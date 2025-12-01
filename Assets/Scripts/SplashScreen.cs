@@ -119,6 +119,9 @@ public class SplashScreen : MonoBehaviour
         // You can add custom logic here when loading completes
         // For example: Load next scene, enable UI elements, etc.
         Debug.Log("Splash Screen: Loading Complete!");
+        
+        // Deactivate this GameObject after loading completes
+        gameObject.SetActive(false);
     }
 
     /// <summary>
