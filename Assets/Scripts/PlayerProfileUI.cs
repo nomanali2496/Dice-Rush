@@ -22,6 +22,16 @@ public class PlayerProfileUI : MonoBehaviour
     [SerializeField] private string cashPrefix = "Cash: $";
     [SerializeField] private string coinsPrefix = "Coins: ";
     
+    private void Awake()
+    {
+        // Subscribe to PlayFab events as early as possible
+        if (PlayFabManager.Instance != null)
+        {
+            PlayFabManager.Instance.OnPlayerDataLoaded += OnPlayerDataLoaded;
+            PlayFabManager.Instance.OnPlayerDataSaved += OnPlayerDataSaved;
+        }
+    }
+    
     private void Start()
     {
         // Add button listeners
@@ -31,15 +41,33 @@ public class PlayerProfileUI : MonoBehaviour
         if (logoutButton != null)
             logoutButton.onClick.AddListener(OnLogoutClicked);
         
-        // Subscribe to PlayFab events
+        // Try to subscribe again in case PlayFabManager was created after Awake
         if (PlayFabManager.Instance != null)
         {
+            PlayFabManager.Instance.OnPlayerDataLoaded -= OnPlayerDataLoaded; // Prevent double subscription
             PlayFabManager.Instance.OnPlayerDataLoaded += OnPlayerDataLoaded;
+            PlayFabManager.Instance.OnPlayerDataSaved -= OnPlayerDataSaved;
             PlayFabManager.Instance.OnPlayerDataSaved += OnPlayerDataSaved;
         }
         
-        // Load initial data
+        // Load data immediately if already logged in
         RefreshPlayerData();
+    }
+    
+    private void OnEnable()
+    {
+        // Refresh data every time this panel becomes active
+        Debug.Log("[PlayerProfileUI] Panel enabled, refreshing data...");
+        
+        // Subscribe to events if not already
+        if (PlayFabManager.Instance != null)
+        {
+            PlayFabManager.Instance.OnPlayerDataLoaded -= OnPlayerDataLoaded;
+            PlayFabManager.Instance.OnPlayerDataLoaded += OnPlayerDataLoaded;
+        }
+        
+        // Wait a moment then refresh
+        Invoke(nameof(RefreshPlayerData), 0.3f);
     }
     
     private void OnDestroy()
@@ -54,22 +82,49 @@ public class PlayerProfileUI : MonoBehaviour
     
     private void RefreshPlayerData()
     {
-        if (PlayFabManager.Instance != null)
+        Debug.Log("[PlayerProfileUI] RefreshPlayerData called");
+        
+        if (PlayFabManager.Instance == null)
         {
-            if (PlayFabManager.Instance.IsLoggedIn())
-            {
-                PlayFabManager.Instance.LoadPlayerData();
-            }
-            else
-            {
-                Debug.LogWarning("Player not logged in!");
-                UpdateUIWithDefaultData();
-            }
+            Debug.LogWarning("[PlayerProfileUI] PlayFabManager not found!");
+            UpdateUIWithDefaultData();
+            return;
         }
+        
+        if (!PlayFabManager.Instance.IsLoggedIn())
+        {
+            Debug.LogWarning("[PlayerProfileUI] Player not logged in! Showing default data.");
+            UpdateUIWithDefaultData();
+            return;
+        }
+        
+        // Player is logged in
+        Debug.Log("[PlayerProfileUI] Player is logged in, loading data...");
+        
+        // First, try to display current data immediately if available
+        if (PlayFabManager.Instance.currentPlayerData != null)
+        {
+            Debug.Log("[PlayerProfileUI] Found cached data, displaying it immediately");
+            UpdateUI(PlayFabManager.Instance.currentPlayerData);
+        }
+        else
+        {
+            Debug.Log("[PlayerProfileUI] No cached data, showing defaults while loading...");
+            UpdateUIWithDefaultData();
+        }
+        
+        // Always load fresh data from PlayFab (will trigger OnPlayerDataLoaded when complete)
+        Debug.Log("[PlayerProfileUI] Requesting fresh data from PlayFab...");
+        PlayFabManager.Instance.LoadPlayerData();
     }
     
     private void OnPlayerDataLoaded(PlayerData data)
     {
+        Debug.Log("[PlayerProfileUI] OnPlayerDataLoaded called!");
+        if (data != null)
+        {
+            Debug.Log($"[PlayerProfileUI] Received data - Name: {data.playerName}, Cash: {data.cash}, Coins: {data.coins}");
+        }
         UpdateUI(data);
     }
     
@@ -88,16 +143,26 @@ public class PlayerProfileUI : MonoBehaviour
     
     private void UpdateUI(PlayerData data)
     {
+        Debug.Log("[PlayerProfileUI] UpdateUI called");
+        
         if (data == null)
         {
+            Debug.LogWarning("[PlayerProfileUI] Data is null, showing defaults");
             UpdateUIWithDefaultData();
             return;
         }
+        
+        Debug.Log($"[PlayerProfileUI] Updating UI with: Name={data.playerName}, Email={data.email}, Cash={data.cash}, Coins={data.coins}");
         
         // Update name
         if (playerNameText != null)
         {
             playerNameText.text = !string.IsNullOrEmpty(data.playerName) ? data.playerName : "Guest";
+            Debug.Log($"[PlayerProfileUI] Set playerNameText to: {playerNameText.text}");
+        }
+        else
+        {
+            Debug.LogWarning("[PlayerProfileUI] playerNameText is null!");
         }
         
         // Update email
@@ -105,17 +170,31 @@ public class PlayerProfileUI : MonoBehaviour
         {
             emailText.text = !string.IsNullOrEmpty(data.email) ? data.email : "No email";
         }
+        else
+        {
+            Debug.LogWarning("[PlayerProfileUI] emailText is null!");
+        }
         
         // Update cash
         if (cashText != null)
         {
             cashText.text = cashPrefix + data.cash.ToString("N0");
+            Debug.Log($"[PlayerProfileUI] Set cashText to: {cashText.text}");
+        }
+        else
+        {
+            Debug.LogWarning("[PlayerProfileUI] cashText is null!");
         }
         
         // Update coins
         if (coinsText != null)
         {
             coinsText.text = coinsPrefix + data.coins.ToString("N0");
+            Debug.Log($"[PlayerProfileUI] Set coinsText to: {coinsText.text}");
+        }
+        else
+        {
+            Debug.LogWarning("[PlayerProfileUI] coinsText is null!");
         }
         
         // Update profile image
@@ -123,9 +202,11 @@ public class PlayerProfileUI : MonoBehaviour
         {
             // If you want to load the image from URL, you'll need to implement that
             // For now, we'll just log it
-            Debug.Log($"Profile image URL: {data.imageUrl}");
+            Debug.Log($"[PlayerProfileUI] Profile image URL: {data.imageUrl}");
             // StartCoroutine(LoadImageFromUrl(data.imageUrl));
         }
+        
+        Debug.Log("[PlayerProfileUI] UI Update Complete!");
     }
     
     private void UpdateUIWithDefaultData()
@@ -150,8 +231,10 @@ public class PlayerProfileUI : MonoBehaviour
             PlayFabManager.Instance.Logout();
             Debug.Log("Player logged out");
             
-            // Optionally reload login scene
-            UnityEngine.SceneManagement.SceneManager.LoadScene("LoginScene");
+            // Since we're using single scene with panels, reload the entire scene
+            UnityEngine.SceneManagement.SceneManager.LoadScene(
+                UnityEngine.SceneManagement.SceneManager.GetActiveScene().name
+            );
         }
     }
     

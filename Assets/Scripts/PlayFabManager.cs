@@ -30,14 +30,17 @@ public class PlayFabManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            Debug.Log("[PlayFabManager] Instance created and set to DontDestroyOnLoad");
         }
         else
         {
+            Debug.Log("[PlayFabManager] Duplicate instance destroyed");
             Destroy(gameObject);
             return;
         }
         
         currentPlayerData = new PlayerData();
+        Debug.Log("[PlayFabManager] Initialized with empty PlayerData");
     }
     
     #region Authentication
@@ -98,9 +101,11 @@ public class PlayFabManager : MonoBehaviour
     
     private void OnLoginSuccess(LoginResult result)
     {
-        Debug.Log("Login successful!");
+        Debug.Log("[PlayFabManager] Login successful!");
         playFabId = result.PlayFabId;
         isLoggedIn = true;
+        
+        Debug.Log($"[PlayFabManager] PlayFabId: {playFabId}, isLoggedIn: {isLoggedIn}");
         
         // Load player data after successful login
         LoadPlayerData();
@@ -196,32 +201,52 @@ public class PlayFabManager : MonoBehaviour
     
     private void OnPlayerDataLoaded_Success(GetUserDataResult result)
     {
-        Debug.Log("Player data loaded successfully!");
+        Debug.Log("[PlayFabManager] Player data loaded successfully from PlayFab!");
         
         if (result.Data != null && result.Data.Count > 0)
         {
+            Debug.Log($"[PlayFabManager] Received {result.Data.Count} data fields");
+            
             // Parse the data
             if (result.Data.ContainsKey("PlayerName"))
+            {
                 currentPlayerData.playerName = result.Data["PlayerName"].Value;
+                Debug.Log($"[PlayFabManager] PlayerName: {currentPlayerData.playerName}");
+            }
             
             if (result.Data.ContainsKey("Email"))
+            {
                 currentPlayerData.email = result.Data["Email"].Value;
+                Debug.Log($"[PlayFabManager] Email: {currentPlayerData.email}");
+            }
             
             if (result.Data.ContainsKey("Cash"))
+            {
                 int.TryParse(result.Data["Cash"].Value, out currentPlayerData.cash);
+                Debug.Log($"[PlayFabManager] Cash: {currentPlayerData.cash}");
+            }
             
             if (result.Data.ContainsKey("Coins"))
+            {
                 int.TryParse(result.Data["Coins"].Value, out currentPlayerData.coins);
+                Debug.Log($"[PlayFabManager] Coins: {currentPlayerData.coins}");
+            }
             
             if (result.Data.ContainsKey("ImageUrl"))
+            {
                 currentPlayerData.imageUrl = result.Data["ImageUrl"].Value;
+                Debug.Log($"[PlayFabManager] ImageUrl: {currentPlayerData.imageUrl}");
+            }
+            
+            Debug.Log($"[PlayFabManager] Final data - Name: {currentPlayerData.playerName}, Cash: {currentPlayerData.cash}, Coins: {currentPlayerData.coins}");
         }
         else
         {
-            Debug.Log("No player data found, using defaults.");
+            Debug.LogWarning("[PlayFabManager] No player data found in PlayFab, using defaults.");
             currentPlayerData = new PlayerData();
         }
         
+        Debug.Log("[PlayFabManager] Invoking OnPlayerDataLoaded event...");
         OnPlayerDataLoaded?.Invoke(currentPlayerData);
     }
     
