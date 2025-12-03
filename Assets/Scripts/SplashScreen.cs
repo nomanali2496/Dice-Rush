@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 /// <summary>
-/// Generic splash screen script that fills a slider/progress bar.
-/// Attach this script to a GameObject and assign a UI Slider component.
+/// Splash screen that shows AFTER login/registration
+/// Displays loading animation then transitions to game
 /// </summary>
 public class SplashScreen : MonoBehaviour
 {
@@ -25,12 +26,18 @@ public class SplashScreen : MonoBehaviour
     [Tooltip("Use smooth interpolation instead of linear fill.")]
     [SerializeField] private bool useSmoothFill = true;
 
+    [Header("Next Panel")]
+    [Tooltip("The game panel to show after loading completes")]
+    [SerializeField] private GameObject gamePanel;
+
+    public Action OnLoadingCompleteEvent;
+
     private float currentProgress = 0f;
     private float targetProgress = 0f;
     private float elapsedTime = 0f;
     private bool isLoading = false;
 
-    private void Start()
+    private void OnEnable()
     {
         InitializeSlider();
         StartLoading();
@@ -116,12 +123,18 @@ public class SplashScreen : MonoBehaviour
         isLoading = false;
         progressSlider.value = 1f;
         
-        // You can add custom logic here when loading completes
-        // For example: Load next scene, enable UI elements, etc.
         Debug.Log("Splash Screen: Loading Complete!");
         
-        // Deactivate this GameObject after loading completes
+        // Hide splash panel and show game panel
         gameObject.SetActive(false);
+        
+        if (gamePanel != null)
+        {
+            gamePanel.SetActive(true);
+        }
+        
+        // Notify listeners
+        OnLoadingCompleteEvent?.Invoke();
     }
 
     /// <summary>

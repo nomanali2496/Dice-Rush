@@ -1,0 +1,351 @@
+================================================================================
+                    SINGLE SCENE VISUAL SETUP GUIDE
+                    Login → SplashScreen → Game
+================================================================================
+
+                              📱 USER FLOW 📱
+
+    START ──> [LOGIN/REGISTER] ──> [SPLASHSCREEN] ──> [GAME]
+              (Shows First)      (After Login)      (After Loading)
+
+================================================================================
+                          🎨 HIERARCHY STRUCTURE
+================================================================================
+
+MainScene
+  │
+  ├─ Canvas
+  │   │
+  │   ├─ LoginRegisterPanel [✓ ACTIVE]
+  │   │   │
+  │   │   ├─ Background Image
+  │   │   │
+  │   │   ├─ LoginSection [✓ ACTIVE]
+  │   │   │   ├─ Title Text ("Welcome to Dice Rush!")
+  │   │   │   ├─ LoginEmailInput (InputField - TMP)
+  │   │   │   ├─ LoginPasswordInput (InputField - TMP)
+  │   │   │   ├─ LoginButton (Button - TMP)
+  │   │   │   ├─ GuestLoginButton (Button - TMP)
+  │   │   │   └─ SwitchToRegisterButton (Button - TMP)
+  │   │   │
+  │   │   ├─ RegisterSection [✗ INACTIVE]
+  │   │   │   ├─ Title Text ("Create Account")
+  │   │   │   ├─ RegisterNameInput (InputField - TMP)
+  │   │   │   ├─ RegisterEmailInput (InputField - TMP)
+  │   │   │   ├─ RegisterPasswordInput (InputField - TMP)
+  │   │   │   ├─ RegisterConfirmPasswordInput (InputField - TMP)
+  │   │   │   ├─ RegisterButton (Button - TMP)
+  │   │   │   └─ SwitchToLoginButton (Button - TMP)
+  │   │   │
+  │   │   ├─ StatusText (Text - TMP)
+  │   │   └─ LoadingIndicator (Image/Panel - Optional)
+  │   │
+  │   ├─ SplashScreenPanel [✗ INACTIVE]
+  │   │   ├─ Background Image
+  │   │   ├─ Game Logo (Image)
+  │   │   ├─ LoadingText ("Loading...")
+  │   │   └─ ProgressSlider (Slider)
+  │   │       ├─ Background
+  │   │       ├─ Fill Area
+  │   │       │   └─ Fill (Colored)
+  │   │       └─ Handle Slide Area (Optional)
+  │   │
+  │   └─ GamePanel [✗ INACTIVE]
+  │       ├─ Header
+  │       │   ├─ PlayerName Text
+  │       │   ├─ CashText
+  │       │   └─ CoinsText
+  │       ├─ GameContent
+  │       │   └─ (Your game UI here)
+  │       └─ Footer
+  │           └─ (Buttons, etc.)
+  │
+  ├─ AuthenticationManager (Empty GameObject)
+  │   └─ AuthenticationManager.cs Script
+  │
+  └─ EventSystem (Auto-created with Canvas)
+
+================================================================================
+                          📝 SCRIPT ASSIGNMENTS
+================================================================================
+
+AuthenticationManager GameObject:
+  ├─ Script: AuthenticationManager.cs
+  │
+  ├─ [Panels]
+  │   ├─ Login Register Panel ──────> LoginRegisterPanel
+  │   └─ Splash Screen Panel ───────> SplashScreenPanel
+  │
+  ├─ [Login/Register Toggle]
+  │   ├─ Login Section ─────────────> LoginSection
+  │   ├─ Register Section ──────────> RegisterSection
+  │   ├─ Switch To Register Button ─> SwitchToRegisterButton
+  │   └─ Switch To Login Button ────> SwitchToLoginButton
+  │
+  ├─ [Login UI]
+  │   ├─ Login Email Input ─────────> LoginEmailInput
+  │   ├─ Login Password Input ──────> LoginPasswordInput
+  │   ├─ Login Button ──────────────> LoginButton
+  │   └─ Guest Login Button ────────> GuestLoginButton
+  │
+  ├─ [Registration UI]
+  │   ├─ Register Name Input ───────> RegisterNameInput
+  │   ├─ Register Email Input ──────> RegisterEmailInput
+  │   ├─ Register Password Input ───> RegisterPasswordInput
+  │   ├─ Register Confirm Password ─> RegisterConfirmPasswordInput
+  │   └─ Register Button ───────────> RegisterButton
+  │
+  └─ [Status]
+      ├─ Status Text ───────────────> StatusText
+      └─ Loading Indicator ─────────> LoadingIndicator
+
+SplashScreenPanel GameObject:
+  ├─ Script: SplashScreen.cs
+  │
+  ├─ [Slider Settings]
+  │   └─ Progress Slider ───────────> ProgressSlider (child)
+  │
+  ├─ [Loading Settings]
+  │   ├─ Loading Duration ──────────> 3 seconds
+  │   └─ Min Loading Time ──────────> 1 second
+  │
+  ├─ [Animation Settings]
+  │   ├─ Fill Speed ────────────────> 2
+  │   └─ Use Smooth Fill ───────────> ✓ Checked
+  │
+  └─ [Next Panel]
+      └─ Game Panel ────────────────> GamePanel
+
+================================================================================
+                          ⚙️ INSPECTOR SETTINGS
+================================================================================
+
+LoginEmailInput:
+  ├─ Placeholder: "Email"
+  ├─ Content Type: Email Address
+  └─ Font Size: 16
+
+LoginPasswordInput:
+  ├─ Placeholder: "Password"
+  ├─ Content Type: Password
+  └─ Font Size: 16
+
+RegisterNameInput:
+  ├─ Placeholder: "Your Name"
+  ├─ Content Type: Standard
+  └─ Font Size: 16
+
+RegisterPasswordInput & RegisterConfirmPasswordInput:
+  ├─ Placeholder: "Password" / "Confirm Password"
+  ├─ Content Type: Password
+  └─ Font Size: 16
+
+ProgressSlider:
+  ├─ Min Value: 0
+  ├─ Max Value: 1
+  ├─ Value: 0
+  ├─ Whole Numbers: ✗ Unchecked
+  └─ Fill Rect: Assign Fill GameObject
+
+StatusText:
+  ├─ Text: (Empty at start)
+  ├─ Color: Red (#FF0000)
+  ├─ Alignment: Center/Center
+  └─ Font Size: 14
+
+================================================================================
+                          🎯 ACTIVE/INACTIVE STATES
+================================================================================
+
+AT START (When scene loads):
+  ✓ LoginRegisterPanel ──> ACTIVE
+  ✓ LoginSection ────────> ACTIVE
+  ✗ RegisterSection ─────> INACTIVE
+  ✗ SplashScreenPanel ───> INACTIVE
+  ✗ GamePanel ───────────> INACTIVE
+
+AFTER LOGIN/REGISTER:
+  ✗ LoginRegisterPanel ──> INACTIVE
+  ✓ SplashScreenPanel ───> ACTIVE (Shown by AuthenticationManager)
+  ✗ GamePanel ───────────> INACTIVE
+
+AFTER LOADING:
+  ✗ LoginRegisterPanel ──> INACTIVE
+  ✗ SplashScreenPanel ───> INACTIVE
+  ✓ GamePanel ───────────> ACTIVE (Shown by SplashScreen)
+
+================================================================================
+                          🔄 TRANSITION FLOW
+================================================================================
+
+┌─────────────────┐
+│  Scene Starts   │
+│  User sees:     │
+│  LOGIN SCREEN   │
+└────────┬────────┘
+         │
+         │ User Actions:
+         │ • Login with email
+         │ • Register account
+         │ • Guest login
+         │
+         ▼
+┌─────────────────┐
+│Authentication   │
+│  Success!       │
+└────────┬────────┘
+         │
+         │ AuthenticationManager:
+         │ • Hides LoginRegisterPanel
+         │ • Shows SplashScreenPanel
+         │
+         ▼
+┌─────────────────┐
+│  SPLASH SCREEN  │
+│  Loading bar    │
+│  fills up...    │
+└────────┬────────┘
+         │
+         │ After 3 seconds:
+         │ • Loading complete
+         │
+         ▼
+┌─────────────────┐
+│  SplashScreen   │
+│  hides itself   │
+│  shows GamePanel│
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│   GAME PANEL    │
+│   Player can    │
+│   play game!    │
+└─────────────────┘
+
+================================================================================
+                          ✅ SETUP CHECKLIST
+================================================================================
+
+CANVAS SETUP:
+  □ Canvas created
+  □ Canvas Scaler set to "Scale With Screen Size"
+  □ Reference Resolution: 1920x1080 (or your target)
+  □ EventSystem exists
+
+LOGIN/REGISTER PANEL:
+  □ LoginRegisterPanel created and ACTIVE
+  □ LoginSection created and ACTIVE
+  □ RegisterSection created and INACTIVE
+  □ All InputFields created with TMP
+  □ All Buttons created with TMP
+  □ StatusText created
+  □ LoadingIndicator created (optional)
+
+SPLASH SCREEN PANEL:
+  □ SplashScreenPanel created and INACTIVE
+  □ ProgressSlider created and assigned
+  □ Background/Logo added (optional)
+  □ SplashScreen.cs script attached to panel
+
+GAME PANEL:
+  □ GamePanel created and INACTIVE
+  □ Game UI elements added
+  □ PlayerProfileUI.cs attached (optional)
+
+AUTHENTICATION MANAGER:
+  □ Empty GameObject "AuthenticationManager" created
+  □ AuthenticationManager.cs script attached
+  □ ALL references assigned in Inspector
+  □ Verified all 15+ assignments!
+
+PLAYFAB:
+  □ PlayFab SDK installed
+  □ Title ID obtained from PlayFab.com
+  □ Title ID set in Unity (Window → PlayFab → Editor Extensions)
+
+TESTING:
+  □ Press Play
+  □ Login screen shows first
+  □ Can switch between Login/Register
+  □ Can create account
+  □ SplashScreen shows after login
+  □ GamePanel shows after loading
+  □ No console errors
+
+================================================================================
+                          💡 QUICK TIPS
+================================================================================
+
+1. USE ANCHORS: Set proper anchors for all UI elements so they scale correctly
+
+2. LAYOUT GROUPS: Add Vertical Layout Group to LoginSection and RegisterSection
+   for automatic positioning
+
+3. CONTENT SIZE FITTER: Use on panels that need to auto-size
+
+4. BUTTON STATES: Set up button colors for Normal, Highlighted, Pressed, Disabled
+
+5. INPUT FIELD VALIDATION: Set correct Content Type (Email, Password, etc.)
+
+6. SLIDER FILL: Make sure the Fill GameObject is properly assigned to Slider
+
+7. TESTING: Test on different resolutions to ensure UI scales properly
+
+8. LOADING TIME: Adjust loadingDuration in SplashScreen for faster/slower loading
+
+9. COLORS: Use consistent color scheme across all panels
+
+10. FONTS: Import TextMeshPro essentials if not already done
+
+================================================================================
+                          🐛 TROUBLESHOOTING
+================================================================================
+
+PROBLEM: "Nothing shows when I press Play"
+SOLUTION: Check LoginRegisterPanel is ACTIVE in Hierarchy
+
+PROBLEM: "Buttons don't respond"
+SOLUTION: 
+  • Check EventSystem exists
+  • Check buttons assigned in AuthenticationManager Inspector
+  • Check Button.interactable is enabled
+
+PROBLEM: "Can't switch to Register screen"
+SOLUTION: 
+  • Check RegisterSection exists
+  • Check Switch buttons assigned
+  • Check RegisterSection is child of LoginRegisterPanel
+
+PROBLEM: "Stuck on Login screen after successful login"
+SOLUTION:
+  • Check SplashScreenPanel assigned to AuthenticationManager
+  • Check SplashScreenPanel exists and is INACTIVE at start
+
+PROBLEM: "Stuck on SplashScreen forever"
+SOLUTION:
+  • Check GamePanel assigned to SplashScreen script
+  • Check Slider assigned to SplashScreen
+  • Check console for errors
+
+PROBLEM: "Can't type in InputFields"
+SOLUTION:
+  • Check InputFields are using TextMeshPro version
+  • Check EventSystem exists
+  • Check InputField.interactable is enabled
+
+PROBLEM: "Slider doesn't fill"
+SOLUTION:
+  • Check Fill GameObject assigned in Slider component
+  • Check Fill Rect is properly setup
+  • Check SplashScreen script has Slider assigned
+
+================================================================================
+
+                    🎉 YOU'RE ALL SET! 🎉
+
+            Flow: Login → SplashScreen → Game
+                    (All in ONE scene!)
+
+================================================================================
+
