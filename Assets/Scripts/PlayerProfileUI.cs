@@ -22,57 +22,100 @@ public class PlayerProfileUI : MonoBehaviour
     [SerializeField] private string cashPrefix = "Cash: $";
     [SerializeField] private string coinsPrefix = "Coins: ";
     
-    private void Awake()
-    {
-        // Subscribe to PlayFab events as early as possible
-        if (PlayFabManager.Instance != null)
-        {
-            PlayFabManager.Instance.OnPlayerDataLoaded += OnPlayerDataLoaded;
-            PlayFabManager.Instance.OnPlayerDataSaved += OnPlayerDataSaved;
-        }
-    }
-    
     private void Start()
     {
         // Add button listeners
-        // if (refreshButton != null)
-        //     refreshButton.onClick.AddListener(RefreshPlayerData);
-        
         if (logoutButton != null)
             logoutButton.onClick.AddListener(OnLogoutClicked);
-        
-        // Try to subscribe again in case PlayFabManager was created after Awake
-        if (PlayFabManager.Instance != null)
-        {
-            PlayFabManager.Instance.OnPlayerDataLoaded -= OnPlayerDataLoaded; // Prevent double subscription
-            PlayFabManager.Instance.OnPlayerDataLoaded += OnPlayerDataLoaded;
-            PlayFabManager.Instance.OnPlayerDataSaved -= OnPlayerDataSaved;
-            PlayFabManager.Instance.OnPlayerDataSaved += OnPlayerDataSaved;
-        }
-        
-        // Load data immediately if already logged in
-        RefreshPlayerData();
     }
     
     private void OnEnable()
     {
-        // Refresh data every time this panel becomes active
-        Debug.Log("[PlayerProfileUI] Panel enabled, refreshing data...");
+        Debug.Log("[PlayerProfileUI] ===== PANEL ENABLED =====");
         
-        // Subscribe to events if not already
+        // Wait a tiny bit to ensure PlayFabManager is fully initialized
+        StartCoroutine(InitializeUIAfterDelay());
+    }
+    
+    private System.Collections.IEnumerator InitializeUIAfterDelay()
+    {
+        // Wait one frame to ensure everything is set up
+        yield return null;
+        
+        Debug.Log("[PlayerProfileUI] Initializing UI after delay...");
+        
+        if (PlayFabManager.Instance == null)
+        {
+            Debug.LogWarning("[PlayerProfileUI] PlayFabManager not found!");
+            UpdateUIWithDefaultData();
+            yield break;
+        }
+        
+        // Subscribe to future events
+        PlayFabManager.Instance.OnPlayerDataLoaded -= OnPlayerDataLoaded;
+        PlayFabManager.Instance.OnPlayerDataLoaded += OnPlayerDataLoaded;
+        PlayFabManager.Instance.OnPlayerDataSaved -= OnPlayerDataSaved;
+        PlayFabManager.Instance.OnPlayerDataSaved += OnPlayerDataSaved;
+        
+        Debug.Log($"[PlayerProfileUI] IsLoggedIn: {PlayFabManager.Instance.IsLoggedIn()}");
+        
+        // Check if player is logged in and data exists
+        if (PlayFabManager.Instance.IsLoggedIn())
+        {
+            PlayerData data = PlayFabManager.Instance.currentPlayerData;
+            
+            Debug.Log($"[PlayerProfileUI] Checking data - playerName: '{data?.playerName}', cash: {data?.cash}, coins: {data?.coins}");
+            
+            if (data != null && !string.IsNullOrEmpty(data.playerName))
+            {
+                // Data was already loaded while this panel was inactive!
+                Debug.Log("[PlayerProfileUI] ✓✓✓ DATA FOUND! Displaying immediately! ✓✓✓");
+                Debug.Log($"[PlayerProfileUI] Updating UI with: Name={data.playerName}, Email={data.email}, Cash={data.cash}, Coins={data.coins}");
+                UpdateUI(data);
+            }
+            else
+            {
+                // Data not loaded yet, request it
+                Debug.Log("[PlayerProfileUI] No data yet, requesting from PlayFab...");
+                UpdateUIWithDefaultData();
+                
+                // Wait a bit then check again (data might be loading)
+                yield return new WaitForSeconds(0.5f);
+                
+                // Check again after waiting
+                data = PlayFabManager.Instance.currentPlayerData;
+                if (data != null && !string.IsNullOrEmpty(data.playerName))
+                {
+                    Debug.Log("[PlayerProfileUI] ✓ Data arrived! Displaying now!");
+                    UpdateUI(data);
+                }
+                else
+                {
+                    Debug.Log("[PlayerProfileUI] Still no data, loading from PlayFab...");
+                    PlayFabManager.Instance.LoadPlayerData();
+                }
+            }
+        }
+        else
+        {
+            Debug.LogWarning("[PlayerProfileUI] Player not logged in!");
+            UpdateUIWithDefaultData();
+        }
+    }
+    
+    private void OnDisable()
+    {
+        // Unsubscribe from events when disabled
         if (PlayFabManager.Instance != null)
         {
             PlayFabManager.Instance.OnPlayerDataLoaded -= OnPlayerDataLoaded;
-            PlayFabManager.Instance.OnPlayerDataLoaded += OnPlayerDataLoaded;
+            PlayFabManager.Instance.OnPlayerDataSaved -= OnPlayerDataSaved;
         }
-        
-        // Wait a moment then refresh
-        Invoke(nameof(RefreshPlayerData), 0.3f);
     }
     
     private void OnDestroy()
     {
-        // Unsubscribe from events
+        // Unsubscribe from events when destroyed
         if (PlayFabManager.Instance != null)
         {
             PlayFabManager.Instance.OnPlayerDataLoaded -= OnPlayerDataLoaded;
@@ -82,7 +125,7 @@ public class PlayerProfileUI : MonoBehaviour
     
     private void RefreshPlayerData()
     {
-        Debug.Log("[PlayerProfileUI] RefreshPlayerData called");
+        Debug.Log("[PlayerProfileUI] Manual RefreshPlayerData called");
         
         if (PlayFabManager.Instance == null)
         {
@@ -93,27 +136,12 @@ public class PlayerProfileUI : MonoBehaviour
         
         if (!PlayFabManager.Instance.IsLoggedIn())
         {
-            Debug.LogWarning("[PlayerProfileUI] Player not logged in! Showing default data.");
+            Debug.LogWarning("[PlayerProfileUI] Player not logged in!");
             UpdateUIWithDefaultData();
             return;
         }
         
-        // Player is logged in
-        Debug.Log("[PlayerProfileUI] Player is logged in, loading data...");
-        
-        // First, try to display current data immediately if available
-        if (PlayFabManager.Instance.currentPlayerData != null)
-        {
-            Debug.Log("[PlayerProfileUI] Found cached data, displaying it immediately");
-            UpdateUI(PlayFabManager.Instance.currentPlayerData);
-        }
-        else
-        {
-            Debug.Log("[PlayerProfileUI] No cached data, showing defaults while loading...");
-            UpdateUIWithDefaultData();
-        }
-        
-        // Always load fresh data from PlayFab (will trigger OnPlayerDataLoaded when complete)
+        // Request fresh data from PlayFab
         Debug.Log("[PlayerProfileUI] Requesting fresh data from PlayFab...");
         PlayFabManager.Instance.LoadPlayerData();
     }
@@ -263,6 +291,26 @@ public class PlayerProfileUI : MonoBehaviour
     */
     
     #region Public Helper Methods
+    
+    /// <summary>
+    /// Manually force UI update with current PlayFab data
+    /// Call this if UI is not updating automatically
+    /// </summary>
+    public void ForceUpdateUI()
+    {
+        Debug.Log("[PlayerProfileUI] ForceUpdateUI called manually");
+        
+        if (PlayFabManager.Instance != null && PlayFabManager.Instance.currentPlayerData != null)
+        {
+            Debug.Log("[PlayerProfileUI] Forcing UI update with current data");
+            UpdateUI(PlayFabManager.Instance.currentPlayerData);
+        }
+        else
+        {
+            Debug.LogWarning("[PlayerProfileUI] Cannot force update - no data available");
+            RefreshPlayerData();
+        }
+    }
     
     /// <summary>
     /// Update displayed cash value

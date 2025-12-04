@@ -123,18 +123,44 @@ public class SplashScreen : MonoBehaviour
         isLoading = false;
         progressSlider.value = 1f;
         
-        Debug.Log("Splash Screen: Loading Complete!");
+        Debug.Log("[SplashScreen] ===== LOADING COMPLETE =====");
         
         // Hide splash panel and show game panel
         gameObject.SetActive(false);
         
         if (gamePanel != null)
         {
+            Debug.Log("[SplashScreen] Activating GamePanel...");
             gamePanel.SetActive(true);
+            
+            // Give the panel a moment to activate, then verify PlayerProfileUI
+            StartCoroutine(VerifyGamePanelActivated());
+        }
+        else
+        {
+            Debug.LogError("[SplashScreen] GamePanel is NULL! Cannot show game!");
         }
         
         // Notify listeners
         OnLoadingCompleteEvent?.Invoke();
+    }
+    
+    private System.Collections.IEnumerator VerifyGamePanelActivated()
+    {
+        yield return new WaitForSeconds(0.2f);
+        
+        Debug.Log($"[SplashScreen] GamePanel active state: {gamePanel.activeSelf}");
+        
+        // Find and verify PlayerProfileUI
+        PlayerProfileUI profileUI = gamePanel.GetComponentInChildren<PlayerProfileUI>(true);
+        if (profileUI != null)
+        {
+            Debug.Log($"[SplashScreen] Found PlayerProfileUI! GameObject active: {profileUI.gameObject.activeSelf}");
+        }
+        else
+        {
+            Debug.LogWarning("[SplashScreen] PlayerProfileUI NOT FOUND in GamePanel!");
+        }
     }
 
     /// <summary>
