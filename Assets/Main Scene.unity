@@ -7283,7 +7283,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 795387962}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1502321585}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &795387962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16626,12 +16638,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f965b1eb73b3d87479d438f00cf6143e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerProfileUI
-  playerNameText: {fileID: 1322599942}
+  playerNameInputField: {fileID: 1168908765}
   emailText: {fileID: 1633492325}
   cashText: {fileID: 1858106302}
   coinsText: {fileID: 834306406}
   profileImage: {fileID: 1371073806}
+  editNameButton: {fileID: 194830705}
   logoutButton: {fileID: 1181182930}
+  editButtonText: Edit
+  saveButtonText: Save
   cashPrefix: 
   coinsPrefix: 
 --- !u!4 &2010734781

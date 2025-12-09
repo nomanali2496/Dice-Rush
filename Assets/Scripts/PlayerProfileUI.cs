@@ -8,25 +8,38 @@ using TMPro;
 public class PlayerProfileUI : MonoBehaviour
 {
     [Header("UI References")]
-    [SerializeField] private TextMeshProUGUI playerNameText;
+    [SerializeField] private TMP_InputField playerNameInputField; // InputField for editing player name
     [SerializeField] private TextMeshProUGUI emailText;
     [SerializeField] private TextMeshProUGUI cashText;
     [SerializeField] private TextMeshProUGUI coinsText;
     [SerializeField] private Image profileImage;
     
     [Header("Buttons")]
-    // [SerializeField] private Button refreshButton;
+    [SerializeField] private Button editNameButton; // Button to edit/save player name
     [SerializeField] private Button logoutButton;
+    
+    [Header("Edit Mode Settings")]
+    [SerializeField] private string editButtonText = "Edit";
+    [SerializeField] private string saveButtonText = "Save";
     
     [Header("Currency Formatting")]
     [SerializeField] private string cashPrefix = "Cash: $";
     [SerializeField] private string coinsPrefix = "Coins: ";
     
+    private bool isEditMode = false;
+    private string originalPlayerName = ""; // Store original name when entering edit mode
+    
     private void Start()
     {
         // Add button listeners
+        if (editNameButton != null)
+            editNameButton.onClick.AddListener(OnEditNameClicked);
+        
         if (logoutButton != null)
             logoutButton.onClick.AddListener(OnLogoutClicked);
+        
+        // Setup input field - start in read-only mode
+        SetEditMode(false);
     }
     
     private void OnEnable()
@@ -182,15 +195,25 @@ public class PlayerProfileUI : MonoBehaviour
         
         Debug.Log($"[PlayerProfileUI] Updating UI with: Name={data.playerName}, Email={data.email}, Cash={data.cash}, Coins={data.coins}");
         
-        // Update name
-        if (playerNameText != null)
+        // Update name - Support InputField
+        // Only update if not in edit mode (to avoid interrupting user's typing)
+        if (!isEditMode)
         {
-            playerNameText.text = !string.IsNullOrEmpty(data.playerName) ? data.playerName : "Guest";
-            Debug.Log($"[PlayerProfileUI] Set playerNameText to: {playerNameText.text}");
+            string playerName = !string.IsNullOrEmpty(data.playerName) ? data.playerName : "Guest";
+            
+            if (playerNameInputField != null)
+            {
+                playerNameInputField.text = playerName;
+                Debug.Log($"[PlayerProfileUI] Set playerNameInputField to: {playerNameInputField.text}");
+            }
+            else
+            {
+                Debug.LogWarning("[PlayerProfileUI] playerNameInputField is null! Assign it in Inspector!");
+            }
         }
         else
         {
-            Debug.LogWarning("[PlayerProfileUI] playerNameText is null!");
+            Debug.Log("[PlayerProfileUI] Skipping name update - user is in edit mode");
         }
         
         // Update email
@@ -239,8 +262,8 @@ public class PlayerProfileUI : MonoBehaviour
     
     private void UpdateUIWithDefaultData()
     {
-        if (playerNameText != null)
-            playerNameText.text = "Guest";
+        if (playerNameInputField != null)
+            playerNameInputField.text = "Guest";
         
         if (emailText != null)
             emailText.text = "Not logged in";
@@ -250,6 +273,176 @@ public class PlayerProfileUI : MonoBehaviour
         
         if (coinsText != null)
             coinsText.text = coinsPrefix + "0";
+    }
+    
+    /// <summary>
+    /// Called when Edit/Save button is clicked
+    /// </summary>
+    private void OnEditNameClicked()
+    {
+        if (playerNameInputField == null)
+        {
+            Debug.LogError("[PlayerProfileUI] playerNameInputField is null! Cannot edit name.");
+            return;
+        }
+        
+        if (!isEditMode)
+        {
+            // Enter Edit Mode
+            EnterEditMode();
+        }
+        else
+        {
+            // Save the name
+            SavePlayerName();
+        }
+    }
+    
+    /// <summary>
+    /// Enter edit mode - enable input field
+    /// </summary>
+    private void EnterEditMode()
+    {
+        isEditMode = true;
+        
+        // Store original name
+        if (PlayFabManager.Instance != null && PlayFabManager.Instance.currentPlayerData != null)
+        {
+            originalPlayerName = PlayFabManager.Instance.currentPlayerData.playerName;
+        }
+        
+        // Enable input field for editing
+        if (playerNameInputField != null)
+        {
+            playerNameInputField.interactable = true;
+            playerNameInputField.readOnly = false;
+            playerNameInputField.Select(); // Focus the input field
+            playerNameInputField.ActivateInputField(); // Show keyboard on mobile
+        }
+        
+        // Update button text
+        UpdateEditButtonText();
+        
+        Debug.Log("[PlayerProfileUI] Entered edit mode");
+    }
+    
+    /// <summary>
+    /// Exit edit mode - disable input field
+    /// </summary>
+    private void ExitEditMode()
+    {
+        isEditMode = false;
+        
+        // Disable input field (read-only mode)
+        if (playerNameInputField != null)
+        {
+            playerNameInputField.interactable = false;
+            playerNameInputField.readOnly = true;
+        }
+        
+        // Update button text
+        UpdateEditButtonText();
+        
+        Debug.Log("[PlayerProfileUI] Exited edit mode");
+    }
+    
+    /// <summary>
+    /// Update the edit button text based on current mode
+    /// </summary>
+    private void UpdateEditButtonText()
+    {
+        if (editNameButton != null)
+        {
+            TextMeshProUGUI buttonText = editNameButton.GetComponentInChildren<TextMeshProUGUI>();
+            if (buttonText != null)
+            {
+                buttonText.text = isEditMode ? saveButtonText : editButtonText;
+            }
+        }
+    }
+    
+    /// <summary>
+    /// Save the updated player name to PlayFab
+    /// </summary>
+    private void SavePlayerName()
+    {
+        if (playerNameInputField == null)
+        {
+            Debug.LogError("[PlayerProfileUI] playerNameInputField is null!");
+            return;
+        }
+        
+        string newName = playerNameInputField.text.Trim();
+        
+        // Validate name
+        if (string.IsNullOrEmpty(newName))
+        {
+            Debug.LogWarning("[PlayerProfileUI] Player name cannot be empty!");
+            // Restore original name
+            if (PlayFabManager.Instance != null && PlayFabManager.Instance.currentPlayerData != null)
+            {
+                playerNameInputField.text = PlayFabManager.Instance.currentPlayerData.playerName;
+            }
+            ExitEditMode();
+            return;
+        }
+        
+        if (newName.Length < 3)
+        {
+            Debug.LogWarning("[PlayerProfileUI] Player name must be at least 3 characters!");
+            // Restore original name
+            if (PlayFabManager.Instance != null && PlayFabManager.Instance.currentPlayerData != null)
+            {
+                playerNameInputField.text = PlayFabManager.Instance.currentPlayerData.playerName;
+            }
+            ExitEditMode();
+            return;
+        }
+        
+        // Check if name actually changed
+        if (newName == originalPlayerName)
+        {
+            Debug.Log("[PlayerProfileUI] Name unchanged, exiting edit mode");
+            ExitEditMode();
+            return;
+        }
+        
+        // Update player data
+        if (PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
+        {
+            Debug.Log($"[PlayerProfileUI] Saving new player name: '{newName}'");
+            
+            // Update local data
+            PlayFabManager.Instance.currentPlayerData.playerName = newName;
+            
+            // Save to PlayFab
+            PlayFabManager.Instance.SavePlayerData(() =>
+            {
+                Debug.Log($"[PlayerProfileUI] ✓ Player name saved successfully to PlayFab: '{newName}'");
+                ExitEditMode();
+            });
+        }
+        else
+        {
+            Debug.LogError("[PlayerProfileUI] Cannot save - player not logged in!");
+            ExitEditMode();
+        }
+    }
+    
+    /// <summary>
+    /// Set edit mode (enable/disable input field)
+    /// </summary>
+    private void SetEditMode(bool editMode)
+    {
+        isEditMode = editMode;
+        
+        if (playerNameInputField != null)
+        {
+            playerNameInputField.interactable = editMode;
+            playerNameInputField.readOnly = !editMode;
+        }
+        
+        UpdateEditButtonText();
     }
     
     private void OnLogoutClicked()
