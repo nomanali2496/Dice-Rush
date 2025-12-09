@@ -3223,7 +3223,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 357481696}
-  - component: {fileID: 357481697}
   - component: {fileID: 357481698}
   m_Layer: 0
   m_Name: AvatarDisplayManager
@@ -3231,7 +3230,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &357481696
 Transform:
   m_ObjectHideFlags: 0
@@ -3247,59 +3246,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &357481697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 357481694}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d4a180ff34e5f842b87a5a251a78741, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AvatarSelector
-  avatarButtons:
-  - {fileID: 1293924207}
-  - {fileID: 1064320441}
-  - {fileID: 2785786764816492199}
-  - {fileID: 1907749573}
-  - {fileID: 877336785}
-  - {fileID: 61744745}
-  - {fileID: 1716853707}
-  - {fileID: 561925871}
-  avatarSprites:
-  - {fileID: 21300000, guid: f0e7973bcaf5df440b0e4c73a8c7f065, type: 3}
-  - {fileID: 21300000, guid: eb4da06a19c3d36478035681c388f9cb, type: 3}
-  - {fileID: 21300000, guid: ae57092177e17a34287e3bddecb4595c, type: 3}
-  - {fileID: 21300000, guid: 1e1f3651abeee594da097bb087416479, type: 3}
-  - {fileID: 21300000, guid: 4d141461978bcb44188176ffae11982d, type: 3}
-  - {fileID: 21300000, guid: 89ba688efedd4914c86ca7625a0555e8, type: 3}
-  - {fileID: 21300000, guid: adfc30ed7e6e16148a6305513d1cfca6, type: 3}
-  - {fileID: 21300000, guid: 39cb2fc4b26e821448ff79584ee16468, type: 3}
-  backgroundSprites:
-  - {fileID: 21300000, guid: 488a932c56077e548a4820b88430b53c, type: 3}
-  - {fileID: 21300000, guid: 45d8940635d24804da3c9ffbae697e22, type: 3}
-  - {fileID: 21300000, guid: a74ebd00cb3a42544924b996122d32bf, type: 3}
-  - {fileID: 21300000, guid: 5d3a7d3e65e88e345a299eae4b2232c1, type: 3}
-  - {fileID: 21300000, guid: 45d8940635d24804da3c9ffbae697e22, type: 3}
-  - {fileID: 21300000, guid: 488a932c56077e548a4820b88430b53c, type: 3}
-  - {fileID: 21300000, guid: 5d3a7d3e65e88e345a299eae4b2232c1, type: 3}
-  - {fileID: 21300000, guid: a74ebd00cb3a42544924b996122d32bf, type: 3}
-  selectedAvatarDisplay: {fileID: 1371073806}
-  selectedBackgroundDisplay: {fileID: 495567087}
-  mainMenuAvatarDisplay: {fileID: 537392989}
-  buttonHighlights:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  saveToPlayFabOnSelect: 1
-  showSelectionFeedback: 1
 --- !u!114 &357481698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14637,8 +14583,11 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  selectCustomImageButton: {fileID: 1975429275}
+  customImageDisplay: {fileID: 1371073806}
   saveToPlayFabOnSelect: 1
   showSelectionFeedback: 1
+  maxImageSize: 1024
 --- !u!1001 &1781118111
 PrefabInstance:
   m_ObjectHideFlags: 0

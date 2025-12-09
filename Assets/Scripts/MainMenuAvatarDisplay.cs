@@ -82,6 +82,42 @@ public class MainMenuAvatarDisplay : MonoBehaviour
             return;
         }
         
+        // First, check if there's a custom uploaded image
+        if (PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
+        {
+            if (PlayFabManager.Instance.currentPlayerData != null)
+            {
+                string imageUrl = PlayFabManager.Instance.currentPlayerData.imageUrl;
+                
+                // Check if it's a custom base64 image
+                if (!string.IsNullOrEmpty(imageUrl) && imageUrl.StartsWith("data:image"))
+                {
+                    try
+                    {
+                        // Extract base64 part
+                        string base64Data = imageUrl.Substring(imageUrl.IndexOf(",") + 1);
+                        byte[] imageBytes = System.Convert.FromBase64String(base64Data);
+                        
+                        // Create texture
+                        Texture2D texture = new Texture2D(2, 2);
+                        if (texture.LoadImage(imageBytes))
+                        {
+                            // Convert to sprite
+                            Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+                            avatarImage.sprite = sprite;
+                            Debug.Log("[MainMenuAvatarDisplay] ✓ Custom uploaded image displayed");
+                            return; // Success!
+                        }
+                    }
+                    catch (System.Exception e)
+                    {
+                        Debug.LogWarning($"[MainMenuAvatarDisplay] Failed to load custom image: {e.Message}");
+                    }
+                }
+            }
+        }
+        
+        // If no custom image, load avatar sprite
         // Get the selected index from PlayFab
         int selectedIndex = 0;
         bool hasValidIndex = false;
@@ -225,6 +261,18 @@ public class MainMenuAvatarDisplay : MonoBehaviour
             // Fallback to loading from PlayFabManager
             LoadSelectedAvatar();
             Debug.Log("[MainMenuAvatarDisplay] Updated via PlayFabManager (AvatarSelector inactive)");
+        }
+    }
+    
+    /// <summary>
+    /// Update with custom uploaded image
+    /// </summary>
+    public void UpdateCustomImage(Sprite customSprite)
+    {
+        if (avatarImage != null && customSprite != null)
+        {
+            avatarImage.sprite = customSprite;
+            Debug.Log("[MainMenuAvatarDisplay] Custom image updated");
         }
     }
 }
