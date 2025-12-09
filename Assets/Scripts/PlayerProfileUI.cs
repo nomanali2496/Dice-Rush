@@ -25,7 +25,7 @@ public class PlayerProfileUI : MonoBehaviour
     [Header("Currency Formatting")]
     [SerializeField] private string cashPrefix = "Cash: $";
     [SerializeField] private string coinsPrefix = "Coins: ";
-    
+    [SerializeField] private GameObject AvatarDisplay;
     private bool isEditMode = false;
     private string originalPlayerName = ""; // Store original name when entering edit mode
     
@@ -101,6 +101,7 @@ public class PlayerProfileUI : MonoBehaviour
                 {
                     Debug.Log("[PlayerProfileUI] ✓ Data arrived! Displaying now!");
                     UpdateUI(data);
+                    
                 }
                 else
                 {
@@ -256,7 +257,7 @@ public class PlayerProfileUI : MonoBehaviour
             Debug.Log($"[PlayerProfileUI] Profile image URL: {data.imageUrl}");
             // StartCoroutine(LoadImageFromUrl(data.imageUrl));
         }
-        
+        AvatarDisplay.SetActive(true);
         Debug.Log("[PlayerProfileUI] UI Update Complete!");
     }
     

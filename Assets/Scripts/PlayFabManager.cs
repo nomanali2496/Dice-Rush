@@ -156,7 +156,9 @@ public class PlayFabManager : MonoBehaviour
             { "Email", currentPlayerData.email },
             { "Cash", currentPlayerData.cash.ToString() },
             { "Coins", currentPlayerData.coins.ToString() },
-            { "ImageUrl", currentPlayerData.imageUrl }
+            { "ImageUrl", currentPlayerData.imageUrl },
+            { "SelectedAvatarIndex", currentPlayerData.selectedAvatarIndex.ToString() },
+            { "SelectedBackgroundIndex", currentPlayerData.selectedBackgroundIndex.ToString() }
         };
         
         var request = new UpdateUserDataRequest
@@ -238,7 +240,19 @@ public class PlayFabManager : MonoBehaviour
                 Debug.Log($"[PlayFabManager] ImageUrl: {currentPlayerData.imageUrl}");
             }
             
-            Debug.Log($"[PlayFabManager] Final data - Name: {currentPlayerData.playerName}, Cash: {currentPlayerData.cash}, Coins: {currentPlayerData.coins}");
+            if (result.Data.ContainsKey("SelectedAvatarIndex"))
+            {
+                int.TryParse(result.Data["SelectedAvatarIndex"].Value, out currentPlayerData.selectedAvatarIndex);
+                Debug.Log($"[PlayFabManager] SelectedAvatarIndex: {currentPlayerData.selectedAvatarIndex}");
+            }
+            
+            if (result.Data.ContainsKey("SelectedBackgroundIndex"))
+            {
+                int.TryParse(result.Data["SelectedBackgroundIndex"].Value, out currentPlayerData.selectedBackgroundIndex);
+                Debug.Log($"[PlayFabManager] SelectedBackgroundIndex: {currentPlayerData.selectedBackgroundIndex}");
+            }
+            
+            Debug.Log($"[PlayFabManager] Final data - Name: {currentPlayerData.playerName}, Cash: {currentPlayerData.cash}, Coins: {currentPlayerData.coins}, Avatar: {currentPlayerData.selectedAvatarIndex}, Background: {currentPlayerData.selectedBackgroundIndex}");
         }
         else
         {

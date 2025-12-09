@@ -12,6 +12,8 @@ public class PlayerData
     public int cash;
     public int coins;
     public string imageUrl;
+    public int selectedAvatarIndex = 0; // Index of selected avatar (0-7)
+    public int selectedBackgroundIndex = 0; // Index of selected background (0-7)
     
     // Constructor
     public PlayerData()
@@ -21,6 +23,8 @@ public class PlayerData
         cash = 0;
         coins = 0;
         imageUrl = "";
+        selectedAvatarIndex = 0;
+        selectedBackgroundIndex = 0;
     }
     
     public PlayerData(string name, string emailAddress, int initialCash = 1000, int initialCoins = 100)
@@ -30,6 +34,8 @@ public class PlayerData
         cash = initialCash;
         coins = initialCoins;
         imageUrl = "";
+        selectedAvatarIndex = 0;
+        selectedBackgroundIndex = 0;
     }
     
     /// <summary>
