@@ -23,7 +23,7 @@ public class AuthenticationManager : MonoBehaviour
     [SerializeField] private TMP_InputField loginEmailInput;
     [SerializeField] private TMP_InputField loginPasswordInput;
     [SerializeField] private Button loginButton;
-    // [SerializeField] private Button guestLoginButton;
+    [SerializeField] private Button guestLoginButton;
     
     [Header("Registration UI")]
     [SerializeField] private TMP_InputField registerNameInput;
@@ -53,8 +53,8 @@ public class AuthenticationManager : MonoBehaviour
         if (registerButton != null)
             registerButton.onClick.AddListener(OnRegisterClicked);
         
-        // if (guestLoginButton != null)
-        //     guestLoginButton.onClick.AddListener(OnGuestLoginClicked);
+        if (guestLoginButton != null)
+            guestLoginButton.onClick.AddListener(OnGuestLoginClicked);
         
         if (switchToRegisterButton != null)
             switchToRegisterButton.onClick.AddListener(() => ShowRegisterSection());
@@ -323,8 +323,8 @@ public class AuthenticationManager : MonoBehaviour
         if (registerButton != null)
             registerButton.interactable = !isLoading;
         
-        // if (guestLoginButton != null)
-        //     guestLoginButton.interactable = !isLoading;
+        if (guestLoginButton != null)
+            guestLoginButton.interactable = !isLoading;
         
         if (switchToRegisterButton != null)
             switchToRegisterButton.interactable = !isLoading;

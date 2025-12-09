@@ -115,7 +115,17 @@ public class PlayFabManager : MonoBehaviour
     
     private void OnLoginFailure(PlayFabError error)
     {
-        Debug.LogError("Login failed: " + error.GenerateErrorReport());
+        string errorMessage = "Login failed: " + error.GenerateErrorReport();
+        Debug.LogError(errorMessage);
+        
+        // Check if account creation is disabled
+        if (error.Error == PlayFabErrorCode.AccountNotFound || 
+            error.ErrorMessage.Contains("Player creations have been disabled"))
+        {
+            Debug.LogError("Guest account creation is disabled in PlayFab settings. " +
+                          "Please enable 'Allow Client to Create Players' in PlayFab Dashboard > Settings > API Features.");
+        }
+        
         OnLoginComplete?.Invoke(false);
     }
     
@@ -124,13 +134,37 @@ public class PlayFabManager : MonoBehaviour
     /// </summary>
     public void LoginWithCustomId(string customId)
     {
+        // First try to login without creating account (in case account already exists)
         var request = new LoginWithCustomIDRequest
         {
             CustomId = customId,
-            CreateAccount = true
+            CreateAccount = false
         };
         
-        PlayFabClientAPI.LoginWithCustomID(request, OnLoginSuccess, OnLoginFailure);
+        PlayFabClientAPI.LoginWithCustomID(request, 
+            OnLoginSuccess, 
+            error => OnCustomIdLoginFailure(error, customId));
+    }
+    
+    private void OnCustomIdLoginFailure(PlayFabError error, string customId)
+    {
+        // If account doesn't exist, try to create it
+        if (error.Error == PlayFabErrorCode.AccountNotFound)
+        {
+            Debug.Log("Account not found, attempting to create new guest account...");
+            var createRequest = new LoginWithCustomIDRequest
+            {
+                CustomId = customId,
+                CreateAccount = true
+            };
+            
+            PlayFabClientAPI.LoginWithCustomID(createRequest, OnLoginSuccess, OnLoginFailure);
+        }
+        else
+        {
+            // For other errors (like account creation disabled), show the error
+            OnLoginFailure(error);
+        }
     }
     
     #endregion
@@ -256,8 +290,11 @@ public class PlayFabManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("[PlayFabManager] No player data found in PlayFab, using defaults.");
-            currentPlayerData = new PlayerData();
+            Debug.LogWarning("[PlayFabManager] No player data found in PlayFab, initializing with defaults.");
+            // Initialize guest account with default values
+            currentPlayerData = new PlayerData("Guest", "", 1000, 100);
+            // Save the initial data for guest accounts
+            SavePlayerData();
         }
         
         Debug.Log("[PlayFabManager] Invoking OnPlayerDataLoaded event...");
