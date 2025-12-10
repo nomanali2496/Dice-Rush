@@ -21,6 +21,10 @@ public class OffersCarouselManager : MonoBehaviour
     [Header("Dot Buttons (7 buttons for navigation)")]
     [SerializeField] private Button[] dotButtons = new Button[7]; // 7 dot buttons at bottom
     
+    [Header("Dot Button Images")]
+    [SerializeField] private Sprite selectedDotImage; // Image to show when dot is selected
+    [SerializeField] private Sprite unselectedDotImage; // Image to show when dot is not selected (optional, uses default if null)
+    
     [Header("Visual Settings")]
     [SerializeField] private float selectedScale = 1.2f; // Scale multiplier for center/selected offer
     [SerializeField] private float sideOpacity = 0.5f; // Opacity for left/right offers (0-1)
@@ -365,7 +369,7 @@ public class OffersCarouselManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Updates dot button visual states (e.g., highlight selected)
+    /// Updates dot button visual states (shows selected image on selected dot)
     /// </summary>
     private void UpdateDotButtons()
     {
@@ -373,18 +377,27 @@ public class OffersCarouselManager : MonoBehaviour
         {
             if (dotButtons[i] != null)
             {
-                // You can add visual feedback here, e.g., change color, scale, etc.
-                // Example: highlight the selected dot
                 Image dotImage = dotButtons[i].GetComponent<Image>();
                 if (dotImage != null)
                 {
                     if (i == currentSelectedIndex)
                     {
-                        dotImage.color = Color.white; // Selected dot
+                        // Show selected image
+                        if (selectedDotImage != null)
+                        {
+                            dotImage.sprite = selectedDotImage;
+                        }
+                        dotImage.color = Color.white; // Full opacity for selected
                     }
                     else
                     {
-                        dotImage.color = new Color(1f, 1f, 1f, 0.5f); // Unselected dots
+                        // Show unselected image
+                        if (unselectedDotImage != null)
+                        {
+                            dotImage.sprite = unselectedDotImage;
+                        }
+                        // Keep current sprite if unselectedDotImage is null
+                        dotImage.color = new Color(1f, 1f, 1f, 0.5f); // Lower opacity for unselected
                     }
                 }
             }
