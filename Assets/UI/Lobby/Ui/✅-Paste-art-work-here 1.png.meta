@@ -1,0 +1,6695 @@
+fileFormatVersion: 2
+guid: b789a2cb332ef524899832dcab61fc1a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8363426233576232124
+    second: "\u2705-Paste-art-work-here 1_0"
+  - first:
+      213: 7869653232731568702
+    second: "\u2705-Paste-art-work-here 1_1"
+  - first:
+      213: -328365932052059636
+    second: "\u2705-Paste-art-work-here 1_2"
+  - first:
+      213: 6931233077991838030
+    second: "\u2705-Paste-art-work-here 1_3"
+  - first:
+      213: 8007226685307024301
+    second: "\u2705-Paste-art-work-here 1_4"
+  - first:
+      213: 7471690739637236639
+    second: "\u2705-Paste-art-work-here 1_5"
+  - first:
+      213: 664320529093221938
+    second: "\u2705-Paste-art-work-here 1_6"
+  - first:
+      213: -4640070378025016148
+    second: "\u2705-Paste-art-work-here 1_7"
+  - first:
+      213: 6230611928633678212
+    second: "\u2705-Paste-art-work-here 1_8"
+  - first:
+      213: 8857731629814753987
+    second: "\u2705-Paste-art-work-here 1_9"
+  - first:
+      213: 557246956117942858
+    second: "\u2705-Paste-art-work-here 1_10"
+  - first:
+      213: -93824057589336462
+    second: "\u2705-Paste-art-work-here 1_11"
+  - first:
+      213: 3799833092619115141
+    second: "\u2705-Paste-art-work-here 1_12"
+  - first:
+      213: 8367219902288677270
+    second: "\u2705-Paste-art-work-here 1_13"
+  - first:
+      213: 9218344956943428409
+    second: "\u2705-Paste-art-work-here 1_14"
+  - first:
+      213: 2419146152375095571
+    second: "\u2705-Paste-art-work-here 1_15"
+  - first:
+      213: -8443551222883059383
+    second: "\u2705-Paste-art-work-here 1_16"
+  - first:
+      213: -4099284630661163190
+    second: "\u2705-Paste-art-work-here 1_17"
+  - first:
+      213: 6522710966358057312
+    second: "\u2705-Paste-art-work-here 1_18"
+  - first:
+      213: 29507037322725722
+    second: "\u2705-Paste-art-work-here 1_19"
+  - first:
+      213: -2896394298909366760
+    second: "\u2705-Paste-art-work-here 1_20"
+  - first:
+      213: -5084920857339572633
+    second: "\u2705-Paste-art-work-here 1_21"
+  - first:
+      213: 4408520043202316181
+    second: "\u2705-Paste-art-work-here 1_22"
+  - first:
+      213: 6544934803707422122
+    second: "\u2705-Paste-art-work-here 1_23"
+  - first:
+      213: -8038150672950607930
+    second: "\u2705-Paste-art-work-here 1_24"
+  - first:
+      213: 6550780913050295092
+    second: "\u2705-Paste-art-work-here 1_25"
+  - first:
+      213: -1887773854668718121
+    second: "\u2705-Paste-art-work-here 1_26"
+  - first:
+      213: -1884048609733716372
+    second: "\u2705-Paste-art-work-here 1_27"
+  - first:
+      213: 8796958728175245372
+    second: "\u2705-Paste-art-work-here 1_28"
+  - first:
+      213: -214076062040083770
+    second: "\u2705-Paste-art-work-here 1_29"
+  - first:
+      213: 6038718238052857981
+    second: "\u2705-Paste-art-work-here 1_30"
+  - first:
+      213: 2713508437436509182
+    second: "\u2705-Paste-art-work-here 1_31"
+  - first:
+      213: 6926967049780516191
+    second: "\u2705-Paste-art-work-here 1_32"
+  - first:
+      213: 1420754020406684148
+    second: "\u2705-Paste-art-work-here 1_33"
+  - first:
+      213: 7953941283468307051
+    second: "\u2705-Paste-art-work-here 1_34"
+  - first:
+      213: -3519822818859643310
+    second: "\u2705-Paste-art-work-here 1_35"
+  - first:
+      213: -8949434427067270684
+    second: "\u2705-Paste-art-work-here 1_36"
+  - first:
+      213: -170606786730624454
+    second: "\u2705-Paste-art-work-here 1_37"
+  - first:
+      213: -8588765798623897824
+    second: "\u2705-Paste-art-work-here 1_38"
+  - first:
+      213: 9144993571271326283
+    second: "\u2705-Paste-art-work-here 1_39"
+  - first:
+      213: 5738293432754823204
+    second: "\u2705-Paste-art-work-here 1_40"
+  - first:
+      213: -6415423833428838164
+    second: "\u2705-Paste-art-work-here 1_41"
+  - first:
+      213: 8851083685120885076
+    second: "\u2705-Paste-art-work-here 1_42"
+  - first:
+      213: -6152911210466897490
+    second: "\u2705-Paste-art-work-here 1_43"
+  - first:
+      213: -8439617484904971774
+    second: "\u2705-Paste-art-work-here 1_44"
+  - first:
+      213: -1182929078388454352
+    second: "\u2705-Paste-art-work-here 1_45"
+  - first:
+      213: -2784749850231923060
+    second: "\u2705-Paste-art-work-here 1_46"
+  - first:
+      213: 2108473069046516582
+    second: "\u2705-Paste-art-work-here 1_47"
+  - first:
+      213: -5428755564610813038
+    second: "\u2705-Paste-art-work-here 1_48"
+  - first:
+      213: -8684840059019961260
+    second: "\u2705-Paste-art-work-here 1_49"
+  - first:
+      213: 7070828645918903163
+    second: "\u2705-Paste-art-work-here 1_50"
+  - first:
+      213: -768820482467102892
+    second: "\u2705-Paste-art-work-here 1_51"
+  - first:
+      213: -1226627478574749918
+    second: "\u2705-Paste-art-work-here 1_52"
+  - first:
+      213: 537009497409223712
+    second: "\u2705-Paste-art-work-here 1_53"
+  - first:
+      213: 2144911365987154836
+    second: "\u2705-Paste-art-work-here 1_54"
+  - first:
+      213: -1065501857145796617
+    second: "\u2705-Paste-art-work-here 1_55"
+  - first:
+      213: 127490660740079020
+    second: "\u2705-Paste-art-work-here 1_56"
+  - first:
+      213: 8012072403240068170
+    second: "\u2705-Paste-art-work-here 1_57"
+  - first:
+      213: 3319600439278073468
+    second: "\u2705-Paste-art-work-here 1_58"
+  - first:
+      213: 8389052557006899704
+    second: "\u2705-Paste-art-work-here 1_59"
+  - first:
+      213: 5942917620952888727
+    second: "\u2705-Paste-art-work-here 1_60"
+  - first:
+      213: -6671071647788631005
+    second: "\u2705-Paste-art-work-here 1_61"
+  - first:
+      213: 4715344231477567006
+    second: "\u2705-Paste-art-work-here 1_62"
+  - first:
+      213: -6099963691719729412
+    second: "\u2705-Paste-art-work-here 1_63"
+  - first:
+      213: 78500009960757631
+    second: "\u2705-Paste-art-work-here 1_64"
+  - first:
+      213: 4257923939343425717
+    second: "\u2705-Paste-art-work-here 1_65"
+  - first:
+      213: 7112534392129322248
+    second: "\u2705-Paste-art-work-here 1_66"
+  - first:
+      213: -486790924461983976
+    second: "\u2705-Paste-art-work-here 1_67"
+  - first:
+      213: 3548192436454975289
+    second: "\u2705-Paste-art-work-here 1_68"
+  - first:
+      213: 8565074039435006885
+    second: "\u2705-Paste-art-work-here 1_69"
+  - first:
+      213: 1187778458316683705
+    second: "\u2705-Paste-art-work-here 1_70"
+  - first:
+      213: -6158461744774810635
+    second: "\u2705-Paste-art-work-here 1_71"
+  - first:
+      213: -2387111113357964297
+    second: "\u2705-Paste-art-work-here 1_72"
+  - first:
+      213: -3366856565972160090
+    second: "\u2705-Paste-art-work-here 1_73"
+  - first:
+      213: -7188662976393102958
+    second: "\u2705-Paste-art-work-here 1_74"
+  - first:
+      213: -2725613788775943629
+    second: "\u2705-Paste-art-work-here 1_75"
+  - first:
+      213: -4539217246331828476
+    second: "\u2705-Paste-art-work-here 1_76"
+  - first:
+      213: 9016034764995882236
+    second: "\u2705-Paste-art-work-here 1_77"
+  - first:
+      213: -6694679570071166610
+    second: "\u2705-Paste-art-work-here 1_78"
+  - first:
+      213: 4854572162529110016
+    second: "\u2705-Paste-art-work-here 1_79"
+  - first:
+      213: -3228111570749807844
+    second: "\u2705-Paste-art-work-here 1_80"
+  - first:
+      213: -5870604485009361908
+    second: "\u2705-Paste-art-work-here 1_81"
+  - first:
+      213: -9157667217765804832
+    second: "\u2705-Paste-art-work-here 1_82"
+  - first:
+      213: 578956853360170084
+    second: "\u2705-Paste-art-work-here 1_83"
+  - first:
+      213: 1802713869389214806
+    second: "\u2705-Paste-art-work-here 1_84"
+  - first:
+      213: -2512028200697692893
+    second: "\u2705-Paste-art-work-here 1_85"
+  - first:
+      213: 8558029008115876747
+    second: "\u2705-Paste-art-work-here 1_86"
+  - first:
+      213: 8713304466159177614
+    second: "\u2705-Paste-art-work-here 1_87"
+  - first:
+      213: 7491066990118499306
+    second: "\u2705-Paste-art-work-here 1_88"
+  - first:
+      213: -7491738845137269792
+    second: "\u2705-Paste-art-work-here 1_89"
+  - first:
+      213: -420005049761830639
+    second: "\u2705-Paste-art-work-here 1_90"
+  - first:
+      213: -331746856279958156
+    second: "\u2705-Paste-art-work-here 1_91"
+  - first:
+      213: 653142375932673157
+    second: "\u2705-Paste-art-work-here 1_92"
+  - first:
+      213: 8857719591789878202
+    second: "\u2705-Paste-art-work-here 1_93"
+  - first:
+      213: -3744141807547148564
+    second: "\u2705-Paste-art-work-here 1_94"
+  - first:
+      213: -340864197590679552
+    second: "\u2705-Paste-art-work-here 1_95"
+  - first:
+      213: 2828369089812924511
+    second: "\u2705-Paste-art-work-here 1_96"
+  - first:
+      213: 3922392182062167982
+    second: "\u2705-Paste-art-work-here 1_97"
+  - first:
+      213: 4239459217593634152
+    second: "\u2705-Paste-art-work-here 1_98"
+  - first:
+      213: -5431029380958272833
+    second: "\u2705-Paste-art-work-here 1_99"
+  - first:
+      213: 7018043569862845645
+    second: "\u2705-Paste-art-work-here 1_100"
+  - first:
+      213: -3901655297120625169
+    second: "\u2705-Paste-art-work-here 1_101"
+  - first:
+      213: -1901534323462626691
+    second: "\u2705-Paste-art-work-here 1_102"
+  - first:
+      213: 4818342911470271151
+    second: "\u2705-Paste-art-work-here 1_103"
+  - first:
+      213: -683189511946879813
+    second: "\u2705-Paste-art-work-here 1_104"
+  - first:
+      213: 7279080862268043038
+    second: "\u2705-Paste-art-work-here 1_105"
+  - first:
+      213: -8397881719980044870
+    second: "\u2705-Paste-art-work-here 1_106"
+  - first:
+      213: 2341656899684205190
+    second: "\u2705-Paste-art-work-here 1_107"
+  - first:
+      213: -4256369592741519440
+    second: "\u2705-Paste-art-work-here 1_108"
+  - first:
+      213: -3617213591363088119
+    second: "\u2705-Paste-art-work-here 1_109"
+  - first:
+      213: 3784073393391979589
+    second: "\u2705-Paste-art-work-here 1_110"
+  - first:
+      213: -4837054335026560603
+    second: "\u2705-Paste-art-work-here 1_111"
+  - first:
+      213: 7050401575308020866
+    second: "\u2705-Paste-art-work-here 1_112"
+  - first:
+      213: 5768857229437971668
+    second: "\u2705-Paste-art-work-here 1_113"
+  - first:
+      213: 693882238754682028
+    second: "\u2705-Paste-art-work-here 1_114"
+  - first:
+      213: -9022827628283359799
+    second: "\u2705-Paste-art-work-here 1_115"
+  - first:
+      213: -5990480078794611929
+    second: "\u2705-Paste-art-work-here 1_116"
+  - first:
+      213: -7071928453633976389
+    second: "\u2705-Paste-art-work-here 1_117"
+  - first:
+      213: -1708722591236584676
+    second: "\u2705-Paste-art-work-here 1_118"
+  - first:
+      213: -8344638587943847264
+    second: "\u2705-Paste-art-work-here 1_119"
+  - first:
+      213: -829712064433506472
+    second: "\u2705-Paste-art-work-here 1_120"
+  - first:
+      213: -5106842683113325212
+    second: "\u2705-Paste-art-work-here 1_121"
+  - first:
+      213: 9212513167150240791
+    second: "\u2705-Paste-art-work-here 1_122"
+  - first:
+      213: -1293790078316888791
+    second: "\u2705-Paste-art-work-here 1_123"
+  - first:
+      213: -5629384730709699499
+    second: "\u2705-Paste-art-work-here 1_124"
+  - first:
+      213: -1474660740664698918
+    second: "\u2705-Paste-art-work-here 1_125"
+  - first:
+      213: 4022200178398263464
+    second: "\u2705-Paste-art-work-here 1_126"
+  - first:
+      213: -4811313960392728123
+    second: "\u2705-Paste-art-work-here 1_127"
+  - first:
+      213: -842295889454075783
+    second: "\u2705-Paste-art-work-here 1_128"
+  - first:
+      213: -6323764040686061082
+    second: "\u2705-Paste-art-work-here 1_129"
+  - first:
+      213: -175887689023155254
+    second: "\u2705-Paste-art-work-here 1_130"
+  - first:
+      213: 6662662462975204646
+    second: "\u2705-Paste-art-work-here 1_131"
+  - first:
+      213: -1332050259285141851
+    second: "\u2705-Paste-art-work-here 1_132"
+  - first:
+      213: 2327546707780086783
+    second: "\u2705-Paste-art-work-here 1_133"
+  - first:
+      213: -1168983864878135489
+    second: "\u2705-Paste-art-work-here 1_134"
+  - first:
+      213: -5635748964100273042
+    second: "\u2705-Paste-art-work-here 1_135"
+  - first:
+      213: -8206550623419386703
+    second: "\u2705-Paste-art-work-here 1_136"
+  - first:
+      213: -881615984782304735
+    second: "\u2705-Paste-art-work-here 1_137"
+  - first:
+      213: 90630851359051632
+    second: "\u2705-Paste-art-work-here 1_138"
+  - first:
+      213: -8508961572194349929
+    second: "\u2705-Paste-art-work-here 1_139"
+  - first:
+      213: 5561083667953002364
+    second: "\u2705-Paste-art-work-here 1_140"
+  - first:
+      213: -2481849856007427968
+    second: "\u2705-Paste-art-work-here 1_141"
+  - first:
+      213: -8180582844476923041
+    second: "\u2705-Paste-art-work-here 1_142"
+  - first:
+      213: 5012093765788284856
+    second: "\u2705-Paste-art-work-here 1_143"
+  - first:
+      213: 5034468857644416447
+    second: "\u2705-Paste-art-work-here 1_144"
+  - first:
+      213: -1923262381782311889
+    second: "\u2705-Paste-art-work-here 1_145"
+  - first:
+      213: 5372989827979712111
+    second: "\u2705-Paste-art-work-here 1_146"
+  - first:
+      213: -1318731392030298781
+    second: "\u2705-Paste-art-work-here 1_147"
+  - first:
+      213: -8764243996113156400
+    second: "\u2705-Paste-art-work-here 1_148"
+  - first:
+      213: -3710881438497790385
+    second: "\u2705-Paste-art-work-here 1_149"
+  - first:
+      213: -5039115462513967996
+    second: "\u2705-Paste-art-work-here 1_150"
+  - first:
+      213: 7479954294936769124
+    second: "\u2705-Paste-art-work-here 1_151"
+  - first:
+      213: -3579684749629778702
+    second: "\u2705-Paste-art-work-here 1_152"
+  - first:
+      213: -4947703485754903630
+    second: "\u2705-Paste-art-work-here 1_153"
+  - first:
+      213: -8760279142295582771
+    second: "\u2705-Paste-art-work-here 1_154"
+  - first:
+      213: 3375690917157989953
+    second: "\u2705-Paste-art-work-here 1_155"
+  - first:
+      213: -924262327589932770
+    second: "\u2705-Paste-art-work-here 1_156"
+  - first:
+      213: -1065355934371125927
+    second: "\u2705-Paste-art-work-here 1_157"
+  - first:
+      213: 7698861786974665585
+    second: "\u2705-Paste-art-work-here 1_158"
+  - first:
+      213: -1266584495803782122
+    second: "\u2705-Paste-art-work-here 1_159"
+  - first:
+      213: -3418009090774400197
+    second: "\u2705-Paste-art-work-here 1_160"
+  - first:
+      213: -5347426947727747566
+    second: "\u2705-Paste-art-work-here 1_161"
+  - first:
+      213: -8299297238429992360
+    second: "\u2705-Paste-art-work-here 1_162"
+  - first:
+      213: -2705177891372236495
+    second: "\u2705-Paste-art-work-here 1_163"
+  - first:
+      213: -8085712455254133507
+    second: "\u2705-Paste-art-work-here 1_164"
+  - first:
+      213: 5683521091172445864
+    second: "\u2705-Paste-art-work-here 1_165"
+  - first:
+      213: 1633267738821948543
+    second: "\u2705-Paste-art-work-here 1_166"
+  - first:
+      213: -7967521592767348456
+    second: "\u2705-Paste-art-work-here 1_167"
+  - first:
+      213: 4400200738882170039
+    second: "\u2705-Paste-art-work-here 1_168"
+  - first:
+      213: 5785444742997403847
+    second: "\u2705-Paste-art-work-here 1_169"
+  - first:
+      213: 5564048581976841823
+    second: "\u2705-Paste-art-work-here 1_170"
+  - first:
+      213: -5855568817594756917
+    second: "\u2705-Paste-art-work-here 1_171"
+  - first:
+      213: 1094884745720354182
+    second: "\u2705-Paste-art-work-here 1_172"
+  - first:
+      213: 5792580104165789106
+    second: "\u2705-Paste-art-work-here 1_173"
+  - first:
+      213: 491158670865917770
+    second: "\u2705-Paste-art-work-here 1_174"
+  - first:
+      213: -6426553502330512502
+    second: "\u2705-Paste-art-work-here 1_175"
+  - first:
+      213: 2403218248874759307
+    second: "\u2705-Paste-art-work-here 1_176"
+  - first:
+      213: 3245358869242318713
+    second: "\u2705-Paste-art-work-here 1_177"
+  - first:
+      213: -4712434290388721075
+    second: "\u2705-Paste-art-work-here 1_178"
+  - first:
+      213: -6297454860093343388
+    second: "\u2705-Paste-art-work-here 1_179"
+  - first:
+      213: 1293706775395373672
+    second: "\u2705-Paste-art-work-here 1_180"
+  - first:
+      213: 6068043554923380292
+    second: "\u2705-Paste-art-work-here 1_181"
+  - first:
+      213: 5992339586026415249
+    second: "\u2705-Paste-art-work-here 1_182"
+  - first:
+      213: -6691915288881099508
+    second: "\u2705-Paste-art-work-here 1_183"
+  - first:
+      213: -1339310634500192164
+    second: "\u2705-Paste-art-work-here 1_184"
+  - first:
+      213: 3315353864764026556
+    second: "\u2705-Paste-art-work-here 1_185"
+  - first:
+      213: -8476904276378140377
+    second: "\u2705-Paste-art-work-here 1_186"
+  - first:
+      213: -5652955738471202635
+    second: "\u2705-Paste-art-work-here 1_187"
+  - first:
+      213: -6497854400195273369
+    second: "\u2705-Paste-art-work-here 1_188"
+  - first:
+      213: 4872894815943984002
+    second: "\u2705-Paste-art-work-here 1_189"
+  - first:
+      213: -7159472029162636998
+    second: "\u2705-Paste-art-work-here 1_190"
+  - first:
+      213: 6600334890097485940
+    second: "\u2705-Paste-art-work-here 1_191"
+  - first:
+      213: -7438728971610275894
+    second: "\u2705-Paste-art-work-here 1_192"
+  - first:
+      213: 5754469256413839924
+    second: "\u2705-Paste-art-work-here 1_193"
+  - first:
+      213: 6400731792681918770
+    second: "\u2705-Paste-art-work-here 1_194"
+  - first:
+      213: -1615821473849836312
+    second: "\u2705-Paste-art-work-here 1_195"
+  - first:
+      213: -1644053022821824748
+    second: "\u2705-Paste-art-work-here 1_196"
+  - first:
+      213: 8796963085532504898
+    second: "\u2705-Paste-art-work-here 1_197"
+  - first:
+      213: 1540476735159664012
+    second: "\u2705-Paste-art-work-here 1_198"
+  - first:
+      213: 7355120425649912380
+    second: "\u2705-Paste-art-work-here 1_199"
+  - first:
+      213: -4424738414837506140
+    second: "\u2705-Paste-art-work-here 1_200"
+  - first:
+      213: -4314675224030457095
+    second: "\u2705-Paste-art-work-here 1_201"
+  - first:
+      213: 411566622700726740
+    second: "\u2705-Paste-art-work-here 1_202"
+  - first:
+      213: -4068535787765486548
+    second: "\u2705-Paste-art-work-here 1_203"
+  - first:
+      213: -521295916767083219
+    second: "\u2705-Paste-art-work-here 1_204"
+  - first:
+      213: -2100035000004614399
+    second: "\u2705-Paste-art-work-here 1_205"
+  - first:
+      213: -4040167831090569904
+    second: "\u2705-Paste-art-work-here 1_206"
+  - first:
+      213: -38620824742788412
+    second: "\u2705-Paste-art-work-here 1_207"
+  - first:
+      213: -5739495824201886655
+    second: "\u2705-Paste-art-work-here 1_208"
+  - first:
+      213: 8844086751490173458
+    second: "\u2705-Paste-art-work-here 1_209"
+  - first:
+      213: -8634631862533778499
+    second: "\u2705-Paste-art-work-here 1_210"
+  - first:
+      213: -654231391502466822
+    second: "\u2705-Paste-art-work-here 1_211"
+  - first:
+      213: -2721003620388153505
+    second: "\u2705-Paste-art-work-here 1_212"
+  - first:
+      213: -8233530846674907614
+    second: "\u2705-Paste-art-work-here 1_213"
+  - first:
+      213: 3052566928164507353
+    second: "\u2705-Paste-art-work-here 1_214"
+  - first:
+      213: 4588827386688421008
+    second: "\u2705-Paste-art-work-here 1_215"
+  - first:
+      213: -4506629993146981804
+    second: "\u2705-Paste-art-work-here 1_216"
+  - first:
+      213: -5960548421758653008
+    second: "\u2705-Paste-art-work-here 1_217"
+  - first:
+      213: -6401460904329630875
+    second: "\u2705-Paste-art-work-here 1_218"
+  - first:
+      213: -2472066649752706650
+    second: "\u2705-Paste-art-work-here 1_219"
+  - first:
+      213: 3870793982275945379
+    second: "\u2705-Paste-art-work-here 1_220"
+  - first:
+      213: 2400869969812037371
+    second: "\u2705-Paste-art-work-here 1_221"
+  - first:
+      213: 5283923233726709894
+    second: "\u2705-Paste-art-work-here 1_222"
+  - first:
+      213: 1820281980487655679
+    second: "\u2705-Paste-art-work-here 1_223"
+  - first:
+      213: 7436823321696317268
+    second: "\u2705-Paste-art-work-here 1_224"
+  - first:
+      213: 9080829883710211986
+    second: "\u2705-Paste-art-work-here 1_225"
+  - first:
+      213: -2695897672633386813
+    second: "\u2705-Paste-art-work-here 1_226"
+  - first:
+      213: -1975836125764468751
+    second: "\u2705-Paste-art-work-here 1_227"
+  - first:
+      213: -5305834106487000298
+    second: "\u2705-Paste-art-work-here 1_228"
+  - first:
+      213: 6365962809821437740
+    second: "\u2705-Paste-art-work-here 1_229"
+  - first:
+      213: 3010682218622649513
+    second: "\u2705-Paste-art-work-here 1_230"
+  - first:
+      213: 4906333449648695213
+    second: "\u2705-Paste-art-work-here 1_231"
+  - first:
+      213: 3584787948845593590
+    second: "\u2705-Paste-art-work-here 1_232"
+  - first:
+      213: 7669185600367545290
+    second: "\u2705-Paste-art-work-here 1_233"
+  - first:
+      213: 8078158465353903877
+    second: "\u2705-Paste-art-work-here 1_234"
+  - first:
+      213: -3046042264316816902
+    second: "\u2705-Paste-art-work-here 1_235"
+  - first:
+      213: -732244405021942037
+    second: "\u2705-Paste-art-work-here 1_236"
+  - first:
+      213: -6038181078238697009
+    second: "\u2705-Paste-art-work-here 1_237"
+  - first:
+      213: -1439117309583764203
+    second: "\u2705-Paste-art-work-here 1_238"
+  - first:
+      213: -6473103239693294928
+    second: "\u2705-Paste-art-work-here 1_239"
+  - first:
+      213: -1589767888124042592
+    second: "\u2705-Paste-art-work-here 1_240"
+  - first:
+      213: -9223344608725410001
+    second: "\u2705-Paste-art-work-here 1_241"
+  - first:
+      213: -1621374473303926152
+    second: "\u2705-Paste-art-work-here 1_242"
+  - first:
+      213: -5694496331787220954
+    second: "\u2705-Paste-art-work-here 1_243"
+  - first:
+      213: -2112679637276575099
+    second: "\u2705-Paste-art-work-here 1_244"
+  - first:
+      213: 7379789878038824744
+    second: "\u2705-Paste-art-work-here 1_245"
+  - first:
+      213: -4077811882443526481
+    second: "\u2705-Paste-art-work-here 1_246"
+  - first:
+      213: -7304289663146268924
+    second: "\u2705-Paste-art-work-here 1_247"
+  - first:
+      213: -1529779735070122296
+    second: "\u2705-Paste-art-work-here 1_248"
+  - first:
+      213: 7011540669563279344
+    second: "\u2705-Paste-art-work-here 1_249"
+  - first:
+      213: 884453972655086896
+    second: "\u2705-Paste-art-work-here 1_250"
+  - first:
+      213: -2795828503998700011
+    second: "\u2705-Paste-art-work-here 1_251"
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_0"
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 8981
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb49e7d19dbd01470800000000000000
+      internalID: 8363426233576232124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_1"
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 9417
+        width: 627
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3a38728bef963d60800000000000000
+      internalID: 7869653232731568702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_2"
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 8981
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0a62bface8617bf0800000000000000
+      internalID: -328365932052059636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_3"
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 8981
+        width: 329
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e41142dd2cfa03060800000000000000
+      internalID: 6931233077991838030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_4"
+      rect:
+        serializedVersion: 2
+        x: 1689
+        y: 9417
+        width: 630
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da3f0c50f326f1f60800000000000000
+      internalID: 8007226685307024301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_5"
+      rect:
+        serializedVersion: 2
+        x: 2013
+        y: 8981
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9337a71427c0b760800000000000000
+      internalID: 7471690739637236639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_6"
+      rect:
+        serializedVersion: 2
+        x: 2784
+        y: 8981
+        width: 328
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23ed9916004283900800000000000000
+      internalID: 664320529093221938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_7"
+      rect:
+        serializedVersion: 2
+        x: 2805
+        y: 9417
+        width: 630
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca4a10943982b9fb0800000000000000
+      internalID: -4640070378025016148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_8"
+      rect:
+        serializedVersion: 2
+        x: 3129
+        y: 8981
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4899583b984977650800000000000000
+      internalID: 6230611928633678212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_9"
+      rect:
+        serializedVersion: 2
+        x: 3901
+        y: 8981
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3caa9deacfbfcea70800000000000000
+      internalID: 8857731629814753987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_10"
+      rect:
+        serializedVersion: 2
+        x: 3925
+        y: 9417
+        width: 630
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a42e397772dbbb700800000000000000
+      internalID: 557246956117942858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_11"
+      rect:
+        serializedVersion: 2
+        x: 4249
+        y: 8981
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2767008448ba2bef0800000000000000
+      internalID: -93824057589336462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_12"
+      rect:
+        serializedVersion: 2
+        x: 5017
+        y: 8981
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58a165bb018bbb430800000000000000
+      internalID: 3799833092619115141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_13"
+      rect:
+        serializedVersion: 2
+        x: 5041
+        y: 9417
+        width: 630
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 699ce717b265e1470800000000000000
+      internalID: 8367219902288677270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_14"
+      rect:
+        serializedVersion: 2
+        x: 5365
+        y: 8981
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93b60afb5e32eef70800000000000000
+      internalID: 9218344956943428409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_15"
+      rect:
+        serializedVersion: 2
+        x: 6137
+        y: 8981
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3111210cb98829120800000000000000
+      internalID: 2419146152375095571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_16"
+      rect:
+        serializedVersion: 2
+        x: 6161
+        y: 9417
+        width: 627
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9497d3d06ea72da80800000000000000
+      internalID: -8443551222883059383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_17"
+      rect:
+        serializedVersion: 2
+        x: 6485
+        y: 8981
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a47193ce85a6c17c0800000000000000
+      internalID: -4099284630661163190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_18"
+      rect:
+        serializedVersion: 2
+        x: 7253
+        y: 8981
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 061215aa013558a50800000000000000
+      internalID: 6522710966358057312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_19"
+      rect:
+        serializedVersion: 2
+        x: 7277
+        y: 9417
+        width: 626
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a59cefd7e74d86000800000000000000
+      internalID: 29507037322725722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_20"
+      rect:
+        serializedVersion: 2
+        x: 7601
+        y: 8981
+        width: 323
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8166a0c1bb0fdc7d0800000000000000
+      internalID: -2896394298909366760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_21"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8137
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76ecc4bdb6bbe69b0800000000000000
+      internalID: -5084920857339572633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_22"
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 8573
+        width: 629
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59783483f953e2d30800000000000000
+      internalID: 4408520043202316181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_23"
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 8137
+        width: 329
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa56215078744da50800000000000000
+      internalID: 6544934803707422122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_24"
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 8137
+        width: 328
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cf36b70d80c27090800000000000000
+      internalID: -8038150672950607930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_25"
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 8573
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43b95cb688c09ea50800000000000000
+      internalID: 6550780913050295092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_26"
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 8137
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7df73385ea74dc5e0800000000000000
+      internalID: -1887773854668718121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_27"
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 8137
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c66d04585c38ad5e0800000000000000
+      internalID: -1884048609733716372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_28"
+      rect:
+        serializedVersion: 2
+        x: 2253
+        y: 8573
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3858a0ea53151a70800000000000000
+      internalID: 8796958728175245372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_29"
+      rect:
+        serializedVersion: 2
+        x: 2577
+        y: 8137
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c2bf2fa4f2770df0800000000000000
+      internalID: -214076062040083770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_30"
+      rect:
+        serializedVersion: 2
+        x: 3349
+        y: 8137
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7830d53e36ddc350800000000000000
+      internalID: 6038718238052857981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_31"
+      rect:
+        serializedVersion: 2
+        x: 3373
+        y: 8573
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efbad6c0c8158a520800000000000000
+      internalID: 2713508437436509182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_32"
+      rect:
+        serializedVersion: 2
+        x: 3697
+        y: 8137
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f55d005c4d7812060800000000000000
+      internalID: 6926967049780516191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_33"
+      rect:
+        serializedVersion: 2
+        x: 4465
+        y: 8137
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f96c8b014887b310800000000000000
+      internalID: 1420754020406684148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_34"
+      rect:
+        serializedVersion: 2
+        x: 4489
+        y: 8573
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6a617d9473126e60800000000000000
+      internalID: 7953941283468307051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_35"
+      rect:
+        serializedVersion: 2
+        x: 4813
+        y: 8137
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25e8e898bc3172fc0800000000000000
+      internalID: -3519822818859643310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_36"
+      rect:
+        serializedVersion: 2
+        x: 5585
+        y: 8137
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e9f0020ec83dc380800000000000000
+      internalID: -8949434427067270684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_37"
+      rect:
+        serializedVersion: 2
+        x: 5609
+        y: 8573
+        width: 626
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3a76a80802e1adf0800000000000000
+      internalID: -170606786730624454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_38"
+      rect:
+        serializedVersion: 2
+        x: 5932
+        y: 8137
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0279ff9e2039ec880800000000000000
+      internalID: -8588765798623897824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_39"
+      rect:
+        serializedVersion: 2
+        x: 6701
+        y: 8137
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4abbd8633b89ee70800000000000000
+      internalID: 9144993571271326283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_40"
+      rect:
+        serializedVersion: 2
+        x: 6724
+        y: 8573
+        width: 627
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 420ee4c697382af40800000000000000
+      internalID: 5738293432754823204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_41"
+      rect:
+        serializedVersion: 2
+        x: 7048
+        y: 8137
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce836ec8306d7f6a0800000000000000
+      internalID: -6415423833428838164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_42"
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 7293
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 451c2e077bd55da70800000000000000
+      internalID: 8851083685120885076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_43"
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 7729
+        width: 626
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea11a958ad77c9aa0800000000000000
+      internalID: -6152911210466897490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_44"
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 7293
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 202401ccc9470ea80800000000000000
+      internalID: -8439617484904971774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_45"
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 7293
+        width: 329
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03c0d284544659fe0800000000000000
+      internalID: -1182929078388454352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_46"
+      rect:
+        serializedVersion: 2
+        x: 1689
+        y: 7729
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8e9a94f3c49a59d0800000000000000
+      internalID: -2784749850231923060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_47"
+      rect:
+        serializedVersion: 2
+        x: 2013
+        y: 7293
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66bcefac51dc24d10800000000000000
+      internalID: 2108473069046516582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_48"
+      rect:
+        serializedVersion: 2
+        x: 2784
+        y: 7293
+        width: 328
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29382f6a39f29a4b0800000000000000
+      internalID: -5428755564610813038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_49"
+      rect:
+        serializedVersion: 2
+        x: 2805
+        y: 7729
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45c58070bff397780800000000000000
+      internalID: -8684840059019961260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_50"
+      rect:
+        serializedVersion: 2
+        x: 3129
+        y: 7293
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7b07abc031a02260800000000000000
+      internalID: 7070828645918903163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_51"
+      rect:
+        serializedVersion: 2
+        x: 3901
+        y: 7293
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45ff08638d99455f0800000000000000
+      internalID: -768820482467102892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_52"
+      rect:
+        serializedVersion: 2
+        x: 3925
+        y: 7729
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227a1d3aec42afee0800000000000000
+      internalID: -1226627478574749918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_53"
+      rect:
+        serializedVersion: 2
+        x: 4249
+        y: 7293
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02c761eea47d37700800000000000000
+      internalID: 537009497409223712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_54"
+      rect:
+        serializedVersion: 2
+        x: 5017
+        y: 7293
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49bbc5ce58144cd10800000000000000
+      internalID: 2144911365987154836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_55"
+      rect:
+        serializedVersion: 2
+        x: 5041
+        y: 7729
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f74e49c4b39631f0800000000000000
+      internalID: -1065501857145796617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_56"
+      rect:
+        serializedVersion: 2
+        x: 5365
+        y: 7293
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cad97999410f4c100800000000000000
+      internalID: 127490660740079020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_57"
+      rect:
+        serializedVersion: 2
+        x: 6137
+        y: 7293
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a44a5d5a669903f60800000000000000
+      internalID: 8012072403240068170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_58"
+      rect:
+        serializedVersion: 2
+        x: 6161
+        y: 7729
+        width: 627
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c767663f207911e20800000000000000
+      internalID: 3319600439278073468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_59"
+      rect:
+        serializedVersion: 2
+        x: 6485
+        y: 7293
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f98a7e7ad6eb6470800000000000000
+      internalID: 8389052557006899704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_60"
+      rect:
+        serializedVersion: 2
+        x: 7253
+        y: 7293
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7957e4ed61c797250800000000000000
+      internalID: 5942917620952888727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_61"
+      rect:
+        serializedVersion: 2
+        x: 7277
+        y: 7729
+        width: 626
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32cf0626ea79b63a0800000000000000
+      internalID: -6671071647788631005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_62"
+      rect:
+        serializedVersion: 2
+        x: 7601
+        y: 7293
+        width: 323
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1e58e67894407140800000000000000
+      internalID: 4715344231477567006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_63"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6445
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfed3446753985ba0800000000000000
+      internalID: -6099963691719729412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_64"
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 6881
+        width: 628
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f795398d753e61100800000000000000
+      internalID: 78500009960757631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_65"
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 6445
+        width: 329
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b0623d634f271b30800000000000000
+      internalID: 4257923939343425717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_66"
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 6445
+        width: 328
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80dfd97885cc4b260800000000000000
+      internalID: 7112534392129322248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_67"
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 6881
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8173f8bbb329e39f0800000000000000
+      internalID: -486790924461983976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_68"
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 6445
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93760a9c836bd3130800000000000000
+      internalID: 3548192436454975289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_69"
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 6445
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a3917b85714dd670800000000000000
+      internalID: 8565074039435006885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_70"
+      rect:
+        serializedVersion: 2
+        x: 2253
+        y: 6881
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b9b3d7f636db7010800000000000000
+      internalID: 1187778458316683705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_71"
+      rect:
+        serializedVersion: 2
+        x: 2577
+        y: 6445
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f37ddb0cafb88aa0800000000000000
+      internalID: -6158461744774810635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_72"
+      rect:
+        serializedVersion: 2
+        x: 3349
+        y: 6445
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fb49e007174fded0800000000000000
+      internalID: -2387111113357964297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_73"
+      rect:
+        serializedVersion: 2
+        x: 3373
+        y: 6881
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a1b987aac58641d0800000000000000
+      internalID: -3366856565972160090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_74"
+      rect:
+        serializedVersion: 2
+        x: 3697
+        y: 6445
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29936123c1dbc3c90800000000000000
+      internalID: -7188662976393102958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_75"
+      rect:
+        serializedVersion: 2
+        x: 4465
+        y: 6445
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3327a1533bcac2ad0800000000000000
+      internalID: -2725613788775943629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_76"
+      rect:
+        serializedVersion: 2
+        x: 4489
+        y: 6881
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 407801ad6f57101c0800000000000000
+      internalID: -4539217246331828476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_77"
+      rect:
+        serializedVersion: 2
+        x: 4813
+        y: 6445
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfce62a89d36f1d70800000000000000
+      internalID: 9016034764995882236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_78"
+      rect:
+        serializedVersion: 2
+        x: 5585
+        y: 6445
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e61e7d4a668b713a0800000000000000
+      internalID: -6694679570071166610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_79"
+      rect:
+        serializedVersion: 2
+        x: 5609
+        y: 6881
+        width: 626
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0082c0449a7ee5340800000000000000
+      internalID: 4854572162529110016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_80"
+      rect:
+        serializedVersion: 2
+        x: 5932
+        y: 6445
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c13212231a17333d0800000000000000
+      internalID: -3228111570749807844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_81"
+      rect:
+        serializedVersion: 2
+        x: 6701
+        y: 6445
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c04b33e135c678ea0800000000000000
+      internalID: -5870604485009361908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_82"
+      rect:
+        serializedVersion: 2
+        x: 6724
+        y: 6881
+        width: 627
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e454d15f2e69e080800000000000000
+      internalID: -9157667217765804832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_83"
+      rect:
+        serializedVersion: 2
+        x: 7048
+        y: 6445
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4649fc0d03ed80800800000000000000
+      internalID: 578956853360170084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_84"
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 5757
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6543d9886b6840910800000000000000
+      internalID: 1802713869389214806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_85"
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 6193
+        width: 627
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32d76a729ab732dd0800000000000000
+      internalID: -2512028200697692893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_86"
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 5757
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b834c3e5a0a34c670800000000000000
+      internalID: 8558029008115876747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_87"
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 5757
+        width: 329
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8f0e353f30ebe870800000000000000
+      internalID: 8713304466159177614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_88"
+      rect:
+        serializedVersion: 2
+        x: 1689
+        y: 6193
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae3faa6fcbd95f760800000000000000
+      internalID: 7491066990118499306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_89"
+      rect:
+        serializedVersion: 2
+        x: 2013
+        y: 5757
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eb0999963ff70890800000000000000
+      internalID: -7491738845137269792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_90"
+      rect:
+        serializedVersion: 2
+        x: 2784
+        y: 5757
+        width: 328
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 119631de1a7db2af0800000000000000
+      internalID: -420005049761830639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_91"
+      rect:
+        serializedVersion: 2
+        x: 2805
+        y: 6193
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47d941cedf5656bf0800000000000000
+      internalID: -331746856279958156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_92"
+      rect:
+        serializedVersion: 2
+        x: 3129
+        y: 5757
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58cb839c78d601900800000000000000
+      internalID: 653142375932673157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_93"
+      rect:
+        serializedVersion: 2
+        x: 3901
+        y: 5757
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abb57acd901fcea70800000000000000
+      internalID: 8857719591789878202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_94"
+      rect:
+        serializedVersion: 2
+        x: 3925
+        y: 6193
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce696740dd22a0cc0800000000000000
+      internalID: -3744141807547148564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_95"
+      rect:
+        serializedVersion: 2
+        x: 4249
+        y: 5757
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00085f971d1054bf0800000000000000
+      internalID: -340864197590679552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_96"
+      rect:
+        serializedVersion: 2
+        x: 5017
+        y: 5757
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f588efba3b2604720800000000000000
+      internalID: 2828369089812924511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_97"
+      rect:
+        serializedVersion: 2
+        x: 5041
+        y: 6193
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea7b59968e22f6630800000000000000
+      internalID: 3922392182062167982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_98"
+      rect:
+        serializedVersion: 2
+        x: 5365
+        y: 5757
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86d8c6062b595da30800000000000000
+      internalID: 4239459217593634152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_99"
+      rect:
+        serializedVersion: 2
+        x: 6137
+        y: 5757
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb2c5478d8b11a4b0800000000000000
+      internalID: -5431029380958272833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_100"
+      rect:
+        serializedVersion: 2
+        x: 6161
+        y: 6193
+        width: 627
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc4a3ef8179156160800000000000000
+      internalID: 7018043569862845645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_101"
+      rect:
+        serializedVersion: 2
+        x: 6485
+        y: 5757
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fed9a1bdd298ad9c0800000000000000
+      internalID: -3901655297120625169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_102"
+      rect:
+        serializedVersion: 2
+        x: 7253
+        y: 5757
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d722cc98b946c95e0800000000000000
+      internalID: -1901534323462626691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_103"
+      rect:
+        serializedVersion: 2
+        x: 7277
+        y: 6193
+        width: 626
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faaf43c69513ed240800000000000000
+      internalID: 4818342911470271151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_104"
+      rect:
+        serializedVersion: 2
+        x: 7601
+        y: 5757
+        width: 323
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbc322232c2d486f0800000000000000
+      internalID: -683189511946879813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_105"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4913
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1fa4de5a7d740560800000000000000
+      internalID: 7279080862268043038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_106"
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 5349
+        width: 629
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abdc7dec11bb47b80800000000000000
+      internalID: -8397881719980044870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_107"
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 4913
+        width: 329
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 682058b2b8c3f7020800000000000000
+      internalID: 2341656899684205190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_108"
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 4913
+        width: 328
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bf1ed718665ee4c0800000000000000
+      internalID: -4256369592741519440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_109"
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 5349
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 901961a47631dcdc0800000000000000
+      internalID: -3617213591363088119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_110"
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 4913
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54cc221d3bab38430800000000000000
+      internalID: 3784073393391979589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_111"
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 4913
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a18a79c5b45fdcb0800000000000000
+      internalID: -4837054335026560603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_112"
+      rect:
+        serializedVersion: 2
+        x: 2253
+        y: 5349
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28cc61cc0ee08d160800000000000000
+      internalID: 7050401575308020866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_113"
+      rect:
+        serializedVersion: 2
+        x: 2577
+        y: 4913
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dc2890e5191f0050800000000000000
+      internalID: 5768857229437971668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_114"
+      rect:
+        serializedVersion: 2
+        x: 3349
+        y: 4913
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca4fce4483a21a900800000000000000
+      internalID: 693882238754682028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_115"
+      rect:
+        serializedVersion: 2
+        x: 3373
+        y: 5349
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cd079ab31a78c280800000000000000
+      internalID: -9022827628283359799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_116"
+      rect:
+        serializedVersion: 2
+        x: 3697
+        y: 4913
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 723a4657b1a8ddca0800000000000000
+      internalID: -5990480078794611929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_117"
+      rect:
+        serializedVersion: 2
+        x: 4465
+        y: 4913
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb75b244a867bdd90800000000000000
+      internalID: -7071928453633976389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_118"
+      rect:
+        serializedVersion: 2
+        x: 4489
+        y: 5349
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b88a14bd56948e0800000000000000
+      internalID: -1708722591236584676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_119"
+      rect:
+        serializedVersion: 2
+        x: 4813
+        y: 4913
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aaf6928a63e13c80800000000000000
+      internalID: -8344638587943847264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_120"
+      rect:
+        serializedVersion: 2
+        x: 5585
+        y: 4913
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 857b59df5454c74f0800000000000000
+      internalID: -829712064433506472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_121"
+      rect:
+        serializedVersion: 2
+        x: 5609
+        y: 5349
+        width: 626
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46d3a3d03a9d029b0800000000000000
+      internalID: -5106842683113325212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_122"
+      rect:
+        serializedVersion: 2
+        x: 5932
+        y: 4913
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71459906aeb69df70800000000000000
+      internalID: 9212513167150240791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_123"
+      rect:
+        serializedVersion: 2
+        x: 6701
+        y: 4913
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92d3fff47c88b0ee0800000000000000
+      internalID: -1293790078316888791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_124"
+      rect:
+        serializedVersion: 2
+        x: 6724
+        y: 5349
+        width: 627
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5545a06c96860e1b0800000000000000
+      internalID: -5629384730709699499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_125"
+      rect:
+        serializedVersion: 2
+        x: 7048
+        y: 4913
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad757749ed3f88be0800000000000000
+      internalID: -1474660740664698918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_126"
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 4069
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a8f0f070c9b1d730800000000000000
+      internalID: 4022200178398263464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_127"
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 4505
+        width: 626
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c1e9e7c177ca3db0800000000000000
+      internalID: -4811313960392728123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_128"
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 4069
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9707159e9509f44f0800000000000000
+      internalID: -842295889454075783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_129"
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 4069
+        width: 329
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e9b4871c1a7d38a0800000000000000
+      internalID: -6323764040686061082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_130"
+      rect:
+        serializedVersion: 2
+        x: 1689
+        y: 4505
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac31967241f1f8df0800000000000000
+      internalID: -175887689023155254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_131"
+      rect:
+        serializedVersion: 2
+        x: 2013
+        y: 4069
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62d57f3b538867c50800000000000000
+      internalID: 6662662462975204646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_132"
+      rect:
+        serializedVersion: 2
+        x: 2784
+        y: 4069
+        width: 328
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a69750c85b938de0800000000000000
+      internalID: -1332050259285141851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_133"
+      rect:
+        serializedVersion: 2
+        x: 2805
+        y: 4505
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffbac5b166b1d4020800000000000000
+      internalID: 2327546707780086783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_134"
+      rect:
+        serializedVersion: 2
+        x: 3129
+        y: 4069
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3786c15e5fe6cfe0800000000000000
+      internalID: -1168983864878135489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_135"
+      rect:
+        serializedVersion: 2
+        x: 3901
+        y: 4069
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6c07873d2cc9c1b0800000000000000
+      internalID: -5635748964100273042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_136"
+      rect:
+        serializedVersion: 2
+        x: 3925
+        y: 4505
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b4b3db20b97c1e80800000000000000
+      internalID: -8206550623419386703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_137"
+      rect:
+        serializedVersion: 2
+        x: 4249
+        y: 4069
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12a9ebeceeed3c3f0800000000000000
+      internalID: -881615984782304735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_138"
+      rect:
+        serializedVersion: 2
+        x: 5017
+        y: 4069
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07f82f4774cf14100800000000000000
+      internalID: 90630851359051632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_139"
+      rect:
+        serializedVersion: 2
+        x: 5041
+        y: 4505
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79c08e158881ae980800000000000000
+      internalID: -8508961572194349929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_140"
+      rect:
+        serializedVersion: 2
+        x: 5365
+        y: 4069
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c77a092d120fc2d40800000000000000
+      internalID: 5561083667953002364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_141"
+      rect:
+        serializedVersion: 2
+        x: 6137
+        y: 4069
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 088a2d294b2be8dd0800000000000000
+      internalID: -2481849856007427968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_142"
+      rect:
+        serializedVersion: 2
+        x: 6161
+        y: 4505
+        width: 627
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f536c4bde3bb87e80800000000000000
+      internalID: -8180582844476923041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_143"
+      rect:
+        serializedVersion: 2
+        x: 6485
+        y: 4069
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b7b2ca89b88e8540800000000000000
+      internalID: 5012093765788284856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_144"
+      rect:
+        serializedVersion: 2
+        x: 7253
+        y: 4069
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbd79a490c60ed540800000000000000
+      internalID: 5034468857644416447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_145"
+      rect:
+        serializedVersion: 2
+        x: 7277
+        y: 4505
+        width: 626
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2c5efbbd033f45e0800000000000000
+      internalID: -1923262381782311889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_146"
+      rect:
+        serializedVersion: 2
+        x: 7601
+        y: 4069
+        width: 323
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f66948ef7c1b09a40800000000000000
+      internalID: 5372989827979712111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_147"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3221
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36da0ef29cce2bde0800000000000000
+      internalID: -1318731392030298781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_148"
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 3657
+        width: 628
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d643de35862f5680800000000000000
+      internalID: -8764243996113156400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_149"
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 3221
+        width: 329
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f46afb62efc408cc0800000000000000
+      internalID: -3710881438497790385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_150"
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 3221
+        width: 328
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48c3daa6f27711ab0800000000000000
+      internalID: -5039115462513967996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_151"
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 3657
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4621dddfcc22ec760800000000000000
+      internalID: 7479954294936769124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_152"
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 3221
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f41f6aafa7625ec0800000000000000
+      internalID: -3579684749629778702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_153"
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 3221
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b3fd9dc4e9365bb0800000000000000
+      internalID: -4947703485754903630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_154"
+      rect:
+        serializedVersion: 2
+        x: 2253
+        y: 3657
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc74536b88c3d6680800000000000000
+      internalID: -8760279142295582771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_155"
+      rect:
+        serializedVersion: 2
+        x: 2577
+        y: 3221
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14ee6b4010dd8de20800000000000000
+      internalID: 3375690917157989953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_156"
+      rect:
+        serializedVersion: 2
+        x: 3349
+        y: 3221
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e11f9bc5f4c5c23f0800000000000000
+      internalID: -924262327589932770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_157"
+      rect:
+        serializedVersion: 2
+        x: 3373
+        y: 3657
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95564741c681731f0800000000000000
+      internalID: -1065355934371125927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_158"
+      rect:
+        serializedVersion: 2
+        x: 3697
+        y: 3221
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17b3473410ad7da60800000000000000
+      internalID: 7698861786974665585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_159"
+      rect:
+        serializedVersion: 2
+        x: 4465
+        y: 3221
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61c29999c103c6ee0800000000000000
+      internalID: -1266584495803782122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_160"
+      rect:
+        serializedVersion: 2
+        x: 4489
+        y: 3657
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b33065167dac090d0800000000000000
+      internalID: -3418009090774400197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_161"
+      rect:
+        serializedVersion: 2
+        x: 4813
+        y: 3221
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 216165ed58f1ac5b0800000000000000
+      internalID: -5347426947727747566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_162"
+      rect:
+        serializedVersion: 2
+        x: 5585
+        y: 3221
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85afff91229f2dc80800000000000000
+      internalID: -8299297238429992360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_163"
+      rect:
+        serializedVersion: 2
+        x: 5609
+        y: 3657
+        width: 626
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 131848a5a07457ad0800000000000000
+      internalID: -2705177891372236495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_164"
+      rect:
+        serializedVersion: 2
+        x: 5932
+        y: 3221
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df430a4ac57c9cf80800000000000000
+      internalID: -8085712455254133507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_165"
+      rect:
+        serializedVersion: 2
+        x: 6701
+        y: 3221
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ae26c0e15cefde40800000000000000
+      internalID: 5683521091172445864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_166"
+      rect:
+        serializedVersion: 2
+        x: 6724
+        y: 3657
+        width: 627
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f747693ea588aa610800000000000000
+      internalID: 1633267738821948543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_167"
+      rect:
+        serializedVersion: 2
+        x: 7048
+        y: 3221
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81109da335dad6190800000000000000
+      internalID: -7967521592767348456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_168"
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 2533
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bcab7d3247a01d30800000000000000
+      internalID: 4400200738882170039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_169"
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 2969
+        width: 627
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c8e20657570a4050800000000000000
+      internalID: 5785444742997403847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_170"
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 2533
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5edeb9a4b8773d40800000000000000
+      internalID: 5564048581976841823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_171"
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 2533
+        width: 329
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc0196d3f27dcbea0800000000000000
+      internalID: -5855568817594756917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_172"
+      rect:
+        serializedVersion: 2
+        x: 1689
+        y: 2969
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 685d7a210efc13f00800000000000000
+      internalID: 1094884745720354182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_173"
+      rect:
+        serializedVersion: 2
+        x: 2013
+        y: 2533
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bd0cc11ae0636050800000000000000
+      internalID: 5792580104165789106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_174"
+      rect:
+        serializedVersion: 2
+        x: 2784
+        y: 2533
+        width: 328
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a47e0597532f0d600800000000000000
+      internalID: 491158670865917770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_175"
+      rect:
+        serializedVersion: 2
+        x: 2805
+        y: 2969
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8b1c8393ab40d6a0800000000000000
+      internalID: -6426553502330512502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_176"
+      rect:
+        serializedVersion: 2
+        x: 3129
+        y: 2533
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b849ae9b342f95120800000000000000
+      internalID: 2403218248874759307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_177"
+      rect:
+        serializedVersion: 2
+        x: 3901
+        y: 2533
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97f0ad962b4d90d20800000000000000
+      internalID: 3245358869242318713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_178"
+      rect:
+        serializedVersion: 2
+        x: 3925
+        y: 2969
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d42a20efaf11a9eb0800000000000000
+      internalID: -4712434290388721075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_179"
+      rect:
+        serializedVersion: 2
+        x: 4249
+        y: 2533
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 469341b8b22fa98a0800000000000000
+      internalID: -6297454860093343388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_180"
+      rect:
+        serializedVersion: 2
+        x: 5017
+        y: 2533
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86215f6357b24f110800000000000000
+      internalID: 1293706775395373672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_181"
+      rect:
+        serializedVersion: 2
+        x: 5041
+        y: 2969
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44e7ecc9675063450800000000000000
+      internalID: 6068043554923380292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_182"
+      rect:
+        serializedVersion: 2
+        x: 5365
+        y: 2533
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 194ad9eca11192350800000000000000
+      internalID: 5992339586026415249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_183"
+      rect:
+        serializedVersion: 2
+        x: 6137
+        y: 2533
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0d8c33008a8123a0800000000000000
+      internalID: -6691915288881099508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_184"
+      rect:
+        serializedVersion: 2
+        x: 6161
+        y: 2969
+        width: 627
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5886bae210d96de0800000000000000
+      internalID: -1339310634500192164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_185"
+      rect:
+        serializedVersion: 2
+        x: 6485
+        y: 2533
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbe6af546c0820e20800000000000000
+      internalID: 3315353864764026556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_186"
+      rect:
+        serializedVersion: 2
+        x: 7253
+        y: 2533
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 721cd73297cfb5a80800000000000000
+      internalID: -8476904276378140377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_187"
+      rect:
+        serializedVersion: 2
+        x: 7277
+        y: 2969
+        width: 626
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b00b6dd4baac81b0800000000000000
+      internalID: -5652955738471202635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_188"
+      rect:
+        serializedVersion: 2
+        x: 7601
+        y: 2533
+        width: 323
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76dd622a9dbf2d5a0800000000000000
+      internalID: -6497854400195273369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_189"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1689
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2830f24740000a340800000000000000
+      internalID: 4872894815943984002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_190"
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 2125
+        width: 629
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a397a6a3f1274ac90800000000000000
+      internalID: -7159472029162636998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_191"
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 1689
+        width: 329
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 478a0eacc99199b50800000000000000
+      internalID: 6600334890097485940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_192"
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 1689
+        width: 328
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acf33c2996354c890800000000000000
+      internalID: -7438728971610275894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_193"
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 2125
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 432047bdc4bfbdf40800000000000000
+      internalID: 5754469256413839924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_194"
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 1689
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 231ea5527a7f3d850800000000000000
+      internalID: 6400731792681918770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_195"
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 1689
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec7bb63ee27399e0800000000000000
+      internalID: -1615821473849836312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_196"
+      rect:
+        serializedVersion: 2
+        x: 2253
+        y: 2125
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4174cce7c762f29e0800000000000000
+      internalID: -1644053022821824748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_197"
+      rect:
+        serializedVersion: 2
+        x: 2577
+        y: 1689
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 243a3676157151a70800000000000000
+      internalID: 8796963085532504898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_198"
+      rect:
+        serializedVersion: 2
+        x: 3349
+        y: 1689
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8df1f7cd6fd06510800000000000000
+      internalID: 1540476735159664012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_199"
+      rect:
+        serializedVersion: 2
+        x: 3373
+        y: 2125
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3a351bde03a21660800000000000000
+      internalID: 7355120425649912380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_200"
+      rect:
+        serializedVersion: 2
+        x: 3697
+        y: 1689
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4afd59fdadb2892c0800000000000000
+      internalID: -4424738414837506140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_201"
+      rect:
+        serializedVersion: 2
+        x: 4465
+        y: 1689
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f25c7e6eb13f14c0800000000000000
+      internalID: -4314675224030457095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_202"
+      rect:
+        serializedVersion: 2
+        x: 4489
+        y: 2125
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d9eb7ba9ad26b500800000000000000
+      internalID: 411566622700726740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_203"
+      rect:
+        serializedVersion: 2
+        x: 4813
+        y: 1689
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2c264ec148a987c0800000000000000
+      internalID: -4068535787765486548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_204"
+      rect:
+        serializedVersion: 2
+        x: 5585
+        y: 1689
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d258c3a202cf3c8f0800000000000000
+      internalID: -521295916767083219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_205"
+      rect:
+        serializedVersion: 2
+        x: 5609
+        y: 2125
+        width: 626
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10766d04b4d2bd2e0800000000000000
+      internalID: -2100035000004614399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_206"
+      rect:
+        serializedVersion: 2
+        x: 5932
+        y: 1689
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05dd2ea63c07ee7c0800000000000000
+      internalID: -4040167831090569904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_207"
+      rect:
+        serializedVersion: 2
+        x: 6701
+        y: 1689
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c20644809ac67ff0800000000000000
+      internalID: -38620824742788412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_208"
+      rect:
+        serializedVersion: 2
+        x: 6724
+        y: 2125
+        width: 627
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 144db9005f63950b0800000000000000
+      internalID: -5739495824201886655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_209"
+      rect:
+        serializedVersion: 2
+        x: 7048
+        y: 1689
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21a6f41ea028cba70800000000000000
+      internalID: 8844086751490173458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_210"
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 845
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db3976bb110ab2880800000000000000
+      internalID: -8634631862533778499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_211"
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 1281
+        width: 626
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af006940404bbe6f0800000000000000
+      internalID: -654231391502466822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_212"
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 845
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f57563eaf9d0d3ad0800000000000000
+      internalID: -2721003620388153505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_213"
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 845
+        width: 329
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e88bc615f9cbd80800000000000000
+      internalID: -8233530846674907614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_214"
+      rect:
+        serializedVersion: 2
+        x: 1689
+        y: 1281
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dec95ea275ec5a20800000000000000
+      internalID: 3052566928164507353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_215"
+      rect:
+        serializedVersion: 2
+        x: 2013
+        y: 845
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09cb52f023aceaf30800000000000000
+      internalID: 4588827386688421008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_216"
+      rect:
+        serializedVersion: 2
+        x: 2784
+        y: 845
+        width: 328
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4526a5cf5eb3571c0800000000000000
+      internalID: -4506629993146981804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_217"
+      rect:
+        serializedVersion: 2
+        x: 2805
+        y: 1281
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bd6f8e6ac0e74da0800000000000000
+      internalID: -5960548421758653008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_218"
+      rect:
+        serializedVersion: 2
+        x: 3129
+        y: 845
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56ba1e159317927a0800000000000000
+      internalID: -6401460904329630875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_219"
+      rect:
+        serializedVersion: 2
+        x: 3901
+        y: 845
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a16668ca7471bdd0800000000000000
+      internalID: -2472066649752706650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_220"
+      rect:
+        serializedVersion: 2
+        x: 3925
+        y: 1281
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a307485e92d7b530800000000000000
+      internalID: 3870793982275945379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_221"
+      rect:
+        serializedVersion: 2
+        x: 4249
+        y: 845
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfe9c86648a915120800000000000000
+      internalID: 2400869969812037371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_222"
+      rect:
+        serializedVersion: 2
+        x: 5017
+        y: 845
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 680c6b68f24445940800000000000000
+      internalID: 5283923233726709894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_223"
+      rect:
+        serializedVersion: 2
+        x: 5041
+        y: 1281
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff0e20621d0f24910800000000000000
+      internalID: 1820281980487655679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_224"
+      rect:
+        serializedVersion: 2
+        x: 5365
+        y: 845
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45fac0bb867e43760800000000000000
+      internalID: 7436823321696317268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_225"
+      rect:
+        serializedVersion: 2
+        x: 6137
+        y: 845
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2978c4cbaa6950e70800000000000000
+      internalID: 9080829883710211986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_226"
+      rect:
+        serializedVersion: 2
+        x: 6161
+        y: 1281
+        width: 627
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c872e7a95f369ad0800000000000000
+      internalID: -2695897672633386813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_227"
+      rect:
+        serializedVersion: 2
+        x: 6485
+        y: 845
+        width: 327
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ffbc65138b6494e0800000000000000
+      internalID: -1975836125764468751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_228"
+      rect:
+        serializedVersion: 2
+        x: 7253
+        y: 845
+        width: 330
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 613b0bdddf3ed56b0800000000000000
+      internalID: -5305834106487000298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_229"
+      rect:
+        serializedVersion: 2
+        x: 7277
+        y: 1281
+        width: 626
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2f11cc7271785850800000000000000
+      internalID: 6365962809821437740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_230"
+      rect:
+        serializedVersion: 2
+        x: 7601
+        y: 845
+        width: 323
+        height: 534
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a4869cc68718c920800000000000000
+      internalID: 3010682218622649513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_231"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 327
+        height: 531
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da76def074cc61440800000000000000
+      internalID: 4906333449648695213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_232"
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 433
+        width: 628
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f3fa0e75a9bfb130800000000000000
+      internalID: 3584787948845593590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_233"
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 0
+        width: 329
+        height: 531
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acbc272abab6e6a60800000000000000
+      internalID: 7669185600367545290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_234"
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 0
+        width: 328
+        height: 531
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50febb603526b1070800000000000000
+      internalID: 8078158465353903877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_235"
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 433
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af1d19003b84ab5d0800000000000000
+      internalID: -3046042264316816902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_236"
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 0
+        width: 330
+        height: 531
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bee56edd79b86d5f0800000000000000
+      internalID: -732244405021942037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_237"
+      rect:
+        serializedVersion: 2
+        x: 2232
+        y: 0
+        width: 327
+        height: 531
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc9e81e0d42143ca0800000000000000
+      internalID: -6038181078238697009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_238"
+      rect:
+        serializedVersion: 2
+        x: 2253
+        y: 433
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 515d4248e6a370ce0800000000000000
+      internalID: -1439117309583764203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_239"
+      rect:
+        serializedVersion: 2
+        x: 2577
+        y: 0
+        width: 330
+        height: 531
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b2a6a346eaea26a0800000000000000
+      internalID: -6473103239693294928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_240"
+      rect:
+        serializedVersion: 2
+        x: 3349
+        y: 0
+        width: 330
+        height: 531
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a22b09578200f9e0800000000000000
+      internalID: -1589767888124042592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_241"
+      rect:
+        serializedVersion: 2
+        x: 3373
+        y: 433
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2f58eb12f8100080800000000000000
+      internalID: -9223344608725410001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_242"
+      rect:
+        serializedVersion: 2
+        x: 3697
+        y: 0
+        width: 330
+        height: 531
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87a55d6c188bf79e0800000000000000
+      internalID: -1621374473303926152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_243"
+      rect:
+        serializedVersion: 2
+        x: 4465
+        y: 0
+        width: 330
+        height: 531
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 628ce09c1c519f0b0800000000000000
+      internalID: -5694496331787220954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_244"
+      rect:
+        serializedVersion: 2
+        x: 4489
+        y: 433
+        width: 630
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58abde730114ea2e0800000000000000
+      internalID: -2112679637276575099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_245"
+      rect:
+        serializedVersion: 2
+        x: 4813
+        y: 0
+        width: 327
+        height: 531
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82707855bc74a6660800000000000000
+      internalID: 7379789878038824744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_246"
+      rect:
+        serializedVersion: 2
+        x: 5585
+        y: 0
+        width: 330
+        height: 531
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fae2616b2b3b867c0800000000000000
+      internalID: -4077811882443526481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_247"
+      rect:
+        serializedVersion: 2
+        x: 5609
+        y: 433
+        width: 626
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 407eb9b4043f1aa90800000000000000
+      internalID: -7304289663146268924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_248"
+      rect:
+        serializedVersion: 2
+        x: 5932
+        y: 0
+        width: 327
+        height: 531
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cedd82af6125cae0800000000000000
+      internalID: -1529779735070122296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_249"
+      rect:
+        serializedVersion: 2
+        x: 6701
+        y: 0
+        width: 330
+        height: 531
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f71689171ffd4160800000000000000
+      internalID: 7011540669563279344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_250"
+      rect:
+        serializedVersion: 2
+        x: 6724
+        y: 433
+        width: 627
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03d1a4cb336364c00800000000000000
+      internalID: 884453972655086896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2705-Paste-art-work-here 1_251"
+      rect:
+        serializedVersion: 2
+        x: 7048
+        y: 0
+        width: 327
+        height: 531
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 516ee3ed9c83339d0800000000000000
+      internalID: -2795828503998700011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      "\u2705-Paste-art-work-here 1_0": 8363426233576232124
+      "\u2705-Paste-art-work-here 1_1": 7869653232731568702
+      "\u2705-Paste-art-work-here 1_10": 557246956117942858
+      "\u2705-Paste-art-work-here 1_100": 7018043569862845645
+      "\u2705-Paste-art-work-here 1_101": -3901655297120625169
+      "\u2705-Paste-art-work-here 1_102": -1901534323462626691
+      "\u2705-Paste-art-work-here 1_103": 4818342911470271151
+      "\u2705-Paste-art-work-here 1_104": -683189511946879813
+      "\u2705-Paste-art-work-here 1_105": 7279080862268043038
+      "\u2705-Paste-art-work-here 1_106": -8397881719980044870
+      "\u2705-Paste-art-work-here 1_107": 2341656899684205190
+      "\u2705-Paste-art-work-here 1_108": -4256369592741519440
+      "\u2705-Paste-art-work-here 1_109": -3617213591363088119
+      "\u2705-Paste-art-work-here 1_11": -93824057589336462
+      "\u2705-Paste-art-work-here 1_110": 3784073393391979589
+      "\u2705-Paste-art-work-here 1_111": -4837054335026560603
+      "\u2705-Paste-art-work-here 1_112": 7050401575308020866
+      "\u2705-Paste-art-work-here 1_113": 5768857229437971668
+      "\u2705-Paste-art-work-here 1_114": 693882238754682028
+      "\u2705-Paste-art-work-here 1_115": -9022827628283359799
+      "\u2705-Paste-art-work-here 1_116": -5990480078794611929
+      "\u2705-Paste-art-work-here 1_117": -7071928453633976389
+      "\u2705-Paste-art-work-here 1_118": -1708722591236584676
+      "\u2705-Paste-art-work-here 1_119": -8344638587943847264
+      "\u2705-Paste-art-work-here 1_12": 3799833092619115141
+      "\u2705-Paste-art-work-here 1_120": -829712064433506472
+      "\u2705-Paste-art-work-here 1_121": -5106842683113325212
+      "\u2705-Paste-art-work-here 1_122": 9212513167150240791
+      "\u2705-Paste-art-work-here 1_123": -1293790078316888791
+      "\u2705-Paste-art-work-here 1_124": -5629384730709699499
+      "\u2705-Paste-art-work-here 1_125": -1474660740664698918
+      "\u2705-Paste-art-work-here 1_126": 4022200178398263464
+      "\u2705-Paste-art-work-here 1_127": -4811313960392728123
+      "\u2705-Paste-art-work-here 1_128": -842295889454075783
+      "\u2705-Paste-art-work-here 1_129": -6323764040686061082
+      "\u2705-Paste-art-work-here 1_13": 8367219902288677270
+      "\u2705-Paste-art-work-here 1_130": -175887689023155254
+      "\u2705-Paste-art-work-here 1_131": 6662662462975204646
+      "\u2705-Paste-art-work-here 1_132": -1332050259285141851
+      "\u2705-Paste-art-work-here 1_133": 2327546707780086783
+      "\u2705-Paste-art-work-here 1_134": -1168983864878135489
+      "\u2705-Paste-art-work-here 1_135": -5635748964100273042
+      "\u2705-Paste-art-work-here 1_136": -8206550623419386703
+      "\u2705-Paste-art-work-here 1_137": -881615984782304735
+      "\u2705-Paste-art-work-here 1_138": 90630851359051632
+      "\u2705-Paste-art-work-here 1_139": -8508961572194349929
+      "\u2705-Paste-art-work-here 1_14": 9218344956943428409
+      "\u2705-Paste-art-work-here 1_140": 5561083667953002364
+      "\u2705-Paste-art-work-here 1_141": -2481849856007427968
+      "\u2705-Paste-art-work-here 1_142": -8180582844476923041
+      "\u2705-Paste-art-work-here 1_143": 5012093765788284856
+      "\u2705-Paste-art-work-here 1_144": 5034468857644416447
+      "\u2705-Paste-art-work-here 1_145": -1923262381782311889
+      "\u2705-Paste-art-work-here 1_146": 5372989827979712111
+      "\u2705-Paste-art-work-here 1_147": -1318731392030298781
+      "\u2705-Paste-art-work-here 1_148": -8764243996113156400
+      "\u2705-Paste-art-work-here 1_149": -3710881438497790385
+      "\u2705-Paste-art-work-here 1_15": 2419146152375095571
+      "\u2705-Paste-art-work-here 1_150": -5039115462513967996
+      "\u2705-Paste-art-work-here 1_151": 7479954294936769124
+      "\u2705-Paste-art-work-here 1_152": -3579684749629778702
+      "\u2705-Paste-art-work-here 1_153": -4947703485754903630
+      "\u2705-Paste-art-work-here 1_154": -8760279142295582771
+      "\u2705-Paste-art-work-here 1_155": 3375690917157989953
+      "\u2705-Paste-art-work-here 1_156": -924262327589932770
+      "\u2705-Paste-art-work-here 1_157": -1065355934371125927
+      "\u2705-Paste-art-work-here 1_158": 7698861786974665585
+      "\u2705-Paste-art-work-here 1_159": -1266584495803782122
+      "\u2705-Paste-art-work-here 1_16": -8443551222883059383
+      "\u2705-Paste-art-work-here 1_160": -3418009090774400197
+      "\u2705-Paste-art-work-here 1_161": -5347426947727747566
+      "\u2705-Paste-art-work-here 1_162": -8299297238429992360
+      "\u2705-Paste-art-work-here 1_163": -2705177891372236495
+      "\u2705-Paste-art-work-here 1_164": -8085712455254133507
+      "\u2705-Paste-art-work-here 1_165": 5683521091172445864
+      "\u2705-Paste-art-work-here 1_166": 1633267738821948543
+      "\u2705-Paste-art-work-here 1_167": -7967521592767348456
+      "\u2705-Paste-art-work-here 1_168": 4400200738882170039
+      "\u2705-Paste-art-work-here 1_169": 5785444742997403847
+      "\u2705-Paste-art-work-here 1_17": -4099284630661163190
+      "\u2705-Paste-art-work-here 1_170": 5564048581976841823
+      "\u2705-Paste-art-work-here 1_171": -5855568817594756917
+      "\u2705-Paste-art-work-here 1_172": 1094884745720354182
+      "\u2705-Paste-art-work-here 1_173": 5792580104165789106
+      "\u2705-Paste-art-work-here 1_174": 491158670865917770
+      "\u2705-Paste-art-work-here 1_175": -6426553502330512502
+      "\u2705-Paste-art-work-here 1_176": 2403218248874759307
+      "\u2705-Paste-art-work-here 1_177": 3245358869242318713
+      "\u2705-Paste-art-work-here 1_178": -4712434290388721075
+      "\u2705-Paste-art-work-here 1_179": -6297454860093343388
+      "\u2705-Paste-art-work-here 1_18": 6522710966358057312
+      "\u2705-Paste-art-work-here 1_180": 1293706775395373672
+      "\u2705-Paste-art-work-here 1_181": 6068043554923380292
+      "\u2705-Paste-art-work-here 1_182": 5992339586026415249
+      "\u2705-Paste-art-work-here 1_183": -6691915288881099508
+      "\u2705-Paste-art-work-here 1_184": -1339310634500192164
+      "\u2705-Paste-art-work-here 1_185": 3315353864764026556
+      "\u2705-Paste-art-work-here 1_186": -8476904276378140377
+      "\u2705-Paste-art-work-here 1_187": -5652955738471202635
+      "\u2705-Paste-art-work-here 1_188": -6497854400195273369
+      "\u2705-Paste-art-work-here 1_189": 4872894815943984002
+      "\u2705-Paste-art-work-here 1_19": 29507037322725722
+      "\u2705-Paste-art-work-here 1_190": -7159472029162636998
+      "\u2705-Paste-art-work-here 1_191": 6600334890097485940
+      "\u2705-Paste-art-work-here 1_192": -7438728971610275894
+      "\u2705-Paste-art-work-here 1_193": 5754469256413839924
+      "\u2705-Paste-art-work-here 1_194": 6400731792681918770
+      "\u2705-Paste-art-work-here 1_195": -1615821473849836312
+      "\u2705-Paste-art-work-here 1_196": -1644053022821824748
+      "\u2705-Paste-art-work-here 1_197": 8796963085532504898
+      "\u2705-Paste-art-work-here 1_198": 1540476735159664012
+      "\u2705-Paste-art-work-here 1_199": 7355120425649912380
+      "\u2705-Paste-art-work-here 1_2": -328365932052059636
+      "\u2705-Paste-art-work-here 1_20": -2896394298909366760
+      "\u2705-Paste-art-work-here 1_200": -4424738414837506140
+      "\u2705-Paste-art-work-here 1_201": -4314675224030457095
+      "\u2705-Paste-art-work-here 1_202": 411566622700726740
+      "\u2705-Paste-art-work-here 1_203": -4068535787765486548
+      "\u2705-Paste-art-work-here 1_204": -521295916767083219
+      "\u2705-Paste-art-work-here 1_205": -2100035000004614399
+      "\u2705-Paste-art-work-here 1_206": -4040167831090569904
+      "\u2705-Paste-art-work-here 1_207": -38620824742788412
+      "\u2705-Paste-art-work-here 1_208": -5739495824201886655
+      "\u2705-Paste-art-work-here 1_209": 8844086751490173458
+      "\u2705-Paste-art-work-here 1_21": -5084920857339572633
+      "\u2705-Paste-art-work-here 1_210": -8634631862533778499
+      "\u2705-Paste-art-work-here 1_211": -654231391502466822
+      "\u2705-Paste-art-work-here 1_212": -2721003620388153505
+      "\u2705-Paste-art-work-here 1_213": -8233530846674907614
+      "\u2705-Paste-art-work-here 1_214": 3052566928164507353
+      "\u2705-Paste-art-work-here 1_215": 4588827386688421008
+      "\u2705-Paste-art-work-here 1_216": -4506629993146981804
+      "\u2705-Paste-art-work-here 1_217": -5960548421758653008
+      "\u2705-Paste-art-work-here 1_218": -6401460904329630875
+      "\u2705-Paste-art-work-here 1_219": -2472066649752706650
+      "\u2705-Paste-art-work-here 1_22": 4408520043202316181
+      "\u2705-Paste-art-work-here 1_220": 3870793982275945379
+      "\u2705-Paste-art-work-here 1_221": 2400869969812037371
+      "\u2705-Paste-art-work-here 1_222": 5283923233726709894
+      "\u2705-Paste-art-work-here 1_223": 1820281980487655679
+      "\u2705-Paste-art-work-here 1_224": 7436823321696317268
+      "\u2705-Paste-art-work-here 1_225": 9080829883710211986
+      "\u2705-Paste-art-work-here 1_226": -2695897672633386813
+      "\u2705-Paste-art-work-here 1_227": -1975836125764468751
+      "\u2705-Paste-art-work-here 1_228": -5305834106487000298
+      "\u2705-Paste-art-work-here 1_229": 6365962809821437740
+      "\u2705-Paste-art-work-here 1_23": 6544934803707422122
+      "\u2705-Paste-art-work-here 1_230": 3010682218622649513
+      "\u2705-Paste-art-work-here 1_231": 4906333449648695213
+      "\u2705-Paste-art-work-here 1_232": 3584787948845593590
+      "\u2705-Paste-art-work-here 1_233": 7669185600367545290
+      "\u2705-Paste-art-work-here 1_234": 8078158465353903877
+      "\u2705-Paste-art-work-here 1_235": -3046042264316816902
+      "\u2705-Paste-art-work-here 1_236": -732244405021942037
+      "\u2705-Paste-art-work-here 1_237": -6038181078238697009
+      "\u2705-Paste-art-work-here 1_238": -1439117309583764203
+      "\u2705-Paste-art-work-here 1_239": -6473103239693294928
+      "\u2705-Paste-art-work-here 1_24": -8038150672950607930
+      "\u2705-Paste-art-work-here 1_240": -1589767888124042592
+      "\u2705-Paste-art-work-here 1_241": -9223344608725410001
+      "\u2705-Paste-art-work-here 1_242": -1621374473303926152
+      "\u2705-Paste-art-work-here 1_243": -5694496331787220954
+      "\u2705-Paste-art-work-here 1_244": -2112679637276575099
+      "\u2705-Paste-art-work-here 1_245": 7379789878038824744
+      "\u2705-Paste-art-work-here 1_246": -4077811882443526481
+      "\u2705-Paste-art-work-here 1_247": -7304289663146268924
+      "\u2705-Paste-art-work-here 1_248": -1529779735070122296
+      "\u2705-Paste-art-work-here 1_249": 7011540669563279344
+      "\u2705-Paste-art-work-here 1_25": 6550780913050295092
+      "\u2705-Paste-art-work-here 1_250": 884453972655086896
+      "\u2705-Paste-art-work-here 1_251": -2795828503998700011
+      "\u2705-Paste-art-work-here 1_26": -1887773854668718121
+      "\u2705-Paste-art-work-here 1_27": -1884048609733716372
+      "\u2705-Paste-art-work-here 1_28": 8796958728175245372
+      "\u2705-Paste-art-work-here 1_29": -214076062040083770
+      "\u2705-Paste-art-work-here 1_3": 6931233077991838030
+      "\u2705-Paste-art-work-here 1_30": 6038718238052857981
+      "\u2705-Paste-art-work-here 1_31": 2713508437436509182
+      "\u2705-Paste-art-work-here 1_32": 6926967049780516191
+      "\u2705-Paste-art-work-here 1_33": 1420754020406684148
+      "\u2705-Paste-art-work-here 1_34": 7953941283468307051
+      "\u2705-Paste-art-work-here 1_35": -3519822818859643310
+      "\u2705-Paste-art-work-here 1_36": -8949434427067270684
+      "\u2705-Paste-art-work-here 1_37": -170606786730624454
+      "\u2705-Paste-art-work-here 1_38": -8588765798623897824
+      "\u2705-Paste-art-work-here 1_39": 9144993571271326283
+      "\u2705-Paste-art-work-here 1_4": 8007226685307024301
+      "\u2705-Paste-art-work-here 1_40": 5738293432754823204
+      "\u2705-Paste-art-work-here 1_41": -6415423833428838164
+      "\u2705-Paste-art-work-here 1_42": 8851083685120885076
+      "\u2705-Paste-art-work-here 1_43": -6152911210466897490
+      "\u2705-Paste-art-work-here 1_44": -8439617484904971774
+      "\u2705-Paste-art-work-here 1_45": -1182929078388454352
+      "\u2705-Paste-art-work-here 1_46": -2784749850231923060
+      "\u2705-Paste-art-work-here 1_47": 2108473069046516582
+      "\u2705-Paste-art-work-here 1_48": -5428755564610813038
+      "\u2705-Paste-art-work-here 1_49": -8684840059019961260
+      "\u2705-Paste-art-work-here 1_5": 7471690739637236639
+      "\u2705-Paste-art-work-here 1_50": 7070828645918903163
+      "\u2705-Paste-art-work-here 1_51": -768820482467102892
+      "\u2705-Paste-art-work-here 1_52": -1226627478574749918
+      "\u2705-Paste-art-work-here 1_53": 537009497409223712
+      "\u2705-Paste-art-work-here 1_54": 2144911365987154836
+      "\u2705-Paste-art-work-here 1_55": -1065501857145796617
+      "\u2705-Paste-art-work-here 1_56": 127490660740079020
+      "\u2705-Paste-art-work-here 1_57": 8012072403240068170
+      "\u2705-Paste-art-work-here 1_58": 3319600439278073468
+      "\u2705-Paste-art-work-here 1_59": 8389052557006899704
+      "\u2705-Paste-art-work-here 1_6": 664320529093221938
+      "\u2705-Paste-art-work-here 1_60": 5942917620952888727
+      "\u2705-Paste-art-work-here 1_61": -6671071647788631005
+      "\u2705-Paste-art-work-here 1_62": 4715344231477567006
+      "\u2705-Paste-art-work-here 1_63": -6099963691719729412
+      "\u2705-Paste-art-work-here 1_64": 78500009960757631
+      "\u2705-Paste-art-work-here 1_65": 4257923939343425717
+      "\u2705-Paste-art-work-here 1_66": 7112534392129322248
+      "\u2705-Paste-art-work-here 1_67": -486790924461983976
+      "\u2705-Paste-art-work-here 1_68": 3548192436454975289
+      "\u2705-Paste-art-work-here 1_69": 8565074039435006885
+      "\u2705-Paste-art-work-here 1_7": -4640070378025016148
+      "\u2705-Paste-art-work-here 1_70": 1187778458316683705
+      "\u2705-Paste-art-work-here 1_71": -6158461744774810635
+      "\u2705-Paste-art-work-here 1_72": -2387111113357964297
+      "\u2705-Paste-art-work-here 1_73": -3366856565972160090
+      "\u2705-Paste-art-work-here 1_74": -7188662976393102958
+      "\u2705-Paste-art-work-here 1_75": -2725613788775943629
+      "\u2705-Paste-art-work-here 1_76": -4539217246331828476
+      "\u2705-Paste-art-work-here 1_77": 9016034764995882236
+      "\u2705-Paste-art-work-here 1_78": -6694679570071166610
+      "\u2705-Paste-art-work-here 1_79": 4854572162529110016
+      "\u2705-Paste-art-work-here 1_8": 6230611928633678212
+      "\u2705-Paste-art-work-here 1_80": -3228111570749807844
+      "\u2705-Paste-art-work-here 1_81": -5870604485009361908
+      "\u2705-Paste-art-work-here 1_82": -9157667217765804832
+      "\u2705-Paste-art-work-here 1_83": 578956853360170084
+      "\u2705-Paste-art-work-here 1_84": 1802713869389214806
+      "\u2705-Paste-art-work-here 1_85": -2512028200697692893
+      "\u2705-Paste-art-work-here 1_86": 8558029008115876747
+      "\u2705-Paste-art-work-here 1_87": 8713304466159177614
+      "\u2705-Paste-art-work-here 1_88": 7491066990118499306
+      "\u2705-Paste-art-work-here 1_89": -7491738845137269792
+      "\u2705-Paste-art-work-here 1_9": 8857731629814753987
+      "\u2705-Paste-art-work-here 1_90": -420005049761830639
+      "\u2705-Paste-art-work-here 1_91": -331746856279958156
+      "\u2705-Paste-art-work-here 1_92": 653142375932673157
+      "\u2705-Paste-art-work-here 1_93": 8857719591789878202
+      "\u2705-Paste-art-work-here 1_94": -3744141807547148564
+      "\u2705-Paste-art-work-here 1_95": -340864197590679552
+      "\u2705-Paste-art-work-here 1_96": 2828369089812924511
+      "\u2705-Paste-art-work-here 1_97": 3922392182062167982
+      "\u2705-Paste-art-work-here 1_98": 4239459217593634152
+      "\u2705-Paste-art-work-here 1_99": -5431029380958272833
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
