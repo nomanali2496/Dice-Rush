@@ -1,10 +1,14 @@
 using UnityEngine;
+using System.Collections;
+using EnhancedUI;
+using EnhancedUI.EnhancedScroller;
 
 /// <summary>
 /// Manages the lobby scene with infinite vertical background scrolling animation
 /// Handles continuous background movement to create a seamless scrolling effect
+/// Also manages lobby game objects using Enhanced Scroller
 /// </summary>
-public class LobbyManager : MonoBehaviour
+public class LobbyManager : MonoBehaviour, IEnhancedScrollerDelegate
 {
     [Header("Background Settings")]
     [SerializeField] private Transform[] backgroundPanels; // Array of background panels for seamless looping
@@ -21,12 +25,38 @@ public class LobbyManager : MonoBehaviour
     [SerializeField] private Camera targetCamera; // Camera to calculate viewport bounds (auto-finds Main Camera if null)
     [SerializeField] private float resetOffset = 2f; // Extra offset below viewport to trigger reset early
     
+    [Header("Enhanced Scroller (Lobby Game Objects)")]
+    [SerializeField] private EnhancedScroller scroller; // Enhanced Scroller for lobby game objects
+    [SerializeField] private LobbyRowCellView cellViewPrefab; // Prefab for lobby row cells (contains 2 items)
+    [SerializeField] private float cellSize = 200f; // Height of each row cell
+    [SerializeField] private int cellsPerRow = 2; // Number of cells per row
+    
+    [Header("Lobby Game Objects Settings")]
+    private const int BACKGROUND_COUNT = 13; // Total number of background sprites (0-12)
+    
     private bool isScrolling = true;
     private float resetThresholdY;
+    
+    /// <summary>
+    /// Internal representation of lobby game objects data
+    /// </summary>
+    private SmallList<LobbyGameObjectData> _lobbyObjectsData;
+    
+    private bool isScrollerInitialized = false;
     
     private void Start()
     {
         InitializeBackgrounds();
+        InitializeLobbyObjects();
+    }
+    
+    private void OnEnable()
+    {
+        // Reinitialize scroller when GameObject becomes active
+        if (isScrollerInitialized && scroller != null)
+        {
+            RefreshLobbyObjects();
+        }
     }
     
     private void Update()
@@ -304,6 +334,230 @@ public class LobbyManager : MonoBehaviour
     {
         PositionBackgroundsForLooping();
     }
+    
+    #region Enhanced Scroller (Lobby Game Objects)
+    
+    /// <summary>
+    /// Initializes the lobby game objects scroller
+    /// </summary>
+    private void InitializeLobbyObjects()
+    {
+        if (scroller == null)
+        {
+            Debug.LogWarning("[LobbyManager] Enhanced Scroller not assigned for lobby objects. Skipping initialization.");
+            return;
+        }
+        
+        // Set this script as the scroller's delegate
+        scroller.Delegate = this;
+        
+        // Load 13 background objects (use coroutine to wait for scroller initialization)
+        StartCoroutine(LoadLobbyObjectsDataDelayed());
+        isScrollerInitialized = true;
+    }
+    
+    /// <summary>
+    /// Refreshes the lobby objects when GameObject becomes active again
+    /// </summary>
+    private void RefreshLobbyObjects()
+    {
+        if (scroller != null)
+        {
+            scroller.Delegate = this;
+            
+            // Reload data if we have data (use coroutine to wait for scroller initialization)
+            if (_lobbyObjectsData != null && _lobbyObjectsData.Count > 0)
+            {
+                StartCoroutine(ReloadLobbyObjectsDataDelayed());
+            }
+            else
+            {
+                // If no data, load 13 background objects
+                StartCoroutine(LoadLobbyObjectsDataDelayed());
+            }
+        }
+    }
+    
+    /// <summary>
+    /// Coroutine to reload data after waiting a frame (ensures scroller is initialized)
+    /// </summary>
+    private IEnumerator ReloadLobbyObjectsDataDelayed()
+    {
+        yield return null; // Wait one frame for scroller to initialize
+        if (scroller != null && scroller.gameObject.activeInHierarchy)
+        {
+            scroller.ReloadData();
+        }
+    }
+    
+    /// <summary>
+    /// Coroutine to load data after waiting a frame (ensures scroller is initialized)
+    /// </summary>
+    private IEnumerator LoadLobbyObjectsDataDelayed()
+    {
+        yield return null; // Wait one frame for scroller to initialize
+        LoadLobbyObjectsData();
+    }
+    
+    /// <summary>
+    /// Loads 13 lobby objects data - one for each background sprite (0-12)
+    /// </summary>
+    public void LoadLobbyObjectsData()
+    {
+        if (_lobbyObjectsData == null)
+        {
+            _lobbyObjectsData = new SmallList<LobbyGameObjectData>();
+        }
+        else
+        {
+            _lobbyObjectsData.Clear();
+        }
+        
+        // Create exactly 13 objects, one for each background sprite (indices 0-12)
+        for (int i = 0; i < BACKGROUND_COUNT; i++)
+        {
+            _lobbyObjectsData.Add(new LobbyGameObjectData(i));
+        }
+        
+        // Reload the scroller with new data (only if scroller is active and initialized)
+        if (scroller != null && scroller.gameObject.activeInHierarchy)
+        {
+            // Check if delegate is set
+            if (scroller.Delegate == null)
+            {
+                scroller.Delegate = this;
+            }
+            scroller.ReloadData();
+        }
+        
+        Debug.Log($"[LobbyManager] Loaded {_lobbyObjectsData.Count} lobby objects - one for each background sprite");
+    }
+    
+    /// <summary>
+    /// Adds a lobby game object entry
+    /// </summary>
+    public void AddLobbyObject(int backgroundIndex)
+    {
+        if (_lobbyObjectsData == null)
+        {
+            _lobbyObjectsData = new SmallList<LobbyGameObjectData>();
+        }
+        
+        _lobbyObjectsData.Add(new LobbyGameObjectData(backgroundIndex));
+        
+        if (scroller != null && scroller.gameObject.activeInHierarchy)
+        {
+            // Check if delegate is set
+            if (scroller.Delegate == null)
+            {
+                scroller.Delegate = this;
+            }
+            scroller.ReloadData();
+        }
+    }
+    
+    /// <summary>
+    /// Clears all lobby objects data
+    /// </summary>
+    public void ClearLobbyObjects()
+    {
+        if (_lobbyObjectsData != null)
+        {
+            _lobbyObjectsData.Clear();
+        }
+        
+        if (scroller != null && scroller.gameObject.activeInHierarchy)
+        {
+            // Check if delegate is set
+            if (scroller.Delegate == null)
+            {
+                scroller.Delegate = this;
+            }
+            scroller.ReloadData();
+        }
+        
+        Debug.Log("[LobbyManager] Lobby objects data cleared");
+    }
+    
+    #endregion
+    
+    #region IEnhancedScrollerDelegate Implementation
+    
+    /// <summary>
+    /// Returns the number of rows (cells) in the lobby objects list
+    /// Each row contains 2 items
+    /// </summary>
+    public int GetNumberOfCells(EnhancedScroller scroller)
+    {
+        if (_lobbyObjectsData == null || _lobbyObjectsData.Count == 0)
+            return 0;
+        
+        // Calculate number of rows: ceil(data count / cells per row)
+        return Mathf.CeilToInt((float)_lobbyObjectsData.Count / cellsPerRow);
+    }
+    
+    /// <summary>
+    /// Returns the size of each row cell (height for vertical scroller)
+    /// </summary>
+    public float GetCellViewSize(EnhancedScroller scroller, int dataIndex)
+    {
+        return cellSize;
+    }
+    
+    /// <summary>
+    /// Gets the cell view (row) for a specific data index
+    /// Each row contains 2 items
+    /// </summary>
+    public EnhancedScrollerCellView GetCellView(EnhancedScroller scroller, int dataIndex, int cellIndex)
+    {
+        // Check if prefab is assigned
+        if (cellViewPrefab == null)
+        {
+            Debug.LogError("[LobbyManager] Cell View Prefab is not assigned!");
+            return null;
+        }
+        
+        // Get a row cell from the scroller (recycled or new)
+        LobbyRowCellView rowCellView = scroller.GetCellView(cellViewPrefab) as LobbyRowCellView;
+        
+        if (rowCellView == null)
+        {
+            Debug.LogError("[LobbyManager] Failed to get LobbyRowCellView cell view!");
+            return null;
+        }
+        
+        // Calculate the starting index for this row
+        int startingIndex = dataIndex * cellsPerRow;
+        
+        // Get data for the two items in this row
+        LobbyGameObjectData data1 = null;
+        LobbyGameObjectData data2 = null;
+        
+        if (_lobbyObjectsData != null)
+        {
+            // First item
+            if (startingIndex < _lobbyObjectsData.Count)
+            {
+                data1 = _lobbyObjectsData[startingIndex];
+            }
+            
+            // Second item
+            if (startingIndex + 1 < _lobbyObjectsData.Count)
+            {
+                data2 = _lobbyObjectsData[startingIndex + 1];
+            }
+        }
+        
+        // Set the name for debugging
+        rowCellView.name = $"Lobby Row {dataIndex}";
+        
+        // Set the data for this row (2 items)
+        rowCellView.SetData(data1, data2);
+        
+        return rowCellView;
+    }
+    
+    #endregion
     
     #if UNITY_EDITOR
     /// <summary>
