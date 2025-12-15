@@ -50,6 +50,8 @@ public class PlayFabManager : MonoBehaviour
     /// </summary>
     public void RegisterPlayer(string email, string password, string playerName)
     {
+        Debug.Log($"[PlayFabManager] Attempting to register player: {playerName} with email: {email}");
+        
         var request = new RegisterPlayFabUserRequest
         {
             Email = email,
@@ -75,13 +77,37 @@ public class PlayFabManager : MonoBehaviour
         // Save the initial player data
         SavePlayerData(() =>
         {
+            Debug.Log("[PlayFabManager] Registration complete and data saved!");
             OnRegisterComplete?.Invoke(true);
         });
     }
     
     private void OnRegisterFailure(PlayFabError error)
     {
-        Debug.LogError("Registration failed: " + error.GenerateErrorReport());
+        string errorMessage = "Registration failed: " + error.GenerateErrorReport();
+        Debug.LogError(errorMessage);
+        
+        // Provide specific error messages for common registration issues
+        if (error.Error == PlayFabErrorCode.EmailAddressNotAvailable || 
+            error.ErrorMessage.Contains("EmailAddressNotAvailable"))
+        {
+            Debug.LogError("Email address is already in use. Please use a different email or try logging in instead.");
+        }
+        else if (error.Error == PlayFabErrorCode.UsernameNotAvailable ||
+                 error.ErrorMessage.Contains("UsernameNotAvailable"))
+        {
+            Debug.LogError("Username is already taken. Please choose a different username.");
+        }
+        else if (error.ErrorMessage.Contains("Player creations have been disabled"))
+        {
+            Debug.LogError("Account creation is disabled in PlayFab settings. " +
+                          "Please enable 'Allow Client to Create Players' in PlayFab Dashboard > Settings > API Features.");
+        }
+        else
+        {
+            Debug.LogError($"Registration failed: {error.Error} - {error.ErrorMessage}");
+        }
+        
         OnRegisterComplete?.Invoke(false);
     }
     
@@ -118,9 +144,16 @@ public class PlayFabManager : MonoBehaviour
         string errorMessage = "Login failed: " + error.GenerateErrorReport();
         Debug.LogError(errorMessage);
         
-        // Check if account creation is disabled
-        if (error.Error == PlayFabErrorCode.AccountNotFound || 
-            error.ErrorMessage.Contains("Player creations have been disabled"))
+        // Provide specific error messages for login issues
+        if (error.Error == PlayFabErrorCode.InvalidAccount)
+        {
+            Debug.LogError("Invalid email or password. Please check your credentials and try again.");
+        }
+        else if (error.Error == PlayFabErrorCode.AccountNotFound)
+        {
+            Debug.LogError("Account not found. Please check your email address or register a new account.");
+        }
+        else if (error.ErrorMessage.Contains("Player creations have been disabled"))
         {
             Debug.LogError("Guest account creation is disabled in PlayFab settings. " +
                           "Please enable 'Allow Client to Create Players' in PlayFab Dashboard > Settings > API Features.");

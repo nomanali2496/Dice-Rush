@@ -29,7 +29,7 @@ public class AuthenticationManager : MonoBehaviour
     [SerializeField] private TMP_InputField registerNameInput;
     [SerializeField] private TMP_InputField registerEmailInput;
     [SerializeField] private TMP_InputField registerPasswordInput;
-    [SerializeField] private TMP_InputField registerConfirmPasswordInput;
+    // [SerializeField] private TMP_InputField registerConfirmPasswordInput;
     [SerializeField] private Button registerButton;
     
     [Header("Status")]
@@ -199,10 +199,12 @@ public class AuthenticationManager : MonoBehaviour
         string name = registerNameInput != null ? registerNameInput.text : "";
         string email = registerEmailInput != null ? registerEmailInput.text : "";
         string password = registerPasswordInput != null ? registerPasswordInput.text : "";
-        string confirmPassword = registerConfirmPasswordInput != null ? registerConfirmPasswordInput.text : "";
-        
-        if (!ValidateRegistration(name, email, password, confirmPassword))
+        // string confirmPassword = registerConfirmPasswordInput != null ? registerConfirmPasswordInput.text : "";
+        Debug.Log("Enter");
+        if (!ValidateRegistration(name, email, password))
         {
+        Debug.Log("Enter invalidate");
+            
             return;
         }
         
@@ -220,7 +222,7 @@ public class AuthenticationManager : MonoBehaviour
         }
     }
     
-    private bool ValidateRegistration(string name, string email, string password, string confirmPassword)
+    private bool ValidateRegistration(string name, string email, string password)
     {
         if (string.IsNullOrEmpty(name))
         {
@@ -252,11 +254,11 @@ public class AuthenticationManager : MonoBehaviour
             return false;
         }
         
-        if (password != confirmPassword)
-        {
-            UpdateStatusText("Passwords do not match!");
-            return false;
-        }
+        // if (password != confirmPassword)
+        // {
+        //     UpdateStatusText("Passwords do not match!");
+        //     return false;
+        // }
         
         return true;
     }
