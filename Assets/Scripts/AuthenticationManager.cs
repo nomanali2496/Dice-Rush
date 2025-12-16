@@ -24,6 +24,7 @@ public class AuthenticationManager : MonoBehaviour
     [SerializeField] private TMP_InputField loginPasswordInput;
     [SerializeField] private Button loginButton;
     [SerializeField] private Button guestLoginButton;
+    [SerializeField] private Toggle loginPasswordToggle;
     
     [Header("Registration UI")]
     [SerializeField] private TMP_InputField registerNameInput;
@@ -31,6 +32,7 @@ public class AuthenticationManager : MonoBehaviour
     [SerializeField] private TMP_InputField registerPasswordInput;
     // [SerializeField] private TMP_InputField registerConfirmPasswordInput;
     [SerializeField] private Button registerButton;
+    [SerializeField] private Toggle registerPasswordToggle;
     
     [Header("Status")]
     // [SerializeField] private TextMeshProUGUI statusText;
@@ -40,6 +42,9 @@ public class AuthenticationManager : MonoBehaviour
     [SerializeField] private int minPasswordLength = 6;
     
     public Action OnAuthenticationSuccess;
+    
+    private bool isLoginPasswordVisible = false;
+    private bool isRegisterPasswordVisible = false;
     
     private void Start()
     {
@@ -61,6 +66,12 @@ public class AuthenticationManager : MonoBehaviour
         
         if (switchToLoginButton != null)
             switchToLoginButton.onClick.AddListener(() => ShowLoginSection());
+        
+        if (loginPasswordToggle != null)
+            loginPasswordToggle.onValueChanged.AddListener(OnLoginPasswordToggleChanged);
+        
+        if (registerPasswordToggle != null)
+            registerPasswordToggle.onValueChanged.AddListener(OnRegisterPasswordToggleChanged);
         
         // Subscribe to PlayFab events
         if (PlayFabManager.Instance != null)
@@ -352,6 +363,24 @@ public class AuthenticationManager : MonoBehaviour
         {
             return false;
         }
+    }
+    
+    private void OnLoginPasswordToggleChanged(bool isOn)
+    {
+        if (loginPasswordInput == null) return;
+        
+        isLoginPasswordVisible = isOn;
+        loginPasswordInput.contentType = isLoginPasswordVisible ? TMP_InputField.ContentType.Standard : TMP_InputField.ContentType.Password;
+        loginPasswordInput.ForceLabelUpdate();
+    }
+    
+    private void OnRegisterPasswordToggleChanged(bool isOn)
+    {
+        if (registerPasswordInput == null) return;
+        
+        isRegisterPasswordVisible = isOn;
+        registerPasswordInput.contentType = isRegisterPasswordVisible ? TMP_InputField.ContentType.Standard : TMP_InputField.ContentType.Password;
+        registerPasswordInput.ForceLabelUpdate();
     }
     
     #endregion
