@@ -27391,6 +27391,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1200179412}
     m_Modifications:
+    - target: {fileID: 1246729162962121125, guid: acb64807e43e07049a2b201603d5e3ce, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1200179411}
     - target: {fileID: 3287377785941736660, guid: acb64807e43e07049a2b201603d5e3ce, type: 3}
       propertyPath: m_Name
       value: BackButton
