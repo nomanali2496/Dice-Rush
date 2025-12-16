@@ -2,6 +2,14 @@
   "Messages": [
     {
       "Type": 0,
+      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::UnregisterInstance(System.Object) - Method was given it\u0027s own cpp file because it is large and costly to compile"
+    },
+    {
+      "Type": 0,
+      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::OnProcessingEvent(PlayFab.Internal.ApiProcessingEventArgs) - Method was given it\u0027s own cpp file because it is large and costly to compile"
+    },
+    {
+      "Type": 0,
       "Text": "[Unity.TextMeshPro] - System.Void TMPro.TextMeshPro::GenerateTextMesh() - Method was given it\u0027s own cpp file because it is large and costly to compile"
     },
     {
@@ -11,38 +19,6 @@
     {
       "Type": 0,
       "Text": "[Unity.TextMeshPro] - System.Void TMPro.TMP_TextParsingUtilities::.cctor() - Method was given it\u0027s own cpp file because it is large and costly to compile"
-    },
-    {
-      "Type": 0,
-      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::UnregisterInstance(System.Object) - Method was given it\u0027s own cpp file because it is large and costly to compile"
-    },
-    {
-      "Type": 0,
-      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::OnProcessingEvent(PlayFab.Internal.ApiProcessingEventArgs) - Method was given it\u0027s own cpp file because it is large and costly to compile"
-    },
-    {
-      "Type": 0,
-      "Text": "[mscorlib] - System.Void System.Security.Cryptography.RIPEMD160Managed::MDTransform(System.UInt32*,System.UInt32*,System.Byte*) - High Instruction Count of 5579"
-    },
-    {
-      "Type": 0,
-      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::UnregisterInstance(System.Object) - High Variable Count of 889"
-    },
-    {
-      "Type": 0,
-      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::UnregisterInstance(System.Object) - High Instruction Count of 31302"
-    },
-    {
-      "Type": 0,
-      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::UnregisterInstance(System.Object) - High CodeSize of 62597"
-    },
-    {
-      "Type": 0,
-      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::OnProcessingEvent(PlayFab.Internal.ApiProcessingEventArgs) - High Instruction Count of 13317"
-    },
-    {
-      "Type": 0,
-      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::OnProcessingEvent(PlayFab.Internal.ApiProcessingEventArgs) - High CodeSize of 50601"
     },
     {
       "Type": 0,
@@ -103,6 +79,30 @@
     {
       "Type": 0,
       "Text": "[UnityEngine.TextCoreTextEngineModule] - UnityEngine.Vector2 UnityEngine.TextCore.Text.TextGenerator::CalculatePreferredValues(System.Single\u0026,UnityEngine.Vector2,System.Boolean,UnityEngine.TextCore.Text.TextGenerationSettings,UnityEngine.TextCore.Text.TextInfo) - High Variable Count of 212"
+    },
+    {
+      "Type": 0,
+      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::UnregisterInstance(System.Object) - High Variable Count of 889"
+    },
+    {
+      "Type": 0,
+      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::UnregisterInstance(System.Object) - High Instruction Count of 31302"
+    },
+    {
+      "Type": 0,
+      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::UnregisterInstance(System.Object) - High CodeSize of 62597"
+    },
+    {
+      "Type": 0,
+      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::OnProcessingEvent(PlayFab.Internal.ApiProcessingEventArgs) - High Instruction Count of 13317"
+    },
+    {
+      "Type": 0,
+      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::OnProcessingEvent(PlayFab.Internal.ApiProcessingEventArgs) - High CodeSize of 50601"
+    },
+    {
+      "Type": 0,
+      "Text": "[mscorlib] - System.Void System.Security.Cryptography.RIPEMD160Managed::MDTransform(System.UInt32*,System.UInt32*,System.Byte*) - High Instruction Count of 5579"
     },
     {
       "Type": 0,
