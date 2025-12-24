@@ -10136,6 +10136,8 @@ MonoBehaviour:
   startPosition: {x: 0, y: 0}
   numberTextName: NumberText
   powerupImageName: PowerUp
+  selectButtonName: SelectButton
+  highlightImageName: HighlightImage
 --- !u!1 &706904677
 GameObject:
   m_ObjectHideFlags: 0
@@ -17515,31 +17517,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a16956614d8507e448a7f56164ed4bfb, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.949024
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a16956614d8507e448a7f56164ed4bfb, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.1397055
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a16956614d8507e448a7f56164ed4bfb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.07433544
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a16956614d8507e448a7f56164ed4bfb, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.27259898
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a16956614d8507e448a7f56164ed4bfb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 17.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a16956614d8507e448a7f56164ed4bfb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 3.91
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a16956614d8507e448a7f56164ed4bfb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -31.44
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a16956614d8507e448a7f56164ed4bfb, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -27334,6 +27336,10 @@ MonoBehaviour:
   dice1: {fileID: 1055557747}
   dice2: {fileID: 448244080}
   rollButton: {fileID: 347553833}
+  numberGrid: {fileID: 702827508}
+  diceSumText: {fileID: 294171673}
+  diceSumTextLegacy: {fileID: 0}
+  sumDisplayFormat: 'Sum: {0}'
   rollDuration: 1.5
   spinSpeed: 720
   minSpins: 3
@@ -27341,10 +27347,10 @@ MonoBehaviour:
   faceRotations:
   - {x: 0, y: 0, z: 0}
   - {x: 90, y: 0, z: 0}
-  - {x: 0, y: 0, z: -90}
-  - {x: 0, y: 0, z: 90}
-  - {x: -90, y: 0, z: 0}
+  - {x: 0, y: 90, z: 0}
   - {x: 180, y: 0, z: 0}
+  - {x: 270, y: 0, z: 0}
+  - {x: 0, y: 270, z: 0}
 --- !u!4 &1956209289
 Transform:
   m_ObjectHideFlags: 0

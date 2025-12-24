@@ -26,15 +26,37 @@ public class NumberGrid : MonoBehaviour
     [Header("Component Names (in Prefab)")]
     [SerializeField] private string numberTextName = "NumberText"; // Name of the Text/TextMeshProUGUI component
     [SerializeField] private string powerupImageName = "PowerupImage"; // Name of the Image component
+    [SerializeField] private string selectButtonName = "SelectButton"; // Name of the Button component
+    [SerializeField] private string highlightImageName = "HighlightImage"; // Name of the highlight Image component
     
-    private List<GameObject> instantiatedBoxes = new List<GameObject>(); // List to store all instantiated boxes
+    /// <summary>
+    /// Box data structure to store box information
+    /// </summary>
+    private class BoxData
+    {
+        public GameObject boxObject;
+        public int number; // Number value (for number boxes)
+        public bool isPowerup; // Whether this is a powerup box
+        public Button selectButton; // Button component
+        public Image highlightImage; // Highlight image component
+        public bool isSelected; // Whether this box is selected
+    }
+    
+    private List<BoxData> boxDataList = new List<BoxData>(); // List to store all box data
+    private List<GameObject> instantiatedBoxes = new List<GameObject>(); // List to store all instantiated boxes (for cleanup)
     private const int MIN_NUMBER = 2;
     private const int MAX_NUMBER = 12;
     private const int POWERUP_COUNT = 3;
+    private int currentDiceSum = -1; // Current dice sum (-1 means no sum set yet)
+    
+    // Events
+    public System.Action<int, GameObject> OnBoxSelected; // Called when a box is selected (number, boxObject)
     
     private void Start()
     {
         GenerateGrid();
+        // Initially disable all buttons until dice are rolled
+        UpdateBoxInteractability();
     }
     
     /// <summary>
@@ -54,6 +76,9 @@ public class NumberGrid : MonoBehaviour
     {
         // Clear existing boxes if any
         ClearGrid();
+        
+        // Reset dice sum
+        currentDiceSum = -1;
         
         // Create list of all grid items (22 numbers + 3 powerups)
         List<GridItem> gridItems = new List<GridItem>();
@@ -126,6 +151,15 @@ public class NumberGrid : MonoBehaviour
         box.transform.localPosition = position;
         instantiatedBoxes.Add(box);
         
+        // Create box data
+        BoxData boxData = new BoxData
+        {
+            boxObject = box,
+            number = number,
+            isPowerup = false,
+            isSelected = false
+        };
+        
         // Find and set number text
         TextMeshProUGUI numberText = FindComponentInChildren<TextMeshProUGUI>(box, numberTextName);
         if (numberText != null)
@@ -154,6 +188,34 @@ public class NumberGrid : MonoBehaviour
         {
             powerupImage.gameObject.SetActive(false);
         }
+        
+        // Find select button
+        Button selectButton = FindComponentInChildren<Button>(box, selectButtonName);
+        if (selectButton != null)
+        {
+            boxData.selectButton = selectButton;
+            selectButton.interactable = false; // Initially disabled
+            selectButton.onClick.RemoveAllListeners();
+            selectButton.onClick.AddListener(() => OnBoxButtonClicked(boxData));
+        }
+        else
+        {
+            Debug.LogWarning($"[NumberGrid] Could not find select button component '{selectButtonName}' in prefab!");
+        }
+        
+        // Find highlight image
+        Image highlightImage = FindComponentInChildren<Image>(box, highlightImageName);
+        if (highlightImage != null)
+        {
+            boxData.highlightImage = highlightImage;
+            highlightImage.gameObject.SetActive(false); // Initially hidden
+        }
+        else
+        {
+            Debug.LogWarning($"[NumberGrid] Could not find highlight image component '{highlightImageName}' in prefab!");
+        }
+        
+        boxDataList.Add(boxData);
     }
     
     /// <summary>
@@ -187,6 +249,15 @@ public class NumberGrid : MonoBehaviour
         box.transform.localPosition = position;
         instantiatedBoxes.Add(box);
         
+        // Create box data for powerup (powerups are not selectable)
+        BoxData boxData = new BoxData
+        {
+            boxObject = box,
+            number = -1, // Powerups don't have numbers
+            isPowerup = true,
+            isSelected = false
+        };
+        
         // Find and disable number text
         TextMeshProUGUI numberText = FindComponentInChildren<TextMeshProUGUI>(box, numberTextName);
         if (numberText != null)
@@ -214,6 +285,15 @@ public class NumberGrid : MonoBehaviour
         {
             Debug.LogWarning($"[NumberGrid] Could not find powerup image component '{powerupImageName}' in prefab!");
         }
+        
+        // Find select button (powerups don't have selectable buttons)
+        Button selectButton = FindComponentInChildren<Button>(box, selectButtonName);
+        if (selectButton != null)
+        {
+            selectButton.interactable = false; // Powerups are never selectable
+        }
+        
+        boxDataList.Add(boxData);
     }
     
     /// <summary>
@@ -277,6 +357,131 @@ public class NumberGrid : MonoBehaviour
             }
         }
         instantiatedBoxes.Clear();
+        boxDataList.Clear();
+        currentDiceSum = -1;
+    }
+    
+    /// <summary>
+    /// Sets the dice sum and enables/disables boxes accordingly
+    /// </summary>
+    public void SetDiceSum(int sum)
+    {
+        currentDiceSum = sum;
+        UpdateBoxInteractability();
+        
+        int availableCount = GetAvailableBoxCount(sum);
+        Debug.Log($"[NumberGrid] Dice sum set to {sum}. {availableCount} box(es) with number {sum} are now selectable.");
+    }
+    
+    /// <summary>
+    /// Clears the current dice sum (disables all buttons)
+    /// </summary>
+    public void ClearDiceSum()
+    {
+        currentDiceSum = -1;
+        UpdateBoxInteractability();
+    }
+    
+    /// <summary>
+    /// Updates button interactability based on current dice sum
+    /// </summary>
+    private void UpdateBoxInteractability()
+    {
+        foreach (BoxData boxData in boxDataList)
+        {
+            if (boxData.isPowerup || boxData.selectButton == null)
+            {
+                continue; // Skip powerups and boxes without buttons
+            }
+            
+            // Enable button only if:
+            // 1. Box number matches dice sum
+            // 2. Box is not already selected
+            bool shouldBeInteractable = !boxData.isSelected && 
+                                       currentDiceSum > 0 && 
+                                       boxData.number == currentDiceSum;
+            
+            boxData.selectButton.interactable = shouldBeInteractable;
+        }
+    }
+    
+    /// <summary>
+    /// Called when a box button is clicked
+    /// </summary>
+    private void OnBoxButtonClicked(BoxData boxData)
+    {
+        if (boxData.isSelected)
+        {
+            Debug.LogWarning($"[NumberGrid] Box with number {boxData.number} is already selected!");
+            return;
+        }
+        
+        if (boxData.isPowerup)
+        {
+            Debug.LogWarning("[NumberGrid] Cannot select powerup boxes!");
+            return;
+        }
+        
+        if (currentDiceSum <= 0 || boxData.number != currentDiceSum)
+        {
+            Debug.LogWarning($"[NumberGrid] Cannot select box with number {boxData.number}. Current dice sum is {currentDiceSum}!");
+            return;
+        }
+        
+        // Mark as selected
+        boxData.isSelected = true;
+        
+        // Disable button
+        if (boxData.selectButton != null)
+        {
+            boxData.selectButton.interactable = false;
+        }
+        
+        // Show highlight
+        if (boxData.highlightImage != null)
+        {
+            boxData.highlightImage.gameObject.SetActive(true);
+        }
+        
+        // Trigger event
+        OnBoxSelected?.Invoke(boxData.number, boxData.boxObject);
+        
+        Debug.Log($"[NumberGrid] Box with number {boxData.number} selected!");
+    }
+    
+    /// <summary>
+    /// Resets all selections (useful for new round)
+    /// </summary>
+    public void ResetSelections()
+    {
+        foreach (BoxData boxData in boxDataList)
+        {
+            boxData.isSelected = false;
+            
+            if (boxData.highlightImage != null)
+            {
+                boxData.highlightImage.gameObject.SetActive(false);
+            }
+        }
+        
+        currentDiceSum = -1;
+        UpdateBoxInteractability();
+    }
+    
+    /// <summary>
+    /// Gets the number of available (unselected) boxes for a given sum
+    /// </summary>
+    public int GetAvailableBoxCount(int sum)
+    {
+        int count = 0;
+        foreach (BoxData boxData in boxDataList)
+        {
+            if (!boxData.isPowerup && !boxData.isSelected && boxData.number == sum)
+            {
+                count++;
+            }
+        }
+        return count;
     }
     
     /// <summary>

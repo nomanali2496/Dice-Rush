@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using System.Collections;
 
 /// <summary>
@@ -14,6 +15,14 @@ public class DicesController : MonoBehaviour
     [Header("Roll Button")]
     [SerializeField] private Button rollButton; // Button to trigger dice roll
     
+    [Header("Number Grid Reference")]
+    [SerializeField] private NumberGrid numberGrid; // Reference to NumberGrid to update based on dice sum
+    
+    [Header("Dice Sum Display")]
+    [SerializeField] private TextMeshProUGUI diceSumText; // Text to display the dice sum (TextMeshProUGUI)
+    [SerializeField] private Text diceSumTextLegacy; // Text to display the dice sum (Legacy Text - use if not using TextMeshPro)
+    [SerializeField] private string sumDisplayFormat = "Sum: {0}"; // Format string for displaying sum (e.g., "Sum: {0}" or "Total: {0}")
+    
     [Header("Animation Settings")]
     [SerializeField] private float rollDuration = 1.5f; // Duration of the rolling animation
     [SerializeField] private float spinSpeed = 720f; // Degrees per second for spinning
@@ -21,15 +30,15 @@ public class DicesController : MonoBehaviour
     [SerializeField] private int maxSpins = 6; // Maximum number of spins before stopping
     
     [Header("Dice Face Rotations")]
-    [Tooltip("Euler angles for each face (1-6). Adjust based on your dice model orientation.")]
+    [Tooltip("Euler angles for each face value (1-6). Index 0 = Face 1, Index 1 = Face 2, etc.")]
     [SerializeField] private Vector3[] faceRotations = new Vector3[6]
     {
-        new Vector3(0, 0, 0),      // Face 1
-        new Vector3(90, 0, 0),      // Face 2
-        new Vector3(0, 0, -90),    // Face 3
-        new Vector3(0, 0, 90),     // Face 4
-        new Vector3(-90, 0, 0),    // Face 5
-        new Vector3(180, 0, 0)     // Face 6
+        new Vector3(0, 90, 0),      // Face 1 (value 1) - (0, 90, 0) = value 1
+        new Vector3(0, 0, 0),       // Face 2 (value 2) - (0, 0, 0) = value 2
+        new Vector3(90, 0, 0),      // Face 3 (value 3) - (90, 0, 0) = value 3
+        new Vector3(180, 0, 0),     // Face 4 (value 4) - (180, 0, 0) = value 4
+        new Vector3(0, 270, 0),     // Face 5 (value 5) - (0, 270, 0) = value 5
+        new Vector3(270, 0, 0)      // Face 6 (value 6) - (270, 0, 0) = value 6
     };
     
     private bool isRolling = false; // Flag to prevent multiple simultaneous rolls
@@ -59,6 +68,51 @@ public class DicesController : MonoBehaviour
         if (dice1 == null || dice2 == null)
         {
             Debug.LogWarning("[DicesController] One or both dice GameObjects are not assigned!");
+        }
+        
+        // Validate faceRotations array
+        ValidateFaceRotations();
+    }
+    
+    /// <summary>
+    /// Validates that the faceRotations array is correctly set up
+    /// </summary>
+    private void ValidateFaceRotations()
+    {
+        if (faceRotations == null || faceRotations.Length != 6)
+        {
+            Debug.LogError("[DicesController] faceRotations array must have exactly 6 elements!");
+            return;
+        }
+        
+        // Expected rotations based on user's mapping
+        Vector3[] expectedRotations = new Vector3[]
+        {
+            new Vector3(0, 90, 0),      // Face 1 (value 1)
+            new Vector3(0, 0, 0),      // Face 2 (value 2)
+            new Vector3(90, 0, 0),     // Face 3 (value 3)
+            new Vector3(180, 0, 0),    // Face 4 (value 4)
+            new Vector3(0, 270, 0),    // Face 5 (value 5)
+            new Vector3(270, 0, 0)     // Face 6 (value 6)
+        };
+        
+        bool hasErrors = false;
+        for (int i = 0; i < 6; i++)
+        {
+            Vector3 actual = faceRotations[i];
+            Vector3 expected = expectedRotations[i];
+            
+            // Check if rotations match (with small tolerance for floating point)
+            if (Vector3.Distance(actual, expected) > 0.1f)
+            {
+                Debug.LogError($"[DicesController] faceRotations[{i}] is WRONG! Expected {expected} for Face {i + 1} (value {i + 1}), but got {actual}. Please fix in Inspector!");
+                hasErrors = true;
+            }
+        }
+        
+        if (!hasErrors)
+        {
+            Debug.Log("[DicesController] faceRotations array is correctly configured!");
         }
     }
     
@@ -123,12 +177,17 @@ public class DicesController : MonoBehaviour
             yield break;
         }
         
+        // Check if dice is a child (use local rotation) or root (use world rotation)
+        bool useLocalRotation = dice.transform.parent != null;
+        
         // Get initial rotation
-        Quaternion startRotation = dice.transform.rotation;
+        Quaternion startRotation = useLocalRotation ? dice.transform.localRotation : dice.transform.rotation;
         
         // Calculate target rotation for the face (exact, no offset)
         Vector3 targetEuler = faceRotations[targetFace - 1];
         Quaternion targetRotation = Quaternion.Euler(targetEuler);
+        
+        Debug.Log($"[DicesController] Rolling dice to face {targetFace}, using rotation {targetEuler} from faceRotations[{targetFace - 1}]");
         
         // Calculate number of spins (random between min and max)
         int numSpins = Random.Range(minSpins, maxSpins + 1);
@@ -164,7 +223,14 @@ public class DicesController : MonoBehaviour
                 
                 // Apply spinning rotation
                 Quaternion spinRotation = Quaternion.AngleAxis(remainingSpin, spinAxis);
-                dice.transform.rotation = baseRotation * spinRotation;
+                if (useLocalRotation)
+                {
+                    dice.transform.localRotation = baseRotation * spinRotation;
+                }
+                else
+                {
+                    dice.transform.rotation = baseRotation * spinRotation;
+                }
             }
             else
             {
@@ -173,8 +239,17 @@ public class DicesController : MonoBehaviour
                 float snapT = EaseInOutCubic(phase2T);
                 
                 // Get current rotation and smoothly snap to exact target
-                Quaternion currentRot = dice.transform.rotation;
-                dice.transform.rotation = Quaternion.Slerp(currentRot, targetRotation, snapT);
+                Quaternion currentRot = useLocalRotation ? dice.transform.localRotation : dice.transform.rotation;
+                Quaternion newRotation = Quaternion.Slerp(currentRot, targetRotation, snapT);
+                
+                if (useLocalRotation)
+                {
+                    dice.transform.localRotation = newRotation;
+                }
+                else
+                {
+                    dice.transform.rotation = newRotation;
+                }
             }
             
             yield return null;
@@ -182,7 +257,23 @@ public class DicesController : MonoBehaviour
         
         // Final guarantee: ensure rotation is exactly the target face (no tilt, perfect alignment)
         // This ensures the dice stops perfectly on the face without any tilt or misalignment
-        dice.transform.rotation = targetRotation;
+        // Set rotation multiple times to ensure Unity applies it correctly
+        for (int i = 0; i < 3; i++)
+        {
+            if (useLocalRotation)
+            {
+                dice.transform.localRotation = targetRotation;
+            }
+            else
+            {
+                dice.transform.rotation = targetRotation;
+            }
+            yield return null; // Wait a frame between each set
+        }
+        
+        // Verify the rotation was set correctly
+        Vector3 finalRotation = useLocalRotation ? dice.transform.localEulerAngles : dice.transform.eulerAngles;
+        Debug.Log($"[DicesController] Dice animation complete. Target face: {targetFace}, Target rotation: {targetEuler}, Final rotation: {finalRotation}");
         
         onComplete?.Invoke();
     }
@@ -197,51 +288,186 @@ public class DicesController : MonoBehaviour
             isRolling = false;
             completedRolls = 0;
             
-            // Re-enable button
-            if (rollButton != null)
-            {
-                rollButton.interactable = true;
-            }
-            
-            // Use target values (they should match the final rotation)
-            // Trigger event
-            OnDiceRollComplete?.Invoke(targetDice1Value, targetDice2Value);
-            
-            Debug.Log($"[DicesController] Roll complete! Dice 1: {targetDice1Value}, Dice 2: {targetDice2Value}");
+            // Wait one frame to ensure rotations are fully applied, then get actual values
+            StartCoroutine(ProcessRollComplete());
         }
     }
     
     /// <summary>
+    /// Processes roll completion after ensuring rotations are applied
+    /// </summary>
+    private IEnumerator ProcessRollComplete()
+    {
+        // Wait one frame to ensure rotations are fully applied
+        yield return null;
+        
+        // Ensure dice are at exact target rotations (one of the 6 defined rotations)
+        bool useLocal1 = dice1.transform.parent != null;
+        bool useLocal2 = dice2.transform.parent != null;
+        
+        Vector3 target1Rotation = faceRotations[targetDice1Value - 1];
+        Vector3 target2Rotation = faceRotations[targetDice2Value - 1];
+        
+        // Force exact rotations multiple times to ensure Unity applies them correctly
+        // Unity sometimes converts rotations to equivalent forms, so we force it multiple times
+        for (int i = 0; i < 3; i++)
+        {
+            if (useLocal1)
+            {
+                dice1.transform.localRotation = Quaternion.Euler(target1Rotation);
+            }
+            else
+            {
+                dice1.transform.rotation = Quaternion.Euler(target1Rotation);
+            }
+            
+            if (useLocal2)
+            {
+                dice2.transform.localRotation = Quaternion.Euler(target2Rotation);
+            }
+            else
+            {
+                dice2.transform.rotation = Quaternion.Euler(target2Rotation);
+            }
+            
+            yield return null; // Wait a frame between each set
+        }
+        
+        // Verify the actual rotations match
+        Vector3 actual1Rotation = useLocal1 ? dice1.transform.localEulerAngles : dice1.transform.eulerAngles;
+        Vector3 actual2Rotation = useLocal2 ? dice2.transform.localEulerAngles : dice2.transform.eulerAngles;
+        
+        // Validate that the rotations match what we expect
+        // Check if the actual rotations are close to the target rotations
+        float tolerance = 5f; // 5 degree tolerance
+        bool dice1Matches = Vector3.Distance(actual1Rotation, target1Rotation) < tolerance || 
+                           Vector3.Distance(NormalizeEulerAngles(actual1Rotation), NormalizeEulerAngles(target1Rotation)) < tolerance;
+        bool dice2Matches = Vector3.Distance(actual2Rotation, target2Rotation) < tolerance || 
+                           Vector3.Distance(NormalizeEulerAngles(actual2Rotation), NormalizeEulerAngles(target2Rotation)) < tolerance;
+        
+        if (!dice1Matches)
+        {
+            Debug.LogWarning($"[DicesController] Dice1 rotation mismatch! Target: {target1Rotation}, Actual: {actual1Rotation}. Using target value {targetDice1Value}.");
+        }
+        if (!dice2Matches)
+        {
+            Debug.LogWarning($"[DicesController] Dice2 rotation mismatch! Target: {target2Rotation}, Actual: {actual2Rotation}. Using target value {targetDice2Value}.");
+        }
+        
+        // Use target values directly since we know exactly what face we set
+        // These are the correct values regardless of what the rotation looks like
+        int actualDice1Value = targetDice1Value;
+        int actualDice2Value = targetDice2Value;
+        
+        // Calculate sum based on target values (which match the exact rotations)
+        int diceSum = actualDice1Value + actualDice2Value;
+        
+        Debug.Log($"[DicesController] Roll complete! Dice 1: {actualDice1Value} (target rotation: {target1Rotation}, actual: {actual1Rotation}), Dice 2: {actualDice2Value} (target rotation: {target2Rotation}, actual: {actual2Rotation}), Sum: {diceSum}");
+        
+        // Update dice sum display
+        UpdateDiceSumDisplay(diceSum);
+        
+        // Update NumberGrid with the dice sum
+        if (numberGrid != null)
+        {
+            numberGrid.SetDiceSum(diceSum);
+        }
+        else
+        {
+            Debug.LogWarning("[DicesController] NumberGrid reference is not assigned!");
+        }
+        
+        // Re-enable button
+        if (rollButton != null)
+        {
+            rollButton.interactable = true;
+        }
+        
+        // Use actual values (what's visually displayed)
+        // Trigger event
+        OnDiceRollComplete?.Invoke(actualDice1Value, actualDice2Value);
+        
+        Debug.Log($"[DicesController] Roll complete! Dice 1: {actualDice1Value}, Dice 2: {actualDice2Value}, Sum: {diceSum}");
+    }
+    
+    /// <summary>
+    /// Normalizes euler angles to 0-360 range and handles equivalent rotations
+    /// </summary>
+    private Vector3 NormalizeEulerAngles(Vector3 euler)
+    {
+        float x = NormalizeAngle(euler.x);
+        float y = NormalizeAngle(euler.y);
+        float z = NormalizeAngle(euler.z);
+        
+        // Handle equivalent rotations (e.g., (0, 180, 180) = (180, 0, 0))
+        // Convert to standard form by checking if we can simplify
+        if (Mathf.Approximately(x, 0f) && Mathf.Approximately(y, 180f) && Mathf.Approximately(z, 180f))
+        {
+            return new Vector3(180f, 0f, 0f);
+        }
+        if (Mathf.Approximately(x, 180f) && Mathf.Approximately(y, 180f) && Mathf.Approximately(z, 0f))
+        {
+            return new Vector3(0f, 0f, 180f);
+        }
+        
+        return new Vector3(x, y, z);
+    }
+    
+    /// <summary>
     /// Gets the current face value of a dice based on its rotation
-    /// This is a simplified version - you may need to adjust based on your dice model
+    /// Compares quaternion rotations for more accurate face detection
     /// </summary>
     private int GetDiceValue(GameObject dice)
     {
         if (dice == null) return 1;
         
-        Vector3 euler = dice.transform.eulerAngles;
+        // Use local rotation if dice is a child, otherwise use world rotation
+        Quaternion currentRotation = dice.transform.parent != null ? dice.transform.localRotation : dice.transform.rotation;
+        Vector3 currentEuler = dice.transform.parent != null ? dice.transform.localEulerAngles : dice.transform.eulerAngles;
+        Vector3 normalizedEuler = NormalizeEulerAngles(currentEuler);
         
-        // Normalize angles to 0-360
-        float x = NormalizeAngle(euler.x);
-        float y = NormalizeAngle(euler.y);
-        float z = NormalizeAngle(euler.z);
-        
-        // Find closest matching face rotation
-        float minDistance = float.MaxValue;
+        // Find closest matching face rotation using quaternion angle
+        float minAngle = float.MaxValue;
         int closestFace = 1;
+        
+        Debug.Log($"[DicesController] GetDiceValue - Current rotation (Euler): {currentEuler}, Normalized: {normalizedEuler}");
+        Debug.Log($"[DicesController] Using {(dice.transform.parent != null ? "local" : "world")} rotation");
         
         for (int i = 0; i < faceRotations.Length; i++)
         {
-            Vector3 faceEuler = faceRotations[i];
-            float distance = Vector3.Distance(
-                new Vector3(NormalizeAngle(faceEuler.x), NormalizeAngle(faceEuler.y), NormalizeAngle(faceEuler.z)),
-                new Vector3(x, y, z)
-            );
+            Quaternion faceRotation = Quaternion.Euler(faceRotations[i]);
             
-            if (distance < minDistance)
+            // Calculate angle between current rotation and face rotation
+            float angle = Quaternion.Angle(currentRotation, faceRotation);
+            
+            // Also check normalized euler distance as backup
+            Vector3 normalizedFaceEuler = NormalizeEulerAngles(faceRotations[i]);
+            float eulerDistance = Vector3.Distance(normalizedEuler, normalizedFaceEuler);
+            
+            Debug.Log($"[DicesController] Face {i + 1} (rotation {faceRotations[i]}, normalized {normalizedFaceEuler}) - Quaternion angle: {angle}°, Euler distance: {eulerDistance}");
+            
+            if (angle < minAngle)
             {
-                minDistance = distance;
+                minAngle = angle;
                 closestFace = i + 1;
+            }
+        }
+        
+        Debug.Log($"[DicesController] Closest face: {closestFace} (angle difference: {minAngle} degrees)");
+        
+        // If the angle is too large (more than 10 degrees), the rotation might not match any face
+        // Use a smaller threshold since quaternion comparison should be very accurate
+        if (minAngle > 10f)
+        {
+            Debug.LogWarning($"[DicesController] Angle difference too large ({minAngle} degrees), using target value as fallback");
+            // Try to determine which dice this is and return its target value
+            if (dice == dice1)
+            {
+                return targetDice1Value;
+            }
+            else if (dice == dice2)
+            {
+                return targetDice2Value;
             }
         }
         
@@ -300,6 +526,40 @@ public class DicesController : MonoBehaviour
         int d1 = dice1 != null ? GetDiceValue(dice1) : 1;
         int d2 = dice2 != null ? GetDiceValue(dice2) : 1;
         return (d1, d2);
+    }
+    
+    /// <summary>
+    /// Updates the dice sum display text
+    /// </summary>
+    private void UpdateDiceSumDisplay(int sum)
+    {
+        string displayText = string.Format(sumDisplayFormat, sum);
+        
+        // Try TextMeshProUGUI first
+        if (diceSumText != null)
+        {
+            diceSumText.text = displayText;
+        }
+        // Fallback to legacy Text component
+        else if (diceSumTextLegacy != null)
+        {
+            diceSumTextLegacy.text = displayText;
+        }
+    }
+    
+    /// <summary>
+    /// Clears the dice sum display
+    /// </summary>
+    public void ClearDiceSumDisplay()
+    {
+        if (diceSumText != null)
+        {
+            diceSumText.text = "";
+        }
+        if (diceSumTextLegacy != null)
+        {
+            diceSumTextLegacy.text = "";
+        }
     }
     
     private void OnDestroy()
