@@ -54,6 +54,8 @@ MonoBehaviour:
   cellIdentifier: LobbyRowCell
   item1: {fileID: 8266724459619458920}
   item2: {fileID: 6846620375075663969}
+  playButton1: {fileID: 815115680804903351}
+  playButton2: {fileID: 2806452339161609918}
 --- !u!114 &2363127087890045917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,6 +188,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7492518202043721189, guid: f162b978b35adfc4f8935ad8abcbe3ac, type: 3}
   m_PrefabInstance: {fileID: 4785208978712697625}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2806452339161609918 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7249387741897862567, guid: f162b978b35adfc4f8935ad8abcbe3ac, type: 3}
+  m_PrefabInstance: {fileID: 4785208978712697625}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!114 &6846620375075663969 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2120191305168989048, guid: f162b978b35adfc4f8935ad8abcbe3ac, type: 3}
@@ -212,6 +225,18 @@ PrefabInstance:
     - target: {fileID: 349822199226042534, guid: f162b978b35adfc4f8935ad8abcbe3ac, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249387741897862567, guid: f162b978b35adfc4f8935ad8abcbe3ac, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249387741897862567, guid: f162b978b35adfc4f8935ad8abcbe3ac, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249387741897862567, guid: f162b978b35adfc4f8935ad8abcbe3ac, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7492518202043721189, guid: f162b978b35adfc4f8935ad8abcbe3ac, type: 3}
       propertyPath: m_Pivot.x
@@ -303,6 +328,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7492518202043721189, guid: f162b978b35adfc4f8935ad8abcbe3ac, type: 3}
   m_PrefabInstance: {fileID: 8058383231472284688}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &815115680804903351 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7249387741897862567, guid: f162b978b35adfc4f8935ad8abcbe3ac, type: 3}
+  m_PrefabInstance: {fileID: 8058383231472284688}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!114 &8266724459619458920 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2120191305168989048, guid: f162b978b35adfc4f8935ad8abcbe3ac, type: 3}

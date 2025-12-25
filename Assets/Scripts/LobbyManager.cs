@@ -31,6 +31,9 @@ public class LobbyManager : MonoBehaviour, IEnhancedScrollerDelegate
     [SerializeField] private float cellSize = 200f; // Height of each row cell
     [SerializeField] private int cellsPerRow = 2; // Number of cells per row
     
+    [Header("Gameplay Object")]
+    [SerializeField] private GameObject gameplayObject; // Gameplay object to open when play button is clicked
+    
     [Header("Lobby Game Objects Settings")]
     private const int BACKGROUND_COUNT = 13; // Total number of background sprites (0-12)
     
@@ -477,6 +480,22 @@ public class LobbyManager : MonoBehaviour, IEnhancedScrollerDelegate
         }
         
         Debug.Log("[LobbyManager] Lobby objects data cleared");
+    }
+    
+    /// <summary>
+    /// Opens the gameplay object
+    /// </summary>
+    public void OpenGameplayObject()
+    {
+        if (gameplayObject != null)
+        {
+            gameplayObject.SetActive(true);
+            Debug.Log("[LobbyManager] Gameplay object opened");
+        }
+        else
+        {
+            Debug.LogWarning("[LobbyManager] Gameplay object is not assigned! Please assign it in the inspector.");
+        }
     }
     
     #endregion

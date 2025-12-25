@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using EnhancedUI.EnhancedScroller;
 
 /// <summary>
@@ -9,6 +10,43 @@ public class LobbyRowCellView : EnhancedScrollerCellView
     [Header("Lobby Game Object Items")]
     [SerializeField] private LobbyGameObjectUI item1; // First item in the row
     [SerializeField] private LobbyGameObjectUI item2; // Second item in the row
+    
+    [Header("Play Buttons")]
+    [SerializeField] private Button playButton1; // Play button for first item
+    [SerializeField] private Button playButton2; // Play button for second item
+    
+    private LobbyManager lobbyManager;
+    
+    private void Awake()
+    {
+        // Find LobbyManager in the scene
+        lobbyManager = FindObjectOfType<LobbyManager>();
+        
+        // Setup button listeners
+        if (playButton1 != null)
+        {
+            playButton1.onClick.AddListener(OnPlayButton1Clicked);
+        }
+        
+        if (playButton2 != null)
+        {
+            playButton2.onClick.AddListener(OnPlayButton2Clicked);
+        }
+    }
+    
+    private void OnDestroy()
+    {
+        // Remove listeners to prevent memory leaks
+        if (playButton1 != null)
+        {
+            playButton1.onClick.RemoveListener(OnPlayButton1Clicked);
+        }
+        
+        if (playButton2 != null)
+        {
+            playButton2.onClick.RemoveListener(OnPlayButton2Clicked);
+        }
+    }
     
     /// <summary>
     /// Sets the data for this row (2 items)
@@ -24,10 +62,22 @@ public class LobbyRowCellView : EnhancedScrollerCellView
             {
                 item1.SetData(data1);
                 item1.gameObject.SetActive(true);
+                
+                // Show play button for first item
+                if (playButton1 != null)
+                {
+                    playButton1.gameObject.SetActive(true);
+                }
             }
             else
             {
                 item1.gameObject.SetActive(false);
+                
+                // Hide play button if no data
+                if (playButton1 != null)
+                {
+                    playButton1.gameObject.SetActive(false);
+                }
             }
         }
         
@@ -38,11 +88,61 @@ public class LobbyRowCellView : EnhancedScrollerCellView
             {
                 item2.SetData(data2);
                 item2.gameObject.SetActive(true);
+                
+                // Show play button for second item
+                if (playButton2 != null)
+                {
+                    playButton2.gameObject.SetActive(true);
+                }
             }
             else
             {
                 item2.gameObject.SetActive(false);
+                
+                // Hide play button if no data
+                if (playButton2 != null)
+                {
+                    playButton2.gameObject.SetActive(false);
+                }
             }
+        }
+    }
+    
+    /// <summary>
+    /// Called when play button 1 is clicked
+    /// </summary>
+    private void OnPlayButton1Clicked()
+    {
+        if (lobbyManager != null && item1 != null)
+        {
+            LobbyGameObjectData data = item1.GetCurrentData();
+            if (data != null)
+            {
+                lobbyManager.OpenGameplayObject();
+            }
+        }
+        else
+        {
+            Debug.LogWarning("[LobbyRowCellView] LobbyManager or item1 is null! Cannot open gameplay object.");
+        }
+    }
+    
+    /// <summary>
+    /// Called when play button 2 is clicked
+    /// </summary>
+    private void OnPlayButton2Clicked()
+    {
+        if (lobbyManager != null && item2 != null)
+        {
+            LobbyGameObjectData data = item2.GetCurrentData();
+            if (data != null)
+            {
+                lobbyManager.OpenGameplayObject();
+            }
+        }
+        else
+        {
+            Debug.LogWarning("[LobbyRowCellView] LobbyManager or item2 is null! Cannot open gameplay object.");
         }
     }
 }
