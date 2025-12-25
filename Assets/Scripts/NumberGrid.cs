@@ -5,8 +5,18 @@ using System.Collections.Generic;
 using System.Linq;
 
 /// <summary>
+/// Player type enum for tracking selections separately
+/// </summary>
+public enum PlayerType
+{
+    Player,
+    CPU
+}
+
+/// <summary>
 /// Manages a 5x5 grid of number boxes with random positioning
 /// Numbers 2-12 appear twice, and 3 boxes contain powerups
+/// Supports separate tracking for Player and CPU selections
 /// </summary>
 public class NumberGrid : MonoBehaviour
 {
@@ -39,7 +49,9 @@ public class NumberGrid : MonoBehaviour
         public bool isPowerup; // Whether this is a powerup box
         public Button selectButton; // Button component
         public Image highlightImage; // Highlight image component
-        public bool isSelected; // Whether this box is selected
+        public bool isSelected; // Whether this box is selected (by any player)
+        public PlayerType selectedByPlayer = PlayerType.Player; // Which player selected this box
+        public int selectedByCPUIndex = -1; // Which CPU index selected this box (-1 if player or not selected)
         public int selectedInRollSum = -1; // Dice sum when this box was selected (-1 if not selected)
         public int selectedInRollId = -1; // Roll ID when this box was selected (-1 if not selected)
     }
@@ -49,12 +61,24 @@ public class NumberGrid : MonoBehaviour
     private const int MIN_NUMBER = 2;
     private const int MAX_NUMBER = 12;
     private const int POWERUP_COUNT = 3;
-    private int currentDiceSum = -1; // Current dice sum (-1 means no sum set yet)
-    private int lastRollDiceSum = -1; // Dice sum from the last roll (to detect new rolls)
-    private int currentRollId = 0; // Roll ID that increments each time dice are rolled (to distinguish same sum in different rolls)
+    
+    // Separate tracking for Player and CPU
+    private int currentDiceSumPlayer = -1; // Current dice sum for Player (-1 means no sum set yet)
+    private int currentDiceSumCPU = -1; // Current dice sum for CPU (-1 means no sum set yet) - DEPRECATED: Use cpuDiceSums instead
+    private int currentRollIdPlayer = 0; // Roll ID for Player
+    private int currentRollIdCPU = 0; // Roll ID for CPU - DEPRECATED: Use cpuRollIds instead
+    
+    // Per-CPU tracking (for multiple CPUs)
+    private Dictionary<int, int> cpuDiceSums = new Dictionary<int, int>(); // CPU dice sums by CPU index
+    private Dictionary<int, int> cpuRollIds = new Dictionary<int, int>(); // CPU roll IDs by CPU index
+    
+    // Outline colors for players
+    private Color playerOutlineColor = Color.white; // Player's outline color (default white)
+    private Dictionary<int, Color> cpuOutlineColors = new Dictionary<int, Color>(); // CPU outline colors by index
     
     // Events
     public System.Action<int, GameObject> OnBoxSelected; // Called when a box is selected (number, boxObject)
+    public System.Action OnAllBoxesSelected; // Called when all selectable boxes are selected
     
     private void Start()
     {
@@ -81,8 +105,9 @@ public class NumberGrid : MonoBehaviour
         // Clear existing boxes if any
         ClearGrid();
         
-        // Reset dice sum
-        currentDiceSum = -1;
+        // Reset dice sums for both players
+        currentDiceSumPlayer = -1;
+        currentDiceSumCPU = -1;
         
         // Create list of all grid items (22 numbers + 3 powerups)
         List<GridItem> gridItems = new List<GridItem>();
@@ -162,6 +187,8 @@ public class NumberGrid : MonoBehaviour
             number = number,
             isPowerup = false,
             isSelected = false,
+            selectedByPlayer = PlayerType.Player,
+            selectedByCPUIndex = -1,
             selectedInRollSum = -1,
             selectedInRollId = -1
         };
@@ -262,6 +289,8 @@ public class NumberGrid : MonoBehaviour
             number = -1, // Powerups don't have numbers
             isPowerup = true,
             isSelected = false,
+            selectedByPlayer = PlayerType.Player,
+            selectedByCPUIndex = -1,
             selectedInRollSum = -1,
             selectedInRollId = -1
         };
@@ -374,43 +403,73 @@ public class NumberGrid : MonoBehaviour
         }
         instantiatedBoxes.Clear();
         boxDataList.Clear();
-        currentDiceSum = -1;
+        currentDiceSumPlayer = -1;
+        currentDiceSumCPU = -1;
     }
     
     /// <summary>
-    /// Sets the dice sum and enables/disables boxes accordingly
+    /// Sets the dice sum for a specific player and enables/disables boxes accordingly
     /// </summary>
-    public void SetDiceSum(int sum)
+    public void SetDiceSum(int sum, PlayerType playerType = PlayerType.Player, int cpuIndex = 0)
     {
         // Every time SetDiceSum is called, it's a new roll (dice were rolled again)
         // Increment roll ID to distinguish between rolls, even if the sum is the same
-        currentRollId++;
+        if (playerType == PlayerType.Player)
+        {
+            currentRollIdPlayer++;
+            currentDiceSumPlayer = sum;
+        }
+        else // CPU
+        {
+            // Track per CPU index
+            if (!cpuRollIds.ContainsKey(cpuIndex))
+            {
+                cpuRollIds[cpuIndex] = 0;
+            }
+            cpuRollIds[cpuIndex]++;
+            
+            if (!cpuDiceSums.ContainsKey(cpuIndex))
+            {
+                cpuDiceSums[cpuIndex] = -1;
+            }
+            cpuDiceSums[cpuIndex] = sum;
+            
+            // Also update legacy variable for backward compatibility
+            currentRollIdCPU = cpuRollIds[cpuIndex];
+            currentDiceSumCPU = sum;
+        }
         
-        lastRollDiceSum = currentDiceSum; // Store previous sum
-        currentDiceSum = sum;
+        // Update interactability for the specific player
+        UpdateBoxInteractability(playerType);
         
-        // Only update interactability - don't reset selections
-        // Selections persist across rolls, but new boxes become available
-        UpdateBoxInteractability();
-        
-        int availableCount = GetAvailableBoxCount(sum);
-        Debug.Log($"[NumberGrid] Dice sum set to {sum}. {availableCount} box(es) with number {sum} are now selectable. Roll ID: {currentRollId}");
+        int availableCount = GetAvailableBoxCount(sum, playerType);
+        int rollId = (playerType == PlayerType.Player) ? currentRollIdPlayer : (cpuRollIds.ContainsKey(cpuIndex) ? cpuRollIds[cpuIndex] : currentRollIdCPU);
+        Debug.Log($"[NumberGrid] {playerType} (CPU index: {cpuIndex}) dice sum set to {sum}. {availableCount} box(es) with number {sum} are now selectable. Roll ID: {rollId}");
     }
     
     /// <summary>
-    /// Clears the current dice sum (disables all buttons)
+    /// Clears the current dice sum for a specific player (disables all buttons for that player)
     /// </summary>
-    public void ClearDiceSum()
+    public void ClearDiceSum(PlayerType playerType = PlayerType.Player)
     {
-        currentDiceSum = -1;
-        UpdateBoxInteractability();
+        if (playerType == PlayerType.Player)
+        {
+            currentDiceSumPlayer = -1;
+        }
+        else // CPU
+        {
+            currentDiceSumCPU = -1;
+        }
+        UpdateBoxInteractability(playerType);
     }
     
     /// <summary>
-    /// Updates button interactability based on current dice sum
+    /// Updates button interactability based on current dice sum for a specific player
     /// </summary>
-    private void UpdateBoxInteractability()
+    private void UpdateBoxInteractability(PlayerType playerType = PlayerType.Player)
     {
+        int currentDiceSum = (playerType == PlayerType.Player) ? currentDiceSumPlayer : currentDiceSumCPU;
+        
         foreach (BoxData boxData in boxDataList)
         {
             if (boxData.isPowerup || boxData.selectButton == null)
@@ -418,15 +477,18 @@ public class NumberGrid : MonoBehaviour
                 continue; // Skip powerups and boxes without buttons
             }
             
-            // Enable button only if:
-            // 1. Box number matches dice sum
-            // 2. Box is not already selected
-            // 3. No other box with the same number is currently blocking it (only disable if another is selected AND we're trying to select a different one)
-            bool shouldBeInteractable = !boxData.isSelected && 
-                                       currentDiceSum > 0 && 
-                                       boxData.number == currentDiceSum;
-            
-            boxData.selectButton.interactable = shouldBeInteractable;
+            // For Player: Enable button only if box number matches player's dice sum and box is not selected
+            // For CPU: Buttons are not interactable (CPU selects programmatically)
+            if (playerType == PlayerType.Player)
+            {
+                bool shouldBeInteractable = !boxData.isSelected && 
+                                           currentDiceSum > 0 && 
+                                           boxData.number == currentDiceSum &&
+                                           !IsAnyBoxWithNumberSelectedInCurrentRoll(boxData.number, PlayerType.Player);
+                
+                boxData.selectButton.interactable = shouldBeInteractable;
+            }
+            // CPU doesn't use buttons, so we don't need to update button interactability for CPU
         }
     }
     
@@ -447,25 +509,27 @@ public class NumberGrid : MonoBehaviour
             return;
         }
         
-        if (currentDiceSum <= 0 || boxData.number != currentDiceSum)
+        if (currentDiceSumPlayer <= 0 || boxData.number != currentDiceSumPlayer)
         {
-            Debug.LogWarning($"[NumberGrid] Cannot select box with number {boxData.number}. Current dice sum is {currentDiceSum}!");
+            Debug.LogWarning($"[NumberGrid] Cannot select box with number {boxData.number}. Current player dice sum is {currentDiceSumPlayer}!");
             return;
         }
         
-        // Check if another box with the same number is already selected in THIS roll
-        // Prevent selecting a second box with the same number in the same roll
-        bool anotherBoxSelectedInThisRoll = IsAnyBoxWithNumberSelectedInCurrentRoll(boxData.number);
+        // Check if another box with the same number is already selected by PLAYER in THIS roll
+        // Prevent selecting a second box with the same number in the same roll (only for this player)
+        bool anotherBoxSelectedInThisRoll = IsAnyBoxWithNumberSelectedInCurrentRoll(boxData.number, PlayerType.Player, -1);
         if (anotherBoxSelectedInThisRoll)
         {
-            Debug.LogWarning($"[NumberGrid] Another box with number {boxData.number} is already selected in this roll (sum: {currentDiceSum}). Cannot select another one until next roll.");
+            Debug.LogWarning($"[NumberGrid] Another box with number {boxData.number} is already selected by Player in this roll (sum: {currentDiceSumPlayer}). Cannot select another one until next roll.");
             return;
         }
         
         // Mark as selected (this locks the selection)
         boxData.isSelected = true;
-        boxData.selectedInRollSum = currentDiceSum; // Track which roll this was selected in
-        boxData.selectedInRollId = currentRollId; // Track which roll ID this was selected in
+        boxData.selectedByPlayer = PlayerType.Player; // Player selection
+        boxData.selectedByCPUIndex = -1; // Not a CPU selection
+        boxData.selectedInRollSum = currentDiceSumPlayer; // Track which roll this was selected in
+        boxData.selectedInRollId = currentRollIdPlayer; // Track which roll ID this was selected in
         
         // Disable this button (permanently locked)
         if (boxData.selectButton != null)
@@ -477,30 +541,56 @@ public class NumberGrid : MonoBehaviour
         if (boxData.highlightImage != null && !boxData.isPowerup)
         {
             boxData.highlightImage.gameObject.SetActive(true);
+            boxData.highlightImage.color = playerOutlineColor; // Use player's outline color
         }
         
         // Trigger event
         OnBoxSelected?.Invoke(boxData.number, boxData.boxObject);
         
         Debug.Log($"[NumberGrid] Box with number {boxData.number} selected and locked!");
+        
+        // Check if all boxes are selected
+        CheckIfAllBoxesSelected();
     }
     
     /// <summary>
-    /// Checks if any box with the given number is already selected in the CURRENT roll
-    /// This prevents selecting a second box with the same number in the same roll
+    /// Checks if any box with the given number is already selected by a specific player in the CURRENT roll
+    /// This prevents selecting a second box with the same number in the same roll (per player)
     /// </summary>
-    private bool IsAnyBoxWithNumberSelectedInCurrentRoll(int number)
+    private bool IsAnyBoxWithNumberSelectedInCurrentRoll(int number, PlayerType playerType, int cpuIndex = 0)
     {
+        int currentRollId;
+        if (playerType == PlayerType.Player)
+        {
+            currentRollId = currentRollIdPlayer;
+        }
+        else // CPU
+        {
+            currentRollId = cpuRollIds.ContainsKey(cpuIndex) ? cpuRollIds[cpuIndex] : currentRollIdCPU;
+        }
+        
         foreach (BoxData boxData in boxDataList)
         {
-            // Check if box is selected AND was selected in the current roll (same roll ID)
-            // This distinguishes between same sum in different rolls
+            // Check if box is selected by this player AND was selected in the current roll (same roll ID)
+            // For CPUs, also check if it's the same CPU index
             if (!boxData.isPowerup && 
                 boxData.number == number && 
                 boxData.isSelected && 
+                boxData.selectedByPlayer == playerType &&
                 boxData.selectedInRollId == currentRollId)
             {
-                return true;
+                // For CPUs, also check if it's the same CPU index
+                if (playerType == PlayerType.CPU)
+                {
+                    if (boxData.selectedByCPUIndex == cpuIndex)
+                    {
+                        return true;
+                    }
+                }
+                else
+                {
+                    return true;
+                }
             }
         }
         return false;
@@ -514,35 +604,333 @@ public class NumberGrid : MonoBehaviour
         foreach (BoxData boxData in boxDataList)
         {
             boxData.isSelected = false;
+            boxData.selectedByPlayer = PlayerType.Player;
             boxData.selectedInRollSum = -1;
             boxData.selectedInRollId = -1;
             
             if (boxData.highlightImage != null)
             {
                 boxData.highlightImage.gameObject.SetActive(false);
+                boxData.highlightImage.color = Color.white; // Reset to default color
             }
         }
         
-        currentDiceSum = -1;
-        lastRollDiceSum = -1;
-        currentRollId = 0;
-        UpdateBoxInteractability();
+        currentDiceSumPlayer = -1;
+        currentDiceSumCPU = -1;
+        currentRollIdPlayer = 0;
+        currentRollIdCPU = 0;
+        UpdateBoxInteractability(PlayerType.Player);
     }
     
     /// <summary>
-    /// Gets the number of available (unselected) boxes for a given sum
+    /// Gets the number of available (unselected) boxes for a given sum and player
     /// </summary>
-    public int GetAvailableBoxCount(int sum)
+    public int GetAvailableBoxCount(int sum, PlayerType playerType = PlayerType.Player, int cpuIndex = 0)
     {
         int count = 0;
+        int currentRollId;
+        if (playerType == PlayerType.Player)
+        {
+            currentRollId = currentRollIdPlayer;
+        }
+        else
+        {
+            currentRollId = cpuRollIds.ContainsKey(cpuIndex) ? cpuRollIds[cpuIndex] : currentRollIdCPU;
+        }
+        
         foreach (BoxData boxData in boxDataList)
         {
             if (!boxData.isPowerup && !boxData.isSelected && boxData.number == sum)
             {
-                count++;
+                // Check if another box with the same number is already selected by this player in current roll
+                bool anotherSelected = IsAnyBoxWithNumberSelectedInCurrentRoll(sum, playerType, cpuIndex);
+                if (!anotherSelected)
+                {
+                    count++;
+                }
             }
         }
         return count;
+    }
+    
+    /// <summary>
+    /// Gets a list of available (unselected) box GameObjects for a given sum and player
+    /// </summary>
+    public List<GameObject> GetAvailableBoxes(int sum, PlayerType playerType = PlayerType.Player, int cpuIndex = 0)
+    {
+        List<GameObject> availableBoxes = new List<GameObject>();
+        
+        foreach (BoxData boxData in boxDataList)
+        {
+            if (!boxData.isPowerup && !boxData.isSelected && boxData.number == sum)
+            {
+                // Check if another box with the same number is already selected by this player in current roll
+                bool anotherSelected = IsAnyBoxWithNumberSelectedInCurrentRoll(sum, playerType, cpuIndex);
+                if (!anotherSelected)
+                {
+                    availableBoxes.Add(boxData.boxObject);
+                }
+            }
+        }
+        return availableBoxes;
+    }
+    
+    /// <summary>
+    /// Selects a box programmatically (for CPU or other automated selection)
+    /// </summary>
+    public bool SelectBox(GameObject boxObject, bool isCPU = false)
+    {
+        // Convert bool to PlayerType for backward compatibility
+        PlayerType playerType = isCPU ? PlayerType.CPU : PlayerType.Player;
+        return SelectBox(boxObject, playerType);
+    }
+    
+    /// <summary>
+    /// Selects a box programmatically (for CPU or other automated selection) - with PlayerType and CPU index
+    /// </summary>
+    public bool SelectBox(GameObject boxObject, PlayerType playerType, int cpuIndex = 0)
+    {
+        // Find the box data
+        BoxData boxData = boxDataList.Find(b => b.boxObject == boxObject);
+        if (boxData == null)
+        {
+            Debug.LogWarning($"[NumberGrid] Box object not found in boxDataList!");
+            return false;
+        }
+        
+        if (boxData.isSelected)
+        {
+            Debug.LogWarning($"[NumberGrid] Box with number {boxData.number} is already selected!");
+            return false;
+        }
+        
+        if (boxData.isPowerup)
+        {
+            Debug.LogWarning("[NumberGrid] Cannot select powerup boxes!");
+            return false;
+        }
+        
+        // Get the current dice sum for this player
+        int currentDiceSum;
+        if (playerType == PlayerType.Player)
+        {
+            currentDiceSum = currentDiceSumPlayer;
+        }
+        else // CPU
+        {
+            currentDiceSum = cpuDiceSums.ContainsKey(cpuIndex) ? cpuDiceSums[cpuIndex] : currentDiceSumCPU;
+        }
+        
+        if (currentDiceSum <= 0 || boxData.number != currentDiceSum)
+        {
+            Debug.LogWarning($"[NumberGrid] Cannot select box with number {boxData.number}. Current {playerType} (CPU index: {cpuIndex}) dice sum is {currentDiceSum}!");
+            return false;
+        }
+        
+        // Check if another box with the same number is already selected by THIS player/CPU in THIS roll
+        bool anotherBoxSelectedInThisRoll = IsAnyBoxWithNumberSelectedInCurrentRoll(boxData.number, playerType, cpuIndex);
+        if (anotherBoxSelectedInThisRoll)
+        {
+            Debug.LogWarning($"[NumberGrid] Another box with number {boxData.number} is already selected by {playerType} (CPU index: {cpuIndex}) in this roll. Cannot select another one.");
+            return false;
+        }
+        
+        // Get the current roll ID for this player
+        int currentRollId;
+        if (playerType == PlayerType.Player)
+        {
+            currentRollId = currentRollIdPlayer;
+        }
+        else // CPU
+        {
+            currentRollId = cpuRollIds.ContainsKey(cpuIndex) ? cpuRollIds[cpuIndex] : currentRollIdCPU;
+        }
+        
+        // Mark as selected
+        boxData.isSelected = true;
+        boxData.selectedByPlayer = playerType;
+        boxData.selectedByCPUIndex = (playerType == PlayerType.CPU) ? cpuIndex : -1; // Store the CPU index
+        boxData.selectedInRollSum = currentDiceSum;
+        boxData.selectedInRollId = currentRollId;
+        
+        // Disable button (if it's a player selection)
+        if (boxData.selectButton != null && playerType == PlayerType.Player)
+        {
+            boxData.selectButton.interactable = false;
+        }
+        
+        // Show highlight with appropriate color matching outline color
+        if (boxData.highlightImage != null && !boxData.isPowerup)
+        {
+            boxData.highlightImage.gameObject.SetActive(true);
+            
+            // Set color based on player type's outline color
+            if (playerType == PlayerType.Player)
+            {
+                boxData.highlightImage.color = playerOutlineColor;
+            }
+            else // CPU
+            {
+                // Get CPU color based on CPU index
+                Color cpuColor = GetCPUOutlineColor(boxData.selectedByCPUIndex);
+                boxData.highlightImage.color = cpuColor;
+            }
+        }
+        
+        // Trigger event
+        OnBoxSelected?.Invoke(boxData.number, boxData.boxObject);
+        
+        Debug.Log($"[NumberGrid] Box with number {boxData.number} selected by {playerType}!");
+        
+        // Check if all boxes are selected
+        CheckIfAllBoxesSelected();
+        
+        return true;
+    }
+    
+    /// <summary>
+    /// Checks if all selectable boxes (non-powerup) are selected
+    /// </summary>
+    private void CheckIfAllBoxesSelected()
+    {
+        int totalSelectableBoxes = 0;
+        int selectedBoxes = 0;
+        
+        foreach (BoxData boxData in boxDataList)
+        {
+            if (!boxData.isPowerup) // Only count non-powerup boxes
+            {
+                totalSelectableBoxes++;
+                if (boxData.isSelected)
+                {
+                    selectedBoxes++;
+                }
+            }
+        }
+        
+        // If all selectable boxes are selected, trigger event
+        if (selectedBoxes >= totalSelectableBoxes && totalSelectableBoxes > 0)
+        {
+            Debug.Log($"[NumberGrid] All {totalSelectableBoxes} selectable boxes are selected!");
+            OnAllBoxesSelected?.Invoke();
+        }
+    }
+    
+    /// <summary>
+    /// Gets the count of selected boxes for each player/CPU
+    /// Returns: Dictionary with PlayerType and CPU index as key, count as value
+    /// Key format: "Player" for player, "CPU_0" for CPU index 0, "CPU_1" for CPU index 1, etc.
+    /// </summary>
+    public Dictionary<string, int> GetSelectionCounts()
+    {
+        Dictionary<string, int> selectionCounts = new Dictionary<string, int>();
+        
+        foreach (BoxData boxData in boxDataList)
+        {
+            if (!boxData.isPowerup && boxData.isSelected)
+            {
+                string key;
+                if (boxData.selectedByPlayer == PlayerType.Player)
+                {
+                    key = "Player";
+                }
+                else // CPU
+                {
+                    key = $"CPU_{boxData.selectedByCPUIndex}";
+                }
+                
+                if (selectionCounts.ContainsKey(key))
+                {
+                    selectionCounts[key]++;
+                }
+                else
+                {
+                    selectionCounts[key] = 1;
+                }
+            }
+        }
+        
+        return selectionCounts;
+    }
+    
+    /// <summary>
+    /// Gets the winner information
+    /// Returns: Tuple with (PlayerType, cpuIndex, selectionCount)
+    /// cpuIndex is -1 for player, 0+ for CPUs
+    /// </summary>
+    public (PlayerType playerType, int cpuIndex, int count) GetWinner()
+    {
+        Dictionary<string, int> selectionCounts = GetSelectionCounts();
+        
+        string winnerKey = null;
+        int maxCount = -1;
+        
+        foreach (var kvp in selectionCounts)
+        {
+            if (kvp.Value > maxCount)
+            {
+                maxCount = kvp.Value;
+                winnerKey = kvp.Key;
+            }
+        }
+        
+        if (winnerKey == null)
+        {
+            return (PlayerType.Player, -1, 0);
+        }
+        
+        if (winnerKey == "Player")
+        {
+            return (PlayerType.Player, -1, maxCount);
+        }
+        else if (winnerKey.StartsWith("CPU_"))
+        {
+            string indexStr = winnerKey.Substring(4); // Remove "CPU_" prefix
+            if (int.TryParse(indexStr, out int cpuIndex))
+            {
+                return (PlayerType.CPU, cpuIndex, maxCount);
+            }
+        }
+        
+        return (PlayerType.Player, -1, 0);
+    }
+    
+    /// <summary>
+    /// Gets the current dice sum for a specific player
+    /// </summary>
+    public int GetCurrentDiceSum(PlayerType playerType = PlayerType.Player)
+    {
+        return (playerType == PlayerType.Player) ? currentDiceSumPlayer : currentDiceSumCPU;
+    }
+    
+    /// <summary>
+    /// Sets the player's outline color
+    /// </summary>
+    public void SetPlayerOutlineColor(Color color)
+    {
+        playerOutlineColor = color;
+        Debug.Log($"[NumberGrid] Player outline color set to: {color}");
+    }
+    
+    /// <summary>
+    /// Sets a CPU's outline color by index
+    /// </summary>
+    public void SetCPUOutlineColor(int cpuIndex, Color color)
+    {
+        cpuOutlineColors[cpuIndex] = color;
+        Debug.Log($"[NumberGrid] CPU {cpuIndex} outline color set to: {color}");
+    }
+    
+    /// <summary>
+    /// Gets a CPU's outline color by index
+    /// </summary>
+    public Color GetCPUOutlineColor(int cpuIndex)
+    {
+        if (cpuOutlineColors.ContainsKey(cpuIndex))
+        {
+            return cpuOutlineColors[cpuIndex];
+        }
+        return Color.red; // Default fallback
     }
     
     /// <summary>

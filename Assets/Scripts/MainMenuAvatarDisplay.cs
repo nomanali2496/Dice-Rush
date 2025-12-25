@@ -265,6 +265,18 @@ public class MainMenuAvatarDisplay : MonoBehaviour
     }
     
     /// <summary>
+    /// Gets the current avatar sprite being displayed
+    /// </summary>
+    public Sprite GetCurrentAvatarSprite()
+    {
+        if (avatarImage != null)
+        {
+            return avatarImage.sprite;
+        }
+        return null;
+    }
+    
+    /// <summary>
     /// Update with custom uploaded image
     /// </summary>
     public void UpdateCustomImage(Sprite customSprite)

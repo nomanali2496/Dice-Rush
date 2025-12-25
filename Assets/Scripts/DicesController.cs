@@ -422,11 +422,11 @@ public class DicesController : MonoBehaviour
         // Update dice sum display
         UpdateDiceSumDisplay(diceSum);
         
-        // Update NumberGrid with the dice sum
-        if (numberGrid != null)
-        {
-            numberGrid.SetDiceSum(diceSum);
-        }
+            // Update NumberGrid with the dice sum (for Player)
+            if (numberGrid != null)
+            {
+                numberGrid.SetDiceSum(diceSum, PlayerType.Player);
+            }
         else
         {
             Debug.LogWarning("[DicesController] NumberGrid reference is not assigned!");
