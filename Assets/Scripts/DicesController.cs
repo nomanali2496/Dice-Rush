@@ -75,6 +75,28 @@ public class DicesController : MonoBehaviour
     }
     
     /// <summary>
+    /// Normalizes euler angles to handle equivalent rotations (e.g., -90 = 270, 360 = 0)
+    /// </summary>
+    private Vector3 NormalizeEulerForComparison(Vector3 euler)
+    {
+        float x = NormalizeAngle(euler.x);
+        float y = NormalizeAngle(euler.y);
+        float z = NormalizeAngle(euler.z);
+        
+        // Convert negative angles to positive equivalents (e.g., -90 to 270)
+        if (x < 0) x = 360f + x;
+        if (y < 0) y = 360f + y;
+        if (z < 0) z = 360f + z;
+        
+        // Normalize to 0-360 range
+        x = NormalizeAngle(x);
+        y = NormalizeAngle(y);
+        z = NormalizeAngle(z);
+        
+        return new Vector3(x, y, z);
+    }
+    
+    /// <summary>
     /// Validates that the faceRotations array is correctly set up
     /// </summary>
     private void ValidateFaceRotations()
@@ -88,32 +110,51 @@ public class DicesController : MonoBehaviour
         // Expected rotations based on user's mapping
         Vector3[] expectedRotations = new Vector3[]
         {
-            new Vector3(0, 90, 0),      // Face 1 (value 1)
-            new Vector3(0, 0, 0),      // Face 2 (value 2)
-            new Vector3(90, 0, 0),     // Face 3 (value 3)
-            new Vector3(180, 0, 0),    // Face 4 (value 4)
-            new Vector3(0, 270, 0),    // Face 5 (value 5)
-            new Vector3(270, 0, 0)     // Face 6 (value 6)
+            new Vector3(0, 90, 0),      // Face 1 (value 1) - (0, 90, 0) = value 1
+            new Vector3(0, 0, 0),       // Face 2 (value 2) - (0, 0, 0) = value 2
+            new Vector3(90, 0, 0),      // Face 3 (value 3) - (90, 0, 0) = value 3
+            new Vector3(180, 0, 0),     // Face 4 (value 4) - (180, 0, 0) = value 4
+            new Vector3(0, 270, 0),     // Face 5 (value 5) - (0, 270, 0) = value 5
+            new Vector3(270, 0, 0)      // Face 6 (value 6) - (270, 0, 0) = value 6
         };
         
         bool hasErrors = false;
+        Debug.Log("=== VALIDATING faceRotations ARRAY ===");
         for (int i = 0; i < 6; i++)
         {
             Vector3 actual = faceRotations[i];
             Vector3 expected = expectedRotations[i];
             
+            // Normalize both for comparison (handles -90 = 270, 360 = 0, etc.)
+            Vector3 normalizedActual = NormalizeEulerForComparison(actual);
+            Vector3 normalizedExpected = NormalizeEulerForComparison(expected);
+            
             // Check if rotations match (with small tolerance for floating point)
-            if (Vector3.Distance(actual, expected) > 0.1f)
+            float distance = Vector3.Distance(normalizedActual, normalizedExpected);
+            if (distance > 0.1f)
             {
-                Debug.LogError($"[DicesController] faceRotations[{i}] is WRONG! Expected {expected} for Face {i + 1} (value {i + 1}), but got {actual}. Please fix in Inspector!");
+                Debug.LogError($"[DicesController] ❌ faceRotations[{i}] (Face {i + 1}, Value {i + 1}) is WRONG!");
+                Debug.LogError($"   Expected: {expected} (normalized: {normalizedExpected})");
+                Debug.LogError($"   Actual:   {actual} (normalized: {normalizedActual})");
+                Debug.LogError($"   Distance: {distance}");
+                Debug.LogError($"   Please fix Element {i} in the Inspector to: X={expected.x}, Y={expected.y}, Z={expected.z}");
                 hasErrors = true;
+            }
+            else
+            {
+                Debug.Log($"[DicesController] ✓ faceRotations[{i}] (Face {i + 1}, Value {i + 1}) is correct: {actual} (normalized: {normalizedActual})");
             }
         }
         
         if (!hasErrors)
         {
-            Debug.Log("[DicesController] faceRotations array is correctly configured!");
+            Debug.Log("[DicesController] ✅ faceRotations array is correctly configured!");
         }
+        else
+        {
+            Debug.LogError("[DicesController] ⚠️ Please fix the faceRotations array in the Inspector! The values are in the wrong order or incorrect.");
+        }
+        Debug.Log("=====================================");
     }
     
     /// <summary>
@@ -338,12 +379,16 @@ public class DicesController : MonoBehaviour
         Vector3 actual2Rotation = useLocal2 ? dice2.transform.localEulerAngles : dice2.transform.eulerAngles;
         
         // Validate that the rotations match what we expect
+        // Normalize rotations to handle equivalent forms (e.g., -90 = 270, 360 = 0, -90 360 0 = 270 0 0)
+        Vector3 normalizedActual1 = NormalizeEulerForComparison(actual1Rotation);
+        Vector3 normalizedTarget1 = NormalizeEulerForComparison(target1Rotation);
+        Vector3 normalizedActual2 = NormalizeEulerForComparison(actual2Rotation);
+        Vector3 normalizedTarget2 = NormalizeEulerForComparison(target2Rotation);
+        
         // Check if the actual rotations are close to the target rotations
         float tolerance = 5f; // 5 degree tolerance
-        bool dice1Matches = Vector3.Distance(actual1Rotation, target1Rotation) < tolerance || 
-                           Vector3.Distance(NormalizeEulerAngles(actual1Rotation), NormalizeEulerAngles(target1Rotation)) < tolerance;
-        bool dice2Matches = Vector3.Distance(actual2Rotation, target2Rotation) < tolerance || 
-                           Vector3.Distance(NormalizeEulerAngles(actual2Rotation), NormalizeEulerAngles(target2Rotation)) < tolerance;
+        bool dice1Matches = Vector3.Distance(normalizedActual1, normalizedTarget1) < tolerance;
+        bool dice2Matches = Vector3.Distance(normalizedActual2, normalizedTarget2) < tolerance;
         
         if (!dice1Matches)
         {
@@ -354,10 +399,20 @@ public class DicesController : MonoBehaviour
             Debug.LogWarning($"[DicesController] Dice2 rotation mismatch! Target: {target2Rotation}, Actual: {actual2Rotation}. Using target value {targetDice2Value}.");
         }
         
-        // Use target values directly since we know exactly what face we set
-        // These are the correct values regardless of what the rotation looks like
-        int actualDice1Value = targetDice1Value;
-        int actualDice2Value = targetDice2Value;
+        // Get actual face values by detecting which face is pointing up
+        // This ensures we get the correct value even if rotations don't match exactly
+        int actualDice1Value = GetDiceValue(dice1);
+        int actualDice2Value = GetDiceValue(dice2);
+        
+        // If detection failed, fall back to target values
+        if (actualDice1Value < 1 || actualDice1Value > 6)
+        {
+            actualDice1Value = targetDice1Value;
+        }
+        if (actualDice2Value < 1 || actualDice2Value > 6)
+        {
+            actualDice2Value = targetDice2Value;
+        }
         
         // Calculate sum based on target values (which match the exact rotations)
         int diceSum = actualDice1Value + actualDice2Value;
@@ -413,54 +468,60 @@ public class DicesController : MonoBehaviour
         return new Vector3(x, y, z);
     }
     
+    [Header("Dice Face Detection")]
+    [Tooltip("Reference direction to check which face is pointing (usually Vector3.up for top face)")]
+    [SerializeField] private Vector3 faceCheckDirection = Vector3.up; // Direction to check for face (usually up)
+    [Tooltip("Tolerance angle in degrees for face detection")]
+    [SerializeField] private float faceDetectionTolerance = 15f; // How close the face needs to be to the check direction
+    
     /// <summary>
-    /// Gets the current face value of a dice based on its rotation
-    /// Compares quaternion rotations for more accurate face detection
+    /// Gets the current face value of a dice by checking which face is pointing up (face up = value 1)
+    /// This method checks which face rotation, when applied to the dice, makes that face point up
     /// </summary>
     private int GetDiceValue(GameObject dice)
     {
         if (dice == null) return 1;
         
-        // Use local rotation if dice is a child, otherwise use world rotation
-        Quaternion currentRotation = dice.transform.parent != null ? dice.transform.localRotation : dice.transform.rotation;
-        Vector3 currentEuler = dice.transform.parent != null ? dice.transform.localEulerAngles : dice.transform.eulerAngles;
-        Vector3 normalizedEuler = NormalizeEulerAngles(currentEuler);
+        // Get the dice's current rotation
+        Quaternion diceRotation = dice.transform.parent != null ? dice.transform.localRotation : dice.transform.rotation;
         
-        // Find closest matching face rotation using quaternion angle
-        float minAngle = float.MaxValue;
-        int closestFace = 1;
+        // The world up direction (what we're checking against)
+        Vector3 worldUp = Vector3.up;
         
-        Debug.Log($"[DicesController] GetDiceValue - Current rotation (Euler): {currentEuler}, Normalized: {normalizedEuler}");
-        Debug.Log($"[DicesController] Using {(dice.transform.parent != null ? "local" : "world")} rotation");
+        // For each face, check if when the dice is at that face's rotation, the face points up
+        float maxDot = -1f;
+        int bestFace = 1;
         
         for (int i = 0; i < faceRotations.Length; i++)
         {
+            // Get the face rotation
             Quaternion faceRotation = Quaternion.Euler(faceRotations[i]);
             
-            // Calculate angle between current rotation and face rotation
-            float angle = Quaternion.Angle(currentRotation, faceRotation);
+            // When dice is at this face rotation, transform the up direction to see where it points
+            Vector3 faceUpDirection = faceRotation * faceCheckDirection;
             
-            // Also check normalized euler distance as backup
-            Vector3 normalizedFaceEuler = NormalizeEulerAngles(faceRotations[i]);
-            float eulerDistance = Vector3.Distance(normalizedEuler, normalizedFaceEuler);
+            // Now check: if the dice is currently at diceRotation, and we want face i+1 to be up,
+            // we need to see if diceRotation rotated by faceRotation makes faceUpDirection point to worldUp
+            // Actually, simpler: check if the current dice rotation matches the face rotation
+            float angle = Quaternion.Angle(diceRotation, faceRotation);
             
-            Debug.Log($"[DicesController] Face {i + 1} (rotation {faceRotations[i]}, normalized {normalizedFaceEuler}) - Quaternion angle: {angle}°, Euler distance: {eulerDistance}");
+            // Convert angle to a dot product-like score (smaller angle = better match)
+            float score = 1f - (angle / 180f); // Score from 1 (perfect match) to -1 (opposite)
             
-            if (angle < minAngle)
+            if (score > maxDot)
             {
-                minAngle = angle;
-                closestFace = i + 1;
+                maxDot = score;
+                bestFace = i + 1;
             }
         }
         
-        Debug.Log($"[DicesController] Closest face: {closestFace} (angle difference: {minAngle} degrees)");
+        // Convert score back to angle
+        float bestAngle = (1f - maxDot) * 180f;
         
-        // If the angle is too large (more than 10 degrees), the rotation might not match any face
-        // Use a smaller threshold since quaternion comparison should be very accurate
-        if (minAngle > 10f)
+        // If the angle is too large, the face detection might be wrong
+        if (bestAngle > faceDetectionTolerance)
         {
-            Debug.LogWarning($"[DicesController] Angle difference too large ({minAngle} degrees), using target value as fallback");
-            // Try to determine which dice this is and return its target value
+            Debug.LogWarning($"[DicesController] Face detection angle too large ({bestAngle}°), using target value as fallback");
             if (dice == dice1)
             {
                 return targetDice1Value;
@@ -471,7 +532,8 @@ public class DicesController : MonoBehaviour
             }
         }
         
-        return closestFace;
+        Debug.Log($"[DicesController] GetDiceValue - Detected face: {bestFace} (angle: {bestAngle}°, score: {maxDot})");
+        return bestFace;
     }
     
     /// <summary>

@@ -40,6 +40,8 @@ public class NumberGrid : MonoBehaviour
         public Button selectButton; // Button component
         public Image highlightImage; // Highlight image component
         public bool isSelected; // Whether this box is selected
+        public int selectedInRollSum = -1; // Dice sum when this box was selected (-1 if not selected)
+        public int selectedInRollId = -1; // Roll ID when this box was selected (-1 if not selected)
     }
     
     private List<BoxData> boxDataList = new List<BoxData>(); // List to store all box data
@@ -48,6 +50,8 @@ public class NumberGrid : MonoBehaviour
     private const int MAX_NUMBER = 12;
     private const int POWERUP_COUNT = 3;
     private int currentDiceSum = -1; // Current dice sum (-1 means no sum set yet)
+    private int lastRollDiceSum = -1; // Dice sum from the last roll (to detect new rolls)
+    private int currentRollId = 0; // Roll ID that increments each time dice are rolled (to distinguish same sum in different rolls)
     
     // Events
     public System.Action<int, GameObject> OnBoxSelected; // Called when a box is selected (number, boxObject)
@@ -157,7 +161,9 @@ public class NumberGrid : MonoBehaviour
             boxObject = box,
             number = number,
             isPowerup = false,
-            isSelected = false
+            isSelected = false,
+            selectedInRollSum = -1,
+            selectedInRollId = -1
         };
         
         // Find and set number text
@@ -255,7 +261,9 @@ public class NumberGrid : MonoBehaviour
             boxObject = box,
             number = -1, // Powerups don't have numbers
             isPowerup = true,
-            isSelected = false
+            isSelected = false,
+            selectedInRollSum = -1,
+            selectedInRollId = -1
         };
         
         // Find and disable number text
@@ -291,6 +299,14 @@ public class NumberGrid : MonoBehaviour
         if (selectButton != null)
         {
             selectButton.interactable = false; // Powerups are never selectable
+        }
+        
+        // Powerups should never have highlight images shown
+        Image highlightImage = FindComponentInChildren<Image>(box, highlightImageName);
+        if (highlightImage != null)
+        {
+            // Don't assign highlight to powerup boxData, but make sure it's hidden
+            highlightImage.gameObject.SetActive(false);
         }
         
         boxDataList.Add(boxData);
@@ -366,11 +382,19 @@ public class NumberGrid : MonoBehaviour
     /// </summary>
     public void SetDiceSum(int sum)
     {
+        // Every time SetDiceSum is called, it's a new roll (dice were rolled again)
+        // Increment roll ID to distinguish between rolls, even if the sum is the same
+        currentRollId++;
+        
+        lastRollDiceSum = currentDiceSum; // Store previous sum
         currentDiceSum = sum;
+        
+        // Only update interactability - don't reset selections
+        // Selections persist across rolls, but new boxes become available
         UpdateBoxInteractability();
         
         int availableCount = GetAvailableBoxCount(sum);
-        Debug.Log($"[NumberGrid] Dice sum set to {sum}. {availableCount} box(es) with number {sum} are now selectable.");
+        Debug.Log($"[NumberGrid] Dice sum set to {sum}. {availableCount} box(es) with number {sum} are now selectable. Roll ID: {currentRollId}");
     }
     
     /// <summary>
@@ -397,6 +421,7 @@ public class NumberGrid : MonoBehaviour
             // Enable button only if:
             // 1. Box number matches dice sum
             // 2. Box is not already selected
+            // 3. No other box with the same number is currently blocking it (only disable if another is selected AND we're trying to select a different one)
             bool shouldBeInteractable = !boxData.isSelected && 
                                        currentDiceSum > 0 && 
                                        boxData.number == currentDiceSum;
@@ -412,7 +437,7 @@ public class NumberGrid : MonoBehaviour
     {
         if (boxData.isSelected)
         {
-            Debug.LogWarning($"[NumberGrid] Box with number {boxData.number} is already selected!");
+            // Box is already selected and locked - do nothing
             return;
         }
         
@@ -428,17 +453,28 @@ public class NumberGrid : MonoBehaviour
             return;
         }
         
-        // Mark as selected
-        boxData.isSelected = true;
+        // Check if another box with the same number is already selected in THIS roll
+        // Prevent selecting a second box with the same number in the same roll
+        bool anotherBoxSelectedInThisRoll = IsAnyBoxWithNumberSelectedInCurrentRoll(boxData.number);
+        if (anotherBoxSelectedInThisRoll)
+        {
+            Debug.LogWarning($"[NumberGrid] Another box with number {boxData.number} is already selected in this roll (sum: {currentDiceSum}). Cannot select another one until next roll.");
+            return;
+        }
         
-        // Disable button
+        // Mark as selected (this locks the selection)
+        boxData.isSelected = true;
+        boxData.selectedInRollSum = currentDiceSum; // Track which roll this was selected in
+        boxData.selectedInRollId = currentRollId; // Track which roll ID this was selected in
+        
+        // Disable this button (permanently locked)
         if (boxData.selectButton != null)
         {
             boxData.selectButton.interactable = false;
         }
         
-        // Show highlight
-        if (boxData.highlightImage != null)
+        // Show highlight (only for number boxes, not powerups)
+        if (boxData.highlightImage != null && !boxData.isPowerup)
         {
             boxData.highlightImage.gameObject.SetActive(true);
         }
@@ -446,7 +482,28 @@ public class NumberGrid : MonoBehaviour
         // Trigger event
         OnBoxSelected?.Invoke(boxData.number, boxData.boxObject);
         
-        Debug.Log($"[NumberGrid] Box with number {boxData.number} selected!");
+        Debug.Log($"[NumberGrid] Box with number {boxData.number} selected and locked!");
+    }
+    
+    /// <summary>
+    /// Checks if any box with the given number is already selected in the CURRENT roll
+    /// This prevents selecting a second box with the same number in the same roll
+    /// </summary>
+    private bool IsAnyBoxWithNumberSelectedInCurrentRoll(int number)
+    {
+        foreach (BoxData boxData in boxDataList)
+        {
+            // Check if box is selected AND was selected in the current roll (same roll ID)
+            // This distinguishes between same sum in different rolls
+            if (!boxData.isPowerup && 
+                boxData.number == number && 
+                boxData.isSelected && 
+                boxData.selectedInRollId == currentRollId)
+            {
+                return true;
+            }
+        }
+        return false;
     }
     
     /// <summary>
@@ -457,6 +514,8 @@ public class NumberGrid : MonoBehaviour
         foreach (BoxData boxData in boxDataList)
         {
             boxData.isSelected = false;
+            boxData.selectedInRollSum = -1;
+            boxData.selectedInRollId = -1;
             
             if (boxData.highlightImage != null)
             {
@@ -465,6 +524,8 @@ public class NumberGrid : MonoBehaviour
         }
         
         currentDiceSum = -1;
+        lastRollDiceSum = -1;
+        currentRollId = 0;
         UpdateBoxInteractability();
     }
     
