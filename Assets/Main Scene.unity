@@ -27759,6 +27759,7 @@ MonoBehaviour:
   mainMenuScreen: {fileID: 407583426}
   showDelay: 0.5
   showOnEveryMainMenuActivation: 0
+  playerProfileUI: {fileID: 2010734780}
 --- !u!4 &1930086431
 Transform:
   m_ObjectHideFlags: 0

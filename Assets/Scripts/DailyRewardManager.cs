@@ -67,6 +67,9 @@ public class DailyRewardManager : MonoBehaviour
     [SerializeField] private float showDelay = 0.5f; // Delay before showing daily reward panel after main menu activates
     [SerializeField] private bool showOnEveryMainMenuActivation = false; // If false, shows only once per session
     
+    [Header("UI Manager Reference")]
+    [SerializeField] private PlayerProfileUI playerProfileUI; // Reference to PlayerProfileUI for updating currency displays
+    
     /// <summary>
     /// Internal representation of daily rewards data
     /// </summary>
@@ -280,17 +283,67 @@ public class DailyRewardManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Adds rewards to player's account
-    /// Override this method or connect to your currency system
+    /// Adds rewards to player's account using PlayFabManager and updates UI
     /// </summary>
     private void AddRewards(float chips, float cash)
     {
-        // TODO: Connect to your game's currency/player data system
-        // Example:
-        // PlayerData.Instance.AddChips(chips);
-        // PlayerData.Instance.AddCash(cash);
-        
-        Debug.Log($"[DailyRewardManager] Adding rewards - Chips: {chips}, Cash: {cash}");
+        if (PlayFabManager.Instance == null)
+        {
+            Debug.LogError("[DailyRewardManager] PlayFabManager.Instance is null! Cannot add rewards.");
+            return;
+        }
+
+        if (!PlayFabManager.Instance.IsLoggedIn())
+        {
+            Debug.LogWarning("[DailyRewardManager] Player is not logged in! Cannot add rewards.");
+            return;
+        }
+
+        // Add chips (coins) to player - convert float to int
+        if (chips > 0)
+        {
+            int chipsInt = Mathf.RoundToInt(chips);
+            PlayFabManager.Instance.AddCoins(chipsInt);
+            Debug.Log($"[DailyRewardManager] Added {chipsInt} chips (coins) to player");
+        }
+
+        // Add cash to player
+        if (cash > 0)
+        {
+            PlayFabManager.Instance.AddCash(cash);
+            Debug.Log($"[DailyRewardManager] Added {cash} cash to player");
+        }
+
+        // Update all UI displays using PlayerProfileUI
+        UpdateAllCurrencyDisplays();
+
+        Debug.Log($"[DailyRewardManager] Rewards added successfully - Chips: {chips}, Cash: {cash}");
+    }
+
+    /// <summary>
+    /// Updates all currency displays (main menu, gameplay, winner screen) using PlayerProfileUI
+    /// </summary>
+    private void UpdateAllCurrencyDisplays()
+    {
+        if (PlayFabManager.Instance == null || PlayFabManager.Instance.currentPlayerData == null)
+        {
+            Debug.LogWarning("[DailyRewardManager] Cannot update UI - PlayFabManager or player data is null");
+            return;
+        }
+
+        PlayerData data = PlayFabManager.Instance.currentPlayerData;
+        int chips = data.coins; // Chips are stored as coins
+        float cash = data.cash; // Cash is stored as float
+
+        // Update all UI displays using PlayerProfileUI
+        if (playerProfileUI != null)
+        {
+            playerProfileUI.UpdateAllCurrencyDisplays(chips, cash);
+        }
+        else
+        {
+            Debug.LogWarning("[DailyRewardManager] PlayerProfileUI reference is null! Cannot update UI displays. Assign it in Inspector.");
+        }
     }
     
     /// <summary>
