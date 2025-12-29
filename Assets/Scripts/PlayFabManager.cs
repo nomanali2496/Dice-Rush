@@ -291,7 +291,7 @@ public class PlayFabManager : MonoBehaviour
             
             if (result.Data.ContainsKey("Cash"))
             {
-                int.TryParse(result.Data["Cash"].Value, out currentPlayerData.cash);
+                float.TryParse(result.Data["Cash"].Value, out currentPlayerData.cash);
                 Debug.Log($"[PlayFabManager] Cash: {currentPlayerData.cash}");
             }
             
@@ -325,7 +325,7 @@ public class PlayFabManager : MonoBehaviour
         {
             Debug.LogWarning("[PlayFabManager] No player data found in PlayFab, initializing with defaults.");
             // Initialize guest account with default values
-            currentPlayerData = new PlayerData("Guest", "", 1000, 100);
+            currentPlayerData = new PlayerData("Guest", "", 1000f, 100);
             // Save the initial data for guest accounts
             SavePlayerData();
         }
@@ -346,7 +346,7 @@ public class PlayFabManager : MonoBehaviour
     /// <summary>
     /// Add cash to player
     /// </summary>
-    public void AddCash(int amount)
+    public void AddCash(float amount)
     {
         currentPlayerData.cash += amount;
         SavePlayerData();
@@ -364,7 +364,7 @@ public class PlayFabManager : MonoBehaviour
     /// <summary>
     /// Spend cash
     /// </summary>
-    public bool SpendCash(int amount)
+    public bool SpendCash(float amount)
     {
         if (currentPlayerData.cash >= amount)
         {

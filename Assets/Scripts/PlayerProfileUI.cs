@@ -14,6 +14,14 @@ public class PlayerProfileUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI coinsText;
     [SerializeField] private Image profileImage;
     
+    [Header("Gameplay UI References")]
+    [SerializeField] private TextMeshProUGUI gameplayChipsText; // Chips display in gameplay screen
+    [SerializeField] private TextMeshProUGUI gameplayCashText; // Cash display in gameplay screen
+    
+    [Header("Winner Screen UI References")]
+    [SerializeField] private TextMeshProUGUI winnerScreenChipsText; // Chips display in winner screen
+    [SerializeField] private TextMeshProUGUI winnerScreenCashText; // Cash display in winner screen
+    
     [Header("Buttons")]
     [SerializeField] private Button editNameButton; // Button to edit/save player name
     [SerializeField] private Button logoutButton;
@@ -227,10 +235,10 @@ public class PlayerProfileUI : MonoBehaviour
             Debug.LogWarning("[PlayerProfileUI] emailText is null!");
         }
         
-        // Update cash
+        // Update cash (Main Menu) - cash is stored as float
         if (cashText != null)
         {
-            cashText.text = cashPrefix + data.cash.ToString("N0");
+            cashText.text = cashPrefix + data.cash.ToString("F2");
             Debug.Log($"[PlayerProfileUI] Set cashText to: {cashText.text}");
         }
         else
@@ -238,7 +246,7 @@ public class PlayerProfileUI : MonoBehaviour
             Debug.LogWarning("[PlayerProfileUI] cashText is null!");
         }
         
-        // Update coins
+        // Update coins (Main Menu)
         if (coinsText != null)
         {
             coinsText.text = coinsPrefix + data.coins.ToString("N0");
@@ -248,6 +256,12 @@ public class PlayerProfileUI : MonoBehaviour
         {
             Debug.LogWarning("[PlayerProfileUI] coinsText is null!");
         }
+        
+        // Update Gameplay UI
+        UpdateGameplayCurrency(data.coins, data.cash);
+        
+        // Update Winner Screen UI
+        UpdateWinnerScreenCurrency(data.coins, data.cash);
         
         // Update profile image
         if (profileImage != null && !string.IsNullOrEmpty(data.imageUrl))
@@ -274,6 +288,44 @@ public class PlayerProfileUI : MonoBehaviour
         
         if (coinsText != null)
             coinsText.text = coinsPrefix + "0";
+        
+        // Update Gameplay UI with default values
+        UpdateGameplayCurrency(0, 0);
+        
+        // Update Winner Screen UI with default values
+        UpdateWinnerScreenCurrency(0, 0);
+    }
+    
+    /// <summary>
+    /// Updates gameplay screen chips and cash displays - cash is stored as float
+    /// </summary>
+    private void UpdateGameplayCurrency(int chips, float cash)
+    {
+        if (gameplayChipsText != null)
+        {
+            gameplayChipsText.text = coinsPrefix + chips.ToString("N0");
+        }
+        
+        if (gameplayCashText != null)
+        {
+            gameplayCashText.text = cashPrefix + cash.ToString("F1");
+        }
+    }
+    
+    /// <summary>
+    /// Updates winner screen chips and cash displays - cash is stored as float
+    /// </summary>
+    private void UpdateWinnerScreenCurrency(int chips, float cash)
+    {
+        if (winnerScreenChipsText != null)
+        {
+            winnerScreenChipsText.text = coinsPrefix + chips.ToString("N0");
+        }
+        
+        if (winnerScreenCashText != null)
+        {
+            winnerScreenCashText.text = cashPrefix + cash.ToString("F1");
+        }
     }
     
     /// <summary>
@@ -507,25 +559,60 @@ public class PlayerProfileUI : MonoBehaviour
     }
     
     /// <summary>
-    /// Update displayed cash value
+    /// Update displayed cash value (all screens) - cash is stored as float
     /// </summary>
-    public void UpdateCashDisplay(int amount)
+    public void UpdateCashDisplay(float amount)
     {
+        // Update Main Menu
         if (cashText != null)
         {
-            cashText.text = cashPrefix + amount.ToString("N0");
+            cashText.text = cashPrefix + amount.ToString("F2");
+        }
+        
+        // Update Gameplay
+        if (gameplayCashText != null)
+        {
+            gameplayCashText.text = cashPrefix + amount.ToString("F2");
+        }
+        
+        // Update Winner Screen
+        if (winnerScreenCashText != null)
+        {
+            winnerScreenCashText.text = cashPrefix + amount.ToString("F2");
         }
     }
     
     /// <summary>
-    /// Update displayed coins value
+    /// Update displayed coins value (all screens)
     /// </summary>
     public void UpdateCoinsDisplay(int amount)
     {
+        // Update Main Menu
         if (coinsText != null)
         {
             coinsText.text = coinsPrefix + amount.ToString("N0");
         }
+        
+        // Update Gameplay
+        if (gameplayChipsText != null)
+        {
+            gameplayChipsText.text = coinsPrefix + amount.ToString("N0");
+        }
+        
+        // Update Winner Screen
+        if (winnerScreenChipsText != null)
+        {
+            winnerScreenChipsText.text = coinsPrefix + amount.ToString("N0");
+        }
+    }
+    
+    /// <summary>
+    /// Update all currency displays (chips and cash) across all screens
+    /// </summary>
+    public void UpdateAllCurrencyDisplays(int chips, float cash)
+    {
+        UpdateCoinsDisplay(chips);
+        UpdateCashDisplay(cash);
     }
     
     #endregion

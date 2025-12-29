@@ -9,7 +9,7 @@ public class PlayerData
 {
     public string playerName;
     public string email;
-    public int cash;
+    public float cash; // Changed to float to support decimal values (e.g., 1000.2)
     public int coins;
     public string imageUrl;
     public int selectedAvatarIndex = 0; // Index of selected avatar (0-7)
@@ -27,7 +27,7 @@ public class PlayerData
         selectedBackgroundIndex = 0;
     }
     
-    public PlayerData(string name, string emailAddress, int initialCash = 1000, int initialCoins = 100)
+    public PlayerData(string name, string emailAddress, float initialCash = 1000f, int initialCoins = 100)
     {
         playerName = name;
         email = emailAddress;
