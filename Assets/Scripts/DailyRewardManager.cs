@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using System.Collections;
 
 /// <summary>
 /// Daily reward data structure
@@ -56,6 +57,16 @@ public class DailyRewardManager : MonoBehaviour
     [SerializeField] private int currentDay = 1; // Current day (1-7)
     [SerializeField] private bool resetOnNewWeek = true; // Reset rewards when new week starts
     
+    [Header("Daily Reward Panel")]
+    [SerializeField] private GameObject dailyRewardPanel; // The daily reward panel GameObject
+    
+    [Header("Main Menu Reference")]
+    [SerializeField] private GameObject mainMenuScreen; // Main menu GameObject to monitor
+    
+    [Header("Panel Settings")]
+    [SerializeField] private float showDelay = 0.5f; // Delay before showing daily reward panel after main menu activates
+    [SerializeField] private bool showOnEveryMainMenuActivation = false; // If false, shows only once per session
+    
     /// <summary>
     /// Internal representation of daily rewards data
     /// </summary>
@@ -64,10 +75,98 @@ public class DailyRewardManager : MonoBehaviour
     // Events for reward collection (optional - can be used by other scripts)
     public System.Action<int, float, float> OnRewardCollected; // day, chips, cash
     
+    // Event for when daily reward panel is closed
+    public System.Action OnDailyRewardPanelClosed;
+    
+    private bool wasPanelActive = false; // Track previous panel state
+    private bool hasShownDailyRewardThisSession = false; // Track if we've shown the panel this session
+    private bool isMonitoringMainMenu = false; // Track if we're monitoring the main menu
+    
     private void Start()
     {
         InitializeDailyRewards();
         UpdateUI();
+        
+        // Initialize panel state tracking
+        if (dailyRewardPanel != null)
+        {
+            wasPanelActive = dailyRewardPanel.activeSelf;
+            // Hide panel initially
+            dailyRewardPanel.SetActive(false);
+        }
+        
+        // Start monitoring main menu if assigned
+        if (mainMenuScreen != null)
+        {
+            StartCoroutine(MonitorMainMenuActivation());
+        }
+        else
+        {
+            Debug.LogWarning("[DailyRewardManager] Main Menu Screen not assigned! Will try to find it automatically.");
+            // Try to find MainMenuScreen by name
+            GameObject foundMainMenu = GameObject.Find("MainMenuScreen");
+            if (foundMainMenu != null)
+            {
+                mainMenuScreen = foundMainMenu;
+                StartCoroutine(MonitorMainMenuActivation());
+                Debug.Log("[DailyRewardManager] Found MainMenuScreen automatically.");
+            }
+            else
+            {
+                Debug.LogWarning("[DailyRewardManager] MainMenuScreen not found! Daily reward panel will not open automatically.");
+            }
+        }
+    }
+    
+    /// <summary>
+    /// Monitors when main menu becomes active and shows daily reward panel
+    /// </summary>
+    private IEnumerator MonitorMainMenuActivation()
+    {
+        isMonitoringMainMenu = true;
+        bool hasShownAfterMainMenuActivation = false;
+        
+        while (true)
+        {
+            // Check if main menu is active
+            if (mainMenuScreen != null && mainMenuScreen.activeSelf)
+            {
+                // Check if we should show daily reward panel
+                if (!showOnEveryMainMenuActivation && hasShownDailyRewardThisSession)
+                {
+                    yield return new WaitForSeconds(0.5f); // Check every 0.5 seconds
+                    continue;
+                }
+                
+                // Show daily reward panel for the first time after main menu activates
+                if (!hasShownAfterMainMenuActivation)
+                {
+                    hasShownAfterMainMenuActivation = true;
+                    yield return new WaitForSeconds(showDelay);
+                    ShowDailyRewardPanel();
+                }
+            }
+            
+            yield return new WaitForSeconds(0.5f); // Check every 0.5 seconds
+        }
+    }
+    
+    private void Update()
+    {
+        // Monitor daily reward panel state to detect when it closes
+        if (dailyRewardPanel != null)
+        {
+            bool isPanelActive = dailyRewardPanel.activeSelf;
+            
+            // If panel was active and now is inactive, it just closed
+            if (wasPanelActive && !isPanelActive)
+            {
+                OnDailyRewardPanelClosed?.Invoke();
+                Debug.Log("[DailyRewardManager] Daily reward panel closed");
+            }
+            
+            wasPanelActive = isPanelActive;
+        }
     }
     
     /// <summary>
@@ -268,6 +367,52 @@ public class DailyRewardManager : MonoBehaviour
         if (day < 1 || day > 7) return null;
         int dayIndex = day - 1;
         return dailyRewards[dayIndex];
+    }
+    
+    /// <summary>
+    /// Gets the daily reward panel GameObject
+    /// </summary>
+    public GameObject GetDailyRewardPanel()
+    {
+        return dailyRewardPanel;
+    }
+    
+    /// <summary>
+    /// Checks if the daily reward panel is currently active
+    /// </summary>
+    public bool IsDailyRewardPanelActive()
+    {
+        return dailyRewardPanel != null && dailyRewardPanel.activeSelf;
+    }
+    
+    /// <summary>
+    /// Shows/opens the daily reward panel
+    /// </summary>
+    public void ShowDailyRewardPanel()
+    {
+        if (dailyRewardPanel != null)
+        {
+            dailyRewardPanel.SetActive(true);
+            wasPanelActive = true;
+            hasShownDailyRewardThisSession = true;
+            Debug.Log("[DailyRewardManager] Daily reward panel opened");
+        }
+        else
+        {
+            Debug.LogWarning("[DailyRewardManager] Daily reward panel GameObject is not assigned!");
+        }
+    }
+    
+    /// <summary>
+    /// Hides/closes the daily reward panel
+    /// </summary>
+    public void HideDailyRewardPanel()
+    {
+        if (dailyRewardPanel != null)
+        {
+            dailyRewardPanel.SetActive(false);
+            Debug.Log("[DailyRewardManager] Daily reward panel closed");
+        }
     }
     
     #region Test Methods

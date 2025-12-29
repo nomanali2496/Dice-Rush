@@ -29,8 +29,11 @@ public class OfferPanelManager : MonoBehaviour
     private int currentActivePanelIndex = -1;
     private bool hasLoggedIn = false;
     private bool isMonitoringMainMenu = false;
+    private bool hasDailyRewardPanelClosed = false; // Start as false - will be set to true when panel closes
+    private bool isWaitingForDailyRewardPanel = false;
     
     private AuthenticationManager authManager;
+    private DailyRewardManager dailyRewardManager;
     
     private void Start()
     {
@@ -47,6 +50,18 @@ public class OfferPanelManager : MonoBehaviour
         else
         {
             Debug.LogWarning("[OfferPanelManager] AuthenticationManager not found! Offer panels will not show on login.");
+        }
+        
+        // Find DailyRewardManager in scene
+        dailyRewardManager = FindObjectOfType<DailyRewardManager>();
+        if (dailyRewardManager != null)
+        {
+            dailyRewardManager.OnDailyRewardPanelClosed += OnDailyRewardPanelClosed;
+            Debug.Log("[OfferPanelManager] Successfully subscribed to DailyRewardManager events");
+        }
+        else
+        {
+            Debug.LogWarning("[OfferPanelManager] DailyRewardManager not found! Offer panels will show immediately after login.");
         }
         
         // Start monitoring main menu if assigned
@@ -78,6 +93,11 @@ public class OfferPanelManager : MonoBehaviour
         {
             authManager.OnAuthenticationSuccess -= OnUserLoggedIn;
         }
+        
+        if (dailyRewardManager != null)
+        {
+            dailyRewardManager.OnDailyRewardPanelClosed -= OnDailyRewardPanelClosed;
+        }
     }
     
     /// <summary>
@@ -87,6 +107,31 @@ public class OfferPanelManager : MonoBehaviour
     {
         hasLoggedIn = true;
         Debug.Log("[OfferPanelManager] User logged in, waiting for main menu to activate...");
+        
+        // Always wait for daily reward panel to close (it will open when main menu activates)
+        // Initialize as false so we wait for the daily reward panel to close
+        hasDailyRewardPanelClosed = false;
+        
+        // Only set to true if daily reward manager doesn't exist (meaning no daily reward panel will show)
+        if (dailyRewardManager == null)
+        {
+            hasDailyRewardPanelClosed = true;
+            Debug.Log("[OfferPanelManager] DailyRewardManager not found, will show offer panel without waiting.");
+        }
+        else
+        {
+            Debug.Log("[OfferPanelManager] Will wait for daily reward panel to close before showing offer panel.");
+        }
+    }
+    
+    /// <summary>
+    /// Called when daily reward panel closes
+    /// </summary>
+    private void OnDailyRewardPanelClosed()
+    {
+        hasDailyRewardPanelClosed = true;
+        isWaitingForDailyRewardPanel = false;
+        Debug.Log("[OfferPanelManager] Daily reward panel closed, can now show offer panel");
     }
     
     /// <summary>
@@ -109,8 +154,18 @@ public class OfferPanelManager : MonoBehaviour
                     continue;
                 }
                 
-                // Show offer panel for the first time after main menu activates
-                if (!hasShownAfterMainMenuActivation)
+                // Wait for daily reward panel to close first
+                // Only rely on the event - don't check panel state directly to avoid timing issues
+                if (!hasDailyRewardPanelClosed)
+                {
+                    // If DailyRewardManager exists, we MUST wait for the OnDailyRewardPanelClosed event
+                    // Don't check panel state here - just wait for the event to fire
+                    yield return new WaitForSeconds(0.5f); // Check every 0.5 seconds
+                    continue;
+                }
+                
+                // Show offer panel for the first time after main menu activates AND daily reward panel is closed
+                if (!hasShownAfterMainMenuActivation && hasDailyRewardPanelClosed)
                 {
                     hasShownAfterMainMenuActivation = true;
                     yield return new WaitForSeconds(showDelay);
