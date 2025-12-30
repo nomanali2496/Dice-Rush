@@ -63,10 +63,11 @@ public class LobbyRowCellView : EnhancedScrollerCellView
                 item1.SetData(data1);
                 item1.gameObject.SetActive(true);
                 
-                // Show play button for first item
+                // Show and update play button for first item
                 if (playButton1 != null)
                 {
                     playButton1.gameObject.SetActive(true);
+                    UpdatePlayButtonInteractability(playButton1, data1.lobbyIndex);
                 }
             }
             else
@@ -89,10 +90,11 @@ public class LobbyRowCellView : EnhancedScrollerCellView
                 item2.SetData(data2);
                 item2.gameObject.SetActive(true);
                 
-                // Show play button for second item
+                // Show and update play button for second item
                 if (playButton2 != null)
                 {
                     playButton2.gameObject.SetActive(true);
+                    UpdatePlayButtonInteractability(playButton2, data2.lobbyIndex);
                 }
             }
             else
@@ -109,6 +111,50 @@ public class LobbyRowCellView : EnhancedScrollerCellView
     }
     
     /// <summary>
+    /// Updates the interactability of a play button based on whether player can afford entry fee
+    /// </summary>
+    private void UpdatePlayButtonInteractability(Button playButton, int lobbyIndex)
+    {
+        if (playButton == null || lobbyManager == null)
+        {
+            return;
+        }
+        
+        // Check if player can afford entry fee
+        bool canAfford = lobbyManager.CanPlayerAffordEntryFee(lobbyIndex);
+        playButton.interactable = canAfford;
+        
+        if (!canAfford)
+        {
+            Debug.Log($"[LobbyRowCellView] Play button disabled for Lobby {lobbyIndex + 1} - player cannot afford entry fee");
+        }
+    }
+    
+    /// <summary>
+    /// Refreshes the interactability of play buttons (call this when player currency changes)
+    /// </summary>
+    public void RefreshPlayButtonsInteractability()
+    {
+        if (item1 != null && playButton1 != null)
+        {
+            LobbyGameObjectData data1 = item1.GetCurrentData();
+            if (data1 != null)
+            {
+                UpdatePlayButtonInteractability(playButton1, data1.lobbyIndex);
+            }
+        }
+        
+        if (item2 != null && playButton2 != null)
+        {
+            LobbyGameObjectData data2 = item2.GetCurrentData();
+            if (data2 != null)
+            {
+                UpdatePlayButtonInteractability(playButton2, data2.lobbyIndex);
+            }
+        }
+    }
+    
+    /// <summary>
     /// Called when play button 1 is clicked
     /// </summary>
     private void OnPlayButton1Clicked()
@@ -118,7 +164,8 @@ public class LobbyRowCellView : EnhancedScrollerCellView
             LobbyGameObjectData data = item1.GetCurrentData();
             if (data != null)
             {
-                lobbyManager.OpenGameplayObject();
+                // Pass the lobby index to open the correct lobby configuration
+                lobbyManager.OpenGameplayObject(data.lobbyIndex);
             }
         }
         else
@@ -137,7 +184,8 @@ public class LobbyRowCellView : EnhancedScrollerCellView
             LobbyGameObjectData data = item2.GetCurrentData();
             if (data != null)
             {
-                lobbyManager.OpenGameplayObject();
+                // Pass the lobby index to open the correct lobby configuration
+                lobbyManager.OpenGameplayObject(data.lobbyIndex);
             }
         }
         else

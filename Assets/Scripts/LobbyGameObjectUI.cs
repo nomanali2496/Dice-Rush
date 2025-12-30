@@ -9,10 +9,19 @@ using EnhancedUI.EnhancedScroller;
 public class LobbyGameObjectData
 {
     public int backgroundIndex; // Index of background sprite to use (0-12 for 13 backgrounds)
+    public int lobbyIndex; // Index of the lobby (0-12 for 13 lobbies)
     
+    public LobbyGameObjectData(int backgroundIndex, int lobbyIndex)
+    {
+        this.backgroundIndex = backgroundIndex;
+        this.lobbyIndex = lobbyIndex;
+    }
+    
+    // Legacy constructor for backward compatibility
     public LobbyGameObjectData(int backgroundIndex)
     {
         this.backgroundIndex = backgroundIndex;
+        this.lobbyIndex = backgroundIndex; // Use background index as lobby index by default
     }
 }
 

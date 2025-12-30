@@ -109,6 +109,10 @@ public class NumberGrid : MonoBehaviour
         currentDiceSumPlayer = -1;
         currentDiceSumCPU = -1;
         
+        // Reset CPU dice sums and roll IDs dictionaries
+        cpuDiceSums.Clear();
+        cpuRollIds.Clear();
+        
         // Create list of all grid items (22 numbers + 3 powerups)
         List<GridItem> gridItems = new List<GridItem>();
         
@@ -405,6 +409,10 @@ public class NumberGrid : MonoBehaviour
         boxDataList.Clear();
         currentDiceSumPlayer = -1;
         currentDiceSumCPU = -1;
+        
+        // Clear CPU dice sums and roll IDs dictionaries
+        cpuDiceSums.Clear();
+        cpuRollIds.Clear();
     }
     
     /// <summary>

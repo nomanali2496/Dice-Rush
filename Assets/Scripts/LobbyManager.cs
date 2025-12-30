@@ -37,6 +37,9 @@ public class LobbyManager : MonoBehaviour, IEnhancedScrollerDelegate
     [Header("Lobby Game Objects Settings")]
     private const int BACKGROUND_COUNT = 13; // Total number of background sprites (0-12)
     
+    [Header("Lobby Configurations")]
+    [SerializeField] private LobbyConfig[] lobbyConfigurations = new LobbyConfig[13]; // 13 lobby configurations (can be set in inspector)
+    
     private bool isScrolling = true;
     private float resetThresholdY;
     
@@ -50,6 +53,7 @@ public class LobbyManager : MonoBehaviour, IEnhancedScrollerDelegate
     private void Start()
     {
         InitializeBackgrounds();
+        InitializeLobbyConfigurations();
         InitializeLobbyObjects();
     }
     
@@ -59,6 +63,8 @@ public class LobbyManager : MonoBehaviour, IEnhancedScrollerDelegate
         if (isScrollerInitialized && scroller != null)
         {
             RefreshLobbyObjects();
+            // Refresh play buttons when lobby becomes active (in case currency changed)
+            RefreshAllPlayButtons();
         }
     }
     
@@ -403,6 +409,102 @@ public class LobbyManager : MonoBehaviour, IEnhancedScrollerDelegate
     }
     
     /// <summary>
+    /// Initializes lobby configurations with default values if not set in inspector
+    /// </summary>
+    private void InitializeLobbyConfigurations()
+    {
+        if (lobbyConfigurations == null || lobbyConfigurations.Length != BACKGROUND_COUNT)
+        {
+            lobbyConfigurations = new LobbyConfig[BACKGROUND_COUNT];
+        }
+        
+        // Initialize any null configurations with default values
+        for (int i = 0; i < BACKGROUND_COUNT; i++)
+        {
+            if (lobbyConfigurations[i] == null)
+            {
+                // Default configuration: 2 players (1 player + 1 CPU), entry fee 10 chips, prizes 20/10/5 chips
+                lobbyConfigurations[i] = new LobbyConfig(
+                    index: i,
+                    players: 2,
+                    entryCash: 0f,
+                    entryChips: 10,
+                    firstCash: 0f,
+                    firstChips: 20,
+                    secondCash: 0f,
+                    secondChips: 10,
+                    thirdCash: 0f,
+                    thirdChips: 5
+                );
+                Debug.Log($"[LobbyManager] Initialized default configuration for Lobby {i + 1}");
+            }
+        }
+        
+        Debug.Log($"[LobbyManager] Initialized {BACKGROUND_COUNT} lobby configurations");
+    }
+    
+    /// <summary>
+    /// Gets the lobby configuration for a specific lobby index
+    /// </summary>
+    public LobbyConfig GetLobbyConfig(int lobbyIndex)
+    {
+        if (lobbyConfigurations != null && lobbyIndex >= 0 && lobbyIndex < lobbyConfigurations.Length)
+        {
+            return lobbyConfigurations[lobbyIndex];
+        }
+        return null;
+    }
+    
+    /// <summary>
+    /// Checks if the player can afford the entry fee for a specific lobby
+    /// </summary>
+    public bool CanPlayerAffordEntryFee(int lobbyIndex)
+    {
+        if (PlayFabManager.Instance == null || !PlayFabManager.Instance.IsLoggedIn())
+        {
+            return false; // Can't check if not logged in
+        }
+        
+        LobbyConfig config = GetLobbyConfig(lobbyIndex);
+        if (config == null)
+        {
+            return false; // No config found
+        }
+        
+        // Check if player has enough cash
+        if (config.entryFeeCash > 0f)
+        {
+            if (PlayFabManager.Instance.currentPlayerData.cash < config.entryFeeCash)
+            {
+                return false; // Can't afford cash entry fee
+            }
+        }
+        
+        // Check if player has enough chips
+        if (config.entryFeeChips > 0)
+        {
+            if (PlayFabManager.Instance.currentPlayerData.coins < config.entryFeeChips)
+            {
+                return false; // Can't afford chips entry fee
+            }
+        }
+        
+        return true; // Player can afford entry fee
+    }
+    
+    /// <summary>
+    /// Sets the lobby configuration for a specific lobby index
+    /// </summary>
+    public void SetLobbyConfig(int lobbyIndex, LobbyConfig config)
+    {
+        if (lobbyConfigurations != null && lobbyIndex >= 0 && lobbyIndex < lobbyConfigurations.Length)
+        {
+            lobbyConfigurations[lobbyIndex] = config;
+            Debug.Log($"[LobbyManager] Updated configuration for Lobby {lobbyIndex + 1}");
+        }
+    }
+    
+    /// <summary>
     /// Loads 13 lobby objects data - one for each background sprite (0-12)
     /// </summary>
     public void LoadLobbyObjectsData()
@@ -419,7 +521,7 @@ public class LobbyManager : MonoBehaviour, IEnhancedScrollerDelegate
         // Create exactly 13 objects, one for each background sprite (indices 0-12)
         for (int i = 0; i < BACKGROUND_COUNT; i++)
         {
-            _lobbyObjectsData.Add(new LobbyGameObjectData(i));
+            _lobbyObjectsData.Add(new LobbyGameObjectData(i, i));
         }
         
         // Reload the scroller with new data (only if scroller is active and initialized)
@@ -439,14 +541,16 @@ public class LobbyManager : MonoBehaviour, IEnhancedScrollerDelegate
     /// <summary>
     /// Adds a lobby game object entry
     /// </summary>
-    public void AddLobbyObject(int backgroundIndex)
+    public void AddLobbyObject(int backgroundIndex, int lobbyIndex = -1)
     {
         if (_lobbyObjectsData == null)
         {
             _lobbyObjectsData = new SmallList<LobbyGameObjectData>();
         }
         
-        _lobbyObjectsData.Add(new LobbyGameObjectData(backgroundIndex));
+        // Use lobbyIndex if provided, otherwise use backgroundIndex
+        int actualLobbyIndex = lobbyIndex >= 0 ? lobbyIndex : backgroundIndex;
+        _lobbyObjectsData.Add(new LobbyGameObjectData(backgroundIndex, actualLobbyIndex));
         
         if (scroller != null && scroller.gameObject.activeInHierarchy)
         {
@@ -483,14 +587,60 @@ public class LobbyManager : MonoBehaviour, IEnhancedScrollerDelegate
     }
     
     /// <summary>
-    /// Opens the gameplay object
+    /// Refreshes all play buttons interactability based on player's current currency
+    /// Call this when player's cash or chips change
     /// </summary>
-    public void OpenGameplayObject()
+    public void RefreshAllPlayButtons()
+    {
+        if (scroller != null && scroller.gameObject.activeInHierarchy)
+        {
+            // Reload data to refresh all cells
+            scroller.ReloadData();
+            Debug.Log("[LobbyManager] Refreshed all play buttons interactability");
+        }
+    }
+    
+    /// <summary>
+    /// Opens the gameplay object with the specified lobby configuration
+    /// </summary>
+    /// <param name="lobbyIndex">Index of the lobby (0-12)</param>
+    public void OpenGameplayObject(int lobbyIndex = -1)
     {
         if (gameplayObject != null)
         {
+            // Get the lobby configuration
+            LobbyConfig config = null;
+            if (lobbyIndex >= 0 && lobbyIndex < BACKGROUND_COUNT)
+            {
+                config = GetLobbyConfig(lobbyIndex);
+            }
+            
+            // Configure GameManager with lobby settings before opening gameplay
+            GameManager gameManager = FindObjectOfType<GameManager>();
+            if (gameManager != null && config != null)
+            {
+                // Ensure gameplay screen is inactive first to ensure proper reset
+                if (gameplayObject.activeSelf)
+                {
+                    gameplayObject.SetActive(false);
+                }
+                
+                // Configure with new lobby settings
+                gameManager.ConfigureGameFromLobby(config);
+                Debug.Log($"[LobbyManager] Configured game for Lobby {lobbyIndex + 1}: {config.numberOfPlayers} players, Entry: {config.entryFeeChips} chips / {config.entryFeeCash} cash");
+            }
+            else if (gameManager == null)
+            {
+                Debug.LogWarning("[LobbyManager] GameManager not found! Game will start with default settings.");
+            }
+            else if (config == null)
+            {
+                Debug.LogWarning($"[LobbyManager] Lobby configuration not found for index {lobbyIndex}! Game will start with default settings.");
+            }
+            
+            // Activate gameplay screen
             gameplayObject.SetActive(true);
-            Debug.Log("[LobbyManager] Gameplay object opened");
+            Debug.Log($"[LobbyManager] Gameplay object opened for Lobby {lobbyIndex + 1}");
         }
         else
         {
