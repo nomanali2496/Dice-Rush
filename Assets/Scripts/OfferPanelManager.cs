@@ -264,6 +264,9 @@ public class OfferPanelManager : MonoBehaviour
             isShowingPanelsSequence = true;
             hasShownOfferThisSession = true;
             
+            // Setup button listeners to auto-close panel when any button is clicked
+            SetupPanelButtonListeners(offerPanels[currentIndex]);
+            
             // Start scale animation
             StartCoroutine(AnimatePanelScale(offerPanels[currentIndex]));
             
@@ -467,7 +470,43 @@ public class OfferPanelManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Setup close buttons for each panel
+    /// Sets up button listeners for a panel to automatically close when any button is clicked
+    /// This includes Buy buttons, Purchase buttons, or any other buttons in the panel
+    /// Note: This adds the close listener without removing existing listeners to preserve button functionality
+    /// </summary>
+    private void SetupPanelButtonListeners(GameObject panel)
+    {
+        if (panel == null) return;
+        
+        // Find all buttons in the panel (including children)
+        Button[] buttons = panel.GetComponentsInChildren<Button>(true);
+        
+        if (buttons == null || buttons.Length == 0)
+        {
+            Debug.LogWarning($"[OfferPanelManager] No buttons found in panel {panel.name}");
+            return;
+        }
+        
+        // Add listener to each button to close the panel when clicked
+        // We add it without removing existing listeners to preserve button functionality (like purchase handlers)
+        foreach (Button button in buttons)
+        {
+            if (button != null)
+            {
+                // Check if this listener is already added to avoid duplicates
+                // We'll use a wrapper method to check
+                button.onClick.AddListener(() => {
+                    Debug.Log($"[OfferPanelManager] Button '{button.name}' clicked in panel, closing panel...");
+                    CloseCurrentPanel();
+                });
+            }
+        }
+        
+        Debug.Log($"[OfferPanelManager] Setup {buttons.Length} button listeners for panel {panel.name} - panels will auto-close on button click");
+    }
+    
+    /// <summary>
+    /// Setup close buttons for each panel (kept for backward compatibility)
     /// </summary>
     // private void SetupCloseButtons()
     // {

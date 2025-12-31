@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using System.Collections;
 
 /// <summary>
 /// Daily reward data structure
@@ -59,11 +60,15 @@ public class DailyRewardManager : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private int currentDay = 1; // Current day (1-7)
     [SerializeField] private bool resetOnNewWeek = true; // Reset rewards when new week starts
+    [SerializeField] private float autoCloseDelay = 0.5f; // Delay before auto-closing panel after collecting reward
     
     /// <summary>
     /// Internal representation of daily rewards data
     /// </summary>
     private DailyRewardData[] dailyRewards = new DailyRewardData[7];
+    
+    // PlayerPrefs key for tracking last shown date
+    private const string LAST_SHOWN_DATE_KEY = "DailyReward_LastShownDate";
     
     // Events for reward collection and panel management (optional - can be used by other scripts)
     public System.Action<int, float, float> OnRewardCollected; // day, chips, cash
@@ -196,20 +201,61 @@ public class DailyRewardManager : MonoBehaviour
         UpdateUI();
         
         Debug.Log($"[DailyRewardManager] Collected Day {currentDay} reward: {chipsAmount} Chips, {cashAmount} Cash");
+        
+        // Auto-close panel after delay
+        StartCoroutine(AutoClosePanelAfterDelay());
+    }
+    
+    /// <summary>
+    /// Automatically closes the panel after a delay
+    /// </summary>
+    private IEnumerator AutoClosePanelAfterDelay()
+    {
+        yield return new WaitForSeconds(autoCloseDelay);
+        ClosePanel();
+        Debug.Log("[DailyRewardManager] Panel auto-closed after collecting reward");
     }
     
     /// <summary>
     /// Adds rewards to player's account
-    /// Override this method or connect to your currency system
+    /// Connects to PlayFabManager to add currency and updates UI
     /// </summary>
     private void AddRewards(float chips, float cash)
     {
-        // TODO: Connect to your game's currency/player data system
-        // Example:
-        // PlayerData.Instance.AddChips(chips);
-        // PlayerData.Instance.AddCash(cash);
+        // Check if PlayFabManager is available
+        if (PlayFabManager.Instance == null)
+        {
+            Debug.LogWarning("[DailyRewardManager] PlayFabManager.Instance is null! Cannot add rewards.");
+            return;
+        }
         
-        Debug.Log($"[DailyRewardManager] Adding rewards - Chips: {chips}, Cash: {cash}");
+        // Add cash to player
+        if (cash > 0f)
+        {
+            PlayFabManager.Instance.AddCash(cash);
+            Debug.Log($"[DailyRewardManager] Added {cash} cash to player");
+        }
+        
+        // Add chips (coins) to player - convert float to int
+        if (chips > 0f)
+        {
+            int chipsInt = Mathf.RoundToInt(chips);
+            PlayFabManager.Instance.AddCoins(chipsInt);
+            Debug.Log($"[DailyRewardManager] Added {chipsInt} chips (coins) to player");
+        }
+        
+        // Update UI displays if PlayerProfileUI is available
+        PlayerProfileUI playerProfileUI = FindObjectOfType<PlayerProfileUI>();
+        if (playerProfileUI != null && PlayFabManager.Instance.currentPlayerData != null)
+        {
+            PlayerData data = PlayFabManager.Instance.currentPlayerData;
+            playerProfileUI.UpdateAllCurrencyDisplays(data.coins, data.cash);
+            Debug.Log("[DailyRewardManager] Updated UI displays with new currency values");
+        }
+        else
+        {
+            Debug.LogWarning("[DailyRewardManager] PlayerProfileUI not found or player data is null. UI may not update automatically.");
+        }
     }
     
     /// <summary>
@@ -289,15 +335,62 @@ public class DailyRewardManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Shows the daily reward panel
+    /// Shows the daily reward panel (only once per day)
+    /// If already shown today, immediately fires OnDailyRewardPanelClosed event so other panels can proceed
     /// </summary>
     public void ShowPanel()
     {
+        // Check if panel has already been shown today
+        if (HasPanelBeenShownToday())
+        {
+            Debug.Log("[DailyRewardManager] Daily reward panel already shown today. Skipping and notifying that panel is 'closed' so offer panels can show.");
+            // Immediately fire the closed event so offer panels can proceed
+            OnDailyRewardPanelClosed?.Invoke();
+            return;
+        }
+        
         if (dailyRewardPanel != null)
         {
             dailyRewardPanel.SetActive(true);
+            
+            // Mark as shown today
+            MarkPanelAsShownToday();
+            
             Debug.Log("[DailyRewardManager] Daily reward panel shown");
         }
+    }
+    
+    /// <summary>
+    /// Checks if the panel has been shown today
+    /// </summary>
+    private bool HasPanelBeenShownToday()
+    {
+        string lastShownDate = PlayerPrefs.GetString(LAST_SHOWN_DATE_KEY, "");
+        string todayDate = DateTime.Now.ToString("yyyy-MM-dd");
+        
+        return lastShownDate == todayDate;
+    }
+    
+    /// <summary>
+    /// Marks the panel as shown today
+    /// </summary>
+    private void MarkPanelAsShownToday()
+    {
+        string todayDate = DateTime.Now.ToString("yyyy-MM-dd");
+        PlayerPrefs.SetString(LAST_SHOWN_DATE_KEY, todayDate);
+        PlayerPrefs.Save();
+        Debug.Log($"[DailyRewardManager] Marked panel as shown on {todayDate}");
+    }
+    
+    /// <summary>
+    /// Resets the daily show tracking (useful for testing)
+    /// </summary>
+    [ContextMenu("Reset Daily Show Tracking")]
+    public void ResetDailyShowTracking()
+    {
+        PlayerPrefs.DeleteKey(LAST_SHOWN_DATE_KEY);
+        PlayerPrefs.Save();
+        Debug.Log("[DailyRewardManager] Daily show tracking reset");
     }
     
     /// <summary>
