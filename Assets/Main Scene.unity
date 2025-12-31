@@ -6940,6 +6940,7 @@ MonoBehaviour:
   mainMenuScreen: {fileID: 407583426}
   showDelay: 1
   showOnEveryLogin: 1
+  delayBetweenPanels: 0.5
   animationDuration: 0.5
   scaleCurve:
     serializedVersion: 2
@@ -15348,6 +15349,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 895038453}
   m_CullTransparentMesh: 1
+--- !u!114 &910092944 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1493063661614368164, guid: 8588ccb3e58cd8340bf27c05778819c5, type: 3}
+  m_PrefabInstance: {fileID: 95545617}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1001 &916960179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30584,7 +30596,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0091a3b53c9b4194e9c34fa3b113dbf8, type: 3}
   dailyRewardPanel: {fileID: 2067754750}
   collectButton: {fileID: 1937150716}
-  closeButton: {fileID: 0}
+  closeButton: {fileID: 910092944}
   chipsRewards:
   - 30
   - 50
@@ -30601,7 +30613,7 @@ MonoBehaviour:
   - 0
   - 0.5
   - 2
-  currentDay: 1
+  currentDay: 2
   resetOnNewWeek: 1
 --- !u!4 &1930086431
 Transform:
