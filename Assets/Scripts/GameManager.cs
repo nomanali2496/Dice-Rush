@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     
     [Header("Winner Screen")]
     [SerializeField] private GameObject winnerScreen; // Winner screen GameObject (set active when game ends)
+    [SerializeField] private WinnerScreen winnerScreenScript; // Winner screen script for animations
     
     [Header("1st Place")]
     [SerializeField] private Image winnerProfileImage; // Winner's profile image display
@@ -398,6 +399,9 @@ public class GameManager : MonoBehaviour
             return;
         }
         
+        // Store lobby config before resetting (needed for animation)
+        LobbyConfig configForAnimation = currentLobbyConfig;
+        
         // Display 1st place
         if (rankings.Count > 0)
         {
@@ -462,6 +466,29 @@ public class GameManager : MonoBehaviour
         if (winnerScreen != null)
         {
             winnerScreen.SetActive(true);
+        }
+        
+        // Trigger winner screen animation if player is in top 3 (use stored config)
+        if (configForAnimation != null)
+        {
+            // Try to find WinnerScreen script if not assigned
+            if (winnerScreenScript == null && winnerScreen != null)
+            {
+                winnerScreenScript = winnerScreen.GetComponent<WinnerScreen>();
+            }
+            
+            if (winnerScreenScript != null)
+            {
+                winnerScreenScript.PlayAnimationIfPlayerInTop3(rankings, configForAnimation);
+            }
+            else
+            {
+                Debug.LogWarning("[GameManager] WinnerScreen script not found! Make sure WinnerScreen script is attached to the winner screen GameObject.");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("[GameManager] No lobby config available for winner screen animation!");
         }
     }
     
@@ -1488,17 +1515,27 @@ public class GameManager : MonoBehaviour
             }
         }
         
-        // Update UI displays
-        PlayerProfileUI playerProfileUI = FindObjectOfType<PlayerProfileUI>();
-        if (playerProfileUI != null)
-        {
-            playerProfileUI.UpdateAllCurrencyDisplays(
-                PlayFabManager.Instance.currentPlayerData.coins,
-                PlayFabManager.Instance.currentPlayerData.cash
-            );
-        }
+        // Don't update UI displays here - let WinnerScreen animation handle the count-up
+        // The UI will be updated by WinnerScreen during the animation
         
         // Refresh lobby play buttons in case player can now afford lobbies they couldn't before
+        // (This will happen after animation completes)
+        LobbyManager lobbyManager = FindObjectOfType<LobbyManager>();
+        if (lobbyManager != null)
+        {
+            // Delay refresh until after animation completes
+            StartCoroutine(RefreshLobbyButtonsDelayed());
+        }
+    }
+    
+    /// <summary>
+    /// Refreshes lobby buttons after a delay (to allow animation to complete)
+    /// </summary>
+    private System.Collections.IEnumerator RefreshLobbyButtonsDelayed()
+    {
+        // Wait for animation to complete (particles + count-up)
+        yield return new WaitForSeconds(3f); // Adjust based on your animation duration
+        
         LobbyManager lobbyManager = FindObjectOfType<LobbyManager>();
         if (lobbyManager != null)
         {
