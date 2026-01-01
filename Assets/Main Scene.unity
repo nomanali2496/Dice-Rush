@@ -8730,17 +8730,6 @@ MonoBehaviour:
     secondPlaceChips: 0
     thirdPlaceCash: 2
     thirdPlaceChips: 0
-  - lobbyIndex: 9
-    numberOfPlayers: 4
-    lobbyName: Roll & Score
-    entryFeeCash: 5
-    entryFeeChips: 0
-    firstPlaceCash: 0
-    firstPlaceChips: 0
-    secondPlaceCash: 0
-    secondPlaceChips: 0
-    thirdPlaceCash: 0
-    thirdPlaceChips: 0
   - lobbyIndex: 10
     numberOfPlayers: 5
     lobbyName: Golden Throw

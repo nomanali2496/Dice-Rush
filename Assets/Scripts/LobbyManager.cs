@@ -35,10 +35,10 @@ public class LobbyManager : MonoBehaviour, IEnhancedScrollerDelegate
     [SerializeField] private GameObject gameplayObject; // Gameplay object to open when play button is clicked
     
     [Header("Lobby Game Objects Settings")]
-    private const int BACKGROUND_COUNT = 13; // Total number of background sprites (0-12)
+    private const int BACKGROUND_COUNT = 12; // Total number of background sprites (0-12)
     
     [Header("Lobby Configurations")]
-    [SerializeField] private LobbyConfig[] lobbyConfigurations = new LobbyConfig[13]; // 13 lobby configurations (can be set in inspector)
+    [SerializeField] private LobbyConfig[] lobbyConfigurations = new LobbyConfig[12]; // 13 lobby configurations (can be set in inspector)
     
     private bool isScrolling = true;
     private float resetThresholdY;

@@ -52,7 +52,7 @@ public class LobbyGameObjectUI : EnhancedScrollerCellView, IPointerEnterHandler,
     [SerializeField] private Sprite backgroundSprite6; // Background sprite 6
     [SerializeField] private Sprite backgroundSprite7; // Background sprite 7
     [SerializeField] private Sprite backgroundSprite8; // Background sprite 8
-    [SerializeField] private Sprite backgroundSprite9; // Background sprite 9
+    // [SerializeField] private Sprite backgroundSprite9; // Background sprite 9
     [SerializeField] private Sprite backgroundSprite10; // Background sprite 10
     [SerializeField] private Sprite backgroundSprite11; // Background sprite 11
     [SerializeField] private Sprite backgroundSprite12; // Background sprite 12
@@ -180,10 +180,10 @@ public class LobbyGameObjectUI : EnhancedScrollerCellView, IPointerEnterHandler,
             case 6: return backgroundSprite6;
             case 7: return backgroundSprite7;
             case 8: return backgroundSprite8;
-            case 9: return backgroundSprite9;
-            case 10: return backgroundSprite10;
-            case 11: return backgroundSprite11;
-            case 12: return backgroundSprite12;
+            // case 9: return backgroundSprite9;
+            case 9: return backgroundSprite10;
+            case 10: return backgroundSprite11;
+            case 11: return backgroundSprite12;
             default: return null;
         }
     }
@@ -254,10 +254,10 @@ public class LobbyGameObjectUI : EnhancedScrollerCellView, IPointerEnterHandler,
             case 6: backgroundSprite6 = sprite; break;
             case 7: backgroundSprite7 = sprite; break;
             case 8: backgroundSprite8 = sprite; break;
-            case 9: backgroundSprite9 = sprite; break;
-            case 10: backgroundSprite10 = sprite; break;
-            case 11: backgroundSprite11 = sprite; break;
-            case 12: backgroundSprite12 = sprite; break;
+            // case 9: backgroundSprite9 = sprite; break;
+            case 9: backgroundSprite10 = sprite; break;
+            case 10: backgroundSprite11 = sprite; break;
+            case 11: backgroundSprite12 = sprite; break;
         }
     }
     
