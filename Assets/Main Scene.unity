@@ -4946,7 +4946,7 @@ PrefabInstance:
     - target: {fileID: 1752902188436038364, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 1534aeab40287bc4bb27a0fcfac64c40, type: 3}
+      objectReference: {fileID: 21300000, guid: 08f874f02480f664faf0a4b4ae789cf0, type: 3}
     - target: {fileID: 1752902188436038364, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_UseSpriteMesh
       value: 0
@@ -9767,7 +9767,7 @@ PrefabInstance:
     - target: {fileID: 1752902188436038364, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a52cf055567c9804f9e71c1d0a45eeef, type: 3}
+      objectReference: {fileID: 21300000, guid: 2d19823ac5c22284e9502b2c91d47c16, type: 3}
     - target: {fileID: 1752902188436038364, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_PreserveAspect
       value: 1
@@ -10362,7 +10362,7 @@ PrefabInstance:
     - target: {fileID: 1752902188436038364, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c3a1db64ac36a314e8b7b496264b3359, type: 3}
+      objectReference: {fileID: 21300000, guid: ab502c1a5f7847645b69e272613499b8, type: 3}
     - target: {fileID: 1752902188436038364, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_PreserveAspect
       value: 1
@@ -20477,6 +20477,7 @@ GameObject:
   - component: {fileID: 1200179412}
   - component: {fileID: 1200179414}
   - component: {fileID: 1200179413}
+  - component: {fileID: 1200179415}
   m_Layer: 5
   m_Name: ShopPanel
   m_TagString: Untagged
@@ -20543,6 +20544,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200179411}
   m_CullTransparentMesh: 1
+--- !u!114 &1200179415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200179411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fbe7cbd53e880249bcc67a25636ff61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShopUIManager
+  shopElements:
+  - {fileID: 2424454671174553167}
+  - {fileID: 1560927374}
+  - {fileID: 559865250}
+  - {fileID: 538555712}
+  - {fileID: 1486815443}
+  - {fileID: 253654714}
+  hoverScale: 1.05
+  animationDuration: 0.3
+  scaleEase: 27
 --- !u!1001 &1209336760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25947,7 +25970,7 @@ PrefabInstance:
     - target: {fileID: 1752902188436038364, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 15ccf14075d6d2d48a25a1afc16d9f95, type: 3}
+      objectReference: {fileID: 21300000, guid: 3f286ee5e2aa8fc45ab9b0286ee7fa7d, type: 3}
     - target: {fileID: 1752902188436038364, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_PreserveAspect
       value: 1
@@ -26794,7 +26817,7 @@ PrefabInstance:
     - target: {fileID: 1752902188436038364, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5afee4ce6cbce1542ad1f7ef64bb20d8, type: 3}
+      objectReference: {fileID: 21300000, guid: 47030a6304b58874c8d973072e0ba357, type: 3}
     - target: {fileID: 1752902188436038364, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_PreserveAspect
       value: 1
@@ -37556,7 +37579,7 @@ PrefabInstance:
     - target: {fileID: 1752902188436038364, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: e9dadea1acc30d8488a6adfb8b82bb04, type: 3}
+      objectReference: {fileID: 21300000, guid: 0bb59f38a9b0d364e904da7945535aac, type: 3}
     - target: {fileID: 1752902188436038364, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_PreserveAspect
       value: 1
