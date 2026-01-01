@@ -506,6 +506,14 @@ public class PlayerProfileUI : MonoBehaviour
     
     private void OnLogoutClicked()
     {
+        // Clear offer panel timer immediately when logout happens
+        OfferPanelManager offerPanelManager = FindObjectOfType<OfferPanelManager>();
+        if (offerPanelManager != null)
+        {
+            offerPanelManager.OnUserLoggedOut();
+            Debug.Log("[PlayerProfileUI] Cleared offer panel timer on logout");
+        }
+        
         if (PlayFabManager.Instance != null)
         {
             PlayFabManager.Instance.Logout();

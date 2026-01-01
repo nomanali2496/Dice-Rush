@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System;
 
 /// <summary>
 /// Manages sequential offer panel display on user login
@@ -23,6 +24,12 @@ public class OfferPanelManager : MonoBehaviour
     [SerializeField] private float animationDuration = 0.5f; // Scale animation duration
     [SerializeField] private AnimationCurve scaleCurve = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f); // Scale animation curve
     
+    [Header("Debug Info")]
+    [SerializeField] private string timeUntilNextOffer = "N/A"; // Time remaining until offers can be shown again (for editor debugging)
+    [SerializeField] private string currentTime = "N/A"; // Current system time
+    [SerializeField] private string lastShownDate = "N/A"; // Last date when offers were shown
+    [SerializeField] private string nextResetTime = "N/A"; // When the next reset will occur (midnight)
+    
     [Header("Close Button (Optional)")]
     // [SerializeField] private Button[] closeButtons; // Close buttons for each panel (optional)
     
@@ -37,6 +44,10 @@ public class OfferPanelManager : MonoBehaviour
     private bool hasTriggeredDailyRewardPanel = false; // Track if we've already triggered the daily reward panel for this login
     private bool hasShownAfterMainMenuActivation = false; // Track if we've shown offer panels after main menu activation for this login
     private bool isWaitingForNextPanel = false; // Prevent duplicate triggers when waiting for next panel
+    
+    private const string LAST_OFFER_SHOWN_TIMESTAMP_KEY_PREFIX = "OfferPanelManager_LastShownTimestamp_";
+    
+    private string currentUserId = ""; // Store current user's PlayFab ID for account-specific storage
     
     private AuthenticationManager authManager;
     private DailyRewardManager dailyRewardManager;
@@ -91,6 +102,9 @@ public class OfferPanelManager : MonoBehaviour
         // Start monitoring panel state to auto-advance when panels are closed
         StartCoroutine(MonitorPanelState());
         
+        // Start updating time until next offer (for editor debugging)
+        StartCoroutine(UpdateTimeUntilNextOffer());
+        
         // Setup close buttons if provided
         // SetupCloseButtons();
     }
@@ -115,12 +129,47 @@ public class OfferPanelManager : MonoBehaviour
     private void OnUserLoggedIn()
     {
         hasLoggedIn = true;
-        nextPanelIndexToShow = 0; // Reset to show panels from the beginning
-        isShowingPanelsSequence = false; // Reset sequence flag
+        
+        // Get the current user's PlayFab ID for account-specific storage
+        if (PlayFabManager.Instance != null)
+        {
+            currentUserId = PlayFabManager.Instance.GetPlayFabId();
+            if (string.IsNullOrEmpty(currentUserId))
+            {
+                Debug.LogWarning("[OfferPanelManager] PlayFabId is empty, using device-based storage (not account-specific)");
+            }
+            else
+            {
+                Debug.Log($"[OfferPanelManager] User logged in with PlayFabId: {currentUserId}");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("[OfferPanelManager] PlayFabManager not found, using device-based storage (not account-specific)");
+            currentUserId = ""; // Fallback to device-based storage
+        }
+        
+        // Check if offers have been shown today
+        bool hasShownToday = HasShownOffersToday();
+        
+        // Only reset flags if offers haven't been shown today
+        if (!hasShownToday)
+        {
+            nextPanelIndexToShow = 0; // Reset to show panels from the beginning
+            isShowingPanelsSequence = false; // Reset sequence flag
+            hasShownAfterMainMenuActivation = false; // Reset flag so offer panels can show again
+            hasShownOfferThisSession = false; // Reset session flag
+            Debug.Log("[OfferPanelManager] User logged in, offers haven't been shown today. Will show offers when main menu activates.");
+        }
+        else
+        {
+            // Offers already shown today, don't reset flags
+            hasShownOfferThisSession = true; // Mark as shown to prevent showing again
+            Debug.Log("[OfferPanelManager] User logged in, but offers have already been shown today. Skipping offer display.");
+        }
+        
         hasTriggeredDailyRewardPanel = false; // Reset flag so daily reward panel can show again on next login
-        hasShownAfterMainMenuActivation = false; // Reset flag so offer panels can show again on next login
         isWaitingForNextPanel = false; // Reset waiting flag
-        Debug.Log("[OfferPanelManager] User logged in, waiting for main menu to activate...");
         
         // Always wait for daily reward panel to close (it will open when main menu activates)
         // Initialize as false so we wait for the daily reward panel to close
@@ -136,6 +185,33 @@ public class OfferPanelManager : MonoBehaviour
         {
             Debug.Log("[OfferPanelManager] Will wait for daily reward panel to close before showing offer panel. Daily reward panel will open when main menu activates.");
         }
+    }
+    
+    /// <summary>
+    /// Called when user logs out - clears current user data and resets flags
+    /// </summary>
+    public void OnUserLoggedOut()
+    {
+        Debug.Log("[OfferPanelManager] User logged out, clearing user data and resetting flags");
+        
+        // Clear current user ID immediately
+        currentUserId = "";
+        
+        // Reset all flags
+        hasLoggedIn = false;
+        hasShownOfferThisSession = false;
+        nextPanelIndexToShow = 0;
+        isShowingPanelsSequence = false;
+        hasTriggeredDailyRewardPanel = false;
+        hasShownAfterMainMenuActivation = false;
+        isWaitingForNextPanel = false;
+        hasDailyRewardPanelClosed = false;
+        currentActivePanelIndex = -1;
+        
+        // Hide all panels
+        HideAllPanels();
+        
+        Debug.Log("[OfferPanelManager] User data cleared - timer will reset for next user");
     }
     
     /// <summary>
@@ -160,8 +236,9 @@ public class OfferPanelManager : MonoBehaviour
             // Check if main menu is active and user has logged in
             if (mainMenuScreen != null && mainMenuScreen.activeSelf && hasLoggedIn)
             {
-                // Check if we should show offer panel
-                if (!showOnEveryLogin && hasShownOfferThisSession)
+                // Check if we should show offer panel (must not have shown today AND not shown this session)
+                bool hasShownToday = HasShownOffersToday();
+                if (hasShownToday || hasShownOfferThisSession)
                 {
                     yield return new WaitForSeconds(0.5f); // Check every 0.5 seconds
                     continue;
@@ -263,6 +340,13 @@ public class OfferPanelManager : MonoBehaviour
             nextPanelIndexToShow = currentIndex + 1; // Update to next panel for next time
             isShowingPanelsSequence = true;
             hasShownOfferThisSession = true;
+            
+            // Mark that offers have been shown today when showing the first panel
+            if (currentIndex == 0)
+            {
+                MarkOffersAsShownToday();
+                Debug.Log("[OfferPanelManager] Marked offers as shown for today.");
+            }
             
             // Setup button listeners to auto-close panel when any button is clicked
             SetupPanelButtonListeners(offerPanels[currentIndex]);
@@ -541,6 +625,163 @@ public class OfferPanelManager : MonoBehaviour
         hasShownOfferThisSession = false;
         nextPanelIndexToShow = 0;
         isShowingPanelsSequence = false;
+    }
+    
+    /// <summary>
+    /// Gets the account-specific PlayerPrefs key for storing offer timestamp
+    /// </summary>
+    private string GetOfferTimestampKey()
+    {
+        if (string.IsNullOrEmpty(currentUserId))
+        {
+            // Fallback to device-based storage if no user ID
+            return LAST_OFFER_SHOWN_TIMESTAMP_KEY_PREFIX + "Device";
+        }
+        return LAST_OFFER_SHOWN_TIMESTAMP_KEY_PREFIX + currentUserId;
+    }
+    
+    /// <summary>
+    /// Checks if offers have been shown within the last 24 hours
+    /// </summary>
+    private bool HasShownOffersToday()
+    {
+        string key = GetOfferTimestampKey();
+        
+        if (!PlayerPrefs.HasKey(key))
+        {
+            return false; // Never shown before
+        }
+        
+        string lastShownTimestampString = PlayerPrefs.GetString(key);
+        
+        if (DateTime.TryParse(lastShownTimestampString, out DateTime lastShownTime))
+        {
+            DateTime now = DateTime.Now;
+            TimeSpan timeSinceShown = now - lastShownTime;
+            
+            // Check if less than 24 hours have passed
+            return timeSinceShown.TotalHours < 24.0;
+        }
+        
+        return false; // Invalid timestamp, treat as not shown
+    }
+    
+    /// <summary>
+    /// Marks that offers have been shown by storing the current timestamp
+    /// </summary>
+    private void MarkOffersAsShownToday()
+    {
+        DateTime now = DateTime.Now;
+        string timestampString = now.ToString("yyyy-MM-dd HH:mm:ss");
+        string key = GetOfferTimestampKey();
+        PlayerPrefs.SetString(key, timestampString);
+        PlayerPrefs.Save();
+        Debug.Log($"[OfferPanelManager] Saved offer shown timestamp for user {currentUserId}: {timestampString}");
+    }
+    
+    /// <summary>
+    /// Reset daily flag (useful for testing)
+    /// </summary>
+    [ContextMenu("Reset Daily Flag")]
+    public void ResetDailyFlag()
+    {
+        string key = GetOfferTimestampKey();
+        PlayerPrefs.DeleteKey(key);
+        PlayerPrefs.Save();
+        Debug.Log($"[OfferPanelManager] Reset daily offer flag for user {currentUserId} - offers will show again now.");
+    }
+    
+    /// <summary>
+    /// Calculates the time remaining until 24 hours have passed since offers were shown
+    /// </summary>
+    private TimeSpan GetTimeUntilNextOffer()
+    {
+        string key = GetOfferTimestampKey();
+        
+        if (!PlayerPrefs.HasKey(key))
+        {
+            return TimeSpan.Zero; // Never shown, available now
+        }
+        
+        string lastShownTimestampString = PlayerPrefs.GetString(key);
+        
+        if (DateTime.TryParse(lastShownTimestampString, out DateTime lastShownTime))
+        {
+            DateTime now = DateTime.Now;
+            DateTime nextAvailableTime = lastShownTime.AddHours(24);
+            TimeSpan timeRemaining = nextAvailableTime - now;
+            
+            // Return zero if time has already passed
+            return timeRemaining.TotalSeconds > 0 ? timeRemaining : TimeSpan.Zero;
+        }
+        
+        return TimeSpan.Zero; // Invalid timestamp, available now
+    }
+    
+    /// <summary>
+    /// Updates the time until next offer display field (for editor debugging)
+    /// </summary>
+    private IEnumerator UpdateTimeUntilNextOffer()
+    {
+        while (true)
+        {
+            DateTime now = DateTime.Now;
+            currentTime = now.ToString("yyyy-MM-dd HH:mm:ss");
+            
+            // Only show meaningful info after user has logged in
+            if (!hasLoggedIn)
+            {
+                timeUntilNextOffer = "Waiting for login...";
+                lastShownDate = "Waiting for login...";
+                nextResetTime = "Waiting for login...";
+            }
+            else
+            {
+                string key = GetOfferTimestampKey();
+                if (PlayerPrefs.HasKey(key))
+                {
+                    string timestampString = PlayerPrefs.GetString(key);
+                    if (DateTime.TryParse(timestampString, out DateTime lastShownTime))
+                    {
+                        lastShownDate = lastShownTime.ToString("yyyy-MM-dd HH:mm:ss");
+                        DateTime nextAvailableTime = lastShownTime.AddHours(24);
+                        nextResetTime = nextAvailableTime.ToString("yyyy-MM-dd HH:mm:ss");
+                    }
+                    else
+                    {
+                        lastShownDate = "Invalid";
+                        nextResetTime = "N/A";
+                    }
+                }
+                else
+                {
+                    lastShownDate = "Never";
+                    nextResetTime = "N/A";
+                }
+                
+                if (HasShownOffersToday())
+                {
+                    TimeSpan timeRemaining = GetTimeUntilNextOffer();
+                    if (timeRemaining.TotalSeconds > 0)
+                    {
+                        int totalHours = (int)timeRemaining.TotalHours;
+                        int minutes = timeRemaining.Minutes;
+                        int seconds = timeRemaining.Seconds;
+                        timeUntilNextOffer = $"{totalHours:D2}:{minutes:D2}:{seconds:D2}";
+                    }
+                    else
+                    {
+                        timeUntilNextOffer = "Available now";
+                    }
+                }
+                else
+                {
+                    timeUntilNextOffer = "Available now";
+                }
+            }
+            
+            yield return new WaitForSeconds(1f); // Update every second
+        }
     }
 }
 
