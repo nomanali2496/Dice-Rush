@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: LilitaOne-Regular SDF
+  m_Name: LILITAONE-REGULAR 1 SDF
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TMP_FontAsset
   m_Version: 1.1.0
   m_FaceInfo:
@@ -35,11 +35,11 @@ MonoBehaviour:
     m_StrikethroughOffset: 18
     m_StrikethroughThickness: 4.4
     m_TabWidth: 17
-  m_Material: {fileID: 4683842789463783465}
-  m_SourceFontFileGUID: 60ffb3a97ad19c74cade926e29f38c10
+  m_Material: {fileID: 576292074335676487}
+  m_SourceFontFileGUID: d20ea5da6739bc748904aeeede39e6da
   m_CreationSettings:
     sourceFontFileName: 
-    sourceFontFileGUID: 60ffb3a97ad19c74cade926e29f38c10
+    sourceFontFileGUID: d20ea5da6739bc748904aeeede39e6da
     faceIndex: 0
     pointSizeSamplingMode: 0
     pointSize: 88
@@ -50,7 +50,7 @@ MonoBehaviour:
     atlasHeight: 512
     characterSetSelectionMode: 0
     characterSequence: 32 - 126, 160, 8203, 8230, 9633
-    referencedFontAssetGUID: 
+    referencedFontAssetGUID: 736ddbd429a73074bbb4e10d6ef26ab9
     referencedTextAssetGUID: 
     fontStyle: 0
     fontStyleModifier: 0
@@ -1887,7 +1887,7 @@ MonoBehaviour:
     m_GlyphIndex: 218
     m_Scale: 1
   m_AtlasTextures:
-  - {fileID: 6819167799395635864}
+  - {fileID: 6705003848481427635}
   m_AtlasTextureIndex: 0
   m_IsMultiAtlasTexturesEnabled: 0
   m_GetFontFeatures: 1
@@ -2617,18 +2617,19 @@ MonoBehaviour:
     kerningPairs: []
   fallbackFontAssets: []
   atlas: {fileID: 0}
---- !u!21 &4683842789463783465
+--- !u!21 &576292074335676487
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LilitaOne-Regular SDF Material
+  m_Name: LILITAONE-REGULAR 1 SDF Material
   m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - UNDERLAY_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -2653,7 +2654,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 6819167799395635864}
+        m_Texture: {fileID: 6705003848481427635}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OutlineTex:
@@ -2673,7 +2674,7 @@ Material:
     - _ColorMask: 15
     - _CullMode: 0
     - _Diffuse: 0.5
-    - _FaceDilate: 1
+    - _FaceDilate: 0
     - _FaceUVSpeedX: 0
     - _FaceUVSpeedY: 0
     - _GlowInner: 0.05
@@ -2726,13 +2727,13 @@ Material:
     - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!28 &6819167799395635864
+--- !u!28 &6705003848481427635
 Texture2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LilitaOne-Regular SDF Atlas
+  m_Name: LILITAONE-REGULAR 1 SDF Atlas
   m_ImageContentsHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000

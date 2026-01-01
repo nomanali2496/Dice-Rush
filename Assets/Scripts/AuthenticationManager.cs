@@ -108,7 +108,10 @@ public class AuthenticationManager : MonoBehaviour
     
     #region Panel Management
     
-    private void ShowLoginRegisterPanel()
+    /// <summary>
+    /// Shows the login/register panel (public method for external access)
+    /// </summary>
+    public void ShowLoginRegisterPanel()
     {
         if (loginRegisterPanel != null)
             loginRegisterPanel.SetActive(true);
@@ -124,6 +127,14 @@ public class AuthenticationManager : MonoBehaviour
         
         if (splashScreenPanel != null)
             splashScreenPanel.SetActive(true);
+    }
+    
+    /// <summary>
+    /// Shows the splash screen/loading panel (public method for external access)
+    /// </summary>
+    public void ShowSplashScreenPanelPublic()
+    {
+        ShowSplashScreenPanel();
     }
     
     private void ShowLoginSection()

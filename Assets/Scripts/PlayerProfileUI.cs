@@ -34,6 +34,12 @@ public class PlayerProfileUI : MonoBehaviour
     [SerializeField] private string cashPrefix = "Cash: $";
     [SerializeField] private string coinsPrefix = "Coins: ";
     [SerializeField] private GameObject AvatarDisplay;
+    
+    [Header("Panel References for Logout")]
+    [SerializeField] private GameObject settingsPanel; // Settings panel to hide on logout
+    [SerializeField] private GameObject mainMenuPanel; // Main menu panel to hide on logout
+    [SerializeField] private GameObject splashScreenPanel; // Loading panel to show on logout
+    
     private bool isEditMode = false;
     private string originalPlayerName = ""; // Store original name when entering edit mode
     
@@ -503,12 +509,59 @@ public class PlayerProfileUI : MonoBehaviour
         if (PlayFabManager.Instance != null)
         {
             PlayFabManager.Instance.Logout();
-            Debug.Log("Player logged out");
-            
-            // Since we're using single scene with panels, reload the entire scene
-            UnityEngine.SceneManagement.SceneManager.LoadScene(
-                UnityEngine.SceneManagement.SceneManager.GetActiveScene().name
-            );
+            Debug.Log("[PlayerProfileUI] Player logged out");
+        }
+        
+        // Show loading panel
+        if (splashScreenPanel != null)
+        {
+            splashScreenPanel.SetActive(true);
+            Debug.Log("[PlayerProfileUI] Showing loading panel");
+        }
+        
+        // Hide settings panel
+        if (settingsPanel != null)
+        {
+            settingsPanel.SetActive(false);
+            Debug.Log("[PlayerProfileUI] Hiding settings panel");
+        }
+        
+        // Hide main menu panel
+        if (mainMenuPanel != null)
+        {
+            mainMenuPanel.SetActive(false);
+            Debug.Log("[PlayerProfileUI] Hiding main menu panel");
+        }
+        
+        // Wait a moment then show login screen
+        StartCoroutine(ShowLoginScreenAfterDelay());
+    }
+    
+    /// <summary>
+    /// Coroutine to show login screen after a brief delay
+    /// </summary>
+    private System.Collections.IEnumerator ShowLoginScreenAfterDelay()
+    {
+        // Wait a brief moment to show loading panel
+        yield return new WaitForSeconds(0.5f);
+        
+        // Hide loading panel
+        if (splashScreenPanel != null)
+        {
+            splashScreenPanel.SetActive(false);
+            Debug.Log("[PlayerProfileUI] Hiding loading panel");
+        }
+        
+        // Show login screen via AuthenticationManager
+        AuthenticationManager authManager = FindObjectOfType<AuthenticationManager>();
+        if (authManager != null)
+        {
+            authManager.ShowLoginRegisterPanel();
+            Debug.Log("[PlayerProfileUI] Showing login screen");
+        }
+        else
+        {
+            Debug.LogWarning("[PlayerProfileUI] AuthenticationManager not found! Cannot show login screen.");
         }
     }
     
