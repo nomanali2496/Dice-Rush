@@ -205,10 +205,31 @@ public class OffersCarouselManager : MonoBehaviour
         // Update dot button states
         UpdateDotButtons();
         
+        // Update navigation button states (enable/disable based on position)
+        UpdateNavigationButtonStates();
+        
         // Mark that first initialization is complete
         if (isFirstInitialization)
         {
             isFirstInitialization = false;
+        }
+    }
+    
+    /// <summary>
+    /// Updates navigation button interactability based on current position
+    /// </summary>
+    private void UpdateNavigationButtonStates()
+    {
+        // Disable left button if at first offer
+        if (leftNavButton != null)
+        {
+            leftNavButton.interactable = (currentSelectedIndex > 0);
+        }
+        
+        // Disable right button if at last offer
+        if (rightNavButton != null)
+        {
+            rightNavButton.interactable = (currentSelectedIndex < offerItems.Length - 1);
         }
     }
     
@@ -298,10 +319,17 @@ public class OffersCarouselManager : MonoBehaviour
     /// </summary>
     public void ScrollRight()
     {
+        Debug.Log($"[OffersCarouselManager] ScrollRight called. Current index: {currentSelectedIndex}, Total offers: {offerItems.Length}");
+        
         if (currentSelectedIndex < offerItems.Length - 1)
         {
-            currentSelectedIndex++;
-            TransitionToOffer(currentSelectedIndex);
+            int nextIndex = currentSelectedIndex + 1;
+            Debug.Log($"[OffersCarouselManager] Scrolling to index: {nextIndex}");
+            TransitionToOffer(nextIndex);
+        }
+        else
+        {
+            Debug.Log("[OffersCarouselManager] Already at the last offer, cannot scroll right");
         }
     }
     
@@ -310,10 +338,17 @@ public class OffersCarouselManager : MonoBehaviour
     /// </summary>
     public void ScrollLeft()
     {
+        Debug.Log($"[OffersCarouselManager] ScrollLeft called. Current index: {currentSelectedIndex}");
+        
         if (currentSelectedIndex > 0)
         {
-            currentSelectedIndex--;
-            TransitionToOffer(currentSelectedIndex);
+            int previousIndex = currentSelectedIndex - 1;
+            Debug.Log($"[OffersCarouselManager] Scrolling to index: {previousIndex}");
+            TransitionToOffer(previousIndex);
+        }
+        else
+        {
+            Debug.Log("[OffersCarouselManager] Already at the first offer, cannot scroll left");
         }
     }
     
@@ -328,8 +363,13 @@ public class OffersCarouselManager : MonoBehaviour
             return;
         }
         
-        if (index == currentSelectedIndex) return; // Already selected
+        if (index == currentSelectedIndex)
+        {
+            Debug.Log($"[OffersCarouselManager] Already at index {index}, skipping transition");
+            return; // Already selected
+        }
         
+        Debug.Log($"[OffersCarouselManager] Transitioning to offer index: {index}");
         currentSelectedIndex = index;
         
         // Stop any existing transition
@@ -413,12 +453,24 @@ public class OffersCarouselManager : MonoBehaviour
         {
             leftNavButton.onClick.RemoveAllListeners();
             leftNavButton.onClick.AddListener(ScrollLeft);
+            leftNavButton.interactable = true; // Ensure button is interactable
+            Debug.Log($"[OffersCarouselManager] Left navigation button setup complete. Interactable: {leftNavButton.interactable}, Active: {leftNavButton.gameObject.activeInHierarchy}");
+        }
+        else
+        {
+            Debug.LogWarning("[OffersCarouselManager] Left navigation button is not assigned!");
         }
         
         if (rightNavButton != null)
         {
             rightNavButton.onClick.RemoveAllListeners();
             rightNavButton.onClick.AddListener(ScrollRight);
+            rightNavButton.interactable = true; // Ensure button is interactable
+            Debug.Log($"[OffersCarouselManager] Right navigation button setup complete. Interactable: {rightNavButton.interactable}, Active: {rightNavButton.gameObject.activeInHierarchy}");
+        }
+        else
+        {
+            Debug.LogWarning("[OffersCarouselManager] Right navigation button is not assigned!");
         }
     }
     
