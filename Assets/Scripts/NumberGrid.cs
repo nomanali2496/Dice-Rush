@@ -549,7 +549,6 @@ public class NumberGrid : MonoBehaviour
         if (boxData.highlightImage != null && !boxData.isPowerup)
         {
             boxData.highlightImage.gameObject.SetActive(true);
-            boxData.highlightImage.color = playerOutlineColor; // Use player's outline color
         }
         
         // Trigger event
@@ -619,7 +618,6 @@ public class NumberGrid : MonoBehaviour
             if (boxData.highlightImage != null)
             {
                 boxData.highlightImage.gameObject.SetActive(false);
-                boxData.highlightImage.color = Color.white; // Reset to default color
             }
         }
         
@@ -767,22 +765,10 @@ public class NumberGrid : MonoBehaviour
             boxData.selectButton.interactable = false;
         }
         
-        // Show highlight with appropriate color matching outline color
+        // Show highlight (only for number boxes, not powerups)
         if (boxData.highlightImage != null && !boxData.isPowerup)
         {
             boxData.highlightImage.gameObject.SetActive(true);
-            
-            // Set color based on player type's outline color
-            if (playerType == PlayerType.Player)
-            {
-                boxData.highlightImage.color = playerOutlineColor;
-            }
-            else // CPU
-            {
-                // Get CPU color based on CPU index
-                Color cpuColor = GetCPUOutlineColor(boxData.selectedByCPUIndex);
-                boxData.highlightImage.color = cpuColor;
-            }
         }
         
         // Trigger event

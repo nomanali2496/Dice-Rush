@@ -87,6 +87,7 @@ public class GameManager : MonoBehaviour
         if (numberGrid != null)
         {
             numberGrid.OnAllBoxesSelected += OnAllBoxesSelected;
+            numberGrid.OnBoxSelected += OnBoxSelected; // Subscribe to box selection event
         }
         
         // Subscribe to quit button
@@ -252,6 +253,7 @@ public class GameManager : MonoBehaviour
         if (numberGrid != null)
         {
             numberGrid.OnAllBoxesSelected -= OnAllBoxesSelected;
+            numberGrid.OnBoxSelected -= OnBoxSelected; // Unsubscribe from box selection event
         }
         
         // Unsubscribe from quit button
@@ -259,6 +261,14 @@ public class GameManager : MonoBehaviour
         {
             quitButton.onClick.RemoveListener(OnQuitButtonClicked);
         }
+    }
+    
+    /// <summary>
+    /// Called when a box is selected - updates outline image fill amounts
+    /// </summary>
+    private void OnBoxSelected(int number, GameObject boxObject)
+    {
+        UpdateOutlineFillAmounts();
     }
     
     /// <summary>
@@ -1228,12 +1238,15 @@ public class GameManager : MonoBehaviour
         // Initialize CPU outline colors array
         cpuOutlineColors = new Color[cpuPlayers != null ? cpuPlayers.Length : 0];
         
-        // Available colors: Red, Yellow, Green
+        // Available colors from hex values
         Color[] availableColors = new Color[]
         {
-            new Color(0.7f, 0.1f, 0.1f, 1f), // Dark Red
-            new Color(0.7f, 0.7f, 0.1f, 1f), // Dark Yellow
-            new Color(0.1f, 0.7f, 0.1f, 1f)  // Dark Green
+            ParseHexColor("#7026BA"), // Purple
+            ParseHexColor("#260E45"), // Dark Purple
+            ParseHexColor("#FF66FF"), // Magenta/Pink
+            ParseHexColor("#B165FF"), // Light Purple
+            ParseHexColor("#86E21B"), // Green
+            ParseHexColor("#FFD24D")  // Yellow
         };
         
         // Create a list of available colors to assign (ensures uniqueness)
@@ -1350,21 +1363,38 @@ public class GameManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Gets a random darker color for outline images (red, yellow, green only)
+    /// Gets a random color from available color palette
     /// </summary>
     private Color GetRandomColor()
     {
-        // Only three colors: Red, Yellow, Green
         Color[] colors = new Color[]
         {
-            new Color(0.7f, 0.1f, 0.1f, 1f), // Dark Red
-            new Color(0.7f, 0.7f, 0.1f, 1f), // Dark Yellow
-            new Color(0.1f, 0.7f, 0.1f, 1f)  // Dark Green
+            ParseHexColor("#7026BA"), // Purple
+            ParseHexColor("#260E45"), // Dark Purple
+            ParseHexColor("#FF66FF"), // Magenta/Pink
+            ParseHexColor("#B165FF"), // Light Purple
+            ParseHexColor("#86E21B"), // Green
+            ParseHexColor("#FFD24D")  // Yellow
         };
         
-        // Randomly select one of the three colors
+        // Randomly select one of the colors
         int randomIndex = Random.Range(0, colors.Length);
         return colors[randomIndex];
+    }
+    
+    /// <summary>
+    /// Parses a hex color string to Unity Color
+    /// </summary>
+    private Color ParseHexColor(string hex)
+    {
+        if (ColorUtility.TryParseHtmlString(hex, out Color color))
+        {
+            return color;
+        }
+        
+        // Fallback if parsing fails
+        Debug.LogWarning($"[GameManager] Failed to parse hex color: {hex}, using white as fallback");
+        return Color.white;
     }
     
     /// <summary>
@@ -1373,6 +1403,72 @@ public class GameManager : MonoBehaviour
     public void ReassignOutlineColors()
     {
         AssignOutlineColors();
+    }
+    
+    /// <summary>
+    /// Updates outline image fill amounts based on current selection counts
+    /// Each selection fills the outline by 4% (0.04)
+    /// </summary>
+    private void UpdateOutlineFillAmounts()
+    {
+        if (numberGrid == null)
+        {
+            return;
+        }
+        
+        // Get current selection counts
+        Dictionary<string, int> selectionCounts = numberGrid.GetSelectionCounts();
+        
+        const float FILL_PER_SELECTION = 0.04f; // 4% per selection
+        
+        // Update player outline fill
+        if (playerOutlineImage != null)
+        {
+            int playerCount = selectionCounts.ContainsKey("Player") ? selectionCounts["Player"] : 0;
+            float fillAmount = playerCount * FILL_PER_SELECTION;
+            fillAmount = Mathf.Clamp01(fillAmount); // Clamp between 0 and 1
+            playerOutlineImage.fillAmount = fillAmount;
+        }
+        
+        // Update CPU outline fills
+        if (cpuOutlineImages != null)
+        {
+            for (int i = 0; i < cpuOutlineImages.Length && i < numberOfCPUs; i++)
+            {
+                if (cpuOutlineImages[i] != null)
+                {
+                    string cpuKey = $"CPU_{i}";
+                    int cpuCount = selectionCounts.ContainsKey(cpuKey) ? selectionCounts[cpuKey] : 0;
+                    float fillAmount = cpuCount * FILL_PER_SELECTION;
+                    fillAmount = Mathf.Clamp01(fillAmount); // Clamp between 0 and 1
+                    cpuOutlineImages[i].fillAmount = fillAmount;
+                }
+            }
+        }
+    }
+    
+    /// <summary>
+    /// Resets outline image fill amounts to 0
+    /// </summary>
+    private void ResetOutlineFillAmounts()
+    {
+        // Reset player outline fill
+        if (playerOutlineImage != null)
+        {
+            playerOutlineImage.fillAmount = 0f;
+        }
+        
+        // Reset CPU outline fills
+        if (cpuOutlineImages != null)
+        {
+            for (int i = 0; i < cpuOutlineImages.Length; i++)
+            {
+                if (cpuOutlineImages[i] != null)
+                {
+                    cpuOutlineImages[i].fillAmount = 0f;
+                }
+            }
+        }
     }
     
     /// <summary>
@@ -1395,6 +1491,9 @@ public class GameManager : MonoBehaviour
         
         // Clear current lobby config (will be set when new game starts)
         currentLobbyConfig = null;
+        
+        // Reset outline fill amounts
+        ResetOutlineFillAmounts();
         
         Debug.Log("[GameManager] Game state reset");
     }
@@ -1423,6 +1522,9 @@ public class GameManager : MonoBehaviour
         
         // Reset winner screen UI to ensure clean state
         ResetWinnerScreenUI();
+        
+        // Reset outline fill amounts for new game
+        ResetOutlineFillAmounts();
         
         // Stop all CPUs before resetting
         if (cpuPlayers != null)
