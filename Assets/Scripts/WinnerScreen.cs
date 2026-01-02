@@ -15,22 +15,19 @@ public class WinnerScreen : MonoBehaviour
     [SerializeField] private Sprite chipsSprite; // Sprite for chips animation
     
     [Header("1st Place Position")]
-    [SerializeField] private RectTransform firstPlaceCashPosition; // Position of 1st place cash display (can use TextMeshProUGUI/Text component)
-    [SerializeField] private RectTransform firstPlaceChipsPosition; // Position of 1st place chips display (can use TextMeshProUGUI/Text component)
-    [SerializeField] private TMPro.TextMeshProUGUI firstPlaceCashText; // Alternative: 1st place cash text (will use its RectTransform)
-    [SerializeField] private TMPro.TextMeshProUGUI firstPlaceChipsText; // Alternative: 1st place chips text (will use its RectTransform)
+    [SerializeField] private RectTransform firstPlacePrizePosition; // Position of 1st place prize display (can use TextMeshProUGUI/Text component)
+    [SerializeField] private TMPro.TextMeshProUGUI firstPlacePrizeText; // Alternative: 1st place prize text (will use its RectTransform)
+    [SerializeField] private Image firstPlacePrizeIcon; // 1st place prize icon image (shows cash or chips sprite)
     
     [Header("2nd Place Position")]
-    [SerializeField] private RectTransform secondPlaceCashPosition; // Position of 2nd place cash display (can use TextMeshProUGUI/Text component)
-    [SerializeField] private RectTransform secondPlaceChipsPosition; // Position of 2nd place chips display (can use TextMeshProUGUI/Text component)
-    [SerializeField] private TMPro.TextMeshProUGUI secondPlaceCashText; // Alternative: 2nd place cash text (will use its RectTransform)
-    [SerializeField] private TMPro.TextMeshProUGUI secondPlaceChipsText; // Alternative: 2nd place chips text (will use its RectTransform)
+    [SerializeField] private RectTransform secondPlacePrizePosition; // Position of 2nd place prize display (can use TextMeshProUGUI/Text component)
+    [SerializeField] private TMPro.TextMeshProUGUI secondPlacePrizeText; // Alternative: 2nd place prize text (will use its RectTransform)
+    [SerializeField] private Image secondPlacePrizeIcon; // 2nd place prize icon image (shows cash or chips sprite)
     
     [Header("3rd Place Position")]
-    [SerializeField] private RectTransform thirdPlaceCashPosition; // Position of 3rd place cash display (can use TextMeshProUGUI/Text component)
-    [SerializeField] private RectTransform thirdPlaceChipsPosition; // Position of 3rd place chips display (can use TextMeshProUGUI/Text component)
-    [SerializeField] private TMPro.TextMeshProUGUI thirdPlaceCashText; // Alternative: 3rd place cash text (will use its RectTransform)
-    [SerializeField] private TMPro.TextMeshProUGUI thirdPlaceChipsText; // Alternative: 3rd place chips text (will use its RectTransform)
+    [SerializeField] private RectTransform thirdPlacePrizePosition; // Position of 3rd place prize display (can use TextMeshProUGUI/Text component)
+    [SerializeField] private TMPro.TextMeshProUGUI thirdPlacePrizeText; // Alternative: 3rd place prize text (will use its RectTransform)
+    [SerializeField] private Image thirdPlacePrizeIcon; // 3rd place prize icon image (shows cash or chips sprite)
     
     [Header("Target Position (Top Display)")]
     [SerializeField] private RectTransform targetCashPosition; // Target position for cash (top display)
@@ -288,9 +285,9 @@ public class WinnerScreen : MonoBehaviour
     }
     
     /// <summary>
-    /// Gets RectTransform from either direct reference or from TextMeshProUGUI component
+    /// Gets RectTransform from either direct reference, TextMeshProUGUI component, or Image component
     /// </summary>
-    private RectTransform GetRectTransform(RectTransform directRef, TMPro.TextMeshProUGUI textRef)
+    private RectTransform GetRectTransform(RectTransform directRef, TMPro.TextMeshProUGUI textRef, Image imageRef = null)
     {
         if (directRef != null)
         {
@@ -299,6 +296,10 @@ public class WinnerScreen : MonoBehaviour
         if (textRef != null)
         {
             return textRef.GetComponent<RectTransform>();
+        }
+        if (imageRef != null)
+        {
+            return imageRef.GetComponent<RectTransform>();
         }
         return null;
     }
@@ -310,64 +311,68 @@ public class WinnerScreen : MonoBehaviour
     {
         Debug.Log($"[WinnerScreen] PlayPrizeAnimation called - Place: {playerPlace}, Cash: {cashPrize}, Chips: {chipsPrize}");
         
-        RectTransform sourceCashPosition = null;
-        RectTransform sourceChipsPosition = null;
+        RectTransform sourcePosition = null;
+        Sprite prizeSprite = null;
+        float prizeAmount = 0f;
+        bool isCash = false;
         
-        // Get source positions based on player's place
+        // Determine which prize to animate (cash or chips - only one exists at a time)
+        if (cashPrize > 0f)
+        {
+            isCash = true;
+            prizeAmount = cashPrize;
+            prizeSprite = cashSprite;
+        }
+        else if (chipsPrize > 0)
+        {
+            isCash = false;
+            prizeAmount = chipsPrize;
+            prizeSprite = chipsSprite;
+        }
+        else
+        {
+            Debug.Log($"[WinnerScreen] No prize to animate for place {playerPlace}");
+            return;
+        }
+        
+        // Get source position based on player's place
         switch (playerPlace)
         {
             case 1:
-                sourceCashPosition = GetRectTransform(firstPlaceCashPosition, firstPlaceCashText);
-                sourceChipsPosition = GetRectTransform(firstPlaceChipsPosition, firstPlaceChipsText);
-                Debug.Log($"[WinnerScreen] 1st place - Cash pos: {sourceCashPosition != null}, Chips pos: {sourceChipsPosition != null}");
+                sourcePosition = GetRectTransform(firstPlacePrizePosition, firstPlacePrizeText, firstPlacePrizeIcon);
+                Debug.Log($"[WinnerScreen] 1st place - Prize pos: {sourcePosition != null}");
                 break;
             case 2:
-                sourceCashPosition = GetRectTransform(secondPlaceCashPosition, secondPlaceCashText);
-                sourceChipsPosition = GetRectTransform(secondPlaceChipsPosition, secondPlaceChipsText);
-                Debug.Log($"[WinnerScreen] 2nd place - Cash pos: {sourceCashPosition != null}, Chips pos: {sourceChipsPosition != null}");
+                sourcePosition = GetRectTransform(secondPlacePrizePosition, secondPlacePrizeText, secondPlacePrizeIcon);
+                Debug.Log($"[WinnerScreen] 2nd place - Prize pos: {sourcePosition != null}");
                 break;
             case 3:
-                sourceCashPosition = GetRectTransform(thirdPlaceCashPosition, thirdPlaceCashText);
-                sourceChipsPosition = GetRectTransform(thirdPlaceChipsPosition, thirdPlaceChipsText);
-                Debug.Log($"[WinnerScreen] 3rd place - Cash pos: {sourceCashPosition != null}, Chips pos: {sourceChipsPosition != null}");
+                sourcePosition = GetRectTransform(thirdPlacePrizePosition, thirdPlacePrizeText, thirdPlacePrizeIcon);
+                Debug.Log($"[WinnerScreen] 3rd place - Prize pos: {sourcePosition != null}");
                 break;
         }
         
-        if (sourceCashPosition == null || sourceChipsPosition == null)
+        if (sourcePosition == null)
         {
-            Debug.LogWarning($"[WinnerScreen] Source positions not assigned for place {playerPlace}! Cash: {sourceCashPosition != null}, Chips: {sourceChipsPosition != null}");
+            Debug.LogWarning($"[WinnerScreen] Source position not assigned for place {playerPlace}!");
             return;
         }
         
-        if (targetCashPosition == null || targetChipsPosition == null)
+        RectTransform targetPosition = isCash ? targetCashPosition : targetChipsPosition;
+        if (targetPosition == null)
         {
-            Debug.LogWarning($"[WinnerScreen] Target positions not assigned! Cash: {targetCashPosition != null}, Chips: {targetChipsPosition != null}");
+            Debug.LogWarning($"[WinnerScreen] Target position not assigned for {(isCash ? "cash" : "chips")}!");
             return;
         }
         
-        Debug.Log($"[WinnerScreen] Starting animations - Cash prize: {cashPrize}, Chips prize: {chipsPrize}");
-        
-        // Animate cash if prize > 0
-        if (cashPrize > 0f && cashSprite != null)
+        if (prizeSprite == null)
         {
-            Debug.Log("[WinnerScreen] Starting cash animation");
-            StartCoroutine(AnimateParticles(sourceCashPosition, targetCashPosition, cashSprite, cashPrize, true));
-        }
-        else
-        {
-            Debug.Log($"[WinnerScreen] Skipping cash animation - Prize: {cashPrize}, Sprite: {cashSprite != null}");
+            Debug.LogWarning($"[WinnerScreen] Prize sprite not assigned for {(isCash ? "cash" : "chips")}!");
+            return;
         }
         
-        // Animate chips if prize > 0
-        if (chipsPrize > 0 && chipsSprite != null)
-        {
-            Debug.Log("[WinnerScreen] Starting chips animation");
-            StartCoroutine(AnimateParticles(sourceChipsPosition, targetChipsPosition, chipsSprite, chipsPrize, false));
-        }
-        else
-        {
-            Debug.Log($"[WinnerScreen] Skipping chips animation - Prize: {chipsPrize}, Sprite: {chipsSprite != null}");
-        }
+        Debug.Log($"[WinnerScreen] Starting animation - Prize: {prizeAmount} {(isCash ? "cash" : "chips")}");
+        StartCoroutine(AnimateParticles(sourcePosition, targetPosition, prizeSprite, prizeAmount, isCash));
     }
     
     /// <summary>
@@ -671,6 +676,70 @@ public class WinnerScreen : MonoBehaviour
     private void OnDestroy()
     {
         CleanupAnimations();
+    }
+    
+    /// <summary>
+    /// Gets the cash sprite (for use by GameManager)
+    /// </summary>
+    public Sprite GetCashSprite()
+    {
+        return cashSprite;
+    }
+    
+    /// <summary>
+    /// Gets the chips sprite (for use by GameManager)
+    /// </summary>
+    public Sprite GetChipsSprite()
+    {
+        return chipsSprite;
+    }
+    
+    /// <summary>
+    /// Gets the 1st place prize icon image
+    /// </summary>
+    public Image GetFirstPlacePrizeIcon()
+    {
+        return firstPlacePrizeIcon;
+    }
+    
+    /// <summary>
+    /// Gets the 1st place prize text
+    /// </summary>
+    public TMPro.TextMeshProUGUI GetFirstPlacePrizeText()
+    {
+        return firstPlacePrizeText;
+    }
+    
+    /// <summary>
+    /// Gets the 2nd place prize icon image
+    /// </summary>
+    public Image GetSecondPlacePrizeIcon()
+    {
+        return secondPlacePrizeIcon;
+    }
+    
+    /// <summary>
+    /// Gets the 2nd place prize text
+    /// </summary>
+    public TMPro.TextMeshProUGUI GetSecondPlacePrizeText()
+    {
+        return secondPlacePrizeText;
+    }
+    
+    /// <summary>
+    /// Gets the 3rd place prize icon image
+    /// </summary>
+    public Image GetThirdPlacePrizeIcon()
+    {
+        return thirdPlacePrizeIcon;
+    }
+    
+    /// <summary>
+    /// Gets the 3rd place prize text
+    /// </summary>
+    public TMPro.TextMeshProUGUI GetThirdPlacePrizeText()
+    {
+        return thirdPlacePrizeText;
     }
 }
 

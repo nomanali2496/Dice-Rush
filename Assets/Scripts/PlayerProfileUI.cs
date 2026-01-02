@@ -23,6 +23,18 @@ public class PlayerProfileUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI winnerScreenChipsText; // Chips display in winner screen
     [SerializeField] private TextMeshProUGUI winnerScreenCashText; // Cash display in winner screen
     
+    [Header("1st Place Prize UI")]
+    [SerializeField] private Image firstPlacePrizeIcon; // 1st place prize icon image (shows cash or chips sprite)
+    [SerializeField] private TextMeshProUGUI firstPlacePrizeText; // 1st place prize text (shows cash or chips value)
+    
+    [Header("2nd Place Prize UI")]
+    [SerializeField] private Image secondPlacePrizeIcon; // 2nd place prize icon image (shows cash or chips sprite)
+    [SerializeField] private TextMeshProUGUI secondPlacePrizeText; // 2nd place prize text (shows cash or chips value)
+    
+    [Header("3rd Place Prize UI")]
+    [SerializeField] private Image thirdPlacePrizeIcon; // 3rd place prize icon image (shows cash or chips sprite)
+    [SerializeField] private TextMeshProUGUI thirdPlacePrizeText; // 3rd place prize text (shows cash or chips value)
+    
     [Header("Buttons")]
     [SerializeField] private Button editNameButton; // Button to edit/save player name
     [SerializeField] private Button logoutButton;
@@ -668,6 +680,54 @@ public class PlayerProfileUI : MonoBehaviour
         {
             winnerScreenChipsText.text = coinsPrefix + amount.ToString("N0");
         }
+    }
+    
+    /// <summary>
+    /// Gets the 1st place prize icon image
+    /// </summary>
+    public Image GetFirstPlacePrizeIcon()
+    {
+        return firstPlacePrizeIcon;
+    }
+    
+    /// <summary>
+    /// Gets the 1st place prize text
+    /// </summary>
+    public TextMeshProUGUI GetFirstPlacePrizeText()
+    {
+        return firstPlacePrizeText;
+    }
+    
+    /// <summary>
+    /// Gets the 2nd place prize icon image
+    /// </summary>
+    public Image GetSecondPlacePrizeIcon()
+    {
+        return secondPlacePrizeIcon;
+    }
+    
+    /// <summary>
+    /// Gets the 2nd place prize text
+    /// </summary>
+    public TextMeshProUGUI GetSecondPlacePrizeText()
+    {
+        return secondPlacePrizeText;
+    }
+    
+    /// <summary>
+    /// Gets the 3rd place prize icon image
+    /// </summary>
+    public Image GetThirdPlacePrizeIcon()
+    {
+        return thirdPlacePrizeIcon;
+    }
+    
+    /// <summary>
+    /// Gets the 3rd place prize text
+    /// </summary>
+    public TextMeshProUGUI GetThirdPlacePrizeText()
+    {
+        return thirdPlacePrizeText;
     }
     
     /// <summary>

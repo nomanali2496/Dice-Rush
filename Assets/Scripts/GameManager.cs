@@ -47,10 +47,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Image winnerFrameImage; // Winner's frame image display
     [SerializeField] private TMPro.TextMeshProUGUI winnerNameText; // Winner's name text (TextMeshProUGUI)
     [SerializeField] private Text winnerNameTextLegacy; // Winner's name text (Legacy Text - use if not using TextMeshPro)
-    [SerializeField] private TMPro.TextMeshProUGUI winnerCashText; // Winner's cash prize text (TextMeshProUGUI)
-    [SerializeField] private Text winnerCashTextLegacy; // Winner's cash prize text (Legacy Text - use if not using TextMeshPro)
-    [SerializeField] private TMPro.TextMeshProUGUI winnerChipsText; // Winner's chips prize text (TextMeshProUGUI)
-    [SerializeField] private Text winnerChipsTextLegacy; // Winner's chips prize text (Legacy Text - use if not using TextMeshPro)
     
     [Header("2nd Place")]
     [SerializeField] private Image secondPlaceProfileImage; // 2nd place profile image display
@@ -58,10 +54,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Image secondPlaceFrameImage; // 2nd place frame image display
     [SerializeField] private TMPro.TextMeshProUGUI secondPlaceNameText; // 2nd place name text (TextMeshProUGUI)
     [SerializeField] private Text secondPlaceNameTextLegacy; // 2nd place name text (Legacy Text - use if not using TextMeshPro)
-    [SerializeField] private TMPro.TextMeshProUGUI secondPlaceCashText; // 2nd place cash prize text (TextMeshProUGUI)
-    [SerializeField] private Text secondPlaceCashTextLegacy; // 2nd place cash prize text (Legacy Text - use if not using TextMeshPro)
-    [SerializeField] private TMPro.TextMeshProUGUI secondPlaceChipsText; // 2nd place chips prize text (TextMeshProUGUI)
-    [SerializeField] private Text secondPlaceChipsTextLegacy; // 2nd place chips prize text (Legacy Text - use if not using TextMeshPro)
     
     [Header("3rd Place")]
     [SerializeField] private Image thirdPlaceProfileImage; // 3rd place profile image display
@@ -69,10 +61,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Image thirdPlaceFrameImage; // 3rd place frame image display
     [SerializeField] private TMPro.TextMeshProUGUI thirdPlaceNameText; // 3rd place name text (TextMeshProUGUI)
     [SerializeField] private Text thirdPlaceNameTextLegacy; // 3rd place name text (Legacy Text - use if not using TextMeshPro)
-    [SerializeField] private TMPro.TextMeshProUGUI thirdPlaceCashText; // 3rd place cash prize text (TextMeshProUGUI)
-    [SerializeField] private Text thirdPlaceCashTextLegacy; // 3rd place cash prize text (Legacy Text - use if not using TextMeshPro)
-    [SerializeField] private TMPro.TextMeshProUGUI thirdPlaceChipsText; // 3rd place chips prize text (TextMeshProUGUI)
-    [SerializeField] private Text thirdPlaceChipsTextLegacy; // 3rd place chips prize text (Legacy Text - use if not using TextMeshPro)
     
     private Sprite playerSelectedAvatar; // Store player's selected avatar sprite
     private List<Sprite> availableCPUAvatars; // List of available avatars for CPUs
@@ -473,15 +461,56 @@ public class GameManager : MonoBehaviour
         // Store lobby config before resetting (needed for animation)
         LobbyConfig configForAnimation = currentLobbyConfig;
         
+        // Ensure WinnerScreen script reference is initialized (needed for sprites)
+        if (winnerScreenScript == null && winnerScreen != null)
+        {
+            winnerScreenScript = winnerScreen.GetComponent<WinnerScreen>();
+        }
+        
+        // Ensure WinnerScreen script reference is initialized (needed for sprites and prize UI)
+        if (winnerScreenScript == null && winnerScreen != null)
+        {
+            winnerScreenScript = winnerScreen.GetComponent<WinnerScreen>();
+        }
+        
+        if (winnerScreenScript == null)
+        {
+            Debug.LogError("[GameManager] WinnerScreen script not found! Cannot display prize icons and texts. Make sure WinnerScreen script is attached to the winner screen GameObject.");
+        }
+        else
+        {
+            Debug.Log($"[GameManager] WinnerScreen script found successfully");
+        }
+        
         // Display 1st place
         if (rankings.Count > 0)
         {
             var firstPlace = rankings[0];
             float firstCash = currentLobbyConfig != null ? currentLobbyConfig.firstPlaceCash : 0f;
             int firstChips = currentLobbyConfig != null ? currentLobbyConfig.firstPlaceChips : 0;
+            // Get prize UI from WinnerScreen
+            Image firstPrizeIcon = winnerScreenScript != null ? winnerScreenScript.GetFirstPlacePrizeIcon() : null;
+            TMPro.TextMeshProUGUI firstPrizeText = winnerScreenScript != null ? winnerScreenScript.GetFirstPlacePrizeText() : null;
+            
+            if (winnerScreenScript != null)
+            {
+                if (firstPrizeIcon == null)
+                {
+                    Debug.LogError("[GameManager] First place prize icon is null! Please assign 'firstPlacePrizeIcon' in WinnerScreen component in Unity Inspector.");
+                }
+                if (firstPrizeText == null)
+                {
+                    Debug.LogError("[GameManager] First place prize text is null! Please assign 'firstPlacePrizeText' in WinnerScreen component in Unity Inspector.");
+                }
+                if (firstPrizeIcon != null && firstPrizeText != null)
+                {
+                    Debug.Log("[GameManager] First place prize UI references are valid");
+                }
+            }
+            
             DisplayPlace(1, firstPlace.playerType, firstPlace.cpuIndex, firstPlace.count,
                         winnerProfileImage, winnerOutlineImage, winnerFrameImage, winnerNameText, winnerNameTextLegacy,
-                        winnerCashText, winnerCashTextLegacy, winnerChipsText, winnerChipsTextLegacy,
+                        firstPrizeIcon, firstPrizeText, null,
                         firstCash, firstChips);
             Debug.Log($"[GameManager] 1st Place: {GetWinnerName(firstPlace.playerType, firstPlace.cpuIndex)} ({firstPlace.playerType}, CPU index: {firstPlace.cpuIndex}) with {firstPlace.count} selected boxes! Prize: {firstCash} cash, {firstChips} chips");
         }
@@ -492,17 +521,23 @@ public class GameManager : MonoBehaviour
             var secondPlace = rankings[1];
             float secondCash = currentLobbyConfig != null ? currentLobbyConfig.secondPlaceCash : 0f;
             int secondChips = currentLobbyConfig != null ? currentLobbyConfig.secondPlaceChips : 0;
+            // Get prize UI from WinnerScreen
+            Image secondPrizeIcon = winnerScreenScript != null ? winnerScreenScript.GetSecondPlacePrizeIcon() : null;
+            TMPro.TextMeshProUGUI secondPrizeText = winnerScreenScript != null ? winnerScreenScript.GetSecondPlacePrizeText() : null;
+            
             DisplayPlace(2, secondPlace.playerType, secondPlace.cpuIndex, secondPlace.count,
                         secondPlaceProfileImage, secondPlaceOutlineImage, secondPlaceFrameImage, secondPlaceNameText, secondPlaceNameTextLegacy,
-                        secondPlaceCashText, secondPlaceCashTextLegacy, secondPlaceChipsText, secondPlaceChipsTextLegacy,
+                        secondPrizeIcon, secondPrizeText, null,
                         secondCash, secondChips);
             Debug.Log($"[GameManager] 2nd Place: {GetWinnerName(secondPlace.playerType, secondPlace.cpuIndex)} ({secondPlace.playerType}, CPU index: {secondPlace.cpuIndex}) with {secondPlace.count} selected boxes! Prize: {secondCash} cash, {secondChips} chips");
         }
         else
         {
             // Hide 2nd place UI if no 2nd place
+            Image secondPrizeIconHide = winnerScreenScript != null ? winnerScreenScript.GetSecondPlacePrizeIcon() : null;
+            TMPro.TextMeshProUGUI secondPrizeTextHide = winnerScreenScript != null ? winnerScreenScript.GetSecondPlacePrizeText() : null;
             HidePlace(secondPlaceProfileImage, secondPlaceOutlineImage, secondPlaceFrameImage, secondPlaceNameText, secondPlaceNameTextLegacy,
-                     secondPlaceCashText, secondPlaceCashTextLegacy, secondPlaceChipsText, secondPlaceChipsTextLegacy);
+                     secondPrizeIconHide, secondPrizeTextHide, null);
         }
         
         // Display 3rd place
@@ -511,17 +546,35 @@ public class GameManager : MonoBehaviour
             var thirdPlace = rankings[2];
             float thirdCash = currentLobbyConfig != null ? currentLobbyConfig.thirdPlaceCash : 0f;
             int thirdChips = currentLobbyConfig != null ? currentLobbyConfig.thirdPlaceChips : 0;
+            // Get prize UI from WinnerScreen
+            Image thirdPrizeIcon = winnerScreenScript != null ? winnerScreenScript.GetThirdPlacePrizeIcon() : null;
+            TMPro.TextMeshProUGUI thirdPrizeText = winnerScreenScript != null ? winnerScreenScript.GetThirdPlacePrizeText() : null;
+            
+            if (winnerScreenScript != null)
+            {
+                if (thirdPrizeIcon == null)
+                {
+                    Debug.LogError("[GameManager] Third place prize icon is null! Please assign 'thirdPlacePrizeIcon' in WinnerScreen component in Unity Inspector.");
+                }
+                if (thirdPrizeText == null)
+                {
+                    Debug.LogError("[GameManager] Third place prize text is null! Please assign 'thirdPlacePrizeText' in WinnerScreen component in Unity Inspector.");
+                }
+            }
+            
             DisplayPlace(3, thirdPlace.playerType, thirdPlace.cpuIndex, thirdPlace.count,
                         thirdPlaceProfileImage, thirdPlaceOutlineImage, thirdPlaceFrameImage, thirdPlaceNameText, thirdPlaceNameTextLegacy,
-                        thirdPlaceCashText, thirdPlaceCashTextLegacy, thirdPlaceChipsText, thirdPlaceChipsTextLegacy,
+                        thirdPrizeIcon, thirdPrizeText, null,
                         thirdCash, thirdChips);
             Debug.Log($"[GameManager] 3rd Place: {GetWinnerName(thirdPlace.playerType, thirdPlace.cpuIndex)} ({thirdPlace.playerType}, CPU index: {thirdPlace.cpuIndex}) with {thirdPlace.count} selected boxes! Prize: {thirdCash} cash, {thirdChips} chips");
         }
         else
         {
             // Hide 3rd place UI if no 3rd place
+            Image thirdPrizeIconHide = winnerScreenScript != null ? winnerScreenScript.GetThirdPlacePrizeIcon() : null;
+            TMPro.TextMeshProUGUI thirdPrizeTextHide = winnerScreenScript != null ? winnerScreenScript.GetThirdPlacePrizeText() : null;
             HidePlace(thirdPlaceProfileImage, thirdPlaceOutlineImage, thirdPlaceFrameImage, thirdPlaceNameText, thirdPlaceNameTextLegacy,
-                     thirdPlaceCashText, thirdPlaceCashTextLegacy, thirdPlaceChipsText, thirdPlaceChipsTextLegacy);
+                     thirdPrizeIconHide, thirdPrizeTextHide, null);
         }
         
         // Reset game state before closing gameplay screen
@@ -564,11 +617,30 @@ public class GameManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Displays a place (1st, 2nd, or 3rd) with profile image, outline, frame, name, cash, and chips
+    /// Gets the WinnerScreen script reference (ensures it's initialized)
+    /// </summary>
+    private WinnerScreen GetWinnerScreenScript()
+    {
+        if (winnerScreenScript != null)
+        {
+            return winnerScreenScript;
+        }
+        
+        if (winnerScreen != null)
+        {
+            winnerScreenScript = winnerScreen.GetComponent<WinnerScreen>();
+            return winnerScreenScript;
+        }
+        
+        return null;
+    }
+    
+    /// <summary>
+    /// Displays a place (1st, 2nd, or 3rd) with profile image, outline, frame, name, prize icon, and prize text
     /// </summary>
     private void DisplayPlace(int placeNumber, PlayerType playerType, int cpuIndex, int selectionCount,
                               Image profileImage, Image outlineImage, Image frameImage, TMPro.TextMeshProUGUI nameText, Text nameTextLegacy,
-                              TMPro.TextMeshProUGUI cashText, Text cashTextLegacy, TMPro.TextMeshProUGUI chipsText, Text chipsTextLegacy,
+                              Image prizeIcon, TMPro.TextMeshProUGUI prizeText, Text prizeTextLegacy,
                               float cashPrize, int chipsPrize)
     {
         // Activate UI elements first (in case they were hidden in previous game)
@@ -642,24 +714,96 @@ public class GameManager : MonoBehaviour
             nameTextLegacy.text = playerName;
         }
         
-        // Set cash prize
-        if (cashText != null)
-        {
-            cashText.text = $"${cashPrize:F2}";
-        }
-        if (cashTextLegacy != null)
-        {
-            cashTextLegacy.text = $"${cashPrize:F2}";
-        }
+        // Get sprites from WinnerScreen
+        WinnerScreen winnerScreenComponent = GetWinnerScreenScript();
+        Sprite cashSprite = winnerScreenComponent != null ? winnerScreenComponent.GetCashSprite() : null;
+        Sprite chipsSprite = winnerScreenComponent != null ? winnerScreenComponent.GetChipsSprite() : null;
         
-        // Set chips prize
-        if (chipsText != null)
+        Debug.Log($"[GameManager] DisplayPlace - Place: {placeNumber}, Cash: {cashPrize}, Chips: {chipsPrize}");
+        Debug.Log($"[GameManager] PrizeIcon: {prizeIcon != null}, PrizeText: {prizeText != null}");
+        Debug.Log($"[GameManager] CashSprite: {cashSprite != null}, ChipsSprite: {chipsSprite != null}");
+        
+        // Set prize icon and text (only one prize type exists at a time - cash OR chips)
+        if (cashPrize > 0f)
         {
-            chipsText.text = chipsPrize.ToString("N0");
+            // Show cash prize
+            if (prizeIcon != null)
+            {
+                if (cashSprite != null)
+                {
+                    prizeIcon.sprite = cashSprite;
+                    prizeIcon.gameObject.SetActive(true);
+                    Debug.Log($"[GameManager] Set cash sprite to prize icon for place {placeNumber}");
+                }
+                else
+                {
+                    Debug.LogWarning($"[GameManager] Cash sprite is null! Cannot set prize icon for place {placeNumber}");
+                    prizeIcon.gameObject.SetActive(false);
+                }
+            }
+            else
+            {
+                Debug.LogWarning($"[GameManager] Prize icon is null for place {placeNumber}!");
+            }
+            
+            // Always set prize text if it exists (even if sprite is missing)
+            if (prizeText != null)
+            {
+                prizeText.text = $"${cashPrize:F2}";
+                prizeText.gameObject.SetActive(true);
+                Debug.Log($"[GameManager] Set prize text to ${cashPrize:F2} for place {placeNumber}");
+            }
+            else
+            {
+                Debug.LogError($"[GameManager] Prize text is null for place {placeNumber}! Make sure it's assigned in PlayerProfileUI.");
+            }
         }
-        if (chipsTextLegacy != null)
+        else if (chipsPrize > 0)
         {
-            chipsTextLegacy.text = chipsPrize.ToString("N0");
+            // Show chips prize
+            if (prizeIcon != null)
+            {
+                if (chipsSprite != null)
+                {
+                    prizeIcon.sprite = chipsSprite;
+                    prizeIcon.gameObject.SetActive(true);
+                    Debug.Log($"[GameManager] Set chips sprite to prize icon for place {placeNumber}");
+                }
+                else
+                {
+                    Debug.LogWarning($"[GameManager] Chips sprite is null! Cannot set prize icon for place {placeNumber}");
+                    prizeIcon.gameObject.SetActive(false);
+                }
+            }
+            else
+            {
+                Debug.LogWarning($"[GameManager] Prize icon is null for place {placeNumber}!");
+            }
+            
+            // Always set prize text if it exists (even if sprite is missing)
+            if (prizeText != null)
+            {
+                prizeText.text = chipsPrize.ToString("N0");
+                prizeText.gameObject.SetActive(true);
+                Debug.Log($"[GameManager] Set prize text to {chipsPrize} chips for place {placeNumber}");
+            }
+            else
+            {
+                Debug.LogError($"[GameManager] Prize text is null for place {placeNumber}! Make sure it's assigned in PlayerProfileUI.");
+            }
+        }
+        else
+        {
+            // Hide prize icon and text if no prize
+            if (prizeIcon != null)
+            {
+                prizeIcon.gameObject.SetActive(false);
+            }
+            if (prizeText != null)
+            {
+                prizeText.gameObject.SetActive(false);
+            }
+            Debug.Log($"[GameManager] No prize for place {placeNumber}, hiding icon and text");
         }
     }
     
@@ -667,7 +811,7 @@ public class GameManager : MonoBehaviour
     /// Hides a place UI (for when there are fewer than 3 players)
     /// </summary>
     private void HidePlace(Image profileImage, Image outlineImage, Image frameImage, TMPro.TextMeshProUGUI nameText, Text nameTextLegacy,
-                          TMPro.TextMeshProUGUI cashText, Text cashTextLegacy, TMPro.TextMeshProUGUI chipsText, Text chipsTextLegacy)
+                          Image prizeIcon, TMPro.TextMeshProUGUI prizeText, Text prizeTextLegacy)
     {
         if (profileImage != null)
         {
@@ -689,21 +833,13 @@ public class GameManager : MonoBehaviour
         {
             nameTextLegacy.gameObject.SetActive(false);
         }
-        if (cashText != null)
+        if (prizeIcon != null)
         {
-            cashText.gameObject.SetActive(false);
+            prizeIcon.gameObject.SetActive(false);
         }
-        if (cashTextLegacy != null)
+        if (prizeText != null)
         {
-            cashTextLegacy.gameObject.SetActive(false);
-        }
-        if (chipsText != null)
-        {
-            chipsText.gameObject.SetActive(false);
-        }
-        if (chipsTextLegacy != null)
-        {
-            chipsTextLegacy.gameObject.SetActive(false);
+            prizeText.gameObject.SetActive(false);
         }
     }
     
@@ -1349,21 +1485,24 @@ public class GameManager : MonoBehaviour
         {
             winnerNameTextLegacy.gameObject.SetActive(true);
         }
-        if (winnerCashText != null)
+        // Ensure WinnerScreen script reference is initialized
+        if (winnerScreenScript == null && winnerScreen != null)
         {
-            winnerCashText.gameObject.SetActive(true);
+            winnerScreenScript = winnerScreen.GetComponent<WinnerScreen>();
         }
-        if (winnerCashTextLegacy != null)
+        
+        if (winnerScreenScript != null)
         {
-            winnerCashTextLegacy.gameObject.SetActive(true);
-        }
-        if (winnerChipsText != null)
-        {
-            winnerChipsText.gameObject.SetActive(true);
-        }
-        if (winnerChipsTextLegacy != null)
-        {
-            winnerChipsTextLegacy.gameObject.SetActive(true);
+            Image firstPrizeIconReset = winnerScreenScript.GetFirstPlacePrizeIcon();
+            TMPro.TextMeshProUGUI firstPrizeTextReset = winnerScreenScript.GetFirstPlacePrizeText();
+            if (firstPrizeIconReset != null)
+            {
+                firstPrizeIconReset.gameObject.SetActive(true);
+            }
+            if (firstPrizeTextReset != null)
+            {
+                firstPrizeTextReset.gameObject.SetActive(true);
+            }
         }
         
         // Reset 2nd place UI
@@ -1387,21 +1526,18 @@ public class GameManager : MonoBehaviour
         {
             secondPlaceNameTextLegacy.gameObject.SetActive(true);
         }
-        if (secondPlaceCashText != null)
+        if (winnerScreenScript != null)
         {
-            secondPlaceCashText.gameObject.SetActive(true);
-        }
-        if (secondPlaceCashTextLegacy != null)
-        {
-            secondPlaceCashTextLegacy.gameObject.SetActive(true);
-        }
-        if (secondPlaceChipsText != null)
-        {
-            secondPlaceChipsText.gameObject.SetActive(true);
-        }
-        if (secondPlaceChipsTextLegacy != null)
-        {
-            secondPlaceChipsTextLegacy.gameObject.SetActive(true);
+            Image secondPrizeIconReset = winnerScreenScript.GetSecondPlacePrizeIcon();
+            TMPro.TextMeshProUGUI secondPrizeTextReset = winnerScreenScript.GetSecondPlacePrizeText();
+            if (secondPrizeIconReset != null)
+            {
+                secondPrizeIconReset.gameObject.SetActive(true);
+            }
+            if (secondPrizeTextReset != null)
+            {
+                secondPrizeTextReset.gameObject.SetActive(true);
+            }
         }
         
         // Reset 3rd place UI
@@ -1425,21 +1561,18 @@ public class GameManager : MonoBehaviour
         {
             thirdPlaceNameTextLegacy.gameObject.SetActive(true);
         }
-        if (thirdPlaceCashText != null)
+        if (winnerScreenScript != null)
         {
-            thirdPlaceCashText.gameObject.SetActive(true);
-        }
-        if (thirdPlaceCashTextLegacy != null)
-        {
-            thirdPlaceCashTextLegacy.gameObject.SetActive(true);
-        }
-        if (thirdPlaceChipsText != null)
-        {
-            thirdPlaceChipsText.gameObject.SetActive(true);
-        }
-        if (thirdPlaceChipsTextLegacy != null)
-        {
-            thirdPlaceChipsTextLegacy.gameObject.SetActive(true);
+            Image thirdPrizeIconReset = winnerScreenScript.GetThirdPlacePrizeIcon();
+            TMPro.TextMeshProUGUI thirdPrizeTextReset = winnerScreenScript.GetThirdPlacePrizeText();
+            if (thirdPrizeIconReset != null)
+            {
+                thirdPrizeIconReset.gameObject.SetActive(true);
+            }
+            if (thirdPrizeTextReset != null)
+            {
+                thirdPrizeTextReset.gameObject.SetActive(true);
+            }
         }
         
         Debug.Log("[GameManager] Winner screen UI reset");
@@ -1509,7 +1642,7 @@ public class GameManager : MonoBehaviour
         }
         
         // Update UI displays
-        PlayerProfileUI playerProfileUI = FindObjectOfType<PlayerProfileUI>();
+        PlayerProfileUI playerProfileUI = FindObjectOfType<PlayerProfileUI>(true);
         if (playerProfileUI != null)
         {
             playerProfileUI.UpdateAllCurrencyDisplays(
