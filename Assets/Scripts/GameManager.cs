@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
     
     [Header("Gameplay Screen")]
     [SerializeField] private GameObject gameplayScreen; // Gameplay screen GameObject (set active when game starts)
+    [SerializeField] private Button quitButton; // Quit button (ends game when clicked)
+    [SerializeField] private GameObject quitPanel; // Quit confirmation panel (shown when quit button is clicked)
     
     [Header("Timer")]
     [SerializeField] private TMPro.TextMeshProUGUI timerText; // Timer text display (TextMeshProUGUI)
@@ -99,6 +101,12 @@ public class GameManager : MonoBehaviour
             numberGrid.OnAllBoxesSelected += OnAllBoxesSelected;
         }
         
+        // Subscribe to quit button
+        if (quitButton != null)
+        {
+            quitButton.onClick.AddListener(OnQuitButtonClicked);
+        }
+        
         // Wait a bit for PlayFab and MainMenuAvatarDisplay to load avatar
         StartCoroutine(InitializeProfilesDelayed());
         SetupCPUs();
@@ -107,6 +115,12 @@ public class GameManager : MonoBehaviour
         if (winnerScreen != null)
         {
             winnerScreen.SetActive(false);
+        }
+        
+        // Hide quit panel initially
+        if (quitPanel != null)
+        {
+            quitPanel.SetActive(false);
         }
         
         // Check if gameplay screen is active and start timer if it is
@@ -251,6 +265,12 @@ public class GameManager : MonoBehaviour
         {
             numberGrid.OnAllBoxesSelected -= OnAllBoxesSelected;
         }
+        
+        // Unsubscribe from quit button
+        if (quitButton != null)
+        {
+            quitButton.onClick.RemoveListener(OnQuitButtonClicked);
+        }
     }
     
     /// <summary>
@@ -294,6 +314,57 @@ public class GameManager : MonoBehaviour
         
         // Show winner screen with rankings
         ShowWinnerScreen(rankings);
+    }
+    
+    /// <summary>
+    /// Called when the quit button is clicked - ends the game immediately
+    /// Player gets prize based on their current ranking position
+    /// </summary>
+    private void OnQuitButtonClicked()
+    {
+        if (!isGameActive)
+        {
+            return; // Game already ended
+        }
+        
+        isGameActive = false;
+        timerStarted = false; // Reset flag so timer can be restarted if needed
+        Debug.Log("[GameManager] Player quit! Determining winner...");
+        
+        // Stop timer
+        if (timerCoroutine != null)
+        {
+            StopCoroutine(timerCoroutine);
+            timerCoroutine = null;
+        }
+        
+        // Stop all CPU rolling
+        if (cpuPlayers != null)
+        {
+            foreach (CPU cpu in cpuPlayers)
+            {
+                if (cpu != null)
+                {
+                    cpu.StopAutoRolling();
+                }
+            }
+        }
+        
+        // Get rankings (top 3) - player's current selection count is included
+        var rankings = GetRankings();
+        
+        // Award prizes based on lobby configuration
+        AwardPrizes(rankings);
+        
+        // Show winner screen with rankings
+        ShowWinnerScreen(rankings);
+        
+        // Close quit panel if it's open
+        if (quitPanel != null && quitPanel.activeSelf)
+        {
+            quitPanel.SetActive(false);
+            Debug.Log("[GameManager] Quit panel closed");
+        }
     }
     
     /// <summary>
