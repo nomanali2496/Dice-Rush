@@ -10,6 +10,7 @@ public class PlayerProfileUI : MonoBehaviour
     [Header("UI References")]
     [SerializeField] private TMP_InputField playerNameInputField; // InputField for editing player name
     [SerializeField] private TextMeshProUGUI emailText;
+    [SerializeField] private TextMeshProUGUI helpAndSupportEmailText;
     [SerializeField] private TextMeshProUGUI cashText;
     [SerializeField] private TextMeshProUGUI coinsText;
     [SerializeField] private Image profileImage;
@@ -235,6 +236,7 @@ public class PlayerProfileUI : MonoBehaviour
         if (emailText != null)
         {
             emailText.text = !string.IsNullOrEmpty(data.email) ? data.email : "No email";
+            helpAndSupportEmailText.text = emailText.text;
         }
         else
         {
@@ -288,6 +290,7 @@ public class PlayerProfileUI : MonoBehaviour
         
         if (emailText != null)
             emailText.text = "Not logged in";
+        helpAndSupportEmailText.text = emailText.text;
         
         if (cashText != null)
             cashText.text = cashPrefix + "0";
