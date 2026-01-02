@@ -12,6 +12,7 @@ public class AuthenticationManager : MonoBehaviour
     [Header("Panels")]
     [SerializeField] private GameObject loginRegisterPanel;
     [SerializeField] private GameObject splashScreenPanel;
+    [SerializeField] private GameObject loadingScreenPanel; // Loading screen that shows until login screen hides
     
     [Header("Login/Register Toggle")]
     [SerializeField] private GameObject loginSection;
@@ -45,6 +46,7 @@ public class AuthenticationManager : MonoBehaviour
     
     private bool isLoginPasswordVisible = false;
     private bool isRegisterPasswordVisible = false;
+    private bool isAttemptingAutoLogin = false;
     
     private void Start()
     {
@@ -80,11 +82,25 @@ public class AuthenticationManager : MonoBehaviour
             PlayFabManager.Instance.OnRegisterComplete += OnRegisterComplete;
         }
         
-        // Show login/register panel first
-        ShowLoginRegisterPanel();
-        ShowLoginSection();
-        SetLoadingState(false);
-        UpdateStatusText("");
+        // Show loading screen initially (covers everything)
+        ShowLoadingScreen();
+        
+        // IMMEDIATE CHECK: If user is already logged in, show splash screen immediately (no delay)
+        // This prevents the login screen from flashing briefly
+        if (PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
+        {
+            Debug.Log("[AuthenticationManager] User is already logged in, hiding login screen and showing splash");
+            // Hide login screen first, then show splash screen (loading screen will hide when splash shows)
+            HideLoginScreen();
+            ShowSplashScreenPanel();
+            SetLoadingState(false);
+            UpdateStatusText("");
+            OnAuthenticationSuccess?.Invoke();
+            return; // Don't attempt auto-login, user is already logged in
+        }
+        
+        // If not logged in, attempt auto-login (will show login panel if auto-login fails)
+        AttemptAutoLogin();
     }
     
     private void OnDestroy()
@@ -106,6 +122,116 @@ public class AuthenticationManager : MonoBehaviour
         }
     }
     
+    /// <summary>
+    /// Attempts to auto-login: first checks for existing session, then tries device ID login
+    /// </summary>
+    private void AttemptAutoLogin()
+    {
+        // Wait a frame to ensure PlayFabManager is fully initialized
+        StartCoroutine(AttemptAutoLoginCoroutine());
+    }
+    
+    private System.Collections.IEnumerator AttemptAutoLoginCoroutine()
+    {
+        // Wait a frame for PlayFabManager to initialize
+        yield return null;
+        
+        if (PlayFabManager.Instance == null)
+        {
+            Debug.LogWarning("[AuthenticationManager] PlayFabManager not found, showing login panel");
+            // Hide loading screen and show login panel
+            ShowLoginRegisterPanel();
+            ShowLoginSection();
+            SetLoadingState(false);
+            UpdateStatusText("");
+            yield break;
+        }
+        
+        // Note: We already checked IsLoggedIn() in Start() immediately, so we skip that check here
+        // This coroutine only runs if user is NOT already logged in
+        
+        // First check: If user has explicitly logged out, don't attempt auto-login
+        if (PlayFabManager.Instance.HasUserExplicitlyLoggedOut())
+        {
+            Debug.Log("[AuthenticationManager] User has explicitly logged out, showing login panel (no auto-login)");
+            isAttemptingAutoLogin = false;
+            // Hide loading screen and show login panel
+            ShowLoginRegisterPanel();
+            ShowLoginSection();
+            SetLoadingState(false);
+            UpdateStatusText("");
+            yield break;
+        }
+        
+        SetLoadingState(true);
+        UpdateStatusText("Checking for saved session...");
+        isAttemptingAutoLogin = true;
+        
+        // Third check: Check if there's an existing PlayFab session
+        if (PlayFabManager.Instance.HasExistingSession())
+        {
+            Debug.Log("[AuthenticationManager] Existing session found, attempting to restore...");
+            UpdateStatusText("Restoring session...");
+            
+            PlayFabManager.Instance.RestoreSession((success) =>
+            {
+                if (success)
+                {
+                    Debug.Log("[AuthenticationManager] Session restored successfully!");
+                    UpdateStatusText("Welcome back!");
+                    isAttemptingAutoLogin = false;
+                    
+                    // Show splash screen after successful session restore
+                    Invoke(nameof(ShowSplashScreenPanel), 0.5f);
+                    
+                    // Notify listeners
+                    OnAuthenticationSuccess?.Invoke();
+                }
+                else
+                {
+                    Debug.Log("[AuthenticationManager] Session restore failed, trying device ID login...");
+                    // Fall through to device ID login
+                    AttemptDeviceIdLogin();
+                }
+                SetLoadingState(false);
+            });
+        }
+        else
+        {
+            Debug.Log("[AuthenticationManager] No existing session, attempting device ID login...");
+            // No existing session, try device ID auto-login
+            // Loading screen will stay visible during auto-login attempt
+            AttemptDeviceIdLogin();
+        }
+    }
+    
+    /// <summary>
+    /// Attempts to login with device ID (guest account)
+    /// </summary>
+    private void AttemptDeviceIdLogin()
+    {
+        UpdateStatusText("Logging in as guest...");
+        
+        string customId = SystemInfo.deviceUniqueIdentifier;
+        Debug.Log($"[AuthenticationManager] Attempting auto-login with device ID: {customId}");
+        
+        if (PlayFabManager.Instance != null)
+        {
+            // The OnLoginComplete callback will handle the result
+            // We use isAttemptingAutoLogin flag to handle failures silently
+            PlayFabManager.Instance.LoginWithCustomId(customId, true);
+        }
+        else
+        {
+            Debug.LogWarning("[AuthenticationManager] PlayFabManager not found, showing login panel");
+            isAttemptingAutoLogin = false;
+            ShowLoginRegisterPanel();
+            ShowLoginSection();
+            SetLoadingState(false);
+            UpdateStatusText("");
+        }
+    }
+    
     #region Panel Management
     
     /// <summary>
@@ -113,6 +239,17 @@ public class AuthenticationManager : MonoBehaviour
     /// </summary>
     public void ShowLoginRegisterPanel()
     {
+        // Don't show login panel if user is already logged in
+        if (PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
+        {
+            Debug.Log("[AuthenticationManager] User is already logged in, preventing login panel from showing");
+            ShowSplashScreenPanel();
+            return;
+        }
+        
+        // Hide loading screen when login screen is shown
+        HideLoadingScreen();
+        
         if (loginRegisterPanel != null)
             loginRegisterPanel.SetActive(true);
         
@@ -120,10 +257,40 @@ public class AuthenticationManager : MonoBehaviour
             splashScreenPanel.SetActive(false);
     }
     
-    private void ShowSplashScreenPanel()
+    /// <summary>
+    /// Hides the login/register panel
+    /// </summary>
+    private void HideLoginScreen()
     {
         if (loginRegisterPanel != null)
             loginRegisterPanel.SetActive(false);
+    }
+    
+    /// <summary>
+    /// Shows the loading screen (covers everything)
+    /// </summary>
+    private void ShowLoadingScreen()
+    {
+        if (loadingScreenPanel != null)
+            loadingScreenPanel.SetActive(true);
+    }
+    
+    /// <summary>
+    /// Hides the loading screen
+    /// </summary>
+    private void HideLoadingScreen()
+    {
+        if (loadingScreenPanel != null)
+            loadingScreenPanel.SetActive(false);
+    }
+    
+    private void ShowSplashScreenPanel()
+    {
+        // Hide login screen if it's showing
+        HideLoginScreen();
+        
+        // Hide loading screen when showing splash screen
+        HideLoadingScreen();
         
         if (splashScreenPanel != null)
             splashScreenPanel.SetActive(true);
@@ -295,7 +462,16 @@ public class AuthenticationManager : MonoBehaviour
         
         if (success)
         {
-            UpdateStatusText("Login successful!");
+            if (isAttemptingAutoLogin)
+            {
+                Debug.Log("[AuthenticationManager] Auto-login successful!");
+                UpdateStatusText("Welcome!");
+                isAttemptingAutoLogin = false;
+            }
+            else
+            {
+                UpdateStatusText("Login successful!");
+            }
             
             // Show splash screen after successful login
             Invoke(nameof(ShowSplashScreenPanel), 0.5f);
@@ -305,7 +481,20 @@ public class AuthenticationManager : MonoBehaviour
         }
         else
         {
-            UpdateStatusText("Login failed! Please check your credentials.");
+            if (isAttemptingAutoLogin)
+            {
+                // Auto-login failed silently, hide loading screen and show login panel
+                Debug.Log("[AuthenticationManager] Auto-login failed, showing login panel");
+                isAttemptingAutoLogin = false;
+                ShowLoginRegisterPanel(); // This will hide loading screen and show login panel
+                ShowLoginSection();
+                UpdateStatusText("");
+            }
+            else
+            {
+                // Manual login failed, show error message
+                UpdateStatusText("Login failed! Please check your credentials.");
+            }
         }
     }
     

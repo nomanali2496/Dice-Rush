@@ -71,6 +71,9 @@ public class PlayFabManager : MonoBehaviour
         playFabId = result.PlayFabId;
         isLoggedIn = true;
         
+        // Clear explicit logout flag since user has successfully registered/logged in
+        ClearExplicitLogoutFlag();
+        
         // Create initial player data
         currentPlayerData = new PlayerData(playerName, email, 1000, 100);
         
@@ -114,12 +117,16 @@ public class PlayFabManager : MonoBehaviour
     /// <summary>
     /// Login with email and password
     /// </summary>
-    public void LoginWithEmail(string email, string password)
+    public void LoginWithEmail(string email, string password, bool rememberMe = true)
     {
         var request = new LoginWithEmailAddressRequest
         {
             Email = email,
-            Password = password
+            Password = password,
+            InfoRequestParameters = new GetPlayerCombinedInfoRequestParams
+            {
+                GetPlayerProfile = true
+            }
         };
         
         PlayFabClientAPI.LoginWithEmailAddress(request, OnLoginSuccess, OnLoginFailure);
@@ -132,6 +139,15 @@ public class PlayFabManager : MonoBehaviour
         isLoggedIn = true;
         
         Debug.Log($"[PlayFabManager] PlayFabId: {playFabId}, isLoggedIn: {isLoggedIn}");
+        
+        // Clear explicit logout flag since user has successfully logged in
+        ClearExplicitLogoutFlag();
+        
+        // Store session info if available
+        if (result.SessionTicket != null)
+        {
+            Debug.Log("[PlayFabManager] Session ticket received - session will persist");
+        }
         
         // Load player data after successful login
         LoadPlayerData();
@@ -165,30 +181,38 @@ public class PlayFabManager : MonoBehaviour
     /// <summary>
     /// Login with custom ID (for guest/quick play)
     /// </summary>
-    public void LoginWithCustomId(string customId)
+    public void LoginWithCustomId(string customId, bool createAccount = true)
     {
         // First try to login without creating account (in case account already exists)
         var request = new LoginWithCustomIDRequest
         {
             CustomId = customId,
-            CreateAccount = false
+            CreateAccount = false,
+            InfoRequestParameters = new GetPlayerCombinedInfoRequestParams
+            {
+                GetPlayerProfile = true
+            }
         };
         
         PlayFabClientAPI.LoginWithCustomID(request, 
             OnLoginSuccess, 
-            error => OnCustomIdLoginFailure(error, customId));
+            error => OnCustomIdLoginFailure(error, customId, createAccount));
     }
     
-    private void OnCustomIdLoginFailure(PlayFabError error, string customId)
+    private void OnCustomIdLoginFailure(PlayFabError error, string customId, bool createAccount = true)
     {
         // If account doesn't exist, try to create it
-        if (error.Error == PlayFabErrorCode.AccountNotFound)
+        if (error.Error == PlayFabErrorCode.AccountNotFound && createAccount)
         {
             Debug.Log("Account not found, attempting to create new guest account...");
             var createRequest = new LoginWithCustomIDRequest
             {
                 CustomId = customId,
-                CreateAccount = true
+                CreateAccount = true,
+                InfoRequestParameters = new GetPlayerCombinedInfoRequestParams
+                {
+                    GetPlayerProfile = true
+                }
             };
             
             PlayFabClientAPI.LoginWithCustomID(createRequest, OnLoginSuccess, OnLoginFailure);
@@ -198,6 +222,74 @@ public class PlayFabManager : MonoBehaviour
             // For other errors (like account creation disabled), show the error
             OnLoginFailure(error);
         }
+    }
+    
+    /// <summary>
+    /// Check if there's an existing PlayFab session
+    /// </summary>
+    public bool HasExistingSession()
+    {
+        return PlayFabClientAPI.IsClientLoggedIn();
+    }
+    
+    /// <summary>
+    /// Attempt to restore session by getting account info
+    /// </summary>
+    public void RestoreSession(Action<bool> onComplete = null)
+    {
+        if (!HasExistingSession())
+        {
+            Debug.Log("[PlayFabManager] No existing session found");
+            onComplete?.Invoke(false);
+            return;
+        }
+        
+        Debug.Log("[PlayFabManager] Existing session found, restoring...");
+        
+        // Get account info to verify session and get PlayFabId
+        var request = new GetAccountInfoRequest();
+        PlayFabClientAPI.GetAccountInfo(request,
+            result =>
+            {
+                if (result.AccountInfo != null)
+                {
+                    playFabId = result.AccountInfo.PlayFabId;
+                    isLoggedIn = true;
+                    Debug.Log($"[PlayFabManager] Session restored! PlayFabId: {playFabId}");
+                    
+                    // Load player data
+                    LoadPlayerData();
+                    
+                    onComplete?.Invoke(true);
+                }
+                else
+                {
+                    Debug.LogWarning("[PlayFabManager] Session exists but account info is null");
+                    onComplete?.Invoke(false);
+                }
+            },
+            error =>
+            {
+                Debug.LogWarning($"[PlayFabManager] Failed to restore session: {error.GenerateErrorReport()}");
+                // Session might be invalid, clear it
+                PlayFabClientAPI.ForgetAllCredentials();
+                onComplete?.Invoke(false);
+            });
+    }
+    
+    /// <summary>
+    /// Attempt auto-login with device ID (for guest accounts)
+    /// </summary>
+    public void AttemptAutoLoginWithDeviceId(Action<bool> onComplete = null)
+    {
+        string deviceId = SystemInfo.deviceUniqueIdentifier;
+        Debug.Log($"[PlayFabManager] Attempting auto-login with device ID: {deviceId}");
+        
+        LoginWithCustomId(deviceId, true);
+        
+        // We'll use the existing OnLoginComplete event, but we need to track this is an auto-login
+        // For now, we'll just let the normal flow handle it
+        // The onComplete will be called via the OnLoginComplete event
     }
     
     #endregion
@@ -431,6 +523,29 @@ public class PlayFabManager : MonoBehaviour
         playFabId = "";
         currentPlayerData = new PlayerData();
         PlayFabClientAPI.ForgetAllCredentials();
+        
+        // Mark that user has explicitly logged out - prevent auto-login on next start
+        PlayerPrefs.SetInt("UserExplicitlyLoggedOut", 1);
+        PlayerPrefs.Save();
+        Debug.Log("[PlayFabManager] User explicitly logged out - auto-login will be disabled on next start");
+    }
+    
+    /// <summary>
+    /// Check if user has explicitly logged out
+    /// </summary>
+    public bool HasUserExplicitlyLoggedOut()
+    {
+        return PlayerPrefs.GetInt("UserExplicitlyLoggedOut", 0) == 1;
+    }
+    
+    /// <summary>
+    /// Clear the explicit logout flag (called when user successfully logs in)
+    /// </summary>
+    private void ClearExplicitLogoutFlag()
+    {
+        PlayerPrefs.DeleteKey("UserExplicitlyLoggedOut");
+        PlayerPrefs.Save();
+        Debug.Log("[PlayFabManager] Cleared explicit logout flag - auto-login enabled");
     }
     
     #endregion
