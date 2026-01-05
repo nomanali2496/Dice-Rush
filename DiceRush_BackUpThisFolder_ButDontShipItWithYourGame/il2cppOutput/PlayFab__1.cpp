@@ -4476,7 +4476,7 @@ inline void PlayFabHttp_MakeApiCall_TisUnsubscribeFromMatchResourceResult_t01441
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 38070
+// Method Definition Index: 45618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptAPI__cctor_mD7A26853A47E4CCF74D1E5AF07C26DDF59B84826 (const RuntimeMethod* method) 
 {
 	{
@@ -4484,7 +4484,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptAPI__cctor_mD7A26853A4
 		return;
 	}
 }
-// Method Definition Index: 38071
+// Method Definition Index: 45619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayFabCloudScriptAPI_IsEntityLoggedIn_m5E516810BE18FA6040481B09A5A63533D1DC1EC1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4503,7 +4503,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayFabCloudScriptAPI_IsEntityLoggedIn_m
 		return L_1;
 	}
 }
-// Method Definition Index: 38072
+// Method Definition Index: 45620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptAPI_ForgetAllCredentials_m15615FE26E7E65E9256A711768A087CE902B6D99 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4522,7 +4522,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptAPI_ForgetAllCredentia
 		return;
 	}
 }
-// Method Definition Index: 38073
+// Method Definition Index: 45621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptAPI_ExecuteEntityCloudScript_m67599FDBA4307485A7D2E3842A4E10A94F7E04FC (ExecuteEntityCloudScriptRequest_tC659794797F57E97311E5AEBB5743498E5B198D6* ___0_request, Action_1_t238FCA3331E98C20120C2CBFD5F3C6C214BA2767* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4616,7 +4616,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38074
+// Method Definition Index: 45622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptAPI_ExecuteFunction_m8ED378B57067B7EA0B1BA26C54B0F4034480F25D (ExecuteFunctionRequest_t4E67AA64EEC1BFCCD6EE920467BE078C54B824BA* ___0_request, Action_1_t611EBB2B7E5D8E2C0EE057F94EFC3809113BE1C9* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4757,7 +4757,7 @@ IL_006a:
 		return;
 	}
 }
-// Method Definition Index: 38075
+// Method Definition Index: 45623
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptAPI_GetFunction_m7EDCB7AEFDBDF27B5B66D27DF4A583197C3319EE (GetFunctionRequest_t6BAFA40A4E53BB89B0AD37E5621C47B2E271172E* ___0_request, Action_1_tE6256E62B6E93433E6594D1CE7C4BBDCC52BB677* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4851,7 +4851,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38076
+// Method Definition Index: 45624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptAPI_ListEventHubFunctions_m7F15CDE0161A240391231078E91BB67D27879091 (ListFunctionsRequest_t1B66C3F4378D5362FB990D9B4875B88BB9013EAC* ___0_request, Action_1_t0B9CAC28B1BC6BB6CCBBC52F72854708E69E03E7* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4945,7 +4945,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38077
+// Method Definition Index: 45625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptAPI_ListFunctions_mF28F53259E11BE255026F18B48B656725F83AA66 (ListFunctionsRequest_t1B66C3F4378D5362FB990D9B4875B88BB9013EAC* ___0_request, Action_1_tC4F32C4C6C9B7B9760C26746E6F6500AA762D235* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5039,7 +5039,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38078
+// Method Definition Index: 45626
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptAPI_ListHttpFunctions_mD497FF9DA57CD26761ADE4CD86033BCCB2F054D0 (ListFunctionsRequest_t1B66C3F4378D5362FB990D9B4875B88BB9013EAC* ___0_request, Action_1_t5A5706DE20763EBA51F00D77005C6CE3829DA401* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5133,7 +5133,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38079
+// Method Definition Index: 45627
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptAPI_ListQueuedFunctions_m0492CDB3DF65C56DDB8715D2E4010ECEDE66DD12 (ListFunctionsRequest_t1B66C3F4378D5362FB990D9B4875B88BB9013EAC* ___0_request, Action_1_t27862E37CA15ED376202DB185853763CEB61CC16* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5227,7 +5227,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38080
+// Method Definition Index: 45628
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptAPI_PostFunctionResultForEntityTriggeredAction_m618D53C79ABD3E5B7808BAC11B227F317C6DC5B7 (PostFunctionResultForEntityTriggeredActionRequest_t693AC2988CCE5CB66EC7DBD55FD75C624AE17F61* ___0_request, Action_1_t7A6380B10F9D2B39E3E5752B32A0F6EBE4CB2F51* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5321,7 +5321,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38081
+// Method Definition Index: 45629
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptAPI_PostFunctionResultForFunctionExecution_m8E8F519FE2561612AC60776D06DFBA68A4BB4007 (PostFunctionResultForFunctionExecutionRequest_tDCF9C800817BDB4E8F3DAEA378E138EB321D603D* ___0_request, Action_1_t7A6380B10F9D2B39E3E5752B32A0F6EBE4CB2F51* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5415,7 +5415,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38082
+// Method Definition Index: 45630
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptAPI_PostFunctionResultForPlayerTriggeredAction_m4686FF0C06EB00C803C6EB4A8B8866974CF2558C (PostFunctionResultForPlayerTriggeredActionRequest_t32D6959B7C46A8E18D75D7B335C4FBAC5CD13C68* ___0_request, Action_1_t7A6380B10F9D2B39E3E5752B32A0F6EBE4CB2F51* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5509,7 +5509,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38083
+// Method Definition Index: 45631
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptAPI_PostFunctionResultForScheduledTask_m072A3AC5C25BFAC073CB959D5B6CA05DB549036F (PostFunctionResultForScheduledTaskRequest_t0CE6CBC99E2E97C90FF0B23F392CDD839DB233FE* ___0_request, Action_1_t7A6380B10F9D2B39E3E5752B32A0F6EBE4CB2F51* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5603,7 +5603,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38084
+// Method Definition Index: 45632
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptAPI_RegisterEventHubFunction_mCE932B2872A956BAB72537B6877E7F5934F860C4 (RegisterEventHubFunctionRequest_tB8C52B879147D7A219F8E9C9E511008FDF06B579* ___0_request, Action_1_t7A6380B10F9D2B39E3E5752B32A0F6EBE4CB2F51* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5697,7 +5697,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38085
+// Method Definition Index: 45633
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptAPI_RegisterHttpFunction_mA071403F5618D8669AAF54461E7850072288995E (RegisterHttpFunctionRequest_t4366A0EE0C19C734D2D4C50D165A3290F8F31AB6* ___0_request, Action_1_t7A6380B10F9D2B39E3E5752B32A0F6EBE4CB2F51* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5791,7 +5791,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38086
+// Method Definition Index: 45634
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptAPI_RegisterQueuedFunction_mB33EF1ACC4223F69E0A2DE1F4EC25D2F7A8EC7CC (RegisterQueuedFunctionRequest_tC5935E3F10F3AF4A5839D2C05D9D3A10202869C4* ___0_request, Action_1_t7A6380B10F9D2B39E3E5752B32A0F6EBE4CB2F51* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5885,7 +5885,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38087
+// Method Definition Index: 45635
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptAPI_UnregisterFunction_m6330BE44E79AD116CF68555512F3F16771A71EC9 (UnregisterFunctionRequest_tC68E29A4390C37B518F50B1F58FB3D0FD5707887* ___0_request, Action_1_t7A6380B10F9D2B39E3E5752B32A0F6EBE4CB2F51* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5987,7 +5987,7 @@ IL_0030:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 38088
+// Method Definition Index: 45636
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptInstanceAPI__ctor_mBB7318CB0F1636A1BC2615549E1333ABE4A78DF3 (PlayFabCloudScriptInstanceAPI_t11C84FE38A44B194F5A17C831DD402551024DFA6* __this, PlayFabAuthenticationContext_t221B79722A7A90BF01896A080CB0488FC0A9971A* ___0_context, const RuntimeMethod* method) 
 {
 	{
@@ -6017,7 +6017,7 @@ IL_0015:
 		return;
 	}
 }
-// Method Definition Index: 38089
+// Method Definition Index: 45637
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptInstanceAPI__ctor_m1E9EA5ECCDB7CEFD8FBD8E957A17188E2D073FF8 (PlayFabCloudScriptInstanceAPI_t11C84FE38A44B194F5A17C831DD402551024DFA6* __this, PlayFabApiSettings_tA64AE28AC2930D2710835FCD401A4212558752D1* ___0_settings, PlayFabAuthenticationContext_t221B79722A7A90BF01896A080CB0488FC0A9971A* ___1_context, const RuntimeMethod* method) 
 {
 	{
@@ -6051,7 +6051,7 @@ IL_0015:
 		return;
 	}
 }
-// Method Definition Index: 38090
+// Method Definition Index: 45638
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayFabCloudScriptInstanceAPI_IsEntityLoggedIn_m8DE4F215EB7C7D726A5F577229253D931246B6BB (PlayFabCloudScriptInstanceAPI_t11C84FE38A44B194F5A17C831DD402551024DFA6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6075,7 +6075,7 @@ IL_0014:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 38091
+// Method Definition Index: 45639
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptInstanceAPI_ForgetAllCredentials_m2CCBC10580CAAB33B2ECA2D4B3CB063D7C3895B8 (PlayFabCloudScriptInstanceAPI_t11C84FE38A44B194F5A17C831DD402551024DFA6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6099,7 +6099,7 @@ IL_0013:
 		return;
 	}
 }
-// Method Definition Index: 38092
+// Method Definition Index: 45640
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptInstanceAPI_ExecuteEntityCloudScript_m291CE4898092BC459F60C9D1F13FC532BFC31752 (PlayFabCloudScriptInstanceAPI_t11C84FE38A44B194F5A17C831DD402551024DFA6* __this, ExecuteEntityCloudScriptRequest_tC659794797F57E97311E5AEBB5743498E5B198D6* ___0_request, Action_1_t238FCA3331E98C20120C2CBFD5F3C6C214BA2767* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6209,7 +6209,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38093
+// Method Definition Index: 45641
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptInstanceAPI_ExecuteFunction_m092CF1946BD7DB86399B839C5AE12B584F236BB9 (PlayFabCloudScriptInstanceAPI_t11C84FE38A44B194F5A17C831DD402551024DFA6* __this, ExecuteFunctionRequest_t4E67AA64EEC1BFCCD6EE920467BE078C54B824BA* ___0_request, Action_1_t611EBB2B7E5D8E2C0EE057F94EFC3809113BE1C9* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6319,7 +6319,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38094
+// Method Definition Index: 45642
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptInstanceAPI_GetFunction_mEAACB093E65513976A338EF41EE04F4B8879A2D1 (PlayFabCloudScriptInstanceAPI_t11C84FE38A44B194F5A17C831DD402551024DFA6* __this, GetFunctionRequest_t6BAFA40A4E53BB89B0AD37E5621C47B2E271172E* ___0_request, Action_1_tE6256E62B6E93433E6594D1CE7C4BBDCC52BB677* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6429,7 +6429,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38095
+// Method Definition Index: 45643
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptInstanceAPI_ListEventHubFunctions_mC6C12CD46EBB06D82F7A5C3A3E1082770277E71C (PlayFabCloudScriptInstanceAPI_t11C84FE38A44B194F5A17C831DD402551024DFA6* __this, ListFunctionsRequest_t1B66C3F4378D5362FB990D9B4875B88BB9013EAC* ___0_request, Action_1_t0B9CAC28B1BC6BB6CCBBC52F72854708E69E03E7* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6539,7 +6539,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38096
+// Method Definition Index: 45644
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptInstanceAPI_ListFunctions_m7AE2CAF3621484D157B720103FDC0A65B1CBACBF (PlayFabCloudScriptInstanceAPI_t11C84FE38A44B194F5A17C831DD402551024DFA6* __this, ListFunctionsRequest_t1B66C3F4378D5362FB990D9B4875B88BB9013EAC* ___0_request, Action_1_tC4F32C4C6C9B7B9760C26746E6F6500AA762D235* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6649,7 +6649,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38097
+// Method Definition Index: 45645
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptInstanceAPI_ListHttpFunctions_mBF969A0970AD014E6AB3F75900BC9CCD4739B409 (PlayFabCloudScriptInstanceAPI_t11C84FE38A44B194F5A17C831DD402551024DFA6* __this, ListFunctionsRequest_t1B66C3F4378D5362FB990D9B4875B88BB9013EAC* ___0_request, Action_1_t5A5706DE20763EBA51F00D77005C6CE3829DA401* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6759,7 +6759,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38098
+// Method Definition Index: 45646
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptInstanceAPI_ListQueuedFunctions_m09C6FD8DEFDD97BF93A815B533A3BF299641ADEF (PlayFabCloudScriptInstanceAPI_t11C84FE38A44B194F5A17C831DD402551024DFA6* __this, ListFunctionsRequest_t1B66C3F4378D5362FB990D9B4875B88BB9013EAC* ___0_request, Action_1_t27862E37CA15ED376202DB185853763CEB61CC16* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6869,7 +6869,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38099
+// Method Definition Index: 45647
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptInstanceAPI_PostFunctionResultForEntityTriggeredAction_m36225A0E1BF8371FBA78B316AB2F29ED196E7A3C (PlayFabCloudScriptInstanceAPI_t11C84FE38A44B194F5A17C831DD402551024DFA6* __this, PostFunctionResultForEntityTriggeredActionRequest_t693AC2988CCE5CB66EC7DBD55FD75C624AE17F61* ___0_request, Action_1_t7A6380B10F9D2B39E3E5752B32A0F6EBE4CB2F51* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6979,7 +6979,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38100
+// Method Definition Index: 45648
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptInstanceAPI_PostFunctionResultForFunctionExecution_mA062E226D72061E6BD83927DC80158D9C29ACEED (PlayFabCloudScriptInstanceAPI_t11C84FE38A44B194F5A17C831DD402551024DFA6* __this, PostFunctionResultForFunctionExecutionRequest_tDCF9C800817BDB4E8F3DAEA378E138EB321D603D* ___0_request, Action_1_t7A6380B10F9D2B39E3E5752B32A0F6EBE4CB2F51* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7089,7 +7089,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38101
+// Method Definition Index: 45649
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptInstanceAPI_PostFunctionResultForPlayerTriggeredAction_m7E11EE12C136E3531097692FC7C3F3BD19ABB1E6 (PlayFabCloudScriptInstanceAPI_t11C84FE38A44B194F5A17C831DD402551024DFA6* __this, PostFunctionResultForPlayerTriggeredActionRequest_t32D6959B7C46A8E18D75D7B335C4FBAC5CD13C68* ___0_request, Action_1_t7A6380B10F9D2B39E3E5752B32A0F6EBE4CB2F51* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7199,7 +7199,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38102
+// Method Definition Index: 45650
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptInstanceAPI_PostFunctionResultForScheduledTask_m15949307F44604986FC551C3DEF8682163C91B07 (PlayFabCloudScriptInstanceAPI_t11C84FE38A44B194F5A17C831DD402551024DFA6* __this, PostFunctionResultForScheduledTaskRequest_t0CE6CBC99E2E97C90FF0B23F392CDD839DB233FE* ___0_request, Action_1_t7A6380B10F9D2B39E3E5752B32A0F6EBE4CB2F51* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7309,7 +7309,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38103
+// Method Definition Index: 45651
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptInstanceAPI_RegisterEventHubFunction_m4532C81FE90D14F5085CC847E2865B5B04CD7055 (PlayFabCloudScriptInstanceAPI_t11C84FE38A44B194F5A17C831DD402551024DFA6* __this, RegisterEventHubFunctionRequest_tB8C52B879147D7A219F8E9C9E511008FDF06B579* ___0_request, Action_1_t7A6380B10F9D2B39E3E5752B32A0F6EBE4CB2F51* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7419,7 +7419,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38104
+// Method Definition Index: 45652
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptInstanceAPI_RegisterHttpFunction_mF6ADE46F2519B40E60CC69E9346EAC09D0EA721D (PlayFabCloudScriptInstanceAPI_t11C84FE38A44B194F5A17C831DD402551024DFA6* __this, RegisterHttpFunctionRequest_t4366A0EE0C19C734D2D4C50D165A3290F8F31AB6* ___0_request, Action_1_t7A6380B10F9D2B39E3E5752B32A0F6EBE4CB2F51* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7529,7 +7529,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38105
+// Method Definition Index: 45653
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptInstanceAPI_RegisterQueuedFunction_mFFD6B8ED32C9314F283C2F94545B4A216D896E37 (PlayFabCloudScriptInstanceAPI_t11C84FE38A44B194F5A17C831DD402551024DFA6* __this, RegisterQueuedFunctionRequest_tC5935E3F10F3AF4A5839D2C05D9D3A10202869C4* ___0_request, Action_1_t7A6380B10F9D2B39E3E5752B32A0F6EBE4CB2F51* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7639,7 +7639,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38106
+// Method Definition Index: 45654
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabCloudScriptInstanceAPI_UnregisterFunction_mF267B1E8FCAC40062011903BA7BE0376266E9EC0 (PlayFabCloudScriptInstanceAPI_t11C84FE38A44B194F5A17C831DD402551024DFA6* __this, UnregisterFunctionRequest_tC68E29A4390C37B518F50B1F58FB3D0FD5707887* ___0_request, Action_1_t7A6380B10F9D2B39E3E5752B32A0F6EBE4CB2F51* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7757,7 +7757,7 @@ IL_003b:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 38107
+// Method Definition Index: 45655
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabDataAPI__cctor_mA08FF3BE3E440292466175E966F9C75F3F454C36 (const RuntimeMethod* method) 
 {
 	{
@@ -7765,7 +7765,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabDataAPI__cctor_mA08FF3BE3E4402924
 		return;
 	}
 }
-// Method Definition Index: 38108
+// Method Definition Index: 45656
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayFabDataAPI_IsEntityLoggedIn_m854D81C3601ECE9D7A602636720F492660B6D4D6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7784,7 +7784,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayFabDataAPI_IsEntityLoggedIn_m854D81C
 		return L_1;
 	}
 }
-// Method Definition Index: 38109
+// Method Definition Index: 45657
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabDataAPI_ForgetAllCredentials_mE00671FC9E679F950351F77D5890940DC2B3D2CB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7803,7 +7803,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabDataAPI_ForgetAllCredentials_mE00
 		return;
 	}
 }
-// Method Definition Index: 38110
+// Method Definition Index: 45658
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabDataAPI_AbortFileUploads_m2297102A37F9270D4A2911165AF593DFA032F9B6 (AbortFileUploadsRequest_t10C7479D892796F8CBFB4969F4948F0FCE030F8F* ___0_request, Action_1_t14F73984569CC6E70B0BFAD43B418849FF1FA0F2* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7897,7 +7897,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38111
+// Method Definition Index: 45659
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabDataAPI_DeleteFiles_mFA09559DB6D8526AAFBD33D9F8A7B2A1203E2E23 (DeleteFilesRequest_t9470D68F21438AF4AA171A89067B5BD1A10B07EE* ___0_request, Action_1_t7ADC336D40E83DEDAF7518F7021EF3CA2CCAB889* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7991,7 +7991,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38112
+// Method Definition Index: 45660
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabDataAPI_FinalizeFileUploads_m8E357464A7FDCACD752E1824A7555FECB9435043 (FinalizeFileUploadsRequest_tEDC6DD2876DD4B778732120EFFF3168F9406E888* ___0_request, Action_1_t1335ADDDE589A60E602E34010099C3AD4A126200* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8085,7 +8085,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38113
+// Method Definition Index: 45661
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabDataAPI_GetFiles_mE9AA7C14132E3523604E17FE08C661A1F7F57962 (GetFilesRequest_t47E82CE9C779382DD2A5BA6619715C7BA54A28AB* ___0_request, Action_1_tAF6B733818A06F2203810F22B7251EF424F713BD* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8179,7 +8179,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38114
+// Method Definition Index: 45662
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabDataAPI_GetObjects_mF388ABCDCBE829A98C45005D673E4A65D72FAC8F (GetObjectsRequest_t758EF8098FA41681A0CC134A2FD1C9C9F0755FE8* ___0_request, Action_1_tD350509000CC674EEDFE62F1EEB7D7F68A3848D3* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8273,7 +8273,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38115
+// Method Definition Index: 45663
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabDataAPI_InitiateFileUploads_mE3012AA8F6B3189490FE7F4AD1343F358B3D9B19 (InitiateFileUploadsRequest_t64C5CF24FE65776979842C9EB9C05900EEA08299* ___0_request, Action_1_tDE927C6200664EB4B9662B011FF80A27FC002BBF* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8367,7 +8367,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38116
+// Method Definition Index: 45664
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabDataAPI_SetObjects_mD5AFE8CFFFA5E5177685181AE910DD44BAED3DB9 (SetObjectsRequest_t61A40D87073B794B381C2783EFF7843D90F2EEEA* ___0_request, Action_1_tB802F24BDC3A16E71283335FF7AB914AAA537890* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8469,7 +8469,7 @@ IL_0030:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 38117
+// Method Definition Index: 45665
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabDataInstanceAPI__ctor_mE64ABAB3AD914D3140B181827D6A3676B37461F0 (PlayFabDataInstanceAPI_t4C3FE291EAD6B348FAE1D732EEBE47A3F0F00BCE* __this, PlayFabAuthenticationContext_t221B79722A7A90BF01896A080CB0488FC0A9971A* ___0_context, const RuntimeMethod* method) 
 {
 	{
@@ -8499,7 +8499,7 @@ IL_0015:
 		return;
 	}
 }
-// Method Definition Index: 38118
+// Method Definition Index: 45666
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabDataInstanceAPI__ctor_m604AE31E4AA3A6EEABF3D5D9D8796E282C2243DD (PlayFabDataInstanceAPI_t4C3FE291EAD6B348FAE1D732EEBE47A3F0F00BCE* __this, PlayFabApiSettings_tA64AE28AC2930D2710835FCD401A4212558752D1* ___0_settings, PlayFabAuthenticationContext_t221B79722A7A90BF01896A080CB0488FC0A9971A* ___1_context, const RuntimeMethod* method) 
 {
 	{
@@ -8533,7 +8533,7 @@ IL_0015:
 		return;
 	}
 }
-// Method Definition Index: 38119
+// Method Definition Index: 45667
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayFabDataInstanceAPI_IsEntityLoggedIn_m6FD6BF7B09427B9149FA100E8C6639142AC0348A (PlayFabDataInstanceAPI_t4C3FE291EAD6B348FAE1D732EEBE47A3F0F00BCE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8557,7 +8557,7 @@ IL_0014:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 38120
+// Method Definition Index: 45668
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabDataInstanceAPI_ForgetAllCredentials_m1A6696F1C30910572CF62D0B68654F08D80EBD3D (PlayFabDataInstanceAPI_t4C3FE291EAD6B348FAE1D732EEBE47A3F0F00BCE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8581,7 +8581,7 @@ IL_0013:
 		return;
 	}
 }
-// Method Definition Index: 38121
+// Method Definition Index: 45669
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabDataInstanceAPI_AbortFileUploads_m50A0681EC05F9D2FC1F38C9DF49182D240A39625 (PlayFabDataInstanceAPI_t4C3FE291EAD6B348FAE1D732EEBE47A3F0F00BCE* __this, AbortFileUploadsRequest_t10C7479D892796F8CBFB4969F4948F0FCE030F8F* ___0_request, Action_1_t14F73984569CC6E70B0BFAD43B418849FF1FA0F2* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8691,7 +8691,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38122
+// Method Definition Index: 45670
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabDataInstanceAPI_DeleteFiles_mC5D7EFEF4E2CC06B831248294BB7B571258250C0 (PlayFabDataInstanceAPI_t4C3FE291EAD6B348FAE1D732EEBE47A3F0F00BCE* __this, DeleteFilesRequest_t9470D68F21438AF4AA171A89067B5BD1A10B07EE* ___0_request, Action_1_t7ADC336D40E83DEDAF7518F7021EF3CA2CCAB889* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8801,7 +8801,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38123
+// Method Definition Index: 45671
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabDataInstanceAPI_FinalizeFileUploads_m932DFFF4599E462681EAE857E334AC27D478B3DB (PlayFabDataInstanceAPI_t4C3FE291EAD6B348FAE1D732EEBE47A3F0F00BCE* __this, FinalizeFileUploadsRequest_tEDC6DD2876DD4B778732120EFFF3168F9406E888* ___0_request, Action_1_t1335ADDDE589A60E602E34010099C3AD4A126200* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8911,7 +8911,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38124
+// Method Definition Index: 45672
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabDataInstanceAPI_GetFiles_mED873A84D6C1D8BCC810465208ED1AB0AA5BB0C5 (PlayFabDataInstanceAPI_t4C3FE291EAD6B348FAE1D732EEBE47A3F0F00BCE* __this, GetFilesRequest_t47E82CE9C779382DD2A5BA6619715C7BA54A28AB* ___0_request, Action_1_tAF6B733818A06F2203810F22B7251EF424F713BD* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9021,7 +9021,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38125
+// Method Definition Index: 45673
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabDataInstanceAPI_GetObjects_mCFC36E5662C657B9B71197A6A6CAB338E09DD9CE (PlayFabDataInstanceAPI_t4C3FE291EAD6B348FAE1D732EEBE47A3F0F00BCE* __this, GetObjectsRequest_t758EF8098FA41681A0CC134A2FD1C9C9F0755FE8* ___0_request, Action_1_tD350509000CC674EEDFE62F1EEB7D7F68A3848D3* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9131,7 +9131,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38126
+// Method Definition Index: 45674
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabDataInstanceAPI_InitiateFileUploads_m418B0305E2EE50F432C5D87897EDEAC224A31F1E (PlayFabDataInstanceAPI_t4C3FE291EAD6B348FAE1D732EEBE47A3F0F00BCE* __this, InitiateFileUploadsRequest_t64C5CF24FE65776979842C9EB9C05900EEA08299* ___0_request, Action_1_tDE927C6200664EB4B9662B011FF80A27FC002BBF* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9241,7 +9241,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38127
+// Method Definition Index: 45675
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabDataInstanceAPI_SetObjects_mF38E81DCDF7CDB3B512F3FE4D27A6190A9B73812 (PlayFabDataInstanceAPI_t4C3FE291EAD6B348FAE1D732EEBE47A3F0F00BCE* __this, SetObjectsRequest_t61A40D87073B794B381C2783EFF7843D90F2EEEA* ___0_request, Action_1_tB802F24BDC3A16E71283335FF7AB914AAA537890* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9359,7 +9359,7 @@ IL_003b:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 38128
+// Method Definition Index: 45676
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI__cctor_mCE6849BE224C017AEDC5E31ED28B6D4482B864E7 (const RuntimeMethod* method) 
 {
 	{
@@ -9367,7 +9367,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI__cctor_mCE6849BE224C01
 		return;
 	}
 }
-// Method Definition Index: 38129
+// Method Definition Index: 45677
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayFabEconomyAPI_IsEntityLoggedIn_mCDCC86614DBEB47D52B56CB8939D185B502738FA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9386,7 +9386,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayFabEconomyAPI_IsEntityLoggedIn_mCDCC
 		return L_1;
 	}
 }
-// Method Definition Index: 38130
+// Method Definition Index: 45678
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_ForgetAllCredentials_m9178FFB3C1A4452BBD26083C3F6B7EFB4D225019 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9405,7 +9405,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_ForgetAllCredentials_m
 		return;
 	}
 }
-// Method Definition Index: 38131
+// Method Definition Index: 45679
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_AddInventoryItems_m534D243F63D9426131546A9AF6EB0B031CA7BEC7 (AddInventoryItemsRequest_t8B4AC89B83A8601B6D89383C8215C2D36282F596* ___0_request, Action_1_t5F553F40B5586235AD61AF33086A736B46E47FE1* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9499,7 +9499,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38132
+// Method Definition Index: 45680
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_CreateDraftItem_m26A0F24956910CDB8E244DE64C5EA9634EE5636B (CreateDraftItemRequest_tE645E0E930C7A394463993D74ABBA2A013B97766* ___0_request, Action_1_t782B278AC9B766A584F913B41AA4A37A2800F25E* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9593,7 +9593,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38133
+// Method Definition Index: 45681
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_CreateUploadUrls_mCE82108CDBAB4704966C7BCE1F3FCF43A63DD781 (CreateUploadUrlsRequest_t7D84D9E584D609FB5FD5670855292EB8D4F0CA27* ___0_request, Action_1_t40180CCB9D31CB1B4B97F1BDF320C206E5A91D47* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9687,7 +9687,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38134
+// Method Definition Index: 45682
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_DeleteEntityItemReviews_m040109D0975431D14EFC85CB693543A4400FB834 (DeleteEntityItemReviewsRequest_t6175E0519653BBA5A5621A9BD4901906BC5B8E9C* ___0_request, Action_1_t8E29751D8B8C82FE8B18C818E631A02D146C8674* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9781,7 +9781,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38135
+// Method Definition Index: 45683
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_DeleteInventoryCollection_m3631E9EE61ED65F8D9BDC7225F0C56BF122DDB11 (DeleteInventoryCollectionRequest_t1D28305C635D8765DC41103547DF1A8E7A08A56B* ___0_request, Action_1_t9EFDDB2C4C20C4386E952D96E8B45CB51C58DB74* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9875,7 +9875,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38136
+// Method Definition Index: 45684
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_DeleteInventoryItems_m2A8A7531E95FADA93E19FDF5AE6FA45376EA5286 (DeleteInventoryItemsRequest_tB5C785C785E6449B7FDF7634FCE90272A1B34C43* ___0_request, Action_1_t81707564C74038CD23E7227E14958ADFF8219B77* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9969,7 +9969,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38137
+// Method Definition Index: 45685
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_DeleteItem_m5EBA723CF2AC662520A95E5C48C556D3675A35DA (DeleteItemRequest_t8B1E7489789F8E863AC6510ACBB7797439F87FE0* ___0_request, Action_1_t4EEF0F4142A634BE66890D62F7C6AD1716181552* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10063,7 +10063,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38138
+// Method Definition Index: 45686
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_ExecuteInventoryOperations_m15B1538908F3D6B2BC3151AC40BE2A56130D0E6F (ExecuteInventoryOperationsRequest_tBACF9FABA793B1258F30B9697349CD047846A878* ___0_request, Action_1_t167B2AE351C2AC2F95CF8795253852111DF85507* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10157,7 +10157,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38139
+// Method Definition Index: 45687
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_ExecuteTransferOperations_mFEA8F595A9888154A788B158C71A64640977E2DE (ExecuteTransferOperationsRequest_t38DBC915196BABEA3C8B5348495422D90FB3776E* ___0_request, Action_1_t0294BC09FE73A793C7F100E36DFC651ADFA3E120* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10251,7 +10251,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38140
+// Method Definition Index: 45688
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_GetCatalogConfig_m26120A5826C7A4D6F40A340D47169B5D17F24C73 (GetCatalogConfigRequest_t2EF461CFAE025675E7742FE45DB5BBD86DEA06BC* ___0_request, Action_1_tE5513E70C92868950AA5244E6866A8729B193773* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10345,7 +10345,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38141
+// Method Definition Index: 45689
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_GetDraftItem_mB5140630A33B6E0527B967AD0E2FE14DD1934A9B (GetDraftItemRequest_t5C0DC2D43E754DCB506982422737CFC2DF74AE9E* ___0_request, Action_1_tD86735F3D90668115D11018027097F1921795CD8* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10439,7 +10439,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38142
+// Method Definition Index: 45690
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_GetDraftItems_m41762361C7EFA4A2D7ED1BD1E7CA5E0397916809 (GetDraftItemsRequest_t319413E8395F62D3B43FF8C5AB2DCC9E73244ABC* ___0_request, Action_1_tBAEBB3CCDF5E2792E0E0FD817C8979769321732E* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10533,7 +10533,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38143
+// Method Definition Index: 45691
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_GetEntityDraftItems_mB42FB153AE9BD1188C6C128CEB31A5A0AE48494D (GetEntityDraftItemsRequest_t7B7609A8C805A7C287B87477E45D408E73190FF6* ___0_request, Action_1_tFDE394DA7E26B9800797673212145E72D0CE54D0* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10627,7 +10627,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38144
+// Method Definition Index: 45692
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_GetEntityItemReview_m3EDA3C9644B48F48B0809C86E5F00E44EAAEADCC (GetEntityItemReviewRequest_t7A95343D657A56E46F249859EECDC557B463CB01* ___0_request, Action_1_tA82407F87135016DAE95336D0D2CD26273A6A353* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10721,7 +10721,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38145
+// Method Definition Index: 45693
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_GetInventoryCollectionIds_m8C43304DB1E1786318CA58D86C4B1E73D6C70067 (GetInventoryCollectionIdsRequest_t9E079452C6AAA36DE793785C346B865E170035F3* ___0_request, Action_1_tC21AF8A8ED20E10CC4F48136E73774FC0D835E20* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10815,7 +10815,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38146
+// Method Definition Index: 45694
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_GetInventoryItems_m5FB1DF727F852A52634EB7641AD64E1C21979117 (GetInventoryItemsRequest_tA4F7CE9BC32435F4BE9DC9108ADA71CAB770943C* ___0_request, Action_1_t66C1AA81C4B98294E5DE08A20F1F6F7D95E3677B* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10909,7 +10909,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38147
+// Method Definition Index: 45695
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_GetInventoryOperationStatus_m516E85AF96A4FFFF1B14D2E135B801EFA6371620 (GetInventoryOperationStatusRequest_tFC8FC779E917A2118DC9E5AA92BD9B461B516ED3* ___0_request, Action_1_t3362DEB770EC8BD8AACBF1D2ABC2F5E2D01FC317* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11003,7 +11003,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38148
+// Method Definition Index: 45696
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_GetItem_m7B71FF800095828F35E8C35A691ED09D9E594793 (GetItemRequest_t4A3A7647D8377E3390CB3254675D6E0628ACF3F4* ___0_request, Action_1_tEE5934929517AE349494D02F7A664D56252EE65F* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11097,7 +11097,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38149
+// Method Definition Index: 45697
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_GetItemContainers_mBD4D671FBDAF93945908AA8EDE7C3FE86F86F3C3 (GetItemContainersRequest_t1F23908A504AB355A35197245D3ADA0AB7B1B018* ___0_request, Action_1_tD8B60C654282B93585D3AB85E22E13771408D864* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11191,7 +11191,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38150
+// Method Definition Index: 45698
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_GetItemModerationState_mAECEFCAE82834C0932220B0A950762D8CBA8F081 (GetItemModerationStateRequest_t8042C6AE7B06C521C51F641DA5060DF0E8BAA7CE* ___0_request, Action_1_tECB861FF954DA3B54489A6D9D8F478504626FB88* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11285,7 +11285,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38151
+// Method Definition Index: 45699
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_GetItemPublishStatus_m7B42FB6C988ECD77D0B44A938F0450B93644C993 (GetItemPublishStatusRequest_t8062156601335D340667A3708B4102B7E881B7B8* ___0_request, Action_1_t6E6D6C1333A5D917555C5410A0F9538D20E183E9* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11379,7 +11379,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38152
+// Method Definition Index: 45700
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_GetItemReviews_mAB05D2B3A87CF2A64F439428A5D0BB0480287EF4 (GetItemReviewsRequest_tEAE9A97ABC575DEC0CC5C6767CFE5F52C824628D* ___0_request, Action_1_t4DF7B20BB846F78FC1B19B625AEA7ABDA86B906B* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11473,7 +11473,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38153
+// Method Definition Index: 45701
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_GetItemReviewSummary_m735DE937168C3AEEEFC5A3EEB22DD6AC01724F69 (GetItemReviewSummaryRequest_t75218F014BBDA45ABB0E06E8E13CF050A86C25A8* ___0_request, Action_1_t3F569D299C34F1E669A5292966CDC5C22BF6C236* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11567,7 +11567,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38154
+// Method Definition Index: 45702
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_GetItems_mB3C04924B84A1DEB447C7283B43727E66509A217 (GetItemsRequest_t6E8A9FB77DEEAF1BD0E19E9A245203795F2556E6* ___0_request, Action_1_t718CA8B1AD38FB4AFE933907C5638BF29C322533* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11661,7 +11661,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38155
+// Method Definition Index: 45703
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_GetMicrosoftStoreAccessTokens_mEFAC9BE866E5A98C2F0C45C3EE608A4DDA6C4510 (GetMicrosoftStoreAccessTokensRequest_t44A5007E1F23F7F7D5957D7F4E637595D73CE362* ___0_request, Action_1_t383BF72F0ECBD26C2FF5E33F96A3B50F5A2A2EE5* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11755,7 +11755,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38156
+// Method Definition Index: 45704
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_GetTransactionHistory_mE44DA0CC1CEB46A0AF87A4931A8CCD7F39FE01F8 (GetTransactionHistoryRequest_t25CDC4135200F4D5D8A74A43F8585A81C6D50A18* ___0_request, Action_1_t5C6E18879FD5B499D722BB101E2CCC70FD3205AD* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11849,7 +11849,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38157
+// Method Definition Index: 45705
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_PublishDraftItem_mFD4FD6228CFD7F38D0530C17DA68CD3CF3156AF8 (PublishDraftItemRequest_tECC4AA456E73475A9F0D55CFD10DD4AF730F53CF* ___0_request, Action_1_t19F323D5A5E7E1DDDB0386EA5D4D2BAF231599C0* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11943,7 +11943,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38158
+// Method Definition Index: 45706
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_PurchaseInventoryItems_m3A5161FDA66FBFE9C89322AA549969D8531D017F (PurchaseInventoryItemsRequest_t1C819C128F54E38C7240FF70A67248120C6F9AFC* ___0_request, Action_1_t2B83B8A5173FA0D88003BA7164C1026A8B20F016* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12037,7 +12037,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38159
+// Method Definition Index: 45707
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_RedeemAppleAppStoreInventoryItems_m72DD17E4A17D17B878517C4A5419EC397EE5FCF5 (RedeemAppleAppStoreInventoryItemsRequest_t5A82F9E439DAEA116F5CC67297E38309E4EDB828* ___0_request, Action_1_t3F805CBBF6D49DF2B0F5A5B73E8AF8032550A250* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12131,7 +12131,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38160
+// Method Definition Index: 45708
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_RedeemAppleAppStoreWithJwsInventoryItems_mBC1EE025C61C61F487CF36ECEBD9B893D50D3C8A (RedeemAppleAppStoreWithJwsInventoryItemsRequest_t1748D6A7E4797A4049690A73ED052BFCF1DC588D* ___0_request, Action_1_t7921EB2DF8B92505C90542ECC507D3A1CC131823* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12225,7 +12225,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38161
+// Method Definition Index: 45709
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_RedeemGooglePlayInventoryItems_mC6E883B3CDED458E192AB697D21A15E58E918980 (RedeemGooglePlayInventoryItemsRequest_t4FE0D5C2F3A9EC91AF45547ECA3D6B9DA95088A5* ___0_request, Action_1_t83699CBD6F3EF69D00821E792AC757A5B8F2B3C6* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12319,7 +12319,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38162
+// Method Definition Index: 45710
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_RedeemMicrosoftStoreInventoryItems_m812AD037EF894AC6A4CA81AF0F8805D51DA2FDA3 (RedeemMicrosoftStoreInventoryItemsRequest_t5BAD23CC752B9210F9B0A1E4E0576C4B45F96944* ___0_request, Action_1_tBF4E793426208876681596178EB5EB729EB8FDF4* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12413,7 +12413,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38163
+// Method Definition Index: 45711
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_RedeemNintendoEShopInventoryItems_m31B3F79184E115F88026265D0476F072DC610D45 (RedeemNintendoEShopInventoryItemsRequest_tC694EB4215312A27D53A02D33BA7E0AE19648A39* ___0_request, Action_1_t525765EF1A4A60130CCCA672AD11E7516DA18ACB* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12507,7 +12507,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38164
+// Method Definition Index: 45712
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_RedeemPlayStationStoreInventoryItems_mBF81DF7E968CCF4DB0AEB709961CB0011FB7B0E8 (RedeemPlayStationStoreInventoryItemsRequest_t6AC888E204CBA70A638F5C4AB318F518DC6A92B6* ___0_request, Action_1_t83435FC55697EB4CEFB7F2E12054AE6636F76EC1* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12601,7 +12601,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38165
+// Method Definition Index: 45713
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_RedeemSteamInventoryItems_m8B34F5F18221508BE23960F2E534D82C157F69EE (RedeemSteamInventoryItemsRequest_t6DE3F3B1BDCDBB4BA2C42CE6CEB83309715FC408* ___0_request, Action_1_tE456D8BBB648ED4EFED9C255ABD0E8DC52B80B86* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12695,7 +12695,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38166
+// Method Definition Index: 45714
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_ReportItem_m18B70FF9A024FFE345F70F7635A9FB2A71C0272E (ReportItemRequest_t3E59BD8ADA0F85A6D1ABA012CC788B4EE54E7DD8* ___0_request, Action_1_tAD02460C19E5264B8CA6C53B157EB0E3A81C3ECB* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12789,7 +12789,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38167
+// Method Definition Index: 45715
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_ReportItemReview_m12D65F567354413F2B5E2D3C485C7633A95735C6 (ReportItemReviewRequest_tA366F9F3A953BA5C4B7B13D9CAC49788A5374488* ___0_request, Action_1_t2F81675B47F75EA1272074BCB8AFBC2AEA0533A0* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12883,7 +12883,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38168
+// Method Definition Index: 45716
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_ReviewItem_m00654807295C8220D66FA11C637457C30E8A4B1F (ReviewItemRequest_t72AAD9D89B6D10B5273F4F358DEEB386B6D05450* ___0_request, Action_1_tD094B1B96EB2CD165D88F5C21534CEBD46B449B8* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12977,7 +12977,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38169
+// Method Definition Index: 45717
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_SearchItems_m9926A875F6D1742BA560CE39D3A83E992F961ED9 (SearchItemsRequest_tF398FF1B378FD96F184A10E0057365FBC0F52889* ___0_request, Action_1_t14DC4F4DC7D7F74B3A7022528A9137C610DE1476* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13071,7 +13071,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38170
+// Method Definition Index: 45718
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_SetItemModerationState_m226382EDBA13533BE5F6C0FE36E0BCA74E05E6BF (SetItemModerationStateRequest_tB20CD45DC1BB82ECC4C5208868C223AF2BDFE382* ___0_request, Action_1_tE0BA6B3CCC02613E0D02E928A4B4874C4E1F753C* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13165,7 +13165,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38171
+// Method Definition Index: 45719
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_SubmitItemReviewVote_m7A057C9F3F829589909697586DEBD49A13432316 (SubmitItemReviewVoteRequest_tC5A45E0412875CACD7C65FA80BFF45678CD94084* ___0_request, Action_1_t35DE65730C15E8142FAC40EF4F82C4C22B680C9A* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13259,7 +13259,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38172
+// Method Definition Index: 45720
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_SubtractInventoryItems_m6265014B92E0DBF82056200CEF34E2166FDEE304 (SubtractInventoryItemsRequest_t8060EFEA03C18DD04AA240E80E25F4AEBA0E4B4F* ___0_request, Action_1_t41409A51FD0EF74E55F7753FC735AF8A1D864E7D* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13353,7 +13353,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38173
+// Method Definition Index: 45721
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_TakedownItemReviews_m94AE42CF540A579FCFDD895B2C34DBEC09C68CD0 (TakedownItemReviewsRequest_t87E5FEE7FE18D851152F19E079B2E4439C11C96E* ___0_request, Action_1_t0884A1081CA023796D2E593F3DE6C2B2E8D0E8C6* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13447,7 +13447,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38174
+// Method Definition Index: 45722
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_TransferInventoryItems_m27F94BD24B0557ED3F30D84D4A59F9D4BF8890D9 (TransferInventoryItemsRequest_t22072ADEE6EC5FF5B405FD3CE922FE1A00A3E771* ___0_request, Action_1_t8C8CF5047008D847240AE9BC0841F827BAD79EF1* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13541,7 +13541,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38175
+// Method Definition Index: 45723
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_UpdateCatalogConfig_mAEE0A834AA409521221A85D4148A66EC300BE364 (UpdateCatalogConfigRequest_t7D83193874033BDD378F2B5AA25BCFEEBA7FA030* ___0_request, Action_1_tA1DE3733921A757F8A1A3DB505B161A7AAF8E4C9* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13635,7 +13635,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38176
+// Method Definition Index: 45724
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_UpdateDraftItem_m18A81F4102653939B2B5ED8D3198208DF91B6A87 (UpdateDraftItemRequest_t76FBA51EE8C997D0D84346FBF8461146049E4631* ___0_request, Action_1_t9F34138253E767040B6D43B921AD3C7715916BBE* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13729,7 +13729,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38177
+// Method Definition Index: 45725
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyAPI_UpdateInventoryItems_m63E876A370E5A26EBE54995D44AB017294242851 (UpdateInventoryItemsRequest_t211CD170BB379775028B03FB2C622A1192200595* ___0_request, Action_1_t87A23285ED460892F2B5385A8413493E17614106* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13831,7 +13831,7 @@ IL_0030:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 38178
+// Method Definition Index: 45726
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI__ctor_m8F018D5BE5C90DB84B26D6BCC8936434C7AD83CA (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, PlayFabAuthenticationContext_t221B79722A7A90BF01896A080CB0488FC0A9971A* ___0_context, const RuntimeMethod* method) 
 {
 	{
@@ -13861,7 +13861,7 @@ IL_0015:
 		return;
 	}
 }
-// Method Definition Index: 38179
+// Method Definition Index: 45727
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI__ctor_m21C6F942D5D9BABD7A702613155BFBE0B5D2A74A (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, PlayFabApiSettings_tA64AE28AC2930D2710835FCD401A4212558752D1* ___0_settings, PlayFabAuthenticationContext_t221B79722A7A90BF01896A080CB0488FC0A9971A* ___1_context, const RuntimeMethod* method) 
 {
 	{
@@ -13895,7 +13895,7 @@ IL_0015:
 		return;
 	}
 }
-// Method Definition Index: 38180
+// Method Definition Index: 45728
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayFabEconomyInstanceAPI_IsEntityLoggedIn_mAC6BE6E25E11599764C28B29998167C351CED59E (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13919,7 +13919,7 @@ IL_0014:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 38181
+// Method Definition Index: 45729
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_ForgetAllCredentials_m94BAEB1BFAE15E88780C83AB5F402A044FF5ABFA (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13943,7 +13943,7 @@ IL_0013:
 		return;
 	}
 }
-// Method Definition Index: 38182
+// Method Definition Index: 45730
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_AddInventoryItems_mBCAAAF7AEFFF1C181BABFC136316E8288AA90FC6 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, AddInventoryItemsRequest_t8B4AC89B83A8601B6D89383C8215C2D36282F596* ___0_request, Action_1_t5F553F40B5586235AD61AF33086A736B46E47FE1* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14053,7 +14053,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38183
+// Method Definition Index: 45731
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_CreateDraftItem_m0C99BE74C2A60F63130BD0FA1F772FDC1865A065 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, CreateDraftItemRequest_tE645E0E930C7A394463993D74ABBA2A013B97766* ___0_request, Action_1_t782B278AC9B766A584F913B41AA4A37A2800F25E* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14163,7 +14163,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38184
+// Method Definition Index: 45732
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_CreateUploadUrls_mC25BD9321DE3E2A8EBE367A00FFC8EBA8BE8AAD9 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, CreateUploadUrlsRequest_t7D84D9E584D609FB5FD5670855292EB8D4F0CA27* ___0_request, Action_1_t40180CCB9D31CB1B4B97F1BDF320C206E5A91D47* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14273,7 +14273,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38185
+// Method Definition Index: 45733
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_DeleteEntityItemReviews_mC5FF1B13587B55D985EAB30A65A57B5F7DF10CDD (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, DeleteEntityItemReviewsRequest_t6175E0519653BBA5A5621A9BD4901906BC5B8E9C* ___0_request, Action_1_t8E29751D8B8C82FE8B18C818E631A02D146C8674* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14383,7 +14383,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38186
+// Method Definition Index: 45734
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_DeleteInventoryCollection_mE88A03D969291323B8DC652AE18D531AEEBCEEB2 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, DeleteInventoryCollectionRequest_t1D28305C635D8765DC41103547DF1A8E7A08A56B* ___0_request, Action_1_t9EFDDB2C4C20C4386E952D96E8B45CB51C58DB74* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14493,7 +14493,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38187
+// Method Definition Index: 45735
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_DeleteInventoryItems_m9DD9F0847DC279495AF5E1A057FC1F4000028092 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, DeleteInventoryItemsRequest_tB5C785C785E6449B7FDF7634FCE90272A1B34C43* ___0_request, Action_1_t81707564C74038CD23E7227E14958ADFF8219B77* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14603,7 +14603,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38188
+// Method Definition Index: 45736
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_DeleteItem_mD6176BAF7186E5F0289AD9EA4DEC37E7823A9471 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, DeleteItemRequest_t8B1E7489789F8E863AC6510ACBB7797439F87FE0* ___0_request, Action_1_t4EEF0F4142A634BE66890D62F7C6AD1716181552* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14713,7 +14713,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38189
+// Method Definition Index: 45737
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_ExecuteInventoryOperations_m41D09E572E333A45778209C8EBAB28DE6E418EE0 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, ExecuteInventoryOperationsRequest_tBACF9FABA793B1258F30B9697349CD047846A878* ___0_request, Action_1_t167B2AE351C2AC2F95CF8795253852111DF85507* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14823,7 +14823,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38190
+// Method Definition Index: 45738
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_ExecuteTransferOperations_m245CA1C845F714200B9D83E7F3E8A06018ACA3B1 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, ExecuteTransferOperationsRequest_t38DBC915196BABEA3C8B5348495422D90FB3776E* ___0_request, Action_1_t0294BC09FE73A793C7F100E36DFC651ADFA3E120* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14933,7 +14933,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38191
+// Method Definition Index: 45739
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_GetCatalogConfig_m54687F5EA43295C8404502C9C1907372902FF389 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, GetCatalogConfigRequest_t2EF461CFAE025675E7742FE45DB5BBD86DEA06BC* ___0_request, Action_1_tE5513E70C92868950AA5244E6866A8729B193773* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15043,7 +15043,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38192
+// Method Definition Index: 45740
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_GetDraftItem_m95059A4282AED50FC2DE7595F55C9FD71F09D75A (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, GetDraftItemRequest_t5C0DC2D43E754DCB506982422737CFC2DF74AE9E* ___0_request, Action_1_tD86735F3D90668115D11018027097F1921795CD8* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15153,7 +15153,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38193
+// Method Definition Index: 45741
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_GetDraftItems_m4D85CF9F8ADEB5A7C911824EBFCEAAA89FA02222 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, GetDraftItemsRequest_t319413E8395F62D3B43FF8C5AB2DCC9E73244ABC* ___0_request, Action_1_tBAEBB3CCDF5E2792E0E0FD817C8979769321732E* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15263,7 +15263,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38194
+// Method Definition Index: 45742
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_GetEntityDraftItems_mE2BCE76667B1067F8C0C8171E6503127469D63D2 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, GetEntityDraftItemsRequest_t7B7609A8C805A7C287B87477E45D408E73190FF6* ___0_request, Action_1_tFDE394DA7E26B9800797673212145E72D0CE54D0* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15373,7 +15373,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38195
+// Method Definition Index: 45743
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_GetEntityItemReview_mDC9C6B93FB27A600D732F3924F4328E70E40FEA6 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, GetEntityItemReviewRequest_t7A95343D657A56E46F249859EECDC557B463CB01* ___0_request, Action_1_tA82407F87135016DAE95336D0D2CD26273A6A353* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15483,7 +15483,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38196
+// Method Definition Index: 45744
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_GetInventoryCollectionIds_m74415D079A184BFBD9B2A8059870407BF41B9610 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, GetInventoryCollectionIdsRequest_t9E079452C6AAA36DE793785C346B865E170035F3* ___0_request, Action_1_tC21AF8A8ED20E10CC4F48136E73774FC0D835E20* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15593,7 +15593,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38197
+// Method Definition Index: 45745
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_GetInventoryItems_m034D84EA7FA360FD423DC452EC6BCC6951729015 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, GetInventoryItemsRequest_tA4F7CE9BC32435F4BE9DC9108ADA71CAB770943C* ___0_request, Action_1_t66C1AA81C4B98294E5DE08A20F1F6F7D95E3677B* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15703,7 +15703,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38198
+// Method Definition Index: 45746
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_GetInventoryOperationStatus_m62B005268B8F12169FCE425D18ABB53D1CD8C552 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, GetInventoryOperationStatusRequest_tFC8FC779E917A2118DC9E5AA92BD9B461B516ED3* ___0_request, Action_1_t3362DEB770EC8BD8AACBF1D2ABC2F5E2D01FC317* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15813,7 +15813,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38199
+// Method Definition Index: 45747
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_GetItem_m2C21826645C7B490D42700483453CD6AE79BD24B (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, GetItemRequest_t4A3A7647D8377E3390CB3254675D6E0628ACF3F4* ___0_request, Action_1_tEE5934929517AE349494D02F7A664D56252EE65F* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15923,7 +15923,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38200
+// Method Definition Index: 45748
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_GetItemContainers_m3D69A646C78F2FB4557998E6A2F9D52151A913C3 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, GetItemContainersRequest_t1F23908A504AB355A35197245D3ADA0AB7B1B018* ___0_request, Action_1_tD8B60C654282B93585D3AB85E22E13771408D864* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16033,7 +16033,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38201
+// Method Definition Index: 45749
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_GetItemModerationState_m58B3BA7350D315D77178AA4677BD1EA58D5F0146 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, GetItemModerationStateRequest_t8042C6AE7B06C521C51F641DA5060DF0E8BAA7CE* ___0_request, Action_1_tECB861FF954DA3B54489A6D9D8F478504626FB88* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16143,7 +16143,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38202
+// Method Definition Index: 45750
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_GetItemPublishStatus_m5A01D7EA223A92B6DCB8284CC4FA030C79D100FF (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, GetItemPublishStatusRequest_t8062156601335D340667A3708B4102B7E881B7B8* ___0_request, Action_1_t6E6D6C1333A5D917555C5410A0F9538D20E183E9* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16253,7 +16253,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38203
+// Method Definition Index: 45751
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_GetItemReviews_m079C90D47609F16702F2E5FA6D4E32396FD227A1 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, GetItemReviewsRequest_tEAE9A97ABC575DEC0CC5C6767CFE5F52C824628D* ___0_request, Action_1_t4DF7B20BB846F78FC1B19B625AEA7ABDA86B906B* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16363,7 +16363,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38204
+// Method Definition Index: 45752
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_GetItemReviewSummary_mA60FF49899ECC2D01AC2D06249AE04BC8B3EDF94 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, GetItemReviewSummaryRequest_t75218F014BBDA45ABB0E06E8E13CF050A86C25A8* ___0_request, Action_1_t3F569D299C34F1E669A5292966CDC5C22BF6C236* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16473,7 +16473,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38205
+// Method Definition Index: 45753
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_GetItems_m501912A7BD8189995D62A05C9E87801033FBCC46 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, GetItemsRequest_t6E8A9FB77DEEAF1BD0E19E9A245203795F2556E6* ___0_request, Action_1_t718CA8B1AD38FB4AFE933907C5638BF29C322533* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16583,7 +16583,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38206
+// Method Definition Index: 45754
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_GetMicrosoftStoreAccessTokens_m0968219AB2B33C30A51F1AC3807DEC40B88F6A0F (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, GetMicrosoftStoreAccessTokensRequest_t44A5007E1F23F7F7D5957D7F4E637595D73CE362* ___0_request, Action_1_t383BF72F0ECBD26C2FF5E33F96A3B50F5A2A2EE5* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16693,7 +16693,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38207
+// Method Definition Index: 45755
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_GetTransactionHistory_mEA1C7BCA2FE2D85FB488FB4DF3361EFCC2D49E19 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, GetTransactionHistoryRequest_t25CDC4135200F4D5D8A74A43F8585A81C6D50A18* ___0_request, Action_1_t5C6E18879FD5B499D722BB101E2CCC70FD3205AD* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16803,7 +16803,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38208
+// Method Definition Index: 45756
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_PublishDraftItem_m82C7E0601FDC6F5112626FAD462677980A52A751 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, PublishDraftItemRequest_tECC4AA456E73475A9F0D55CFD10DD4AF730F53CF* ___0_request, Action_1_t19F323D5A5E7E1DDDB0386EA5D4D2BAF231599C0* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16913,7 +16913,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38209
+// Method Definition Index: 45757
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_PurchaseInventoryItems_m0575A0153DC610DC7FA9BA64577A867D871691F7 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, PurchaseInventoryItemsRequest_t1C819C128F54E38C7240FF70A67248120C6F9AFC* ___0_request, Action_1_t2B83B8A5173FA0D88003BA7164C1026A8B20F016* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17023,7 +17023,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38210
+// Method Definition Index: 45758
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_RedeemAppleAppStoreInventoryItems_m242A12B34DF2BEAEBEA2DEA424F01B325EE5696C (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, RedeemAppleAppStoreInventoryItemsRequest_t5A82F9E439DAEA116F5CC67297E38309E4EDB828* ___0_request, Action_1_t3F805CBBF6D49DF2B0F5A5B73E8AF8032550A250* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17133,7 +17133,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38211
+// Method Definition Index: 45759
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_RedeemAppleAppStoreWithJwsInventoryItems_m2162F3C18E69FD3D2B28CBFBD0525E756A3DAD7D (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, RedeemAppleAppStoreWithJwsInventoryItemsRequest_t1748D6A7E4797A4049690A73ED052BFCF1DC588D* ___0_request, Action_1_t7921EB2DF8B92505C90542ECC507D3A1CC131823* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17243,7 +17243,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38212
+// Method Definition Index: 45760
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_RedeemGooglePlayInventoryItems_mDBDCE944998A68AB6EBD008EE7CBE5F56506C9C7 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, RedeemGooglePlayInventoryItemsRequest_t4FE0D5C2F3A9EC91AF45547ECA3D6B9DA95088A5* ___0_request, Action_1_t83699CBD6F3EF69D00821E792AC757A5B8F2B3C6* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17353,7 +17353,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38213
+// Method Definition Index: 45761
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_RedeemMicrosoftStoreInventoryItems_m971A7AB8593111FB234821E8B2415C2BE6912034 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, RedeemMicrosoftStoreInventoryItemsRequest_t5BAD23CC752B9210F9B0A1E4E0576C4B45F96944* ___0_request, Action_1_tBF4E793426208876681596178EB5EB729EB8FDF4* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17463,7 +17463,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38214
+// Method Definition Index: 45762
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_RedeemNintendoEShopInventoryItems_m5938B9EF8AF09515FED03A71482BA2D2B999FD82 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, RedeemNintendoEShopInventoryItemsRequest_tC694EB4215312A27D53A02D33BA7E0AE19648A39* ___0_request, Action_1_t525765EF1A4A60130CCCA672AD11E7516DA18ACB* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17573,7 +17573,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38215
+// Method Definition Index: 45763
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_RedeemPlayStationStoreInventoryItems_m756FFAA89FE062DCFF11E42231F89701C89C8568 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, RedeemPlayStationStoreInventoryItemsRequest_t6AC888E204CBA70A638F5C4AB318F518DC6A92B6* ___0_request, Action_1_t83435FC55697EB4CEFB7F2E12054AE6636F76EC1* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17683,7 +17683,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38216
+// Method Definition Index: 45764
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_RedeemSteamInventoryItems_mC1563797CDDD8BBC30EA31E065B85AAF737BDD9C (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, RedeemSteamInventoryItemsRequest_t6DE3F3B1BDCDBB4BA2C42CE6CEB83309715FC408* ___0_request, Action_1_tE456D8BBB648ED4EFED9C255ABD0E8DC52B80B86* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17793,7 +17793,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38217
+// Method Definition Index: 45765
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_ReportItem_m57EE4073ECC9E09516745CC27D27C2D30B32FD4A (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, ReportItemRequest_t3E59BD8ADA0F85A6D1ABA012CC788B4EE54E7DD8* ___0_request, Action_1_tAD02460C19E5264B8CA6C53B157EB0E3A81C3ECB* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17903,7 +17903,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38218
+// Method Definition Index: 45766
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_ReportItemReview_m1B432C5107C2B8DB239B0E17E9A314CD8B294219 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, ReportItemReviewRequest_tA366F9F3A953BA5C4B7B13D9CAC49788A5374488* ___0_request, Action_1_t2F81675B47F75EA1272074BCB8AFBC2AEA0533A0* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18013,7 +18013,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38219
+// Method Definition Index: 45767
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_ReviewItem_m4BE71BA5C2183C222F162EE7F77A64312D86B7E2 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, ReviewItemRequest_t72AAD9D89B6D10B5273F4F358DEEB386B6D05450* ___0_request, Action_1_tD094B1B96EB2CD165D88F5C21534CEBD46B449B8* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18123,7 +18123,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38220
+// Method Definition Index: 45768
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_SearchItems_m5578472AFA399B56E83AFF772F9BAF2D5EEF20D3 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, SearchItemsRequest_tF398FF1B378FD96F184A10E0057365FBC0F52889* ___0_request, Action_1_t14DC4F4DC7D7F74B3A7022528A9137C610DE1476* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18233,7 +18233,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38221
+// Method Definition Index: 45769
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_SetItemModerationState_m2367195855BA4AD4B3C3A08BBB31E2A1EF9B5647 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, SetItemModerationStateRequest_tB20CD45DC1BB82ECC4C5208868C223AF2BDFE382* ___0_request, Action_1_tE0BA6B3CCC02613E0D02E928A4B4874C4E1F753C* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18343,7 +18343,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38222
+// Method Definition Index: 45770
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_SubmitItemReviewVote_m9AFF0857284006E36C4FA1B88ACBF78A784C09BE (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, SubmitItemReviewVoteRequest_tC5A45E0412875CACD7C65FA80BFF45678CD94084* ___0_request, Action_1_t35DE65730C15E8142FAC40EF4F82C4C22B680C9A* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18453,7 +18453,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38223
+// Method Definition Index: 45771
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_SubtractInventoryItems_mB1C1BFE5FB8229829074BBCEF5DE5E6046342A62 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, SubtractInventoryItemsRequest_t8060EFEA03C18DD04AA240E80E25F4AEBA0E4B4F* ___0_request, Action_1_t41409A51FD0EF74E55F7753FC735AF8A1D864E7D* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18563,7 +18563,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38224
+// Method Definition Index: 45772
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_TakedownItemReviews_mE03238EE6E55857D3EBF881F37A8D0CF3BAD058C (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, TakedownItemReviewsRequest_t87E5FEE7FE18D851152F19E079B2E4439C11C96E* ___0_request, Action_1_t0884A1081CA023796D2E593F3DE6C2B2E8D0E8C6* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18673,7 +18673,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38225
+// Method Definition Index: 45773
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_TransferInventoryItems_mE19A35DD04AFA1A3B3B1B1A1BFF75A64C3DBEE37 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, TransferInventoryItemsRequest_t22072ADEE6EC5FF5B405FD3CE922FE1A00A3E771* ___0_request, Action_1_t8C8CF5047008D847240AE9BC0841F827BAD79EF1* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18783,7 +18783,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38226
+// Method Definition Index: 45774
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_UpdateCatalogConfig_m135C27496754CC51DE7EB39F9D18F9ACCD66A756 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, UpdateCatalogConfigRequest_t7D83193874033BDD378F2B5AA25BCFEEBA7FA030* ___0_request, Action_1_tA1DE3733921A757F8A1A3DB505B161A7AAF8E4C9* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18893,7 +18893,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38227
+// Method Definition Index: 45775
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_UpdateDraftItem_m3ED2A3BF7B5FCB085EDFE1CE0371E8FF5014F564 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, UpdateDraftItemRequest_t76FBA51EE8C997D0D84346FBF8461146049E4631* ___0_request, Action_1_t9F34138253E767040B6D43B921AD3C7715916BBE* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19003,7 +19003,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38228
+// Method Definition Index: 45776
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEconomyInstanceAPI_UpdateInventoryItems_m1374D6FB2E40885C29FB08FB040C72C5C6A2BF44 (PlayFabEconomyInstanceAPI_tFA62398DF40A287D09C96441E11853125761B5B6* __this, UpdateInventoryItemsRequest_t211CD170BB379775028B03FB2C622A1192200595* ___0_request, Action_1_t87A23285ED460892F2B5385A8413493E17614106* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19121,7 +19121,7 @@ IL_003b:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 38229
+// Method Definition Index: 45777
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsAPI__cctor_m488484BE818E0F6D2BE35947AD0D9146CF263D99 (const RuntimeMethod* method) 
 {
 	{
@@ -19129,7 +19129,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsAPI__cctor_m488484BE818E0F6
 		return;
 	}
 }
-// Method Definition Index: 38230
+// Method Definition Index: 45778
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayFabEventsAPI_IsEntityLoggedIn_mE32FD04B99E63401A4049362ADE8C75BF3CB0FFC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19148,7 +19148,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayFabEventsAPI_IsEntityLoggedIn_mE32FD
 		return L_1;
 	}
 }
-// Method Definition Index: 38231
+// Method Definition Index: 45779
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsAPI_ForgetAllCredentials_m919B99FB5539D29A64DB9ED42CAA180194C94FB6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19167,7 +19167,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsAPI_ForgetAllCredentials_m9
 		return;
 	}
 }
-// Method Definition Index: 38232
+// Method Definition Index: 45780
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsAPI_CreateTelemetryKey_mDDBB0955CB81537DEBE56D3D93481B2F69A791C4 (CreateTelemetryKeyRequest_t415B66753E71771FBFBCBE6327E01217F2F1A8D5* ___0_request, Action_1_t7D48FFA05E9814A64D14650CFAEC5C006CB6B2C3* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19261,7 +19261,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38233
+// Method Definition Index: 45781
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsAPI_DeleteDataConnection_mD798034BC050F95D74E86E21239355372BF05AA8 (DeleteDataConnectionRequest_tBB4FB77F9A349F6BB31F078DA7A9760666177FF7* ___0_request, Action_1_t70D1811B9531C03881F79B5E3AD9B3870A24D8F1* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19355,7 +19355,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38234
+// Method Definition Index: 45782
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsAPI_DeleteTelemetryKey_m6751331CC35656676CA4FEF35B595197907BB8FF (DeleteTelemetryKeyRequest_tBF706C2B6533DDAFBF839C01D673E99070729D47* ___0_request, Action_1_tF6EC4B533A399AD85E3CB3AF88DD5F9738D33DAA* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19449,7 +19449,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38235
+// Method Definition Index: 45783
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsAPI_GetDataConnection_mB3DF16E294C43F937FCC66B1789B93CA0D9A91C6 (GetDataConnectionRequest_t8932EE505E95D59E77812FEB320E92183925B423* ___0_request, Action_1_t2114BBCF095696A185EA3F2E41A7329557906B2F* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19543,7 +19543,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38236
+// Method Definition Index: 45784
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsAPI_GetTelemetryKey_mAC34D37E0EAFE3B74D5347606ED202452020B66D (GetTelemetryKeyRequest_t50EDBF514749FD78219B79104311DFBC2841C621* ___0_request, Action_1_t3061285E81FAFC3D442ABAA07E9BB6B7DD8FB96E* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19637,7 +19637,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38237
+// Method Definition Index: 45785
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsAPI_ListDataConnections_m1C365FE43B4646B0BEF3315E46E8A0DC1F7698BA (ListDataConnectionsRequest_t9FEA8B3EF41B2A2972CC3D07421DEFA7AC12020B* ___0_request, Action_1_tF16D7D487953B2624D6AEF13793FFF957AB6466D* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19731,7 +19731,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38238
+// Method Definition Index: 45786
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsAPI_ListTelemetryKeys_m46DE12A34204F4DC6F509E5F38FA1A26FB1D4DA4 (ListTelemetryKeysRequest_tF6A1864A85201F0E512900A15B3EAF6C12916237* ___0_request, Action_1_t25754123D0D14DD8A4F61D969314AC98917F55C1* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19825,7 +19825,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38239
+// Method Definition Index: 45787
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsAPI_SetDataConnection_m077FA02F126AF81E96AB7AAEE95FCC43055B75C2 (SetDataConnectionRequest_t3F428EF7AD41AA5BFDB5F0EAE666A3A2B90DB5A0* ___0_request, Action_1_t856A8028292E8EF7FF05A8F2EC107E2F03F41710* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19919,7 +19919,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38240
+// Method Definition Index: 45788
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsAPI_SetDataConnectionActive_m84EF5D72C096E64495856C714F797D44809EB597 (SetDataConnectionActiveRequest_t3C40A6CA7B9AA839466FA91F055A0D41F4477B11* ___0_request, Action_1_t20D06AD1BB53AE9597462A012DBD78FEDB36DD82* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20013,7 +20013,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38241
+// Method Definition Index: 45789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsAPI_SetTelemetryKeyActive_mB3397FA27CB9418AA2821F8771A9CB1CA9512530 (SetTelemetryKeyActiveRequest_t1E61528D334312A405B85C403DD1F26C18E61EF1* ___0_request, Action_1_t23938AEE2AD50D32D4142A2022E0A9FA1D05A878* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20107,7 +20107,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38242
+// Method Definition Index: 45790
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsAPI_WriteEvents_m5ADFD50748926C9D0AF136AA902FA0682E4E7CDF (WriteEventsRequest_t6EC7D56913CB95E695762160E9896CB50E93DA15* ___0_request, Action_1_t4F12540B2C7BB128C509046A0B1620D1D1776C45* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20201,7 +20201,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38243
+// Method Definition Index: 45791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsAPI_WriteTelemetryEvents_mCFEB074444E203C17CA3BACDE5A71AF581E4BB66 (WriteEventsRequest_t6EC7D56913CB95E695762160E9896CB50E93DA15* ___0_request, Action_1_t4F12540B2C7BB128C509046A0B1620D1D1776C45* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20295,7 +20295,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38244
+// Method Definition Index: 45792
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsAPI_WriteTelemetryEventsWithTelemetryKey_m27703BA0E08044CFAD161CBDE71AF236112FCA81 (WriteEventsRequest_t6EC7D56913CB95E695762160E9896CB50E93DA15* ___0_request, Action_1_t4F12540B2C7BB128C509046A0B1620D1D1776C45* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20397,7 +20397,7 @@ IL_0030:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 38245
+// Method Definition Index: 45793
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsInstanceAPI__ctor_mF09D07BBFDD30CA2828E5962FA06E7915EEA64D6 (PlayFabEventsInstanceAPI_t52D69DEE8FB34EDF0D955EA43218D3F05E4229F1* __this, PlayFabAuthenticationContext_t221B79722A7A90BF01896A080CB0488FC0A9971A* ___0_context, const RuntimeMethod* method) 
 {
 	{
@@ -20427,7 +20427,7 @@ IL_0015:
 		return;
 	}
 }
-// Method Definition Index: 38246
+// Method Definition Index: 45794
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsInstanceAPI__ctor_m8369D569F8335D4C0923424BC8C16283BE27C454 (PlayFabEventsInstanceAPI_t52D69DEE8FB34EDF0D955EA43218D3F05E4229F1* __this, PlayFabApiSettings_tA64AE28AC2930D2710835FCD401A4212558752D1* ___0_settings, PlayFabAuthenticationContext_t221B79722A7A90BF01896A080CB0488FC0A9971A* ___1_context, const RuntimeMethod* method) 
 {
 	{
@@ -20461,7 +20461,7 @@ IL_0015:
 		return;
 	}
 }
-// Method Definition Index: 38247
+// Method Definition Index: 45795
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayFabEventsInstanceAPI_IsEntityLoggedIn_m9261C6461E8FE8B628DD2EBA077489F79D4A5A2C (PlayFabEventsInstanceAPI_t52D69DEE8FB34EDF0D955EA43218D3F05E4229F1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20485,7 +20485,7 @@ IL_0014:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 38248
+// Method Definition Index: 45796
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsInstanceAPI_ForgetAllCredentials_mEEC41C00FD4273F1040D4FF06C2E8547344324EF (PlayFabEventsInstanceAPI_t52D69DEE8FB34EDF0D955EA43218D3F05E4229F1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20509,7 +20509,7 @@ IL_0013:
 		return;
 	}
 }
-// Method Definition Index: 38249
+// Method Definition Index: 45797
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsInstanceAPI_CreateTelemetryKey_m974E496BF3DD579F7D14376C098288DDCCF29984 (PlayFabEventsInstanceAPI_t52D69DEE8FB34EDF0D955EA43218D3F05E4229F1* __this, CreateTelemetryKeyRequest_t415B66753E71771FBFBCBE6327E01217F2F1A8D5* ___0_request, Action_1_t7D48FFA05E9814A64D14650CFAEC5C006CB6B2C3* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20619,7 +20619,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38250
+// Method Definition Index: 45798
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsInstanceAPI_DeleteDataConnection_m94A3CB120C33D02B7E8D87314D14790973DFB340 (PlayFabEventsInstanceAPI_t52D69DEE8FB34EDF0D955EA43218D3F05E4229F1* __this, DeleteDataConnectionRequest_tBB4FB77F9A349F6BB31F078DA7A9760666177FF7* ___0_request, Action_1_t70D1811B9531C03881F79B5E3AD9B3870A24D8F1* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20729,7 +20729,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38251
+// Method Definition Index: 45799
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsInstanceAPI_DeleteTelemetryKey_m4D31EC0477385CC71ADD2C8DC309ED15441676E5 (PlayFabEventsInstanceAPI_t52D69DEE8FB34EDF0D955EA43218D3F05E4229F1* __this, DeleteTelemetryKeyRequest_tBF706C2B6533DDAFBF839C01D673E99070729D47* ___0_request, Action_1_tF6EC4B533A399AD85E3CB3AF88DD5F9738D33DAA* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20839,7 +20839,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38252
+// Method Definition Index: 45800
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsInstanceAPI_GetDataConnection_mB59F328FB3A7DE4AEF54EA9AE56121C121EFF3EB (PlayFabEventsInstanceAPI_t52D69DEE8FB34EDF0D955EA43218D3F05E4229F1* __this, GetDataConnectionRequest_t8932EE505E95D59E77812FEB320E92183925B423* ___0_request, Action_1_t2114BBCF095696A185EA3F2E41A7329557906B2F* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20949,7 +20949,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38253
+// Method Definition Index: 45801
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsInstanceAPI_GetTelemetryKey_m14B1C6B0B2DFDE0EB1D7857E7809C69EDB9F32B7 (PlayFabEventsInstanceAPI_t52D69DEE8FB34EDF0D955EA43218D3F05E4229F1* __this, GetTelemetryKeyRequest_t50EDBF514749FD78219B79104311DFBC2841C621* ___0_request, Action_1_t3061285E81FAFC3D442ABAA07E9BB6B7DD8FB96E* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21059,7 +21059,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38254
+// Method Definition Index: 45802
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsInstanceAPI_ListDataConnections_m2CEF0FB79CFD48075DEB0E3B375D10E75631A4D1 (PlayFabEventsInstanceAPI_t52D69DEE8FB34EDF0D955EA43218D3F05E4229F1* __this, ListDataConnectionsRequest_t9FEA8B3EF41B2A2972CC3D07421DEFA7AC12020B* ___0_request, Action_1_tF16D7D487953B2624D6AEF13793FFF957AB6466D* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21169,7 +21169,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38255
+// Method Definition Index: 45803
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsInstanceAPI_ListTelemetryKeys_m829DE5CB669C77384791B14DFE9DE346A2A29D08 (PlayFabEventsInstanceAPI_t52D69DEE8FB34EDF0D955EA43218D3F05E4229F1* __this, ListTelemetryKeysRequest_tF6A1864A85201F0E512900A15B3EAF6C12916237* ___0_request, Action_1_t25754123D0D14DD8A4F61D969314AC98917F55C1* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21279,7 +21279,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38256
+// Method Definition Index: 45804
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsInstanceAPI_SetDataConnection_mDF13B20BD77BCB718E63521ADC7AE245EAC8B590 (PlayFabEventsInstanceAPI_t52D69DEE8FB34EDF0D955EA43218D3F05E4229F1* __this, SetDataConnectionRequest_t3F428EF7AD41AA5BFDB5F0EAE666A3A2B90DB5A0* ___0_request, Action_1_t856A8028292E8EF7FF05A8F2EC107E2F03F41710* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21389,7 +21389,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38257
+// Method Definition Index: 45805
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsInstanceAPI_SetDataConnectionActive_m41C8D3D040A20A93329B08D6B54B3716C8BA7C97 (PlayFabEventsInstanceAPI_t52D69DEE8FB34EDF0D955EA43218D3F05E4229F1* __this, SetDataConnectionActiveRequest_t3C40A6CA7B9AA839466FA91F055A0D41F4477B11* ___0_request, Action_1_t20D06AD1BB53AE9597462A012DBD78FEDB36DD82* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21499,7 +21499,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38258
+// Method Definition Index: 45806
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsInstanceAPI_SetTelemetryKeyActive_mF9CD8B2F90449E9202DB7473D89C1F249FE52E0A (PlayFabEventsInstanceAPI_t52D69DEE8FB34EDF0D955EA43218D3F05E4229F1* __this, SetTelemetryKeyActiveRequest_t1E61528D334312A405B85C403DD1F26C18E61EF1* ___0_request, Action_1_t23938AEE2AD50D32D4142A2022E0A9FA1D05A878* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21609,7 +21609,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38259
+// Method Definition Index: 45807
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsInstanceAPI_WriteEvents_m239726E94EF107B9FFC23D8F3BDB34A1B0D9AB7E (PlayFabEventsInstanceAPI_t52D69DEE8FB34EDF0D955EA43218D3F05E4229F1* __this, WriteEventsRequest_t6EC7D56913CB95E695762160E9896CB50E93DA15* ___0_request, Action_1_t4F12540B2C7BB128C509046A0B1620D1D1776C45* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21719,7 +21719,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38260
+// Method Definition Index: 45808
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsInstanceAPI_WriteTelemetryEvents_m04F58686A6BF1FC3FA6F4EC0F644A5E5027F50D0 (PlayFabEventsInstanceAPI_t52D69DEE8FB34EDF0D955EA43218D3F05E4229F1* __this, WriteEventsRequest_t6EC7D56913CB95E695762160E9896CB50E93DA15* ___0_request, Action_1_t4F12540B2C7BB128C509046A0B1620D1D1776C45* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21829,7 +21829,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38261
+// Method Definition Index: 45809
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEventsInstanceAPI_WriteTelemetryEventsWithTelemetryKey_m07854DB040DFD4465A7B16811CD0C521871D5686 (PlayFabEventsInstanceAPI_t52D69DEE8FB34EDF0D955EA43218D3F05E4229F1* __this, WriteEventsRequest_t6EC7D56913CB95E695762160E9896CB50E93DA15* ___0_request, Action_1_t4F12540B2C7BB128C509046A0B1620D1D1776C45* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21947,7 +21947,7 @@ IL_003b:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 38262
+// Method Definition Index: 45810
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationAPI__cctor_m923F84595E34E1F0D9E7EB13F32E1FC6B3CC4D43 (const RuntimeMethod* method) 
 {
 	{
@@ -21955,7 +21955,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationAPI__cctor_m923F84
 		return;
 	}
 }
-// Method Definition Index: 38263
+// Method Definition Index: 45811
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayFabExperimentationAPI_IsEntityLoggedIn_mCAFD1D639BAC063115FAFA6C2A817BA9E9FBA256 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21974,7 +21974,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayFabExperimentationAPI_IsEntityLogged
 		return L_1;
 	}
 }
-// Method Definition Index: 38264
+// Method Definition Index: 45812
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationAPI_ForgetAllCredentials_m10625B8108028CDD87A738DC53F4430AB53F7D34 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21993,7 +21993,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationAPI_ForgetAllCrede
 		return;
 	}
 }
-// Method Definition Index: 38265
+// Method Definition Index: 45813
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationAPI_CreateExclusionGroup_m7C411C035FC44736B810058E355A4EE1B4EA0A29 (CreateExclusionGroupRequest_tE3FA877E716AB1FFC750F33E815944391F165640* ___0_request, Action_1_t5F6FE83E7771A945BCA5A4C513CA425900034622* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22087,7 +22087,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38266
+// Method Definition Index: 45814
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationAPI_CreateExperiment_m9E97FB2CBC72BD5C50F0C1FA9BB2455D87F6C270 (CreateExperimentRequest_t92ECF99C537F801959FC7C554505F79FB3EB4FB9* ___0_request, Action_1_t538269C671F2E1A03F67FB553E54B898FB59D1CB* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22181,7 +22181,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38267
+// Method Definition Index: 45815
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationAPI_DeleteExclusionGroup_m454D9C291F1A7878066548173D1B9C9B91D44EE5 (DeleteExclusionGroupRequest_t64FDE349606863BCB1CC9FA6908F85643586F880* ___0_request, Action_1_t333F27E76FA587D2240027EBF11668EBEC527802* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22275,7 +22275,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38268
+// Method Definition Index: 45816
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationAPI_DeleteExperiment_mF8D1E74412DD0C81AD0AD35CD02C1623B868EE75 (DeleteExperimentRequest_tF334C878EAB7FB8E8B2AF959AD836B9A174F6CC2* ___0_request, Action_1_t333F27E76FA587D2240027EBF11668EBEC527802* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22369,7 +22369,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38269
+// Method Definition Index: 45817
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationAPI_GetExclusionGroups_m893211C1DFED33283DF7B1EB0CBEB4DA3046AEF2 (GetExclusionGroupsRequest_tCA05C0121AC5968A79DCBAA6E63963A72437DB0D* ___0_request, Action_1_t34686DC80956F4F2D1DED66909977161C6F82D95* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22463,7 +22463,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38270
+// Method Definition Index: 45818
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationAPI_GetExclusionGroupTraffic_mF875CD5F9292CDDD09BFB553F7C6454573385918 (GetExclusionGroupTrafficRequest_tBD64BD39D517362BEDF811FE8D185198DD938F85* ___0_request, Action_1_tB87DF88EF872858FA387BAD4C0E08241A3783B0F* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22557,7 +22557,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38271
+// Method Definition Index: 45819
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationAPI_GetExperiments_m8D69347AEA523E3B331555D46B0C1540DBCC2976 (GetExperimentsRequest_t8FE08661981EE50E719A91FA0A0EDE7C8937D2E5* ___0_request, Action_1_tB68083952C6BFE5FC34F16C501D455A5215AA24D* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22651,7 +22651,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38272
+// Method Definition Index: 45820
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationAPI_GetLatestScorecard_m4F3D734C33240E393BD83A35DD5ABD71965E8684 (GetLatestScorecardRequest_tD9C9D1DA7F799B770101CF2D1F9C404CA96E37C0* ___0_request, Action_1_t1329C243313AF9A485E56CB8DD74FE7E5FE3BA18* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22745,7 +22745,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38273
+// Method Definition Index: 45821
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationAPI_GetTreatmentAssignment_m0F2D13C76D89A677381BCBD14712EF8EE66F3C4A (GetTreatmentAssignmentRequest_tE32C8000E47A897ACB4C03FF35598FEF8DA64FE2* ___0_request, Action_1_t1DF9275C0602B9F9C532EDEAF5F8DC52BD18AB12* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22839,7 +22839,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38274
+// Method Definition Index: 45822
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationAPI_StartExperiment_mCDF420BBE02256955C5E1649C9A6ED31326F5279 (StartExperimentRequest_tBB4DED95249DA2431EE59B0F7136E3091A00AE54* ___0_request, Action_1_t333F27E76FA587D2240027EBF11668EBEC527802* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22933,7 +22933,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38275
+// Method Definition Index: 45823
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationAPI_StopExperiment_m721766835C1CA2D749A909A483308381DEEE49BF (StopExperimentRequest_t9DA4A92FBC08FA0692DF708E33DC7C5BAEB14C11* ___0_request, Action_1_t333F27E76FA587D2240027EBF11668EBEC527802* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23027,7 +23027,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38276
+// Method Definition Index: 45824
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationAPI_UpdateExclusionGroup_mEFCFC805E441730A5C299B8849AA720F27267670 (UpdateExclusionGroupRequest_t9500E10FC6331F8C524937A710EDE3989E7B8F32* ___0_request, Action_1_t333F27E76FA587D2240027EBF11668EBEC527802* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23121,7 +23121,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38277
+// Method Definition Index: 45825
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationAPI_UpdateExperiment_m7DEE968932E3F0E80B800F25740F7ADAB5AA6FBA (UpdateExperimentRequest_t4405D5B74A361BDF000F2347EC5EC7BE99608B3B* ___0_request, Action_1_t333F27E76FA587D2240027EBF11668EBEC527802* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23223,7 +23223,7 @@ IL_0030:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 38278
+// Method Definition Index: 45826
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationInstanceAPI__ctor_m657B945BB531D960D96EE76FC26B4E1228458C21 (PlayFabExperimentationInstanceAPI_tFC0ED981B05ED64AF50FFA6C9DDEDBAC754A49F5* __this, PlayFabAuthenticationContext_t221B79722A7A90BF01896A080CB0488FC0A9971A* ___0_context, const RuntimeMethod* method) 
 {
 	{
@@ -23253,7 +23253,7 @@ IL_0015:
 		return;
 	}
 }
-// Method Definition Index: 38279
+// Method Definition Index: 45827
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationInstanceAPI__ctor_mF9F2D8F7E839C51879EED06947016AA7441556B8 (PlayFabExperimentationInstanceAPI_tFC0ED981B05ED64AF50FFA6C9DDEDBAC754A49F5* __this, PlayFabApiSettings_tA64AE28AC2930D2710835FCD401A4212558752D1* ___0_settings, PlayFabAuthenticationContext_t221B79722A7A90BF01896A080CB0488FC0A9971A* ___1_context, const RuntimeMethod* method) 
 {
 	{
@@ -23287,7 +23287,7 @@ IL_0015:
 		return;
 	}
 }
-// Method Definition Index: 38280
+// Method Definition Index: 45828
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayFabExperimentationInstanceAPI_IsEntityLoggedIn_m90355EA5AFE561C017DC139DD3EE666B945F6133 (PlayFabExperimentationInstanceAPI_tFC0ED981B05ED64AF50FFA6C9DDEDBAC754A49F5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23311,7 +23311,7 @@ IL_0014:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 38281
+// Method Definition Index: 45829
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationInstanceAPI_ForgetAllCredentials_mFAFEB31227B8343A10D27495255B59FFFF3867FC (PlayFabExperimentationInstanceAPI_tFC0ED981B05ED64AF50FFA6C9DDEDBAC754A49F5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23335,7 +23335,7 @@ IL_0013:
 		return;
 	}
 }
-// Method Definition Index: 38282
+// Method Definition Index: 45830
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationInstanceAPI_CreateExclusionGroup_m42CEF36E23844AB5955724F848AEB63639CF6C59 (PlayFabExperimentationInstanceAPI_tFC0ED981B05ED64AF50FFA6C9DDEDBAC754A49F5* __this, CreateExclusionGroupRequest_tE3FA877E716AB1FFC750F33E815944391F165640* ___0_request, Action_1_t5F6FE83E7771A945BCA5A4C513CA425900034622* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23445,7 +23445,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38283
+// Method Definition Index: 45831
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationInstanceAPI_CreateExperiment_mA3BAA43522A57D8C707F8BF72C7F6DC9AF86A54E (PlayFabExperimentationInstanceAPI_tFC0ED981B05ED64AF50FFA6C9DDEDBAC754A49F5* __this, CreateExperimentRequest_t92ECF99C537F801959FC7C554505F79FB3EB4FB9* ___0_request, Action_1_t538269C671F2E1A03F67FB553E54B898FB59D1CB* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23555,7 +23555,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38284
+// Method Definition Index: 45832
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationInstanceAPI_DeleteExclusionGroup_m958D022D1A439AE2A8D8A615C681E907C1D8E016 (PlayFabExperimentationInstanceAPI_tFC0ED981B05ED64AF50FFA6C9DDEDBAC754A49F5* __this, DeleteExclusionGroupRequest_t64FDE349606863BCB1CC9FA6908F85643586F880* ___0_request, Action_1_t333F27E76FA587D2240027EBF11668EBEC527802* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23665,7 +23665,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38285
+// Method Definition Index: 45833
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationInstanceAPI_DeleteExperiment_m0CFCD01EBEFDBBD86FE74D11D5BF8C4615B17626 (PlayFabExperimentationInstanceAPI_tFC0ED981B05ED64AF50FFA6C9DDEDBAC754A49F5* __this, DeleteExperimentRequest_tF334C878EAB7FB8E8B2AF959AD836B9A174F6CC2* ___0_request, Action_1_t333F27E76FA587D2240027EBF11668EBEC527802* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23775,7 +23775,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38286
+// Method Definition Index: 45834
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationInstanceAPI_GetExclusionGroups_m8BF281A1CC9093F2372ADD0566F7A41A9F0DCBCE (PlayFabExperimentationInstanceAPI_tFC0ED981B05ED64AF50FFA6C9DDEDBAC754A49F5* __this, GetExclusionGroupsRequest_tCA05C0121AC5968A79DCBAA6E63963A72437DB0D* ___0_request, Action_1_t34686DC80956F4F2D1DED66909977161C6F82D95* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23885,7 +23885,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38287
+// Method Definition Index: 45835
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationInstanceAPI_GetExclusionGroupTraffic_mF509F006B1431FCB380C007B249EA57C3F3CE8FA (PlayFabExperimentationInstanceAPI_tFC0ED981B05ED64AF50FFA6C9DDEDBAC754A49F5* __this, GetExclusionGroupTrafficRequest_tBD64BD39D517362BEDF811FE8D185198DD938F85* ___0_request, Action_1_tB87DF88EF872858FA387BAD4C0E08241A3783B0F* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23995,7 +23995,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38288
+// Method Definition Index: 45836
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationInstanceAPI_GetExperiments_m817F527403E1BA952562E02FEA37069EC19E2439 (PlayFabExperimentationInstanceAPI_tFC0ED981B05ED64AF50FFA6C9DDEDBAC754A49F5* __this, GetExperimentsRequest_t8FE08661981EE50E719A91FA0A0EDE7C8937D2E5* ___0_request, Action_1_tB68083952C6BFE5FC34F16C501D455A5215AA24D* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24105,7 +24105,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38289
+// Method Definition Index: 45837
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationInstanceAPI_GetLatestScorecard_mF0BB74F11DAE969A7A209D3DE730C8E3F5BC2F3D (PlayFabExperimentationInstanceAPI_tFC0ED981B05ED64AF50FFA6C9DDEDBAC754A49F5* __this, GetLatestScorecardRequest_tD9C9D1DA7F799B770101CF2D1F9C404CA96E37C0* ___0_request, Action_1_t1329C243313AF9A485E56CB8DD74FE7E5FE3BA18* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24215,7 +24215,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38290
+// Method Definition Index: 45838
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationInstanceAPI_GetTreatmentAssignment_m0DFDB7109641B3192BDCEC0258B00657AA832303 (PlayFabExperimentationInstanceAPI_tFC0ED981B05ED64AF50FFA6C9DDEDBAC754A49F5* __this, GetTreatmentAssignmentRequest_tE32C8000E47A897ACB4C03FF35598FEF8DA64FE2* ___0_request, Action_1_t1DF9275C0602B9F9C532EDEAF5F8DC52BD18AB12* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24325,7 +24325,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38291
+// Method Definition Index: 45839
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationInstanceAPI_StartExperiment_m42829CA16556A70C7103430C0988B239C448743E (PlayFabExperimentationInstanceAPI_tFC0ED981B05ED64AF50FFA6C9DDEDBAC754A49F5* __this, StartExperimentRequest_tBB4DED95249DA2431EE59B0F7136E3091A00AE54* ___0_request, Action_1_t333F27E76FA587D2240027EBF11668EBEC527802* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24435,7 +24435,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38292
+// Method Definition Index: 45840
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationInstanceAPI_StopExperiment_mA8070F768CE28F72FE61486BC2B288DABBC2B4E8 (PlayFabExperimentationInstanceAPI_tFC0ED981B05ED64AF50FFA6C9DDEDBAC754A49F5* __this, StopExperimentRequest_t9DA4A92FBC08FA0692DF708E33DC7C5BAEB14C11* ___0_request, Action_1_t333F27E76FA587D2240027EBF11668EBEC527802* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24545,7 +24545,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38293
+// Method Definition Index: 45841
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationInstanceAPI_UpdateExclusionGroup_mB3C753B14AE85A8B91844CAC4AC5A33D3199BE05 (PlayFabExperimentationInstanceAPI_tFC0ED981B05ED64AF50FFA6C9DDEDBAC754A49F5* __this, UpdateExclusionGroupRequest_t9500E10FC6331F8C524937A710EDE3989E7B8F32* ___0_request, Action_1_t333F27E76FA587D2240027EBF11668EBEC527802* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24655,7 +24655,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38294
+// Method Definition Index: 45842
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabExperimentationInstanceAPI_UpdateExperiment_m143ED4ACE13F81D27FF9945A176F21A8FE382FA8 (PlayFabExperimentationInstanceAPI_tFC0ED981B05ED64AF50FFA6C9DDEDBAC754A49F5* __this, UpdateExperimentRequest_t4405D5B74A361BDF000F2347EC5EC7BE99608B3B* ___0_request, Action_1_t333F27E76FA587D2240027EBF11668EBEC527802* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24773,7 +24773,7 @@ IL_003b:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 38295
+// Method Definition Index: 45843
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI__cctor_m96CA24F0EC884D8FEFBDBB14567ECE8D567D091F (const RuntimeMethod* method) 
 {
 	{
@@ -24781,7 +24781,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI__cctor_m96CA24F0EC884D8
 		return;
 	}
 }
-// Method Definition Index: 38296
+// Method Definition Index: 45844
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayFabGroupsAPI_IsEntityLoggedIn_m810D70A19DD8D9895256B2FB2319BE231CDBBD6A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24800,7 +24800,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayFabGroupsAPI_IsEntityLoggedIn_m810D7
 		return L_1;
 	}
 }
-// Method Definition Index: 38297
+// Method Definition Index: 45845
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_ForgetAllCredentials_mF00D5399B67EF9546F2ADF25424357D55CE5C2C3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24819,7 +24819,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_ForgetAllCredentials_mF
 		return;
 	}
 }
-// Method Definition Index: 38298
+// Method Definition Index: 45846
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_AcceptGroupApplication_mCC03EF6F80F475BD918326D13389D14F5D057BB0 (AcceptGroupApplicationRequest_t10C9976E3AABB7D9068D99D663659689F7164153* ___0_request, Action_1_t8F70B1C7A95641434854AE39F70D5DE56A810120* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24913,7 +24913,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38299
+// Method Definition Index: 45847
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_AcceptGroupInvitation_m06A8DB07BDF868C451CDAB55708AEC18C53A8618 (AcceptGroupInvitationRequest_t8026D1B157BC067A82517D17B3FFC68B6AF5E0B1* ___0_request, Action_1_t8F70B1C7A95641434854AE39F70D5DE56A810120* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25007,7 +25007,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38300
+// Method Definition Index: 45848
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_AddMembers_m76FA7B5ABB1643022EF3D2B7E8AD39C88BFEA321 (AddMembersRequest_t38D0FCC4663926CBE5FE0B076E276A7BBA9C340B* ___0_request, Action_1_t8F70B1C7A95641434854AE39F70D5DE56A810120* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25101,7 +25101,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38301
+// Method Definition Index: 45849
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_ApplyToGroup_mA346B41E40F2A3DE41597618E5110C6AE03F4698 (ApplyToGroupRequest_t4759B67274AF6ADCE6DB82AF250EEC497FCF92EB* ___0_request, Action_1_tBF987C58A07FA54EBF60ABED415CE9C669EF74C6* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25195,7 +25195,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38302
+// Method Definition Index: 45850
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_BlockEntity_mB834E12E99C41693946E223B83EEE6780E5C97A0 (BlockEntityRequest_t2942CB3A81A4F0BAC5928839104D9F406B299D43* ___0_request, Action_1_t8F70B1C7A95641434854AE39F70D5DE56A810120* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25289,7 +25289,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38303
+// Method Definition Index: 45851
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_ChangeMemberRole_m5E4034EBF00005F61F6E1BF5763AE7A5B57529EA (ChangeMemberRoleRequest_tCFEA2BBCD6703008FDA1BE83F48C022556585181* ___0_request, Action_1_t8F70B1C7A95641434854AE39F70D5DE56A810120* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25383,7 +25383,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38304
+// Method Definition Index: 45852
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_CreateGroup_m3F997D80C5C1C8D449A74C1595BE1477B9C7CDB5 (CreateGroupRequest_tA5D2E50E672513341A3253C5FE756274524F8CE5* ___0_request, Action_1_tB1C76149DFF64D1EED3BB6C0CFC1BC319F46AB21* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25477,7 +25477,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38305
+// Method Definition Index: 45853
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_CreateRole_m33101C2419C7995CEE3A081F75DED0600BC2FEAD (CreateGroupRoleRequest_tCEA2E0D5AE372E91979360E5F5630CFC128F4E3C* ___0_request, Action_1_t7D354FDB23F580432BC7919E886D4B2126520350* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25571,7 +25571,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38306
+// Method Definition Index: 45854
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_DeleteGroup_mCAFF7D5CE342DA9C0B3B6CD24A5315284BA23F44 (DeleteGroupRequest_tC1DF66370091FCDC1E262F325BF57FF5C7139F0F* ___0_request, Action_1_t8F70B1C7A95641434854AE39F70D5DE56A810120* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25665,7 +25665,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38307
+// Method Definition Index: 45855
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_DeleteRole_m2968AFD02E99488C6591C4B7C651FB19B9258A41 (DeleteRoleRequest_t3FC8D8904DA331C1BDB538A48538711C9DD770D6* ___0_request, Action_1_t8F70B1C7A95641434854AE39F70D5DE56A810120* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25759,7 +25759,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38308
+// Method Definition Index: 45856
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_GetGroup_m7A88AF31733ED1C8E4F989FDCCD60800E88AAC1C (GetGroupRequest_t8A739181C8ADA5AE32AF1CFC23877EF3F0E23BF6* ___0_request, Action_1_t91124C4802E4F08EFF4986FB49141D279FDA8AE1* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25853,7 +25853,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38309
+// Method Definition Index: 45857
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_InviteToGroup_m4AC395D46907917F1817C17FF870C62148699A52 (InviteToGroupRequest_tE7B3E57AE31029297EC23F041CC1E4D4B85796B6* ___0_request, Action_1_t1B813900D284F23AB0E8821F1BA4FA1F3B0D63B8* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25947,7 +25947,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38310
+// Method Definition Index: 45858
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_IsMember_m3B0978A7ADF97986A4AD755B6B951D6E37834565 (IsMemberRequest_t2BE361682B8DAEE56E351B2F02BB044BCDA4B759* ___0_request, Action_1_t1DB87EBD0BD46BB3B038675C1DBD318E1E1E8727* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26041,7 +26041,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38311
+// Method Definition Index: 45859
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_ListGroupApplications_mE3C5B4459A8ED634DE50794175A3D6CDC5422ED4 (ListGroupApplicationsRequest_t272574E3F93298A26834551035A544CC06ACDA1C* ___0_request, Action_1_t829D4908310C56F77EEE133F9F6CF93A1D8A7B5F* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26135,7 +26135,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38312
+// Method Definition Index: 45860
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_ListGroupBlocks_mE8F35559F24AC53AFE113019E70B0D240F868849 (ListGroupBlocksRequest_tB78BDE5F5CD7519D49B6BC33E584BFFEEE871B77* ___0_request, Action_1_t3DA9CD77F66BDDA3B0B20F6258A58C57B3E1AC93* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26229,7 +26229,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38313
+// Method Definition Index: 45861
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_ListGroupInvitations_mE4CCEC588D905937D96774DA5AC76FB710976623 (ListGroupInvitationsRequest_t2CE922714F6BA2BAD46AB1A55D5BC4D2A0CF593D* ___0_request, Action_1_t0D82A184E45C45A978CB1AE3D1D76116CD5AABD3* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26323,7 +26323,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38314
+// Method Definition Index: 45862
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_ListGroupMembers_m83C9F3E4E78355E63A7E2F614CCA584F66B3CBDB (ListGroupMembersRequest_t555530680C1650A450C3D6E7F9761B7858B4E9F0* ___0_request, Action_1_t60D1EE9836D1E2BBF70A33349D80CFE89C69CF7E* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26417,7 +26417,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38315
+// Method Definition Index: 45863
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_ListMembership_mA8EE44DF87161905ED29C33C5928DADC177B5B63 (ListMembershipRequest_t72F53851AEFD6A7E2B6857374DAB8958945F3B8F* ___0_request, Action_1_t2CEE1C32E28AEE2C3A330D070B12CF224D9334C1* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26511,7 +26511,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38316
+// Method Definition Index: 45864
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_ListMembershipOpportunities_m3F2E0C99FA6A0A67CA660B21C261665AE16BC9BB (ListMembershipOpportunitiesRequest_tE3BD0DA3A7995852FC2214414E8896514908B66E* ___0_request, Action_1_t9A27628A4B1E85946C89B09EFB81A472B02E4C7E* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26605,7 +26605,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38317
+// Method Definition Index: 45865
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_RemoveGroupApplication_mEA3C293FC5C9E51062B49E667DCB152B64A5CD98 (RemoveGroupApplicationRequest_t8C9C6B250EBFB686DC1094D7ECE98884E08DA5F3* ___0_request, Action_1_t8F70B1C7A95641434854AE39F70D5DE56A810120* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26699,7 +26699,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38318
+// Method Definition Index: 45866
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_RemoveGroupInvitation_mB1FF89C3349F11C87E4FD8C16D6E4B2AB789C5B8 (RemoveGroupInvitationRequest_tD2C019660C197AEB8D9CC63272DBD213539C9FF8* ___0_request, Action_1_t8F70B1C7A95641434854AE39F70D5DE56A810120* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26793,7 +26793,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38319
+// Method Definition Index: 45867
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_RemoveMembers_mEB2B379A63E9D603B412195838540CBD3B4034B9 (RemoveMembersRequest_t143122C5B9742AD8CC380B92FFC41DAD9B341D31* ___0_request, Action_1_t8F70B1C7A95641434854AE39F70D5DE56A810120* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26887,7 +26887,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38320
+// Method Definition Index: 45868
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_UnblockEntity_mD3CB63096E3FD39382F1ECA02AAB5C664C193B11 (UnblockEntityRequest_tDF86775712F95005540CA7C2D2C89ED3E9A1899F* ___0_request, Action_1_t8F70B1C7A95641434854AE39F70D5DE56A810120* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26981,7 +26981,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38321
+// Method Definition Index: 45869
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_UpdateGroup_m75979A6F3709389A81D2EC777363D62A7228595D (UpdateGroupRequest_t3DB4F4BCC798BCB934077F9706F5D6E03F771D0F* ___0_request, Action_1_t589DAB2121C609E5115EAFF638E2D61FACC73D3A* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27075,7 +27075,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38322
+// Method Definition Index: 45870
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsAPI_UpdateRole_m236AE724DD1F3E9B44681839A5C917E116193384 (UpdateGroupRoleRequest_t12CB5E5672A2D3EFBC1D4B16935EE8D9E1DDBF0D* ___0_request, Action_1_tF8930D9B4032FFB43A75203017F5408968C9E8DF* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27177,7 +27177,7 @@ IL_0030:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 38323
+// Method Definition Index: 45871
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI__ctor_m3A693D1CBF4B0CF62CDF46BC73C384562BAA32DD (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, PlayFabAuthenticationContext_t221B79722A7A90BF01896A080CB0488FC0A9971A* ___0_context, const RuntimeMethod* method) 
 {
 	{
@@ -27207,7 +27207,7 @@ IL_0015:
 		return;
 	}
 }
-// Method Definition Index: 38324
+// Method Definition Index: 45872
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI__ctor_mE0325742B1FB2DD39CF4D1B43FCD827ADA3F61E9 (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, PlayFabApiSettings_tA64AE28AC2930D2710835FCD401A4212558752D1* ___0_settings, PlayFabAuthenticationContext_t221B79722A7A90BF01896A080CB0488FC0A9971A* ___1_context, const RuntimeMethod* method) 
 {
 	{
@@ -27241,7 +27241,7 @@ IL_0015:
 		return;
 	}
 }
-// Method Definition Index: 38325
+// Method Definition Index: 45873
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayFabGroupsInstanceAPI_IsEntityLoggedIn_m62C41004A3ACE01A90BA13E418E84846B521CD65 (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27265,7 +27265,7 @@ IL_0014:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 38326
+// Method Definition Index: 45874
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI_ForgetAllCredentials_m7DF87EC7008E2422C5EEA70F1650CA1A77984B8E (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27289,7 +27289,7 @@ IL_0013:
 		return;
 	}
 }
-// Method Definition Index: 38327
+// Method Definition Index: 45875
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI_AcceptGroupApplication_m0E28E415AC89F4CCBB87A1C1D43B1815118CC54B (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, AcceptGroupApplicationRequest_t10C9976E3AABB7D9068D99D663659689F7164153* ___0_request, Action_1_t8F70B1C7A95641434854AE39F70D5DE56A810120* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27399,7 +27399,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38328
+// Method Definition Index: 45876
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI_AcceptGroupInvitation_mF395B51DEADFF8470194B0E5CF532A745082A77E (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, AcceptGroupInvitationRequest_t8026D1B157BC067A82517D17B3FFC68B6AF5E0B1* ___0_request, Action_1_t8F70B1C7A95641434854AE39F70D5DE56A810120* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27509,7 +27509,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38329
+// Method Definition Index: 45877
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI_AddMembers_m0F0BAE0A6AC803E34D26E5E11B208BA882A7ADB3 (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, AddMembersRequest_t38D0FCC4663926CBE5FE0B076E276A7BBA9C340B* ___0_request, Action_1_t8F70B1C7A95641434854AE39F70D5DE56A810120* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27619,7 +27619,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38330
+// Method Definition Index: 45878
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI_ApplyToGroup_m5B98ED23AA10F4F45B9715D94C2D0EA05044744F (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, ApplyToGroupRequest_t4759B67274AF6ADCE6DB82AF250EEC497FCF92EB* ___0_request, Action_1_tBF987C58A07FA54EBF60ABED415CE9C669EF74C6* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27729,7 +27729,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38331
+// Method Definition Index: 45879
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI_BlockEntity_m79DC0AAB6E5C5289170D8B1D4D65EB6756DADF34 (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, BlockEntityRequest_t2942CB3A81A4F0BAC5928839104D9F406B299D43* ___0_request, Action_1_t8F70B1C7A95641434854AE39F70D5DE56A810120* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27839,7 +27839,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38332
+// Method Definition Index: 45880
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI_ChangeMemberRole_m547006C7E5E7CD5FC8D624E3140177A3AA3CB7E1 (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, ChangeMemberRoleRequest_tCFEA2BBCD6703008FDA1BE83F48C022556585181* ___0_request, Action_1_t8F70B1C7A95641434854AE39F70D5DE56A810120* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27949,7 +27949,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38333
+// Method Definition Index: 45881
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI_CreateGroup_mEFDA81943BA1AE4CAD775414EBB159814FED3314 (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, CreateGroupRequest_tA5D2E50E672513341A3253C5FE756274524F8CE5* ___0_request, Action_1_tB1C76149DFF64D1EED3BB6C0CFC1BC319F46AB21* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28059,7 +28059,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38334
+// Method Definition Index: 45882
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI_CreateRole_m2F36FCB803B26281E9E63BE9711A85A6164F1F07 (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, CreateGroupRoleRequest_tCEA2E0D5AE372E91979360E5F5630CFC128F4E3C* ___0_request, Action_1_t7D354FDB23F580432BC7919E886D4B2126520350* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28169,7 +28169,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38335
+// Method Definition Index: 45883
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI_DeleteGroup_m26DD327D8B1053E7D2DA281132ACBE8F9D2630B3 (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, DeleteGroupRequest_tC1DF66370091FCDC1E262F325BF57FF5C7139F0F* ___0_request, Action_1_t8F70B1C7A95641434854AE39F70D5DE56A810120* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28279,7 +28279,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38336
+// Method Definition Index: 45884
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI_DeleteRole_m7D0CD4855B4585B7033CB5BA9C3E5ECDBC336A96 (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, DeleteRoleRequest_t3FC8D8904DA331C1BDB538A48538711C9DD770D6* ___0_request, Action_1_t8F70B1C7A95641434854AE39F70D5DE56A810120* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28389,7 +28389,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38337
+// Method Definition Index: 45885
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI_GetGroup_mAB202670EF72713C4FF17D00E4B88D5FC73D9AA0 (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, GetGroupRequest_t8A739181C8ADA5AE32AF1CFC23877EF3F0E23BF6* ___0_request, Action_1_t91124C4802E4F08EFF4986FB49141D279FDA8AE1* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28499,7 +28499,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38338
+// Method Definition Index: 45886
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI_InviteToGroup_mF537EEEB34218312A07883B8C99036DB2F97FB54 (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, InviteToGroupRequest_tE7B3E57AE31029297EC23F041CC1E4D4B85796B6* ___0_request, Action_1_t1B813900D284F23AB0E8821F1BA4FA1F3B0D63B8* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28609,7 +28609,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38339
+// Method Definition Index: 45887
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI_IsMember_mEE6F401DC69B0EC8715A0568FB9E4FAF6F5F4AA8 (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, IsMemberRequest_t2BE361682B8DAEE56E351B2F02BB044BCDA4B759* ___0_request, Action_1_t1DB87EBD0BD46BB3B038675C1DBD318E1E1E8727* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28719,7 +28719,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38340
+// Method Definition Index: 45888
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI_ListGroupApplications_m74B1F1DCEEA88DA5A98C60DBE6430588B30A447A (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, ListGroupApplicationsRequest_t272574E3F93298A26834551035A544CC06ACDA1C* ___0_request, Action_1_t829D4908310C56F77EEE133F9F6CF93A1D8A7B5F* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28829,7 +28829,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38341
+// Method Definition Index: 45889
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI_ListGroupBlocks_m4FC4359E60A736AFD5CD6B51B05B8B057BE1C575 (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, ListGroupBlocksRequest_tB78BDE5F5CD7519D49B6BC33E584BFFEEE871B77* ___0_request, Action_1_t3DA9CD77F66BDDA3B0B20F6258A58C57B3E1AC93* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28939,7 +28939,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38342
+// Method Definition Index: 45890
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI_ListGroupInvitations_m091741B94A9142268C6847E6214277A289BD2064 (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, ListGroupInvitationsRequest_t2CE922714F6BA2BAD46AB1A55D5BC4D2A0CF593D* ___0_request, Action_1_t0D82A184E45C45A978CB1AE3D1D76116CD5AABD3* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29049,7 +29049,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38343
+// Method Definition Index: 45891
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI_ListGroupMembers_m60816ADB5559C04FE4EE5CC48C617CD168569174 (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, ListGroupMembersRequest_t555530680C1650A450C3D6E7F9761B7858B4E9F0* ___0_request, Action_1_t60D1EE9836D1E2BBF70A33349D80CFE89C69CF7E* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29159,7 +29159,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38344
+// Method Definition Index: 45892
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI_ListMembership_mF0A1E8D9AC5536C692715F622BCAA52CF470C3D3 (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, ListMembershipRequest_t72F53851AEFD6A7E2B6857374DAB8958945F3B8F* ___0_request, Action_1_t2CEE1C32E28AEE2C3A330D070B12CF224D9334C1* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29269,7 +29269,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38345
+// Method Definition Index: 45893
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI_ListMembershipOpportunities_m99C025C024410321F2A23B5FE8297E0DA2C0995D (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, ListMembershipOpportunitiesRequest_tE3BD0DA3A7995852FC2214414E8896514908B66E* ___0_request, Action_1_t9A27628A4B1E85946C89B09EFB81A472B02E4C7E* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29379,7 +29379,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38346
+// Method Definition Index: 45894
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI_RemoveGroupApplication_m13773D690A0C5666C19B2E3DCD8D72E84FF242A7 (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, RemoveGroupApplicationRequest_t8C9C6B250EBFB686DC1094D7ECE98884E08DA5F3* ___0_request, Action_1_t8F70B1C7A95641434854AE39F70D5DE56A810120* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29489,7 +29489,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38347
+// Method Definition Index: 45895
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI_RemoveGroupInvitation_mD9F92768234784B141D6C701223885E8FCFC3CEC (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, RemoveGroupInvitationRequest_tD2C019660C197AEB8D9CC63272DBD213539C9FF8* ___0_request, Action_1_t8F70B1C7A95641434854AE39F70D5DE56A810120* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29599,7 +29599,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38348
+// Method Definition Index: 45896
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI_RemoveMembers_m572331E918323C5E6C7D24B826B9635340FAE5AD (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, RemoveMembersRequest_t143122C5B9742AD8CC380B92FFC41DAD9B341D31* ___0_request, Action_1_t8F70B1C7A95641434854AE39F70D5DE56A810120* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29709,7 +29709,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38349
+// Method Definition Index: 45897
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI_UnblockEntity_m0E5772F14D7095D09660C9DE9FA8A1A05E83B896 (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, UnblockEntityRequest_tDF86775712F95005540CA7C2D2C89ED3E9A1899F* ___0_request, Action_1_t8F70B1C7A95641434854AE39F70D5DE56A810120* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29819,7 +29819,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38350
+// Method Definition Index: 45898
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI_UpdateGroup_m6A97C27E837DFB75D99C9C8A280C08F4330B6922 (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, UpdateGroupRequest_t3DB4F4BCC798BCB934077F9706F5D6E03F771D0F* ___0_request, Action_1_t589DAB2121C609E5115EAFF638E2D61FACC73D3A* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29929,7 +29929,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38351
+// Method Definition Index: 45899
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabGroupsInstanceAPI_UpdateRole_mEFE726F5D8B546FC6690927A08D0F913BC920A10 (PlayFabGroupsInstanceAPI_t1A3F5D8853C6E8C1CE2AF79CF5C44EEA08B6B48B* __this, UpdateGroupRoleRequest_t12CB5E5672A2D3EFBC1D4B16935EE8D9E1DDBF0D* ___0_request, Action_1_tF8930D9B4032FFB43A75203017F5408968C9E8DF* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30047,7 +30047,7 @@ IL_003b:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 38352
+// Method Definition Index: 45900
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabInsightsAPI__cctor_m1873A68BE5A29EF8A836383F9A88D108BDD2AEAE (const RuntimeMethod* method) 
 {
 	{
@@ -30055,7 +30055,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabInsightsAPI__cctor_m1873A68BE5A29
 		return;
 	}
 }
-// Method Definition Index: 38353
+// Method Definition Index: 45901
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayFabInsightsAPI_IsEntityLoggedIn_mDEF26D92AEA1276C7936DB7742E3BFFB27B6E611 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30074,7 +30074,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayFabInsightsAPI_IsEntityLoggedIn_mDEF
 		return L_1;
 	}
 }
-// Method Definition Index: 38354
+// Method Definition Index: 45902
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabInsightsAPI_ForgetAllCredentials_mCE1B50926D5057B90FF7EE3204D01938D9FDDDCE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30093,7 +30093,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabInsightsAPI_ForgetAllCredentials_
 		return;
 	}
 }
-// Method Definition Index: 38355
+// Method Definition Index: 45903
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabInsightsAPI_GetDetails_m439B08D8A4B827C031D58B98E751CB689456035F (InsightsEmptyRequest_t238F0A0AE47E4485DCCD7BD25CA7A1390B695869* ___0_request, Action_1_t122077422995D2A5F8E65E7534CC15DB3EDDD366* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30187,7 +30187,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38356
+// Method Definition Index: 45904
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabInsightsAPI_GetLimits_mA3905CDABB2E3C33A0F6CD32EA247D5D78FB1767 (InsightsEmptyRequest_t238F0A0AE47E4485DCCD7BD25CA7A1390B695869* ___0_request, Action_1_t5D4C5E8A4BC6D65504B60D2936921D648B3C1D1E* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30281,7 +30281,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38357
+// Method Definition Index: 45905
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabInsightsAPI_GetOperationStatus_m671FCAF7F9D589F3B8575E9FD854B9B6965C8275 (InsightsGetOperationStatusRequest_t59A941D820FC68EAE1DD6194DF661AB2B3D7B680* ___0_request, Action_1_t17CF183A8E2E567135D40AB52C7FC33D185DDEEE* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30375,7 +30375,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38358
+// Method Definition Index: 45906
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabInsightsAPI_GetPendingOperations_m32A321312EA41B68B6DCDD41C8C953FB88D7EEC9 (InsightsGetPendingOperationsRequest_tFF4085E07AE100D325DBA578CAFA667F57996BA1* ___0_request, Action_1_t7FC2ED6F8529F5C83D329EFC4B778D5F59FD1AE1* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30469,7 +30469,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38359
+// Method Definition Index: 45907
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabInsightsAPI_SetPerformance_m754C178F7DCFF7CA65F7B788413EB9B1EAB55486 (InsightsSetPerformanceRequest_t8AF479C4C81792111C7499A2F9DFD83101FD596F* ___0_request, Action_1_tD52DE5DFB4AF6C10A06BD44EA9AC54116BEA0255* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30563,7 +30563,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38360
+// Method Definition Index: 45908
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabInsightsAPI_SetStorageRetention_m535E2B3B83DD4702136B4C4021AD1BC6B3507562 (InsightsSetStorageRetentionRequest_t684B6821325135B56B5AC88A1E6710D56C4FEE9C* ___0_request, Action_1_tD52DE5DFB4AF6C10A06BD44EA9AC54116BEA0255* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30665,7 +30665,7 @@ IL_0030:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 38361
+// Method Definition Index: 45909
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabInsightsInstanceAPI__ctor_m12B94F77517B8FD434DC431C548B7B108D2A8A33 (PlayFabInsightsInstanceAPI_t953D474A885AB365D66FF9B7598159EC50A994C9* __this, PlayFabAuthenticationContext_t221B79722A7A90BF01896A080CB0488FC0A9971A* ___0_context, const RuntimeMethod* method) 
 {
 	{
@@ -30695,7 +30695,7 @@ IL_0015:
 		return;
 	}
 }
-// Method Definition Index: 38362
+// Method Definition Index: 45910
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabInsightsInstanceAPI__ctor_mA2A747887258EAC4A0FCC2EE1C1DEAE54EF6151E (PlayFabInsightsInstanceAPI_t953D474A885AB365D66FF9B7598159EC50A994C9* __this, PlayFabApiSettings_tA64AE28AC2930D2710835FCD401A4212558752D1* ___0_settings, PlayFabAuthenticationContext_t221B79722A7A90BF01896A080CB0488FC0A9971A* ___1_context, const RuntimeMethod* method) 
 {
 	{
@@ -30729,7 +30729,7 @@ IL_0015:
 		return;
 	}
 }
-// Method Definition Index: 38363
+// Method Definition Index: 45911
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayFabInsightsInstanceAPI_IsEntityLoggedIn_m840874C7310AAC3603D106D58A7001143897EBFE (PlayFabInsightsInstanceAPI_t953D474A885AB365D66FF9B7598159EC50A994C9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30753,7 +30753,7 @@ IL_0014:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 38364
+// Method Definition Index: 45912
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabInsightsInstanceAPI_ForgetAllCredentials_m0141C4AEBD13D0B709243128952760F61BA02B24 (PlayFabInsightsInstanceAPI_t953D474A885AB365D66FF9B7598159EC50A994C9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30777,7 +30777,7 @@ IL_0013:
 		return;
 	}
 }
-// Method Definition Index: 38365
+// Method Definition Index: 45913
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabInsightsInstanceAPI_GetDetails_mEBE6CE1E816DA21CA803C2BE13279028002D2A21 (PlayFabInsightsInstanceAPI_t953D474A885AB365D66FF9B7598159EC50A994C9* __this, InsightsEmptyRequest_t238F0A0AE47E4485DCCD7BD25CA7A1390B695869* ___0_request, Action_1_t122077422995D2A5F8E65E7534CC15DB3EDDD366* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30887,7 +30887,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38366
+// Method Definition Index: 45914
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabInsightsInstanceAPI_GetLimits_mD38A416CE4859EEA2C9B1CEF5057C26C47616601 (PlayFabInsightsInstanceAPI_t953D474A885AB365D66FF9B7598159EC50A994C9* __this, InsightsEmptyRequest_t238F0A0AE47E4485DCCD7BD25CA7A1390B695869* ___0_request, Action_1_t5D4C5E8A4BC6D65504B60D2936921D648B3C1D1E* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30997,7 +30997,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38367
+// Method Definition Index: 45915
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabInsightsInstanceAPI_GetOperationStatus_m9738DA667EF517E26E777914C13E1BF8E013E8B0 (PlayFabInsightsInstanceAPI_t953D474A885AB365D66FF9B7598159EC50A994C9* __this, InsightsGetOperationStatusRequest_t59A941D820FC68EAE1DD6194DF661AB2B3D7B680* ___0_request, Action_1_t17CF183A8E2E567135D40AB52C7FC33D185DDEEE* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31107,7 +31107,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38368
+// Method Definition Index: 45916
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabInsightsInstanceAPI_GetPendingOperations_m4A76A095E8F5A39BC929A1E59421B604CA962117 (PlayFabInsightsInstanceAPI_t953D474A885AB365D66FF9B7598159EC50A994C9* __this, InsightsGetPendingOperationsRequest_tFF4085E07AE100D325DBA578CAFA667F57996BA1* ___0_request, Action_1_t7FC2ED6F8529F5C83D329EFC4B778D5F59FD1AE1* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31217,7 +31217,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38369
+// Method Definition Index: 45917
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabInsightsInstanceAPI_SetPerformance_m56E1A08DB7E2F5A6D350124834220FC22B6FF961 (PlayFabInsightsInstanceAPI_t953D474A885AB365D66FF9B7598159EC50A994C9* __this, InsightsSetPerformanceRequest_t8AF479C4C81792111C7499A2F9DFD83101FD596F* ___0_request, Action_1_tD52DE5DFB4AF6C10A06BD44EA9AC54116BEA0255* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31327,7 +31327,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 38370
+// Method Definition Index: 45918
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabInsightsInstanceAPI_SetStorageRetention_m0A6E04305A0DA71026F34AFC950E2A280DF68DC7 (PlayFabInsightsInstanceAPI_t953D474A885AB365D66FF9B7598159EC50A994C9* __this, InsightsSetStorageRetentionRequest_t684B6821325135B56B5AC88A1E6710D56C4FEE9C* ___0_request, Action_1_tD52DE5DFB4AF6C10A06BD44EA9AC54116BEA0255* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31445,7 +31445,7 @@ IL_003b:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 38371
+// Method Definition Index: 45919
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabLocalizationAPI__cctor_mBBA8120C01BC6598E03F970AECB29A1776A5187E (const RuntimeMethod* method) 
 {
 	{
@@ -31453,7 +31453,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabLocalizationAPI__cctor_mBBA8120C0
 		return;
 	}
 }
-// Method Definition Index: 38372
+// Method Definition Index: 45920
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayFabLocalizationAPI_IsEntityLoggedIn_m7C8A6020EF364B439E065142CDD1D7AA8326C2CB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31472,7 +31472,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayFabLocalizationAPI_IsEntityLoggedIn_
 		return L_1;
 	}
 }
-// Method Definition Index: 38373
+// Method Definition Index: 45921
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabLocalizationAPI_ForgetAllCredentials_m23F0686CA0D6FE4F8C4EA26247019D3C99D79B2B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31491,7 +31491,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabLocalizationAPI_ForgetAllCredenti
 		return;
 	}
 }
-// Method Definition Index: 38374
+// Method Definition Index: 45922
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabLocalizationAPI_GetLanguageList_m8626BE7CAE79799989B4649367819285234AADDD (GetLanguageListRequest_t8B494C594A2474E1F793C6A981352376220394F1* ___0_request, Action_1_tB7596168CC03485A9AA884D8B412988B1BB87320* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31593,7 +31593,7 @@ IL_0030:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 38375
+// Method Definition Index: 45923
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabLocalizationInstanceAPI__ctor_mB169DB52E5A020A92768F42722B15A36427424D7 (PlayFabLocalizationInstanceAPI_t796932A7A356979301999CE3FAA30FBB1B871AE1* __this, PlayFabAuthenticationContext_t221B79722A7A90BF01896A080CB0488FC0A9971A* ___0_context, const RuntimeMethod* method) 
 {
 	{
@@ -31623,7 +31623,7 @@ IL_0015:
 		return;
 	}
 }
-// Method Definition Index: 38376
+// Method Definition Index: 45924
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabLocalizationInstanceAPI__ctor_mE826D25E1240BF62B7EAE9AC6E26051EBB98E585 (PlayFabLocalizationInstanceAPI_t796932A7A356979301999CE3FAA30FBB1B871AE1* __this, PlayFabApiSettings_tA64AE28AC2930D2710835FCD401A4212558752D1* ___0_settings, PlayFabAuthenticationContext_t221B79722A7A90BF01896A080CB0488FC0A9971A* ___1_context, const RuntimeMethod* method) 
 {
 	{
@@ -31657,7 +31657,7 @@ IL_0015:
 		return;
 	}
 }
-// Method Definition Index: 38377
+// Method Definition Index: 45925
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayFabLocalizationInstanceAPI_IsEntityLoggedIn_mB3F99D76E7EDA389A352679518DB7DF3B2C36C6F (PlayFabLocalizationInstanceAPI_t796932A7A356979301999CE3FAA30FBB1B871AE1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31681,7 +31681,7 @@ IL_0014:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 38378
+// Method Definition Index: 45926
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabLocalizationInstanceAPI_ForgetAllCredentials_m5541C6774874202EDDA47B667431518C6FB575E9 (PlayFabLocalizationInstanceAPI_t796932A7A356979301999CE3FAA30FBB1B871AE1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31705,7 +31705,7 @@ IL_0013:
 		return;
 	}
 }
-// Method Definition Index: 38379
+// Method Definition Index: 45927
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabLocalizationInstanceAPI_GetLanguageList_mF074F0F976178200C3ACD469B0100EEDCD0D467A (PlayFabLocalizationInstanceAPI_t796932A7A356979301999CE3FAA30FBB1B871AE1* __this, GetLanguageListRequest_t8B494C594A2474E1F793C6A981352376220394F1* ___0_request, Action_1_tB7596168CC03485A9AA884D8B412988B1BB87320* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31823,7 +31823,7 @@ IL_003b:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 38380
+// Method Definition Index: 45928
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI__cctor_mEF00635BC7B61A858A94AADF0EB459E9343F029F (const RuntimeMethod* method) 
 {
 	{
@@ -31831,7 +31831,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI__cctor_mEF00635BC7
 		return;
 	}
 }
-// Method Definition Index: 38381
+// Method Definition Index: 45929
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayFabMultiplayerAPI_IsEntityLoggedIn_m69E2F6335C5776C4DC358A3866A3CE994CA032F1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31850,7 +31850,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayFabMultiplayerAPI_IsEntityLoggedIn_m
 		return L_1;
 	}
 }
-// Method Definition Index: 38382
+// Method Definition Index: 45930
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_ForgetAllCredentials_m65C5D32D56A436B36F24419AB9401F82FB67C522 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31869,7 +31869,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_ForgetAllCredentia
 		return;
 	}
 }
-// Method Definition Index: 38383
+// Method Definition Index: 45931
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_CancelAllMatchmakingTicketsForPlayer_mCAC816B53DC7368EE0C48D2D80396EE02F3ED08A (CancelAllMatchmakingTicketsForPlayerRequest_t8E9ACAC6895533ECD17C4542A140182733E98D96* ___0_request, Action_1_t96291C51E181148385E76266468F47822A66F028* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31963,7 +31963,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38384
+// Method Definition Index: 45932
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_CancelAllServerBackfillTicketsForPlayer_m9063532820EA8CE907761143A07DCDEFBFF78BBB (CancelAllServerBackfillTicketsForPlayerRequest_t1478006377679034E771185B5E422D07C5E24662* ___0_request, Action_1_tEA0D6C49401994AE2ECDE31A6FBC3BAF1A720D54* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32057,7 +32057,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38385
+// Method Definition Index: 45933
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_CancelMatchmakingTicket_mC6016D713E159DACD94BD1C824F010677EDCB2DC (CancelMatchmakingTicketRequest_t7546EA089EAAC48957D5D908FF8EDFF7C0EDC833* ___0_request, Action_1_tAC51CBF6809D09F34C62F271B4C08B747EADE7C0* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32151,7 +32151,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38386
+// Method Definition Index: 45934
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_CancelServerBackfillTicket_m6C6BB8B6C1D39FC33B0CE4990563F335C0F7743A (CancelServerBackfillTicketRequest_t51EF300FB399CB53D9FFCDE281FD3C2697923CDF* ___0_request, Action_1_t60396B2EC9F42D7B204675B0E81259C5C37F27E8* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32245,7 +32245,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38387
+// Method Definition Index: 45935
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_CreateBuildAlias_m2ADA64E4824D4EDCDA589247954A01A609ED2830 (CreateBuildAliasRequest_tD2F77BFB5ADEE3856553727F8D41490CBDC78255* ___0_request, Action_1_t11B4CFB6CA89B2936B5C6EE1695B545BFF63540F* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32339,7 +32339,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38388
+// Method Definition Index: 45936
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_CreateBuildWithCustomContainer_m53B0D8E8461CBCE106DF617569AFC7BA7E8D3375 (CreateBuildWithCustomContainerRequest_tD42E674905C0C33E5591BB51754B1BB7D60B37EF* ___0_request, Action_1_t1C20FBE6A03A65A6FCD2B4B6FA18F288ED73E86B* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32433,7 +32433,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38389
+// Method Definition Index: 45937
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_CreateBuildWithManagedContainer_m6BA7B03C8E9AC2BEDF681D59F6405AE84F1B2053 (CreateBuildWithManagedContainerRequest_tE6681F4A00E09CF1E26D2F45CD88CD96C47D415C* ___0_request, Action_1_t73605BD722FB414C044FB8DCF2984DDDB248F5AF* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32527,7 +32527,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38390
+// Method Definition Index: 45938
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_CreateBuildWithProcessBasedServer_mFE9B34C728FE79B6EDF964A87C685530275DC5C9 (CreateBuildWithProcessBasedServerRequest_tE6558EA25A68DBBACD7CDB7B8856EE5D5124BEE6* ___0_request, Action_1_tC5915E37504567773960FDF19FDA87C61390BE44* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32621,7 +32621,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38391
+// Method Definition Index: 45939
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_CreateLobby_m8C83AC6148DA5DF60457AEE8C1050BEB7C3955DF (CreateLobbyRequest_t3BD4C13DA981BF624B03A520BBFD950C2223B78C* ___0_request, Action_1_t6F5026DFFCEE30749711AB2B8EC9B69D0046F9DE* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32715,7 +32715,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38392
+// Method Definition Index: 45940
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_CreateMatchmakingTicket_m48AFD70E5E919B9BFFCE4F4A5F4D587959BDD340 (CreateMatchmakingTicketRequest_t0341F9ED38C6009EF4715CDDEEC4F867F09A6DAC* ___0_request, Action_1_tDD47A8D23808EB107BE15DD51DD452897566810D* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32809,7 +32809,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38393
+// Method Definition Index: 45941
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_CreateRemoteUser_m4F592FDEAB8F2C42D5D76CC19990D04CC0800C80 (CreateRemoteUserRequest_t6DAA843BC0F722A8754DD170C4E5C7E7452E04BD* ___0_request, Action_1_tF9C7D55631A853F55FB63DBDB7AD40799A6ED5EF* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32903,7 +32903,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38394
+// Method Definition Index: 45942
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_CreateServerBackfillTicket_mB7507EA9C21E0E980C65A7943E83BF147F8DE287 (CreateServerBackfillTicketRequest_tA5E8B20D0408CB1DC936FCA05633432EFC67F6DB* ___0_request, Action_1_t0F4E9B658FC243E5A11D274C0F1676C43EB20E5E* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32997,7 +32997,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38395
+// Method Definition Index: 45943
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_CreateServerMatchmakingTicket_m2C7CCA94789D1FADF54183E167C2989BA2D15F7C (CreateServerMatchmakingTicketRequest_tA15AC2F2846DD88B01514720D1895BC7E0781D23* ___0_request, Action_1_tDD47A8D23808EB107BE15DD51DD452897566810D* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33091,7 +33091,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38396
+// Method Definition Index: 45944
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_CreateTitleMultiplayerServersQuotaChange_m1F87204DCC377221F811364DFB5B94C447AEF127 (CreateTitleMultiplayerServersQuotaChangeRequest_t6C7BEBCD10E9BB45FDDCC669DE0CE280CF1D958F* ___0_request, Action_1_tA442F73B63C57A18034149A2C30AC5403C5A1BC4* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33185,7 +33185,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38397
+// Method Definition Index: 45945
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_DeleteAsset_m12799F66107E46634805E2C36ED49292B0256332 (DeleteAssetRequest_t78EA282051FE896CE3C059EAEA89CF751A5CEFBB* ___0_request, Action_1_t9904560C9FDEBDCDD0358ACB37C4D95C61AE8328* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33279,7 +33279,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38398
+// Method Definition Index: 45946
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_DeleteBuild_m4D195732EBD3D0095C5A378A5597F88C4A932F9B (DeleteBuildRequest_t229EA8DC33343D44FA08FABEEB0B6031D9E90163* ___0_request, Action_1_t9904560C9FDEBDCDD0358ACB37C4D95C61AE8328* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33373,7 +33373,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38399
+// Method Definition Index: 45947
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_DeleteBuildAlias_m5A66F816B241F744F0A2A8D1B4D9AB7C595D452B (DeleteBuildAliasRequest_tDAD1A4F2EF06796C2867AD2FD4441D3F918904D2* ___0_request, Action_1_t9904560C9FDEBDCDD0358ACB37C4D95C61AE8328* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33467,7 +33467,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38400
+// Method Definition Index: 45948
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_DeleteBuildRegion_m99FBC817FA30CAB00C6C69A0E77DB7321B8BE1BB (DeleteBuildRegionRequest_t24D20F7D037BEE1508602CF5D9F30855DE835DF8* ___0_request, Action_1_t9904560C9FDEBDCDD0358ACB37C4D95C61AE8328* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33561,7 +33561,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38401
+// Method Definition Index: 45949
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_DeleteCertificate_m8183ED6E21FD0D5DC2193C4C7FEAEE2AD48CC2FA (DeleteCertificateRequest_t23E6EFDEAA27F11095E6726A9956D38D64DFDDAA* ___0_request, Action_1_t9904560C9FDEBDCDD0358ACB37C4D95C61AE8328* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33655,7 +33655,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38402
+// Method Definition Index: 45950
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_DeleteContainerImageRepository_m08E23DDA55A5E455307F79FBD373108BAD9392E5 (DeleteContainerImageRequest_t2C227572D57C5B3A6B2104E3B05A6ED7D19D4634* ___0_request, Action_1_t9904560C9FDEBDCDD0358ACB37C4D95C61AE8328* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33749,7 +33749,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38403
+// Method Definition Index: 45951
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_DeleteLobby_m7AD8EC3AB55757F872B9A62C612E4892EE694AB9 (DeleteLobbyRequest_tCE8F5310FE0519335FDB20888646339D7FEC1079* ___0_request, Action_1_t4AB9D5C5C22B1D7A6D6271218CCD8F9589B5ABD9* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33843,7 +33843,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38404
+// Method Definition Index: 45952
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_DeleteRemoteUser_mF872EBAE7ABD52403BEF9DCC33097CA3D367A78D (DeleteRemoteUserRequest_t2A2931E9FBEF08DD7F936BAE080ECE6768A11786* ___0_request, Action_1_t9904560C9FDEBDCDD0358ACB37C4D95C61AE8328* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33937,7 +33937,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38405
+// Method Definition Index: 45953
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_DeleteSecret_m1CC9C2D2AF693D22D9C648AC80002AC4D1AD76A5 (DeleteSecretRequest_t288AC831DDB6F124E2182E2A671DEEEF4A7BFD02* ___0_request, Action_1_t9904560C9FDEBDCDD0358ACB37C4D95C61AE8328* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34031,7 +34031,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38406
+// Method Definition Index: 45954
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_EnableMultiplayerServersForTitle_m26FA88FD7CBCF9A5B8DD094CDCAD771CE3369761 (EnableMultiplayerServersForTitleRequest_tB4FEF0EE9D89491B25FD8C949C015D9CD4B99DE4* ___0_request, Action_1_tDBFB82F14D1E2A7D3F86B845F21BDE2C6A2ABCF5* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34125,7 +34125,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38407
+// Method Definition Index: 45955
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_FindFriendLobbies_mE171C1C985B88F3BE06173A08D5ADFBE9F6E2BE1 (FindFriendLobbiesRequest_t7B0C40F6CE7215B6AF0C338D996B906AE88A680B* ___0_request, Action_1_t14C7FA4F25A129604E5B3A762CC89702064F71C0* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34219,7 +34219,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38408
+// Method Definition Index: 45956
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_FindLobbies_m1BE2AFE6EB6643BFFACDC3ED04A0EF4CBFD86582 (FindLobbiesRequest_t632CA150B58020E0BDD91655FC8E4A9BA2AADA25* ___0_request, Action_1_tC98A61B582D412D4B015F3D22C8B51A498BC7D65* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34313,7 +34313,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38409
+// Method Definition Index: 45957
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_GetAssetDownloadUrl_mF7696FBD1F804EC57AD945FCAA7AC93F8A93DED3 (GetAssetDownloadUrlRequest_t085C4C55D751632680F897BE12B0C741EAF0B267* ___0_request, Action_1_tE3414291F83A3A104E19EF470E9D5F9E5CD19AE0* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34407,7 +34407,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38410
+// Method Definition Index: 45958
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_GetAssetUploadUrl_m849FD93814A6C40FC97F53A6E277B46BE6A333FF (GetAssetUploadUrlRequest_tEF2F887BEC546B93ADF33A3465E90AD6600F3C41* ___0_request, Action_1_tA0B20B5B24EF74799801328CDC1EAE023B0BF02C* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34501,7 +34501,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38411
+// Method Definition Index: 45959
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_GetBuild_m6ED757BBA40E1D1A8387FFC973AE0883386557CA (GetBuildRequest_t93728107C56F082C7ED0D1FCA618B7543EBEC63B* ___0_request, Action_1_tE3CE84D0FD3D98C4CAB6CF486ECDE9B89E22A025* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34595,7 +34595,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38412
+// Method Definition Index: 45960
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_GetBuildAlias_m32177262A3E1A7A0D455402746F02065C349A4FB (GetBuildAliasRequest_t97F226A04C0996D425C6F6A075984A6EA6E3E64E* ___0_request, Action_1_t11B4CFB6CA89B2936B5C6EE1695B545BFF63540F* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34689,7 +34689,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38413
+// Method Definition Index: 45961
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_GetContainerRegistryCredentials_mFD9F2781C1D3A9009C8F2992307D7445121A0DFD (GetContainerRegistryCredentialsRequest_t2B3A165519C98146EC9B9C867BD55D300446E69E* ___0_request, Action_1_t2A6B7D7C0D1A28D5B94992DFD0E2C46FAA450123* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34783,7 +34783,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38414
+// Method Definition Index: 45962
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_GetLobby_mC74CA6102E1759B31DB6100E6C7C7BF6BC97C229 (GetLobbyRequest_t8CACA991A9BBD71B3F1B9AA5C40E6D18BD5619C7* ___0_request, Action_1_t7BCFD5722204EC3BD7B786503EE6DA05A6BB8E35* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34877,7 +34877,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38415
+// Method Definition Index: 45963
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_GetMatch_m9778ABC0BBBF077BCA8FF5C43D9694DA85B4AEEC (GetMatchRequest_tCE60568D3972B9077209282E7C00CDB5BA50009C* ___0_request, Action_1_t97503313D00995011292931EECDB9EA65F10B3F2* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34971,7 +34971,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38416
+// Method Definition Index: 45964
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_GetMatchmakingQueue_m5062B8BDF56EAC7DBD7F8A54D9FFE7BA91EA2671 (GetMatchmakingQueueRequest_tB619DC90F3501B4655A00D486F91E9B1B68EA2ED* ___0_request, Action_1_t9346526E827B217DF58FA9021DFF0AECD53566D9* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35065,7 +35065,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38417
+// Method Definition Index: 45965
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_GetMatchmakingTicket_mAA53118192AB12165DEC2233806A28D94E2122B7 (GetMatchmakingTicketRequest_t7E781B458FA0F7F2ED03ADF65617ED060B172D66* ___0_request, Action_1_t03614CDA1CF8AE34DD6899203955E2B7D240D092* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35159,7 +35159,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38418
+// Method Definition Index: 45966
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_GetMultiplayerServerDetails_mD5D1FA7BA4ECED79AF8A8A04321FF4144BC635A5 (GetMultiplayerServerDetailsRequest_t619D938D9C35A3F68093D86318FF73A59165D7BA* ___0_request, Action_1_t0FC321FA961B1B3706BB10031E71E9C93BFD4A40* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35253,7 +35253,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38419
+// Method Definition Index: 45967
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_GetMultiplayerServerLogs_m24BCD8BD5E2B811F7F37AC7BADC9CA4B4EAB03FC (GetMultiplayerServerLogsRequest_t366EA455F034FDBAE0A71C888B13F1DD8B89A912* ___0_request, Action_1_tA623D43634C639140016C36C044756BAA486701D* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35347,7 +35347,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38420
+// Method Definition Index: 45968
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_GetMultiplayerSessionLogsBySessionId_m244BC7D4EDC21CABE3E78965DD622E9503744A12 (GetMultiplayerSessionLogsBySessionIdRequest_t6EDFE4F520BE3BF68C6FF908CB39C12C4CDC326B* ___0_request, Action_1_tA623D43634C639140016C36C044756BAA486701D* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35441,7 +35441,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38421
+// Method Definition Index: 45969
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_GetQueueStatistics_m408B9BB6726BFD8A5FD2B2EED23DD875711A47F3 (GetQueueStatisticsRequest_t9B32287F35E6419C2775D9AC5AEB03EA2F586667* ___0_request, Action_1_tDBDE29C77445F102DE54E993BAB97C51C72A080C* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35535,7 +35535,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38422
+// Method Definition Index: 45970
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_GetRemoteLoginEndpoint_m217E50A106474587F54431EE5348EB0F5514744D (GetRemoteLoginEndpointRequest_t12DB819C96206154E09E2196DCDECC8CAFC66387* ___0_request, Action_1_t11D68F75D1305CE61449E7BAA5E38535CFBD35B4* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35629,7 +35629,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38423
+// Method Definition Index: 45971
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_GetServerBackfillTicket_m4B40630D1D8C719D74EF5E91464296DAA33B51A2 (GetServerBackfillTicketRequest_t74617FE26940F437C9A412D221FA7E2C2DDA45C0* ___0_request, Action_1_t9B09CC1ABE4E6593972C5E122400640B7F058163* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35723,7 +35723,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38424
+// Method Definition Index: 45972
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_GetTitleEnabledForMultiplayerServersStatus_m2CC14273D060ADDA3F050D6D6F205F37058EAA94 (GetTitleEnabledForMultiplayerServersStatusRequest_t81C300377875895A1BDC710BD849D2D8F5689899* ___0_request, Action_1_tEEF616B9E5E556E34FD167EA0CA374AA8B66CEC8* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35817,7 +35817,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38425
+// Method Definition Index: 45973
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_GetTitleMultiplayerServersQuotaChange_m80F2647CDE8B1352D1D08B5F6B2A34CEF80B7205 (GetTitleMultiplayerServersQuotaChangeRequest_tF3C097FCEF7FDAECC545A2537D82917307BA8B49* ___0_request, Action_1_t6B07F4CF2171FA8DC81343184BE3DA3F82CA4160* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35911,7 +35911,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38426
+// Method Definition Index: 45974
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_GetTitleMultiplayerServersQuotas_mA9CC83E00C5E09D0B7750892110C8FDC91078F95 (GetTitleMultiplayerServersQuotasRequest_tEB982723878F992E05B77BD62EC59B94498BA636* ___0_request, Action_1_t432335F3569BF6A1753DA64ECE95DC4A68DDD4E9* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36005,7 +36005,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38427
+// Method Definition Index: 45975
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_InviteToLobby_m951AA3D4E0D492380F16F78D0A62904718902F5C (InviteToLobbyRequest_t8208D455FD24B0562DB481AB3B0B3DC66438F3D5* ___0_request, Action_1_t4AB9D5C5C22B1D7A6D6271218CCD8F9589B5ABD9* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36099,7 +36099,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38428
+// Method Definition Index: 45976
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_JoinArrangedLobby_m74444A9493A99307DEBEF4435E5DFFC22CE65442 (JoinArrangedLobbyRequest_t897C5ABF7F273831D10D7CC9B5E4333211D52828* ___0_request, Action_1_tD83F8F159A4638B48DD57EF81DF11FD44827A4CB* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36193,7 +36193,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38429
+// Method Definition Index: 45977
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_JoinLobby_m50A83748A1234EB1488BE68FA3B0FDFA992FB54F (JoinLobbyRequest_t391DD74586150C8B84F7D7AA04DFA68FE5AEE9A7* ___0_request, Action_1_tD83F8F159A4638B48DD57EF81DF11FD44827A4CB* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36287,7 +36287,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38430
+// Method Definition Index: 45978
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_JoinLobbyAsServer_m6C86F69FD46CEA699B5440815A6DC218EAFED802 (JoinLobbyAsServerRequest_tD1DADC6334700A3D35C78BFECF9034999184352D* ___0_request, Action_1_t8EFF49306DEAF5448CE1BC97CAC65885DD41784B* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36381,7 +36381,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38431
+// Method Definition Index: 45979
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_JoinMatchmakingTicket_m6F6C8A0C1EA17A2E12C704603F1F89EF35F08535 (JoinMatchmakingTicketRequest_t0C7289E70EDD5D7AF62DA597C5A5E110B9FE7CA1* ___0_request, Action_1_tE874FECD8FCB1E8BA0B968044B45CBFF166DB355* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36475,7 +36475,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38432
+// Method Definition Index: 45980
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_LeaveLobby_m55FAAA72D5425B5FFD22354DD7B4B1804F83983D (LeaveLobbyRequest_t7DC344450D565ECC875E11ABD230A90583FA9CF1* ___0_request, Action_1_t4AB9D5C5C22B1D7A6D6271218CCD8F9589B5ABD9* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36569,7 +36569,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38433
+// Method Definition Index: 45981
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_LeaveLobbyAsServer_m19709A4D217D4AC7689D3A39B6730FB9E242FF05 (LeaveLobbyAsServerRequest_t7EFB6EAC465A07C8D576CEB45DC688026E88BFF8* ___0_request, Action_1_t4AB9D5C5C22B1D7A6D6271218CCD8F9589B5ABD9* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36663,7 +36663,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38434
+// Method Definition Index: 45982
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_ListArchivedMultiplayerServers_m3F83E74AC5CDC48C3161F52B378BCB364B594C4C (ListMultiplayerServersRequest_tC66732D25E5D66B4A5081E23430BA97CCD0A5A98* ___0_request, Action_1_t3018F2A2AA4ADD269E2BFE614F4A75F8555E094E* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36757,7 +36757,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38435
+// Method Definition Index: 45983
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_ListAssetSummaries_m870C98A5953124556429E0ACA15B94ABD6469C3D (ListAssetSummariesRequest_t2EA0546EC0AE69B5A7920B1FAAEB84E22006A741* ___0_request, Action_1_tBAE0479D3A0C93D08B042EB9F2952D815524139A* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36851,7 +36851,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38436
+// Method Definition Index: 45984
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_ListBuildAliases_mC5A7E1672ADBB5C442C8C96635EA755C88BEC225 (ListBuildAliasesRequest_t956FBBDCA0E11DC9A6A4604E514E0591F0531459* ___0_request, Action_1_t39AF19B92466247B71D7D58F664F3D9B3023BD9E* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36945,7 +36945,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38437
+// Method Definition Index: 45985
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_ListBuildSummariesV2_mA87AA3CCD93549F7A19E40FBE59842D6EBAFE6A8 (ListBuildSummariesRequest_tF7B17D7BAB891C0529F84D19BBD9225F7EE62EB7* ___0_request, Action_1_tC40CCD49258AA4CC137A3BA8DE5BF21B8EB30F18* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37039,7 +37039,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38438
+// Method Definition Index: 45986
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_ListCertificateSummaries_m9AEDAA8978ADA2F2A9314348E37B92AB9A7D3618 (ListCertificateSummariesRequest_tF5B2617760E95BACEEA2D49388089F2695041DC1* ___0_request, Action_1_tC6B22268D33E00005D1E0CADA4BF5F15D5DE28E1* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37133,7 +37133,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38439
+// Method Definition Index: 45987
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_ListContainerImages_m07029570BA6F304F936332C34322CFDAE84000B5 (ListContainerImagesRequest_t22B2DDC32EC1CAFC2A90F7959D8184E9CCBB9E54* ___0_request, Action_1_t44A71C83D2517B0A45AECBD1F205421A809A61D5* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37227,7 +37227,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38440
+// Method Definition Index: 45988
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_ListContainerImageTags_mF3AA4E561B4C194C4D0CFBC2D271CC90AD70B3B7 (ListContainerImageTagsRequest_t5542D6BA1CE385C6F47E40525F843664F2EAB4D8* ___0_request, Action_1_tD2A7138B3D7D6C92E3AFF445A467FAF5E8BE9046* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37321,7 +37321,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38441
+// Method Definition Index: 45989
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_ListMatchmakingQueues_m06A744BD567A5A488F5266F7760AA693A0372A84 (ListMatchmakingQueuesRequest_tB97E97196053A83906FAA473C12D95D650FB4291* ___0_request, Action_1_t58D97749C571D9033903DF5D81D92212B9A2C9A1* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37415,7 +37415,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38442
+// Method Definition Index: 45990
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_ListMatchmakingTicketsForPlayer_mE5BA485557C80BB1F0E69007EFBD22D509F50647 (ListMatchmakingTicketsForPlayerRequest_t43E66B1155BB3EC2C6FDC2F15EF27CA3B8D47ECD* ___0_request, Action_1_t703E1D7118F5F0A9FA931A1DED91BAE78BFCA066* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37509,7 +37509,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38443
+// Method Definition Index: 45991
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_ListMultiplayerServers_m64730E08D38045B38F6F24DC7EE7FD18621D219B (ListMultiplayerServersRequest_tC66732D25E5D66B4A5081E23430BA97CCD0A5A98* ___0_request, Action_1_t3018F2A2AA4ADD269E2BFE614F4A75F8555E094E* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37603,7 +37603,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38444
+// Method Definition Index: 45992
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_ListPartyQosServers_m4DF64216ECB83A585EAC54374E3DD193D6565A4B (ListPartyQosServersRequest_tD454265D312175360B13F2CE38EA51A5DA27463E* ___0_request, Action_1_t2B3E185FA1A3B7A91E6CEDA2AAC19C5B7510F004* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37678,7 +37678,7 @@ IL_0015:
 		return;
 	}
 }
-// Method Definition Index: 38445
+// Method Definition Index: 45993
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_ListQosServersForTitle_m7198786B2D350A3BCB3818F872BD7E9D91B5C4A4 (ListQosServersForTitleRequest_tC4443ABAB3E4A13F132634DFEA03C3792BF95973* ___0_request, Action_1_tF46C8310AB4F9A8E46AD35668485DE0CE45FB0EC* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37772,7 +37772,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38446
+// Method Definition Index: 45994
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_ListSecretSummaries_m8E5DF414093B2C5C5A7A97E5053F7AD1CF6EA7A2 (ListSecretSummariesRequest_t18E67F44E451A9062677F11CD194E1CCEE6E57B6* ___0_request, Action_1_tB2201C135CA8B4910C601960CCFFD465C1956ABB* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37866,7 +37866,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38447
+// Method Definition Index: 45995
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_ListServerBackfillTicketsForPlayer_mD84ADAD6A6DA4BA635D2681C82BF7E7C8B4DFD9C (ListServerBackfillTicketsForPlayerRequest_t8B32F9A142A81C90C38F0895BB1DEA13D0D6246B* ___0_request, Action_1_t6172D7C8652954FCC2C1E72ECC1EF38DA8CE7098* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37960,7 +37960,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38448
+// Method Definition Index: 45996
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_ListTitleMultiplayerServersQuotaChanges_m1B9CDA614DF6C5938ACE604AC9BAA576A2840A94 (ListTitleMultiplayerServersQuotaChangesRequest_tA6E84FACC6D0B847A7E94DE99C16A6E068E73B83* ___0_request, Action_1_t63C452FB2C5652A50533683FBBC3FBFD5D95875E* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38054,7 +38054,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38449
+// Method Definition Index: 45997
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_ListVirtualMachineSummaries_mED1BBAB9320AC0E078878D3D37BB339FE4C86AC6 (ListVirtualMachineSummariesRequest_t47BB08E1441307D7E47BCA737F9617394003A4D0* ___0_request, Action_1_tCF8CF8D49D28BCF588758B746E6B70E1A7E0E3A5* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38148,7 +38148,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38450
+// Method Definition Index: 45998
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_RemoveMatchmakingQueue_m3F30C4EE99666C989820EA64F499F81EE4A273CD (RemoveMatchmakingQueueRequest_t7A484BEAC774D57C7B0338E4E32EA7764F02DD95* ___0_request, Action_1_t252C3D27D3ADD006D090465115321222609D91CE* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38242,7 +38242,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38451
+// Method Definition Index: 45999
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_RemoveMember_m4F09B1699AC4976F15232E0F4664AC855B6BFE14 (RemoveMemberFromLobbyRequest_t7AB12EF2360F6056A3A6414E5E35C877E8EDF34E* ___0_request, Action_1_t4AB9D5C5C22B1D7A6D6271218CCD8F9589B5ABD9* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38336,7 +38336,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38452
+// Method Definition Index: 46000
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_RequestMultiplayerServer_mBD4FF1B98C6BC0AD88AC343C217FC9589EF95A7D (RequestMultiplayerServerRequest_t91E400B9839D2A6C24F53D49A8BB245BE905A65A* ___0_request, Action_1_t83AECCFF96630AECBE42DBDC5A1BEA5925E3A5F2* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38430,7 +38430,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38453
+// Method Definition Index: 46001
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_RequestPartyService_mAF8D3CEAF00F6AA512DA2404CFB8D318D1BEF266 (RequestPartyServiceRequest_tB99FB9520151298A3429E889A70009A61E7B0435* ___0_request, Action_1_t412D8010235C9C9E9E64F50A4FCAE7754F87BE88* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38524,7 +38524,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38454
+// Method Definition Index: 46002
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_RolloverContainerRegistryCredentials_m63088D22A57AB040975C8EDC8365C41D32AE5D09 (RolloverContainerRegistryCredentialsRequest_t8966747C24BD66BEF088C2443B9B4FB5CBC23B55* ___0_request, Action_1_tC57A03BFB2332FED2716F164B5ED5E631C029E11* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38618,7 +38618,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38455
+// Method Definition Index: 46003
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_SetMatchmakingQueue_m7632DE9FB28591386308D4894124FD5CB4D92872 (SetMatchmakingQueueRequest_t64A88ED4E7803E6E0C210DB1CD882DD9235A3BD3* ___0_request, Action_1_t97F47668E8239ACF50A174385133AAF7BDDBA8F2* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38712,7 +38712,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38456
+// Method Definition Index: 46004
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_ShutdownMultiplayerServer_m744FC924F181F95790838748E6666DD87F3D1298 (ShutdownMultiplayerServerRequest_tFB716C19AD1319052F8B09F32DF3C3EA2DD1CBC2* ___0_request, Action_1_t9904560C9FDEBDCDD0358ACB37C4D95C61AE8328* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38806,7 +38806,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38457
+// Method Definition Index: 46005
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_SubscribeToLobbyResource_m8A61BA963D221C698BB20F2642002C4185B8C8CE (SubscribeToLobbyResourceRequest_tE9557141290554FA0F91B186756421AC6C89D6CF* ___0_request, Action_1_tA9E27E21F7ED64D9DDF02B2D30CF395B32A20031* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38900,7 +38900,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38458
+// Method Definition Index: 46006
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_SubscribeToMatchmakingResource_m50273C5F6DD47C50FC2F6051B409E46E345799A1 (SubscribeToMatchResourceRequest_tEBA297532BFF56E868D46BB07C566DFEA9FFA173* ___0_request, Action_1_t2D65567288D2E89EA4605A96D1E3056814C013BA* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38994,7 +38994,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38459
+// Method Definition Index: 46007
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_UnsubscribeFromLobbyResource_mC4C932A40B8014BEBF3DB55131FDEBDDEB1358CB (UnsubscribeFromLobbyResourceRequest_t0A03A20D75C5648431F4F95BAF162C1BF37BBBA0* ___0_request, Action_1_t4AB9D5C5C22B1D7A6D6271218CCD8F9589B5ABD9* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39088,7 +39088,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38460
+// Method Definition Index: 46008
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_UnsubscribeFromMatchmakingResource_mEB5624CBB4E60476A7DFAFB4524CE8D3D6E03E48 (UnsubscribeFromMatchResourceRequest_t57710E20D4DD6C726C7A456E539C7CB259BD7ABF* ___0_request, Action_1_t8AC64391D6CEBFE426DEE966E37EFFE700C12198* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39182,7 +39182,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38461
+// Method Definition Index: 46009
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_UntagContainerImage_m9B4F90B98B9428AEBE835684CC742350EFE92238 (UntagContainerImageRequest_tD0AAC3379C6CB07B7A4C0825A76B619E40D0D10D* ___0_request, Action_1_t9904560C9FDEBDCDD0358ACB37C4D95C61AE8328* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39276,7 +39276,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38462
+// Method Definition Index: 46010
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_UpdateBuildAlias_m146EBD95BB1D102068815BCBAE01E35942AD9989 (UpdateBuildAliasRequest_tFE2FAA3B475E75B9FA738BB3F79BA1B1AA452254* ___0_request, Action_1_t11B4CFB6CA89B2936B5C6EE1695B545BFF63540F* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39370,7 +39370,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38463
+// Method Definition Index: 46011
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_UpdateBuildName_mBE490EDD760958C2195F280178C56B6AD993F4DF (UpdateBuildNameRequest_t1C46DE508D42EB1ED9011E0FB16B88DFDD90672A* ___0_request, Action_1_t9904560C9FDEBDCDD0358ACB37C4D95C61AE8328* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39464,7 +39464,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38464
+// Method Definition Index: 46012
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_UpdateBuildRegion_m236FB0535F4789856276C774D8D68761883C7289 (UpdateBuildRegionRequest_t2E7D760CCF72A0E7ABDA9D09D177CBBBE14CC9D8* ___0_request, Action_1_t9904560C9FDEBDCDD0358ACB37C4D95C61AE8328* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39558,7 +39558,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38465
+// Method Definition Index: 46013
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_UpdateBuildRegions_m8CC7BB75376D55D83AA3149DD2427560BF02747F (UpdateBuildRegionsRequest_tD82F43ECD326A7169A680F38A01CA2AFF543E470* ___0_request, Action_1_t9904560C9FDEBDCDD0358ACB37C4D95C61AE8328* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39652,7 +39652,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38466
+// Method Definition Index: 46014
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_UpdateLobby_m41E3ED10510B419C486C2E2E23DA6689CDAF87F9 (UpdateLobbyRequest_tC7325D4661D6F00F1AC716E12D6CC925009C3441* ___0_request, Action_1_t4AB9D5C5C22B1D7A6D6271218CCD8F9589B5ABD9* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39746,7 +39746,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38467
+// Method Definition Index: 46015
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_UpdateLobbyAsServer_mC775A756A7A555CE10DAB89B345A527DC8AB2E30 (UpdateLobbyAsServerRequest_t9C2EE809A8988B8FE85F193DF5DE36B54096AD96* ___0_request, Action_1_t4AB9D5C5C22B1D7A6D6271218CCD8F9589B5ABD9* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39840,7 +39840,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38468
+// Method Definition Index: 46016
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_UploadCertificate_m7F0285461AE3FF53929C4369CEE21DAA8EEB1C4C (UploadCertificateRequest_t5DEC877AA2EAF29C891D927CDAEB3B54E5A1564E* ___0_request, Action_1_t9904560C9FDEBDCDD0358ACB37C4D95C61AE8328* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39934,7 +39934,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 38469
+// Method Definition Index: 46017
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabMultiplayerAPI_UploadSecret_mB99A8FF87FE060C06942D1737BFBA6FDCD45FCE2 (UploadSecretRequest_t0F9A48115AC1BAB5C325E0BC78E63BE392A3A270* ___0_request, Action_1_t9904560C9FDEBDCDD0358ACB37C4D95C61AE8328* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;

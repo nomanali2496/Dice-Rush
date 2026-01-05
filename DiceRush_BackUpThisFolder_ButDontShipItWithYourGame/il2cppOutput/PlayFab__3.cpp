@@ -6718,7 +6718,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonGetTwitchRes
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 41929
+// Method Definition Index: 49477
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_UnregisterInstance_mD44B7BB326C88C9BABDF0682E4DE6AD1DE0AD737 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, RuntimeObject* ___0_instance, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -65185,7 +65185,7 @@ IL_f484:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 3809
+// Method Definition Index: 3915
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Delegate_get_Target_m6E203F111C1548193A5AB7E616BD5834CD269753_inline (Delegate_t* __this, const RuntimeMethod* method) 
 {
 	{

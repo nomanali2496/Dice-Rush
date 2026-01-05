@@ -84,9 +84,21 @@
             "icon": null
           },
           {
+            "name": "AudioMixer",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "AudioResource",
             "scenes": [],
             "dependencyType": 1,
+            "icon": null
+          },
+          {
+            "name": "AudioSource",
+            "scenes": [],
+            "dependencyType": 0,
             "icon": null
           },
           {
@@ -239,6 +251,12 @@
             "icon": null
           },
           {
+            "name": "LineRenderer",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "LowerResBlitTexture",
             "scenes": [],
             "dependencyType": 0,
@@ -254,19 +272,25 @@
           },
           {
             "name": "Mesh",
-            "scenes": [],
+            "scenes": [
+              "Assets/Main Scene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "MeshFilter",
-            "scenes": [],
+            "scenes": [
+              "Assets/Main Scene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "MeshRenderer",
-            "scenes": [],
+            "scenes": [
+              "Assets/Main Scene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -462,6 +486,12 @@
             "name": "TimeManager",
             "scenes": [],
             "dependencyType": 1,
+            "icon": null
+          },
+          {
+            "name": "TrailRenderer",
+            "scenes": [],
+            "dependencyType": 0,
             "icon": null
           },
           {

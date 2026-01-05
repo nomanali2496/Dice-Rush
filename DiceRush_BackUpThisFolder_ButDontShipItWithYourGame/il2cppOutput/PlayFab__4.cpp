@@ -14982,7 +14982,7 @@ inline void PlayFabResultEvent_1_Invoke_mDFB3527068264355817C552EEED183703EE768E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 41931
+// Method Definition Index: 49479
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_OnProcessingEvent_mFD80296AF2ACBB540E96ABDFB7E4FA52133ABC67 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, ApiProcessingEventArgs_t664B1BAEB3983BC9D8FE22ACFE2BC6059F33D4D3* ___0_e, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51208,13 +51208,13 @@ IL_c5a8:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 41941
+// Method Definition Index: 49489
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayFabRequestEvent_1_Invoke_m12752B2569F723AE5BDBB5616C3EC76C89C1792D_gshared_inline (PlayFabRequestEvent_1_t51B3E359773FD9E5CA5D68F46DE9B456B849F3CF* __this, RuntimeObject* ___0_request, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_request, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 41937
+// Method Definition Index: 49485
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayFabResultEvent_1_Invoke_m6985CA99E04AE4562B93660AF025DE0F915CD5BC_gshared_inline (PlayFabResultEvent_1_t30E35A16C71E77D8A1E88CEA24747B2415521859* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, RuntimeObject*, const RuntimeMethod*);
