@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 using System;
+using System.Linq;
 
 /// <summary>
 /// Manages sequential offer panel display on user login
-/// Shows all seven offer panels one by one when main menu becomes active for the first time after login
+/// Shows 3 random offer panels one by one when main menu becomes active for the first time after login
 /// </summary>
 public class OfferPanelManager : MonoBehaviour
 {
@@ -35,7 +37,8 @@ public class OfferPanelManager : MonoBehaviour
     
     private bool hasShownOfferThisSession = false;
     private int currentActivePanelIndex = -1;
-    private int nextPanelIndexToShow = 0; // Track which panel to show next (0-6)
+    private int nextPanelIndexToShow = 0; // Track which panel to show next in the selected panels sequence
+    private List<int> selectedPanelIndices = new List<int>(); // Stores 3 random panel indices to show
     private bool hasLoggedIn = false;
     private bool isMonitoringMainMenu = false;
     private bool hasDailyRewardPanelClosed = false; // Start as false - will be set to true when panel closes
@@ -155,11 +158,13 @@ public class OfferPanelManager : MonoBehaviour
         // Only reset flags if offers haven't been shown today
         if (!hasShownToday)
         {
+            // Generate 3 random panel indices
+            GenerateRandomPanelIndices();
             nextPanelIndexToShow = 0; // Reset to show panels from the beginning
             isShowingPanelsSequence = false; // Reset sequence flag
             hasShownAfterMainMenuActivation = false; // Reset flag so offer panels can show again
             hasShownOfferThisSession = false; // Reset session flag
-            Debug.Log("[OfferPanelManager] User logged in, offers haven't been shown today. Will show offers when main menu activates.");
+            Debug.Log("[OfferPanelManager] User logged in, offers haven't been shown today. Will show 3 random offers when main menu activates.");
         }
         else
         {
@@ -201,6 +206,7 @@ public class OfferPanelManager : MonoBehaviour
         hasLoggedIn = false;
         hasShownOfferThisSession = false;
         nextPanelIndexToShow = 0;
+        selectedPanelIndices.Clear();
         isShowingPanelsSequence = false;
         hasTriggeredDailyRewardPanel = false;
         hasShownAfterMainMenuActivation = false;
@@ -276,7 +282,55 @@ public class OfferPanelManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Shows the next offer panel in sequence (0, 1, 2, 3, 4, 5, 6)
+    /// Generates 3 random unique panel indices from available panels
+    /// </summary>
+    private void GenerateRandomPanelIndices()
+    {
+        selectedPanelIndices.Clear();
+        
+        // Validate that we have offer panels
+        if (offerPanels == null || offerPanels.Length == 0)
+        {
+            Debug.LogWarning("[OfferPanelManager] No offer panels assigned!");
+            return;
+        }
+        
+        // Get list of valid panel indices (non-null panels)
+        List<int> validIndices = new List<int>();
+        for (int i = 0; i < offerPanels.Length; i++)
+        {
+            if (offerPanels[i] != null)
+            {
+                validIndices.Add(i);
+            }
+        }
+        
+        if (validIndices.Count == 0)
+        {
+            Debug.LogWarning("[OfferPanelManager] No valid offer panels found!");
+            return;
+        }
+        
+        // If we have 3 or fewer valid panels, use all of them
+        int panelsToSelect = Mathf.Min(3, validIndices.Count);
+        
+        // Shuffle the valid indices and take the first 3
+        for (int i = 0; i < validIndices.Count; i++)
+        {
+            int randomIndex = UnityEngine.Random.Range(i, validIndices.Count);
+            int temp = validIndices[i];
+            validIndices[i] = validIndices[randomIndex];
+            validIndices[randomIndex] = temp;
+        }
+        
+        // Take the first 3 (or all if less than 3)
+        selectedPanelIndices = validIndices.Take(panelsToSelect).ToList();
+        
+        Debug.Log($"[OfferPanelManager] Generated {selectedPanelIndices.Count} random panel indices: {string.Join(", ", selectedPanelIndices)}");
+    }
+    
+    /// <summary>
+    /// Shows the next offer panel from the 3 randomly selected panels
     /// </summary>
     private void ShowNextOfferPanelInSequence()
     {
@@ -287,46 +341,40 @@ public class OfferPanelManager : MonoBehaviour
             return;
         }
         
-        // Check if we've shown all panels
-        if (nextPanelIndexToShow >= offerPanels.Length)
+        // Check if we have selected panel indices (should be generated on login)
+        if (selectedPanelIndices == null || selectedPanelIndices.Count == 0)
         {
-            Debug.Log("[OfferPanelManager] All offer panels have been shown!");
+            Debug.LogWarning("[OfferPanelManager] No panel indices selected! Generating now...");
+            GenerateRandomPanelIndices();
+            if (selectedPanelIndices == null || selectedPanelIndices.Count == 0)
+            {
+                Debug.LogWarning("[OfferPanelManager] Failed to generate panel indices!");
+                return;
+            }
+        }
+        
+        // Check if we've shown all selected panels
+        if (nextPanelIndexToShow >= selectedPanelIndices.Count)
+        {
+            Debug.Log("[OfferPanelManager] All 3 random offer panels have been shown!");
             isShowingPanelsSequence = false;
             hasShownOfferThisSession = true;
             return;
         }
         
-        // Find the next valid panel (skip null panels)
-        int validPanelCount = 0;
-        int currentIndex = nextPanelIndexToShow;
-        int attempts = 0;
+        // Get the actual panel index from our selected list
+        int selectedIndex = selectedPanelIndices[nextPanelIndexToShow];
         
-        // Count valid panels first
-        foreach (GameObject panel in offerPanels)
+        // Validate the panel exists and is not null
+        if (selectedIndex < 0 || selectedIndex >= offerPanels.Length || offerPanels[selectedIndex] == null)
         {
-            if (panel != null)
-                validPanelCount++;
-        }
-        
-        if (validPanelCount == 0)
-        {
-            Debug.LogWarning("[OfferPanelManager] No valid offer panels found!");
-            return;
-        }
-        
-        // Find next valid panel starting from nextPanelIndexToShow
-        while (currentIndex < offerPanels.Length && offerPanels[currentIndex] == null && attempts < offerPanels.Length)
-        {
-            currentIndex++;
-            attempts++;
-        }
-        
-        // If we've reached the end, check if all panels have been shown
-        if (currentIndex >= offerPanels.Length)
-        {
-            Debug.Log("[OfferPanelManager] All offer panels have been shown!");
-            isShowingPanelsSequence = false;
-            hasShownOfferThisSession = true;
+            Debug.LogWarning($"[OfferPanelManager] Invalid panel index {selectedIndex}! Skipping to next panel.");
+            nextPanelIndexToShow++;
+            // Try to show next panel
+            if (nextPanelIndexToShow < selectedPanelIndices.Count)
+            {
+                ShowNextOfferPanelInSequence();
+            }
             return;
         }
         
@@ -334,28 +382,27 @@ public class OfferPanelManager : MonoBehaviour
         HideAllPanels();
         
         // Show the next panel in sequence with animation
-        if (offerPanels[currentIndex] != null)
+        currentActivePanelIndex = selectedIndex;
+        isShowingPanelsSequence = true;
+        hasShownOfferThisSession = true;
+        
+        // Mark that offers have been shown today when showing the first panel
+        if (nextPanelIndexToShow == 0)
         {
-            currentActivePanelIndex = currentIndex;
-            nextPanelIndexToShow = currentIndex + 1; // Update to next panel for next time
-            isShowingPanelsSequence = true;
-            hasShownOfferThisSession = true;
-            
-            // Mark that offers have been shown today when showing the first panel
-            if (currentIndex == 0)
-            {
-                MarkOffersAsShownToday();
-                Debug.Log("[OfferPanelManager] Marked offers as shown for today.");
-            }
-            
-            // Setup button listeners to auto-close panel when any button is clicked
-            SetupPanelButtonListeners(offerPanels[currentIndex]);
-            
-            // Start scale animation
-            StartCoroutine(AnimatePanelScale(offerPanels[currentIndex]));
-            
-            Debug.Log($"[OfferPanelManager] Showing offer panel {currentIndex + 1} of {offerPanels.Length} (Panel {currentIndex + 1})");
+            MarkOffersAsShownToday();
+            Debug.Log("[OfferPanelManager] Marked offers as shown for today.");
         }
+        
+        // Setup button listeners to auto-close panel when any button is clicked
+        SetupPanelButtonListeners(offerPanels[selectedIndex]);
+        
+        // Start scale animation
+        StartCoroutine(AnimatePanelScale(offerPanels[selectedIndex]));
+        
+        Debug.Log($"[OfferPanelManager] Showing offer panel {nextPanelIndexToShow + 1} of {selectedPanelIndices.Count} (Panel index {selectedIndex})");
+        
+        // Update to next panel for next time
+        nextPanelIndexToShow++;
     }
     
     /// <summary>
@@ -462,24 +509,20 @@ public class OfferPanelManager : MonoBehaviour
             if (offerPanels[currentActivePanelIndex] != null)
             {
                 offerPanels[currentActivePanelIndex].SetActive(false);
-                int previousIndex = currentActivePanelIndex;
                 currentActivePanelIndex = -1;
                 
-                // Move to next panel index
-                nextPanelIndexToShow = previousIndex + 1;
-                
                 // Show next panel in sequence if there are more to show
-                if (nextPanelIndexToShow < offerPanels.Length && isShowingPanelsSequence && !isWaitingForNextPanel)
+                if (nextPanelIndexToShow < selectedPanelIndices.Count && isShowingPanelsSequence && !isWaitingForNextPanel)
                 {
                     isWaitingForNextPanel = true;
                     StartCoroutine(ShowNextPanelAfterDelay());
                 }
-                else if (nextPanelIndexToShow >= offerPanels.Length)
+                else if (nextPanelIndexToShow >= selectedPanelIndices.Count)
                 {
-                    // All panels have been shown
+                    // All 3 selected panels have been shown
                     isShowingPanelsSequence = false;
                     isWaitingForNextPanel = false;
-                    Debug.Log("[OfferPanelManager] All offer panels have been shown and closed!");
+                    Debug.Log("[OfferPanelManager] All 3 random offer panels have been shown and closed!");
                 }
             }
         }
@@ -516,23 +559,20 @@ public class OfferPanelManager : MonoBehaviour
                     // If panel was active before but is now inactive, it was closed
                     if (lastActivePanelIndex == currentActivePanelIndex && !isPanelActive)
                     {
-                        Debug.Log($"[OfferPanelManager] Detected panel {currentActivePanelIndex + 1} was closed, showing next panel...");
-                        
-                        // Move to next panel index
-                        nextPanelIndexToShow = currentActivePanelIndex + 1;
+                        Debug.Log($"[OfferPanelManager] Detected panel {currentActivePanelIndex} was closed, showing next panel...");
                         
                         // Show next panel if there are more to show
-                        if (nextPanelIndexToShow < offerPanels.Length)
+                        if (nextPanelIndexToShow < selectedPanelIndices.Count)
                         {
                             isWaitingForNextPanel = true;
                             StartCoroutine(ShowNextPanelAfterDelay());
                         }
                         else
                         {
-                            // All panels have been shown
+                            // All 3 selected panels have been shown
                             isShowingPanelsSequence = false;
                             currentActivePanelIndex = -1;
-                            Debug.Log("[OfferPanelManager] All offer panels have been shown and closed!");
+                            Debug.Log("[OfferPanelManager] All 3 random offer panels have been shown and closed!");
                         }
                         
                         lastActivePanelIndex = -1;
@@ -623,6 +663,7 @@ public class OfferPanelManager : MonoBehaviour
     public void ResetSessionFlag()
     {
         hasShownOfferThisSession = false;
+        GenerateRandomPanelIndices(); // Regenerate random panels
         nextPanelIndexToShow = 0;
         isShowingPanelsSequence = false;
     }

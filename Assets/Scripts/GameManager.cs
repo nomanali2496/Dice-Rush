@@ -1369,12 +1369,12 @@ public class GameManager : MonoBehaviour
     {
         Color[] colors = new Color[]
         {
-            ParseHexColor("#7026BA"), // Purple
-            ParseHexColor("#260E45"), // Dark Purple
-            ParseHexColor("#FF66FF"), // Magenta/Pink
-            ParseHexColor("#B165FF"), // Light Purple
-            ParseHexColor("#86E21B"), // Green
-            ParseHexColor("#FFD24D")  // Yellow
+            ParseHexColor("#FF00C8"), // Purple
+            ParseHexColor("#FF6A00"), // Dark Purple
+            ParseHexColor("#FFE100"), // Magenta/Pink
+            ParseHexColor("#0DFF00"), // Light Purple
+            ParseHexColor("#00F6FF"), // Green
+            ParseHexColor("#FF0000")  // Yellow
         };
         
         // Randomly select one of the colors
