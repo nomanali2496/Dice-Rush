@@ -1033,19 +1033,6 @@ public class NumberGrid : MonoBehaviour
     }
     
     /// <summary>
-    /// Gets the currently visible powerup box (if any)
-    /// Returns null if no powerup is currently visible
-    /// </summary>
-    public GameObject GetVisiblePowerup()
-    {
-        if (currentlyVisiblePowerup != null && currentlyVisiblePowerup.isPowerupVisible && !currentlyVisiblePowerup.isSelected)
-        {
-            return currentlyVisiblePowerup.boxObject;
-        }
-        return null;
-    }
-    
-    /// <summary>
     /// Stops the powerup timer system
     /// </summary>
     private void StopPowerupTimer()
@@ -1115,10 +1102,10 @@ public class NumberGrid : MonoBehaviour
                     elapsed += Time.deltaTime;
                     float remaining = powerupVisibleDuration - elapsed;
                     
-                    // Update slider (0 to 1, where 1 is full time elapsed - moves left to right)
+                    // Update slider (0 to 1, where 1 is full time remaining)
                     if (powerupTimerSlider != null && powerupTimerSlider.gameObject.activeSelf)
                     {
-                        powerupTimerSlider.value = elapsed / powerupVisibleDuration;
+                        powerupTimerSlider.value = remaining / powerupVisibleDuration;
                     }
                     
                     // Update text (show remaining seconds)
@@ -1165,7 +1152,7 @@ public class NumberGrid : MonoBehaviour
         if (powerupTimerSlider != null)
         {
             powerupTimerSlider.gameObject.SetActive(true);
-            powerupTimerSlider.value = 0f; // Start at empty (left side)
+            powerupTimerSlider.value = 1f; // Start at full
         }
         if (powerupTimerText != null)
         {
