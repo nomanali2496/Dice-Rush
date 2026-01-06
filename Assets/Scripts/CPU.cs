@@ -18,7 +18,13 @@ public class CPU : MonoBehaviour
     [SerializeField] private bool autoRoll = true; // Automatically roll dice at intervals
     [SerializeField] private int cpuIndex = 0; // Index of this CPU (0, 1, 2, etc.) - set by GameManager
     
+    [Header("Powerup Settings")]
+    [SerializeField] private float powerupCheckInterval = 0.5f; // How often to check for visible powerups (in seconds)
+    [SerializeField] private float powerupSelectionProbability = 0.1f; // Probability (0-1) that CPU will select a visible powerup (70% default)
+    [SerializeField] private float powerupSelectionDelay = 0.3f; // Delay before CPU selects powerup (to simulate reaction time)
+    
     private Coroutine rollCoroutine; // Coroutine for automatic rolling
+    private Coroutine powerupCheckCoroutine; // Coroutine for checking visible powerups
     
     private void Start()
     {
@@ -32,6 +38,12 @@ public class CPU : MonoBehaviour
         {
             StartAutoRolling();
         }
+        
+        // Start powerup checking coroutine
+        if (enableCPU)
+        {
+            StartPowerupChecking();
+        }
     }
     
     private void OnDestroy()
@@ -41,6 +53,9 @@ public class CPU : MonoBehaviour
         {
             StopCoroutine(rollCoroutine);
         }
+        
+        // Stop powerup checking coroutine
+        StopPowerupChecking();
     }
     
     /// <summary>
@@ -119,12 +134,30 @@ public class CPU : MonoBehaviour
             yield break;
         }
         
+        // First check if there's a visible powerup - prioritize powerups
+        GameObject visiblePowerup = numberGrid.GetVisiblePowerup();
+        if (visiblePowerup != null)
+        {
+            // Decide whether to select the powerup based on probability
+            float randomValue = Random.Range(0f, 1f);
+            if (randomValue <= powerupSelectionProbability)
+            {
+                // Select the powerup
+                bool success = numberGrid.SelectPowerup(visiblePowerup, PlayerType.CPU, cpuIndex);
+                if (success)
+                {
+                    Debug.Log($"[CPU {cpuIndex}] Selected visible powerup!");
+                    yield break; // Don't select number box if powerup was selected
+                }
+            }
+        }
+        
         // Get available boxes for this sum (for this specific CPU)
         List<GameObject> availableBoxes = numberGrid.GetAvailableBoxes(diceSum, PlayerType.CPU, cpuIndex);
         
         if (availableBoxes == null || availableBoxes.Count == 0)
         {
-            Debug.Log($"[CPU] No available boxes for sum {diceSum}!");
+            Debug.Log($"[CPU {cpuIndex}] No available boxes for sum {diceSum}!");
             yield break;
         }
         
@@ -133,15 +166,80 @@ public class CPU : MonoBehaviour
         GameObject selectedBox = availableBoxes[randomIndex];
         
         // Select the box (mark as CPU selection with this CPU's index)
-        bool success = numberGrid.SelectBox(selectedBox, PlayerType.CPU, cpuIndex);
+        bool success2 = numberGrid.SelectBox(selectedBox, PlayerType.CPU, cpuIndex);
         
-        if (success)
+        if (success2)
         {
-            Debug.Log($"[CPU] Selected box with number {diceSum}!");
+            Debug.Log($"[CPU {cpuIndex}] Selected box with number {diceSum}!");
         }
         else
         {
-            Debug.LogWarning($"[CPU] Failed to select box with number {diceSum}!");
+            Debug.LogWarning($"[CPU {cpuIndex}] Failed to select box with number {diceSum}!");
+        }
+    }
+    
+    /// <summary>
+    /// Starts the powerup checking coroutine
+    /// </summary>
+    private void StartPowerupChecking()
+    {
+        if (powerupCheckCoroutine != null)
+        {
+            StopCoroutine(powerupCheckCoroutine);
+        }
+        powerupCheckCoroutine = StartCoroutine(PowerupCheckLoop());
+    }
+    
+    /// <summary>
+    /// Stops the powerup checking coroutine
+    /// </summary>
+    private void StopPowerupChecking()
+    {
+        if (powerupCheckCoroutine != null)
+        {
+            StopCoroutine(powerupCheckCoroutine);
+            powerupCheckCoroutine = null;
+        }
+    }
+    
+    /// <summary>
+    /// Coroutine that continuously checks for visible powerups and selects them
+    /// </summary>
+    private IEnumerator PowerupCheckLoop()
+    {
+        while (enableCPU)
+        {
+            yield return new WaitForSeconds(powerupCheckInterval);
+            
+            if (!enableCPU || numberGrid == null)
+            {
+                yield break;
+            }
+            
+            // Check for visible powerup
+            GameObject visiblePowerup = numberGrid.GetVisiblePowerup();
+            if (visiblePowerup != null)
+            {
+                // Decide whether to select the powerup based on probability
+                float randomValue = Random.Range(0f, 1f);
+                if (randomValue <= powerupSelectionProbability)
+                {
+                    // Wait a bit before selecting (simulate reaction time)
+                    yield return new WaitForSeconds(powerupSelectionDelay);
+                    
+                    // Double-check the powerup is still visible (might have been selected by another player)
+                    visiblePowerup = numberGrid.GetVisiblePowerup();
+                    if (visiblePowerup != null)
+                    {
+                        // Select the powerup
+                        bool success = numberGrid.SelectPowerup(visiblePowerup, PlayerType.CPU, cpuIndex);
+                        if (success)
+                        {
+                            Debug.Log($"[CPU {cpuIndex}] Selected visible powerup!");
+                        }
+                    }
+                }
+            }
         }
     }
     
@@ -160,6 +258,16 @@ public class CPU : MonoBehaviour
         else
         {
             StopAutoRolling();
+        }
+        
+        // Start or stop powerup checking based on enabled state
+        if (enabled)
+        {
+            StartPowerupChecking();
+        }
+        else
+        {
+            StopPowerupChecking();
         }
     }
     

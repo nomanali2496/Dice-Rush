@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -39,6 +40,15 @@ public class NumberGrid : MonoBehaviour
     [SerializeField] private string selectButtonName = "SelectButton"; // Name of the Button component
     [SerializeField] private string highlightImageName = "HighlightImage"; // Name of the highlight Image component
     
+    [Header("Powerup Timer UI")]
+    [SerializeField] private Slider powerupTimerSlider; // Slider to show timer progress
+    [SerializeField] private TextMeshProUGUI powerupTimerText; // Text to show timer countdown
+    
+    [Header("Powerup Timer Settings")]
+    [SerializeField] private float powerupVisibleDuration = 5f; // How long powerup stays visible (seconds)
+    [SerializeField] private float minDelayBetweenPowerups = 3f; // Minimum delay before next powerup appears
+    [SerializeField] private float maxDelayBetweenPowerups = 10f; // Maximum delay before next powerup appears
+    
     /// <summary>
     /// Box data structure to store box information
     /// </summary>
@@ -49,11 +59,13 @@ public class NumberGrid : MonoBehaviour
         public bool isPowerup; // Whether this is a powerup box
         public Button selectButton; // Button component
         public Image highlightImage; // Highlight image component
+        public Image powerupImage; // Powerup image component (for powerup boxes)
         public bool isSelected; // Whether this box is selected (by any player)
         public PlayerType selectedByPlayer = PlayerType.Player; // Which player selected this box
         public int selectedByCPUIndex = -1; // Which CPU index selected this box (-1 if player or not selected)
         public int selectedInRollSum = -1; // Dice sum when this box was selected (-1 if not selected)
         public int selectedInRollId = -1; // Roll ID when this box was selected (-1 if not selected)
+        public bool isPowerupVisible = false; // Whether this powerup is currently visible
     }
     
     private List<BoxData> boxDataList = new List<BoxData>(); // List to store all box data
@@ -76,15 +88,31 @@ public class NumberGrid : MonoBehaviour
     private Color playerOutlineColor = Color.white; // Player's outline color (default white)
     private Dictionary<int, Color> cpuOutlineColors = new Dictionary<int, Color>(); // CPU outline colors by index
     
+    // Powerup timer system
+    private Coroutine powerupTimerCoroutine; // Coroutine for powerup timer
+    private BoxData currentlyVisiblePowerup = null; // Currently visible powerup box
+    private System.Random powerupRandom = new System.Random(); // Random for powerup selection
+    
     // Events
     public System.Action<int, GameObject> OnBoxSelected; // Called when a box is selected (number, boxObject)
     public System.Action OnAllBoxesSelected; // Called when all selectable boxes are selected
     
     private void Start()
     {
+        // Ensure slider is hidden by default
+        if (powerupTimerSlider != null)
+        {
+            powerupTimerSlider.gameObject.SetActive(false);
+        }
+        if (powerupTimerText != null)
+        {
+            powerupTimerText.gameObject.SetActive(false);
+        }
+        
         GenerateGrid();
         // Initially disable all buttons until dice are rolled
         UpdateBoxInteractability();
+        // Timer is automatically started by GenerateGrid()
     }
     
     /// <summary>
@@ -157,6 +185,18 @@ public class NumberGrid : MonoBehaviour
                 CreateNumberBox(gridItems[i].number, posIndex);
             }
         }
+        
+        // Restart powerup timer after grid is generated (wait one frame to ensure all boxes are created)
+        StartCoroutine(DelayedTimerStartAfterGrid());
+    }
+    
+    /// <summary>
+    /// Delays timer start by one frame after grid generation
+    /// </summary>
+    private IEnumerator DelayedTimerStartAfterGrid()
+    {
+        yield return null; // Wait one frame to ensure all boxes are fully created
+        StartPowerupTimer();
     }
     
     /// <summary>
@@ -315,31 +355,39 @@ public class NumberGrid : MonoBehaviour
             }
         }
         
-        // Find and enable powerup image with sprite
+        // Find and store powerup image with sprite (start hidden)
         Image powerupImage = FindComponentInChildren<Image>(box, powerupImageName);
         if (powerupImage != null)
         {
             powerupImage.sprite = powerupSprites[powerupSpriteIndex];
-            powerupImage.gameObject.SetActive(true);
+            powerupImage.gameObject.SetActive(false); // Start hidden
+            boxData.powerupImage = powerupImage; // Store reference
         }
         else
         {
             Debug.LogWarning($"[NumberGrid] Could not find powerup image component '{powerupImageName}' in prefab!");
         }
         
-        // Find select button (powerups don't have selectable buttons)
+        // Find select button (powerups are selectable only when visible)
         Button selectButton = FindComponentInChildren<Button>(box, selectButtonName);
         if (selectButton != null)
         {
-            selectButton.interactable = false; // Powerups are never selectable
+            boxData.selectButton = selectButton;
+            selectButton.interactable = false; // Initially disabled (only enabled when visible)
+            selectButton.onClick.RemoveAllListeners();
+            selectButton.onClick.AddListener(() => OnPowerupButtonClicked(boxData));
         }
         
-        // Powerups should never have highlight images shown
+        // Find and store highlight image (for showing when powerup is selected)
         Image highlightImage = FindComponentInChildren<Image>(box, highlightImageName);
         if (highlightImage != null)
         {
-            // Don't assign highlight to powerup boxData, but make sure it's hidden
-            highlightImage.gameObject.SetActive(false);
+            boxData.highlightImage = highlightImage; // Store reference for when powerup is selected
+            highlightImage.gameObject.SetActive(false); // Initially hidden
+        }
+        else
+        {
+            Debug.LogWarning($"[NumberGrid] Could not find highlight image component '{highlightImageName}' in prefab!");
         }
         
         boxDataList.Add(boxData);
@@ -398,6 +446,9 @@ public class NumberGrid : MonoBehaviour
     /// </summary>
     public void ClearGrid()
     {
+        // Stop powerup timer
+        StopPowerupTimer();
+        
         foreach (GameObject box in instantiatedBoxes)
         {
             if (box != null)
@@ -409,6 +460,7 @@ public class NumberGrid : MonoBehaviour
         boxDataList.Clear();
         currentDiceSumPlayer = -1;
         currentDiceSumCPU = -1;
+        currentlyVisiblePowerup = null;
         
         // Clear CPU dice sums and roll IDs dictionaries
         cpuDiceSums.Clear();
@@ -612,12 +664,20 @@ public class NumberGrid : MonoBehaviour
         {
             boxData.isSelected = false;
             boxData.selectedByPlayer = PlayerType.Player;
+            boxData.selectedByCPUIndex = -1;
             boxData.selectedInRollSum = -1;
             boxData.selectedInRollId = -1;
             
             if (boxData.highlightImage != null)
             {
                 boxData.highlightImage.gameObject.SetActive(false);
+            }
+            
+            // Reset powerup visibility state (but don't show/hide - timer will handle that)
+            if (boxData.isPowerup)
+            {
+                boxData.isPowerupVisible = false;
+                // Button will be enabled/disabled by timer system
             }
         }
         
@@ -811,7 +871,7 @@ public class NumberGrid : MonoBehaviour
     }
     
     /// <summary>
-    /// Gets the count of selected boxes for each player/CPU
+    /// Gets the count of selected boxes for each player/CPU (includes powerups)
     /// Returns: Dictionary with PlayerType and CPU index as key, count as value
     /// Key format: "Player" for player, "CPU_0" for CPU index 0, "CPU_1" for CPU index 1, etc.
     /// </summary>
@@ -821,7 +881,7 @@ public class NumberGrid : MonoBehaviour
         
         foreach (BoxData boxData in boxDataList)
         {
-            if (!boxData.isPowerup && boxData.isSelected)
+            if (boxData.isSelected) // Include both number boxes and powerups
             {
                 string key;
                 if (boxData.selectedByPlayer == PlayerType.Player)
@@ -934,10 +994,389 @@ public class NumberGrid : MonoBehaviour
     public void RegenerateGrid()
     {
         GenerateGrid();
+        // Timer is automatically started by GenerateGrid()
+    }
+    
+    /// <summary>
+    /// Starts the powerup timer system
+    /// </summary>
+    private void StartPowerupTimer()
+    {
+        // Only start if GameObject is active and enabled
+        if (!gameObject.activeInHierarchy || !enabled)
+        {
+            Debug.LogWarning("[NumberGrid] Cannot start powerup timer - GameObject is not active!");
+            return;
+        }
+        
+        StopPowerupTimer(); // Stop any existing timer
+        
+        // Only start if we have powerup boxes
+        int powerupCount = boxDataList.Count(b => b.isPowerup);
+        if (powerupCount == 0)
+        {
+            Debug.LogWarning("[NumberGrid] Cannot start powerup timer - no powerup boxes found!");
+            return;
+        }
+        
+        // Start the coroutine
+        powerupTimerCoroutine = StartCoroutine(PowerupTimerLoop());
+        Debug.Log($"[NumberGrid] Powerup timer started! ({powerupCount} powerup boxes available)");
+    }
+    
+    /// <summary>
+    /// Public method to restart the powerup timer (useful for debugging or external calls)
+    /// </summary>
+    public void RestartPowerupTimer()
+    {
+        StartPowerupTimer();
+    }
+    
+    /// <summary>
+    /// Gets the currently visible powerup box (if any)
+    /// Returns null if no powerup is currently visible
+    /// </summary>
+    public GameObject GetVisiblePowerup()
+    {
+        if (currentlyVisiblePowerup != null && currentlyVisiblePowerup.isPowerupVisible && !currentlyVisiblePowerup.isSelected)
+        {
+            return currentlyVisiblePowerup.boxObject;
+        }
+        return null;
+    }
+    
+    /// <summary>
+    /// Stops the powerup timer system
+    /// </summary>
+    private void StopPowerupTimer()
+    {
+        if (powerupTimerCoroutine != null)
+        {
+            StopCoroutine(powerupTimerCoroutine);
+            powerupTimerCoroutine = null;
+        }
+        
+        // Hide currently visible powerup
+        if (currentlyVisiblePowerup != null)
+        {
+            HidePowerup(currentlyVisiblePowerup);
+        }
+        
+        // Hide and reset UI
+        if (powerupTimerSlider != null)
+        {
+            powerupTimerSlider.value = 0f;
+            powerupTimerSlider.gameObject.SetActive(false);
+        }
+        if (powerupTimerText != null)
+        {
+            powerupTimerText.text = "";
+            powerupTimerText.gameObject.SetActive(false);
+        }
+    }
+    
+    /// <summary>
+    /// Main loop for powerup timer system
+    /// </summary>
+    private IEnumerator PowerupTimerLoop()
+    {
+        while (true)
+        {
+            // Wait for random delay before showing next powerup
+            float delay = Random.Range(minDelayBetweenPowerups, maxDelayBetweenPowerups);
+            yield return new WaitForSeconds(delay);
+            
+            // Get list of all unselected powerup boxes
+            List<BoxData> powerupBoxes = boxDataList.Where(b => b.isPowerup && !b.isSelected).ToList();
+            
+            if (powerupBoxes.Count > 0)
+            {
+                // Randomly select a powerup box
+                int randomIndex = powerupRandom.Next(0, powerupBoxes.Count);
+                BoxData selectedPowerup = powerupBoxes[randomIndex];
+                
+                // Show the powerup
+                ShowPowerup(selectedPowerup);
+                
+                // Wait for visibility duration while updating timer
+                // Check if powerup was selected during countdown
+                float elapsed = 0f;
+                while (elapsed < powerupVisibleDuration)
+                {
+                    // Check if powerup was selected (locked) during countdown
+                    if (selectedPowerup.isSelected)
+                    {
+                        // Powerup was selected, stop timer for this powerup and continue loop
+                        // Timer UI is already hidden by LockPowerup method
+                        currentlyVisiblePowerup = null;
+                        break;
+                    }
+                    
+                    elapsed += Time.deltaTime;
+                    float remaining = powerupVisibleDuration - elapsed;
+                    
+                    // Update slider (0 to 1, where 1 is full time elapsed - moves left to right)
+                    if (powerupTimerSlider != null && powerupTimerSlider.gameObject.activeSelf)
+                    {
+                        powerupTimerSlider.value = elapsed / powerupVisibleDuration;
+                    }
+                    
+                    // Update text (show remaining seconds)
+                    if (powerupTimerText != null && powerupTimerText.gameObject.activeSelf)
+                    {
+                        powerupTimerText.text = Mathf.CeilToInt(remaining).ToString();
+                    }
+                    
+                    yield return null;
+                }
+                
+                // Only hide the powerup if it wasn't selected during countdown
+                if (!selectedPowerup.isSelected)
+                {
+                    HidePowerup(selectedPowerup);
+                }
+            }
+        }
+    }
+    
+    /// <summary>
+    /// Shows a powerup box (makes it visible and selectable)
+    /// </summary>
+    private void ShowPowerup(BoxData powerupBox)
+    {
+        if (powerupBox == null || !powerupBox.isPowerup) return;
+        
+        currentlyVisiblePowerup = powerupBox;
+        powerupBox.isPowerupVisible = true;
+        
+        // Show powerup image
+        if (powerupBox.powerupImage != null)
+        {
+            powerupBox.powerupImage.gameObject.SetActive(true);
+        }
+        
+        // Enable button (make it selectable)
+        if (powerupBox.selectButton != null)
+        {
+            powerupBox.selectButton.interactable = true;
+        }
+        
+        // Show timer UI (slider and text)
+        if (powerupTimerSlider != null)
+        {
+            powerupTimerSlider.gameObject.SetActive(true);
+            powerupTimerSlider.value = 0f; // Start at empty (left side)
+        }
+        if (powerupTimerText != null)
+        {
+            powerupTimerText.gameObject.SetActive(true);
+            powerupTimerText.text = Mathf.CeilToInt(powerupVisibleDuration).ToString();
+        }
+        
+        Debug.Log($"[NumberGrid] Powerup shown for 5 seconds!");
+    }
+    
+    /// <summary>
+    /// Hides a powerup box (makes it invisible and unselectable)
+    /// </summary>
+    private void HidePowerup(BoxData powerupBox)
+    {
+        if (powerupBox == null || !powerupBox.isPowerup) return;
+        
+        if (currentlyVisiblePowerup == powerupBox)
+        {
+            currentlyVisiblePowerup = null;
+        }
+        
+        powerupBox.isPowerupVisible = false;
+        
+        // Hide powerup image
+        if (powerupBox.powerupImage != null)
+        {
+            powerupBox.powerupImage.gameObject.SetActive(false);
+        }
+        
+        // Disable button (make it unselectable)
+        if (powerupBox.selectButton != null)
+        {
+            powerupBox.selectButton.interactable = false;
+        }
+        
+        // Hide timer UI (slider and text)
+        if (powerupTimerSlider != null)
+        {
+            powerupTimerSlider.value = 0f;
+            powerupTimerSlider.gameObject.SetActive(false);
+        }
+        if (powerupTimerText != null)
+        {
+            powerupTimerText.text = "";
+            powerupTimerText.gameObject.SetActive(false);
+        }
+        
+        Debug.Log($"[NumberGrid] Powerup hidden!");
+    }
+    
+    /// <summary>
+    /// Called when a powerup button is clicked
+    /// </summary>
+    private void OnPowerupButtonClicked(BoxData boxData)
+    {
+        if (boxData.isSelected)
+        {
+            // Box is already selected and locked - do nothing
+            return;
+        }
+        
+        if (!boxData.isPowerup)
+        {
+            Debug.LogWarning("[NumberGrid] This is not a powerup box!");
+            return;
+        }
+        
+        if (!boxData.isPowerupVisible)
+        {
+            Debug.LogWarning("[NumberGrid] Powerup is not currently visible!");
+            return;
+        }
+        
+        // Lock the powerup (keep it visible but locked)
+        LockPowerup(boxData, PlayerType.Player, -1);
+        
+        // Trigger event (use -1 or 0 as number for powerups)
+        OnBoxSelected?.Invoke(-1, boxData.boxObject);
+        
+        Debug.Log($"[NumberGrid] Powerup selected and locked!");
+        
+        // Check if all boxes are selected
+        CheckIfAllBoxesSelected();
+    }
+    
+    /// <summary>
+    /// Selects a powerup programmatically (for CPU or other automated selection)
+    /// </summary>
+    public bool SelectPowerup(GameObject boxObject, PlayerType playerType, int cpuIndex = 0)
+    {
+        // Find the box data
+        BoxData boxData = boxDataList.Find(b => b.boxObject == boxObject);
+        if (boxData == null)
+        {
+            Debug.LogWarning($"[NumberGrid] Box object not found in boxDataList!");
+            return false;
+        }
+        
+        if (boxData.isSelected)
+        {
+            Debug.LogWarning($"[NumberGrid] Powerup is already selected!");
+            return false;
+        }
+        
+        if (!boxData.isPowerup)
+        {
+            Debug.LogWarning("[NumberGrid] This is not a powerup box!");
+            return false;
+        }
+        
+        if (!boxData.isPowerupVisible)
+        {
+            Debug.LogWarning("[NumberGrid] Powerup is not currently visible!");
+            return false;
+        }
+        
+        // Lock the powerup (keep it visible but locked)
+        LockPowerup(boxData, playerType, cpuIndex);
+        
+        // Trigger event
+        OnBoxSelected?.Invoke(-1, boxData.boxObject);
+        
+        Debug.Log($"[NumberGrid] Powerup selected by {playerType}!");
+        
+        // Check if all boxes are selected
+        CheckIfAllBoxesSelected();
+        
+        return true;
+    }
+    
+    /// <summary>
+    /// Locks a powerup (keeps it visible but makes it unselectable)
+    /// </summary>
+    private void LockPowerup(BoxData boxData, PlayerType playerType, int cpuIndex)
+    {
+        if (boxData == null || !boxData.isPowerup) return;
+        
+        // Mark as selected
+        boxData.isSelected = true;
+        boxData.selectedByPlayer = playerType;
+        boxData.selectedByCPUIndex = (playerType == PlayerType.CPU) ? cpuIndex : -1;
+        boxData.selectedInRollSum = -1; // Powerups don't have dice sum
+        boxData.selectedInRollId = -1; // Powerups don't have roll ID
+        
+        // Keep powerup visible (don't hide it)
+        // Powerup image stays visible
+        
+        // Disable button (permanently locked)
+        if (boxData.selectButton != null)
+        {
+            boxData.selectButton.interactable = false;
+        }
+        
+        // Show highlight
+        if (boxData.highlightImage != null)
+        {
+            boxData.highlightImage.gameObject.SetActive(true);
+        }
+        
+        // Hide timer UI (slider and text) since powerup is now locked
+        if (currentlyVisiblePowerup == boxData)
+        {
+            currentlyVisiblePowerup = null;
+        }
+        boxData.isPowerupVisible = false; // No longer in timer cycle
+        
+        // Hide timer UI
+        if (powerupTimerSlider != null)
+        {
+            powerupTimerSlider.value = 0f;
+            powerupTimerSlider.gameObject.SetActive(false);
+        }
+        if (powerupTimerText != null)
+        {
+            powerupTimerText.text = "";
+            powerupTimerText.gameObject.SetActive(false);
+        }
+    }
+    
+    private void OnEnable()
+    {
+        // If grid is already generated but timer is not running, restart it
+        // Wait one frame to ensure everything is initialized
+        if (boxDataList.Count > 0)
+        {
+            StartCoroutine(DelayedTimerStart());
+        }
+    }
+    
+    /// <summary>
+    /// Delays timer start by one frame to ensure everything is initialized
+    /// </summary>
+    private IEnumerator DelayedTimerStart()
+    {
+        yield return null; // Wait one frame
+        if (powerupTimerCoroutine == null && boxDataList.Count > 0)
+        {
+            StartPowerupTimer();
+        }
+    }
+    
+    private void OnDisable()
+    {
+        // Stop timer when GameObject is disabled
+        StopPowerupTimer();
     }
     
     private void OnDestroy()
     {
+        StopPowerupTimer();
         ClearGrid();
     }
 }
