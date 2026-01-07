@@ -225,6 +225,38 @@ public class PlayFabManager : MonoBehaviour
     }
     
     /// <summary>
+    /// Login with Google account
+    /// </summary>
+    /// <param name="serverAuthCode">Server auth code from Google Sign-In (required for PlayFab)</param>
+    public void LoginWithGoogle(string serverAuthCode)
+    {
+        Debug.Log("[PlayFabManager] Attempting to login with Google...");
+        
+        if (string.IsNullOrEmpty(serverAuthCode))
+        {
+            Debug.LogError("[PlayFabManager] Server auth code is required for Google login!");
+            OnLoginFailure(new PlayFabError
+            {
+                Error = PlayFabErrorCode.UnknownError,
+                ErrorMessage = "Server auth code is required"
+            });
+            return;
+        }
+        
+        var request = new LoginWithGoogleAccountRequest
+        {
+            ServerAuthCode = serverAuthCode,
+            CreateAccount = true, // Create PlayFab account if it doesn't exist
+            InfoRequestParameters = new GetPlayerCombinedInfoRequestParams
+            {
+                GetPlayerProfile = true
+            }
+        };
+        
+        PlayFabClientAPI.LoginWithGoogleAccount(request, OnLoginSuccess, OnLoginFailure);
+    }
+    
+    /// <summary>
     /// Check if there's an existing PlayFab session
     /// </summary>
     public bool HasExistingSession()

@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "com.google.external-dependency-manager": "https://github.com/googlesamples/unity-jar-resolver.git?path=upm",
+    "com.google.signin": "https://github.com/Thaina/google-signin-unity.git#newmigration",
     "com.unity.2d.animation": "12.0.2",
     "com.unity.2d.aseprite": "2.0.1",
     "com.unity.2d.psdimporter": "11.0.1",

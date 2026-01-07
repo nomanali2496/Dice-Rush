@@ -25,6 +25,7 @@ public class AuthenticationManager : MonoBehaviour
     [SerializeField] private TMP_InputField loginPasswordInput;
     [SerializeField] private Button loginButton;
     [SerializeField] private Button guestLoginButton;
+    [SerializeField] private Button googleLoginButton;
     [SerializeField] private Toggle loginPasswordToggle;
     
     [Header("Registration UI")]
@@ -62,6 +63,9 @@ public class AuthenticationManager : MonoBehaviour
         
         if (guestLoginButton != null)
             guestLoginButton.onClick.AddListener(OnGuestLoginClicked);
+        
+        if (googleLoginButton != null)
+            googleLoginButton.onClick.AddListener(OnGoogleLoginClicked);
         
         if (switchToRegisterButton != null)
             switchToRegisterButton.onClick.AddListener(() => ShowRegisterSection());
@@ -119,6 +123,14 @@ public class AuthenticationManager : MonoBehaviour
             GameObject playfabObj = new GameObject("PlayFabManager");
             playfabObj.AddComponent<PlayFabManager>();
             Debug.Log("PlayFabManager initialized");
+        }
+        
+        // Initialize GoogleSignInManager if it doesn't exist
+        if (GoogleSignInManager.Instance == null)
+        {
+            GameObject googleSignInObj = new GameObject("GoogleSignInManager");
+            googleSignInObj.AddComponent<GoogleSignInManager>();
+            Debug.Log("GoogleSignInManager initialized");
         }
     }
     
@@ -379,6 +391,65 @@ public class AuthenticationManager : MonoBehaviour
         }
     }
     
+    private void OnGoogleLoginClicked()
+    {
+        SetLoadingState(true);
+        UpdateStatusText("Signing in with Google...");
+        
+        if (GoogleSignInManager.Instance != null)
+        {
+            // Subscribe to Google Sign-In events
+            GoogleSignInManager.Instance.OnGoogleSignInSuccess += OnGoogleSignInSuccess;
+            GoogleSignInManager.Instance.OnGoogleSignInFailure += OnGoogleSignInFailure;
+            
+            // Start Google Sign-In
+            GoogleSignInManager.Instance.SignInWithGoogle();
+        }
+        else
+        {
+            UpdateStatusText("Error: GoogleSignInManager not found!");
+            SetLoadingState(false);
+        }
+    }
+    
+    private void OnGoogleSignInSuccess(string serverAuthCode, string idToken)
+    {
+        Debug.Log("[AuthenticationManager] Google Sign-In successful, logging into PlayFab...");
+        UpdateStatusText("Logging into PlayFab...");
+        
+        if (PlayFabManager.Instance != null)
+        {
+            // PlayFab requires ServerAuthCode (first parameter)
+            PlayFabManager.Instance.LoginWithGoogle(serverAuthCode);
+        }
+        else
+        {
+            UpdateStatusText("Error: PlayFabManager not found!");
+            SetLoadingState(false);
+        }
+        
+        // Unsubscribe from events
+        if (GoogleSignInManager.Instance != null)
+        {
+            GoogleSignInManager.Instance.OnGoogleSignInSuccess -= OnGoogleSignInSuccess;
+            GoogleSignInManager.Instance.OnGoogleSignInFailure -= OnGoogleSignInFailure;
+        }
+    }
+    
+    private void OnGoogleSignInFailure(string error)
+    {
+        Debug.LogError($"[AuthenticationManager] Google Sign-In failed: {error}");
+        UpdateStatusText($"Google Sign-In failed: {error}");
+        SetLoadingState(false);
+        
+        // Unsubscribe from events
+        if (GoogleSignInManager.Instance != null)
+        {
+            GoogleSignInManager.Instance.OnGoogleSignInSuccess -= OnGoogleSignInSuccess;
+            GoogleSignInManager.Instance.OnGoogleSignInFailure -= OnGoogleSignInFailure;
+        }
+    }
+    
     #endregion
     
     #region Registration
@@ -538,6 +609,9 @@ public class AuthenticationManager : MonoBehaviour
         
         if (guestLoginButton != null)
             guestLoginButton.interactable = !isLoading;
+        
+        if (googleLoginButton != null)
+            googleLoginButton.interactable = !isLoading;
         
         if (switchToRegisterButton != null)
             switchToRegisterButton.interactable = !isLoading;

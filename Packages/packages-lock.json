@@ -1,5 +1,22 @@
 {
   "dependencies": {
+    "com.google.external-dependency-manager": {
+      "version": "https://github.com/googlesamples/unity-jar-resolver.git?path=upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "6eee66190fb6d7182518cc3b41e3919e054699b6"
+    },
+    "com.google.signin": {
+      "version": "https://github.com/Thaina/google-signin-unity.git#newmigration",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.2.1",
+        "com.google.external-dependency-manager": "1.2.175"
+      },
+      "hash": "b7293977a7fae2895acc5fc4bc43d624846d08df"
+    },
     "com.unity.2d.animation": {
       "version": "12.0.2",
       "depth": 0,
@@ -197,7 +214,7 @@
     },
     "com.unity.nuget.newtonsoft-json": {
       "version": "3.2.1",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
