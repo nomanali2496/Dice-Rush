@@ -119,12 +119,29 @@ public class CPU : MonoBehaviour
             yield break;
         }
         
+        // Check if there's a visible powerup available
+        GameObject visiblePowerup = numberGrid.GetCurrentlyVisiblePowerup();
+        if (visiblePowerup != null)
+        {
+            // CPU has a chance to select the powerup (50% probability)
+            // This makes CPUs competitive but not too aggressive
+            if (Random.Range(0f, 1f) < 0.5f)
+            {
+                bool powerupSuccess = numberGrid.SelectPowerup(visiblePowerup, PlayerType.CPU, cpuIndex);
+                if (powerupSuccess)
+                {
+                    Debug.Log($"[CPU {cpuIndex}] Selected visible powerup!");
+                    yield break; // Powerup selected, done
+                }
+            }
+        }
+        
         // Get available boxes for this sum (for this specific CPU)
         List<GameObject> availableBoxes = numberGrid.GetAvailableBoxes(diceSum, PlayerType.CPU, cpuIndex);
         
         if (availableBoxes == null || availableBoxes.Count == 0)
         {
-            Debug.Log($"[CPU] No available boxes for sum {diceSum}!");
+            Debug.Log($"[CPU {cpuIndex}] No available boxes for sum {diceSum}!");
             yield break;
         }
         
@@ -137,11 +154,11 @@ public class CPU : MonoBehaviour
         
         if (success)
         {
-            Debug.Log($"[CPU] Selected box with number {diceSum}!");
+            Debug.Log($"[CPU {cpuIndex}] Selected box with number {diceSum}!");
         }
         else
         {
-            Debug.LogWarning($"[CPU] Failed to select box with number {diceSum}!");
+            Debug.LogWarning($"[CPU {cpuIndex}] Failed to select box with number {diceSum}!");
         }
     }
     

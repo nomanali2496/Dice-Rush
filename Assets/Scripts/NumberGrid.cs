@@ -990,6 +990,18 @@ public class NumberGrid : MonoBehaviour
     }
     
     /// <summary>
+    /// Gets the currently visible powerup GameObject (null if no powerup is visible)
+    /// </summary>
+    public GameObject GetCurrentlyVisiblePowerup()
+    {
+        if (currentlyVisiblePowerup != null && currentlyVisiblePowerup.isPowerupVisible && !currentlyVisiblePowerup.isSelected)
+        {
+            return currentlyVisiblePowerup.boxObject;
+        }
+        return null;
+    }
+    
+    /// <summary>
     /// Regenerates the grid with new random positions
     /// </summary>
     [ContextMenu("Regenerate Grid")]
