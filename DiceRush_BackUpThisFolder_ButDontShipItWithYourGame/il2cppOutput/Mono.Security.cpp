@@ -1942,7 +1942,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 102154
+// Method Definition Index: 102193
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Locale_GetText_m7531650AD8364720B8A7BADB48287D4E6FF9FCE8 (String_t* ___0_msg, const RuntimeMethod* method) 
 {
 	{
@@ -1950,7 +1950,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Locale_GetText_m7531650AD8364720B8A
 		return L_0;
 	}
 }
-// Method Definition Index: 102155
+// Method Definition Index: 102194
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Locale_GetText_mB63D530ABD106F4BC9C2BB3AC1A38EDDFC3188A2 (String_t* ___0_fmt, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, const RuntimeMethod* method) 
 {
 	{
@@ -1969,7 +1969,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Locale_GetText_mB63D530ABD106F4BC9C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 102156
+// Method Definition Index: 102195
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ASN1__ctor_mA9AE2197367C1E13DBFDA67E0A383167F52CC114 (ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* __this, uint8_t ___0_tag, const RuntimeMethod* method) 
 {
 	{
@@ -1978,7 +1978,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ASN1__ctor_mA9AE2197367C1E13DBFDA67E0A38
 		return;
 	}
 }
-// Method Definition Index: 102157
+// Method Definition Index: 102196
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ASN1__ctor_mAA538F9E1BE0DE739E9747BC3BC71DC030B018AA (ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* __this, uint8_t ___0_tag, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_data, const RuntimeMethod* method) 
 {
 	{
@@ -1991,7 +1991,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ASN1__ctor_mAA538F9E1BE0DE739E9747BC3BC7
 		return;
 	}
 }
-// Method Definition Index: 102158
+// Method Definition Index: 102197
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ASN1__ctor_m950BFCCF44A987ACBA12142624AA222200EE503E (ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2103,7 +2103,7 @@ IL_009a:
 		return;
 	}
 }
-// Method Definition Index: 102159
+// Method Definition Index: 102198
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ASN1_get_Count_mBE45E73126FAD2694E9059CAC53B7AC9A5F60833 (ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2126,7 +2126,7 @@ IL_000a:
 		return L_2;
 	}
 }
-// Method Definition Index: 102160
+// Method Definition Index: 102199
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t ASN1_get_Tag_m1984CF0DDF54424E61BA3650D93CBA0DCB58F232 (ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2134,7 +2134,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t ASN1_get_Tag_m1984CF0DDF54424E61BA365
 		return L_0;
 	}
 }
-// Method Definition Index: 102161
+// Method Definition Index: 102200
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ASN1_get_Length_mC03E8FE25B4BD7B97EA3D8591E01A457F491C7FE (ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2155,7 +2155,7 @@ IL_0011:
 		return 0;
 	}
 }
-// Method Definition Index: 102162
+// Method Definition Index: 102201
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ASN1_get_Value_mA6F9BE5AC19AC060AC42673C8FD5AA864EA046B6 (ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2185,7 +2185,7 @@ IL_000f:
 		return ((ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)Castclass((RuntimeObject*)L_3, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 102163
+// Method Definition Index: 102202
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ASN1_set_Value_mAFFA885810928715B379EAD478AA3961E8ACD589 (ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2215,7 +2215,7 @@ IL_0014:
 		return;
 	}
 }
-// Method Definition Index: 102164
+// Method Definition Index: 102203
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ASN1_CompareArray_mA7A05EE692B23D6D9A7C0E5B8CCC4CDECDAC0A79 (ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_array1, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_array2, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -2281,7 +2281,7 @@ IL_0024:
 		return L_14;
 	}
 }
-// Method Definition Index: 102165
+// Method Definition Index: 102204
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ASN1_CompareValue_m7397F4657555C6ACAF6622DE143C89E9E7593554 (ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -2292,7 +2292,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ASN1_CompareValue_m7397F4657555C6ACAF662
 		return L_2;
 	}
 }
-// Method Definition Index: 102166
+// Method Definition Index: 102205
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ASN1_Add_m4C61487A6CCF48D5CEB0D97B248FE31F9FCD849F (ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* __this, ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ___0_asn1, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2337,7 +2337,7 @@ IL_0023:
 		return L_6;
 	}
 }
-// Method Definition Index: 102167
+// Method Definition Index: 102206
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ASN1_GetBytes_m3B7DABFDBE6BF7F9C926E4C8A16FC6BE6D1CE67B (ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2697,7 +2697,7 @@ IL_01ed:
 		return L_93;
 	}
 }
-// Method Definition Index: 102168
+// Method Definition Index: 102207
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ASN1_Decode_mC4CF3CB2CC1DB454AA9C720BA79520956FB1F77B (ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_asn1, int32_t* ___1_anPos, int32_t ___2_anLength, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2775,7 +2775,7 @@ IL_0040:
 		return;
 	}
 }
-// Method Definition Index: 102169
+// Method Definition Index: 102208
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ASN1_DecodeTLV_mD4465394202DA7B0D37B9453CDE039233969E9DF (ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_asn1, int32_t* ___1_pos, uint8_t* ___2_tag, int32_t* ___3_length, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031** ___4_content, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2881,7 +2881,7 @@ IL_005a:
 		return;
 	}
 }
-// Method Definition Index: 102170
+// Method Definition Index: 102209
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ASN1_get_Item_mF105DA24F3BE9FA3697229CF99B1602B736B647F (ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2954,7 +2954,7 @@ IL_0033:
 		return L_8;
 	}
 }
-// Method Definition Index: 102171
+// Method Definition Index: 102210
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ASN1_Element_m97C1D5E39B14AC29D2F7AB0226A6E6CA2952B7C9 (ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* __this, int32_t ___0_index, uint8_t ___1_anTag, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3047,7 +3047,7 @@ IL_0042:
 		return L_12;
 	}
 }
-// Method Definition Index: 102172
+// Method Definition Index: 102211
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ASN1_ToString_m4995F083B02F8FEF578ECA6EE73A257821F50A00 (ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3164,7 +3164,7 @@ IL_00a0:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 102173
+// Method Definition Index: 102212
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ASN1Convert_FromDateTime_m79B9DDCD059CF7CD8E8DDCC53FFDF69D2CC6F8B9 (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___0_dt, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3234,7 +3234,7 @@ IL_0043:
 		return L_14;
 	}
 }
-// Method Definition Index: 102174
+// Method Definition Index: 102213
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ASN1Convert_FromInt32_mACAC096211E525F124BE0D50D90524ADCB6EA198 (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3351,7 +3351,7 @@ IL_0063:
 		return L_25;
 	}
 }
-// Method Definition Index: 102175
+// Method Definition Index: 102214
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ASN1Convert_FromOid_mBB920E2827A66620790C5E07549D74F244735C1C (String_t* ___0_oid, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3385,7 +3385,7 @@ IL_000e:
 		return L_4;
 	}
 }
-// Method Definition Index: 102176
+// Method Definition Index: 102215
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ASN1Convert_FromUnsignedBigInteger_mFA9B30C2532C4E1909AE0CF5151544D857C941FE (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_big, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3444,7 +3444,7 @@ IL_0034:
 		return L_13;
 	}
 }
-// Method Definition Index: 102177
+// Method Definition Index: 102216
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ASN1Convert_ToInt32_m956785EB4A235575C21677C16D2F6CBE54787032 (ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ___0_asn1, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -3520,7 +3520,7 @@ IL_0039:
 		return L_15;
 	}
 }
-// Method Definition Index: 102178
+// Method Definition Index: 102217
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ASN1Convert_ToOid_mBCE4FD3970C556190FB00A6AD409A6ABB4C627D8 (ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ___0_asn1, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3670,7 +3670,7 @@ IL_00bd:
 		return L_43;
 	}
 }
-// Method Definition Index: 102179
+// Method Definition Index: 102218
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ASN1Convert_ToDateTime_m2D520694D39F2C86F72ECB24EF48F58B8C57AA75 (ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ___0_time, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3954,7 +3954,7 @@ IL_014b:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 102180
+// Method Definition Index: 102219
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* BitConverterLE_GetUIntBytes_mED0A55F565721091E851FD6108E128C3CBCB87F0 (uint8_t* ___0_bytes, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4020,7 +4020,7 @@ IL_0028:
 		return L_23;
 	}
 }
-// Method Definition Index: 102181
+// Method Definition Index: 102220
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* BitConverterLE_GetULongBytes_m335C736CF3E43BF45AB110AD48E83777A03F4A26 (uint8_t* ___0_bytes, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4126,7 +4126,7 @@ IL_0044:
 		return L_47;
 	}
 }
-// Method Definition Index: 102182
+// Method Definition Index: 102221
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* BitConverterLE_GetBytes_mEEFE00015D501FBBD32225D9C45A2C2A0673E9C7 (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -4135,7 +4135,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		return L_0;
 	}
 }
-// Method Definition Index: 102183
+// Method Definition Index: 102222
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* BitConverterLE_GetBytes_m1200CDE198D95D35643FBDDE226BC59D988BC44D (int64_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -4144,7 +4144,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		return L_0;
 	}
 }
-// Method Definition Index: 102184
+// Method Definition Index: 102223
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BitConverterLE_UShortFromBytes_mD0F7166ABCEED3D220DCE26EDF1F03680ED1C82A (uint8_t* ___0_dst, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_src, int32_t ___2_startIndex, const RuntimeMethod* method) 
 {
 	{
@@ -4190,7 +4190,7 @@ IL_0016:
 		return;
 	}
 }
-// Method Definition Index: 102185
+// Method Definition Index: 102224
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BitConverterLE_UIntFromBytes_m22FF5D22A65B4C2F7D1A32BC7C28844187FCEE48 (uint8_t* ___0_dst, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_src, int32_t ___2_startIndex, const RuntimeMethod* method) 
 {
 	{
@@ -4264,7 +4264,7 @@ IL_0028:
 		return;
 	}
 }
-// Method Definition Index: 102186
+// Method Definition Index: 102225
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t BitConverterLE_ToInt32_m9883205CC9360B9937EBB27051250198255F8D2A (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_value, int32_t ___1_startIndex, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -4276,7 +4276,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t BitConverterLE_ToInt32_m9883205CC9360
 		return L_2;
 	}
 }
-// Method Definition Index: 102187
+// Method Definition Index: 102226
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint16_t BitConverterLE_ToUInt16_m9C9006FA48C5155275790F99EC5558AB440B4088 (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_value, int32_t ___1_startIndex, const RuntimeMethod* method) 
 {
 	uint16_t V_0 = 0;
@@ -4288,7 +4288,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint16_t BitConverterLE_ToUInt16_m9C9006FA48C
 		return L_2;
 	}
 }
-// Method Definition Index: 102188
+// Method Definition Index: 102227
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t BitConverterLE_ToUInt32_m311817F60340C60EE9891E11C144DCAC2113BC8E (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_value, int32_t ___1_startIndex, const RuntimeMethod* method) 
 {
 	uint32_t V_0 = 0;
@@ -4308,7 +4308,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t BitConverterLE_ToUInt32_m311817F6034
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 102189
+// Method Definition Index: 102228
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* PKCS7_AlgorithmIdentifier_m17D5656B7CC04E7C6B7FEC4A57CFFE07AC6C091A (String_t* ___0_oid, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4336,7 +4336,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6
 		return L_5;
 	}
 }
-// Method Definition Index: 102190
+// Method Definition Index: 102229
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* PKCS7_AlgorithmIdentifier_m5277AEA5E232D63CE3CE1D6076E133C5291E306B (String_t* ___0_oid, ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ___1_parameters, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4371,7 +4371,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 102191
+// Method Definition Index: 102230
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ContentInfo__ctor_m1B4B1B164D5159FE64E1346E1DE36B4E7B6F4078 (ContentInfo_t5742C43EE0907BEA6330E14F18C4885A874797FE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4389,7 +4389,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ContentInfo__ctor_m1B4B1B164D5159FE64E13
 		return;
 	}
 }
-// Method Definition Index: 102192
+// Method Definition Index: 102231
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ContentInfo__ctor_m95EA3D16DCE96C9504DFC08940380C6983F41036 (ContentInfo_t5742C43EE0907BEA6330E14F18C4885A874797FE* __this, String_t* ___0_oid, const RuntimeMethod* method) 
 {
 	{
@@ -4400,7 +4400,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ContentInfo__ctor_m95EA3D16DCE96C9504DFC
 		return;
 	}
 }
-// Method Definition Index: 102193
+// Method Definition Index: 102232
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ContentInfo__ctor_m7D3DD72DA482A68007DB183975E3F649EEE308CD (ContentInfo_t5742C43EE0907BEA6330E14F18C4885A874797FE* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4417,7 +4417,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ContentInfo__ctor_m7D3DD72DA482A68007DB1
 		return;
 	}
 }
-// Method Definition Index: 102194
+// Method Definition Index: 102233
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ContentInfo__ctor_mBC763695FB9DCE655DC9F64E932679635A8A803B (ContentInfo_t5742C43EE0907BEA6330E14F18C4885A874797FE* __this, ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ___0_asn1, const RuntimeMethod* method) 
 {
 	{
@@ -4532,7 +4532,7 @@ IL_008d:
 		return;
 	}
 }
-// Method Definition Index: 102195
+// Method Definition Index: 102234
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ContentInfo_get_ASN1_m3A32CA99ED50DDA79761FC779979489927D0ABE3 (ContentInfo_t5742C43EE0907BEA6330E14F18C4885A874797FE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4541,7 +4541,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6
 		return L_0;
 	}
 }
-// Method Definition Index: 102196
+// Method Definition Index: 102235
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ContentInfo_get_Content_m85ECCB3CF732981E207598428EF008D95F754F98 (ContentInfo_t5742C43EE0907BEA6330E14F18C4885A874797FE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4549,7 +4549,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6
 		return L_0;
 	}
 }
-// Method Definition Index: 102197
+// Method Definition Index: 102236
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ContentInfo_set_Content_mC885DF149B5AB25343766F00FB7749A77BEFBC36 (ContentInfo_t5742C43EE0907BEA6330E14F18C4885A874797FE* __this, ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -4559,7 +4559,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ContentInfo_set_Content_mC885DF149B5AB25
 		return;
 	}
 }
-// Method Definition Index: 102198
+// Method Definition Index: 102237
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ContentInfo_get_ContentType_m4ACE1C1CD7330D35EF0C2C422CF48E3BA0FFD7D1 (ContentInfo_t5742C43EE0907BEA6330E14F18C4885A874797FE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4567,7 +4567,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ContentInfo_get_ContentType_m4ACE1C
 		return L_0;
 	}
 }
-// Method Definition Index: 102199
+// Method Definition Index: 102238
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ContentInfo_set_ContentType_mE3356914A7D44048391DCD32316D00C026415791 (ContentInfo_t5742C43EE0907BEA6330E14F18C4885A874797FE* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -4577,7 +4577,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ContentInfo_set_ContentType_mE3356914A7D
 		return;
 	}
 }
-// Method Definition Index: 102200
+// Method Definition Index: 102239
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ContentInfo_GetASN1_m52EF51C772714542A1263FCABF334391397F08AD (ContentInfo_t5742C43EE0907BEA6330E14F18C4885A874797FE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4636,7 +4636,7 @@ IL_003d:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 102201
+// Method Definition Index: 102240
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EncryptedData__ctor_m355455E414AB2547674FDB62A72BFF4EE98BDDF1 (EncryptedData_tB91085BBD2ADFBF2671238CA933B85B8E30D2778* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4645,7 +4645,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EncryptedData__ctor_m355455E414AB2547674
 		return;
 	}
 }
-// Method Definition Index: 102202
+// Method Definition Index: 102241
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EncryptedData__ctor_m5C149670A898E43CCCC28D6B30568138D4098E72 (EncryptedData_tB91085BBD2ADFBF2671238CA933B85B8E30D2778* __this, ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ___0_asn1, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4850,7 +4850,7 @@ IL_0100:
 		return;
 	}
 }
-// Method Definition Index: 102203
+// Method Definition Index: 102242
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ContentInfo_t5742C43EE0907BEA6330E14F18C4885A874797FE* EncryptedData_get_EncryptionAlgorithm_mF1F3CE667E2558EC146D7086A64C5735DEB37BF4 (EncryptedData_tB91085BBD2ADFBF2671238CA933B85B8E30D2778* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4858,7 +4858,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ContentInfo_t5742C43EE0907BEA6330E14F18C4885A
 		return L_0;
 	}
 }
-// Method Definition Index: 102204
+// Method Definition Index: 102243
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* EncryptedData_get_EncryptedContent_m28A275C350840EAD2C448DF76D9116D49000DC5C (EncryptedData_tB91085BBD2ADFBF2671238CA933B85B8E30D2778* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4895,7 +4895,7 @@ IL_000a:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 102205
+// Method Definition Index: 102244
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignedData__ctor_m4609283D3F9F231C0B5156FAE7C2DCF89A3AD7A6 (SignedData_t3F2C8F79336563E389C9B885D6393D4300A6783B* __this, ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ___0_asn1, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5225,7 +5225,7 @@ IL_01b9:
 		return;
 	}
 }
-// Method Definition Index: 102206
+// Method Definition Index: 102245
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR X509CertificateCollection_t4FCE6AFCD042978CC0A24627945F864BB3188FC4* SignedData_get_Certificates_m2F2280AA69C4903FD8CAA75FAECEFC7586EF6D7E (SignedData_t3F2C8F79336563E389C9B885D6393D4300A6783B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5233,7 +5233,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR X509CertificateCollection_t4FCE6AFCD042978CC0
 		return L_0;
 	}
 }
-// Method Definition Index: 102207
+// Method Definition Index: 102246
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ContentInfo_t5742C43EE0907BEA6330E14F18C4885A874797FE* SignedData_get_ContentInfo_m91409FC043E8C6FF741A922FC69BB9E98B5B7F09 (SignedData_t3F2C8F79336563E389C9B885D6393D4300A6783B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5241,7 +5241,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ContentInfo_t5742C43EE0907BEA6330E14F18C4885A
 		return L_0;
 	}
 }
-// Method Definition Index: 102208
+// Method Definition Index: 102247
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignedData_set_HashName_mFDAB9AC05B7FDB00F646E3E44D4E9FF91CD0B4E7 (SignedData_t3F2C8F79336563E389C9B885D6393D4300A6783B* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -5255,7 +5255,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignedData_set_HashName_mFDAB9AC05B7FDB0
 		return;
 	}
 }
-// Method Definition Index: 102209
+// Method Definition Index: 102248
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SignerInfo_t1D335355B15E47705EAEA3E503BF54F31625E505* SignedData_get_SignerInfo_mAE14D45F3CE393345D41AD231A382765E551D604 (SignedData_t3F2C8F79336563E389C9B885D6393D4300A6783B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5263,7 +5263,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SignerInfo_t1D335355B15E47705EAEA3E503BF54F31
 		return L_0;
 	}
 }
-// Method Definition Index: 102210
+// Method Definition Index: 102249
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SignedData_OidToName_m910B0AD432C05A196504A1933374C93086027DD1 (SignedData_t3F2C8F79336563E389C9B885D6393D4300A6783B* __this, String_t* ___0_oid, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5385,7 +5385,7 @@ IL_0074:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 102211
+// Method Definition Index: 102250
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignerInfo__ctor_mD8D5B3BEC47BCB44044A801365EE363D24922FE3 (SignerInfo_t1D335355B15E47705EAEA3E503BF54F31625E505* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5408,7 +5408,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignerInfo__ctor_mD8D5B3BEC47BCB44044A80
 		return;
 	}
 }
-// Method Definition Index: 102212
+// Method Definition Index: 102251
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignerInfo__ctor_mDB114E56EC2F9D5820B2F48A00CF14972B3BCCED (SignerInfo_t1D335355B15E47705EAEA3E503BF54F31625E505* __this, ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ___0_asn1, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5725,7 +5725,7 @@ IL_01a4:
 		return;
 	}
 }
-// Method Definition Index: 102213
+// Method Definition Index: 102252
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SignerInfo_get_IssuerName_m30347CCCF2ED4EF05618DD9AF4F71030E4A5A324 (SignerInfo_t1D335355B15E47705EAEA3E503BF54F31625E505* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5733,7 +5733,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SignerInfo_get_IssuerName_m30347CCC
 		return L_0;
 	}
 }
-// Method Definition Index: 102214
+// Method Definition Index: 102253
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* SignerInfo_get_SerialNumber_m6B855067A7C4CEF6758805C18E8417729BA62BD7 (SignerInfo_t1D335355B15E47705EAEA3E503BF54F31625E505* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5762,7 +5762,7 @@ IL_000a:
 		return ((ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)Castclass((RuntimeObject*)L_2, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 102215
+// Method Definition Index: 102254
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* SignerInfo_get_AuthenticatedAttributes_m52500C3AC3793C89F0296BBEF64698F2ED20B8F4 (SignerInfo_t1D335355B15E47705EAEA3E503BF54F31625E505* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5770,7 +5770,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782
 		return L_0;
 	}
 }
-// Method Definition Index: 102216
+// Method Definition Index: 102255
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SignerInfo_get_HashName_m1FCB2FBBA2DEC8F246B2ECE65997A2972B60B424 (SignerInfo_t1D335355B15E47705EAEA3E503BF54F31625E505* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5778,7 +5778,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SignerInfo_get_HashName_m1FCB2FBBA2
 		return L_0;
 	}
 }
-// Method Definition Index: 102217
+// Method Definition Index: 102256
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignerInfo_set_HashName_m5C681833EF9E8380311B609BE25BE33911140E37 (SignerInfo_t1D335355B15E47705EAEA3E503BF54F31625E505* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -5788,7 +5788,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignerInfo_set_HashName_m5C681833EF9E838
 		return;
 	}
 }
-// Method Definition Index: 102218
+// Method Definition Index: 102257
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* SignerInfo_get_Signature_m6FA43681D705A53BA0857AF55624483A9AE94CA8 (SignerInfo_t1D335355B15E47705EAEA3E503BF54F31625E505* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5817,7 +5817,7 @@ IL_000a:
 		return ((ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)Castclass((RuntimeObject*)L_2, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 102219
+// Method Definition Index: 102258
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* SignerInfo_get_UnauthenticatedAttributes_m718FE21E74C9898E7B4060A5BE1264C68D3171FA (SignerInfo_t1D335355B15E47705EAEA3E503BF54F31625E505* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5825,7 +5825,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782
 		return L_0;
 	}
 }
-// Method Definition Index: 102220
+// Method Definition Index: 102259
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t SignerInfo_get_Version_m0CFF6A1B831986936100F7F4A27D6386D65CFB37 (SignerInfo_t1D335355B15E47705EAEA3E503BF54F31625E505* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5841,7 +5841,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t SignerInfo_get_Version_m0CFF6A1B83198
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 102221
+// Method Definition Index: 102260
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS5__ctor_m7320C5F1BCF9556E49FD6E10B070767563E2FE7B (PKCS5_t22FA06A949B3A12DF99FC065514B9047CDD20730* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5857,7 +5857,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS5__ctor_m7320C5F1BCF9556E49FD6E10B07
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 102222
+// Method Definition Index: 102261
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS9__ctor_mF03216B84C121DCB4DA77CF10FF6DC4917713133 (PKCS9_tBA78D11317F1C0C7B97C6DB9DC510A65ECE3410C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5873,7 +5873,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS9__ctor_mF03216B84C121DCB4DA77CF10FF
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 102223
+// Method Definition Index: 102262
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeBag__ctor_m0AE5FFE8783310FAC265D1A911F5F6FA6A1CE9BF (SafeBag_t130F59A27AC0BC5E9982CFE75C920D99DB1C8109* __this, String_t* ___0_bagOID, ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ___1_asn1, const RuntimeMethod* method) 
 {
 	{
@@ -5887,7 +5887,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SafeBag__ctor_m0AE5FFE8783310FAC265D1A91
 		return;
 	}
 }
-// Method Definition Index: 102224
+// Method Definition Index: 102263
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SafeBag_get_BagOID_m1218C83BAD5C56D41AFF31B58784848A27A265E6 (SafeBag_t130F59A27AC0BC5E9982CFE75C920D99DB1C8109* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5895,7 +5895,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SafeBag_get_BagOID_m1218C83BAD5C56D
 		return L_0;
 	}
 }
-// Method Definition Index: 102225
+// Method Definition Index: 102264
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* SafeBag_get_ASN1_m699A375228725122D8B9EE455013B215FBB87D05 (SafeBag_t130F59A27AC0BC5E9982CFE75C920D99DB1C8109* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5911,7 +5911,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 102226
+// Method Definition Index: 102265
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12__ctor_mC4CC29A25D40F4799AB2715A3C7FB270C74EEFDD (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5946,7 +5946,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12__ctor_mC4CC29A25D40F4799AB2715A3C
 		return;
 	}
 }
-// Method Definition Index: 102227
+// Method Definition Index: 102266
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12__ctor_m77EA8CF7C0DD214E25C7C8B9580339F1E2134E31 (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_data, const RuntimeMethod* method) 
 {
 	{
@@ -5957,7 +5957,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12__ctor_m77EA8CF7C0DD214E25C7C8B958
 		return;
 	}
 }
-// Method Definition Index: 102228
+// Method Definition Index: 102267
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12__ctor_m2C6FBB30C343DA9D9E1753FBB72F01AD4E1F7FFC (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_data, String_t* ___1_password, const RuntimeMethod* method) 
 {
 	{
@@ -5969,7 +5969,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12__ctor_m2C6FBB30C343DA9D9E1753FBB7
 		return;
 	}
 }
-// Method Definition Index: 102229
+// Method Definition Index: 102268
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12__ctor_mA6EA449096A0FAA2FF7B716CDB1E46F41C47E19E (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_data, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_password, const RuntimeMethod* method) 
 {
 	{
@@ -5982,7 +5982,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12__ctor_mA6EA449096A0FAA2FF7B716CDB
 		return;
 	}
 }
-// Method Definition Index: 102230
+// Method Definition Index: 102269
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_Decode_m750703D9B730F5A8A355252F92DCD2D039C3FCDF (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6506,7 +6506,7 @@ IL_02c7:
 		return;
 	}
 }
-// Method Definition Index: 102231
+// Method Definition Index: 102270
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_Finalize_m123C72042CF1A6A425005642408FF60B04D99462 (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6553,7 +6553,7 @@ IL_002c:
 		return;
 	}
 }
-// Method Definition Index: 102232
+// Method Definition Index: 102271
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_set_Password_mB7CC3D7C9B194C6CF6E82B289EB1FD98EA002646 (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6669,7 +6669,7 @@ IL_0087:
 		return;
 	}
 }
-// Method Definition Index: 102233
+// Method Definition Index: 102272
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PKCS12_get_IterationCount_m2034EE21157689975AE4DC6E1F6B8628DB4539B4 (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6677,7 +6677,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PKCS12_get_IterationCount_m2034EE2115
 		return L_0;
 	}
 }
-// Method Definition Index: 102234
+// Method Definition Index: 102273
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_set_IterationCount_m3F155BE5145E6356037FCEB58E1811255F80A6D3 (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -6686,7 +6686,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_set_IterationCount_m3F155BE5145E6
 		return;
 	}
 }
-// Method Definition Index: 102235
+// Method Definition Index: 102274
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* PKCS12_get_Keys_mFF1C9F9DEF54D27CC472AA46DDBBE224F67DC46B (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7002,7 +7002,7 @@ IL_0195:
 		return L_75;
 	}
 }
-// Method Definition Index: 102236
+// Method Definition Index: 102275
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* PKCS12_get_Secrets_m08253C4ACB53881CD439A591DC900BB3AA4FCAE8 (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7140,7 +7140,7 @@ IL_0080:
 		return L_22;
 	}
 }
-// Method Definition Index: 102237
+// Method Definition Index: 102276
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR X509CertificateCollection_t4FCE6AFCD042978CC0A24627945F864BB3188FC4* PKCS12_get_Certificates_m6FB30DF4377FE4FC725153AC237CBC59786E719E (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7291,7 +7291,7 @@ IL_009d:
 		return L_26;
 	}
 }
-// Method Definition Index: 102238
+// Method Definition Index: 102277
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RandomNumberGenerator_t4E862666A2F7D55324960670C7A1B4C2D40222F3* PKCS12_get_RNG_m3C2B6A93761E38174AAB889781AB78E0A3A5B003 (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7314,7 +7314,7 @@ IL_0013:
 		return L_2;
 	}
 }
-// Method Definition Index: 102239
+// Method Definition Index: 102278
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PKCS12_Compare_mB111BD413CF9B26BBFEA519F7AFE6531BF5E2C1E (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_expected, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_actual, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -7382,7 +7382,7 @@ IL_0024:
 		return L_13;
 	}
 }
-// Method Definition Index: 102240
+// Method Definition Index: 102279
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SymmetricAlgorithm_t8C631E4E7B9073CCBD856F8D559A62EB5616BBE8* PKCS12_GetSymmetricAlgorithm_m10BEA3D381B4DF46D904219E1CB9297E8D7CD439 (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, String_t* ___0_algorithmOid, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_salt, int32_t ___2_iterationCount, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7900,7 +7900,7 @@ IL_0331:
 		return L_75;
 	}
 }
-// Method Definition Index: 102241
+// Method Definition Index: 102280
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* PKCS12_Decrypt_mDA2EFC82AEC5616D5E0CBCF64315B9E9523FF02A (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, String_t* ___0_algorithmOid, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_salt, int32_t ___2_iterationCount, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___3_encryptedData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7973,7 +7973,7 @@ IL_002d:
 		return L_11;
 	}
 }
-// Method Definition Index: 102242
+// Method Definition Index: 102281
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* PKCS12_Decrypt_m9734C9729FDAD344DBE41EC3E3641F34F8F5A2B1 (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, EncryptedData_tB91085BBD2ADFBF2671238CA933B85B8E30D2778* ___0_ed, const RuntimeMethod* method) 
 {
 	{
@@ -8018,7 +8018,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		return L_15;
 	}
 }
-// Method Definition Index: 102243
+// Method Definition Index: 102282
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* PKCS12_Encrypt_mFF1143A709115E5239D21DB9BB2BA795AC16B504 (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, String_t* ___0_algorithmOid, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_salt, int32_t ___2_iterationCount, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___3_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8091,7 +8091,7 @@ IL_002b:
 		return L_11;
 	}
 }
-// Method Definition Index: 102244
+// Method Definition Index: 102283
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DSAParameters_t2FA923FEA7E2DB5515EE54A7E86B0401D025E0E9 PKCS12_GetExistingParameters_m2350C6BD29DDCE4EACCCDE545B7621624FCF90F0 (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, bool* ___0_found, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8224,7 +8224,7 @@ IL_0060:
 		return L_19;
 	}
 }
-// Method Definition Index: 102245
+// Method Definition Index: 102284
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_AddPrivateKey_m9387CE382E87E7C38F49ECFC7D96078B7FB4463F (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, PrivateKeyInfo_t28A9EE4065B3A3A02D373C6FC28EE45E394D9354* ___0_pki, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8355,7 +8355,7 @@ IL_0084:
 		return;
 	}
 }
-// Method Definition Index: 102246
+// Method Definition Index: 102285
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_ReadSafeBag_m8DDA9FAD730EE4A90C18689EFB0837AEEAE492B9 (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ___0_safeBag, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8839,7 +8839,7 @@ IL_0261:
 		return;
 	}
 }
-// Method Definition Index: 102247
+// Method Definition Index: 102286
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* PKCS12_Pkcs8ShroudedKeyBagSafeBag_m709E0123F26B2AA286664D1706B5B22A34AA4FFF (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, AsymmetricAlgorithm_t5E7E9D26CE0EDCAABD84F616A44E476473BA2AF8* ___0_aa, RuntimeObject* ___1_attributes, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9320,7 +9320,7 @@ IL_029e:
 		return L_115;
 	}
 }
-// Method Definition Index: 102248
+// Method Definition Index: 102287
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* PKCS12_KeyBagSafeBag_mB5A01D44A3F84B60D4751CC97BE8266C2FEB33A9 (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, AsymmetricAlgorithm_t5E7E9D26CE0EDCAABD84F616A44E476473BA2AF8* ___0_aa, RuntimeObject* ___1_attributes, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9774,7 +9774,7 @@ IL_0259:
 		return L_104;
 	}
 }
-// Method Definition Index: 102249
+// Method Definition Index: 102288
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* PKCS12_SecretBagSafeBag_m06F3FE04A68AEA45DA08C2420C099310B7F9B50A (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_secret, RuntimeObject* ___1_attributes, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10158,7 +10158,7 @@ IL_01e4:
 		return L_86;
 	}
 }
-// Method Definition Index: 102250
+// Method Definition Index: 102289
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* PKCS12_CertificateSafeBag_mC0BC2105B927BC138FB90EEDDEA95BD8A8DA024A (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* ___0_x509, RuntimeObject* ___1_attributes, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10574,7 +10574,7 @@ IL_0225:
 		return L_98;
 	}
 }
-// Method Definition Index: 102251
+// Method Definition Index: 102290
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* PKCS12_MAC_mBAD3C0B24FD8CA6FFE0F4A56CC29BE3E0D6F68A4 (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_password, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_salt, int32_t ___2_iterations, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___3_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10623,7 +10623,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		return L_14;
 	}
 }
-// Method Definition Index: 102252
+// Method Definition Index: 102291
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* PKCS12_GetBytes_mDB4325D82327A46832138F16A8CBD3AA006B3A7F (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11882,7 +11882,7 @@ IL_05b9:
 		return L_259;
 	}
 }
-// Method Definition Index: 102253
+// Method Definition Index: 102292
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ContentInfo_t5742C43EE0907BEA6330E14F18C4885A874797FE* PKCS12_EncryptedContentInfo_m670295BC933FE6D756A18DEC50779443A1A9FB7F (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ___0_safeBags, String_t* ___1_algorithmOid, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12011,7 +12011,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ContentInfo_t5742C43EE0907BEA6330E14F18C4885A
 		return L_52;
 	}
 }
-// Method Definition Index: 102254
+// Method Definition Index: 102293
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_AddCertificate_m11EC4FA6E1AF1BCEE6483B5601225CD6A043D183 (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* ___0_cert, const RuntimeMethod* method) 
 {
 	{
@@ -12020,7 +12020,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_AddCertificate_m11EC4FA6E1AF1BCEE
 		return;
 	}
 }
-// Method Definition Index: 102255
+// Method Definition Index: 102294
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_AddCertificate_m19F5576C596335EB6DD4E737D0CD4701884D91EF (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* ___0_cert, RuntimeObject* ___1_attributes, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12159,7 +12159,7 @@ IL_00a9:
 		return;
 	}
 }
-// Method Definition Index: 102256
+// Method Definition Index: 102295
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_RemoveCertificate_m65A709EDC4D5409904E14C738840252177D5E589 (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* ___0_cert, const RuntimeMethod* method) 
 {
 	{
@@ -12168,7 +12168,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_RemoveCertificate_m65A709EDC4D540
 		return;
 	}
 }
-// Method Definition Index: 102257
+// Method Definition Index: 102296
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_RemoveCertificate_m3A6B9EF29379012C8495C7A71332C93EA4733D29 (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* ___0_cert, RuntimeObject* ___1_attrs, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12500,7 +12500,7 @@ IL_0195:
 		return;
 	}
 }
-// Method Definition Index: 102258
+// Method Definition Index: 102297
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PKCS12_CompareAsymmetricAlgorithm_mEE368C0A5F8D7C27A6C4D1FD146DF41DACE696DC (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, AsymmetricAlgorithm_t5E7E9D26CE0EDCAABD84F616A44E476473BA2AF8* ___0_a1, AsymmetricAlgorithm_t5E7E9D26CE0EDCAABD84F616A44E476473BA2AF8* ___1_a2, const RuntimeMethod* method) 
 {
 	{
@@ -12536,7 +12536,7 @@ IL_0010:
 		return L_8;
 	}
 }
-// Method Definition Index: 102259
+// Method Definition Index: 102298
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_AddPkcs8ShroudedKeyBag_m241403C64A2995F518AC8AE41E7631590E0CB18E (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, AsymmetricAlgorithm_t5E7E9D26CE0EDCAABD84F616A44E476473BA2AF8* ___0_aa, const RuntimeMethod* method) 
 {
 	{
@@ -12545,7 +12545,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_AddPkcs8ShroudedKeyBag_m241403C64
 		return;
 	}
 }
-// Method Definition Index: 102260
+// Method Definition Index: 102299
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_AddPkcs8ShroudedKeyBag_m270345FF04644145B23EC638522B390554D2AC0D (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, AsymmetricAlgorithm_t5E7E9D26CE0EDCAABD84F616A44E476473BA2AF8* ___0_aa, RuntimeObject* ___1_attributes, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12767,7 +12767,7 @@ IL_0133:
 		return;
 	}
 }
-// Method Definition Index: 102261
+// Method Definition Index: 102300
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_RemovePkcs8ShroudedKeyBag_m4E4B7BDAF02DF3744C13AA27EF3252505AA5A5A5 (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, AsymmetricAlgorithm_t5E7E9D26CE0EDCAABD84F616A44E476473BA2AF8* ___0_aa, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12984,7 +12984,7 @@ IL_0123:
 		return;
 	}
 }
-// Method Definition Index: 102262
+// Method Definition Index: 102301
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_AddKeyBag_m59CE5FF372D2F77507B17273166C39D42D39B40A (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, AsymmetricAlgorithm_t5E7E9D26CE0EDCAABD84F616A44E476473BA2AF8* ___0_aa, const RuntimeMethod* method) 
 {
 	{
@@ -12993,7 +12993,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_AddKeyBag_m59CE5FF372D2F77507B172
 		return;
 	}
 }
-// Method Definition Index: 102263
+// Method Definition Index: 102302
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_AddKeyBag_mDF4678E44902B9AA80A6F824868E6A2ABAD6902D (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, AsymmetricAlgorithm_t5E7E9D26CE0EDCAABD84F616A44E476473BA2AF8* ___0_aa, RuntimeObject* ___1_attributes, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13181,7 +13181,7 @@ IL_00e8:
 		return;
 	}
 }
-// Method Definition Index: 102264
+// Method Definition Index: 102303
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_RemoveKeyBag_m0CD640FD0D686A18E84B829907EF8CB496941643 (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, AsymmetricAlgorithm_t5E7E9D26CE0EDCAABD84F616A44E476473BA2AF8* ___0_aa, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13364,7 +13364,7 @@ IL_00d8:
 		return;
 	}
 }
-// Method Definition Index: 102265
+// Method Definition Index: 102304
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_AddSecretBag_m946848CC319BEB69CC0CA467D3023AD3A406AA0D (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_secret, const RuntimeMethod* method) 
 {
 	{
@@ -13373,7 +13373,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_AddSecretBag_m946848CC319BEB69CC0
 		return;
 	}
 }
-// Method Definition Index: 102266
+// Method Definition Index: 102305
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_AddSecretBag_mB9528941C70DF9BD4CF39D8D588CD1DF10315A1F (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_secret, RuntimeObject* ___1_attributes, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13491,7 +13491,7 @@ IL_0085:
 		return;
 	}
 }
-// Method Definition Index: 102267
+// Method Definition Index: 102306
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_RemoveSecretBag_m7A9A2D9E6CBED92E4450C9FF5F569CDE32DBCA11 (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_secret, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13604,7 +13604,7 @@ IL_0075:
 		return;
 	}
 }
-// Method Definition Index: 102268
+// Method Definition Index: 102307
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AsymmetricAlgorithm_t5E7E9D26CE0EDCAABD84F616A44E476473BA2AF8* PKCS12_GetAsymmetricAlgorithm_m1962F8ED6D38CF18DB91EABEA3A1877D03EB910D (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, RuntimeObject* ___0_attrs, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14115,7 +14115,7 @@ IL_0266:
 		return L_117;
 	}
 }
-// Method Definition Index: 102269
+// Method Definition Index: 102308
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* PKCS12_GetSecret_m524EEF2BD6C79A9F43A54ABCA22DA3BB30E08BD4 (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, RuntimeObject* ___0_attrs, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14421,7 +14421,7 @@ IL_014a:
 		return L_63;
 	}
 }
-// Method Definition Index: 102270
+// Method Definition Index: 102309
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* PKCS12_GetCertificate_m9A9507380E1109352F5B30591DECA6349C84E6D6 (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, RuntimeObject* ___0_attrs, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14742,7 +14742,7 @@ IL_0164:
 		return L_68;
 	}
 }
-// Method Definition Index: 102271
+// Method Definition Index: 102310
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PKCS12_GetAttributes_m6A4640F846C459B0BA1483B73C2CB4519E0B5ADB (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, AsymmetricAlgorithm_t5E7E9D26CE0EDCAABD84F616A44E476473BA2AF8* ___0_aa, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15191,7 +15191,7 @@ IL_0220:
 		return L_105;
 	}
 }
-// Method Definition Index: 102272
+// Method Definition Index: 102311
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PKCS12_GetAttributes_m5919FCF5B5B831ACC6CC5503F137AF46BCB9C6A8 (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* ___0_cert, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15452,7 +15452,7 @@ IL_0128:
 		return L_58;
 	}
 }
-// Method Definition Index: 102273
+// Method Definition Index: 102312
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_SaveToFile_m31D5DE09E3F2FF7C3441FC3C20E63CDF51FEF320 (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, String_t* ___0_filename, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15532,7 +15532,7 @@ IL_0033:
 		return;
 	}
 }
-// Method Definition Index: 102274
+// Method Definition Index: 102313
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PKCS12_Clone_m50D19F50BDEC33F80386C00F4BA4A409D37297C9 (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15585,7 +15585,7 @@ IL_0034:
 		return L_10;
 	}
 }
-// Method Definition Index: 102275
+// Method Definition Index: 102314
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PKCS12_get_MaximumPasswordLength_m1254971BF3342F220F85AA11F42433D1BD4E86A0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15600,7 +15600,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PKCS12_get_MaximumPasswordLength_m125
 		return L_0;
 	}
 }
-// Method Definition Index: 102276
+// Method Definition Index: 102315
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12_set_MaximumPasswordLength_m6348125EE652B11D584397D498892B69CC1D8231 (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15639,7 +15639,7 @@ IL_0025:
 		return;
 	}
 }
-// Method Definition Index: 102277
+// Method Definition Index: 102316
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* PKCS12_LoadFile_m96F22A070A8DB9FE20AB25F75D3C6FE9301B79B1 (String_t* ___0_filename, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15717,7 +15717,7 @@ IL_0034:
 		return L_12;
 	}
 }
-// Method Definition Index: 102278
+// Method Definition Index: 102317
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* PKCS12_LoadFromFile_m68458398FE6862B865C5CF76823EF95B8836EFD8 (String_t* ___0_filename, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15750,7 +15750,7 @@ IL_000e:
 		return L_4;
 	}
 }
-// Method Definition Index: 102279
+// Method Definition Index: 102318
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* PKCS12_LoadFromFile_mACFE9BB072C2CFDB39CED7D017DC379AF19AB6BB (String_t* ___0_filename, String_t* ___1_password, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15784,7 +15784,7 @@ IL_000e:
 		return L_5;
 	}
 }
-// Method Definition Index: 102280
+// Method Definition Index: 102319
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12__cctor_mA93112C607BE4C95CC48AF6B6F03C866B349F6B5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15806,7 +15806,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PKCS12__cctor_mA93112C607BE4C95CC48AF6B6
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 102281
+// Method Definition Index: 102320
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeriveBytes__ctor_mE49888D87CB6AA78648DF0D8129838DC91CF891A (DeriveBytes_tBB1E8E29CFD7109C94F19C8A40DCC7189883361F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15814,7 +15814,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeriveBytes__ctor_mE49888D87CB6AA78648DF
 		return;
 	}
 }
-// Method Definition Index: 102282
+// Method Definition Index: 102321
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* DeriveBytes_get_HashName_mE3D3D4DA55660E503FE99058531CBEC0EAD3A3BF (DeriveBytes_tBB1E8E29CFD7109C94F19C8A40DCC7189883361F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15822,7 +15822,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* DeriveBytes_get_HashName_mE3D3D4DA5
 		return L_0;
 	}
 }
-// Method Definition Index: 102283
+// Method Definition Index: 102322
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeriveBytes_set_HashName_m8C49265C77E164C659E6B11840289B0BFF7A0AA2 (DeriveBytes_tBB1E8E29CFD7109C94F19C8A40DCC7189883361F* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -15832,7 +15832,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeriveBytes_set_HashName_m8C49265C77E164
 		return;
 	}
 }
-// Method Definition Index: 102284
+// Method Definition Index: 102323
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t DeriveBytes_get_IterationCount_m3A2B5D501541EE33BA709AA6FF8EEFAE39A0E2B3 (DeriveBytes_tBB1E8E29CFD7109C94F19C8A40DCC7189883361F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15840,7 +15840,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t DeriveBytes_get_IterationCount_m3A2B5
 		return L_0;
 	}
 }
-// Method Definition Index: 102285
+// Method Definition Index: 102324
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeriveBytes_set_IterationCount_m0C50A49409C1B40DB50FA5123C89B2EF10C76E1D (DeriveBytes_tBB1E8E29CFD7109C94F19C8A40DCC7189883361F* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -15849,7 +15849,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeriveBytes_set_IterationCount_m0C50A494
 		return;
 	}
 }
-// Method Definition Index: 102286
+// Method Definition Index: 102325
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* DeriveBytes_get_Password_m2942E715FD45405A6D1424801FF5AC88F979AB80 (DeriveBytes_tBB1E8E29CFD7109C94F19C8A40DCC7189883361F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15866,7 +15866,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		return ((ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)Castclass((RuntimeObject*)L_1, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 102287
+// Method Definition Index: 102326
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeriveBytes_set_Password_mE6A98520EA50E2A62428C9A8850D1C05B2A7FAFC (DeriveBytes_tBB1E8E29CFD7109C94F19C8A40DCC7189883361F* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15900,7 +15900,7 @@ IL_0010:
 		return;
 	}
 }
-// Method Definition Index: 102288
+// Method Definition Index: 102327
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* DeriveBytes_get_Salt_m77E70FBC054E5D573FBD991275980C107F4633D6 (DeriveBytes_tBB1E8E29CFD7109C94F19C8A40DCC7189883361F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15917,7 +15917,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		return ((ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)Castclass((RuntimeObject*)L_1, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 102289
+// Method Definition Index: 102328
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeriveBytes_set_Salt_m9B502480F116A9B921146E849553EFC60DB94A7B (DeriveBytes_tBB1E8E29CFD7109C94F19C8A40DCC7189883361F* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15950,7 +15950,7 @@ IL_0015:
 		return;
 	}
 }
-// Method Definition Index: 102290
+// Method Definition Index: 102329
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeriveBytes_Adjust_m39BE20F4725D07DCBF711117748BE7AD654BE568 (DeriveBytes_tBB1E8E29CFD7109C94F19C8A40DCC7189883361F* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_a, int32_t ___1_aOff, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___2_b, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -16024,7 +16024,7 @@ IL_005e:
 		return;
 	}
 }
-// Method Definition Index: 102291
+// Method Definition Index: 102330
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* DeriveBytes_Derive_m4CF08A181B9E46EDB98691BB4C6D00BD75D08EE8 (DeriveBytes_tBB1E8E29CFD7109C94F19C8A40DCC7189883361F* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_diversifier, int32_t ___1_n, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16387,7 +16387,7 @@ IL_01ee:
 		return L_111;
 	}
 }
-// Method Definition Index: 102292
+// Method Definition Index: 102331
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* DeriveBytes_DeriveKey_m52FB070FC8822D470918BAE70E27A5C57CDC662A (DeriveBytes_tBB1E8E29CFD7109C94F19C8A40DCC7189883361F* __this, int32_t ___0_size, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16405,7 +16405,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		return L_2;
 	}
 }
-// Method Definition Index: 102293
+// Method Definition Index: 102332
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* DeriveBytes_DeriveIV_mDEECB1C384C67AF716AFE91FC210FC496B3334FE (DeriveBytes_tBB1E8E29CFD7109C94F19C8A40DCC7189883361F* __this, int32_t ___0_size, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16423,7 +16423,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		return L_2;
 	}
 }
-// Method Definition Index: 102294
+// Method Definition Index: 102333
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* DeriveBytes_DeriveMAC_m99726BCF64068E24CC03C4258AFF6831E235D774 (DeriveBytes_tBB1E8E29CFD7109C94F19C8A40DCC7189883361F* __this, int32_t ___0_size, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16441,7 +16441,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		return L_2;
 	}
 }
-// Method Definition Index: 102295
+// Method Definition Index: 102334
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeriveBytes__cctor_m6F7601E9D1537AF9EFBFB25CFD8C9F90D6FD8C25 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16492,7 +16492,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DeriveBytes__cctor_m6F7601E9D1537AF9EFBF
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 102296
+// Method Definition Index: 102335
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void X501__ctor_mFEAF6B02BEA1C519AB6A9BC805367E221B09969F (X501_t5DBAC33581ADA4FC61FAF731E9A02855AB572EB4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16500,7 +16500,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void X501__ctor_mFEAF6B02BEA1C519AB6A9BC80536
 		return;
 	}
 }
-// Method Definition Index: 102297
+// Method Definition Index: 102336
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* X501_ToString_mAC7577F741B34152BF7C5C4DD079CF62DB2FFF32 (ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ___0_seq, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16577,7 +16577,7 @@ IL_0035:
 		return L_16;
 	}
 }
-// Method Definition Index: 102298
+// Method Definition Index: 102337
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* X501_ToString_m4C3921DEC65010E4B8A225C0982C382B1ADF0399 (ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ___0_seq, bool ___1_reversed, String_t* ___2_separator, bool ___3_quotes, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16721,7 +16721,7 @@ IL_0070:
 		return L_33;
 	}
 }
-// Method Definition Index: 102299
+// Method Definition Index: 102338
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void X501_AppendEntry_mE65E502CDE90C1957BFE3C9362DFCEF9B0597553 (StringBuilder_t* ___0_sb, ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ___1_entry, bool ___2_quotes, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17358,7 +17358,7 @@ IL_0328:
 		return;
 	}
 }
-// Method Definition Index: 102300
+// Method Definition Index: 102339
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AttributeTypeAndValue_tFF0F7747472880B8B7FA52EFB7AF251C9014EC32* X501_GetAttributeFromOid_mAE3703F9FE13B1A41316DE71FF62CB9C4999F44A (String_t* ___0_attributeType, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17991,7 +17991,7 @@ IL_02e6:
 		return (AttributeTypeAndValue_tFF0F7747472880B8B7FA52EFB7AF251C9014EC32*)NULL;
 	}
 }
-// Method Definition Index: 102301
+// Method Definition Index: 102340
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool X501_IsOid_m7A3E3F8641772F6BAEC2C2B9A725EE0E37113586 (String_t* ___0_oid, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -18031,7 +18031,7 @@ IL_0016:
 		return L_4;
 	}
 }
-// Method Definition Index: 102302
+// Method Definition Index: 102341
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AttributeTypeAndValue_tFF0F7747472880B8B7FA52EFB7AF251C9014EC32* X501_ReadAttribute_m079FE6D17D21A5988555544D410888B6B8A25BB1 (String_t* ___0_value, int32_t* ___1_pos, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18148,7 +18148,7 @@ IL_0069:
 		return G_B8_0;
 	}
 }
-// Method Definition Index: 102303
+// Method Definition Index: 102342
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool X501_IsHex_m96BE6A757E80CB2BE7CC1B647D04231839EE74E7 (Il2CppChar ___0_c, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18198,7 +18198,7 @@ IL_0024:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 102304
+// Method Definition Index: 102343
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* X501_ReadHex_mA3D6F3FD07FED399AEDE49E48277868C6D9260EE (String_t* ___0_value, int32_t* ___1_pos, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18328,7 +18328,7 @@ IL_0081:
 		return L_52;
 	}
 }
-// Method Definition Index: 102305
+// Method Definition Index: 102344
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t X501_ReadEscaped_m18A2383AA2E5F11185B301FD712B73E67E79FD5A (StringBuilder_t* ___0_sb, String_t* ___1_value, int32_t ___2_pos, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18470,7 +18470,7 @@ IL_0078:
 		return L_29;
 	}
 }
-// Method Definition Index: 102306
+// Method Definition Index: 102345
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t X501_ReadQuoted_mBA2D9FC475D33B0DE15FEFFBD4011CA23288A6E8 (StringBuilder_t* ___0_sb, String_t* ___1_value, int32_t ___2_pos, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18571,7 +18571,7 @@ IL_0036:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_25, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&X501_ReadQuoted_mBA2D9FC475D33B0DE15FEFFBD4011CA23288A6E8_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 102307
+// Method Definition Index: 102346
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* X501_ReadValue_m1E942CB1C1F9241A5F9E09D1066655B88D6F0EEC (String_t* ___0_value, int32_t* ___1_pos, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18796,7 +18796,7 @@ IL_00cc:
 		return L_64;
 	}
 }
-// Method Definition Index: 102308
+// Method Definition Index: 102347
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* X501_FromString_m22E2E65B409AD90884F39373D865EF97AECDADC9 (String_t* ___0_rdn, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18880,7 +18880,7 @@ IL_004e:
 		return L_19;
 	}
 }
-// Method Definition Index: 102309
+// Method Definition Index: 102348
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void X501__cctor_mF9E1961695BFF008C8CDADB7A357965E20024FFA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19014,7 +19014,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void X501__cctor_mF9E1961695BFF008C8CDADB7A35
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 102310
+// Method Definition Index: 102349
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void X509Builder__ctor_mA2067CA17F88628EAB410A2173AE6F7C89333D76 (X509Builder_tCD4859EB5902EFB980F584C5EA281D7FE9A0FE83* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19030,7 +19030,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void X509Builder__ctor_mA2067CA17F88628EAB410
 		return;
 	}
 }
-// Method Definition Index: 102312
+// Method Definition Index: 102351
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* X509Builder_GetOid_mA8E6CDFD500D7D42D94A68114D593D1F6BDB97E3 (X509Builder_tCD4859EB5902EFB980F584C5EA281D7FE9A0FE83* __this, String_t* ___0_hashName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19287,7 +19287,7 @@ IL_0100:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_30, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&X509Builder_GetOid_mA8E6CDFD500D7D42D94A68114D593D1F6BDB97E3_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 102313
+// Method Definition Index: 102352
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* X509Builder_get_Hash_m79DA6B8EE434D5ABEE1F58F69189962CF48F3AC1 (X509Builder_tCD4859EB5902EFB980F584C5EA281D7FE9A0FE83* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19295,7 +19295,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* X509Builder_get_Hash_m79DA6B8EE434D
 		return L_0;
 	}
 }
-// Method Definition Index: 102314
+// Method Definition Index: 102353
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void X509Builder_set_Hash_m625ACBCDDF66FD86F02413D92D099D9406C76799 (X509Builder_tCD4859EB5902EFB980F584C5EA281D7FE9A0FE83* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19325,7 +19325,7 @@ IL_0014:
 		return;
 	}
 }
-// Method Definition Index: 102315
+// Method Definition Index: 102354
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* X509Builder_Sign_m26C703D29A4AAB6C13EAB9E9F1802051A263A356 (X509Builder_tCD4859EB5902EFB980F584C5EA281D7FE9A0FE83* __this, AsymmetricAlgorithm_t5E7E9D26CE0EDCAABD84F616A44E476473BA2AF8* ___0_aa, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19377,7 +19377,7 @@ IL_002a:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_9, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&X509Builder_Sign_m26C703D29A4AAB6C13EAB9E9F1802051A263A356_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 102316
+// Method Definition Index: 102355
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* X509Builder_Build_mE3EBA8EAF6F5B0573E15D18F0D7C6626CB06CF24 (X509Builder_tCD4859EB5902EFB980F584C5EA281D7FE9A0FE83* __this, ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ___0_tbs, String_t* ___1_hashoid, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___2_signature, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19425,7 +19425,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		return L_17;
 	}
 }
-// Method Definition Index: 102317
+// Method Definition Index: 102356
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* X509Builder_Sign_m364EB838E4465B31CEEE9BA413DF7B601496BED9 (X509Builder_tCD4859EB5902EFB980F584C5EA281D7FE9A0FE83* __this, RSA_tDDE9BD4C9806074FA9B1C6A5C93523A97116F21A* ___0_key, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19478,7 +19478,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		return L_18;
 	}
 }
-// Method Definition Index: 102318
+// Method Definition Index: 102357
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* X509Builder_Sign_mEBD6F2AD577F6E76DFFD152884F36EDC5A0F48FA (X509Builder_tCD4859EB5902EFB980F584C5EA281D7FE9A0FE83* __this, DSA_tB12EE3AEA99FBD41DE318E2A371878CA94653E41* ___0_key, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19588,7 +19588,7 @@ IL_002c:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 102319
+// Method Definition Index: 102358
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void X509Crl__ctor_mE8AE92D0023939007B09AA12D066EBED204CD674 (X509Crl_t44039854AA43FD70925AB7812C3BDF8F392D7698* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_crl, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19624,7 +19624,7 @@ IL_0014:
 		return;
 	}
 }
-// Method Definition Index: 102320
+// Method Definition Index: 102359
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void X509Crl_Parse_mBFF8B04C60CD9047169F7F3CB5E9026D66B266B4 (X509Crl_t44039854AA43FD70925AB7812C3BDF8F392D7698* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_crl, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20044,7 +20044,7 @@ IL_0216:
 		return;
 	}
 }
-// Method Definition Index: 102321
+// Method Definition Index: 102360
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* X509Crl_get_Entries_m1405EDA2CCED95EF03456484CB0CA75F51358C15 (X509Crl_t44039854AA43FD70925AB7812C3BDF8F392D7698* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20054,7 +20054,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782
 		return L_1;
 	}
 }
-// Method Definition Index: 102322
+// Method Definition Index: 102361
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR X509CrlEntry_tF569A17BE317C02CF1DEED4D40D7F3C3E70188D7* X509Crl_get_Item_m038DBF642ECE9EF58A6FB40C13276D587733A80F (X509Crl_t44039854AA43FD70925AB7812C3BDF8F392D7698* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20072,7 +20072,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR X509CrlEntry_tF569A17BE317C02CF1DEED4D40D7F3C
 		return ((X509CrlEntry_tF569A17BE317C02CF1DEED4D40D7F3C3E70188D7*)CastclassClass((RuntimeObject*)L_2, X509CrlEntry_tF569A17BE317C02CF1DEED4D40D7F3C3E70188D7_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 102323
+// Method Definition Index: 102362
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR X509CrlEntry_tF569A17BE317C02CF1DEED4D40D7F3C3E70188D7* X509Crl_get_Item_mDFAF09AD2DCBA4AFA034652FAD0AFAF503372CC6 (X509Crl_t44039854AA43FD70925AB7812C3BDF8F392D7698* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_serialNumber, const RuntimeMethod* method) 
 {
 	{
@@ -20082,7 +20082,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR X509CrlEntry_tF569A17BE317C02CF1DEED4D40D7F3C
 		return L_1;
 	}
 }
-// Method Definition Index: 102324
+// Method Definition Index: 102363
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR X509ExtensionCollection_t4A6DDB3D653B72CD358E09B7A1D6DE4EA4DB6534* X509Crl_get_Extensions_mC3F9AF029FB2AA579EA6E940EE7827BCDA2614DF (X509Crl_t44039854AA43FD70925AB7812C3BDF8F392D7698* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20090,7 +20090,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR X509ExtensionCollection_t4A6DDB3D653B72CD358E
 		return L_0;
 	}
 }
-// Method Definition Index: 102325
+// Method Definition Index: 102364
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* X509Crl_get_Hash_m4A8044B7D2C67FD6C32DAC39542CDD42B3F2C9C0 (X509Crl_t44039854AA43FD70925AB7812C3BDF8F392D7698* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20175,7 +20175,7 @@ IL_0044:
 		return L_12;
 	}
 }
-// Method Definition Index: 102326
+// Method Definition Index: 102365
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* X509Crl_get_IssuerName_m88AADDAC80012372BE645AA7CADE49FE090CCB68 (X509Crl_t44039854AA43FD70925AB7812C3BDF8F392D7698* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20183,7 +20183,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* X509Crl_get_IssuerName_m88AADDAC800
 		return L_0;
 	}
 }
-// Method Definition Index: 102327
+// Method Definition Index: 102366
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D X509Crl_get_NextUpdate_mA171254E41B8FD9672F8767B1C65588F75DAF072 (X509Crl_t44039854AA43FD70925AB7812C3BDF8F392D7698* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20191,7 +20191,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA
 		return L_0;
 	}
 }
-// Method Definition Index: 102328
+// Method Definition Index: 102367
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D X509Crl_get_ThisUpdate_m89B176C1E2DBB4BB4D3236341CD6FEE495CD9F6B (X509Crl_t44039854AA43FD70925AB7812C3BDF8F392D7698* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20199,7 +20199,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA
 		return L_0;
 	}
 }
-// Method Definition Index: 102329
+// Method Definition Index: 102368
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* X509Crl_get_SignatureAlgorithm_m736051B7AE4FE2A749A325EEA06CB1B7C4A9F6D3 (X509Crl_t44039854AA43FD70925AB7812C3BDF8F392D7698* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20207,7 +20207,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* X509Crl_get_SignatureAlgorithm_m736
 		return L_0;
 	}
 }
-// Method Definition Index: 102330
+// Method Definition Index: 102369
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* X509Crl_get_Signature_m642237E425E9A48A65EF95E9DEDE0F8672E806EA (X509Crl_t44039854AA43FD70925AB7812C3BDF8F392D7698* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20236,7 +20236,7 @@ IL_000a:
 		return ((ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)Castclass((RuntimeObject*)L_2, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 102331
+// Method Definition Index: 102370
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* X509Crl_get_RawData_mD4B1802A33551803C5716FAD241A7510E743C126 (X509Crl_t44039854AA43FD70925AB7812C3BDF8F392D7698* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20253,7 +20253,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		return ((ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)Castclass((RuntimeObject*)L_1, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 102332
+// Method Definition Index: 102371
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t X509Crl_get_Version_mC843AD2755662FEB8E9A43A3223D18AE15CD8161 (X509Crl_t44039854AA43FD70925AB7812C3BDF8F392D7698* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20261,7 +20261,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t X509Crl_get_Version_mC843AD2755662FEB
 		return L_0;
 	}
 }
-// Method Definition Index: 102333
+// Method Definition Index: 102372
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool X509Crl_get_IsCurrent_mB8B3DB0F86E39203DF59BC862F7FECD6D2CC41A4 (X509Crl_t44039854AA43FD70925AB7812C3BDF8F392D7698* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20279,7 +20279,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool X509Crl_get_IsCurrent_mB8B3DB0F86E39203D
 		return L_1;
 	}
 }
-// Method Definition Index: 102334
+// Method Definition Index: 102373
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool X509Crl_WasCurrent_mBF6A540F2CA0CAD578C2C0E3E8EBE2878ABF1882 (X509Crl_t44039854AA43FD70925AB7812C3BDF8F392D7698* __this, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___0_instant, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20334,7 +20334,7 @@ IL_003a:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 102335
+// Method Definition Index: 102374
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* X509Crl_GetBytes_mE37E98426CF7BC757036FC48B52A87B29470F99A (X509Crl_t44039854AA43FD70925AB7812C3BDF8F392D7698* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20351,7 +20351,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		return ((ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)Castclass((RuntimeObject*)L_1, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 102336
+// Method Definition Index: 102375
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool X509Crl_Compare_mB585F4CCA3B1FAD5815FDA71976D5FC6842BD46E (X509Crl_t44039854AA43FD70925AB7812C3BDF8F392D7698* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_array1, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_array2, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -20456,7 +20456,7 @@ IL_002c:
 		return (bool)1;
 	}
 }
-// Method Definition Index: 102337
+// Method Definition Index: 102376
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR X509CrlEntry_tF569A17BE317C02CF1DEED4D40D7F3C3E70188D7* X509Crl_GetCrlEntry_m824AEE6406406298D8740660A24F87CAD854936C (X509Crl_t44039854AA43FD70925AB7812C3BDF8F392D7698* __this, X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* ___0_x509, const RuntimeMethod* method) 
 {
 	{
@@ -20483,7 +20483,7 @@ IL_000e:
 		return L_4;
 	}
 }
-// Method Definition Index: 102338
+// Method Definition Index: 102377
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR X509CrlEntry_tF569A17BE317C02CF1DEED4D40D7F3C3E70188D7* X509Crl_GetCrlEntry_m93093BA86976CEC62DFFDB28FFFE2353ECE35BB1 (X509Crl_t44039854AA43FD70925AB7812C3BDF8F392D7698* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_serialNumber, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20560,7 +20560,7 @@ IL_0039:
 		return (X509CrlEntry_tF569A17BE317C02CF1DEED4D40D7F3C3E70188D7*)NULL;
 	}
 }
-// Method Definition Index: 102339
+// Method Definition Index: 102378
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool X509Crl_VerifySignature_m3F75F2FE7B2EFF0869734A2C498AF044C5D96E0F (X509Crl_t44039854AA43FD70925AB7812C3BDF8F392D7698* __this, X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* ___0_x509, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20736,7 +20736,7 @@ IL_00a8:
 		return L_34;
 	}
 }
-// Method Definition Index: 102340
+// Method Definition Index: 102379
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool X509Crl_VerifySignature_m91D8FC43DAB9C5688E85FDA94C176AF73E665389 (X509Crl_t44039854AA43FD70925AB7812C3BDF8F392D7698* __this, DSA_tB12EE3AEA99FBD41DE318E2A371878CA94653E41* ___0_dsa, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20879,7 +20879,7 @@ IL_0054:
 		return L_43;
 	}
 }
-// Method Definition Index: 102341
+// Method Definition Index: 102380
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool X509Crl_VerifySignature_m68859DEF40F3BB35F9DC79A025FED8981E0CE800 (X509Crl_t44039854AA43FD70925AB7812C3BDF8F392D7698* __this, RSA_tDDE9BD4C9806074FA9B1C6A5C93523A97116F21A* ___0_rsa, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20909,7 +20909,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool X509Crl_VerifySignature_m68859DEF40F3BB3
 		return L_7;
 	}
 }
-// Method Definition Index: 102342
+// Method Definition Index: 102381
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool X509Crl_VerifySignature_m4FBC30F86E1BAF545D86876CF90C9105A01D8553 (X509Crl_t44039854AA43FD70925AB7812C3BDF8F392D7698* __this, AsymmetricAlgorithm_t5E7E9D26CE0EDCAABD84F616A44E476473BA2AF8* ___0_aa, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20975,7 +20975,7 @@ IL_0038:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_11, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&X509Crl_VerifySignature_m4FBC30F86E1BAF545D86876CF90C9105A01D8553_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 102343
+// Method Definition Index: 102382
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR X509Crl_t44039854AA43FD70925AB7812C3BDF8F392D7698* X509Crl_CreateFromFile_m53B402D6C9631657280B6A74785606D8251C4A29 (String_t* ___0_filename, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21064,7 +21064,7 @@ IL_0037:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 102344
+// Method Definition Index: 102383
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void X509CrlEntry__ctor_mD1462E6E821C1EAAA077BF99DE1343DCF73E3FE1 (X509CrlEntry_tF569A17BE317C02CF1DEED4D40D7F3C3E70188D7* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_serialNumber, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___1_revocationDate, X509ExtensionCollection_t4A6DDB3D653B72CD358E09B7A1D6DE4EA4DB6534* ___2_extensions, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21102,7 +21102,7 @@ IL_0023:
 		return;
 	}
 }
-// Method Definition Index: 102345
+// Method Definition Index: 102384
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void X509CrlEntry__ctor_m1CE31E179C47AA73774CE7C57CA24C879741EE81 (X509CrlEntry_tF569A17BE317C02CF1DEED4D40D7F3C3E70188D7* __this, ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ___0_entry, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21143,7 +21143,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void X509CrlEntry__ctor_m1CE31E179C47AA73774C
 		return;
 	}
 }
-// Method Definition Index: 102346
+// Method Definition Index: 102385
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* X509CrlEntry_get_SerialNumber_mC1CD9010A26A5983B2DDD1A459FDC15619107478 (X509CrlEntry_tF569A17BE317C02CF1DEED4D40D7F3C3E70188D7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21160,7 +21160,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		return ((ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)Castclass((RuntimeObject*)L_1, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 102347
+// Method Definition Index: 102386
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D X509CrlEntry_get_RevocationDate_m46DE2560B090EC69ECD7B9D819297E544C5386DA (X509CrlEntry_tF569A17BE317C02CF1DEED4D40D7F3C3E70188D7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -21168,7 +21168,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA
 		return L_0;
 	}
 }
-// Method Definition Index: 102348
+// Method Definition Index: 102387
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR X509ExtensionCollection_t4A6DDB3D653B72CD358E09B7A1D6DE4EA4DB6534* X509CrlEntry_get_Extensions_m9756808EA9F465E76B8FC88417819B051538BB3B (X509CrlEntry_tF569A17BE317C02CF1DEED4D40D7F3C3E70188D7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -21176,7 +21176,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR X509ExtensionCollection_t4A6DDB3D653B72CD358E
 		return L_0;
 	}
 }
-// Method Definition Index: 102349
+// Method Definition Index: 102388
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* X509CrlEntry_GetBytes_mFB3396B881D5186A95A6DCB3A8A89BD7C0C4479B (X509CrlEntry_tF569A17BE317C02CF1DEED4D40D7F3C3E70188D7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21243,7 +21243,7 @@ IL_0052:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 102350
+// Method Definition Index: 102389
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void X509Certificate_Parse_m52B3A2D924074F675F699C569C548DD521D5CF81 (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21751,7 +21751,7 @@ IL_0323:
 		return;
 	}
 }
-// Method Definition Index: 102351
+// Method Definition Index: 102390
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void X509Certificate__ctor_m4F437D7E76C6CCB0941AB5801946076C82583946 (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21832,7 +21832,7 @@ IL_0037:
 		return;
 	}
 }
-// Method Definition Index: 102352
+// Method Definition Index: 102391
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* X509Certificate_GetUnsignedBigInteger_mCFCA46D7C07D96A6B33AAB09A68BEA6E653E4BD3 (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_integer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21874,7 +21874,7 @@ IL_001e:
 		return L_10;
 	}
 }
-// Method Definition Index: 102353
+// Method Definition Index: 102392
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DSA_tB12EE3AEA99FBD41DE318E2A371878CA94653E41* X509Certificate_get_DSA_m661EA8FA79C2108403B685495B961422BC531AA6 (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22093,7 +22093,7 @@ IL_0127:
 		return L_46;
 	}
 }
-// Method Definition Index: 102354
+// Method Definition Index: 102393
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void X509Certificate_set_DSA_m35B061538E1BA0B2492CA50F46092FB3C48927B8 (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, DSA_tB12EE3AEA99FBD41DE318E2A371878CA94653E41* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -22116,7 +22116,7 @@ IL_0011:
 		return;
 	}
 }
-// Method Definition Index: 102355
+// Method Definition Index: 102394
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR X509ExtensionCollection_t4A6DDB3D653B72CD358E09B7A1D6DE4EA4DB6534* X509Certificate_get_Extensions_m74416980E0AF90FAD180B10AF4BAE2727E3C6EA6 (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22124,7 +22124,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR X509ExtensionCollection_t4A6DDB3D653B72CD358E
 		return L_0;
 	}
 }
-// Method Definition Index: 102356
+// Method Definition Index: 102395
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* X509Certificate_get_Hash_m116CA9E5DFB48CE5464E79C1941A0E78F20EB1F6 (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22254,7 +22254,7 @@ IL_0068:
 		return ((ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)Castclass((RuntimeObject*)L_19, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 102357
+// Method Definition Index: 102396
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* X509Certificate_get_IssuerName_mAB4FC4E65427A67DBEA87A6182336AF6870D900A (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22262,7 +22262,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* X509Certificate_get_IssuerName_mAB4
 		return L_0;
 	}
 }
-// Method Definition Index: 102358
+// Method Definition Index: 102397
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* X509Certificate_get_KeyAlgorithm_m7538B572B9ACFCE48CAD7B8B2F5DF0EA3299D4DF (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22270,7 +22270,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* X509Certificate_get_KeyAlgorithm_m7
 		return L_0;
 	}
 }
-// Method Definition Index: 102359
+// Method Definition Index: 102398
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* X509Certificate_get_KeyAlgorithmParameters_m198AAE45BF470804D29A79EDF6CC0EFB4DF8A247 (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22299,7 +22299,7 @@ IL_000a:
 		return ((ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)Castclass((RuntimeObject*)L_2, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 102360
+// Method Definition Index: 102399
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void X509Certificate_set_KeyAlgorithmParameters_m61198F54A91C2FDC7175E12C2E77E30A77D8E1D8 (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -22309,7 +22309,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void X509Certificate_set_KeyAlgorithmParamete
 		return;
 	}
 }
-// Method Definition Index: 102361
+// Method Definition Index: 102400
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* X509Certificate_get_PublicKey_m5504C97766FD6A8B0AF72CC6255A09A7397C819C (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22338,7 +22338,7 @@ IL_000a:
 		return ((ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)Castclass((RuntimeObject*)L_2, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 102362
+// Method Definition Index: 102401
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RSA_tDDE9BD4C9806074FA9B1C6A5C93523A97116F21A* X509Certificate_get_RSA_mB74DAA8EF4132B0917C236F0F2617D95F23005E8 (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22461,7 +22461,7 @@ IL_00a2:
 		return L_25;
 	}
 }
-// Method Definition Index: 102363
+// Method Definition Index: 102402
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void X509Certificate_set_RSA_m92B549DE372ABD58211BE846490719E5511D6D9C (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, RSA_tDDE9BD4C9806074FA9B1C6A5C93523A97116F21A* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -22484,7 +22484,7 @@ IL_000a:
 		return;
 	}
 }
-// Method Definition Index: 102364
+// Method Definition Index: 102403
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* X509Certificate_get_RawData_m322C38993C6E083A2FB1425C2E4D846FF905472E (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22513,7 +22513,7 @@ IL_000a:
 		return ((ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)Castclass((RuntimeObject*)L_2, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 102365
+// Method Definition Index: 102404
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* X509Certificate_get_SerialNumber_m851B2E32EF2F46323798CBFD8450E4B8A82F264C (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22542,7 +22542,7 @@ IL_000a:
 		return ((ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)Castclass((RuntimeObject*)L_2, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 102366
+// Method Definition Index: 102405
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* X509Certificate_get_Signature_m9B024ABD17D5320621904317E66A36BCC2B0FA46 (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22949,7 +22949,7 @@ IL_022d:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_74, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&X509Certificate_get_Signature_m9B024ABD17D5320621904317E66A36BCC2B0FA46_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 102367
+// Method Definition Index: 102406
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* X509Certificate_get_SignatureAlgorithm_m41245989FFF05F260F8587D183644069CCBE6C74 (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22957,7 +22957,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* X509Certificate_get_SignatureAlgori
 		return L_0;
 	}
 }
-// Method Definition Index: 102368
+// Method Definition Index: 102407
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* X509Certificate_get_SignatureAlgorithmParameters_m7299DD361892FB74C883A753D26167E3F853CF3F (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22987,7 +22987,7 @@ IL_000f:
 		return ((ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)Castclass((RuntimeObject*)L_3, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 102369
+// Method Definition Index: 102408
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* X509Certificate_get_SubjectName_m75A5BA36DC4F00694DC5F3797EA89F04C095A48D (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22995,7 +22995,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* X509Certificate_get_SubjectName_m75
 		return L_0;
 	}
 }
-// Method Definition Index: 102370
+// Method Definition Index: 102409
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D X509Certificate_get_ValidFrom_m735D09A81A642542E2509EDED48399D671FE2CE9 (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23003,7 +23003,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA
 		return L_0;
 	}
 }
-// Method Definition Index: 102371
+// Method Definition Index: 102410
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D X509Certificate_get_ValidUntil_m58C8212E0E011376733C1DE57F78796483815AA7 (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23011,7 +23011,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA
 		return L_0;
 	}
 }
-// Method Definition Index: 102372
+// Method Definition Index: 102411
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t X509Certificate_get_Version_mE2DE4C0948C42ECECCA2C1B87F1C2524C2E10128 (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23019,7 +23019,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t X509Certificate_get_Version_mE2DE4C09
 		return L_0;
 	}
 }
-// Method Definition Index: 102373
+// Method Definition Index: 102412
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool X509Certificate_get_IsCurrent_mEBC52E38B22A633B0047BAA006F2446905473BDE (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23037,7 +23037,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool X509Certificate_get_IsCurrent_mEBC52E38B
 		return L_1;
 	}
 }
-// Method Definition Index: 102374
+// Method Definition Index: 102413
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool X509Certificate_WasCurrent_mA995BED12113288539D2BAB184B16AEF38844CEC (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___0_instant, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23073,7 +23073,7 @@ IL_001b:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 102375
+// Method Definition Index: 102414
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* X509Certificate_get_IssuerUniqueIdentifier_mCE638238B77D1AB7129089E6457807D04060529D (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23102,7 +23102,7 @@ IL_000a:
 		return ((ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)Castclass((RuntimeObject*)L_2, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 102376
+// Method Definition Index: 102415
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* X509Certificate_get_SubjectUniqueIdentifier_mFFD9B105CAF9F3E41099AEB542685376060F900A (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23131,7 +23131,7 @@ IL_000a:
 		return ((ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)Castclass((RuntimeObject*)L_2, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 102377
+// Method Definition Index: 102416
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool X509Certificate_VerifySignature_mE51967C4A00FD61035443B3E31358F40A1719AA1 (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, DSA_tB12EE3AEA99FBD41DE318E2A371878CA94653E41* ___0_dsa, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23158,7 +23158,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool X509Certificate_VerifySignature_mE51967C
 		return L_5;
 	}
 }
-// Method Definition Index: 102378
+// Method Definition Index: 102417
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool X509Certificate_VerifySignature_m7FCB318B8E4049EFDD072092C0EE96A552DBF417 (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, RSA_tDDE9BD4C9806074FA9B1C6A5C93523A97116F21A* ___0_rsa, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23204,7 +23204,7 @@ IL_0014:
 		return L_9;
 	}
 }
-// Method Definition Index: 102379
+// Method Definition Index: 102418
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool X509Certificate_VerifySignature_m2CB811C31D526CF4ECDEC02E59297A94DE8826AE (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, AsymmetricAlgorithm_t5E7E9D26CE0EDCAABD84F616A44E476473BA2AF8* ___0_aa, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23270,7 +23270,7 @@ IL_0038:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_11, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&X509Certificate_VerifySignature_m2CB811C31D526CF4ECDEC02E59297A94DE8826AE_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 102380
+// Method Definition Index: 102419
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool X509Certificate_CheckSignature_m056B5E92F6A84AAC3B6EC00839957289A419B2A0 (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_hash, String_t* ___1_hashAlgorithm, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___2_signature, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23291,7 +23291,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool X509Certificate_CheckSignature_m056B5E92
 		return L_4;
 	}
 }
-// Method Definition Index: 102381
+// Method Definition Index: 102420
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool X509Certificate_get_IsSelfSigned_mAC256ADBF25A2572AAA95F126D3A466E1E3D00AA (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -23380,7 +23380,7 @@ IL_004d:
 		return L_10;
 	}
 }
-// Method Definition Index: 102382
+// Method Definition Index: 102421
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* X509Certificate_GetIssuerName_mE6AB37F450202C09FF15BFF0A495510D7A13047C (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23388,7 +23388,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6
 		return L_0;
 	}
 }
-// Method Definition Index: 102383
+// Method Definition Index: 102422
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* X509Certificate_GetSubjectName_mB9D86C1BA49735DCA812F914AB7FD2A6272C7502 (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23396,7 +23396,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6
 		return L_0;
 	}
 }
-// Method Definition Index: 102384
+// Method Definition Index: 102423
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void X509Certificate__ctor_mBC8B5ED251D09EB222EB313F7B3D4F99B26616A9 (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37* ___0_info, StreamingContext_t56760522A751890146EE45F82F866B55B7E33677 ___1_context, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23421,7 +23421,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void X509Certificate__ctor_mBC8B5ED251D09EB22
 		return;
 	}
 }
-// Method Definition Index: 102385
+// Method Definition Index: 102424
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void X509Certificate_GetObjectData_mD8D5BD0C35EAB48243C4330A842755738B1CD9F3 (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37* ___0_info, StreamingContext_t56760522A751890146EE45F82F866B55B7E33677 ___1_context, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23438,7 +23438,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void X509Certificate_GetObjectData_mD8D5BD0C3
 		return;
 	}
 }
-// Method Definition Index: 102386
+// Method Definition Index: 102425
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* X509Certificate_PEM_mE33D5467323808200102789409F34F31DD037306 (String_t* ___0_type, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23497,7 +23497,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		return L_20;
 	}
 }
-// Method Definition Index: 102387
+// Method Definition Index: 102426
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void X509Certificate__cctor_mD9016D839CEC21325002B8084A426A59693BB6EA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23518,7 +23518,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void X509Certificate__cctor_mD9016D839CEC2132
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 102160
+// Method Definition Index: 102199
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint8_t ASN1_get_Tag_m1984CF0DDF54424E61BA3650D93CBA0DCB58F232_inline (ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23534,7 +23534,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m42625D
 		return L_0;
 	}
 }
-// Method Definition Index: 102197
+// Method Definition Index: 102236
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ContentInfo_set_Content_mC885DF149B5AB25343766F00FB7749A77BEFBC36_inline (ContentInfo_t5742C43EE0907BEA6330E14F18C4885A874797FE* __this, ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -23544,7 +23544,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ContentInfo_set_Content_mC88
 		return;
 	}
 }
-// Method Definition Index: 102216
+// Method Definition Index: 102255
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* SignerInfo_get_HashName_m1FCB2FBBA2DEC8F246B2ECE65997A2972B60B424_inline (SignerInfo_t1D335355B15E47705EAEA3E503BF54F31625E505* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23552,7 +23552,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* SignerInfo_get_HashName
 		return L_0;
 	}
 }
-// Method Definition Index: 102215
+// Method Definition Index: 102254
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* SignerInfo_get_AuthenticatedAttributes_m52500C3AC3793C89F0296BBEF64698F2ED20B8F4_inline (SignerInfo_t1D335355B15E47705EAEA3E503BF54F31625E505* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23560,7 +23560,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ArrayList_t7A8E5AF0C4378015B5731A
 		return L_0;
 	}
 }
-// Method Definition Index: 102217
+// Method Definition Index: 102256
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SignerInfo_set_HashName_m5C681833EF9E8380311B609BE25BE33911140E37_inline (SignerInfo_t1D335355B15E47705EAEA3E503BF54F31625E505* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -23570,7 +23570,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SignerInfo_set_HashName_m5C6
 		return;
 	}
 }
-// Method Definition Index: 102198
+// Method Definition Index: 102237
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* ContentInfo_get_ContentType_m4ACE1C1CD7330D35EF0C2C422CF48E3BA0FFD7D1_inline (ContentInfo_t5742C43EE0907BEA6330E14F18C4885A874797FE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23578,7 +23578,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* ContentInfo_get_Content
 		return L_0;
 	}
 }
-// Method Definition Index: 102196
+// Method Definition Index: 102235
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* ContentInfo_get_Content_m85ECCB3CF732981E207598428EF008D95F754F98_inline (ContentInfo_t5742C43EE0907BEA6330E14F18C4885A874797FE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23586,7 +23586,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD18
 		return L_0;
 	}
 }
-// Method Definition Index: 102275
+// Method Definition Index: 102314
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PKCS12_get_MaximumPasswordLength_m1254971BF3342F220F85AA11F42433D1BD4E86A0_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23601,7 +23601,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PKCS12_get_MaximumPasswor
 		return L_0;
 	}
 }
-// Method Definition Index: 102224
+// Method Definition Index: 102263
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* SafeBag_get_BagOID_m1218C83BAD5C56D41AFF31B58784848A27A265E6_inline (SafeBag_t130F59A27AC0BC5E9982CFE75C920D99DB1C8109* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23609,7 +23609,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* SafeBag_get_BagOID_m121
 		return L_0;
 	}
 }
-// Method Definition Index: 102225
+// Method Definition Index: 102264
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F* SafeBag_get_ASN1_m699A375228725122D8B9EE455013B215FBB87D05_inline (SafeBag_t130F59A27AC0BC5E9982CFE75C920D99DB1C8109* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23617,7 +23617,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ASN1_t33549D58797C9C33AA83F13AD18
 		return L_0;
 	}
 }
-// Method Definition Index: 102784
+// Method Definition Index: 102823
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* EncryptedPrivateKeyInfo_get_Algorithm_mA143C07290B65E429244DBD3C98CD7E4F2FDA061_inline (EncryptedPrivateKeyInfo_t05EB9097978F3451F26C58ADF5A958DDDC27CE02* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23625,7 +23625,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* EncryptedPrivateKeyInfo
 		return L_0;
 	}
 }
-// Method Definition Index: 102789
+// Method Definition Index: 102828
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t EncryptedPrivateKeyInfo_get_IterationCount_m0027F1C5D6D120B70924F3DFCDFAAA48C064F410_inline (EncryptedPrivateKeyInfo_t05EB9097978F3451F26C58ADF5A958DDDC27CE02* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23633,7 +23633,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t EncryptedPrivateKeyInfo_g
 		return L_0;
 	}
 }
-// Method Definition Index: 102285
+// Method Definition Index: 102324
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DeriveBytes_set_IterationCount_m0C50A49409C1B40DB50FA5123C89B2EF10C76E1D_inline (DeriveBytes_tBB1E8E29CFD7109C94F19C8A40DCC7189883361F* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -23642,7 +23642,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DeriveBytes_set_IterationCou
 		return;
 	}
 }
-// Method Definition Index: 102283
+// Method Definition Index: 102322
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DeriveBytes_set_HashName_m8C49265C77E164C659E6B11840289B0BFF7A0AA2_inline (DeriveBytes_tBB1E8E29CFD7109C94F19C8A40DCC7189883361F* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -23652,7 +23652,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DeriveBytes_set_HashName_m8C
 		return;
 	}
 }
-// Method Definition Index: 102203
+// Method Definition Index: 102242
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ContentInfo_t5742C43EE0907BEA6330E14F18C4885A874797FE* EncryptedData_get_EncryptionAlgorithm_mF1F3CE667E2558EC146D7086A64C5735DEB37BF4_inline (EncryptedData_tB91085BBD2ADFBF2671238CA933B85B8E30D2778* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23660,7 +23660,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ContentInfo_t5742C43EE0907BEA6330
 		return L_0;
 	}
 }
-// Method Definition Index: 102769
+// Method Definition Index: 102808
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PrivateKeyInfo_get_Algorithm_m544D7A80C2BD7DE45C080DF09D88221A58DB9459_inline (PrivateKeyInfo_t28A9EE4065B3A3A02D373C6FC28EE45E394D9354* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23668,7 +23668,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PrivateKeyInfo_get_Algo
 		return L_0;
 	}
 }
-// Method Definition Index: 102770
+// Method Definition Index: 102809
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PrivateKeyInfo_set_Algorithm_mFD8F5D740F42A4FB5F140746F66344C482214461_inline (PrivateKeyInfo_t28A9EE4065B3A3A02D373C6FC28EE45E394D9354* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -23678,7 +23678,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PrivateKeyInfo_set_Algorithm
 		return;
 	}
 }
-// Method Definition Index: 102785
+// Method Definition Index: 102824
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void EncryptedPrivateKeyInfo_set_Algorithm_m5D20F5C3A27178F750D8EA9284487B0CB000BDF2_inline (EncryptedPrivateKeyInfo_t05EB9097978F3451F26C58ADF5A958DDDC27CE02* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -23688,7 +23688,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void EncryptedPrivateKeyInfo_set_
 		return;
 	}
 }
-// Method Definition Index: 102199
+// Method Definition Index: 102238
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ContentInfo_set_ContentType_mE3356914A7D44048391DCD32316D00C026415791_inline (ContentInfo_t5742C43EE0907BEA6330E14F18C4885A874797FE* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -23698,7 +23698,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ContentInfo_set_ContentType_
 		return;
 	}
 }
-// Method Definition Index: 102233
+// Method Definition Index: 102272
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PKCS12_get_IterationCount_m2034EE21157689975AE4DC6E1F6B8628DB4539B4_inline (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23706,7 +23706,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PKCS12_get_IterationCount
 		return L_0;
 	}
 }
-// Method Definition Index: 102234
+// Method Definition Index: 102273
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PKCS12_set_IterationCount_m3F155BE5145E6356037FCEB58E1811255F80A6D3_inline (PKCS12_t1E7D81A38668D35E4536A15ADC8190525267A989* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -23715,7 +23715,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PKCS12_set_IterationCount_m3
 		return;
 	}
 }
-// Method Definition Index: 102372
+// Method Definition Index: 102411
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t X509Certificate_get_Version_mE2DE4C0948C42ECECCA2C1B87F1C2524C2E10128_inline (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23723,7 +23723,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t X509Certificate_get_Versi
 		return L_0;
 	}
 }
-// Method Definition Index: 102355
+// Method Definition Index: 102394
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR X509ExtensionCollection_t4A6DDB3D653B72CD358E09B7A1D6DE4EA4DB6534* X509Certificate_get_Extensions_m74416980E0AF90FAD180B10AF4BAE2727E3C6EA6_inline (X509Certificate_t9ECDEAA7F2B56A899145F284A13F4D0042481356* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23731,7 +23731,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR X509ExtensionCollection_t4A6DDB3D
 		return L_0;
 	}
 }
-// Method Definition Index: 102570
+// Method Definition Index: 102609
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool BasicConstraintsExtension_get_CertificateAuthority_m5BCC384C91B4A0B11CA41B7C12148457A0B56549_inline (BasicConstraintsExtension_tD20BD507457CBA6AD6D52B019179C4CDE32D4953* __this, const RuntimeMethod* method) 
 {
 	{

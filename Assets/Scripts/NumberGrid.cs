@@ -60,6 +60,7 @@ public class NumberGrid : MonoBehaviour
         public Button selectButton; // Button component
         public Image highlightImage; // Highlight image component
         public Image powerupImage; // Powerup image component (for powerup boxes)
+        public int powerupSpriteIndex = -1; // Powerup sprite index (for powerup boxes)
         public bool isSelected; // Whether this box is selected (by any player)
         public PlayerType selectedByPlayer = PlayerType.Player; // Which player selected this box
         public int selectedByCPUIndex = -1; // Which CPU index selected this box (-1 if player or not selected)
@@ -336,7 +337,8 @@ public class NumberGrid : MonoBehaviour
             selectedByPlayer = PlayerType.Player,
             selectedByCPUIndex = -1,
             selectedInRollSum = -1,
-            selectedInRollId = -1
+            selectedInRollId = -1,
+            powerupSpriteIndex = powerupSpriteIndex // Store the sprite index
         };
         
         // Find and disable number text
@@ -1102,10 +1104,10 @@ public class NumberGrid : MonoBehaviour
                     elapsed += Time.deltaTime;
                     float remaining = powerupVisibleDuration - elapsed;
                     
-                    // Update slider (0 to 1, where 1 is full time remaining)
+                    // Update slider (0 to 1, where 1 is full time elapsed - moves left to right)
                     if (powerupTimerSlider != null && powerupTimerSlider.gameObject.activeSelf)
                     {
-                        powerupTimerSlider.value = remaining / powerupVisibleDuration;
+                        powerupTimerSlider.value = elapsed / powerupVisibleDuration;
                     }
                     
                     // Update text (show remaining seconds)
@@ -1152,7 +1154,31 @@ public class NumberGrid : MonoBehaviour
         if (powerupTimerSlider != null)
         {
             powerupTimerSlider.gameObject.SetActive(true);
-            powerupTimerSlider.value = 1f; // Start at full
+            powerupTimerSlider.value = 0f; // Start at empty (left side)
+            
+            // Set slider handle sprite to match the powerup sprite
+            if (powerupBox.powerupSpriteIndex >= 0 && powerupBox.powerupSpriteIndex < powerupSprites.Length && powerupSprites[powerupBox.powerupSpriteIndex] != null)
+            {
+                // Get the handle RectTransform
+                RectTransform handleRect = powerupTimerSlider.handleRect;
+                if (handleRect != null)
+                {
+                    // Get the Image component from the handle
+                    Image handleImage = handleRect.GetComponent<Image>();
+                    if (handleImage != null)
+                    {
+                        handleImage.sprite = powerupSprites[powerupBox.powerupSpriteIndex];
+                    }
+                    else
+                    {
+                        Debug.LogWarning("[NumberGrid] Slider handle does not have an Image component!");
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning("[NumberGrid] Slider handleRect is not assigned!");
+                }
+            }
         }
         if (powerupTimerText != null)
         {
