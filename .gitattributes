@@ -1,22 +1,18 @@
 # Auto detect text files and perform LF normalization
 * text=auto eol=lf
-
 # Unity-specific files should use LF
 *.cs text eol=lf
 *.js text eol=lf
 *.boo text eol=lf
 *.shader text eol=lf
-
 # Unity meta files
 *.meta text eol=lf
-
 # Unity asset files
 *.asset text eol=lf
 *.prefab text eol=lf
 *.unity text eol=lf
 *.anim text eol=lf
 *.controller text eol=lf
-
 # Text files
 *.txt text eol=lf
 *.md text eol=lf
@@ -24,7 +20,6 @@
 *.xml text eol=lf
 *.yml text eol=lf
 *.yaml text eol=lf
-
 # Binary files
 *.png binary
 *.jpg binary
@@ -40,3 +35,5 @@
 *.dll binary
 *.so binary
 *.dylib binary
+Assets/Firebase/Plugins/x86_64/FirebaseCppApp-13_6_0.bundle filter=lfs diff=lfs merge=lfs -text
+Assets/Firebase/Plugins/x86_64/FirebaseCppApp-13_6_0.so filter=lfs diff=lfs merge=lfs -text
