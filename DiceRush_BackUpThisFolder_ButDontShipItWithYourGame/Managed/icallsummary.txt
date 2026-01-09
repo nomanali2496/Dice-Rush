@@ -232,7 +232,6 @@ UnityEngine.AndroidJNI::CallStaticStringMethodUnsafeInternal_Injected
 UnityEngine.AndroidJNI::CallStaticVoidMethodUnsafe
 UnityEngine.AndroidJNI::CallStringMethodUnsafeInternal_Injected
 UnityEngine.AndroidJNI::CallVoidMethodUnsafe
-UnityEngine.AndroidJNI::CleanQueueGlobalRefs
 UnityEngine.AndroidJNI::DeleteGlobalRef
 UnityEngine.AndroidJNI::DeleteLocalRef
 UnityEngine.AndroidJNI::DeleteWeakGlobalRef
@@ -310,6 +309,7 @@ UnityEngine.Application::get_isPlaying
 UnityEngine.Application::get_runInBackground
 UnityEngine.Application::get_targetFrameRate
 UnityEngine.Application::OpenURL_Injected
+UnityEngine.Application::Quit
 UnityEngine.Application::SetLogCallbackDefined
 UnityEngine.Application::get_cloudProjectId_Injected
 UnityEngine.Application::get_companyName_Injected
@@ -1592,8 +1592,6 @@ UnityEngine.SystemInfo::GetPhysicalMemoryMB
 UnityEngine.SystemInfo::GetProcessorCount
 UnityEngine.SystemInfo::GetProcessorFrequencyMHz
 UnityEngine.SystemInfo::GetRenderTextureSupportedMSAASampleCount_Injected
-UnityEngine.SystemInfo::GetTiledRenderTargetStorageSize
-UnityEngine.SystemInfo::MaxTiledPixelStorageSize
 UnityEngine.SystemInfo::SupportedRenderTargetCount
 UnityEngine.SystemInfo::SupportsMultisampledTextures
 UnityEngine.SystemInfo::MaxGraphicsBufferSize
@@ -1877,11 +1875,9 @@ UnityEngine.UIElements.UIR.JobProcessor::ScheduleNudgeJobs_Injected
 UnityEngine.UIElements.UIR.Utility::CPUFencePassed
 UnityEngine.UIElements.UIR.Utility::HasMappedBufferRange
 UnityEngine.UIElements.UIR.Utility::AllocateBuffer
-UnityEngine.UIElements.UIR.Utility::AllocateShaderPropertySheet
 UnityEngine.UIElements.UIR.Utility::CreateStencilState_Injected
 UnityEngine.UIElements.UIR.Utility::GetVertexDeclaration_Injected
 UnityEngine.UIElements.UIR.Utility::InsertCPUFence
-UnityEngine.UIElements.UIR.Utility::ApplyShaderPropertySheet
 UnityEngine.UIElements.UIR.Utility::DisableScissor
 UnityEngine.UIElements.UIR.Utility::DrawRanges
 UnityEngine.UIElements.UIR.Utility::FreeBuffer
@@ -1890,12 +1886,9 @@ UnityEngine.UIElements.UIR.Utility::GetUnityProjectionMatrix_Injected
 UnityEngine.UIElements.UIR.Utility::NotifyOfUIREvents
 UnityEngine.UIElements.UIR.Utility::ProfileDrawChainBegin
 UnityEngine.UIElements.UIR.Utility::ProfileDrawChainEnd
-UnityEngine.UIElements.UIR.Utility::ReleasePropertySheet
-UnityEngine.UIElements.UIR.Utility::SetAllTextures
 UnityEngine.UIElements.UIR.Utility::SetPropertyBlock_Injected
 UnityEngine.UIElements.UIR.Utility::SetScissorRect_Injected
 UnityEngine.UIElements.UIR.Utility::SetStencilState
-UnityEngine.UIElements.UIR.Utility::SetVectorArray_Injected
 UnityEngine.UIElements.UIR.Utility::SyncRenderThread
 UnityEngine.UIElements.UIR.Utility::UpdateBufferRanges
 UnityEngine.UIElements.UIR.Utility::WaitForCPUFencePassed

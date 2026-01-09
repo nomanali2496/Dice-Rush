@@ -3,6 +3,7 @@ using System.Collections;
 using TMPro;
 using EnhancedUI;
 using EnhancedUI.EnhancedScroller;
+using UnityEngine.Networking;
 
 /// <summary>
 /// Manages the invite friends list display using Enhanced Scroller
@@ -68,8 +69,8 @@ public class InviteFriendManager : MonoBehaviour, IEnhancedScrollerDelegate
             return;
         }
         
-        // Load test data on start (use coroutine to wait for scroller initialization)
-        StartCoroutine(LoadTestDataDelayed());
+        // Load referred users from PlayFab (use coroutine to wait for scroller initialization)
+        StartCoroutine(LoadReferredUsersDelayed());
         isInitialized = true;
     }
     
@@ -93,8 +94,8 @@ public class InviteFriendManager : MonoBehaviour, IEnhancedScrollerDelegate
             }
             else
             {
-                // If no data, load test data
-                StartCoroutine(LoadTestDataDelayed());
+                // If no data, load referred users from PlayFab
+                StartCoroutine(LoadReferredUsersDelayed());
             }
         }
     }
@@ -114,12 +115,108 @@ public class InviteFriendManager : MonoBehaviour, IEnhancedScrollerDelegate
     }
     
     /// <summary>
+    /// Coroutine to load referred users from PlayFab after waiting a frame (ensures scroller is initialized)
+    /// </summary>
+    private IEnumerator LoadReferredUsersDelayed()
+    {
+        yield return null; // Wait one frame for scroller to initialize
+        LoadReferredUsersFromPlayFab();
+    }
+    
+    /// <summary>
     /// Coroutine to load test data after waiting a frame (ensures scroller is initialized)
     /// </summary>
     private IEnumerator LoadTestDataDelayed()
     {
         yield return null; // Wait one frame for scroller to initialize
         LoadTestData();
+    }
+    
+    /// <summary>
+    /// Loads referred users from PlayFab (people who installed the app using your invite link)
+    /// </summary>
+    public void LoadReferredUsersFromPlayFab()
+    {
+        if (PlayFabManager.Instance == null || !PlayFabManager.Instance.IsLoggedIn())
+        {
+            Debug.LogWarning("[InviteFriendManager] Cannot load referred users - not logged into PlayFab. Loading test data instead.");
+            LoadTestData();
+            return;
+        }
+        
+        Debug.Log("[InviteFriendManager] Loading referred users from PlayFab...");
+        
+        PlayFabManager.Instance.GetMyReferredUsers((referredUsers) =>
+        {
+            if (_friendsData == null)
+            {
+                _friendsData = new SmallList<FriendRowData>();
+            }
+            else
+            {
+                _friendsData.Clear();
+            }
+            
+            if (referredUsers != null && referredUsers.Count > 0)
+            {
+                Debug.Log($"[InviteFriendManager] Found {referredUsers.Count} referred users from PlayFab");
+                
+                // Convert referred users to FriendRowData
+                foreach (var referredUser in referredUsers)
+                {
+                    // Start loading image from URL (will be set asynchronously)
+                    Sprite avatar = null;
+                    
+                    // If user has an image URL, load it
+                    if (!string.IsNullOrEmpty(referredUser.imageUrl))
+                    {
+                        StartCoroutine(LoadImageFromURL(referredUser.imageUrl, referredUser.playFabId, (loadedSprite) =>
+                        {
+                            // Update the avatar for this specific user
+                            UpdateFriendAvatar(referredUser.playFabId, loadedSprite);
+                        }));
+                    }
+                    else
+                    {
+                        // Fallback to random test avatar if no image URL
+                        if (testAvatars != null && testAvatars.Length > 0)
+                        {
+                            System.Random random = new System.Random(referredUser.playFabId.GetHashCode());
+                            avatar = testAvatars[random.Next(0, testAvatars.Length)];
+                        }
+                    }
+                    
+                    // For now, we'll set online status to false (you can implement real-time status later)
+                    bool isOnline = false;
+                    
+                    _friendsData.Add(new FriendRowData(
+                        referredUser.playerName,
+                        referredUser.playFabId,
+                        avatar,
+                        isOnline
+                    ));
+                }
+            }
+            else
+            {
+                Debug.Log("[InviteFriendManager] No referred users found in PlayFab");
+            }
+            
+            // Reload the scroller with new data
+            if (scroller != null && scroller.gameObject.activeInHierarchy)
+            {
+                if (scroller.Delegate == null)
+                {
+                    scroller.Delegate = this;
+                }
+                scroller.ReloadData();
+            }
+            
+            // Update total invites text
+            UpdateTotalInvitesText();
+            
+            Debug.Log($"[InviteFriendManager] Loaded {_friendsData.Count} referred users from PlayFab");
+        });
     }
     
     /// <summary>
@@ -364,6 +461,109 @@ public class InviteFriendManager : MonoBehaviour, IEnhancedScrollerDelegate
         }
         
         return cellView;
+    }
+    
+    #endregion
+    
+    #region Image Loading
+    
+    /// <summary>
+    /// Loads an image from a URL or base64 data URI and converts it to a Sprite
+    /// </summary>
+    private IEnumerator LoadImageFromURL(string imageUrl, string playFabId, System.Action<Sprite> onComplete)
+    {
+        if (string.IsNullOrEmpty(imageUrl))
+        {
+            onComplete?.Invoke(null);
+            yield break;
+        }
+        
+        // Check if it's a base64 data URI (custom uploaded image)
+        if (imageUrl.StartsWith("data:image"))
+        {
+            try
+            {
+                // Extract base64 part
+                string base64Data = imageUrl.Substring(imageUrl.IndexOf(",") + 1);
+                byte[] imageBytes = System.Convert.FromBase64String(base64Data);
+                
+                // Create texture
+                Texture2D texture = new Texture2D(2, 2);
+                if (texture.LoadImage(imageBytes))
+                {
+                    // Convert to sprite
+                    Sprite sprite = Sprite.Create(
+                        texture,
+                        new Rect(0, 0, texture.width, texture.height),
+                        new Vector2(0.5f, 0.5f)
+                    );
+                    
+                    Debug.Log($"[InviteFriendManager] Successfully loaded base64 image for {playFabId}");
+                    onComplete?.Invoke(sprite);
+                    yield break;
+                }
+            }
+            catch (System.Exception e)
+            {
+                Debug.LogWarning($"[InviteFriendManager] Failed to load base64 image for {playFabId}: {e.Message}");
+            }
+        }
+        
+        // Try loading as regular URL
+        using (UnityWebRequest www = UnityWebRequestTexture.GetTexture(imageUrl))
+        {
+            yield return www.SendWebRequest();
+            
+            if (www.result == UnityWebRequest.Result.Success)
+            {
+                Texture2D texture = DownloadHandlerTexture.GetContent(www);
+                if (texture != null)
+                {
+                    // Create sprite from texture
+                    Sprite sprite = Sprite.Create(
+                        texture,
+                        new Rect(0, 0, texture.width, texture.height),
+                        new Vector2(0.5f, 0.5f)
+                    );
+                    
+                    Debug.Log($"[InviteFriendManager] Successfully loaded image from URL for {playFabId}");
+                    onComplete?.Invoke(sprite);
+                }
+                else
+                {
+                    Debug.LogWarning($"[InviteFriendManager] Failed to create texture from image URL: {imageUrl}");
+                    onComplete?.Invoke(null);
+                }
+            }
+            else
+            {
+                Debug.LogWarning($"[InviteFriendManager] Failed to load image from URL: {imageUrl}. Error: {www.error}");
+                onComplete?.Invoke(null);
+            }
+        }
+    }
+    
+    /// <summary>
+    /// Updates the avatar for a specific friend by their PlayFab ID
+    /// </summary>
+    private void UpdateFriendAvatar(string playFabId, Sprite newAvatar)
+    {
+        if (_friendsData == null) return;
+        
+        for (int i = 0; i < _friendsData.Count; i++)
+        {
+            if (_friendsData[i].friendId == playFabId)
+            {
+                _friendsData[i].avatarSprite = newAvatar;
+                
+                // Refresh the specific cell if scroller is active
+                if (scroller != null && scroller.gameObject.activeInHierarchy)
+                {
+                    scroller.RefreshActiveCellViews();
+                }
+                break;
+            }
+        }
     }
     
     #endregion

@@ -143,6 +143,12 @@ public class PlayFabManager : MonoBehaviour
         // Clear explicit logout flag since user has successfully logged in
         ClearExplicitLogoutFlag();
         
+        // Check for pending Branch referral after login
+        if (BranchInit.instance != null)
+        {
+            BranchInit.instance.CheckPendingReferral();
+        }
+        
         // Store session info if available
         if (result.SessionTicket != null)
         {
@@ -456,6 +462,12 @@ public class PlayFabManager : MonoBehaviour
         
         Debug.Log("[PlayFabManager] Invoking OnPlayerDataLoaded event...");
         OnPlayerDataLoaded?.Invoke(currentPlayerData);
+        
+        // Check for pending Branch referral after data is loaded
+        if (BranchInit.instance != null)
+        {
+            BranchInit.instance.CheckPendingReferral();
+        }
     }
     
     private void OnPlayerDataLoaded_Failure(PlayFabError error)
@@ -524,6 +536,224 @@ public class PlayFabManager : MonoBehaviour
     {
         currentPlayerData.imageUrl = imageUrl;
         SavePlayerData();
+    }
+    
+    #endregion
+    
+    #region Referral System
+    
+    /// <summary>
+    /// Save referral data when a user is referred by someone
+    /// This adds the referred user to the referrer's list
+    /// </summary>
+    public void SaveReferralData(string inviterPlayFabId, string inviterName, Action<bool> onComplete = null)
+    {
+        if (!isLoggedIn)
+        {
+            Debug.LogWarning("[PlayFabManager] Cannot save referral data - not logged in!");
+            onComplete?.Invoke(false);
+            return;
+        }
+        
+        string currentUserPlayFabId = playFabId;
+        string currentUserName = currentPlayerData != null ? currentPlayerData.playerName : "Unknown";
+        
+        if (string.IsNullOrEmpty(inviterPlayFabId))
+        {
+            Debug.LogWarning("[PlayFabManager] Cannot save referral - no inviter PlayFab ID");
+            onComplete?.Invoke(false);
+            return;
+        }
+        
+        Debug.Log($"[PlayFabManager] Saving referral: {currentUserPlayFabId} ({currentUserName}) was referred by {inviterPlayFabId} ({inviterName ?? "Unknown"})");
+        
+        // Get the referrer's current referred users list
+        GetReferredUsersList(inviterPlayFabId, (existingList) =>
+        {
+            // Check if this user is already in the list
+            bool alreadyExists = false;
+            if (existingList != null)
+            {
+                foreach (var referredUser in existingList)
+                {
+                    if (referredUser.playFabId == currentUserPlayFabId)
+                    {
+                        alreadyExists = true;
+                        Debug.Log("[PlayFabManager] User already in referrer's list - skipping");
+                        break;
+                    }
+                }
+            }
+            
+            if (alreadyExists)
+            {
+                onComplete?.Invoke(true);
+                return;
+            }
+            
+            // Add current user to referrer's list
+            if (existingList == null)
+            {
+                existingList = new List<ReferredUserData>();
+            }
+            
+            ReferredUserData newReferral = new ReferredUserData
+            {
+                playFabId = currentUserPlayFabId,
+                playerName = currentUserName,
+                imageUrl = currentPlayerData != null ? currentPlayerData.imageUrl : "",
+                referredDate = System.DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ssZ")
+            };
+            
+            existingList.Add(newReferral);
+            
+            // Save updated list to referrer's PlayFab data
+            SaveReferredUsersList(inviterPlayFabId, existingList, (success) =>
+            {
+                if (success)
+                {
+                    Debug.Log($"[PlayFabManager] ✅ Successfully added {currentUserName} to {inviterName ?? inviterPlayFabId}'s referral list");
+                }
+                onComplete?.Invoke(success);
+            });
+        });
+    }
+    
+    /// <summary>
+    /// Get the list of users referred by the current user
+    /// </summary>
+    public void GetMyReferredUsers(Action<List<ReferredUserData>> onComplete)
+    {
+        if (!isLoggedIn)
+        {
+            Debug.LogWarning("[PlayFabManager] Cannot get referred users - not logged in!");
+            onComplete?.Invoke(null);
+            return;
+        }
+        
+        GetReferredUsersList(playFabId, onComplete);
+    }
+    
+    /// <summary>
+    /// Get the list of users referred by a specific PlayFab ID
+    /// </summary>
+    private void GetReferredUsersList(string referrerPlayFabId, Action<List<ReferredUserData>> onComplete)
+    {
+        var request = new GetUserDataRequest
+        {
+            PlayFabId = referrerPlayFabId,
+            Keys = new List<string> { "ReferredUsers" }
+        };
+        
+        PlayFabClientAPI.GetUserData(request,
+            result =>
+            {
+                List<ReferredUserData> referredUsers = new List<ReferredUserData>();
+                
+                if (result.Data != null && result.Data.ContainsKey("ReferredUsers"))
+                {
+                    string jsonData = result.Data["ReferredUsers"].Value;
+                    if (!string.IsNullOrEmpty(jsonData))
+                    {
+                        try
+                        {
+                            ReferredUsersListWrapper wrapper = JsonUtility.FromJson<ReferredUsersListWrapper>(jsonData);
+                            if (wrapper != null && wrapper.referredUsers != null)
+                            {
+                                referredUsers = wrapper.referredUsers;
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            Debug.LogError($"[PlayFabManager] Error parsing referred users JSON: {e.Message}");
+                        }
+                    }
+                }
+                
+                Debug.Log($"[PlayFabManager] Loaded {referredUsers.Count} referred users for {referrerPlayFabId}");
+                onComplete?.Invoke(referredUsers);
+            },
+            error =>
+            {
+                Debug.LogWarning($"[PlayFabManager] Could not load referred users (user may not exist or have no referrals): {error.GenerateErrorReport()}");
+                onComplete?.Invoke(new List<ReferredUserData>());
+            });
+    }
+    
+    /// <summary>
+    /// Save the list of referred users for a specific PlayFab ID
+    /// </summary>
+    private void SaveReferredUsersList(string referrerPlayFabId, List<ReferredUserData> referredUsers, Action<bool> onComplete)
+    {
+        ReferredUsersListWrapper wrapper = new ReferredUsersListWrapper
+        {
+            referredUsers = referredUsers
+        };
+        
+        string jsonData = JsonUtility.ToJson(wrapper);
+        
+        var request = new UpdateUserDataRequest
+        {
+            Data = new Dictionary<string, string>
+            {
+                { "ReferredUsers", jsonData }
+            },
+            Permission = UserDataPermission.Public
+        };
+        
+        // Note: We need to use server API or admin API to update another user's data
+        // For now, we'll use a workaround: save to current user's data with a key based on referrer ID
+        // OR use CloudScript to handle this properly
+        
+        // For client-side, we can only update our own data
+        // So we'll save it with a special key that includes the referrer ID
+        if (referrerPlayFabId == playFabId)
+        {
+            // We're updating our own data
+            PlayFabClientAPI.UpdateUserData(request,
+                result =>
+                {
+                    Debug.Log("[PlayFabManager] Referred users list saved successfully!");
+                    onComplete?.Invoke(true);
+                },
+                error =>
+                {
+                    Debug.LogError($"[PlayFabManager] Failed to save referred users list: {error.GenerateErrorReport()}");
+                    onComplete?.Invoke(false);
+                });
+        }
+        else
+        {
+            // We need to update another user's data - this requires CloudScript or Server API
+            // For now, log a warning and suggest using CloudScript
+            Debug.LogWarning("[PlayFabManager] Cannot update another user's data from client. This should be done via CloudScript.");
+            Debug.LogWarning("[PlayFabManager] For production, implement a CloudScript function to handle referral saving.");
+            
+            // For testing, we'll try to save it to current user's data with a special key
+            // This is a workaround - in production, use CloudScript
+            string keyName = $"ReferredUsers_{referrerPlayFabId}";
+            var workaroundRequest = new UpdateUserDataRequest
+            {
+                Data = new Dictionary<string, string>
+                {
+                    { keyName, jsonData }
+                },
+                Permission = UserDataPermission.Public
+            };
+            
+            PlayFabClientAPI.UpdateUserData(workaroundRequest,
+                result =>
+                {
+                    Debug.Log($"[PlayFabManager] Saved referred users list with workaround key: {keyName}");
+                    Debug.LogWarning("[PlayFabManager] NOTE: This is a workaround. Implement CloudScript for production.");
+                    onComplete?.Invoke(true);
+                },
+                error =>
+                {
+                    Debug.LogError($"[PlayFabManager] Failed to save referred users list: {error.GenerateErrorReport()}");
+                    onComplete?.Invoke(false);
+                });
+        }
     }
     
     #endregion

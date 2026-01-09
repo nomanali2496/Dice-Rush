@@ -17,12 +17,13 @@ extern void DownloadHandlerTexture_GetNativeData_m241724A953EC64E660235D0A0374EF
 extern void DownloadHandlerTexture_Dispose_m8B9EB903164BC27743144F900697F7B98A4725EB (void);
 extern void DownloadHandlerTexture_get_texture_m170B5539995EB5984E98E426F52983589F7BEB7C (void);
 extern void DownloadHandlerTexture_InternalGetTextureNative_m9244CDF2A5DE7B9971121CAC5642DD5FEA877688 (void);
+extern void DownloadHandlerTexture_GetContent_m86BC88F58305A1B21C21CE7D82658197932EFB18 (void);
 extern void DownloadHandlerTexture_Create_Injected_m86E5840C23E23813F04F98CDE0A11979B42A5F70 (void);
 extern void DownloadHandlerTexture_InternalGetTextureNative_Injected_mDF24B80A618125CF190BED435749BD5B280A16D7 (void);
 extern void BindingsMarshaller_ConvertToNative_m8E5A9372411335423FFFA7AB64D18304E5743723 (void);
 extern void UnityWebRequestTexture_GetTexture_mEEC74BBC5190D4012A0B87C5D439AF59E22EF2EF (void);
 extern void UnityWebRequestTexture_GetTexture_m45F855106C834021AC0DFA25FE31BA14C42693CA (void);
-static Il2CppMethodPointer s_methodPointers[15] = 
+static Il2CppMethodPointer s_methodPointers[16] = 
 {
 	DownloadedTextureParams_get_Default_mB6A1ECF1CB3173FD7FFC40EFAB5327CC19C2B14F,
 	DownloadedTextureParams_set_readable_m97C160C991808985618C29DF90DD45043142E0A9,
@@ -34,6 +35,7 @@ static Il2CppMethodPointer s_methodPointers[15] =
 	DownloadHandlerTexture_Dispose_m8B9EB903164BC27743144F900697F7B98A4725EB,
 	DownloadHandlerTexture_get_texture_m170B5539995EB5984E98E426F52983589F7BEB7C,
 	DownloadHandlerTexture_InternalGetTextureNative_m9244CDF2A5DE7B9971121CAC5642DD5FEA877688,
+	DownloadHandlerTexture_GetContent_m86BC88F58305A1B21C21CE7D82658197932EFB18,
 	DownloadHandlerTexture_Create_Injected_m86E5840C23E23813F04F98CDE0A11979B42A5F70,
 	DownloadHandlerTexture_InternalGetTextureNative_Injected_mDF24B80A618125CF190BED435749BD5B280A16D7,
 	BindingsMarshaller_ConvertToNative_m8E5A9372411335423FFFA7AB64D18304E5743723,
@@ -47,29 +49,30 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[2] =
 	{ 0x06000002, DownloadedTextureParams_set_readable_m97C160C991808985618C29DF90DD45043142E0A9_AdjustorThunk },
 	{ 0x06000003, DownloadedTextureParams_SetFlags_m44125E677087DA7F9E9F1E2A0F8E70AE1F713EBE_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[15] = 
+static const int32_t s_InvokerIndices[16] = 
 {
-	27654,
-	12133,
-	6547,
-	22453,
-	12178,
-	12133,
-	14570,
-	16144,
-	15904,
-	15904,
-	22451,
-	25928,
-	25929,
-	26060,
-	22567,
+	27676,
+	12149,
+	6553,
+	22476,
+	12194,
+	12149,
+	14594,
+	16168,
+	15928,
+	15928,
+	26082,
+	22474,
+	25950,
+	25951,
+	26082,
+	22590,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_UnityWebRequestTextureModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_UnityWebRequestTextureModule_CodeGenModule = 
 {
 	"UnityEngine.UnityWebRequestTextureModule.dll",
-	15,
+	16,
 	s_methodPointers,
 	2,
 	s_adjustorThunks,
