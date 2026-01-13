@@ -263,6 +263,38 @@ public class PlayFabManager : MonoBehaviour
     }
     
     /// <summary>
+    /// Login with Facebook account
+    /// </summary>
+    /// <param name="accessToken">Access token from Facebook SDK (required for PlayFab)</param>
+    public void LoginWithFacebook(string accessToken)
+    {
+        Debug.Log("[PlayFabManager] Attempting to login with Facebook...");
+        
+        if (string.IsNullOrEmpty(accessToken))
+        {
+            Debug.LogError("[PlayFabManager] Access token is required for Facebook login!");
+            OnLoginFailure(new PlayFabError
+            {
+                Error = PlayFabErrorCode.UnknownError,
+                ErrorMessage = "Access token is required"
+            });
+            return;
+        }
+        
+        var request = new LoginWithFacebookRequest
+        {
+            AccessToken = accessToken,
+            CreateAccount = true, // Create PlayFab account if it doesn't exist
+            InfoRequestParameters = new GetPlayerCombinedInfoRequestParams
+            {
+                GetPlayerProfile = true
+            }
+        };
+        
+        PlayFabClientAPI.LoginWithFacebook(request, OnLoginSuccess, OnLoginFailure);
+    }
+    
+    /// <summary>
     /// Check if there's an existing PlayFab session
     /// </summary>
     public bool HasExistingSession()

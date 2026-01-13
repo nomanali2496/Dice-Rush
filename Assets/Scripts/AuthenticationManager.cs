@@ -26,6 +26,7 @@ public class AuthenticationManager : MonoBehaviour
     [SerializeField] private Button loginButton;
     [SerializeField] private Button guestLoginButton;
     [SerializeField] private Button googleLoginButton;
+    [SerializeField] private Button facebookLoginButton;
     [SerializeField] private Toggle loginPasswordToggle;
     
     [Header("Registration UI")]
@@ -66,6 +67,9 @@ public class AuthenticationManager : MonoBehaviour
         
         if (googleLoginButton != null)
             googleLoginButton.onClick.AddListener(OnGoogleLoginClicked);
+        
+        if (facebookLoginButton != null)
+            facebookLoginButton.onClick.AddListener(OnFacebookLoginClicked);
         
         if (switchToRegisterButton != null)
             switchToRegisterButton.onClick.AddListener(() => ShowRegisterSection());
@@ -131,6 +135,14 @@ public class AuthenticationManager : MonoBehaviour
             GameObject googleSignInObj = new GameObject("GoogleSignInManager");
             googleSignInObj.AddComponent<GoogleSignInManager>();
             Debug.Log("GoogleSignInManager initialized");
+        }
+        
+        // Initialize FacebookSignInManager if it doesn't exist
+        if (FacebookSignInManager.Instance == null)
+        {
+            GameObject facebookSignInObj = new GameObject("FacebookSignInManager");
+            facebookSignInObj.AddComponent<FacebookSignInManager>();
+            Debug.Log("FacebookSignInManager initialized");
         }
     }
     
@@ -450,6 +462,64 @@ public class AuthenticationManager : MonoBehaviour
         }
     }
     
+    private void OnFacebookLoginClicked()
+    {
+        SetLoadingState(true);
+        UpdateStatusText("Signing in with Facebook...");
+        
+        if (FacebookSignInManager.Instance != null)
+        {
+            // Subscribe to Facebook Sign-In events
+            FacebookSignInManager.Instance.OnFacebookSignInSuccess += OnFacebookSignInSuccess;
+            FacebookSignInManager.Instance.OnFacebookSignInFailure += OnFacebookSignInFailure;
+            
+            // Start Facebook Sign-In
+            FacebookSignInManager.Instance.SignInWithFacebook();
+        }
+        else
+        {
+            UpdateStatusText("Error: FacebookSignInManager not found!");
+            SetLoadingState(false);
+        }
+    }
+    
+    private void OnFacebookSignInSuccess(string accessToken)
+    {
+        Debug.Log("[AuthenticationManager] Facebook Sign-In successful, logging into PlayFab...");
+        UpdateStatusText("Logging into PlayFab...");
+        
+        if (PlayFabManager.Instance != null)
+        {
+            PlayFabManager.Instance.LoginWithFacebook(accessToken);
+        }
+        else
+        {
+            UpdateStatusText("Error: PlayFabManager not found!");
+            SetLoadingState(false);
+        }
+        
+        // Unsubscribe from events
+        if (FacebookSignInManager.Instance != null)
+        {
+            FacebookSignInManager.Instance.OnFacebookSignInSuccess -= OnFacebookSignInSuccess;
+            FacebookSignInManager.Instance.OnFacebookSignInFailure -= OnFacebookSignInFailure;
+        }
+    }
+    
+    private void OnFacebookSignInFailure(string error)
+    {
+        Debug.LogError($"[AuthenticationManager] Facebook Sign-In failed: {error}");
+        UpdateStatusText($"Facebook Sign-In failed: {error}");
+        SetLoadingState(false);
+        
+        // Unsubscribe from events
+        if (FacebookSignInManager.Instance != null)
+        {
+            FacebookSignInManager.Instance.OnFacebookSignInSuccess -= OnFacebookSignInSuccess;
+            FacebookSignInManager.Instance.OnFacebookSignInFailure -= OnFacebookSignInFailure;
+        }
+    }
+    
     #endregion
     
     #region Registration
@@ -612,6 +682,9 @@ public class AuthenticationManager : MonoBehaviour
         
         if (googleLoginButton != null)
             googleLoginButton.interactable = !isLoading;
+        
+        if (facebookLoginButton != null)
+            facebookLoginButton.interactable = !isLoading;
         
         if (switchToRegisterButton != null)
             switchToRegisterButton.interactable = !isLoading;

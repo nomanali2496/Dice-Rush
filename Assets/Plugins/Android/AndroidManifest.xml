@@ -12,8 +12,8 @@
         <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
-        <data android:scheme="https" android:host="blingodice.app.link" />
-        <data android:scheme="https" android:host="blingodice-alternate.app.link" />
+        <data android:scheme="https" android:host="blingodice.test-app.link" />
+        <data android:scheme="https" android:host="blingodice-alternate.test-app.link" />
       </intent-filter>
       <intent-filter>
         <data android:host="open" android:scheme="blingodice" />
@@ -25,8 +25,8 @@
         <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
-        <data android:scheme="https" android:host="blingodice.test-app.link" />
-        <data android:scheme="https" android:host="blingodice-alternate.test-app.link" />
+        <data android:scheme="https" android:host="blingodice.app.link" />
+        <data android:scheme="https" android:host="blingodice-alternate.app.link" />
       </intent-filter>
     </activity>
     <!-- Optional. Set to true to disable auto deep link feature-->
@@ -34,8 +34,19 @@
     <!--Set true to simulate fresh installs -->
     <meta-data android:name="io.branch.sdk.TestMode" android:value="true" />
     <!--Branch keys - both test and live-->
-    <meta-data android:name="io.branch.sdk.BranchKey.test" android:value="key_test_hEAzfZd5zd4p9Nb53UEh6iifsAjNy3HM" />
     <meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_gqvue8d4El5a9Qe01SAi0hgjuzmQw4Is" />
+    <meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_gqvue8d4El5a9Qe01SAi0hgjuzmQw4Is" />
+    <activity android:name="com.facebook.unity.FBUnityLoginActivity" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+    <activity android:name="com.facebook.unity.FBUnityDialogsActivity" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+    <activity android:name="com.facebook.unity.FBUnityGamingServicesFriendFinderActivity" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+    <activity android:name="com.facebook.unity.FBUnityAppLinkActivity" android:exported="true" />
+    <activity android:name="com.facebook.unity.FBUnityDeepLinkingActivity" android:exported="true" />
+    <activity android:name="com.facebook.unity.FBUnityGameRequestActivity" />
+    <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="fb1499800861114671" />
+    <meta-data android:name="com.facebook.sdk.ClientToken" android:value="f8e53e9f76633642c836c027436878f4" />
+    <meta-data android:name="com.facebook.sdk.AutoLogAppEventsEnabled" android:value="true" />
+    <meta-data android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled" android:value="true" />
+    <provider android:name="com.facebook.FacebookContentProvider" android:authorities="com.facebook.app.FacebookContentProvider1499800861114671" android:exported="true" />
   </application>
   <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
