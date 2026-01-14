@@ -284,9 +284,13 @@ public class PlayerProfileUI : MonoBehaviour
         UpdateWinnerScreenCurrency(data.coins, data.cash);
         
         // Update profile image
-        if (profileImage != null && !string.IsNullOrEmpty(data.imageUrl))
+        if (profileImage == null)
         {
-            Debug.Log($"[PlayerProfileUI] Profile image URL: {data.imageUrl}");
+            Debug.LogWarning("[PlayerProfileUI] profileImage is not assigned in Inspector! Cannot display profile image.");
+        }
+        else if (!string.IsNullOrEmpty(data.imageUrl))
+        {
+            Debug.Log($"[PlayerProfileUI] Profile image URL found: {data.imageUrl}");
             
             // Check if it's a base64 image
             if (data.imageUrl.StartsWith("data:image"))
@@ -306,6 +310,10 @@ public class PlayerProfileUI : MonoBehaviour
                         profileImage.sprite = sprite;
                         Debug.Log("[PlayerProfileUI] ✓ Base64 profile image displayed");
                     }
+                    else
+                    {
+                        Debug.LogWarning("[PlayerProfileUI] Failed to load image from base64 data");
+                    }
                 }
                 catch (System.Exception e)
                 {
@@ -318,6 +326,14 @@ public class PlayerProfileUI : MonoBehaviour
                 Debug.Log($"[PlayerProfileUI] Loading profile image from URL: {data.imageUrl}");
                 StartCoroutine(LoadImageFromUrl(data.imageUrl));
             }
+            else
+            {
+                Debug.LogWarning($"[PlayerProfileUI] Unknown image URL format: {data.imageUrl}");
+            }
+        }
+        else
+        {
+            Debug.Log("[PlayerProfileUI] No image URL in data, profile image will remain default");
         }
         AvatarDisplay.SetActive(true);
         Debug.Log("[PlayerProfileUI] UI Update Complete!");

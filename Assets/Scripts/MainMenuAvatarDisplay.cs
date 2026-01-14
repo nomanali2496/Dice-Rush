@@ -60,12 +60,32 @@ public class MainMenuAvatarDisplay : MonoBehaviour
         }
     }
     
+    private bool isLoadingUrlImage = false; // Track if we're currently loading a URL image
+    private string currentImageUrl = ""; // Track the current image URL being loaded/displayed
+    
     private void OnPlayerDataLoaded(PlayerData data)
     {
         // Update avatar when PlayFab data is loaded
         if (data != null)
         {
             Debug.Log("[MainMenuAvatarDisplay] PlayFab data loaded, updating avatar...");
+            
+            // If we're currently loading a URL image, don't interrupt it
+            if (isLoadingUrlImage)
+            {
+                Debug.Log("[MainMenuAvatarDisplay] URL image is currently loading, skipping reload to avoid interruption");
+                return;
+            }
+            
+            // If we already have the same URL image displayed, don't reload
+            if (!string.IsNullOrEmpty(data.imageUrl) && 
+                (data.imageUrl.StartsWith("http://") || data.imageUrl.StartsWith("https://")) &&
+                data.imageUrl == currentImageUrl && avatarImage.sprite != null)
+            {
+                Debug.Log("[MainMenuAvatarDisplay] Same URL image already displayed, skipping reload");
+                return;
+            }
+            
             LoadSelectedAvatar();
         }
     }
@@ -119,9 +139,20 @@ public class MainMenuAvatarDisplay : MonoBehaviour
                     // Check if it's a URL (Facebook profile picture, etc.)
                     else if (imageUrl.StartsWith("http://") || imageUrl.StartsWith("https://"))
                     {
-                        Debug.Log($"[MainMenuAvatarDisplay] Loading image from URL: {imageUrl}");
-                        StartCoroutine(LoadImageFromUrl(imageUrl));
-                        return; // Don't load avatar sprite, wait for URL image
+                        // Only load if it's a different URL
+                        if (imageUrl != currentImageUrl)
+                        {
+                            Debug.Log($"[MainMenuAvatarDisplay] Loading image from URL: {imageUrl}");
+                            currentImageUrl = imageUrl; // Store the URL we're loading
+                            isLoadingUrlImage = true; // Mark that we're loading a URL image
+                            StartCoroutine(LoadImageFromUrl(imageUrl));
+                            return; // Don't load avatar sprite, wait for URL image
+                        }
+                        else
+                        {
+                            Debug.Log("[MainMenuAvatarDisplay] Same URL image already loaded, skipping");
+                            return; // Already have this image, don't reload
+                        }
                     }
                 }
             }
@@ -323,10 +354,12 @@ public class MainMenuAvatarDisplay : MonoBehaviour
                     Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
                     avatarImage.sprite = sprite;
                     Debug.Log($"[MainMenuAvatarDisplay] ✓ Image loaded from URL successfully! Size: {texture.width}x{texture.height}");
+                    isLoadingUrlImage = false; // Mark loading as complete
                 }
                 else
                 {
                     Debug.LogWarning("[MainMenuAvatarDisplay] Failed to create texture from downloaded image");
+                    isLoadingUrlImage = false; // Mark loading as complete (even though it failed)
                     // Fall back to avatar sprite
                     LoadAvatarSpriteFallback();
                 }
@@ -334,6 +367,7 @@ public class MainMenuAvatarDisplay : MonoBehaviour
             else
             {
                 Debug.LogWarning($"[MainMenuAvatarDisplay] Failed to load image from URL: {url}. Error: {www.error}");
+                isLoadingUrlImage = false; // Mark loading as complete (even though it failed)
                 // Fall back to avatar sprite by calling LoadSelectedAvatar again (but skip URL check)
                 // This will load the default avatar sprite
                 LoadAvatarSpriteFallback();

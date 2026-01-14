@@ -22,6 +22,7 @@ public class PlayFabManager : MonoBehaviour
     
     private string playFabId;
     private bool isLoggedIn = false;
+    private string lastErrorMessage = "";
     
     private void Awake()
     {
@@ -71,6 +72,9 @@ public class PlayFabManager : MonoBehaviour
         playFabId = result.PlayFabId;
         isLoggedIn = true;
         
+        // Clear last error message on successful registration
+        lastErrorMessage = "";
+        
         // Clear explicit logout flag since user has successfully registered/logged in
         ClearExplicitLogoutFlag();
         
@@ -90,24 +94,31 @@ public class PlayFabManager : MonoBehaviour
         string errorMessage = "Registration failed: " + error.GenerateErrorReport();
         Debug.LogError(errorMessage);
         
+        // Store the last error message for UI display
+        lastErrorMessage = "";
+        
         // Provide specific error messages for common registration issues
         if (error.Error == PlayFabErrorCode.EmailAddressNotAvailable || 
             error.ErrorMessage.Contains("EmailAddressNotAvailable"))
         {
-            Debug.LogError("Email address is already in use. Please use a different email or try logging in instead.");
+            lastErrorMessage = "Email address is already in use. Please use a different email or try logging in instead.";
+            Debug.LogError(lastErrorMessage);
         }
         else if (error.Error == PlayFabErrorCode.UsernameNotAvailable ||
                  error.ErrorMessage.Contains("UsernameNotAvailable"))
         {
-            Debug.LogError("Username is already taken. Please choose a different username.");
+            lastErrorMessage = "Username is already taken. Please choose a different username.";
+            Debug.LogError(lastErrorMessage);
         }
         else if (error.ErrorMessage.Contains("Player creations have been disabled"))
         {
-            Debug.LogError("Account creation is disabled in PlayFab settings. " +
-                          "Please enable 'Allow Client to Create Players' in PlayFab Dashboard > Settings > API Features.");
+            lastErrorMessage = "Account creation is disabled in PlayFab settings. " +
+                          "Please enable 'Allow Client to Create Players' in PlayFab Dashboard > Settings > API Features.";
+            Debug.LogError(lastErrorMessage);
         }
         else
         {
+            lastErrorMessage = "Registration failed. Please try again.";
             Debug.LogError($"Registration failed: {error.Error} - {error.ErrorMessage}");
         }
         
@@ -138,6 +149,9 @@ public class PlayFabManager : MonoBehaviour
         playFabId = result.PlayFabId;
         isLoggedIn = true;
         
+        // Clear last error message on successful login
+        lastErrorMessage = "";
+        
         Debug.Log($"[PlayFabManager] PlayFabId: {playFabId}, isLoggedIn: {isLoggedIn}");
         
         // Clear explicit logout flag since user has successfully logged in
@@ -166,19 +180,49 @@ public class PlayFabManager : MonoBehaviour
         string errorMessage = "Login failed: " + error.GenerateErrorReport();
         Debug.LogError(errorMessage);
         
+        // Store the last error message for UI display
+        lastErrorMessage = "";
+        
         // Provide specific error messages for login issues
         if (error.Error == PlayFabErrorCode.InvalidAccount)
         {
-            Debug.LogError("Invalid email or password. Please check your credentials and try again.");
+            lastErrorMessage = "Invalid email or password. Please check your credentials and try again.";
+            Debug.LogError(lastErrorMessage);
         }
         else if (error.Error == PlayFabErrorCode.AccountNotFound)
         {
-            Debug.LogError("Account not found. Please check your email address or register a new account.");
+            lastErrorMessage = "Account not found. Please check your email address or register a new account.";
+            Debug.LogError(lastErrorMessage);
         }
         else if (error.ErrorMessage.Contains("Player creations have been disabled"))
         {
-            Debug.LogError("Guest account creation is disabled in PlayFab settings. " +
-                          "Please enable 'Allow Client to Create Players' in PlayFab Dashboard > Settings > API Features.");
+            lastErrorMessage = "Guest account creation is disabled in PlayFab settings. " +
+                          "Please enable 'Allow Client to Create Players' in PlayFab Dashboard > Settings > API Features.";
+            Debug.LogError(lastErrorMessage);
+        }
+        else if (error.ErrorMessage.Contains("Client ID and secret must be configured") || 
+                 error.ErrorMessage.Contains("Google Add-on"))
+        {
+            lastErrorMessage = "Google Sign-In is not configured. " +
+                          "Please configure Google Client ID and secret in PlayFab Game Manager " +
+                          "(Dashboard > Add-ons > Google > Configure).";
+            Debug.LogError("Google Sign-In configuration error: " +
+                          "Google Client ID and secret must be configured in PlayFab Game Manager. " +
+                          "Go to PlayFab Dashboard > Add-ons > Google > Configure to set up Google authentication.");
+        }
+        else if (error.ErrorMessage.Contains("redirect_uri_mismatch"))
+        {
+            lastErrorMessage = "Google redirect URI mismatch. " +
+                          "Please add 'https://oauth.playfab.com/oauth2/google' to your Google OAuth Client's authorized redirect URIs in Google Cloud Console.";
+            Debug.LogError("Google redirect URI mismatch error: " +
+                          "The redirect URI 'https://oauth.playfab.com/oauth2/google' must be added to your Google OAuth Client's " +
+                          "authorized redirect URIs. Go to Google Cloud Console > APIs & Services > Credentials > " +
+                          "Your OAuth 2.0 Client ID > Authorized redirect URIs and add: https://oauth.playfab.com/oauth2/google");
+        }
+        else
+        {
+            // Generic error message
+            lastErrorMessage = "Login failed. Please try again.";
         }
         
         OnLoginComplete?.Invoke(false);
@@ -234,9 +278,15 @@ public class PlayFabManager : MonoBehaviour
     /// Login with Google account
     /// </summary>
     /// <param name="serverAuthCode">Server auth code from Google Sign-In (required for PlayFab)</param>
-    public void LoginWithGoogle(string serverAuthCode)
+    /// <param name="googleEmail">Google user's email (optional)</param>
+    /// <param name="googleName">Google user's display name (optional)</param>
+    /// <param name="googleImageUrl">Google user's profile picture URL (optional)</param>
+    public void LoginWithGoogle(string serverAuthCode, string googleEmail = "", string googleName = "", string googleImageUrl = "")
     {
         Debug.Log("[PlayFabManager] Attempting to login with Google...");
+        Debug.Log($"[PlayFabManager] PlayFab Title ID: {PlayFabSettings.TitleId}");
+        Debug.Log($"[PlayFabManager] ServerAuthCode length: {(serverAuthCode?.Length ?? 0)}");
+        Debug.Log($"[PlayFabManager] ServerAuthCode (first 50 chars): {(serverAuthCode?.Substring(0, Math.Min(50, serverAuthCode.Length)) ?? "null")}...");
         
         if (string.IsNullOrEmpty(serverAuthCode))
         {
@@ -259,7 +309,78 @@ public class PlayFabManager : MonoBehaviour
             }
         };
         
-        PlayFabClientAPI.LoginWithGoogleAccount(request, OnLoginSuccess, OnLoginFailure);
+        // Store Google profile data for later use
+        string googleEmailStr = googleEmail;
+        string googleNameStr = googleName;
+        string googleImageUrlStr = googleImageUrl;
+        
+        Debug.Log("[PlayFabManager] Sending LoginWithGoogleAccount request to PlayFab...");
+        PlayFabClientAPI.LoginWithGoogleAccount(request, 
+            result => OnGoogleLoginSuccess(result, googleNameStr, googleEmailStr, googleImageUrlStr), 
+            OnLoginFailure);
+    }
+    
+    /// <summary>
+    /// Handle successful Google login and update user data with Google profile
+    /// </summary>
+    private void OnGoogleLoginSuccess(LoginResult result, string googleName, string googleEmail, string googleImageUrl)
+    {
+        // First call the standard login success handler
+        OnLoginSuccess(result);
+        
+        // Then update user data with Google profile if available
+        if (!string.IsNullOrEmpty(googleName) || !string.IsNullOrEmpty(googleEmail) || !string.IsNullOrEmpty(googleImageUrl))
+        {
+            Debug.Log($"[PlayFabManager] Updating user data with Google profile - Name: {googleName}, Email: {googleEmail}, ImageURL: {googleImageUrl}");
+            
+            // Update local player data
+            bool shouldUpdateName = !string.IsNullOrEmpty(googleName) && (string.IsNullOrEmpty(currentPlayerData.playerName) || currentPlayerData.playerName == "Guest");
+            bool shouldUpdateEmail = !string.IsNullOrEmpty(googleEmail) && string.IsNullOrEmpty(currentPlayerData.email);
+            bool shouldUpdateImage = !string.IsNullOrEmpty(googleImageUrl) && string.IsNullOrEmpty(currentPlayerData.imageUrl);
+            
+            bool dataUpdated = false;
+            
+            if (shouldUpdateName)
+            {
+                currentPlayerData.playerName = googleName;
+                Debug.Log($"[PlayFabManager] Updated player name from Google: {googleName}");
+                dataUpdated = true;
+                
+                // Update PlayFab display name
+                UpdatePlayFabDisplayName(googleName);
+            }
+            
+            if (shouldUpdateEmail)
+            {
+                currentPlayerData.email = googleEmail;
+                Debug.Log($"[PlayFabManager] Updated email from Google: {googleEmail}");
+                dataUpdated = true;
+            }
+            
+            if (shouldUpdateImage)
+            {
+                currentPlayerData.imageUrl = googleImageUrl;
+                Debug.Log($"[PlayFabManager] Updated avatar image URL from Google: {googleImageUrl}");
+                dataUpdated = true;
+            }
+            
+            // If data was updated, notify UI immediately and then save
+            if (dataUpdated)
+            {
+                // Trigger UI update immediately with the new Google data
+                Debug.Log("[PlayFabManager] Triggering OnPlayerDataLoaded event with updated Google profile data");
+                OnPlayerDataLoaded?.Invoke(currentPlayerData);
+            }
+            
+            // Save updated data to PlayFab
+            SavePlayerData(() =>
+            {
+                Debug.Log("[PlayFabManager] Google profile data (including avatar) saved to PlayFab successfully!");
+                
+                // Reload player data to ensure everything is in sync
+                LoadPlayerData();
+            });
+        }
     }
     
     /// <summary>
@@ -905,6 +1026,14 @@ public class PlayFabManager : MonoBehaviour
     public string GetPlayFabId()
     {
         return playFabId;
+    }
+    
+    /// <summary>
+    /// Get the last error message from login/registration attempts
+    /// </summary>
+    public string GetLastErrorMessage()
+    {
+        return lastErrorMessage;
     }
     
     /// <summary>

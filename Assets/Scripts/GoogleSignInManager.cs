@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Threading.Tasks;
+using System.Reflection;
 
 #if UNITY_ANDROID && !UNITY_EDITOR
 using Google;
@@ -16,7 +17,7 @@ public class GoogleSignInManager : MonoBehaviour
     [Header("Google Sign-In Settings")]
     [SerializeField] private string webClientId = ""; // Set this in the inspector or via code
     
-    public Action<string, string> OnGoogleSignInSuccess; // ID Token, Server Auth Code
+    public Action<string, string, string, string, string> OnGoogleSignInSuccess; // Server Auth Code, ID Token, Email, DisplayName, PhotoUrl
     public Action<string> OnGoogleSignInFailure;
     
     private void Awake()
@@ -86,7 +87,7 @@ public class GoogleSignInManager : MonoBehaviour
             };
             
             // Start the sign-in process
-            GoogleSignIn.DefaultInstance.SignIn().ContinueWith(task =>
+            GoogleSignIn.DefaultInstance.SignIn().ContinueWith((Task<GoogleSignInUser> task) =>
             {
                 if (task.IsFaulted)
                 {
@@ -102,11 +103,34 @@ public class GoogleSignInManager : MonoBehaviour
                 else
                 {
                     var signInResult = task.Result;
-                    Debug.Log($"[GoogleSignInManager] Google Sign-In successful! Email: {signInResult.Email}");
+                    Debug.Log($"[GoogleSignInManager] Google Sign-In successful! Email: {signInResult.Email}, DisplayName: {signInResult.DisplayName}");
                     
                     // Get the auth code (this is the ServerAuthCode for PlayFab)
                     string authCode = signInResult.AuthCode;
                     string idToken = signInResult.IdToken;
+                    string email = signInResult.Email ?? "";
+                    string displayName = signInResult.DisplayName ?? "";
+                    
+                    // Try to get photo URL - property may not be available in all SDK versions
+                    string photoUrl = "";
+                    try
+                    {
+                        // Use reflection to safely access PhotoUrl property if it exists
+                        var photoUrlProperty = typeof(GoogleSignInUser).GetProperty("PhotoUrl");
+                        if (photoUrlProperty != null)
+                        {
+                            var photoValue = photoUrlProperty.GetValue(signInResult);
+                            if (photoValue != null)
+                            {
+                                photoUrl = photoValue.ToString();
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        // PhotoUrl not available in this SDK version, continue without it
+                        Debug.Log($"[GoogleSignInManager] PhotoUrl not available: {ex.Message}");
+                    }
                     
                     if (string.IsNullOrEmpty(authCode))
                     {
@@ -115,9 +139,9 @@ public class GoogleSignInManager : MonoBehaviour
                         return;
                     }
                     
-                    // Notify success with auth code (PlayFab uses this as ServerAuthCode)
-                    // Pass authCode as first parameter (serverAuthCode) and idToken as second (for reference)
-                    OnGoogleSignInSuccess?.Invoke(authCode, idToken ?? "");
+                    // Notify success with auth code and profile data
+                    // Parameters: serverAuthCode, idToken, email, displayName, photoUrl
+                    OnGoogleSignInSuccess?.Invoke(authCode, idToken ?? "", email, displayName, photoUrl);
                 }
             });
         }

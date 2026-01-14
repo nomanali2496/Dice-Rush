@@ -424,15 +424,15 @@ public class AuthenticationManager : MonoBehaviour
         }
     }
     
-    private void OnGoogleSignInSuccess(string serverAuthCode, string idToken)
+    private void OnGoogleSignInSuccess(string serverAuthCode, string idToken, string email, string displayName, string photoUrl)
     {
-        Debug.Log("[AuthenticationManager] Google Sign-In successful, logging into PlayFab...");
+        Debug.Log($"[AuthenticationManager] Google Sign-In successful, logging into PlayFab... Email: {email}, Name: {displayName}");
         UpdateStatusText("Logging into PlayFab...");
         
         if (PlayFabManager.Instance != null)
         {
-            // PlayFab requires ServerAuthCode (first parameter)
-            PlayFabManager.Instance.LoginWithGoogle(serverAuthCode);
+            // PlayFab requires ServerAuthCode, and we pass Google profile data
+            PlayFabManager.Instance.LoginWithGoogle(serverAuthCode, email, displayName, photoUrl);
         }
         else
         {
@@ -635,7 +635,21 @@ public class AuthenticationManager : MonoBehaviour
             else
             {
                 // Manual login failed, show error message
-                UpdateStatusText("Login failed! Please check your credentials.");
+                // Try to get a more specific error message from PlayFabManager
+                string errorMsg = "";
+                if (PlayFabManager.Instance != null)
+                {
+                    errorMsg = PlayFabManager.Instance.GetLastErrorMessage();
+                }
+                
+                if (!string.IsNullOrEmpty(errorMsg))
+                {
+                    UpdateStatusText(errorMsg);
+                }
+                else
+                {
+                    UpdateStatusText("Login failed! Please check your credentials.");
+                }
             }
         }
     }
@@ -659,7 +673,21 @@ public class AuthenticationManager : MonoBehaviour
         }
         else
         {
-            UpdateStatusText("Registration failed! Email might already be in use.");
+            // Try to get a more specific error message from PlayFabManager
+            string errorMsg = "";
+            if (PlayFabManager.Instance != null)
+            {
+                errorMsg = PlayFabManager.Instance.GetLastErrorMessage();
+            }
+            
+            if (!string.IsNullOrEmpty(errorMsg))
+            {
+                UpdateStatusText(errorMsg);
+            }
+            else
+            {
+                UpdateStatusText("Registration failed! Email might already be in use.");
+            }
         }
     }
     
