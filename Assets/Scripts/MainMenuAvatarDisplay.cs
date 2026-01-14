@@ -82,36 +82,46 @@ public class MainMenuAvatarDisplay : MonoBehaviour
             return;
         }
         
-        // First, check if there's a custom uploaded image
+        // First, check if there's a custom uploaded image or URL image
         if (PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
         {
             if (PlayFabManager.Instance.currentPlayerData != null)
             {
                 string imageUrl = PlayFabManager.Instance.currentPlayerData.imageUrl;
                 
-                // Check if it's a custom base64 image
-                if (!string.IsNullOrEmpty(imageUrl) && imageUrl.StartsWith("data:image"))
+                if (!string.IsNullOrEmpty(imageUrl))
                 {
-                    try
+                    // Check if it's a custom base64 image
+                    if (imageUrl.StartsWith("data:image"))
                     {
-                        // Extract base64 part
-                        string base64Data = imageUrl.Substring(imageUrl.IndexOf(",") + 1);
-                        byte[] imageBytes = System.Convert.FromBase64String(base64Data);
-                        
-                        // Create texture
-                        Texture2D texture = new Texture2D(2, 2);
-                        if (texture.LoadImage(imageBytes))
+                        try
                         {
-                            // Convert to sprite
-                            Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
-                            avatarImage.sprite = sprite;
-                            Debug.Log("[MainMenuAvatarDisplay] ✓ Custom uploaded image displayed");
-                            return; // Success!
+                            // Extract base64 part
+                            string base64Data = imageUrl.Substring(imageUrl.IndexOf(",") + 1);
+                            byte[] imageBytes = System.Convert.FromBase64String(base64Data);
+                            
+                            // Create texture
+                            Texture2D texture = new Texture2D(2, 2);
+                            if (texture.LoadImage(imageBytes))
+                            {
+                                // Convert to sprite
+                                Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+                                avatarImage.sprite = sprite;
+                                Debug.Log("[MainMenuAvatarDisplay] ✓ Custom uploaded image displayed");
+                                return; // Success!
+                            }
+                        }
+                        catch (System.Exception e)
+                        {
+                            Debug.LogWarning($"[MainMenuAvatarDisplay] Failed to load custom image: {e.Message}");
                         }
                     }
-                    catch (System.Exception e)
+                    // Check if it's a URL (Facebook profile picture, etc.)
+                    else if (imageUrl.StartsWith("http://") || imageUrl.StartsWith("https://"))
                     {
-                        Debug.LogWarning($"[MainMenuAvatarDisplay] Failed to load custom image: {e.Message}");
+                        Debug.Log($"[MainMenuAvatarDisplay] Loading image from URL: {imageUrl}");
+                        StartCoroutine(LoadImageFromUrl(imageUrl));
+                        return; // Don't load avatar sprite, wait for URL image
                     }
                 }
             }
@@ -285,6 +295,104 @@ public class MainMenuAvatarDisplay : MonoBehaviour
         {
             avatarImage.sprite = customSprite;
             Debug.Log("[MainMenuAvatarDisplay] Custom image updated");
+        }
+    }
+    
+    /// <summary>
+    /// Load image from URL (for Facebook profile pictures, etc.)
+    /// </summary>
+    private System.Collections.IEnumerator LoadImageFromUrl(string url)
+    {
+        if (avatarImage == null || string.IsNullOrEmpty(url))
+        {
+            yield break;
+        }
+        
+        Debug.Log($"[MainMenuAvatarDisplay] Starting to load image from URL: {url}");
+        
+        using (UnityEngine.Networking.UnityWebRequest www = UnityEngine.Networking.UnityWebRequestTexture.GetTexture(url))
+        {
+            yield return www.SendWebRequest();
+            
+            if (www.result == UnityEngine.Networking.UnityWebRequest.Result.Success)
+            {
+                Texture2D texture = UnityEngine.Networking.DownloadHandlerTexture.GetContent(www);
+                if (texture != null)
+                {
+                    // Convert to sprite
+                    Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+                    avatarImage.sprite = sprite;
+                    Debug.Log($"[MainMenuAvatarDisplay] ✓ Image loaded from URL successfully! Size: {texture.width}x{texture.height}");
+                }
+                else
+                {
+                    Debug.LogWarning("[MainMenuAvatarDisplay] Failed to create texture from downloaded image");
+                    // Fall back to avatar sprite
+                    LoadAvatarSpriteFallback();
+                }
+            }
+            else
+            {
+                Debug.LogWarning($"[MainMenuAvatarDisplay] Failed to load image from URL: {url}. Error: {www.error}");
+                // Fall back to avatar sprite by calling LoadSelectedAvatar again (but skip URL check)
+                // This will load the default avatar sprite
+                LoadAvatarSpriteFallback();
+            }
+        }
+    }
+    
+    /// <summary>
+    /// Load avatar sprite (fallback when URL image fails or no URL available)
+    /// </summary>
+    private void LoadAvatarSpriteFallback()
+    {
+        // Get the selected index from PlayFab
+        int selectedIndex = 0;
+        bool hasValidIndex = false;
+        
+        if (PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
+        {
+            if (PlayFabManager.Instance.currentPlayerData != null)
+            {
+                selectedIndex = PlayFabManager.Instance.currentPlayerData.selectedAvatarIndex;
+                if (!string.IsNullOrEmpty(PlayFabManager.Instance.currentPlayerData.playerName))
+                {
+                    hasValidIndex = true;
+                }
+            }
+        }
+        
+        // If we don't have a valid index from PlayFab, try AvatarSelector
+        AvatarSelector selector = FindObjectOfType<AvatarSelector>();
+        if (!hasValidIndex && selector != null)
+        {
+            selectedIndex = selector.GetSelectedAvatarIndex();
+            hasValidIndex = true;
+        }
+        
+        // Validate index
+        if (selectedIndex < 0 || selectedIndex >= 8)
+        {
+            selectedIndex = 0;
+        }
+        
+        // Try to get sprite from AvatarSelector first
+        if (selector != null)
+        {
+            Sprite avatarSprite = selector.GetAvatarSpriteByIndex(selectedIndex);
+            if (avatarSprite != null)
+            {
+                avatarImage.sprite = avatarSprite;
+                Debug.Log($"[MainMenuAvatarDisplay] ✓ Avatar sprite displayed (fallback): Index {selectedIndex}");
+                return;
+            }
+        }
+        
+        // Fallback: Use local avatar sprites array
+        if (avatarSprites != null && selectedIndex < avatarSprites.Length && avatarSprites[selectedIndex] != null)
+        {
+            avatarImage.sprite = avatarSprites[selectedIndex];
+            Debug.Log($"[MainMenuAvatarDisplay] ✓ Avatar sprite displayed from local array (fallback): Index {selectedIndex}");
         }
     }
 }

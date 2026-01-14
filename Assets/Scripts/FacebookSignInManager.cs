@@ -13,7 +13,7 @@ public class FacebookSignInManager : MonoBehaviour
 {
     public static FacebookSignInManager Instance { get; private set; }
     
-    public Action<string> OnFacebookSignInSuccess; // Access Token
+    public Action<string, string, string, string> OnFacebookSignInSuccess; // Access Token, Name, Email, ImageURL
     public Action<string> OnFacebookSignInFailure;
     
     private bool isInitialized = false;
@@ -155,8 +155,8 @@ public class FacebookSignInManager : MonoBehaviour
             string accessToken = AccessToken.CurrentAccessToken.TokenString;
             Debug.Log($"[FacebookSignInManager] Facebook Sign-In successful! Access Token: {accessToken.Substring(0, Mathf.Min(20, accessToken.Length))}...");
             
-            // Notify success with access token (PlayFab uses this)
-            OnFacebookSignInSuccess?.Invoke(accessToken);
+            // Fetch Facebook profile data (name, email, image)
+            FetchFacebookProfile(accessToken);
         }
         else
         {
@@ -165,6 +165,87 @@ public class FacebookSignInManager : MonoBehaviour
         }
     }
     #endif
+    
+    /// <summary>
+    /// Fetches Facebook profile data (name, email, image URL) using Graph API
+    /// </summary>
+    private void FetchFacebookProfile(string accessToken)
+    {
+        #if UNITY_ANDROID || UNITY_IOS || UNITY_EDITOR
+        try
+        {
+            Debug.Log("[FacebookSignInManager] Fetching Facebook profile data using Graph API...");
+            
+            // Use Graph API to fetch profile data (works on Android and iOS)
+            // Request fields: name, email, picture (with width and height for better quality)
+            string graphQuery = "/me?fields=name,email,picture.width(200).height(200)";
+            
+            FB.API(graphQuery, HttpMethod.GET, (IGraphResult result) =>
+            {
+                if (result.Error != null)
+                {
+                    Debug.LogWarning($"[FacebookSignInManager] Error fetching profile via Graph API: {result.Error}. Continuing with login anyway.");
+                    // Continue with login even if profile fetch fails
+                    OnFacebookSignInSuccess?.Invoke(accessToken, "", "", "");
+                    return;
+                }
+                
+                if (result.ResultDictionary != null)
+                {
+                    // Extract data from Graph API response
+                    string name = "";
+                    string email = "";
+                    string imageUrl = "";
+                    
+                    // Get name
+                    if (result.ResultDictionary.ContainsKey("name"))
+                    {
+                        name = result.ResultDictionary["name"]?.ToString() ?? "";
+                    }
+                    
+                    // Get email
+                    if (result.ResultDictionary.ContainsKey("email"))
+                    {
+                        email = result.ResultDictionary["email"]?.ToString() ?? "";
+                    }
+                    
+                    // Get picture URL (nested in picture.data.url)
+                    if (result.ResultDictionary.ContainsKey("picture"))
+                    {
+                        var pictureData = result.ResultDictionary["picture"] as Dictionary<string, object>;
+                        if (pictureData != null && pictureData.ContainsKey("data"))
+                        {
+                            var data = pictureData["data"] as Dictionary<string, object>;
+                            if (data != null && data.ContainsKey("url"))
+                            {
+                                imageUrl = data["url"]?.ToString() ?? "";
+                            }
+                        }
+                    }
+                    
+                    Debug.Log($"[FacebookSignInManager] Profile fetched via Graph API - Name: {name}, Email: {email}, ImageURL: {imageUrl}");
+                    
+                    // Notify success with access token and profile data (including avatar)
+                    OnFacebookSignInSuccess?.Invoke(accessToken, name, email, imageUrl);
+                }
+                else
+                {
+                    Debug.LogWarning("[FacebookSignInManager] Graph API result is null. Continuing with login anyway.");
+                    OnFacebookSignInSuccess?.Invoke(accessToken, "", "", "");
+                }
+            });
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError($"[FacebookSignInManager] Exception fetching profile: {ex.Message}. Continuing with login anyway.");
+            // Continue with login even if profile fetch fails
+            OnFacebookSignInSuccess?.Invoke(accessToken, "", "", "");
+        }
+        #else
+        // On unsupported platforms, just pass empty strings
+        OnFacebookSignInSuccess?.Invoke(accessToken, "", "", "");
+        #endif
+    }
     
     /// <summary>
     /// Signs out from Facebook account

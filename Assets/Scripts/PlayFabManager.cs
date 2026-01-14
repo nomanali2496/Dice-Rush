@@ -266,7 +266,10 @@ public class PlayFabManager : MonoBehaviour
     /// Login with Facebook account
     /// </summary>
     /// <param name="accessToken">Access token from Facebook SDK (required for PlayFab)</param>
-    public void LoginWithFacebook(string accessToken)
+    /// <param name="facebookName">Facebook user's name (optional)</param>
+    /// <param name="facebookEmail">Facebook user's email (optional)</param>
+    /// <param name="facebookImageUrl">Facebook user's profile picture URL (optional)</param>
+    public void LoginWithFacebook(string accessToken, string facebookName = "", string facebookEmail = "", string facebookImageUrl = "")
     {
         Debug.Log("[PlayFabManager] Attempting to login with Facebook...");
         
@@ -281,6 +284,11 @@ public class PlayFabManager : MonoBehaviour
             return;
         }
         
+        // Store Facebook profile data for later use
+        string fbName = facebookName;
+        string fbEmail = facebookEmail;
+        string fbImageUrl = facebookImageUrl;
+        
         var request = new LoginWithFacebookRequest
         {
             AccessToken = accessToken,
@@ -291,7 +299,98 @@ public class PlayFabManager : MonoBehaviour
             }
         };
         
-        PlayFabClientAPI.LoginWithFacebook(request, OnLoginSuccess, OnLoginFailure);
+        PlayFabClientAPI.LoginWithFacebook(request, 
+            result => OnFacebookLoginSuccess(result, fbName, fbEmail, fbImageUrl), 
+            OnLoginFailure);
+    }
+    
+    /// <summary>
+    /// Handle successful Facebook login and update user data with Facebook profile
+    /// </summary>
+    private void OnFacebookLoginSuccess(LoginResult result, string facebookName, string facebookEmail, string facebookImageUrl)
+    {
+        // First call the standard login success handler
+        OnLoginSuccess(result);
+        
+        // Then update user data with Facebook profile if available
+        if (!string.IsNullOrEmpty(facebookName) || !string.IsNullOrEmpty(facebookEmail) || !string.IsNullOrEmpty(facebookImageUrl))
+        {
+            Debug.Log($"[PlayFabManager] Updating user data with Facebook profile - Name: {facebookName}, Email: {facebookEmail}, ImageURL: {facebookImageUrl}");
+            
+            // Update local player data
+            bool shouldUpdateName = !string.IsNullOrEmpty(facebookName) && (string.IsNullOrEmpty(currentPlayerData.playerName) || currentPlayerData.playerName == "Guest");
+            bool shouldUpdateEmail = !string.IsNullOrEmpty(facebookEmail) && string.IsNullOrEmpty(currentPlayerData.email);
+            bool shouldUpdateImage = !string.IsNullOrEmpty(facebookImageUrl) && string.IsNullOrEmpty(currentPlayerData.imageUrl);
+            
+            bool dataUpdated = false;
+            
+            if (shouldUpdateName)
+            {
+                currentPlayerData.playerName = facebookName;
+                Debug.Log($"[PlayFabManager] Updated player name from Facebook: {facebookName}");
+                dataUpdated = true;
+                
+                // Update PlayFab display name
+                UpdatePlayFabDisplayName(facebookName);
+            }
+            
+            if (shouldUpdateEmail)
+            {
+                currentPlayerData.email = facebookEmail;
+                Debug.Log($"[PlayFabManager] Updated email from Facebook: {facebookEmail}");
+                dataUpdated = true;
+            }
+            
+            if (shouldUpdateImage)
+            {
+                currentPlayerData.imageUrl = facebookImageUrl;
+                Debug.Log($"[PlayFabManager] Updated avatar image URL from Facebook: {facebookImageUrl}");
+                dataUpdated = true;
+            }
+            
+            // If data was updated, notify UI immediately and then save
+            if (dataUpdated)
+            {
+                // Trigger UI update immediately with the new Facebook data
+                Debug.Log("[PlayFabManager] Triggering OnPlayerDataLoaded event with updated Facebook profile data");
+                OnPlayerDataLoaded?.Invoke(currentPlayerData);
+            }
+            
+            // Save updated data to PlayFab
+            SavePlayerData(() =>
+            {
+                Debug.Log("[PlayFabManager] Facebook profile data (including avatar) saved to PlayFab successfully!");
+                
+                // Reload player data to ensure everything is in sync
+                LoadPlayerData();
+            });
+        }
+    }
+    
+    /// <summary>
+    /// Update PlayFab display name (title display name)
+    /// </summary>
+    private void UpdatePlayFabDisplayName(string displayName)
+    {
+        if (string.IsNullOrEmpty(displayName) || !isLoggedIn)
+        {
+            return;
+        }
+        
+        var request = new UpdateUserTitleDisplayNameRequest
+        {
+            DisplayName = displayName
+        };
+        
+        PlayFabClientAPI.UpdateUserTitleDisplayName(request,
+            result =>
+            {
+                Debug.Log($"[PlayFabManager] PlayFab display name updated to: {result.DisplayName}");
+            },
+            error =>
+            {
+                Debug.LogWarning($"[PlayFabManager] Failed to update display name: {error.GenerateErrorReport()}");
+            });
     }
     
     /// <summary>

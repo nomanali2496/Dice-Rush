@@ -286,10 +286,38 @@ public class PlayerProfileUI : MonoBehaviour
         // Update profile image
         if (profileImage != null && !string.IsNullOrEmpty(data.imageUrl))
         {
-            // If you want to load the image from URL, you'll need to implement that
-            // For now, we'll just log it
             Debug.Log($"[PlayerProfileUI] Profile image URL: {data.imageUrl}");
-            // StartCoroutine(LoadImageFromUrl(data.imageUrl));
+            
+            // Check if it's a base64 image
+            if (data.imageUrl.StartsWith("data:image"))
+            {
+                try
+                {
+                    // Extract base64 part
+                    string base64Data = data.imageUrl.Substring(data.imageUrl.IndexOf(",") + 1);
+                    byte[] imageBytes = System.Convert.FromBase64String(base64Data);
+                    
+                    // Create texture
+                    Texture2D texture = new Texture2D(2, 2);
+                    if (texture.LoadImage(imageBytes))
+                    {
+                        // Convert to sprite
+                        Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+                        profileImage.sprite = sprite;
+                        Debug.Log("[PlayerProfileUI] ✓ Base64 profile image displayed");
+                    }
+                }
+                catch (System.Exception e)
+                {
+                    Debug.LogWarning($"[PlayerProfileUI] Failed to load base64 image: {e.Message}");
+                }
+            }
+            // Check if it's a URL (Facebook profile picture, etc.)
+            else if (data.imageUrl.StartsWith("http://") || data.imageUrl.StartsWith("https://"))
+            {
+                Debug.Log($"[PlayerProfileUI] Loading profile image from URL: {data.imageUrl}");
+                StartCoroutine(LoadImageFromUrl(data.imageUrl));
+            }
         }
         AvatarDisplay.SetActive(true);
         Debug.Log("[PlayerProfileUI] UI Update Complete!");
@@ -588,29 +616,44 @@ public class PlayerProfileUI : MonoBehaviour
         }
     }
     
-    // Optional: Load image from URL
-    /*
+    /// <summary>
+    /// Load image from URL (for Facebook profile pictures, etc.)
+    /// </summary>
     private System.Collections.IEnumerator LoadImageFromUrl(string url)
     {
-        UnityEngine.Networking.UnityWebRequest request = UnityEngine.Networking.UnityWebRequestTexture.GetTexture(url);
-        yield return request.SendWebRequest();
-        
-        if (request.result == UnityEngine.Networking.UnityWebRequest.Result.Success)
+        if (profileImage == null || string.IsNullOrEmpty(url))
         {
-            Texture2D texture = UnityEngine.Networking.DownloadHandlerTexture.GetContent(request);
-            if (profileImage != null)
+            yield break;
+        }
+        
+        Debug.Log($"[PlayerProfileUI] Starting to load profile image from URL: {url}");
+        
+        using (UnityEngine.Networking.UnityWebRequest request = UnityEngine.Networking.UnityWebRequestTexture.GetTexture(url))
+        {
+            yield return request.SendWebRequest();
+            
+            if (request.result == UnityEngine.Networking.UnityWebRequest.Result.Success)
             {
-                profileImage.sprite = Sprite.Create(texture, 
-                    new Rect(0, 0, texture.width, texture.height), 
-                    new Vector2(0.5f, 0.5f));
+                Texture2D texture = UnityEngine.Networking.DownloadHandlerTexture.GetContent(request);
+                if (texture != null && profileImage != null)
+                {
+                    Sprite sprite = Sprite.Create(texture, 
+                        new Rect(0, 0, texture.width, texture.height), 
+                        new Vector2(0.5f, 0.5f));
+                    profileImage.sprite = sprite;
+                    Debug.Log($"[PlayerProfileUI] ✓ Profile image loaded from URL successfully! Size: {texture.width}x{texture.height}");
+                }
+                else
+                {
+                    Debug.LogWarning("[PlayerProfileUI] Failed to create texture from downloaded image");
+                }
+            }
+            else
+            {
+                Debug.LogError($"[PlayerProfileUI] Failed to load profile image from URL: {url}. Error: {request.error}");
             }
         }
-        else
-        {
-            Debug.LogError("Failed to load profile image: " + request.error);
-        }
     }
-    */
     
     #region Public Helper Methods
     

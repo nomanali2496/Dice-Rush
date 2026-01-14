@@ -483,14 +483,15 @@ public class AuthenticationManager : MonoBehaviour
         }
     }
     
-    private void OnFacebookSignInSuccess(string accessToken)
+    private void OnFacebookSignInSuccess(string accessToken, string facebookName, string facebookEmail, string facebookImageUrl)
     {
-        Debug.Log("[AuthenticationManager] Facebook Sign-In successful, logging into PlayFab...");
+        Debug.Log($"[AuthenticationManager] Facebook Sign-In successful, logging into PlayFab... Name: {facebookName}, Email: {facebookEmail}, ImageURL: {facebookImageUrl}");
         UpdateStatusText("Logging into PlayFab...");
         
         if (PlayFabManager.Instance != null)
         {
-            PlayFabManager.Instance.LoginWithFacebook(accessToken);
+            // Pass Facebook profile data (including avatar) to PlayFab
+            PlayFabManager.Instance.LoginWithFacebook(accessToken, facebookName, facebookEmail, facebookImageUrl);
         }
         else
         {

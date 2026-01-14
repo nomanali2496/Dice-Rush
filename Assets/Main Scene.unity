@@ -27969,7 +27969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390dbc3984c188b409a9b79e5d19f4b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GoogleSignInManager
-  webClientId: 
+  webClientId: 409840056182-0utne9hsfdgat5lb6ggeusqc2fpnjjnm.apps.googleusercontent.com
 --- !u!4 &1492197461
 Transform:
   m_ObjectHideFlags: 0
