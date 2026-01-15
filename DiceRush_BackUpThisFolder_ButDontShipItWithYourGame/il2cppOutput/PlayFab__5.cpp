@@ -5876,7 +5876,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayFabErrorEvent_Invoke_mC7
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 47735
+// Method Definition Index: 47744
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonCreateOrUpdateAppleRequestEvent_mB7158EEE798CE6C2E93450062A25D522065A71E5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t0DFC19BF4A8DFA76AC0A100D1500E32432866B85* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5919,7 +5919,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47736
+// Method Definition Index: 47745
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonCreateOrUpdateAppleRequestEvent_mFBE5326E4DC9D2BEE40E68AA2ADB5D7A3FD961FA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t0DFC19BF4A8DFA76AC0A100D1500E32432866B85* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5962,7 +5962,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47737
+// Method Definition Index: 47746
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonCreateOrUpdateAppleResultEvent_m439DD0F9B6C40A2CF098F879548F6E46F02CDEAA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t2F67CD00ADC44F304DFBF02C278F2B578C764C58* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6005,7 +6005,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47738
+// Method Definition Index: 47747
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonCreateOrUpdateAppleResultEvent_mD2389CECACB483BAC0B4E1A8D54D0B757D734B26 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t2F67CD00ADC44F304DFBF02C278F2B578C764C58* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6048,7 +6048,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47739
+// Method Definition Index: 47748
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonCreateOrUpdateFacebookRequestEvent_m6BE3722352E922EE1BE26DC6F3765DE7FC15966C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3C5F25D2489537C6CB328006E5EF950ED6FB486C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6091,7 +6091,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47740
+// Method Definition Index: 47749
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonCreateOrUpdateFacebookRequestEvent_mA7D77C6C66CECDD44C7DDDFE0B19325EA4AA3D59 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3C5F25D2489537C6CB328006E5EF950ED6FB486C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6134,7 +6134,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47741
+// Method Definition Index: 47750
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonCreateOrUpdateFacebookResultEvent_m7A830F1C533DBE36852A4C1B1460790BED34916A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tBD9843F95E0FF493E185393242D91BB1036704FE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6177,7 +6177,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47742
+// Method Definition Index: 47751
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonCreateOrUpdateFacebookResultEvent_m29FD9DD854C3BFF3228C51C25BBC5C97B96A8506 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tBD9843F95E0FF493E185393242D91BB1036704FE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6220,7 +6220,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47743
+// Method Definition Index: 47752
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonCreateOrUpdateFacebookInstantGamesRequestEvent_m33E1B428EF9AC95157E0A77F87AD14D9711EC4EA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC564853EFB1083C49C4A37B34A88FA13F084CBB4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6263,7 +6263,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47744
+// Method Definition Index: 47753
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonCreateOrUpdateFacebookInstantGamesRequestEvent_mD5A9278834A1AE2D92C34F2D5EA0117A5C77B56A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC564853EFB1083C49C4A37B34A88FA13F084CBB4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6306,7 +6306,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47745
+// Method Definition Index: 47754
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonCreateOrUpdateFacebookInstantGamesResultEvent_mADB87B91C5A84F572432418AC97696B53F3515FA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8C98E69B2F5F5B6056C6C6370836784A51A2FD2E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6349,7 +6349,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47746
+// Method Definition Index: 47755
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonCreateOrUpdateFacebookInstantGamesResultEvent_mDD4143674A3FFACB45013486715ADF8DD8E085D3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8C98E69B2F5F5B6056C6C6370836784A51A2FD2E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6392,7 +6392,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47747
+// Method Definition Index: 47756
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonCreateOrUpdateGoogleRequestEvent_m9F9BFFD7DDAACDEB0AB32F474BB22695AB041ADE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tEEEFE650CEA258D617FC70E032341B9AF2E437BA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6435,7 +6435,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47748
+// Method Definition Index: 47757
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonCreateOrUpdateGoogleRequestEvent_m50EAA0025246DEC2ED38C8DF8676F3086F9C9034 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tEEEFE650CEA258D617FC70E032341B9AF2E437BA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6478,7 +6478,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47749
+// Method Definition Index: 47758
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonCreateOrUpdateGoogleResultEvent_m4A233E7A825C86239E57C950C07C8CA1F4484612 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8C7ADD2591B3DC7D4DC8030D06A2664FB6AC67B2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6521,7 +6521,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47750
+// Method Definition Index: 47759
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonCreateOrUpdateGoogleResultEvent_mB08E8EE38EDF223DA6A013DE3D76EC335C80DFA8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8C7ADD2591B3DC7D4DC8030D06A2664FB6AC67B2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6564,7 +6564,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47751
+// Method Definition Index: 47760
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonCreateOrUpdateKongregateRequestEvent_m3828887E7E5A1A7F1F4D4252DA439BF595108CE1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9088FC6BD15C91D31913445E34367421AD030D89* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6607,7 +6607,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47752
+// Method Definition Index: 47761
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonCreateOrUpdateKongregateRequestEvent_mFB3143AB728BB82A72C9D104903FC8E29A149E6E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9088FC6BD15C91D31913445E34367421AD030D89* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6650,7 +6650,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47753
+// Method Definition Index: 47762
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonCreateOrUpdateKongregateResultEvent_mD0C988597200831D4FC818DF580CE3298A663C2C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tBD958BA6047D21AF387A2E747BCD1FA48D9DD411* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6693,7 +6693,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47754
+// Method Definition Index: 47763
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonCreateOrUpdateKongregateResultEvent_mC229B4E3C2DA6A5D442A90DE4D2E0A66CA14FDF4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tBD958BA6047D21AF387A2E747BCD1FA48D9DD411* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6736,7 +6736,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47755
+// Method Definition Index: 47764
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonCreateOrUpdateNintendoRequestEvent_m27784D50148A5F000D148FBA3A50B21C832F0CEB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t164B2A7E4420E7BD21C942B11CB3DF2CD819F31F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6779,7 +6779,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47756
+// Method Definition Index: 47765
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonCreateOrUpdateNintendoRequestEvent_m0154938E557C34B86A13F764F6221D453013B7F5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t164B2A7E4420E7BD21C942B11CB3DF2CD819F31F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6822,7 +6822,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47757
+// Method Definition Index: 47766
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonCreateOrUpdateNintendoResultEvent_m3E106634C2E1574DE0AE2BB0E10110E2437ABD08 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE762625AF556881F271910809E5DE69B25F20920* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6865,7 +6865,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47758
+// Method Definition Index: 47767
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonCreateOrUpdateNintendoResultEvent_m72CFC7ECADD7CC9D4D4904DCC4D02F0274CEDD72 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE762625AF556881F271910809E5DE69B25F20920* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6908,7 +6908,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47759
+// Method Definition Index: 47768
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonCreateOrUpdatePSNRequestEvent_m0B6DD549750AE3FD88F730AAB006B0142B3616FA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t2C91B8FCB092449081149D7EABAFC3E95FA78B8C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6951,7 +6951,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47760
+// Method Definition Index: 47769
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonCreateOrUpdatePSNRequestEvent_m5A4DC716BD30E2BF1502DA44E64ECD0C41471063 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t2C91B8FCB092449081149D7EABAFC3E95FA78B8C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6994,7 +6994,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47761
+// Method Definition Index: 47770
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonCreateOrUpdatePSNResultEvent_m13118AE5195EFE9CB07232E05DD754798A799CE2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t03B18F9A8294416737101E83F404CB3A20B3651A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7037,7 +7037,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47762
+// Method Definition Index: 47771
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonCreateOrUpdatePSNResultEvent_m38EF5EE5F898D1857ED981AFEF69A14D7F631136 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t03B18F9A8294416737101E83F404CB3A20B3651A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7080,7 +7080,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47763
+// Method Definition Index: 47772
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonCreateOrUpdateSteamRequestEvent_mBD08AD662A1E78985D14121A5C1778268C0C0F4A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8E4B8F545AA31D603EB7C75E686D027C5172110E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7123,7 +7123,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47764
+// Method Definition Index: 47773
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonCreateOrUpdateSteamRequestEvent_m6B99716E41D29D1AAEBE932114BFC141020F7C40 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8E4B8F545AA31D603EB7C75E686D027C5172110E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7166,7 +7166,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47765
+// Method Definition Index: 47774
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonCreateOrUpdateSteamResultEvent_mF6D6EDE2598114F6111A2539E16D0E915E8EADF7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t24AFC65454A444DA0DB4782B58C16A63DBC49F4A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7209,7 +7209,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47766
+// Method Definition Index: 47775
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonCreateOrUpdateSteamResultEvent_m55F4516EEA50294BD11F1566CB527A30457EAD48 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t24AFC65454A444DA0DB4782B58C16A63DBC49F4A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7252,7 +7252,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47767
+// Method Definition Index: 47776
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonCreateOrUpdateToxModRequestEvent_mC3402EAD9FA38B3E55811FCAF06674A61F1F605F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t653DF12BF415C3521F77DEE856400F8922D160B1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7295,7 +7295,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47768
+// Method Definition Index: 47777
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonCreateOrUpdateToxModRequestEvent_m8158B905E71A001F95ABDCEC3690B18F284C95EA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t653DF12BF415C3521F77DEE856400F8922D160B1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7338,7 +7338,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47769
+// Method Definition Index: 47778
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonCreateOrUpdateToxModResultEvent_m3A938C5E75A3595AD4C0DFF53A358E171EE0039F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA96A85E6CADA613E692738B4D4BB44419A188DD1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7381,7 +7381,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47770
+// Method Definition Index: 47779
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonCreateOrUpdateToxModResultEvent_m1E2B285AFABED8CFFA89A1A656A5DE2DE2BB5DAE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA96A85E6CADA613E692738B4D4BB44419A188DD1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7424,7 +7424,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47771
+// Method Definition Index: 47780
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonCreateOrUpdateTwitchRequestEvent_m3BAD62811834FD36038E1F4F600AB95C6BDD86A6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5276FCF3E66CCF43FE95E55380A1E34525A30778* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7467,7 +7467,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47772
+// Method Definition Index: 47781
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonCreateOrUpdateTwitchRequestEvent_mA7821CAA104A7E77A4C86AD550475B11E763868F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5276FCF3E66CCF43FE95E55380A1E34525A30778* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7510,7 +7510,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47773
+// Method Definition Index: 47782
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonCreateOrUpdateTwitchResultEvent_m0467FC2677E7FD728700B44344BA3AF6BD1E4FB2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC1CC11A59B9A663A5442AA5F805AC724A9D5F1B4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7553,7 +7553,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47774
+// Method Definition Index: 47783
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonCreateOrUpdateTwitchResultEvent_mD7DB40986F6E41C83890752EEEF8AA78888B8652 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC1CC11A59B9A663A5442AA5F805AC724A9D5F1B4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7596,7 +7596,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47775
+// Method Definition Index: 47784
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonDeleteAppleRequestEvent_m548E29BFA5872F20472A00496B03FB64A257673D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t645F5DE9377A2CDFBB5B0D1B8BCCDA094E0EACDE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7639,7 +7639,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47776
+// Method Definition Index: 47785
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonDeleteAppleRequestEvent_m21FA23D7E73912BB07710A7FB5ABCC6944EBB8E2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t645F5DE9377A2CDFBB5B0D1B8BCCDA094E0EACDE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7682,7 +7682,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47777
+// Method Definition Index: 47786
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonDeleteAppleResultEvent_mB8EADF38ECAE90BB7CDD0C45E41F15B937E7F4F0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE2F0860931F9D7EB714363DBC3D8D77F6977A82D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7725,7 +7725,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47778
+// Method Definition Index: 47787
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonDeleteAppleResultEvent_mFB6D38302E6B0AF8FF4CFD972359929E6B4E995F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE2F0860931F9D7EB714363DBC3D8D77F6977A82D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7768,7 +7768,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47779
+// Method Definition Index: 47788
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonDeleteFacebookRequestEvent_mE88C5D20F695FD5543D2FFD72D2AD0D91AF3AC93 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t6D9D2F3E8E7AA371FFDDF2FDCB167C4BD412EECD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7811,7 +7811,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47780
+// Method Definition Index: 47789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonDeleteFacebookRequestEvent_m0F9B950B222DE3293CEEB03532E7E349E24727A1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t6D9D2F3E8E7AA371FFDDF2FDCB167C4BD412EECD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7854,7 +7854,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47781
+// Method Definition Index: 47790
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonDeleteFacebookResultEvent_mD0A0CE5A6D8D9206C9FDE1B902783D6E88FA6D12 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1445DADB987246F76FA00E728D160390D7791B15* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7897,7 +7897,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47782
+// Method Definition Index: 47791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonDeleteFacebookResultEvent_mED157CEC71C719EC9A39F9DAFBDC16936985E4C2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1445DADB987246F76FA00E728D160390D7791B15* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7940,7 +7940,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47783
+// Method Definition Index: 47792
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonDeleteFacebookInstantGamesRequestEvent_mEE7107156E0E4C8B7B9355247689C70B6727356F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1415FB70E0870DC4921A58909A9B06FED81E84FB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7983,7 +7983,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47784
+// Method Definition Index: 47793
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonDeleteFacebookInstantGamesRequestEvent_m946048DA39A6600B3E498CBD8CFE18D99B4EA7B8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1415FB70E0870DC4921A58909A9B06FED81E84FB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8026,7 +8026,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47785
+// Method Definition Index: 47794
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonDeleteFacebookInstantGamesResultEvent_mB5C2A369C0F1634950B603FCAC2893AC8FB991AF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tB94BAA0D31AE46AF15CEC84965B811C563BC3233* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8069,7 +8069,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47786
+// Method Definition Index: 47795
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonDeleteFacebookInstantGamesResultEvent_mCA37F12F0924A5E8E17C6CC53B490ACC5BFBBBF7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tB94BAA0D31AE46AF15CEC84965B811C563BC3233* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8112,7 +8112,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47787
+// Method Definition Index: 47796
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonDeleteGoogleRequestEvent_mB24C5378F2B3E7FF01B91075B4319969D68159CB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3783DC5336DF3546726238247CA1BBE8DF2EB54B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8155,7 +8155,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47788
+// Method Definition Index: 47797
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonDeleteGoogleRequestEvent_mA5033C61561C4FC80581F43713D362B3472058BC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3783DC5336DF3546726238247CA1BBE8DF2EB54B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8198,7 +8198,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47789
+// Method Definition Index: 47798
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonDeleteGoogleResultEvent_mFF0FA1335E84EB24A46C2BBD0E736CB7842D13A5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t33A670E6790D3E3AE118A50929F5B0C9D0644B92* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8241,7 +8241,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47790
+// Method Definition Index: 47799
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonDeleteGoogleResultEvent_mB1CB46D3C72F2B169342DA6A5A77DD1FE9D8F7BA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t33A670E6790D3E3AE118A50929F5B0C9D0644B92* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8284,7 +8284,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47791
+// Method Definition Index: 47800
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonDeleteKongregateRequestEvent_m8FA434A7DCE1E1736CF2705AA6A713607FCFD11D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tEC455F951FC665F745E8A140606B4E41ADDC678D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8327,7 +8327,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47792
+// Method Definition Index: 47801
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonDeleteKongregateRequestEvent_mE8DE25412BFED228A32D02F236410FEAE992BE93 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tEC455F951FC665F745E8A140606B4E41ADDC678D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8370,7 +8370,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47793
+// Method Definition Index: 47802
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonDeleteKongregateResultEvent_mF7417076E5A0BCD47997544484409D636EEA5851 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t3B2030BEDC2F7E242AF5E51904C2B8459648D05A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8413,7 +8413,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47794
+// Method Definition Index: 47803
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonDeleteKongregateResultEvent_m990CBE7E1AC10B200172E64F23FCDDA4E98D5E32 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t3B2030BEDC2F7E242AF5E51904C2B8459648D05A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8456,7 +8456,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47795
+// Method Definition Index: 47804
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonDeleteNintendoRequestEvent_m82535FD346F05E0191A4F7591ABADCA7C5054476 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE55901A21922767E194CC527E3314E1DE1ADEAF9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8499,7 +8499,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47796
+// Method Definition Index: 47805
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonDeleteNintendoRequestEvent_m4898FFF0D6436C60C08CFDB75B1A915C5AC691B8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE55901A21922767E194CC527E3314E1DE1ADEAF9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8542,7 +8542,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47797
+// Method Definition Index: 47806
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonDeleteNintendoResultEvent_m8F20AA86FEA3CA28DC9F660E33611DBB49C54D0A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8A8EF77389EF98B8487FA27008527EC89BE4F5D5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8585,7 +8585,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47798
+// Method Definition Index: 47807
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonDeleteNintendoResultEvent_mDBCE07BCABDD6031719C0E430D9322FADAA559DE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8A8EF77389EF98B8487FA27008527EC89BE4F5D5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8628,7 +8628,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47799
+// Method Definition Index: 47808
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonDeletePSNRequestEvent_mEC7793FAEA4254EB1ADF72B452665C0AA5A9BC05 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t126D3C4609E3C4A696267B4BBAEB13C95826FD87* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8671,7 +8671,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47800
+// Method Definition Index: 47809
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonDeletePSNRequestEvent_m8792AC13BC91AD420344E9C101653833EB52CC25 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t126D3C4609E3C4A696267B4BBAEB13C95826FD87* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8714,7 +8714,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47801
+// Method Definition Index: 47810
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonDeletePSNResultEvent_m74D9DCD4F83C9D1892DEBEFE1B7AC2B1614C7108 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t330F5310186BBACFF78E52955576FA488B38378C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8757,7 +8757,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47802
+// Method Definition Index: 47811
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonDeletePSNResultEvent_m9B1BE69E2FD0A6925957412249BA3CA2234ECE25 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t330F5310186BBACFF78E52955576FA488B38378C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8800,7 +8800,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47803
+// Method Definition Index: 47812
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonDeleteSteamRequestEvent_m7A57D0A249EB67605BBC7AD7C3D1F8402588F5B2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5D0A05B248FB70E6169A9E23F24439ECC9A797E5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8843,7 +8843,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47804
+// Method Definition Index: 47813
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonDeleteSteamRequestEvent_m3ED61E6EFE4C25EF9F419701CCB99B43ED521724 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5D0A05B248FB70E6169A9E23F24439ECC9A797E5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8886,7 +8886,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47805
+// Method Definition Index: 47814
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonDeleteSteamResultEvent_m49CC388A838D15A7C8398340BF68587FB25DEDE1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tB9B2EBA15CC95832F387185EFD23FB93D5088EC3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8929,7 +8929,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47806
+// Method Definition Index: 47815
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonDeleteSteamResultEvent_m9440A8A5363CCA25473A41A0F720EE5AFC1457E8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tB9B2EBA15CC95832F387185EFD23FB93D5088EC3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8972,7 +8972,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47807
+// Method Definition Index: 47816
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonDeleteToxModRequestEvent_mBD2BADC8B8BA5C5B1052CED556FEDCC0CF148D45 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4A0B2C255C136528A761EB2B0BF041512A2682B1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9015,7 +9015,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47808
+// Method Definition Index: 47817
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonDeleteToxModRequestEvent_m2D493C69BEA1998271EEE71A1E5D0BFC6F0114F8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4A0B2C255C136528A761EB2B0BF041512A2682B1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9058,7 +9058,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47809
+// Method Definition Index: 47818
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonDeleteToxModResultEvent_m95E25A2CA5F08566BB60F7F472375380A5A6758A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t9E3FFD94E147B43E00AB839E7E4C7C85CC36857F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9101,7 +9101,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47810
+// Method Definition Index: 47819
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonDeleteToxModResultEvent_mE578F52076CC8B9C622890189BF762AC743E2E42 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t9E3FFD94E147B43E00AB839E7E4C7C85CC36857F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9144,7 +9144,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47811
+// Method Definition Index: 47820
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonDeleteTwitchRequestEvent_m4EE595C6075C5F2EBB4554199AFBC6E216E17DD8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t0ACFE6A39BABE143320CDEEC7D85ECC5FD998F8F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9187,7 +9187,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47812
+// Method Definition Index: 47821
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonDeleteTwitchRequestEvent_m0382168B5CE7AA96F3A349A7EA9DD31F4256C5EE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t0ACFE6A39BABE143320CDEEC7D85ECC5FD998F8F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9230,7 +9230,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47813
+// Method Definition Index: 47822
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonDeleteTwitchResultEvent_mC5C54470FB78FC5F611190A9B7AD5AFFCED0A232 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA7DC1238B4547E88FEB8464769C349C73974EA94* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9273,7 +9273,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47814
+// Method Definition Index: 47823
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonDeleteTwitchResultEvent_m83E563C1A60C4D5840FFDEF743A15492A0D4389D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA7DC1238B4547E88FEB8464769C349C73974EA94* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9316,7 +9316,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47815
+// Method Definition Index: 47824
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonGetAppleRequestEvent_m43A5084D42087273C028BD0B51C5A22933DC8389 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4B102DF149FF4D9BA05CBB05E62DC7BFDE981A99* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9359,7 +9359,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47816
+// Method Definition Index: 47825
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonGetAppleRequestEvent_m021AE6DBE0FBAE62D299FCF4A78994535D7A5FFD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4B102DF149FF4D9BA05CBB05E62DC7BFDE981A99* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9402,7 +9402,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47817
+// Method Definition Index: 47826
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonGetAppleResultEvent_mCD255EADE034E2E4F06317B9BCD34C89E73B12F7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t056B7B6256BF824C12A57D67693BC277F5569CD6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9445,7 +9445,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47818
+// Method Definition Index: 47827
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonGetAppleResultEvent_mD8DD72184550B904EA9538E78E8DDC9F9F96CF18 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t056B7B6256BF824C12A57D67693BC277F5569CD6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9488,7 +9488,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47819
+// Method Definition Index: 47828
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonGetFacebookRequestEvent_m468A4FA2072C06341C2BBA8140554D4EE996C21E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD505E8A7B736F874E7AE959C701B7102E5D798E3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9531,7 +9531,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47820
+// Method Definition Index: 47829
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonGetFacebookRequestEvent_m2DF3F37EB682FC01C41FC481C677B5FF5BB34332 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD505E8A7B736F874E7AE959C701B7102E5D798E3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9574,7 +9574,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47821
+// Method Definition Index: 47830
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonGetFacebookResultEvent_mB3A135E25CCA1224B11331C57292C2BBDD1543A7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t33BAF3FDA566ECDC365657E14BF8D1A656807F5F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9617,7 +9617,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47822
+// Method Definition Index: 47831
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonGetFacebookResultEvent_mD6C5C7791EDADE62F52CD8A236DED554692D932A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t33BAF3FDA566ECDC365657E14BF8D1A656807F5F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9660,7 +9660,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47823
+// Method Definition Index: 47832
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonGetFacebookInstantGamesRequestEvent_m010B058A3085C994DFD5B963C6905E3BBC1F69A5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4B4ACFF261A7CF28888B677B5A1705B955764615* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9703,7 +9703,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47824
+// Method Definition Index: 47833
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonGetFacebookInstantGamesRequestEvent_m12BD27C926BD90CD99AAEECC0442DFA1E9A7C711 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4B4ACFF261A7CF28888B677B5A1705B955764615* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9746,7 +9746,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47825
+// Method Definition Index: 47834
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonGetFacebookInstantGamesResultEvent_m5716618AA7E7F5BF3152ABF763F342FC182D1454 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tB33CB93A6978B105E0A0485D0AFC1BF7E4E06594* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9789,7 +9789,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47826
+// Method Definition Index: 47835
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonGetFacebookInstantGamesResultEvent_m113E9FF26D49312A90D078BF1E96DA0DA84B0FCC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tB33CB93A6978B105E0A0485D0AFC1BF7E4E06594* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9832,7 +9832,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47827
+// Method Definition Index: 47836
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonGetGoogleRequestEvent_m98F34AC77908CCE804292006601F6E6D46DD1943 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3E167C8CAE39C989497B7BCEED0B37BACCA21B9F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9875,7 +9875,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47828
+// Method Definition Index: 47837
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonGetGoogleRequestEvent_mD5E8E33827D9148C196C796337385206D282874D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3E167C8CAE39C989497B7BCEED0B37BACCA21B9F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9918,7 +9918,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47829
+// Method Definition Index: 47838
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonGetGoogleResultEvent_m9136B8DBF72B6B2FECCF01D9610456402F63F2F6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t0CD0ED81AE2ADBFDAFE5B9A9B06DA0814124F72D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9961,7 +9961,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47830
+// Method Definition Index: 47839
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonGetGoogleResultEvent_m2D27AC9AB3DDFF0331A14549CFC62A5619B61FF6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t0CD0ED81AE2ADBFDAFE5B9A9B06DA0814124F72D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10004,7 +10004,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47831
+// Method Definition Index: 47840
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonGetKongregateRequestEvent_m673C871D056FFB97816BABA66D1805F37532C0F1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3FAC7AF318D2CBD005E7311FB2049388A5E41FB1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10047,7 +10047,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47832
+// Method Definition Index: 47841
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonGetKongregateRequestEvent_mB346BC32D5AB875D26A34939EB05C248785107D6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3FAC7AF318D2CBD005E7311FB2049388A5E41FB1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10090,7 +10090,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47833
+// Method Definition Index: 47842
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonGetKongregateResultEvent_m8C0D46A98A88CBBDED9C4A46F3155B7156619FE9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t6EC2E7567FBCB2350321F8286C15C9552F4BA01F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10133,7 +10133,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47834
+// Method Definition Index: 47843
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonGetKongregateResultEvent_m2D3A0A4CFFAAF10BF658C5A857A97753C48AB644 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t6EC2E7567FBCB2350321F8286C15C9552F4BA01F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10176,7 +10176,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47835
+// Method Definition Index: 47844
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonGetNintendoRequestEvent_m239B8EA9A7A57AF89FE41F9A4EE222EB762BC48A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t711789FA9A3BF4EA03FB310F7680A7ADD3A8BC22* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10219,7 +10219,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47836
+// Method Definition Index: 47845
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonGetNintendoRequestEvent_m4A013D7613F84BF8A0B37AD82F78167446E061E3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t711789FA9A3BF4EA03FB310F7680A7ADD3A8BC22* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10262,7 +10262,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47837
+// Method Definition Index: 47846
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonGetNintendoResultEvent_mED16012ECC5CC45B9EC739941D6E3C4B844C7136 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t5555915072D2625C981B79BD3F0D75482F04D3E1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10305,7 +10305,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47838
+// Method Definition Index: 47847
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonGetNintendoResultEvent_m40E487CCBE8039B84BFFDEFB17DAA202730D6B1B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t5555915072D2625C981B79BD3F0D75482F04D3E1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10348,7 +10348,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47839
+// Method Definition Index: 47848
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonGetPSNRequestEvent_m2792ADDC7296FE4A7FC67071EDD1C99527B8FC85 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE9590C6AF9A336C0F1CF574B4789ABCABCE7D752* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10391,7 +10391,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47840
+// Method Definition Index: 47849
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonGetPSNRequestEvent_m7E2F042A870769B514DB83C032C7AC1BEE74D615 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE9590C6AF9A336C0F1CF574B4789ABCABCE7D752* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10434,7 +10434,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47841
+// Method Definition Index: 47850
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonGetPSNResultEvent_m0692ECFC8F552873E4204BE5C5251FA6430D03AA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA298B1F56FA3319E82379AA50C8A228653C83A5C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10477,7 +10477,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47842
+// Method Definition Index: 47851
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonGetPSNResultEvent_m12898EF80F3FEA9E018E99520E57E90C459A2ED9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA298B1F56FA3319E82379AA50C8A228653C83A5C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10520,7 +10520,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47843
+// Method Definition Index: 47852
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonGetSteamRequestEvent_m448FBA3EFF429888D94B0A65ED892AF00F16ADB1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tF5006B23DF400F303B740ABEFE8058A083DEB2A2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10563,7 +10563,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47844
+// Method Definition Index: 47853
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonGetSteamRequestEvent_m94DE022680A9B0D9D4DA48138E39F822260A3336 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tF5006B23DF400F303B740ABEFE8058A083DEB2A2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10606,7 +10606,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47845
+// Method Definition Index: 47854
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonGetSteamResultEvent_mD81BC70E01E77AB549F9AE9FF2DFD548A91B95D4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t5ABC73EB1F3E8CDEF1DB7C25D8232E5CCC946203* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10649,7 +10649,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47846
+// Method Definition Index: 47855
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonGetSteamResultEvent_m1A3A210FE223550719F1FE94607F29888F6D4446 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t5ABC73EB1F3E8CDEF1DB7C25D8232E5CCC946203* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10692,7 +10692,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47847
+// Method Definition Index: 47856
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonGetToxModRequestEvent_mD6820D06C8A42FF534061D67299273B1BC671009 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1C73F1B396DAE659BA24873199707D05418D5F8C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10735,7 +10735,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47848
+// Method Definition Index: 47857
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonGetToxModRequestEvent_m66DE4D7EB040FB6C933C7ECBF4FCED690CC1E7B9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1C73F1B396DAE659BA24873199707D05418D5F8C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10778,7 +10778,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47849
+// Method Definition Index: 47858
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonGetToxModResultEvent_mAE76D3A42DDBABA16C11CF2390FE93253D98319A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8B2F89065CA09784403D65C61949140A5F19FC88* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10821,7 +10821,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47850
+// Method Definition Index: 47859
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonGetToxModResultEvent_mED52B8ABDE5E88DC7FFA45F8BD3F5FF7EF741723 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8B2F89065CA09784403D65C61949140A5F19FC88* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10864,7 +10864,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47851
+// Method Definition Index: 47860
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonGetTwitchRequestEvent_mE8145B9FEB52CF1774C418C813407031F7E15E94 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4C34574472832DB5E12C505C067F293DEB6F3944* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10907,7 +10907,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47852
+// Method Definition Index: 47861
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonGetTwitchRequestEvent_m7C2A9447E7D6C9A3D19B67B5366D3C81D03EB3B2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4C34574472832DB5E12C505C067F293DEB6F3944* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10950,7 +10950,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47853
+// Method Definition Index: 47862
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddonGetTwitchResultEvent_m6661D025063B79DEA8EC8954F55DCEF1A3CAC4F9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8CDD400815C57F0A2488D6009F75C555C460B69C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10993,7 +10993,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47854
+// Method Definition Index: 47863
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddonGetTwitchResultEvent_m4D8233B7836C9DE56A10532BB398769D44EF2507 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8CDD400815C57F0A2488D6009F75C555C460B69C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11036,7 +11036,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47855
+// Method Definition Index: 47864
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAuthenticationAuthenticateGameServerWithCustomIdRequestEvent_m517A56EC97BDC8D4CED237CEBF7A28F1A5978D81 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t7416298D0833CCD6ADA6ABA52E8000FF994ABA67* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11079,7 +11079,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47856
+// Method Definition Index: 47865
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAuthenticationAuthenticateGameServerWithCustomIdRequestEvent_m2996CB61B9F9423D8FB948607DD146879EC03B1F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t7416298D0833CCD6ADA6ABA52E8000FF994ABA67* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11122,7 +11122,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47857
+// Method Definition Index: 47866
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAuthenticationAuthenticateGameServerWithCustomIdResultEvent_mD1446E22B43579ED12BCAFE6A4DD9171B7F2BA12 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1E60E5E1D931B9AF6AD1F9DCCC2AAC1F63F1A72A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11165,7 +11165,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47858
+// Method Definition Index: 47867
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAuthenticationAuthenticateGameServerWithCustomIdResultEvent_m63A3C5BE716C8C7C468885751563AD55EE9C92F0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1E60E5E1D931B9AF6AD1F9DCCC2AAC1F63F1A72A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11208,7 +11208,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47859
+// Method Definition Index: 47868
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAuthenticationDeleteRequestEvent_mF4375F70F710868EC386AC9C24DBB00D5130ED7B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tBC4BA8A481589E3CDC185AA3C16B95E22C1F38D8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11251,7 +11251,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47860
+// Method Definition Index: 47869
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAuthenticationDeleteRequestEvent_m9E6C09DD8DDCCD919B0A795BA1C1369B615BB093 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tBC4BA8A481589E3CDC185AA3C16B95E22C1F38D8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11294,7 +11294,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47861
+// Method Definition Index: 47870
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAuthenticationDeleteResultEvent_m02BDD93A8963655F033BA3631E115B885FCBD827 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tD6A5FCA6F4F4DB4A1F8A4F3ABBC1183E299E9295* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11337,7 +11337,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47862
+// Method Definition Index: 47871
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAuthenticationDeleteResultEvent_m332963C05EDFCBBDF89D30A495B9434CC1AA566A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tD6A5FCA6F4F4DB4A1F8A4F3ABBC1183E299E9295* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11380,7 +11380,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47863
+// Method Definition Index: 47872
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAuthenticationGetEntityTokenRequestEvent_mDA88E9701A060B9575C0E4F57A458B0E1F016660 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA008C99EC59F44F0CFF1CD939C1D7A5FA8FC8281* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11423,7 +11423,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47864
+// Method Definition Index: 47873
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAuthenticationGetEntityTokenRequestEvent_mE9848E19AC681743DAC62FC1B2DB159AF275FBD4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA008C99EC59F44F0CFF1CD939C1D7A5FA8FC8281* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11466,7 +11466,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47865
+// Method Definition Index: 47874
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAuthenticationGetEntityTokenResultEvent_m7C7BA2162093079EC0274653DDED8B54C55DED46 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t181C8E7DB87E7EBD7C275C445E0ABFDE9564A0AD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11509,7 +11509,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47866
+// Method Definition Index: 47875
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAuthenticationGetEntityTokenResultEvent_m1B75B006F0270230C73A82FD461FCD5EB81997C5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t181C8E7DB87E7EBD7C275C445E0ABFDE9564A0AD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11552,7 +11552,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47867
+// Method Definition Index: 47876
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAuthenticationValidateEntityTokenRequestEvent_m00259CB99FD8801F3A1B028EDBF3E488764540AE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD71B8CDCDDC2ECE324F4052083B05FCCF4CF0CCE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11595,7 +11595,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47868
+// Method Definition Index: 47877
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAuthenticationValidateEntityTokenRequestEvent_mF794F2A773FFADCE97FBF7B98A98EF4A6E4AC536 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD71B8CDCDDC2ECE324F4052083B05FCCF4CF0CCE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11638,7 +11638,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47869
+// Method Definition Index: 47878
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAuthenticationValidateEntityTokenResultEvent_m4742536FACC56415A640ADE430A188DACD791AB3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t56C72D3432CE1061BB1EACE5BA1C243E01900DA5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11681,7 +11681,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47870
+// Method Definition Index: 47879
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAuthenticationValidateEntityTokenResultEvent_mF334F9490BAA171C0969311A820C013FE2FAB262 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t56C72D3432CE1061BB1EACE5BA1C243E01900DA5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11724,7 +11724,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47871
+// Method Definition Index: 47880
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLoginResultEvent_m97303241C3CA3CA6905121FE88E0AD1DF83E0AEE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE7DA29D03E13A6560EDCA3183C6C44ED1C0F75BF* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11767,7 +11767,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47872
+// Method Definition Index: 47881
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLoginResultEvent_mAAA4389A41C8713707B7E3E91D1CFB2030D5C804 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE7DA29D03E13A6560EDCA3183C6C44ED1C0F75BF* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11810,7 +11810,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47873
+// Method Definition Index: 47882
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAcceptTradeRequestEvent_m78E48C57B76F6B01474C908DE49BDDDCBCCB6190 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8B04C6EBF104AAC2A92CC9707637C4C951650300* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11853,7 +11853,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47874
+// Method Definition Index: 47883
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAcceptTradeRequestEvent_m15B2B12B53D7F7224CD5EBA9426B94BCE3811E50 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8B04C6EBF104AAC2A92CC9707637C4C951650300* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11896,7 +11896,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47875
+// Method Definition Index: 47884
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAcceptTradeResultEvent_mD400110CC1B12A78E5F5C3836936621C9603C9C1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t64478FB815CFC202C5A19F2BDDD460AB0DC2FB7A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11939,7 +11939,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47876
+// Method Definition Index: 47885
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAcceptTradeResultEvent_m154022E6890D82AED5D719D8B16F89B080FBDB20 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t64478FB815CFC202C5A19F2BDDD460AB0DC2FB7A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11982,7 +11982,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47877
+// Method Definition Index: 47886
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddFriendRequestEvent_m71282578F784DDB244B21D84CD2BC2F12664DEAE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tCD015290096C5733E6F98C20FC7EF5FA9C65DCD8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12025,7 +12025,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47878
+// Method Definition Index: 47887
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddFriendRequestEvent_m161B3A5D5F4582D7441EADF9160E1BEC1FB66860 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tCD015290096C5733E6F98C20FC7EF5FA9C65DCD8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12068,7 +12068,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47879
+// Method Definition Index: 47888
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddFriendResultEvent_mDC6735703CB3B1510C9BC87AF62465E794165CCB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA64A14D230D5D42CE16DC28F0B4A15FE8827A7C6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12111,7 +12111,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47880
+// Method Definition Index: 47889
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddFriendResultEvent_mEC71EDB759872B3D4EBE3992828E7251674130AD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA64A14D230D5D42CE16DC28F0B4A15FE8827A7C6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12154,7 +12154,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47881
+// Method Definition Index: 47890
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddGenericIDRequestEvent_mE4C855519A484336224AB3229768B13F7AD480BD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t78A8EBAC2214BD0418F4101F7DBBFBD47A742F1C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12197,7 +12197,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47882
+// Method Definition Index: 47891
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddGenericIDRequestEvent_m561625C9D8CCAC3188E334E11B7D70E03663A453 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t78A8EBAC2214BD0418F4101F7DBBFBD47A742F1C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12240,7 +12240,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47883
+// Method Definition Index: 47892
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddGenericIDResultEvent_m55074B56EE1D895D533BD6D2C1D98ACCBE6AD153 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tFD352897959D4FB52F5E535EA7DFE4957A1C3377* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12283,7 +12283,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47884
+// Method Definition Index: 47893
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddGenericIDResultEvent_m9F18A937474E8BC42D1B4B1535A60E34F32CE755 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tFD352897959D4FB52F5E535EA7DFE4957A1C3377* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12326,7 +12326,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47885
+// Method Definition Index: 47894
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddOrUpdateContactEmailRequestEvent_m5C15FF27884D1AB5D5F666B6D96C1CC5D2ED08B8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC16EB32CAF6121C96947D52C5D940CCC59353807* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12369,7 +12369,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47886
+// Method Definition Index: 47895
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddOrUpdateContactEmailRequestEvent_mFE29E42BC9861B882B3196D672BFF8028DE6524B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC16EB32CAF6121C96947D52C5D940CCC59353807* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12412,7 +12412,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47887
+// Method Definition Index: 47896
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddOrUpdateContactEmailResultEvent_m4DD35737504BCC981E6A096C81C3B5D8B3F6E25A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t84D3B6DC31A29FDDFC2F82188341953DBD826FBE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12455,7 +12455,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47888
+// Method Definition Index: 47897
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddOrUpdateContactEmailResultEvent_m0403051BDBC023FBA0D5F36C64966D71E1FEAA87 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t84D3B6DC31A29FDDFC2F82188341953DBD826FBE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12498,7 +12498,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47889
+// Method Definition Index: 47898
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddSharedGroupMembersRequestEvent_mBDD326ADF78FE8FAA3F4F3DC4252CA71B1D2ADD1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC8C9A4A4188231F664895F7387054E78ACA75354* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12541,7 +12541,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47890
+// Method Definition Index: 47899
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddSharedGroupMembersRequestEvent_m9E4DCB9C8F9837860217A09C846BBBCAF7505E88 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC8C9A4A4188231F664895F7387054E78ACA75354* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12584,7 +12584,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47891
+// Method Definition Index: 47900
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddSharedGroupMembersResultEvent_mABD0CC2F139BA20F3DEDF8FD9E2B46BC7BF5A26B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t60592098F47FF44D5EC67170CAE6ACE24C137862* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12627,7 +12627,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47892
+// Method Definition Index: 47901
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddSharedGroupMembersResultEvent_m2769C3A69A00FFF1123D6BA12E78857CB5B2F10F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t60592098F47FF44D5EC67170CAE6ACE24C137862* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12670,7 +12670,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47893
+// Method Definition Index: 47902
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddUsernamePasswordRequestEvent_mB079BF08BEDAB25BD996E73C1AAD2F61A9AB46C6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t063C5A42E39A25B10B638C4367D5D004AD42619A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12713,7 +12713,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47894
+// Method Definition Index: 47903
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddUsernamePasswordRequestEvent_mEFECC468F22A7AE34FD4A93620E7DEA3307A851C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t063C5A42E39A25B10B638C4367D5D004AD42619A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12756,7 +12756,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47895
+// Method Definition Index: 47904
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddUsernamePasswordResultEvent_mBC97742D046562C78CE7B70FBD510F4CACEF6ECA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t52574D9038539DE82F88DC860F529E0D85A38614* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12799,7 +12799,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47896
+// Method Definition Index: 47905
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddUsernamePasswordResultEvent_m63DB4941B94F1A0161ADAB45F16BE7F3BBA26954 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t52574D9038539DE82F88DC860F529E0D85A38614* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12842,7 +12842,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47897
+// Method Definition Index: 47906
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddUserVirtualCurrencyRequestEvent_m47F81781E0D973B476AA186B6F391289E78A92CD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t322F892D1B4F7C6A4A2228EA2D3E64812EBBCBBB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12885,7 +12885,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47898
+// Method Definition Index: 47907
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddUserVirtualCurrencyRequestEvent_mC0AEDE3F4DE3686600C54EA84130EE7A08A5D8E1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t322F892D1B4F7C6A4A2228EA2D3E64812EBBCBBB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12928,7 +12928,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47899
+// Method Definition Index: 47908
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAddUserVirtualCurrencyResultEvent_m0BA49098F824997B04C9223E10CFDDEF24534734 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t62E05008006929197C5495D70831189CA9A21E9C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12971,7 +12971,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47900
+// Method Definition Index: 47909
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAddUserVirtualCurrencyResultEvent_m64969948A0E9DCB6805889B0B25007E7EE42DFCA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t62E05008006929197C5495D70831189CA9A21E9C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13014,7 +13014,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47901
+// Method Definition Index: 47910
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAndroidDevicePushNotificationRegistrationRequestEvent_m0725623115770540F5515D447CAFC08B7F61AECB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE2E456F2C0B6D88737F78375415916637F79F6A5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13057,7 +13057,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47902
+// Method Definition Index: 47911
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAndroidDevicePushNotificationRegistrationRequestEvent_mB76AEB99326151EA05EAD22782FC1C6B5DC7C8FC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE2E456F2C0B6D88737F78375415916637F79F6A5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13100,7 +13100,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47903
+// Method Definition Index: 47912
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAndroidDevicePushNotificationRegistrationResultEvent_m1BB8CD5928CB6F6469B75C05C61ACBAF16E3A9F6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t66C85914471DA3841EB4D3667736F763510E1945* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13143,7 +13143,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47904
+// Method Definition Index: 47913
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAndroidDevicePushNotificationRegistrationResultEvent_m682A659C3DFCF0AC28BA227F36924A07089A1B09 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t66C85914471DA3841EB4D3667736F763510E1945* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13186,7 +13186,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47905
+// Method Definition Index: 47914
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAttributeInstallRequestEvent_mBDE86078D1DB11EABA16A8119BBD87E52B644EBE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t906606732CB2D034ED54D6D5C3B3ADE8D887E03F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13229,7 +13229,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47906
+// Method Definition Index: 47915
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAttributeInstallRequestEvent_m5A6431E62116C074CB45168D5CDDF2CDDE150518 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t906606732CB2D034ED54D6D5C3B3ADE8D887E03F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13272,7 +13272,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47907
+// Method Definition Index: 47916
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnAttributeInstallResultEvent_m763DEEAB298BFF2B38828FB7E10BA68FD9AB5747 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t2A465AACCF9EF61B29E130497F4FFDA6A156FC2D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13315,7 +13315,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47908
+// Method Definition Index: 47917
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnAttributeInstallResultEvent_mD8EC511D9DD5A35BCBFE124476412BEC237CD3BB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t2A465AACCF9EF61B29E130497F4FFDA6A156FC2D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13358,7 +13358,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47909
+// Method Definition Index: 47918
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCancelTradeRequestEvent_mACEBFE2CEF65295F2BB4A9A28004C87F0E6C6AAF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAFBF37E777C072B7E261247886F6D96605C744A1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13401,7 +13401,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47910
+// Method Definition Index: 47919
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCancelTradeRequestEvent_m376B2E1BB48898A11E3D5862E8B92E6C5F7838F7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAFBF37E777C072B7E261247886F6D96605C744A1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13444,7 +13444,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47911
+// Method Definition Index: 47920
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCancelTradeResultEvent_m5208345F630FAB91203EECC5AD9B32AA576626CA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE98C00285FFD92B1790BB8DD07E7A2A80B188E91* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13487,7 +13487,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47912
+// Method Definition Index: 47921
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCancelTradeResultEvent_m21E9E6F4E887DD9C143125C9557BA9ABBA5443A8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE98C00285FFD92B1790BB8DD07E7A2A80B188E91* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13530,7 +13530,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47913
+// Method Definition Index: 47922
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnConfirmPurchaseRequestEvent_m280E548C2783E1AD87B89D5F78910DAE4E8F682A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB169239E4781CF6CE824E2114F203D9D5D7C71C0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13573,7 +13573,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47914
+// Method Definition Index: 47923
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnConfirmPurchaseRequestEvent_m5F242BC93272E7CCD1C89CBAF4C855829E34B8C0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB169239E4781CF6CE824E2114F203D9D5D7C71C0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13616,7 +13616,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47915
+// Method Definition Index: 47924
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnConfirmPurchaseResultEvent_m88500D126404819DBC35A5E594237CE5C09923B0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC0EDC1EA48C0A0F5D250AAC9EA1B96981B42E70E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13659,7 +13659,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47916
+// Method Definition Index: 47925
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnConfirmPurchaseResultEvent_mF8533828E4585C2CCC4B31AFFD65C6314FB4EA69 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC0EDC1EA48C0A0F5D250AAC9EA1B96981B42E70E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13702,7 +13702,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47917
+// Method Definition Index: 47926
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnConsumeItemRequestEvent_m0D3A510387A3C91106F9DF08A270560F1D43D613 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t41B2BC5D67DD8F40F0F195818A9AFF2D015A3D65* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13745,7 +13745,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47918
+// Method Definition Index: 47927
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnConsumeItemRequestEvent_m4DA58D63DE505E0F8C3D8A05F5B05F038FF8B029 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t41B2BC5D67DD8F40F0F195818A9AFF2D015A3D65* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13788,7 +13788,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47919
+// Method Definition Index: 47928
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnConsumeItemResultEvent_mDED73A69B666D74694134536CE74DDD0CB970F06 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t3EB5A82D31763E01FD9ACD763E68A5774CED95A4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13831,7 +13831,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47920
+// Method Definition Index: 47929
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnConsumeItemResultEvent_mF190E94DD02BF489DACE9CCE9D6F4A84BF2C3EB1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t3EB5A82D31763E01FD9ACD763E68A5774CED95A4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13874,7 +13874,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47921
+// Method Definition Index: 47930
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnConsumeMicrosoftStoreEntitlementsRequestEvent_m145AB152E1C215890933E21E2CA1C605D95C12CC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4407628CB2D5D39D76A0FBDB2227310FB4AE28DA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13917,7 +13917,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47922
+// Method Definition Index: 47931
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnConsumeMicrosoftStoreEntitlementsRequestEvent_mDCE9C75B2197CD01A3E58A146A7E1F2073AFAEF0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4407628CB2D5D39D76A0FBDB2227310FB4AE28DA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13960,7 +13960,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47923
+// Method Definition Index: 47932
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnConsumeMicrosoftStoreEntitlementsResultEvent_m7992E66F5EDAE6B77DB952BF08755B4B6AF7EAEF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t14B89E85526CC917BF6344FAFBC655C7D799C452* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14003,7 +14003,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47924
+// Method Definition Index: 47933
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnConsumeMicrosoftStoreEntitlementsResultEvent_mCE404A0A36D6107F98CB78E5004C93A01EABD3DA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t14B89E85526CC917BF6344FAFBC655C7D799C452* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14046,7 +14046,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47925
+// Method Definition Index: 47934
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnConsumePS5EntitlementsRequestEvent_m5964C1766636AEB6DC88ABBAEB20EEEAE489B3B0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t874836F3D348B116CFAEE63224630CA3AEDE30FE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14089,7 +14089,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47926
+// Method Definition Index: 47935
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnConsumePS5EntitlementsRequestEvent_m70E929E7BA133662244B9EF13FBF6E7A3F2F3F05 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t874836F3D348B116CFAEE63224630CA3AEDE30FE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14132,7 +14132,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47927
+// Method Definition Index: 47936
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnConsumePS5EntitlementsResultEvent_mBE4A07932BC2D19236DF2D92C15F7170CA95165A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t246DD71C5120279DBCBE483C063854C1FD77910D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14175,7 +14175,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47928
+// Method Definition Index: 47937
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnConsumePS5EntitlementsResultEvent_m80073463C766549B6D26BCF12F1E4C6BA476915C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t246DD71C5120279DBCBE483C063854C1FD77910D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14218,7 +14218,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47929
+// Method Definition Index: 47938
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnConsumePSNEntitlementsRequestEvent_mFB91E77A15F19E67CC8534AF562BE39E1D1E7B2A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t70B1F6A801143259187121AB14FA023816FF2011* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14261,7 +14261,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47930
+// Method Definition Index: 47939
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnConsumePSNEntitlementsRequestEvent_mC00E1823F136F1DAE88A213BD2CB88F73951B191 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t70B1F6A801143259187121AB14FA023816FF2011* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14304,7 +14304,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47931
+// Method Definition Index: 47940
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnConsumePSNEntitlementsResultEvent_m992382CBA662E73B8F850A5090C2108CB374A161 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t25C67CDA5507D0BA383B6D6F0A42E9FBF70A8DEC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14347,7 +14347,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47932
+// Method Definition Index: 47941
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnConsumePSNEntitlementsResultEvent_m2DC42CB5212C8C5B9757E74471194CD0A84B7065 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t25C67CDA5507D0BA383B6D6F0A42E9FBF70A8DEC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14390,7 +14390,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47933
+// Method Definition Index: 47942
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnConsumeXboxEntitlementsRequestEvent_mCB516CB0A7535B3A4222E48377120FFD3BF029EB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t0375F435F7503A1C0AFB6FE48CAEE0ED8CF39CB1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14433,7 +14433,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47934
+// Method Definition Index: 47943
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnConsumeXboxEntitlementsRequestEvent_mA0CBA654CA5A39AD6E80CE7F7ADD6101D93DD890 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t0375F435F7503A1C0AFB6FE48CAEE0ED8CF39CB1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14476,7 +14476,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47935
+// Method Definition Index: 47944
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnConsumeXboxEntitlementsResultEvent_m81D2A9088B94D44DE90CE4A96617B4A095C27F7D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t5E802FF1C92E8EACF5F5B39B733326A27D45EE2B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14519,7 +14519,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47936
+// Method Definition Index: 47945
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnConsumeXboxEntitlementsResultEvent_m685D6E6BCA5C58355BA366B3234417592D5DC973 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t5E802FF1C92E8EACF5F5B39B733326A27D45EE2B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14562,7 +14562,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47937
+// Method Definition Index: 47946
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCreateSharedGroupRequestEvent_m6B51AB72FE0333D7555B6D271BC90B6DAADA5A54 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8A4C61C7EDA80D2DF1FAE246D1A97382799E0198* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14605,7 +14605,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47938
+// Method Definition Index: 47947
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCreateSharedGroupRequestEvent_mC746E823EE1F264813915271D8DCD268932A8B35 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8A4C61C7EDA80D2DF1FAE246D1A97382799E0198* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14648,7 +14648,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47939
+// Method Definition Index: 47948
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCreateSharedGroupResultEvent_mEBC5A7CFD7C20D5596F2CEDEABAC12B64AE353F1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4B70F402984D839F74BD0455D12D031A3A5DFC38* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14691,7 +14691,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47940
+// Method Definition Index: 47949
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCreateSharedGroupResultEvent_m5C0C6983A35D27E91836B131614AA9EA65B3E354 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4B70F402984D839F74BD0455D12D031A3A5DFC38* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14734,7 +14734,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47941
+// Method Definition Index: 47950
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnDeletePlayerCustomPropertiesRequestEvent_m23AD0A61C2FE3C4A94817799D1C3CB2DD7CDDA87 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tFF0779346F74B806ED1B51CD62D483308D0720F9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14777,7 +14777,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47942
+// Method Definition Index: 47951
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnDeletePlayerCustomPropertiesRequestEvent_m48B7551335EF51CD9B308B97E68422BF8C652196 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tFF0779346F74B806ED1B51CD62D483308D0720F9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14820,7 +14820,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47943
+// Method Definition Index: 47952
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnDeletePlayerCustomPropertiesResultEvent_m86664578CEC796D152F5688578D993866C668E12 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE366D92F9E69B2E8FD41807EE677630E1C3506F8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14863,7 +14863,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47944
+// Method Definition Index: 47953
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnDeletePlayerCustomPropertiesResultEvent_m15878F16BFDBF2ECD7289F4F5F1C32A4956F60F3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE366D92F9E69B2E8FD41807EE677630E1C3506F8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14906,7 +14906,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47945
+// Method Definition Index: 47954
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExecuteCloudScriptRequestEvent_m972103E5E21D55228724D754A6436B158D34CD18 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3CD0DD19B583645ED58DC8E5EADC0CB259B17AC3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14949,7 +14949,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47946
+// Method Definition Index: 47955
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExecuteCloudScriptRequestEvent_m13289C215A171B8010036458BF9547FFD2570862 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3CD0DD19B583645ED58DC8E5EADC0CB259B17AC3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14992,7 +14992,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47947
+// Method Definition Index: 47956
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExecuteCloudScriptResultEvent_m097D3B5A220F4F988D82060CC8AB9B89493D5817 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tBD235AED2071DBA52954BFBE3D70159083D8F295* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15035,7 +15035,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47948
+// Method Definition Index: 47957
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExecuteCloudScriptResultEvent_m458A18BE881A6D0231BE1D977A3A944CB6620943 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tBD235AED2071DBA52954BFBE3D70159083D8F295* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15078,7 +15078,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47949
+// Method Definition Index: 47958
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetAccountInfoRequestEvent_mED3D4BEFF030A834E7F38921EB7B4343C3E6376A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t845AB91BEBA90C4FF463DC100C6985145E5FD2F0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15121,7 +15121,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47950
+// Method Definition Index: 47959
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetAccountInfoRequestEvent_m7E37E50B32C839C3648A8A3EA22FD41FBCB72BB2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t845AB91BEBA90C4FF463DC100C6985145E5FD2F0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15164,7 +15164,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47951
+// Method Definition Index: 47960
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetAccountInfoResultEvent_m8F99917C50AD410395C86E71DBA47C5D11C353AA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t9CCF7A730508CAD702B56AD606346504C632BBB6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15207,7 +15207,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47952
+// Method Definition Index: 47961
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetAccountInfoResultEvent_mE894A0B3AE2128F66CFB2C12E1AAF6E65A6D1722 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t9CCF7A730508CAD702B56AD606346504C632BBB6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15250,7 +15250,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47953
+// Method Definition Index: 47962
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetAdPlacementsRequestEvent_mD3A043531CD30503DC73A897BCAA73E526A5C514 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB40EFAFE9F9DC3C39014FD37481F7AE091DAF9FF* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15293,7 +15293,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47954
+// Method Definition Index: 47963
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetAdPlacementsRequestEvent_m82E29745AD754C42B7E754A65CBC809C859AC158 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB40EFAFE9F9DC3C39014FD37481F7AE091DAF9FF* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15336,7 +15336,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47955
+// Method Definition Index: 47964
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetAdPlacementsResultEvent_mE9E74E2BC3816193A656D14417E30D72C82C1750 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t6E3D1EBCD954956429E3EFE35D13ED32A9B4E958* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15379,7 +15379,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47956
+// Method Definition Index: 47965
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetAdPlacementsResultEvent_mCAF840ECE1A0E42B3E5290BD7986D3838FA8A8B0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t6E3D1EBCD954956429E3EFE35D13ED32A9B4E958* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15422,7 +15422,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47957
+// Method Definition Index: 47966
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetAllUsersCharactersRequestEvent_m86BA1EF4BB732CB945F023B9C002EAEA6A7A91AD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t931221FC24EB8A1F588F47A6DF13CF5C113692B5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15465,7 +15465,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47958
+// Method Definition Index: 47967
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetAllUsersCharactersRequestEvent_m671215A726833F6116782C3F1199FAE34D6AA877 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t931221FC24EB8A1F588F47A6DF13CF5C113692B5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15508,7 +15508,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47959
+// Method Definition Index: 47968
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetAllUsersCharactersResultEvent_m49D1B6807C912C852B22099A003BE60EC96A2CAA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t9622342765D912074E67430134D9D3290424658D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15551,7 +15551,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47960
+// Method Definition Index: 47969
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetAllUsersCharactersResultEvent_m052FBF5F0894D4CBD0605779A9480C0244042CBF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t9622342765D912074E67430134D9D3290424658D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15594,7 +15594,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47961
+// Method Definition Index: 47970
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetCatalogItemsRequestEvent_mCC0DB28FABFBD0B77A2B234BEDDDAE454BD6C97A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t10E3E6D3381A9E1B7019D96274DBC60B45054C49* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15637,7 +15637,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47962
+// Method Definition Index: 47971
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetCatalogItemsRequestEvent_mC16DB736AA635D2DA8611B312E7E61AC250D3FA3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t10E3E6D3381A9E1B7019D96274DBC60B45054C49* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15680,7 +15680,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47963
+// Method Definition Index: 47972
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetCatalogItemsResultEvent_m73F52161ECA6D3390E33CF64A2EA8645F4A2A225 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8F52EC04C47452DDDADB062246E98DE6FAC66A22* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15723,7 +15723,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47964
+// Method Definition Index: 47973
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetCatalogItemsResultEvent_m6331078008A4FBF8FFCF2A18608BF5ABE6619499 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8F52EC04C47452DDDADB062246E98DE6FAC66A22* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15766,7 +15766,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47965
+// Method Definition Index: 47974
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetCharacterDataRequestEvent_mA484BD609FDA03FE876FED6710434BB6FEF41806 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4CAADF6927F4DEE7B7480B9F3FE0611578E3AEAC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15809,7 +15809,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47966
+// Method Definition Index: 47975
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetCharacterDataRequestEvent_m830D1F3BF3409AC75B1D90BF7A0F2E28C93C7A98 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4CAADF6927F4DEE7B7480B9F3FE0611578E3AEAC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15852,7 +15852,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47967
+// Method Definition Index: 47976
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetCharacterDataResultEvent_m0E46EE56C0C79DC9F6064D19929380369EBEB3FD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t58920405618E25DB86B373F804B3AD8B16412D82* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15895,7 +15895,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47968
+// Method Definition Index: 47977
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetCharacterDataResultEvent_m9B36AC5890B0A218601F19489508F1774529C4F8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t58920405618E25DB86B373F804B3AD8B16412D82* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15938,7 +15938,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47969
+// Method Definition Index: 47978
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetCharacterInventoryRequestEvent_mCAA6A08C9CC909D8D116716BCE66A347B708FBF6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t149FB952A236B1D594848ACFBD8317024269924E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15981,7 +15981,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47970
+// Method Definition Index: 47979
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetCharacterInventoryRequestEvent_mBBDFF34999965FE7772D979514A49D2D13CE150E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t149FB952A236B1D594848ACFBD8317024269924E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16024,7 +16024,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47971
+// Method Definition Index: 47980
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetCharacterInventoryResultEvent_mDC6803D90FACBBCB3A71EA4D000D74FB5911012E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t0E236D7968722AABF2F8A1A122590222609F9004* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16067,7 +16067,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47972
+// Method Definition Index: 47981
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetCharacterInventoryResultEvent_m2A6B9692AE082CE05425772E7A8093FBAB550C30 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t0E236D7968722AABF2F8A1A122590222609F9004* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16110,7 +16110,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47973
+// Method Definition Index: 47982
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetCharacterLeaderboardRequestEvent_m2A884F9B862FBD9F2FEBF8C6BB1A4EC22D9B403A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t97C229865681EB80CD4E7A5CB5FCE0CEF54CAD49* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16153,7 +16153,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47974
+// Method Definition Index: 47983
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetCharacterLeaderboardRequestEvent_m89D9848ADCD319B54E18255257F990E93FFF46E7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t97C229865681EB80CD4E7A5CB5FCE0CEF54CAD49* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16196,7 +16196,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47975
+// Method Definition Index: 47984
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetCharacterLeaderboardResultEvent_m77D486B60BACD12F6AE1C5EFC38BB6DEB7F32C0B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tDFDB2C658F73A975261D3D3712160A8179D6815C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16239,7 +16239,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47976
+// Method Definition Index: 47985
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetCharacterLeaderboardResultEvent_mE0C4FB4955202A56F2D16521327A1D1B449948D9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tDFDB2C658F73A975261D3D3712160A8179D6815C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16282,7 +16282,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47977
+// Method Definition Index: 47986
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetCharacterReadOnlyDataRequestEvent_m9AE881CF4BC453A18261357FCE12405DE718B3EC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4CAADF6927F4DEE7B7480B9F3FE0611578E3AEAC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16325,7 +16325,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47978
+// Method Definition Index: 47987
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetCharacterReadOnlyDataRequestEvent_m3C2D01D07CAB76F5B8E5D58D8A3FFA5251891611 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4CAADF6927F4DEE7B7480B9F3FE0611578E3AEAC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16368,7 +16368,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47979
+// Method Definition Index: 47988
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetCharacterReadOnlyDataResultEvent_m56DEB8FF0B45897A1CF40C769F608954C66328E6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t58920405618E25DB86B373F804B3AD8B16412D82* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16411,7 +16411,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47980
+// Method Definition Index: 47989
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetCharacterReadOnlyDataResultEvent_m381D73239003BD02681436381123B108D233AF4E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t58920405618E25DB86B373F804B3AD8B16412D82* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16454,7 +16454,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47981
+// Method Definition Index: 47990
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetCharacterStatisticsRequestEvent_m4F54BE9289206725B1EA6701D2F7AEFDC91C2333 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC513F1B26447F507C799AEDEFB2E25DA3F9EB910* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16497,7 +16497,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47982
+// Method Definition Index: 47991
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetCharacterStatisticsRequestEvent_m2480BFAD6E1E30372A9E743BCECDE72D45C4C151 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC513F1B26447F507C799AEDEFB2E25DA3F9EB910* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16540,7 +16540,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47983
+// Method Definition Index: 47992
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetCharacterStatisticsResultEvent_mC82B86F18E5E5C9DB877627FB258F6AE7688D7BC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tEBF4E8B960BEB6E90F2303651476AFD47BC59F74* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16583,7 +16583,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47984
+// Method Definition Index: 47993
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetCharacterStatisticsResultEvent_m1D790E3F400F81AF1B8C2A9EE0F471125841EC52 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tEBF4E8B960BEB6E90F2303651476AFD47BC59F74* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16626,7 +16626,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47985
+// Method Definition Index: 47994
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetContentDownloadUrlRequestEvent_mB353428CAFCD6E5A4DE4B11513380177D34FE03D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tF5CC306A137AE87B452CF671A8B72D999BD0AB8B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16669,7 +16669,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47986
+// Method Definition Index: 47995
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetContentDownloadUrlRequestEvent_m8551486E0D95DF6540D9D5BFCD28C36934E646E7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tF5CC306A137AE87B452CF671A8B72D999BD0AB8B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16712,7 +16712,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47987
+// Method Definition Index: 47996
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetContentDownloadUrlResultEvent_m31A0B627154BF36B3FABED57418177286C1D2B3B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8BE3040E45440F31B17DE0D03EC2923199C6002B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16755,7 +16755,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47988
+// Method Definition Index: 47997
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetContentDownloadUrlResultEvent_mCC5088E738997FC6BDDC6E5C7D231A772FE641F7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8BE3040E45440F31B17DE0D03EC2923199C6002B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16798,7 +16798,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47989
+// Method Definition Index: 47998
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetFriendLeaderboardRequestEvent_mFD974ECD95BB5DD434DC76584E736D3E6E562E1C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD4AE08EB5A968A191CAA1117B5BA5136014DEC0B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16841,7 +16841,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47990
+// Method Definition Index: 47999
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetFriendLeaderboardRequestEvent_m0B798A048423B02C87C26355595B3DDBAB54764A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD4AE08EB5A968A191CAA1117B5BA5136014DEC0B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16884,7 +16884,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47991
+// Method Definition Index: 48000
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetFriendLeaderboardResultEvent_m0EA97F9ADB9F5BD1C8A39FB43A6C1AD19C463070 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t94F619D5767B52BD575C14F49610BB4A3A43536D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16927,7 +16927,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47992
+// Method Definition Index: 48001
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetFriendLeaderboardResultEvent_m77E5F0CEA4DD155881AF4775C38CB64791397F2E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t94F619D5767B52BD575C14F49610BB4A3A43536D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16970,7 +16970,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47993
+// Method Definition Index: 48002
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetFriendLeaderboardAroundPlayerRequestEvent_m7AF04BB9ACC32010DD81FFC69C96ABB5D0452D03 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t2DAD819CE26EE577B44B72716AB15765E171AB30* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17013,7 +17013,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47994
+// Method Definition Index: 48003
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetFriendLeaderboardAroundPlayerRequestEvent_mC108180DB1011A8D4CF7545FC7B960B74A9FD797 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t2DAD819CE26EE577B44B72716AB15765E171AB30* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17056,7 +17056,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47995
+// Method Definition Index: 48004
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetFriendLeaderboardAroundPlayerResultEvent_mC15506FBF34F924B3C4E450867EAB918E3EB51D0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t99138ECE45969071DDC608580C42ADD26CC93FD9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17099,7 +17099,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47996
+// Method Definition Index: 48005
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetFriendLeaderboardAroundPlayerResultEvent_m3E59B422B8133304C6EC70EE7C731E4179F0EDEF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t99138ECE45969071DDC608580C42ADD26CC93FD9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17142,7 +17142,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47997
+// Method Definition Index: 48006
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetFriendsListRequestEvent_m05530DC787D54D27E6996BF8D7B4AD86419F213A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tFACBFCA0DEA63B61881C7749D51DFA5014DD4416* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17185,7 +17185,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47998
+// Method Definition Index: 48007
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetFriendsListRequestEvent_m8C1B4C34BB66D72F331FCFE94A143C1ECC0896DB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tFACBFCA0DEA63B61881C7749D51DFA5014DD4416* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17228,7 +17228,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 47999
+// Method Definition Index: 48008
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetFriendsListResultEvent_mF831E3B46D75872C67AA8623AEC2E3B10C4CE1D8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE9CE90BFA406051A39149C5D4E99788A9A550385* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17271,7 +17271,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48000
+// Method Definition Index: 48009
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetFriendsListResultEvent_m241948EFAB2F0EA5BE575999EF9A7BD869759900 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE9CE90BFA406051A39149C5D4E99788A9A550385* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17314,7 +17314,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48001
+// Method Definition Index: 48010
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetLeaderboardRequestEvent_m4613625887870AD78FCF6D6B52A04E050C8BB8F6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tBA3FFF53E3BAFC00FDE505FB0B1B1D374F38B595* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17357,7 +17357,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48002
+// Method Definition Index: 48011
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetLeaderboardRequestEvent_mB81715F491ED8BB0156EA0BD515DDD942B72A3F2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tBA3FFF53E3BAFC00FDE505FB0B1B1D374F38B595* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17400,7 +17400,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48003
+// Method Definition Index: 48012
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetLeaderboardResultEvent_m9CA3F176A1DA62D839AD7FD71F1F7FA2484C5CDE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t94F619D5767B52BD575C14F49610BB4A3A43536D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17443,7 +17443,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48004
+// Method Definition Index: 48013
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetLeaderboardResultEvent_m50DC69B6F3E480C848CE7F09625C75AD203F6DA2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t94F619D5767B52BD575C14F49610BB4A3A43536D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17486,7 +17486,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48005
+// Method Definition Index: 48014
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetLeaderboardAroundCharacterRequestEvent_mCAACF0764100B0F31177E2075F7229CA687B74EB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB7FC96A61DEF674EB993FDAA4E4AF45E987D3002* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17529,7 +17529,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48006
+// Method Definition Index: 48015
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetLeaderboardAroundCharacterRequestEvent_m4348DF6D2225F1D925318D26FBBAFB8AD767C543 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB7FC96A61DEF674EB993FDAA4E4AF45E987D3002* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17572,7 +17572,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48007
+// Method Definition Index: 48016
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetLeaderboardAroundCharacterResultEvent_mFC887F630ECDB35064ED73694753D2508045C072 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7E9283D0E582AF0FFC75CF6FD54293D945F339A4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17615,7 +17615,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48008
+// Method Definition Index: 48017
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetLeaderboardAroundCharacterResultEvent_mF29278383E776BEE74A3F6700F2401A58EC66855 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7E9283D0E582AF0FFC75CF6FD54293D945F339A4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17658,7 +17658,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48009
+// Method Definition Index: 48018
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetLeaderboardAroundPlayerRequestEvent_mC63B97D2972C4151CB7ABDB01D3AB9383D241F2C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9529357FCA13582EF924E20FDE842E84EC52B732* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17701,7 +17701,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48010
+// Method Definition Index: 48019
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetLeaderboardAroundPlayerRequestEvent_mDD901D03CF60CD9184CA4917322FD89C2AC688BA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9529357FCA13582EF924E20FDE842E84EC52B732* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17744,7 +17744,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48011
+// Method Definition Index: 48020
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetLeaderboardAroundPlayerResultEvent_mAAC1B6BD51D7BF37A8732E32E45AEBC41F8198AF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t2EB161B1AB8EBBF61BFE8F80495ADA07305A1933* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17787,7 +17787,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48012
+// Method Definition Index: 48021
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetLeaderboardAroundPlayerResultEvent_m4D921EDEC556FB9A9AB69730FE1EE215B4A6DCD7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t2EB161B1AB8EBBF61BFE8F80495ADA07305A1933* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17830,7 +17830,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48013
+// Method Definition Index: 48022
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetLeaderboardForUserCharactersRequestEvent_mCD5A88D9B0F3FE9ED1CF356BB2BCFD13588AEBD5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t219178F9F2E70941042F78D4C8E7C7D302870E03* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17873,7 +17873,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48014
+// Method Definition Index: 48023
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetLeaderboardForUserCharactersRequestEvent_m5841B42083A5CED217CFDC9A1360BF9EF7908EA3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t219178F9F2E70941042F78D4C8E7C7D302870E03* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17916,7 +17916,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48015
+// Method Definition Index: 48024
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetLeaderboardForUserCharactersResultEvent_m5DCBB2EC36CAC6A645E9299D82395098D85EAA8F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t9B0B998FF5C1D7D14871E8CEF822336AFF1DA458* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17959,7 +17959,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48016
+// Method Definition Index: 48025
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetLeaderboardForUserCharactersResultEvent_mC1063E9AB3DCE4A7887ABB9FC2AD4ED186453E54 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t9B0B998FF5C1D7D14871E8CEF822336AFF1DA458* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18002,7 +18002,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48017
+// Method Definition Index: 48026
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPaymentTokenRequestEvent_m753F2C78E5A4D8EA0C28A82252F1C9D627E8E579 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t7745192BE9D6ABCD0B64F1D34247DC32F5EE793F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18045,7 +18045,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48018
+// Method Definition Index: 48027
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPaymentTokenRequestEvent_mF62AAE7C90FE0BAA801BB62DC6969C7E1F3BDB7C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t7745192BE9D6ABCD0B64F1D34247DC32F5EE793F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18088,7 +18088,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48019
+// Method Definition Index: 48028
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPaymentTokenResultEvent_mC083E67440FA24AE06AADEC1DC376D4383BA514D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC34CA8C6A0F1F8F54BD0BE1B52A3D7DAAD1F1644* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18131,7 +18131,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48020
+// Method Definition Index: 48029
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPaymentTokenResultEvent_m52AA7A8CE205D134E81D40630E222110822C124E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC34CA8C6A0F1F8F54BD0BE1B52A3D7DAAD1F1644* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18174,7 +18174,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48021
+// Method Definition Index: 48030
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPhotonAuthenticationTokenRequestEvent_mA51EE24FBEA99CC49E37BEF4CE202B429E219D93 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9D5C4DB7A79F8D4683008F6D857D76DC6B793CFA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18217,7 +18217,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48022
+// Method Definition Index: 48031
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPhotonAuthenticationTokenRequestEvent_m10D9D6C99525D3B2D6554ABC835832207331259C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9D5C4DB7A79F8D4683008F6D857D76DC6B793CFA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18260,7 +18260,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48023
+// Method Definition Index: 48032
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPhotonAuthenticationTokenResultEvent_m2526AF0A64B49EFA9E0659253F81C4047F0D9EE2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t070F462818B965B0EB23694B5D9E423266582D48* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18303,7 +18303,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48024
+// Method Definition Index: 48033
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPhotonAuthenticationTokenResultEvent_m28A6CACA455504C3CEB776F29DED965592054C2F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t070F462818B965B0EB23694B5D9E423266582D48* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18346,7 +18346,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48025
+// Method Definition Index: 48034
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayerCombinedInfoRequestEvent_mF59F4E728BF08E252FC8F4470ABF69484F46068E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC32C4FF67E063F9D790A1BDB132F7C397AF0F7B7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18389,7 +18389,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48026
+// Method Definition Index: 48035
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayerCombinedInfoRequestEvent_mF20B488B787E1F7AA5F3F71D6C4D70C287839494 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC32C4FF67E063F9D790A1BDB132F7C397AF0F7B7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18432,7 +18432,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48027
+// Method Definition Index: 48036
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayerCombinedInfoResultEvent_m6DE6E3523A1F7BD37E3B5EE4754AE77874A3CBCE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA8D1F405384098980C270A70F1E8E2105A97FFB7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18475,7 +18475,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48028
+// Method Definition Index: 48037
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayerCombinedInfoResultEvent_m967D4DD00E8A6F7DA907FADB6C78F279B71204F6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA8D1F405384098980C270A70F1E8E2105A97FFB7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18518,7 +18518,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48029
+// Method Definition Index: 48038
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayerCustomPropertyRequestEvent_mC38808FD4D4FCD1AA6DD342F54FB4C6EAF15F210 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3BEEFAAF09E8E82148CEBF3581CCE94BC91E7AD5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18561,7 +18561,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48030
+// Method Definition Index: 48039
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayerCustomPropertyRequestEvent_m0A829628CA91DAA51F25DADFDA6C8397923853E5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3BEEFAAF09E8E82148CEBF3581CCE94BC91E7AD5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18604,7 +18604,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48031
+// Method Definition Index: 48040
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayerCustomPropertyResultEvent_mCD2DEF60CE42F5C5C95DE097BB762FC3F76FF665 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t089F15A8773F9FFCA70AB20C443567801722E759* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18647,7 +18647,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48032
+// Method Definition Index: 48041
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayerCustomPropertyResultEvent_mF25FE366C8171D91EDDFA1E9226302A9ECFB0C8C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t089F15A8773F9FFCA70AB20C443567801722E759* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18690,7 +18690,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48033
+// Method Definition Index: 48042
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayerProfileRequestEvent_mC09CFEA0B7C9B8FDF9B38C18C04D33DB80C4DA45 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t38501345C841C87F227B76225D7A3746C9CF6FC0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18733,7 +18733,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48034
+// Method Definition Index: 48043
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayerProfileRequestEvent_m92922B513FB174A6D2A16C43C5867B669601B4C2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t38501345C841C87F227B76225D7A3746C9CF6FC0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18776,7 +18776,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48035
+// Method Definition Index: 48044
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayerProfileResultEvent_m8A402067176FC812A4978CCBD847C9C4A2471B0B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1D80597F5B50CDC865E27566FBBD42BDFBA1D7BB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18819,7 +18819,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48036
+// Method Definition Index: 48045
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayerProfileResultEvent_m1C2324E5449B1D98A13FE9231D0718770BA5F3A5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1D80597F5B50CDC865E27566FBBD42BDFBA1D7BB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18862,7 +18862,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48037
+// Method Definition Index: 48046
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayerSegmentsRequestEvent_m713DF8E7233FD318647A68C1B5F230112EFD2573 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tDC5FF0A9C3DAD0B37D329E0624F3D493AA69105E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18905,7 +18905,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48038
+// Method Definition Index: 48047
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayerSegmentsRequestEvent_mEA757EA05290723F9E75D68C58AA2B4BC9A17828 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tDC5FF0A9C3DAD0B37D329E0624F3D493AA69105E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18948,7 +18948,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48039
+// Method Definition Index: 48048
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayerSegmentsResultEvent_mA662CF695EE53CFA9CA8C24B5602AB7CA251D58D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA9CA2404A0AF450EE4C736B8424E59DD12874112* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18991,7 +18991,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48040
+// Method Definition Index: 48049
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayerSegmentsResultEvent_mAD7D202610DD4AE41BC982EF58CEEDFAE9DAE661 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA9CA2404A0AF450EE4C736B8424E59DD12874112* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19034,7 +19034,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48041
+// Method Definition Index: 48050
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayerStatisticsRequestEvent_m843371EA8A3A1712E907FD6F7611490D67160510 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t324A24DDF36BA31DD623879472DE60D93BDD6278* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19077,7 +19077,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48042
+// Method Definition Index: 48051
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayerStatisticsRequestEvent_mC28AFFE3F84D8F9E7C4C8DBA60C08A7D0FF7ECF9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t324A24DDF36BA31DD623879472DE60D93BDD6278* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19120,7 +19120,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48043
+// Method Definition Index: 48052
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayerStatisticsResultEvent_mBBFC45F88334015ADE4600C5AAA435D2DB8C140C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tDE09E49E7293440444D796C52F66D5E49393169C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19163,7 +19163,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48044
+// Method Definition Index: 48053
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayerStatisticsResultEvent_mF770D406FD1CFC2D1B6F5274FF97192796417B82 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tDE09E49E7293440444D796C52F66D5E49393169C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19206,7 +19206,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48045
+// Method Definition Index: 48054
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayerStatisticVersionsRequestEvent_mB0431F7B452B7C7F8F680696445C634FAB62E8FB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t396B7046F3408E7185DC3032306E95244CB2B3F6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19249,7 +19249,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48046
+// Method Definition Index: 48055
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayerStatisticVersionsRequestEvent_mBCE518AE892090E969DC956E4BA34B32DB67135E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t396B7046F3408E7185DC3032306E95244CB2B3F6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19292,7 +19292,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48047
+// Method Definition Index: 48056
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayerStatisticVersionsResultEvent_m45CA0B5CE16797D025C61B4F1AB2D2D40F2A8954 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tFA0F24EA2DE17DA19472C2D2CA7BDCA8E468A19B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19335,7 +19335,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48048
+// Method Definition Index: 48057
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayerStatisticVersionsResultEvent_m208C8CF13A6135155935C7EE25422800E12BC203 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tFA0F24EA2DE17DA19472C2D2CA7BDCA8E468A19B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19378,7 +19378,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48049
+// Method Definition Index: 48058
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayerTagsRequestEvent_m830A08138EDB94889FDDAF2F37E9A2D7B4ECA785 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tF99789F779474BB1445048E17D06FF7F96B77939* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19421,7 +19421,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48050
+// Method Definition Index: 48059
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayerTagsRequestEvent_mA07145BCFBFAE7C9CD0A194E447349C5F651F5C9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tF99789F779474BB1445048E17D06FF7F96B77939* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19464,7 +19464,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48051
+// Method Definition Index: 48060
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayerTagsResultEvent_m94AF58FF0FB8B28190BF4C8145BDD1E4F55BBDC8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t9A4496C36C8DB98BAAEBBA71EE7DB48ACC1EF74F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19507,7 +19507,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48052
+// Method Definition Index: 48061
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayerTagsResultEvent_m63F588C2DAEE5D210150E8CB3780DB88E9F6417A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t9A4496C36C8DB98BAAEBBA71EE7DB48ACC1EF74F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19550,7 +19550,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48053
+// Method Definition Index: 48062
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayerTradesRequestEvent_m143267C4EE35F98963CAD622F2F5B93E669B7581 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD1233CF9571C8AC7B7F27730137FD176611AB118* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19593,7 +19593,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48054
+// Method Definition Index: 48063
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayerTradesRequestEvent_mD565CAF569F8503928699A8E7E2871DA91C5BD8B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD1233CF9571C8AC7B7F27730137FD176611AB118* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19636,7 +19636,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48055
+// Method Definition Index: 48064
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayerTradesResultEvent_m8D1264C43DD2DC3DBFF444E9BF9D7EDFD3AFFCA7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t0F5E1129B3FCFA381AA2C7EB9A9ECD6901673F51* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19679,7 +19679,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48056
+// Method Definition Index: 48065
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayerTradesResultEvent_m1382A2420D7839080698D18413C34AC82D4F8004 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t0F5E1129B3FCFA381AA2C7EB9A9ECD6901673F51* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19722,7 +19722,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48057
+// Method Definition Index: 48066
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromBattleNetAccountIdsRequestEvent_mD966E43C2929E4F5585EE446E86F0D68C6B90818 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9D846D64736048F7F62D26CFD378664400EB149F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19765,7 +19765,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48058
+// Method Definition Index: 48067
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromBattleNetAccountIdsRequestEvent_m66F328C7EBB1C7C6AB31CB170B19775409C00C45 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9D846D64736048F7F62D26CFD378664400EB149F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19808,7 +19808,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48059
+// Method Definition Index: 48068
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromBattleNetAccountIdsResultEvent_m2982B42F7B05EED91214A30FB839E7BAB9A9022A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t48AC81040A2CB53C5911DE10BF8983C5CC4A0D98* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19851,7 +19851,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48060
+// Method Definition Index: 48069
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromBattleNetAccountIdsResultEvent_mC8A279D50E5542F2E57B01D6F27BCEC305A7DEE6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t48AC81040A2CB53C5911DE10BF8983C5CC4A0D98* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19894,7 +19894,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48061
+// Method Definition Index: 48070
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromFacebookIDsRequestEvent_m352E52DE5D56A283B2C60FD8284BA0A33EB9B3CF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tFDDD97A1B6B1A19D9676DEB89BE85085AB028D0D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19937,7 +19937,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48062
+// Method Definition Index: 48071
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromFacebookIDsRequestEvent_mCF507177C42BABE8919BC4B2A4CBD4421E7EC8A5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tFDDD97A1B6B1A19D9676DEB89BE85085AB028D0D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19980,7 +19980,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48063
+// Method Definition Index: 48072
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromFacebookIDsResultEvent_mD7B7EBB13DF7A0DCB59ECB1431767FDCD7D28BC8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t37E96598AD43203045B8C79091E7301CB8AE38E3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20023,7 +20023,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48064
+// Method Definition Index: 48073
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromFacebookIDsResultEvent_mF1B9F928397C36E6CA865862213CD20D3BBA200C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t37E96598AD43203045B8C79091E7301CB8AE38E3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20066,7 +20066,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48065
+// Method Definition Index: 48074
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromFacebookInstantGamesIdsRequestEvent_m7F11B2BF70E6235295D58D2A279A264457ABB721 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t0513C218248FAC6F29A987177736607EABC13DFD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20109,7 +20109,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48066
+// Method Definition Index: 48075
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromFacebookInstantGamesIdsRequestEvent_m2A627A49F353530A188B3A37E92DBDEE47FB37CF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t0513C218248FAC6F29A987177736607EABC13DFD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20152,7 +20152,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48067
+// Method Definition Index: 48076
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromFacebookInstantGamesIdsResultEvent_mBB8144F141DF175A5D29E802D4C0E041864A70A8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1E7D86561E0F806F0E3DBFBE09E39ED9A816431D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20195,7 +20195,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48068
+// Method Definition Index: 48077
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromFacebookInstantGamesIdsResultEvent_mCDA8F10101B2E7BCA78F8791F89D1145F8579469 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1E7D86561E0F806F0E3DBFBE09E39ED9A816431D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20238,7 +20238,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48069
+// Method Definition Index: 48078
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromGameCenterIDsRequestEvent_mAC22410A08B78988F63C4C55CF5434918ED20DAC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t238D3576AC30671C82F5A79903E0592E48E48DF5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20281,7 +20281,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48070
+// Method Definition Index: 48079
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromGameCenterIDsRequestEvent_m5B197E60558560C17EEA2E69B27B06417D42626C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t238D3576AC30671C82F5A79903E0592E48E48DF5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20324,7 +20324,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48071
+// Method Definition Index: 48080
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromGameCenterIDsResultEvent_mB652F3C3F740EB86ED6CA009D4BC503D37AFE131 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t37AD7BF88EE1B16864D9061D776BC1618601A3AE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20367,7 +20367,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48072
+// Method Definition Index: 48081
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromGameCenterIDsResultEvent_m4F53E219737A883D32973C903E0D0778381658C1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t37AD7BF88EE1B16864D9061D776BC1618601A3AE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20410,7 +20410,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48073
+// Method Definition Index: 48082
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromGenericIDsRequestEvent_m6BE1F0B50C944F7C22D9877D64AA9D3486E83C64 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4E426C529DB8E12E25DDF4625E3F66B2A79BDD1B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20453,7 +20453,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48074
+// Method Definition Index: 48083
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromGenericIDsRequestEvent_m1F5A3E95AADF844C316379053C32FCA593A7DD59 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4E426C529DB8E12E25DDF4625E3F66B2A79BDD1B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20496,7 +20496,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48075
+// Method Definition Index: 48084
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromGenericIDsResultEvent_m1EE5E17AC6D7B851414A0C1C5172DD762E60D7A9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t9B98A7DDC46122FC0BA7C309712A11D70CD7E636* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20539,7 +20539,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48076
+// Method Definition Index: 48085
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromGenericIDsResultEvent_m54AE13573E1E2BD927728EF1E2CC7EB384681BFA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t9B98A7DDC46122FC0BA7C309712A11D70CD7E636* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20582,7 +20582,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48077
+// Method Definition Index: 48086
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromGoogleIDsRequestEvent_m2CB7BCBC6C6B9C154B08577DF3D4FD20B165822F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC35D2F1782BB3244947123D24E0305292BBCF33A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20625,7 +20625,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48078
+// Method Definition Index: 48087
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromGoogleIDsRequestEvent_m324113863A8F7809A661F627323A8813032E63F2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC35D2F1782BB3244947123D24E0305292BBCF33A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20668,7 +20668,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48079
+// Method Definition Index: 48088
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromGoogleIDsResultEvent_mBA79A63761B942897016CBD4C4ED457D6157294E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8703F2D5BB95F8C73ADC82E5D8CB4FF00CECB480* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20711,7 +20711,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48080
+// Method Definition Index: 48089
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromGoogleIDsResultEvent_mFBF33C0C46626EC9EA40DFD3D8C36287238B56E2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8703F2D5BB95F8C73ADC82E5D8CB4FF00CECB480* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20754,7 +20754,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48081
+// Method Definition Index: 48090
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromGooglePlayGamesPlayerIDsRequestEvent_m310C5EA85079A5EE85F4037D24D2A1F6129EEAFD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8C6A1AC1B55A50D4211B7C39CBE1645C8DFF6DC7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20797,7 +20797,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48082
+// Method Definition Index: 48091
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromGooglePlayGamesPlayerIDsRequestEvent_mBE562FC6329FD63EB4F9CAE390BA7C2C19DD6120 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8C6A1AC1B55A50D4211B7C39CBE1645C8DFF6DC7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20840,7 +20840,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48083
+// Method Definition Index: 48092
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromGooglePlayGamesPlayerIDsResultEvent_m63FE20B8BCDC9B11281838A11407717EFABF7E26 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t118ACCFF7953A1E766D61DCAC28F9EF52F22B678* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20883,7 +20883,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48084
+// Method Definition Index: 48093
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromGooglePlayGamesPlayerIDsResultEvent_mD80E484CA8751A7C651F076E23B039F4F9074175 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t118ACCFF7953A1E766D61DCAC28F9EF52F22B678* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20926,7 +20926,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48085
+// Method Definition Index: 48094
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromKongregateIDsRequestEvent_m20D28A75AA1D5D16489D59CFCE24675ED51E2409 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tBF6934E832E7D909FAA53CDEBC47BBCD5DEAC111* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20969,7 +20969,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48086
+// Method Definition Index: 48095
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromKongregateIDsRequestEvent_m5F22EAC48A531D1471D46DEFED84DE72689E89C9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tBF6934E832E7D909FAA53CDEBC47BBCD5DEAC111* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21012,7 +21012,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48087
+// Method Definition Index: 48096
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromKongregateIDsResultEvent_mC7EC0422CD45AA10FFD6F0139DE430D509D2EF48 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t481F661C30C997E66F228ECD1FF4B6A524609C32* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21055,7 +21055,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48088
+// Method Definition Index: 48097
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromKongregateIDsResultEvent_m0F216DB5F8830593670F75EC4FCBB60F69BCC9F4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t481F661C30C997E66F228ECD1FF4B6A524609C32* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21098,7 +21098,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48089
+// Method Definition Index: 48098
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromNintendoServiceAccountIdsRequestEvent_m0940EA7E2A4BE7A3F96623F233CB3D587974B825 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9E24F9431C021461853FB378C24B3B26870819B1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21141,7 +21141,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48090
+// Method Definition Index: 48099
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromNintendoServiceAccountIdsRequestEvent_mBDA48A9B85E9390AAB7C5726701704729CC58961 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9E24F9431C021461853FB378C24B3B26870819B1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21184,7 +21184,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48091
+// Method Definition Index: 48100
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromNintendoServiceAccountIdsResultEvent_mA7A7EDD3A7D556525C98F7D5AA624A1D897DEB4E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t2C90C6340A421F95BDFBFFB9BF6ACC69F0CEA75A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21227,7 +21227,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48092
+// Method Definition Index: 48101
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromNintendoServiceAccountIdsResultEvent_m96DFBAFBBF1AB898FA5A859F6462A33E5FCF8972 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t2C90C6340A421F95BDFBFFB9BF6ACC69F0CEA75A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21270,7 +21270,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48093
+// Method Definition Index: 48102
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromNintendoSwitchDeviceIdsRequestEvent_m9F58399BBDE93ECC1C948FDF34C51A9276180674 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5404A7F39BEFA68F5357EFDA5A9FF16738088F00* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21313,7 +21313,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48094
+// Method Definition Index: 48103
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromNintendoSwitchDeviceIdsRequestEvent_m95F0EA7C8F276B9BD398C0FA8755EE5B2A17D2DF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5404A7F39BEFA68F5357EFDA5A9FF16738088F00* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21356,7 +21356,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48095
+// Method Definition Index: 48104
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromNintendoSwitchDeviceIdsResultEvent_m66C1A0E5B4E58586E075B8871044B9B22B672829 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1B1DDE7697D63F2D0D03B25C7B2A0CED60E5DD3E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21399,7 +21399,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48096
+// Method Definition Index: 48105
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromNintendoSwitchDeviceIdsResultEvent_mFDEB8960905CAE365C0BB93208860146C283826F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1B1DDE7697D63F2D0D03B25C7B2A0CED60E5DD3E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21442,7 +21442,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48097
+// Method Definition Index: 48106
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromPSNAccountIDsRequestEvent_m44389CCD2D9E0FCEE40AD1EAF4EBF647EF87D91D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC990EA2FA60BAE9EC7FDA74F9A765C47ECF52534* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21485,7 +21485,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48098
+// Method Definition Index: 48107
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromPSNAccountIDsRequestEvent_m678FF8C762DE79CD924C8920A9B2916FB6ED3886 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC990EA2FA60BAE9EC7FDA74F9A765C47ECF52534* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21528,7 +21528,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48099
+// Method Definition Index: 48108
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromPSNAccountIDsResultEvent_m9187A951A032BEC6C7522AC898EAB4A6803900D6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t5F530113276E288ADE883676E589946C136175D0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21571,7 +21571,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48100
+// Method Definition Index: 48109
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromPSNAccountIDsResultEvent_mF909C284D9BCAE64776ACE73AD8BF6BFD725063D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t5F530113276E288ADE883676E589946C136175D0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21614,7 +21614,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48101
+// Method Definition Index: 48110
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromPSNOnlineIDsRequestEvent_mDEC859FC36C6485F4484234EE7A48D2EC00D79A0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4E68BA4B745370242922321134646D25FCDB9ECE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21657,7 +21657,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48102
+// Method Definition Index: 48111
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromPSNOnlineIDsRequestEvent_mE04B531A95F95FD1F00A279617EAB6493F42CF43 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4E68BA4B745370242922321134646D25FCDB9ECE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21700,7 +21700,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48103
+// Method Definition Index: 48112
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromPSNOnlineIDsResultEvent_m82074A4C625327074172C7E3DB6F994906E1AB82 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t23E08A84348067E51452620E83D5B009BC7CAB40* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21743,7 +21743,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48104
+// Method Definition Index: 48113
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromPSNOnlineIDsResultEvent_m6836DBF6C7D9497324A63114414420790AE4C973 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t23E08A84348067E51452620E83D5B009BC7CAB40* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21786,7 +21786,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48105
+// Method Definition Index: 48114
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromSteamIDsRequestEvent_mDE4569E21F5172C9A39D9C1F254ABBC3EB514022 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1736A885E8088946255C3EB4D7B629E8CB9F42B7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21829,7 +21829,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48106
+// Method Definition Index: 48115
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromSteamIDsRequestEvent_m82B86AF1A64FF701C904CEE97942A42EE4D1B787 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1736A885E8088946255C3EB4D7B629E8CB9F42B7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21872,7 +21872,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48107
+// Method Definition Index: 48116
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromSteamIDsResultEvent_m070FC763A4954C061BBCA043B2909BB12062EFDA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t9ED30A61182A21491AFBB5BECE0FEBC5488DE9DB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21915,7 +21915,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48108
+// Method Definition Index: 48117
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromSteamIDsResultEvent_m93D4C8D525126BB43439C69DE0A30CF6EB0C4FAD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t9ED30A61182A21491AFBB5BECE0FEBC5488DE9DB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21958,7 +21958,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48109
+// Method Definition Index: 48118
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromSteamNamesRequestEvent_m1F2FCF01973980190D72AE023CC383032D30B188 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE561E889C2DBA8D7159C6C2DEE5E362E60E22B0B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22001,7 +22001,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48110
+// Method Definition Index: 48119
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromSteamNamesRequestEvent_m0E1801371A0C62C31875410F77DF26E96C35CB06 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE561E889C2DBA8D7159C6C2DEE5E362E60E22B0B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22044,7 +22044,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48111
+// Method Definition Index: 48120
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromSteamNamesResultEvent_mF3801B5EDEB1E6A802F73063A2116AF2C531A05F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tAE9823962058BB7FE59ABE9C983F16486A016533* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22087,7 +22087,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48112
+// Method Definition Index: 48121
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromSteamNamesResultEvent_mF5A3D49B6E84EC53603AE99071BDCDD70988888C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tAE9823962058BB7FE59ABE9C983F16486A016533* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22130,7 +22130,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48113
+// Method Definition Index: 48122
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromTwitchIDsRequestEvent_m88D871A351A45402EEE0C797BFC49A6E0485C6FE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8B8BB469DED237E4EE0D6CB6A488006D1D343E3B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22173,7 +22173,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48114
+// Method Definition Index: 48123
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromTwitchIDsRequestEvent_m8A79975692368585EE1571372091A612FB18B390 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8B8BB469DED237E4EE0D6CB6A488006D1D343E3B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22216,7 +22216,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48115
+// Method Definition Index: 48124
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromTwitchIDsResultEvent_m54BEB0188B52219C8F34373E4003B16C58B53E43 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA28F2F054719AA55554B1359D2845057797325CB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22259,7 +22259,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48116
+// Method Definition Index: 48125
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromTwitchIDsResultEvent_mE849ED4DB3F3CA685EA2AC1E9D9170C410054E8F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA28F2F054719AA55554B1359D2845057797325CB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22302,7 +22302,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48117
+// Method Definition Index: 48126
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromXboxLiveIDsRequestEvent_m52F32E0B60D6F8EE36BEAEA054A6A4D9A669B37E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tBC983C1D284CF49F4A6F8F52F3F9BEA0D7ACB319* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22345,7 +22345,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48118
+// Method Definition Index: 48127
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromXboxLiveIDsRequestEvent_m521C65799CF01D8D0BEAD28F5CFA7CF0915AA795 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tBC983C1D284CF49F4A6F8F52F3F9BEA0D7ACB319* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22388,7 +22388,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48119
+// Method Definition Index: 48128
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPlayFabIDsFromXboxLiveIDsResultEvent_m8D3DAE97B0857D28643E1C34DB60DDC5D8FC9643 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t621773603F2884E27D33A63D49A4487897888AC5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22431,7 +22431,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48120
+// Method Definition Index: 48129
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPlayFabIDsFromXboxLiveIDsResultEvent_mF4E1360F37CB13C7A228356DFF835A09F96EB67C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t621773603F2884E27D33A63D49A4487897888AC5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22474,7 +22474,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48121
+// Method Definition Index: 48130
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPublisherDataRequestEvent_m123C85BC083901F92B417B9B98342B8741375429 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t7F8258E01E4B6E81E79C6C9592AD161CB8FE93B1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22517,7 +22517,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48122
+// Method Definition Index: 48131
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPublisherDataRequestEvent_mEC00B82D1638DD9C08A037680B86E77D693582BF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t7F8258E01E4B6E81E79C6C9592AD161CB8FE93B1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22560,7 +22560,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48123
+// Method Definition Index: 48132
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPublisherDataResultEvent_mD723BDF9E8B8A3B21425908894D653F415C4B297 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t608DC9A1A790D6A7440FE648D1E1367F594E7239* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22603,7 +22603,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48124
+// Method Definition Index: 48133
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPublisherDataResultEvent_mC9DBA1D3CAC622EDD7EA283209FE485058831315 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t608DC9A1A790D6A7440FE648D1E1367F594E7239* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22646,7 +22646,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48125
+// Method Definition Index: 48134
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPurchaseRequestEvent_mB6B5B364E435E11590B50D09795558C5A6E0E6ED (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9DD50970AE92A9598841D79CDFB47F668DA74665* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22689,7 +22689,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48126
+// Method Definition Index: 48135
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPurchaseRequestEvent_mBE3DD9C58C962A3EF99F912B837470D6EBCAD311 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9DD50970AE92A9598841D79CDFB47F668DA74665* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22732,7 +22732,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48127
+// Method Definition Index: 48136
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetPurchaseResultEvent_m2D1C9827A1CB4187A68F95AD77ED2336A459260C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t517AD994334F5484334FAA7B9D2CE4878C9C5E3A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22775,7 +22775,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48128
+// Method Definition Index: 48137
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetPurchaseResultEvent_m112B705FEC331030BBAF766A0690FE28B4B551C8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t517AD994334F5484334FAA7B9D2CE4878C9C5E3A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22818,7 +22818,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48129
+// Method Definition Index: 48138
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetSharedGroupDataRequestEvent_mD1FA62611368F0693AFC693982354BA3DB8292FA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tF164F2612AA9986E4CC1332497B373ADBCC29A4B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22861,7 +22861,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48130
+// Method Definition Index: 48139
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetSharedGroupDataRequestEvent_m598F4C5C956DBDE37DCA6B85E6ED04DA83D287EC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tF164F2612AA9986E4CC1332497B373ADBCC29A4B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22904,7 +22904,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48131
+// Method Definition Index: 48140
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetSharedGroupDataResultEvent_m79611C41EBC3E4F98949BA0FAEA2DA58D93E9A7F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1D9F03719F1D178BA4F82C0FF6A8DEBB255D255B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22947,7 +22947,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48132
+// Method Definition Index: 48141
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetSharedGroupDataResultEvent_m600FE8F2178ABFA64ADB7CBA08F386DAC9BCACFA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1D9F03719F1D178BA4F82C0FF6A8DEBB255D255B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22990,7 +22990,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48133
+// Method Definition Index: 48142
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetStoreItemsRequestEvent_m68203BF8A031CFA024D9F9FF79E1395552EC39C4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t430FFF57F73713A2D989CC1B3FA489E78C7FA3C2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23033,7 +23033,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48134
+// Method Definition Index: 48143
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetStoreItemsRequestEvent_mB92B91A0FA4040483D906F3342CAA482D06A35F0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t430FFF57F73713A2D989CC1B3FA489E78C7FA3C2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23076,7 +23076,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48135
+// Method Definition Index: 48144
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetStoreItemsResultEvent_mE0AB95ED2CB2FE3907137F48339592CDF69E6913 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tDEFA44A6FC535974FE08E15A16325A9F7C965E79* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23119,7 +23119,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48136
+// Method Definition Index: 48145
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetStoreItemsResultEvent_m3085130AB86D1592E992BB9C89E3F8D862E057EE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tDEFA44A6FC535974FE08E15A16325A9F7C965E79* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23162,7 +23162,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48137
+// Method Definition Index: 48146
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetTimeRequestEvent_mC1341DC826EE9D98BCB802E7F427962F810ACC15 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t0FF8A6D008E130B3D8EFD1B36F8A3FB996814241* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23205,7 +23205,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48138
+// Method Definition Index: 48147
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetTimeRequestEvent_mA8071A634FA6376B617F3FDDB01860C878832B9A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t0FF8A6D008E130B3D8EFD1B36F8A3FB996814241* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23248,7 +23248,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48139
+// Method Definition Index: 48148
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetTimeResultEvent_mB2A2841798030D98FC185ABB74296968EB8D9391 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t06A998522A2094446F388D23A06A5247A7D9FD0E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23291,7 +23291,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48140
+// Method Definition Index: 48149
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetTimeResultEvent_m8640D1316862F884884C1B079B19DC8025B3A858 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t06A998522A2094446F388D23A06A5247A7D9FD0E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23334,7 +23334,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48141
+// Method Definition Index: 48150
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetTitleDataRequestEvent_mB92445964D7DD8BA23981DA7FBACCAE6E891BAC3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t132B2E05F9C670C4D31316AAC13CF1331B68C3D7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23377,7 +23377,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48142
+// Method Definition Index: 48151
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetTitleDataRequestEvent_mC22F061AF5FB9CE67D9FE92E4E4DEBFFD0CCB9A8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t132B2E05F9C670C4D31316AAC13CF1331B68C3D7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23420,7 +23420,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48143
+// Method Definition Index: 48152
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetTitleDataResultEvent_m96F9F8DC760CDFA9F6E23A60609119A000A938C2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t5F7BECD834C6A7329692D0032A9FCD235F917EA6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23463,7 +23463,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48144
+// Method Definition Index: 48153
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetTitleDataResultEvent_m15AE0A2B5B23947DEB8AEF84B204776B8F16D65C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t5F7BECD834C6A7329692D0032A9FCD235F917EA6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23506,7 +23506,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48145
+// Method Definition Index: 48154
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetTitleNewsRequestEvent_mC86FD615616B67B6418BEAF659D12BB5EB826DC6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3DB9D9DEA3D05A250D10DF9C3FCBE864FFD79625* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23549,7 +23549,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48146
+// Method Definition Index: 48155
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetTitleNewsRequestEvent_mBF76756FB7ED752A6301399101686B4EB74FAA5F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3DB9D9DEA3D05A250D10DF9C3FCBE864FFD79625* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23592,7 +23592,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48147
+// Method Definition Index: 48156
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetTitleNewsResultEvent_m0B0A126A9BB64CEDC81CE496485D1CA88F93C36C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE875FCF0F435F070E410CB8413B868F5B053C2A9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23635,7 +23635,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48148
+// Method Definition Index: 48157
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetTitleNewsResultEvent_mE58EC44413A8E4CD9E50FEF82C094C11B80C5020 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE875FCF0F435F070E410CB8413B868F5B053C2A9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23678,7 +23678,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48149
+// Method Definition Index: 48158
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetTitlePublicKeyRequestEvent_m5EF17EC7B880E6B401A563AB1F54D3276B4FEF6C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t99979C847A41CFDB088909022A2A59D633F01EC6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23721,7 +23721,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48150
+// Method Definition Index: 48159
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetTitlePublicKeyRequestEvent_mC0AD41294456055C8730D05BD4942CA5CA3684A8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t99979C847A41CFDB088909022A2A59D633F01EC6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23764,7 +23764,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48151
+// Method Definition Index: 48160
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetTitlePublicKeyResultEvent_m88ED459ED08B0A9C2A038EC5ACFB66098B7721E0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t207D658DD68FAFE664FC8F8041745B9EBEDBC2B4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23807,7 +23807,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48152
+// Method Definition Index: 48161
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetTitlePublicKeyResultEvent_m0EECEA9F23895EE1C571977D148BA57751FA3A4B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t207D658DD68FAFE664FC8F8041745B9EBEDBC2B4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23850,7 +23850,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48153
+// Method Definition Index: 48162
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetTradeStatusRequestEvent_m219DDB8D28DBB0A75D353A8B2A36A6E575FF1E6C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t749B9777CB16B3985998FF6ABD94982AD4413BE0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23893,7 +23893,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48154
+// Method Definition Index: 48163
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetTradeStatusRequestEvent_m183606BAC93A41B1C5FEAB60B524FF2EBD8C3FC8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t749B9777CB16B3985998FF6ABD94982AD4413BE0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23936,7 +23936,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48155
+// Method Definition Index: 48164
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetTradeStatusResultEvent_mEAB0A9AB96DB1D06F2E0EAA146D375F9A75E09A7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC6061392A704769E681438CD80377F7A33655866* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23979,7 +23979,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48156
+// Method Definition Index: 48165
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetTradeStatusResultEvent_m703FC5DC37AC9FB5A55817294C566059B7C18766 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC6061392A704769E681438CD80377F7A33655866* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24022,7 +24022,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48157
+// Method Definition Index: 48166
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetUserDataRequestEvent_mD7361407EF38A19E5CF8042B3F51B71B65143826 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t015E7D37C13D95E14E9C8C2BDF5C65987E9006A9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24065,7 +24065,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48158
+// Method Definition Index: 48167
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetUserDataRequestEvent_mAA01502A7FFE2D65E6A5B30F656A91013FED4721 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t015E7D37C13D95E14E9C8C2BDF5C65987E9006A9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24108,7 +24108,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48159
+// Method Definition Index: 48168
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetUserDataResultEvent_mDE2372E75CD79C604171F16D9FDE9C483F80DA7C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t05A6CEF9C11ABA3AB3AFE239B44F27EFDBAAB1F6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24151,7 +24151,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48160
+// Method Definition Index: 48169
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetUserDataResultEvent_m5852F3885D09F903A8BF235E62F64AB027D06F5C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t05A6CEF9C11ABA3AB3AFE239B44F27EFDBAAB1F6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24194,7 +24194,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48161
+// Method Definition Index: 48170
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetUserInventoryRequestEvent_mA4D31471BA963B487E189C13B13CD8EE186CAD81 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8AE7F863AEBCBB5AFFEF6D1F3E96CE249654397C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24237,7 +24237,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48162
+// Method Definition Index: 48171
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetUserInventoryRequestEvent_m76FB3D16DD07F895DA66665E8689BF64B0DE0893 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8AE7F863AEBCBB5AFFEF6D1F3E96CE249654397C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24280,7 +24280,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48163
+// Method Definition Index: 48172
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetUserInventoryResultEvent_m6C5A6AD2A0E446BEEF4DB86B03D9CFFE026D0BAB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t9229E7A61FA3F1B9F3F2AE9C31C526DFF32D3A85* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24323,7 +24323,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48164
+// Method Definition Index: 48173
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetUserInventoryResultEvent_m55A52EBF9AA717A16685E54DA144C6647B59B4DC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t9229E7A61FA3F1B9F3F2AE9C31C526DFF32D3A85* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24366,7 +24366,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48165
+// Method Definition Index: 48174
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetUserPublisherDataRequestEvent_mE6025E880457ACE752E1CC33574AD063872328DA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t015E7D37C13D95E14E9C8C2BDF5C65987E9006A9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24409,7 +24409,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48166
+// Method Definition Index: 48175
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetUserPublisherDataRequestEvent_mD81983A7933D1288F8AD4F25B366131FF3F1035C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t015E7D37C13D95E14E9C8C2BDF5C65987E9006A9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24452,7 +24452,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48167
+// Method Definition Index: 48176
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetUserPublisherDataResultEvent_m42C295EA48F71CF6C7B6E5B5623475CCE6DCEA45 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t05A6CEF9C11ABA3AB3AFE239B44F27EFDBAAB1F6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24495,7 +24495,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48168
+// Method Definition Index: 48177
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetUserPublisherDataResultEvent_m9035F1765D833A6A7FBD788D578F78B5644BA992 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t05A6CEF9C11ABA3AB3AFE239B44F27EFDBAAB1F6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24538,7 +24538,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48169
+// Method Definition Index: 48178
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetUserPublisherReadOnlyDataRequestEvent_m1452D0B53458C82A8947F21FEC8ECC815283A26F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t015E7D37C13D95E14E9C8C2BDF5C65987E9006A9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24581,7 +24581,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48170
+// Method Definition Index: 48179
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetUserPublisherReadOnlyDataRequestEvent_m28765867C4A862DD9D7499460BCFD92BD139F17E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t015E7D37C13D95E14E9C8C2BDF5C65987E9006A9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24624,7 +24624,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48171
+// Method Definition Index: 48180
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetUserPublisherReadOnlyDataResultEvent_m836CA2A0B3643B730FC525847BF1B2EE566B49B0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t05A6CEF9C11ABA3AB3AFE239B44F27EFDBAAB1F6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24667,7 +24667,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48172
+// Method Definition Index: 48181
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetUserPublisherReadOnlyDataResultEvent_m7B8EF70AE2DAFD3751790C0D1A478092F519D3CE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t05A6CEF9C11ABA3AB3AFE239B44F27EFDBAAB1F6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24710,7 +24710,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48173
+// Method Definition Index: 48182
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetUserReadOnlyDataRequestEvent_m19A3D0670ACE4AF78898608D9EDB2ACCAAB0D47B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t015E7D37C13D95E14E9C8C2BDF5C65987E9006A9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24753,7 +24753,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48174
+// Method Definition Index: 48183
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetUserReadOnlyDataRequestEvent_m33924BCE9242DB833A3EB60850CC35BD915701E2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t015E7D37C13D95E14E9C8C2BDF5C65987E9006A9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24796,7 +24796,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48175
+// Method Definition Index: 48184
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGetUserReadOnlyDataResultEvent_mF62E7FA7DD61FE4086FA04F570CFBCEDC267DF63 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t05A6CEF9C11ABA3AB3AFE239B44F27EFDBAAB1F6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24839,7 +24839,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48176
+// Method Definition Index: 48185
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGetUserReadOnlyDataResultEvent_m6EF1C6BB96AD5322DC67F3BFE296A21B53267F0B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t05A6CEF9C11ABA3AB3AFE239B44F27EFDBAAB1F6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24882,7 +24882,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48177
+// Method Definition Index: 48186
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGrantCharacterToUserRequestEvent_m424AA155C000856DC574F6AF4A61E9C6B1716B22 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9918A6AE03AD9F23E7DD491FA57DA7DE19441980* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24925,7 +24925,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48178
+// Method Definition Index: 48187
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGrantCharacterToUserRequestEvent_m05418A6A1DDDF31B1D63ADA9B68730B9927BD6BA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9918A6AE03AD9F23E7DD491FA57DA7DE19441980* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24968,7 +24968,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48179
+// Method Definition Index: 48188
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGrantCharacterToUserResultEvent_mB4C67FDBC3AAB3595D1284E02AB95EA84983A25E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t70AC7A4662CE00B0AB41A923D3B2D8AD20DADFC8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25011,7 +25011,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48180
+// Method Definition Index: 48189
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGrantCharacterToUserResultEvent_m81388EB49E1D8FEABAB95F0AABAE84588E2166B8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t70AC7A4662CE00B0AB41A923D3B2D8AD20DADFC8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25054,7 +25054,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48181
+// Method Definition Index: 48190
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkAndroidDeviceIDRequestEvent_m06297F10A67093263BC81BFA6E0E326ECEC40BB8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t603734FF9A74D40FB4558FDDEB09D16793FD2AFA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25097,7 +25097,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48182
+// Method Definition Index: 48191
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkAndroidDeviceIDRequestEvent_m93B22E6A889E27C2E1E84E5383833AC02B2B6195 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t603734FF9A74D40FB4558FDDEB09D16793FD2AFA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25140,7 +25140,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48183
+// Method Definition Index: 48192
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkAndroidDeviceIDResultEvent_m05A48752E4B6FA8FE2DE09EE4E09D6DD68C21782 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t440DC91972A0D5F982DABFC9A46FC088163334A7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25183,7 +25183,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48184
+// Method Definition Index: 48193
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkAndroidDeviceIDResultEvent_m60381094F6C2ADC190A15D4590902554F8D47EA0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t440DC91972A0D5F982DABFC9A46FC088163334A7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25226,7 +25226,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48185
+// Method Definition Index: 48194
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkAppleRequestEvent_m5A5C48EF68D7B77CD2A44CCF694617FABF7B1D31 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5B202F7DC0331F2E11362FA303D7DA076C72EF3F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25269,7 +25269,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48186
+// Method Definition Index: 48195
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkAppleRequestEvent_m59989A71549789D03961010DA27DF11516EA38E7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5B202F7DC0331F2E11362FA303D7DA076C72EF3F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25312,7 +25312,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48187
+// Method Definition Index: 48196
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkAppleResultEvent_mA57E160A7730384C2A5B06EFF95FC349F98FC6D4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8A2092CCC17FA635E3B9D648C9EDF64EDA25610C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25355,7 +25355,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48188
+// Method Definition Index: 48197
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkAppleResultEvent_m89FFD78CCFFA6F7251A903A5C7337B76AF8E778D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8A2092CCC17FA635E3B9D648C9EDF64EDA25610C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25398,7 +25398,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48189
+// Method Definition Index: 48198
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkBattleNetAccountRequestEvent_m19E4AC1BDD1FF65A025A314B2B6FEDE4CBE29F84 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8623FA65AA7C562ED57429DB371A22936ED57676* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25441,7 +25441,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48190
+// Method Definition Index: 48199
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkBattleNetAccountRequestEvent_m6A086785EC70338DF3456995AA39826562917921 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8623FA65AA7C562ED57429DB371A22936ED57676* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25484,7 +25484,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48191
+// Method Definition Index: 48200
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkBattleNetAccountResultEvent_m9778450101F763369FEF8E46451B06DBF3F1E1BA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCAF3FD2AC8C661F2B2ACA021F2D589680F436F22* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25527,7 +25527,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48192
+// Method Definition Index: 48201
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkBattleNetAccountResultEvent_m4B68F5E8813FED7CA6D46DCF36C9A4B68442ACB9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCAF3FD2AC8C661F2B2ACA021F2D589680F436F22* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25570,7 +25570,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48193
+// Method Definition Index: 48202
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkCustomIDRequestEvent_m3721E1A87DE8D30550EBE189007779A1CEFB85C5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1533AF5EEE86F2C8EFCE64B900588C4310447458* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25613,7 +25613,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48194
+// Method Definition Index: 48203
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkCustomIDRequestEvent_mE06AB0581059685E7BD920511A88A7DBA994F182 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1533AF5EEE86F2C8EFCE64B900588C4310447458* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25656,7 +25656,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48195
+// Method Definition Index: 48204
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkCustomIDResultEvent_m23B47A093A2458456E769DC079FC0EFF78FEA9C6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tEA79FBAD4F370596208A0B620B2ADC52E308D2F1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25699,7 +25699,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48196
+// Method Definition Index: 48205
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkCustomIDResultEvent_m3FBE2556E3BFBCB469BAA98822E5E2AA2A7AC2CC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tEA79FBAD4F370596208A0B620B2ADC52E308D2F1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25742,7 +25742,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48197
+// Method Definition Index: 48206
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkFacebookAccountRequestEvent_m285C9EA7EC57F4FA69A572530C2E207760F7AEC0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t6F30D9B00D04B3F5B1D5D1FE214D52C67A4A56D6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25785,7 +25785,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48198
+// Method Definition Index: 48207
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkFacebookAccountRequestEvent_m0DE6906DBDD07E1703EA13758AE6929C7E5B4093 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t6F30D9B00D04B3F5B1D5D1FE214D52C67A4A56D6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25828,7 +25828,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48199
+// Method Definition Index: 48208
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkFacebookAccountResultEvent_m922C7DEFD4C93DFC0D5D8750CB47E02B5DFC6FB0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t6A89C5D76896EBF9C4542DA58A41EA1B71265A2E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25871,7 +25871,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48200
+// Method Definition Index: 48209
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkFacebookAccountResultEvent_m66C8F6B85595976AA3FD496DF07C777AED90C17C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t6A89C5D76896EBF9C4542DA58A41EA1B71265A2E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25914,7 +25914,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48201
+// Method Definition Index: 48210
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkFacebookInstantGamesIdRequestEvent_m6C5220C95FC56E9439355F00C4281D1F4D39125D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3DCC457082DCAFD05E65AC2F8D0DD49069ADEC59* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25957,7 +25957,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48202
+// Method Definition Index: 48211
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkFacebookInstantGamesIdRequestEvent_mBE14EB05C31054E546C9BAE72201C534B3EFEFBB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3DCC457082DCAFD05E65AC2F8D0DD49069ADEC59* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26000,7 +26000,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48203
+// Method Definition Index: 48212
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkFacebookInstantGamesIdResultEvent_m0677E51F129A8EF7C8107EBE96D669ED76A34529 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t2ABFFEAA90445CD9475B4906AD43008EC8CB6088* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26043,7 +26043,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48204
+// Method Definition Index: 48213
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkFacebookInstantGamesIdResultEvent_m41417A3FB379676A6AC7CC9C758946A519E36D10 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t2ABFFEAA90445CD9475B4906AD43008EC8CB6088* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26086,7 +26086,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48205
+// Method Definition Index: 48214
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkGameCenterAccountRequestEvent_m541CE19AB538E9E5CDA5C2A0C20D73247EDA8826 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAFB9B15BC5448300D0EB6E0D49140330F9BDE74C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26129,7 +26129,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48206
+// Method Definition Index: 48215
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkGameCenterAccountRequestEvent_mA6CCCD900DCC8A87C7521DA2C333F887A1AFF9B8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAFB9B15BC5448300D0EB6E0D49140330F9BDE74C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26172,7 +26172,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48207
+// Method Definition Index: 48216
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkGameCenterAccountResultEvent_m754CA88D18DC452C8B5C7833D86E5D18CF15633D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7EF44365200339784635F7CC2039653DF33FD188* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26215,7 +26215,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48208
+// Method Definition Index: 48217
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkGameCenterAccountResultEvent_mF0C5E9CCB721A17EDDD49E0968C524D1634CAC54 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7EF44365200339784635F7CC2039653DF33FD188* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26258,7 +26258,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48209
+// Method Definition Index: 48218
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkGoogleAccountRequestEvent_m0AFD708B18D8E64A41F8E9BDFDF41FBEB621FFEE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE0976098467E3B740DBE415E93E53EBEB1781930* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26301,7 +26301,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48210
+// Method Definition Index: 48219
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkGoogleAccountRequestEvent_mF5091417D44C9D730ECB06A689A86DC7BBF3AEB3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE0976098467E3B740DBE415E93E53EBEB1781930* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26344,7 +26344,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48211
+// Method Definition Index: 48220
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkGoogleAccountResultEvent_mDBEF6FE8538520BA8F7917FAA43A056B9A47970C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tB23267ED71C1FEE0CE139395DCC43D50BF29FD1C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26387,7 +26387,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48212
+// Method Definition Index: 48221
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkGoogleAccountResultEvent_m936D2B073A66745878E9CDAF858B44E48476CD67 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tB23267ED71C1FEE0CE139395DCC43D50BF29FD1C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26430,7 +26430,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48213
+// Method Definition Index: 48222
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkGooglePlayGamesServicesAccountRequestEvent_m76654678E64FF7CAE50A750090DC75A15E7101E2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t833CC2F5302213B8AF21C48844D8A25DF2B99337* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26473,7 +26473,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48214
+// Method Definition Index: 48223
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkGooglePlayGamesServicesAccountRequestEvent_m011229FB75B1E101D933A590191CA50AF23ADB47 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t833CC2F5302213B8AF21C48844D8A25DF2B99337* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26516,7 +26516,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48215
+// Method Definition Index: 48224
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkGooglePlayGamesServicesAccountResultEvent_mDE18EB118ACFF75FE089EA2394D904CB406E1066 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA45AB4EC821876F3CF6606E58689A732143C1F74* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26559,7 +26559,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48216
+// Method Definition Index: 48225
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkGooglePlayGamesServicesAccountResultEvent_mB6D29402E9069394856404A0C22D01011A518777 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA45AB4EC821876F3CF6606E58689A732143C1F74* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26602,7 +26602,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48217
+// Method Definition Index: 48226
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkIOSDeviceIDRequestEvent_mEECB5A63E17336F22C2BDE8FCE3895299AA21A99 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t83D34A92E3AB7ECC9AB403EC1AFEB35231A4DC4B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26645,7 +26645,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48218
+// Method Definition Index: 48227
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkIOSDeviceIDRequestEvent_mDAB5CB4D22E050CBCD2595FD622965034BE71A29 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t83D34A92E3AB7ECC9AB403EC1AFEB35231A4DC4B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26688,7 +26688,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48219
+// Method Definition Index: 48228
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkIOSDeviceIDResultEvent_mB6EC93446BC44C9BA118ED280AFA768729CDB71B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tD6BEDBA571D079EC45F336DFCAB57066A147C0CA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26731,7 +26731,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48220
+// Method Definition Index: 48229
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkIOSDeviceIDResultEvent_mAD2C738B025BA44EA0DC1C033574C4A7C1943BFD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tD6BEDBA571D079EC45F336DFCAB57066A147C0CA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26774,7 +26774,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48221
+// Method Definition Index: 48230
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkKongregateRequestEvent_mE5927B5CBE71EAFC243D719491FE4DD6B00BDD42 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t2718F4946D88593D42D359D95050B2B0BC0FE893* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26817,7 +26817,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48222
+// Method Definition Index: 48231
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkKongregateRequestEvent_m1F615273732A7514BF9F4A8C8C83245727D06A35 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t2718F4946D88593D42D359D95050B2B0BC0FE893* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26860,7 +26860,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48223
+// Method Definition Index: 48232
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkKongregateResultEvent_m95001C9BBD2593E56986176291D2D7FD45191DEF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t14958B28FA9C6C636069B85C32E41F56B0164533* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26903,7 +26903,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48224
+// Method Definition Index: 48233
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkKongregateResultEvent_m9557AC4FC1CBB0E5DCCDD41D6FB26457FADEBDED (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t14958B28FA9C6C636069B85C32E41F56B0164533* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26946,7 +26946,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48225
+// Method Definition Index: 48234
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkNintendoServiceAccountRequestEvent_m09C7694CEE2BFD603E5148FFD226E18E308BAF11 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1DBF7093C16926F51573BB63EC62D294BFCF22FE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26989,7 +26989,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48226
+// Method Definition Index: 48235
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkNintendoServiceAccountRequestEvent_mDA6014681B1719806AB08D59814BEF6EC0B0EAE5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1DBF7093C16926F51573BB63EC62D294BFCF22FE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27032,7 +27032,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48227
+// Method Definition Index: 48236
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkNintendoServiceAccountResultEvent_m07C2F32D6A371B4141B97B3F818821A420DE2446 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8A2092CCC17FA635E3B9D648C9EDF64EDA25610C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27075,7 +27075,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48228
+// Method Definition Index: 48237
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkNintendoServiceAccountResultEvent_mA3AB1F4B55F0930CFE8BC50E760F55CA2203A5BD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8A2092CCC17FA635E3B9D648C9EDF64EDA25610C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27118,7 +27118,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48229
+// Method Definition Index: 48238
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkNintendoSwitchDeviceIdRequestEvent_m10E88C1A49EE5207A7B3D968BC4F581283D158FE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t647A03482980CDAE2F17E4DFCF819C1E713B7BB8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27161,7 +27161,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48230
+// Method Definition Index: 48239
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkNintendoSwitchDeviceIdRequestEvent_mB75E1F126165E3FCDA65E47B51E02D8096CCA5D8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t647A03482980CDAE2F17E4DFCF819C1E713B7BB8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27204,7 +27204,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48231
+// Method Definition Index: 48240
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkNintendoSwitchDeviceIdResultEvent_m8745D1C0B2CFF0F742A859549DF26E361DB744CF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCA62CA7A948890FF797B35D6E79C8D59EC5953E1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27247,7 +27247,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48232
+// Method Definition Index: 48241
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkNintendoSwitchDeviceIdResultEvent_mAA5934BE9DDB4D0EDC6D5D74A13FF0449BE20498 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCA62CA7A948890FF797B35D6E79C8D59EC5953E1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27290,7 +27290,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48233
+// Method Definition Index: 48242
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkOpenIdConnectRequestEvent_mEFA55F9A20831F580ED8A9A3E9FCC8AD7D88C639 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAC3750EC533B7BD46F605242A85206DA2ADB7C9F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27333,7 +27333,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48234
+// Method Definition Index: 48243
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkOpenIdConnectRequestEvent_m326147F31D4CB489AC6E584484401AE52E35A9EE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAC3750EC533B7BD46F605242A85206DA2ADB7C9F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27376,7 +27376,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48235
+// Method Definition Index: 48244
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkOpenIdConnectResultEvent_m3C3A3372AAB366D6A53AB42F301870791CAE36A9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8A2092CCC17FA635E3B9D648C9EDF64EDA25610C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27419,7 +27419,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48236
+// Method Definition Index: 48245
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkOpenIdConnectResultEvent_mEB8B2118A68E93B8796AAE27113E0CBBC58865A1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8A2092CCC17FA635E3B9D648C9EDF64EDA25610C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27462,7 +27462,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48237
+// Method Definition Index: 48246
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkPSNAccountRequestEvent_mD7A211A6B6D2CAAA667A4ED855015C09970B080C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC00BA8FD9AB7B451437F76DFA98050202032A34A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27505,7 +27505,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48238
+// Method Definition Index: 48247
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkPSNAccountRequestEvent_m401EE5D99964FCDB190FD74736A5A49D56203D17 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC00BA8FD9AB7B451437F76DFA98050202032A34A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27548,7 +27548,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48239
+// Method Definition Index: 48248
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkPSNAccountResultEvent_mF7713FFFB6939717ED1E6528458793136670C74F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4D8E5179FFE0E2457AD4B92E71D70FECD03F209E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27591,7 +27591,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48240
+// Method Definition Index: 48249
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkPSNAccountResultEvent_mB1821DAE05DC3F1F5934D8AA60A3EC89108B2F21 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4D8E5179FFE0E2457AD4B92E71D70FECD03F209E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27634,7 +27634,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48241
+// Method Definition Index: 48250
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkSteamAccountRequestEvent_mB5BECE7FDBE81C861F48FA0DEAB2D8894F373F48 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tCD03C14D6FEBF1B9FC1491F68E73E6547C690ABF* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27677,7 +27677,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48242
+// Method Definition Index: 48251
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkSteamAccountRequestEvent_mCB38E9D785339374F4C0AA7D666A13BD7DA5779D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tCD03C14D6FEBF1B9FC1491F68E73E6547C690ABF* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27720,7 +27720,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48243
+// Method Definition Index: 48252
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkSteamAccountResultEvent_m5D44E7C2712C6E4496988EA6BEB96E09BA0F8F6B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4EEB07ED6ED110260572CFC093EB53309040F245* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27763,7 +27763,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48244
+// Method Definition Index: 48253
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkSteamAccountResultEvent_m68F36EF6222D3F3F43DA06F8F08ADC84F61EAFAB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4EEB07ED6ED110260572CFC093EB53309040F245* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27806,7 +27806,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48245
+// Method Definition Index: 48254
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkTwitchRequestEvent_m7242095F8F96762098FCCF8CCCD505B8B2357479 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tEB24831654B532CF40608694899A041A162FEC3E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27849,7 +27849,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48246
+// Method Definition Index: 48255
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkTwitchRequestEvent_m5BA4F625979CDA760CCFA9B88FD25E7190231798 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tEB24831654B532CF40608694899A041A162FEC3E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27892,7 +27892,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48247
+// Method Definition Index: 48256
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkTwitchResultEvent_mCC7C84906022B6E23FD5E97F66731260641D45CB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCE40347EF760AF62D1D76316AD974F0841FBD717* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27935,7 +27935,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48248
+// Method Definition Index: 48257
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkTwitchResultEvent_m5A3704D406AD95B28509A8FE96FA3D2FCD6EFAC2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCE40347EF760AF62D1D76316AD974F0841FBD717* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27978,7 +27978,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48249
+// Method Definition Index: 48258
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkXboxAccountRequestEvent_mE53CC2D0FF5D7719E67887E2A3D7F7E6F085E745 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4CBB3F9891A4AA7CB6B9336F28330BA1CEE4E277* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28021,7 +28021,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48250
+// Method Definition Index: 48259
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkXboxAccountRequestEvent_m47F7FF775D3CEB48519301BE8827CE121D3FF7DA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4CBB3F9891A4AA7CB6B9336F28330BA1CEE4E277* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28064,7 +28064,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48251
+// Method Definition Index: 48260
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLinkXboxAccountResultEvent_mDF13A6E066E708CEE687D31DFD94F764E480F762 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t895A561F00F9EE2128FB4AA46F980BADEF894729* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28107,7 +28107,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48252
+// Method Definition Index: 48261
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLinkXboxAccountResultEvent_mA3C4A6430AC52F4FFF230CD18E8B7E1842E485E4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t895A561F00F9EE2128FB4AA46F980BADEF894729* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28150,7 +28150,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48253
+// Method Definition Index: 48262
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnListPlayerCustomPropertiesRequestEvent_mE87C592CCDA25E197AE539B18C783FA569D7885B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD74E4F4AB31BC112E5AA5F8AFFCDA7E3B4DCE31F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28193,7 +28193,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48254
+// Method Definition Index: 48263
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnListPlayerCustomPropertiesRequestEvent_m430C8359D60FF3ABE94A60595BF3C673922CB9FE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD74E4F4AB31BC112E5AA5F8AFFCDA7E3B4DCE31F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28236,7 +28236,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48255
+// Method Definition Index: 48264
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnListPlayerCustomPropertiesResultEvent_m81FEE2FCA115916D055C81D044A8751D5D550039 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t27E5D9A3405695D90B2A692E01C9C70990324B7D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28279,7 +28279,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48256
+// Method Definition Index: 48265
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnListPlayerCustomPropertiesResultEvent_m23AF31459A6B70857A2AE0A591C03F2762190AF8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t27E5D9A3405695D90B2A692E01C9C70990324B7D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28322,7 +28322,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48257
+// Method Definition Index: 48266
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLoginWithAndroidDeviceIDRequestEvent_m8E3E280D05BCC0E7F8BE54DAB5DE9C0AF4B486E2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tF47DF0D31022D91E6A514C26BDF882DB8B5EEDFB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28365,7 +28365,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48258
+// Method Definition Index: 48267
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLoginWithAndroidDeviceIDRequestEvent_m4033895FBC7FA34AF2C01FD5C0FF0C8FA9F87B0C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tF47DF0D31022D91E6A514C26BDF882DB8B5EEDFB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28408,7 +28408,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48259
+// Method Definition Index: 48268
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLoginWithAppleRequestEvent_m6B05A47268B795AB6E08FEFF19B6AD727CA8C119 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5C016ED104A9D72562627B4D98FA9B5B308D50FA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28451,7 +28451,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48260
+// Method Definition Index: 48269
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLoginWithAppleRequestEvent_m8BB6498E6E53DA5A3AD216EFD0FEF55C066204FD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5C016ED104A9D72562627B4D98FA9B5B308D50FA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28494,7 +28494,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48261
+// Method Definition Index: 48270
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLoginWithBattleNetRequestEvent_mD3DA4728056C0FD4485453ED17C7E177F31BD792 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t27E6F87D934CC2F29023168A213E4D4818304237* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28537,7 +28537,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48262
+// Method Definition Index: 48271
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLoginWithBattleNetRequestEvent_m0D34B735604C08A70A2D266C603FB8F0FEC74C0C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t27E6F87D934CC2F29023168A213E4D4818304237* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28580,7 +28580,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48263
+// Method Definition Index: 48272
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLoginWithCustomIDRequestEvent_m5584B0D665628781A946C323C8687521CF13CC8B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5A5EF541C4EA890418C259F912216BFB5FFDE888* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28623,7 +28623,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48264
+// Method Definition Index: 48273
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLoginWithCustomIDRequestEvent_m4D6811D76A3B1B98FDCA74A0411C34D20CBED58F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5A5EF541C4EA890418C259F912216BFB5FFDE888* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28666,7 +28666,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48265
+// Method Definition Index: 48274
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLoginWithEmailAddressRequestEvent_mF884956053212443BADB40F81590CD0B433B2FEE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t0C402FA9568B05C662ECDCEFF9C033BA67901ADE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28709,7 +28709,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48266
+// Method Definition Index: 48275
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLoginWithEmailAddressRequestEvent_m4065CE04BD0B6D37758512060DC89BD208A63940 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t0C402FA9568B05C662ECDCEFF9C033BA67901ADE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28752,7 +28752,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48267
+// Method Definition Index: 48276
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLoginWithFacebookRequestEvent_m5541FC30945F871E8266B0BE2883955AEA0C4030 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t031B8FBDB1224648EF237292E422D62ED0942436* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28795,7 +28795,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48268
+// Method Definition Index: 48277
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLoginWithFacebookRequestEvent_m3B57F88BB2713530236A115FAD057C8C7A65D469 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t031B8FBDB1224648EF237292E422D62ED0942436* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28838,7 +28838,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48269
+// Method Definition Index: 48278
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLoginWithFacebookInstantGamesIdRequestEvent_mD0242EDE266B670267AB5111F23FB8772B6A73FD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1677AE5BA4D743ED2647CED036AF545C54DBD381* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28881,7 +28881,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48270
+// Method Definition Index: 48279
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLoginWithFacebookInstantGamesIdRequestEvent_m9BEE89EDB3C73F7F4D73FA67FCF1BC597B0EE1CA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1677AE5BA4D743ED2647CED036AF545C54DBD381* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28924,7 +28924,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48271
+// Method Definition Index: 48280
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLoginWithGameCenterRequestEvent_m40F8583483BA40263C57AE1733F6CBEB59B50E1A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA555973A96DB8FB5CE608D83BA4807E12F860795* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28967,7 +28967,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48272
+// Method Definition Index: 48281
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLoginWithGameCenterRequestEvent_m9747F39000B5694CE426F73D5402A184A01BFAA0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA555973A96DB8FB5CE608D83BA4807E12F860795* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29010,7 +29010,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48273
+// Method Definition Index: 48282
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLoginWithGoogleAccountRequestEvent_mA8AF5047B6FF462DEC8633ABBBEFD8EB28726587 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t44D79B01B6EA5AAAA3CB7AF48B254C9DBF29A8C2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29053,7 +29053,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48274
+// Method Definition Index: 48283
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLoginWithGoogleAccountRequestEvent_mA70CB3D9E71E651521DF3E0459837F4AD6643FE4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t44D79B01B6EA5AAAA3CB7AF48B254C9DBF29A8C2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29096,7 +29096,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48275
+// Method Definition Index: 48284
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLoginWithGooglePlayGamesServicesRequestEvent_m7C378A969E99D4B079CB765125C3C985A957D589 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tEE346E818C796E3BDDF37AD4F30E60DCCE2A994B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29139,7 +29139,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48276
+// Method Definition Index: 48285
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLoginWithGooglePlayGamesServicesRequestEvent_mC42AC2B9C04D7531836E638FD78A7913A605372E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tEE346E818C796E3BDDF37AD4F30E60DCCE2A994B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29182,7 +29182,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48277
+// Method Definition Index: 48286
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLoginWithIOSDeviceIDRequestEvent_m5474E734B3C2FD9CED0C2997CB11D6AF484C4BAF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB878BF10E26D3F11FF42E07C9CC2F80EE448F060* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29225,7 +29225,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48278
+// Method Definition Index: 48287
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLoginWithIOSDeviceIDRequestEvent_m03B7BC94E32ED47A8709EE2F2DC7C2709654E53A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB878BF10E26D3F11FF42E07C9CC2F80EE448F060* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29268,7 +29268,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48279
+// Method Definition Index: 48288
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLoginWithKongregateRequestEvent_mC22A9919B37157216EAACF177D7D7B7F6AA3B4E9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t809FFB62628C49FEDA177127678C19B9EB90FA22* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29311,7 +29311,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48280
+// Method Definition Index: 48289
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLoginWithKongregateRequestEvent_m25FC6102760A29B477CE671EA9E05624B1553F65 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t809FFB62628C49FEDA177127678C19B9EB90FA22* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29354,7 +29354,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48281
+// Method Definition Index: 48290
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLoginWithNintendoServiceAccountRequestEvent_m741C5D2747BE84897706D2D75A85D2CE786BB389 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t730896C5BEF4086349C0127D03D6731DDEC7F881* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29397,7 +29397,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48282
+// Method Definition Index: 48291
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLoginWithNintendoServiceAccountRequestEvent_m4B76CB19B3231309261AE82CB9D7E59A3D897C79 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t730896C5BEF4086349C0127D03D6731DDEC7F881* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29440,7 +29440,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48283
+// Method Definition Index: 48292
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLoginWithNintendoSwitchDeviceIdRequestEvent_m082B462404EB04FE0ADDF17A072ABCACC4CC519A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tEA88857AD755F54F441E8DB03EC8B9E661417368* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29483,7 +29483,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48284
+// Method Definition Index: 48293
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLoginWithNintendoSwitchDeviceIdRequestEvent_mBD791E86B38039F216A68397963B410803DF7E6C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tEA88857AD755F54F441E8DB03EC8B9E661417368* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29526,7 +29526,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48285
+// Method Definition Index: 48294
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLoginWithOpenIdConnectRequestEvent_mA8E5F0D1AA895A5FF5EC356DB83E7B6B9947C67B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t32E45B51EB6F6B7A7C1B831D565154724B16D209* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29569,7 +29569,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48286
+// Method Definition Index: 48295
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLoginWithOpenIdConnectRequestEvent_m0B21C34C54602026F497CBC48E946037301C5371 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t32E45B51EB6F6B7A7C1B831D565154724B16D209* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29612,7 +29612,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48287
+// Method Definition Index: 48296
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLoginWithPlayFabRequestEvent_m3F569E35E983975FF5BA81F5FB35E958CC8761A9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC112E21B4478C6C447807F051A5D07B76ED910F2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29655,7 +29655,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48288
+// Method Definition Index: 48297
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLoginWithPlayFabRequestEvent_mCB0CB82D3219CDECF94C38E3C80A329288B6E12B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC112E21B4478C6C447807F051A5D07B76ED910F2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29698,7 +29698,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48289
+// Method Definition Index: 48298
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLoginWithPSNRequestEvent_mCE5622FFCEC8D7D1ACD59635F1DD0D2834136484 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t6F6BAE6F14A836EC898CA4CFB3287A1059F3D22E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29741,7 +29741,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48290
+// Method Definition Index: 48299
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLoginWithPSNRequestEvent_mC3364C6F5CCCE425E69F61775CDBC0CEF3654921 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t6F6BAE6F14A836EC898CA4CFB3287A1059F3D22E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29784,7 +29784,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48291
+// Method Definition Index: 48300
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLoginWithSteamRequestEvent_m4E2AF353FBD98B7DBFBC7081DE001842085CEE35 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB7BFE963383333BAFB48450664F45DB20BD7D70C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29827,7 +29827,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48292
+// Method Definition Index: 48301
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLoginWithSteamRequestEvent_mECF64CEF98F779DEB7715D4C22CE73876EB208D5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB7BFE963383333BAFB48450664F45DB20BD7D70C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29870,7 +29870,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48293
+// Method Definition Index: 48302
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLoginWithTwitchRequestEvent_mF2CE4C689E98B9E60F209C1D954D34491A6131EA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5ED90FE1B5C65FBB9B828CD3FCE0B7967C4574CA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29913,7 +29913,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48294
+// Method Definition Index: 48303
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLoginWithTwitchRequestEvent_m8546837151481B6FCF6C6BB40488B6690BA45E1F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5ED90FE1B5C65FBB9B828CD3FCE0B7967C4574CA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29956,7 +29956,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48295
+// Method Definition Index: 48304
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLoginWithXboxRequestEvent_m8E79BCFB0EA3187FFA65812837E62CA8A1645E32 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4E25717F44B40787613B379EE31E3F6E3DF9E778* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29999,7 +29999,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48296
+// Method Definition Index: 48305
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLoginWithXboxRequestEvent_mEB1AC06E7FAB1841609B0AF8908355897739ED1C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4E25717F44B40787613B379EE31E3F6E3DF9E778* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30042,7 +30042,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48297
+// Method Definition Index: 48306
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnOpenTradeRequestEvent_m8A5C8ACF99862DE41081C385B862540162ED952E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA5AF65842F05599BF264D43B07503D25A31CB2D9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30085,7 +30085,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48298
+// Method Definition Index: 48307
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnOpenTradeRequestEvent_mE48C84BCB35818B4C16DFA6E774A412AB84E4290 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA5AF65842F05599BF264D43B07503D25A31CB2D9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30128,7 +30128,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48299
+// Method Definition Index: 48308
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnOpenTradeResultEvent_m17E9AE010EFAD9B953620574CD38D5A200F0B096 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t976FAAA7023C2805E607F0FED1D8E625FBC669ED* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30171,7 +30171,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48300
+// Method Definition Index: 48309
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnOpenTradeResultEvent_m23179ED616A4B2D5E5511AC074BEA67ED6A11ED3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t976FAAA7023C2805E607F0FED1D8E625FBC669ED* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30214,7 +30214,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48301
+// Method Definition Index: 48310
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnPayForPurchaseRequestEvent_m372B739987C2C8E6AE743962968C0468323B044D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tCDA5BD8E980138C91566EF7F57ACD478CC6B30CC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30257,7 +30257,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48302
+// Method Definition Index: 48311
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnPayForPurchaseRequestEvent_mA01659F406D1F1DB43B90801A353A9F0AFDB270A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tCDA5BD8E980138C91566EF7F57ACD478CC6B30CC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30300,7 +30300,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48303
+// Method Definition Index: 48312
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnPayForPurchaseResultEvent_m2E10A0377FA7F1935252A7029C8565FC7EE1498F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA1A52720D42819DF5234564302A08C750D3A159B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30343,7 +30343,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48304
+// Method Definition Index: 48313
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnPayForPurchaseResultEvent_mA1C1D3011C1FB77F26C32A6EDE5FAF3FA797A8DF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA1A52720D42819DF5234564302A08C750D3A159B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30386,7 +30386,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48305
+// Method Definition Index: 48314
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnPurchaseItemRequestEvent_mF5BDBB46DEB255BDE49DBB98232EA971CD2152F2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1445D1AF9E1C36472ADEAEFC0901594A95EC23FF* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30429,7 +30429,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48306
+// Method Definition Index: 48315
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnPurchaseItemRequestEvent_mD55DAB4C0153F84910064082535195E01AF3ABC5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1445D1AF9E1C36472ADEAEFC0901594A95EC23FF* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30472,7 +30472,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48307
+// Method Definition Index: 48316
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnPurchaseItemResultEvent_mE76CFCC97DA0D95C8AD1F0B6A3C520AD1788E81C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t87A82A4D85FE92A562B972C126DF46F616A35BB1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30515,7 +30515,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48308
+// Method Definition Index: 48317
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnPurchaseItemResultEvent_m5A4282B4504C6EADFA69E5C18F062D62720CCD72 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t87A82A4D85FE92A562B972C126DF46F616A35BB1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30558,7 +30558,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48309
+// Method Definition Index: 48318
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnRedeemCouponRequestEvent_m474CF4435C579A168DA37D07DF98D29510B259DE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t169961CC372BAE9DFA025C54D3BEC019D19226B6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30601,7 +30601,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48310
+// Method Definition Index: 48319
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnRedeemCouponRequestEvent_mF8C1824BD4F810AFD39FF00E267D7157B6B18476 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t169961CC372BAE9DFA025C54D3BEC019D19226B6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30644,7 +30644,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48311
+// Method Definition Index: 48320
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnRedeemCouponResultEvent_m502B6BFA522699521AB357D49D785C8128D03FE6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7048F5B3880E206C9A669E9AD85C98F049C42A41* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30687,7 +30687,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48312
+// Method Definition Index: 48321
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnRedeemCouponResultEvent_mB4571199FAD8BD5E908388760C7DF333530A24E7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7048F5B3880E206C9A669E9AD85C98F049C42A41* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30730,7 +30730,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48313
+// Method Definition Index: 48322
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnRefreshPSNAuthTokenRequestEvent_m0E7596D725499A8459030C9DF39B6D4014C68F0A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t2AFBB1D3AAE2FE6E6433FA0B18084D87F25251A7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30773,7 +30773,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48314
+// Method Definition Index: 48323
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnRefreshPSNAuthTokenRequestEvent_m4846C12906DCF30FEF253F2DE10890A1F96640E7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t2AFBB1D3AAE2FE6E6433FA0B18084D87F25251A7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30816,7 +30816,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48315
+// Method Definition Index: 48324
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnRefreshPSNAuthTokenResultEvent_m603428791307DD73B8BAAD4D7ECC4F335A4A0F3F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCAF3FD2AC8C661F2B2ACA021F2D589680F436F22* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30859,7 +30859,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48316
+// Method Definition Index: 48325
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnRefreshPSNAuthTokenResultEvent_m049909707CC680D04460BF044E205474188826FD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCAF3FD2AC8C661F2B2ACA021F2D589680F436F22* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30902,7 +30902,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48317
+// Method Definition Index: 48326
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnRegisterForIOSPushNotificationRequestEvent_m3027F1E452C80D4B00887ADA1F47912F88843AFE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8BDE9FB2DEF7D554E732D3C2DF9F5B6FFDDCD2D5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30945,7 +30945,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48318
+// Method Definition Index: 48327
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnRegisterForIOSPushNotificationRequestEvent_m956172BA9153AA5BBC895D74C53EC01D40E4B3C5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8BDE9FB2DEF7D554E732D3C2DF9F5B6FFDDCD2D5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30988,7 +30988,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48319
+// Method Definition Index: 48328
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnRegisterForIOSPushNotificationResultEvent_mBCAD7ECFF1EBD606CE5DA11CB42259E324AA5731 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t89BBFCCEBC2347C086D2785FCFDB0718E5C24B60* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31031,7 +31031,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48320
+// Method Definition Index: 48329
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnRegisterForIOSPushNotificationResultEvent_mCDA63B6C349A9DB7A77DB75FBD1B4412C0FB1A2C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t89BBFCCEBC2347C086D2785FCFDB0718E5C24B60* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31074,7 +31074,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48321
+// Method Definition Index: 48330
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnRegisterPlayFabUserRequestEvent_m10B1D0A91ED7BB5C2C3E4A8871FF977AB1AF6EFE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tF452D4D95C85A06F5D68E21EDAC9A3BC3CC0F29C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31117,7 +31117,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48322
+// Method Definition Index: 48331
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnRegisterPlayFabUserRequestEvent_m2477C6AACE079DF2C6C369D4B6096E0075E493CE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tF452D4D95C85A06F5D68E21EDAC9A3BC3CC0F29C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31160,7 +31160,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48323
+// Method Definition Index: 48332
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnRegisterPlayFabUserResultEvent_m1218938B497552C2BEA517BFBC3D0F5CDBC67EB9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tADDB5E099F3985F06B6C41793F092894F45057D5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31203,7 +31203,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48324
+// Method Definition Index: 48333
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnRegisterPlayFabUserResultEvent_m47242C94B36EFA2170A6BBDE0C8FDA4F995ED04C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tADDB5E099F3985F06B6C41793F092894F45057D5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31246,7 +31246,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48325
+// Method Definition Index: 48334
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnRemoveContactEmailRequestEvent_m28FE47C63FEADD87E9882B7DD45C789908D8449A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t91BA02FBEFC0E2A1243FA007EFD728228E761DDD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31289,7 +31289,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48326
+// Method Definition Index: 48335
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnRemoveContactEmailRequestEvent_mD17AA006E12EB84436B8D1415415B1031E9867FF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t91BA02FBEFC0E2A1243FA007EFD728228E761DDD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31332,7 +31332,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48327
+// Method Definition Index: 48336
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnRemoveContactEmailResultEvent_m71C70EE65E449C48D37B8DD2C98BEF91085E9374 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t64D4A3B4DCC9061732EFEBA9D59A1E41534A534D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31375,7 +31375,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48328
+// Method Definition Index: 48337
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnRemoveContactEmailResultEvent_m583BEB1FE5EA86D56BCCB2DA30B88B3FB6969E33 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t64D4A3B4DCC9061732EFEBA9D59A1E41534A534D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31418,7 +31418,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48329
+// Method Definition Index: 48338
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnRemoveFriendRequestEvent_mC5B54BB4B67B5BDD47836C00F268E860D4A9545E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t208FC80728C7DEC6A4E9408B319E5409B3325C72* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31461,7 +31461,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48330
+// Method Definition Index: 48339
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnRemoveFriendRequestEvent_mCBF07C69A8F328EDE25CB121B8FCE6CCB2748E67 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t208FC80728C7DEC6A4E9408B319E5409B3325C72* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31504,7 +31504,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48331
+// Method Definition Index: 48340
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnRemoveFriendResultEvent_mAF7B42F034E2F6F59486A83A2DA62D191B686660 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCF36432534362C0169164FDC51CEBCC57C1D54EF* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31547,7 +31547,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48332
+// Method Definition Index: 48341
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnRemoveFriendResultEvent_m033ABA828FD31941DE66B37B5BBAFD336D5746B9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCF36432534362C0169164FDC51CEBCC57C1D54EF* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31590,7 +31590,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48333
+// Method Definition Index: 48342
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnRemoveGenericIDRequestEvent_mCF0AE0BBAF279FA6514311C5675C0B4CB43081C9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tFE728565457EFB31FA20845C26E1A99F6E7919B9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31633,7 +31633,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48334
+// Method Definition Index: 48343
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnRemoveGenericIDRequestEvent_mA6B520E05598322189C300D3BC4E417BB40EC78E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tFE728565457EFB31FA20845C26E1A99F6E7919B9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31676,7 +31676,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48335
+// Method Definition Index: 48344
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnRemoveGenericIDResultEvent_mC4D8BE4AE2E333685D8EF7C50C9A0791AEBC1797 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA1CABBE25D4A6D015947D0433788FBADCA92CA2B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31719,7 +31719,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48336
+// Method Definition Index: 48345
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnRemoveGenericIDResultEvent_m74F97CAD429A7131168BCFE0021AA94FB73941F9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA1CABBE25D4A6D015947D0433788FBADCA92CA2B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31762,7 +31762,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48337
+// Method Definition Index: 48346
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnRemoveSharedGroupMembersRequestEvent_mEB9788B58F951F401FFD5C05E41AFD9410A874F6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tBD7E4E04A2F1DDBC4D5C59020D414133B2B16146* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31805,7 +31805,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48338
+// Method Definition Index: 48347
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnRemoveSharedGroupMembersRequestEvent_m3CE56FFCB21983A59F4BFCE8C8DE1AD663207038 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tBD7E4E04A2F1DDBC4D5C59020D414133B2B16146* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31848,7 +31848,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48339
+// Method Definition Index: 48348
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnRemoveSharedGroupMembersResultEvent_m8040BAE631D79CB3D4E7661E156F39C86950F257 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t304D80C2368C11F4B293C45102B4BCE286B01178* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31891,7 +31891,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48340
+// Method Definition Index: 48349
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnRemoveSharedGroupMembersResultEvent_mE54C78E67AFF4E667497B9D41902D83C06A70B5D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t304D80C2368C11F4B293C45102B4BCE286B01178* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31934,7 +31934,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48341
+// Method Definition Index: 48350
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnReportAdActivityRequestEvent_m214535869B36ABEC5CCD222521187093A9AC65E8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t028E484F51A305C5E815891E0072B5D451D3588B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31977,7 +31977,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48342
+// Method Definition Index: 48351
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnReportAdActivityRequestEvent_m0874FFE0D02AF012350C66B08B275B7A7EC7D975 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t028E484F51A305C5E815891E0072B5D451D3588B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32020,7 +32020,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48343
+// Method Definition Index: 48352
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnReportAdActivityResultEvent_mD6EB6168D609735FC0D0EC69DEFB1E61F6CDCA75 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t288AD013FF1E3D423B4FB5A653458F0BADB7D289* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32063,7 +32063,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48344
+// Method Definition Index: 48353
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnReportAdActivityResultEvent_m452B5D30B11425D05F472B936E3EB3AA2F8B8E42 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t288AD013FF1E3D423B4FB5A653458F0BADB7D289* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32106,7 +32106,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48345
+// Method Definition Index: 48354
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnReportDeviceInfoRequestEvent_mFE76AF2B5086675D36CD6300392042C58B0C46EB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA3FFE74F53A44A8BFBFB9A40A9F82A88216A4BE8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32149,7 +32149,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48346
+// Method Definition Index: 48355
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnReportDeviceInfoRequestEvent_mA7792B8EE6455BFC346F4F190470FCD8C530A22A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA3FFE74F53A44A8BFBFB9A40A9F82A88216A4BE8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32192,7 +32192,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48347
+// Method Definition Index: 48356
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnReportDeviceInfoResultEvent_m3D27C14218D7B59D242636674AED71910C2C9B9E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCAF3FD2AC8C661F2B2ACA021F2D589680F436F22* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32235,7 +32235,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48348
+// Method Definition Index: 48357
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnReportDeviceInfoResultEvent_m51F3314C7C765F898685A780609F87218D5B8619 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCAF3FD2AC8C661F2B2ACA021F2D589680F436F22* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32278,7 +32278,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48349
+// Method Definition Index: 48358
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnReportPlayerRequestEvent_m27BA94D1ADF0D7B3C3179951E9F2540025A80EE1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t89432FFC5EEF87D7F352838B621B3C51472DF6EA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32321,7 +32321,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48350
+// Method Definition Index: 48359
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnReportPlayerRequestEvent_mD60B2DD5E129311DD33016E858B1AD9E02B13061 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t89432FFC5EEF87D7F352838B621B3C51472DF6EA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32364,7 +32364,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48351
+// Method Definition Index: 48360
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnReportPlayerResultEvent_m270FB577655F0960628F7921CB5A4BC21E5C2E46 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7859C9E4DB16A7506F5EB4F0ED9F04476F1B082E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32407,7 +32407,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48352
+// Method Definition Index: 48361
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnReportPlayerResultEvent_m888EA3BCDBF3E2253B545FD49362F3A38453B38F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7859C9E4DB16A7506F5EB4F0ED9F04476F1B082E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32450,7 +32450,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48353
+// Method Definition Index: 48362
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnRestoreIOSPurchasesRequestEvent_m147C2DBFF34CF957E31C3322CB57891C1194187D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t57990AB5CCFDD953ACBC3913AC55A7FD45D52A42* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32493,7 +32493,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48354
+// Method Definition Index: 48363
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnRestoreIOSPurchasesRequestEvent_m96C3D8B5054149BE19DABFB523CE8EE01CC88C42 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t57990AB5CCFDD953ACBC3913AC55A7FD45D52A42* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32536,7 +32536,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48355
+// Method Definition Index: 48364
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnRestoreIOSPurchasesResultEvent_m5D1047BEEE37D940983F98F3F030311A93C95026 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t6123227A9A35C83F88911ABCF34D1CEA2132F55C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32579,7 +32579,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48356
+// Method Definition Index: 48365
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnRestoreIOSPurchasesResultEvent_mCF90ECC4C93C9D2BEE7C23EF6CA1D5B30CE3AB53 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t6123227A9A35C83F88911ABCF34D1CEA2132F55C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32622,7 +32622,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48357
+// Method Definition Index: 48366
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnRewardAdActivityRequestEvent_m03992AAB9FCF192FA895B1530F30D71F5EEEC02B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE6D15236DB29C8488CA614D643F92EB426E3091C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32665,7 +32665,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48358
+// Method Definition Index: 48367
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnRewardAdActivityRequestEvent_m81EBA30874B29C1906A7884DD59CE2D232733F07 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE6D15236DB29C8488CA614D643F92EB426E3091C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32708,7 +32708,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48359
+// Method Definition Index: 48368
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnRewardAdActivityResultEvent_m651ED663EC8555BFE024EFDAD4B365D93323FCA5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1D17770C16F58DCDE294A68E5C1C23E987C4A509* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32751,7 +32751,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48360
+// Method Definition Index: 48369
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnRewardAdActivityResultEvent_m7C9256D7A8D66DC6F876A061F954CD7AAFDE17DE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1D17770C16F58DCDE294A68E5C1C23E987C4A509* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32794,7 +32794,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48361
+// Method Definition Index: 48370
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnSendAccountRecoveryEmailRequestEvent_mFB703B13E76C022952058DD779F579CE03A3E216 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB6078D6FC396840AF6A1BD31BD0F3D309D464449* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32837,7 +32837,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48362
+// Method Definition Index: 48371
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnSendAccountRecoveryEmailRequestEvent_m15D5B8FCF261DBBD8FA83E49B262537DD2E7718E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB6078D6FC396840AF6A1BD31BD0F3D309D464449* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32880,7 +32880,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48363
+// Method Definition Index: 48372
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnSendAccountRecoveryEmailResultEvent_m6880C0522DDA45B1DFDF8D3399568C2357B84C74 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tFD865D57BF288D56C252948FD64E25A110CAA073* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32923,7 +32923,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48364
+// Method Definition Index: 48373
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnSendAccountRecoveryEmailResultEvent_m0BF0EBA43E9820CABBF4B0777A95777723BC38E2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tFD865D57BF288D56C252948FD64E25A110CAA073* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32966,7 +32966,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48365
+// Method Definition Index: 48374
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnSetFriendTagsRequestEvent_mBA7D8B0E68C6F826F7EA847C4FB62194C33BDA4B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA343E51934F1BE7058E2465FCBE9E9FF66E5FE52* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33009,7 +33009,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48366
+// Method Definition Index: 48375
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnSetFriendTagsRequestEvent_mF9BDD25C91303DABCD072A2FDC8B64E1B735032C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA343E51934F1BE7058E2465FCBE9E9FF66E5FE52* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33052,7 +33052,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48367
+// Method Definition Index: 48376
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnSetFriendTagsResultEvent_mA4D8606E302FFFB092E99FEC6618F4AF5A5953A9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF6D81824291EE12B2D6621BEA9F70DB0206FCAB7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33095,7 +33095,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48368
+// Method Definition Index: 48377
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnSetFriendTagsResultEvent_m39B5B4220D74D2A6B3D89EBD4490649904C2C391 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF6D81824291EE12B2D6621BEA9F70DB0206FCAB7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33138,7 +33138,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48369
+// Method Definition Index: 48378
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnSetPlayerSecretRequestEvent_m4D27BF7286E5268F0C5D3D4BE25C8A55AC1B8125 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t668FBB8DA9D8CAA715528378C8C9B0F780D1724A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33181,7 +33181,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48370
+// Method Definition Index: 48379
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnSetPlayerSecretRequestEvent_mF5175EBD55CB475EE0A01D7380AE8AE2F677EE53 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t668FBB8DA9D8CAA715528378C8C9B0F780D1724A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33224,7 +33224,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48371
+// Method Definition Index: 48380
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnSetPlayerSecretResultEvent_mF869ED7B070CD0E2BF5A29B72307B9FC6FF5C6DD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t9100F64AD3387838B6841B000EBC0036483C5AC6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33267,7 +33267,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48372
+// Method Definition Index: 48381
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnSetPlayerSecretResultEvent_m1E422B0BDD771B4101F9E768B07F06D92FA85D8B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t9100F64AD3387838B6841B000EBC0036483C5AC6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33310,7 +33310,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48373
+// Method Definition Index: 48382
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnStartPurchaseRequestEvent_m6BEDAF0F15FBD6820E33A2B5DFDC900E518E319F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3044CAFC169F6597B8F2757E02CA6ECDEFCC7559* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33353,7 +33353,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48374
+// Method Definition Index: 48383
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnStartPurchaseRequestEvent_mF1B7B427F351185F553D03C921C01A66E456B07A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3044CAFC169F6597B8F2757E02CA6ECDEFCC7559* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33396,7 +33396,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48375
+// Method Definition Index: 48384
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnStartPurchaseResultEvent_mAC1CB2C4845BE9D2AA5CDE697356C7E065EDCBA7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE20D3F1A8DB9C6148DF91128B36967BC88EC0D9F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33439,7 +33439,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48376
+// Method Definition Index: 48385
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnStartPurchaseResultEvent_m62ED5BEA4302ABD147493DCF622ADA6FC9A1DFCE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE20D3F1A8DB9C6148DF91128B36967BC88EC0D9F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33482,7 +33482,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48377
+// Method Definition Index: 48386
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnSubtractUserVirtualCurrencyRequestEvent_m8CB1F4AA6694114B29590739BD5CF6D0B7F48570 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t26C77EC00A306C1FA43DF3D3C4235DEC958141FD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33525,7 +33525,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48378
+// Method Definition Index: 48387
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnSubtractUserVirtualCurrencyRequestEvent_m7B941842B4BA0E3E88AD742601F7555318ACDBB3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t26C77EC00A306C1FA43DF3D3C4235DEC958141FD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33568,7 +33568,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48379
+// Method Definition Index: 48388
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnSubtractUserVirtualCurrencyResultEvent_m716CB0EB9BA191011F9A93C141A8884E936F1282 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t62E05008006929197C5495D70831189CA9A21E9C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33611,7 +33611,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48380
+// Method Definition Index: 48389
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnSubtractUserVirtualCurrencyResultEvent_m2C7CBD58059ACDEB53743689C71D3C635BC5EDBC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t62E05008006929197C5495D70831189CA9A21E9C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33654,7 +33654,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48381
+// Method Definition Index: 48390
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkAndroidDeviceIDRequestEvent_m8F63D966FAFD22267146109A86D837E8BFAF6423 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAE25AD770610508ADC1365D9EE3ADA595DC6DAAC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33697,7 +33697,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48382
+// Method Definition Index: 48391
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkAndroidDeviceIDRequestEvent_m47D421F97E02B1F1C4F0B22D2BE26F76E66B2ED1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAE25AD770610508ADC1365D9EE3ADA595DC6DAAC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33740,7 +33740,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48383
+// Method Definition Index: 48392
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkAndroidDeviceIDResultEvent_m61E405371B3CEA8ABD2C580BFE8AB7ADACDAD828 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF20568B95D6DF39DD25D04970E5F1F7858542786* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33783,7 +33783,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48384
+// Method Definition Index: 48393
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkAndroidDeviceIDResultEvent_mA121E385DB27BB761D4952E516C1DEF419E5488F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF20568B95D6DF39DD25D04970E5F1F7858542786* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33826,7 +33826,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48385
+// Method Definition Index: 48394
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkAppleRequestEvent_m67301B8FA26040419B252CFCF503A24FEB946A01 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA4618CCABFBFD4DA704B430E7F769BD9B7FD3B4E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33869,7 +33869,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48386
+// Method Definition Index: 48395
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkAppleRequestEvent_m825F7A109DB79CA358D69ED94F24871B025B3C05 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA4618CCABFBFD4DA704B430E7F769BD9B7FD3B4E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33912,7 +33912,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48387
+// Method Definition Index: 48396
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkAppleResultEvent_m3A11F793763189173E620F922A68C1706EC8482C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCAF3FD2AC8C661F2B2ACA021F2D589680F436F22* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33955,7 +33955,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48388
+// Method Definition Index: 48397
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkAppleResultEvent_mF0843555F34BC720299D5B0214828E40461CD7D0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCAF3FD2AC8C661F2B2ACA021F2D589680F436F22* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33998,7 +33998,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48389
+// Method Definition Index: 48398
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkBattleNetAccountRequestEvent_m44FEFB915CE6F7D508212C323BFF924EB3492797 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t234B9E0EB25FDB837C402062E1EC8F07CF77B421* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34041,7 +34041,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48390
+// Method Definition Index: 48399
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkBattleNetAccountRequestEvent_m1C3F15589E53E9F5F0C940FDD640F5E7163A233D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t234B9E0EB25FDB837C402062E1EC8F07CF77B421* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34084,7 +34084,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48391
+// Method Definition Index: 48400
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkBattleNetAccountResultEvent_mAF859C9C98E47454C6ED021346182ABA77075F25 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCAF3FD2AC8C661F2B2ACA021F2D589680F436F22* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34127,7 +34127,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48392
+// Method Definition Index: 48401
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkBattleNetAccountResultEvent_mC464EB482D503AF4A96E1680BB8B218222206404 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCAF3FD2AC8C661F2B2ACA021F2D589680F436F22* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34170,7 +34170,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48393
+// Method Definition Index: 48402
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkCustomIDRequestEvent_m75088BB579DDA8707EFDD2AA1A92895C19579578 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB5C84CD7F6DE86E475155B28E469290630D9551D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34213,7 +34213,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48394
+// Method Definition Index: 48403
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkCustomIDRequestEvent_m663FB7E9E2F9E33BA541E9251FA43B8EA3CD2667 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB5C84CD7F6DE86E475155B28E469290630D9551D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34256,7 +34256,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48395
+// Method Definition Index: 48404
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkCustomIDResultEvent_m18790C12C0B4C64E95F4AAC71D37F83C07FB2A6E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t748789D3DD7A5E6918CDA7759D8762A189C8FBB4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34299,7 +34299,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48396
+// Method Definition Index: 48405
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkCustomIDResultEvent_mC81A0F91696BBE23FA3386D848664077A3A07846 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t748789D3DD7A5E6918CDA7759D8762A189C8FBB4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34342,7 +34342,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48397
+// Method Definition Index: 48406
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkFacebookAccountRequestEvent_mB136384CA251378853CF3E574B9019CE692AFC4A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD818408C6B9045038FA02C6180E38038205C5BF6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34385,7 +34385,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48398
+// Method Definition Index: 48407
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkFacebookAccountRequestEvent_m395ACB358F971A3C900C965C6E3F7643F0A2E1A1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD818408C6B9045038FA02C6180E38038205C5BF6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34428,7 +34428,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48399
+// Method Definition Index: 48408
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkFacebookAccountResultEvent_mCE1F44186688E7A8B0C34208664C94EC7C4E3464 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tDA70068B26231723314C9C2BED57C684830B6E26* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34471,7 +34471,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48400
+// Method Definition Index: 48409
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkFacebookAccountResultEvent_mB47A59FD41D9DAFB70479E2256B26DC22C79B102 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tDA70068B26231723314C9C2BED57C684830B6E26* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34514,7 +34514,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48401
+// Method Definition Index: 48410
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkFacebookInstantGamesIdRequestEvent_m20928FAD68828B08788E9ADD8EA30318F8F30ADC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9FCAC14928303D8240C0F9FDC392AF8952C9CB82* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34557,7 +34557,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48402
+// Method Definition Index: 48411
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkFacebookInstantGamesIdRequestEvent_m0A0121C8BD7F12F5B1FBDF9BC106261D17873DE7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9FCAC14928303D8240C0F9FDC392AF8952C9CB82* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34600,7 +34600,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48403
+// Method Definition Index: 48412
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkFacebookInstantGamesIdResultEvent_m6000E69C7F1F54EC9D9EC6F71B6FAACE9705EDBB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tDA7AD1B2037965F8F4B00B2278A9F595D64F54B0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34643,7 +34643,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48404
+// Method Definition Index: 48413
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkFacebookInstantGamesIdResultEvent_mD026A078EAC803808B98C9E5ABD5DDC4BCF28584 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tDA7AD1B2037965F8F4B00B2278A9F595D64F54B0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34686,7 +34686,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48405
+// Method Definition Index: 48414
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkGameCenterAccountRequestEvent_m8A104B4DB8FB172F0E5035A4EF6D8EF5BF17AF12 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t2A152CAC62A2024F6854FEB41D3868A6AC1755F1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34729,7 +34729,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48406
+// Method Definition Index: 48415
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkGameCenterAccountRequestEvent_m773216A64D1415F751953DAD780503690337A8B3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t2A152CAC62A2024F6854FEB41D3868A6AC1755F1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34772,7 +34772,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48407
+// Method Definition Index: 48416
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkGameCenterAccountResultEvent_m4A40538A04BF6D47517D3EDE7DECE4F31005F728 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t3F09E9A60572DB0EDAB6A6FC2DAB52FDAB72BD3C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34815,7 +34815,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48408
+// Method Definition Index: 48417
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkGameCenterAccountResultEvent_m1D93E9A10F213F6FB717D814066E1F8847A4BCD2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t3F09E9A60572DB0EDAB6A6FC2DAB52FDAB72BD3C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34858,7 +34858,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48409
+// Method Definition Index: 48418
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkGoogleAccountRequestEvent_mCE5804F1AE5E60F1C336040C555491D59F73D7A6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3C9D26D6D75716CC1DB49B510C6E64D05395475B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34901,7 +34901,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48410
+// Method Definition Index: 48419
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkGoogleAccountRequestEvent_mA28389E61A93ED21215069FA9357481B824FE5E7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3C9D26D6D75716CC1DB49B510C6E64D05395475B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34944,7 +34944,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48411
+// Method Definition Index: 48420
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkGoogleAccountResultEvent_mE51D1036BB43EF30A329F40029CF859EB8C38A5D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t0CEFC629CDA87559395ADC34DC42BB91B2BDF69D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34987,7 +34987,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48412
+// Method Definition Index: 48421
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkGoogleAccountResultEvent_mABDD47944FA415558786B16C072803AB22A0CF18 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t0CEFC629CDA87559395ADC34DC42BB91B2BDF69D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35030,7 +35030,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48413
+// Method Definition Index: 48422
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkGooglePlayGamesServicesAccountRequestEvent_mD46F7EE30BB2ED360711A22E9ED4030F3916CC89 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA3D475965EB51376EACC2A10B332F0FB419E4423* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35073,7 +35073,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48414
+// Method Definition Index: 48423
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkGooglePlayGamesServicesAccountRequestEvent_m0F3CD5B5F1385F549A2D79597C658219D57E6EFB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA3D475965EB51376EACC2A10B332F0FB419E4423* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35116,7 +35116,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48415
+// Method Definition Index: 48424
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkGooglePlayGamesServicesAccountResultEvent_m646F62368573160C64137071CFF46CE42D332AC6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t51A0A23940665663960E737DB142CEAD3FE227DA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35159,7 +35159,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48416
+// Method Definition Index: 48425
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkGooglePlayGamesServicesAccountResultEvent_mCD9FFE5344E73423900990DCCD2329A37CE41367 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t51A0A23940665663960E737DB142CEAD3FE227DA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35202,7 +35202,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48417
+// Method Definition Index: 48426
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkIOSDeviceIDRequestEvent_mFD1B98D7EFC0A797FD03FE417A207B2483100430 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE6A63071ACE5AE9642D0356D7423AB8B532954B3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35245,7 +35245,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48418
+// Method Definition Index: 48427
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkIOSDeviceIDRequestEvent_m50DC3596BFFD679229EE8EECCFED2A620FED7C04 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE6A63071ACE5AE9642D0356D7423AB8B532954B3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35288,7 +35288,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48419
+// Method Definition Index: 48428
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkIOSDeviceIDResultEvent_mC70E05620FF573855DA5F09F0A0E8E6ACF0598D5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t15BA8459E2966F7C4FD929AB649339BB372078B5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35331,7 +35331,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48420
+// Method Definition Index: 48429
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkIOSDeviceIDResultEvent_m71A0517714920055B76377F0FB68991B5CAC8BCE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t15BA8459E2966F7C4FD929AB649339BB372078B5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35374,7 +35374,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48421
+// Method Definition Index: 48430
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkKongregateRequestEvent_m036C148880FC194B31FF70CB13E6B8BD9091859B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA7579972570C8E598E0ABAE569A9678A9922DD9A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35417,7 +35417,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48422
+// Method Definition Index: 48431
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkKongregateRequestEvent_m345D79637DF2F52399E47D7E378C6B2D1ACB87C8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA7579972570C8E598E0ABAE569A9678A9922DD9A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35460,7 +35460,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48423
+// Method Definition Index: 48432
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkKongregateResultEvent_m4FE0E927872719EAA31C2400C51E45AEA0548520 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t9A9BDA980C7B938E3655EE9D4C3FEB77E4D8AD41* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35503,7 +35503,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48424
+// Method Definition Index: 48433
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkKongregateResultEvent_m9748E1C4A214694B3552F4970BA84382735DECC4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t9A9BDA980C7B938E3655EE9D4C3FEB77E4D8AD41* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35546,7 +35546,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48425
+// Method Definition Index: 48434
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkNintendoServiceAccountRequestEvent_mB51BE4A8492EE820517C134A2174A603843F26A5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t2CAAE165D9BDFE5F39018E2D336AF34E5CF6A9AE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35589,7 +35589,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48426
+// Method Definition Index: 48435
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkNintendoServiceAccountRequestEvent_mB04932C09C722008CCB676428C26489476CDDACE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t2CAAE165D9BDFE5F39018E2D336AF34E5CF6A9AE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35632,7 +35632,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48427
+// Method Definition Index: 48436
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkNintendoServiceAccountResultEvent_mB62608B1B64E31BADD3B80B1F9516F7D2F2B71FC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCAF3FD2AC8C661F2B2ACA021F2D589680F436F22* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35675,7 +35675,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48428
+// Method Definition Index: 48437
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkNintendoServiceAccountResultEvent_mEEFBD67ECD104A8FBCC512F0D60AA7B0F913E72C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCAF3FD2AC8C661F2B2ACA021F2D589680F436F22* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35718,7 +35718,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48429
+// Method Definition Index: 48438
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkNintendoSwitchDeviceIdRequestEvent_m7F74EE2E0A6A86FFA56BA3862B59E87EF0991220 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t871FAB6D8FA2C783339018F9905ED93F955778AF* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35761,7 +35761,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48430
+// Method Definition Index: 48439
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkNintendoSwitchDeviceIdRequestEvent_m7D2B2FB4A8B5411728A68BACFA1532E54E60D88C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t871FAB6D8FA2C783339018F9905ED93F955778AF* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35804,7 +35804,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48431
+// Method Definition Index: 48440
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkNintendoSwitchDeviceIdResultEvent_m858717D466285E65C6DE2A749E4B6EDD94211C5A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCF673704771D76CD4CB51CD741035B512491676A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35847,7 +35847,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48432
+// Method Definition Index: 48441
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkNintendoSwitchDeviceIdResultEvent_m9BE59BCE946B19306C65A3AE7338296F88A1C5C2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCF673704771D76CD4CB51CD741035B512491676A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35890,7 +35890,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48433
+// Method Definition Index: 48442
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkOpenIdConnectRequestEvent_m0EB628DBD7B03C173CC582A7914E67D2F7A853BB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA63C34E7F6BB4C90F8DBA4E5ED321EF8B2BA78E7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35933,7 +35933,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48434
+// Method Definition Index: 48443
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkOpenIdConnectRequestEvent_mB76C050A3ADFD9828C7687830085416AC3A1981B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA63C34E7F6BB4C90F8DBA4E5ED321EF8B2BA78E7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35976,7 +35976,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48435
+// Method Definition Index: 48444
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkOpenIdConnectResultEvent_mCADD81041BA4AFBD1463F5B638B56F556E89F056 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCAF3FD2AC8C661F2B2ACA021F2D589680F436F22* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36019,7 +36019,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48436
+// Method Definition Index: 48445
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkOpenIdConnectResultEvent_mFC1B6E82C9610C39046615B3FB9B2EA4663911E1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCAF3FD2AC8C661F2B2ACA021F2D589680F436F22* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36062,7 +36062,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48437
+// Method Definition Index: 48446
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkPSNAccountRequestEvent_mEEA156D2A752639390C632C7A7D7A18003E99401 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t502EA1D3F174E783EE6AE0555EC9A4FA7D4E9CA1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36105,7 +36105,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48438
+// Method Definition Index: 48447
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkPSNAccountRequestEvent_m3B49A49295C7BB8013C9F69FA6338AF4BA773F20 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t502EA1D3F174E783EE6AE0555EC9A4FA7D4E9CA1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36148,7 +36148,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48439
+// Method Definition Index: 48448
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkPSNAccountResultEvent_mFABD095A874A0FF3186310A6FB3977AAA90684CD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF86C895C81470B6E80F359D6B2B7558250D1D12D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36191,7 +36191,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48440
+// Method Definition Index: 48449
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkPSNAccountResultEvent_mF4C06BE1AEFE8EA22E6CE25235E6494F784D27BC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF86C895C81470B6E80F359D6B2B7558250D1D12D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36234,7 +36234,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48441
+// Method Definition Index: 48450
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkSteamAccountRequestEvent_mE4792195483B6FC93F96A82B9FE42467EB715FA6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB8E4DDAC89CC9BD4E2F6DF8B92FCE460676771EE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36277,7 +36277,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48442
+// Method Definition Index: 48451
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkSteamAccountRequestEvent_mE774AA785143366529BD3005E182EEF6BDD3BF64 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB8E4DDAC89CC9BD4E2F6DF8B92FCE460676771EE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36320,7 +36320,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48443
+// Method Definition Index: 48452
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkSteamAccountResultEvent_mA7D2F1328414857F9CA37B0F01D506FE0D7921E7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t9CB6080831CB836E6FD0636B8E88D2C12CA67D64* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36363,7 +36363,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48444
+// Method Definition Index: 48453
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkSteamAccountResultEvent_m8D98663CCDDF29100F2471ED129F2ECD0E6247E6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t9CB6080831CB836E6FD0636B8E88D2C12CA67D64* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36406,7 +36406,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48445
+// Method Definition Index: 48454
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkTwitchRequestEvent_mAC6230C181957A03F2AAB2429F4A7B56A0B75518 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t666B669027F9E000DD824CEB31688A976EA72FAC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36449,7 +36449,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48446
+// Method Definition Index: 48455
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkTwitchRequestEvent_mD8D1534A91A66FA3368E6FE1E97D827CCE0A531E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t666B669027F9E000DD824CEB31688A976EA72FAC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36492,7 +36492,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48447
+// Method Definition Index: 48456
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkTwitchResultEvent_mC79631B56C5E9930FCFCC4357E6CE2D66CE492B6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tDB771AD7057FBC9128030835B2A6546D91BC9AE9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36535,7 +36535,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48448
+// Method Definition Index: 48457
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkTwitchResultEvent_m9F283CA0F1EA5D030AD0CB26D72E6904D13614D1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tDB771AD7057FBC9128030835B2A6546D91BC9AE9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36578,7 +36578,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48449
+// Method Definition Index: 48458
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkXboxAccountRequestEvent_m82A5359AD40025057978A303823B9CC6A6762007 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t613FC06924078D392431927E26F30BFA5C8C0FFA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36621,7 +36621,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48450
+// Method Definition Index: 48459
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkXboxAccountRequestEvent_m65FA9BFEA65961CF03005D62DD7EDE8052B4E7CE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t613FC06924078D392431927E26F30BFA5C8C0FFA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36664,7 +36664,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48451
+// Method Definition Index: 48460
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlinkXboxAccountResultEvent_mE4C6B9AEB36652AEBD434C344763FDD74DE13FF9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1F7C9527AD60358861DAC86AA23DC75A046D77E5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36707,7 +36707,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48452
+// Method Definition Index: 48461
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlinkXboxAccountResultEvent_m3BFE6095C93929EA45DFE4563897C55B64A47CF5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1F7C9527AD60358861DAC86AA23DC75A046D77E5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36750,7 +36750,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48453
+// Method Definition Index: 48462
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlockContainerInstanceRequestEvent_mB3302930F5DB191377E857E2CCA2A4660413BE41 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t97FE8B913EED919DAD23A1A60446D6740B11C5A4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36793,7 +36793,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48454
+// Method Definition Index: 48463
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlockContainerInstanceRequestEvent_m29EEEE2259DFDE96DA542A4B8A241CC4B564B6B8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t97FE8B913EED919DAD23A1A60446D6740B11C5A4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36836,7 +36836,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48455
+// Method Definition Index: 48464
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlockContainerInstanceResultEvent_m6FA26076E4492E1E95E4535C0C8FD455DF2020F4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE895B85E3E55C9BBC701478AC1B0425834B8E2EE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36879,7 +36879,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48456
+// Method Definition Index: 48465
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlockContainerInstanceResultEvent_mCDC3A393EC4D723C2E013D84CF30F65CA6BC095D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE895B85E3E55C9BBC701478AC1B0425834B8E2EE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36922,7 +36922,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48457
+// Method Definition Index: 48466
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlockContainerItemRequestEvent_mA204B19760ECA9061D2C4DCE2D6D6DBA339157E6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t079A51B8EC1E77F536397968F42F61B9B1D708D6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36965,7 +36965,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48458
+// Method Definition Index: 48467
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlockContainerItemRequestEvent_m73A774E80878B77B784C024699C9ED23DEC66E2E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t079A51B8EC1E77F536397968F42F61B9B1D708D6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37008,7 +37008,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48459
+// Method Definition Index: 48468
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUnlockContainerItemResultEvent_m84BDFFC39BAA468E111AB9E46A673989A9F7F54D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE895B85E3E55C9BBC701478AC1B0425834B8E2EE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37051,7 +37051,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48460
+// Method Definition Index: 48469
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUnlockContainerItemResultEvent_mF4A61FAF2727B9BE7E9B38FFDE714381E4373906 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE895B85E3E55C9BBC701478AC1B0425834B8E2EE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37094,7 +37094,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48461
+// Method Definition Index: 48470
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUpdateAvatarUrlRequestEvent_m3E28C2FECC3EF282B2E0C07A3938B676991A97E7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA761009CDB2CF53806B58908C0D24BB7ED3895FD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37137,7 +37137,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48462
+// Method Definition Index: 48471
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUpdateAvatarUrlRequestEvent_m5D5D1172FA5826D926F40FF25F90D0D763FED8E2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA761009CDB2CF53806B58908C0D24BB7ED3895FD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37180,7 +37180,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48463
+// Method Definition Index: 48472
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUpdateAvatarUrlResultEvent_mD5294F052DE42BC1985F90D381CCBBB1A3F5C6B0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCAF3FD2AC8C661F2B2ACA021F2D589680F436F22* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37223,7 +37223,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48464
+// Method Definition Index: 48473
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUpdateAvatarUrlResultEvent_m163BBA26549D075E1DE4B598901C1661AEE0A47C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCAF3FD2AC8C661F2B2ACA021F2D589680F436F22* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37266,7 +37266,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48465
+// Method Definition Index: 48474
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUpdateCharacterDataRequestEvent_m20D8548B34BAEF579967FC208CB962FE91EADA98 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tDDAF72DAAF8453A549DC7AB763B39ADA253D9831* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37309,7 +37309,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48466
+// Method Definition Index: 48475
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUpdateCharacterDataRequestEvent_m8F86BAB837D8F38D3E6B0CDB6A30708CB62C369D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tDDAF72DAAF8453A549DC7AB763B39ADA253D9831* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37352,7 +37352,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48467
+// Method Definition Index: 48476
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUpdateCharacterDataResultEvent_mBFA5330DA7E8E2E7D00C29042E1DA091EFB04C91 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tDEBA8EA8F9765E35248F0CC0C89D2F4CC7F310F1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37395,7 +37395,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48468
+// Method Definition Index: 48477
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUpdateCharacterDataResultEvent_m49D911F9E4428FC26FC14457F43044EF841A366C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tDEBA8EA8F9765E35248F0CC0C89D2F4CC7F310F1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37438,7 +37438,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48469
+// Method Definition Index: 48478
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUpdateCharacterStatisticsRequestEvent_m9AA9397E84B39564700DCD45E6B34EC47EBF1C3B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5E2ED2DD75AAAADE24D9A121FB5219994188CA60* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37481,7 +37481,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48470
+// Method Definition Index: 48479
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUpdateCharacterStatisticsRequestEvent_m576520B8FBC85814E2E6075A404CD4D21BE27E4F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5E2ED2DD75AAAADE24D9A121FB5219994188CA60* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37524,7 +37524,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48471
+// Method Definition Index: 48480
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUpdateCharacterStatisticsResultEvent_m1D8608BA3F5A703E70C1EB93EE020F59D7864541 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t5EB1FE396A9C94EF6F1AB996219FC16631B314A7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37567,7 +37567,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48472
+// Method Definition Index: 48481
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUpdateCharacterStatisticsResultEvent_m02E84CB8B6CC9D3344C6E5F15924A2C66DC965CF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t5EB1FE396A9C94EF6F1AB996219FC16631B314A7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37610,7 +37610,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48473
+// Method Definition Index: 48482
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUpdatePlayerCustomPropertiesRequestEvent_mAC60502F40512DC660F9DB68069999362443C2EA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE958CDBC32F8E92B3BF8DFF490613AFC3B970369* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37653,7 +37653,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48474
+// Method Definition Index: 48483
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUpdatePlayerCustomPropertiesRequestEvent_m8C8DEA4A06EF6A1F319CB8D1B9DCBF7BB05F441E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE958CDBC32F8E92B3BF8DFF490613AFC3B970369* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37696,7 +37696,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48475
+// Method Definition Index: 48484
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUpdatePlayerCustomPropertiesResultEvent_mF156A3B2D9BE3B16BC73108637C8C01FDF38ACD6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t998C1925874DCF3FD313DC996D1403119D881630* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37739,7 +37739,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48476
+// Method Definition Index: 48485
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUpdatePlayerCustomPropertiesResultEvent_m8FF5F8A808B365F083A20F427C0AC3A75E4C15EE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t998C1925874DCF3FD313DC996D1403119D881630* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37782,7 +37782,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48477
+// Method Definition Index: 48486
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUpdatePlayerStatisticsRequestEvent_mE8A5821F278BD1ECB1661B60F8DBC4211BCD2FFB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t108CB1A5734C5A431D9514EBE15CC0EBFFF5D278* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37825,7 +37825,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48478
+// Method Definition Index: 48487
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUpdatePlayerStatisticsRequestEvent_m72214713D08D51CE23C6A97040205E4B506F53CA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t108CB1A5734C5A431D9514EBE15CC0EBFFF5D278* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37868,7 +37868,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48479
+// Method Definition Index: 48488
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUpdatePlayerStatisticsResultEvent_mE699F734ABAC94B28BB3DFB90C8948F9703F6F5E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA7AFDE8A1CCBF17FC299C4F4DA7CF0777420410F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37911,7 +37911,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48480
+// Method Definition Index: 48489
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUpdatePlayerStatisticsResultEvent_m7672E64F4CE5C43C222CD8A90462AD398D725B62 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA7AFDE8A1CCBF17FC299C4F4DA7CF0777420410F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37954,7 +37954,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48481
+// Method Definition Index: 48490
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUpdateSharedGroupDataRequestEvent_m7F30A397824C81AA1A4EC52ADBE0FB88D3AB5466 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB24C43F4A1AC5A1A8B8589DD24BCF078C27564AF* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37997,7 +37997,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48482
+// Method Definition Index: 48491
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUpdateSharedGroupDataRequestEvent_mE971F97BD348DCD690C87A0BFBC014CE53D5499C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB24C43F4A1AC5A1A8B8589DD24BCF078C27564AF* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38040,7 +38040,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48483
+// Method Definition Index: 48492
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUpdateSharedGroupDataResultEvent_mBFEEA930CF604BCE0F70F34EC7516BBCDC6C113B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tEE76C62A491F3FEFF4ACDBCE643AA5AC9602CF58* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38083,7 +38083,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48484
+// Method Definition Index: 48493
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUpdateSharedGroupDataResultEvent_m3720E322D229EC852FF7B4755D9E788C1A03B6C2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tEE76C62A491F3FEFF4ACDBCE643AA5AC9602CF58* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38126,7 +38126,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48485
+// Method Definition Index: 48494
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUpdateUserDataRequestEvent_mED041F95809EBE02C9F9BC45B14C7342E799BCEF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tFB9CA2DE47BC890CA238C2819E483328C912815E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38169,7 +38169,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48486
+// Method Definition Index: 48495
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUpdateUserDataRequestEvent_m417FBAED3896E338F23BFDD9EA90A6BCC63283EE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tFB9CA2DE47BC890CA238C2819E483328C912815E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38212,7 +38212,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48487
+// Method Definition Index: 48496
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUpdateUserDataResultEvent_mD4B90619A983E43AB2037B1E4C35D2E0CF3D0B9A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4D7599DE010D2E172ED11402BF5CADFA985DA92E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38255,7 +38255,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48488
+// Method Definition Index: 48497
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUpdateUserDataResultEvent_mACDAEBD1180CFEE04776F0C2A048F51B77477EE0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4D7599DE010D2E172ED11402BF5CADFA985DA92E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38298,7 +38298,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48489
+// Method Definition Index: 48498
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUpdateUserPublisherDataRequestEvent_m6E5C35C4FEE51D164A12B52DFC20B23C42F0DCD5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tFB9CA2DE47BC890CA238C2819E483328C912815E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38341,7 +38341,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48490
+// Method Definition Index: 48499
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUpdateUserPublisherDataRequestEvent_m8F6FF0ADC20A7F21DDEF74B7AFA61A398594BEED (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tFB9CA2DE47BC890CA238C2819E483328C912815E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38384,7 +38384,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48491
+// Method Definition Index: 48500
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUpdateUserPublisherDataResultEvent_m92CE36FDA401F080BB24AC3252CE989C80732675 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4D7599DE010D2E172ED11402BF5CADFA985DA92E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38427,7 +38427,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48492
+// Method Definition Index: 48501
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUpdateUserPublisherDataResultEvent_m29A2253D97B96DDAAEE132BA4FC59A81F2BABA82 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4D7599DE010D2E172ED11402BF5CADFA985DA92E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38470,7 +38470,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48493
+// Method Definition Index: 48502
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUpdateUserTitleDisplayNameRequestEvent_m27EB9EE499877A11AF8720EB6B901475B7159A28 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t373D06E05CEF9FA9F1AEAF1C16364EEFDF88CE76* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38513,7 +38513,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48494
+// Method Definition Index: 48503
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUpdateUserTitleDisplayNameRequestEvent_mCEDA5B32F4EC07E6796D2BD43A3ACD42E110D8CF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t373D06E05CEF9FA9F1AEAF1C16364EEFDF88CE76* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38556,7 +38556,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48495
+// Method Definition Index: 48504
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnUpdateUserTitleDisplayNameResultEvent_mCE51954D56D3D928B09420BD110B9E13D907BFD4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC544A49887488A1863537825F06712B8CEF84270* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38599,7 +38599,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48496
+// Method Definition Index: 48505
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnUpdateUserTitleDisplayNameResultEvent_m535A325503937E3A2364526D8224FB538A65B6F0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC544A49887488A1863537825F06712B8CEF84270* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38642,7 +38642,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48497
+// Method Definition Index: 48506
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnValidateAmazonIAPReceiptRequestEvent_mB3601F3BA4CA49AE2C3D7881CA9BA17E107F5EB6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t7D9F1996594F8E93743C25EC111E4DFA795C8443* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38685,7 +38685,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48498
+// Method Definition Index: 48507
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnValidateAmazonIAPReceiptRequestEvent_m922C6B0DB6124B2BE9135AE5755B4DCA62D242FC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t7D9F1996594F8E93743C25EC111E4DFA795C8443* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38728,7 +38728,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48499
+// Method Definition Index: 48508
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnValidateAmazonIAPReceiptResultEvent_mF424A3AA42AF9B9C859638CD43DA70AA51897A60 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF6B572C21844B06FE814866873065F1B6F81E005* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38771,7 +38771,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48500
+// Method Definition Index: 48509
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnValidateAmazonIAPReceiptResultEvent_mBA42AC433EFACABF9A0C7DF4283274B73EEE90A6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF6B572C21844B06FE814866873065F1B6F81E005* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38814,7 +38814,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48501
+// Method Definition Index: 48510
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnValidateGooglePlayPurchaseRequestEvent_m1928FAA4AF772E725DC6CB7DF5A4628FE226FC48 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE8E3BE49782987FB5C4B520BF1A7E6E82BCB3549* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38857,7 +38857,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48502
+// Method Definition Index: 48511
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnValidateGooglePlayPurchaseRequestEvent_m7BE83E5ED11287976E50F9326B69000C6611BE46 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE8E3BE49782987FB5C4B520BF1A7E6E82BCB3549* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38900,7 +38900,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48503
+// Method Definition Index: 48512
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnValidateGooglePlayPurchaseResultEvent_m4EBDEE22E9722611B47DACA5A3462EB523C3FDB6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tD6067C021C59D7023F12C7AE686B0595FA656B04* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38943,7 +38943,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48504
+// Method Definition Index: 48513
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnValidateGooglePlayPurchaseResultEvent_m8DA851C15F6E08134BAAF94D5F659D9895917979 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tD6067C021C59D7023F12C7AE686B0595FA656B04* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38986,7 +38986,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48505
+// Method Definition Index: 48514
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnValidateIOSReceiptRequestEvent_mDF1443529C87C2D4041DF0C228208D2DFDB9A36F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC343229EE70028C983B52A4408FECC086CBCA994* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39029,7 +39029,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48506
+// Method Definition Index: 48515
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnValidateIOSReceiptRequestEvent_m62D9D5703072093F6B4AA91D3CC76702E5390741 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC343229EE70028C983B52A4408FECC086CBCA994* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39072,7 +39072,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48507
+// Method Definition Index: 48516
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnValidateIOSReceiptResultEvent_m2B6DFB8D746ED38155E5340DFFD79DE55171578E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tB4CDA4EF487C8B0E63BC50D83EFA2423E0769526* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39115,7 +39115,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48508
+// Method Definition Index: 48517
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnValidateIOSReceiptResultEvent_m310EB2BCD697880F61476172BA3AF3E71DECC998 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tB4CDA4EF487C8B0E63BC50D83EFA2423E0769526* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39158,7 +39158,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48509
+// Method Definition Index: 48518
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnValidateWindowsStoreReceiptRequestEvent_mAACD40D062CD10092721FBDA4CD8FCCBB89CF79A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t67B686E86A040489B4A8CF2BF4F8594E859E607B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39201,7 +39201,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48510
+// Method Definition Index: 48519
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnValidateWindowsStoreReceiptRequestEvent_m2F057F7AA1895ABF64BC3DA87272946144819A2C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t67B686E86A040489B4A8CF2BF4F8594E859E607B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39244,7 +39244,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48511
+// Method Definition Index: 48520
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnValidateWindowsStoreReceiptResultEvent_m1A2B0679BF1C1B15D9F120D4A8F311D842C72C84 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t42BE53CFEF4174AC889CC558F90B7A33D8CAED5F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39287,7 +39287,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48512
+// Method Definition Index: 48521
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnValidateWindowsStoreReceiptResultEvent_mEAC4BBBEC99FC9AE54E5307DA39F5A747E922242 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t42BE53CFEF4174AC889CC558F90B7A33D8CAED5F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39330,7 +39330,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48513
+// Method Definition Index: 48522
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnWriteCharacterEventRequestEvent_mCE032B497AB3EED78DCCF307F7F7F03AA996E3F3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t7ECE7A3A81E67A6F333F8F7B05FAFF5276A54997* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39373,7 +39373,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48514
+// Method Definition Index: 48523
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnWriteCharacterEventRequestEvent_m5A9711C66C76B3A5A596793A93E97938C03AFFA8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t7ECE7A3A81E67A6F333F8F7B05FAFF5276A54997* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39416,7 +39416,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48515
+// Method Definition Index: 48524
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnWriteCharacterEventResultEvent_m07EFF969113A458395F4F33BCEE99EEE2BC177D7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE6760F52944418A44EDAC5556D99C862FDD195A8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39459,7 +39459,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48516
+// Method Definition Index: 48525
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnWriteCharacterEventResultEvent_m3C983B0932F9EE32F54E94AD8B0CB034C4D1B179 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE6760F52944418A44EDAC5556D99C862FDD195A8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39502,7 +39502,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48517
+// Method Definition Index: 48526
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnWritePlayerEventRequestEvent_mC0B6E7D510BB06BC7F0E9107028D16C141F40736 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t6D560FE24251865F810D746D2D197358C7EF86C2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39545,7 +39545,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48518
+// Method Definition Index: 48527
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnWritePlayerEventRequestEvent_m690F74975559D3275052B07F2E91979D0A495DD3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t6D560FE24251865F810D746D2D197358C7EF86C2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39588,7 +39588,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48519
+// Method Definition Index: 48528
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnWritePlayerEventResultEvent_m914BAFF243D833705EAB58416A10CF3F284B19B0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE6760F52944418A44EDAC5556D99C862FDD195A8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39631,7 +39631,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48520
+// Method Definition Index: 48529
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnWritePlayerEventResultEvent_mADB4F448D93BACE3A8338B0C224D77E0DD282B5A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE6760F52944418A44EDAC5556D99C862FDD195A8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39674,7 +39674,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48521
+// Method Definition Index: 48530
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnWriteTitleEventRequestEvent_mE0F76A396C47BC3651BDD8C7AB46E2C3C6E07B90 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE19F580BC5AF22F3B480F75734E108CA4D2C2CA4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39717,7 +39717,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48522
+// Method Definition Index: 48531
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnWriteTitleEventRequestEvent_m2E6D3D18F2F3DEFCE8A07177B037BCA2648FC366 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE19F580BC5AF22F3B480F75734E108CA4D2C2CA4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39760,7 +39760,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48523
+// Method Definition Index: 48532
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnWriteTitleEventResultEvent_mA5903F04C6480D9C7260E07C0D95051A6665D8A3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE6760F52944418A44EDAC5556D99C862FDD195A8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39803,7 +39803,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48524
+// Method Definition Index: 48533
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnWriteTitleEventResultEvent_m6C83ED88554DF2EDD9AD766389C3B95BFEB07D25 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE6760F52944418A44EDAC5556D99C862FDD195A8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39846,7 +39846,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48525
+// Method Definition Index: 48534
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptExecuteEntityCloudScriptRequestEvent_m215944AE2F2B41F0898CB51D6EF98C00153C5882 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t94CDFEDFE026C1767A6B13AB01B67D9F737D673F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39889,7 +39889,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48526
+// Method Definition Index: 48535
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptExecuteEntityCloudScriptRequestEvent_mC5DE1BE36B85308C167059E8D2E549C921732564 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t94CDFEDFE026C1767A6B13AB01B67D9F737D673F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39932,7 +39932,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48527
+// Method Definition Index: 48536
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptExecuteEntityCloudScriptResultEvent_mA1CB22AAD885BD345A20FCB4CB672D3EEF910CA5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t398DD1A710A62A67CFF046E52D69242FC561525A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39975,7 +39975,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48528
+// Method Definition Index: 48537
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptExecuteEntityCloudScriptResultEvent_m7B59489FBE08353E7B84ACAA568B41A3A235F048 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t398DD1A710A62A67CFF046E52D69242FC561525A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40018,7 +40018,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48529
+// Method Definition Index: 48538
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptExecuteFunctionRequestEvent_m6415FAA6D3F4B71339349303B290B585EB391D5F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD051AB7237B56D78B2C3021723AA117D54EA78BD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40061,7 +40061,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48530
+// Method Definition Index: 48539
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptExecuteFunctionRequestEvent_mACB947F4B7761ED3E7DF1695DEA30D83102CECAD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD051AB7237B56D78B2C3021723AA117D54EA78BD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40104,7 +40104,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48531
+// Method Definition Index: 48540
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptExecuteFunctionResultEvent_m59604815D388A3F7A22DF6749ED0F36D3188A91A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA6FEC76B63038AD6D2822D80371CE34EBF3D6B2F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40147,7 +40147,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48532
+// Method Definition Index: 48541
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptExecuteFunctionResultEvent_m5981CE915A45E883B63A3694595390917D4E3D7D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA6FEC76B63038AD6D2822D80371CE34EBF3D6B2F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40190,7 +40190,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48533
+// Method Definition Index: 48542
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptGetFunctionRequestEvent_m11AB5F9E1DB54CC732DE219CC0312F9C812A48CB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t7AE8A73827BB06578F879A123926860929B616B2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40233,7 +40233,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48534
+// Method Definition Index: 48543
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptGetFunctionRequestEvent_mA2A7367001FA75D7FDAD51BC1F1202B31C3DF124 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t7AE8A73827BB06578F879A123926860929B616B2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40276,7 +40276,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48535
+// Method Definition Index: 48544
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptGetFunctionResultEvent_m847982F50544F428901442C7478B8362B40DD934 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC8FF3534F737478EBA421F714AA7FE62C7C39D38* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40319,7 +40319,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48536
+// Method Definition Index: 48545
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptGetFunctionResultEvent_m4579999B1757ACF5A8BAA84769AB39E2A21AD000 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC8FF3534F737478EBA421F714AA7FE62C7C39D38* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40362,7 +40362,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48537
+// Method Definition Index: 48546
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptListEventHubFunctionsRequestEvent_m15D05A3E8F6D15FC06EA6D63D912CEFBEAE23363 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA51FD5B07E983590A847DC9F2976646A086C11A1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40405,7 +40405,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48538
+// Method Definition Index: 48547
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptListEventHubFunctionsRequestEvent_mCF57F6D2A0275D16554080805CF17D122E8207D6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA51FD5B07E983590A847DC9F2976646A086C11A1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40448,7 +40448,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48539
+// Method Definition Index: 48548
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptListEventHubFunctionsResultEvent_m081D4C30ECAD99718FBE3BD6DC738B517990CB07 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t25C15066FBA2529558532ACF7E6C7E6B8931E456* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40491,7 +40491,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48540
+// Method Definition Index: 48549
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptListEventHubFunctionsResultEvent_m886781C017FFC172746D42E2959AD551DE40C372 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t25C15066FBA2529558532ACF7E6C7E6B8931E456* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40534,7 +40534,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48541
+// Method Definition Index: 48550
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptListFunctionsRequestEvent_m9847EC41969D72FEC5DCCB7DFC7A893F7E50D811 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA51FD5B07E983590A847DC9F2976646A086C11A1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40577,7 +40577,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48542
+// Method Definition Index: 48551
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptListFunctionsRequestEvent_m1312A524EA33C5D3E4A39B8A8AC8321C1F1CFBC9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA51FD5B07E983590A847DC9F2976646A086C11A1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40620,7 +40620,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48543
+// Method Definition Index: 48552
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptListFunctionsResultEvent_mF0268659F1A3DBFCF29DDE1BBBB504775FA0B939 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tAFCE9E8E85D6A0FF682D23560355A6D23C3CD29E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40663,7 +40663,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48544
+// Method Definition Index: 48553
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptListFunctionsResultEvent_m147A7CAFB12ED883AB812AEBC2E896F5DCFD6A45 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tAFCE9E8E85D6A0FF682D23560355A6D23C3CD29E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40706,7 +40706,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48545
+// Method Definition Index: 48554
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptListHttpFunctionsRequestEvent_m5B68FDC90EA4901C496E493DD8928871C51367E7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA51FD5B07E983590A847DC9F2976646A086C11A1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40749,7 +40749,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48546
+// Method Definition Index: 48555
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptListHttpFunctionsRequestEvent_mD0E6E8C7D47282E61AE48052713A297BE6F4402A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA51FD5B07E983590A847DC9F2976646A086C11A1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40792,7 +40792,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48547
+// Method Definition Index: 48556
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptListHttpFunctionsResultEvent_mB422CB8BC7A1AC03B3BC7B6EF1A17C0CCC95A82A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t241DB6D254199A71024A4A658D9F9FC38736BB51* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40835,7 +40835,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48548
+// Method Definition Index: 48557
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptListHttpFunctionsResultEvent_m269C3EC08DC90ED849597E06387739B981F8CE83 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t241DB6D254199A71024A4A658D9F9FC38736BB51* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40878,7 +40878,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48549
+// Method Definition Index: 48558
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptListQueuedFunctionsRequestEvent_m40282C44267C09D85380E2C25B3CCA9CE286A301 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA51FD5B07E983590A847DC9F2976646A086C11A1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40921,7 +40921,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48550
+// Method Definition Index: 48559
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptListQueuedFunctionsRequestEvent_m475A880BC378A7A4212DBF1FB8ADE8860C989066 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA51FD5B07E983590A847DC9F2976646A086C11A1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40964,7 +40964,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48551
+// Method Definition Index: 48560
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptListQueuedFunctionsResultEvent_m1EEBD3BBF8ED45B0FCB6E9BD84108801BC0392F4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7832F30607BF2BE512B1480E112059A76E57E9E0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41007,7 +41007,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48552
+// Method Definition Index: 48561
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptListQueuedFunctionsResultEvent_mF71DFAE326E888438BD3265986DEED59B4F80363 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7832F30607BF2BE512B1480E112059A76E57E9E0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41050,7 +41050,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48553
+// Method Definition Index: 48562
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptPostFunctionResultForEntityTriggeredActionRequestEvent_m3BC04E847274FE24F93EA7A74A5D44BB73284F5C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tCF5571299665723E84DCE1482B9C161191628E06* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41093,7 +41093,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48554
+// Method Definition Index: 48563
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptPostFunctionResultForEntityTriggeredActionRequestEvent_m15778971DCEF87AA7106BFC552DF4434553706FE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tCF5571299665723E84DCE1482B9C161191628E06* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41136,7 +41136,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48555
+// Method Definition Index: 48564
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptPostFunctionResultForEntityTriggeredActionResultEvent_m097A67AC82D54879A49056AD066DBBC10DB4B09B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA4CE78D74FAEB9BE8A32477F69294EDD3F7162C6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41179,7 +41179,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48556
+// Method Definition Index: 48565
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptPostFunctionResultForEntityTriggeredActionResultEvent_m2DD757F65B97BF98EAC6B0450AFCE18AB99C22BE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA4CE78D74FAEB9BE8A32477F69294EDD3F7162C6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41222,7 +41222,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48557
+// Method Definition Index: 48566
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptPostFunctionResultForFunctionExecutionRequestEvent_mA84B329CC0DDD8BF3816E6E48EEA83116E7C5EA5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8AFFE2177F5E8887D2675E703503EA4A22C88AEC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41265,7 +41265,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48558
+// Method Definition Index: 48567
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptPostFunctionResultForFunctionExecutionRequestEvent_m580B3C0293F24F6ED2A4F8E8BE14A8EA94FD0793 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8AFFE2177F5E8887D2675E703503EA4A22C88AEC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41308,7 +41308,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48559
+// Method Definition Index: 48568
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptPostFunctionResultForFunctionExecutionResultEvent_m10B2F8596648A859DBD66883C8936D16DC436C5D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA4CE78D74FAEB9BE8A32477F69294EDD3F7162C6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41351,7 +41351,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48560
+// Method Definition Index: 48569
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptPostFunctionResultForFunctionExecutionResultEvent_mAF986740899DE349436DBB64BE2DB29690A27A89 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA4CE78D74FAEB9BE8A32477F69294EDD3F7162C6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41394,7 +41394,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48561
+// Method Definition Index: 48570
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptPostFunctionResultForPlayerTriggeredActionRequestEvent_mF6A6A924C70513D64004A731BFDB681D64A1C4B5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t646619A5926B41CFF11920A5E3689A69E15FE7E1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41437,7 +41437,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48562
+// Method Definition Index: 48571
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptPostFunctionResultForPlayerTriggeredActionRequestEvent_mF37C50476211BA1917F3D079F9FF292B48A8A1E2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t646619A5926B41CFF11920A5E3689A69E15FE7E1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41480,7 +41480,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48563
+// Method Definition Index: 48572
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptPostFunctionResultForPlayerTriggeredActionResultEvent_m93CE1D9E0D32C0EF1E68E1AFC8A3F74C1C5778A4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA4CE78D74FAEB9BE8A32477F69294EDD3F7162C6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41523,7 +41523,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48564
+// Method Definition Index: 48573
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptPostFunctionResultForPlayerTriggeredActionResultEvent_m9F665166850EE02FB29586960015017A70F30DC9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA4CE78D74FAEB9BE8A32477F69294EDD3F7162C6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41566,7 +41566,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48565
+// Method Definition Index: 48574
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptPostFunctionResultForScheduledTaskRequestEvent_mE59D081C36CD9BEF64D25D662F5F90BCF6B64BDA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t587DF571869AEFD029CB7CDCF72BB0F0F31E4A53* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41609,7 +41609,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48566
+// Method Definition Index: 48575
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptPostFunctionResultForScheduledTaskRequestEvent_m37692C7D2CCD9434F735DF2CD0E7F8FB8208BFD5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t587DF571869AEFD029CB7CDCF72BB0F0F31E4A53* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41652,7 +41652,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48567
+// Method Definition Index: 48576
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptPostFunctionResultForScheduledTaskResultEvent_mB0E9EBF5681B04210627843136B246D7A10A78EF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA4CE78D74FAEB9BE8A32477F69294EDD3F7162C6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41695,7 +41695,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48568
+// Method Definition Index: 48577
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptPostFunctionResultForScheduledTaskResultEvent_m427D3DB2D594099B97882130F72B8AA2BDF5BF68 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA4CE78D74FAEB9BE8A32477F69294EDD3F7162C6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41738,7 +41738,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48569
+// Method Definition Index: 48578
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptRegisterEventHubFunctionRequestEvent_m37FF52B1DF19F37D3355A7E61BE0F0B6C2808684 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD8378370736217B66D8F65D20ACCE0B2D1B01DAC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41781,7 +41781,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48570
+// Method Definition Index: 48579
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptRegisterEventHubFunctionRequestEvent_m7522A23E9AE1A17520F03C538927A9858D7B0C8B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD8378370736217B66D8F65D20ACCE0B2D1B01DAC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41824,7 +41824,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48571
+// Method Definition Index: 48580
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptRegisterEventHubFunctionResultEvent_m7B31A60A4504ABD3EBAC2D3AA60389EDA7877589 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA4CE78D74FAEB9BE8A32477F69294EDD3F7162C6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41867,7 +41867,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48572
+// Method Definition Index: 48581
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptRegisterEventHubFunctionResultEvent_m41A9D1F1542D9849FBF06FBB8D902EDDA65BD9F8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA4CE78D74FAEB9BE8A32477F69294EDD3F7162C6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41910,7 +41910,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48573
+// Method Definition Index: 48582
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptRegisterHttpFunctionRequestEvent_m50D9A44C7A8668014578BEE004603CE71354A6EC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAB6F33EE6291724FAA995806EAD23164483067C9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41953,7 +41953,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48574
+// Method Definition Index: 48583
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptRegisterHttpFunctionRequestEvent_m6C654A4F7D4BA5ABCF98D0B72051D559E9505176 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAB6F33EE6291724FAA995806EAD23164483067C9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41996,7 +41996,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48575
+// Method Definition Index: 48584
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptRegisterHttpFunctionResultEvent_m7F371A5D45CA30323F4C49A8A6079A7AAE3DD666 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA4CE78D74FAEB9BE8A32477F69294EDD3F7162C6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42039,7 +42039,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48576
+// Method Definition Index: 48585
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptRegisterHttpFunctionResultEvent_m531941A459880B494FC23B9239790654FD78C0B5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA4CE78D74FAEB9BE8A32477F69294EDD3F7162C6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42082,7 +42082,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48577
+// Method Definition Index: 48586
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptRegisterQueuedFunctionRequestEvent_m49226D748A8F12557071096FEF4AF16EB3065DC4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tFF1778AEB4CDFDF7159F39A4DD5007F37CFA7301* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42125,7 +42125,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48578
+// Method Definition Index: 48587
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptRegisterQueuedFunctionRequestEvent_m433EB57159910DBAE0DAC222574435545CF80402 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tFF1778AEB4CDFDF7159F39A4DD5007F37CFA7301* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42168,7 +42168,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48579
+// Method Definition Index: 48588
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptRegisterQueuedFunctionResultEvent_m744DC5867E7ADECEDCF53817D1FB50D557E3AC02 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA4CE78D74FAEB9BE8A32477F69294EDD3F7162C6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42211,7 +42211,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48580
+// Method Definition Index: 48589
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptRegisterQueuedFunctionResultEvent_m1B5D9C497FB3D210DD6148E085240EE07A2A801D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA4CE78D74FAEB9BE8A32477F69294EDD3F7162C6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42254,7 +42254,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48581
+// Method Definition Index: 48590
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptUnregisterFunctionRequestEvent_mF3BD2249FB9E2C0654682D5AE9EEBEE598479C26 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tCB0DB6D69564FB838C0C57C4911B4A8648603564* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42297,7 +42297,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48582
+// Method Definition Index: 48591
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptUnregisterFunctionRequestEvent_mDB099543DF3BCE1027AD8D0A15244E08B4FA87B5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tCB0DB6D69564FB838C0C57C4911B4A8648603564* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42340,7 +42340,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48583
+// Method Definition Index: 48592
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnCloudScriptUnregisterFunctionResultEvent_mDEBB794E73A650948C8D2715395B8339CA5F81E0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA4CE78D74FAEB9BE8A32477F69294EDD3F7162C6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42383,7 +42383,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48584
+// Method Definition Index: 48593
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnCloudScriptUnregisterFunctionResultEvent_m14227202780D12FBA9A5F3CEAEB6EFD6C9449DF5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA4CE78D74FAEB9BE8A32477F69294EDD3F7162C6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42426,7 +42426,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48585
+// Method Definition Index: 48594
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnDataAbortFileUploadsRequestEvent_m42D0F5F01D6E5958CF6DA4C2198A2DC43130E21D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8888321AF889C8ABA6B5D9F560F3B6334813C5ED* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42469,7 +42469,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48586
+// Method Definition Index: 48595
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnDataAbortFileUploadsRequestEvent_mB8AB3CE97F238D8E9A8AB4D4B731874D7A7EE9E4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8888321AF889C8ABA6B5D9F560F3B6334813C5ED* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42512,7 +42512,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48587
+// Method Definition Index: 48596
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnDataAbortFileUploadsResultEvent_mD261377F2A4E887B640FB0C2ECD9E671EF4B1604 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7E4678EE69A168D80C5F794AE54A016D899275EB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42555,7 +42555,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48588
+// Method Definition Index: 48597
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnDataAbortFileUploadsResultEvent_mC078B10C5164F542638E1D33ADD8AD9DCA04304B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7E4678EE69A168D80C5F794AE54A016D899275EB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42598,7 +42598,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48589
+// Method Definition Index: 48598
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnDataDeleteFilesRequestEvent_m74C9A551A0ADF0E1ADF1E1AFB0A3A265EA305B93 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB5F2D2DC40B876EEF3F7B301C2D9F34D9E76E2E2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42641,7 +42641,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48590
+// Method Definition Index: 48599
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnDataDeleteFilesRequestEvent_m6805E8CA58B47A7092B19E902C15795BCA7553ED (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB5F2D2DC40B876EEF3F7B301C2D9F34D9E76E2E2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42684,7 +42684,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48591
+// Method Definition Index: 48600
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnDataDeleteFilesResultEvent_m760D50A342EDB90C7CC684C8AC5840E6EE170433 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t692FDBCF4D5323D127E7BDEC2EF3394900823639* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42727,7 +42727,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48592
+// Method Definition Index: 48601
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnDataDeleteFilesResultEvent_m0AE04DCA5BA32502EF9D00607C4E6AE63F300D36 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t692FDBCF4D5323D127E7BDEC2EF3394900823639* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42770,7 +42770,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48593
+// Method Definition Index: 48602
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnDataFinalizeFileUploadsRequestEvent_mF091701F8D08799BB25677ECE5FFD9B68C8807F3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD06CD916588B641DEC11159063125724254FB4C9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42813,7 +42813,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48594
+// Method Definition Index: 48603
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnDataFinalizeFileUploadsRequestEvent_m477EA01F04A404F5CCA327A0B8D0C48E49E7F4D0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD06CD916588B641DEC11159063125724254FB4C9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42856,7 +42856,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48595
+// Method Definition Index: 48604
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnDataFinalizeFileUploadsResultEvent_m641C5469509C7EC055BA1CF9704F0789AB731ED0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t873793FF254CAC588F4DBA567B69E497BD41DB2A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42899,7 +42899,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48596
+// Method Definition Index: 48605
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnDataFinalizeFileUploadsResultEvent_m119C9876D99A82265EB1C0784EA3A4BF1B4B20D8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t873793FF254CAC588F4DBA567B69E497BD41DB2A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42942,7 +42942,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48597
+// Method Definition Index: 48606
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnDataGetFilesRequestEvent_mB1F32C8BE72AF0CA747BAF9B718B2C6F3EED253E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tF23EE837B549F9C48FCD75304E653A2A20C803A0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42985,7 +42985,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48598
+// Method Definition Index: 48607
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnDataGetFilesRequestEvent_m40BA01C964055CF17218350F0BBED75BAB030906 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tF23EE837B549F9C48FCD75304E653A2A20C803A0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43028,7 +43028,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48599
+// Method Definition Index: 48608
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnDataGetFilesResultEvent_m2B06CA29DAB1C494711B26ABCEFFDEBB38103C34 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC14297FB7C4DC2D0D6752BF73B47588F60C5DE2C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43071,7 +43071,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48600
+// Method Definition Index: 48609
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnDataGetFilesResultEvent_m5D8E99AA647F7D3B790D8B6C109653EAE7F69E6A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC14297FB7C4DC2D0D6752BF73B47588F60C5DE2C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43114,7 +43114,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48601
+// Method Definition Index: 48610
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnDataGetObjectsRequestEvent_m8955299341F65BAE22B81D4293B7B8385BE5B0CA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tBEAE5EF010164C1FC590E0B66E088FB70437BFB4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43157,7 +43157,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48602
+// Method Definition Index: 48611
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnDataGetObjectsRequestEvent_m9C1333025EC0AF24CE9A49CD4EC09F07CA3D6E68 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tBEAE5EF010164C1FC590E0B66E088FB70437BFB4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43200,7 +43200,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48603
+// Method Definition Index: 48612
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnDataGetObjectsResultEvent_m1E37FE1661B4C08D95799B2AAECDE9D6BE2AEAC4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCD74A3A4AF43983FA2FBE3C6BB1F51E5A70B2834* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43243,7 +43243,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48604
+// Method Definition Index: 48613
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnDataGetObjectsResultEvent_m988842D22A7235A1273E8BC844CB74F974446BB5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCD74A3A4AF43983FA2FBE3C6BB1F51E5A70B2834* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43286,7 +43286,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48605
+// Method Definition Index: 48614
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnDataInitiateFileUploadsRequestEvent_m357D2C4242DA511A3AA04425460AAECFE6C39B33 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t6B89E0D4B9CE831642FBEABE81999B33B5E99425* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43329,7 +43329,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48606
+// Method Definition Index: 48615
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnDataInitiateFileUploadsRequestEvent_m71D448D4A22ECB5F382FEF5354CA3C15EF3B809D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t6B89E0D4B9CE831642FBEABE81999B33B5E99425* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43372,7 +43372,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48607
+// Method Definition Index: 48616
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnDataInitiateFileUploadsResultEvent_m1731A22C61F77DC61FB7C8162E2F8BF2904737C5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tB8CD915CF1982070B57F5A22110D351F1C5B0417* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43415,7 +43415,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48608
+// Method Definition Index: 48617
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnDataInitiateFileUploadsResultEvent_m540A72D9804BEC0A9B798E165582B5160ED84978 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tB8CD915CF1982070B57F5A22110D351F1C5B0417* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43458,7 +43458,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48609
+// Method Definition Index: 48618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnDataSetObjectsRequestEvent_mD900A6FE26A8D811074C45CF3E53393F25FBCDFB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3F24776191954FD42490927E11167428BC17E8EB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43501,7 +43501,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48610
+// Method Definition Index: 48619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnDataSetObjectsRequestEvent_m507D40291DFCA3ABD549F3D21F56E1D949207107 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3F24776191954FD42490927E11167428BC17E8EB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43544,7 +43544,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48611
+// Method Definition Index: 48620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnDataSetObjectsResultEvent_m72229DE417361D4D66F6403A57BB83A824C34015 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC4D1A3EC98F252472648220DEFF9DD3EA56480CC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43587,7 +43587,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48612
+// Method Definition Index: 48621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnDataSetObjectsResultEvent_m3A242F41252E9651B288251208883CC494639AC7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC4D1A3EC98F252472648220DEFF9DD3EA56480CC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43630,7 +43630,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48613
+// Method Definition Index: 48622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyAddInventoryItemsRequestEvent_m439780419EDB64A67F2E5597E0AC7347910E332F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t18CF6847E3C3DE58132B0AD4B75CB4C00020A0F2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43673,7 +43673,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48614
+// Method Definition Index: 48623
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyAddInventoryItemsRequestEvent_m6149DF8CEED38CCC44E564AD0074BFCB6D61DF80 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t18CF6847E3C3DE58132B0AD4B75CB4C00020A0F2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43716,7 +43716,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48615
+// Method Definition Index: 48624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyAddInventoryItemsResultEvent_m782CCD81B23414637257248DCC1702460A48F561 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4C9B56BE6EF2C09891B8CAE544E5DF660EED49F7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43759,7 +43759,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48616
+// Method Definition Index: 48625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyAddInventoryItemsResultEvent_m796ADA9D8BB817D27F22DE0B75A7FB44E91A88FB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4C9B56BE6EF2C09891B8CAE544E5DF660EED49F7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43802,7 +43802,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48617
+// Method Definition Index: 48626
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyCreateDraftItemRequestEvent_mD5933387C1902F9E265D78E61653BFE1796C2C4F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t7A8A1AA804D89AE160A4907385DCA044F5A8560F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43845,7 +43845,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48618
+// Method Definition Index: 48627
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyCreateDraftItemRequestEvent_m487B3E8569065396BA4EB23CAEC16E02A4D378D4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t7A8A1AA804D89AE160A4907385DCA044F5A8560F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43888,7 +43888,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48619
+// Method Definition Index: 48628
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyCreateDraftItemResultEvent_m3CA3083C6B9049EF99202EE76AB721771D3B19F6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7F2E0FC980AE866AE0165F163E47BC409C9176BA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43931,7 +43931,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48620
+// Method Definition Index: 48629
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyCreateDraftItemResultEvent_m137C972FEE8FA673985B349BE86C98926B239EA5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7F2E0FC980AE866AE0165F163E47BC409C9176BA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43974,7 +43974,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48621
+// Method Definition Index: 48630
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyCreateUploadUrlsRequestEvent_mB91A34D81CC48462140AB36FD286356AE7A141EF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9B5A353E87C65EC8D90BCB0C71B2E33482996D5B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44017,7 +44017,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48622
+// Method Definition Index: 48631
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyCreateUploadUrlsRequestEvent_m90672F28871286976D048E0EFF57319D67F4B64B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9B5A353E87C65EC8D90BCB0C71B2E33482996D5B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44060,7 +44060,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48623
+// Method Definition Index: 48632
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyCreateUploadUrlsResultEvent_m39C2230A09E2F3F91EF51CC61FB0EB8E408BA1E5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t0F934C24FD6783BAF8A8CCD71D69D6F1998FAE7D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44103,7 +44103,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48624
+// Method Definition Index: 48633
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyCreateUploadUrlsResultEvent_m657F147BF4FF44A551FADD86AE70E4659C0365BD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t0F934C24FD6783BAF8A8CCD71D69D6F1998FAE7D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44146,7 +44146,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48625
+// Method Definition Index: 48634
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyDeleteEntityItemReviewsRequestEvent_m94F84875E2AF7A8DC701677672AFBB071BE03770 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tDE0205491EF7B2254806DDF10B647CF5B6B28A11* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44189,7 +44189,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48626
+// Method Definition Index: 48635
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyDeleteEntityItemReviewsRequestEvent_mE5326A6D13745FEB2EAC38BD6E442DDDC32EC7BA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tDE0205491EF7B2254806DDF10B647CF5B6B28A11* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44232,7 +44232,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48627
+// Method Definition Index: 48636
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyDeleteEntityItemReviewsResultEvent_m502AD17DE859D5DD4B49D80728226545F5FC1D41 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t22CAB1DDA3D64E832F7C15848A0C177B1E24B9E2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44275,7 +44275,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48628
+// Method Definition Index: 48637
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyDeleteEntityItemReviewsResultEvent_mE506DC3A7D77ED871D23BF1630CCDEF69EE1B29A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t22CAB1DDA3D64E832F7C15848A0C177B1E24B9E2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44318,7 +44318,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48629
+// Method Definition Index: 48638
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyDeleteInventoryCollectionRequestEvent_mFE01647E790872794613CCE4D160397B9B43ACDA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t93DBFAFC2C0B4477F286974C63323350AB755EB8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44361,7 +44361,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48630
+// Method Definition Index: 48639
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyDeleteInventoryCollectionRequestEvent_m02497F46326EA3BB804F35823B464E1DC4308E91 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t93DBFAFC2C0B4477F286974C63323350AB755EB8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44404,7 +44404,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48631
+// Method Definition Index: 48640
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyDeleteInventoryCollectionResultEvent_mFAB16F99BE98734C56FE094817DC57FE20C6BB73 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t95F500C4412B75D46FF93C0192E52108267D27EE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44447,7 +44447,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48632
+// Method Definition Index: 48641
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyDeleteInventoryCollectionResultEvent_mA3EC070BBB40B64E2EB7EA32293BB128AACA6A40 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t95F500C4412B75D46FF93C0192E52108267D27EE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44490,7 +44490,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48633
+// Method Definition Index: 48642
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyDeleteInventoryItemsRequestEvent_m7AF8E6C92E012C6226F90FE461942C3EA19F9B32 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAB9767DA7AD80FEB3717A53596C3CE57E146B0A9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44533,7 +44533,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48634
+// Method Definition Index: 48643
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyDeleteInventoryItemsRequestEvent_m206DBADD6FA9FD0D0B5F8571101966EEE8A9DA4E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAB9767DA7AD80FEB3717A53596C3CE57E146B0A9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44576,7 +44576,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48635
+// Method Definition Index: 48644
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyDeleteInventoryItemsResultEvent_mFE3E9F590584E09B90C2724318ACA71D1FA94DF9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t70A5802F827EA3F3AD02449A638F12CF5C0CC9D3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44619,7 +44619,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48636
+// Method Definition Index: 48645
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyDeleteInventoryItemsResultEvent_mF187F2A3FBB3DE7C0E2FA84DEFD7885ED9AE2233 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t70A5802F827EA3F3AD02449A638F12CF5C0CC9D3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44662,7 +44662,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48637
+// Method Definition Index: 48646
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyDeleteItemRequestEvent_m672BA65F22E881051FC9DDA15C3793611EC1A15B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA837B77D0EE754A7DB1D5612E0E631A8106657D7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44705,7 +44705,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48638
+// Method Definition Index: 48647
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyDeleteItemRequestEvent_m0929EDFFC192FDBDFDF3B2A4A78A1AC4343BB524 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA837B77D0EE754A7DB1D5612E0E631A8106657D7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44748,7 +44748,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48639
+// Method Definition Index: 48648
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyDeleteItemResultEvent_mFBFF2F184BBF383EA40C86509B5F96E0F2A4D52A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tDEFAD46A38A39F9AAFFF944CA0A578FA01452052* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44791,7 +44791,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48640
+// Method Definition Index: 48649
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyDeleteItemResultEvent_mABE251F7505B35CD3D58A45DB448FD82AB1A21E7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tDEFAD46A38A39F9AAFFF944CA0A578FA01452052* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44834,7 +44834,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48641
+// Method Definition Index: 48650
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyExecuteInventoryOperationsRequestEvent_mEE0AB51FB8FE0F084ACAF30408CA482C90093ACC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8FBF0FA62AA06AA90725CCCDC94178B643DB2F2D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44877,7 +44877,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48642
+// Method Definition Index: 48651
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyExecuteInventoryOperationsRequestEvent_mB9119E46E34D9FD08A446E4AB1051539303B8F71 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8FBF0FA62AA06AA90725CCCDC94178B643DB2F2D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44920,7 +44920,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48643
+// Method Definition Index: 48652
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyExecuteInventoryOperationsResultEvent_mFEBF97869949CB7D4EF6D7BED8CCA673CE2895AD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA4261841CA67884EE667041771D169D273444C20* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44963,7 +44963,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48644
+// Method Definition Index: 48653
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyExecuteInventoryOperationsResultEvent_m9D045566E3B33E01980D0DB872A7CC05B72A7A0F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA4261841CA67884EE667041771D169D273444C20* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45006,7 +45006,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48645
+// Method Definition Index: 48654
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyExecuteTransferOperationsRequestEvent_m5DA1D8EAEDF3E48D79E4BC24203AC91C9858C17F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tF522AE7E164A041B818AFA2617EAC1FFD0FD9338* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45049,7 +45049,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48646
+// Method Definition Index: 48655
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyExecuteTransferOperationsRequestEvent_mB6E42CC7640211192B87BFD6D6FEAD7505C5219D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tF522AE7E164A041B818AFA2617EAC1FFD0FD9338* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45092,7 +45092,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48647
+// Method Definition Index: 48656
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyExecuteTransferOperationsResultEvent_m22B27185E2E77F90BDDA07AF837500DD60676D0D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tAB869B6775CC28BF516BBE2BADA6FBDD3BB25451* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45135,7 +45135,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48648
+// Method Definition Index: 48657
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyExecuteTransferOperationsResultEvent_m40381AC8D0AE6C7339CA74DFCDC3584E4E77D769 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tAB869B6775CC28BF516BBE2BADA6FBDD3BB25451* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45178,7 +45178,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48649
+// Method Definition Index: 48658
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetCatalogConfigRequestEvent_mF4EBB588CC7CE2660DDD61DA4D89FF313DEB1283 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tEED2AC43ABCAA373E3DDAF2E21F5C35AAD3D1A6A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45221,7 +45221,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48650
+// Method Definition Index: 48659
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetCatalogConfigRequestEvent_m19170CB88CAB02B1912686156306BE06CC577667 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tEED2AC43ABCAA373E3DDAF2E21F5C35AAD3D1A6A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45264,7 +45264,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48651
+// Method Definition Index: 48660
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetCatalogConfigResultEvent_mFCD459B99D9D5438B137523555DFA4C7CB7A8099 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8F84BEF4943A8DF25F65F525330A532E87D4C037* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45307,7 +45307,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48652
+// Method Definition Index: 48661
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetCatalogConfigResultEvent_mF66721E1BAB5DD9728F7E3F529D6AC3C07690C20 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8F84BEF4943A8DF25F65F525330A532E87D4C037* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45350,7 +45350,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48653
+// Method Definition Index: 48662
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetDraftItemRequestEvent_mE597ACAE1A7E8337074DC1EA5EC3748E208E51E6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t07BFB3AA7C63C874AA2D0BBCD5DDD12D3FAA181B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45393,7 +45393,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48654
+// Method Definition Index: 48663
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetDraftItemRequestEvent_m1A08B350E98DFD9DDBF19723464595E0029F200A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t07BFB3AA7C63C874AA2D0BBCD5DDD12D3FAA181B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45436,7 +45436,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48655
+// Method Definition Index: 48664
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetDraftItemResultEvent_mB3AA8211CBC4DD9AA241E41D01C5AE1E79B0E21F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tDB35ED3B4B0D767D612BCE54E4C61A6759B1CDE5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45479,7 +45479,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48656
+// Method Definition Index: 48665
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetDraftItemResultEvent_mF2F625458D1D9275DB0D860ECFC970C5110E4DE8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tDB35ED3B4B0D767D612BCE54E4C61A6759B1CDE5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45522,7 +45522,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48657
+// Method Definition Index: 48666
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetDraftItemsRequestEvent_mD2778B03AA33A39B5481640CF8997C64A3DA60DF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8269054CA441CB790320974EE59FC450CC09B5E9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45565,7 +45565,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48658
+// Method Definition Index: 48667
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetDraftItemsRequestEvent_m7D532C155FC61596711E225C028E7CE88DD5AA01 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8269054CA441CB790320974EE59FC450CC09B5E9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45608,7 +45608,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48659
+// Method Definition Index: 48668
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetDraftItemsResultEvent_mC1484DF97459CD0D457EE651F3CA4A8EEA463A71 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t035C204546B873D9AD393B729DD1A91B8765A6CA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45651,7 +45651,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48660
+// Method Definition Index: 48669
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetDraftItemsResultEvent_m13FAB66F469310C7C9A4FA57B68ED28AA1322711 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t035C204546B873D9AD393B729DD1A91B8765A6CA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45694,7 +45694,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48661
+// Method Definition Index: 48670
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetEntityDraftItemsRequestEvent_mFEF4685049D4487C060D1108691451ABD78C8F6F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3B789F2DFBE7B9E090210B553672081952F5BD71* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45737,7 +45737,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48662
+// Method Definition Index: 48671
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetEntityDraftItemsRequestEvent_m22FA79D0248F74E1BDC26CEC9EBE67EF9253D060 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3B789F2DFBE7B9E090210B553672081952F5BD71* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45780,7 +45780,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48663
+// Method Definition Index: 48672
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetEntityDraftItemsResultEvent_m5EBB95A90760C9A5B622FFC4D0D78D957265F3C5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t44A6369C67AE736C2DB47DC4A58A37A98FE0BE4A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45823,7 +45823,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48664
+// Method Definition Index: 48673
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetEntityDraftItemsResultEvent_m0588B76AC2115388B005AF61A8F3A6E58B5D2BC7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t44A6369C67AE736C2DB47DC4A58A37A98FE0BE4A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45866,7 +45866,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48665
+// Method Definition Index: 48674
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetEntityItemReviewRequestEvent_mA4874FB8AA73EA1D2B6AC2D01BA7C62645A6809B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE0FC7466D5DAE104F47AF8250D178D2D96E394CD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45909,7 +45909,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48666
+// Method Definition Index: 48675
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetEntityItemReviewRequestEvent_m2410A0844666044BA984397BB14BC77053F4622C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE0FC7466D5DAE104F47AF8250D178D2D96E394CD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45952,7 +45952,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48667
+// Method Definition Index: 48676
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetEntityItemReviewResultEvent_mB711CCE00782DFC8797163E478BF9DFFABAADA8E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t2F4DBA33242D6509101F53B72EB55D00BA930AF1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45995,7 +45995,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48668
+// Method Definition Index: 48677
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetEntityItemReviewResultEvent_mD31AECBD9FCBDD78508B2E0FB0C3D534BB44678F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t2F4DBA33242D6509101F53B72EB55D00BA930AF1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46038,7 +46038,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48669
+// Method Definition Index: 48678
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetInventoryCollectionIdsRequestEvent_mB9261301F41DEB5E15F74D704B6637642B1C8900 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD50327D3368B613791B8DBA02A1D0C785B874A62* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46081,7 +46081,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48670
+// Method Definition Index: 48679
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetInventoryCollectionIdsRequestEvent_mE3E831ABA8E4A538E691BA83C221B369EEAC8280 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD50327D3368B613791B8DBA02A1D0C785B874A62* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46124,7 +46124,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48671
+// Method Definition Index: 48680
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetInventoryCollectionIdsResultEvent_m0AAEE446C785F42978EEDB187AC5B29E3A37E1AC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7E51B783CB09F7CD4744089005AB1FB87099FDF8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46167,7 +46167,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48672
+// Method Definition Index: 48681
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetInventoryCollectionIdsResultEvent_m3FB15E66EC141CD5FB6EE926D107797979819B73 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7E51B783CB09F7CD4744089005AB1FB87099FDF8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46210,7 +46210,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48673
+// Method Definition Index: 48682
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetInventoryItemsRequestEvent_mCE9C37AC5B1B62FE8A8415538DACCE60359A689F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t697608DF08D01C555BEEE3C6751D4886ACE522AE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46253,7 +46253,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48674
+// Method Definition Index: 48683
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetInventoryItemsRequestEvent_mDB315F5C46E1E0E9EB9DB1FE7A197CC659E72FF4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t697608DF08D01C555BEEE3C6751D4886ACE522AE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46296,7 +46296,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48675
+// Method Definition Index: 48684
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetInventoryItemsResultEvent_m411F8FBDF2428FD4D2DEFA5E9EF36E5CC0429472 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tD3C9B33AC70A47C272A4A6C82ED69203BD8E3F49* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46339,7 +46339,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48676
+// Method Definition Index: 48685
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetInventoryItemsResultEvent_mBDD0106D03695BDF57A3E266FD0781224D0C9603 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tD3C9B33AC70A47C272A4A6C82ED69203BD8E3F49* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46382,7 +46382,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48677
+// Method Definition Index: 48686
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetInventoryOperationStatusRequestEvent_m132BB6A3CE191CC4268D5D29851D2A59214A7DBF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC3E1D65E406D4FA036CF51C726C649355C85ED25* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46425,7 +46425,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48678
+// Method Definition Index: 48687
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetInventoryOperationStatusRequestEvent_m8EE61280FC130A559E365ABE3EED64FD1E703D92 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC3E1D65E406D4FA036CF51C726C649355C85ED25* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46468,7 +46468,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48679
+// Method Definition Index: 48688
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetInventoryOperationStatusResultEvent_m29B17947BCE439A9ABF5610E8470CCC3E25EFDFB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tB0565E2C185542E04E384A887853AF3BA343E862* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46511,7 +46511,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48680
+// Method Definition Index: 48689
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetInventoryOperationStatusResultEvent_mF9CD46C0292505651F8C73DFA88552BE06D68A17 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tB0565E2C185542E04E384A887853AF3BA343E862* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46554,7 +46554,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48681
+// Method Definition Index: 48690
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetItemRequestEvent_m2A40D2129CB20824E242A794F0947C276B4F41F5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA2A657C557D59C03E98B6A586656D6D64A765D10* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46597,7 +46597,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48682
+// Method Definition Index: 48691
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetItemRequestEvent_m111F6B5D30531AF47A259730932C04AE3223FB3E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA2A657C557D59C03E98B6A586656D6D64A765D10* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46640,7 +46640,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48683
+// Method Definition Index: 48692
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetItemResultEvent_mA1206F61D502996A572B9FE75900610E34C10199 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE7E08D973ED71055DC63F3FCCA5A3331BFF1891C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46683,7 +46683,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48684
+// Method Definition Index: 48693
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetItemResultEvent_mD6E17DAB494359C3224EE122BB8F0E3D2055BF69 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE7E08D973ED71055DC63F3FCCA5A3331BFF1891C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46726,7 +46726,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48685
+// Method Definition Index: 48694
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetItemContainersRequestEvent_m71546D2CFA1B460130F5417582C04F73BBD2377E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t2F0C9516EDF7FFFDC30BBC5EBE5EB9D431AC0931* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46769,7 +46769,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48686
+// Method Definition Index: 48695
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetItemContainersRequestEvent_m0DFCD58481B0276645038889B71C6FCE9DB4C508 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t2F0C9516EDF7FFFDC30BBC5EBE5EB9D431AC0931* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46812,7 +46812,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48687
+// Method Definition Index: 48696
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetItemContainersResultEvent_mC6A8B8E7208D4F692AA232BB8E9252277F8E60D6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t11972DB16DDC13A1832FA0625DD7B776504B1AF2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46855,7 +46855,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48688
+// Method Definition Index: 48697
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetItemContainersResultEvent_mA66B39C2F9AE45151E07C9C4A0BA14563D8FBD1A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t11972DB16DDC13A1832FA0625DD7B776504B1AF2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46898,7 +46898,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48689
+// Method Definition Index: 48698
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetItemModerationStateRequestEvent_mE4735917B3607DB56AB2A999D8AE2E6978F87CC9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t401691CF20E100F1C1E82E9FB53D297B77A7EAA6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46941,7 +46941,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48690
+// Method Definition Index: 48699
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetItemModerationStateRequestEvent_mFBFD1CD2C0671E56A4F272F49E8F9F736006775E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t401691CF20E100F1C1E82E9FB53D297B77A7EAA6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46984,7 +46984,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48691
+// Method Definition Index: 48700
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetItemModerationStateResultEvent_mD5A95C2DF34C65B5D414FAF772448D36F0D3F52E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t16B95204F36A4A15F56469A5A02E5662A8832D0C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47027,7 +47027,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48692
+// Method Definition Index: 48701
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetItemModerationStateResultEvent_mE7BDB2FCFBB721CFDE56E25D910732EB6739E93C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t16B95204F36A4A15F56469A5A02E5662A8832D0C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47070,7 +47070,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48693
+// Method Definition Index: 48702
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetItemPublishStatusRequestEvent_m7CD569D6AF4DE2EF48965027EE557002357876FB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3DBF7AF54B0FACCB24F8053F3A78F3148F17EE37* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47113,7 +47113,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48694
+// Method Definition Index: 48703
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetItemPublishStatusRequestEvent_m4F3CDC843A98D6759C5449D24DFC814E19421B85 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3DBF7AF54B0FACCB24F8053F3A78F3148F17EE37* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47156,7 +47156,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48695
+// Method Definition Index: 48704
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetItemPublishStatusResultEvent_m1356F419C61086B59A7E066B3AD3C28D3C92F961 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t2A56F455C4BC3D9F5358BA1E2D298C881DF6FEF0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47199,7 +47199,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48696
+// Method Definition Index: 48705
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetItemPublishStatusResultEvent_m9A86C15A59415DD0C9C6C943CE85792D35776277 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t2A56F455C4BC3D9F5358BA1E2D298C881DF6FEF0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47242,7 +47242,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48697
+// Method Definition Index: 48706
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetItemReviewsRequestEvent_m833C8D2DD33CF0618B881A36091BDB9E88D76F98 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t99693D63BA0EF51362FD2DBDFB8857A005F9A5DB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47285,7 +47285,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48698
+// Method Definition Index: 48707
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetItemReviewsRequestEvent_mD1E9A5BA58FEB68151C90E8EA0C40AE3B548C355 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t99693D63BA0EF51362FD2DBDFB8857A005F9A5DB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47328,7 +47328,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48699
+// Method Definition Index: 48708
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetItemReviewsResultEvent_mB4484A1EB5CB96612D075997CC822B19D700BBC7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE3A037CF56E1C40866DCF07B02055F061C30CC75* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47371,7 +47371,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48700
+// Method Definition Index: 48709
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetItemReviewsResultEvent_m43A5149957000954946948EA5A362ADA76BD14C0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE3A037CF56E1C40866DCF07B02055F061C30CC75* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47414,7 +47414,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48701
+// Method Definition Index: 48710
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetItemReviewSummaryRequestEvent_m2CCE7E21C19FFEFC9877C2FADA2F89AA9CFD67D5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t6DD13852EAA4931FFE63E58085CD45FBD74BE2FA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47457,7 +47457,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48702
+// Method Definition Index: 48711
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetItemReviewSummaryRequestEvent_m2AE03E70F6F624DD05E4D9D5876C2DEC0DA568BF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t6DD13852EAA4931FFE63E58085CD45FBD74BE2FA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47500,7 +47500,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48703
+// Method Definition Index: 48712
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetItemReviewSummaryResultEvent_mDDEB87E005E3B3E1CF1459494A952F81963F39E3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t00C608690BE6FD061C10540BFC4D88738447D02E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47543,7 +47543,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48704
+// Method Definition Index: 48713
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetItemReviewSummaryResultEvent_m01679E07BADC3F33870196E02279CC7CFC377156 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t00C608690BE6FD061C10540BFC4D88738447D02E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47586,7 +47586,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48705
+// Method Definition Index: 48714
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetItemsRequestEvent_m3CBB7966769E4748C26252B6F9CA8FFC80916864 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t46465C44AF6863B32F93A5CE62AA5DE6FB1D70FB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47629,7 +47629,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48706
+// Method Definition Index: 48715
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetItemsRequestEvent_m9D5232CEEADBC56245975DD718E75FBBC85447A4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t46465C44AF6863B32F93A5CE62AA5DE6FB1D70FB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47672,7 +47672,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48707
+// Method Definition Index: 48716
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetItemsResultEvent_m930C0CB160FB47FDF48528C3089F6B11D419BAB3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tD2D5D7DD6B3DCF079581B217B9FAD49EE631A9FA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47715,7 +47715,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48708
+// Method Definition Index: 48717
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetItemsResultEvent_mFFF8C5CF8F1A690445BF484DC84CE6EAB1A21EFB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tD2D5D7DD6B3DCF079581B217B9FAD49EE631A9FA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47758,7 +47758,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48709
+// Method Definition Index: 48718
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetMicrosoftStoreAccessTokensRequestEvent_m6A3A5A99B572429B99DC5E587BC2EBBDFA2E75AD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tBAADA595361F0E1E995D67DD9297A315E3B5B8F6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47801,7 +47801,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48710
+// Method Definition Index: 48719
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetMicrosoftStoreAccessTokensRequestEvent_m8E9CA7A273EA1F4F4ADADBA43F68C93265034687 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tBAADA595361F0E1E995D67DD9297A315E3B5B8F6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47844,7 +47844,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48711
+// Method Definition Index: 48720
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetMicrosoftStoreAccessTokensResultEvent_mE002145C07A960F6F96B6DC2C1716CEC9A5C1EC7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA5718EABAF47C98BED8DE8F9DBCCA1FDCA31E0BE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47887,7 +47887,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48712
+// Method Definition Index: 48721
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetMicrosoftStoreAccessTokensResultEvent_m41DEC0297E9BCB62D1CC2197C5D5E6C6362905ED (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA5718EABAF47C98BED8DE8F9DBCCA1FDCA31E0BE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47930,7 +47930,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48713
+// Method Definition Index: 48722
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetTransactionHistoryRequestEvent_m50C85EE5F57D569D03DAEECDC5EBE4F549E126C4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t891EC95CBAA783FC6FFE2A57886B7C1F29BC087A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47973,7 +47973,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48714
+// Method Definition Index: 48723
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetTransactionHistoryRequestEvent_m3655415D85CC07B48C0D9EA6A6440B03EF9F734E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t891EC95CBAA783FC6FFE2A57886B7C1F29BC087A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48016,7 +48016,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48715
+// Method Definition Index: 48724
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyGetTransactionHistoryResultEvent_m5947B2E402D5096914A23F8807FA7632FD6C2AB5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tFC8C94FD53D84DC6BE6CB02BAAD9BC4A3D8CA1FA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48059,7 +48059,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48716
+// Method Definition Index: 48725
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyGetTransactionHistoryResultEvent_m4D5877BBCE45BCADE7C54285D6F64409989D5F22 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tFC8C94FD53D84DC6BE6CB02BAAD9BC4A3D8CA1FA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48102,7 +48102,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48717
+// Method Definition Index: 48726
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyPublishDraftItemRequestEvent_mB357D7604C759D6679EB6C1D61E0BD36FFA06345 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t79AEE81BD00BD7940C0D72EEFB0F9DF947690497* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48145,7 +48145,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48718
+// Method Definition Index: 48727
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyPublishDraftItemRequestEvent_m69AA2C66093E5382AB7B798BFB061C9009FB7FA6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t79AEE81BD00BD7940C0D72EEFB0F9DF947690497* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48188,7 +48188,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48719
+// Method Definition Index: 48728
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyPublishDraftItemResultEvent_mF33E5F99199D4E78D793AA5CEE73C759A4D9284D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tD1AF71DC22A87371DC4122EEB7F39A999C26C1BB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48231,7 +48231,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48720
+// Method Definition Index: 48729
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyPublishDraftItemResultEvent_m45CEA6ECCD816C9B6B7893B9F8B77AAAB8830137 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tD1AF71DC22A87371DC4122EEB7F39A999C26C1BB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48274,7 +48274,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48721
+// Method Definition Index: 48730
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyPurchaseInventoryItemsRequestEvent_mA2EDE94E2A731DED81A537E27F73587C5E7443C3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAF6EE27FA7BB22A7C9D7A60BE0AAB1A3912E9902* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48317,7 +48317,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48722
+// Method Definition Index: 48731
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyPurchaseInventoryItemsRequestEvent_m8778B2CAD7C1C1FC0AED714280307C38CA8AEBD0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAF6EE27FA7BB22A7C9D7A60BE0AAB1A3912E9902* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48360,7 +48360,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48723
+// Method Definition Index: 48732
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyPurchaseInventoryItemsResultEvent_mB355FC174242BFC16E3C67ED1EF4379F31FFFFF7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t89E8B3A18C8369A95E407CA9537BA2CBCAD16D71* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48403,7 +48403,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48724
+// Method Definition Index: 48733
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyPurchaseInventoryItemsResultEvent_mCA0EDE8145AD4F7393438B0A329F2ACE1304666A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t89E8B3A18C8369A95E407CA9537BA2CBCAD16D71* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48446,7 +48446,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48725
+// Method Definition Index: 48734
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyRedeemAppleAppStoreInventoryItemsRequestEvent_mCB35A5CEB505AC35999F919F7713AB65AEB63707 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t2022310851BCB3264690C6EAB3C7F0C61DCF58E7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48489,7 +48489,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48726
+// Method Definition Index: 48735
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyRedeemAppleAppStoreInventoryItemsRequestEvent_mFF122FA59F9AD1B203DE1855D91A1326D6D6C2CE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t2022310851BCB3264690C6EAB3C7F0C61DCF58E7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48532,7 +48532,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48727
+// Method Definition Index: 48736
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyRedeemAppleAppStoreInventoryItemsResultEvent_m00435781CEF0EDD9F582D85EA01FD87F522D62B0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t02EE66AB83C6868C88A376CC47E06F719FABD877* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48575,7 +48575,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48728
+// Method Definition Index: 48737
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyRedeemAppleAppStoreInventoryItemsResultEvent_m7EBACF7FACC17596DB1A839881BD4E149CFC69BE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t02EE66AB83C6868C88A376CC47E06F719FABD877* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48618,7 +48618,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48729
+// Method Definition Index: 48738
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyRedeemAppleAppStoreWithJwsInventoryItemsRequestEvent_m5F5E8B2F7DE9A681A34B36A19054EE445579B6F7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t85495159053BD45219E1017EB315FBA04479BA44* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48661,7 +48661,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48730
+// Method Definition Index: 48739
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyRedeemAppleAppStoreWithJwsInventoryItemsRequestEvent_m642AF369E52CCAAE5FFBCEBFB9D8E1FEFE818E23 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t85495159053BD45219E1017EB315FBA04479BA44* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48704,7 +48704,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48731
+// Method Definition Index: 48740
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyRedeemAppleAppStoreWithJwsInventoryItemsResultEvent_mED1568EF11A1AC9619E0D0693B19B85C719DE9EF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t24DDF8CBCB12BA22EE71754C70F4331BA42E53AE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48747,7 +48747,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48732
+// Method Definition Index: 48741
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyRedeemAppleAppStoreWithJwsInventoryItemsResultEvent_m2C0E230E5C4ED0A4755889EF01B714811B55AA0D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t24DDF8CBCB12BA22EE71754C70F4331BA42E53AE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48790,7 +48790,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48733
+// Method Definition Index: 48742
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyRedeemGooglePlayInventoryItemsRequestEvent_mEF7AE87C8F5221ED7653490DF8A6E9E2F4C97D05 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tEEF92A896F279FFC65C9FFCECC32591C50420B98* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48833,7 +48833,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48734
+// Method Definition Index: 48743
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyRedeemGooglePlayInventoryItemsRequestEvent_m398BC83879D5C425646179EC4DEBE9F6DF09453F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tEEF92A896F279FFC65C9FFCECC32591C50420B98* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48876,7 +48876,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48735
+// Method Definition Index: 48744
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyRedeemGooglePlayInventoryItemsResultEvent_m23B603EFBAA0BE3F86D5AE3006459878EDAB46E9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t60D5928811B4BD3F5569939257AAE8D775344EEF* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48919,7 +48919,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48736
+// Method Definition Index: 48745
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyRedeemGooglePlayInventoryItemsResultEvent_mC872FF8B0FF104ECB9C4CF50E71B06D1FEBC2576 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t60D5928811B4BD3F5569939257AAE8D775344EEF* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48962,7 +48962,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48737
+// Method Definition Index: 48746
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyRedeemMicrosoftStoreInventoryItemsRequestEvent_m9F56E982364D884988D964CFD57600D51C849A2C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC77BC58C8FF490349F535226C6A28AC244619808* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49005,7 +49005,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48738
+// Method Definition Index: 48747
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyRedeemMicrosoftStoreInventoryItemsRequestEvent_m7CFA0BB18A93D223D3F38B8F9E5D1845D059065B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC77BC58C8FF490349F535226C6A28AC244619808* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49048,7 +49048,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48739
+// Method Definition Index: 48748
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyRedeemMicrosoftStoreInventoryItemsResultEvent_m4174119D6AAAA408CA41325EA5F9C3E42AE07F71 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tB64F8F9F8C51D080D7D65E6B19A815AF2CD98114* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49091,7 +49091,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48740
+// Method Definition Index: 48749
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyRedeemMicrosoftStoreInventoryItemsResultEvent_mF7B6B7206AFF14CBBE3B42F4D567861B900B6EBE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tB64F8F9F8C51D080D7D65E6B19A815AF2CD98114* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49134,7 +49134,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48741
+// Method Definition Index: 48750
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyRedeemNintendoEShopInventoryItemsRequestEvent_mE142CB6ABAE11F3BC297D65F87E85B6B241365C0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t6609921800B2CB03CEB9050E9BDBB54588F7DFA8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49177,7 +49177,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48742
+// Method Definition Index: 48751
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyRedeemNintendoEShopInventoryItemsRequestEvent_m3E20C5711A46AEDE3A98E4FB356A98914CB14798 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t6609921800B2CB03CEB9050E9BDBB54588F7DFA8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49220,7 +49220,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48743
+// Method Definition Index: 48752
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyRedeemNintendoEShopInventoryItemsResultEvent_m321B5CBCA78D693F30DD80E4969C529AD1BC8908 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t28A3F65CE568F3ACEB5B65094AFD64189E8E563D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49263,7 +49263,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48744
+// Method Definition Index: 48753
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyRedeemNintendoEShopInventoryItemsResultEvent_m6F024966DD99BA05ECFC5FBC83D0048216C90AFF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t28A3F65CE568F3ACEB5B65094AFD64189E8E563D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49306,7 +49306,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48745
+// Method Definition Index: 48754
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyRedeemPlayStationStoreInventoryItemsRequestEvent_mE29F8F6CBED1685BC1ABE873BE15486FCF676744 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t414ACEF3BC37A63B2A97F512F66027BDF746CE09* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49349,7 +49349,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48746
+// Method Definition Index: 48755
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyRedeemPlayStationStoreInventoryItemsRequestEvent_m43B761E1AA9FF26FCB67AE7180445D442922B4AB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t414ACEF3BC37A63B2A97F512F66027BDF746CE09* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49392,7 +49392,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48747
+// Method Definition Index: 48756
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyRedeemPlayStationStoreInventoryItemsResultEvent_mEAD7E25A09A3CA16512D30F1830F90D02FC4CC7F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1164DEF30DD525915281E2D1ADE2E958A65C48C6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49435,7 +49435,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48748
+// Method Definition Index: 48757
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyRedeemPlayStationStoreInventoryItemsResultEvent_m302F58600BDE068C9F49A3AF14006753F6CC235A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1164DEF30DD525915281E2D1ADE2E958A65C48C6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49478,7 +49478,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48749
+// Method Definition Index: 48758
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyRedeemSteamInventoryItemsRequestEvent_m1DBE01869A796B87BDE3D62A5485BDEBEAA2023D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t43283C75F1CAFEC71ED72DB9D8B12487C93909CA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49521,7 +49521,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48750
+// Method Definition Index: 48759
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyRedeemSteamInventoryItemsRequestEvent_m0A247685D6856A75846FFA03B39909BF6B4F1F73 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t43283C75F1CAFEC71ED72DB9D8B12487C93909CA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49564,7 +49564,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48751
+// Method Definition Index: 48760
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyRedeemSteamInventoryItemsResultEvent_m606EE6DCB17ADA0903CA9F4C7E19C8011B64ACC6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t046833978D26AE88CF41B47030CCF39209EFBF9B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49607,7 +49607,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48752
+// Method Definition Index: 48761
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyRedeemSteamInventoryItemsResultEvent_m6BAD0E5C75A7C8EE0A7DAB51C83DFAD9BA7D8D93 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t046833978D26AE88CF41B47030CCF39209EFBF9B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49650,7 +49650,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48753
+// Method Definition Index: 48762
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyReportItemRequestEvent_m3A55314BDFC016489526A89D34102010E4DDCA15 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tFAEF7AF99D20793E0AD8C1DC2F96464B34CF1A30* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49693,7 +49693,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48754
+// Method Definition Index: 48763
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyReportItemRequestEvent_m07664B8003797B7C1FD8086CE7726314B26B57CD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tFAEF7AF99D20793E0AD8C1DC2F96464B34CF1A30* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49736,7 +49736,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48755
+// Method Definition Index: 48764
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyReportItemResultEvent_m8550016660935131D1AB8EA2D57056E54EFE434A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tAB5FB7819332B3F42F0025A5456C424EB54D6ABF* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49779,7 +49779,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48756
+// Method Definition Index: 48765
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyReportItemResultEvent_m53E5CBBD39FE76536A8DB734C4B688F1BB7FB0CA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tAB5FB7819332B3F42F0025A5456C424EB54D6ABF* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49822,7 +49822,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48757
+// Method Definition Index: 48766
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyReportItemReviewRequestEvent_m1906B6514D0E08584ED9AA796D4C3FD0C19ED439 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t56F0E76C12CCBA3639D7517948DEEF4DA4C783DD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49865,7 +49865,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48758
+// Method Definition Index: 48767
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyReportItemReviewRequestEvent_m96593674CDF7715F27570E47CBCE0F20625956F9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t56F0E76C12CCBA3639D7517948DEEF4DA4C783DD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49908,7 +49908,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48759
+// Method Definition Index: 48768
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyReportItemReviewResultEvent_m373BFA20579B775A8DBC7EC7C73E6CDA78F1E8DC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tFBFB963CAB97B276F09F3567EBF881ACE94B8334* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49951,7 +49951,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48760
+// Method Definition Index: 48769
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyReportItemReviewResultEvent_m5C777635ECCC0EC11EA3B8D241648A6E6384F4A8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tFBFB963CAB97B276F09F3567EBF881ACE94B8334* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49994,7 +49994,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48761
+// Method Definition Index: 48770
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyReviewItemRequestEvent_mB695CAB004DC06D3B7F96B85D9F28BAB6AF963AF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD98BBC54E8D4835968DECB51B1F6057FC93E482B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50037,7 +50037,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48762
+// Method Definition Index: 48771
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyReviewItemRequestEvent_m51619507EEF2EA98021752A9D3445128CCFAE2E2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD98BBC54E8D4835968DECB51B1F6057FC93E482B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50080,7 +50080,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48763
+// Method Definition Index: 48772
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyReviewItemResultEvent_m02687B58F712DC0249A19F07DE5054D58FFF1CED (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t6A83BABBB53E79C16D251DEC023643BFAC6BA72B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50123,7 +50123,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48764
+// Method Definition Index: 48773
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyReviewItemResultEvent_mBF4A839CD8EF61DC7A97091D73F81F448D1E52FA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t6A83BABBB53E79C16D251DEC023643BFAC6BA72B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50166,7 +50166,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48765
+// Method Definition Index: 48774
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomySearchItemsRequestEvent_mB0881FF6F0804F642BFB1F654B2B598FB39AC81E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9B6E4087997646FDEAAAB73B91FEB11D7C8288B8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50209,7 +50209,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48766
+// Method Definition Index: 48775
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomySearchItemsRequestEvent_mE0782F58F58D31754955B3AD351ECC89DEC1F97D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9B6E4087997646FDEAAAB73B91FEB11D7C8288B8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50252,7 +50252,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48767
+// Method Definition Index: 48776
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomySearchItemsResultEvent_mF291E0FDCB483E4D4AC58B60F2E6D248BFD00E6B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE5DA95FE05A3966D52504ADEC7385A99F996BC21* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50295,7 +50295,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48768
+// Method Definition Index: 48777
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomySearchItemsResultEvent_mF38AF90E5C91A383DA406CF5397DE7F1DE073C42 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE5DA95FE05A3966D52504ADEC7385A99F996BC21* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50338,7 +50338,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48769
+// Method Definition Index: 48778
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomySetItemModerationStateRequestEvent_m074EB91ECBE8423353FC77604DFD97A65482A0EE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC5F39C980C4D999C954D199F0A227828988B4EEE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50381,7 +50381,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48770
+// Method Definition Index: 48779
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomySetItemModerationStateRequestEvent_m5DD58D34A963F3CD8D300E738E6F553A50FBF9FF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC5F39C980C4D999C954D199F0A227828988B4EEE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50424,7 +50424,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48771
+// Method Definition Index: 48780
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomySetItemModerationStateResultEvent_m0F8FF65B896444E26A4BA63E4E5C2F554701D87C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t91C28EFA8C6140F62FAA12977634614BB872E8E2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50467,7 +50467,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48772
+// Method Definition Index: 48781
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomySetItemModerationStateResultEvent_m4D8F9BFBBF019D66965496D25F601DB81EFB1F40 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t91C28EFA8C6140F62FAA12977634614BB872E8E2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50510,7 +50510,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48773
+// Method Definition Index: 48782
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomySubmitItemReviewVoteRequestEvent_m03132069E557AC14BA061E2E7DAE3E0F39CDFD40 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t51336C3A6A449175C616B4558597CE042D49C637* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50553,7 +50553,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48774
+// Method Definition Index: 48783
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomySubmitItemReviewVoteRequestEvent_mDFF3C89B1B0EDD63C6DC705565254A6B3D286487 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t51336C3A6A449175C616B4558597CE042D49C637* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50596,7 +50596,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48775
+// Method Definition Index: 48784
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomySubmitItemReviewVoteResultEvent_mF7C21F24A399FD6EB109454C86D3B123B319DF41 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t02D3ED22678BC393AE93DED5FDCC445961019A2F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50639,7 +50639,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48776
+// Method Definition Index: 48785
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomySubmitItemReviewVoteResultEvent_m5EDA55374C5B5EDDB2D4E79D6B13BF3C792DBDAE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t02D3ED22678BC393AE93DED5FDCC445961019A2F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50682,7 +50682,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48777
+// Method Definition Index: 48786
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomySubtractInventoryItemsRequestEvent_m4777D71436E33B0D117AADBBCD7D4D8F815AB0B7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t7943850E4979C5248815053B87F52841531B0FD6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50725,7 +50725,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48778
+// Method Definition Index: 48787
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomySubtractInventoryItemsRequestEvent_m31E9E6F30DC84F4C5E11FC797C787E964E0137E9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t7943850E4979C5248815053B87F52841531B0FD6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50768,7 +50768,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48779
+// Method Definition Index: 48788
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomySubtractInventoryItemsResultEvent_m984A401C25E9A7D4566CAE213437A0A7E2F8EF10 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t39D555026252D50219975F00EFDD84AF7851217F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50811,7 +50811,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48780
+// Method Definition Index: 48789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomySubtractInventoryItemsResultEvent_mEDF1D8D3B7A61EFFFE966562E4F5FA557CB16C4E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t39D555026252D50219975F00EFDD84AF7851217F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50854,7 +50854,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48781
+// Method Definition Index: 48790
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyTakedownItemReviewsRequestEvent_m6AA2E16781C9957936D1F3055446C9CE054CCDF0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t0DCB5E67BA297E6669714204F229923AB8C93180* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50897,7 +50897,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48782
+// Method Definition Index: 48791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyTakedownItemReviewsRequestEvent_m9AD3773A814D24AF850436ED1537C34090FE1C10 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t0DCB5E67BA297E6669714204F229923AB8C93180* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50940,7 +50940,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48783
+// Method Definition Index: 48792
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyTakedownItemReviewsResultEvent_mC50E2886F4D03D55F80F2590A9FB15A8A8B6385C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1110C81A8EF5A1CE50C5F28747F569EEF10DD668* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50983,7 +50983,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48784
+// Method Definition Index: 48793
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyTakedownItemReviewsResultEvent_m42A8C5BE07AF445183C5A6028637D8A59119C3DF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1110C81A8EF5A1CE50C5F28747F569EEF10DD668* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51026,7 +51026,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48785
+// Method Definition Index: 48794
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyTransferInventoryItemsRequestEvent_mA693233DA25C92FEF9F4BF7D17978455C262A2CB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD53C3046B0F35207D594BFD13FFFBCEA4932D1E9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51069,7 +51069,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48786
+// Method Definition Index: 48795
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyTransferInventoryItemsRequestEvent_m66AE1B8C4715E82B6F6AE747664C2CBE646FA272 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD53C3046B0F35207D594BFD13FFFBCEA4932D1E9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51112,7 +51112,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48787
+// Method Definition Index: 48796
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyTransferInventoryItemsResultEvent_m0488FCE60FA6EC0DAB7AA846187A5ED952196B4F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8161DDE6A081A115B82EEC32BD38681161E0E197* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51155,7 +51155,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48788
+// Method Definition Index: 48797
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyTransferInventoryItemsResultEvent_mE593EE20CBAEA5348F01D9BFAA98C8780EE0FE83 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8161DDE6A081A115B82EEC32BD38681161E0E197* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51198,7 +51198,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48789
+// Method Definition Index: 48798
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyUpdateCatalogConfigRequestEvent_m48DB5E9BEED453A3B9D12917C3C4BFBF5BC94DD7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t997207D52AF048A44062EC5005CED7672A52B75A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51241,7 +51241,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48790
+// Method Definition Index: 48799
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyUpdateCatalogConfigRequestEvent_mB2A537C125367A121A9E80F1F5E3F2390185F7A0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t997207D52AF048A44062EC5005CED7672A52B75A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51284,7 +51284,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48791
+// Method Definition Index: 48800
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyUpdateCatalogConfigResultEvent_m3E660755C26B4CF337E7D253D1D0B9B4245E7933 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA8A47AA678AB0BFE8299A03A21B9312212C73785* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51327,7 +51327,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48792
+// Method Definition Index: 48801
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyUpdateCatalogConfigResultEvent_m228366EDD96CDA724F7D11A737F826DB3F1CB472 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA8A47AA678AB0BFE8299A03A21B9312212C73785* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51370,7 +51370,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48793
+// Method Definition Index: 48802
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyUpdateDraftItemRequestEvent_mC1EFAED2451CC8047CAB0E0FA2CB43FBA25CA9BA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t7D00326686448A38F1706589730FCB96BCF824BA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51413,7 +51413,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48794
+// Method Definition Index: 48803
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyUpdateDraftItemRequestEvent_m092B857D31BA7018F8066A6ADD1578628EDAEA5A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t7D00326686448A38F1706589730FCB96BCF824BA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51456,7 +51456,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48795
+// Method Definition Index: 48804
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyUpdateDraftItemResultEvent_mDCDD7A47DBB97FD1E3DB5C33B543C407C6B93F6E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCD6277B7C00B71AF8956DE4F5EA2D51C4343B4C0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51499,7 +51499,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48796
+// Method Definition Index: 48805
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyUpdateDraftItemResultEvent_m7A8459C96F784E81B1D9561F77DE9DF0B90C6B73 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCD6277B7C00B71AF8956DE4F5EA2D51C4343B4C0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51542,7 +51542,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48797
+// Method Definition Index: 48806
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyUpdateInventoryItemsRequestEvent_mEAAE5AFB49E89A0B3FC421114D447E74CFA0C4D4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tABF74E766DA07D38E6C5D731CC6AF6EA923D7BCE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51585,7 +51585,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48798
+// Method Definition Index: 48807
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyUpdateInventoryItemsRequestEvent_m003CA7CA651B1C00B09BD996B197E55D73A65BD4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tABF74E766DA07D38E6C5D731CC6AF6EA923D7BCE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51628,7 +51628,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48799
+// Method Definition Index: 48808
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEconomyUpdateInventoryItemsResultEvent_mFF08984CBF555F1E7122367F4300A1DC0F2816A7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tB249F8AD7ADBC703CF44937D37B68D379470B801* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51671,7 +51671,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48800
+// Method Definition Index: 48809
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEconomyUpdateInventoryItemsResultEvent_mEEEDE3E07263B252B85A2C1C06BEC7C92BBFA851 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tB249F8AD7ADBC703CF44937D37B68D379470B801* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51714,7 +51714,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48801
+// Method Definition Index: 48810
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEventsCreateTelemetryKeyRequestEvent_mB840303A14E5A31B6F0C6DE694C7D503E5EF22E1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5DD7CB637FD36B8B978E346A9AEC62EDA151B937* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51757,7 +51757,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48802
+// Method Definition Index: 48811
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEventsCreateTelemetryKeyRequestEvent_mF94FB23358EF120E33C3E1F395342BDC810F6E10 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5DD7CB637FD36B8B978E346A9AEC62EDA151B937* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51800,7 +51800,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48803
+// Method Definition Index: 48812
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEventsCreateTelemetryKeyResultEvent_m84AAAE647D2FAC5874DEC5E8CAFB27050EB71E31 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t154AD3DAC3207A4B1EAD738ED016CA7583996B74* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51843,7 +51843,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48804
+// Method Definition Index: 48813
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEventsCreateTelemetryKeyResultEvent_m43C9F9ED0E5C916004C24FC12D0059B48A0FEC8E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t154AD3DAC3207A4B1EAD738ED016CA7583996B74* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51886,7 +51886,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48805
+// Method Definition Index: 48814
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEventsDeleteDataConnectionRequestEvent_m048B1749FBC2E0A1D5FDBEAAA1B4D6D67A927376 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC9867BA53464E3F2BA3B513E82A093435B241CB0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51929,7 +51929,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48806
+// Method Definition Index: 48815
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEventsDeleteDataConnectionRequestEvent_mC529EB3F46D3561B917110AF23487871BF61D760 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC9867BA53464E3F2BA3B513E82A093435B241CB0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51972,7 +51972,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48807
+// Method Definition Index: 48816
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEventsDeleteDataConnectionResultEvent_m4017D4B3FD3C09CCBCE8280F6E309C3D3F77A534 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tB81D575DCC11C8A3BF5467013DBFA0D0E4F7AD80* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52015,7 +52015,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48808
+// Method Definition Index: 48817
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEventsDeleteDataConnectionResultEvent_m64D63657CB6C234ABE73ADFAFFFD33BAB456D456 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tB81D575DCC11C8A3BF5467013DBFA0D0E4F7AD80* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52058,7 +52058,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48809
+// Method Definition Index: 48818
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEventsDeleteTelemetryKeyRequestEvent_mC33303C667E71F871A176FBC95737447D471296D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC38D758E0956CE619DD7E7CD737A61465A0EB91E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52101,7 +52101,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48810
+// Method Definition Index: 48819
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEventsDeleteTelemetryKeyRequestEvent_m508ECD27D12B548312B675815908C149D75B59AA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC38D758E0956CE619DD7E7CD737A61465A0EB91E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52144,7 +52144,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48811
+// Method Definition Index: 48820
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEventsDeleteTelemetryKeyResultEvent_m067DEEEBA4BAFDA3B761798BFC56EC3E11E525EE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA5A042C26D5B76F83A7DB94576ED32EF7A14E93B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52187,7 +52187,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48812
+// Method Definition Index: 48821
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEventsDeleteTelemetryKeyResultEvent_m1FBDD1EECD024959B4FBDB0B556E93144817B819 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA5A042C26D5B76F83A7DB94576ED32EF7A14E93B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52230,7 +52230,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48813
+// Method Definition Index: 48822
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEventsGetDataConnectionRequestEvent_m3830ACE921F378DD31BB6B2A81AB131980A93930 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4D3AD00745F387F94DC5C2DAAEBC32988E4D60BD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52273,7 +52273,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48814
+// Method Definition Index: 48823
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEventsGetDataConnectionRequestEvent_m327B0F3116EE4A51F0BA2FD209DA703471A1082E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4D3AD00745F387F94DC5C2DAAEBC32988E4D60BD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52316,7 +52316,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48815
+// Method Definition Index: 48824
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEventsGetDataConnectionResultEvent_m87245D6907EDCE9C2CF965AEB384D9E9183EC49D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t2D32E28EAC4A0495077EB0714143DE5D77E5311D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52359,7 +52359,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48816
+// Method Definition Index: 48825
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEventsGetDataConnectionResultEvent_mBDBBC87FA09801D985A5497CC8F1C43EA4802998 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t2D32E28EAC4A0495077EB0714143DE5D77E5311D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52402,7 +52402,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48817
+// Method Definition Index: 48826
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEventsGetTelemetryKeyRequestEvent_mD50C1FA55370DB981A650BC5EBB0BC898BDA0E01 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5DE7AC8DC12C4483E96E6F81FA94958CFA6C5BCC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52445,7 +52445,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48818
+// Method Definition Index: 48827
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEventsGetTelemetryKeyRequestEvent_m1D86EBD6D728B8619EB942010BEAD955F7DEEBA7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5DE7AC8DC12C4483E96E6F81FA94958CFA6C5BCC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52488,7 +52488,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48819
+// Method Definition Index: 48828
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEventsGetTelemetryKeyResultEvent_m63B1E09A7359B57F645D7C61EFFB6E44DF850D00 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tBB73D12576A02ED30388CE6A4524A8341F712A8E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52531,7 +52531,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48820
+// Method Definition Index: 48829
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEventsGetTelemetryKeyResultEvent_mA915345FB4F205AE31441964EF803380BDFAF332 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tBB73D12576A02ED30388CE6A4524A8341F712A8E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52574,7 +52574,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48821
+// Method Definition Index: 48830
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEventsListDataConnectionsRequestEvent_m5039747AE52DAC608B9BFECC89C20CC507C5BD7B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1FA77374F10A8C987441843F0FDD8839C18BE5B9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52617,7 +52617,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48822
+// Method Definition Index: 48831
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEventsListDataConnectionsRequestEvent_m47DE13C8F2BCC5A877D4AB8DD975861449524AED (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1FA77374F10A8C987441843F0FDD8839C18BE5B9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52660,7 +52660,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48823
+// Method Definition Index: 48832
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEventsListDataConnectionsResultEvent_mED580831A86DDF36B8594BFD2A47BE02D10672E6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t9E841E42C9F692D1AB82DD882571867330EFE35F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52703,7 +52703,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48824
+// Method Definition Index: 48833
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEventsListDataConnectionsResultEvent_m45887F0E40CCB53738D146EBC6F26391D5451EF5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t9E841E42C9F692D1AB82DD882571867330EFE35F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52746,7 +52746,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48825
+// Method Definition Index: 48834
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEventsListTelemetryKeysRequestEvent_mE4AFA22ACA00921D7E51DE006AA8A7CA6CC3979C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t94A2F37D71B23C12DA1A97F0C80B98A3CB4943DF* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52789,7 +52789,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48826
+// Method Definition Index: 48835
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEventsListTelemetryKeysRequestEvent_mCCA8C1076D923FE7CDAC11581B2B57DDD9E9B33A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t94A2F37D71B23C12DA1A97F0C80B98A3CB4943DF* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52832,7 +52832,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48827
+// Method Definition Index: 48836
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEventsListTelemetryKeysResultEvent_mB00B07E31B4BE6EFE36FAA58241FDCCAB01B199B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t90318E1213B8B0A6E70963187F4C543229B2DEEA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52875,7 +52875,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48828
+// Method Definition Index: 48837
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEventsListTelemetryKeysResultEvent_m72D6C5E05A0BC7CFCFC83B972FD34AD219931C45 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t90318E1213B8B0A6E70963187F4C543229B2DEEA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52918,7 +52918,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48829
+// Method Definition Index: 48838
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEventsSetDataConnectionRequestEvent_mDFE3F50743ED8CEFA19629C06DF7134EDFD61A85 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t494CDD0DB15771006E64CD8F4720453881669C60* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52961,7 +52961,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48830
+// Method Definition Index: 48839
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEventsSetDataConnectionRequestEvent_m083E3F03DAC80529483100AA6585496689159CD1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t494CDD0DB15771006E64CD8F4720453881669C60* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53004,7 +53004,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48831
+// Method Definition Index: 48840
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEventsSetDataConnectionResultEvent_m12A888CD5182E522D876B950FC7ACBEE11CDF37F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8A875991E05CB12A7AE063FF90472F31E7DAB78C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53047,7 +53047,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48832
+// Method Definition Index: 48841
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEventsSetDataConnectionResultEvent_m19687EF9A29E6654CB5BDAB53D245AE4F4C246D5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8A875991E05CB12A7AE063FF90472F31E7DAB78C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53090,7 +53090,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48833
+// Method Definition Index: 48842
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEventsSetDataConnectionActiveRequestEvent_mDEA41AB81CD1557EBBA682F3F0908A86B052E894 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t6B83BBAF6984134445AA8E1A8D5C221027092728* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53133,7 +53133,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48834
+// Method Definition Index: 48843
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEventsSetDataConnectionActiveRequestEvent_mD9CA36CDB4C6CCD4E835CCC96F7909565DE6E319 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t6B83BBAF6984134445AA8E1A8D5C221027092728* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53176,7 +53176,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48835
+// Method Definition Index: 48844
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEventsSetDataConnectionActiveResultEvent_m68D55DAE954173D5B2DE6CEFA96A237C4EBE6789 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t2F81A11E99BAF4F3E8C90A8C33C59410CEADE6DA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53219,7 +53219,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48836
+// Method Definition Index: 48845
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEventsSetDataConnectionActiveResultEvent_mBA0A64325C59C944E5117504E00D876D667C9482 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t2F81A11E99BAF4F3E8C90A8C33C59410CEADE6DA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53262,7 +53262,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48837
+// Method Definition Index: 48846
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEventsSetTelemetryKeyActiveRequestEvent_m3BDA43800357E2A1925F726B44E5E9C906473325 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE7848922100E0DF14F022DE8000BA96FB84CA661* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53305,7 +53305,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48838
+// Method Definition Index: 48847
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEventsSetTelemetryKeyActiveRequestEvent_mB2AC741AFA7A1BBE29787E0FBB4E06618F684D5F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE7848922100E0DF14F022DE8000BA96FB84CA661* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53348,7 +53348,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48839
+// Method Definition Index: 48848
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEventsSetTelemetryKeyActiveResultEvent_m63B24D791AD1D23B3210C2287401410D76AA046D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE7A15F84498C82C7702CBA7D0348524581C42EBA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53391,7 +53391,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48840
+// Method Definition Index: 48849
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEventsSetTelemetryKeyActiveResultEvent_m6416454192824C7B5DE713A60D78910CE4CB914E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE7A15F84498C82C7702CBA7D0348524581C42EBA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53434,7 +53434,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48841
+// Method Definition Index: 48850
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEventsWriteEventsRequestEvent_m9BF11AE1DA9B2E7E10DA5553836F696D0E718511 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t71DB39B41B53CD9D4511C8D927AEC142F700A52E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53477,7 +53477,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48842
+// Method Definition Index: 48851
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEventsWriteEventsRequestEvent_m29B9359A1B3F6EAE4D358818B53AD02D351E163D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t71DB39B41B53CD9D4511C8D927AEC142F700A52E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53520,7 +53520,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48843
+// Method Definition Index: 48852
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEventsWriteEventsResultEvent_mBFE8EB180BFE9F29B3E5FD0C49382A72937D582B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tEE3D640A89B71D090F9842FFDCFF0BD7F3815D2A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53563,7 +53563,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48844
+// Method Definition Index: 48853
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEventsWriteEventsResultEvent_m6DF413735B91A21825F23CE0B24E9F35A4AEF2E9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tEE3D640A89B71D090F9842FFDCFF0BD7F3815D2A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53606,7 +53606,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48845
+// Method Definition Index: 48854
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEventsWriteTelemetryEventsRequestEvent_m8BB7346A789B001BA26018C4B2F3B1866444263D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t71DB39B41B53CD9D4511C8D927AEC142F700A52E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53649,7 +53649,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48846
+// Method Definition Index: 48855
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEventsWriteTelemetryEventsRequestEvent_mE2D77DC2E6CD5B15B6900C8473A02282B7257A01 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t71DB39B41B53CD9D4511C8D927AEC142F700A52E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53692,7 +53692,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48847
+// Method Definition Index: 48856
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnEventsWriteTelemetryEventsResultEvent_m6449DB3C3BFE0958A03CEE66215C84FC85BC1B37 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tEE3D640A89B71D090F9842FFDCFF0BD7F3815D2A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53735,7 +53735,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48848
+// Method Definition Index: 48857
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnEventsWriteTelemetryEventsResultEvent_m1246AC0F346DEA2111DA77E321EACD1C7F63DB1F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tEE3D640A89B71D090F9842FFDCFF0BD7F3815D2A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53778,7 +53778,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48849
+// Method Definition Index: 48858
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExperimentationCreateExclusionGroupRequestEvent_mE4E9FF7969E25D4F9E7FA0B11169EAE28BACA59A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1F4F2D631A5E773668BCACB148B471F0BA2A1447* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53821,7 +53821,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48850
+// Method Definition Index: 48859
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExperimentationCreateExclusionGroupRequestEvent_mC5C0AC5AF659876818EF44AA35EA287A8346F0A9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1F4F2D631A5E773668BCACB148B471F0BA2A1447* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53864,7 +53864,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48851
+// Method Definition Index: 48860
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExperimentationCreateExclusionGroupResultEvent_mEE9D8BC447057DB5E0932EDCE8C4FBCCF836604A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCDECCDE890921546DE6CF1AADA557B52F872B21C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53907,7 +53907,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48852
+// Method Definition Index: 48861
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExperimentationCreateExclusionGroupResultEvent_m534C729DB10CD9578561900EED849C3712442D26 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCDECCDE890921546DE6CF1AADA557B52F872B21C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53950,7 +53950,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48853
+// Method Definition Index: 48862
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExperimentationCreateExperimentRequestEvent_mD7D6BE2B1153BAD0E1ACEC806C0C855347E6F162 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t24757644B0EA1D1B0B131C1309DFB0CE2C968ADE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53993,7 +53993,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48854
+// Method Definition Index: 48863
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExperimentationCreateExperimentRequestEvent_m3750D9EB4F2A4F3C428FDE09217A57E95DBE530A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t24757644B0EA1D1B0B131C1309DFB0CE2C968ADE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54036,7 +54036,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48855
+// Method Definition Index: 48864
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExperimentationCreateExperimentResultEvent_m508E80CEA6D169422138743EA0BC2E80F9AD472B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC3F892B80BFC6AAB086FE931571BF0FA953A2E45* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54079,7 +54079,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48856
+// Method Definition Index: 48865
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExperimentationCreateExperimentResultEvent_m355E5B4DDF166809A2FCBE3F9A33BAE49E03B87F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC3F892B80BFC6AAB086FE931571BF0FA953A2E45* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54122,7 +54122,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48857
+// Method Definition Index: 48866
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExperimentationDeleteExclusionGroupRequestEvent_m9807832547897F47C019A7D988E81ED5C9F59C9E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t92A3D094AE66FC6A18FE2A6EC3E57FA4CA5E5791* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54165,7 +54165,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48858
+// Method Definition Index: 48867
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExperimentationDeleteExclusionGroupRequestEvent_m4F16F1CDEB596E99AAC22533D57EBF577AE038ED (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t92A3D094AE66FC6A18FE2A6EC3E57FA4CA5E5791* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54208,7 +54208,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48859
+// Method Definition Index: 48868
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExperimentationDeleteExclusionGroupResultEvent_m3BA7E3E279AB5BBABFE821E9793E35C78400A9BC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t3002432C18BDEBD615E5B75A43935B1C72EFD8A3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54251,7 +54251,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48860
+// Method Definition Index: 48869
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExperimentationDeleteExclusionGroupResultEvent_m13E688E8A900B334AD7B07DBB2EBD754632A56D6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t3002432C18BDEBD615E5B75A43935B1C72EFD8A3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54294,7 +54294,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48861
+// Method Definition Index: 48870
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExperimentationDeleteExperimentRequestEvent_m3C5C69B017647465AE7C2CA176962A36D5D4EB99 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t93B677FEB8145A604FCAB26F31EE67AC851910A2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54337,7 +54337,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48862
+// Method Definition Index: 48871
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExperimentationDeleteExperimentRequestEvent_m66672CAB4C000533BB94A6967A86027A3A0EF34D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t93B677FEB8145A604FCAB26F31EE67AC851910A2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54380,7 +54380,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48863
+// Method Definition Index: 48872
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExperimentationDeleteExperimentResultEvent_m43D187BC69AADDC1E567FB4B1CA0119E6D6D36FE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t3002432C18BDEBD615E5B75A43935B1C72EFD8A3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54423,7 +54423,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48864
+// Method Definition Index: 48873
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExperimentationDeleteExperimentResultEvent_m6CB935586B0FF2E4C6938C06678AB96B624B48B9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t3002432C18BDEBD615E5B75A43935B1C72EFD8A3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54466,7 +54466,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48865
+// Method Definition Index: 48874
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExperimentationGetExclusionGroupsRequestEvent_mECB86CFFCBE33042FEDE9491EC72445CE3724CCC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1D586CA5C5AA58194D456A589FE31E1F9A4EE585* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54509,7 +54509,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48866
+// Method Definition Index: 48875
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExperimentationGetExclusionGroupsRequestEvent_mF9742B7B7FD4AA9645C46806A6E023B896C4A38F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1D586CA5C5AA58194D456A589FE31E1F9A4EE585* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54552,7 +54552,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48867
+// Method Definition Index: 48876
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExperimentationGetExclusionGroupsResultEvent_mFE0BCD9FA252201A4D62D3B01281017999A0FE90 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE15934FFACB12A528AF86F8DD9709183D5A9370B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54595,7 +54595,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48868
+// Method Definition Index: 48877
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExperimentationGetExclusionGroupsResultEvent_mF2BC3FF8431CC9093926E8DDCA8E361D61031727 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE15934FFACB12A528AF86F8DD9709183D5A9370B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54638,7 +54638,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48869
+// Method Definition Index: 48878
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExperimentationGetExclusionGroupTrafficRequestEvent_m07A0EB88660F8DBDD7854A7F4008AFC9C5924FC0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t60E2B52C52CA0CB8C8B6CDCDE12E353E99F00F8D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54681,7 +54681,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48870
+// Method Definition Index: 48879
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExperimentationGetExclusionGroupTrafficRequestEvent_mB2D1736DDDEBCBE3ED06201C41AEBFE5D4620BA9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t60E2B52C52CA0CB8C8B6CDCDE12E353E99F00F8D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54724,7 +54724,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48871
+// Method Definition Index: 48880
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExperimentationGetExclusionGroupTrafficResultEvent_m29274932C80DF42FEEF6878179C193575CC578FE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t2E61E0D02E7F26909824C33E4963FD4609D8292D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54767,7 +54767,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48872
+// Method Definition Index: 48881
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExperimentationGetExclusionGroupTrafficResultEvent_m0E40AB918CDE32C62F9EE442CDD8E359199D80FD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t2E61E0D02E7F26909824C33E4963FD4609D8292D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54810,7 +54810,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48873
+// Method Definition Index: 48882
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExperimentationGetExperimentsRequestEvent_m1DC7B0EB1B777357B1AB487D2E7A709962894BC2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5CB34289719889AA209151EF3D6FD4F8B935BF10* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54853,7 +54853,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48874
+// Method Definition Index: 48883
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExperimentationGetExperimentsRequestEvent_m194D5D4642C7EABB620120C1D77A4B94C9852966 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5CB34289719889AA209151EF3D6FD4F8B935BF10* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54896,7 +54896,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48875
+// Method Definition Index: 48884
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExperimentationGetExperimentsResultEvent_m3200851A88DEE3839E76221716DF06EAD4B57607 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tAAB65F46EC25267F7E2AE0A4338EF21C49DFDF2B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54939,7 +54939,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48876
+// Method Definition Index: 48885
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExperimentationGetExperimentsResultEvent_m860DB30FDB009AF42FD5FC5F90352F47F6532D43 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tAAB65F46EC25267F7E2AE0A4338EF21C49DFDF2B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54982,7 +54982,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48877
+// Method Definition Index: 48886
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExperimentationGetLatestScorecardRequestEvent_mB9215579AA1EA5304D433D0611B13251923314EA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tF5D2F834D926CFF7649E18E0AA91A84AF436067B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55025,7 +55025,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48878
+// Method Definition Index: 48887
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExperimentationGetLatestScorecardRequestEvent_m8578A4218EAFD7BB68B1808ED7FA0C4938035020 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tF5D2F834D926CFF7649E18E0AA91A84AF436067B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55068,7 +55068,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48879
+// Method Definition Index: 48888
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExperimentationGetLatestScorecardResultEvent_mD295E8549E03B8E5E70584ADA02A79DD3DC46A1A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t37585A3B353C1EA00A2632066169F18E201EEECE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55111,7 +55111,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48880
+// Method Definition Index: 48889
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExperimentationGetLatestScorecardResultEvent_mAEABBA7929455EA8B59E0C262394F0644CA22F9F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t37585A3B353C1EA00A2632066169F18E201EEECE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55154,7 +55154,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48881
+// Method Definition Index: 48890
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExperimentationGetTreatmentAssignmentRequestEvent_m4BF7B9FC30524A44369179A119118F3F108B70D9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC0ED791A92CA9B6C4B851970E88095428889A271* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55197,7 +55197,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48882
+// Method Definition Index: 48891
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExperimentationGetTreatmentAssignmentRequestEvent_m4D17ED5544D07CFF093187261BFC4ADFDBCFD019 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC0ED791A92CA9B6C4B851970E88095428889A271* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55240,7 +55240,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48883
+// Method Definition Index: 48892
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExperimentationGetTreatmentAssignmentResultEvent_m1DD001CB38B2713B36DE4FF7EE6FB4E2EBD09B51 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tD8549BF284BD15092B3E3EEDB721FA81397B5685* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55283,7 +55283,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48884
+// Method Definition Index: 48893
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExperimentationGetTreatmentAssignmentResultEvent_m69728C309E21E5D9A4E9F1D815573E2C4F2D43D2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tD8549BF284BD15092B3E3EEDB721FA81397B5685* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55326,7 +55326,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48885
+// Method Definition Index: 48894
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExperimentationStartExperimentRequestEvent_m6FDF29936B73CDC4C5F1F867C0864AF277F378C3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t09343AA7C5A62ED54EDCAA30A1E11B978642B207* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55369,7 +55369,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48886
+// Method Definition Index: 48895
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExperimentationStartExperimentRequestEvent_mEC2E7928D03AD68B0B2C3290724D1CF89F93632E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t09343AA7C5A62ED54EDCAA30A1E11B978642B207* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55412,7 +55412,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48887
+// Method Definition Index: 48896
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExperimentationStartExperimentResultEvent_mE5EA28BFDFE6021310E4C523ACCC476C215706C3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t3002432C18BDEBD615E5B75A43935B1C72EFD8A3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55455,7 +55455,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48888
+// Method Definition Index: 48897
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExperimentationStartExperimentResultEvent_m921C8E499FDB567ABC5DE43CE95C329F051D9007 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t3002432C18BDEBD615E5B75A43935B1C72EFD8A3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55498,7 +55498,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48889
+// Method Definition Index: 48898
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExperimentationStopExperimentRequestEvent_m00A01687B8C6BD508190CE2421182336326A8A44 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t982AFB1538281DB4B0A1AA3B5E18D79C43E0CA36* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55541,7 +55541,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48890
+// Method Definition Index: 48899
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExperimentationStopExperimentRequestEvent_mAD151BA8B3C58EC5D8F13791840C6A929EFBC0A4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t982AFB1538281DB4B0A1AA3B5E18D79C43E0CA36* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55584,7 +55584,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48891
+// Method Definition Index: 48900
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExperimentationStopExperimentResultEvent_mAC740F2C22AC4EFC51A610E847851D7BB63EDD40 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t3002432C18BDEBD615E5B75A43935B1C72EFD8A3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55627,7 +55627,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48892
+// Method Definition Index: 48901
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExperimentationStopExperimentResultEvent_m9E74A8D516B88F975ABBEDBB408022CFDF165DAE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t3002432C18BDEBD615E5B75A43935B1C72EFD8A3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55670,7 +55670,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48893
+// Method Definition Index: 48902
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExperimentationUpdateExclusionGroupRequestEvent_mCA5D27984A40C7F3CC78E730C5D5DBF14C750664 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t480ED21832581612A969F2F35D9645F9A0CEF80E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55713,7 +55713,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48894
+// Method Definition Index: 48903
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExperimentationUpdateExclusionGroupRequestEvent_m12BDC77AFC092513A822E5A3F0F67E0D6B3D85F4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t480ED21832581612A969F2F35D9645F9A0CEF80E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55756,7 +55756,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48895
+// Method Definition Index: 48904
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExperimentationUpdateExclusionGroupResultEvent_m71C5E1C1DECACD6606F021636BD18258E9066B1F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t3002432C18BDEBD615E5B75A43935B1C72EFD8A3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55799,7 +55799,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48896
+// Method Definition Index: 48905
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExperimentationUpdateExclusionGroupResultEvent_mA5D6C999A0D6624F8381EA5ED22FD8FFF2D91611 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t3002432C18BDEBD615E5B75A43935B1C72EFD8A3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55842,7 +55842,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48897
+// Method Definition Index: 48906
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExperimentationUpdateExperimentRequestEvent_m9FD806481860EC3A1AC99B584262BEFBF9F9EA07 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t38A58A2E093EBC072393C10D725B5FE42A51314E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55885,7 +55885,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48898
+// Method Definition Index: 48907
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExperimentationUpdateExperimentRequestEvent_m049F9D4A2AA0AC1E080956CB531D75ACAF4FCA74 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t38A58A2E093EBC072393C10D725B5FE42A51314E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55928,7 +55928,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48899
+// Method Definition Index: 48908
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnExperimentationUpdateExperimentResultEvent_mB862D63724AF13B4D71467927A579E5F23D70F7E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t3002432C18BDEBD615E5B75A43935B1C72EFD8A3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55971,7 +55971,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48900
+// Method Definition Index: 48909
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnExperimentationUpdateExperimentResultEvent_mFF20CA84B11A53D00CBBBDCA6713D70D1DD9EE1E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t3002432C18BDEBD615E5B75A43935B1C72EFD8A3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56014,7 +56014,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48901
+// Method Definition Index: 48910
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsAcceptGroupApplicationRequestEvent_m2F19B707D9C6C82273AE078C58FEE6153E7E93C9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tBAD87602B16854B889FF6425C3E8078B5ACDCD2C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56057,7 +56057,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48902
+// Method Definition Index: 48911
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsAcceptGroupApplicationRequestEvent_m3E29C77D144F7730C60A94ED47A2D431DB4DC673 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tBAD87602B16854B889FF6425C3E8078B5ACDCD2C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56100,7 +56100,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48903
+// Method Definition Index: 48912
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsAcceptGroupApplicationResultEvent_m2610C1FC7173E595EF7E51EA1B3CAC9E0E4CA4AF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4976CF1BE8876A7B0DDAB3B29883FE908493579A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56143,7 +56143,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48904
+// Method Definition Index: 48913
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsAcceptGroupApplicationResultEvent_m6B8D5349F44B3A0B7DDD141C477803B8445FE912 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4976CF1BE8876A7B0DDAB3B29883FE908493579A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56186,7 +56186,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48905
+// Method Definition Index: 48914
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsAcceptGroupInvitationRequestEvent_m05BCCD170D46799C7DDE46FFDFE5510E88836FC2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t513A808CC94273A90D2CD4371958AFC348807024* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56229,7 +56229,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48906
+// Method Definition Index: 48915
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsAcceptGroupInvitationRequestEvent_m83D3FD822B86F734789B01E868310C9A74C3C734 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t513A808CC94273A90D2CD4371958AFC348807024* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56272,7 +56272,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48907
+// Method Definition Index: 48916
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsAcceptGroupInvitationResultEvent_m3CA8B177BFC1EE73B7BA045686959843796CF2D1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4976CF1BE8876A7B0DDAB3B29883FE908493579A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56315,7 +56315,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48908
+// Method Definition Index: 48917
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsAcceptGroupInvitationResultEvent_m2B2F0CC16BBA7C21F86DB1AFD21E1CDF13352DF0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4976CF1BE8876A7B0DDAB3B29883FE908493579A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56358,7 +56358,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48909
+// Method Definition Index: 48918
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsAddMembersRequestEvent_mC7A9C435272647BE4386A226011AA0DAAE3CDA85 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t05C3C02AFF8D55B732DF43E143A57256E3C61924* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56401,7 +56401,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48910
+// Method Definition Index: 48919
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsAddMembersRequestEvent_m45EC9998797DF8BA48995C367D7B5B5A411F33E7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t05C3C02AFF8D55B732DF43E143A57256E3C61924* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56444,7 +56444,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48911
+// Method Definition Index: 48920
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsAddMembersResultEvent_m16E7CCD1F8BFD1A607E918338097359FCEF0D417 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4976CF1BE8876A7B0DDAB3B29883FE908493579A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56487,7 +56487,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48912
+// Method Definition Index: 48921
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsAddMembersResultEvent_m3928E83999D0874E1B797AB4205B8AC92E1103D6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4976CF1BE8876A7B0DDAB3B29883FE908493579A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56530,7 +56530,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48913
+// Method Definition Index: 48922
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsApplyToGroupRequestEvent_m1E44C93D4A52EE60BAFCCAF8AB45AACA722E4942 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t86C3C3A857C4B3724D9DEEC87F952FF1F0ED6F47* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56573,7 +56573,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48914
+// Method Definition Index: 48923
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsApplyToGroupRequestEvent_mD4AFE63199E3ABA7D25C730CB6359AF945CBFEC9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t86C3C3A857C4B3724D9DEEC87F952FF1F0ED6F47* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56616,7 +56616,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48915
+// Method Definition Index: 48924
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsApplyToGroupResultEvent_m9E554C3ECFE452CBDEC42D5C43F8BE45C269A1EE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tFBF46F09241DD4C82B675B2CCA5C34E85FEE3EB2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56659,7 +56659,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48916
+// Method Definition Index: 48925
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsApplyToGroupResultEvent_m484D2493E407F115B78EAC26F5E844BAC5A4E6C6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tFBF46F09241DD4C82B675B2CCA5C34E85FEE3EB2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56702,7 +56702,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48917
+// Method Definition Index: 48926
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsBlockEntityRequestEvent_m097900171B355CA1AE3720F82F19FD1B8746E2F6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5CBCB1058AF7224A116ABEA26DB997CFA266CBBD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56745,7 +56745,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48918
+// Method Definition Index: 48927
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsBlockEntityRequestEvent_m331428DAFB533E9600D3AB45FC8B05F9E4CEA7DF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5CBCB1058AF7224A116ABEA26DB997CFA266CBBD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56788,7 +56788,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48919
+// Method Definition Index: 48928
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsBlockEntityResultEvent_mC104DE7AF2734061E7ECAD543A57369A8F53D25E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4976CF1BE8876A7B0DDAB3B29883FE908493579A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56831,7 +56831,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48920
+// Method Definition Index: 48929
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsBlockEntityResultEvent_mB48BE7FEFC3AF99986DDF1B18511AA1BFE1E19EA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4976CF1BE8876A7B0DDAB3B29883FE908493579A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56874,7 +56874,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48921
+// Method Definition Index: 48930
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsChangeMemberRoleRequestEvent_m63E8A92B8B70814A0E5F82F33C74918D6956673D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t0B60D7AF1591D39AAA761B4CB5109FB2C8EA2B48* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56917,7 +56917,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48922
+// Method Definition Index: 48931
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsChangeMemberRoleRequestEvent_m31604C9718CC10CB0A0B718887547B92321B6E44 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t0B60D7AF1591D39AAA761B4CB5109FB2C8EA2B48* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56960,7 +56960,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48923
+// Method Definition Index: 48932
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsChangeMemberRoleResultEvent_m454A1F93CA2B60BE8B759FB45699B8F520FCB4FC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4976CF1BE8876A7B0DDAB3B29883FE908493579A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57003,7 +57003,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48924
+// Method Definition Index: 48933
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsChangeMemberRoleResultEvent_m9E8F2764C96D53F542201BD5B133ED20DE8B68E1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4976CF1BE8876A7B0DDAB3B29883FE908493579A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57046,7 +57046,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48925
+// Method Definition Index: 48934
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsCreateGroupRequestEvent_mCD613A1FB368D7ADEC500AA6BB3D15CDE1B3FBF9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4DB6A3BDE82A318402706B36B0FC43483E77E7CB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57089,7 +57089,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48926
+// Method Definition Index: 48935
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsCreateGroupRequestEvent_mBE216BFB2501EFD5A9ED118876D8211C20A53675 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4DB6A3BDE82A318402706B36B0FC43483E77E7CB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57132,7 +57132,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48927
+// Method Definition Index: 48936
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsCreateGroupResultEvent_mED12A986146E5563F5051E3E3E7E80507D5DF679 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1BEDDE84605964CA84FB6932974126DA7F4B1693* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57175,7 +57175,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48928
+// Method Definition Index: 48937
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsCreateGroupResultEvent_mD16CA44EE18D524C0DBC62255DBB23096C75C7A3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1BEDDE84605964CA84FB6932974126DA7F4B1693* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57218,7 +57218,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48929
+// Method Definition Index: 48938
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsCreateRoleRequestEvent_m139041636383A06AA1EBA692C74ECA93E4EC5644 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t2E3C235AE6C406B6281A4A261F8EA316F1529357* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57261,7 +57261,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48930
+// Method Definition Index: 48939
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsCreateRoleRequestEvent_m754607CDD354C5A5627B9CEF7E93686F3E402028 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t2E3C235AE6C406B6281A4A261F8EA316F1529357* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57304,7 +57304,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48931
+// Method Definition Index: 48940
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsCreateRoleResultEvent_m016866AE47B81D6F22E24D93C1D689AC3966C908 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t0B3000A771FC7A251D5586D9A855183EB0A20DB8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57347,7 +57347,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48932
+// Method Definition Index: 48941
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsCreateRoleResultEvent_m23E2BB80E1C9F34B7275C86A02086A88F2AE3594 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t0B3000A771FC7A251D5586D9A855183EB0A20DB8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57390,7 +57390,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48933
+// Method Definition Index: 48942
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsDeleteGroupRequestEvent_mF29722099062845939309A35E880A0E28780F8B8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t734B8AED0BB6F41F16030018FA5FDCA23EFFB444* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57433,7 +57433,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48934
+// Method Definition Index: 48943
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsDeleteGroupRequestEvent_mCCC368D50AD1075987AD66B5142639AB897183FE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t734B8AED0BB6F41F16030018FA5FDCA23EFFB444* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57476,7 +57476,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48935
+// Method Definition Index: 48944
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsDeleteGroupResultEvent_m08AA288D8271EB9B9A156D4FC774CED3A7518BCB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4976CF1BE8876A7B0DDAB3B29883FE908493579A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57519,7 +57519,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48936
+// Method Definition Index: 48945
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsDeleteGroupResultEvent_m6F1E37FECB6A095A5AB8A11FE0E4824528F9236F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4976CF1BE8876A7B0DDAB3B29883FE908493579A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57562,7 +57562,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48937
+// Method Definition Index: 48946
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsDeleteRoleRequestEvent_m58E1D154241C6E684FBC60DE596FD1C52B729FAD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAD858E49179C9101B3C21F743815F40C6F0764B2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57605,7 +57605,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48938
+// Method Definition Index: 48947
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsDeleteRoleRequestEvent_mB0B31D5D2F0ABC4895F63D52BDA499791B79117A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAD858E49179C9101B3C21F743815F40C6F0764B2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57648,7 +57648,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48939
+// Method Definition Index: 48948
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsDeleteRoleResultEvent_mA467784BE54047B5D6BFAF08E4CB0DD2124163C4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4976CF1BE8876A7B0DDAB3B29883FE908493579A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57691,7 +57691,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48940
+// Method Definition Index: 48949
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsDeleteRoleResultEvent_mF134E8E83F54F2731A32ACEC5A498171C4B29B2D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4976CF1BE8876A7B0DDAB3B29883FE908493579A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57734,7 +57734,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48941
+// Method Definition Index: 48950
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsGetGroupRequestEvent_m0513803B720BAE676FEE04553503F8E11B88CAB9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tDDD440FD0DD796743D9A5FEDA6243A4DEAE98319* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57777,7 +57777,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48942
+// Method Definition Index: 48951
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsGetGroupRequestEvent_m27A31026878D64506580F28C1B7902CDEF0619FC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tDDD440FD0DD796743D9A5FEDA6243A4DEAE98319* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57820,7 +57820,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48943
+// Method Definition Index: 48952
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsGetGroupResultEvent_mA65249F4979DCBAF381D7B86629ED8ACE092737A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t396E71E2D126C9FFC5186E8AA2566E4A80F11BE0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57863,7 +57863,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48944
+// Method Definition Index: 48953
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsGetGroupResultEvent_m008910CDF59818E0A169E0A80C199574CC8879D7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t396E71E2D126C9FFC5186E8AA2566E4A80F11BE0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57906,7 +57906,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48945
+// Method Definition Index: 48954
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsInviteToGroupRequestEvent_m4B62EF62B3A3EB5E80D0AD77180D361AC7D2BDFF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5E7E8F6307C841913E2F5724A64A5A02D62D627C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57949,7 +57949,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48946
+// Method Definition Index: 48955
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsInviteToGroupRequestEvent_mF8359ACB1C634BBA5C3EB0E2B18A7598CB9E3C9E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5E7E8F6307C841913E2F5724A64A5A02D62D627C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57992,7 +57992,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48947
+// Method Definition Index: 48956
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsInviteToGroupResultEvent_m4456B5606ABC786F769423641241CCE309750018 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1FF41C133DE91E7272A1962819221B73AB6A5DAE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58035,7 +58035,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48948
+// Method Definition Index: 48957
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsInviteToGroupResultEvent_m0790E3DB0680F8A65A98F7C0F383BB9EDEEA4F68 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1FF41C133DE91E7272A1962819221B73AB6A5DAE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58078,7 +58078,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48949
+// Method Definition Index: 48958
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsIsMemberRequestEvent_m3B4A975F293CE8B31C1C45B8D96AC5C1B6E23436 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t08502BA059CFF9FC6E7F2A682B6367412272FD07* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58121,7 +58121,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48950
+// Method Definition Index: 48959
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsIsMemberRequestEvent_mDBA04183FEBC5F2A8F59293013C6E4FB1C039675 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t08502BA059CFF9FC6E7F2A682B6367412272FD07* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58164,7 +58164,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48951
+// Method Definition Index: 48960
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsIsMemberResultEvent_mF115EAE5EBDAF346C9B92385A9CBBFEC8A8888BE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tD0042F142C0CE4AF0550754ACCFCB36E98F65CDB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58207,7 +58207,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48952
+// Method Definition Index: 48961
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsIsMemberResultEvent_mD6C30DE706283EDD0127161A4452C17E3368D52D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tD0042F142C0CE4AF0550754ACCFCB36E98F65CDB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58250,7 +58250,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48953
+// Method Definition Index: 48962
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsListGroupApplicationsRequestEvent_mD489C1E7AB2B35869121755A133DDF7152E977DE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tBB12457365C191C6EAA837B8AF2B27517F11FD5C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58293,7 +58293,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48954
+// Method Definition Index: 48963
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsListGroupApplicationsRequestEvent_mFC7BE3EDB20B3F10460165A59523D3028988CB6D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tBB12457365C191C6EAA837B8AF2B27517F11FD5C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58336,7 +58336,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48955
+// Method Definition Index: 48964
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsListGroupApplicationsResultEvent_m11CE89596604240B3575968C5AE4EFCF932B1F76 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t3056B979472E3F50087ECF355ED7D73DCAF591B2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58379,7 +58379,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48956
+// Method Definition Index: 48965
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsListGroupApplicationsResultEvent_m49584E13BFB7BDCF6C5CC82577023AD5B41EEF44 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t3056B979472E3F50087ECF355ED7D73DCAF591B2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58422,7 +58422,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48957
+// Method Definition Index: 48966
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsListGroupBlocksRequestEvent_m7D37CC3ED0C2385003444C7E4C97B171AB54EB42 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA809E575727C94AB1211D7606E982E608631902A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58465,7 +58465,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48958
+// Method Definition Index: 48967
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsListGroupBlocksRequestEvent_m8C91F041CDFAD8D047DDC13F993C7AE6BA00EC50 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA809E575727C94AB1211D7606E982E608631902A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58508,7 +58508,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48959
+// Method Definition Index: 48968
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsListGroupBlocksResultEvent_mA6C265776C2B0FD227A8469FB7B409DB6DAA7874 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t97327F791967052902EFDDF2DE6816E52D1BAACE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58551,7 +58551,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48960
+// Method Definition Index: 48969
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsListGroupBlocksResultEvent_mFE00B766B2CDBCB3CDE5A5B8F0B16DE2BB762B06 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t97327F791967052902EFDDF2DE6816E52D1BAACE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58594,7 +58594,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48961
+// Method Definition Index: 48970
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsListGroupInvitationsRequestEvent_mEBD733E171255F8A3AEB7ABE0B6CEAAD2D148DD3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9D1EB2FAFB1FC5C7E9FC51B04E15AA38E99EF085* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58637,7 +58637,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48962
+// Method Definition Index: 48971
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsListGroupInvitationsRequestEvent_m94C17D112D7BB1CC2933AF9C3AC7F439B482FC00 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9D1EB2FAFB1FC5C7E9FC51B04E15AA38E99EF085* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58680,7 +58680,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48963
+// Method Definition Index: 48972
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsListGroupInvitationsResultEvent_m929B0E965CEE7369E9A758803459901165D54106 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1169C70A1E33FC7784DB2CF744DD45C4E3E2F84C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58723,7 +58723,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48964
+// Method Definition Index: 48973
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsListGroupInvitationsResultEvent_m3336A0111BE32AF3BEBB54A06239D55963C2F68E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1169C70A1E33FC7784DB2CF744DD45C4E3E2F84C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58766,7 +58766,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48965
+// Method Definition Index: 48974
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsListGroupMembersRequestEvent_m5D54FEB4B1BB2D4FC3E37A298B10373DBC9B8A07 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t435903D2AA8A3311A0BF0E1339DC64706C638023* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58809,7 +58809,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48966
+// Method Definition Index: 48975
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsListGroupMembersRequestEvent_m19EE2FC8432AE053A72FE088852230B3472B684E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t435903D2AA8A3311A0BF0E1339DC64706C638023* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58852,7 +58852,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48967
+// Method Definition Index: 48976
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsListGroupMembersResultEvent_m4B438281118D5A613D439101D91209F32A33F51E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t424BF71D4437E80987B0D730D9CB1406AA16815C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58895,7 +58895,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48968
+// Method Definition Index: 48977
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsListGroupMembersResultEvent_m1DE01C132CABDB7280F4E7E2A7E81A2BFB928314 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t424BF71D4437E80987B0D730D9CB1406AA16815C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58938,7 +58938,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48969
+// Method Definition Index: 48978
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsListMembershipRequestEvent_mFC507791D83FC11AE82E71D742EB3618D028A5C8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t09BD114A979D823F2D87812A3A44ACEC2A21B1AB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58981,7 +58981,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48970
+// Method Definition Index: 48979
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsListMembershipRequestEvent_m9BFAA777D548355CC737D41FEA6B3DBB2516BBE9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t09BD114A979D823F2D87812A3A44ACEC2A21B1AB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59024,7 +59024,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48971
+// Method Definition Index: 48980
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsListMembershipResultEvent_m6866AE20B14B38226EE5D4AD1003696ABBC3EAA5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t494EF77AEFF9E81012EB82EA5E5E453144D7CC4D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59067,7 +59067,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48972
+// Method Definition Index: 48981
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsListMembershipResultEvent_mAE01C256B195E1E878501D05BBADAEB7679A9F0D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t494EF77AEFF9E81012EB82EA5E5E453144D7CC4D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59110,7 +59110,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48973
+// Method Definition Index: 48982
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsListMembershipOpportunitiesRequestEvent_mEBCC48E7ED413F26D363971C3B10C79555E282CA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD5C16AA58ED3952DDFF915A513C3186A8D37FE44* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59153,7 +59153,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48974
+// Method Definition Index: 48983
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsListMembershipOpportunitiesRequestEvent_m6FBF4E9B8D432E6CF3172C7F39ED5546F834607A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD5C16AA58ED3952DDFF915A513C3186A8D37FE44* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59196,7 +59196,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48975
+// Method Definition Index: 48984
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsListMembershipOpportunitiesResultEvent_m37DB18F5AF5E6E8D2A430929239E72D83878266D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC7E05D94FC5E8F445E95F4ACF89A68768297C634* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59239,7 +59239,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48976
+// Method Definition Index: 48985
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsListMembershipOpportunitiesResultEvent_mC280B4CC923E68E78B1C2578996E0C12E866F64C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC7E05D94FC5E8F445E95F4ACF89A68768297C634* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59282,7 +59282,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48977
+// Method Definition Index: 48986
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsRemoveGroupApplicationRequestEvent_m8EF2320ADC87A7842401D7355BD4BAB87E3AD5B1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA0310745349E656B450816C4587C8E347D963505* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59325,7 +59325,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48978
+// Method Definition Index: 48987
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsRemoveGroupApplicationRequestEvent_mBE529526EB7ABDF95A86970F4D50ED039ED1050A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA0310745349E656B450816C4587C8E347D963505* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59368,7 +59368,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48979
+// Method Definition Index: 48988
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsRemoveGroupApplicationResultEvent_mC320F892A939B4F8AC83D5047552D62FF0C556F8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4976CF1BE8876A7B0DDAB3B29883FE908493579A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59411,7 +59411,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48980
+// Method Definition Index: 48989
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsRemoveGroupApplicationResultEvent_m63612B1C49F55639227B4E8B4E83B1BC6D276DC8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4976CF1BE8876A7B0DDAB3B29883FE908493579A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59454,7 +59454,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48981
+// Method Definition Index: 48990
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsRemoveGroupInvitationRequestEvent_m0CA0B232C7E700A2A0B0BA6699D4EB9E60AB766F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t17AC899D9B2F3B982E5E4652DEC96914B51FB4D6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59497,7 +59497,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48982
+// Method Definition Index: 48991
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsRemoveGroupInvitationRequestEvent_mFFD0E6956146BA8A864505E0EA68D05325ACEB3D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t17AC899D9B2F3B982E5E4652DEC96914B51FB4D6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59540,7 +59540,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48983
+// Method Definition Index: 48992
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsRemoveGroupInvitationResultEvent_m8ED20341BFF0F30F7D46F3B10221C5F79BC19A66 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4976CF1BE8876A7B0DDAB3B29883FE908493579A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59583,7 +59583,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48984
+// Method Definition Index: 48993
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsRemoveGroupInvitationResultEvent_m28030FB314DC9EEA887D7F33ABD9368DD20FF47F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4976CF1BE8876A7B0DDAB3B29883FE908493579A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59626,7 +59626,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48985
+// Method Definition Index: 48994
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsRemoveMembersRequestEvent_m725668EF32105478077D34C42E77BCE537306638 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tACAB9C9B707E877B9712A931CAED27E953F1E775* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59669,7 +59669,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48986
+// Method Definition Index: 48995
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsRemoveMembersRequestEvent_m0B4938F2BCC97231BF48C38341BCABC6CD779D5E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tACAB9C9B707E877B9712A931CAED27E953F1E775* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59712,7 +59712,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48987
+// Method Definition Index: 48996
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsRemoveMembersResultEvent_m0A5AC9661FA2AE7E87A9BCF7C9F1B6FE5F189393 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4976CF1BE8876A7B0DDAB3B29883FE908493579A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59755,7 +59755,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48988
+// Method Definition Index: 48997
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsRemoveMembersResultEvent_m2B2CCE40089FB74CC6E018D06CEAD2B0AF6DBBA5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4976CF1BE8876A7B0DDAB3B29883FE908493579A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59798,7 +59798,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48989
+// Method Definition Index: 48998
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsUnblockEntityRequestEvent_m9E6F82E3EF5AA68DD54003911396716A0E098538 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t14B889B4A2B1D9536E0A96C24A2A72EB603CAB42* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59841,7 +59841,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48990
+// Method Definition Index: 48999
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsUnblockEntityRequestEvent_mBB99A0570BFD28D4732D6A556394DF55185F9049 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t14B889B4A2B1D9536E0A96C24A2A72EB603CAB42* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59884,7 +59884,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48991
+// Method Definition Index: 49000
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsUnblockEntityResultEvent_mA46F1EC15A603DEDA2C560DA7AB833C5452E42CA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4976CF1BE8876A7B0DDAB3B29883FE908493579A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59927,7 +59927,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48992
+// Method Definition Index: 49001
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsUnblockEntityResultEvent_m5C4996729363E33023EA07FEA73C32352C366448 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4976CF1BE8876A7B0DDAB3B29883FE908493579A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59970,7 +59970,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48993
+// Method Definition Index: 49002
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsUpdateGroupRequestEvent_m2CA41BC2E048910FB3B43C66B9221B44144BABAE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAF49581860C7F0540852D3F8DF74CA7278B3A55D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60013,7 +60013,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48994
+// Method Definition Index: 49003
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsUpdateGroupRequestEvent_m3A9DDC7A04175105F1D85B881307AD52AA77C7C6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAF49581860C7F0540852D3F8DF74CA7278B3A55D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60056,7 +60056,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48995
+// Method Definition Index: 49004
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsUpdateGroupResultEvent_m6C935188B9F28CD382118C101A3ECEEDDA4235D6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7C843FE80BDC39DE1E960203A5562CE0C96C17C5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60099,7 +60099,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48996
+// Method Definition Index: 49005
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsUpdateGroupResultEvent_m982ADC80753C4D730B43FD54FE14E69828B390F8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7C843FE80BDC39DE1E960203A5562CE0C96C17C5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60142,7 +60142,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48997
+// Method Definition Index: 49006
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsUpdateRoleRequestEvent_m77DBCADC9C419492C960E2305E694D7D06252A7B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB2C87DADED08A554AA76D7DF2F07B49CD981DFCE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60185,7 +60185,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48998
+// Method Definition Index: 49007
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsUpdateRoleRequestEvent_mA13B165BBF442B69D99C4C85645E62E119E830BC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB2C87DADED08A554AA76D7DF2F07B49CD981DFCE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60228,7 +60228,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 48999
+// Method Definition Index: 49008
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGroupsUpdateRoleResultEvent_mE5BD23C35EBBA0557A70B790B589E5EA077E93BF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA2E83230C0BF754417F90CDB5414567315313D4A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60271,7 +60271,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49000
+// Method Definition Index: 49009
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGroupsUpdateRoleResultEvent_m430597194053D9C3DDD339A797E830E51E849C33 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA2E83230C0BF754417F90CDB5414567315313D4A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60314,7 +60314,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49001
+// Method Definition Index: 49010
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnInsightsGetDetailsRequestEvent_m603AF95937DF83AEFDE0EFB5218D85CD33E275D3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t68B55FE627B629747AAD3E5AC027D81883FCB0F4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60357,7 +60357,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49002
+// Method Definition Index: 49011
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnInsightsGetDetailsRequestEvent_m20B5A2CD07A3885EC068B4507E7733AFC0C52391 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t68B55FE627B629747AAD3E5AC027D81883FCB0F4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60400,7 +60400,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49003
+// Method Definition Index: 49012
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnInsightsGetDetailsResultEvent_m016E0BCC88DFCE1A5D7DE83CD04074FAA9D3F842 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE5FB572E7D646C311E242DBD37747DFADA99D59F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60443,7 +60443,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49004
+// Method Definition Index: 49013
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnInsightsGetDetailsResultEvent_m5AB63EE604C0A16B92438100FA93BD2AD0273F48 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE5FB572E7D646C311E242DBD37747DFADA99D59F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60486,7 +60486,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49005
+// Method Definition Index: 49014
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnInsightsGetLimitsRequestEvent_m3754B91102C45AE87511892B478881B47CE39192 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t68B55FE627B629747AAD3E5AC027D81883FCB0F4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60529,7 +60529,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49006
+// Method Definition Index: 49015
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnInsightsGetLimitsRequestEvent_m7CB2E55DCBA2CECE7E6AD4560A467E8888833533 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t68B55FE627B629747AAD3E5AC027D81883FCB0F4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60572,7 +60572,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49007
+// Method Definition Index: 49016
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnInsightsGetLimitsResultEvent_mD4C964DB073170533E7A07F0D8CB5ACE4D063C50 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7335239E77863624B63F09C8A314D412F82633D1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60615,7 +60615,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49008
+// Method Definition Index: 49017
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnInsightsGetLimitsResultEvent_m060BC0CCDEF0E15762382FF1CF5EAA196D5BBD63 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7335239E77863624B63F09C8A314D412F82633D1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60658,7 +60658,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49009
+// Method Definition Index: 49018
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnInsightsGetOperationStatusRequestEvent_m3B0EEDDE2D6B10438C33C528970051DE07343C23 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t6296F1C7F631943D170664B92B616EE5545674D8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60701,7 +60701,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49010
+// Method Definition Index: 49019
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnInsightsGetOperationStatusRequestEvent_m67824E398B271289692829713842463242E2F594 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t6296F1C7F631943D170664B92B616EE5545674D8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60744,7 +60744,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49011
+// Method Definition Index: 49020
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnInsightsGetOperationStatusResultEvent_m92169DC122469909EDD64A539FE86F15A216ADBE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t925DA1BF2B889622E29BBBFD488C6D5E051DBD69* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60787,7 +60787,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49012
+// Method Definition Index: 49021
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnInsightsGetOperationStatusResultEvent_mCAC9287F562DD09055EE5C36EF810C09091B0FE1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t925DA1BF2B889622E29BBBFD488C6D5E051DBD69* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60830,7 +60830,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49013
+// Method Definition Index: 49022
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnInsightsGetPendingOperationsRequestEvent_m2C2E9672BBB9D9ED172BC2DC143980BA959D2F8B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA91B5A01427891B9245608E23D5CC420292809DD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60873,7 +60873,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49014
+// Method Definition Index: 49023
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnInsightsGetPendingOperationsRequestEvent_mFE65531A20EA4EFAE34BACCC9B5ABB3530F2E419 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA91B5A01427891B9245608E23D5CC420292809DD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60916,7 +60916,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49015
+// Method Definition Index: 49024
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnInsightsGetPendingOperationsResultEvent_m2DDC18E9C083AF602324B5DEF86BB4CD90155E13 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCDCE304E6973945AF3641080980194356D2F2085* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60959,7 +60959,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49016
+// Method Definition Index: 49025
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnInsightsGetPendingOperationsResultEvent_m69CD3684D38B3088DF9C5BEF620CA1C5E78B008D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCDCE304E6973945AF3641080980194356D2F2085* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61002,7 +61002,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49017
+// Method Definition Index: 49026
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnInsightsSetPerformanceRequestEvent_mBDC7D6C290B7B1E83EE93B3A27098B3C3B485264 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t13E232BFB4E5856ABC0EFF1A491C7702A28CC321* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61045,7 +61045,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49018
+// Method Definition Index: 49027
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnInsightsSetPerformanceRequestEvent_m6D92FBC57D87A818C15BA693B019BF2DCFE27937 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t13E232BFB4E5856ABC0EFF1A491C7702A28CC321* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61088,7 +61088,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49019
+// Method Definition Index: 49028
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnInsightsSetPerformanceResultEvent_mEA3D58A05E8CE06478390031882B5C7F3E621399 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1FC52ED52695A89DDFE615BC89303447FE4DE5F3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61131,7 +61131,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49020
+// Method Definition Index: 49029
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnInsightsSetPerformanceResultEvent_mC5CCD1FA655B3094028DD95767C93288AABE4C02 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1FC52ED52695A89DDFE615BC89303447FE4DE5F3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61174,7 +61174,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49021
+// Method Definition Index: 49030
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnInsightsSetStorageRetentionRequestEvent_mFD9DBC902D411762B7331607A23F90E9CEA489E8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tF8F886AB95BD803F947EF3ABAE5358BF889A644F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61217,7 +61217,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49022
+// Method Definition Index: 49031
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnInsightsSetStorageRetentionRequestEvent_m00854ABBA23524349E7A6C3121D227B08F0748CF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tF8F886AB95BD803F947EF3ABAE5358BF889A644F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61260,7 +61260,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49023
+// Method Definition Index: 49032
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnInsightsSetStorageRetentionResultEvent_mC2CAF8543FC765B3A366825C0D5B9AC2C72DDD30 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1FC52ED52695A89DDFE615BC89303447FE4DE5F3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61303,7 +61303,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49024
+// Method Definition Index: 49033
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnInsightsSetStorageRetentionResultEvent_m5E1E37233C1BC0A04BFF865D91193A8AB27741E8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1FC52ED52695A89DDFE615BC89303447FE4DE5F3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61346,7 +61346,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49025
+// Method Definition Index: 49034
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLocalizationGetLanguageListRequestEvent_mBFBE8460464078EA1CDF138D48D3813987F090AA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3A253A8D8864730670BA8867D6004FC4A5510604* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61389,7 +61389,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49026
+// Method Definition Index: 49035
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLocalizationGetLanguageListRequestEvent_mC91D0F471A8E428C070804E3E381ECC721CDAD47 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3A253A8D8864730670BA8867D6004FC4A5510604* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61432,7 +61432,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49027
+// Method Definition Index: 49036
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnLocalizationGetLanguageListResultEvent_mC7BEF72A9B8A966C9C1499A37E802493954BD1B9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t0163011DDCAF278415E1D7D8AAD7576883127FB9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61475,7 +61475,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49028
+// Method Definition Index: 49037
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnLocalizationGetLanguageListResultEvent_m7B44F47B67CFD4855C314376806DADFA8A774CEC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t0163011DDCAF278415E1D7D8AAD7576883127FB9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61518,7 +61518,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49029
+// Method Definition Index: 49038
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCancelAllMatchmakingTicketsForPlayerRequestEvent_m8671B772DEFB66204E2E2504F9D75B719E97CA1C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tBFF019C3AEF64B522F9E07DE096138B6F8D71ADE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61561,7 +61561,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49030
+// Method Definition Index: 49039
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCancelAllMatchmakingTicketsForPlayerRequestEvent_m1B4535722E540451E4FE2748A85CD0AF922A4C95 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tBFF019C3AEF64B522F9E07DE096138B6F8D71ADE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61604,7 +61604,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49031
+// Method Definition Index: 49040
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCancelAllMatchmakingTicketsForPlayerResultEvent_m0FD94D6FBFF75BAE99F54265B9EBDB7D70ABB563 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4734C546F168956CF2E832775F973ACEC95E6AE3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61647,7 +61647,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49032
+// Method Definition Index: 49041
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCancelAllMatchmakingTicketsForPlayerResultEvent_m94F9E40864C4B04BF9619734A05BB1DE97EE97E2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4734C546F168956CF2E832775F973ACEC95E6AE3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61690,7 +61690,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49033
+// Method Definition Index: 49042
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCancelAllServerBackfillTicketsForPlayerRequestEvent_m3A78AB7A22C773166FB9965725B59A2018284306 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAD78409683BA148C5BF254AE7C3939789131174D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61733,7 +61733,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49034
+// Method Definition Index: 49043
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCancelAllServerBackfillTicketsForPlayerRequestEvent_m424D35DD8C2F6DA89E3024A7F6998363695A11EC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAD78409683BA148C5BF254AE7C3939789131174D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61776,7 +61776,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49035
+// Method Definition Index: 49044
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCancelAllServerBackfillTicketsForPlayerResultEvent_m174E649C2DA70CBC0E2983973C92C90A2EF16FDA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t432499E330C41335B93880865A33A3C287A3596A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61819,7 +61819,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49036
+// Method Definition Index: 49045
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCancelAllServerBackfillTicketsForPlayerResultEvent_m65E79267EE851FCAFEA374A91C5913D45306C117 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t432499E330C41335B93880865A33A3C287A3596A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61862,7 +61862,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49037
+// Method Definition Index: 49046
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCancelMatchmakingTicketRequestEvent_m75486FB5F8FADAFC03FF4E92C2D73A41FC9C8497 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC2633056B1FE9CB89D91880CC8992FAFC84E9C61* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61905,7 +61905,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49038
+// Method Definition Index: 49047
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCancelMatchmakingTicketRequestEvent_mDEA07349BBEF3D0F687E90320525E688301A9CE0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC2633056B1FE9CB89D91880CC8992FAFC84E9C61* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61948,7 +61948,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49039
+// Method Definition Index: 49048
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCancelMatchmakingTicketResultEvent_mE5671164EC35040E1916672584E1F13E93313DD5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t5BC6A4D0CFE2F616E1ABB9076BFD103835FF0B9D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61991,7 +61991,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49040
+// Method Definition Index: 49049
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCancelMatchmakingTicketResultEvent_m73C37A4C50AC41FF509BC6EF08AD95B452662B5A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t5BC6A4D0CFE2F616E1ABB9076BFD103835FF0B9D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -62034,7 +62034,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49041
+// Method Definition Index: 49050
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCancelServerBackfillTicketRequestEvent_mC0FEE0B1E9FB1211650F6AFA464AB3ED3E8C9EE1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t6DE0F47EB8FBD6ADF9156BD3AD3068A656978754* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -62077,7 +62077,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49042
+// Method Definition Index: 49051
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCancelServerBackfillTicketRequestEvent_m598D290C7A586117956746BE00118A4085CFF2A2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t6DE0F47EB8FBD6ADF9156BD3AD3068A656978754* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -62120,7 +62120,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49043
+// Method Definition Index: 49052
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCancelServerBackfillTicketResultEvent_m801334A4CAA5BC1BECAA78C4ACF1C108C0AA055B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1C5EBE1AE8F49F02B8E65B7311DDE3BAFF04E4DA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -62163,7 +62163,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49044
+// Method Definition Index: 49053
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCancelServerBackfillTicketResultEvent_mA93CC5FFA1CAC9068696327DA5A44A592121574A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1C5EBE1AE8F49F02B8E65B7311DDE3BAFF04E4DA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -62206,7 +62206,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49045
+// Method Definition Index: 49054
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCreateBuildAliasRequestEvent_mB234B62D5B6AD24E01D6BFEA5C00912487C61086 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA2BE37AB27E233140D633D3D3E87F825D13D6B0E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -62249,7 +62249,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49046
+// Method Definition Index: 49055
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCreateBuildAliasRequestEvent_m33BDE9143CB5724A37E7B0CA57A5FC6F20A6B155 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA2BE37AB27E233140D633D3D3E87F825D13D6B0E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -62292,7 +62292,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49047
+// Method Definition Index: 49056
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCreateBuildAliasResultEvent_m60BF5F6C47F81ED7EBDC26F908200B822C52D31C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE139B901F6C5BF36929F70077D92EA253EDE5E31* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -62335,7 +62335,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49048
+// Method Definition Index: 49057
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCreateBuildAliasResultEvent_mA29480961D800C2A86183DBC644818BCBD3C2BD9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE139B901F6C5BF36929F70077D92EA253EDE5E31* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -62378,7 +62378,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49049
+// Method Definition Index: 49058
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCreateBuildWithCustomContainerRequestEvent_mBBF97D5D8F38D0EDEC4260D8DC7DB68C9C830A11 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4F44902A046EB4F907BC627636CDAE24916919CC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -62421,7 +62421,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49050
+// Method Definition Index: 49059
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCreateBuildWithCustomContainerRequestEvent_mBF14A27064576526AD4EA019CC411A20B4CA8C3A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4F44902A046EB4F907BC627636CDAE24916919CC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -62464,7 +62464,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49051
+// Method Definition Index: 49060
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCreateBuildWithCustomContainerResultEvent_m1B23B6C0DAF972EC68E633D641B93CAC25880738 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE10A52E589CB2EEDD80A1A1765FC8230DBFA5A19* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -62507,7 +62507,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49052
+// Method Definition Index: 49061
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCreateBuildWithCustomContainerResultEvent_mE4E1949A7E43FE4D1C0AAB5F69B068F433EFA8DA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE10A52E589CB2EEDD80A1A1765FC8230DBFA5A19* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -62550,7 +62550,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49053
+// Method Definition Index: 49062
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCreateBuildWithManagedContainerRequestEvent_mC673C778C7F3CA5FFB7C08DCB53110F4FE61FC21 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4EB22DE95155CF02BF250D8909008FE6ED319B5B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -62593,7 +62593,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49054
+// Method Definition Index: 49063
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCreateBuildWithManagedContainerRequestEvent_m910DF002423A19E4BF6BCF660BE3E1B8A61C88BF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4EB22DE95155CF02BF250D8909008FE6ED319B5B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -62636,7 +62636,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49055
+// Method Definition Index: 49064
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCreateBuildWithManagedContainerResultEvent_mDF218EFF85B4228396DDBF8114469713637D343E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t24531EFF8825A41ED401C4965E46A4B15651050C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -62679,7 +62679,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49056
+// Method Definition Index: 49065
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCreateBuildWithManagedContainerResultEvent_m24E125209D3C094D9093A0F98EA05CF1D16B54DD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t24531EFF8825A41ED401C4965E46A4B15651050C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -62722,7 +62722,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49057
+// Method Definition Index: 49066
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCreateBuildWithProcessBasedServerRequestEvent_mDC0595F8EE120045E83AE48C73047BAA3A0E2A0A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t18974478A6BCF9CE8A6E17928527D6F6B699AAFF* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -62765,7 +62765,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49058
+// Method Definition Index: 49067
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCreateBuildWithProcessBasedServerRequestEvent_m9FBB4638B025B3618002515BEB7B64C1FFD87536 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t18974478A6BCF9CE8A6E17928527D6F6B699AAFF* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -62808,7 +62808,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49059
+// Method Definition Index: 49068
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCreateBuildWithProcessBasedServerResultEvent_mD2E3294B48704A763091394F76BA90C774C94CD6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t97B9A83474622100DC42AA0732F196A0AE48DCBB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -62851,7 +62851,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49060
+// Method Definition Index: 49069
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCreateBuildWithProcessBasedServerResultEvent_mECCCBDFB10A6C6C2DBA4B9FACBE2D909DF6EA170 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t97B9A83474622100DC42AA0732F196A0AE48DCBB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -62894,7 +62894,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49061
+// Method Definition Index: 49070
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCreateLobbyRequestEvent_m17B80BBEFA4641B8583FAAD715C74E75D33621EE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9A10A0EB2F25498F354B7DA2A6B1D6F4C8DA1655* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -62937,7 +62937,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49062
+// Method Definition Index: 49071
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCreateLobbyRequestEvent_mA1B8B1AA24786222DEDA10DC1E74FA0435699489 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9A10A0EB2F25498F354B7DA2A6B1D6F4C8DA1655* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -62980,7 +62980,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49063
+// Method Definition Index: 49072
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCreateLobbyResultEvent_mBB9E7E3A7C4C0DC1B596E7DDA1B52E97CE3A5A37 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t308768862611A0265F7A8089EFF51DF408CBC34B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -63023,7 +63023,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49064
+// Method Definition Index: 49073
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCreateLobbyResultEvent_m359CE97264F1AEF803B2B15BE336DBEF26C7146C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t308768862611A0265F7A8089EFF51DF408CBC34B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -63066,7 +63066,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49065
+// Method Definition Index: 49074
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCreateMatchmakingTicketRequestEvent_m808EBDC3A027A01ACEBA48FD3EC9CBB673DDD154 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5F71475635C2404FBBC9CA754E8DF32C7EF66281* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -63109,7 +63109,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49066
+// Method Definition Index: 49075
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCreateMatchmakingTicketRequestEvent_m86F321A24B720DABE17AE8946395E145E3828886 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5F71475635C2404FBBC9CA754E8DF32C7EF66281* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -63152,7 +63152,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49067
+// Method Definition Index: 49076
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCreateMatchmakingTicketResultEvent_mFB5587724EDC1D7C396F660CC324F25E387A6B85 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t524236BA14E01A8E8EA46AF87BEE3419316089FB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -63195,7 +63195,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49068
+// Method Definition Index: 49077
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCreateMatchmakingTicketResultEvent_m9A3F6BFF3900CB9B34D76062169BC811F44F3CC3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t524236BA14E01A8E8EA46AF87BEE3419316089FB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -63238,7 +63238,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49069
+// Method Definition Index: 49078
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCreateRemoteUserRequestEvent_mEF350B84DDEBA471B1D61FBFAEF65F107F3926EF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t706F46B87F786A04D682DA962965878D5335C3EC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -63281,7 +63281,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49070
+// Method Definition Index: 49079
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCreateRemoteUserRequestEvent_m8651FC00DA89CD2531C11B77AFF1F0119665587C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t706F46B87F786A04D682DA962965878D5335C3EC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -63324,7 +63324,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49071
+// Method Definition Index: 49080
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCreateRemoteUserResultEvent_mDF6DDDA910087759C20ECA324B7129035B5F4331 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t2829107D97F17817810DF373F0BFAF5DC7445AAB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -63367,7 +63367,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49072
+// Method Definition Index: 49081
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCreateRemoteUserResultEvent_mED14E23CE5B778D1AAC419484D5C6DA651EA014B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t2829107D97F17817810DF373F0BFAF5DC7445AAB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -63410,7 +63410,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49073
+// Method Definition Index: 49082
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCreateServerBackfillTicketRequestEvent_mF8743B6F622E55F44717E677456C7C1CCE86D4A7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA2F8D42E40C92B930C7883FE77B91D1240455195* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -63453,7 +63453,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49074
+// Method Definition Index: 49083
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCreateServerBackfillTicketRequestEvent_mD4A978A5AE3B1927756BD880EE8207ED4A2A051C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA2F8D42E40C92B930C7883FE77B91D1240455195* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -63496,7 +63496,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49075
+// Method Definition Index: 49084
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCreateServerBackfillTicketResultEvent_mC53C1D16F98CDD496FB1C03EB1D7FE38AE445B28 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE3154E3760FE6AE1745F96147E6DF661355F4977* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -63539,7 +63539,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49076
+// Method Definition Index: 49085
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCreateServerBackfillTicketResultEvent_m03898AF4E81A944EE2742BB296A802375CCD42D2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE3154E3760FE6AE1745F96147E6DF661355F4977* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -63582,7 +63582,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49077
+// Method Definition Index: 49086
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCreateServerMatchmakingTicketRequestEvent_m466CCBBC2BFA1C12BA3569FE9914769C71AA5904 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t862FF76F8BB5528F9C22033399BAE62049E9EA9E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -63625,7 +63625,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49078
+// Method Definition Index: 49087
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCreateServerMatchmakingTicketRequestEvent_m2978272AC2B70B19EB77091FFA406B56A365C179 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t862FF76F8BB5528F9C22033399BAE62049E9EA9E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -63668,7 +63668,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49079
+// Method Definition Index: 49088
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCreateServerMatchmakingTicketResultEvent_mF58311B6C7EFB09B7BE7218684194158374C1C98 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t524236BA14E01A8E8EA46AF87BEE3419316089FB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -63711,7 +63711,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49080
+// Method Definition Index: 49089
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCreateServerMatchmakingTicketResultEvent_m6DD3512DD268DADE3C76834CF40E6E6323F7DE96 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t524236BA14E01A8E8EA46AF87BEE3419316089FB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -63754,7 +63754,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49081
+// Method Definition Index: 49090
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCreateTitleMultiplayerServersQuotaChangeRequestEvent_mBD6079158E04AF30F54A0B65EB9858D8944E13CA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t2161F1A59D7FA43F16674E75B323EF47EE3DDC09* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -63797,7 +63797,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49082
+// Method Definition Index: 49091
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCreateTitleMultiplayerServersQuotaChangeRequestEvent_mAE19DD25B69D7EC74340C8C381EDAF8361FB5B7C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t2161F1A59D7FA43F16674E75B323EF47EE3DDC09* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -63840,7 +63840,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49083
+// Method Definition Index: 49092
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerCreateTitleMultiplayerServersQuotaChangeResultEvent_m7C7630A7158CBD6B4257E14D85F97A46867EF503 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7875102C8A977A2E2E71673C9117FB1FD9B007F0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -63883,7 +63883,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49084
+// Method Definition Index: 49093
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerCreateTitleMultiplayerServersQuotaChangeResultEvent_m30E9A9943B20B22CAE6F8299088268189F521675 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7875102C8A977A2E2E71673C9117FB1FD9B007F0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -63926,7 +63926,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49085
+// Method Definition Index: 49094
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerDeleteAssetRequestEvent_m6A95E6EE1F1D9DD2B8AB08C4D7C7C8B58D47579E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t0A3D43B89E5FF5C17D84E5F9ED448C35DE87F129* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -63969,7 +63969,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49086
+// Method Definition Index: 49095
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerDeleteAssetRequestEvent_m4F543B5B3978A8E65E9B541A7F17E1825A1994E8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t0A3D43B89E5FF5C17D84E5F9ED448C35DE87F129* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -64012,7 +64012,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49087
+// Method Definition Index: 49096
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerDeleteAssetResultEvent_m408B01AE470EFB6B0D6CD344C686C6B49C00D17E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -64055,7 +64055,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49088
+// Method Definition Index: 49097
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerDeleteAssetResultEvent_m240B4F48937D4009DDB01514E16DCEC7190F9AB7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -64098,7 +64098,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49089
+// Method Definition Index: 49098
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerDeleteBuildRequestEvent_m421AE3B9690A8836B3EC91919ADA93F741E00BC1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t6B0094B78B18DAEA27C4DB8B4DAA50B499150C34* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -64141,7 +64141,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49090
+// Method Definition Index: 49099
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerDeleteBuildRequestEvent_m09A4E5508C251482B219AE5365F61496853F5814 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t6B0094B78B18DAEA27C4DB8B4DAA50B499150C34* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -64184,7 +64184,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49091
+// Method Definition Index: 49100
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerDeleteBuildResultEvent_m6BD860CDA6EA8561D4E1D2808C71650FB373AF1A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -64227,7 +64227,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49092
+// Method Definition Index: 49101
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerDeleteBuildResultEvent_m20BADBA35888860415D1AEA21D3D35A3144FA973 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -64270,7 +64270,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49093
+// Method Definition Index: 49102
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerDeleteBuildAliasRequestEvent_m2798180DA67D5D3200DADFF489C753E1B52D1D99 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t44D8A08281B237608683C50BE4DD0C0C9692D55B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -64313,7 +64313,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49094
+// Method Definition Index: 49103
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerDeleteBuildAliasRequestEvent_mD36FC41B138AD45CFD9D8CA463888E1B14148DBA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t44D8A08281B237608683C50BE4DD0C0C9692D55B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -64356,7 +64356,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49095
+// Method Definition Index: 49104
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerDeleteBuildAliasResultEvent_m51E7FB3ED17E7DD3F794D9C490BBEFE6A374BBEC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -64399,7 +64399,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49096
+// Method Definition Index: 49105
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerDeleteBuildAliasResultEvent_m0248BC3F9F87B30F02E7904EA67CC87098004EA4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -64442,7 +64442,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49097
+// Method Definition Index: 49106
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerDeleteBuildRegionRequestEvent_mFF6A7D7CA2FA6D612FB9C81240F2C341C2730E6F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t43336672C206331BCEE817939E7558A7ADF6F7AC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -64485,7 +64485,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49098
+// Method Definition Index: 49107
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerDeleteBuildRegionRequestEvent_mF28CE6F92A97FFBC458073E29C7B98EDA75A25E5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t43336672C206331BCEE817939E7558A7ADF6F7AC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -64528,7 +64528,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49099
+// Method Definition Index: 49108
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerDeleteBuildRegionResultEvent_mE0598ACDF05177FB43299555646A40F5328339CF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -64571,7 +64571,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49100
+// Method Definition Index: 49109
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerDeleteBuildRegionResultEvent_mF549A8108FF7B2D6B1B5CD5950C2C2FF2AF4ECA0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -64614,7 +64614,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49101
+// Method Definition Index: 49110
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerDeleteCertificateRequestEvent_mEA5C71514445803A09C8C547CAC774286309B89A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9143492592F2312BB3563EDC8DC890BD63312937* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -64657,7 +64657,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49102
+// Method Definition Index: 49111
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerDeleteCertificateRequestEvent_mD96D57AAA90CFB7E752C9DE2661849CDCF85AF2C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9143492592F2312BB3563EDC8DC890BD63312937* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -64700,7 +64700,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49103
+// Method Definition Index: 49112
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerDeleteCertificateResultEvent_mED42C508EF673EBD0974FADED6655C181E5626F0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -64743,7 +64743,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49104
+// Method Definition Index: 49113
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerDeleteCertificateResultEvent_m02C441951BF307132C5086DCFAE65374480E0A4F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -64786,7 +64786,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49105
+// Method Definition Index: 49114
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerDeleteContainerImageRepositoryRequestEvent_m1BBF7EDEEEEE32AD796784552466E32F2D3802C7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE7F766A33DBEB7637A83945F7DC7BCE24365CE0C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -64829,7 +64829,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49106
+// Method Definition Index: 49115
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerDeleteContainerImageRepositoryRequestEvent_m10576D31698C9D0237C395352C0BF7A24A64B040 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE7F766A33DBEB7637A83945F7DC7BCE24365CE0C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -64872,7 +64872,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49107
+// Method Definition Index: 49116
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerDeleteContainerImageRepositoryResultEvent_mFBD318A4F4ED44BDBDFFC6C1E8EAA9662F4AD9C6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -64915,7 +64915,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49108
+// Method Definition Index: 49117
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerDeleteContainerImageRepositoryResultEvent_mAF9B8AEA912B9A3F0C315D2A9FBB6CE17BD44320 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -64958,7 +64958,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49109
+// Method Definition Index: 49118
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerDeleteLobbyRequestEvent_m75316A7AAE33F4204C8DC174053DD63AFD61D726 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA0EF23D144F646DE7F16B7F8F2367BDDC4A77F4C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -65001,7 +65001,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49110
+// Method Definition Index: 49119
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerDeleteLobbyRequestEvent_m0D9DAFEEC00944C7187B2E5C14E20AA547D27C8B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA0EF23D144F646DE7F16B7F8F2367BDDC4A77F4C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -65044,7 +65044,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49111
+// Method Definition Index: 49120
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerDeleteLobbyResultEvent_mA923C3902D853CE900A11422EBC718F550B271D2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCA4CE88D322B89AC51F03666055DF820DFEEDFB1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -65087,7 +65087,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49112
+// Method Definition Index: 49121
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerDeleteLobbyResultEvent_m612EEBAC4D04E1B743015F4D21B1C4E0FDF1291F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCA4CE88D322B89AC51F03666055DF820DFEEDFB1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -65130,7 +65130,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49113
+// Method Definition Index: 49122
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerDeleteRemoteUserRequestEvent_m89FA8B6FF22E0B21385217BCA1DF59EA89C8718C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t384BCF191CA9FC3819D267C68DE00751A185B81A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -65173,7 +65173,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49114
+// Method Definition Index: 49123
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerDeleteRemoteUserRequestEvent_m0953B0424B9096005C19C08E36742422D125026B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t384BCF191CA9FC3819D267C68DE00751A185B81A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -65216,7 +65216,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49115
+// Method Definition Index: 49124
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerDeleteRemoteUserResultEvent_m35984F949F21F26645AAB310EEDA6EA5A5497CCA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -65259,7 +65259,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49116
+// Method Definition Index: 49125
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerDeleteRemoteUserResultEvent_m9A5247E7A4EAE8C787E8D38D68C097D739E9490F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -65302,7 +65302,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49117
+// Method Definition Index: 49126
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerDeleteSecretRequestEvent_m1E1732280BB300B7BF78B191944D56FBC640611A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t988B9FAAE6D5A4A15C8E5D02FB6A085541776C21* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -65345,7 +65345,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49118
+// Method Definition Index: 49127
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerDeleteSecretRequestEvent_m0D16B66780C414830D645DF60F9FD1FFF1CE19C2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t988B9FAAE6D5A4A15C8E5D02FB6A085541776C21* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -65388,7 +65388,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49119
+// Method Definition Index: 49128
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerDeleteSecretResultEvent_mFE4470281874B055480C4A6AD28EA5D79ADAFC47 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -65431,7 +65431,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49120
+// Method Definition Index: 49129
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerDeleteSecretResultEvent_m527CDB60365A28EC9C0ED00071000FEDE4E09A65 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -65474,7 +65474,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49121
+// Method Definition Index: 49130
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerEnableMultiplayerServersForTitleRequestEvent_mD938BB9172A7FA9414AEABC8385DD46AC00D48EE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t666CE373B949418BDA843A671C348280C68B436A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -65517,7 +65517,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49122
+// Method Definition Index: 49131
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerEnableMultiplayerServersForTitleRequestEvent_m2C2A0152F6377E293C5DEFCC2B29586429BB71B3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t666CE373B949418BDA843A671C348280C68B436A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -65560,7 +65560,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49123
+// Method Definition Index: 49132
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerEnableMultiplayerServersForTitleResultEvent_mDC4E210F58CBA3862D8B302D0561DA1859A0B289 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t474AE95FED87294F09B43CC57355C8D7042B60C1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -65603,7 +65603,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49124
+// Method Definition Index: 49133
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerEnableMultiplayerServersForTitleResultEvent_mF5E2B3504A406C9B4ED838736F1A4ADBB3132EF9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t474AE95FED87294F09B43CC57355C8D7042B60C1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -65646,7 +65646,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49125
+// Method Definition Index: 49134
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerFindFriendLobbiesRequestEvent_m0DAC6E9BD795288F648CE6A44ED2ADDC272058B0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4652B376C8ABEE7FCE1CDD7D29A8A4B71923670E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -65689,7 +65689,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49126
+// Method Definition Index: 49135
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerFindFriendLobbiesRequestEvent_m86BD811517BCCA82C37FC94E97DE124AC9754B20 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4652B376C8ABEE7FCE1CDD7D29A8A4B71923670E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -65732,7 +65732,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49127
+// Method Definition Index: 49136
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerFindFriendLobbiesResultEvent_mBD148F7E33B709F6DBF36DFD9894A58A15C0DB23 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tAD57CBE6E514279F6D132B21AABA80A69F34EC34* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -65775,7 +65775,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49128
+// Method Definition Index: 49137
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerFindFriendLobbiesResultEvent_m2177BE32737F1CF8DFD8256FA8873A6595907D0F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tAD57CBE6E514279F6D132B21AABA80A69F34EC34* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -65818,7 +65818,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49129
+// Method Definition Index: 49138
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerFindLobbiesRequestEvent_m2AAA5E3E81256BD09B96032C74161AF1392770A7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t40A4FF5C38A344948E79DF370B54EB7C4372A02C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -65861,7 +65861,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49130
+// Method Definition Index: 49139
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerFindLobbiesRequestEvent_m52AFEE7BE2A10DB88A98167792A430BA9A3FB21D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t40A4FF5C38A344948E79DF370B54EB7C4372A02C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -65904,7 +65904,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49131
+// Method Definition Index: 49140
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerFindLobbiesResultEvent_mE11F7D7727C829DCC2AFDE9D98458B875853035E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC3A9D214DCA7D2504C182FA35FCF014ED3E9FA34* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -65947,7 +65947,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49132
+// Method Definition Index: 49141
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerFindLobbiesResultEvent_mC6184F79BE276ED52CDBF38825A015BD644E82D2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC3A9D214DCA7D2504C182FA35FCF014ED3E9FA34* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -65990,7 +65990,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49133
+// Method Definition Index: 49142
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetAssetDownloadUrlRequestEvent_mC4A56DA9587F97CFF64E663752B116A904B402F7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tDC35EC5995F06A4C3184B08887B308DEB8DA9AF2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -66033,7 +66033,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49134
+// Method Definition Index: 49143
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetAssetDownloadUrlRequestEvent_m2E5274F33FEDAF34B4C382CFC50914EAE15EC63C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tDC35EC5995F06A4C3184B08887B308DEB8DA9AF2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -66076,7 +66076,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49135
+// Method Definition Index: 49144
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetAssetDownloadUrlResultEvent_m934EB6FB858F335C42886240858D45320AAB4963 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t0DD4D6671C8211B7462BE24027EBAF7915F4C034* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -66119,7 +66119,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49136
+// Method Definition Index: 49145
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetAssetDownloadUrlResultEvent_m2A0F49154059FC66AB3A1AA63ADE5A13E98653DA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t0DD4D6671C8211B7462BE24027EBAF7915F4C034* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -66162,7 +66162,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49137
+// Method Definition Index: 49146
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetAssetUploadUrlRequestEvent_m70C1E9ECA6EE3EC1BEFC608023B860DE11F50F81 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAB978D3C689A66FCD07F90B59225C2444615FEC2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -66205,7 +66205,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49138
+// Method Definition Index: 49147
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetAssetUploadUrlRequestEvent_m790378BD38E2E512C817D27E77D394E866C10CDE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAB978D3C689A66FCD07F90B59225C2444615FEC2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -66248,7 +66248,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49139
+// Method Definition Index: 49148
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetAssetUploadUrlResultEvent_mC059A08296B70A453E9D0CF146A9A58584215B76 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t66BC750966978E83B22701601426BDCAAC94A0D6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -66291,7 +66291,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49140
+// Method Definition Index: 49149
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetAssetUploadUrlResultEvent_mF49F4DF830C4AB98957865928E260882E50C028A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t66BC750966978E83B22701601426BDCAAC94A0D6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -66334,7 +66334,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49141
+// Method Definition Index: 49150
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetBuildRequestEvent_m22DAE0E7614FC8C88A5DA8B8EA2EC5799C24989B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tBF063ED71D5CB9BC2302B3CBA35FAD20A41C523B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -66377,7 +66377,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49142
+// Method Definition Index: 49151
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetBuildRequestEvent_m2A074E7684C258FC29D779150E51DDA57FEF98E3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tBF063ED71D5CB9BC2302B3CBA35FAD20A41C523B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -66420,7 +66420,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49143
+// Method Definition Index: 49152
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetBuildResultEvent_m7362432F28E746773C1E2092DCAC1921AF03BFC9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t287109912D02D05E7E752B5A3EDDFDDF6AB51598* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -66463,7 +66463,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49144
+// Method Definition Index: 49153
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetBuildResultEvent_m3509F3A8B56F1399AD1DDC6959142668F9032085 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t287109912D02D05E7E752B5A3EDDFDDF6AB51598* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -66506,7 +66506,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49145
+// Method Definition Index: 49154
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetBuildAliasRequestEvent_m4F23632665C43CDF39BB9387E594C178693AFBA0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t874ED63C5A8E668A5A8B7B256631EFA113908702* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -66549,7 +66549,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49146
+// Method Definition Index: 49155
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetBuildAliasRequestEvent_m33BF00DEFF4673D143A965137488E8C76841CB27 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t874ED63C5A8E668A5A8B7B256631EFA113908702* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -66592,7 +66592,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49147
+// Method Definition Index: 49156
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetBuildAliasResultEvent_m7FD6B35740B38E8DA9DD592163E56C7C7570EB74 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE139B901F6C5BF36929F70077D92EA253EDE5E31* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -66635,7 +66635,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49148
+// Method Definition Index: 49157
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetBuildAliasResultEvent_m7D31C7984DE970C2DE21016A1B8BF6C5B36C0CE1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE139B901F6C5BF36929F70077D92EA253EDE5E31* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -66678,7 +66678,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49149
+// Method Definition Index: 49158
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetContainerRegistryCredentialsRequestEvent_m5995912B6CCDD7007C07C1C603990102CA8F4303 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tDAD9C14AF5D60C5B7281654BD6FB55A84533C812* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -66721,7 +66721,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49150
+// Method Definition Index: 49159
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetContainerRegistryCredentialsRequestEvent_mCEDD7C0B8357C99A37B21395C3971E344C081118 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tDAD9C14AF5D60C5B7281654BD6FB55A84533C812* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -66764,7 +66764,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49151
+// Method Definition Index: 49160
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetContainerRegistryCredentialsResultEvent_mDA4A9DAE07FE8EC74C8D4E470336662F8CF78EE1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tD284CA6FCFD4477861CE66049A197DC0ACF73E77* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -66807,7 +66807,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49152
+// Method Definition Index: 49161
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetContainerRegistryCredentialsResultEvent_m7BF104A9FF0F198856C89D6669E536F2AECD3284 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tD284CA6FCFD4477861CE66049A197DC0ACF73E77* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -66850,7 +66850,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49153
+// Method Definition Index: 49162
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetLobbyRequestEvent_m6915CFA99CBF72406B170E6FF485D984B40AA1CE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9CCF71F5E33FDF776507D60414E12279FBEA2E4A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -66893,7 +66893,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49154
+// Method Definition Index: 49163
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetLobbyRequestEvent_m4A66B45F6600B9F444364366ED01D603AEAF11F4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9CCF71F5E33FDF776507D60414E12279FBEA2E4A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -66936,7 +66936,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49155
+// Method Definition Index: 49164
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetLobbyResultEvent_m57EAC3C05AD54018972F75BFEEBA1360F4652B12 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA552B7D6F619D5326059FE555F206B898AB19063* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -66979,7 +66979,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49156
+// Method Definition Index: 49165
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetLobbyResultEvent_m64396CB7BFF7B63D89D7850E2159F297109A4400 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA552B7D6F619D5326059FE555F206B898AB19063* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -67022,7 +67022,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49157
+// Method Definition Index: 49166
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetMatchRequestEvent_m4769D47E676216B69DFBDB0324833463AFD9EB79 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t39E9867E2CAA9F67B39F57EBBDC9FBC86C960DC5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -67065,7 +67065,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49158
+// Method Definition Index: 49167
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetMatchRequestEvent_m4EB43F1E13AAEBF369135205AB5A8AF82187A0E0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t39E9867E2CAA9F67B39F57EBBDC9FBC86C960DC5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -67108,7 +67108,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49159
+// Method Definition Index: 49168
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetMatchResultEvent_m0A838D12FB011FF5E7B659B0529051765968FF38 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t48350A232B8B80FE9B5F5B1F608341FF84839831* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -67151,7 +67151,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49160
+// Method Definition Index: 49169
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetMatchResultEvent_m95C747E7D83B23BA97C71CD8DD4718C6A0EE6D95 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t48350A232B8B80FE9B5F5B1F608341FF84839831* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -67194,7 +67194,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49161
+// Method Definition Index: 49170
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetMatchmakingQueueRequestEvent_m5BD7C2D71666362FA7B5AADC48530D2211FBE2BA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tDB4700A28F14DDF2F49A2156C09280F42AB0AC5E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -67237,7 +67237,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49162
+// Method Definition Index: 49171
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetMatchmakingQueueRequestEvent_m624AEF8ECA542D81A35F1B68FDD4F293F7A220D5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tDB4700A28F14DDF2F49A2156C09280F42AB0AC5E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -67280,7 +67280,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49163
+// Method Definition Index: 49172
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetMatchmakingQueueResultEvent_m93C60A8B93DA8B8C978D6EB7DB19DA7B64D171E4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t434FB8ED27B74AB3C5CE7454DE58754C9F0F3F96* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -67323,7 +67323,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49164
+// Method Definition Index: 49173
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetMatchmakingQueueResultEvent_mE0BEDE24E84BC669AE16EEEF4F3E1B427DE5C228 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t434FB8ED27B74AB3C5CE7454DE58754C9F0F3F96* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -67366,7 +67366,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49165
+// Method Definition Index: 49174
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetMatchmakingTicketRequestEvent_m2479F6F13B12FDB9C880DACB168E31AF67B9CC8E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t2D83A041C862EAB45241EBF711C6B03D755A56BB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -67409,7 +67409,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49166
+// Method Definition Index: 49175
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetMatchmakingTicketRequestEvent_mBA314B87C013CB251D3FD9432CD2BEE8F93B6EF8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t2D83A041C862EAB45241EBF711C6B03D755A56BB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -67452,7 +67452,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49167
+// Method Definition Index: 49176
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetMatchmakingTicketResultEvent_mBAFE28A497B635FFC4E0B0F49C82F8F6BB72D59C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE37053D3133D9C48B5C95D339B9D794E137ACC68* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -67495,7 +67495,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49168
+// Method Definition Index: 49177
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetMatchmakingTicketResultEvent_mF01F6985175423AF2DE7C609B7D0E6E9D178BC8A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE37053D3133D9C48B5C95D339B9D794E137ACC68* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -67538,7 +67538,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49169
+// Method Definition Index: 49178
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetMultiplayerServerDetailsRequestEvent_m124C576A02A3E4C63A80838D5FB1EA4692C8527E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tDC3219AB63952A368A328C25196C9DAD7DBF769D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -67581,7 +67581,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49170
+// Method Definition Index: 49179
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetMultiplayerServerDetailsRequestEvent_m089760F6AB8A6A7B169E383B806E3CAD975F2D19 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tDC3219AB63952A368A328C25196C9DAD7DBF769D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -67624,7 +67624,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49171
+// Method Definition Index: 49180
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetMultiplayerServerDetailsResultEvent_m2ED86E97F89BA4667A16DF777AED8F19487839A4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t998E1194E827EE12A577193A8A91BAA00938CCF5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -67667,7 +67667,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49172
+// Method Definition Index: 49181
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetMultiplayerServerDetailsResultEvent_mDF0BF105DD9D0A4FBD2B595F60FBD8CC968E74E1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t998E1194E827EE12A577193A8A91BAA00938CCF5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -67710,7 +67710,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49173
+// Method Definition Index: 49182
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetMultiplayerServerLogsRequestEvent_m1EFB9750BC9E27B152FAC57CC55FAC0DA2F89AE5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tF09EA1F1FCA4A39379AD912F56C6ABE0F989140B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -67753,7 +67753,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49174
+// Method Definition Index: 49183
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetMultiplayerServerLogsRequestEvent_m9474CD582FA52D5285A3E981A447EFD51D583327 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tF09EA1F1FCA4A39379AD912F56C6ABE0F989140B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -67796,7 +67796,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49175
+// Method Definition Index: 49184
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetMultiplayerServerLogsResultEvent_m4ECBA8C41408F516930D7CBE988036A544BCD4D1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t3398C36EF594817980D322EE2D46EEA577A41517* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -67839,7 +67839,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49176
+// Method Definition Index: 49185
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetMultiplayerServerLogsResultEvent_m6E8C4C7C23F2CB3CBC7BDAED3C8C42ABD1755A39 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t3398C36EF594817980D322EE2D46EEA577A41517* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -67882,7 +67882,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49177
+// Method Definition Index: 49186
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetMultiplayerSessionLogsBySessionIdRequestEvent_m1462AF7159F5FC343F119794D60905D3E81454F5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA956841F986693507ECCEACD3D2377D9B997004E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -67925,7 +67925,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49178
+// Method Definition Index: 49187
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetMultiplayerSessionLogsBySessionIdRequestEvent_mF78A132F0E099D4E86D5B8AAC217C506F9403C81 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tA956841F986693507ECCEACD3D2377D9B997004E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -67968,7 +67968,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49179
+// Method Definition Index: 49188
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetMultiplayerSessionLogsBySessionIdResultEvent_mAA5D3D4D0CD35A2A83B63480D85A9295A9FF18A5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t3398C36EF594817980D322EE2D46EEA577A41517* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -68011,7 +68011,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49180
+// Method Definition Index: 49189
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetMultiplayerSessionLogsBySessionIdResultEvent_mBA8838C92A905CBD2269D1514FC5A80C3B96A458 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t3398C36EF594817980D322EE2D46EEA577A41517* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -68054,7 +68054,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49181
+// Method Definition Index: 49190
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetQueueStatisticsRequestEvent_m8AD8C039302B82ED57B99217DE3A9EBD1146DC54 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t159554C2B1EB2A1A1628FF01A789F336485B2E63* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -68097,7 +68097,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49182
+// Method Definition Index: 49191
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetQueueStatisticsRequestEvent_mF84C2E8F901A7FAD936B66B4C8044CDA708E17DB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t159554C2B1EB2A1A1628FF01A789F336485B2E63* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -68140,7 +68140,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49183
+// Method Definition Index: 49192
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetQueueStatisticsResultEvent_m73271B928CCD71D8C7F7163DCE4A94E4B53C1025 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t6BC073D18BBD4C926BE8AB4351E92E7C571FAC70* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -68183,7 +68183,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49184
+// Method Definition Index: 49193
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetQueueStatisticsResultEvent_mBA953492CA08E74A1FCF96795F4EA2ABF2A18278 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t6BC073D18BBD4C926BE8AB4351E92E7C571FAC70* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -68226,7 +68226,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49185
+// Method Definition Index: 49194
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetRemoteLoginEndpointRequestEvent_m83430FA752042A04D05730743718C6B3C3ADCC00 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4CC3CD91C2FA2EED9C52C922BE5C44E1AEB6AFBB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -68269,7 +68269,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49186
+// Method Definition Index: 49195
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetRemoteLoginEndpointRequestEvent_m1783F53305F2A37B359C77D5DAE736158BC248CF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4CC3CD91C2FA2EED9C52C922BE5C44E1AEB6AFBB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -68312,7 +68312,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49187
+// Method Definition Index: 49196
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetRemoteLoginEndpointResultEvent_m40F272DDB6DB660BEE8DB8CBCC073C92793E3AD7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t2FA7E75CC7CD9D857F37FC9AF1414C49A8BAD171* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -68355,7 +68355,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49188
+// Method Definition Index: 49197
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetRemoteLoginEndpointResultEvent_m44A7DF563D3B71893F9287D3793411C9DB0D1EE7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t2FA7E75CC7CD9D857F37FC9AF1414C49A8BAD171* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -68398,7 +68398,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49189
+// Method Definition Index: 49198
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetServerBackfillTicketRequestEvent_mC01AAD4C281830D954A4569350F258EF163495A5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1E5B4ADF6659FA3C6FCD9EAA8A24F9B8A268C4BF* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -68441,7 +68441,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49190
+// Method Definition Index: 49199
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetServerBackfillTicketRequestEvent_m51A3A697B85E6CE7133A90D02EA6DB2852FD2EE1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1E5B4ADF6659FA3C6FCD9EAA8A24F9B8A268C4BF* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -68484,7 +68484,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49191
+// Method Definition Index: 49200
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetServerBackfillTicketResultEvent_m341548DF4EAEC27EFBCF02FB0EF4511B27203DDD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1D9F97FF3A0C8225E3333922AC17311240311B40* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -68527,7 +68527,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49192
+// Method Definition Index: 49201
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetServerBackfillTicketResultEvent_m89CAF569975DB8367E8B0544BAE875BBDF1C4C02 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1D9F97FF3A0C8225E3333922AC17311240311B40* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -68570,7 +68570,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49193
+// Method Definition Index: 49202
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetTitleEnabledForMultiplayerServersStatusRequestEvent_mD0F79E61FCB15DD050FC55F5C1CDB548279D6BCC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t54377B1C86DB12AF5086B1C5EF8EAF217C0CA8B5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -68613,7 +68613,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49194
+// Method Definition Index: 49203
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetTitleEnabledForMultiplayerServersStatusRequestEvent_mF35F7350AC16B2C0808F0B80E880F389645AA6EB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t54377B1C86DB12AF5086B1C5EF8EAF217C0CA8B5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -68656,7 +68656,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49195
+// Method Definition Index: 49204
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetTitleEnabledForMultiplayerServersStatusResultEvent_m81F10FCDC981464672D49DC7D54156C7704D127C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tD1EDC851C34CE9B674A11F92821C75B95D013DAC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -68699,7 +68699,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49196
+// Method Definition Index: 49205
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetTitleEnabledForMultiplayerServersStatusResultEvent_m60AE6F0799E4AE725D1523BF7B521FF75F4CFF75 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tD1EDC851C34CE9B674A11F92821C75B95D013DAC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -68742,7 +68742,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49197
+// Method Definition Index: 49206
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetTitleMultiplayerServersQuotaChangeRequestEvent_m33CEF26CEDCEAEC986722ADDF2690F691E9B1D7A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5C3897B8F3CF7E302C8205CD2D2A0DFD393E44D7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -68785,7 +68785,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49198
+// Method Definition Index: 49207
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetTitleMultiplayerServersQuotaChangeRequestEvent_m16691C5E0D6CCE02F216791F7F13FD35332DE1C7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5C3897B8F3CF7E302C8205CD2D2A0DFD393E44D7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -68828,7 +68828,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49199
+// Method Definition Index: 49208
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetTitleMultiplayerServersQuotaChangeResultEvent_m8CAA27A8E63E834329AEB7593DF517DF04E643AE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tD26B80B9CE85DCB3C30A561B26257EC4288E64FD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -68871,7 +68871,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49200
+// Method Definition Index: 49209
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetTitleMultiplayerServersQuotaChangeResultEvent_m75F21624F6B7A3A34A9BE7E7939D6AFE00A7B099 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tD26B80B9CE85DCB3C30A561B26257EC4288E64FD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -68914,7 +68914,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49201
+// Method Definition Index: 49210
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetTitleMultiplayerServersQuotasRequestEvent_m6B76898B670CB6F2B71C03FC04B5FEF368D60A71 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t0F878501E74B363D8A12E0648516EEFB3BA3900A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -68957,7 +68957,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49202
+// Method Definition Index: 49211
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetTitleMultiplayerServersQuotasRequestEvent_m20FF6D949E07776DDBF976D5D6712B35D7AF37D3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t0F878501E74B363D8A12E0648516EEFB3BA3900A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -69000,7 +69000,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49203
+// Method Definition Index: 49212
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerGetTitleMultiplayerServersQuotasResultEvent_mD205994E05543DAEE4C5EF5595AC1F25B831EBE0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA88C6F36EEC2FB22196955CAB129692361DDAC34* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -69043,7 +69043,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49204
+// Method Definition Index: 49213
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerGetTitleMultiplayerServersQuotasResultEvent_m79D629C7EDDC97CF25E87372BC5F7663E8042802 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA88C6F36EEC2FB22196955CAB129692361DDAC34* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -69086,7 +69086,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49205
+// Method Definition Index: 49214
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerInviteToLobbyRequestEvent_m11B923D5BE0F05E699933D90F0409AA2B4792A12 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t63428F2FE4092E7173F85B11758908E55D7EAE18* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -69129,7 +69129,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49206
+// Method Definition Index: 49215
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerInviteToLobbyRequestEvent_m18F65880FCB37821B727720123DC67C25147D95C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t63428F2FE4092E7173F85B11758908E55D7EAE18* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -69172,7 +69172,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49207
+// Method Definition Index: 49216
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerInviteToLobbyResultEvent_mD4466FF03C35A2FC483F84463C6CC99E252F815B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCA4CE88D322B89AC51F03666055DF820DFEEDFB1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -69215,7 +69215,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49208
+// Method Definition Index: 49217
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerInviteToLobbyResultEvent_m65675C6ECB720F42DFE94CB6C03E44C010B9A00A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCA4CE88D322B89AC51F03666055DF820DFEEDFB1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -69258,7 +69258,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49209
+// Method Definition Index: 49218
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerJoinArrangedLobbyRequestEvent_mDBA35AA2B4204A763CD55599A22096AEDEA6EEE0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t860F62CD92D6F33BFC07020D2EA1A5A4F9F93A23* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -69301,7 +69301,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49210
+// Method Definition Index: 49219
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerJoinArrangedLobbyRequestEvent_mB1FBD2E569B4A355513AE8645C66FE77BD3C42FD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t860F62CD92D6F33BFC07020D2EA1A5A4F9F93A23* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -69344,7 +69344,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49211
+// Method Definition Index: 49220
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerJoinArrangedLobbyResultEvent_m4F23FC673378A610A5BAD5EEFD050EDB4E9B003F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4A1646827EAAF0E9A67CF2035F17E658478AB1D9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -69387,7 +69387,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49212
+// Method Definition Index: 49221
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerJoinArrangedLobbyResultEvent_m1E159D2CD7D31B6825A983EA850D8C91CEE1E7F7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4A1646827EAAF0E9A67CF2035F17E658478AB1D9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -69430,7 +69430,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49213
+// Method Definition Index: 49222
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerJoinLobbyRequestEvent_m1C6C4F0F27A8A0C316BCFF48F4E40C5E3ECA0651 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9F9BBF9A3E4B10F312FE558AA386292AC4D192CE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -69473,7 +69473,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49214
+// Method Definition Index: 49223
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerJoinLobbyRequestEvent_mBA0A3666B44261229FF4252CA07CD4C0F395C11D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9F9BBF9A3E4B10F312FE558AA386292AC4D192CE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -69516,7 +69516,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49215
+// Method Definition Index: 49224
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerJoinLobbyResultEvent_m34CA6B41953081C9AB49AA0E1AC416275E0B9804 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4A1646827EAAF0E9A67CF2035F17E658478AB1D9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -69559,7 +69559,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49216
+// Method Definition Index: 49225
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerJoinLobbyResultEvent_m1D0A5A18D930BB5D3E47C4D969987D1450A94E60 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4A1646827EAAF0E9A67CF2035F17E658478AB1D9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -69602,7 +69602,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49217
+// Method Definition Index: 49226
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerJoinLobbyAsServerRequestEvent_mD11C830643708179163AE66A51FD8E31FF7DA939 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t7DA3961155DB9372E1D1E0B592CD056C441FA2F4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -69645,7 +69645,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49218
+// Method Definition Index: 49227
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerJoinLobbyAsServerRequestEvent_mED35093B2F8529610866419004EA70F8FD61D039 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t7DA3961155DB9372E1D1E0B592CD056C441FA2F4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -69688,7 +69688,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49219
+// Method Definition Index: 49228
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerJoinLobbyAsServerResultEvent_mC2BAD20172BDA4F1563B7302E60629FDF3544CDF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC0C023626605C4F420BB4A445368A162C97C8624* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -69731,7 +69731,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49220
+// Method Definition Index: 49229
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerJoinLobbyAsServerResultEvent_m293EAACB1D55F62E493EEDD78DD4B0413439FDE8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC0C023626605C4F420BB4A445368A162C97C8624* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -69774,7 +69774,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49221
+// Method Definition Index: 49230
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerJoinMatchmakingTicketRequestEvent_m12CC96F7E8294DD87500A2478D57438966F0EBAA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t26CE87CC31EDC9137C67112DD3D876FC228026F6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -69817,7 +69817,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49222
+// Method Definition Index: 49231
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerJoinMatchmakingTicketRequestEvent_m3F9EF5475C7A2A0F046B3CA1EFD97B95BDBAE1DF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t26CE87CC31EDC9137C67112DD3D876FC228026F6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -69860,7 +69860,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49223
+// Method Definition Index: 49232
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerJoinMatchmakingTicketResultEvent_mBFBB827679996778109F4F8B21D913AB6DA3B7C4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t54B3E45F72D2A3EE67A15528EEAA77BEA6AF2F49* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -69903,7 +69903,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49224
+// Method Definition Index: 49233
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerJoinMatchmakingTicketResultEvent_m7A732518202977F961402894C3DA8EAC4CEDE631 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t54B3E45F72D2A3EE67A15528EEAA77BEA6AF2F49* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -69946,7 +69946,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49225
+// Method Definition Index: 49234
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerLeaveLobbyRequestEvent_m457565F6F0156767A604B189C0FDD882469FAAE3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD6E65888C856A27CD952B20F11CB2479D2137D1E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -69989,7 +69989,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49226
+// Method Definition Index: 49235
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerLeaveLobbyRequestEvent_m72893F518CE69DFCB22BF1A6FAA473DE2464699A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD6E65888C856A27CD952B20F11CB2479D2137D1E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -70032,7 +70032,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49227
+// Method Definition Index: 49236
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerLeaveLobbyResultEvent_m27A0E3D12939DA1112C8F7AC95433F770D61AF90 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCA4CE88D322B89AC51F03666055DF820DFEEDFB1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -70075,7 +70075,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49228
+// Method Definition Index: 49237
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerLeaveLobbyResultEvent_mCF9728BAB5F7D0DEDEF380566DF749822B411AFC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCA4CE88D322B89AC51F03666055DF820DFEEDFB1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -70118,7 +70118,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49229
+// Method Definition Index: 49238
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerLeaveLobbyAsServerRequestEvent_m4EE627A2499B2CEEC6439D19DBEC37F177376FA1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC569FCDBC92A285920F2F17CF6AE334DE24DC3A0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -70161,7 +70161,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49230
+// Method Definition Index: 49239
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerLeaveLobbyAsServerRequestEvent_mF3FCF03EA8FDE5B4A89AA4F64C0046AC941AF38D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC569FCDBC92A285920F2F17CF6AE334DE24DC3A0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -70204,7 +70204,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49231
+// Method Definition Index: 49240
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerLeaveLobbyAsServerResultEvent_mF20E47B903668DD088C60D76AE59F00D941FEBE4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCA4CE88D322B89AC51F03666055DF820DFEEDFB1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -70247,7 +70247,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49232
+// Method Definition Index: 49241
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerLeaveLobbyAsServerResultEvent_mC516F42D7955FDABD0D7169F0B07E60B1496ACF8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCA4CE88D322B89AC51F03666055DF820DFEEDFB1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -70290,7 +70290,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49233
+// Method Definition Index: 49242
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListArchivedMultiplayerServersRequestEvent_m836485E5997E3E629996F19E582A4331BF65446D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tCF2D28DF3250EA2B158E5C2BEA572AC5BDA70D3B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -70333,7 +70333,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49234
+// Method Definition Index: 49243
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListArchivedMultiplayerServersRequestEvent_m3F213FE6DEA4024A11A1810D912D4EBBEF1A6D22 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tCF2D28DF3250EA2B158E5C2BEA572AC5BDA70D3B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -70376,7 +70376,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49235
+// Method Definition Index: 49244
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListArchivedMultiplayerServersResultEvent_m2ABBCA7B67FD9F31DDB0F4839D8F1ABF7E1CF95F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC614FC6437D6499E2E2972F377E13CC97550F4D2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -70419,7 +70419,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49236
+// Method Definition Index: 49245
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListArchivedMultiplayerServersResultEvent_mE36AC400EEDB59A16A3A7A992C5F8B91FDE734EE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC614FC6437D6499E2E2972F377E13CC97550F4D2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -70462,7 +70462,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49237
+// Method Definition Index: 49246
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListAssetSummariesRequestEvent_m6BA925D9F66824B9DD9B6A661D7AF81AB250231D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAEA04CADCAD1B63CFA8106CF1CF13ECDF2690EC7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -70505,7 +70505,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49238
+// Method Definition Index: 49247
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListAssetSummariesRequestEvent_m93E605A178EE56F017E1DC0C3053CCE858F71579 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAEA04CADCAD1B63CFA8106CF1CF13ECDF2690EC7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -70548,7 +70548,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49239
+// Method Definition Index: 49248
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListAssetSummariesResultEvent_m04D5914DB325EE921E6CBBC5FC1AFC5D8A8D728E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tEC9BCB4729A400B8E60AF63072F6DD183ADA8755* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -70591,7 +70591,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49240
+// Method Definition Index: 49249
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListAssetSummariesResultEvent_m648C4218AAEF7C4728F8E0CFEB3D393407A36C37 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tEC9BCB4729A400B8E60AF63072F6DD183ADA8755* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -70634,7 +70634,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49241
+// Method Definition Index: 49250
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListBuildAliasesRequestEvent_m418703031BC90DA74629A6B9641308BEEB30355D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1CD65BCEE0B044C0FDF04D3CECF792DA59BADC97* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -70677,7 +70677,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49242
+// Method Definition Index: 49251
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListBuildAliasesRequestEvent_m346E4402663BE805134C6327DFD25AD9D3A11C54 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1CD65BCEE0B044C0FDF04D3CECF792DA59BADC97* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -70720,7 +70720,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49243
+// Method Definition Index: 49252
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListBuildAliasesResultEvent_mA56AB5B2B3B1BB64772E182B108DA8FD987652FC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCA5CFBA83A24A3EA5ED5CB13F4983EB48E635F39* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -70763,7 +70763,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49244
+// Method Definition Index: 49253
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListBuildAliasesResultEvent_mF1CF3CD52A1F19F2EABD87780AEC20614AAC39D4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCA5CFBA83A24A3EA5ED5CB13F4983EB48E635F39* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -70806,7 +70806,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49245
+// Method Definition Index: 49254
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListBuildSummariesV2RequestEvent_mC944A0DBB2511B463D16FE7CB3C3ABAD6EDE27C5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t63F1D18FB12713763FEF04197998F031B858159A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -70849,7 +70849,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49246
+// Method Definition Index: 49255
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListBuildSummariesV2RequestEvent_mD4317398FA02CA2AD1D55586005C28DA0AE39CB2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t63F1D18FB12713763FEF04197998F031B858159A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -70892,7 +70892,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49247
+// Method Definition Index: 49256
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListBuildSummariesV2ResultEvent_m91972117E55F43BF832D4A051774C34A7DD6EB55 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t9EA80443CFDD9214279A7F2797C2E77538F1F5F9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -70935,7 +70935,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49248
+// Method Definition Index: 49257
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListBuildSummariesV2ResultEvent_mEA302B7FFEB3CDE84AA1386FC1C1129867FC7780 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t9EA80443CFDD9214279A7F2797C2E77538F1F5F9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -70978,7 +70978,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49249
+// Method Definition Index: 49258
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListCertificateSummariesRequestEvent_mFA6B0EC956E52B968895000DC519D05B055C620D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t33A81E7B57EB72DDA7E4B18AF52A336FFACCEDAD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -71021,7 +71021,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49250
+// Method Definition Index: 49259
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListCertificateSummariesRequestEvent_mE7F9F90ED19DD7FB61C87F77E93AA126C4D8904F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t33A81E7B57EB72DDA7E4B18AF52A336FFACCEDAD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -71064,7 +71064,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49251
+// Method Definition Index: 49260
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListCertificateSummariesResultEvent_mCDE7AE01F0B467DA3DEBF5E5AB2C158A3FBA6E77 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7782BAE81B7F5D61D8FCF60BB652F78E29ABFC2F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -71107,7 +71107,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49252
+// Method Definition Index: 49261
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListCertificateSummariesResultEvent_m6A03538CD1F38A40996C9A838A24A5FC14F07BB6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7782BAE81B7F5D61D8FCF60BB652F78E29ABFC2F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -71150,7 +71150,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49253
+// Method Definition Index: 49262
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListContainerImagesRequestEvent_mE48E20AE4D47CB180DDEE8792B4C25BCE49DC8FB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t2F82CC19BD2BBFA1A3A384B902C98233C41A707D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -71193,7 +71193,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49254
+// Method Definition Index: 49263
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListContainerImagesRequestEvent_mD70E8B3C47F854152F2DA69507C08C96482E3E46 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t2F82CC19BD2BBFA1A3A384B902C98233C41A707D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -71236,7 +71236,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49255
+// Method Definition Index: 49264
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListContainerImagesResultEvent_m1358E4C01AD3E8E38756DFEEA9B8215DD5BDD933 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4259B33FECB64A8E3C7F1A86BC82055E4A7E90FC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -71279,7 +71279,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49256
+// Method Definition Index: 49265
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListContainerImagesResultEvent_mD07AA8A4623B56530971CD27449715883C245FF7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4259B33FECB64A8E3C7F1A86BC82055E4A7E90FC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -71322,7 +71322,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49257
+// Method Definition Index: 49266
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListContainerImageTagsRequestEvent_m64CF68C0763E0DF6711215D08B7B117B30445C1F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB9567E315BCBCF894B82FF6883B171B89F54FB0D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -71365,7 +71365,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49258
+// Method Definition Index: 49267
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListContainerImageTagsRequestEvent_mE1A963AFABECFAB34094BCE202BE00762A10DF1E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB9567E315BCBCF894B82FF6883B171B89F54FB0D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -71408,7 +71408,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49259
+// Method Definition Index: 49268
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListContainerImageTagsResultEvent_m1F70A5763F0B90D4CCA50BCF017DEF9447BDC987 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tB57B651CA8557F1B0088E4A2A8F5395A4E036A97* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -71451,7 +71451,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49260
+// Method Definition Index: 49269
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListContainerImageTagsResultEvent_m5FBCAE19653FDD1BF81F07E6711696CF33263F44 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tB57B651CA8557F1B0088E4A2A8F5395A4E036A97* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -71494,7 +71494,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49261
+// Method Definition Index: 49270
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListMatchmakingQueuesRequestEvent_mBFE61E1A41B3BF342163A0CE077DEC80E6CA25F1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tEFF5EB918356B6D0E69505D16B3D0B50CAC41D2F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -71537,7 +71537,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49262
+// Method Definition Index: 49271
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListMatchmakingQueuesRequestEvent_m5F57BDFDC909527822C97CF970FC0E5A6FEC606C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tEFF5EB918356B6D0E69505D16B3D0B50CAC41D2F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -71580,7 +71580,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49263
+// Method Definition Index: 49272
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListMatchmakingQueuesResultEvent_m5250DA8756D5DA6EB2FA4436F7E75EFF217EA60A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t82EEC3D2A12C974E3A5060D7410D2D84AB41B401* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -71623,7 +71623,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49264
+// Method Definition Index: 49273
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListMatchmakingQueuesResultEvent_m4AED7A0D46216FD539173D9CA56577666A23036D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t82EEC3D2A12C974E3A5060D7410D2D84AB41B401* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -71666,7 +71666,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49265
+// Method Definition Index: 49274
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListMatchmakingTicketsForPlayerRequestEvent_mF8C487A35B240C2849CCAEBF220087196A9A7BA9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD278D0BB2FDC98B36F6C401E212D9DF5227488BD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -71709,7 +71709,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49266
+// Method Definition Index: 49275
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListMatchmakingTicketsForPlayerRequestEvent_m8C7207C421A6553679FCF14E4521233449770180 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tD278D0BB2FDC98B36F6C401E212D9DF5227488BD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -71752,7 +71752,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49267
+// Method Definition Index: 49276
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListMatchmakingTicketsForPlayerResultEvent_mDE1E4FC3D5716FDAC3006347E1508B8C607F19CB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA56F24B67F466B6D4794DCEF5C731DD0FDCBCDE4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -71795,7 +71795,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49268
+// Method Definition Index: 49277
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListMatchmakingTicketsForPlayerResultEvent_m5D6851DF1ECFEFD88A91E33819A8198B2A7B335E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA56F24B67F466B6D4794DCEF5C731DD0FDCBCDE4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -71838,7 +71838,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49269
+// Method Definition Index: 49278
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListMultiplayerServersRequestEvent_mD075385D96891E93CF2233B406A3C748320D728D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tCF2D28DF3250EA2B158E5C2BEA572AC5BDA70D3B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -71881,7 +71881,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49270
+// Method Definition Index: 49279
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListMultiplayerServersRequestEvent_m83E31AAFBF4EBAE028BCC60C295C1396489979DD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tCF2D28DF3250EA2B158E5C2BEA572AC5BDA70D3B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -71924,7 +71924,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49271
+// Method Definition Index: 49280
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListMultiplayerServersResultEvent_m079ED18D1354578CB6042B9B4ADB17DE245C3797 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC614FC6437D6499E2E2972F377E13CC97550F4D2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -71967,7 +71967,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49272
+// Method Definition Index: 49281
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListMultiplayerServersResultEvent_m8981FAE0C58F77B6891C873F1CEAE64C3E63C135 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tC614FC6437D6499E2E2972F377E13CC97550F4D2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -72010,7 +72010,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49273
+// Method Definition Index: 49282
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListPartyQosServersRequestEvent_m53FA6209C33E47EC7382FA5FBEF25A3029A659A1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t027B669BD0523056818A6FCCAC8EF90E230F02A4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -72053,7 +72053,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49274
+// Method Definition Index: 49283
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListPartyQosServersRequestEvent_mCEA90EC833E0DEE8118E53030CE061BA1DD11435 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t027B669BD0523056818A6FCCAC8EF90E230F02A4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -72096,7 +72096,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49275
+// Method Definition Index: 49284
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListPartyQosServersResultEvent_mD7A3DCC237B69CD39B7B2C680A4C8A1BCEFF7D2E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t29D6701B44207CCD13F416DE14FFA3DF97678575* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -72139,7 +72139,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49276
+// Method Definition Index: 49285
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListPartyQosServersResultEvent_mED7B291192A4157E2959923F907E404DA335DC7D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t29D6701B44207CCD13F416DE14FFA3DF97678575* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -72182,7 +72182,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49277
+// Method Definition Index: 49286
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListQosServersForTitleRequestEvent_mF406741EEE43665CD109CD69E4461C2AE3187D09 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tED57F04822C7FB63838417F204311AE58321C777* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -72225,7 +72225,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49278
+// Method Definition Index: 49287
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListQosServersForTitleRequestEvent_m7349778B75C6997DE180E0F0B7872395B07FB729 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tED57F04822C7FB63838417F204311AE58321C777* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -72268,7 +72268,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49279
+// Method Definition Index: 49288
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListQosServersForTitleResultEvent_m4EAC56B96E7A8580CF12778D938C24CE128EE3B8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t895BF83B38E6A467B8D607304FA0496B316FF1DD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -72311,7 +72311,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49280
+// Method Definition Index: 49289
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListQosServersForTitleResultEvent_m2EC14E1B8E269DC8A2A11E2CFC3528DB8561B87B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t895BF83B38E6A467B8D607304FA0496B316FF1DD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -72354,7 +72354,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49281
+// Method Definition Index: 49290
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListSecretSummariesRequestEvent_mEAC200E9BC49BF1EFB59247BE37D3D7DC2CD302D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tEA5601FAF664CEC70308E9F13C4B1503ABCC76ED* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -72397,7 +72397,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49282
+// Method Definition Index: 49291
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListSecretSummariesRequestEvent_m3538E679BADC67ED8387B7DFEB95D4C9C53256DE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tEA5601FAF664CEC70308E9F13C4B1503ABCC76ED* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -72440,7 +72440,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49283
+// Method Definition Index: 49292
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListSecretSummariesResultEvent_m72FB5EEC2370999569D428DA4F2F3C36217AA87F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF5475899EFFE9B74229E76ED55619C81A018D87B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -72483,7 +72483,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49284
+// Method Definition Index: 49293
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListSecretSummariesResultEvent_m4087CF2D8AA43A1AAB653124A793AD976E7E01A6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF5475899EFFE9B74229E76ED55619C81A018D87B* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -72526,7 +72526,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49285
+// Method Definition Index: 49294
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListServerBackfillTicketsForPlayerRequestEvent_m6F111320DDF83A7B5639B8256036D4B9FFB8EE0F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3AA8ED08E1382562293FBDAA4434319003C0BED7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -72569,7 +72569,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49286
+// Method Definition Index: 49295
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListServerBackfillTicketsForPlayerRequestEvent_m38C65219CDB75BEC690F6FFBDA20205660D1CC79 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t3AA8ED08E1382562293FBDAA4434319003C0BED7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -72612,7 +72612,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49287
+// Method Definition Index: 49296
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListServerBackfillTicketsForPlayerResultEvent_m6B55D463AB96AEAE0613043D16DEA071935FD305 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t2292F03A4058348C44217EE3D43E57663F5628E8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -72655,7 +72655,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49288
+// Method Definition Index: 49297
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListServerBackfillTicketsForPlayerResultEvent_mCAC442CA308F677466A5C556BE9EE5E8906AE70E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t2292F03A4058348C44217EE3D43E57663F5628E8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -72698,7 +72698,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49289
+// Method Definition Index: 49298
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListTitleMultiplayerServersQuotaChangesRequestEvent_m765C449AB67437ECB32F83B1AA0C38C1B3F0B1DB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8A6BAD0D9AEEA585930E367B28E99E68DBB7D755* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -72741,7 +72741,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49290
+// Method Definition Index: 49299
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListTitleMultiplayerServersQuotaChangesRequestEvent_m68EA26D8369FFBBBFE638CD2AABE0494A864F69B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8A6BAD0D9AEEA585930E367B28E99E68DBB7D755* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -72784,7 +72784,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49291
+// Method Definition Index: 49300
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListTitleMultiplayerServersQuotaChangesResultEvent_m686FB3C01ACAD14E36829B67D142C0DFCAB2E7F1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t95CBC3CD62D2B347154D2495F2A279B0E0814EFE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -72827,7 +72827,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49292
+// Method Definition Index: 49301
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListTitleMultiplayerServersQuotaChangesResultEvent_m24C253F128922F4499528203ED5DBCCA0E62E2E9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t95CBC3CD62D2B347154D2495F2A279B0E0814EFE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -72870,7 +72870,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49293
+// Method Definition Index: 49302
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListVirtualMachineSummariesRequestEvent_m49E753A599819D9D257B527146A534B4F170760B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t11B4EA270C58469AA11F3E7BBBBC82DB368BC54A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -72913,7 +72913,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49294
+// Method Definition Index: 49303
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListVirtualMachineSummariesRequestEvent_m0F3786EA6FFB8876A86246DB0748ACA957CBB326 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t11B4EA270C58469AA11F3E7BBBBC82DB368BC54A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -72956,7 +72956,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49295
+// Method Definition Index: 49304
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerListVirtualMachineSummariesResultEvent_mA5FCBBE10F669AE88F9A52C41646C5B373708053 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t430CF8B543C6C55E6CF3468E45C51FF36A645810* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -72999,7 +72999,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49296
+// Method Definition Index: 49305
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerListVirtualMachineSummariesResultEvent_m0526E1D4969D9A9FD611F57CABA699D5C0750591 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t430CF8B543C6C55E6CF3468E45C51FF36A645810* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -73042,7 +73042,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49297
+// Method Definition Index: 49306
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerRemoveMatchmakingQueueRequestEvent_m5C9D120DAFE083B1A28BE579B84488B62ECD7D90 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t348FB08501179476A120FF4E44F0C6103A76801A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -73085,7 +73085,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49298
+// Method Definition Index: 49307
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerRemoveMatchmakingQueueRequestEvent_m92E627F98C8A0FA90F9807574F4E98986403C9C0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t348FB08501179476A120FF4E44F0C6103A76801A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -73128,7 +73128,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49299
+// Method Definition Index: 49308
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerRemoveMatchmakingQueueResultEvent_m2A701C4F89491209D10AA8429A9CD61D14A9CF57 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tEBD16BABE188F49668D3B7919F5B9CF965FDCFCC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -73171,7 +73171,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49300
+// Method Definition Index: 49309
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerRemoveMatchmakingQueueResultEvent_mFA69B70A4EB9C39F6ABDB87A7551E8530CF3476B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tEBD16BABE188F49668D3B7919F5B9CF965FDCFCC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -73214,7 +73214,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49301
+// Method Definition Index: 49310
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerRemoveMemberRequestEvent_m36B80A6FB295D6413E3B4E7343B60CEEC65B25BE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAF18FAA4F1A842D55C7D685E0330250A7F210778* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -73257,7 +73257,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49302
+// Method Definition Index: 49311
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerRemoveMemberRequestEvent_mCD9B6EEEA5C087445A147C2E243B641E584C78CA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAF18FAA4F1A842D55C7D685E0330250A7F210778* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -73300,7 +73300,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49303
+// Method Definition Index: 49312
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerRemoveMemberResultEvent_mAEF9B56AB65637822099855CEC3280D33159CBD0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCA4CE88D322B89AC51F03666055DF820DFEEDFB1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -73343,7 +73343,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49304
+// Method Definition Index: 49313
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerRemoveMemberResultEvent_m195D7EBAB19C304DE46E950DF2345E0E65D18880 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCA4CE88D322B89AC51F03666055DF820DFEEDFB1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -73386,7 +73386,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49305
+// Method Definition Index: 49314
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerRequestMultiplayerServerRequestEvent_mB41781CD041A369036E150B9218F2C5A79718503 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE2EEF44F0370CC3D7CE773D6D7C4F1BD7744B1B6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -73429,7 +73429,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49306
+// Method Definition Index: 49315
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerRequestMultiplayerServerRequestEvent_mAC3A6D933515FFB0A76596A061FBC8864D8CC775 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tE2EEF44F0370CC3D7CE773D6D7C4F1BD7744B1B6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -73472,7 +73472,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49307
+// Method Definition Index: 49316
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerRequestMultiplayerServerResultEvent_mE8A6E1EBA4D838B070674CB0D93B7F575544DC28 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7AE4A8073E79FC609897A16610EDCCF9672929D1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -73515,7 +73515,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49308
+// Method Definition Index: 49317
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerRequestMultiplayerServerResultEvent_mBE7704C76419B30377923C97C78883386C543169 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7AE4A8073E79FC609897A16610EDCCF9672929D1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -73558,7 +73558,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49309
+// Method Definition Index: 49318
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerRequestPartyServiceRequestEvent_m02E081B7AE1B20B46A99C1EDB8E2BC6D108DD93B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tDD1C722314437EC3E4D1BF1EE58AEDF32942E820* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -73601,7 +73601,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49310
+// Method Definition Index: 49319
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerRequestPartyServiceRequestEvent_mCDA2B8641F5FE31FC815A0BCE19DC06C71D1B34D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tDD1C722314437EC3E4D1BF1EE58AEDF32942E820* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -73644,7 +73644,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49311
+// Method Definition Index: 49320
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerRequestPartyServiceResultEvent_mC43D7DADE83E0F819645A0C655BB485A8216E093 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF9001BA894C3FFB529D21BEB81F29E831423208E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -73687,7 +73687,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49312
+// Method Definition Index: 49321
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerRequestPartyServiceResultEvent_mF21B365CC6501CA758537F88649AD2F2FF31059E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF9001BA894C3FFB529D21BEB81F29E831423208E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -73730,7 +73730,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49313
+// Method Definition Index: 49322
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerRolloverContainerRegistryCredentialsRequestEvent_m139EC98F777ABFF4FF21D153BEA05851E16914CB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t0A17E7F9E1BACF2BAFAE014A416E0F61CCA07491* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -73773,7 +73773,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49314
+// Method Definition Index: 49323
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerRolloverContainerRegistryCredentialsRequestEvent_m7ABEDB73F48D64C21306CDAAAD9872AC0C758DEE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t0A17E7F9E1BACF2BAFAE014A416E0F61CCA07491* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -73816,7 +73816,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49315
+// Method Definition Index: 49324
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerRolloverContainerRegistryCredentialsResultEvent_m4145ADFF67A5AD7BCA3B2F27C6BC841408D1B772 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t5EC50596F5D455298C668D6E0FAEFACA3C60AFA5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -73859,7 +73859,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49316
+// Method Definition Index: 49325
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerRolloverContainerRegistryCredentialsResultEvent_m2C483EA49592D4F3305DB52898DE4A88AB86EA3E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t5EC50596F5D455298C668D6E0FAEFACA3C60AFA5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -73902,7 +73902,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49317
+// Method Definition Index: 49326
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerSetMatchmakingQueueRequestEvent_m3646E58D7E197A45D6783410F54B225513FFDDA3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9C55B139752AE04A9E6F71EB9ADA643E4140B545* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -73945,7 +73945,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49318
+// Method Definition Index: 49327
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerSetMatchmakingQueueRequestEvent_m99AC06FD27466ED400B4AE9225600441B7FFECB1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9C55B139752AE04A9E6F71EB9ADA643E4140B545* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -73988,7 +73988,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49319
+// Method Definition Index: 49328
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerSetMatchmakingQueueResultEvent_m72117D3A80CFB60903B81A5D389FB321B953CF67 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA0A827914D14309FDBE98DA00457B51E1A902393* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -74031,7 +74031,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49320
+// Method Definition Index: 49329
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerSetMatchmakingQueueResultEvent_m9D4F43025218C40FD0DFABB1E0D86B27EEE2CA82 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA0A827914D14309FDBE98DA00457B51E1A902393* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -74074,7 +74074,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49321
+// Method Definition Index: 49330
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerShutdownMultiplayerServerRequestEvent_mC23C02856D252AEE7AD08913BF63EAB3A848176D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAEE4A5577CA2E0E3D87D34FA7962ADF716CB416C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -74117,7 +74117,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49322
+// Method Definition Index: 49331
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerShutdownMultiplayerServerRequestEvent_mE7D7C33168AD390AD4212282B9FE3CEDCCAB974B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tAEE4A5577CA2E0E3D87D34FA7962ADF716CB416C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -74160,7 +74160,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49323
+// Method Definition Index: 49332
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerShutdownMultiplayerServerResultEvent_mD4099A8C43BCAAF78B35D3E3EB11D45506506867 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -74203,7 +74203,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49324
+// Method Definition Index: 49333
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerShutdownMultiplayerServerResultEvent_mD6C72DE1F7C177E086ED9CEE43F184084B6DA4C1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -74246,7 +74246,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49325
+// Method Definition Index: 49334
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerSubscribeToLobbyResourceRequestEvent_m62306859D42ECFFAB78BDBF290CCC74D9460C4C8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1015DBB03611A4DA3404AD133BC3AF3D642BBD84* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -74289,7 +74289,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49326
+// Method Definition Index: 49335
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerSubscribeToLobbyResourceRequestEvent_m1EC67C559084D1BF44F77AEDED082395EF457DB9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1015DBB03611A4DA3404AD133BC3AF3D642BBD84* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -74332,7 +74332,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49327
+// Method Definition Index: 49336
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerSubscribeToLobbyResourceResultEvent_m16A3D6973FF80027584DFA3F2F4AF41CB9D7307E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t966C39156C98B6F9F1B4001B60DC0E7210282878* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -74375,7 +74375,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49328
+// Method Definition Index: 49337
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerSubscribeToLobbyResourceResultEvent_m1B089608B54ECD3D4BD4AABB79721447002658B0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t966C39156C98B6F9F1B4001B60DC0E7210282878* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -74418,7 +74418,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49329
+// Method Definition Index: 49338
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerSubscribeToMatchmakingResourceRequestEvent_mBED2BAEA2573457E8AB25A131C0B41F474E1885D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tDCA510EDE51F38E0A833DE746497903E2A4D10FC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -74461,7 +74461,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49330
+// Method Definition Index: 49339
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerSubscribeToMatchmakingResourceRequestEvent_m312C7D44A15222841487F7C541842BDC2B44981C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tDCA510EDE51F38E0A833DE746497903E2A4D10FC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -74504,7 +74504,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49331
+// Method Definition Index: 49340
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerSubscribeToMatchmakingResourceResultEvent_mCA2164C2E3FDBF6F0EA748B9832A4A4598176123 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t71388B78D567BB0551597D74B31EA033BB86B1CC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -74547,7 +74547,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49332
+// Method Definition Index: 49341
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerSubscribeToMatchmakingResourceResultEvent_m931691E35C6B96B646BB447458D3ACF83CBF805A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t71388B78D567BB0551597D74B31EA033BB86B1CC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -74590,7 +74590,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49333
+// Method Definition Index: 49342
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerUnsubscribeFromLobbyResourceRequestEvent_mEC4704454F9B5919DD316C2A6875AC347834F914 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tED3EEC6F0D4FA6EE118DE5B095DDB5AC0A4BCD30* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -74633,7 +74633,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49334
+// Method Definition Index: 49343
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerUnsubscribeFromLobbyResourceRequestEvent_m3BA538CE6D3F805517487781E6AA9878F67BD8C5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tED3EEC6F0D4FA6EE118DE5B095DDB5AC0A4BCD30* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -74676,7 +74676,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49335
+// Method Definition Index: 49344
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerUnsubscribeFromLobbyResourceResultEvent_m553434C933297892176FD3E426726F7556B0BAFC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCA4CE88D322B89AC51F03666055DF820DFEEDFB1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -74719,7 +74719,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49336
+// Method Definition Index: 49345
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerUnsubscribeFromLobbyResourceResultEvent_m4D3329F81FEFC85EC9E60C0F216055B649603160 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCA4CE88D322B89AC51F03666055DF820DFEEDFB1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -74762,7 +74762,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49337
+// Method Definition Index: 49346
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerUnsubscribeFromMatchmakingResourceRequestEvent_m4FE2E9139FE8169A0CC558DF0EAB45072C534653 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5B43C2CBC30286D05C14067B0D00A6DB6CFBA413* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -74805,7 +74805,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49338
+// Method Definition Index: 49347
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerUnsubscribeFromMatchmakingResourceRequestEvent_m008E84D680743BA81517D56114CE2F0C39797815 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5B43C2CBC30286D05C14067B0D00A6DB6CFBA413* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -74848,7 +74848,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49339
+// Method Definition Index: 49348
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerUnsubscribeFromMatchmakingResourceResultEvent_m3FEC72328CDCCCC39E5DE095938B54BE3331778C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t55BC2C040FB09357F697FA5ADFF511102E087993* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -74891,7 +74891,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49340
+// Method Definition Index: 49349
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerUnsubscribeFromMatchmakingResourceResultEvent_m13AD9A79017AB2B79EA862F14505494B5F91C517 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t55BC2C040FB09357F697FA5ADFF511102E087993* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -74934,7 +74934,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49341
+// Method Definition Index: 49350
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerUntagContainerImageRequestEvent_mCC1CD3ACF368ECC5568A1AE6996049236B75538D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t59026145CAEAC6BC778EBB73834FA5DE29F2BBDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -74977,7 +74977,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49342
+// Method Definition Index: 49351
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerUntagContainerImageRequestEvent_m8FEA899D0B5F8A536088EC63163EFF4B6AE04113 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t59026145CAEAC6BC778EBB73834FA5DE29F2BBDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -75020,7 +75020,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49343
+// Method Definition Index: 49352
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerUntagContainerImageResultEvent_mE83F89BDF86C7D1E39B825302FA8860304AE732D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -75063,7 +75063,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49344
+// Method Definition Index: 49353
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerUntagContainerImageResultEvent_m710FF5A1F7B92DA2D891C440A7503380018EF331 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -75106,7 +75106,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49345
+// Method Definition Index: 49354
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerUpdateBuildAliasRequestEvent_m8D4BB7C8B870576EF9EF68D8C866E1055356BE1D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t44BE5835896FB8968E7EC73B60046301478DDA84* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -75149,7 +75149,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49346
+// Method Definition Index: 49355
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerUpdateBuildAliasRequestEvent_m82840BD70D7DEAFD4CAC0CB76B1FBF48F2F5B59E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t44BE5835896FB8968E7EC73B60046301478DDA84* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -75192,7 +75192,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49347
+// Method Definition Index: 49356
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerUpdateBuildAliasResultEvent_m6E8D157E47575C2F29D18B66C1BA8C5F9FE8F94F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE139B901F6C5BF36929F70077D92EA253EDE5E31* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -75235,7 +75235,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49348
+// Method Definition Index: 49357
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerUpdateBuildAliasResultEvent_m834B942DA4060F5B5F48C909EB9946617CD85A5B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE139B901F6C5BF36929F70077D92EA253EDE5E31* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -75278,7 +75278,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49349
+// Method Definition Index: 49358
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerUpdateBuildNameRequestEvent_mE6A58B2EF38B07B239AFD13115678EF6BD5A20E2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t190FAE3E51F25DB8B542E4B7ACC2EA299F60C5C4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -75321,7 +75321,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49350
+// Method Definition Index: 49359
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerUpdateBuildNameRequestEvent_m1C69560281E69E5A651EB18C239F7E4C25392F62 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t190FAE3E51F25DB8B542E4B7ACC2EA299F60C5C4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -75364,7 +75364,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49351
+// Method Definition Index: 49360
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerUpdateBuildNameResultEvent_mCD46D9534BFBF2708C346A8846BF5E28083DC877 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -75407,7 +75407,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49352
+// Method Definition Index: 49361
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerUpdateBuildNameResultEvent_m1F767665BE66A618DEA94DA24147F847EEE64E1C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -75450,7 +75450,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49353
+// Method Definition Index: 49362
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerUpdateBuildRegionRequestEvent_mB5B955CF572A0689DC9958780465931157294CBA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t59671AF51217F7C2B94EE5923F178F96BD8A2BF1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -75493,7 +75493,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49354
+// Method Definition Index: 49363
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerUpdateBuildRegionRequestEvent_mCA1B5C161D0DB20357A48406DDE8732DC99D656A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t59671AF51217F7C2B94EE5923F178F96BD8A2BF1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -75536,7 +75536,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49355
+// Method Definition Index: 49364
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerUpdateBuildRegionResultEvent_m7BF89AF7AAB918D9A9FEF0127638542B796BDB47 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -75579,7 +75579,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49356
+// Method Definition Index: 49365
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerUpdateBuildRegionResultEvent_mD1154ED8C5AB66493CAF5A70EF86B5ECA1B984D6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -75622,7 +75622,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49357
+// Method Definition Index: 49366
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerUpdateBuildRegionsRequestEvent_mB40E5B59F756DCA7B225528CB2D419C5BF3FD772 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5D2642B314464EF0243D98A852AB24A6B47F41B7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -75665,7 +75665,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49358
+// Method Definition Index: 49367
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerUpdateBuildRegionsRequestEvent_m7892F42AF3EF16375166729B7ADC37047A8154CF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5D2642B314464EF0243D98A852AB24A6B47F41B7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -75708,7 +75708,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49359
+// Method Definition Index: 49368
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerUpdateBuildRegionsResultEvent_m8CFF26332B72DF14839590941A67E43183321F02 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -75751,7 +75751,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49360
+// Method Definition Index: 49369
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerUpdateBuildRegionsResultEvent_mC067B49569F9F282C88157333D342B8071CAE2B6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -75794,7 +75794,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49361
+// Method Definition Index: 49370
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerUpdateLobbyRequestEvent_mE968E8819BA8E70F26E09E5214C91CC076B5D9ED (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tDF7ED2EC16074CB2688F49614649F6AD979C6BBB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -75837,7 +75837,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49362
+// Method Definition Index: 49371
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerUpdateLobbyRequestEvent_m6DC30A9E768546DFE0EA6D898CD002B8155A12AA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tDF7ED2EC16074CB2688F49614649F6AD979C6BBB* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -75880,7 +75880,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49363
+// Method Definition Index: 49372
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerUpdateLobbyResultEvent_mAE11B5ED4695A90DBDB492827D36F2E75B924698 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCA4CE88D322B89AC51F03666055DF820DFEEDFB1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -75923,7 +75923,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49364
+// Method Definition Index: 49373
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerUpdateLobbyResultEvent_m651E5DA7C850D702626828321C23AA1C3B46DFD4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCA4CE88D322B89AC51F03666055DF820DFEEDFB1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -75966,7 +75966,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49365
+// Method Definition Index: 49374
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerUpdateLobbyAsServerRequestEvent_m105FAF8642E280AD569360B25B43258D7637C2F1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t51E94B3AF25932DD64BAF3583B65BFB4168520E7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -76009,7 +76009,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49366
+// Method Definition Index: 49375
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerUpdateLobbyAsServerRequestEvent_mE5E97424E6571FEDF175A2BA76DF4103A9E2C54D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t51E94B3AF25932DD64BAF3583B65BFB4168520E7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -76052,7 +76052,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49367
+// Method Definition Index: 49376
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerUpdateLobbyAsServerResultEvent_m09B420A01E672F8CA221105FDF300EA55F637E6B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCA4CE88D322B89AC51F03666055DF820DFEEDFB1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -76095,7 +76095,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49368
+// Method Definition Index: 49377
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerUpdateLobbyAsServerResultEvent_mFAFAB358A1EBFA2CC611D64685E83A7F03569B61 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tCA4CE88D322B89AC51F03666055DF820DFEEDFB1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -76138,7 +76138,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49369
+// Method Definition Index: 49378
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerUploadCertificateRequestEvent_m3E7274D16974447766D93D5B3B81194CA161544B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB79DC4673BA2F77D52A3146B06EFFCFECCF3D82E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -76181,7 +76181,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49370
+// Method Definition Index: 49379
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerUploadCertificateRequestEvent_m189177383A51743A06B3AF2E9B28A7505B7D01B1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB79DC4673BA2F77D52A3146B06EFFCFECCF3D82E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -76224,7 +76224,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49371
+// Method Definition Index: 49380
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerUploadCertificateResultEvent_mD29BD5956ED3171D9FA1D99636A46B404F76EB09 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -76267,7 +76267,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49372
+// Method Definition Index: 49381
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerUploadCertificateResultEvent_mF87D0F2D3CAB6AE8159C0D1825F4CD4864C196BF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -76310,7 +76310,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49373
+// Method Definition Index: 49382
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerUploadSecretRequestEvent_m0D8D98BFE3DE0B46984D593585DF41F59773B8A7 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t08BD543ED81EBEE756774C6D6F002781D983ACD2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -76353,7 +76353,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49374
+// Method Definition Index: 49383
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerUploadSecretRequestEvent_m8EEE25521836EC78FAF18073AC1553002EE4D7A3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t08BD543ED81EBEE756774C6D6F002781D983ACD2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -76396,7 +76396,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49375
+// Method Definition Index: 49384
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnMultiplayerUploadSecretResultEvent_mC6E8D1FE3C2CE3ACACCBBF798C738C05F80A597D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -76439,7 +76439,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49376
+// Method Definition Index: 49385
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnMultiplayerUploadSecretResultEvent_mDEFA39DD91B1A076DABC98D8A37BB4B2038ADE8B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tE0A5F9A22BA3ADA84F3538F56103596FF2474FDC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -76482,7 +76482,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49377
+// Method Definition Index: 49386
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProfilesGetGlobalPolicyRequestEvent_mCC2D84B8E444DCED4EA712FA531E23D4BB07E176 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tFD2D91A47D0C14F1DA3C9C0CAA1454199CF0C7A5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -76525,7 +76525,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49378
+// Method Definition Index: 49387
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProfilesGetGlobalPolicyRequestEvent_m37B1B81FD79617D32969616E236D8A63171A33FC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tFD2D91A47D0C14F1DA3C9C0CAA1454199CF0C7A5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -76568,7 +76568,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49379
+// Method Definition Index: 49388
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProfilesGetGlobalPolicyResultEvent_mA768862CE2FFA8BABB714B0F00582326A1A2E3AD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t28743C99C3EF6CF82B3B5C66EF40FA7D0389DE23* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -76611,7 +76611,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49380
+// Method Definition Index: 49389
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProfilesGetGlobalPolicyResultEvent_mF2A65CFDBAF098A34B3647B1B9A1575FA3EAC966 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t28743C99C3EF6CF82B3B5C66EF40FA7D0389DE23* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -76654,7 +76654,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49381
+// Method Definition Index: 49390
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProfilesGetProfileRequestEvent_m1D04EE6A84D8A77589A24160B52F0751D3D6D3DC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t40D4841FA752DB284C50D8954BA626AE253C7BCC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -76697,7 +76697,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49382
+// Method Definition Index: 49391
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProfilesGetProfileRequestEvent_m74578869F91AACB56BED1CAFE38FEC8F5F02E76F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t40D4841FA752DB284C50D8954BA626AE253C7BCC* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -76740,7 +76740,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49383
+// Method Definition Index: 49392
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProfilesGetProfileResultEvent_m660EB2C19C285D79CA87FE9D2115125EEF9D93C3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4E8DF33B0054B43059FFB02C25F490F73C6CCD7C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -76783,7 +76783,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49384
+// Method Definition Index: 49393
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProfilesGetProfileResultEvent_m2C5425F024825AC6EA57C2DA8E423F6D21656BE1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t4E8DF33B0054B43059FFB02C25F490F73C6CCD7C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -76826,7 +76826,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49385
+// Method Definition Index: 49394
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProfilesGetProfilesRequestEvent_m112E72E3A294036157C2D1203347E2A430C409B2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tEA6279841526162972439182BF2886F81141394C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -76869,7 +76869,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49386
+// Method Definition Index: 49395
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProfilesGetProfilesRequestEvent_m7E9FAB6942C6C1739977EFACF446D8C8199B009F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tEA6279841526162972439182BF2886F81141394C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -76912,7 +76912,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49387
+// Method Definition Index: 49396
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProfilesGetProfilesResultEvent_mBEBC2AB004C8268AA963F97FDAFBAA2EC5210D7D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t0F24F032C04F84473EFDB278E8DFEA96CBEDA7D1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -76955,7 +76955,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49388
+// Method Definition Index: 49397
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProfilesGetProfilesResultEvent_m54404CFF5C72DB21FE32686D4E91475C34A6F2E5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t0F24F032C04F84473EFDB278E8DFEA96CBEDA7D1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -76998,7 +76998,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49389
+// Method Definition Index: 49398
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProfilesGetTitlePlayersFromMasterPlayerAccountIdsRequestEvent_m6F5515711A73DADB963370B136DDB1A6901D58D3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t7BA12EF560310FB428272E905431AD5D588E8EF3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -77041,7 +77041,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49390
+// Method Definition Index: 49399
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProfilesGetTitlePlayersFromMasterPlayerAccountIdsRequestEvent_m402D667AB49ECF18E806894F7389AA390FD5A7F5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t7BA12EF560310FB428272E905431AD5D588E8EF3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -77084,7 +77084,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49391
+// Method Definition Index: 49400
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProfilesGetTitlePlayersFromMasterPlayerAccountIdsResultEvent_m7650A526104E8A1D9A3DFE340B0440E1B84826DA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tAA681F5590BF7997A9C8D2E82600184802199516* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -77127,7 +77127,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49392
+// Method Definition Index: 49401
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProfilesGetTitlePlayersFromMasterPlayerAccountIdsResultEvent_mC402BA2F74FD5F03011B32892126E40FAADDD8CB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tAA681F5590BF7997A9C8D2E82600184802199516* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -77170,7 +77170,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49393
+// Method Definition Index: 49402
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProfilesGetTitlePlayersFromXboxLiveIDsRequestEvent_mE4D5820E9AE4BAD09C4B2D5063A296C4B7B45797 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB751A90DC9D7A493097A28C6172A5C738900680D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -77213,7 +77213,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49394
+// Method Definition Index: 49403
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProfilesGetTitlePlayersFromXboxLiveIDsRequestEvent_m0383504989B89F807B7923E50599EC2865F6D2F0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tB751A90DC9D7A493097A28C6172A5C738900680D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -77256,7 +77256,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49395
+// Method Definition Index: 49404
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProfilesGetTitlePlayersFromXboxLiveIDsResultEvent_mECF3425B6CE3DC7BC691D726C8C9846CC3613687 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t46EA40E355B01060A3133B57F9DEAB63356D16C0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -77299,7 +77299,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49396
+// Method Definition Index: 49405
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProfilesGetTitlePlayersFromXboxLiveIDsResultEvent_mD255A0B4FAFC79C8243D5DF88987F522F2A97428 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t46EA40E355B01060A3133B57F9DEAB63356D16C0* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -77342,7 +77342,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49397
+// Method Definition Index: 49406
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProfilesSetDisplayNameRequestEvent_m8338E173489EDBAD5158E80ED485038EB5FE6229 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5551260619C9788AFA48E96097D0D0F39960DF70* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -77385,7 +77385,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49398
+// Method Definition Index: 49407
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProfilesSetDisplayNameRequestEvent_mD1A3D7188C56CB951CAA9FF5BF2175C1181B62C3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t5551260619C9788AFA48E96097D0D0F39960DF70* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -77428,7 +77428,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49399
+// Method Definition Index: 49408
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProfilesSetDisplayNameResultEvent_m1109D95AD19B2DC416F14461CE32C2D24724CA69 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t5C4F766D4E7CB4F3294158009E901305D3CC7DAD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -77471,7 +77471,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49400
+// Method Definition Index: 49409
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProfilesSetDisplayNameResultEvent_mD7EBC6711045ACA08D6AE0CE5E9B435326A5AB04 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t5C4F766D4E7CB4F3294158009E901305D3CC7DAD* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -77514,7 +77514,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49401
+// Method Definition Index: 49410
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProfilesSetGlobalPolicyRequestEvent_mB06CC9805E8A226CE44AA638B70B4D2010C9F38F (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t684260855255EC42FE9691E2921B9BC064583A54* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -77557,7 +77557,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49402
+// Method Definition Index: 49411
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProfilesSetGlobalPolicyRequestEvent_m61ADEDF94E3F0013B80A5680EC3D736539256140 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t684260855255EC42FE9691E2921B9BC064583A54* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -77600,7 +77600,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49403
+// Method Definition Index: 49412
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProfilesSetGlobalPolicyResultEvent_m2E921E3AC42348BAE6F885BFBC767D27CB2D3B00 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tDE7F7DEAE813DF1E72FE76807603553AAB9CE6EE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -77643,7 +77643,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49404
+// Method Definition Index: 49413
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProfilesSetGlobalPolicyResultEvent_mF539B34C1262566EA6110FE100B464AA498857F5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tDE7F7DEAE813DF1E72FE76807603553AAB9CE6EE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -77686,7 +77686,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49405
+// Method Definition Index: 49414
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProfilesSetProfileLanguageRequestEvent_mCFDA84339C8FF4F4C9969E30D99EBA97FCD25C19 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tEE088770B486ECFC35C5BD12872DC91F644657E2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -77729,7 +77729,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49406
+// Method Definition Index: 49415
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProfilesSetProfileLanguageRequestEvent_mF2C0D52EA65231AD0E066608CD41DC21838BCCC1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tEE088770B486ECFC35C5BD12872DC91F644657E2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -77772,7 +77772,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49407
+// Method Definition Index: 49416
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProfilesSetProfileLanguageResultEvent_m3A775BD080C35DC2B49A6065875D1C9E646E5248 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA29CC55EC38AB5B4D381F79555BE06D8F925CC0F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -77815,7 +77815,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49408
+// Method Definition Index: 49417
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProfilesSetProfileLanguageResultEvent_m9F4C3F42467D2C4F8EE763A33E765249378B1B13 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA29CC55EC38AB5B4D381F79555BE06D8F925CC0F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -77858,7 +77858,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49409
+// Method Definition Index: 49418
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProfilesSetProfilePolicyRequestEvent_m05A2EE24582A51628A05043C95D14D21E6499413 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC5D8AA3CAD62DDFE7E701D5726CA48A868D7DD19* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -77901,7 +77901,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49410
+// Method Definition Index: 49419
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProfilesSetProfilePolicyRequestEvent_m766D7583C585CDD2A8621894D598E75A5ADD0AB1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tC5D8AA3CAD62DDFE7E701D5726CA48A868D7DD19* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -77944,7 +77944,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49411
+// Method Definition Index: 49420
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProfilesSetProfilePolicyResultEvent_m449B73BB8529C9002C5BCB46790EC5AE906DAD62 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t3CABFACB8169F8D915781FB7F9A561BAB931AA0F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -77987,7 +77987,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49412
+// Method Definition Index: 49421
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProfilesSetProfilePolicyResultEvent_m5B640A94A18A21E59BC271CA5CB3AE765C68919A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t3CABFACB8169F8D915781FB7F9A561BAB931AA0F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -78030,7 +78030,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49413
+// Method Definition Index: 49422
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionCreateLeaderboardDefinitionRequestEvent_mD327E4AFF4201F8DB44E645BD036D21381DD9EEB (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t80813D7A867C02E46C53C10989FFF1FC0BCA366F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -78073,7 +78073,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49414
+// Method Definition Index: 49423
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionCreateLeaderboardDefinitionRequestEvent_mC2F96ECE26F2D4D3B8E78C8CBE1725CED7424FB4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t80813D7A867C02E46C53C10989FFF1FC0BCA366F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -78116,7 +78116,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49415
+// Method Definition Index: 49424
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionCreateLeaderboardDefinitionResultEvent_m0044F7A23AF5D693712B1989F4EE87D327F53295 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF12F7822632BFE68C2546B3DF90805D80F609361* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -78159,7 +78159,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49416
+// Method Definition Index: 49425
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionCreateLeaderboardDefinitionResultEvent_m89950639CAA3117D7E48B502C2175E295225EF0C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF12F7822632BFE68C2546B3DF90805D80F609361* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -78202,7 +78202,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49417
+// Method Definition Index: 49426
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionCreateStatisticDefinitionRequestEvent_m4262346E021216B4FA42A2D525B8532491D41FA2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1A9517CAA3619008E4FB7D9B73000F25FDB540A6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -78245,7 +78245,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49418
+// Method Definition Index: 49427
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionCreateStatisticDefinitionRequestEvent_m121AF8906B1E12C05C6FD2A1ADAEB43E5FADC013 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1A9517CAA3619008E4FB7D9B73000F25FDB540A6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -78288,7 +78288,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49419
+// Method Definition Index: 49428
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionCreateStatisticDefinitionResultEvent_mACCC9B77F0D2C68E55522E12EFF640717D22AAB0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF12F7822632BFE68C2546B3DF90805D80F609361* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -78331,7 +78331,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49420
+// Method Definition Index: 49429
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionCreateStatisticDefinitionResultEvent_mCE9D79AF769B896382017C4E4533F6A6B4BF17D2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF12F7822632BFE68C2546B3DF90805D80F609361* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -78374,7 +78374,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49421
+// Method Definition Index: 49430
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionDeleteLeaderboardDefinitionRequestEvent_m353CA896BE2E388DD0C62ED9FFF3E750D577A907 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4F88D38D8C4D539D057F70FA4BC3A117C2514AB9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -78417,7 +78417,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49422
+// Method Definition Index: 49431
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionDeleteLeaderboardDefinitionRequestEvent_m82B36E6A3B603C62B4C76CA5260ACD071CBA8208 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4F88D38D8C4D539D057F70FA4BC3A117C2514AB9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -78460,7 +78460,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49423
+// Method Definition Index: 49432
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionDeleteLeaderboardDefinitionResultEvent_m476B94CEBDB66BC406353D741743B18972F9B194 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF12F7822632BFE68C2546B3DF90805D80F609361* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -78503,7 +78503,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49424
+// Method Definition Index: 49433
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionDeleteLeaderboardDefinitionResultEvent_m9F61D7F60E16E552540FB9F4CF06BCF681992A9C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF12F7822632BFE68C2546B3DF90805D80F609361* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -78546,7 +78546,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49425
+// Method Definition Index: 49434
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionDeleteLeaderboardEntriesRequestEvent_mC0BE05E90F18741ED0C315BCC55EA59FDCD13208 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8DE4316040034555B43531115D3E78E05185A8B6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -78589,7 +78589,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49426
+// Method Definition Index: 49435
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionDeleteLeaderboardEntriesRequestEvent_mD9AECCC0C5AF50D4D4DE8191264A75A87717F4E2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8DE4316040034555B43531115D3E78E05185A8B6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -78632,7 +78632,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49427
+// Method Definition Index: 49436
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionDeleteLeaderboardEntriesResultEvent_mDCE01020524225B49A091A776C385587C78708F8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF12F7822632BFE68C2546B3DF90805D80F609361* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -78675,7 +78675,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49428
+// Method Definition Index: 49437
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionDeleteLeaderboardEntriesResultEvent_mB2C68A04CFB5C4440428541E91E364202B1FC606 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF12F7822632BFE68C2546B3DF90805D80F609361* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -78718,7 +78718,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49429
+// Method Definition Index: 49438
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionDeleteStatisticDefinitionRequestEvent_mA5C6A5694EE505364309B894853945BD82351CD8 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tED46D132EE5AFDCFF3094C34A25BB3A59794C707* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -78761,7 +78761,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49430
+// Method Definition Index: 49439
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionDeleteStatisticDefinitionRequestEvent_m9190ED202E52DE585BBC3E2C87A515CD7775BD38 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tED46D132EE5AFDCFF3094C34A25BB3A59794C707* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -78804,7 +78804,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49431
+// Method Definition Index: 49440
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionDeleteStatisticDefinitionResultEvent_mE7A379D978FB28D2DAE5E7431BA7A0EC8E3AFCFD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF12F7822632BFE68C2546B3DF90805D80F609361* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -78847,7 +78847,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49432
+// Method Definition Index: 49441
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionDeleteStatisticDefinitionResultEvent_m179A2641F2FAC10763CB7CEF4DAA73C0AF0B8B6A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF12F7822632BFE68C2546B3DF90805D80F609361* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -78890,7 +78890,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49433
+// Method Definition Index: 49442
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionDeleteStatisticsRequestEvent_m44D41CB79AB2E0DC4283EE31089330D013ED969B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t88D3E3BDB55C6186F428747D3C29FABD1E3DE3A5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -78933,7 +78933,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49434
+// Method Definition Index: 49443
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionDeleteStatisticsRequestEvent_mEE6E93E14FB785D1FD042A7CA414170805F3FDC3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t88D3E3BDB55C6186F428747D3C29FABD1E3DE3A5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -78976,7 +78976,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49435
+// Method Definition Index: 49444
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionDeleteStatisticsResultEvent_m98B0DC32BA6F3BB678F67AD00F0D70E0D8A01CFD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t204CFE6F84FF7A7F287F7A75016200C29919CE52* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -79019,7 +79019,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49436
+// Method Definition Index: 49445
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionDeleteStatisticsResultEvent_m56DC03B74E77901EA870B737F9D2F11FA0ED9418 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t204CFE6F84FF7A7F287F7A75016200C29919CE52* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -79062,7 +79062,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49437
+// Method Definition Index: 49446
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionGetFriendLeaderboardForEntityRequestEvent_m4E8B238EF914D9D7F03539307E24C64ED580ED9A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t80E482CDA9880A309AF23E5BCDC44CEAE020602C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -79105,7 +79105,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49438
+// Method Definition Index: 49447
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionGetFriendLeaderboardForEntityRequestEvent_mD9D34F1A4BCD9A54CF4B32229AA1EDB6B3F92839 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t80E482CDA9880A309AF23E5BCDC44CEAE020602C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -79148,7 +79148,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49439
+// Method Definition Index: 49448
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionGetFriendLeaderboardForEntityResultEvent_m550D5E039D9D36ED03BFE0960D225C3E6B10938C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t19B377325BB447D7D57DF6F069E270998DBD07E6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -79191,7 +79191,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49440
+// Method Definition Index: 49449
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionGetFriendLeaderboardForEntityResultEvent_m1E457EA2A5F6CC4772D051ADA50A94EB7FFB0185 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t19B377325BB447D7D57DF6F069E270998DBD07E6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -79234,7 +79234,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49441
+// Method Definition Index: 49450
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionGetLeaderboardRequestEvent_m52751A157DCFB82A4A99EFD4751E70C946987755 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9302C4FAE54FABA36CF952E3FE96CB05074BA4B6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -79277,7 +79277,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49442
+// Method Definition Index: 49451
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionGetLeaderboardRequestEvent_mE9E7502FEFF3D13B6109ED3C139B1C7FBFD9254D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t9302C4FAE54FABA36CF952E3FE96CB05074BA4B6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -79320,7 +79320,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49443
+// Method Definition Index: 49452
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionGetLeaderboardResultEvent_m1E094245C436EC2FDF7815F04B30EC72EE24DCF2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t19B377325BB447D7D57DF6F069E270998DBD07E6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -79363,7 +79363,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49444
+// Method Definition Index: 49453
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionGetLeaderboardResultEvent_m38EAEE25FC3A6680DF21DA05EEAE2A20973CBEE1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t19B377325BB447D7D57DF6F069E270998DBD07E6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -79406,7 +79406,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49445
+// Method Definition Index: 49454
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionGetLeaderboardAroundEntityRequestEvent_m152D11738B1AF22CD5951D7613CF62C2BFEC6B27 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tCF37A12A58A8A2DB7EDE5A904C06E6E9F9DDE7DE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -79449,7 +79449,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49446
+// Method Definition Index: 49455
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionGetLeaderboardAroundEntityRequestEvent_m71E0D869380CF47DEF22638C5A3CADAEA56EBD95 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tCF37A12A58A8A2DB7EDE5A904C06E6E9F9DDE7DE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -79492,7 +79492,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49447
+// Method Definition Index: 49456
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionGetLeaderboardAroundEntityResultEvent_m1274EF76A3AE44F715C41881AFFE113CA3B3D8FC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t19B377325BB447D7D57DF6F069E270998DBD07E6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -79535,7 +79535,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49448
+// Method Definition Index: 49457
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionGetLeaderboardAroundEntityResultEvent_m1EDD28049F551FB3C2388DBEDCBA738C69E96750 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t19B377325BB447D7D57DF6F069E270998DBD07E6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -79578,7 +79578,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49449
+// Method Definition Index: 49458
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionGetLeaderboardDefinitionRequestEvent_m86B6F1AC190561D22E7DDF54CA72A9BFF474A0D1 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8E7600A02EAE36E5F62E33F6441F0A02E9160819* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -79621,7 +79621,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49450
+// Method Definition Index: 49459
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionGetLeaderboardDefinitionRequestEvent_mE8F911C5ED8CD8F39D2E7DBF925EDC2402507EDE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t8E7600A02EAE36E5F62E33F6441F0A02E9160819* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -79664,7 +79664,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49451
+// Method Definition Index: 49460
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionGetLeaderboardDefinitionResultEvent_m2DA26A9A731C38A766AB653E5207AA5CEA3A2BA0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7EE50A78BD3BD918A443364405ED19AA049F86C1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -79707,7 +79707,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49452
+// Method Definition Index: 49461
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionGetLeaderboardDefinitionResultEvent_m0E49038341508F5189DFFBF0112FBB55F11AEE0D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t7EE50A78BD3BD918A443364405ED19AA049F86C1* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -79750,7 +79750,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49453
+// Method Definition Index: 49462
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionGetLeaderboardForEntitiesRequestEvent_m12DB60FC6302EED5BC1CEB36525A6B772D3CC1A2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t78995E1246E9EE1FAD7C7438A1EBDCB924687AA5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -79793,7 +79793,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49454
+// Method Definition Index: 49463
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionGetLeaderboardForEntitiesRequestEvent_mA14C1030AC43A533E62077B60597CEAF973D7D9C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t78995E1246E9EE1FAD7C7438A1EBDCB924687AA5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -79836,7 +79836,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49455
+// Method Definition Index: 49464
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionGetLeaderboardForEntitiesResultEvent_m0F2C3A61F177462A700AE6D67AA28B2C1582217E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t19B377325BB447D7D57DF6F069E270998DBD07E6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -79879,7 +79879,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49456
+// Method Definition Index: 49465
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionGetLeaderboardForEntitiesResultEvent_mF9384449C3F31B44F99EF9BEBC851C8F2CF70EDA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t19B377325BB447D7D57DF6F069E270998DBD07E6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -79922,7 +79922,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49457
+// Method Definition Index: 49466
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionGetStatisticDefinitionRequestEvent_m49FE5FC898EF604F6BA373224E5C51722FDA40B2 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t64A8DAF26892FFA21C06A66BE788175132E53B40* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -79965,7 +79965,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49458
+// Method Definition Index: 49467
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionGetStatisticDefinitionRequestEvent_m6E10CE2529D2500E018840B5A5960CBE614F0DF5 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t64A8DAF26892FFA21C06A66BE788175132E53B40* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -80008,7 +80008,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49459
+// Method Definition Index: 49468
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionGetStatisticDefinitionResultEvent_m340FDA8185AF71BC7C689AB60015BF9A999B3817 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA09AE088750CFBDDBD16CCF20A8998534458D6EE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -80051,7 +80051,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49460
+// Method Definition Index: 49469
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionGetStatisticDefinitionResultEvent_mD0C383F06DEF6005B5A2A3035C14D571E44E2050 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tA09AE088750CFBDDBD16CCF20A8998534458D6EE* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -80094,7 +80094,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49461
+// Method Definition Index: 49470
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionGetStatisticsRequestEvent_mB756200A7A5A5BDC2C20FA4C0E982071B6767BE3 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t37AD9956F248115C9EEBF0B501120F8CEA3DA028* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -80137,7 +80137,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49462
+// Method Definition Index: 49471
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionGetStatisticsRequestEvent_m24FD689CFC2D6BABECAA3299FEE774B7595DDD57 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t37AD9956F248115C9EEBF0B501120F8CEA3DA028* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -80180,7 +80180,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49463
+// Method Definition Index: 49472
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionGetStatisticsResultEvent_m340547D671A6FC9AA7E64B013B3370F785DF93FA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tB5BF52385FCDADC7778836EDC2A1B24C21215D24* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -80223,7 +80223,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49464
+// Method Definition Index: 49473
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionGetStatisticsResultEvent_m62C2208054D4F83822F81FF88536FDF4FF8A0961 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tB5BF52385FCDADC7778836EDC2A1B24C21215D24* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -80266,7 +80266,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49465
+// Method Definition Index: 49474
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionGetStatisticsForEntitiesRequestEvent_mD8F5FC2B844119E3AC28C1DE8B3FE951F92D6CE0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tED9FFB6B73386EABE20022AD856F9C490E7A335D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -80309,7 +80309,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49466
+// Method Definition Index: 49475
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionGetStatisticsForEntitiesRequestEvent_mD8C11717F9B40F7B311F2857BB2961E98A2F7A70 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tED9FFB6B73386EABE20022AD856F9C490E7A335D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -80352,7 +80352,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49467
+// Method Definition Index: 49476
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionGetStatisticsForEntitiesResultEvent_m7223B9C460F77ACEF0D732AD28E5A546637069FC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tFC621F0956D30A4915EEFD888BD6CC6BDFA0BB3C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -80395,7 +80395,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49468
+// Method Definition Index: 49477
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionGetStatisticsForEntitiesResultEvent_mC6CB58B9CAF0A9A9E3B78A57C4271B9DFC9CC165 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tFC621F0956D30A4915EEFD888BD6CC6BDFA0BB3C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -80438,7 +80438,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49469
+// Method Definition Index: 49478
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionIncrementLeaderboardVersionRequestEvent_mB06FD77B0F4DB8E0A52549C8408CD38C1D7776BD (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4473F5C467C05B5D8D52DA30410558CDF97619C2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -80481,7 +80481,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49470
+// Method Definition Index: 49479
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionIncrementLeaderboardVersionRequestEvent_m9BDB0ECE60563C5CFC9900ED0956AE0B20D83057 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t4473F5C467C05B5D8D52DA30410558CDF97619C2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -80524,7 +80524,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49471
+// Method Definition Index: 49480
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionIncrementLeaderboardVersionResultEvent_m98EAE5F87963C949E8D94065CA3C7E64C1BAFAAF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t09323718EB81CC186451C4AEFD65D860D00DF10E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -80567,7 +80567,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49472
+// Method Definition Index: 49481
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionIncrementLeaderboardVersionResultEvent_m6FA01700D24B58FC82D282359C97326F161D99D6 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t09323718EB81CC186451C4AEFD65D860D00DF10E* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -80610,7 +80610,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49473
+// Method Definition Index: 49482
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionIncrementStatisticVersionRequestEvent_m94EFB35E347768A30FC5CB8F63834CFBC3AF8128 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tCA10199A08829D89A7A129A4C6E7BBDE71BEB0C9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -80653,7 +80653,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49474
+// Method Definition Index: 49483
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionIncrementStatisticVersionRequestEvent_m1FE8D417B497A8A6B41670E426A1B140C79F6757 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tCA10199A08829D89A7A129A4C6E7BBDE71BEB0C9* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -80696,7 +80696,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49475
+// Method Definition Index: 49484
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionIncrementStatisticVersionResultEvent_m1AAE5218F5583108A6453C7CB3CFD0609386D350 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8E4304141FB6D236FE69C9991C183676647F1E94* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -80739,7 +80739,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49476
+// Method Definition Index: 49485
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionIncrementStatisticVersionResultEvent_m7674A6B9D392AA436158771CC52B21EE7985013A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t8E4304141FB6D236FE69C9991C183676647F1E94* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -80782,7 +80782,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49477
+// Method Definition Index: 49486
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionListLeaderboardDefinitionsRequestEvent_mDB53972FE848F555145966B0A055A52CD406D84E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1C291D6A92CA5DBC751BEE8A3415BF4E05F53080* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -80825,7 +80825,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49478
+// Method Definition Index: 49487
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionListLeaderboardDefinitionsRequestEvent_mB1906C676D68AC3A6F1906D7C96CC534537589FA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t1C291D6A92CA5DBC751BEE8A3415BF4E05F53080* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -80868,7 +80868,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49479
+// Method Definition Index: 49488
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionListLeaderboardDefinitionsResultEvent_m804A83B33E28345462D76835D89958409BDA3762 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t5AB62B4077BA1AC4F478A362BABEDBB1A7D8A848* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -80911,7 +80911,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49480
+// Method Definition Index: 49489
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionListLeaderboardDefinitionsResultEvent_mF340818C40328E39629509E6BFF92D67AE9451DF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t5AB62B4077BA1AC4F478A362BABEDBB1A7D8A848* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -80954,7 +80954,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49481
+// Method Definition Index: 49490
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionListStatisticDefinitionsRequestEvent_m0168F4EB92130DFE27102340905DD3D3661EC8C0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t82B285DDEFFCC35BD26243CC3660901A6C9CCA04* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -80997,7 +80997,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49482
+// Method Definition Index: 49491
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionListStatisticDefinitionsRequestEvent_mD16E0D2CFC368102AC535ABB33DF77A1DB68115A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t82B285DDEFFCC35BD26243CC3660901A6C9CCA04* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -81040,7 +81040,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49483
+// Method Definition Index: 49492
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionListStatisticDefinitionsResultEvent_m72B6FB34631A06BA7885A34185E20A89B010499E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tB3FB27110E66B5C0877430A7DEAD4B1D8024A05A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -81083,7 +81083,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49484
+// Method Definition Index: 49493
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionListStatisticDefinitionsResultEvent_m8212018A590B03092B2E613580C0E40AECCE157B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tB3FB27110E66B5C0877430A7DEAD4B1D8024A05A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -81126,7 +81126,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49485
+// Method Definition Index: 49494
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionUnlinkAggregationSourceFromStatisticRequestEvent_m3DE84190A452A0402D27288AF054BEEBAFFD6E5C (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t0DDAFFA6403AE91397A3ADAD9BEFB87C0433C9E7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -81169,7 +81169,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49486
+// Method Definition Index: 49495
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionUnlinkAggregationSourceFromStatisticRequestEvent_m88062650825D2636E01DA6205B5EFD706CB8C6E0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t0DDAFFA6403AE91397A3ADAD9BEFB87C0433C9E7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -81212,7 +81212,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49487
+// Method Definition Index: 49496
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionUnlinkAggregationSourceFromStatisticResultEvent_m28AF4C35A6991B47E59C33E629846D4D32A3C9AA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF12F7822632BFE68C2546B3DF90805D80F609361* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -81255,7 +81255,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49488
+// Method Definition Index: 49497
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionUnlinkAggregationSourceFromStatisticResultEvent_m15FDCC8A58280E17B23687A124C3A36BABFCDE7D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF12F7822632BFE68C2546B3DF90805D80F609361* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -81298,7 +81298,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49489
+// Method Definition Index: 49498
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionUnlinkLeaderboardFromStatisticRequestEvent_m68C766F1918B5DEFCA8E787B29257E03EE86A64B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t305CC67704EC612822559E12C466CC2BA5E1EE24* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -81341,7 +81341,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49490
+// Method Definition Index: 49499
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionUnlinkLeaderboardFromStatisticRequestEvent_mBFE5FCEB2148C08E3649B9BD5FAC33641A8334BF (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t305CC67704EC612822559E12C466CC2BA5E1EE24* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -81384,7 +81384,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49491
+// Method Definition Index: 49500
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionUnlinkLeaderboardFromStatisticResultEvent_mD720AD24E554085B05F8E2135DB1A2416D0432AC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF12F7822632BFE68C2546B3DF90805D80F609361* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -81427,7 +81427,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49492
+// Method Definition Index: 49501
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionUnlinkLeaderboardFromStatisticResultEvent_mDAB4EAB48304610DE733B7129279991F01F98581 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF12F7822632BFE68C2546B3DF90805D80F609361* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -81470,7 +81470,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49493
+// Method Definition Index: 49502
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionUpdateLeaderboardDefinitionRequestEvent_m95552042D528876FD59DB33910FA6490B3B37777 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t653E84544E9380D24BA6886E6C5F097853899846* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -81513,7 +81513,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49494
+// Method Definition Index: 49503
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionUpdateLeaderboardDefinitionRequestEvent_mBCAFCA6DA15EC26C9CC4F7F8285AFA207CC37BA9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t653E84544E9380D24BA6886E6C5F097853899846* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -81556,7 +81556,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49495
+// Method Definition Index: 49504
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionUpdateLeaderboardDefinitionResultEvent_m1DC7ADB3D99C469CBE44E98608B9DA6B1F563A39 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF12F7822632BFE68C2546B3DF90805D80F609361* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -81599,7 +81599,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49496
+// Method Definition Index: 49505
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionUpdateLeaderboardDefinitionResultEvent_m57BD10467CDD43ED149473975CA4B8B618883BEC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF12F7822632BFE68C2546B3DF90805D80F609361* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -81642,7 +81642,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49497
+// Method Definition Index: 49506
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionUpdateLeaderboardEntriesRequestEvent_m101598D3D8AFD52EC48DED9BA28080C3FC90A43E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t0D6C941663A7192C3F7C3F5A78CE09FE43AFD222* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -81685,7 +81685,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49498
+// Method Definition Index: 49507
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionUpdateLeaderboardEntriesRequestEvent_m8D922F16E83D61CA5B59DB0C155BE70E047C98C0 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t0D6C941663A7192C3F7C3F5A78CE09FE43AFD222* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -81728,7 +81728,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49499
+// Method Definition Index: 49508
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionUpdateLeaderboardEntriesResultEvent_m22B0DBD8A55D44AFF4EF3C82ACB2F5449C6F7585 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF12F7822632BFE68C2546B3DF90805D80F609361* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -81771,7 +81771,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49500
+// Method Definition Index: 49509
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionUpdateLeaderboardEntriesResultEvent_m5678B8B0A9CC4D0F02E81C80B2FC6CC7A5A7A456 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF12F7822632BFE68C2546B3DF90805D80F609361* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -81814,7 +81814,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49501
+// Method Definition Index: 49510
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionUpdateStatisticDefinitionRequestEvent_m71AF3D23B79118F73FCEA90850757B151C449DBE (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t2E6555206B4E1764983183B68CCD0CDB0C02921D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -81857,7 +81857,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49502
+// Method Definition Index: 49511
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionUpdateStatisticDefinitionRequestEvent_m8C1184EDD4FFBA1C08183407939514749BAAEA02 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_t2E6555206B4E1764983183B68CCD0CDB0C02921D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -81900,7 +81900,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49503
+// Method Definition Index: 49512
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionUpdateStatisticDefinitionResultEvent_mFE259D664C6D05FAA57B88885B33F4A4A53B284A (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF12F7822632BFE68C2546B3DF90805D80F609361* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -81943,7 +81943,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49504
+// Method Definition Index: 49513
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionUpdateStatisticDefinitionResultEvent_m9375CD2300EC527B8914C976C202759EC758A8E9 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_tF12F7822632BFE68C2546B3DF90805D80F609361* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -81986,7 +81986,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49505
+// Method Definition Index: 49514
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionUpdateStatisticsRequestEvent_mB299D7F9ACA07261AC17226129640D2703F55D2D (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tCAFBCBAF073E0C3093829F6FB1AB833EBF4C7AED* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -82029,7 +82029,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49506
+// Method Definition Index: 49515
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionUpdateStatisticsRequestEvent_m641AACD32D81DC0EC0CF56D22A2DB43E5D5F8A2E (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestEvent_1_tCAFBCBAF073E0C3093829F6FB1AB833EBF4C7AED* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -82072,7 +82072,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49507
+// Method Definition Index: 49516
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnProgressionUpdateStatisticsResultEvent_m150628486DBA657D1A008523A0B5350FEF6DE5BA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1E65D885F2697B2C490F41D0676628C680DA3CCF* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -82115,7 +82115,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49508
+// Method Definition Index: 49517
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnProgressionUpdateStatisticsResultEvent_m49FB9A1FF7430603D3D321A9C24E5ADA92C9671B (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabResultEvent_1_t1E65D885F2697B2C490F41D0676628C680DA3CCF* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -82158,7 +82158,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49509
+// Method Definition Index: 49518
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_add_OnGlobalErrorEvent_m2044B1DDDE878DF5A85E1A45072F16F83EEC13FA (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabErrorEvent_t32269E6C8CF3C5FF597C169C1CACE3D97D0E50C3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -82201,7 +82201,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49510
+// Method Definition Index: 49519
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_remove_OnGlobalErrorEvent_m4FA668C997E625362F88AEC94324FBE1DA45C5FC (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabErrorEvent_t32269E6C8CF3C5FF597C169C1CACE3D97D0E50C3* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -82244,7 +82244,7 @@ IL_0007:
 		return;
 	}
 }
-// Method Definition Index: 49511
+// Method Definition Index: 49520
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents__ctor_m958F2CF63001B70C100C59940A5FFC406B19E286 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, const RuntimeMethod* method) 
 {
 	{
@@ -82254,7 +82254,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents__ctor_m958F2CF63001B70C100
 		return;
 	}
 }
-// Method Definition Index: 49512
+// Method Definition Index: 49521
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* PlayFabEvents_Init_mAC66B31272FC09EED57C4D452EFFE55480FB1CF3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -82302,7 +82302,7 @@ IL_0011:
 		return L_6;
 	}
 }
-// Method Definition Index: 49514
+// Method Definition Index: 49523
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabEvents_OnProcessingErrorEvent_mA1F1163329E18B1DC2B37781243633D0431232C4 (PlayFabEvents_t6D57F5CCD639068D2F9D9C0D06F7FD4DB069B105* __this, PlayFabRequestCommon_t42B97E9F405CF1969D1CB265129566E2657A654D* ___0_request, PlayFabError_t085A18640C2631872C3888388E2BC667C7B09C23* ___1_error, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -82341,7 +82341,7 @@ IL_001d:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 49517
+// Method Definition Index: 49526
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayFabErrorEvent_Invoke_mC72A34EB21591A0DAA34836E22A89E7DA238D038_inline (PlayFabErrorEvent_t32269E6C8CF3C5FF597C169C1CACE3D97D0E50C3* __this, PlayFabRequestCommon_t42B97E9F405CF1969D1CB265129566E2657A654D* ___0_request, PlayFabError_t085A18640C2631872C3888388E2BC667C7B09C23* ___1_error, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, PlayFabRequestCommon_t42B97E9F405CF1969D1CB265129566E2657A654D*, PlayFabError_t085A18640C2631872C3888388E2BC667C7B09C23*, const RuntimeMethod*);

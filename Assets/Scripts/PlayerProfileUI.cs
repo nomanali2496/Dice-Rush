@@ -67,6 +67,17 @@ public class PlayerProfileUI : MonoBehaviour
         
         // Setup input field - start in read-only mode
         SetEditMode(false);
+        
+        // Subscribe to PlayFab events early (like MainMenuAvatarDisplay does)
+        // This ensures we don't miss events that fire during initialization
+        if (PlayFabManager.Instance != null)
+        {
+            PlayFabManager.Instance.OnPlayerDataLoaded -= OnPlayerDataLoaded;
+            PlayFabManager.Instance.OnPlayerDataLoaded += OnPlayerDataLoaded;
+            PlayFabManager.Instance.OnPlayerDataSaved -= OnPlayerDataSaved;
+            PlayFabManager.Instance.OnPlayerDataSaved += OnPlayerDataSaved;
+            Debug.Log("[PlayerProfileUI] Subscribed to PlayFab events in Start()");
+        }
     }
     
     private void OnEnable()
@@ -91,11 +102,13 @@ public class PlayerProfileUI : MonoBehaviour
             yield break;
         }
         
-        // Subscribe to future events
+        // Subscribe to future events (if not already subscribed in Start)
+        // Note: We unsubscribe first to avoid duplicate subscriptions
         PlayFabManager.Instance.OnPlayerDataLoaded -= OnPlayerDataLoaded;
         PlayFabManager.Instance.OnPlayerDataLoaded += OnPlayerDataLoaded;
         PlayFabManager.Instance.OnPlayerDataSaved -= OnPlayerDataSaved;
         PlayFabManager.Instance.OnPlayerDataSaved += OnPlayerDataSaved;
+        Debug.Log("[PlayerProfileUI] Subscribed to PlayFab events in OnEnable()");
         
         Debug.Log($"[PlayerProfileUI] IsLoggedIn: {PlayFabManager.Instance.IsLoggedIn()}");
         
@@ -258,7 +271,7 @@ public class PlayerProfileUI : MonoBehaviour
         // Update cash (Main Menu) - cash is stored as float
         if (cashText != null)
         {
-            cashText.text = cashPrefix + data.cash.ToString("F2");
+            cashText.text = cashPrefix + FormatCash(data.cash);
             Debug.Log($"[PlayerProfileUI] Set cashText to: {cashText.text}");
         }
         else
@@ -333,7 +346,9 @@ public class PlayerProfileUI : MonoBehaviour
         }
         else
         {
-            Debug.Log("[PlayerProfileUI] No image URL in data, profile image will remain default");
+            // No image URL - load avatar sprite from selectedAvatarIndex (like MainMenuAvatarDisplay does)
+            Debug.Log("[PlayerProfileUI] No image URL in data, loading avatar sprite from selectedAvatarIndex");
+            LoadAvatarSpriteFromIndex(data.selectedAvatarIndex);
         }
         AvatarDisplay.SetActive(true);
         Debug.Log("[PlayerProfileUI] UI Update Complete!");
@@ -373,7 +388,7 @@ public class PlayerProfileUI : MonoBehaviour
         
         if (gameplayCashText != null)
         {
-            gameplayCashText.text = cashPrefix + cash.ToString("F1");
+            gameplayCashText.text = cashPrefix + FormatCash(cash);
         }
     }
     
@@ -389,7 +404,7 @@ public class PlayerProfileUI : MonoBehaviour
         
         if (winnerScreenCashText != null)
         {
-            winnerScreenCashText.text = cashPrefix + cash.ToString("F1");
+            winnerScreenCashText.text = cashPrefix + FormatCash(cash);
         }
     }
     
@@ -667,8 +682,57 @@ public class PlayerProfileUI : MonoBehaviour
             else
             {
                 Debug.LogError($"[PlayerProfileUI] Failed to load profile image from URL: {url}. Error: {request.error}");
+                // Fallback to avatar sprite if URL loading fails
+                LoadAvatarSpriteFromIndex(PlayFabManager.Instance?.currentPlayerData?.selectedAvatarIndex ?? 0);
             }
         }
+    }
+    
+    /// <summary>
+    /// Load avatar sprite from selectedAvatarIndex (fallback when no imageUrl)
+    /// Similar to MainMenuAvatarDisplay.LoadSelectedAvatar()
+    /// </summary>
+    private void LoadAvatarSpriteFromIndex(int selectedIndex)
+    {
+        if (profileImage == null)
+        {
+            Debug.LogWarning("[PlayerProfileUI] profileImage is not assigned! Cannot load avatar sprite.");
+            return;
+        }
+        
+        // Validate index
+        if (selectedIndex < 0 || selectedIndex >= 8)
+        {
+            selectedIndex = 0;
+            Debug.LogWarning($"[PlayerProfileUI] Invalid avatar index, using default 0");
+        }
+        
+        Debug.Log($"[PlayerProfileUI] Loading avatar sprite from index: {selectedIndex}");
+        
+        // Try to get sprite from AvatarSelector first (it has the sprites)
+        AvatarSelector selector = FindObjectOfType<AvatarSelector>();
+        if (selector != null)
+        {
+            Sprite avatarSprite = selector.GetAvatarSpriteByIndex(selectedIndex);
+            if (avatarSprite != null)
+            {
+                profileImage.sprite = avatarSprite;
+                Debug.Log($"[PlayerProfileUI] ✓ Avatar sprite displayed from AvatarSelector: Index {selectedIndex}");
+                return; // Success!
+            }
+            else
+            {
+                Debug.LogWarning($"[PlayerProfileUI] Avatar sprite at index {selectedIndex} is null in AvatarSelector!");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("[PlayerProfileUI] AvatarSelector not found in scene!");
+        }
+        
+        // If we couldn't load from AvatarSelector, the sprite will remain as default
+        // (which might be set in the Inspector)
+        Debug.LogWarning($"[PlayerProfileUI] Could not load avatar sprite at index {selectedIndex}. Profile image will remain default.");
     }
     
     #region Public Helper Methods
@@ -701,19 +765,19 @@ public class PlayerProfileUI : MonoBehaviour
         // Update Main Menu
         if (cashText != null)
         {
-            cashText.text = cashPrefix + amount.ToString("F2");
+            cashText.text = cashPrefix + FormatCash(amount);
         }
         
         // Update Gameplay
         if (gameplayCashText != null)
         {
-            gameplayCashText.text = cashPrefix + amount.ToString("F2");
+            gameplayCashText.text = cashPrefix + FormatCash(amount);
         }
         
         // Update Winner Screen
         if (winnerScreenCashText != null)
         {
-            winnerScreenCashText.text = cashPrefix + amount.ToString("F2");
+            winnerScreenCashText.text = cashPrefix + FormatCash(amount);
         }
     }
     
@@ -796,6 +860,26 @@ public class PlayerProfileUI : MonoBehaviour
     {
         UpdateCoinsDisplay(chips);
         UpdateCashDisplay(cash);
+    }
+    
+    /// <summary>
+    /// Format cash value intelligently:
+    /// - Whole numbers: show without decimals (e.g., "1000")
+    /// - Decimal numbers: show only necessary decimals (e.g., "1000.5" or "1000.25")
+    /// </summary>
+    private string FormatCash(float amount)
+    {
+        // Check if it's a whole number
+        if (amount == (int)amount)
+        {
+            // Whole number - show without decimals
+            return ((int)amount).ToString();
+        }
+        else
+        {
+            // Has decimals - show up to 2 decimal places, removing trailing zeros
+            return amount.ToString("0.##");
+        }
     }
     
     #endregion
