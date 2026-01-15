@@ -27,7 +27,7 @@ public class PlayerData
         selectedBackgroundIndex = 0;
     }
     
-    public PlayerData(string name, string emailAddress, float initialCash = 1000f, int initialCoins = 100)
+    public PlayerData(string name, string emailAddress, float initialCash = 0f, int initialCoins = 0)
     {
         playerName = name;
         email = emailAddress;
