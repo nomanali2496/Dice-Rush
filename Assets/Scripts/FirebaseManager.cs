@@ -2,10 +2,11 @@ using UnityEngine;
 using System;
 using System.Threading.Tasks;
 
-#if UNITY_ANDROID && !UNITY_EDITOR
+#if UNITY_ANDROID || UNITY_IOS && !UNITY_EDITOR
 using Firebase;
 using Firebase.Extensions;
 #endif
+
 
 /// <summary>
 /// Manages Firebase initialization and provides access to Firebase services
