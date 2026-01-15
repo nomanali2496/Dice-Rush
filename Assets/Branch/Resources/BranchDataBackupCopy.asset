@@ -25,4 +25,4 @@ MonoBehaviour:
   - blingodice.test-app.link
   - blingodice-alternate.test-app.link
   enableLogging: 1
-  testMode: 0
+  testMode: 1

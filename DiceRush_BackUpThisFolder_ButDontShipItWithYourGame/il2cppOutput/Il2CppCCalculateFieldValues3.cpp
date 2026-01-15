@@ -645,6 +645,7 @@ struct IDictionary_t6D03155AF1FA9083817AA5B6AD7DEEACC26AB220;
 struct IEnhancedScrollerDelegate_t3557F02EA96DADB18540D3E954A0FCA56D608A22;
 struct IEnumerator_t7B609C2FFA6EB5167D9C62A0C32A21DE2F666DAA;
 struct IEqualityComparer_tEF8F1EC76B9C8E76695BE848D41E6B147928D1C1;
+struct IExtensionProvider_t304E3FFEA215BB94CB2A64DE20931680A6127106;
 struct IFilter_t58EBA348D3AE27E6DFA80A9076821C981199F36F;
 struct IFormatProvider_tC202922D43BFF3525109ABF3FB79625F5646AB52;
 struct IJsonLineInfo_t0D0AE8B876EA3C837134934E5A1A3DF9FB72A32C;
@@ -654,6 +655,7 @@ struct IScriptableRuntimeReflectionSystem_t0E6ED00D872A0EFCF87A494C5C893AE9FBE56
 struct IScrollHandler_t762CB73017D561E11CF6759ED9FD8C9F24B3D13F;
 struct ISerializationBinder_t3C8B850335FB40001C9201981439AE77B430031F;
 struct ISite_t4BB2A7E2B477FC6B1AF9D0554FF8B07204356E93;
+struct IStoreController_tF6EF5D798C7755B324AEA7C36311B54669FA89A6;
 struct ITextPreprocessor_tDBB49C8B68D7B80E8D233B9D9666C43981EFAAB9;
 struct ITraceWriter_t44C99CB7D5AB59A077F569914E56DAD66B5A41EF;
 struct IValueProvider_t2EEC2D13DF16BA74BC89448718A0754E0A4931D4;
@@ -2731,7 +2733,7 @@ struct ImmutableCollectionTypeInfo_tABA4F728A9A2BA1C6AB88F6BFD1FF9F0C936E685  : 
 	String_t* ___U3CCreatedTypeNameU3Ek__BackingField;
 	String_t* ___U3CBuilderTypeNameU3Ek__BackingField;
 };
-struct U3CU3Ec__DisplayClass34_0_tBE3FAE06F6ECAE89874327680EA3481A787B9516  : public RuntimeObject
+struct U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8  : public RuntimeObject
 {
 	int32_t ___packageIndex;
 	InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* ___U3CU3E4__this;
@@ -27312,6 +27314,9 @@ struct InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27  : public 
 	Action_3_t5E914D59BC31AAE44A0FE411A5376A095F347A2B* ___OnPurchaseSuccess;
 	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* ___PurchaseFailed;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___OnPurchaseInitialized;
+	RuntimeObject* ___storeController;
+	RuntimeObject* ___extensionProvider;
+	bool ___isInitialized;
 };
 struct InviteFriendManager_t8B237D78EC6FBC30CA6B9628302BBDE4D2881024  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -34506,10 +34511,10 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable10404[4] =
 	static_cast<int32_t>(offsetof(PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053, ___chipsAmount)),static_cast<int32_t>(offsetof(PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053, ___cashAmount)),static_cast<int32_t>(offsetof(PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053, ___cashBonus)),static_cast<int32_t>(offsetof(PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053, ___productId)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable10405[2] = 
 {
-	static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass34_0_tBE3FAE06F6ECAE89874327680EA3481A787B9516, ___packageIndex)),static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass34_0_tBE3FAE06F6ECAE89874327680EA3481A787B9516, ___U3CU3E4__this)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable10406[21] = 
+	static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8, ___packageIndex)),static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8, ___U3CU3E4__this)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable10406[24] = 
 {
-	static_cast<int32_t>(offsetof(InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27_StaticFields, ___U3CInstanceU3Ek__BackingField)),0,0,0,0,0,0,0,0,0,0,0,0,0,static_cast<int32_t>(offsetof(InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27, ___purchasePackages)),static_cast<int32_t>(offsetof(InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27, ___purchaseButtons)),static_cast<int32_t>(offsetof(InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27, ___playerProfileUI)),static_cast<int32_t>(offsetof(InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27, ___purchasePanel)),static_cast<int32_t>(offsetof(InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27, ___OnPurchaseSuccess)),static_cast<int32_t>(offsetof(InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27, ___PurchaseFailed)),static_cast<int32_t>(offsetof(InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27, ___OnPurchaseInitialized)),};
+	static_cast<int32_t>(offsetof(InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27_StaticFields, ___U3CInstanceU3Ek__BackingField)),0,0,0,0,0,0,0,0,0,0,0,0,0,static_cast<int32_t>(offsetof(InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27, ___purchasePackages)),static_cast<int32_t>(offsetof(InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27, ___purchaseButtons)),static_cast<int32_t>(offsetof(InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27, ___playerProfileUI)),static_cast<int32_t>(offsetof(InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27, ___purchasePanel)),static_cast<int32_t>(offsetof(InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27, ___OnPurchaseSuccess)),static_cast<int32_t>(offsetof(InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27, ___PurchaseFailed)),static_cast<int32_t>(offsetof(InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27, ___OnPurchaseInitialized)),static_cast<int32_t>(offsetof(InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27, ___storeController)),static_cast<int32_t>(offsetof(InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27, ___extensionProvider)),static_cast<int32_t>(offsetof(InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27, ___isInitialized)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable10407[2] = 
 {
 	static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass16_0_t52D3590F1AC688DCFE2A961A7285737FAC3127EE, ___referredUser)),static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass16_0_t52D3590F1AC688DCFE2A961A7285737FAC3127EE, ___U3CU3E4__this)),};

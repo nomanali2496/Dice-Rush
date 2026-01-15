@@ -933,6 +933,19 @@ extern void InAppPurchaseManager_BuyMegaBundle_m667A3B6E940A5B266DB7D4CCF8DCBA89
 extern void InAppPurchaseManager_BuyPowerDeal_m2F19394FE34A1FE754360287444EF48B905A5977 (void);
 extern void InAppPurchaseManager_BuyBonusPlus_m05FAAC0C9AE6A57B65A7DB1B3E0C47CD36782098 (void);
 extern void InAppPurchaseManager_BuySmartStarter_mBA15D69BC51B7F63463B06D1CB3E6C9B47651E42 (void);
+extern void InAppPurchaseManager_InitializePurchasing_m9243B32B804D6E870D4717FDF3B45BCA20617BDE (void);
+extern void InAppPurchaseManager_IsInitialized_m0A7F0F8EA2A5871B42427AB612CC5B0E3A2E8C79 (void);
+extern void InAppPurchaseManager_BuyProductID_m6521B715B1B1856506693F896F91016F781D6C6D (void);
+extern void InAppPurchaseManager_RestorePurchases_m9DFF3D76EEB114F056A025C655C3528D921DB986 (void);
+extern void InAppPurchaseManager_OnRestoreResult_mC729689D6C095F53E00A3FF94FF11F59A96AC622 (void);
+extern void InAppPurchaseManager_OnInitialized_m15FCF09574D74627A2AD0933068B0EFDC5AF017B (void);
+extern void InAppPurchaseManager_OnInitializeFailed_mCD7DE719978D756E7323CF040B5E47A89E244720 (void);
+extern void InAppPurchaseManager_OnInitializeFailed_m6BBF22DCB560ED4C74EDC0BBD8F4D8608C692697 (void);
+extern void InAppPurchaseManager_ProcessPurchase_m9F3629942E024A529B5703988DB6F0B442BF1AE1 (void);
+extern void InAppPurchaseManager_OnPurchaseFailed_mB70C0CEDF0B938981FB94794B96CC7632EAB6736 (void);
+extern void InAppPurchaseManager_OnPurchaseFailed_m850D0A9A3D088A81E1C8078826567C8416B9A856 (void);
+extern void InAppPurchaseManager_GetProductPrice_mF4BE836DEDE50F3279333FD8198D400A7A6589BD (void);
+extern void InAppPurchaseManager_IsProductAvailable_m6314FFEA39F642A295014344D2B6E3ADBFAF47C4 (void);
 extern void InAppPurchaseManager_ProcessPurchaseDirectly_m2F924996DD8D269BB821F0F86C8684D2C9993752 (void);
 extern void InAppPurchaseManager_GrantPurchaseRewards_m2B43AE76229F1E3DEACCC21E187526F32D138F18 (void);
 extern void InAppPurchaseManager_UpdateAllUIDisplays_m3A53B992A39B6636DD0A2831286E9424415FA77F (void);
@@ -944,8 +957,8 @@ extern void InAppPurchaseManager_GetPurchasePackage_m6CE52F446F64F44228C0E2686BC
 extern void InAppPurchaseManager_SetPurchasePanelActive_mF0FC719FAB003AA4C40EC2F6FCFA4C4C6F24C9FC (void);
 extern void InAppPurchaseManager__ctor_m298C4CD361D951CAE27066BD3B6B5FEEA47FA9E2 (void);
 extern void PurchasePackage__ctor_m9AC61414FE96F602D6B9750AB7AFA7C0A8EE0311 (void);
-extern void U3CU3Ec__DisplayClass34_0__ctor_m8B8F1B76F1D9703A31C5F3EF4026CF020CD13245 (void);
-extern void U3CU3Ec__DisplayClass34_0_U3CSetupPurchaseButtonsU3Eb__0_m798EC92025757F5FFCA807DA4F8B73875E6AB242 (void);
+extern void U3CU3Ec__DisplayClass37_0__ctor_m456B3FE78677607D4A6396046549BA21691AE409 (void);
+extern void U3CU3Ec__DisplayClass37_0_U3CSetupPurchaseButtonsU3Eb__0_m0BEFFF223635F0F81B09AF1F4FAC554606D47E9D (void);
 extern void InviteFriendManager_Start_m9A003BDDD1932055B8C17903DEE6126461F1682D (void);
 extern void InviteFriendManager_OnEnable_mF4FE778C27FAC424ACADFCB8209EA3B4FEADE7B2 (void);
 extern void InviteFriendManager_InitializeFriendsList_m7E6D5945FF83C805A7508FC39560C328B624304A (void);
@@ -1347,6 +1360,7 @@ extern void PlayerProfileUI_GetSecondPlacePrizeText_mF4DC93A1ADEA228E4F7F3C1EF99
 extern void PlayerProfileUI_GetThirdPlacePrizeIcon_m7EB3C65FBBB72F660BDBBECDAA93866B846B696D (void);
 extern void PlayerProfileUI_GetThirdPlacePrizeText_m44B0210A8084B154F42FB3DD7B98C407D4B76911 (void);
 extern void PlayerProfileUI_UpdateAllCurrencyDisplays_m5C9DEDF239698A2870F8F9D9885B05F7698AE97A (void);
+extern void PlayerProfileUI_FormatCash_m6CEFE1EAA945C51050F82C829B38701F8D444BCB (void);
 extern void PlayerProfileUI__ctor_m6F7E1855E0272EDEADD37FA289EFE4F6535100FB (void);
 extern void U3CU3Ec__DisplayClass44_0__ctor_mB8349DFDDE0BD1583C26A70E858776DBC6D553E1 (void);
 extern void U3CU3Ec__DisplayClass44_0_U3CSavePlayerNameU3Eb__0_mF8BACD1DF7FEF62953CF0EFEA6CB45890E5084E8 (void);
@@ -2528,7 +2542,7 @@ extern void Serializer_SerializeObject_mEE17BC69DDCF30AD22C910401562491ADABE5426
 extern void Serializer_SerializeArray_mD635B32B9406AF9608B71640F32C16AB828138BB (void);
 extern void Serializer_SerializeString_mB658D7F56B6D171FE905FE62A98E59DAC6050BDB (void);
 extern void Serializer_SerializeOther_m5A394D1B6C91B809DFBF69B4F3B9FAE531853841 (void);
-static Il2CppMethodPointer s_methodPointers[2544] = 
+static Il2CppMethodPointer s_methodPointers[2558] = 
 {
 	Branch_initSession_mA094BFC68D86105527AF4192E91D67F941F6652D,
 	Branch_initSession_mE08C2916193D182CE7ABD85BA63A2A5A30C67FEC,
@@ -3456,6 +3470,19 @@ static Il2CppMethodPointer s_methodPointers[2544] =
 	InAppPurchaseManager_BuyPowerDeal_m2F19394FE34A1FE754360287444EF48B905A5977,
 	InAppPurchaseManager_BuyBonusPlus_m05FAAC0C9AE6A57B65A7DB1B3E0C47CD36782098,
 	InAppPurchaseManager_BuySmartStarter_mBA15D69BC51B7F63463B06D1CB3E6C9B47651E42,
+	InAppPurchaseManager_InitializePurchasing_m9243B32B804D6E870D4717FDF3B45BCA20617BDE,
+	InAppPurchaseManager_IsInitialized_m0A7F0F8EA2A5871B42427AB612CC5B0E3A2E8C79,
+	InAppPurchaseManager_BuyProductID_m6521B715B1B1856506693F896F91016F781D6C6D,
+	InAppPurchaseManager_RestorePurchases_m9DFF3D76EEB114F056A025C655C3528D921DB986,
+	InAppPurchaseManager_OnRestoreResult_mC729689D6C095F53E00A3FF94FF11F59A96AC622,
+	InAppPurchaseManager_OnInitialized_m15FCF09574D74627A2AD0933068B0EFDC5AF017B,
+	InAppPurchaseManager_OnInitializeFailed_mCD7DE719978D756E7323CF040B5E47A89E244720,
+	InAppPurchaseManager_OnInitializeFailed_m6BBF22DCB560ED4C74EDC0BBD8F4D8608C692697,
+	InAppPurchaseManager_ProcessPurchase_m9F3629942E024A529B5703988DB6F0B442BF1AE1,
+	InAppPurchaseManager_OnPurchaseFailed_mB70C0CEDF0B938981FB94794B96CC7632EAB6736,
+	InAppPurchaseManager_OnPurchaseFailed_m850D0A9A3D088A81E1C8078826567C8416B9A856,
+	InAppPurchaseManager_GetProductPrice_mF4BE836DEDE50F3279333FD8198D400A7A6589BD,
+	InAppPurchaseManager_IsProductAvailable_m6314FFEA39F642A295014344D2B6E3ADBFAF47C4,
 	InAppPurchaseManager_ProcessPurchaseDirectly_m2F924996DD8D269BB821F0F86C8684D2C9993752,
 	InAppPurchaseManager_GrantPurchaseRewards_m2B43AE76229F1E3DEACCC21E187526F32D138F18,
 	InAppPurchaseManager_UpdateAllUIDisplays_m3A53B992A39B6636DD0A2831286E9424415FA77F,
@@ -3467,8 +3494,8 @@ static Il2CppMethodPointer s_methodPointers[2544] =
 	InAppPurchaseManager_SetPurchasePanelActive_mF0FC719FAB003AA4C40EC2F6FCFA4C4C6F24C9FC,
 	InAppPurchaseManager__ctor_m298C4CD361D951CAE27066BD3B6B5FEEA47FA9E2,
 	PurchasePackage__ctor_m9AC61414FE96F602D6B9750AB7AFA7C0A8EE0311,
-	U3CU3Ec__DisplayClass34_0__ctor_m8B8F1B76F1D9703A31C5F3EF4026CF020CD13245,
-	U3CU3Ec__DisplayClass34_0_U3CSetupPurchaseButtonsU3Eb__0_m798EC92025757F5FFCA807DA4F8B73875E6AB242,
+	U3CU3Ec__DisplayClass37_0__ctor_m456B3FE78677607D4A6396046549BA21691AE409,
+	U3CU3Ec__DisplayClass37_0_U3CSetupPurchaseButtonsU3Eb__0_m0BEFFF223635F0F81B09AF1F4FAC554606D47E9D,
 	InviteFriendManager_Start_m9A003BDDD1932055B8C17903DEE6126461F1682D,
 	InviteFriendManager_OnEnable_mF4FE778C27FAC424ACADFCB8209EA3B4FEADE7B2,
 	InviteFriendManager_InitializeFriendsList_m7E6D5945FF83C805A7508FC39560C328B624304A,
@@ -3872,6 +3899,7 @@ static Il2CppMethodPointer s_methodPointers[2544] =
 	PlayerProfileUI_GetThirdPlacePrizeIcon_m7EB3C65FBBB72F660BDBBECDAA93866B846B696D,
 	PlayerProfileUI_GetThirdPlacePrizeText_m44B0210A8084B154F42FB3DD7B98C407D4B76911,
 	PlayerProfileUI_UpdateAllCurrencyDisplays_m5C9DEDF239698A2870F8F9D9885B05F7698AE97A,
+	PlayerProfileUI_FormatCash_m6CEFE1EAA945C51050F82C829B38701F8D444BCB,
 	PlayerProfileUI__ctor_m6F7E1855E0272EDEADD37FA289EFE4F6535100FB,
 	U3CU3Ec__DisplayClass44_0__ctor_mB8349DFDDE0BD1583C26A70E858776DBC6D553E1,
 	U3CU3Ec__DisplayClass44_0_U3CSavePlayerNameU3Eb__0_mF8BACD1DF7FEF62953CF0EFEA6CB45890E5084E8,
@@ -5075,7 +5103,7 @@ static Il2CppMethodPointer s_methodPointers[2544] =
 	Serializer_SerializeString_mB658D7F56B6D171FE905FE62A98E59DAC6050BDB,
 	Serializer_SerializeOther_m5A394D1B6C91B809DFBF69B4F3B9FAE531853841,
 };
-static const int32_t s_InvokerIndices[2544] = 
+static const int32_t s_InvokerIndices[2558] = 
 {
 	26610,
 	26610,
@@ -6003,6 +6031,19 @@ static const int32_t s_InvokerIndices[2544] =
 	16195,
 	16195,
 	16195,
+	16195,
+	15752,
+	12374,
+	16195,
+	5388,
+	6438,
+	12310,
+	5934,
+	10088,
+	6428,
+	6438,
+	10659,
+	8836,
 	12374,
 	12374,
 	16195,
@@ -6419,6 +6460,7 @@ static const int32_t s_InvokerIndices[2544] =
 	15955,
 	15955,
 	6011,
+	10666,
 	16195,
 	16195,
 	16195,
@@ -7625,10 +7667,10 @@ static const int32_t s_InvokerIndices[2544] =
 static const Il2CppTokenRangePair s_rgctxIndices[5] = 
 {
 	{ 0x0200012A, { 9, 8 } },
-	{ 0x0600047E, { 0, 4 } },
-	{ 0x0600047F, { 4, 5 } },
-	{ 0x060008B7, { 17, 3 } },
-	{ 0x060008D6, { 20, 3 } },
+	{ 0x0600048B, { 0, 4 } },
+	{ 0x0600048C, { 4, 5 } },
+	{ 0x060008C5, { 17, 3 } },
+	{ 0x060008E4, { 20, 3 } },
 };
 extern const uint32_t g_rgctx_T_t8C0EC4E6A28998AEF990D24C5045CD8DAEC7CE27;
 extern const uint32_t g_rgctx_GameObject_GetComponent_TisT_t8C0EC4E6A28998AEF990D24C5045CD8DAEC7CE27_m6F00BBCCD33F37575CAA88D74342A9BB172E7394;
@@ -7683,7 +7725,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	2544,
+	2558,
 	s_methodPointers,
 	0,
 	NULL,
