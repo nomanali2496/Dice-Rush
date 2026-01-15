@@ -24,6 +24,14 @@ public class PlayFabManager : MonoBehaviour
     private bool isLoggedIn = false;
     private string lastErrorMessage = "";
     
+    // Constants for login method types
+    private const string LOGIN_METHOD_GUEST = "Guest";
+    private const string LOGIN_METHOD_EMAIL = "Email";
+    private const string LOGIN_METHOD_GOOGLE = "Google";
+    private const string LOGIN_METHOD_FACEBOOK = "Facebook";
+    private const string PLAYER_PREFS_LOGIN_METHOD = "LastLoginMethod";
+    private const string PLAYER_PREFS_DEVICE_ID = "StoredDeviceId";
+    
     private void Awake()
     {
         // Singleton pattern
@@ -77,6 +85,15 @@ public class PlayFabManager : MonoBehaviour
         
         // Clear explicit logout flag since user has successfully registered/logged in
         ClearExplicitLogoutFlag();
+        
+        // Save login method as Email (registration logs user in with email/password)
+        SaveLastLoginMethod(LOGIN_METHOD_EMAIL);
+        Debug.Log("[PlayFabManager] Saved last login method: Email (from registration)");
+        
+        // Store device ID for new device detection
+        string currentDeviceId = SystemInfo.deviceUniqueIdentifier;
+        PlayerPrefs.SetString(PLAYER_PREFS_DEVICE_ID, currentDeviceId);
+        PlayerPrefs.Save();
         
         // Create initial player data
         currentPlayerData = new PlayerData(playerName, email, 1000, 100);
@@ -140,10 +157,12 @@ public class PlayFabManager : MonoBehaviour
             }
         };
         
-        PlayFabClientAPI.LoginWithEmailAddress(request, OnLoginSuccess, OnLoginFailure);
+        PlayFabClientAPI.LoginWithEmailAddress(request, 
+            result => OnLoginSuccess(result, LOGIN_METHOD_EMAIL), 
+            OnLoginFailure);
     }
     
-    private void OnLoginSuccess(LoginResult result)
+    private void OnLoginSuccess(LoginResult result, string loginMethod = null)
     {
         Debug.Log("[PlayFabManager] Login successful!");
         playFabId = result.PlayFabId;
@@ -156,6 +175,18 @@ public class PlayFabManager : MonoBehaviour
         
         // Clear explicit logout flag since user has successfully logged in
         ClearExplicitLogoutFlag();
+        
+        // Store login method if provided (will be set by specific login methods)
+        if (!string.IsNullOrEmpty(loginMethod))
+        {
+            SaveLastLoginMethod(loginMethod);
+            Debug.Log($"[PlayFabManager] Saved last login method: {loginMethod}");
+        }
+        
+        // Store device ID for new device detection
+        string currentDeviceId = SystemInfo.deviceUniqueIdentifier;
+        PlayerPrefs.SetString(PLAYER_PREFS_DEVICE_ID, currentDeviceId);
+        PlayerPrefs.Save();
         
         // Check for pending Branch referral after login
         if (BranchInit.instance != null)
@@ -245,7 +276,7 @@ public class PlayFabManager : MonoBehaviour
         };
         
         PlayFabClientAPI.LoginWithCustomID(request, 
-            OnLoginSuccess, 
+            result => OnLoginSuccess(result, LOGIN_METHOD_GUEST), 
             error => OnCustomIdLoginFailure(error, customId, createAccount));
     }
     
@@ -265,7 +296,9 @@ public class PlayFabManager : MonoBehaviour
                 }
             };
             
-            PlayFabClientAPI.LoginWithCustomID(createRequest, OnLoginSuccess, OnLoginFailure);
+            PlayFabClientAPI.LoginWithCustomID(createRequest, 
+                result => OnLoginSuccess(result, LOGIN_METHOD_GUEST), 
+                OnLoginFailure);
         }
         else
         {
@@ -325,8 +358,8 @@ public class PlayFabManager : MonoBehaviour
     /// </summary>
     private void OnGoogleLoginSuccess(LoginResult result, string googleName, string googleEmail, string googleImageUrl)
     {
-        // First call the standard login success handler
-        OnLoginSuccess(result);
+        // First call the standard login success handler with Google login method
+        OnLoginSuccess(result, LOGIN_METHOD_GOOGLE);
         
         // Then update user data with Google profile if available
         if (!string.IsNullOrEmpty(googleName) || !string.IsNullOrEmpty(googleEmail) || !string.IsNullOrEmpty(googleImageUrl))
@@ -430,8 +463,8 @@ public class PlayFabManager : MonoBehaviour
     /// </summary>
     private void OnFacebookLoginSuccess(LoginResult result, string facebookName, string facebookEmail, string facebookImageUrl)
     {
-        // First call the standard login success handler
-        OnLoginSuccess(result);
+        // First call the standard login success handler with Facebook login method
+        OnLoginSuccess(result, LOGIN_METHOD_FACEBOOK);
         
         // Then update user data with Facebook profile if available
         if (!string.IsNullOrEmpty(facebookName) || !string.IsNullOrEmpty(facebookEmail) || !string.IsNullOrEmpty(facebookImageUrl))
@@ -1068,6 +1101,40 @@ public class PlayFabManager : MonoBehaviour
         PlayerPrefs.DeleteKey("UserExplicitlyLoggedOut");
         PlayerPrefs.Save();
         Debug.Log("[PlayFabManager] Cleared explicit logout flag - auto-login enabled");
+    }
+    
+    /// <summary>
+    /// Save the last login method used
+    /// </summary>
+    private void SaveLastLoginMethod(string loginMethod)
+    {
+        PlayerPrefs.SetString(PLAYER_PREFS_LOGIN_METHOD, loginMethod);
+        PlayerPrefs.Save();
+    }
+    
+    /// <summary>
+    /// Get the last login method used
+    /// </summary>
+    public string GetLastLoginMethod()
+    {
+        return PlayerPrefs.GetString(PLAYER_PREFS_LOGIN_METHOD, "");
+    }
+    
+    /// <summary>
+    /// Check if the current device is a new device (different from stored device ID)
+    /// </summary>
+    public bool IsNewDevice()
+    {
+        string storedDeviceId = PlayerPrefs.GetString(PLAYER_PREFS_DEVICE_ID, "");
+        string currentDeviceId = SystemInfo.deviceUniqueIdentifier;
+        
+        if (string.IsNullOrEmpty(storedDeviceId))
+        {
+            // No stored device ID means this is likely a new installation
+            return true;
+        }
+        
+        return storedDeviceId != currentDeviceId;
     }
     
     #endregion

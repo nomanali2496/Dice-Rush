@@ -191,6 +191,20 @@ public class AuthenticationManager : MonoBehaviour
         UpdateStatusText("Checking for saved session...");
         isAttemptingAutoLogin = true;
         
+        // Check if this is a new device
+        bool isNewDevice = PlayFabManager.Instance.IsNewDevice();
+        if (isNewDevice)
+        {
+            Debug.Log("[AuthenticationManager] New device detected - showing login screen");
+            // On new device, always show login screen instead of auto-login
+            isAttemptingAutoLogin = false;
+            ShowLoginRegisterPanel();
+            ShowLoginSection();
+            SetLoadingState(false);
+            UpdateStatusText("");
+            yield break;
+        }
+        
         // Third check: Check if there's an existing PlayFab session
         if (PlayFabManager.Instance.HasExistingSession())
         {
@@ -213,20 +227,119 @@ public class AuthenticationManager : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("[AuthenticationManager] Session restore failed, trying device ID login...");
-                    // Fall through to device ID login
-                    AttemptDeviceIdLogin();
+                    Debug.Log("[AuthenticationManager] Session restore failed, checking last login method...");
+                    // Session restore failed - check what login method was used last
+                    HandleSessionRestoreFailed();
                 }
                 SetLoadingState(false);
             });
         }
         else
         {
-            Debug.Log("[AuthenticationManager] No existing session, attempting device ID login...");
-            // No existing session, try device ID auto-login
-            // Loading screen will stay visible during auto-login attempt
+            Debug.Log("[AuthenticationManager] No existing session, checking last login method...");
+            // No existing session - check what login method was used last
+            HandleSessionRestoreFailed();
+        }
+    }
+    
+    /// <summary>
+    /// Handles the case when session restore fails - checks last login method and acts accordingly
+    /// </summary>
+    private void HandleSessionRestoreFailed()
+    {
+        string lastLoginMethod = PlayFabManager.Instance.GetLastLoginMethod();
+        Debug.Log($"[AuthenticationManager] Last login method was: {lastLoginMethod ?? "Unknown"}");
+        
+        // Only auto-login as guest if the last login was actually guest
+        if (lastLoginMethod == "Guest")
+        {
+            Debug.Log("[AuthenticationManager] Last login was guest - attempting device ID auto-login");
             AttemptDeviceIdLogin();
         }
+        else if (lastLoginMethod == "Google")
+        {
+            // Try to silently restore Google login first
+            Debug.Log("[AuthenticationManager] Last login was Google - attempting silent Google sign-in...");
+            AttemptSilentGoogleLogin();
+        }
+        else
+        {
+            // Last login was Email or Facebook - show login screen instead of auto-login
+            Debug.Log("[AuthenticationManager] Last login was Email/Facebook - showing login screen");
+            isAttemptingAutoLogin = false;
+            ShowLoginRegisterPanel();
+            ShowLoginSection();
+            SetLoadingState(false);
+            UpdateStatusText("");
+        }
+    }
+    
+    /// <summary>
+    /// Attempts to silently restore Google login
+    /// </summary>
+    private void AttemptSilentGoogleLogin()
+    {
+        UpdateStatusText("Restoring Google login...");
+        
+        if (GoogleSignInManager.Instance != null)
+        {
+            // Subscribe to Google Sign-In events
+            GoogleSignInManager.Instance.OnGoogleSignInSuccess += OnSilentGoogleSignInSuccess;
+            GoogleSignInManager.Instance.OnGoogleSignInFailure += OnSilentGoogleSignInFailure;
+            
+            // Attempt silent sign-in
+            GoogleSignInManager.Instance.AttemptSilentSignIn();
+        }
+        else
+        {
+            Debug.LogWarning("[AuthenticationManager] GoogleSignInManager not found, showing login screen");
+            OnSilentGoogleSignInFailure("GoogleSignInManager not available");
+        }
+    }
+    
+    private void OnSilentGoogleSignInSuccess(string serverAuthCode, string idToken, string email, string displayName, string photoUrl)
+    {
+        Debug.Log($"[AuthenticationManager] Silent Google Sign-In successful! Restoring PlayFab session...");
+        
+        // Unsubscribe from events first
+        if (GoogleSignInManager.Instance != null)
+        {
+            GoogleSignInManager.Instance.OnGoogleSignInSuccess -= OnSilentGoogleSignInSuccess;
+            GoogleSignInManager.Instance.OnGoogleSignInFailure -= OnSilentGoogleSignInFailure;
+        }
+        
+        UpdateStatusText("Logging into PlayFab...");
+        
+        if (PlayFabManager.Instance != null)
+        {
+            // Login to PlayFab with Google auth code
+            PlayFabManager.Instance.LoginWithGoogle(serverAuthCode, email, displayName, photoUrl);
+        }
+        else
+        {
+            UpdateStatusText("Error: PlayFabManager not found!");
+            SetLoadingState(false);
+            isAttemptingAutoLogin = false;
+        }
+    }
+    
+    private void OnSilentGoogleSignInFailure(string error)
+    {
+        Debug.Log($"[AuthenticationManager] Silent Google Sign-In failed: {error} - showing login screen");
+        
+        // Unsubscribe from events
+        if (GoogleSignInManager.Instance != null)
+        {
+            GoogleSignInManager.Instance.OnGoogleSignInSuccess -= OnSilentGoogleSignInSuccess;
+            GoogleSignInManager.Instance.OnGoogleSignInFailure -= OnSilentGoogleSignInFailure;
+        }
+        
+        // Silent sign-in failed - show login screen so user can manually sign in
+        isAttemptingAutoLogin = false;
+        ShowLoginRegisterPanel();
+        ShowLoginSection();
+        SetLoadingState(false);
+        UpdateStatusText("");
     }
     
     /// <summary>
