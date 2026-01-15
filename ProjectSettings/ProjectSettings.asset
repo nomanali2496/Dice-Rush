@@ -785,7 +785,7 @@ PlayerSettings:
   webWasm2023: 0
   webEnableSubmoduleStrippingCompatibility: 0
   scriptingDefineSymbols:
-    Android: DOTWEEN;NATIVE_GALLERY_AVAILABLE
+    Android: DOTWEEN;NATIVE_GALLERY_AVAILABLE;UNITY_PURCHASING
     EmbeddedLinux: DOTWEEN
     GameCoreScarlett: DOTWEEN
     GameCoreXboxOne: DOTWEEN
