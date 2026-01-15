@@ -31,6 +31,8 @@ public class PlayFabManager : MonoBehaviour
     private const string LOGIN_METHOD_FACEBOOK = "Facebook";
     private const string PLAYER_PREFS_LOGIN_METHOD = "LastLoginMethod";
     private const string PLAYER_PREFS_DEVICE_ID = "StoredDeviceId";
+    private const string PLAYER_PREFS_EMAIL = "StoredEmail";
+    private const string PLAYER_PREFS_PASSWORD = "StoredPassword"; // Encoded, not plain text
     
     private void Awake()
     {
@@ -61,6 +63,10 @@ public class PlayFabManager : MonoBehaviour
     {
         Debug.Log($"[PlayFabManager] Attempting to register player: {playerName} with email: {email}");
         
+        // Store credentials temporarily to save them after successful registration
+        pendingRegistrationEmail = email;
+        pendingRegistrationPassword = password;
+        
         var request = new RegisterPlayFabUserRequest
         {
             Email = email,
@@ -70,13 +76,22 @@ public class PlayFabManager : MonoBehaviour
         };
         
         PlayFabClientAPI.RegisterPlayFabUser(request, 
-            result => OnRegisterSuccess(result, email, playerName), 
+            result => OnRegisterSuccess(result, email, playerName, password), 
             OnRegisterFailure);
     }
     
-    private void OnRegisterSuccess(RegisterPlayFabUserResult result, string email, string playerName)
+    private string pendingRegistrationEmail = "";
+    private string pendingRegistrationPassword = "";
+    
+    private void OnRegisterSuccess(RegisterPlayFabUserResult result, string email, string playerName, string password)
     {
-        Debug.Log("Registration successful!");
+        Debug.Log("[PlayFabManager] Registration successful! Creating new account...");
+        
+        // Clear any old stored credentials before saving new ones
+        // This ensures we're using the newly registered account, not old credentials
+        ClearStoredEmailCredentials();
+        
+        // Set the new account details
         playFabId = result.PlayFabId;
         isLoggedIn = true;
         
@@ -90,20 +105,40 @@ public class PlayFabManager : MonoBehaviour
         SaveLastLoginMethod(LOGIN_METHOD_EMAIL);
         Debug.Log("[PlayFabManager] Saved last login method: Email (from registration)");
         
+        // IMPORTANT: Save the new account's credentials for auto-login
+        // This must be done before loading player data to ensure proper association
+        SaveEmailCredentials(email, password);
+        Debug.Log("[PlayFabManager] Saved new account credentials for auto-login");
+        
         // Store device ID for new device detection
         string currentDeviceId = SystemInfo.deviceUniqueIdentifier;
         PlayerPrefs.SetString(PLAYER_PREFS_DEVICE_ID, currentDeviceId);
         PlayerPrefs.Save();
         
-        // Create initial player data
+        // Clear any cached player data and create fresh data for the NEW account
         currentPlayerData = new PlayerData(playerName, email, 1000, 100);
         
-        // Save the initial player data
+        Debug.Log($"[PlayFabManager] New account created - PlayFabId: {playFabId}, Name: {playerName}, Email: {email}");
+        Debug.Log($"[PlayFabManager] Session ticket: {(result.SessionTicket != null ? "Received" : "Not received")}");
+        
+        // Save the initial player data first
         SavePlayerData(() =>
         {
-            Debug.Log("[PlayFabManager] Registration complete and data saved!");
+            Debug.Log("[PlayFabManager] Initial player data saved for new account");
+            
+            // Then load player data to ensure we're working with the new account's data
+            // (This should load the data we just saved, confirming we have the right account)
+            LoadPlayerData();
+            
+            Debug.Log("[PlayFabManager] Registration complete - new account ready!");
+            // Only invoke OnRegisterComplete, not OnLoginComplete
+            // This ensures registration flow is separate from login flow
             OnRegisterComplete?.Invoke(true);
         });
+        
+        // Clear pending registration data
+        pendingRegistrationEmail = "";
+        pendingRegistrationPassword = "";
     }
     
     private void OnRegisterFailure(PlayFabError error)
@@ -157,6 +192,12 @@ public class PlayFabManager : MonoBehaviour
             }
         };
         
+        // Store credentials if rememberMe is true
+        if (rememberMe)
+        {
+            SaveEmailCredentials(email, password);
+        }
+        
         PlayFabClientAPI.LoginWithEmailAddress(request, 
             result => OnLoginSuccess(result, LOGIN_METHOD_EMAIL), 
             OnLoginFailure);
@@ -204,6 +245,13 @@ public class PlayFabManager : MonoBehaviour
         LoadPlayerData();
         
         OnLoginComplete?.Invoke(true);
+        
+        // Call pending email auto-login callback if set
+        if (pendingEmailAutoLoginCallback != null)
+        {
+            pendingEmailAutoLoginCallback.Invoke(true);
+            pendingEmailAutoLoginCallback = null;
+        }
     }
     
     private void OnLoginFailure(PlayFabError error)
@@ -257,6 +305,13 @@ public class PlayFabManager : MonoBehaviour
         }
         
         OnLoginComplete?.Invoke(false);
+        
+        // Call pending email auto-login callback if set
+        if (pendingEmailAutoLoginCallback != null)
+        {
+            pendingEmailAutoLoginCallback.Invoke(false);
+            pendingEmailAutoLoginCallback = null;
+        }
     }
     
     /// <summary>
@@ -739,10 +794,22 @@ public class PlayFabManager : MonoBehaviour
         else
         {
             Debug.LogWarning("[PlayFabManager] No player data found in PlayFab, initializing with defaults.");
-            // Initialize guest account with default values
-            currentPlayerData = new PlayerData("Guest", "", 1000f, 100);
-            // Save the initial data for guest accounts
-            SavePlayerData();
+            
+            // Only initialize guest data if we don't have a name/email already set
+            // (This prevents overwriting data during registration)
+            if (string.IsNullOrEmpty(currentPlayerData.playerName) || currentPlayerData.playerName == "Guest")
+            {
+                // Initialize guest account with default values
+                currentPlayerData = new PlayerData("Guest", "", 1000f, 100);
+                // Save the initial data for guest accounts
+                SavePlayerData();
+            }
+            else
+            {
+                // We have player data from registration, just save it
+                Debug.Log($"[PlayFabManager] Using existing player data: {currentPlayerData.playerName}");
+                SavePlayerData();
+            }
         }
         
         Debug.Log("[PlayFabManager] Invoking OnPlayerDataLoaded event...");
@@ -1081,6 +1148,10 @@ public class PlayFabManager : MonoBehaviour
         
         // Mark that user has explicitly logged out - prevent auto-login on next start
         PlayerPrefs.SetInt("UserExplicitlyLoggedOut", 1);
+        
+        // Clear stored email credentials on logout for security
+        ClearStoredEmailCredentials();
+        
         PlayerPrefs.Save();
         Debug.Log("[PlayFabManager] User explicitly logged out - auto-login will be disabled on next start");
     }
@@ -1135,6 +1206,89 @@ public class PlayFabManager : MonoBehaviour
         }
         
         return storedDeviceId != currentDeviceId;
+    }
+    
+    /// <summary>
+    /// Save email credentials securely (encoded, not plain text)
+    /// </summary>
+    private void SaveEmailCredentials(string email, string password)
+    {
+        try
+        {
+            // Simple encoding (base64) - not full encryption but better than plain text
+            string encodedPassword = System.Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(password));
+            PlayerPrefs.SetString(PLAYER_PREFS_EMAIL, email);
+            PlayerPrefs.SetString(PLAYER_PREFS_PASSWORD, encodedPassword);
+            PlayerPrefs.Save();
+            Debug.Log("[PlayFabManager] Email credentials saved (encoded)");
+        }
+        catch (Exception ex)
+        {
+            Debug.LogWarning($"[PlayFabManager] Failed to save credentials: {ex.Message}");
+        }
+    }
+    
+    /// <summary>
+    /// Get stored email credentials
+    /// </summary>
+    public bool GetStoredEmailCredentials(out string email, out string password)
+    {
+        email = "";
+        password = "";
+        
+        try
+        {
+            email = PlayerPrefs.GetString(PLAYER_PREFS_EMAIL, "");
+            string encodedPassword = PlayerPrefs.GetString(PLAYER_PREFS_PASSWORD, "");
+            
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(encodedPassword))
+            {
+                return false;
+            }
+            
+            // Decode password
+            password = System.Text.Encoding.UTF8.GetString(System.Convert.FromBase64String(encodedPassword));
+            return true;
+        }
+        catch (Exception ex)
+        {
+            Debug.LogWarning($"[PlayFabManager] Failed to retrieve stored credentials: {ex.Message}");
+            return false;
+        }
+    }
+    
+    /// <summary>
+    /// Clear stored email credentials
+    /// </summary>
+    public void ClearStoredEmailCredentials()
+    {
+        PlayerPrefs.DeleteKey(PLAYER_PREFS_EMAIL);
+        PlayerPrefs.DeleteKey(PLAYER_PREFS_PASSWORD);
+        PlayerPrefs.Save();
+        Debug.Log("[PlayFabManager] Stored email credentials cleared");
+    }
+    
+    private Action<bool> pendingEmailAutoLoginCallback = null;
+    
+    /// <summary>
+    /// Attempt to login with stored email credentials
+    /// </summary>
+    public void AttemptAutoLoginWithEmail(Action<bool> onComplete = null)
+    {
+        if (GetStoredEmailCredentials(out string email, out string password))
+        {
+            Debug.Log($"[PlayFabManager] Attempting auto-login with stored email credentials for: {email}");
+            
+            // Store callback to call it in OnLoginSuccess/OnLoginFailure
+            pendingEmailAutoLoginCallback = onComplete;
+            
+            LoginWithEmail(email, password, true); // Keep rememberMe true
+        }
+        else
+        {
+            Debug.Log("[PlayFabManager] No stored email credentials found");
+            onComplete?.Invoke(false);
+        }
     }
     
     #endregion

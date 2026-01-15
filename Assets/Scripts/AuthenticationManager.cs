@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using PlayFab;
 
 /// <summary>
 /// Handles Login and Registration in a single scene
@@ -49,6 +50,7 @@ public class AuthenticationManager : MonoBehaviour
     private bool isLoginPasswordVisible = false;
     private bool isRegisterPasswordVisible = false;
     private bool isAttemptingAutoLogin = false;
+    private bool isRegistering = false; // Track if we're currently registering
     
     private void Start()
     {
@@ -262,10 +264,22 @@ public class AuthenticationManager : MonoBehaviour
             Debug.Log("[AuthenticationManager] Last login was Google - attempting silent Google sign-in...");
             AttemptSilentGoogleLogin();
         }
+        else if (lastLoginMethod == "Facebook")
+        {
+            // Try to silently restore Facebook login first
+            Debug.Log("[AuthenticationManager] Last login was Facebook - attempting silent Facebook sign-in...");
+            AttemptSilentFacebookLogin();
+        }
+        else if (lastLoginMethod == "Email")
+        {
+            // Try to auto-login with stored email credentials
+            Debug.Log("[AuthenticationManager] Last login was Email - attempting auto-login with stored credentials...");
+            AttemptEmailAutoLogin();
+        }
         else
         {
-            // Last login was Email or Facebook - show login screen instead of auto-login
-            Debug.Log("[AuthenticationManager] Last login was Email/Facebook - showing login screen");
+            // Unknown login method - show login screen
+            Debug.Log("[AuthenticationManager] Unknown last login method - showing login screen");
             isAttemptingAutoLogin = false;
             ShowLoginRegisterPanel();
             ShowLoginSection();
@@ -343,6 +357,119 @@ public class AuthenticationManager : MonoBehaviour
     }
     
     /// <summary>
+    /// Attempts to silently restore Facebook login
+    /// </summary>
+    private void AttemptSilentFacebookLogin()
+    {
+        UpdateStatusText("Restoring Facebook login...");
+        
+        if (FacebookSignInManager.Instance != null)
+        {
+            // Subscribe to Facebook Sign-In events
+            FacebookSignInManager.Instance.OnFacebookSignInSuccess += OnSilentFacebookSignInSuccess;
+            FacebookSignInManager.Instance.OnFacebookSignInFailure += OnSilentFacebookSignInFailure;
+            
+            // Wait a moment for Facebook SDK to initialize, then attempt silent sign-in
+            StartCoroutine(AttemptSilentFacebookLoginCoroutine());
+        }
+        else
+        {
+            Debug.LogWarning("[AuthenticationManager] FacebookSignInManager not found, showing login screen");
+            OnSilentFacebookSignInFailure("FacebookSignInManager not available");
+        }
+    }
+    
+    private System.Collections.IEnumerator AttemptSilentFacebookLoginCoroutine()
+    {
+        // Wait a moment for Facebook SDK to initialize
+        yield return new WaitForSeconds(0.5f);
+        
+        // Attempt silent sign-in
+        FacebookSignInManager.Instance.AttemptSilentSignIn();
+    }
+    
+    private void OnSilentFacebookSignInSuccess(string accessToken, string facebookName, string facebookEmail, string facebookImageUrl)
+    {
+        Debug.Log($"[AuthenticationManager] Silent Facebook Sign-In successful! Restoring PlayFab session...");
+        
+        // Unsubscribe from events first
+        if (FacebookSignInManager.Instance != null)
+        {
+            FacebookSignInManager.Instance.OnFacebookSignInSuccess -= OnSilentFacebookSignInSuccess;
+            FacebookSignInManager.Instance.OnFacebookSignInFailure -= OnSilentFacebookSignInFailure;
+        }
+        
+        UpdateStatusText("Logging into PlayFab...");
+        
+        if (PlayFabManager.Instance != null)
+        {
+            // Login to PlayFab with Facebook access token
+            PlayFabManager.Instance.LoginWithFacebook(accessToken, facebookName, facebookEmail, facebookImageUrl);
+        }
+        else
+        {
+            UpdateStatusText("Error: PlayFabManager not found!");
+            SetLoadingState(false);
+            isAttemptingAutoLogin = false;
+        }
+    }
+    
+    private void OnSilentFacebookSignInFailure(string error)
+    {
+        Debug.Log($"[AuthenticationManager] Silent Facebook Sign-In failed: {error} - showing login screen");
+        
+        // Unsubscribe from events
+        if (FacebookSignInManager.Instance != null)
+        {
+            FacebookSignInManager.Instance.OnFacebookSignInSuccess -= OnSilentFacebookSignInSuccess;
+            FacebookSignInManager.Instance.OnFacebookSignInFailure -= OnSilentFacebookSignInFailure;
+        }
+        
+        // Silent sign-in failed - show login screen so user can manually sign in
+        isAttemptingAutoLogin = false;
+        ShowLoginRegisterPanel();
+        ShowLoginSection();
+        SetLoadingState(false);
+        UpdateStatusText("");
+    }
+    
+    /// <summary>
+    /// Attempts to auto-login with stored email credentials
+    /// </summary>
+    private void AttemptEmailAutoLogin()
+    {
+        UpdateStatusText("Restoring email login...");
+        
+        if (PlayFabManager.Instance != null)
+        {
+            // This will attempt login if credentials are stored, or return false if not
+            PlayFabManager.Instance.AttemptAutoLoginWithEmail((success) =>
+            {
+                if (!success)
+                {
+                    // No stored credentials or login failed - show login screen
+                    Debug.Log("[AuthenticationManager] Email auto-login failed - showing login screen");
+                    isAttemptingAutoLogin = false;
+                    ShowLoginRegisterPanel();
+                    ShowLoginSection();
+                    SetLoadingState(false);
+                    UpdateStatusText("");
+                }
+                // If success, OnLoginComplete will be called automatically
+            });
+        }
+        else
+        {
+            Debug.LogWarning("[AuthenticationManager] PlayFabManager not found, showing login screen");
+            isAttemptingAutoLogin = false;
+            ShowLoginRegisterPanel();
+            ShowLoginSection();
+            SetLoadingState(false);
+            UpdateStatusText("");
+        }
+    }
+    
+    /// <summary>
     /// Attempts to login with device ID (guest account)
     /// </summary>
     private void AttemptDeviceIdLogin()
@@ -401,6 +528,11 @@ public class AuthenticationManager : MonoBehaviour
     {
         if (loginRegisterPanel != null)
             loginRegisterPanel.SetActive(false);
+    }
+    private void HideRegisterScreen()
+    {
+        if (registerSection != null)
+            registerSection.SetActive(false);
     }
     
     /// <summary>
@@ -654,15 +786,25 @@ public class AuthenticationManager : MonoBehaviour
         
         SetLoadingState(true);
         UpdateStatusText("Creating account...");
+        isRegistering = true; // Mark that we're registering
         
+        // Clear any existing PlayFab session to ensure clean registration
         if (PlayFabManager.Instance != null)
         {
+            // Clear any stored email credentials before registration to avoid conflicts
+            PlayFabManager.Instance.ClearStoredEmailCredentials();
+            
+            // Clear any existing PlayFab session
+            PlayFabClientAPI.ForgetAllCredentials();
+            
+            // Register the new account
             PlayFabManager.Instance.RegisterPlayer(email, password, name);
         }
         else
         {
             UpdateStatusText("Error: PlayFabManager not found!");
             SetLoadingState(false);
+            isRegistering = false;
         }
     }
     
@@ -713,6 +855,13 @@ public class AuthenticationManager : MonoBehaviour
     
     private void OnLoginComplete(bool success)
     {
+        // If we're registering, ignore this callback - OnRegisterComplete will handle it
+        if (isRegistering)
+        {
+            Debug.Log("[AuthenticationManager] Ignoring OnLoginComplete during registration - OnRegisterComplete will handle it");
+            return;
+        }
+        
         SetLoadingState(false);
         
         if (success)
@@ -770,13 +919,21 @@ public class AuthenticationManager : MonoBehaviour
     private void OnRegisterComplete(bool success)
     {
         SetLoadingState(false);
+        isRegistering = false; // Reset registration flag
         
         if (success)
         {
             UpdateStatusText("Registration successful! Logging you in...");
             
             // User is automatically logged in by PlayFab after registration
-            Debug.Log("User registered and logged in automatically!");
+            Debug.Log("[AuthenticationManager] User registered and logged in automatically with NEW account!");
+            
+            // Clear registration input fields
+            ClearRegistrationFields();
+            
+            // Hide the registration screen after 3.5 seconds
+            // This gives user time to see the success message
+            Invoke(nameof(HideRegisterScreen), 3.5f);
             
             // Show splash screen after successful registration
             Invoke(nameof(ShowSplashScreenPanel), 0.5f);
@@ -786,6 +943,9 @@ public class AuthenticationManager : MonoBehaviour
         }
         else
         {
+            // Registration failed - clear the flag
+            isRegistering = false;
+            
             // Try to get a more specific error message from PlayFabManager
             string errorMsg = "";
             if (PlayFabManager.Instance != null)
@@ -801,6 +961,36 @@ public class AuthenticationManager : MonoBehaviour
             {
                 UpdateStatusText("Registration failed! Email might already be in use.");
             }
+            
+            // Clear password field on failure (keep name and email for user convenience)
+            if (registerPasswordInput != null)
+            {
+                registerPasswordInput.text = "";
+            }
+        }
+    }
+    
+    /// <summary>
+    /// Clears all registration input fields
+    /// </summary>
+    private void ClearRegistrationFields()
+    {
+        if (registerNameInput != null)
+        {
+            registerNameInput.text = "";
+            Debug.Log("[AuthenticationManager] Cleared register name input");
+        }
+        
+        if (registerEmailInput != null)
+        {
+            registerEmailInput.text = "";
+            Debug.Log("[AuthenticationManager] Cleared register email input");
+        }
+        
+        if (registerPasswordInput != null)
+        {
+            registerPasswordInput.text = "";
+            Debug.Log("[AuthenticationManager] Cleared register password input");
         }
     }
     

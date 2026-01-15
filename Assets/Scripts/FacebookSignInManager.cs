@@ -92,7 +92,20 @@ public class FacebookSignInManager : MonoBehaviour
         #endif
     }
     
-    #if UNITY_ANDROID && !UNITY_EDITOR || UNITY_IOS && !UNITY_EDITOR
+    /// <summary>
+    /// Attempts to silently sign in with Facebook (if user is already logged in)
+    /// This can be used for automatic restoration of Facebook login
+    /// </summary>
+    public void AttemptSilentSignIn()
+    {
+        #if (UNITY_ANDROID && !UNITY_EDITOR) || (UNITY_IOS && !UNITY_EDITOR)
+            AttemptSilentSignInMobile();
+        #else
+            OnFacebookSignInFailure?.Invoke("Silent sign-in not supported on this platform");
+        #endif
+    }
+    
+    #if (UNITY_ANDROID && !UNITY_EDITOR) || (UNITY_IOS && !UNITY_EDITOR)
     private void SignInWithFacebookMobile()
     {
         if (!isInitialized)
@@ -111,6 +124,58 @@ public class FacebookSignInManager : MonoBehaviour
         List<string> permissions = new List<string> { "public_profile", "email" };
         
         FB.LogInWithReadPermissions(permissions, OnFacebookLoginCallback);
+    }
+    
+    private void AttemptSilentSignInMobile()
+    {
+        if (!isInitialized)
+        {
+            Debug.Log("[FacebookSignInManager] Facebook SDK not initialized yet, waiting for initialization...");
+            // Wait for initialization
+            StartCoroutine(DelayedSilentSignIn());
+            return;
+        }
+        
+        Debug.Log("[FacebookSignInManager] Attempting silent Facebook Sign-In...");
+        
+        // Check if user is already logged in to Facebook
+        if (FB.IsLoggedIn && AccessToken.CurrentAccessToken != null)
+        {
+            string accessToken = AccessToken.CurrentAccessToken.TokenString;
+            Debug.Log("[FacebookSignInManager] User already logged in to Facebook - fetching profile...");
+            
+            // Fetch profile data and notify success
+            FetchFacebookProfile(accessToken);
+        }
+        else
+        {
+            Debug.Log("[FacebookSignInManager] User not logged in to Facebook - silent sign-in failed");
+            OnFacebookSignInFailure?.Invoke("User not logged in to Facebook");
+        }
+    }
+    
+    private System.Collections.IEnumerator DelayedSilentSignIn()
+    {
+        // Wait for initialization (with timeout)
+        float timeout = 5f;
+        float elapsed = 0f;
+        
+        while (!isInitialized && elapsed < timeout)
+        {
+            yield return new WaitForSeconds(0.1f);
+            elapsed += 0.1f;
+        }
+        
+        if (isInitialized)
+        {
+            // Try silent sign-in again
+            AttemptSilentSignInMobile();
+        }
+        else
+        {
+            Debug.LogWarning("[FacebookSignInManager] Facebook SDK initialization timeout");
+            OnFacebookSignInFailure?.Invoke("Facebook SDK initialization timeout");
+        }
     }
     
     private System.Collections.IEnumerator DelayedSignIn()
