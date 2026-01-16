@@ -62,13 +62,25 @@ public class DailyRewardManager : MonoBehaviour
     [SerializeField] private bool resetOnNewWeek = true; // Reset rewards when new week starts
     [SerializeField] private float autoCloseDelay = 0.5f; // Delay before auto-closing panel after collecting reward
     
+    [Header("Debug Info")]
+    [SerializeField] private string currentUserId = ""; // Current user's PlayFab ID (for account-specific storage)
+    [SerializeField] private string lastShownDate = "N/A"; // Last date when panel was shown
+    [SerializeField] private string currentTime = "N/A"; // Current system time
+    [SerializeField] private string storageKey = "N/A"; // PlayerPrefs key being used for storage
+    [SerializeField] private bool hasShownToday = false; // Whether panel has been shown today
+    [SerializeField] private bool isPanelAssigned = false; // Whether dailyRewardPanel GameObject is assigned
+    [SerializeField] private bool isPanelActive = false; // Whether dailyRewardPanel is currently active
+    
     /// <summary>
     /// Internal representation of daily rewards data
     /// </summary>
     private DailyRewardData[] dailyRewards = new DailyRewardData[7];
     
-    // PlayerPrefs key for tracking last shown date
-    private const string LAST_SHOWN_DATE_KEY = "DailyReward_LastShownDate";
+    // PlayerPrefs key prefix for tracking last shown date (account-specific)
+    private const string LAST_SHOWN_DATE_KEY_PREFIX = "DailyReward_LastShownDate_";
+    
+    // Reference to AuthenticationManager for login events
+    private AuthenticationManager authManager;
     
     // Events for reward collection and panel management (optional - can be used by other scripts)
     public System.Action<int, float, float> OnRewardCollected; // day, chips, cash
@@ -79,6 +91,89 @@ public class DailyRewardManager : MonoBehaviour
         InitializeDailyRewards();
         UpdateUI();
         SetupCloseButton();
+        
+        // Find AuthenticationManager in scene
+        authManager = FindObjectOfType<AuthenticationManager>();
+        if (authManager != null)
+        {
+            authManager.OnAuthenticationSuccess += OnUserLoggedIn;
+            Debug.Log("[DailyRewardManager] Successfully subscribed to AuthenticationManager events");
+        }
+        else
+        {
+            Debug.LogWarning("[DailyRewardManager] AuthenticationManager not found! Daily reward tracking will use device-based storage.");
+        }
+        
+        // Start updating debug info (for editor debugging)
+        StartCoroutine(UpdateDebugInfo());
+    }
+    
+    private void OnDestroy()
+    {
+        // Unsubscribe from events
+        if (authManager != null)
+        {
+            authManager.OnAuthenticationSuccess -= OnUserLoggedIn;
+        }
+    }
+    
+    /// <summary>
+    /// Called when user successfully logs in - gets the user ID for account-specific storage
+    /// </summary>
+    private void OnUserLoggedIn()
+    {
+        // Get the current user's PlayFab ID for account-specific storage
+        if (PlayFabManager.Instance != null)
+        {
+            currentUserId = PlayFabManager.Instance.GetPlayFabId();
+            if (string.IsNullOrEmpty(currentUserId))
+            {
+                Debug.LogWarning("[DailyRewardManager] PlayFabId is empty, using device-based storage (not account-specific)");
+            }
+            else
+            {
+                Debug.Log($"[DailyRewardManager] User logged in with PlayFabId: {currentUserId}");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("[DailyRewardManager] PlayFabManager not found, using device-based storage (not account-specific)");
+            currentUserId = ""; // Fallback to device-based storage
+        }
+        
+        // Update storage key immediately
+        UpdateStorageKeyDisplay();
+    }
+    
+    /// <summary>
+    /// Called when user logs out - clears current user data
+    /// </summary>
+    public void OnUserLoggedOut()
+    {
+        Debug.Log("[DailyRewardManager] User logged out, clearing user data");
+        currentUserId = "";
+        UpdateStorageKeyDisplay();
+    }
+    
+    /// <summary>
+    /// Updates the storage key display in the editor
+    /// </summary>
+    private void UpdateStorageKeyDisplay()
+    {
+        storageKey = GetLastShownDateKey();
+    }
+    
+    /// <summary>
+    /// Gets the account-specific PlayerPrefs key for storing last shown date
+    /// </summary>
+    private string GetLastShownDateKey()
+    {
+        if (string.IsNullOrEmpty(currentUserId))
+        {
+            // Fallback to device-based storage if no user ID
+            return LAST_SHOWN_DATE_KEY_PREFIX + "Device";
+        }
+        return LAST_SHOWN_DATE_KEY_PREFIX + currentUserId;
     }
     
     /// <summary>
@@ -358,39 +453,52 @@ public class DailyRewardManager : MonoBehaviour
             
             Debug.Log("[DailyRewardManager] Daily reward panel shown");
         }
+        else
+        {
+            Debug.LogError("[DailyRewardManager] Cannot show panel! dailyRewardPanel GameObject is not assigned in the Inspector!");
+            // Still fire the closed event so offer panels can proceed
+            OnDailyRewardPanelClosed?.Invoke();
+        }
     }
     
     /// <summary>
-    /// Checks if the panel has been shown today
+    /// Checks if the panel has been shown today (account-specific)
     /// </summary>
     private bool HasPanelBeenShownToday()
     {
-        string lastShownDate = PlayerPrefs.GetString(LAST_SHOWN_DATE_KEY, "");
+        string key = GetLastShownDateKey();
+        string lastShownDateValue = PlayerPrefs.GetString(key, "");
         string todayDate = DateTime.Now.ToString("yyyy-MM-dd");
         
-        return lastShownDate == todayDate;
+        // Update debug fields
+        lastShownDate = string.IsNullOrEmpty(lastShownDateValue) ? "Never" : lastShownDateValue;
+        hasShownToday = lastShownDateValue == todayDate;
+        
+        return hasShownToday;
     }
     
     /// <summary>
-    /// Marks the panel as shown today
+    /// Marks the panel as shown today (account-specific)
     /// </summary>
     private void MarkPanelAsShownToday()
     {
         string todayDate = DateTime.Now.ToString("yyyy-MM-dd");
-        PlayerPrefs.SetString(LAST_SHOWN_DATE_KEY, todayDate);
+        string key = GetLastShownDateKey();
+        PlayerPrefs.SetString(key, todayDate);
         PlayerPrefs.Save();
-        Debug.Log($"[DailyRewardManager] Marked panel as shown on {todayDate}");
+        Debug.Log($"[DailyRewardManager] Marked panel as shown on {todayDate} for user {currentUserId}");
     }
     
     /// <summary>
-    /// Resets the daily show tracking (useful for testing)
+    /// Resets the daily show tracking (useful for testing) - account-specific
     /// </summary>
     [ContextMenu("Reset Daily Show Tracking")]
     public void ResetDailyShowTracking()
     {
-        PlayerPrefs.DeleteKey(LAST_SHOWN_DATE_KEY);
+        string key = GetLastShownDateKey();
+        PlayerPrefs.DeleteKey(key);
         PlayerPrefs.Save();
-        Debug.Log("[DailyRewardManager] Daily show tracking reset");
+        Debug.Log($"[DailyRewardManager] Daily show tracking reset for user {currentUserId}");
     }
     
     /// <summary>
@@ -415,7 +523,46 @@ public class DailyRewardManager : MonoBehaviour
         Debug.Log("[DailyRewardManager] Daily reward panel closed - event fired");
     }
     
+    /// <summary>
+    /// Updates debug info fields in real-time (for editor debugging)
+    /// </summary>
+    private IEnumerator UpdateDebugInfo()
+    {
+        while (true)
+        {
+            // Update current time
+            currentTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            
+            // Update storage key
+            UpdateStorageKeyDisplay();
+            
+            // Update panel assignment status
+            isPanelAssigned = dailyRewardPanel != null;
+            isPanelActive = dailyRewardPanel != null && dailyRewardPanel.activeSelf;
+            
+            // Update last shown date and has shown today status
+            string key = GetLastShownDateKey();
+            string lastShownDateValue = PlayerPrefs.GetString(key, "");
+            lastShownDate = string.IsNullOrEmpty(lastShownDateValue) ? "Never" : lastShownDateValue;
+            
+            string todayDate = DateTime.Now.ToString("yyyy-MM-dd");
+            hasShownToday = lastShownDateValue == todayDate;
+            
+            yield return new WaitForSeconds(1f); // Update every second
+        }
+    }
+    
     #region Test Methods
+    
+    /// <summary>
+    /// Test method: Show daily reward panel (for testing)
+    /// </summary>
+    [ContextMenu("Show Daily Reward Panel")]
+    public void TestShowPanel()
+    {
+        Debug.Log("[DailyRewardManager] Test: Manually triggering ShowPanel()");
+        ShowPanel();
+    }
     
     /// <summary>
     /// Test method: Collect current day reward
