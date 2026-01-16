@@ -79,6 +79,9 @@ public class DailyRewardManager : MonoBehaviour
     // PlayerPrefs key prefix for tracking last shown date (account-specific)
     private const string LAST_SHOWN_DATE_KEY_PREFIX = "DailyReward_LastShownDate_";
     
+    // PlayerPrefs key prefix for tracking current day (account-specific)
+    private const string CURRENT_DAY_KEY_PREFIX = "DailyReward_CurrentDay_";
+    
     // Reference to AuthenticationManager for login events
     private AuthenticationManager authManager;
     
@@ -89,7 +92,6 @@ public class DailyRewardManager : MonoBehaviour
     private void Start()
     {
         InitializeDailyRewards();
-        UpdateUI();
         SetupCloseButton();
         
         // Find AuthenticationManager in scene
@@ -102,6 +104,18 @@ public class DailyRewardManager : MonoBehaviour
         else
         {
             Debug.LogWarning("[DailyRewardManager] AuthenticationManager not found! Daily reward tracking will use device-based storage.");
+        }
+        
+        // Check if user is already logged in (in case Start() runs after login)
+        if (PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
+        {
+            OnUserLoggedIn();
+        }
+        else
+        {
+            // User not logged in yet - initialize with default day 1
+            currentDay = 1;
+            UpdateUI();
         }
         
         // Start updating debug info (for editor debugging)
@@ -143,6 +157,9 @@ public class DailyRewardManager : MonoBehaviour
         
         // Update storage key immediately
         UpdateStorageKeyDisplay();
+        
+        // Load account-specific current day (defaults to 1 for new accounts)
+        LoadCurrentDay();
     }
     
     /// <summary>
@@ -153,6 +170,8 @@ public class DailyRewardManager : MonoBehaviour
         Debug.Log("[DailyRewardManager] User logged out, clearing user data");
         currentUserId = "";
         UpdateStorageKeyDisplay();
+        // Reset currentDay to default (will be loaded when new user logs in)
+        currentDay = 1;
     }
     
     /// <summary>
@@ -161,6 +180,53 @@ public class DailyRewardManager : MonoBehaviour
     private void UpdateStorageKeyDisplay()
     {
         storageKey = GetLastShownDateKey();
+    }
+    
+    /// <summary>
+    /// Gets the account-specific PlayerPrefs key for storing current day
+    /// </summary>
+    private string GetCurrentDayKey()
+    {
+        if (string.IsNullOrEmpty(currentUserId))
+        {
+            // Fallback to device-based storage if no user ID
+            return CURRENT_DAY_KEY_PREFIX + "Device";
+        }
+        return CURRENT_DAY_KEY_PREFIX + currentUserId;
+    }
+    
+    /// <summary>
+    /// Loads the current day from PlayerPrefs (account-specific)
+    /// Defaults to 1 if not found (new account)
+    /// </summary>
+    private void LoadCurrentDay()
+    {
+        string key = GetCurrentDayKey();
+        if (PlayerPrefs.HasKey(key))
+        {
+            currentDay = PlayerPrefs.GetInt(key, 1);
+            currentDay = Mathf.Clamp(currentDay, 1, 7);
+            Debug.Log($"[DailyRewardManager] Loaded current day {currentDay} for user {currentUserId}");
+        }
+        else
+        {
+            // New account - start at day 1
+            currentDay = 1;
+            SaveCurrentDay();
+            Debug.Log($"[DailyRewardManager] New account detected - starting at day 1 for user {currentUserId}");
+        }
+        UpdateUI();
+    }
+    
+    /// <summary>
+    /// Saves the current day to PlayerPrefs (account-specific)
+    /// </summary>
+    private void SaveCurrentDay()
+    {
+        string key = GetCurrentDayKey();
+        PlayerPrefs.SetInt(key, currentDay);
+        PlayerPrefs.Save();
+        Debug.Log($"[DailyRewardManager] Saved current day {currentDay} for user {currentUserId}");
     }
     
     /// <summary>
@@ -286,16 +352,19 @@ public class DailyRewardManager : MonoBehaviour
         float chipsAmount = dailyRewards[dayIndex].chipsAmount;
         float cashAmount = dailyRewards[dayIndex].cashAmount;
         
+        // Store the day that was collected before advancing
+        int collectedDay = currentDay;
+        
         // Add rewards (you can connect this to your game's currency system)
         AddRewards(chipsAmount, cashAmount);
         
         // Trigger event
-        OnRewardCollected?.Invoke(currentDay, chipsAmount, cashAmount);
+        OnRewardCollected?.Invoke(collectedDay, chipsAmount, cashAmount);
         
-        // Update UI
-        UpdateUI();
+        // Advance to next day after collecting
+        AdvanceToNextDay();
         
-        Debug.Log($"[DailyRewardManager] Collected Day {currentDay} reward: {chipsAmount} Chips, {cashAmount} Cash");
+        Debug.Log($"[DailyRewardManager] Collected Day {collectedDay} reward: {chipsAmount} Chips, {cashAmount} Cash. Advanced to day {currentDay}");
         
         // Auto-close panel after delay
         StartCoroutine(AutoClosePanelAfterDelay());
@@ -354,11 +423,12 @@ public class DailyRewardManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Sets the current day (1-7)
+    /// Sets the current day (1-7) and saves it account-specifically
     /// </summary>
     public void SetCurrentDay(int day)
     {
         currentDay = Mathf.Clamp(day, 1, 7);
+        SaveCurrentDay();
         UpdateUI();
     }
     
@@ -371,7 +441,7 @@ public class DailyRewardManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Advances to the next day
+    /// Advances to the next day and saves it account-specifically
     /// </summary>
     public void AdvanceToNextDay()
     {
@@ -390,6 +460,7 @@ public class DailyRewardManager : MonoBehaviour
             currentDay = 1; // Loop back to day 1
         }
         
+        SaveCurrentDay();
         UpdateUI();
     }
     
