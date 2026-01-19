@@ -682,7 +682,8 @@ public class OfferPanelManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Checks if offers have been shown within the last 24 hours
+    /// Checks if offers have been shown today (same calendar day)
+    /// Resets automatically at midnight (start of new day)
     /// </summary>
     private bool HasShownOffersToday()
     {
@@ -698,10 +699,9 @@ public class OfferPanelManager : MonoBehaviour
         if (DateTime.TryParse(lastShownTimestampString, out DateTime lastShownTime))
         {
             DateTime now = DateTime.Now;
-            TimeSpan timeSinceShown = now - lastShownTime;
             
-            // Check if less than 24 hours have passed
-            return timeSinceShown.TotalHours < 24.0;
+            // Check if last shown date is the same as today's date
+            return lastShownTime.Date == now.Date;
         }
         
         return false; // Invalid timestamp, treat as not shown
@@ -733,7 +733,8 @@ public class OfferPanelManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Calculates the time remaining until 24 hours have passed since offers were shown
+    /// Calculates the time remaining until midnight (start of next day)
+    /// Offers reset automatically at midnight, not after 24 hours
     /// </summary>
     private TimeSpan GetTimeUntilNextOffer()
     {
@@ -749,10 +750,12 @@ public class OfferPanelManager : MonoBehaviour
         if (DateTime.TryParse(lastShownTimestampString, out DateTime lastShownTime))
         {
             DateTime now = DateTime.Now;
-            DateTime nextAvailableTime = lastShownTime.AddHours(24);
-            TimeSpan timeRemaining = nextAvailableTime - now;
             
-            // Return zero if time has already passed
+            // Calculate next midnight (start of next day)
+            DateTime nextMidnight = now.Date.AddDays(1);
+            TimeSpan timeRemaining = nextMidnight - now;
+            
+            // Return zero if time has already passed (shouldn't happen, but safety check)
             return timeRemaining.TotalSeconds > 0 ? timeRemaining : TimeSpan.Zero;
         }
         
@@ -785,7 +788,8 @@ public class OfferPanelManager : MonoBehaviour
                     if (DateTime.TryParse(timestampString, out DateTime lastShownTime))
                     {
                         lastShownDate = lastShownTime.ToString("yyyy-MM-dd HH:mm:ss");
-                        DateTime nextAvailableTime = lastShownTime.AddHours(24);
+                        // Calculate next midnight (start of next day)
+                        DateTime nextAvailableTime = now.Date.AddDays(1);
                         nextResetTime = nextAvailableTime.ToString("yyyy-MM-dd HH:mm:ss");
                     }
                     else
