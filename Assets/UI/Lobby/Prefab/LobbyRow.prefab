@@ -34,10 +34,10 @@ RectTransform:
   - {fileID: 2707437076186988284}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 380.2}
-  m_SizeDelta: {x: 1008, y: 537}
+  m_AnchorMin: {x: 0.033333335, y: 0.5581771}
+  m_AnchorMax: {x: 0.96666664, y: 0.8378646}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8902121777698372060
 MonoBehaviour:
@@ -56,6 +56,9 @@ MonoBehaviour:
   item2: {fileID: 6846620375075663969}
   playButton1: {fileID: 815115680804903351}
   playButton2: {fileID: 2806452339161609918}
+  buttonHoverScale: 1.15
+  buttonAnimationDuration: 0.2
+  buttonScaleEase: 27
 --- !u!114 &2363127087890045917
 MonoBehaviour:
   m_ObjectHideFlags: 0

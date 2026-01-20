@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8181932749425886386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6423278406675224289}
+  - component: {fileID: 6507332059633217576}
+  - component: {fileID: 1162559560897828473}
+  m_Layer: 5
+  m_Name: Boxes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &6423278406675224289
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8181932749425886386}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6507332059633217576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8181932749425886386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GridLayoutGroup
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 157, y: 158.5}
+  m_Spacing: {x: 16, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
+--- !u!114 &1162559560897828473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8181932749425886386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57ba1d1f1db5e254e85d987c8b215ac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NumberGrid
+  numberBoxPrefab: {fileID: 334190132868930896, guid: 616265ead6d0bb34c939157c1d20f1ff, type: 3}
+  powerupSprites:
+  - {fileID: -3625413013475502443, guid: d5d7eec13a2d9c242a6256727eb9efa7, type: 3}
+  - {fileID: 5142229827288482663, guid: 4e970b00402d78b4b9889df702c6441f, type: 3}
+  - {fileID: 570513375360262070, guid: 47b2c9782b7511540b5c3b22d085d081, type: 3}
+  gridWidth: 5
+  gridHeight: 5
+  spacingX: 100
+  spacingY: 100
+  startPosition: {x: 0, y: 0}
+  numberTextName: NumberText
+  powerupImageName: PowerUp
+  selectButtonName: SelectButton
+  highlightImageName: HighlightImage
+  powerupTimerSlider: {fileID: 0}
+  powerupTimerText: {fileID: 0}
+  powerupVisibleDuration: 5
+  minDelayBetweenPowerups: 3
+  maxDelayBetweenPowerups: 10

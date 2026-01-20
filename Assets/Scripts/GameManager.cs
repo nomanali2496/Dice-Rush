@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Reflection;
 
 /// <summary>
 /// Manages game state, player profiles, and CPU profiles
@@ -24,8 +25,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private bool excludePlayerAvatarFromCPU = true; // Don't use player's avatar for CPUs
     
     [Header("References")]
-    [SerializeField] private NumberGrid numberGrid; // Reference to NumberGrid
+    [SerializeField] private NumberGrid numberGrid; // Reference to NumberGrid (legacy - will be replaced by individual grids)
     [SerializeField] private DicesController playerDicesController; // Reference to player's DicesController
+    [SerializeField] private GameObject numberGridPrefab; // Prefab for creating individual NumberGrid instances (if null, will use existing numberGrid as template)
+    [SerializeField] private Transform gridsParent; // Parent transform for all NumberGrid instances (if null, will use gameplayScreen or this transform)
     
     [Header("Gameplay Screen")]
     [SerializeField] private GameObject gameplayScreen; // Gameplay screen GameObject (set active when game starts)
@@ -75,6 +78,11 @@ public class GameManager : MonoBehaviour
     // Current lobby configuration
     private LobbyConfig currentLobbyConfig; // Current lobby configuration being played
     
+    // Individual NumberGrid instances (one per player/CPU)
+    private NumberGrid playerNumberGrid; // Player's own NumberGrid instance
+    private Dictionary<int, NumberGrid> cpuNumberGrids = new Dictionary<int, NumberGrid>(); // CPU NumberGrid instances by CPU index
+    private List<NumberGrid> allNumberGrids = new List<NumberGrid>(); // All NumberGrid instances (for cleanup)
+    
     private void Start()
     {
         // Subscribe to PlayFab events to update when player data loads
@@ -83,7 +91,7 @@ public class GameManager : MonoBehaviour
             PlayFabManager.Instance.OnPlayerDataLoaded += OnPlayerDataLoaded;
         }
         
-        // Subscribe to NumberGrid event for when all boxes are selected
+        // Subscribe to NumberGrid event for when all boxes are selected (legacy - will be updated when individual grids are created)
         if (numberGrid != null)
         {
             numberGrid.OnAllBoxesSelected += OnAllBoxesSelected;
@@ -272,7 +280,8 @@ public class GameManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Called when all boxes in the grid are selected
+    /// Called when all boxes in a grid are selected (from any individual board)
+    /// With individual boards, game ends when any player completes their board or timer expires
     /// </summary>
     private void OnAllBoxesSelected()
     {
@@ -283,7 +292,7 @@ public class GameManager : MonoBehaviour
         
         isGameActive = false;
         timerStarted = false; // Reset flag so timer can be restarted if needed
-        Debug.Log("[GameManager] All boxes selected! Determining winner...");
+        Debug.Log("[GameManager] All boxes selected on a board! Determining winner...");
         
         // Stop timer
         if (timerCoroutine != null)
@@ -304,7 +313,7 @@ public class GameManager : MonoBehaviour
             }
         }
         
-        // Get rankings (top 3)
+        // Get rankings (top 3) - based on individual board selection counts
         var rankings = GetRankings();
         
         // Award prizes based on lobby configuration
@@ -366,87 +375,45 @@ public class GameManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Gets the top 3 rankings from selection counts
+    /// Gets the top 3 rankings from individual board selection counts
+    /// Each player/CPU has their own board, winner is determined by who selected most on their own board
     /// Returns: List of tuples (PlayerType, cpuIndex, selectionCount) sorted by count (descending)
     /// Includes all players even if they have 0 selections
     /// </summary>
     private List<(PlayerType playerType, int cpuIndex, int count)> GetRankings()
     {
-        if (numberGrid == null)
-        {
-            Debug.LogWarning("[GameManager] NumberGrid not assigned!");
-            return new List<(PlayerType, int, int)>();
-        }
-        
-        Dictionary<string, int> selectionCounts = numberGrid.GetSelectionCounts();
         List<(PlayerType playerType, int cpuIndex, int count)> rankings = new List<(PlayerType, int, int)>();
         
-        // Convert dictionary to list of tuples
-        foreach (var kvp in selectionCounts)
+        // Count player's selections from their own board
+        int playerCount = 0;
+        if (playerNumberGrid != null)
         {
-            PlayerType playerType;
-            int cpuIndex;
-            
-            if (kvp.Key == "Player")
+            Dictionary<string, int> playerSelectionCounts = playerNumberGrid.GetSelectionCounts();
+            // Sum all selections from player's board (should only be "Player" key, but sum all to be safe)
+            foreach (var kvp in playerSelectionCounts)
             {
-                playerType = PlayerType.Player;
-                cpuIndex = -1;
+                playerCount += kvp.Value;
             }
-            else if (kvp.Key.StartsWith("CPU_"))
-            {
-                playerType = PlayerType.CPU;
-                string indexStr = kvp.Key.Substring(4); // Remove "CPU_" prefix
-                if (int.TryParse(indexStr, out cpuIndex))
-                {
-                    // cpuIndex is already set
-                }
-                else
-                {
-                    continue; // Skip invalid entries
-                }
-            }
-            else
-            {
-                continue; // Skip invalid entries
-            }
-            
-            rankings.Add((playerType, cpuIndex, kvp.Value));
         }
+        rankings.Add((PlayerType.Player, -1, playerCount));
         
-        // Add player with 0 selections if not already in rankings
-        bool playerFound = false;
-        foreach (var ranking in rankings)
-        {
-            if (ranking.playerType == PlayerType.Player)
-            {
-                playerFound = true;
-                break;
-            }
-        }
-        if (!playerFound)
-        {
-            rankings.Add((PlayerType.Player, -1, 0));
-        }
-        
-        // Add all active CPUs with 0 selections if not already in rankings
+        // Count each CPU's selections from their own board
         if (currentLobbyConfig != null && cpuPlayers != null)
         {
             int numberOfCPUs = currentLobbyConfig.GetNumberOfCPUs();
             for (int i = 0; i < numberOfCPUs; i++)
             {
-                bool cpuFound = false;
-                foreach (var ranking in rankings)
+                int cpuCount = 0;
+                if (cpuNumberGrids.ContainsKey(i) && cpuNumberGrids[i] != null)
                 {
-                    if (ranking.playerType == PlayerType.CPU && ranking.cpuIndex == i)
+                    Dictionary<string, int> cpuSelectionCounts = cpuNumberGrids[i].GetSelectionCounts();
+                    // Sum all selections from this CPU's board
+                    foreach (var kvp in cpuSelectionCounts)
                     {
-                        cpuFound = true;
-                        break;
+                        cpuCount += kvp.Value;
                     }
                 }
-                if (!cpuFound)
-                {
-                    rankings.Add((PlayerType.CPU, i, 0));
-                }
+                rankings.Add((PlayerType.CPU, i, cpuCount));
             }
         }
         
@@ -1406,39 +1373,45 @@ public class GameManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Updates outline image fill amounts based on current selection counts
+    /// Updates outline image fill amounts based on current selection counts from individual boards
     /// Each selection fills the outline by 4% (0.04)
     /// </summary>
     private void UpdateOutlineFillAmounts()
     {
-        if (numberGrid == null)
-        {
-            return;
-        }
-        
-        // Get current selection counts
-        Dictionary<string, int> selectionCounts = numberGrid.GetSelectionCounts();
-        
         const float FILL_PER_SELECTION = 0.04f; // 4% per selection
         
-        // Update player outline fill
-        if (playerOutlineImage != null)
+        // Update player outline fill from player's own board
+        if (playerOutlineImage != null && playerNumberGrid != null)
         {
-            int playerCount = selectionCounts.ContainsKey("Player") ? selectionCounts["Player"] : 0;
+            Dictionary<string, int> playerSelectionCounts = playerNumberGrid.GetSelectionCounts();
+            int playerCount = 0;
+            // Sum all selections from player's board
+            foreach (var kvp in playerSelectionCounts)
+            {
+                playerCount += kvp.Value;
+            }
             float fillAmount = playerCount * FILL_PER_SELECTION;
             fillAmount = Mathf.Clamp01(fillAmount); // Clamp between 0 and 1
             playerOutlineImage.fillAmount = fillAmount;
         }
         
-        // Update CPU outline fills
+        // Update CPU outline fills from each CPU's own board
         if (cpuOutlineImages != null)
         {
             for (int i = 0; i < cpuOutlineImages.Length && i < numberOfCPUs; i++)
             {
                 if (cpuOutlineImages[i] != null)
                 {
-                    string cpuKey = $"CPU_{i}";
-                    int cpuCount = selectionCounts.ContainsKey(cpuKey) ? selectionCounts[cpuKey] : 0;
+                    int cpuCount = 0;
+                    if (cpuNumberGrids.ContainsKey(i) && cpuNumberGrids[i] != null)
+                    {
+                        Dictionary<string, int> cpuSelectionCounts = cpuNumberGrids[i].GetSelectionCounts();
+                        // Sum all selections from this CPU's board
+                        foreach (var kvp in cpuSelectionCounts)
+                        {
+                            cpuCount += kvp.Value;
+                        }
+                    }
                     float fillAmount = cpuCount * FILL_PER_SELECTION;
                     fillAmount = Mathf.Clamp01(fillAmount); // Clamp between 0 and 1
                     cpuOutlineImages[i].fillAmount = fillAmount;
@@ -1539,20 +1512,16 @@ public class GameManager : MonoBehaviour
             Debug.Log("[GameManager] All CPUs stopped");
         }
         
-        // Reset and regenerate NumberGrid for new game
-        if (numberGrid != null)
-        {
-            numberGrid.GenerateGrid();
-            Debug.Log("[GameManager] NumberGrid regenerated for new game");
-        }
-        
         // Set new lobby configuration
         currentLobbyConfig = config;
         
         // Set number of CPUs based on lobby configuration
         int numberOfCPUs = config.GetNumberOfCPUs();
         
-        // Wait a frame to ensure NumberGrid is fully regenerated before restarting CPUs
+        // Create individual NumberGrid instances for player and each CPU
+        CreateIndividualNumberGrids(numberOfCPUs);
+        
+        // Wait a frame to ensure NumberGrids are fully created before restarting CPUs
         StartCoroutine(ConfigureCPUsAfterDelay(numberOfCPUs));
         
         Debug.Log($"[GameManager] Game configured from Lobby {config.lobbyIndex + 1}: {config.numberOfPlayers} players ({numberOfCPUs} CPUs)");
@@ -1855,6 +1824,263 @@ public class GameManager : MonoBehaviour
     public LobbyConfig GetCurrentLobbyConfig()
     {
         return currentLobbyConfig;
+    }
+    
+    /// <summary>
+    /// Creates individual NumberGrid instances for player and each CPU
+    /// Each player/CPU gets their own independent board
+    /// </summary>
+    private void CreateIndividualNumberGrids(int numberOfCPUs)
+    {
+        // Clean up existing individual grids first
+        DestroyIndividualNumberGrids();
+        
+        // Determine parent transform for grids
+        Transform parentTransform = gridsParent != null ? gridsParent : 
+                                   (gameplayScreen != null ? gameplayScreen.transform : transform);
+        
+        // Validate that we have either a prefab or existing numberGrid to use as template
+        if (numberGridPrefab == null && numberGrid == null)
+        {
+            Debug.LogError("[GameManager] Cannot create individual grids - no NumberGrid prefab or existing NumberGrid available!");
+            return;
+        }
+        
+        // Disable the original numberGrid from scene (if it exists) since we're replacing it with individual grids
+        if (numberGrid != null)
+        {
+            numberGrid.gameObject.SetActive(false);
+            // Unsubscribe from original grid events
+            numberGrid.OnAllBoxesSelected -= OnAllBoxesSelected;
+            numberGrid.OnBoxSelected -= OnBoxSelected;
+            Debug.Log("[GameManager] Disabled original NumberGrid from scene (replaced with individual grids)");
+        }
+        
+        // Create player's NumberGrid
+        playerNumberGrid = CreateNumberGridInstance("PlayerGrid", parentTransform);
+        if (playerNumberGrid != null)
+        {
+            allNumberGrids.Add(playerNumberGrid);
+            
+            // Assign timer UI references from original NumberGrid to PlayerGrid
+            if (numberGrid != null)
+            {
+                AssignTimerUIReferences(numberGrid, playerNumberGrid);
+            }
+            
+            // Subscribe to player grid events
+            playerNumberGrid.OnAllBoxesSelected += OnAllBoxesSelected;
+            playerNumberGrid.OnBoxSelected += OnBoxSelected;
+            // Ensure player grid is active and visible
+            playerNumberGrid.gameObject.SetActive(true);
+            // Hide CPU grids visually (only show player's grid)
+            // Player grid stays visible at default position
+            Debug.Log("[GameManager] Created player's NumberGrid");
+        }
+        
+        // Create CPU NumberGrids (hidden off-screen or in separate area)
+        for (int i = 0; i < numberOfCPUs; i++)
+        {
+            NumberGrid cpuGrid = CreateNumberGridInstance($"CPUGrid_{i}", parentTransform);
+            if (cpuGrid != null)
+            {
+                cpuNumberGrids[i] = cpuGrid;
+                allNumberGrids.Add(cpuGrid);
+                
+                // Subscribe to CPU grid events (game ends if any board is completed)
+                cpuGrid.OnAllBoxesSelected += OnAllBoxesSelected;
+                cpuGrid.OnBoxSelected += OnBoxSelected;
+                
+                // Hide CPU grids from view (position off-screen or disable renderer)
+                // We can position them far off-screen or disable the GameObject
+                cpuGrid.gameObject.SetActive(false); // Hide CPU grids completely
+                // Alternative: Position off-screen: cpuGrid.transform.localPosition = new Vector3(10000 + i * 1000, 0, 0);
+                
+                Debug.Log($"[GameManager] Created CPU {i}'s NumberGrid (hidden)");
+            }
+        }
+        
+        // Assign grids to DicesController and CPUs
+        AssignGridsToControllers();
+    }
+    
+    /// <summary>
+    /// Creates a NumberGrid instance from prefab or existing template
+    /// </summary>
+    private NumberGrid CreateNumberGridInstance(string name, Transform parent)
+    {
+        GameObject instance = null;
+        bool templateWasDisabled = false;
+        
+        // Use prefab if available, otherwise duplicate the existing numberGrid GameObject
+        if (numberGridPrefab != null)
+        {
+            instance = Instantiate(numberGridPrefab, parent);
+        }
+        else if (numberGrid != null)
+        {
+            // Check if template is disabled - we'll need to temporarily enable it or handle it differently
+            templateWasDisabled = !numberGrid.gameObject.activeSelf;
+            
+            // If template is disabled, temporarily enable it for cloning, then disable it again
+            if (templateWasDisabled)
+            {
+                numberGrid.gameObject.SetActive(true);
+            }
+            
+            // Create a duplicate of the existing NumberGrid GameObject
+            instance = Instantiate(numberGrid.gameObject, parent);
+            
+            // Restore template's original state
+            if (templateWasDisabled)
+            {
+                numberGrid.gameObject.SetActive(false);
+            }
+        }
+        else
+        {
+            Debug.LogError($"[GameManager] Cannot create NumberGrid instance: {name} - no prefab or existing NumberGrid available!");
+            return null;
+        }
+        
+        instance.name = name;
+        instance.transform.localPosition = Vector3.zero;
+        instance.transform.localRotation = Quaternion.identity;
+        instance.transform.localScale = Vector3.one;
+        
+        // Always ensure the new instance is active (even if template was disabled)
+        instance.SetActive(true);
+        
+        NumberGrid grid = instance.GetComponent<NumberGrid>();
+        if (grid != null)
+        {
+            // Regenerate grid for this instance (creates new random layout)
+            grid.GenerateGrid();
+            return grid;
+        }
+        
+        Debug.LogError($"[GameManager] Failed to create NumberGrid instance: {name} - component not found!");
+        return null;
+    }
+    
+    /// <summary>
+    /// Destroys all individual NumberGrid instances
+    /// </summary>
+    private void DestroyIndividualNumberGrids()
+    {
+        // Unsubscribe from events before destroying
+        foreach (NumberGrid grid in allNumberGrids)
+        {
+            if (grid != null)
+            {
+                grid.OnAllBoxesSelected -= OnAllBoxesSelected;
+                grid.OnBoxSelected -= OnBoxSelected;
+            }
+        }
+        
+        // Destroy all grid instances
+        foreach (NumberGrid grid in allNumberGrids)
+        {
+            if (grid != null && grid.gameObject != null)
+            {
+                Destroy(grid.gameObject);
+            }
+        }
+        
+        allNumberGrids.Clear();
+        cpuNumberGrids.Clear();
+        playerNumberGrid = null;
+        
+        Debug.Log("[GameManager] Destroyed all individual NumberGrid instances");
+    }
+    
+    /// <summary>
+    /// Assigns timer UI references (slider and text) from source NumberGrid to target NumberGrid
+    /// </summary>
+    private void AssignTimerUIReferences(NumberGrid sourceGrid, NumberGrid targetGrid)
+    {
+        if (sourceGrid == null || targetGrid == null)
+        {
+            Debug.LogWarning("[GameManager] Cannot assign timer UI references - source or target grid is null!");
+            return;
+        }
+        
+        // Use reflection to get and set the SerializeField references
+        var sourceType = typeof(NumberGrid);
+        
+        // Get powerupTimerSlider field
+        var sliderField = sourceType.GetField("powerupTimerSlider", 
+            BindingFlags.NonPublic | BindingFlags.Instance);
+        if (sliderField != null)
+        {
+            var sliderValue = sliderField.GetValue(sourceGrid);
+            sliderField.SetValue(targetGrid, sliderValue);
+            Debug.Log("[GameManager] Assigned powerupTimerSlider to PlayerGrid");
+        }
+        else
+        {
+            Debug.LogWarning("[GameManager] Could not find powerupTimerSlider field in NumberGrid!");
+        }
+        
+        // Get powerupTimerText field
+        var textField = sourceType.GetField("powerupTimerText", 
+            BindingFlags.NonPublic | BindingFlags.Instance);
+        if (textField != null)
+        {
+            var textValue = textField.GetValue(sourceGrid);
+            textField.SetValue(targetGrid, textValue);
+            Debug.Log("[GameManager] Assigned powerupTimerText to PlayerGrid");
+        }
+        else
+        {
+            Debug.LogWarning("[GameManager] Could not find powerupTimerText field in NumberGrid!");
+        }
+    }
+    
+    /// <summary>
+    /// Assigns NumberGrid instances to DicesController and CPU scripts
+    /// </summary>
+    private void AssignGridsToControllers()
+    {
+        // Assign player's grid to DicesController
+        if (playerDicesController != null && playerNumberGrid != null)
+        {
+            // Use reflection to set the numberGrid field in DicesController
+            var field = typeof(DicesController).GetField("numberGrid", 
+                System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+            if (field != null)
+            {
+                field.SetValue(playerDicesController, playerNumberGrid);
+                Debug.Log("[GameManager] Assigned player's NumberGrid to DicesController");
+            }
+            else
+            {
+                Debug.LogWarning("[GameManager] Could not find numberGrid field in DicesController!");
+            }
+        }
+        
+        // Assign CPU grids to CPU scripts
+        if (cpuPlayers != null)
+        {
+            for (int i = 0; i < cpuPlayers.Length; i++)
+            {
+                if (cpuPlayers[i] != null && cpuNumberGrids.ContainsKey(i))
+                {
+                    // Use reflection to set the numberGrid field in CPU
+                    var field = typeof(CPU).GetField("numberGrid", 
+                        System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+                    if (field != null)
+                    {
+                        field.SetValue(cpuPlayers[i], cpuNumberGrids[i]);
+                        Debug.Log($"[GameManager] Assigned CPU {i}'s NumberGrid to CPU script");
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"[GameManager] Could not find numberGrid field in CPU {i}!");
+                    }
+                }
+            }
+        }
     }
 }
 

@@ -36,6 +36,7 @@ public class NumberGrid : MonoBehaviour
     
     [Header("Component Names (in Prefab)")]
     [SerializeField] private string numberTextName = "NumberText"; // Name of the Text/TextMeshProUGUI component
+    [SerializeField] private string numberTextNameShadow = "NumberText1"; // Name of the Text/TextMeshProUGUI component
     [SerializeField] private string powerupImageName = "PowerupImage"; // Name of the Image component
     [SerializeField] private string selectButtonName = "SelectButton"; // Name of the Button component
     [SerializeField] private string highlightImageName = "HighlightImage"; // Name of the highlight Image component
@@ -240,15 +241,19 @@ public class NumberGrid : MonoBehaviour
         
         // Find and set number text
         TextMeshProUGUI numberText = FindComponentInChildren<TextMeshProUGUI>(box, numberTextName);
+        TextMeshProUGUI numberTextShadow = FindComponentInChildren<TextMeshProUGUI>(box, numberTextNameShadow);
         if (numberText != null)
         {
             numberText.text = number.ToString();
+            numberTextShadow.text = number.ToString();
             numberText.gameObject.SetActive(true);
+            numberTextShadow.gameObject.SetActive(true);
         }
         else
         {
             // Try Text component as fallback
             Text textComponent = FindComponentInChildren<Text>(box, numberTextName);
+            
             if (textComponent != null)
             {
                 textComponent.text = number.ToString();
@@ -343,9 +348,11 @@ public class NumberGrid : MonoBehaviour
         
         // Find and disable number text
         TextMeshProUGUI numberText = FindComponentInChildren<TextMeshProUGUI>(box, numberTextName);
+        TextMeshProUGUI numberTextShadow = FindComponentInChildren<TextMeshProUGUI>(box ,  numberTextNameShadow);
         if (numberText != null)
         {
             numberText.gameObject.SetActive(false);
+            numberTextShadow.gameObject.SetActive(false);
         }
         else
         {
