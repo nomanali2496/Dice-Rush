@@ -23,6 +23,10 @@ public class PlayerProfileUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI winnerScreenChipsText; // Chips display in winner screen
     [SerializeField] private TextMeshProUGUI winnerScreenCashText; // Cash display in winner screen
     
+    [Header("Daily Reward UI References")]
+    [SerializeField] private TextMeshProUGUI dailyRewardChipsText; // Chips display in daily reward panel
+    [SerializeField] private TextMeshProUGUI dailyRewardCashText; // Cash display in daily reward panel
+    
     [Header("1st Place Prize UI")]
     [SerializeField] private Image firstPlacePrizeIcon; // 1st place prize icon image (shows cash or chips sprite)
     [SerializeField] private TextMeshProUGUI firstPlacePrizeText; // 1st place prize text (shows cash or chips value)
@@ -296,6 +300,9 @@ public class PlayerProfileUI : MonoBehaviour
         // Update Winner Screen UI
         UpdateWinnerScreenCurrency(data.coins, data.cash);
         
+        // Update Daily Reward UI
+        UpdateDailyRewardCurrency(data.coins, data.cash);
+        
         // Update profile image
         if (profileImage == null)
         {
@@ -374,6 +381,9 @@ public class PlayerProfileUI : MonoBehaviour
         
         // Update Winner Screen UI with default values
         UpdateWinnerScreenCurrency(0, 0);
+        
+        // Update Daily Reward UI with default values
+        UpdateDailyRewardCurrency(0, 0);
     }
     
     /// <summary>
@@ -405,6 +415,22 @@ public class PlayerProfileUI : MonoBehaviour
         if (winnerScreenCashText != null)
         {
             winnerScreenCashText.text = cashPrefix + FormatCash(cash);
+        }
+    }
+    
+    /// <summary>
+    /// Updates daily reward panel chips and cash displays - cash is stored as float
+    /// </summary>
+    private void UpdateDailyRewardCurrency(int chips, float cash)
+    {
+        if (dailyRewardChipsText != null)
+        {
+            dailyRewardChipsText.text = coinsPrefix + chips.ToString("N0");
+        }
+        
+        if (dailyRewardCashText != null)
+        {
+            dailyRewardCashText.text = cashPrefix + FormatCash(cash);
         }
     }
     
@@ -779,6 +805,12 @@ public class PlayerProfileUI : MonoBehaviour
         {
             winnerScreenCashText.text = cashPrefix + FormatCash(amount);
         }
+        
+        // Update Daily Reward Panel
+        if (dailyRewardCashText != null)
+        {
+            dailyRewardCashText.text = cashPrefix + FormatCash(amount);
+        }
     }
     
     /// <summary>
@@ -802,6 +834,12 @@ public class PlayerProfileUI : MonoBehaviour
         if (winnerScreenChipsText != null)
         {
             winnerScreenChipsText.text = coinsPrefix + amount.ToString("N0");
+        }
+        
+        // Update Daily Reward Panel
+        if (dailyRewardChipsText != null)
+        {
+            dailyRewardChipsText.text = coinsPrefix + amount.ToString("N0");
         }
     }
     

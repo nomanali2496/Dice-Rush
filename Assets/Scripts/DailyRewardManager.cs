@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 
 /// <summary>
 /// Daily reward data structure
@@ -62,6 +63,29 @@ public class DailyRewardManager : MonoBehaviour
     [SerializeField] private bool resetOnNewWeek = true; // Reset rewards when new week starts
     [SerializeField] private float autoCloseDelay = 0.5f; // Delay before auto-closing panel after collecting reward
     
+    [Header("Animation - Source Positions (Daily Reward Display) - One for Each Day (1-7)")]
+    [SerializeField] private RectTransform[] sourceRewardPositions = new RectTransform[7]; // Starting positions for animation for each day (0-6 for days 1-7)
+    
+    [Header("Animation - Target Position (Top Display)")]
+    [SerializeField] private RectTransform targetCashPosition; // Target position for cash (top display)
+    [SerializeField] private RectTransform targetChipsPosition; // Target position for chips (top display)
+    
+    [Header("Animation - Sprites")]
+    [SerializeField] private Sprite cashSprite; // Sprite for cash animation
+    [SerializeField] private Sprite chipsSprite; // Sprite for chips animation
+    
+    [Header("Animation Settings")]
+    [SerializeField] private float animationDuration = 1.5f; // Duration of animation in seconds
+    [SerializeField] private AnimationCurve movementCurve = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f); // Animation curve for movement
+    [SerializeField] private int baseParticles = 3; // Base number of particles (minimum)
+    [SerializeField] private float particlesPerCash = 0.5f; // Number of particles per unit of cash (e.g., 0.5 = 1 particle per $2)
+    [SerializeField] private float particlesPerChip = 0.1f; // Number of particles per chip (e.g., 0.1 = 1 particle per 10 chips)
+    [SerializeField] private int maxParticles = 20; // Maximum number of particles to spawn
+    [SerializeField] private float delayBetweenParticles = 0.1f; // Delay between spawning each particle (one by one effect)
+    
+    [Header("Animation - Prefab")]
+    [SerializeField] private GameObject animatedSpritePrefab; // Prefab for animated cash/chips sprites (should have Image component)
+    
     [Header("Debug Info")]
     [SerializeField] private string currentUserId = ""; // Current user's PlayFab ID (for account-specific storage)
     [SerializeField] private string lastShownDate = "N/A"; // Last date when panel was shown
@@ -85,6 +109,18 @@ public class DailyRewardManager : MonoBehaviour
     // Reference to AuthenticationManager for login events
     private AuthenticationManager authManager;
     
+    // Animation tracking
+    private List<GameObject> activeAnimations = new List<GameObject>(); // Track active animation objects
+    private PlayerProfileUI playerProfileUI;
+    
+    // Values for count-up animation
+    private float initialCash = 0f;
+    private int initialChips = 0;
+    private float targetCash = 0f;
+    private int targetChips = 0;
+    private float currentAnimatedCash = 0f;
+    private int currentAnimatedChips = 0;
+    
     // Events for reward collection and panel management (optional - can be used by other scripts)
     public System.Action<int, float, float> OnRewardCollected; // day, chips, cash
     public System.Action OnDailyRewardPanelClosed; // Fired when the daily reward panel is closed
@@ -93,6 +129,9 @@ public class DailyRewardManager : MonoBehaviour
     {
         InitializeDailyRewards();
         SetupCloseButton();
+        
+        // Find PlayerProfileUI for animation target positions
+        playerProfileUI = FindObjectOfType<PlayerProfileUI>();
         
         // Find AuthenticationManager in scene
         authManager = FindObjectOfType<AuthenticationManager>();
@@ -129,6 +168,15 @@ public class DailyRewardManager : MonoBehaviour
         {
             authManager.OnAuthenticationSuccess -= OnUserLoggedIn;
         }
+        
+        // Clean up animations
+        CleanupAnimations();
+    }
+    
+    private void OnDisable()
+    {
+        // Clean up any active animations when disabled
+        CleanupAnimations();
     }
     
     /// <summary>
@@ -355,8 +403,63 @@ public class DailyRewardManager : MonoBehaviour
         // Store the day that was collected before advancing
         int collectedDay = currentDay;
         
-        // Add rewards (you can connect this to your game's currency system)
+        // Get initial values before adding rewards
+        if (PlayFabManager.Instance != null && PlayFabManager.Instance.currentPlayerData != null)
+        {
+            initialCash = PlayFabManager.Instance.currentPlayerData.cash;
+            initialChips = PlayFabManager.Instance.currentPlayerData.coins;
+            
+            // Calculate target values (initial + reward)
+            targetCash = initialCash + cashAmount;
+            targetChips = initialChips + Mathf.RoundToInt(chipsAmount);
+            
+            // Set current animated values to initial
+            currentAnimatedCash = initialCash;
+            currentAnimatedChips = initialChips;
+            
+            // Update UI to show initial values (before animation)
+            if (playerProfileUI != null)
+            {
+                playerProfileUI.UpdateAllCurrencyDisplays(initialChips, initialCash);
+            }
+        }
+        
+        // Play animation instead of immediately adding rewards
+        StartCoroutine(PlayRewardAnimationAndAddRewards(chipsAmount, cashAmount, collectedDay));
+    }
+    
+    /// <summary>
+    /// Plays reward animation and then adds rewards to player's account
+    /// </summary>
+    private IEnumerator PlayRewardAnimationAndAddRewards(float chipsAmount, float cashAmount, int collectedDay)
+    {
+        // Play animation for chips if present
+        if (chipsAmount > 0f)
+        {
+            PlayRewardAnimation(chipsAmount, false, collectedDay); // false = chips
+        }
+        
+        // Play animation for cash if present
+        if (cashAmount > 0f)
+        {
+            PlayRewardAnimation(cashAmount, true, collectedDay); // true = cash
+        }
+        
+        // Wait for animation to complete before adding rewards
+        yield return new WaitForSeconds(animationDuration + (delayBetweenParticles * maxParticles) + 0.2f);
+        
+        // Add rewards to player's account
         AddRewards(chipsAmount, cashAmount);
+        
+        // Ensure final values are exact (in case of rounding errors)
+        if (playerProfileUI != null)
+        {
+            if (PlayFabManager.Instance != null && PlayFabManager.Instance.currentPlayerData != null)
+            {
+                PlayerData data = PlayFabManager.Instance.currentPlayerData;
+                playerProfileUI.UpdateAllCurrencyDisplays(data.coins, data.cash);
+            }
+        }
         
         // Trigger event
         OnRewardCollected?.Invoke(collectedDay, chipsAmount, cashAmount);
@@ -367,7 +470,318 @@ public class DailyRewardManager : MonoBehaviour
         Debug.Log($"[DailyRewardManager] Collected Day {collectedDay} reward: {chipsAmount} Chips, {cashAmount} Cash. Advanced to day {currentDay}");
         
         // Auto-close panel after delay
-        StartCoroutine(AutoClosePanelAfterDelay());
+        yield return new WaitForSeconds(autoCloseDelay);
+        ClosePanel();
+        Debug.Log("[DailyRewardManager] Panel auto-closed after collecting reward");
+    }
+    
+    /// <summary>
+    /// Plays the animation of cash or chips moving from daily reward position to top display
+    /// </summary>
+    private void PlayRewardAnimation(float amount, bool isCash, int day)
+    {
+        RectTransform sourcePosition = GetSourceRewardPosition(day);
+        if (sourcePosition == null)
+        {
+            Debug.LogWarning($"[DailyRewardManager] Source reward position not assigned for day {day}! Cannot play animation.");
+            return;
+        }
+        
+        RectTransform targetPosition = isCash ? targetCashPosition : targetChipsPosition;
+        if (targetPosition == null)
+        {
+            Debug.LogWarning($"[DailyRewardManager] Target position not assigned for {(isCash ? "cash" : "chips")}! Cannot play animation.");
+            return;
+        }
+        
+        Sprite rewardSprite = isCash ? cashSprite : chipsSprite;
+        if (rewardSprite == null)
+        {
+            Debug.LogWarning($"[DailyRewardManager] Reward sprite not assigned for {(isCash ? "cash" : "chips")}! Cannot play animation.");
+            return;
+        }
+        
+        Debug.Log($"[DailyRewardManager] Starting animation - Reward: {amount} {(isCash ? "cash" : "chips")}");
+        StartCoroutine(AnimateParticles(sourcePosition, targetPosition, rewardSprite, amount, isCash));
+    }
+    
+    /// <summary>
+    /// Gets RectTransform for a specific day
+    /// </summary>
+    private RectTransform GetSourceRewardPosition(int day)
+    {
+        // Convert day (1-7) to array index (0-6)
+        int dayIndex = day - 1;
+        
+        if (dayIndex < 0 || dayIndex >= 7)
+        {
+            Debug.LogWarning($"[DailyRewardManager] Invalid day {day}! Must be 1-7.");
+            return null;
+        }
+        
+        if (sourceRewardPositions != null && dayIndex < sourceRewardPositions.Length && sourceRewardPositions[dayIndex] != null)
+        {
+            return sourceRewardPositions[dayIndex];
+        }
+        
+        return null;
+    }
+    
+    /// <summary>
+    /// Animates particles moving from source to target position
+    /// Particles spawn one by one from the exact source transform position
+    /// Number of particles is based on the reward amount
+    /// Also animates the count-up of cash/chips display
+    /// </summary>
+    private IEnumerator AnimateParticles(RectTransform source, RectTransform target, Sprite sprite, float amount, bool isCash)
+    {
+        Debug.Log($"[DailyRewardManager] AnimateParticles - Type: {(isCash ? "Cash" : "Chips")}, Amount: {amount}, Source: {source.position}, Target: {target.position}");
+        
+        // Calculate particle count based on reward amount
+        int particleCount;
+        if (isCash)
+        {
+            // For cash: base particles + (amount * particlesPerCash)
+            particleCount = Mathf.RoundToInt(baseParticles + (amount * particlesPerCash));
+        }
+        else
+        {
+            // For chips: base particles + (amount * particlesPerChip)
+            particleCount = Mathf.RoundToInt(baseParticles + (amount * particlesPerChip));
+        }
+        
+        // Clamp to max particles
+        particleCount = Mathf.Clamp(particleCount, baseParticles, maxParticles);
+        
+        Debug.Log($"[DailyRewardManager] Calculated {particleCount} particles for {(isCash ? "cash" : "chips")} reward of {amount}");
+        
+        // Calculate increment per particle
+        float incrementPerParticle = amount / particleCount;
+        
+        // Get the exact source position (world position for UI)
+        Vector3 sourceWorldPos = source.position;
+        
+        // Spawn particles one by one with delay
+        for (int i = 0; i < particleCount; i++)
+        {
+            // Create particle at exact source position
+            GameObject particle = CreateAnimatedSprite(sourceWorldPos, sprite);
+            if (particle != null)
+            {
+                activeAnimations.Add(particle);
+                
+                // Set particle to exact source position (no random spread)
+                RectTransform particleRect = particle.GetComponent<RectTransform>();
+                if (particleRect != null)
+                {
+                    particleRect.position = sourceWorldPos;
+                }
+                else
+                {
+                    particle.transform.position = sourceWorldPos;
+                }
+                
+                Debug.Log($"[DailyRewardManager] Created particle {i + 1}/{particleCount} at exact source position {sourceWorldPos}");
+                
+                // Animate this particle to target and update count-up
+                StartCoroutine(AnimateSingleParticleWithCountUp(particle.transform, target.position, animationDuration, incrementPerParticle, isCash));
+            }
+            else
+            {
+                Debug.LogWarning($"[DailyRewardManager] Failed to create particle {i + 1}");
+            }
+            
+            // Wait before spawning next particle (one by one effect)
+            if (i < particleCount - 1) // Don't wait after the last particle
+            {
+                yield return new WaitForSeconds(delayBetweenParticles);
+            }
+        }
+        
+        yield return null;
+    }
+    
+    /// <summary>
+    /// Creates an animated sprite GameObject
+    /// </summary>
+    private GameObject CreateAnimatedSprite(Vector3 position, Sprite sprite)
+    {
+        GameObject spriteObj;
+        
+        // Find the Canvas to parent the sprite to (for proper UI rendering)
+        // First try to find Canvas from dailyRewardPanel, then fall back to script's GameObject
+        Canvas canvas = null;
+        Transform parentTransform = transform; // Default fallback
+        
+        if (dailyRewardPanel != null)
+        {
+            // Try to find Canvas from daily reward panel
+            canvas = dailyRewardPanel.GetComponentInParent<Canvas>();
+            if (canvas != null)
+            {
+                parentTransform = canvas.transform;
+            }
+            else
+            {
+                // If no Canvas found, use the daily reward panel itself as parent
+                parentTransform = dailyRewardPanel.transform;
+            }
+        }
+        else
+        {
+            // Fallback: try to find Canvas from script's GameObject
+            canvas = GetComponentInParent<Canvas>();
+            if (canvas != null)
+            {
+                parentTransform = canvas.transform;
+            }
+            else
+            {
+                // Last resort: use script's GameObject
+                parentTransform = transform;
+            }
+        }
+        
+        if (animatedSpritePrefab != null)
+        {
+            spriteObj = Instantiate(animatedSpritePrefab, parentTransform);
+        }
+        else
+        {
+            // Create a simple GameObject with Image component if no prefab
+            spriteObj = new GameObject("AnimatedSprite");
+            spriteObj.transform.SetParent(parentTransform);
+            
+            // Add RectTransform for UI element
+            RectTransform rectTransform = spriteObj.AddComponent<RectTransform>();
+            rectTransform.sizeDelta = new Vector2(100f, 100f); // Default size
+            
+            Image img = spriteObj.AddComponent<Image>();
+            img.sprite = sprite;
+        }
+        
+        // Set position using RectTransform for UI elements
+        RectTransform rect = spriteObj.GetComponent<RectTransform>();
+        if (rect != null)
+        {
+            rect.position = position;
+        }
+        else
+        {
+            spriteObj.transform.position = position;
+        }
+        
+        // Set sprite if Image component exists
+        Image image = spriteObj.GetComponent<Image>();
+        if (image != null && sprite != null)
+        {
+            image.sprite = sprite;
+        }
+        
+        return spriteObj;
+    }
+    
+    /// <summary>
+    /// Animates a single particle from source to target and updates count-up display
+    /// </summary>
+    private IEnumerator AnimateSingleParticleWithCountUp(Transform particle, Vector3 targetPosition, float duration, float increment, bool isCash)
+    {
+        RectTransform rectTransform = particle.GetComponent<RectTransform>();
+        Vector3 startPosition;
+        
+        // Get start position based on whether it's a UI element or world object
+        if (rectTransform != null)
+        {
+            startPosition = rectTransform.position;
+        }
+        else
+        {
+            startPosition = particle.position;
+        }
+        
+        float elapsed = 0f;
+        bool countUpApplied = false;
+        
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / duration;
+            float curveValue = movementCurve.Evaluate(t);
+            
+            // Interpolate position
+            Vector3 currentPosition = Vector3.Lerp(startPosition, targetPosition, curveValue);
+            
+            if (rectTransform != null)
+            {
+                rectTransform.position = currentPosition;
+            }
+            else
+            {
+                particle.position = currentPosition;
+            }
+            
+            // Apply count-up when particle reaches 80% of the way there
+            if (!countUpApplied && t >= 0.8f)
+            {
+                if (isCash)
+                {
+                    currentAnimatedCash += increment;
+                    currentAnimatedCash = Mathf.Min(currentAnimatedCash, targetCash); // Don't exceed target
+                }
+                else
+                {
+                    currentAnimatedChips += Mathf.RoundToInt(increment);
+                    currentAnimatedChips = Mathf.Min(currentAnimatedChips, targetChips); // Don't exceed target
+                }
+                
+                // Update UI display
+                if (playerProfileUI != null)
+                {
+                    playerProfileUI.UpdateAllCurrencyDisplays(currentAnimatedChips, currentAnimatedCash);
+                }
+                
+                countUpApplied = true;
+            }
+            
+            // Keep size the same throughout animation (no scaling)
+            particle.localScale = Vector3.one;
+            
+            yield return null;
+        }
+        
+        // Ensure final position
+        if (rectTransform != null)
+        {
+            rectTransform.position = targetPosition;
+        }
+        else
+        {
+            particle.position = targetPosition;
+        }
+        
+        // Destroy particle after a short delay
+        yield return new WaitForSeconds(0.1f);
+        
+        if (particle != null && particle.gameObject != null)
+        {
+            activeAnimations.Remove(particle.gameObject);
+            Destroy(particle.gameObject);
+        }
+    }
+    
+    /// <summary>
+    /// Cleans up all active animations
+    /// </summary>
+    private void CleanupAnimations()
+    {
+        foreach (GameObject anim in activeAnimations)
+        {
+            if (anim != null)
+            {
+                Destroy(anim);
+            }
+        }
+        activeAnimations.Clear();
     }
     
     /// <summary>
