@@ -211,6 +211,7 @@ public class PlayerProfileUI : MonoBehaviour
         if (data != null)
         {
             Debug.Log($"[PlayerProfileUI] Received data - Name: {data.playerName}, Cash: {data.cash}, Coins: {data.coins}");
+            Debug.Log($"[PlayerProfileUI] Formatted Cash: {FormatCash(data.cash)}, Formatted Coins: {FormatCoins(data.coins)}");
         }
         UpdateUI(data);
     }
@@ -240,6 +241,7 @@ public class PlayerProfileUI : MonoBehaviour
         }
         
         Debug.Log($"[PlayerProfileUI] Updating UI with: Name={data.playerName}, Email={data.email}, Cash={data.cash}, Coins={data.coins}");
+        Debug.Log($"[PlayerProfileUI] Formatting - Cash: {data.cash} -> {FormatCash(data.cash)}, Coins: {data.coins} -> {FormatCoins(data.coins)}");
         
         // Update name - Support InputField
         // Only update if not in edit mode (to avoid interrupting user's typing)
@@ -293,7 +295,7 @@ public class PlayerProfileUI : MonoBehaviour
         // Update coins (Main Menu)
         if (coinsText != null)
         {
-            coinsText.text = coinsPrefix + data.coins.ToString("N0");
+            coinsText.text = coinsPrefix + FormatCoins(data.coins);
             Debug.Log($"[PlayerProfileUI] Set coinsText to: {coinsText.text}");
         }
         else
@@ -377,14 +379,15 @@ public class PlayerProfileUI : MonoBehaviour
             emailText.text = "Not logged in";
         helpAndSupportEmailText.text = emailText.text;
         
+        // Use formatting methods for consistency (even though 0 doesn't need formatting)
         if (cashText != null)
-            cashText.text = cashPrefix + "0";
+            cashText.text = cashPrefix + FormatCash(0f);
         
         if (accountCashText != null)
-            accountCashText.text = cashPrefix + "0";
+            accountCashText.text = cashPrefix + FormatCash(0f);
         
         if (coinsText != null)
-            coinsText.text = coinsPrefix + "0";
+            coinsText.text = coinsPrefix + FormatCoins(0);
         
         // Update Gameplay UI with default values
         UpdateGameplayCurrency(0, 0);
@@ -403,7 +406,7 @@ public class PlayerProfileUI : MonoBehaviour
     {
         if (gameplayChipsText != null)
         {
-            gameplayChipsText.text = coinsPrefix + chips.ToString("N0");
+            gameplayChipsText.text = coinsPrefix + FormatCoins(chips);
         }
         
         if (gameplayCashText != null)
@@ -419,7 +422,7 @@ public class PlayerProfileUI : MonoBehaviour
     {
         if (winnerScreenChipsText != null)
         {
-            winnerScreenChipsText.text = coinsPrefix + chips.ToString("N0");
+            winnerScreenChipsText.text = coinsPrefix + FormatCoins(chips);
         }
         
         if (winnerScreenCashText != null)
@@ -435,7 +438,7 @@ public class PlayerProfileUI : MonoBehaviour
     {
         if (dailyRewardChipsText != null)
         {
-            dailyRewardChipsText.text = coinsPrefix + chips.ToString("N0");
+            dailyRewardChipsText.text = coinsPrefix + FormatCoins(chips);
         }
         
         if (dailyRewardCashText != null)
@@ -837,25 +840,25 @@ public class PlayerProfileUI : MonoBehaviour
         // Update Main Menu
         if (coinsText != null)
         {
-            coinsText.text = coinsPrefix + amount.ToString("N0");
+            coinsText.text = coinsPrefix + FormatCoins(amount);
         }
         
         // Update Gameplay
         if (gameplayChipsText != null)
         {
-            gameplayChipsText.text = coinsPrefix + amount.ToString("N0");
+            gameplayChipsText.text = coinsPrefix + FormatCoins(amount);
         }
         
         // Update Winner Screen
         if (winnerScreenChipsText != null)
         {
-            winnerScreenChipsText.text = coinsPrefix + amount.ToString("N0");
+            winnerScreenChipsText.text = coinsPrefix + FormatCoins(amount);
         }
         
         // Update Daily Reward Panel
         if (dailyRewardChipsText != null)
         {
-            dailyRewardChipsText.text = coinsPrefix + amount.ToString("N0");
+            dailyRewardChipsText.text = coinsPrefix + FormatCoins(amount);
         }
     }
     
@@ -918,22 +921,77 @@ public class PlayerProfileUI : MonoBehaviour
     
     /// <summary>
     /// Format cash value intelligently:
-    /// - Whole numbers: show without decimals (e.g., "1000")
-    /// - Decimal numbers: show only necessary decimals (e.g., "1000.5" or "1000.25")
+    /// - Values >= 1000: convert to "k" notation (e.g., "1k", "1.5k", "10k")
+    /// - Values < 1000: 
+    ///   - If 2 digits or less before decimal (e.g., 99.9): show decimals
+    ///   - If 3+ digits before decimal (e.g., 999.9): round to integer (999)
     /// </summary>
-    private string FormatCash(float amount)
+    public static string FormatCash(float amount)
     {
+        // Convert to "k" notation if >= 1000
+        if (amount >= 1000f)
+        {
+            float kValue = amount / 1000f;
+            // Check if it's a whole number in k (using epsilon for floating point comparison)
+            if (Mathf.Abs(kValue - Mathf.RoundToInt(kValue)) < 0.001f)
+            {
+                return Mathf.RoundToInt(kValue).ToString() + "k";
+            }
+            else
+            {
+                // Show up to 1 decimal place for k notation, removing trailing zeros
+                return kValue.ToString("0.#") + "k";
+            }
+        }
+        
+        // For values < 1000
+        int wholeNumberPart = Mathf.FloorToInt(amount);
+        
+        // If 3+ digits before decimal point (>= 100), truncate to integer (don't round)
+        if (wholeNumberPart >= 100)
+        {
+            return wholeNumberPart.ToString();
+        }
+        
+        // If 2 digits or less before decimal point (< 100), show decimals if present
         // Check if it's a whole number
-        if (amount == (int)amount)
+        if (Mathf.Abs(amount - Mathf.RoundToInt(amount)) < 0.001f)
         {
             // Whole number - show without decimals
-            return ((int)amount).ToString();
+            return Mathf.RoundToInt(amount).ToString();
         }
         else
         {
             // Has decimals - show up to 2 decimal places, removing trailing zeros
             return amount.ToString("0.##");
         }
+    }
+    
+    /// <summary>
+    /// Format coins/chips value intelligently:
+    /// - Values >= 1000: convert to "k" notation (e.g., "1k", "1.5k", "10k")
+    /// - Values < 1000: show as whole number
+    /// </summary>
+    public static string FormatCoins(int amount)
+    {
+        // Convert to "k" notation if >= 1000
+        if (amount >= 1000)
+        {
+            float kValue = amount / 1000f;
+            // Check if it's a whole number in k (using epsilon for floating point comparison)
+            if (Mathf.Abs(kValue - Mathf.RoundToInt(kValue)) < 0.001f)
+            {
+                return Mathf.RoundToInt(kValue).ToString() + "k";
+            }
+            else
+            {
+                // Show up to 1 decimal place for k notation, removing trailing zeros
+                return kValue.ToString("0.#") + "k";
+            }
+        }
+        
+        // For values < 1000, show as whole number
+        return amount.ToString();
     }
     
     #endregion
