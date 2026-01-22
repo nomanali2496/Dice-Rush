@@ -13,6 +13,7 @@ public class PlayerProfileUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI helpAndSupportEmailText;
     [SerializeField] private TextMeshProUGUI cashText;
     [SerializeField] private TextMeshProUGUI coinsText;
+    [SerializeField] private TextMeshProUGUI accountCashText; // Account cash display (aligned with other currency displays)
     [SerializeField] private Image profileImage;
     
     [Header("Gameplay UI References")]
@@ -283,6 +284,12 @@ public class PlayerProfileUI : MonoBehaviour
             Debug.LogWarning("[PlayerProfileUI] cashText is null!");
         }
         
+        // Update account cash display - cash is stored as float
+        if (accountCashText != null)
+        {
+            accountCashText.text = cashPrefix + FormatCash(data.cash);
+        }
+        
         // Update coins (Main Menu)
         if (coinsText != null)
         {
@@ -372,6 +379,9 @@ public class PlayerProfileUI : MonoBehaviour
         
         if (cashText != null)
             cashText.text = cashPrefix + "0";
+        
+        if (accountCashText != null)
+            accountCashText.text = cashPrefix + "0";
         
         if (coinsText != null)
             coinsText.text = coinsPrefix + "0";
@@ -792,6 +802,12 @@ public class PlayerProfileUI : MonoBehaviour
         if (cashText != null)
         {
             cashText.text = cashPrefix + FormatCash(amount);
+        }
+        
+        // Update Account Cash
+        if (accountCashText != null)
+        {
+            accountCashText.text = cashPrefix + FormatCash(amount);
         }
         
         // Update Gameplay
