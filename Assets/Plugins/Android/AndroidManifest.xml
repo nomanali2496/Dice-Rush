@@ -12,8 +12,8 @@
         <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
-        <data android:scheme="https" android:host="blingodice.app.link" />
-        <data android:scheme="https" android:host="blingodice-alternate.app.link" />
+        <data android:scheme="https" android:host="blingodice.test-app.link" />
+        <data android:scheme="https" android:host="blingodice-alternate.test-app.link" />
       </intent-filter>
       <intent-filter>
         <data android:host="open" android:scheme="blingodice" />
