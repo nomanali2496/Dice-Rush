@@ -30,9 +30,26 @@ public class NumberGrid : MonoBehaviour
     [Header("Grid Settings")]
     [SerializeField] private int gridWidth = 5; // Grid width (5 columns)
     [SerializeField] private int gridHeight = 5; // Grid height (5 rows)
-    [SerializeField] private float spacingX = 100f; // Horizontal spacing between boxes
-    [SerializeField] private float spacingY = 100f; // Vertical spacing between boxes
-    [SerializeField] private Vector2 startPosition = Vector2.zero; // Starting position for grid
+    [SerializeField] private float spacingX = 18.27f; // Horizontal spacing between boxes (constant)
+    [SerializeField] private float spacingY = 0f; // Vertical spacing between boxes (constant)
+    
+    [Header("Padding (in pixels)")]
+    [SerializeField] private float paddingLeft = 20f; // Padding on the left side
+    [SerializeField] private float paddingRight = 20f; // Padding on the right side
+    [SerializeField] private float paddingTop = 20f; // Padding on the top side
+    [SerializeField] private float paddingBottom = 20f; // Padding on the bottom side
+    
+    [SerializeField] private Vector2 startPosition = Vector2.zero; // Starting position for grid (calculated automatically)
+    
+    [Header("Reference Values (1440x3216 resolution)")]
+    [SerializeField] private float referenceCellSizeX = 218.8f; // Reference cell width
+    [SerializeField] private float referenceCellSizeY = 216.5f; // Reference cell height
+    [SerializeField] private float referenceFontSize = 60f; // Reference font size for number text (at reference resolution)
+    
+    // Calculated values (set during grid generation)
+    private float currentCellSizeX; // Current scaled cell width
+    private float currentCellSizeY; // Current scaled cell height
+    private float scaleFactor = 1f; // Scale factor based on NumberGrid size
     
     [Header("Component Names (in Prefab)")]
     [SerializeField] private string numberTextName = "NumberText"; // Name of the Text/TextMeshProUGUI component
@@ -128,12 +145,102 @@ public class NumberGrid : MonoBehaviour
     }
     
     /// <summary>
+    /// Sets the size and positions a box instance based on calculated cell size and grid position
+    /// </summary>
+    private void SetSizeAndPositionBox(GameObject box, int row, int col)
+    {
+        if (box == null) return;
+        
+        // Set the box size directly (no scaling, just change width/height)
+        RectTransform boxRect = box.GetComponent<RectTransform>();
+        if (boxRect != null)
+        {
+            // Set the size directly to match calculated cell size
+            boxRect.sizeDelta = new Vector2(currentCellSizeX, currentCellSizeY);
+        }
+        
+        // Calculate position based on cell size
+        // Position is center-to-center: startPosition + (col * (cellWidth + spacing))
+        Vector3 position = new Vector3(
+            startPosition.x + col * (currentCellSizeX + spacingX),
+            startPosition.y - row * (currentCellSizeY + spacingY),
+            0f
+        );
+        
+        // Set position
+        box.transform.localPosition = position;
+    }
+    
+    /// <summary>
+    /// Calculates the cell sizes based on NumberGrid RectTransform size
+    /// Ensures the 5x5 grid fits within the NumberGrid bounds
+    /// </summary>
+    private void CalculateGridScale()
+    {
+        // Get the NumberGrid RectTransform
+        RectTransform rectTransform = GetComponent<RectTransform>();
+        if (rectTransform == null)
+        {
+            Debug.LogWarning("[NumberGrid] No RectTransform found! Using default cell sizes.");
+            currentCellSizeX = referenceCellSizeX;
+            currentCellSizeY = referenceCellSizeY;
+            startPosition = Vector2.zero;
+            return;
+        }
+        
+        // Get the current size of the NumberGrid (available space)
+        // Subtract individual padding from each side
+        float availableWidth = rectTransform.rect.width - (paddingLeft + paddingRight);
+        float availableHeight = rectTransform.rect.height - (paddingTop + paddingBottom);
+        
+        Debug.Log($"[NumberGrid] ====== SCALE CALCULATION ====== Screen: {Screen.width}x{Screen.height} | NumberGrid Size: {availableWidth:F2}x{availableHeight:F2} | RefCell: {referenceCellSizeX:F2}x{referenceCellSizeY:F2} | Spacing: {spacingX:F2},{spacingY:F2} | Padding: L{paddingLeft:F0} R{paddingRight:F0} T{paddingTop:F0} B{paddingBottom:F0}");
+        
+        // Calculate total grid size at reference scale
+        // Grid width = 5 cells + 4 spacings (spacing is gap between cells)
+        float referenceGridWidth = (gridWidth * referenceCellSizeX) + ((gridWidth - 1) * spacingX);
+        // Grid height = 5 cells + 4 spacings
+        float referenceGridHeight = (gridHeight * referenceCellSizeY) + ((gridHeight - 1) * spacingY);
+        
+        // Calculate scale factors for width and height
+        float scaleX = availableWidth / referenceGridWidth;
+        float scaleY = availableHeight / referenceGridHeight;
+        
+        // Use the smaller scale factor to ensure grid fits in both dimensions
+        scaleFactor = Mathf.Min(scaleX, scaleY);
+        
+        // Calculate scaled cell sizes
+        currentCellSizeX = referenceCellSizeX * scaleFactor;
+        currentCellSizeY = referenceCellSizeY * scaleFactor;
+        
+        // Calculate actual grid size with scaled cells (spacing stays constant)
+        float actualGridWidth = (gridWidth * currentCellSizeX) + ((gridWidth - 1) * spacingX);
+        float actualGridHeight = (gridHeight * currentCellSizeY) + ((gridHeight - 1) * spacingY);
+        
+        // Calculate start position to center the grid within NumberGrid bounds
+        // Position is for the CENTER of the first cell (top-left)
+        // In UI coordinates: (0,0) is center, positive X is right, positive Y is up
+        // Account for individual padding (offset horizontally by paddingLeft-paddingRight, vertically by paddingTop-paddingBottom)
+        float horizontalPaddingOffset = (paddingLeft - paddingRight) / 2f;
+        float verticalPaddingOffset = (paddingTop - paddingBottom) / 2f;
+        
+        startPosition = new Vector2(
+            -actualGridWidth / 2f + currentCellSizeX / 2f + horizontalPaddingOffset,  // Center horizontally, then offset to first cell center, then adjust for padding difference
+            actualGridHeight / 2f - currentCellSizeY / 2f - verticalPaddingOffset     // Center vertically (top), then offset to first cell center, then adjust for padding difference
+        );
+        
+        Debug.Log($"[NumberGrid] Grid scale calculated - Available: {availableWidth:F2}x{availableHeight:F2}, Scale Factor: {scaleFactor:F3}, Cell Size: {currentCellSizeX:F2}x{currentCellSizeY:F2}, Grid Size: {actualGridWidth:F2}x{actualGridHeight:F2}, Start Position: {startPosition}");
+    }
+    
+    /// <summary>
     /// Generates the 5x5 grid with random positioning
     /// </summary>
     public void GenerateGrid()
     {
         // Clear existing boxes if any
         ClearGrid();
+        
+        // Calculate scale factor and cell sizes based on NumberGrid RectTransform size
+        CalculateGridScale();
         
         // Reset dice sums for both players
         currentDiceSumPlayer = -1;
@@ -212,18 +319,16 @@ public class NumberGrid : MonoBehaviour
             return;
         }
         
-        // Calculate world position
+        // Calculate grid position (row and column)
         int row = gridPosition / gridWidth;
         int col = gridPosition % gridWidth;
-        Vector3 position = new Vector3(
-            startPosition.x + col * spacingX,
-            startPosition.y - row * spacingY,
-            0f
-        );
         
         // Instantiate the box
         GameObject box = Instantiate(numberBoxPrefab, transform);
-        box.transform.localPosition = position;
+        
+        // Scale and position the box
+        SetSizeAndPositionBox(box, row, col);
+        
         instantiatedBoxes.Add(box);
         
         // Create box data
@@ -246,6 +351,16 @@ public class NumberGrid : MonoBehaviour
         {
             numberText.text = number.ToString();
             numberTextShadow.text = number.ToString();
+            
+            // Scale font size proportionally with cell size
+            float scaledFontSize = referenceFontSize * scaleFactor;
+            numberText.fontSize = scaledFontSize;
+            numberTextShadow.fontSize = scaledFontSize;
+            
+            // Disable auto-sizing to use our calculated font size
+            numberText.enableAutoSizing = false;
+            numberTextShadow.enableAutoSizing = false;
+            
             numberText.gameObject.SetActive(true);
             numberTextShadow.gameObject.SetActive(true);
         }
@@ -318,18 +433,16 @@ public class NumberGrid : MonoBehaviour
             return;
         }
         
-        // Calculate world position
+        // Calculate grid position (row and column)
         int row = gridPosition / gridWidth;
         int col = gridPosition % gridWidth;
-        Vector3 position = new Vector3(
-            startPosition.x + col * spacingX,
-            startPosition.y - row * spacingY,
-            0f
-        );
         
         // Instantiate the box
         GameObject box = Instantiate(numberBoxPrefab, transform);
-        box.transform.localPosition = position;
+        
+        // Set size and position the box
+        SetSizeAndPositionBox(box, row, col);
+        
         instantiatedBoxes.Add(box);
         
         // Create box data for powerup (powerups are not selectable)
