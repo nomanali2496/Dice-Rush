@@ -7440,7 +7440,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &314033591
 RectTransform:
   m_ObjectHideFlags: 0
@@ -41015,6 +41015,7 @@ MonoBehaviour:
   diceParentContainer: {fileID: 1749224912}
   referenceScreenSize: {x: 1440, y: 3216}
   referenceDiceScale: 9000
+  referenceDiceSpacing: 200
   enableDiceScaling: 1
   panelsToMonitor:
   - {fileID: 1200179411}
