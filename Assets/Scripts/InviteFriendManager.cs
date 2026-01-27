@@ -617,5 +617,25 @@ public class InviteFriendManager : MonoBehaviour, IEnhancedScrollerDelegate
     }
     
     #endregion
+    
+    #region Scaling Support
+    
+    /// <summary>
+    /// Sets the cell size and reloads the scroller (called by FriendRowScaler)
+    /// </summary>
+    public void SetCellSizeAndReload(float newCellSize)
+    {
+        cellSize = newCellSize;
+        Debug.Log($"[InviteFriendManager] Cell size updated to {cellSize:F2}");
+        
+        // Reload scroller to apply new cell size
+        if (scroller != null && scroller.gameObject.activeInHierarchy && _friendsData != null)
+        {
+            scroller.ReloadData();
+            Debug.Log($"[InviteFriendManager] Scroller reloaded with new cell size");
+        }
+    }
+    
+    #endregion
 }
 

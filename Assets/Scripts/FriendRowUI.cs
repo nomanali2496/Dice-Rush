@@ -43,7 +43,11 @@ public class FriendRowUI : EnhancedScrollerCellView
     [SerializeField] private Sprite onlineSprite; // Sprite to show when friend is online
     [SerializeField] private Sprite offlineSprite; // Sprite to show when friend is offline
     
+    [Header("Line Separator")]
+    [SerializeField] private RectTransform lineImage; // Line separator image
+    
     private FriendRowData currentData;
+    private static FriendRowScaler cachedScaler; // Cache the scaler to avoid FindObjectOfType every time
     
     /// <summary>
     /// Sets the data for this cell view (called by Enhanced Scroller)
@@ -52,7 +56,37 @@ public class FriendRowUI : EnhancedScrollerCellView
     public void SetData(FriendRowData data)
     {
         currentData = data;
+        
+        // Apply scaling every time (Enhanced Scroller recycles cells)
+        ApplyScaling();
+        
         SetupRow(data.friendName, data.friendId, data.avatarSprite, data.isOnline);
+    }
+    
+    /// <summary>
+    /// Applies scaling to all row elements using FriendRowScaler
+    /// </summary>
+    private void ApplyScaling()
+    {
+        // Find or use cached FriendRowScaler
+        if (cachedScaler == null)
+        {
+            cachedScaler = FindObjectOfType<FriendRowScaler>();
+        }
+        
+        if (cachedScaler != null)
+        {
+            // Get RectTransforms
+            RectTransform profileRect = avatarImage != null ? avatarImage.GetComponent<RectTransform>() : null;
+            RectTransform statusRect = statusImage != null ? statusImage.GetComponent<RectTransform>() : null;
+            
+            // Scale all elements
+            cachedScaler.ScaleRowElements(profileRect, statusRect, nameText, idText, lineImage);
+        }
+        else
+        {
+            Debug.LogWarning("[FriendRowUI] FriendRowScaler not found in scene! Elements will not be scaled.");
+        }
     }
     
     /// <summary>

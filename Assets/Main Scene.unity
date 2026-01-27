@@ -23665,6 +23665,7 @@ GameObject:
   - component: {fileID: 1142095843}
   - component: {fileID: 1142095845}
   - component: {fileID: 1142095844}
+  - component: {fileID: 1142095846}
   m_Layer: 5
   m_Name: Invite
   m_TagString: Untagged
@@ -23730,6 +23731,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142095842}
   m_CullTransparentMesh: 1
+--- !u!114 &1142095846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142095842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c70215a399a462f4ab3377de7c206e58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InviteFriendsScaler
+  referenceScreenSize: {x: 1440, y: 3216}
+  upperPart: {fileID: 454757767}
+  title: {fileID: 297146627}
+  closeButton: {fileID: 1231627232}
+  lowerPart: {fileID: 1611949348}
+  upperButton: {fileID: 1356579009}
+  panel1: {fileID: 1670358145822806056}
+  panel2: {fileID: 1467634289}
+  scrollerContainer: {fileID: 0}
+  inviteFriendButton: {fileID: 2117616989}
 --- !u!1 &1143662463 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1149332164459918182, guid: c0efaed249119934eac021f344791969, type: 3}
@@ -34560,10 +34583,10 @@ RectTransform:
   - {fileID: 2117616989}
   m_Father: {fileID: 124563282}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: -4.96, y: -9.0655}
-  m_AnchorMax: {x: 5.96, y: 7.8754997}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -138}
+  m_SizeDelta: {x: 1334, y: 2132}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1617791325
 PrefabInstance:
@@ -43147,7 +43170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
