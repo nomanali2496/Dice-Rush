@@ -640,5 +640,41 @@ public class DicesController : MonoBehaviour
     }
     
     #endregion
+    
+    #region Dice Visibility Control
+    
+    /// <summary>
+    /// Hides both dice (called when panels are shown over gameplay)
+    /// </summary>
+    public void HideDices()
+    {
+        if (dice1 != null)
+        {
+            dice1.SetActive(false);
+        }
+        if (dice2 != null)
+        {
+            dice2.SetActive(false);
+        }
+        Debug.Log("[DicesController] Dice hidden - panel is active");
+    }
+    
+    /// <summary>
+    /// Shows both dice (called when on gameplay with no panels)
+    /// </summary>
+    public void ShowDices()
+    {
+        if (dice1 != null)
+        {
+            dice1.SetActive(true);
+        }
+        if (dice2 != null)
+        {
+            dice2.SetActive(true);
+        }
+        Debug.Log("[DicesController] Dice visible - gameplay active");
+    }
+    
+    #endregion
 }
 
