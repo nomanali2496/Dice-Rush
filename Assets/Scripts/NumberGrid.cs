@@ -4,6 +4,7 @@ using TMPro;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using DG.Tweening;
 
 /// <summary>
 /// Player type enum for tracking selections separately
@@ -85,6 +86,7 @@ public class NumberGrid : MonoBehaviour
         public int selectedInRollSum = -1; // Dice sum when this box was selected (-1 if not selected)
         public int selectedInRollId = -1; // Roll ID when this box was selected (-1 if not selected)
         public bool isPowerupVisible = false; // Whether this powerup is currently visible
+        public Tweener powerupAnimation; // DOTween animation for powerup (when active)
     }
     
     private List<BoxData> boxDataList = new List<BoxData>(); // List to store all box data
@@ -477,12 +479,12 @@ public class NumberGrid : MonoBehaviour
             }
         }
         
-        // Find and store powerup image with sprite (start hidden)
+        // Find and store powerup image with sprite (start visible but inactive)
         Image powerupImage = FindComponentInChildren<Image>(box, powerupImageName);
         if (powerupImage != null)
         {
             powerupImage.sprite = powerupSprites[powerupSpriteIndex];
-            powerupImage.gameObject.SetActive(false); // Start hidden
+            powerupImage.gameObject.SetActive(true); // Start visible
             boxData.powerupImage = powerupImage; // Store reference
         }
         else
@@ -1261,7 +1263,7 @@ public class NumberGrid : MonoBehaviour
     }
     
     /// <summary>
-    /// Shows a powerup box (makes it visible and selectable)
+    /// Shows a powerup box (makes it selectable and starts animation)
     /// </summary>
     private void ShowPowerup(BoxData powerupBox)
     {
@@ -1270,10 +1272,24 @@ public class NumberGrid : MonoBehaviour
         currentlyVisiblePowerup = powerupBox;
         powerupBox.isPowerupVisible = true;
         
-        // Show powerup image
+        // Powerup image is already visible, just start animating it
         if (powerupBox.powerupImage != null)
         {
-            powerupBox.powerupImage.gameObject.SetActive(true);
+            // Kill any existing animation
+            if (powerupBox.powerupAnimation != null)
+            {
+                powerupBox.powerupAnimation.Kill();
+            }
+            
+            // Reset scale before starting animation
+            powerupBox.powerupImage.transform.localScale = Vector3.one;
+            
+            // Create pulsing scale animation with DOTween
+            // Scale up and down continuously in a loop
+            powerupBox.powerupAnimation = powerupBox.powerupImage.transform
+                .DOScale(1.2f, 0.5f)
+                .SetEase(Ease.InOutSine)
+                .SetLoops(-1, LoopType.Yoyo);
         }
         
         // Enable button (make it selectable)
@@ -1318,11 +1334,11 @@ public class NumberGrid : MonoBehaviour
             powerupTimerText.text = Mathf.CeilToInt(powerupVisibleDuration).ToString();
         }
         
-        Debug.Log($"[NumberGrid] Powerup shown for 5 seconds!");
+        Debug.Log($"[NumberGrid] Powerup animation started for {powerupVisibleDuration} seconds!");
     }
     
     /// <summary>
-    /// Hides a powerup box (makes it invisible and unselectable)
+    /// Hides a powerup box (stops animation and makes it unselectable, but keeps sprite visible)
     /// </summary>
     private void HidePowerup(BoxData powerupBox)
     {
@@ -1335,10 +1351,21 @@ public class NumberGrid : MonoBehaviour
         
         powerupBox.isPowerupVisible = false;
         
-        // Hide powerup image
+        // Stop animation and reset scale (keep image visible)
         if (powerupBox.powerupImage != null)
         {
-            powerupBox.powerupImage.gameObject.SetActive(false);
+            // Kill the animation
+            if (powerupBox.powerupAnimation != null)
+            {
+                powerupBox.powerupAnimation.Kill();
+                powerupBox.powerupAnimation = null;
+            }
+            
+            // Reset scale to normal
+            powerupBox.powerupImage.transform.localScale = Vector3.one;
+            
+            // Keep image visible (don't disable it)
+            // powerupBox.powerupImage.gameObject.SetActive(true); // Already visible
         }
         
         // Disable button (make it unselectable)
@@ -1359,7 +1386,7 @@ public class NumberGrid : MonoBehaviour
             powerupTimerText.gameObject.SetActive(false);
         }
         
-        Debug.Log($"[NumberGrid] Powerup hidden!");
+        Debug.Log($"[NumberGrid] Powerup animation stopped and disabled!");
     }
     
     /// <summary>
@@ -1443,7 +1470,7 @@ public class NumberGrid : MonoBehaviour
     }
     
     /// <summary>
-    /// Locks a powerup (keeps it visible but makes it unselectable)
+    /// Locks a powerup (keeps it visible but makes it unselectable, stops animation)
     /// </summary>
     private void LockPowerup(BoxData boxData, PlayerType playerType, int cpuIndex)
     {
@@ -1455,6 +1482,20 @@ public class NumberGrid : MonoBehaviour
         boxData.selectedByCPUIndex = (playerType == PlayerType.CPU) ? cpuIndex : -1;
         boxData.selectedInRollSum = -1; // Powerups don't have dice sum
         boxData.selectedInRollId = -1; // Powerups don't have roll ID
+        
+        // Stop animation and reset scale
+        if (boxData.powerupImage != null)
+        {
+            // Kill the animation
+            if (boxData.powerupAnimation != null)
+            {
+                boxData.powerupAnimation.Kill();
+                boxData.powerupAnimation = null;
+            }
+            
+            // Reset scale to normal
+            boxData.powerupImage.transform.localScale = Vector3.one;
+        }
         
         // Keep powerup visible (don't hide it)
         // Powerup image stays visible
