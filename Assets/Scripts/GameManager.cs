@@ -324,8 +324,10 @@ public class GameManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Called when the quit button is clicked - ends the game immediately
-    /// Player gets prize based on their current ranking position
+    /// Called when the quit button is clicked - player goes to lobby screen
+    /// No prizes awarded, no winner screen shown to quitting player
+    /// If only 2 players total: CPU wins instantly but player doesn't see winner screen
+    /// If more than 2 players: CPUs continue playing
     /// </summary>
     private void OnQuitButtonClicked()
     {
@@ -334,37 +336,23 @@ public class GameManager : MonoBehaviour
             return; // Game already ended
         }
         
-        isGameActive = false;
-        timerStarted = false; // Reset flag so timer can be restarted if needed
-        Debug.Log("[GameManager] Player quit! Determining winner...");
+        Debug.Log("[GameManager] Player quit! Returning to lobby...");
         
-        // Stop timer
+        // Calculate total number of players (1 player + CPUs)
+        int totalPlayers = 1; // Always 1 human player
+        if (currentLobbyConfig != null)
+        {
+            totalPlayers += currentLobbyConfig.GetNumberOfCPUs();
+        }
+        
+        Debug.Log($"[GameManager] Total players: {totalPlayers}");
+        
+        // Stop timer for the player
         if (timerCoroutine != null)
         {
             StopCoroutine(timerCoroutine);
             timerCoroutine = null;
         }
-        
-        // Stop all CPU rolling
-        if (cpuPlayers != null)
-        {
-            foreach (CPU cpu in cpuPlayers)
-            {
-                if (cpu != null)
-                {
-                    cpu.StopAutoRolling();
-                }
-            }
-        }
-        
-        // Get rankings (top 3) - player's current selection count is included
-        var rankings = GetRankings();
-        
-        // Award prizes based on lobby configuration
-        AwardPrizes(rankings);
-        
-        // Show winner screen with rankings
-        ShowWinnerScreen(rankings);
         
         // Close quit panel if it's open
         if (quitPanel != null && quitPanel.activeSelf)
@@ -372,6 +360,48 @@ public class GameManager : MonoBehaviour
             quitPanel.SetActive(false);
             Debug.Log("[GameManager] Quit panel closed");
         }
+        
+        // If only 2 players total (player + 1 CPU), end game for CPU
+        // CPU wins but player doesn't see winner screen
+        if (totalPlayers == 2)
+        {
+            Debug.Log("[GameManager] Only 2 players - ending game for CPU (player won't see winner screen)");
+            
+            isGameActive = false;
+            timerStarted = false;
+            
+            // Stop all CPU rolling
+            if (cpuPlayers != null)
+            {
+                foreach (CPU cpu in cpuPlayers)
+                {
+                    if (cpu != null)
+                    {
+                        cpu.StopAutoRolling();
+                    }
+                }
+            }
+            
+            // Reset game state
+            ResetGameState();
+        }
+        else // More than 2 players - CPUs continue playing
+        {
+            Debug.Log("[GameManager] More than 2 players - CPUs continue playing");
+            // Don't set isGameActive to false - game continues for CPUs
+            // Don't stop CPU rolling - they keep playing
+            // Don't reset game state - game is still active for others
+        }
+        
+        // Hide gameplay screen - player returns to lobby
+        if (gameplayScreen != null)
+        {
+            gameplayScreen.SetActive(false);
+            Debug.Log("[GameManager] Gameplay screen hidden - player returned to lobby");
+        }
+        
+        // Do NOT show winner screen - player goes straight to lobby
+        // Do NOT award prizes - player gets nothing for quitting
     }
     
     /// <summary>
