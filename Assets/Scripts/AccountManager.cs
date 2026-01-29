@@ -255,6 +255,27 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
         Debug.Log("[AccountManager] Transaction data cleared");
     }
     
+    /// <summary>
+    /// Sets the cell size and reloads the scroller data
+    /// Used by AccountRowScaler to apply scaled cell size
+    /// </summary>
+    public void SetCellSizeAndReload(float newCellSize)
+    {
+        cellSize = newCellSize;
+        
+        if (scroller != null && scroller.gameObject.activeInHierarchy)
+        {
+            // Check if delegate is set
+            if (scroller.Delegate == null)
+            {
+                scroller.Delegate = this;
+            }
+            scroller.ReloadData();
+        }
+        
+        Debug.Log($"[AccountManager] Cell size updated to {cellSize:F2} and scroller reloaded");
+    }
+    
     #region EnhancedScroller Handlers
     
     /// <summary>
