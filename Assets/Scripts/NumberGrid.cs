@@ -262,12 +262,31 @@ public class NumberGrid : MonoBehaviour
             gridItems.Add(new GridItem { isPowerup = false, number = i });
         }
         
-        // Add powerups with random sprite indices
+        // Add powerups with unique sprite indices (no duplicates)
         System.Random rng = new System.Random();
-        for (int i = 0; i < POWERUP_COUNT; i++)
+        
+        // Create a list of all available sprite indices
+        List<int> availableSpriteIndices = new List<int>();
+        for (int i = 0; i < powerupSprites.Length; i++)
         {
-            int powerupIndex = rng.Next(0, powerupSprites.Length);
-            gridItems.Add(new GridItem { isPowerup = true, powerupIndex = powerupIndex });
+            availableSpriteIndices.Add(i);
+        }
+        
+        // Shuffle the indices to randomize
+        int n = availableSpriteIndices.Count;
+        while (n > 1)
+        {
+            n--;
+            int k = rng.Next(n + 1);
+            int value = availableSpriteIndices[k];
+            availableSpriteIndices[k] = availableSpriteIndices[n];
+            availableSpriteIndices[n] = value;
+        }
+        
+        // Take the first POWERUP_COUNT unique indices
+        for (int i = 0; i < POWERUP_COUNT && i < availableSpriteIndices.Count; i++)
+        {
+            gridItems.Add(new GridItem { isPowerup = true, powerupIndex = availableSpriteIndices[i] });
         }
         
         // Shuffle all items together for complete randomness
