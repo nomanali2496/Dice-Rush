@@ -781,6 +781,12 @@ public class DailyRewardManager : MonoBehaviour
     /// </summary>
     private void PlayParticleSound(bool isCash)
     {
+        // Check if sound is enabled in SettingManager
+        if (SettingManager.instance != null && !SettingManager.instance.IsSoundEnabled())
+        {
+            return; // Sound is disabled, don't play
+        }
+        
         AudioClip soundToPlay = isCash ? cashSound : chipsSound;
         
         if (soundToPlay != null)
