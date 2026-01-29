@@ -35213,7 +35213,7 @@ MonoBehaviour:
   thirdPlacePrizeIcon: {fileID: 1293086537}
   targetCashPosition: {fileID: 1042256181}
   targetChipsPosition: {fileID: 1785389101}
-  animationDuration: 1
+  animationDuration: 0.5
   movementCurve:
     serializedVersion: 2
     m_Curve:
@@ -35244,6 +35244,8 @@ MonoBehaviour:
   maxParticles: 20
   delayBetweenParticles: 0.2
   animatedSpritePrefab: {fileID: 0}
+  cashSound: {fileID: 8300000, guid: 208941914fc9c10468cd7077352cb50b, type: 3}
+  chipsSound: {fileID: 8300000, guid: 67a381b6524c7644ebde94ade51db146, type: 3}
 --- !u!114 &1620104689
 MonoBehaviour:
   m_ObjectHideFlags: 0

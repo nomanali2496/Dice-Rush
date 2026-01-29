@@ -45,6 +45,10 @@ public class WinnerScreen : MonoBehaviour
     [Header("Prefab for Animated Sprites")]
     [SerializeField] private GameObject animatedSpritePrefab; // Prefab for animated cash/chips sprites (should have Image component)
     
+    [Header("Sound Effects")]
+    [SerializeField] private AudioClip cashSound; // Sound to play for each cash particle
+    [SerializeField] private AudioClip chipsSound; // Sound to play for each chip particle
+    
     private GameManager gameManager;
     private PlayerProfileUI playerProfileUI;
     private List<GameObject> activeAnimations = new List<GameObject>(); // Track active animation objects
@@ -431,6 +435,9 @@ public class WinnerScreen : MonoBehaviour
                 
                 Debug.Log($"[WinnerScreen] Created particle {i + 1}/{particleCount} at exact source position {sourceWorldPos}");
                 
+                // Play sound for this particle
+                PlayParticleSound(isCash);
+                
                 // Animate this particle to target and update count-up
                 StartCoroutine(AnimateSingleParticleWithCountUp(particle.transform, target.position, animationDuration, incrementPerParticle, isCash));
             }
@@ -655,6 +662,23 @@ public class WinnerScreen : MonoBehaviour
         {
             activeAnimations.Remove(particle.gameObject);
             Destroy(particle.gameObject);
+        }
+    }
+    
+    /// <summary>
+    /// Plays the appropriate sound for a particle (cash or chips)
+    /// </summary>
+    private void PlayParticleSound(bool isCash)
+    {
+        AudioClip soundToPlay = isCash ? cashSound : chipsSound;
+        
+        if (soundToPlay != null)
+        {
+            AudioSource.PlayClipAtPoint(soundToPlay, Camera.main.transform.position);
+        }
+        else
+        {
+            Debug.LogWarning($"[WinnerScreen] {(isCash ? "Cash" : "Chips")} sound not assigned!");
         }
     }
     
