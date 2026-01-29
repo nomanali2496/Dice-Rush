@@ -40548,7 +40548,7 @@ MonoBehaviour:
   - 2
   currentDay: 2
   resetOnNewWeek: 1
-  autoCloseDelay: 0.5
+  autoCloseDelay: 0
   sourceRewardPositions:
   - {fileID: 1058306121}
   - {fileID: 1724083228}
@@ -40561,7 +40561,7 @@ MonoBehaviour:
   targetChipsPosition: {fileID: 90524356}
   cashSprite: {fileID: 21300000, guid: 86b18dec5ba4dbc40971d2f46a36ae7f, type: 3}
   chipsSprite: {fileID: 21300000, guid: 8fb7979643e342845846eeea117a494d, type: 3}
-  animationDuration: 1
+  animationDuration: 0.5
   movementCurve:
     serializedVersion: 2
     m_Curve:
@@ -40592,6 +40592,8 @@ MonoBehaviour:
   maxParticles: 20
   delayBetweenParticles: 0.2
   animatedSpritePrefab: {fileID: 0}
+  cashSound: {fileID: 8300000, guid: 208941914fc9c10468cd7077352cb50b, type: 3}
+  chipsSound: {fileID: 8300000, guid: 67a381b6524c7644ebde94ade51db146, type: 3}
   currentUserId: 
   lastShownDate: N/A
   currentTime: N/A
