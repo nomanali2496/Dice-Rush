@@ -418,5 +418,36 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
     }
     
     #endregion
+    
+    #region Scaling Support
+    
+    /// <summary>
+    /// Sets the cell size and reloads the scroller data
+    /// Used by LeaderboardRowScaler to apply scaled cell sizes
+    /// </summary>
+    public void SetCellSizeAndReload(float newCellSize)
+    {
+        cellSize = newCellSize;
+        
+        // Reload scroller if it's active and initialized
+        if (scroller != null && scroller.gameObject.activeInHierarchy)
+        {
+            // Ensure delegate is set
+            if (scroller.Delegate == null)
+            {
+                scroller.Delegate = this;
+            }
+            
+            // Only reload if we have data
+            if (_leaderboardData != null && _leaderboardData.Count > 0)
+            {
+                scroller.ReloadData();
+            }
+        }
+        
+        Debug.Log($"[LeaderboardManager] Cell size updated to {cellSize:F2}");
+    }
+    
+    #endregion
 }
 
