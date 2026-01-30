@@ -37,6 +37,9 @@ public class LobbyGameObjectUI : EnhancedScrollerCellView, IPointerEnterHandler,
     [Header("Background Image")]
     [SerializeField] private Image backgroundImage; // Main background image component
     
+    [Header("Selection Visuals")]
+    [SerializeField] private Image unselectedOverlayImage; // Image to show when item is NOT selected (e.g. dark overlay)
+    
     [Header("Hover Animation Settings")]
     [SerializeField] private float hoverScale = 1.1f; // Scale factor when hovering (default 1.1 = 10% larger)
     [SerializeField] private float animationDuration = 0.3f; // Duration of scale animation in seconds
@@ -325,6 +328,17 @@ public class LobbyGameObjectUI : EnhancedScrollerCellView, IPointerEnterHandler,
         // Ensure we end exactly at target scale
         rectTransform.localScale = targetScale;
         scaleCoroutine = null;
+    }
+    /// <summary>
+    /// Sets the visual state based on whether this item is currently selected/focused
+    /// </summary>
+    public void SetSelectedState(bool isSelected)
+    {
+        if (unselectedOverlayImage != null)
+        {
+            // If selected, hide overlay. If not selected, show overlay.
+            unselectedOverlayImage.gameObject.SetActive(!isSelected);
+        }
     }
 }
 

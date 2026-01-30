@@ -1,0 +1,1314 @@
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using System.Collections;
+using System.Collections.Generic;
+using DG.Tweening;
+
+/// <summary>
+/// Manages the lobby scene with infinite vertical background scrolling animation
+/// Handles continuous background movement to create a seamless scrolling effect
+/// Also manages 3 fixed lobby rows with swipe and button scroll controls
+/// </summary>
+public class LobbyManager : MonoBehaviour
+{
+    [Header("Background Settings")]
+    [SerializeField] private Transform[] backgroundPanels; // Array of background panels for seamless looping
+    [SerializeField] private float scrollSpeed = 2f; // Speed of background scrolling (units per second)
+    
+    [Header("Background Dimensions")]
+    [SerializeField] private float backgroundHeight = 10f; // Height of each background panel (for seamless looping)
+    
+    [Header("Auto Setup")]
+    [SerializeField] private bool autoSetupBackgrounds = true; // Automatically find and setup backgrounds
+    [SerializeField] private string backgroundTag = "Background"; // Tag to search for backgrounds
+    
+    [Header("Camera Settings (Optional)")]
+    [SerializeField] private Camera targetCamera; // Camera to calculate viewport bounds (auto-finds Main Camera if null)
+    [SerializeField] private float resetOffset = 2f; // Extra offset below viewport to trigger reset early
+    
+    [Header("Lobby Carousel Setup")]
+    [SerializeField] private GameObject lobbyPrefab; // Single lobby prefab to instantiate 12 times
+    [SerializeField] private Transform lobbyContainer; // Parent transform to hold all lobby instances
+    
+    [Header("Position References (3 Positions)")]
+    [SerializeField] private Transform upperPosition; // Transform for upper lobby position
+    [SerializeField] private Transform middlePosition; // Transform for middle/selected lobby position
+    [SerializeField] private Transform lowerPosition; // Transform for lower lobby position
+    
+    [Header("Scroll Controls")]
+    [SerializeField] private Button scrollUpButton; // Button to scroll up (show previous items)
+    [SerializeField] private Button scrollDownButton; // Button to scroll down (show next items)
+    [SerializeField] private bool enableSwipeDetection = false; // Enable/disable swipe scrolling (set to false if using new Input System)
+    
+    [Header("Scroll Animation Settings")]
+    [SerializeField] private float scrollAnimationDuration = 0.3f; // Duration of scroll animation
+    [SerializeField] private Ease scrollEase = Ease.OutCubic; // Easing for scroll animation
+    [SerializeField] private float swipeThreshold = 50f; // Minimum swipe distance to trigger scroll
+    
+    [Header("Carousel Visual Settings")]
+    [SerializeField] private float selectedScale = 1.0f; // Scale for middle (focused) item
+    [SerializeField] private float sideScale = 0.85f; // Scale for upper and lower (side) items
+    [SerializeField] private float sideOpacity = 0.7f; // Opacity for side items (0-1)
+    
+    [Header("Gameplay Object")]
+    [SerializeField] private GameObject gameplayObject; // Gameplay object to open when play button is clicked
+    
+    [Header("Lobby Game Objects Settings")]
+    private const int BACKGROUND_COUNT = 12; // Total number of background sprites (0-11)
+    
+    [Header("Lobby Configurations")]
+    [SerializeField] private LobbyConfig[] lobbyConfigurations = new LobbyConfig[12]; // 12 lobby configurations (can be set in inspector)
+    
+    private bool isScrolling = true;
+    private float resetThresholdY;
+    
+    // Carousel management (like OffersCarouselManager)
+    private GameObject[] lobbyInstances = new GameObject[BACKGROUND_COUNT]; // 12 instantiated lobby items
+    private int currentSelectedIndex = 0; // Currently selected lobby (middle position)
+    private Dictionary<int, RectTransform> lobbyTransforms = new Dictionary<int, RectTransform>();
+    private Dictionary<int, CanvasGroup> lobbyCanvasGroups = new Dictionary<int, CanvasGroup>();
+    private Coroutine transitionCoroutine;
+    
+    // Track which lobbies are currently in upper, middle, lower positions
+    private int upperLobbyIndex = -1;
+    private int middleLobbyIndex = 0;
+    private int lowerLobbyIndex = 1;
+    private bool isFirstInitialization = true;
+    
+    // Swipe detection
+    private Vector2 swipeStartPos;
+    private bool isSwiping = false;
+    
+    private void Start()
+    {
+        InitializeBackgrounds();
+        InitializeLobbyConfigurations();
+        InitializeLobbyCarousel(); // Initialize carousel like OffersCarouselManager
+        SetupScrollButtons();
+        UpdateLobbyPositions(); // Show initial state
+    }
+    
+    private void OnEnable()
+    {
+        // Refresh lobby positions when GameObject becomes active
+        if (lobbyInstances != null && lobbyInstances.Length > 0 && lobbyInstances[0] != null)
+        {
+            UpdateLobbyPositions();
+        }
+    }
+    
+    private void Update()
+    {
+        // Background scrolling
+        if (isScrolling && backgroundPanels != null && backgroundPanels.Length > 0)
+        {
+            ScrollBackgrounds();
+        }
+        
+        // Swipe detection
+        HandleSwipeInput();
+    }
+    
+    /// <summary>
+    /// Gets the actual height of a panel using its renderer bounds
+    /// </summary>
+    private float GetPanelHeight(Transform panel)
+    {
+        // Try SpriteRenderer first
+        SpriteRenderer spriteRenderer = panel.GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null && spriteRenderer.bounds.size.y > 0)
+        {
+            return spriteRenderer.bounds.size.y;
+        }
+        
+        // Try RectTransform for UI elements
+        RectTransform rectTransform = panel.GetComponent<RectTransform>();
+        if (rectTransform != null)
+        {
+            return rectTransform.rect.height * rectTransform.lossyScale.y;
+        }
+        
+        // Fallback to configured value
+        return backgroundHeight;
+    }
+    
+    /// <summary>
+    /// Gets the actual bottom edge of a panel using its renderer bounds
+    /// </summary>
+    private float GetPanelBottomEdge(Transform panel)
+    {
+        // Try SpriteRenderer first
+        SpriteRenderer spriteRenderer = panel.GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null && spriteRenderer.bounds.size.y > 0)
+        {
+            return spriteRenderer.bounds.min.y;
+        }
+        
+        // Try RectTransform for UI elements
+        RectTransform rectTransform = panel.GetComponent<RectTransform>();
+        if (rectTransform != null)
+        {
+            return rectTransform.position.y - (rectTransform.rect.height * 0.5f * rectTransform.lossyScale.y);
+        }
+        
+        // Fallback to calculated value
+        return panel.position.y - (backgroundHeight * 0.5f);
+    }
+    
+    /// <summary>
+    /// Gets the actual top edge of a panel using its renderer bounds
+    /// </summary>
+    private float GetPanelTopEdge(Transform panel)
+    {
+        // Try SpriteRenderer first
+        SpriteRenderer spriteRenderer = panel.GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null && spriteRenderer.bounds.size.y > 0)
+        {
+            return spriteRenderer.bounds.max.y;
+        }
+        
+        // Try RectTransform for UI elements
+        RectTransform rectTransform = panel.GetComponent<RectTransform>();
+        if (rectTransform != null)
+        {
+            return rectTransform.position.y + (rectTransform.rect.height * 0.5f * rectTransform.lossyScale.y);
+        }
+        
+        // Fallback to calculated value
+        return panel.position.y + (backgroundHeight * 0.5f);
+    }
+    
+    /// <summary>
+    /// Initializes the background panels for infinite scrolling
+    /// </summary>
+    private void InitializeBackgrounds()
+    {
+        // Auto-setup if enabled
+        if (autoSetupBackgrounds && (backgroundPanels == null || backgroundPanels.Length == 0))
+        {
+            GameObject[] backgroundObjects = GameObject.FindGameObjectsWithTag(backgroundTag);
+            if (backgroundObjects.Length > 0)
+            {
+                backgroundPanels = new Transform[backgroundObjects.Length];
+                for (int i = 0; i < backgroundObjects.Length; i++)
+                {
+                    backgroundPanels[i] = backgroundObjects[i].transform;
+                }
+            }
+        }
+        
+        // Validate backgrounds
+        if (backgroundPanels == null || backgroundPanels.Length == 0)
+        {
+            Debug.LogWarning("[LobbyManager] No background panels assigned! Please assign backgrounds in the inspector.");
+            return;
+        }
+        
+        // Remove null references
+        System.Collections.Generic.List<Transform> validPanels = new System.Collections.Generic.List<Transform>();
+        foreach (Transform panel in backgroundPanels)
+        {
+            if (panel != null)
+            {
+                validPanels.Add(panel);
+            }
+        }
+        backgroundPanels = validPanels.ToArray();
+        
+        if (backgroundPanels.Length == 0)
+        {
+            Debug.LogError("[LobbyManager] No valid background panels found!");
+            return;
+        }
+        
+        // Get camera for viewport calculations
+        if (targetCamera == null)
+        {
+            targetCamera = Camera.main;
+        }
+        
+        // Calculate reset threshold - reposition when bottom edge goes below this point
+        // This ensures panels are repositioned before visible gaps appear
+        if (targetCamera != null)
+        {
+            // Calculate bottom of camera viewport in world space
+            float cameraBottom = targetCamera.transform.position.y - targetCamera.orthographicSize;
+            resetThresholdY = cameraBottom - resetOffset;
+        }
+        else
+        {
+            // Fallback: use a fixed threshold below zero
+            // Use actual panel height if available
+            float avgHeight = backgroundHeight;
+            if (backgroundPanels.Length > 0 && backgroundPanels[0] != null)
+            {
+                avgHeight = GetPanelHeight(backgroundPanels[0]);
+            }
+            resetThresholdY = -avgHeight - resetOffset;
+        }
+        
+        // Position backgrounds vertically for seamless looping
+        PositionBackgroundsForLooping();
+        
+        Debug.Log($"[LobbyManager] Initialized {backgroundPanels.Length} background panel(s) for infinite scrolling");
+    }
+    
+    /// <summary>
+    /// Positions background panels vertically for seamless infinite looping
+    /// </summary>
+    private void PositionBackgroundsForLooping()
+    {
+        if (backgroundPanels == null || backgroundPanels.Length == 0) return;
+        
+        // Sort backgrounds by current Y position (top to bottom)
+        System.Array.Sort(backgroundPanels, (a, b) => b.position.y.CompareTo(a.position.y));
+        
+        // Position them one after another using actual panel heights
+        float currentTopEdge = 0f;
+        for (int i = 0; i < backgroundPanels.Length; i++)
+        {
+            if (backgroundPanels[i] == null) continue;
+            
+            float panelHeight = GetPanelHeight(backgroundPanels[i]);
+            float panelCenterY = currentTopEdge - (panelHeight * 0.5f);
+            
+            Vector3 pos = backgroundPanels[i].position;
+            pos.y = panelCenterY;
+            backgroundPanels[i].position = pos;
+            
+            // Next panel starts where this one ends
+            currentTopEdge -= panelHeight;
+        }
+    }
+    
+    /// <summary>
+    /// Scrolls all background panels downward and resets them when they go off-screen
+    /// </summary>
+    private void ScrollBackgrounds()
+    {
+        // Calculate camera bottom for off-screen detection
+        float cameraBottom = resetThresholdY;
+        if (targetCamera != null)
+        {
+            cameraBottom = targetCamera.transform.position.y - targetCamera.orthographicSize;
+        }
+        
+        for (int i = 0; i < backgroundPanels.Length; i++)
+        {
+            if (backgroundPanels[i] == null) continue;
+            
+            // Move background down
+            Vector3 position = backgroundPanels[i].position;
+            position.y -= scrollSpeed * Time.deltaTime;
+            backgroundPanels[i].position = position;
+            
+            // Get actual top and bottom edges of this panel (from renderer bounds)
+            float topEdge = GetPanelTopEdge(backgroundPanels[i]);
+            float bottomEdge = GetPanelBottomEdge(backgroundPanels[i]);
+            
+            // Only reposition when the panel is FULLY off-screen (top edge is below camera bottom)
+            // This ensures at least one panel is always visible
+            if (topEdge <= cameraBottom)
+            {
+                // Find the highest background panel's top edge (using actual bounds)
+                float highestTopEdge = float.MinValue;
+                foreach (Transform panel in backgroundPanels)
+                {
+                    if (panel != null && panel != backgroundPanels[i])
+                    {
+                        float panelTopEdge = GetPanelTopEdge(panel);
+                        if (panelTopEdge > highestTopEdge)
+                        {
+                            highestTopEdge = panelTopEdge;
+                        }
+                    }
+                }
+                
+                // Get this panel's actual height
+                float panelHeight = GetPanelHeight(backgroundPanels[i]);
+                
+                // Place this panel directly above the highest one (seamless connection)
+                // Position so its bottom edge touches the highest panel's top edge
+                float newCenterY = highestTopEdge + (panelHeight * 0.5f);
+                
+                position.y = newCenterY;
+                backgroundPanels[i].position = position;
+            }
+        }
+    }
+    
+    /// <summary>
+    /// Starts the background scrolling animation
+    /// </summary>
+    public void StartScrolling()
+    {
+        isScrolling = true;
+    }
+    
+    /// <summary>
+    /// Stops the background scrolling animation
+    /// </summary>
+    public void StopScrolling()
+    {
+        isScrolling = false;
+    }
+    
+    /// <summary>
+    /// Sets the scroll speed
+    /// </summary>
+    public void SetScrollSpeed(float speed)
+    {
+        scrollSpeed = Mathf.Max(0f, speed);
+    }
+    
+    /// <summary>
+    /// Gets the current scroll speed
+    /// </summary>
+    public float GetScrollSpeed()
+    {
+        return scrollSpeed;
+    }
+    
+    /// <summary>
+    /// Resets all background positions to initial state
+    /// </summary>
+    public void ResetBackgrounds()
+    {
+        PositionBackgroundsForLooping();
+    }
+    
+    #region Lobby Rows Management (3 Fixed Positions)
+    
+    /// <summary>
+    /// Initializes all lobby items by instantiating 12 copies of the lobby prefab
+    /// Each copy will display a different background sprite via LobbyGameObjectUI
+    /// </summary>
+    private void InitializeLobbyCarousel()
+    {
+        if (middlePosition == null)
+        {
+            Debug.LogError("[LobbyManager] Middle position not assigned!");
+            return;
+        }
+        
+        if (upperPosition == null || lowerPosition == null)
+        {
+            Debug.LogWarning("[LobbyManager] Upper or Lower position not assigned!");
+        }
+        
+        if (lobbyPrefab == null)
+        {
+            Debug.LogError("[LobbyManager] Lobby prefab not assigned!");
+            return;
+        }
+        
+        if (lobbyContainer == null)
+        {
+            Debug.LogWarning("[LobbyManager] Lobby container not assigned, using this transform");
+            lobbyContainer = this.transform;
+        }
+        
+        // Clear existing dictionaries
+        lobbyTransforms.Clear();
+        lobbyCanvasGroups.Clear();
+        
+        // Instantiate 12 lobby items
+        for (int i = 0; i < BACKGROUND_COUNT; i++)
+        {
+            // Instantiate the prefab
+            GameObject lobbyInstance = Instantiate(lobbyPrefab, lobbyContainer);
+            lobbyInstance.name = $"Lobby_{i}";
+            lobbyInstances[i] = lobbyInstance;
+            
+            // Get LobbyGameObjectUI component and set the background
+            LobbyGameObjectUI lobbyUI = lobbyInstance.GetComponent<LobbyGameObjectUI>();
+            if (lobbyUI != null)
+            {
+                // Create data for this lobby (background index = lobby index)
+                LobbyGameObjectData data = new LobbyGameObjectData(i, i);
+                lobbyUI.SetData(data);
+            }
+            else
+            {
+                Debug.LogWarning($"[LobbyManager] Lobby instance {i} doesn't have LobbyGameObjectUI component!");
+            }
+            
+            // Ensure lobby is active
+            lobbyInstance.SetActive(true);
+            
+            // Get RectTransform
+            RectTransform rectTransform = lobbyInstance.GetComponent<RectTransform>();
+            if (rectTransform == null)
+            {
+                Debug.LogError($"[LobbyManager] Lobby instance {i} doesn't have RectTransform!");
+                continue;
+            }
+            
+            // Get or add CanvasGroup for opacity control
+            CanvasGroup canvasGroup = lobbyInstance.GetComponent<CanvasGroup>();
+            if (canvasGroup == null)
+            {
+                canvasGroup = lobbyInstance.AddComponent<CanvasGroup>();
+            }
+            
+            lobbyTransforms[i] = rectTransform;
+            lobbyCanvasGroups[i] = canvasGroup;
+        }
+        
+        // Calculate initial positions
+        CalculateVisibleLobbies();
+        
+        Debug.Log($"[LobbyManager] Initialized {BACKGROUND_COUNT} lobby items in carousel");
+    }
+    
+    /// <summary>
+    /// Sets up scroll button click listeners
+    /// </summary>
+    private void SetupScrollButtons()
+    {
+        if (scrollUpButton != null)
+        {
+            scrollUpButton.onClick.AddListener(ScrollUp);
+        }
+        
+        if (scrollDownButton != null)
+        {
+            scrollDownButton.onClick.AddListener(ScrollDown);
+        }
+    }
+    
+    /// <summary>
+    /// Calculates which lobbies should be visible in upper, middle, lower positions
+    /// </summary>
+    private void CalculateVisibleLobbies()
+    {
+        middleLobbyIndex = currentSelectedIndex;
+        upperLobbyIndex = currentSelectedIndex - 1;
+        lowerLobbyIndex = currentSelectedIndex + 1;
+        
+        // Handle edge cases (no wrapping for now)
+        if (upperLobbyIndex < 0)
+        {
+            upperLobbyIndex = -1; // No upper lobby
+        }
+        
+        if (lowerLobbyIndex >= BACKGROUND_COUNT)
+        {
+            lowerLobbyIndex = -1; // No lower lobby
+        }
+    }
+    
+    /// <summary>
+    /// Updates the positions and visual states of all lobbies (like OffersCarouselManager.UpdateOfferPositions)
+    /// </summary>
+    private void UpdateLobbyPositions()
+    {
+        CalculateVisibleLobbies();
+        
+        // Position and update all lobbies
+        for (int i = 0; i < BACKGROUND_COUNT; i++)
+        {
+            if (lobbyInstances[i] == null || !lobbyTransforms.ContainsKey(i)) continue;
+            
+            RectTransform rectTransform = lobbyTransforms[i];
+            CanvasGroup canvasGroup = lobbyCanvasGroups[i];
+            
+            // Determine position and visual state
+            Transform targetPosition = null;
+            float targetScale = 1f;
+            float targetOpacity = 0f;
+            bool shouldBeVisible = false;
+            
+            if (i == middleLobbyIndex)
+            {
+                // Middle lobby - selected
+                targetPosition = middlePosition;
+                targetScale = selectedScale;
+                targetOpacity = 1f;
+                shouldBeVisible = true;
+            }
+            else if (i == upperLobbyIndex)
+            {
+                // Upper lobby
+                targetPosition = upperPosition;
+                targetScale = sideScale;
+                targetOpacity = sideOpacity;
+                shouldBeVisible = true;
+            }
+            else if (i == lowerLobbyIndex)
+            {
+                // Lower lobby
+                targetPosition = lowerPosition;
+                targetScale = sideScale;
+                targetOpacity = sideOpacity;
+                shouldBeVisible = true;
+            }
+            else
+            {
+                // Hidden lobby - keep it somewhere off-screen or inactive
+                shouldBeVisible = false;
+            }
+            
+            // Update position and visual state
+            if (shouldBeVisible && targetPosition != null)
+            {
+                lobbyInstances[i].SetActive(true);
+                
+                if (isFirstInitialization)
+                {
+                    // Set position instantly on first initialization
+                    SetLobbyPositionInstantly(i, targetPosition, targetScale, targetOpacity);
+                }
+                else
+                {
+                    // Animate position changes
+                    StartCoroutine(AnimateLobbyToPosition(i, targetPosition, targetScale, targetOpacity));
+                }
+            }
+            else
+            {
+                // Hide lobbies that shouldn't be visible
+                lobbyInstances[i].SetActive(false);
+            }
+        }
+        
+        // Update navigation button states (enable/disable based on position)
+        UpdateNavigationButtonStates();
+        
+        // Mark that first initialization is complete
+        if (isFirstInitialization)
+        {
+            isFirstInitialization = false;
+        }
+    }
+    
+    /// <summary>
+    /// Updates navigation button interactability based on current position
+    /// </summary>
+    private void UpdateNavigationButtonStates()
+    {
+        // Disable up button if at first lobby
+        if (scrollUpButton != null)
+        {
+            scrollUpButton.interactable = (currentSelectedIndex > 0);
+        }
+        
+        // Disable down button if at last lobby
+        if (scrollDownButton != null)
+        {
+            scrollDownButton.interactable = (currentSelectedIndex < BACKGROUND_COUNT - 1);
+        }
+    }
+    
+    /// <summary>
+    /// Instantly sets a lobby to a target position, scale, and opacity (no animation)
+    /// </summary>
+    private void SetLobbyPositionInstantly(int index, Transform targetPosition, float targetScale, float targetOpacity)
+    {
+        if (!lobbyTransforms.ContainsKey(index) || targetPosition == null) return;
+        
+        RectTransform rectTransform = lobbyTransforms[index];
+        CanvasGroup canvasGroup = lobbyCanvasGroups[index];
+        
+        // Change parent to target position transform
+        rectTransform.SetParent(targetPosition, false);
+        
+        // Set local position to center (zero)
+        rectTransform.localPosition = Vector3.zero;
+        
+        // Set scale
+        rectTransform.localScale = Vector3.one * targetScale;
+        
+        // Set opacity
+        if (canvasGroup != null)
+        {
+            canvasGroup.alpha = targetOpacity;
+        }
+    }
+    
+    /// <summary>
+    /// Animates a lobby to a target position, scale, and opacity
+    /// </summary>
+    private IEnumerator AnimateLobbyToPosition(int index, Transform targetPosition, float targetScale, float targetOpacity)
+    {
+        if (!lobbyTransforms.ContainsKey(index) || targetPosition == null) yield break;
+        
+        RectTransform rectTransform = lobbyTransforms[index];
+        CanvasGroup canvasGroup = lobbyCanvasGroups[index];
+        
+        // Store initial values before changing parent
+        Vector3 startLocalScale = rectTransform.localScale;
+        float startOpacity = canvasGroup != null ? canvasGroup.alpha : 1f;
+        
+        // Change parent to target position transform (world position stays the same)
+        rectTransform.SetParent(targetPosition, true);
+        
+        // Now get the current local position after parent change
+        Vector3 startLocalPosition = rectTransform.localPosition;
+        Vector3 endLocalPosition = Vector3.zero; // Position at the center of target transform
+        Vector3 endLocalScale = Vector3.one * targetScale;
+        
+        float elapsed = 0f;
+        
+        while (elapsed < scrollAnimationDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / scrollAnimationDuration;
+            t = Mathf.SmoothStep(0f, 1f, t); // Smooth easing
+            
+            // Animate local position (relative to parent) to center it on the transform
+            rectTransform.localPosition = Vector3.Lerp(startLocalPosition, endLocalPosition, t);
+            
+            // Animate scale
+            rectTransform.localScale = Vector3.Lerp(startLocalScale, endLocalScale, t);
+            
+            // Animate opacity
+            if (canvasGroup != null)
+            {
+                canvasGroup.alpha = Mathf.Lerp(startOpacity, targetOpacity, t);
+            }
+            
+            yield return null;
+        }
+        
+        // Ensure final values
+        rectTransform.localPosition = endLocalPosition;
+        rectTransform.localScale = endLocalScale;
+        if (canvasGroup != null)
+        {
+            canvasGroup.alpha = targetOpacity;
+        }
+    }
+    
+    /// <summary>
+    /// Scrolls to the previous lobby (up)
+    /// </summary>
+    public void ScrollUp()
+    {
+        Debug.Log($"[LobbyManager] ScrollUp called. Current index: {currentSelectedIndex}");
+        
+        if (currentSelectedIndex > 0)
+        {
+            int previousIndex = currentSelectedIndex - 1;
+            Debug.Log($"[LobbyManager] Scrolling to index: {previousIndex}");
+            TransitionToLobby(previousIndex);
+        }
+        else
+        {
+            Debug.Log("[LobbyManager] Already at the first lobby, cannot scroll up");
+        }
+    }
+    
+    /// <summary>
+    /// Scrolls to the next lobby (down)
+    /// </summary>
+    public void ScrollDown()
+    {
+        Debug.Log($"[LobbyManager] ScrollDown called. Current index: {currentSelectedIndex}, Total lobbies: {BACKGROUND_COUNT}");
+        
+        if (currentSelectedIndex < BACKGROUND_COUNT - 1)
+        {
+            int nextIndex = currentSelectedIndex + 1;
+            Debug.Log($"[LobbyManager] Scrolling to index: {nextIndex}");
+            TransitionToLobby(nextIndex);
+        }
+        else
+        {
+            Debug.Log("[LobbyManager] Already at the last lobby, cannot scroll down");
+        }
+    }
+    
+    /// <summary>
+    /// Transitions to a specific lobby index
+    /// </summary>
+    public void TransitionToLobby(int index)
+    {
+        if (index < 0 || index >= BACKGROUND_COUNT)
+        {
+            Debug.LogWarning($"[LobbyManager] Invalid lobby index: {index}");
+            return;
+        }
+        
+        if (index == currentSelectedIndex)
+        {
+            Debug.Log($"[LobbyManager] Already at index {index}, skipping transition");
+            return; // Already selected
+        }
+        
+        Debug.Log($"[LobbyManager] Transitioning to lobby index: {index}");
+        currentSelectedIndex = index;
+        
+        // Stop any existing transition
+        if (transitionCoroutine != null)
+        {
+            StopCoroutine(transitionCoroutine);
+        }
+        
+        // Update positions
+        UpdateLobbyPositions();
+    }
+    
+    /// <summary>
+    /// Refreshes all play buttons interactability based on player's current currency
+    /// Call this when player's cash or chips change
+    /// </summary>
+    public void RefreshAllPlayButtons()
+    {
+        // Refresh play buttons for all 3 visible lobbies
+        RefreshPlayButtonForLobby(upperLobbyIndex);
+        RefreshPlayButtonForLobby(middleLobbyIndex);
+        RefreshPlayButtonForLobby(lowerLobbyIndex);
+        
+        Debug.Log("[LobbyManager] Refreshed all visible play buttons interactability");
+    }
+    
+    /// <summary>
+    /// Refreshes the play button for a specific lobby index
+    /// </summary>
+    private void RefreshPlayButtonForLobby(int lobbyIndex)
+    {
+        if (lobbyIndex < 0 || lobbyIndex >= BACKGROUND_COUNT) return;
+        if (lobbyInstances[lobbyIndex] == null) return;
+        
+        LobbyRowCellView cellView = lobbyInstances[lobbyIndex].GetComponent<LobbyRowCellView>();
+        if (cellView != null)
+        {
+            cellView.RefreshPlayButtonsInteractability();
+        }
+    }
+    
+    /// <summary>
+    /// Handles swipe input detection using Touch API (works with both old and new Input System)
+    /// </summary>
+    private void HandleSwipeInput()
+    {
+        // Skip if swipe detection is disabled
+        if (!enableSwipeDetection)
+        {
+            return;
+        }
+        
+        // Use Touch API for mobile/touch devices (works with both input systems)
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+            
+            if (touch.phase == TouchPhase.Began)
+            {
+                swipeStartPos = touch.position;
+                isSwiping = true;
+            }
+            else if (touch.phase == TouchPhase.Ended && isSwiping)
+            {
+                Vector2 swipeEndPos = touch.position;
+                Vector2 swipeDelta = swipeEndPos - swipeStartPos;
+                
+                // Check if swipe is long enough
+                if (Mathf.Abs(swipeDelta.y) > swipeThreshold)
+                {
+                    // Swipe up = scroll down (show next items)
+                    if (swipeDelta.y < 0)
+                    {
+                        ScrollDown();
+                    }
+                    // Swipe down = scroll up (show previous items)
+                    else
+                    {
+                        ScrollUp();
+                    }
+                }
+                
+                isSwiping = false;
+            }
+        }
+    }
+    
+    #endregion
+    
+    
+    /// <summary>
+    /// Initializes lobby configurations with default values if not set in inspector
+    /// </summary>
+    private void InitializeLobbyConfigurations()
+    {
+    {
+        if (lobbyConfigurations == null || lobbyConfigurations.Length != BACKGROUND_COUNT)
+        {
+            upperRow.SetData(_lobbyObjectsData[upperIndex]);
+        }
+        
+        if (middleRow != null)
+        {
+            middleRow.SetData(_lobbyObjectsData[middleIndex]);
+        }
+        
+        if (lowerRow != null)
+        {
+            lowerRow.SetData(_lobbyObjectsData[lowerIndex]);
+        }
+        
+        // Apply carousel scaling if enabled
+        if (enableCarouselScaling)
+        {
+            ApplyCarouselScales(false); // Apply instantly (no animation)
+        }
+        
+        Debug.Log($"[LobbyManager] Updated visible rows: Upper={upperIndex}, Middle={middleIndex}, Lower={lowerIndex}");
+    }
+    
+    /// <summary>
+    /// Gets a wrapped index (loops around the array)
+    /// </summary>
+    private int GetWrappedIndex(int index)
+    {
+        int wrappedIndex = index % BACKGROUND_COUNT;
+        if (wrappedIndex < 0)
+        {
+            wrappedIndex += BACKGROUND_COUNT;
+        }
+        return wrappedIndex;
+    }
+    
+    /// <summary>
+    /// Applies carousel scaling to the 3 rows (middle = larger, sides = smaller)
+    /// </summary>
+    /// <param name="animate">If true, animates the scale change with DOTween</param>
+    private void ApplyCarouselScales(bool animate)
+    {
+        if (upperRow != null)
+        {
+            RectTransform upperRT = upperRow.GetComponent<RectTransform>();
+            if (upperRT != null)
+            {
+                if (animate)
+                {
+                    upperRT.DOScale(sideRowScale, scrollAnimationDuration).SetEase(scrollEase);
+                }
+                else
+                {
+                    upperRT.localScale = Vector3.one * sideRowScale;
+                }
+            }
+        }
+        
+        if (middleRow != null)
+        {
+            RectTransform middleRT = middleRow.GetComponent<RectTransform>();
+            if (middleRT != null)
+            {
+                if (animate)
+                {
+                    middleRT.DOScale(middleRowScale, scrollAnimationDuration).SetEase(scrollEase);
+                }
+                else
+                {
+                    middleRT.localScale = Vector3.one * middleRowScale;
+                }
+            }
+        }
+        
+        if (lowerRow != null)
+        {
+            RectTransform lowerRT = lowerRow.GetComponent<RectTransform>();
+            if (lowerRT != null)
+            {
+                if (animate)
+                {
+                    lowerRT.DOScale(sideRowScale, scrollAnimationDuration).SetEase(scrollEase);
+                }
+                else
+                {
+                    lowerRT.localScale = Vector3.one * sideRowScale;
+                }
+            }
+        }
+    }
+    
+    /// <summary>
+    /// Scrolls up (shows previous items)
+    /// </summary>
+    public void ScrollUp()
+    {
+        if (isScrollAnimating) return;
+        
+        StartCoroutine(AnimateScroll(-1));
+    }
+    
+    /// <summary>
+    /// Scrolls down (shows next items)
+    /// </summary>
+    public void ScrollDown()
+    {
+        if (isScrollAnimating) return;
+        
+        StartCoroutine(AnimateScroll(1));
+    }
+    
+    /// <summary>
+    /// Smoothly transitions to the next/previous lobby items
+    /// Uses smooth position, scale, and opacity animation like OffersCarouselManager
+    /// </summary>
+    private IEnumerator AnimateScroll(int direction)
+    {
+        isScrollAnimating = true;
+        
+        // Update scroll index
+        currentScrollIndex += direction;
+        if (currentScrollIndex < 0)
+        {
+            currentScrollIndex = BACKGROUND_COUNT - 1;
+        }
+        else if (currentScrollIndex >= BACKGROUND_COUNT)
+        {
+            currentScrollIndex = 0;
+        }
+        
+        // Calculate indices for the 3 visible items (with wrapping)
+        int upperIndex = GetWrappedIndex(currentScrollIndex);
+        int middleIndex = GetWrappedIndex(currentScrollIndex + 1);
+        int lowerIndex = GetWrappedIndex(currentScrollIndex + 2);
+        
+        // Update data FIRST (change backgrounds)
+        if (upperRow != null)
+        {
+            upperRow.SetData(_lobbyObjectsData[upperIndex]);
+        }
+        
+        if (middleRow != null)
+        {
+            middleRow.SetData(_lobbyObjectsData[middleIndex]);
+        }
+        
+        if (lowerRow != null)
+        {
+            lowerRow.SetData(_lobbyObjectsData[lowerIndex]);
+        }
+        
+        // Now smoothly animate scales if enabled
+        if (enableCarouselScaling)
+        {
+            yield return StartCoroutine(AnimateCarouselScales());
+        }
+        else
+        {
+            yield return new WaitForSeconds(scrollAnimationDuration);
+        }
+        
+        isScrollAnimating = false;
+    }
+    
+    /// <summary>
+    /// Animates the scales of the 3 rows smoothly (like OffersCarouselManager)
+    /// </summary>
+    private IEnumerator AnimateCarouselScales()
+    {
+        RectTransform upperRT = upperRow != null ? upperRow.GetComponent<RectTransform>() : null;
+        RectTransform middleRT = middleRow != null ? middleRow.GetComponent<RectTransform>() : null;
+        RectTransform lowerRT = lowerRow != null ? lowerRow.GetComponent<RectTransform>() : null;
+        
+        if (upperRT == null || middleRT == null || lowerRT == null)
+        {
+            yield return new WaitForSeconds(scrollAnimationDuration);
+            yield break;
+        }
+        
+        // Get CanvasGroups for opacity (add if needed)
+        CanvasGroup upperCG = upperRow.GetComponent<CanvasGroup>();
+        if (upperCG == null) upperCG = upperRow.gameObject.AddComponent<CanvasGroup>();
+        
+        CanvasGroup middleCG = middleRow.GetComponent<CanvasGroup>();
+        if (middleCG == null) middleCG = middleRow.gameObject.AddComponent<CanvasGroup>();
+        
+        CanvasGroup lowerCG = lowerRow.GetComponent<CanvasGroup>();
+        if (lowerCG == null) lowerCG = lowerRow.gameObject.AddComponent<CanvasGroup>();
+        
+        // Store start values
+        Vector3 upperStartScale = upperRT.localScale;
+        Vector3 middleStartScale = middleRT.localScale;
+        Vector3 lowerStartScale = lowerRT.localScale;
+        
+        float upperStartAlpha = upperCG.alpha;
+        float middleStartAlpha = middleCG.alpha;
+        float lowerStartAlpha = lowerCG.alpha;
+        
+        // Target values
+        Vector3 upperTargetScale = Vector3.one * sideRowScale;
+        Vector3 middleTargetScale = Vector3.one * middleRowScale;
+        Vector3 lowerTargetScale = Vector3.one * sideRowScale;
+        
+        float sideAlpha = 0.7f; // Slightly faded for side rows
+        float upperTargetAlpha = sideAlpha;
+        float middleTargetAlpha = 1f; // Full opacity for middle
+        float lowerTargetAlpha = sideAlpha;
+        
+        // Animate
+        float elapsed = 0f;
+        while (elapsed < scrollAnimationDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / scrollAnimationDuration;
+            t = Mathf.SmoothStep(0f, 1f, t); // Smooth easing
+            
+            // Animate scales
+            upperRT.localScale = Vector3.Lerp(upperStartScale, upperTargetScale, t);
+            middleRT.localScale = Vector3.Lerp(middleStartScale, middleTargetScale, t);
+            lowerRT.localScale = Vector3.Lerp(lowerStartScale, lowerTargetScale, t);
+            
+            // Animate alphas
+            upperCG.alpha = Mathf.Lerp(upperStartAlpha, upperTargetAlpha, t);
+            middleCG.alpha = Mathf.Lerp(middleStartAlpha, middleTargetAlpha, t);
+            lowerCG.alpha = Mathf.Lerp(lowerStartAlpha, lowerTargetAlpha, t);
+            
+            yield return null;
+        }
+        
+        // Ensure final values
+        upperRT.localScale = upperTargetScale;
+        middleRT.localScale = middleTargetScale;
+        lowerRT.localScale = lowerTargetScale;
+        
+        upperCG.alpha = upperTargetAlpha;
+        middleCG.alpha = middleTargetAlpha;
+        lowerCG.alpha = lowerTargetAlpha;
+    }
+    
+    /// <summary>
+    /// Handles swipe input detection using Touch API (works with both old and new Input System)
+    /// </summary>
+    private void HandleSwipeInput()
+    {
+        // Skip if swipe detection is disabled
+        if (!enableSwipeDetection)
+        {
+            return;
+        }
+        
+        // Use Touch API for mobile/touch devices (works with both input systems)
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+            
+            if (touch.phase == TouchPhase.Began)
+            {
+                swipeStartPos = touch.position;
+                isSwiping = true;
+            }
+            else if (touch.phase == TouchPhase.Ended && isSwiping)
+            {
+                Vector2 swipeEndPos = touch.position;
+                Vector2 swipeDelta = swipeEndPos - swipeStartPos;
+                
+                // Check if swipe is long enough
+                if (Mathf.Abs(swipeDelta.y) > swipeThreshold)
+                {
+                    // Swipe up = scroll down (show next items)
+                    if (swipeDelta.y < 0)
+                    {
+                        ScrollDown();
+                    }
+                    // Swipe down = scroll up (show previous items)
+                    else
+                    {
+                        ScrollUp();
+                    }
+                }
+                
+                isSwiping = false;
+            }
+        }
+    }
+    
+    /// <summary>
+    /// Initializes lobby configurations with default values if not set in inspector
+    /// </summary>
+    private void InitializeLobbyConfigurations()
+    {
+        if (lobbyConfigurations == null || lobbyConfigurations.Length != BACKGROUND_COUNT)
+        {
+            lobbyConfigurations = new LobbyConfig[BACKGROUND_COUNT];
+        }
+        
+        // Initialize any null configurations with default values
+        for (int i = 0; i < BACKGROUND_COUNT; i++)
+        {
+            if (lobbyConfigurations[i] == null)
+            {
+                // Default configuration: 2 players (1 player + 1 CPU), entry fee 10 chips, prizes 20/10/5 chips
+                lobbyConfigurations[i] = new LobbyConfig(
+                    index: i,
+                    players: 2,
+                    entryCash: 0f,
+                    entryChips: 10,
+                    firstCash: 0f,
+                    firstChips: 20,
+                    secondCash: 0f,
+                    secondChips: 10,
+                    thirdCash: 0f,
+                    thirdChips: 5
+                );
+                Debug.Log($"[LobbyManager] Initialized default configuration for Lobby {i + 1}");
+            }
+        }
+        
+        Debug.Log($"[LobbyManager] Initialized {BACKGROUND_COUNT} lobby configurations");
+    }
+    
+    /// <summary>
+    /// Gets the lobby configuration for a specific lobby index
+    /// </summary>
+    public LobbyConfig GetLobbyConfig(int lobbyIndex)
+    {
+        if (lobbyConfigurations != null && lobbyIndex >= 0 && lobbyIndex < lobbyConfigurations.Length)
+        {
+            return lobbyConfigurations[lobbyIndex];
+        }
+        return null;
+    }
+    
+    /// <summary>
+    /// Checks if the player can afford the entry fee for a specific lobby
+    /// </summary>
+    public bool CanPlayerAffordEntryFee(int lobbyIndex)
+    {
+        if (PlayFabManager.Instance == null || !PlayFabManager.Instance.IsLoggedIn())
+        {
+            return false; // Can't check if not logged in
+        }
+        
+        LobbyConfig config = GetLobbyConfig(lobbyIndex);
+        if (config == null)
+        {
+            return false; // No config found
+        }
+        
+        // Check if player has enough cash
+        if (config.entryFeeCash > 0f)
+        {
+            if (PlayFabManager.Instance.currentPlayerData.cash < config.entryFeeCash)
+            {
+                return false; // Can't afford cash entry fee
+            }
+        }
+        
+        // Check if player has enough chips
+        if (config.entryFeeChips > 0)
+        {
+            if (PlayFabManager.Instance.currentPlayerData.coins < config.entryFeeChips)
+            {
+                return false; // Can't afford chips entry fee
+            }
+        }
+        
+        return true; // Player can afford entry fee
+    }
+    
+    /// <summary>
+    /// Sets the lobby configuration for a specific lobby index
+    /// </summary>
+    public void SetLobbyConfig(int lobbyIndex, LobbyConfig config)
+    {
+        if (lobbyConfigurations != null && lobbyIndex >= 0 && lobbyIndex < lobbyConfigurations.Length)
+        {
+            lobbyConfigurations[lobbyIndex] = config;
+            Debug.Log($"[LobbyManager] Updated configuration for Lobby {lobbyIndex + 1}");
+        }
+    }
+    
+    /// <summary>
+    /// Opens the gameplay object with the specified lobby configuration
+    /// </summary>
+    /// <param name="lobbyIndex">Index of the lobby (0-12)</param>
+    public void OpenGameplayObject(int lobbyIndex = -1)
+    {
+        if (gameplayObject != null)
+        {
+            // Get the lobby configuration
+            LobbyConfig config = null;
+            if (lobbyIndex >= 0 && lobbyIndex < BACKGROUND_COUNT)
+            {
+                config = GetLobbyConfig(lobbyIndex);
+            }
+            
+            // Configure GameManager with lobby settings before opening gameplay
+            GameManager gameManager = FindObjectOfType<GameManager>();
+            if (gameManager != null && config != null)
+            {
+                // Ensure gameplay screen is inactive first to ensure proper reset
+                if (gameplayObject.activeSelf)
+                {
+                    gameplayObject.SetActive(false);
+                }
+                
+                // Configure with new lobby settings
+                gameManager.ConfigureGameFromLobby(config);
+                Debug.Log($"[LobbyManager] Configured game for Lobby {lobbyIndex + 1}: {config.numberOfPlayers} players, Entry: {config.entryFeeChips} chips / {config.entryFeeCash} cash");
+            }
+            else if (gameManager == null)
+            {
+                Debug.LogWarning("[LobbyManager] GameManager not found! Game will start with default settings.");
+            }
+            else if (config == null)
+            {
+                Debug.LogWarning($"[LobbyManager] Lobby configuration not found for index {lobbyIndex}! Game will start with default settings.");
+            }
+            
+            // Activate gameplay screen
+            gameplayObject.SetActive(true);
+            Debug.Log($"[LobbyManager] Gameplay object opened for Lobby {lobbyIndex + 1}");
+        }
+        else
+        {
+            Debug.LogWarning("[LobbyManager] Gameplay object is not assigned! Please assign it in the inspector.");
+        }
+    }
+    
+    /// <summary>
+    /// Refreshes all play buttons interactability based on player's current currency
+    /// Call this when player's cash or chips change
+    /// </summary>
+    public void RefreshAllPlayButtons()
+    {
+        // Refresh the 3 visible rows
+        if (upperRow != null)
+        {
+            upperRow.RefreshPlayButtonsInteractability();
+        }
+        
+        if (middleRow != null)
+        {
+            middleRow.RefreshPlayButtonsInteractability();
+        }
+        
+        if (lowerRow != null)
+        {
+            lowerRow.RefreshPlayButtonsInteractability();
+        }
+        
+        Debug.Log("[LobbyManager] Refreshed all visible play buttons interactability");
+    }
+    
+    #endregion
+    
+    #if UNITY_EDITOR
+    /// <summary>
+    /// Editor helper: Draws gizmos to visualize background boundaries
+    /// </summary>
+    private void OnDrawGizmosSelected()
+    {
+        if (backgroundPanels == null) return;
+        
+        Gizmos.color = Color.yellow;
+        foreach (Transform panel in backgroundPanels)
+        {
+            if (panel != null)
+            {
+                Vector3 center = panel.position;
+                Vector3 size = new Vector3(20f, backgroundHeight, 0.1f);
+                Gizmos.DrawWireCube(center, size);
+            }
+        }
+    }
+    #endif
+}
+

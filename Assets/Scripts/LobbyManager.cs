@@ -1,14 +1,16 @@
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using System.Collections;
-using EnhancedUI;
-using EnhancedUI.EnhancedScroller;
+using System.Collections.Generic;
+using DG.Tweening;
 
 /// <summary>
 /// Manages the lobby scene with infinite vertical background scrolling animation
 /// Handles continuous background movement to create a seamless scrolling effect
-/// Also manages lobby game objects using Enhanced Scroller
+/// Also manages 3 fixed lobby rows with swipe and button scroll controls
 /// </summary>
-public class LobbyManager : MonoBehaviour, IEnhancedScrollerDelegate
+public class LobbyManager : MonoBehaviour
 {
     [Header("Background Settings")]
     [SerializeField] private Transform[] backgroundPanels; // Array of background panels for seamless looping
@@ -25,55 +27,108 @@ public class LobbyManager : MonoBehaviour, IEnhancedScrollerDelegate
     [SerializeField] private Camera targetCamera; // Camera to calculate viewport bounds (auto-finds Main Camera if null)
     [SerializeField] private float resetOffset = 2f; // Extra offset below viewport to trigger reset early
     
-    [Header("Enhanced Scroller (Lobby Game Objects)")]
-    [SerializeField] private EnhancedScroller scroller; // Enhanced Scroller for lobby game objects
-    [SerializeField] private LobbyRowCellView cellViewPrefab; // Prefab for lobby row cells (contains 2 items)
-    [SerializeField] private float cellSize = 200f; // Height of each row cell
-    [SerializeField] private int cellsPerRow = 2; // Number of cells per row
+    [Header("Lobby Rows (3 Fixed Positions)")]
+    [SerializeField] private LobbyRowCellView upperRow; // Upper lobby row
+    [SerializeField] private LobbyRowCellView middleRow; // Middle lobby row (main focus)
+    [SerializeField] private LobbyRowCellView lowerRow; // Lower lobby row
+    
+    [Header("Scroll Controls")]
+    [SerializeField] private Button scrollUpButton; // Button to scroll up (show previous items)
+    [SerializeField] private Button scrollDownButton; // Button to scroll down (show next items)
+    [SerializeField] private bool enableSwipeDetection = false; // Enable/disable swipe scrolling (set to false if using new Input System)
+    
+    [Header("Scroll Animation Settings")]
+    [SerializeField] private float scrollAnimationDuration = 0.3f; // Duration of scroll animation
+    [SerializeField] private Ease scrollEase = Ease.OutCubic; // Easing for scroll animation
+    [SerializeField] private float swipeThreshold = 50f; // Minimum swipe distance to trigger scroll
+    
+    [Header("Carousel Scale Settings")]
+    [SerializeField] private float middleRowScale = 1.0f; // Scale for middle (focused) row
+    [SerializeField] private float sideRowScale = 0.85f; // Scale for upper and lower (side) rows
+    [SerializeField] private bool enableCarouselScaling = true; // Enable/disable carousel scaling effect
     
     [Header("Gameplay Object")]
     [SerializeField] private GameObject gameplayObject; // Gameplay object to open when play button is clicked
     
     [Header("Lobby Game Objects Settings")]
-    private const int BACKGROUND_COUNT = 12; // Total number of background sprites (0-12)
+    private const int BACKGROUND_COUNT = 12; // Total number of background sprites (0-11)
     
     [Header("Lobby Configurations")]
-    [SerializeField] private LobbyConfig[] lobbyConfigurations = new LobbyConfig[12]; // 13 lobby configurations (can be set in inspector)
+    [SerializeField] private LobbyConfig[] lobbyConfigurations = new LobbyConfig[12]; // 12 lobby configurations (can be set in inspector)
     
     private bool isScrolling = true;
     private float resetThresholdY;
     
-    /// <summary>
-    /// Internal representation of lobby game objects data
-    /// </summary>
-    private SmallList<LobbyGameObjectData> _lobbyObjectsData;
+    // Lobby scroll management
+    private LobbyGameObjectData[] _lobbyObjectsData; // Array of all 12 lobby objects
+    private int currentScrollIndex = 0; // Current scroll position
+    private bool isScrollAnimating = false; // Prevents multiple scrolls at once
     
-    private bool isScrollerInitialized = false;
+    // Vertical Carousel - Dynamic Items
+    private List<LobbyRowCellView> allLobbyItems = new List<LobbyRowCellView>();
+    private Transform upperAnchor;
+    private Transform middleAnchor;
+    private Transform lowerAnchor;
+    
+    [Header("Carousel Visual Settings")]
+    [SerializeField] private float sideOpacity = 0.5f; // Opacity for upper/lower rows
+    
+    [Header("Dot Navigation")]
+    [SerializeField] private Button[] dotButtons; // Dot buttons for navigation
+    [SerializeField] private Sprite selectedDotImage; // Image to show when dot is selected
+    [SerializeField] private Sprite unselectedDotImage; // Image to show when dot is not selected
+
+
+    
+    // Swipe detection
+    private Vector2 swipeStartPos;
+    private bool isSwiping = false;
     
     private void Start()
     {
         InitializeBackgrounds();
         InitializeLobbyConfigurations();
-        InitializeLobbyObjects();
+        InitializeLobbyRows();
+        SetupScrollButtons();
+        
+        // Start retry routine to ensure buttons light up when data is ready
+        StartCoroutine(InitializeButtonsRoutine());
+    }
+    
+    private IEnumerator InitializeButtonsRoutine()
+    {
+        // Retry for 5 seconds
+        float elapsed = 0f;
+        while (elapsed < 5f)
+        {
+            RefreshAllPlayButtons();
+            yield return new WaitForSeconds(0.5f);
+            elapsed += 0.5f;
+            
+            // If logged in, we can slow down or stop if finding success? 
+            // Better to just keep checking for a few seconds to catch the data load event.
+        }
     }
     
     private void OnEnable()
     {
-        // Reinitialize scroller when GameObject becomes active
-        if (isScrollerInitialized && scroller != null)
+        // Refresh lobby rows when GameObject becomes active
+        if (_lobbyObjectsData != null && _lobbyObjectsData.Length > 0)
         {
-            RefreshLobbyObjects();
-            // Refresh play buttons when lobby becomes active (in case currency changed)
-            RefreshAllPlayButtons();
+            UpdateVisibleRows();
         }
     }
     
     private void Update()
     {
+        // Background scrolling
         if (isScrolling && backgroundPanels != null && backgroundPanels.Length > 0)
         {
             ScrollBackgrounds();
         }
+        
+        // Swipe detection
+        HandleSwipeInput();
     }
     
     /// <summary>
@@ -344,68 +399,363 @@ public class LobbyManager : MonoBehaviour, IEnhancedScrollerDelegate
         PositionBackgroundsForLooping();
     }
     
-    #region Enhanced Scroller (Lobby Game Objects)
+    #region Lobby Rows Management (3 Fixed Positions)
     
     /// <summary>
-    /// Initializes the lobby game objects scroller
+    /// Initializes the lobby items pool and anchors
     /// </summary>
-    private void InitializeLobbyObjects()
+    private void InitializeLobbyRows()
     {
-        if (scroller == null)
+        // 1. Setup Anchors from existing assignments
+        if (upperRow != null) upperAnchor = upperRow.transform;
+        if (middleRow != null) middleAnchor = middleRow.transform;
+        if (lowerRow != null) lowerAnchor = lowerRow.transform;
+        
+        if (upperAnchor == null || middleAnchor == null || lowerAnchor == null)
         {
-            Debug.LogWarning("[LobbyManager] Enhanced Scroller not assigned for lobby objects. Skipping initialization.");
+            Debug.LogError("[LobbyManager] Row references are missing! Cannot setup carousel.");
+            return;
+        }
+
+        // 2. Create data for all lobby items
+        _lobbyObjectsData = new LobbyGameObjectData[BACKGROUND_COUNT];
+        for (int i = 0; i < BACKGROUND_COUNT; i++)
+        {
+            _lobbyObjectsData[i] = new LobbyGameObjectData(i, i);
+        }
+        
+        // 3. Instantiate Layout Items (Pool)
+        // Use middleRow as the template prefab since it's the main focused one
+        LobbyRowCellView prefab = middleRow;
+        
+        // Prepare container
+        Transform container = new GameObject("LobbyItemsContainer").transform;
+        container.SetParent(this.transform, false);
+        
+        // Clear existing list
+        allLobbyItems.Clear();
+        
+        for (int i = 0; i < BACKGROUND_COUNT; i++)
+        {
+            // Instantiate new item
+            LobbyRowCellView newItem = Instantiate(prefab, container);
+            newItem.name = $"LobbyItem_{i}";
+            
+            // Setup Data
+            newItem.SetData(_lobbyObjectsData[i]);
+            
+            // Ensure it has CanvasGroup for fading
+            if (newItem.GetComponent<CanvasGroup>() == null)
+            {
+                newItem.gameObject.AddComponent<CanvasGroup>();
+            }
+            
+            // Add to list
+            allLobbyItems.Add(newItem);
+        }
+        
+        // 4. Disable Original Rows (Turn them into invisible anchors)
+        DisableOriginalRow(upperRow);
+        DisableOriginalRow(middleRow);
+        DisableOriginalRow(lowerRow);
+        
+        // Start at first position
+        currentScrollIndex = 0;
+        
+        // Pre-position all items immediately to avoid "flying in from zero"
+        // 1. Determine active indices
+        int centerIndex = 0;
+        int upperIndex = BACKGROUND_COUNT - 1; 
+        int lowerIndex = 1;
+        
+        for (int i = 0; i < allLobbyItems.Count; i++)
+        {
+            var item = allLobbyItems[i];
+            
+            // If active, snap to its visible anchor
+            if (i == centerIndex) SnapItemToPosition(item, middleAnchor, middleRowScale, 1f);
+            else if (i == upperIndex) SnapItemToPosition(item, upperAnchor, sideRowScale, sideOpacity);
+            else if (i == lowerIndex) SnapItemToPosition(item, lowerAnchor, sideRowScale, sideOpacity);
+            
+            // If inactive, snap to the closer anchor ("stacking" them)
+            // Items > 1 are "below", Items < 0 (wrapped) are "above"
+            // For the initial list 0,1,2..., items 2-11 are "below" so we stack them at lowerAnchor
+            else 
+            {
+               item.gameObject.SetActive(false);
+               SnapItemToPosition(item, lowerAnchor, sideRowScale, 0f);
+            }
+        }
+        
+        // Initial Position Update (Instant)
+        UpdateLobbyPositions(true, 0);
+        
+        // Setup Dots
+        SetupDotButtons();
+        UpdateDotButtons();
+        
+        Debug.Log($"[LobbyManager] Initialized {BACKGROUND_COUNT} dynamic lobby items for vertical carousel");
+    }
+    
+    private void DisableOriginalRow(LobbyRowCellView row)
+    {
+        if (row != null)
+        {
+            // Disable visuals but keep GameObject active for Transform anchor
+            if (row.GetComponent<Image>() != null) row.GetComponent<Image>().enabled = false;
+            if (row.GetComponent<CanvasGroup>() != null) row.GetComponent<CanvasGroup>().alpha = 0f;
+            row.enabled = false; // Disable the script
+            
+            // Hide children if any (clean anchor)
+            foreach(Transform child in row.transform)
+            {
+                child.gameObject.SetActive(false);
+            }
+        }
+    }
+    
+    /// <summary>
+    /// Sets up scroll button click listeners
+    /// </summary>
+    private void SetupScrollButtons()
+    {
+        if (scrollUpButton != null)
+        {
+            scrollUpButton.onClick.AddListener(ScrollUp);
+        }
+        
+        if (scrollDownButton != null)
+        {
+            scrollDownButton.onClick.AddListener(ScrollDown);
+        }
+    }
+    
+    /// <summary>
+    /// Updates positions of all lobby items based on current scroll index
+    /// </summary>
+    /// <param name="instant">If true, snaps to position without animation</param>
+    private void UpdateVisibleRows()
+    {
+        // Wrapper for compatibility with existing calls
+        UpdateLobbyPositions(false, 0);
+    }
+    
+    private void UpdateLobbyPositions(bool instant = false, int scrollDirection = 0)
+    {
+        if (allLobbyItems == null || allLobbyItems.Count == 0) return;
+        
+        int centerIndex = GetWrappedIndex(currentScrollIndex);
+        int upperIndex = GetWrappedIndex(currentScrollIndex - 1);
+        int lowerIndex = GetWrappedIndex(currentScrollIndex + 1);
+        
+        for (int i = 0; i < allLobbyItems.Count; i++)
+        {
+             LobbyRowCellView item = allLobbyItems[i];
+             if (item == null) continue;
+             
+             Transform targetAnchor = null;
+             float targetScale = sideRowScale;
+             float targetOpacity = 0f;
+             bool isVisible = false;
+             bool isEntering = false;
+             
+             // Determine state
+             if (i == centerIndex)
+             {
+                 targetAnchor = middleAnchor;
+                 targetScale = middleRowScale;
+                 targetOpacity = 1f;
+                 isVisible = true;
+             }
+             else if (i == upperIndex)
+             {
+                 targetAnchor = upperAnchor;
+                 targetScale = sideRowScale;
+                 targetOpacity = sideOpacity;
+                 isVisible = true;
+                 
+                 // If scrolling UP (direction -1), this slot is being filled by a new item coming from above
+                 if (scrollDirection < 0 && !item.gameObject.activeSelf) isEntering = true;
+             }
+             else if (i == lowerIndex)
+             {
+                 targetAnchor = lowerAnchor;
+                 targetScale = sideRowScale;
+                 targetOpacity = sideOpacity;
+                 isVisible = true;
+                 
+                 // If scrolling DOWN (direction 1), this slot is being filled by a new item coming from below
+                 if (scrollDirection > 0 && !item.gameObject.activeSelf) isEntering = true;
+             }
+             
+             if (isVisible && targetAnchor != null)
+             {
+                 // Smart Snap for new entrants:
+                 if (isEntering && !instant)
+                 {
+                     SnapItemToPosition(item, targetAnchor, sideRowScale * 0.5f, 0f);
+                 }
+                 
+                 item.gameObject.SetActive(true);
+                 
+                 // Update visual selection state (Overlay)
+                 // Only center item is "Selected", others are "Unselected"
+                 bool isSelected = (i == centerIndex);
+                 item.SetSelectedState(isSelected);
+
+                 if (instant)
+                 {
+                     SnapItemToPosition(item, targetAnchor, targetScale, targetOpacity);
+                 }
+                 else
+                 {
+                     StartCoroutine(AnimateItemToPosition(item, targetAnchor, targetScale, targetOpacity));
+                 }
+             }
+             else
+             {
+                 // When hiding an item...
+                 item.gameObject.SetActive(false);
+             }
+        }
+        
+        // Update Dots
+        UpdateDotButtons();
+    }
+    
+    private void SnapItemToPosition(LobbyRowCellView item, Transform anchor, float scale, float opacity)
+    {
+        item.transform.SetParent(anchor, true);
+        item.transform.localPosition = Vector3.zero;
+        item.transform.localScale = Vector3.one * scale;
+        
+        CanvasGroup cg = item.GetComponent<CanvasGroup>();
+        if (cg != null) cg.alpha = opacity;
+    }
+
+    private IEnumerator AnimateItemToPosition(LobbyRowCellView item, Transform anchor, float scale, float opacity)
+    {
+        // Kill previous animations
+        item.transform.DOKill();
+        CanvasGroup cg = item.GetComponent<CanvasGroup>();
+        if (cg != null) cg.DOKill();
+
+        // Reparent first to ensure correct draw order/context
+        // true = keep world position, but we want smooth local move
+        item.transform.SetParent(anchor, true);
+        
+        // Animate Local Move to Zero (Anchor Center)
+        item.transform.DOLocalMove(Vector3.zero, scrollAnimationDuration).SetEase(scrollEase);
+        
+        // Animate Scale
+        item.transform.DOScale(scale, scrollAnimationDuration).SetEase(scrollEase);
+        
+        // Animate Opacity
+        if (cg != null)
+        {
+            cg.DOFade(opacity, scrollAnimationDuration);
+        }
+        
+        yield return null;
+    }
+
+    /// <summary>
+    /// Gets a wrapped index (loops around the array)
+    /// </summary>
+    private int GetWrappedIndex(int index)
+    {
+        int wrappedIndex = index % BACKGROUND_COUNT;
+        if (wrappedIndex < 0)
+        {
+            wrappedIndex += BACKGROUND_COUNT;
+        }
+        return wrappedIndex;
+    }
+    
+    // Obsolete - functionality moved to UpdateLobbyPositions
+    private void ApplyCarouselScales(bool animate) { }
+    
+    /// <summary>
+    /// Scrolls up (shows previous items)
+    /// </summary>
+    public void ScrollUp()
+    {
+        // Scroll Up means we want to see "Index - 1"
+        // In the carousel visualization:
+        // Current: I
+        // Up: I-1
+        // So we decrement index
+        
+        // Debounce if needed, or allow rapid scrolling?
+        // OffersCarouselManager allows overwriting transition.
+        
+        currentScrollIndex--;
+        if (currentScrollIndex < 0) currentScrollIndex = BACKGROUND_COUNT - 1;
+        
+        UpdateLobbyPositions(false, -1);
+    }
+    
+    /// <summary>
+    /// Scrolls down (shows next items)
+    /// </summary>
+    public void ScrollDown()
+    {
+        currentScrollIndex++;
+        if (currentScrollIndex >= BACKGROUND_COUNT) currentScrollIndex = 0;
+        
+        UpdateLobbyPositions(false, 1);
+    }
+    
+    // Obsolete
+    private IEnumerator AnimateScroll(int direction)
+    {
+        yield break;
+    }
+    
+    /// <summary>
+    /// Handles swipe input detection using Touch API (works with both old and new Input System)
+    /// </summary>
+    private void HandleSwipeInput()
+    {
+        // Skip if swipe detection is disabled
+        if (!enableSwipeDetection)
+        {
             return;
         }
         
-        // Set this script as the scroller's delegate
-        scroller.Delegate = this;
-        
-        // Load 13 background objects (use coroutine to wait for scroller initialization)
-        StartCoroutine(LoadLobbyObjectsDataDelayed());
-        isScrollerInitialized = true;
-    }
-    
-    /// <summary>
-    /// Refreshes the lobby objects when GameObject becomes active again
-    /// </summary>
-    private void RefreshLobbyObjects()
-    {
-        if (scroller != null)
+        // Use Touch API for mobile/touch devices (works with both input systems)
+        if (Input.touchCount > 0)
         {
-            scroller.Delegate = this;
+            Touch touch = Input.GetTouch(0);
             
-            // Reload data if we have data (use coroutine to wait for scroller initialization)
-            if (_lobbyObjectsData != null && _lobbyObjectsData.Count > 0)
+            if (touch.phase == TouchPhase.Began)
             {
-                StartCoroutine(ReloadLobbyObjectsDataDelayed());
+                swipeStartPos = touch.position;
+                isSwiping = true;
             }
-            else
+            else if (touch.phase == TouchPhase.Ended && isSwiping)
             {
-                // If no data, load 13 background objects
-                StartCoroutine(LoadLobbyObjectsDataDelayed());
+                Vector2 swipeEndPos = touch.position;
+                Vector2 swipeDelta = swipeEndPos - swipeStartPos;
+                
+                // Check if swipe is long enough
+                if (Mathf.Abs(swipeDelta.y) > swipeThreshold)
+                {
+                    // Swipe up = scroll down (show next items)
+                    if (swipeDelta.y < 0)
+                    {
+                        ScrollDown();
+                    }
+                    // Swipe down = scroll up (show previous items)
+                    else
+                    {
+                        ScrollUp();
+                    }
+                }
+                
+                isSwiping = false;
             }
         }
-    }
-    
-    /// <summary>
-    /// Coroutine to reload data after waiting a frame (ensures scroller is initialized)
-    /// </summary>
-    private IEnumerator ReloadLobbyObjectsDataDelayed()
-    {
-        yield return null; // Wait one frame for scroller to initialize
-        if (scroller != null && scroller.gameObject.activeInHierarchy)
-        {
-            scroller.ReloadData();
-        }
-    }
-    
-    /// <summary>
-    /// Coroutine to load data after waiting a frame (ensures scroller is initialized)
-    /// </summary>
-    private IEnumerator LoadLobbyObjectsDataDelayed()
-    {
-        yield return null; // Wait one frame for scroller to initialize
-        LoadLobbyObjectsData();
     }
     
     /// <summary>
@@ -460,36 +810,50 @@ public class LobbyManager : MonoBehaviour, IEnhancedScrollerDelegate
     /// </summary>
     public bool CanPlayerAffordEntryFee(int lobbyIndex)
     {
-        if (PlayFabManager.Instance == null || !PlayFabManager.Instance.IsLoggedIn())
+        if (PlayFabManager.Instance == null)
         {
-            return false; // Can't check if not logged in
+            Debug.LogWarning("CanPlayerAffordEntryFee: PlayFabManager is null");
+            return false;
+        }
+        
+        if (!PlayFabManager.Instance.IsLoggedIn())
+        {
+            Debug.LogWarning("CanPlayerAffordEntryFee: Not logged in");
+            return false;
         }
         
         LobbyConfig config = GetLobbyConfig(lobbyIndex);
         if (config == null)
         {
-            return false; // No config found
+            Debug.LogError($"CanPlayerAffordEntryFee: No config for index {lobbyIndex}");
+            return false; 
         }
+        
+        // Log values for debugging
+        var data = PlayFabManager.Instance.currentPlayerData;
+        // Debug.Log($"Checking Affordability for Lobby {lobbyIndex}: Cash({data.cash}/{config.entryFeeCash}), Chips({data.coins}/{config.entryFeeChips})");
         
         // Check if player has enough cash
         if (config.entryFeeCash > 0f)
         {
-            if (PlayFabManager.Instance.currentPlayerData.cash < config.entryFeeCash)
+            if (data.cash < config.entryFeeCash)
             {
-                return false; // Can't afford cash entry fee
+                // Debug.LogWarning($"Can't afford Cash: Has {data.cash}, Needs {config.entryFeeCash}");
+                return false; 
             }
         }
         
         // Check if player has enough chips
         if (config.entryFeeChips > 0)
         {
-            if (PlayFabManager.Instance.currentPlayerData.coins < config.entryFeeChips)
+            if (data.coins < config.entryFeeChips)
             {
-                return false; // Can't afford chips entry fee
+                // Debug.LogWarning($"Can't afford Chips: Has {data.coins}, Needs {config.entryFeeChips}");
+                return false; 
             }
         }
         
-        return true; // Player can afford entry fee
+        return true; 
     }
     
     /// <summary>
@@ -501,102 +865,6 @@ public class LobbyManager : MonoBehaviour, IEnhancedScrollerDelegate
         {
             lobbyConfigurations[lobbyIndex] = config;
             Debug.Log($"[LobbyManager] Updated configuration for Lobby {lobbyIndex + 1}");
-        }
-    }
-    
-    /// <summary>
-    /// Loads 13 lobby objects data - one for each background sprite (0-12)
-    /// </summary>
-    public void LoadLobbyObjectsData()
-    {
-        if (_lobbyObjectsData == null)
-        {
-            _lobbyObjectsData = new SmallList<LobbyGameObjectData>();
-        }
-        else
-        {
-            _lobbyObjectsData.Clear();
-        }
-        
-        // Create exactly 13 objects, one for each background sprite (indices 0-12)
-        for (int i = 0; i < BACKGROUND_COUNT; i++)
-        {
-            _lobbyObjectsData.Add(new LobbyGameObjectData(i, i));
-        }
-        
-        // Reload the scroller with new data (only if scroller is active and initialized)
-        if (scroller != null && scroller.gameObject.activeInHierarchy)
-        {
-            // Check if delegate is set
-            if (scroller.Delegate == null)
-            {
-                scroller.Delegate = this;
-            }
-            scroller.ReloadData();
-        }
-        
-        Debug.Log($"[LobbyManager] Loaded {_lobbyObjectsData.Count} lobby objects - one for each background sprite");
-    }
-    
-    /// <summary>
-    /// Adds a lobby game object entry
-    /// </summary>
-    public void AddLobbyObject(int backgroundIndex, int lobbyIndex = -1)
-    {
-        if (_lobbyObjectsData == null)
-        {
-            _lobbyObjectsData = new SmallList<LobbyGameObjectData>();
-        }
-        
-        // Use lobbyIndex if provided, otherwise use backgroundIndex
-        int actualLobbyIndex = lobbyIndex >= 0 ? lobbyIndex : backgroundIndex;
-        _lobbyObjectsData.Add(new LobbyGameObjectData(backgroundIndex, actualLobbyIndex));
-        
-        if (scroller != null && scroller.gameObject.activeInHierarchy)
-        {
-            // Check if delegate is set
-            if (scroller.Delegate == null)
-            {
-                scroller.Delegate = this;
-            }
-            scroller.ReloadData();
-        }
-    }
-    
-    /// <summary>
-    /// Clears all lobby objects data
-    /// </summary>
-    public void ClearLobbyObjects()
-    {
-        if (_lobbyObjectsData != null)
-        {
-            _lobbyObjectsData.Clear();
-        }
-        
-        if (scroller != null && scroller.gameObject.activeInHierarchy)
-        {
-            // Check if delegate is set
-            if (scroller.Delegate == null)
-            {
-                scroller.Delegate = this;
-            }
-            scroller.ReloadData();
-        }
-        
-        Debug.Log("[LobbyManager] Lobby objects data cleared");
-    }
-    
-    /// <summary>
-    /// Refreshes all play buttons interactability based on player's current currency
-    /// Call this when player's cash or chips change
-    /// </summary>
-    public void RefreshAllPlayButtons()
-    {
-        if (scroller != null && scroller.gameObject.activeInHierarchy)
-        {
-            // Reload data to refresh all cells
-            scroller.ReloadData();
-            Debug.Log("[LobbyManager] Refreshed all play buttons interactability");
         }
     }
     
@@ -648,82 +916,24 @@ public class LobbyManager : MonoBehaviour, IEnhancedScrollerDelegate
         }
     }
     
-    #endregion
-    
-    #region IEnhancedScrollerDelegate Implementation
-    
     /// <summary>
-    /// Returns the number of rows (cells) in the lobby objects list
-    /// Each row contains 2 items
+    /// Refreshes all play buttons interactability based on player's current currency
+    /// Call this when player's cash or chips change
     /// </summary>
-    public int GetNumberOfCells(EnhancedScroller scroller)
+    public void RefreshAllPlayButtons()
     {
-        if (_lobbyObjectsData == null || _lobbyObjectsData.Count == 0)
-            return 0;
-        
-        // Calculate number of rows: ceil(data count / cells per row)
-        return Mathf.CeilToInt((float)_lobbyObjectsData.Count / cellsPerRow);
-    }
-    
-    /// <summary>
-    /// Returns the size of each row cell (height for vertical scroller)
-    /// </summary>
-    public float GetCellViewSize(EnhancedScroller scroller, int dataIndex)
-    {
-        return cellSize;
-    }
-    
-    /// <summary>
-    /// Gets the cell view (row) for a specific data index
-    /// Each row contains 2 items
-    /// </summary>
-    public EnhancedScrollerCellView GetCellView(EnhancedScroller scroller, int dataIndex, int cellIndex)
-    {
-        // Check if prefab is assigned
-        if (cellViewPrefab == null)
+        if (allLobbyItems != null)
         {
-            Debug.LogError("[LobbyManager] Cell View Prefab is not assigned!");
-            return null;
-        }
-        
-        // Get a row cell from the scroller (recycled or new)
-        LobbyRowCellView rowCellView = scroller.GetCellView(cellViewPrefab) as LobbyRowCellView;
-        
-        if (rowCellView == null)
-        {
-            Debug.LogError("[LobbyManager] Failed to get LobbyRowCellView cell view!");
-            return null;
-        }
-        
-        // Calculate the starting index for this row
-        int startingIndex = dataIndex * cellsPerRow;
-        
-        // Get data for the two items in this row
-        LobbyGameObjectData data1 = null;
-        LobbyGameObjectData data2 = null;
-        
-        if (_lobbyObjectsData != null)
-        {
-            // First item
-            if (startingIndex < _lobbyObjectsData.Count)
+            foreach(var item in allLobbyItems)
             {
-                data1 = _lobbyObjectsData[startingIndex];
-            }
-            
-            // Second item
-            if (startingIndex + 1 < _lobbyObjectsData.Count)
-            {
-                data2 = _lobbyObjectsData[startingIndex + 1];
+                if (item != null && item.gameObject.activeSelf)
+                {
+                    item.RefreshPlayButtonsInteractability();
+                }
             }
         }
         
-        // Set the name for debugging
-        rowCellView.name = $"Lobby Row {dataIndex}";
-        
-        // Set the data for this row (2 items)
-        rowCellView.SetData(data1, data2);
-        
-        return rowCellView;
+        Debug.Log("[LobbyManager] Refreshed all visible play buttons interactability");
     }
     
     #endregion
@@ -748,5 +958,100 @@ public class LobbyManager : MonoBehaviour, IEnhancedScrollerDelegate
         }
     }
     #endif
+    /// <summary>
+    /// Sets up dot button listeners
+    /// </summary>
+    private void SetupDotButtons()
+    {
+        if (dotButtons == null) return;
+        
+        for (int i = 0; i < dotButtons.Length; i++)
+        {
+            if (dotButtons[i] != null)
+            {
+                int index = i; // Move to local scope for closure
+                dotButtons[i].onClick.RemoveAllListeners();
+                dotButtons[i].onClick.AddListener(() => OnDotButtonClicked(index));
+            }
+        }
+    }
+
+    /// <summary>
+    /// Called when a dot button is clicked
+    /// </summary>
+    private void OnDotButtonClicked(int targetIndex)
+    {
+        // Play click sound
+        if (SettingManager.instance != null)
+        {
+            SettingManager.instance.PlayTapSound();
+        }
+        
+        if (targetIndex == currentScrollIndex) return;
+        
+        // Determine direction for smooth scroll visual
+        // If clicking a dot "below" current, scroll down. "Above" scroll up.
+        int direction = (targetIndex > currentScrollIndex) ? 1 : -1;
+        
+        // Handle wrap-around cases for shorter path? 
+        // For simplicity, just jump to it. OR scroll nicely if close.
+        
+        // Update index
+        currentScrollIndex = targetIndex;
+        // Clamp
+        if (currentScrollIndex < 0) currentScrollIndex = 0;
+        if (currentScrollIndex >= BACKGROUND_COUNT) currentScrollIndex = BACKGROUND_COUNT - 1;
+        
+        UpdateLobbyPositions(false, direction);
+    }
+
+    /// <summary>
+    /// Updates dot button visual states with scale animation
+    /// </summary>
+    private void UpdateDotButtons()
+    {
+        if (dotButtons == null) return;
+        
+        int activeDotIndex = currentScrollIndex;
+        
+        for (int i = 0; i < dotButtons.Length; i++)
+        {
+            if (dotButtons[i] != null)
+            {
+                Image dotImage = dotButtons[i].GetComponent<Image>();
+                RectTransform dotRect = dotButtons[i].GetComponent<RectTransform>();
+                
+                if (dotImage != null)
+                {
+                    bool isSelected = (i == activeDotIndex);
+                     
+                    if (isSelected)
+                    {
+                        if (selectedDotImage != null) dotImage.sprite = selectedDotImage;
+                        dotImage.color = Color.white;
+                        
+                        // Animate Scale Up
+                        if (dotRect != null)
+                        {
+                            dotRect.DOKill();
+                            dotRect.DOScale(1.4f, 0.2f).SetEase(Ease.OutBack);
+                        }
+                    }
+                    else
+                    {
+                        if (unselectedDotImage != null) dotImage.sprite = unselectedDotImage;
+                        dotImage.color = (unselectedDotImage == null) ? new Color(1f, 1f, 1f, 0.5f) : Color.white;
+                        
+                        // Animate Scale Down
+                        if (dotRect != null)
+                        {
+                            dotRect.DOKill();
+                            dotRect.DOScale(1.0f, 0.2f).SetEase(Ease.OutQuad);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 

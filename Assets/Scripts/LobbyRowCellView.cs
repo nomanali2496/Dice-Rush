@@ -7,17 +7,15 @@ using System.Collections.Generic;
 using DOTweenTween = DG.Tweening.Tween;
 
 /// <summary>
-/// Row cell view that contains 2 LobbyGameObjectUI items for grid layout
+/// Row cell view that contains 1 LobbyGameObjectUI item
 /// </summary>
 public class LobbyRowCellView : EnhancedScrollerCellView
 {
-    [Header("Lobby Game Object Items")]
-    [SerializeField] private LobbyGameObjectUI item1; // First item in the row
-    [SerializeField] private LobbyGameObjectUI item2; // Second item in the row
+    [Header("Lobby Game Object Item")]
+    [SerializeField] private LobbyGameObjectUI item; // Lobby item in the row
     
-    [Header("Play Buttons")]
-    [SerializeField] private Button playButton1; // Play button for first item
-    [SerializeField] private Button playButton2; // Play button for second item
+    [Header("Play Button")]
+    [SerializeField] private Button playButton; // Play button for the item
     
     [Header("Play Button Hover Animation Settings")]
     [SerializeField] private float buttonHoverScale = 1.15f; // Scale factor when hovering over button (default 1.15 = 15% larger)
@@ -33,97 +31,67 @@ public class LobbyRowCellView : EnhancedScrollerCellView
         // Find LobbyManager in the scene
         lobbyManager = FindObjectOfType<LobbyManager>();
         
-        // Setup button listeners and hover animations
-        if (playButton1 != null)
+        // Setup button listener and hover animation
+        if (playButton != null)
         {
-            playButton1.onClick.AddListener(OnPlayButton1Clicked);
-            SetupButtonHoverAnimation(playButton1);
-        }
-        
-        if (playButton2 != null)
-        {
-            playButton2.onClick.AddListener(OnPlayButton2Clicked);
-            SetupButtonHoverAnimation(playButton2);
+            playButton.onClick.AddListener(OnPlayButtonClicked);
+            SetupButtonHoverAnimation(playButton);
         }
     }
     
     private void OnDestroy()
     {
-        // Remove listeners to prevent memory leaks
-        if (playButton1 != null)
+        // Remove listener to prevent memory leaks
+        if (playButton != null)
         {
-            playButton1.onClick.RemoveListener(OnPlayButton1Clicked);
-            CleanupButtonHoverAnimation(playButton1);
-        }
-        
-        if (playButton2 != null)
-        {
-            playButton2.onClick.RemoveListener(OnPlayButton2Clicked);
-            CleanupButtonHoverAnimation(playButton2);
+            playButton.onClick.RemoveListener(OnPlayButtonClicked);
+            CleanupButtonHoverAnimation(playButton);
         }
     }
     
     /// <summary>
-    /// Sets the data for this row (2 items)
+    /// Sets the data for this row (1 item)
     /// </summary>
-    /// <param name="data1">Data for first item (can be null)</param>
-    /// <param name="data2">Data for second item (can be null)</param>
-    public void SetData(LobbyGameObjectData data1, LobbyGameObjectData data2)
+    /// <param name="data">Data for the item (can be null)</param>
+    public void SetData(LobbyGameObjectData data)
     {
-        // Set first item
-        if (item1 != null)
+        // Set item
+        if (item != null)
         {
-            if (data1 != null)
+            if (data != null)
             {
-                item1.SetData(data1);
-                item1.gameObject.SetActive(true);
+                item.SetData(data);
+                item.gameObject.SetActive(true);
                 
-                // Show and update play button for first item
-                if (playButton1 != null)
+                // Show and update play button
+                if (playButton != null)
                 {
-                    playButton1.gameObject.SetActive(true);
-                    UpdatePlayButtonInteractability(playButton1, data1.lobbyIndex);
-                    ResetButtonScale(playButton1); // Reset scale when data is set (cell recycling)
+                    playButton.gameObject.SetActive(true);
+                    UpdatePlayButtonInteractability(playButton, data.lobbyIndex);
+                    ResetButtonScale(playButton); // Reset scale when data is set (cell recycling)
                 }
             }
             else
             {
-                item1.gameObject.SetActive(false);
+                item.gameObject.SetActive(false);
                 
                 // Hide play button if no data
-                if (playButton1 != null)
+                if (playButton != null)
                 {
-                    playButton1.gameObject.SetActive(false);
+                    playButton.gameObject.SetActive(false);
                 }
             }
         }
-        
-        // Set second item
-        if (item2 != null)
+    }
+
+    /// <summary>
+    /// Update the selected visual state
+    /// </summary>
+    public void SetSelectedState(bool isSelected)
+    {
+        if (item != null)
         {
-            if (data2 != null)
-            {
-                item2.SetData(data2);
-                item2.gameObject.SetActive(true);
-                
-                // Show and update play button for second item
-                if (playButton2 != null)
-                {
-                    playButton2.gameObject.SetActive(true);
-                    UpdatePlayButtonInteractability(playButton2, data2.lobbyIndex);
-                    ResetButtonScale(playButton2); // Reset scale when data is set (cell recycling)
-                }
-            }
-            else
-            {
-                item2.gameObject.SetActive(false);
-                
-                // Hide play button if no data
-                if (playButton2 != null)
-                {
-                    playButton2.gameObject.SetActive(false);
-                }
-            }
+            item.SetSelectedState(isSelected);
         }
     }
     
@@ -148,37 +116,28 @@ public class LobbyRowCellView : EnhancedScrollerCellView
     }
     
     /// <summary>
-    /// Refreshes the interactability of play buttons (call this when player currency changes)
+    /// Refreshes the interactability of play button (call this when player currency changes)
     /// </summary>
     public void RefreshPlayButtonsInteractability()
     {
-        if (item1 != null && playButton1 != null)
+        if (item != null && playButton != null)
         {
-            LobbyGameObjectData data1 = item1.GetCurrentData();
-            if (data1 != null)
+            LobbyGameObjectData data = item.GetCurrentData();
+            if (data != null)
             {
-                UpdatePlayButtonInteractability(playButton1, data1.lobbyIndex);
-            }
-        }
-        
-        if (item2 != null && playButton2 != null)
-        {
-            LobbyGameObjectData data2 = item2.GetCurrentData();
-            if (data2 != null)
-            {
-                UpdatePlayButtonInteractability(playButton2, data2.lobbyIndex);
+                UpdatePlayButtonInteractability(playButton, data.lobbyIndex);
             }
         }
     }
     
     /// <summary>
-    /// Called when play button 1 is clicked
+    /// Called when play button is clicked
     /// </summary>
-    private void OnPlayButton1Clicked()
+    private void OnPlayButtonClicked()
     {
-        if (lobbyManager != null && item1 != null)
+        if (lobbyManager != null && item != null)
         {
-            LobbyGameObjectData data = item1.GetCurrentData();
+            LobbyGameObjectData data = item.GetCurrentData();
             if (data != null)
             {
                 // Pass the lobby index to open the correct lobby configuration
@@ -187,27 +146,7 @@ public class LobbyRowCellView : EnhancedScrollerCellView
         }
         else
         {
-            Debug.LogWarning("[LobbyRowCellView] LobbyManager or item1 is null! Cannot open gameplay object.");
-        }
-    }
-    
-    /// <summary>
-    /// Called when play button 2 is clicked
-    /// </summary>
-    private void OnPlayButton2Clicked()
-    {
-        if (lobbyManager != null && item2 != null)
-        {
-            LobbyGameObjectData data = item2.GetCurrentData();
-            if (data != null)
-            {
-                // Pass the lobby index to open the correct lobby configuration
-                lobbyManager.OpenGameplayObject(data.lobbyIndex);
-            }
-        }
-        else
-        {
-            Debug.LogWarning("[LobbyRowCellView] LobbyManager or item2 is null! Cannot open gameplay object.");
+            Debug.LogWarning("[LobbyRowCellView] LobbyManager or item is null! Cannot open gameplay object.");
         }
     }
     
