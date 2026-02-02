@@ -289,7 +289,7 @@ public class PlayerProfileUI : MonoBehaviour
         // Update account cash display - cash is stored as float
         if (accountCashText != null)
         {
-            accountCashText.text = cashPrefix + FormatCash(data.cash);
+            accountCashText.text = cashPrefix + data.cash;
         }
         
         // Update coins (Main Menu)
