@@ -429,16 +429,13 @@ public class LobbyManager : MonoBehaviour
         LobbyRowCellView prefab = middleRow;
         
         // Prepare container
-        Transform container = new GameObject("LobbyItemsContainer").transform;
-        container.SetParent(this.transform, false);
-        
         // Clear existing list
         allLobbyItems.Clear();
         
         for (int i = 0; i < BACKGROUND_COUNT; i++)
         {
             // Instantiate new item
-            LobbyRowCellView newItem = Instantiate(prefab, container);
+            LobbyRowCellView newItem = Instantiate(prefab);
             newItem.name = $"LobbyItem_{i}";
             
             // Setup Data
@@ -625,12 +622,45 @@ public class LobbyManager : MonoBehaviour
     
     private void SnapItemToPosition(LobbyRowCellView item, Transform anchor, float scale, float opacity)
     {
-        item.transform.SetParent(anchor, true);
+        item.transform.SetParent(anchor, false);
+        
+        // Calculate screen scale factor to ensure children resize correctly
+        float screenRatio = GetScreenScaleFactor();
+        
+        RectTransform rect = item.GetComponent<RectTransform>();
+        if (rect != null)
+        {
+            // Center the item - do NOT stretch, let localScale handle the sizing
+            rect.anchorMin = new Vector2(0.5f, 0.5f);
+            rect.anchorMax = new Vector2(0.5f, 0.5f);
+            rect.pivot = new Vector2(0.5f, 0.5f);
+            rect.anchoredPosition = Vector2.zero;
+            
+            // Note: We keep the original SizeDelta of the prefab here
+        }
+        
         item.transform.localPosition = Vector3.zero;
-        item.transform.localScale = Vector3.one * scale;
+        
+        // Apply both the carousel scale AND the screen resolution scale
+        item.transform.localScale = Vector3.one * scale * screenRatio;
         
         CanvasGroup cg = item.GetComponent<CanvasGroup>();
         if (cg != null) cg.alpha = opacity;
+    }
+
+    private float GetScreenScaleFactor()
+    {
+        // Reference resolution from LobbyScaler
+        float refWidth = 1440f;
+        float refHeight = 3216f;
+        
+        float scaleX = Screen.width / refWidth;
+        float scaleY = Screen.height / refHeight;
+        
+        // Use the same logic as LobbyScaler to ensure consistency
+        // If screen is smaller than reference, we shrink. 
+        // We typically want to fit the width for portrait UI.
+        return Mathf.Min(scaleX, scaleY);
     }
 
     private IEnumerator AnimateItemToPosition(LobbyRowCellView item, Transform anchor, float scale, float opacity)
@@ -644,11 +674,14 @@ public class LobbyManager : MonoBehaviour
         // true = keep world position, but we want smooth local move
         item.transform.SetParent(anchor, true);
         
+        // Calculate screen scale to ensure children resize correctly
+        float screenRatio = GetScreenScaleFactor();
+
         // Animate Local Move to Zero (Anchor Center)
         item.transform.DOLocalMove(Vector3.zero, scrollAnimationDuration).SetEase(scrollEase);
         
-        // Animate Scale
-        item.transform.DOScale(scale, scrollAnimationDuration).SetEase(scrollEase);
+        // Animate Scale (Carousel Scale * Screen Ratio)
+        item.transform.DOScale(scale * screenRatio, scrollAnimationDuration).SetEase(scrollEase);
         
         // Animate Opacity
         if (cg != null)
