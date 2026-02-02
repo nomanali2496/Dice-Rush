@@ -111,6 +111,12 @@ public class LobbyManager : MonoBehaviour
     
     private void OnEnable()
     {
+        // Ensure background music is playing if settings allow (e.g. returning from game)
+        if (SettingManager.instance != null)
+        {
+            SettingManager.instance.ApplyMusicSetting();
+        }
+
         // Refresh lobby rows when GameObject becomes active
         if (_lobbyObjectsData != null && _lobbyObjectsData.Length > 0)
         {

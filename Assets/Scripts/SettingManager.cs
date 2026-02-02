@@ -14,10 +14,15 @@ public class SettingManager : MonoBehaviour
     [SerializeField] AudioSource source;
     [Header("Music Settings")]
     [SerializeField] private Toggle musicToggle; // Toggle UI for music on/off
-    [SerializeField] private AudioSource backgroundMusicSource; // AudioSource component that plays background music
+    [SerializeField] private AudioSource backgroundMusicSource; // Main Menu / Normal Background Music
+    [SerializeField] private AudioSource gameplayMusicSource; // Gameplay Background Music
     
     [Header("Sound Settings")]
     [SerializeField] private Toggle soundToggle; // Toggle UI for sound effects on/off
+
+    [Header("Game Reference")]
+    [SerializeField] private GameObject mainMenu; // Reference to Main Menu / Lobby GameObject
+    [SerializeField] private GameObject gameplayScreen; // Reference to Gameplay GameObject
     
     [Header("Debug Info")]
     [SerializeField] private string currentUserId = ""; // Current user's PlayFab ID (for account-specific storage)
@@ -40,6 +45,9 @@ public class SettingManager : MonoBehaviour
         instance = this;
     }
 
+    private bool lastMainMenuActiveState = false; // Track previous state to detect changes
+    private bool lastGameplayActiveState = false; // Track previous gameplay state
+
     private void Start()
     {
         // Find AuthenticationManager in scene
@@ -54,13 +62,28 @@ public class SettingManager : MonoBehaviour
             Debug.LogWarning("[SettingManager] AuthenticationManager not found! Settings will use device-based storage.");
         }
         
+        // Initialize state tracker
+        if (mainMenu != null)
+        {
+            lastMainMenuActiveState = mainMenu.activeInHierarchy;
+        }
+        if (gameplayScreen != null)
+        {
+            lastGameplayActiveState = gameplayScreen.activeInHierarchy;
+        }
+        
         // Ensure music is stopped initially (before login)
         if (backgroundMusicSource != null)
         {
             backgroundMusicSource.Stop();
             backgroundMusicSource.mute = true;
-            Debug.Log("[SettingManager] Background music muted until user logs in");
         }
+        if (gameplayMusicSource != null)
+        {
+            gameplayMusicSource.Stop();
+            gameplayMusicSource.mute = true;
+        }
+        Debug.Log("[SettingManager] All music muted until user logs in");
         
         // Check if user is already logged in (in case Start() runs after login)
         if (PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
@@ -105,6 +128,33 @@ public class SettingManager : MonoBehaviour
             if (source == null)
             {
                 Debug.LogWarning("[SettingManager] AudioSource not found! Sound effects may not work.");
+            }
+        }
+    }
+
+    private void Update()
+    {
+        // 1. Check Main Menu state changes
+        if (mainMenu != null)
+        {
+            bool isMainMenuActive = mainMenu.activeInHierarchy;
+            if (isMainMenuActive != lastMainMenuActiveState)
+            {
+                lastMainMenuActiveState = isMainMenuActive;
+                Debug.Log($"[SettingManager] Main Menu active state changed to: {isMainMenuActive}. Refreshing music.");
+                ApplyMusicSetting();
+            }
+        }
+
+        // 2. Check Gameplay state changes
+        if (gameplayScreen != null)
+        {
+            bool isGameplayActive = gameplayScreen.activeInHierarchy;
+            if (isGameplayActive != lastGameplayActiveState)
+            {
+                lastGameplayActiveState = isGameplayActive;
+                Debug.Log($"[SettingManager] Gameplay active state changed to: {isGameplayActive}. Refreshing music.");
+                ApplyMusicSetting();
             }
         }
     }
@@ -166,11 +216,8 @@ public class SettingManager : MonoBehaviour
         Debug.Log("[SettingManager] User logged out, clearing user data and stopping music");
         
         // Stop music when user logs out
-        if (backgroundMusicSource != null)
-        {
-            backgroundMusicSource.Stop();
-            backgroundMusicSource.mute = true;
-        }
+        if (backgroundMusicSource != null) backgroundMusicSource.Stop();
+        if (gameplayMusicSource != null) gameplayMusicSource.Stop();
         
         currentUserId = "";
         UpdateStorageKeyDisplay();
@@ -221,30 +268,86 @@ public class SettingManager : MonoBehaviour
     
     /// <summary>
     /// Applies the current music setting to the AudioSource
+    /// Logic: 
+    /// 1. If Game Active -> Play Gameplay Music, Stop Normal
+    /// 2. If Game Not Active (Lobby/Winner) -> Play Normal Music, Stop Gameplay
     /// </summary>
-    private void ApplyMusicSetting()
+    public void ApplyMusicSetting()
     {
-        if (backgroundMusicSource != null)
+        // 1. Check Login Status
+        bool isLoggedIn = hasUserLoggedIn;
+        if (PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
         {
-            if (isMusicEnabled)
+            isLoggedIn = true;
+        }
+
+        if (!isLoggedIn)
+        {
+            StopAllMusic();
+            return;
+        }
+
+        // 2. Determine Logic based on Screens
+        bool isGameplayActive = (gameplayScreen != null && gameplayScreen.activeInHierarchy);
+        bool isMainMenuActive = (mainMenu != null && mainMenu.activeInHierarchy);
+        
+        // "Gameplay" music plays ONLY if Gameplay is active
+        bool shouldPlayGameplay = isGameplayActive;
+        
+        // "Normal" music plays ONLY if Gameplay is NOT active AND Main Menu IS active
+        bool shouldPlayNormal = !isGameplayActive && isMainMenuActive;
+
+        // 3. Apply Settings (Toggle Check)
+        if (isMusicEnabled)
+        {
+            // --- GAMEPLAY MUSIC ---
+            if (gameplayMusicSource != null)
             {
-                // Enable music
-                backgroundMusicSource.mute = false;
-                // If not playing, start playing
-                if (!backgroundMusicSource.isPlaying)
+                if (shouldPlayGameplay)
                 {
-                    backgroundMusicSource.Play();
+                    gameplayMusicSource.mute = false;
+                    if (!gameplayMusicSource.isPlaying) gameplayMusicSource.Play();
+                }
+                else
+                {
+                    // Stop gameplay music if not in gameplay
+                    if (gameplayMusicSource.isPlaying) gameplayMusicSource.Stop();
                 }
             }
-            else
+
+            // --- NORMAL / MAIN MENU MUSIC ---
+            if (backgroundMusicSource != null)
             {
-                // Disable music
-                backgroundMusicSource.mute = true;
+                if (shouldPlayNormal)
+                {
+                    backgroundMusicSource.mute = false;
+                    if (!backgroundMusicSource.isPlaying) backgroundMusicSource.Play();
+                }
+                else
+                {
+                    // Stop normal music if in gameplay
+                    if (backgroundMusicSource.isPlaying) backgroundMusicSource.Stop();
+                }
             }
         }
         else
         {
-            Debug.LogWarning("[SettingManager] Background music AudioSource not assigned! Please assign it in the Inspector.");
+            // Music Disabled Globally
+            StopAllMusic();
+        }
+    }
+
+    private void StopAllMusic()
+    {
+        if (backgroundMusicSource != null)
+        {
+            backgroundMusicSource.mute = true;
+            if (backgroundMusicSource.isPlaying) backgroundMusicSource.Stop();
+        }
+        if (gameplayMusicSource != null)
+        {
+            gameplayMusicSource.mute = true;
+            if (gameplayMusicSource.isPlaying) gameplayMusicSource.Stop();
         }
     }
     
