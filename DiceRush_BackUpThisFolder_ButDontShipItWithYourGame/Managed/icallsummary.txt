@@ -329,6 +329,7 @@ UnityEngine.AsyncOperation::InternalDestroy
 UnityEngine.AsyncOperation::InternalSetManagedObject
 UnityEngine.Audio.AudioMixer::GetFloat_Injected
 UnityEngine.Audio.AudioMixer::SetFloat_Injected
+UnityEngine.AudioClip::get_length_Injected
 UnityEngine.AudioSettings::StartAudioOutput
 UnityEngine.AudioSettings::StopAudioOutput
 UnityEngine.AudioSource::get_isPlaying_Injected
@@ -339,6 +340,8 @@ UnityEngine.AudioSource::PlayOneShotHelper_Injected
 UnityEngine.AudioSource::SetPitch_Injected
 UnityEngine.AudioSource::Stop_Injected
 UnityEngine.AudioSource::set_mute_Injected
+UnityEngine.AudioSource::set_resource_Injected
+UnityEngine.AudioSource::set_spatialBlend_Injected
 UnityEngine.AudioSource::set_volume_Injected
 UnityEngine.Awaitable::IsNativeAwaitableCompleted
 UnityEngine.Awaitable::ReleaseNativeAwaitable

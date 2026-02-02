@@ -91,8 +91,7 @@ public class LobbyManager : MonoBehaviour
         InitializeLobbyRows();
         SetupScrollButtons();
         
-        // Start retry routine to ensure buttons light up when data is ready
-        StartCoroutine(InitializeButtonsRoutine());
+        // Removed InitializeButtonsRoutine from here, it is now called in OnEnable to handle re-enabling
     }
     
     private IEnumerator InitializeButtonsRoutine()
@@ -117,6 +116,9 @@ public class LobbyManager : MonoBehaviour
         {
             UpdateVisibleRows();
         }
+
+        // Start retry routine to ensure buttons light up when data is ready (e.g. after returning from game)
+        StartCoroutine(InitializeButtonsRoutine());
     }
     
     private void Update()
@@ -594,6 +596,9 @@ public class LobbyManager : MonoBehaviour
                  }
                  
                  item.gameObject.SetActive(true);
+                 
+                 // Refresh interactability state immediately when item becomes visible/updating
+                 item.RefreshPlayButtonsInteractability();
                  
                  // Update visual selection state (Overlay)
                  // Only center item is "Selected", others are "Unselected"
