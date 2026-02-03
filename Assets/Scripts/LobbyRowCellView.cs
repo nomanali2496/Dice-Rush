@@ -135,6 +135,7 @@ public class LobbyRowCellView : EnhancedScrollerCellView
     /// </summary>
     private void OnPlayButtonClicked()
     {
+        Debug.Log("play button clicked");
         if (lobbyManager != null && item != null)
         {
             LobbyGameObjectData data = item.GetCurrentData();

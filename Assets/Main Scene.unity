@@ -7799,7 +7799,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &314033591
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8787,11 +8787,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
---- !u!1 &373567251 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7714650447888563382, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
-  m_PrefabInstance: {fileID: 572276822}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &377632930
 GameObject:
   m_ObjectHideFlags: 0
@@ -11266,7 +11261,7 @@ MonoBehaviour:
     firstPlaceChips: 0
     secondPlaceCash: 1.5
     secondPlaceChips: 0
-    thirdPlaceCash: 100
+    thirdPlaceCash: 0
     thirdPlaceChips: 0
   - lobbyIndex: 2
     numberOfPlayers: 5
@@ -14235,13 +14230,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8902121777698372060, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7714650447888563382, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 677648076}
     - targetCorrespondingSourceObject: {fileID: 1739733887702631164, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1189379032}
@@ -15731,30 +15724,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8266724459619458920, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
   m_PrefabInstance: {fileID: 572276822}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 373567251}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3119083e0c6e8494c9bfa4c582005c1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LobbyGameObjectUI
---- !u!114 &677648076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 373567251}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ae1797d0b16e8449b20672ce29302b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LobbyRowCellView
-  cellIdentifier: LobbyRowCell
-  item: {fileID: 2120191305168989048, guid: f162b978b35adfc4f8935ad8abcbe3ac, type: 3}
-  playButton: {fileID: 1189379033}
-  buttonHoverScale: 1.15
-  buttonAnimationDuration: 0.2
-  buttonScaleEase: 27
 --- !u!1001 &678581720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21304,11 +21279,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 883832901}
   m_CullTransparentMesh: 1
---- !u!1 &890788050 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7714650447888563382, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
-  m_PrefabInstance: {fileID: 1030584693714709705}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &895038453
 GameObject:
   m_ObjectHideFlags: 0
@@ -25390,13 +25360,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8902121777698372060, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7714650447888563382, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2099270272}
     - targetCorrespondingSourceObject: {fileID: 1739733887702631164, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1084508091}
@@ -27343,30 +27311,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8266724459619458920, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
   m_PrefabInstance: {fileID: 1030584693714709705}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 890788050}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3119083e0c6e8494c9bfa4c582005c1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LobbyGameObjectUI
---- !u!114 &1205209843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 890788050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ae1797d0b16e8449b20672ce29302b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LobbyRowCellView
-  cellIdentifier: LobbyRowCell
-  item: {fileID: 2120191305168989048, guid: f162b978b35adfc4f8935ad8abcbe3ac, type: 3}
-  playButton: {fileID: 665324649}
-  buttonHoverScale: 1.15
-  buttonAnimationDuration: 0.2
-  buttonScaleEase: 27
 --- !u!1001 &1209336760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36157,7 +36107,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8266724459619458920, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
   m_PrefabInstance: {fileID: 1105158599}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2099270270}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3119083e0c6e8494c9bfa4c582005c1a, type: 3}
@@ -48056,7 +48006,7 @@ MonoBehaviour:
   quitPanel: {fileID: 1300549906}
   timerText: {fileID: 294171673}
   timerTextLegacy: {fileID: 0}
-  gameTimer: 90
+  gameTimer: 10
   winnerScreen: {fileID: 1620104683}
   winnerScreenScript: {fileID: 1620104688}
   winnerProfileImage: {fileID: 1964234723}
@@ -48592,29 +48542,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2093685879}
   m_CullTransparentMesh: 1
---- !u!1 &2099270270 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7714650447888563382, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
-  m_PrefabInstance: {fileID: 1105158599}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2099270272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2099270270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ae1797d0b16e8449b20672ce29302b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LobbyRowCellView
-  cellIdentifier: LobbyRowCell
-  item: {fileID: 2120191305168989048, guid: f162b978b35adfc4f8935ad8abcbe3ac, type: 3}
-  playButton: {fileID: 1084508092}
-  buttonHoverScale: 1.15
-  buttonAnimationDuration: 0.2
-  buttonScaleEase: 27
 --- !u!1 &2103533191
 GameObject:
   m_ObjectHideFlags: 0
@@ -50800,13 +50727,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8902121777698372060, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7714650447888563382, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1205209843}
     - targetCorrespondingSourceObject: {fileID: 1739733887702631164, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
       insertIndex: -1
       addedObject: {fileID: 665324647}

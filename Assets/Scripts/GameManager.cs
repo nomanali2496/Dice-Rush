@@ -1554,7 +1554,7 @@ public class GameManager : MonoBehaviour
         // Wait a frame to ensure NumberGrids are fully created before restarting CPUs
         StartCoroutine(ConfigureCPUsAfterDelay(numberOfCPUs));
         
-        Debug.Log($"[GameManager] Game configured from Lobby {config.lobbyIndex + 1}: {config.numberOfPlayers} players ({numberOfCPUs} CPUs)");
+        Debug.Log($"[GameManager] Game configured from Lobby {config.lobbyIndex }: {config.numberOfPlayers} players ({numberOfCPUs} CPUs) Name = {config.lobbyName}  ");
         
         // Handle entry fee
         HandleEntryFee(config);

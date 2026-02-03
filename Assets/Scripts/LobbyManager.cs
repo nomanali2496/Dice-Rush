@@ -939,7 +939,7 @@ public class LobbyManager : MonoBehaviour
                 
                 // Configure with new lobby settings
                 gameManager.ConfigureGameFromLobby(config);
-                Debug.Log($"[LobbyManager] Configured game for Lobby {lobbyIndex + 1}: {config.numberOfPlayers} players, Entry: {config.entryFeeChips} chips / {config.entryFeeCash} cash");
+                Debug.Log($"[LobbyManager] Configured game for Lobby {lobbyIndex }: {config.numberOfPlayers} players, Entry: {config.entryFeeChips} chips / {config.entryFeeCash} cash");
             }
             else if (gameManager == null)
             {
