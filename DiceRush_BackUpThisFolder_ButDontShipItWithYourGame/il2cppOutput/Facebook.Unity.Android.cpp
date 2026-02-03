@@ -128,7 +128,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC8
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 115639
+// Method Definition Index: 115687
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidWrapper_CallStatic_m0CD9F74FE3E44284F0AAFEEB821DF705E183A241 (AndroidWrapper_t2BA2D5C4047DFFA8A79C6EEA9634418AE647896E* __this, String_t* ___0_methodName, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, const RuntimeMethod* method) 
 {
 	{
@@ -140,7 +140,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidWrapper_CallStatic_m0CD9F74FE3E44
 		return;
 	}
 }
-// Method Definition Index: 115640
+// Method Definition Index: 115688
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidWrapper__ctor_mBD74B6015FE81975C1A5EDEE19642900CBA5B975 (AndroidWrapper_t2BA2D5C4047DFFA8A79C6EEA9634418AE647896E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
