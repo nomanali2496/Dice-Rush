@@ -84,6 +84,9 @@ public class LobbyManager : MonoBehaviour
     private Vector2 swipeStartPos;
     private bool isSwiping = false;
     
+    // Multi-step scroll animation tracking
+    private Coroutine multiScrollCoroutine = null;
+    
     private void Start()
     {
         InitializeBackgrounds();
@@ -748,6 +751,73 @@ public class LobbyManager : MonoBehaviour
         if (currentScrollIndex >= BACKGROUND_COUNT) currentScrollIndex = 0;
         
         UpdateLobbyPositions(false, 1);
+    }
+    
+    /// <summary>
+    /// Scrolls by multiple positions with sequential animations (for swipe velocity-based scrolling)
+    /// </summary>
+    /// <param name="steps">Number of steps to scroll (positive = down, negative = up)</param>
+    public void ScrollMultiple(int steps)
+    {
+        if (steps == 0) return;
+        
+        // Clamp steps to reasonable range to prevent excessive scrolling
+        steps = Mathf.Clamp(steps, -BACKGROUND_COUNT, BACKGROUND_COUNT);
+        
+        // Stop any existing scroll animation
+        if (multiScrollCoroutine != null)
+        {
+            StopCoroutine(multiScrollCoroutine);
+        }
+        
+        // Start sequential scroll animation
+        multiScrollCoroutine = StartCoroutine(AnimateMultipleSteps(steps));
+    }
+    
+    /// <summary>
+    /// Coroutine that animates through each scroll step sequentially for smooth visual flow
+    /// </summary>
+    private IEnumerator AnimateMultipleSteps(int totalSteps)
+    {
+        int direction = totalSteps > 0 ? 1 : -1;
+        int stepsRemaining = Mathf.Abs(totalSteps);
+        
+        // Calculate delay based on animation duration
+        // Make it slightly faster than normal scroll for quick succession
+        float stepDelay = scrollAnimationDuration * 0.7f;
+        
+        for (int i = 0; i < stepsRemaining; i++)
+        {
+            // Perform one scroll step
+            if (direction > 0)
+            {
+                currentScrollIndex++;
+                if (currentScrollIndex >= BACKGROUND_COUNT) currentScrollIndex = 0;
+            }
+            else
+            {
+                currentScrollIndex--;
+                if (currentScrollIndex < 0) currentScrollIndex = BACKGROUND_COUNT - 1;
+            }
+            
+            // Update positions with animation
+            UpdateLobbyPositions(false, direction);
+            
+            // Play tap sound for each scroll step
+            if (SettingManager.instance != null)
+            {
+                SettingManager.instance.PlayTapSound();
+            }
+            
+            // Wait for animation to complete before next step
+            // Only wait if there are more steps to go
+            if (i < stepsRemaining - 1)
+            {
+                yield return new WaitForSeconds(stepDelay);
+            }
+        }
+        
+        multiScrollCoroutine = null;
     }
     
     // Obsolete

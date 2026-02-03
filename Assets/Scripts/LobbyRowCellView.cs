@@ -8,8 +8,9 @@ using DOTweenTween = DG.Tweening.Tween;
 
 /// <summary>
 /// Row cell view that contains 1 LobbyGameObjectUI item
+/// Also detects swipes and forwards to LobbyManager
 /// </summary>
-public class LobbyRowCellView : EnhancedScrollerCellView
+public class LobbyRowCellView : EnhancedScrollerCellView, IPointerDownHandler, IPointerUpHandler
 {
     [Header("Lobby Game Object Item")]
     [SerializeField] private LobbyGameObjectUI item; // Lobby item in the row
@@ -25,6 +26,17 @@ public class LobbyRowCellView : EnhancedScrollerCellView
     private LobbyManager lobbyManager;
     private Dictionary<Button, DOTweenTween> buttonTweens = new Dictionary<Button, DOTweenTween>();
     private Dictionary<Button, Vector3> buttonOriginalScales = new Dictionary<Button, Vector3>();
+    
+    // Swipe detection
+    [Header("Swipe Detection")]
+    [SerializeField] private bool enableSwipeOnCard = true; // Enable swipe detection on this card
+    [SerializeField] private float swipeThreshold = 50f; // Minimum swipe distance to trigger
+    [SerializeField] private bool useVelocityScrolling = true; // Use velocity-based scrolling
+    [SerializeField] private float pixelsPerItem = 100f; // Pixels per item for velocity scrolling
+    [SerializeField] private int maxScrollItems = 5; // Max items to scroll
+    
+    private Vector2 swipeStartPos;
+    private bool isSwiping = false;
     
     private void Awake()
     {
@@ -302,6 +314,79 @@ public class LobbyRowCellView : EnhancedScrollerCellView
             // Store current scale as original if not stored yet
             buttonOriginalScales[button] = rectTransform.localScale;
         }
+    }
+    
+    #endregion
+    
+    #region Swipe Detection (Forward to LobbyManager)
+    
+    /// <summary>
+    /// Called when pointer/touch begins on this lobby card
+    /// </summary>
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        if (!enableSwipeOnCard) return;
+        
+        swipeStartPos = eventData.position;
+        isSwiping = true;
+    }
+    
+    /// <summary>
+    /// Called when pointer/touch is released from this lobby card
+    /// </summary>
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        if (!enableSwipeOnCard || !isSwiping) return;
+        
+        Vector2 swipeEndPos = eventData.position;
+        Vector2 swipeDelta = swipeEndPos - swipeStartPos;
+        
+        // Check if swipe is long enough (primarily vertical)
+        if (Mathf.Abs(swipeDelta.y) > swipeThreshold)
+        {
+            // Ensure vertical swipe is more dominant than horizontal
+            if (Mathf.Abs(swipeDelta.y) > Mathf.Abs(swipeDelta.x))
+            {
+                if (lobbyManager != null)
+                {
+                    if (useVelocityScrolling)
+                    {
+                        // Calculate how many items to scroll based on swipe distance
+                        float swipeDistance = Mathf.Abs(swipeDelta.y);
+                        int itemsToScroll = Mathf.RoundToInt(swipeDistance / pixelsPerItem);
+                        
+                        // Clamp to max scroll items
+                        itemsToScroll = Mathf.Clamp(itemsToScroll, 1, maxScrollItems);
+                        
+                        // Forward to LobbyManager
+                        if (swipeDelta.y < 0)
+                        {
+                            // Swipe up = scroll down
+                            lobbyManager.ScrollMultiple(itemsToScroll);
+                        }
+                        else
+                        {
+                            // Swipe down = scroll up
+                            lobbyManager.ScrollMultiple(-itemsToScroll);
+                        }
+                    }
+                    else
+                    {
+                        // Single-step scrolling
+                        if (swipeDelta.y < 0)
+                        {
+                            lobbyManager.ScrollDown();
+                        }
+                        else
+                        {
+                            lobbyManager.ScrollUp();
+                        }
+                    }
+                }
+            }
+        }
+        
+        isSwiping = false;
     }
     
     #endregion

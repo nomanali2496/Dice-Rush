@@ -2529,6 +2529,11 @@ MonoBehaviour:
   buttonHoverScale: 1.15
   buttonAnimationDuration: 0.2
   buttonScaleEase: 27
+  enableSwipeOnCard: 1
+  swipeThreshold: 50
+  useVelocityScrolling: 1
+  pixelsPerItem: 100
+  maxScrollItems: 5
 --- !u!1001 &102235142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11318,7 +11323,7 @@ MonoBehaviour:
   lowerRow: {fileID: 101791977}
   scrollUpButton: {fileID: 1381469098}
   scrollDownButton: {fileID: 1224661562}
-  enableSwipeDetection: 1
+  enableSwipeDetection: 0
   scrollAnimationDuration: 0.3
   scrollEase: 9
   swipeThreshold: 50
@@ -24156,8 +24161,9 @@ RectTransform:
   - {fileID: 1063224360}
   - {fileID: 1699534236}
   - {fileID: 1982708426}
-  - {fileID: 1962000524}
+  - {fileID: 1613593917}
   - {fileID: 1705734196}
+  - {fileID: 1962000524}
   - {fileID: 1030461124}
   m_Father: {fileID: 1237862631}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31518,6 +31524,11 @@ MonoBehaviour:
   buttonHoverScale: 1.15
   buttonAnimationDuration: 0.2
   buttonScaleEase: 27
+  enableSwipeOnCard: 1
+  swipeThreshold: 50
+  useVelocityScrolling: 1
+  pixelsPerItem: 100
+  maxScrollItems: 5
 --- !u!1 &1355918729
 GameObject:
   m_ObjectHideFlags: 0
@@ -37774,6 +37785,100 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -138}
   m_SizeDelta: {x: 1334, y: 2132}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1613593916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1613593917}
+  - component: {fileID: 1613593920}
+  - component: {fileID: 1613593919}
+  - component: {fileID: 1613593918}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1613593917
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613593916}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1060572963}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1613593918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613593916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5caa1ff27b1a1a54f84f7b791c739fb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SwipeTouchZone
+  swipeThreshold: 100
+  enableSwipeDetection: 1
+  useVelocityScrolling: 1
+  pixelsPerItem: 100
+  maxScrollItems: 5
+  showDebugLogs: 1
+--- !u!114 &1613593919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613593916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1613593920
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613593916}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1617791325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46416,6 +46521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2010150919}
   - component: {fileID: 2010150920}
+  - component: {fileID: 2010150921}
   m_Layer: 5
   m_Name: Middle
   m_TagString: Untagged
@@ -46461,6 +46567,19 @@ MonoBehaviour:
   buttonHoverScale: 1.15
   buttonAnimationDuration: 0.2
   buttonScaleEase: 27
+  enableSwipeOnCard: 1
+  swipeThreshold: 50
+  useVelocityScrolling: 1
+  pixelsPerItem: 100
+  maxScrollItems: 5
+--- !u!222 &2010150921
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010150918}
+  m_CullTransparentMesh: 1
 --- !u!1 &2010734779
 GameObject:
   m_ObjectHideFlags: 0
