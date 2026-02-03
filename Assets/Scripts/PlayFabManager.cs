@@ -800,7 +800,7 @@ public class PlayFabManager : MonoBehaviour
             if (string.IsNullOrEmpty(currentPlayerData.playerName) || currentPlayerData.playerName == "Guest")
             {
                 // Initialize guest account with default values
-                currentPlayerData = new PlayerData("Guest", "", 0f, 0);
+                currentPlayerData = new PlayerData("Guest", "", 100, 100);
                 // Save the initial data for guest accounts
                 SavePlayerData();
             }

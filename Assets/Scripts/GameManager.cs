@@ -489,7 +489,7 @@ public class GameManager : MonoBehaviour
             Debug.Log($"[GameManager] WinnerScreen script found successfully");
         }
         
-        // Display 1st place
+        // Display 1st place (only if there's a prize)
         if (rankings.Count > 0)
         {
             var firstPlace = rankings[0];
@@ -499,30 +499,41 @@ public class GameManager : MonoBehaviour
             Image firstPrizeIcon = winnerScreenScript != null ? winnerScreenScript.GetFirstPlacePrizeIcon() : null;
             TMPro.TextMeshProUGUI firstPrizeText = winnerScreenScript != null ? winnerScreenScript.GetFirstPlacePrizeText() : null;
             
-            if (winnerScreenScript != null)
+            // Check if there's any prize for 1st place
+            if (firstCash > 0f || firstChips > 0)
             {
-                if (firstPrizeIcon == null)
+                if (winnerScreenScript != null)
                 {
-                    Debug.LogError("[GameManager] First place prize icon is null! Please assign 'firstPlacePrizeIcon' in WinnerScreen component in Unity Inspector.");
+                    if (firstPrizeIcon == null)
+                    {
+                        Debug.LogError("[GameManager] First place prize icon is null! Please assign 'firstPlacePrizeIcon' in WinnerScreen component in Unity Inspector.");
+                    }
+                    if (firstPrizeText == null)
+                    {
+                        Debug.LogError("[GameManager] First place prize text is null! Please assign 'firstPlacePrizeText' in WinnerScreen component in Unity Inspector.");
+                    }
+                    if (firstPrizeIcon != null && firstPrizeText != null)
+                    {
+                        Debug.Log("[GameManager] First place prize UI references are valid");
+                    }
                 }
-                if (firstPrizeText == null)
-                {
-                    Debug.LogError("[GameManager] First place prize text is null! Please assign 'firstPlacePrizeText' in WinnerScreen component in Unity Inspector.");
-                }
-                if (firstPrizeIcon != null && firstPrizeText != null)
-                {
-                    Debug.Log("[GameManager] First place prize UI references are valid");
-                }
+                
+                DisplayPlace(1, firstPlace.playerType, firstPlace.cpuIndex, firstPlace.count,
+                            winnerProfileImage, winnerOutlineImage, winnerFrameImage, winnerNameText, winnerNameTextLegacy,
+                            firstPrizeIcon, firstPrizeText, null,
+                            firstCash, firstChips);
+                Debug.Log($"[GameManager] 1st Place: {GetWinnerName(firstPlace.playerType, firstPlace.cpuIndex)} ({firstPlace.playerType}, CPU index: {firstPlace.cpuIndex}) with {firstPlace.count} selected boxes! Prize: {firstCash} cash, {firstChips} chips");
             }
-            
-            DisplayPlace(1, firstPlace.playerType, firstPlace.cpuIndex, firstPlace.count,
-                        winnerProfileImage, winnerOutlineImage, winnerFrameImage, winnerNameText, winnerNameTextLegacy,
-                        firstPrizeIcon, firstPrizeText, null,
-                        firstCash, firstChips);
-            Debug.Log($"[GameManager] 1st Place: {GetWinnerName(firstPlace.playerType, firstPlace.cpuIndex)} ({firstPlace.playerType}, CPU index: {firstPlace.cpuIndex}) with {firstPlace.count} selected boxes! Prize: {firstCash} cash, {firstChips} chips");
+            else
+            {
+                // No prize for 1st place, hide it
+                HidePlace(winnerProfileImage, winnerOutlineImage, winnerFrameImage, winnerNameText, winnerNameTextLegacy,
+                         firstPrizeIcon, firstPrizeText, null);
+                Debug.Log("[GameManager] No prize for 1st place (cash and chips are both 0), hiding 1st place UI");
+            }
         }
         
-        // Display 2nd place
+        // Display 2nd place (only if there's a prize)
         if (rankings.Count > 1)
         {
             var secondPlace = rankings[1];
@@ -532,11 +543,22 @@ public class GameManager : MonoBehaviour
             Image secondPrizeIcon = winnerScreenScript != null ? winnerScreenScript.GetSecondPlacePrizeIcon() : null;
             TMPro.TextMeshProUGUI secondPrizeText = winnerScreenScript != null ? winnerScreenScript.GetSecondPlacePrizeText() : null;
             
-            DisplayPlace(2, secondPlace.playerType, secondPlace.cpuIndex, secondPlace.count,
-                        secondPlaceProfileImage, secondPlaceOutlineImage, secondPlaceFrameImage, secondPlaceNameText, secondPlaceNameTextLegacy,
-                        secondPrizeIcon, secondPrizeText, null,
-                        secondCash, secondChips);
-            Debug.Log($"[GameManager] 2nd Place: {GetWinnerName(secondPlace.playerType, secondPlace.cpuIndex)} ({secondPlace.playerType}, CPU index: {secondPlace.cpuIndex}) with {secondPlace.count} selected boxes! Prize: {secondCash} cash, {secondChips} chips");
+            // Check if there's any prize for 2nd place
+            if (secondCash > 0f || secondChips > 0)
+            {
+                DisplayPlace(2, secondPlace.playerType, secondPlace.cpuIndex, secondPlace.count,
+                            secondPlaceProfileImage, secondPlaceOutlineImage, secondPlaceFrameImage, secondPlaceNameText, secondPlaceNameTextLegacy,
+                            secondPrizeIcon, secondPrizeText, null,
+                            secondCash, secondChips);
+                Debug.Log($"[GameManager] 2nd Place: {GetWinnerName(secondPlace.playerType, secondPlace.cpuIndex)} ({secondPlace.playerType}, CPU index: {secondPlace.cpuIndex}) with {secondPlace.count} selected boxes! Prize: {secondCash} cash, {secondChips} chips");
+            }
+            else
+            {
+                // No prize for 2nd place, hide it
+                HidePlace(secondPlaceProfileImage, secondPlaceOutlineImage, secondPlaceFrameImage, secondPlaceNameText, secondPlaceNameTextLegacy,
+                         secondPrizeIcon, secondPrizeText, null);
+                Debug.Log("[GameManager] No prize for 2nd place (cash and chips are both 0), hiding 2nd place UI");
+            }
         }
         else
         {
@@ -547,7 +569,7 @@ public class GameManager : MonoBehaviour
                      secondPrizeIconHide, secondPrizeTextHide, null);
         }
         
-        // Display 3rd place
+        // Display 3rd place (only if there's a prize)
         if (rankings.Count > 2)
         {
             var thirdPlace = rankings[2];
@@ -557,23 +579,34 @@ public class GameManager : MonoBehaviour
             Image thirdPrizeIcon = winnerScreenScript != null ? winnerScreenScript.GetThirdPlacePrizeIcon() : null;
             TMPro.TextMeshProUGUI thirdPrizeText = winnerScreenScript != null ? winnerScreenScript.GetThirdPlacePrizeText() : null;
             
-            if (winnerScreenScript != null)
+            // Check if there's any prize for 3rd place
+            if (thirdCash > 0f || thirdChips > 0)
             {
-                if (thirdPrizeIcon == null)
+                if (winnerScreenScript != null)
                 {
-                    Debug.LogError("[GameManager] Third place prize icon is null! Please assign 'thirdPlacePrizeIcon' in WinnerScreen component in Unity Inspector.");
+                    if (thirdPrizeIcon == null)
+                    {
+                        Debug.LogError("[GameManager] Third place prize icon is null! Please assign 'thirdPlacePrizeIcon' in WinnerScreen component in Unity Inspector.");
+                    }
+                    if (thirdPrizeText == null)
+                    {
+                        Debug.LogError("[GameManager] Third place prize text is null! Please assign 'thirdPlacePrizeText' in WinnerScreen component in Unity Inspector.");
+                    }
                 }
-                if (thirdPrizeText == null)
-                {
-                    Debug.LogError("[GameManager] Third place prize text is null! Please assign 'thirdPlacePrizeText' in WinnerScreen component in Unity Inspector.");
-                }
+                
+                DisplayPlace(3, thirdPlace.playerType, thirdPlace.cpuIndex, thirdPlace.count,
+                            thirdPlaceProfileImage, thirdPlaceOutlineImage, thirdPlaceFrameImage, thirdPlaceNameText, thirdPlaceNameTextLegacy,
+                            thirdPrizeIcon, thirdPrizeText, null,
+                            thirdCash, thirdChips);
+                Debug.Log($"[GameManager] 3rd Place: {GetWinnerName(thirdPlace.playerType, thirdPlace.cpuIndex)} ({thirdPlace.playerType}, CPU index: {thirdPlace.cpuIndex}) with {thirdPlace.count} selected boxes! Prize: {thirdCash} cash, {thirdChips} chips");
             }
-            
-            DisplayPlace(3, thirdPlace.playerType, thirdPlace.cpuIndex, thirdPlace.count,
-                        thirdPlaceProfileImage, thirdPlaceOutlineImage, thirdPlaceFrameImage, thirdPlaceNameText, thirdPlaceNameTextLegacy,
-                        thirdPrizeIcon, thirdPrizeText, null,
-                        thirdCash, thirdChips);
-            Debug.Log($"[GameManager] 3rd Place: {GetWinnerName(thirdPlace.playerType, thirdPlace.cpuIndex)} ({thirdPlace.playerType}, CPU index: {thirdPlace.cpuIndex}) with {thirdPlace.count} selected boxes! Prize: {thirdCash} cash, {thirdChips} chips");
+            else
+            {
+                // No prize for 3rd place, hide it
+                HidePlace(thirdPlaceProfileImage, thirdPlaceOutlineImage, thirdPlaceFrameImage, thirdPlaceNameText, thirdPlaceNameTextLegacy,
+                         thirdPrizeIcon, thirdPrizeText, null);
+                Debug.Log("[GameManager] No prize for 3rd place (cash and chips are both 0), hiding 3rd place UI");
+            }
         }
         else
         {
