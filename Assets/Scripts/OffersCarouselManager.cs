@@ -39,6 +39,9 @@ public class OffersCarouselManager : MonoBehaviour
     private Dictionary<int, CanvasGroup> offerCanvasGroups = new Dictionary<int, CanvasGroup>();
     private Coroutine transitionCoroutine;
     
+    // Multi-step scroll animation tracking
+    private Coroutine multiScrollCoroutine = null;
+    
     // Track which offers are currently in left, center, right positions
     private int leftOfferIndex = -1;
     private int centerOfferIndex = 0;
@@ -350,6 +353,93 @@ public class OffersCarouselManager : MonoBehaviour
         {
             Debug.Log("[OffersCarouselManager] Already at the first offer, cannot scroll left");
         }
+    }
+    
+    /// <summary>
+    /// Scrolls by multiple positions with sequential animations (for swipe velocity-based scrolling)
+    /// </summary>
+    /// <param name="steps">Number of steps to scroll (positive = right, negative = left)</param>
+    public void ScrollMultiple(int steps)
+    {
+        if (steps == 0) return;
+        
+        // Clamp steps to reasonable range
+        int maxSteps = offerItems.Length - 1;
+        steps = Mathf.Clamp(steps, -maxSteps, maxSteps);
+        
+        // Stop any existing scroll animation
+        if (multiScrollCoroutine != null)
+        {
+            StopCoroutine(multiScrollCoroutine);
+        }
+        
+        // Start sequential scroll animation
+        multiScrollCoroutine = StartCoroutine(AnimateMultipleSteps(steps));
+    }
+    
+    /// <summary>
+    /// Coroutine that animates through each scroll step sequentially for smooth visual flow
+    /// </summary>
+    private IEnumerator AnimateMultipleSteps(int totalSteps)
+    {
+        int direction = totalSteps > 0 ? 1 : -1; // 1 = right, -1 = left
+        int stepsRemaining = Mathf.Abs(totalSteps);
+        
+        // Calculate delay based on transition duration
+        // Make it slightly faster than normal scroll for quick succession
+        float stepDelay = transitionDuration * 1.5f;
+        
+        for (int i = 0; i < stepsRemaining; i++)
+        {
+            // Check boundaries before scrolling
+            bool canScroll = false;
+            
+            if (direction > 0)
+            {
+                // Scrolling right
+                if (currentSelectedIndex < offerItems.Length - 1)
+                {
+                    currentSelectedIndex++;
+                    canScroll = true;
+                }
+            }
+            else
+            {
+                // Scrolling left
+                if (currentSelectedIndex > 0)
+                {
+                    currentSelectedIndex--;
+                    canScroll = true;
+                }
+            }
+            
+            if (canScroll)
+            {
+                // Update positions with animation
+                UpdateOfferPositions();
+                
+                // Play tap sound for each scroll step
+                if (SettingManager.instance != null)
+                {
+                    SettingManager.instance.PlayTapSound();
+                }
+                
+                // Wait for animation to complete before next step
+                // Only wait if there are more steps to go
+                if (i < stepsRemaining - 1)
+                {
+                    yield return new WaitForSeconds(stepDelay);
+                }
+            }
+            else
+            {
+                // Hit boundary, stop scrolling
+                Debug.Log($"[OffersCarouselManager] Hit boundary at index {currentSelectedIndex}, stopping multi-scroll");
+                break;
+            }
+        }
+        
+        multiScrollCoroutine = null;
     }
     
     /// <summary>
