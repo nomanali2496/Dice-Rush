@@ -50023,7 +50023,7 @@ MonoBehaviour:
   quitPanel: {fileID: 1300549906}
   timerText: {fileID: 294171673}
   timerTextLegacy: {fileID: 0}
-  gameTimer: 90
+  gameTimer: 105
   winnerScreen: {fileID: 1620104683}
   winnerScreenScript: {fileID: 1620104688}
   winnerProfileImage: {fileID: 1964234723}
