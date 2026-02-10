@@ -44,9 +44,17 @@ public class PlayerProfileUI : MonoBehaviour
     [SerializeField] private Button editNameButton; // Button to edit/save player name
     [SerializeField] private Button logoutButton;
     
+    [Header("Custom Image Upload")]
+    [Tooltip("Button to select custom image from device")]
+    [SerializeField] private Button selectCustomImageButton;
+    
+    [Tooltip("Image component to display selected custom image")]
+    [SerializeField] private Image customImageDisplay;
+    
     [Header("Edit Mode Settings")]
     [SerializeField] private string editButtonText = "Edit";
     [SerializeField] private string saveButtonText = "Save";
+    [SerializeField] private int maxImageSize = 512; // Max width/height for uploaded images
     
     [Header("Currency Formatting")]
     [SerializeField] private string cashPrefix = "Cash: $";
@@ -60,6 +68,7 @@ public class PlayerProfileUI : MonoBehaviour
     
     private bool isEditMode = false;
     private string originalPlayerName = ""; // Store original name when entering edit mode
+    private Texture2D selectedCustomTexture; // Store selected custom texture
     
     private void Start()
     {
@@ -69,6 +78,12 @@ public class PlayerProfileUI : MonoBehaviour
         
         if (logoutButton != null)
             logoutButton.onClick.AddListener(OnLogoutClicked);
+        
+        // Setup custom image button
+        if (selectCustomImageButton != null)
+        {
+            selectCustomImageButton.onClick.AddListener(OnSelectCustomImageClicked);
+        }
         
         // Setup input field - start in read-only mode
         SetEditMode(false);
@@ -83,11 +98,17 @@ public class PlayerProfileUI : MonoBehaviour
             PlayFabManager.Instance.OnPlayerDataSaved += OnPlayerDataSaved;
             Debug.Log("[PlayerProfileUI] Subscribed to PlayFab events in Start()");
         }
+        
+        // Load custom image if exists
+        LoadCustomImage();
     }
     
     private void OnEnable()
     {
         Debug.Log("[PlayerProfileUI] ===== PANEL ENABLED =====");
+        
+        // Load custom image if exists
+        LoadCustomImage();
         
         // Wait a tiny bit to ensure PlayFabManager is fully initialized
         StartCoroutine(InitializeUIAfterDelay());
@@ -992,6 +1013,183 @@ public class PlayerProfileUI : MonoBehaviour
         
         // For values < 1000, show as whole number
         return amount.ToString();
+    }
+    
+    #endregion
+    
+    #region Custom Image Selection
+    
+    /// <summary>
+    /// Called when select custom image button is clicked
+    /// </summary>
+    private void OnSelectCustomImageClicked()
+    {
+        Debug.Log("[PlayerProfileUI] Select custom image button clicked");
+        
+        // Use cross-platform image picker
+        ImagePickerHelper.PickImage(OnImageSelected, maxImageSize);
+    }
+    
+    /// <summary>
+    /// Called when image is selected
+    /// </summary>
+    private void OnImageSelected(Texture2D texture)
+    {
+        if (texture == null)
+        {
+            Debug.LogError("[PlayerProfileUI] Selected texture is null!");
+            return;
+        }
+        
+        selectedCustomTexture = texture;
+        
+        // Convert to sprite and display
+        Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+        
+        // Update custom image display if assigned
+        if (customImageDisplay != null)
+        {
+            customImageDisplay.sprite = sprite;
+            Debug.Log("[PlayerProfileUI] Custom image displayed in customImageDisplay");
+        }
+        
+        // Update profile image display
+        if (profileImage != null)
+        {
+            profileImage.sprite = sprite;
+            Debug.Log("[PlayerProfileUI] Custom image updated in profileImage");
+        }
+        
+        // Update all MainMenuAvatarDisplay scripts
+        MainMenuAvatarDisplay[] displays = FindObjectsOfType<MainMenuAvatarDisplay>(true);
+        foreach (MainMenuAvatarDisplay display in displays)
+        {
+            if (display != null)
+            {
+                display.UpdateCustomImage(sprite);
+            }
+        }
+        
+        // Convert to base64 and save to PlayFab
+        SaveCustomImageToPlayFab(texture);
+    }
+    
+    /// <summary>
+    /// Save custom image to PlayFab as base64 string
+    /// </summary>
+    private void SaveCustomImageToPlayFab(Texture2D texture)
+    {
+        if (PlayFabManager.Instance == null)
+        {
+            Debug.LogWarning("[PlayerProfileUI] PlayFabManager not found! Cannot save image.");
+            return;
+        }
+        
+        if (!PlayFabManager.Instance.IsLoggedIn())
+        {
+            Debug.LogWarning("[PlayerProfileUI] Player not logged in! Cannot save image.");
+            return;
+        }
+        
+        // Convert texture to PNG bytes
+        byte[] imageBytes = texture.EncodeToPNG();
+        
+        // Convert to base64 string
+        string base64Image = System.Convert.ToBase64String(imageBytes);
+        
+        Debug.Log($"[PlayerProfileUI] Saving custom image to PlayFab (size: {imageBytes.Length} bytes, base64 length: {base64Image.Length})");
+        
+        // Update player data
+        if (PlayFabManager.Instance.currentPlayerData != null)
+        {
+            // Store as base64 string in imageUrl field
+            PlayFabManager.Instance.currentPlayerData.imageUrl = "data:image/png;base64," + base64Image;
+            
+            // Save to PlayFab
+            PlayFabManager.Instance.SavePlayerData(() =>
+            {
+                Debug.Log("[PlayerProfileUI] ✓ Custom image saved successfully to PlayFab!");
+            });
+        }
+        else
+        {
+            Debug.LogError("[PlayerProfileUI] PlayerData is null! Cannot save image.");
+        }
+    }
+    
+    /// <summary>
+    /// Load custom image from PlayFab
+    /// </summary>
+    private void LoadCustomImage()
+    {
+        if (PlayFabManager.Instance == null || !PlayFabManager.Instance.IsLoggedIn())
+        {
+            return;
+        }
+        
+        if (PlayFabManager.Instance.currentPlayerData == null)
+        {
+            return;
+        }
+        
+        string imageUrl = PlayFabManager.Instance.currentPlayerData.imageUrl;
+        
+        if (string.IsNullOrEmpty(imageUrl))
+        {
+            return;
+        }
+        
+        // Check if it's a base64 image
+        if (imageUrl.StartsWith("data:image"))
+        {
+            try
+            {
+                // Extract base64 part
+                string base64Data = imageUrl.Substring(imageUrl.IndexOf(",") + 1);
+                byte[] imageBytes = System.Convert.FromBase64String(base64Data);
+                
+                // Create texture
+                Texture2D texture = new Texture2D(2, 2);
+                if (texture.LoadImage(imageBytes))
+                {
+                    // Store texture
+                    selectedCustomTexture = texture;
+                    
+                    // Convert to sprite
+                    Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+                    
+                    // Update custom image display (if separate display exists)
+                    if (customImageDisplay != null)
+                    {
+                        customImageDisplay.sprite = sprite;
+                        Debug.Log("[PlayerProfileUI] Custom image loaded in customImageDisplay");
+                    }
+                    
+                    // Update profile image display
+                    if (profileImage != null)
+                    {
+                        profileImage.sprite = sprite;
+                        Debug.Log("[PlayerProfileUI] ✓ Custom image loaded in profileImage");
+                    }
+                    
+                    // Update all MainMenuAvatarDisplay scripts
+                    MainMenuAvatarDisplay[] displays = FindObjectsOfType<MainMenuAvatarDisplay>(true);
+                    foreach (MainMenuAvatarDisplay display in displays)
+                    {
+                        if (display != null)
+                        {
+                            display.UpdateCustomImage(sprite);
+                        }
+                    }
+                    
+                    Debug.Log("[PlayerProfileUI] ✓ Custom image loaded from PlayFab and displayed in all locations");
+                }
+            }
+            catch (System.Exception e)
+            {
+                Debug.LogError($"[PlayerProfileUI] Failed to load custom image: {e.Message}");
+            }
+        }
     }
     
     #endregion

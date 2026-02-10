@@ -69,6 +69,9 @@ public class LobbyManager : MonoBehaviour
     // Multi-step scroll animation tracking
     private Coroutine multiScrollCoroutine = null;
     
+    // Auto-select flag to prevent re-selecting on every enable
+    private bool hasAutoSelectedOnce = false;
+    
     private void Start()
     {
         InitializeLobbyConfigurations();
@@ -85,6 +88,14 @@ public class LobbyManager : MonoBehaviour
         while (elapsed < 5f)
         {
             RefreshAllPlayButtons();
+            
+            // Auto-select lobby based on balance (only on first load)
+            if (!hasAutoSelectedOnce && PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
+            {
+                AutoSelectLobbyBasedOnBalance();
+                hasAutoSelectedOnce = true; // Mark as done, don't auto-select again
+            }
+            
             yield return new WaitForSeconds(0.5f);
             elapsed += 0.5f;
             
@@ -206,6 +217,8 @@ public class LobbyManager : MonoBehaviour
         
         // Initial Position Update (Instant)
         UpdateLobbyPositions(true, 0);
+        
+        // Note: Auto-select is now handled in InitializeButtonsRoutine to wait for PlayFab data
         
         // Setup Dots
         SetupDotButtons();
@@ -426,6 +439,58 @@ public class LobbyManager : MonoBehaviour
             wrappedIndex += BACKGROUND_COUNT;
         }
         return wrappedIndex;
+    }
+    
+    /// <summary>
+    /// Finds the first lobby configuration that only requires chips (no cash)
+    /// </summary>
+    /// <returns>Index of first chip-only lobby, or -1 if none found</returns>
+    private int FindFirstChipsOnlyLobby()
+    {
+        for (int i = 0; i < BACKGROUND_COUNT; i++)
+        {
+            LobbyConfig config = GetLobbyConfig(i);
+            if (config != null && config.entryFeeCash == 0f && config.entryFeeChips > 0)
+            {
+                Debug.Log($"[LobbyManager] Found first chip-only lobby at index {i}");
+                return i;
+            }
+        }
+        Debug.LogWarning("[LobbyManager] No chip-only lobby found!");
+        return -1;
+    }
+    
+    /// <summary>
+    /// Automatically selects appropriate lobby based on player's balance
+    /// If player has no cash, shows first chip-based game
+    /// </summary>
+    private void AutoSelectLobbyBasedOnBalance()
+    {
+        // Check if PlayFabManager exists and player is logged in
+        if (PlayFabManager.Instance == null || !PlayFabManager.Instance.IsLoggedIn())
+        {
+            Debug.Log("[LobbyManager] Player not logged in, skipping auto-select");
+            return;
+        }
+        
+        var playerData = PlayFabManager.Instance.currentPlayerData;
+        
+        // If player has no cash, find and show first chip-only lobby
+        if (playerData.cash <= 0f)
+        {
+            int chipLobbyIndex = FindFirstChipsOnlyLobby();
+            if (chipLobbyIndex >= 0 && chipLobbyIndex != currentScrollIndex)
+            {
+                Debug.Log($"[LobbyManager] Player has no cash (${playerData.cash}), auto-selecting chip-based lobby at index {chipLobbyIndex}");
+                currentScrollIndex = chipLobbyIndex;
+                UpdateLobbyPositions(true, 0); // Instant update to new position
+                UpdateDotButtons(); // Update navigation dots
+            }
+        }
+        else
+        {
+            Debug.Log($"[LobbyManager] Player has cash (${playerData.cash}), no auto-select needed");
+        }
     }
     
     // Obsolete - functionality moved to UpdateLobbyPositions
