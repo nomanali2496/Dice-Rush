@@ -329,6 +329,12 @@ public class DicesController : MonoBehaviour
             isRolling = false;
             completedRolls = 0;
             
+            // Re-enable button immediately when dice finish rolling
+            if (rollButton != null)
+            {
+                rollButton.interactable = true;
+            }
+            
             // Wait one frame to ensure rotations are fully applied, then get actual values
             StartCoroutine(ProcessRollComplete());
         }
@@ -431,12 +437,7 @@ public class DicesController : MonoBehaviour
         {
             Debug.LogWarning("[DicesController] NumberGrid reference is not assigned!");
         }
-        
-        // Re-enable button
-        if (rollButton != null)
-        {
-            rollButton.interactable = true;
-        }
+
         
         // Use actual values (what's visually displayed)
         // Trigger event
