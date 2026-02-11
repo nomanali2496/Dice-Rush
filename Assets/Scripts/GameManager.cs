@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Reflection;
+using DG.Tweening;
 
 /// <summary>
 /// Manages game state, player profiles, and CPU profiles
@@ -39,6 +40,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI timerText; // Timer text display (TextMeshProUGUI)
     [SerializeField] private Text timerTextLegacy; // Timer text display (Legacy Text - use if not using TextMeshPro)
     [SerializeField] private float gameTimer = 30f; // Game timer in seconds (30 seconds)
+    
+    [Header("Countdown")]
+    [SerializeField] private TMPro.TextMeshProUGUI countdownText; // Countdown text display ("3", "2", "1")
+    [SerializeField] private TMPro.TextMeshProUGUI countdownTextShadow; // Countdown text shadow display ("3", "2", "1")
+    [SerializeField] private float countdownDuration = 1f; // Duration for each countdown number (in seconds)
+    [SerializeField] private AudioSource countdownAudioSource; // Audio source for countdown sound
+    [SerializeField] private AudioClip countdownSound; // Sound effect for each countdown number (3, 2, 1)
     
     [Header("Winner Screen")]
     [SerializeField] private GameObject winnerScreen; // Winner screen GameObject (set active when game ends)
@@ -152,7 +160,7 @@ public class GameManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Starts the game timer countdown
+    /// Starts the game timer countdown (with "3, 2, 1" countdown first)
     /// </summary>
     private void StartGameTimer()
     {
@@ -163,16 +171,136 @@ public class GameManager : MonoBehaviour
             return;
         }
         
-        currentTimer = gameTimer;
-        isGameActive = true;
-        
+        // Start with "3, 2, 1" countdown first
         if (timerCoroutine != null)
         {
             StopCoroutine(timerCoroutine);
         }
         
+        timerCoroutine = StartCoroutine(CountdownBeforeStart());
+        Debug.Log($"[GameManager] Starting '3, 2, 1' countdown before game timer...");
+    }
+    
+    /// <summary>
+    /// Coroutine for "3, 2, 1" countdown before game starts
+    /// </summary>
+    private System.Collections.IEnumerator CountdownBeforeStart()
+    {
+        // Make sure countdown text exists
+        if (countdownText == null)
+        {
+            Debug.LogWarning("[GameManager] Countdown text not assigned! Skipping countdown and starting timer directly.");
+            currentTimer = gameTimer;
+            isGameActive = true;
+            timerCoroutine = StartCoroutine(TimerCountdown());
+            yield break;
+        }
+        
+        // Hide timer text during countdown
+        if (timerText != null) timerText.gameObject.SetActive(false);
+        if (timerTextLegacy != null) timerTextLegacy.gameObject.SetActive(false);
+        
+        // Show countdown text
+        countdownText.gameObject.SetActive(true);
+        countdownTextShadow.gameObject.SetActive(true);
+        
+        // Countdown from 3 to 1
+        for (int i = 3; i >= 1; i--)
+        {
+            countdownText.text = i.ToString();
+            countdownTextShadow.text = i.ToString();
+            
+            // Play countdown sound effect (only if sound is enabled in settings)
+            if (countdownAudioSource != null && countdownSound != null)
+            {
+                // Check if sound is enabled in SettingManager
+                bool isSoundEnabled = true; // Default to true
+                if (SettingManager.instance != null)
+                {
+                    isSoundEnabled = SettingManager.instance.IsSoundEnabled();
+                }
+                
+                if (isSoundEnabled)
+                {
+                    countdownAudioSource.PlayOneShot(countdownSound);
+                    Debug.Log($"[GameManager] Playing countdown sound for: {i}");
+                }
+                else
+                {
+                    Debug.Log($"[GameManager] Sound disabled - skipping countdown sound for: {i}");
+                }
+            }
+            
+            // Reset scale and alpha
+            countdownText.transform.localScale = Vector3.zero;
+            countdownText.alpha = 0f;
+            countdownTextShadow.transform.localScale = Vector3.zero;
+            countdownTextShadow.alpha = 0f;
+            
+            // Animate: Scale up and fade in
+            countdownText.transform.DOScale(Vector3.one * 1.5f, countdownDuration * 0.3f).SetEase(DG.Tweening.Ease.OutBack);
+            countdownText.DOFade(1f, countdownDuration * 0.3f);
+            countdownTextShadow.transform.DOScale(Vector3.one * 1.5f, countdownDuration * 0.3f).SetEase(DG.Tweening.Ease.OutBack);
+            countdownTextShadow.DOFade(1f, countdownDuration * 0.3f);
+            
+            yield return new WaitForSeconds(countdownDuration * 0.3f);
+            
+            // Animate: Scale down slightly and fade out
+            countdownText.transform.DOScale(Vector3.one * 0.8f, countdownDuration * 0.7f).SetEase(DG.Tweening.Ease.InBack);
+            countdownText.DOFade(0f, countdownDuration * 0.7f);
+            countdownTextShadow.transform.DOScale(Vector3.one * 0.8f, countdownDuration * 0.7f).SetEase(DG.Tweening.Ease.InBack);
+            countdownTextShadow.DOFade(0f, countdownDuration * 0.7f);
+            
+            yield return new WaitForSeconds(countdownDuration * 0.7f);
+        }
+        
+        // Hide countdown text
+        countdownText.gameObject.SetActive(false);
+        countdownTextShadow.gameObject.SetActive(false);
+        
+        // Show timer text again
+        if (timerText != null) timerText.gameObject.SetActive(true);
+        if (timerTextLegacy != null) timerTextLegacy.gameObject.SetActive(true);
+        
+        // Start gameplay music after countdown completes
+        if (SettingManager.instance != null)
+        {
+            SettingManager.instance.OnCountdownComplete();
+            Debug.Log("[GameManager] Countdown complete - signaled SettingManager to start gameplay music");
+        }
+        
+        // Start powerup timers for all grids (player and CPUs) after countdown completes
+        StartAllPowerupTimers();
+        
+        // Now start the actual game timer
+        currentTimer = gameTimer;
+        isGameActive = true;
         timerCoroutine = StartCoroutine(TimerCountdown());
-        Debug.Log($"[GameManager] Game timer started! Timer: {gameTimer} seconds");
+        Debug.Log($"[GameManager] '3, 2, 1' countdown complete! Game timer started: {gameTimer} seconds");
+    }
+    
+    /// <summary>
+    /// Starts powerup timers for all grids (player and all CPUs)
+    /// Called after "3, 2, 1" countdown completes
+    /// </summary>
+    private void StartAllPowerupTimers()
+    {
+        // Start player powerup timer
+        if (playerNumberGrid != null)
+        {
+            playerNumberGrid.StartPowerupTimerFromGameManager();
+            Debug.Log("[GameManager] Started powerup timer for player grid");
+        }
+        
+        // Start all CPU powerup timers
+        foreach (var kvp in cpuNumberGrids)
+        {
+            if (kvp.Value != null)
+            {
+                kvp.Value.StartPowerupTimerFromGameManager();
+                Debug.Log($"[GameManager] Started powerup timer for CPU {kvp.Key} grid");
+            }
+        }
     }
     
     /// <summary>

@@ -322,11 +322,22 @@ public class NumberGrid : MonoBehaviour
     
     /// <summary>
     /// Delays timer start by one frame after grid generation
+    /// NOTE: Timer is NOT auto-started anymore - must be started by GameManager after countdown
     /// </summary>
     private IEnumerator DelayedTimerStartAfterGrid()
     {
         yield return null; // Wait one frame to ensure all boxes are fully created
+        // Powerup timer is now started by GameManager after "3, 2, 1" countdown
+        Debug.Log("[NumberGrid] Grid generated - waiting for GameManager to start powerup timer after countdown");
+    }
+    
+    /// <summary>
+    /// Public method to start powerup timer from GameManager (called after countdown)
+    /// </summary>
+    public void StartPowerupTimerFromGameManager()
+    {
         StartPowerupTimer();
+        Debug.Log("[NumberGrid] Powerup timer started by GameManager after countdown!");
     }
     
     /// <summary>

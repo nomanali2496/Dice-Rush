@@ -47,6 +47,7 @@ public class SettingManager : MonoBehaviour
 
     private bool lastMainMenuActiveState = false; // Track previous state to detect changes
     private bool lastGameplayActiveState = false; // Track previous gameplay state
+    private bool isCountdownActive = false; // Track if countdown is currently running (to delay gameplay music)
 
     private void Start()
     {
@@ -154,7 +155,19 @@ public class SettingManager : MonoBehaviour
             {
                 lastGameplayActiveState = isGameplayActive;
                 Debug.Log($"[SettingManager] Gameplay active state changed to: {isGameplayActive}. Refreshing music.");
-                ApplyMusicSetting();
+                
+                // If gameplay just became active, set countdown flag to delay music
+                if (isGameplayActive)
+                {
+                    isCountdownActive = true;
+                    Debug.Log("[SettingManager] Gameplay activated - waiting for countdown to complete before starting music");
+                }
+                else
+                {
+                    // Gameplay deactivated, apply music setting immediately (stop gameplay music)
+                    isCountdownActive = false;
+                    ApplyMusicSetting();
+                }
             }
         }
     }
@@ -291,8 +304,8 @@ public class SettingManager : MonoBehaviour
         bool isGameplayActive = (gameplayScreen != null && gameplayScreen.activeInHierarchy);
         bool isMainMenuActive = (mainMenu != null && mainMenu.activeInHierarchy);
         
-        // "Gameplay" music plays ONLY if Gameplay is active
-        bool shouldPlayGameplay = isGameplayActive;
+        // "Gameplay" music plays ONLY if Gameplay is active AND countdown is NOT active
+        bool shouldPlayGameplay = isGameplayActive && !isCountdownActive;
         
         // "Normal" music plays ONLY if Gameplay is NOT active AND Main Menu IS active
         bool shouldPlayNormal = !isGameplayActive && isMainMenuActive;
@@ -310,7 +323,7 @@ public class SettingManager : MonoBehaviour
                 }
                 else
                 {
-                    // Stop gameplay music if not in gameplay
+                    // Stop gameplay music if not in gameplay or countdown is active
                     if (gameplayMusicSource.isPlaying) gameplayMusicSource.Stop();
                 }
             }
@@ -490,6 +503,16 @@ public class SettingManager : MonoBehaviour
         }
         
         SaveSoundSetting();
+    }
+    
+    /// <summary>
+    /// Called by GameManager when countdown completes - allows gameplay music to start
+    /// </summary>
+    public void OnCountdownComplete()
+    {
+        isCountdownActive = false;
+        ApplyMusicSetting();
+        Debug.Log("[SettingManager] Countdown complete - gameplay music can now play");
     }
     
     /// <summary>
