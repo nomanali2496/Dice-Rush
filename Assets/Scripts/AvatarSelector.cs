@@ -41,6 +41,22 @@ public class AvatarSelector : MonoBehaviour
     [Tooltip("Image component to display selected custom image")]
     [SerializeField] private Image customImageDisplay;
     
+    [Tooltip("Image cropper UI component for cropping uploaded images")]
+    [SerializeField] private ImageCropperUI imageCropperUI;
+    
+    [Header("Watch Video UI")]
+    [Tooltip("Text component for watch video button")]
+    [SerializeField] private TMP_Text watchVideoText;
+    
+    [Tooltip("Chips sprite name or index to show as postfix in text (TMP Sprite Asset)")]
+    [SerializeField] private string chipsSpriteName = "chips";
+    
+    [Tooltip("Vertical offset for chips sprite (positive = up, negative = down)")]
+    [SerializeField] private float chipsSpriteVerticalOffset = 0.15f;
+    
+    [Tooltip("Scale for chips sprite (1.0 = normal size, 0.8 = smaller, 1.2 = larger)")]
+    [SerializeField] private float chipsSpriteScale = 0.8f;
+    
     [Header("Settings")]
     [SerializeField] private bool saveToPlayFabOnSelect = true;
     [SerializeField] private bool showSelectionFeedback = true;
@@ -78,6 +94,9 @@ public class AvatarSelector : MonoBehaviour
         
         // Load custom image if exists
         LoadCustomImage();
+        
+        // Setup watch video text with chips icon
+        SetupWatchVideoText();
     }
     
     private void OnDestroy()
@@ -710,6 +729,24 @@ public class AvatarSelector : MonoBehaviour
         UpdateMainMenuAvatar();
     }
     
+    /// <summary>
+    /// Setup watch video text with chips icon as postfix
+    /// </summary>
+    private void SetupWatchVideoText()
+    {
+        if (watchVideoText != null)
+        {
+            // Set the text to "Watch Video and Earn 10" with inline chips sprite
+            // The sprite includes:
+            // - voffset: vertical positioning (lifts sprite up/down)
+            // - size: scaling (makes sprite smaller to reduce width and prevent wrapping)
+            string textWithSprite = $"Watch Video and Earn 10   <voffset={chipsSpriteVerticalOffset}em><size={chipsSpriteScale * 100}%><sprite name=\"{chipsSpriteName}\"></size><voffset=0em>";
+            
+            watchVideoText.text = textWithSprite;
+            Debug.Log($"[AvatarSelector] Watch video text set with inline chips sprite (offset: {chipsSpriteVerticalOffset}em, scale: {chipsSpriteScale}): '{textWithSprite}'");
+        }
+    }
+    
     #region Custom Image Selection
     
     /// <summary>
@@ -719,8 +756,16 @@ public class AvatarSelector : MonoBehaviour
     {
         Debug.Log("[AvatarSelector] Select custom image button clicked");
         
-        // Use cross-platform image picker
-        ImagePickerHelper.PickImage(OnImageSelected, maxImageSize);
+        // Use cross-platform image picker with crop functionality
+        if (imageCropperUI != null)
+        {
+            ImagePickerHelper.PickImageWithCrop(OnImageSelected, imageCropperUI, maxImageSize);
+        }
+        else
+        {
+            Debug.LogWarning("[AvatarSelector] ImageCropperUI not assigned! Using standard picker without crop.");
+            ImagePickerHelper.PickImage(OnImageSelected, maxImageSize);
+        }
     }
     
     /// <summary>
