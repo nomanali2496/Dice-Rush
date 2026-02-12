@@ -14,6 +14,7 @@ public class PlayerProfileUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI cashText;
     [SerializeField] private TextMeshProUGUI coinsText;
     [SerializeField] private TextMeshProUGUI accountCashText; // Account cash display (aligned with other currency displays)
+    [SerializeField] private TextMeshProUGUI accountCashTextShadow;
     [SerializeField] private Image profileImage;
     
     [Header("Gameplay UI References")]
@@ -50,6 +51,9 @@ public class PlayerProfileUI : MonoBehaviour
     
     [Tooltip("Image component to display selected custom image")]
     [SerializeField] private Image customImageDisplay;
+    
+    [Tooltip("Image cropper UI component for cropping uploaded images")]
+    [SerializeField] private ImageCropperUI imageCropperUI;
     
     [Header("Edit Mode Settings")]
     [SerializeField] private string editButtonText = "Edit";
@@ -311,6 +315,7 @@ public class PlayerProfileUI : MonoBehaviour
         if (accountCashText != null)
         {
             accountCashText.text = cashPrefix + data.cash;
+            accountCashTextShadow.text =  accountCashText.text;
         }
         
         // Update coins (Main Menu)
@@ -1026,8 +1031,16 @@ public class PlayerProfileUI : MonoBehaviour
     {
         Debug.Log("[PlayerProfileUI] Select custom image button clicked");
         
-        // Use cross-platform image picker
-        ImagePickerHelper.PickImage(OnImageSelected, maxImageSize);
+        // Use cross-platform image picker with crop functionality
+        if (imageCropperUI != null)
+        {
+            ImagePickerHelper.PickImageWithCrop(OnImageSelected, imageCropperUI, maxImageSize);
+        }
+        else
+        {
+            Debug.LogWarning("[PlayerProfileUI] ImageCropperUI not assigned! Using standard picker without crop.");
+            ImagePickerHelper.PickImage(OnImageSelected, maxImageSize);
+        }
     }
     
     /// <summary>
