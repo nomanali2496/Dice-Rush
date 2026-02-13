@@ -3376,7 +3376,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7229106799575818427, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 476.00015
+      value: 476.00012
       objectReference: {fileID: 0}
     - target: {fileID: 7229106799575818427, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -6282,7 +6282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7229106799575818427, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 476.00015
+      value: 476.00012
       objectReference: {fileID: 0}
     - target: {fileID: 7229106799575818427, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -12263,7 +12263,7 @@ MonoBehaviour:
   - lobbyIndex: 0
     numberOfPlayers: 2
     lobbyName: Combo Dice
-    entryFeeCash: 0.1
+    entryFeeCash: 5
     entryFeeChips: 0
     firstPlaceCash: 7
     firstPlaceChips: 0
@@ -56437,7 +56437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7229106799575818427, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 476.00015
+      value: 476.00012
       objectReference: {fileID: 0}
     - target: {fileID: 7229106799575818427, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_AnchoredPosition.y

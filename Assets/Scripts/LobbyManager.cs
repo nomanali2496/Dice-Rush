@@ -85,22 +85,43 @@ public class LobbyManager : MonoBehaviour
     {
         // Retry for 5 seconds
         float elapsed = 0f;
+        
         while (elapsed < 5f)
         {
             RefreshAllPlayButtons();
             
-            // Auto-select lobby based on balance (only on first load)
+            // Auto-select lobby based on balance (only on first load and when data is actually loaded)
             if (!hasAutoSelectedOnce && PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
             {
-                AutoSelectLobbyBasedOnBalance();
-                hasAutoSelectedOnce = true; // Mark as done, don't auto-select again
+                var playerData = PlayFabManager.Instance.currentPlayerData;
+                
+                // Check if player data is actually populated (not just default zeros)
+                // We'll assume if either cash > 0 OR coins > 0, the data is loaded
+                bool dataLooksLoaded = playerData != null && (playerData.cash > 0 || playerData.coins > 0);
+                
+                if (dataLooksLoaded)
+                {
+                    Debug.Log($"[LobbyManager] Player data loaded after {elapsed}s - Cash: ${playerData.cash}, Chips: {playerData.coins}");
+                    AutoSelectLobbyBasedOnBalance();
+                    hasAutoSelectedOnce = true; // Mark as done, don't auto-select again
+                }
+                else if (elapsed < 4.5f)
+                {
+                    Debug.Log($"[LobbyManager] Waiting for player data to load... (elapsed: {elapsed}s, Cash: ${playerData?.cash ?? 0}, Chips: {playerData?.coins ?? 0})");
+                }
             }
             
             yield return new WaitForSeconds(0.5f);
             elapsed += 0.5f;
-            
-            // If logged in, we can slow down or stop if finding success? 
-            // Better to just keep checking for a few seconds to catch the data load event.
+        }
+        
+        // Final attempt after 5 seconds even if data shows zeros (edge case: player truly has $0 and 0 chips)
+        if (!hasAutoSelectedOnce && PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
+        {
+            var playerData = PlayFabManager.Instance.currentPlayerData;
+            Debug.LogWarning($"[LobbyManager] Final auto-select attempt after 5 seconds with Cash: ${playerData?.cash ?? 0}, Chips: {playerData?.coins ?? 0}");
+            AutoSelectLobbyBasedOnBalance();
+            hasAutoSelectedOnce = true;
         }
     }
     
@@ -442,27 +463,66 @@ public class LobbyManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Finds the first lobby configuration that only requires chips (no cash)
+    /// Finds the first lobby configuration that requires cash AND the player can afford
     /// </summary>
-    /// <returns>Index of first chip-only lobby, or -1 if none found</returns>
-    private int FindFirstChipsOnlyLobby()
+    /// <param name="playerCash">Player's current cash balance</param>
+    /// <returns>Index of first affordable cash-based lobby, or -1 if none found</returns>
+    private int FindFirstAffordableCashLobby(float playerCash)
+    {
+        for (int i = 0; i < BACKGROUND_COUNT; i++)
+        {
+            LobbyConfig config = GetLobbyConfig(i);
+            if (config != null && config.entryFeeCash > 0f)
+            {
+                // Check if player can afford this cash lobby
+                if (playerCash >= config.entryFeeCash)
+                {
+                    Debug.Log($"[LobbyManager] Found first affordable cash lobby at index {i} (requires ${config.entryFeeCash}, player has ${playerCash})");
+                    return i;
+                }
+                else
+                {
+                    Debug.Log($"[LobbyManager] Lobby {i} requires ${config.entryFeeCash}, but player only has ${playerCash} - skipping");
+                }
+            }
+        }
+        Debug.Log($"[LobbyManager] No affordable cash lobby found! Player has ${playerCash}");
+        return -1;
+    }
+    
+    /// <summary>
+    /// Finds the first lobby configuration that only requires chips (no cash) AND the player can afford
+    /// </summary>
+    /// <param name="playerChips">Player's current chip balance</param>
+    /// <returns>Index of first affordable chip-only lobby, or -1 if none found</returns>
+    private int FindFirstAffordableChipsOnlyLobby(int playerChips)
     {
         for (int i = 0; i < BACKGROUND_COUNT; i++)
         {
             LobbyConfig config = GetLobbyConfig(i);
             if (config != null && config.entryFeeCash == 0f && config.entryFeeChips > 0)
             {
-                Debug.Log($"[LobbyManager] Found first chip-only lobby at index {i}");
-                return i;
+                // Check if player can afford this lobby
+                if (playerChips >= config.entryFeeChips)
+                {
+                    Debug.Log($"[LobbyManager] Found first affordable chip-only lobby at index {i} (requires {config.entryFeeChips} chips, player has {playerChips} chips)");
+                    return i;
+                }
+                else
+                {
+                    Debug.Log($"[LobbyManager] Lobby {i} requires {config.entryFeeChips} chips, but player only has {playerChips} chips - skipping");
+                }
             }
         }
-        Debug.LogWarning("[LobbyManager] No chip-only lobby found!");
+        Debug.Log($"[LobbyManager] No affordable chip-only lobby found! Player has {playerChips} chips");
         return -1;
     }
     
     /// <summary>
     /// Automatically selects appropriate lobby based on player's balance
-    /// If player has no cash, shows first chip-based game
+    /// Priority 1: Find first affordable cash-based lobby
+    /// Priority 2: If none, find first affordable chip-based lobby
+    /// Priority 3: Stay on default lobby if nothing is affordable
     /// </summary>
     private void AutoSelectLobbyBasedOnBalance()
     {
@@ -475,21 +535,46 @@ public class LobbyManager : MonoBehaviour
         
         var playerData = PlayFabManager.Instance.currentPlayerData;
         
-        // If player has no cash, find and show first chip-only lobby
-        if (playerData.cash <= 0f)
+        // Check if player data is actually loaded (not just default zeros)
+        // If both cash and chips are 0, data might not be loaded yet
+        if (playerData == null)
         {
-            int chipLobbyIndex = FindFirstChipsOnlyLobby();
-            if (chipLobbyIndex >= 0 && chipLobbyIndex != currentScrollIndex)
-            {
-                Debug.Log($"[LobbyManager] Player has no cash (${playerData.cash}), auto-selecting chip-based lobby at index {chipLobbyIndex}");
-                currentScrollIndex = chipLobbyIndex;
-                UpdateLobbyPositions(true, 0); // Instant update to new position
-                UpdateDotButtons(); // Update navigation dots
-            }
+            Debug.Log("[LobbyManager] Player data is null, skipping auto-select (data not loaded yet)");
+            return;
+        }
+        
+        // Additional check: If the player truly has 0 cash AND 0 chips, that's suspicious during initial load
+        // But we'll proceed anyway since it could be a legitimate state
+        
+        int selectedLobbyIndex = -1;
+        
+        Debug.Log($"[LobbyManager] Auto-selecting lobby - Player has ${playerData.cash} cash and {playerData.coins} chips");
+        
+        // Priority 1: Try to find affordable cash-based lobby
+        selectedLobbyIndex = FindFirstAffordableCashLobby(playerData.cash);
+        
+        // Priority 2: If no affordable cash lobby, try chip-based lobbies
+        if (selectedLobbyIndex < 0)
+        {
+            Debug.Log("[LobbyManager] No affordable cash lobbies, checking chip-based lobbies...");
+            selectedLobbyIndex = FindFirstAffordableChipsOnlyLobby(playerData.coins);
+        }
+        
+        // If we found an affordable lobby, select it
+        if (selectedLobbyIndex >= 0 && selectedLobbyIndex != currentScrollIndex)
+        {
+            Debug.Log($"[LobbyManager] Auto-selecting affordable lobby at index {selectedLobbyIndex}");
+            currentScrollIndex = selectedLobbyIndex;
+            UpdateLobbyPositions(true, 0); // Instant update to new position
+            UpdateDotButtons(); // Update navigation dots
+        }
+        else if (selectedLobbyIndex < 0)
+        {
+            Debug.LogWarning($"[LobbyManager] Player can't afford ANY lobbies! Cash: ${playerData.cash}, Chips: {playerData.coins}");
         }
         else
         {
-            Debug.Log($"[LobbyManager] Player has cash (${playerData.cash}), no auto-select needed");
+            Debug.Log($"[LobbyManager] Already on affordable lobby {selectedLobbyIndex}, no change needed");
         }
     }
     
