@@ -46,6 +46,8 @@ public class NumberGrid : MonoBehaviour
     [SerializeField] private float referenceCellSizeX = 218.8f; // Reference cell width
     [SerializeField] private float referenceCellSizeY = 216.5f; // Reference cell height
     [SerializeField] private float referenceFontSize = 60f; // Reference font size for number text (at reference resolution)
+    [SerializeField] private float referenceHandleWidth = 144.69f; // Reference slider handle width (at reference resolution)
+    [SerializeField] private float referenceHandleHeight = 144.69f; // Reference slider handle height (at reference resolution)
     
     // Calculated values (set during grid generation)
     private float currentCellSizeX; // Current scaled cell width
@@ -1351,6 +1353,13 @@ public class NumberGrid : MonoBehaviour
                     {
                         Debug.LogWarning("[NumberGrid] Slider handle does not have an Image component!");
                     }
+                    
+                    // Scale the handle size based on the scaleFactor
+                    float scaledHandleWidth = referenceHandleWidth * scaleFactor;
+                    float scaledHandleHeight = referenceHandleHeight * scaleFactor;
+                    handleRect.sizeDelta = new Vector2(scaledHandleWidth, scaledHandleHeight);
+                    
+                    Debug.Log($"[NumberGrid] Slider handle scaled - Scale Factor: {scaleFactor:F3}, Handle Size: {scaledHandleWidth:F2}x{scaledHandleHeight:F2}");
                 }
                 else
                 {
