@@ -32229,6 +32229,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5814584712426890948, guid: 2d9527626a390d94bb4ec5a45c15f41c, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814584712426890948, guid: 2d9527626a390d94bb4ec5a45c15f41c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -56630,6 +56634,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4130115403510204353, guid: 2d9527626a390d94bb4ec5a45c15f41c, type: 3}
       propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814584712426890948, guid: 2d9527626a390d94bb4ec5a45c15f41c, type: 3}
+      propertyPath: m_Interactable
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5814584712426890948, guid: 2d9527626a390d94bb4ec5a45c15f41c, type: 3}
