@@ -5,6 +5,6 @@ public class ClickButtonSound : MonoBehaviour
 {
     void Start()
     {
-        GetComponent<Button>().onClick.AddListener(SettingManager.instance.PlayTapSound);
+        GetComponent<Button>().onClick.AddListener(() => { if (SoundManager.instance != null) SoundManager.instance.PlayTap(); });
     }
 }

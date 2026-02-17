@@ -663,9 +663,9 @@ public class LobbyManager : MonoBehaviour
             UpdateLobbyPositions(false, direction);
             
             // Play tap sound for each scroll step
-            if (SettingManager.instance != null)
+            if (SoundManager.instance != null)
             {
-                SettingManager.instance.PlayTapSound();
+                SoundManager.instance.PlayTap();
             }
             
             // Wait for animation to complete before next step
@@ -936,9 +936,9 @@ public class LobbyManager : MonoBehaviour
     private void OnDotButtonClicked(int targetIndex)
     {
         // Play click sound
-        if (SettingManager.instance != null)
+        if (SoundManager.instance != null)
         {
-            SettingManager.instance.PlayTapSound();
+            SoundManager.instance.PlayTap();
         }
         
         if (targetIndex == currentScrollIndex) return;

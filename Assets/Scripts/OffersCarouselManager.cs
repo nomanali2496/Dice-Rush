@@ -419,9 +419,9 @@ public class OffersCarouselManager : MonoBehaviour
                 UpdateOfferPositions();
                 
                 // Play tap sound for each scroll step
-                if (SettingManager.instance != null)
+                if (SoundManager.instance != null)
                 {
-                    SettingManager.instance.PlayTapSound();
+                    SoundManager.instance.PlayTap();
                 }
                 
                 // Wait for animation to complete before next step

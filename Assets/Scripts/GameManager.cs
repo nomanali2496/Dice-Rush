@@ -45,8 +45,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI countdownText; // Countdown text display ("3", "2", "1")
     [SerializeField] private TMPro.TextMeshProUGUI countdownTextShadow; // Countdown text shadow display ("3", "2", "1")
     [SerializeField] private float countdownDuration = 1f; // Duration for each countdown number (in seconds)
-    [SerializeField] private AudioSource countdownAudioSource; // Audio source for countdown sound
-    [SerializeField] private AudioClip countdownSound; // Sound effect for each countdown number (3, 2, 1)
     
     [Header("Winner Screen")]
     [SerializeField] private GameObject winnerScreen; // Winner screen GameObject (set active when game ends)
@@ -210,25 +208,11 @@ public class GameManager : MonoBehaviour
             countdownText.text = i.ToString();
             countdownTextShadow.text = i.ToString();
             
-            // Play countdown sound effect (only if sound is enabled in settings)
-            if (countdownAudioSource != null && countdownSound != null)
+            // Play countdown sound effect using SoundManager
+            if (SoundManager.instance != null)
             {
-                // Check if sound is enabled in SettingManager
-                bool isSoundEnabled = true; // Default to true
-                if (SettingManager.instance != null)
-                {
-                    isSoundEnabled = SettingManager.instance.IsSoundEnabled();
-                }
-                
-                if (isSoundEnabled)
-                {
-                    countdownAudioSource.PlayOneShot(countdownSound);
-                    Debug.Log($"[GameManager] Playing countdown sound for: {i}");
-                }
-                else
-                {
-                    Debug.Log($"[GameManager] Sound disabled - skipping countdown sound for: {i}");
-                }
+                SoundManager.instance.PlayCountdown();
+                Debug.Log($"[GameManager] Playing countdown sound for: {i}");
             }
             
             // Reset scale and alpha

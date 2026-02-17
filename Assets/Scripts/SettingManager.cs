@@ -6,16 +6,11 @@ using UnityEngine.UI;
 /// Handles saving and loading settings using PlayerPrefs (account-based)
 /// </summary>
 
-[RequireComponent(typeof(AudioSource))]
 public class SettingManager : MonoBehaviour
 {
     public static SettingManager instance;
-    [SerializeField] AudioClip tapClip;
-    [SerializeField] AudioSource source;
     [Header("Music Settings")]
     [SerializeField] private Toggle musicToggle; // Toggle UI for music on/off
-    [SerializeField] private AudioSource backgroundMusicSource; // Main Menu / Normal Background Music
-    [SerializeField] private AudioSource gameplayMusicSource; // Gameplay Background Music
     
     [Header("Sound Settings")]
     [SerializeField] private Toggle soundToggle; // Toggle UI for sound effects on/off
@@ -74,15 +69,9 @@ public class SettingManager : MonoBehaviour
         }
         
         // Ensure music is stopped initially (before login)
-        if (backgroundMusicSource != null)
+        if (SoundManager.instance != null)
         {
-            backgroundMusicSource.Stop();
-            backgroundMusicSource.mute = true;
-        }
-        if (gameplayMusicSource != null)
-        {
-            gameplayMusicSource.Stop();
-            gameplayMusicSource.mute = true;
+            SoundManager.instance.StopAllMusic();
         }
         Debug.Log("[SettingManager] All music muted until user logs in");
         
@@ -122,15 +111,7 @@ public class SettingManager : MonoBehaviour
             Debug.LogWarning("[SettingManager] Sound toggle not assigned! Please assign it in the Inspector.");
         }
         
-        // Initialize AudioSource if not assigned
-        if (source == null)
-        {
-            source = GetComponent<AudioSource>();
-            if (source == null)
-            {
-                Debug.LogWarning("[SettingManager] AudioSource not found! Sound effects may not work.");
-            }
-        }
+
     }
 
     private void Update()
@@ -229,8 +210,10 @@ public class SettingManager : MonoBehaviour
         Debug.Log("[SettingManager] User logged out, clearing user data and stopping music");
         
         // Stop music when user logs out
-        if (backgroundMusicSource != null) backgroundMusicSource.Stop();
-        if (gameplayMusicSource != null) gameplayMusicSource.Stop();
+        if (SoundManager.instance != null)
+        {
+            SoundManager.instance.StopAllMusic();
+        }
         
         currentUserId = "";
         UpdateStorageKeyDisplay();
@@ -314,33 +297,29 @@ public class SettingManager : MonoBehaviour
         if (isMusicEnabled)
         {
             // --- GAMEPLAY MUSIC ---
-            if (gameplayMusicSource != null)
+            if (shouldPlayGameplay)
             {
-                if (shouldPlayGameplay)
+                // Stop background music and play gameplay music
+                if (SoundManager.instance != null)
                 {
-                    gameplayMusicSource.mute = false;
-                    if (!gameplayMusicSource.isPlaying) gameplayMusicSource.Play();
-                }
-                else
-                {
-                    // Stop gameplay music if not in gameplay or countdown is active
-                    if (gameplayMusicSource.isPlaying) gameplayMusicSource.Stop();
+                    SoundManager.instance.StopBackgroundMusic();
+                    SoundManager.instance.PlayGameplayMusic();
                 }
             }
-
             // --- NORMAL / MAIN MENU MUSIC ---
-            if (backgroundMusicSource != null)
+            else if (shouldPlayNormal)
             {
-                if (shouldPlayNormal)
+                // Stop gameplay music and play background music
+                if (SoundManager.instance != null)
                 {
-                    backgroundMusicSource.mute = false;
-                    if (!backgroundMusicSource.isPlaying) backgroundMusicSource.Play();
+                    SoundManager.instance.StopGameplayMusic();
+                    SoundManager.instance.PlayBackgroundMusic();
                 }
-                else
-                {
-                    // Stop normal music if in gameplay
-                    if (backgroundMusicSource.isPlaying) backgroundMusicSource.Stop();
-                }
+            }
+            else
+            {
+                // Neither screen is active, stop all music
+                StopAllMusic();
             }
         }
         else
@@ -352,15 +331,9 @@ public class SettingManager : MonoBehaviour
 
     private void StopAllMusic()
     {
-        if (backgroundMusicSource != null)
+        if (SoundManager.instance != null)
         {
-            backgroundMusicSource.mute = true;
-            if (backgroundMusicSource.isPlaying) backgroundMusicSource.Stop();
-        }
-        if (gameplayMusicSource != null)
-        {
-            gameplayMusicSource.mute = true;
-            if (gameplayMusicSource.isPlaying) gameplayMusicSource.Stop();
+            SoundManager.instance.StopAllMusic();
         }
     }
     
@@ -515,32 +488,7 @@ public class SettingManager : MonoBehaviour
         Debug.Log("[SettingManager] Countdown complete - gameplay music can now play");
     }
     
-    /// <summary>
-    /// Plays tap/click sound effect (only if sound is enabled)
-    /// </summary>
-    public void PlayTapSound()
-    {
-        // Check if sound is enabled before playing
-        if (!isSoundEnabled)
-        {
-            return; // Sound is disabled, don't play
-        }
-        
-        // Check if source and clip are assigned
-        if (source == null)
-        {
-            Debug.LogWarning("[SettingManager] AudioSource not assigned for tap sound!");
-            return;
-        }
-        
-        if (tapClip == null)
-        {
-            Debug.LogWarning("[SettingManager] Tap clip not assigned!");
-            return;
-        }
-        
-        source.PlayOneShot(tapClip);
-    }
+
 
     private void OnDestroy()
     {

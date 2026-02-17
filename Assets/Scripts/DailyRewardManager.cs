@@ -86,10 +86,6 @@ public class DailyRewardManager : MonoBehaviour
     [Header("Animation - Prefab")]
     [SerializeField] private GameObject animatedSpritePrefab; // Prefab for animated cash/chips sprites (should have Image component)
     
-    [Header("Sound Effects")]
-    [SerializeField] private AudioClip cashSound; // Sound to play for each cash particle
-    [SerializeField] private AudioClip chipsSound; // Sound to play for each chip particle
-    
     [Header("Debug Info")]
     [SerializeField] private string currentUserId = ""; // Current user's PlayFab ID (for account-specific storage)
     [SerializeField] private string lastShownDate = "N/A"; // Last date when panel was shown
@@ -781,21 +777,17 @@ public class DailyRewardManager : MonoBehaviour
     /// </summary>
     private void PlayParticleSound(bool isCash)
     {
-        // Check if sound is enabled in SettingManager
-        if (SettingManager.instance != null && !SettingManager.instance.IsSoundEnabled())
+        // Play sound using SoundManager
+        if (SoundManager.instance != null)
         {
-            return; // Sound is disabled, don't play
-        }
-        
-        AudioClip soundToPlay = isCash ? cashSound : chipsSound;
-        
-        if (soundToPlay != null)
-        {
-            AudioSource.PlayClipAtPoint(soundToPlay, Camera.main.transform.position);
-        }
-        else
-        {
-            Debug.LogWarning($"[DailyRewardManager] {(isCash ? "Cash" : "Chips")} sound not assigned!");
+            if (isCash)
+            {
+                SoundManager.instance.PlayCash();
+            }
+            else
+            {
+                SoundManager.instance.PlayChips();
+            }
         }
     }
     
