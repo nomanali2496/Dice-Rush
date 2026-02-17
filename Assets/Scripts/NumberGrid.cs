@@ -46,6 +46,11 @@ public class NumberGrid : MonoBehaviour
     [SerializeField] private float referenceCellSizeX = 218.8f; // Reference cell width
     [SerializeField] private float referenceCellSizeY = 216.5f; // Reference cell height
     [SerializeField] private float referenceFontSize = 60f; // Reference font size for number text (at reference resolution)
+    
+    [Header("Slider Parent Reference (1440x3216 resolution)")]
+    [SerializeField] private RectTransform sliderParent; // Reference to the slider's parent RectTransform
+    [SerializeField] private float referenceSliderParentWidth = 446f; // Reference slider parent width (at reference resolution)
+    [SerializeField] private float referenceSliderParentHeight = 110f; // Reference slider parent height (at reference resolution)
     [SerializeField] private float referenceHandleWidth = 144.69f; // Reference slider handle width (at reference resolution)
     [SerializeField] private float referenceHandleHeight = 144.69f; // Reference slider handle height (at reference resolution)
     
@@ -1354,12 +1359,27 @@ public class NumberGrid : MonoBehaviour
                         Debug.LogWarning("[NumberGrid] Slider handle does not have an Image component!");
                     }
                     
-                    // Scale the handle size based on the scaleFactor
-                    float scaledHandleWidth = referenceHandleWidth * scaleFactor;
-                    float scaledHandleHeight = referenceHandleHeight * scaleFactor;
-                    handleRect.sizeDelta = new Vector2(scaledHandleWidth, scaledHandleHeight);
-                    
-                    Debug.Log($"[NumberGrid] Slider handle scaled - Scale Factor: {scaleFactor:F3}, Handle Size: {scaledHandleWidth:F2}x{scaledHandleHeight:F2}");
+                    // Scale the handle size based on the slider parent's scale factor
+                    if (sliderParent != null)
+                    {
+                        // Calculate the parent's current scale by comparing to reference size
+                        float parentScaleX = sliderParent.rect.width / referenceSliderParentWidth;
+                        float parentScaleY = sliderParent.rect.height / referenceSliderParentHeight;
+                        
+                        // Use the smaller scale to maintain aspect ratio
+                        float parentScale = Mathf.Min(parentScaleX, parentScaleY);
+                        
+                        // Apply scale to handle
+                        float scaledHandleWidth = referenceHandleWidth * parentScale;
+                        float scaledHandleHeight = referenceHandleHeight * parentScale;
+                        handleRect.sizeDelta = new Vector2(scaledHandleWidth, scaledHandleHeight);
+                        
+                        Debug.Log($"[NumberGrid] Slider handle scaled - Parent Size: {sliderParent.rect.width:F2}x{sliderParent.rect.height:F2}, Parent Scale: {parentScale:F3}, Handle Size: {scaledHandleWidth:F2}x{scaledHandleHeight:F2}");
+                    }
+                    else
+                    {
+                        Debug.LogWarning("[NumberGrid] Slider parent RectTransform is not assigned! Cannot scale handle properly.");
+                    }
                 }
                 else
                 {
