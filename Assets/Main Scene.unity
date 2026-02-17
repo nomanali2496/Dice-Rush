@@ -2774,7 +2774,7 @@ MonoBehaviour:
   swipeThreshold: 50
   useVelocityScrolling: 1
   pixelsPerItem: 100
-  maxScrollItems: 5
+  maxScrollItems: 1
 --- !u!1001 &102235142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33915,7 +33915,7 @@ MonoBehaviour:
   swipeThreshold: 50
   useVelocityScrolling: 1
   pixelsPerItem: 100
-  maxScrollItems: 5
+  maxScrollItems: 1
 --- !u!1 &1355918729
 GameObject:
   m_ObjectHideFlags: 0
@@ -40672,7 +40672,7 @@ MonoBehaviour:
   enableSwipeDetection: 1
   useVelocityScrolling: 1
   pixelsPerItem: 100
-  maxScrollItems: 5
+  maxScrollItems: 1
   showDebugLogs: 1
 --- !u!114 &1613593919
 MonoBehaviour:
@@ -49953,7 +49953,7 @@ MonoBehaviour:
   swipeThreshold: 50
   useVelocityScrolling: 1
   pixelsPerItem: 100
-  maxScrollItems: 5
+  maxScrollItems: 1
 --- !u!222 &2010150921
 CanvasRenderer:
   m_ObjectHideFlags: 0

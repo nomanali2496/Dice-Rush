@@ -33,7 +33,7 @@ public class LobbyRowCellView : EnhancedScrollerCellView, IPointerDownHandler, I
     [SerializeField] private float swipeThreshold = 50f; // Minimum swipe distance to trigger
     [SerializeField] private bool useVelocityScrolling = true; // Use velocity-based scrolling
     [SerializeField] private float pixelsPerItem = 100f; // Pixels per item for velocity scrolling
-    [SerializeField] private int maxScrollItems = 5; // Max items to scroll
+    [SerializeField] private int maxScrollItems = 1; // Max items to scroll
     
     private Vector2 swipeStartPos;
     private bool isSwiping = false;
