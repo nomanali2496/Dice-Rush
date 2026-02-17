@@ -2007,8 +2007,8 @@ RectTransform:
   - {fileID: 1331150283}
   m_Father: {fileID: 1502321586}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5462256, y: 0.2120892}
-  m_AnchorMax: {x: 0.8564885, y: 0.24628325}
+  m_AnchorMin: {x: 0.5465278, y: 0.21206468}
+  m_AnchorMax: {x: 0.85625, y: 0.24626866}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2305,7 +2305,7 @@ MonoBehaviour:
   enableSwipeDetection: 1
   useVelocityScrolling: 1
   pixelsPerItem: 150
-  maxScrollItems: 3
+  maxScrollItems: 1
   showDebugLogs: 1
 --- !u!114 &91520642
 MonoBehaviour:
@@ -8400,7 +8400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &314033591
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26862,8 +26862,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 274520989}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMin: {x: 0.613, y: 0}
+  m_AnchorMax: {x: 0.613, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 144.69, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -27691,7 +27691,7 @@ MonoBehaviour:
   swipeThreshold: 50
   useVelocityScrolling: 1
   pixelsPerItem: 150
-  maxScrollItems: 3
+  maxScrollItems: 1
 --- !u!1001 &1147546268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28558,7 +28558,7 @@ MonoBehaviour:
   swipeThreshold: 50
   useVelocityScrolling: 1
   pixelsPerItem: 150
-  maxScrollItems: 3
+  maxScrollItems: 1
 --- !u!1 &1172730325
 GameObject:
   m_ObjectHideFlags: 0
@@ -29242,7 +29242,7 @@ MonoBehaviour:
   swipeThreshold: 50
   useVelocityScrolling: 1
   pixelsPerItem: 150
-  maxScrollItems: 3
+  maxScrollItems: 1
 --- !u!1 &1189379030 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1739733887702631164, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
@@ -29399,7 +29399,7 @@ MonoBehaviour:
   swipeThreshold: 50
   useVelocityScrolling: 1
   pixelsPerItem: 150
-  maxScrollItems: 3
+  maxScrollItems: 1
 --- !u!1 &1197553819
 GameObject:
   m_ObjectHideFlags: 0
@@ -33462,7 +33462,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.613
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -42865,7 +42865,7 @@ MonoBehaviour:
   swipeThreshold: 50
   useVelocityScrolling: 1
   pixelsPerItem: 150
-  maxScrollItems: 3
+  maxScrollItems: 1
 --- !u!1001 &1695955059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52016,7 +52016,7 @@ RectTransform:
   m_Father: {fileID: 1001760923}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0.613, y: 1}
   m_AnchoredPosition: {x: -7.6799927, y: 0}
   m_SizeDelta: {x: -5.37, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -52938,7 +52938,7 @@ MonoBehaviour:
   swipeThreshold: 50
   useVelocityScrolling: 1
   pixelsPerItem: 150
-  maxScrollItems: 3
+  maxScrollItems: 1
 --- !u!224 &2113678052 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 492026478492308729, guid: c7d78fc3c2bfb434889cef23f0ec303a, type: 3}
@@ -58403,7 +58403,7 @@ MonoBehaviour:
   swipeThreshold: 50
   useVelocityScrolling: 1
   pixelsPerItem: 150
-  maxScrollItems: 3
+  maxScrollItems: 1
 --- !u!1001 &8347167236295735459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58636,6 +58636,10 @@ PrefabInstance:
       propertyPath: paddingRight
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1162559560897828473, guid: 590116b256728294394a3354f86c01dc, type: 3}
+      propertyPath: sliderParent
+      value: 
+      objectReference: {fileID: 75685190}
     - target: {fileID: 1162559560897828473, guid: 590116b256728294394a3354f86c01dc, type: 3}
       propertyPath: paddingBottom
       value: 25
