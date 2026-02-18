@@ -239,18 +239,30 @@ public class AvatarSelector : MonoBehaviour
     /// </summary>
     private void UpdateMainMenuAvatarDisplayViaScript()
     {
-        // Find all MainMenuAvatarDisplay scripts in the scene (even if inactive)
+        // Update all MainMenuAvatarDisplay scripts in the scene (even if inactive)
         MainMenuAvatarDisplay[] displays = FindObjectsOfType<MainMenuAvatarDisplay>(true);
-        
         if (displays != null && displays.Length > 0)
         {
             foreach (MainMenuAvatarDisplay display in displays)
             {
                 if (display != null)
                 {
-                    // Update immediately with current selected index and sprites
                     display.UpdateFromAvatarSelector(currentSelectedIndex, avatarSprites);
-                    Debug.Log($"[AvatarSelector] Updated MainMenuAvatarDisplay script immediately with index {currentSelectedIndex}");
+                    Debug.Log($"[AvatarSelector] Updated MainMenuAvatarDisplay with index {currentSelectedIndex}");
+                }
+            }
+        }
+        
+        // Also update PlayerProfileUI if it's open — it has its own image slots
+        PlayerProfileUI[] profileUIs = FindObjectsOfType<PlayerProfileUI>(true);
+        if (profileUIs != null && profileUIs.Length > 0)
+        {
+            foreach (PlayerProfileUI profileUI in profileUIs)
+            {
+                if (profileUI != null)
+                {
+                    profileUI.UpdateFromAvatarSelector(currentSelectedIndex, avatarSprites);
+                    Debug.Log($"[AvatarSelector] Updated PlayerProfileUI with index {currentSelectedIndex}");
                 }
             }
         }
@@ -768,17 +780,16 @@ public class AvatarSelector : MonoBehaviour
         
         selectedCustomTexture = texture;
         
-        // Convert to sprite and display
         Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
         
-        // Update display
+        // Update local display
         if (customImageDisplay != null)
         {
             customImageDisplay.sprite = sprite;
             Debug.Log("[AvatarSelector] Custom image displayed");
         }
         
-        // Update main menu display if assigned
+        // Update main menu direct reference
         if (mainMenuAvatarDisplay != null)
         {
             mainMenuAvatarDisplay.sprite = sprite;
@@ -790,8 +801,17 @@ public class AvatarSelector : MonoBehaviour
         foreach (MainMenuAvatarDisplay display in displays)
         {
             if (display != null)
-            {
                 display.UpdateCustomImage(sprite);
+        }
+        
+        // Update PlayerProfileUI if open — so profile panel also shows the new custom image
+        PlayerProfileUI[] profileUIs = FindObjectsOfType<PlayerProfileUI>(true);
+        foreach (PlayerProfileUI profileUI in profileUIs)
+        {
+            if (profileUI != null)
+            {
+                profileUI.UpdateCustomImage(sprite);
+                Debug.Log("[AvatarSelector] Custom image pushed to PlayerProfileUI");
             }
         }
         

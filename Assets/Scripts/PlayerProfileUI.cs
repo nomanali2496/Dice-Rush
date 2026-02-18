@@ -718,12 +718,26 @@ public class PlayerProfileUI : MonoBehaviour
     {
         if (profileImageCustom != null)
         {
+            // Preferred path: dedicated custom slot
             profileImageCustom.sprite = sprite;
-            profileImageCustom.rectTransform.localScale = Vector3.one * 2f; // 2x zoom to fill the mask
+            profileImageCustom.rectTransform.localScale = Vector3.one * 2f;
             profileImageCustom.gameObject.SetActive(true);
+            
+            if (profileImageSprite != null)
+                profileImageSprite.gameObject.SetActive(false);
         }
-        if (profileImageSprite != null)
-            profileImageSprite.gameObject.SetActive(false);
+        else if (profileImageSprite != null)
+        {
+            // Fallback: no custom slot assigned — reuse sprite slot with 2x zoom
+            Debug.LogWarning("[PlayerProfileUI] profileImageCustom not assigned! Showing custom image in profileImageSprite with 2x zoom.");
+            profileImageSprite.sprite = sprite;
+            profileImageSprite.rectTransform.localScale = Vector3.one * 2f;
+            profileImageSprite.gameObject.SetActive(true);
+        }
+        else
+        {
+            Debug.LogError("[PlayerProfileUI] Neither profileImageCustom nor profileImageSprite is assigned!");
+        }
         
         // Also update the legacy customImageDisplay slot if assigned
         if (customImageDisplay != null)
@@ -743,6 +757,43 @@ public class PlayerProfileUI : MonoBehaviour
         }
         if (profileImageCustom != null)
             profileImageCustom.gameObject.SetActive(false);
+    }
+    
+    /// <summary>
+    /// Called by AvatarSelector when a preset avatar button is tapped.
+    /// Shows the selected sprite in the sprite slot (hides the custom slot).
+    /// </summary>
+    public void UpdateFromAvatarSelector(int avatarIndex, Sprite[] sprites)
+    {
+        if (sprites == null || avatarIndex < 0 || avatarIndex >= sprites.Length)
+        {
+            Debug.LogWarning($"[PlayerProfileUI] UpdateFromAvatarSelector: invalid index {avatarIndex}");
+            return;
+        }
+        
+        Sprite avatarSprite = sprites[avatarIndex];
+        if (avatarSprite != null)
+        {
+            ShowSpriteImage(avatarSprite);
+            Debug.Log($"[PlayerProfileUI] ✓ Avatar updated to index {avatarIndex} via AvatarSelector");
+        }
+        else
+        {
+            Debug.LogWarning($"[PlayerProfileUI] Avatar sprite at index {avatarIndex} is null!");
+        }
+    }
+    
+    /// <summary>
+    /// Called by AvatarSelector when a custom gallery image is picked from the main menu.
+    /// Shows the image in the custom slot (zoomed).
+    /// </summary>
+    public void UpdateCustomImage(Sprite customSprite)
+    {
+        if (customSprite != null)
+        {
+            ShowCustomImage(customSprite);
+            Debug.Log("[PlayerProfileUI] ✓ Custom image updated via external call");
+        }
     }
     
     /// <summary>
