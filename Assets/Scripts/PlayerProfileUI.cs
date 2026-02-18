@@ -15,7 +15,11 @@ public class PlayerProfileUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI coinsText;
     [SerializeField] private TextMeshProUGUI accountCashText; // Account cash display (aligned with other currency displays)
     [SerializeField] private TextMeshProUGUI accountCashTextShadow;
-    [SerializeField] private Image profileImage;
+    [Tooltip("Image shown when a PRESET avatar is selected (from the avatar buttons)")]
+    [SerializeField] private Image profileImageSprite;
+    
+    [Tooltip("Image shown when a CUSTOM photo is picked from the gallery — size this larger than the mask in the Inspector for the zoom effect")]
+    [SerializeField] private Image profileImageCustom;
     
     [Header("Gameplay UI References")]
     [SerializeField] private TextMeshProUGUI gameplayChipsText; // Chips display in gameplay screen
@@ -49,11 +53,8 @@ public class PlayerProfileUI : MonoBehaviour
     [Tooltip("Button to select custom image from device")]
     [SerializeField] private Button selectCustomImageButton;
     
-    [Tooltip("Image component to display selected custom image")]
+    [Tooltip("Image component to display selected custom image (same as profileImageCustom, optional separate slot)")]
     [SerializeField] private Image customImageDisplay;
-    
-    [Tooltip("Image cropper UI component for cropping uploaded images")]
-    [SerializeField] private ImageCropperUI imageCropperUI;
     
     [Header("Edit Mode Settings")]
     [SerializeField] private string editButtonText = "Edit";
@@ -76,6 +77,12 @@ public class PlayerProfileUI : MonoBehaviour
     
     private void Start()
     {
+        // Hide the custom image slot by default — sprite slot is shown until a custom image is loaded
+        if (profileImageCustom != null)
+            profileImageCustom.gameObject.SetActive(false);
+        if (profileImageSprite != null)
+            profileImageSprite.gameObject.SetActive(true);
+        
         // Add button listeners
         if (editNameButton != null)
             editNameButton.onClick.AddListener(OnEditNameClicked);
@@ -339,31 +346,23 @@ public class PlayerProfileUI : MonoBehaviour
         UpdateDailyRewardCurrency(data.coins, data.cash);
         
         // Update profile image
-        if (profileImage == null)
-        {
-            Debug.LogWarning("[PlayerProfileUI] profileImage is not assigned in Inspector! Cannot display profile image.");
-        }
-        else if (!string.IsNullOrEmpty(data.imageUrl))
+        if (!string.IsNullOrEmpty(data.imageUrl))
         {
             Debug.Log($"[PlayerProfileUI] Profile image URL found: {data.imageUrl}");
             
-            // Check if it's a base64 image
+            // Check if it's a base64 image (custom gallery pick)
             if (data.imageUrl.StartsWith("data:image"))
             {
                 try
                 {
-                    // Extract base64 part
                     string base64Data = data.imageUrl.Substring(data.imageUrl.IndexOf(",") + 1);
                     byte[] imageBytes = System.Convert.FromBase64String(base64Data);
-                    
-                    // Create texture
                     Texture2D texture = new Texture2D(2, 2);
                     if (texture.LoadImage(imageBytes))
                     {
-                        // Convert to sprite
                         Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
-                        profileImage.sprite = sprite;
-                        Debug.Log("[PlayerProfileUI] ✓ Base64 profile image displayed");
+                        ShowCustomImage(sprite);
+                        Debug.Log("[PlayerProfileUI] ✓ Base64 profile image displayed in custom slot");
                     }
                     else
                     {
@@ -375,7 +374,7 @@ public class PlayerProfileUI : MonoBehaviour
                     Debug.LogWarning($"[PlayerProfileUI] Failed to load base64 image: {e.Message}");
                 }
             }
-            // Check if it's a URL (Facebook profile picture, etc.)
+            // URL image (Facebook/Google) — show in sprite slot, no zoom needed
             else if (data.imageUrl.StartsWith("http://") || data.imageUrl.StartsWith("https://"))
             {
                 Debug.Log($"[PlayerProfileUI] Loading profile image from URL: {data.imageUrl}");
@@ -388,7 +387,7 @@ public class PlayerProfileUI : MonoBehaviour
         }
         else
         {
-            // No image URL - load avatar sprite from selectedAvatarIndex (like MainMenuAvatarDisplay does)
+            // No image URL — show preset avatar sprite
             Debug.Log("[PlayerProfileUI] No image URL in data, loading avatar sprite from selectedAvatarIndex");
             LoadAvatarSpriteFromIndex(data.selectedAvatarIndex);
         }
@@ -713,11 +712,45 @@ public class PlayerProfileUI : MonoBehaviour
     }
     
     /// <summary>
+    /// Show a custom gallery-picked image: activates profileImageCustom, hides profileImageSprite.
+    /// </summary>
+    private void ShowCustomImage(Sprite sprite)
+    {
+        if (profileImageCustom != null)
+        {
+            profileImageCustom.sprite = sprite;
+            profileImageCustom.rectTransform.localScale = Vector3.one * 2f; // 2x zoom to fill the mask
+            profileImageCustom.gameObject.SetActive(true);
+        }
+        if (profileImageSprite != null)
+            profileImageSprite.gameObject.SetActive(false);
+        
+        // Also update the legacy customImageDisplay slot if assigned
+        if (customImageDisplay != null)
+            customImageDisplay.sprite = sprite;
+    }
+    
+    /// <summary>
+    /// Show a preset avatar sprite: activates profileImageSprite, hides profileImageCustom.
+    /// </summary>
+    private void ShowSpriteImage(Sprite sprite)
+    {
+        if (profileImageSprite != null)
+        {
+            profileImageSprite.sprite = sprite;
+            profileImageSprite.rectTransform.localScale = Vector3.one; // ensure no leftover zoom
+            profileImageSprite.gameObject.SetActive(true);
+        }
+        if (profileImageCustom != null)
+            profileImageCustom.gameObject.SetActive(false);
+    }
+    
+    /// <summary>
     /// Load image from URL (for Facebook profile pictures, etc.)
     /// </summary>
     private System.Collections.IEnumerator LoadImageFromUrl(string url)
     {
-        if (profileImage == null || string.IsNullOrEmpty(url))
+        if (string.IsNullOrEmpty(url))
         {
             yield break;
         }
@@ -731,12 +764,13 @@ public class PlayerProfileUI : MonoBehaviour
             if (request.result == UnityEngine.Networking.UnityWebRequest.Result.Success)
             {
                 Texture2D texture = UnityEngine.Networking.DownloadHandlerTexture.GetContent(request);
-                if (texture != null && profileImage != null)
+                if (texture != null)
                 {
                     Sprite sprite = Sprite.Create(texture, 
                         new Rect(0, 0, texture.width, texture.height), 
                         new Vector2(0.5f, 0.5f));
-                    profileImage.sprite = sprite;
+                    // URL images (Facebook/Google) — show in sprite slot, no zoom
+                    ShowSpriteImage(sprite);
                     Debug.Log($"[PlayerProfileUI] ✓ Profile image loaded from URL successfully! Size: {texture.width}x{texture.height}");
                 }
                 else
@@ -747,24 +781,16 @@ public class PlayerProfileUI : MonoBehaviour
             else
             {
                 Debug.LogError($"[PlayerProfileUI] Failed to load profile image from URL: {url}. Error: {request.error}");
-                // Fallback to avatar sprite if URL loading fails
                 LoadAvatarSpriteFromIndex(PlayFabManager.Instance?.currentPlayerData?.selectedAvatarIndex ?? 0);
             }
         }
     }
     
     /// <summary>
-    /// Load avatar sprite from selectedAvatarIndex (fallback when no imageUrl)
-    /// Similar to MainMenuAvatarDisplay.LoadSelectedAvatar()
+    /// Load avatar sprite from selectedAvatarIndex — shows in the sprite slot (no zoom).
     /// </summary>
     private void LoadAvatarSpriteFromIndex(int selectedIndex)
     {
-        if (profileImage == null)
-        {
-            Debug.LogWarning("[PlayerProfileUI] profileImage is not assigned! Cannot load avatar sprite.");
-            return;
-        }
-        
         // Validate index
         if (selectedIndex < 0 || selectedIndex >= 8)
         {
@@ -774,16 +800,15 @@ public class PlayerProfileUI : MonoBehaviour
         
         Debug.Log($"[PlayerProfileUI] Loading avatar sprite from index: {selectedIndex}");
         
-        // Try to get sprite from AvatarSelector first (it has the sprites)
         AvatarSelector selector = FindObjectOfType<AvatarSelector>();
         if (selector != null)
         {
             Sprite avatarSprite = selector.GetAvatarSpriteByIndex(selectedIndex);
             if (avatarSprite != null)
             {
-                profileImage.sprite = avatarSprite;
+                ShowSpriteImage(avatarSprite);
                 Debug.Log($"[PlayerProfileUI] ✓ Avatar sprite displayed from AvatarSelector: Index {selectedIndex}");
-                return; // Success!
+                return;
             }
             else
             {
@@ -795,9 +820,7 @@ public class PlayerProfileUI : MonoBehaviour
             Debug.LogWarning("[PlayerProfileUI] AvatarSelector not found in scene!");
         }
         
-        // If we couldn't load from AvatarSelector, the sprite will remain as default
-        // (which might be set in the Inspector)
-        Debug.LogWarning($"[PlayerProfileUI] Could not load avatar sprite at index {selectedIndex}. Profile image will remain default.");
+        Debug.LogWarning($"[PlayerProfileUI] Could not load avatar sprite at index {selectedIndex}.");
     }
     
     #region Public Helper Methods
@@ -1030,17 +1053,7 @@ public class PlayerProfileUI : MonoBehaviour
     private void OnSelectCustomImageClicked()
     {
         Debug.Log("[PlayerProfileUI] Select custom image button clicked");
-        
-        // Use cross-platform image picker with crop functionality
-        if (imageCropperUI != null)
-        {
-            ImagePickerHelper.PickImageWithCrop(OnImageSelected, imageCropperUI, maxImageSize);
-        }
-        else
-        {
-            Debug.LogWarning("[PlayerProfileUI] ImageCropperUI not assigned! Using standard picker without crop.");
-            ImagePickerHelper.PickImage(OnImageSelected, maxImageSize);
-        }
+        ImagePickerHelper.PickImage(OnImageSelected, maxImageSize);
     }
     
     /// <summary>
@@ -1056,22 +1069,11 @@ public class PlayerProfileUI : MonoBehaviour
         
         selectedCustomTexture = texture;
         
-        // Convert to sprite and display
         Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
         
-        // Update custom image display if assigned
-        if (customImageDisplay != null)
-        {
-            customImageDisplay.sprite = sprite;
-            Debug.Log("[PlayerProfileUI] Custom image displayed in customImageDisplay");
-        }
-        
-        // Update profile image display
-        if (profileImage != null)
-        {
-            profileImage.sprite = sprite;
-            Debug.Log("[PlayerProfileUI] Custom image updated in profileImage");
-        }
+        // Show in the custom image slot (zoomed) — hides the sprite slot
+        ShowCustomImage(sprite);
+        Debug.Log("[PlayerProfileUI] Custom image displayed in custom slot");
         
         // Update all MainMenuAvatarDisplay scripts
         MainMenuAvatarDisplay[] displays = FindObjectsOfType<MainMenuAvatarDisplay>(true);
@@ -1171,19 +1173,8 @@ public class PlayerProfileUI : MonoBehaviour
                     // Convert to sprite
                     Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
                     
-                    // Update custom image display (if separate display exists)
-                    if (customImageDisplay != null)
-                    {
-                        customImageDisplay.sprite = sprite;
-                        Debug.Log("[PlayerProfileUI] Custom image loaded in customImageDisplay");
-                    }
-                    
-                    // Update profile image display
-                    if (profileImage != null)
-                    {
-                        profileImage.sprite = sprite;
-                        Debug.Log("[PlayerProfileUI] ✓ Custom image loaded in profileImage");
-                    }
+                    // Show in the custom image slot (hides the sprite slot)
+                    ShowCustomImage(sprite);
                     
                     // Update all MainMenuAvatarDisplay scripts
                     MainMenuAvatarDisplay[] displays = FindObjectsOfType<MainMenuAvatarDisplay>(true);

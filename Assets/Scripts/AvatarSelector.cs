@@ -41,9 +41,6 @@ public class AvatarSelector : MonoBehaviour
     [Tooltip("Image component to display selected custom image")]
     [SerializeField] private Image customImageDisplay;
     
-    [Tooltip("Image cropper UI component for cropping uploaded images")]
-    [SerializeField] private ImageCropperUI imageCropperUI;
-    
     [Header("Watch Video UI")]
     [Tooltip("Text component for watch video button")]
     [SerializeField] private TMP_Text watchVideoText;
@@ -755,17 +752,7 @@ public class AvatarSelector : MonoBehaviour
     private void OnSelectCustomImageClicked()
     {
         Debug.Log("[AvatarSelector] Select custom image button clicked");
-        
-        // Use cross-platform image picker with crop functionality
-        if (imageCropperUI != null)
-        {
-            ImagePickerHelper.PickImageWithCrop(OnImageSelected, imageCropperUI, maxImageSize);
-        }
-        else
-        {
-            Debug.LogWarning("[AvatarSelector] ImageCropperUI not assigned! Using standard picker without crop.");
-            ImagePickerHelper.PickImage(OnImageSelected, maxImageSize);
-        }
+        ImagePickerHelper.PickImage(OnImageSelected, maxImageSize);
     }
     
     /// <summary>

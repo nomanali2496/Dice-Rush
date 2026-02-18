@@ -8,8 +8,11 @@ using UnityEngine.UI;
 public class MainMenuAvatarDisplay : MonoBehaviour
 {
     [Header("Avatar Display")]
-    [Tooltip("Image component to show the selected avatar")]
-    [SerializeField] private Image avatarImage;
+    [Tooltip("Image shown when a PRESET avatar is selected (from the avatar buttons)")]
+    [SerializeField] private Image avatarImageSprite;
+    
+    [Tooltip("Image shown when a CUSTOM photo is picked from the gallery — size this larger than the mask in the Inspector for the zoom effect")]
+    [SerializeField] private Image avatarImageCustom;
     
     [Header("Avatar Sprites")]
     [Tooltip("Array of avatar sprites (must match AvatarSelector order)")]
@@ -21,10 +24,18 @@ public class MainMenuAvatarDisplay : MonoBehaviour
     
     private void Start()
     {
-        // If avatarImage not assigned, try to find it on this GameObject
-        if (avatarImage == null)
+        // Hide the custom image slot by default — sprite slot is shown until a custom image is loaded
+        if (avatarImageCustom != null)
+            avatarImageCustom.gameObject.SetActive(false);
+        if (avatarImageSprite != null)
+            avatarImageSprite.gameObject.SetActive(true);
+        
+        // If neither slot is assigned, try to find Image on this GameObject as fallback
+        if (avatarImageSprite == null && avatarImageCustom == null)
         {
-            avatarImage = GetComponent<Image>();
+            avatarImageSprite = GetComponent<Image>();
+            if (avatarImageSprite != null)
+                Debug.Log("[MainMenuAvatarDisplay] Auto-assigned avatarImageSprite from GameObject");
         }
         
         // Subscribe to PlayFab events to update when data loads
@@ -65,22 +76,20 @@ public class MainMenuAvatarDisplay : MonoBehaviour
     
     private void OnPlayerDataLoaded(PlayerData data)
     {
-        // Update avatar when PlayFab data is loaded
         if (data != null)
         {
             Debug.Log("[MainMenuAvatarDisplay] PlayFab data loaded, updating avatar...");
             
-            // If we're currently loading a URL image, don't interrupt it
             if (isLoadingUrlImage)
             {
-                Debug.Log("[MainMenuAvatarDisplay] URL image is currently loading, skipping reload to avoid interruption");
+                Debug.Log("[MainMenuAvatarDisplay] URL image is currently loading, skipping reload");
                 return;
             }
             
-            // If we already have the same URL image displayed, don't reload
+            // If same URL is already displayed in the sprite slot, skip
             if (!string.IsNullOrEmpty(data.imageUrl) && 
                 (data.imageUrl.StartsWith("http://") || data.imageUrl.StartsWith("https://")) &&
-                data.imageUrl == currentImageUrl && avatarImage.sprite != null)
+                data.imageUrl == currentImageUrl && avatarImageSprite != null && avatarImageSprite.sprite != null)
             {
                 Debug.Log("[MainMenuAvatarDisplay] Same URL image already displayed, skipping reload");
                 return;
@@ -96,13 +105,7 @@ public class MainMenuAvatarDisplay : MonoBehaviour
     /// </summary>
     public void LoadSelectedAvatar()
     {
-        if (avatarImage == null)
-        {
-            Debug.LogWarning("[MainMenuAvatarDisplay] Avatar Image not assigned!");
-            return;
-        }
-        
-        // First, check if there's a custom uploaded image or URL image
+        // Check for custom uploaded or URL image first
         if (PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
         {
             if (PlayFabManager.Instance.currentPlayerData != null)
@@ -111,24 +114,20 @@ public class MainMenuAvatarDisplay : MonoBehaviour
                 
                 if (!string.IsNullOrEmpty(imageUrl))
                 {
-                    // Check if it's a custom base64 image
+                    // Base64 custom image — show in custom slot
                     if (imageUrl.StartsWith("data:image"))
                     {
                         try
                         {
-                            // Extract base64 part
                             string base64Data = imageUrl.Substring(imageUrl.IndexOf(",") + 1);
                             byte[] imageBytes = System.Convert.FromBase64String(base64Data);
-                            
-                            // Create texture
                             Texture2D texture = new Texture2D(2, 2);
                             if (texture.LoadImage(imageBytes))
                             {
-                                // Convert to sprite
                                 Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
-                                avatarImage.sprite = sprite;
-                                Debug.Log("[MainMenuAvatarDisplay] ✓ Custom uploaded image displayed");
-                                return; // Success!
+                                ShowCustomAvatar(sprite);
+                                Debug.Log("[MainMenuAvatarDisplay] ✓ Custom uploaded image displayed in custom slot");
+                                return;
                             }
                         }
                         catch (System.Exception e)
@@ -136,30 +135,28 @@ public class MainMenuAvatarDisplay : MonoBehaviour
                             Debug.LogWarning($"[MainMenuAvatarDisplay] Failed to load custom image: {e.Message}");
                         }
                     }
-                    // Check if it's a URL (Facebook profile picture, etc.)
+                    // URL image (Facebook/Google) — show in sprite slot, no zoom
                     else if (imageUrl.StartsWith("http://") || imageUrl.StartsWith("https://"))
                     {
-                        // Only load if it's a different URL
                         if (imageUrl != currentImageUrl)
                         {
                             Debug.Log($"[MainMenuAvatarDisplay] Loading image from URL: {imageUrl}");
-                            currentImageUrl = imageUrl; // Store the URL we're loading
-                            isLoadingUrlImage = true; // Mark that we're loading a URL image
+                            currentImageUrl = imageUrl;
+                            isLoadingUrlImage = true;
                             StartCoroutine(LoadImageFromUrl(imageUrl));
-                            return; // Don't load avatar sprite, wait for URL image
+                            return;
                         }
                         else
                         {
                             Debug.Log("[MainMenuAvatarDisplay] Same URL image already loaded, skipping");
-                            return; // Already have this image, don't reload
+                            return;
                         }
                     }
                 }
             }
         }
         
-        // If no custom image, load avatar sprite
-        // Get the selected index from PlayFab
+        // No custom image — load preset avatar sprite
         int selectedIndex = 0;
         bool hasValidIndex = false;
         
@@ -168,29 +165,26 @@ public class MainMenuAvatarDisplay : MonoBehaviour
             if (PlayFabManager.Instance.currentPlayerData != null)
             {
                 selectedIndex = PlayFabManager.Instance.currentPlayerData.selectedAvatarIndex;
-                // Check if this is a real saved value or just default 0
-                // If player has a name, data is likely loaded
                 if (!string.IsNullOrEmpty(PlayFabManager.Instance.currentPlayerData.playerName))
                 {
                     hasValidIndex = true;
-                    Debug.Log($"[MainMenuAvatarDisplay] ✓ Got avatar index from PlayFab: {selectedIndex} (player: {PlayFabManager.Instance.currentPlayerData.playerName})");
+                    Debug.Log($"[MainMenuAvatarDisplay] ✓ Got avatar index from PlayFab: {selectedIndex}");
                 }
                 else
                 {
-                    Debug.LogWarning("[MainMenuAvatarDisplay] PlayerData exists but playerName is empty - data may not be fully loaded yet");
+                    Debug.LogWarning("[MainMenuAvatarDisplay] PlayerData exists but playerName is empty");
                 }
             }
             else
             {
-                Debug.LogWarning("[MainMenuAvatarDisplay] PlayerData is null! PlayFab data may not be loaded yet.");
+                Debug.LogWarning("[MainMenuAvatarDisplay] PlayerData is null!");
             }
         }
         else
         {
-            Debug.LogWarning("[MainMenuAvatarDisplay] PlayFabManager not available or player not logged in!");
+            Debug.LogWarning("[MainMenuAvatarDisplay] PlayFabManager not available or not logged in!");
         }
         
-        // If we don't have a valid index from PlayFab, try AvatarSelector
         AvatarSelector selector = FindObjectOfType<AvatarSelector>();
         if (!hasValidIndex && selector != null)
         {
@@ -200,28 +194,26 @@ public class MainMenuAvatarDisplay : MonoBehaviour
         }
         else if (!hasValidIndex)
         {
-            Debug.LogWarning("[MainMenuAvatarDisplay] AvatarSelector not found, will use default index 0");
+            Debug.LogWarning("[MainMenuAvatarDisplay] AvatarSelector not found, using default index 0");
         }
         
-        // Validate index
         if (selectedIndex < 0 || selectedIndex >= 8)
         {
             selectedIndex = 0;
             Debug.LogWarning($"[MainMenuAvatarDisplay] Invalid index, using default 0");
         }
         
-        Debug.Log($"[MainMenuAvatarDisplay] Final selected index: {selectedIndex}, hasValidIndex: {hasValidIndex}");
+        Debug.Log($"[MainMenuAvatarDisplay] Final selected index: {selectedIndex}");
         
-        // Try to get sprite from AvatarSelector first (it has the sprites)
+        // Try AvatarSelector sprites first
         if (selector != null)
         {
-            // Get sprite by index directly (not by selected index)
             Sprite avatarSprite = selector.GetAvatarSpriteByIndex(selectedIndex);
             if (avatarSprite != null)
             {
-                avatarImage.sprite = avatarSprite;
+                ShowSpriteAvatar(avatarSprite);
                 Debug.Log($"[MainMenuAvatarDisplay] ✓ Avatar displayed from AvatarSelector: Index {selectedIndex}");
-                return; // Success!
+                return;
             }
             else
             {
@@ -233,15 +225,15 @@ public class MainMenuAvatarDisplay : MonoBehaviour
             Debug.LogWarning("[MainMenuAvatarDisplay] AvatarSelector not found in scene!");
         }
         
-        // Fallback: Use local avatar sprites array
+        // Fallback: local sprites array
         if (avatarSprites != null && selectedIndex < avatarSprites.Length && avatarSprites[selectedIndex] != null)
         {
-            avatarImage.sprite = avatarSprites[selectedIndex];
+            ShowSpriteAvatar(avatarSprites[selectedIndex]);
             Debug.Log($"[MainMenuAvatarDisplay] ✓ Avatar displayed from local sprites: Index {selectedIndex}");
         }
         else
         {
-            Debug.LogError($"[MainMenuAvatarDisplay] Avatar sprite at index {selectedIndex} is null or not assigned! Make sure avatar sprites are assigned in Inspector.");
+            Debug.LogError($"[MainMenuAvatarDisplay] Avatar sprite at index {selectedIndex} is null or not assigned!");
         }
     }
     
@@ -259,23 +251,16 @@ public class MainMenuAvatarDisplay : MonoBehaviour
     /// </summary>
     public void UpdateFromAvatarSelector(int avatarIndex, Sprite[] sprites)
     {
-        if (avatarImage == null)
-        {
-            Debug.LogWarning("[MainMenuAvatarDisplay] Avatar Image not assigned!");
-            return;
-        }
-        
-        // Validate index
         if (avatarIndex < 0 || avatarIndex >= sprites.Length)
         {
             Debug.LogWarning($"[MainMenuAvatarDisplay] Invalid avatar index: {avatarIndex}");
             return;
         }
         
-        // Update the display immediately
         if (sprites[avatarIndex] != null)
         {
-            avatarImage.sprite = sprites[avatarIndex];
+            // Preset sprite selected from avatar buttons
+            ShowSpriteAvatar(sprites[avatarIndex]);
             Debug.Log($"[MainMenuAvatarDisplay] ✓ Avatar updated immediately to index {avatarIndex}");
         }
         else
@@ -306,26 +291,57 @@ public class MainMenuAvatarDisplay : MonoBehaviour
     }
     
     /// <summary>
+    /// Show a custom gallery-picked image: activates avatarImageCustom, hides avatarImageSprite.
+    /// </summary>
+    private void ShowCustomAvatar(Sprite sprite)
+    {
+        if (avatarImageCustom != null)
+        {
+            avatarImageCustom.sprite = sprite;
+            avatarImageCustom.rectTransform.localScale = Vector3.one * 2f; // 2x zoom to fill the mask
+            avatarImageCustom.gameObject.SetActive(true);
+        }
+        if (avatarImageSprite != null)
+            avatarImageSprite.gameObject.SetActive(false);
+    }
+    
+    /// <summary>
+    /// Show a preset avatar sprite: activates avatarImageSprite, hides avatarImageCustom.
+    /// </summary>
+    private void ShowSpriteAvatar(Sprite sprite)
+    {
+        if (avatarImageSprite != null)
+        {
+            avatarImageSprite.sprite = sprite;
+            avatarImageSprite.rectTransform.localScale = Vector3.one; // ensure no leftover zoom
+            avatarImageSprite.gameObject.SetActive(true);
+        }
+        if (avatarImageCustom != null)
+            avatarImageCustom.gameObject.SetActive(false);
+    }
+    
+    /// <summary>
     /// Gets the current avatar sprite being displayed
     /// </summary>
     public Sprite GetCurrentAvatarSprite()
     {
-        if (avatarImage != null)
-        {
-            return avatarImage.sprite;
-        }
+        // Return whichever slot is active
+        if (avatarImageCustom != null && avatarImageCustom.gameObject.activeSelf)
+            return avatarImageCustom.sprite;
+        if (avatarImageSprite != null)
+            return avatarImageSprite.sprite;
         return null;
     }
     
     /// <summary>
-    /// Update with custom uploaded image
+    /// Update with custom uploaded image — shows in the custom slot
     /// </summary>
     public void UpdateCustomImage(Sprite customSprite)
     {
-        if (avatarImage != null && customSprite != null)
+        if (customSprite != null)
         {
-            avatarImage.sprite = customSprite;
-            Debug.Log("[MainMenuAvatarDisplay] Custom image updated");
+            ShowCustomAvatar(customSprite);
+            Debug.Log("[MainMenuAvatarDisplay] Custom image updated in custom slot");
         }
     }
     
@@ -334,7 +350,7 @@ public class MainMenuAvatarDisplay : MonoBehaviour
     /// </summary>
     private System.Collections.IEnumerator LoadImageFromUrl(string url)
     {
-        if (avatarImage == null || string.IsNullOrEmpty(url))
+        if (string.IsNullOrEmpty(url))
         {
             yield break;
         }
@@ -350,26 +366,23 @@ public class MainMenuAvatarDisplay : MonoBehaviour
                 Texture2D texture = UnityEngine.Networking.DownloadHandlerTexture.GetContent(www);
                 if (texture != null)
                 {
-                    // Convert to sprite
+                    // URL image (Facebook/Google) — show in sprite slot, no zoom
                     Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
-                    avatarImage.sprite = sprite;
+                    ShowSpriteAvatar(sprite);
                     Debug.Log($"[MainMenuAvatarDisplay] ✓ Image loaded from URL successfully! Size: {texture.width}x{texture.height}");
-                    isLoadingUrlImage = false; // Mark loading as complete
+                    isLoadingUrlImage = false;
                 }
                 else
                 {
                     Debug.LogWarning("[MainMenuAvatarDisplay] Failed to create texture from downloaded image");
-                    isLoadingUrlImage = false; // Mark loading as complete (even though it failed)
-                    // Fall back to avatar sprite
+                    isLoadingUrlImage = false;
                     LoadAvatarSpriteFallback();
                 }
             }
             else
             {
                 Debug.LogWarning($"[MainMenuAvatarDisplay] Failed to load image from URL: {url}. Error: {www.error}");
-                isLoadingUrlImage = false; // Mark loading as complete (even though it failed)
-                // Fall back to avatar sprite by calling LoadSelectedAvatar again (but skip URL check)
-                // This will load the default avatar sprite
+                isLoadingUrlImage = false;
                 LoadAvatarSpriteFallback();
             }
         }
@@ -380,7 +393,6 @@ public class MainMenuAvatarDisplay : MonoBehaviour
     /// </summary>
     private void LoadAvatarSpriteFallback()
     {
-        // Get the selected index from PlayFab
         int selectedIndex = 0;
         bool hasValidIndex = false;
         
@@ -390,13 +402,10 @@ public class MainMenuAvatarDisplay : MonoBehaviour
             {
                 selectedIndex = PlayFabManager.Instance.currentPlayerData.selectedAvatarIndex;
                 if (!string.IsNullOrEmpty(PlayFabManager.Instance.currentPlayerData.playerName))
-                {
                     hasValidIndex = true;
-                }
             }
         }
         
-        // If we don't have a valid index from PlayFab, try AvatarSelector
         AvatarSelector selector = FindObjectOfType<AvatarSelector>();
         if (!hasValidIndex && selector != null)
         {
@@ -404,28 +413,23 @@ public class MainMenuAvatarDisplay : MonoBehaviour
             hasValidIndex = true;
         }
         
-        // Validate index
         if (selectedIndex < 0 || selectedIndex >= 8)
-        {
             selectedIndex = 0;
-        }
         
-        // Try to get sprite from AvatarSelector first
         if (selector != null)
         {
             Sprite avatarSprite = selector.GetAvatarSpriteByIndex(selectedIndex);
             if (avatarSprite != null)
             {
-                avatarImage.sprite = avatarSprite;
+                ShowSpriteAvatar(avatarSprite);
                 Debug.Log($"[MainMenuAvatarDisplay] ✓ Avatar sprite displayed (fallback): Index {selectedIndex}");
                 return;
             }
         }
         
-        // Fallback: Use local avatar sprites array
         if (avatarSprites != null && selectedIndex < avatarSprites.Length && avatarSprites[selectedIndex] != null)
         {
-            avatarImage.sprite = avatarSprites[selectedIndex];
+            ShowSpriteAvatar(avatarSprites[selectedIndex]);
             Debug.Log($"[MainMenuAvatarDisplay] ✓ Avatar sprite displayed from local array (fallback): Index {selectedIndex}");
         }
     }
