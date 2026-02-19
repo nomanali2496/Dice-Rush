@@ -8282,7 +8282,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &314033591
 RectTransform:
   m_ObjectHideFlags: 0
@@ -44824,7 +44824,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Your Email
+  m_text: Email
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 736ddbd429a73074bbb4e10d6ef26ab9, type: 2}
   m_sharedMaterial: {fileID: 576292074335676487, guid: 736ddbd429a73074bbb4e10d6ef26ab9, type: 2}
