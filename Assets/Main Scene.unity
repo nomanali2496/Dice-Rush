@@ -7565,7 +7565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -25193,9 +25193,9 @@ RectTransform:
   - {fileID: 733629027}
   - {fileID: 263621785}
   - {fileID: 1982708426}
-  - {fileID: 1705734196}
   - {fileID: 1422069518}
   - {fileID: 1613593917}
+  - {fileID: 1705734196}
   - {fileID: 1962000524}
   - {fileID: 1030461124}
   m_Father: {fileID: 1237862631}
@@ -35379,7 +35379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
