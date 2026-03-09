@@ -303,6 +303,8 @@ public class MainMenuAvatarDisplay : MonoBehaviour
         }
         if (avatarImageSprite != null)
             avatarImageSprite.gameObject.SetActive(false);
+            
+        NotifyLeaderboard();
     }
     
     /// <summary>
@@ -318,6 +320,8 @@ public class MainMenuAvatarDisplay : MonoBehaviour
         }
         if (avatarImageCustom != null)
             avatarImageCustom.gameObject.SetActive(false);
+            
+        NotifyLeaderboard();
     }
     
     /// <summary>
@@ -431,6 +435,22 @@ public class MainMenuAvatarDisplay : MonoBehaviour
         {
             ShowSpriteAvatar(avatarSprites[selectedIndex]);
             Debug.Log($"[MainMenuAvatarDisplay] ✓ Avatar sprite displayed from local array (fallback): Index {selectedIndex}");
+        }
+    }
+    
+    /// <summary>
+    /// Notifies the leaderboard that the avatar has changed
+    /// </summary>
+    private void NotifyLeaderboard()
+    {
+        LeaderboardManager[] leaderboardManagers = FindObjectsOfType<LeaderboardManager>(true);
+        foreach (LeaderboardManager lbm in leaderboardManagers)
+        {
+            if (lbm != null)
+            {
+                lbm.SyncAvatarFromMainMenu();
+                Debug.Log("[MainMenuAvatarDisplay] Pushed avatar update to LeaderboardManager");
+            }
         }
     }
 }

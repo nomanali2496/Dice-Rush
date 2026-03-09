@@ -262,7 +262,20 @@ public class AvatarSelector : MonoBehaviour
                 if (profileUI != null)
                 {
                     profileUI.UpdateFromAvatarSelector(currentSelectedIndex, avatarSprites);
-                    Debug.Log($"[AvatarSelector] Updated PlayerProfileUI with index {currentSelectedIndex}");
+                }
+            }
+        }
+        
+        // Also update LeaderboardManager if it's in the scene
+        LeaderboardManager[] leaderboardManagers = FindObjectsOfType<LeaderboardManager>(true);
+        if (leaderboardManagers != null && leaderboardManagers.Length > 0)
+        {
+            foreach (LeaderboardManager lbm in leaderboardManagers)
+            {
+                if (lbm != null)
+                {
+                    lbm.SyncAvatarFromMainMenu();
+                    Debug.Log("[AvatarSelector] Updated LeaderboardManager avatar/name sync");
                 }
             }
         }
@@ -814,6 +827,17 @@ public class AvatarSelector : MonoBehaviour
                 Debug.Log("[AvatarSelector] Custom image pushed to PlayerProfileUI");
             }
         }
+
+        // Update LeaderboardManager if open
+        LeaderboardManager[] leaderboardManagers = FindObjectsOfType<LeaderboardManager>(true);
+        foreach (LeaderboardManager lbm in leaderboardManagers)
+        {
+            if (lbm != null)
+            {
+                lbm.SyncAvatarFromMainMenu();
+                Debug.Log("[AvatarSelector] Custom gallery image pushed to LeaderboardManager");
+            }
+        }
         
         // Convert to base64 and save to PlayFab
         SaveCustomImageToPlayFab(texture);
@@ -932,6 +956,16 @@ public class AvatarSelector : MonoBehaviour
                         if (display != null)
                         {
                             display.UpdateCustomImage(sprite);
+                        }
+                    }
+
+                    // Update LeaderboardManager if open
+                    LeaderboardManager[] leaderboardManagers = FindObjectsOfType<LeaderboardManager>(true);
+                    foreach (LeaderboardManager lbm in leaderboardManagers)
+                    {
+                        if (lbm != null)
+                        {
+                            lbm.SyncAvatarFromMainMenu();
                         }
                     }
                     

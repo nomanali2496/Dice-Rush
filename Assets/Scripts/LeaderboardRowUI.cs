@@ -32,17 +32,17 @@ public class LeaderboardRowUI : EnhancedScrollerCellView
 {
     [Header("Background Images")]
     [SerializeField] private Image rowBackground; // Main row background image
-    [SerializeField] private Sprite firstPlaceBackground; // Background for 1st place
-    [SerializeField] private Sprite secondPlaceBackground; // Background for 2nd place
-    [SerializeField] private Sprite thirdPlaceBackground; // Background for 3rd place
-    [SerializeField] private Sprite normalRowBackground; // Background for 4th place and onwards
+    [SerializeField] public Sprite firstPlaceBackground; // Background for 1st place
+    [SerializeField] public Sprite secondPlaceBackground; // Background for 2nd place
+    [SerializeField] public Sprite thirdPlaceBackground; // Background for 3rd place
+    [SerializeField] public Sprite normalRowBackground; // Background for 4th place and onwards
     
     [Header("Profile Background Images")]
     [SerializeField] private Image profileBackground; // Profile picture background/frame
-    [SerializeField] private Sprite firstPlaceProfileBackground; // Profile background for 1st place
-    [SerializeField] private Sprite secondPlaceProfileBackground; // Profile background for 2nd place
-    [SerializeField] private Sprite thirdPlaceProfileBackground; // Profile background for 3rd place
-    [SerializeField] private Sprite normalRowProfileBackground; // Profile background for normal rows
+    [SerializeField] public Sprite firstPlaceProfileBackground; // Profile background for 1st place
+    [SerializeField] public Sprite secondPlaceProfileBackground; // Profile background for 2nd place
+    [SerializeField] public Sprite thirdPlaceProfileBackground; // Profile background for 3rd place
+    [SerializeField] public Sprite normalRowProfileBackground; // Profile background for normal rows
     
     [Header("Avatar")]
     [SerializeField] private Image avatarImage; // Player avatar image
@@ -64,9 +64,9 @@ public class LeaderboardRowUI : EnhancedScrollerCellView
     [Header("Position Display")]
     [SerializeField] private Image badgeImage; // Badge image for positions 1, 2, 3
     [SerializeField] private TextMeshProUGUI positionText; // Position text for positions 4 and onwards
-    [SerializeField] private Sprite firstPlaceBadge; // Badge sprite for 1st place
-    [SerializeField] private Sprite secondPlaceBadge; // Badge sprite for 2nd place
-    [SerializeField] private Sprite thirdPlaceBadge; // Badge sprite for 3rd place
+    [SerializeField] public Sprite firstPlaceBadge; // Badge sprite for 1st place
+    [SerializeField] public Sprite secondPlaceBadge; // Badge sprite for 2nd place
+    [SerializeField] public Sprite thirdPlaceBadge; // Badge sprite for 3rd place
     
     [Header("Arrow Image")]
     [SerializeField] private GameObject arrowImage; // Arrow image (only active for 1st place)
