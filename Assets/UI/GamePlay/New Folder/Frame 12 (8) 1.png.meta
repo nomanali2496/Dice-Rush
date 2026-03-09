@@ -1,0 +1,3835 @@
+fileFormatVersion: 2
+guid: 03c60165d38e2db48b458e7f4ac1a97b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3889659599010112450
+    second: Frame 12 (8) 1_0
+  - first:
+      213: -7526388740246874220
+    second: Frame 12 (8) 1_1
+  - first:
+      213: -13129892877366377
+    second: Frame 12 (8) 1_2
+  - first:
+      213: -8078454546118841170
+    second: Frame 12 (8) 1_3
+  - first:
+      213: 7222180607362816288
+    second: Frame 12 (8) 1_4
+  - first:
+      213: 236584561354687359
+    second: Frame 12 (8) 1_5
+  - first:
+      213: -7378597881556125361
+    second: Frame 12 (8) 1_6
+  - first:
+      213: -8725723846313908379
+    second: Frame 12 (8) 1_7
+  - first:
+      213: 3185553551670584925
+    second: Frame 12 (8) 1_8
+  - first:
+      213: 4589073414075998633
+    second: Frame 12 (8) 1_9
+  - first:
+      213: 4987841278892005618
+    second: Frame 12 (8) 1_10
+  - first:
+      213: -5030694158899194870
+    second: Frame 12 (8) 1_11
+  - first:
+      213: -1116222705882805815
+    second: Frame 12 (8) 1_12
+  - first:
+      213: 7580530815450768510
+    second: Frame 12 (8) 1_13
+  - first:
+      213: -2771650977593095591
+    second: Frame 12 (8) 1_14
+  - first:
+      213: -811642627733318964
+    second: Frame 12 (8) 1_15
+  - first:
+      213: 7848187471080795292
+    second: Frame 12 (8) 1_16
+  - first:
+      213: -4885601024950505238
+    second: Frame 12 (8) 1_17
+  - first:
+      213: -4712276055602782441
+    second: Frame 12 (8) 1_18
+  - first:
+      213: 4932721010848551259
+    second: Frame 12 (8) 1_19
+  - first:
+      213: -4144578657318439538
+    second: Frame 12 (8) 1_20
+  - first:
+      213: -787541080412109145
+    second: Frame 12 (8) 1_21
+  - first:
+      213: -6684048748962629499
+    second: Frame 12 (8) 1_22
+  - first:
+      213: -6457155398553159221
+    second: Frame 12 (8) 1_23
+  - first:
+      213: -3399862577331567583
+    second: Frame 12 (8) 1_24
+  - first:
+      213: -832823666309044360
+    second: Frame 12 (8) 1_25
+  - first:
+      213: 212615913967079955
+    second: Frame 12 (8) 1_26
+  - first:
+      213: 7244082509784992606
+    second: Frame 12 (8) 1_27
+  - first:
+      213: -3135708724337069001
+    second: Frame 12 (8) 1_28
+  - first:
+      213: -8329546202157389147
+    second: Frame 12 (8) 1_29
+  - first:
+      213: -7273253192095508953
+    second: Frame 12 (8) 1_30
+  - first:
+      213: -5708046219220040084
+    second: Frame 12 (8) 1_31
+  - first:
+      213: 6783740707220613349
+    second: Frame 12 (8) 1_32
+  - first:
+      213: -127907875020101081
+    second: Frame 12 (8) 1_33
+  - first:
+      213: -4766110029082515933
+    second: Frame 12 (8) 1_34
+  - first:
+      213: 7909909653518669248
+    second: Frame 12 (8) 1_35
+  - first:
+      213: -7856145067106273054
+    second: Frame 12 (8) 1_36
+  - first:
+      213: 8301023123753292003
+    second: Frame 12 (8) 1_37
+  - first:
+      213: 274352083336355592
+    second: Frame 12 (8) 1_38
+  - first:
+      213: 2352369732606783751
+    second: Frame 12 (8) 1_39
+  - first:
+      213: 6952249742736682955
+    second: Frame 12 (8) 1_40
+  - first:
+      213: -2841127638370989497
+    second: Frame 12 (8) 1_41
+  - first:
+      213: 1718114286059227956
+    second: Frame 12 (8) 1_42
+  - first:
+      213: -7974529330461119917
+    second: Frame 12 (8) 1_43
+  - first:
+      213: -5474831437093639664
+    second: Frame 12 (8) 1_44
+  - first:
+      213: -6798185350450619739
+    second: Frame 12 (8) 1_45
+  - first:
+      213: -2123915632977663570
+    second: Frame 12 (8) 1_46
+  - first:
+      213: -9216680284317661206
+    second: Frame 12 (8) 1_47
+  - first:
+      213: -8277868235371177602
+    second: Frame 12 (8) 1_48
+  - first:
+      213: 6005487416771525171
+    second: Frame 12 (8) 1_49
+  - first:
+      213: -3484529301713995447
+    second: Frame 12 (8) 1_50
+  - first:
+      213: -2562165096168986565
+    second: Frame 12 (8) 1_51
+  - first:
+      213: 6832365988879591674
+    second: Frame 12 (8) 1_52
+  - first:
+      213: -8666604971815787691
+    second: Frame 12 (8) 1_53
+  - first:
+      213: -2874990310073539701
+    second: Frame 12 (8) 1_54
+  - first:
+      213: 7093468255166449623
+    second: Frame 12 (8) 1_55
+  - first:
+      213: 2150249661649241568
+    second: Frame 12 (8) 1_56
+  - first:
+      213: -8851200797807804680
+    second: Frame 12 (8) 1_57
+  - first:
+      213: 6150992558650839067
+    second: Frame 12 (8) 1_58
+  - first:
+      213: -6267880595692041964
+    second: Frame 12 (8) 1_59
+  - first:
+      213: -9022317126008907409
+    second: Frame 12 (8) 1_60
+  - first:
+      213: -1219757733249693461
+    second: Frame 12 (8) 1_61
+  - first:
+      213: 3177073985244619106
+    second: Frame 12 (8) 1_62
+  - first:
+      213: 4396951569498804479
+    second: Frame 12 (8) 1_63
+  - first:
+      213: -6744161882536243893
+    second: Frame 12 (8) 1_64
+  - first:
+      213: -1868401753669657544
+    second: Frame 12 (8) 1_65
+  - first:
+      213: -8659708575483361767
+    second: Frame 12 (8) 1_66
+  - first:
+      213: -8270235237813618316
+    second: Frame 12 (8) 1_67
+  - first:
+      213: 7484171829276009300
+    second: Frame 12 (8) 1_68
+  - first:
+      213: -7816097483859018795
+    second: Frame 12 (8) 1_69
+  - first:
+      213: -3814930364102888597
+    second: Frame 12 (8) 1_70
+  - first:
+      213: -9136339582920908989
+    second: Frame 12 (8) 1_71
+  - first:
+      213: 7108270027173970910
+    second: Frame 12 (8) 1_72
+  - first:
+      213: -5249198375235668252
+    second: Frame 12 (8) 1_73
+  - first:
+      213: 9217482338869499609
+    second: Frame 12 (8) 1_74
+  - first:
+      213: 4848087860306168282
+    second: Frame 12 (8) 1_75
+  - first:
+      213: 3116913208253771726
+    second: Frame 12 (8) 1_76
+  - first:
+      213: -6818467007901253648
+    second: Frame 12 (8) 1_77
+  - first:
+      213: -8834699325980642442
+    second: Frame 12 (8) 1_78
+  - first:
+      213: 4165254072601017668
+    second: Frame 12 (8) 1_79
+  - first:
+      213: 5040688315909916369
+    second: Frame 12 (8) 1_80
+  - first:
+      213: 7770393396445207246
+    second: Frame 12 (8) 1_81
+  - first:
+      213: 4875441636063862981
+    second: Frame 12 (8) 1_82
+  - first:
+      213: -3658714933587703091
+    second: Frame 12 (8) 1_83
+  - first:
+      213: 7714175719664097257
+    second: Frame 12 (8) 1_84
+  - first:
+      213: -2024385416736854560
+    second: Frame 12 (8) 1_85
+  - first:
+      213: 3454732099726222492
+    second: Frame 12 (8) 1_86
+  - first:
+      213: 7049610144206682507
+    second: Frame 12 (8) 1_87
+  - first:
+      213: 3262532814745191074
+    second: Frame 12 (8) 1_88
+  - first:
+      213: 6774837568805662968
+    second: Frame 12 (8) 1_89
+  - first:
+      213: -3485918566326994678
+    second: Frame 12 (8) 1_90
+  - first:
+      213: 7889555491129058021
+    second: Frame 12 (8) 1_91
+  - first:
+      213: 2271916152306839913
+    second: Frame 12 (8) 1_92
+  - first:
+      213: -981451728980031384
+    second: Frame 12 (8) 1_93
+  - first:
+      213: -5396961408138035500
+    second: Frame 12 (8) 1_94
+  - first:
+      213: 5500065733488174050
+    second: Frame 12 (8) 1_95
+  - first:
+      213: 1036244071242742923
+    second: Frame 12 (8) 1_96
+  - first:
+      213: 1049468812753234328
+    second: Frame 12 (8) 1_97
+  - first:
+      213: -6866691128125063691
+    second: Frame 12 (8) 1_98
+  - first:
+      213: 7496428868327422110
+    second: Frame 12 (8) 1_99
+  - first:
+      213: 6168635994512201990
+    second: Frame 12 (8) 1_100
+  - first:
+      213: -6677651290350674196
+    second: Frame 12 (8) 1_101
+  - first:
+      213: -3109033916884646083
+    second: Frame 12 (8) 1_102
+  - first:
+      213: -5555385541668534355
+    second: Frame 12 (8) 1_103
+  - first:
+      213: 2021030540567764749
+    second: Frame 12 (8) 1_104
+  - first:
+      213: -8057640336537448291
+    second: Frame 12 (8) 1_105
+  - first:
+      213: -2832166289477899402
+    second: Frame 12 (8) 1_106
+  - first:
+      213: 5801831502209199121
+    second: Frame 12 (8) 1_107
+  - first:
+      213: 1526233594975153481
+    second: Frame 12 (8) 1_108
+  - first:
+      213: 4178303942885570362
+    second: Frame 12 (8) 1_109
+  - first:
+      213: -8355038188574335050
+    second: Frame 12 (8) 1_110
+  - first:
+      213: -1423022799788346116
+    second: Frame 12 (8) 1_111
+  - first:
+      213: -8198546477935247030
+    second: Frame 12 (8) 1_112
+  - first:
+      213: -6541325551166056419
+    second: Frame 12 (8) 1_113
+  - first:
+      213: 4696039767269316997
+    second: Frame 12 (8) 1_114
+  - first:
+      213: -614228736644795784
+    second: Frame 12 (8) 1_115
+  - first:
+      213: 6808667087234171975
+    second: Frame 12 (8) 1_116
+  - first:
+      213: 1620411950704422852
+    second: Frame 12 (8) 1_117
+  - first:
+      213: -7248203699750945445
+    second: Frame 12 (8) 1_118
+  - first:
+      213: -7231839956461029080
+    second: Frame 12 (8) 1_119
+  - first:
+      213: 2177989531969292181
+    second: Frame 12 (8) 1_120
+  - first:
+      213: -5978481721048388107
+    second: Frame 12 (8) 1_121
+  - first:
+      213: -5124414753845420241
+    second: Frame 12 (8) 1_122
+  - first:
+      213: 6122942295803499932
+    second: Frame 12 (8) 1_123
+  - first:
+      213: 4037223227619051640
+    second: Frame 12 (8) 1_124
+  - first:
+      213: 1110369916999018195
+    second: Frame 12 (8) 1_125
+  - first:
+      213: -1282055567929417714
+    second: Frame 12 (8) 1_126
+  - first:
+      213: 4367727718164131701
+    second: Frame 12 (8) 1_127
+  - first:
+      213: 5667149952456752579
+    second: Frame 12 (8) 1_128
+  - first:
+      213: -7393624466271054729
+    second: Frame 12 (8) 1_129
+  - first:
+      213: 2223191766237921040
+    second: Frame 12 (8) 1_130
+  - first:
+      213: -7088928619048942051
+    second: Frame 12 (8) 1_131
+  - first:
+      213: 8548418593130560963
+    second: Frame 12 (8) 1_132
+  - first:
+      213: -5737546146825817967
+    second: Frame 12 (8) 1_133
+  - first:
+      213: -1559370279946682861
+    second: Frame 12 (8) 1_134
+  - first:
+      213: -6530018218566810391
+    second: Frame 12 (8) 1_135
+  - first:
+      213: -2786776314861687481
+    second: Frame 12 (8) 1_136
+  - first:
+      213: 4241314763622289066
+    second: Frame 12 (8) 1_137
+  - first:
+      213: -1592021727918986252
+    second: Frame 12 (8) 1_138
+  - first:
+      213: -6483373793924263676
+    second: Frame 12 (8) 1_139
+  - first:
+      213: 15278414388790563
+    second: Frame 12 (8) 1_140
+  - first:
+      213: 4309763614782443459
+    second: Frame 12 (8) 1_141
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4287
+        width: 4320
+        height: 3393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3c50d7f337250ac0800000000000000
+      internalID: -3889659599010112450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_1
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 4283
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 497d5183155ec8790800000000000000
+      internalID: -7526388740246874220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_2
+      rect:
+        serializedVersion: 2
+        x: 1635
+        y: 4283
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79b0b179e6a51dff0800000000000000
+      internalID: -13129892877366377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_3
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 4283
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eac627c446093ef80800000000000000
+      internalID: -8078454546118841170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_4
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 4283
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02953956ff65a3460800000000000000
+      internalID: 7222180607362816288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_5
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 4279
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7343e2b764884300800000000000000
+      internalID: 236584561354687359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_6
+      rect:
+        serializedVersion: 2
+        x: 1743
+        y: 4279
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f49b569f154f99990800000000000000
+      internalID: -7378597881556125361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_7
+      rect:
+        serializedVersion: 2
+        x: 1763
+        y: 4286
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 567ed44846008e680800000000000000
+      internalID: -8725723846313908379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_8
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 4283
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d562f44d31c553c20800000000000000
+      internalID: 3185553551670584925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_9
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 4279
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a16036c4f9afaf30800000000000000
+      internalID: 4589073414075998633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_10
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 4279
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f85368673f583540800000000000000
+      internalID: 4987841278892005618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_11
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 4287
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a045e25f0526f2ab0800000000000000
+      internalID: -5030694158899194870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_12
+      rect:
+        serializedVersion: 2
+        x: 1875
+        y: 4283
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c941adec516280f0800000000000000
+      internalID: -1116222705882805815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_13
+      rect:
+        serializedVersion: 2
+        x: 1898
+        y: 4283
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7468dffc94733960800000000000000
+      internalID: 7580530815450768510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_14
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 4275
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95a0337ee1e1989d0800000000000000
+      internalID: -2771650977593095591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_15
+      rect:
+        serializedVersion: 2
+        x: 1939
+        y: 4283
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc2146194577cb4f0800000000000000
+      internalID: -811642627733318964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_16
+      rect:
+        serializedVersion: 2
+        x: 1979
+        y: 4275
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9c21786cec5aec60800000000000000
+      internalID: 7848187471080795292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_17
+      rect:
+        serializedVersion: 2
+        x: 1983
+        y: 4275
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae07a89b0cbd23cb0800000000000000
+      internalID: -4885601024950505238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_18
+      rect:
+        serializedVersion: 2
+        x: 2031
+        y: 4287
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71f9736e4e1aa9eb0800000000000000
+      internalID: -4712276055602782441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_19
+      rect:
+        serializedVersion: 2
+        x: 2082
+        y: 4280
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b51dbbbef9b847440800000000000000
+      internalID: 4932721010848551259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_20
+      rect:
+        serializedVersion: 2
+        x: 2103
+        y: 4283
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e857eda8baf7b76c0800000000000000
+      internalID: -4144578657318439538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_21
+      rect:
+        serializedVersion: 2
+        x: 2123
+        y: 4283
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a642085f871215f0800000000000000
+      internalID: -787541080412109145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_22
+      rect:
+        serializedVersion: 2
+        x: 2187
+        y: 4279
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58830b0931d7d33a0800000000000000
+      internalID: -6684048748962629499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_23
+      rect:
+        serializedVersion: 2
+        x: 2254
+        y: 4271
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc93eb160639366a0800000000000000
+      internalID: -6457155398553159221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_24
+      rect:
+        serializedVersion: 2
+        x: 2263
+        y: 4286
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1240209cff241d0d0800000000000000
+      internalID: -3399862577331567583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_25
+      rect:
+        serializedVersion: 2
+        x: 2275
+        y: 4275
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8776c19b9473174f0800000000000000
+      internalID: -832823666309044360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_26
+      rect:
+        serializedVersion: 2
+        x: 2295
+        y: 4275
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3125a991c0d53f200800000000000000
+      internalID: 212615913967079955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_27
+      rect:
+        serializedVersion: 2
+        x: 2319
+        y: 4279
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5bca5f69a6288460800000000000000
+      internalID: 7244082509784992606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_28
+      rect:
+        serializedVersion: 2
+        x: 2362
+        y: 4283
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 734bbc66789bb74d0800000000000000
+      internalID: -3135708724337069001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_29
+      rect:
+        serializedVersion: 2
+        x: 2383
+        y: 4283
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aa64386cd1876c80800000000000000
+      internalID: -8329546202157389147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_30
+      rect:
+        serializedVersion: 2
+        x: 2395
+        y: 4279
+        width: 46
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 726dba3d1c6301b90800000000000000
+      internalID: -7273253192095508953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_31
+      rect:
+        serializedVersion: 2
+        x: 2471
+        y: 4283
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c66c0e5c432f8c0b0800000000000000
+      internalID: -5708046219220040084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_32
+      rect:
+        serializedVersion: 2
+        x: 2503
+        y: 4279
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e8ed3e3b30b42e50800000000000000
+      internalID: 6783740707220613349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_33
+      rect:
+        serializedVersion: 2
+        x: 2539
+        y: 4283
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72aa3712774993ef0800000000000000
+      internalID: -127907875020101081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_34
+      rect:
+        serializedVersion: 2
+        x: 2575
+        y: 4283
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3262c143e206bddb0800000000000000
+      internalID: -4766110029082515933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_35
+      rect:
+        serializedVersion: 2
+        x: 2619
+        y: 4283
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c5d96fdbe4a5cd60800000000000000
+      internalID: 7909909653518669248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_36
+      rect:
+        serializedVersion: 2
+        x: 2715
+        y: 4283
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e871336fad59f290800000000000000
+      internalID: -7856145067106273054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_37
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 4283
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e05e93ec88233370800000000000000
+      internalID: 8301023123753292003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_38
+      rect:
+        serializedVersion: 2
+        x: 2799
+        y: 4283
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80fd6a624c1bec300800000000000000
+      internalID: 274352083336355592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_39
+      rect:
+        serializedVersion: 2
+        x: 1523
+        y: 4279
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7017864fecb45a020800000000000000
+      internalID: 2352369732606783751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_40
+      rect:
+        serializedVersion: 2
+        x: 1663
+        y: 4275
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcfee917e4a5b7060800000000000000
+      internalID: 6952249742736682955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_41
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 4275
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74a4a5147794298d0800000000000000
+      internalID: -2841127638370989497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_42
+      rect:
+        serializedVersion: 2
+        x: 1731
+        y: 4275
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43b851817d7f7d710800000000000000
+      internalID: 1718114286059227956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_43
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 4275
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35a6ee623d7c45190800000000000000
+      internalID: -7974529330461119917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_44
+      rect:
+        serializedVersion: 2
+        x: 1783
+        y: 4279
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01a64ea90dd7504b0800000000000000
+      internalID: -5474831437093639664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_45
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 4275
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aa502d217ef7a1a0800000000000000
+      internalID: -6798185350450619739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_46
+      rect:
+        serializedVersion: 2
+        x: 1842
+        y: 4275
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea9a77b1cf55682e0800000000000000
+      internalID: -2123915632977663570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_47
+      rect:
+        serializedVersion: 2
+        x: 1863
+        y: 4279
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae746ec0d16c71080800000000000000
+      internalID: -9216680284317661206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_48
+      rect:
+        serializedVersion: 2
+        x: 1963
+        y: 4275
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e79163da2ba1f1d80800000000000000
+      internalID: -8277868235371177602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_49
+      rect:
+        serializedVersion: 2
+        x: 2019
+        y: 4275
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33abeb3bcf6c75350800000000000000
+      internalID: 6005487416771525171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_50
+      rect:
+        serializedVersion: 2
+        x: 2039
+        y: 4279
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 949b5e9df0774afc0800000000000000
+      internalID: -3484529301713995447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_51
+      rect:
+        serializedVersion: 2
+        x: 2047
+        y: 4275
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3861f28b6c517cd0800000000000000
+      internalID: -2562165096168986565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_52
+      rect:
+        serializedVersion: 2
+        x: 2059
+        y: 4279
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af8e0aedaa071de50800000000000000
+      internalID: 6832365988879591674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_53
+      rect:
+        serializedVersion: 2
+        x: 2071
+        y: 4279
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 553294e12b80ab780800000000000000
+      internalID: -8666604971815787691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_54
+      rect:
+        serializedVersion: 2
+        x: 2095
+        y: 4271
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b83606b9b8bf918d0800000000000000
+      internalID: -2874990310073539701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_55
+      rect:
+        serializedVersion: 2
+        x: 2119
+        y: 4271
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d7c4b69bcf017260800000000000000
+      internalID: 7093468255166449623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_56
+      rect:
+        serializedVersion: 2
+        x: 2163
+        y: 4279
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e5c10dbca837dd10800000000000000
+      internalID: 2150249661649241568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_57
+      rect:
+        serializedVersion: 2
+        x: 2207
+        y: 4267
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fef20325c73a2580800000000000000
+      internalID: -8851200797807804680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_58
+      rect:
+        serializedVersion: 2
+        x: 2222
+        y: 4271
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b10547a8427bc5550800000000000000
+      internalID: 6150992558650839067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_59
+      rect:
+        serializedVersion: 2
+        x: 2327
+        y: 4279
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 419463f8ec30409a0800000000000000
+      internalID: -6267880595692041964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_60
+      rect:
+        serializedVersion: 2
+        x: 2343
+        y: 4275
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f69d05d406a4ac280800000000000000
+      internalID: -9022317126008907409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_61
+      rect:
+        serializedVersion: 2
+        x: 2351
+        y: 4279
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be8cd9dddcc821fe0800000000000000
+      internalID: -1219757733249693461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_62
+      rect:
+        serializedVersion: 2
+        x: 2371
+        y: 4275
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 261e3abe4fb371c20800000000000000
+      internalID: 3177073985244619106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_63
+      rect:
+        serializedVersion: 2
+        x: 2407
+        y: 4271
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff0929a082c150d30800000000000000
+      internalID: 4396951569498804479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_64
+      rect:
+        serializedVersion: 2
+        x: 2451
+        y: 4279
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4d82bbff7ce762a0800000000000000
+      internalID: -6744161882536243893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_65
+      rect:
+        serializedVersion: 2
+        x: 2463
+        y: 4279
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83c9dc6118a1216e0800000000000000
+      internalID: -1868401753669657544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_66
+      rect:
+        serializedVersion: 2
+        x: 2482
+        y: 4275
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91609e38ee882d780800000000000000
+      internalID: -8659708575483361767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_67
+      rect:
+        serializedVersion: 2
+        x: 2491
+        y: 4279
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47973396ed83a3d80800000000000000
+      internalID: -8270235237813618316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_68
+      rect:
+        serializedVersion: 2
+        x: 2515
+        y: 4279
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4536bf930ae1dd760800000000000000
+      internalID: 7484171829276009300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_69
+      rect:
+        serializedVersion: 2
+        x: 2539
+        y: 4275
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5db32c8ffb4a78390800000000000000
+      internalID: -7816097483859018795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_70
+      rect:
+        serializedVersion: 2
+        x: 2559
+        y: 4275
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b63bbc4db05ae0bc0800000000000000
+      internalID: -3814930364102888597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_71
+      rect:
+        serializedVersion: 2
+        x: 2583
+        y: 4275
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34f98a44e83353180800000000000000
+      internalID: -9136339582920908989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_72
+      rect:
+        serializedVersion: 2
+        x: 2591
+        y: 4275
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed3c241bde5a5a260800000000000000
+      internalID: 7108270027173970910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_73
+      rect:
+        serializedVersion: 2
+        x: 2627
+        y: 4279
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e63580a3e91727b0800000000000000
+      internalID: -5249198375235668252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_74
+      rect:
+        serializedVersion: 2
+        x: 2679
+        y: 4275
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d6d0c3d9531bef70800000000000000
+      internalID: 9217482338869499609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_75
+      rect:
+        serializedVersion: 2
+        x: 2695
+        y: 4279
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad9ce61093ed74340800000000000000
+      internalID: 4848087860306168282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_76
+      rect:
+        serializedVersion: 2
+        x: 2731
+        y: 4279
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecf60bd7c00814b20800000000000000
+      internalID: 3116913208253771726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_77
+      rect:
+        serializedVersion: 2
+        x: 2839
+        y: 4279
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ff3351d160ff51a0800000000000000
+      internalID: -6818467007901253648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_78
+      rect:
+        serializedVersion: 2
+        x: 1783
+        y: 4271
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6737a8175c7d46580800000000000000
+      internalID: -8834699325980642442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_79
+      rect:
+        serializedVersion: 2
+        x: 1863
+        y: 4267
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44df1a4b284fdc930800000000000000
+      internalID: 4165254072601017668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_80
+      rect:
+        serializedVersion: 2
+        x: 1875
+        y: 4271
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d6c54d015f14f540800000000000000
+      internalID: 5040688315909916369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_81
+      rect:
+        serializedVersion: 2
+        x: 1907
+        y: 4267
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eca5820ff9bf5db60800000000000000
+      internalID: 7770393396445207246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_82
+      rect:
+        serializedVersion: 2
+        x: 1943
+        y: 4271
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c06cb8365c09a340800000000000000
+      internalID: 4875441636063862981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_83
+      rect:
+        serializedVersion: 2
+        x: 1975
+        y: 4263
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dca86111722a93dc0800000000000000
+      internalID: -3658714933587703091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_84
+      rect:
+        serializedVersion: 2
+        x: 1987
+        y: 4271
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e7958112f14e0b60800000000000000
+      internalID: 7714175719664097257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_85
+      rect:
+        serializedVersion: 2
+        x: 2083
+        y: 4271
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ed2bea6030f7e3e0800000000000000
+      internalID: -2024385416736854560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_86
+      rect:
+        serializedVersion: 2
+        x: 2147
+        y: 4271
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c94225e6a8ca1ff20800000000000000
+      internalID: 3454732099726222492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_87
+      rect:
+        serializedVersion: 2
+        x: 2171
+        y: 4271
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b89fd62631f35d160800000000000000
+      internalID: 7049610144206682507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_88
+      rect:
+        serializedVersion: 2
+        x: 2191
+        y: 4271
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a241f23f48d64d20800000000000000
+      internalID: 3262532814745191074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_89
+      rect:
+        serializedVersion: 2
+        x: 2247
+        y: 4267
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f0f1abcfde050e50800000000000000
+      internalID: 6774837568805662968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_90
+      rect:
+        serializedVersion: 2
+        x: 2295
+        y: 4267
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a09f32a78878f9fc0800000000000000
+      internalID: -3485918566326994678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_91
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 4267
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e2ea742be45d7d60800000000000000
+      internalID: 7889555491129058021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_92
+      rect:
+        serializedVersion: 2
+        x: 2423
+        y: 4271
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 961b8b114b7778f10800000000000000
+      internalID: 2271916152306839913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_93
+      rect:
+        serializedVersion: 2
+        x: 2443
+        y: 4271
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 868c3f93ade2162f0800000000000000
+      internalID: -981451728980031384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_94
+      rect:
+        serializedVersion: 2
+        x: 2455
+        y: 4271
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4deb07191342a15b0800000000000000
+      internalID: -5396961408138035500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_95
+      rect:
+        serializedVersion: 2
+        x: 2547
+        y: 4271
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e36cddd4a8245c40800000000000000
+      internalID: 5500065733488174050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_96
+      rect:
+        serializedVersion: 2
+        x: 1966
+        y: 4263
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8c37071e7a716e00800000000000000
+      internalID: 1036244071242742923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_97
+      rect:
+        serializedVersion: 2
+        x: 2230
+        y: 4263
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 899e10b2356709e00800000000000000
+      internalID: 1049468812753234328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_98
+      rect:
+        serializedVersion: 2
+        x: 1879
+        y: 3563
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fd77cddccc94b0a0800000000000000
+      internalID: -6866691128125063691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_99
+      rect:
+        serializedVersion: 2
+        x: 2003
+        y: 3567
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e98b3a4865aa80860800000000000000
+      internalID: 7496428868327422110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_100
+      rect:
+        serializedVersion: 2
+        x: 2075
+        y: 3567
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 609969111c56b9550800000000000000
+      internalID: 6168635994512201990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_101
+      rect:
+        serializedVersion: 2
+        x: 2087
+        y: 3571
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cee18b8f7873453a0800000000000000
+      internalID: -6677651290350674196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_102
+      rect:
+        serializedVersion: 2
+        x: 2167
+        y: 3567
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d37037dff1e7ad4d0800000000000000
+      internalID: -3109033916884646083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_103
+      rect:
+        serializedVersion: 2
+        x: 2174
+        y: 3571
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da78186984e47e2b0800000000000000
+      internalID: -5555385541668534355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_104
+      rect:
+        serializedVersion: 2
+        x: 2199
+        y: 3563
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0fd1ca91942c0c10800000000000000
+      internalID: 2021030540567764749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_105
+      rect:
+        serializedVersion: 2
+        x: 2235
+        y: 3567
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9093dc1ec28d2090800000000000000
+      internalID: -8057640336537448291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_106
+      rect:
+        serializedVersion: 2
+        x: 2279
+        y: 3567
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67b65d2e3cf12b8d0800000000000000
+      internalID: -2832166289477899402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_107
+      rect:
+        serializedVersion: 2
+        x: 2370
+        y: 3567
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11ca9d7030f348050800000000000000
+      internalID: 5801831502209199121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_108
+      rect:
+        serializedVersion: 2
+        x: 2387
+        y: 3567
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94de2c84e554e2510800000000000000
+      internalID: 1526233594975153481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_109
+      rect:
+        serializedVersion: 2
+        x: 2463
+        y: 3567
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a37fe476c415cf930800000000000000
+      internalID: 4178303942885570362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_110
+      rect:
+        serializedVersion: 2
+        x: 2515
+        y: 3567
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bf143dc801fc0c80800000000000000
+      internalID: -8355038188574335050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_111
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 3559
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf475579d48604ce0800000000000000
+      internalID: -1423022799788346116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_112
+      rect:
+        serializedVersion: 2
+        x: 1691
+        y: 3555
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a41c3248a69e83e80800000000000000
+      internalID: -8198546477935247030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_113
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 3559
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d189f82911b8835a0800000000000000
+      internalID: -6541325551166056419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_114
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 3563
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5891233a94fab2140800000000000000
+      internalID: 4696039767269316997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_115
+      rect:
+        serializedVersion: 2
+        x: 1787
+        y: 3555
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8723375e732d977f0800000000000000
+      internalID: -614228736644795784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_116
+      rect:
+        serializedVersion: 2
+        x: 1799
+        y: 3559
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7448c7854ae3d7e50800000000000000
+      internalID: 6808667087234171975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_117
+      rect:
+        serializedVersion: 2
+        x: 1807
+        y: 3559
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cfe887751cdc7610800000000000000
+      internalID: 1620411950704422852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_118
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 3563
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5d3ca04325396b90800000000000000
+      internalID: -7248203699750945445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_119
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 3563
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 829f9a220e753ab90800000000000000
+      internalID: -7231839956461029080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_120
+      rect:
+        serializedVersion: 2
+        x: 2019
+        y: 3563
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5978c8990f5c93e10800000000000000
+      internalID: 2177989531969292181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_121
+      rect:
+        serializedVersion: 2
+        x: 2035
+        y: 3547
+        width: 34
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fdaeb0dc8a280da0800000000000000
+      internalID: -5978481721048388107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_122
+      rect:
+        serializedVersion: 2
+        x: 2087
+        y: 3555
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2fd5438eeb62e8b0800000000000000
+      internalID: -5124414753845420241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_123
+      rect:
+        serializedVersion: 2
+        x: 2155
+        y: 3559
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c951599c39f09f450800000000000000
+      internalID: 6122942295803499932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_124
+      rect:
+        serializedVersion: 2
+        x: 2175
+        y: 3559
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8788039a229170830800000000000000
+      internalID: 4037223227619051640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_125
+      rect:
+        serializedVersion: 2
+        x: 2223
+        y: 3559
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d6a1087e83d86f00800000000000000
+      internalID: 1110369916999018195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_126
+      rect:
+        serializedVersion: 2
+        x: 2266
+        y: 3555
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e00614be049353ee0800000000000000
+      internalID: -1282055567929417714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_127
+      rect:
+        serializedVersion: 2
+        x: 2303
+        y: 3563
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57feccce7394d9c30800000000000000
+      internalID: 4367727718164131701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_128
+      rect:
+        serializedVersion: 2
+        x: 2314
+        y: 3555
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cd7e0d1bd2c5ae40800000000000000
+      internalID: 5667149952456752579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_129
+      rect:
+        serializedVersion: 2
+        x: 2327
+        y: 3559
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 774d64598b1946990800000000000000
+      internalID: -7393624466271054729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_130
+      rect:
+        serializedVersion: 2
+        x: 2343
+        y: 3547
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01f3f26e12d5ade10800000000000000
+      internalID: 2223191766237921040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_131
+      rect:
+        serializedVersion: 2
+        x: 2355
+        y: 3559
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d16cc7fcaf01f9d90800000000000000
+      internalID: -7088928619048942051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_132
+      rect:
+        serializedVersion: 2
+        x: 2447
+        y: 3559
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cd34e24b6512a670800000000000000
+      internalID: 8548418593130560963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_133
+      rect:
+        serializedVersion: 2
+        x: 2491
+        y: 3559
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1903904ad242060b0800000000000000
+      internalID: -5737546146825817967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_134
+      rect:
+        serializedVersion: 2
+        x: 2507
+        y: 3551
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31ef9760ef00c5ae0800000000000000
+      internalID: -1559370279946682861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_135
+      rect:
+        serializedVersion: 2
+        x: 2539
+        y: 3563
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e40f791707b065a0800000000000000
+      internalID: -6530018218566810391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_136
+      rect:
+        serializedVersion: 2
+        x: 2555
+        y: 3555
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d6234e4b16359d0800000000000000
+      internalID: -2786776314861687481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_137
+      rect:
+        serializedVersion: 2
+        x: 2567
+        y: 3559
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aae835a5e4d2cda30800000000000000
+      internalID: 4241314763622289066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_138
+      rect:
+        serializedVersion: 2
+        x: 2583
+        y: 3559
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fb6fa06ca008e9e0800000000000000
+      internalID: -1592021727918986252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_139
+      rect:
+        serializedVersion: 2
+        x: 2603
+        y: 3559
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 401511382ed6606a0800000000000000
+      internalID: -6483373793924263676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_140
+      rect:
+        serializedVersion: 2
+        x: 2655
+        y: 3559
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 325006e03a7463000800000000000000
+      internalID: 15278414388790563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame 12 (8) 1_141
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 4320
+        height: 3561
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cfc20d6c2b5fcb30800000000000000
+      internalID: 4309763614782443459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Frame 12 (8) 1_0: -3889659599010112450
+      Frame 12 (8) 1_1: -7526388740246874220
+      Frame 12 (8) 1_10: 4987841278892005618
+      Frame 12 (8) 1_100: 6168635994512201990
+      Frame 12 (8) 1_101: -6677651290350674196
+      Frame 12 (8) 1_102: -3109033916884646083
+      Frame 12 (8) 1_103: -5555385541668534355
+      Frame 12 (8) 1_104: 2021030540567764749
+      Frame 12 (8) 1_105: -8057640336537448291
+      Frame 12 (8) 1_106: -2832166289477899402
+      Frame 12 (8) 1_107: 5801831502209199121
+      Frame 12 (8) 1_108: 1526233594975153481
+      Frame 12 (8) 1_109: 4178303942885570362
+      Frame 12 (8) 1_11: -5030694158899194870
+      Frame 12 (8) 1_110: -8355038188574335050
+      Frame 12 (8) 1_111: -1423022799788346116
+      Frame 12 (8) 1_112: -8198546477935247030
+      Frame 12 (8) 1_113: -6541325551166056419
+      Frame 12 (8) 1_114: 4696039767269316997
+      Frame 12 (8) 1_115: -614228736644795784
+      Frame 12 (8) 1_116: 6808667087234171975
+      Frame 12 (8) 1_117: 1620411950704422852
+      Frame 12 (8) 1_118: -7248203699750945445
+      Frame 12 (8) 1_119: -7231839956461029080
+      Frame 12 (8) 1_12: -1116222705882805815
+      Frame 12 (8) 1_120: 2177989531969292181
+      Frame 12 (8) 1_121: -5978481721048388107
+      Frame 12 (8) 1_122: -5124414753845420241
+      Frame 12 (8) 1_123: 6122942295803499932
+      Frame 12 (8) 1_124: 4037223227619051640
+      Frame 12 (8) 1_125: 1110369916999018195
+      Frame 12 (8) 1_126: -1282055567929417714
+      Frame 12 (8) 1_127: 4367727718164131701
+      Frame 12 (8) 1_128: 5667149952456752579
+      Frame 12 (8) 1_129: -7393624466271054729
+      Frame 12 (8) 1_13: 7580530815450768510
+      Frame 12 (8) 1_130: 2223191766237921040
+      Frame 12 (8) 1_131: -7088928619048942051
+      Frame 12 (8) 1_132: 8548418593130560963
+      Frame 12 (8) 1_133: -5737546146825817967
+      Frame 12 (8) 1_134: -1559370279946682861
+      Frame 12 (8) 1_135: -6530018218566810391
+      Frame 12 (8) 1_136: -2786776314861687481
+      Frame 12 (8) 1_137: 4241314763622289066
+      Frame 12 (8) 1_138: -1592021727918986252
+      Frame 12 (8) 1_139: -6483373793924263676
+      Frame 12 (8) 1_14: -2771650977593095591
+      Frame 12 (8) 1_140: 15278414388790563
+      Frame 12 (8) 1_141: 4309763614782443459
+      Frame 12 (8) 1_15: -811642627733318964
+      Frame 12 (8) 1_16: 7848187471080795292
+      Frame 12 (8) 1_17: -4885601024950505238
+      Frame 12 (8) 1_18: -4712276055602782441
+      Frame 12 (8) 1_19: 4932721010848551259
+      Frame 12 (8) 1_2: -13129892877366377
+      Frame 12 (8) 1_20: -4144578657318439538
+      Frame 12 (8) 1_21: -787541080412109145
+      Frame 12 (8) 1_22: -6684048748962629499
+      Frame 12 (8) 1_23: -6457155398553159221
+      Frame 12 (8) 1_24: -3399862577331567583
+      Frame 12 (8) 1_25: -832823666309044360
+      Frame 12 (8) 1_26: 212615913967079955
+      Frame 12 (8) 1_27: 7244082509784992606
+      Frame 12 (8) 1_28: -3135708724337069001
+      Frame 12 (8) 1_29: -8329546202157389147
+      Frame 12 (8) 1_3: -8078454546118841170
+      Frame 12 (8) 1_30: -7273253192095508953
+      Frame 12 (8) 1_31: -5708046219220040084
+      Frame 12 (8) 1_32: 6783740707220613349
+      Frame 12 (8) 1_33: -127907875020101081
+      Frame 12 (8) 1_34: -4766110029082515933
+      Frame 12 (8) 1_35: 7909909653518669248
+      Frame 12 (8) 1_36: -7856145067106273054
+      Frame 12 (8) 1_37: 8301023123753292003
+      Frame 12 (8) 1_38: 274352083336355592
+      Frame 12 (8) 1_39: 2352369732606783751
+      Frame 12 (8) 1_4: 7222180607362816288
+      Frame 12 (8) 1_40: 6952249742736682955
+      Frame 12 (8) 1_41: -2841127638370989497
+      Frame 12 (8) 1_42: 1718114286059227956
+      Frame 12 (8) 1_43: -7974529330461119917
+      Frame 12 (8) 1_44: -5474831437093639664
+      Frame 12 (8) 1_45: -6798185350450619739
+      Frame 12 (8) 1_46: -2123915632977663570
+      Frame 12 (8) 1_47: -9216680284317661206
+      Frame 12 (8) 1_48: -8277868235371177602
+      Frame 12 (8) 1_49: 6005487416771525171
+      Frame 12 (8) 1_5: 236584561354687359
+      Frame 12 (8) 1_50: -3484529301713995447
+      Frame 12 (8) 1_51: -2562165096168986565
+      Frame 12 (8) 1_52: 6832365988879591674
+      Frame 12 (8) 1_53: -8666604971815787691
+      Frame 12 (8) 1_54: -2874990310073539701
+      Frame 12 (8) 1_55: 7093468255166449623
+      Frame 12 (8) 1_56: 2150249661649241568
+      Frame 12 (8) 1_57: -8851200797807804680
+      Frame 12 (8) 1_58: 6150992558650839067
+      Frame 12 (8) 1_59: -6267880595692041964
+      Frame 12 (8) 1_6: -7378597881556125361
+      Frame 12 (8) 1_60: -9022317126008907409
+      Frame 12 (8) 1_61: -1219757733249693461
+      Frame 12 (8) 1_62: 3177073985244619106
+      Frame 12 (8) 1_63: 4396951569498804479
+      Frame 12 (8) 1_64: -6744161882536243893
+      Frame 12 (8) 1_65: -1868401753669657544
+      Frame 12 (8) 1_66: -8659708575483361767
+      Frame 12 (8) 1_67: -8270235237813618316
+      Frame 12 (8) 1_68: 7484171829276009300
+      Frame 12 (8) 1_69: -7816097483859018795
+      Frame 12 (8) 1_7: -8725723846313908379
+      Frame 12 (8) 1_70: -3814930364102888597
+      Frame 12 (8) 1_71: -9136339582920908989
+      Frame 12 (8) 1_72: 7108270027173970910
+      Frame 12 (8) 1_73: -5249198375235668252
+      Frame 12 (8) 1_74: 9217482338869499609
+      Frame 12 (8) 1_75: 4848087860306168282
+      Frame 12 (8) 1_76: 3116913208253771726
+      Frame 12 (8) 1_77: -6818467007901253648
+      Frame 12 (8) 1_78: -8834699325980642442
+      Frame 12 (8) 1_79: 4165254072601017668
+      Frame 12 (8) 1_8: 3185553551670584925
+      Frame 12 (8) 1_80: 5040688315909916369
+      Frame 12 (8) 1_81: 7770393396445207246
+      Frame 12 (8) 1_82: 4875441636063862981
+      Frame 12 (8) 1_83: -3658714933587703091
+      Frame 12 (8) 1_84: 7714175719664097257
+      Frame 12 (8) 1_85: -2024385416736854560
+      Frame 12 (8) 1_86: 3454732099726222492
+      Frame 12 (8) 1_87: 7049610144206682507
+      Frame 12 (8) 1_88: 3262532814745191074
+      Frame 12 (8) 1_89: 6774837568805662968
+      Frame 12 (8) 1_9: 4589073414075998633
+      Frame 12 (8) 1_90: -3485918566326994678
+      Frame 12 (8) 1_91: 7889555491129058021
+      Frame 12 (8) 1_92: 2271916152306839913
+      Frame 12 (8) 1_93: -981451728980031384
+      Frame 12 (8) 1_94: -5396961408138035500
+      Frame 12 (8) 1_95: 5500065733488174050
+      Frame 12 (8) 1_96: 1036244071242742923
+      Frame 12 (8) 1_97: 1049468812753234328
+      Frame 12 (8) 1_98: -6866691128125063691
+      Frame 12 (8) 1_99: 7496428868327422110
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
