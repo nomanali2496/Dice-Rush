@@ -65,6 +65,11 @@ public class NumberGrid : MonoBehaviour
     [SerializeField] private string powerupImageName = "PowerupImage"; // Name of the Image component
     [SerializeField] private string selectButtonName = "SelectButton"; // Name of the Button component
     [SerializeField] private string highlightImageName = "HighlightImage"; // Name of the highlight Image component
+    [SerializeField] private string boxBackgroundImageName = "MainBackground"; // Name of the background Image component
+    
+    [Header("Box Background Sprites")]
+    [SerializeField] private Sprite normalBoxBgSprite; // Sprite for normal number boxes
+    [SerializeField] private Sprite powerupBoxBgSprite; // Sprite for powerup boxes
     
     [Header("Powerup Timer UI")]
     [SerializeField] private Slider powerupTimerSlider; // Slider to show timer progress
@@ -370,6 +375,14 @@ public class NumberGrid : MonoBehaviour
         
         instantiatedBoxes.Add(box);
         
+        // Set background sprite
+        Image bgImage = FindComponentByName<Image>(box, boxBackgroundImageName);
+        if (bgImage == null) bgImage = box.GetComponent<Image>(); // Fallback to root
+        if (bgImage != null && normalBoxBgSprite != null)
+        {
+            bgImage.sprite = normalBoxBgSprite;
+        }
+        
         // Create box data
         BoxData boxData = new BoxData
         {
@@ -484,6 +497,14 @@ public class NumberGrid : MonoBehaviour
         
         instantiatedBoxes.Add(box);
         
+        // Set background sprite
+        Image bgImage = FindComponentByName<Image>(box, boxBackgroundImageName);
+        if (bgImage == null) bgImage = box.GetComponent<Image>(); // Fallback to root
+        if (bgImage != null && powerupBoxBgSprite != null)
+        {
+            bgImage.sprite = powerupBoxBgSprite;
+        }
+        
         // Create box data for powerup (powerups are not selectable)
         BoxData boxData = new BoxData
         {
@@ -580,6 +601,29 @@ public class NumberGrid : MonoBehaviour
             // Recursively search in grandchildren
             T found = FindComponentInChildren<T>(child.gameObject, name);
             if (found != null) return found;
+        }
+        
+        return null;
+    }
+
+    /// <summary>
+    /// Finds a component in children by name (non-recursive first, then root)
+    /// </summary>
+    private T FindComponentByName<T>(GameObject parent, string name) where T : Component
+    {
+        if (parent == null) return null;
+        
+        // Check children first
+        Transform child = parent.transform.Find(name);
+        if (child != null)
+        {
+            return child.GetComponent<T>();
+        }
+        
+        // If name matches parent
+        if (parent.name == name)
+        {
+            return parent.GetComponent<T>();
         }
         
         return null;
