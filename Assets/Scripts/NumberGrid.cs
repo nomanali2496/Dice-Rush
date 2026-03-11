@@ -39,6 +39,10 @@ public class NumberGrid : MonoBehaviour
     [SerializeField] private float paddingRight = 20f; // Padding on the right side
     [SerializeField] private float paddingTop = 20f; // Padding on the top side
     [SerializeField] private float paddingBottom = 20f; // Padding on the bottom side
+
+    [Header("Brix Scaling")]
+    [SerializeField] private RectTransform brixParent;      // The purple frame containing the grid
+    [SerializeField] private float referenceWidthValue = 1440f; // Scale is 1 at this width
     
     [SerializeField] private Vector2 startPosition = Vector2.zero; // Starting position for grid (calculated automatically)
     
@@ -132,6 +136,8 @@ public class NumberGrid : MonoBehaviour
     
     private void Start()
     {
+        AdjustBrixScale(); // Scale parent to fit screen width (as per your instruction)
+
         // Ensure slider is hidden by default
         if (powerupTimerSlider != null)
         {
@@ -147,7 +153,30 @@ public class NumberGrid : MonoBehaviour
         UpdateBoxInteractability();
         // Timer is automatically started by GenerateGrid()
     }
-    
+
+    /// <summary>
+    /// Adjusts the scale factor based on aspect ratio difference (Ref: 1440/3216 = 0.447).
+    /// Optimized for iPhones by using Screen.safeArea to account for notches and bars.
+    /// </summary>
+    private void AdjustBrixScale()
+    {
+        if (brixParent == null) return;
+        
+        float referenceAspect = 1440f / 3216f;
+        
+        // Using safeArea detects that notch phones are "shorter" and "wider", allowing for more scale
+        Rect safeArea = Screen.safeArea;
+        float currentAspect = safeArea.width / safeArea.height;
+        
+        float scale = currentAspect / referenceAspect;
+        
+        // Ensure we at least maintain the reference size
+        scale = Mathf.Max(scale, 1.0f);
+        
+        brixParent.localScale = new Vector3(scale, scale, 1f);
+        Debug.Log($"[NumberGrid] Optimized Brix Scale: {scale:F3} (Safe Area: {safeArea.width}x{safeArea.height})");
+    }
+
     /// <summary>
     /// Grid item data structure
     /// </summary>
