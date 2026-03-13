@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 {
     [Header("Player Profile")]
     [SerializeField] private Image playerProfileImage; // Player's profile image display
+    [SerializeField] private Image playerProfileImageCustom; // Player's profile image (custom/zoomed)
     [SerializeField] private Image playerOutlineImage; // Player's outline image (for color assignment)
     [SerializeField] private MainMenuAvatarDisplay mainMenuAvatarDisplay; // Reference to main menu avatar display (to get user's selected avatar)
     
@@ -52,6 +53,7 @@ public class GameManager : MonoBehaviour
     
     [Header("1st Place")]
     [SerializeField] private Image winnerProfileImage; // Winner's profile image display
+    [SerializeField] private Image winnerProfileImageCustom; // Winner's profile image (custom/zoomed)
     [SerializeField] private Image winnerOutlineImage; // Winner's outline image display
     [SerializeField] private Image winnerFrameImage; // Winner's frame image display
     [SerializeField] private TMPro.TextMeshProUGUI winnerNameText; // Winner's name text (TextMeshProUGUI)
@@ -59,6 +61,7 @@ public class GameManager : MonoBehaviour
     
     [Header("2nd Place")]
     [SerializeField] private Image secondPlaceProfileImage; // 2nd place profile image display
+    [SerializeField] private Image secondPlaceProfileImageCustom; // 2nd place profile image (custom/zoomed)
     [SerializeField] private Image secondPlaceOutlineImage; // 2nd place outline image display
     [SerializeField] private Image secondPlaceFrameImage; // 2nd place frame image display
     [SerializeField] private TMPro.TextMeshProUGUI secondPlaceNameText; // 2nd place name text (TextMeshProUGUI)
@@ -66,6 +69,7 @@ public class GameManager : MonoBehaviour
     
     [Header("3rd Place")]
     [SerializeField] private Image thirdPlaceProfileImage; // 3rd place profile image display
+    [SerializeField] private Image thirdPlaceProfileImageCustom; // 3rd place profile image (custom/zoomed)
     [SerializeField] private Image thirdPlaceOutlineImage; // 3rd place outline image display
     [SerializeField] private Image thirdPlaceFrameImage; // 3rd place frame image display
     [SerializeField] private TMPro.TextMeshProUGUI thirdPlaceNameText; // 3rd place name text (TextMeshProUGUI)
@@ -631,7 +635,7 @@ public class GameManager : MonoBehaviour
                 }
                 
                 DisplayPlace(1, firstPlace.playerType, firstPlace.cpuIndex, firstPlace.count,
-                            winnerProfileImage, winnerOutlineImage, winnerFrameImage, winnerNameText, winnerNameTextLegacy,
+                            winnerProfileImage, winnerProfileImageCustom, winnerOutlineImage, winnerFrameImage, winnerNameText, winnerNameTextLegacy,
                             firstPrizeIcon, firstPrizeText, null,
                             firstCash, firstChips);
                 Debug.Log($"[GameManager] 1st Place: {GetWinnerName(firstPlace.playerType, firstPlace.cpuIndex)} ({firstPlace.playerType}, CPU index: {firstPlace.cpuIndex}) with {firstPlace.count} selected boxes! Prize: {firstCash} cash, {firstChips} chips");
@@ -659,7 +663,7 @@ public class GameManager : MonoBehaviour
             if (secondCash > 0f || secondChips > 0)
             {
                 DisplayPlace(2, secondPlace.playerType, secondPlace.cpuIndex, secondPlace.count,
-                            secondPlaceProfileImage, secondPlaceOutlineImage, secondPlaceFrameImage, secondPlaceNameText, secondPlaceNameTextLegacy,
+                            secondPlaceProfileImage, secondPlaceProfileImageCustom, secondPlaceOutlineImage, secondPlaceFrameImage, secondPlaceNameText, secondPlaceNameTextLegacy,
                             secondPrizeIcon, secondPrizeText, null,
                             secondCash, secondChips);
                 Debug.Log($"[GameManager] 2nd Place: {GetWinnerName(secondPlace.playerType, secondPlace.cpuIndex)} ({secondPlace.playerType}, CPU index: {secondPlace.cpuIndex}) with {secondPlace.count} selected boxes! Prize: {secondCash} cash, {secondChips} chips");
@@ -707,7 +711,7 @@ public class GameManager : MonoBehaviour
                 }
                 
                 DisplayPlace(3, thirdPlace.playerType, thirdPlace.cpuIndex, thirdPlace.count,
-                            thirdPlaceProfileImage, thirdPlaceOutlineImage, thirdPlaceFrameImage, thirdPlaceNameText, thirdPlaceNameTextLegacy,
+                            thirdPlaceProfileImage, thirdPlaceProfileImageCustom, thirdPlaceOutlineImage, thirdPlaceFrameImage, thirdPlaceNameText, thirdPlaceNameTextLegacy,
                             thirdPrizeIcon, thirdPrizeText, null,
                             thirdCash, thirdChips);
                 Debug.Log($"[GameManager] 3rd Place: {GetWinnerName(thirdPlace.playerType, thirdPlace.cpuIndex)} ({thirdPlace.playerType}, CPU index: {thirdPlace.cpuIndex}) with {thirdPlace.count} selected boxes! Prize: {thirdCash} cash, {thirdChips} chips");
@@ -791,7 +795,7 @@ public class GameManager : MonoBehaviour
     /// Displays a place (1st, 2nd, or 3rd) with profile image, outline, frame, name, prize icon, and prize text
     /// </summary>
     private void DisplayPlace(int placeNumber, PlayerType playerType, int cpuIndex, int selectionCount,
-                              Image profileImage, Image outlineImage, Image frameImage, TMPro.TextMeshProUGUI nameText, Text nameTextLegacy,
+                              Image profileImage, Image profileImageCustom, Image outlineImage, Image frameImage, TMPro.TextMeshProUGUI nameText, Text nameTextLegacy,
                               Image prizeIcon, TMPro.TextMeshProUGUI prizeText, Text prizeTextLegacy,
                               float cashPrize, int chipsPrize)
     {
@@ -818,13 +822,38 @@ public class GameManager : MonoBehaviour
         }
         
         // Set profile image
-        if (profileImage != null)
+        if (profileImage != null || profileImageCustom != null)
         {
             if (playerType == PlayerType.Player)
             {
-                if (playerProfileImage != null && playerProfileImage.sprite != null)
+                // Always prefer the live avatar from MainMenuAvatarDisplay
+                // so gallery/custom images are shown correctly on the winner screen
+                Sprite liveSprite = (mainMenuAvatarDisplay != null)
+                                    ? mainMenuAvatarDisplay.GetCurrentAvatarSprite()
+                                    : null;
+                
+                bool isCustom = (mainMenuAvatarDisplay != null) && mainMenuAvatarDisplay.IsShowingCustomAvatar();
+
+                if (liveSprite != null)
                 {
-                    profileImage.sprite = playerProfileImage.sprite;
+                    SetProfileSlot(profileImage, profileImageCustom, liveSprite, isCustom);
+                    Debug.Log($"[GameManager] Winner podium: player avatar loaded from MainMenuAvatarDisplay (live, Custom: {isCustom}).");
+                }
+                else if (playerProfileImage != null && playerProfileImage.sprite != null)
+                {
+                    // Fallback to standard player profile image
+                    SetProfileSlot(profileImage, profileImageCustom, playerProfileImage.sprite, false);
+                    Debug.Log("[GameManager] Winner podium: player avatar loaded from cached playerProfileImage.");
+                }
+                else if (playerProfileImageCustom != null && playerProfileImageCustom.sprite != null)
+                {
+                    // Fallback to custom player profile image
+                    SetProfileSlot(profileImage, profileImageCustom, playerProfileImageCustom.sprite, true);
+                    Debug.Log("[GameManager] Winner podium: player avatar loaded from cached playerProfileImageCustom.");
+                }
+                else
+                {
+                    Debug.LogWarning("[GameManager] Winner podium: could not get player avatar sprite (both live and cached are null).");
                 }
             }
             else // CPU
@@ -833,7 +862,7 @@ public class GameManager : MonoBehaviour
                 {
                     if (cpuProfileImages[cpuIndex] != null && cpuProfileImages[cpuIndex].sprite != null)
                     {
-                        profileImage.sprite = cpuProfileImages[cpuIndex].sprite;
+                        SetProfileSlot(profileImage, profileImageCustom, cpuProfileImages[cpuIndex].sprite, false);
                     }
                 }
             }
@@ -1085,31 +1114,34 @@ public class GameManager : MonoBehaviour
         {
             // Use the public method to get the current avatar sprite
             Sprite avatarSprite = mainMenuAvatarDisplay.GetCurrentAvatarSprite();
+            bool isCustom = mainMenuAvatarDisplay.IsShowingCustomAvatar();
+
             if (avatarSprite != null)
             {
                 playerSelectedAvatar = avatarSprite;
-                playerProfileImage.sprite = playerSelectedAvatar;
-                Debug.Log("[GameManager] Player profile image loaded from MainMenuAvatarDisplay");
-                return;
-            }
-            
-            // Fallback: Try to get the Image component directly
-            Image mainMenuImage = mainMenuAvatarDisplay.GetComponent<Image>();
-            if (mainMenuImage != null && mainMenuImage.sprite != null)
-            {
-                playerSelectedAvatar = mainMenuImage.sprite;
-                playerProfileImage.sprite = playerSelectedAvatar;
-                Debug.Log("[GameManager] Player profile image loaded from MainMenuAvatarDisplay (component fallback)");
-                return;
-            }
-            
-            // Also try to find Image component in children
-            Image childImage = mainMenuAvatarDisplay.GetComponentInChildren<Image>();
-            if (childImage != null && childImage.sprite != null)
-            {
-                playerSelectedAvatar = childImage.sprite;
-                playerProfileImage.sprite = playerSelectedAvatar;
-                Debug.Log("[GameManager] Player profile image loaded from MainMenuAvatarDisplay (child fallback)");
+                
+                if (isCustom)
+                {
+                    if (playerProfileImageCustom != null)
+                    {
+                        playerProfileImageCustom.sprite = playerSelectedAvatar;
+                        playerProfileImageCustom.rectTransform.localScale = Vector3.one * 2f;
+                        playerProfileImageCustom.gameObject.SetActive(true);
+                    }
+                    if (playerProfileImage != null) playerProfileImage.gameObject.SetActive(false);
+                    Debug.Log("[GameManager] Player profile image loaded from MainMenuAvatarDisplay (Custom/Zoomed)");
+                }
+                else
+                {
+                    if (playerProfileImage != null)
+                    {
+                        playerProfileImage.sprite = playerSelectedAvatar;
+                        playerProfileImage.rectTransform.localScale = Vector3.one;
+                        playerProfileImage.gameObject.SetActive(true);
+                    }
+                    if (playerProfileImageCustom != null) playerProfileImageCustom.gameObject.SetActive(false);
+                    Debug.Log("[GameManager] Player profile image loaded from MainMenuAvatarDisplay (Standard)");
+                }
                 return;
             }
         }
@@ -2255,6 +2287,30 @@ public class GameManager : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+
+    private void SetProfileSlot(Image spriteSlot, Image customSlot, Sprite sprite, bool isCustom)
+    {
+        if (isCustom)
+        {
+            if (customSlot != null)
+            {
+                customSlot.sprite = sprite;
+                customSlot.rectTransform.localScale = Vector3.one * 2f;
+                customSlot.gameObject.SetActive(true);
+            }
+            if (spriteSlot != null) spriteSlot.gameObject.SetActive(false);
+        }
+        else
+        {
+            if (spriteSlot != null)
+            {
+                spriteSlot.sprite = sprite;
+                spriteSlot.rectTransform.localScale = Vector3.one;
+                spriteSlot.gameObject.SetActive(true);
+            }
+            if (customSlot != null) customSlot.gameObject.SetActive(false);
         }
     }
 }
