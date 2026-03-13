@@ -13,13 +13,15 @@ public class LeaderboardRowData
     public string username;
     public int score;
     public Sprite avatarSprite;
+    public bool isCustom;
     
-    public LeaderboardRowData(int position, string username, int score, Sprite avatarSprite = null)
+    public LeaderboardRowData(int position, string username, int score, Sprite avatarSprite = null, bool isCustom = false)
     {
         this.position = position;
         this.username = username;
         this.score = score;
         this.avatarSprite = avatarSprite;
+        this.isCustom = isCustom;
     }
 }
 
@@ -46,6 +48,7 @@ public class LeaderboardRowUI : EnhancedScrollerCellView
     
     [Header("Avatar")]
     [SerializeField] private Image avatarImage; // Player avatar image
+    [SerializeField] private Image avatarImageCustom; // Player avatar image (custom/zoomed)
     
     [Header("Username Text")]
     [SerializeField] private TextMeshProUGUI usernameText; // Username text component
@@ -81,18 +84,13 @@ public class LeaderboardRowUI : EnhancedScrollerCellView
     public void SetData(LeaderboardRowData data)
     {
         currentData = data;
-        SetupRow(data.position, data.username, data.score, data.avatarSprite);
+        SetupRow(data.position, data.username, data.score, data.avatarSprite, data.isCustom);
     }
     
     /// <summary>
     /// Sets up the leaderboard row with the specified position, username, score, and avatar
-    /// This method can still be called directly if not using Enhanced Scroller
     /// </summary>
-    /// <param name="position">Player's position in leaderboard (1, 2, 3, 4, etc.)</param>
-    /// <param name="username">Player's username</param>
-    /// <param name="score">Player's score</param>
-    /// <param name="avatarSprite">Player's avatar sprite (optional)</param>
-    public void SetupRow(int position, string username, int score, Sprite avatarSprite = null)
+    public void SetupRow(int position, string username, int score, Sprite avatarSprite = null, bool isCustom = false)
     {
         currentPosition = position;
         
@@ -102,10 +100,28 @@ public class LeaderboardRowUI : EnhancedScrollerCellView
         // Setup profile background based on position
         SetupProfileBackground(position);
         
-        // Setup avatar
-        if (avatarImage != null && avatarSprite != null)
+        // Setup avatar display
+        if (isCustom)
         {
-            avatarImage.sprite = avatarSprite;
+            if (avatarImageCustom != null)
+            {
+                avatarImageCustom.sprite = avatarSprite;
+                avatarImageCustom.rectTransform.localScale = Vector3.one * 2f; // Zoom effect for custom images
+                avatarImageCustom.gameObject.SetActive(true);
+            }
+            if (avatarImage != null)
+                avatarImage.gameObject.SetActive(false);
+        }
+        else
+        {
+            if (avatarImage != null)
+            {
+                avatarImage.sprite = avatarSprite;
+                avatarImage.rectTransform.localScale = Vector3.one; // No zoom for presets
+                avatarImage.gameObject.SetActive(true);
+            }
+            if (avatarImageCustom != null)
+                avatarImageCustom.gameObject.SetActive(false);
         }
         
         // Setup username text
@@ -318,9 +334,29 @@ public class LeaderboardRowUI : EnhancedScrollerCellView
     /// </summary>
     public void UpdateAvatar(Sprite newAvatar)
     {
-        if (avatarImage != null && newAvatar != null)
+        if (newAvatar == null) return;
+
+        bool isCustom = currentData != null && currentData.isCustom;
+
+        if (isCustom)
         {
-            avatarImage.sprite = newAvatar;
+            if (avatarImageCustom != null)
+            {
+                avatarImageCustom.sprite = newAvatar;
+                avatarImageCustom.rectTransform.localScale = Vector3.one * 2f;
+                avatarImageCustom.gameObject.SetActive(true);
+            }
+            if (avatarImage != null) avatarImage.gameObject.SetActive(false);
+        }
+        else
+        {
+            if (avatarImage != null)
+            {
+                avatarImage.sprite = newAvatar;
+                avatarImage.rectTransform.localScale = Vector3.one;
+                avatarImage.gameObject.SetActive(true);
+            }
+            if (avatarImageCustom != null) avatarImageCustom.gameObject.SetActive(false);
         }
     }
     

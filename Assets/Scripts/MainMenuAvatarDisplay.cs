@@ -336,6 +336,14 @@ public class MainMenuAvatarDisplay : MonoBehaviour
             return avatarImageSprite.sprite;
         return null;
     }
+
+    /// <summary>
+    /// Returns true if the custom avatar slot (the zoomed one) is currently active.
+    /// </summary>
+    public bool IsShowingCustomAvatar()
+    {
+        return avatarImageCustom != null && avatarImageCustom.gameObject.activeSelf;
+    }
     
     /// <summary>
     /// Update with custom uploaded image — shows in the custom slot

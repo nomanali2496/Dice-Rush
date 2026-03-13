@@ -20,14 +20,18 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
     
     [Header("Top 3 Position Avatars")]
     [SerializeField] private Image firstPlaceAvatarImage;
+    [SerializeField] private Image firstPlaceAvatarCustom;
     [SerializeField] private Image secondPlaceAvatarImage;
+    [SerializeField] private Image secondPlaceAvatarCustom;
     [SerializeField] private Image thirdPlaceAvatarImage;
+    [SerializeField] private Image thirdPlaceAvatarCustom;
     
     [Header("External UI References")]
     [SerializeField] private MainMenuAvatarDisplay mainMenuAvatarDisplay;
     
     [Header("User's Fixed Row (Explicit Components)")]
     [SerializeField] private Image userFixedAvatar;
+    [SerializeField] private Image userFixedAvatarCustom;
     [SerializeField] private Image userFixedBadge;
     [SerializeField] private TextMeshProUGUI userFixedName;
     [SerializeField] private TextMeshProUGUI userFixedScore;
@@ -175,13 +179,15 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
             int score = random.Next(100, 10000);
             
             Sprite avatar = null;
-            if (i == 4) 
+            bool isRowCustom = false;
+            if (i == 0) // Include logged-in user in test data
             {
                 username = loggedInUsername;
                 // REAL AVATAR SYNC: Use the actual sprite from main menu if available
                 if (mainMenuAvatarDisplay != null)
                 {
                     avatar = mainMenuAvatarDisplay.GetCurrentAvatarSprite();
+                    isRowCustom = mainMenuAvatarDisplay.IsShowingCustomAvatar();
                 }
             }
             else 
@@ -194,7 +200,7 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
                 avatar = testAvatars[random.Next(0, testAvatars.Length)];
             }
             
-            LeaderboardRowData data = new LeaderboardRowData(position, username, score, avatar);
+            LeaderboardRowData data = new LeaderboardRowData(position, username, score, avatar, isRowCustom);
             _leaderboardData.Add(data);
             if (username == loggedInUsername) _userData = data;
         }
@@ -262,56 +268,84 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
         }
     }
     
+    /// <summary>
+    /// Returns the best available avatar sprite for a leaderboard entry.
+    /// If the entry belongs to the logged-in user, the live MainMenu avatar is
+    /// always preferred so gallery/custom selections are reflected immediately.
+    /// </summary>
+    private Sprite GetAvatarForEntry(LeaderboardRowData entry)
+    {
+        if (entry == null) return null;
+
+        // If this entry is the logged-in user, use the live MainMenu avatar
+        if (entry == _userData && mainMenuAvatarDisplay != null)
+        {
+            Sprite live = mainMenuAvatarDisplay.GetCurrentAvatarSprite();
+            if (live != null) return live;
+        }
+
+        return entry.avatarSprite;
+    }
+
     private void UpdateTop3Avatars()
     {
         if (_leaderboardData == null || _leaderboardData.Count == 0)
         {
             if (firstPlaceAvatarImage != null) firstPlaceAvatarImage.sprite = null;
+            if (firstPlaceAvatarCustom != null) firstPlaceAvatarCustom.sprite = null;
             if (secondPlaceAvatarImage != null) secondPlaceAvatarImage.sprite = null;
+            if (secondPlaceAvatarCustom != null) secondPlaceAvatarCustom.sprite = null;
             if (thirdPlaceAvatarImage != null) thirdPlaceAvatarImage.sprite = null;
+            if (thirdPlaceAvatarCustom != null) thirdPlaceAvatarCustom.sprite = null;
             return;
         }
-        
-        if (firstPlaceAvatarImage != null)
+
+        if (firstPlaceAvatarImage != null || firstPlaceAvatarCustom != null)
         {
-            if (_leaderboardData.Count > 0 && _leaderboardData[0].avatarSprite != null)
-            {
-                firstPlaceAvatarImage.sprite = _leaderboardData[0].avatarSprite;
-                firstPlaceAvatarImage.enabled = true;
-            }
-            else
-            {
-                firstPlaceAvatarImage.sprite = null;
-                firstPlaceAvatarImage.enabled = false;
-            }
+            LeaderboardRowData entry = _leaderboardData.Count > 0 ? _leaderboardData[0] : null;
+            Sprite s = GetAvatarForEntry(entry);
+            bool isC = (entry == _userData && mainMenuAvatarDisplay != null) ? mainMenuAvatarDisplay.IsShowingCustomAvatar() : (entry != null && entry.isCustom);
+            SetTop3Slot(firstPlaceAvatarImage, firstPlaceAvatarCustom, s, isC);
         }
-        
-        if (secondPlaceAvatarImage != null)
+
+        if (secondPlaceAvatarImage != null || secondPlaceAvatarCustom != null)
         {
-            if (_leaderboardData.Count > 1 && _leaderboardData[1].avatarSprite != null)
-            {
-                secondPlaceAvatarImage.sprite = _leaderboardData[1].avatarSprite;
-                secondPlaceAvatarImage.enabled = true;
-            }
-            else
-            {
-                secondPlaceAvatarImage.sprite = null;
-                secondPlaceAvatarImage.enabled = false;
-            }
+            LeaderboardRowData entry = _leaderboardData.Count > 1 ? _leaderboardData[1] : null;
+            Sprite s = GetAvatarForEntry(entry);
+            bool isC = (entry == _userData && mainMenuAvatarDisplay != null) ? mainMenuAvatarDisplay.IsShowingCustomAvatar() : (entry != null && entry.isCustom);
+            SetTop3Slot(secondPlaceAvatarImage, secondPlaceAvatarCustom, s, isC);
         }
-        
-        if (thirdPlaceAvatarImage != null)
+
+        if (thirdPlaceAvatarImage != null || thirdPlaceAvatarCustom != null)
         {
-            if (_leaderboardData.Count > 2 && _leaderboardData[2].avatarSprite != null)
+            LeaderboardRowData entry = _leaderboardData.Count > 2 ? _leaderboardData[2] : null;
+            Sprite s = GetAvatarForEntry(entry);
+            bool isC = (entry == _userData && mainMenuAvatarDisplay != null) ? mainMenuAvatarDisplay.IsShowingCustomAvatar() : (entry != null && entry.isCustom);
+            SetTop3Slot(thirdPlaceAvatarImage, thirdPlaceAvatarCustom, s, isC);
+        }
+    }
+
+    private void SetTop3Slot(Image spriteSlot, Image customSlot, Sprite sprite, bool isCustom)
+    {
+        if (isCustom)
+        {
+            if (customSlot != null)
             {
-                thirdPlaceAvatarImage.sprite = _leaderboardData[2].avatarSprite;
-                thirdPlaceAvatarImage.enabled = true;
+                customSlot.sprite = sprite;
+                customSlot.rectTransform.localScale = Vector3.one * 2f;
+                customSlot.gameObject.SetActive(sprite != null);
             }
-            else
+            if (spriteSlot != null) spriteSlot.gameObject.SetActive(false);
+        }
+        else
+        {
+            if (spriteSlot != null)
             {
-                thirdPlaceAvatarImage.sprite = null;
-                thirdPlaceAvatarImage.enabled = false;
+                spriteSlot.sprite = sprite;
+                spriteSlot.rectTransform.localScale = Vector3.one;
+                spriteSlot.gameObject.SetActive(sprite != null);
             }
+            if (customSlot != null) customSlot.gameObject.SetActive(false);
         }
     }
     
@@ -336,17 +370,38 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
         if (userFixedName != null) userFixedName.text = !string.IsNullOrEmpty(playerData.playerName) ? playerData.playerName : "Guest";
         if (userFixedScore != null) userFixedScore.text = (_userData != null) ? _userData.score.ToString() : "0";
 
-        if (userFixedAvatar != null && mainMenuAvatarDisplay != null)
+        if ((userFixedAvatar != null || userFixedAvatarCustom != null) && mainMenuAvatarDisplay != null)
         {
             Sprite mainMenuSprite = mainMenuAvatarDisplay.GetCurrentAvatarSprite();
+            bool isC = mainMenuAvatarDisplay.IsShowingCustomAvatar();
+            
             if (mainMenuSprite != null) 
             {
-                userFixedAvatar.sprite = mainMenuSprite;
-                Debug.Log($"[LeaderboardManager] Synced avatar from MainMenu: {mainMenuSprite.name}");
+                if (isC)
+                {
+                    if (userFixedAvatarCustom != null)
+                    {
+                        userFixedAvatarCustom.sprite = mainMenuSprite;
+                        userFixedAvatarCustom.rectTransform.localScale = Vector3.one * 2f;
+                        userFixedAvatarCustom.gameObject.SetActive(true);
+                    }
+                    if (userFixedAvatar != null) userFixedAvatar.gameObject.SetActive(false);
+                }
+                else
+                {
+                    if (userFixedAvatar != null)
+                    {
+                        userFixedAvatar.sprite = mainMenuSprite;
+                        userFixedAvatar.rectTransform.localScale = Vector3.one;
+                        userFixedAvatar.gameObject.SetActive(true);
+                    }
+                    if (userFixedAvatarCustom != null) userFixedAvatarCustom.gameObject.SetActive(false);
+                }
+                Debug.Log($"[LeaderboardManager] Synced avatar from MainMenu (Custom: {isC})");
             }
             else
             {
-                Debug.LogWarning("[LeaderboardManager] MainMenuAvatarDisplay returned null sprite! MainMenu might not be loaded yet.");
+                Debug.LogWarning("[LeaderboardManager] MainMenuAvatarDisplay returned null sprite!");
             }
         }
 
@@ -419,31 +474,40 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
     public void SyncAvatarFromMainMenu()
     {
         if (mainMenuAvatarDisplay == null) return;
-        
+
         Sprite currentAvatar = mainMenuAvatarDisplay.GetCurrentAvatarSprite();
         if (currentAvatar == null) return;
 
         Debug.Log("[LeaderboardManager] External sync for gallery/preset avatar.");
-        
-        // 1. Update the fixed row
-        UpdateUserFixedRow();
-        
-        // 2. Update the sprite in the actual data list (so the scrolling list shows it too)
-        if (PlayFabManager.Instance != null && PlayFabManager.Instance.currentPlayerData != null)
+
+        // 1. Update the sprite on the user's data entry directly via object reference (most reliable)
+        if (_userData != null)
         {
+            _userData.avatarSprite = currentAvatar;
+            _userData.isCustom = mainMenuAvatarDisplay.IsShowingCustomAvatar();
+        }
+        else if (PlayFabManager.Instance != null && PlayFabManager.Instance.currentPlayerData != null)
+        {
+            // Fallback: search by username if _userData ref isn't set yet
             string pName = PlayFabManager.Instance.currentPlayerData.playerName;
-            if (_leaderboardData != null && !string.IsNullOrEmpty(pName))
+            if (string.IsNullOrEmpty(pName)) pName = "Guest User";
+            if (_leaderboardData != null)
             {
                 for (int i = 0; i < _leaderboardData.Count; i++)
                 {
-                    if (_leaderboardData[i].username == pName)
+                    if (_leaderboardData[i] != null && _leaderboardData[i].username == pName)
                     {
                         _leaderboardData[i].avatarSprite = currentAvatar;
+                        // Cache the reference for future calls
+                        _userData = _leaderboardData[i];
                         break;
                     }
                 }
             }
         }
+
+        // 2. Update the fixed row
+        UpdateUserFixedRow();
         
         // 3. Update top 3 visuals in case user is there
         UpdateTop3Avatars();
@@ -455,11 +519,11 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
         }
     }
     
-    public void AddTestEntry(string username, int score, Sprite avatar = null)
+    public void AddTestEntry(string username, int score, Sprite avatar = null, bool isCustom = false)
     {
         if (_leaderboardData == null) _leaderboardData = new SmallList<LeaderboardRowData>();
         int position = _leaderboardData.Count + 1;
-        _leaderboardData.Add(new LeaderboardRowData(position, username, score, avatar));
+        _leaderboardData.Add(new LeaderboardRowData(position, username, score, avatar, isCustom));
         SortAndUpdatePositions();
         RebuildFilteredIndices();
         UpdateTop3Avatars();
