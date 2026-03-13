@@ -39,6 +39,9 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
     private LeaderboardRowData _userData;
     private bool isInitialized = false;
     
+    // Filtered indices for the scroller — excludes the logged-in user's row
+    private System.Collections.Generic.List<int> _filteredIndices = new System.Collections.Generic.List<int>();
+    
     private void Start()
     {
         InitializeLeaderboard();
@@ -197,6 +200,7 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
         }
         
         SortAndUpdatePositions();
+        RebuildFilteredIndices();
         UpdateTop3Avatars();
         UpdateUserFixedRow();
         
@@ -224,6 +228,37 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
         for (int i = 0; i < _leaderboardData.Count; i++)
         {
             _leaderboardData[i].position = i + 1;
+        }
+    }
+    
+    /// <summary>
+    /// Rebuilds the filtered index list used by the scroller,
+    /// excluding the logged-in user's own row (it appears in the fixed row instead).
+    /// </summary>
+    private void RebuildFilteredIndices()
+    {
+        _filteredIndices.Clear();
+
+        // Match the exact same fallback logic used in LoadTestData
+        string loggedInUsername = "Guest User";
+        if (PlayFabManager.Instance != null &&
+            PlayFabManager.Instance.currentPlayerData != null &&
+            !string.IsNullOrEmpty(PlayFabManager.Instance.currentPlayerData.playerName))
+        {
+            loggedInUsername = PlayFabManager.Instance.currentPlayerData.playerName;
+        }
+
+        for (int i = 0; i < (_leaderboardData != null ? _leaderboardData.Count : 0); i++)
+        {
+            if (_leaderboardData[i] == null) continue;
+
+            // Skip by object reference (most reliable) OR by username match
+            bool isUserRow = (_userData != null && _leaderboardData[i] == _userData)
+                             || _leaderboardData[i].username == loggedInUsername;
+
+            if (isUserRow) continue;
+
+            _filteredIndices.Add(i);
         }
     }
     
@@ -426,6 +461,7 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
         int position = _leaderboardData.Count + 1;
         _leaderboardData.Add(new LeaderboardRowData(position, username, score, avatar));
         SortAndUpdatePositions();
+        RebuildFilteredIndices();
         UpdateTop3Avatars();
         if (scroller != null && scroller.gameObject.activeInHierarchy)
         {
@@ -437,6 +473,7 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
     public void ClearData()
     {
         if (_leaderboardData != null) _leaderboardData.Clear();
+        RebuildFilteredIndices();
         UpdateTop3Avatars();
         if (scroller != null && scroller.gameObject.activeInHierarchy)
         {
@@ -447,7 +484,7 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
     
     public int GetNumberOfCells(EnhancedScroller scroller)
     {
-        return _leaderboardData != null ? _leaderboardData.Count : 0;
+        return _filteredIndices != null ? _filteredIndices.Count : 0;
     }
     
     public float GetCellViewSize(EnhancedScroller scroller, int dataIndex)
@@ -460,10 +497,16 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
         if (cellViewPrefab == null) return null;
         LeaderboardRowUI cellView = scroller.GetCellView(cellViewPrefab) as LeaderboardRowUI;
         if (cellView == null) return null;
-        cellView.name = $"Leaderboard Row {dataIndex}";
-        if (_leaderboardData != null && dataIndex < _leaderboardData.Count)
+        
+        // Map the scroller's dataIndex → actual data index (user row excluded)
+        int actualIndex = (_filteredIndices != null && dataIndex < _filteredIndices.Count)
+                          ? _filteredIndices[dataIndex]
+                          : dataIndex;
+        
+        cellView.name = $"Leaderboard Row {actualIndex}";
+        if (_leaderboardData != null && actualIndex < _leaderboardData.Count)
         {
-            cellView.SetData(_leaderboardData[dataIndex]);
+            cellView.SetData(_leaderboardData[actualIndex]);
         }
         return cellView;
     }
