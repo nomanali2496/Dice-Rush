@@ -22,6 +22,7 @@ extern void ConfigurationSection_IsModified_m65E5503E4AB960336F17AF49AD94FDCA63E
 extern void ConfigurationSection_ResetModified_m3A4EF275904DF31400B33FD9C4F22537D2922844 (void);
 extern void ConfigurationSection_SerializeSection_m4526B82EBA81F4B2A049AA668905A27C58A07540 (void);
 extern void ConfigurationElementCollection_get_CollectionType_m26CF49B14935B5F3B2948C477B69AE95A7BAA303 (void);
+extern void ConfigurationElementCollection_get_Count_mB6BF33F872437348CD9E6FEFF15892F2298AC426 (void);
 extern void ConfigurationElementCollection_get_ElementName_m0B9C2540DC83D244A2CAB89C8BD1471F7682B7E9 (void);
 extern void ConfigurationElementCollection_get_ThrowOnDuplicate_mCF2E6A87DA72AB9E0D75BC31B29EE8C8A3078927 (void);
 extern void ConfigurationCollectionAttribute__ctor_m1C1204D379E75BB9D1AC794CAD78B0C95FDEDB8D (void);
@@ -38,7 +39,7 @@ extern void IgnoreSection_Reset_m8A41B00CEC8C72D608FEE005D438864B5638B84E (void)
 extern void IgnoreSection_ResetModified_m13E416D3841F85E3B334CF9EB517FFBE9F7E224C (void);
 extern void IgnoreSection_SerializeSection_m12BD59834DBCACE13758DA83BD3DEF2B8A6F3DBE (void);
 extern void ThrowStub_ThrowNotSupportedException_mA14F496FFE8A1B92C4565A9F18F2113E1C1F2A77 (void);
-static Il2CppMethodPointer s_methodPointers[35] = 
+static Il2CppMethodPointer s_methodPointers[36] = 
 {
 	ProviderBase_Initialize_mFC7015388A0935666004EA89121C0DD34AF4D751,
 	ConfigurationElement_get_Properties_m85E584B7C5EAFA411191A245AF41DEC274DE8F93,
@@ -55,6 +56,7 @@ static Il2CppMethodPointer s_methodPointers[35] =
 	ConfigurationSection_ResetModified_m3A4EF275904DF31400B33FD9C4F22537D2922844,
 	ConfigurationSection_SerializeSection_m4526B82EBA81F4B2A049AA668905A27C58A07540,
 	ConfigurationElementCollection_get_CollectionType_m26CF49B14935B5F3B2948C477B69AE95A7BAA303,
+	ConfigurationElementCollection_get_Count_mB6BF33F872437348CD9E6FEFF15892F2298AC426,
 	ConfigurationElementCollection_get_ElementName_m0B9C2540DC83D244A2CAB89C8BD1471F7682B7E9,
 	ConfigurationElementCollection_get_ThrowOnDuplicate_mCF2E6A87DA72AB9E0D75BC31B29EE8C8A3078927,
 	NULL,
@@ -76,49 +78,50 @@ static Il2CppMethodPointer s_methodPointers[35] =
 	NULL,
 	ThrowStub_ThrowNotSupportedException_mA14F496FFE8A1B92C4565A9F18F2113E1C1F2A77,
 };
-static const int32_t s_InvokerIndices[35] = 
+static const int32_t s_InvokerIndices[36] = 
 {
-	6451,
-	15994,
-	6424,
-	16234,
-	15791,
-	16234,
-	12403,
-	16234,
-	4063,
-	3023,
-	12403,
-	15791,
-	16234,
-	2574,
-	15929,
-	15994,
-	15791,
+	6877,
+	17753,
+	6850,
+	17994,
+	17549,
+	17994,
+	13510,
+	17994,
+	4350,
+	3236,
+	13510,
+	17549,
+	17994,
+	2780,
+	17688,
+	17688,
+	17753,
+	17549,
 	-1,
 	-1,
-	12403,
-	12403,
-	12403,
-	12339,
-	12403,
-	12403,
-	16234,
-	15994,
-	12403,
-	15791,
-	12403,
-	16234,
-	2574,
+	13510,
+	13510,
+	13510,
+	13446,
+	13510,
+	13510,
+	17994,
+	17753,
+	13510,
+	17549,
+	13510,
+	17994,
+	2780,
 	-1,
 	-1,
-	27922,
+	31287,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_System_Configuration_CodeGenModule;
 const Il2CppCodeGenModule g_System_Configuration_CodeGenModule = 
 {
 	"System.Configuration.dll",
-	35,
+	36,
 	s_methodPointers,
 	0,
 	NULL,

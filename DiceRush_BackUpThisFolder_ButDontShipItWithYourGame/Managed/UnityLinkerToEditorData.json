@@ -39,6 +39,14 @@
             "icon": null
           },
           {
+            "name": "Avatar",
+            "scenes": [
+              "Assets/Main Scene.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "Motion",
             "scenes": [],
             "dependencyType": 1,
@@ -419,6 +427,14 @@
             "icon": null
           },
           {
+            "name": "SkinnedMeshRenderer",
+            "scenes": [
+              "Assets/Main Scene.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "Skybox",
             "scenes": [],
             "dependencyType": 0,
@@ -593,6 +609,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.jsonserialize"
+          },
+          {
+            "name": "Required by ParticleSystem Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.particlesystem"
           },
           {
             "name": "Required by Physics Module",
@@ -969,11 +991,50 @@
         ]
       },
       {
+        "name": "ParticleSystem",
+        "dependencies": [
+          {
+            "name": "ParticleSystem",
+            "scenes": [
+              "Assets/Main Scene.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "ParticleSystemRenderer",
+            "scenes": [
+              "Assets/Main Scene.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          }
+        ]
+      },
+      {
         "name": "Physics",
         "dependencies": [
           {
             "name": "BoxCollider",
-            "scenes": [],
+            "scenes": [
+              "Assets/Main Scene.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "CapsuleCollider",
+            "scenes": [
+              "Assets/Main Scene.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "CharacterController",
+            "scenes": [
+              "Assets/Main Scene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -991,7 +1052,17 @@
           },
           {
             "name": "Rigidbody",
-            "scenes": [],
+            "scenes": [
+              "Assets/Main Scene.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "SphereCollider",
+            "scenes": [
+              "Assets/Main Scene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -1176,6 +1247,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.jsonserialize"
+          },
+          {
+            "name": "Required by ParticleSystem Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.particlesystem"
           },
           {
             "name": "Required by Physics Module",
@@ -1520,7 +1597,9 @@
           },
           {
             "name": "CanvasGroup",
-            "scenes": [],
+            "scenes": [
+              "Assets/Main Scene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },

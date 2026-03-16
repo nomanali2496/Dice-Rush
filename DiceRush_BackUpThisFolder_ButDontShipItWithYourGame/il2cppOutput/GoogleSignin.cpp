@@ -247,6 +247,8 @@ IL2CPP_EXTERN_C const RuntimeMethod* TaskCompletionSource_1__ctor_m9F873842EF24D
 IL2CPP_EXTERN_C const RuntimeMethod* TaskCompletionSource_1_get_Task_mE19DFD43D6CF945DBF793CEDE371A7BFF8941BC6_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CSignInAsyncU3Eb__11_0_mA34F90E45B845B39CF4F31470C7899F580BFC5A1_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CSignInSilentlyAsyncU3Eb__14_0_mCBC5988DFB816FE68835352A2BE6479E77C3CAF7_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ValueTuple_1__ctor_mCBE1A2A5123A278E9713DE263AA5BDC752D29BCE_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* ValueTuple_8__ctor_m7A1E34C08FC88A9988E64EC80F6704D163E7AC0E_RuntimeMethod_var;
 struct Delegate_t_marshaled_com;
 struct Delegate_t_marshaled_pinvoke;
 struct Exception_t_marshaled_com;
@@ -415,6 +417,14 @@ struct Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2  : public Task_t751C4CC3
 {
 	RuntimeObject* ___m_result;
 };
+struct ValueTuple_1_t663569ADAA18CD8C235E326982F6DF261C2C59A7 
+{
+	RuntimeObject* ___Item1;
+};
+struct ValueTuple_1_t4D700872753E7FC5B9BC4857CF23A08406E9AC10 
+{
+	Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___Item1;
+};
 struct AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03  : public AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0
 {
 };
@@ -526,6 +536,28 @@ struct MonoScriptData_t56A585E073BD452D100717C3F3BA96CF4BFC93B3_marshaled_com
 	int32_t ___TotalTypes;
 	int32_t ___TotalFiles;
 	int32_t ___IsEditorOnly;
+};
+struct ValueTuple_8_t00F450045B671A47FD1FA1BC4FA5AEFDDB4A502C 
+{
+	RuntimeObject* ___Item1;
+	RuntimeObject* ___Item2;
+	RuntimeObject* ___Item3;
+	RuntimeObject* ___Item4;
+	RuntimeObject* ___Item5;
+	RuntimeObject* ___Item6;
+	RuntimeObject* ___Item7;
+	ValueTuple_1_t663569ADAA18CD8C235E326982F6DF261C2C59A7 ___Rest;
+};
+struct ValueTuple_8_t560D7B304EC85F9BF8879160A37ABB8FBFCF939C 
+{
+	String_t* ___Item1;
+	String_t* ___Item2;
+	String_t* ___Item3;
+	String_t* ___Item4;
+	String_t* ___Item5;
+	String_t* ___Item6;
+	String_t* ___Item7;
+	ValueTuple_1_t4D700872753E7FC5B9BC4857CF23A08406E9AC10 ___Rest;
 };
 struct AndroidJavaProxy_tE5521F9761F7B95444B9C39FB15FDFC23F80A78D  : public RuntimeObject
 {
@@ -1100,12 +1132,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t AndroidJavaObject_CallStatic_TisInt32
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AndroidJavaObject_Call_TisRuntimeObject_mA5AF1A9E0463CE91F0ACB6AC2FE0C1922B579EF7_gshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_methodName, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_args, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_ElementAtOrDefault_TisRuntimeObject_mB4CCD6E98EC19C926EA785DDDECFEE583C3AF82A_gshared (RuntimeObject* ___0_source, int32_t ___1_index, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AndroidJavaObject_GetStatic_TisRuntimeObject_m4EF4E4761A0A6E99E0A298F653E8129B1494E4C9_gshared (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* __this, String_t* ___0_fieldName, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ValueTuple_1__ctor_mFAB64192C3D3526588EBF398DF500FFC33AA207C_gshared_inline (ValueTuple_1_t663569ADAA18CD8C235E326982F6DF261C2C59A7* __this, RuntimeObject* ___0_item1, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueTuple_8__ctor_m3378DD4230A09FBF0961A5E79AB89975DB9DB98A_gshared (ValueTuple_8_t00F450045B671A47FD1FA1BC4FA5AEFDDB4A502C* __this, RuntimeObject* ___0_item1, RuntimeObject* ___1_item2, RuntimeObject* ___2_item3, RuntimeObject* ___3_item4, RuntimeObject* ___4_item5, RuntimeObject* ___5_item6, RuntimeObject* ___6_item7, ValueTuple_1_t663569ADAA18CD8C235E326982F6DF261C2C59A7 ___7_rest, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameObject_AddComponent_TisRuntimeObject_m69B93700FACCF372F5753371C6E8FB780800B824_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
 
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B (RuntimeArray* ___0_array, RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 ___1_fldHandle, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2 (RuntimeObject* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignInException__ctor_mEFB1FB020F43727A96EF781D2255B29F45A41483 (SignInException_t1A39E711A0851916A1A091E093F99F3254083488* __this, int32_t ___0_status, String_t* ___1_message, const RuntimeMethod* method) ;
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* GoogleSignIn_get_Configuration_m88D0A38CDF9F974F949223FB91D0119FA3D54185_inline (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* GoogleSignIn_get_Configuration_m88D0A38CDF9F974F949223FB91D0119FA3D54185 (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInImpl__ctor_mFFDCFE493A1EE13F18F1D029CEAF793B6A7C2FB2 (GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887* __this, GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* ___0_configuration, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignIn__ctor_m9D6BBCAFF77E3F8C1B7A556114E8D9EC20D45470 (GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF* __this, RuntimeObject* ___0_impl, const RuntimeMethod* method) ;
 inline void TaskCompletionSource_1__ctor_m9F873842EF24DC9FF25A290D1137A1A2B1AA0F52 (TaskCompletionSource_1_t1180DC7FAC24A2BBEE5792EA5765A1C8CC2671FF* __this, const RuntimeMethod* method)
@@ -1259,6 +1293,14 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_Gi
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_IdToken_m4A42AE6E2B638B1904CBD666D6CD020A76A513CD_inline (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_AuthCode_mAB7501ADD8EDF9BB06A121DFE9AF840C676477A3_inline (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* GoogleSignInUser_get_ImageUrl_mD59AC87D6DCA359CC1831D23B17BF6D946DAFDEA_inline (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, const RuntimeMethod* method) ;
+inline void ValueTuple_1__ctor_mCBE1A2A5123A278E9713DE263AA5BDC752D29BCE_inline (ValueTuple_1_t4D700872753E7FC5B9BC4857CF23A08406E9AC10* __this, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___0_item1, const RuntimeMethod* method)
+{
+	((  void (*) (ValueTuple_1_t4D700872753E7FC5B9BC4857CF23A08406E9AC10*, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E*, const RuntimeMethod*))ValueTuple_1__ctor_mFAB64192C3D3526588EBF398DF500FFC33AA207C_gshared_inline)(__this, ___0_item1, method);
+}
+inline void ValueTuple_8__ctor_m7A1E34C08FC88A9988E64EC80F6704D163E7AC0E (ValueTuple_8_t560D7B304EC85F9BF8879160A37ABB8FBFCF939C* __this, String_t* ___0_item1, String_t* ___1_item2, String_t* ___2_item3, String_t* ___3_item4, String_t* ___4_item5, String_t* ___5_item6, String_t* ___6_item7, ValueTuple_1_t4D700872753E7FC5B9BC4857CF23A08406E9AC10 ___7_rest, const RuntimeMethod* method)
+{
+	((  void (*) (ValueTuple_8_t560D7B304EC85F9BF8879160A37ABB8FBFCF939C*, String_t*, String_t*, String_t*, String_t*, String_t*, String_t*, String_t*, ValueTuple_1_t4D700872753E7FC5B9BC4857CF23A08406E9AC10, const RuntimeMethod*))ValueTuple_8__ctor_m3378DD4230A09FBF0961A5E79AB89975DB9DB98A_gshared)(__this, ___0_item1, ___1_item2, ___2_item3, ___3_item4, ___4_item5, ___5_item6, ___6_item7, ___7_rest, method);
+}
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GoogleSignInImpl_GoogleSignIn_Status_m209453A2A6006F043246ACFFA18024387D1E5E54 (HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F ___0_self, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_exists, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Application_get_isPlaying_m25B0ABDFEF54F5370CD3F263A813540843D00F34 (const RuntimeMethod* method) ;
@@ -1283,7 +1325,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_m592DB0105CA0BC97AA1
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 114725
+// Method Definition Index: 119133
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t56A585E073BD452D100717C3F3BA96CF4BFC93B3 UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m76489AEB69C493BEF01C834145EC71116B0D8112 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1296,6 +1338,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t56A585E073BD452D100717C3F3BA9
 	}
 	MonoScriptData_t56A585E073BD452D100717C3F3BA96CF4BFC93B3 V_0;
 	memset((&V_0), 0, sizeof(V_0));
+	MonoScriptData_t56A585E073BD452D100717C3F3BA96CF4BFC93B3 V_1;
+	memset((&V_1), 0, sizeof(V_1));
 	{
 		il2cpp_codegen_initobj((&V_0), sizeof(MonoScriptData_t56A585E073BD452D100717C3F3BA96CF4BFC93B3));
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)751));
@@ -1314,10 +1358,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t56A585E073BD452D100717C3F3BA9
 		(&V_0)->___TotalTypes = ((int32_t)13);
 		(&V_0)->___IsEditorOnly = (bool)0;
 		MonoScriptData_t56A585E073BD452D100717C3F3BA96CF4BFC93B3 L_6 = V_0;
-		return L_6;
+		V_1 = L_6;
+		goto IL_005e;
+	}
+
+IL_005e:
+	{
+		MonoScriptData_t56A585E073BD452D100717C3F3BA96CF4BFC93B3 L_7 = V_1;
+		return L_7;
 	}
 }
-// Method Definition Index: 114726
+// Method Definition Index: 119134
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mECF6CB86130260F7BE3AB21E8563F861EF1994B4 (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t11B40FF4F6E7B577E66F3F0143FF148307DD06A4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1403,7 +1454,7 @@ IL2CPP_EXTERN_C void MonoScriptData_t56A585E073BD452D100717C3F3BA96CF4BFC93B3_ma
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 114745
+// Method Definition Index: 119154
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignIn_set_Configuration_m8776A7F24E2A96A318952F7A604120D6957047B8 (GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1412,12 +1463,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignIn_set_Configuration_m8776A7F2
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	bool V_0 = false;
+	int32_t G_B4_0 = 0;
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignIn.cs:69>
 		GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF* L_0 = ((GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_StaticFields*)il2cpp_codegen_static_fields_for(GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_il2cpp_TypeInfo_var))->___theInstance;
 		if (!L_0)
 		{
-			goto IL_0016;
+			goto IL_001a;
 		}
 	}
 	{
@@ -1425,35 +1478,52 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignIn_set_Configuration_m8776A7F2
 		GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* L_2 = ___0_value;
 		if ((((RuntimeObject*)(GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57*)L_1) == ((RuntimeObject*)(GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57*)L_2)))
 		{
-			goto IL_0016;
+			goto IL_001a;
 		}
 	}
 	{
 		GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* L_3 = ((GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_StaticFields*)il2cpp_codegen_static_fields_for(GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_il2cpp_TypeInfo_var))->___theConfiguration;
-		if (L_3)
+		G_B4_0 = ((((RuntimeObject*)(GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57*)L_3) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		goto IL_001b;
+	}
+
+IL_001a:
+	{
+		G_B4_0 = 1;
+	}
+
+IL_001b:
+	{
+		V_0 = (bool)G_B4_0;
+		bool L_4 = V_0;
+		if (!L_4)
 		{
-			goto IL_001d;
+			goto IL_0029;
 		}
 	}
-
-IL_0016:
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignIn.cs:70>
-		GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* L_4 = ___0_value;
-		((GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_StaticFields*)il2cpp_codegen_static_fields_for(GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_il2cpp_TypeInfo_var))->___theConfiguration = L_4;
-		Il2CppCodeGenWriteBarrier((void**)(&((GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_StaticFields*)il2cpp_codegen_static_fields_for(GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_il2cpp_TypeInfo_var))->___theConfiguration), (void*)L_4);
-		return;
+		GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* L_5 = ___0_value;
+		((GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_StaticFields*)il2cpp_codegen_static_fields_for(GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_il2cpp_TypeInfo_var))->___theConfiguration = L_5;
+		Il2CppCodeGenWriteBarrier((void**)(&((GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_StaticFields*)il2cpp_codegen_static_fields_for(GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_il2cpp_TypeInfo_var))->___theConfiguration), (void*)L_5);
+		goto IL_0037;
 	}
 
-IL_001d:
+IL_0029:
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignIn.cs:72>
-		SignInException_t1A39E711A0851916A1A091E093F99F3254083488* L_5 = (SignInException_t1A39E711A0851916A1A091E093F99F3254083488*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&SignInException_t1A39E711A0851916A1A091E093F99F3254083488_il2cpp_TypeInfo_var)));
-		SignInException__ctor_mEFB1FB020F43727A96EF781D2255B29F45A41483(L_5, ((int32_t)10), ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral610F0167257825ECFEADF630A48056085FC43188)), NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_5, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&GoogleSignIn_set_Configuration_m8776A7F24E2A96A318952F7A604120D6957047B8_RuntimeMethod_var)));
+		SignInException_t1A39E711A0851916A1A091E093F99F3254083488* L_6 = (SignInException_t1A39E711A0851916A1A091E093F99F3254083488*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&SignInException_t1A39E711A0851916A1A091E093F99F3254083488_il2cpp_TypeInfo_var)));
+		SignInException__ctor_mEFB1FB020F43727A96EF781D2255B29F45A41483(L_6, ((int32_t)10), ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral610F0167257825ECFEADF630A48056085FC43188)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_6, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&GoogleSignIn_set_Configuration_m8776A7F24E2A96A318952F7A604120D6957047B8_RuntimeMethod_var)));
+	}
+
+IL_0037:
+	{
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignIn.cs:74>
+		return;
 	}
 }
-// Method Definition Index: 114746
+// Method Definition Index: 119155
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* GoogleSignIn_get_Configuration_m88D0A38CDF9F974F949223FB91D0119FA3D54185 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1462,13 +1532,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GoogleSignInConfiguration_t5307D14EA1D76B5E0D
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* V_0 = NULL;
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignIn.cs:77>
 		GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* L_0 = ((GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_StaticFields*)il2cpp_codegen_static_fields_for(GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_il2cpp_TypeInfo_var))->___theConfiguration;
-		return L_0;
+		V_0 = L_0;
+		goto IL_0009;
+	}
+
+IL_0009:
+	{
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignIn.cs:78>
+		GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* L_1 = V_0;
+		return L_1;
 	}
 }
-// Method Definition Index: 114747
+// Method Definition Index: 119156
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF* GoogleSignIn_get_DefaultInstance_m42FE194859E95A015E875EA09B8FB257DEB3DFB7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1478,34 +1557,46 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B960
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	bool V_0 = false;
+	GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF* V_1 = NULL;
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignIn.cs:87>
 		GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF* L_0 = ((GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_StaticFields*)il2cpp_codegen_static_fields_for(GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_il2cpp_TypeInfo_var))->___theInstance;
-		if (L_0)
+		V_0 = (bool)((((RuntimeObject*)(GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
 		{
-			goto IL_001b;
+			goto IL_0023;
 		}
 	}
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignIn.cs:91>
-		GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* L_1;
-		L_1 = GoogleSignIn_get_Configuration_m88D0A38CDF9F974F949223FB91D0119FA3D54185_inline(NULL);
-		GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887* L_2 = (GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887*)il2cpp_codegen_object_new(GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887_il2cpp_TypeInfo_var);
-		GoogleSignInImpl__ctor_mFFDCFE493A1EE13F18F1D029CEAF793B6A7C2FB2(L_2, L_1, NULL);
-		GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF* L_3 = (GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF*)il2cpp_codegen_object_new(GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_il2cpp_TypeInfo_var);
-		GoogleSignIn__ctor_m9D6BBCAFF77E3F8C1B7A556114E8D9EC20D45470(L_3, L_2, NULL);
-		((GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_StaticFields*)il2cpp_codegen_static_fields_for(GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_il2cpp_TypeInfo_var))->___theInstance = L_3;
-		Il2CppCodeGenWriteBarrier((void**)(&((GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_StaticFields*)il2cpp_codegen_static_fields_for(GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_il2cpp_TypeInfo_var))->___theInstance), (void*)L_3);
+		GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* L_2;
+		L_2 = GoogleSignIn_get_Configuration_m88D0A38CDF9F974F949223FB91D0119FA3D54185(NULL);
+		GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887* L_3 = (GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887*)il2cpp_codegen_object_new(GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887_il2cpp_TypeInfo_var);
+		GoogleSignInImpl__ctor_mFFDCFE493A1EE13F18F1D029CEAF793B6A7C2FB2(L_3, L_2, NULL);
+		GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF* L_4 = (GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF*)il2cpp_codegen_object_new(GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_il2cpp_TypeInfo_var);
+		GoogleSignIn__ctor_m9D6BBCAFF77E3F8C1B7A556114E8D9EC20D45470(L_4, L_3, NULL);
+		((GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_StaticFields*)il2cpp_codegen_static_fields_for(GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_il2cpp_TypeInfo_var))->___theInstance = L_4;
+		Il2CppCodeGenWriteBarrier((void**)(&((GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_StaticFields*)il2cpp_codegen_static_fields_for(GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_il2cpp_TypeInfo_var))->___theInstance), (void*)L_4);
 	}
 
-IL_001b:
+IL_0023:
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignIn.cs:97>
-		GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF* L_4 = ((GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_StaticFields*)il2cpp_codegen_static_fields_for(GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_il2cpp_TypeInfo_var))->___theInstance;
-		return L_4;
+		GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF* L_5 = ((GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_StaticFields*)il2cpp_codegen_static_fields_for(GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_il2cpp_TypeInfo_var))->___theInstance;
+		V_1 = L_5;
+		goto IL_002b;
+	}
+
+IL_002b:
+	{
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignIn.cs:98>
+		GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF* L_6 = V_1;
+		return L_6;
 	}
 }
-// Method Definition Index: 114748
+// Method Definition Index: 119157
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignIn__ctor_m9D6BBCAFF77E3F8C1B7A556114E8D9EC20D45470 (GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF* __this, RuntimeObject* ___0_impl, const RuntimeMethod* method) 
 {
 	{
@@ -1519,7 +1610,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignIn__ctor_m9D6BBCAFF77E3F8C1B7A
 		return;
 	}
 }
-// Method Definition Index: 114749
+// Method Definition Index: 119158
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignIn_EnableDebugLogging_m9A2736A8BA136DF30BDE5C4F6ED92B22A34045E8 (GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF* __this, bool ___0_flag, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1538,7 +1629,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignIn_EnableDebugLogging_m9A2736A
 		return;
 	}
 }
-// Method Definition Index: 114750
+// Method Definition Index: 119159
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D678* GoogleSignIn_SignIn_m085F6F3074206AAA53B14F910B7E6BBD177F00BC (GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1552,6 +1643,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D
 		s_Il2CppMethodInitialized = true;
 	}
 	TaskCompletionSource_1_t1180DC7FAC24A2BBEE5792EA5765A1C8CC2671FF* V_0 = NULL;
+	Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D678* V_1 = NULL;
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignIn.cs:116>
 		TaskCompletionSource_1_t1180DC7FAC24A2BBEE5792EA5765A1C8CC2671FF* L_0 = (TaskCompletionSource_1_t1180DC7FAC24A2BBEE5792EA5765A1C8CC2671FF*)il2cpp_codegen_object_new(TaskCompletionSource_1_t1180DC7FAC24A2BBEE5792EA5765A1C8CC2671FF_il2cpp_TypeInfo_var);
@@ -1576,10 +1668,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D
 		NullCheck(L_7);
 		Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D678* L_8;
 		L_8 = TaskCompletionSource_1_get_Task_mE19DFD43D6CF945DBF793CEDE371A7BFF8941BC6_inline(L_7, TaskCompletionSource_1_get_Task_mE19DFD43D6CF945DBF793CEDE371A7BFF8941BC6_RuntimeMethod_var);
-		return L_8;
+		V_1 = L_8;
+		goto IL_002c;
+	}
+
+IL_002c:
+	{
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignIn.cs:119>
+		Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D678* L_9 = V_1;
+		return L_9;
 	}
 }
-// Method Definition Index: 114751
+// Method Definition Index: 119160
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D678* GoogleSignIn_SignInAsync_mF38F5D5408000F864F22872BF75499B9AACF6CEE (GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1596,6 +1696,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D
 		s_Il2CppMethodInitialized = true;
 	}
 	TaskCompletionSource_1_t1180DC7FAC24A2BBEE5792EA5765A1C8CC2671FF* V_0 = NULL;
+	Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D678* V_1 = NULL;
 	Action_1_t5EBB3AEBB9FE27F01C5BD35C3A6AD36CB3AA357A* G_B2_0 = NULL;
 	Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572* G_B2_1 = NULL;
 	Action_1_t5EBB3AEBB9FE27F01C5BD35C3A6AD36CB3AA357A* G_B1_0 = NULL;
@@ -1621,7 +1722,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D
 		{
 			G_B2_0 = L_6;
 			G_B2_1 = L_4;
-			goto IL_0036;
+			goto IL_0037;
 		}
 		G_B1_0 = L_6;
 		G_B1_1 = L_4;
@@ -1638,7 +1739,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D
 		G_B2_1 = G_B1_1;
 	}
 
-IL_0036:
+IL_0037:
 	{
 		NullCheck(G_B2_1);
 		Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572* L_10;
@@ -1648,10 +1749,18 @@ IL_0036:
 		NullCheck(L_11);
 		Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D678* L_12;
 		L_12 = TaskCompletionSource_1_get_Task_mE19DFD43D6CF945DBF793CEDE371A7BFF8941BC6_inline(L_11, TaskCompletionSource_1_get_Task_mE19DFD43D6CF945DBF793CEDE371A7BFF8941BC6_RuntimeMethod_var);
-		return L_12;
+		V_1 = L_12;
+		goto IL_0046;
+	}
+
+IL_0046:
+	{
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignIn.cs:125>
+		Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D678* L_13 = V_1;
+		return L_13;
 	}
 }
-// Method Definition Index: 114752
+// Method Definition Index: 119161
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Future_1_t4BF29057B5414E37343F71FD3CA541FE29CB36F1* GoogleSignIn_SignInFuture_m31801E39069A10FEBFF09ADA3CDA920DC5AD517E (GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1669,7 +1778,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Future_1_t4BF29057B5414E37343F71FD3CA541FE29C
 		return L_1;
 	}
 }
-// Method Definition Index: 114753
+// Method Definition Index: 119162
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D678* GoogleSignIn_SignInSilently_m3DCA07F6E437AA9A1F117CC02E0624BB15A5FDA6 (GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1683,6 +1792,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D
 		s_Il2CppMethodInitialized = true;
 	}
 	TaskCompletionSource_1_t1180DC7FAC24A2BBEE5792EA5765A1C8CC2671FF* V_0 = NULL;
+	Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D678* V_1 = NULL;
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignIn.cs:136>
 		TaskCompletionSource_1_t1180DC7FAC24A2BBEE5792EA5765A1C8CC2671FF* L_0 = (TaskCompletionSource_1_t1180DC7FAC24A2BBEE5792EA5765A1C8CC2671FF*)il2cpp_codegen_object_new(TaskCompletionSource_1_t1180DC7FAC24A2BBEE5792EA5765A1C8CC2671FF_il2cpp_TypeInfo_var);
@@ -1707,10 +1817,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D
 		NullCheck(L_7);
 		Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D678* L_8;
 		L_8 = TaskCompletionSource_1_get_Task_mE19DFD43D6CF945DBF793CEDE371A7BFF8941BC6_inline(L_7, TaskCompletionSource_1_get_Task_mE19DFD43D6CF945DBF793CEDE371A7BFF8941BC6_RuntimeMethod_var);
-		return L_8;
+		V_1 = L_8;
+		goto IL_002c;
+	}
+
+IL_002c:
+	{
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignIn.cs:139>
+		Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D678* L_9 = V_1;
+		return L_9;
 	}
 }
-// Method Definition Index: 114754
+// Method Definition Index: 119163
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D678* GoogleSignIn_SignInSilentlyAsync_m4B87E1502D923A42089B1A2B333C9A93234FB9A6 (GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1727,6 +1845,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D
 		s_Il2CppMethodInitialized = true;
 	}
 	TaskCompletionSource_1_t1180DC7FAC24A2BBEE5792EA5765A1C8CC2671FF* V_0 = NULL;
+	Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D678* V_1 = NULL;
 	Action_1_t5EBB3AEBB9FE27F01C5BD35C3A6AD36CB3AA357A* G_B2_0 = NULL;
 	Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572* G_B2_1 = NULL;
 	Action_1_t5EBB3AEBB9FE27F01C5BD35C3A6AD36CB3AA357A* G_B1_0 = NULL;
@@ -1752,7 +1871,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D
 		{
 			G_B2_0 = L_6;
 			G_B2_1 = L_4;
-			goto IL_0036;
+			goto IL_0037;
 		}
 		G_B1_0 = L_6;
 		G_B1_1 = L_4;
@@ -1769,7 +1888,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D
 		G_B2_1 = G_B1_1;
 	}
 
-IL_0036:
+IL_0037:
 	{
 		NullCheck(G_B2_1);
 		Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572* L_10;
@@ -1779,10 +1898,18 @@ IL_0036:
 		NullCheck(L_11);
 		Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D678* L_12;
 		L_12 = TaskCompletionSource_1_get_Task_mE19DFD43D6CF945DBF793CEDE371A7BFF8941BC6_inline(L_11, TaskCompletionSource_1_get_Task_mE19DFD43D6CF945DBF793CEDE371A7BFF8941BC6_RuntimeMethod_var);
-		return L_12;
+		V_1 = L_12;
+		goto IL_0046;
+	}
+
+IL_0046:
+	{
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignIn.cs:145>
+		Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D678* L_13 = V_1;
+		return L_13;
 	}
 }
-// Method Definition Index: 114755
+// Method Definition Index: 119164
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Future_1_t4BF29057B5414E37343F71FD3CA541FE29CB36F1* GoogleSignIn_SignInSilentlyFuture_m599A139C88D6B4C0695BB06958CAB555904A8722 (GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1800,7 +1927,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Future_1_t4BF29057B5414E37343F71FD3CA541FE29C
 		return L_1;
 	}
 }
-// Method Definition Index: 114756
+// Method Definition Index: 119165
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignIn_SignOut_m798626794F16910EEB26294BD4369F3B490CC472 (GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1822,7 +1949,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignIn_SignOut_m798626794F16910EEB
 		return;
 	}
 }
-// Method Definition Index: 114757
+// Method Definition Index: 119166
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignIn_Disconnect_m9DCE18275C7BCD1BEBDAD28810207E5658D6E7C0 (GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1848,7 +1975,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignIn_Disconnect_m9DCE18275C7BCD1
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 114758
+// Method Definition Index: 119167
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignInException__ctor_m3167FCB370C13B85B68BD5CFA2305BAD30B49EE2 (SignInException_t1A39E711A0851916A1A091E093F99F3254083488* __this, int32_t ___0_status, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1868,7 +1995,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignInException__ctor_m3167FCB370C13B85B
 		return;
 	}
 }
-// Method Definition Index: 114759
+// Method Definition Index: 119168
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignInException__ctor_mEFB1FB020F43727A96EF781D2255B29F45A41483 (SignInException_t1A39E711A0851916A1A091E093F99F3254083488* __this, int32_t ___0_status, String_t* ___1_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1889,7 +2016,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignInException__ctor_mEFB1FB020F43727A9
 		return;
 	}
 }
-// Method Definition Index: 114760
+// Method Definition Index: 119169
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignInException__ctor_m383708787EEB326F5A3CEB39C24482BCA11A33E3 (SignInException_t1A39E711A0851916A1A091E093F99F3254083488* __this, int32_t ___0_status, String_t* ___1_message, Exception_t* ___2_innerException, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1911,7 +2038,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignInException__ctor_m383708787EEB326F5
 		return;
 	}
 }
-// Method Definition Index: 114761
+// Method Definition Index: 119170
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignInException__ctor_m889B2848D265008BE273889CCDE66E804D81506B (SignInException_t1A39E711A0851916A1A091E093F99F3254083488* __this, int32_t ___0_status, SerializationInfo_t3C47F63E24BEB9FCE2DC6309E027F238DC5C5E37* ___1_info, StreamingContext_t56760522A751890146EE45F82F866B55B7E33677 ___2_context, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1933,7 +2060,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignInException__ctor_m889B2848D265008BE
 		return;
 	}
 }
-// Method Definition Index: 114762
+// Method Definition Index: 119171
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SignInException_get_Status_m4207ED7094A5177E0A0A17DE364AD33EE776D6FA (SignInException_t1A39E711A0851916A1A091E093F99F3254083488* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1942,7 +2069,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SignInException_get_Status_m4207ED709
 		return L_0;
 	}
 }
-// Method Definition Index: 114763
+// Method Definition Index: 119172
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignInException_set_Status_m06F443CC005EEADDEB9D8C3DF71E8880EC619D70 (SignInException_t1A39E711A0851916A1A091E093F99F3254083488* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -1960,7 +2087,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignInException_set_Status_m06F443CC005E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 114764
+// Method Definition Index: 119173
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m89953C7BC52A044A3BDA741CAC906AE8A9A6C31F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1977,7 +2104,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m89953C7BC52A044A3BDA741C
 		return;
 	}
 }
-// Method Definition Index: 114765
+// Method Definition Index: 119174
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_mAAAA1C002DC9DA25D263184BF5A33DE73DEBB7FB (U3CU3Ec_tDB2FCCD59CECED5EAF9948119C48B7A28DE542F0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1985,7 +2112,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_mAAAA1C002DC9DA25D263184BF
 		return;
 	}
 }
-// Method Definition Index: 114766
+// Method Definition Index: 119175
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CSignInAsyncU3Eb__11_0_mA34F90E45B845B39CF4F31470C7899F580BFC5A1 (U3CU3Ec_tDB2FCCD59CECED5EAF9948119C48B7A28DE542F0* __this, Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572* ___0_task, const RuntimeMethod* method) 
 {
 	{
@@ -1993,7 +2120,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CSignInAsyncU3Eb__11_0_mA34F90
 		return;
 	}
 }
-// Method Definition Index: 114767
+// Method Definition Index: 119176
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CSignInSilentlyAsyncU3Eb__14_0_mCBC5988DFB816FE68835352A2BE6479E77C3CAF7 (U3CU3Ec_tDB2FCCD59CECED5EAF9948119C48B7A28DE542F0* __this, Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572* ___0_task, const RuntimeMethod* method) 
 {
 	{
@@ -2009,12 +2136,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CSignInSilentlyAsyncU3Eb__14_0
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 114773
+// Method Definition Index: 119182
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInConfiguration__ctor_m0869D25269A6E1DB1896150CFC7E035C7D3546EA (GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* __this, const RuntimeMethod* method) 
 {
 	{
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignInConfiguration.cs:32>
+		__this->___UseGameSignIn = (bool)0;
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignInConfiguration.cs:40>
+		__this->___WebClientId = (String_t*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___WebClientId), (void*)(String_t*)NULL);
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignInConfiguration.cs:43>
+		__this->___RequestAuthCode = (bool)0;
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignInConfiguration.cs:47>
+		__this->___ForceTokenRefresh = (bool)0;
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignInConfiguration.cs:49>
+		__this->___RequestEmail = (bool)0;
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignInConfiguration.cs:51>
+		__this->___RequestIdToken = (bool)0;
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignInConfiguration.cs:53>
 		__this->___RequestProfile = (bool)1;
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignInConfiguration.cs:60>
+		__this->___HidePopups = (bool)0;
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignInConfiguration.cs:63>
+		__this->___AccountName = (String_t*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___AccountName), (void*)(String_t*)NULL);
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignInConfiguration.cs:65>
+		__this->___AdditionalScopes = (RuntimeObject*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___AdditionalScopes), (void*)(RuntimeObject*)NULL);
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		return;
 	}
@@ -2035,7 +2183,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInConfiguration__ctor_m0869D25
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 114774
+// Method Definition Index: 119183
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_AuthCode_mAB7501ADD8EDF9BB06A121DFE9AF840C676477A3 (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2044,7 +2192,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_AuthCode_mAB75
 		return L_0;
 	}
 }
-// Method Definition Index: 114775
+// Method Definition Index: 119184
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInUser_set_AuthCode_m93BC17B96BDFB4FCB39322C11021F30AC951FB8A (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -2055,7 +2203,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInUser_set_AuthCode_m93BC17B96
 		return;
 	}
 }
-// Method Definition Index: 114776
+// Method Definition Index: 119185
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_Email_m7303A59BDED078C2634FD843064E55AC5907D014 (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2064,7 +2212,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_Email_m7303A59
 		return L_0;
 	}
 }
-// Method Definition Index: 114777
+// Method Definition Index: 119186
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInUser_set_Email_m18F58E94A2656880AD14F1DB1FFF4EF61742AB4E (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -2075,7 +2223,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInUser_set_Email_m18F58E94A265
 		return;
 	}
 }
-// Method Definition Index: 114778
+// Method Definition Index: 119187
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_IdToken_m4A42AE6E2B638B1904CBD666D6CD020A76A513CD (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2084,7 +2232,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_IdToken_m4A42A
 		return L_0;
 	}
 }
-// Method Definition Index: 114779
+// Method Definition Index: 119188
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInUser_set_IdToken_mF0C5188019CF5F4612A13FE1D633884A7A10AB91 (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -2095,7 +2243,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInUser_set_IdToken_mF0C5188019
 		return;
 	}
 }
-// Method Definition Index: 114780
+// Method Definition Index: 119189
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_DisplayName_mB38DD9107955716F09BFD40F1A69F55936395D75 (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2104,7 +2252,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_DisplayName_mB
 		return L_0;
 	}
 }
-// Method Definition Index: 114781
+// Method Definition Index: 119190
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInUser_set_DisplayName_m08C401FA1EB7D5C2ABE2C4DB08729D2A1B6B253E (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -2115,7 +2263,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInUser_set_DisplayName_m08C401
 		return;
 	}
 }
-// Method Definition Index: 114782
+// Method Definition Index: 119191
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_GivenName_m8F13271B0A6D1E0C5A97810BCBB043A8D0BE1AC1 (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2124,7 +2272,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_GivenName_m8F1
 		return L_0;
 	}
 }
-// Method Definition Index: 114783
+// Method Definition Index: 119192
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInUser_set_GivenName_m2E04B88B7B7B8E64C657F3AA3BBA62E84CD082AE (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -2135,7 +2283,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInUser_set_GivenName_m2E04B88B
 		return;
 	}
 }
-// Method Definition Index: 114784
+// Method Definition Index: 119193
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_FamilyName_mAB727ADC5AF57C14E7791ACFAD37B2E6F39A3A5C (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2144,7 +2292,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_FamilyName_mAB
 		return L_0;
 	}
 }
-// Method Definition Index: 114785
+// Method Definition Index: 119194
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInUser_set_FamilyName_m9FBC2F5327C966E8CF65E93AE872CC1F37827AFF (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -2155,7 +2303,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInUser_set_FamilyName_m9FBC2F5
 		return;
 	}
 }
-// Method Definition Index: 114786
+// Method Definition Index: 119195
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* GoogleSignInUser_get_ImageUrl_mD59AC87D6DCA359CC1831D23B17BF6D946DAFDEA (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2164,7 +2312,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E
 		return L_0;
 	}
 }
-// Method Definition Index: 114787
+// Method Definition Index: 119196
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInUser_set_ImageUrl_m7454AB09D9DBBFD61EB540977E1580DC27B226BE (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -2175,7 +2323,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInUser_set_ImageUrl_m7454AB09D
 		return;
 	}
 }
-// Method Definition Index: 114788
+// Method Definition Index: 119197
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_UserId_m865781CBAC9C015842B148A939CD0F4433E4103B (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2184,7 +2332,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_UserId_m865781
 		return L_0;
 	}
 }
-// Method Definition Index: 114789
+// Method Definition Index: 119198
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInUser_set_UserId_mEEB8E05D475D3CD0CF6337173F03570AA8594202 (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -2195,7 +2343,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInUser_set_UserId_mEEB8E05D475
 		return;
 	}
 }
-// Method Definition Index: 114790
+// Method Definition Index: 119199
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInUser__ctor_mBD99BD9F39E563F092CC90A53BEC211C0BA34036 (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2211,7 +2359,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInUser__ctor_mBD99BD9F39E563F0
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 114791
+// Method Definition Index: 119200
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseObject__ctor_m18DFB872C5CF043237F2BE731191A25D59B980A8 (BaseObject_t3E74454EF853F9EAA2916F8F19C9767885FF58FB* __this, intptr_t ___0_intPtr, const RuntimeMethod* method) 
 {
 	{
@@ -2228,7 +2376,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseObject__ctor_m18DFB872C5CF043237F2BE
 		return;
 	}
 }
-// Method Definition Index: 114792
+// Method Definition Index: 119201
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F BaseObject_SelfPtr_m7F7E5F93E7561480682B91C6AE0089D0CFEE5362 (BaseObject_t3E74454EF853F9EAA2916F8F19C9767885FF58FB* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2238,6 +2386,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR HandleRef_t4B05E32B68797F702257D4E838B85A9763
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	bool V_0 = false;
+	HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F V_1;
+	memset((&V_1), 0, sizeof(V_1));
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/BaseObject.cs:37>
 		HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F* L_0 = (HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F*)(&__this->___selfHandleRef);
@@ -2248,26 +2399,36 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR HandleRef_t4B05E32B68797F702257D4E838B85A9763
 		Il2CppFakeBox<HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F> L_4(HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F_il2cpp_TypeInfo_var, L_0);
 		bool L_5;
 		L_5 = ValueType_Equals_mCA5344597A8055EC544855AD60A983B10E0EE67D((ValueType_t6D9B272BD21782F0A9A14F2E41F85A50E97A986F*)(&L_4), L_3, NULL);
-		if (!L_5)
+		V_0 = L_5;
+		bool L_6 = V_0;
+		if (!L_6)
 		{
-			goto IL_0028;
+			goto IL_002c;
 		}
 	}
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/BaseObject.cs:38>
-		InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* L_6 = (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB_il2cpp_TypeInfo_var)));
-		InvalidOperationException__ctor_mE4CB6F4712AB6D99A2358FBAE2E052B3EE976162(L_6, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralD6AEB00E2908EDBFDB9EF7E0BC9A94A5D2742E6C)), NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_6, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&BaseObject_SelfPtr_m7F7E5F93E7561480682B91C6AE0089D0CFEE5362_RuntimeMethod_var)));
+		InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* L_7 = (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB_il2cpp_TypeInfo_var)));
+		InvalidOperationException__ctor_mE4CB6F4712AB6D99A2358FBAE2E052B3EE976162(L_7, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralD6AEB00E2908EDBFDB9EF7E0BC9A94A5D2742E6C)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_7, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&BaseObject_SelfPtr_m7F7E5F93E7561480682B91C6AE0089D0CFEE5362_RuntimeMethod_var)));
 	}
 
-IL_0028:
+IL_002c:
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/BaseObject.cs:40>
-		HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F L_7 = __this->___selfHandleRef;
-		return L_7;
+		HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F L_8 = __this->___selfHandleRef;
+		V_1 = L_8;
+		goto IL_0035;
+	}
+
+IL_0035:
+	{
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/BaseObject.cs:41>
+		HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F L_9 = V_1;
+		return L_9;
 	}
 }
-// Method Definition Index: 114793
+// Method Definition Index: 119202
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseObject_Dispose_m1A1CA6B7BBCC85E261A3D69C09F658E0E7D06C20 (BaseObject_t3E74454EF853F9EAA2916F8F19C9767885FF58FB* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2286,7 +2447,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseObject_Dispose_m1A1CA6B7BBCC85E261A3
 		return;
 	}
 }
-// Method Definition Index: 114794
+// Method Definition Index: 119203
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* BaseObject_OutParamsToString_m3A39BB4EB01E8249F44C49499223079C5B23AE27 (OutStringMethod_t11AE334DE87E5E256FD065CEC1CCCCAC8D1EF939* ___0_outStringMethod, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2298,8 +2459,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* BaseObject_OutParamsToString_m3A39B
 	uintptr_t V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	String_t* V_1 = NULL;
-	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* V_2 = NULL;
-	Exception_t* V_3 = NULL;
+	bool V_2 = false;
+	String_t* V_3 = NULL;
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* V_4 = NULL;
+	Exception_t* V_5 = NULL;
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
 	Exception_t* G_B6_0 = NULL;
 	String_t* G_B6_1 = NULL;
@@ -2319,17 +2482,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* BaseObject_OutParamsToString_m3A39B
 		RuntimeObject* L_3 = Box(il2cpp_defaults.uint_class, &L_2);
 		bool L_4;
 		L_4 = UIntPtr_Equals_m7A952F9624311E28A8F6B7D48A27E897F59E7021((&V_0), L_3, NULL);
-		if (!L_4)
+		V_2 = L_4;
+		bool L_5 = V_2;
+		if (!L_5)
 		{
-			goto IL_0022;
+			goto IL_0028;
 		}
 	}
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/BaseObject.cs:52>
-		return (String_t*)NULL;
+		V_3 = (String_t*)NULL;
+		goto IL_008b;
 	}
 
-IL_0022:
+IL_0028:
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/BaseObject.cs:55>
 		V_1 = (String_t*)NULL;
@@ -2337,99 +2503,113 @@ IL_0022:
 	try
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/BaseObject.cs:57>
-		uint32_t L_5;
-		L_5 = UIntPtr_ToUInt32_mAD7A6CD8C254052CAC60B29546BE796360E0B965((&V_0), NULL);
-		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_6 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)L_5);
-		V_2 = L_6;
+		uint32_t L_6;
+		L_6 = UIntPtr_ToUInt32_mAD7A6CD8C254052CAC60B29546BE796360E0B965((&V_0), NULL);
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_7 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)L_6);
+		V_4 = L_7;
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/BaseObject.cs:58>
-		OutStringMethod_t11AE334DE87E5E256FD065CEC1CCCCAC8D1EF939* L_7 = ___0_outStringMethod;
-		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_8 = V_2;
-		uintptr_t L_9 = V_0;
-		NullCheck(L_7);
-		uintptr_t L_10;
-		L_10 = OutStringMethod_Invoke_m65036F152BF550FFC3B9C6C3277D6BE2B38ADED6_inline(L_7, L_8, L_9, NULL);
+		OutStringMethod_t11AE334DE87E5E256FD065CEC1CCCCAC8D1EF939* L_8 = ___0_outStringMethod;
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_9 = V_4;
+		uintptr_t L_10 = V_0;
+		NullCheck(L_8);
+		uintptr_t L_11;
+		L_11 = OutStringMethod_Invoke_m65036F152BF550FFC3B9C6C3277D6BE2B38ADED6_inline(L_8, L_9, L_10, NULL);
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/BaseObject.cs:59>
-		Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* L_11;
-		L_11 = Encoding_get_UTF8_m9FA98A53CE96FD6D02982625C5246DD36C1235C9(NULL);
-		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_12 = V_2;
-		uint32_t L_13;
-		L_13 = UIntPtr_ToUInt32_mAD7A6CD8C254052CAC60B29546BE796360E0B965((&V_0), NULL);
-		NullCheck(L_11);
-		String_t* L_14;
-		L_14 = VirtualFuncInvoker3< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(37, L_11, L_12, 0, ((int32_t)il2cpp_codegen_subtract((int32_t)L_13, 1)));
-		V_1 = L_14;
-		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/BaseObject.cs:60>
-		goto IL_0077;
+		Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* L_12;
+		L_12 = Encoding_get_UTF8_m9FA98A53CE96FD6D02982625C5246DD36C1235C9(NULL);
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_13 = V_4;
+		uint32_t L_14;
+		L_14 = UIntPtr_ToUInt32_mAD7A6CD8C254052CAC60B29546BE796360E0B965((&V_0), NULL);
+		NullCheck(L_12);
+		String_t* L_15;
+		L_15 = VirtualFuncInvoker3< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(37, L_12, L_13, 0, ((int32_t)il2cpp_codegen_subtract((int32_t)L_14, 1)));
+		V_1 = L_15;
+		goto IL_0087;
 	}
 	catch(Il2CppExceptionWrapper& e)
 	{
 		if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
 		{
 			IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
-			goto CATCH_0052;
+			goto CATCH_005d;
 		}
 		throw e;
 	}
 
-CATCH_0052:
+CATCH_005d:
 	{
 		{
-			Exception_t* L_15 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
+			Exception_t* L_16 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
 			//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/BaseObject.cs:60>
-			V_3 = L_15;
+			V_5 = L_16;
 			//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/BaseObject.cs:61>
-			Exception_t* L_16 = V_3;
-			Exception_t* L_17 = L_16;
-			if (L_17)
+			Exception_t* L_17 = V_5;
+			Exception_t* L_18 = L_17;
+			if (L_18)
 			{
-				G_B6_0 = L_17;
+				G_B6_0 = L_18;
 				G_B6_1 = ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral79098B9D29578596CA3BA3FCEDAFB6AF622D9AFD));
-				goto IL_0060;
+				goto IL_006e;
 			}
-			G_B5_0 = L_17;
+			G_B5_0 = L_18;
 			G_B5_1 = ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral79098B9D29578596CA3BA3FCEDAFB6AF622D9AFD));
 		}
 		{
 			G_B7_0 = ((String_t*)(NULL));
 			G_B7_1 = G_B5_1;
-			goto IL_0065;
+			goto IL_0073;
 		}
 
-IL_0060:
+IL_006e:
 		{
 			NullCheck(G_B6_0);
-			String_t* L_18;
-			L_18 = VirtualFuncInvoker0< String_t* >::Invoke(3, G_B6_0);
-			G_B7_0 = L_18;
+			String_t* L_19;
+			L_19 = VirtualFuncInvoker0< String_t* >::Invoke(3, G_B6_0);
+			G_B7_0 = L_19;
 			G_B7_1 = G_B6_1;
 		}
 
-IL_0065:
+IL_0073:
 		{
-			String_t* L_19;
-			L_19 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(G_B7_1, G_B7_0, NULL);
+			String_t* L_20;
+			L_20 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(G_B7_1, G_B7_0, NULL);
 			il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
-			Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_19, NULL);
+			Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_20, NULL);
 			//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/BaseObject.cs:62>
-			String_t* L_20 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_defaults.string_class))->___Empty;
-			V_1 = L_20;
-			//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/BaseObject.cs:63>
+			String_t* L_21 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_defaults.string_class))->___Empty;
+			V_1 = L_21;
 			IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
-			goto IL_0077;
+			goto IL_0087;
 		}
 	}
 
-IL_0077:
+IL_0087:
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/BaseObject.cs:64>
-		String_t* L_21 = V_1;
-		return L_21;
+		String_t* L_22 = V_1;
+		V_3 = L_22;
+		goto IL_008b;
+	}
+
+IL_008b:
+	{
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/BaseObject.cs:65>
+		String_t* L_23 = V_3;
+		return L_23;
 	}
 }
-// Method Definition Index: 114795
+// Method Definition Index: 119204
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BaseObject__cctor_mC93E61243573909AFCE3EA5DD04D49F521D15874 (const RuntimeMethod* method) 
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&BaseObject_t3E74454EF853F9EAA2916F8F19C9767885FF58FB_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/BaseObject.cs:30>
+		il2cpp_codegen_initobj((&((BaseObject_t3E74454EF853F9EAA2916F8F19C9767885FF58FB_StaticFields*)il2cpp_codegen_static_fields_for(BaseObject_t3E74454EF853F9EAA2916F8F19C9767885FF58FB_il2cpp_TypeInfo_var))->___nullSelf), sizeof(HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F));
 		return;
 	}
 }
@@ -2480,7 +2660,7 @@ IL2CPP_EXTERN_C  uintptr_t DelegatePInvokeWrapper_OutStringMethod_t11AE334DE87E5
 
 	return returnValue;
 }
-// Method Definition Index: 114796
+// Method Definition Index: 119205
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OutStringMethod__ctor_m7A4971C5333E6EA90A06AB9B04A889273F5295DB (OutStringMethod_t11AE334DE87E5E256FD065CEC1CCCCAC8D1EF939* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -2517,13 +2697,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OutStringMethod__ctor_m7A4971C5333E6EA90
 	}
 	__this->___extra_arg = (intptr_t)&OutStringMethod_Invoke_m65036F152BF550FFC3B9C6C3277D6BE2B38ADED6_Multicast;
 }
-// Method Definition Index: 114797
+// Method Definition Index: 119206
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uintptr_t OutStringMethod_Invoke_m65036F152BF550FFC3B9C6C3277D6BE2B38ADED6 (OutStringMethod_t11AE334DE87E5E256FD065CEC1CCCCAC8D1EF939* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_out_bytes, uintptr_t ___1_out_size, const RuntimeMethod* method) 
 {
 	typedef uintptr_t (*FunctionPointerType) (RuntimeObject*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, uintptr_t, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_out_bytes, ___1_out_size, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 114798
+// Method Definition Index: 119207
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OutStringMethod_BeginInvoke_m1B247AFA58969B8AD1679D630B43BD183AF3983D (OutStringMethod_t11AE334DE87E5E256FD065CEC1CCCCAC8D1EF939* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_out_bytes, uintptr_t ___1_out_size, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___2_callback, RuntimeObject* ___3_object, const RuntimeMethod* method) 
 {
 	void *__d_args[3] = {0};
@@ -2531,7 +2711,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OutStringMethod_BeginInvoke_m1
 	__d_args[1] = Box(il2cpp_defaults.uint_class, &___1_out_size);
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___2_callback, (RuntimeObject*)___3_object);
 }
-// Method Definition Index: 114799
+// Method Definition Index: 119208
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uintptr_t OutStringMethod_EndInvoke_m8825709A2E2D94CD67BDA24007121C4F34FF4200 (OutStringMethod_t11AE334DE87E5E256FD065CEC1CCCCAC8D1EF939* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	RuntimeObject *__result = il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___0_result, 0);
@@ -2545,7 +2725,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uintptr_t OutStringMethod_EndInvoke_m8825709A
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 114800
+// Method Definition Index: 119209
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInImpl__ctor_mFFDCFE493A1EE13F18F1D029CEAF793B6A7C2FB2 (GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887* __this, GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* ___0_configuration, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2560,7 +2740,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInImpl__ctor_mFFDCFE493A1EE13F
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* V_0 = NULL;
+	bool V_0 = false;
+	List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* V_1 = NULL;
+	bool V_2 = false;
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:33>
 		il2cpp_codegen_runtime_class_init_inline(GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887_il2cpp_TypeInfo_var);
@@ -2572,36 +2754,40 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInImpl__ctor_mFFDCFE493A1EE13F
 		BaseObject__ctor_m18DFB872C5CF043237F2BE731191A25D59B980A8(__this, L_1, NULL);
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:35>
 		GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* L_2 = ___0_configuration;
-		if (!L_2)
+		V_0 = (bool)((!(((RuntimeObject*)(GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57*)L_2) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_3 = V_0;
+		if (!L_3)
 		{
-			goto IL_0075;
+			goto IL_0086;
 		}
 	}
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:36>
-		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_3 = (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*)il2cpp_codegen_object_new(List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD_il2cpp_TypeInfo_var);
-		List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E(L_3, List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E_RuntimeMethod_var);
-		V_0 = L_3;
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_4 = (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*)il2cpp_codegen_object_new(List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD_il2cpp_TypeInfo_var);
+		List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E(L_4, List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E_RuntimeMethod_var);
+		V_1 = L_4;
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:37>
-		GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* L_4 = ___0_configuration;
-		NullCheck(L_4);
-		RuntimeObject* L_5 = L_4->___AdditionalScopes;
-		if (!L_5)
+		GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* L_5 = ___0_configuration;
+		NullCheck(L_5);
+		RuntimeObject* L_6 = L_5->___AdditionalScopes;
+		V_2 = (bool)((!(((RuntimeObject*)(RuntimeObject*)L_6) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_7 = V_2;
+		if (!L_7)
 		{
-			goto IL_002d;
+			goto IL_003d;
 		}
 	}
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:38>
-		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_6 = V_0;
-		GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* L_7 = ___0_configuration;
-		NullCheck(L_7);
-		RuntimeObject* L_8 = L_7->___AdditionalScopes;
-		NullCheck(L_6);
-		List_1_AddRange_m157DD7AD4D25423F82A21E533BC4686C83770D5E(L_6, L_8, List_1_AddRange_m157DD7AD4D25423F82A21E533BC4686C83770D5E_RuntimeMethod_var);
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_8 = V_1;
+		GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* L_9 = ___0_configuration;
+		NullCheck(L_9);
+		RuntimeObject* L_10 = L_9->___AdditionalScopes;
+		NullCheck(L_8);
+		List_1_AddRange_m157DD7AD4D25423F82A21E533BC4686C83770D5E(L_8, L_10, List_1_AddRange_m157DD7AD4D25423F82A21E533BC4686C83770D5E_RuntimeMethod_var);
 	}
 
-IL_002d:
+IL_003d:
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:40>
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:41>
@@ -2614,52 +2800,52 @@ IL_002d:
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:48>
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:49>
 		il2cpp_codegen_runtime_class_init_inline(BaseObject_t3E74454EF853F9EAA2916F8F19C9767885FF58FB_il2cpp_TypeInfo_var);
-		HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F L_9;
-		L_9 = BaseObject_SelfPtr_m7F7E5F93E7561480682B91C6AE0089D0CFEE5362(__this, NULL);
-		GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* L_10 = ___0_configuration;
-		NullCheck(L_10);
-		bool L_11 = L_10->___UseGameSignIn;
+		HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F L_11;
+		L_11 = BaseObject_SelfPtr_m7F7E5F93E7561480682B91C6AE0089D0CFEE5362(__this, NULL);
 		GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* L_12 = ___0_configuration;
 		NullCheck(L_12);
-		String_t* L_13 = L_12->___WebClientId;
+		bool L_13 = L_12->___UseGameSignIn;
 		GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* L_14 = ___0_configuration;
 		NullCheck(L_14);
-		bool L_15 = L_14->___RequestAuthCode;
+		String_t* L_15 = L_14->___WebClientId;
 		GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* L_16 = ___0_configuration;
 		NullCheck(L_16);
-		bool L_17 = L_16->___ForceTokenRefresh;
+		bool L_17 = L_16->___RequestAuthCode;
 		GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* L_18 = ___0_configuration;
 		NullCheck(L_18);
-		bool L_19 = L_18->___RequestEmail;
+		bool L_19 = L_18->___ForceTokenRefresh;
 		GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* L_20 = ___0_configuration;
 		NullCheck(L_20);
-		bool L_21 = L_20->___RequestIdToken;
+		bool L_21 = L_20->___RequestEmail;
 		GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* L_22 = ___0_configuration;
 		NullCheck(L_22);
-		bool L_23 = L_22->___HidePopups;
-		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_24 = V_0;
+		bool L_23 = L_22->___RequestIdToken;
+		GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* L_24 = ___0_configuration;
 		NullCheck(L_24);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_25;
-		L_25 = List_1_ToArray_m2C402D882AA60FC1D5C7C09A129BE7779F833B4A(L_24, List_1_ToArray_m2C402D882AA60FC1D5C7C09A129BE7779F833B4A_RuntimeMethod_var);
-		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_26 = V_0;
+		bool L_25 = L_24->___HidePopups;
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_26 = V_1;
 		NullCheck(L_26);
-		int32_t L_27;
-		L_27 = List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_inline(L_26, List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_RuntimeMethod_var);
-		GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* L_28 = ___0_configuration;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_27;
+		L_27 = List_1_ToArray_m2C402D882AA60FC1D5C7C09A129BE7779F833B4A(L_26, List_1_ToArray_m2C402D882AA60FC1D5C7C09A129BE7779F833B4A_RuntimeMethod_var);
+		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_28 = V_1;
 		NullCheck(L_28);
-		String_t* L_29 = L_28->___AccountName;
+		int32_t L_29;
+		L_29 = List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_inline(L_28, List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_RuntimeMethod_var);
+		GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* L_30 = ___0_configuration;
+		NullCheck(L_30);
+		String_t* L_31 = L_30->___AccountName;
 		il2cpp_codegen_runtime_class_init_inline(GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887_il2cpp_TypeInfo_var);
-		bool L_30;
-		L_30 = GoogleSignInImpl_GoogleSignIn_Configure_m529447589394ECDADF6F1941DF6D4E0F25D6B0DB(L_9, L_11, L_13, L_15, L_17, L_19, L_21, L_23, L_25, L_27, L_29, NULL);
+		bool L_32;
+		L_32 = GoogleSignInImpl_GoogleSignIn_Configure_m529447589394ECDADF6F1941DF6D4E0F25D6B0DB(L_11, L_13, L_15, L_17, L_19, L_21, L_23, L_25, L_27, L_29, L_31, NULL);
 	}
 
-IL_0075:
+IL_0086:
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:51>
 		return;
 	}
 }
-// Method Definition Index: 114801
+// Method Definition Index: 119210
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInImpl_EnableDebugLogging_m0751DDAF3D4655A1F17FEF9AD4C166826B719C8B (GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887* __this, bool ___0_flag, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2679,7 +2865,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInImpl_EnableDebugLogging_m075
 		return;
 	}
 }
-// Method Definition Index: 114802
+// Method Definition Index: 119211
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Future_1_t4BF29057B5414E37343F71FD3CA541FE29CB36F1* GoogleSignInImpl_SignIn_m709AC3C264F9EE363B58C37CA6410E42FAEC5076 (GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2691,6 +2877,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Future_1_t4BF29057B5414E37343F71FD3CA541FE29C
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeFuture_t876229FFA3B2B09EBC88C7C88C6547E507CD9FDC_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	intptr_t V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	Future_1_t4BF29057B5414E37343F71FD3CA541FE29CB36F1* V_1 = NULL;
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:67>
 		HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F L_0;
@@ -2698,15 +2887,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Future_1_t4BF29057B5414E37343F71FD3CA541FE29C
 		il2cpp_codegen_runtime_class_init_inline(GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887_il2cpp_TypeInfo_var);
 		intptr_t L_1;
 		L_1 = GoogleSignInImpl_GoogleSignIn_SignIn_m3204FB530AAFB5B4B8CFC163235099E5764E8257(L_0, NULL);
+		V_0 = L_1;
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:68>
-		NativeFuture_t876229FFA3B2B09EBC88C7C88C6547E507CD9FDC* L_2 = (NativeFuture_t876229FFA3B2B09EBC88C7C88C6547E507CD9FDC*)il2cpp_codegen_object_new(NativeFuture_t876229FFA3B2B09EBC88C7C88C6547E507CD9FDC_il2cpp_TypeInfo_var);
-		NativeFuture__ctor_mE32D8E975B1C930445B262B285F9404088F8EE73(L_2, L_1, NULL);
-		Future_1_t4BF29057B5414E37343F71FD3CA541FE29CB36F1* L_3 = (Future_1_t4BF29057B5414E37343F71FD3CA541FE29CB36F1*)il2cpp_codegen_object_new(Future_1_t4BF29057B5414E37343F71FD3CA541FE29CB36F1_il2cpp_TypeInfo_var);
-		Future_1__ctor_m97F9A128927D11377DDDE11538EE41548FA9EFD3(L_3, L_2, Future_1__ctor_m97F9A128927D11377DDDE11538EE41548FA9EFD3_RuntimeMethod_var);
-		return L_3;
+		intptr_t L_2 = V_0;
+		NativeFuture_t876229FFA3B2B09EBC88C7C88C6547E507CD9FDC* L_3 = (NativeFuture_t876229FFA3B2B09EBC88C7C88C6547E507CD9FDC*)il2cpp_codegen_object_new(NativeFuture_t876229FFA3B2B09EBC88C7C88C6547E507CD9FDC_il2cpp_TypeInfo_var);
+		NativeFuture__ctor_mE32D8E975B1C930445B262B285F9404088F8EE73(L_3, L_2, NULL);
+		Future_1_t4BF29057B5414E37343F71FD3CA541FE29CB36F1* L_4 = (Future_1_t4BF29057B5414E37343F71FD3CA541FE29CB36F1*)il2cpp_codegen_object_new(Future_1_t4BF29057B5414E37343F71FD3CA541FE29CB36F1_il2cpp_TypeInfo_var);
+		Future_1__ctor_m97F9A128927D11377DDDE11538EE41548FA9EFD3(L_4, L_3, Future_1__ctor_m97F9A128927D11377DDDE11538EE41548FA9EFD3_RuntimeMethod_var);
+		V_1 = L_4;
+		goto IL_001b;
+	}
+
+IL_001b:
+	{
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:69>
+		Future_1_t4BF29057B5414E37343F71FD3CA541FE29CB36F1* L_5 = V_1;
+		return L_5;
 	}
 }
-// Method Definition Index: 114803
+// Method Definition Index: 119212
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Future_1_t4BF29057B5414E37343F71FD3CA541FE29CB36F1* GoogleSignInImpl_SignInSilently_mC95D2A310DB2C94D326D0BA1DB969002F682C34C (GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2718,6 +2917,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Future_1_t4BF29057B5414E37343F71FD3CA541FE29C
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeFuture_t876229FFA3B2B09EBC88C7C88C6547E507CD9FDC_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	intptr_t V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	Future_1_t4BF29057B5414E37343F71FD3CA541FE29CB36F1* V_1 = NULL;
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:80>
 		HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F L_0;
@@ -2725,15 +2927,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Future_1_t4BF29057B5414E37343F71FD3CA541FE29C
 		il2cpp_codegen_runtime_class_init_inline(GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887_il2cpp_TypeInfo_var);
 		intptr_t L_1;
 		L_1 = GoogleSignInImpl_GoogleSignIn_SignInSilently_mC76660CD2EBE7D51ABE3AE4E665A32339585CAF2(L_0, NULL);
+		V_0 = L_1;
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:81>
-		NativeFuture_t876229FFA3B2B09EBC88C7C88C6547E507CD9FDC* L_2 = (NativeFuture_t876229FFA3B2B09EBC88C7C88C6547E507CD9FDC*)il2cpp_codegen_object_new(NativeFuture_t876229FFA3B2B09EBC88C7C88C6547E507CD9FDC_il2cpp_TypeInfo_var);
-		NativeFuture__ctor_mE32D8E975B1C930445B262B285F9404088F8EE73(L_2, L_1, NULL);
-		Future_1_t4BF29057B5414E37343F71FD3CA541FE29CB36F1* L_3 = (Future_1_t4BF29057B5414E37343F71FD3CA541FE29CB36F1*)il2cpp_codegen_object_new(Future_1_t4BF29057B5414E37343F71FD3CA541FE29CB36F1_il2cpp_TypeInfo_var);
-		Future_1__ctor_m97F9A128927D11377DDDE11538EE41548FA9EFD3(L_3, L_2, Future_1__ctor_m97F9A128927D11377DDDE11538EE41548FA9EFD3_RuntimeMethod_var);
-		return L_3;
+		intptr_t L_2 = V_0;
+		NativeFuture_t876229FFA3B2B09EBC88C7C88C6547E507CD9FDC* L_3 = (NativeFuture_t876229FFA3B2B09EBC88C7C88C6547E507CD9FDC*)il2cpp_codegen_object_new(NativeFuture_t876229FFA3B2B09EBC88C7C88C6547E507CD9FDC_il2cpp_TypeInfo_var);
+		NativeFuture__ctor_mE32D8E975B1C930445B262B285F9404088F8EE73(L_3, L_2, NULL);
+		Future_1_t4BF29057B5414E37343F71FD3CA541FE29CB36F1* L_4 = (Future_1_t4BF29057B5414E37343F71FD3CA541FE29CB36F1*)il2cpp_codegen_object_new(Future_1_t4BF29057B5414E37343F71FD3CA541FE29CB36F1_il2cpp_TypeInfo_var);
+		Future_1__ctor_m97F9A128927D11377DDDE11538EE41548FA9EFD3(L_4, L_3, Future_1__ctor_m97F9A128927D11377DDDE11538EE41548FA9EFD3_RuntimeMethod_var);
+		V_1 = L_4;
+		goto IL_001b;
+	}
+
+IL_001b:
+	{
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:82>
+		Future_1_t4BF29057B5414E37343F71FD3CA541FE29CB36F1* L_5 = V_1;
+		return L_5;
 	}
 }
-// Method Definition Index: 114804
+// Method Definition Index: 119213
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInImpl_SignOut_mEDA19A6013972C9AC2002F7B3C5A9D0BD311364D (GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2752,7 +2964,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInImpl_SignOut_mEDA19A6013972C
 		return;
 	}
 }
-// Method Definition Index: 114805
+// Method Definition Index: 119214
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInImpl_Disconnect_m0ADFC6FD24D04C6ADB98581A5D3AF699B8F4C4B9 (GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2771,7 +2983,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInImpl_Disconnect_m0ADFC6FD24D
 		return;
 	}
 }
-// Method Definition Index: 114806
+// Method Definition Index: 119215
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t GoogleSignInImpl_GoogleSignIn_Create_m8EDD2D285716DE6451D3453CB80553D14896A8C0 (intptr_t ___0_activity, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2782,6 +2994,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t GoogleSignInImpl_GoogleSignIn_Create
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralCB7592BDF3A13ECEF2C35F6D10F69FA828D0B392);
 		s_Il2CppMethodInitialized = true;
 	}
+	intptr_t V_0;
+	memset((&V_0), 0, sizeof(V_0));
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:103>
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_0;
@@ -2791,10 +3005,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t GoogleSignInImpl_GoogleSignIn_Create
 		NullCheck(L_1);
 		intptr_t L_2;
 		L_2 = AndroidJavaObject_GetRawObject_m536F043B5CE2C21369FF6173C9D2A9A62136BC48(L_1, NULL);
-		return L_2;
+		V_0 = L_2;
+		goto IL_0018;
+	}
+
+IL_0018:
+	{
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:104>
+		intptr_t L_3 = V_0;
+		return L_3;
 	}
 }
-// Method Definition Index: 114807
+// Method Definition Index: 119216
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GoogleSignInImpl_GoogleSignIn_Configure_m529447589394ECDADF6F1941DF6D4E0F25D6B0DB (HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F ___0_googleSignInHelper, bool ___1_useGameSignIn, String_t* ___2_webClientId, bool ___3_requestAuthCode, bool ___4_forceTokenRefresh, bool ___5_requestEmail, bool ___6_requestIdToken, bool ___7_hidePopups, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___8_additionalScopes, int32_t ___9_scopeCount, String_t* ___10_accountName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2806,6 +3028,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GoogleSignInImpl_GoogleSignIn_Configure_
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8AA4520EB9779404DDBBD879E6D8F4D4EED034AC);
 		s_Il2CppMethodInitialized = true;
 	}
+	bool V_0 = false;
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:112>
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:113>
@@ -2888,10 +3111,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GoogleSignInImpl_GoogleSignIn_Configure_
 		AndroidJavaObject_CallStatic_mB677DE04369EDD8E6DECAF2F233116EE1F06555C(L_0, _stringLiteral8AA4520EB9779404DDBBD879E6D8F4D4EED034AC, L_32, NULL);
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:124>
 		bool L_34 = ___1_useGameSignIn;
-		return (bool)((((int32_t)L_34) == ((int32_t)0))? 1 : 0);
+		V_0 = (bool)((((int32_t)L_34) == ((int32_t)0))? 1 : 0);
+		goto IL_0070;
+	}
+
+IL_0070:
+	{
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:125>
+		bool L_35 = V_0;
+		return L_35;
 	}
 }
-// Method Definition Index: 114808
+// Method Definition Index: 119217
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInImpl_GoogleSignIn_EnableDebugLogging_m6C88C44E9F8B336E20728E7491D04639137EE5E1 (HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F ___0_self, bool ___1_flag, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2919,7 +3150,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInImpl_GoogleSignIn_EnableDebu
 		return;
 	}
 }
-// Method Definition Index: 114809
+// Method Definition Index: 119218
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t GoogleSignInImpl_GoogleSignIn_SignIn_m3204FB530AAFB5B4B8CFC163235099E5764E8257 (HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F ___0_self, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2931,6 +3162,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t GoogleSignInImpl_GoogleSignIn_SignIn
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralCDA4901A930D81A056A2C573A3FA1335C093B17D);
 		s_Il2CppMethodInitialized = true;
 	}
+	intptr_t V_0;
+	memset((&V_0), 0, sizeof(V_0));
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:162>
 		il2cpp_codegen_runtime_class_init_inline(GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887_il2cpp_TypeInfo_var);
@@ -2943,10 +3176,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t GoogleSignInImpl_GoogleSignIn_SignIn
 		NullCheck(L_2);
 		intptr_t L_3;
 		L_3 = AndroidJavaObject_GetRawObject_m536F043B5CE2C21369FF6173C9D2A9A62136BC48(L_2, NULL);
-		return L_3;
+		V_0 = L_3;
+		goto IL_001d;
+	}
+
+IL_001d:
+	{
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:163>
+		intptr_t L_4 = V_0;
+		return L_4;
 	}
 }
-// Method Definition Index: 114810
+// Method Definition Index: 119219
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t GoogleSignInImpl_GoogleSignIn_SignInSilently_mC76660CD2EBE7D51ABE3AE4E665A32339585CAF2 (HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F ___0_self, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2958,6 +3199,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t GoogleSignInImpl_GoogleSignIn_SignIn
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral976C6C9FF92672B64ECA38585706CF9C60774006);
 		s_Il2CppMethodInitialized = true;
 	}
+	intptr_t V_0;
+	memset((&V_0), 0, sizeof(V_0));
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:167>
 		il2cpp_codegen_runtime_class_init_inline(GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887_il2cpp_TypeInfo_var);
@@ -2970,10 +3213,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t GoogleSignInImpl_GoogleSignIn_SignIn
 		NullCheck(L_2);
 		intptr_t L_3;
 		L_3 = AndroidJavaObject_GetRawObject_m536F043B5CE2C21369FF6173C9D2A9A62136BC48(L_2, NULL);
-		return L_3;
+		V_0 = L_3;
+		goto IL_001d;
+	}
+
+IL_001d:
+	{
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:168>
+		intptr_t L_4 = V_0;
+		return L_4;
 	}
 }
-// Method Definition Index: 114811
+// Method Definition Index: 119220
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInImpl_GoogleSignIn_Signout_m97C1982817C3FEDBC3405B91C1E356E0290B7D33 (HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F ___0_self, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2996,21 +3247,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInImpl_GoogleSignIn_Signout_m9
 		if (L_1)
 		{
 			G_B2_0 = L_1;
-			goto IL_000b;
+			goto IL_000c;
 		}
 		G_B1_0 = L_1;
 	}
 	{
-		goto IL_0010;
+		goto IL_0012;
 	}
 
-IL_000b:
+IL_000c:
 	{
 		NullCheck(G_B2_0);
 		AndroidJavaObject_Dispose_m2B1593C20B3CE1C8FF95982F638F50985F9DD9E6(G_B2_0, NULL);
 	}
 
-IL_0010:
+IL_0012:
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:173>
 		il2cpp_codegen_runtime_class_init_inline(GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887_il2cpp_TypeInfo_var);
@@ -3022,21 +3273,21 @@ IL_0010:
 		if (L_3)
 		{
 			G_B5_0 = L_3;
-			goto IL_0021;
+			goto IL_0023;
 		}
 		G_B4_0 = L_3;
 	}
 	{
-		goto IL_0026;
+		goto IL_0029;
 	}
 
-IL_0021:
+IL_0023:
 	{
 		NullCheck(G_B5_0);
 		AndroidJavaObject_Dispose_m2B1593C20B3CE1C8FF95982F638F50985F9DD9E6(G_B5_0, NULL);
 	}
 
-IL_0026:
+IL_0029:
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:176>
 		il2cpp_codegen_runtime_class_init_inline(GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887_il2cpp_TypeInfo_var);
@@ -3052,7 +3303,7 @@ IL_0026:
 		return;
 	}
 }
-// Method Definition Index: 114812
+// Method Definition Index: 119221
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInImpl_GoogleSignIn_Disconnect_m2D3717BC355DA1F0C466C88F4448B4D6EA1CBC19 (HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F ___0_self, const RuntimeMethod* method) 
 {
 	{
@@ -3062,7 +3313,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInImpl_GoogleSignIn_Disconnect
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&GoogleSignInImpl_GoogleSignIn_Disconnect_m2D3717BC355DA1F0C466C88F4448B4D6EA1CBC19_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 114813
+// Method Definition Index: 119222
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInImpl_GoogleSignIn_DisposeFuture_m673772B77043C71424828ACE60757A9965723FE1 (HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F ___0_self, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3084,7 +3335,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInImpl_GoogleSignIn_DisposeFut
 		return;
 	}
 }
-// Method Definition Index: 114814
+// Method Definition Index: 119223
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GoogleSignInImpl_GoogleSignIn_Pending_m3F3CF995171685E04D3A5BA8E89AA369BE0312B5 (HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F ___0_self, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3108,7 +3359,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GoogleSignInImpl_GoogleSignIn_Pending_m3
 		return L_2;
 	}
 }
-// Method Definition Index: 114815
+// Method Definition Index: 119224
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t GoogleSignInImpl_GoogleSignIn_Result_m65F90A535064A0693E7FE71223BF4611A4A02B47 (HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F ___0_self, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3127,7 +3378,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t GoogleSignInImpl_GoogleSignIn_Result
 		return L_1;
 	}
 }
-// Method Definition Index: 114816
+// Method Definition Index: 119225
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GoogleSignInImpl_GoogleSignIn_Status_m209453A2A6006F043246ACFFA18024387D1E5E54 (HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F ___0_self, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3151,7 +3402,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GoogleSignInImpl_GoogleSignIn_Status_
 		return L_2;
 	}
 }
-// Method Definition Index: 114817
+// Method Definition Index: 119226
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInImpl_GoogleSignIn_GetServerAuthCode_mAB5121BD8FF585B94553EDB83A99A77E497D9151 (HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F ___0_self, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3165,6 +3416,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInImpl_GoogleSignIn_GetSe
 	}
 	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* G_B2_0 = NULL;
 	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* G_B1_0 = NULL;
+	String_t* G_B3_0 = NULL;
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:191>
 		il2cpp_codegen_runtime_class_init_inline(GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887_il2cpp_TypeInfo_var);
@@ -3173,25 +3425,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInImpl_GoogleSignIn_GetSe
 		if (L_1)
 		{
 			G_B2_0 = L_1;
-			goto IL_000b;
+			goto IL_000c;
 		}
 		G_B1_0 = L_1;
 	}
 	{
-		return (String_t*)NULL;
+		G_B3_0 = ((String_t*)(NULL));
+		goto IL_001b;
 	}
 
-IL_000b:
+IL_000c:
 	{
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2;
 		L_2 = Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_inline(Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_RuntimeMethod_var);
 		NullCheck(G_B2_0);
 		String_t* L_3;
 		L_3 = AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40(G_B2_0, _stringLiteral120F94D6065CAF0D0F3DD64A963FBDA43A3F81AC, L_2, AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40_RuntimeMethod_var);
-		return L_3;
+		G_B3_0 = L_3;
+	}
+
+IL_001b:
+	{
+		return G_B3_0;
 	}
 }
-// Method Definition Index: 114818
+// Method Definition Index: 119227
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInImpl_GoogleSignIn_GetUserId_m8C80202BADD92EE047F65C5E2593F2C60649900E (HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F ___0_self, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3207,23 +3465,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInImpl_GoogleSignIn_GetUs
 		s_Il2CppMethodInitialized = true;
 	}
 	String_t* V_0 = NULL;
-	int32_t V_1 = 0;
-	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* V_2 = NULL;
-	String_t* V_3 = NULL;
+	String_t* V_1 = NULL;
+	int32_t V_2 = 0;
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* V_3 = NULL;
+	String_t* V_4 = NULL;
+	JObject_t22BBBA7A90517B7E66E8C9D8D16DE84CB5054DE1* V_5 = NULL;
+	bool V_6 = false;
+	String_t* V_7 = NULL;
+	bool V_8 = false;
+	Exception_t* V_9 = NULL;
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
+	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* G_B3_0 = NULL;
 	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* G_B2_0 = NULL;
-	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* G_B1_0 = NULL;
-	String_t* G_B3_0 = NULL;
-	String_t* G_B5_0 = NULL;
 	String_t* G_B4_0 = NULL;
-	String_t* G_B8_0 = NULL;
+	String_t* G_B9_0 = NULL;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B8_0 = NULL;
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B7_0 = NULL;
-	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B6_0 = NULL;
-	JObject_t22BBBA7A90517B7E66E8C9D8D16DE84CB5054DE1* G_B15_0 = NULL;
-	JObject_t22BBBA7A90517B7E66E8C9D8D16DE84CB5054DE1* G_B14_0 = NULL;
-	String_t* G_B18_0 = NULL;
-	JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* G_B17_0 = NULL;
-	JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* G_B16_0 = NULL;
+	int32_t G_B12_0 = 0;
+	String_t* G_B21_0 = NULL;
+	JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* G_B20_0 = NULL;
+	JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* G_B19_0 = NULL;
+	{
+	}
 	try
 	{
 		{
@@ -3233,192 +3496,207 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInImpl_GoogleSignIn_GetUs
 			AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_1 = L_0;
 			if (L_1)
 			{
-				G_B2_0 = L_1;
-				goto IL_000c_1;
+				G_B3_0 = L_1;
+				goto IL_000e_1;
 			}
-			G_B1_0 = L_1;
+			G_B2_0 = L_1;
 		}
 		{
-			G_B3_0 = ((String_t*)(NULL));
-			goto IL_001b_1;
+			G_B4_0 = ((String_t*)(NULL));
+			goto IL_001d_1;
 		}
 
-IL_000c_1:
+IL_000e_1:
 		{
 			ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2;
 			L_2 = Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_inline(Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_RuntimeMethod_var);
-			NullCheck(G_B2_0);
+			NullCheck(G_B3_0);
 			String_t* L_3;
-			L_3 = AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40(G_B2_0, _stringLiteralDE3298FBB59A4FF58406912DE9FC212BF5689F5C, L_2, AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40_RuntimeMethod_var);
-			G_B3_0 = L_3;
+			L_3 = AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40(G_B3_0, _stringLiteralDE3298FBB59A4FF58406912DE9FC212BF5689F5C, L_2, AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40_RuntimeMethod_var);
+			G_B4_0 = L_3;
 		}
 
-IL_001b_1:
+IL_001d_1:
 		{
+			V_0 = G_B4_0;
 			//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:198>
-			String_t* L_4 = G_B3_0;
+			String_t* L_4 = V_0;
 			if (L_4)
 			{
-				G_B5_0 = L_4;
-				goto IL_0022_1;
+				goto IL_0024_1;
 			}
-			G_B4_0 = L_4;
 		}
 		{
-			G_B8_0 = ((String_t*)(NULL));
-			goto IL_0037_1;
+			G_B9_0 = ((String_t*)(NULL));
+			goto IL_003a_1;
 		}
 
-IL_0022_1:
+IL_0024_1:
 		{
-			NullCheck(G_B5_0);
-			StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_5;
-			L_5 = String_Split_m9530B73D02054692283BF35C3A27C8F2230946F4(G_B5_0, ((int32_t)46), 0, NULL);
-			StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_6 = L_5;
-			if (L_6)
+			String_t* L_5 = V_0;
+			NullCheck(L_5);
+			StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_6;
+			L_6 = String_Split_m9530B73D02054692283BF35C3A27C8F2230946F4(L_5, ((int32_t)46), 0, NULL);
+			StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_7 = L_6;
+			if (L_7)
 			{
-				G_B7_0 = L_6;
-				goto IL_0031_1;
+				G_B8_0 = L_7;
+				goto IL_0034_1;
 			}
-			G_B6_0 = L_6;
+			G_B7_0 = L_7;
 		}
 		{
-			G_B8_0 = ((String_t*)(NULL));
-			goto IL_0037_1;
-		}
-
-IL_0031_1:
-		{
-			String_t* L_7;
-			L_7 = Enumerable_ElementAtOrDefault_TisString_t_mC0563A8C24DEE2224BC443FA50D1792481D4EEFB((RuntimeObject*)G_B7_0, 1, Enumerable_ElementAtOrDefault_TisString_t_mC0563A8C24DEE2224BC443FA50D1792481D4EEFB_RuntimeMethod_var);
-			G_B8_0 = L_7;
+			G_B9_0 = ((String_t*)(NULL));
+			goto IL_003a_1;
 		}
 
-IL_0037_1:
+IL_0034_1:
 		{
-			V_0 = G_B8_0;
+			String_t* L_8;
+			L_8 = Enumerable_ElementAtOrDefault_TisString_t_mC0563A8C24DEE2224BC443FA50D1792481D4EEFB((RuntimeObject*)G_B8_0, 1, Enumerable_ElementAtOrDefault_TisString_t_mC0563A8C24DEE2224BC443FA50D1792481D4EEFB_RuntimeMethod_var);
+			G_B9_0 = L_8;
+		}
+
+IL_003a_1:
+		{
+			V_1 = G_B9_0;
 			//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:199>
-			String_t* L_8 = V_0;
-			if (!L_8)
+			String_t* L_9 = V_1;
+			if (L_9)
 			{
-				goto IL_0044_1;
+				goto IL_0041_1;
 			}
 		}
 		{
-			String_t* L_9 = V_0;
-			NullCheck(L_9);
-			int32_t L_10;
-			L_10 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_9, NULL);
-			if ((((int32_t)L_10) > ((int32_t)1)))
-			{
-				goto IL_0048_1;
-			}
+			G_B12_0 = 0;
+			goto IL_004a_1;
 		}
 
-IL_0044_1:
+IL_0041_1:
+		{
+			String_t* L_10 = V_1;
+			NullCheck(L_10);
+			int32_t L_11;
+			L_11 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_10, NULL);
+			G_B12_0 = ((((int32_t)L_11) > ((int32_t)1))? 1 : 0);
+		}
+
+IL_004a_1:
+		{
+			V_6 = (bool)((((int32_t)G_B12_0) == ((int32_t)0))? 1 : 0);
+			bool L_12 = V_6;
+			if (!L_12)
+			{
+				goto IL_005b_1;
+			}
+		}
 		{
 			//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:200>
-			V_3 = (String_t*)NULL;
-			goto IL_00ba;
+			V_7 = (String_t*)NULL;
+			goto IL_00e3;
 		}
 
-IL_0048_1:
+IL_005b_1:
 		{
 			//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:203>
-			String_t* L_11 = V_0;
-			NullCheck(L_11);
-			String_t* L_12;
-			L_12 = String_Replace_m86403DC5F422D8D5E1CFAAF255B103CB807EDAAF(L_11, ((int32_t)45), ((int32_t)43), NULL);
-			NullCheck(L_12);
-			String_t* L_13;
-			L_13 = String_Replace_m86403DC5F422D8D5E1CFAAF255B103CB807EDAAF(L_12, ((int32_t)95), ((int32_t)47), NULL);
-			V_0 = L_13;
-			//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:204>
-			String_t* L_14 = V_0;
+			String_t* L_13 = V_1;
+			NullCheck(L_13);
+			String_t* L_14;
+			L_14 = String_Replace_m86403DC5F422D8D5E1CFAAF255B103CB807EDAAF(L_13, ((int32_t)45), ((int32_t)43), NULL);
 			NullCheck(L_14);
-			int32_t L_15;
-			L_15 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_14, NULL);
-			V_1 = ((int32_t)(L_15%4));
+			String_t* L_15;
+			L_15 = String_Replace_m86403DC5F422D8D5E1CFAAF255B103CB807EDAAF(L_14, ((int32_t)95), ((int32_t)47), NULL);
+			V_1 = L_15;
+			//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:204>
+			String_t* L_16 = V_1;
+			NullCheck(L_16);
+			int32_t L_17;
+			L_17 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_16, NULL);
+			V_2 = ((int32_t)(L_17%4));
 			//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:205>
-			int32_t L_16 = V_1;
-			if ((((int32_t)L_16) <= ((int32_t)0)))
+			int32_t L_18 = V_2;
+			V_8 = (bool)((((int32_t)L_18) > ((int32_t)0))? 1 : 0);
+			bool L_19 = V_8;
+			if (!L_19)
 			{
-				goto IL_007a_1;
+				goto IL_0093_1;
 			}
 		}
 		{
 			//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:206>
-			String_t* L_17 = V_0;
-			int32_t L_18 = V_1;
-			String_t* L_19;
-			L_19 = String_CreateString_mAA0705B41B390BDB42F67894B9B67C956814C71B(NULL, ((int32_t)61), ((int32_t)il2cpp_codegen_subtract(4, L_18)), NULL);
-			String_t* L_20;
-			L_20 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_17, L_19, NULL);
-			V_0 = L_20;
+			String_t* L_20 = V_1;
+			int32_t L_21 = V_2;
+			String_t* L_22;
+			L_22 = String_CreateString_mAA0705B41B390BDB42F67894B9B67C956814C71B(NULL, ((int32_t)61), ((int32_t)il2cpp_codegen_subtract(4, L_21)), NULL);
+			String_t* L_23;
+			L_23 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_20, L_22, NULL);
+			V_1 = L_23;
 		}
 
-IL_007a_1:
+IL_0093_1:
 		{
 			//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:207>
-			String_t* L_21 = V_0;
+			String_t* L_24 = V_1;
 			il2cpp_codegen_runtime_class_init_inline(Convert_t7097FF336D592F7C06D88A98349A44646F91EFFC_il2cpp_TypeInfo_var);
-			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_22;
-			L_22 = Convert_FromBase64String_m267327B074B41D93C9622D142B95CFAA4ACCCA9C(L_21, NULL);
-			V_2 = L_22;
+			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_25;
+			L_25 = Convert_FromBase64String_m267327B074B41D93C9622D142B95CFAA4ACCCA9C(L_24, NULL);
+			V_3 = L_25;
 			//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:208>
-			Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* L_23;
-			L_23 = Encoding_get_UTF8_m9FA98A53CE96FD6D02982625C5246DD36C1235C9(NULL);
-			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_24 = V_2;
-			NullCheck(L_23);
-			String_t* L_25;
-			L_25 = VirtualFuncInvoker1< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(36, L_23, L_24);
+			Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* L_26;
+			L_26 = Encoding_get_UTF8_m9FA98A53CE96FD6D02982625C5246DD36C1235C9(NULL);
+			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_27 = V_3;
+			NullCheck(L_26);
+			String_t* L_28;
+			L_28 = VirtualFuncInvoker1< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(36, L_26, L_27);
+			V_4 = L_28;
 			//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:209>
-			JObject_t22BBBA7A90517B7E66E8C9D8D16DE84CB5054DE1* L_26;
-			L_26 = JObject_Parse_mBC884661DD2708BA92BCE45E8C104924542A2D43(L_25, NULL);
+			String_t* L_29 = V_4;
+			JObject_t22BBBA7A90517B7E66E8C9D8D16DE84CB5054DE1* L_30;
+			L_30 = JObject_Parse_mBC884661DD2708BA92BCE45E8C104924542A2D43(L_29, NULL);
+			V_5 = L_30;
 			//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:210>
-			JObject_t22BBBA7A90517B7E66E8C9D8D16DE84CB5054DE1* L_27 = L_26;
-			if (L_27)
+			JObject_t22BBBA7A90517B7E66E8C9D8D16DE84CB5054DE1* L_31 = V_5;
+			if (L_31)
 			{
-				G_B15_0 = L_27;
-				goto IL_0098_1;
+				goto IL_00b7_1;
 			}
-			G_B14_0 = L_27;
 		}
 		{
-			G_B18_0 = ((String_t*)(NULL));
-			goto IL_00ae_1;
+			G_B21_0 = ((String_t*)(NULL));
+			goto IL_00cf_1;
 		}
 
-IL_0098_1:
+IL_00b7_1:
 		{
-			NullCheck(G_B15_0);
-			JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* L_28;
-			L_28 = JObject_get_Item_m889A29E8FCEA531AF829407F208DD05F0108C50B(G_B15_0, _stringLiteralCEE09538204AD98EAB3D28D92042369A4AA98CF2, NULL);
-			JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* L_29 = L_28;
-			if (L_29)
+			JObject_t22BBBA7A90517B7E66E8C9D8D16DE84CB5054DE1* L_32 = V_5;
+			NullCheck(L_32);
+			JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* L_33;
+			L_33 = JObject_get_Item_m889A29E8FCEA531AF829407F208DD05F0108C50B(L_32, _stringLiteralCEE09538204AD98EAB3D28D92042369A4AA98CF2, NULL);
+			JToken_tFD7D9015F3F97A09AD93E439ACE894D12C06E8B3* L_34 = L_33;
+			if (L_34)
 			{
-				G_B17_0 = L_29;
-				goto IL_00a9_1;
+				G_B20_0 = L_34;
+				goto IL_00ca_1;
 			}
-			G_B16_0 = L_29;
+			G_B19_0 = L_34;
 		}
 		{
-			G_B18_0 = ((String_t*)(NULL));
-			goto IL_00ae_1;
-		}
-
-IL_00a9_1:
-		{
-			NullCheck(G_B17_0);
-			String_t* L_30;
-			L_30 = VirtualFuncInvoker0< String_t* >::Invoke(3, G_B17_0);
-			G_B18_0 = L_30;
+			G_B21_0 = ((String_t*)(NULL));
+			goto IL_00cf_1;
 		}
 
-IL_00ae_1:
+IL_00ca_1:
 		{
-			V_3 = G_B18_0;
-			goto IL_00ba;
+			NullCheck(G_B20_0);
+			String_t* L_35;
+			L_35 = VirtualFuncInvoker0< String_t* >::Invoke(3, G_B20_0);
+			G_B21_0 = L_35;
+		}
+
+IL_00cf_1:
+		{
+			V_7 = G_B21_0;
+			goto IL_00e3;
 		}
 	}
 	catch(Il2CppExceptionWrapper& e)
@@ -3426,31 +3704,34 @@ IL_00ae_1:
 		if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
 		{
 			IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
-			goto CATCH_00b1;
+			goto CATCH_00d3;
 		}
 		throw e;
 	}
 
-CATCH_00b1:
+CATCH_00d3:
 	{
-		Exception_t* L_31 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
+		Exception_t* L_36 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:212>
+		V_9 = L_36;
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:214>
+		Exception_t* L_37 = V_9;
 		il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
-		Debug_LogException_mAB3F4DC7297ED8FBB49DAA718B70E59A6B0171B0(L_31, NULL);
+		Debug_LogException_mAB3F4DC7297ED8FBB49DAA718B70E59A6B0171B0(L_37, NULL);
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:215>
-		V_3 = (String_t*)NULL;
+		V_7 = (String_t*)NULL;
 		IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
-		goto IL_00ba;
+		goto IL_00e3;
 	}
 
-IL_00ba:
+IL_00e3:
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:217>
-		String_t* L_32 = V_3;
-		return L_32;
+		String_t* L_38 = V_7;
+		return L_38;
 	}
 }
-// Method Definition Index: 114819
+// Method Definition Index: 119228
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInImpl_GoogleSignIn_GetEmail_m4111C4F0D4B4942BCA5456628FD1B5704D008167 (HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F ___0_self, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3464,6 +3745,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInImpl_GoogleSignIn_GetEm
 	}
 	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* G_B2_0 = NULL;
 	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* G_B1_0 = NULL;
+	String_t* G_B3_0 = NULL;
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:219>
 		il2cpp_codegen_runtime_class_init_inline(GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887_il2cpp_TypeInfo_var);
@@ -3472,25 +3754,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInImpl_GoogleSignIn_GetEm
 		if (L_1)
 		{
 			G_B2_0 = L_1;
-			goto IL_000b;
+			goto IL_000c;
 		}
 		G_B1_0 = L_1;
 	}
 	{
-		return (String_t*)NULL;
+		G_B3_0 = ((String_t*)(NULL));
+		goto IL_001b;
 	}
 
-IL_000b:
+IL_000c:
 	{
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2;
 		L_2 = Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_inline(Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_RuntimeMethod_var);
 		NullCheck(G_B2_0);
 		String_t* L_3;
 		L_3 = AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40(G_B2_0, _stringLiteralBBFA7F41AA1206FFC1D57C437B2C8F2C4D2F797D, L_2, AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40_RuntimeMethod_var);
-		return L_3;
+		G_B3_0 = L_3;
+	}
+
+IL_001b:
+	{
+		return G_B3_0;
 	}
 }
-// Method Definition Index: 114820
+// Method Definition Index: 119229
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInImpl_GoogleSignIn_GetDisplayName_mB0CE05F6B2C5B5EC45CC9DF07C05D19FE7259331 (HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F ___0_self, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3504,6 +3792,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInImpl_GoogleSignIn_GetDi
 	}
 	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* G_B2_0 = NULL;
 	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* G_B1_0 = NULL;
+	String_t* G_B3_0 = NULL;
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:221>
 		il2cpp_codegen_runtime_class_init_inline(GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887_il2cpp_TypeInfo_var);
@@ -3512,25 +3801,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInImpl_GoogleSignIn_GetDi
 		if (L_1)
 		{
 			G_B2_0 = L_1;
-			goto IL_000b;
+			goto IL_000c;
 		}
 		G_B1_0 = L_1;
 	}
 	{
-		return (String_t*)NULL;
+		G_B3_0 = ((String_t*)(NULL));
+		goto IL_001b;
 	}
 
-IL_000b:
+IL_000c:
 	{
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2;
 		L_2 = Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_inline(Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_RuntimeMethod_var);
 		NullCheck(G_B2_0);
 		String_t* L_3;
 		L_3 = AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40(G_B2_0, _stringLiteral56BE3BF8FB826FC634288376AA110A996FC27037, L_2, AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40_RuntimeMethod_var);
-		return L_3;
+		G_B3_0 = L_3;
+	}
+
+IL_001b:
+	{
+		return G_B3_0;
 	}
 }
-// Method Definition Index: 114821
+// Method Definition Index: 119230
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInImpl_GoogleSignIn_GetFamilyName_m0CF73DEC44FD149FA3F2F539D495F4182C03F2E0 (HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F ___0_self, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3544,6 +3839,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInImpl_GoogleSignIn_GetFa
 	}
 	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* G_B2_0 = NULL;
 	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* G_B1_0 = NULL;
+	String_t* G_B3_0 = NULL;
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:223>
 		il2cpp_codegen_runtime_class_init_inline(GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887_il2cpp_TypeInfo_var);
@@ -3552,25 +3848,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInImpl_GoogleSignIn_GetFa
 		if (L_1)
 		{
 			G_B2_0 = L_1;
-			goto IL_000b;
+			goto IL_000c;
 		}
 		G_B1_0 = L_1;
 	}
 	{
-		return (String_t*)NULL;
+		G_B3_0 = ((String_t*)(NULL));
+		goto IL_001b;
 	}
 
-IL_000b:
+IL_000c:
 	{
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2;
 		L_2 = Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_inline(Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_RuntimeMethod_var);
 		NullCheck(G_B2_0);
 		String_t* L_3;
 		L_3 = AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40(G_B2_0, _stringLiteral224C6173C65BEC2C5010097237C5C56DB79D707D, L_2, AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40_RuntimeMethod_var);
-		return L_3;
+		G_B3_0 = L_3;
+	}
+
+IL_001b:
+	{
+		return G_B3_0;
 	}
 }
-// Method Definition Index: 114822
+// Method Definition Index: 119231
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInImpl_GoogleSignIn_GetGivenName_m50765672ABCFBD394D593023CE43B11A139E37F4 (HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F ___0_self, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3584,6 +3886,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInImpl_GoogleSignIn_GetGi
 	}
 	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* G_B2_0 = NULL;
 	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* G_B1_0 = NULL;
+	String_t* G_B3_0 = NULL;
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:225>
 		il2cpp_codegen_runtime_class_init_inline(GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887_il2cpp_TypeInfo_var);
@@ -3592,25 +3895,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInImpl_GoogleSignIn_GetGi
 		if (L_1)
 		{
 			G_B2_0 = L_1;
-			goto IL_000b;
+			goto IL_000c;
 		}
 		G_B1_0 = L_1;
 	}
 	{
-		return (String_t*)NULL;
+		G_B3_0 = ((String_t*)(NULL));
+		goto IL_001b;
 	}
 
-IL_000b:
+IL_000c:
 	{
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2;
 		L_2 = Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_inline(Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_RuntimeMethod_var);
 		NullCheck(G_B2_0);
 		String_t* L_3;
 		L_3 = AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40(G_B2_0, _stringLiteralA4F96F963E7006FC4801354B8A7E21CDEEAD2CF5, L_2, AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40_RuntimeMethod_var);
-		return L_3;
+		G_B3_0 = L_3;
+	}
+
+IL_001b:
+	{
+		return G_B3_0;
 	}
 }
-// Method Definition Index: 114823
+// Method Definition Index: 119232
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInImpl_GoogleSignIn_GetIdToken_mF4FD46BFE88B49E1A7571C943169DF94B9F5CC44 (HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F ___0_self, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3624,6 +3933,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInImpl_GoogleSignIn_GetId
 	}
 	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* G_B2_0 = NULL;
 	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* G_B1_0 = NULL;
+	String_t* G_B3_0 = NULL;
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:227>
 		il2cpp_codegen_runtime_class_init_inline(GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887_il2cpp_TypeInfo_var);
@@ -3632,25 +3942,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInImpl_GoogleSignIn_GetId
 		if (L_1)
 		{
 			G_B2_0 = L_1;
-			goto IL_000b;
+			goto IL_000c;
 		}
 		G_B1_0 = L_1;
 	}
 	{
-		return (String_t*)NULL;
+		G_B3_0 = ((String_t*)(NULL));
+		goto IL_001b;
 	}
 
-IL_000b:
+IL_000c:
 	{
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2;
 		L_2 = Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_inline(Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_RuntimeMethod_var);
 		NullCheck(G_B2_0);
 		String_t* L_3;
 		L_3 = AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40(G_B2_0, _stringLiteralDE3298FBB59A4FF58406912DE9FC212BF5689F5C, L_2, AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40_RuntimeMethod_var);
-		return L_3;
+		G_B3_0 = L_3;
+	}
+
+IL_001b:
+	{
+		return G_B3_0;
 	}
 }
-// Method Definition Index: 114824
+// Method Definition Index: 119233
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInImpl_GoogleSignIn_GetImageUrl_m42254C90BE5C993F12AD00178807AB01F95D594F (HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F ___0_self, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3666,6 +3982,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInImpl_GoogleSignIn_GetIm
 	}
 	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* G_B2_0 = NULL;
 	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* G_B1_0 = NULL;
+	String_t* G_B5_0 = NULL;
 	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* G_B4_0 = NULL;
 	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* G_B3_0 = NULL;
 	{
@@ -3676,15 +3993,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GoogleSignInImpl_GoogleSignIn_GetIm
 		if (L_1)
 		{
 			G_B2_0 = L_1;
-			goto IL_000b;
+			goto IL_000c;
 		}
 		G_B1_0 = L_1;
 	}
 	{
-		return (String_t*)NULL;
+		G_B5_0 = ((String_t*)(NULL));
+		goto IL_0031;
 	}
 
-IL_000b:
+IL_000c:
 	{
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2;
 		L_2 = Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_inline(Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_RuntimeMethod_var);
@@ -3695,25 +4013,31 @@ IL_000b:
 		if (L_4)
 		{
 			G_B4_0 = L_4;
-			goto IL_0020;
+			goto IL_0022;
 		}
 		G_B3_0 = L_4;
 	}
 	{
-		return (String_t*)NULL;
+		G_B5_0 = ((String_t*)(NULL));
+		goto IL_0031;
 	}
 
-IL_0020:
+IL_0022:
 	{
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_5;
 		L_5 = Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_inline(Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_RuntimeMethod_var);
 		NullCheck(G_B4_0);
 		String_t* L_6;
 		L_6 = AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40(G_B4_0, _stringLiteral495DD512A2F1C21C6107D1EA689AF431C75A1C5A, L_5, AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40_RuntimeMethod_var);
-		return L_6;
+		G_B5_0 = L_6;
+	}
+
+IL_0031:
+	{
+		return G_B5_0;
 	}
 }
-// Method Definition Index: 114825
+// Method Definition Index: 119234
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t GoogleSignInImpl_GetPlayerActivity_mBF39CFC799BA3054680D60FB49DB4F04415DD725 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3725,21 +4049,34 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t GoogleSignInImpl_GetPlayerActivity_m
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralFB4AE4F77150C3A8E8E4F8B23E734E0C7277B7D9);
 		s_Il2CppMethodInitialized = true;
 	}
+	AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* V_0 = NULL;
+	intptr_t V_1;
+	memset((&V_1), 0, sizeof(V_1));
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:333>
 		AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_0 = (AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03*)il2cpp_codegen_object_new(AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03_il2cpp_TypeInfo_var);
 		AndroidJavaClass__ctor_mB5466169E1151B8CC44C8FED234D79984B431389(L_0, _stringLiteral4D613657609485AE586A3379BA0E3FC13C1E1078, NULL);
+		V_0 = L_0;
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:334>
-		NullCheck(L_0);
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_1;
-		L_1 = AndroidJavaObject_GetStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mD7D192A35EB2B2DA3775FAB081958B72088251DD(L_0, _stringLiteralFB4AE4F77150C3A8E8E4F8B23E734E0C7277B7D9, AndroidJavaObject_GetStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mD7D192A35EB2B2DA3775FAB081958B72088251DD_RuntimeMethod_var);
+		AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_1 = V_0;
 		NullCheck(L_1);
-		intptr_t L_2;
-		L_2 = AndroidJavaObject_GetRawObject_m536F043B5CE2C21369FF6173C9D2A9A62136BC48(L_1, NULL);
-		return L_2;
+		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_2;
+		L_2 = AndroidJavaObject_GetStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mD7D192A35EB2B2DA3775FAB081958B72088251DD(L_1, _stringLiteralFB4AE4F77150C3A8E8E4F8B23E734E0C7277B7D9, AndroidJavaObject_GetStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mD7D192A35EB2B2DA3775FAB081958B72088251DD_RuntimeMethod_var);
+		NullCheck(L_2);
+		intptr_t L_3;
+		L_3 = AndroidJavaObject_GetRawObject_m536F043B5CE2C21369FF6173C9D2A9A62136BC48(L_2, NULL);
+		V_1 = L_3;
+		goto IL_001f;
+	}
+
+IL_001f:
+	{
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:338>
+		intptr_t L_4 = V_1;
+		return L_4;
 	}
 }
-// Method Definition Index: 114826
+// Method Definition Index: 119235
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInImpl__cctor_m4149D2AFF81E19AF15056DC0A5CBD9701895B19B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3767,7 +4104,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInImpl__cctor_m4149D2AFF81E19A
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 114827
+// Method Definition Index: 119236
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignInListener__ctor_mB245EA219B111241B0EEFCA0C3B0B065D7E98784 (SignInListener_t201D8836EA47A27961807FE98790411D684FE351* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3785,7 +4122,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignInListener__ctor_mB245EA219B111241B0
 		return;
 	}
 }
-// Method Definition Index: 114828
+// Method Definition Index: 119237
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignInListener_onAuthenticated_m5223A267DC663F6955731633611AB2444677106A (SignInListener_t201D8836EA47A27961807FE98790411D684FE351* __this, AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* ___0__googleIdTokenCredential, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3804,21 +4141,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignInListener_onAuthenticated_m5223A267
 		if (L_1)
 		{
 			G_B2_0 = L_1;
-			goto IL_000b;
+			goto IL_000c;
 		}
 		G_B1_0 = L_1;
 	}
 	{
-		goto IL_0010;
+		goto IL_0012;
 	}
 
-IL_000b:
+IL_000c:
 	{
 		NullCheck(G_B2_0);
 		AndroidJavaObject_Dispose_m2B1593C20B3CE1C8FF95982F638F50985F9DD9E6(G_B2_0, NULL);
 	}
 
-IL_0010:
+IL_0012:
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:137>
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_2 = ___0__googleIdTokenCredential;
@@ -3829,7 +4166,7 @@ IL_0010:
 		return;
 	}
 }
-// Method Definition Index: 114829
+// Method Definition Index: 119238
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignInListener_onAuthorized_m90A3BA191FDE212EBDF2DCF7FB3ED853959F1A1A (SignInListener_t201D8836EA47A27961807FE98790411D684FE351* __this, AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* ___0__authorizationResult, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3848,21 +4185,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignInListener_onAuthorized_m90A3BA191FD
 		if (L_1)
 		{
 			G_B2_0 = L_1;
-			goto IL_000b;
+			goto IL_000c;
 		}
 		G_B1_0 = L_1;
 	}
 	{
-		goto IL_0010;
+		goto IL_0012;
 	}
 
-IL_000b:
+IL_000c:
 	{
 		NullCheck(G_B2_0);
 		AndroidJavaObject_Dispose_m2B1593C20B3CE1C8FF95982F638F50985F9DD9E6(G_B2_0, NULL);
 	}
 
-IL_0010:
+IL_0012:
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:143>
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_2 = ___0__authorizationResult;
@@ -3873,7 +4210,7 @@ IL_0010:
 		return;
 	}
 }
-// Method Definition Index: 114830
+// Method Definition Index: 119239
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignInListener_onFailure_mB3CD50C59691C77251D8CDE36E7C4EC05877EDA2 (SignInListener_t201D8836EA47A27961807FE98790411D684FE351* __this, AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* ___0_exception, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3927,7 +4264,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignInListener_onFailure_mB3CD50C59691C7
 			G_B2_1 = L_1;
 			G_B2_2 = L_1;
 			G_B2_3 = _stringLiteralF267C53B58359ABCB74153BDCE3D3277BECB8D2C;
-			goto IL_0013;
+			goto IL_0014;
 		}
 		G_B1_0 = 0;
 		G_B1_1 = L_1;
@@ -3940,10 +4277,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignInListener_onFailure_mB3CD50C59691C7
 		G_B3_2 = G_B1_1;
 		G_B3_3 = G_B1_2;
 		G_B3_4 = G_B1_3;
-		goto IL_0032;
+		goto IL_0033;
 	}
 
-IL_0013:
+IL_0014:
 	{
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_3 = ___0_exception;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_4;
@@ -3963,7 +4300,7 @@ IL_0013:
 		G_B3_4 = G_B2_3;
 	}
 
-IL_0032:
+IL_0033:
 	{
 		NullCheck(G_B3_2);
 		ArrayElementTypeCheck (G_B3_2, G_B3_0);
@@ -3976,7 +4313,7 @@ IL_0032:
 			G_B5_1 = L_8;
 			G_B5_2 = L_8;
 			G_B5_3 = G_B3_4;
-			goto IL_003b;
+			goto IL_003c;
 		}
 		G_B4_0 = 1;
 		G_B4_1 = L_8;
@@ -3989,10 +4326,10 @@ IL_0032:
 		G_B6_2 = G_B4_1;
 		G_B6_3 = G_B4_2;
 		G_B6_4 = G_B4_3;
-		goto IL_004b;
+		goto IL_004c;
 	}
 
-IL_003b:
+IL_003c:
 	{
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_10 = ___0_exception;
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_11;
@@ -4007,7 +4344,7 @@ IL_003b:
 		G_B6_4 = G_B5_3;
 	}
 
-IL_004b:
+IL_004c:
 	{
 		NullCheck(G_B6_2);
 		ArrayElementTypeCheck (G_B6_2, G_B6_0);
@@ -4022,7 +4359,7 @@ IL_004b:
 		return;
 	}
 }
-// Method Definition Index: 114831
+// Method Definition Index: 119240
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignInListener_onCanceled_mA27F24809C37AF96A8096CBF19216EEB38775759 (SignInListener_t201D8836EA47A27961807FE98790411D684FE351* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4043,21 +4380,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignInListener_onCanceled_mA27F24809C37A
 		if (L_1)
 		{
 			G_B2_0 = L_1;
-			goto IL_000b;
+			goto IL_000c;
 		}
 		G_B1_0 = L_1;
 	}
 	{
-		goto IL_0010;
+		goto IL_0012;
 	}
 
-IL_000b:
+IL_000c:
 	{
 		NullCheck(G_B2_0);
 		AndroidJavaObject_Dispose_m2B1593C20B3CE1C8FF95982F638F50985F9DD9E6(G_B2_0, NULL);
 	}
 
-IL_0010:
+IL_0012:
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:154>
 		il2cpp_codegen_runtime_class_init_inline(GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887_il2cpp_TypeInfo_var);
@@ -4066,18 +4403,22 @@ IL_0010:
 		if (L_3)
 		{
 			G_B5_0 = L_3;
-			goto IL_001a;
+			goto IL_001d;
 		}
 		G_B4_0 = L_3;
 	}
 	{
-		return;
+		goto IL_0023;
 	}
 
-IL_001a:
+IL_001d:
 	{
 		NullCheck(G_B5_0);
 		AndroidJavaObject_Dispose_m2B1593C20B3CE1C8FF95982F638F50985F9DD9E6(G_B5_0, NULL);
+	}
+
+IL_0023:
+	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:155>
 		return;
 	}
@@ -4090,7 +4431,7 @@ IL_001a:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 114832
+// Method Definition Index: 119241
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* Ext_ToAndroidJavaObject_m1038641C83A740A537B611EB15D7BDC9827EB250 (HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F* ___0_self, const RuntimeMethod* method) 
 {
 	intptr_t V_0;
@@ -4106,7 +4447,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AndroidJavaObject_t8FFB930F335C1178405B82AC2B
 		return L_2;
 	}
 }
-// Method Definition Index: 114833
+// Method Definition Index: 119242
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* Ext_ToAndroidJavaObject_mE62344DE251622746E01F40C3C08EC63DDB39265 (intptr_t* ___0_intPtr, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4115,8 +4456,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AndroidJavaObject_t8FFB930F335C1178405B82AC2B
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
-	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* V_0 = NULL;
-	Exception_t* V_1 = NULL;
+	bool V_0 = false;
+	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* V_1 = NULL;
+	Exception_t* V_2 = NULL;
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
 	Exception_t* G_B6_0 = NULL;
 	String_t* G_B6_1 = NULL;
@@ -4130,90 +4472,93 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AndroidJavaObject_t8FFB930F335C1178405B82AC2B
 		intptr_t L_1 = *((intptr_t*)L_0);
 		bool L_2;
 		L_2 = IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_inline(L_1, 0, NULL);
-		if (!L_2)
+		V_0 = L_2;
+		bool L_3 = V_0;
+		if (!L_3)
 		{
-			goto IL_0010;
+			goto IL_0015;
 		}
 	}
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:352>
-		return (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)NULL;
+		V_1 = (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)NULL;
+		goto IL_0044;
 	}
 
-IL_0010:
+IL_0015:
 	{
 	}
 	try
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:356>
-		intptr_t* L_3 = ___0_intPtr;
-		intptr_t L_4 = *((intptr_t*)L_3);
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_5 = (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)il2cpp_codegen_object_new(AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_il2cpp_TypeInfo_var);
-		AndroidJavaObject__ctor_m0CEE7D570807333CE2C193A82AB3AB8D4F873A6B(L_5, L_4, NULL);
-		V_0 = L_5;
-		goto IL_003c;
+		intptr_t* L_4 = ___0_intPtr;
+		intptr_t L_5 = *((intptr_t*)L_4);
+		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_6 = (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)il2cpp_codegen_object_new(AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_il2cpp_TypeInfo_var);
+		AndroidJavaObject__ctor_m0CEE7D570807333CE2C193A82AB3AB8D4F873A6B(L_6, L_5, NULL);
+		V_1 = L_6;
+		goto IL_0044;
 	}
 	catch(Il2CppExceptionWrapper& e)
 	{
 		if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
 		{
 			IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
-			goto CATCH_001b;
+			goto CATCH_0021;
 		}
 		throw e;
 	}
 
-CATCH_001b:
+CATCH_0021:
 	{
 		{
-			Exception_t* L_6 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
+			Exception_t* L_7 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
 			//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:364>
-			V_1 = L_6;
+			V_2 = L_7;
 			//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:365>
-			Exception_t* L_7 = V_1;
-			Exception_t* L_8 = L_7;
-			if (L_8)
+			Exception_t* L_8 = V_2;
+			Exception_t* L_9 = L_8;
+			if (L_9)
 			{
-				G_B6_0 = L_8;
+				G_B6_0 = L_9;
 				G_B6_1 = ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralB7747EAF7323DBC75412283C6C4C71CD48F8D6DA));
-				goto IL_0029;
+				goto IL_0030;
 			}
-			G_B5_0 = L_8;
+			G_B5_0 = L_9;
 			G_B5_1 = ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralB7747EAF7323DBC75412283C6C4C71CD48F8D6DA));
 		}
 		{
 			G_B7_0 = ((String_t*)(NULL));
 			G_B7_1 = G_B5_1;
-			goto IL_002e;
+			goto IL_0035;
 		}
 
-IL_0029:
+IL_0030:
 		{
 			NullCheck(G_B6_0);
-			String_t* L_9;
-			L_9 = VirtualFuncInvoker0< String_t* >::Invoke(3, G_B6_0);
-			G_B7_0 = L_9;
+			String_t* L_10;
+			L_10 = VirtualFuncInvoker0< String_t* >::Invoke(3, G_B6_0);
+			G_B7_0 = L_10;
 			G_B7_1 = G_B6_1;
 		}
 
-IL_002e:
+IL_0035:
 		{
-			String_t* L_10;
-			L_10 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(G_B7_1, G_B7_0, NULL);
+			String_t* L_11;
+			L_11 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(G_B7_1, G_B7_0, NULL);
 			il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
-			Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_10, NULL);
+			Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_11, NULL);
 			//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:366>
-			V_0 = (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)NULL;
+			V_1 = (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)NULL;
 			IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
-			goto IL_003c;
+			goto IL_0044;
 		}
 	}
 
-IL_003c:
+IL_0044:
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/GoogleSignInImpl.cs:368>
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_11 = V_0;
-		return L_11;
+		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_12 = V_1;
+		return L_12;
 	}
 }
 #ifdef __clang__
@@ -4224,7 +4569,7 @@ IL_003c:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 114834
+// Method Definition Index: 119243
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeFuture__ctor_mE32D8E975B1C930445B262B285F9404088F8EE73 (NativeFuture_t876229FFA3B2B09EBC88C7C88C6547E507CD9FDC* __this, intptr_t ___0_ptr, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4242,7 +4587,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeFuture__ctor_mE32D8E975B1C930445B2
 		return;
 	}
 }
-// Method Definition Index: 114835
+// Method Definition Index: 119244
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeFuture_Dispose_mA311946F84B01D055335DE896FD37B9ED5132454 (NativeFuture_t876229FFA3B2B09EBC88C7C88C6547E507CD9FDC* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4260,7 +4605,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeFuture_Dispose_mA311946F84B01D0553
 		return;
 	}
 }
-// Method Definition Index: 114836
+// Method Definition Index: 119245
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NativeFuture_get_Pending_m0E9D95F9DE18147128DAB0E7F00BCF07DC36702B (NativeFuture_t876229FFA3B2B09EBC88C7C88C6547E507CD9FDC* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4279,7 +4624,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NativeFuture_get_Pending_m0E9D95F9DE1814
 		return L_1;
 	}
 }
-// Method Definition Index: 114837
+// Method Definition Index: 119246
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* NativeFuture_get_Result_m93E7A096F68DAB4B24A62D331FF5BF7A3F8E8263 (NativeFuture_t876229FFA3B2B09EBC88C7C88C6547E507CD9FDC* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4288,6 +4633,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GoogleSignInUser_tE581A5A467AA6C201CF1C06152F
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ValueTuple_1__ctor_mCBE1A2A5123A278E9713DE263AA5BDC752D29BCE_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ValueTuple_8__ctor_m7A1E34C08FC88A9988E64EC80F6704D163E7AC0E_RuntimeMethod_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F V_0;
@@ -4298,6 +4645,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GoogleSignInUser_tE581A5A467AA6C201CF1C06152F
 	HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F V_3;
 	memset((&V_3), 0, sizeof(V_3));
 	String_t* V_4 = NULL;
+	ValueTuple_8_t560D7B304EC85F9BF8879160A37ABB8FBFCF939C V_5;
+	memset((&V_5), 0, sizeof(V_5));
+	bool V_6 = false;
+	GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* V_7 = NULL;
+	bool V_8 = false;
+	int32_t G_B5_0 = 0;
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/NativeFuture.cs:37>
 		HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F L_0;
@@ -4313,149 +4666,177 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GoogleSignInUser_tE581A5A467AA6C201CF1C06152F
 		intptr_t L_3 = V_1;
 		bool L_4;
 		L_4 = IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_inline(L_3, 0, NULL);
-		if (!L_4)
+		V_6 = L_4;
+		bool L_5 = V_6;
+		if (!L_5)
 		{
-			goto IL_001d;
+			goto IL_0029;
 		}
 	}
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/NativeFuture.cs:40>
-		return (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC*)NULL;
+		V_7 = (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC*)NULL;
+		goto IL_0103;
 	}
 
-IL_001d:
+IL_0029:
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/NativeFuture.cs:43>
-		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_5 = (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC*)il2cpp_codegen_object_new(GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC_il2cpp_TypeInfo_var);
-		GoogleSignInUser__ctor_mBD99BD9F39E563F092CC90A53BEC211C0BA34036(L_5, NULL);
-		V_2 = L_5;
+		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_6 = (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC*)il2cpp_codegen_object_new(GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC_il2cpp_TypeInfo_var);
+		GoogleSignInUser__ctor_mBD99BD9F39E563F092CC90A53BEC211C0BA34036(L_6, NULL);
+		V_2 = L_6;
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/NativeFuture.cs:44>
-		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_6 = V_2;
-		intptr_t L_7 = V_1;
-		HandleRef__ctor_m0298D55E5F35F77B6A6CCA75C8E828C3F3127DE7((&V_3), L_6, L_7, NULL);
+		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_7 = V_2;
+		intptr_t L_8 = V_1;
+		HandleRef__ctor_m0298D55E5F35F77B6A6CCA75C8E828C3F3127DE7((&V_3), L_7, L_8, NULL);
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/NativeFuture.cs:46>
-		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_8 = V_2;
-		HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F L_9 = V_3;
+		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_9 = V_2;
+		HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F L_10 = V_3;
 		il2cpp_codegen_runtime_class_init_inline(GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887_il2cpp_TypeInfo_var);
-		String_t* L_10;
-		L_10 = GoogleSignInImpl_GoogleSignIn_GetUserId_m8C80202BADD92EE047F65C5E2593F2C60649900E(L_9, NULL);
-		NullCheck(L_8);
-		GoogleSignInUser_set_UserId_mEEB8E05D475D3CD0CF6337173F03570AA8594202_inline(L_8, L_10, NULL);
+		String_t* L_11;
+		L_11 = GoogleSignInImpl_GoogleSignIn_GetUserId_m8C80202BADD92EE047F65C5E2593F2C60649900E(L_10, NULL);
+		NullCheck(L_9);
+		GoogleSignInUser_set_UserId_mEEB8E05D475D3CD0CF6337173F03570AA8594202_inline(L_9, L_11, NULL);
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/NativeFuture.cs:48>
-		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_11 = V_2;
-		HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F L_12 = V_3;
-		String_t* L_13;
-		L_13 = GoogleSignInImpl_GoogleSignIn_GetEmail_m4111C4F0D4B4942BCA5456628FD1B5704D008167(L_12, NULL);
-		NullCheck(L_11);
-		GoogleSignInUser_set_Email_m18F58E94A2656880AD14F1DB1FFF4EF61742AB4E_inline(L_11, L_13, NULL);
+		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_12 = V_2;
+		HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F L_13 = V_3;
+		String_t* L_14;
+		L_14 = GoogleSignInImpl_GoogleSignIn_GetEmail_m4111C4F0D4B4942BCA5456628FD1B5704D008167(L_13, NULL);
+		NullCheck(L_12);
+		GoogleSignInUser_set_Email_m18F58E94A2656880AD14F1DB1FFF4EF61742AB4E_inline(L_12, L_14, NULL);
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/NativeFuture.cs:50>
-		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_14 = V_2;
-		HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F L_15 = V_3;
-		String_t* L_16;
-		L_16 = GoogleSignInImpl_GoogleSignIn_GetDisplayName_mB0CE05F6B2C5B5EC45CC9DF07C05D19FE7259331(L_15, NULL);
-		NullCheck(L_14);
-		GoogleSignInUser_set_DisplayName_m08C401FA1EB7D5C2ABE2C4DB08729D2A1B6B253E_inline(L_14, L_16, NULL);
+		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_15 = V_2;
+		HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F L_16 = V_3;
+		String_t* L_17;
+		L_17 = GoogleSignInImpl_GoogleSignIn_GetDisplayName_mB0CE05F6B2C5B5EC45CC9DF07C05D19FE7259331(L_16, NULL);
+		NullCheck(L_15);
+		GoogleSignInUser_set_DisplayName_m08C401FA1EB7D5C2ABE2C4DB08729D2A1B6B253E_inline(L_15, L_17, NULL);
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/NativeFuture.cs:52>
-		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_17 = V_2;
-		HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F L_18 = V_3;
-		String_t* L_19;
-		L_19 = GoogleSignInImpl_GoogleSignIn_GetFamilyName_m0CF73DEC44FD149FA3F2F539D495F4182C03F2E0(L_18, NULL);
-		NullCheck(L_17);
-		GoogleSignInUser_set_FamilyName_m9FBC2F5327C966E8CF65E93AE872CC1F37827AFF_inline(L_17, L_19, NULL);
+		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_18 = V_2;
+		HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F L_19 = V_3;
+		String_t* L_20;
+		L_20 = GoogleSignInImpl_GoogleSignIn_GetFamilyName_m0CF73DEC44FD149FA3F2F539D495F4182C03F2E0(L_19, NULL);
+		NullCheck(L_18);
+		GoogleSignInUser_set_FamilyName_m9FBC2F5327C966E8CF65E93AE872CC1F37827AFF_inline(L_18, L_20, NULL);
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/NativeFuture.cs:54>
-		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_20 = V_2;
-		HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F L_21 = V_3;
-		String_t* L_22;
-		L_22 = GoogleSignInImpl_GoogleSignIn_GetGivenName_m50765672ABCFBD394D593023CE43B11A139E37F4(L_21, NULL);
-		NullCheck(L_20);
-		GoogleSignInUser_set_GivenName_m2E04B88B7B7B8E64C657F3AA3BBA62E84CD082AE_inline(L_20, L_22, NULL);
+		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_21 = V_2;
+		HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F L_22 = V_3;
+		String_t* L_23;
+		L_23 = GoogleSignInImpl_GoogleSignIn_GetGivenName_m50765672ABCFBD394D593023CE43B11A139E37F4(L_22, NULL);
+		NullCheck(L_21);
+		GoogleSignInUser_set_GivenName_m2E04B88B7B7B8E64C657F3AA3BBA62E84CD082AE_inline(L_21, L_23, NULL);
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/NativeFuture.cs:56>
-		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_23 = V_2;
-		HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F L_24 = V_3;
-		String_t* L_25;
-		L_25 = GoogleSignInImpl_GoogleSignIn_GetIdToken_mF4FD46BFE88B49E1A7571C943169DF94B9F5CC44(L_24, NULL);
-		NullCheck(L_23);
-		GoogleSignInUser_set_IdToken_mF0C5188019CF5F4612A13FE1D633884A7A10AB91_inline(L_23, L_25, NULL);
+		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_24 = V_2;
+		HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F L_25 = V_3;
+		String_t* L_26;
+		L_26 = GoogleSignInImpl_GoogleSignIn_GetIdToken_mF4FD46BFE88B49E1A7571C943169DF94B9F5CC44(L_25, NULL);
+		NullCheck(L_24);
+		GoogleSignInUser_set_IdToken_mF0C5188019CF5F4612A13FE1D633884A7A10AB91_inline(L_24, L_26, NULL);
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/NativeFuture.cs:58>
-		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_26 = V_2;
-		HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F L_27 = V_0;
-		String_t* L_28;
-		L_28 = GoogleSignInImpl_GoogleSignIn_GetServerAuthCode_mAB5121BD8FF585B94553EDB83A99A77E497D9151(L_27, NULL);
-		NullCheck(L_26);
-		GoogleSignInUser_set_AuthCode_m93BC17B96BDFB4FCB39322C11021F30AC951FB8A_inline(L_26, L_28, NULL);
+		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_27 = V_2;
+		HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F L_28 = V_0;
+		String_t* L_29;
+		L_29 = GoogleSignInImpl_GoogleSignIn_GetServerAuthCode_mAB5121BD8FF585B94553EDB83A99A77E497D9151(L_28, NULL);
+		NullCheck(L_27);
+		GoogleSignInUser_set_AuthCode_m93BC17B96BDFB4FCB39322C11021F30AC951FB8A_inline(L_27, L_29, NULL);
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/NativeFuture.cs:60>
-		HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F L_29 = V_3;
-		String_t* L_30;
-		L_30 = GoogleSignInImpl_GoogleSignIn_GetImageUrl_m42254C90BE5C993F12AD00178807AB01F95D594F(L_29, NULL);
-		V_4 = L_30;
+		HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F L_30 = V_3;
+		String_t* L_31;
+		L_31 = GoogleSignInImpl_GoogleSignIn_GetImageUrl_m42254C90BE5C993F12AD00178807AB01F95D594F(L_30, NULL);
+		V_4 = L_31;
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/NativeFuture.cs:61>
-		String_t* L_31 = V_4;
-		if (!L_31)
+		String_t* L_32 = V_4;
+		if (L_32)
 		{
-			goto IL_00a3;
+			goto IL_00a2;
 		}
 	}
 	{
-		String_t* L_32 = V_4;
-		NullCheck(L_32);
-		int32_t L_33;
-		L_33 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_32, NULL);
-		if ((((int32_t)L_33) <= ((int32_t)0)))
+		G_B5_0 = 0;
+		goto IL_00ac;
+	}
+
+IL_00a2:
+	{
+		String_t* L_33 = V_4;
+		NullCheck(L_33);
+		int32_t L_34;
+		L_34 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_33, NULL);
+		G_B5_0 = ((((int32_t)L_34) > ((int32_t)0))? 1 : 0);
+	}
+
+IL_00ac:
+	{
+		V_8 = (bool)G_B5_0;
+		bool L_35 = V_8;
+		if (!L_35)
 		{
-			goto IL_00a3;
+			goto IL_00c2;
 		}
 	}
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/NativeFuture.cs:62>
-		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_34 = V_2;
-		String_t* L_35 = V_4;
-		Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* L_36 = (Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E*)il2cpp_codegen_object_new(Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E_il2cpp_TypeInfo_var);
-		Uri__ctor_m6CA436E6AD2768A121FA851CBEEFA3623E849D3A(L_36, L_35, NULL);
-		NullCheck(L_34);
-		GoogleSignInUser_set_ImageUrl_m7454AB09D9DBBFD61EB540977E1580DC27B226BE_inline(L_34, L_36, NULL);
+		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_36 = V_2;
+		String_t* L_37 = V_4;
+		Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* L_38 = (Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E*)il2cpp_codegen_object_new(Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E_il2cpp_TypeInfo_var);
+		Uri__ctor_m6CA436E6AD2768A121FA851CBEEFA3623E849D3A(L_38, L_37, NULL);
+		NullCheck(L_36);
+		GoogleSignInUser_set_ImageUrl_m7454AB09D9DBBFD61EB540977E1580DC27B226BE_inline(L_36, L_38, NULL);
 	}
 
-IL_00a3:
+IL_00c2:
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/NativeFuture.cs:66>
-		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_37 = V_2;
-		NullCheck(L_37);
-		String_t* L_38;
-		L_38 = GoogleSignInUser_get_UserId_m865781CBAC9C015842B148A939CD0F4433E4103B_inline(L_37, NULL);
 		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_39 = V_2;
 		NullCheck(L_39);
 		String_t* L_40;
-		L_40 = GoogleSignInUser_get_Email_m7303A59BDED078C2634FD843064E55AC5907D014_inline(L_39, NULL);
+		L_40 = GoogleSignInUser_get_UserId_m865781CBAC9C015842B148A939CD0F4433E4103B_inline(L_39, NULL);
 		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_41 = V_2;
 		NullCheck(L_41);
 		String_t* L_42;
-		L_42 = GoogleSignInUser_get_DisplayName_mB38DD9107955716F09BFD40F1A69F55936395D75_inline(L_41, NULL);
+		L_42 = GoogleSignInUser_get_Email_m7303A59BDED078C2634FD843064E55AC5907D014_inline(L_41, NULL);
 		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_43 = V_2;
 		NullCheck(L_43);
 		String_t* L_44;
-		L_44 = GoogleSignInUser_get_FamilyName_mAB727ADC5AF57C14E7791ACFAD37B2E6F39A3A5C_inline(L_43, NULL);
+		L_44 = GoogleSignInUser_get_DisplayName_mB38DD9107955716F09BFD40F1A69F55936395D75_inline(L_43, NULL);
 		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_45 = V_2;
 		NullCheck(L_45);
 		String_t* L_46;
-		L_46 = GoogleSignInUser_get_GivenName_m8F13271B0A6D1E0C5A97810BCBB043A8D0BE1AC1_inline(L_45, NULL);
+		L_46 = GoogleSignInUser_get_FamilyName_mAB727ADC5AF57C14E7791ACFAD37B2E6F39A3A5C_inline(L_45, NULL);
 		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_47 = V_2;
 		NullCheck(L_47);
 		String_t* L_48;
-		L_48 = GoogleSignInUser_get_IdToken_m4A42AE6E2B638B1904CBD666D6CD020A76A513CD_inline(L_47, NULL);
+		L_48 = GoogleSignInUser_get_GivenName_m8F13271B0A6D1E0C5A97810BCBB043A8D0BE1AC1_inline(L_47, NULL);
 		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_49 = V_2;
 		NullCheck(L_49);
 		String_t* L_50;
-		L_50 = GoogleSignInUser_get_AuthCode_mAB7501ADD8EDF9BB06A121DFE9AF840C676477A3_inline(L_49, NULL);
+		L_50 = GoogleSignInUser_get_IdToken_m4A42AE6E2B638B1904CBD666D6CD020A76A513CD_inline(L_49, NULL);
 		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_51 = V_2;
 		NullCheck(L_51);
-		Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* L_52;
-		L_52 = GoogleSignInUser_get_ImageUrl_mD59AC87D6DCA359CC1831D23B17BF6D946DAFDEA_inline(L_51, NULL);
-		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/NativeFuture.cs:69>
+		String_t* L_52;
+		L_52 = GoogleSignInUser_get_AuthCode_mAB7501ADD8EDF9BB06A121DFE9AF840C676477A3_inline(L_51, NULL);
 		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_53 = V_2;
-		return L_53;
+		NullCheck(L_53);
+		Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* L_54;
+		L_54 = GoogleSignInUser_get_ImageUrl_mD59AC87D6DCA359CC1831D23B17BF6D946DAFDEA_inline(L_53, NULL);
+		ValueTuple_1_t4D700872753E7FC5B9BC4857CF23A08406E9AC10 L_55;
+		memset((&L_55), 0, sizeof(L_55));
+		ValueTuple_1__ctor_mCBE1A2A5123A278E9713DE263AA5BDC752D29BCE_inline((&L_55), L_54, ValueTuple_1__ctor_mCBE1A2A5123A278E9713DE263AA5BDC752D29BCE_RuntimeMethod_var);
+		ValueTuple_8__ctor_m7A1E34C08FC88A9988E64EC80F6704D163E7AC0E((&V_5), L_40, L_42, L_44, L_46, L_48, L_50, L_52, L_55, ValueTuple_8__ctor_m7A1E34C08FC88A9988E64EC80F6704D163E7AC0E_RuntimeMethod_var);
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/NativeFuture.cs:69>
+		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_56 = V_2;
+		V_7 = L_56;
+		goto IL_0103;
+	}
+
+IL_0103:
+	{
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/NativeFuture.cs:70>
+		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_57 = V_7;
+		return L_57;
 	}
 }
-// Method Definition Index: 114838
+// Method Definition Index: 119247
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeFuture_get_Status_m2CD402A19F4EC99BB0B21FE03CF7F2DB11B89206 (NativeFuture_t876229FFA3B2B09EBC88C7C88C6547E507CD9FDC* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4464,6 +4845,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeFuture_get_Status_m2CD402A19F4E
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
+	int32_t V_0 = 0;
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/NativeFuture.cs:81>
 		HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F L_0;
@@ -4471,7 +4853,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeFuture_get_Status_m2CD402A19F4E
 		il2cpp_codegen_runtime_class_init_inline(GoogleSignInImpl_t301664689A103D49E7E68568772E29EDBD8A4887_il2cpp_TypeInfo_var);
 		int32_t L_1;
 		L_1 = GoogleSignInImpl_GoogleSignIn_Status_m209453A2A6006F043246ACFFA18024387D1E5E54(L_0, NULL);
-		return (int32_t)(L_1);
+		V_0 = L_1;
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/NativeFuture.cs:82>
+		int32_t L_2 = V_0;
+		return L_2;
 	}
 }
 #ifdef __clang__
@@ -4482,7 +4872,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeFuture_get_Status_m2CD402A19F4E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 114839
+// Method Definition Index: 119248
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F* SignInHelperObject_get_Instance_m5E10FF161F96C9C9EBAEC61532503F99EAA16113 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4496,68 +4886,87 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SignInHelperObject_t40C8BA925CEF30A8928AE56B9
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDAFAF1BA7E22CC639E69C44B0308455A786E3D91);
 		s_Il2CppMethodInitialized = true;
 	}
+	bool V_0 = false;
+	SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F* V_1 = NULL;
+	bool V_2 = false;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* V_3 = NULL;
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/SignInHelperObject.cs:30>
 		SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F* L_0 = ((SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_StaticFields*)il2cpp_codegen_static_fields_for(SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_il2cpp_TypeInfo_var))->___instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_0, NULL);
-		if (!L_1)
+		V_0 = L_1;
+		bool L_2 = V_0;
+		if (!L_2)
 		{
-			goto IL_0012;
+			goto IL_0018;
 		}
 	}
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/SignInHelperObject.cs:31>
-		SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F* L_2 = ((SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_StaticFields*)il2cpp_codegen_static_fields_for(SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_il2cpp_TypeInfo_var))->___instance;
-		return L_2;
+		SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F* L_3 = ((SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_StaticFields*)il2cpp_codegen_static_fields_for(SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_il2cpp_TypeInfo_var))->___instance;
+		V_1 = L_3;
+		goto IL_0056;
 	}
 
-IL_0012:
+IL_0018:
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/SignInHelperObject.cs:33>
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
-		bool L_3;
-		L_3 = Application_get_isPlaying_m25B0ABDFEF54F5370CD3F263A813540843D00F34(NULL);
-		if (!L_3)
+		bool L_4;
+		L_4 = Application_get_isPlaying_m25B0ABDFEF54F5370CD3F263A813540843D00F34(NULL);
+		V_2 = L_4;
+		bool L_5 = V_2;
+		if (!L_5)
 		{
-			goto IL_0035;
+			goto IL_0042;
 		}
 	}
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/SignInHelperObject.cs:35>
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)il2cpp_codegen_object_new(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var);
-		GameObject__ctor_m37D512B05D292F954792225E6C6EEE95293A9B88(L_4, _stringLiteralDAFAF1BA7E22CC639E69C44B0308455A786E3D91, NULL);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)il2cpp_codegen_object_new(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var);
+		GameObject__ctor_m37D512B05D292F954792225E6C6EEE95293A9B88(L_6, _stringLiteralDAFAF1BA7E22CC639E69C44B0308455A786E3D91, NULL);
+		V_3 = L_6;
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/SignInHelperObject.cs:36>
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = L_4;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7 = V_3;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		Object_DontDestroyOnLoad_m4B70C3AEF886C176543D1295507B6455C9DCAEA7(L_5, NULL);
+		Object_DontDestroyOnLoad_m4B70C3AEF886C176543D1295507B6455C9DCAEA7(L_7, NULL);
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/SignInHelperObject.cs:37>
-		NullCheck(L_5);
-		SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F* L_6;
-		L_6 = GameObject_AddComponent_TisSignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_m5D99D7A25752DFFE2CAA3CF73D66CE3018F816EC(L_5, GameObject_AddComponent_TisSignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_m5D99D7A25752DFFE2CAA3CF73D66CE3018F816EC_RuntimeMethod_var);
-		((SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_StaticFields*)il2cpp_codegen_static_fields_for(SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_il2cpp_TypeInfo_var))->___instance = L_6;
-		Il2CppCodeGenWriteBarrier((void**)(&((SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_StaticFields*)il2cpp_codegen_static_fields_for(SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_il2cpp_TypeInfo_var))->___instance), (void*)L_6);
-		goto IL_003f;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8 = V_3;
+		NullCheck(L_8);
+		SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F* L_9;
+		L_9 = GameObject_AddComponent_TisSignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_m5D99D7A25752DFFE2CAA3CF73D66CE3018F816EC(L_8, GameObject_AddComponent_TisSignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_m5D99D7A25752DFFE2CAA3CF73D66CE3018F816EC_RuntimeMethod_var);
+		((SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_StaticFields*)il2cpp_codegen_static_fields_for(SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_il2cpp_TypeInfo_var))->___instance = L_9;
+		Il2CppCodeGenWriteBarrier((void**)(&((SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_StaticFields*)il2cpp_codegen_static_fields_for(SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_il2cpp_TypeInfo_var))->___instance), (void*)L_9);
+		goto IL_004e;
 	}
 
-IL_0035:
+IL_0042:
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/SignInHelperObject.cs:39>
-		SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F* L_7 = (SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F*)il2cpp_codegen_object_new(SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_il2cpp_TypeInfo_var);
-		SignInHelperObject__ctor_m4FFE9BA4D534FB74B3FA48E90E673648AB3FE435(L_7, NULL);
-		((SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_StaticFields*)il2cpp_codegen_static_fields_for(SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_il2cpp_TypeInfo_var))->___instance = L_7;
-		Il2CppCodeGenWriteBarrier((void**)(&((SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_StaticFields*)il2cpp_codegen_static_fields_for(SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_il2cpp_TypeInfo_var))->___instance), (void*)L_7);
+		SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F* L_10 = (SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F*)il2cpp_codegen_object_new(SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_il2cpp_TypeInfo_var);
+		SignInHelperObject__ctor_m4FFE9BA4D534FB74B3FA48E90E673648AB3FE435(L_10, NULL);
+		((SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_StaticFields*)il2cpp_codegen_static_fields_for(SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_il2cpp_TypeInfo_var))->___instance = L_10;
+		Il2CppCodeGenWriteBarrier((void**)(&((SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_StaticFields*)il2cpp_codegen_static_fields_for(SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_il2cpp_TypeInfo_var))->___instance), (void*)L_10);
 	}
 
-IL_003f:
+IL_004e:
 	{
 		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/SignInHelperObject.cs:41>
-		SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F* L_8 = ((SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_StaticFields*)il2cpp_codegen_static_fields_for(SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_il2cpp_TypeInfo_var))->___instance;
-		return L_8;
+		SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F* L_11 = ((SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_StaticFields*)il2cpp_codegen_static_fields_for(SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F_il2cpp_TypeInfo_var))->___instance;
+		V_1 = L_11;
+		goto IL_0056;
+	}
+
+IL_0056:
+	{
+		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/Impl/SignInHelperObject.cs:42>
+		SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F* L_12 = V_1;
+		return L_12;
 	}
 }
-// Method Definition Index: 114840
+// Method Definition Index: 119249
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignInHelperObject__ctor_m4FFE9BA4D534FB74B3FA48E90E673648AB3FE435 (SignInHelperObject_t40C8BA925CEF30A8928AE56B939D338EFC013C5F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4592,22 +5001,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignInHelperObject__ctor_m4FFE9BA4D534FB
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 114746
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* GoogleSignIn_get_Configuration_m88D0A38CDF9F974F949223FB91D0119FA3D54185_inline (const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_il2cpp_TypeInfo_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		//<source_info:./Library/PackageCache/com.google.signin@b7293977a7fa/GoogleSignIn/GoogleSignIn.cs:77>
-		GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* L_0 = ((GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_StaticFields*)il2cpp_codegen_static_fields_for(GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF_il2cpp_TypeInfo_var))->___theConfiguration;
-		return L_0;
-	}
-}
-// Method Definition Index: 114763
+// Method Definition Index: 119172
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SignInException_set_Status_m06F443CC005EEADDEB9D8C3DF71E8880EC619D70_inline (SignInException_t1A39E711A0851916A1A091E093F99F3254083488* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -4617,7 +5011,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SignInException_set_Status_m
 		return;
 	}
 }
-// Method Definition Index: 114797
+// Method Definition Index: 119206
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uintptr_t OutStringMethod_Invoke_m65036F152BF550FFC3B9C6C3277D6BE2B38ADED6_inline (OutStringMethod_t11AE334DE87E5E256FD065CEC1CCCCAC8D1EF939* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_out_bytes, uintptr_t ___1_out_size, const RuntimeMethod* method) 
 {
 	typedef uintptr_t (*FunctionPointerType) (RuntimeObject*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, uintptr_t, const RuntimeMethod*);
@@ -4631,7 +5025,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m42625D
 		return L_0;
 	}
 }
-// Method Definition Index: 8687
+// Method Definition Index: 8817
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR intptr_t HandleRef_get_Handle_m2055005E349E895499E1B3B826C89228FFAC4C17_inline (HandleRef_t4B05E32B68797F702257D4E838B85A976313F08F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4639,7 +5033,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR intptr_t HandleRef_get_Handle_m20
 		return L_0;
 	}
 }
-// Method Definition Index: 3983
+// Method Definition Index: 4047
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_inline (intptr_t ___0_value1, intptr_t ___1_value2, const RuntimeMethod* method) 
 {
 	{
@@ -4648,7 +5042,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool IntPtr_op_Equality_m7D9CDCDE
 		return (bool)((((intptr_t)L_0) == ((intptr_t)L_1))? 1 : 0);
 	}
 }
-// Method Definition Index: 114789
+// Method Definition Index: 119198
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GoogleSignInUser_set_UserId_mEEB8E05D475D3CD0CF6337173F03570AA8594202_inline (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -4659,7 +5053,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GoogleSignInUser_set_UserId_
 		return;
 	}
 }
-// Method Definition Index: 114777
+// Method Definition Index: 119186
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GoogleSignInUser_set_Email_m18F58E94A2656880AD14F1DB1FFF4EF61742AB4E_inline (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -4670,7 +5064,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GoogleSignInUser_set_Email_m
 		return;
 	}
 }
-// Method Definition Index: 114781
+// Method Definition Index: 119190
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GoogleSignInUser_set_DisplayName_m08C401FA1EB7D5C2ABE2C4DB08729D2A1B6B253E_inline (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -4681,7 +5075,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GoogleSignInUser_set_Display
 		return;
 	}
 }
-// Method Definition Index: 114785
+// Method Definition Index: 119194
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GoogleSignInUser_set_FamilyName_m9FBC2F5327C966E8CF65E93AE872CC1F37827AFF_inline (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -4692,7 +5086,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GoogleSignInUser_set_FamilyN
 		return;
 	}
 }
-// Method Definition Index: 114783
+// Method Definition Index: 119192
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GoogleSignInUser_set_GivenName_m2E04B88B7B7B8E64C657F3AA3BBA62E84CD082AE_inline (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -4703,7 +5097,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GoogleSignInUser_set_GivenNa
 		return;
 	}
 }
-// Method Definition Index: 114779
+// Method Definition Index: 119188
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GoogleSignInUser_set_IdToken_mF0C5188019CF5F4612A13FE1D633884A7A10AB91_inline (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -4714,7 +5108,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GoogleSignInUser_set_IdToken
 		return;
 	}
 }
-// Method Definition Index: 114775
+// Method Definition Index: 119184
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GoogleSignInUser_set_AuthCode_m93BC17B96BDFB4FCB39322C11021F30AC951FB8A_inline (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -4725,7 +5119,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GoogleSignInUser_set_AuthCod
 		return;
 	}
 }
-// Method Definition Index: 114787
+// Method Definition Index: 119196
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GoogleSignInUser_set_ImageUrl_m7454AB09D9DBBFD61EB540977E1580DC27B226BE_inline (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -4736,7 +5130,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GoogleSignInUser_set_ImageUr
 		return;
 	}
 }
-// Method Definition Index: 114788
+// Method Definition Index: 119197
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_UserId_m865781CBAC9C015842B148A939CD0F4433E4103B_inline (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4745,7 +5139,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_Us
 		return L_0;
 	}
 }
-// Method Definition Index: 114776
+// Method Definition Index: 119185
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_Email_m7303A59BDED078C2634FD843064E55AC5907D014_inline (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4754,7 +5148,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_Em
 		return L_0;
 	}
 }
-// Method Definition Index: 114780
+// Method Definition Index: 119189
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_DisplayName_mB38DD9107955716F09BFD40F1A69F55936395D75_inline (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4763,7 +5157,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_Di
 		return L_0;
 	}
 }
-// Method Definition Index: 114784
+// Method Definition Index: 119193
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_FamilyName_mAB727ADC5AF57C14E7791ACFAD37B2E6F39A3A5C_inline (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4772,7 +5166,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_Fa
 		return L_0;
 	}
 }
-// Method Definition Index: 114782
+// Method Definition Index: 119191
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_GivenName_m8F13271B0A6D1E0C5A97810BCBB043A8D0BE1AC1_inline (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4781,7 +5175,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_Gi
 		return L_0;
 	}
 }
-// Method Definition Index: 114778
+// Method Definition Index: 119187
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_IdToken_m4A42AE6E2B638B1904CBD666D6CD020A76A513CD_inline (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4790,7 +5184,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_Id
 		return L_0;
 	}
 }
-// Method Definition Index: 114774
+// Method Definition Index: 119183
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_AuthCode_mAB7501ADD8EDF9BB06A121DFE9AF840C676477A3_inline (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4799,7 +5193,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_Au
 		return L_0;
 	}
 }
-// Method Definition Index: 114786
+// Method Definition Index: 119195
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* GoogleSignInUser_get_ImageUrl_mD59AC87D6DCA359CC1831D23B17BF6D946DAFDEA_inline (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4808,7 +5202,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Uri_t1500A52B5F71A04F5D05C0852D0F
 		return L_0;
 	}
 }
-// Method Definition Index: 4969
+// Method Definition Index: 5063
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Task_1_t0C4CD3A5BB93A184420D73218644C56C70FDA7E2* TaskCompletionSource_1_get_Task_mF44990297C25C7DBE1E65241C03D0120CB551552_gshared_inline (TaskCompletionSource_1_tB4EF81F69CCF7C4F0D956F9B26127C0634A24A37* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4816,7 +5210,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Task_1_t0C4CD3A5BB93A184420D73218
 		return L_0;
 	}
 }
-// Method Definition Index: 12020
+// Method Definition Index: 12180
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4824,7 +5218,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C
 		return L_0;
 	}
 }
-// Method Definition Index: 3345
+// Method Definition Index: 3404
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_gshared_inline (const RuntimeMethod* method) 
 {
 	il2cpp_rgctx_method_init(method);
@@ -4832,5 +5226,15 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(method->rgctx_data, 2));
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_0 = ((EmptyArray_1_tDF0DD7256B115243AA6BD5558417387A734240EE_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(method->rgctx_data, 2)))->___Value;
 		return L_0;
+	}
+}
+// Method Definition Index: 3051
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ValueTuple_1__ctor_mFAB64192C3D3526588EBF398DF500FFC33AA207C_gshared_inline (ValueTuple_1_t663569ADAA18CD8C235E326982F6DF261C2C59A7* __this, RuntimeObject* ___0_item1, const RuntimeMethod* method) 
+{
+	{
+		RuntimeObject* L_0 = ___0_item1;
+		__this->___Item1 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___Item1), (void*)L_0);
+		return;
 	}
 }

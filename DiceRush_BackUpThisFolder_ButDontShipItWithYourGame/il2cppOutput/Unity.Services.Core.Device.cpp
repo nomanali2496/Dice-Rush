@@ -351,7 +351,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidUtils_SharedPreferencesPutString_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 115572
+// Method Definition Index: 120197
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InstallationId__ctor_mD8E8D5B7A72C54F2517D33F9F2C89FA708CC6BF7 (InstallationId_tA5712B394172DB4DBA3B5F9A67D5522D37E2B873* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -378,17 +378,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InstallationId__ctor_mD8E8D5B7A72C54F251
 		return;
 	}
 }
-// Method Definition Index: 115573
+// Method Definition Index: 120198
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* InstallationId_GetOrCreateIdentifier_mB808E735A25CB3357E33337F9A4B737DDAB6B40F (InstallationId_tA5712B394172DB4DBA3B5F9A67D5522D37E2B873* __this, const RuntimeMethod* method) 
 {
+	bool V_0 = false;
+	String_t* V_1 = NULL;
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:24>
 		String_t* L_0 = __this->___Identifier;
 		bool L_1;
 		L_1 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_0, NULL);
-		if (!L_1)
+		V_0 = L_1;
+		bool L_2 = V_0;
+		if (!L_2)
 		{
-			goto IL_0013;
+			goto IL_0017;
 		}
 	}
 	{
@@ -396,14 +400,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* InstallationId_GetOrCreateIdentifie
 		InstallationId_CreateIdentifier_mC089486FCD96983C9186689C41D1D75E36EFB90C(__this, NULL);
 	}
 
-IL_0013:
+IL_0017:
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:27>
-		String_t* L_2 = __this->___Identifier;
-		return L_2;
+		String_t* L_3 = __this->___Identifier;
+		V_1 = L_3;
+		goto IL_0020;
+	}
+
+IL_0020:
+	{
+		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:28>
+		String_t* L_4 = V_1;
+		return L_4;
 	}
 }
-// Method Definition Index: 115574
+// Method Definition Index: 120199
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InstallationId_CreateIdentifier_mC089486FCD96983C9186689C41D1D75E36EFB90C (InstallationId_tA5712B394172DB4DBA3B5F9A67D5522D37E2B873* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -414,6 +426,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InstallationId_CreateIdentifier_mC089486
 	}
 	String_t* V_0 = NULL;
 	String_t* V_1 = NULL;
+	bool V_2 = false;
+	bool V_3 = false;
+	bool V_4 = false;
+	bool V_5 = false;
+	bool V_6 = false;
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:32>
 		String_t* L_0;
@@ -424,123 +441,133 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InstallationId_CreateIdentifier_mC089486
 		String_t* L_1 = __this->___Identifier;
 		bool L_2;
 		L_2 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_1, NULL);
-		if (L_2)
+		V_2 = (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
+		bool L_3 = V_2;
+		if (!L_3)
 		{
-			goto IL_0019;
+			goto IL_0023;
 		}
 	}
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:34>
-		return;
+		goto IL_00c6;
 	}
 
-IL_0019:
+IL_0023:
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:36>
-		RuntimeObject* L_3 = __this->___UnityAnalyticsIdentifierProvider;
-		NullCheck(L_3);
-		String_t* L_4;
-		L_4 = InterfaceFuncInvoker0< String_t* >::Invoke(0, IUserIdentifierProvider_t37955FEADD673B2F4333F6D756F9F9BEC3486E41_il2cpp_TypeInfo_var, L_3);
-		V_0 = L_4;
+		RuntimeObject* L_4 = __this->___UnityAnalyticsIdentifierProvider;
+		NullCheck(L_4);
+		String_t* L_5;
+		L_5 = InterfaceFuncInvoker0< String_t* >::Invoke(0, IUserIdentifierProvider_t37955FEADD673B2F4333F6D756F9F9BEC3486E41_il2cpp_TypeInfo_var, L_4);
+		V_0 = L_5;
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:37>
-		RuntimeObject* L_5 = __this->___UnityAdsIdentifierProvider;
-		NullCheck(L_5);
-		String_t* L_6;
-		L_6 = InterfaceFuncInvoker0< String_t* >::Invoke(0, IUserIdentifierProvider_t37955FEADD673B2F4333F6D756F9F9BEC3486E41_il2cpp_TypeInfo_var, L_5);
-		V_1 = L_6;
+		RuntimeObject* L_6 = __this->___UnityAdsIdentifierProvider;
+		NullCheck(L_6);
+		String_t* L_7;
+		L_7 = InterfaceFuncInvoker0< String_t* >::Invoke(0, IUserIdentifierProvider_t37955FEADD673B2F4333F6D756F9F9BEC3486E41_il2cpp_TypeInfo_var, L_6);
+		V_1 = L_7;
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:39>
-		String_t* L_7 = V_0;
-		bool L_8;
-		L_8 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_7, NULL);
-		if (L_8)
-		{
-			goto IL_0042;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:41>
-		String_t* L_9 = V_0;
-		__this->___Identifier = L_9;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___Identifier), (void*)L_9);
-		goto IL_005e;
-	}
-
-IL_0042:
-	{
-		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:43>
-		String_t* L_10 = V_1;
-		bool L_11;
-		L_11 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_10, NULL);
-		if (L_11)
+		String_t* L_8 = V_0;
+		bool L_9;
+		L_9 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_8, NULL);
+		V_3 = (bool)((((int32_t)L_9) == ((int32_t)0))? 1 : 0);
+		bool L_10 = V_3;
+		if (!L_10)
 		{
 			goto IL_0053;
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:45>
-		String_t* L_12 = V_1;
-		__this->___Identifier = L_12;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___Identifier), (void*)L_12);
-		goto IL_005e;
+		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:41>
+		String_t* L_11 = V_0;
+		__this->___Identifier = L_11;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___Identifier), (void*)L_11);
+		goto IL_007a;
 	}
 
 IL_0053:
 	{
-		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:49>
-		String_t* L_13;
-		L_13 = InstallationId_GenerateGuid_m7220D8C5AE5B4DCA4F4C01A6F921FF66C23E855A(NULL);
-		__this->___Identifier = L_13;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___Identifier), (void*)L_13);
+		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:43>
+		String_t* L_12 = V_1;
+		bool L_13;
+		L_13 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_12, NULL);
+		V_4 = (bool)((((int32_t)L_13) == ((int32_t)0))? 1 : 0);
+		bool L_14 = V_4;
+		if (!L_14)
+		{
+			goto IL_006d;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:45>
+		String_t* L_15 = V_1;
+		__this->___Identifier = L_15;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___Identifier), (void*)L_15);
+		goto IL_007a;
 	}
 
-IL_005e:
+IL_006d:
+	{
+		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:49>
+		String_t* L_16;
+		L_16 = InstallationId_GenerateGuid_m7220D8C5AE5B4DCA4F4C01A6F921FF66C23E855A(NULL);
+		__this->___Identifier = L_16;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___Identifier), (void*)L_16);
+	}
+
+IL_007a:
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:52>
-		String_t* L_14 = __this->___Identifier;
-		InstallationId_WriteIdentifierToFile_m67273AD8773FDBEE468B0BB7F502B3383AB9A6C4(L_14, NULL);
+		String_t* L_17 = __this->___Identifier;
+		InstallationId_WriteIdentifierToFile_m67273AD8773FDBEE468B0BB7F502B3383AB9A6C4(L_17, NULL);
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:54>
-		String_t* L_15 = V_0;
-		bool L_16;
-		L_16 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_15, NULL);
-		if (!L_16)
+		String_t* L_18 = V_0;
+		bool L_19;
+		L_19 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_18, NULL);
+		V_5 = L_19;
+		bool L_20 = V_5;
+		if (!L_20)
 		{
-			goto IL_0082;
+			goto IL_00a6;
 		}
 	}
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:56>
-		RuntimeObject* L_17 = __this->___UnityAnalyticsIdentifierProvider;
-		String_t* L_18 = __this->___Identifier;
-		NullCheck(L_17);
-		InterfaceActionInvoker1< String_t* >::Invoke(1, IUserIdentifierProvider_t37955FEADD673B2F4333F6D756F9F9BEC3486E41_il2cpp_TypeInfo_var, L_17, L_18);
-	}
-
-IL_0082:
-	{
-		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:59>
-		String_t* L_19 = V_1;
-		bool L_20;
-		L_20 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_19, NULL);
-		if (!L_20)
-		{
-			goto IL_009b;
-		}
-	}
-	{
-		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:61>
-		RuntimeObject* L_21 = __this->___UnityAdsIdentifierProvider;
+		RuntimeObject* L_21 = __this->___UnityAnalyticsIdentifierProvider;
 		String_t* L_22 = __this->___Identifier;
 		NullCheck(L_21);
 		InterfaceActionInvoker1< String_t* >::Invoke(1, IUserIdentifierProvider_t37955FEADD673B2F4333F6D756F9F9BEC3486E41_il2cpp_TypeInfo_var, L_21, L_22);
 	}
 
-IL_009b:
+IL_00a6:
+	{
+		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:59>
+		String_t* L_23 = V_1;
+		bool L_24;
+		L_24 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_23, NULL);
+		V_6 = L_24;
+		bool L_25 = V_6;
+		if (!L_25)
+		{
+			goto IL_00c6;
+		}
+	}
+	{
+		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:61>
+		RuntimeObject* L_26 = __this->___UnityAdsIdentifierProvider;
+		String_t* L_27 = __this->___Identifier;
+		NullCheck(L_26);
+		InterfaceActionInvoker1< String_t* >::Invoke(1, IUserIdentifierProvider_t37955FEADD673B2F4333F6D756F9F9BEC3486E41_il2cpp_TypeInfo_var, L_26, L_27);
+	}
+
+IL_00c6:
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:63>
 		return;
 	}
 }
-// Method Definition Index: 115575
+// Method Definition Index: 120200
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* InstallationId_ReadIdentifierFromFile_m126AF7B4F947DBB382AA8848D51FEA52C91C3E7C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -549,14 +576,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* InstallationId_ReadIdentifierFromFi
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9802A0C242B6B1F11EC74461BB2DF09CE62B8035);
 		s_Il2CppMethodInitialized = true;
 	}
+	String_t* V_0 = NULL;
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:67>
 		String_t* L_0;
 		L_0 = PlayerPrefs_GetString_mA4C9F842BF77E5572AB20EA087C7048F870D02AE(_stringLiteral9802A0C242B6B1F11EC74461BB2DF09CE62B8035, NULL);
-		return L_0;
+		V_0 = L_0;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:68>
+		String_t* L_1 = V_0;
+		return L_1;
 	}
 }
-// Method Definition Index: 115576
+// Method Definition Index: 120201
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InstallationId_WriteIdentifierToFile_m67273AD8773FDBEE468B0BB7F502B3383AB9A6C4 (String_t* ___0_identifier, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -575,11 +611,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InstallationId_WriteIdentifierToFile_m67
 		return;
 	}
 }
-// Method Definition Index: 115577
+// Method Definition Index: 120202
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* InstallationId_GenerateGuid_m7220D8C5AE5B4DCA4F4C01A6F921FF66C23E855A (const RuntimeMethod* method) 
 {
 	Guid_t V_0;
 	memset((&V_0), 0, sizeof(V_0));
+	String_t* V_1 = NULL;
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:78>
 		Guid_t L_0;
@@ -587,7 +624,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* InstallationId_GenerateGuid_m7220D8
 		V_0 = L_0;
 		String_t* L_1;
 		L_1 = Guid_ToString_m2BFFD5FA726E03FA707AAFCCF065896C46D5290C((&V_0), NULL);
-		return L_1;
+		V_1 = L_1;
+		goto IL_0017;
+	}
+
+IL_0017:
+	{
+		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/InstallationId.cs:79>
+		String_t* L_2 = V_1;
+		return L_2;
 	}
 }
 #ifdef __clang__
@@ -598,7 +643,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* InstallationId_GenerateGuid_m7220D8
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 115578
+// Method Definition Index: 120203
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* AndroidUtils_GetUnityActivity_m88FEFFE4C2DCE674DAF38136C651C836701A4F70 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -623,13 +668,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AndroidJavaObject_t8FFB930F335C1178405B82AC2B
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_0019:
+FINALLY_001b:
 			{
 				{
 					AndroidJavaClass_tE6296B30CC4BF84434A9B765267F3FD0DD8DDB03* L_1 = V_0;
 					if (!L_1)
 					{
-						goto IL_0022;
+						goto IL_0025;
 					}
 				}
 				{
@@ -638,7 +683,7 @@ FINALLY_0019:
 					InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_2);
 				}
 
-IL_0022:
+IL_0025:
 				{
 					return;
 				}
@@ -652,7 +697,7 @@ IL_0022:
 			AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_4;
 			L_4 = AndroidJavaObject_GetStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mD7D192A35EB2B2DA3775FAB081958B72088251DD(L_3, _stringLiteralFB4AE4F77150C3A8E8E4F8B23E734E0C7277B7D9, AndroidJavaObject_GetStatic_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_mD7D192A35EB2B2DA3775FAB081958B72088251DD_RuntimeMethod_var);
 			V_1 = L_4;
-			goto IL_0023;
+			goto IL_0026;
 		}
 		catch(Il2CppExceptionWrapper& e)
 		{
@@ -660,14 +705,14 @@ IL_0022:
 		}
 	}
 
-IL_0023:
+IL_0026:
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/AndroidUtils.cs:17>
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_5 = V_1;
 		return L_5;
 	}
 }
-// Method Definition Index: 115579
+// Method Definition Index: 120204
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* AndroidUtils_GetSharedPreferences_m6F51F6E0B2E32618CAC0E0B067A68669A1E2E078 (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* ___0_context, String_t* ___1_name, int32_t ___2_mode, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -678,6 +723,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AndroidJavaObject_t8FFB930F335C1178405B82AC2B
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9EC438EC45167313D62C8D0D3D2FD52F72313009);
 		s_Il2CppMethodInitialized = true;
 	}
+	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* V_0 = NULL;
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/AndroidUtils.cs:21>
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_0 = ___0_context;
@@ -697,10 +743,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AndroidJavaObject_t8FFB930F335C1178405B82AC2B
 		NullCheck(L_0);
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_8;
 		L_8 = AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D(L_0, _stringLiteral9EC438EC45167313D62C8D0D3D2FD52F72313009, L_4, AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D_RuntimeMethod_var);
-		return L_8;
+		V_0 = L_8;
+		goto IL_0022;
+	}
+
+IL_0022:
+	{
+		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/AndroidUtils.cs:22>
+		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_9 = V_0;
+		return L_9;
 	}
 }
-// Method Definition Index: 115580
+// Method Definition Index: 120205
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* AndroidUtils_GetSharedPreferences_m8755F37D93E44616FCB22B70BA4204BDEAD68721 (String_t* ___0_name, int32_t ___1_mode, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -721,13 +775,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AndroidJavaObject_t8FFB930F335C1178405B82AC2B
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_0011:
+FINALLY_0013:
 			{
 				{
 					AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_1 = V_0;
 					if (!L_1)
 					{
-						goto IL_001a;
+						goto IL_001d;
 					}
 				}
 				{
@@ -736,7 +790,7 @@ FINALLY_0011:
 					InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_2);
 				}
 
-IL_001a:
+IL_001d:
 				{
 					return;
 				}
@@ -751,7 +805,7 @@ IL_001a:
 			AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_6;
 			L_6 = AndroidUtils_GetSharedPreferences_m6F51F6E0B2E32618CAC0E0B067A68669A1E2E078(L_3, L_4, L_5, NULL);
 			V_1 = L_6;
-			goto IL_001b;
+			goto IL_001e;
 		}
 		catch(Il2CppExceptionWrapper& e)
 		{
@@ -759,14 +813,14 @@ IL_001a:
 		}
 	}
 
-IL_001b:
+IL_001e:
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/AndroidUtils.cs:30>
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_7 = V_1;
 		return L_7;
 	}
 }
-// Method Definition Index: 115581
+// Method Definition Index: 120206
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AndroidUtils_SharedPreferencesGetString_mA87E9B301E07EF2C8D008A5AC77350D2E5906271 (String_t* ___0_name, String_t* ___1_key, String_t* ___2_defValue, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -788,13 +842,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AndroidUtils_SharedPreferencesGetSt
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_0013:
+FINALLY_0015:
 			{
 				{
 					AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_2 = V_0;
 					if (!L_2)
 					{
-						goto IL_001c;
+						goto IL_001f;
 					}
 				}
 				{
@@ -803,7 +857,7 @@ FINALLY_0013:
 					InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_3);
 				}
 
-IL_001c:
+IL_001f:
 				{
 					return;
 				}
@@ -818,7 +872,7 @@ IL_001c:
 			String_t* L_7;
 			L_7 = AndroidUtils_SharedPreferencesGetString_mC07FAAD6DED55337A7C55ADE690FF6B2897AEB6E(L_4, L_5, L_6, NULL);
 			V_1 = L_7;
-			goto IL_001d;
+			goto IL_0020;
 		}
 		catch(Il2CppExceptionWrapper& e)
 		{
@@ -826,14 +880,14 @@ IL_001c:
 		}
 	}
 
-IL_001d:
+IL_0020:
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/AndroidUtils.cs:38>
 		String_t* L_8 = V_1;
 		return L_8;
 	}
 }
-// Method Definition Index: 115582
+// Method Definition Index: 120207
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AndroidUtils_SharedPreferencesGetString_mC07FAAD6DED55337A7C55ADE690FF6B2897AEB6E (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* ___0_preferences, String_t* ___1_key, String_t* ___2_defValue, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -846,99 +900,107 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AndroidUtils_SharedPreferencesGetSt
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralF53C2A1D0804BE802D96B7BF7C02EA86655D4D6E);
 		s_Il2CppMethodInitialized = true;
 	}
-	String_t* V_0 = NULL;
+	bool V_0 = false;
+	String_t* V_1 = NULL;
+	bool V_2 = false;
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/AndroidUtils.cs:42>
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_0 = ___0_preferences;
-		if (L_0)
+		V_0 = (bool)((((RuntimeObject*)(AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_1 = V_0;
+		if (!L_1)
 		{
-			goto IL_0005;
+			goto IL_000d;
 		}
 	}
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/AndroidUtils.cs:43>
-		String_t* L_1 = ___2_defValue;
-		return L_1;
+		String_t* L_2 = ___2_defValue;
+		V_1 = L_2;
+		goto IL_0051;
 	}
 
-IL_0005:
+IL_000d:
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/AndroidUtils.cs:44>
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_2 = ___0_preferences;
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_3 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)1);
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_4 = L_3;
-		String_t* L_5 = ___1_key;
-		NullCheck(L_4);
-		ArrayElementTypeCheck (L_4, L_5);
-		(L_4)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_5);
-		NullCheck(L_2);
-		bool L_6;
-		L_6 = AndroidJavaObject_Call_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m05D3284A3FA772D032190A0FE82363C61000F1DF(L_2, _stringLiteralF53C2A1D0804BE802D96B7BF7C02EA86655D4D6E, L_4, AndroidJavaObject_Call_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m05D3284A3FA772D032190A0FE82363C61000F1DF_RuntimeMethod_var);
-		if (L_6)
+		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_3 = ___0_preferences;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_4 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)1);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_5 = L_4;
+		String_t* L_6 = ___1_key;
+		NullCheck(L_5);
+		ArrayElementTypeCheck (L_5, L_6);
+		(L_5)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_6);
+		NullCheck(L_3);
+		bool L_7;
+		L_7 = AndroidJavaObject_Call_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m05D3284A3FA772D032190A0FE82363C61000F1DF(L_3, _stringLiteralF53C2A1D0804BE802D96B7BF7C02EA86655D4D6E, L_5, AndroidJavaObject_Call_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m05D3284A3FA772D032190A0FE82363C61000F1DF_RuntimeMethod_var);
+		V_2 = (bool)((((int32_t)L_7) == ((int32_t)0))? 1 : 0);
+		bool L_8 = V_2;
+		if (!L_8)
 		{
-			goto IL_001e;
+			goto IL_002d;
 		}
 	}
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/AndroidUtils.cs:45>
-		String_t* L_7 = ___2_defValue;
-		return L_7;
+		String_t* L_9 = ___2_defValue;
+		V_1 = L_9;
+		goto IL_0051;
 	}
 
-IL_001e:
+IL_002d:
 	{
 	}
 	try
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/AndroidUtils.cs:49>
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_8 = ___0_preferences;
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_9 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)2);
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_10 = L_9;
-		String_t* L_11 = ___1_key;
-		NullCheck(L_10);
-		ArrayElementTypeCheck (L_10, L_11);
-		(L_10)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_11);
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_12 = L_10;
-		String_t* L_13 = ___2_defValue;
+		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_10 = ___0_preferences;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_11 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)2);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_12 = L_11;
+		String_t* L_13 = ___1_key;
 		NullCheck(L_12);
 		ArrayElementTypeCheck (L_12, L_13);
-		(L_12)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)L_13);
-		NullCheck(L_8);
-		String_t* L_14;
-		L_14 = AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40(L_8, _stringLiteral5004BB2B79B894E5CC70CDBEA1DD320044EF8F3A, L_12, AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40_RuntimeMethod_var);
-		V_0 = L_14;
-		goto IL_0040;
+		(L_12)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_13);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_14 = L_12;
+		String_t* L_15 = ___2_defValue;
+		NullCheck(L_14);
+		ArrayElementTypeCheck (L_14, L_15);
+		(L_14)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)L_15);
+		NullCheck(L_10);
+		String_t* L_16;
+		L_16 = AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40(L_10, _stringLiteral5004BB2B79B894E5CC70CDBEA1DD320044EF8F3A, L_14, AndroidJavaObject_Call_TisString_t_m67FC2931E81004C3F259008314180511C3D2AF40_RuntimeMethod_var);
+		V_1 = L_16;
+		goto IL_0051;
 	}
 	catch(Il2CppExceptionWrapper& e)
 	{
 		if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
 		{
 			IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
-			goto CATCH_003b;
+			goto CATCH_004b;
 		}
 		throw e;
 	}
 
-CATCH_003b:
+CATCH_004b:
 	{
-		Exception_t* L_15 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
+		Exception_t* L_17 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/AndroidUtils.cs:52>
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/AndroidUtils.cs:54>
-		String_t* L_16 = ___2_defValue;
-		V_0 = L_16;
+		String_t* L_18 = ___2_defValue;
+		V_1 = L_18;
 		IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
-		goto IL_0040;
+		goto IL_0051;
 	}
 
-IL_0040:
+IL_0051:
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/AndroidUtils.cs:56>
-		String_t* L_17 = V_0;
-		return L_17;
+		String_t* L_19 = V_1;
+		return L_19;
 	}
 }
-// Method Definition Index: 115583
+// Method Definition Index: 120208
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidUtils_SharedPreferencesPutString_m0E5667A51792E3CCF838E8A87285717B0F690899 (String_t* ___0_name, String_t* ___1_key, String_t* ___2_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -959,13 +1021,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidUtils_SharedPreferencesPutString_
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_0012:
+FINALLY_0016:
 			{
 				{
 					AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_2 = V_0;
 					if (!L_2)
 					{
-						goto IL_001b;
+						goto IL_0020;
 					}
 				}
 				{
@@ -974,7 +1036,7 @@ FINALLY_0012:
 					InterfaceActionInvoker0::Invoke(0, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_3);
 				}
 
-IL_001b:
+IL_0020:
 				{
 					return;
 				}
@@ -987,8 +1049,7 @@ IL_001b:
 			String_t* L_5 = ___1_key;
 			String_t* L_6 = ___2_value;
 			AndroidUtils_SharedPreferencesPutString_mA6254CC994E7CE80F42DC58262C8F478BE41ED05(L_4, L_5, L_6, NULL);
-			//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/AndroidUtils.cs:63>
-			goto IL_001c;
+			goto IL_0021;
 		}
 		catch(Il2CppExceptionWrapper& e)
 		{
@@ -996,13 +1057,13 @@ IL_001b:
 		}
 	}
 
-IL_001c:
+IL_0021:
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/AndroidUtils.cs:64>
 		return;
 	}
 }
-// Method Definition Index: 115584
+// Method Definition Index: 120209
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidUtils_SharedPreferencesPutString_mA6254CC994E7CE80F42DC58262C8F478BE41ED05 (AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* ___0_preferences, String_t* ___1_key, String_t* ___2_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1018,52 +1079,59 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidUtils_SharedPreferencesPutString_
 		s_Il2CppMethodInitialized = true;
 	}
 	AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* V_0 = NULL;
+	bool V_1 = false;
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/AndroidUtils.cs:68>
 		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_0 = ___0_preferences;
-		if (L_0)
+		V_1 = (bool)((((RuntimeObject*)(AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0*)L_0) == ((RuntimeObject*)(RuntimeObject*)NULL))? 1 : 0);
+		bool L_1 = V_1;
+		if (!L_1)
 		{
-			goto IL_0004;
+			goto IL_000b;
 		}
 	}
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/AndroidUtils.cs:69>
-		return;
+		goto IL_0047;
 	}
 
-IL_0004:
+IL_000b:
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/AndroidUtils.cs:71>
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_1 = ___0_preferences;
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_2;
-		L_2 = Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_inline(Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_RuntimeMethod_var);
-		NullCheck(L_1);
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_3;
-		L_3 = AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D(L_1, _stringLiteral8AA961E914CD1D587EB94CC5E82EFA76731DF41B, L_2, AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D_RuntimeMethod_var);
-		V_0 = L_3;
+		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_2 = ___0_preferences;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_3;
+		L_3 = Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_inline(Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_RuntimeMethod_var);
+		NullCheck(L_2);
+		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_4;
+		L_4 = AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D(L_2, _stringLiteral8AA961E914CD1D587EB94CC5E82EFA76731DF41B, L_3, AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D_RuntimeMethod_var);
+		V_0 = L_4;
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/AndroidUtils.cs:72>
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_4 = V_0;
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_5 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)2);
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_6 = L_5;
-		String_t* L_7 = ___1_key;
-		NullCheck(L_6);
-		ArrayElementTypeCheck (L_6, L_7);
-		(L_6)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_7);
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_8 = L_6;
-		String_t* L_9 = ___2_value;
-		NullCheck(L_8);
-		ArrayElementTypeCheck (L_8, L_9);
-		(L_8)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)L_9);
-		NullCheck(L_4);
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_10;
-		L_10 = AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D(L_4, _stringLiteral4A885A89832F4E62C8E259AA47DF0907BB0C1ED3, L_8, AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D_RuntimeMethod_var);
+		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_5 = V_0;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_6 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)2);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_7 = L_6;
+		String_t* L_8 = ___1_key;
+		NullCheck(L_7);
+		ArrayElementTypeCheck (L_7, L_8);
+		(L_7)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_8);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_9 = L_7;
+		String_t* L_10 = ___2_value;
+		NullCheck(L_9);
+		ArrayElementTypeCheck (L_9, L_10);
+		(L_9)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)L_10);
+		NullCheck(L_5);
+		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_11;
+		L_11 = AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D(L_5, _stringLiteral4A885A89832F4E62C8E259AA47DF0907BB0C1ED3, L_9, AndroidJavaObject_Call_TisAndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0_m020246E0988293B6126B690BD6CE4D894276AA3D_RuntimeMethod_var);
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/AndroidUtils.cs:73>
-		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_11 = V_0;
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_12;
-		L_12 = Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_inline(Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_RuntimeMethod_var);
-		NullCheck(L_11);
-		bool L_13;
-		L_13 = AndroidJavaObject_Call_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m05D3284A3FA772D032190A0FE82363C61000F1DF(L_11, _stringLiteral46308C2360498265204DA7350FCD77C6D5A57F9C, L_12, AndroidJavaObject_Call_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m05D3284A3FA772D032190A0FE82363C61000F1DF_RuntimeMethod_var);
+		AndroidJavaObject_t8FFB930F335C1178405B82AC2BF512BB1EEF9EB0* L_12 = V_0;
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_13;
+		L_13 = Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_inline(Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_RuntimeMethod_var);
+		NullCheck(L_12);
+		bool L_14;
+		L_14 = AndroidJavaObject_Call_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m05D3284A3FA772D032190A0FE82363C61000F1DF(L_12, _stringLiteral46308C2360498265204DA7350FCD77C6D5A57F9C, L_13, AndroidJavaObject_Call_TisBoolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_m05D3284A3FA772D032190A0FE82363C61000F1DF_RuntimeMethod_var);
+	}
+
+IL_0047:
+	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/AndroidUtils.cs:74>
 		return;
 	}
@@ -1076,17 +1144,26 @@ IL_0004:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 115587
+// Method Definition Index: 120212
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityAdsIdentifier_get_UserId_m4E41B6AEB6405B6BFA7D4E52FE3F66478A18D90A (UnityAdsIdentifier_t8D3A8D6DB9A1FB469E2E7F3D58B30C3D0D71DA56* __this, const RuntimeMethod* method) 
 {
+	String_t* V_0 = NULL;
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/UnityAdsIdentifier.cs:17>
 		String_t* L_0;
 		L_0 = UnityAdsIdentifier_get_IdentifierForInstallAndroid_m9468812B9ADE3F29594C0831B833097C3E60EDD6(NULL);
-		return L_0;
+		V_0 = L_0;
+		goto IL_0009;
+	}
+
+IL_0009:
+	{
+		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/UnityAdsIdentifier.cs:23>
+		String_t* L_1 = V_0;
+		return L_1;
 	}
 }
-// Method Definition Index: 115588
+// Method Definition Index: 120213
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityAdsIdentifier_set_UserId_mA2519CC19694D24C35D6E2E72B79E2CE34DACA4F (UnityAdsIdentifier_t8D3A8D6DB9A1FB469E2E7F3D58B30C3D0D71DA56* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -1097,7 +1174,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityAdsIdentifier_set_UserId_mA2519CC19
 		return;
 	}
 }
-// Method Definition Index: 115589
+// Method Definition Index: 120214
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityAdsIdentifier_get_IdentifierForInstallAndroid_m9468812B9ADE3F29594C0831B833097C3E60EDD6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1115,7 +1192,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityAdsIdentifier_get_IdentifierFo
 		return L_0;
 	}
 }
-// Method Definition Index: 115590
+// Method Definition Index: 120215
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityAdsIdentifier_set_IdentifierForInstallAndroid_mF2399D3966F017BAF29565F319D37DEF1962D04E (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1132,7 +1209,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityAdsIdentifier_set_IdentifierForInst
 		return;
 	}
 }
-// Method Definition Index: 115591
+// Method Definition Index: 120216
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityAdsIdentifier__ctor_mFD5085EB0AD902D689B820D13D697CE640E2E7B8 (UnityAdsIdentifier_t8D3A8D6DB9A1FB469E2E7F3D58B30C3D0D71DA56* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1148,7 +1225,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityAdsIdentifier__ctor_mFD5085EB0AD902
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 115592
+// Method Definition Index: 120217
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityAnalyticsIdentifier_get_UserId_m15964ABDB88E2D752C471143ED9C5A32017989CE (UnityAnalyticsIdentifier_tAB8DD85C666D878FC108C324E10DF6528B5BDA5D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1164,7 +1241,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnityAnalyticsIdentifier_get_UserId
 		return L_0;
 	}
 }
-// Method Definition Index: 115593
+// Method Definition Index: 120218
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityAnalyticsIdentifier_set_UserId_m2751FA3CB0A777DAC8AA56ECBE8945EED55CAC3C (UnityAnalyticsIdentifier_tAB8DD85C666D878FC108C324E10DF6528B5BDA5D* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1174,6 +1251,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityAnalyticsIdentifier_set_UserId_m275
 		s_Il2CppMethodInitialized = true;
 	}
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
+	{
+	}
 	try
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/UnityAnalyticsIdentifier.cs:17>
@@ -1181,35 +1260,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityAnalyticsIdentifier_set_UserId_m275
 		PlayerPrefs_SetString_mF4F457C81BB75F0213547C6287BA36E15E1F0256(_stringLiteral20353326ACF03BB4112F3080DBCA0AC47DBC7BB2, L_0, NULL);
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/UnityAnalyticsIdentifier.cs:18>
 		PlayerPrefs_Save_m82567E045D69C838112EA204B60C144D4C1EA3AE(NULL);
-		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/UnityAnalyticsIdentifier.cs:19>
-		goto IL_0015;
+		goto IL_001c;
 	}
 	catch(Il2CppExceptionWrapper& e)
 	{
 		if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
 		{
 			IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
-			goto CATCH_0012;
+			goto CATCH_0017;
 		}
 		throw e;
 	}
 
-CATCH_0012:
+CATCH_0017:
 	{
 		Exception_t* L_1 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/UnityAnalyticsIdentifier.cs:20>
-		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/UnityAnalyticsIdentifier.cs:23>
 		IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
-		goto IL_0015;
+		goto IL_001c;
 	}
 
-IL_0015:
+IL_001c:
 	{
 		//<source_info:./Library/PackageCache/com.unity.services.core@9e81a5e38245/Runtime/Device/UserIdProviders/UnityAnalyticsIdentifier.cs:24>
 		return;
 	}
 }
-// Method Definition Index: 115594
+// Method Definition Index: 120219
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityAnalyticsIdentifier__ctor_mE19B73CB1414B5AC0619E8EF1366C0164B06D14B (UnityAnalyticsIdentifier_tAB8DD85C666D878FC108C324E10DF6528B5BDA5D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1220,7 +1297,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityAnalyticsIdentifier__ctor_mE19B73CB
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 3345
+// Method Definition Index: 3404
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_gshared_inline (const RuntimeMethod* method) 
 {
 	il2cpp_rgctx_method_init(method);

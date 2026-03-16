@@ -847,6 +847,34 @@ public class LobbyManager : MonoBehaviour
     /// <param name="lobbyIndex">Index of the lobby (0-12)</param>
     public void OpenGameplayObject(int lobbyIndex = -1)
     {
+        LobbyConfig config = GetLobbyConfig(lobbyIndex);
+        if (config == null)
+        {
+            Debug.LogWarning($"[LobbyManager] Lobby configuration not found for index {lobbyIndex}!");
+            return;
+        }
+
+        // Check if we are using Networking
+        if (LobbyNetworkManager.Instance != null && Photon.Pun.PhotonNetwork.IsConnectedAndReady)
+        {
+            // Instead of starting immediately, join the network room
+            LobbyNetworkManager.Instance.JoinLobbyRoom(config);
+            Debug.Log($"[LobbyManager] Initiating network room join for Lobby {lobbyIndex}");
+        }
+        else
+        {
+            // Fallback to local game if network is not available
+            StartGameFromNetwork(lobbyIndex);
+            Debug.LogWarning("[LobbyManager] Network not ready, starting local game fallback.");
+        }
+    }
+
+    /// <summary>
+    /// Officially starts the gameplay screen and configures the game.
+    /// This is called by LobbyNetworkManager when the room is full.
+    /// </summary>
+    public void StartGameFromNetwork(int lobbyIndex)
+    {
         if (gameplayObject != null)
         {
             // Get the lobby configuration
@@ -881,7 +909,7 @@ public class LobbyManager : MonoBehaviour
             
             // Activate gameplay screen
             gameplayObject.SetActive(true);
-            Debug.Log($"[LobbyManager] Gameplay object opened for Lobby {lobbyIndex + 1}");
+            Debug.Log($"[LobbyManager] Gameplay object opened and synchronized for Lobby {lobbyIndex + 1}");
         }
         else
         {
