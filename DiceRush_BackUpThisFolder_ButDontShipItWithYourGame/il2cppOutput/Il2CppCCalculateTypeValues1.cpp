@@ -4103,6 +4103,7 @@ struct LeaderboardRowData_t103707DE40DE18AC342597279240F60A2D19928F  : public Ru
 	String_t* ___username;
 	int32_t ___score;
 	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___avatarSprite;
+	bool ___isCustom;
 };
 struct LensFlareCommonSRP_t216404EC3242B43B3A8486A9D03A70302E79C135  : public RuntimeObject
 {
@@ -7477,38 +7478,38 @@ struct ShaderIDs_tC56D5AA7AEEAC25C70C55D91596AFCC3F5B4DDE6  : public RuntimeObje
 struct U3CU3Ec_t934A682FC7A2310EB64DF8FB184FC75102272AA5  : public RuntimeObject
 {
 };
-struct U3CConfigureCPUsAfterDelayU3Ed__94_tD0F5BCFB31520C5F468EF5956ADCE797ED1CFC11  : public RuntimeObject
+struct U3CConfigureCPUsAfterDelayU3Ed__98_tB5A2A67AC372FBD846E78537220DF80BD3242121  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
 	GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* ___U3CU3E4__this;
 	int32_t ___numberOfCPUs;
 };
-struct U3CCountdownBeforeStartU3Ed__55_t51810BBFAD3BFB5345DEFE553C7BD7C2FFF21F45  : public RuntimeObject
+struct U3CCountdownBeforeStartU3Ed__59_t58D2A2EFD5A88B7004039D206DB1EABD4E800A66  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
 	GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* ___U3CU3E4__this;
 	int32_t ___U3CiU3E5__2;
 };
-struct U3CInitializeProfilesDelayedU3Ed__72_t9B2694BC406668A2A25CB76C17EE937875FCF18E  : public RuntimeObject
+struct U3CInitializeProfilesDelayedU3Ed__76_t3D5022F60366E845AFF8CD4FF1F533B4581B8746  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
 	GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* ___U3CU3E4__this;
 };
-struct U3CRefreshLobbyButtonsDelayedU3Ed__97_t78C4A4D704E0F3B1489DB4FA0F835A8899DDF3EA  : public RuntimeObject
+struct U3CRefreshLobbyButtonsDelayedU3Ed__101_t6241868E6F210059248F31FA7FE7B221E17B2273  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
 };
-struct U3CRetryLoadPlayerProfileU3Ed__71_t2100268EC23954281B08E5A50633DE9F0C7737DE  : public RuntimeObject
+struct U3CRetryLoadPlayerProfileU3Ed__75_tD1A41BF2191E0E8C31DACD06B095425F551B5B51  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
 	GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* ___U3CU3E4__this;
 };
-struct U3CTimerCountdownU3Ed__57_t4A0C81FBABA020D06E3F86CA0614C2D2D3C47DD5  : public RuntimeObject
+struct U3CTimerCountdownU3Ed__61_t2B80E603FCABBA3F96522328E2A1DDE73430737F  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -7755,25 +7756,25 @@ struct U3CU3Ec__DisplayClass3_0_t6228E726F6E749FBE0D3BC6C013EF0CF35FEB9CC  : pub
 	ConstructorInfo_t1B5967EE7E5554272F79F8880183C70AD240EEEB* ___c;
 	MethodBase_t* ___method;
 };
-struct U3CLoadTestDataDelayedU3Ed__28_tAE7261F2AD41694DC8EAC4F5A400F7EFB73FA36C  : public RuntimeObject
+struct U3CLoadTestDataDelayedU3Ed__33_tD999367B4B710D90F7DC90D3478069D4F7D09257  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
 	LeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863* ___U3CU3E4__this;
 };
-struct U3CReloadDataDelayedU3Ed__27_tF96FE523CC078F5F33AAB58F2E41A29B49D1E05C  : public RuntimeObject
+struct U3CReloadDataDelayedU3Ed__32_t4A156C5C24ABED0DA9FBCB5B38993BEA6CF4CB86  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
 	LeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863* ___U3CU3E4__this;
 };
-struct U3CSyncAvatarDelayedU3Ed__24_t1B376820E0C30786D352905AB08F0EC57FB1AF24  : public RuntimeObject
+struct U3CSyncAvatarDelayedU3Ed__29_tB1892D6921A1373D9BCDBFA149F6AA701E30C25E  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
 	LeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863* ___U3CU3E4__this;
 };
-struct U3CUpdateFixedRowDelayedU3Ed__22_tE70111001FE2BFF6EFB788905DAC98DF931FDEFF  : public RuntimeObject
+struct U3CUpdateFixedRowDelayedU3Ed__27_tFFF597581AB67E395CBDEC118916636720666D80  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -7855,7 +7856,7 @@ struct U3CU3Ec_tC651251045AF6738E88E0DC843CE52D8B72A3264  : public RuntimeObject
 struct MainLightShadowConstantBuffer_tDE7E52C397EA5C7066924F7C9DC843321DF0A6E3  : public RuntimeObject
 {
 };
-struct U3CLoadImageFromUrlU3Ed__18_t80E8D029A3F38CB2B0D686738ECCC9F53DF0F002  : public RuntimeObject
+struct U3CLoadImageFromUrlU3Ed__19_t21CBC03B7D3ADBFBDA2E22007CFE9DD341F52022  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -43881,6 +43882,7 @@ struct FullScreenPassRendererFeature_OldGUID_t4AF397475381ACA94CA1A9773CA300A38E
 struct GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___playerProfileImage;
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___playerProfileImageCustom;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___playerOutlineImage;
 	MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* ___mainMenuAvatarDisplay;
 	CPUU5BU5D_tAB071B75DFF3DB1996254B41AB907EF18986E828* ___cpuPlayers;
@@ -43905,16 +43907,19 @@ struct GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6  : public MonoBehav
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___winnerScreen;
 	WinnerScreen_tB62EA0D93C2FBA5D799895D556E444C02627FC0A* ___winnerScreenScript;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___winnerProfileImage;
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___winnerProfileImageCustom;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___winnerOutlineImage;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___winnerFrameImage;
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___winnerNameText;
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___winnerNameTextLegacy;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___secondPlaceProfileImage;
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___secondPlaceProfileImageCustom;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___secondPlaceOutlineImage;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___secondPlaceFrameImage;
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___secondPlaceNameText;
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___secondPlaceNameTextLegacy;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___thirdPlaceProfileImage;
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___thirdPlaceProfileImageCustom;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___thirdPlaceOutlineImage;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___thirdPlaceFrameImage;
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___thirdPlaceNameText;
@@ -44007,10 +44012,14 @@ struct LeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863  : public Mo
 	float ___cellSize;
 	SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B* ___testAvatars;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___firstPlaceAvatarImage;
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___firstPlaceAvatarCustom;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___secondPlaceAvatarImage;
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___secondPlaceAvatarCustom;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___thirdPlaceAvatarImage;
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___thirdPlaceAvatarCustom;
 	MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* ___mainMenuAvatarDisplay;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___userFixedAvatar;
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___userFixedAvatarCustom;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___userFixedBadge;
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___userFixedName;
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___userFixedScore;
@@ -44020,6 +44029,7 @@ struct LeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863  : public Mo
 	SmallList_1_tE095558593123623FE7D5530B077AF6E37CB4A95* ____leaderboardData;
 	LeaderboardRowData_t103707DE40DE18AC342597279240F60A2D19928F* ____userData;
 	bool ___isInitialized;
+	List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ____filteredIndices;
 };
 struct LeaderboardRowScaler_t4B120A09B199BBAC05F551718DD7BB73B8A1CCF5  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -45782,6 +45792,7 @@ struct LeaderboardRowUI_tE1FDBDBD345001EB393900EDD0D4E918B073B144  : public Enha
 	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___thirdPlaceProfileBackground;
 	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___normalRowProfileBackground;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___avatarImage;
+	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___avatarImageCustom;
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___usernameText;
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___firstPlaceUsernameColor;
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___secondPlaceUsernameColor;
@@ -47822,7 +47833,7 @@ struct ShaderIDs_tC56D5AA7AEEAC25C70C55D91596AFCC3F5B4DDE6_StaticFields
 struct U3CU3Ec_t934A682FC7A2310EB64DF8FB184FC75102272AA5_StaticFields
 {
 	U3CU3Ec_t934A682FC7A2310EB64DF8FB184FC75102272AA5* ___U3CU3E9;
-	Comparison_1_tED881B384601D05493481B4B126AE424016299AD* ___U3CU3E9__64_0;
+	Comparison_1_tED881B384601D05493481B4B126AE424016299AD* ___U3CU3E9__68_0;
 };
 struct U3CU3Ec_t9EF33D21B93D32D0C5E77702FBC4F79B0A19DBAE_StaticFields
 {
@@ -59208,17 +59219,17 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize9667 = { sizeof(FriendRowUI_
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9668;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize9668 = { sizeof(U3CU3Ec_t934A682FC7A2310EB64DF8FB184FC75102272AA5), -1, sizeof(U3CU3Ec_t934A682FC7A2310EB64DF8FB184FC75102272AA5_StaticFields), 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9669;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize9669 = { sizeof(U3CConfigureCPUsAfterDelayU3Ed__94_tD0F5BCFB31520C5F468EF5956ADCE797ED1CFC11), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize9669 = { sizeof(U3CConfigureCPUsAfterDelayU3Ed__98_tB5A2A67AC372FBD846E78537220DF80BD3242121), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9670;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize9670 = { sizeof(U3CCountdownBeforeStartU3Ed__55_t51810BBFAD3BFB5345DEFE553C7BD7C2FFF21F45), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize9670 = { sizeof(U3CCountdownBeforeStartU3Ed__59_t58D2A2EFD5A88B7004039D206DB1EABD4E800A66), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9671;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize9671 = { sizeof(U3CInitializeProfilesDelayedU3Ed__72_t9B2694BC406668A2A25CB76C17EE937875FCF18E), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize9671 = { sizeof(U3CInitializeProfilesDelayedU3Ed__76_t3D5022F60366E845AFF8CD4FF1F533B4581B8746), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9672;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize9672 = { sizeof(U3CRefreshLobbyButtonsDelayedU3Ed__97_t78C4A4D704E0F3B1489DB4FA0F835A8899DDF3EA), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize9672 = { sizeof(U3CRefreshLobbyButtonsDelayedU3Ed__101_t6241868E6F210059248F31FA7FE7B221E17B2273), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9673;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize9673 = { sizeof(U3CRetryLoadPlayerProfileU3Ed__71_t2100268EC23954281B08E5A50633DE9F0C7737DE), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize9673 = { sizeof(U3CRetryLoadPlayerProfileU3Ed__75_tD1A41BF2191E0E8C31DACD06B095425F551B5B51), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9674;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize9674 = { sizeof(U3CTimerCountdownU3Ed__57_t4A0C81FBABA020D06E3F86CA0614C2D2D3C47DD5), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize9674 = { sizeof(U3CTimerCountdownU3Ed__61_t2B80E603FCABBA3F96522328E2A1DDE73430737F), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9675;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize9675 = { sizeof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9676;
@@ -59254,13 +59265,13 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize9690 = { sizeof(InviteFriend
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9691;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize9691 = { sizeof(InviteFriendsScaler_tFBE3B6498902A70605E9440EAC3F8EAFCE2EE4AF), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9692;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize9692 = { sizeof(U3CLoadTestDataDelayedU3Ed__28_tAE7261F2AD41694DC8EAC4F5A400F7EFB73FA36C), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize9692 = { sizeof(U3CLoadTestDataDelayedU3Ed__33_tD999367B4B710D90F7DC90D3478069D4F7D09257), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9693;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize9693 = { sizeof(U3CReloadDataDelayedU3Ed__27_tF96FE523CC078F5F33AAB58F2E41A29B49D1E05C), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize9693 = { sizeof(U3CReloadDataDelayedU3Ed__32_t4A156C5C24ABED0DA9FBCB5B38993BEA6CF4CB86), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9694;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize9694 = { sizeof(U3CSyncAvatarDelayedU3Ed__24_t1B376820E0C30786D352905AB08F0EC57FB1AF24), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize9694 = { sizeof(U3CSyncAvatarDelayedU3Ed__29_tB1892D6921A1373D9BCDBFA149F6AA701E30C25E), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9695;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize9695 = { sizeof(U3CUpdateFixedRowDelayedU3Ed__22_tE70111001FE2BFF6EFB788905DAC98DF931FDEFF), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize9695 = { sizeof(U3CUpdateFixedRowDelayedU3Ed__27_tFFF597581AB67E395CBDEC118916636720666D80), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9696;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize9696 = { sizeof(LeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9697;
@@ -59296,7 +59307,7 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize9711 = { sizeof(LobbyRowCell
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9712;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize9712 = { sizeof(LobbyScaler_t1468F4DE599440A604EAB43941C25805DC4696E7), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9713;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize9713 = { sizeof(U3CLoadImageFromUrlU3Ed__18_t80E8D029A3F38CB2B0D686738ECCC9F53DF0F002), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize9713 = { sizeof(U3CLoadImageFromUrlU3Ed__19_t21CBC03B7D3ADBFBDA2E22007CFE9DD341F52022), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9714;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize9714 = { sizeof(MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9715;

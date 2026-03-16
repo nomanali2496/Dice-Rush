@@ -23526,7 +23526,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BasicNode_1__ctor_m5F6BD5BB6499D84BA6B02
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 77115
+// Method Definition Index: 77120
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BidirectionalDictionary_2__ctor_m27667649EDE2FD1194C5DBDECF5457DD0533737C_gshared (BidirectionalDictionary_2_tEB7B33CFA033B1A7D86A7A5054807F4A876542C1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23538,7 +23538,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BidirectionalDictionary_2__ctor_m2766764
 		return;
 	}
 }
-// Method Definition Index: 77116
+// Method Definition Index: 77121
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BidirectionalDictionary_2__ctor_mFE69C1297EF0140AF4E08BE452A49C8FF0E9EF0C_gshared (BidirectionalDictionary_2_tEB7B33CFA033B1A7D86A7A5054807F4A876542C1* __this, RuntimeObject* ___0_firstEqualityComparer, RuntimeObject* ___1_secondEqualityComparer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23554,7 +23554,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BidirectionalDictionary_2__ctor_mFE69C12
 		return;
 	}
 }
-// Method Definition Index: 77117
+// Method Definition Index: 77122
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BidirectionalDictionary_2__ctor_m73A3EDCB695C291A4E5C56F35FEE6A7F7DB1EFAC_gshared (BidirectionalDictionary_2_tEB7B33CFA033B1A7D86A7A5054807F4A876542C1* __this, RuntimeObject* ___0_firstEqualityComparer, RuntimeObject* ___1_secondEqualityComparer, String_t* ___2_duplicateFirstErrorMessage, String_t* ___3_duplicateSecondErrorMessage, const RuntimeMethod* method) 
 {
 	{
@@ -23578,7 +23578,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BidirectionalDictionary_2__ctor_m73A3EDC
 		return;
 	}
 }
-// Method Definition Index: 77118
+// Method Definition Index: 77123
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BidirectionalDictionary_2_Set_m115A2629309F93E0E382DC8177CCF7D7A4A15219_gshared (BidirectionalDictionary_2_tEB7B33CFA033B1A7D86A7A5054807F4A876542C1* __this, RuntimeObject* ___0_first, RuntimeObject* ___1_second, const RuntimeMethod* method) 
 {
 	RuntimeObject* V_0 = NULL;
@@ -23667,7 +23667,7 @@ IL_0082:
 		return;
 	}
 }
-// Method Definition Index: 77119
+// Method Definition Index: 77124
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BidirectionalDictionary_2_TryGetByFirst_m78E865CC81116093B332C344E86FA1BCAF7EE42A_gshared (BidirectionalDictionary_2_tEB7B33CFA033B1A7D86A7A5054807F4A876542C1* __this, RuntimeObject* ___0_first, RuntimeObject** ___1_second, const RuntimeMethod* method) 
 {
 	{
@@ -23680,7 +23680,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BidirectionalDictionary_2_TryGetByFirst_
 		return L_3;
 	}
 }
-// Method Definition Index: 77120
+// Method Definition Index: 77125
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BidirectionalDictionary_2_TryGetBySecond_mF54964097CCB61E85EB0362E97BFDE42CA970029_gshared (BidirectionalDictionary_2_tEB7B33CFA033B1A7D86A7A5054807F4A876542C1* __this, RuntimeObject* ___0_second, RuntimeObject** ___1_first, const RuntimeMethod* method) 
 {
 	{
@@ -23701,7 +23701,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BidirectionalDictionary_2_TryGetBySecond
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 77115
+// Method Definition Index: 77120
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BidirectionalDictionary_2__ctor_mA9B4A9F341FF639E885A3CCAD54DA2F2CC46239E_gshared (BidirectionalDictionary_2_t3414A66FDA7CB6E1F164010642A3CB92AC50FFC9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23713,7 +23713,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BidirectionalDictionary_2__ctor_mA9B4A9F
 		return;
 	}
 }
-// Method Definition Index: 77116
+// Method Definition Index: 77121
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BidirectionalDictionary_2__ctor_m3DEDCB25ADA7434626E019394CCA18604C9666E0_gshared (BidirectionalDictionary_2_t3414A66FDA7CB6E1F164010642A3CB92AC50FFC9* __this, RuntimeObject* ___0_firstEqualityComparer, RuntimeObject* ___1_secondEqualityComparer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23729,7 +23729,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BidirectionalDictionary_2__ctor_m3DEDCB2
 		return;
 	}
 }
-// Method Definition Index: 77117
+// Method Definition Index: 77122
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BidirectionalDictionary_2__ctor_m62510A3C100B871B916158FFAD89A803EA1672B6_gshared (BidirectionalDictionary_2_t3414A66FDA7CB6E1F164010642A3CB92AC50FFC9* __this, RuntimeObject* ___0_firstEqualityComparer, RuntimeObject* ___1_secondEqualityComparer, String_t* ___2_duplicateFirstErrorMessage, String_t* ___3_duplicateSecondErrorMessage, const RuntimeMethod* method) 
 {
 	{
@@ -23753,7 +23753,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BidirectionalDictionary_2__ctor_m62510A3
 		return;
 	}
 }
-// Method Definition Index: 77118
+// Method Definition Index: 77123
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BidirectionalDictionary_2_Set_m1FFE1C842DB033B9D60AF7F61C881D38E9C776C5_gshared (BidirectionalDictionary_2_t3414A66FDA7CB6E1F164010642A3CB92AC50FFC9* __this, Il2CppFullySharedGenericAny ___0_first, Il2CppFullySharedGenericAny ___1_second, const RuntimeMethod* method) 
 {
 	const uint32_t SizeOf_TSecond_t2220931A411DB9B732F9FC1AC3C7972048AC4553 = il2cpp_codegen_sizeof(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 20));
@@ -23860,7 +23860,7 @@ IL_0082:
 		return;
 	}
 }
-// Method Definition Index: 77119
+// Method Definition Index: 77124
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BidirectionalDictionary_2_TryGetByFirst_mFDB314C59CCE3ECE08299675983EA32A2A9FE23E_gshared (BidirectionalDictionary_2_t3414A66FDA7CB6E1F164010642A3CB92AC50FFC9* __this, Il2CppFullySharedGenericAny ___0_first, Il2CppFullySharedGenericAny* ___1_second, const RuntimeMethod* method) 
 {
 	const uint32_t SizeOf_TFirst_t3EBC8F9FAA67A448006D4FD551BCA19C770B2E18 = il2cpp_codegen_sizeof(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 17));
@@ -23875,7 +23875,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BidirectionalDictionary_2_TryGetByFirst_
 		return L_3;
 	}
 }
-// Method Definition Index: 77120
+// Method Definition Index: 77125
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BidirectionalDictionary_2_TryGetBySecond_m4E950599C91910ED5DD0D3B9494A6F9DF67C1CCD_gshared (BidirectionalDictionary_2_t3414A66FDA7CB6E1F164010642A3CB92AC50FFC9* __this, Il2CppFullySharedGenericAny ___0_second, Il2CppFullySharedGenericAny* ___1_first, const RuntimeMethod* method) 
 {
 	const uint32_t SizeOf_TSecond_t2220931A411DB9B732F9FC1AC3C7972048AC4553 = il2cpp_codegen_sizeof(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 20));
