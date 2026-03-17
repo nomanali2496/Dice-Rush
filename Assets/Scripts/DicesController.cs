@@ -592,6 +592,17 @@ public class DicesController : MonoBehaviour
     }
     
     /// <summary>
+    /// Sets the interactability of the roll button
+    /// </summary>
+    public void SetRollButtonInteractable(bool interactable)
+    {
+        if (rollButton != null)
+        {
+            rollButton.interactable = interactable;
+        }
+    }
+
+    /// <summary>
     /// Updates the dice sum display text
     /// </summary>
     private void UpdateDiceSumDisplay(int sum)

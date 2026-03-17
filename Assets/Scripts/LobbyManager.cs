@@ -871,9 +871,9 @@ public class LobbyManager : MonoBehaviour
 
     /// <summary>
     /// Officially starts the gameplay screen and configures the game.
-    /// This is called by LobbyNetworkManager when the room is full.
+    /// This is called by LobbyNetworkManager when the room is full or timer expires.
     /// </summary>
-    public void StartGameFromNetwork(int lobbyIndex)
+    public void StartGameFromNetwork(int lobbyIndex, int overrideCPUs = -1)
     {
         if (gameplayObject != null)
         {
@@ -894,9 +894,11 @@ public class LobbyManager : MonoBehaviour
                     gameplayObject.SetActive(false);
                 }
                 
-                // Configure with new lobby settings
-                gameManager.ConfigureGameFromLobby(config);
-                Debug.Log($"[LobbyManager] Configured game for Lobby {lobbyIndex }: {config.numberOfPlayers} players, Entry: {config.entryFeeChips} chips / {config.entryFeeCash} cash");
+                // Configure with new lobby settings (using override CPUs if provided by Networking)
+                gameManager.ConfigureGameFromLobby(config, overrideCPUs);
+                
+                int finalCPUs = overrideCPUs >= 0 ? overrideCPUs : config.GetNumberOfCPUs();
+                Debug.Log($"[LobbyManager] Configured game for Lobby {lobbyIndex }: {config.numberOfPlayers} slots, Actual: {finalCPUs} CPUs");
             }
             else if (gameManager == null)
             {

@@ -202,6 +202,13 @@ public class GameManager : MonoBehaviour
         if (timerText != null) timerText.gameObject.SetActive(false);
         if (timerTextLegacy != null) timerTextLegacy.gameObject.SetActive(false);
         
+        // Disable roll button during countdown
+        if (playerDicesController != null)
+        {
+            playerDicesController.SetRollButtonInteractable(false);
+            Debug.Log("[GameManager] Roll button disabled during countdown.");
+        }
+
         // Show countdown text
         countdownText.gameObject.SetActive(true);
         countdownTextShadow.gameObject.SetActive(true);
@@ -259,6 +266,13 @@ public class GameManager : MonoBehaviour
         
         // Start powerup timers for all grids (player and CPUs) after countdown completes
         StartAllPowerupTimers();
+        
+        // Enable roll button after countdown completes
+        if (playerDicesController != null)
+        {
+            playerDicesController.SetRollButtonInteractable(true);
+            Debug.Log("[GameManager] Roll button enabled after countdown.");
+        }
         
         // Now start the actual game timer
         currentTimer = gameTimer;
@@ -393,6 +407,18 @@ public class GameManager : MonoBehaviour
     private void OnBoxSelected(int number, GameObject boxObject)
     {
         UpdateOutlineFillAmounts();
+
+        // Update local score in Photon so other players can see progress
+        if (LobbyNetworkManager.Instance != null && playerNumberGrid != null)
+        {
+            Dictionary<string, int> playerSelectionCounts = playerNumberGrid.GetSelectionCounts();
+            int currentScore = 0;
+            foreach (var kvp in playerSelectionCounts)
+            {
+                currentScore += kvp.Value;
+            }
+            LobbyNetworkManager.Instance.UpdateLocalPlayerScore(currentScore);
+        }
     }
     
     /// <summary>
@@ -535,7 +561,6 @@ public class GameManager : MonoBehaviour
         if (playerNumberGrid != null)
         {
             Dictionary<string, int> playerSelectionCounts = playerNumberGrid.GetSelectionCounts();
-            // Sum all selections from player's board (should only be "Player" key, but sum all to be safe)
             foreach (var kvp in playerSelectionCounts)
             {
                 playerCount += kvp.Value;
@@ -543,17 +568,35 @@ public class GameManager : MonoBehaviour
         }
         rankings.Add((PlayerType.Player, -1, playerCount));
         
-        // Count each CPU's selections from their own board
-        if (currentLobbyConfig != null && cpuPlayers != null)
+        // Add network players if in a room
+        if (Photon.Pun.PhotonNetwork.InRoom)
         {
-            int numberOfCPUs = currentLobbyConfig.GetNumberOfCPUs();
-            for (int i = 0; i < numberOfCPUs; i++)
+            foreach (var p in Photon.Pun.PhotonNetwork.PlayerListOthers)
+            {
+                int score = 0;
+                if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_SCORE_KEY, out object scoreObj))
+                {
+                    score = (int)scoreObj;
+                }
+                // Use a negative index offset by 100 to uniquely identify network players in the ranking list
+                rankings.Add((PlayerType.Player, -p.ActorNumber - 100, score));
+            }
+        }
+        
+        // Count each CPU's selections from their own board
+        if (currentLobbyConfig != null)
+        {
+            int numberOfCPUsToCount = currentLobbyConfig.GetNumberOfCPUs();
+            // If we are in network mode, the number of CPUs might be overridden
+            // We should use the actual spawned CPU count
+            int actualCPUs = cpuNumberGrids.Count;
+            
+            for (int i = 0; i < actualCPUs; i++)
             {
                 int cpuCount = 0;
                 if (cpuNumberGrids.ContainsKey(i) && cpuNumberGrids[i] != null)
                 {
                     Dictionary<string, int> cpuSelectionCounts = cpuNumberGrids[i].GetSelectionCounts();
-                    // Sum all selections from this CPU's board
                     foreach (var kvp in cpuSelectionCounts)
                     {
                         cpuCount += kvp.Value;
@@ -826,34 +869,78 @@ public class GameManager : MonoBehaviour
         {
             if (playerType == PlayerType.Player)
             {
-                // Always prefer the live avatar from MainMenuAvatarDisplay
-                // so gallery/custom images are shown correctly on the winner screen
-                Sprite liveSprite = (mainMenuAvatarDisplay != null)
-                                    ? mainMenuAvatarDisplay.GetCurrentAvatarSprite()
-                                    : null;
-                
-                bool isCustom = (mainMenuAvatarDisplay != null) && mainMenuAvatarDisplay.IsShowingCustomAvatar();
+                if (cpuIndex == -1) // Local Player
+                {
+                    // Always prefer the live avatar from MainMenuAvatarDisplay
+                    // so gallery/custom images are shown correctly on the winner screen
+                    Sprite liveSprite = (mainMenuAvatarDisplay != null)
+                                        ? mainMenuAvatarDisplay.GetCurrentAvatarSprite()
+                                        : null;
+                    
+                    bool isCustom = (mainMenuAvatarDisplay != null) && mainMenuAvatarDisplay.IsShowingCustomAvatar();
 
-                if (liveSprite != null)
-                {
-                    SetProfileSlot(profileImage, profileImageCustom, liveSprite, isCustom);
-                    Debug.Log($"[GameManager] Winner podium: player avatar loaded from MainMenuAvatarDisplay (live, Custom: {isCustom}).");
+                    if (liveSprite != null)
+                    {
+                        SetProfileSlot(profileImage, profileImageCustom, liveSprite, isCustom);
+                        Debug.Log($"[GameManager] Winner podium: player avatar loaded from MainMenuAvatarDisplay (live, Custom: {isCustom}).");
+                    }
+                    else if (playerProfileImage != null && playerProfileImage.sprite != null)
+                    {
+                        // Fallback to standard player profile image
+                        SetProfileSlot(profileImage, profileImageCustom, playerProfileImage.sprite, false);
+                        Debug.Log("[GameManager] Winner podium: player avatar loaded from cached playerProfileImage.");
+                    }
+                    else if (playerProfileImageCustom != null && playerProfileImageCustom.sprite != null)
+                    {
+                        // Fallback to custom player profile image
+                        SetProfileSlot(profileImage, profileImageCustom, playerProfileImageCustom.sprite, true);
+                        Debug.Log("[GameManager] Winner podium: player avatar loaded from cached playerProfileImageCustom.");
+                    }
                 }
-                else if (playerProfileImage != null && playerProfileImage.sprite != null)
+                else if (cpuIndex <= -100) // Network Human
                 {
-                    // Fallback to standard player profile image
-                    SetProfileSlot(profileImage, profileImageCustom, playerProfileImage.sprite, false);
-                    Debug.Log("[GameManager] Winner podium: player avatar loaded from cached playerProfileImage.");
-                }
-                else if (playerProfileImageCustom != null && playerProfileImageCustom.sprite != null)
-                {
-                    // Fallback to custom player profile image
-                    SetProfileSlot(profileImage, profileImageCustom, playerProfileImageCustom.sprite, true);
-                    Debug.Log("[GameManager] Winner podium: player avatar loaded from cached playerProfileImageCustom.");
-                }
-                else
-                {
-                    Debug.LogWarning("[GameManager] Winner podium: could not get player avatar sprite (both live and cached are null).");
+                    // Find the network player by ActorNumber
+                    int actorNumber = Mathf.Abs(cpuIndex + 100);
+                    Photon.Realtime.Player targetPlayer = null;
+                    foreach (var p in Photon.Pun.PhotonNetwork.PlayerList)
+                    {
+                        if (p.ActorNumber == actorNumber)
+                        {
+                            targetPlayer = p;
+                            break;
+                        }
+                    }
+
+                    if (targetPlayer != null)
+                    {
+                        // Check for Custom Image data first (Gallery/Pro way)
+                        if (targetPlayer.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_CUSTOM_IMAGE_KEY, out object imageDataObj))
+                        {
+                            byte[] bytes = (byte[])imageDataObj;
+                            Texture2D tex = new Texture2D(2, 2);
+                            if (tex.LoadImage(bytes))
+                            {
+                                Sprite customSprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+                                SetProfileSlot(profileImage, profileImageCustom, customSprite, true);
+                                Debug.Log($"[GameManager] Winner podium: network human custom gallery image synced and displayed.");
+                            }
+                        }
+                        // Fallback to Preset Avatar Index
+                        else if (targetPlayer.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_AVATAR_KEY, out object avatarIdxObj))
+                        {
+                            int avatarIndex = (int)avatarIdxObj;
+                            if (availableProfileSprites != null && avatarIndex >= 0 && avatarIndex < availableProfileSprites.Length)
+                            {
+                                SetProfileSlot(profileImage, profileImageCustom, availableProfileSprites[avatarIndex], false);
+                                Debug.Log($"[GameManager] Winner podium: network human avatar (synced index {avatarIndex}) assigned.");
+                            }
+                        }
+                    }
+                    else if (availableProfileSprites != null && availableProfileSprites.Length > 0)
+                    {
+                        // Fallback to first sprite if sync failed
+                        SetProfileSlot(profileImage, profileImageCustom, availableProfileSprites[0], false);
+                    }
                 }
             }
             else // CPU
@@ -873,7 +960,15 @@ public class GameManager : MonoBehaviour
         {
             if (playerType == PlayerType.Player)
             {
-                outlineImage.color = playerOutlineColor;
+                if (cpuIndex == -1) // Local Player
+                {
+                    outlineImage.color = playerOutlineColor;
+                }
+                else // Network Human
+                {
+                    // Use a distinct color for network humans if available, or just white/default
+                    outlineImage.color = Color.white;
+                }
             }
             else // CPU
             {
@@ -1031,6 +1126,27 @@ public class GameManager : MonoBehaviour
     {
         if (playerType == PlayerType.Player)
         {
+            if (cpuIndex == -1)
+            {
+                return "You";
+            }
+            else if (cpuIndex <= -100)
+            {
+                // Network Player
+                int actorNumber = Mathf.Abs(cpuIndex + 100);
+                foreach (var p in Photon.Pun.PhotonNetwork.PlayerList)
+                {
+                    if (p.ActorNumber == actorNumber)
+                    {
+                        if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_NAME_KEY, out object nameObj))
+                        {
+                            return (string)nameObj;
+                        }
+                        return string.IsNullOrEmpty(p.NickName) ? $"Player {actorNumber}" : p.NickName;
+                    }
+                }
+                return "Player";
+            }
             return "You";
         }
         else // CPU
@@ -1682,7 +1798,7 @@ public class GameManager : MonoBehaviour
     /// Configures the game from a lobby configuration
     /// Sets number of CPUs, handles entry fee, and stores prize information
     /// </summary>
-    public void ConfigureGameFromLobby(LobbyConfig config)
+    public void ConfigureGameFromLobby(LobbyConfig config, int overrideCPUs = -1)
     {
         if (config == null)
         {
@@ -1722,8 +1838,8 @@ public class GameManager : MonoBehaviour
         // Set new lobby configuration
         currentLobbyConfig = config;
         
-        // Set number of CPUs based on lobby configuration
-        int numberOfCPUs = config.GetNumberOfCPUs();
+        // Set number of CPUs based on lobby configuration or network override
+        int numberOfCPUs = overrideCPUs >= 0 ? overrideCPUs : config.GetNumberOfCPUs();
         
         // Create individual NumberGrid instances for player and each CPU
         CreateIndividualNumberGrids(numberOfCPUs);
@@ -1731,7 +1847,7 @@ public class GameManager : MonoBehaviour
         // Wait a frame to ensure NumberGrids are fully created before restarting CPUs
         StartCoroutine(ConfigureCPUsAfterDelay(numberOfCPUs));
         
-        Debug.Log($"[GameManager] Game configured from Lobby {config.lobbyIndex }: {config.numberOfPlayers} players ({numberOfCPUs} CPUs) Name = {config.lobbyName}  ");
+        Debug.Log($"[GameManager] Game configured from Lobby {config.lobbyIndex }: {config.numberOfPlayers} players ({numberOfCPUs} CPUs spawned) Name = {config.lobbyName}");
         
         // Handle entry fee
         HandleEntryFee(config);
@@ -1959,8 +2075,9 @@ public class GameManager : MonoBehaviour
         {
             var ranking = rankings[i];
             
-            // Only award prize to the player (not CPUs)
-            if (ranking.playerType == PlayerType.Player)
+            // CRITICAL: Only award prize if it's the LOCAL player (cpuIndex == -1)
+            // We don't award money to other human players over the network (they do it on their own device)
+            if (ranking.playerType == PlayerType.Player && ranking.cpuIndex == -1)
             {
                 float cashPrize = 0f;
                 int chipsPrize = 0;
@@ -1985,14 +2102,14 @@ public class GameManager : MonoBehaviour
                 if (cashPrize > 0f)
                 {
                     PlayFabManager.Instance.AddCash(cashPrize);
-                    Debug.Log($"[GameManager] Awarded {cashPrize} cash for {i + 1}st place");
+                    Debug.Log($"[GameManager] Awarded {cashPrize} cash to LOCAL player for {i + 1}st place");
                 }
                 
                 // Award chips prize
                 if (chipsPrize > 0)
                 {
                     PlayFabManager.Instance.AddCoins(chipsPrize);
-                    Debug.Log($"[GameManager] Awarded {chipsPrize} chips for {i + 1}st place");
+                    Debug.Log($"[GameManager] Awarded {chipsPrize} chips to LOCAL player for {i + 1}st place");
                 }
             }
         }

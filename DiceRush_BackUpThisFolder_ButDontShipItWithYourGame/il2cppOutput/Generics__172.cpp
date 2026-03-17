@@ -34730,7 +34730,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ValueCollection_System_Collect
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 103351
+// Method Definition Index: 103357
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueIterator__ctor_mA5E66EE78063A0EC677DB7175D258BEB70191727_gshared (ValueIterator_t9C941381C2D346E4A2E86FDCBEF3328E7B079F70* __this, NonAllocDictionary_2_t731311DC35E31CEB666B4A4099E518236EA55F79* ___0_dictionary, const RuntimeMethod* method) 
 {
 	{
@@ -34748,7 +34748,7 @@ IL2CPP_EXTERN_C  void ValueIterator__ctor_mA5E66EE78063A0EC677DB7175D258BEB70191
 	_thisAdjusted = reinterpret_cast<ValueIterator_t9C941381C2D346E4A2E86FDCBEF3328E7B079F70*>(__this + _offset);
 	ValueIterator__ctor_mA5E66EE78063A0EC677DB7175D258BEB70191727(_thisAdjusted, ___0_dictionary, method);
 }
-// Method Definition Index: 103352
+// Method Definition Index: 103358
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ValueIterator_t9C941381C2D346E4A2E86FDCBEF3328E7B079F70 ValueIterator_GetEnumerator_mF512965D871306101DBC204817E3D48340D8F443_gshared (ValueIterator_t9C941381C2D346E4A2E86FDCBEF3328E7B079F70* __this, const RuntimeMethod* method) 
 {
 	ValueIterator_t9C941381C2D346E4A2E86FDCBEF3328E7B079F70 V_0;
@@ -34774,7 +34774,7 @@ IL2CPP_EXTERN_C  ValueIterator_t9C941381C2D346E4A2E86FDCBEF3328E7B079F70 ValueIt
 	_returnValue = ValueIterator_GetEnumerator_mF512965D871306101DBC204817E3D48340D8F443(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 103353
+// Method Definition Index: 103359
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueIterator_Reset_m83760985E5CDCA0F7D9AE75449BEE4B0376265CB_gshared (ValueIterator_t9C941381C2D346E4A2E86FDCBEF3328E7B079F70* __this, const RuntimeMethod* method) 
 {
 	{
@@ -34789,7 +34789,7 @@ IL2CPP_EXTERN_C  void ValueIterator_Reset_m83760985E5CDCA0F7D9AE75449BEE4B037626
 	_thisAdjusted = reinterpret_cast<ValueIterator_t9C941381C2D346E4A2E86FDCBEF3328E7B079F70*>(__this + _offset);
 	ValueIterator_Reset_m83760985E5CDCA0F7D9AE75449BEE4B0376265CB(_thisAdjusted, method);
 }
-// Method Definition Index: 103354
+// Method Definition Index: 103360
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ValueIterator_get_Current_mC90124808E44EB98ACED35F9237CAEEE349F31F4_gshared (ValueIterator_t9C941381C2D346E4A2E86FDCBEF3328E7B079F70* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -34838,7 +34838,7 @@ IL2CPP_EXTERN_C  RuntimeObject* ValueIterator_get_Current_mC90124808E44EB98ACED3
 	_returnValue = ValueIterator_get_Current_mC90124808E44EB98ACED35F9237CAEEE349F31F4(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 103355
+// Method Definition Index: 103361
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ValueIterator_System_Collections_IEnumerator_get_Current_mCBF20A5D2035BC86B61A6B129A6A294F0D1F724F_gshared (ValueIterator_t9C941381C2D346E4A2E86FDCBEF3328E7B079F70* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -34885,7 +34885,7 @@ IL2CPP_EXTERN_C  RuntimeObject* ValueIterator_System_Collections_IEnumerator_get
 	_returnValue = ValueIterator_System_Collections_IEnumerator_get_Current_mCBF20A5D2035BC86B61A6B129A6A294F0D1F724F(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 103356
+// Method Definition Index: 103362
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ValueIterator_MoveNext_mCAE9304BB60C1400B30F5A896CFD419432022097_gshared (ValueIterator_t9C941381C2D346E4A2E86FDCBEF3328E7B079F70* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -34958,7 +34958,7 @@ IL2CPP_EXTERN_C  bool ValueIterator_MoveNext_mCAE9304BB60C1400B30F5A896CFD419432
 	_returnValue = ValueIterator_MoveNext_mCAE9304BB60C1400B30F5A896CFD419432022097(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 103357
+// Method Definition Index: 103363
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueIterator_Dispose_mFBBCE305A11FA205D88E05137C6DDD9ADF6BBC8E_gshared (ValueIterator_t9C941381C2D346E4A2E86FDCBEF3328E7B079F70* __this, const RuntimeMethod* method) 
 {
 	{

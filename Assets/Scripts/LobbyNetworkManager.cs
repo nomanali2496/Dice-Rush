@@ -90,12 +90,132 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
         );
     }
 
+    private bool isStarting = false;
+    private const string START_TIME_KEY = "StartTime";
+    private const float MATCHMAKING_TIMEOUT = 30f;
+
     public override void OnJoinedRoom()
     {
         Debug.Log($"[LobbyNetworkManager] Joined Room: {PhotonNetwork.CurrentRoom.Name}");
         if (waitingPanel != null) waitingPanel.SetActive(true);
+        isStarting = false;
+
+        // If we are the Master Client, set the start time for the countdown
+        if (PhotonNetwork.IsMasterClient)
+        {
+            ExitGames.Client.Photon.Hashtable props = new ExitGames.Client.Photon.Hashtable();
+            props.Add(START_TIME_KEY, PhotonNetwork.Time);
+            PhotonNetwork.CurrentRoom.SetCustomProperties(props);
+        }
+
+        // Sync profile data (Name and Avatar) to Custom Properties
+        if (PlayFabManager.Instance != null && PlayFabManager.Instance.currentPlayerData != null)
+        {
+            var data = PlayFabManager.Instance.currentPlayerData;
+            PhotonNetwork.NickName = data.playerName;
+            
+            ExitGames.Client.Photon.Hashtable profileProps = new ExitGames.Client.Photon.Hashtable();
+            profileProps.Add(PLAYER_NAME_KEY, data.playerName);
+            profileProps.Add(PLAYER_AVATAR_KEY, data.selectedAvatarIndex);
+            
+            // Sync custom photo if being used
+            MainMenuAvatarDisplay avatarDisplay = FindObjectOfType<MainMenuAvatarDisplay>();
+            if (avatarDisplay != null && avatarDisplay.IsShowingCustomAvatar())
+            {
+                Sprite s = avatarDisplay.GetCurrentAvatarSprite();
+                if (s != null && s.texture != null)
+                {
+                    byte[] compressedImage = CompressAvatarTexture(s.texture);
+                    if (compressedImage != null)
+                    {
+                        profileProps.Add(PLAYER_CUSTOM_IMAGE_KEY, compressedImage);
+                        Debug.Log($"[LobbyNetworkManager] Syncing custom photo ({compressedImage.Length} bytes)");
+                    }
+                }
+            }
+            
+            PhotonNetwork.LocalPlayer.SetCustomProperties(profileProps);
+            Debug.Log($"[LobbyNetworkManager] Cached profile for sync: {data.playerName}, Avatar: {data.selectedAvatarIndex}");
+        }
+
         UpdateWaitingStatus();
         CheckIfRoomFull();
+    }
+
+    public const string PLAYER_SCORE_KEY = "Score";
+    public const string PLAYER_NAME_KEY = "PlayerName";
+    public const string PLAYER_AVATAR_KEY = "AvatarIndex";
+    public const string PLAYER_CUSTOM_IMAGE_KEY = "CustomImage";
+
+    /// <summary>
+    /// Resizes and compresses texture to byte array for network sync
+    /// </summary>
+    private byte[] CompressAvatarTexture(Texture2D source)
+    {
+        try
+        {
+            // Create a temporary readable texture
+            RenderTexture rt = RenderTexture.GetTemporary(64, 64);
+            Graphics.Blit(source, rt);
+            RenderTexture previous = RenderTexture.active;
+            RenderTexture.active = rt;
+            
+            Texture2D readableText = new Texture2D(64, 64);
+            readableText.ReadPixels(new Rect(0, 0, 64, 64), 0, 0);
+            readableText.Apply();
+            
+            RenderTexture.active = previous;
+            RenderTexture.ReleaseTemporary(rt);
+            
+            // Compress to JPG (quality 50 for small size)
+            byte[] bytes = readableText.EncodeToJPG(50);
+            Destroy(readableText);
+            return bytes;
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError($"[LobbyNetworkManager] Failed to compress avatar: {e.Message}");
+            return null;
+        }
+    }
+
+    /// <summary>
+    /// Updates the local player's score in Photon custom properties.
+    /// This allows other players to see your progress.
+    /// </summary>
+    public void UpdateLocalPlayerScore(int score)
+    {
+        if (PhotonNetwork.InRoom)
+        {
+            ExitGames.Client.Photon.Hashtable props = new ExitGames.Client.Photon.Hashtable();
+            props.Add(PLAYER_SCORE_KEY, score);
+            PhotonNetwork.LocalPlayer.SetCustomProperties(props);
+        }
+    }
+
+    private void Update()
+    {
+        if (PhotonNetwork.InRoom && !isStarting)
+        {
+            UpdateWaitingStatus();
+            CheckMatchmakingTimer();
+        }
+    }
+
+    private void CheckMatchmakingTimer()
+    {
+        if (PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(START_TIME_KEY, out object startTimeObj))
+        {
+            double startTime = (double)startTimeObj;
+            double elapsedTime = PhotonNetwork.Time - startTime;
+            double remainingTime = MATCHMAKING_TIMEOUT - elapsedTime;
+
+            if (remainingTime <= 0)
+            {
+                Debug.Log("[LobbyNetworkManager] Matchmaking timeout reached! Starting with current players.");
+                StartMultiplayerGame();
+            }
+        }
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
@@ -111,35 +231,61 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
         UpdateWaitingStatus();
     }
 
+    public override void OnRoomPropertiesUpdate(Hashtable propertiesThatChanged)
+    {
+        if (propertiesThatChanged.ContainsKey(START_TIME_KEY))
+        {
+            UpdateWaitingStatus();
+        }
+    }
+
     private void UpdateWaitingStatus()
     {
         if (PhotonNetwork.InRoom && statusText != null)
         {
             int current = PhotonNetwork.CurrentRoom.PlayerCount;
             int max = PhotonNetwork.CurrentRoom.MaxPlayers;
-            statusText.text = $"Waiting for players... {current}/{max}";
+            
+            string timerPrefix = "";
+            if (PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(START_TIME_KEY, out object startTimeObj))
+            {
+                double startTime = (double)startTimeObj;
+                double remainingTime = Mathf.Max(0, (float)(MATCHMAKING_TIMEOUT - (PhotonNetwork.Time - startTime)));
+                timerPrefix = $"Starting in {Mathf.CeilToInt((float)remainingTime)}s...\n";
+            }
+
+            statusText.text = $"{timerPrefix}Players: {current}/{max}";
         }
     }
 
     private void CheckIfRoomFull()
     {
-        if (PhotonNetwork.InRoom && PhotonNetwork.CurrentRoom.PlayerCount >= PhotonNetwork.CurrentRoom.MaxPlayers)
+        if (PhotonNetwork.InRoom && !isStarting && PhotonNetwork.CurrentRoom.PlayerCount >= PhotonNetwork.CurrentRoom.MaxPlayers)
         {
-            Debug.Log("[LobbyNetworkManager] Room is full! Starting game...");
+            Debug.Log("[LobbyNetworkManager] Room is full! Starting game immediately...");
             StartMultiplayerGame();
         }
     }
 
     private void StartMultiplayerGame()
     {
+        if (isStarting) return;
+        isStarting = true;
+
         if (waitingPanel != null) waitingPanel.SetActive(false);
         
         LobbyManager lobbyManager = FindObjectOfType<LobbyManager>();
         if (lobbyManager != null && currentSelectedConfig != null)
         {
-            // Call the original gameplay start logic in LobbyManager 
-            // but now it's synchronized by Photon
-            lobbyManager.StartGameFromNetwork(currentSelectedConfig.lobbyIndex);
+            // Determine how many CPUs we need to fill the remaining slots
+            int humanPlayers = PhotonNetwork.CurrentRoom.PlayerCount;
+            int totalSlots = currentSelectedConfig.numberOfPlayers;
+            int neededCPUs = Mathf.Max(0, totalSlots - humanPlayers);
+
+            Debug.Log($"[LobbyNetworkManager] Starting game with {humanPlayers} humans and {neededCPUs} CPUs");
+            
+            // Pass the number of CPUs needed to the LobbyManager
+            lobbyManager.StartGameFromNetwork(currentSelectedConfig.lobbyIndex, neededCPUs);
         }
     }
 

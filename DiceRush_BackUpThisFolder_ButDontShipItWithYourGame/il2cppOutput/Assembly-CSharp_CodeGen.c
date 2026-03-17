@@ -835,6 +835,7 @@ extern void DicesController_EaseOutCubic_m74D2E3A31CD2401242A31E64F270623C2BA371
 extern void DicesController_EaseInOutCubic_m62D9C4206A298FB0E4A816D784848B5B836B923E (void);
 extern void DicesController_SetDiceFaces_mD26C038D81A280399BE1DE9237DB4B15749394D5 (void);
 extern void DicesController_GetCurrentDiceValues_m4565B04943C9757BAE6092AE22F920583D6BDB69 (void);
+extern void DicesController_SetRollButtonInteractable_mAB42C5281CD16F0E36E0C717B8289AB4FC55CDDF (void);
 extern void DicesController_UpdateDiceSumDisplay_m29A9D5F0A116ADC6ADAE67962875A0599CB6691A (void);
 extern void DicesController_ClearDiceSumDisplay_mB8A3001124E08E5F9C42648FFDB87B523F471971 (void);
 extern void DicesController_OnDestroy_mADC2C2672F9FE94CAEF01BC056D0BE6EC683385C (void);
@@ -962,7 +963,7 @@ extern void GameManager_ReassignOutlineColors_m6D4963AE82AB8554DC922A4A8C0E1C6CC
 extern void GameManager_UpdateOutlineFillAmounts_m7A38CCE91B3A2F9CE7DA89E9DDC0A8B69D5C0026 (void);
 extern void GameManager_ResetOutlineFillAmounts_m38857726E6EC8D4E94F3D21A368832A699ABABA4 (void);
 extern void GameManager_ResetGameState_mF33FB9053CFB001BA59AF315587CBC6520941C66 (void);
-extern void GameManager_ConfigureGameFromLobby_m95A474D742D46A60D2D6B6419320A95C8B2CBEF3 (void);
+extern void GameManager_ConfigureGameFromLobby_mEE8CB112AA7AD98FF2B86019A99249D5AED8F25A (void);
 extern void GameManager_ResetWinnerScreenUI_mB142D1CC347257EF99B54F05FFF88B002765AFBD (void);
 extern void GameManager_ConfigureCPUsAfterDelay_mC9CBA9109B30A97042F9DF109BEB175CE49307D1 (void);
 extern void GameManager_HandleEntryFee_m50A7A72CC467E63A0A597C89B6B2C68AB398A7F6 (void);
@@ -1306,7 +1307,7 @@ extern void LobbyManager_GetLobbyConfig_m7C9C8E2F9383DB082B8B429F4B293CDD965AFD2
 extern void LobbyManager_CanPlayerAffordEntryFee_m7544F07C4BB2D726D7988997FF52AD5CD6D6D13D (void);
 extern void LobbyManager_SetLobbyConfig_mA4412D1981131FB105637417FE82D4EF77277E37 (void);
 extern void LobbyManager_OpenGameplayObject_m0948427B32BC29DFCAE0C26F67B13A2A31F3DC86 (void);
-extern void LobbyManager_StartGameFromNetwork_m42991300A31661C549160C2F23F761941AEF1528 (void);
+extern void LobbyManager_StartGameFromNetwork_mCB781DBFA88CA18F529A82E0A593F27B07A78383 (void);
 extern void LobbyManager_RefreshAllPlayButtons_mFFD67B324C911D0D480510017C5E107717C2B05B (void);
 extern void LobbyManager_SetupDotButtons_mEEC08B89A62A2E7D90DD5C68C6BA43F8E8A1F583 (void);
 extern void LobbyManager_OnDotButtonClicked_mFBBB0770D1029A35AFA74005CAB2F826838D3433 (void);
@@ -1344,8 +1345,13 @@ extern void LobbyNetworkManager_OnConnectedToMaster_m8EE7D8B171EB442BD81AB908935
 extern void LobbyNetworkManager_OnJoinedLobby_m568F2801ED3BC944D77F29AB6CE8280A888302F8 (void);
 extern void LobbyNetworkManager_JoinLobbyRoom_m4332A9AFD6922E57D2A00A03AC80306D0156E587 (void);
 extern void LobbyNetworkManager_OnJoinedRoom_mDC77D32742B1F5DFB18EBA0F6C81D4858F9F4C15 (void);
+extern void LobbyNetworkManager_CompressAvatarTexture_mEFEE999C094F4E3E24FB70A41A27BB14AEAC001D (void);
+extern void LobbyNetworkManager_UpdateLocalPlayerScore_mD23FEF9E25F51570A82785752D6B44399A384280 (void);
+extern void LobbyNetworkManager_Update_m798DB3DC04B8D11E2675C46ADD1D17FDBBD2620B (void);
+extern void LobbyNetworkManager_CheckMatchmakingTimer_m7A3CCDDB5F4A9B0828D630D499817E47D4FEFF75 (void);
 extern void LobbyNetworkManager_OnPlayerEnteredRoom_m54764500799EA8CCC9CB4ACCE46CB23FE4F9F79E (void);
 extern void LobbyNetworkManager_OnPlayerLeftRoom_m19BE33D22DD17240C3D6D1D44E1A085720539A27 (void);
+extern void LobbyNetworkManager_OnRoomPropertiesUpdate_m9517434CB0114CE1ADD10C69077579E6E82B6C43 (void);
 extern void LobbyNetworkManager_UpdateWaitingStatus_m256AA80308ECE72095FF47E834EA34579C7CBD46 (void);
 extern void LobbyNetworkManager_CheckIfRoomFull_mA21DE997DE48EDDD3189475D25A49862720039EB (void);
 extern void LobbyNetworkManager_StartMultiplayerGame_m69490BB8953A4094CB1B9A9C1670259EDEF7050D (void);
@@ -2997,7 +3003,7 @@ extern void Serializer_SerializeObject_mEE17BC69DDCF30AD22C910401562491ADABE5426
 extern void Serializer_SerializeArray_mD635B32B9406AF9608B71640F32C16AB828138BB (void);
 extern void Serializer_SerializeString_mB658D7F56B6D171FE905FE62A98E59DAC6050BDB (void);
 extern void Serializer_SerializeOther_m5A394D1B6C91B809DFBF69B4F3B9FAE531853841 (void);
-static Il2CppMethodPointer s_methodPointers[3014] = 
+static Il2CppMethodPointer s_methodPointers[3020] = 
 {
 	Branch_initSession_mA094BFC68D86105527AF4192E91D67F941F6652D,
 	Branch_initSession_mE08C2916193D182CE7ABD85BA63A2A5A30C67FEC,
@@ -3827,6 +3833,7 @@ static Il2CppMethodPointer s_methodPointers[3014] =
 	DicesController_EaseInOutCubic_m62D9C4206A298FB0E4A816D784848B5B836B923E,
 	DicesController_SetDiceFaces_mD26C038D81A280399BE1DE9237DB4B15749394D5,
 	DicesController_GetCurrentDiceValues_m4565B04943C9757BAE6092AE22F920583D6BDB69,
+	DicesController_SetRollButtonInteractable_mAB42C5281CD16F0E36E0C717B8289AB4FC55CDDF,
 	DicesController_UpdateDiceSumDisplay_m29A9D5F0A116ADC6ADAE67962875A0599CB6691A,
 	DicesController_ClearDiceSumDisplay_mB8A3001124E08E5F9C42648FFDB87B523F471971,
 	DicesController_OnDestroy_mADC2C2672F9FE94CAEF01BC056D0BE6EC683385C,
@@ -3954,7 +3961,7 @@ static Il2CppMethodPointer s_methodPointers[3014] =
 	GameManager_UpdateOutlineFillAmounts_m7A38CCE91B3A2F9CE7DA89E9DDC0A8B69D5C0026,
 	GameManager_ResetOutlineFillAmounts_m38857726E6EC8D4E94F3D21A368832A699ABABA4,
 	GameManager_ResetGameState_mF33FB9053CFB001BA59AF315587CBC6520941C66,
-	GameManager_ConfigureGameFromLobby_m95A474D742D46A60D2D6B6419320A95C8B2CBEF3,
+	GameManager_ConfigureGameFromLobby_mEE8CB112AA7AD98FF2B86019A99249D5AED8F25A,
 	GameManager_ResetWinnerScreenUI_mB142D1CC347257EF99B54F05FFF88B002765AFBD,
 	GameManager_ConfigureCPUsAfterDelay_mC9CBA9109B30A97042F9DF109BEB175CE49307D1,
 	GameManager_HandleEntryFee_m50A7A72CC467E63A0A597C89B6B2C68AB398A7F6,
@@ -4298,7 +4305,7 @@ static Il2CppMethodPointer s_methodPointers[3014] =
 	LobbyManager_CanPlayerAffordEntryFee_m7544F07C4BB2D726D7988997FF52AD5CD6D6D13D,
 	LobbyManager_SetLobbyConfig_mA4412D1981131FB105637417FE82D4EF77277E37,
 	LobbyManager_OpenGameplayObject_m0948427B32BC29DFCAE0C26F67B13A2A31F3DC86,
-	LobbyManager_StartGameFromNetwork_m42991300A31661C549160C2F23F761941AEF1528,
+	LobbyManager_StartGameFromNetwork_mCB781DBFA88CA18F529A82E0A593F27B07A78383,
 	LobbyManager_RefreshAllPlayButtons_mFFD67B324C911D0D480510017C5E107717C2B05B,
 	LobbyManager_SetupDotButtons_mEEC08B89A62A2E7D90DD5C68C6BA43F8E8A1F583,
 	LobbyManager_OnDotButtonClicked_mFBBB0770D1029A35AFA74005CAB2F826838D3433,
@@ -4336,8 +4343,13 @@ static Il2CppMethodPointer s_methodPointers[3014] =
 	LobbyNetworkManager_OnJoinedLobby_m568F2801ED3BC944D77F29AB6CE8280A888302F8,
 	LobbyNetworkManager_JoinLobbyRoom_m4332A9AFD6922E57D2A00A03AC80306D0156E587,
 	LobbyNetworkManager_OnJoinedRoom_mDC77D32742B1F5DFB18EBA0F6C81D4858F9F4C15,
+	LobbyNetworkManager_CompressAvatarTexture_mEFEE999C094F4E3E24FB70A41A27BB14AEAC001D,
+	LobbyNetworkManager_UpdateLocalPlayerScore_mD23FEF9E25F51570A82785752D6B44399A384280,
+	LobbyNetworkManager_Update_m798DB3DC04B8D11E2675C46ADD1D17FDBBD2620B,
+	LobbyNetworkManager_CheckMatchmakingTimer_m7A3CCDDB5F4A9B0828D630D499817E47D4FEFF75,
 	LobbyNetworkManager_OnPlayerEnteredRoom_m54764500799EA8CCC9CB4ACCE46CB23FE4F9F79E,
 	LobbyNetworkManager_OnPlayerLeftRoom_m19BE33D22DD17240C3D6D1D44E1A085720539A27,
+	LobbyNetworkManager_OnRoomPropertiesUpdate_m9517434CB0114CE1ADD10C69077579E6E82B6C43,
 	LobbyNetworkManager_UpdateWaitingStatus_m256AA80308ECE72095FF47E834EA34579C7CBD46,
 	LobbyNetworkManager_CheckIfRoomFull_mA21DE997DE48EDDD3189475D25A49862720039EB,
 	LobbyNetworkManager_StartMultiplayerGame_m69490BB8953A4094CB1B9A9C1670259EDEF7050D,
@@ -6014,7 +6026,7 @@ static Il2CppMethodPointer s_methodPointers[3014] =
 	Serializer_SerializeString_mB658D7F56B6D171FE905FE62A98E59DAC6050BDB,
 	Serializer_SerializeOther_m5A394D1B6C91B809DFBF69B4F3B9FAE531853841,
 };
-static const int32_t s_InvokerIndices[3014] = 
+static const int32_t s_InvokerIndices[3020] = 
 {
 	29616,
 	29616,
@@ -6844,6 +6856,7 @@ static const int32_t s_InvokerIndices[3014] =
 	11568,
 	6313,
 	17495,
+	13309,
 	13446,
 	17994,
 	17994,
@@ -6971,7 +6984,7 @@ static const int32_t s_InvokerIndices[3014] =
 	17994,
 	17994,
 	17994,
-	13510,
+	6867,
 	17994,
 	11372,
 	13510,
@@ -7315,7 +7328,7 @@ static const int32_t s_InvokerIndices[3014] =
 	9461,
 	6367,
 	13446,
-	13446,
+	6313,
 	17994,
 	17994,
 	13446,
@@ -7353,6 +7366,11 @@ static const int32_t s_InvokerIndices[3014] =
 	17994,
 	13510,
 	17994,
+	11380,
+	13446,
+	17994,
+	17994,
+	13510,
 	13510,
 	13510,
 	17994,
@@ -9034,11 +9052,11 @@ static const int32_t s_InvokerIndices[3014] =
 static const Il2CppTokenRangePair s_rgctxIndices[6] = 
 {
 	{ 0x0200015B, { 12, 8 } },
-	{ 0x06000586, { 0, 4 } },
-	{ 0x06000587, { 4, 3 } },
-	{ 0x06000588, { 7, 5 } },
-	{ 0x06000A8D, { 20, 3 } },
-	{ 0x06000AAC, { 23, 3 } },
+	{ 0x0600058C, { 0, 4 } },
+	{ 0x0600058D, { 4, 3 } },
+	{ 0x0600058E, { 7, 5 } },
+	{ 0x06000A93, { 20, 3 } },
+	{ 0x06000AB2, { 23, 3 } },
 };
 extern const uint32_t g_rgctx_T_t8C0EC4E6A28998AEF990D24C5045CD8DAEC7CE27;
 extern const uint32_t g_rgctx_GameObject_GetComponent_TisT_t8C0EC4E6A28998AEF990D24C5045CD8DAEC7CE27_m6F00BBCCD33F37575CAA88D74342A9BB172E7394;
@@ -9099,7 +9117,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	3014,
+	3020,
 	s_methodPointers,
 	0,
 	NULL,
