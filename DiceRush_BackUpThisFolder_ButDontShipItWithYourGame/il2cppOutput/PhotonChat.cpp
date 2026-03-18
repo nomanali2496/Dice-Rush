@@ -1638,7 +1638,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Array_Clear_m50BAA3751899858B097D3FF2ED3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 117012
+// Method Definition Index: 117016
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t5A166F72B92AE2C851132A6B51C267151DABD10E UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mC1EE1810DC92EE5AFB5BD9EA17776939A7BAB28C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1681,7 +1681,7 @@ IL_005f:
 		return L_7;
 	}
 }
-// Method Definition Index: 117013
+// Method Definition Index: 117017
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mF00746AE00C18EE822D629C0D156BB0F7D7994CE (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_tCC7F72FC029DA8E32998BCACACC0EF1A27F34234* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1767,7 +1767,7 @@ IL2CPP_EXTERN_C void MonoScriptData_t5A166F72B92AE2C851132A6B51C267151DABD10E_ma
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 117014
+// Method Definition Index: 117018
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChannelCreationOptions_get_PublishSubscribers_m1DE43FC2FA2BC1B223AD3006D33726E429EC1CD4 (ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1776,7 +1776,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChannelCreationOptions_get_PublishSubscr
 		return L_0;
 	}
 }
-// Method Definition Index: 117015
+// Method Definition Index: 117019
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChannelCreationOptions_set_PublishSubscribers_m2B808C7A7AF9BB9C18F6E6A956F625AB58809020 (ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -1786,7 +1786,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChannelCreationOptions_set_PublishSubscr
 		return;
 	}
 }
-// Method Definition Index: 117016
+// Method Definition Index: 117020
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ChannelCreationOptions_get_MaxSubscribers_m1F147E5851EF027099B954B5D4CADB288112ECA9 (ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1795,7 +1795,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ChannelCreationOptions_get_MaxSubscri
 		return L_0;
 	}
 }
-// Method Definition Index: 117017
+// Method Definition Index: 117021
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChannelCreationOptions_set_MaxSubscribers_m94D7B927C7BA0F3A3AC23B1843C75A65B4FCFE48 (ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -1805,7 +1805,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChannelCreationOptions_set_MaxSubscriber
 		return;
 	}
 }
-// Method Definition Index: 117018
+// Method Definition Index: 117022
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChannelCreationOptions__ctor_m1F62AA7111622F40FE14CCEB29A87991754DD694 (ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1813,7 +1813,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChannelCreationOptions__ctor_m1F62AA7111
 		return;
 	}
 }
-// Method Definition Index: 117019
+// Method Definition Index: 117023
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChannelCreationOptions__cctor_m416383118DC3B0116DED27C48A3B2832F04DA207 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1839,7 +1839,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChannelCreationOptions__cctor_m416383118
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 117020
+// Method Definition Index: 117024
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChannelWellKnownProperties__ctor_m9DFC27AD2EDA163874394D85D40BB14DE5E9A1F9 (ChannelWellKnownProperties_t5ACDCF18009291B8A4D1277B89C0B727B77F3088* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1855,7 +1855,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChannelWellKnownProperties__ctor_m9DFC27
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 117021
+// Method Definition Index: 117025
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatAppSettings_get_IsDefaultNameServer_m7847F68B2E3DCF7D3DC72481DDCBB048D0EFC050 (ChatAppSettings_tF76C214B6AA76ACABCEFC447A2CEC798F2B8C689* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -1875,7 +1875,7 @@ IL_000f:
 		return L_2;
 	}
 }
-// Method Definition Index: 117022
+// Method Definition Index: 117026
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatAppSettings__ctor_m0B6F25C335A13983DA701EBD9CFADAC43E6011A3 (ChatAppSettings_tF76C214B6AA76ACABCEFC447A2CEC798F2B8C689* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1897,7 +1897,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatAppSettings__ctor_m0B6F25C335A13983D
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 117023
+// Method Definition Index: 117027
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatChannel_get_IsPrivate_mC599C46B2CEC8BBE5DCAC94A90F806380EA4B714 (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1906,7 +1906,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatChannel_get_IsPrivate_mC599C46B2CEC8
 		return L_0;
 	}
 }
-// Method Definition Index: 117024
+// Method Definition Index: 117028
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_set_IsPrivate_mC15D3E62B0A6EB24F6C1D0C6EC7F7857886D8068 (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -1916,7 +1916,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_set_IsPrivate_mC15D3E62B0A6E
 		return;
 	}
 }
-// Method Definition Index: 117025
+// Method Definition Index: 117029
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ChatChannel_get_MessageCount_m397FEA02D9BB924CFD66F741696D768968B382FC (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1943,7 +1943,7 @@ IL_000f:
 		return L_2;
 	}
 }
-// Method Definition Index: 117026
+// Method Definition Index: 117030
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ChatChannel_get_LastMsgId_m915B3ED70A993EC92823F0AB378602411555E3FA (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1952,7 +1952,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ChatChannel_get_LastMsgId_m915B3ED70A
 		return L_0;
 	}
 }
-// Method Definition Index: 117027
+// Method Definition Index: 117031
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_set_LastMsgId_m687ECE88274288B3CA564D41E8F129C90EAEED8A (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -1962,7 +1962,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_set_LastMsgId_m687ECE8827428
 		return;
 	}
 }
-// Method Definition Index: 117028
+// Method Definition Index: 117032
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatChannel_get_PublishSubscribers_m30398EBDCF6E7F5D9492086707802FCB77193A74 (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1971,7 +1971,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatChannel_get_PublishSubscribers_m3039
 		return L_0;
 	}
 }
-// Method Definition Index: 117029
+// Method Definition Index: 117033
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_set_PublishSubscribers_m2DA1D9D78E6A17E14CBA33FECB5469836E9FBB5A (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -1981,7 +1981,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_set_PublishSubscribers_m2DA1
 		return;
 	}
 }
-// Method Definition Index: 117030
+// Method Definition Index: 117034
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ChatChannel_get_MaxSubscribers_mB8947349369A4CFCD31E8A25DD9C7E6FB325D81A (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1990,7 +1990,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ChatChannel_get_MaxSubscribers_mB8947
 		return L_0;
 	}
 }
-// Method Definition Index: 117031
+// Method Definition Index: 117035
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_set_MaxSubscribers_mABD8D726D312CCFA0CA5A75AFB4865F9D17C7079 (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -2000,7 +2000,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_set_MaxSubscribers_mABD8D726
 		return;
 	}
 }
-// Method Definition Index: 117032
+// Method Definition Index: 117036
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel__ctor_m0C6E9FBE4AC69157786CA8E3CA9036064E9D99EC (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, String_t* ___0_name, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2040,7 +2040,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel__ctor_m0C6E9FBE4AC69157786CA
 		return;
 	}
 }
-// Method Definition Index: 117033
+// Method Definition Index: 117037
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_Add_m22E0343342399B1C9130CCDD12325EAA80DA9440 (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, String_t* ___0_sender, RuntimeObject* ___1_message, int32_t ___2_msgId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2070,7 +2070,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_Add_m22E0343342399B1C9130CCD
 		return;
 	}
 }
-// Method Definition Index: 117034
+// Method Definition Index: 117038
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_Add_m3906378A35460170D74185680E5D50946D59FEE9 (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_senders, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_messages, int32_t ___2_lastMsgId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2100,7 +2100,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_Add_m3906378A35460170D741856
 		return;
 	}
 }
-// Method Definition Index: 117035
+// Method Definition Index: 117039
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_TruncateMessages_mFB6B287B9514E50824B638D050B055CB4FA206ED (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2178,7 +2178,7 @@ IL_0059:
 		return;
 	}
 }
-// Method Definition Index: 117036
+// Method Definition Index: 117040
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_ClearMessages_m046EA236CDD967B62CDE383F2098BF4B6ED80FFE (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2201,7 +2201,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_ClearMessages_m046EA236CDD96
 		return;
 	}
 }
-// Method Definition Index: 117037
+// Method Definition Index: 117041
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatChannel_ToStringMessages_mB286B6E5F35FAF7A5F4F4EE259BB64207F34FE18 (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2284,7 +2284,7 @@ IL_0055:
 		return L_17;
 	}
 }
-// Method Definition Index: 117038
+// Method Definition Index: 117042
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatChannel_ReadChannelProperties_m8A24F53556005A092A43DD57FD9BF99E3BAB3D35 (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* ___0_newProperties, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2510,7 +2510,7 @@ IL_0103:
 		return;
 	}
 }
-// Method Definition Index: 117039
+// Method Definition Index: 117043
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatChannel_AddSubscribers_mF79231AA897C23C7901F4767C7AD8C917C1DA8B0 (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_users, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2608,7 +2608,7 @@ IL_0045:
 		return L_14;
 	}
 }
-// Method Definition Index: 117040
+// Method Definition Index: 117044
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatChannel_AddSubscriber_m99C1D8A453B5D493031845BD8642B2E21CC52198 (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, String_t* ___0_userId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2636,7 +2636,7 @@ IL_0010:
 		return L_3;
 	}
 }
-// Method Definition Index: 117041
+// Method Definition Index: 117045
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatChannel_RemoveSubscriber_m77F6089D6E0D3158EB99FD8696CF4314F5D4E73D (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, String_t* ___0_userId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2694,7 +2694,7 @@ IL_002c:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 117042
+// Method Definition Index: 117046
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_get_EnableProtocolFallback_m3DAF11DE8346D9968298E4697B47925784AD58DA (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2703,7 +2703,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_get_EnableProtocolFallback_m3
 		return L_0;
 	}
 }
-// Method Definition Index: 117043
+// Method Definition Index: 117047
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_EnableProtocolFallback_m2E863E03B55E3C1EB600C58EB56EDCF86EE89D14 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -2713,7 +2713,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_EnableProtocolFallback_m2
 		return;
 	}
 }
-// Method Definition Index: 117044
+// Method Definition Index: 117048
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatClient_get_NameServerAddress_mCAE58820E4D0221517E68E9C7B97FE9CACAE8744 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2722,7 +2722,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatClient_get_NameServerAddress_mC
 		return L_0;
 	}
 }
-// Method Definition Index: 117045
+// Method Definition Index: 117049
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_NameServerAddress_m151DD2A6FF91AAA0F9651E73E2B10BAC5AAC398E (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -2733,7 +2733,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_NameServerAddress_m151DD2
 		return;
 	}
 }
-// Method Definition Index: 117046
+// Method Definition Index: 117050
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatClient_get_FrontendAddress_m30BBAAAA9AD37DA13479A1744D18C17423491A05 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2742,7 +2742,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatClient_get_FrontendAddress_m30B
 		return L_0;
 	}
 }
-// Method Definition Index: 117047
+// Method Definition Index: 117051
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_FrontendAddress_m11BEEFC4E38A657099753638560CF27FD8BEA8C6 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -2753,7 +2753,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_FrontendAddress_m11BEEFC4
 		return;
 	}
 }
-// Method Definition Index: 117048
+// Method Definition Index: 117052
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatClient_get_ChatRegion_m16D06C18E5EA82A340719664D3A83768514E73D5 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	String_t* V_0 = NULL;
@@ -2771,7 +2771,7 @@ IL_000a:
 		return L_1;
 	}
 }
-// Method Definition Index: 117049
+// Method Definition Index: 117053
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_ChatRegion_m9B16E563441406C92D0E6C323C05E32BAD465F06 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -2783,7 +2783,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_ChatRegion_m9B16E56344140
 		return;
 	}
 }
-// Method Definition Index: 117050
+// Method Definition Index: 117054
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2792,7 +2792,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ChatClient_get_State_mFB6A41D2E892E71
 		return L_0;
 	}
 }
-// Method Definition Index: 117051
+// Method Definition Index: 117055
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_State_m252A256FA608F60F638EE5B108C7AE0ABD633011 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -2802,7 +2802,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_State_m252A256FA608F60F63
 		return;
 	}
 }
-// Method Definition Index: 117052
+// Method Definition Index: 117056
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ChatClient_get_DisconnectedCause_mE36D0EDB819FF001973B6D318B1DB4CD7C1CC9B6 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2811,7 +2811,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ChatClient_get_DisconnectedCause_mE36
 		return L_0;
 	}
 }
-// Method Definition Index: 117053
+// Method Definition Index: 117057
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_DisconnectedCause_m59B65942F46DE9360B0718B48DCC1AF2A5175E90 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -2821,7 +2821,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_DisconnectedCause_m59B659
 		return;
 	}
 }
-// Method Definition Index: 117054
+// Method Definition Index: 117058
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_get_CanChat_m473BF925E7278DFB04D621AC7FA14CE1C56F354C (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -2860,7 +2860,7 @@ IL_0016:
 		return L_2;
 	}
 }
-// Method Definition Index: 117055
+// Method Definition Index: 117059
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_CanChatInChannel_mB8F68786A04CFE98CC246EC5DA346519E0671D0A (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_channelName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2920,7 +2920,7 @@ IL_002c:
 		return L_7;
 	}
 }
-// Method Definition Index: 117056
+// Method Definition Index: 117060
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_get_HasPeer_mDE54E546DE15BC0267634E17733D748D1054D275 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -2938,7 +2938,7 @@ IL_000d:
 		return L_1;
 	}
 }
-// Method Definition Index: 117057
+// Method Definition Index: 117061
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatClient_get_AppVersion_mF7A2D391AA50B211D710648C1358811C4467F316 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2947,7 +2947,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatClient_get_AppVersion_mF7A2D391
 		return L_0;
 	}
 }
-// Method Definition Index: 117058
+// Method Definition Index: 117062
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_AppVersion_mDCCA9627D033CA507EC3414F1B27F6620FDFD418 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -2958,7 +2958,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_AppVersion_mDCCA9627D033C
 		return;
 	}
 }
-// Method Definition Index: 117059
+// Method Definition Index: 117063
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatClient_get_AppId_mF61469890165B6A5543FA2678CA50BC56DA1C00C (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2967,7 +2967,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatClient_get_AppId_mF61469890165B
 		return L_0;
 	}
 }
-// Method Definition Index: 117060
+// Method Definition Index: 117064
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_AppId_m59122AD30CE686185534AB99FE427F9659C705F1 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -2978,7 +2978,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_AppId_m59122AD30CE6861855
 		return;
 	}
 }
-// Method Definition Index: 117061
+// Method Definition Index: 117065
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* ChatClient_get_AuthValues_mC9F4405E66924D1BA21DEDE10848199C24915476 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2987,7 +2987,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AuthenticationValues_t280C50CB2B86FA149EE99B6
 		return L_0;
 	}
 }
-// Method Definition Index: 117062
+// Method Definition Index: 117066
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_AuthValues_mAAD43D4212103C80D1377FA04B33815397E28937 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -2998,7 +2998,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_AuthValues_mAAD43D4212103
 		return;
 	}
 }
-// Method Definition Index: 117063
+// Method Definition Index: 117067
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatClient_get_UserId_mBA19EB231D8FE9ED61E348542F6C2A42F00EEB0E (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	String_t* V_0 = NULL;
@@ -3040,7 +3040,7 @@ IL_001a:
 		return L_3;
 	}
 }
-// Method Definition Index: 117064
+// Method Definition Index: 117068
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_UserId_m5B177DA1889900F53C5AC0B55FB9C765469970B3 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3080,7 +3080,7 @@ IL_001c:
 		return;
 	}
 }
-// Method Definition Index: 117065
+// Method Definition Index: 117069
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_get_UseBackgroundWorkerForSending_mB1BDA076DABA2774E60635B640BF176C062FF288 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3089,7 +3089,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_get_UseBackgroundWorkerForSen
 		return L_0;
 	}
 }
-// Method Definition Index: 117066
+// Method Definition Index: 117070
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_UseBackgroundWorkerForSending_m6B0CF62C2EBF74CB62FFB1557DC30969292B7596 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -3099,7 +3099,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_UseBackgroundWorkerForSen
 		return;
 	}
 }
-// Method Definition Index: 117067
+// Method Definition Index: 117071
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t ChatClient_get_TransportProtocol_mA8A1C69B50CAF221B290D80AD48244FC667EE772 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	uint8_t V_0 = 0;
@@ -3120,7 +3120,7 @@ IL_000f:
 		return L_2;
 	}
 }
-// Method Definition Index: 117068
+// Method Definition Index: 117072
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_TransportProtocol_m21D6C23D1B7EE7C8C4C71C5D5FBCB4FDBB58DD23 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, uint8_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3243,7 +3243,7 @@ IL_0077:
 		return;
 	}
 }
-// Method Definition Index: 117069
+// Method Definition Index: 117073
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Dictionary_2_tAD182111317FFA6F3D46F2A5D89115A1E112F989* ChatClient_get_SocketImplementationConfig_mE7AFB116514353572B13B63A1C067FCC6DB89199 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	Dictionary_2_tAD182111317FFA6F3D46F2A5D89115A1E112F989* V_0 = NULL;
@@ -3263,7 +3263,7 @@ IL_000f:
 		return L_2;
 	}
 }
-// Method Definition Index: 117070
+// Method Definition Index: 117074
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient__ctor_m5C32CB0A0CAC33E980D4C6FA700B551D0DAF46F4 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, RuntimeObject* ___0_listener, uint8_t ___1_protocol, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3328,7 +3328,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient__ctor_m5C32CB0A0CAC33E980D4C6
 		return;
 	}
 }
-// Method Definition Index: 117071
+// Method Definition Index: 117075
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_ConnectUsingSettings_m3DCD03EA4CAE4ADDD935BDA323CCF37B5E96BB4C (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, ChatAppSettings_tF76C214B6AA76ACABCEFC447A2CEC798F2B8C689* ___0_appSettings, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3462,7 +3462,7 @@ IL_00c3:
 		return L_32;
 	}
 }
-// Method Definition Index: 117072
+// Method Definition Index: 117076
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_Connect_m1733B76CCE95AFB18699D6D1A0CC7DDA1F731121 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_appId, String_t* ___1_appVersion, AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* ___2_authValues, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3600,7 +3600,7 @@ IL_00ed:
 		return L_25;
 	}
 }
-// Method Definition Index: 117073
+// Method Definition Index: 117077
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_ConnectAndSetStatus_m8B3FE8E9EF96CB28C4895188429657080ED1181E (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_appId, String_t* ___1_appVersion, AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* ___2_authValues, int32_t ___3_status, RuntimeObject* ___4_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3638,7 +3638,7 @@ IL_0022:
 		return L_7;
 	}
 }
-// Method Definition Index: 117074
+// Method Definition Index: 117078
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_Service_mD968988B9275FE4CA7113196FFB455F3BA79D0B7 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -3789,7 +3789,7 @@ IL_007d:
 		return;
 	}
 }
-// Method Definition Index: 117075
+// Method Definition Index: 117079
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_SendOutgoingInBackground_m5639D30394C3AEAAF72AA718874BF90ABB1D35B2 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -3851,7 +3851,7 @@ IL_002f:
 		return L_5;
 	}
 }
-// Method Definition Index: 117076
+// Method Definition Index: 117080
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_SendAcksOnly_m28C6305565EFD80AAFDE3919C4F5AB0F7BC50A3B (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -3880,7 +3880,7 @@ IL_0017:
 		return;
 	}
 }
-// Method Definition Index: 117077
+// Method Definition Index: 117081
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_Disconnect_m678FDF44265FD926B8DB5555B439F5F70D82BA52 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, int32_t ___0_cause, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -3935,7 +3935,7 @@ IL_003d:
 		return;
 	}
 }
-// Method Definition Index: 117078
+// Method Definition Index: 117082
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_StopThread_mDE8EC6DC08826F84C881E1D2DA26AE9FC45F5EC3 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -3963,7 +3963,7 @@ IL_0019:
 		return;
 	}
 }
-// Method Definition Index: 117079
+// Method Definition Index: 117083
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_Subscribe_mAB072792329A26749E58FED202C38A51691CD32C (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_channels, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -3983,7 +3983,7 @@ IL_000c:
 		return L_2;
 	}
 }
-// Method Definition Index: 117080
+// Method Definition Index: 117084
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_Subscribe_mB3CCAE652E721F860D36F5ED421B752F33F304D8 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_channels, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___1_lastMsgIds, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4278,7 +4278,7 @@ IL_015b:
 		return L_47;
 	}
 }
-// Method Definition Index: 117081
+// Method Definition Index: 117085
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_Subscribe_m4A3A6D2D5703A1D8CF8ED0CACA717114062A6559 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_channels, int32_t ___1_messagesFromHistory, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4404,7 +4404,7 @@ IL_007d:
 		return L_14;
 	}
 }
-// Method Definition Index: 117082
+// Method Definition Index: 117086
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_Unsubscribe_m384652194B1073EDB7A8CA3DBA04EFB7A14F0B0A (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_channels, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4571,7 +4571,7 @@ IL_00ab:
 		return L_24;
 	}
 }
-// Method Definition Index: 117083
+// Method Definition Index: 117087
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_PublishMessage_mC0EA414F46817A9F77DF910D9094AF23B563A2D8 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_channelName, RuntimeObject* ___1_message, bool ___2_forwardAsWebhook, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -4593,7 +4593,7 @@ IL_000e:
 		return L_4;
 	}
 }
-// Method Definition Index: 117084
+// Method Definition Index: 117088
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_PublishMessageUnreliable_m9738E4EE77647B19CF2E54E03B8FC2128EC36648 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_channelName, RuntimeObject* ___1_message, bool ___2_forwardAsWebhook, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -4615,7 +4615,7 @@ IL_000e:
 		return L_4;
 	}
 }
-// Method Definition Index: 117085
+// Method Definition Index: 117089
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_publishMessage_m1D582A9BD53AE5064740B5F5F12825F5C26CCC0A (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_channelName, RuntimeObject* ___1_message, bool ___2_reliable, bool ___3_forwardAsWebhook, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4792,7 +4792,7 @@ IL_00ce:
 		return L_27;
 	}
 }
-// Method Definition Index: 117086
+// Method Definition Index: 117090
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_SendPrivateMessage_m736B989819416ADFFE92A9B4EB297FE6DC607E36 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_target, RuntimeObject* ___1_message, bool ___2_forwardAsWebhook, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -4814,7 +4814,7 @@ IL_000e:
 		return L_4;
 	}
 }
-// Method Definition Index: 117087
+// Method Definition Index: 117091
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_SendPrivateMessage_mD0CBC64A95983197A562032B8DABE544D64DDBBA (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_target, RuntimeObject* ___1_message, bool ___2_encrypt, bool ___3_forwardAsWebhook, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -4837,7 +4837,7 @@ IL_0010:
 		return L_5;
 	}
 }
-// Method Definition Index: 117088
+// Method Definition Index: 117092
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_SendPrivateMessageUnreliable_m928B4AA913DA3A3CF6E619E75DED9F0CAAF7212A (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_target, RuntimeObject* ___1_message, bool ___2_encrypt, bool ___3_forwardAsWebhook, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -4860,7 +4860,7 @@ IL_0010:
 		return L_5;
 	}
 }
-// Method Definition Index: 117089
+// Method Definition Index: 117093
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_sendPrivateMessage_m1451A1E63E97234F5F6B8E98339ACAE3241A6361 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_target, RuntimeObject* ___1_message, bool ___2_encrypt, bool ___3_reliable, bool ___4_forwardAsWebhook, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5039,7 +5039,7 @@ IL_00db:
 		return L_28;
 	}
 }
-// Method Definition Index: 117090
+// Method Definition Index: 117094
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_SetOnlineStatus_m4966D3F9DC69453B3AE2830C8FCA5A4D9DCA3A15 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, int32_t ___0_status, RuntimeObject* ___1_message, bool ___2_skipMessage, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5159,7 +5159,7 @@ IL_0086:
 		return L_21;
 	}
 }
-// Method Definition Index: 117091
+// Method Definition Index: 117095
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_SetOnlineStatus_mEFE64834C76CBF45AB5B986DE9FE28A27D77E6CD (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, int32_t ___0_status, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -5179,7 +5179,7 @@ IL_000d:
 		return L_2;
 	}
 }
-// Method Definition Index: 117092
+// Method Definition Index: 117096
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_SetOnlineStatus_mA793BD64EB3D9ED4E360835951BD0333424C918D (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, int32_t ___0_status, RuntimeObject* ___1_message, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -5200,7 +5200,7 @@ IL_000d:
 		return L_3;
 	}
 }
-// Method Definition Index: 117093
+// Method Definition Index: 117097
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_AddFriends_mC7A8A45F98205A68592ED3BE7A5FC88BF4EFB809 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_friends, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5397,7 +5397,7 @@ IL_00fd:
 		return L_27;
 	}
 }
-// Method Definition Index: 117094
+// Method Definition Index: 117098
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_RemoveFriends_m2134FFBAC12E8F9BE1A374C749E3CA150D57F1D2 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_friends, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5594,7 +5594,7 @@ IL_00fd:
 		return L_27;
 	}
 }
-// Method Definition Index: 117095
+// Method Definition Index: 117099
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatClient_GetPrivateChannelNameByUser_m09D882771EED3D069B5B7F396C824AE40FA3B17F (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_userName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5622,7 +5622,7 @@ IL_0015:
 		return L_3;
 	}
 }
-// Method Definition Index: 117096
+// Method Definition Index: 117100
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_TryGetChannel_m5C5176103E0A618C661F6351BEBE408F4A06D925 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_channelName, bool ___1_isPrivate, ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1** ___2_channel, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5675,7 +5675,7 @@ IL_002b:
 		return L_10;
 	}
 }
-// Method Definition Index: 117097
+// Method Definition Index: 117101
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_TryGetChannel_m596F2DCA70B7C83E7E82B92B341DDEE9A5864C0A (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_channelName, ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1** ___1_channel, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5736,7 +5736,7 @@ IL_002c:
 		return L_11;
 	}
 }
-// Method Definition Index: 117098
+// Method Definition Index: 117102
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_TryGetPrivateChannelByUser_m5B951249A1D4B3DA9B2D2B0F962915AA03B6A7BE (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_userId, ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1** ___1_channel, const RuntimeMethod* method) 
 {
 	String_t* V_0 = NULL;
@@ -5787,7 +5787,7 @@ IL_0027:
 		return L_9;
 	}
 }
-// Method Definition Index: 117099
+// Method Definition Index: 117103
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_DebugOut_m742DBBA5A5D1910991A3932A362A584D43E6402A (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, uint8_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -5800,7 +5800,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_set_DebugOut_m742DBBA5A5D1910
 		return;
 	}
 }
-// Method Definition Index: 117100
+// Method Definition Index: 117104
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t ChatClient_get_DebugOut_mD9D127987951E2C66ADF8D3CE8484766E1CBE338 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	uint8_t V_0 = 0;
@@ -5820,7 +5820,7 @@ IL_000f:
 		return L_2;
 	}
 }
-// Method Definition Index: 117101
+// Method Definition Index: 117105
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_ExitGames_Client_Photon_IPhotonPeerListener_DebugReturn_m590A6E7F333B2F16A679E400DD34C595CF7E0B81 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, uint8_t ___0_level, String_t* ___1_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5840,7 +5840,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_ExitGames_Client_Photon_IPhot
 		return;
 	}
 }
-// Method Definition Index: 117102
+// Method Definition Index: 117106
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_ExitGames_Client_Photon_IPhotonPeerListener_OnEvent_mDBC0668C71E45CE9817CBA5A74D44101710180CD (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* ___0_eventData, const RuntimeMethod* method) 
 {
 	uint8_t V_0 = 0x0;
@@ -5971,7 +5971,7 @@ IL_0080:
 		return;
 	}
 }
-// Method Definition Index: 117103
+// Method Definition Index: 117107
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_ExitGames_Client_Photon_IPhotonPeerListener_OnOperationResponse_mA6E3C6475748F8561B1F394DC4DFF3EA3EF1E559 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* ___0_operationResponse, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6124,7 +6124,7 @@ IL_00af:
 		return;
 	}
 }
-// Method Definition Index: 117104
+// Method Definition Index: 117108
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_ExitGames_Client_Photon_IPhotonPeerListener_OnStatusChanged_mF83E07587B59DE916DC872BF17B2AA7DA147CAE2 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, int32_t ___0_statusCode, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6727,7 +6727,7 @@ IL_0317:
 		return;
 	}
 }
-// Method Definition Index: 117105
+// Method Definition Index: 117109
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_TryAuthenticateOnNameServer_mDDF0C0B3A9210E6617888B7376A4B22F8B059A19 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6813,7 +6813,7 @@ IL_007c:
 		return;
 	}
 }
-// Method Definition Index: 117106
+// Method Definition Index: 117110
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_SendChannelOperation_mDB9A461F277FC2A7F0574F9BAF93CDAB94FA97D8 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_channels, uint8_t ___1_operation, int32_t ___2_historyLength, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6878,7 +6878,7 @@ IL_003e:
 		return L_14;
 	}
 }
-// Method Definition Index: 117107
+// Method Definition Index: 117111
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandlePrivateMessageEvent_m380A7506206A6F1493EF61005ECC712D9BD9BE28 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7043,7 +7043,7 @@ IL_00c9:
 		return;
 	}
 }
-// Method Definition Index: 117108
+// Method Definition Index: 117112
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleChatMessagesEvent_m02DB6D4309A64B61FA34E2A7B45E7FAC476C2B1F (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7161,7 +7161,7 @@ IL_00ae:
 		return;
 	}
 }
-// Method Definition Index: 117109
+// Method Definition Index: 117113
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleSubscribeEvent_m2EDD7435FC9D8267571BAC98A3974D082799509B (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7383,7 +7383,7 @@ IL_00fa:
 		return;
 	}
 }
-// Method Definition Index: 117110
+// Method Definition Index: 117114
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleUnsubscribeEvent_m905C05E19B4D368A7A59D7F1F06A86B251AC7461 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7460,7 +7460,7 @@ IL_0036:
 		return;
 	}
 }
-// Method Definition Index: 117111
+// Method Definition Index: 117115
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleAuthResponse_m17B43A51ED0F7F675A42E4BAAB273DFCF791C14F (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* ___0_operationResponse, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7905,7 +7905,7 @@ IL_02c4:
 		return;
 	}
 }
-// Method Definition Index: 117112
+// Method Definition Index: 117116
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleStatusUpdate_m10E9C9324C8204A4887C67648683EA3A49C556F7 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7980,7 +7980,7 @@ IL_004b:
 		return;
 	}
 }
-// Method Definition Index: 117113
+// Method Definition Index: 117117
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_ConnectToFrontEnd_m879F8C0ABFB420829231375D08CB8F31DD4A11D0 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8080,7 +8080,7 @@ IL_0095:
 		return L_15;
 	}
 }
-// Method Definition Index: 117114
+// Method Definition Index: 117118
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_AuthenticateOnFrontEnd_mA7969A2B821D59B68D4475A328952E8971E922DE (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8233,7 +8233,7 @@ IL_00da:
 		return L_25;
 	}
 }
-// Method Definition Index: 117115
+// Method Definition Index: 117119
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleUserUnsubscribedEvent_m6E44BD9864D21DF5BEF3F5585D2DA5E7C152D046 (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8409,7 +8409,7 @@ IL_00ee:
 		return;
 	}
 }
-// Method Definition Index: 117116
+// Method Definition Index: 117120
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatClient_HandleUserSubscribedEvent_m8F835E34839B69198C7D0067421F1B2BD30A48AC (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8671,7 +8671,7 @@ IL_015e:
 		return;
 	}
 }
-// Method Definition Index: 117117
+// Method Definition Index: 117121
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatClient_Subscribe_m939246D7BA362744B82F8721FD4881ED15BFBB4F (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_channel, int32_t ___1_lastMsgId, int32_t ___2_messagesFromHistory, ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270* ___3_creationOptions, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9155,7 +9155,7 @@ IL_0239:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 117118
+// Method Definition Index: 117122
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatEventCode__ctor_m4B7FEAA30BD9990E6B094E6352A1764A580C9B3B (ChatEventCode_t971D6853DE3EAE4E0F99C9D76C30E2F1D2614473* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9171,7 +9171,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatEventCode__ctor_m4B7FEAA30BD9990E6B0
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 117119
+// Method Definition Index: 117123
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatOperationCode__ctor_m989B83DC47DF6ADEFF96163EEA139FE96511DAB8 (ChatOperationCode_t906F6ACF5232598FE4F4161B3F0961D19C796D72* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9187,7 +9187,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatOperationCode__ctor_m989B83DC47DF6AD
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 117120
+// Method Definition Index: 117124
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatParameterCode__ctor_mFEA179722A1E99CC17839F327498C5AF1ED2538E (ChatParameterCode_tA1A9C40C6CDC0D5D31BF98B5407A236E14AFBBBF* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9203,7 +9203,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatParameterCode__ctor_mFEA179722A1E99C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 117121
+// Method Definition Index: 117125
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatPeer_get_NameServerAddress_m34FD6CEB0A89DF565D492EB7ED3E12CDC17A9797 (ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* __this, const RuntimeMethod* method) 
 {
 	String_t* V_0 = NULL;
@@ -9222,7 +9222,7 @@ IL_000a:
 		return L_1;
 	}
 }
-// Method Definition Index: 117122
+// Method Definition Index: 117126
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatPeer_get_IsProtocolSecure_mBAD912D7CCE3E3D3C771CBAA6A1DE1E965723AFE (ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* __this, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -9241,7 +9241,7 @@ IL_000d:
 		return L_1;
 	}
 }
-// Method Definition Index: 117123
+// Method Definition Index: 117127
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatPeer__ctor_mA7BE40BE95B917104BCECEA560E5A314855FC3B0 (ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* __this, RuntimeObject* ___0_listener, uint8_t ___1_protocol, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9266,7 +9266,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatPeer__ctor_mA7BE40BE95B917104BCECEA5
 		return;
 	}
 }
-// Method Definition Index: 117124
+// Method Definition Index: 117128
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatPeer_ConfigUnitySockets_mAFCA08575EA77884475A5677B3845D7ED275CA9B (ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9366,7 +9366,7 @@ IL_006a:
 		return;
 	}
 }
-// Method Definition Index: 117125
+// Method Definition Index: 117129
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ChatPeer_GetNameServerAddress_m658289FA23C7386FB38A03CF3B51C973302BB217 (ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9517,7 +9517,7 @@ IL_00cb:
 		return L_30;
 	}
 }
-// Method Definition Index: 117126
+// Method Definition Index: 117130
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ChatPeer_AuthenticateOnNameServer_m31221AA4DF632CB3DB9BBDA4614AB1241F538BA3 (ChatPeer_t216E56C8D1791380415477470013A3787DF76D43* __this, String_t* ___0_appId, String_t* ___1_appVersion, String_t* ___2_region, AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* ___3_authValues, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9753,7 +9753,7 @@ IL_0164:
 		return L_50;
 	}
 }
-// Method Definition Index: 117127
+// Method Definition Index: 117131
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatPeer__cctor_mB92DD7F353D38D803679D1553400B5277304E155 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9802,7 +9802,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChatPeer__cctor_mB92DD7F353D38D803679D15
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 117128
+// Method Definition Index: 117132
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t AuthenticationValues_get_AuthType_m0F71CF47439FF7CF99AC9CEBA528B85D29EC393C (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) 
 {
 	uint8_t V_0 = 0;
@@ -9820,7 +9820,7 @@ IL_000a:
 		return L_1;
 	}
 }
-// Method Definition Index: 117129
+// Method Definition Index: 117133
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_set_AuthType_m519421DCCFF7B04D46E42006D878CC54DB989404 (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, uint8_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -9831,7 +9831,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_set_AuthType_m51942
 		return;
 	}
 }
-// Method Definition Index: 117130
+// Method Definition Index: 117134
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AuthenticationValues_get_AuthGetParameters_mBD8FD611CDC2F19026B0FD77807D664084B8C721 (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9840,7 +9840,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AuthenticationValues_get_AuthGetPar
 		return L_0;
 	}
 }
-// Method Definition Index: 117131
+// Method Definition Index: 117135
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_set_AuthGetParameters_m0A7179AD6ED8D4E8BA046DF9D04DC6A203B0B029 (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -9851,7 +9851,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_set_AuthGetParamete
 		return;
 	}
 }
-// Method Definition Index: 117132
+// Method Definition Index: 117136
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AuthenticationValues_get_AuthPostData_mCAA0ECC6166A47228B7C18DF24166EF48D3AF646 (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9860,7 +9860,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AuthenticationValues_get_AuthP
 		return L_0;
 	}
 }
-// Method Definition Index: 117133
+// Method Definition Index: 117137
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_set_AuthPostData_m35BBCD7D16E9A774104702DDE7AAD2B9890DB0C9 (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -9871,7 +9871,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_set_AuthPostData_m3
 		return;
 	}
 }
-// Method Definition Index: 117134
+// Method Definition Index: 117138
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AuthenticationValues_get_Token_m5A51A48A263944BAAA27F558EC8618B121CC2765 (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9880,7 +9880,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AuthenticationValues_get_Token
 		return L_0;
 	}
 }
-// Method Definition Index: 117135
+// Method Definition Index: 117139
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_set_Token_m51CDC767848D2FBF8614B97064CCC492AADB2D6A (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -9891,7 +9891,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_set_Token_m51CDC767
 		return;
 	}
 }
-// Method Definition Index: 117136
+// Method Definition Index: 117140
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AuthenticationValues_get_UserId_m61CDE1031F42330B0EDC0EC489A75E46E1DB6B79 (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9900,7 +9900,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AuthenticationValues_get_UserId_m61
 		return L_0;
 	}
 }
-// Method Definition Index: 117137
+// Method Definition Index: 117141
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_set_UserId_mEA1F6C71D108FD9915143893DDFDDDECE936B0D0 (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -9911,7 +9911,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_set_UserId_mEA1F6C7
 		return;
 	}
 }
-// Method Definition Index: 117138
+// Method Definition Index: 117142
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues__ctor_m0EC34240479292C7E3D292072C7AE92D1CEA7C60 (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9923,7 +9923,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues__ctor_m0EC342404792
 		return;
 	}
 }
-// Method Definition Index: 117139
+// Method Definition Index: 117143
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues__ctor_mB097BC3108CD439CAD77D4AE77F8616FA92C929D (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, String_t* ___0_userId, const RuntimeMethod* method) 
 {
 	{
@@ -9938,7 +9938,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues__ctor_mB097BC3108CD
 		return;
 	}
 }
-// Method Definition Index: 117140
+// Method Definition Index: 117144
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_SetAuthPostData_mFE26A17A25FB89D5144A822BB192D9109B3E80E6 (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, String_t* ___0_stringData, const RuntimeMethod* method) 
 {
 	AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* G_B2_0 = NULL;
@@ -9978,7 +9978,7 @@ IL_000e:
 		return;
 	}
 }
-// Method Definition Index: 117141
+// Method Definition Index: 117145
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_SetAuthPostData_mFDEEAC38514C2C52DD458EE8DFFBFE3E9EE89742 (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_byteData, const RuntimeMethod* method) 
 {
 	{
@@ -9989,7 +9989,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_SetAuthPostData_mFD
 		return;
 	}
 }
-// Method Definition Index: 117142
+// Method Definition Index: 117146
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_SetAuthPostData_m38D2201739503795772FDE32E0B48BA45774CF0C (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* ___0_dictData, const RuntimeMethod* method) 
 {
 	{
@@ -10000,7 +10000,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_SetAuthPostData_m38
 		return;
 	}
 }
-// Method Definition Index: 117143
+// Method Definition Index: 117147
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationValues_AddAuthParameter_m0B79DDC43BE54A9722A65B6AE270A3280F77CB1A (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, String_t* ___0_key, String_t* ___1_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10074,7 +10074,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 117144
+// Method Definition Index: 117148
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AuthenticationValues_ToString_mA8AFE35348657942021ABA732B823022DD617E0F (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10130,7 +10130,7 @@ IL_0045:
 		return L_14;
 	}
 }
-// Method Definition Index: 117145
+// Method Definition Index: 117149
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* AuthenticationValues_CopyTo_m3F2607D839FF331F256F1470F6737196FA71DA62 (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* ___0_copy, const RuntimeMethod* method) 
 {
 	AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* V_0 = NULL;
@@ -10180,7 +10180,7 @@ IL_0039:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 117146
+// Method Definition Index: 117150
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ParameterCode__ctor_mD0F4E855C662638C7A00897ACA58D12934D93855 (ParameterCode_t4B15A3A1CFDF4D5C7D5C69BC1FDCEFD9AF3148AD* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10196,7 +10196,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ParameterCode__ctor_mD0F4E855C662638C7A0
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 117147
+// Method Definition Index: 117151
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ErrorCode__ctor_m06F10D940C060F2D1FD575C6279FC1552F1721D3 (ErrorCode_tB0581F5918237D121D76606DB4899640A7C43093* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10247,7 +10247,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ErrorCode__ctor_m06F10D940C060F2D1FD575C
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 117027
+// Method Definition Index: 117031
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatChannel_set_LastMsgId_m687ECE88274288B3CA564D41E8F129C90EAEED8A_inline (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -10257,7 +10257,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatChannel_set_LastMsgId_m6
 		return;
 	}
 }
-// Method Definition Index: 117029
+// Method Definition Index: 117033
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatChannel_set_PublishSubscribers_m2DA1D9D78E6A17E14CBA33FECB5469836E9FBB5A_inline (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -10267,7 +10267,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatChannel_set_PublishSubsc
 		return;
 	}
 }
-// Method Definition Index: 117031
+// Method Definition Index: 117035
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatChannel_set_MaxSubscribers_mABD8D726D312CCFA0CA5A75AFB4865F9D17C7079_inline (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -10277,7 +10277,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatChannel_set_MaxSubscribe
 		return;
 	}
 }
-// Method Definition Index: 117050
+// Method Definition Index: 117054
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ChatClient_get_State_mFB6A41D2E892E71A9FEFA42846D99D651F4E8A5E_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10286,7 +10286,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ChatClient_get_State_mFB6
 		return L_0;
 	}
 }
-// Method Definition Index: 117061
+// Method Definition Index: 117065
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* ChatClient_get_AuthValues_mC9F4405E66924D1BA21DEDE10848199C24915476_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10295,7 +10295,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AuthenticationValues_t280C50CB2B8
 		return L_0;
 	}
 }
-// Method Definition Index: 117136
+// Method Definition Index: 117140
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* AuthenticationValues_get_UserId_m61CDE1031F42330B0EDC0EC489A75E46E1DB6B79_inline (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10304,7 +10304,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* AuthenticationValues_ge
 		return L_0;
 	}
 }
-// Method Definition Index: 117062
+// Method Definition Index: 117066
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_AuthValues_mAAD43D4212103C80D1377FA04B33815397E28937_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -10315,7 +10315,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_AuthValues_mA
 		return;
 	}
 }
-// Method Definition Index: 117137
+// Method Definition Index: 117141
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AuthenticationValues_set_UserId_mEA1F6C71D108FD9915143893DDFDDDECE936B0D0_inline (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -10326,7 +10326,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AuthenticationValues_set_Use
 		return;
 	}
 }
-// Method Definition Index: 103718
+// Method Definition Index: 103722
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint8_t PhotonPeer_get_TransportProtocol_mC3688A65F01A1BDB8B5CAFFAFAF5BA6980885AF8_inline (PhotonPeer_t49659FA3F71A8C67E0A1922FBA955CCBEF14DD9C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10334,7 +10334,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint8_t PhotonPeer_get_TransportP
 		return L_0;
 	}
 }
-// Method Definition Index: 103719
+// Method Definition Index: 103723
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PhotonPeer_set_TransportProtocol_mAF4EE9345BAC9F2E8540CE79F8A791BD3E13014C_inline (PhotonPeer_t49659FA3F71A8C67E0A1922FBA955CCBEF14DD9C* __this, uint8_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -10343,7 +10343,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PhotonPeer_set_TransportProt
 		return;
 	}
 }
-// Method Definition Index: 117051
+// Method Definition Index: 117055
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_State_m252A256FA608F60F638EE5B108C7AE0ABD633011_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -10353,7 +10353,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_State_m252A25
 		return;
 	}
 }
-// Method Definition Index: 103664
+// Method Definition Index: 103668
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PhotonPeer_set_SerializationProtocolType_m3A949C39212B0109744721F7CEFC122C6C4C573B_inline (PhotonPeer_t49659FA3F71A8C67E0A1922FBA955CCBEF14DD9C* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -10362,7 +10362,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PhotonPeer_set_Serialization
 		return;
 	}
 }
-// Method Definition Index: 117043
+// Method Definition Index: 117047
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_EnableProtocolFallback_m2E863E03B55E3C1EB600C58EB56EDCF86EE89D14_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -10372,7 +10372,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_EnableProtoco
 		return;
 	}
 }
-// Method Definition Index: 117053
+// Method Definition Index: 117057
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_DisconnectedCause_m59B65942F46DE9360B0718B48DCC1AF2A5175E90_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -10382,7 +10382,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_DisconnectedC
 		return;
 	}
 }
-// Method Definition Index: 117060
+// Method Definition Index: 117064
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_AppId_m59122AD30CE686185534AB99FE427F9659C705F1_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -10393,7 +10393,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_AppId_m59122A
 		return;
 	}
 }
-// Method Definition Index: 117058
+// Method Definition Index: 117062
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_AppVersion_mDCCA9627D033CA507EC3414F1B27F6620FDFD418_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -10404,7 +10404,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_AppVersion_mD
 		return;
 	}
 }
-// Method Definition Index: 117045
+// Method Definition Index: 117049
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_NameServerAddress_m151DD2A6FF91AAA0F9651E73E2B10BAC5AAC398E_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -10415,7 +10415,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_NameServerAdd
 		return;
 	}
 }
-// Method Definition Index: 117044
+// Method Definition Index: 117048
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* ChatClient_get_NameServerAddress_mCAE58820E4D0221517E68E9C7B97FE9CACAE8744_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10424,7 +10424,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* ChatClient_get_NameServ
 		return L_0;
 	}
 }
-// Method Definition Index: 117065
+// Method Definition Index: 117069
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool ChatClient_get_UseBackgroundWorkerForSending_mB1BDA076DABA2774E60635B640BF176C062FF288_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10433,7 +10433,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool ChatClient_get_UseBackground
 		return L_0;
 	}
 }
-// Method Definition Index: 117059
+// Method Definition Index: 117063
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* ChatClient_get_AppId_mF61469890165B6A5543FA2678CA50BC56DA1C00C_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10442,7 +10442,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* ChatClient_get_AppId_mF
 		return L_0;
 	}
 }
-// Method Definition Index: 117057
+// Method Definition Index: 117061
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* ChatClient_get_AppVersion_mF7A2D391AA50B211D710648C1358811C4467F316_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10451,7 +10451,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* ChatClient_get_AppVersi
 		return L_0;
 	}
 }
-// Method Definition Index: 117135
+// Method Definition Index: 117139
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AuthenticationValues_set_Token_m51CDC767848D2FBF8614B97064CCC492AADB2D6A_inline (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -10462,7 +10462,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AuthenticationValues_set_Tok
 		return;
 	}
 }
-// Method Definition Index: 117042
+// Method Definition Index: 117046
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool ChatClient_get_EnableProtocolFallback_m3DAF11DE8346D9968298E4697B47925784AD58DA_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10471,7 +10471,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool ChatClient_get_EnableProtoco
 		return L_0;
 	}
 }
-// Method Definition Index: 117024
+// Method Definition Index: 117028
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatChannel_set_IsPrivate_mC15D3E62B0A6EB24F6C1D0C6EC7F7857886D8068_inline (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -10481,7 +10481,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatChannel_set_IsPrivate_mC
 		return;
 	}
 }
-// Method Definition Index: 117028
+// Method Definition Index: 117032
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool ChatChannel_get_PublishSubscribers_m30398EBDCF6E7F5D9492086707802FCB77193A74_inline (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10490,7 +10490,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool ChatChannel_get_PublishSubsc
 		return L_0;
 	}
 }
-// Method Definition Index: 117047
+// Method Definition Index: 117051
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_FrontendAddress_m11BEEFC4E38A657099753638560CF27FD8BEA8C6_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -10501,7 +10501,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ChatClient_set_FrontendAddre
 		return;
 	}
 }
-// Method Definition Index: 117052
+// Method Definition Index: 117056
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ChatClient_get_DisconnectedCause_mE36D0EDB819FF001973B6D318B1DB4CD7C1CC9B6_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10510,7 +10510,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ChatClient_get_Disconnect
 		return L_0;
 	}
 }
-// Method Definition Index: 117046
+// Method Definition Index: 117050
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* ChatClient_get_FrontendAddress_m30BBAAAA9AD37DA13479A1744D18C17423491A05_inline (ChatClient_t55B701443AAF83A83E3CD42D4C33F0A1092038BA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10519,7 +10519,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* ChatClient_get_Frontend
 		return L_0;
 	}
 }
-// Method Definition Index: 117134
+// Method Definition Index: 117138
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* AuthenticationValues_get_Token_m5A51A48A263944BAAA27F558EC8618B121CC2765_inline (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10528,7 +10528,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* AuthenticationValu
 		return L_0;
 	}
 }
-// Method Definition Index: 117030
+// Method Definition Index: 117034
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ChatChannel_get_MaxSubscribers_mB8947349369A4CFCD31E8A25DD9C7E6FB325D81A_inline (ChatChannel_t8D4CB0B315BC5C6DCCE4C6BD547D9E2EAEB66CC1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10537,7 +10537,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ChatChannel_get_MaxSubscr
 		return L_0;
 	}
 }
-// Method Definition Index: 117016
+// Method Definition Index: 117020
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ChannelCreationOptions_get_MaxSubscribers_m1F147E5851EF027099B954B5D4CADB288112ECA9_inline (ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10546,7 +10546,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ChannelCreationOptions_ge
 		return L_0;
 	}
 }
-// Method Definition Index: 117014
+// Method Definition Index: 117018
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool ChannelCreationOptions_get_PublishSubscribers_m1DE43FC2FA2BC1B223AD3006D33726E429EC1CD4_inline (ChannelCreationOptions_t1E18095B0781273EBFDE7DA6DCA16B7912E9E270* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10555,7 +10555,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool ChannelCreationOptions_get_P
 		return L_0;
 	}
 }
-// Method Definition Index: 103668
+// Method Definition Index: 103672
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* PhotonPeer_get_Listener_mB769F69826EC32376B6FB257FEF8B7AC7881B971_inline (PhotonPeer_t49659FA3F71A8C67E0A1922FBA955CCBEF14DD9C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10563,7 +10563,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* PhotonPeer_get_Lis
 		return L_0;
 	}
 }
-// Method Definition Index: 117130
+// Method Definition Index: 117134
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* AuthenticationValues_get_AuthGetParameters_mBD8FD611CDC2F19026B0FD77807D664084B8C721_inline (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10572,7 +10572,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* AuthenticationValues_ge
 		return L_0;
 	}
 }
-// Method Definition Index: 117132
+// Method Definition Index: 117136
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* AuthenticationValues_get_AuthPostData_mCAA0ECC6166A47228B7C18DF24166EF48D3AF646_inline (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10581,7 +10581,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* AuthenticationValu
 		return L_0;
 	}
 }
-// Method Definition Index: 117133
+// Method Definition Index: 117137
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AuthenticationValues_set_AuthPostData_m35BBCD7D16E9A774104702DDE7AAD2B9890DB0C9_inline (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -10592,7 +10592,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AuthenticationValues_set_Aut
 		return;
 	}
 }
-// Method Definition Index: 117131
+// Method Definition Index: 117135
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AuthenticationValues_set_AuthGetParameters_m0A7179AD6ED8D4E8BA046DF9D04DC6A203B0B029_inline (AuthenticationValues_t280C50CB2B86FA149EE99B6405C5636B2AEFFD1C* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -10711,7 +10711,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_mCF2
 		return L_0;
 	}
 }
-// Method Definition Index: 93092
+// Method Definition Index: 93096
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t HashSet_1_get_Count_m41CC85EEB7855CEFA3BC7A32F115387939318ED3_gshared_inline (HashSet_1_t2F33BEB06EEA4A872E2FAF464382422AA39AE885* __this, const RuntimeMethod* method) 
 {
 	{

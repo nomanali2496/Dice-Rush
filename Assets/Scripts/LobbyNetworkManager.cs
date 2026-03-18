@@ -133,6 +133,11 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
                     }
                 }
             }
+            else
+            {
+                // Clear stale custom image if switched back to preset
+                profileProps.Add(PLAYER_CUSTOM_IMAGE_KEY, null);
+            }
             
             PhotonNetwork.LocalPlayer.SetCustomProperties(profileProps);
             Debug.Log($"[LobbyNetworkManager] Cached profile for sync: {data.playerName}, Avatar: {data.selectedAvatarIndex}");
@@ -146,6 +151,22 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
     public const string PLAYER_NAME_KEY = "PlayerName";
     public const string PLAYER_AVATAR_KEY = "AvatarIndex";
     public const string PLAYER_CUSTOM_IMAGE_KEY = "CustomImage";
+    public const string GAME_OVER_KEY = "GameOver";
+
+    /// <summary>
+    /// Signals to the room that the game is over.
+    /// Used when someone finishes their board or the timer expires.
+    /// </summary>
+    public void MarkGameAsFinished()
+    {
+        if (PhotonNetwork.InRoom)
+        {
+            ExitGames.Client.Photon.Hashtable props = new ExitGames.Client.Photon.Hashtable();
+            props.Add(GAME_OVER_KEY, true);
+            PhotonNetwork.CurrentRoom.SetCustomProperties(props);
+            Debug.Log("[LobbyNetworkManager] Room marked as GAME OVER.");
+        }
+    }
 
     /// <summary>
     /// Resizes and compresses texture to byte array for network sync
@@ -154,21 +175,21 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
     {
         try
         {
-            // Create a temporary readable texture
-            RenderTexture rt = RenderTexture.GetTemporary(64, 64);
+            // Increase resolution to 256x256 for very clear podium face shots
+            RenderTexture rt = RenderTexture.GetTemporary(256, 256);
             Graphics.Blit(source, rt);
             RenderTexture previous = RenderTexture.active;
             RenderTexture.active = rt;
             
-            Texture2D readableText = new Texture2D(64, 64);
-            readableText.ReadPixels(new Rect(0, 0, 64, 64), 0, 0);
+            Texture2D readableText = new Texture2D(256, 256);
+            readableText.ReadPixels(new Rect(0, 0, 256, 256), 0, 0);
             readableText.Apply();
             
             RenderTexture.active = previous;
             RenderTexture.ReleaseTemporary(rt);
             
-            // Compress to JPG (quality 50 for small size)
-            byte[] bytes = readableText.EncodeToJPG(50);
+            // High quality JPG (90) for maximum clarity
+            byte[] bytes = readableText.EncodeToJPG(90);
             Destroy(readableText);
             return bytes;
         }
@@ -236,6 +257,19 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
         if (propertiesThatChanged.ContainsKey(START_TIME_KEY))
         {
             UpdateWaitingStatus();
+        }
+
+        if (propertiesThatChanged.ContainsKey(GAME_OVER_KEY))
+        {
+            bool isGameOver = (bool)propertiesThatChanged[GAME_OVER_KEY];
+            if (isGameOver)
+            {
+                GameManager gm = FindObjectOfType<GameManager>();
+                if (gm != null)
+                {
+                    gm.OnGameFinishedByOtherPlayer();
+                }
+            }
         }
     }
 

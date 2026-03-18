@@ -50,6 +50,7 @@ public class GameManager : MonoBehaviour
     [Header("Winner Screen")]
     [SerializeField] private GameObject winnerScreen; // Winner screen GameObject (set active when game ends)
     [SerializeField] private WinnerScreen winnerScreenScript; // Winner screen script for animations
+    [SerializeField] private Button winnerScreenLobbyButton; // Lobby button on winner screen (returns to lobby and leaves room)
     
     [Header("1st Place")]
     [SerializeField] private Image winnerProfileImage; // Winner's profile image display
@@ -83,6 +84,12 @@ public class GameManager : MonoBehaviour
     private float currentTimer; // Current timer value
     private bool isGameActive = false; // Whether the game is still active (starts as false, becomes true when gameplay screen is active)
     private Coroutine timerCoroutine; // Coroutine for timer countdown
+    [Header("Network Caching")]
+    private Dictionary<int, string> cachedNetworkNames = new Dictionary<int, string>();
+    private Dictionary<int, Sprite> cachedNetworkAvatars = new Dictionary<int, Sprite>();
+
+    // Constants for profile slot states
+    private const float CUSTOM_AVATAR_SCALE = 2.0f;
     private bool timerStarted = false; // Flag to prevent multiple timer starts
     
     // Current lobby configuration
@@ -112,6 +119,12 @@ public class GameManager : MonoBehaviour
         if (quitButton != null)
         {
             quitButton.onClick.AddListener(OnQuitButtonClicked);
+        }
+
+        // Subscribe to winner screen lobby button
+        if (winnerScreenLobbyButton != null)
+        {
+            winnerScreenLobbyButton.onClick.AddListener(OnWinnerLobbyButtonClicked);
         }
         
         // Wait a bit for PlayFab and MainMenuAvatarDisplay to load avatar
@@ -174,6 +187,8 @@ public class GameManager : MonoBehaviour
         }
         
         // Start with "3, 2, 1" countdown first
+        CacheNetworkPlayerNames();
+        
         if (timerCoroutine != null)
         {
             StopCoroutine(timerCoroutine);
@@ -370,14 +385,46 @@ public class GameManager : MonoBehaviour
             }
         }
         
+        // Mark room as game over so other players stop their timers too
+        if (LobbyNetworkManager.Instance != null)
+        {
+            LobbyNetworkManager.Instance.MarkGameAsFinished();
+        }
+        
         // Get rankings (top 3)
         var rankings = GetRankings();
-        
+
         // Award prizes based on lobby configuration
         AwardPrizes(rankings);
         
         // Show winner screen with rankings
         ShowWinnerScreen(rankings);
+    }
+
+    /// <summary>
+    /// Called when the lobby/finish button on the winner screen is clicked
+    /// Leaves the room and cleans up game state
+    /// </summary>
+    private void OnWinnerLobbyButtonClicked()
+    {
+        Debug.Log("[GameManager] Winner lobby button clicked. Leaving room...");
+        if (Photon.Pun.PhotonNetwork.InRoom)
+        {
+            Photon.Pun.PhotonNetwork.LeaveRoom();
+        }
+
+        // Return to lobby by disabling gameplay screen
+        if (gameplayScreen != null)
+        {
+            gameplayScreen.SetActive(false);
+        }
+        
+        if (winnerScreen != null)
+        {
+            winnerScreen.SetActive(false);
+        }
+        
+        ResetGameState();
     }
     
     private void OnDestroy()
@@ -422,6 +469,66 @@ public class GameManager : MonoBehaviour
     }
     
     /// <summary>
+    /// Pre-caches current human player names and avatars
+    /// This fixes the bug where names are missing at the end of the match
+    /// because players might have already disconnected from the room.
+    /// </summary>
+    private void CacheNetworkPlayerNames()
+    {
+        if (!Photon.Pun.PhotonNetwork.InRoom) return;
+
+        cachedNetworkNames.Clear();
+        cachedNetworkAvatars.Clear();
+
+        foreach (var p in Photon.Pun.PhotonNetwork.PlayerList)
+        {
+            if (p.IsLocal) continue;
+
+            int actorNo = p.ActorNumber;
+            
+            // Cache Name
+            if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_NAME_KEY, out object nameObj))
+            {
+                cachedNetworkNames[actorNo] = (string)nameObj;
+            }
+            else
+            {
+                cachedNetworkNames[actorNo] = string.IsNullOrEmpty(p.NickName) ? $"Player {actorNo}" : p.NickName;
+            }
+
+            // Cache High-Res Avatar if available
+            if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_CUSTOM_IMAGE_KEY, out object imageDataObj))
+            {
+                byte[] bytes = (byte[])imageDataObj;
+                if (bytes != null && bytes.Length > 0)
+                {
+                    Texture2D tex = new Texture2D(2, 2);
+                    if (tex.LoadImage(bytes))
+                    {
+                        Sprite s = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+                        cachedNetworkAvatars[actorNo] = s;
+                        Debug.Log($"[GameManager] Pre-cached human avatar for actor {actorNo}");
+                    }
+                }
+            }
+        }
+        Debug.Log($"[GameManager] Cached info for {cachedNetworkNames.Count} network human players.");
+    }
+
+    /// <summary>
+    /// Called when another human player finishes their board first
+    /// This ensures everyone ends the game together
+    /// </summary>
+    public void OnGameFinishedByOtherPlayer()
+    {
+        if (isGameActive)
+        {
+            Debug.Log("[GameManager] Match ended by another player! Showing winner screen.");
+            OnAllBoxesSelected();
+        }
+    }
+
+    /// <summary>
     /// Called when all boxes in a grid are selected (from any individual board)
     /// With individual boards, game ends when any player completes their board or timer expires
     /// </summary>
@@ -455,6 +562,12 @@ public class GameManager : MonoBehaviour
             }
         }
         
+        // Mark room as game over so other players stop their timers too
+        if (LobbyNetworkManager.Instance != null)
+        {
+            LobbyNetworkManager.Instance.MarkGameAsFinished();
+        }
+
         // Get rankings (top 3) - based on individual board selection counts
         var rankings = GetRankings();
         
@@ -475,10 +588,21 @@ public class GameManager : MonoBehaviour
     {
         if (!isGameActive)
         {
+            // Even if game is not active, we should still leave the room if we're in one
+            if (Photon.Pun.PhotonNetwork.InRoom)
+            {
+                Photon.Pun.PhotonNetwork.LeaveRoom();
+            }
             return; // Game already ended
         }
         
         Debug.Log("[GameManager] Player quit! Returning to lobby...");
+        
+        // Leave Room instantly if we're in one
+        if (Photon.Pun.PhotonNetwork.InRoom)
+        {
+            Photon.Pun.PhotonNetwork.LeaveRoom();
+        }
         
         // Calculate total number of players (1 player + CPUs)
         int totalPlayers = 1; // Always 1 human player
@@ -554,6 +678,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private List<(PlayerType playerType, int cpuIndex, int count)> GetRankings()
     {
+        // Don't clear caches here anymore, they were populated at start of game
         List<(PlayerType playerType, int cpuIndex, int count)> rankings = new List<(PlayerType, int, int)>();
         
         // Count player's selections from their own board
@@ -578,6 +703,31 @@ public class GameManager : MonoBehaviour
                 {
                     score = (int)scoreObj;
                 }
+                
+                // Cache info before session ends
+                int actorNo = p.ActorNumber;
+                if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_NAME_KEY, out object nameObj))
+                {
+                    cachedNetworkNames[actorNo] = (string)nameObj;
+                }
+                else if (!string.IsNullOrEmpty(p.NickName))
+                {
+                    cachedNetworkNames[actorNo] = p.NickName;
+                }
+                
+                // Cache Custom Image if available
+                if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_CUSTOM_IMAGE_KEY, out object imageDataObj))
+                {
+                    byte[] bytes = (byte[])imageDataObj;
+                    Texture2D tex = new Texture2D(2, 2);
+                    if (tex.LoadImage(bytes))
+                    {
+                        Sprite s = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+                        cachedNetworkAvatars[actorNo] = s;
+                        Debug.Log($"[GameManager] Cached high-quality custom avatar for player {actorNo}");
+                    }
+                }
+                
                 // Use a negative index offset by 100 to uniquely identify network players in the ranking list
                 rankings.Add((PlayerType.Player, -p.ActorNumber - 100, score));
             }
@@ -871,75 +1021,91 @@ public class GameManager : MonoBehaviour
             {
                 if (cpuIndex == -1) // Local Player
                 {
-                    // Always prefer the live avatar from MainMenuAvatarDisplay
-                    // so gallery/custom images are shown correctly on the winner screen
-                    Sprite liveSprite = (mainMenuAvatarDisplay != null)
-                                        ? mainMenuAvatarDisplay.GetCurrentAvatarSprite()
-                                        : null;
+                    // Prefer existing cached state from LoadPlayerProfileImage
+                    bool isCustomLocally = (playerProfileImageCustom != null && playerProfileImageCustom.gameObject.activeSelf) 
+                                        || (mainMenuAvatarDisplay != null && mainMenuAvatarDisplay.IsShowingCustomAvatar());
                     
-                    bool isCustom = (mainMenuAvatarDisplay != null) && mainMenuAvatarDisplay.IsShowingCustomAvatar();
-
-                    if (liveSprite != null)
+                    if (playerSelectedAvatar != null)
                     {
-                        SetProfileSlot(profileImage, profileImageCustom, liveSprite, isCustom);
-                        Debug.Log($"[GameManager] Winner podium: player avatar loaded from MainMenuAvatarDisplay (live, Custom: {isCustom}).");
+                        SetProfileSlot(profileImage, profileImageCustom, playerSelectedAvatar, isCustomLocally);
+                        Debug.Log($"[GameManager] Winner podium: local player avatar assigned (Custom: {isCustomLocally}).");
                     }
                     else if (playerProfileImage != null && playerProfileImage.sprite != null)
                     {
-                        // Fallback to standard player profile image
                         SetProfileSlot(profileImage, profileImageCustom, playerProfileImage.sprite, false);
-                        Debug.Log("[GameManager] Winner podium: player avatar loaded from cached playerProfileImage.");
-                    }
-                    else if (playerProfileImageCustom != null && playerProfileImageCustom.sprite != null)
-                    {
-                        // Fallback to custom player profile image
-                        SetProfileSlot(profileImage, profileImageCustom, playerProfileImageCustom.sprite, true);
-                        Debug.Log("[GameManager] Winner podium: player avatar loaded from cached playerProfileImageCustom.");
                     }
                 }
                 else if (cpuIndex <= -100) // Network Human
                 {
                     // Find the network player by ActorNumber
                     int actorNumber = Mathf.Abs(cpuIndex + 100);
-                    Photon.Realtime.Player targetPlayer = null;
-                    foreach (var p in Photon.Pun.PhotonNetwork.PlayerList)
+                    bool customProfileMatched = false;
+                    
+                    // Priority 1: Use Cached High-Quality Avatar (decided during GetRankings)
+                    if (cachedNetworkAvatars.TryGetValue(actorNumber, out Sprite cachedSprite))
                     {
-                        if (p.ActorNumber == actorNumber)
-                        {
-                            targetPlayer = p;
-                            break;
-                        }
+                        SetProfileSlot(profileImage, profileImageCustom, cachedSprite, true);
+                        customProfileMatched = true;
+                        Debug.Log($"[GameManager] Winner podium: used cached high-quality avatar for player {actorNumber}");
+                    }
+                    
+                    // Priority 2: Try live properties (if not yet left room)
+                    if (!customProfileMatched)
+                    {
+                        // (Fallback logic handled below if not matched)
                     }
 
-                    if (targetPlayer != null)
+                    if (!customProfileMatched)
                     {
-                        // Check for Custom Image data first (Gallery/Pro way)
-                        if (targetPlayer.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_CUSTOM_IMAGE_KEY, out object imageDataObj))
+                        Photon.Realtime.Player targetPlayer = null;
+                        foreach (var p in Photon.Pun.PhotonNetwork.PlayerList)
                         {
-                            byte[] bytes = (byte[])imageDataObj;
-                            Texture2D tex = new Texture2D(2, 2);
-                            if (tex.LoadImage(bytes))
+                            if (p.ActorNumber == actorNumber)
                             {
-                                Sprite customSprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
-                                SetProfileSlot(profileImage, profileImageCustom, customSprite, true);
-                                Debug.Log($"[GameManager] Winner podium: network human custom gallery image synced and displayed.");
+                                targetPlayer = p;
+                                break;
                             }
                         }
-                        // Fallback to Preset Avatar Index
-                        else if (targetPlayer.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_AVATAR_KEY, out object avatarIdxObj))
+
+                        if (targetPlayer != null)
                         {
-                            int avatarIndex = (int)avatarIdxObj;
-                            if (availableProfileSprites != null && avatarIndex >= 0 && avatarIndex < availableProfileSprites.Length)
+                            // Check for Custom Image data (Gallery/Pro way)
+                            if (targetPlayer.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_CUSTOM_IMAGE_KEY, out object imageDataObj))
                             {
-                                SetProfileSlot(profileImage, profileImageCustom, availableProfileSprites[avatarIndex], false);
-                                Debug.Log($"[GameManager] Winner podium: network human avatar (synced index {avatarIndex}) assigned.");
+                                byte[] bytes = (byte[])imageDataObj;
+                                Texture2D tex = new Texture2D(2, 2);
+                                if (tex.LoadImage(bytes))
+                                {
+                                    Sprite customSprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+                                    SetProfileSlot(profileImage, profileImageCustom, customSprite, true);
+                                    customProfileMatched = true;
+                                    Debug.Log($"[GameManager] Winner podium: network human custom gallery image synced and displayed.");
+                                }
+                            }
+                            
+                            // Fallback to Preset Avatar Index if no custom was successfully loaded
+                            if (!customProfileMatched)
+                            {
+                                if (targetPlayer.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_AVATAR_KEY, out object avatarIdxObj))
+                                {
+                                    int avatarIndex = (int)avatarIdxObj;
+                                    if (availableProfileSprites != null && avatarIndex >= 0 && avatarIndex < availableProfileSprites.Length)
+                                    {
+                                        SetProfileSlot(profileImage, profileImageCustom, availableProfileSprites[avatarIndex], false);
+                                        Debug.Log($"[GameManager] Winner podium: network human avatar (synced index {avatarIndex}) assigned.");
+                                    }
+                                    else if (availableProfileSprites != null && availableProfileSprites.Length > 0)
+                                    {
+                                        SetProfileSlot(profileImage, profileImageCustom, availableProfileSprites[0], false);
+                                    }
+                                }
                             }
                         }
-                    }
-                    else if (availableProfileSprites != null && availableProfileSprites.Length > 0)
-                    {
-                        // Fallback to first sprite if sync failed
-                        SetProfileSlot(profileImage, profileImageCustom, availableProfileSprites[0], false);
+                        else if (availableProfileSprites != null && availableProfileSprites.Length > 0)
+                        {
+                            // Final fallback to first sprite if all else failed (data not found)
+                            SetProfileSlot(profileImage, profileImageCustom, availableProfileSprites[0], false);
+                        }
                     }
                 }
             }
@@ -1134,6 +1300,13 @@ public class GameManager : MonoBehaviour
             {
                 // Network Player
                 int actorNumber = Mathf.Abs(cpuIndex + 100);
+                // Try cache first (snapshot from session end)
+                if (cachedNetworkNames.TryGetValue(actorNumber, out string cachedName))
+                {
+                    return cachedName;
+                }
+
+                // Fallback to live list (if still in room)
                 foreach (var p in Photon.Pun.PhotonNetwork.PlayerList)
                 {
                     if (p.ActorNumber == actorNumber)
@@ -2292,6 +2465,10 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void DestroyIndividualNumberGrids()
     {
+        // Clear caches when destroying grids
+        cachedNetworkNames.Clear();
+        cachedNetworkAvatars.Clear();
+
         // Unsubscribe from events before destroying
         foreach (NumberGrid grid in allNumberGrids)
         {
