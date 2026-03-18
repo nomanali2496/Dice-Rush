@@ -2201,10 +2201,10 @@ RectTransform:
   - {fileID: 1331150283}
   m_Father: {fileID: 1502321586}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.54486114, y: 0.9474502}
-  m_AnchorMax: {x: 0.8545833, y: 0.9816542}
+  m_AnchorMin: {x: 0.030798594, y: 0.7660603}
+  m_AnchorMax: {x: 0.43128473, y: 0.8134173}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -0.000030517578, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &77688224
 GameObject:
@@ -24415,7 +24415,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48.35
+  m_fontSize: 67
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -57057,12 +57057,13 @@ MonoBehaviour:
   quitPanel: {fileID: 1300549906}
   timerText: {fileID: 294171673}
   timerTextLegacy: {fileID: 0}
-  gameTimer: 105
+  gameTimer: 5
   countdownText: {fileID: 1576471693}
   countdownTextShadow: {fileID: 762145800}
   countdownDuration: 1
   winnerScreen: {fileID: 1620104683}
   winnerScreenScript: {fileID: 1620104688}
+  winnerScreenLobbyButton: {fileID: 1663080490}
   winnerProfileImage: {fileID: 1964234723}
   winnerProfileImageCustom: {fileID: 865509120}
   winnerOutlineImage: {fileID: 1964234722}
