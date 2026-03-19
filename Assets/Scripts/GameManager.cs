@@ -486,14 +486,20 @@ public class GameManager : MonoBehaviour
 
             int actorNo = p.ActorNumber;
             
-            // Cache Name
+            // Cache Name (only if it's already a real name, not default 'Player X')
+            string currentName = "";
             if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_NAME_KEY, out object nameObj))
             {
-                cachedNetworkNames[actorNo] = (string)nameObj;
+                currentName = (string)nameObj;
             }
-            else
+            else if (!string.IsNullOrEmpty(p.NickName) && !p.NickName.StartsWith("Player "))
             {
-                cachedNetworkNames[actorNo] = string.IsNullOrEmpty(p.NickName) ? $"Player {actorNo}" : p.NickName;
+                currentName = p.NickName;
+            }
+
+            if (!string.IsNullOrEmpty(currentName))
+            {
+                cachedNetworkNames[actorNo] = currentName;
             }
 
             // Cache High-Res Avatar if available
@@ -1300,27 +1306,37 @@ public class GameManager : MonoBehaviour
             {
                 // Network Player
                 int actorNumber = Mathf.Abs(cpuIndex + 100);
-                // Try cache first (snapshot from session end)
+
+                // Priority 1: Live list (always check network first for most recent sync)
+                foreach (var p in Photon.Pun.PhotonNetwork.PlayerList)
+                {
+                    if (p.ActorNumber == actorNumber)
+                    {
+                        // Prefer Custom Property name (synced from PlayFab)
+                        if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_NAME_KEY, out object nameObj))
+                        {
+                            string propName = (string)nameObj;
+                            if (!string.IsNullOrEmpty(propName)) return propName;
+                        }
+                        
+                        // Then NickName (only if it's a real name, not 'Player X' fallback)
+                        if (!string.IsNullOrEmpty(p.NickName) && !p.NickName.StartsWith("Player "))
+                        {
+                            return p.NickName;
+                        }
+                    }
+                }
+
+                // Priority 2: Cache (fallback if player has disconnected)
                 if (cachedNetworkNames.TryGetValue(actorNumber, out string cachedName))
                 {
                     return cachedName;
                 }
 
-                // Fallback to live list (if still in room)
-                foreach (var p in Photon.Pun.PhotonNetwork.PlayerList)
-                {
-                    if (p.ActorNumber == actorNumber)
-                    {
-                        if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_NAME_KEY, out object nameObj))
-                        {
-                            return (string)nameObj;
-                        }
-                        return string.IsNullOrEmpty(p.NickName) ? $"Player {actorNumber}" : p.NickName;
-                    }
-                }
-                return "Player";
+                // Priority 3: Final fallback to generic label
+                return $"Player {actorNumber}";
             }
-            return "You";
+            return "Player";
         }
         else // CPU
         {

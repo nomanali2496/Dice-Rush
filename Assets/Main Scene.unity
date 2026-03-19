@@ -1693,10 +1693,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1964234721}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.3314691, y: -0.09013823}
-  m_AnchorMax: {x: 0.65365756, y: 0.081528895}
+  m_AnchorMin: {x: 0.12090296, y: -0.109611906}
+  m_AnchorMax: {x: 0.8641654, y: 0.0998126}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: -0.000015258789}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &62748786
 MonoBehaviour:
@@ -1745,7 +1745,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 68.4
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -29180,10 +29180,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1879194352}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.16040629, y: -0.34770638}
-  m_AnchorMax: {x: 0.806456, y: -0.045871526}
+  m_AnchorMin: {x: -0.34462488, y: -0.36222273}
+  m_AnchorMax: {x: 1.3113574, y: -0.034104142}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0.0000076293945}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1104086343
 MonoBehaviour:
@@ -29232,7 +29232,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 61.55
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -33479,10 +33479,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1685394756}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.16040632, y: -0.34770638}
-  m_AnchorMax: {x: 0.806456, y: -0.045871526}
+  m_AnchorMin: {x: -0.34462488, y: -0.36222273}
+  m_AnchorMax: {x: 1.3113574, y: -0.034104142}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0.0000076293945}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1276840507
 MonoBehaviour:
@@ -33531,7 +33531,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 61.55
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -57057,7 +57057,7 @@ MonoBehaviour:
   quitPanel: {fileID: 1300549906}
   timerText: {fileID: 294171673}
   timerTextLegacy: {fileID: 0}
-  gameTimer: 5
+  gameTimer: 105
   countdownText: {fileID: 1576471693}
   countdownTextShadow: {fileID: 762145800}
   countdownDuration: 1

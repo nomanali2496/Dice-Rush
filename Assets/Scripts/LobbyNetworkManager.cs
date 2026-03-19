@@ -42,6 +42,20 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
             Debug.Log("[LobbyNetworkManager] Connecting to Photon...");
             PhotonNetwork.ConnectUsingSettings();
         }
+
+        // Listen for data loading to trigger a resync if we are already in a room
+        if (PlayFabManager.Instance != null)
+        {
+            PlayFabManager.Instance.OnPlayerDataLoaded += SyncCurrentProfileToPhoton;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (PlayFabManager.Instance != null)
+        {
+            PlayFabManager.Instance.OnPlayerDataLoaded -= SyncCurrentProfileToPhoton;
+        }
     }
 
     public override void OnConnectedToMaster()
@@ -99,6 +113,7 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
         Debug.Log($"[LobbyNetworkManager] Joined Room: {PhotonNetwork.CurrentRoom.Name}");
         if (waitingPanel != null) waitingPanel.SetActive(true);
         isStarting = false;
+        hasSyncedProfile = false; // Reset sync flag for new room session
 
         // If we are the Master Client, set the start time for the countdown
         if (PhotonNetwork.IsMasterClient)
@@ -108,10 +123,31 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
             PhotonNetwork.CurrentRoom.SetCustomProperties(props);
         }
 
-        // Sync profile data (Name and Avatar) to Custom Properties
+        // Try to sync initially (might be empty if still loading data)
+        SyncCurrentProfileToPhoton();
+
+        UpdateWaitingStatus();
+        CheckIfRoomFull();
+    }
+
+    private bool hasSyncedProfile = false;
+
+    /// <summary>
+    /// Synchronizes the local player's Name, Avatar Index, and Custom Photo to Photon.
+    /// This is called when joining a room AND periodically until successful (to handle slow loading).
+    /// </summary>
+    public void SyncCurrentProfileToPhoton(PlayerData info = null)
+    {
+        if (!PhotonNetwork.InRoom) return;
+
+        // Ensure PlayFab data is actually present before trying to sync
         if (PlayFabManager.Instance != null && PlayFabManager.Instance.currentPlayerData != null)
         {
             var data = PlayFabManager.Instance.currentPlayerData;
+            
+            // Only sync if data has actually been loaded (playerName isn't empty)
+            if (string.IsNullOrEmpty(data.playerName)) return;
+
             PhotonNetwork.NickName = data.playerName;
             
             ExitGames.Client.Photon.Hashtable profileProps = new ExitGames.Client.Photon.Hashtable();
@@ -138,13 +174,11 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
                 // Clear stale custom image if switched back to preset
                 profileProps.Add(PLAYER_CUSTOM_IMAGE_KEY, null);
             }
-            
-            PhotonNetwork.LocalPlayer.SetCustomProperties(profileProps);
-            Debug.Log($"[LobbyNetworkManager] Cached profile for sync: {data.playerName}, Avatar: {data.selectedAvatarIndex}");
-        }
 
-        UpdateWaitingStatus();
-        CheckIfRoomFull();
+            PhotonNetwork.LocalPlayer.SetCustomProperties(profileProps);
+            hasSyncedProfile = true;
+            Debug.Log($"[LobbyNetworkManager] Successfully synced profile data for {data.playerName} to Photon.");
+        }
     }
 
     public const string PLAYER_SCORE_KEY = "Score";
@@ -161,10 +195,14 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
     {
         if (PhotonNetwork.InRoom)
         {
+            // Lock the room so nobody can re-join this finished game session
+            PhotonNetwork.CurrentRoom.IsOpen = false;
+            PhotonNetwork.CurrentRoom.IsVisible = false;
+
             ExitGames.Client.Photon.Hashtable props = new ExitGames.Client.Photon.Hashtable();
             props.Add(GAME_OVER_KEY, true);
             PhotonNetwork.CurrentRoom.SetCustomProperties(props);
-            Debug.Log("[LobbyNetworkManager] Room marked as GAME OVER.");
+            Debug.Log("[LobbyNetworkManager] Room marked as GAME OVER and LOCKED from new joins.");
         }
     }
 
@@ -216,10 +254,19 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
 
     private void Update()
     {
-        if (PhotonNetwork.InRoom && !isStarting)
+        if (PhotonNetwork.InRoom)
         {
-            UpdateWaitingStatus();
-            CheckMatchmakingTimer();
+            // If data is ready but hasn't been synced to this room yet, do it now
+            if (!hasSyncedProfile)
+            {
+                SyncCurrentProfileToPhoton();
+            }
+
+            if (!isStarting)
+            {
+                UpdateWaitingStatus();
+                CheckMatchmakingTimer();
+            }
         }
     }
 

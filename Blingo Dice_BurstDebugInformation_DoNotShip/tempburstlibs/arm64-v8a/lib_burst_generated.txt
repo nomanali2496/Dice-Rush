@@ -10,7 +10,6 @@ Library: D:\GitHub\Dice-Rush\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_
 --target-framework=NetFramework
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=D:\GitHub\Dice-Rush\Temp\Burst
---debug=Full
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.2.6f2/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=D:\GitHub\Dice-Rush\Library\Burst
 --output=D:\GitHub\Dice-Rush\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
@@ -127,7 +126,6 @@ Library: D:\GitHub\Dice-Rush\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_
 --target-framework=NetFramework
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=D:\GitHub\Dice-Rush\Temp\Burst
---debug=Full
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.2.6f2/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=D:\GitHub\Dice-Rush\Library\Burst
 --output=D:\GitHub\Dice-Rush\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
@@ -156,7 +154,6 @@ Library: D:\GitHub\Dice-Rush\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_
 --float-mode=Fast
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=D:\GitHub\Dice-Rush\Temp\Burst
---debug=Full
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.2.6f2/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=D:\GitHub\Dice-Rush\Library\Burst
 --output=D:\GitHub\Dice-Rush\Temp\BurstOutput\tempburstlibs\arm64-v8a\lib_burst_generated
