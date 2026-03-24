@@ -846,6 +846,8 @@ public class AvatarSelector : MonoBehaviour
     
     /// <summary>
     /// Save custom image to PlayFab as base64 string
+    /// IMPORTANT: We must resize and compress the image BEFORE saving to PlayFab because
+    /// PlayFab has a character limit on UserData fields. Full-res images will be silently dropped.
     /// </summary>
     private void SaveCustomImageToPlayFab(Texture2D texture)
     {
@@ -860,30 +862,41 @@ public class AvatarSelector : MonoBehaviour
             Debug.LogWarning("[AvatarSelector] Player not logged in! Cannot save image.");
             return;
         }
+
+        // Resize to 128x128 for PlayFab storage compatibility (keep base64 string short)
+        int size = 128;
+        RenderTexture rt = RenderTexture.GetTemporary(size, size);
+        Graphics.Blit(texture, rt);
+        RenderTexture previous = RenderTexture.active;
+        RenderTexture.active = rt;
         
-        // Convert texture to PNG bytes
-        byte[] imageBytes = texture.EncodeToPNG();
+        Texture2D smallTexture = new Texture2D(size, size);
+        smallTexture.ReadPixels(new Rect(0, 0, size, size), 0, 0);
+        smallTexture.Apply();
+        
+        RenderTexture.active = previous;
+        RenderTexture.ReleaseTemporary(rt);
+
+        // Encode to low-quality JPG to stay under character limits (around 5-8KB base64)
+        byte[] imageBytes = smallTexture.EncodeToJPG(50);
+        Destroy(smallTexture);
         
         // Convert to base64 string
         string base64Image = System.Convert.ToBase64String(imageBytes);
         
-        Debug.Log($"[AvatarSelector] Saving custom image to PlayFab (size: {imageBytes.Length} bytes, base64 length: {base64Image.Length})");
+        Debug.Log($"[AvatarSelector] Saving compressed custom image to PlayFab (size: {imageBytes.Length} bytes, base64 length: {base64Image.Length})");
         
         // Update player data
         if (PlayFabManager.Instance.currentPlayerData != null)
         {
             // Store as base64 string in imageUrl field
-            PlayFabManager.Instance.currentPlayerData.imageUrl = "data:image/png;base64," + base64Image;
+            PlayFabManager.Instance.currentPlayerData.imageUrl = "data:image/jpg;base64," + base64Image;
             
             // Save to PlayFab
             PlayFabManager.Instance.SavePlayerData(() =>
             {
-                Debug.Log("[AvatarSelector] ✓ Custom image saved successfully to PlayFab!");
+                Debug.Log("[AvatarSelector] ✓ Compressed custom image saved successfully to PlayFab!");
             });
-        }
-        else
-        {
-            Debug.LogError("[AvatarSelector] PlayerData is null! Cannot save image.");
         }
     }
     

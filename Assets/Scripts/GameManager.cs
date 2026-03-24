@@ -100,6 +100,10 @@ public class GameManager : MonoBehaviour
     private Dictionary<int, NumberGrid> cpuNumberGrids = new Dictionary<int, NumberGrid>(); // CPU NumberGrid instances by CPU index
     private List<NumberGrid> allNumberGrids = new List<NumberGrid>(); // All NumberGrid instances (for cleanup)
     
+    // Cache refresh timing
+    private float cacheRefreshInterval = 2.0f;
+    private float lastCacheRefreshTime = 0f;
+    
     private void Start()
     {
         // Subscribe to PlayFab events to update when player data loads
@@ -171,6 +175,17 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("[GameManager] Gameplay screen is active, starting timer...");
             OnGameplayScreenActivated();
+        }
+
+        // Periodically refresh network cache while game is active to catch late-arriving data
+        if (isGameActive && Photon.Pun.PhotonNetwork.InRoom)
+        {
+            // Increased interval slightly to 3s for better performance on devices
+            if (Time.time - lastCacheRefreshTime > 3.0f)
+            {
+                lastCacheRefreshTime = Time.time;
+                CacheNetworkPlayerNames();
+            }
         }
     }
     
@@ -477,48 +492,55 @@ public class GameManager : MonoBehaviour
     {
         if (!Photon.Pun.PhotonNetwork.InRoom) return;
 
-        cachedNetworkNames.Clear();
-        cachedNetworkAvatars.Clear();
-
+        // Note: We don't always clear here, so we can keep data that arrived earlier
         foreach (var p in Photon.Pun.PhotonNetwork.PlayerList)
         {
             if (p.IsLocal) continue;
 
             int actorNo = p.ActorNumber;
             
-            // Cache Name (only if it's already a real name, not default 'Player X')
+            // 1. Cache Name
             string currentName = "";
             if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_NAME_KEY, out object nameObj))
             {
                 currentName = (string)nameObj;
+                if (!string.IsNullOrEmpty(currentName)) cachedNetworkNames[actorNo] = currentName;
             }
-            else if (!string.IsNullOrEmpty(p.NickName) && !p.NickName.StartsWith("Player "))
+            
+            // Also check NickName if PLAYER_NAME_KEY isn't found yet
+            if (string.IsNullOrEmpty(currentName) && !string.IsNullOrEmpty(p.NickName))
             {
-                currentName = p.NickName;
+                // We keep it as a fallback even if it's "Player X"
+                cachedNetworkNames[actorNo] = p.NickName;
             }
 
-            if (!string.IsNullOrEmpty(currentName))
+            // 2. Cache Avatar Image if not already cached
+            if (!cachedNetworkAvatars.ContainsKey(actorNo))
             {
-                cachedNetworkNames[actorNo] = currentName;
-            }
-
-            // Cache High-Res Avatar if available
-            if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_CUSTOM_IMAGE_KEY, out object imageDataObj))
-            {
-                byte[] bytes = (byte[])imageDataObj;
-                if (bytes != null && bytes.Length > 0)
+                if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_CUSTOM_IMAGE_KEY, out object imageDataObj))
                 {
-                    Texture2D tex = new Texture2D(2, 2);
-                    if (tex.LoadImage(bytes))
+                    byte[] bytes = (byte[])imageDataObj;
+                    if (bytes != null && bytes.Length > 0)
                     {
-                        Sprite s = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
-                        cachedNetworkAvatars[actorNo] = s;
-                        Debug.Log($"[GameManager] Pre-cached human avatar for actor {actorNo}");
+                        try
+                        {
+                            Texture2D tex = new Texture2D(2, 2);
+                            if (tex.LoadImage(bytes))
+                            {
+                                Sprite s = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+                                cachedNetworkAvatars[actorNo] = s;
+                                Debug.Log($"[GameManager] Pre-cached human avatar for actor {actorNo} ({bytes.Length} bytes)");
+                            }
+                        }
+                        catch (System.Exception e)
+                        {
+                            Debug.LogWarning($"[GameManager] Failed to decode avatar for actor {actorNo}: {e.Message}");
+                        }
                     }
                 }
             }
         }
-        Debug.Log($"[GameManager] Cached info for {cachedNetworkNames.Count} network human players.");
+        Debug.Log($"[GameManager] Cache updated. Names: {cachedNetworkNames.Count}, Avatars: {cachedNetworkAvatars.Count}");
     }
 
     /// <summary>
@@ -1307,33 +1329,31 @@ public class GameManager : MonoBehaviour
                 // Network Player
                 int actorNumber = Mathf.Abs(cpuIndex + 100);
 
-                // Priority 1: Live list (always check network first for most recent sync)
+                // Priority 1: Check live property first (always most up-to-date)
                 foreach (var p in Photon.Pun.PhotonNetwork.PlayerList)
                 {
                     if (p.ActorNumber == actorNumber)
                     {
-                        // Prefer Custom Property name (synced from PlayFab)
                         if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_NAME_KEY, out object nameObj))
                         {
-                            string propName = (string)nameObj;
-                            if (!string.IsNullOrEmpty(propName)) return propName;
+                            string name = (string)nameObj;
+                            if (!string.IsNullOrEmpty(name)) return name;
                         }
-                        
-                        // Then NickName (only if it's a real name, not 'Player X' fallback)
-                        if (!string.IsNullOrEmpty(p.NickName) && !p.NickName.StartsWith("Player "))
+
+                        if (!string.IsNullOrEmpty(p.NickName))
                         {
                             return p.NickName;
                         }
                     }
                 }
 
-                // Priority 2: Cache (fallback if player has disconnected)
-                if (cachedNetworkNames.TryGetValue(actorNumber, out string cachedName))
+                // Priority 2: Return cached name if it exists
+                if (cachedNetworkNames.TryGetValue(actorNumber, out string cachedName) && !string.IsNullOrEmpty(cachedName))
                 {
                     return cachedName;
                 }
 
-                // Priority 3: Final fallback to generic label
+                // Final fallback
                 return $"Player {actorNumber}";
             }
             return "Player";

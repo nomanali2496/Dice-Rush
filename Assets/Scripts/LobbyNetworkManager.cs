@@ -138,35 +138,53 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
     /// </summary>
     public void SyncCurrentProfileToPhoton(PlayerData info = null)
     {
-        if (!PhotonNetwork.InRoom) return;
-
         // Ensure PlayFab data is actually present before trying to sync
         if (PlayFabManager.Instance != null && PlayFabManager.Instance.currentPlayerData != null)
         {
             var data = PlayFabManager.Instance.currentPlayerData;
             
-            // Only sync if data has actually been loaded (playerName isn't empty)
+            // Critical: Don't sync if playerName is empty
             if (string.IsNullOrEmpty(data.playerName)) return;
 
-            PhotonNetwork.NickName = data.playerName;
+            // Always update NickName immediately (this works even before joining a room)
+            if (PhotonNetwork.NickName != data.playerName)
+            {
+                PhotonNetwork.NickName = data.playerName;
+                Debug.Log($"[LobbyNetworkManager] Updated Local NickName to: {data.playerName}");
+            }
             
+            // Stop here if we aren't in a room yet - custom properties require a room
+            if (!PhotonNetwork.InRoom) return;
+
             ExitGames.Client.Photon.Hashtable profileProps = new ExitGames.Client.Photon.Hashtable();
             profileProps.Add(PLAYER_NAME_KEY, data.playerName);
             profileProps.Add(PLAYER_AVATAR_KEY, data.selectedAvatarIndex);
             
-            // Sync custom photo if being used
-            MainMenuAvatarDisplay avatarDisplay = FindObjectOfType<MainMenuAvatarDisplay>();
-            if (avatarDisplay != null && avatarDisplay.IsShowingCustomAvatar())
+            // Sync custom photo from PlayFab data if present (scene-independent)
+            if (!string.IsNullOrEmpty(data.imageUrl) && data.imageUrl.StartsWith("data:image"))
             {
-                Sprite s = avatarDisplay.GetCurrentAvatarSprite();
-                if (s != null && s.texture != null)
+                try
                 {
-                    byte[] compressedImage = CompressAvatarTexture(s.texture);
-                    if (compressedImage != null)
+                    // Extract base64 part
+                    string base64Data = data.imageUrl.Substring(data.imageUrl.IndexOf(",") + 1);
+                    byte[] imageBytes = System.Convert.FromBase64String(base64Data);
+                    
+                    // Decode to check validity and then re-compress/resize for network
+                    Texture2D tex = new Texture2D(2, 2);
+                    if (tex.LoadImage(imageBytes))
                     {
-                        profileProps.Add(PLAYER_CUSTOM_IMAGE_KEY, compressedImage);
-                        Debug.Log($"[LobbyNetworkManager] Syncing custom photo ({compressedImage.Length} bytes)");
+                        byte[] compressedImage = CompressAvatarTexture(tex);
+                        if (compressedImage != null)
+                        {
+                            profileProps.Add(PLAYER_CUSTOM_IMAGE_KEY, compressedImage);
+                            Debug.Log($"[LobbyNetworkManager] Syncing custom photo from PlayFab data ({compressedImage.Length} bytes) for {data.playerName}");
+                        }
+                        Destroy(tex);
                     }
+                }
+                catch (System.Exception e)
+                {
+                    Debug.LogWarning($"[LobbyNetworkManager] Failed to process custom image for sync: {e.Message}");
                 }
             }
             else
@@ -176,8 +194,14 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
             }
 
             PhotonNetwork.LocalPlayer.SetCustomProperties(profileProps);
-            hasSyncedProfile = true;
-            Debug.Log($"[LobbyNetworkManager] Successfully synced profile data for {data.playerName} to Photon.");
+            
+            // Only consider it "fully synced" if the name is not empty
+            // We allow re-syncing if the name was "Guest" but now it's something else
+            if (!string.IsNullOrEmpty(data.playerName) && data.playerName != "Guest") {
+                hasSyncedProfile = true;
+            }
+            
+            Debug.Log($"[LobbyNetworkManager] Successfully synced profile properties to Photon.");
         }
     }
 
@@ -213,21 +237,24 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
     {
         try
         {
-            // Increase resolution to 256x256 for very clear podium face shots
-            RenderTexture rt = RenderTexture.GetTemporary(256, 256);
+            // Reduced resolution to 160x160 to ensure we stay under Photon's property size limits on mobile
+            // while still maintaining enough clarity for the winner podium.
+            int size = 160; 
+            RenderTexture rt = RenderTexture.GetTemporary(size, size);
             Graphics.Blit(source, rt);
             RenderTexture previous = RenderTexture.active;
             RenderTexture.active = rt;
             
-            Texture2D readableText = new Texture2D(256, 256);
-            readableText.ReadPixels(new Rect(0, 0, 256, 256), 0, 0);
+            Texture2D readableText = new Texture2D(size, size);
+            readableText.ReadPixels(new Rect(0, 0, size, size), 0, 0);
             readableText.Apply();
             
             RenderTexture.active = previous;
             RenderTexture.ReleaseTemporary(rt);
             
-            // High quality JPG (90) for maximum clarity
-            byte[] bytes = readableText.EncodeToJPG(90);
+            // JPG Quality 75 provides a great balance of size (usually 5-10KB) and clarity.
+            // High quality (90) was too large for reliable network property syncing on devices.
+            byte[] bytes = readableText.EncodeToJPG(75);
             Destroy(readableText);
             return bytes;
         }

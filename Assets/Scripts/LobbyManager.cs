@@ -78,6 +78,12 @@ public class LobbyManager : MonoBehaviour
         InitializeLobbyRows();
         SetupScrollButtons();
         
+        // Subscribe to PlayFab events to update when player data loads
+        if (PlayFabManager.Instance != null)
+        {
+            PlayFabManager.Instance.OnPlayerDataLoaded += OnPlayerDataLoaded;
+        }
+        
         // Removed InitializeButtonsRoutine from here, it is now called in OnEnable to handle re-enabling
     }
     
@@ -141,6 +147,37 @@ public class LobbyManager : MonoBehaviour
 
         // Start retry routine to ensure buttons light up when data is ready (e.g. after returning from game)
         StartCoroutine(InitializeButtonsRoutine());
+    }
+
+    private void OnDestroy()
+    {
+        // Unsubscribe from events
+        if (PlayFabManager.Instance != null)
+        {
+            PlayFabManager.Instance.OnPlayerDataLoaded -= OnPlayerDataLoaded;
+        }
+    }
+    
+    /// <summary>
+    /// Event handler for when PlayFab player data is loaded
+    /// Ensures lobby buttons refresh immediately even if internet was slow
+    /// </summary>
+    private void OnPlayerDataLoaded(PlayerData data)
+    {
+        Debug.Log($"[LobbyManager] Player data loaded event received. Refreshing all play buttons...");
+        RefreshAllPlayButtons();
+        
+        // If we haven't auto-selected yet, do it now that data is definitely ready
+        if (!hasAutoSelectedOnce && isLoggedIn())
+        {
+             AutoSelectLobbyBasedOnBalance();
+             hasAutoSelectedOnce = true;
+        }
+    }
+
+    private bool isLoggedIn()
+    {
+        return PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn();
     }
     
     private void Update()
@@ -929,7 +966,7 @@ public class LobbyManager : MonoBehaviour
         {
             foreach(var item in allLobbyItems)
             {
-                if (item != null && item.gameObject.activeSelf)
+                if (item != null)
                 {
                     item.RefreshPlayButtonsInteractability();
                 }
