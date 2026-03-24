@@ -146,7 +146,7 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
             // Critical: Don't sync if playerName is empty
             if (string.IsNullOrEmpty(data.playerName)) return;
 
-            // Always update NickName immediately (this works even before joining a room)
+            // 1. Update NickName immediately (this works even before joining a room)
             if (PhotonNetwork.NickName != data.playerName)
             {
                 PhotonNetwork.NickName = data.playerName;
@@ -156,28 +156,35 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
             // Stop here if we aren't in a room yet - custom properties require a room
             if (!PhotonNetwork.InRoom) return;
 
-            ExitGames.Client.Photon.Hashtable profileProps = new ExitGames.Client.Photon.Hashtable();
-            profileProps.Add(PLAYER_NAME_KEY, data.playerName);
-            profileProps.Add(PLAYER_AVATAR_KEY, data.selectedAvatarIndex);
+            // 2. SYNC NAME AND AVATAR INDEX (Tiny, instant packet — priority 1)
+            ExitGames.Client.Photon.Hashtable basicProps = new ExitGames.Client.Photon.Hashtable();
+            basicProps.Add(PLAYER_NAME_KEY, data.playerName);
+            basicProps.Add(PLAYER_AVATAR_KEY, data.selectedAvatarIndex);
             
-            // Sync custom photo from PlayFab data if present (scene-independent)
+            // Send the basic info first so it's guaranteed to reach others even on slow networks
+            PhotonNetwork.LocalPlayer.SetCustomProperties(basicProps);
+            Debug.Log($"[LobbyNetworkManager] ✅ Priority 1 (Name/Index) sent to Photon for {data.playerName}");
+            
+            // 3. SYNC CUSTOM IMAGE (Larger packet — priority 2)
+            // We send this separately to avoid the "All or Nothing" failure on mobile devices
             if (!string.IsNullOrEmpty(data.imageUrl) && data.imageUrl.StartsWith("data:image"))
             {
                 try
                 {
-                    // Extract base64 part
                     string base64Data = data.imageUrl.Substring(data.imageUrl.IndexOf(",") + 1);
                     byte[] imageBytes = System.Convert.FromBase64String(base64Data);
                     
-                    // Decode to check validity and then re-compress/resize for network
                     Texture2D tex = new Texture2D(2, 2);
                     if (tex.LoadImage(imageBytes))
                     {
+                        // Use 128x128 for even better mobile reliability
                         byte[] compressedImage = CompressAvatarTexture(tex);
                         if (compressedImage != null)
                         {
-                            profileProps.Add(PLAYER_CUSTOM_IMAGE_KEY, compressedImage);
-                            Debug.Log($"[LobbyNetworkManager] Syncing custom photo from PlayFab data ({compressedImage.Length} bytes) for {data.playerName}");
+                            ExitGames.Client.Photon.Hashtable imageProps = new ExitGames.Client.Photon.Hashtable();
+                            imageProps.Add(PLAYER_CUSTOM_IMAGE_KEY, compressedImage);
+                            PhotonNetwork.LocalPlayer.SetCustomProperties(imageProps);
+                            Debug.Log($"[LobbyNetworkManager] ✅ Priority 2 (Custom Image: {compressedImage.Length} bytes) sent separately for {data.playerName}");
                         }
                         Destroy(tex);
                     }
@@ -190,18 +197,15 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
             else
             {
                 // Clear stale custom image if switched back to preset
-                profileProps.Add(PLAYER_CUSTOM_IMAGE_KEY, null);
+                ExitGames.Client.Photon.Hashtable clearProps = new ExitGames.Client.Photon.Hashtable();
+                clearProps.Add(PLAYER_CUSTOM_IMAGE_KEY, null);
+                PhotonNetwork.LocalPlayer.SetCustomProperties(clearProps);
             }
 
-            PhotonNetwork.LocalPlayer.SetCustomProperties(profileProps);
-            
             // Only consider it "fully synced" if the name is not empty
-            // We allow re-syncing if the name was "Guest" but now it's something else
             if (!string.IsNullOrEmpty(data.playerName) && data.playerName != "Guest") {
                 hasSyncedProfile = true;
             }
-            
-            Debug.Log($"[LobbyNetworkManager] Successfully synced profile properties to Photon.");
         }
     }
 
@@ -237,30 +241,27 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
     {
         try
         {
-            // Reduced resolution to 160x160 to ensure we stay under Photon's property size limits on mobile
-            // while still maintaining enough clarity for the winner podium.
-            int size = 160; 
+            // Aggressive mobile optimization: 128x128 at 60% quality ensures the packet stays small
+            int size = 128;
             RenderTexture rt = RenderTexture.GetTemporary(size, size);
             Graphics.Blit(source, rt);
             RenderTexture previous = RenderTexture.active;
             RenderTexture.active = rt;
             
-            Texture2D readableText = new Texture2D(size, size);
-            readableText.ReadPixels(new Rect(0, 0, size, size), 0, 0);
-            readableText.Apply();
+            Texture2D smallTexture = new Texture2D(size, size);
+            smallTexture.ReadPixels(new Rect(0, 0, size, size), 0, 0);
+            smallTexture.Apply();
             
             RenderTexture.active = previous;
             RenderTexture.ReleaseTemporary(rt);
-            
-            // JPG Quality 75 provides a great balance of size (usually 5-10KB) and clarity.
-            // High quality (90) was too large for reliable network property syncing on devices.
-            byte[] bytes = readableText.EncodeToJPG(75);
-            Destroy(readableText);
+
+            byte[] bytes = smallTexture.EncodeToJPG(60); 
+            Destroy(smallTexture);
             return bytes;
         }
         catch (System.Exception e)
         {
-            Debug.LogError($"[LobbyNetworkManager] Failed to compress avatar: {e.Message}");
+            Debug.LogWarning($"[LobbyNetworkManager] Compression failed: {e.Message}");
             return null;
         }
     }

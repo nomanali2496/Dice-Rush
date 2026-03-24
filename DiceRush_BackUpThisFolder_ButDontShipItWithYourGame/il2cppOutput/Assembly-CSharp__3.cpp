@@ -478,6 +478,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral10DAFBA48133C624216A783C3EFE2C6219DF1284
 IL2CPP_EXTERN_C String_t* _stringLiteral10E6793B2E23C236915ED12C82EEC6006307D8F9;
 IL2CPP_EXTERN_C String_t* _stringLiteral1168E92C164109D6220480DEDA987085B2A21155;
 IL2CPP_EXTERN_C String_t* _stringLiteral13E5F6A5D64554F0BAB44238445D2005D89F2AA7;
+IL2CPP_EXTERN_C String_t* _stringLiteral147C7664C6E258F7CDDF70B0523EB41C07B4A95F;
 IL2CPP_EXTERN_C String_t* _stringLiteral14B265BD8DD13F2618359AA5640C9360995F6A8A;
 IL2CPP_EXTERN_C String_t* _stringLiteral16E550486A02DCF80CC4B95C19AB19324103A860;
 IL2CPP_EXTERN_C String_t* _stringLiteral171F06CC810502DC7E5D6AC0423843C349A3AB4E;
@@ -504,7 +505,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteral2AC27ACDE80F492AEDBDFC22492886762E458E99
 IL2CPP_EXTERN_C String_t* _stringLiteral2B431A29AD3F4F603F68CDE0B21E581217FDBCDC;
 IL2CPP_EXTERN_C String_t* _stringLiteral2CD4B7F9122D40B4B607F3E8F10A3F64A6F61BE3;
 IL2CPP_EXTERN_C String_t* _stringLiteral2E188FFB064D64146559366220C1E6C19F22EE14;
-IL2CPP_EXTERN_C String_t* _stringLiteral300988CB7CA720DDD097DAA7122E2EAAB16FA841;
 IL2CPP_EXTERN_C String_t* _stringLiteral30D6487F7C5D14A8F02187291542C1D0514267DF;
 IL2CPP_EXTERN_C String_t* _stringLiteral310CC28C42D62055BD0511D3EA8606E1D2F4D25C;
 IL2CPP_EXTERN_C String_t* _stringLiteral336B029D04847DC4F36985E1B89D1A0B11D299A3;
@@ -521,7 +521,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral3B521581ED05DACCA0D5ED77B24977F54136C54D
 IL2CPP_EXTERN_C String_t* _stringLiteral3CC3DBB3A85FDB3FC7C074D20EC077A512875915;
 IL2CPP_EXTERN_C String_t* _stringLiteral3D939ECC5B34F410664BB6AE0E112F2C2A9E91D4;
 IL2CPP_EXTERN_C String_t* _stringLiteral3DABBE414F96C64037985584100F1E96816907E4;
-IL2CPP_EXTERN_C String_t* _stringLiteral3F32A6C995AAE0C0C7DA967F775C36CDD860B3A9;
+IL2CPP_EXTERN_C String_t* _stringLiteral3DBF507E89B09CF61C0DD866E113407CDFEA80A9;
 IL2CPP_EXTERN_C String_t* _stringLiteral40E83ACCE0D042A519B971EC5FA530E519DEAD8E;
 IL2CPP_EXTERN_C String_t* _stringLiteral417F662CF6023211A87EF24583BB890056FA422F;
 IL2CPP_EXTERN_C String_t* _stringLiteral41E5364FC6C37C3A44A73701EAF5A4509646AF5B;
@@ -548,6 +548,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral588D12FF670CF9052A9FFA62ECA16F1D1D51EA06
 IL2CPP_EXTERN_C String_t* _stringLiteral5989DA41CA90FD09399563828A0E318687AB2A89;
 IL2CPP_EXTERN_C String_t* _stringLiteral599652E59B43B6B5DD20A7552A1F6B9411C9C45C;
 IL2CPP_EXTERN_C String_t* _stringLiteral59E12EEF1A0CCC7DCCF55F738E2543ECF5F399AD;
+IL2CPP_EXTERN_C String_t* _stringLiteral5C23C27D3B263EAC5A0201A31B2CF45312F4BE90;
 IL2CPP_EXTERN_C String_t* _stringLiteral5F0EBFBCAB3915F143E1FCB79D1E8860CA877A56;
 IL2CPP_EXTERN_C String_t* _stringLiteral5F5D48A8F930D4657FD722322B0F9AB096125CAA;
 IL2CPP_EXTERN_C String_t* _stringLiteral61ED135CAC005894DA2CFDE521207BD0F2EE487C;
@@ -637,7 +638,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteralC5A20DABE89F40C2022EF9972FEEF9F05DEDD5D0
 IL2CPP_EXTERN_C String_t* _stringLiteralC62B61BC27E509D700023566A09D2AE606BE85A7;
 IL2CPP_EXTERN_C String_t* _stringLiteralC64EAC486EC6090CCB86FAE797C197F4067BB479;
 IL2CPP_EXTERN_C String_t* _stringLiteralC7AEA809A49CC3CE342C3D4360785B4FBDC11575;
-IL2CPP_EXTERN_C String_t* _stringLiteralCD1E210D794D465BBF910DD41A5FBEF87FCBF7BB;
 IL2CPP_EXTERN_C String_t* _stringLiteralCE36BBF509FE3C42A20671D5B7F4E88C22BB2B7A;
 IL2CPP_EXTERN_C String_t* _stringLiteralCEC45496099ED662C1E74D8F1CD94B925EA42789;
 IL2CPP_EXTERN_C String_t* _stringLiteralCEFBD26B0BD00B8147BF64A9E8072462C0A96FB2;
@@ -4713,9 +4713,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PhotonNetwork_get_NickName_m140E4FF
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_op_Inequality_m8C940F3CFC42866709D7CA931B3D77B4BE94BCB6 (String_t* ___0_a, String_t* ___1_b, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_set_NickName_m9EB46021028BE0060635402D3C3989A2816AFA61 (String_t* ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_get_InRoom_mFBE0C1A516C34FBAD9923933C73E07080FDA199D (const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* LobbyNetworkManager_CompressAvatarTexture_mEFEE999C094F4E3E24FB70A41A27BB14AEAC001D (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___0_source, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* PhotonNetwork_get_LocalPlayer_mEA3335FEF4E4B55C1EFAC8AFA8D5F7E3D7FBE4DC (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Player_SetCustomProperties_mACE0A943F112829C5E9E91BC5FC8050FF9E4EECA (Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* __this, Hashtable_tD626399B3ADFD501225241D7366103F35472542A* ___0_propertiesToSet, Hashtable_tD626399B3ADFD501225241D7366103F35472542A* ___1_expectedValues, WebFlags_tFD3605BF6E5F1A42F1D0D6F0DA9A8B32CF7B27CA* ___2_webFlags, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* LobbyNetworkManager_CompressAvatarTexture_mEFEE999C094F4E3E24FB70A41A27BB14AEAC001D (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___0_source, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Room_set_IsOpen_m8BA8D4E6233E041B3242BA516B8BADCFF10117FA (Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* __this, bool ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Room_set_IsVisible_m88B1F48E1CDB171A2ECB10D9289596FA45EC74D7 (Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* __this, bool ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* RenderTexture_GetTemporary_m82379FD4C767A36F0677CAF4E68319EAE16ADF7F (int32_t ___0_width, int32_t ___1_height, const RuntimeMethod* method) ;
@@ -25722,14 +25722,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_SyncCurrentProfileTo
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral07C79D85E48FB8D0CD057DEB2A73B4C79856ECFA);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral147C7664C6E258F7CDDF70B0523EB41C07B4A95F);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral19C806D68E59B55C159B027AC5E29668266F98C3);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral300988CB7CA720DDD097DAA7122E2EAAB16FA841);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3DBF507E89B09CF61C0DD866E113407CDFEA80A9);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral72251341398644C3990229C42372D0080A8ACB0E);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8124BDB1A2CA14DD93C011A07991DCC38CA2BDB1);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8D593402CCA6ACC55AF9D86F83E9BF79C5A9C557);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralBC7D6D0661172FFD532D3DE3967638B3F2C4B8CE);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC18C9BB6DF0D5C60CE5A5D2D3D6111BEB6F8CCEB);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralCD1E210D794D465BBF910DD41A5FBEF87FCBF7BB);
 		s_Il2CppMethodInitialized = true;
 	}
 	PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* V_0 = NULL;
@@ -25737,7 +25737,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_SyncCurrentProfileTo
 	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* V_2 = NULL;
 	Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* V_3 = NULL;
 	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* V_4 = NULL;
-	Exception_t* V_5 = NULL;
+	Hashtable_tD626399B3ADFD501225241D7366103F35472542A* V_5 = NULL;
+	Exception_t* V_6 = NULL;
+	Hashtable_tD626399B3ADFD501225241D7366103F35472542A* V_7 = NULL;
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
 	{
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:142>
@@ -25748,7 +25750,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_SyncCurrentProfileTo
 		L_1 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_0, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_1)
 		{
-			goto IL_019c;
+			goto IL_01d5;
 		}
 	}
 	{
@@ -25758,7 +25760,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_SyncCurrentProfileTo
 		PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* L_3 = L_2->___currentPlayerData;
 		if (!L_3)
 		{
-			goto IL_019c;
+			goto IL_01d5;
 		}
 	}
 	{
@@ -25835,18 +25837,18 @@ IL_006a:
 
 IL_0072:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:159>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:160>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_19 = (Hashtable_tD626399B3ADFD501225241D7366103F35472542A*)il2cpp_codegen_object_new(Hashtable_tD626399B3ADFD501225241D7366103F35472542A_il2cpp_TypeInfo_var);
 		Hashtable__ctor_m1C4D2BF84624173510D714545C1FBB92ADEFC624(L_19, NULL);
 		V_1 = L_19;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:160>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:161>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_20 = V_1;
 		PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* L_21 = V_0;
 		NullCheck(L_21);
 		String_t* L_22 = L_21->___playerName;
 		NullCheck(L_20);
 		Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1(L_20, _stringLiteral8D593402CCA6ACC55AF9D86F83E9BF79C5A9C557, L_22, Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_RuntimeMethod_var);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:161>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:162>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_23 = V_1;
 		PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* L_24 = V_0;
 		NullCheck(L_24);
@@ -25855,109 +25857,137 @@ IL_0072:
 		RuntimeObject* L_27 = Box(il2cpp_defaults.int32_class, &L_26);
 		NullCheck(L_23);
 		Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1(L_23, _stringLiteral8124BDB1A2CA14DD93C011A07991DCC38CA2BDB1, L_27, Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_RuntimeMethod_var);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:164>
-		PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* L_28 = V_0;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:165>
+		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
+		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_28;
+		L_28 = PhotonNetwork_get_LocalPlayer_mEA3335FEF4E4B55C1EFAC8AFA8D5F7E3D7FBE4DC(NULL);
+		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_29 = V_1;
 		NullCheck(L_28);
-		String_t* L_29 = L_28->___imageUrl;
 		bool L_30;
-		L_30 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_29, NULL);
-		if (L_30)
+		L_30 = Player_SetCustomProperties_mACE0A943F112829C5E9E91BC5FC8050FF9E4EECA(L_28, L_29, (Hashtable_tD626399B3ADFD501225241D7366103F35472542A*)NULL, (WebFlags_tFD3605BF6E5F1A42F1D0D6F0DA9A8B32CF7B27CA*)NULL, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:166>
+		PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* L_31 = V_0;
+		NullCheck(L_31);
+		String_t* L_32 = L_31->___playerName;
+		String_t* L_33;
+		L_33 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral147C7664C6E258F7CDDF70B0523EB41C07B4A95F, L_32, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_33, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:170>
+		PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* L_34 = V_0;
+		NullCheck(L_34);
+		String_t* L_35 = L_34->___imageUrl;
+		bool L_36;
+		L_36 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_35, NULL);
+		if (L_36)
 		{
-			goto IL_0152;
+			goto IL_018c;
 		}
 	}
 	{
-		PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* L_31 = V_0;
-		NullCheck(L_31);
-		String_t* L_32 = L_31->___imageUrl;
-		NullCheck(L_32);
-		bool L_33;
-		L_33 = String_StartsWith_mF75DBA1EB709811E711B44E26FF919C88A8E65C0(L_32, _stringLiteral72251341398644C3990229C42372D0080A8ACB0E, NULL);
-		if (!L_33)
+		PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* L_37 = V_0;
+		NullCheck(L_37);
+		String_t* L_38 = L_37->___imageUrl;
+		NullCheck(L_38);
+		bool L_39;
+		L_39 = String_StartsWith_mF75DBA1EB709811E711B44E26FF919C88A8E65C0(L_38, _stringLiteral72251341398644C3990229C42372D0080A8ACB0E, NULL);
+		if (!L_39)
 		{
-			goto IL_0152;
+			goto IL_018c;
 		}
 	}
 	try
 	{
 		{
-			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:169>
-			PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* L_34 = V_0;
-			NullCheck(L_34);
-			String_t* L_35 = L_34->___imageUrl;
-			PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* L_36 = V_0;
-			NullCheck(L_36);
-			String_t* L_37 = L_36->___imageUrl;
-			NullCheck(L_37);
-			int32_t L_38;
-			L_38 = String_IndexOf_m69E9BDAFD93767C85A7FF861B453415D3B4A200F(L_37, _stringLiteralC18C9BB6DF0D5C60CE5A5D2D3D6111BEB6F8CCEB, NULL);
-			NullCheck(L_35);
-			String_t* L_39;
-			L_39 = String_Substring_m6BA4A3FA3800FE92662D0847CC8E1EEF940DF472(L_35, ((int32_t)il2cpp_codegen_add(L_38, 1)), NULL);
-			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:170>
-			il2cpp_codegen_runtime_class_init_inline(Convert_t7097FF336D592F7C06D88A98349A44646F91EFFC_il2cpp_TypeInfo_var);
-			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_40;
-			L_40 = Convert_FromBase64String_m267327B074B41D93C9622D142B95CFAA4ACCCA9C(L_39, NULL);
-			V_2 = L_40;
-			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:173>
-			Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_41 = (Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4*)il2cpp_codegen_object_new(Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4_il2cpp_TypeInfo_var);
-			Texture2D__ctor_m3BA82E87442B7F69E118477069AE11101B9DF796(L_41, 2, 2, NULL);
-			V_3 = L_41;
 			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:174>
-			Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_42 = V_3;
-			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_43 = V_2;
-			bool L_44;
-			L_44 = ImageConversion_LoadImage_m1797365F78319B68638DE8BB02836F8D60760041(L_42, L_43, NULL);
-			if (!L_44)
-			{
-				goto IL_0136_1;
-			}
-		}
-		{
-			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:176>
-			Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_45 = V_3;
+			PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* L_40 = V_0;
+			NullCheck(L_40);
+			String_t* L_41 = L_40->___imageUrl;
+			PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* L_42 = V_0;
+			NullCheck(L_42);
+			String_t* L_43 = L_42->___imageUrl;
+			NullCheck(L_43);
+			int32_t L_44;
+			L_44 = String_IndexOf_m69E9BDAFD93767C85A7FF861B453415D3B4A200F(L_43, _stringLiteralC18C9BB6DF0D5C60CE5A5D2D3D6111BEB6F8CCEB, NULL);
+			NullCheck(L_41);
+			String_t* L_45;
+			L_45 = String_Substring_m6BA4A3FA3800FE92662D0847CC8E1EEF940DF472(L_41, ((int32_t)il2cpp_codegen_add(L_44, 1)), NULL);
+			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:175>
+			il2cpp_codegen_runtime_class_init_inline(Convert_t7097FF336D592F7C06D88A98349A44646F91EFFC_il2cpp_TypeInfo_var);
 			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_46;
-			L_46 = LobbyNetworkManager_CompressAvatarTexture_mEFEE999C094F4E3E24FB70A41A27BB14AEAC001D(__this, L_45, NULL);
-			V_4 = L_46;
+			L_46 = Convert_FromBase64String_m267327B074B41D93C9622D142B95CFAA4ACCCA9C(L_45, NULL);
+			V_2 = L_46;
 			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:177>
-			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_47 = V_4;
-			if (!L_47)
+			Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_47 = (Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4*)il2cpp_codegen_object_new(Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4_il2cpp_TypeInfo_var);
+			Texture2D__ctor_m3BA82E87442B7F69E118477069AE11101B9DF796(L_47, 2, 2, NULL);
+			V_3 = L_47;
+			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:178>
+			Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_48 = V_3;
+			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_49 = V_2;
+			bool L_50;
+			L_50 = ImageConversion_LoadImage_m1797365F78319B68638DE8BB02836F8D60760041(L_48, L_49, NULL);
+			if (!L_50)
 			{
-				goto IL_0130_1;
+				goto IL_0170_1;
 			}
 		}
 		{
-			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:179>
-			Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_48 = V_1;
-			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_49 = V_4;
-			NullCheck(L_48);
-			Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1(L_48, _stringLiteral19C806D68E59B55C159B027AC5E29668266F98C3, (RuntimeObject*)L_49, Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_RuntimeMethod_var);
-			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:180>
-			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_50 = V_4;
-			NullCheck(L_50);
-			int32_t L_51 = ((int32_t)(((RuntimeArray*)L_50)->max_length));
-			RuntimeObject* L_52 = Box(il2cpp_defaults.int32_class, &L_51);
-			PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* L_53 = V_0;
-			NullCheck(L_53);
-			String_t* L_54 = L_53->___playerName;
-			String_t* L_55;
-			L_55 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralCD1E210D794D465BBF910DD41A5FBEF87FCBF7BB, L_52, L_54, NULL);
-			il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-			Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_55, NULL);
-		}
-
-IL_0130_1:
-		{
+			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:181>
+			Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_51 = V_3;
+			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_52;
+			L_52 = LobbyNetworkManager_CompressAvatarTexture_mEFEE999C094F4E3E24FB70A41A27BB14AEAC001D(__this, L_51, NULL);
+			V_4 = L_52;
 			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:182>
-			Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_56 = V_3;
-			il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-			Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_56, NULL);
+			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_53 = V_4;
+			if (!L_53)
+			{
+				goto IL_016a_1;
+			}
 		}
-
-IL_0136_1:
 		{
 			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:184>
-			goto IL_015e;
+			Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_54 = (Hashtable_tD626399B3ADFD501225241D7366103F35472542A*)il2cpp_codegen_object_new(Hashtable_tD626399B3ADFD501225241D7366103F35472542A_il2cpp_TypeInfo_var);
+			Hashtable__ctor_m1C4D2BF84624173510D714545C1FBB92ADEFC624(L_54, NULL);
+			V_5 = L_54;
+			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:185>
+			Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_55 = V_5;
+			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_56 = V_4;
+			NullCheck(L_55);
+			Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1(L_55, _stringLiteral19C806D68E59B55C159B027AC5E29668266F98C3, (RuntimeObject*)L_56, Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_RuntimeMethod_var);
+			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:186>
+			il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
+			Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_57;
+			L_57 = PhotonNetwork_get_LocalPlayer_mEA3335FEF4E4B55C1EFAC8AFA8D5F7E3D7FBE4DC(NULL);
+			Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_58 = V_5;
+			NullCheck(L_57);
+			bool L_59;
+			L_59 = Player_SetCustomProperties_mACE0A943F112829C5E9E91BC5FC8050FF9E4EECA(L_57, L_58, (Hashtable_tD626399B3ADFD501225241D7366103F35472542A*)NULL, (WebFlags_tFD3605BF6E5F1A42F1D0D6F0DA9A8B32CF7B27CA*)NULL, NULL);
+			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:187>
+			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_60 = V_4;
+			NullCheck(L_60);
+			int32_t L_61 = ((int32_t)(((RuntimeArray*)L_60)->max_length));
+			RuntimeObject* L_62 = Box(il2cpp_defaults.int32_class, &L_61);
+			PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* L_63 = V_0;
+			NullCheck(L_63);
+			String_t* L_64 = L_63->___playerName;
+			String_t* L_65;
+			L_65 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral3DBF507E89B09CF61C0DD866E113407CDFEA80A9, L_62, L_64, NULL);
+			il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+			Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_65, NULL);
+		}
+
+IL_016a_1:
+		{
+			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:189>
+			Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_66 = V_3;
+			il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+			Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_66, NULL);
+		}
+
+IL_0170_1:
+		{
+			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:191>
+			goto IL_01af;
 		}
 	}
 	catch(Il2CppExceptionWrapper& e)
@@ -25965,85 +25995,82 @@ IL_0136_1:
 		if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
 		{
 			IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
-			goto CATCH_0138;
+			goto CATCH_0172;
 		}
 		throw e;
 	}
 
-CATCH_0138:
+CATCH_0172:
 	{
-		Exception_t* L_57 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:185>
-		V_5 = L_57;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:187>
-		Exception_t* L_58 = V_5;
-		NullCheck(L_58);
-		String_t* L_59;
-		L_59 = VirtualFuncInvoker0< String_t* >::Invoke(5, L_58);
-		String_t* L_60;
-		L_60 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralC7AEA809A49CC3CE342C3D4360785B4FBDC11575)), L_59, NULL);
-		il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
-		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_60, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:188>
-		IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
-		goto IL_015e;
-	}
-
-IL_0152:
-	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:193>
-		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_61 = V_1;
-		NullCheck(L_61);
-		Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1(L_61, _stringLiteral19C806D68E59B55C159B027AC5E29668266F98C3, NULL, Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_RuntimeMethod_var);
-	}
-
-IL_015e:
-	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:196>
-		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
-		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_62;
-		L_62 = PhotonNetwork_get_LocalPlayer_mEA3335FEF4E4B55C1EFAC8AFA8D5F7E3D7FBE4DC(NULL);
-		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_63 = V_1;
-		NullCheck(L_62);
-		bool L_64;
-		L_64 = Player_SetCustomProperties_mACE0A943F112829C5E9E91BC5FC8050FF9E4EECA(L_62, L_63, (Hashtable_tD626399B3ADFD501225241D7366103F35472542A*)NULL, (WebFlags_tFD3605BF6E5F1A42F1D0D6F0DA9A8B32CF7B27CA*)NULL, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:200>
-		PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* L_65 = V_0;
-		NullCheck(L_65);
-		String_t* L_66 = L_65->___playerName;
-		bool L_67;
-		L_67 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_66, NULL);
-		if (L_67)
-		{
-			goto IL_0192;
-		}
-	}
-	{
-		PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* L_68 = V_0;
+		Exception_t* L_67 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:192>
+		V_6 = L_67;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:194>
+		Exception_t* L_68 = V_6;
 		NullCheck(L_68);
-		String_t* L_69 = L_68->___playerName;
-		bool L_70;
-		L_70 = String_op_Inequality_m8C940F3CFC42866709D7CA931B3D77B4BE94BCB6(L_69, _stringLiteralBC7D6D0661172FFD532D3DE3967638B3F2C4B8CE, NULL);
-		if (!L_70)
+		String_t* L_69;
+		L_69 = VirtualFuncInvoker0< String_t* >::Invoke(5, L_68);
+		String_t* L_70;
+		L_70 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralC7AEA809A49CC3CE342C3D4360785B4FBDC11575)), L_69, NULL);
+		il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
+		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_70, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:195>
+		IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
+		goto IL_01af;
+	}
+
+IL_018c:
+	{
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:200>
+		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_71 = (Hashtable_tD626399B3ADFD501225241D7366103F35472542A*)il2cpp_codegen_object_new(Hashtable_tD626399B3ADFD501225241D7366103F35472542A_il2cpp_TypeInfo_var);
+		Hashtable__ctor_m1C4D2BF84624173510D714545C1FBB92ADEFC624(L_71, NULL);
+		V_7 = L_71;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:201>
+		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_72 = V_7;
+		NullCheck(L_72);
+		Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1(L_72, _stringLiteral19C806D68E59B55C159B027AC5E29668266F98C3, NULL, Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_RuntimeMethod_var);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:202>
+		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
+		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_73;
+		L_73 = PhotonNetwork_get_LocalPlayer_mEA3335FEF4E4B55C1EFAC8AFA8D5F7E3D7FBE4DC(NULL);
+		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_74 = V_7;
+		NullCheck(L_73);
+		bool L_75;
+		L_75 = Player_SetCustomProperties_mACE0A943F112829C5E9E91BC5FC8050FF9E4EECA(L_73, L_74, (Hashtable_tD626399B3ADFD501225241D7366103F35472542A*)NULL, (WebFlags_tFD3605BF6E5F1A42F1D0D6F0DA9A8B32CF7B27CA*)NULL, NULL);
+	}
+
+IL_01af:
+	{
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:206>
+		PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* L_76 = V_0;
+		NullCheck(L_76);
+		String_t* L_77 = L_76->___playerName;
+		bool L_78;
+		L_78 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_77, NULL);
+		if (L_78)
 		{
-			goto IL_0192;
+			goto IL_01d5;
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:201>
+		PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* L_79 = V_0;
+		NullCheck(L_79);
+		String_t* L_80 = L_79->___playerName;
+		bool L_81;
+		L_81 = String_op_Inequality_m8C940F3CFC42866709D7CA931B3D77B4BE94BCB6(L_80, _stringLiteralBC7D6D0661172FFD532D3DE3967638B3F2C4B8CE, NULL);
+		if (!L_81)
+		{
+			goto IL_01d5;
+		}
+	}
+	{
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:207>
 		__this->___hasSyncedProfile = (bool)1;
 	}
 
-IL_0192:
+IL_01d5:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:204>
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral300988CB7CA720DDD097DAA7122E2EAAB16FA841, NULL);
-	}
-
-IL_019c:
-	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:206>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:210>
 		return;
 	}
 }
@@ -26063,7 +26090,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_MarkGameAsFinished_m
 	}
 	Hashtable_tD626399B3ADFD501225241D7366103F35472542A* V_0 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:220>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:224>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = PhotonNetwork_get_InRoom_mFBE0C1A516C34FBAD9923933C73E07080FDA199D(NULL);
@@ -26073,42 +26100,42 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_MarkGameAsFinished_m
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:223>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:227>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* L_1;
 		L_1 = PhotonNetwork_get_CurrentRoom_m72D3601299E109EED858E132DE1BD316226BA38D(NULL);
 		NullCheck(L_1);
 		Room_set_IsOpen_m8BA8D4E6233E041B3242BA516B8BADCFF10117FA(L_1, (bool)0, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:224>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:228>
 		Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* L_2;
 		L_2 = PhotonNetwork_get_CurrentRoom_m72D3601299E109EED858E132DE1BD316226BA38D(NULL);
 		NullCheck(L_2);
 		Room_set_IsVisible_m88B1F48E1CDB171A2ECB10D9289596FA45EC74D7(L_2, (bool)0, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:226>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:230>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_3 = (Hashtable_tD626399B3ADFD501225241D7366103F35472542A*)il2cpp_codegen_object_new(Hashtable_tD626399B3ADFD501225241D7366103F35472542A_il2cpp_TypeInfo_var);
 		Hashtable__ctor_m1C4D2BF84624173510D714545C1FBB92ADEFC624(L_3, NULL);
 		V_0 = L_3;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:227>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:231>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_4 = V_0;
 		bool L_5 = ((bool)1);
 		RuntimeObject* L_6 = Box(il2cpp_defaults.boolean_class, &L_5);
 		NullCheck(L_4);
 		Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1(L_4, _stringLiteralC62B61BC27E509D700023566A09D2AE606BE85A7, L_6, Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_RuntimeMethod_var);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:228>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:232>
 		Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* L_7;
 		L_7 = PhotonNetwork_get_CurrentRoom_m72D3601299E109EED858E132DE1BD316226BA38D(NULL);
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_8 = V_0;
 		NullCheck(L_7);
 		bool L_9;
 		L_9 = VirtualFuncInvoker3< bool, Hashtable_tD626399B3ADFD501225241D7366103F35472542A*, Hashtable_tD626399B3ADFD501225241D7366103F35472542A*, WebFlags_tFD3605BF6E5F1A42F1D0D6F0DA9A8B32CF7B27CA* >::Invoke(5, L_7, L_8, (Hashtable_tD626399B3ADFD501225241D7366103F35472542A*)NULL, (WebFlags_tFD3605BF6E5F1A42F1D0D6F0DA9A8B32CF7B27CA*)NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:229>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:233>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral9D10E49530F898E62DCA620FE817CFECC2B8F887, NULL);
 	}
 
 IL_004c:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:231>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:235>
 		return;
 	}
 }
@@ -26132,32 +26159,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
 	try
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:242>
-		V_0 = ((int32_t)160);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:243>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:245>
+		V_0 = ((int32_t)128);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:246>
 		int32_t L_0 = V_0;
 		int32_t L_1 = V_0;
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_2;
 		L_2 = RenderTexture_GetTemporary_m82379FD4C767A36F0677CAF4E68319EAE16ADF7F(L_0, L_1, NULL);
 		V_1 = L_2;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:244>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:247>
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_3 = ___0_source;
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_4 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(Graphics_t99CD970FFEA58171C70F54DF0C06D315BD452F2C_il2cpp_TypeInfo_var);
 		Graphics_Blit_m8D99E16B74C7D3C8F79F4F142C59DB6B38114504(L_3, L_4, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:245>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:248>
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_5;
 		L_5 = RenderTexture_get_active_mA4434B3E79DEF2C01CAE0A53061598B16443C9E7(NULL);
 		V_2 = L_5;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:246>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:249>
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_6 = V_1;
 		RenderTexture_set_active_m5EE8E2327EF9B306C1425014CC34C41A8384E7AB(L_6, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:248>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:251>
 		int32_t L_7 = V_0;
 		int32_t L_8 = V_0;
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_9 = (Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4*)il2cpp_codegen_object_new(Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4_il2cpp_TypeInfo_var);
 		Texture2D__ctor_m3BA82E87442B7F69E118477069AE11101B9DF796(L_9, L_7, L_8, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:249>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:252>
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_10 = L_9;
 		int32_t L_11 = V_0;
 		int32_t L_12 = V_0;
@@ -26166,25 +26193,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23_inline((&L_13), (0.0f), (0.0f), ((float)L_11), ((float)L_12), NULL);
 		NullCheck(L_10);
 		Texture2D_ReadPixels_m6B45DF7C051BF599C72ED09691F21A6C769EEBD9(L_10, L_13, 0, 0, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:250>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:253>
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_14 = L_10;
 		NullCheck(L_14);
 		Texture2D_Apply_mA014182C9EE0BBF6EEE3B286854F29E50EB972DC(L_14, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:252>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:255>
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_15 = V_2;
 		RenderTexture_set_active_m5EE8E2327EF9B306C1425014CC34C41A8384E7AB(L_15, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:253>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:256>
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_16 = V_1;
 		RenderTexture_ReleaseTemporary_mEEF2C1990196FF06FDD0DC190928AD3A023EBDD2(L_16, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:257>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:258>
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_17 = L_14;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_18;
-		L_18 = ImageConversion_EncodeToJPG_mD0307B5DFF32A3FF39488E97B467F11AFE501F6F(L_17, ((int32_t)75), NULL);
+		L_18 = ImageConversion_EncodeToJPG_mD0307B5DFF32A3FF39488E97B467F11AFE501F6F(L_17, ((int32_t)60), NULL);
 		V_3 = L_18;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:258>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:259>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_17, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:259>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:260>
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_19 = V_3;
 		V_4 = L_19;
 		goto IL_0085;
@@ -26202,18 +26229,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 CATCH_0068:
 	{
 		Exception_t* L_20 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:261>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:262>
 		V_5 = L_20;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:263>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:264>
 		Exception_t* L_21 = V_5;
 		NullCheck(L_21);
 		String_t* L_22;
 		L_22 = VirtualFuncInvoker0< String_t* >::Invoke(5, L_21);
 		String_t* L_23;
-		L_23 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral3F32A6C995AAE0C0C7DA967F775C36CDD860B3A9)), L_22, NULL);
+		L_23 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral5C23C27D3B263EAC5A0201A31B2CF45312F4BE90)), L_22, NULL);
 		il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
-		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_23, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:264>
+		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_23, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:265>
 		V_4 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)NULL;
 		IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
 		goto IL_0085;
@@ -26221,7 +26248,7 @@ CATCH_0068:
 
 IL_0085:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:266>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:267>
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_24 = V_4;
 		return L_24;
 	}
@@ -26240,7 +26267,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_UpdateLocalPlayerSco
 	}
 	Hashtable_tD626399B3ADFD501225241D7366103F35472542A* V_0 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:274>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:275>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = PhotonNetwork_get_InRoom_mFBE0C1A516C34FBAD9923933C73E07080FDA199D(NULL);
@@ -26250,18 +26277,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_UpdateLocalPlayerSco
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:276>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:277>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_1 = (Hashtable_tD626399B3ADFD501225241D7366103F35472542A*)il2cpp_codegen_object_new(Hashtable_tD626399B3ADFD501225241D7366103F35472542A_il2cpp_TypeInfo_var);
 		Hashtable__ctor_m1C4D2BF84624173510D714545C1FBB92ADEFC624(L_1, NULL);
 		V_0 = L_1;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:277>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:278>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_2 = V_0;
 		int32_t L_3 = ___0_score;
 		int32_t L_4 = L_3;
 		RuntimeObject* L_5 = Box(il2cpp_defaults.int32_class, &L_4);
 		NullCheck(L_2);
 		Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1(L_2, _stringLiteral336B029D04847DC4F36985E1B89D1A0B11D299A3, L_5, Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_RuntimeMethod_var);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:278>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:279>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_6;
 		L_6 = PhotonNetwork_get_LocalPlayer_mEA3335FEF4E4B55C1EFAC8AFA8D5F7E3D7FBE4DC(NULL);
@@ -26273,7 +26300,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_UpdateLocalPlayerSco
 
 IL_002c:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:280>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:281>
 		return;
 	}
 }
@@ -26287,7 +26314,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_Update_m798DB3DC04B8
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:284>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:285>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = PhotonNetwork_get_InRoom_mFBE0C1A516C34FBAD9923933C73E07080FDA199D(NULL);
@@ -26297,7 +26324,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_Update_m798DB3DC04B8
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:287>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:288>
 		bool L_1 = __this->___hasSyncedProfile;
 		if (L_1)
 		{
@@ -26305,13 +26332,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_Update_m798DB3DC04B8
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:289>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:290>
 		LobbyNetworkManager_SyncCurrentProfileToPhoton_mCC248A2607EA892B247FEE109B1968A6B6D62C87(__this, (PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A*)NULL, NULL);
 	}
 
 IL_0016:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:292>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:293>
 		bool L_2 = __this->___isStarting;
 		if (L_2)
 		{
@@ -26319,15 +26346,15 @@ IL_0016:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:294>
-		LobbyNetworkManager_UpdateWaitingStatus_m256AA80308ECE72095FF47E834EA34579C7CBD46(__this, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:295>
+		LobbyNetworkManager_UpdateWaitingStatus_m256AA80308ECE72095FF47E834EA34579C7CBD46(__this, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:296>
 		LobbyNetworkManager_CheckMatchmakingTimer_m7A3CCDDB5F4A9B0828D630D499817E47D4FEFF75(__this, NULL);
 	}
 
 IL_002a:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:298>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:299>
 		return;
 	}
 }
@@ -26348,7 +26375,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_CheckMatchmakingTime
 	double V_1 = 0.0;
 	double V_2 = 0.0;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:302>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:303>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* L_0;
 		L_0 = PhotonNetwork_get_CurrentRoom_m72D3601299E109EED858E132DE1BD316226BA38D(NULL);
@@ -26364,34 +26391,34 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_CheckMatchmakingTime
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:304>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:305>
 		RuntimeObject* L_3 = V_0;
 		V_1 = ((*(double*)UnBox(L_3, il2cpp_defaults.double_class)));
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:305>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:306>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		double L_4;
 		L_4 = PhotonNetwork_get_Time_m65093824EBCB03FA8E31A8E95344F2F56D62EE79(NULL);
 		double L_5 = V_1;
 		V_2 = ((double)il2cpp_codegen_subtract(L_4, L_5));
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:306>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:307>
 		double L_6 = V_2;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:308>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:309>
 		if ((!(((double)((double)il2cpp_codegen_subtract((30.0), L_6))) <= ((double)(0.0)))))
 		{
 			goto IL_004d;
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:310>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:311>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral236724A3DFAA00CB1846B76F0D3A87EE19443667, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:311>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:312>
 		LobbyNetworkManager_StartMultiplayerGame_m69490BB8953A4094CB1B9A9C1670259EDEF7050D(__this, NULL);
 	}
 
 IL_004d:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:314>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:315>
 		return;
 	}
 }
@@ -26406,7 +26433,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnPlayerEnteredRoom_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:318>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:319>
 		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_0 = ___0_newPlayer;
 		NullCheck(L_0);
 		String_t* L_1;
@@ -26415,11 +26442,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnPlayerEnteredRoom_
 		L_2 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralB2C95BEE9168B3CACA0E0E42F3AB0BC43B371161, L_1, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_2, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:319>
-		LobbyNetworkManager_UpdateWaitingStatus_m256AA80308ECE72095FF47E834EA34579C7CBD46(__this, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:320>
-		LobbyNetworkManager_CheckIfRoomFull_mA21DE997DE48EDDD3189475D25A49862720039EB(__this, NULL);
+		LobbyNetworkManager_UpdateWaitingStatus_m256AA80308ECE72095FF47E834EA34579C7CBD46(__this, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:321>
+		LobbyNetworkManager_CheckIfRoomFull_mA21DE997DE48EDDD3189475D25A49862720039EB(__this, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:322>
 		return;
 	}
 }
@@ -26434,7 +26461,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnPlayerLeftRoom_m19
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:325>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:326>
 		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_0 = ___0_otherPlayer;
 		NullCheck(L_0);
 		String_t* L_1;
@@ -26443,9 +26470,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnPlayerLeftRoom_m19
 		L_2 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral3AD8FD6410F8FED9742CB909541DBE1C56893DFF, L_1, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_2, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:326>
-		LobbyNetworkManager_UpdateWaitingStatus_m256AA80308ECE72095FF47E834EA34579C7CBD46(__this, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:327>
+		LobbyNetworkManager_UpdateWaitingStatus_m256AA80308ECE72095FF47E834EA34579C7CBD46(__this, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:328>
 		return;
 	}
 }
@@ -26464,7 +26491,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnRoomPropertiesUpda
 	}
 	GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* V_0 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:331>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:332>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_0 = ___0_propertiesThatChanged;
 		NullCheck(L_0);
 		bool L_1;
@@ -26475,13 +26502,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnRoomPropertiesUpda
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:333>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:334>
 		LobbyNetworkManager_UpdateWaitingStatus_m256AA80308ECE72095FF47E834EA34579C7CBD46(__this, NULL);
 	}
 
 IL_0013:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:336>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:337>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_2 = ___0_propertiesThatChanged;
 		NullCheck(L_2);
 		bool L_3;
@@ -26492,24 +26519,24 @@ IL_0013:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:338>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:339>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_4 = ___0_propertiesThatChanged;
 		NullCheck(L_4);
 		RuntimeObject* L_5;
 		L_5 = Hashtable_get_Item_m33995CAF3384BA31ADA32E8B6D3AA69946190CA9(L_4, _stringLiteralC62B61BC27E509D700023566A09D2AE606BE85A7, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:339>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:340>
 		if (!((*(bool*)UnBox(L_5, il2cpp_defaults.boolean_class))))
 		{
 			goto IL_0047;
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:341>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:342>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_6;
 		L_6 = Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40(Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40_RuntimeMethod_var);
 		V_0 = L_6;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:342>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:343>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_7 = V_0;
 		bool L_8;
 		L_8 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_7, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -26519,7 +26546,7 @@ IL_0013:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:344>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:345>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_9 = V_0;
 		NullCheck(L_9);
 		GameManager_OnGameFinishedByOtherPlayer_mB34B6AD04D4963159EF60284C71E479EDB341F46(L_9, NULL);
@@ -26527,7 +26554,7 @@ IL_0013:
 
 IL_0047:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:348>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:349>
 		return;
 	}
 }
@@ -26553,7 +26580,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_UpdateWaitingStatus_
 	double V_4 = 0.0;
 	double V_5 = 0.0;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:352>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:353>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = PhotonNetwork_get_InRoom_mFBE0C1A516C34FBAD9923933C73E07080FDA199D(NULL);
@@ -26573,7 +26600,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_UpdateWaitingStatus_
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:354>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:355>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* L_3;
 		L_3 = PhotonNetwork_get_CurrentRoom_m72D3601299E109EED858E132DE1BD316226BA38D(NULL);
@@ -26581,16 +26608,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_UpdateWaitingStatus_
 		int32_t L_4;
 		L_4 = Room_get_PlayerCount_m663432EB660EDFF2D7428BD6B6AE7142505BFE1F(L_3, NULL);
 		V_0 = L_4;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:355>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:356>
 		Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* L_5;
 		L_5 = PhotonNetwork_get_CurrentRoom_m72D3601299E109EED858E132DE1BD316226BA38D(NULL);
 		NullCheck(L_5);
 		int32_t L_6;
 		L_6 = Room_get_MaxPlayers_mF412674376F33CCDD74FF300F66A2EC644A84920_inline(L_5, NULL);
 		V_1 = L_6;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:357>
-		V_2 = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:358>
+		V_2 = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:359>
 		Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* L_7;
 		L_7 = PhotonNetwork_get_CurrentRoom_m72D3601299E109EED858E132DE1BD316226BA38D(NULL);
 		NullCheck(L_7);
@@ -26605,10 +26632,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_UpdateWaitingStatus_
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:360>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:361>
 		RuntimeObject* L_10 = V_3;
 		V_4 = ((*(double*)UnBox(L_10, il2cpp_defaults.double_class)));
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:361>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:362>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		double L_11;
 		L_11 = PhotonNetwork_get_Time_m65093824EBCB03FA8E31A8E95344F2F56D62EE79(NULL);
@@ -26616,7 +26643,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_UpdateWaitingStatus_
 		float L_13;
 		L_13 = Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline((0.0f), ((float)((double)il2cpp_codegen_subtract((30.0), ((double)il2cpp_codegen_subtract(L_11, L_12))))), NULL);
 		V_5 = ((double)L_13);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:362>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:363>
 		double L_14 = V_5;
 		int32_t L_15;
 		L_15 = Mathf_CeilToInt_mF2BF9F4261B3431DC20E10A46CFEEED103C48963_inline(((float)L_14), NULL);
@@ -26629,7 +26656,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_UpdateWaitingStatus_
 
 IL_008f:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:365>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:366>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_19 = __this->___statusText;
 		String_t* L_20 = V_2;
 		int32_t L_21 = V_0;
@@ -26646,7 +26673,7 @@ IL_008f:
 
 IL_00b1:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:367>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:368>
 		return;
 	}
 }
@@ -26662,7 +26689,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_CheckIfRoomFull_mA21
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:371>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:372>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = PhotonNetwork_get_InRoom_mFBE0C1A516C34FBAD9923933C73E07080FDA199D(NULL);
@@ -26696,16 +26723,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_CheckIfRoomFull_mA21
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:373>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:374>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral535D17299EEAC3DDB09E1708E42E864E044C4F9B, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:374>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:375>
 		LobbyNetworkManager_StartMultiplayerGame_m69490BB8953A4094CB1B9A9C1670259EDEF7050D(__this, NULL);
 	}
 
 IL_0035:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:376>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:377>
 		return;
 	}
 }
@@ -26727,7 +26754,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_StartMultiplayerGame
 	int32_t V_2 = 0;
 	int32_t V_3 = 0;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:380>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:381>
 		bool L_0 = __this->___isStarting;
 		if (!L_0)
 		{
@@ -26735,15 +26762,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_StartMultiplayerGame
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:380>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:381>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:381>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:382>
 		__this->___isStarting = (bool)1;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:383>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:384>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___waitingPanel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
@@ -26754,7 +26781,7 @@ IL_0009:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:383>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:384>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___waitingPanel;
 		NullCheck(L_3);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_3, (bool)0, NULL);
@@ -26762,12 +26789,12 @@ IL_0009:
 
 IL_002a:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:385>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:386>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* L_4;
 		L_4 = Object_FindObjectOfType_TisLobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797_m6CDAE89A2E0ABF5A15BDFB20F89DC3486C998BA7(Object_FindObjectOfType_TisLobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797_m6CDAE89A2E0ABF5A15BDFB20F89DC3486C998BA7_RuntimeMethod_var);
 		V_0 = L_4;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:386>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:387>
 		LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* L_5 = V_0;
 		bool L_6;
 		L_6 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_5, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -26784,7 +26811,7 @@ IL_002a:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:389>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:390>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* L_8;
 		L_8 = PhotonNetwork_get_CurrentRoom_m72D3601299E109EED858E132DE1BD316226BA38D(NULL);
@@ -26792,18 +26819,18 @@ IL_002a:
 		int32_t L_9;
 		L_9 = Room_get_PlayerCount_m663432EB660EDFF2D7428BD6B6AE7142505BFE1F(L_8, NULL);
 		V_1 = L_9;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:390>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:391>
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_10 = __this->___currentSelectedConfig;
 		NullCheck(L_10);
 		int32_t L_11 = L_10->___numberOfPlayers;
 		V_2 = L_11;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:391>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:392>
 		int32_t L_12 = V_2;
 		int32_t L_13 = V_1;
 		int32_t L_14;
 		L_14 = Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline(0, ((int32_t)il2cpp_codegen_subtract(L_12, L_13)), NULL);
 		V_3 = L_14;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:393>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:394>
 		int32_t L_15 = V_1;
 		int32_t L_16 = L_15;
 		RuntimeObject* L_17 = Box(il2cpp_defaults.int32_class, &L_16);
@@ -26814,7 +26841,7 @@ IL_002a:
 		L_21 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral25A35A06F985F1F3EA5B40089F08ED354EA8CC58, L_17, L_20, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_21, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:396>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:397>
 		LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* L_22 = V_0;
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_23 = __this->___currentSelectedConfig;
 		NullCheck(L_23);
@@ -26826,7 +26853,7 @@ IL_002a:
 
 IL_008f:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:398>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:399>
 		return;
 	}
 }
@@ -26841,7 +26868,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnCancelWaiting_m4DC
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:402>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:403>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = PhotonNetwork_get_InRoom_mFBE0C1A516C34FBAD9923933C73E07080FDA199D(NULL);
@@ -26851,7 +26878,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnCancelWaiting_m4DC
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:404>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:405>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = PhotonNetwork_LeaveRoom_m3BE228D128665941646C4D4A1D5529B944F49744((bool)1, NULL);
@@ -26859,7 +26886,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnCancelWaiting_m4DC
 
 IL_000e:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:406>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:407>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___waitingPanel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
@@ -26870,7 +26897,7 @@ IL_000e:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:406>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:407>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___waitingPanel;
 		NullCheck(L_4);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_4, (bool)0, NULL);
@@ -26878,7 +26905,7 @@ IL_000e:
 
 IL_0028:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:407>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:408>
 		return;
 	}
 }
@@ -26892,7 +26919,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnLeftRoom_m1418296F
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:411>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:412>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___waitingPanel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -26903,7 +26930,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnLeftRoom_m1418296F
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:411>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:412>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___waitingPanel;
 		NullCheck(L_2);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_2, (bool)0, NULL);
@@ -26911,7 +26938,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnLeftRoom_m1418296F
 
 IL_001a:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:412>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:413>
 		return;
 	}
 }
