@@ -116,7 +116,7 @@ public class PlayFabManager : MonoBehaviour
         PlayerPrefs.Save();
         
         // Clear any cached player data and create fresh data for the NEW account
-        currentPlayerData = new PlayerData(playerName, email, 0, 0);
+        currentPlayerData = new PlayerData(playerName, email, 1000, 1000);
         
         Debug.Log($"[PlayFabManager] New account created - PlayFabId: {playFabId}, Name: {playerName}, Email: {email}");
         Debug.Log($"[PlayFabManager] Session ticket: {(result.SessionTicket != null ? "Received" : "Not received")}");
@@ -800,7 +800,7 @@ public class PlayFabManager : MonoBehaviour
             if (string.IsNullOrEmpty(currentPlayerData.playerName) || currentPlayerData.playerName == "Guest")
             {
                 // Initialize guest account with default values
-                currentPlayerData = new PlayerData("Guest", "", 100, 100);
+                currentPlayerData = new PlayerData("Guest", "", 1000, 1000);
                 // Save the initial data for guest accounts
                 SavePlayerData();
             }
