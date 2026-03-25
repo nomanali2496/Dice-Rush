@@ -246,6 +246,7 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
     public const string PLAYER_AVATAR_KEY = "AvatarIndex";
     public const string PLAYER_CUSTOM_IMAGE_KEY = "CustomImage";
     public const string GAME_OVER_KEY = "GameOver";
+    public const string GAME_START_TIME_KEY = "GameStartTime";
 
     /// <summary>
     /// Signals to the room that the game is over.
@@ -455,6 +456,15 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
 
             Debug.Log($"[LobbyNetworkManager] Starting game with {humanPlayers} humans and {neededCPUs} CPUs");
             
+            // Set the game start time in room properties (only Master Client)
+            if (PhotonNetwork.IsMasterClient)
+            {
+                ExitGames.Client.Photon.Hashtable props = new ExitGames.Client.Photon.Hashtable();
+                props.Add(GAME_START_TIME_KEY, PhotonNetwork.Time);
+                PhotonNetwork.CurrentRoom.SetCustomProperties(props);
+                Debug.Log($"[LobbyNetworkManager] Master Client set {GAME_START_TIME_KEY} to {PhotonNetwork.Time}");
+            }
+
             // Pass the number of CPUs needed to the LobbyManager
             lobbyManager.StartGameFromNetwork(currentSelectedConfig.lobbyIndex, neededCPUs);
         }

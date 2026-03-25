@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Reflection;
 using DG.Tweening;
+using Photon.Pun;
 
 /// <summary>
 /// Manages game state, player profiles, and CPU profiles
@@ -216,6 +217,7 @@ public class GameManager : MonoBehaviour
     
     /// <summary>
     /// Coroutine for "3, 2, 1" countdown before game starts
+    /// Highly optimized for Photon sync - skips levels if player joined/resumed late
     /// </summary>
     private System.Collections.IEnumerator CountdownBeforeStart()
     {
@@ -244,9 +246,30 @@ public class GameManager : MonoBehaviour
         countdownText.gameObject.SetActive(true);
         countdownTextShadow.gameObject.SetActive(true);
         
+        // Calculate network start offset
+        float networkElapsedOffset = 0f;
+        if (PhotonNetwork.InRoom)
+        {
+            if (PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(LobbyNetworkManager.GAME_START_TIME_KEY, out object startTimeObj))
+            {
+                networkElapsedOffset = (float)(PhotonNetwork.Time - (double)startTimeObj);
+                Debug.Log($"[GameManager] Network Sync: {networkElapsedOffset:F2}s elapsed since room start command.");
+            }
+        }
+
         // Countdown from 3 to 1
         for (int i = 3; i >= 1; i--)
         {
+            // Calculate when this specific number should end
+            float targetEndForCurrentNumber = 3f - (i - 1); // 3-2=1s, 3-1=2s, 3-0=3s
+            
+            // If network time says we already passed this number, skip it
+            if (networkElapsedOffset > targetEndForCurrentNumber)
+            {
+                Debug.Log($"[GameManager] Skipping countdown number {i} (already passed)");
+                continue;
+            }
+
             countdownText.text = i.ToString();
             countdownTextShadow.text = i.ToString();
             
@@ -254,7 +277,6 @@ public class GameManager : MonoBehaviour
             if (SoundManager.instance != null)
             {
                 SoundManager.instance.PlayCountdown();
-                Debug.Log($"[GameManager] Playing countdown sound for: {i}");
             }
             
             // Reset scale and alpha
@@ -278,6 +300,15 @@ public class GameManager : MonoBehaviour
             countdownTextShadow.DOFade(0f, countdownDuration * 0.7f);
             
             yield return new WaitForSeconds(countdownDuration * 0.7f);
+
+            // Update local tracking offset
+            if (PhotonNetwork.InRoom)
+            {
+                if (PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(LobbyNetworkManager.GAME_START_TIME_KEY, out object sTime))
+                {
+                    networkElapsedOffset = (float)(PhotonNetwork.Time - (double)sTime);
+                }
+            }
         }
         
         // Hide countdown text
@@ -346,10 +377,16 @@ public class GameManager : MonoBehaviour
         
         while (currentTimer > 0 && isGameActive)
         {
-            yield return new WaitForSeconds(1f);
-            currentTimer -= 1f;
+            // For network sync, we update more frequently (every 0.5s) to ensure 
+            // the UI stays snapped to global truth
+            yield return new WaitForSeconds(0.5f);
             
-            // Update timer display
+            if (!PhotonNetwork.InRoom)
+            {
+                currentTimer -= 0.5f;
+            }
+            
+            // Update display (this also resyncs currentTimer from Photon if in a room)
             UpdateTimerDisplay();
         }
         
@@ -367,6 +404,32 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void UpdateTimerDisplay()
     {
+        // Network Sync: Priority 1 - Use synchronized Photon time if available
+        if (PhotonNetwork.InRoom)
+        {
+            if (PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(LobbyNetworkManager.GAME_START_TIME_KEY, out object startTimeObj))
+            {
+                double startTime = (double)startTimeObj;
+                float networkElapsedTime = (float)(PhotonNetwork.Time - startTime);
+                
+                // The 30s game timer starts after the 3s countdown (total 3.0 duration)
+                float totalGameplayDuration = gameTimer;
+                float countdownDurationTotal = 3.0f; 
+                
+                float timeRemaining = totalGameplayDuration - (networkElapsedTime - countdownDurationTotal);
+                
+                // Ensure we don't start the gameplay timer while still in countdown
+                if (networkElapsedTime < countdownDurationTotal)
+                {
+                     currentTimer = totalGameplayDuration;
+                }
+                else
+                {
+                     currentTimer = Mathf.Max(0, timeRemaining);
+                }
+            }
+        }
+
         int seconds = Mathf.CeilToInt(currentTimer);
         
         if (timerText != null)

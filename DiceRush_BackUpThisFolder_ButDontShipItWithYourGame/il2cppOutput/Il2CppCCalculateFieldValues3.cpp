@@ -2705,7 +2705,8 @@ struct U3CCountdownBeforeStartU3Ed__66_tB5CDD2B6AD29867436ECD29990C0793AAA395AC6
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
 	GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* ___U3CU3E4__this;
-	int32_t ___U3CiU3E5__2;
+	float ___U3CnetworkElapsedOffsetU3E5__2;
+	int32_t ___U3CiU3E5__3;
 };
 struct U3CInitializeProfilesDelayedU3Ed__86_t83EC9E3B5747D8DB653F14FB06FFD7BE73ACD96E  : public RuntimeObject
 {
@@ -30496,9 +30497,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9709[2] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9710[4] = 
 {
 	static_cast<int32_t>(offsetof(U3CConfigureCPUsAfterDelayU3Ed__108_tAC75D894AE3C5878CB33D2037491609A95C35E71, ___U3CU3E1__state)),static_cast<int32_t>(offsetof(U3CConfigureCPUsAfterDelayU3Ed__108_tAC75D894AE3C5878CB33D2037491609A95C35E71, ___U3CU3E2__current)),static_cast<int32_t>(offsetof(U3CConfigureCPUsAfterDelayU3Ed__108_tAC75D894AE3C5878CB33D2037491609A95C35E71, ___U3CU3E4__this)),static_cast<int32_t>(offsetof(U3CConfigureCPUsAfterDelayU3Ed__108_tAC75D894AE3C5878CB33D2037491609A95C35E71, ___numberOfCPUs)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9711[4] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9711[5] = 
 {
-	static_cast<int32_t>(offsetof(U3CCountdownBeforeStartU3Ed__66_tB5CDD2B6AD29867436ECD29990C0793AAA395AC6, ___U3CU3E1__state)),static_cast<int32_t>(offsetof(U3CCountdownBeforeStartU3Ed__66_tB5CDD2B6AD29867436ECD29990C0793AAA395AC6, ___U3CU3E2__current)),static_cast<int32_t>(offsetof(U3CCountdownBeforeStartU3Ed__66_tB5CDD2B6AD29867436ECD29990C0793AAA395AC6, ___U3CU3E4__this)),static_cast<int32_t>(offsetof(U3CCountdownBeforeStartU3Ed__66_tB5CDD2B6AD29867436ECD29990C0793AAA395AC6, ___U3CiU3E5__2)),};
+	static_cast<int32_t>(offsetof(U3CCountdownBeforeStartU3Ed__66_tB5CDD2B6AD29867436ECD29990C0793AAA395AC6, ___U3CU3E1__state)),static_cast<int32_t>(offsetof(U3CCountdownBeforeStartU3Ed__66_tB5CDD2B6AD29867436ECD29990C0793AAA395AC6, ___U3CU3E2__current)),static_cast<int32_t>(offsetof(U3CCountdownBeforeStartU3Ed__66_tB5CDD2B6AD29867436ECD29990C0793AAA395AC6, ___U3CU3E4__this)),static_cast<int32_t>(offsetof(U3CCountdownBeforeStartU3Ed__66_tB5CDD2B6AD29867436ECD29990C0793AAA395AC6, ___U3CnetworkElapsedOffsetU3E5__2)),static_cast<int32_t>(offsetof(U3CCountdownBeforeStartU3Ed__66_tB5CDD2B6AD29867436ECD29990C0793AAA395AC6, ___U3CiU3E5__3)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9712[3] = 
 {
 	static_cast<int32_t>(offsetof(U3CInitializeProfilesDelayedU3Ed__86_t83EC9E3B5747D8DB653F14FB06FFD7BE73ACD96E, ___U3CU3E1__state)),static_cast<int32_t>(offsetof(U3CInitializeProfilesDelayedU3Ed__86_t83EC9E3B5747D8DB653F14FB06FFD7BE73ACD96E, ___U3CU3E2__current)),static_cast<int32_t>(offsetof(U3CInitializeProfilesDelayedU3Ed__86_t83EC9E3B5747D8DB653F14FB06FFD7BE73ACD96E, ___U3CU3E4__this)),};
@@ -30616,9 +30617,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9750[30] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9751[4] = 
 {
 	static_cast<int32_t>(offsetof(U3CWaitAndJoinRoomU3Ed__13_tE81D7352C7D06BD70D6F82F979A2B08669E09DC0, ___U3CU3E1__state)),static_cast<int32_t>(offsetof(U3CWaitAndJoinRoomU3Ed__13_tE81D7352C7D06BD70D6F82F979A2B08669E09DC0, ___U3CU3E2__current)),static_cast<int32_t>(offsetof(U3CWaitAndJoinRoomU3Ed__13_tE81D7352C7D06BD70D6F82F979A2B08669E09DC0, ___U3CU3E4__this)),static_cast<int32_t>(offsetof(U3CWaitAndJoinRoomU3Ed__13_tE81D7352C7D06BD70D6F82F979A2B08669E09DC0, ___config)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9752[16] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9752[17] = 
 {
-	static_cast<int32_t>(offsetof(LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D_StaticFields, ___Instance)),static_cast<int32_t>(offsetof(LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D, ___waitingPanel)),static_cast<int32_t>(offsetof(LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D, ___statusText)),static_cast<int32_t>(offsetof(LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D, ___cancelButton)),static_cast<int32_t>(offsetof(LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D, ___currentSelectedConfig)),static_cast<int32_t>(offsetof(LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D, ___pendingJoinCoroutine)),static_cast<int32_t>(offsetof(LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D, ___lastJoinTimeLocal)),static_cast<int32_t>(offsetof(LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D, ___isStarting)),0,0,static_cast<int32_t>(offsetof(LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D, ___hasSyncedProfile)),0,0,0,0,0,};
+	static_cast<int32_t>(offsetof(LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D_StaticFields, ___Instance)),static_cast<int32_t>(offsetof(LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D, ___waitingPanel)),static_cast<int32_t>(offsetof(LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D, ___statusText)),static_cast<int32_t>(offsetof(LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D, ___cancelButton)),static_cast<int32_t>(offsetof(LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D, ___currentSelectedConfig)),static_cast<int32_t>(offsetof(LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D, ___pendingJoinCoroutine)),static_cast<int32_t>(offsetof(LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D, ___lastJoinTimeLocal)),static_cast<int32_t>(offsetof(LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D, ___isStarting)),0,0,static_cast<int32_t>(offsetof(LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D, ___hasSyncedProfile)),0,0,0,0,0,0,};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9753[2] = 
 {
 	static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass22_0_t55E0B703AE4267A0FEC7C3492A4D37EC26E07EB9, ___U3CU3E4__this)),static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass22_0_t55E0B703AE4267A0FEC7C3492A4D37EC26E07EB9, ___button)),};

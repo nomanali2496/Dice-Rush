@@ -7526,7 +7526,8 @@ struct U3CCountdownBeforeStartU3Ed__66_tB5CDD2B6AD29867436ECD29990C0793AAA395AC6
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
 	GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* ___U3CU3E4__this;
-	int32_t ___U3CiU3E5__2;
+	float ___U3CnetworkElapsedOffsetU3E5__2;
+	int32_t ___U3CiU3E5__3;
 };
 struct U3CInitializeProfilesDelayedU3Ed__86_t83EC9E3B5747D8DB653F14FB06FFD7BE73ACD96E  : public RuntimeObject
 {
