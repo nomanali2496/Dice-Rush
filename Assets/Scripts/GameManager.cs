@@ -86,7 +86,8 @@ public class GameManager : MonoBehaviour
     private Coroutine timerCoroutine; // Coroutine for timer countdown
     [Header("Network Caching")]
     private Dictionary<int, string> cachedNetworkNames = new Dictionary<int, string>();
-    private Dictionary<int, Sprite> cachedNetworkAvatars = new Dictionary<int, Sprite>();
+    private Dictionary<int, Sprite> cachedNetworkAvatars = new Dictionary<int, Sprite>(); // Quality 2: Custom Gallery Images
+    private Dictionary<int, int> cachedNetworkAvatarIndices = new Dictionary<int, int>(); // Quality 1: Preset Avatar 0-7
 
     // Constants for profile slot states
     private const float CUSTOM_AVATAR_SCALE = 2.0f;
@@ -514,7 +515,7 @@ public class GameManager : MonoBehaviour
                 cachedNetworkNames[actorNo] = p.NickName;
             }
 
-            // 2. Cache Avatar Image if not already cached
+            // 2. Cache Custom Avatar Image if not already cached
             if (!cachedNetworkAvatars.ContainsKey(actorNo))
             {
                 if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_CUSTOM_IMAGE_KEY, out object imageDataObj))
@@ -529,18 +530,21 @@ public class GameManager : MonoBehaviour
                             {
                                 Sprite s = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
                                 cachedNetworkAvatars[actorNo] = s;
-                                Debug.Log($"[GameManager] Pre-cached human avatar for actor {actorNo} ({bytes.Length} bytes)");
+                                Debug.Log($"[GameManager] Pre-cached human custom photo for actor {actorNo}");
                             }
                         }
-                        catch (System.Exception e)
-                        {
-                            Debug.LogWarning($"[GameManager] Failed to decode avatar for actor {actorNo}: {e.Message}");
-                        }
+                        catch (System.Exception) { }
                     }
                 }
             }
+
+            // 3. Cache Preset Avatar Index (0-7)
+            if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_AVATAR_KEY, out object avatarIdxObj))
+            {
+                cachedNetworkAvatarIndices[actorNo] = (int)avatarIdxObj;
+            }
         }
-        Debug.Log($"[GameManager] Cache updated. Names: {cachedNetworkNames.Count}, Avatars: {cachedNetworkAvatars.Count}");
+        Debug.Log($"[GameManager] Profile Cache - Names: {cachedNetworkNames.Count}, Custom Images: {cachedNetworkAvatars.Count}, Preset Avatars: {cachedNetworkAvatarIndices.Count}");
     }
 
     /// <summary>
@@ -737,6 +741,12 @@ public class GameManager : MonoBehaviour
                 if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_NAME_KEY, out object nameObj))
                 {
                     cachedNetworkNames[actorNo] = (string)nameObj;
+                }
+                
+                // Also cache avatar index here to ensure it's captured before anyone leaves
+                if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_AVATAR_KEY, out object avatarIdxObj))
+                {
+                    cachedNetworkAvatarIndices[actorNo] = (int)avatarIdxObj;
                 }
                 else if (!string.IsNullOrEmpty(p.NickName))
                 {
@@ -1069,20 +1079,26 @@ public class GameManager : MonoBehaviour
                     int actorNumber = Mathf.Abs(cpuIndex + 100);
                     bool customProfileMatched = false;
                     
-                    // Priority 1: Use Cached High-Quality Avatar (decided during GetRankings)
+                    // Priority 1: Use Cached High-Quality Custom Avatar (Gallery Photo)
                     if (cachedNetworkAvatars.TryGetValue(actorNumber, out Sprite cachedSprite))
                     {
                         SetProfileSlot(profileImage, profileImageCustom, cachedSprite, true);
                         customProfileMatched = true;
-                        Debug.Log($"[GameManager] Winner podium: used cached high-quality avatar for player {actorNumber}");
+                        Debug.Log($"[GameManager] Winner podium: used cached custom gallery photo for player {actorNumber}");
                     }
                     
-                    // Priority 2: Try live properties (if not yet left room)
-                    if (!customProfileMatched)
+                    // Priority 2: Use Cached Preset Avatar Index (Choice 0-7)
+                    if (!customProfileMatched && cachedNetworkAvatarIndices.TryGetValue(actorNumber, out int cachedIdx))
                     {
-                        // (Fallback logic handled below if not matched)
+                        if (availableProfileSprites != null && cachedIdx >= 0 && cachedIdx < availableProfileSprites.Length)
+                        {
+                            SetProfileSlot(profileImage, profileImageCustom, availableProfileSprites[cachedIdx], false);
+                            customProfileMatched = true;
+                            Debug.Log($"[GameManager] Winner podium: used cached preset avatar index {cachedIdx} for player {actorNumber}");
+                        }
                     }
 
+                    // Priority 3: Try live properties (Fallback if not yet left room)
                     if (!customProfileMatched)
                     {
                         Photon.Realtime.Player targetPlayer = null;
@@ -1097,7 +1113,7 @@ public class GameManager : MonoBehaviour
 
                         if (targetPlayer != null)
                         {
-                            // Check for Custom Image data (Gallery/Pro way)
+                            // Try to get Custom Photo live
                             if (targetPlayer.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_CUSTOM_IMAGE_KEY, out object imageDataObj))
                             {
                                 byte[] bytes = (byte[])imageDataObj;
@@ -1107,11 +1123,10 @@ public class GameManager : MonoBehaviour
                                     Sprite customSprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
                                     SetProfileSlot(profileImage, profileImageCustom, customSprite, true);
                                     customProfileMatched = true;
-                                    Debug.Log($"[GameManager] Winner podium: network human custom gallery image synced and displayed.");
                                 }
                             }
                             
-                            // Fallback to Preset Avatar Index if no custom was successfully loaded
+                            // Try to get Preset Index live
                             if (!customProfileMatched)
                             {
                                 if (targetPlayer.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_AVATAR_KEY, out object avatarIdxObj))
@@ -1120,20 +1135,18 @@ public class GameManager : MonoBehaviour
                                     if (availableProfileSprites != null && avatarIndex >= 0 && avatarIndex < availableProfileSprites.Length)
                                     {
                                         SetProfileSlot(profileImage, profileImageCustom, availableProfileSprites[avatarIndex], false);
-                                        Debug.Log($"[GameManager] Winner podium: network human avatar (synced index {avatarIndex}) assigned.");
-                                    }
-                                    else if (availableProfileSprites != null && availableProfileSprites.Length > 0)
-                                    {
-                                        SetProfileSlot(profileImage, profileImageCustom, availableProfileSprites[0], false);
+                                        customProfileMatched = true;
                                     }
                                 }
                             }
                         }
-                        else if (availableProfileSprites != null && availableProfileSprites.Length > 0)
-                        {
-                            // Final fallback to first sprite if all else failed (data not found)
-                            SetProfileSlot(profileImage, profileImageCustom, availableProfileSprites[0], false);
-                        }
+                    }
+
+                    // Final Fallback: Default to first sprite if all else failed
+                    if (!customProfileMatched && availableProfileSprites != null && availableProfileSprites.Length > 0)
+                    {
+                        SetProfileSlot(profileImage, profileImageCustom, availableProfileSprites[0], false);
+                        Debug.LogWarning($"[GameManager] Winner podium: all options failed for player {actorNumber}, using default avatar.");
                     }
                 }
             }
@@ -2060,6 +2073,12 @@ public class GameManager : MonoBehaviour
         
         // Handle entry fee
         HandleEntryFee(config);
+
+        // Clear network caches for a fresh game session
+        cachedNetworkNames.Clear();
+        cachedNetworkAvatars.Clear();
+        cachedNetworkAvatarIndices.Clear();
+        Debug.Log("[GameManager] Network profile caches cleared for new session.");
     }
     
     /// <summary>

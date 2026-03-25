@@ -7514,38 +7514,38 @@ struct ShaderIDs_tC56D5AA7AEEAC25C70C55D91596AFCC3F5B4DDE6  : public RuntimeObje
 struct U3CU3Ec_t934A682FC7A2310EB64DF8FB184FC75102272AA5  : public RuntimeObject
 {
 };
-struct U3CConfigureCPUsAfterDelayU3Ed__107_t5C464AF3D77B04D66692472656C4F46D08DD8E17  : public RuntimeObject
+struct U3CConfigureCPUsAfterDelayU3Ed__108_tAC75D894AE3C5878CB33D2037491609A95C35E71  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
 	GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* ___U3CU3E4__this;
 	int32_t ___numberOfCPUs;
 };
-struct U3CCountdownBeforeStartU3Ed__65_t6F8534A012C42C461AC6D782B0912EF9733BAA75  : public RuntimeObject
+struct U3CCountdownBeforeStartU3Ed__66_tB5CDD2B6AD29867436ECD29990C0793AAA395AC6  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
 	GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* ___U3CU3E4__this;
 	int32_t ___U3CiU3E5__2;
 };
-struct U3CInitializeProfilesDelayedU3Ed__85_tCACB66715CE99E9C4C0722E8DA1463876DFE26F8  : public RuntimeObject
+struct U3CInitializeProfilesDelayedU3Ed__86_t83EC9E3B5747D8DB653F14FB06FFD7BE73ACD96E  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
 	GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* ___U3CU3E4__this;
 };
-struct U3CRefreshLobbyButtonsDelayedU3Ed__110_t57325997333FC8CC4A105F0B3960F1740B5C0550  : public RuntimeObject
+struct U3CRefreshLobbyButtonsDelayedU3Ed__111_tB232F03C3E25FA3557823A2CF4D9358693C543B6  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
 };
-struct U3CRetryLoadPlayerProfileU3Ed__84_t9C3A21067867876FB6CDE73C3C6446E9D3359A98  : public RuntimeObject
+struct U3CRetryLoadPlayerProfileU3Ed__85_t6AE80C2490ECCCA4D3CFE8A4426913347F406C1B  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
 	GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* ___U3CU3E4__this;
 };
-struct U3CTimerCountdownU3Ed__67_tAD999D19059AB4755D0AE9E273E01A9297FBEE13  : public RuntimeObject
+struct U3CTimerCountdownU3Ed__68_t815FB954E9E3C3AEF33E2C6947E2B60FB9E2870A  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -40931,6 +40931,7 @@ struct GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6  : public MonoBehav
 	Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* ___timerCoroutine;
 	Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* ___cachedNetworkNames;
 	Dictionary_2_tD001156821253ED04A22112577C96EFE869F40F0* ___cachedNetworkAvatars;
+	Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180* ___cachedNetworkAvatarIndices;
 	bool ___timerStarted;
 	LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* ___currentLobbyConfig;
 	NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* ___playerNumberGrid;
@@ -44866,7 +44867,7 @@ struct ShaderIDs_tC56D5AA7AEEAC25C70C55D91596AFCC3F5B4DDE6_StaticFields
 struct U3CU3Ec_t934A682FC7A2310EB64DF8FB184FC75102272AA5_StaticFields
 {
 	U3CU3Ec_t934A682FC7A2310EB64DF8FB184FC75102272AA5* ___U3CU3E9;
-	Comparison_1_tED881B384601D05493481B4B126AE424016299AD* ___U3CU3E9__77_0;
+	Comparison_1_tED881B384601D05493481B4B126AE424016299AD* ___U3CU3E9__78_0;
 };
 struct U3CU3Ec_t9EF33D21B93D32D0C5E77702FBC4F79B0A19DBAE_StaticFields
 {
@@ -56331,17 +56332,17 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize9708 = { sizeof(FriendRowUI_
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9709;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize9709 = { sizeof(U3CU3Ec_t934A682FC7A2310EB64DF8FB184FC75102272AA5), -1, sizeof(U3CU3Ec_t934A682FC7A2310EB64DF8FB184FC75102272AA5_StaticFields), 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9710;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize9710 = { sizeof(U3CConfigureCPUsAfterDelayU3Ed__107_t5C464AF3D77B04D66692472656C4F46D08DD8E17), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize9710 = { sizeof(U3CConfigureCPUsAfterDelayU3Ed__108_tAC75D894AE3C5878CB33D2037491609A95C35E71), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9711;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize9711 = { sizeof(U3CCountdownBeforeStartU3Ed__65_t6F8534A012C42C461AC6D782B0912EF9733BAA75), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize9711 = { sizeof(U3CCountdownBeforeStartU3Ed__66_tB5CDD2B6AD29867436ECD29990C0793AAA395AC6), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9712;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize9712 = { sizeof(U3CInitializeProfilesDelayedU3Ed__85_tCACB66715CE99E9C4C0722E8DA1463876DFE26F8), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize9712 = { sizeof(U3CInitializeProfilesDelayedU3Ed__86_t83EC9E3B5747D8DB653F14FB06FFD7BE73ACD96E), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9713;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize9713 = { sizeof(U3CRefreshLobbyButtonsDelayedU3Ed__110_t57325997333FC8CC4A105F0B3960F1740B5C0550), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize9713 = { sizeof(U3CRefreshLobbyButtonsDelayedU3Ed__111_tB232F03C3E25FA3557823A2CF4D9358693C543B6), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9714;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize9714 = { sizeof(U3CRetryLoadPlayerProfileU3Ed__84_t9C3A21067867876FB6CDE73C3C6446E9D3359A98), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize9714 = { sizeof(U3CRetryLoadPlayerProfileU3Ed__85_t6AE80C2490ECCCA4D3CFE8A4426913347F406C1B), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9715;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize9715 = { sizeof(U3CTimerCountdownU3Ed__67_tAD999D19059AB4755D0AE9E273E01A9297FBEE13), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize9715 = { sizeof(U3CTimerCountdownU3Ed__68_t815FB954E9E3C3AEF33E2C6947E2B60FB9E2870A), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9716;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize9716 = { sizeof(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize9717;

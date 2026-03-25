@@ -50,6 +50,12 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
         {
             PlayFabManager.Instance.OnPlayerDataLoaded += SyncCurrentProfileToPhoton;
         }
+
+        // Defensive: Ensure we always have a temporary name from the start
+        if (string.IsNullOrEmpty(PhotonNetwork.NickName))
+        {
+            PhotonNetwork.NickName = "Guest_" + Random.Range(1000, 9999);
+        }
     }
 
     private void OnDestroy()
@@ -350,7 +356,8 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
-        Debug.Log($"[LobbyNetworkManager] Player entered: {newPlayer.NickName}");
+        string currentName = !string.IsNullOrEmpty(newPlayer.NickName) ? newPlayer.NickName : "A Player";
+        Debug.Log($"[LobbyNetworkManager] Player entered: {currentName} (Actor: {newPlayer.ActorNumber})");
         UpdateWaitingStatus();
         CheckIfRoomFull();
     }
@@ -379,6 +386,27 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
                     gm.OnGameFinishedByOtherPlayer();
                 }
             }
+        }
+    }
+
+    /// <summary>
+    /// Important override for mobile: Detects when the player's name/profile actually arrives 
+    /// from the server if it was a few frames late (the "Blank Name" fix).
+    /// </summary>
+    public override void OnPlayerPropertiesUpdate(Player targetPlayer, Hashtable changedProps)
+    {
+        if (changedProps.ContainsKey(PLAYER_NAME_KEY))
+        {
+            string newName = (string)changedProps[PLAYER_NAME_KEY];
+            Debug.Log($"[LobbyNetworkManager] Sync: Player {targetPlayer.ActorNumber} updated name to: {newName}");
+            UpdateWaitingStatus();
+        }
+        
+        // Also refresh UI when someone finishes syncing their gallery image
+        if (changedProps.ContainsKey(PLAYER_CUSTOM_IMAGE_KEY))
+        {
+            Debug.Log($"[LobbyNetworkManager] Sync: Player {targetPlayer.ActorNumber} ({targetPlayer.NickName}) successfully synced custom photo!");
+            UpdateWaitingStatus();
         }
     }
 
