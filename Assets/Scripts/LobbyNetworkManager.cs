@@ -18,6 +18,8 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
     [SerializeField] private Button cancelButton; // Button to cancel and leave the room
 
     private LobbyConfig currentSelectedConfig;
+    private Coroutine pendingJoinCoroutine;
+    private double lastJoinTimeLocal;
 
     private void Awake()
     {
@@ -74,13 +76,21 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
     /// </summary>
     public void JoinLobbyRoom(LobbyConfig config)
     {
+        currentSelectedConfig = config;
+
+        // If not connected yet, show waiting panel and wait for connection
         if (!PhotonNetwork.IsConnectedAndReady)
         {
-            Debug.LogWarning("[LobbyNetworkManager] Not connected to Photon yet!");
+            Debug.Log("[LobbyNetworkManager] Not connected to Photon yet! Waiting for connection...");
+            
+            if (waitingPanel != null) waitingPanel.SetActive(true);
+            if (statusText != null) statusText.text = "Connecting to Server...";
+            
+            if (pendingJoinCoroutine != null) StopCoroutine(pendingJoinCoroutine);
+            pendingJoinCoroutine = StartCoroutine(WaitAndJoinRoom(config));
             return;
         }
 
-        currentSelectedConfig = config;
         Debug.Log($"[LobbyNetworkManager] Seeking room for Lobby: {config.lobbyName}");
 
         RoomOptions roomOptions = new RoomOptions();
@@ -104,6 +114,21 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
         );
     }
 
+    /// <summary>
+    /// Coroutine that waits for connection before joined the requested lobby.
+    /// </summary>
+    private System.Collections.IEnumerator WaitAndJoinRoom(LobbyConfig config)
+    {
+        while (!PhotonNetwork.IsConnectedAndReady)
+        {
+            yield return null;
+        }
+
+        Debug.Log("[LobbyNetworkManager] Connection established! Proceeding to join room.");
+        JoinLobbyRoom(config);
+        pendingJoinCoroutine = null;
+    }
+
     private bool isStarting = false;
     private const string START_TIME_KEY = "StartTime";
     private const float MATCHMAKING_TIMEOUT = 30f;
@@ -114,6 +139,7 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
         if (waitingPanel != null) waitingPanel.SetActive(true);
         isStarting = false;
         hasSyncedProfile = false; // Reset sync flag for new room session
+        lastJoinTimeLocal = Time.timeAsDouble; // Store local join time to prevent ghost timers
 
         // If we are the Master Client, set the start time for the countdown
         if (PhotonNetwork.IsMasterClient)
@@ -308,6 +334,14 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
 
             if (remainingTime <= 0)
             {
+                // Safety check: Avoid "Ghost Timers" from recycled rooms
+                // If we joined less than 1.5 seconds ago, the START_TIME_KEY might still be the old value
+                // from a previous game in the same (recycled) room.
+                if (Time.timeAsDouble - lastJoinTimeLocal < 1.5)
+                {
+                    return; 
+                }
+
                 Debug.Log("[LobbyNetworkManager] Matchmaking timeout reached! Starting with current players.");
                 StartMultiplayerGame();
             }
@@ -404,6 +438,12 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
         {
             PhotonNetwork.LeaveRoom();
         }
+        if (pendingJoinCoroutine != null)
+        {
+            StopCoroutine(pendingJoinCoroutine);
+            pendingJoinCoroutine = null;
+        }
+
         if (waitingPanel != null) waitingPanel.SetActive(false);
     }
 

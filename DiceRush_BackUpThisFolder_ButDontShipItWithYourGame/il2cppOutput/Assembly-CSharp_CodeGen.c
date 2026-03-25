@@ -1350,6 +1350,7 @@ extern void LobbyNetworkManager_OnDestroy_mEB6828B511950DEACA915CBC8C1F149C1950F
 extern void LobbyNetworkManager_OnConnectedToMaster_m8EE7D8B171EB442BD81AB90893582ED889E73C00 (void);
 extern void LobbyNetworkManager_OnJoinedLobby_m568F2801ED3BC944D77F29AB6CE8280A888302F8 (void);
 extern void LobbyNetworkManager_JoinLobbyRoom_m4332A9AFD6922E57D2A00A03AC80306D0156E587 (void);
+extern void LobbyNetworkManager_WaitAndJoinRoom_m2DDFA2810CC732E1137FC1D07DC180DD17B9D071 (void);
 extern void LobbyNetworkManager_OnJoinedRoom_mDC77D32742B1F5DFB18EBA0F6C81D4858F9F4C15 (void);
 extern void LobbyNetworkManager_SyncCurrentProfileToPhoton_mCC248A2607EA892B247FEE109B1968A6B6D62C87 (void);
 extern void LobbyNetworkManager_MarkGameAsFinished_m22F78FD22838B26BB28C7AAB50F436B21D22EE1D (void);
@@ -1366,6 +1367,12 @@ extern void LobbyNetworkManager_StartMultiplayerGame_m69490BB8953A4094CB1B9A9C16
 extern void LobbyNetworkManager_OnCancelWaiting_m4DC1E9D0206B198AC99A5B1E3CFD3D0778071513 (void);
 extern void LobbyNetworkManager_OnLeftRoom_m1418296F8EB26C5022E861E1454CA01725C023A3 (void);
 extern void LobbyNetworkManager__ctor_m6E72DA9F433DCB3C6DBAF5791C6CE5CC10E77C1A (void);
+extern void U3CWaitAndJoinRoomU3Ed__13__ctor_mB17D8F78DE9363F3BAC106127DC6B8F751E7BEAA (void);
+extern void U3CWaitAndJoinRoomU3Ed__13_System_IDisposable_Dispose_m89F321AE4DD44FDB8133D8E112331F98EDCC77D0 (void);
+extern void U3CWaitAndJoinRoomU3Ed__13_MoveNext_m21D31434CB93E95C3FF1BB7650CD15CBEC4BC674 (void);
+extern void U3CWaitAndJoinRoomU3Ed__13_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD6FA2358E5AB85640E90850784711B7A00554541 (void);
+extern void U3CWaitAndJoinRoomU3Ed__13_System_Collections_IEnumerator_Reset_mFAE41E4BB14CC70796C9BC121CB251A8D5EA9670 (void);
+extern void U3CWaitAndJoinRoomU3Ed__13_System_Collections_IEnumerator_get_Current_m995E6A9F7C5EE84CC6497E8A586C3780458C75FD (void);
 extern void LobbyRowCellView_Awake_m7A1E2E3CCB13DE5F0E111CDB9D9F9F3B50E59C53 (void);
 extern void LobbyRowCellView_OnDestroy_m74556A0063CC7CCF32D0A3A196B0DA59058A605A (void);
 extern void LobbyRowCellView_SetData_mA1502C7FD4C96D764E382654A27388D1A43B84D0 (void);
@@ -3011,7 +3018,7 @@ extern void Serializer_SerializeObject_mEE17BC69DDCF30AD22C910401562491ADABE5426
 extern void Serializer_SerializeArray_mD635B32B9406AF9608B71640F32C16AB828138BB (void);
 extern void Serializer_SerializeString_mB658D7F56B6D171FE905FE62A98E59DAC6050BDB (void);
 extern void Serializer_SerializeOther_m5A394D1B6C91B809DFBF69B4F3B9FAE531853841 (void);
-static Il2CppMethodPointer s_methodPointers[3028] = 
+static Il2CppMethodPointer s_methodPointers[3035] = 
 {
 	Branch_initSession_mA094BFC68D86105527AF4192E91D67F941F6652D,
 	Branch_initSession_mE08C2916193D182CE7ABD85BA63A2A5A30C67FEC,
@@ -4356,6 +4363,7 @@ static Il2CppMethodPointer s_methodPointers[3028] =
 	LobbyNetworkManager_OnConnectedToMaster_m8EE7D8B171EB442BD81AB90893582ED889E73C00,
 	LobbyNetworkManager_OnJoinedLobby_m568F2801ED3BC944D77F29AB6CE8280A888302F8,
 	LobbyNetworkManager_JoinLobbyRoom_m4332A9AFD6922E57D2A00A03AC80306D0156E587,
+	LobbyNetworkManager_WaitAndJoinRoom_m2DDFA2810CC732E1137FC1D07DC180DD17B9D071,
 	LobbyNetworkManager_OnJoinedRoom_mDC77D32742B1F5DFB18EBA0F6C81D4858F9F4C15,
 	LobbyNetworkManager_SyncCurrentProfileToPhoton_mCC248A2607EA892B247FEE109B1968A6B6D62C87,
 	LobbyNetworkManager_MarkGameAsFinished_m22F78FD22838B26BB28C7AAB50F436B21D22EE1D,
@@ -4372,6 +4380,12 @@ static Il2CppMethodPointer s_methodPointers[3028] =
 	LobbyNetworkManager_OnCancelWaiting_m4DC1E9D0206B198AC99A5B1E3CFD3D0778071513,
 	LobbyNetworkManager_OnLeftRoom_m1418296F8EB26C5022E861E1454CA01725C023A3,
 	LobbyNetworkManager__ctor_m6E72DA9F433DCB3C6DBAF5791C6CE5CC10E77C1A,
+	U3CWaitAndJoinRoomU3Ed__13__ctor_mB17D8F78DE9363F3BAC106127DC6B8F751E7BEAA,
+	U3CWaitAndJoinRoomU3Ed__13_System_IDisposable_Dispose_m89F321AE4DD44FDB8133D8E112331F98EDCC77D0,
+	U3CWaitAndJoinRoomU3Ed__13_MoveNext_m21D31434CB93E95C3FF1BB7650CD15CBEC4BC674,
+	U3CWaitAndJoinRoomU3Ed__13_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD6FA2358E5AB85640E90850784711B7A00554541,
+	U3CWaitAndJoinRoomU3Ed__13_System_Collections_IEnumerator_Reset_mFAE41E4BB14CC70796C9BC121CB251A8D5EA9670,
+	U3CWaitAndJoinRoomU3Ed__13_System_Collections_IEnumerator_get_Current_m995E6A9F7C5EE84CC6497E8A586C3780458C75FD,
 	LobbyRowCellView_Awake_m7A1E2E3CCB13DE5F0E111CDB9D9F9F3B50E59C53,
 	LobbyRowCellView_OnDestroy_m74556A0063CC7CCF32D0A3A196B0DA59058A605A,
 	LobbyRowCellView_SetData_mA1502C7FD4C96D764E382654A27388D1A43B84D0,
@@ -6042,7 +6056,7 @@ static Il2CppMethodPointer s_methodPointers[3028] =
 	Serializer_SerializeString_mB658D7F56B6D171FE905FE62A98E59DAC6050BDB,
 	Serializer_SerializeOther_m5A394D1B6C91B809DFBF69B4F3B9FAE531853841,
 };
-static const int32_t s_InvokerIndices[3028] = 
+static const int32_t s_InvokerIndices[3035] = 
 {
 	26972,
 	26972,
@@ -7387,6 +7401,7 @@ static const int32_t s_InvokerIndices[3028] =
 	16460,
 	16460,
 	12574,
+	10835,
 	16460,
 	12574,
 	16460,
@@ -7403,6 +7418,12 @@ static const int32_t s_InvokerIndices[3028] =
 	16460,
 	16460,
 	16460,
+	12510,
+	16460,
+	16016,
+	16220,
+	16460,
+	16220,
 	16460,
 	16460,
 	12574,
@@ -9075,12 +9096,12 @@ static const int32_t s_InvokerIndices[3028] =
 };
 static const Il2CppTokenRangePair s_rgctxIndices[6] = 
 {
-	{ 0x0200015A, { 12, 8 } },
-	{ 0x06000594, { 0, 4 } },
-	{ 0x06000595, { 4, 3 } },
-	{ 0x06000596, { 7, 5 } },
-	{ 0x06000A9B, { 20, 3 } },
-	{ 0x06000ABA, { 23, 3 } },
+	{ 0x0200015B, { 12, 8 } },
+	{ 0x0600059B, { 0, 4 } },
+	{ 0x0600059C, { 4, 3 } },
+	{ 0x0600059D, { 7, 5 } },
+	{ 0x06000AA2, { 20, 3 } },
+	{ 0x06000AC1, { 23, 3 } },
 };
 extern const uint32_t g_rgctx_T_t8C0EC4E6A28998AEF990D24C5045CD8DAEC7CE27;
 extern const uint32_t g_rgctx_GameObject_GetComponent_TisT_t8C0EC4E6A28998AEF990D24C5045CD8DAEC7CE27_m6F00BBCCD33F37575CAA88D74342A9BB172E7394;
@@ -9141,7 +9162,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	3028,
+	3035,
 	s_methodPointers,
 	0,
 	NULL,

@@ -2,14 +2,6 @@
   "Messages": [
     {
       "Type": 0,
-      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::UnregisterInstance(System.Object) - Method was given it\u0027s own cpp file because it is large and costly to compile"
-    },
-    {
-      "Type": 0,
-      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::OnProcessingEvent(PlayFab.Internal.ApiProcessingEventArgs) - Method was given it\u0027s own cpp file because it is large and costly to compile"
-    },
-    {
-      "Type": 0,
       "Text": "[Unity.TextMeshPro] - System.Void TMPro.TextMeshPro::GenerateTextMesh() - Method was given it\u0027s own cpp file because it is large and costly to compile"
     },
     {
@@ -22,23 +14,15 @@
     },
     {
       "Type": 0,
-      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::UnregisterInstance(System.Object) - High Variable Count of 889"
+      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::UnregisterInstance(System.Object) - Method was given it\u0027s own cpp file because it is large and costly to compile"
     },
     {
       "Type": 0,
-      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::UnregisterInstance(System.Object) - High Instruction Count of 31302"
+      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::OnProcessingEvent(PlayFab.Internal.ApiProcessingEventArgs) - Method was given it\u0027s own cpp file because it is large and costly to compile"
     },
     {
       "Type": 0,
-      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::UnregisterInstance(System.Object) - High CodeSize of 62597"
-    },
-    {
-      "Type": 0,
-      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::OnProcessingEvent(PlayFab.Internal.ApiProcessingEventArgs) - High Instruction Count of 13317"
-    },
-    {
-      "Type": 0,
-      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::OnProcessingEvent(PlayFab.Internal.ApiProcessingEventArgs) - High CodeSize of 50601"
+      "Text": "[mscorlib] - System.Void System.Security.Cryptography.RIPEMD160Managed::MDTransform(System.UInt32*,System.UInt32*,System.Byte*) - High Instruction Count of 5579"
     },
     {
       "Type": 0,
@@ -74,10 +58,6 @@
     },
     {
       "Type": 0,
-      "Text": "[mscorlib] - System.Void System.Security.Cryptography.RIPEMD160Managed::MDTransform(System.UInt32*,System.UInt32*,System.Byte*) - High Instruction Count of 5579"
-    },
-    {
-      "Type": 0,
       "Text": "[UnityEngine.TextCoreTextEngineModule] - System.Boolean UnityEngine.TextCore.Text.TextGenerator::ValidateHtmlTag(UnityEngine.TextCore.Text.TextProcessingElement[],System.Int32,System.Int32\u0026,UnityEngine.TextCore.Text.TextGenerationSettings,UnityEngine.TextCore.Text.TextInfo,System.Boolean\u0026) - High Variable Count of 250"
     },
     {
@@ -107,6 +87,26 @@
     {
       "Type": 0,
       "Text": "[Unity.InputSystem] - System.Void UnityEngine.InputSystem.FastTouchscreen::.ctor() - High Variable Count of 315"
+    },
+    {
+      "Type": 0,
+      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::UnregisterInstance(System.Object) - High Variable Count of 889"
+    },
+    {
+      "Type": 0,
+      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::UnregisterInstance(System.Object) - High Instruction Count of 31302"
+    },
+    {
+      "Type": 0,
+      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::UnregisterInstance(System.Object) - High CodeSize of 62597"
+    },
+    {
+      "Type": 0,
+      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::OnProcessingEvent(PlayFab.Internal.ApiProcessingEventArgs) - High Instruction Count of 13317"
+    },
+    {
+      "Type": 0,
+      "Text": "[PlayFab] - System.Void PlayFab.Events.PlayFabEvents::OnProcessingEvent(PlayFab.Internal.ApiProcessingEventArgs) - High CodeSize of 50601"
     }
   ],
   "CommandLine": "@Library\\Bee\\artifacts\\rsp\\1944220245930651433.rsp"

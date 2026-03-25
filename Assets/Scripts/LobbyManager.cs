@@ -892,17 +892,17 @@ public class LobbyManager : MonoBehaviour
         }
 
         // Check if we are using Networking
-        if (LobbyNetworkManager.Instance != null && Photon.Pun.PhotonNetwork.IsConnectedAndReady)
+        if (LobbyNetworkManager.Instance != null)
         {
-            // Instead of starting immediately, join the network room
+            // Always use network join (LobbyNetworkManager now handles the "wait for connection" state)
             LobbyNetworkManager.Instance.JoinLobbyRoom(config);
-            Debug.Log($"[LobbyManager] Initiating network room join for Lobby {lobbyIndex}");
+            Debug.Log($"[LobbyManager] Initiating network room sequence for Lobby {lobbyIndex}");
         }
         else
         {
-            // Fallback to local game if network is not available
+            // Final fallback only if no network manager exists at all
             StartGameFromNetwork(lobbyIndex);
-            Debug.LogWarning("[LobbyManager] Network not ready, starting local game fallback.");
+            Debug.LogWarning("[LobbyManager] LobbyNetworkManager not found! Starting local fallback.");
         }
     }
 
