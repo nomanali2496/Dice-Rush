@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
 using TMPro;
+using System.Collections.Generic;
 using ExitGames.Client.Photon;
 
 /// <summary>
@@ -192,6 +193,7 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
             ExitGames.Client.Photon.Hashtable basicProps = new ExitGames.Client.Photon.Hashtable();
             basicProps.Add(PLAYER_NAME_KEY, data.playerName);
             basicProps.Add(PLAYER_AVATAR_KEY, data.selectedAvatarIndex);
+            basicProps.Add(PLAYER_ID_KEY, data.playFabId);
             
             // Send the basic info first so it's guaranteed to reach others even on slow networks
             PhotonNetwork.LocalPlayer.SetCustomProperties(basicProps);
@@ -242,6 +244,8 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
     }
 
     public const string PLAYER_SCORE_KEY = "Score";
+    public const string PLAYER_SCORE_TIME_KEY = "ScoreTime";
+    public const string PLAYER_ID_KEY = "PlayFabId";
     public const string PLAYER_NAME_KEY = "PlayerName";
     public const string PLAYER_AVATAR_KEY = "AvatarIndex";
     public const string PLAYER_CUSTOM_IMAGE_KEY = "CustomImage";
@@ -303,12 +307,16 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
     /// Updates the local player's score in Photon custom properties.
     /// This allows other players to see your progress.
     /// </summary>
-    public void UpdateLocalPlayerScore(int score)
+    public void UpdateLocalPlayerScore(int score, double time = 0)
     {
         if (PhotonNetwork.InRoom)
         {
             ExitGames.Client.Photon.Hashtable props = new ExitGames.Client.Photon.Hashtable();
             props.Add(PLAYER_SCORE_KEY, score);
+            if (time > 0)
+            {
+                props.Add(PLAYER_SCORE_TIME_KEY, time);
+            }
             PhotonNetwork.LocalPlayer.SetCustomProperties(props);
         }
     }
@@ -456,13 +464,25 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
 
             Debug.Log($"[LobbyNetworkManager] Starting game with {humanPlayers} humans and {neededCPUs} CPUs");
             
-            // Set the game start time in room properties (only Master Client)
+            // Set the game start time and Participants list in room properties (only Master Client)
             if (PhotonNetwork.IsMasterClient)
             {
                 ExitGames.Client.Photon.Hashtable props = new ExitGames.Client.Photon.Hashtable();
                 props.Add(GAME_START_TIME_KEY, PhotonNetwork.Time);
+                
+                // Store ActorNumber:PlayFabId mapping for all players present at start
+                List<string> mappings = new List<string>();
+                foreach (var p in PhotonNetwork.PlayerList)
+                {
+                    if (p.CustomProperties.TryGetValue(PLAYER_ID_KEY, out object pfId))
+                    {
+                        mappings.Add($"{p.ActorNumber}:{pfId}");
+                    }
+                }
+                props.Add("Participants", string.Join(",", mappings));
+                
                 PhotonNetwork.CurrentRoom.SetCustomProperties(props);
-                Debug.Log($"[LobbyNetworkManager] Master Client set {GAME_START_TIME_KEY} to {PhotonNetwork.Time}");
+                Debug.Log($"[LobbyNetworkManager] Master Client set {GAME_START_TIME_KEY} and Participants mapping.");
             }
 
             // Pass the number of CPUs needed to the LobbyManager

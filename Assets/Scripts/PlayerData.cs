@@ -9,17 +9,18 @@ public class PlayerData
 {
     public string playerName;
     public string email;
-    public float cash; // Changed to float to support decimal values (e.g., 1000.2)
+    public string playFabId;
+    public float cash;
     public int coins;
     public string imageUrl;
-    public int selectedAvatarIndex = 0; // Index of selected avatar (0-7)
-    public int selectedBackgroundIndex = 0; // Index of selected background (0-7)
+    public int selectedAvatarIndex = 0;
+    public int selectedBackgroundIndex = 0;
     
-    // Constructor
     public PlayerData()
     {
         playerName = "";
         email = "";
+        playFabId = "";
         cash = 0;
         coins = 0;
         imageUrl = "";
@@ -27,10 +28,11 @@ public class PlayerData
         selectedBackgroundIndex = 0;
     }
     
-    public PlayerData(string name, string emailAddress, float initialCash = 0f, int initialCoins = 0)
+    public PlayerData(string name, string emailAddress, float initialCash = 0f, int initialCoins = 0, string id = "")
     {
         playerName = name;
         email = emailAddress;
+        playFabId = id;
         cash = initialCash;
         coins = initialCoins;
         imageUrl = "";

@@ -131,7 +131,7 @@ public class NumberGrid : MonoBehaviour
     private System.Random powerupRandom = new System.Random(); // Random for powerup selection
     
     // Events
-    public System.Action<int, GameObject> OnBoxSelected; // Called when a box is selected (number, boxObject)
+    public System.Action<NumberGrid, int, GameObject> OnBoxSelected; // Called when a box is selected (grid, number, boxObject)
     public System.Action OnAllBoxesSelected; // Called when all selectable boxes are selected
     
     private void Start()
@@ -838,7 +838,7 @@ public class NumberGrid : MonoBehaviour
         }
         
         // Trigger event
-        OnBoxSelected?.Invoke(boxData.number, boxData.boxObject);
+        OnBoxSelected?.Invoke(this, boxData.number, boxData.boxObject);
         
         Debug.Log($"[NumberGrid] Box with number {boxData.number} selected and locked!");
         
@@ -1066,7 +1066,7 @@ public class NumberGrid : MonoBehaviour
         }
         
         // Trigger event
-        OnBoxSelected?.Invoke(boxData.number, boxData.boxObject);
+        OnBoxSelected?.Invoke(this, boxData.number, boxData.boxObject);
         
         Debug.Log($"[NumberGrid] Box with number {boxData.number} selected by {playerType}!");
         
@@ -1548,7 +1548,7 @@ public class NumberGrid : MonoBehaviour
         LockPowerup(boxData, PlayerType.Player, -1);
         
         // Trigger event (use -1 or 0 as number for powerups)
-        OnBoxSelected?.Invoke(-1, boxData.boxObject);
+        OnBoxSelected?.Invoke(this, -1, boxData.boxObject);
         
         Debug.Log($"[NumberGrid] Powerup selected and locked!");
         
@@ -1591,7 +1591,7 @@ public class NumberGrid : MonoBehaviour
         LockPowerup(boxData, playerType, cpuIndex);
         
         // Trigger event
-        OnBoxSelected?.Invoke(-1, boxData.boxObject);
+        OnBoxSelected?.Invoke(this, -1, boxData.boxObject);
         
         Debug.Log($"[NumberGrid] Powerup selected by {playerType}!");
         

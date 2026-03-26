@@ -27,6 +27,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Sprite[] availableProfileSprites; // Available profile sprites for CPUs (random selection)
     [SerializeField] private bool excludePlayerAvatarFromCPU = true; // Don't use player's avatar for CPUs
     
+    // Recovery & Persistent Rankings state
+    private HashSet<int> participantsAtStart = new HashSet<int>();
+    private Dictionary<int, string> lastKnownPlayFabIds = new Dictionary<int, string>();
+    private Dictionary<int, (int score, double time)> playerRecoveryData = new Dictionary<int, (int score, double time)>();
+    
     [Header("References")]
     [SerializeField] private NumberGrid numberGrid; // Reference to NumberGrid (legacy - will be replaced by individual grids)
     [SerializeField] private DicesController playerDicesController; // Reference to player's DicesController
@@ -105,6 +110,13 @@ public class GameManager : MonoBehaviour
     // Cache refresh timing
     private float cacheRefreshInterval = 2.0f;
     private float lastCacheRefreshTime = 0f;
+    
+    // Tie-breaker and Disconnection persistence
+    private Dictionary<int, double> playerLastScoreTime = new Dictionary<int, double>();
+    private const string PLAYFAB_MATCH_SCORE_KEY = "CurrentMatchScore";
+    private const string PLAYFAB_MATCH_TIME_KEY = "ScoreAchievedAt";
+    private float lastPlayFabSyncTime = 0f;
+    private const float PLAYFAB_SYNC_DEBOUNCE = 1.5f; // Min 1.5 seconds between PlayFab writes
     
     private void Start()
     {
@@ -206,13 +218,23 @@ public class GameManager : MonoBehaviour
         // Start with "3, 2, 1" countdown first
         CacheNetworkPlayerNames();
         
-        if (timerCoroutine != null)
+        // Initialize participant tracking for this match
+        participantsAtStart.Clear();
+        lastKnownPlayFabIds.Clear();
+        if (Photon.Pun.PhotonNetwork.InRoom)
         {
-            StopCoroutine(timerCoroutine);
+            foreach (var p in Photon.Pun.PhotonNetwork.PlayerList)
+            {
+                participantsAtStart.Add(p.ActorNumber);
+                if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_ID_KEY, out object id))
+                {
+                    lastKnownPlayFabIds[p.ActorNumber] = id.ToString();
+                }
+            }
         }
-        
+
         timerCoroutine = StartCoroutine(CountdownBeforeStart());
-        Debug.Log($"[GameManager] Starting '3, 2, 1' countdown before game timer...");
+        Debug.Log($"[GameManager] Starting match with {participantsAtStart.Count} players tracked for recovery.");
     }
     
     /// <summary>
@@ -470,14 +492,17 @@ public class GameManager : MonoBehaviour
             LobbyNetworkManager.Instance.MarkGameAsFinished();
         }
         
-        // Get rankings (top 3)
-        var rankings = GetRankings();
-
-        // Award prizes based on lobby configuration
-        AwardPrizes(rankings);
-        
-        // Show winner screen with rankings
-        ShowWinnerScreen(rankings);
+        // Get rankings with recovery logic for disconnected players
+        StartCoroutine(FetchDisconnectedPlayerScores(recoveredScores => {
+            // Get rankings (top 3) including missing players from PlayFab
+            var rankings = GetRankings(recoveredScores);
+            
+            // Award prizes based on lobby configuration
+            AwardPrizes(rankings);
+            
+            // Show winner screen with rankings
+            ShowWinnerScreen(rankings);
+        }));
     }
 
     /// <summary>
@@ -530,12 +555,29 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Called when a box is selected - updates outline image fill amounts
     /// </summary>
-    private void OnBoxSelected(int number, GameObject boxObject)
+    private void OnBoxSelected(NumberGrid grid, int number, GameObject boxObject)
     {
         UpdateOutlineFillAmounts();
 
-        // Update local score in Photon so other players can see progress
-        if (LobbyNetworkManager.Instance != null && playerNumberGrid != null)
+        // 1. Identify who this board belongs to
+        int ownerKey = -1; // Default to local player
+        if (grid != playerNumberGrid)
+        {
+            // Check CPUs
+            foreach (var kvp in cpuNumberGrids)
+            {
+                if (kvp.Value == grid) { ownerKey = kvp.Key; break; }
+            }
+            // If not local and not CPU, it could be a network grid? 
+            // In your current architecture, human opponents use scores from Photon properties instead of grids.
+        }
+
+        // 2. Record the time of this score achievement for tie-breakers
+        double currentTotalTime = PhotonNetwork.InRoom ? PhotonNetwork.Time : (double)Time.time;
+        playerLastScoreTime[ownerKey] = currentTotalTime;
+
+        // 3. Update local score in Photon (only if it's the local player's board)
+        if (ownerKey == -1 && LobbyNetworkManager.Instance != null)
         {
             Dictionary<string, int> playerSelectionCounts = playerNumberGrid.GetSelectionCounts();
             int currentScore = 0;
@@ -543,8 +585,39 @@ public class GameManager : MonoBehaviour
             {
                 currentScore += kvp.Value;
             }
-            LobbyNetworkManager.Instance.UpdateLocalPlayerScore(currentScore);
+            LobbyNetworkManager.Instance.UpdateLocalPlayerScore(currentScore, currentTotalTime);
+            
+            // 4. Sync to PlayFab with debounce to handle disconnect recovery
+            if (Time.time - lastPlayFabSyncTime > PLAYFAB_SYNC_DEBOUNCE)
+            {
+                lastPlayFabSyncTime = Time.time;
+                SyncMatchDataToPlayFab(currentScore, currentTotalTime);
+            }
         }
+    }
+
+    /// <summary>
+    /// Saves current match progress to PlayFab to ensure disconnected players 
+    /// are still visible on the winner screen.
+    /// </summary>
+    private void SyncMatchDataToPlayFab(int score, double timestamp)
+    {
+        if (PlayFabManager.Instance == null || !PlayFabManager.Instance.IsLoggedIn()) return;
+
+        var data = new Dictionary<string, string>
+        {
+            { PLAYFAB_MATCH_SCORE_KEY, score.ToString() },
+            { PLAYFAB_MATCH_TIME_KEY, timestamp.ToString("F2") }
+        };
+
+        PlayFab.PlayFabClientAPI.UpdateUserData(new PlayFab.ClientModels.UpdateUserDataRequest
+        {
+            Data = data,
+            Permission = PlayFab.ClientModels.UserDataPermission.Public
+        }, 
+        result => Debug.Log($"[GameManager] Score Checkpoint: {score} at {timestamp:F2}"),
+        error => Debug.LogWarning($"[GameManager] Failed to checkpoint score: {error.GenerateErrorReport()}")
+        );
     }
     
     /// <summary>
@@ -663,14 +736,17 @@ public class GameManager : MonoBehaviour
             LobbyNetworkManager.Instance.MarkGameAsFinished();
         }
 
-        // Get rankings (top 3) - based on individual board selection counts
-        var rankings = GetRankings();
-        
-        // Award prizes based on lobby configuration
-        AwardPrizes(rankings);
-        
-        // Show winner screen with rankings
-        ShowWinnerScreen(rankings);
+        // Get rankings with recovery logic for disconnected players
+        StartCoroutine(FetchDisconnectedPlayerScores(recoveredScores => {
+            // Get rankings (top 3) including missing players from PlayFab
+            var rankings = GetRankings(recoveredScores);
+            
+            // Award prizes based on lobby configuration
+            AwardPrizes(rankings);
+            
+            // Show winner screen with rankings
+            ShowWinnerScreen(rankings);
+        }));
     }
     
     /// <summary>
@@ -764,6 +840,113 @@ public class GameManager : MonoBehaviour
         // Do NOT show winner screen - player goes straight to lobby
         // Do NOT award prizes - player gets nothing for quitting
     }
+
+    /// <summary>
+    /// Fetches scores and achievement times from PlayFab for players who are no longer in the Photon room.
+    /// This ensures they still appear on the winner screen if they had a high score.
+    /// </summary>
+    private System.Collections.IEnumerator FetchDisconnectedPlayerScores(System.Action<Dictionary<int, (int score, double time)>> onComplete)
+    {
+        Dictionary<int, (int score, double time)> recoveredData = new Dictionary<int, (int score, double time)>();
+        
+        if (!PhotonNetwork.InRoom) {
+            onComplete?.Invoke(recoveredData);
+            yield break;
+        }
+
+        // 1. Get the list of all participants from Room Properties (saved at match start)
+        // Fallback to local participantsAtStart if room property is missing
+        Dictionary<int, string> missingPlayers = new Dictionary<int, string>();
+        
+        if (PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue("Participants", out object listObj))
+        {
+            string participantMapping = (string)listObj;
+            string[] mappingsArray = participantMapping.Split(',');
+            foreach (string m in mappingsArray)
+            {
+                string[] parts = m.Split(':');
+                if (parts.Length == 2 && int.TryParse(parts[0], out int actorNo))
+                {
+                    bool isStillPresent = false;
+                    foreach (var p in PhotonNetwork.PlayerList)
+                    {
+                        if (p.ActorNumber == actorNo) { isStillPresent = true; break; }
+                    }
+                    if (!isStillPresent) missingPlayers[actorNo] = parts[1];
+                }
+            }
+        }
+        else
+        {
+            // Room property missing, use our local cached list
+            foreach (int actorNo in participantsAtStart)
+            {
+                if (actorNo == PhotonNetwork.LocalPlayer.ActorNumber) continue;
+                
+                bool isStillPresent = false;
+                foreach (var p in PhotonNetwork.PlayerList)
+                {
+                    if (p.ActorNumber == actorNo) { isStillPresent = true; break; }
+                }
+                
+                if (!isStillPresent && lastKnownPlayFabIds.ContainsKey(actorNo))
+                {
+                    missingPlayers[actorNo] = lastKnownPlayFabIds[actorNo];
+                }
+            }
+        }
+
+        if (missingPlayers.Count == 0)
+        {
+            onComplete?.Invoke(recoveredData);
+            yield break;
+        }
+
+        // 3. Fetch missing players' data from PlayFab server
+        int pendingRequests = missingPlayers.Count;
+        foreach (var kvp in missingPlayers)
+        {
+            int actorNo = kvp.Key;
+            string pfId = kvp.Value;
+            
+            PlayFab.PlayFabClientAPI.GetUserData(new PlayFab.ClientModels.GetUserDataRequest
+            {
+                PlayFabId = pfId
+            }, 
+            result => {
+                int score = 0;
+                double time = 9999f; 
+
+                if (result.Data.ContainsKey(PLAYFAB_MATCH_SCORE_KEY))
+                    int.TryParse(result.Data[PLAYFAB_MATCH_SCORE_KEY].Value, out score);
+                
+                if (result.Data.ContainsKey(PLAYFAB_MATCH_TIME_KEY))
+                    double.TryParse(result.Data[PLAYFAB_MATCH_TIME_KEY].Value, out time);
+
+                // Populate caches for winner screen display
+                if (result.Data.ContainsKey(LobbyNetworkManager.PLAYER_NAME_KEY))
+                    cachedNetworkNames[actorNo] = result.Data[LobbyNetworkManager.PLAYER_NAME_KEY].Value;
+                
+                if (result.Data.ContainsKey(LobbyNetworkManager.PLAYER_AVATAR_KEY))
+                {
+                    if (int.TryParse(result.Data[LobbyNetworkManager.PLAYER_AVATAR_KEY].Value, out int idx))
+                        cachedNetworkAvatarIndices[actorNo] = idx;
+                }
+
+                recoveredData[actorNo] = (score, time);
+                pendingRequests--;
+            },
+            error => {
+                pendingRequests--;
+            });
+        }
+
+        // Wait for all async requests to complete
+        float fetchTimeout = Time.time + 3.0f; 
+        while (pendingRequests > 0 && Time.time < fetchTimeout) yield return null;
+        
+        onComplete?.Invoke(recoveredData);
+    }
     
     /// <summary>
     /// Gets the top 3 rankings from individual board selection counts
@@ -771,10 +954,10 @@ public class GameManager : MonoBehaviour
     /// Returns: List of tuples (PlayerType, cpuIndex, selectionCount) sorted by count (descending)
     /// Includes all players even if they have 0 selections
     /// </summary>
-    private List<(PlayerType playerType, int cpuIndex, int count)> GetRankings()
+    private List<(PlayerType playerType, int cpuIndex, int count, double time)> GetRankings(Dictionary<int, (int score, double time)> recoveredScores = null)
     {
         // Don't clear caches here anymore, they were populated at start of game
-        List<(PlayerType playerType, int cpuIndex, int count)> rankings = new List<(PlayerType, int, int)>();
+        List<(PlayerType playerType, int cpuIndex, int count, double time)> rankings = new List<(PlayerType, int, int, double)>();
         
         // Count player's selections from their own board
         int playerCount = 0;
@@ -786,66 +969,65 @@ public class GameManager : MonoBehaviour
                 playerCount += kvp.Value;
             }
         }
-        rankings.Add((PlayerType.Player, -1, playerCount));
+        double playerTime = playerLastScoreTime.ContainsKey(-1) ? playerLastScoreTime[-1] : (double)Time.time;
+        rankings.Add((PlayerType.Player, -1, playerCount, playerTime));
         
         // Add network players if in a room
         if (Photon.Pun.PhotonNetwork.InRoom)
         {
+            // First, track which participants we already see in the CurrentRoom
+            HashSet<int> seenActors = new HashSet<int>();
+
             foreach (var p in Photon.Pun.PhotonNetwork.PlayerListOthers)
             {
                 int score = 0;
+                double time = 0;
                 if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_SCORE_KEY, out object scoreObj))
                 {
                     score = (int)scoreObj;
                 }
+                if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_SCORE_TIME_KEY, out object timeObj))
+                {
+                    time = (double)timeObj;
+                }
                 
-                // Cache info before session ends
+                // Cache info
                 int actorNo = p.ActorNumber;
+                seenActors.Add(actorNo);
                 if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_NAME_KEY, out object nameObj))
                 {
                     cachedNetworkNames[actorNo] = (string)nameObj;
                 }
-                
-                // Also cache avatar index here to ensure it's captured before anyone leaves
                 if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_AVATAR_KEY, out object avatarIdxObj))
                 {
                     cachedNetworkAvatarIndices[actorNo] = (int)avatarIdxObj;
                 }
-                else if (!string.IsNullOrEmpty(p.NickName))
-                {
-                    cachedNetworkNames[actorNo] = p.NickName;
-                }
                 
-                // Cache Custom Image if available
-                if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_CUSTOM_IMAGE_KEY, out object imageDataObj))
+                rankings.Add((PlayerType.Player, -p.ActorNumber - 100, score, time));
+            }
+
+            // RECOVERY: Add players who were in the match but aren't here anymore
+            if (recoveredScores != null)
+            {
+                foreach (var kvp in recoveredScores)
                 {
-                    byte[] bytes = (byte[])imageDataObj;
-                    Texture2D tex = new Texture2D(2, 2);
-                    if (tex.LoadImage(bytes))
+                    if (!seenActors.Contains(kvp.Key))
                     {
-                        Sprite s = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
-                        cachedNetworkAvatars[actorNo] = s;
-                        Debug.Log($"[GameManager] Cached high-quality custom avatar for player {actorNo}");
+                        // kvp.Key is ActorNumber, kvp.Value is (score, time)
+                        rankings.Add((PlayerType.Player, -kvp.Key - 100, kvp.Value.score, kvp.Value.time));
+                        Debug.Log($"[GameManager] Including disconnected player {kvp.Key} in rankings using recovered data.");
                     }
                 }
-                
-                // Use a negative index offset by 100 to uniquely identify network players in the ranking list
-                rankings.Add((PlayerType.Player, -p.ActorNumber - 100, score));
             }
         }
         
         // Count each CPU's selections from their own board
         if (currentLobbyConfig != null)
         {
-            int numberOfCPUsToCount = currentLobbyConfig.GetNumberOfCPUs();
-            // If we are in network mode, the number of CPUs might be overridden
-            // We should use the actual spawned CPU count
-            int actualCPUs = cpuNumberGrids.Count;
-            
-            for (int i = 0; i < actualCPUs; i++)
+            for (int i = 0; i < currentLobbyConfig.GetNumberOfCPUs(); i++)
             {
                 int cpuCount = 0;
-                if (cpuNumberGrids.ContainsKey(i) && cpuNumberGrids[i] != null)
+                if (cpuNumberGrids.ContainsKey(i))
                 {
                     Dictionary<string, int> cpuSelectionCounts = cpuNumberGrids[i].GetSelectionCounts();
                     foreach (var kvp in cpuSelectionCounts)
@@ -853,12 +1035,51 @@ public class GameManager : MonoBehaviour
                         cpuCount += kvp.Value;
                     }
                 }
-                rankings.Add((PlayerType.CPU, i, cpuCount));
+                double cpuTime = playerLastScoreTime.ContainsKey(i) ? playerLastScoreTime[i] : (double)Time.time;
+                rankings.Add((PlayerType.CPU, i, cpuCount, cpuTime));
+            }
+        }
+
+        // RECOVERY FALLBACK: Ensure EVERYONE who started the match is in the rankings
+        // If recovery didn't find them and they are not in the room, add them with 0
+        if (Photon.Pun.PhotonNetwork.InRoom)
+        {
+            foreach (int actorNo in participantsAtStart)
+            {
+                if (actorNo == Photon.Pun.PhotonNetwork.LocalPlayer.ActorNumber) continue;
+                
+                bool alreadyInRankings = false;
+                foreach (var r in rankings)
+                {
+                    // Network human indexes are stored as -actorNumber - 100
+                    if (r.playerType == PlayerType.Player && r.cpuIndex == -actorNo - 100)
+                    {
+                        alreadyInRankings = true;
+                        break;
+                    }
+                }
+                
+                if (!alreadyInRankings)
+                {
+                    // Player was at start but missing now. Add with 0 score.
+                    rankings.Add((PlayerType.Player, -actorNo - 100, 0, 9999.0));
+                    Debug.Log($"[GameManager] Adding silent placeholder for disconnected player {actorNo} to keep podium full.");
+                }
             }
         }
         
-        // Sort by count (descending)
-        rankings.Sort((a, b) => b.count.CompareTo(a.count));
+        // Final Sort: 
+        // 1. By Count (descending)
+        // 2. By Time (ascending) - the one who achieved the score EARLIER wins the tie
+        rankings.Sort((a, b) => {
+            int scoreCompare = b.count.CompareTo(a.count);
+            if (scoreCompare == 0)
+            {
+                // Tie-break: earlier time is better
+                return a.time.CompareTo(b.time);
+            }
+            return scoreCompare;
+        });
         
         // Return top 3 (or less if there are fewer players)
         return rankings.Count > 3 ? rankings.GetRange(0, 3) : rankings;
@@ -867,7 +1088,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Shows the winner screen with 1st, 2nd, and 3rd place information
     /// </summary>
-    private void ShowWinnerScreen(List<(PlayerType playerType, int cpuIndex, int count)> rankings)
+    private void ShowWinnerScreen(List<(PlayerType playerType, int cpuIndex, int count, double time)> rankings)
     {
         if (winnerScreen == null)
         {
@@ -1053,7 +1274,11 @@ public class GameManager : MonoBehaviour
             
             if (winnerScreenScript != null)
             {
-                winnerScreenScript.PlayAnimationIfPlayerInTop3(rankings, configForAnimation);
+                // Convert 4-tuple rankings to 3-tuple for existing UI methods
+                List<(PlayerType, int, int)> uiRankings = new List<(PlayerType, int, int)>();
+                foreach (var r in rankings) uiRankings.Add((r.playerType, r.cpuIndex, r.count));
+                
+                winnerScreenScript.PlayAnimationIfPlayerInTop3(uiRankings, configForAnimation);
             }
             else
             {
@@ -2072,6 +2297,9 @@ public class GameManager : MonoBehaviour
         
         // Clear current lobby config (will be set when new game starts)
         currentLobbyConfig = null;
+        participantsAtStart.Clear();
+        lastKnownPlayFabIds.Clear();
+        playerRecoveryData.Clear();
         
         // Reset outline fill amounts
         ResetOutlineFillAmounts();
@@ -2347,7 +2575,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Awards prizes based on current lobby configuration and player rankings
     /// </summary>
-    private void AwardPrizes(List<(PlayerType playerType, int cpuIndex, int count)> rankings)
+    private void AwardPrizes(List<(PlayerType playerType, int cpuIndex, int count, double time)> rankings)
     {
         if (currentLobbyConfig == null)
         {
@@ -2388,7 +2616,7 @@ public class GameManager : MonoBehaviour
                         chipsPrize = currentLobbyConfig.thirdPlaceChips;
                         break;
                 }
-                
+
                 // Award cash prize
                 if (cashPrize > 0f)
                 {
@@ -2400,21 +2628,9 @@ public class GameManager : MonoBehaviour
                 if (chipsPrize > 0)
                 {
                     PlayFabManager.Instance.AddCoins(chipsPrize);
-                    Debug.Log($"[GameManager] Awarded {chipsPrize} chips to LOCAL player for {i + 1}st place");
+                    Debug.Log($"[GameManager] Awarded {chipsPrize} coins to LOCAL player for {i + 1}st place");
                 }
             }
-        }
-        
-        // Don't update UI displays here - let WinnerScreen animation handle the count-up
-        // The UI will be updated by WinnerScreen during the animation
-        
-        // Refresh lobby play buttons in case player can now afford lobbies they couldn't before
-        // (This will happen after animation completes)
-        LobbyManager lobbyManager = FindObjectOfType<LobbyManager>();
-        if (lobbyManager != null)
-        {
-            // Delay refresh until after animation completes
-            StartCoroutine(RefreshLobbyButtonsDelayed());
         }
     }
     
