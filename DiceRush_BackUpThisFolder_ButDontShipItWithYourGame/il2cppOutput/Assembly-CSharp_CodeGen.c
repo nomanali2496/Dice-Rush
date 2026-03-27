@@ -990,9 +990,9 @@ extern void U3CU3Ec_U3CGetRankingsU3Eb__88_0_m91E23240A85F296EC05F4B781089B9188F
 extern void U3CU3Ec__DisplayClass82_0__ctor_m16F8FE8DB2365EF538BAB4FF65E645920C402B23 (void);
 extern void U3CU3Ec__DisplayClass82_0_U3CSyncMatchDataToPlayFabU3Eb__0_m9C93299FF5208F8D84D8F2CB3B8EF95D37D175AD (void);
 extern void U3CU3Ec__DisplayClass87_0__ctor_m1DDCB20DA361D957005DFB8B2B886CD394F4C18C (void);
-extern void U3CU3Ec__DisplayClass87_0_U3CFetchDisconnectedPlayerScoresU3Eb__1_mDB24ABA7ACAFF669771F92EB8B03C555F792FFC5 (void);
 extern void U3CU3Ec__DisplayClass87_1__ctor_m21DE8494B8DA0BF27593D24CC37E3C2DE6F6531D (void);
 extern void U3CU3Ec__DisplayClass87_1_U3CFetchDisconnectedPlayerScoresU3Eb__0_mA0D11BBE60030B8DC2CAED0D68C280BBE04FD00A (void);
+extern void U3CU3Ec__DisplayClass87_1_U3CFetchDisconnectedPlayerScoresU3Eb__1_m7BA668DD95BD1D4364C286EEFA2E2D9C1B7B40F5 (void);
 extern void U3CConfigureCPUsAfterDelayU3Ed__118__ctor_mAB8CDF31B865785438CA767BDEA34050B905BF92 (void);
 extern void U3CConfigureCPUsAfterDelayU3Ed__118_System_IDisposable_Dispose_m8171E5CE73576A2738DE0C2FAD19CADE3C5D6DF4 (void);
 extern void U3CConfigureCPUsAfterDelayU3Ed__118_MoveNext_m3ADBC37B3FE446A6A50AB1D1631C61100CD0EA3A (void);
@@ -1369,6 +1369,7 @@ extern void LobbyNetworkManager_OnJoinedLobby_m568F2801ED3BC944D77F29AB6CE8280A8
 extern void LobbyNetworkManager_JoinLobbyRoom_m4332A9AFD6922E57D2A00A03AC80306D0156E587 (void);
 extern void LobbyNetworkManager_WaitAndJoinRoom_m2DDFA2810CC732E1137FC1D07DC180DD17B9D071 (void);
 extern void LobbyNetworkManager_OnJoinedRoom_mDC77D32742B1F5DFB18EBA0F6C81D4858F9F4C15 (void);
+extern void LobbyNetworkManager_SyncPlayFabIdToPhoton_m530580F610392DC2E9055B33DC9612301DCF0E3C (void);
 extern void LobbyNetworkManager_SyncCurrentProfileToPhoton_mCC248A2607EA892B247FEE109B1968A6B6D62C87 (void);
 extern void LobbyNetworkManager_MarkGameAsFinished_m22F78FD22838B26BB28C7AAB50F436B21D22EE1D (void);
 extern void LobbyNetworkManager_CompressAvatarTexture_mEFEE999C094F4E3E24FB70A41A27BB14AEAC001D (void);
@@ -1382,6 +1383,7 @@ extern void LobbyNetworkManager_OnPlayerPropertiesUpdate_mFD44A94758FFE4096DD7C1
 extern void LobbyNetworkManager_UpdateWaitingStatus_m256AA80308ECE72095FF47E834EA34579C7CBD46 (void);
 extern void LobbyNetworkManager_CheckIfRoomFull_mA21DE997DE48EDDD3189475D25A49862720039EB (void);
 extern void LobbyNetworkManager_StartMultiplayerGame_m69490BB8953A4094CB1B9A9C1670259EDEF7050D (void);
+extern void LobbyNetworkManager_WriteParticipantsDelayed_m2D0ACD954A0FAB2A8886E4F59E02605A17B5FD2D (void);
 extern void LobbyNetworkManager_OnCancelWaiting_m4DC1E9D0206B198AC99A5B1E3CFD3D0778071513 (void);
 extern void LobbyNetworkManager_OnLeftRoom_m1418296F8EB26C5022E861E1454CA01725C023A3 (void);
 extern void LobbyNetworkManager__ctor_m6E72DA9F433DCB3C6DBAF5791C6CE5CC10E77C1A (void);
@@ -1391,6 +1393,12 @@ extern void U3CWaitAndJoinRoomU3Ed__13_MoveNext_m21D31434CB93E95C3FF1BB7650CD15C
 extern void U3CWaitAndJoinRoomU3Ed__13_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD6FA2358E5AB85640E90850784711B7A00554541 (void);
 extern void U3CWaitAndJoinRoomU3Ed__13_System_Collections_IEnumerator_Reset_mFAE41E4BB14CC70796C9BC121CB251A8D5EA9670 (void);
 extern void U3CWaitAndJoinRoomU3Ed__13_System_Collections_IEnumerator_get_Current_m995E6A9F7C5EE84CC6497E8A586C3780458C75FD (void);
+extern void U3CWriteParticipantsDelayedU3Ed__41__ctor_m74CB832C3C374507D50B9584708DF0CE9A1F3664 (void);
+extern void U3CWriteParticipantsDelayedU3Ed__41_System_IDisposable_Dispose_mC3503369BCB897D8CB43612CCE3357306ABC4142 (void);
+extern void U3CWriteParticipantsDelayedU3Ed__41_MoveNext_mF5AAD99E273A9693AC60F5AE0ABBADA0991B29C4 (void);
+extern void U3CWriteParticipantsDelayedU3Ed__41_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m640DB17603C5927A5798D569711D173EE17BB3D7 (void);
+extern void U3CWriteParticipantsDelayedU3Ed__41_System_Collections_IEnumerator_Reset_m222820D9E0E530B262C772D2D0A131EF49840D4A (void);
+extern void U3CWriteParticipantsDelayedU3Ed__41_System_Collections_IEnumerator_get_Current_m8FE9FF0C6EE0FA420F348FE4DEA7A50FE3346381 (void);
 extern void LobbyRowCellView_Awake_m7A1E2E3CCB13DE5F0E111CDB9D9F9F3B50E59C53 (void);
 extern void LobbyRowCellView_OnDestroy_m74556A0063CC7CCF32D0A3A196B0DA59058A605A (void);
 extern void LobbyRowCellView_SetData_mA1502C7FD4C96D764E382654A27388D1A43B84D0 (void);
@@ -3036,7 +3044,7 @@ extern void Serializer_SerializeObject_mEE17BC69DDCF30AD22C910401562491ADABE5426
 extern void Serializer_SerializeArray_mD635B32B9406AF9608B71640F32C16AB828138BB (void);
 extern void Serializer_SerializeString_mB658D7F56B6D171FE905FE62A98E59DAC6050BDB (void);
 extern void Serializer_SerializeOther_m5A394D1B6C91B809DFBF69B4F3B9FAE531853841 (void);
-static Il2CppMethodPointer s_methodPointers[3053] = 
+static Il2CppMethodPointer s_methodPointers[3061] = 
 {
 	Branch_initSession_mA094BFC68D86105527AF4192E91D67F941F6652D,
 	Branch_initSession_mE08C2916193D182CE7ABD85BA63A2A5A30C67FEC,
@@ -4021,9 +4029,9 @@ static Il2CppMethodPointer s_methodPointers[3053] =
 	U3CU3Ec__DisplayClass82_0__ctor_m16F8FE8DB2365EF538BAB4FF65E645920C402B23,
 	U3CU3Ec__DisplayClass82_0_U3CSyncMatchDataToPlayFabU3Eb__0_m9C93299FF5208F8D84D8F2CB3B8EF95D37D175AD,
 	U3CU3Ec__DisplayClass87_0__ctor_m1DDCB20DA361D957005DFB8B2B886CD394F4C18C,
-	U3CU3Ec__DisplayClass87_0_U3CFetchDisconnectedPlayerScoresU3Eb__1_mDB24ABA7ACAFF669771F92EB8B03C555F792FFC5,
 	U3CU3Ec__DisplayClass87_1__ctor_m21DE8494B8DA0BF27593D24CC37E3C2DE6F6531D,
 	U3CU3Ec__DisplayClass87_1_U3CFetchDisconnectedPlayerScoresU3Eb__0_mA0D11BBE60030B8DC2CAED0D68C280BBE04FD00A,
+	U3CU3Ec__DisplayClass87_1_U3CFetchDisconnectedPlayerScoresU3Eb__1_m7BA668DD95BD1D4364C286EEFA2E2D9C1B7B40F5,
 	U3CConfigureCPUsAfterDelayU3Ed__118__ctor_mAB8CDF31B865785438CA767BDEA34050B905BF92,
 	U3CConfigureCPUsAfterDelayU3Ed__118_System_IDisposable_Dispose_m8171E5CE73576A2738DE0C2FAD19CADE3C5D6DF4,
 	U3CConfigureCPUsAfterDelayU3Ed__118_MoveNext_m3ADBC37B3FE446A6A50AB1D1631C61100CD0EA3A,
@@ -4400,6 +4408,7 @@ static Il2CppMethodPointer s_methodPointers[3053] =
 	LobbyNetworkManager_JoinLobbyRoom_m4332A9AFD6922E57D2A00A03AC80306D0156E587,
 	LobbyNetworkManager_WaitAndJoinRoom_m2DDFA2810CC732E1137FC1D07DC180DD17B9D071,
 	LobbyNetworkManager_OnJoinedRoom_mDC77D32742B1F5DFB18EBA0F6C81D4858F9F4C15,
+	LobbyNetworkManager_SyncPlayFabIdToPhoton_m530580F610392DC2E9055B33DC9612301DCF0E3C,
 	LobbyNetworkManager_SyncCurrentProfileToPhoton_mCC248A2607EA892B247FEE109B1968A6B6D62C87,
 	LobbyNetworkManager_MarkGameAsFinished_m22F78FD22838B26BB28C7AAB50F436B21D22EE1D,
 	LobbyNetworkManager_CompressAvatarTexture_mEFEE999C094F4E3E24FB70A41A27BB14AEAC001D,
@@ -4413,6 +4422,7 @@ static Il2CppMethodPointer s_methodPointers[3053] =
 	LobbyNetworkManager_UpdateWaitingStatus_m256AA80308ECE72095FF47E834EA34579C7CBD46,
 	LobbyNetworkManager_CheckIfRoomFull_mA21DE997DE48EDDD3189475D25A49862720039EB,
 	LobbyNetworkManager_StartMultiplayerGame_m69490BB8953A4094CB1B9A9C1670259EDEF7050D,
+	LobbyNetworkManager_WriteParticipantsDelayed_m2D0ACD954A0FAB2A8886E4F59E02605A17B5FD2D,
 	LobbyNetworkManager_OnCancelWaiting_m4DC1E9D0206B198AC99A5B1E3CFD3D0778071513,
 	LobbyNetworkManager_OnLeftRoom_m1418296F8EB26C5022E861E1454CA01725C023A3,
 	LobbyNetworkManager__ctor_m6E72DA9F433DCB3C6DBAF5791C6CE5CC10E77C1A,
@@ -4422,6 +4432,12 @@ static Il2CppMethodPointer s_methodPointers[3053] =
 	U3CWaitAndJoinRoomU3Ed__13_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD6FA2358E5AB85640E90850784711B7A00554541,
 	U3CWaitAndJoinRoomU3Ed__13_System_Collections_IEnumerator_Reset_mFAE41E4BB14CC70796C9BC121CB251A8D5EA9670,
 	U3CWaitAndJoinRoomU3Ed__13_System_Collections_IEnumerator_get_Current_m995E6A9F7C5EE84CC6497E8A586C3780458C75FD,
+	U3CWriteParticipantsDelayedU3Ed__41__ctor_m74CB832C3C374507D50B9584708DF0CE9A1F3664,
+	U3CWriteParticipantsDelayedU3Ed__41_System_IDisposable_Dispose_mC3503369BCB897D8CB43612CCE3357306ABC4142,
+	U3CWriteParticipantsDelayedU3Ed__41_MoveNext_mF5AAD99E273A9693AC60F5AE0ABBADA0991B29C4,
+	U3CWriteParticipantsDelayedU3Ed__41_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m640DB17603C5927A5798D569711D173EE17BB3D7,
+	U3CWriteParticipantsDelayedU3Ed__41_System_Collections_IEnumerator_Reset_m222820D9E0E530B262C772D2D0A131EF49840D4A,
+	U3CWriteParticipantsDelayedU3Ed__41_System_Collections_IEnumerator_get_Current_m8FE9FF0C6EE0FA420F348FE4DEA7A50FE3346381,
 	LobbyRowCellView_Awake_m7A1E2E3CCB13DE5F0E111CDB9D9F9F3B50E59C53,
 	LobbyRowCellView_OnDestroy_m74556A0063CC7CCF32D0A3A196B0DA59058A605A,
 	LobbyRowCellView_SetData_mA1502C7FD4C96D764E382654A27388D1A43B84D0,
@@ -6092,7 +6108,7 @@ static Il2CppMethodPointer s_methodPointers[3053] =
 	Serializer_SerializeString_mB658D7F56B6D171FE905FE62A98E59DAC6050BDB,
 	Serializer_SerializeOther_m5A394D1B6C91B809DFBF69B4F3B9FAE531853841,
 };
-static const int32_t s_InvokerIndices[3053] = 
+static const int32_t s_InvokerIndices[3061] = 
 {
 	27032,
 	27032,
@@ -7077,8 +7093,8 @@ static const int32_t s_InvokerIndices[3053] =
 	16518,
 	12619,
 	16518,
-	12619,
 	16518,
+	12619,
 	12619,
 	12555,
 	16518,
@@ -7456,6 +7472,7 @@ static const int32_t s_InvokerIndices[3053] =
 	12619,
 	10874,
 	16518,
+	16518,
 	12619,
 	16518,
 	10874,
@@ -7469,9 +7486,16 @@ static const int32_t s_InvokerIndices[3053] =
 	16518,
 	16518,
 	16518,
+	16278,
 	16518,
 	16518,
 	16518,
+	12555,
+	16518,
+	16074,
+	16278,
+	16518,
+	16278,
 	12555,
 	16518,
 	16074,
@@ -9150,12 +9174,12 @@ static const int32_t s_InvokerIndices[3053] =
 };
 static const Il2CppTokenRangePair s_rgctxIndices[6] = 
 {
-	{ 0x0200015F, { 12, 8 } },
-	{ 0x060005AD, { 0, 4 } },
-	{ 0x060005AE, { 4, 3 } },
-	{ 0x060005AF, { 7, 5 } },
-	{ 0x06000AB4, { 20, 3 } },
-	{ 0x06000AD3, { 23, 3 } },
+	{ 0x02000160, { 12, 8 } },
+	{ 0x060005B5, { 0, 4 } },
+	{ 0x060005B6, { 4, 3 } },
+	{ 0x060005B7, { 7, 5 } },
+	{ 0x06000ABC, { 20, 3 } },
+	{ 0x06000ADB, { 23, 3 } },
 };
 extern const uint32_t g_rgctx_T_t8C0EC4E6A28998AEF990D24C5045CD8DAEC7CE27;
 extern const uint32_t g_rgctx_GameObject_GetComponent_TisT_t8C0EC4E6A28998AEF990D24C5045CD8DAEC7CE27_m6F00BBCCD33F37575CAA88D74342A9BB172E7394;
@@ -9216,7 +9240,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	3053,
+	3061,
 	s_methodPointers,
 	0,
 	NULL,

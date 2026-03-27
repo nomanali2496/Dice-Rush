@@ -148,19 +148,37 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
         hasSyncedProfile = false; // Reset sync flag for new room session
         lastJoinTimeLocal = Time.timeAsDouble; // Store local join time to prevent ghost timers
 
-        // If we are the Master Client, set the start time for the countdown
-        if (PhotonNetwork.IsMasterClient)
-        {
-            ExitGames.Client.Photon.Hashtable props = new ExitGames.Client.Photon.Hashtable();
-            props.Add(START_TIME_KEY, PhotonNetwork.Time);
-            PhotonNetwork.CurrentRoom.SetCustomProperties(props);
-        }
+        // NOTE: Matchmaking countdown removed - game only starts when room is full of real human players.
 
-        // Try to sync initially (might be empty if still loading data)
+        // CRITICAL: Immediately sync PlayFabId as a tiny standalone property the moment we enter
+        // the room. This runs BEFORE the full profile sync so that other players (and the Master
+        // Client building the Participants list) always see our PlayFabId even if our full profile
+        // data is still loading from PlayFab.
+        SyncPlayFabIdToPhoton();
+
+        // Try to sync full profile (might be empty if still loading data)
         SyncCurrentProfileToPhoton();
 
         UpdateWaitingStatus();
         CheckIfRoomFull();
+    }
+
+    /// <summary>
+    /// Sends only the PlayFabId to Photon immediately. This is a tiny packet that is guaranteed
+    /// to arrive well before any larger profile sync. Called straight from OnJoinedRoom.
+    /// </summary>
+    private void SyncPlayFabIdToPhoton()
+    {
+        if (!PhotonNetwork.InRoom) return;
+        if (PlayFabManager.Instance == null || PlayFabManager.Instance.currentPlayerData == null) return;
+
+        string pfId = PlayFabManager.Instance.currentPlayerData.playFabId;
+        if (string.IsNullOrEmpty(pfId)) return;
+
+        ExitGames.Client.Photon.Hashtable idProp = new ExitGames.Client.Photon.Hashtable();
+        idProp.Add(PLAYER_ID_KEY, pfId);
+        PhotonNetwork.LocalPlayer.SetCustomProperties(idProp);
+        Debug.Log($"[LobbyNetworkManager] ✅ PlayFabId sent immediately on room join: {pfId}");
     }
 
     private bool hasSyncedProfile = false;
@@ -334,34 +352,12 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
             if (!isStarting)
             {
                 UpdateWaitingStatus();
-                CheckMatchmakingTimer();
             }
         }
     }
 
-    private void CheckMatchmakingTimer()
-    {
-        if (PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(START_TIME_KEY, out object startTimeObj))
-        {
-            double startTime = (double)startTimeObj;
-            double elapsedTime = PhotonNetwork.Time - startTime;
-            double remainingTime = MATCHMAKING_TIMEOUT - elapsedTime;
-
-            if (remainingTime <= 0)
-            {
-                // Safety check: Avoid "Ghost Timers" from recycled rooms
-                // If we joined less than 1.5 seconds ago, the START_TIME_KEY might still be the old value
-                // from a previous game in the same (recycled) room.
-                if (Time.timeAsDouble - lastJoinTimeLocal < 1.5)
-                {
-                    return; 
-                }
-
-                Debug.Log("[LobbyNetworkManager] Matchmaking timeout reached! Starting with current players.");
-                StartMultiplayerGame();
-            }
-        }
-    }
+    // Matchmaking timer removed - game now only starts when full.
+    private void CheckMatchmakingTimer() { }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
@@ -426,15 +422,8 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
             int current = PhotonNetwork.CurrentRoom.PlayerCount;
             int max = PhotonNetwork.CurrentRoom.MaxPlayers;
             
-            string timerPrefix = "";
-            if (PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(START_TIME_KEY, out object startTimeObj))
-            {
-                double startTime = (double)startTimeObj;
-                double remainingTime = Mathf.Max(0, (float)(MATCHMAKING_TIMEOUT - (PhotonNetwork.Time - startTime)));
-                timerPrefix = $"Starting in {Mathf.CeilToInt((float)remainingTime)}s...\n";
-            }
-
-            statusText.text = $"{timerPrefix}Players: {current}/{max}";
+            // No timer - showing count only
+            statusText.text = $"Waiting for players...\nPlayers: {current}/{max}";
         }
     }
 
@@ -457,37 +446,70 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
         LobbyManager lobbyManager = FindObjectOfType<LobbyManager>();
         if (lobbyManager != null && currentSelectedConfig != null)
         {
-            // Determine how many CPUs we need to fill the remaining slots
+            // No CPUs functionality: only real humans.
             int humanPlayers = PhotonNetwork.CurrentRoom.PlayerCount;
-            int totalSlots = currentSelectedConfig.numberOfPlayers;
-            int neededCPUs = Mathf.Max(0, totalSlots - humanPlayers);
+            int neededCPUs = 0; // Forced to zero per user request
 
-            Debug.Log($"[LobbyNetworkManager] Starting game with {humanPlayers} humans and {neededCPUs} CPUs");
-            
-            // Set the game start time and Participants list in room properties (only Master Client)
+            Debug.Log($"[LobbyNetworkManager] Starting game with {humanPlayers} humans. No CPUs allowed.");
+
+            // Set the official game start time in room properties (only Master Client)
+            // This ensures all clients start their match timers from the exact same network timestamp.
             if (PhotonNetwork.IsMasterClient)
             {
-                ExitGames.Client.Photon.Hashtable props = new ExitGames.Client.Photon.Hashtable();
-                props.Add(GAME_START_TIME_KEY, PhotonNetwork.Time);
-                
-                // Store ActorNumber:PlayFabId mapping for all players present at start
-                List<string> mappings = new List<string>();
-                foreach (var p in PhotonNetwork.PlayerList)
-                {
-                    if (p.CustomProperties.TryGetValue(PLAYER_ID_KEY, out object pfId))
-                    {
-                        mappings.Add($"{p.ActorNumber}:{pfId}");
-                    }
-                }
-                props.Add("Participants", string.Join(",", mappings));
-                
-                PhotonNetwork.CurrentRoom.SetCustomProperties(props);
-                Debug.Log($"[LobbyNetworkManager] Master Client set {GAME_START_TIME_KEY} and Participants mapping.");
+                ExitGames.Client.Photon.Hashtable startTimeProp = new ExitGames.Client.Photon.Hashtable();
+                startTimeProp.Add(GAME_START_TIME_KEY, PhotonNetwork.Time);
+                PhotonNetwork.CurrentRoom.SetCustomProperties(startTimeProp);
+                Debug.Log($"[LobbyNetworkManager] Master Client set {GAME_START_TIME_KEY} to {PhotonNetwork.Time}");
             }
-
-            // Pass the number of CPUs needed to the LobbyManager
+            
+            // Pass the number of CPUs needed to the LobbyManager first (start the game visually)
             lobbyManager.StartGameFromNetwork(currentSelectedConfig.lobbyIndex, neededCPUs);
+
+            // Delay writing the Participants list so every player has had time to push their
+            // PlayFabId to Photon. Without this delay the Master Client may record NOID placeholders
+            // for players whose PlayFab data was still loading, making disconnect recovery impossible.
+            StartCoroutine(WriteParticipantsDelayed());
         }
+    }
+
+    /// <summary>
+    /// Writes the Participants room property after a short delay to ensure all players'
+    /// PlayFabIds have propagated through Photon before the list is saved.
+    /// </summary>
+    private System.Collections.IEnumerator WriteParticipantsDelayed()
+    {
+        // Wait 1.5 seconds: enough for PlayFabId properties to arrive on the Master Client
+        // from all connected players even on slow mobile connections.
+        yield return new WaitForSeconds(1.5f);
+
+        if (!PhotonNetwork.InRoom || !PhotonNetwork.IsMasterClient) yield break;
+
+            
+        ExitGames.Client.Photon.Hashtable props = new ExitGames.Client.Photon.Hashtable();
+
+        // Store ActorNumber:PlayFabId mapping for ALL players present at start.
+        // Thanks to SyncPlayFabIdToPhoton() + the 1.5s delay, most players will have
+        // their real PlayFabId here. NOID is the last-resort fallback.
+        List<string> mappings = new List<string>();
+        foreach (var p in PhotonNetwork.PlayerList)
+        {
+            if (p.CustomProperties.TryGetValue(PLAYER_ID_KEY, out object pfId) && pfId != null && !string.IsNullOrEmpty(pfId.ToString()))
+            {
+                mappings.Add($"{p.ActorNumber}:{pfId}");
+                Debug.Log($"[LobbyNetworkManager] Participants: Actor {p.ActorNumber} ({p.NickName}) → PlayFabId {pfId}");
+            }
+            else
+            {
+                mappings.Add($"{p.ActorNumber}:NOID_{p.ActorNumber}");
+                Debug.LogWarning($"[LobbyNetworkManager] Participants: Actor {p.ActorNumber} ({p.NickName}) has no PlayFabId after delay — using NOID placeholder.");
+            }
+        }
+        props.Add("Participants", string.Join(",", mappings));
+        // NOTE: Do NOT re-write GAME_START_TIME_KEY here — it was already written at game start
+        // and overwriting it 1.5s later would desync the timer on all clients.
+
+        PhotonNetwork.CurrentRoom.SetCustomProperties(props);
+        Debug.Log($"[LobbyNetworkManager] Participants list written after delay: {string.Join(" | ", mappings)}");
     }
 
     private void OnCancelWaiting()

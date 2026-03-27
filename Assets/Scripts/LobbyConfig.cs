@@ -49,11 +49,11 @@ public class LobbyConfig
     }
     
     /// <summary>
-    /// Gets the number of CPUs (total players - 1 for the player)
+    /// Now returns 0 as CPU functionality has been removed.
     /// </summary>
     public int GetNumberOfCPUs()
     {
-        return Mathf.Max(0, numberOfPlayers - 1);
+        return 0; // Forced to zero per user request
     }
 }
 
