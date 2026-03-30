@@ -13452,9 +13452,9 @@ MonoBehaviour:
     lobbyName: Combo Dice
     entryFeeCash: 5
     entryFeeChips: 0
-    firstPlaceCash: 7
+    firstPlaceCash: 55
     firstPlaceChips: 0
-    secondPlaceCash: 0.5
+    secondPlaceCash: 20
     secondPlaceChips: 0
     thirdPlaceCash: 0
     thirdPlaceChips: 0

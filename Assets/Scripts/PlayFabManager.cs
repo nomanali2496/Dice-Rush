@@ -19,6 +19,12 @@ public class PlayFabManager : MonoBehaviour
     public Action<bool> OnRegisterComplete;
     public Action<PlayerData> OnPlayerDataLoaded;
     public Action<bool> OnPlayerDataSaved;
+    public Action<string, float, int> OnRewardClaimed; // Action when a pending reward is claimed
+    
+    // Reward keys
+    public const string PENDING_CASH_KEY = "PendingCashReward";
+    public const string PENDING_CHIPS_KEY = "PendingChipsReward";
+    public const string PENDING_MSG_KEY = "PendingRewardMessage";
     
     private string playFabId;
     private bool isLoggedIn = false;
@@ -790,6 +796,9 @@ public class PlayFabManager : MonoBehaviour
             }
             
             Debug.Log($"[PlayFabManager] Final data - Name: {currentPlayerData.playerName}, Cash: {currentPlayerData.cash}, Coins: {currentPlayerData.coins}, Avatar: {currentPlayerData.selectedAvatarIndex}, Background: {currentPlayerData.selectedBackgroundIndex}");
+
+            // Check for any rewards won while away (Match disconnection recovery)
+            CheckForPendingRewards(result);
         }
         else
         {
@@ -827,8 +836,59 @@ public class PlayFabManager : MonoBehaviour
         Debug.LogError("Failed to load player data: " + error.GenerateErrorReport());
     }
     
+    /// <summary>
+    /// Checks if there are any rewards waiting to be claimed globally (from matches won while away)
+    /// </summary>
+    private void CheckForPendingRewards(GetUserDataResult result)
+    {
+        if (result.Data == null) return;
+
+        bool hasCash = result.Data.ContainsKey(PENDING_CASH_KEY);
+        bool hasChips = result.Data.ContainsKey(PENDING_CHIPS_KEY);
+
+        if (hasCash || hasChips)
+        {
+            float cashVal = 0;
+            int chipVal = 0;
+            string msg = "You won rewards while you were offline!";
+
+            if (hasCash) float.TryParse(result.Data[PENDING_CASH_KEY].Value, out cashVal);
+            if (hasChips) int.TryParse(result.Data[PENDING_CHIPS_KEY].Value, out chipVal);
+            if (result.Data.ContainsKey(PENDING_MSG_KEY)) msg = result.Data[PENDING_MSG_KEY].Value;
+
+            if (cashVal > 0 || chipVal > 0)
+            {
+                Debug.Log($"[PlayFabManager] 🎁 Found pending rewards: ${cashVal}, {chipVal} chips. Applying now...");
+                
+                // Add to current totals
+                currentPlayerData.cash += cashVal;
+                currentPlayerData.coins += chipVal;
+                
+                // Notify UI
+                OnRewardClaimed?.Invoke(msg, cashVal, chipVal);
+                
+                // 1. CLEAR the pending rewards from PlayFab (to prevent double claiming)
+                var clearData = new Dictionary<string, string>
+                {
+                    { PENDING_CASH_KEY, null },
+                    { PENDING_CHIPS_KEY, null },
+                    { PENDING_MSG_KEY, null }
+                };
+
+                PlayFabClientAPI.UpdateUserData(new UpdateUserDataRequest { Data = clearData }, 
+                    res => {
+                        Debug.Log("[PlayFabManager] Pending rewards cleared from server.");
+                        // 2. Persist the updated totals to secure the addition
+                        SavePlayerData(); 
+                    }, 
+                    err => Debug.LogWarning("[PlayFabManager] Failed to clear pending rewards: " + err.GenerateErrorReport())
+                );
+            }
+        }
+    }
+
     #endregion
-    
+
     #region Currency Management
     
     /// <summary>
