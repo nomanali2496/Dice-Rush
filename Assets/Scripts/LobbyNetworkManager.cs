@@ -392,6 +392,22 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
                 }
             }
         }
+
+        // Handle game timer extension (triggered when nobody has selected any boxes)
+        if (propertiesThatChanged.ContainsKey(GameManager.GAME_EXTENSION_KEY))
+        {
+            float newTimerValue = 30f; // Safe fallback
+            if (propertiesThatChanged.TryGetValue("gameTimerVal", out object val))
+            {
+                newTimerValue = (float)val;
+            }
+
+            GameManager gm = FindObjectOfType<GameManager>();
+            if (gm != null)
+            {
+                gm.OnGameExtendedByNetwork(newTimerValue);
+            }
+        }
     }
 
     /// <summary>

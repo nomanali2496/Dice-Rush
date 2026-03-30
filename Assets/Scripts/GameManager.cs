@@ -98,6 +98,8 @@ public class GameManager : MonoBehaviour
     // Constants for profile slot states
     private const float CUSTOM_AVATAR_SCALE = 2.0f;
     private bool timerStarted = false; // Flag to prevent multiple timer starts
+    private float initialGameTimer; // Original game timer value to reset back to
+    public const string GAME_EXTENSION_KEY = "GameExtensionCount"; // Key for tracking time extensions in Room Properties
     
     // Current lobby configuration
     private LobbyConfig currentLobbyConfig; // Current lobby configuration being played
@@ -120,6 +122,9 @@ public class GameManager : MonoBehaviour
     
     private void Start()
     {
+        // Store initial game timer for resetting later
+        initialGameTimer = gameTimer;
+
         // Subscribe to PlayFab events to update when player data loads
         if (PlayFabManager.Instance != null)
         {
@@ -241,7 +246,7 @@ public class GameManager : MonoBehaviour
     /// Coroutine for "3, 2, 1" countdown before game starts
     /// Highly optimized for Photon sync - skips levels if player joined/resumed late
     /// </summary>
-    private System.Collections.IEnumerator CountdownBeforeStart()
+    private System.Collections.IEnumerator CountdownBeforeStart(string customMessage = null)
     {
         // Make sure countdown text exists
         if (countdownText == null)
@@ -300,8 +305,14 @@ public class GameManager : MonoBehaviour
                 continue;
             }
 
-            countdownText.text = i.ToString();
-            countdownTextShadow.text = i.ToString();
+            if (countdownText != null)
+            {
+                countdownText.text = string.IsNullOrEmpty(customMessage) ? i.ToString() : customMessage;
+            }
+            if (countdownTextShadow != null)
+            {
+                countdownTextShadow.text = string.IsNullOrEmpty(customMessage) ? i.ToString() : customMessage;
+            }
             
             // Play countdown sound effect using SoundManager
             if (SoundManager.instance != null)
@@ -478,6 +489,63 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void OnTimerExpired()
     {
+        // REFRESH: Check if ANY player has selected any box across all boards
+        // This is the condition for extending time if both players haven't clicked anything
+        var rankings = GetRankings();
+        bool anyBoxSelected = false;
+        foreach (var r in rankings)
+        {
+            if (r.count > 0)
+            {
+                anyBoxSelected = true;
+                break;
+            }
+        }
+
+        // 🚨 EXTENSION LOGIC 🚨
+        // If neither player has selected any box, increase time by 10% and restart timer
+        if (!anyBoxSelected)
+        {
+            Debug.Log("[GameManager] No boxes selected by any player! Extending game time by 10%...");
+            
+            // Calculate new timer: 10% increase of current gameTimer
+            float newGameTimer = gameTimer * 1.1f;
+            
+            if (Photon.Pun.PhotonNetwork.InRoom)
+            {
+                // Only the Master Client manages the Room Properties for synchronization
+                if (Photon.Pun.PhotonNetwork.IsMasterClient)
+                {
+                    ExitGames.Client.Photon.Hashtable props = new ExitGames.Client.Photon.Hashtable();
+                    
+                    // Reset start time to NOW to give a fresh duration
+                    props.Add(LobbyNetworkManager.GAME_START_TIME_KEY, Photon.Pun.PhotonNetwork.Time);
+                    
+                    // Increment extension counter to signal all clients to show "Timer Increased" and reset
+                    int extCount = 0;
+                    if (Photon.Pun.PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(GAME_EXTENSION_KEY, out object currentExt))
+                    {
+                        extCount = (int)currentExt;
+                    }
+                    props.Add(GAME_EXTENSION_KEY, extCount + 1);
+                    
+                    // Share the new extended timer value
+                    props.Add("gameTimerVal", newGameTimer);
+                    
+                    Photon.Pun.PhotonNetwork.CurrentRoom.SetCustomProperties(props);
+                    Debug.Log($"[GameManager] Master Client synchronized game extension #{extCount + 1} with time: {newGameTimer:F1}s");
+                }
+            }
+            else
+            {
+                // Local/Offline mode: Apply immediately
+                gameTimer = newGameTimer;
+                if (timerCoroutine != null) StopCoroutine(timerCoroutine);
+                timerCoroutine = StartCoroutine(CountdownBeforeStart("Timer Increased"));
+            }
+            return;
+        }
+
         isGameActive = false;
         timerStarted = false; // Reset flag so timer can be restarted for next game
         Debug.Log("[GameManager] Timer expired! Determining winner...");
@@ -511,6 +579,27 @@ public class GameManager : MonoBehaviour
             // Show winner screen with rankings
             ShowWinnerScreen(rankings);
         }));
+    }
+
+    /// <summary>
+    /// Triggered by network when the game is extended due to lack of selections
+    /// </summary>
+    public void OnGameExtendedByNetwork(float newTimer)
+    {
+        Debug.Log($"[GameManager] Game extension received from network. New timer: {newTimer:F1}s");
+        
+        // Update local timer variables
+        gameTimer = newTimer;
+        isGameActive = false; // Temporarily stop gameplay logic during countdown
+        
+        // Stop current timer coroutine if running
+        if (timerCoroutine != null)
+        {
+            StopCoroutine(timerCoroutine);
+        }
+        
+        // Trigger the countdown with the "Timer Increased" message
+        timerCoroutine = StartCoroutine(CountdownBeforeStart("Timer Increased"));
     }
 
     /// <summary>
@@ -2388,6 +2477,7 @@ public class GameManager : MonoBehaviour
         // Reset flags
         isGameActive = false;
         timerStarted = false;
+        gameTimer = initialGameTimer; // Reset timer back to its original value after match ends
         currentTimer = gameTimer; // Reset to default timer value
         
         // Clear current lobby config (will be set when new game starts)
