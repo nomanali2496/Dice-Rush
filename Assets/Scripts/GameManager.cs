@@ -780,13 +780,13 @@ public class GameManager : MonoBehaviour
                 }
             }
 
-            // 3. Cache Preset Avatar Index (0-7)
-            if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_AVATAR_KEY, out object avatarIdxObj))
+            // 4. Cache PlayFab ID for score recovery (CRITICAL for disconnected players)
+            if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_ID_KEY, out object id))
             {
-                cachedNetworkAvatarIndices[actorNo] = (int)avatarIdxObj;
+                lastKnownPlayFabIds[actorNo] = id.ToString();
             }
         }
-        Debug.Log($"[GameManager] Profile Cache - Names: {cachedNetworkNames.Count}, Custom Images: {cachedNetworkAvatars.Count}, Preset Avatars: {cachedNetworkAvatarIndices.Count}");
+        Debug.Log($"[GameManager] Profile Cache - Names: {cachedNetworkNames.Count}, IDs: {lastKnownPlayFabIds.Count}, Images: {cachedNetworkAvatars.Count}");
     }
 
     /// <summary>
@@ -979,19 +979,28 @@ public class GameManager : MonoBehaviour
         
         if (PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue("Participants", out object listObj))
         {
-            string participantMapping = (string)listObj;
+            string participantMapping = listObj.ToString();
             string[] mappingsArray = participantMapping.Split(',');
             foreach (string m in mappingsArray)
             {
                 string[] parts = m.Split(':');
                 if (parts.Length == 2 && int.TryParse(parts[0], out int actorNo))
                 {
+                    // Only treat as present if they are in the room AND active.
+                    // Inactive players (ghosts) should be treated as disconnected so we recover their PlayFab score.
                     bool isStillPresent = false;
                     foreach (var p in PhotonNetwork.PlayerList)
                     {
-                        if (p.ActorNumber == actorNo) { isStillPresent = true; break; }
+                        if (p.ActorNumber == actorNo && !p.IsInactive) { isStillPresent = true; break; }
                     }
-                    if (!isStillPresent) missingPlayers[actorNo] = parts[1];
+                    if (!isStillPresent) 
+                    {
+                        // Prioritize local cache, fallback to room property
+                        if (lastKnownPlayFabIds.TryGetValue(actorNo, out string cachedId) && !cachedId.StartsWith("NOID_"))
+                            missingPlayers[actorNo] = cachedId;
+                        else
+                            missingPlayers[actorNo] = parts[1];
+                    }
                 }
             }
         }
@@ -1005,7 +1014,7 @@ public class GameManager : MonoBehaviour
                 bool isStillPresent = false;
                 foreach (var p in PhotonNetwork.PlayerList)
                 {
-                    if (p.ActorNumber == actorNo) { isStillPresent = true; break; }
+                    if (p.ActorNumber == actorNo && !p.IsInactive) { isStillPresent = true; break; }
                 }
                 
                 if (!isStillPresent && lastKnownPlayFabIds.ContainsKey(actorNo))
@@ -1158,6 +1167,15 @@ public class GameManager : MonoBehaviour
                 if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_SCORE_KEY, out object scoreObj)) score = (int)scoreObj;
                 if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_SCORE_TIME_KEY, out object timeObj)) time = (double)timeObj;
                 if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_ID_KEY, out object idObj)) pfId = (string)idObj;
+
+                // CRITICAL FIX: If the player is inactive (disconnected ghost), prioritize their 
+                // recovered PlayFab score because the Photon property is likely stale/0.
+                if (p.IsInactive && recoveredScores != null && recoveredScores.TryGetValue(p.ActorNumber, out var rec))
+                {
+                    score = rec.score;
+                    time = rec.time;
+                    Debug.Log($"[GameManager] Prioritizing PlayFab score ({score}) over Photon data for inactive player {p.ActorNumber}");
+                }
 
                 if (score == 0 && time == 0) time = 9999.0;
                 
@@ -1461,11 +1479,6 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogWarning("[GameManager] No lobby config available for winner screen animation!");
         }
-
-        // Reset game state AFTER the winner screen is fully shown and animation is triggered.
-        // Moving this call earlier would wipe currentLobbyConfig and cached player data that
-        // the winner screen UI and animation still need at this point.
-        ResetGameState();
     }
     
     /// <summary>
