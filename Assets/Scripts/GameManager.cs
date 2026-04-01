@@ -968,7 +968,93 @@ public class GameManager : MonoBehaviour
     {
         Dictionary<int, (int score, double time, string pfId)> recoveredData = new Dictionary<int, (int score, double time, string pfId)>();
         
-        if (!PhotonNetwork.InRoom) {
+        if (!PhotonNetwork.InRoom)
+        {
+            // The local player has left the Photon room (disconnected).
+            // We still need to rank everyone correctly, so use our pre-cached PlayFab IDs
+            // to fetch the other participants' final scores directly from PlayFab.
+            if (lastKnownPlayFabIds.Count == 0)
+            {
+                Debug.Log("[GameManager] Not in room and no cached PlayFab IDs — skipping recovery.");
+                onComplete?.Invoke(recoveredData);
+                yield break;
+            }
+
+            int offlinePendingRequests = 0;
+            foreach (var kvp in lastKnownPlayFabIds)
+            {
+                if (!kvp.Value.StartsWith("NOID_")) offlinePendingRequests++;
+            }
+
+            foreach (var kvp in lastKnownPlayFabIds)
+            {
+                int actorNo = kvp.Key;
+                string pfId = kvp.Value;
+
+                if (pfId.StartsWith("NOID_")) continue;
+
+                PlayFab.PlayFabClientAPI.GetUserData(new PlayFab.ClientModels.GetUserDataRequest
+                {
+                    PlayFabId = pfId
+                },
+                result =>
+                {
+                    int score = 0;
+                    double time = 9999.0;
+
+                    if (result.Data.ContainsKey(PLAYFAB_MATCH_SCORE_KEY))
+                        int.TryParse(result.Data[PLAYFAB_MATCH_SCORE_KEY].Value, out score);
+
+                    if (result.Data.ContainsKey(PLAYFAB_MATCH_TIME_KEY))
+                        double.TryParse(result.Data[PLAYFAB_MATCH_TIME_KEY].Value, out time);
+
+                    if (result.Data.ContainsKey("PlayerName") && !string.IsNullOrEmpty(result.Data["PlayerName"].Value))
+                        cachedNetworkNames[actorNo] = result.Data["PlayerName"].Value;
+
+                    if (result.Data.ContainsKey("SelectedAvatarIndex"))
+                    {
+                        if (int.TryParse(result.Data["SelectedAvatarIndex"].Value, out int idx))
+                            cachedNetworkAvatarIndices[actorNo] = idx;
+                    }
+
+                    if (!cachedNetworkAvatars.ContainsKey(actorNo) && result.Data.ContainsKey("ImageUrl"))
+                    {
+                        string imageUrl = result.Data["ImageUrl"].Value;
+                        if (!string.IsNullOrEmpty(imageUrl) && imageUrl.StartsWith("data:image"))
+                        {
+                            try
+                            {
+                                string base64Data = imageUrl.Substring(imageUrl.IndexOf(",") + 1);
+                                byte[] imageBytes = System.Convert.FromBase64String(base64Data);
+                                Texture2D tex = new Texture2D(2, 2);
+                                if (tex.LoadImage(imageBytes))
+                                {
+                                    Sprite s = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+                                    cachedNetworkAvatars[actorNo] = s;
+                                }
+                            }
+                            catch (System.Exception e)
+                            {
+                                Debug.LogWarning($"[GameManager] (Offline recovery) Could not decode image for actor {actorNo}: {e.Message}");
+                            }
+                        }
+                    }
+
+                    recoveredData[actorNo] = (score, time, pfId);
+                    offlinePendingRequests--;
+                    Debug.Log($"[GameManager] (Offline recovery) Fetched score {score} for actor {actorNo} from PlayFab.");
+                },
+                error =>
+                {
+                    Debug.LogWarning($"[GameManager] (Offline recovery) Failed to fetch PlayFab data for actor {actorNo}: {error.GenerateErrorReport()}");
+                    offlinePendingRequests--;
+                });
+            }
+
+            // Wait for all async requests (timeout: 5 seconds)
+            float offlineTimeout = Time.time + 5.0f;
+            while (offlinePendingRequests > 0 && Time.time < offlineTimeout) yield return null;
+
             onComplete?.Invoke(recoveredData);
             yield break;
         }
@@ -1254,6 +1340,32 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+
+        // OFFLINE RECOVERY: Local player is not in the room (disconnected) but we fetched
+        // other participants' scores from PlayFab above. Add them to rankings now.
+        if (!Photon.Pun.PhotonNetwork.InRoom && recoveredScores != null && recoveredScores.Count > 0)
+        {
+            foreach (var kvp in recoveredScores)
+            {
+                int actorNo = kvp.Key;
+                // Avoid duplicate entries
+                bool alreadyAdded = false;
+                foreach (var r in rankings)
+                {
+                    if (r.playerType == PlayerType.Player && r.cpuIndex == -actorNo - 100)
+                    {
+                        alreadyAdded = true;
+                        break;
+                    }
+                }
+                if (!alreadyAdded)
+                {
+                    rankings.Add((PlayerType.Player, -actorNo - 100, kvp.Value.score, kvp.Value.time, kvp.Value.pfId));
+                    Debug.Log($"[GameManager] (Offline) Added recovered score {kvp.Value.score} for actor {actorNo} to rankings.");
+                }
+            }
+        }
+
          // Final Sort: 
         // 1. By Count (descending)
         // 2. By Time (ascending) - the one who achieved the score EARLIER wins the tie
@@ -2804,12 +2916,15 @@ public class GameManager : MonoBehaviour
             // OPTION 2: If the winner is a DISCONNECTED player, the Master Client awards it via CloudScript
             else if (Photon.Pun.PhotonNetwork.IsMasterClient && ranking.playerType == PlayerType.Player)
             {
-                // Check if this winner is still in the room
+                // Check if this winner is still ACTIVE in the room.
+                // If they are INACTIVE (disconnected ghost) or GONE, the Master Client must report it.
                 int actorNo = -ranking.cpuIndex - 100;
                 bool isWinnerInRoom = false;
                 foreach (var p in Photon.Pun.PhotonNetwork.PlayerListOthers)
                 {
-                    if (p.ActorNumber == actorNo) { isWinnerInRoom = true; break; }
+                    // If p.IsInactive is true, the player has disconnected but the room is still holding 
+                    // their slot. They aren't running code, so they won't award themselves. 
+                    if (p.ActorNumber == actorNo && !p.IsInactive) { isWinnerInRoom = true; break; }
                 }
 
                 if (!isWinnerInRoom)

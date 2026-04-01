@@ -99,6 +99,7 @@ public class PlayFabManager : MonoBehaviour
         
         // Set the new account details
         playFabId = result.PlayFabId;
+        if (currentPlayerData != null) currentPlayerData.playFabId = playFabId;
         isLoggedIn = true;
         
         // Clear last error message on successful registration
@@ -213,6 +214,7 @@ public class PlayFabManager : MonoBehaviour
     {
         Debug.Log("[PlayFabManager] Login successful!");
         playFabId = result.PlayFabId;
+        if (currentPlayerData != null) currentPlayerData.playFabId = playFabId;
         isLoggedIn = true;
         
         // Clear last error message on successful login
@@ -638,6 +640,7 @@ public class PlayFabManager : MonoBehaviour
                 if (result.AccountInfo != null)
                 {
                     playFabId = result.AccountInfo.PlayFabId;
+                    if (currentPlayerData != null) currentPlayerData.playFabId = playFabId;
                     isLoggedIn = true;
                     Debug.Log($"[PlayFabManager] Session restored! PlayFabId: {playFabId}");
                     
@@ -747,6 +750,12 @@ public class PlayFabManager : MonoBehaviour
     private void OnPlayerDataLoaded_Success(GetUserDataResult result)
     {
         Debug.Log("[PlayFabManager] Player data loaded successfully from PlayFab!");
+        
+        // Ensure playFabId is set in currentPlayerData even if not provided in dictionary
+        if (currentPlayerData != null && !string.IsNullOrEmpty(playFabId))
+        {
+            currentPlayerData.playFabId = playFabId;
+        }
         
         if (result.Data != null && result.Data.Count > 0)
         {
