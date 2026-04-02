@@ -13367,11 +13367,11 @@ MonoBehaviour:
   - lobbyIndex: 0
     numberOfPlayers: 2
     lobbyName: Combo Dice
-    entryFeeCash: 1000
+    entryFeeCash: 5
     entryFeeChips: 0
-    firstPlaceCash: 55
+    firstPlaceCash: 7
     firstPlaceChips: 0
-    secondPlaceCash: 20
+    secondPlaceCash: 0.5
     secondPlaceChips: 0
     thirdPlaceCash: 0
     thirdPlaceChips: 0

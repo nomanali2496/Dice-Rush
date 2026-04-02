@@ -103,7 +103,9 @@ public class WinnerScreen : MonoBehaviour
         // Check top 3 positions
         for (int i = 0; i < rankings.Count && i < 3; i++)
         {
-            if (rankings[i].playerType == PlayerType.Player)
+            // IMPORTANT: Only trigger animation if the player at this rank is the LOCAL player (cpuIndex == -1)
+            // In multiplayer, other human players also have PlayerType.Player but different cpuIndices
+            if (rankings[i].playerType == PlayerType.Player && rankings[i].cpuIndex == -1)
             {
                 playerInTop3 = true;
                 playerPlace = i + 1; // 1, 2, or 3
@@ -246,7 +248,8 @@ public class WinnerScreen : MonoBehaviour
         // Check if player is in top 3 and get their place
         for (int i = 0; i < allRankings.Count && i < 3; i++)
         {
-            if (allRankings[i].playerType == PlayerType.Player)
+            // IMPORTANT: Only trigger animation if the player at this rank is the LOCAL player (cpuIndex == -1)
+            if (allRankings[i].playerType == PlayerType.Player && allRankings[i].cpuIndex == -1)
             {
                 playerInTop3 = true;
                 playerPlace = i + 1; // 1, 2, or 3
