@@ -481,11 +481,53 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
             // Pass the number of CPUs needed to the LobbyManager first (start the game visually)
             lobbyManager.StartGameFromNetwork(currentSelectedConfig.lobbyIndex, neededCPUs);
 
+            // NEW: Save the lobby prizes (rules) to PlayFab Match Shared Data
+            // This ensures that even if you disconnect, the server knows exactly what the prizes were.
+            if (PhotonNetwork.IsMasterClient)
+            {
+                SyncLobbyPrizesToPlayFabMatch(currentSelectedConfig);
+            }
+
             // Delay writing the Participants list so every player has had time to push their
             // PlayFabId to Photon. Without this delay the Master Client may record NOID placeholders
             // for players whose PlayFab data was still loading, making disconnect recovery impossible.
             StartCoroutine(WriteParticipantsDelayed());
         }
+    }
+
+    /// <summary>
+    /// Saves the current match's prize rules to PlayFab Match Shared Data.
+    /// This allows the server (CloudScript) to know the exact payouts for 1st, 2nd, 3rd place
+    /// even if the Master Client disconnects later.
+    /// </summary>
+    private void SyncLobbyPrizesToPlayFabMatch(LobbyConfig config)
+    {
+        if (config == null || PlayFabManager.Instance == null) return;
+
+        // Create a simple JSON object string with the prize data
+        // We use a flat dictionary for speed and reliability.
+        var prizeRules = new Dictionary<string, string>
+        {
+            { "MatchId", PhotonNetwork.CurrentRoom.Name },
+            { "LobbyName", config.lobbyName },
+            { "1st_Cash", config.firstPlaceCash.ToString() },
+            { "1st_Chips", config.firstPlaceChips.ToString() },
+            { "2nd_Cash", config.secondPlaceCash.ToString() },
+            { "2nd_Chips", config.secondPlaceChips.ToString() },
+            { "3rd_Cash", config.thirdPlaceCash.ToString() },
+            { "3rd_Chips", config.thirdPlaceChips.ToString() }
+        };
+
+        // We save this to the Master Client's PlayFab data under a shared MatchRules key.
+        // We use a specific prefix so the reward recovery logic doesn't mistake it for a cash reward.
+        PlayFab.PlayFabClientAPI.UpdateUserData(new PlayFab.ClientModels.UpdateUserDataRequest
+        {
+             Data = new Dictionary<string, string> { { "LobbyMatchRules_START", Newtonsoft.Json.JsonConvert.SerializeObject(prizeRules) } },
+             Permission = PlayFab.ClientModels.UserDataPermission.Public
+        }, 
+        res => Debug.Log($"[LobbyNetworkManager] ✅ Official Match Setup saved to PlayFab: {config.lobbyName} | Key: LobbyMatchRules_START"),
+        err => Debug.LogWarning($"[LobbyNetworkManager] ⚠️ Failed to backup match rules to PlayFab: {err.GenerateErrorReport()}")
+        );
     }
 
     /// <summary>

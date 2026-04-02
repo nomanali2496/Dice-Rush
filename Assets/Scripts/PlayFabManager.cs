@@ -717,12 +717,14 @@ public class PlayFabManager : MonoBehaviour
             result =>
             {
                 Debug.Log("Player data saved successfully!");
+                isAwardingPrize = false; // Clear lock — save confirmed by server
                 OnPlayerDataSaved?.Invoke(true);
                 onComplete?.Invoke();
             },
             error =>
             {
                 Debug.LogError("Failed to save player data: " + error.GenerateErrorReport());
+                isAwardingPrize = false; // Clear lock even on failure
                 OnPlayerDataSaved?.Invoke(false);
                 onComplete?.Invoke();
             });
@@ -776,14 +778,30 @@ public class PlayFabManager : MonoBehaviour
             
             if (result.Data.ContainsKey("Cash"))
             {
-                float.TryParse(result.Data["Cash"].Value, out currentPlayerData.cash);
-                Debug.Log($"[PlayFabManager] Cash: {currentPlayerData.cash}");
+                // Only load from server if we are NOT currently saving a prize award.
+                // This prevents a stale server value from overwriting a freshly awarded prize.
+                if (!isAwardingPrize)
+                {
+                    float.TryParse(result.Data["Cash"].Value, out currentPlayerData.cash);
+                    Debug.Log($"[PlayFabManager] Cash loaded from server: {currentPlayerData.cash}");
+                }
+                else
+                {
+                    Debug.Log($"[PlayFabManager] ⚠️ Skipping Cash overwrite — prize award in progress. Current cash: {currentPlayerData.cash}");
+                }
             }
             
             if (result.Data.ContainsKey("Coins"))
             {
-                int.TryParse(result.Data["Coins"].Value, out currentPlayerData.coins);
-                Debug.Log($"[PlayFabManager] Coins: {currentPlayerData.coins}");
+                if (!isAwardingPrize)
+                {
+                    int.TryParse(result.Data["Coins"].Value, out currentPlayerData.coins);
+                    Debug.Log($"[PlayFabManager] Coins loaded from server: {currentPlayerData.coins}");
+                }
+                else
+                {
+                    Debug.Log($"[PlayFabManager] ⚠️ Skipping Coins overwrite — prize award in progress. Current coins: {currentPlayerData.coins}");
+                }
             }
             
             if (result.Data.ContainsKey("ImageUrl"))
@@ -845,18 +863,21 @@ public class PlayFabManager : MonoBehaviour
         Debug.LogError("Failed to load player data: " + error.GenerateErrorReport());
     }
     
+    private bool isCheckingRewards = false;
+
     /// <summary>
     /// Checks if there are any rewards waiting to be claimed globally (from matches won while away)
     /// </summary>
     private void CheckForPendingRewards(GetUserDataResult result)
     {
-        if (result.Data == null) return;
+        if (result.Data == null || isCheckingRewards) return;
 
-        bool hasCash = result.Data.ContainsKey(PENDING_CASH_KEY);
-        bool hasChips = result.Data.ContainsKey(PENDING_CHIPS_KEY);
+        bool hasCash = result.Data.ContainsKey(PENDING_CASH_KEY) && !string.IsNullOrEmpty(result.Data[PENDING_CASH_KEY].Value);
+        bool hasChips = result.Data.ContainsKey(PENDING_CHIPS_KEY) && !string.IsNullOrEmpty(result.Data[PENDING_CHIPS_KEY].Value);
 
         if (hasCash || hasChips)
         {
+            isCheckingRewards = true; // Lock process
             float cashVal = 0;
             int chipVal = 0;
             string msg = "You won rewards while you were offline!";
@@ -886,12 +907,20 @@ public class PlayFabManager : MonoBehaviour
 
                 PlayFabClientAPI.UpdateUserData(new UpdateUserDataRequest { Data = clearData }, 
                     res => {
-                        Debug.Log("[PlayFabManager] Pending rewards cleared from server.");
+                        Debug.Log("[PlayFabManager] Pending rewards cleared from server. Persisting totals...");
+                        isCheckingRewards = false;
                         // 2. Persist the updated totals to secure the addition
                         SavePlayerData(); 
                     }, 
-                    err => Debug.LogWarning("[PlayFabManager] Failed to clear pending rewards: " + err.GenerateErrorReport())
+                    err => {
+                        Debug.LogWarning("[PlayFabManager] Failed to clear pending rewards: " + err.GenerateErrorReport());
+                        isCheckingRewards = false;
+                    }
                 );
+            }
+            else
+            {
+                isCheckingRewards = false;
             }
         }
     }
@@ -899,22 +928,32 @@ public class PlayFabManager : MonoBehaviour
     #endregion
 
     #region Currency Management
-    
+
+    // Lock flag: prevents LoadPlayerData from overwriting cash/coins
+    // while a prize is being saved to the server.
+    private bool isAwardingPrize = false;
+
     /// <summary>
-    /// Add cash to player
+    /// Add cash to player. Locks LoadPlayerData from overwriting this value
+    /// until the save is confirmed by the server.
     /// </summary>
     public void AddCash(float amount)
     {
+        isAwardingPrize = true;
         currentPlayerData.cash += amount;
+        Debug.Log($"[PlayFabManager] 💰 AddCash: +{amount} → New balance: {currentPlayerData.cash}");
         SavePlayerData();
     }
     
     /// <summary>
-    /// Add coins to player
+    /// Add coins to player. Locks LoadPlayerData from overwriting this value
+    /// until the save is confirmed by the server.
     /// </summary>
     public void AddCoins(int amount)
     {
+        isAwardingPrize = true;
         currentPlayerData.coins += amount;
+        Debug.Log($"[PlayFabManager] 🪙 AddCoins: +{amount} → New balance: {currentPlayerData.coins}");
         SavePlayerData();
     }
     

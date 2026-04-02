@@ -120,6 +120,13 @@ public class GameManager : MonoBehaviour
     private float lastPlayFabSyncTime = 0f;
     private const float PLAYFAB_SYNC_DEBOUNCE = 0.5f; // Min 0.5 seconds between PlayFab writes for better disconnect recovery
     
+    // Official prize tracking (for WinnerScreen animation sync)
+    private float lastAwardedCash = 0f;
+    private int lastAwardedChips = 0;
+    private bool prizesAwardedForThisMatch = false; // Prevents infinite loop/duplicate prizes
+    
+    public (float cash, int chips) GetLastAwardedPrize() => (lastAwardedCash, lastAwardedChips);
+    
     private void Start()
     {
         // Store initial game timer for resetting later
@@ -238,6 +245,11 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        // Reset official prize tracking for the NEW match
+        lastAwardedCash = 0f;
+        lastAwardedChips = 0;
+        prizesAwardedForThisMatch = false;
+        
         timerCoroutine = StartCoroutine(CountdownBeforeStart());
         Debug.Log($"[GameManager] Starting match with {participantsAtStart.Count} players tracked for recovery.");
     }
@@ -2880,9 +2892,11 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void AwardPrizes(List<(PlayerType playerType, int cpuIndex, int count, double time, string pfId)> rankings)
     {
+        Debug.Log($"[GameManager] 🏆 FINAL AWARD PHASE STARTED - Rankings Count: {rankings.Count} | Original Participants: {participantsAtStart.Count}");
+        
         if (currentLobbyConfig == null)
         {
-            Debug.LogWarning("[GameManager] No lobby configuration set! Cannot award prizes.");
+            Debug.LogWarning("[GameManager] ⚠️ No lobby configuration set! Cannot award prizes.");
             return;
         }
         
@@ -2891,8 +2905,23 @@ public class GameManager : MonoBehaviour
             Debug.LogWarning("[GameManager] PlayFabManager not available! Cannot award prizes.");
             return;
         }
+
+        // SAFETY LOCK: Only award prizes ONCE per match.
+        // This prevents infinite loops triggered by UI refreshes or late-arriving network data.
+        if (prizesAwardedForThisMatch)
+        {
+            Debug.Log("[GameManager] 🔒 Prizes already awarded for this match. Skipping duplicate award phase.");
+            return;
+        }
+
+        prizesAwardedForThisMatch = true;
+        Debug.Log("[GameManager] 🔒 Prize award lock ENGAGED. Only 1 award phase allowed per match.");
         
-        // Award prizes to top 3 players
+        // Award prizes to top players
+        // We always loop up to 3 slots but only if they were HUMAN participants at start
+        int maxPrizes = Mathf.Min(participantsAtStart.Count, 3);
+        Debug.Log($"[GameManager] Awarding prizes for top {maxPrizes} human participants.");
+        
         for (int i = 0; i < rankings.Count && i < 3; i++)
         {
             var ranking = rankings[i];
@@ -2906,31 +2935,51 @@ public class GameManager : MonoBehaviour
                 case 2: cashPrize = currentLobbyConfig.thirdPlaceCash; chipsPrize = currentLobbyConfig.thirdPlaceChips; break;
             }
 
-            // OPTION 1: Award prize if it's the LOCAL player
-            if (ranking.playerType == PlayerType.Player && ranking.cpuIndex == -1)
-            {
-                if (cashPrize > 0f) PlayFabManager.Instance.AddCash(cashPrize);
-                if (chipsPrize > 0) PlayFabManager.Instance.AddCoins(chipsPrize);
-                Debug.Log($"[GameManager] Awarded LOCAL prize for {i + 1}st place");
-            }
-            // OPTION 2: If the winner is a DISCONNECTED player, the Master Client awards it via CloudScript
-            else if (Photon.Pun.PhotonNetwork.IsMasterClient && ranking.playerType == PlayerType.Player)
-            {
-                // Check if this winner is still ACTIVE in the room.
-                // If they are INACTIVE (disconnected ghost) or GONE, the Master Client must report it.
-                int actorNo = -ranking.cpuIndex - 100;
-                bool isWinnerInRoom = false;
-                foreach (var p in Photon.Pun.PhotonNetwork.PlayerListOthers)
-                {
-                    // If p.IsInactive is true, the player has disconnected but the room is still holding 
-                    // their slot. They aren't running code, so they won't award themselves. 
-                    if (p.ActorNumber == actorNo && !p.IsInactive) { isWinnerInRoom = true; break; }
-                }
+            Debug.Log($"[GameManager] Check Rank {i+1}: {ranking.playerType} (CPUIdx: {ranking.cpuIndex}) | Prize: ${cashPrize} / {chipsPrize} Chips");
 
-                if (!isWinnerInRoom)
+            // CRITICAL FIX: Only human players get prizes (CPUs do not)
+            if (ranking.playerType == PlayerType.Player)
+            {
+                // OPTION 1: Award prize to LOCAL player (this is the only prize YOU get)
+                if (ranking.cpuIndex == -1)
                 {
-                    AwardPrizeToDisconnectedPlayer(ranking.pfId, cashPrize, chipsPrize);
+                    lastAwardedCash = cashPrize;
+                    lastAwardedChips = chipsPrize;
+                    if (cashPrize > 0f) PlayFabManager.Instance.AddCash(cashPrize);
+                    if (chipsPrize > 0) PlayFabManager.Instance.AddCoins(chipsPrize);
+                    Debug.Log($"[GameManager] Awarded LOCAL prize for {i + 1}st place: {cashPrize} Cash, {chipsPrize} Chips");
                 }
+                // OPTION 2: If winner is a DISCONNECTED player, the Master Client awards it via CloudScript
+                else if (Photon.Pun.PhotonNetwork.IsMasterClient)
+                {
+                    // Check if this winner is still ACTIVE in the room.
+                    // If they are INACTIVE (disconnected ghost) or GONE, the Master Client must report it.
+                    int actorNo = Mathf.Abs(ranking.cpuIndex + 100);
+                    
+                    // ONLY award for OTHER human players (not yourself, not CPUs)
+                    if (actorNo != Photon.Pun.PhotonNetwork.LocalPlayer.ActorNumber)
+                    {
+                        bool isWinnerInRoomAndActive = false;
+                        foreach (var p in Photon.Pun.PhotonNetwork.PlayerListOthers)
+                        {
+                            if (p.ActorNumber == actorNo && !p.IsInactive) 
+                            { 
+                                isWinnerInRoomAndActive = true; 
+                                break; 
+                            }
+                        }
+
+                        if (!isWinnerInRoomAndActive)
+                        {
+                            Debug.Log($"[GameManager] Winner at rank {i+1} (Actor {actorNo}) is disconnected. Master Client reporting prize.");
+                            AwardPrizeToDisconnectedPlayer(ranking.pfId, cashPrize, chipsPrize);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                Debug.Log($"[GameManager] CPU at rank {i+1} - no prize awarded.");
             }
         }
     }

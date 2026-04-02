@@ -13371,7 +13371,7 @@ MonoBehaviour:
     entryFeeChips: 0
     firstPlaceCash: 7
     firstPlaceChips: 0
-    secondPlaceCash: 0.5
+    secondPlaceCash: 5
     secondPlaceChips: 0
     thirdPlaceCash: 0
     thirdPlaceChips: 0

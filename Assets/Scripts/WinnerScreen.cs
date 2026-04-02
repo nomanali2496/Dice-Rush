@@ -69,10 +69,8 @@ public class WinnerScreen : MonoBehaviour
     
     private void OnEnable()
     {
-        // Note: Animation is triggered by GameManager via PlayAnimationIfPlayerInTop3()
-        // This OnEnable is kept as a fallback but will likely not find the config
-        // since ResetGameState() is called before showing the winner screen
-        // StartCoroutine(CheckAndPlayAnimationDelayed());
+        // NO OP: Animation is triggered exclusively by GameManager via PlayAnimationIfPlayerInTop3()
+        // This prevents multiple triggers and infinite award loops.
     }
     
     /// <summary>
@@ -110,22 +108,11 @@ public class WinnerScreen : MonoBehaviour
                 playerInTop3 = true;
                 playerPlace = i + 1; // 1, 2, or 3
                 
-                // Get prize based on place
-                switch (playerPlace)
-                {
-                    case 1:
-                        playerCashPrize = config.firstPlaceCash;
-                        playerChipsPrize = config.firstPlaceChips;
-                        break;
-                    case 2:
-                        playerCashPrize = config.secondPlaceCash;
-                        playerChipsPrize = config.secondPlaceChips;
-                        break;
-                    case 3:
-                        playerCashPrize = config.thirdPlaceCash;
-                        playerChipsPrize = config.thirdPlaceChips;
-                        break;
-                }
+                // CRITICAL FIX: Use the OFFICIAL prize awarded by GameManager, not the 'guessed' lobby prizes.
+                // This ensures the animation matches the actual account balance exactly.
+                var officialPrize = gameManager.GetLastAwardedPrize();
+                playerCashPrize = officialPrize.cash;
+                playerChipsPrize = officialPrize.chips;
                 break;
             }
         }
@@ -254,22 +241,10 @@ public class WinnerScreen : MonoBehaviour
                 playerInTop3 = true;
                 playerPlace = i + 1; // 1, 2, or 3
                 
-                // Get prize based on place
-                switch (playerPlace)
-                {
-                    case 1:
-                        playerCashPrize = config.firstPlaceCash;
-                        playerChipsPrize = config.firstPlaceChips;
-                        break;
-                    case 2:
-                        playerCashPrize = config.secondPlaceCash;
-                        playerChipsPrize = config.secondPlaceChips;
-                        break;
-                    case 3:
-                        playerCashPrize = config.thirdPlaceCash;
-                        playerChipsPrize = config.thirdPlaceChips;
-                        break;
-                }
+                // CRITICAL FIX: Use the OFFICIAL prize awarded by GameManager
+                var officialPrize = gameManager.GetLastAwardedPrize();
+                playerCashPrize = officialPrize.cash;
+                playerChipsPrize = officialPrize.chips;
                 break;
             }
         }
