@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject winnerScreen; // Winner screen GameObject (set active when game ends)
     [SerializeField] private WinnerScreen winnerScreenScript; // Winner screen script for animations
     [SerializeField] private Button winnerScreenLobbyButton; // Lobby button on winner screen (returns to lobby and leaves room)
+    [SerializeField] private GameObject calculateLoadingScreen; // Loading screen shown while fetching final scores from PlayFab
     
     [Header("1st Place")]
     [SerializeField] private Image winnerProfileImage; // Winner's profile image display
@@ -161,12 +162,13 @@ public class GameManager : MonoBehaviour
         StartCoroutine(InitializeProfilesDelayed());
         SetupCPUs();
         
-        // Hide winner screen initially
+        // Hide screens initially
         if (winnerScreen != null)
-        {
             winnerScreen.SetActive(false);
-        }
-        
+            
+        if (calculateLoadingScreen != null)
+            calculateLoadingScreen.SetActive(false);
+            
         // Hide quit panel initially
         if (quitPanel != null)
         {
@@ -980,6 +982,19 @@ public class GameManager : MonoBehaviour
     {
         Dictionary<int, (int score, double time, string pfId)> recoveredData = new Dictionary<int, (int score, double time, string pfId)>();
 
+        // Show the loading screen while we wait for scores to sync and be fetched
+        if (calculateLoadingScreen != null)
+        {
+            calculateLoadingScreen.SetActive(true);
+        }
+        
+        // Hide the gameplay screen immediately so the player doesn't see 
+        // a stale board while the final rankings are being calculated.
+        if (gameplayScreen != null)
+        {
+            gameplayScreen.SetActive(false);
+        }
+
         // IMPORTANT: Wait for a short moment to ensure all players (including winner)
         // have had enough time to sync their final board to PlayFab after the board was filled.
         yield return new WaitForSeconds(1.25f);
@@ -1071,6 +1086,12 @@ public class GameManager : MonoBehaviour
             float offlineTimeout = Time.time + 5.0f;
             while (offlinePendingRequests > 0 && Time.time < offlineTimeout) yield return null;
 
+            // Hide the loading screen just before showing the results
+            if (calculateLoadingScreen != null)
+            {
+                calculateLoadingScreen.SetActive(false);
+            }
+
             onComplete?.Invoke(recoveredData);
             yield break;
         }
@@ -1116,6 +1137,12 @@ public class GameManager : MonoBehaviour
 
         if (missingPlayers.Count == 0)
         {
+            // Hide the loading screen just before showing the results
+            if (calculateLoadingScreen != null)
+            {
+                calculateLoadingScreen.SetActive(false);
+            }
+
             onComplete?.Invoke(recoveredData);
             yield break;
         }
@@ -1215,6 +1242,12 @@ public class GameManager : MonoBehaviour
         float fetchTimeout = Time.time + 5.0f; 
         while (pendingRequests > 0 && Time.time < fetchTimeout) yield return null;
         
+        // Hide the loading screen just before showing the results
+        if (calculateLoadingScreen != null)
+        {
+            calculateLoadingScreen.SetActive(false);
+        }
+
         onComplete?.Invoke(recoveredData);
     }
     
