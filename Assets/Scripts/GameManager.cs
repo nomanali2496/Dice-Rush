@@ -979,6 +979,10 @@ public class GameManager : MonoBehaviour
     private System.Collections.IEnumerator FetchDisconnectedPlayerScores(System.Action<Dictionary<int, (int score, double time, string pfId)>> onComplete)
     {
         Dictionary<int, (int score, double time, string pfId)> recoveredData = new Dictionary<int, (int score, double time, string pfId)>();
+
+        // IMPORTANT: Wait for a short moment to ensure all players (including winner)
+        // have had enough time to sync their final board to PlayFab after the board was filled.
+        yield return new WaitForSeconds(1.25f);
         
         if (!PhotonNetwork.InRoom)
         {
@@ -1084,38 +1088,26 @@ public class GameManager : MonoBehaviour
                 string[] parts = m.Split(':');
                 if (parts.Length == 2 && int.TryParse(parts[0], out int actorNo))
                 {
-                    // Only treat as present if they are in the room AND active.
-                    // Inactive players (ghosts) should be treated as disconnected so we recover their PlayFab score.
-                    bool isStillPresent = false;
-                    foreach (var p in PhotonNetwork.PlayerList)
-                    {
-                        if (p.ActorNumber == actorNo && !p.IsInactive) { isStillPresent = true; break; }
-                    }
-                    if (!isStillPresent) 
-                    {
-                        // Prioritize local cache, fallback to room property
-                        if (lastKnownPlayFabIds.TryGetValue(actorNo, out string cachedId) && !cachedId.StartsWith("NOID_"))
-                            missingPlayers[actorNo] = cachedId;
-                        else
-                            missingPlayers[actorNo] = parts[1];
-                    }
+                    // Always treat other human players as "missing" for score recovery purposes
+                    // to ensure we have their ABSOLUTE final score from PlayFab.
+                    if (actorNo == PhotonNetwork.LocalPlayer.ActorNumber) continue;
+
+                    // Prioritize local cache, fallback to room property
+                    if (lastKnownPlayFabIds.TryGetValue(actorNo, out string cachedId) && !cachedId.StartsWith("NOID_"))
+                        missingPlayers[actorNo] = cachedId;
+                    else
+                        missingPlayers[actorNo] = parts[1];
                 }
             }
         }
         else
         {
-            // Room property missing, use our local cached list
+            // Room property missing, use our local cached list for everyone EXCEPT the local player.
             foreach (int actorNo in participantsAtStart)
             {
                 if (actorNo == PhotonNetwork.LocalPlayer.ActorNumber) continue;
                 
-                bool isStillPresent = false;
-                foreach (var p in PhotonNetwork.PlayerList)
-                {
-                    if (p.ActorNumber == actorNo && !p.IsInactive) { isStillPresent = true; break; }
-                }
-                
-                if (!isStillPresent && lastKnownPlayFabIds.ContainsKey(actorNo))
+                if (lastKnownPlayFabIds.ContainsKey(actorNo))
                 {
                     missingPlayers[actorNo] = lastKnownPlayFabIds[actorNo];
                 }
@@ -1266,13 +1258,14 @@ public class GameManager : MonoBehaviour
                 if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_SCORE_TIME_KEY, out object timeObj)) time = (double)timeObj;
                 if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_ID_KEY, out object idObj)) pfId = (string)idObj;
 
-                // CRITICAL FIX: If the player is inactive (disconnected ghost), prioritize their 
-                // recovered PlayFab score because the Photon property is likely stale/0.
-                if (p.IsInactive && recoveredScores != null && recoveredScores.TryGetValue(p.ActorNumber, out var rec))
+                // PRIORITY: If we have recovered server scores from PlayFab for THIS player, 
+                // use them regardless of whether they are still active in the room.
+                // This ensures we use the ABSOLUTE source of truth (PlayFab) for everyone.
+                if (recoveredScores != null && recoveredScores.TryGetValue(p.ActorNumber, out var rec))
                 {
                     score = rec.score;
                     time = rec.time;
-                    Debug.Log($"[GameManager] Prioritizing PlayFab score ({score}) over Photon data for inactive player {p.ActorNumber}");
+                    Debug.Log($"[GameManager] Using final Server Score ({score}) for player {p.ActorNumber}");
                 }
 
                 if (score == 0 && time == 0) time = 9999.0;

@@ -226,7 +226,6 @@ struct LobbyRowCellViewU5BU5D_tF88C1ACCA6F6EA8038431858AB93B0401FEB7052;
 struct MaterialU5BU5D_t2B1D11C42DB07A4400C0535F92DBB87A2E346D3D;
 struct MaterialReferenceU5BU5D_t7491D335AB3E3E13CE9C0F5E931F396F6A02E1F2;
 struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
-struct PlayerU5BU5D_t04E1460375559A2DB32E4B90230BCE7DDAC0E572;
 struct ReferredUserDataU5BU5D_t2523D705BC5175B616215A08C7858D635A73D319;
 struct RichTextTagAttributeU5BU5D_t5816316EFD8F59DBC30B9F88E15828C564E47B6D;
 struct SecondarySpriteTextureU5BU5D_tC322D73EA4B9A8B747013A3584DEFEAFC0D87192;
@@ -935,7 +934,6 @@ struct KeyframeU5BU5D_t63250A46914A6A07B2A6689850D47D7D19D80BA3;
 struct LobbyConfigU5BU5D_tC3F4948ACA699720D170B89FC9F0E31786F6E9B5;
 struct LobbyGameObjectDataU5BU5D_t3FC25AF1B5F6E7B05938D8765AB27E36FBB1271A;
 struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
-struct PlayerU5BU5D_t04E1460375559A2DB32E4B90230BCE7DDAC0E572;
 struct SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B;
 struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248;
 struct TransformU5BU5D_tBB9C5F5686CAE82E3D97D43DF0F3D68ABF75EC24;
@@ -1357,9 +1355,9 @@ struct U3CFetchDisconnectedPlayerScoresU3Ed__94_t2373D42919F54C43BDD5450B2A8F046
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
 	GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* ___U3CU3E4__this;
+	U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* ___U3CU3E8__1;
 	Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* ___onComplete;
-	U3CU3Ec__DisplayClass94_1_tABB8536B79DD21B458BC8BB2B66F21A11987C7F7* ___U3CU3E8__1;
-	U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* ___U3CU3E8__2;
+	U3CU3Ec__DisplayClass94_1_tABB8536B79DD21B458BC8BB2B66F21A11987C7F7* ___U3CU3E8__2;
 	float ___U3CfetchTimeoutU3E5__2;
 	float ___U3CofflineTimeoutU3E5__3;
 };
@@ -4379,40 +4377,6 @@ struct StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248  : public RuntimeA
 		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
 	}
 };
-struct PlayerU5BU5D_t04E1460375559A2DB32E4B90230BCE7DDAC0E572  : public RuntimeArray
-{
-	ALIGN_FIELD (8) Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* m_Items[1];
-
-	inline Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* GetAt(il2cpp_array_size_t index) const
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items[index];
-	}
-	inline Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C** GetAddressAt(il2cpp_array_size_t index)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items + index;
-	}
-	inline void SetAt(il2cpp_array_size_t index, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* value)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		m_Items[index] = value;
-		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
-	}
-	inline Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* GetAtUnchecked(il2cpp_array_size_t index) const
-	{
-		return m_Items[index];
-	}
-	inline Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C** GetAddressAtUnchecked(il2cpp_array_size_t index)
-	{
-		return m_Items + index;
-	}
-	inline void SetAtUnchecked(il2cpp_array_size_t index, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* value)
-	{
-		m_Items[index] = value;
-		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
-	}
-};
 struct ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF  : public RuntimeArray
 {
 	ALIGN_FIELD (8) Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* m_Items[1];
@@ -4961,9 +4925,8 @@ inline void Dictionary_2__ctor_mC854597C0C338BBA12EE451456D8658DF6D01BD4 (Dictio
 	((  void (*) (Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9*, const RuntimeMethod*))Dictionary_2__ctor_m92E9AB321FBD7147CA109C822D99C8B0610C27B7_gshared)(__this, method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* String_Split_m9530B73D02054692283BF35C3A27C8F2230946F4 (String_t* __this, Il2CppChar ___0_separator, int32_t ___1_options, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayerU5BU5D_t04E1460375559A2DB32E4B90230BCE7DDAC0E572* PhotonNetwork_get_PlayerList_mD2A2D36659BCEF35EBE2E6B4909F4439D191AE39 (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* PhotonNetwork_get_LocalPlayer_mEA3335FEF4E4B55C1EFAC8AFA8D5F7E3D7FBE4DC (const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Player_get_ActorNumber_mE177B60195A5329B1E5D3012295DB0098B7A0F3A_inline (Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* __this, const RuntimeMethod* method) ;
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Player_get_IsInactive_m4DDCB652FA77A7DD38F02922C4E411EA4647ED9B_inline (Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* __this, const RuntimeMethod* method) ;
 inline bool Dictionary_2_TryGetValue_mCDFD7D70277204321AC48EB917B85ECA419DBA1C (Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* __this, int32_t ___0_key, String_t** ___1_value, const RuntimeMethod* method)
 {
 	return ((  bool (*) (Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9*, int32_t, String_t**, const RuntimeMethod*))Dictionary_2_TryGetValue_m7316301B8CF47FB538886B229B2749EC160B9D5C_gshared)(__this, ___0_key, ___1_value, method);
@@ -4980,7 +4943,6 @@ inline int32_t Enumerator_get_Current_m5FB849BD27E36D48FF75A612369B19AE25ED429C_
 {
 	return ((  int32_t (*) (Enumerator_t28FAA6D38864A25718956AF2B8AFCB3B8CCF4376*, const RuntimeMethod*))Enumerator_get_Current_m5FB849BD27E36D48FF75A612369B19AE25ED429C_gshared_inline)(__this, method);
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* PhotonNetwork_get_LocalPlayer_mEA3335FEF4E4B55C1EFAC8AFA8D5F7E3D7FBE4DC (const RuntimeMethod* method) ;
 inline bool Dictionary_2_ContainsKey_mEE6D0925776269838621C5F6F344DE08713D5B6B (Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* __this, int32_t ___0_key, const RuntimeMethod* method)
 {
 	return ((  bool (*) (Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9*, int32_t, const RuntimeMethod*))Dictionary_2_ContainsKey_mED5C451F158CDDD2B3F4B0720CD248DA9DB27B25_gshared)(__this, ___0_key, method);
@@ -5600,11 +5562,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass94_3_U3CFetchDiscon
 	int32_t V_8 = 0;
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1160>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1152>
 		V_0 = 0;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1161>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1153>
 		V_1 = (9999.0);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1164>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1156>
 		GetUserDataResult_t68AF037F9916162542CE2C905DFF0B0C935FC48E* L_0 = ___0_result;
 		NullCheck(L_0);
 		Dictionary_2_tCCB825E12B065472E3DC7F9E132CF4B37C7226E2* L_1 = L_0->___Data;
@@ -5617,7 +5579,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass94_3_U3CFetchDiscon
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1165>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1157>
 		GetUserDataResult_t68AF037F9916162542CE2C905DFF0B0C935FC48E* L_3 = ___0_result;
 		NullCheck(L_3);
 		Dictionary_2_tCCB825E12B065472E3DC7F9E132CF4B37C7226E2* L_4 = L_3->___Data;
@@ -5632,7 +5594,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass94_3_U3CFetchDiscon
 
 IL_003b:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1167>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1159>
 		GetUserDataResult_t68AF037F9916162542CE2C905DFF0B0C935FC48E* L_8 = ___0_result;
 		NullCheck(L_8);
 		Dictionary_2_tCCB825E12B065472E3DC7F9E132CF4B37C7226E2* L_9 = L_8->___Data;
@@ -5645,7 +5607,7 @@ IL_003b:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1168>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1160>
 		GetUserDataResult_t68AF037F9916162542CE2C905DFF0B0C935FC48E* L_11 = ___0_result;
 		NullCheck(L_11);
 		Dictionary_2_tCCB825E12B065472E3DC7F9E132CF4B37C7226E2* L_12 = L_11->___Data;
@@ -5660,7 +5622,7 @@ IL_003b:
 
 IL_006a:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1172>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1164>
 		GetUserDataResult_t68AF037F9916162542CE2C905DFF0B0C935FC48E* L_16 = ___0_result;
 		NullCheck(L_16);
 		Dictionary_2_tCCB825E12B065472E3DC7F9E132CF4B37C7226E2* L_17 = L_16->___Data;
@@ -5689,7 +5651,7 @@ IL_006a:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1174>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1166>
 		U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_24 = __this->___CSU24U3CU3E8__locals3;
 		NullCheck(L_24);
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_25 = L_24->___U3CU3E4__this;
@@ -5706,7 +5668,7 @@ IL_006a:
 		String_t* L_31 = L_30->___Value;
 		NullCheck(L_26);
 		Dictionary_2_set_Item_mD6B904ADF5B3D53E0D896FA7AF623E90CA1C95F0(L_26, L_27, L_31, Dictionary_2_set_Item_mD6B904ADF5B3D53E0D896FA7AF623E90CA1C95F0_RuntimeMethod_var);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1175>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1167>
 		int32_t L_32 = __this->___actorNo;
 		int32_t L_33 = L_32;
 		RuntimeObject* L_34 = Box(il2cpp_defaults.int32_class, &L_33);
@@ -5726,7 +5688,7 @@ IL_006a:
 
 IL_00f7:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1179>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1171>
 		GetUserDataResult_t68AF037F9916162542CE2C905DFF0B0C935FC48E* L_40 = ___0_result;
 		NullCheck(L_40);
 		Dictionary_2_tCCB825E12B065472E3DC7F9E132CF4B37C7226E2* L_41 = L_40->___Data;
@@ -5739,7 +5701,7 @@ IL_00f7:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1181>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1173>
 		GetUserDataResult_t68AF037F9916162542CE2C905DFF0B0C935FC48E* L_43 = ___0_result;
 		NullCheck(L_43);
 		Dictionary_2_tCCB825E12B065472E3DC7F9E132CF4B37C7226E2* L_44 = L_43->___Data;
@@ -5756,7 +5718,7 @@ IL_00f7:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1183>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1175>
 		U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_48 = __this->___CSU24U3CU3E8__locals3;
 		NullCheck(L_48);
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_49 = L_48->___U3CU3E4__this;
@@ -5766,7 +5728,7 @@ IL_00f7:
 		int32_t L_52 = V_2;
 		NullCheck(L_50);
 		Dictionary_2_set_Item_m420CFC153320557E6823B06767710D1E636E5BDF(L_50, L_51, L_52, Dictionary_2_set_Item_m420CFC153320557E6823B06767710D1E636E5BDF_RuntimeMethod_var);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1184>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1176>
 		int32_t L_53 = V_2;
 		int32_t L_54 = L_53;
 		RuntimeObject* L_55 = Box(il2cpp_defaults.int32_class, &L_54);
@@ -5781,7 +5743,7 @@ IL_00f7:
 
 IL_0163:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1189>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1181>
 		U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_60 = __this->___CSU24U3CU3E8__locals3;
 		NullCheck(L_60);
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_61 = L_60->___U3CU3E4__this;
@@ -5809,7 +5771,7 @@ IL_0163:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1191>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1183>
 		GetUserDataResult_t68AF037F9916162542CE2C905DFF0B0C935FC48E* L_68 = ___0_result;
 		NullCheck(L_68);
 		Dictionary_2_tCCB825E12B065472E3DC7F9E132CF4B37C7226E2* L_69 = L_68->___Data;
@@ -5819,7 +5781,7 @@ IL_0163:
 		NullCheck(L_70);
 		String_t* L_71 = L_70->___Value;
 		V_3 = L_71;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1192>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1184>
 		String_t* L_72 = V_3;
 		bool L_73;
 		L_73 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_72, NULL);
@@ -5841,7 +5803,7 @@ IL_0163:
 	try
 	{
 		{
-			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1196>
+			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1188>
 			String_t* L_76 = V_3;
 			String_t* L_77 = V_3;
 			NullCheck(L_77);
@@ -5850,16 +5812,16 @@ IL_0163:
 			NullCheck(L_76);
 			String_t* L_79;
 			L_79 = String_Substring_m6BA4A3FA3800FE92662D0847CC8E1EEF940DF472(L_76, ((int32_t)il2cpp_codegen_add(L_78, 1)), NULL);
-			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1197>
+			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1189>
 			il2cpp_codegen_runtime_class_init_inline(Convert_t7097FF336D592F7C06D88A98349A44646F91EFFC_il2cpp_TypeInfo_var);
 			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_80;
 			L_80 = Convert_FromBase64String_m267327B074B41D93C9622D142B95CFAA4ACCCA9C(L_79, NULL);
 			V_4 = L_80;
-			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1198>
+			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1190>
 			Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_81 = (Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4*)il2cpp_codegen_object_new(Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4_il2cpp_TypeInfo_var);
 			Texture2D__ctor_m3BA82E87442B7F69E118477069AE11101B9DF796(L_81, 2, 2, NULL);
 			V_5 = L_81;
-			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1199>
+			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1191>
 			Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_82 = V_5;
 			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_83 = V_4;
 			bool L_84;
@@ -5870,7 +5832,7 @@ IL_0163:
 			}
 		}
 		{
-			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1201>
+			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1193>
 			Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_85 = V_5;
 			Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_86 = V_5;
 			NullCheck(L_86);
@@ -5889,7 +5851,7 @@ IL_0163:
 			Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_92;
 			L_92 = Sprite_Create_m827A9BDEC4566AB71966A40DB48A09BB064D81E7(L_85, L_90, L_91, NULL);
 			V_6 = L_92;
-			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1202>
+			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1194>
 			U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_93 = __this->___CSU24U3CU3E8__locals3;
 			NullCheck(L_93);
 			GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_94 = L_93->___U3CU3E4__this;
@@ -5899,7 +5861,7 @@ IL_0163:
 			Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_97 = V_6;
 			NullCheck(L_95);
 			Dictionary_2_set_Item_m81FF99BEE113ED6979C1F2A03418C589DCCCEA3B(L_95, L_96, L_97, Dictionary_2_set_Item_m81FF99BEE113ED6979C1F2A03418C589DCCCEA3B_RuntimeMethod_var);
-			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1203>
+			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1195>
 			int32_t L_98 = __this->___actorNo;
 			int32_t L_99 = L_98;
 			RuntimeObject* L_100 = Box(il2cpp_defaults.int32_class, &L_99);
@@ -5911,7 +5873,7 @@ IL_0163:
 
 IL_0265_1:
 		{
-			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1205>
+			//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1197>
 			goto IL_028c;
 		}
 	}
@@ -5928,9 +5890,9 @@ IL_0265_1:
 CATCH_0267:
 	{
 		Exception_t* L_102 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1206>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1198>
 		V_7 = L_102;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1208>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1200>
 		int32_t L_103 = __this->___actorNo;
 		int32_t L_104 = L_103;
 		RuntimeObject* L_105 = Box(il2cpp_defaults.int32_class, &L_104);
@@ -5942,14 +5904,14 @@ CATCH_0267:
 		L_108 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral5A8C4851D61DCB963E87CA8A186DE59DA96836E7)), L_105, L_107, NULL);
 		il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_108, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1209>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1201>
 		IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
 		goto IL_028c;
 	}
 
 IL_028c:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1213>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1205>
 		U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_109 = __this->___CSU24U3CU3E8__locals3;
 		NullCheck(L_109);
 		Dictionary_2_tFF3F4A3304D5DB3B3C939264040C6D83E6BABBCE* L_110 = L_109->___recoveredData;
@@ -5962,7 +5924,7 @@ IL_028c:
 		ValueTuple_3__ctor_mDF56769BB5EB574DF349D9F1ABA3798E141848ED((&L_115), L_112, L_113, L_114, ValueTuple_3__ctor_mDF56769BB5EB574DF349D9F1ABA3798E141848ED_RuntimeMethod_var);
 		NullCheck(L_110);
 		Dictionary_2_set_Item_mCAD297F6C8085CDF573164ACC1F416B82B8CCDC5(L_110, L_111, L_115, Dictionary_2_set_Item_mCAD297F6C8085CDF573164ACC1F416B82B8CCDC5_RuntimeMethod_var);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1214>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1206>
 		U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_116 = __this->___CSU24U3CU3E8__locals3;
 		NullCheck(L_116);
 		int32_t L_117 = L_116->___pendingRequests;
@@ -5971,7 +5933,7 @@ IL_028c:
 		int32_t L_119 = V_8;
 		NullCheck(L_118);
 		L_118->___pendingRequests = ((int32_t)il2cpp_codegen_subtract(L_119, 1));
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1215>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1207>
 		return;
 	}
 }
@@ -5987,7 +5949,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass94_3_U3CFetchDiscon
 	}
 	int32_t V_0 = 0;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1217>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1209>
 		int32_t L_0 = __this->___actorNo;
 		int32_t L_1 = L_0;
 		RuntimeObject* L_2 = Box(il2cpp_defaults.int32_class, &L_1);
@@ -5999,7 +5961,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass94_3_U3CFetchDiscon
 		L_5 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralB3CBBC72B003DC196D18D9A035E3AEA8BAE560A7, L_2, L_4, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_5, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1218>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1210>
 		U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_6 = __this->___CSU24U3CU3E8__locals3;
 		NullCheck(L_6);
 		int32_t L_7 = L_6->___pendingRequests;
@@ -6008,7 +5970,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass94_3_U3CFetchDiscon
 		int32_t L_9 = V_0;
 		NullCheck(L_8);
 		L_8->___pendingRequests = ((int32_t)il2cpp_codegen_subtract(L_9, 1));
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1219>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1211>
 		return;
 	}
 }
@@ -6074,7 +6036,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CConfigureCPUsAfterDelayU3Ed__125_Move
 IL_0017:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:2815>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:2808>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 1;
@@ -6084,15 +6046,15 @@ IL_0017:
 IL_002e:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:2818>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:2811>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_4 = V_1;
 		int32_t L_5 = __this->___numberOfCPUs;
 		NullCheck(L_4);
 		GameManager_SetNumberOfCPUs_m58FF3517485C5144431485843593AD88925164DD(L_4, L_5, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:2820>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:2813>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral9B40B6DED1865883B8AAED598EFD4214155BB53D, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:2821>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:2814>
 		return (bool)0;
 	}
 }
@@ -7071,6 +7033,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CFetchDisconnectedPlayerScoresU3Ed__94
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass94_3_U3CFetchDisconnectedPlayerScoresU3Eb__2_m9330674992B3E1CA2DADC63A63C75C929130F5E3_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass94_3_U3CFetchDisconnectedPlayerScoresU3Eb__3_m03D711036479258BC0B2ADD5F5A6E4C1C79171A1_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass94_3_t93D9FC0FC2D4A39864539FE54B3AA7CB22505264_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral039E64C395491F9EAA7BB13A5B459CA099CF2C64);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral21A444263E956AB895BD2235E50EF45DF27C315C);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD7A9EBE82EB636356AF2F0262D543BE51448E9E2);
@@ -7092,29 +7055,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CFetchDisconnectedPlayerScoresU3Ed__94
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* V_9 = NULL;
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* V_10 = NULL;
 	int32_t V_11 = 0;
-	bool V_12 = false;
-	PlayerU5BU5D_t04E1460375559A2DB32E4B90230BCE7DDAC0E572* V_13 = NULL;
+	String_t* V_12 = NULL;
+	Enumerator_t28FAA6D38864A25718956AF2B8AFCB3B8CCF4376 V_13;
+	memset((&V_13), 0, sizeof(V_13));
 	int32_t V_14 = 0;
-	Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* V_15 = NULL;
-	String_t* V_16 = NULL;
-	Enumerator_t28FAA6D38864A25718956AF2B8AFCB3B8CCF4376 V_17;
-	memset((&V_17), 0, sizeof(V_17));
-	int32_t V_18 = 0;
-	bool V_19 = false;
-	Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* V_20 = NULL;
-	KeyValuePair_2_t3B76D3F0C04E7C20EB9535693336FFC4F9231441 V_21;
-	memset((&V_21), 0, sizeof(V_21));
-	KeyValuePair_2_t3B76D3F0C04E7C20EB9535693336FFC4F9231441 V_22;
-	memset((&V_22), 0, sizeof(V_22));
-	U3CU3Ec__DisplayClass94_3_t93D9FC0FC2D4A39864539FE54B3AA7CB22505264* V_23 = NULL;
+	KeyValuePair_2_t3B76D3F0C04E7C20EB9535693336FFC4F9231441 V_15;
+	memset((&V_15), 0, sizeof(V_15));
+	KeyValuePair_2_t3B76D3F0C04E7C20EB9535693336FFC4F9231441 V_16;
+	memset((&V_16), 0, sizeof(V_16));
+	U3CU3Ec__DisplayClass94_3_t93D9FC0FC2D4A39864539FE54B3AA7CB22505264* V_17 = NULL;
+	Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* G_B7_0 = NULL;
 	Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* G_B6_0 = NULL;
-	Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* G_B5_0 = NULL;
+	Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* G_B30_0 = NULL;
 	Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* G_B29_0 = NULL;
-	Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* G_B28_0 = NULL;
-	Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* G_B67_0 = NULL;
-	Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* G_B66_0 = NULL;
-	Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* G_B91_0 = NULL;
-	Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* G_B90_0 = NULL;
+	Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* G_B55_0 = NULL;
+	Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* G_B54_0 = NULL;
+	Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* G_B79_0 = NULL;
+	Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* G_B78_0 = NULL;
 	{
 		int32_t L_0 = __this->___U3CU3E1__state;
 		V_0 = L_0;
@@ -7125,15 +7082,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CFetchDisconnectedPlayerScoresU3Ed__94
 		{
 			case 0:
 			{
-				goto IL_0022;
+				goto IL_0026;
 			}
 			case 1:
 			{
-				goto IL_01ee;
+				goto IL_0072;
 			}
 			case 2:
 			{
-				goto IL_0539;
+				goto IL_0212;
+			}
+			case 3:
+			{
+				goto IL_04da;
 			}
 		}
 	}
@@ -7141,111 +7102,123 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CFetchDisconnectedPlayerScoresU3Ed__94
 		return (bool)0;
 	}
 
-IL_0022:
+IL_0026:
 	{
 		__this->___U3CU3E1__state = (-1);
 		U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_3 = (U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1*)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1_il2cpp_TypeInfo_var);
 		U3CU3Ec__DisplayClass94_0__ctor_mC6C31F046DE4909013CDA1E06204F870FB75728A(L_3, NULL);
-		__this->___U3CU3E8__2 = L_3;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E8__2), (void*)L_3);
-		U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_4 = __this->___U3CU3E8__2;
+		__this->___U3CU3E8__1 = L_3;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E8__1), (void*)L_3);
+		U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_4 = __this->___U3CU3E8__1;
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_5 = __this->___U3CU3E4__this;
 		NullCheck(L_4);
 		L_4->___U3CU3E4__this = L_5;
 		Il2CppCodeGenWriteBarrier((void**)(&L_4->___U3CU3E4__this), (void*)L_5);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:981>
-		U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_6 = __this->___U3CU3E8__2;
+		U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_6 = __this->___U3CU3E8__1;
 		Dictionary_2_tFF3F4A3304D5DB3B3C939264040C6D83E6BABBCE* L_7 = (Dictionary_2_tFF3F4A3304D5DB3B3C939264040C6D83E6BABBCE*)il2cpp_codegen_object_new(Dictionary_2_tFF3F4A3304D5DB3B3C939264040C6D83E6BABBCE_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_m3F37A11E9C5163BFB974C5F0FB1A1D5EDBE6DC1E(L_7, Dictionary_2__ctor_m3F37A11E9C5163BFB974C5F0FB1A1D5EDBE6DC1E_RuntimeMethod_var);
 		NullCheck(L_6);
 		L_6->___recoveredData = L_7;
 		Il2CppCodeGenWriteBarrier((void**)(&L_6->___recoveredData), (void*)L_7);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:983>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:985>
+		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_8 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
+		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_8, (1.25f), NULL);
+		__this->___U3CU3E2__current = L_8;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)L_8);
+		__this->___U3CU3E1__state = 1;
+		return (bool)1;
+	}
+
+IL_0072:
+	{
+		__this->___U3CU3E1__state = (-1);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:987>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
-		bool L_8;
-		L_8 = PhotonNetwork_get_InRoom_mFBE0C1A516C34FBAD9923933C73E07080FDA199D(NULL);
-		if (L_8)
+		bool L_9;
+		L_9 = PhotonNetwork_get_InRoom_mFBE0C1A516C34FBAD9923933C73E07080FDA199D(NULL);
+		if (L_9)
 		{
-			goto IL_0233;
+			goto IL_0257;
 		}
 	}
 	{
-		U3CU3Ec__DisplayClass94_1_tABB8536B79DD21B458BC8BB2B66F21A11987C7F7* L_9 = (U3CU3Ec__DisplayClass94_1_tABB8536B79DD21B458BC8BB2B66F21A11987C7F7*)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass94_1_tABB8536B79DD21B458BC8BB2B66F21A11987C7F7_il2cpp_TypeInfo_var);
-		U3CU3Ec__DisplayClass94_1__ctor_m58C16960CDB8255B30BD55513BBF5EB9514436E4(L_9, NULL);
-		__this->___U3CU3E8__1 = L_9;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E8__1), (void*)L_9);
-		U3CU3Ec__DisplayClass94_1_tABB8536B79DD21B458BC8BB2B66F21A11987C7F7* L_10 = __this->___U3CU3E8__1;
-		U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_11 = __this->___U3CU3E8__2;
-		NullCheck(L_10);
-		L_10->___CSU24U3CU3E8__locals1 = L_11;
-		Il2CppCodeGenWriteBarrier((void**)(&L_10->___CSU24U3CU3E8__locals1), (void*)L_11);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:988>
-		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_12 = V_1;
-		NullCheck(L_12);
-		Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_13 = L_12->___lastKnownPlayFabIds;
+		U3CU3Ec__DisplayClass94_1_tABB8536B79DD21B458BC8BB2B66F21A11987C7F7* L_10 = (U3CU3Ec__DisplayClass94_1_tABB8536B79DD21B458BC8BB2B66F21A11987C7F7*)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass94_1_tABB8536B79DD21B458BC8BB2B66F21A11987C7F7_il2cpp_TypeInfo_var);
+		U3CU3Ec__DisplayClass94_1__ctor_m58C16960CDB8255B30BD55513BBF5EB9514436E4(L_10, NULL);
+		__this->___U3CU3E8__2 = L_10;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E8__2), (void*)L_10);
+		U3CU3Ec__DisplayClass94_1_tABB8536B79DD21B458BC8BB2B66F21A11987C7F7* L_11 = __this->___U3CU3E8__2;
+		U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_12 = __this->___U3CU3E8__1;
+		NullCheck(L_11);
+		L_11->___CSU24U3CU3E8__locals1 = L_12;
+		Il2CppCodeGenWriteBarrier((void**)(&L_11->___CSU24U3CU3E8__locals1), (void*)L_12);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:992>
+		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_13 = V_1;
 		NullCheck(L_13);
-		int32_t L_14;
-		L_14 = Dictionary_2_get_Count_mC4E2F9B574CD67AAB88F2C0BFB9787708EB06F1D(L_13, Dictionary_2_get_Count_mC4E2F9B574CD67AAB88F2C0BFB9787708EB06F1D_RuntimeMethod_var);
-		if (L_14)
+		Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_14 = L_13->___lastKnownPlayFabIds;
+		NullCheck(L_14);
+		int32_t L_15;
+		L_15 = Dictionary_2_get_Count_mC4E2F9B574CD67AAB88F2C0BFB9787708EB06F1D(L_14, Dictionary_2_get_Count_mC4E2F9B574CD67AAB88F2C0BFB9787708EB06F1D_RuntimeMethod_var);
+		if (L_15)
 		{
-			goto IL_00b5;
+			goto IL_00d9;
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:990>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:994>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralEEAFA4648B39C50771BBC5BD1FAA234FDCE68F09, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:991>
-		Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* L_15 = __this->___onComplete;
-		Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* L_16 = L_15;
-		if (L_16)
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:995>
+		Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* L_16 = __this->___onComplete;
+		Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* L_17 = L_16;
+		if (L_17)
 		{
-			G_B6_0 = L_16;
-			goto IL_009e;
+			G_B7_0 = L_17;
+			goto IL_00c2;
 		}
-		G_B5_0 = L_16;
+		G_B6_0 = L_17;
 	}
 	{
-		goto IL_00b3;
+		goto IL_00d7;
 	}
 
-IL_009e:
+IL_00c2:
 	{
-		U3CU3Ec__DisplayClass94_1_tABB8536B79DD21B458BC8BB2B66F21A11987C7F7* L_17 = __this->___U3CU3E8__1;
-		NullCheck(L_17);
-		U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_18 = L_17->___CSU24U3CU3E8__locals1;
+		U3CU3Ec__DisplayClass94_1_tABB8536B79DD21B458BC8BB2B66F21A11987C7F7* L_18 = __this->___U3CU3E8__2;
 		NullCheck(L_18);
-		Dictionary_2_tFF3F4A3304D5DB3B3C939264040C6D83E6BABBCE* L_19 = L_18->___recoveredData;
-		NullCheck(G_B6_0);
-		Action_1_Invoke_mA8A2349392B60BC78885EE456D60C0565E9534EF_inline(G_B6_0, L_19, NULL);
+		U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_19 = L_18->___CSU24U3CU3E8__locals1;
+		NullCheck(L_19);
+		Dictionary_2_tFF3F4A3304D5DB3B3C939264040C6D83E6BABBCE* L_20 = L_19->___recoveredData;
+		NullCheck(G_B7_0);
+		Action_1_Invoke_mA8A2349392B60BC78885EE456D60C0565E9534EF_inline(G_B7_0, L_20, NULL);
 	}
 
-IL_00b3:
+IL_00d7:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:992>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:996>
 		return (bool)0;
 	}
 
-IL_00b5:
+IL_00d9:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:995>
-		U3CU3Ec__DisplayClass94_1_tABB8536B79DD21B458BC8BB2B66F21A11987C7F7* L_20 = __this->___U3CU3E8__1;
-		NullCheck(L_20);
-		L_20->___offlinePendingRequests = 0;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:996>
-		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_21 = V_1;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:999>
+		U3CU3Ec__DisplayClass94_1_tABB8536B79DD21B458BC8BB2B66F21A11987C7F7* L_21 = __this->___U3CU3E8__2;
 		NullCheck(L_21);
-		Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_22 = L_21->___lastKnownPlayFabIds;
+		L_21->___offlinePendingRequests = 0;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1000>
+		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_22 = V_1;
 		NullCheck(L_22);
-		Enumerator_t377F3F2E2AF88AB9C5BE4EF6A313E042D723A6D7 L_23;
-		L_23 = Dictionary_2_GetEnumerator_m6E58EBCEA45A97A9165033BA82E53D6BEBEA4A65(L_22, Dictionary_2_GetEnumerator_m6E58EBCEA45A97A9165033BA82E53D6BEBEA4A65_RuntimeMethod_var);
-		V_4 = L_23;
+		Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_23 = L_22->___lastKnownPlayFabIds;
+		NullCheck(L_23);
+		Enumerator_t377F3F2E2AF88AB9C5BE4EF6A313E042D723A6D7 L_24;
+		L_24 = Dictionary_2_GetEnumerator_m6E58EBCEA45A97A9165033BA82E53D6BEBEA4A65(L_23, Dictionary_2_GetEnumerator_m6E58EBCEA45A97A9165033BA82E53D6BEBEA4A65_RuntimeMethod_var);
+		V_4 = L_24;
 	}
 	{
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_0113:
+FINALLY_0137:
 			{
 				Enumerator_Dispose_mF3BB40D7FFC864A72DB5CDA6DECD0236EF41B698((&V_4), Enumerator_Dispose_mF3BB40D7FFC864A72DB5CDA6DECD0236EF41B698_RuntimeMethod_var);
 				return;
@@ -7254,50 +7227,50 @@ FINALLY_0113:
 		try
 		{
 			{
-				goto IL_0108_1;
+				goto IL_012c_1;
 			}
 
-IL_00d0_1:
+IL_00f4_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:996>
-				KeyValuePair_2_t3B76D3F0C04E7C20EB9535693336FFC4F9231441 L_24;
-				L_24 = Enumerator_get_Current_m811A4576130833B216E5FFD7B495A9A2EF692B4C_inline((&V_4), Enumerator_get_Current_m811A4576130833B216E5FFD7B495A9A2EF692B4C_RuntimeMethod_var);
-				V_5 = L_24;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:998>
-				String_t* L_25;
-				L_25 = KeyValuePair_2_get_Value_m95996219C06A16F0E1BD86BBDC9BF46C6B2D84E3_inline((&V_5), KeyValuePair_2_get_Value_m95996219C06A16F0E1BD86BBDC9BF46C6B2D84E3_RuntimeMethod_var);
-				NullCheck(L_25);
-				bool L_26;
-				L_26 = String_StartsWith_mF75DBA1EB709811E711B44E26FF919C88A8E65C0(L_25, _stringLiteral039E64C395491F9EAA7BB13A5B459CA099CF2C64, NULL);
-				if (L_26)
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1000>
+				KeyValuePair_2_t3B76D3F0C04E7C20EB9535693336FFC4F9231441 L_25;
+				L_25 = Enumerator_get_Current_m811A4576130833B216E5FFD7B495A9A2EF692B4C_inline((&V_4), Enumerator_get_Current_m811A4576130833B216E5FFD7B495A9A2EF692B4C_RuntimeMethod_var);
+				V_5 = L_25;
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1002>
+				String_t* L_26;
+				L_26 = KeyValuePair_2_get_Value_m95996219C06A16F0E1BD86BBDC9BF46C6B2D84E3_inline((&V_5), KeyValuePair_2_get_Value_m95996219C06A16F0E1BD86BBDC9BF46C6B2D84E3_RuntimeMethod_var);
+				NullCheck(L_26);
+				bool L_27;
+				L_27 = String_StartsWith_mF75DBA1EB709811E711B44E26FF919C88A8E65C0(L_26, _stringLiteral039E64C395491F9EAA7BB13A5B459CA099CF2C64, NULL);
+				if (L_27)
 				{
-					goto IL_0108_1;
+					goto IL_012c_1;
 				}
 			}
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:998>
-				U3CU3Ec__DisplayClass94_1_tABB8536B79DD21B458BC8BB2B66F21A11987C7F7* L_27 = __this->___U3CU3E8__1;
-				NullCheck(L_27);
-				int32_t L_28 = L_27->___offlinePendingRequests;
-				V_6 = L_28;
-				U3CU3Ec__DisplayClass94_1_tABB8536B79DD21B458BC8BB2B66F21A11987C7F7* L_29 = __this->___U3CU3E8__1;
-				int32_t L_30 = V_6;
-				NullCheck(L_29);
-				L_29->___offlinePendingRequests = ((int32_t)il2cpp_codegen_add(L_30, 1));
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1002>
+				U3CU3Ec__DisplayClass94_1_tABB8536B79DD21B458BC8BB2B66F21A11987C7F7* L_28 = __this->___U3CU3E8__2;
+				NullCheck(L_28);
+				int32_t L_29 = L_28->___offlinePendingRequests;
+				V_6 = L_29;
+				U3CU3Ec__DisplayClass94_1_tABB8536B79DD21B458BC8BB2B66F21A11987C7F7* L_30 = __this->___U3CU3E8__2;
+				int32_t L_31 = V_6;
+				NullCheck(L_30);
+				L_30->___offlinePendingRequests = ((int32_t)il2cpp_codegen_add(L_31, 1));
 			}
 
-IL_0108_1:
+IL_012c_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:996>
-				bool L_31;
-				L_31 = Enumerator_MoveNext_m6881F4F4B2935356D2A140C8BD87FF2C7B21089E((&V_4), Enumerator_MoveNext_m6881F4F4B2935356D2A140C8BD87FF2C7B21089E_RuntimeMethod_var);
-				if (L_31)
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1000>
+				bool L_32;
+				L_32 = Enumerator_MoveNext_m6881F4F4B2935356D2A140C8BD87FF2C7B21089E((&V_4), Enumerator_MoveNext_m6881F4F4B2935356D2A140C8BD87FF2C7B21089E_RuntimeMethod_var);
+				if (L_32)
 				{
-					goto IL_00d0_1;
+					goto IL_00f4_1;
 				}
 			}
 			{
-				goto IL_0121;
+				goto IL_0145;
 			}
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -7306,22 +7279,22 @@ IL_0108_1:
 		}
 	}
 
-IL_0121:
+IL_0145:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1001>
-		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_32 = V_1;
-		NullCheck(L_32);
-		Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_33 = L_32->___lastKnownPlayFabIds;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1005>
+		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_33 = V_1;
 		NullCheck(L_33);
-		Enumerator_t377F3F2E2AF88AB9C5BE4EF6A313E042D723A6D7 L_34;
-		L_34 = Dictionary_2_GetEnumerator_m6E58EBCEA45A97A9165033BA82E53D6BEBEA4A65(L_33, Dictionary_2_GetEnumerator_m6E58EBCEA45A97A9165033BA82E53D6BEBEA4A65_RuntimeMethod_var);
-		V_4 = L_34;
+		Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_34 = L_33->___lastKnownPlayFabIds;
+		NullCheck(L_34);
+		Enumerator_t377F3F2E2AF88AB9C5BE4EF6A313E042D723A6D7 L_35;
+		L_35 = Dictionary_2_GetEnumerator_m6E58EBCEA45A97A9165033BA82E53D6BEBEA4A65(L_34, Dictionary_2_GetEnumerator_m6E58EBCEA45A97A9165033BA82E53D6BEBEA4A65_RuntimeMethod_var);
+		V_4 = L_35;
 	}
 	{
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_01bd:
+FINALLY_01e1:
 			{
 				Enumerator_Dispose_mF3BB40D7FFC864A72DB5CDA6DECD0236EF41B698((&V_4), Enumerator_Dispose_mF3BB40D7FFC864A72DB5CDA6DECD0236EF41B698_RuntimeMethod_var);
 				return;
@@ -7330,53 +7303,49 @@ FINALLY_01bd:
 		try
 		{
 			{
-				goto IL_01af_1;
+				goto IL_01d3_1;
 			}
 
-IL_0130_1:
+IL_0154_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1001>
-				KeyValuePair_2_t3B76D3F0C04E7C20EB9535693336FFC4F9231441 L_35;
-				L_35 = Enumerator_get_Current_m811A4576130833B216E5FFD7B495A9A2EF692B4C_inline((&V_4), Enumerator_get_Current_m811A4576130833B216E5FFD7B495A9A2EF692B4C_RuntimeMethod_var);
-				V_7 = L_35;
-				U3CU3Ec__DisplayClass94_2_t7C21CD02FD2997323BEC43265B33DE5C5048D879* L_36 = (U3CU3Ec__DisplayClass94_2_t7C21CD02FD2997323BEC43265B33DE5C5048D879*)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass94_2_t7C21CD02FD2997323BEC43265B33DE5C5048D879_il2cpp_TypeInfo_var);
-				U3CU3Ec__DisplayClass94_2__ctor_mF1B805BFA4BDE390AB017D1D4CBCBB0345557C55(L_36, NULL);
-				V_8 = L_36;
-				U3CU3Ec__DisplayClass94_2_t7C21CD02FD2997323BEC43265B33DE5C5048D879* L_37 = V_8;
-				U3CU3Ec__DisplayClass94_1_tABB8536B79DD21B458BC8BB2B66F21A11987C7F7* L_38 = __this->___U3CU3E8__1;
-				NullCheck(L_37);
-				L_37->___CSU24U3CU3E8__locals2 = L_38;
-				Il2CppCodeGenWriteBarrier((void**)(&L_37->___CSU24U3CU3E8__locals2), (void*)L_38);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1003>
-				U3CU3Ec__DisplayClass94_2_t7C21CD02FD2997323BEC43265B33DE5C5048D879* L_39 = V_8;
-				int32_t L_40;
-				L_40 = KeyValuePair_2_get_Key_mA54FE544A8049DCD5EEA3C8C56331FB7932C3820_inline((&V_7), KeyValuePair_2_get_Key_mA54FE544A8049DCD5EEA3C8C56331FB7932C3820_RuntimeMethod_var);
-				NullCheck(L_39);
-				L_39->___actorNo = L_40;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1004>
-				U3CU3Ec__DisplayClass94_2_t7C21CD02FD2997323BEC43265B33DE5C5048D879* L_41 = V_8;
-				String_t* L_42;
-				L_42 = KeyValuePair_2_get_Value_m95996219C06A16F0E1BD86BBDC9BF46C6B2D84E3_inline((&V_7), KeyValuePair_2_get_Value_m95996219C06A16F0E1BD86BBDC9BF46C6B2D84E3_RuntimeMethod_var);
-				NullCheck(L_41);
-				L_41->___pfId = L_42;
-				Il2CppCodeGenWriteBarrier((void**)(&L_41->___pfId), (void*)L_42);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1006>
-				U3CU3Ec__DisplayClass94_2_t7C21CD02FD2997323BEC43265B33DE5C5048D879* L_43 = V_8;
-				NullCheck(L_43);
-				String_t* L_44 = L_43->___pfId;
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1005>
+				KeyValuePair_2_t3B76D3F0C04E7C20EB9535693336FFC4F9231441 L_36;
+				L_36 = Enumerator_get_Current_m811A4576130833B216E5FFD7B495A9A2EF692B4C_inline((&V_4), Enumerator_get_Current_m811A4576130833B216E5FFD7B495A9A2EF692B4C_RuntimeMethod_var);
+				V_7 = L_36;
+				U3CU3Ec__DisplayClass94_2_t7C21CD02FD2997323BEC43265B33DE5C5048D879* L_37 = (U3CU3Ec__DisplayClass94_2_t7C21CD02FD2997323BEC43265B33DE5C5048D879*)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass94_2_t7C21CD02FD2997323BEC43265B33DE5C5048D879_il2cpp_TypeInfo_var);
+				U3CU3Ec__DisplayClass94_2__ctor_mF1B805BFA4BDE390AB017D1D4CBCBB0345557C55(L_37, NULL);
+				V_8 = L_37;
+				U3CU3Ec__DisplayClass94_2_t7C21CD02FD2997323BEC43265B33DE5C5048D879* L_38 = V_8;
+				U3CU3Ec__DisplayClass94_1_tABB8536B79DD21B458BC8BB2B66F21A11987C7F7* L_39 = __this->___U3CU3E8__2;
+				NullCheck(L_38);
+				L_38->___CSU24U3CU3E8__locals2 = L_39;
+				Il2CppCodeGenWriteBarrier((void**)(&L_38->___CSU24U3CU3E8__locals2), (void*)L_39);
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1007>
+				U3CU3Ec__DisplayClass94_2_t7C21CD02FD2997323BEC43265B33DE5C5048D879* L_40 = V_8;
+				int32_t L_41;
+				L_41 = KeyValuePair_2_get_Key_mA54FE544A8049DCD5EEA3C8C56331FB7932C3820_inline((&V_7), KeyValuePair_2_get_Key_mA54FE544A8049DCD5EEA3C8C56331FB7932C3820_RuntimeMethod_var);
+				NullCheck(L_40);
+				L_40->___actorNo = L_41;
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1008>
+				U3CU3Ec__DisplayClass94_2_t7C21CD02FD2997323BEC43265B33DE5C5048D879* L_42 = V_8;
+				String_t* L_43;
+				L_43 = KeyValuePair_2_get_Value_m95996219C06A16F0E1BD86BBDC9BF46C6B2D84E3_inline((&V_7), KeyValuePair_2_get_Value_m95996219C06A16F0E1BD86BBDC9BF46C6B2D84E3_RuntimeMethod_var);
+				NullCheck(L_42);
+				L_42->___pfId = L_43;
+				Il2CppCodeGenWriteBarrier((void**)(&L_42->___pfId), (void*)L_43);
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1010>
+				U3CU3Ec__DisplayClass94_2_t7C21CD02FD2997323BEC43265B33DE5C5048D879* L_44 = V_8;
 				NullCheck(L_44);
-				bool L_45;
-				L_45 = String_StartsWith_mF75DBA1EB709811E711B44E26FF919C88A8E65C0(L_44, _stringLiteral039E64C395491F9EAA7BB13A5B459CA099CF2C64, NULL);
-				if (L_45)
+				String_t* L_45 = L_44->___pfId;
+				NullCheck(L_45);
+				bool L_46;
+				L_46 = String_StartsWith_mF75DBA1EB709811E711B44E26FF919C88A8E65C0(L_45, _stringLiteral039E64C395491F9EAA7BB13A5B459CA099CF2C64, NULL);
+				if (L_46)
 				{
-					goto IL_01af_1;
+					goto IL_01d3_1;
 				}
 			}
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1008>
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1009>
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1010>
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1011>
 				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1012>
 				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1013>
 				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1014>
@@ -7429,37 +7398,41 @@ IL_0130_1:
 				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1061>
 				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1062>
 				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1063>
-				GetUserDataRequest_tCAF1E6FC4FE7E58BE0D3BDFE78230975CC08E501* L_46 = (GetUserDataRequest_tCAF1E6FC4FE7E58BE0D3BDFE78230975CC08E501*)il2cpp_codegen_object_new(GetUserDataRequest_tCAF1E6FC4FE7E58BE0D3BDFE78230975CC08E501_il2cpp_TypeInfo_var);
-				GetUserDataRequest__ctor_m523EBE281F8FFDC1ADDC0FAC37DD923D5E669EE8(L_46, NULL);
-				GetUserDataRequest_tCAF1E6FC4FE7E58BE0D3BDFE78230975CC08E501* L_47 = L_46;
-				U3CU3Ec__DisplayClass94_2_t7C21CD02FD2997323BEC43265B33DE5C5048D879* L_48 = V_8;
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1064>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1065>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1066>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1067>
+				GetUserDataRequest_tCAF1E6FC4FE7E58BE0D3BDFE78230975CC08E501* L_47 = (GetUserDataRequest_tCAF1E6FC4FE7E58BE0D3BDFE78230975CC08E501*)il2cpp_codegen_object_new(GetUserDataRequest_tCAF1E6FC4FE7E58BE0D3BDFE78230975CC08E501_il2cpp_TypeInfo_var);
+				GetUserDataRequest__ctor_m523EBE281F8FFDC1ADDC0FAC37DD923D5E669EE8(L_47, NULL);
+				GetUserDataRequest_tCAF1E6FC4FE7E58BE0D3BDFE78230975CC08E501* L_48 = L_47;
+				U3CU3Ec__DisplayClass94_2_t7C21CD02FD2997323BEC43265B33DE5C5048D879* L_49 = V_8;
+				NullCheck(L_49);
+				String_t* L_50 = L_49->___pfId;
 				NullCheck(L_48);
-				String_t* L_49 = L_48->___pfId;
-				NullCheck(L_47);
-				L_47->___PlayFabId = L_49;
-				Il2CppCodeGenWriteBarrier((void**)(&L_47->___PlayFabId), (void*)L_49);
-				U3CU3Ec__DisplayClass94_2_t7C21CD02FD2997323BEC43265B33DE5C5048D879* L_50 = V_8;
-				Action_1_tD9E83BC18B83F9247CC90A0C23DF62FDD6F42CDB* L_51 = (Action_1_tD9E83BC18B83F9247CC90A0C23DF62FDD6F42CDB*)il2cpp_codegen_object_new(Action_1_tD9E83BC18B83F9247CC90A0C23DF62FDD6F42CDB_il2cpp_TypeInfo_var);
-				Action_1__ctor_mD6270E419C5F8EAF16444AD1BB5DC749B63D61CC(L_51, L_50, (intptr_t)((void*)U3CU3Ec__DisplayClass94_2_U3CFetchDisconnectedPlayerScoresU3Eb__0_m3B31B4B2008B4F874F679118EE098B149E66DB8D_RuntimeMethod_var), NULL);
-				U3CU3Ec__DisplayClass94_2_t7C21CD02FD2997323BEC43265B33DE5C5048D879* L_52 = V_8;
-				Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* L_53 = (Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93*)il2cpp_codegen_object_new(Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93_il2cpp_TypeInfo_var);
-				Action_1__ctor_m50D54982908458E8FC5738016581B24B71E96BB8(L_53, L_52, (intptr_t)((void*)U3CU3Ec__DisplayClass94_2_U3CFetchDisconnectedPlayerScoresU3Eb__1_m0DC4E0FFDDF502281E64E2A7EB66B3DC025B5713_RuntimeMethod_var), NULL);
+				L_48->___PlayFabId = L_50;
+				Il2CppCodeGenWriteBarrier((void**)(&L_48->___PlayFabId), (void*)L_50);
+				U3CU3Ec__DisplayClass94_2_t7C21CD02FD2997323BEC43265B33DE5C5048D879* L_51 = V_8;
+				Action_1_tD9E83BC18B83F9247CC90A0C23DF62FDD6F42CDB* L_52 = (Action_1_tD9E83BC18B83F9247CC90A0C23DF62FDD6F42CDB*)il2cpp_codegen_object_new(Action_1_tD9E83BC18B83F9247CC90A0C23DF62FDD6F42CDB_il2cpp_TypeInfo_var);
+				Action_1__ctor_mD6270E419C5F8EAF16444AD1BB5DC749B63D61CC(L_52, L_51, (intptr_t)((void*)U3CU3Ec__DisplayClass94_2_U3CFetchDisconnectedPlayerScoresU3Eb__0_m3B31B4B2008B4F874F679118EE098B149E66DB8D_RuntimeMethod_var), NULL);
+				U3CU3Ec__DisplayClass94_2_t7C21CD02FD2997323BEC43265B33DE5C5048D879* L_53 = V_8;
+				Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* L_54 = (Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93*)il2cpp_codegen_object_new(Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93_il2cpp_TypeInfo_var);
+				Action_1__ctor_m50D54982908458E8FC5738016581B24B71E96BB8(L_54, L_53, (intptr_t)((void*)U3CU3Ec__DisplayClass94_2_U3CFetchDisconnectedPlayerScoresU3Eb__1_m0DC4E0FFDDF502281E64E2A7EB66B3DC025B5713_RuntimeMethod_var), NULL);
 				il2cpp_codegen_runtime_class_init_inline(PlayFabClientAPI_t5D87B6818CF460028FBCB816062118DAA41EA597_il2cpp_TypeInfo_var);
-				PlayFabClientAPI_GetUserData_mB5CC23587106F2213A068A3CAB87A3A59DE16609(L_47, L_51, L_53, NULL, (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*)NULL, NULL);
+				PlayFabClientAPI_GetUserData_mB5CC23587106F2213A068A3CAB87A3A59DE16609(L_48, L_52, L_54, NULL, (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*)NULL, NULL);
 			}
 
-IL_01af_1:
+IL_01d3_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1001>
-				bool L_54;
-				L_54 = Enumerator_MoveNext_m6881F4F4B2935356D2A140C8BD87FF2C7B21089E((&V_4), Enumerator_MoveNext_m6881F4F4B2935356D2A140C8BD87FF2C7B21089E_RuntimeMethod_var);
-				if (L_54)
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1005>
+				bool L_55;
+				L_55 = Enumerator_MoveNext_m6881F4F4B2935356D2A140C8BD87FF2C7B21089E((&V_4), Enumerator_MoveNext_m6881F4F4B2935356D2A140C8BD87FF2C7B21089E_RuntimeMethod_var);
+				if (L_55)
 				{
-					goto IL_0130_1;
+					goto IL_0154_1;
 				}
 			}
 			{
-				goto IL_01cb;
+				goto IL_01ef;
 			}
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -7468,459 +7441,322 @@ IL_01af_1:
 		}
 	}
 
-IL_01cb:
+IL_01ef:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1067>
-		float L_55;
-		L_55 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
-		__this->___U3CofflineTimeoutU3E5__3 = ((float)il2cpp_codegen_add(L_55, (5.0f)));
-		goto IL_01f5;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1071>
+		float L_56;
+		L_56 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
+		__this->___U3CofflineTimeoutU3E5__3 = ((float)il2cpp_codegen_add(L_56, (5.0f)));
+		goto IL_0219;
 	}
 
-IL_01de:
+IL_0202:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1068>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1072>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
-		__this->___U3CU3E1__state = 1;
+		__this->___U3CU3E1__state = 2;
 		return (bool)1;
 	}
 
-IL_01ee:
+IL_0212:
 	{
 		__this->___U3CU3E1__state = (-1);
 	}
 
-IL_01f5:
+IL_0219:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1068>
-		U3CU3Ec__DisplayClass94_1_tABB8536B79DD21B458BC8BB2B66F21A11987C7F7* L_56 = __this->___U3CU3E8__1;
-		NullCheck(L_56);
-		int32_t L_57 = L_56->___offlinePendingRequests;
-		if ((((int32_t)L_57) <= ((int32_t)0)))
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1072>
+		U3CU3Ec__DisplayClass94_1_tABB8536B79DD21B458BC8BB2B66F21A11987C7F7* L_57 = __this->___U3CU3E8__2;
+		NullCheck(L_57);
+		int32_t L_58 = L_57->___offlinePendingRequests;
+		if ((((int32_t)L_58) <= ((int32_t)0)))
 		{
-			goto IL_0210;
+			goto IL_0234;
 		}
 	}
 	{
-		float L_58;
-		L_58 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
-		float L_59 = __this->___U3CofflineTimeoutU3E5__3;
-		if ((((float)L_58) < ((float)L_59)))
+		float L_59;
+		L_59 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
+		float L_60 = __this->___U3CofflineTimeoutU3E5__3;
+		if ((((float)L_59) < ((float)L_60)))
 		{
-			goto IL_01de;
+			goto IL_0202;
 		}
 	}
 
-IL_0210:
+IL_0234:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1070>
-		Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* L_60 = __this->___onComplete;
-		Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* L_61 = L_60;
-		if (L_61)
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1074>
+		Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* L_61 = __this->___onComplete;
+		Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* L_62 = L_61;
+		if (L_62)
 		{
-			G_B29_0 = L_61;
-			goto IL_021c;
+			G_B30_0 = L_62;
+			goto IL_0240;
 		}
-		G_B28_0 = L_61;
+		G_B29_0 = L_62;
 	}
 	{
-		goto IL_0231;
+		goto IL_0255;
 	}
 
-IL_021c:
+IL_0240:
 	{
-		U3CU3Ec__DisplayClass94_1_tABB8536B79DD21B458BC8BB2B66F21A11987C7F7* L_62 = __this->___U3CU3E8__1;
-		NullCheck(L_62);
-		U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_63 = L_62->___CSU24U3CU3E8__locals1;
+		U3CU3Ec__DisplayClass94_1_tABB8536B79DD21B458BC8BB2B66F21A11987C7F7* L_63 = __this->___U3CU3E8__2;
 		NullCheck(L_63);
-		Dictionary_2_tFF3F4A3304D5DB3B3C939264040C6D83E6BABBCE* L_64 = L_63->___recoveredData;
-		NullCheck(G_B29_0);
-		Action_1_Invoke_mA8A2349392B60BC78885EE456D60C0565E9534EF_inline(G_B29_0, L_64, NULL);
+		U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_64 = L_63->___CSU24U3CU3E8__locals1;
+		NullCheck(L_64);
+		Dictionary_2_tFF3F4A3304D5DB3B3C939264040C6D83E6BABBCE* L_65 = L_64->___recoveredData;
+		NullCheck(G_B30_0);
+		Action_1_Invoke_mA8A2349392B60BC78885EE456D60C0565E9534EF_inline(G_B30_0, L_65, NULL);
 	}
 
-IL_0231:
+IL_0255:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1071>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1075>
 		return (bool)0;
 	}
 
-IL_0233:
-	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1076>
-		Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_65 = (Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9*)il2cpp_codegen_object_new(Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9_il2cpp_TypeInfo_var);
-		Dictionary_2__ctor_mC854597C0C338BBA12EE451456D8658DF6D01BD4(L_65, Dictionary_2__ctor_mC854597C0C338BBA12EE451456D8658DF6D01BD4_RuntimeMethod_var);
-		V_2 = L_65;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1078>
-		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
-		Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* L_66;
-		L_66 = PhotonNetwork_get_CurrentRoom_m72D3601299E109EED858E132DE1BD316226BA38D(NULL);
-		NullCheck(L_66);
-		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_67;
-		L_67 = RoomInfo_get_CustomProperties_mE54DDDE221FC51475970867611765A4205AFD422_inline(L_66, NULL);
-		NullCheck(L_67);
-		bool L_68;
-		L_68 = Dictionary_2_TryGetValue_mD15380A4ED7CDEE99EA45881577D26BA9CE1B849(L_67, _stringLiteralD7A9EBE82EB636356AF2F0262D543BE51448E9E2, (&V_3), Dictionary_2_TryGetValue_mD15380A4ED7CDEE99EA45881577D26BA9CE1B849_RuntimeMethod_var);
-		if (!L_68)
-		{
-			goto IL_0320;
-		}
-	}
+IL_0257:
 	{
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1080>
-		RuntimeObject* L_69 = V_3;
-		NullCheck(L_69);
-		String_t* L_70;
-		L_70 = VirtualFuncInvoker0< String_t* >::Invoke(3, L_69);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1081>
-		NullCheck(L_70);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_71;
-		L_71 = String_Split_m9530B73D02054692283BF35C3A27C8F2230946F4(L_70, ((int32_t)44), 0, NULL);
+		Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_66 = (Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9*)il2cpp_codegen_object_new(Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9_il2cpp_TypeInfo_var);
+		Dictionary_2__ctor_mC854597C0C338BBA12EE451456D8658DF6D01BD4(L_66, Dictionary_2__ctor_mC854597C0C338BBA12EE451456D8658DF6D01BD4_RuntimeMethod_var);
+		V_2 = L_66;
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1082>
-		V_9 = L_71;
-		V_6 = 0;
-		goto IL_0310;
-	}
-
-IL_026c:
-	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1082>
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_72 = V_9;
-		int32_t L_73 = V_6;
-		NullCheck(L_72);
-		int32_t L_74 = L_73;
-		String_t* L_75 = (L_72)->GetAt(static_cast<il2cpp_array_size_t>(L_74));
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1084>
-		NullCheck(L_75);
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_76;
-		L_76 = String_Split_m9530B73D02054692283BF35C3A27C8F2230946F4(L_75, ((int32_t)58), 0, NULL);
-		V_10 = L_76;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1085>
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_77 = V_10;
-		NullCheck(L_77);
-		if ((!(((uint32_t)((int32_t)(((RuntimeArray*)L_77)->max_length))) == ((uint32_t)2))))
+		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
+		Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* L_67;
+		L_67 = PhotonNetwork_get_CurrentRoom_m72D3601299E109EED858E132DE1BD316226BA38D(NULL);
+		NullCheck(L_67);
+		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_68;
+		L_68 = RoomInfo_get_CustomProperties_mE54DDDE221FC51475970867611765A4205AFD422_inline(L_67, NULL);
+		NullCheck(L_68);
+		bool L_69;
+		L_69 = Dictionary_2_TryGetValue_mD15380A4ED7CDEE99EA45881577D26BA9CE1B849(L_68, _stringLiteralD7A9EBE82EB636356AF2F0262D543BE51448E9E2, (&V_3), Dictionary_2_TryGetValue_mD15380A4ED7CDEE99EA45881577D26BA9CE1B849_RuntimeMethod_var);
+		if (!L_69)
 		{
-			goto IL_030a;
+			goto IL_0305;
 		}
 	}
 	{
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1084>
+		RuntimeObject* L_70 = V_3;
+		NullCheck(L_70);
+		String_t* L_71;
+		L_71 = VirtualFuncInvoker0< String_t* >::Invoke(3, L_70);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1085>
+		NullCheck(L_71);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_72;
+		L_72 = String_Split_m9530B73D02054692283BF35C3A27C8F2230946F4(L_71, ((int32_t)44), 0, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1086>
+		V_9 = L_72;
+		V_6 = 0;
+		goto IL_02fb;
+	}
+
+IL_028d:
+	{
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1086>
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_73 = V_9;
+		int32_t L_74 = V_6;
+		NullCheck(L_73);
+		int32_t L_75 = L_74;
+		String_t* L_76 = (L_73)->GetAt(static_cast<il2cpp_array_size_t>(L_75));
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1088>
+		NullCheck(L_76);
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_77;
+		L_77 = String_Split_m9530B73D02054692283BF35C3A27C8F2230946F4(L_76, ((int32_t)58), 0, NULL);
+		V_10 = L_77;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1089>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_78 = V_10;
 		NullCheck(L_78);
-		int32_t L_79 = 0;
-		String_t* L_80 = (L_78)->GetAt(static_cast<il2cpp_array_size_t>(L_79));
-		bool L_81;
-		L_81 = Int32_TryParse_mC928DE2FEC1C35ED5298BDDCA9868076E94B8A21(L_80, (&V_11), NULL);
-		if (!L_81)
+		if ((!(((uint32_t)((int32_t)(((RuntimeArray*)L_78)->max_length))) == ((uint32_t)2))))
 		{
-			goto IL_030a;
+			goto IL_02f5;
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1089>
-		V_12 = (bool)0;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1090>
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_79 = V_10;
+		NullCheck(L_79);
+		int32_t L_80 = 0;
+		String_t* L_81 = (L_79)->GetAt(static_cast<il2cpp_array_size_t>(L_80));
+		bool L_82;
+		L_82 = Int32_TryParse_mC928DE2FEC1C35ED5298BDDCA9868076E94B8A21(L_81, (&V_11), NULL);
+		if (!L_82)
+		{
+			goto IL_02f5;
+		}
+	}
+	{
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1093>
+		int32_t L_83 = V_11;
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
-		PlayerU5BU5D_t04E1460375559A2DB32E4B90230BCE7DDAC0E572* L_82;
-		L_82 = PhotonNetwork_get_PlayerList_mD2A2D36659BCEF35EBE2E6B4909F4439D191AE39(NULL);
-		V_13 = L_82;
-		V_14 = 0;
-		goto IL_02c7;
-	}
-
-IL_02a1:
-	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1090>
-		PlayerU5BU5D_t04E1460375559A2DB32E4B90230BCE7DDAC0E572* L_83 = V_13;
-		int32_t L_84 = V_14;
-		NullCheck(L_83);
-		int32_t L_85 = L_84;
-		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_86 = (L_83)->GetAt(static_cast<il2cpp_array_size_t>(L_85));
-		V_15 = L_86;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1092>
-		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_87 = V_15;
-		NullCheck(L_87);
-		int32_t L_88;
-		L_88 = Player_get_ActorNumber_mE177B60195A5329B1E5D3012295DB0098B7A0F3A_inline(L_87, NULL);
-		int32_t L_89 = V_11;
-		if ((!(((uint32_t)L_88) == ((uint32_t)L_89))))
+		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_84;
+		L_84 = PhotonNetwork_get_LocalPlayer_mEA3335FEF4E4B55C1EFAC8AFA8D5F7E3D7FBE4DC(NULL);
+		NullCheck(L_84);
+		int32_t L_85;
+		L_85 = Player_get_ActorNumber_mE177B60195A5329B1E5D3012295DB0098B7A0F3A_inline(L_84, NULL);
+		if ((((int32_t)L_83) == ((int32_t)L_85)))
 		{
-			goto IL_02c1;
+			goto IL_02f5;
 		}
 	}
 	{
-		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_90 = V_15;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1096>
+		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_86 = V_1;
+		NullCheck(L_86);
+		Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_87 = L_86->___lastKnownPlayFabIds;
+		int32_t L_88 = V_11;
+		NullCheck(L_87);
+		bool L_89;
+		L_89 = Dictionary_2_TryGetValue_mCDFD7D70277204321AC48EB917B85ECA419DBA1C(L_87, L_88, (&V_12), Dictionary_2_TryGetValue_mCDFD7D70277204321AC48EB917B85ECA419DBA1C_RuntimeMethod_var);
+		if (!L_89)
+		{
+			goto IL_02e9;
+		}
+	}
+	{
+		String_t* L_90 = V_12;
 		NullCheck(L_90);
 		bool L_91;
-		L_91 = Player_get_IsInactive_m4DDCB652FA77A7DD38F02922C4E411EA4647ED9B_inline(L_90, NULL);
+		L_91 = String_StartsWith_mF75DBA1EB709811E711B44E26FF919C88A8E65C0(L_90, _stringLiteral039E64C395491F9EAA7BB13A5B459CA099CF2C64, NULL);
 		if (L_91)
 		{
-			goto IL_02c1;
-		}
-	}
-	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1092>
-		V_12 = (bool)1;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1092>
-		goto IL_02cf;
-	}
-
-IL_02c1:
-	{
-		int32_t L_92 = V_14;
-		V_14 = ((int32_t)il2cpp_codegen_add(L_92, 1));
-	}
-
-IL_02c7:
-	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1090>
-		int32_t L_93 = V_14;
-		PlayerU5BU5D_t04E1460375559A2DB32E4B90230BCE7DDAC0E572* L_94 = V_13;
-		NullCheck(L_94);
-		if ((((int32_t)L_93) < ((int32_t)((int32_t)(((RuntimeArray*)L_94)->max_length)))))
-		{
-			goto IL_02a1;
-		}
-	}
-
-IL_02cf:
-	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1094>
-		bool L_95 = V_12;
-		if (L_95)
-		{
-			goto IL_030a;
+			goto IL_02e9;
 		}
 	}
 	{
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1097>
-		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_96 = V_1;
-		NullCheck(L_96);
-		Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_97 = L_96->___lastKnownPlayFabIds;
-		int32_t L_98 = V_11;
+		Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_92 = V_2;
+		int32_t L_93 = V_11;
+		String_t* L_94 = V_12;
+		NullCheck(L_92);
+		Dictionary_2_set_Item_mD6B904ADF5B3D53E0D896FA7AF623E90CA1C95F0(L_92, L_93, L_94, Dictionary_2_set_Item_mD6B904ADF5B3D53E0D896FA7AF623E90CA1C95F0_RuntimeMethod_var);
+		goto IL_02f5;
+	}
+
+IL_02e9:
+	{
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1099>
+		Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_95 = V_2;
+		int32_t L_96 = V_11;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_97 = V_10;
 		NullCheck(L_97);
-		bool L_99;
-		L_99 = Dictionary_2_TryGetValue_mCDFD7D70277204321AC48EB917B85ECA419DBA1C(L_97, L_98, (&V_16), Dictionary_2_TryGetValue_mCDFD7D70277204321AC48EB917B85ECA419DBA1C_RuntimeMethod_var);
-		if (!L_99)
-		{
-			goto IL_02fe;
-		}
+		int32_t L_98 = 1;
+		String_t* L_99 = (L_97)->GetAt(static_cast<il2cpp_array_size_t>(L_98));
+		NullCheck(L_95);
+		Dictionary_2_set_Item_mD6B904ADF5B3D53E0D896FA7AF623E90CA1C95F0(L_95, L_96, L_99, Dictionary_2_set_Item_mD6B904ADF5B3D53E0D896FA7AF623E90CA1C95F0_RuntimeMethod_var);
 	}
+
+IL_02f5:
 	{
-		String_t* L_100 = V_16;
-		NullCheck(L_100);
-		bool L_101;
-		L_101 = String_StartsWith_mF75DBA1EB709811E711B44E26FF919C88A8E65C0(L_100, _stringLiteral039E64C395491F9EAA7BB13A5B459CA099CF2C64, NULL);
-		if (L_101)
-		{
-			goto IL_02fe;
-		}
+		int32_t L_100 = V_6;
+		V_6 = ((int32_t)il2cpp_codegen_add(L_100, 1));
 	}
+
+IL_02fb:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1098>
-		Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_102 = V_2;
-		int32_t L_103 = V_11;
-		String_t* L_104 = V_16;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1086>
+		int32_t L_101 = V_6;
+		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_102 = V_9;
 		NullCheck(L_102);
-		Dictionary_2_set_Item_mD6B904ADF5B3D53E0D896FA7AF623E90CA1C95F0(L_102, L_103, L_104, Dictionary_2_set_Item_mD6B904ADF5B3D53E0D896FA7AF623E90CA1C95F0_RuntimeMethod_var);
-		goto IL_030a;
-	}
-
-IL_02fe:
-	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1100>
-		Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_105 = V_2;
-		int32_t L_106 = V_11;
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_107 = V_10;
-		NullCheck(L_107);
-		int32_t L_108 = 1;
-		String_t* L_109 = (L_107)->GetAt(static_cast<il2cpp_array_size_t>(L_108));
-		NullCheck(L_105);
-		Dictionary_2_set_Item_mD6B904ADF5B3D53E0D896FA7AF623E90CA1C95F0(L_105, L_106, L_109, Dictionary_2_set_Item_mD6B904ADF5B3D53E0D896FA7AF623E90CA1C95F0_RuntimeMethod_var);
-	}
-
-IL_030a:
-	{
-		int32_t L_110 = V_6;
-		V_6 = ((int32_t)il2cpp_codegen_add(L_110, 1));
-	}
-
-IL_0310:
-	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1082>
-		int32_t L_111 = V_6;
-		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_112 = V_9;
-		NullCheck(L_112);
-		if ((((int32_t)L_111) < ((int32_t)((int32_t)(((RuntimeArray*)L_112)->max_length)))))
+		if ((((int32_t)L_101) < ((int32_t)((int32_t)(((RuntimeArray*)L_102)->max_length)))))
 		{
-			goto IL_026c;
+			goto IL_028d;
 		}
 	}
 	{
-		goto IL_03c7;
+		goto IL_0368;
 	}
 
-IL_0320:
+IL_0305:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1108>
-		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_113 = V_1;
-		NullCheck(L_113);
-		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_114 = L_113->___participantsAtStart;
-		NullCheck(L_114);
-		Enumerator_t28FAA6D38864A25718956AF2B8AFCB3B8CCF4376 L_115;
-		L_115 = HashSet_1_GetEnumerator_m55BD13C9FD783AFB7B5B8F018E3008E05137A360(L_114, HashSet_1_GetEnumerator_m55BD13C9FD783AFB7B5B8F018E3008E05137A360_RuntimeMethod_var);
-		V_17 = L_115;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1106>
+		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_103 = V_1;
+		NullCheck(L_103);
+		HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* L_104 = L_103->___participantsAtStart;
+		NullCheck(L_104);
+		Enumerator_t28FAA6D38864A25718956AF2B8AFCB3B8CCF4376 L_105;
+		L_105 = HashSet_1_GetEnumerator_m55BD13C9FD783AFB7B5B8F018E3008E05137A360(L_104, HashSet_1_GetEnumerator_m55BD13C9FD783AFB7B5B8F018E3008E05137A360_RuntimeMethod_var);
+		V_13 = L_105;
 	}
 	{
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_03b9:
+FINALLY_035a:
 			{
-				Enumerator_Dispose_mC7EA452A8170B03342899CC33339B5FA25C99BEC((&V_17), Enumerator_Dispose_mC7EA452A8170B03342899CC33339B5FA25C99BEC_RuntimeMethod_var);
+				Enumerator_Dispose_mC7EA452A8170B03342899CC33339B5FA25C99BEC((&V_13), Enumerator_Dispose_mC7EA452A8170B03342899CC33339B5FA25C99BEC_RuntimeMethod_var);
 				return;
 			}
 		});
 		try
 		{
 			{
-				goto IL_03ab_1;
+				goto IL_034f_1;
 			}
 
-IL_032f_1:
+IL_0314_1:
 			{
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1106>
+				int32_t L_106;
+				L_106 = Enumerator_get_Current_m5FB849BD27E36D48FF75A612369B19AE25ED429C_inline((&V_13), Enumerator_get_Current_m5FB849BD27E36D48FF75A612369B19AE25ED429C_RuntimeMethod_var);
+				V_14 = L_106;
 				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1108>
-				int32_t L_116;
-				L_116 = Enumerator_get_Current_m5FB849BD27E36D48FF75A612369B19AE25ED429C_inline((&V_17), Enumerator_get_Current_m5FB849BD27E36D48FF75A612369B19AE25ED429C_RuntimeMethod_var);
-				V_18 = L_116;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1110>
-				int32_t L_117 = V_18;
+				int32_t L_107 = V_14;
 				il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
-				Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_118;
-				L_118 = PhotonNetwork_get_LocalPlayer_mEA3335FEF4E4B55C1EFAC8AFA8D5F7E3D7FBE4DC(NULL);
-				NullCheck(L_118);
-				int32_t L_119;
-				L_119 = Player_get_ActorNumber_mE177B60195A5329B1E5D3012295DB0098B7A0F3A_inline(L_118, NULL);
-				if ((((int32_t)L_117) == ((int32_t)L_119)))
+				Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_108;
+				L_108 = PhotonNetwork_get_LocalPlayer_mEA3335FEF4E4B55C1EFAC8AFA8D5F7E3D7FBE4DC(NULL);
+				NullCheck(L_108);
+				int32_t L_109;
+				L_109 = Player_get_ActorNumber_mE177B60195A5329B1E5D3012295DB0098B7A0F3A_inline(L_108, NULL);
+				if ((((int32_t)L_107) == ((int32_t)L_109)))
 				{
-					goto IL_03ab_1;
+					goto IL_034f_1;
+				}
+			}
+			{
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1110>
+				GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_110 = V_1;
+				NullCheck(L_110);
+				Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_111 = L_110->___lastKnownPlayFabIds;
+				int32_t L_112 = V_14;
+				NullCheck(L_111);
+				bool L_113;
+				L_113 = Dictionary_2_ContainsKey_mEE6D0925776269838621C5F6F344DE08713D5B6B(L_111, L_112, Dictionary_2_ContainsKey_mEE6D0925776269838621C5F6F344DE08713D5B6B_RuntimeMethod_var);
+				if (!L_113)
+				{
+					goto IL_034f_1;
 				}
 			}
 			{
 				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1112>
-				V_19 = (bool)0;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1113>
-				il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
-				PlayerU5BU5D_t04E1460375559A2DB32E4B90230BCE7DDAC0E572* L_120;
-				L_120 = PhotonNetwork_get_PlayerList_mD2A2D36659BCEF35EBE2E6B4909F4439D191AE39(NULL);
-				V_13 = L_120;
-				V_6 = 0;
-				goto IL_037b_1;
+				Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_114 = V_2;
+				int32_t L_115 = V_14;
+				GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_116 = V_1;
+				NullCheck(L_116);
+				Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_117 = L_116->___lastKnownPlayFabIds;
+				int32_t L_118 = V_14;
+				NullCheck(L_117);
+				String_t* L_119;
+				L_119 = Dictionary_2_get_Item_mD4A750E28CFF3DE9AE032540D174398E46DAA39D(L_117, L_118, Dictionary_2_get_Item_mD4A750E28CFF3DE9AE032540D174398E46DAA39D_RuntimeMethod_var);
+				NullCheck(L_114);
+				Dictionary_2_set_Item_mD6B904ADF5B3D53E0D896FA7AF623E90CA1C95F0(L_114, L_115, L_119, Dictionary_2_set_Item_mD6B904ADF5B3D53E0D896FA7AF623E90CA1C95F0_RuntimeMethod_var);
 			}
 
-IL_0355_1:
+IL_034f_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1113>
-				PlayerU5BU5D_t04E1460375559A2DB32E4B90230BCE7DDAC0E572* L_121 = V_13;
-				int32_t L_122 = V_6;
-				NullCheck(L_121);
-				int32_t L_123 = L_122;
-				Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_124 = (L_121)->GetAt(static_cast<il2cpp_array_size_t>(L_123));
-				V_20 = L_124;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1115>
-				Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_125 = V_20;
-				NullCheck(L_125);
-				int32_t L_126;
-				L_126 = Player_get_ActorNumber_mE177B60195A5329B1E5D3012295DB0098B7A0F3A_inline(L_125, NULL);
-				int32_t L_127 = V_18;
-				if ((!(((uint32_t)L_126) == ((uint32_t)L_127))))
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1106>
+				bool L_120;
+				L_120 = Enumerator_MoveNext_m058ADEC590C81C3B445E1CEEC139CD49DA79E7CC((&V_13), Enumerator_MoveNext_m058ADEC590C81C3B445E1CEEC139CD49DA79E7CC_RuntimeMethod_var);
+				if (L_120)
 				{
-					goto IL_0375_1;
+					goto IL_0314_1;
 				}
 			}
 			{
-				Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_128 = V_20;
-				NullCheck(L_128);
-				bool L_129;
-				L_129 = Player_get_IsInactive_m4DDCB652FA77A7DD38F02922C4E411EA4647ED9B_inline(L_128, NULL);
-				if (L_129)
-				{
-					goto IL_0375_1;
-				}
-			}
-			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1115>
-				V_19 = (bool)1;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1115>
-				goto IL_0383_1;
-			}
-
-IL_0375_1:
-			{
-				int32_t L_130 = V_6;
-				V_6 = ((int32_t)il2cpp_codegen_add(L_130, 1));
-			}
-
-IL_037b_1:
-			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1113>
-				int32_t L_131 = V_6;
-				PlayerU5BU5D_t04E1460375559A2DB32E4B90230BCE7DDAC0E572* L_132 = V_13;
-				NullCheck(L_132);
-				if ((((int32_t)L_131) < ((int32_t)((int32_t)(((RuntimeArray*)L_132)->max_length)))))
-				{
-					goto IL_0355_1;
-				}
-			}
-
-IL_0383_1:
-			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1118>
-				bool L_133 = V_19;
-				if (L_133)
-				{
-					goto IL_03ab_1;
-				}
-			}
-			{
-				GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_134 = V_1;
-				NullCheck(L_134);
-				Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_135 = L_134->___lastKnownPlayFabIds;
-				int32_t L_136 = V_18;
-				NullCheck(L_135);
-				bool L_137;
-				L_137 = Dictionary_2_ContainsKey_mEE6D0925776269838621C5F6F344DE08713D5B6B(L_135, L_136, Dictionary_2_ContainsKey_mEE6D0925776269838621C5F6F344DE08713D5B6B_RuntimeMethod_var);
-				if (!L_137)
-				{
-					goto IL_03ab_1;
-				}
-			}
-			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1120>
-				Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_138 = V_2;
-				int32_t L_139 = V_18;
-				GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_140 = V_1;
-				NullCheck(L_140);
-				Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_141 = L_140->___lastKnownPlayFabIds;
-				int32_t L_142 = V_18;
-				NullCheck(L_141);
-				String_t* L_143;
-				L_143 = Dictionary_2_get_Item_mD4A750E28CFF3DE9AE032540D174398E46DAA39D(L_141, L_142, Dictionary_2_get_Item_mD4A750E28CFF3DE9AE032540D174398E46DAA39D_RuntimeMethod_var);
-				NullCheck(L_138);
-				Dictionary_2_set_Item_mD6B904ADF5B3D53E0D896FA7AF623E90CA1C95F0(L_138, L_139, L_143, Dictionary_2_set_Item_mD6B904ADF5B3D53E0D896FA7AF623E90CA1C95F0_RuntimeMethod_var);
-			}
-
-IL_03ab_1:
-			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1108>
-				bool L_144;
-				L_144 = Enumerator_MoveNext_m058ADEC590C81C3B445E1CEEC139CD49DA79E7CC((&V_17), Enumerator_MoveNext_m058ADEC590C81C3B445E1CEEC139CD49DA79E7CC_RuntimeMethod_var);
-				if (L_144)
-				{
-					goto IL_032f_1;
-				}
-			}
-			{
-				goto IL_03c7;
+				goto IL_0368;
 			}
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -7929,66 +7765,66 @@ IL_03ab_1:
 		}
 	}
 
-IL_03c7:
+IL_0368:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1125>
-		Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_145 = V_2;
-		NullCheck(L_145);
-		int32_t L_146;
-		L_146 = Dictionary_2_get_Count_mC4E2F9B574CD67AAB88F2C0BFB9787708EB06F1D(L_145, Dictionary_2_get_Count_mC4E2F9B574CD67AAB88F2C0BFB9787708EB06F1D_RuntimeMethod_var);
-		if (L_146)
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1117>
+		Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_121 = V_2;
+		NullCheck(L_121);
+		int32_t L_122;
+		L_122 = Dictionary_2_get_Count_mC4E2F9B574CD67AAB88F2C0BFB9787708EB06F1D(L_121, Dictionary_2_get_Count_mC4E2F9B574CD67AAB88F2C0BFB9787708EB06F1D_RuntimeMethod_var);
+		if (L_122)
 		{
-			goto IL_03ed;
+			goto IL_038e;
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1127>
-		Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* L_147 = __this->___onComplete;
-		Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* L_148 = L_147;
-		if (L_148)
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1119>
+		Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* L_123 = __this->___onComplete;
+		Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* L_124 = L_123;
+		if (L_124)
 		{
-			G_B67_0 = L_148;
-			goto IL_03db;
+			G_B55_0 = L_124;
+			goto IL_037c;
 		}
-		G_B66_0 = L_148;
+		G_B54_0 = L_124;
 	}
 	{
-		goto IL_03eb;
-	}
-
-IL_03db:
-	{
-		U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_149 = __this->___U3CU3E8__2;
-		NullCheck(L_149);
-		Dictionary_2_tFF3F4A3304D5DB3B3C939264040C6D83E6BABBCE* L_150 = L_149->___recoveredData;
-		NullCheck(G_B67_0);
-		Action_1_Invoke_mA8A2349392B60BC78885EE456D60C0565E9534EF_inline(G_B67_0, L_150, NULL);
+		goto IL_038c;
 	}
 
-IL_03eb:
+IL_037c:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1128>
+		U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_125 = __this->___U3CU3E8__1;
+		NullCheck(L_125);
+		Dictionary_2_tFF3F4A3304D5DB3B3C939264040C6D83E6BABBCE* L_126 = L_125->___recoveredData;
+		NullCheck(G_B55_0);
+		Action_1_Invoke_mA8A2349392B60BC78885EE456D60C0565E9534EF_inline(G_B55_0, L_126, NULL);
+	}
+
+IL_038c:
+	{
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1120>
 		return (bool)0;
 	}
 
-IL_03ed:
+IL_038e:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1134>
-		U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_151 = __this->___U3CU3E8__2;
-		NullCheck(L_151);
-		L_151->___pendingRequests = 0;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1135>
-		Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_152 = V_2;
-		NullCheck(L_152);
-		Enumerator_t377F3F2E2AF88AB9C5BE4EF6A313E042D723A6D7 L_153;
-		L_153 = Dictionary_2_GetEnumerator_m6E58EBCEA45A97A9165033BA82E53D6BEBEA4A65(L_152, Dictionary_2_GetEnumerator_m6E58EBCEA45A97A9165033BA82E53D6BEBEA4A65_RuntimeMethod_var);
-		V_4 = L_153;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1126>
+		U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_127 = __this->___U3CU3E8__1;
+		NullCheck(L_127);
+		L_127->___pendingRequests = 0;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1127>
+		Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_128 = V_2;
+		NullCheck(L_128);
+		Enumerator_t377F3F2E2AF88AB9C5BE4EF6A313E042D723A6D7 L_129;
+		L_129 = Dictionary_2_GetEnumerator_m6E58EBCEA45A97A9165033BA82E53D6BEBEA4A65(L_128, Dictionary_2_GetEnumerator_m6E58EBCEA45A97A9165033BA82E53D6BEBEA4A65_RuntimeMethod_var);
+		V_4 = L_129;
 	}
 	{
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_0463:
+FINALLY_0404:
 			{
 				Enumerator_Dispose_mF3BB40D7FFC864A72DB5CDA6DECD0236EF41B698((&V_4), Enumerator_Dispose_mF3BB40D7FFC864A72DB5CDA6DECD0236EF41B698_RuntimeMethod_var);
 				return;
@@ -7997,66 +7833,66 @@ FINALLY_0463:
 		try
 		{
 			{
-				goto IL_0458_1;
+				goto IL_03f9_1;
 			}
 
-IL_0403_1:
+IL_03a4_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1135>
-				KeyValuePair_2_t3B76D3F0C04E7C20EB9535693336FFC4F9231441 L_154;
-				L_154 = Enumerator_get_Current_m811A4576130833B216E5FFD7B495A9A2EF692B4C_inline((&V_4), Enumerator_get_Current_m811A4576130833B216E5FFD7B495A9A2EF692B4C_RuntimeMethod_var);
-				V_21 = L_154;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1137>
-				String_t* L_155;
-				L_155 = KeyValuePair_2_get_Value_m95996219C06A16F0E1BD86BBDC9BF46C6B2D84E3_inline((&V_21), KeyValuePair_2_get_Value_m95996219C06A16F0E1BD86BBDC9BF46C6B2D84E3_RuntimeMethod_var);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1139>
-				NullCheck(L_155);
-				bool L_156;
-				L_156 = String_StartsWith_mF75DBA1EB709811E711B44E26FF919C88A8E65C0(L_155, _stringLiteral039E64C395491F9EAA7BB13A5B459CA099CF2C64, NULL);
-				if (!L_156)
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1127>
+				KeyValuePair_2_t3B76D3F0C04E7C20EB9535693336FFC4F9231441 L_130;
+				L_130 = Enumerator_get_Current_m811A4576130833B216E5FFD7B495A9A2EF692B4C_inline((&V_4), Enumerator_get_Current_m811A4576130833B216E5FFD7B495A9A2EF692B4C_RuntimeMethod_var);
+				V_15 = L_130;
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1129>
+				String_t* L_131;
+				L_131 = KeyValuePair_2_get_Value_m95996219C06A16F0E1BD86BBDC9BF46C6B2D84E3_inline((&V_15), KeyValuePair_2_get_Value_m95996219C06A16F0E1BD86BBDC9BF46C6B2D84E3_RuntimeMethod_var);
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1131>
+				NullCheck(L_131);
+				bool L_132;
+				L_132 = String_StartsWith_mF75DBA1EB709811E711B44E26FF919C88A8E65C0(L_131, _stringLiteral039E64C395491F9EAA7BB13A5B459CA099CF2C64, NULL);
+				if (!L_132)
 				{
-					goto IL_043c_1;
+					goto IL_03dd_1;
 				}
 			}
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1141>
-				int32_t L_157;
-				L_157 = KeyValuePair_2_get_Key_mA54FE544A8049DCD5EEA3C8C56331FB7932C3820_inline((&V_21), KeyValuePair_2_get_Key_mA54FE544A8049DCD5EEA3C8C56331FB7932C3820_RuntimeMethod_var);
-				int32_t L_158 = L_157;
-				RuntimeObject* L_159 = Box(il2cpp_defaults.int32_class, &L_158);
-				String_t* L_160;
-				L_160 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral21A444263E956AB895BD2235E50EF45DF27C315C, L_159, NULL);
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1133>
+				int32_t L_133;
+				L_133 = KeyValuePair_2_get_Key_mA54FE544A8049DCD5EEA3C8C56331FB7932C3820_inline((&V_15), KeyValuePair_2_get_Key_mA54FE544A8049DCD5EEA3C8C56331FB7932C3820_RuntimeMethod_var);
+				int32_t L_134 = L_133;
+				RuntimeObject* L_135 = Box(il2cpp_defaults.int32_class, &L_134);
+				String_t* L_136;
+				L_136 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral21A444263E956AB895BD2235E50EF45DF27C315C, L_135, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_160, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1142>
-				goto IL_0458_1;
+				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_136, NULL);
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1134>
+				goto IL_03f9_1;
 			}
 
-IL_043c_1:
+IL_03dd_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1144>
-				U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_161 = __this->___U3CU3E8__2;
-				NullCheck(L_161);
-				int32_t L_162 = L_161->___pendingRequests;
-				V_6 = L_162;
-				U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_163 = __this->___U3CU3E8__2;
-				int32_t L_164 = V_6;
-				NullCheck(L_163);
-				L_163->___pendingRequests = ((int32_t)il2cpp_codegen_add(L_164, 1));
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1136>
+				U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_137 = __this->___U3CU3E8__1;
+				NullCheck(L_137);
+				int32_t L_138 = L_137->___pendingRequests;
+				V_6 = L_138;
+				U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_139 = __this->___U3CU3E8__1;
+				int32_t L_140 = V_6;
+				NullCheck(L_139);
+				L_139->___pendingRequests = ((int32_t)il2cpp_codegen_add(L_140, 1));
 			}
 
-IL_0458_1:
+IL_03f9_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1135>
-				bool L_165;
-				L_165 = Enumerator_MoveNext_m6881F4F4B2935356D2A140C8BD87FF2C7B21089E((&V_4), Enumerator_MoveNext_m6881F4F4B2935356D2A140C8BD87FF2C7B21089E_RuntimeMethod_var);
-				if (L_165)
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1127>
+				bool L_141;
+				L_141 = Enumerator_MoveNext_m6881F4F4B2935356D2A140C8BD87FF2C7B21089E((&V_4), Enumerator_MoveNext_m6881F4F4B2935356D2A140C8BD87FF2C7B21089E_RuntimeMethod_var);
+				if (L_141)
 				{
-					goto IL_0403_1;
+					goto IL_03a4_1;
 				}
 			}
 			{
-				goto IL_0471;
+				goto IL_0412;
 			}
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -8065,20 +7901,20 @@ IL_0458_1:
 		}
 	}
 
-IL_0471:
+IL_0412:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1147>
-		Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_166 = V_2;
-		NullCheck(L_166);
-		Enumerator_t377F3F2E2AF88AB9C5BE4EF6A313E042D723A6D7 L_167;
-		L_167 = Dictionary_2_GetEnumerator_m6E58EBCEA45A97A9165033BA82E53D6BEBEA4A65(L_166, Dictionary_2_GetEnumerator_m6E58EBCEA45A97A9165033BA82E53D6BEBEA4A65_RuntimeMethod_var);
-		V_4 = L_167;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1139>
+		Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_142 = V_2;
+		NullCheck(L_142);
+		Enumerator_t377F3F2E2AF88AB9C5BE4EF6A313E042D723A6D7 L_143;
+		L_143 = Dictionary_2_GetEnumerator_m6E58EBCEA45A97A9165033BA82E53D6BEBEA4A65(L_142, Dictionary_2_GetEnumerator_m6E58EBCEA45A97A9165033BA82E53D6BEBEA4A65_RuntimeMethod_var);
+		V_4 = L_143;
 	}
 	{
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_0508:
+FINALLY_04a9:
 			{
 				Enumerator_Dispose_mF3BB40D7FFC864A72DB5CDA6DECD0236EF41B698((&V_4), Enumerator_Dispose_mF3BB40D7FFC864A72DB5CDA6DECD0236EF41B698_RuntimeMethod_var);
 				return;
@@ -8087,49 +7923,57 @@ FINALLY_0508:
 		try
 		{
 			{
-				goto IL_04fa_1;
+				goto IL_049b_1;
 			}
 
-IL_047b_1:
+IL_041c_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1147>
-				KeyValuePair_2_t3B76D3F0C04E7C20EB9535693336FFC4F9231441 L_168;
-				L_168 = Enumerator_get_Current_m811A4576130833B216E5FFD7B495A9A2EF692B4C_inline((&V_4), Enumerator_get_Current_m811A4576130833B216E5FFD7B495A9A2EF692B4C_RuntimeMethod_var);
-				V_22 = L_168;
-				U3CU3Ec__DisplayClass94_3_t93D9FC0FC2D4A39864539FE54B3AA7CB22505264* L_169 = (U3CU3Ec__DisplayClass94_3_t93D9FC0FC2D4A39864539FE54B3AA7CB22505264*)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass94_3_t93D9FC0FC2D4A39864539FE54B3AA7CB22505264_il2cpp_TypeInfo_var);
-				U3CU3Ec__DisplayClass94_3__ctor_m96A7C269DE1924DC79B1CCF33DEC57A1722BD721(L_169, NULL);
-				V_23 = L_169;
-				U3CU3Ec__DisplayClass94_3_t93D9FC0FC2D4A39864539FE54B3AA7CB22505264* L_170 = V_23;
-				U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_171 = __this->___U3CU3E8__2;
-				NullCheck(L_170);
-				L_170->___CSU24U3CU3E8__locals3 = L_171;
-				Il2CppCodeGenWriteBarrier((void**)(&L_170->___CSU24U3CU3E8__locals3), (void*)L_171);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1149>
-				U3CU3Ec__DisplayClass94_3_t93D9FC0FC2D4A39864539FE54B3AA7CB22505264* L_172 = V_23;
-				int32_t L_173;
-				L_173 = KeyValuePair_2_get_Key_mA54FE544A8049DCD5EEA3C8C56331FB7932C3820_inline((&V_22), KeyValuePair_2_get_Key_mA54FE544A8049DCD5EEA3C8C56331FB7932C3820_RuntimeMethod_var);
-				NullCheck(L_172);
-				L_172->___actorNo = L_173;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1150>
-				U3CU3Ec__DisplayClass94_3_t93D9FC0FC2D4A39864539FE54B3AA7CB22505264* L_174 = V_23;
-				String_t* L_175;
-				L_175 = KeyValuePair_2_get_Value_m95996219C06A16F0E1BD86BBDC9BF46C6B2D84E3_inline((&V_22), KeyValuePair_2_get_Value_m95996219C06A16F0E1BD86BBDC9BF46C6B2D84E3_RuntimeMethod_var);
-				NullCheck(L_174);
-				L_174->___pfId = L_175;
-				Il2CppCodeGenWriteBarrier((void**)(&L_174->___pfId), (void*)L_175);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1153>
-				U3CU3Ec__DisplayClass94_3_t93D9FC0FC2D4A39864539FE54B3AA7CB22505264* L_176 = V_23;
-				NullCheck(L_176);
-				String_t* L_177 = L_176->___pfId;
-				NullCheck(L_177);
-				bool L_178;
-				L_178 = String_StartsWith_mF75DBA1EB709811E711B44E26FF919C88A8E65C0(L_177, _stringLiteral039E64C395491F9EAA7BB13A5B459CA099CF2C64, NULL);
-				if (L_178)
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1139>
+				KeyValuePair_2_t3B76D3F0C04E7C20EB9535693336FFC4F9231441 L_144;
+				L_144 = Enumerator_get_Current_m811A4576130833B216E5FFD7B495A9A2EF692B4C_inline((&V_4), Enumerator_get_Current_m811A4576130833B216E5FFD7B495A9A2EF692B4C_RuntimeMethod_var);
+				V_16 = L_144;
+				U3CU3Ec__DisplayClass94_3_t93D9FC0FC2D4A39864539FE54B3AA7CB22505264* L_145 = (U3CU3Ec__DisplayClass94_3_t93D9FC0FC2D4A39864539FE54B3AA7CB22505264*)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass94_3_t93D9FC0FC2D4A39864539FE54B3AA7CB22505264_il2cpp_TypeInfo_var);
+				U3CU3Ec__DisplayClass94_3__ctor_m96A7C269DE1924DC79B1CCF33DEC57A1722BD721(L_145, NULL);
+				V_17 = L_145;
+				U3CU3Ec__DisplayClass94_3_t93D9FC0FC2D4A39864539FE54B3AA7CB22505264* L_146 = V_17;
+				U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_147 = __this->___U3CU3E8__1;
+				NullCheck(L_146);
+				L_146->___CSU24U3CU3E8__locals3 = L_147;
+				Il2CppCodeGenWriteBarrier((void**)(&L_146->___CSU24U3CU3E8__locals3), (void*)L_147);
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1141>
+				U3CU3Ec__DisplayClass94_3_t93D9FC0FC2D4A39864539FE54B3AA7CB22505264* L_148 = V_17;
+				int32_t L_149;
+				L_149 = KeyValuePair_2_get_Key_mA54FE544A8049DCD5EEA3C8C56331FB7932C3820_inline((&V_16), KeyValuePair_2_get_Key_mA54FE544A8049DCD5EEA3C8C56331FB7932C3820_RuntimeMethod_var);
+				NullCheck(L_148);
+				L_148->___actorNo = L_149;
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1142>
+				U3CU3Ec__DisplayClass94_3_t93D9FC0FC2D4A39864539FE54B3AA7CB22505264* L_150 = V_17;
+				String_t* L_151;
+				L_151 = KeyValuePair_2_get_Value_m95996219C06A16F0E1BD86BBDC9BF46C6B2D84E3_inline((&V_16), KeyValuePair_2_get_Value_m95996219C06A16F0E1BD86BBDC9BF46C6B2D84E3_RuntimeMethod_var);
+				NullCheck(L_150);
+				L_150->___pfId = L_151;
+				Il2CppCodeGenWriteBarrier((void**)(&L_150->___pfId), (void*)L_151);
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1145>
+				U3CU3Ec__DisplayClass94_3_t93D9FC0FC2D4A39864539FE54B3AA7CB22505264* L_152 = V_17;
+				NullCheck(L_152);
+				String_t* L_153 = L_152->___pfId;
+				NullCheck(L_153);
+				bool L_154;
+				L_154 = String_StartsWith_mF75DBA1EB709811E711B44E26FF919C88A8E65C0(L_153, _stringLiteral039E64C395491F9EAA7BB13A5B459CA099CF2C64, NULL);
+				if (L_154)
 				{
-					goto IL_04fa_1;
+					goto IL_049b_1;
 				}
 			}
 			{
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1147>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1148>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1149>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1150>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1151>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1152>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1153>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1154>
 				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1155>
 				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1156>
 				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1157>
@@ -8187,45 +8031,37 @@ IL_047b_1:
 				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1209>
 				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1210>
 				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1211>
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1212>
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1213>
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1214>
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1215>
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1216>
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1217>
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1218>
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1219>
-				GetUserDataRequest_tCAF1E6FC4FE7E58BE0D3BDFE78230975CC08E501* L_179 = (GetUserDataRequest_tCAF1E6FC4FE7E58BE0D3BDFE78230975CC08E501*)il2cpp_codegen_object_new(GetUserDataRequest_tCAF1E6FC4FE7E58BE0D3BDFE78230975CC08E501_il2cpp_TypeInfo_var);
-				GetUserDataRequest__ctor_m523EBE281F8FFDC1ADDC0FAC37DD923D5E669EE8(L_179, NULL);
-				GetUserDataRequest_tCAF1E6FC4FE7E58BE0D3BDFE78230975CC08E501* L_180 = L_179;
-				U3CU3Ec__DisplayClass94_3_t93D9FC0FC2D4A39864539FE54B3AA7CB22505264* L_181 = V_23;
-				NullCheck(L_181);
-				String_t* L_182 = L_181->___pfId;
-				NullCheck(L_180);
-				L_180->___PlayFabId = L_182;
-				Il2CppCodeGenWriteBarrier((void**)(&L_180->___PlayFabId), (void*)L_182);
-				U3CU3Ec__DisplayClass94_3_t93D9FC0FC2D4A39864539FE54B3AA7CB22505264* L_183 = V_23;
-				Action_1_tD9E83BC18B83F9247CC90A0C23DF62FDD6F42CDB* L_184 = (Action_1_tD9E83BC18B83F9247CC90A0C23DF62FDD6F42CDB*)il2cpp_codegen_object_new(Action_1_tD9E83BC18B83F9247CC90A0C23DF62FDD6F42CDB_il2cpp_TypeInfo_var);
-				Action_1__ctor_mD6270E419C5F8EAF16444AD1BB5DC749B63D61CC(L_184, L_183, (intptr_t)((void*)U3CU3Ec__DisplayClass94_3_U3CFetchDisconnectedPlayerScoresU3Eb__2_m9330674992B3E1CA2DADC63A63C75C929130F5E3_RuntimeMethod_var), NULL);
-				U3CU3Ec__DisplayClass94_3_t93D9FC0FC2D4A39864539FE54B3AA7CB22505264* L_185 = V_23;
-				Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* L_186 = (Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93*)il2cpp_codegen_object_new(Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93_il2cpp_TypeInfo_var);
-				Action_1__ctor_m50D54982908458E8FC5738016581B24B71E96BB8(L_186, L_185, (intptr_t)((void*)U3CU3Ec__DisplayClass94_3_U3CFetchDisconnectedPlayerScoresU3Eb__3_m03D711036479258BC0B2ADD5F5A6E4C1C79171A1_RuntimeMethod_var), NULL);
+				GetUserDataRequest_tCAF1E6FC4FE7E58BE0D3BDFE78230975CC08E501* L_155 = (GetUserDataRequest_tCAF1E6FC4FE7E58BE0D3BDFE78230975CC08E501*)il2cpp_codegen_object_new(GetUserDataRequest_tCAF1E6FC4FE7E58BE0D3BDFE78230975CC08E501_il2cpp_TypeInfo_var);
+				GetUserDataRequest__ctor_m523EBE281F8FFDC1ADDC0FAC37DD923D5E669EE8(L_155, NULL);
+				GetUserDataRequest_tCAF1E6FC4FE7E58BE0D3BDFE78230975CC08E501* L_156 = L_155;
+				U3CU3Ec__DisplayClass94_3_t93D9FC0FC2D4A39864539FE54B3AA7CB22505264* L_157 = V_17;
+				NullCheck(L_157);
+				String_t* L_158 = L_157->___pfId;
+				NullCheck(L_156);
+				L_156->___PlayFabId = L_158;
+				Il2CppCodeGenWriteBarrier((void**)(&L_156->___PlayFabId), (void*)L_158);
+				U3CU3Ec__DisplayClass94_3_t93D9FC0FC2D4A39864539FE54B3AA7CB22505264* L_159 = V_17;
+				Action_1_tD9E83BC18B83F9247CC90A0C23DF62FDD6F42CDB* L_160 = (Action_1_tD9E83BC18B83F9247CC90A0C23DF62FDD6F42CDB*)il2cpp_codegen_object_new(Action_1_tD9E83BC18B83F9247CC90A0C23DF62FDD6F42CDB_il2cpp_TypeInfo_var);
+				Action_1__ctor_mD6270E419C5F8EAF16444AD1BB5DC749B63D61CC(L_160, L_159, (intptr_t)((void*)U3CU3Ec__DisplayClass94_3_U3CFetchDisconnectedPlayerScoresU3Eb__2_m9330674992B3E1CA2DADC63A63C75C929130F5E3_RuntimeMethod_var), NULL);
+				U3CU3Ec__DisplayClass94_3_t93D9FC0FC2D4A39864539FE54B3AA7CB22505264* L_161 = V_17;
+				Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* L_162 = (Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93*)il2cpp_codegen_object_new(Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93_il2cpp_TypeInfo_var);
+				Action_1__ctor_m50D54982908458E8FC5738016581B24B71E96BB8(L_162, L_161, (intptr_t)((void*)U3CU3Ec__DisplayClass94_3_U3CFetchDisconnectedPlayerScoresU3Eb__3_m03D711036479258BC0B2ADD5F5A6E4C1C79171A1_RuntimeMethod_var), NULL);
 				il2cpp_codegen_runtime_class_init_inline(PlayFabClientAPI_t5D87B6818CF460028FBCB816062118DAA41EA597_il2cpp_TypeInfo_var);
-				PlayFabClientAPI_GetUserData_mB5CC23587106F2213A068A3CAB87A3A59DE16609(L_180, L_184, L_186, NULL, (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*)NULL, NULL);
+				PlayFabClientAPI_GetUserData_mB5CC23587106F2213A068A3CAB87A3A59DE16609(L_156, L_160, L_162, NULL, (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*)NULL, NULL);
 			}
 
-IL_04fa_1:
+IL_049b_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1147>
-				bool L_187;
-				L_187 = Enumerator_MoveNext_m6881F4F4B2935356D2A140C8BD87FF2C7B21089E((&V_4), Enumerator_MoveNext_m6881F4F4B2935356D2A140C8BD87FF2C7B21089E_RuntimeMethod_var);
-				if (L_187)
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1139>
+				bool L_163;
+				L_163 = Enumerator_MoveNext_m6881F4F4B2935356D2A140C8BD87FF2C7B21089E((&V_4), Enumerator_MoveNext_m6881F4F4B2935356D2A140C8BD87FF2C7B21089E_RuntimeMethod_var);
+				if (L_163)
 				{
-					goto IL_047b_1;
+					goto IL_041c_1;
 				}
 			}
 			{
-				goto IL_0516;
+				goto IL_04b7;
 			}
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -8234,78 +8070,78 @@ IL_04fa_1:
 		}
 	}
 
-IL_0516:
+IL_04b7:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1223>
-		float L_188;
-		L_188 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
-		__this->___U3CfetchTimeoutU3E5__2 = ((float)il2cpp_codegen_add(L_188, (5.0f)));
-		goto IL_0540;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1215>
+		float L_164;
+		L_164 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
+		__this->___U3CfetchTimeoutU3E5__2 = ((float)il2cpp_codegen_add(L_164, (5.0f)));
+		goto IL_04e1;
 	}
 
-IL_0529:
+IL_04ca:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1224>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1216>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
-		__this->___U3CU3E1__state = 2;
+		__this->___U3CU3E1__state = 3;
 		return (bool)1;
 	}
 
-IL_0539:
+IL_04da:
 	{
 		__this->___U3CU3E1__state = (-1);
 	}
 
-IL_0540:
+IL_04e1:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1224>
-		U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_189 = __this->___U3CU3E8__2;
-		NullCheck(L_189);
-		int32_t L_190 = L_189->___pendingRequests;
-		if ((((int32_t)L_190) <= ((int32_t)0)))
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1216>
+		U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_165 = __this->___U3CU3E8__1;
+		NullCheck(L_165);
+		int32_t L_166 = L_165->___pendingRequests;
+		if ((((int32_t)L_166) <= ((int32_t)0)))
 		{
-			goto IL_055b;
+			goto IL_04fc;
 		}
 	}
 	{
-		float L_191;
-		L_191 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
-		float L_192 = __this->___U3CfetchTimeoutU3E5__2;
-		if ((((float)L_191) < ((float)L_192)))
+		float L_167;
+		L_167 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
+		float L_168 = __this->___U3CfetchTimeoutU3E5__2;
+		if ((((float)L_167) < ((float)L_168)))
 		{
-			goto IL_0529;
+			goto IL_04ca;
 		}
 	}
 
-IL_055b:
+IL_04fc:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1226>
-		Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* L_193 = __this->___onComplete;
-		Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* L_194 = L_193;
-		if (L_194)
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1218>
+		Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* L_169 = __this->___onComplete;
+		Action_1_tF01EADA52784A662567C2481BBEC20D8DEB9B0AC* L_170 = L_169;
+		if (L_170)
 		{
-			G_B91_0 = L_194;
-			goto IL_0567;
+			G_B79_0 = L_170;
+			goto IL_0508;
 		}
-		G_B90_0 = L_194;
+		G_B78_0 = L_170;
 	}
 	{
-		goto IL_0577;
-	}
-
-IL_0567:
-	{
-		U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_195 = __this->___U3CU3E8__2;
-		NullCheck(L_195);
-		Dictionary_2_tFF3F4A3304D5DB3B3C939264040C6D83E6BABBCE* L_196 = L_195->___recoveredData;
-		NullCheck(G_B91_0);
-		Action_1_Invoke_mA8A2349392B60BC78885EE456D60C0565E9534EF_inline(G_B91_0, L_196, NULL);
+		goto IL_0518;
 	}
 
-IL_0577:
+IL_0508:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1227>
+		U3CU3Ec__DisplayClass94_0_t8C263534A01709BAB5CBF8A0DE3A2BF5334E0CD1* L_171 = __this->___U3CU3E8__1;
+		NullCheck(L_171);
+		Dictionary_2_tFF3F4A3304D5DB3B3C939264040C6D83E6BABBCE* L_172 = L_171->___recoveredData;
+		NullCheck(G_B79_0);
+		Action_1_Invoke_mA8A2349392B60BC78885EE456D60C0565E9534EF_inline(G_B79_0, L_172, NULL);
+	}
+
+IL_0518:
+	{
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:1219>
 		return (bool)0;
 	}
 }
@@ -8395,7 +8231,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CInitializeProfilesDelayedU3Ed__103_Mo
 IL_0017:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:2018>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:2011>
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_4 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_4, (1.5f), NULL);
 		__this->___U3CU3E2__current = L_4;
@@ -8407,11 +8243,11 @@ IL_0017:
 IL_0037:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:2020>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:2013>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_5 = V_1;
 		NullCheck(L_5);
 		GameManager_InitializeProfiles_mD1B8A360213C4C000199A9AECB5A2F4A02435737(L_5, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:2021>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:2014>
 		return (bool)0;
 	}
 }
@@ -8501,7 +8337,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CRefreshLobbyButtonsDelayedU3Ed__129_M
 IL_0010:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:3019>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:3012>
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_3 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_3, (3.0f), NULL);
 		__this->___U3CU3E2__current = L_3;
@@ -8513,12 +8349,12 @@ IL_0010:
 IL_0030:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:3021>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:3014>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* L_4;
 		L_4 = Object_FindObjectOfType_TisLobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797_m6CDAE89A2E0ABF5A15BDFB20F89DC3486C998BA7(Object_FindObjectOfType_TisLobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797_m6CDAE89A2E0ABF5A15BDFB20F89DC3486C998BA7_RuntimeMethod_var);
 		V_1 = L_4;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:3022>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:3015>
 		LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* L_5 = V_1;
 		bool L_6;
 		L_6 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_5, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -8528,7 +8364,7 @@ IL_0030:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:3024>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:3017>
 		LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* L_7 = V_1;
 		NullCheck(L_7);
 		LobbyManager_RefreshAllPlayButtons_mFFD67B324C911D0D480510017C5E107717C2B05B(L_7, NULL);
@@ -8536,7 +8372,7 @@ IL_0030:
 
 IL_004c:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:3026>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:3019>
 		return (bool)0;
 	}
 }
@@ -8626,7 +8462,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CRetryLoadPlayerProfileU3Ed__102_MoveN
 IL_0017:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:2008>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:2001>
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_4 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_4, (0.5f), NULL);
 		__this->___U3CU3E2__current = L_4;
@@ -8638,11 +8474,11 @@ IL_0017:
 IL_0037:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:2009>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:2002>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_5 = V_1;
 		NullCheck(L_5);
 		GameManager_LoadPlayerProfileImage_mB7A61E2E9A792236E3CB7D7721BCF7BD24012AE3(L_5, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:2010>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/GameManager.cs:2003>
 		return (bool)0;
 	}
 }
@@ -30090,15 +29926,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Player_get_ActorNumber_mE
 	{
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Photon/PhotonRealtime/Code/Player.cs:56>
 		int32_t L_0 = __this->___actorNumber;
-		return L_0;
-	}
-}
-// Method Definition Index: 111123
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Player_get_IsInactive_m4DDCB652FA77A7DD38F02922C4E411EA4647ED9B_inline (Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* __this, const RuntimeMethod* method) 
-{
-	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Photon/PhotonRealtime/Code/Player.cs:127>
-		bool L_0 = __this->___U3CIsInactiveU3Ek__BackingField;
 		return L_0;
 	}
 }
