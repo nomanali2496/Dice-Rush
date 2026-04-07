@@ -230,6 +230,9 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log($"[GameManager] 🏆 Offline reward DETECTED: '{message}' | Cash: {cash} | Chips: {chips}");
         
+        // 0. Force Profile Image Load FIRST so it's ready for DisplayPlace
+        LoadPlayerProfileImage();
+        
         // Safety: If game is already active, don't show the lobby popup
         if (isGameActive) 
         {
@@ -308,7 +311,7 @@ public class GameManager : MonoBehaviour
                     DisplayPlace(place, entry.type, entry.cpuIdx, 0,
                                  GetProfileImageForPod(place), GetProfileImageCustomForPod(place), GetOutlineImageForPod(place), GetFrameImageForPod(place), GetNameTextForPod(place), null,
                                  pIcon, pText, null,
-                                 entry.cash, entry.chips, entry.name, entry.avatarIdx);
+                                 entry.cash, entry.chips, entry.name, entry.avatarIdx, entry.customImg);
                 }
             }
 
@@ -322,8 +325,7 @@ public class GameManager : MonoBehaviour
             DisplayPlace(playerPlace, PlayerType.Player, -1, 0, GetProfileImageForPod(playerPlace), GetProfileImageCustomForPod(playerPlace), GetOutlineImageForPod(playerPlace), GetFrameImageForPod(playerPlace), GetNameTextForPod(playerPlace), null, null, null, null, cash, chips);
         }
 
-        // 4. Force Profile Image Load
-        LoadPlayerProfileImage();
+        // 4. (Profile load moved to start)
 
         // 5. Activate visuals
         if (winnerScreen != null) winnerScreen.SetActive(true);
@@ -920,6 +922,13 @@ public class GameManager : MonoBehaviour
                         catch (System.Exception) { }
                     }
                 }
+            }
+
+            // 3. Cache Preset Avatar Index 0-7
+            if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_AVATAR_KEY, out object avatarIdxObj))
+            {
+                cachedNetworkAvatarIndices[actorNo] = (int)avatarIdxObj;
+                Debug.Log($"[GameManager] Pre-cached human avatar index {avatarIdxObj} for actor {actorNo}");
             }
 
             // 4. Cache PlayFab ID for score recovery (CRITICAL for disconnected players)
@@ -1784,7 +1793,7 @@ public class GameManager : MonoBehaviour
     private void DisplayPlace(int placeNumber, PlayerType playerType, int cpuIndex, int selectionCount,
                               Image profileImage, Image profileImageCustom, Image outlineImage, Image frameImage, TMPro.TextMeshProUGUI nameText, Text nameTextLegacy,
                               Image prizeIcon, TMPro.TextMeshProUGUI prizeText, Text prizeTextLegacy,
-                              float cashPrize, int chipsPrize, string overrideName = null, int overrideAvatarIdx = -1)
+                              float cashPrize, int chipsPrize, string overrideName = null, int overrideAvatarIdx = -1, string overrideCustomBase64 = null)
     {
         // Activate UI elements first (in case they were hidden in previous game)
         if (profileImage != null)
@@ -1898,7 +1907,25 @@ public class GameManager : MonoBehaviour
                         }
                     }
 
-                    // Priority 4: Use Offline Snapshot Avatar Index (if provided)
+                    // Priority 4: Use Offline Snapshot Custom Image (if provided)
+                    if (!customProfileMatched && !string.IsNullOrEmpty(overrideCustomBase64))
+                    {
+                        try
+                        {
+                            byte[] bytes = System.Convert.FromBase64String(overrideCustomBase64);
+                            Texture2D tex = new Texture2D(2, 2);
+                            if (tex.LoadImage(bytes))
+                            {
+                                Sprite customSprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+                                SetProfileSlot(profileImage, profileImageCustom, customSprite, true);
+                                customProfileMatched = true;
+                                Debug.Log($"[GameManager] Winner podium: restored saved custom gallery photo for place {placeNumber}");
+                            }
+                        }
+                        catch (System.Exception ex) { Debug.LogWarning($"[GameManager] Failed to decode saved custom photo: {ex.Message}"); }
+                    }
+
+                    // Priority 5: Use Offline Snapshot Avatar Index (if provided)
                     if (!customProfileMatched && overrideAvatarIdx >= 0)
                     {
                         if (availableProfileSprites != null && overrideAvatarIdx < availableProfileSprites.Length)
@@ -3146,19 +3173,52 @@ public class GameManager : MonoBehaviour
                                 OfflinePodiumSnapshot snapshot = new OfflinePodiumSnapshot();
                                 for (int j = 0; j < rankings.Count && j < 3; j++)
                                 {
+                                    // 1. Reset variables for THIS entry to prevent carrying over old data
                                     string pName = GetWinnerName(rankings[j].playerType, rankings[j].cpuIndex);
                                     int pAvatarIdx = 0;
+                                    string pCustomBase64 = "";
                                     
-                                    // PERSPECTIVE FIX: If the Master Client is in the snapshot, save their ACTUAL NAME instead of "You"
-                                    if (rankings[j].playerType == PlayerType.Player && rankings[j].cpuIndex == -1) 
+                                    // 2. Capture data based on player type
+                                    if (rankings[j].playerType == PlayerType.Player) 
                                     {
-                                        pName = PlayFabManager.Instance.currentPlayerData.playerName;
-                                        pAvatarIdx = PlayFabManager.Instance.currentPlayerData.selectedAvatarIndex;
-                                    }
-                                    else if (rankings[j].playerType == PlayerType.Player) // Other humans
-                                    {
-                                        int actorNo = Mathf.Abs(rankings[j].cpuIndex + 100);
-                                        if (!cachedNetworkAvatarIndices.TryGetValue(actorNo, out pAvatarIdx)) pAvatarIdx = 0;
+                                        if (rankings[j].cpuIndex == -1) // Master Client (Local)
+                                        {
+                                            pName = PlayFabManager.Instance.currentPlayerData.playerName;
+                                            pAvatarIdx = PlayFabManager.Instance.currentPlayerData.selectedAvatarIndex;
+                                            
+                                            if (mainMenuAvatarDisplay != null && mainMenuAvatarDisplay.IsShowingCustomAvatar())
+                                            {
+                                                Sprite s = mainMenuAvatarDisplay.GetCurrentAvatarSprite();
+                                                if (s != null && s.texture != null)
+                                                {
+                                                    try { pCustomBase64 = System.Convert.ToBase64String(s.texture.EncodeToJPG(50)); } catch { }
+                                                }
+                                            }
+                                        }
+                                        else // Other Humans
+                                        {
+                                            int actorNo = Mathf.Abs(rankings[j].cpuIndex + 100);
+                                            cachedNetworkAvatarIndices.TryGetValue(actorNo, out pAvatarIdx);
+                                            
+                                            // Seek live properties
+                                            if (Photon.Pun.PhotonNetwork.CurrentRoom != null && Photon.Pun.PhotonNetwork.CurrentRoom.Players.ContainsKey(actorNo))
+                                            {
+                                                var p = Photon.Pun.PhotonNetwork.CurrentRoom.GetPlayer(actorNo);
+                                                if (p != null && p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_CUSTOM_IMAGE_KEY, out object imageDataObj))
+                                                {
+                                                    pCustomBase64 = System.Convert.ToBase64String((byte[])imageDataObj);
+                                                }
+                                            }
+                                            
+                                            // Fallback to cache
+                                            if (string.IsNullOrEmpty(pCustomBase64) && cachedNetworkAvatars.TryGetValue(actorNo, out Sprite cachedSprite))
+                                            {
+                                                if (cachedSprite != null && cachedSprite.texture != null)
+                                                {
+                                                    try { pCustomBase64 = System.Convert.ToBase64String(cachedSprite.texture.EncodeToJPG(50)); } catch { }
+                                                }
+                                            }
+                                        }
                                     }
 
                                     snapshot.topThree.Add(new OfflinePlayerEntry {
@@ -3168,7 +3228,8 @@ public class GameManager : MonoBehaviour
                                         cpuIdx = rankings[j].cpuIndex,
                                         cash = winnerScreenScript != null ? (j == 0 ? currentLobbyConfig?.firstPlaceCash ?? 0 : j == 1 ? currentLobbyConfig?.secondPlaceCash ?? 0 : currentLobbyConfig?.thirdPlaceCash ?? 0) : 0,
                                         chips = winnerScreenScript != null ? (j == 0 ? currentLobbyConfig?.firstPlaceChips ?? 0 : j == 1 ? currentLobbyConfig?.secondPlaceChips ?? 0 : currentLobbyConfig?.thirdPlaceChips ?? 0) : 0,
-                                        avatarIdx = pAvatarIdx
+                                        avatarIdx = pAvatarIdx,
+                                        customImg = pCustomBase64
                                     });
                                 }
                                 string rankingsJson = JsonUtility.ToJson(snapshot);
@@ -3499,6 +3560,9 @@ public class GameManager : MonoBehaviour
 
     private void SetProfileSlot(Image spriteSlot, Image customSlot, Sprite sprite, bool isCustom)
     {
+        if (spriteSlot != null) spriteSlot.gameObject.SetActive(false);
+        if (customSlot != null) customSlot.gameObject.SetActive(false);
+
         if (isCustom)
         {
             if (customSlot != null)
@@ -3507,7 +3571,6 @@ public class GameManager : MonoBehaviour
                 customSlot.rectTransform.localScale = Vector3.one * 2f;
                 customSlot.gameObject.SetActive(true);
             }
-            if (spriteSlot != null) spriteSlot.gameObject.SetActive(false);
         }
         else
         {
@@ -3517,7 +3580,6 @@ public class GameManager : MonoBehaviour
                 spriteSlot.rectTransform.localScale = Vector3.one;
                 spriteSlot.gameObject.SetActive(true);
             }
-            if (customSlot != null) customSlot.gameObject.SetActive(false);
         }
     }
 }
@@ -3539,4 +3601,5 @@ public class OfflinePlayerEntry {
     public float cash;
     public int chips;
     public int avatarIdx;
+    public string customImg;
 }
