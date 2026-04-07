@@ -137,6 +137,7 @@ public class GameManager : MonoBehaviour
         if (PlayFabManager.Instance != null)
         {
             PlayFabManager.Instance.OnPlayerDataLoaded += OnPlayerDataLoaded;
+            PlayFabManager.Instance.OnRewardClaimed += OnOfflineRewardClaimed;
         }
         
         // Subscribe to NumberGrid event for when all boxes are selected (legacy - will be updated when individual grids are created)
@@ -216,7 +217,133 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-    
+
+    /// <summary>
+    /// Called when a pending reward is claimed from PlayFab (match won while away)
+    /// Shows the winner screen UI even when returning after a disconnect.
+    /// </summary>
+    /// <summary>
+    /// Called when a pending reward is claimed from PlayFab (match won while away)
+    /// Shows the winner screen UI even when returning after a disconnect.
+    /// </summary>
+    private void OnOfflineRewardClaimed(string message, float cash, int chips, string rankingsJson)
+    {
+        Debug.Log($"[GameManager] 🏆 Offline reward DETECTED: '{message}' | Cash: {cash} | Chips: {chips}");
+        
+        // Safety: If game is already active, don't show the lobby popup
+        if (isGameActive) 
+        {
+             Debug.LogWarning($"[GameManager] ⚠️ Offline reward BLOCKED: isGameActive is {isGameActive}. We only show this in the Lobby.");
+             return;
+        }
+
+        // Validate the GameObject exists
+        if (winnerScreen == null)
+        {
+            Debug.LogError("[GameManager] ❌ ERROR: 'winnerScreen' GameObject is not assigned in the Inspector!");
+            return;
+        }
+
+        // Ensure WinnerScreen script reference is initialized
+        WinnerScreen ws = GetWinnerScreenScript();
+        if (ws == null)
+        {
+            Debug.LogError("[GameManager] ❌ ERROR: Could not find WinnerScreen script on the assigned GameObject!");
+            return;
+        }
+
+        // 1. Setup prize tracking for animation
+        lastAwardedCash = cash;
+        lastAwardedChips = chips;
+        prizesAwardedForThisMatch = true;
+
+        // 2. Identify the place from message
+        int playerPlace = 1;
+        if (message.Contains("1st")) playerPlace = 1;
+        else if (message.Contains("2nd")) playerPlace = 3; // Correct 2nd vs 3rd if needed
+        else if (message.Contains("3rd")) playerPlace = 3;
+
+        // 3. Setup Podium
+        ResetWinnerScreenUI();
+        
+        // Try parsing full rankings snapshot
+        OfflinePodiumSnapshot snapshot = null;
+        if (!string.IsNullOrEmpty(rankingsJson))
+        {
+            try { snapshot = JsonUtility.FromJson<OfflinePodiumSnapshot>(rankingsJson); } 
+            catch { Debug.LogWarning("[GameManager] Failed to parse podium snapshot JSON."); }
+        }
+
+        if (snapshot != null && snapshot.topThree.Count > 0)
+        {
+            Debug.Log($"[GameManager] 🥇 Displaying FULL PODIUM for offline win ({snapshot.topThree.Count} entries).");
+            
+            for (int i = 0; i < snapshot.topThree.Count; i++)
+            {
+                var entry = snapshot.topThree[i];
+                int place = i + 1;
+                
+                Image pIcon = null;
+                TMPro.TextMeshProUGUI pText = null;
+                Image pIconSmall = null;
+                
+                switch (place) {
+                    case 1: pIcon = ws.GetFirstPlacePrizeIcon(); pText = ws.GetFirstPlacePrizeText(); break;
+                    case 2: pIcon = ws.GetSecondPlacePrizeIcon(); pText = ws.GetSecondPlacePrizeText(); break;
+                    case 3: pIcon = ws.GetThirdPlacePrizeIcon(); pText = ws.GetThirdPlacePrizeText(); break;
+                }
+
+                // FIX: If this entry in the snapshot is the LOCAL PLAYER watching the screen, always show them as "YOU"
+                if (!string.IsNullOrEmpty(entry.pfId) && entry.pfId == PlayFabManager.Instance.currentPlayerData.playFabId)
+                {
+                    // cpuIdx = -1 forces DisplayPlace to use local player logic/high-quality avatar
+                    DisplayPlace(place, PlayerType.Player, -1, 0,
+                                 GetProfileImageForPod(place), GetProfileImageCustomForPod(place), GetOutlineImageForPod(place), GetFrameImageForPod(place), GetNameTextForPod(place), null,
+                                 pIcon, pText, null,
+                                 entry.cash, entry.chips);
+                }
+                else 
+                {
+                    // Use the snapshot's saved name and avatar index
+                    DisplayPlace(place, entry.type, entry.cpuIdx, 0,
+                                 GetProfileImageForPod(place), GetProfileImageCustomForPod(place), GetOutlineImageForPod(place), GetFrameImageForPod(place), GetNameTextForPod(place), null,
+                                 pIcon, pText, null,
+                                 entry.cash, entry.chips, entry.name, entry.avatarIdx);
+                }
+            }
+
+            // Hide pods that were not in snapshot
+            if (snapshot.topThree.Count < 2) HidePlace(secondPlaceProfileImage, secondPlaceOutlineImage, secondPlaceFrameImage, secondPlaceNameText, secondPlaceNameTextLegacy, null, null, null);
+            if (snapshot.topThree.Count < 3) HidePlace(thirdPlaceProfileImage, thirdPlaceOutlineImage, thirdPlaceFrameImage, thirdPlaceNameText, thirdPlaceNameTextLegacy, null, null, null);
+        }
+        else
+        {
+            Debug.Log($"[GameManager] 🥈 No podium snapshot found. Displaying only the local player on Rank {playerPlace}.");
+            DisplayPlace(playerPlace, PlayerType.Player, -1, 0, GetProfileImageForPod(playerPlace), GetProfileImageCustomForPod(playerPlace), GetOutlineImageForPod(playerPlace), GetFrameImageForPod(playerPlace), GetNameTextForPod(playerPlace), null, null, null, null, cash, chips);
+        }
+
+        // 4. Force Profile Image Load
+        LoadPlayerProfileImage();
+
+        // 5. Activate visuals
+        if (winnerScreen != null) winnerScreen.SetActive(true);
+
+        // 6. Trigger animation
+        if (ws != null) {
+            List<(PlayerType, int, int)> uiRankings = new List<(PlayerType, int, int)>();
+            uiRankings.Add((PlayerType.Player, -1, 0)); // Only the local player prize animates
+            ws.PlayAnimationIfPlayerInTop3(uiRankings, currentLobbyConfig);
+        }
+    }
+
+    // Helpers for pod access
+    private Image GetProfileImageForPod(int place) { return place == 1 ? winnerProfileImage : place == 2 ? secondPlaceProfileImage : thirdPlaceProfileImage; }
+    private Image GetProfileImageCustomForPod(int place) { return place == 1 ? winnerProfileImageCustom : place == 2 ? secondPlaceProfileImageCustom : thirdPlaceProfileImageCustom; }
+    private Image GetOutlineImageForPod(int place) { return place == 1 ? winnerOutlineImage : place == 2 ? secondPlaceOutlineImage : thirdPlaceOutlineImage; }
+    private Image GetFrameImageForPod(int place) { return place == 1 ? winnerFrameImage : place == 2 ? secondPlaceFrameImage : thirdPlaceFrameImage; }
+    private TMPro.TextMeshProUGUI GetNameTextForPod(int place) { return place == 1 ? winnerNameText : place == 2 ? secondPlaceNameText : thirdPlaceNameText; }
+
+
     /// <summary>
     /// Starts the game timer countdown (with "3, 2, 1" countdown first)
     /// </summary>
@@ -657,6 +784,7 @@ public class GameManager : MonoBehaviour
         if (PlayFabManager.Instance != null)
         {
             PlayFabManager.Instance.OnPlayerDataLoaded -= OnPlayerDataLoaded;
+            PlayFabManager.Instance.OnRewardClaimed -= OnOfflineRewardClaimed;
         }
         
         if (numberGrid != null)
@@ -1656,7 +1784,7 @@ public class GameManager : MonoBehaviour
     private void DisplayPlace(int placeNumber, PlayerType playerType, int cpuIndex, int selectionCount,
                               Image profileImage, Image profileImageCustom, Image outlineImage, Image frameImage, TMPro.TextMeshProUGUI nameText, Text nameTextLegacy,
                               Image prizeIcon, TMPro.TextMeshProUGUI prizeText, Text prizeTextLegacy,
-                              float cashPrize, int chipsPrize)
+                              float cashPrize, int chipsPrize, string overrideName = null, int overrideAvatarIdx = -1)
     {
         // Activate UI elements first (in case they were hidden in previous game)
         if (profileImage != null)
@@ -1770,11 +1898,22 @@ public class GameManager : MonoBehaviour
                         }
                     }
 
+                    // Priority 4: Use Offline Snapshot Avatar Index (if provided)
+                    if (!customProfileMatched && overrideAvatarIdx >= 0)
+                    {
+                        if (availableProfileSprites != null && overrideAvatarIdx < availableProfileSprites.Length)
+                        {
+                            SetProfileSlot(profileImage, profileImageCustom, availableProfileSprites[overrideAvatarIdx], false);
+                            customProfileMatched = true;
+                            Debug.Log($"[GameManager] Winner podium: used override avatar index {overrideAvatarIdx} for offline recovery.");
+                        }
+                    }
+
                     // Final Fallback: Default to first sprite if all else failed
                     if (!customProfileMatched && availableProfileSprites != null && availableProfileSprites.Length > 0)
                     {
                         SetProfileSlot(profileImage, profileImageCustom, availableProfileSprites[0], false);
-                        Debug.LogWarning($"[GameManager] Winner podium: all options failed for player {actorNumber}, using default avatar.");
+                        Debug.LogWarning($"[GameManager] Winner podium: all options failed, using default avatar.");
                     }
                 }
             }
@@ -1814,8 +1953,8 @@ public class GameManager : MonoBehaviour
             }
         }
         
-        // Set name
-        string playerName = GetWinnerName(playerType, cpuIndex);
+        // Set name (use override if provided for offline recovery)
+        string playerName = !string.IsNullOrEmpty(overrideName) ? overrideName : GetWinnerName(playerType, cpuIndex);
         if (nameText != null)
         {
             nameText.text = playerName;
@@ -2980,27 +3119,63 @@ public class GameManager : MonoBehaviour
                 {
                     // Check if this winner is still ACTIVE in the room.
                     // If they are INACTIVE (disconnected ghost) or GONE, the Master Client must report it.
-                    int actorNo = Mathf.Abs(ranking.cpuIndex + 100);
-                    
-                    // ONLY award for OTHER human players (not yourself, not CPUs)
-                    if (actorNo != Photon.Pun.PhotonNetwork.LocalPlayer.ActorNumber)
-                    {
-                        bool isWinnerInRoomAndActive = false;
-                        foreach (var p in Photon.Pun.PhotonNetwork.PlayerListOthers)
+                        // ONLY award for OTHER human players
+                        if (!string.IsNullOrEmpty(ranking.pfId) && ranking.pfId != PlayFabManager.Instance.currentPlayerData.playFabId)
                         {
-                            if (p.ActorNumber == actorNo && !p.IsInactive) 
-                            { 
-                                isWinnerInRoomAndActive = true; 
-                                break; 
+                            bool isWinnerInRoomAndActive = false;
+                            
+                            // Check if this winner is still LIVE in the room by their PlayFab ID
+                            if (Photon.Pun.PhotonNetwork.CurrentRoom != null)
+                            {
+                                foreach (var p in Photon.Pun.PhotonNetwork.CurrentRoom.Players.Values)
+                                {
+                                    if (p.UserId == ranking.pfId) 
+                                    { 
+                                        isWinnerInRoomAndActive = true; 
+                                        break; 
+                                    }
+                                }
+                            }
+
+                            if (!isWinnerInRoomAndActive)
+                            {
+                                string rankLabel = (i + 1) == 1 ? "1st" : (i + 1) == 2 ? "2nd" : "3rd";
+                                Debug.Log($"[GameManager] Winner '{ranking.pfId}' at rank {rankLabel} is NOT in the room. Master Client reporting prize via CloudScript.");
+                                
+                                // Create a snapshot of the TOP 3 rankings to show full podium in lobby
+                                OfflinePodiumSnapshot snapshot = new OfflinePodiumSnapshot();
+                                for (int j = 0; j < rankings.Count && j < 3; j++)
+                                {
+                                    string pName = GetWinnerName(rankings[j].playerType, rankings[j].cpuIndex);
+                                    int pAvatarIdx = 0;
+                                    
+                                    // PERSPECTIVE FIX: If the Master Client is in the snapshot, save their ACTUAL NAME instead of "You"
+                                    if (rankings[j].playerType == PlayerType.Player && rankings[j].cpuIndex == -1) 
+                                    {
+                                        pName = PlayFabManager.Instance.currentPlayerData.playerName;
+                                        pAvatarIdx = PlayFabManager.Instance.currentPlayerData.selectedAvatarIndex;
+                                    }
+                                    else if (rankings[j].playerType == PlayerType.Player) // Other humans
+                                    {
+                                        int actorNo = Mathf.Abs(rankings[j].cpuIndex + 100);
+                                        if (!cachedNetworkAvatarIndices.TryGetValue(actorNo, out pAvatarIdx)) pAvatarIdx = 0;
+                                    }
+
+                                    snapshot.topThree.Add(new OfflinePlayerEntry {
+                                        name = pName,
+                                        pfId = rankings[j].pfId,
+                                        type = rankings[j].playerType,
+                                        cpuIdx = rankings[j].cpuIndex,
+                                        cash = winnerScreenScript != null ? (j == 0 ? currentLobbyConfig?.firstPlaceCash ?? 0 : j == 1 ? currentLobbyConfig?.secondPlaceCash ?? 0 : currentLobbyConfig?.thirdPlaceCash ?? 0) : 0,
+                                        chips = winnerScreenScript != null ? (j == 0 ? currentLobbyConfig?.firstPlaceChips ?? 0 : j == 1 ? currentLobbyConfig?.secondPlaceChips ?? 0 : currentLobbyConfig?.thirdPlaceChips ?? 0) : 0,
+                                        avatarIdx = pAvatarIdx
+                                    });
+                                }
+                                string rankingsJson = JsonUtility.ToJson(snapshot);
+
+                                AwardPrizeToDisconnectedPlayer(ranking.pfId, cashPrize, chipsPrize, rankLabel, rankingsJson);
                             }
                         }
-
-                        if (!isWinnerInRoomAndActive)
-                        {
-                            Debug.Log($"[GameManager] Winner at rank {i+1} (Actor {actorNo}) is disconnected. Master Client reporting prize.");
-                            AwardPrizeToDisconnectedPlayer(ranking.pfId, cashPrize, chipsPrize);
-                        }
-                    }
                 }
             }
             else
@@ -3013,7 +3188,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Calls PlayFab CloudScript to award a prize to a winner who has disconnected
     /// </summary>
-    private void AwardPrizeToDisconnectedPlayer(string pfId, float cash, int chips)
+    private void AwardPrizeToDisconnectedPlayer(string pfId, float cash, int chips, string rank, string rankingsJson)
     {
         if (string.IsNullOrEmpty(pfId) || (cash <= 0 && chips <= 0)) return;
 
@@ -3026,6 +3201,8 @@ public class GameManager : MonoBehaviour
                 WinnerPlayFabId = pfId, 
                 CashAmount = cash, 
                 ChipsAmount = chips, 
+                Rank = rank,
+                RankingsJson = rankingsJson,
                 MatchName = currentLobbyConfig?.lobbyName ?? "Dice Match" 
             }
         };
@@ -3345,3 +3522,21 @@ public class GameManager : MonoBehaviour
     }
 }
 
+/// <summary>
+/// Serializable data for capturing a snapshot of the podium for disconnected players
+/// </summary>
+[System.Serializable]
+public class OfflinePodiumSnapshot {
+    public System.Collections.Generic.List<OfflinePlayerEntry> topThree = new System.Collections.Generic.List<OfflinePlayerEntry>();
+}
+
+[System.Serializable]
+public class OfflinePlayerEntry {
+    public string name;
+    public string pfId;
+    public PlayerType type;
+    public int cpuIdx;
+    public float cash;
+    public int chips;
+    public int avatarIdx;
+}

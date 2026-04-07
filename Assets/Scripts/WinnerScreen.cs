@@ -79,9 +79,13 @@ public class WinnerScreen : MonoBehaviour
     /// </summary>
     public void PlayAnimationIfPlayerInTop3(List<(PlayerType playerType, int cpuIndex, int count)> rankings, LobbyConfig config)
     {
-        if (rankings == null || config == null)
+        // Ensure references are valid (important if called immediately after SetActive(true))
+        if (gameManager == null) gameManager = FindObjectOfType<GameManager>();
+        if (playerProfileUI == null) playerProfileUI = FindObjectOfType<PlayerProfileUI>();
+
+        if (rankings == null)
         {
-            Debug.LogWarning("[WinnerScreen] Rankings or config is null!");
+            Debug.LogWarning("[WinnerScreen] Rankings list is null!");
             return;
         }
         
@@ -289,7 +293,7 @@ public class WinnerScreen : MonoBehaviour
     /// <summary>
     /// Plays the animation of cash and chips moving from place position to top display
     /// </summary>
-    private void PlayPrizeAnimation(int playerPlace, float cashPrize, int chipsPrize)
+    public void PlayPrizeAnimation(int playerPlace, float cashPrize, int chipsPrize)
     {
         Debug.Log($"[WinnerScreen] PlayPrizeAnimation called - Place: {playerPlace}, Cash: {cashPrize}, Chips: {chipsPrize}");
         

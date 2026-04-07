@@ -19,12 +19,13 @@ public class PlayFabManager : MonoBehaviour
     public Action<bool> OnRegisterComplete;
     public Action<PlayerData> OnPlayerDataLoaded;
     public Action<bool> OnPlayerDataSaved;
-    public Action<string, float, int> OnRewardClaimed; // Action when a pending reward is claimed
+    public Action<string, float, int, string> OnRewardClaimed; // Action: Message, Cash, Chips, RankingsJSON
     
     // Reward keys
     public const string PENDING_CASH_KEY = "PendingCashReward";
     public const string PENDING_CHIPS_KEY = "PendingChipsReward";
     public const string PENDING_MSG_KEY = "PendingRewardMessage";
+    public const string PENDING_RANKINGS_KEY = "PendingRewardRankings";
     
     private string playFabId;
     private bool isLoggedIn = false;
@@ -824,8 +825,18 @@ public class PlayFabManager : MonoBehaviour
             
             Debug.Log($"[PlayFabManager] Final data - Name: {currentPlayerData.playerName}, Cash: {currentPlayerData.cash}, Coins: {currentPlayerData.coins}, Avatar: {currentPlayerData.selectedAvatarIndex}, Background: {currentPlayerData.selectedBackgroundIndex}");
 
-            // Check for any rewards won while away (Match disconnection recovery)
-            CheckForPendingRewards(result);
+            // CRITICAL FIX: We must check BOTH Regular and Read-Only data for rewards.
+            // CloudScript often uses Read-Only for security.
+            PlayFabClientAPI.GetUserReadOnlyData(new GetUserDataRequest { PlayFabId = playFabId },
+                roResult => {
+                    Debug.Log("[PlayFabManager] Read-Only data loaded. Searching for rewards in both slots...");
+                    CheckForPendingRewards(result, roResult);
+                },
+                err => {
+                    Debug.LogWarning("[PlayFabManager] Failed to load Read-Only data, falling back to Regular data only.");
+                    CheckForPendingRewards(result, null);
+                }
+            );
         }
         else
         {
@@ -866,14 +877,37 @@ public class PlayFabManager : MonoBehaviour
     private bool isCheckingRewards = false;
 
     /// <summary>
-    /// Checks if there are any rewards waiting to be claimed globally (from matches won while away)
+    /// Checks for any rewards won while away (Match disconnection recovery).
+    /// Now checks BOTH regular and read-only data.
     /// </summary>
-    private void CheckForPendingRewards(GetUserDataResult result)
+    private void CheckForPendingRewards(GetUserDataResult regularResult, GetUserDataResult roResult)
     {
-        if (result.Data == null || isCheckingRewards) return;
+        // Ensure the lock is clean
+        isCheckingRewards = false;
 
-        bool hasCash = result.Data.ContainsKey(PENDING_CASH_KEY) && !string.IsNullOrEmpty(result.Data[PENDING_CASH_KEY].Value);
-        bool hasChips = result.Data.ContainsKey(PENDING_CHIPS_KEY) && !string.IsNullOrEmpty(result.Data[PENDING_CHIPS_KEY].Value);
+        if (regularResult == null || regularResult.Data == null) 
+        {
+             Debug.Log("[PlayFabManager] Skip rewards check: Regular result data is null.");
+             return;
+        }
+
+        // 1. Combine regular and read-only into one search dictionary
+        Dictionary<string, UserDataRecord> combinedData = new Dictionary<string, UserDataRecord>(regularResult.Data);
+        if (roResult != null && roResult.Data != null)
+        {
+            foreach (var kvp in roResult.Data)
+            {
+                if (!combinedData.ContainsKey(kvp.Key)) combinedData.Add(kvp.Key, kvp.Value);
+            }
+        }
+
+        Debug.Log($"[PlayFabManager] 🔍 Searching through {combinedData.Count} fields for pending rewards...");
+        foreach (var key in combinedData.Keys) {
+             Debug.Log($"[PlayFabManager] -> Data Slot Found: {key}");
+        }
+
+        bool hasCash = combinedData.ContainsKey(PENDING_CASH_KEY) && !string.IsNullOrEmpty(combinedData[PENDING_CASH_KEY].Value);
+        bool hasChips = combinedData.ContainsKey(PENDING_CHIPS_KEY) && !string.IsNullOrEmpty(combinedData[PENDING_CHIPS_KEY].Value);
 
         if (hasCash || hasChips)
         {
@@ -881,39 +915,34 @@ public class PlayFabManager : MonoBehaviour
             float cashVal = 0;
             int chipVal = 0;
             string msg = "You won rewards while you were offline!";
+            string rankingsJson = "";
 
-            if (hasCash) float.TryParse(result.Data[PENDING_CASH_KEY].Value, out cashVal);
-            if (hasChips) int.TryParse(result.Data[PENDING_CHIPS_KEY].Value, out chipVal);
-            if (result.Data.ContainsKey(PENDING_MSG_KEY)) msg = result.Data[PENDING_MSG_KEY].Value;
+            if (hasCash) float.TryParse(combinedData[PENDING_CASH_KEY].Value, out cashVal);
+            if (hasChips) int.TryParse(combinedData[PENDING_CHIPS_KEY].Value, out chipVal);
+            if (combinedData.ContainsKey(PENDING_MSG_KEY)) msg = combinedData[PENDING_MSG_KEY].Value;
+            if (combinedData.ContainsKey(PENDING_RANKINGS_KEY)) rankingsJson = combinedData[PENDING_RANKINGS_KEY].Value;
 
             if (cashVal > 0 || chipVal > 0)
             {
-                Debug.Log($"[PlayFabManager] 🎁 Found pending rewards: ${cashVal}, {chipVal} chips. Applying now...");
+                Debug.Log($"[PlayFabManager] 🎁 Found pending rewards! Cash: {cashVal}, Chips: {chipVal}. Rankings: {!string.IsNullOrEmpty(rankingsJson)}");
                 
                 // Add to current totals
                 currentPlayerData.cash += cashVal;
                 currentPlayerData.coins += chipVal;
                 
                 // Notify UI
-                OnRewardClaimed?.Invoke(msg, cashVal, chipVal);
+                OnRewardClaimed?.Invoke(msg, cashVal, chipVal, rankingsJson);
                 
-                // 1. CLEAR the pending rewards from PlayFab (to prevent double claiming)
-                var clearData = new Dictionary<string, string>
-                {
-                    { PENDING_CASH_KEY, null },
-                    { PENDING_CHIPS_KEY, null },
-                    { PENDING_MSG_KEY, null }
-                };
-
-                PlayFabClientAPI.UpdateUserData(new UpdateUserDataRequest { Data = clearData }, 
+                // CRITICAL LOOP FIX: Call CloudScript to clear Read-Only data (Client cannot clear it alone)
+                var clearRequest = new ExecuteCloudScriptRequest { FunctionName = "ClearPendingRewards" };
+                PlayFabClientAPI.ExecuteCloudScript(clearRequest, 
                     res => {
-                        Debug.Log("[PlayFabManager] Pending rewards cleared from server. Persisting totals...");
+                        Debug.Log("[PlayFabManager] Pending rewards successfully cleared from server via CloudScript.");
                         isCheckingRewards = false;
-                        // 2. Persist the updated totals to secure the addition
-                        SavePlayerData(); 
+                        SavePlayerData(); // Persist final totals
                     }, 
                     err => {
-                        Debug.LogWarning("[PlayFabManager] Failed to clear pending rewards: " + err.GenerateErrorReport());
+                        Debug.LogWarning("[PlayFabManager] Failed to clear rewards via CloudScript: " + err.GenerateErrorReport());
                         isCheckingRewards = false;
                     }
                 );

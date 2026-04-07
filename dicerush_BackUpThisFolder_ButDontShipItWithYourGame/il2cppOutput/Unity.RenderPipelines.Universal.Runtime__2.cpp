@@ -28742,7 +28742,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void LightCookieShaderData_set_is
 		return;
 	}
 }
-// Method Definition Index: 68275
+// Method Definition Index: 68277
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t math_tzcnt_mB3717EA8D7052CBC8F048C8ADB37D6C6060C5490_inline (uint64_t ___0_x, const RuntimeMethod* method) 
 {
 	uint32_t V_0 = 0;
@@ -28833,7 +28833,7 @@ IL_002a:
 		return ((int32_t)il2cpp_codegen_subtract(((int32_t)((int64_t)(L_13>>((int32_t)52)))), L_14));
 	}
 }
-// Method Definition Index: 67719
+// Method Definition Index: 67721
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t math_min_m02D43DF516544C279AF660EA4731449C82991849_inline (int32_t ___0_x, int32_t ___1_y, const RuntimeMethod* method) 
 {
 	{
@@ -28856,7 +28856,7 @@ IL_0006:
 		return L_3;
 	}
 }
-// Method Definition Index: 67737
+// Method Definition Index: 67739
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t math_max_m9083201D37A8ED0157B127B5878D9B7F3A2A40BE_inline (int32_t ___0_x, int32_t ___1_y, const RuntimeMethod* method) 
 {
 	{
