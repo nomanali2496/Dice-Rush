@@ -333,7 +333,18 @@ public class GameManager : MonoBehaviour
         // 6. Trigger animation
         if (ws != null) {
             List<(PlayerType, int, int)> uiRankings = new List<(PlayerType, int, int)>();
-            uiRankings.Add((PlayerType.Player, -1, 0)); // Only the local player prize animates
+            
+            // Explicitly build a 3-person list (1st, 2nd, 3rd) and place YOU in your exact rank.
+            // This ensures the animation starting position is always 100% accurate to the podium.
+            for (int i = 1; i <= 3; i++)
+            {
+                if (i == playerPlace) {
+                    uiRankings.Add((PlayerType.Player, -1, 0)); // Add local player at their real rank
+                } else {
+                    uiRankings.Add((PlayerType.CPU, -2, 0)); // Add placeholder for other ranks
+                }
+            }
+            
             ws.PlayAnimationIfPlayerInTop3(uiRankings, currentLobbyConfig);
         }
     }
@@ -1822,126 +1833,80 @@ public class GameManager : MonoBehaviour
         {
             if (playerType == PlayerType.Player)
             {
-                if (cpuIndex == -1) // Local Player
+                bool customProfileMatched = false;
+
+                // Priority 1: Use Offline Snapshot Custom Image (Match Recovery)
+                // We check this FIRST so match history overrides generic shortcuts
+                if (!string.IsNullOrEmpty(overrideCustomBase64))
                 {
-                    // Prefer existing cached state from LoadPlayerProfileImage
-                    bool isCustomLocally = (playerProfileImageCustom != null && playerProfileImageCustom.gameObject.activeSelf) 
-                                        || (mainMenuAvatarDisplay != null && mainMenuAvatarDisplay.IsShowingCustomAvatar());
-                    
-                    if (playerSelectedAvatar != null)
+                    try
                     {
-                        SetProfileSlot(profileImage, profileImageCustom, playerSelectedAvatar, isCustomLocally);
-                        Debug.Log($"[GameManager] Winner podium: local player avatar assigned (Custom: {isCustomLocally}).");
+                        byte[] bytes = System.Convert.FromBase64String(overrideCustomBase64);
+                        Texture2D tex = new Texture2D(2, 2);
+                        if (tex.LoadImage(bytes))
+                        {
+                            Sprite customSprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+                            SetProfileSlot(profileImage, profileImageCustom, customSprite, true);
+                            customProfileMatched = true;
+                            Debug.Log($"[GameManager] Winner podium: used SAVED snapshot picture for place {placeNumber}");
+                        }
                     }
-                    else if (playerProfileImage != null && playerProfileImage.sprite != null)
+                    catch (System.Exception ex) { Debug.LogWarning($"[GameManager] Failed to decode saved photo: {ex.Message}"); }
+                }
+
+                // Priority 2: Use Offline Snapshot Avatar Index (Match Recovery Fallback)
+                if (!customProfileMatched && overrideAvatarIdx >= 0)
+                {
+                    if (availableProfileSprites != null && overrideAvatarIdx < availableProfileSprites.Length)
                     {
-                        SetProfileSlot(profileImage, profileImageCustom, playerProfileImage.sprite, false);
+                        SetProfileSlot(profileImage, profileImageCustom, availableProfileSprites[overrideAvatarIdx], false);
+                        customProfileMatched = true;
+                        Debug.Log($"[GameManager] Winner podium: used SAVED avatar index {overrideAvatarIdx} for place {placeNumber}");
                     }
                 }
-                else if (cpuIndex <= -100) // Network Human
+
+                // Priority 3: Live Logic (Only if snapshot was empty)
+                if (!customProfileMatched)
                 {
-                    // Find the network player by ActorNumber
-                    int actorNumber = Mathf.Abs(cpuIndex + 100);
-                    bool customProfileMatched = false;
-                    
-                    // Priority 1: Use Cached High-Quality Custom Avatar (Gallery Photo)
-                    if (cachedNetworkAvatars.TryGetValue(actorNumber, out Sprite cachedSprite))
+                    if (cpuIndex == -1) // Local Player
                     {
-                        SetProfileSlot(profileImage, profileImageCustom, cachedSprite, true);
-                        customProfileMatched = true;
-                        Debug.Log($"[GameManager] Winner podium: used cached custom gallery photo for player {actorNumber}");
-                    }
-                    
-                    // Priority 2: Use Cached Preset Avatar Index (Choice 0-7)
-                    if (!customProfileMatched && cachedNetworkAvatarIndices.TryGetValue(actorNumber, out int cachedIdx))
-                    {
-                        if (availableProfileSprites != null && cachedIdx >= 0 && cachedIdx < availableProfileSprites.Length)
+                        // Use standard player avatar from profile
+                        bool isCustomLocally = (playerProfileImageCustom != null && playerProfileImageCustom.gameObject.activeSelf) 
+                                            || (mainMenuAvatarDisplay != null && mainMenuAvatarDisplay.IsShowingCustomAvatar());
+
+                        if (playerSelectedAvatar != null)
                         {
-                            SetProfileSlot(profileImage, profileImageCustom, availableProfileSprites[cachedIdx], false);
+                            SetProfileSlot(profileImage, profileImageCustom, playerSelectedAvatar, isCustomLocally);
                             customProfileMatched = true;
-                            Debug.Log($"[GameManager] Winner podium: used cached preset avatar index {cachedIdx} for player {actorNumber}");
+                            Debug.Log($"[GameManager] Winner podium: local player avatar assigned.");
                         }
                     }
-
-                    // Priority 3: Try live properties (Fallback if not yet left room)
-                    if (!customProfileMatched)
+                    else if (cpuIndex <= -100) // Network Human
                     {
-                        Photon.Realtime.Player targetPlayer = null;
-                        foreach (var p in Photon.Pun.PhotonNetwork.PlayerList)
-                        {
-                            if (p.ActorNumber == actorNumber)
-                            {
-                                targetPlayer = p;
-                                break;
-                            }
-                        }
+                        int actorNumber = Mathf.Abs(cpuIndex + 100);
 
-                        if (targetPlayer != null)
+                        // Priority A: Use Cached High-Quality Custom Avatar
+                        if (cachedNetworkAvatars.TryGetValue(actorNumber, out Sprite cachedSprite))
                         {
-                            // Try to get Custom Photo live
-                            if (targetPlayer.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_CUSTOM_IMAGE_KEY, out object imageDataObj))
-                            {
-                                byte[] bytes = (byte[])imageDataObj;
-                                Texture2D tex = new Texture2D(2, 2);
-                                if (tex.LoadImage(bytes))
-                                {
-                                    Sprite customSprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
-                                    SetProfileSlot(profileImage, profileImageCustom, customSprite, true);
-                                    customProfileMatched = true;
-                                }
-                            }
-                            
-                            // Try to get Preset Index live
-                            if (!customProfileMatched)
-                            {
-                                if (targetPlayer.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_AVATAR_KEY, out object avatarIdxObj))
-                                {
-                                    int avatarIndex = (int)avatarIdxObj;
-                                    if (availableProfileSprites != null && avatarIndex >= 0 && avatarIndex < availableProfileSprites.Length)
-                                    {
-                                        SetProfileSlot(profileImage, profileImageCustom, availableProfileSprites[avatarIndex], false);
-                                        customProfileMatched = true;
-                                    }
-                                }
-                            }
+                            SetProfileSlot(profileImage, profileImageCustom, cachedSprite, true);
+                            customProfileMatched = true;
                         }
-                    }
-
-                    // Priority 4: Use Offline Snapshot Custom Image (if provided)
-                    if (!customProfileMatched && !string.IsNullOrEmpty(overrideCustomBase64))
-                    {
-                        try
+                        else if (cachedNetworkAvatarIndices.TryGetValue(actorNumber, out int cachedIdx))
                         {
-                            byte[] bytes = System.Convert.FromBase64String(overrideCustomBase64);
-                            Texture2D tex = new Texture2D(2, 2);
-                            if (tex.LoadImage(bytes))
+                            // Priority B: Use Cached Basic Avatar Index
+                            if (availableProfileSprites != null && cachedIdx < availableProfileSprites.Length)
                             {
-                                Sprite customSprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
-                                SetProfileSlot(profileImage, profileImageCustom, customSprite, true);
+                                SetProfileSlot(profileImage, profileImageCustom, availableProfileSprites[cachedIdx], false);
                                 customProfileMatched = true;
-                                Debug.Log($"[GameManager] Winner podium: restored saved custom gallery photo for place {placeNumber}");
                             }
                         }
-                        catch (System.Exception ex) { Debug.LogWarning($"[GameManager] Failed to decode saved custom photo: {ex.Message}"); }
                     }
+                }
 
-                    // Priority 5: Use Offline Snapshot Avatar Index (if provided)
-                    if (!customProfileMatched && overrideAvatarIdx >= 0)
-                    {
-                        if (availableProfileSprites != null && overrideAvatarIdx < availableProfileSprites.Length)
-                        {
-                            SetProfileSlot(profileImage, profileImageCustom, availableProfileSprites[overrideAvatarIdx], false);
-                            customProfileMatched = true;
-                            Debug.Log($"[GameManager] Winner podium: used override avatar index {overrideAvatarIdx} for offline recovery.");
-                        }
-                    }
-
-                    // Final Fallback: Default to first sprite if all else failed
-                    if (!customProfileMatched && availableProfileSprites != null && availableProfileSprites.Length > 0)
-                    {
-                        SetProfileSlot(profileImage, profileImageCustom, availableProfileSprites[0], false);
-                        Debug.LogWarning($"[GameManager] Winner podium: all options failed, using default avatar.");
-                    }
+                // Final Fallback: Default icon if all else failed
+                if (!customProfileMatched && availableProfileSprites != null && availableProfileSprites.Length > 0)
+                {
+                    SetProfileSlot(profileImage, profileImageCustom, availableProfileSprites[0], false);
                 }
             }
             else // CPU
