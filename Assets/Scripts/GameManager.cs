@@ -583,10 +583,10 @@ public class GameManager : MonoBehaviour
             // the UI stays snapped to global truth
             yield return new WaitForSeconds(0.5f);
             
-            if (!PhotonNetwork.InRoom)
-            {
-                currentTimer -= 0.5f;
-            }
+            // FALLBACK: If we are offline or haven't received the network 'finish line' yet,
+            // we manually decrement the timer locally so it doesn't appear frozen.
+            // As soon as UpdateTimerDisplay find the network key, it will OVERWRITE this local value.
+            currentTimer -= 0.5f;
             
             // Update display (this also resyncs currentTimer from Photon if in a room)
             UpdateTimerDisplay();
@@ -607,30 +607,33 @@ public class GameManager : MonoBehaviour
     private void UpdateTimerDisplay()
     {
         // Network Sync: Priority 1 - Use synchronized Photon time if available
+        // Network Sync: Priority 1 - Use absolute finish line if available
         if (PhotonNetwork.InRoom)
         {
-            if (PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(LobbyNetworkManager.GAME_START_TIME_KEY, out object startTimeObj))
+            if (PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(LobbyNetworkManager.GAME_END_TIME_KEY, out object endTimeObj))
             {
-                double startTime = (double)startTimeObj;
-                float networkElapsedTime = (float)(PhotonNetwork.Time - startTime);
+                double absoluteEndTime = (double)endTimeObj;
+                float timeRemaining = (float)(absoluteEndTime - PhotonNetwork.Time);
                 
-                // Network Sync for Extensions vs Regular Start
-                // Regular match starts have a 3-second countdown (3, 2, 1)
-                // Timer extensions (15s) only show the message once (1.0 duration)
-                float countdownDurationTotal = (gameTimer <= 15.1f) ? 1.0f : 3.0f;
-                float totalGameplayDuration = gameTimer;
-                
-                float timeRemaining = totalGameplayDuration - (networkElapsedTime - countdownDurationTotal);
-                
-                // Ensure we don't start the gameplay timer while still in countdown
-                if (networkElapsedTime < countdownDurationTotal)
+                // If we are still in the 3s countdown period, timeRemaining will be > 60s
+                // We clamp it so the display shows the full game duration until the match actually starts.
+                if (timeRemaining > gameTimer)
                 {
-                    currentTimer = totalGameplayDuration;
+                    currentTimer = gameTimer;
                 }
                 else
                 {
                     currentTimer = Mathf.Max(0, timeRemaining);
                 }
+            }
+            else if (PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(LobbyNetworkManager.GAME_START_TIME_KEY, out object startTimeObj))
+            {
+                // Fallback for legacy rooms or during initial initialization
+                double startTime = (double)startTimeObj;
+                float networkElapsedTime = (float)(PhotonNetwork.Time - startTime);
+                float countdownDurationTotal = (gameTimer <= 15.1f) ? 1.0f : 3.0f;
+                float remaining = gameTimer - (networkElapsedTime - countdownDurationTotal);
+                currentTimer = (networkElapsedTime < countdownDurationTotal) ? gameTimer : Mathf.Max(0, remaining);
             }
         }
 
@@ -682,7 +685,12 @@ public class GameManager : MonoBehaviour
                     ExitGames.Client.Photon.Hashtable props = new ExitGames.Client.Photon.Hashtable();
                     
                     // Reset start time to NOW to give a fresh duration
-                    props.Add(LobbyNetworkManager.GAME_START_TIME_KEY, Photon.Pun.PhotonNetwork.Time);
+                    double serverTime = Photon.Pun.PhotonNetwork.Time;
+                    props.Add(LobbyNetworkManager.GAME_START_TIME_KEY, serverTime);
+                    
+                    // Update Absolute End Time for the extension (1s countdown + 15s game)
+                    double extCountdown = (newGameTimer <= 15.1f) ? 1.0 : 3.0;
+                    props.Add(LobbyNetworkManager.GAME_END_TIME_KEY, serverTime + extCountdown + newGameTimer);
                     
                     // Increment extension counter to signal all clients to show "Timer Increased" and reset
                     int extCount = 0;
@@ -2799,7 +2807,7 @@ public class GameManager : MonoBehaviour
         }
         isGameActive = false;
         timerStarted = false;
-        currentTimer = gameTimer;
+        // gameTimer will be updated below from currentLobbyConfig
         
         // Reset winner screen UI to ensure clean state
         ResetWinnerScreenUI();
@@ -2822,6 +2830,10 @@ public class GameManager : MonoBehaviour
         
         // Set new lobby configuration
         currentLobbyConfig = config;
+        
+        // Update game duration from lobby configuration
+        this.gameTimer = config.gameTimer;
+        this.currentTimer = this.gameTimer;
         
         // Set number of CPUs based on lobby configuration or network override
         int numberOfCPUs = overrideCPUs >= 0 ? overrideCPUs : config.GetNumberOfCPUs();

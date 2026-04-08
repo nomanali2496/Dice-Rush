@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using System.Reflection;
 using PlayFab;
 
 /// <summary>
@@ -14,6 +15,8 @@ public class AuthenticationManager : MonoBehaviour
     [SerializeField] private GameObject loginRegisterPanel;
     [SerializeField] private GameObject splashScreenPanel;
     [SerializeField] private GameObject loadingScreenPanel; // Loading screen that shows until login screen hides
+    [SerializeField] private GameObject internetPanel; // Internet error panel
+    [SerializeField] private Button internetRetryButton; // Retry button on internet panel
     
     [Header("Login/Register Toggle")]
     [SerializeField] private GameObject loginSection;
@@ -51,6 +54,7 @@ public class AuthenticationManager : MonoBehaviour
     private bool isRegisterPasswordVisible = false;
     private bool isAttemptingAutoLogin = false;
     private bool isRegistering = false; // Track if we're currently registering
+    private Action lastAttemptedAction = null; // Store last action for retry
     
     private void Start()
     {
@@ -84,6 +88,13 @@ public class AuthenticationManager : MonoBehaviour
         
         if (registerPasswordToggle != null)
             registerPasswordToggle.onValueChanged.AddListener(OnRegisterPasswordToggleChanged);
+        
+        if (internetRetryButton != null)
+            internetRetryButton.onClick.AddListener(OnRetryClicked);
+        
+        // Hide internet panel initially
+        if (internetPanel != null)
+            internetPanel.SetActive(false);
         
         // Subscribe to PlayFab events
         if (PlayFabManager.Instance != null)
@@ -153,6 +164,7 @@ public class AuthenticationManager : MonoBehaviour
     /// </summary>
     private void AttemptAutoLogin()
     {
+        lastAttemptedAction = AttemptAutoLogin;
         // Wait a frame to ensure PlayFabManager is fully initialized
         StartCoroutine(AttemptAutoLoginCoroutine());
     }
@@ -293,6 +305,7 @@ public class AuthenticationManager : MonoBehaviour
     /// </summary>
     private void AttemptSilentGoogleLogin()
     {
+        lastAttemptedAction = AttemptSilentGoogleLogin;
         UpdateStatusText("Restoring Google login...");
         
         if (GoogleSignInManager.Instance != null)
@@ -354,6 +367,12 @@ public class AuthenticationManager : MonoBehaviour
         ShowLoginSection();
         SetLoadingState(false);
         UpdateStatusText("");
+
+        // If failed due to network, show internet panel
+        if (Application.internetReachability == NetworkReachability.NotReachable || (error != null && error.ToLower().Contains("network")))
+        {
+            ShowInternetPanel(AttemptSilentGoogleLogin);
+        }
     }
     
     /// <summary>
@@ -361,6 +380,7 @@ public class AuthenticationManager : MonoBehaviour
     /// </summary>
     private void AttemptSilentFacebookLogin()
     {
+        lastAttemptedAction = AttemptSilentFacebookLogin;
         UpdateStatusText("Restoring Facebook login...");
         
         if (FacebookSignInManager.Instance != null)
@@ -431,6 +451,12 @@ public class AuthenticationManager : MonoBehaviour
         ShowLoginSection();
         SetLoadingState(false);
         UpdateStatusText("");
+
+        // If failed due to network, show internet panel
+        if (Application.internetReachability == NetworkReachability.NotReachable || (error != null && error.ToLower().Contains("network")))
+        {
+            ShowInternetPanel(AttemptSilentFacebookLogin);
+        }
     }
     
     /// <summary>
@@ -438,6 +464,7 @@ public class AuthenticationManager : MonoBehaviour
     /// </summary>
     private void AttemptEmailAutoLogin()
     {
+        lastAttemptedAction = AttemptEmailAutoLogin;
         UpdateStatusText("Restoring email login...");
         
         if (PlayFabManager.Instance != null)
@@ -474,6 +501,7 @@ public class AuthenticationManager : MonoBehaviour
     /// </summary>
     private void AttemptDeviceIdLogin()
     {
+        lastAttemptedAction = AttemptDeviceIdLogin;
         UpdateStatusText("Logging in as guest...");
         
         string customId = SystemInfo.deviceUniqueIdentifier;
@@ -599,8 +627,54 @@ public class AuthenticationManager : MonoBehaviour
     
     #region Login
     
+    private void OnRetryClicked()
+    {
+        if (internetPanel != null)
+            internetPanel.SetActive(false);
+
+        if (lastAttemptedAction != null)
+        {
+            Debug.Log($"[AuthenticationManager] Retrying action: {lastAttemptedAction.Method.Name}");
+            lastAttemptedAction.Invoke();
+        }
+        else
+        {
+            Debug.LogWarning("[AuthenticationManager] No last action recorded for retry. Showing login screen.");
+            ShowLoginRegisterPanel();
+            ShowLoginSection();
+        }
+    }
+    
+    private void ShowInternetPanel(Action retryAction)
+    {
+        if (retryAction != null)
+            lastAttemptedAction = retryAction;
+            
+        SetLoadingState(false);
+        
+        if (internetPanel != null && !internetPanel.activeSelf)
+        {
+            internetPanel.SetActive(true);
+        }
+    }
+    
+    private bool CheckInternetAndAction(Action action)
+    {
+        lastAttemptedAction = action;
+        
+        if (Application.internetReachability == NetworkReachability.NotReachable)
+        {
+            ShowInternetPanel(action);
+            return false;
+        }
+        
+        return true;
+    }
+    
     private void OnLoginClicked()
     {
+        if (!CheckInternetAndAction(OnLoginClicked)) return;
+        
         string email = loginEmailInput != null ? loginEmailInput.text : "";
         string password = loginPasswordInput != null ? loginPasswordInput.text : "";
         
@@ -632,6 +706,8 @@ public class AuthenticationManager : MonoBehaviour
     
     private void OnGuestLoginClicked()
     {
+        if (!CheckInternetAndAction(OnGuestLoginClicked)) return;
+        
         SetLoadingState(true);
         UpdateStatusText("Logging in as guest...");
         
@@ -650,6 +726,8 @@ public class AuthenticationManager : MonoBehaviour
     
     private void OnGoogleLoginClicked()
     {
+        if (!CheckInternetAndAction(OnGoogleLoginClicked)) return;
+        
         SetLoadingState(true);
         UpdateStatusText("Signing in with Google...");
         
@@ -705,10 +783,18 @@ public class AuthenticationManager : MonoBehaviour
             GoogleSignInManager.Instance.OnGoogleSignInSuccess -= OnGoogleSignInSuccess;
             GoogleSignInManager.Instance.OnGoogleSignInFailure -= OnGoogleSignInFailure;
         }
+
+        // If failed due to network, show internet panel
+        if (Application.internetReachability == NetworkReachability.NotReachable || (error != null && error.ToLower().Contains("network")))
+        {
+            ShowInternetPanel(OnGoogleLoginClicked);
+        }
     }
     
     private void OnFacebookLoginClicked()
     {
+        if (!CheckInternetAndAction(OnFacebookLoginClicked)) return;
+        
         SetLoadingState(true);
         UpdateStatusText("Signing in with Facebook...");
         
@@ -764,6 +850,12 @@ public class AuthenticationManager : MonoBehaviour
             FacebookSignInManager.Instance.OnFacebookSignInSuccess -= OnFacebookSignInSuccess;
             FacebookSignInManager.Instance.OnFacebookSignInFailure -= OnFacebookSignInFailure;
         }
+
+        // If failed due to network, show internet panel
+        if (Application.internetReachability == NetworkReachability.NotReachable || (error != null && error.ToLower().Contains("network")))
+        {
+            ShowInternetPanel(OnFacebookLoginClicked);
+        }
     }
     
     #endregion
@@ -772,6 +864,8 @@ public class AuthenticationManager : MonoBehaviour
     
     private void OnRegisterClicked()
     {
+        if (!CheckInternetAndAction(OnRegisterClicked)) return;
+        
         string name = registerNameInput != null ? registerNameInput.text : "";
         string email = registerEmailInput != null ? registerEmailInput.text : "";
         string password = registerPasswordInput != null ? registerPasswordInput.text : "";
@@ -912,6 +1006,12 @@ public class AuthenticationManager : MonoBehaviour
                 {
                     UpdateStatusText("Login failed! Please check your credentials.");
                 }
+
+                // If login failed due to network, show internet panel
+                if (Application.internetReachability == NetworkReachability.NotReachable || (errorMsg != null && errorMsg.ToLower().Contains("network")))
+                {
+                    ShowInternetPanel(lastAttemptedAction);
+                }
             }
         }
     }
@@ -960,6 +1060,12 @@ public class AuthenticationManager : MonoBehaviour
             else
             {
                 UpdateStatusText("Registration failed! Email might already be in use.");
+            }
+            
+            // If registration failed due to network, show internet panel
+            if (Application.internetReachability == NetworkReachability.NotReachable || (errorMsg != null && errorMsg.ToLower().Contains("network")))
+            {
+                ShowInternetPanel(OnRegisterClicked);
             }
             
             // Clear password field on failure (keep name and email for user convenience)

@@ -11,6 +11,7 @@ public class LobbyConfig
     public int lobbyIndex; // Index of this lobby (0-12)
     public int numberOfPlayers; // Total number of players (1 player + CPUs)
     public string lobbyName; // Optional name for the lobby
+    public float gameTimer = 60f; // Match duration in seconds
     
     [Header("Entry Fee")]
     public float entryFeeCash; // Entry fee in cash (0 if not using cash)
@@ -33,7 +34,7 @@ public class LobbyConfig
     /// </summary>
     public LobbyConfig(int index, int players, float entryCash, int entryChips,
                       float firstCash, int firstChips, float secondCash, int secondChips,
-                      float thirdCash, int thirdChips)
+                      float thirdCash, int thirdChips, float duration = 60f)
     {
         lobbyIndex = index;
         numberOfPlayers = players;
@@ -45,6 +46,7 @@ public class LobbyConfig
         secondPlaceChips = secondChips;
         thirdPlaceCash = thirdCash;
         thirdPlaceChips = thirdChips;
+        gameTimer = duration;
         lobbyName = $"Lobby {index + 1}";
     }
     

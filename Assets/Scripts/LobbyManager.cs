@@ -794,7 +794,8 @@ public class LobbyManager : MonoBehaviour
                     secondCash: 0f,
                     secondChips: 10,
                     thirdCash: 0f,
-                    thirdChips: 5
+                    thirdChips: 5,
+                    duration: 60f
                 );
                 Debug.Log($"[LobbyManager] Initialized default configuration for Lobby {i + 1}");
             }

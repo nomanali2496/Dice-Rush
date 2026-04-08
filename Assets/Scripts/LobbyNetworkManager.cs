@@ -269,6 +269,7 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
     public const string PLAYER_CUSTOM_IMAGE_KEY = "CustomImage";
     public const string GAME_OVER_KEY = "GameOver";
     public const string GAME_START_TIME_KEY = "GameStartTime";
+    public const string GAME_END_TIME_KEY = "GameEndTime";
 
     /// <summary>
     /// Signals to the room that the game is over.
@@ -473,9 +474,18 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
             if (PhotonNetwork.IsMasterClient)
             {
                 ExitGames.Client.Photon.Hashtable startTimeProp = new ExitGames.Client.Photon.Hashtable();
-                startTimeProp.Add(GAME_START_TIME_KEY, PhotonNetwork.Time);
+                double serverTime = PhotonNetwork.Time;
+                startTimeProp.Add(GAME_START_TIME_KEY, serverTime);
+                
+                // Calculate absolute end time: Start + Countdown + Match Duration
+                // Use 1.0s countdown for short games (<=15s) and 3.0s for regular matches
+                double matchDuration = currentSelectedConfig.gameTimer; 
+                double countdown = (matchDuration <= 15.1f) ? 1.0 : 3.0;
+                double absoluteEndTime = serverTime + countdown + matchDuration;
+                startTimeProp.Add(GAME_END_TIME_KEY, absoluteEndTime);
+
                 PhotonNetwork.CurrentRoom.SetCustomProperties(startTimeProp);
-                Debug.Log($"[LobbyNetworkManager] Master Client set {GAME_START_TIME_KEY} to {PhotonNetwork.Time}");
+                Debug.Log($"[LobbyNetworkManager] Master Client set Start: {serverTime} | End: {absoluteEndTime}");
             }
             
             // Pass the number of CPUs needed to the LobbyManager first (start the game visually)
