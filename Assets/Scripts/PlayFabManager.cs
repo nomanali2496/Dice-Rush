@@ -26,6 +26,10 @@ public class PlayFabManager : MonoBehaviour
     public const string PENDING_CHIPS_KEY = "PendingChipsReward";
     public const string PENDING_MSG_KEY = "PendingRewardMessage";
     public const string PENDING_RANKINGS_KEY = "PendingRewardRankings";
+    // Witness flag written by the local client when it receives its prize directly.
+    // If this key exists when CheckForPendingRewards runs, the player already got
+    // their reward live — any pending reward in PlayFab is a ghost duplicate.
+    public const string DIRECT_PRIZE_KEY = "DirectPrizeReceived";
     
     private string playFabId;
     private bool isLoggedIn = false;
@@ -906,8 +910,37 @@ public class PlayFabManager : MonoBehaviour
              Debug.Log($"[PlayFabManager] -> Data Slot Found: {key}");
         }
 
-        bool hasCash = combinedData.ContainsKey(PENDING_CASH_KEY) && !string.IsNullOrEmpty(combinedData[PENDING_CASH_KEY].Value);
+        bool hasCash  = combinedData.ContainsKey(PENDING_CASH_KEY)  && !string.IsNullOrEmpty(combinedData[PENDING_CASH_KEY].Value);
         bool hasChips = combinedData.ContainsKey(PENDING_CHIPS_KEY) && !string.IsNullOrEmpty(combinedData[PENDING_CHIPS_KEY].Value);
+
+        // GHOST REWARD GUARD ────────────────────────────────────────────────────────────
+        // If DirectPrizeReceived is set, the player already collected this reward live
+        // during the same match session (they reconnected before the game ended).
+        // Any pending reward in PlayFab right now is a ghost duplicate written by the
+        // Master Client's CloudScript AFTER our direct award. Skip the winner screen,
+        // clear all pending keys, and delete the witness flag.
+        if ((hasCash || hasChips) && combinedData.ContainsKey(DIRECT_PRIZE_KEY))
+        {
+            Debug.Log("[PlayFabManager] 🛡️ DirectPrizeReceived flag found — pending reward is a ghost duplicate. Clearing without showing winner screen.");
+            var clearGhost = new ExecuteCloudScriptRequest { FunctionName = "ClearPendingRewards" };
+            PlayFabClientAPI.ExecuteCloudScript(clearGhost,
+                res => {
+                    Debug.Log("[PlayFabManager] ✅ Ghost duplicate pending reward cleared.");
+                    // Also delete the witness flag from regular user data
+                    PlayFabClientAPI.UpdateUserData(
+                        new UpdateUserDataRequest
+                        {
+                            KeysToRemove = new System.Collections.Generic.List<string> { DIRECT_PRIZE_KEY }
+                        },
+                        _ => Debug.Log("[PlayFabManager] ✅ DirectPrizeReceived flag removed."),
+                        e => Debug.LogWarning("[PlayFabManager] ⚠️ Could not remove DirectPrizeReceived flag: " + e.GenerateErrorReport())
+                    );
+                },
+                err => Debug.LogWarning("[PlayFabManager] ⚠️ Failed to clear ghost duplicate: " + err.GenerateErrorReport())
+            );
+            return; // Do NOT show the winner screen
+        }
+        // ───────────────────────────────────────────────────────────────────────────────
 
         if (hasCash || hasChips)
         {

@@ -159,6 +159,12 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
         // Try to sync full profile (might be empty if still loading data)
         SyncCurrentProfileToPhoton();
 
+        // RECONNECT SCORE SYNC: If a game is already running when we (re)join this room,
+        // immediately push our current local score to Photon so other players see the real
+        // value and not the stale pre-disconnect score. This prevents wrong winner decisions.
+        GameManager gm = FindObjectOfType<GameManager>();
+        if (gm != null) gm.ReSyncScoreToPhoton();
+
         UpdateWaitingStatus();
         CheckIfRoomFull();
     }

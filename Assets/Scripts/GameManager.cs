@@ -923,7 +923,31 @@ public class GameManager : MonoBehaviour
         error => Debug.LogWarning($"[GameManager] Failed to checkpoint score: {error.GenerateErrorReport()}")
         );
     }
-    
+
+    /// <summary>
+    /// Called by LobbyNetworkManager when this client rejoins a Photon room mid-game.
+    /// Re-pushes the current local box-selection score to Photon so all other clients
+    /// (especially the Master Client computing final rankings) see the real score and
+    /// not the stale pre-disconnect value. Without this, boxes selected while offline
+    /// would appear as zero to everyone else, causing a wrong winner decision.
+    /// </summary>
+    public void ReSyncScoreToPhoton()
+    {
+        if (!isGameActive || playerNumberGrid == null || LobbyNetworkManager.Instance == null) return;
+
+        int currentScore = 0;
+        foreach (var kvp in playerNumberGrid.GetSelectionCounts())
+            currentScore += kvp.Value;
+
+        double currentTime = playerLastScoreTime.ContainsKey(-1)
+            ? playerLastScoreTime[-1]
+            : (PhotonNetwork.InRoom ? PhotonNetwork.Time : (double)Time.time);
+
+        LobbyNetworkManager.Instance.UpdateLocalPlayerScore(currentScore, currentTime);
+        Debug.Log($"[GameManager] 🔄 ReSyncScoreToPhoton after reconnect: score={currentScore}, time={currentTime:F2}");
+    }
+
+
     /// <summary>
     /// Pre-caches current human player names and avatars
     /// This fixes the bug where names are missing at the end of the match
@@ -3152,6 +3176,32 @@ public class GameManager : MonoBehaviour
                     if (cashPrize > 0f) PlayFabManager.Instance.AddCash(cashPrize);
                     if (chipsPrize > 0) PlayFabManager.Instance.AddCoins(chipsPrize);
                     Debug.Log($"[GameManager] Awarded LOCAL prize for {i + 1}st place: {cashPrize} Cash, {chipsPrize} Chips");
+
+                    // GHOST REWARD GUARD ─────────────────────────────────────────────────
+                    // Problem: Master Client's CloudScript "AwardMatchPrize" is QUEUED on
+                    // PlayFab's server. Even if we called ClearPendingRewards first, the
+                    // AwardMatchPrize script could write AFTER our clear, leaving a stale
+                    // pending reward that shows a duplicate winner screen on next app open.
+                    //
+                    // Solution: Write a "DirectPrizeReceived" witness flag to PlayFab via
+                    // UpdateUserData (a direct API call — not CloudScript, so it is NOT
+                    // queued behind AwardMatchPrize). The AwardMatchPrize CloudScript on the
+                    // PlayFab server must check for this flag before writing pending rewards.
+                    // CheckForPendingRewards also checks it so even if the CloudScript didn't
+                    // check, we still skip showing the duplicate winner screen.
+                    // ────────────────────────────────────────────────────────────────────
+                    PlayFab.PlayFabClientAPI.UpdateUserData(
+                        new PlayFab.ClientModels.UpdateUserDataRequest
+                        {
+                            Data = new System.Collections.Generic.Dictionary<string, string>
+                            {
+                                { PlayFabManager.DIRECT_PRIZE_KEY, "true" }
+                            },
+                            Permission = PlayFab.ClientModels.UserDataPermission.Private
+                        },
+                        res => Debug.Log("[GameManager] ✅ DirectPrizeReceived flag written — ghost pending reward will be skipped on next login."),
+                        err => Debug.LogWarning("[GameManager] ⚠️ Could not write DirectPrizeReceived flag: " + err.GenerateErrorReport())
+                    );
                 }
                 // OPTION 2: If winner is a DISCONNECTED player, the Master Client awards it via CloudScript
                 else if (Photon.Pun.PhotonNetwork.IsMasterClient)
@@ -3163,15 +3213,20 @@ public class GameManager : MonoBehaviour
                         {
                             bool isWinnerInRoomAndActive = false;
                             
-                            // Check if this winner is still LIVE in the room by their PlayFab ID
+                            // Check if this winner is still LIVE in the room by their PlayFab ID.
+                            // IMPORTANT: p.UserId is Photon's own internal ID — it is NOT the PlayFab ID.
+                            // We must read the "PlayFabId" custom property that LobbyNetworkManager syncs
+                            // to every player's slot at room-join time to get a correct match.
                             if (Photon.Pun.PhotonNetwork.CurrentRoom != null)
                             {
                                 foreach (var p in Photon.Pun.PhotonNetwork.CurrentRoom.Players.Values)
                                 {
-                                    if (p.UserId == ranking.pfId) 
-                                    { 
-                                        isWinnerInRoomAndActive = true; 
-                                        break; 
+                                    if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_ID_KEY, out object storedPfId)
+                                        && storedPfId != null
+                                        && storedPfId.ToString() == ranking.pfId)
+                                    {
+                                        isWinnerInRoomAndActive = true;
+                                        break;
                                     }
                                 }
                             }
