@@ -93,7 +93,7 @@ struct Action_1_t139E7046AE454B29FEAF744BC82303A1A70C9680;
 struct Action_3_t0E86DA63793CD1809A131CFBD949A3CE47DA0F1A;
 struct Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040;
 struct Action_3_t5511B0887751192C7A5C88C6E4F0367D9EC13A7A;
-struct Action_3_t92BA6E581FE80009F77E1316426E446A95F34708;
+struct Action_4_tBBAA068894A1B1AD8EFAEC559545D58A9D7B87A6;
 struct DOGetter_1_tE8B39477E96408653D0242624F4D7E48ABFD1B03;
 struct DOGetter_1_t709462C08281F3AA5DFEF36CAF91404B1004C338;
 struct DOSetter_1_t48D41DB8CE0BFC91A1844C4CC49A8A7222A69200;
@@ -373,9 +373,9 @@ struct U3CAnimateMultipleStepsU3Ed__53_t198D0DDCFE58AC90FDBCF22B611385A42D56B7AB
 struct U3CAnimateScrollU3Ed__54_t4DECE95A0A9F41D104D8183DFECB5758080F78C8;
 struct U3CInitializeButtonsRoutineU3Ed__31_t7D48E651A60C28A088BA3E73D2CB7A1526D8416F;
 struct U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797;
-struct U3CU3Ec__DisplayClass41_0_tFA287D8D51B6ED2E83B51A8D45268D6C308FB760;
+struct U3CU3Ec__DisplayClass42_0_t6CD1A4F55C4342D77E2A1439D9DBF84D16CB7BE8;
 struct U3CWaitAndJoinRoomU3Ed__13_tE81D7352C7D06BD70D6F82F979A2B08669E09DC0;
-struct U3CWriteParticipantsDelayedU3Ed__42_tC5DF50D6573D2CC307071960E791CC68A32F7274;
+struct U3CWriteParticipantsDelayedU3Ed__43_t9C9212429E253A5F7F7C67C8E753544887F66185;
 struct U3CU3Ec__DisplayClass22_0_t55E0B703AE4267A0FEC7C3492A4D37EC26E07EB9;
 struct U3CLoadImageFromUrlU3Ed__19_t21CBC03B7D3ADBFBDA2E22007CFE9DD341F52022;
 struct CullStateChangedEvent_t6073CD0D951EC1256BF74B8F9107D68FC89B99B8;
@@ -468,7 +468,7 @@ IL2CPP_EXTERN_C RuntimeClass* U3CMonitorPanelStateU3Ed__41_t4DD55070E523D01124C6
 IL2CPP_EXTERN_C RuntimeClass* U3CPowerupTimerLoopU3Ed__92_tA82A3DCE00A33595E216F7D6725597B49262B3DB_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CShowNextPanelAfterDelayU3Ed__40_t128390D4F261E30BAE438B0CECF9E511E4E78611_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass22_0_t55E0B703AE4267A0FEC7C3492A4D37EC26E07EB9_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass41_0_tFA287D8D51B6ED2E83B51A8D45268D6C308FB760_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass42_0_t6CD1A4F55C4342D77E2A1439D9DBF84D16CB7BE8_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass42_0_tB0723819A8CE1A5015767CACC2844C28BAFCCD96_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass63_0_t2D06338B74E27C5A94B1EF265A8F36BFBCF0784C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass64_0_tC52B12D3CCC41134DAE69ACAD13FB3BF987C779D_il2cpp_TypeInfo_var;
@@ -479,7 +479,7 @@ IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797_
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_tE7C5954DD0D271D0DC9DA0E606E1C53B69E71765_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CUpdateTimeUntilNextOfferU3Ed__50_t98F02B77AD139A31B11693504B021868B3245345_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CWaitAndJoinRoomU3Ed__13_tE81D7352C7D06BD70D6F82F979A2B08669E09DC0_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* U3CWriteParticipantsDelayedU3Ed__42_tC5DF50D6573D2CC307071960E791CC68A32F7274_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CWriteParticipantsDelayedU3Ed__43_t9C9212429E253A5F7F7C67C8E753544887F66185_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* UnityAction_1_tDCC99FBA001EBDDF07829A18E8358DF5B8757F64_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* UpdateUserDataRequest_t00F2203E748C9D0B33E3CC673EAB649EB2B5662A_il2cpp_TypeInfo_var;
@@ -588,7 +588,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteral6DE89BDDAF0601FF1178834CBEA2A45FB174C35B
 IL2CPP_EXTERN_C String_t* _stringLiteral6EB486AC3C1DCE78F59871AA4B1DDBBE9D0BDE02;
 IL2CPP_EXTERN_C String_t* _stringLiteral6F0AE663779D9CC2A6C97AFB908AB893CB3AADBF;
 IL2CPP_EXTERN_C String_t* _stringLiteral6F9E1A6D11FA61BA90509F1F7AE5B0972CF8B8E8;
-IL2CPP_EXTERN_C String_t* _stringLiteral701A75697C80448DBCDE9E837A07E798949C1A24;
 IL2CPP_EXTERN_C String_t* _stringLiteral70F96948E1BDA42952D778E46EA550883983278A;
 IL2CPP_EXTERN_C String_t* _stringLiteral71FFF5CD5A353BE1CF40873B6C9A5F8D2D886EF4;
 IL2CPP_EXTERN_C String_t* _stringLiteral72251341398644C3990229C42372D0080A8ACB0E;
@@ -603,6 +602,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral78212CAAB738CA05B68F2EFB98902DCBDB56747F
 IL2CPP_EXTERN_C String_t* _stringLiteral79557BD97BAE51445BC722686939745A0A7E5DCC;
 IL2CPP_EXTERN_C String_t* _stringLiteral79FF6C37D889E738A524544C0862C3C4DA664085;
 IL2CPP_EXTERN_C String_t* _stringLiteral7B3CBB7EB32D75CD40301890ED04FBEB4E149DD7;
+IL2CPP_EXTERN_C String_t* _stringLiteral7BCB86985B1BD3E8B93BFC0ED7F71FD21A09F01D;
 IL2CPP_EXTERN_C String_t* _stringLiteral7D4A33286BB96B494796DF8D06816802CEE81FAA;
 IL2CPP_EXTERN_C String_t* _stringLiteral7D756CF26BC0652C2835A33EA564BD3E64F5D58A;
 IL2CPP_EXTERN_C String_t* _stringLiteral7EAF21B4CD6A8D53E076468E0BF02D2C26339DE4;
@@ -646,6 +646,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral9C9C6FD0E590E72844D696521FD5BCED10EE1FDC
 IL2CPP_EXTERN_C String_t* _stringLiteral9D10E49530F898E62DCA620FE817CFECC2B8F887;
 IL2CPP_EXTERN_C String_t* _stringLiteral9E03DBCAD4B13A69BA5601F2B0BD0AFEE9C35374;
 IL2CPP_EXTERN_C String_t* _stringLiteral9EFD9844AAD4CB97D14864BB60EEA3FF4C1C5ED0;
+IL2CPP_EXTERN_C String_t* _stringLiteral9FA948E8D8A264AC17F7EAA37611359A2CE5F5F9;
 IL2CPP_EXTERN_C String_t* _stringLiteral9FEF7B7EDBBDE0A1DA9765EB6254AA1E4517D783;
 IL2CPP_EXTERN_C String_t* _stringLiteralA136E6DC32E9BE3B8ED166B44BBF161289E000FA;
 IL2CPP_EXTERN_C String_t* _stringLiteralA23EC806B5AF2F16E197C9315C85FD68D1C1CAAF;
@@ -889,18 +890,18 @@ IL2CPP_EXTERN_C const RuntimeMethod* U3CPowerupTimerLoopU3Ed__92_System_Collecti
 IL2CPP_EXTERN_C const RuntimeMethod* U3CScaleToU3Ed__34_System_Collections_IEnumerator_Reset_m9E8C6FAFDE2DD366202ABB8DE2031DD35C9697C7_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CPowerupTimerLoopU3Eb__92_0_m6B1B0FBDBE12CC3A00A39F20DBDD50049EC06952_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CStartPowerupTimerU3Eb__89_0_m1D044E97DD4C53F4802DD1F922A80A7E46A10354_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CSyncLobbyPrizesToPlayFabMatchU3Eb__41_1_mB591D76BDEF64608C2C3189B87C1155596AAADA5_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CSyncLobbyPrizesToPlayFabMatchU3Eb__42_1_m8088063AA161481696767A03636B1BD9D7939259_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass22_0_U3CSetupButtonHoverAnimationU3Eb__0_m19421D875ED95187D2D8CBFCCA75B65D586B3909_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass22_0_U3CSetupButtonHoverAnimationU3Eb__1_mEFF19863BCD9AE88F61120E0F76000BAB3DC479C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass41_0_U3CSyncLobbyPrizesToPlayFabMatchU3Eb__0_mB30B2A6985B4B369CBD7C1DE5B539AF993BFA220_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass42_0_U3CSetupPanelButtonListenersU3Eb__0_m67DAC6EC7EB14E7127DAB3DA63571384B3BD76B2_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass42_0_U3CSyncLobbyPrizesToPlayFabMatchU3Eb__0_m94E5681B24805CA2CAE84507A19AB021413EF2AB_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass63_0_U3CSetupDotButtonsU3Eb__0_m5579F885653CC9E9261FA04182F29A4C50681ABC_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass64_0_U3CCreateNumberBoxU3Eb__0_m59D4EA6E818592AF02A1D77DF169FC4AF8D5650E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass65_0_U3CCreatePowerupBoxU3Eb__0_mD56C2E3A0CB4AE2C5F4F84EB57A57C946194A1DD_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass79_0_U3CSelectBoxU3Eb__0_mB0A64023CFF93E0DB971C6BA965F5502C08D1E13_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass96_0_U3CSelectPowerupU3Eb__0_mF212B5FAAFA71B3DD58BB96BF77A81991C98F8B5_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CWaitAndJoinRoomU3Ed__13_System_Collections_IEnumerator_Reset_mFAE41E4BB14CC70796C9BC121CB251A8D5EA9670_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CWriteParticipantsDelayedU3Ed__42_System_Collections_IEnumerator_Reset_m3549871999A825B4ACE7AEA926E45079F484BBB1_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CWriteParticipantsDelayedU3Ed__43_System_Collections_IEnumerator_Reset_m77629D1A87902A4A2386E70D9861A8CF575CF999_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_1_AddListener_mC4A5C41CF8D2336E9459CA430A39B9CE7DA5A1BD_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* ValueTuple_3__ctor_mEA507ABEF0655908930F089F51B6DE86EA6BEB8E_RuntimeMethod_var;
 struct CertificateHandler_t148B524FA5DB39F3ABADB181CD420FC505C33804_marshaled_com;
@@ -1123,6 +1124,7 @@ struct LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6  : public RuntimeOb
 	int32_t ___lobbyIndex;
 	int32_t ___numberOfPlayers;
 	String_t* ___lobbyName;
+	float ___gameTimer;
 	float ___entryFeeCash;
 	int32_t ___entryFeeChips;
 	float ___firstPlaceCash;
@@ -1276,7 +1278,7 @@ struct U3CInitializeButtonsRoutineU3Ed__31_t7D48E651A60C28A088BA3E73D2CB7A1526D8
 struct U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797  : public RuntimeObject
 {
 };
-struct U3CU3Ec__DisplayClass41_0_tFA287D8D51B6ED2E83B51A8D45268D6C308FB760  : public RuntimeObject
+struct U3CU3Ec__DisplayClass42_0_t6CD1A4F55C4342D77E2A1439D9DBF84D16CB7BE8  : public RuntimeObject
 {
 	LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* ___config;
 };
@@ -1287,7 +1289,7 @@ struct U3CWaitAndJoinRoomU3Ed__13_tE81D7352C7D06BD70D6F82F979A2B08669E09DC0  : p
 	LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* ___U3CU3E4__this;
 	LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* ___config;
 };
-struct U3CWriteParticipantsDelayedU3Ed__42_tC5DF50D6573D2CC307071960E791CC68A32F7274  : public RuntimeObject
+struct U3CWriteParticipantsDelayedU3Ed__43_t9C9212429E253A5F7F7C67C8E753544887F66185  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -2990,6 +2992,8 @@ struct AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725  : public
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___loginRegisterPanel;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___splashScreenPanel;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___loadingScreenPanel;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___internetPanel;
+	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___internetRetryButton;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___loginSection;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___registerSection;
 	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___switchToRegisterButton;
@@ -3012,6 +3016,7 @@ struct AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725  : public
 	bool ___isRegisterPasswordVisible;
 	bool ___isAttemptingAutoLogin;
 	bool ___isRegistering;
+	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___lastAttemptedAction;
 };
 struct AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -3153,6 +3158,9 @@ struct GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6  : public MonoBehav
 	Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180* ___cachedNetworkAvatarIndices;
 	bool ___timerStarted;
 	float ___initialGameTimer;
+	double ___cachedAbsoluteEndTime;
+	double ___cachedPhotonTimeAtCapture;
+	float ___cachedRealTimeAtCapture;
 	LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* ___currentLobbyConfig;
 	NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* ___playerNumberGrid;
 	Dictionary_2_t03CB0E456E3F308DB7BD58AC650EDBFA1BB3E3E8* ___cpuNumberGrids;
@@ -3408,7 +3416,7 @@ struct PlayFabManager_tDE93977FA2FED127B002B4472B4C362CE7929317  : public MonoBe
 	Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* ___OnRegisterComplete;
 	Action_1_t9684B8E7E23D8CF11181F762A91124A4E032C27A* ___OnPlayerDataLoaded;
 	Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* ___OnPlayerDataSaved;
-	Action_3_t92BA6E581FE80009F77E1316426E446A95F34708* ___OnRewardClaimed;
+	Action_4_tBBAA068894A1B1AD8EFAEC559545D58A9D7B87A6* ___OnRewardClaimed;
 	String_t* ___playFabId;
 	bool ___isLoggedIn;
 	String_t* ___lastErrorMessage;
@@ -3905,7 +3913,7 @@ struct WebFlags_tFD3605BF6E5F1A42F1D0D6F0DA9A8B32CF7B27CA_StaticFields
 struct U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797_StaticFields
 {
 	U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797* ___U3CU3E9;
-	Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___U3CU3E9__41_1;
+	Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___U3CU3E9__42_1;
 };
 struct U3CU3Ec_tE7C5954DD0D271D0DC9DA0E606E1C53B69E71765_StaticFields
 {
@@ -4712,7 +4720,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Subtraction_m44475FCDAD2DA2F98D78A6625EC2DCDFE8803837_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_a, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_b, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_ScrollDown_mA45FBC0D7627452BEDECB54C5EC9932E698AAD02 (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_ScrollUp_m1779BDF9A3943E6855207DDC657C1E28E63B9202 (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyConfig__ctor_m068DC1A8DB62D23DA9E057EDAA631A1865C4D8F0 (LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* __this, int32_t ___0_index, int32_t ___1_players, float ___2_entryCash, int32_t ___3_entryChips, float ___4_firstCash, int32_t ___5_firstChips, float ___6_secondCash, int32_t ___7_secondChips, float ___8_thirdCash, int32_t ___9_thirdChips, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyConfig__ctor_mABF579212323D333FC1B06B6F012E02163C09A53 (LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* __this, int32_t ___0_index, int32_t ___1_players, float ___2_entryCash, int32_t ___3_entryChips, float ___4_firstCash, int32_t ___5_firstChips, float ___6_secondCash, int32_t ___7_secondChips, float ___8_thirdCash, int32_t ___9_thirdChips, float ___10_duration, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_JoinLobbyRoom_m4332A9AFD6922E57D2A00A03AC80306D0156E587 (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* ___0_config, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_StartGameFromNetwork_mCB781DBFA88CA18F529A82E0A593F27B07A78383 (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, int32_t ___0_lobbyIndex, int32_t ___1_overrideCPUs, const RuntimeMethod* method) ;
 inline GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40 (const RuntimeMethod* method)
@@ -4833,7 +4841,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_get_IsMasterClient_mD04046
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double PhotonNetwork_get_Time_m65093824EBCB03FA8E31A8E95344F2F56D62EE79 (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_SyncLobbyPrizesToPlayFabMatch_mF562E7344342659BA4386BC50287326D3F82196C (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* ___0_config, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* LobbyNetworkManager_WriteParticipantsDelayed_m2D0ACD954A0FAB2A8886E4F59E02605A17B5FD2D (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass41_0__ctor_m9242FB03B51B6293B811DBBFDA67C194EB763782 (U3CU3Ec__DisplayClass41_0_tFA287D8D51B6ED2E83B51A8D45268D6C308FB760* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass42_0__ctor_m6A9768506BCC03F76AD198736C02CA3D06863A36 (U3CU3Ec__DisplayClass42_0_t6CD1A4F55C4342D77E2A1439D9DBF84D16CB7BE8* __this, const RuntimeMethod* method) ;
 inline void Dictionary_2__ctor_m768E076F1E804CE4959F4E71D3E6A9ADE2F55052 (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* __this, const RuntimeMethod* method)
 {
 	((  void (*) (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*, const RuntimeMethod*))Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329_gshared)(__this, method);
@@ -4858,7 +4866,7 @@ inline void Action_1__ctor_m50D54982908458E8FC5738016581B24B71E96BB8 (Action_1_t
 	((  void (*) (Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93*, RuntimeObject*, intptr_t, const RuntimeMethod*))Action_1__ctor_m2E1DFA67718FC1A0B6E5DFEB78831FFE9C059EB4_gshared)(__this, ___0_object, ___1_method, method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayFabClientAPI_UpdateUserData_mAB771B8D821916A564353819348F374CE82DA055 (UpdateUserDataRequest_t00F2203E748C9D0B33E3CC673EAB649EB2B5662A* ___0_request, Action_1_t139E7046AE454B29FEAF744BC82303A1A70C9680* ___1_resultCallback, Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* ___2_errorCallback, RuntimeObject* ___3_customData, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___4_extraHeaders, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWriteParticipantsDelayedU3Ed__42__ctor_mF60376484B048919473B3C4D5F6651DFB5F55A51 (U3CWriteParticipantsDelayedU3Ed__42_tC5DF50D6573D2CC307071960E791CC68A32F7274* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWriteParticipantsDelayedU3Ed__43__ctor_m21EA568C3CEBD2850E92F66E9CF0FCFC0D3423FB (U3CWriteParticipantsDelayedU3Ed__43_t9C9212429E253A5F7F7C67C8E753544887F66185* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_LeaveRoom_m3BE228D128665941646C4D4A1D5529B944F49744 (bool ___0_becomeInactive, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks__ctor_m25DE2B188CA2481D58FBA9BB58CFBD65432B77E2 (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_mEC1089FDF3E2BF13B3136D8E9D1B8E5FFF55692B (U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797* __this, const RuntimeMethod* method) ;
@@ -5466,7 +5474,7 @@ inline void List_1_AddWithResize_m378B392086AAB6F400944FA9839516326B3F7BB8 (List
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65106
+// Method Definition Index: 65117
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CScaleToU3Ed__34__ctor_m0149CC53686AD5985374A14E438192D2BF842302 (U3CScaleToU3Ed__34_tD41A5F93B3DE417DB1D8D0995CDDE256D3F2779C* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -5476,14 +5484,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CScaleToU3Ed__34__ctor_m0149CC53686AD5
 		return;
 	}
 }
-// Method Definition Index: 65107
+// Method Definition Index: 65118
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CScaleToU3Ed__34_System_IDisposable_Dispose_mBE4F7E36AEA22AF9D09E4EB37DE42CA36F62E479 (U3CScaleToU3Ed__34_tD41A5F93B3DE417DB1D8D0995CDDE256D3F2779C* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65108
+// Method Definition Index: 65119
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CScaleToU3Ed__34_MoveNext_m7BABF53E1B852939F02996213B57713E3B7EAB82 (U3CScaleToU3Ed__34_tD41A5F93B3DE417DB1D8D0995CDDE256D3F2779C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5625,7 +5633,7 @@ IL_00b5:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65109
+// Method Definition Index: 65120
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CScaleToU3Ed__34_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m367F87DB480C15F58F9282BC194E244F21483EAA (U3CScaleToU3Ed__34_tD41A5F93B3DE417DB1D8D0995CDDE256D3F2779C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5633,7 +5641,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CScaleToU3Ed__34_System_Coll
 		return L_0;
 	}
 }
-// Method Definition Index: 65110
+// Method Definition Index: 65121
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CScaleToU3Ed__34_System_Collections_IEnumerator_Reset_m9E8C6FAFDE2DD366202ABB8DE2031DD35C9697C7 (U3CScaleToU3Ed__34_tD41A5F93B3DE417DB1D8D0995CDDE256D3F2779C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5642,7 +5650,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CScaleToU3Ed__34_System_Collections_IE
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CScaleToU3Ed__34_System_Collections_IEnumerator_Reset_m9E8C6FAFDE2DD366202ABB8DE2031DD35C9697C7_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65111
+// Method Definition Index: 65122
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CScaleToU3Ed__34_System_Collections_IEnumerator_get_Current_m109350BCFA073D1920A5914A983CF5B943E4B697 (U3CScaleToU3Ed__34_tD41A5F93B3DE417DB1D8D0995CDDE256D3F2779C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5658,7 +5666,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CScaleToU3Ed__34_System_Coll
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65112
+// Method Definition Index: 65123
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_Start_mF549C6A849CDD18D13D46BB3DF47AA45A20A0D29 (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5709,7 +5717,7 @@ IL_0045:
 		return;
 	}
 }
-// Method Definition Index: 65113
+// Method Definition Index: 65124
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* LobbyManager_InitializeButtonsRoutine_m4E12E0DD53B9E0E69B9200C83348BBAB04AB31FA (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5728,7 +5736,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* LobbyManager_InitializeButtons
 		return L_1;
 	}
 }
-// Method Definition Index: 65114
+// Method Definition Index: 65125
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_OnEnable_m21C2B44EC1C5736551D2326824949AB82295A38C (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5789,7 +5797,7 @@ IL_002e:
 		return;
 	}
 }
-// Method Definition Index: 65115
+// Method Definition Index: 65126
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_OnDestroy_mEFB581DECF23B08E8A704404A23EF49DE8A3FA6B (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5834,7 +5842,7 @@ IL_0033:
 		return;
 	}
 }
-// Method Definition Index: 65116
+// Method Definition Index: 65127
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_OnPlayerDataLoaded_m687BB1AEECD8197BB36E89B1CD94F78DFAE69867 (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5878,7 +5886,7 @@ IL_002d:
 		return;
 	}
 }
-// Method Definition Index: 65117
+// Method Definition Index: 65128
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LobbyManager_isLoggedIn_m5F94E4366FA18FA811BAEB8446E3273ECBF13CEE (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5913,7 +5921,7 @@ IL_0018:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65118
+// Method Definition Index: 65129
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_Update_m2EDDF5EAAD4D4C87A19CF970492F05044168A99C (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5923,7 +5931,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_Update_m2EDDF5EAAD4D4C87A19
 		return;
 	}
 }
-// Method Definition Index: 65119
+// Method Definition Index: 65130
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_InitializeLobbyRows_mBC671DD5C0D324DCDE76080A6F6F3C6C1AA149B8 (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6324,7 +6332,7 @@ IL_0215:
 		return;
 	}
 }
-// Method Definition Index: 65120
+// Method Definition Index: 65131
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_DisableOriginalRow_m40BABFF77EB37127D54504F0ED277BD303B94EFF (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* ___0_row, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6492,7 +6500,7 @@ IL_0087:
 		return;
 	}
 }
-// Method Definition Index: 65121
+// Method Definition Index: 65132
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_SetupScrollButtons_mE0DC3ECBB90C213BA8230F9410F1535D8BC38127 (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6557,7 +6565,7 @@ IL_0054:
 		return;
 	}
 }
-// Method Definition Index: 65122
+// Method Definition Index: 65133
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_UpdateVisibleRows_m580C3FED31B3DBA240E4DE3793230E163963121C (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6567,7 +6575,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_UpdateVisibleRows_m580C3FED
 		return;
 	}
 }
-// Method Definition Index: 65123
+// Method Definition Index: 65134
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_UpdateLobbyPositions_mB255986DBD5F4958F6A2D5B637DFAC842E7E954C (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, bool ___0_instant, int32_t ___1_scrollDirection, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6917,7 +6925,7 @@ IL_0193:
 		return;
 	}
 }
-// Method Definition Index: 65124
+// Method Definition Index: 65135
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_SnapItemToPosition_m79EA48445BD481C0650E67DB0AB911241DA7C470 (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* ___0_item, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___1_anchor, float ___2_scale, float ___3_opacity, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7046,7 +7054,7 @@ IL_00b2:
 		return;
 	}
 }
-// Method Definition Index: 65125
+// Method Definition Index: 65136
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float LobbyManager_GetScreenScaleFactor_m3E2301E0C249C1B5D4D1DC0337A30ED072200B90 (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -7073,7 +7081,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float LobbyManager_GetScreenScaleFactor_m3E23
 		return L_5;
 	}
 }
-// Method Definition Index: 65126
+// Method Definition Index: 65137
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* LobbyManager_AnimateItemToPosition_mDA1C21D54FF783A4623D6F77CB8984279FB2F3ED (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* ___0_item, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___1_anchor, float ___2_scale, float ___3_opacity, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7110,7 +7118,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* LobbyManager_AnimateItemToPosi
 		return L_8;
 	}
 }
-// Method Definition Index: 65127
+// Method Definition Index: 65138
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t LobbyManager_GetWrappedIndex_m1D310DC2AA6365688F91633287C5C0501DAF1D5E (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -7138,7 +7146,7 @@ IL_000e:
 		return L_3;
 	}
 }
-// Method Definition Index: 65128
+// Method Definition Index: 65139
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t LobbyManager_FindFirstAffordableCashLobby_mBBBF580540D30D385C2F0D563FDF179762225390 (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, float ___0_playerCash, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7263,7 +7271,7 @@ IL_0077:
 		return (-1);
 	}
 }
-// Method Definition Index: 65129
+// Method Definition Index: 65140
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t LobbyManager_FindFirstAffordableChipsOnlyLobby_mBA93481DDB1481EC8672947D4237E2064F415DDD (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, int32_t ___0_playerChips, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7397,7 +7405,7 @@ IL_0080:
 		return (-1);
 	}
 }
-// Method Definition Index: 65130
+// Method Definition Index: 65141
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_AutoSelectLobbyBasedOnBalance_mA1CCC819C0571E3EF7B5E29D7305794A75B76AE8 (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7596,7 +7604,7 @@ IL_00ee:
 		return;
 	}
 }
-// Method Definition Index: 65131
+// Method Definition Index: 65142
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_ApplyCarouselScales_m8AEF6C2115976165A01178D6C4AD0C20A9233354 (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, bool ___0_animate, const RuntimeMethod* method) 
 {
 	{
@@ -7604,7 +7612,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_ApplyCarouselScales_m8AEF6C
 		return;
 	}
 }
-// Method Definition Index: 65132
+// Method Definition Index: 65143
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_ScrollUp_m1779BDF9A3943E6855207DDC657C1E28E63B9202 (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7631,7 +7639,7 @@ IL_001f:
 		return;
 	}
 }
-// Method Definition Index: 65133
+// Method Definition Index: 65144
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_ScrollDown_mA45FBC0D7627452BEDECB54C5EC9932E698AAD02 (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7658,7 +7666,7 @@ IL_001f:
 		return;
 	}
 }
-// Method Definition Index: 65134
+// Method Definition Index: 65145
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_ScrollMultiple_m4EB5344A56A3637E54EF58CF2D6354242AF1D09F (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, int32_t ___0_steps, const RuntimeMethod* method) 
 {
 	{
@@ -7708,7 +7716,7 @@ IL_0024:
 		return;
 	}
 }
-// Method Definition Index: 65135
+// Method Definition Index: 65146
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* LobbyManager_AnimateMultipleSteps_m6AB4FED722997324EEE7D0848945AB963754477F (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, int32_t ___0_totalSteps, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7731,7 +7739,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* LobbyManager_AnimateMultipleSt
 		return L_2;
 	}
 }
-// Method Definition Index: 65136
+// Method Definition Index: 65147
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* LobbyManager_AnimateScroll_mF1A287212877F0C3AAC28DF0EE2E49091FC76C8B (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, int32_t ___0_direction, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7746,7 +7754,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* LobbyManager_AnimateScroll_mF1
 		return L_0;
 	}
 }
-// Method Definition Index: 65137
+// Method Definition Index: 65148
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_HandleSwipeInput_m3194F3BC6806475789B7836488D8742C679C44BF (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, const RuntimeMethod* method) 
 {
 	Touch_t03E51455ED508492B3F278903A0114FA0E87B417 V_0;
@@ -7869,7 +7877,7 @@ IL_0090:
 		return;
 	}
 }
-// Method Definition Index: 65138
+// Method Definition Index: 65149
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_InitializeLobbyConfigurations_mF258B3C5FF9F6592E6C4D1DEBBFBE3DF198D2435 (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7912,7 +7920,7 @@ IL_0021:
 	{
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:782>
 		V_0 = 0;
-		goto IL_0074;
+		goto IL_0079;
 	}
 
 IL_0025:
@@ -7925,7 +7933,7 @@ IL_0025:
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_6 = (L_3)->GetAt(static_cast<il2cpp_array_size_t>(L_5));
 		if (L_6)
 		{
-			goto IL_0070;
+			goto IL_0075;
 		}
 	}
 	{
@@ -7941,15 +7949,16 @@ IL_0025:
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:796>
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:797>
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:798>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:799>
 		LobbyConfigU5BU5D_tC3F4948ACA699720D170B89FC9F0E31786F6E9B5* L_7 = __this->___lobbyConfigurations;
 		int32_t L_8 = V_0;
 		int32_t L_9 = V_0;
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_10 = (LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6*)il2cpp_codegen_object_new(LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6_il2cpp_TypeInfo_var);
-		LobbyConfig__ctor_m068DC1A8DB62D23DA9E057EDAA631A1865C4D8F0(L_10, L_9, 2, (0.0f), ((int32_t)10), (0.0f), ((int32_t)20), (0.0f), ((int32_t)10), (0.0f), 5, NULL);
+		LobbyConfig__ctor_mABF579212323D333FC1B06B6F012E02163C09A53(L_10, L_9, 2, (0.0f), ((int32_t)10), (0.0f), ((int32_t)20), (0.0f), ((int32_t)10), (0.0f), 5, (60.0f), NULL);
 		NullCheck(L_7);
 		ArrayElementTypeCheck (L_7, L_10);
 		(L_7)->SetAt(static_cast<il2cpp_array_size_t>(L_8), (LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6*)L_10);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:799>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:800>
 		int32_t L_11 = V_0;
 		int32_t L_12 = ((int32_t)il2cpp_codegen_add(L_11, 1));
 		RuntimeObject* L_13 = Box(il2cpp_defaults.int32_class, &L_12);
@@ -7959,14 +7968,14 @@ IL_0025:
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_14, NULL);
 	}
 
-IL_0070:
+IL_0075:
 	{
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:782>
 		int32_t L_15 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_15, 1));
 	}
 
-IL_0074:
+IL_0079:
 	{
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:782>
 		int32_t L_16 = V_0;
@@ -7976,22 +7985,22 @@ IL_0074:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:803>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:804>
 		int32_t L_17 = ((int32_t)12);
 		RuntimeObject* L_18 = Box(il2cpp_defaults.int32_class, &L_17);
 		String_t* L_19;
 		L_19 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral01CF00B1C76E8E1F589DF551BC9E4758F45D8712, L_18, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_19, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:804>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:805>
 		return;
 	}
 }
-// Method Definition Index: 65139
+// Method Definition Index: 65150
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* LobbyManager_GetLobbyConfig_m7C9C8E2F9383DB082B8B429F4B293CDD965AFD2B (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, int32_t ___0_lobbyIndex, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:811>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:812>
 		LobbyConfigU5BU5D_tC3F4948ACA699720D170B89FC9F0E31786F6E9B5* L_0 = __this->___lobbyConfigurations;
 		if (!L_0)
 		{
@@ -8015,7 +8024,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR LobbyConfig_t68470063396B86A2C737A8147C8B09F9
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:813>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:814>
 		LobbyConfigU5BU5D_tC3F4948ACA699720D170B89FC9F0E31786F6E9B5* L_4 = __this->___lobbyConfigurations;
 		int32_t L_5 = ___0_lobbyIndex;
 		NullCheck(L_4);
@@ -8026,11 +8035,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR LobbyConfig_t68470063396B86A2C737A8147C8B09F9
 
 IL_0020:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:815>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:816>
 		return (LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6*)NULL;
 	}
 }
-// Method Definition Index: 65140
+// Method Definition Index: 65151
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LobbyManager_CanPlayerAffordEntryFee_m7544F07C4BB2D726D7988997FF52AD5CD6D6D13D (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, int32_t ___0_lobbyIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8046,7 +8055,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LobbyManager_CanPlayerAffordEntryFee_m75
 	LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* V_0 = NULL;
 	PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* V_1 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:823>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:824>
 		PlayFabManager_tDE93977FA2FED127B002B4472B4C362CE7929317* L_0;
 		L_0 = PlayFabManager_get_Instance_m2FB283A1AC156A0431480CD98B4795FB2A9DC8F0_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -8058,16 +8067,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LobbyManager_CanPlayerAffordEntryFee_m75
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:825>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:826>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral52EE96910958D054F1C795409EECA87899B989A8, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:826>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:827>
 		return (bool)0;
 	}
 
 IL_0019:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:829>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:830>
 		PlayFabManager_tDE93977FA2FED127B002B4472B4C362CE7929317* L_2;
 		L_2 = PlayFabManager_get_Instance_m2FB283A1AC156A0431480CD98B4795FB2A9DC8F0_inline(NULL);
 		NullCheck(L_2);
@@ -8079,21 +8088,21 @@ IL_0019:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:831>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:832>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral3489B9C0861618B6CC60726274BC75C75FBF770C, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:832>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:833>
 		return (bool)0;
 	}
 
 IL_0031:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:835>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:836>
 		int32_t L_4 = ___0_lobbyIndex;
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_5;
 		L_5 = LobbyManager_GetLobbyConfig_m7C9C8E2F9383DB082B8B429F4B293CDD965AFD2B(__this, L_4, NULL);
 		V_0 = L_5;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:836>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:837>
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_6 = V_0;
 		if (L_6)
 		{
@@ -8101,7 +8110,7 @@ IL_0031:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:838>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:839>
 		int32_t L_7 = ___0_lobbyIndex;
 		int32_t L_8 = L_7;
 		RuntimeObject* L_9 = Box(il2cpp_defaults.int32_class, &L_8);
@@ -8109,19 +8118,19 @@ IL_0031:
 		L_10 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral92416A011D2C43A2D71A8E0AEE8465D19ED83CEF, L_9, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_10, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:839>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:840>
 		return (bool)0;
 	}
 
 IL_0053:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:843>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:844>
 		PlayFabManager_tDE93977FA2FED127B002B4472B4C362CE7929317* L_11;
 		L_11 = PlayFabManager_get_Instance_m2FB283A1AC156A0431480CD98B4795FB2A9DC8F0_inline(NULL);
 		NullCheck(L_11);
 		PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* L_12 = L_11->___currentPlayerData;
 		V_1 = L_12;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:847>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:848>
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_13 = V_0;
 		NullCheck(L_13);
 		float L_14 = L_13->___entryFeeCash;
@@ -8131,7 +8140,7 @@ IL_0053:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:849>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:850>
 		PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* L_15 = V_1;
 		NullCheck(L_15);
 		float L_16 = L_15->___cash;
@@ -8144,13 +8153,13 @@ IL_0053:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:852>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:853>
 		return (bool)0;
 	}
 
 IL_007b:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:857>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:858>
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_19 = V_0;
 		NullCheck(L_19);
 		int32_t L_20 = L_19->___entryFeeChips;
@@ -8160,7 +8169,7 @@ IL_007b:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:859>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:860>
 		PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* L_21 = V_1;
 		NullCheck(L_21);
 		int32_t L_22 = L_21->___coins;
@@ -8173,17 +8182,17 @@ IL_007b:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:862>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:863>
 		return (bool)0;
 	}
 
 IL_0094:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:866>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:867>
 		return (bool)1;
 	}
 }
-// Method Definition Index: 65141
+// Method Definition Index: 65152
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_SetLobbyConfig_mA4412D1981131FB105637417FE82D4EF77277E37 (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, int32_t ___0_lobbyIndex, LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* ___1_config, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8194,7 +8203,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_SetLobbyConfig_mA4412D19811
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:874>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:875>
 		LobbyConfigU5BU5D_tC3F4948ACA699720D170B89FC9F0E31786F6E9B5* L_0 = __this->___lobbyConfigurations;
 		if (!L_0)
 		{
@@ -8218,14 +8227,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_SetLobbyConfig_mA4412D19811
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:876>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:877>
 		LobbyConfigU5BU5D_tC3F4948ACA699720D170B89FC9F0E31786F6E9B5* L_4 = __this->___lobbyConfigurations;
 		int32_t L_5 = ___0_lobbyIndex;
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_6 = ___1_config;
 		NullCheck(L_4);
 		ArrayElementTypeCheck (L_4, L_6);
 		(L_4)->SetAt(static_cast<il2cpp_array_size_t>(L_5), (LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6*)L_6);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:877>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:878>
 		int32_t L_7 = ___0_lobbyIndex;
 		int32_t L_8 = ((int32_t)il2cpp_codegen_add(L_7, 1));
 		RuntimeObject* L_9 = Box(il2cpp_defaults.int32_class, &L_8);
@@ -8237,11 +8246,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_SetLobbyConfig_mA4412D19811
 
 IL_0037:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:879>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:880>
 		return;
 	}
 }
-// Method Definition Index: 65142
+// Method Definition Index: 65153
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_OpenGameplayObject_m0948427B32BC29DFCAE0C26F67B13A2A31F3DC86 (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, int32_t ___0_lobbyIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8257,12 +8266,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_OpenGameplayObject_m0948427
 	}
 	LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* V_0 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:887>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:888>
 		int32_t L_0 = ___0_lobbyIndex;
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_1;
 		L_1 = LobbyManager_GetLobbyConfig_m7C9C8E2F9383DB082B8B429F4B293CDD965AFD2B(__this, L_0, NULL);
 		V_0 = L_1;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:888>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:889>
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_2 = V_0;
 		if (L_2)
 		{
@@ -8270,7 +8279,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_OpenGameplayObject_m0948427
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:890>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:891>
 		int32_t L_3 = ___0_lobbyIndex;
 		int32_t L_4 = L_3;
 		RuntimeObject* L_5 = Box(il2cpp_defaults.int32_class, &L_4);
@@ -8278,13 +8287,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_OpenGameplayObject_m0948427
 		L_6 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral8B33077617CC58DD929264FCB0006E18C1E4AE98, L_5, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_6, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:891>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:892>
 		return;
 	}
 
 IL_0021:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:895>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:896>
 		LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* L_7 = ((LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D_StaticFields*)il2cpp_codegen_static_fields_for(LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D_il2cpp_TypeInfo_var))->___Instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_8;
@@ -8295,12 +8304,12 @@ IL_0021:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:898>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:899>
 		LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* L_9 = ((LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D_StaticFields*)il2cpp_codegen_static_fields_for(LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D_il2cpp_TypeInfo_var))->___Instance;
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_10 = V_0;
 		NullCheck(L_9);
 		LobbyNetworkManager_JoinLobbyRoom_m4332A9AFD6922E57D2A00A03AC80306D0156E587(L_9, L_10, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:899>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:900>
 		int32_t L_11 = ___0_lobbyIndex;
 		int32_t L_12 = L_11;
 		RuntimeObject* L_13 = Box(il2cpp_defaults.int32_class, &L_12);
@@ -8313,17 +8322,17 @@ IL_0021:
 
 IL_004f:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:904>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:905>
 		int32_t L_15 = ___0_lobbyIndex;
 		LobbyManager_StartGameFromNetwork_mCB781DBFA88CA18F529A82E0A593F27B07A78383(__this, L_15, (-1), NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:905>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:906>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteralD12667DB51192D0AC88D296162B87F71BF8BCAB5, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:907>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:908>
 		return;
 	}
 }
-// Method Definition Index: 65143
+// Method Definition Index: 65154
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_StartGameFromNetwork_mCB781DBFA88CA18F529A82E0A593F27B07A78383 (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, int32_t ___0_lobbyIndex, int32_t ___1_overrideCPUs, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8344,7 +8353,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_StartGameFromNetwork_mCB781
 	int32_t V_2 = 0;
 	int32_t G_B11_0 = 0;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:915>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:916>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___gameplayObject;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -8355,9 +8364,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_StartGameFromNetwork_mCB781
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:918>
-		V_0 = (LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6*)NULL;
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:919>
+		V_0 = (LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6*)NULL;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:920>
 		int32_t L_2 = ___0_lobbyIndex;
 		if ((((int32_t)L_2) < ((int32_t)0)))
 		{
@@ -8372,7 +8381,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_StartGameFromNetwork_mCB781
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:921>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:922>
 		int32_t L_4 = ___0_lobbyIndex;
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_5;
 		L_5 = LobbyManager_GetLobbyConfig_m7C9C8E2F9383DB082B8B429F4B293CDD965AFD2B(__this, L_4, NULL);
@@ -8381,12 +8390,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_StartGameFromNetwork_mCB781
 
 IL_0024:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:925>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:926>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_6;
 		L_6 = Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40(Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40_RuntimeMethod_var);
 		V_1 = L_6;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:926>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:927>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_7 = V_1;
 		bool L_8;
 		L_8 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_7, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -8403,7 +8412,7 @@ IL_0024:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:929>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:930>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_10 = __this->___gameplayObject;
 		NullCheck(L_10);
 		bool L_11;
@@ -8414,7 +8423,7 @@ IL_0024:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:931>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:932>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_12 = __this->___gameplayObject;
 		NullCheck(L_12);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_12, (bool)0, NULL);
@@ -8422,13 +8431,13 @@ IL_0024:
 
 IL_004f:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:935>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:936>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_13 = V_1;
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_14 = V_0;
 		int32_t L_15 = ___1_overrideCPUs;
 		NullCheck(L_13);
 		GameManager_ConfigureGameFromLobby_mEE8CB112AA7AD98FF2B86019A99249D5AED8F25A(L_13, L_14, L_15, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:937>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:938>
 		int32_t L_16 = ___1_overrideCPUs;
 		if ((((int32_t)L_16) >= ((int32_t)0)))
 		{
@@ -8453,7 +8462,7 @@ IL_0063:
 IL_0064:
 	{
 		V_2 = G_B11_0;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:938>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:939>
 		int32_t L_20 = ___0_lobbyIndex;
 		int32_t L_21 = L_20;
 		RuntimeObject* L_22 = Box(il2cpp_defaults.int32_class, &L_21);
@@ -8474,7 +8483,7 @@ IL_0064:
 
 IL_008d:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:940>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:941>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_31 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_32;
@@ -8485,7 +8494,7 @@ IL_008d:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:942>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:943>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral948C019D1CBEACCA58091D5AB6CAFBDCA92603F8, NULL);
 		goto IL_00ba;
@@ -8493,7 +8502,7 @@ IL_008d:
 
 IL_00a2:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:944>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:945>
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_33 = V_0;
 		if (L_33)
 		{
@@ -8501,7 +8510,7 @@ IL_00a2:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:946>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:947>
 		int32_t L_34 = ___0_lobbyIndex;
 		int32_t L_35 = L_34;
 		RuntimeObject* L_36 = Box(il2cpp_defaults.int32_class, &L_35);
@@ -8513,11 +8522,11 @@ IL_00a2:
 
 IL_00ba:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:950>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:951>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_38 = __this->___gameplayObject;
 		NullCheck(L_38);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_38, (bool)1, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:951>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:952>
 		int32_t L_39 = ___0_lobbyIndex;
 		int32_t L_40 = ((int32_t)il2cpp_codegen_add(L_39, 1));
 		RuntimeObject* L_41 = Box(il2cpp_defaults.int32_class, &L_40);
@@ -8530,14 +8539,14 @@ IL_00ba:
 
 IL_00de:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:955>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:956>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral0F6A6C4F02CC5F4920F3C12CC7CC095D9B5D6023, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:957>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:958>
 		return;
 	}
 }
-// Method Definition Index: 65144
+// Method Definition Index: 65155
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_RefreshAllPlayButtons_mFFD67B324C911D0D480510017C5E107717C2B05B (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8556,7 +8565,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_RefreshAllPlayButtons_mFFD6
 	memset((&V_0), 0, sizeof(V_0));
 	LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* V_1 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:965>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:966>
 		List_1_tB94ACE950C33AFE60E57CD5E8B2294C3AFCFF600* L_0 = __this->___allLobbyItems;
 		if (!L_0)
 		{
@@ -8564,7 +8573,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_RefreshAllPlayButtons_mFFD6
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:967>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:968>
 		List_1_tB94ACE950C33AFE60E57CD5E8B2294C3AFCFF600* L_1 = __this->___allLobbyItems;
 		NullCheck(L_1);
 		Enumerator_tF07174C7A760167C8B39E2C39FCDD4D7C09F24DB L_2;
@@ -8589,11 +8598,11 @@ FINALLY_0038:
 
 IL_0016_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:967>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:968>
 				LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* L_3;
 				L_3 = Enumerator_get_Current_m3EC001D51113EBCB5188B00F5129A3412B5C24C2_inline((&V_0), Enumerator_get_Current_m3EC001D51113EBCB5188B00F5129A3412B5C24C2_RuntimeMethod_var);
 				V_1 = L_3;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:969>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:970>
 				LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* L_4 = V_1;
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 				bool L_5;
@@ -8604,7 +8613,7 @@ IL_0016_1:
 				}
 			}
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:971>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:972>
 				LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* L_6 = V_1;
 				NullCheck(L_6);
 				LobbyRowCellView_RefreshPlayButtonsInteractability_mA9022AE94D977514266655B03FF19BBAEA5C3E28(L_6, NULL);
@@ -8612,7 +8621,7 @@ IL_0016_1:
 
 IL_002d_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:967>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:968>
 				bool L_7;
 				L_7 = Enumerator_MoveNext_m77213D8166E202F0275BD66F1083A00E56C00EA1((&V_0), Enumerator_MoveNext_m77213D8166E202F0275BD66F1083A00E56C00EA1_RuntimeMethod_var);
 				if (L_7)
@@ -8632,14 +8641,14 @@ IL_002d_1:
 
 IL_0046:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:976>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:977>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral65C6F584C25722BC534AEF6A0F0A155EFB3E7CAC, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:977>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:978>
 		return;
 	}
 }
-// Method Definition Index: 65145
+// Method Definition Index: 65156
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_SetupDotButtons_mEEC08B89A62A2E7D90DD5C68C6BA43F8E8A1F583 (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8654,7 +8663,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_SetupDotButtons_mEEC08B89A6
 	int32_t V_0 = 0;
 	U3CU3Ec__DisplayClass63_0_t2D06338B74E27C5A94B1EF265A8F36BFBCF0784C* V_1 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:987>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:988>
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_0 = __this->___dotButtons;
 		if (L_0)
 		{
@@ -8662,20 +8671,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_SetupDotButtons_mEEC08B89A6
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:987>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:988>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:989>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:990>
 		V_0 = 0;
 		goto IL_0065;
 	}
 
 IL_000d:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:991>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:992>
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_1 = __this->___dotButtons;
 		int32_t L_2 = V_0;
 		NullCheck(L_1);
@@ -8697,12 +8706,12 @@ IL_000d:
 		NullCheck(L_7);
 		L_7->___U3CU3E4__this = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&L_7->___U3CU3E4__this), (void*)__this);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:993>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:994>
 		U3CU3Ec__DisplayClass63_0_t2D06338B74E27C5A94B1EF265A8F36BFBCF0784C* L_8 = V_1;
 		int32_t L_9 = V_0;
 		NullCheck(L_8);
 		L_8->___index = L_9;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:994>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:995>
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_10 = __this->___dotButtons;
 		int32_t L_11 = V_0;
 		NullCheck(L_10);
@@ -8713,7 +8722,7 @@ IL_000d:
 		L_14 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline(L_13, NULL);
 		NullCheck(L_14);
 		UnityEventBase_RemoveAllListeners_m6E68297189537543B0C72FE38804646CA204D076(L_14, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:995>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:996>
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_15 = __this->___dotButtons;
 		int32_t L_16 = V_0;
 		NullCheck(L_15);
@@ -8731,14 +8740,14 @@ IL_000d:
 
 IL_0061:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:989>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:990>
 		int32_t L_22 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_22, 1));
 	}
 
 IL_0065:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:989>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:990>
 		int32_t L_23 = V_0;
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_24 = __this->___dotButtons;
 		NullCheck(L_24);
@@ -8748,11 +8757,11 @@ IL_0065:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:998>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:999>
 		return;
 	}
 }
-// Method Definition Index: 65146
+// Method Definition Index: 65157
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_OnDotButtonClicked_mFBBB0770D1029A35AFA74005CAB2F826838D3433 (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, int32_t ___0_targetIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8765,7 +8774,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_OnDotButtonClicked_mFBBB077
 	int32_t V_0 = 0;
 	int32_t G_B7_0 = 0;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1006>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1007>
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_0 = ((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -8776,7 +8785,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_OnDotButtonClicked_mFBBB077
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1008>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1009>
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_2 = ((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance;
 		NullCheck(L_2);
 		SoundManager_PlayTap_m17D3982C5E1201E4B2EB340FDA5D6DA6D39625EB(L_2, NULL);
@@ -8784,7 +8793,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_OnDotButtonClicked_mFBBB077
 
 IL_0017:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1011>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1012>
 		int32_t L_3 = ___0_targetIndex;
 		int32_t L_4 = __this->___currentScrollIndex;
 		if ((!(((uint32_t)L_3) == ((uint32_t)L_4))))
@@ -8793,13 +8802,13 @@ IL_0017:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1011>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1012>
 		return;
 	}
 
 IL_0021:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1015>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1016>
 		int32_t L_5 = ___0_targetIndex;
 		int32_t L_6 = __this->___currentScrollIndex;
 		if ((((int32_t)L_5) > ((int32_t)L_6)))
@@ -8820,10 +8829,10 @@ IL_002d:
 IL_002e:
 	{
 		V_0 = G_B7_0;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1021>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1022>
 		int32_t L_7 = ___0_targetIndex;
 		__this->___currentScrollIndex = L_7;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1023>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1024>
 		int32_t L_8 = __this->___currentScrollIndex;
 		if ((((int32_t)L_8) >= ((int32_t)0)))
 		{
@@ -8831,13 +8840,13 @@ IL_002e:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1023>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1024>
 		__this->___currentScrollIndex = 0;
 	}
 
 IL_0046:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1024>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1025>
 		int32_t L_9 = __this->___currentScrollIndex;
 		if ((((int32_t)L_9) < ((int32_t)((int32_t)12))))
 		{
@@ -8845,20 +8854,20 @@ IL_0046:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1024>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1025>
 		__this->___currentScrollIndex = ((int32_t)11);
 	}
 
 IL_0058:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1026>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1027>
 		int32_t L_10 = V_0;
 		LobbyManager_UpdateLobbyPositions_mB255986DBD5F4958F6A2D5B637DFAC842E7E954C(__this, (bool)0, L_10, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1027>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1028>
 		return;
 	}
 }
-// Method Definition Index: 65147
+// Method Definition Index: 65158
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_UpdateDotButtons_mEE567B7B2B5B8954CE99D9D67C8167AA116840AE (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8880,7 +8889,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_UpdateDotButtons_mEE567B7B2
 	memset((&G_B15_0), 0, sizeof(G_B15_0));
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* G_B15_1 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1034>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1035>
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_0 = __this->___dotButtons;
 		if (L_0)
 		{
@@ -8888,23 +8897,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager_UpdateDotButtons_mEE567B7B2
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1034>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1035>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1036>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1037>
 		int32_t L_1 = __this->___currentScrollIndex;
 		V_0 = L_1;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1038>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1039>
 		V_1 = 0;
 		goto IL_0125;
 	}
 
 IL_0017:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1040>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1041>
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_2 = __this->___dotButtons;
 		int32_t L_3 = V_1;
 		NullCheck(L_2);
@@ -8919,7 +8928,7 @@ IL_0017:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1042>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1043>
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_7 = __this->___dotButtons;
 		int32_t L_8 = V_1;
 		NullCheck(L_7);
@@ -8929,7 +8938,7 @@ IL_0017:
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_11;
 		L_11 = Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79(L_10, Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79_RuntimeMethod_var);
 		V_2 = L_11;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1043>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1044>
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_12 = __this->___dotButtons;
 		int32_t L_13 = V_1;
 		NullCheck(L_12);
@@ -8939,7 +8948,7 @@ IL_0017:
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_16;
 		L_16 = Component_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m0640480E7E38BB88B0D1F6AD59E697C8EE6AAFA4(L_15, Component_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m0640480E7E38BB88B0D1F6AD59E697C8EE6AAFA4_RuntimeMethod_var);
 		V_3 = L_16;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1045>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1046>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_17 = V_2;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_18;
@@ -8950,17 +8959,17 @@ IL_0017:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1047>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1048>
 		int32_t L_19 = V_1;
 		int32_t L_20 = V_0;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1049>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1050>
 		if (!((((int32_t)L_19) == ((int32_t)L_20))? 1 : 0))
 		{
 			goto IL_00ab;
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1051>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1052>
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_21 = __this->___selectedDotImage;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_22;
@@ -8971,7 +8980,7 @@ IL_0017:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1051>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1052>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_23 = V_2;
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_24 = __this->___selectedDotImage;
 		NullCheck(L_23);
@@ -8980,13 +8989,13 @@ IL_0017:
 
 IL_0072:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1052>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1053>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_25 = V_2;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_26;
 		L_26 = Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_inline(NULL);
 		NullCheck(L_25);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_25, L_26);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1055>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1056>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_27 = V_3;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_28;
@@ -8997,11 +9006,11 @@ IL_0072:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1057>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1058>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_29 = V_3;
 		int32_t L_30;
 		L_30 = ShortcutExtensions_DOKill_m3F197E779AB6CA95FF3C4C2DD547B4B493E42D46(L_29, (bool)0, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1058>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1059>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_31 = V_3;
 		TweenerCore_3_tCD82DFC45FB71C681FA8659EA63A7D7D16BFFE77* L_32;
 		L_32 = ShortcutExtensions_DOScale_m5935113B55474CC0551EF8A8EA3CFA82371D5E99(L_31, (1.39999998f), (0.200000003f), NULL);
@@ -9012,7 +9021,7 @@ IL_0072:
 
 IL_00ab:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1063>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1064>
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_34 = __this->___unselectedDotImage;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_35;
@@ -9023,7 +9032,7 @@ IL_00ab:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1063>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1064>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_36 = V_2;
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_37 = __this->___unselectedDotImage;
 		NullCheck(L_36);
@@ -9032,7 +9041,7 @@ IL_00ab:
 
 IL_00c5:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1064>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1065>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_38 = V_2;
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_39 = __this->___unselectedDotImage;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -9066,7 +9075,7 @@ IL_00f4:
 	{
 		NullCheck(G_B15_1);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, G_B15_1, G_B15_0);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1067>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1068>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_43 = V_3;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_44;
@@ -9077,11 +9086,11 @@ IL_00f4:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1069>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1070>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_45 = V_3;
 		int32_t L_46;
 		L_46 = ShortcutExtensions_DOKill_m3F197E779AB6CA95FF3C4C2DD547B4B493E42D46(L_45, (bool)0, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1070>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1071>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_47 = V_3;
 		TweenerCore_3_tCD82DFC45FB71C681FA8659EA63A7D7D16BFFE77* L_48;
 		L_48 = ShortcutExtensions_DOScale_m5935113B55474CC0551EF8A8EA3CFA82371D5E99(L_47, (1.0f), (0.200000003f), NULL);
@@ -9091,14 +9100,14 @@ IL_00f4:
 
 IL_0121:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1038>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1039>
 		int32_t L_50 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_50, 1));
 	}
 
 IL_0125:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1038>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1039>
 		int32_t L_51 = V_1;
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_52 = __this->___dotButtons;
 		NullCheck(L_52);
@@ -9108,11 +9117,11 @@ IL_0125:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1076>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:1077>
 		return;
 	}
 }
-// Method Definition Index: 65148
+// Method Definition Index: 65159
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager__ctor_m1A4D2FDD6CF3611918EF889457B0D4ABA7384C4B (LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9159,7 +9168,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyManager__ctor_m1A4D2FDD6CF3611918EF
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65149
+// Method Definition Index: 65160
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass63_0__ctor_m5B7107055ED62C09B1884A558D848592B7AEF21B (U3CU3Ec__DisplayClass63_0_t2D06338B74E27C5A94B1EF265A8F36BFBCF0784C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9167,11 +9176,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass63_0__ctor_m5B71070
 		return;
 	}
 }
-// Method Definition Index: 65150
+// Method Definition Index: 65161
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass63_0_U3CSetupDotButtonsU3Eb__0_m5579F885653CC9E9261FA04182F29A4C50681ABC (U3CU3Ec__DisplayClass63_0_t2D06338B74E27C5A94B1EF265A8F36BFBCF0784C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:995>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyManager.cs:996>
 		LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* L_0 = __this->___U3CU3E4__this;
 		int32_t L_1 = __this->___index;
 		NullCheck(L_0);
@@ -9187,7 +9196,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass63_0_U3CSetupDotBut
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65151
+// Method Definition Index: 65162
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateItemToPositionU3Ed__44__ctor_mE3D73211026E7F2A9BE5C50F2FB95A5F86F9815E (U3CAnimateItemToPositionU3Ed__44_tB790FC4B21CC89ADC27E08497761D12F93901FC3* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -9197,14 +9206,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateItemToPositionU3Ed__44__ctor_m
 		return;
 	}
 }
-// Method Definition Index: 65152
+// Method Definition Index: 65163
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateItemToPositionU3Ed__44_System_IDisposable_Dispose_m62AB23E568A6E6E92FC5E809970856B31E5643DE (U3CAnimateItemToPositionU3Ed__44_tB790FC4B21CC89ADC27E08497761D12F93901FC3* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65153
+// Method Definition Index: 65164
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CAnimateItemToPositionU3Ed__44_MoveNext_m0464A519316C25BB30B6F8BC386B7590E359430E (U3CAnimateItemToPositionU3Ed__44_tB790FC4B21CC89ADC27E08497761D12F93901FC3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9361,7 +9370,7 @@ IL_00ec:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65154
+// Method Definition Index: 65165
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateItemToPositionU3Ed__44_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m9C2095D184F54F50696C146B256F400C09AD673B (U3CAnimateItemToPositionU3Ed__44_tB790FC4B21CC89ADC27E08497761D12F93901FC3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9369,7 +9378,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateItemToPositionU3Ed__
 		return L_0;
 	}
 }
-// Method Definition Index: 65155
+// Method Definition Index: 65166
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateItemToPositionU3Ed__44_System_Collections_IEnumerator_Reset_m83D1A28E32E28458983298317E48C4F0C04DBB73 (U3CAnimateItemToPositionU3Ed__44_tB790FC4B21CC89ADC27E08497761D12F93901FC3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9378,7 +9387,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateItemToPositionU3Ed__44_System_
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CAnimateItemToPositionU3Ed__44_System_Collections_IEnumerator_Reset_m83D1A28E32E28458983298317E48C4F0C04DBB73_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65156
+// Method Definition Index: 65167
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateItemToPositionU3Ed__44_System_Collections_IEnumerator_get_Current_m9AAA0F6DFC139E70832862C29F935992AF6BCE22 (U3CAnimateItemToPositionU3Ed__44_tB790FC4B21CC89ADC27E08497761D12F93901FC3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9394,7 +9403,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateItemToPositionU3Ed__
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65157
+// Method Definition Index: 65168
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateMultipleStepsU3Ed__53__ctor_m1B83BF46B31860991043A2BC477C9172D914BEA0 (U3CAnimateMultipleStepsU3Ed__53_t198D0DDCFE58AC90FDBCF22B611385A42D56B7AB* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -9404,14 +9413,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateMultipleStepsU3Ed__53__ctor_m1
 		return;
 	}
 }
-// Method Definition Index: 65158
+// Method Definition Index: 65169
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateMultipleStepsU3Ed__53_System_IDisposable_Dispose_m5AFCF941A68FAC6BD52B86CED91D7EA20DF21CBD (U3CAnimateMultipleStepsU3Ed__53_t198D0DDCFE58AC90FDBCF22B611385A42D56B7AB* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65159
+// Method Definition Index: 65170
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CAnimateMultipleStepsU3Ed__53_MoveNext_mDDB7C65053840A21CF896D57091FC8E6EED0BDFF (U3CAnimateMultipleStepsU3Ed__53_t198D0DDCFE58AC90FDBCF22B611385A42D56B7AB* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9632,7 +9641,7 @@ IL_0111:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65160
+// Method Definition Index: 65171
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateMultipleStepsU3Ed__53_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m57D35A20C62CDB9755FC9E5DCD9973D6BEAC1F5A (U3CAnimateMultipleStepsU3Ed__53_t198D0DDCFE58AC90FDBCF22B611385A42D56B7AB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9640,7 +9649,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateMultipleStepsU3Ed__5
 		return L_0;
 	}
 }
-// Method Definition Index: 65161
+// Method Definition Index: 65172
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateMultipleStepsU3Ed__53_System_Collections_IEnumerator_Reset_m4AB5EB8EBBF4A2CC66B7856AF1B63C3990F02608 (U3CAnimateMultipleStepsU3Ed__53_t198D0DDCFE58AC90FDBCF22B611385A42D56B7AB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9649,7 +9658,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateMultipleStepsU3Ed__53_System_C
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CAnimateMultipleStepsU3Ed__53_System_Collections_IEnumerator_Reset_m4AB5EB8EBBF4A2CC66B7856AF1B63C3990F02608_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65162
+// Method Definition Index: 65173
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateMultipleStepsU3Ed__53_System_Collections_IEnumerator_get_Current_m495632FF14EBEE3E733E8955F10A07E58B42EDDA (U3CAnimateMultipleStepsU3Ed__53_t198D0DDCFE58AC90FDBCF22B611385A42D56B7AB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9665,7 +9674,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateMultipleStepsU3Ed__5
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65163
+// Method Definition Index: 65174
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateScrollU3Ed__54__ctor_m698F486DE1DDE274F4783519B14CE9630C79ECBF (U3CAnimateScrollU3Ed__54_t4DECE95A0A9F41D104D8183DFECB5758080F78C8* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -9675,14 +9684,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateScrollU3Ed__54__ctor_m698F486D
 		return;
 	}
 }
-// Method Definition Index: 65164
+// Method Definition Index: 65175
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateScrollU3Ed__54_System_IDisposable_Dispose_mC1DA381450AB565D94F17141D4DF31F49ADCA8D7 (U3CAnimateScrollU3Ed__54_t4DECE95A0A9F41D104D8183DFECB5758080F78C8* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65165
+// Method Definition Index: 65176
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CAnimateScrollU3Ed__54_MoveNext_m15A7B4226EFC9512BAB3549F1DFAF4A14C6560DB (U3CAnimateScrollU3Ed__54_t4DECE95A0A9F41D104D8183DFECB5758080F78C8* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -9706,7 +9715,7 @@ IL_000c:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65166
+// Method Definition Index: 65177
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateScrollU3Ed__54_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m7BB51C967FC93F6D666AF4F57636F0869E9EDF01 (U3CAnimateScrollU3Ed__54_t4DECE95A0A9F41D104D8183DFECB5758080F78C8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9714,7 +9723,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateScrollU3Ed__54_Syste
 		return L_0;
 	}
 }
-// Method Definition Index: 65167
+// Method Definition Index: 65178
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateScrollU3Ed__54_System_Collections_IEnumerator_Reset_mEF40F272675368011D32BD0D6C30934FB98BA6FA (U3CAnimateScrollU3Ed__54_t4DECE95A0A9F41D104D8183DFECB5758080F78C8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9723,7 +9732,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateScrollU3Ed__54_System_Collecti
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CAnimateScrollU3Ed__54_System_Collections_IEnumerator_Reset_mEF40F272675368011D32BD0D6C30934FB98BA6FA_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65168
+// Method Definition Index: 65179
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateScrollU3Ed__54_System_Collections_IEnumerator_get_Current_mC284006D4F5A04749190DC46A1420092C40A0BDE (U3CAnimateScrollU3Ed__54_t4DECE95A0A9F41D104D8183DFECB5758080F78C8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9739,7 +9748,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateScrollU3Ed__54_Syste
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65169
+// Method Definition Index: 65180
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInitializeButtonsRoutineU3Ed__31__ctor_m74CE9D47E928BF2F3488FF0D0442413EE92C7751 (U3CInitializeButtonsRoutineU3Ed__31_t7D48E651A60C28A088BA3E73D2CB7A1526D8416F* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -9749,14 +9758,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInitializeButtonsRoutineU3Ed__31__cto
 		return;
 	}
 }
-// Method Definition Index: 65170
+// Method Definition Index: 65181
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInitializeButtonsRoutineU3Ed__31_System_IDisposable_Dispose_m59BA73068BAC9E320CE47158C49799767F507AA2 (U3CInitializeButtonsRoutineU3Ed__31_t7D48E651A60C28A088BA3E73D2CB7A1526D8416F* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65171
+// Method Definition Index: 65182
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CInitializeButtonsRoutineU3Ed__31_MoveNext_m59BC77863999603DEC342485B869EEEA0FEB1E45 (U3CInitializeButtonsRoutineU3Ed__31_t7D48E651A60C28A088BA3E73D2CB7A1526D8416F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10182,7 +10191,7 @@ IL_01c9:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65172
+// Method Definition Index: 65183
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CInitializeButtonsRoutineU3Ed__31_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m41AAC6FD09DDBE5476B70D936C231591718C3EE0 (U3CInitializeButtonsRoutineU3Ed__31_t7D48E651A60C28A088BA3E73D2CB7A1526D8416F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10190,7 +10199,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CInitializeButtonsRoutineU3E
 		return L_0;
 	}
 }
-// Method Definition Index: 65173
+// Method Definition Index: 65184
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInitializeButtonsRoutineU3Ed__31_System_Collections_IEnumerator_Reset_mBFF91B0EF11282CA18F6D83A6BE2CF7BE1CFA2A3 (U3CInitializeButtonsRoutineU3Ed__31_t7D48E651A60C28A088BA3E73D2CB7A1526D8416F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10199,7 +10208,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInitializeButtonsRoutineU3Ed__31_Syst
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CInitializeButtonsRoutineU3Ed__31_System_Collections_IEnumerator_Reset_mBFF91B0EF11282CA18F6D83A6BE2CF7BE1CFA2A3_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65174
+// Method Definition Index: 65185
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CInitializeButtonsRoutineU3Ed__31_System_Collections_IEnumerator_get_Current_mF906654EE36646DE0EF3003D35D9F39975E6DEBA (U3CInitializeButtonsRoutineU3Ed__31_t7D48E651A60C28A088BA3E73D2CB7A1526D8416F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10215,7 +10224,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CInitializeButtonsRoutineU3E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65175
+// Method Definition Index: 65186
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_Awake_mDA90C73C243D14FA38474046DDDF8747371AF8C5 (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10254,7 +10263,7 @@ IL_0014:
 		return;
 	}
 }
-// Method Definition Index: 65176
+// Method Definition Index: 65187
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_Start_m3C683B98CA43671E2B858C4BE1E592959A1F8CE2 (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10396,7 +10405,7 @@ IL_00c0:
 		return;
 	}
 }
-// Method Definition Index: 65177
+// Method Definition Index: 65188
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnDestroy_mEB6828B511950DEACA915CBC8C1F149C1950F52C (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10441,7 +10450,7 @@ IL_0033:
 		return;
 	}
 }
-// Method Definition Index: 65178
+// Method Definition Index: 65189
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnConnectedToMaster_m8EE7D8B171EB442BD81AB90893582ED889E73C00 (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10464,7 +10473,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnConnectedToMaster_
 		return;
 	}
 }
-// Method Definition Index: 65179
+// Method Definition Index: 65190
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnJoinedLobby_m568F2801ED3BC944D77F29AB6CE8280A888302F8 (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10482,7 +10491,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnJoinedLobby_m568F2
 		return;
 	}
 }
-// Method Definition Index: 65180
+// Method Definition Index: 65191
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_JoinLobbyRoom_m4332A9AFD6922E57D2A00A03AC80306D0156E587 (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* ___0_config, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10661,7 +10670,7 @@ IL_0078:
 		return;
 	}
 }
-// Method Definition Index: 65181
+// Method Definition Index: 65192
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* LobbyNetworkManager_WaitAndJoinRoom_m2DDFA2810CC732E1137FC1D07DC180DD17B9D071 (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* ___0_config, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10685,7 +10694,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* LobbyNetworkManager_WaitAndJoi
 		return L_2;
 	}
 }
-// Method Definition Index: 65182
+// Method Definition Index: 65193
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnJoinedRoom_mDC77D32742B1F5DFB18EBA0F6C81D4858F9F4C15 (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10748,7 +10757,7 @@ IL_0033:
 		return;
 	}
 }
-// Method Definition Index: 65183
+// Method Definition Index: 65194
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_SyncPlayFabIdToPhoton_m530580F610392DC2E9055B33DC9612301DCF0E3C (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10863,7 +10872,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 65184
+// Method Definition Index: 65195
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_SyncCurrentProfileToPhoton_mCC248A2607EA892B247FEE109B1968A6B6D62C87 (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* ___0_info, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11237,7 +11246,7 @@ IL_01e6:
 		return;
 	}
 }
-// Method Definition Index: 65185
+// Method Definition Index: 65196
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_MarkGameAsFinished_m22F78FD22838B26BB28C7AAB50F436B21D22EE1D (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11253,7 +11262,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_MarkGameAsFinished_m
 	}
 	Hashtable_tD626399B3ADFD501225241D7366103F35472542A* V_0 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:279>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:280>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = PhotonNetwork_get_InRoom_mFBE0C1A516C34FBAD9923933C73E07080FDA199D(NULL);
@@ -11263,46 +11272,46 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_MarkGameAsFinished_m
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:282>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:283>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* L_1;
 		L_1 = PhotonNetwork_get_CurrentRoom_m72D3601299E109EED858E132DE1BD316226BA38D(NULL);
 		NullCheck(L_1);
 		Room_set_IsOpen_m8BA8D4E6233E041B3242BA516B8BADCFF10117FA(L_1, (bool)0, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:283>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:284>
 		Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* L_2;
 		L_2 = PhotonNetwork_get_CurrentRoom_m72D3601299E109EED858E132DE1BD316226BA38D(NULL);
 		NullCheck(L_2);
 		Room_set_IsVisible_m88B1F48E1CDB171A2ECB10D9289596FA45EC74D7(L_2, (bool)0, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:285>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:286>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_3 = (Hashtable_tD626399B3ADFD501225241D7366103F35472542A*)il2cpp_codegen_object_new(Hashtable_tD626399B3ADFD501225241D7366103F35472542A_il2cpp_TypeInfo_var);
 		Hashtable__ctor_m1C4D2BF84624173510D714545C1FBB92ADEFC624(L_3, NULL);
 		V_0 = L_3;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:286>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:287>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_4 = V_0;
 		bool L_5 = ((bool)1);
 		RuntimeObject* L_6 = Box(il2cpp_defaults.boolean_class, &L_5);
 		NullCheck(L_4);
 		Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1(L_4, _stringLiteralC62B61BC27E509D700023566A09D2AE606BE85A7, L_6, Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_RuntimeMethod_var);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:287>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:288>
 		Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* L_7;
 		L_7 = PhotonNetwork_get_CurrentRoom_m72D3601299E109EED858E132DE1BD316226BA38D(NULL);
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_8 = V_0;
 		NullCheck(L_7);
 		bool L_9;
 		L_9 = VirtualFuncInvoker3< bool, Hashtable_tD626399B3ADFD501225241D7366103F35472542A*, Hashtable_tD626399B3ADFD501225241D7366103F35472542A*, WebFlags_tFD3605BF6E5F1A42F1D0D6F0DA9A8B32CF7B27CA* >::Invoke(5, L_7, L_8, (Hashtable_tD626399B3ADFD501225241D7366103F35472542A*)NULL, (WebFlags_tFD3605BF6E5F1A42F1D0D6F0DA9A8B32CF7B27CA*)NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:288>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:289>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral9D10E49530F898E62DCA620FE817CFECC2B8F887, NULL);
 	}
 
 IL_004c:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:290>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:291>
 		return;
 	}
 }
-// Method Definition Index: 65186
+// Method Definition Index: 65197
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* LobbyNetworkManager_CompressAvatarTexture_mEFEE999C094F4E3E24FB70A41A27BB14AEAC001D (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___0_source, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11322,32 +11331,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
 	try
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:300>
-		V_0 = ((int32_t)128);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:301>
+		V_0 = ((int32_t)128);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:302>
 		int32_t L_0 = V_0;
 		int32_t L_1 = V_0;
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_2;
 		L_2 = RenderTexture_GetTemporary_m82379FD4C767A36F0677CAF4E68319EAE16ADF7F(L_0, L_1, NULL);
 		V_1 = L_2;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:302>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:303>
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_3 = ___0_source;
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_4 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(Graphics_t99CD970FFEA58171C70F54DF0C06D315BD452F2C_il2cpp_TypeInfo_var);
 		Graphics_Blit_m8D99E16B74C7D3C8F79F4F142C59DB6B38114504(L_3, L_4, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:303>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:304>
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_5;
 		L_5 = RenderTexture_get_active_mA4434B3E79DEF2C01CAE0A53061598B16443C9E7(NULL);
 		V_2 = L_5;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:304>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:305>
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_6 = V_1;
 		RenderTexture_set_active_m5EE8E2327EF9B306C1425014CC34C41A8384E7AB(L_6, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:306>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:307>
 		int32_t L_7 = V_0;
 		int32_t L_8 = V_0;
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_9 = (Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4*)il2cpp_codegen_object_new(Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4_il2cpp_TypeInfo_var);
 		Texture2D__ctor_m3BA82E87442B7F69E118477069AE11101B9DF796(L_9, L_7, L_8, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:307>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:308>
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_10 = L_9;
 		int32_t L_11 = V_0;
 		int32_t L_12 = V_0;
@@ -11356,25 +11365,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23_inline((&L_13), (0.0f), (0.0f), ((float)L_11), ((float)L_12), NULL);
 		NullCheck(L_10);
 		Texture2D_ReadPixels_m6B45DF7C051BF599C72ED09691F21A6C769EEBD9(L_10, L_13, 0, 0, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:308>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:309>
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_14 = L_10;
 		NullCheck(L_14);
 		Texture2D_Apply_mA014182C9EE0BBF6EEE3B286854F29E50EB972DC(L_14, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:310>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:311>
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_15 = V_2;
 		RenderTexture_set_active_m5EE8E2327EF9B306C1425014CC34C41A8384E7AB(L_15, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:311>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:312>
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_16 = V_1;
 		RenderTexture_ReleaseTemporary_mEEF2C1990196FF06FDD0DC190928AD3A023EBDD2(L_16, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:313>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:314>
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_17 = L_14;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_18;
 		L_18 = ImageConversion_EncodeToJPG_mD0307B5DFF32A3FF39488E97B467F11AFE501F6F(L_17, ((int32_t)60), NULL);
 		V_3 = L_18;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:314>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:315>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_17, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:315>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:316>
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_19 = V_3;
 		V_4 = L_19;
 		goto IL_0085;
@@ -11392,9 +11401,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 CATCH_0068:
 	{
 		Exception_t* L_20 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:317>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:318>
 		V_5 = L_20;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:319>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:320>
 		Exception_t* L_21 = V_5;
 		NullCheck(L_21);
 		String_t* L_22;
@@ -11403,7 +11412,7 @@ CATCH_0068:
 		L_23 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral5C23C27D3B263EAC5A0201A31B2CF45312F4BE90)), L_22, NULL);
 		il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_23, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:320>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:321>
 		V_4 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)NULL;
 		IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
 		goto IL_0085;
@@ -11411,12 +11420,12 @@ CATCH_0068:
 
 IL_0085:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:322>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:323>
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_24 = V_4;
 		return L_24;
 	}
 }
-// Method Definition Index: 65187
+// Method Definition Index: 65198
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_UpdateLocalPlayerScore_m29AE1968B493FAC08ABB7B19AFBDB0AA8F3436C0 (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, int32_t ___0_score, double ___1_time, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11431,7 +11440,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_UpdateLocalPlayerSco
 	}
 	Hashtable_tD626399B3ADFD501225241D7366103F35472542A* V_0 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:330>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:331>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = PhotonNetwork_get_InRoom_mFBE0C1A516C34FBAD9923933C73E07080FDA199D(NULL);
@@ -11441,18 +11450,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_UpdateLocalPlayerSco
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:332>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:333>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_1 = (Hashtable_tD626399B3ADFD501225241D7366103F35472542A*)il2cpp_codegen_object_new(Hashtable_tD626399B3ADFD501225241D7366103F35472542A_il2cpp_TypeInfo_var);
 		Hashtable__ctor_m1C4D2BF84624173510D714545C1FBB92ADEFC624(L_1, NULL);
 		V_0 = L_1;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:333>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:334>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_2 = V_0;
 		int32_t L_3 = ___0_score;
 		int32_t L_4 = L_3;
 		RuntimeObject* L_5 = Box(il2cpp_defaults.int32_class, &L_4);
 		NullCheck(L_2);
 		Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1(L_2, _stringLiteral336B029D04847DC4F36985E1B89D1A0B11D299A3, L_5, Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_RuntimeMethod_var);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:334>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:335>
 		double L_6 = ___1_time;
 		if ((!(((double)L_6) > ((double)(0.0)))))
 		{
@@ -11460,7 +11469,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_UpdateLocalPlayerSco
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:336>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:337>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_7 = V_0;
 		double L_8 = ___1_time;
 		double L_9 = L_8;
@@ -11471,7 +11480,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_UpdateLocalPlayerSco
 
 IL_003b:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:338>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:339>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_11;
 		L_11 = PhotonNetwork_get_LocalPlayer_mEA3335FEF4E4B55C1EFAC8AFA8D5F7E3D7FBE4DC(NULL);
@@ -11483,11 +11492,11 @@ IL_003b:
 
 IL_0049:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:340>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:341>
 		return;
 	}
 }
-// Method Definition Index: 65188
+// Method Definition Index: 65199
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_Update_m798DB3DC04B8D11E2675C46ADD1D17FDBBD2620B (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11497,7 +11506,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_Update_m798DB3DC04B8
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:344>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:345>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = PhotonNetwork_get_InRoom_mFBE0C1A516C34FBAD9923933C73E07080FDA199D(NULL);
@@ -11507,7 +11516,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_Update_m798DB3DC04B8
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:347>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:348>
 		bool L_1 = __this->___hasSyncedProfile;
 		if (L_1)
 		{
@@ -11515,13 +11524,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_Update_m798DB3DC04B8
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:349>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:350>
 		LobbyNetworkManager_SyncCurrentProfileToPhoton_mCC248A2607EA892B247FEE109B1968A6B6D62C87(__this, (PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A*)NULL, NULL);
 	}
 
 IL_0016:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:352>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:353>
 		bool L_2 = __this->___isStarting;
 		if (L_2)
 		{
@@ -11529,25 +11538,25 @@ IL_0016:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:354>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:355>
 		LobbyNetworkManager_UpdateWaitingStatus_m256AA80308ECE72095FF47E834EA34579C7CBD46(__this, NULL);
 	}
 
 IL_0024:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:357>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:358>
 		return;
 	}
 }
-// Method Definition Index: 65189
+// Method Definition Index: 65200
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_CheckMatchmakingTimer_m7A3CCDDB5F4A9B0828D630D499817E47D4FEFF75 (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:360>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:361>
 		return;
 	}
 }
-// Method Definition Index: 65190
+// Method Definition Index: 65201
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnPlayerEnteredRoom_m54764500799EA8CCC9CB4ACCE46CB23FE4F9F79E (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_newPlayer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11561,7 +11570,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnPlayerEnteredRoom_
 	String_t* V_0 = NULL;
 	String_t* G_B3_0 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:364>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:365>
 		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_0 = ___0_newPlayer;
 		NullCheck(L_0);
 		String_t* L_1;
@@ -11590,7 +11599,7 @@ IL_0014:
 IL_001a:
 	{
 		V_0 = G_B3_0;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:365>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:366>
 		String_t* L_5 = V_0;
 		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_6 = ___0_newPlayer;
 		NullCheck(L_6);
@@ -11602,15 +11611,15 @@ IL_001a:
 		L_10 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral45BFB8F783EC52BBF345EA866A5BBFBCCAA3A390, L_5, L_9, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_10, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:366>
-		LobbyNetworkManager_UpdateWaitingStatus_m256AA80308ECE72095FF47E834EA34579C7CBD46(__this, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:367>
-		LobbyNetworkManager_CheckIfRoomFull_mA21DE997DE48EDDD3189475D25A49862720039EB(__this, NULL);
+		LobbyNetworkManager_UpdateWaitingStatus_m256AA80308ECE72095FF47E834EA34579C7CBD46(__this, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:368>
+		LobbyNetworkManager_CheckIfRoomFull_mA21DE997DE48EDDD3189475D25A49862720039EB(__this, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:369>
 		return;
 	}
 }
-// Method Definition Index: 65191
+// Method Definition Index: 65202
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnPlayerLeftRoom_m19BE33D22DD17240C3D6D1D44E1A085720539A27 (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_otherPlayer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11621,7 +11630,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnPlayerLeftRoom_m19
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:372>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:373>
 		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_0 = ___0_otherPlayer;
 		NullCheck(L_0);
 		String_t* L_1;
@@ -11630,13 +11639,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnPlayerLeftRoom_m19
 		L_2 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral3AD8FD6410F8FED9742CB909541DBE1C56893DFF, L_1, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_2, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:373>
-		LobbyNetworkManager_UpdateWaitingStatus_m256AA80308ECE72095FF47E834EA34579C7CBD46(__this, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:374>
+		LobbyNetworkManager_UpdateWaitingStatus_m256AA80308ECE72095FF47E834EA34579C7CBD46(__this, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:375>
 		return;
 	}
 }
-// Method Definition Index: 65192
+// Method Definition Index: 65203
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnRoomPropertiesUpdate_m9517434CB0114CE1ADD10C69077579E6E82B6C43 (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, Hashtable_tD626399B3ADFD501225241D7366103F35472542A* ___0_propertiesThatChanged, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11657,7 +11666,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnRoomPropertiesUpda
 	RuntimeObject* V_2 = NULL;
 	GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* V_3 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:378>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:379>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_0 = ___0_propertiesThatChanged;
 		NullCheck(L_0);
 		bool L_1;
@@ -11668,13 +11677,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnRoomPropertiesUpda
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:380>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:381>
 		LobbyNetworkManager_UpdateWaitingStatus_m256AA80308ECE72095FF47E834EA34579C7CBD46(__this, NULL);
 	}
 
 IL_0013:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:383>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:384>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_2 = ___0_propertiesThatChanged;
 		NullCheck(L_2);
 		bool L_3;
@@ -11685,24 +11694,24 @@ IL_0013:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:385>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:386>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_4 = ___0_propertiesThatChanged;
 		NullCheck(L_4);
 		RuntimeObject* L_5;
 		L_5 = Hashtable_get_Item_m33995CAF3384BA31ADA32E8B6D3AA69946190CA9(L_4, _stringLiteralC62B61BC27E509D700023566A09D2AE606BE85A7, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:386>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:387>
 		if (!((*(bool*)UnBox(L_5, il2cpp_defaults.boolean_class))))
 		{
 			goto IL_0047;
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:388>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:389>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_6;
 		L_6 = Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40(Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40_RuntimeMethod_var);
 		V_0 = L_6;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:389>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:390>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_7 = V_0;
 		bool L_8;
 		L_8 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_7, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -11712,7 +11721,7 @@ IL_0013:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:391>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:392>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_9 = V_0;
 		NullCheck(L_9);
 		GameManager_OnGameFinishedByOtherPlayer_mB34B6AD04D4963159EF60284C71E479EDB341F46(L_9, NULL);
@@ -11720,7 +11729,7 @@ IL_0013:
 
 IL_0047:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:397>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:398>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_10 = ___0_propertiesThatChanged;
 		NullCheck(L_10);
 		bool L_11;
@@ -11731,9 +11740,9 @@ IL_0047:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:399>
-		V_1 = (30.0f);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:400>
+		V_1 = (30.0f);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:401>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_12 = ___0_propertiesThatChanged;
 		NullCheck(L_12);
 		bool L_13;
@@ -11744,19 +11753,19 @@ IL_0047:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:402>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:403>
 		RuntimeObject* L_14 = V_2;
 		V_1 = ((*(float*)UnBox(L_14, il2cpp_defaults.single_class)));
 	}
 
 IL_0070:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:405>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:406>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_15;
 		L_15 = Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40(Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40_RuntimeMethod_var);
 		V_3 = L_15;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:406>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:407>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_16 = V_3;
 		bool L_17;
 		L_17 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_16, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -11766,7 +11775,7 @@ IL_0070:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:408>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:409>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_18 = V_3;
 		float L_19 = V_1;
 		NullCheck(L_18);
@@ -11775,11 +11784,11 @@ IL_0070:
 
 IL_0086:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:411>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:412>
 		return;
 	}
 }
-// Method Definition Index: 65193
+// Method Definition Index: 65204
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnPlayerPropertiesUpdate_mFD44A94758FFE4096DD7C17A9C0767DE53F3AE28 (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_targetPlayer, Hashtable_tD626399B3ADFD501225241D7366103F35472542A* ___1_changedProps, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11795,7 +11804,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnPlayerPropertiesUp
 	}
 	String_t* V_0 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:419>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:420>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_0 = ___1_changedProps;
 		NullCheck(L_0);
 		bool L_1;
@@ -11806,13 +11815,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnPlayerPropertiesUp
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:421>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:422>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_2 = ___1_changedProps;
 		NullCheck(L_2);
 		RuntimeObject* L_3;
 		L_3 = Hashtable_get_Item_m33995CAF3384BA31ADA32E8B6D3AA69946190CA9(L_2, _stringLiteral8D593402CCA6ACC55AF9D86F83E9BF79C5A9C557, NULL);
 		V_0 = ((String_t*)CastclassSealed((RuntimeObject*)L_3, il2cpp_defaults.string_class));
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:422>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:423>
 		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_4 = ___0_targetPlayer;
 		NullCheck(L_4);
 		int32_t L_5;
@@ -11824,13 +11833,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnPlayerPropertiesUp
 		L_9 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral3C6B6E660210BBF1D27F24F1CCCEFD5A0DCCA539, L_7, L_8, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_9, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:423>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:424>
 		LobbyNetworkManager_UpdateWaitingStatus_m256AA80308ECE72095FF47E834EA34579C7CBD46(__this, NULL);
 	}
 
 IL_003f:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:427>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:428>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_10 = ___1_changedProps;
 		NullCheck(L_10);
 		bool L_11;
@@ -11841,7 +11850,7 @@ IL_003f:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:429>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:430>
 		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_12 = ___0_targetPlayer;
 		NullCheck(L_12);
 		int32_t L_13;
@@ -11856,17 +11865,17 @@ IL_003f:
 		L_18 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral1AB94B5F0E9B858F74E7D7B51D807920F447D67E, L_15, L_17, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_18, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:430>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:431>
 		LobbyNetworkManager_UpdateWaitingStatus_m256AA80308ECE72095FF47E834EA34579C7CBD46(__this, NULL);
 	}
 
 IL_0072:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:432>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:433>
 		return;
 	}
 }
-// Method Definition Index: 65194
+// Method Definition Index: 65205
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_UpdateWaitingStatus_m256AA80308ECE72095FF47E834EA34579C7CBD46 (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11880,7 +11889,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_UpdateWaitingStatus_
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:436>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:437>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = PhotonNetwork_get_InRoom_mFBE0C1A516C34FBAD9923933C73E07080FDA199D(NULL);
@@ -11900,7 +11909,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_UpdateWaitingStatus_
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:438>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:439>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* L_3;
 		L_3 = PhotonNetwork_get_CurrentRoom_m72D3601299E109EED858E132DE1BD316226BA38D(NULL);
@@ -11908,14 +11917,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_UpdateWaitingStatus_
 		int32_t L_4;
 		L_4 = Room_get_PlayerCount_m663432EB660EDFF2D7428BD6B6AE7142505BFE1F(L_3, NULL);
 		V_0 = L_4;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:439>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:440>
 		Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* L_5;
 		L_5 = PhotonNetwork_get_CurrentRoom_m72D3601299E109EED858E132DE1BD316226BA38D(NULL);
 		NullCheck(L_5);
 		int32_t L_6;
 		L_6 = Room_get_MaxPlayers_mF412674376F33CCDD74FF300F66A2EC644A84920_inline(L_5, NULL);
 		V_1 = L_6;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:442>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:443>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_7 = __this->___statusText;
 		int32_t L_8 = V_0;
 		int32_t L_9 = L_8;
@@ -11931,11 +11940,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_UpdateWaitingStatus_
 
 IL_004c:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:444>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:445>
 		return;
 	}
 }
-// Method Definition Index: 65195
+// Method Definition Index: 65206
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_CheckIfRoomFull_mA21DE997DE48EDDD3189475D25A49862720039EB (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11947,7 +11956,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_CheckIfRoomFull_mA21
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:448>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:449>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = PhotonNetwork_get_InRoom_mFBE0C1A516C34FBAD9923933C73E07080FDA199D(NULL);
@@ -11981,20 +11990,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_CheckIfRoomFull_mA21
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:450>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:451>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral535D17299EEAC3DDB09E1708E42E864E044C4F9B, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:451>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:452>
 		LobbyNetworkManager_StartMultiplayerGame_m69490BB8953A4094CB1B9A9C1670259EDEF7050D(__this, NULL);
 	}
 
 IL_0035:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:453>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:454>
 		return;
 	}
 }
-// Method Definition Index: 65196
+// Method Definition Index: 65207
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_StartMultiplayerGame_m69490BB8953A4094CB1B9A9C1670259EDEF7050D (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12007,16 +12016,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_StartMultiplayerGame
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0FF3D29BC22486287DF4DAC0B88E20394F3B64F5);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral701A75697C80448DBCDE9E837A07E798949C1A24);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral7BCB86985B1BD3E8B93BFC0ED7F71FD21A09F01D);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9BE331ABCCEBCAE32BA4654B5C2086B7B399B8BC);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9FA948E8D8A264AC17F7EAA37611359A2CE5F5F9);
 		s_Il2CppMethodInitialized = true;
 	}
 	LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* V_0 = NULL;
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
 	Hashtable_tD626399B3ADFD501225241D7366103F35472542A* V_3 = NULL;
+	double V_4 = 0.0;
+	double V_5 = 0.0;
+	double V_6 = 0.0;
+	double V_7 = 0.0;
+	double G_B10_0 = 0.0;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:457>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:458>
 		bool L_0 = __this->___isStarting;
 		if (!L_0)
 		{
@@ -12024,15 +12039,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_StartMultiplayerGame
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:457>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:458>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:458>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:459>
 		__this->___isStarting = (bool)1;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:460>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:461>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___waitingPanel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
@@ -12043,7 +12058,7 @@ IL_0009:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:460>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:461>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___waitingPanel;
 		NullCheck(L_3);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_3, (bool)0, NULL);
@@ -12051,29 +12066,29 @@ IL_0009:
 
 IL_002a:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:462>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:463>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* L_4;
 		L_4 = Object_FindObjectOfType_TisLobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797_m6CDAE89A2E0ABF5A15BDFB20F89DC3486C998BA7(Object_FindObjectOfType_TisLobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797_m6CDAE89A2E0ABF5A15BDFB20F89DC3486C998BA7_RuntimeMethod_var);
 		V_0 = L_4;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:463>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:464>
 		LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* L_5 = V_0;
 		bool L_6;
 		L_6 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_5, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_6)
 		{
-			goto IL_00e9;
+			goto IL_013c;
 		}
 	}
 	{
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_7 = __this->___currentSelectedConfig;
 		if (!L_7)
 		{
-			goto IL_00e9;
+			goto IL_013c;
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:466>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:467>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* L_8;
 		L_8 = PhotonNetwork_get_CurrentRoom_m72D3601299E109EED858E132DE1BD316226BA38D(NULL);
@@ -12081,9 +12096,9 @@ IL_002a:
 		int32_t L_9;
 		L_9 = Room_get_PlayerCount_m663432EB660EDFF2D7428BD6B6AE7142505BFE1F(L_8, NULL);
 		V_1 = L_9;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:467>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:468>
 		V_2 = 0;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:469>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:470>
 		int32_t L_10 = V_1;
 		int32_t L_11 = L_10;
 		RuntimeObject* L_12 = Box(il2cpp_defaults.int32_class, &L_11);
@@ -12091,87 +12106,130 @@ IL_002a:
 		L_13 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral0FF3D29BC22486287DF4DAC0B88E20394F3B64F5, L_12, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_13, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:473>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:474>
 		bool L_14;
 		L_14 = PhotonNetwork_get_IsMasterClient_mD04046028C484F06D77A1C36C64FFAC285C2DF9C(NULL);
 		if (!L_14)
 		{
-			goto IL_00b7;
+			goto IL_010a;
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:475>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:476>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_15 = (Hashtable_tD626399B3ADFD501225241D7366103F35472542A*)il2cpp_codegen_object_new(Hashtable_tD626399B3ADFD501225241D7366103F35472542A_il2cpp_TypeInfo_var);
 		Hashtable__ctor_m1C4D2BF84624173510D714545C1FBB92ADEFC624(L_15, NULL);
 		V_3 = L_15;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:476>
-		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_16 = V_3;
-		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
-		double L_17;
-		L_17 = PhotonNetwork_get_Time_m65093824EBCB03FA8E31A8E95344F2F56D62EE79(NULL);
-		double L_18 = L_17;
-		RuntimeObject* L_19 = Box(il2cpp_defaults.double_class, &L_18);
-		NullCheck(L_16);
-		Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1(L_16, _stringLiteral9BE331ABCCEBCAE32BA4654B5C2086B7B399B8BC, L_19, Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_RuntimeMethod_var);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:477>
-		Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* L_20;
-		L_20 = PhotonNetwork_get_CurrentRoom_m72D3601299E109EED858E132DE1BD316226BA38D(NULL);
-		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_21 = V_3;
-		NullCheck(L_20);
-		bool L_22;
-		L_22 = VirtualFuncInvoker3< bool, Hashtable_tD626399B3ADFD501225241D7366103F35472542A*, Hashtable_tD626399B3ADFD501225241D7366103F35472542A*, WebFlags_tFD3605BF6E5F1A42F1D0D6F0DA9A8B32CF7B27CA* >::Invoke(5, L_20, L_21, (Hashtable_tD626399B3ADFD501225241D7366103F35472542A*)NULL, (WebFlags_tFD3605BF6E5F1A42F1D0D6F0DA9A8B32CF7B27CA*)NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:478>
-		double L_23;
-		L_23 = PhotonNetwork_get_Time_m65093824EBCB03FA8E31A8E95344F2F56D62EE79(NULL);
-		double L_24 = L_23;
-		RuntimeObject* L_25 = Box(il2cpp_defaults.double_class, &L_24);
-		String_t* L_26;
-		L_26 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral701A75697C80448DBCDE9E837A07E798949C1A24, _stringLiteral9BE331ABCCEBCAE32BA4654B5C2086B7B399B8BC, L_25, NULL);
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_26, NULL);
-	}
-
-IL_00b7:
-	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:482>
-		LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* L_27 = V_0;
-		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_28 = __this->___currentSelectedConfig;
-		NullCheck(L_28);
-		int32_t L_29 = L_28->___lobbyIndex;
-		int32_t L_30 = V_2;
-		NullCheck(L_27);
-		LobbyManager_StartGameFromNetwork_mCB781DBFA88CA18F529A82E0A593F27B07A78383(L_27, L_29, L_30, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:486>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
-		bool L_31;
-		L_31 = PhotonNetwork_get_IsMasterClient_mD04046028C484F06D77A1C36C64FFAC285C2DF9C(NULL);
-		if (!L_31)
+		double L_16;
+		L_16 = PhotonNetwork_get_Time_m65093824EBCB03FA8E31A8E95344F2F56D62EE79(NULL);
+		V_4 = L_16;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:478>
+		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_17 = V_3;
+		double L_18 = V_4;
+		double L_19 = L_18;
+		RuntimeObject* L_20 = Box(il2cpp_defaults.double_class, &L_19);
+		NullCheck(L_17);
+		Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1(L_17, _stringLiteral9BE331ABCCEBCAE32BA4654B5C2086B7B399B8BC, L_20, Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_RuntimeMethod_var);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:482>
+		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_21 = __this->___currentSelectedConfig;
+		NullCheck(L_21);
+		float L_22 = L_21->___gameTimer;
+		V_5 = ((double)L_22);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:483>
+		double L_23 = V_5;
+		if ((((double)L_23) <= ((double)(15.100000381469727))))
 		{
-			goto IL_00dc;
+			goto IL_00b8;
 		}
 	}
 	{
+		G_B10_0 = (3.0);
+		goto IL_00c1;
+	}
+
+IL_00b8:
+	{
+		G_B10_0 = (1.0);
+	}
+
+IL_00c1:
+	{
+		V_6 = G_B10_0;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:484>
+		double L_24 = V_4;
+		double L_25 = V_6;
+		double L_26 = V_5;
+		V_7 = ((double)il2cpp_codegen_add(((double)il2cpp_codegen_add(L_24, L_25)), L_26));
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:485>
+		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_27 = V_3;
+		double L_28 = V_7;
+		double L_29 = L_28;
+		RuntimeObject* L_30 = Box(il2cpp_defaults.double_class, &L_29);
+		NullCheck(L_27);
+		Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1(L_27, _stringLiteral9FA948E8D8A264AC17F7EAA37611359A2CE5F5F9, L_30, Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_RuntimeMethod_var);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:487>
+		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
+		Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* L_31;
+		L_31 = PhotonNetwork_get_CurrentRoom_m72D3601299E109EED858E132DE1BD316226BA38D(NULL);
+		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_32 = V_3;
+		NullCheck(L_31);
+		bool L_33;
+		L_33 = VirtualFuncInvoker3< bool, Hashtable_tD626399B3ADFD501225241D7366103F35472542A*, Hashtable_tD626399B3ADFD501225241D7366103F35472542A*, WebFlags_tFD3605BF6E5F1A42F1D0D6F0DA9A8B32CF7B27CA* >::Invoke(5, L_31, L_32, (Hashtable_tD626399B3ADFD501225241D7366103F35472542A*)NULL, (WebFlags_tFD3605BF6E5F1A42F1D0D6F0DA9A8B32CF7B27CA*)NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:488>
-		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_32 = __this->___currentSelectedConfig;
-		LobbyNetworkManager_SyncLobbyPrizesToPlayFabMatch_mF562E7344342659BA4386BC50287326D3F82196C(__this, L_32, NULL);
+		double L_34 = V_4;
+		double L_35 = L_34;
+		RuntimeObject* L_36 = Box(il2cpp_defaults.double_class, &L_35);
+		double L_37 = V_7;
+		double L_38 = L_37;
+		RuntimeObject* L_39 = Box(il2cpp_defaults.double_class, &L_38);
+		String_t* L_40;
+		L_40 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral7BCB86985B1BD3E8B93BFC0ED7F71FD21A09F01D, L_36, L_39, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_40, NULL);
 	}
 
-IL_00dc:
+IL_010a:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:494>
-		RuntimeObject* L_33;
-		L_33 = LobbyNetworkManager_WriteParticipantsDelayed_m2D0ACD954A0FAB2A8886E4F59E02605A17B5FD2D(__this, NULL);
-		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_34;
-		L_34 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_33, NULL);
-	}
-
-IL_00e9:
-	{
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:492>
+		LobbyManager_t3D76B2B2C2FBE659E1371C92C3C1B50AF2908797* L_41 = V_0;
+		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_42 = __this->___currentSelectedConfig;
+		NullCheck(L_42);
+		int32_t L_43 = L_42->___lobbyIndex;
+		int32_t L_44 = V_2;
+		NullCheck(L_41);
+		LobbyManager_StartGameFromNetwork_mCB781DBFA88CA18F529A82E0A593F27B07A78383(L_41, L_43, L_44, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:496>
+		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
+		bool L_45;
+		L_45 = PhotonNetwork_get_IsMasterClient_mD04046028C484F06D77A1C36C64FFAC285C2DF9C(NULL);
+		if (!L_45)
+		{
+			goto IL_012f;
+		}
+	}
+	{
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:498>
+		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_46 = __this->___currentSelectedConfig;
+		LobbyNetworkManager_SyncLobbyPrizesToPlayFabMatch_mF562E7344342659BA4386BC50287326D3F82196C(__this, L_46, NULL);
+	}
+
+IL_012f:
+	{
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:504>
+		RuntimeObject* L_47;
+		L_47 = LobbyNetworkManager_WriteParticipantsDelayed_m2D0ACD954A0FAB2A8886E4F59E02605A17B5FD2D(__this, NULL);
+		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_48;
+		L_48 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_47, NULL);
+	}
+
+IL_013c:
+	{
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:506>
 		return;
 	}
 }
-// Method Definition Index: 65197
+// Method Definition Index: 65208
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_SyncLobbyPrizesToPlayFabMatch_mF562E7344342659BA4386BC50287326D3F82196C (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* ___0_config, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12187,9 +12245,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_SyncLobbyPrizesToPla
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PlayFabClientAPI_t5D87B6818CF460028FBCB816062118DAA41EA597_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_U3CSyncLobbyPrizesToPlayFabMatchU3Eb__41_1_mB591D76BDEF64608C2C3189B87C1155596AAADA5_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass41_0_U3CSyncLobbyPrizesToPlayFabMatchU3Eb__0_mB30B2A6985B4B369CBD7C1DE5B539AF993BFA220_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass41_0_tFA287D8D51B6ED2E83B51A8D45268D6C308FB760_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_U3CSyncLobbyPrizesToPlayFabMatchU3Eb__42_1_m8088063AA161481696767A03636B1BD9D7939259_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass42_0_U3CSyncLobbyPrizesToPlayFabMatchU3Eb__0_m94E5681B24805CA2CAE84507A19AB021413EF2AB_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass42_0_t6CD1A4F55C4342D77E2A1439D9DBF84D16CB7BE8_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UpdateUserDataRequest_t00F2203E748C9D0B33E3CC673EAB649EB2B5662A_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0FE86EC62649FC6ED7780F4C3E0D67C69D03C1ED);
@@ -12203,7 +12261,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_SyncLobbyPrizesToPla
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralF829C1EF3C068D2CA0F6A48FC35A767F0DAA1A30);
 		s_Il2CppMethodInitialized = true;
 	}
-	U3CU3Ec__DisplayClass41_0_tFA287D8D51B6ED2E83B51A8D45268D6C308FB760* V_0 = NULL;
+	U3CU3Ec__DisplayClass42_0_t6CD1A4F55C4342D77E2A1439D9DBF84D16CB7BE8* V_0 = NULL;
 	Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* V_1 = NULL;
 	Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* G_B5_0 = NULL;
 	Action_1_t139E7046AE454B29FEAF744BC82303A1A70C9680* G_B5_1 = NULL;
@@ -12212,16 +12270,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_SyncLobbyPrizesToPla
 	Action_1_t139E7046AE454B29FEAF744BC82303A1A70C9680* G_B4_1 = NULL;
 	UpdateUserDataRequest_t00F2203E748C9D0B33E3CC673EAB649EB2B5662A* G_B4_2 = NULL;
 	{
-		U3CU3Ec__DisplayClass41_0_tFA287D8D51B6ED2E83B51A8D45268D6C308FB760* L_0 = (U3CU3Ec__DisplayClass41_0_tFA287D8D51B6ED2E83B51A8D45268D6C308FB760*)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass41_0_tFA287D8D51B6ED2E83B51A8D45268D6C308FB760_il2cpp_TypeInfo_var);
-		U3CU3Ec__DisplayClass41_0__ctor_m9242FB03B51B6293B811DBBFDA67C194EB763782(L_0, NULL);
+		U3CU3Ec__DisplayClass42_0_t6CD1A4F55C4342D77E2A1439D9DBF84D16CB7BE8* L_0 = (U3CU3Ec__DisplayClass42_0_t6CD1A4F55C4342D77E2A1439D9DBF84D16CB7BE8*)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass42_0_t6CD1A4F55C4342D77E2A1439D9DBF84D16CB7BE8_il2cpp_TypeInfo_var);
+		U3CU3Ec__DisplayClass42_0__ctor_m6A9768506BCC03F76AD198736C02CA3D06863A36(L_0, NULL);
 		V_0 = L_0;
-		U3CU3Ec__DisplayClass41_0_tFA287D8D51B6ED2E83B51A8D45268D6C308FB760* L_1 = V_0;
+		U3CU3Ec__DisplayClass42_0_t6CD1A4F55C4342D77E2A1439D9DBF84D16CB7BE8* L_1 = V_0;
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_2 = ___0_config;
 		NullCheck(L_1);
 		L_1->___config = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___config), (void*)L_2);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:505>
-		U3CU3Ec__DisplayClass41_0_tFA287D8D51B6ED2E83B51A8D45268D6C308FB760* L_3 = V_0;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:515>
+		U3CU3Ec__DisplayClass42_0_t6CD1A4F55C4342D77E2A1439D9DBF84D16CB7BE8* L_3 = V_0;
 		NullCheck(L_3);
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_4 = L_3->___config;
 		if (!L_4)
@@ -12243,23 +12301,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_SyncLobbyPrizesToPla
 
 IL_0022:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:505>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:515>
 		return;
 	}
 
 IL_0023:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:509>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:510>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:511>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:512>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:513>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:514>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:515>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:516>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:517>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:518>
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:519>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:520>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:521>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:522>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:523>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:524>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:525>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:526>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:527>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:528>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:529>
 		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_7 = (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*)il2cpp_codegen_object_new(Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_m768E076F1E804CE4959F4E71D3E6A9ADE2F55052(L_7, Dictionary_2__ctor_m768E076F1E804CE4959F4E71D3E6A9ADE2F55052_RuntimeMethod_var);
 		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_8 = L_7;
@@ -12272,7 +12330,7 @@ IL_0023:
 		NullCheck(L_8);
 		Dictionary_2_Add_mC78C20D5901C87AAC38F37C906FAB6946BDE5F13(L_8, _stringLiteralD400B99E51D6561211C1FD1C50D80C384273763D, L_10, Dictionary_2_Add_mC78C20D5901C87AAC38F37C906FAB6946BDE5F13_RuntimeMethod_var);
 		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_11 = L_8;
-		U3CU3Ec__DisplayClass41_0_tFA287D8D51B6ED2E83B51A8D45268D6C308FB760* L_12 = V_0;
+		U3CU3Ec__DisplayClass42_0_t6CD1A4F55C4342D77E2A1439D9DBF84D16CB7BE8* L_12 = V_0;
 		NullCheck(L_12);
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_13 = L_12->___config;
 		NullCheck(L_13);
@@ -12280,7 +12338,7 @@ IL_0023:
 		NullCheck(L_11);
 		Dictionary_2_Add_mC78C20D5901C87AAC38F37C906FAB6946BDE5F13(L_11, _stringLiteral284C152403DC5CC767354F4786747A67A217EE58, L_14, Dictionary_2_Add_mC78C20D5901C87AAC38F37C906FAB6946BDE5F13_RuntimeMethod_var);
 		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_15 = L_11;
-		U3CU3Ec__DisplayClass41_0_tFA287D8D51B6ED2E83B51A8D45268D6C308FB760* L_16 = V_0;
+		U3CU3Ec__DisplayClass42_0_t6CD1A4F55C4342D77E2A1439D9DBF84D16CB7BE8* L_16 = V_0;
 		NullCheck(L_16);
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_17 = L_16->___config;
 		NullCheck(L_17);
@@ -12290,7 +12348,7 @@ IL_0023:
 		NullCheck(L_15);
 		Dictionary_2_Add_mC78C20D5901C87AAC38F37C906FAB6946BDE5F13(L_15, _stringLiteralDB845D58FFD57DF1AE8637446327B201A7CF9AD0, L_19, Dictionary_2_Add_mC78C20D5901C87AAC38F37C906FAB6946BDE5F13_RuntimeMethod_var);
 		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_20 = L_15;
-		U3CU3Ec__DisplayClass41_0_tFA287D8D51B6ED2E83B51A8D45268D6C308FB760* L_21 = V_0;
+		U3CU3Ec__DisplayClass42_0_t6CD1A4F55C4342D77E2A1439D9DBF84D16CB7BE8* L_21 = V_0;
 		NullCheck(L_21);
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_22 = L_21->___config;
 		NullCheck(L_22);
@@ -12300,7 +12358,7 @@ IL_0023:
 		NullCheck(L_20);
 		Dictionary_2_Add_mC78C20D5901C87AAC38F37C906FAB6946BDE5F13(L_20, _stringLiteralB46674AE6ECEE3C49FE8B71A8613147B2F551DF7, L_24, Dictionary_2_Add_mC78C20D5901C87AAC38F37C906FAB6946BDE5F13_RuntimeMethod_var);
 		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_25 = L_20;
-		U3CU3Ec__DisplayClass41_0_tFA287D8D51B6ED2E83B51A8D45268D6C308FB760* L_26 = V_0;
+		U3CU3Ec__DisplayClass42_0_t6CD1A4F55C4342D77E2A1439D9DBF84D16CB7BE8* L_26 = V_0;
 		NullCheck(L_26);
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_27 = L_26->___config;
 		NullCheck(L_27);
@@ -12310,7 +12368,7 @@ IL_0023:
 		NullCheck(L_25);
 		Dictionary_2_Add_mC78C20D5901C87AAC38F37C906FAB6946BDE5F13(L_25, _stringLiteralA564B71090AC427ADBBBF940E1967F5FDC55F327, L_29, Dictionary_2_Add_mC78C20D5901C87AAC38F37C906FAB6946BDE5F13_RuntimeMethod_var);
 		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_30 = L_25;
-		U3CU3Ec__DisplayClass41_0_tFA287D8D51B6ED2E83B51A8D45268D6C308FB760* L_31 = V_0;
+		U3CU3Ec__DisplayClass42_0_t6CD1A4F55C4342D77E2A1439D9DBF84D16CB7BE8* L_31 = V_0;
 		NullCheck(L_31);
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_32 = L_31->___config;
 		NullCheck(L_32);
@@ -12320,7 +12378,7 @@ IL_0023:
 		NullCheck(L_30);
 		Dictionary_2_Add_mC78C20D5901C87AAC38F37C906FAB6946BDE5F13(L_30, _stringLiteral0FE86EC62649FC6ED7780F4C3E0D67C69D03C1ED, L_34, Dictionary_2_Add_mC78C20D5901C87AAC38F37C906FAB6946BDE5F13_RuntimeMethod_var);
 		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_35 = L_30;
-		U3CU3Ec__DisplayClass41_0_tFA287D8D51B6ED2E83B51A8D45268D6C308FB760* L_36 = V_0;
+		U3CU3Ec__DisplayClass42_0_t6CD1A4F55C4342D77E2A1439D9DBF84D16CB7BE8* L_36 = V_0;
 		NullCheck(L_36);
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_37 = L_36->___config;
 		NullCheck(L_37);
@@ -12330,7 +12388,7 @@ IL_0023:
 		NullCheck(L_35);
 		Dictionary_2_Add_mC78C20D5901C87AAC38F37C906FAB6946BDE5F13(L_35, _stringLiteralF829C1EF3C068D2CA0F6A48FC35A767F0DAA1A30, L_39, Dictionary_2_Add_mC78C20D5901C87AAC38F37C906FAB6946BDE5F13_RuntimeMethod_var);
 		Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* L_40 = L_35;
-		U3CU3Ec__DisplayClass41_0_tFA287D8D51B6ED2E83B51A8D45268D6C308FB760* L_41 = V_0;
+		U3CU3Ec__DisplayClass42_0_t6CD1A4F55C4342D77E2A1439D9DBF84D16CB7BE8* L_41 = V_0;
 		NullCheck(L_41);
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_42 = L_41->___config;
 		NullCheck(L_42);
@@ -12340,14 +12398,14 @@ IL_0023:
 		NullCheck(L_40);
 		Dictionary_2_Add_mC78C20D5901C87AAC38F37C906FAB6946BDE5F13(L_40, _stringLiteralF28DE46020AB9D4B51BA0F7EB2C26FFAA9539F69, L_44, Dictionary_2_Add_mC78C20D5901C87AAC38F37C906FAB6946BDE5F13_RuntimeMethod_var);
 		V_1 = L_40;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:523>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:524>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:525>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:526>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:527>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:528>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:529>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:530>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:533>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:534>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:535>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:536>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:537>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:538>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:539>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:540>
 		UpdateUserDataRequest_t00F2203E748C9D0B33E3CC673EAB649EB2B5662A* L_45 = (UpdateUserDataRequest_t00F2203E748C9D0B33E3CC673EAB649EB2B5662A*)il2cpp_codegen_object_new(UpdateUserDataRequest_t00F2203E748C9D0B33E3CC673EAB649EB2B5662A_il2cpp_TypeInfo_var);
 		UpdateUserDataRequest__ctor_m085241A7619C2B3BB47F59688FFB0C9E9863D5FA(L_45, NULL);
 		UpdateUserDataRequest_t00F2203E748C9D0B33E3CC673EAB649EB2B5662A* L_46 = L_45;
@@ -12369,11 +12427,11 @@ IL_0023:
 		Nullable_1__ctor_m24F290FF8284BAA0639212CCEAC6622B6D8EB0BF((&L_52), 1, Nullable_1__ctor_m24F290FF8284BAA0639212CCEAC6622B6D8EB0BF_RuntimeMethod_var);
 		NullCheck(L_51);
 		L_51->___Permission = L_52;
-		U3CU3Ec__DisplayClass41_0_tFA287D8D51B6ED2E83B51A8D45268D6C308FB760* L_53 = V_0;
+		U3CU3Ec__DisplayClass42_0_t6CD1A4F55C4342D77E2A1439D9DBF84D16CB7BE8* L_53 = V_0;
 		Action_1_t139E7046AE454B29FEAF744BC82303A1A70C9680* L_54 = (Action_1_t139E7046AE454B29FEAF744BC82303A1A70C9680*)il2cpp_codegen_object_new(Action_1_t139E7046AE454B29FEAF744BC82303A1A70C9680_il2cpp_TypeInfo_var);
-		Action_1__ctor_m59B4FAFC83B06CA46810B130E57C2B02275E9B92(L_54, L_53, (intptr_t)((void*)U3CU3Ec__DisplayClass41_0_U3CSyncLobbyPrizesToPlayFabMatchU3Eb__0_mB30B2A6985B4B369CBD7C1DE5B539AF993BFA220_RuntimeMethod_var), NULL);
+		Action_1__ctor_m59B4FAFC83B06CA46810B130E57C2B02275E9B92(L_54, L_53, (intptr_t)((void*)U3CU3Ec__DisplayClass42_0_U3CSyncLobbyPrizesToPlayFabMatchU3Eb__0_m94E5681B24805CA2CAE84507A19AB021413EF2AB_RuntimeMethod_var), NULL);
 		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797_il2cpp_TypeInfo_var);
-		Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* L_55 = ((U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797_il2cpp_TypeInfo_var))->___U3CU3E9__41_1;
+		Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* L_55 = ((U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797_il2cpp_TypeInfo_var))->___U3CU3E9__42_1;
 		Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* L_56 = L_55;
 		if (L_56)
 		{
@@ -12390,10 +12448,10 @@ IL_0023:
 		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797_il2cpp_TypeInfo_var);
 		U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797* L_57 = ((U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797_il2cpp_TypeInfo_var))->___U3CU3E9;
 		Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* L_58 = (Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93*)il2cpp_codegen_object_new(Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93_il2cpp_TypeInfo_var);
-		Action_1__ctor_m50D54982908458E8FC5738016581B24B71E96BB8(L_58, L_57, (intptr_t)((void*)U3CU3Ec_U3CSyncLobbyPrizesToPlayFabMatchU3Eb__41_1_mB591D76BDEF64608C2C3189B87C1155596AAADA5_RuntimeMethod_var), NULL);
+		Action_1__ctor_m50D54982908458E8FC5738016581B24B71E96BB8(L_58, L_57, (intptr_t)((void*)U3CU3Ec_U3CSyncLobbyPrizesToPlayFabMatchU3Eb__42_1_m8088063AA161481696767A03636B1BD9D7939259_RuntimeMethod_var), NULL);
 		Action_1_t795ED1F4E6C6EEAB7072001CFF691E4CC2F7DF93* L_59 = L_58;
-		((U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797_il2cpp_TypeInfo_var))->___U3CU3E9__41_1 = L_59;
-		Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797_il2cpp_TypeInfo_var))->___U3CU3E9__41_1), (void*)L_59);
+		((U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797_il2cpp_TypeInfo_var))->___U3CU3E9__42_1 = L_59;
+		Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797_il2cpp_TypeInfo_var))->___U3CU3E9__42_1), (void*)L_59);
 		G_B5_0 = L_59;
 		G_B5_1 = G_B4_1;
 		G_B5_2 = G_B4_2;
@@ -12403,26 +12461,26 @@ IL_014e:
 	{
 		il2cpp_codegen_runtime_class_init_inline(PlayFabClientAPI_t5D87B6818CF460028FBCB816062118DAA41EA597_il2cpp_TypeInfo_var);
 		PlayFabClientAPI_UpdateUserData_mAB771B8D821916A564353819348F374CE82DA055(G_B5_2, G_B5_1, G_B5_0, NULL, (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83*)NULL, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:531>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:541>
 		return;
 	}
 }
-// Method Definition Index: 65198
+// Method Definition Index: 65209
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* LobbyNetworkManager_WriteParticipantsDelayed_m2D0ACD954A0FAB2A8886E4F59E02605A17B5FD2D (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CWriteParticipantsDelayedU3Ed__42_tC5DF50D6573D2CC307071960E791CC68A32F7274_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CWriteParticipantsDelayedU3Ed__43_t9C9212429E253A5F7F7C67C8E753544887F66185_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		U3CWriteParticipantsDelayedU3Ed__42_tC5DF50D6573D2CC307071960E791CC68A32F7274* L_0 = (U3CWriteParticipantsDelayedU3Ed__42_tC5DF50D6573D2CC307071960E791CC68A32F7274*)il2cpp_codegen_object_new(U3CWriteParticipantsDelayedU3Ed__42_tC5DF50D6573D2CC307071960E791CC68A32F7274_il2cpp_TypeInfo_var);
-		U3CWriteParticipantsDelayedU3Ed__42__ctor_mF60376484B048919473B3C4D5F6651DFB5F55A51(L_0, 0, NULL);
+		U3CWriteParticipantsDelayedU3Ed__43_t9C9212429E253A5F7F7C67C8E753544887F66185* L_0 = (U3CWriteParticipantsDelayedU3Ed__43_t9C9212429E253A5F7F7C67C8E753544887F66185*)il2cpp_codegen_object_new(U3CWriteParticipantsDelayedU3Ed__43_t9C9212429E253A5F7F7C67C8E753544887F66185_il2cpp_TypeInfo_var);
+		U3CWriteParticipantsDelayedU3Ed__43__ctor_m21EA568C3CEBD2850E92F66E9CF0FCFC0D3423FB(L_0, 0, NULL);
 		return L_0;
 	}
 }
-// Method Definition Index: 65199
+// Method Definition Index: 65210
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnCancelWaiting_m4DC1E9D0206B198AC99A5B1E3CFD3D0778071513 (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12433,7 +12491,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnCancelWaiting_m4DC
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:575>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:585>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = PhotonNetwork_get_InRoom_mFBE0C1A516C34FBAD9923933C73E07080FDA199D(NULL);
@@ -12443,7 +12501,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnCancelWaiting_m4DC
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:577>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:587>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		bool L_1;
 		L_1 = PhotonNetwork_LeaveRoom_m3BE228D128665941646C4D4A1D5529B944F49744((bool)1, NULL);
@@ -12451,7 +12509,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnCancelWaiting_m4DC
 
 IL_000e:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:579>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:589>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_2 = __this->___pendingJoinCoroutine;
 		if (!L_2)
 		{
@@ -12459,17 +12517,17 @@ IL_000e:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:581>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:591>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_3 = __this->___pendingJoinCoroutine;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_3, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:582>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:592>
 		__this->___pendingJoinCoroutine = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___pendingJoinCoroutine), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
 	}
 
 IL_0029:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:585>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:595>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___waitingPanel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_5;
@@ -12480,7 +12538,7 @@ IL_0029:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:585>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:595>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = __this->___waitingPanel;
 		NullCheck(L_6);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_6, (bool)0, NULL);
@@ -12488,11 +12546,11 @@ IL_0029:
 
 IL_0043:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:586>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:596>
 		return;
 	}
 }
-// Method Definition Index: 65200
+// Method Definition Index: 65211
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnLeftRoom_m1418296F8EB26C5022E861E1454CA01725C023A3 (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12502,7 +12560,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnLeftRoom_m1418296F
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:590>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:600>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___waitingPanel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -12513,7 +12571,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnLeftRoom_m1418296F
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:590>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:600>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___waitingPanel;
 		NullCheck(L_2);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_2, (bool)0, NULL);
@@ -12521,11 +12579,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager_OnLeftRoom_m1418296F
 
 IL_001a:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:591>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:601>
 		return;
 	}
 }
-// Method Definition Index: 65201
+// Method Definition Index: 65212
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager__ctor_m6E72DA9F433DCB3C6DBAF5791C6CE5CC10E77C1A (LobbyNetworkManager_t3C928A336EDD93BA28A06154592742A0E3B4085D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12541,7 +12599,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyNetworkManager__ctor_m6E72DA9F433DC
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65202
+// Method Definition Index: 65213
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m45E9599CDFA2917D1834E881CD068637FC055365 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12558,7 +12616,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m45E9599CDFA2917D1834E881
 		return;
 	}
 }
-// Method Definition Index: 65203
+// Method Definition Index: 65214
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_mEC1089FDF3E2BF13B3136D8E9D1B8E5FFF55692B (U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12566,8 +12624,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_mEC1089FDF3E2BF13B3136D8E9
 		return;
 	}
 }
-// Method Definition Index: 65204
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CSyncLobbyPrizesToPlayFabMatchU3Eb__41_1_mB591D76BDEF64608C2C3189B87C1155596AAADA5 (U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797* __this, PlayFabError_t085A18640C2631872C3888388E2BC667C7B09C23* ___0_err, const RuntimeMethod* method) 
+// Method Definition Index: 65215
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CSyncLobbyPrizesToPlayFabMatchU3Eb__42_1_m8088063AA161481696767A03636B1BD9D7939259 (U3CU3Ec_tC42E8D1F22A1BF56A4722E548D43E5E36117B797* __this, PlayFabError_t085A18640C2631872C3888388E2BC667C7B09C23* ___0_err, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -12577,7 +12635,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CSyncLobbyPrizesToPlayFabMatch
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:529>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:539>
 		PlayFabError_t085A18640C2631872C3888388E2BC667C7B09C23* L_0 = ___0_err;
 		NullCheck(L_0);
 		String_t* L_1;
@@ -12597,16 +12655,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CSyncLobbyPrizesToPlayFabMatch
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65205
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass41_0__ctor_m9242FB03B51B6293B811DBBFDA67C194EB763782 (U3CU3Ec__DisplayClass41_0_tFA287D8D51B6ED2E83B51A8D45268D6C308FB760* __this, const RuntimeMethod* method) 
+// Method Definition Index: 65216
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass42_0__ctor_m6A9768506BCC03F76AD198736C02CA3D06863A36 (U3CU3Ec__DisplayClass42_0_t6CD1A4F55C4342D77E2A1439D9DBF84D16CB7BE8* __this, const RuntimeMethod* method) 
 {
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		return;
 	}
 }
-// Method Definition Index: 65206
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass41_0_U3CSyncLobbyPrizesToPlayFabMatchU3Eb__0_mB30B2A6985B4B369CBD7C1DE5B539AF993BFA220 (U3CU3Ec__DisplayClass41_0_tFA287D8D51B6ED2E83B51A8D45268D6C308FB760* __this, UpdateUserDataResult_t23060B0433CB78E7CECEDFC3F7D63B91E051A74B* ___0_res, const RuntimeMethod* method) 
+// Method Definition Index: 65217
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass42_0_U3CSyncLobbyPrizesToPlayFabMatchU3Eb__0_m94E5681B24805CA2CAE84507A19AB021413EF2AB (U3CU3Ec__DisplayClass42_0_t6CD1A4F55C4342D77E2A1439D9DBF84D16CB7BE8* __this, UpdateUserDataResult_t23060B0433CB78E7CECEDFC3F7D63B91E051A74B* ___0_res, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -12617,7 +12675,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass41_0_U3CSyncLobbyPr
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:528>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:538>
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_0 = __this->___config;
 		NullCheck(L_0);
 		String_t* L_1 = L_0->___lobbyName;
@@ -12636,7 +12694,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass41_0_U3CSyncLobbyPr
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65207
+// Method Definition Index: 65218
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWaitAndJoinRoomU3Ed__13__ctor_mB17D8F78DE9363F3BAC106127DC6B8F751E7BEAA (U3CWaitAndJoinRoomU3Ed__13_tE81D7352C7D06BD70D6F82F979A2B08669E09DC0* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -12646,14 +12704,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWaitAndJoinRoomU3Ed__13__ctor_mB17D8F
 		return;
 	}
 }
-// Method Definition Index: 65208
+// Method Definition Index: 65219
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWaitAndJoinRoomU3Ed__13_System_IDisposable_Dispose_m89F321AE4DD44FDB8133D8E112331F98EDCC77D0 (U3CWaitAndJoinRoomU3Ed__13_tE81D7352C7D06BD70D6F82F979A2B08669E09DC0* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65209
+// Method Definition Index: 65220
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CWaitAndJoinRoomU3Ed__13_MoveNext_m21D31434CB93E95C3FF1BB7650CD15CBEC4BC674 (U3CWaitAndJoinRoomU3Ed__13_tE81D7352C7D06BD70D6F82F979A2B08669E09DC0* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12737,7 +12795,7 @@ IL_0037:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65210
+// Method Definition Index: 65221
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CWaitAndJoinRoomU3Ed__13_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD6FA2358E5AB85640E90850784711B7A00554541 (U3CWaitAndJoinRoomU3Ed__13_tE81D7352C7D06BD70D6F82F979A2B08669E09DC0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12745,7 +12803,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CWaitAndJoinRoomU3Ed__13_Sys
 		return L_0;
 	}
 }
-// Method Definition Index: 65211
+// Method Definition Index: 65222
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWaitAndJoinRoomU3Ed__13_System_Collections_IEnumerator_Reset_mFAE41E4BB14CC70796C9BC121CB251A8D5EA9670 (U3CWaitAndJoinRoomU3Ed__13_tE81D7352C7D06BD70D6F82F979A2B08669E09DC0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12754,7 +12812,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWaitAndJoinRoomU3Ed__13_System_Collec
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CWaitAndJoinRoomU3Ed__13_System_Collections_IEnumerator_Reset_mFAE41E4BB14CC70796C9BC121CB251A8D5EA9670_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65212
+// Method Definition Index: 65223
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CWaitAndJoinRoomU3Ed__13_System_Collections_IEnumerator_get_Current_m995E6A9F7C5EE84CC6497E8A586C3780458C75FD (U3CWaitAndJoinRoomU3Ed__13_tE81D7352C7D06BD70D6F82F979A2B08669E09DC0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12770,8 +12828,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CWaitAndJoinRoomU3Ed__13_Sys
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65213
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWriteParticipantsDelayedU3Ed__42__ctor_mF60376484B048919473B3C4D5F6651DFB5F55A51 (U3CWriteParticipantsDelayedU3Ed__42_tC5DF50D6573D2CC307071960E791CC68A32F7274* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
+// Method Definition Index: 65224
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWriteParticipantsDelayedU3Ed__43__ctor_m21EA568C3CEBD2850E92F66E9CF0FCFC0D3423FB (U3CWriteParticipantsDelayedU3Ed__43_t9C9212429E253A5F7F7C67C8E753544887F66185* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
@@ -12780,15 +12838,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWriteParticipantsDelayedU3Ed__42__cto
 		return;
 	}
 }
-// Method Definition Index: 65214
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWriteParticipantsDelayedU3Ed__42_System_IDisposable_Dispose_mAA333391857822FC5A8657E4A5C63B85E0D55783 (U3CWriteParticipantsDelayedU3Ed__42_tC5DF50D6573D2CC307071960E791CC68A32F7274* __this, const RuntimeMethod* method) 
+// Method Definition Index: 65225
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWriteParticipantsDelayedU3Ed__43_System_IDisposable_Dispose_m4D8AF6D1D2FA8A74DD72768B0372BC51B239DD7E (U3CWriteParticipantsDelayedU3Ed__43_t9C9212429E253A5F7F7C67C8E753544887F66185* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65215
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CWriteParticipantsDelayedU3Ed__42_MoveNext_mE6A1747DA5FE84916C0E92DF1B38089E643C650B (U3CWriteParticipantsDelayedU3Ed__42_tC5DF50D6573D2CC307071960E791CC68A32F7274* __this, const RuntimeMethod* method) 
+// Method Definition Index: 65226
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CWriteParticipantsDelayedU3Ed__43_MoveNext_m146FED00C6A10818A523EB9E8A8F5AC96F136D90 (U3CWriteParticipantsDelayedU3Ed__43_t9C9212429E253A5F7F7C67C8E753544887F66185* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -12843,7 +12901,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CWriteParticipantsDelayedU3Ed__42_Move
 IL_0010:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:541>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:551>
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_3 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_3, (1.5f), NULL);
 		__this->___U3CU3E2__current = L_3;
@@ -12855,7 +12913,7 @@ IL_0010:
 IL_0030:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:543>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:553>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		bool L_4;
 		L_4 = PhotonNetwork_get_InRoom_mFBE0C1A516C34FBAD9923933C73E07080FDA199D(NULL);
@@ -12876,21 +12934,21 @@ IL_0030:
 
 IL_0045:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:543>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:553>
 		return (bool)0;
 	}
 
 IL_0047:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:546>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:556>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_6 = (Hashtable_tD626399B3ADFD501225241D7366103F35472542A*)il2cpp_codegen_object_new(Hashtable_tD626399B3ADFD501225241D7366103F35472542A_il2cpp_TypeInfo_var);
 		Hashtable__ctor_m1C4D2BF84624173510D714545C1FBB92ADEFC624(L_6, NULL);
 		V_1 = L_6;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:551>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:561>
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_7 = (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*)il2cpp_codegen_object_new(List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD_il2cpp_TypeInfo_var);
 		List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E(L_7, List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E_RuntimeMethod_var);
 		V_2 = L_7;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:552>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:562>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		PlayerU5BU5D_t04E1460375559A2DB32E4B90230BCE7DDAC0E572* L_8;
 		L_8 = PhotonNetwork_get_PlayerList_mD2A2D36659BCEF35EBE2E6B4909F4439D191AE39(NULL);
@@ -12901,14 +12959,14 @@ IL_0047:
 
 IL_0061:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:552>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:562>
 		PlayerU5BU5D_t04E1460375559A2DB32E4B90230BCE7DDAC0E572* L_9 = V_3;
 		int32_t L_10 = V_4;
 		NullCheck(L_9);
 		int32_t L_11 = L_10;
 		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_12 = (L_9)->GetAt(static_cast<il2cpp_array_size_t>(L_11));
 		V_5 = L_12;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:554>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:564>
 		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_13 = V_5;
 		NullCheck(L_13);
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_14;
@@ -12941,7 +12999,7 @@ IL_0061:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:556>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:566>
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_20 = V_2;
 		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_21 = V_5;
 		NullCheck(L_21);
@@ -12954,7 +13012,7 @@ IL_0061:
 		L_26 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralAD6CD2C36915DEB6A18BCF0F46B294FC1D97072F, L_24, L_25, NULL);
 		NullCheck(L_20);
 		List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_inline(L_20, L_26, List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_RuntimeMethod_var);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:557>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:567>
 		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_27 = V_5;
 		NullCheck(L_27);
 		int32_t L_28;
@@ -12975,7 +13033,7 @@ IL_0061:
 
 IL_00d2:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:561>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:571>
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_35 = V_2;
 		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_36 = V_5;
 		NullCheck(L_36);
@@ -12993,7 +13051,7 @@ IL_00d2:
 		L_44 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral4ABCD70A77323A0F6FD2ED34EC239C6E50F296E9, L_39, L_43, NULL);
 		NullCheck(L_35);
 		List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_inline(L_35, L_44, List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_RuntimeMethod_var);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:562>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:572>
 		Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* L_45 = V_5;
 		NullCheck(L_45);
 		int32_t L_46;
@@ -13018,7 +13076,7 @@ IL_011c:
 
 IL_0122:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:552>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:562>
 		int32_t L_53 = V_4;
 		PlayerU5BU5D_t04E1460375559A2DB32E4B90230BCE7DDAC0E572* L_54 = V_3;
 		NullCheck(L_54);
@@ -13028,14 +13086,14 @@ IL_0122:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:565>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:575>
 		Hashtable_tD626399B3ADFD501225241D7366103F35472542A* L_55 = V_1;
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_56 = V_2;
 		String_t* L_57;
 		L_57 = String_Join_m8159F953B3D62AA54A0853A6E9573CDC0F63E158(_stringLiteralC18C9BB6DF0D5C60CE5A5D2D3D6111BEB6F8CCEB, L_56, NULL);
 		NullCheck(L_55);
 		Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1(L_55, _stringLiteralD7A9EBE82EB636356AF2F0262D543BE51448E9E2, L_57, Dictionary_2_Add_m93FFFABE8FCE7FA9793F0915E2A8842C7CD0C0C1_RuntimeMethod_var);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:569>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:579>
 		il2cpp_codegen_runtime_class_init_inline(PhotonNetwork_tBF04D378B56DDA80F9DB8E08DF87D5B532C22B99_il2cpp_TypeInfo_var);
 		Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* L_58;
 		L_58 = PhotonNetwork_get_CurrentRoom_m72D3601299E109EED858E132DE1BD316226BA38D(NULL);
@@ -13043,7 +13101,7 @@ IL_0122:
 		NullCheck(L_58);
 		bool L_60;
 		L_60 = VirtualFuncInvoker3< bool, Hashtable_tD626399B3ADFD501225241D7366103F35472542A*, Hashtable_tD626399B3ADFD501225241D7366103F35472542A*, WebFlags_tFD3605BF6E5F1A42F1D0D6F0DA9A8B32CF7B27CA* >::Invoke(5, L_58, L_59, (Hashtable_tD626399B3ADFD501225241D7366103F35472542A*)NULL, (WebFlags_tFD3605BF6E5F1A42F1D0D6F0DA9A8B32CF7B27CA*)NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:570>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:580>
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_61 = V_2;
 		String_t* L_62;
 		L_62 = String_Join_m8159F953B3D62AA54A0853A6E9573CDC0F63E158(_stringLiteralBD2155E54D0A0EF69D6B035ACE4FB0D1E5C8A136, L_61, NULL);
@@ -13051,29 +13109,29 @@ IL_0122:
 		L_63 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral7295DBEBF08DF1375A3C02BCE63D576DF6927025, L_62, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_63, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:571>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/LobbyNetworkManager.cs:581>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65216
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CWriteParticipantsDelayedU3Ed__42_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mF9F68EB6E4E9ACD02EF8F63A0727B4EBC32925A6 (U3CWriteParticipantsDelayedU3Ed__42_tC5DF50D6573D2CC307071960E791CC68A32F7274* __this, const RuntimeMethod* method) 
+// Method Definition Index: 65227
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CWriteParticipantsDelayedU3Ed__43_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mF4288887030FD4C3863B9B40EEA2DC0AEA24ABD9 (U3CWriteParticipantsDelayedU3Ed__43_t9C9212429E253A5F7F7C67C8E753544887F66185* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current;
 		return L_0;
 	}
 }
-// Method Definition Index: 65217
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWriteParticipantsDelayedU3Ed__42_System_Collections_IEnumerator_Reset_m3549871999A825B4ACE7AEA926E45079F484BBB1 (U3CWriteParticipantsDelayedU3Ed__42_tC5DF50D6573D2CC307071960E791CC68A32F7274* __this, const RuntimeMethod* method) 
+// Method Definition Index: 65228
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWriteParticipantsDelayedU3Ed__43_System_Collections_IEnumerator_Reset_m77629D1A87902A4A2386E70D9861A8CF575CF999 (U3CWriteParticipantsDelayedU3Ed__43_t9C9212429E253A5F7F7C67C8E753544887F66185* __this, const RuntimeMethod* method) 
 {
 	{
 		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
 		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CWriteParticipantsDelayedU3Ed__42_System_Collections_IEnumerator_Reset_m3549871999A825B4ACE7AEA926E45079F484BBB1_RuntimeMethod_var)));
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CWriteParticipantsDelayedU3Ed__43_System_Collections_IEnumerator_Reset_m77629D1A87902A4A2386E70D9861A8CF575CF999_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65218
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CWriteParticipantsDelayedU3Ed__42_System_Collections_IEnumerator_get_Current_mD70347ABCCBEE9028439A073DB2DE830FB337104 (U3CWriteParticipantsDelayedU3Ed__42_tC5DF50D6573D2CC307071960E791CC68A32F7274* __this, const RuntimeMethod* method) 
+// Method Definition Index: 65229
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CWriteParticipantsDelayedU3Ed__43_System_Collections_IEnumerator_get_Current_m8D0F03651659842436F6C0E4DF046B568FD9E248 (U3CWriteParticipantsDelayedU3Ed__43_t9C9212429E253A5F7F7C67C8E753544887F66185* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current;
@@ -13088,7 +13146,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CWriteParticipantsDelayedU3E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65219
+// Method Definition Index: 65230
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_Awake_m7A1E2E3CCB13DE5F0E111CDB9D9F9F3B50E59C53 (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13137,7 +13195,7 @@ IL_0041:
 		return;
 	}
 }
-// Method Definition Index: 65220
+// Method Definition Index: 65231
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_OnDestroy_m74556A0063CC7CCF32D0A3A196B0DA59058A605A (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13180,7 +13238,7 @@ IL_0036:
 		return;
 	}
 }
-// Method Definition Index: 65221
+// Method Definition Index: 65232
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_SetData_mA1502C7FD4C96D764E382654A27388D1A43B84D0 (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, LobbyGameObjectData_t8598BBF8A6DF007144529A0494D17C1E7B055FA7* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13286,7 +13344,7 @@ IL_009f:
 		return;
 	}
 }
-// Method Definition Index: 65222
+// Method Definition Index: 65233
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_SetSelectedState_mA072924FF6808D3BC06F365D3C8F4B26E8FB98C0 (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, bool ___0_isSelected, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13320,7 +13378,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65223
+// Method Definition Index: 65234
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_UpdatePlayButtonInteractability_m1D67B1523FB383C895817634C4C283FE2516C9FD (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___0_playButton, int32_t ___1_lobbyIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13398,7 +13456,7 @@ IL_0046:
 		return;
 	}
 }
-// Method Definition Index: 65224
+// Method Definition Index: 65235
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_RefreshPlayButtonsInteractability_mA9022AE94D977514266655B03FF19BBAEA5C3E28 (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13458,7 +13516,7 @@ IL_003d:
 		return;
 	}
 }
-// Method Definition Index: 65225
+// Method Definition Index: 65236
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_OnPlayButtonClicked_m343A5685DA3D47A35ED78AFBF147D63AE39A1D49 (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13533,7 +13591,7 @@ IL_0051:
 		return;
 	}
 }
-// Method Definition Index: 65226
+// Method Definition Index: 65237
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_SetupButtonHoverAnimation_m9CC880A0DD93896E658DEC16B3A35D5C3FC90277 (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___0_button, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13737,7 +13795,7 @@ IL_008d:
 		return;
 	}
 }
-// Method Definition Index: 65227
+// Method Definition Index: 65238
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_CleanupButtonHoverAnimation_mCB815D77C17D35E94C99B4EBE4D7DB6E780451C1 (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___0_button, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13831,7 +13889,7 @@ IL_0058:
 		return;
 	}
 }
-// Method Definition Index: 65228
+// Method Definition Index: 65239
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_OnButtonPointerEnter_m58265D926C9DC742FE825CEEFEE521BD8C68D6F6 (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___0_button, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14021,7 +14079,7 @@ IL_009b:
 		return;
 	}
 }
-// Method Definition Index: 65229
+// Method Definition Index: 65240
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_OnButtonPointerExit_m205D8EECD5F381B658F823F1DD368D9C7B95D0BE (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___0_button, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14191,7 +14249,7 @@ IL_0093:
 		return;
 	}
 }
-// Method Definition Index: 65230
+// Method Definition Index: 65241
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_ResetButtonScale_m2F82CF5DE8B1574D233DE67F3A3748BB2B921CF2 (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___0_button, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14341,7 +14399,7 @@ IL_008a:
 		return;
 	}
 }
-// Method Definition Index: 65231
+// Method Definition Index: 65242
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_OnPointerDown_m0050C1BF121DF80CE9C7DE00782DC195B39E5F0B (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
 	{
@@ -14371,7 +14429,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 65232
+// Method Definition Index: 65243
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_OnPointerUp_m9B2C419E3EC27296AA220A619CA9F5922BBF4F03 (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14540,7 +14598,7 @@ IL_00df:
 		return;
 	}
 }
-// Method Definition Index: 65233
+// Method Definition Index: 65244
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView__ctor_mA876A31E9AB06B6538EDDC908C80DBEB8BE6AD1A (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14591,7 +14649,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView__ctor_mA876A31E9AB06B65
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65234
+// Method Definition Index: 65245
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass22_0__ctor_m88546A1D79706A3496C9DDED10D0EF9FBAAB6E9D (U3CU3Ec__DisplayClass22_0_t55E0B703AE4267A0FEC7C3492A4D37EC26E07EB9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14599,7 +14657,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass22_0__ctor_m88546A1
 		return;
 	}
 }
-// Method Definition Index: 65235
+// Method Definition Index: 65246
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass22_0_U3CSetupButtonHoverAnimationU3Eb__0_m19421D875ED95187D2D8CBFCCA75B65D586B3909 (U3CU3Ec__DisplayClass22_0_t55E0B703AE4267A0FEC7C3492A4D37EC26E07EB9* __this, BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* ___0_data, const RuntimeMethod* method) 
 {
 	{
@@ -14612,7 +14670,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass22_0_U3CSetupButton
 		return;
 	}
 }
-// Method Definition Index: 65236
+// Method Definition Index: 65247
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass22_0_U3CSetupButtonHoverAnimationU3Eb__1_mEFF19863BCD9AE88F61120E0F76000BAB3DC479C (U3CU3Ec__DisplayClass22_0_t55E0B703AE4267A0FEC7C3492A4D37EC26E07EB9* __this, BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* ___0_data, const RuntimeMethod* method) 
 {
 	{
@@ -14633,7 +14691,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass22_0_U3CSetupButton
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65237
+// Method Definition Index: 65248
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyScaler_Awake_m211F9419F1CB6544358742FB97D9EFB29C4252F8 (LobbyScaler_t1468F4DE599440A604EAB43941C25805DC4696E7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14750,7 +14808,7 @@ IL_00b2:
 		return;
 	}
 }
-// Method Definition Index: 65238
+// Method Definition Index: 65249
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyScaler_Start_m3D29DED2769B20D7928CE7948FC97AB1C46C05D5 (LobbyScaler_t1468F4DE599440A604EAB43941C25805DC4696E7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14760,7 +14818,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyScaler_Start_m3D29DED2769B20D7928CE
 		return;
 	}
 }
-// Method Definition Index: 65239
+// Method Definition Index: 65250
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyScaler_StoreOriginalOffsets_m630010BF03889503E964F93244A4D7D42A78C6F6 (LobbyScaler_t1468F4DE599440A604EAB43941C25805DC4696E7* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, String_t* ___1_name, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14834,7 +14892,7 @@ IL_0050:
 		return;
 	}
 }
-// Method Definition Index: 65240
+// Method Definition Index: 65251
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyScaler_StoreOriginalSize_m98D37C1C4E83388AC2BBFC1E0F4062BFFCBB9F28 (LobbyScaler_t1468F4DE599440A604EAB43941C25805DC4696E7* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, String_t* ___1_name, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14873,7 +14931,7 @@ IL_001b:
 		return;
 	}
 }
-// Method Definition Index: 65241
+// Method Definition Index: 65252
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyScaler_ApplyScaling_m4E9DC140D63181C6FF4B3AD4C0974BE333330E30 (LobbyScaler_t1468F4DE599440A604EAB43941C25805DC4696E7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15066,7 +15124,7 @@ IL_012b:
 		return;
 	}
 }
-// Method Definition Index: 65242
+// Method Definition Index: 65253
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyScaler_ScaleByOffset_m0329A2BFE48CD54A26CA7331EBF95D270D381A88 (LobbyScaler_t1468F4DE599440A604EAB43941C25805DC4696E7* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15159,7 +15217,7 @@ IL_0018:
 		return;
 	}
 }
-// Method Definition Index: 65243
+// Method Definition Index: 65254
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyScaler_ScaleBySizeDelta_mB3C38F4117BCBFCED35DEC4611F48DC0E589822F (LobbyScaler_t1468F4DE599440A604EAB43941C25805DC4696E7* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15222,7 +15280,7 @@ IL_0018:
 		return;
 	}
 }
-// Method Definition Index: 65244
+// Method Definition Index: 65255
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyScaler__ctor_m80F01C9A1F0E4644F69FF72DA2323687021A1016 (LobbyScaler_t1468F4DE599440A604EAB43941C25805DC4696E7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15271,7 +15329,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyScaler__ctor_m80F01C9A1F0E4644F69FF
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65245
+// Method Definition Index: 65256
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_Start_mA2E65730286DE745438BDB917E2CF0DDF5E53892 (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15422,7 +15480,7 @@ IL_00c9:
 		return;
 	}
 }
-// Method Definition Index: 65246
+// Method Definition Index: 65257
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_OnEnable_mF9C9684BB74C27BE63369B64E65DE170303BD5A1 (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15450,7 +15508,7 @@ IL_0018:
 		return;
 	}
 }
-// Method Definition Index: 65247
+// Method Definition Index: 65258
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_OnDestroy_m62EB7EF950013D022D3EB9E1A71EDEFC85D5C5B2 (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15495,7 +15553,7 @@ IL_0033:
 		return;
 	}
 }
-// Method Definition Index: 65248
+// Method Definition Index: 65259
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_OnPlayerDataLoaded_mE70CA6882A318D1A08E40269FCA9FF804D66EA39 (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15633,7 +15691,7 @@ IL_0099:
 		return;
 	}
 }
-// Method Definition Index: 65249
+// Method Definition Index: 65260
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_LoadSelectedAvatar_mBD9D925FCAC6552C118EAF00A2B309A43C611C29 (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16229,7 +16287,7 @@ IL_02fa:
 		return;
 	}
 }
-// Method Definition Index: 65250
+// Method Definition Index: 65261
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_Refresh_m2CFCF07995DE63B6748F48735BDD71BD64C5814F (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16239,7 +16297,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_Refresh_m2CFCF0799
 		return;
 	}
 }
-// Method Definition Index: 65251
+// Method Definition Index: 65262
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_UpdateFromAvatarSelector_mD317952122F91C6C2BA91C18C3233FA1B5BE4046 (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, int32_t ___0_avatarIndex, SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B* ___1_sprites, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16333,7 +16391,7 @@ IL_004a:
 		return;
 	}
 }
-// Method Definition Index: 65252
+// Method Definition Index: 65263
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_UpdateFromAvatarSelector_m248DCDD64616760ABCBF08466B3771C645A6A744 (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16397,7 +16455,7 @@ IL_002d:
 		return;
 	}
 }
-// Method Definition Index: 65253
+// Method Definition Index: 65264
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_ShowCustomAvatar_m701E43F3189962F770675224755CC717303A235A (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___0_sprite, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16473,7 +16531,7 @@ IL_0069:
 		return;
 	}
 }
-// Method Definition Index: 65254
+// Method Definition Index: 65265
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_ShowSpriteAvatar_m66CA543BAB60C417A343180ECA4B209E064AF9DC (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___0_sprite, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16547,7 +16605,7 @@ IL_005f:
 		return;
 	}
 }
-// Method Definition Index: 65255
+// Method Definition Index: 65266
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* MainMenuAvatarDisplay_GetCurrentAvatarSprite_m8E9E61DF0B4F446EC8533510F2F7D34EB05FB40F (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16616,7 +16674,7 @@ IL_0046:
 		return (Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99*)NULL;
 	}
 }
-// Method Definition Index: 65256
+// Method Definition Index: 65267
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MainMenuAvatarDisplay_IsShowingCustomAvatar_m3EB26B9A63B6528128B1DC58D3FCF3B75E1A649B (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16652,7 +16710,7 @@ IL_001f:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65257
+// Method Definition Index: 65268
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_UpdateCustomImage_mCE9AF94B82E28811D891E3581489115D29F9A166 (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___0_customSprite, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16689,7 +16747,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65258
+// Method Definition Index: 65269
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* MainMenuAvatarDisplay_LoadImageFromUrl_mC62E3E78591C9F7C23B7B8FB1EEF7BE7AD0D94E0 (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, String_t* ___0_url, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16713,7 +16771,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* MainMenuAvatarDisplay_LoadImag
 		return L_2;
 	}
 }
-// Method Definition Index: 65259
+// Method Definition Index: 65270
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_LoadAvatarSpriteFallback_m3FE36FD1334D0B8F6D3D94B54A18FB63B0386FA2 (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16956,7 +17014,7 @@ IL_00f3:
 		return;
 	}
 }
-// Method Definition Index: 65260
+// Method Definition Index: 65271
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_NotifyLeaderboard_m2D84C0985B2EDC3C4885AE0631CC8141EDD5BC95 (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17033,7 +17091,7 @@ IL_002c:
 		return;
 	}
 }
-// Method Definition Index: 65261
+// Method Definition Index: 65272
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay__ctor_m4F45DFDE691A534C646C09D49775544E517F5961 (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17065,7 +17123,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay__ctor_m4F45DFDE691
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65262
+// Method Definition Index: 65273
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadImageFromUrlU3Ed__19__ctor_m7BA0AB7826D79D468390E84B109C6564703FA074 (U3CLoadImageFromUrlU3Ed__19_t21CBC03B7D3ADBFBDA2E22007CFE9DD341F52022* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -17075,7 +17133,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadImageFromUrlU3Ed__19__ctor_m7BA0A
 		return;
 	}
 }
-// Method Definition Index: 65263
+// Method Definition Index: 65274
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadImageFromUrlU3Ed__19_System_IDisposable_Dispose_m5B3E760F4F3319A1CA0B358FB06A413382343FB4 (U3CLoadImageFromUrlU3Ed__19_t21CBC03B7D3ADBFBDA2E22007CFE9DD341F52022* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -17124,7 +17182,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65264
+// Method Definition Index: 65275
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CLoadImageFromUrlU3Ed__19_MoveNext_m2C45D03369CF3157B3CFBABB22A4739055F7B478 (U3CLoadImageFromUrlU3Ed__19_t21CBC03B7D3ADBFBDA2E22007CFE9DD341F52022* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17363,7 +17421,7 @@ IL_017f:
 		return L_46;
 	}
 }
-// Method Definition Index: 65265
+// Method Definition Index: 65276
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadImageFromUrlU3Ed__19_U3CU3Em__Finally1_m61BCA09F33CA97CB4CB6D728160E7F60458B9350 (U3CLoadImageFromUrlU3Ed__19_t21CBC03B7D3ADBFBDA2E22007CFE9DD341F52022* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17391,7 +17449,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65266
+// Method Definition Index: 65277
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadImageFromUrlU3Ed__19_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m51A330FE8A30B540947836085ECBE803578785FC (U3CLoadImageFromUrlU3Ed__19_t21CBC03B7D3ADBFBDA2E22007CFE9DD341F52022* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17399,7 +17457,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadImageFromUrlU3Ed__19_Sy
 		return L_0;
 	}
 }
-// Method Definition Index: 65267
+// Method Definition Index: 65278
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadImageFromUrlU3Ed__19_System_Collections_IEnumerator_Reset_mED07AB7C91EF7AC44B03B7E5B2627DB2CFCF2EFE (U3CLoadImageFromUrlU3Ed__19_t21CBC03B7D3ADBFBDA2E22007CFE9DD341F52022* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17408,7 +17466,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadImageFromUrlU3Ed__19_System_Colle
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CLoadImageFromUrlU3Ed__19_System_Collections_IEnumerator_Reset_mED07AB7C91EF7AC44B03B7E5B2627DB2CFCF2EFE_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65268
+// Method Definition Index: 65279
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadImageFromUrlU3Ed__19_System_Collections_IEnumerator_get_Current_m29C21F0EE6B85066C43185DEA3BCEDF38E32AD68 (U3CLoadImageFromUrlU3Ed__19_t21CBC03B7D3ADBFBDA2E22007CFE9DD341F52022* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17424,7 +17482,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadImageFromUrlU3Ed__19_Sy
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65269
+// Method Definition Index: 65280
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuScaler_Awake_mFC710761500C114B68B6A389CCCEDEB8D2FCD28A (MainMenuScaler_tD4A0995B6EE454A76051559928596004F7AE24F2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17510,7 +17568,7 @@ IL_0083:
 		return;
 	}
 }
-// Method Definition Index: 65270
+// Method Definition Index: 65281
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuScaler_Start_mA6227A58CF8071C850E753EE7FE65670E5B13CFC (MainMenuScaler_tD4A0995B6EE454A76051559928596004F7AE24F2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17520,7 +17578,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuScaler_Start_mA6227A58CF8071C850
 		return;
 	}
 }
-// Method Definition Index: 65271
+// Method Definition Index: 65282
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuScaler_StoreOriginalOffsets_mF038DBA064339F82A500CFD22B2756D1338FB905 (MainMenuScaler_tD4A0995B6EE454A76051559928596004F7AE24F2* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3* ___1_offsets, String_t* ___2_elementName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17617,7 +17675,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuScaler_StoreOriginalOffsets_mF03
 		return;
 	}
 }
-// Method Definition Index: 65272
+// Method Definition Index: 65283
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuScaler_ApplyScaling_m9D10E4D35B4B32C5341C59EB965C8E69B66E730D (MainMenuScaler_tD4A0995B6EE454A76051559928596004F7AE24F2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17771,7 +17829,7 @@ IL_0070:
 		return;
 	}
 }
-// Method Definition Index: 65273
+// Method Definition Index: 65284
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuScaler_ScaleDiceImage_mD90AC7BBD74BDC304855EC55FC633879501391F6 (MainMenuScaler_tD4A0995B6EE454A76051559928596004F7AE24F2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17834,7 +17892,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 65274
+// Method Definition Index: 65285
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuScaler_ScaleCashBar_mD83A5F98F9C43753BA3477A17C915BD2BE968E5C (MainMenuScaler_tD4A0995B6EE454A76051559928596004F7AE24F2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17944,7 +18002,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 65275
+// Method Definition Index: 65286
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuScaler_ScaleChipsBar_m9DDEAB16966A7B242ACB15D86480D9B16FAEF527 (MainMenuScaler_tD4A0995B6EE454A76051559928596004F7AE24F2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18054,7 +18112,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 65276
+// Method Definition Index: 65287
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuScaler_RecalculateScaling_mD838DF2A00AF2073F7A750BC1029B13DEDB9206D (MainMenuScaler_tD4A0995B6EE454A76051559928596004F7AE24F2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18064,7 +18122,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuScaler_RecalculateScaling_mD838D
 		return;
 	}
 }
-// Method Definition Index: 65277
+// Method Definition Index: 65288
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuScaler__ctor_m78DB49FADAC03C0CB4D7D7ECEAB04C6EF6797EB7 (MainMenuScaler_tD4A0995B6EE454A76051559928596004F7AE24F2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18095,7 +18153,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuScaler__ctor_m78DB49FADAC03C0CB4
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65278
+// Method Definition Index: 65289
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_Start_m0392F1E25232AD81E83D02DADA2D74987326FCBD (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18159,7 +18217,7 @@ IL_0044:
 		return;
 	}
 }
-// Method Definition Index: 65279
+// Method Definition Index: 65290
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_AdjustBrixScale_mCCF63DC5C97E6306D241573F328B73F0554C14BD (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18240,7 +18298,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 65280
+// Method Definition Index: 65291
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_SetSizeAndPositionBox_mC9245E4F8C2862B4EF71DB0CB5F1E87893D77DDE (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_box, int32_t ___1_row, int32_t ___2_col, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18329,7 +18387,7 @@ IL_0031:
 		return;
 	}
 }
-// Method Definition Index: 65281
+// Method Definition Index: 65292
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_CalculateGridScale_m28B9115491FEF7B8E14201CD671E65BD8350F568 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18640,7 +18698,7 @@ IL_003e:
 		return;
 	}
 }
-// Method Definition Index: 65282
+// Method Definition Index: 65293
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_GenerateGrid_m0C24E107097E9A1324B53BF97DB34AE03EFFBA1B (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19014,7 +19072,7 @@ IL_01d4:
 		return;
 	}
 }
-// Method Definition Index: 65283
+// Method Definition Index: 65294
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* NumberGrid_DelayedTimerStartAfterGrid_m4A650AEEAC2EF84FA27A7370FE152CC061E920BE (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19029,7 +19087,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* NumberGrid_DelayedTimerStartAf
 		return L_0;
 	}
 }
-// Method Definition Index: 65284
+// Method Definition Index: 65295
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_StartPowerupTimerFromGameManager_mADEBBBD57E3162BB8586FB96E1C9BE48E3E2E60F (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19049,7 +19107,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_StartPowerupTimerFromGameMana
 		return;
 	}
 }
-// Method Definition Index: 65285
+// Method Definition Index: 65296
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_CreateNumberBox_m62A4CF634BD9347EDE569CB710199F68E50F5B32 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, int32_t ___0_number, int32_t ___1_gridPosition, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19511,7 +19569,7 @@ IL_02ac:
 		return;
 	}
 }
-// Method Definition Index: 65286
+// Method Definition Index: 65297
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_CreatePowerupBox_mDC59448FD660B0C9DD3B878C65080301904D1E81 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, int32_t ___0_powerupSpriteIndex, int32_t ___1_gridPosition, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19989,7 +20047,7 @@ IL_028d:
 		return;
 	}
 }
-// Method Definition Index: 65290
+// Method Definition Index: 65301
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_ClearGrid_m8E6B453E493D61754D4D688BC6B5C00799E2172A (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20106,7 +20164,7 @@ IL_0044:
 		return;
 	}
 }
-// Method Definition Index: 65291
+// Method Definition Index: 65302
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_SetDiceSum_m43975CED02860FEB4209970AB4C80A303A6D78CF (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, int32_t ___0_sum, int32_t ___1_playerType, int32_t ___2_cpuIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20327,7 +20385,7 @@ IL_00cd:
 		return;
 	}
 }
-// Method Definition Index: 65292
+// Method Definition Index: 65303
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_ClearDiceSum_m5D3BEEE6074B9BE307DEDC817BD4EBB000C701D2 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, int32_t ___0_playerType, const RuntimeMethod* method) 
 {
 	{
@@ -20359,7 +20417,7 @@ IL_0013:
 		return;
 	}
 }
-// Method Definition Index: 65293
+// Method Definition Index: 65304
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_UpdateBoxInteractability_mB5F6A88062E41F69EB5F8C4327D48D1DDC718C99 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, int32_t ___0_playerType, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20543,7 +20601,7 @@ IL_0090:
 		return;
 	}
 }
-// Method Definition Index: 65294
+// Method Definition Index: 65305
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_OnBoxButtonClicked_m0EA80F983B8ED5F99871561E3D2DC9FE0DB10D05 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* ___0_boxData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20790,7 +20848,7 @@ IL_011b:
 		return;
 	}
 }
-// Method Definition Index: 65295
+// Method Definition Index: 65306
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NumberGrid_IsAnyBoxWithNumberSelectedInCurrentRoll_m01D4F791887ECCE07A3BE3993558815A685170AA (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, int32_t ___0_number, int32_t ___1_playerType, int32_t ___2_cpuIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21007,7 +21065,7 @@ IL_00a0:
 		return L_30;
 	}
 }
-// Method Definition Index: 65296
+// Method Definition Index: 65307
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_ResetSelections_m9F183E7218CAE08E86E5956805F709AB7E3546E8 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21151,7 +21209,7 @@ IL_0080:
 		return;
 	}
 }
-// Method Definition Index: 65297
+// Method Definition Index: 65308
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NumberGrid_GetAvailableBoxCount_mDBFC959BE5619794B3052A3B9A50901E78F0D566 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, int32_t ___0_sum, int32_t ___1_playerType, int32_t ___2_cpuIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21317,7 +21375,7 @@ IL_0089:
 		return L_25;
 	}
 }
-// Method Definition Index: 65298
+// Method Definition Index: 65309
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* NumberGrid_GetAvailableBoxes_m6E93AEE5E3CD26B66FAFF9AB7E5F6A8036F2BB7A (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, int32_t ___0_sum, int32_t ___1_playerType, int32_t ___2_cpuIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21448,7 +21506,7 @@ IL_0065:
 		return L_19;
 	}
 }
-// Method Definition Index: 65299
+// Method Definition Index: 65310
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NumberGrid_SelectBox_m44B049F4EBBE47D26AF478D9DB5A7378CEC1291C (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_boxObject, bool ___1_isCPU, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -21482,7 +21540,7 @@ IL_0007:
 		return L_3;
 	}
 }
-// Method Definition Index: 65300
+// Method Definition Index: 65311
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NumberGrid_SelectBox_mE3F21CAAF688ACF19E07B3A5B89E23AC2E392187 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_boxObject, int32_t ___1_playerType, int32_t ___2_cpuIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21955,7 +22013,7 @@ IL_01db:
 		return (bool)1;
 	}
 }
-// Method Definition Index: 65301
+// Method Definition Index: 65312
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_CheckIfAllBoxesSelected_m7EE12261BEDAAE06D50CD5161AAC9721C69A19DA (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22110,7 +22168,7 @@ IL_0078:
 		return;
 	}
 }
-// Method Definition Index: 65302
+// Method Definition Index: 65313
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588* NumberGrid_GetSelectionCounts_m7BBD1D87A2A27E142273DF2482B47D9ACA563690 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22275,7 +22333,7 @@ IL_008f:
 		return L_26;
 	}
 }
-// Method Definition Index: 65303
+// Method Definition Index: 65314
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ValueTuple_3_tB335A5D0E3266E1B2306837EE625791AF96AA7CA NumberGrid_GetWinner_mE1AF49168EFC54839D68D68E25AC222CDF7A64E4 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22457,7 +22515,7 @@ IL_0096:
 		return L_22;
 	}
 }
-// Method Definition Index: 65304
+// Method Definition Index: 65315
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NumberGrid_GetCurrentDiceSum_m76136175ED91E0D2783AD9A0AA0C409CAABC509E (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, int32_t ___0_playerType, const RuntimeMethod* method) 
 {
 	{
@@ -22479,7 +22537,7 @@ IL_000a:
 		return L_2;
 	}
 }
-// Method Definition Index: 65305
+// Method Definition Index: 65316
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_SetPlayerOutlineColor_mAB2FC02618D437FE7E708FFA8516278C54296A12 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_color, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22506,7 +22564,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_SetPlayerOutlineColor_mAB2FC0
 		return;
 	}
 }
-// Method Definition Index: 65306
+// Method Definition Index: 65317
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_SetCPUOutlineColor_m44C0497881EC5455236AEDAA96F7EB348799FC19 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, int32_t ___0_cpuIndex, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___1_color, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22540,7 +22598,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_SetCPUOutlineColor_m44C049788
 		return;
 	}
 }
-// Method Definition Index: 65307
+// Method Definition Index: 65318
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F NumberGrid_GetCPUOutlineColor_m41BB4B933DBE341372736740A0F09BB2B27AF8BD (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, int32_t ___0_cpuIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22580,7 +22638,7 @@ IL_001b:
 		return L_6;
 	}
 }
-// Method Definition Index: 65308
+// Method Definition Index: 65319
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* NumberGrid_GetCurrentlyVisiblePowerup_m2B9156483EAF9DDB59482F419CF6B3F9BA7DC709 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22623,7 +22681,7 @@ IL_002e:
 		return (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL;
 	}
 }
-// Method Definition Index: 65309
+// Method Definition Index: 65320
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_RegenerateGrid_m4E22297BC5B83D1910A13FF59B76136A078B0FA0 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22633,7 +22691,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_RegenerateGrid_m4E22297BC5B83
 		return;
 	}
 }
-// Method Definition Index: 65310
+// Method Definition Index: 65321
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_StartPowerupTimer_mADC8F0522C2482E6D41C680051EB5305AADF174B (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22755,7 +22813,7 @@ IL_005f:
 		return;
 	}
 }
-// Method Definition Index: 65311
+// Method Definition Index: 65322
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_RestartPowerupTimer_mDD6E30C40D396EF1D0342728FD7DE097231826B9 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22765,7 +22823,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_RestartPowerupTimer_mDD6E30C4
 		return;
 	}
 }
-// Method Definition Index: 65312
+// Method Definition Index: 65323
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_StopPowerupTimer_m8A7856C6812DA3EE30035001F14FD137ADF6F67F (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22865,7 +22923,7 @@ IL_008d:
 		return;
 	}
 }
-// Method Definition Index: 65313
+// Method Definition Index: 65324
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* NumberGrid_PowerupTimerLoop_m6B2D5D9FE2E225DB4A6C6EFEA440A9E49919312A (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22884,7 +22942,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* NumberGrid_PowerupTimerLoop_m6
 		return L_1;
 	}
 }
-// Method Definition Index: 65314
+// Method Definition Index: 65325
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_ShowPowerup_mD310BC13CFFCDD790543330FB0E52F98B26E75FB (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* ___0_powerupBox, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23321,7 +23379,7 @@ IL_027a:
 		return;
 	}
 }
-// Method Definition Index: 65315
+// Method Definition Index: 65326
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HidePowerup_mB0F295063AD94BE6CA700869DAB60970C27D0516 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* ___0_powerupBox, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23513,7 +23571,7 @@ IL_00d9:
 		return;
 	}
 }
-// Method Definition Index: 65316
+// Method Definition Index: 65327
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_OnPowerupButtonClicked_mDE7425A34A7F4B2E148C2A541CF45EA2C7DD31EF (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* ___0_boxData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23619,7 +23677,7 @@ IL_0051:
 		return;
 	}
 }
-// Method Definition Index: 65317
+// Method Definition Index: 65328
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NumberGrid_SelectPowerup_m0147E2CC6EED4E355AFE3B6BF5C54930A7D5F624 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_boxObject, int32_t ___1_playerType, int32_t ___2_cpuIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23778,7 +23836,7 @@ IL_0092:
 		return (bool)1;
 	}
 }
-// Method Definition Index: 65318
+// Method Definition Index: 65329
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_LockPowerup_mF278D8B3B4CD9099B9F6FC3D07CDF326BD7EC275 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* ___0_boxData, int32_t ___1_playerType, int32_t ___2_cpuIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24039,7 +24097,7 @@ IL_0122:
 		return;
 	}
 }
-// Method Definition Index: 65319
+// Method Definition Index: 65330
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_OnEnable_mEEC39DC082E60187188C031CF99AE383474AD879 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24073,7 +24131,7 @@ IL_001b:
 		return;
 	}
 }
-// Method Definition Index: 65320
+// Method Definition Index: 65331
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* NumberGrid_DelayedTimerStart_mDCCF21B2FFF589267C64CCAB40F005114119C8A6 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24092,7 +24150,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* NumberGrid_DelayedTimerStart_m
 		return L_1;
 	}
 }
-// Method Definition Index: 65321
+// Method Definition Index: 65332
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_OnDisable_m94288D42B447C1D689D7344AFF01487A0BDAE5B6 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24102,7 +24160,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_OnDisable_m94288D42B447C1D689
 		return;
 	}
 }
-// Method Definition Index: 65322
+// Method Definition Index: 65333
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_OnDestroy_mC2A101279B0FD937CD669A778220FF04072F6B4D (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24114,7 +24172,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_OnDestroy_mC2A101279B0FD937CD
 		return;
 	}
 }
-// Method Definition Index: 65323
+// Method Definition Index: 65334
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid__ctor_mCD0B30E3051AD205369B9DC50A06030FAA35A65C (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24253,7 +24311,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid__ctor_mCD0B30E3051AD205369B9D
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65324
+// Method Definition Index: 65335
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BoxData__ctor_m9471D003191BAE8E2F1FCC0E4D30D0948C40A202 (BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24327,7 +24385,7 @@ IL2CPP_EXTERN_C void GridItem_t30F423BB4BFA3D5F5DA067D098A0B38B654AE787_marshal_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65325
+// Method Definition Index: 65336
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_mEAFF775241BF5893E0CBE219E8E042592BCCD8B9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24344,7 +24402,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_mEAFF775241BF5893E0CBE219
 		return;
 	}
 }
-// Method Definition Index: 65326
+// Method Definition Index: 65337
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m4C29A447619724077F0D29EBDDCBE60369BD3268 (U3CU3Ec_tE7C5954DD0D271D0DC9DA0E606E1C53B69E71765* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24352,7 +24410,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m4C29A447619724077F0D29EBD
 		return;
 	}
 }
-// Method Definition Index: 65327
+// Method Definition Index: 65338
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CStartPowerupTimerU3Eb__89_0_m1D044E97DD4C53F4802DD1F922A80A7E46A10354 (U3CU3Ec_tE7C5954DD0D271D0DC9DA0E606E1C53B69E71765* __this, BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* ___0_b, const RuntimeMethod* method) 
 {
 	{
@@ -24363,7 +24421,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CStartPowerupTimerU3Eb__89_0_m
 		return L_1;
 	}
 }
-// Method Definition Index: 65328
+// Method Definition Index: 65339
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CPowerupTimerLoopU3Eb__92_0_m6B1B0FBDBE12CC3A00A39F20DBDD50049EC06952 (U3CU3Ec_tE7C5954DD0D271D0DC9DA0E606E1C53B69E71765* __this, BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* ___0_b, const RuntimeMethod* method) 
 {
 	{
@@ -24396,7 +24454,7 @@ IL_0012:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65329
+// Method Definition Index: 65340
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass64_0__ctor_m0861561269AEB5BF16086CDA48E18CA72C7D70AB (U3CU3Ec__DisplayClass64_0_tC52B12D3CCC41134DAE69ACAD13FB3BF987C779D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24404,7 +24462,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass64_0__ctor_m0861561
 		return;
 	}
 }
-// Method Definition Index: 65330
+// Method Definition Index: 65341
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass64_0_U3CCreateNumberBoxU3Eb__0_m59D4EA6E818592AF02A1D77DF169FC4AF8D5650E (U3CU3Ec__DisplayClass64_0_tC52B12D3CCC41134DAE69ACAD13FB3BF987C779D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24424,7 +24482,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass64_0_U3CCreateNumbe
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65331
+// Method Definition Index: 65342
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass65_0__ctor_m55C1BBCD4B7D331FA92A04C85171B86EAE44BD13 (U3CU3Ec__DisplayClass65_0_t208C5E2F02CD87E7B3061A343C215E58FE508DB9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24432,7 +24490,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass65_0__ctor_m55C1BBC
 		return;
 	}
 }
-// Method Definition Index: 65332
+// Method Definition Index: 65343
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass65_0_U3CCreatePowerupBoxU3Eb__0_mD56C2E3A0CB4AE2C5F4F84EB57A57C946194A1DD (U3CU3Ec__DisplayClass65_0_t208C5E2F02CD87E7B3061A343C215E58FE508DB9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24452,7 +24510,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass65_0_U3CCreatePower
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65333
+// Method Definition Index: 65344
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass79_0__ctor_mEF1D400867B163D0E93C8257DEC6A73F932F7422 (U3CU3Ec__DisplayClass79_0_t1AEF6E5935D623639BA4784A9907B2AA1D84F2D0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24460,7 +24518,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass79_0__ctor_mEF1D400
 		return;
 	}
 }
-// Method Definition Index: 65334
+// Method Definition Index: 65345
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass79_0_U3CSelectBoxU3Eb__0_mB0A64023CFF93E0DB971C6BA965F5502C08D1E13 (U3CU3Ec__DisplayClass79_0_t1AEF6E5935D623639BA4784A9907B2AA1D84F2D0* __this, BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* ___0_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24489,7 +24547,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass79_0_U3CSelectBoxU3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65335
+// Method Definition Index: 65346
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass96_0__ctor_mEA83B5AB5C9E1314C54C3B3F969E493FC65C5467 (U3CU3Ec__DisplayClass96_0_t27DEC26DBD1D7A2A6F1943CF4D1F17AADC91EB51* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24497,7 +24555,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass96_0__ctor_mEA83B5A
 		return;
 	}
 }
-// Method Definition Index: 65336
+// Method Definition Index: 65347
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass96_0_U3CSelectPowerupU3Eb__0_mF212B5FAAFA71B3DD58BB96BF77A81991C98F8B5 (U3CU3Ec__DisplayClass96_0_t27DEC26DBD1D7A2A6F1943CF4D1F17AADC91EB51* __this, BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* ___0_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24526,7 +24584,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass96_0_U3CSelectPower
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65337
+// Method Definition Index: 65348
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedTimerStartU3Ed__99__ctor_mB28EB6DCA700EA7BC668093892C4C8A452BBE31F (U3CDelayedTimerStartU3Ed__99_t1EDC11D9B48770F48169AFFE1E50C401B5F6ECED* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -24536,14 +24594,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedTimerStartU3Ed__99__ctor_mB28E
 		return;
 	}
 }
-// Method Definition Index: 65338
+// Method Definition Index: 65349
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedTimerStartU3Ed__99_System_IDisposable_Dispose_mD7028F2C498BC37F5100913D92E086285B7CD1BC (U3CDelayedTimerStartU3Ed__99_t1EDC11D9B48770F48169AFFE1E50C401B5F6ECED* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65339
+// Method Definition Index: 65350
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CDelayedTimerStartU3Ed__99_MoveNext_mAB633C4C07132BB42CBA91B4F5C81289F546E20F (U3CDelayedTimerStartU3Ed__99_t1EDC11D9B48770F48169AFFE1E50C401B5F6ECED* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24623,7 +24681,7 @@ IL_0051:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65340
+// Method Definition Index: 65351
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedTimerStartU3Ed__99_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m54A5E8E0EB73D244B3DD518FA3BEEB6CDA3BBF35 (U3CDelayedTimerStartU3Ed__99_t1EDC11D9B48770F48169AFFE1E50C401B5F6ECED* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24631,7 +24689,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedTimerStartU3Ed__99_S
 		return L_0;
 	}
 }
-// Method Definition Index: 65341
+// Method Definition Index: 65352
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedTimerStartU3Ed__99_System_Collections_IEnumerator_Reset_m0EC4D676662765C5C1D52CD9BB2964D096515ACA (U3CDelayedTimerStartU3Ed__99_t1EDC11D9B48770F48169AFFE1E50C401B5F6ECED* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24640,7 +24698,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedTimerStartU3Ed__99_System_Coll
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CDelayedTimerStartU3Ed__99_System_Collections_IEnumerator_Reset_m0EC4D676662765C5C1D52CD9BB2964D096515ACA_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65342
+// Method Definition Index: 65353
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedTimerStartU3Ed__99_System_Collections_IEnumerator_get_Current_m397441BF2D417074A9CF6DDD46ED56BEA01B780A (U3CDelayedTimerStartU3Ed__99_t1EDC11D9B48770F48169AFFE1E50C401B5F6ECED* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24656,7 +24714,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedTimerStartU3Ed__99_S
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65343
+// Method Definition Index: 65354
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedTimerStartAfterGridU3Ed__62__ctor_m868645470C65FA3FBB04219987A61B1271BC5ADF (U3CDelayedTimerStartAfterGridU3Ed__62_t10C9526D475492B02EDB3B321EFEDFCEB263BBA6* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -24666,14 +24724,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedTimerStartAfterGridU3Ed__62__c
 		return;
 	}
 }
-// Method Definition Index: 65344
+// Method Definition Index: 65355
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedTimerStartAfterGridU3Ed__62_System_IDisposable_Dispose_m60BF6DAEF6D128D29AD5B1C2F79FE1BF3346667A (U3CDelayedTimerStartAfterGridU3Ed__62_t10C9526D475492B02EDB3B321EFEDFCEB263BBA6* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65345
+// Method Definition Index: 65356
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CDelayedTimerStartAfterGridU3Ed__62_MoveNext_m1BDE0051AFFE4CB93283F91A10CA16E075D416A5 (U3CDelayedTimerStartAfterGridU3Ed__62_t10C9526D475492B02EDB3B321EFEDFCEB263BBA6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24724,7 +24782,7 @@ IL_0027:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65346
+// Method Definition Index: 65357
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedTimerStartAfterGridU3Ed__62_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m85793E0A66CFE5277A6F6078F3E08058A75BF31D (U3CDelayedTimerStartAfterGridU3Ed__62_t10C9526D475492B02EDB3B321EFEDFCEB263BBA6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24732,7 +24790,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedTimerStartAfterGridU
 		return L_0;
 	}
 }
-// Method Definition Index: 65347
+// Method Definition Index: 65358
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedTimerStartAfterGridU3Ed__62_System_Collections_IEnumerator_Reset_mA60AB6CC50688B0BA57CAA4516E2EBECBDDD1A81 (U3CDelayedTimerStartAfterGridU3Ed__62_t10C9526D475492B02EDB3B321EFEDFCEB263BBA6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24741,7 +24799,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedTimerStartAfterGridU3Ed__62_Sy
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CDelayedTimerStartAfterGridU3Ed__62_System_Collections_IEnumerator_Reset_mA60AB6CC50688B0BA57CAA4516E2EBECBDDD1A81_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65348
+// Method Definition Index: 65359
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedTimerStartAfterGridU3Ed__62_System_Collections_IEnumerator_get_Current_mA3B142EEFB28C6CC48732008EC91261E507DB5E4 (U3CDelayedTimerStartAfterGridU3Ed__62_t10C9526D475492B02EDB3B321EFEDFCEB263BBA6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24757,7 +24815,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedTimerStartAfterGridU
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65349
+// Method Definition Index: 65360
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPowerupTimerLoopU3Ed__92__ctor_mE34C2A94CD95E545329834EA6242EB547BC6D42D (U3CPowerupTimerLoopU3Ed__92_tA82A3DCE00A33595E216F7D6725597B49262B3DB* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -24767,14 +24825,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPowerupTimerLoopU3Ed__92__ctor_mE34C2
 		return;
 	}
 }
-// Method Definition Index: 65350
+// Method Definition Index: 65361
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPowerupTimerLoopU3Ed__92_System_IDisposable_Dispose_m403D37F9888244C8F54902DA42092D42391C9EB9 (U3CPowerupTimerLoopU3Ed__92_tA82A3DCE00A33595E216F7D6725597B49262B3DB* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65351
+// Method Definition Index: 65362
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CPowerupTimerLoopU3Ed__92_MoveNext_m95FDF335E459888F0FE85DC433AE6A0D43E29FEC (U3CPowerupTimerLoopU3Ed__92_tA82A3DCE00A33595E216F7D6725597B49262B3DB* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25107,7 +25165,7 @@ IL_01bc:
 		goto IL_0029;
 	}
 }
-// Method Definition Index: 65352
+// Method Definition Index: 65363
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CPowerupTimerLoopU3Ed__92_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m6420A7824026288BC2209B351E984F8E848BD8CD (U3CPowerupTimerLoopU3Ed__92_tA82A3DCE00A33595E216F7D6725597B49262B3DB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25115,7 +25173,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CPowerupTimerLoopU3Ed__92_Sy
 		return L_0;
 	}
 }
-// Method Definition Index: 65353
+// Method Definition Index: 65364
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPowerupTimerLoopU3Ed__92_System_Collections_IEnumerator_Reset_mA3B4E7F8A1EF61559B37C9C258E07CB28A3A0A29 (U3CPowerupTimerLoopU3Ed__92_tA82A3DCE00A33595E216F7D6725597B49262B3DB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25124,7 +25182,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPowerupTimerLoopU3Ed__92_System_Colle
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CPowerupTimerLoopU3Ed__92_System_Collections_IEnumerator_Reset_mA3B4E7F8A1EF61559B37C9C258E07CB28A3A0A29_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65354
+// Method Definition Index: 65365
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CPowerupTimerLoopU3Ed__92_System_Collections_IEnumerator_get_Current_mE581D7C8CDAB30247E41F843652C18660A6CA6A2 (U3CPowerupTimerLoopU3Ed__92_tA82A3DCE00A33595E216F7D6725597B49262B3DB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25140,7 +25198,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CPowerupTimerLoopU3Ed__92_Sy
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65355
+// Method Definition Index: 65366
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCardSwipeDetector_Start_m03A94E1D0B135C2E1CE263C3AE1D4D44CE22719D (OfferCardSwipeDetector_t8A92D3D7515E4CD6DBDDB3EDC24350A68B2C2CA8* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25180,7 +25238,7 @@ IL_0023:
 		return;
 	}
 }
-// Method Definition Index: 65356
+// Method Definition Index: 65367
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCardSwipeDetector_OnPointerDown_m16C6C3A77C466B6BF437DA13D756CE37729F906B (OfferCardSwipeDetector_t8A92D3D7515E4CD6DBDDB3EDC24350A68B2C2CA8* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
 	{
@@ -25210,7 +25268,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 65357
+// Method Definition Index: 65368
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCardSwipeDetector_OnPointerUp_mCDC7BC8C57E7F87A074647992D9C908AF6F93E60 (OfferCardSwipeDetector_t8A92D3D7515E4CD6DBDDB3EDC24350A68B2C2CA8* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25379,7 +25437,7 @@ IL_00df:
 		return;
 	}
 }
-// Method Definition Index: 65358
+// Method Definition Index: 65369
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCardSwipeDetector__ctor_m5174F569E1A2ED72A721DBEEDED41E97B2C50243 (OfferCardSwipeDetector_t8A92D3D7515E4CD6DBDDB3EDC24350A68B2C2CA8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25405,7 +25463,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCardSwipeDetector__ctor_m5174F569E1
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65359
+// Method Definition Index: 65370
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCarouselScaler_Awake_m58BD2606AEB45AD40318768DB4E2ED8546E03FFB (OfferCarouselScaler_tDFA4DC8FB0CE908324FE37413C25F8627BFBFD4A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25568,7 +25626,7 @@ IL_00ed:
 		return;
 	}
 }
-// Method Definition Index: 65360
+// Method Definition Index: 65371
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCarouselScaler_Start_m48A472C7395DD7E9036CE0C67D27434E106F9700 (OfferCarouselScaler_tDFA4DC8FB0CE908324FE37413C25F8627BFBFD4A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25578,7 +25636,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCarouselScaler_Start_m48A472C7395DD
 		return;
 	}
 }
-// Method Definition Index: 65361
+// Method Definition Index: 65372
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCarouselScaler_StoreOriginalOffsets_m477FDD742A74480597B8009AA9A4160A27E35768 (OfferCarouselScaler_tDFA4DC8FB0CE908324FE37413C25F8627BFBFD4A* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, String_t* ___1_elementName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25704,7 +25762,7 @@ IL_001f:
 		return;
 	}
 }
-// Method Definition Index: 65362
+// Method Definition Index: 65373
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCarouselScaler_StoreOriginalSize_m6C8D5EFEECB05D1488E4FBBD80296E40F533252C (OfferCarouselScaler_tDFA4DC8FB0CE908324FE37413C25F8627BFBFD4A* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, String_t* ___1_elementName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25775,7 +25833,7 @@ IL_001f:
 		return;
 	}
 }
-// Method Definition Index: 65363
+// Method Definition Index: 65374
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCarouselScaler_ApplyScaling_m928ECBBB61BB5D0B72E2D41D84F3EF0B0064082A (OfferCarouselScaler_tDFA4DC8FB0CE908324FE37413C25F8627BFBFD4A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26065,7 +26123,7 @@ IL_01ca:
 		return;
 	}
 }
-// Method Definition Index: 65364
+// Method Definition Index: 65375
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCarouselScaler_ScaleByOffset_m3301493E2ED554C183346B5ED9D5B5776ABA8F7B (OfferCarouselScaler_tDFA4DC8FB0CE908324FE37413C25F8627BFBFD4A* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26158,7 +26216,7 @@ IL_0018:
 		return;
 	}
 }
-// Method Definition Index: 65365
+// Method Definition Index: 65376
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCarouselScaler_ScaleBySizeDelta_mDD3977A653208C4669EACD2F23FBA62800814D8F (OfferCarouselScaler_tDFA4DC8FB0CE908324FE37413C25F8627BFBFD4A* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26231,7 +26289,7 @@ IL_0018:
 		return;
 	}
 }
-// Method Definition Index: 65366
+// Method Definition Index: 65377
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCarouselScaler_RecalculateScaling_m6317A6814D091448034CC4E14EE31B897FE6E919 (OfferCarouselScaler_tDFA4DC8FB0CE908324FE37413C25F8627BFBFD4A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26241,7 +26299,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCarouselScaler_RecalculateScaling_m
 		return;
 	}
 }
-// Method Definition Index: 65367
+// Method Definition Index: 65378
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCarouselScaler__ctor_mFE831F740C9FB5D0D66B7357DE22AEE71101D45A (OfferCarouselScaler_tDFA4DC8FB0CE908324FE37413C25F8627BFBFD4A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26295,7 +26353,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCarouselScaler__ctor_mFE831F740C9FB
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65368
+// Method Definition Index: 65379
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_Start_m82243AF50473C9C618ACC9E7ACE0E2F42481BCEE (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26476,7 +26534,7 @@ IL_010b:
 		return;
 	}
 }
-// Method Definition Index: 65369
+// Method Definition Index: 65380
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_OnDestroy_m89C18C85E961DB5136E012E0F884706C731214DE (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26547,7 +26605,7 @@ IL_006a:
 		return;
 	}
 }
-// Method Definition Index: 65370
+// Method Definition Index: 65381
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_OnUserLoggedIn_m1FF22EE27553EEBB3E4A318FD6C37BF1E08E6AB4 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26698,7 +26756,7 @@ IL_00e5:
 		return;
 	}
 }
-// Method Definition Index: 65371
+// Method Definition Index: 65382
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_OnUserLoggedOut_m700F2684A47031F22801A9A2111603CFEC56041A (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26748,7 +26806,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_OnUserLoggedOut_m700F2
 		return;
 	}
 }
-// Method Definition Index: 65372
+// Method Definition Index: 65383
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_OnDailyRewardPanelClosed_m9D6AA578916CE673B10C4D3E792297C7430FE2C7 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26770,7 +26828,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_OnDailyRewardPanelClos
 		return;
 	}
 }
-// Method Definition Index: 65373
+// Method Definition Index: 65384
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OfferPanelManager_MonitorMainMenuActivation_m7445DACAEB8BA71BABE4FBDCB565B6BC1DBB880E (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26789,7 +26847,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OfferPanelManager_MonitorMainM
 		return L_1;
 	}
 }
-// Method Definition Index: 65374
+// Method Definition Index: 65385
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_GenerateRandomPanelIndices_mEC789E4D20037B4D6349ECC5C0B819AC383403D0 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27016,7 +27074,7 @@ IL_00af:
 		return;
 	}
 }
-// Method Definition Index: 65375
+// Method Definition Index: 65386
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_ShowNextOfferPanelInSequence_mB80DE29913B7103A16484902D8659AE8D4A82C22 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27285,7 +27343,7 @@ IL_012e:
 		return;
 	}
 }
-// Method Definition Index: 65376
+// Method Definition Index: 65387
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_ShowRandomOfferPanelWithAnimation_m3A108FEC29D61A01EBE6B7282AB1724372E2CF13 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27295,7 +27353,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_ShowRandomOfferPanelWi
 		return;
 	}
 }
-// Method Definition Index: 65377
+// Method Definition Index: 65388
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_ShowRandomOfferPanel_m86D05C63AADEE1EE0DC018351408636C65591129 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27305,7 +27363,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_ShowRandomOfferPanel_m
 		return;
 	}
 }
-// Method Definition Index: 65378
+// Method Definition Index: 65389
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OfferPanelManager_AnimatePanelScale_mE22D41C752AFADFC84FE96F79DCE70E7A4DEB952 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_panel, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27329,7 +27387,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OfferPanelManager_AnimatePanel
 		return L_2;
 	}
 }
-// Method Definition Index: 65379
+// Method Definition Index: 65390
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_HideAllPanels_m2C9C10DAEB8107D51E8DE85C9808E5A409DB931A (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27413,7 +27471,7 @@ IL_002c:
 		return;
 	}
 }
-// Method Definition Index: 65380
+// Method Definition Index: 65391
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_CloseCurrentPanel_mBAF996C6037D940AEA80CC5EA4E46F4DF1618481 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27533,7 +27591,7 @@ IL_00b1:
 		return;
 	}
 }
-// Method Definition Index: 65381
+// Method Definition Index: 65392
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OfferPanelManager_ShowNextPanelAfterDelay_m80C216B23D6D13D93DA768CF6FAC7E0F2092DE65 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27552,7 +27610,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OfferPanelManager_ShowNextPane
 		return L_1;
 	}
 }
-// Method Definition Index: 65382
+// Method Definition Index: 65393
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OfferPanelManager_MonitorPanelState_mF1BB47CBC9FF964AED5DE1F577754347B26A9E6F (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27571,7 +27629,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OfferPanelManager_MonitorPanel
 		return L_1;
 	}
 }
-// Method Definition Index: 65383
+// Method Definition Index: 65394
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_SetupPanelButtonListeners_m4BDA410DAE8BCC247B2C0ED84450BCD6148B7F27 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_panel, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27739,7 +27797,7 @@ IL_0079:
 		return;
 	}
 }
-// Method Definition Index: 65384
+// Method Definition Index: 65395
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_TestShowRandomPanel_m794735C6BFD84EBF376D608A121B7FEE68685689 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27749,7 +27807,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_TestShowRandomPanel_m7
 		return;
 	}
 }
-// Method Definition Index: 65385
+// Method Definition Index: 65396
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_ResetSessionFlag_mAE0E0FB9637D8B620C49D333CC325B66FF47F2C6 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27765,7 +27823,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_ResetSessionFlag_mAE0E
 		return;
 	}
 }
-// Method Definition Index: 65386
+// Method Definition Index: 65397
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* OfferPanelManager_GetOfferTimestampKey_mF686C388A0E83DC13F68FABDC5666E1A60BF988F (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27799,7 +27857,7 @@ IL_0013:
 		return L_3;
 	}
 }
-// Method Definition Index: 65387
+// Method Definition Index: 65398
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool OfferPanelManager_HasShownOffersToday_mADEEBBCF1A808695D7FCE2AF0F261FDB2D56036F (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27869,7 +27927,7 @@ IL_003a:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65388
+// Method Definition Index: 65399
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_MarkOffersAsShownToday_mA5E503AB85F7657E1718FC9F8D56E6A70A5F79D3 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27914,7 +27972,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_MarkOffersAsShownToday
 		return;
 	}
 }
-// Method Definition Index: 65389
+// Method Definition Index: 65400
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_ResetDailyFlag_m19675E8AD398929ACF94B49A1D92FF711078442A (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27943,7 +28001,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_ResetDailyFlag_m19675E
 		return;
 	}
 }
-// Method Definition Index: 65390
+// Method Definition Index: 65401
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A OfferPanelManager_GetTimeUntilNextOffer_mD645CC213E32F374EBC09F72718F46C9521CF102 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28044,7 +28102,7 @@ IL_0064:
 		return L_15;
 	}
 }
-// Method Definition Index: 65391
+// Method Definition Index: 65402
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OfferPanelManager_UpdateTimeUntilNextOffer_m86CF2ECACBFEDEF1DE868FDB8CABDEFE7D936FDD (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28063,7 +28121,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OfferPanelManager_UpdateTimeUn
 		return L_1;
 	}
 }
-// Method Definition Index: 65392
+// Method Definition Index: 65403
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager__ctor_m844DCE4C41F995A5BC9EF0D58C67B001617C881B (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28213,7 +28271,7 @@ IL_0053:
 		return L_24;
 	}
 }
-// Method Definition Index: 65550
+// Method Definition Index: 65561
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR PlayFabManager_tDE93977FA2FED127B002B4472B4C362CE7929317* PlayFabManager_get_Instance_m2FB283A1AC156A0431480CD98B4795FB2A9DC8F0_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28228,16 +28286,16 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR PlayFabManager_tDE93977FA2FED127B
 		return L_0;
 	}
 }
-// Method Definition Index: 65583
+// Method Definition Index: 65594
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool PlayFabManager_IsLoggedIn_m3EACC5CB157C6391582BF06779CDE2EB3F978E50_inline (PlayFabManager_tDE93977FA2FED127B002B4472B4C362CE7929317* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/PlayFabManager.cs:1228>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/PlayFabManager.cs:1257>
 		bool L_0 = __this->___isLoggedIn;
 		return L_0;
 	}
 }
-// Method Definition Index: 96313
+// Method Definition Index: 96327
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline (Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28519,7 +28577,7 @@ IL_000a:
 		return L_2;
 	}
 }
-// Method Definition Index: 111215
+// Method Definition Index: 111229
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Room_get_Name_m8C466150335A007F72B11711AB64F9F62288D500_inline (Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28543,7 +28601,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect__ctor_m18C3033D135097BE
 		return;
 	}
 }
-// Method Definition Index: 111120
+// Method Definition Index: 111134
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Player_get_NickName_mC1B2AC59B8850ABEB4DA27199675066DC3BF0738_inline (Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28552,7 +28610,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Player_get_NickName_mC1
 		return L_0;
 	}
 }
-// Method Definition Index: 111117
+// Method Definition Index: 111131
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Player_get_ActorNumber_mE177B60195A5329B1E5D3012295DB0098B7A0F3A_inline (Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28561,7 +28619,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Player_get_ActorNumber_mE
 		return L_0;
 	}
 }
-// Method Definition Index: 111223
+// Method Definition Index: 111237
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Room_get_MaxPlayers_mF412674376F33CCDD74FF300F66A2EC644A84920_inline (Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28570,7 +28628,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Room_get_MaxPlayers_mF412
 		return L_0;
 	}
 }
-// Method Definition Index: 111127
+// Method Definition Index: 111141
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Hashtable_tD626399B3ADFD501225241D7366103F35472542A* Player_get_CustomProperties_m398B81FB1DEE02243650B8CB5FBF5C7F1B8928D6_inline (Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28579,7 +28637,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Hashtable_tD626399B3ADFD501225241
 		return L_0;
 	}
 }
-// Method Definition Index: 65097
+// Method Definition Index: 65108
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR LobbyGameObjectData_t8598BBF8A6DF007144529A0494D17C1E7B055FA7* LobbyGameObjectUI_GetCurrentData_mF8FC071C0089CD88A1A4260EFA2988C111587DD3_inline (LobbyGameObjectUI_tAA7D05CB1E96C1F969841144DECD57900212CE7C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28588,7 +28646,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR LobbyGameObjectData_t8598BBF8A6DF
 		return L_0;
 	}
 }
-// Method Definition Index: 97380
+// Method Definition Index: 97394
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Selectable_get_interactable_m17DD0484DC62DCB4467109488D7A599BC85EC112_inline (Selectable_t3251808068A17B8E92FB33590A4C2FA66D456712* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28597,7 +28655,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Selectable_get_interactable_
 		return L_0;
 	}
 }
-// Method Definition Index: 97912
+// Method Definition Index: 97926
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 PointerEventData_get_position_m5BE71C28EB72EFB8435749E4E6E839213AEF458C_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28708,7 +28766,7 @@ IL_0019:
 		return L_7;
 	}
 }
-// Method Definition Index: 96616
+// Method Definition Index: 96630
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* Image_get_sprite_mB2AA377708722E100574F6F75BC102513BB3BCB1_inline (Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28717,7 +28775,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F
 		return L_0;
 	}
 }
-// Method Definition Index: 64478
+// Method Definition Index: 64482
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t AvatarSelector_GetSelectedAvatarIndex_m90208A6930A5971B2E66314D01279CEE4CDAEAC9_inline (AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28787,7 +28845,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 		return L_0;
 	}
 }
-// Method Definition Index: 97432
+// Method Definition Index: 97446
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* Slider_get_handleRect_mF6564572F3D7074E01D17661BD012F5987D328D9_inline (Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28821,11 +28879,11 @@ IL_000c:
 		return L_2;
 	}
 }
-// Method Definition Index: 65584
+// Method Definition Index: 65595
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayFabManager_GetPlayFabId_mF815D7F5F2DD9C470DE728BBDF503FCE79F73126_inline (PlayFabManager_tDE93977FA2FED127B002B4472B4C362CE7929317* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/PlayFabManager.cs:1236>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/PlayFabManager.cs:1265>
 		String_t* L_0 = __this->___playFabId;
 		return L_0;
 	}

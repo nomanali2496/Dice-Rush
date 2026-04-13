@@ -100,6 +100,12 @@ public class GameManager : MonoBehaviour
     private const float CUSTOM_AVATAR_SCALE = 2.0f;
     private bool timerStarted = false; // Flag to prevent multiple timer starts
     private float initialGameTimer; // Original game timer value to reset back to
+
+    // Offline bridge: last known Photon end-time + matching local wall-clock snapshot.
+    // Used to keep the timer accurate when the player briefly loses internet.
+    private double cachedAbsoluteEndTime = 0;       // Photon server timestamp when match ends
+    private double cachedPhotonTimeAtCapture = 0;   // PhotonNetwork.Time at the moment of caching
+    private float  cachedRealTimeAtCapture  = 0f;   // Time.realtimeSinceStartup at the same moment
     public const string GAME_EXTENSION_KEY = "GameExtensionCount"; // Key for tracking time extensions in Room Properties
     
     // Current lobby configuration
@@ -391,6 +397,11 @@ public class GameManager : MonoBehaviour
         lastAwardedCash = 0f;
         lastAwardedChips = 0;
         prizesAwardedForThisMatch = false;
+
+        // Reset offline bridge cache so a stale end-time from a previous match never bleeds through
+        cachedAbsoluteEndTime   = 0;
+        cachedPhotonTimeAtCapture = 0;
+        cachedRealTimeAtCapture  = 0f;
         
         timerCoroutine = StartCoroutine(CountdownBeforeStart());
         Debug.Log($"[GameManager] Starting match with {participantsAtStart.Count} players tracked for recovery.");
@@ -606,17 +617,25 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void UpdateTimerDisplay()
     {
-        // Network Sync: Priority 1 - Use synchronized Photon time if available
-        // Network Sync: Priority 1 - Use absolute finish line if available
+        // Network Sync: Priority 1 - Use absolute finish line from Photon if available
         if (PhotonNetwork.InRoom)
         {
             if (PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(LobbyNetworkManager.GAME_END_TIME_KEY, out object endTimeObj))
             {
                 double absoluteEndTime = (double)endTimeObj;
                 float timeRemaining = (float)(absoluteEndTime - PhotonNetwork.Time);
-                
-                // If we are still in the 3s countdown period, timeRemaining will be > 60s
-                // We clamp it so the display shows the full game duration until the match actually starts.
+
+                // ── Offline bridge: cache every successful Photon read ──────────────
+                // We store both the Photon timestamp and the matching real wall-clock time.
+                // If the player disconnects, we use the wall-clock delta to extrapolate
+                // instead of drifting on raw local frame ticks.
+                cachedAbsoluteEndTime    = absoluteEndTime;
+                cachedPhotonTimeAtCapture = PhotonNetwork.Time;
+                cachedRealTimeAtCapture   = Time.realtimeSinceStartup;
+                // ────────────────────────────────────────────────────────────────────
+
+                // If we are still in the 3s countdown period, timeRemaining will be > gameTimer.
+                // Clamp so the display shows the full game duration until the match actually starts.
                 if (timeRemaining > gameTimer)
                 {
                     currentTimer = gameTimer;
@@ -635,6 +654,22 @@ public class GameManager : MonoBehaviour
                 float remaining = gameTimer - (networkElapsedTime - countdownDurationTotal);
                 currentTimer = (networkElapsedTime < countdownDurationTotal) ? gameTimer : Mathf.Max(0, remaining);
             }
+        }
+        else if (cachedAbsoluteEndTime > 0)
+        {
+            // ── Offline bridge: Photon is unreachable (disconnect / reconnecting) ──
+            // Time.realtimeSinceStartup is a pure OS wall-clock — it keeps running
+            // at exactly the same rate as PhotonNetwork.Time and is unaffected by
+            // frame drops, Time.timeScale, or app throttling on mobile.
+            // By measuring how many real seconds passed since we last had a Photon
+            // reading, we can estimate where PhotonNetwork.Time is RIGHT NOW and
+            // derive an accurate remaining time — eliminating the 3–5 s drift.
+            float  realElapsed        = Time.realtimeSinceStartup - cachedRealTimeAtCapture;
+            double estimatedPhotonNow = cachedPhotonTimeAtCapture  + (double)realElapsed;
+            float  timeRemaining      = (float)(cachedAbsoluteEndTime - estimatedPhotonNow);
+            currentTimer = Mathf.Max(0, timeRemaining);
+            Debug.Log($"[GameManager] 📡 OFFLINE BRIDGE: ~{timeRemaining:F1}s remaining (wall-clock elapsed: {realElapsed:F1}s)");
+            // ────────────────────────────────────────────────────────────────────────
         }
 
         int seconds = Mathf.CeilToInt(currentTimer);
