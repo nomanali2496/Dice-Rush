@@ -106,6 +106,11 @@ public class GameManager : MonoBehaviour
     private double cachedAbsoluteEndTime = 0;       // Photon server timestamp when match ends
     private double cachedPhotonTimeAtCapture = 0;   // PhotonNetwork.Time at the moment of caching
     private float  cachedRealTimeAtCapture  = 0f;   // Time.realtimeSinceStartup at the same moment
+
+    // Silent-reconnect detector: tracks PhotonNetwork.InRoom state every frame.
+    // OnJoinedRoom is NOT called when Photon silently restores a dropped connection
+    // within its keep-alive window, so we must detect the false→true flip here.
+    private bool wasInRoomLastFrame = false;
     public const string GAME_EXTENSION_KEY = "GameExtensionCount"; // Key for tracking time extensions in Room Properties
     
     // Current lobby configuration
@@ -133,6 +138,12 @@ public class GameManager : MonoBehaviour
     private bool prizesAwardedForThisMatch = false; // Prevents infinite loop/duplicate prizes
     
     public (float cash, int chips) GetLastAwardedPrize() => (lastAwardedCash, lastAwardedChips);
+    
+    // Retry logic for PlayFab sync (handles "Cannot connect" warm-up issues)
+    private int playfabRetryCount = 0;
+    private const int MAX_PLAYFAB_RETRIES = 5;
+    private Coroutine retryCoroutine;
+    private Coroutine reconnectSyncCoroutine;
     
     private void Start()
     {
@@ -212,17 +223,34 @@ public class GameManager : MonoBehaviour
             OnGameplayScreenActivated();
         }
 
-        // Periodically refresh network cache while game is active to catch late-arriving data
-        if (isGameActive && Photon.Pun.PhotonNetwork.InRoom)
+        // SILENT RECONNECT DETECTOR ───────────────────────────────────────────────────────
+        // When internet drops and comes back within Photon's keep-alive window (~10–15s),
+        // Photon silently restores the connection WITHOUT firing OnJoinedRoom or OnConnected.
+        // No callback exists for this case, so we detect it by watching the frame-by-frame
+        // state of PhotonNetwork.InRoom.
+        bool isInRoomNow = Photon.Pun.PhotonNetwork.InRoom;
+        
+        // RECOVERY FIX: Detect reconnect and start a DELAYED sync to allow
+        // DNS and SSL/Socket warm-up. This fixes the "Cannot connect" errors.
+        if (!wasInRoomLastFrame && isInRoomNow)
         {
-            // Increased interval slightly to 3s for better performance on devices
-            if (Time.time - lastCacheRefreshTime > 3.0f)
-            {
-                lastCacheRefreshTime = Time.time;
-                CacheNetworkPlayerNames();
-            }
+            if (reconnectSyncCoroutine != null) StopCoroutine(reconnectSyncCoroutine);
+            reconnectSyncCoroutine = StartCoroutine(DelayedReconnectSync());
         }
+        wasInRoomLastFrame = isInRoomNow;
+        // ─────────────────────────────────────────────────────────────────────────────────
     }
+
+    private System.Collections.IEnumerator DelayedReconnectSync()
+    {
+        Debug.Log("[GameManager] 🔌 Reconnect detected. Waiting 3 seconds for network warm-up before syncing...");
+        yield return new WaitForSeconds(3.0f);
+        
+        Debug.Log("[GameManager] 🔌 Warm-up complete. Triggering full re-sync.");
+        ReSyncScoreToPhoton();
+        reconnectSyncCoroutine = null;
+    }
+
 
     /// <summary>
     /// Called when a pending reward is claimed from PlayFab (match won while away)
@@ -877,7 +905,8 @@ public class GameManager : MonoBehaviour
         }
 
         // 2. Record the time of this score achievement for tie-breakers
-        double currentTotalTime = PhotonNetwork.InRoom ? PhotonNetwork.Time : (double)Time.time;
+        // FIX: Use estimated server time so offline selections use the SAME scale as online ones.
+        double currentTotalTime = GetEstimatedServerTime();
         playerLastScoreTime[ownerKey] = currentTotalTime;
 
         // 3. Update local score in Photon (only if it's the local player's board)
@@ -906,7 +935,17 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void SyncMatchDataToPlayFab(int score, double timestamp)
     {
-        if (PlayFabManager.Instance == null || !PlayFabManager.Instance.IsLoggedIn()) return;
+        if (PlayFabManager.Instance == null)
+        {
+            Debug.LogWarning("[GameManager] ❌ Cannot sync to PlayFab: PlayFabManager.Instance is NULL");
+            return;
+        }
+
+        if (!PlayFabManager.Instance.IsLoggedIn())
+        {
+            Debug.LogWarning("[GameManager] ❌ Cannot sync to PlayFab: Player is NOT logged into PlayFab");
+            return;
+        }
 
         var data = new Dictionary<string, string>
         {
@@ -914,38 +953,94 @@ public class GameManager : MonoBehaviour
             { PLAYFAB_MATCH_TIME_KEY, timestamp.ToString("F2") }
         };
 
+        Debug.Log($"[GameManager] ☁️ Attempting PlayFab UpdateUserData: Score={score}, Time={timestamp:F2}...");
+
         PlayFab.PlayFabClientAPI.UpdateUserData(new PlayFab.ClientModels.UpdateUserDataRequest
         {
             Data = data,
             Permission = PlayFab.ClientModels.UserDataPermission.Public
         }, 
-        result => Debug.Log($"[GameManager] Score Checkpoint: {score} at {timestamp:F2}"),
-        error => Debug.LogWarning($"[GameManager] Failed to checkpoint score: {error.GenerateErrorReport()}")
+        result => {
+            playfabRetryCount = 0; // Reset counter on success
+            Debug.Log($"[GameManager] ✅ PlayFab Sync SUCCESS! (Score: {score})");
+        },
+        error => {
+            bool isConnectionError = error.Error == PlayFab.PlayFabErrorCode.ServiceUnavailable || 
+                                    error.ErrorMessage.Contains("Cannot connect") ||
+                                    error.ErrorMessage.Contains("destination host");
+
+            if (isConnectionError && playfabRetryCount < MAX_PLAYFAB_RETRIES && isGameActive)
+            {
+                playfabRetryCount++;
+                Debug.LogWarning($"[GameManager] ⚠️ PlayFab sync failed (connection warm-up). Retrying in 5s... (Attempt {playfabRetryCount}/{MAX_PLAYFAB_RETRIES})");
+                
+                if (retryCoroutine != null) StopCoroutine(retryCoroutine);
+                retryCoroutine = StartCoroutine(RetrySync(score, timestamp));
+            }
+            else
+            {
+                Debug.LogWarning($"[GameManager] ❌ PlayFab Sync FAILED: {error.GenerateErrorReport()} (Score: {score})");
+            }
+        }
         );
     }
 
-    /// <summary>
-    /// Called by LobbyNetworkManager when this client rejoins a Photon room mid-game.
-    /// Re-pushes the current local box-selection score to Photon so all other clients
-    /// (especially the Master Client computing final rankings) see the real score and
-    /// not the stale pre-disconnect value. Without this, boxes selected while offline
-    /// would appear as zero to everyone else, causing a wrong winner decision.
-    /// </summary>
+    private System.Collections.IEnumerator RetrySync(int score, double timestamp)
+    {
+        yield return new WaitForSeconds(5.0f);
+        SyncMatchDataToPlayFab(score, timestamp);
+        retryCoroutine = null;
+    }
+
     public void ReSyncScoreToPhoton()
     {
-        if (!isGameActive || playerNumberGrid == null || LobbyNetworkManager.Instance == null) return;
+        if (playerNumberGrid == null)
+        {
+            Debug.LogWarning("[GameManager] ⚠️ ReSyncScoreToPhoton aborted: playerNumberGrid is NULL");
+            return;
+        }
+
+        if (LobbyNetworkManager.Instance == null)
+        {
+            Debug.LogWarning("[GameManager] ⚠️ ReSyncScoreToPhoton aborted: LobbyNetworkManager.Instance is NULL");
+            return;
+        }
 
         int currentScore = 0;
-        foreach (var kvp in playerNumberGrid.GetSelectionCounts())
-            currentScore += kvp.Value;
+        Dictionary<string, int> counts = playerNumberGrid.GetSelectionCounts();
+        foreach (var kvp in counts) currentScore += kvp.Value;
 
         double currentTime = playerLastScoreTime.ContainsKey(-1)
             ? playerLastScoreTime[-1]
-            : (PhotonNetwork.InRoom ? PhotonNetwork.Time : (double)Time.time);
+            : GetEstimatedServerTime();
 
+        Debug.Log($"[GameManager] 🔄 Re-Sync Initiated: Grid Score={currentScore}, Grid Boxes={counts.Count}, Time={currentTime:F2}");
+
+        // 1. Sync to Photon
         LobbyNetworkManager.Instance.UpdateLocalPlayerScore(currentScore, currentTime);
-        Debug.Log($"[GameManager] 🔄 ReSyncScoreToPhoton after reconnect: score={currentScore}, time={currentTime:F2}");
+        
+        // 2. Sync to PlayFab
+        SyncMatchDataToPlayFab(currentScore, currentTime);
     }
+
+    /// <summary>
+    /// Returns the current Photon server time if online, or an estimated server time
+    /// using the local wall-clock bridge if offline. Ensures tie-breaker scales match.
+    /// </summary>
+    public double GetEstimatedServerTime()
+    {
+        if (PhotonNetwork.InRoom) return PhotonNetwork.Time;
+
+        // Estimate: cachedServerTime + (currentLocalTime - cachedLocalTime)
+        if (cachedPhotonTimeAtCapture > 0)
+        {
+            float elapsed = Time.realtimeSinceStartup - cachedRealTimeAtCapture;
+            return cachedPhotonTimeAtCapture + (double)elapsed;
+        }
+
+        return (double)Time.time; // Fallback
+    }
+
 
 
     /// <summary>
@@ -1071,10 +1166,12 @@ public class GameManager : MonoBehaviour
             LobbyNetworkManager.Instance.MarkGameAsFinished();
         }
 
-        // Get rankings with recovery logic for disconnected players
-        StartCoroutine(FetchDisconnectedPlayerScores(recoveredScores => {
+        // GRACE PERIOD: Wait 1 second before determining winner.
+        // This gives reconnected players' score packets time to arrive at the Master Client.
+        // Without this, the Master Client decides the winner INSTANTLY using stale data.
+        StartCoroutine(FetchDisconnectedPlayerScoresWithDelay(onComplete => {
             // Get rankings (top 3) including missing players from PlayFab
-            var rankings = GetRankings(recoveredScores);
+            var rankings = GetRankings(onComplete);
             
             // Award prizes based on lobby configuration
             AwardPrizes(rankings);
@@ -1082,6 +1179,15 @@ public class GameManager : MonoBehaviour
             // Show winner screen with rankings
             ShowWinnerScreen(rankings);
         }));
+    }
+
+    private System.Collections.IEnumerator FetchDisconnectedPlayerScoresWithDelay(System.Action<Dictionary<int, (int score, double time, string pfId)>> onComplete)
+    {
+        // Wait for network propagation
+        yield return new WaitForSeconds(1.0f);
+        
+        // Proceed with original recovery logic
+        yield return StartCoroutine(FetchDisconnectedPlayerScores(onComplete));
     }
     
     /// <summary>
@@ -1324,8 +1430,8 @@ public class GameManager : MonoBehaviour
                 string[] parts = m.Split(':');
                 if (parts.Length == 2 && int.TryParse(parts[0], out int actorNo))
                 {
-                    // Always treat other human players as "missing" for score recovery purposes
-                    // to ensure we have their ABSOLUTE final score from PlayFab.
+                    // RECOVERY: Always fetch PlayFab stats for other human players as a backup truth.
+                    // We will compare this with live Photon data later and take the HIGHER value.
                     if (actorNo == PhotonNetwork.LocalPlayer.ActorNumber) continue;
 
                     // Prioritize local cache, fallback to room property
@@ -1502,18 +1608,35 @@ public class GameManager : MonoBehaviour
                 double time = 0;
                 string pfId = "";
 
-                if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_SCORE_KEY, out object scoreObj)) score = (int)scoreObj;
-                if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_SCORE_TIME_KEY, out object timeObj)) time = (double)timeObj;
+                // 1. Get live data from Photon room properties
+                if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_SCORE_KEY, out object scoreObj)) 
+                {
+                    // Use Convert.ToInt32 to safely handle byte/short variants from network
+                    score = System.Convert.ToInt32(scoreObj); 
+                }
+                
+                if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_SCORE_TIME_KEY, out object timeObj)) 
+                {
+                    time = System.Convert.ToDouble(timeObj);
+                }
+                
                 if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_ID_KEY, out object idObj)) pfId = (string)idObj;
 
-                // PRIORITY: If we have recovered server scores from PlayFab for THIS player, 
-                // use them regardless of whether they are still active in the room.
-                // This ensures we use the ABSOLUTE source of truth (PlayFab) for everyone.
+                // 2. HIGHEST SCORE WINS: If PlayFab server has a HIGHER score than the live Photon room,
+                // it means the PlayFab sync was more reliable or the room property is lagging.
+                // Since scores only go up, the highest value is the most "True" one.
                 if (recoveredScores != null && recoveredScores.TryGetValue(p.ActorNumber, out var rec))
                 {
-                    score = rec.score;
-                    time = rec.time;
-                    Debug.Log($"[GameManager] Using final Server Score ({score}) for player {p.ActorNumber}");
+                    if (rec.score > score)
+                    {
+                        score = rec.score;
+                        time = rec.time;
+                        Debug.Log($"[GameManager] {p.NickName}: PlayFab score ({score}) is HIGHER than Photon ({scoreObj ?? 0}). Using PlayFab.");
+                    }
+                    else
+                    {
+                        Debug.Log($"[GameManager] {p.NickName}: Photon score ({score}) is higher/equal to PlayFab ({rec.score}). Using Photon.");
+                    }
                 }
 
                 if (score == 0 && time == 0) time = 9999.0;
