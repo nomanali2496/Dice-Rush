@@ -116,8 +116,15 @@ public class AuthenticationManager : MonoBehaviour
             ShowSplashScreenPanel();
             SetLoadingState(false);
             UpdateStatusText("");
+            
+            // CRITICAL FIX: We must call LoadPlayerData even if already logged in.
+            // This ensures CheckForPendingRewards runs to show the winner screen 
+            // if the player won a prize while away. The DIRECT_PRIZE_KEY handles
+            // preventing duplicate "ghost" screens if they already saw it live.
+            PlayFabManager.Instance.LoadPlayerData();
+            
             OnAuthenticationSuccess?.Invoke();
-            return; // Don't attempt auto-login, user is already logged in
+            return; // Already logged in, no need for auto-login
         }
         
         // If not logged in, attempt auto-login (will show login panel if auto-login fails)

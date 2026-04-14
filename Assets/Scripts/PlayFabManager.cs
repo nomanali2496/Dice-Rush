@@ -886,8 +886,13 @@ public class PlayFabManager : MonoBehaviour
     /// </summary>
     private void CheckForPendingRewards(GetUserDataResult regularResult, GetUserDataResult roResult)
     {
-        // Ensure the lock is clean
-        isCheckingRewards = false;
+        // REAL LOCK: If we are already processing rewards, don't start a second parallel check.
+        // This prevents the winner screen from showing twice if LoadPlayerData is called rapidly.
+        if (isCheckingRewards)
+        {
+            Debug.Log("[PlayFabManager] Rewards check already in progress, skipping duplicate call.");
+            return;
+        }
 
         if (regularResult == null || regularResult.Data == null) 
         {
@@ -906,39 +911,56 @@ public class PlayFabManager : MonoBehaviour
         }
 
         Debug.Log($"[PlayFabManager] 🔍 Searching through {combinedData.Count} fields for pending rewards...");
-        foreach (var key in combinedData.Keys) {
-             Debug.Log($"[PlayFabManager] -> Data Slot Found: {key}");
-        }
-
+        
         bool hasCash  = combinedData.ContainsKey(PENDING_CASH_KEY)  && !string.IsNullOrEmpty(combinedData[PENDING_CASH_KEY].Value);
         bool hasChips = combinedData.ContainsKey(PENDING_CHIPS_KEY) && !string.IsNullOrEmpty(combinedData[PENDING_CHIPS_KEY].Value);
+        bool hasDirectPrizeFlag = combinedData.ContainsKey(DIRECT_PRIZE_KEY);
+
+        // STALE FLAG CLEANUP ────────────────────────────────────────────────────────────
+        // If we have the flag but NO rewards, the flag was left over from a match where 
+        // the player saw the winner screen live and CloudScript never wrote a backup.
+        // Clear it now so it doesn't block legitimate future rewards.
+        if (!hasCash && !hasChips && hasDirectPrizeFlag)
+        {
+            Debug.Log("[PlayFabManager] 🧹 Found stale DirectPrizeReceived flag with no rewards. Clearing...");
+            PlayFabClientAPI.UpdateUserData(
+                new UpdateUserDataRequest { KeysToRemove = new List<string> { DIRECT_PRIZE_KEY } },
+                _ => Debug.Log("[PlayFabManager] ✅ Stale flag removed."),
+                null
+            );
+        }
 
         // GHOST REWARD GUARD ────────────────────────────────────────────────────────────
-        // If DirectPrizeReceived is set, the player already collected this reward live
-        // during the same match session (they reconnected before the game ended).
-        // Any pending reward in PlayFab right now is a ghost duplicate written by the
-        // Master Client's CloudScript AFTER our direct award. Skip the winner screen,
-        // clear all pending keys, and delete the witness flag.
-        if ((hasCash || hasChips) && combinedData.ContainsKey(DIRECT_PRIZE_KEY))
+        // If DirectPrizeReceived is set, the player already collected this reward live.
+        // Skip display, clear ghost keys, and remove the witness flag.
+        if ((hasCash || hasChips) && hasDirectPrizeFlag)
         {
-            Debug.Log("[PlayFabManager] 🛡️ DirectPrizeReceived flag found — pending reward is a ghost duplicate. Clearing without showing winner screen.");
+            Debug.Log("[PlayFabManager] 🛡️ DirectPrizeReceived flag found — pending reward is a ghost duplicate. Clearing...");
+            isCheckingRewards = true; // Lock while clearing
+            
             var clearGhost = new ExecuteCloudScriptRequest { FunctionName = "ClearPendingRewards" };
             PlayFabClientAPI.ExecuteCloudScript(clearGhost,
                 res => {
                     Debug.Log("[PlayFabManager] ✅ Ghost duplicate pending reward cleared.");
-                    // Also delete the witness flag from regular user data
+                    // Also delete the witness flag
                     PlayFabClientAPI.UpdateUserData(
-                        new UpdateUserDataRequest
-                        {
-                            KeysToRemove = new System.Collections.Generic.List<string> { DIRECT_PRIZE_KEY }
+                        new UpdateUserDataRequest { KeysToRemove = new List<string> { DIRECT_PRIZE_KEY } },
+                        _ => {
+                            Debug.Log("[PlayFabManager] ✅ Ghost flag removed.");
+                            isCheckingRewards = false;
                         },
-                        _ => Debug.Log("[PlayFabManager] ✅ DirectPrizeReceived flag removed."),
-                        e => Debug.LogWarning("[PlayFabManager] ⚠️ Could not remove DirectPrizeReceived flag: " + e.GenerateErrorReport())
+                        e => {
+                            Debug.LogWarning("[PlayFabManager] ⚠️ Could not remove Ghost flag: " + e.GenerateErrorReport());
+                            isCheckingRewards = false;
+                        }
                     );
                 },
-                err => Debug.LogWarning("[PlayFabManager] ⚠️ Failed to clear ghost duplicate: " + err.GenerateErrorReport())
+                err => {
+                    Debug.LogWarning("[PlayFabManager] ⚠️ Failed to clear ghost duplicate: " + err.GenerateErrorReport());
+                    isCheckingRewards = false;
+                }
             );
-            return; // Do NOT show the winner screen
+            return; 
         }
         // ───────────────────────────────────────────────────────────────────────────────
 
@@ -966,16 +988,16 @@ public class PlayFabManager : MonoBehaviour
                 // Notify UI
                 OnRewardClaimed?.Invoke(msg, cashVal, chipVal, rankingsJson);
                 
-                // CRITICAL LOOP FIX: Call CloudScript to clear Read-Only data (Client cannot clear it alone)
+                // CRITICAL LOOP FIX: Call CloudScript to clear Read-Only data
                 var clearRequest = new ExecuteCloudScriptRequest { FunctionName = "ClearPendingRewards" };
                 PlayFabClientAPI.ExecuteCloudScript(clearRequest, 
                     res => {
-                        Debug.Log("[PlayFabManager] Pending rewards successfully cleared from server via CloudScript.");
+                        Debug.Log("[PlayFabManager] Pending rewards successfully cleared from server.");
                         isCheckingRewards = false;
-                        SavePlayerData(); // Persist final totals
+                        SavePlayerData(); 
                     }, 
                     err => {
-                        Debug.LogWarning("[PlayFabManager] Failed to clear rewards via CloudScript: " + err.GenerateErrorReport());
+                        Debug.LogWarning("[PlayFabManager] Failed to clear rewards: " + err.GenerateErrorReport());
                         isCheckingRewards = false;
                     }
                 );
@@ -986,7 +1008,6 @@ public class PlayFabManager : MonoBehaviour
             }
         }
     }
-
     #endregion
 
     #region Currency Management
