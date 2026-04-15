@@ -21,3 +21,5 @@
 81	4070	7977734515077581	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	726f0d8088dee480
 9	4077	7977734515097530	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	d3d013f83209d873
 4078	4204	7977734516459875	D:/GitHub/Dice-Rush/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/485l682o/obj/arm64-v8a/libgame.so	bc0996bd71c3019e
+19	526	7979609373290545	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	cbd7eeb18ef9cd16
+527	780	7979609375426124	D:/GitHub/Dice-Rush/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/485l682o/obj/arm64-v8a/libswappywrapper.so	31d8f0052710f3f9

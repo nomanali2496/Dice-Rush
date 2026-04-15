@@ -29,7 +29,7 @@ public class PlayFabManager : MonoBehaviour
     // Witness flag written by the local client when it receives its prize directly.
     // If this key exists when CheckForPendingRewards runs, the player already got
     // their reward live — any pending reward in PlayFab is a ghost duplicate.
-    public const string DIRECT_PRIZE_KEY = "DirectPrizeReceived";
+    // public const string DIRECT_PRIZE_KEY = "DirectPrizeReceived"; // DEPRECATED - We now show all rewards from PlayFab
     
     private string playFabId;
     private bool isLoggedIn = false;
@@ -914,55 +914,7 @@ public class PlayFabManager : MonoBehaviour
         
         bool hasCash  = combinedData.ContainsKey(PENDING_CASH_KEY)  && !string.IsNullOrEmpty(combinedData[PENDING_CASH_KEY].Value);
         bool hasChips = combinedData.ContainsKey(PENDING_CHIPS_KEY) && !string.IsNullOrEmpty(combinedData[PENDING_CHIPS_KEY].Value);
-        bool hasDirectPrizeFlag = combinedData.ContainsKey(DIRECT_PRIZE_KEY);
 
-        // STALE FLAG CLEANUP ────────────────────────────────────────────────────────────
-        // If we have the flag but NO rewards, the flag was left over from a match where 
-        // the player saw the winner screen live and CloudScript never wrote a backup.
-        // Clear it now so it doesn't block legitimate future rewards.
-        if (!hasCash && !hasChips && hasDirectPrizeFlag)
-        {
-            Debug.Log("[PlayFabManager] 🧹 Found stale DirectPrizeReceived flag with no rewards. Clearing...");
-            PlayFabClientAPI.UpdateUserData(
-                new UpdateUserDataRequest { KeysToRemove = new List<string> { DIRECT_PRIZE_KEY } },
-                _ => Debug.Log("[PlayFabManager] ✅ Stale flag removed."),
-                null
-            );
-        }
-
-        // GHOST REWARD GUARD ────────────────────────────────────────────────────────────
-        // If DirectPrizeReceived is set, the player already collected this reward live.
-        // Skip display, clear ghost keys, and remove the witness flag.
-        if ((hasCash || hasChips) && hasDirectPrizeFlag)
-        {
-            Debug.Log("[PlayFabManager] 🛡️ DirectPrizeReceived flag found — pending reward is a ghost duplicate. Clearing...");
-            isCheckingRewards = true; // Lock while clearing
-            
-            var clearGhost = new ExecuteCloudScriptRequest { FunctionName = "ClearPendingRewards" };
-            PlayFabClientAPI.ExecuteCloudScript(clearGhost,
-                res => {
-                    Debug.Log("[PlayFabManager] ✅ Ghost duplicate pending reward cleared.");
-                    // Also delete the witness flag
-                    PlayFabClientAPI.UpdateUserData(
-                        new UpdateUserDataRequest { KeysToRemove = new List<string> { DIRECT_PRIZE_KEY } },
-                        _ => {
-                            Debug.Log("[PlayFabManager] ✅ Ghost flag removed.");
-                            isCheckingRewards = false;
-                        },
-                        e => {
-                            Debug.LogWarning("[PlayFabManager] ⚠️ Could not remove Ghost flag: " + e.GenerateErrorReport());
-                            isCheckingRewards = false;
-                        }
-                    );
-                },
-                err => {
-                    Debug.LogWarning("[PlayFabManager] ⚠️ Failed to clear ghost duplicate: " + err.GenerateErrorReport());
-                    isCheckingRewards = false;
-                }
-            );
-            return; 
-        }
-        // ───────────────────────────────────────────────────────────────────────────────
 
         if (hasCash || hasChips)
         {

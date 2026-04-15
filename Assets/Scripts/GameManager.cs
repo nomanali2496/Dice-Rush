@@ -264,6 +264,9 @@ public class GameManager : MonoBehaviour
     private void OnOfflineRewardClaimed(string message, float cash, int chips, string rankingsJson)
     {
         Debug.Log($"[GameManager] 🏆 Offline reward DETECTED: '{message}' | Cash: {cash} | Chips: {chips}");
+
+        // NEW: Hide the loading screen now that we are ready to show the winner screen
+        if (calculateLoadingScreen != null) calculateLoadingScreen.SetActive(false);
         
         // 0. Force Profile Image Load FIRST so it's ready for DisplayPlace
         LoadPlayerProfileImage();
@@ -840,10 +843,8 @@ public class GameManager : MonoBehaviour
             var rankings = GetRankings(recoveredScores);
             
             // Award prizes based on lobby configuration
+            // This now triggers CloudScript — winner screen will show automatically when PlayFab confirms rewards.
             AwardPrizes(rankings);
-            
-            // Show winner screen with rankings
-            ShowWinnerScreen(rankings);
         }));
     }
 
@@ -1213,18 +1214,14 @@ public class GameManager : MonoBehaviour
             LobbyNetworkManager.Instance.MarkGameAsFinished();
         }
 
-        // GRACE PERIOD: Wait 1 second before determining winner.
-        // This gives reconnected players' score packets time to arrive at the Master Client.
-        // Without this, the Master Client decides the winner INSTANTLY using stale data.
+        // have had enough time to sync their final board to PlayFab after the board was filled.
         StartCoroutine(FetchDisconnectedPlayerScoresWithDelay(onComplete => {
             // Get rankings (top 3) including missing players from PlayFab
             var rankings = GetRankings(onComplete);
             
             // Award prizes based on lobby configuration
+            // This now triggers CloudScript — winner screen will show automatically when PlayFab confirms rewards.
             AwardPrizes(rankings);
-            
-            // Show winner screen with rankings
-            ShowWinnerScreen(rankings);
         }));
     }
 
@@ -1467,15 +1464,6 @@ public class GameManager : MonoBehaviour
                 });
             }
 
-            // Wait for all async requests (timeout: 5 seconds)
-            float offlineTimeout = Time.time + 5.0f;
-            while (offlinePendingRequests > 0 && Time.time < offlineTimeout) yield return null;
-
-            // Hide the loading screen just before showing the results
-            if (calculateLoadingScreen != null)
-            {
-                calculateLoadingScreen.SetActive(false);
-            }
 
             onComplete?.Invoke(recoveredData);
             yield break;
@@ -1522,11 +1510,6 @@ public class GameManager : MonoBehaviour
 
         if (missingPlayers.Count == 0)
         {
-            // Hide the loading screen just before showing the results
-            if (calculateLoadingScreen != null)
-            {
-                calculateLoadingScreen.SetActive(false);
-            }
 
             onComplete?.Invoke(recoveredData);
             yield break;
@@ -1623,11 +1606,7 @@ public class GameManager : MonoBehaviour
         float fetchTimeout = Time.time + 5.0f; 
         while (pendingRequests > 0 && Time.time < fetchTimeout) yield return null;
         
-        // Hide the loading screen just before showing the results
-        if (calculateLoadingScreen != null)
-        {
-            calculateLoadingScreen.SetActive(false);
-        }
+        // REMOVED: calculateLoadingScreen.SetActive(false);
 
         onComplete?.Invoke(recoveredData);
     }
@@ -3326,8 +3305,6 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        // SAFETY LOCK: Only award prizes ONCE per match.
-        // This prevents infinite loops triggered by UI refreshes or late-arriving network data.
         if (prizesAwardedForThisMatch)
         {
             Debug.Log("[GameManager] 🔒 Prizes already awarded for this match. Skipping duplicate award phase.");
@@ -3336,16 +3313,73 @@ public class GameManager : MonoBehaviour
 
         prizesAwardedForThisMatch = true;
         Debug.Log("[GameManager] 🔒 Prize award lock ENGAGED. Only 1 award phase allowed per match.");
-        
-        // Award prizes to top players
-        // We always loop up to 3 slots but only if they were HUMAN participants at start
-        int maxPrizes = Mathf.Min(participantsAtStart.Count, 3);
-        Debug.Log($"[GameManager] Awarding prizes for top {maxPrizes} human participants.");
-        
+
+        // 1. Create a snapshot of the TOP 3 rankings to show full podium for everyone
+        OfflinePodiumSnapshot snapshot = new OfflinePodiumSnapshot();
+        for (int j = 0; j < rankings.Count && j < 3; j++)
+        {
+            string pName = GetWinnerName(rankings[j].playerType, rankings[j].cpuIndex);
+            int pAvatarIdx = 0;
+            string pCustomBase64 = "";
+            
+            if (rankings[j].playerType == PlayerType.Player) 
+            {
+                if (rankings[j].cpuIndex == -1) // Local Player
+                {
+                    pName = PlayFabManager.Instance.currentPlayerData.playerName;
+                    pAvatarIdx = PlayFabManager.Instance.currentPlayerData.selectedAvatarIndex;
+                    
+                    if (mainMenuAvatarDisplay != null && mainMenuAvatarDisplay.IsShowingCustomAvatar())
+                    {
+                        Sprite s = mainMenuAvatarDisplay.GetCurrentAvatarSprite();
+                        if (s != null && s.texture != null)
+                        {
+                            try { pCustomBase64 = System.Convert.ToBase64String(s.texture.EncodeToJPG(50)); } catch { }
+                        }
+                    }
+                }
+                else // Other Humans
+                {
+                    int actorNo = Mathf.Abs(rankings[j].cpuIndex + 100);
+                    cachedNetworkAvatarIndices.TryGetValue(actorNo, out pAvatarIdx);
+                    
+                    if (Photon.Pun.PhotonNetwork.CurrentRoom != null && Photon.Pun.PhotonNetwork.CurrentRoom.Players.ContainsKey(actorNo))
+                    {
+                        var p = Photon.Pun.PhotonNetwork.CurrentRoom.GetPlayer(actorNo);
+                        if (p != null && p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_CUSTOM_IMAGE_KEY, out object imageDataObj))
+                        {
+                            pCustomBase64 = System.Convert.ToBase64String((byte[])imageDataObj);
+                        }
+                    }
+                    
+                    if (string.IsNullOrEmpty(pCustomBase64) && cachedNetworkAvatars.TryGetValue(actorNo, out Sprite cachedSprite))
+                    {
+                        if (cachedSprite != null && cachedSprite.texture != null)
+                        {
+                            try { pCustomBase64 = System.Convert.ToBase64String(cachedSprite.texture.EncodeToJPG(50)); } catch { }
+                        }
+                    }
+                }
+            }
+
+            snapshot.topThree.Add(new OfflinePlayerEntry {
+                name = pName,
+                pfId = rankings[j].pfId,
+                type = rankings[j].playerType,
+                cpuIdx = rankings[j].cpuIndex,
+                cash = j == 0 ? currentLobbyConfig?.firstPlaceCash ?? 0 : j == 1 ? currentLobbyConfig?.secondPlaceCash ?? 0 : currentLobbyConfig?.thirdPlaceCash ?? 0,
+                chips = j == 0 ? currentLobbyConfig?.firstPlaceChips ?? 0 : j == 1 ? currentLobbyConfig?.secondPlaceChips ?? 0 : currentLobbyConfig?.thirdPlaceChips ?? 0,
+                avatarIdx = pAvatarIdx,
+                customImg = pCustomBase64
+            });
+        }
+        string rankingsJson = JsonUtility.ToJson(snapshot);
+
+        // 2. Award prizes to top players via CloudScript
+        bool localPlayerInTop3 = false;
         for (int i = 0; i < rankings.Count && i < 3; i++)
         {
             var ranking = rankings[i];
-            
             float cashPrize = 0f;
             int chipsPrize = 0;
             switch (i)
@@ -3355,161 +3389,68 @@ public class GameManager : MonoBehaviour
                 case 2: cashPrize = currentLobbyConfig.thirdPlaceCash; chipsPrize = currentLobbyConfig.thirdPlaceChips; break;
             }
 
-            Debug.Log($"[GameManager] Check Rank {i+1}: {ranking.playerType} (CPUIdx: {ranking.cpuIndex}) | Prize: ${cashPrize} / {chipsPrize} Chips");
-
-            // CRITICAL FIX: Only human players get prizes (CPUs do not)
             if (ranking.playerType == PlayerType.Player)
             {
-                // OPTION 1: Award prize to LOCAL player (this is the only prize YOU get)
+                string rankLabel = (i + 1) == 1 ? "1st" : (i + 1) == 2 ? "2nd" : "3rd";
+
+                // CASE 1: YOU won - call CloudScript for yourself
                 if (ranking.cpuIndex == -1)
                 {
-                    lastAwardedCash = cashPrize;
-                    lastAwardedChips = chipsPrize;
-                    if (cashPrize > 0f) PlayFabManager.Instance.AddCash(cashPrize);
-                    if (chipsPrize > 0) PlayFabManager.Instance.AddCoins(chipsPrize);
-                    Debug.Log($"[GameManager] Awarded LOCAL prize for {i + 1}st place: {cashPrize} Cash, {chipsPrize} Chips");
-
-                    // GHOST REWARD GUARD ─────────────────────────────────────────────────
-                    // Problem: Master Client's CloudScript "AwardMatchPrize" is QUEUED on
-                    // PlayFab's server. Even if we called ClearPendingRewards first, the
-                    // AwardMatchPrize script could write AFTER our clear, leaving a stale
-                    // pending reward that shows a duplicate winner screen on next app open.
-                    //
-                    // Solution: Write a "DirectPrizeReceived" witness flag to PlayFab via
-                    // UpdateUserData (a direct API call — not CloudScript, so it is NOT
-                    // queued behind AwardMatchPrize). The AwardMatchPrize CloudScript on the
-                    // PlayFab server must check for this flag before writing pending rewards.
-                    // CheckForPendingRewards also checks it so even if the CloudScript didn't
-                    // check, we still skip showing the duplicate winner screen.
-                    // ────────────────────────────────────────────────────────────────────
-                    PlayFab.PlayFabClientAPI.UpdateUserData(
-                        new PlayFab.ClientModels.UpdateUserDataRequest
-                        {
-                            Data = new System.Collections.Generic.Dictionary<string, string>
-                            {
-                                { PlayFabManager.DIRECT_PRIZE_KEY, "true" }
-                            },
-                            Permission = PlayFab.ClientModels.UserDataPermission.Private
-                        },
-                        res => Debug.Log("[GameManager] ✅ DirectPrizeReceived flag written — ghost pending reward will be skipped on next login."),
-                        err => Debug.LogWarning("[GameManager] ⚠️ Could not write DirectPrizeReceived flag: " + err.GenerateErrorReport())
-                    );
+                    localPlayerInTop3 = true;
+                    Debug.Log($"[GameManager] Reporting LOCAL prize via CloudScript for {rankLabel} place...");
+                    AwardPrizeToDisconnectedPlayer(ranking.pfId, cashPrize, chipsPrize, rankLabel, rankingsJson);
+                    
+                    // After reporting, trigger a data reload so we pick up the reward and show the screen.
+                    // We wait 1.5s to give the CloudScript time to finish writing to UserData.
+                    StartCoroutine(ReloadPlayerDataAfterAward());
                 }
-                // OPTION 2: If winner is a DISCONNECTED player, the Master Client awards it via CloudScript
+                // CASE 2: Master Client reports prizes for OTHER humans who have left/gone inactive
                 else if (Photon.Pun.PhotonNetwork.IsMasterClient)
                 {
-                    // Check if this winner is still ACTIVE in the room.
-                    // If they are INACTIVE (disconnected ghost) or GONE, the Master Client must report it.
-                        // ONLY award for OTHER human players
-                        if (!string.IsNullOrEmpty(ranking.pfId) && ranking.pfId != PlayFabManager.Instance.currentPlayerData.playFabId)
+                    if (!string.IsNullOrEmpty(ranking.pfId) && ranking.pfId != PlayFabManager.Instance.currentPlayerData.playFabId)
+                    {
+                        bool isWinnerInRoomAndActive = false;
+                        if (Photon.Pun.PhotonNetwork.CurrentRoom != null)
                         {
-                            bool isWinnerInRoomAndActive = false;
-                            
-                            // Check if this winner is still LIVE in the room by their PlayFab ID.
-                            // IMPORTANT: p.UserId is Photon's own internal ID — it is NOT the PlayFab ID.
-                            // We must read the "PlayFabId" custom property that LobbyNetworkManager syncs
-                            // to every player's slot at room-join time to get a correct match.
-                            if (Photon.Pun.PhotonNetwork.CurrentRoom != null)
+                            foreach (var p in Photon.Pun.PhotonNetwork.CurrentRoom.Players.Values)
                             {
-                                foreach (var p in Photon.Pun.PhotonNetwork.CurrentRoom.Players.Values)
+                                if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_ID_KEY, out object storedPfId)
+                                    && storedPfId != null && storedPfId.ToString() == ranking.pfId && !p.IsInactive)
                                 {
-                                    if (p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_ID_KEY, out object storedPfId)
-                                        && storedPfId != null
-                                        && storedPfId.ToString() == ranking.pfId)
-                                    {
-                                        // CRITICAL FIX FOR EXTRA TIME:
-                                        // A player is only "Active" if they are in the list AND not marked as Inactive.
-                                        // If IsInactive is true, they are disconnected (even if Photon hasn't removed
-                                        // them yet) and they will NOT see the live win. Master Client must report it.
-                                        if (!p.IsInactive)
-                                        {
-                                            isWinnerInRoomAndActive = true;
-                                        }
-                                        break;
-                                    }
+                                    isWinnerInRoomAndActive = true;
+                                    break;
                                 }
-                            }
-
-                            if (!isWinnerInRoomAndActive)
-                            {
-                                string rankLabel = (i + 1) == 1 ? "1st" : (i + 1) == 2 ? "2nd" : "3rd";
-                                Debug.Log($"[GameManager] Winner '{ranking.pfId}' at rank {rankLabel} is NOT in the room. Master Client reporting prize via CloudScript.");
-                                
-                                // Create a snapshot of the TOP 3 rankings to show full podium in lobby
-                                OfflinePodiumSnapshot snapshot = new OfflinePodiumSnapshot();
-                                for (int j = 0; j < rankings.Count && j < 3; j++)
-                                {
-                                    // 1. Reset variables for THIS entry to prevent carrying over old data
-                                    string pName = GetWinnerName(rankings[j].playerType, rankings[j].cpuIndex);
-                                    int pAvatarIdx = 0;
-                                    string pCustomBase64 = "";
-                                    
-                                    // 2. Capture data based on player type
-                                    if (rankings[j].playerType == PlayerType.Player) 
-                                    {
-                                        if (rankings[j].cpuIndex == -1) // Master Client (Local)
-                                        {
-                                            pName = PlayFabManager.Instance.currentPlayerData.playerName;
-                                            pAvatarIdx = PlayFabManager.Instance.currentPlayerData.selectedAvatarIndex;
-                                            
-                                            if (mainMenuAvatarDisplay != null && mainMenuAvatarDisplay.IsShowingCustomAvatar())
-                                            {
-                                                Sprite s = mainMenuAvatarDisplay.GetCurrentAvatarSprite();
-                                                if (s != null && s.texture != null)
-                                                {
-                                                    try { pCustomBase64 = System.Convert.ToBase64String(s.texture.EncodeToJPG(50)); } catch { }
-                                                }
-                                            }
-                                        }
-                                        else // Other Humans
-                                        {
-                                            int actorNo = Mathf.Abs(rankings[j].cpuIndex + 100);
-                                            cachedNetworkAvatarIndices.TryGetValue(actorNo, out pAvatarIdx);
-                                            
-                                            // Seek live properties
-                                            if (Photon.Pun.PhotonNetwork.CurrentRoom != null && Photon.Pun.PhotonNetwork.CurrentRoom.Players.ContainsKey(actorNo))
-                                            {
-                                                var p = Photon.Pun.PhotonNetwork.CurrentRoom.GetPlayer(actorNo);
-                                                if (p != null && p.CustomProperties.TryGetValue(LobbyNetworkManager.PLAYER_CUSTOM_IMAGE_KEY, out object imageDataObj))
-                                                {
-                                                    pCustomBase64 = System.Convert.ToBase64String((byte[])imageDataObj);
-                                                }
-                                            }
-                                            
-                                            // Fallback to cache
-                                            if (string.IsNullOrEmpty(pCustomBase64) && cachedNetworkAvatars.TryGetValue(actorNo, out Sprite cachedSprite))
-                                            {
-                                                if (cachedSprite != null && cachedSprite.texture != null)
-                                                {
-                                                    try { pCustomBase64 = System.Convert.ToBase64String(cachedSprite.texture.EncodeToJPG(50)); } catch { }
-                                                }
-                                            }
-                                        }
-                                    }
-
-                                    snapshot.topThree.Add(new OfflinePlayerEntry {
-                                        name = pName,
-                                        pfId = rankings[j].pfId,
-                                        type = rankings[j].playerType,
-                                        cpuIdx = rankings[j].cpuIndex,
-                                        cash = winnerScreenScript != null ? (j == 0 ? currentLobbyConfig?.firstPlaceCash ?? 0 : j == 1 ? currentLobbyConfig?.secondPlaceCash ?? 0 : currentLobbyConfig?.thirdPlaceCash ?? 0) : 0,
-                                        chips = winnerScreenScript != null ? (j == 0 ? currentLobbyConfig?.firstPlaceChips ?? 0 : j == 1 ? currentLobbyConfig?.secondPlaceChips ?? 0 : currentLobbyConfig?.thirdPlaceChips ?? 0) : 0,
-                                        avatarIdx = pAvatarIdx,
-                                        customImg = pCustomBase64
-                                    });
-                                }
-                                string rankingsJson = JsonUtility.ToJson(snapshot);
-
-                                AwardPrizeToDisconnectedPlayer(ranking.pfId, cashPrize, chipsPrize, rankLabel, rankingsJson);
                             }
                         }
+
+                        if (!isWinnerInRoomAndActive)
+                        {
+                            Debug.Log($"[GameManager] Master Client: Reporting prize for disconnected winner {ranking.pfId}...");
+                            AwardPrizeToDisconnectedPlayer(ranking.pfId, cashPrize, chipsPrize, rankLabel, rankingsJson);
+                        }
+                    }
                 }
             }
-            else
-            {
-                Debug.Log($"[GameManager] CPU at rank {i+1} - no prize awarded.");
-            }
         }
+
+        // If local player was a loser (not in top 3), hide the loading screen now.
+        // There is no server-side "win" event coming for them to trigger the winner screen.
+        if (!localPlayerInTop3)
+        {
+            Debug.Log("[GameManager] Local player not in Top 3. Hiding loading screen.");
+            if (calculateLoadingScreen != null) calculateLoadingScreen.SetActive(false);
+        }
+    }
+
+    /// <summary>
+    /// Triggers a PlayFab data reload after a short delay to fetch the new reward snapshot.
+    /// This causes the winner screen to show via the OnOfflineRewardClaimed event flow.
+    /// </summary>
+    private System.Collections.IEnumerator ReloadPlayerDataAfterAward()
+    {
+        yield return new WaitForSeconds(2.0f);
+        Debug.Log("[GameManager] Refreshing player data from PlayFab to pick up match reward...");
+        PlayFabManager.Instance.LoadPlayerData();
     }
 
     /// <summary>
