@@ -137,6 +137,7 @@ public class GameManager : MonoBehaviour
     private int lastAwardedChips = 0;
     private bool prizesAwardedForThisMatch = false; // Prevents infinite loop/duplicate prizes
     private int currentActorNumberAtStart = -999; // Tracks local player ID throughout the match (even if disconnected)
+    private int localMatchScore = 0; // The persistent running score for the local player match
     
     public (float cash, int chips) GetLastAwardedPrize() => (lastAwardedCash, lastAwardedChips);
     
@@ -441,7 +442,8 @@ public class GameManager : MonoBehaviour
         cachedRealTimeAtCapture  = 0f;
         
         timerCoroutine = StartCoroutine(CountdownBeforeStart());
-        Debug.Log($"[GameManager] Starting match with {participantsAtStart.Count} players tracked for recovery.");
+        localMatchScore = 0; // Reset score for new match
+        Debug.Log($"[GameManager] Starting match with {participantsAtStart.Count} players tracked for recovery. Score reset to 0.");
     }
     
     /// <summary>
@@ -942,19 +944,50 @@ public class GameManager : MonoBehaviour
         double currentTotalTime = GetEstimatedServerTime();
         playerLastScoreTime[ownerKey] = currentTotalTime;
 
-        // 3. Update local score in Photon (only if it's the local player's board)
-        if (ownerKey == -1 && LobbyNetworkManager.Instance != null)
+        // 3. Update local score for local player
+        if (ownerKey == -1) 
         {
-            Dictionary<string, int> playerSelectionCounts = playerNumberGrid.GetSelectionCounts();
-            int currentScore = 0;
-            foreach (var kvp in playerSelectionCounts)
-            {
-                currentScore += kvp.Value;
+            // NEW SCORING: 
+            // - Selecting correct number: +100
+            // - Selecting icon (if number is -1): +200
+            if (number == -1) {
+                localMatchScore += 200;
+                Debug.Log($"[GameManager] 💎 Icon Selected! +200 Points (Total: {localMatchScore})");
+            } else {
+                localMatchScore += 100;
+                Debug.Log($"[GameManager] ✅ Correct Number! +100 Points (Total: {localMatchScore})");
             }
-            LobbyNetworkManager.Instance.UpdateLocalPlayerScore(currentScore, currentTotalTime);
-            
-            // 4. Sync to PlayFab (Internal debounce handles frequency)
-            SyncMatchDataToPlayFab(currentScore, currentTotalTime);
+
+            if (LobbyNetworkManager.Instance != null)
+            {
+                LobbyNetworkManager.Instance.UpdateLocalPlayerScore(localMatchScore, currentTotalTime);
+                
+                // 4. Sync to PlayFab (Internal debounce handles frequency)
+                SyncMatchDataToPlayFab(localMatchScore, currentTotalTime);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Called when a wrong box is clicked - subtracts 50 points
+    /// </summary>
+    private void OnWrongBoxSelected(NumberGrid grid, int number, GameObject boxObject)
+    {
+        // Only penalize if it's the player's own board and match is active
+        if (grid == playerNumberGrid && isGameActive)
+        {
+            localMatchScore -= 50;
+            // Optionally clamp to zero if you don't want negative scores:
+            // if (localMatchScore < 0) localMatchScore = 0;
+
+            double currentTotalTime = GetEstimatedServerTime();
+            Debug.Log($"[GameManager] ❌ Wrong Number Clicked! -50 Points (Total: {localMatchScore})");
+
+            if (LobbyNetworkManager.Instance != null)
+            {
+                LobbyNetworkManager.Instance.UpdateLocalPlayerScore(localMatchScore, currentTotalTime);
+                SyncMatchDataToPlayFab(localMatchScore, currentTotalTime);
+            }
         }
     }
 
@@ -1216,11 +1249,21 @@ public class GameManager : MonoBehaviour
 
         // have had enough time to sync their final board to PlayFab after the board was filled.
         StartCoroutine(FetchDisconnectedPlayerScoresWithDelay(onComplete => {
+            // Add completion bonus: +1200 points
+            localMatchScore += 1200;
+            Debug.Log($"[GameManager] 🏆 TABLE COMPLETE! +1200 Points (Total: {localMatchScore})");
+            
+            double finishTime = GetEstimatedServerTime();
+            if (LobbyNetworkManager.Instance != null)
+            {
+                LobbyNetworkManager.Instance.UpdateLocalPlayerScore(localMatchScore, finishTime);
+                SyncMatchDataToPlayFab(localMatchScore, finishTime, true);
+            }
+
             // Get rankings (top 3) including missing players from PlayFab
             var rankings = GetRankings(onComplete);
             
             // Award prizes based on lobby configuration
-            // This now triggers CloudScript — winner screen will show automatically when PlayFab confirms rewards.
             AwardPrizes(rankings);
         }));
     }
@@ -1624,11 +1667,12 @@ public class GameManager : MonoBehaviour
         HashSet<int> seenActors = new HashSet<int>();
         if (currentActorNumberAtStart != -999) seenActors.Add(currentActorNumberAtStart);
 
-        int playerCount = 0;
+        int playerCount = localMatchScore; 
         if (playerNumberGrid != null)
         {
-            Dictionary<string, int> playerSelectionCounts = playerNumberGrid.GetSelectionCounts();
-            foreach (var kvp in playerSelectionCounts) playerCount += kvp.Value;
+            // Fallback: Check grid just in case localMatchScore wasn't updated
+            int gridPoints = playerNumberGrid.GetTotalPoints("Player");
+            if (gridPoints > playerCount) playerCount = gridPoints;
         }
 
         double playerTime = playerLastScoreTime.ContainsKey(-1) ? playerLastScoreTime[-1] : (double)Time.time;
@@ -1728,12 +1772,7 @@ public class GameManager : MonoBehaviour
             // Solo play: use cpuNumberGrids.Keys (actually created grids)
             foreach (int cpuIdx in cpuNumberGrids.Keys)
             {
-                int cpuCount = 0;
-                Dictionary<string, int> cpuSelectionCounts = cpuNumberGrids[cpuIdx].GetSelectionCounts();
-                foreach (var kvp in cpuSelectionCounts)
-                {
-                    cpuCount += kvp.Value;
-                }
+                int cpuCount = cpuNumberGrids[cpuIdx].GetTotalPoints($"CPU_{cpuIdx}");
                 double cpuTime = playerLastScoreTime.ContainsKey(cpuIdx) ? playerLastScoreTime[cpuIdx] : (double)Time.time;
                 rankings.Add((PlayerType.CPU, cpuIdx, cpuCount, cpuTime, ""));
             }
@@ -3549,6 +3588,7 @@ public class GameManager : MonoBehaviour
             // Subscribe to player grid events
             playerNumberGrid.OnAllBoxesSelected += OnAllBoxesSelected;
             playerNumberGrid.OnBoxSelected += OnBoxSelected;
+            playerNumberGrid.OnWrongBoxSelected += OnWrongBoxSelected; // Subscribe to wrong click event
             // Ensure player grid is active and visible
             playerNumberGrid.gameObject.SetActive(true);
             // Hide CPU grids visually (only show player's grid)
@@ -3657,6 +3697,7 @@ public class GameManager : MonoBehaviour
             {
                 grid.OnAllBoxesSelected -= OnAllBoxesSelected;
                 grid.OnBoxSelected -= OnBoxSelected;
+                grid.OnWrongBoxSelected -= OnWrongBoxSelected; // Unsubscribe
             }
         }
         

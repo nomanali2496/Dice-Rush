@@ -132,6 +132,7 @@ public class NumberGrid : MonoBehaviour
     
     // Events
     public System.Action<NumberGrid, int, GameObject> OnBoxSelected; // Called when a box is selected (grid, number, boxObject)
+    public System.Action<NumberGrid, int, GameObject> OnWrongBoxSelected; // Called when a wrong box is clicked
     public System.Action OnAllBoxesSelected; // Called when all selectable boxes are selected
     
     private void Start()
@@ -806,6 +807,7 @@ public class NumberGrid : MonoBehaviour
         if (currentDiceSumPlayer <= 0 || boxData.number != currentDiceSumPlayer)
         {
             Debug.LogWarning($"[NumberGrid] Cannot select box with number {boxData.number}. Current player dice sum is {currentDiceSumPlayer}!");
+            OnWrongBoxSelected?.Invoke(this, boxData.number, boxData.boxObject);
             return;
         }
         
@@ -1139,6 +1141,44 @@ public class NumberGrid : MonoBehaviour
         }
         
         return selectionCounts;
+    }
+
+    /// <summary>
+    /// Gets the total points based on the new scoring system:
+    /// - Number box: +100
+    /// - Power-up icon: +200
+    /// - All boxes complete: +1200
+    /// </summary>
+    public int GetTotalPoints(string playerKey)
+    {
+        int points = 0;
+        int selectedCount = 0;
+        int totalSelectable = 0;
+
+        foreach (BoxData boxData in boxDataList)
+        {
+            if (!boxData.isPowerup) totalSelectable++;
+
+            if (boxData.isSelected)
+            {
+                string key = (boxData.selectedByPlayer == PlayerType.Player) ? "Player" : $"CPU_{boxData.selectedByCPUIndex}";
+                if (key == playerKey)
+                {
+                    if (boxData.isPowerup) points += 200;
+                    else points += 100;
+                    
+                    if (!boxData.isPowerup) selectedCount++;
+                }
+            }
+        }
+
+        // Completion bonus
+        if (selectedCount >= totalSelectable && totalSelectable > 0)
+        {
+            points += 1200;
+        }
+
+        return points;
     }
     
     /// <summary>
