@@ -950,12 +950,24 @@ public class GameManager : MonoBehaviour
             // NEW SCORING: 
             // - Selecting correct number: +100
             // - Selecting icon (if number is -1): +200
-            if (number == -1) {
+                        if (number == -1) {
                 localMatchScore += 200;
                 Debug.Log($"[GameManager] 💎 Icon Selected! +200 Points (Total: {localMatchScore})");
+                
+                // Trigger visual feedback
+                if (ScoreFeedbackUIManager.Instance != null && boxObject != null)
+                {
+                    ScoreFeedbackUIManager.Instance.ShowScoreFeedback(200, boxObject.transform.position);
+                }
             } else {
                 localMatchScore += 100;
                 Debug.Log($"[GameManager] ✅ Correct Number! +100 Points (Total: {localMatchScore})");
+
+                // Trigger visual feedback
+                if (ScoreFeedbackUIManager.Instance != null && boxObject != null)
+                {
+                    ScoreFeedbackUIManager.Instance.ShowScoreFeedback(100, boxObject.transform.position);
+                }
             }
 
             if (LobbyNetworkManager.Instance != null)
@@ -976,12 +988,18 @@ public class GameManager : MonoBehaviour
         // Only penalize if it's the player's own board and match is active
         if (grid == playerNumberGrid && isGameActive)
         {
-            localMatchScore -= 50;
+                        localMatchScore -= 50;
             // Optionally clamp to zero if you don't want negative scores:
             // if (localMatchScore < 0) localMatchScore = 0;
 
             double currentTotalTime = GetEstimatedServerTime();
             Debug.Log($"[GameManager] ❌ Wrong Number Clicked! -50 Points (Total: {localMatchScore})");
+
+            // Trigger visual feedback
+            if (ScoreFeedbackUIManager.Instance != null && boxObject != null)
+            {
+                ScoreFeedbackUIManager.Instance.ShowScoreFeedback(-50, boxObject.transform.position);
+            }
 
             if (LobbyNetworkManager.Instance != null)
             {

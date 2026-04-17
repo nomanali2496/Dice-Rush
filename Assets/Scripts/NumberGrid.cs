@@ -776,11 +776,8 @@ public class NumberGrid : MonoBehaviour
             // For CPU: Buttons are not interactable (CPU selects programmatically)
             if (playerType == PlayerType.Player)
             {
-                bool shouldBeInteractable = !boxData.isSelected && 
-                                           currentDiceSum > 0 && 
-                                           boxData.number == currentDiceSum &&
-                                           !IsAnyBoxWithNumberSelectedInCurrentRoll(boxData.number, PlayerType.Player);
-                
+                // Allow all unselected boxes to be interactable so we can detect "Wrong" clicks for -50 penalty
+                bool shouldBeInteractable = !boxData.isSelected && currentDiceSum > 0;
                 boxData.selectButton.interactable = shouldBeInteractable;
             }
             // CPU doesn't use buttons, so we don't need to update button interactability for CPU
