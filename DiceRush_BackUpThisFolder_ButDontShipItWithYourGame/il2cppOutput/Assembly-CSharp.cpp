@@ -27368,7 +27368,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Dictionary_2_t46B2DB028096FA2B828
 		return L_0;
 	}
 }
-// Method Definition Index: 65592
+// Method Definition Index: 65602
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR PlayFabManager_tDE93977FA2FED127B002B4472B4C362CE7929317* PlayFabManager_get_Instance_m2FB283A1AC156A0431480CD98B4795FB2A9DC8F0_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27383,7 +27383,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR PlayFabManager_tDE93977FA2FED127B
 		return L_0;
 	}
 }
-// Method Definition Index: 65625
+// Method Definition Index: 65635
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool PlayFabManager_IsLoggedIn_m3EACC5CB157C6391582BF06779CDE2EB3F978E50_inline (PlayFabManager_tDE93977FA2FED127B002B4472B4C362CE7929317* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27392,7 +27392,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool PlayFabManager_IsLoggedIn_m3
 		return L_0;
 	}
 }
-// Method Definition Index: 65626
+// Method Definition Index: 65636
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayFabManager_GetPlayFabId_mF815D7F5F2DD9C470DE728BBDF503FCE79F73126_inline (PlayFabManager_tDE93977FA2FED127B002B4472B4C362CE7929317* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27401,7 +27401,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayFabManager_GetPlayF
 		return L_0;
 	}
 }
-// Method Definition Index: 96358
+// Method Definition Index: 96379
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline (Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27564,7 +27564,7 @@ IL_0009:
 		return L_1;
 	}
 }
-// Method Definition Index: 105523
+// Method Definition Index: 105544
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Product_get_Title_m7E5E55AA9B8F3E29A3407487E50F8445CC6499CB_inline (Product_t55A2FB5E6C13AC042B41E8BB798D886EEFBF5D78* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27572,7 +27572,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Product_get_Title_m7E5E
 		return L_0;
 	}
 }
-// Method Definition Index: 105525
+// Method Definition Index: 105546
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Product_get_ProductID_m77FDDBECEEBE09AE0265EA56CE808BD0C3454D27_inline (Product_t55A2FB5E6C13AC042B41E8BB798D886EEFBF5D78* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27580,7 +27580,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Product_get_ProductID_m
 		return L_0;
 	}
 }
-// Method Definition Index: 105531
+// Method Definition Index: 105552
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Product_get_Price_mE4DED2E929AA3D8B5D7C810915BCB53972F30A44_inline (Product_t55A2FB5E6C13AC042B41E8BB798D886EEFBF5D78* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27588,7 +27588,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Product_get_Price_mE4DE
 		return L_0;
 	}
 }
-// Method Definition Index: 105529
+// Method Definition Index: 105550
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Product_get_ImageURI_mA0D6AE68CCC62FA570904C45DCBDA0BA1D8FAF29_inline (Product_t55A2FB5E6C13AC042B41E8BB798D886EEFBF5D78* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27596,7 +27596,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Product_get_ImageURI_mA
 		return L_0;
 	}
 }
-// Method Definition Index: 105555
+// Method Definition Index: 105576
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Purchase_get_PurchaseToken_m1F0140FBF6B7D83643370716F643CE7A0692553F_inline (Purchase_t4D22EDC9A0B3FFA9161757D96B5781F47C814081* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27604,7 +27604,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Purchase_get_PurchaseTo
 		return L_0;
 	}
 }
-// Method Definition Index: 105547
+// Method Definition Index: 105568
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Purchase_get_ProductID_m24DF0DCB0A71046522E7AA78D64279EBFAEDE07C_inline (Purchase_t4D22EDC9A0B3FFA9161757D96B5781F47C814081* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27612,7 +27612,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Purchase_get_ProductID_
 		return L_0;
 	}
 }
-// Method Definition Index: 105553
+// Method Definition Index: 105574
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D Purchase_get_PurchaseTime_m82743C9C46A953C93DA92AFE1779AFDB6E862928_inline (Purchase_t4D22EDC9A0B3FFA9161757D96B5781F47C814081* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27620,7 +27620,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89
 		return L_0;
 	}
 }
-// Method Definition Index: 105541
+// Method Definition Index: 105562
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Purchase_get_IsConsumed_m1F285E30854A583DFD654ED97A82665A5CD99572_inline (Purchase_t4D22EDC9A0B3FFA9161757D96B5781F47C814081* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27656,7 +27656,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9C
 		return;
 	}
 }
-// Method Definition Index: 105102
+// Method Definition Index: 105123
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AccessToken_t73BAE9F45493316E7FF33A14EECB3D77E8C0D346* AccessToken_get_CurrentAccessToken_m79A35A353C7FCFB189F95F9D9BF96763CB085D75_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27670,7 +27670,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AccessToken_t73BAE9F45493316E7FF3
 		return L_0;
 	}
 }
-// Method Definition Index: 96754
+// Method Definition Index: 96775
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* InputField_get_text_m6E0796350FF559505E4DF17311803962699D6704_inline (InputField_tABEA115F23FBD374EBE80D4FAC1D15BD6E37A140* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27698,7 +27698,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool UIInputHelper_get_isOldEvent
 		return L_0;
 	}
 }
-// Method Definition Index: 98036
+// Method Definition Index: 98057
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* EventSystem_get_currentSelectedGameObject_mD606FFACF3E72755298A523CBB709535CF08C98A_inline (EventSystem_t61C51380B105BE9D2C39C4F15B7E655659957707* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27716,7 +27716,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR FBSDKEventBindingManager_t869715A
 		return L_0;
 	}
 }
-// Method Definition Index: 105956
+// Method Definition Index: 105977
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tF0607A35E9C45FC10ADB06961839CF4455581695* FBSDKEventBindingManager_get_eventBindings_m75A8172DEA5A682112D3002FFD3290DB86D003F4_inline (FBSDKEventBindingManager_t869715AF86DDD63E9A9D0019ECD8C91C5965FD5C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27724,7 +27724,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tF0607A35E9C45FC10ADB06961
 		return L_0;
 	}
 }
-// Method Definition Index: 105952
+// Method Definition Index: 105973
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_t4235E49E9E0B611C1E9FE2B9E20148FE6CAEE401* FBSDKEventBinding_get_path_m83FD7785B6EEEAE5E3470F97C804BDA0EB959B09_inline (FBSDKEventBinding_tBB22412D5D78A580D89DF782CB7E6812C242B9AF* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27732,7 +27732,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_t4235E49E9E0B611C1E9FE2B9E
 		return L_0;
 	}
 }
-// Method Definition Index: 105944
+// Method Definition Index: 105965
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* FBSDKEventBinding_get_eventName_m2245B1A1960CF8C94F81144819F57BD0533E76A3_inline (FBSDKEventBinding_tBB22412D5D78A580D89DF782CB7E6812C242B9AF* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27740,7 +27740,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* FBSDKEventBinding_get_e
 		return L_0;
 	}
 }
-// Method Definition Index: 105416
+// Method Definition Index: 105437
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* FriendFinderInviation_get_ApplicationName_m2656EA1919A4732F9B98A087CE4ADC17AA283600_inline (FriendFinderInviation_t49A22EE151766B2F801290EE485A92C3E35265EE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27748,7 +27748,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* FriendFinderInviation_g
 		return L_0;
 	}
 }
-// Method Definition Index: 105420
+// Method Definition Index: 105441
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* FriendFinderInviation_get_FromName_m3B361E7EB39350AB93CD728E4B528432939EFED9_inline (FriendFinderInviation_t49A22EE151766B2F801290EE485A92C3E35265EE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27756,7 +27756,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* FriendFinderInviation_g
 		return L_0;
 	}
 }
-// Method Definition Index: 105424
+// Method Definition Index: 105445
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* FriendFinderInviation_get_ToName_m2B52BB50EE406CC26EBF5214EE106BDF60A14A95_inline (FriendFinderInviation_t49A22EE151766B2F801290EE485A92C3E35265EE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27764,7 +27764,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* FriendFinderInviation_g
 		return L_0;
 	}
 }
-// Method Definition Index: 105426
+// Method Definition Index: 105447
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* FriendFinderInviation_get_Message_mBA438462E068DE3A4ADC8B7ABF4365FCECAA28C3_inline (FriendFinderInviation_t49A22EE151766B2F801290EE485A92C3E35265EE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27772,7 +27772,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* FriendFinderInviation_g
 		return L_0;
 	}
 }
-// Method Definition Index: 105428
+// Method Definition Index: 105449
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* FriendFinderInviation_get_CreatedTime_mBAE47482A5EAAEB6DCF473AAF365396D098AD0AB_inline (FriendFinderInviation_t49A22EE151766B2F801290EE485A92C3E35265EE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27780,7 +27780,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* FriendFinderInviation_g
 		return L_0;
 	}
 }
-// Method Definition Index: 105412
+// Method Definition Index: 105433
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* FriendFinderInviation_get_Id_m72645E5B1DDA033880CF39746B861394DD99575C_inline (FriendFinderInviation_t49A22EE151766B2F801290EE485A92C3E35265EE* __this, const RuntimeMethod* method) 
 {
 	{

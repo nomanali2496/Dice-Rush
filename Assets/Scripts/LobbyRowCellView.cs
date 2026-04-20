@@ -24,6 +24,7 @@ public class LobbyRowCellView : EnhancedScrollerCellView, IPointerDownHandler, I
     [SerializeField] private Ease buttonScaleEase = Ease.OutBack; // Easing function for button scale animation
     
     private LobbyManager lobbyManager;
+    private HorizontalLobbyManager horizontalLobbyManager;
     private Dictionary<Button, DOTweenTween> buttonTweens = new Dictionary<Button, DOTweenTween>();
     private Dictionary<Button, Vector3> buttonOriginalScales = new Dictionary<Button, Vector3>();
     
@@ -40,8 +41,9 @@ public class LobbyRowCellView : EnhancedScrollerCellView, IPointerDownHandler, I
     
     private void Awake()
     {
-        // Find LobbyManager in the scene
+        // Find Managers in the scene
         lobbyManager = FindObjectOfType<LobbyManager>();
+        horizontalLobbyManager = FindObjectOfType<HorizontalLobbyManager>();
         
         // Setup button listener and hover animation
         if (playButton != null)
@@ -112,13 +114,22 @@ public class LobbyRowCellView : EnhancedScrollerCellView, IPointerDownHandler, I
     /// </summary>
     private void UpdatePlayButtonInteractability(Button playButton, int lobbyIndex)
     {
-        if (playButton == null || lobbyManager == null)
+        if (playButton == null || (lobbyManager == null && horizontalLobbyManager == null))
         {
             return;
         }
         
         // Check if player can afford entry fee
-        bool canAfford = lobbyManager.CanPlayerAffordEntryFee(lobbyIndex);
+        bool canAfford = false;
+        if (horizontalLobbyManager != null)
+        {
+            canAfford = horizontalLobbyManager.CanPlayerAffordEntryFee(lobbyIndex);
+        }
+        else if (lobbyManager != null)
+        {
+            canAfford = lobbyManager.CanPlayerAffordEntryFee(lobbyIndex);
+        }
+
         playButton.interactable = canAfford;
         
         if (!canAfford)
@@ -148,18 +159,24 @@ public class LobbyRowCellView : EnhancedScrollerCellView, IPointerDownHandler, I
     private void OnPlayButtonClicked()
     {
         Debug.Log("play button clicked");
-        if (lobbyManager != null && item != null)
+        if (item != null)
         {
             LobbyGameObjectData data = item.GetCurrentData();
             if (data != null)
             {
-                // Pass the lobby index to open the correct lobby configuration
-                lobbyManager.OpenGameplayObject(data.lobbyIndex);
+                if (horizontalLobbyManager != null)
+                {
+                    horizontalLobbyManager.OpenGameplayObject(data.lobbyIndex);
+                }
+                else if (lobbyManager != null)
+                {
+                    lobbyManager.OpenGameplayObject(data.lobbyIndex);
+                }
+                else
+                {
+                    Debug.LogWarning("[LobbyRowCellView] No LobbyManager found! Cannot open gameplay object.");
+                }
             }
-        }
-        else
-        {
-            Debug.LogWarning("[LobbyRowCellView] LobbyManager or item is null! Cannot open gameplay object.");
         }
     }
     
@@ -341,47 +358,41 @@ public class LobbyRowCellView : EnhancedScrollerCellView, IPointerDownHandler, I
         Vector2 swipeEndPos = eventData.position;
         Vector2 swipeDelta = swipeEndPos - swipeStartPos;
         
-        // Check if swipe is long enough (primarily vertical)
-        if (Mathf.Abs(swipeDelta.y) > swipeThreshold)
+        if (horizontalLobbyManager != null)
         {
-            // Ensure vertical swipe is more dominant than horizontal
-            if (Mathf.Abs(swipeDelta.y) > Mathf.Abs(swipeDelta.x))
+            if (Mathf.Abs(swipeDelta.x) > swipeThreshold && Mathf.Abs(swipeDelta.x) > Mathf.Abs(swipeDelta.y))
             {
-                if (lobbyManager != null)
+                if (useVelocityScrolling)
                 {
-                    if (useVelocityScrolling)
-                    {
-                        // Calculate how many items to scroll based on swipe distance
-                        float swipeDistance = Mathf.Abs(swipeDelta.y);
-                        int itemsToScroll = Mathf.RoundToInt(swipeDistance / pixelsPerItem);
-                        
-                        // Clamp to max scroll items
-                        itemsToScroll = Mathf.Clamp(itemsToScroll, 1, maxScrollItems);
-                        
-                        // Forward to LobbyManager
-                        if (swipeDelta.y < 0)
-                        {
-                            // Swipe up = scroll down
-                            lobbyManager.ScrollMultiple(itemsToScroll);
-                        }
-                        else
-                        {
-                            // Swipe down = scroll up
-                            lobbyManager.ScrollMultiple(-itemsToScroll);
-                        }
-                    }
-                    else
-                    {
-                        // Single-step scrolling
-                        if (swipeDelta.y < 0)
-                        {
-                            lobbyManager.ScrollDown();
-                        }
-                        else
-                        {
-                            lobbyManager.ScrollUp();
-                        }
-                    }
+                    float swipeDistance = Mathf.Abs(swipeDelta.x);
+                    int itemsToScroll = Mathf.Clamp(Mathf.RoundToInt(swipeDistance / pixelsPerItem), 1, maxScrollItems);
+                    
+                    if (swipeDelta.x < 0) horizontalLobbyManager.ScrollMultiple(itemsToScroll);
+                    else horizontalLobbyManager.ScrollMultiple(-itemsToScroll);
+                }
+                else
+                {
+                    if (swipeDelta.x < 0) horizontalLobbyManager.ScrollRight();
+                    else horizontalLobbyManager.ScrollLeft();
+                }
+            }
+        }
+        else if (lobbyManager != null)
+        {
+            if (Mathf.Abs(swipeDelta.y) > swipeThreshold && Mathf.Abs(swipeDelta.y) > Mathf.Abs(swipeDelta.x))
+            {
+                if (useVelocityScrolling)
+                {
+                    float swipeDistance = Mathf.Abs(swipeDelta.y);
+                    int itemsToScroll = Mathf.Clamp(Mathf.RoundToInt(swipeDistance / pixelsPerItem), 1, maxScrollItems);
+                    
+                    if (swipeDelta.y < 0) lobbyManager.ScrollMultiple(itemsToScroll);
+                    else lobbyManager.ScrollMultiple(-itemsToScroll);
+                }
+                else
+                {
+                    if (swipeDelta.y < 0) lobbyManager.ScrollDown();
+                    else lobbyManager.ScrollUp();
                 }
             }
         }

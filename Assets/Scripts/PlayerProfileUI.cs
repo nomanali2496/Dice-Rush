@@ -21,6 +21,10 @@ public class PlayerProfileUI : MonoBehaviour
     [Tooltip("Image shown when a CUSTOM photo is picked from the gallery — size this larger than the mask in the Inspector for the zoom effect")]
     [SerializeField] private Image profileImageCustom;
     
+    [Header("Lobby UI References")]
+    [SerializeField] private TextMeshProUGUI lobbyChipsText; // Chips display in lobby screen
+    [SerializeField] private TextMeshProUGUI lobbyCashText; // Cash display in lobby screen
+
     [Header("Gameplay UI References")]
     [SerializeField] private TextMeshProUGUI gameplayChipsText; // Chips display in gameplay screen
     [SerializeField] private TextMeshProUGUI gameplayCashText; // Cash display in gameplay screen
@@ -345,6 +349,9 @@ public class PlayerProfileUI : MonoBehaviour
         // Update Daily Reward UI
         UpdateDailyRewardCurrency(data.coins, data.cash);
         
+        // Update Lobby UI
+        UpdateLobbyCurrency(data.coins, data.cash);
+        
         // Update profile image
         if (!string.IsNullOrEmpty(data.imageUrl))
         {
@@ -422,8 +429,27 @@ public class PlayerProfileUI : MonoBehaviour
         
         // Update Daily Reward UI with default values
         UpdateDailyRewardCurrency(0, 0);
+        
+        // Update Lobby UI with default values
+        UpdateLobbyCurrency(0, 0);
     }
     
+    /// <summary>
+    /// Updates lobby screen chips and cash displays - cash is stored as float
+    /// </summary>
+    private void UpdateLobbyCurrency(int chips, float cash)
+    {
+        if (lobbyChipsText != null)
+        {
+            lobbyChipsText.text = coinsPrefix + FormatCoins(chips);
+        }
+        
+        if (lobbyCashText != null)
+        {
+            lobbyCashText.text = cashPrefix + FormatCash(cash);
+        }
+    }
+
     /// <summary>
     /// Updates gameplay screen chips and cash displays - cash is stored as float
     /// </summary>

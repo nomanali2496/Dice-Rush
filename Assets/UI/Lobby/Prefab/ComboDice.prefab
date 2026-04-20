@@ -52,6 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LobbyGameObjectUI
   cellIdentifier: LobbyGameObject
   backgroundImage: {fileID: 3410319784714228194}
+  unselectedOverlayImage: {fileID: 0}
   hoverScale: 1.1
   animationDuration: 0.3
   scaleCurve:
@@ -60,18 +61,18 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  backgroundSprite0: {fileID: 21300000, guid: c9b954cf3a3331149a25435a2d8adaea, type: 3}
-  backgroundSprite1: {fileID: 21300000, guid: 3967e9b2f7988e24699540078d37f21d, type: 3}
-  backgroundSprite2: {fileID: 21300000, guid: 6cd6e63e115425a4c879b1dd2a99414b, type: 3}
-  backgroundSprite3: {fileID: 21300000, guid: 6139a810914ed854ebeefd2ae6947990, type: 3}
-  backgroundSprite4: {fileID: 21300000, guid: b04f62acd9a55a94c98316c085317c60, type: 3}
-  backgroundSprite5: {fileID: 21300000, guid: 49bfc5727fcfe5542840269a6dd36517, type: 3}
-  backgroundSprite6: {fileID: 21300000, guid: 80d2d819773655f49b1e2916e749b275, type: 3}
-  backgroundSprite7: {fileID: 21300000, guid: 57e3f3e39ce0cdc4797917b7c20901e2, type: 3}
-  backgroundSprite8: {fileID: 21300000, guid: b9bb80c27220a50439a176662b06cef9, type: 3}
-  backgroundSprite10: {fileID: 21300000, guid: 345af37c4e7fe644d94acc16fc50aa5a, type: 3}
-  backgroundSprite11: {fileID: 21300000, guid: e58ccd93a91de7b47bd58d175f301657, type: 3}
-  backgroundSprite12: {fileID: 21300000, guid: 7eb46e5f59deb3542b1df44c46944ac3, type: 3}
+  backgroundSprite0: {fileID: 21300000, guid: 808865f431b90684791fc8a6594552fa, type: 3}
+  backgroundSprite1: {fileID: 21300000, guid: db6253f65d5ccca4dae0ee4c4c10f8ba, type: 3}
+  backgroundSprite2: {fileID: 21300000, guid: 71de092f54cfa254faaa2626650f0f94, type: 3}
+  backgroundSprite3: {fileID: 21300000, guid: 007fa645c889ab247be4b13c44743f09, type: 3}
+  backgroundSprite4: {fileID: 21300000, guid: 5dfa3529cfbaec34aa3cc0bb7e900516, type: 3}
+  backgroundSprite5: {fileID: 21300000, guid: b1dd7454085e25f4894ab8fb1f4f8ce6, type: 3}
+  backgroundSprite6: {fileID: 21300000, guid: ce0694673173abd4c939ffdbd49ba833, type: 3}
+  backgroundSprite7: {fileID: 21300000, guid: a7e874a3dba574d41be9679deaa8631e, type: 3}
+  backgroundSprite8: {fileID: 21300000, guid: 5c87fde5146317648be2567ad90db9f9, type: 3}
+  backgroundSprite10: {fileID: 21300000, guid: 426950b52b447334087a3a93d9d974ab, type: 3}
+  backgroundSprite11: {fileID: 21300000, guid: 874790312afe6f7408330eed790e0d2e, type: 3}
+  backgroundSprite12: {fileID: 21300000, guid: f1318e5086b8d6b44b25d616082444ed, type: 3}
 --- !u!1 &4896836788611776765
 GameObject:
   m_ObjectHideFlags: 0

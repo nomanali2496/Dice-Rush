@@ -3903,7 +3903,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Quaternion_IsEqualUsingDot_m
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 111390
+// Method Definition Index: 111411
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t62C440B6E027BE0C9E84D5049BB9025BCE693238 UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m04654479198A85397D7A576BABAFFC73FBC23B31 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3937,7 +3937,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t62C440B6E027BE0C9E84D5049BB90
 		return L_6;
 	}
 }
-// Method Definition Index: 111391
+// Method Definition Index: 111412
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m0BDC5CFE4A4C3AA2A1B115B6CB557F5CE7A20062 (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_tD2916C27F68911316C69697BB7AA5BB9A508D67E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4023,7 +4023,7 @@ IL2CPP_EXTERN_C void MonoScriptData_t62C440B6E027BE0C9E84D5049BB9025BCE693238_ma
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 111392
+// Method Definition Index: 111413
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CustomTypes_Register_mC5670F39FBCDD0311FF42369CBED0BF248DE3A6E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4054,7 +4054,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CustomTypes_Register_mC5670F39FBCDD0311F
 		return;
 	}
 }
-// Method Definition Index: 111393
+// Method Definition Index: 111414
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int16_t CustomTypes_SerializePhotonPlayer_mB6AA50523DAF55566CBBCD04D38521484CDAD8F4 (StreamBuffer_tE57C7EEE4C12F51CE0B37E8C4FD1040EB5ED63FB* ___0_outStream, RuntimeObject* ___1_customobject, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4145,7 +4145,7 @@ IL_0046:
 		return L_11;
 	}
 }
-// Method Definition Index: 111394
+// Method Definition Index: 111415
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CustomTypes_DeserializePhotonPlayer_m313C2B8FE368CAD4380EDEDF7AC154ED88410FC7 (StreamBuffer_tE57C7EEE4C12F51CE0B37E8C4FD1040EB5ED63FB* ___0_inStream, int16_t ___1_length, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4262,7 +4262,7 @@ IL_0054:
 		return NULL;
 	}
 }
-// Method Definition Index: 111395
+// Method Definition Index: 111416
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CustomTypes__cctor_m2499583BB716D292B5577995B1B97FC48BB8B167 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4328,7 +4328,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CustomTypes__cctor_m2499583BB716D292B557
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 111406
+// Method Definition Index: 111427
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PhotonHandler_tD4F215694F2D38FDD6CCB10EED94376994C10BC7* PhotonHandler_get_Instance_mB70C8CAF5E5F89885B71B9F97A39B4B7287498B1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4396,7 +4396,7 @@ IL_003e:
 		return L_8;
 	}
 }
-// Method Definition Index: 111407
+// Method Definition Index: 111428
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_Awake_m9BC16ED3969FBC5B6EE594C98ED7AF7BFCD684AD (PhotonHandler_tD4F215694F2D38FDD6CCB10EED94376994C10BC7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4455,7 +4455,7 @@ IL_0038:
 		return;
 	}
 }
-// Method Definition Index: 111408
+// Method Definition Index: 111429
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_OnEnable_m45D79E600811290996AB23E97AF604C6B2D08100 (PhotonHandler_tD4F215694F2D38FDD6CCB10EED94376994C10BC7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4606,7 +4606,7 @@ IL_0097:
 		return;
 	}
 }
-// Method Definition Index: 111409
+// Method Definition Index: 111430
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_Start_mC88A34318CF1C36C681F79AA2565D071B54B8178 (PhotonHandler_tD4F215694F2D38FDD6CCB10EED94376994C10BC7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4654,7 +4654,7 @@ IL_001f:
 		return;
 	}
 }
-// Method Definition Index: 111410
+// Method Definition Index: 111431
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_OnDisable_m1BCF4B22ED801B5F57B0CA86F7ADE9EC9C93FA96 (PhotonHandler_tD4F215694F2D38FDD6CCB10EED94376994C10BC7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4673,7 +4673,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_OnDisable_m1BCF4B22ED801B5
 		return;
 	}
 }
-// Method Definition Index: 111411
+// Method Definition Index: 111432
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_FixedUpdate_mF953D692F8BBF792FFBC5CE61025B5AFEC6F7E88 (PhotonHandler_tD4F215694F2D38FDD6CCB10EED94376994C10BC7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4704,7 +4704,7 @@ IL_0012:
 		return;
 	}
 }
-// Method Definition Index: 111412
+// Method Definition Index: 111433
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_LateUpdate_m90EEC24262D7D1B4209FED0A88F10B6AA9A58136 (PhotonHandler_tD4F215694F2D38FDD6CCB10EED94376994C10BC7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4871,7 +4871,7 @@ IL_00aa:
 		return;
 	}
 }
-// Method Definition Index: 111413
+// Method Definition Index: 111434
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_Dispatch_m86C9F3FC37146A9A4D8C104E916508E2D49A336F (PhotonHandler_tD4F215694F2D38FDD6CCB10EED94376994C10BC7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5011,7 +5011,7 @@ IL_0062:
 		return;
 	}
 }
-// Method Definition Index: 111414
+// Method Definition Index: 111435
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_OnCreatedRoom_m4B1463C91610E8AB56E0F964A0C6C6FE34BB5306 (PhotonHandler_tD4F215694F2D38FDD6CCB10EED94376994C10BC7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5030,7 +5030,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_OnCreatedRoom_m4B1463C9161
 		return;
 	}
 }
-// Method Definition Index: 111415
+// Method Definition Index: 111436
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_OnRoomPropertiesUpdate_mF4AB6E5B939756B5F52DE42919C114F837FC5434 (PhotonHandler_tD4F215694F2D38FDD6CCB10EED94376994C10BC7* __this, Hashtable_tD626399B3ADFD501225241D7366103F35472542A* ___0_propertiesThatChanged, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5047,7 +5047,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_OnRoomPropertiesUpdate_mF4
 		return;
 	}
 }
-// Method Definition Index: 111416
+// Method Definition Index: 111437
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_OnPlayerPropertiesUpdate_m593B67E91B89C9859AD2D1F2924709B619DD56DB (PhotonHandler_tD4F215694F2D38FDD6CCB10EED94376994C10BC7* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_targetPlayer, Hashtable_tD626399B3ADFD501225241D7366103F35472542A* ___1_changedProps, const RuntimeMethod* method) 
 {
 	{
@@ -5055,7 +5055,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_OnPlayerPropertiesUpdate_m
 		return;
 	}
 }
-// Method Definition Index: 111417
+// Method Definition Index: 111438
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_OnMasterClientSwitched_mA0B7FFA0718CF99AE154A311D57D7B672535F5B4 (PhotonHandler_tD4F215694F2D38FDD6CCB10EED94376994C10BC7* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_newMasterClient, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5161,7 +5161,7 @@ IL_0051:
 		return;
 	}
 }
-// Method Definition Index: 111418
+// Method Definition Index: 111439
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_OnFriendListUpdate_mD1B6A2DF9CF73BBA23A69D8AA8319ACD91527C87 (PhotonHandler_tD4F215694F2D38FDD6CCB10EED94376994C10BC7* __this, List_1_tAF836F2F45E5E36A0C7B30A5B2C2B8FED009605F* ___0_friendList, const RuntimeMethod* method) 
 {
 	{
@@ -5169,7 +5169,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_OnFriendListUpdate_mD1B6A2
 		return;
 	}
 }
-// Method Definition Index: 111419
+// Method Definition Index: 111440
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_OnCreateRoomFailed_mFD05E8FC7EAE5953FEE6C9580BA6A73A6AABDF83 (PhotonHandler_tD4F215694F2D38FDD6CCB10EED94376994C10BC7* __this, int16_t ___0_returnCode, String_t* ___1_message, const RuntimeMethod* method) 
 {
 	{
@@ -5177,7 +5177,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_OnCreateRoomFailed_mFD05E8
 		return;
 	}
 }
-// Method Definition Index: 111420
+// Method Definition Index: 111441
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_OnJoinRoomFailed_mDBF6397CAAF04CBAEC49155A925E1EBA3C7F7FD1 (PhotonHandler_tD4F215694F2D38FDD6CCB10EED94376994C10BC7* __this, int16_t ___0_returnCode, String_t* ___1_message, const RuntimeMethod* method) 
 {
 	{
@@ -5185,7 +5185,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_OnJoinRoomFailed_mDBF6397C
 		return;
 	}
 }
-// Method Definition Index: 111421
+// Method Definition Index: 111442
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_OnJoinRandomFailed_mAF7A55535BA4D8D6F4D463D892D4BAEF872BD5EB (PhotonHandler_tD4F215694F2D38FDD6CCB10EED94376994C10BC7* __this, int16_t ___0_returnCode, String_t* ___1_message, const RuntimeMethod* method) 
 {
 	{
@@ -5193,7 +5193,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_OnJoinRandomFailed_mAF7A55
 		return;
 	}
 }
-// Method Definition Index: 111422
+// Method Definition Index: 111443
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_OnJoinedRoom_m8C186FD12456F14611360E8E1BD5242011254EA9 (PhotonHandler_tD4F215694F2D38FDD6CCB10EED94376994C10BC7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5415,7 +5415,7 @@ IL_00bf:
 		return;
 	}
 }
-// Method Definition Index: 111423
+// Method Definition Index: 111444
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_OnLeftRoom_m44F838EB5DDA9D69AD949721CDD6C4240A005BEA (PhotonHandler_tD4F215694F2D38FDD6CCB10EED94376994C10BC7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5423,7 +5423,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_OnLeftRoom_m44F838EB5DDA9D
 		return;
 	}
 }
-// Method Definition Index: 111424
+// Method Definition Index: 111445
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_OnPlayerEnteredRoom_m365D46BF81402F6BAD14737E5D31C1A0CEEBD4BE (PhotonHandler_tD4F215694F2D38FDD6CCB10EED94376994C10BC7* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_newPlayer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5604,7 +5604,7 @@ IL_00a6:
 		return;
 	}
 }
-// Method Definition Index: 111425
+// Method Definition Index: 111446
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler_OnPlayerLeftRoom_m879FE98C15AEDB125290CDE9FC04F8514D123651 (PhotonHandler_tD4F215694F2D38FDD6CCB10EED94376994C10BC7* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_otherPlayer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5845,7 +5845,7 @@ IL_00cf:
 		return;
 	}
 }
-// Method Definition Index: 111426
+// Method Definition Index: 111447
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler__ctor_m3BB4D93C56467E7AAAE4C385BC1DCD676703A8C7 (PhotonHandler_tD4F215694F2D38FDD6CCB10EED94376994C10BC7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5876,7 +5876,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler__ctor_m3BB4D93C56467E7AAAE
 		return;
 	}
 }
-// Method Definition Index: 111427
+// Method Definition Index: 111448
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler__cctor_m8B1D2B558D749857C59CC8AE8B8B9C1012801DD6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5899,7 +5899,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonHandler__cctor_m8B1D2B558D749857C5
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 111428
+// Method Definition Index: 111449
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_mBAC680E3146AF826F9AABC24458F5F191639C2AB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5916,7 +5916,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_mBAC680E3146AF826F9AABC24
 		return;
 	}
 }
-// Method Definition Index: 111429
+// Method Definition Index: 111450
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_mEC4E5059263A347E180BFE57BF2CAC3725358C18 (U3CU3Ec_t6343B4D29F792224D6D2E079B70214484876B666* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5924,7 +5924,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_mEC4E5059263A347E180BFE57B
 		return;
 	}
 }
-// Method Definition Index: 111430
+// Method Definition Index: 111451
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CStartU3Eb__13_0_m8C6CEE15454EF18A1F677CC69D5A88882C8A797A (U3CU3Ec_t6343B4D29F792224D6D2E079B70214484876B666* __this, Scene_tA1DC762B79745EB5140F054C884855B922318356 ___0_scene, int32_t ___1_loadingMode, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6003,7 +6003,7 @@ IL2CPP_EXTERN_C void InstantiateParameters_t9FB6B1ABF5F3EA25CBDF102CFBEF3A375FB0
 IL2CPP_EXTERN_C void InstantiateParameters_t9FB6B1ABF5F3EA25CBDF102CFBEF3A375FB04D43_marshal_com_cleanup(InstantiateParameters_t9FB6B1ABF5F3EA25CBDF102CFBEF3A375FB04D43_marshaled_com& marshaled)
 {
 }
-// Method Definition Index: 111431
+// Method Definition Index: 111452
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InstantiateParameters__ctor_mC3FA32D5B68D8A7F572DE374DC36BD5095EB3876 (InstantiateParameters_t9FB6B1ABF5F3EA25CBDF102CFBEF3A375FB04D43* __this, String_t* ___0_prefabName, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_position, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___2_rotation, uint8_t ___3_group, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___4_data, uint8_t ___5_objLevelPrefix, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___6_viewIDs, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___7_creator, int32_t ___8_timestamp, const RuntimeMethod* method) 
 {
 	{
@@ -6057,7 +6057,7 @@ IL2CPP_EXTERN_C  void InstantiateParameters__ctor_mC3FA32D5B68D8A7F572DE374DC36B
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 111432
+// Method Definition Index: 111453
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PhotonNetwork_get_GameVersion_m99B6B0223E5B0B74A8C6597147A21EBECF6ABC1F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6073,7 +6073,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PhotonNetwork_get_GameVersion_m99B6
 		return L_0;
 	}
 }
-// Method Definition Index: 111433
+// Method Definition Index: 111454
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_set_GameVersion_mB966AE0195C1B2D7CEDFF51442646EE81A371124 (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6101,7 +6101,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_set_GameVersion_mB966AE019
 		return;
 	}
 }
-// Method Definition Index: 111434
+// Method Definition Index: 111455
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PhotonNetwork_get_AppVersion_mA6214274EB0D5086777F46CDDDAAC3086F735EFF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6120,7 +6120,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PhotonNetwork_get_AppVersion_mA6214
 		return L_1;
 	}
 }
-// Method Definition Index: 111435
+// Method Definition Index: 111456
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ServerSettings_t41BE4338E7E76BFB4919D4039BAFC6799E242152* PhotonNetwork_get_PhotonServerSettings_mEB0FD5D91970368EE4D23AA12213DAD57B8D1097 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6156,7 +6156,7 @@ IL_0013:
 		return L_2;
 	}
 }
-// Method Definition Index: 111436
+// Method Definition Index: 111457
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_set_PhotonServerSettings_mA6AB233BFF75DF94BA0F60AB47A15C8DBC3AAE38 (ServerSettings_t41BE4338E7E76BFB4919D4039BAFC6799E242152* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6175,7 +6175,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_set_PhotonServerSettings_m
 		return;
 	}
 }
-// Method Definition Index: 111437
+// Method Definition Index: 111458
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PhotonNetwork_get_ServerAddress_mB80937306588286493CBE499E7B5C2ECE4225FBE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6208,7 +6208,7 @@ IL_000d:
 		return L_2;
 	}
 }
-// Method Definition Index: 111438
+// Method Definition Index: 111459
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PhotonNetwork_get_CloudRegion_mB5B2C20FAB0892E2CCBCEF249C2146497AECB16E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6260,7 +6260,7 @@ IL_0018:
 		return L_4;
 	}
 }
-// Method Definition Index: 111439
+// Method Definition Index: 111460
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PhotonNetwork_get_CurrentCluster_m4EDFFBE0E64F02EF3045A60492F967A1F00F0FD8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6292,7 +6292,7 @@ IL_0009:
 		return L_2;
 	}
 }
-// Method Definition Index: 111440
+// Method Definition Index: 111461
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PhotonNetwork_get_BestRegionSummaryInPreferences_mD517299C796211BB0EED73CD5DF1EC5ADF71B254 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6308,7 +6308,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PhotonNetwork_get_BestRegionSummary
 		return L_0;
 	}
 }
-// Method Definition Index: 111441
+// Method Definition Index: 111462
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_set_BestRegionSummaryInPreferences_mACD62A726A2DDCCF790917236874C2A6BB193BCA (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6345,7 +6345,7 @@ IL_0013:
 		return;
 	}
 }
-// Method Definition Index: 111442
+// Method Definition Index: 111463
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_get_IsConnected_mBEE4F9C1E740A9CB648145D889BED707AC75D5ED (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6395,7 +6395,7 @@ IL_0012:
 		return L_3;
 	}
 }
-// Method Definition Index: 111443
+// Method Definition Index: 111464
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_get_IsConnectedAndReady_m6993C4832641872CEFB235E437704DCD2C0F23ED (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6445,7 +6445,7 @@ IL_0012:
 		return L_3;
 	}
 }
-// Method Definition Index: 111444
+// Method Definition Index: 111465
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_get_NetworkClientState_m14926C92B031C5788348074278770D6CB848BE7D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6508,7 +6508,7 @@ IL_001e:
 		return L_4;
 	}
 }
-// Method Definition Index: 111445
+// Method Definition Index: 111466
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_get_Server_m899FFD64C9A6B8418AE7B26EC69C22C3F89EF51D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6570,7 +6570,7 @@ IL_001b:
 		return L_4;
 	}
 }
-// Method Definition Index: 111446
+// Method Definition Index: 111467
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AuthenticationValues_tD40B2D956BF978BFB23657901557FD46EC8601C7* PhotonNetwork_get_AuthValues_mF4E6173BA3C5E848ABF50755644C01CF6DB7D341 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6602,7 +6602,7 @@ IL_0009:
 		return L_2;
 	}
 }
-// Method Definition Index: 111447
+// Method Definition Index: 111468
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_set_AuthValues_m610853C05B29C7C1E44ADB95C1D46906D86835B0 (AuthenticationValues_tD40B2D956BF978BFB23657901557FD46EC8601C7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6635,7 +6635,7 @@ IL_0012:
 		return;
 	}
 }
-// Method Definition Index: 111448
+// Method Definition Index: 111469
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TypedLobby_t29F38D993E984979E53A9212143F1B770EEC6DB9* PhotonNetwork_get_CurrentLobby_mD9355A1A2D63CA5C8A40CFC417CB366E4445B7B7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6654,7 +6654,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TypedLobby_t29F38D993E984979E53A9212143F1B770
 		return L_1;
 	}
 }
-// Method Definition Index: 111449
+// Method Definition Index: 111470
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* PhotonNetwork_get_CurrentRoom_m72D3601299E109EED858E132DE1BD316226BA38D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6703,7 +6703,7 @@ IL_001f:
 		return (Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373*)NULL;
 	}
 }
-// Method Definition Index: 111450
+// Method Definition Index: 111471
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* PhotonNetwork_get_LocalPlayer_mEA3335FEF4E4B55C1EFAC8AFA8D5F7E3D7FBE4DC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6737,7 +6737,7 @@ IL_0009:
 		return L_2;
 	}
 }
-// Method Definition Index: 111451
+// Method Definition Index: 111472
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PhotonNetwork_get_NickName_m140E4FF3672857F270501B1C128FDADC5D715095 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6756,7 +6756,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PhotonNetwork_get_NickName_m140E4FF
 		return L_1;
 	}
 }
-// Method Definition Index: 111452
+// Method Definition Index: 111473
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_set_NickName_m9EB46021028BE0060635402D3C3989A2816AFA61 (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6776,7 +6776,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_set_NickName_m9EB46021028B
 		return;
 	}
 }
-// Method Definition Index: 111453
+// Method Definition Index: 111474
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayerU5BU5D_t04E1460375559A2DB32E4B90230BCE7DDAC0E572* PhotonNetwork_get_PlayerList_mD2A2D36659BCEF35EBE2E6B4909F4439D191AE39 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6859,7 +6859,7 @@ IL_003e:
 		return L_12;
 	}
 }
-// Method Definition Index: 111454
+// Method Definition Index: 111475
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayerU5BU5D_t04E1460375559A2DB32E4B90230BCE7DDAC0E572* PhotonNetwork_get_PlayerListOthers_mBD22BAD0C7AFC3E98EBD3E26A0EF6A0EE8397DA9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6977,7 +6977,7 @@ IL_0062:
 		return L_18;
 	}
 }
-// Method Definition Index: 111455
+// Method Definition Index: 111476
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_get_OfflineMode_m57596042EE764187C75DEAC48E6F420799C192C2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6993,7 +6993,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_get_OfflineMode_m57596042E
 		return L_0;
 	}
 }
-// Method Definition Index: 111456
+// Method Definition Index: 111477
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_set_OfflineMode_m38ECEB0037E9E6B660970FC1DBD041A62943E7E7 (bool ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7153,7 +7153,7 @@ IL_009b:
 		return;
 	}
 }
-// Method Definition Index: 111457
+// Method Definition Index: 111478
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_get_AutomaticallySyncScene_m3CA1C229D9C984DCF96D64D27CEBD2F0E5FE4CF0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7169,7 +7169,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_get_AutomaticallySyncScene
 		return L_0;
 	}
 }
-// Method Definition Index: 111458
+// Method Definition Index: 111479
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_set_AutomaticallySyncScene_m0A604B7E821B77102C4D8A7D59A783B9BBA2FF88 (bool ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7211,7 +7211,7 @@ IL_0019:
 		return;
 	}
 }
-// Method Definition Index: 111459
+// Method Definition Index: 111480
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_get_EnableLobbyStatistics_mABD864D139ADD22C4FAB89EC3A05AA0838F74ECC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7229,7 +7229,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_get_EnableLobbyStatistics_
 		return L_1;
 	}
 }
-// Method Definition Index: 111460
+// Method Definition Index: 111481
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_get_InLobby_mC1CFEC7A5FBBC6413525C31C3805A6B9B63B1E00 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7248,7 +7248,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_get_InLobby_mC1CFEC7A5FBBC
 		return L_1;
 	}
 }
-// Method Definition Index: 111461
+// Method Definition Index: 111482
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_get_SendRate_m5FC7AAACC89973EB9D98221D00F17A14CE8412B2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7264,7 +7264,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_get_SendRate_m5FC7AAACC
 		return ((int32_t)(((int32_t)1000)/L_0));
 	}
 }
-// Method Definition Index: 111462
+// Method Definition Index: 111483
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_set_SendRate_m29C9E487A48DA29B30146EC89F523A4F7D4BC89A (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7309,7 +7309,7 @@ IL_0028:
 		return;
 	}
 }
-// Method Definition Index: 111463
+// Method Definition Index: 111484
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_get_SerializationRate_m9761A548751079532BB24A59510AEF80D95ED18C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7325,7 +7325,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_get_SerializationRate_m
 		return ((int32_t)(((int32_t)1000)/L_0));
 	}
 }
-// Method Definition Index: 111464
+// Method Definition Index: 111485
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_set_SerializationRate_m1FFD8FBCC373F9A3C4F7E63F9B280ADD254528F8 (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7370,7 +7370,7 @@ IL_0028:
 		return;
 	}
 }
-// Method Definition Index: 111465
+// Method Definition Index: 111486
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_get_IsMessageQueueRunning_m6AC527F21843CC4C70526CC8044532E3C1CE159E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7386,7 +7386,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_get_IsMessageQueueRunning_
 		return L_0;
 	}
 }
-// Method Definition Index: 111466
+// Method Definition Index: 111487
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_set_IsMessageQueueRunning_m7CF18DBEA443B8ED0A71BE59EE584BCB54D817DE (bool ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7404,7 +7404,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_set_IsMessageQueueRunning_
 		return;
 	}
 }
-// Method Definition Index: 111467
+// Method Definition Index: 111488
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double PhotonNetwork_get_Time_m65093824EBCB03FA8E31A8E95344F2F56D62EE79 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7449,7 +7449,7 @@ IL_0012:
 		return L_5;
 	}
 }
-// Method Definition Index: 111468
+// Method Definition Index: 111489
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_get_ServerTimestamp_m80C21A37739284FD474253F51D8474BFB0DE7DB1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7520,7 +7520,7 @@ IL_002c:
 		return L_9;
 	}
 }
-// Method Definition Index: 111469
+// Method Definition Index: 111490
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_set_KeepAliveInBackground_mC2C10BCF057D4ABDF9207235A59D65C47BDC9D5B (float ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7561,7 +7561,7 @@ IL_0024:
 		return;
 	}
 }
-// Method Definition Index: 111470
+// Method Definition Index: 111491
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float PhotonNetwork_get_KeepAliveInBackground_mFF39A69BB4E53A3603030A012202B23398E2793B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7600,7 +7600,7 @@ IL_0013:
 		return L_4;
 	}
 }
-// Method Definition Index: 111471
+// Method Definition Index: 111492
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_get_IsMasterClient_mD04046028C484F06D77A1C36C64FFAC285C2DF9C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7659,7 +7659,7 @@ IL_0031:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 111472
+// Method Definition Index: 111493
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* PhotonNetwork_get_MasterClient_mFA0E7A37C182F09D96A3D6BAC79BC14CA7AF321A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7735,7 +7735,7 @@ IL_0022:
 		return L_10;
 	}
 }
-// Method Definition Index: 111473
+// Method Definition Index: 111494
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_get_InRoom_mFBE0C1A516C34FBAD9923933C73E07080FDA199D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7752,7 +7752,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_get_InRoom_mFBE0C1A516C34F
 		return (bool)((((int32_t)L_0) == ((int32_t)((int32_t)9)))? 1 : 0);
 	}
 }
-// Method Definition Index: 111474
+// Method Definition Index: 111495
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_get_CountOfPlayersOnMaster_mB5BBF672B3279E3DB0690F390E038109F73E4A01 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7771,7 +7771,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_get_CountOfPlayersOnMas
 		return L_1;
 	}
 }
-// Method Definition Index: 111475
+// Method Definition Index: 111496
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_get_CountOfPlayersInRooms_mB2D6068361061FDA936858192C6D289839E9EB72 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7790,7 +7790,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_get_CountOfPlayersInRoo
 		return L_1;
 	}
 }
-// Method Definition Index: 111476
+// Method Definition Index: 111497
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_get_CountOfPlayers_mE91457D4D8BD3F06581A4458BDCB8C5BD1918E7C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7813,7 +7813,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_get_CountOfPlayers_mE91
 		return ((int32_t)il2cpp_codegen_add(L_1, L_3));
 	}
 }
-// Method Definition Index: 111477
+// Method Definition Index: 111498
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_get_CountOfRooms_mA6835EAD49171DE7D7F3AEB059FC998EF660E92C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7832,7 +7832,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_get_CountOfRooms_mA6835
 		return L_1;
 	}
 }
-// Method Definition Index: 111478
+// Method Definition Index: 111499
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_get_NetworkStatisticsEnabled_mC14EB1DDACA5F3509FF6B772B3A991D1F1694FB0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7854,7 +7854,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_get_NetworkStatisticsEnabl
 		return L_2;
 	}
 }
-// Method Definition Index: 111479
+// Method Definition Index: 111500
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_set_NetworkStatisticsEnabled_m556E7A6660F973308C25501C3D86A6A84800FA76 (bool ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7877,7 +7877,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_set_NetworkStatisticsEnabl
 		return;
 	}
 }
-// Method Definition Index: 111480
+// Method Definition Index: 111501
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_get_ResentReliableCommands_mB66065508F03FEF80EF36AEFCEAFD430CD995C9A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7899,7 +7899,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_get_ResentReliableComma
 		return L_2;
 	}
 }
-// Method Definition Index: 111481
+// Method Definition Index: 111502
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_get_CrcCheckEnabled_mB0D3CB6589A99D1CBBB33B034C2C971430DB4B90 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7921,7 +7921,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_get_CrcCheckEnabled_mB0D3C
 		return L_2;
 	}
 }
-// Method Definition Index: 111482
+// Method Definition Index: 111503
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_set_CrcCheckEnabled_mE72DB7A7A824D15B68FE2BB708C60C56727545D0 (bool ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7979,7 +7979,7 @@ IL_0018:
 		return;
 	}
 }
-// Method Definition Index: 111483
+// Method Definition Index: 111504
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_get_PacketLossByCrcCheck_mBC034A94976EB27246CAED5B11E85A44D3E72D0A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8001,7 +8001,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_get_PacketLossByCrcChec
 		return L_2;
 	}
 }
-// Method Definition Index: 111484
+// Method Definition Index: 111505
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_get_MaxResendsBeforeDisconnect_m52846257768409EF38A1AE4E520CBC6192D521B7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8022,7 +8022,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_get_MaxResendsBeforeDis
 		return L_2;
 	}
 }
-// Method Definition Index: 111485
+// Method Definition Index: 111506
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_set_MaxResendsBeforeDisconnect_m58B08EA3106D99617A14ECB4CF05773B592E9DF1 (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8073,7 +8073,7 @@ IL_0010:
 		return;
 	}
 }
-// Method Definition Index: 111486
+// Method Definition Index: 111507
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_get_QuickResends_mF1E27DC98A0120C78023E97562EE3D6D9F93FC62 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8095,7 +8095,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_get_QuickResends_mF1E27
 		return L_2;
 	}
 }
-// Method Definition Index: 111487
+// Method Definition Index: 111508
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_set_QuickResends_m9E9D1164C19D8B83C3B8DAB9EE6A1ED706864541 (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8146,7 +8146,7 @@ IL_000e:
 		return;
 	}
 }
-// Method Definition Index: 111488
+// Method Definition Index: 111509
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_get_UseAlternativeUdpPorts_m51E9A4140DD956E4D6C45A36254167849E4F683C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8162,7 +8162,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_get_UseAlternativeUdpPorts
 		return L_0;
 	}
 }
-// Method Definition Index: 111489
+// Method Definition Index: 111510
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_set_UseAlternativeUdpPorts_mC3A39C389497425DCA5B077007FA6ED0E95893EF (bool ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8179,7 +8179,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_set_UseAlternativeUdpPorts
 		return;
 	}
 }
-// Method Definition Index: 111490
+// Method Definition Index: 111511
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PhotonPortDefinition_t75A54992188E1DC3FF910A00927F213E7198590A PhotonNetwork_get_ServerPortOverrides_m60C22399610CA6B917E250C92483AA5113C2AA8F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8214,7 +8214,7 @@ IL_0012:
 		return L_3;
 	}
 }
-// Method Definition Index: 111491
+// Method Definition Index: 111512
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_set_ServerPortOverrides_mB333076D30517A5E01642479646BFAAA1F8FDCF3 (PhotonPortDefinition_t75A54992188E1DC3FF910A00927F213E7198590A ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8247,7 +8247,7 @@ IL_0012:
 		return;
 	}
 }
-// Method Definition Index: 111492
+// Method Definition Index: 111513
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork__cctor_m040AF38F552D57EBAC627CD7EE1B28354AFCFCF6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8526,7 +8526,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork__cctor_m040AF38F552D57EBAC
 		return;
 	}
 }
-// Method Definition Index: 111493
+// Method Definition Index: 111514
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_StaticReset_m706DB93E0DBFF4958AD48C4819D23F209FB66AFF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8718,7 +8718,7 @@ IL_0148:
 		return;
 	}
 }
-// Method Definition Index: 111494
+// Method Definition Index: 111515
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_ConnectUsingSettings_m5062DDA82806820AE9358F849B0533B82230E540 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8768,7 +8768,7 @@ IL_0019:
 		return L_6;
 	}
 }
-// Method Definition Index: 111495
+// Method Definition Index: 111516
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_ConnectUsingSettings_m9A8B77D0995EF92A73EF1965026A365B1DC1DFE3 (AppSettings_tF847AF39732C3BF8BECBCCAC41D186A0B79123F7* ___0_appSettings, bool ___1_startInOfflineMode, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9115,7 +9115,7 @@ IL_01c5:
 		return L_69;
 	}
 }
-// Method Definition Index: 111496
+// Method Definition Index: 111517
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_ConnectToMaster_m2AEE8B4E5BD308379879D781FA43ED8126722D5E (String_t* ___0_masterServerAddress, int32_t ___1_port, String_t* ___2_appID, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9288,7 +9288,7 @@ IL_00b3:
 		return L_22;
 	}
 }
-// Method Definition Index: 111497
+// Method Definition Index: 111518
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_ConnectToBestCloudServer_m7D076B8B1EB2D5671195CE54DF8F61495F886651 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9373,7 +9373,7 @@ IL_0052:
 		return L_11;
 	}
 }
-// Method Definition Index: 111498
+// Method Definition Index: 111519
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_ConnectToRegion_m726F4BE18CBB6F263E8DD55D93753CB565119E61 (String_t* ___0_region, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9486,7 +9486,7 @@ IL_007e:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 111499
+// Method Definition Index: 111520
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_Disconnect_mD35F0E20EE21ADD3BE7787C3E26EBC27476EF734 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9550,7 +9550,7 @@ IL_0037:
 		return;
 	}
 }
-// Method Definition Index: 111500
+// Method Definition Index: 111521
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_Reconnect_m476A2186057CD5302D1FEE77A8C9F191C6175D45 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9695,7 +9695,7 @@ IL_00ac:
 		return L_22;
 	}
 }
-// Method Definition Index: 111501
+// Method Definition Index: 111522
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_NetworkStatisticsReset_mE89ED48740A303EDDCDC2A24FAA8CE7F73D03031 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9717,7 +9717,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_NetworkStatisticsReset_mE8
 		return;
 	}
 }
-// Method Definition Index: 111502
+// Method Definition Index: 111523
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PhotonNetwork_NetworkStatisticsToString_m9506BFB707A056CAD9D543FA23623CAB92F4ECCA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9766,7 +9766,7 @@ IL_0014:
 		return L_4;
 	}
 }
-// Method Definition Index: 111503
+// Method Definition Index: 111524
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_VerifyCanUseNetwork_m8DF6F99C82F45DBB35BC1865DA4FC8325A152E2D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9801,7 +9801,7 @@ IL_0009:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 111504
+// Method Definition Index: 111525
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_GetPing_mD08CA65E2772AE7F579C16F768F435C2CC3EA624 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9823,7 +9823,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_GetPing_mD08CA65E2772AE
 		return L_2;
 	}
 }
-// Method Definition Index: 111505
+// Method Definition Index: 111526
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_FetchServerTimestamp_mE6814D2750B220555E298736A5225031258814DC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9858,7 +9858,7 @@ IL_0016:
 		return;
 	}
 }
-// Method Definition Index: 111506
+// Method Definition Index: 111527
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_SendAllOutgoingCommands_mB373F463210BBD3F8C8551D9DA5D5FC7C0992B5C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9903,7 +9903,7 @@ IL_0008:
 		return;
 	}
 }
-// Method Definition Index: 111507
+// Method Definition Index: 111528
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_CloseConnection_mEA52276BFFCB506193862B67A4CC1A6CF915B94B (Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_kickPlayer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10025,7 +10025,7 @@ IL_0043:
 		return L_15;
 	}
 }
-// Method Definition Index: 111508
+// Method Definition Index: 111529
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_SetMasterClient_m431C2D183767DB84E3E73FFD85BC276128EE9F70 (Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_masterClientPlayer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10100,7 +10100,7 @@ IL_0029:
 		return L_6;
 	}
 }
-// Method Definition Index: 111509
+// Method Definition Index: 111530
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_JoinRandomRoom_mF5453EB2387249408D170C4635AD4B5981955282 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10117,7 +10117,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_JoinRandomRoom_mF5453EB238
 		return L_0;
 	}
 }
-// Method Definition Index: 111510
+// Method Definition Index: 111531
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_JoinRandomRoom_m2539CD9AAEC557F777AA35A745D412F6BECCC0F2 (Hashtable_tD626399B3ADFD501225241D7366103F35472542A* ___0_expectedCustomRoomProperties, int32_t ___1_expectedMaxPlayers, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10136,7 +10136,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_JoinRandomRoom_m2539CD9AAE
 		return L_2;
 	}
 }
-// Method Definition Index: 111511
+// Method Definition Index: 111532
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_JoinRandomRoom_m09436D727F9FAEBCF7B00B7271ED2A9536A729AE (Hashtable_tD626399B3ADFD501225241D7366103F35472542A* ___0_expectedCustomRoomProperties, int32_t ___1_expectedMaxPlayers, uint8_t ___2_matchingType, TypedLobby_t29F38D993E984979E53A9212143F1B770EEC6DB9* ___3_typedLobby, String_t* ___4_sqlLobbyFilter, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___5_expectedUsers, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10399,7 +10399,7 @@ IL_00d6:
 		return L_43;
 	}
 }
-// Method Definition Index: 111512
+// Method Definition Index: 111533
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_JoinRandomOrCreateRoom_m02D834725093A2674487F57648278471ADAC9B3A (Hashtable_tD626399B3ADFD501225241D7366103F35472542A* ___0_expectedCustomRoomProperties, uint8_t ___1_expectedMaxPlayers, uint8_t ___2_matchingType, TypedLobby_t29F38D993E984979E53A9212143F1B770EEC6DB9* ___3_typedLobby, String_t* ___4_sqlLobbyFilter, String_t* ___5_roomName, RoomOptions_t373282A7E849A09DA153714F5A1B479C325CDE23* ___6_roomOptions, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___7_expectedUsers, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10693,7 +10693,7 @@ IL_00d6:
 		return L_53;
 	}
 }
-// Method Definition Index: 111513
+// Method Definition Index: 111534
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_CreateRoom_m4C10274CD848B558E95997CA1277EFE77420B821 (String_t* ___0_roomName, RoomOptions_t373282A7E849A09DA153714F5A1B479C325CDE23* ___1_roomOptions, TypedLobby_t29F38D993E984979E53A9212143F1B770EEC6DB9* ___2_typedLobby, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___3_expectedUsers, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10947,7 +10947,7 @@ IL_00d2:
 		return L_41;
 	}
 }
-// Method Definition Index: 111514
+// Method Definition Index: 111535
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_JoinOrCreateRoom_m2D5FE70159544CF661E2033C2AE4348608C9F44A (String_t* ___0_roomName, RoomOptions_t373282A7E849A09DA153714F5A1B479C325CDE23* ___1_roomOptions, TypedLobby_t29F38D993E984979E53A9212143F1B770EEC6DB9* ___2_typedLobby, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___3_expectedUsers, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11231,7 +11231,7 @@ IL_00e6:
 		return L_46;
 	}
 }
-// Method Definition Index: 111515
+// Method Definition Index: 111536
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_JoinRoom_mB85EDB547BA767A21BEB5CB6AC5068F00F05B08C (String_t* ___0_roomName, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___1_expectedUsers, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11451,7 +11451,7 @@ IL_00c8:
 		return L_32;
 	}
 }
-// Method Definition Index: 111516
+// Method Definition Index: 111537
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_RejoinRoom_m9FA217800D779480361FAAB375C40A19EFD24E89 (String_t* ___0_roomName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11634,7 +11634,7 @@ IL_00b7:
 		return L_25;
 	}
 }
-// Method Definition Index: 111517
+// Method Definition Index: 111538
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_ReconnectAndRejoin_m1167F6D6787B15E683088B1716CD0572E5D132C6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11737,7 +11737,7 @@ IL_006d:
 		return L_12;
 	}
 }
-// Method Definition Index: 111518
+// Method Definition Index: 111539
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_LeaveRoom_m3BE228D128665941646C4D4A1D5529B944F49744 (bool ___0_becomeInactive, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11856,7 +11856,7 @@ IL_007a:
 		return (bool)1;
 	}
 }
-// Method Definition Index: 111519
+// Method Definition Index: 111540
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_EnterOfflineRoom_m7ED28ED2C6ADC46E6D54894AFC8A7327612FF7B0 (String_t* ___0_roomName, RoomOptions_t373282A7E849A09DA153714F5A1B479C325CDE23* ___1_roomOptions, bool ___2_createdRoom, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11930,7 +11930,7 @@ IL_0064:
 		return;
 	}
 }
-// Method Definition Index: 111520
+// Method Definition Index: 111541
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_JoinLobby_m1963DA1D3B6EDFADCC45C75B121188EF6B6B4803 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11947,7 +11947,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_JoinLobby_m1963DA1D3B6EDFA
 		return L_0;
 	}
 }
-// Method Definition Index: 111521
+// Method Definition Index: 111542
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_JoinLobby_mE05E6E046D392B2B62804BF0778FB2B6AE4E8162 (TypedLobby_t29F38D993E984979E53A9212143F1B770EEC6DB9* ___0_typedLobby, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11992,7 +11992,7 @@ IL_001a:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 111522
+// Method Definition Index: 111543
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_LeaveLobby_m7795775952D587514D497F6657FFD581BF0F31DC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12036,7 +12036,7 @@ IL_0019:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 111523
+// Method Definition Index: 111544
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_FindFriends_m9E7568F92250B87994356BBDA728E02068062BDC (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_friendsToFind, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12081,7 +12081,7 @@ IL_0010:
 		return L_4;
 	}
 }
-// Method Definition Index: 111524
+// Method Definition Index: 111545
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_GetCustomRoomList_m5D7E40891A2D06DA84BE88A88D646ED24EB7BB18 (TypedLobby_t29F38D993E984979E53A9212143F1B770EEC6DB9* ___0_typedLobby, String_t* ___1_sqlLobbyFilter, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12102,7 +12102,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_GetCustomRoomList_m5D7E408
 		return L_3;
 	}
 }
-// Method Definition Index: 111525
+// Method Definition Index: 111546
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_SetPlayerCustomProperties_m8F2FB7487D031516310350962C1D1271380C02EB (Hashtable_tD626399B3ADFD501225241D7366103F35472542A* ___0_customProperties, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12210,7 +12210,7 @@ IL_004f:
 		return L_12;
 	}
 }
-// Method Definition Index: 111526
+// Method Definition Index: 111547
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_RemovePlayerCustomProperties_mA3103C1CA9E42C2418305F83B6906ABD6A652C25 (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_customPropertiesToDelete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12336,7 +12336,7 @@ IL_0052:
 		return;
 	}
 }
-// Method Definition Index: 111527
+// Method Definition Index: 111548
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_RaiseEvent_mFB515FAB067583F656F8B64D7CF44F8F0C41224B (uint8_t ___0_eventCode, RuntimeObject* ___1_eventContent, RaiseEventOptions_tAEB3A9A0993C52981809954BC2DB304E887D852E* ___2_raiseEventOptions, SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 ___3_sendOptions, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12456,7 +12456,7 @@ IL_007e:
 		return L_24;
 	}
 }
-// Method Definition Index: 111528
+// Method Definition Index: 111549
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_RaiseEventInternal_m4843CF58691D76C64B392CB7CA2A941C9652082F (uint8_t ___0_eventCode, RuntimeObject* ___1_eventContent, RaiseEventOptions_tAEB3A9A0993C52981809954BC2DB304E887D852E* ___2_raiseEventOptions, SendOptions_tF9510905DE0E4230B6BF45A2AD2A43773AC32ED8 ___3_sendOptions, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12520,7 +12520,7 @@ IL_002d:
 		return L_9;
 	}
 }
-// Method Definition Index: 111529
+// Method Definition Index: 111550
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_AllocateViewID_mA07AE80A1D3B664BD5140342283010D349A233B9 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___0_view, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12578,7 +12578,7 @@ IL_001f:
 		return (bool)1;
 	}
 }
-// Method Definition Index: 111530
+// Method Definition Index: 111551
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_AllocateSceneViewID_m08729B697E9C85D0076504BC0C6219045CB422C7 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___0_view, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12596,7 +12596,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_AllocateSceneViewID_m08729
 		return L_1;
 	}
 }
-// Method Definition Index: 111531
+// Method Definition Index: 111552
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_AllocateRoomViewID_m44F8C251FCB8664CACEF61FAED0386112247E6CA (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___0_view, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12669,7 +12669,7 @@ IL_0032:
 		return (bool)1;
 	}
 }
-// Method Definition Index: 111532
+// Method Definition Index: 111553
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_AllocateViewID_m557AA27EA993A04C8BB3749A1C0DFC37251E01D4 (bool ___0_roomObject, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12743,7 +12743,7 @@ IL_002b:
 		return L_6;
 	}
 }
-// Method Definition Index: 111533
+// Method Definition Index: 111554
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_AllocateViewID_m1290B1F7301CA3A42350AE99706B070BC02B0ABD (int32_t ___0_ownerId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12940,7 +12940,7 @@ IL_00a7:
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_42, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&PhotonNetwork_AllocateViewID_m1290B1F7301CA3A42350AE99706B070BC02B0ABD_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 111534
+// Method Definition Index: 111555
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* PhotonNetwork_Instantiate_mD5714F5AC4C17B75AFD65676226351C91B60AF0D (String_t* ___0_prefabName, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_position, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___2_rotation, uint8_t ___3_group, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___4_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13003,7 +13003,7 @@ IL_002b:
 		return L_14;
 	}
 }
-// Method Definition Index: 111535
+// Method Definition Index: 111556
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* PhotonNetwork_InstantiateSceneObject_m98C90A59D4D5D417B0B2B23AE707FB0A3242BAC9 (String_t* ___0_prefabName, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_position, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___2_rotation, uint8_t ___3_group, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___4_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13025,7 +13025,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651
 		return L_5;
 	}
 }
-// Method Definition Index: 111536
+// Method Definition Index: 111557
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* PhotonNetwork_InstantiateRoomObject_m7C4F501A51832D5335699A10D862B6020FF858B6 (String_t* ___0_prefabName, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_position, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___2_rotation, uint8_t ___3_group, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___4_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13096,7 +13096,7 @@ IL_0042:
 		return (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL;
 	}
 }
-// Method Definition Index: 111537
+// Method Definition Index: 111558
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* PhotonNetwork_NetworkInstantiate_mF204F7B3E2B54D1EBA89C683D63E5CBDB34503C2 (Hashtable_tD626399B3ADFD501225241D7366103F35472542A* ___0_networkEvent, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___1_creator, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13376,7 +13376,7 @@ IL_0128:
 		return L_64;
 	}
 }
-// Method Definition Index: 111538
+// Method Definition Index: 111559
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* PhotonNetwork_NetworkInstantiate_mE5EDF7EFCED99505DF2D7F91D02A064355452BF1 (InstantiateParameters_t9FB6B1ABF5F3EA25CBDF102CFBEF3A375FB04D43 ___0_parameters, bool ___1_roomObject, bool ___2_instantiateEvent, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13820,7 +13820,7 @@ IL_01d7:
 		return L_108;
 	}
 }
-// Method Definition Index: 111539
+// Method Definition Index: 111560
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_SendInstantiate_m9FBB7956F3B688F0F135FAD33A6225B6625DBB91 (InstantiateParameters_t9FB6B1ABF5F3EA25CBDF102CFBEF3A375FB04D43 ___0_parameters, bool ___1_roomObject, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14055,7 +14055,7 @@ IL_013a:
 		return L_70;
 	}
 }
-// Method Definition Index: 111540
+// Method Definition Index: 111561
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_Destroy_m1AADC23FAA2D1E6DE71F55869B24B200C5E4A277 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___0_targetView, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14100,7 +14100,7 @@ IL_001d:
 		return;
 	}
 }
-// Method Definition Index: 111541
+// Method Definition Index: 111562
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_Destroy_m3168CD7351F397AFD5A9A389593AB4EC09B2CA16 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_targetGo, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14120,7 +14120,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_Destroy_m3168CD7351F397AFD
 		return;
 	}
 }
-// Method Definition Index: 111542
+// Method Definition Index: 111563
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_DestroyPlayerObjects_mBE9B091DCB5D307D856FE75486D259A7F8897031 (Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_targetPlayer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14158,7 +14158,7 @@ IL_000d:
 		return;
 	}
 }
-// Method Definition Index: 111543
+// Method Definition Index: 111564
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_DestroyPlayerObjects_mA1CE40E7A54B80B8A23276DD9077D15257697A24 (int32_t ___0_targetPlayerId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14240,7 +14240,7 @@ IL_0029:
 		return;
 	}
 }
-// Method Definition Index: 111544
+// Method Definition Index: 111565
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_DestroyAll_m79D03DF4664CAED5D46AA513C6D89068E62AC1F6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14277,7 +14277,7 @@ IL_000e:
 		return;
 	}
 }
-// Method Definition Index: 111545
+// Method Definition Index: 111566
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_RemoveRPCs_mFA20B13B8DAF557C7160E6726B43AB5CCF61E845 (Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_targetPlayer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14344,7 +14344,7 @@ IL_0022:
 		return;
 	}
 }
-// Method Definition Index: 111546
+// Method Definition Index: 111567
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_RemoveRPCs_m9A1B2B93B17B9129BCE65CB4C4E3F74D5B124BC9 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___0_targetPhotonView, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14378,7 +14378,7 @@ IL_0008:
 		return;
 	}
 }
-// Method Definition Index: 111547
+// Method Definition Index: 111568
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_RPC_mC0E36B1655F1562BA53A5257FA8867B0B962ECAA (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___0_view, String_t* ___1_methodName, int32_t ___2_target, bool ___3_encrypt, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___4_parameters, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14483,7 +14483,7 @@ IL_004c:
 		return;
 	}
 }
-// Method Definition Index: 111548
+// Method Definition Index: 111569
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_RPC_m51FE97D7FB4EF01149075D2D7A36B89B5E396239 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___0_view, String_t* ___1_methodName, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___2_targetPlayer, bool ___3_encrypt, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___4_parameters, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14590,7 +14590,7 @@ IL_0055:
 		return;
 	}
 }
-// Method Definition Index: 111549
+// Method Definition Index: 111570
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_SetInterestGroups_m37624CCBFFC24E77527BF2E329A68B550775DF7C (uint8_t ___0_group, bool ___1_enabled, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14655,7 +14655,7 @@ IL_001e:
 		return;
 	}
 }
-// Method Definition Index: 111550
+// Method Definition Index: 111571
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_LoadLevel_m2DFDDBF54E17F875F9A30EFB459D7AE68AD865B7 (int32_t ___0_levelNumber, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14717,7 +14717,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 111551
+// Method Definition Index: 111572
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_LoadLevel_m71D2B6098A6F1CBFB37EE1E4CBE28B11149C8A38 (String_t* ___0_levelName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14777,7 +14777,7 @@ IL_0015:
 		return;
 	}
 }
-// Method Definition Index: 111552
+// Method Definition Index: 111573
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_WebRpc_m39ED702134CA687CAFFD2BCD80E3BEEC7EBE4482 (String_t* ___0_name, RuntimeObject* ___1_parameters, bool ___2_sendAuthCookie, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14799,7 +14799,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_WebRpc_m39ED702134CA687CAF
 		return L_4;
 	}
 }
-// Method Definition Index: 111553
+// Method Definition Index: 111574
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_SetupLogging_m9CED46FF2390001E3A1AE653B6CCC78E6D40AB9A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14865,7 +14865,7 @@ IL_0046:
 		return;
 	}
 }
-// Method Definition Index: 111554
+// Method Definition Index: 111575
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_LoadOrCreateSettings_m1B7E8671B93257F5367D557D2418E40001901670 (bool ___0_reload, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14990,7 +14990,7 @@ IL_0088:
 		return;
 	}
 }
-// Method Definition Index: 111555
+// Method Definition Index: 111576
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PhotonViewU5BU5D_t01FB622269E79B530116EDC76C4B21407EADF27C* PhotonNetwork_get_PhotonViews_mD4B34384B8DC463C2FB6B8F12DE35D3EF7CB42E0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15095,7 +15095,7 @@ IL_0052:
 		return L_12;
 	}
 }
-// Method Definition Index: 111556
+// Method Definition Index: 111577
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ValueIterator_t586A64FAED1F7A00B9D24599C007688011D4EDEB PhotonNetwork_get_PhotonViewCollection_mF7BEE875D96BE93DDD71D02771C68BC62F648D6C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15115,7 +15115,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ValueIterator_t586A64FAED1F7A00B9D24599C00768
 		return L_1;
 	}
 }
-// Method Definition Index: 111557
+// Method Definition Index: 111578
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_get_ViewCount_m2FEC7FA5D0BBF56466DD05B9607A5F302F67D14B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15135,7 +15135,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonNetwork_get_ViewCount_m2FEC7FA5
 		return L_1;
 	}
 }
-// Method Definition Index: 111558
+// Method Definition Index: 111579
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_add_OnOwnershipRequestEv_m71D5D6651CE98114538FC45C1D2242B3BB3460C8 (Action_2_tAA2E46B2015896D2C3FD7EC72B52C340E8EFF4C4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15180,7 +15180,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 111559
+// Method Definition Index: 111580
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_remove_OnOwnershipRequestEv_mEA643C85BFE46E56E39F6BE6975CE095F2A4C18D (Action_2_tAA2E46B2015896D2C3FD7EC72B52C340E8EFF4C4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15225,7 +15225,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 111560
+// Method Definition Index: 111581
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_add_OnOwnershipTransferedEv_mE79957D9E6262796A51CC08A3C9F9B95C586DDB2 (Action_2_tAA2E46B2015896D2C3FD7EC72B52C340E8EFF4C4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15270,7 +15270,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 111561
+// Method Definition Index: 111582
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_remove_OnOwnershipTransferedEv_m0CA3A0EE8A183318AC434107D4A85EFCBA63DE2A (Action_2_tAA2E46B2015896D2C3FD7EC72B52C340E8EFF4C4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15315,7 +15315,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 111562
+// Method Definition Index: 111583
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_add_OnOwnershipTransferFailedEv_m5A1F811BDB84B9029E3CABFAE363AD949C9F4BFA (Action_2_tAA2E46B2015896D2C3FD7EC72B52C340E8EFF4C4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15360,7 +15360,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 111563
+// Method Definition Index: 111584
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_remove_OnOwnershipTransferFailedEv_mFF28119D0721856F658CE03A91707810B97E5FBE (Action_2_tAA2E46B2015896D2C3FD7EC72B52C340E8EFF4C4* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15405,7 +15405,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 111564
+// Method Definition Index: 111585
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_AddCallbackTarget_m484BD3273273426AE5B66E8599405D2501079E58 (RuntimeObject* ___0_target, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15477,7 +15477,7 @@ IL_0049:
 		return;
 	}
 }
-// Method Definition Index: 111565
+// Method Definition Index: 111586
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_RemoveCallbackTarget_m7CE5AF22A90F9E3886919CE540D10089A01C46AB (RuntimeObject* ___0_target, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15559,7 +15559,7 @@ IL_0050:
 		return;
 	}
 }
-// Method Definition Index: 111566
+// Method Definition Index: 111587
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PhotonNetwork_CallbacksToString_mCDA18CEA5F4299B74EF8C14BC388C243A03FE736 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15623,7 +15623,7 @@ IL_0029:
 		return L_10;
 	}
 }
-// Method Definition Index: 111567
+// Method Definition Index: 111588
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PhotonNetwork_get_PrefabPool_m59E44382821A80EE7409DF0D27ECAD5EBB8203CC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15639,7 +15639,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PhotonNetwork_get_PrefabPool_m
 		return L_0;
 	}
 }
-// Method Definition Index: 111568
+// Method Definition Index: 111589
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_set_PrefabPool_mD71CFB7B4709E22FD28375B0A41F9A075AF823F0 (RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15683,7 +15683,7 @@ IL_0018:
 		return;
 	}
 }
-// Method Definition Index: 111569
+// Method Definition Index: 111590
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float PhotonNetwork_get_LevelLoadingProgress_m1EBFA101FC22E6CC27660556969CE729238C4B87 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15736,7 +15736,7 @@ IL_002e:
 		return L_4;
 	}
 }
-// Method Definition Index: 111570
+// Method Definition Index: 111591
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_LeftRoomCleanup_mA26735AA7B996B4442DDD7A8C926816A333BB788 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15844,7 +15844,7 @@ IL_0061:
 		return;
 	}
 }
-// Method Definition Index: 111571
+// Method Definition Index: 111592
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_LocalCleanupAnythingInstantiated_m8331D9D428D16D05822AD2387D2C193A6AA78099 (bool ___0_destroyInstantiatedGameObjects, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16035,7 +16035,7 @@ IL_0090:
 		return;
 	}
 }
-// Method Definition Index: 111572
+// Method Definition Index: 111593
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_ResetPhotonViewsOnSerialize_m1571927E4BD5E647905EB5F5DD824D016D314648 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16118,7 +16118,7 @@ IL_003b:
 		return;
 	}
 }
-// Method Definition Index: 111573
+// Method Definition Index: 111594
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_ExecuteRpc_m23AD7192BD95E6E7BC1B2ED9E24D958433E1D814 (Hashtable_tD626399B3ADFD501225241D7366103F35472542A* ___0_rpcData, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___1_sender, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17815,7 +17815,7 @@ IL_074e:
 		return;
 	}
 }
-// Method Definition Index: 111574
+// Method Definition Index: 111595
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_CheckTypeMatch_mB103E5B4296205AFAD37B715D258147CBD4C3A5E (ParameterInfoU5BU5D_t86995AB4A1693393FE29B058CC3FD727DF0B984C* ___0_methodParameters, TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* ___1_callParameterTypes, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -17942,7 +17942,7 @@ IL_004b:
 		return (bool)1;
 	}
 }
-// Method Definition Index: 111575
+// Method Definition Index: 111596
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_DestroyPlayerObjects_mD6A78D26709FAF8EF2ABEA6FFE1ABF81BE488699 (int32_t ___0_playerId, bool ___1_localOnly, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18237,7 +18237,7 @@ IL_0106:
 		return;
 	}
 }
-// Method Definition Index: 111576
+// Method Definition Index: 111597
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_DestroyAll_m5D5324E3328BB27FFF99A1C19779FCD75FF7B116 (bool ___0_localOnly, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18271,7 +18271,7 @@ IL_000d:
 		return;
 	}
 }
-// Method Definition Index: 111577
+// Method Definition Index: 111598
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_RemoveInstantiatedGO_m72F7A5FFDECDBEF21F3AE850F9020A8F9EDB306C (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_go, bool ___1_localOnly, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18650,7 +18650,7 @@ IL_0124:
 		return;
 	}
 }
-// Method Definition Index: 111578
+// Method Definition Index: 111599
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_ServerCleanInstantiateAndDestroy_m56E0A70186CC9F4472612305E6F7FD184536E570 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___0_photonView, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18765,7 +18765,7 @@ IL_0078:
 		return;
 	}
 }
-// Method Definition Index: 111579
+// Method Definition Index: 111600
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_SendDestroyOfPlayer_mA9D7A01E407C9EA1137FB3827234370AADCB0B09 (int32_t ___0_actorNr, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18801,7 +18801,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_SendDestroyOfPlayer_mA9D7A
 		return;
 	}
 }
-// Method Definition Index: 111580
+// Method Definition Index: 111601
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_SendDestroyOfAll_m0C38D20A9B9B3CC4DAAD4CD0B9C634148F8B779B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18836,7 +18836,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_SendDestroyOfAll_m0C38D20A
 		return;
 	}
 }
-// Method Definition Index: 111581
+// Method Definition Index: 111602
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_OpRemoveFromServerInstantiationsOfPlayer_m5FD7F1D63EA05091E7B06DAFF9D049D12843D163 (int32_t ___0_actorNr, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18880,7 +18880,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_OpRemoveFromServerInstanti
 		return;
 	}
 }
-// Method Definition Index: 111582
+// Method Definition Index: 111603
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_RequestOwnership_m533A77937964C32EBD95617485296FB6CA66D254 (int32_t ___0_viewID, int32_t ___1_fromOwner, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18912,7 +18912,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_RequestOwnership_m533A7793
 		return;
 	}
 }
-// Method Definition Index: 111583
+// Method Definition Index: 111604
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_TransferOwnership_mEA76B8FA42811915088CBC04E3D0ADF6513B3143 (int32_t ___0_viewID, int32_t ___1_playerID, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18944,7 +18944,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_TransferOwnership_mEA76B8F
 		return;
 	}
 }
-// Method Definition Index: 111584
+// Method Definition Index: 111605
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_OwnershipUpdate_m72B0D5A10337E399FCF079A37EC72500D898259C (Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___0_viewOwnerPairs, int32_t ___1_targetActor, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19000,7 +19000,7 @@ IL_001f:
 		return;
 	}
 }
-// Method Definition Index: 111585
+// Method Definition Index: 111606
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_LocalCleanPhotonView_mCCF991CCCC58D12FED0B03AF6231BBFBFE5AC574 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___0_view, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19028,7 +19028,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_LocalCleanPhotonView_mCCF9
 		return L_4;
 	}
 }
-// Method Definition Index: 111586
+// Method Definition Index: 111607
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* PhotonNetwork_GetPhotonView_mADB9462BBD999FA4027CA06BB0051649D213BA00 (int32_t ___0_viewID, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19054,7 +19054,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB5
 		return L_3;
 	}
 }
-// Method Definition Index: 111587
+// Method Definition Index: 111608
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_RegisterPhotonView_m1AAAD1B2EE2D235C618D8FC757755C7BDAB1F327 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___0_netView, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19262,7 +19262,7 @@ IL_00c0:
 		return;
 	}
 }
-// Method Definition Index: 111588
+// Method Definition Index: 111609
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_OpCleanActorRpcBuffer_m6B8E981D7CB64D9F0ADCE2C6AEFF15846C6E95DA (int32_t ___0_actorNumber, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19306,7 +19306,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_OpCleanActorRpcBuffer_m6B8
 		return;
 	}
 }
-// Method Definition Index: 111589
+// Method Definition Index: 111610
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_OpRemoveCompleteCacheOfPlayer_mB03BE28E540C4E37955A6DEEC90FD30C7A6EB161 (int32_t ___0_actorNumber, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19350,7 +19350,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_OpRemoveCompleteCacheOfPla
 		return;
 	}
 }
-// Method Definition Index: 111590
+// Method Definition Index: 111611
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_OpRemoveCompleteCache_mEC8E104E51E8207EB8E332E4E86536BF2E413D45 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19384,7 +19384,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_OpRemoveCompleteCache_mEC8
 		return;
 	}
 }
-// Method Definition Index: 111591
+// Method Definition Index: 111612
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_RemoveCacheOfLeftPlayers_mFD09F9D065B8A47F503D4BCFA68C81F0FD68DE9E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19429,7 +19429,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_RemoveCacheOfLeftPlayers_m
 		return;
 	}
 }
-// Method Definition Index: 111592
+// Method Definition Index: 111613
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_CleanRpcBufferIfMine_mBA59865C462872EDF76313F15C4700EC0341010A (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___0_view, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19540,7 +19540,7 @@ IL_005d:
 		return;
 	}
 }
-// Method Definition Index: 111593
+// Method Definition Index: 111614
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_OpCleanRpcBuffer_mE8B2BC11F67E2A926891BE459D117B7CC18C4C92 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___0_view, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19574,7 +19574,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_OpCleanRpcBuffer_mE8B2BC11
 		return;
 	}
 }
-// Method Definition Index: 111594
+// Method Definition Index: 111615
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_RemoveRPCsInGroup_m9BB0EFD4B5B246CDBC1E7BF3D5822366E2D18642 (int32_t ___0_group, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19670,7 +19670,7 @@ IL_0045:
 		return;
 	}
 }
-// Method Definition Index: 111595
+// Method Definition Index: 111616
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_RemoveBufferedRPCs_m5B4A236B18500FEC6187E9DE520E2E1DC1DAA78B (int32_t ___0_viewId, String_t* ___1_methodName, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___2_callersActorNumbers, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19797,7 +19797,7 @@ IL_0069:
 		return L_28;
 	}
 }
-// Method Definition Index: 111596
+// Method Definition Index: 111617
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_SetLevelPrefix_m762F1C2F3605935DFA26E323CB1AFEA381CFA91D (uint8_t ___0_prefix, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19815,7 +19815,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_SetLevelPrefix_m762F1C2F36
 		return;
 	}
 }
-// Method Definition Index: 111597
+// Method Definition Index: 111618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_RPC_mF4FCE6795586C0EFBC613801F9788B0561A5E831 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___0_view, String_t* ___1_methodName, int32_t ___2_target, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___3_player, bool ___4_encrypt, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___5_parameters, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20507,7 +20507,7 @@ IL_03ce:
 		return;
 	}
 }
-// Method Definition Index: 111598
+// Method Definition Index: 111619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_SetInterestGroups_m4156F5BC261595B2765831B8632DDB0F2BDEDD79 (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_disableGroups, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_enableGroups, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20781,7 +20781,7 @@ IL_00eb:
 		return;
 	}
 }
-// Method Definition Index: 111599
+// Method Definition Index: 111620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_SetSendingEnabled_mAC55C3B8722D14B3201DFB7D148CD3B437549DDC (uint8_t ___0_group, bool ___1_enabled, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20824,7 +20824,7 @@ IL_0010:
 		return;
 	}
 }
-// Method Definition Index: 111600
+// Method Definition Index: 111621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_SetSendingEnabled_m3EC31CC0C692CE0E54DF1685152DFC5B43F490F5 (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_disableGroups, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___1_enableGroups, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20940,7 +20940,7 @@ IL_0042:
 		return;
 	}
 }
-// Method Definition Index: 111601
+// Method Definition Index: 111622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_NewSceneLoaded_mC0EF5741B762471C5A04A1E91EC979C362E1CB03 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21162,7 +21162,7 @@ IL_00d0:
 		return;
 	}
 }
-// Method Definition Index: 111602
+// Method Definition Index: 111623
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_RunViewUpdate_mB0C58136E9DECE9A967E8CCA3CE8F6D450023235 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21489,7 +21489,7 @@ IL_0142:
 		return;
 	}
 }
-// Method Definition Index: 111603
+// Method Definition Index: 111624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_SendSerializeViewBatch_m8C6971CB94A8F671F1E97330F4FF7595B0280B6E (SerializeViewBatch_tD73893D5FFD826B74BE8D35DDED9CC22ADE76CDB* ___0_batch, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21680,7 +21680,7 @@ IL_009a:
 		return;
 	}
 }
-// Method Definition Index: 111604
+// Method Definition Index: 111625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* PhotonNetwork_OnSerializeWrite_mA7FBABB2241037168D00CFBD60455846875EF94F (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___0_view, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21983,7 +21983,7 @@ IL_0153:
 		return (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D*)NULL;
 	}
 }
-// Method Definition Index: 111605
+// Method Definition Index: 111626
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_OnSerializeRead_m39C4CBFD913D16A0239CA3F65543221E25F1949B (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___0_data, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___1_sender, int32_t ___2_networkTime, int16_t ___3_correctPrefix, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22276,7 +22276,7 @@ IL_0144:
 		return;
 	}
 }
-// Method Definition Index: 111606
+// Method Definition Index: 111627
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* PhotonNetwork_DeltaCompressionWrite_m1E74974E96545CF1CCA20B11C43A4C065C2917E6 (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* ___0_previousContent, List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* ___1_currentContent, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22540,7 +22540,7 @@ IL_00c1:
 		return L_53;
 	}
 }
-// Method Definition Index: 111607
+// Method Definition Index: 111628
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* PhotonNetwork_DeltaCompressionRead_m478EAF5EA1FF5D239B082737518AD0C9A69767AD (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___0_lastOnSerializeDataReceived, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_incomingData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22672,7 +22672,7 @@ IL_003b:
 		return L_26;
 	}
 }
-// Method Definition Index: 111608
+// Method Definition Index: 111629
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_AlmostEquals_mA825CB1292DDC82E48E0797EE4FAEDE3BE2A0B94 (RuntimeObject* ___0_lastData, RuntimeObject* ___1_currentContent, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22804,7 +22804,7 @@ IL_003f:
 		return (bool)1;
 	}
 }
-// Method Definition Index: 111609
+// Method Definition Index: 111630
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_AlmostEquals_m768E279923F8BDD5E7A492B92984D32C6BF937AA (RuntimeObject* ___0_one, RuntimeObject* ___1_two, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23011,7 +23011,7 @@ IL_00ae:
 		return (bool)1;
 	}
 }
-// Method Definition Index: 111610
+// Method Definition Index: 111631
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonNetwork_GetMethod_m46847FEFF972479A40C71978B91276985E27423E (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* ___0_monob, String_t* ___1_methodType, MethodInfo_t** ___2_mi, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23131,7 +23131,7 @@ IL_0046:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 111611
+// Method Definition Index: 111632
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_LoadLevelIfSynced_mEE1EB2AE80076E9BAB79814DA58A65E4D6A3ACF4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23272,7 +23272,7 @@ IL_0088:
 		return;
 	}
 }
-// Method Definition Index: 111612
+// Method Definition Index: 111633
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_SetLevelInPropsIfSynced_m3DD835309AB3064EE2F95894142745C912E6F303 (RuntimeObject* ___0_levelId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23593,7 +23593,7 @@ IL_011e:
 		return;
 	}
 }
-// Method Definition Index: 111613
+// Method Definition Index: 111634
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_OnEvent_m9B3AA9065DAF0522689F01C7C128984EA2FB99A2 (EventData_t1D834FCA8C994FD4AA4D12372B5532170DFD3681* ___0_photonEvent, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25168,7 +25168,7 @@ IL_06d8:
 		return;
 	}
 }
-// Method Definition Index: 111614
+// Method Definition Index: 111635
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_OnOperation_mFB99237E87670311F6B683140CEE508990C8B5DD (OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* ___0_opResponse, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25318,7 +25318,7 @@ IL_0094:
 		return;
 	}
 }
-// Method Definition Index: 111615
+// Method Definition Index: 111636
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_OnClientStateChanged_m6DE4381B41161E5FD49930B2B22EC0D20C719019 (int32_t ___0_previousState, int32_t ___1_state, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25414,7 +25414,7 @@ IL_0042:
 		return;
 	}
 }
-// Method Definition Index: 111616
+// Method Definition Index: 111637
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonNetwork_OnRegionsPinged_m7EDFE011C1042F0C0B55521635EE07BCCA1ECFEC (RegionHandler_tF76A25E25C3BF915FDFBEA81372D9D7858087EBB* ___0_regionHandler, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25533,7 +25533,7 @@ IL2CPP_EXTERN_C void RaiseEventBatch_t841FB5779B1DEA38AD940F66168BFD85F40A0401_m
 IL2CPP_EXTERN_C void RaiseEventBatch_t841FB5779B1DEA38AD940F66168BFD85F40A0401_marshal_com_cleanup(RaiseEventBatch_t841FB5779B1DEA38AD940F66168BFD85F40A0401_marshaled_com& marshaled)
 {
 }
-// Method Definition Index: 111617
+// Method Definition Index: 111638
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t RaiseEventBatch_GetHashCode_mBD26C0817F3D9E91AE5BD4633A60CEA4E59705E3 (RaiseEventBatch_t841FB5779B1DEA38AD940F66168BFD85F40A0401* __this, const RuntimeMethod* method) 
 {
 	uint8_t G_B2_0 = 0x0;
@@ -25577,7 +25577,7 @@ IL2CPP_EXTERN_C  int32_t RaiseEventBatch_GetHashCode_mBD26C0817F3D9E91AE5BD4633A
 	_returnValue = RaiseEventBatch_GetHashCode_mBD26C0817F3D9E91AE5BD4633A60CEA4E59705E3(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 111618
+// Method Definition Index: 111639
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RaiseEventBatch_Equals_mC7FF1344A27197990A33BE52EF3423A819B98BAA (RaiseEventBatch_t841FB5779B1DEA38AD940F66168BFD85F40A0401* __this, RaiseEventBatch_t841FB5779B1DEA38AD940F66168BFD85F40A0401 ___0_other, const RuntimeMethod* method) 
 {
 	{
@@ -25619,7 +25619,7 @@ IL2CPP_EXTERN_C  bool RaiseEventBatch_Equals_mC7FF1344A27197990A33BE52EF3423A819
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 111619
+// Method Definition Index: 111640
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializeViewBatch__ctor_mD32FF3D51CA3B26ADE7F4C86D9B268C812C5B7A8 (SerializeViewBatch_tD73893D5FFD826B74BE8D35DDED9CC22ADE76CDB* __this, RaiseEventBatch_t841FB5779B1DEA38AD940F66168BFD85F40A0401 ___0_batch, int32_t ___1_offset, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25682,7 +25682,7 @@ IL_0044:
 		return;
 	}
 }
-// Method Definition Index: 111620
+// Method Definition Index: 111641
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SerializeViewBatch_GetHashCode_m06A4F7146C77C4F3E6670EED9C523EAD03060D19 (SerializeViewBatch_tD73893D5FFD826B74BE8D35DDED9CC22ADE76CDB* __this, const RuntimeMethod* method) 
 {
 	uint8_t G_B2_0 = 0x0;
@@ -25719,7 +25719,7 @@ IL_001e:
 		return ((int32_t)il2cpp_codegen_add((int32_t)G_B3_1, G_B3_0));
 	}
 }
-// Method Definition Index: 111621
+// Method Definition Index: 111642
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SerializeViewBatch_Equals_mA0C625E948F60674C9EA857F2E49A0E43AB4037A (SerializeViewBatch_tD73893D5FFD826B74BE8D35DDED9CC22ADE76CDB* __this, SerializeViewBatch_tD73893D5FFD826B74BE8D35DDED9CC22ADE76CDB* ___0_other, const RuntimeMethod* method) 
 {
 	{
@@ -25732,7 +25732,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SerializeViewBatch_Equals_mA0C625E948F60
 		return L_2;
 	}
 }
-// Method Definition Index: 111622
+// Method Definition Index: 111643
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SerializeViewBatch_Equals_m69804052E9672ED91601F6900EB4BFBF40674D89 (SerializeViewBatch_tD73893D5FFD826B74BE8D35DDED9CC22ADE76CDB* __this, RaiseEventBatch_t841FB5779B1DEA38AD940F66168BFD85F40A0401 ___0_other, const RuntimeMethod* method) 
 {
 	{
@@ -25759,7 +25759,7 @@ IL_0027:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 111623
+// Method Definition Index: 111644
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SerializeViewBatch_Equals_m245D7EF768CBDF646FB6419EBA9034EC440E11B4 (SerializeViewBatch_tD73893D5FFD826B74BE8D35DDED9CC22ADE76CDB* __this, RuntimeObject* ___0_obj, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25798,7 +25798,7 @@ IL_001f:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 111624
+// Method Definition Index: 111645
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializeViewBatch_Clear_m4FA16305695857F550DA7EDA059DF8DEB58AF479 (SerializeViewBatch_tD73893D5FFD826B74BE8D35DDED9CC22ADE76CDB* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25845,7 +25845,7 @@ IL_001f:
 		return;
 	}
 }
-// Method Definition Index: 111625
+// Method Definition Index: 111646
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializeViewBatch_Add_m9AAD4401E4FB5930269BEBD613354F425F76A6BA (SerializeViewBatch_tD73893D5FFD826B74BE8D35DDED9CC22ADE76CDB* __this, List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* ___0_viewData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25897,7 +25897,7 @@ IL_0023:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 111626
+// Method Definition Index: 111647
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m2B3368D009A202DB81B63607A0352E6436CB94B6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25914,7 +25914,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m2B3368D009A202DB81B63607
 		return;
 	}
 }
-// Method Definition Index: 111627
+// Method Definition Index: 111648
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m08B28C0EDCA62D065ABE364892F7481C431D3972 (U3CU3Ec_t22B20E2F95B6EE1C538DF93E0ACFAD609DD019F8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25922,7 +25922,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m08B28C0EDCA62D065ABE36489
 		return;
 	}
 }
-// Method Definition Index: 111628
+// Method Definition Index: 111649
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t U3CU3Ec_U3Cget_PlayerListU3Eb__47_0_mC5F47BF066EE255FDFB9A93A0F20750A6E443920 (U3CU3Ec_t22B20E2F95B6EE1C538DF93E0ACFAD609DD019F8* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_x, const RuntimeMethod* method) 
 {
 	{
@@ -25934,7 +25934,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t U3CU3Ec_U3Cget_PlayerListU3Eb__47_0_m
 		return L_1;
 	}
 }
-// Method Definition Index: 111629
+// Method Definition Index: 111650
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t U3CU3Ec_U3Cget_PlayerListOthersU3Eb__49_0_m2C9810C96C4ECE898D7ABEEE9D51D24DECC65312 (U3CU3Ec_t22B20E2F95B6EE1C538DF93E0ACFAD609DD019F8* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_x, const RuntimeMethod* method) 
 {
 	{
@@ -25946,7 +25946,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t U3CU3Ec_U3Cget_PlayerListOthersU3Eb__
 		return L_1;
 	}
 }
-// Method Definition Index: 111630
+// Method Definition Index: 111651
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3Cget_PlayerListOthersU3Eb__49_1_mFF5962F48BAD0488BBFDFD0CE299DBC1006E62D7 (U3CU3Ec_t22B20E2F95B6EE1C538DF93E0ACFAD609DD019F8* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_x, const RuntimeMethod* method) 
 {
 	{
@@ -25957,7 +25957,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3Cget_PlayerListOthersU3Eb__49_
 		return (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
 	}
 }
-// Method Definition Index: 111631
+// Method Definition Index: 111652
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* U3CU3Ec_U3CCallbacksToStringU3Eb__216_0_m26A69CEFB75EAE48F81461555E98771C14F84529 (U3CU3Ec_t22B20E2F95B6EE1C538DF93E0ACFAD609DD019F8* __this, RuntimeObject* ___0_m, const RuntimeMethod* method) 
 {
 	{
@@ -25977,7 +25977,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* U3CU3Ec_U3CCallbacksToStringU3Eb__2
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 111632
+// Method Definition Index: 111653
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStreamQueue__ctor_mA2D5FEAB856A1ECF6A6A19BF777E0A7767AA6050 (PhotonStreamQueue_t8131497D9983956A47379D2BA8B52656B5DE50C0* __this, int32_t ___0_sampleRate, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26010,7 +26010,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStreamQueue__ctor_mA2D5FEAB856A1EC
 		return;
 	}
 }
-// Method Definition Index: 111633
+// Method Definition Index: 111654
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStreamQueue_BeginWritePackage_m7F5E0AC17F8A36B8EC30E7866F10A7F9D5091F7A (PhotonStreamQueue_t8131497D9983956A47379D2BA8B52656B5DE50C0* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26157,7 +26157,7 @@ IL_00f4:
 		return;
 	}
 }
-// Method Definition Index: 111634
+// Method Definition Index: 111655
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStreamQueue_Reset_mFA7E5F8D55298A77E34531897694C14274BCE257 (PhotonStreamQueue_t8131497D9983956A47379D2BA8B52656B5DE50C0* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26183,7 +26183,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStreamQueue_Reset_mFA7E5F8D55298A7
 		return;
 	}
 }
-// Method Definition Index: 111635
+// Method Definition Index: 111656
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStreamQueue_SendNext_m50C29D6708EDC136A00F4DD3BEDFF3B92D1EDC5D (PhotonStreamQueue_t8131497D9983956A47379D2BA8B52656B5DE50C0* __this, RuntimeObject* ___0_obj, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26236,7 +26236,7 @@ IL_0027:
 		return;
 	}
 }
-// Method Definition Index: 111636
+// Method Definition Index: 111657
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonStreamQueue_HasQueuedObjects_m44DCAA3F4632FB14E321F3BCF9EA533AFFAFA548 (PhotonStreamQueue_t8131497D9983956A47379D2BA8B52656B5DE50C0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26245,7 +26245,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonStreamQueue_HasQueuedObjects_m44DC
 		return (bool)((((int32_t)((((int32_t)L_0) == ((int32_t)(-1)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
 	}
 }
-// Method Definition Index: 111637
+// Method Definition Index: 111658
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PhotonStreamQueue_ReceiveNext_m07622AF0C072AA30C39263341D396D8ED2A7F9C7 (PhotonStreamQueue_t8131497D9983956A47379D2BA8B52656B5DE50C0* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26304,7 +26304,7 @@ IL_0031:
 		return L_10;
 	}
 }
-// Method Definition Index: 111638
+// Method Definition Index: 111659
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStreamQueue_Serialize_m6E2271A7861EE936591CEE9514A78E5550FD481E (PhotonStreamQueue_t8131497D9983956A47379D2BA8B52656B5DE50C0* __this, PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* ___0_stream, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26404,7 +26404,7 @@ IL_0064:
 		return;
 	}
 }
-// Method Definition Index: 111639
+// Method Definition Index: 111660
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStreamQueue_Deserialize_m0F50ED55571DF39D48084F92F47E6D77B700C9FD (PhotonStreamQueue_t8131497D9983956A47379D2BA8B52656B5DE50C0* __this, PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* ___0_stream, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26497,7 +26497,7 @@ IL_006c:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 111640
+// Method Definition Index: 111661
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonView_get_Prefix_mC4801872CFC964428483178763EC3AF79DF29315 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26536,7 +26536,7 @@ IL_001b:
 		return L_3;
 	}
 }
-// Method Definition Index: 111641
+// Method Definition Index: 111662
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_set_Prefix_mEE024D4A0CDF4553CC8F7280D8EC3B1604113524 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -26547,7 +26547,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_set_Prefix_mEE024D4A0CDF4553C
 		return;
 	}
 }
-// Method Definition Index: 111642
+// Method Definition Index: 111663
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* PhotonView_get_InstantiationData_mBD54CA614C303DD42F7FBA97ED7B33D648243114 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26556,7 +26556,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922F
 		return L_0;
 	}
 }
-// Method Definition Index: 111643
+// Method Definition Index: 111664
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_set_InstantiationData_m927591A1EC7DEA1BA092943D816304D64A9F318F (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -26568,7 +26568,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_set_InstantiationData_m927591
 		return;
 	}
 }
-// Method Definition Index: 111644
+// Method Definition Index: 111665
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonView_get_IsSceneView_m83C3705900951386ABFD1B9B15FF9C20B572150A (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26578,7 +26578,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonView_get_IsSceneView_m83C370590095
 		return L_0;
 	}
 }
-// Method Definition Index: 111645
+// Method Definition Index: 111666
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonView_get_IsRoomView_m5AC02FB01BBBCBF295D1AF9114D9A1DB15620934 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26588,7 +26588,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonView_get_IsRoomView_m5AC02FB01BBBC
 		return (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
 	}
 }
-// Method Definition Index: 111646
+// Method Definition Index: 111667
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonView_get_IsOwnerActive_mEF0794169BA30738094CCC94022FAA27CB02B9F7 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26614,7 +26614,7 @@ IL_0017:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 111647
+// Method Definition Index: 111668
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonView_get_IsMine_mE26FB70A42C0D92C66536B45D7A7F8F491C8D648 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26623,7 +26623,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonView_get_IsMine_mE26FB70A42C0D92C6
 		return L_0;
 	}
 }
-// Method Definition Index: 111648
+// Method Definition Index: 111669
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_set_IsMine_m492DED79558F5A91E4DD6191DEBA7D03FF221AE8 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -26633,7 +26633,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_set_IsMine_m492DED79558F5A91E
 		return;
 	}
 }
-// Method Definition Index: 111649
+// Method Definition Index: 111670
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonView_get_AmController_m4FF0C159999822452745698742E6C990CBB14BCC (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26643,7 +26643,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonView_get_AmController_m4FF0C159999
 		return L_0;
 	}
 }
-// Method Definition Index: 111650
+// Method Definition Index: 111671
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* PhotonView_get_Controller_m1C0F02953F5BDC4A9AA2AA028ACBC19649CE9E59 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26652,7 +26652,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA3
 		return L_0;
 	}
 }
-// Method Definition Index: 111651
+// Method Definition Index: 111672
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_set_Controller_mE75B8864554CA8DC9D0076455168DD179E990826 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -26663,7 +26663,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_set_Controller_mE75B8864554CA
 		return;
 	}
 }
-// Method Definition Index: 111652
+// Method Definition Index: 111673
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonView_get_CreatorActorNr_m995A3F297ABAF45C435EBD53F94A09EA0E8101DA (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26672,7 +26672,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonView_get_CreatorActorNr_m995A3F
 		return L_0;
 	}
 }
-// Method Definition Index: 111653
+// Method Definition Index: 111674
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_set_CreatorActorNr_m00B775FF87C1E39410AFD70CD14C9863D522683D (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -26682,7 +26682,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_set_CreatorActorNr_m00B775FF8
 		return;
 	}
 }
-// Method Definition Index: 111654
+// Method Definition Index: 111675
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonView_get_AmOwner_m08399284C315B6F00D6201E7C02C9694FCDBC7A1 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26691,7 +26691,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonView_get_AmOwner_m08399284C315B6F0
 		return L_0;
 	}
 }
-// Method Definition Index: 111655
+// Method Definition Index: 111676
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_set_AmOwner_mA1CE2BB54AF0F1D129E38B378AA201E5A13BC77A (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -26701,7 +26701,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_set_AmOwner_mA1CE2BB54AF0F1D1
 		return;
 	}
 }
-// Method Definition Index: 111656
+// Method Definition Index: 111677
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* PhotonView_get_Owner_m99D611AD5C17B06E4490F75CFAC02C26AABC4A21 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26710,7 +26710,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA3
 		return L_0;
 	}
 }
-// Method Definition Index: 111657
+// Method Definition Index: 111678
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_set_Owner_mC4ADCCA911F918015BCB71EBD74E4BB5D67AF9A7 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -26721,7 +26721,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_set_Owner_mC4ADCCA911F918015B
 		return;
 	}
 }
-// Method Definition Index: 111658
+// Method Definition Index: 111679
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonView_get_OwnerActorNr_mD9C14958B5CC4A817C6720FD0BF37A9B61A47FDF (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26730,7 +26730,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonView_get_OwnerActorNr_mD9C14958
 		return L_0;
 	}
 }
-// Method Definition Index: 111659
+// Method Definition Index: 111680
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_set_OwnerActorNr_mDC0E3CCCFD665892522DB9CE62BBF08DE83CB9E9 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26940,7 +26940,7 @@ IL_00ac:
 		return;
 	}
 }
-// Method Definition Index: 111660
+// Method Definition Index: 111681
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonView_get_ControllerActorNr_m055FD3D197F59F69B929D262A790828C7AD73CA7 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26949,7 +26949,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonView_get_ControllerActorNr_m055
 		return L_0;
 	}
 }
-// Method Definition Index: 111661
+// Method Definition Index: 111682
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_set_ControllerActorNr_m4729232C01EBA2910EE012594EA66522D8FBED9C (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27176,7 +27176,7 @@ IL_00c8:
 		return;
 	}
 }
-// Method Definition Index: 111662
+// Method Definition Index: 111683
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonView_get_ViewID_m69795CA0AB8AB13740BEDAD899BED88745F4C8A5 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27185,7 +27185,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonView_get_ViewID_m69795CA0AB8AB1
 		return L_0;
 	}
 }
-// Method Definition Index: 111663
+// Method Definition Index: 111684
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_set_ViewID_m81F2B69E5C222A86270FCDF08F0C4FEAD98AFB18 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27286,7 +27286,7 @@ IL_0074:
 		return;
 	}
 }
-// Method Definition Index: 111664
+// Method Definition Index: 111685
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_Awake_m21486EFD00F23191497749DEFC918AB6E2DDE7E6 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27326,7 +27326,7 @@ IL_001d:
 		return;
 	}
 }
-// Method Definition Index: 111665
+// Method Definition Index: 111686
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_ResetPhotonView_mD448655FE2790E6D85DDCCC400720C1906EB975B (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, bool ___0_resetOwner, const RuntimeMethod* method) 
 {
 	{
@@ -27337,7 +27337,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_ResetPhotonView_mD448655FE279
 		return;
 	}
 }
-// Method Definition Index: 111666
+// Method Definition Index: 111687
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_RebuildControllerCache_m468C85FAC3F098D5B82A26A43A758B1AB15D14D2 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, bool ___0_ownerHasChanged, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27436,7 +27436,7 @@ IL_003e:
 		return;
 	}
 }
-// Method Definition Index: 111667
+// Method Definition Index: 111688
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_OnPreNetDestroy_mCEEFA512C45C5EF2B6087889BB3FE3F55C14EDAD (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___0_rootView, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27504,7 +27504,7 @@ IL_0038:
 		return;
 	}
 }
-// Method Definition Index: 111668
+// Method Definition Index: 111689
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_OnDestroy_m5AA47824F78B70B055CCB8ABEB141099F20CCF38 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27577,7 +27577,7 @@ IL_0047:
 		return;
 	}
 }
-// Method Definition Index: 111669
+// Method Definition Index: 111690
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_RequestOwnership_m2A954C692A9B815630882276DB1BB117AD524E17 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27658,7 +27658,7 @@ IL_0064:
 		return;
 	}
 }
-// Method Definition Index: 111670
+// Method Definition Index: 111691
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_TransferOwnership_m3D84A0B1A5E99880218986A6F8748D597C36F635 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_newOwner, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27739,7 +27739,7 @@ IL_005a:
 		return;
 	}
 }
-// Method Definition Index: 111671
+// Method Definition Index: 111692
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_TransferOwnership_m1E56E5149DE636BDB492FF2980FE73C35E2B29BE (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, int32_t ___0_newOwnerId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27888,7 +27888,7 @@ IL_00c8:
 		return;
 	}
 }
-// Method Definition Index: 111672
+// Method Definition Index: 111693
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_FindObservables_mDE68A27BA140F369606CC1645AD8DEF252BB5D72 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, bool ___0_force, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27986,7 +27986,7 @@ IL_0041:
 		return;
 	}
 }
-// Method Definition Index: 111673
+// Method Definition Index: 111694
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_SerializeView_m2DFBCC4BAA58B454EE76023DBFC99577468EA2A3 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* ___0_stream, PhotonMessageInfo_tBA8653D413ADDF1C1329026FA1B84F1BD4F203CA ___1_info, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28078,7 +28078,7 @@ IL_0054:
 		return;
 	}
 }
-// Method Definition Index: 111674
+// Method Definition Index: 111695
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_DeserializeView_m65474552C24B7987B2939C116E876B9C23612FEB (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* ___0_stream, PhotonMessageInfo_tBA8653D413ADDF1C1329026FA1B84F1BD4F203CA ___1_info, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28169,7 +28169,7 @@ IL_004b:
 		return;
 	}
 }
-// Method Definition Index: 111675
+// Method Definition Index: 111696
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_DeserializeComponent_m2F2B5F6B3BA6DDEF3DC420B42CD0F9039ED2CA3F (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* ___0_component, PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* ___1_stream, PhotonMessageInfo_tBA8653D413ADDF1C1329026FA1B84F1BD4F203CA ___2_info, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28303,7 +28303,7 @@ IL_003c:
 		return;
 	}
 }
-// Method Definition Index: 111676
+// Method Definition Index: 111697
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_SerializeComponent_m2C8D619A82F7416D940C7484AE6BC02F7BAAD911 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* ___0_component, PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* ___1_stream, PhotonMessageInfo_tBA8653D413ADDF1C1329026FA1B84F1BD4F203CA ___2_info, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28437,7 +28437,7 @@ IL_003c:
 		return;
 	}
 }
-// Method Definition Index: 111677
+// Method Definition Index: 111698
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_RefreshRpcMonoBehaviourCache_m8A81B4F3059E1ADFF08BA2716B4BA0B086F410FC (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28456,7 +28456,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_RefreshRpcMonoBehaviourCache_
 		return;
 	}
 }
-// Method Definition Index: 111678
+// Method Definition Index: 111699
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_RPC_mD406BD732C9B9AFD46C149F63514AB3A923EB5BB (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, String_t* ___0_methodName, int32_t ___1_target, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___2_parameters, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28476,7 +28476,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_RPC_mD406BD732C9B9AFD46C149F6
 		return;
 	}
 }
-// Method Definition Index: 111679
+// Method Definition Index: 111700
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_RpcSecure_m19040F18B173D773EF74A46CB0588BFB6E4B28EA (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, String_t* ___0_methodName, int32_t ___1_target, bool ___2_encrypt, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___3_parameters, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28497,7 +28497,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_RpcSecure_m19040F18B173D773EF
 		return;
 	}
 }
-// Method Definition Index: 111680
+// Method Definition Index: 111701
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_RPC_m985C1C00D88C33FABAE7B0C51AAB32C67A9D010B (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, String_t* ___0_methodName, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___1_targetPlayer, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___2_parameters, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28517,7 +28517,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_RPC_m985C1C00D88C33FABAE7B0C5
 		return;
 	}
 }
-// Method Definition Index: 111681
+// Method Definition Index: 111702
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_RpcSecure_m2F47B26768F1D88669D44F50F8EF8AEE461EE02A (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, String_t* ___0_methodName, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___1_targetPlayer, bool ___2_encrypt, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___3_parameters, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28538,7 +28538,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_RpcSecure_m2F47B26768F1D88669
 		return;
 	}
 }
-// Method Definition Index: 111682
+// Method Definition Index: 111703
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* PhotonView_Get_m07E7523622E0DF2199874AAFC207B221505F3C87 (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* ___0_component, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28560,7 +28560,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB5
 		return L_2;
 	}
 }
-// Method Definition Index: 111683
+// Method Definition Index: 111704
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* PhotonView_Get_m2D405752144B85B9DA17087BD20C33DA88D545D4 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_gameObj, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28582,7 +28582,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB5
 		return L_2;
 	}
 }
-// Method Definition Index: 111684
+// Method Definition Index: 111705
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* PhotonView_Find_m0882E2232D4EAB45F754B4FAFEE5E6EA54DF7707 (int32_t ___0_viewID, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28600,7 +28600,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB5
 		return L_1;
 	}
 }
-// Method Definition Index: 111685
+// Method Definition Index: 111706
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_AddCallbackTarget_m8E639BCBCC1AEE528DA785E5589FE9F36384663F (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, RuntimeObject* ___0_obj, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28622,7 +28622,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_AddCallbackTarget_m8E639BCBCC
 		return;
 	}
 }
-// Method Definition Index: 111686
+// Method Definition Index: 111707
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_RemoveCallbackTarget_m66FB51B5346EAAE043C306C8AC463408E8498B03 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, RuntimeObject* ___0_obj, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28644,7 +28644,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_RemoveCallbackTarget_m66FB51B
 		return;
 	}
 }
-// Method Definition Index: 111689
+// Method Definition Index: 111710
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView_UpdateCallbackLists_mF9D0397ECC560EEDB9327007F6BCB881E9C9871A (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28808,7 +28808,7 @@ IL_00cc:
 		return;
 	}
 }
-// Method Definition Index: 111692
+// Method Definition Index: 111713
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PhotonView_ToString_m03C518201EBE79F7DDC97EE816BDF1F78210B659 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29012,7 +29012,7 @@ IL_007d:
 		return L_18;
 	}
 }
-// Method Definition Index: 111693
+// Method Definition Index: 111714
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonView__ctor_m632CC91283015E10211CD6C744A00C9DFB5B9259 (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29106,7 +29106,7 @@ IL2CPP_EXTERN_C void CallbackTargetChange_t35BA45CC3E5C4A3ED4F8EDC715DD62C8C90DB
 IL2CPP_EXTERN_C void CallbackTargetChange_t35BA45CC3E5C4A3ED4F8EDC715DD62C8C90DBC05_marshal_com_cleanup(CallbackTargetChange_t35BA45CC3E5C4A3ED4F8EDC715DD62C8C90DBC05_marshaled_com& marshaled)
 {
 }
-// Method Definition Index: 111694
+// Method Definition Index: 111715
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CallbackTargetChange__ctor_mB1EEB23E73D1B72DCBD4D0D3C4F5EAE824F55A21 (CallbackTargetChange_t35BA45CC3E5C4A3ED4F8EDC715DD62C8C90DBC05* __this, RuntimeObject* ___0_obj, Type_t* ___1_type, bool ___2_add, const RuntimeMethod* method) 
 {
 	{
@@ -29140,7 +29140,7 @@ IL2CPP_EXTERN_C  void CallbackTargetChange__ctor_mB1EEB23E73D1B72DCBD4D0D3C4F5EA
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 111695
+// Method Definition Index: 111716
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PunRPC__ctor_mFA70554D4975B2908676A41B131D9C56C9AFD4C5 (PunRPC_t505783A69D87642A42B5AA158CA53254E1D8A47D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29156,7 +29156,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PunRPC__ctor_mFA70554D4975B2908676A41B13
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 111696
+// Method Definition Index: 111717
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* MonoBehaviourPun_get_photonView_m0DBC40909E2E885D7FA3D40157A189FADEE98A67 (MonoBehaviourPun_t64DD82CBA1C47A70448DAB2263AB90A4411621BD* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29191,7 +29191,7 @@ IL_001a:
 		return L_3;
 	}
 }
-// Method Definition Index: 111697
+// Method Definition Index: 111718
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPun__ctor_m52771D9D46565807FDF72A7B6622574D38C29A55 (MonoBehaviourPun_t64DD82CBA1C47A70448DAB2263AB90A4411621BD* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29207,7 +29207,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPun__ctor_m52771D9D46565807
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 111698
+// Method Definition Index: 111719
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnEnable_mE52090084F3FD96661321314B3B09FA27FEA0037 (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29224,7 +29224,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnEnable_mE520
 		return;
 	}
 }
-// Method Definition Index: 111699
+// Method Definition Index: 111720
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnDisable_mE964C1F6FC3751955E1A6ED55E14F60451503437 (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29241,7 +29241,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnDisable_mE96
 		return;
 	}
 }
-// Method Definition Index: 111700
+// Method Definition Index: 111721
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnConnected_m90B492C8A8A013F1D5CD56BCB848D9ABE05D4BAF (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29249,7 +29249,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnConnected_m9
 		return;
 	}
 }
-// Method Definition Index: 111701
+// Method Definition Index: 111722
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnLeftRoom_mFD043927E412CEBBCE4C4FA2161F059FCF5B0A28 (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29257,7 +29257,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnLeftRoom_mFD
 		return;
 	}
 }
-// Method Definition Index: 111702
+// Method Definition Index: 111723
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnMasterClientSwitched_mEAFCD6A17A71221B17DC1285BC8EDAE419C5241A (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_newMasterClient, const RuntimeMethod* method) 
 {
 	{
@@ -29265,7 +29265,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnMasterClient
 		return;
 	}
 }
-// Method Definition Index: 111703
+// Method Definition Index: 111724
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnCreateRoomFailed_mC75D42F6CB00B0998B0A08300DEFDA95C7B24A69 (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, int16_t ___0_returnCode, String_t* ___1_message, const RuntimeMethod* method) 
 {
 	{
@@ -29273,7 +29273,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnCreateRoomFa
 		return;
 	}
 }
-// Method Definition Index: 111704
+// Method Definition Index: 111725
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnJoinRoomFailed_m3D045A575F0D286A836F2D568DFED0C8B70EDC88 (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, int16_t ___0_returnCode, String_t* ___1_message, const RuntimeMethod* method) 
 {
 	{
@@ -29281,7 +29281,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnJoinRoomFail
 		return;
 	}
 }
-// Method Definition Index: 111705
+// Method Definition Index: 111726
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnCreatedRoom_m198DADD9507AC1B309E403587302E09345863527 (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29289,7 +29289,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnCreatedRoom_
 		return;
 	}
 }
-// Method Definition Index: 111706
+// Method Definition Index: 111727
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnJoinedLobby_mC8B9CB6380D91FE80BCBBD5CD886B88F7FDD23C7 (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29297,7 +29297,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnJoinedLobby_
 		return;
 	}
 }
-// Method Definition Index: 111707
+// Method Definition Index: 111728
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnLeftLobby_mD120ED84DE83E0C7D11E2C833B7206629F8217DE (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29305,7 +29305,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnLeftLobby_mD
 		return;
 	}
 }
-// Method Definition Index: 111708
+// Method Definition Index: 111729
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnDisconnected_m36B6E7D27E5379468788DCE758462BFE6C0D6CB1 (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, int32_t ___0_cause, const RuntimeMethod* method) 
 {
 	{
@@ -29313,7 +29313,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnDisconnected
 		return;
 	}
 }
-// Method Definition Index: 111709
+// Method Definition Index: 111730
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnRegionListReceived_mAE8D0BEB2310EC84DA20F61169536B6DC92F1A1C (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, RegionHandler_tF76A25E25C3BF915FDFBEA81372D9D7858087EBB* ___0_regionHandler, const RuntimeMethod* method) 
 {
 	{
@@ -29321,7 +29321,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnRegionListRe
 		return;
 	}
 }
-// Method Definition Index: 111710
+// Method Definition Index: 111731
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnRoomListUpdate_mD10D2E719A9979F0A1AC464D2DD7C627DB992D40 (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, List_1_t2DCE8BA4B15DC3B666CEEA3E5A3E9E922B2F8CAE* ___0_roomList, const RuntimeMethod* method) 
 {
 	{
@@ -29329,7 +29329,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnRoomListUpda
 		return;
 	}
 }
-// Method Definition Index: 111711
+// Method Definition Index: 111732
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnJoinedRoom_m817D94FDDAF24D66A92DC9FAB480FC53272A8EF5 (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29337,7 +29337,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnJoinedRoom_m
 		return;
 	}
 }
-// Method Definition Index: 111712
+// Method Definition Index: 111733
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnPlayerEnteredRoom_m0951CB09066015931986C42556735ACDC1B2228C (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_newPlayer, const RuntimeMethod* method) 
 {
 	{
@@ -29345,7 +29345,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnPlayerEntere
 		return;
 	}
 }
-// Method Definition Index: 111713
+// Method Definition Index: 111734
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnPlayerLeftRoom_mD863D5DCFEB2C09DA8F4B222C9C0A7F345A03450 (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_otherPlayer, const RuntimeMethod* method) 
 {
 	{
@@ -29353,7 +29353,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnPlayerLeftRo
 		return;
 	}
 }
-// Method Definition Index: 111714
+// Method Definition Index: 111735
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnJoinRandomFailed_mF597D0B2F5B92ED02F0E771442DF653C5E03765A (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, int16_t ___0_returnCode, String_t* ___1_message, const RuntimeMethod* method) 
 {
 	{
@@ -29361,7 +29361,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnJoinRandomFa
 		return;
 	}
 }
-// Method Definition Index: 111715
+// Method Definition Index: 111736
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnConnectedToMaster_m8F8226A0CC5E06EDE926F7B5227683BBE7F0E7DB (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29369,7 +29369,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnConnectedToM
 		return;
 	}
 }
-// Method Definition Index: 111716
+// Method Definition Index: 111737
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnRoomPropertiesUpdate_m13B74C056EF1BA2BB1A1FF86725BEDF8AEC558CE (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, Hashtable_tD626399B3ADFD501225241D7366103F35472542A* ___0_propertiesThatChanged, const RuntimeMethod* method) 
 {
 	{
@@ -29377,7 +29377,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnRoomProperti
 		return;
 	}
 }
-// Method Definition Index: 111717
+// Method Definition Index: 111738
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnPlayerPropertiesUpdate_mD0607C5AD32AEFB47FCC9924E283277523CAF9BD (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_targetPlayer, Hashtable_tD626399B3ADFD501225241D7366103F35472542A* ___1_changedProps, const RuntimeMethod* method) 
 {
 	{
@@ -29385,7 +29385,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnPlayerProper
 		return;
 	}
 }
-// Method Definition Index: 111718
+// Method Definition Index: 111739
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnFriendListUpdate_mB892352781FA1C29A4CAF89A1D7CF8E65175DE39 (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, List_1_tAF836F2F45E5E36A0C7B30A5B2C2B8FED009605F* ___0_friendList, const RuntimeMethod* method) 
 {
 	{
@@ -29393,7 +29393,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnFriendListUp
 		return;
 	}
 }
-// Method Definition Index: 111719
+// Method Definition Index: 111740
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnCustomAuthenticationResponse_mE01CD46D38233BFE2C1F44F7AA76181D901850D7 (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* ___0_data, const RuntimeMethod* method) 
 {
 	{
@@ -29401,7 +29401,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnCustomAuthen
 		return;
 	}
 }
-// Method Definition Index: 111720
+// Method Definition Index: 111741
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnCustomAuthenticationFailed_mC87C4D060CB8EB57D449DA6CAE3AB3225D42E45D (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, String_t* ___0_debugMessage, const RuntimeMethod* method) 
 {
 	{
@@ -29409,7 +29409,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnCustomAuthen
 		return;
 	}
 }
-// Method Definition Index: 111721
+// Method Definition Index: 111742
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnWebRpcResponse_m1C4091DF5CDB58A37E0E7362F8494082A34C69CA (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, OperationResponse_t19D9B9933391EE79E5DEB2F8AECE02D5519E65ED* ___0_response, const RuntimeMethod* method) 
 {
 	{
@@ -29417,7 +29417,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnWebRpcRespon
 		return;
 	}
 }
-// Method Definition Index: 111722
+// Method Definition Index: 111743
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnLobbyStatisticsUpdate_mC6861416EF4AE8DEE8C9B55EF259D5E3F7B93970 (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, List_1_t9502060F404ACB6B9ACF04BFA5D0DFC653142A15* ___0_lobbyStatistics, const RuntimeMethod* method) 
 {
 	{
@@ -29425,7 +29425,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnLobbyStatist
 		return;
 	}
 }
-// Method Definition Index: 111723
+// Method Definition Index: 111744
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnErrorInfo_mEAE6493BAD497A32E04CA5367D747CB89755F381 (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, ErrorInfo_tBEC0163224E8E559901B5BA6D2DDDC2B15D013ED* ___0_errorInfo, const RuntimeMethod* method) 
 {
 	{
@@ -29433,7 +29433,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks_OnErrorInfo_mE
 		return;
 	}
 }
-// Method Definition Index: 111724
+// Method Definition Index: 111745
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviourPunCallbacks__ctor_m25DE2B188CA2481D58FBA9BB58CFBD65432B77E2 (MonoBehaviourPunCallbacks_t0B3C6A2FD0A09450A8505ACD42A647F3BCE6D783* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29503,7 +29503,7 @@ IL2CPP_EXTERN_C void PhotonMessageInfo_tBA8653D413ADDF1C1329026FA1B84F1BD4F203CA
 IL2CPP_EXTERN_C void PhotonMessageInfo_tBA8653D413ADDF1C1329026FA1B84F1BD4F203CA_marshal_com_cleanup(PhotonMessageInfo_tBA8653D413ADDF1C1329026FA1B84F1BD4F203CA_marshaled_com& marshaled)
 {
 }
-// Method Definition Index: 111725
+// Method Definition Index: 111746
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonMessageInfo__ctor_m21813023AE2CEED78C0C2C982AE85C1242843D9B (PhotonMessageInfo_tBA8653D413ADDF1C1329026FA1B84F1BD4F203CA* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_player, int32_t ___1_timestamp, PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* ___2_view, const RuntimeMethod* method) 
 {
 	{
@@ -29529,7 +29529,7 @@ IL2CPP_EXTERN_C  void PhotonMessageInfo__ctor_m21813023AE2CEED78C0C2C982AE85C124
 	_thisAdjusted = reinterpret_cast<PhotonMessageInfo_tBA8653D413ADDF1C1329026FA1B84F1BD4F203CA*>(__this + _offset);
 	PhotonMessageInfo__ctor_m21813023AE2CEED78C0C2C982AE85C1242843D9B(_thisAdjusted, ___0_player, ___1_timestamp, ___2_view, method);
 }
-// Method Definition Index: 111726
+// Method Definition Index: 111747
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double PhotonMessageInfo_get_timestamp_m549C9694E24655ADF2EA45721FE6BC9D5EE77D56 (PhotonMessageInfo_tBA8653D413ADDF1C1329026FA1B84F1BD4F203CA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29549,7 +29549,7 @@ IL2CPP_EXTERN_C  double PhotonMessageInfo_get_timestamp_m549C9694E24655ADF2EA457
 	_returnValue = PhotonMessageInfo_get_timestamp_m549C9694E24655ADF2EA45721FE6BC9D5EE77D56(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 111727
+// Method Definition Index: 111748
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double PhotonMessageInfo_get_SentServerTime_m508C6E24F40A6447F4D21AFEBE7DBDBBB5B1E760 (PhotonMessageInfo_tBA8653D413ADDF1C1329026FA1B84F1BD4F203CA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29569,7 +29569,7 @@ IL2CPP_EXTERN_C  double PhotonMessageInfo_get_SentServerTime_m508C6E24F40A6447F4
 	_returnValue = PhotonMessageInfo_get_SentServerTime_m508C6E24F40A6447F4D21AFEBE7DBDBBB5B1E760(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 111728
+// Method Definition Index: 111749
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonMessageInfo_get_SentServerTimestamp_m6B625049D52B49190920E50BF327A0CED525C635 (PhotonMessageInfo_tBA8653D413ADDF1C1329026FA1B84F1BD4F203CA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29587,7 +29587,7 @@ IL2CPP_EXTERN_C  int32_t PhotonMessageInfo_get_SentServerTimestamp_m6B625049D52B
 	_returnValue = PhotonMessageInfo_get_SentServerTimestamp_m6B625049D52B49190920E50BF327A0CED525C635_inline(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 111729
+// Method Definition Index: 111750
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PhotonMessageInfo_ToString_m9CEBB023056D66EB9A546AF0728E23072CD5676E (PhotonMessageInfo_tBA8653D413ADDF1C1329026FA1B84F1BD4F203CA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29625,7 +29625,7 @@ IL2CPP_EXTERN_C  String_t* PhotonMessageInfo_ToString_m9CEBB023056D66EB9A546AF07
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 111730
+// Method Definition Index: 111751
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PunEvent__ctor_m8A762AA53AC5D8EE4D7162609DF997E147F9C19E (PunEvent_tA890BCE9E328AE051E16DA664AA3E15EB40AD6ED* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29641,7 +29641,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PunEvent__ctor_m8A762AA53AC5D8EE4D716260
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 111731
+// Method Definition Index: 111752
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonStream_get_IsWriting_m7D9C8E96E51841AC62FC8884C2F8222821BD5ABE (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29650,7 +29650,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonStream_get_IsWriting_m7D9C8E96E518
 		return L_0;
 	}
 }
-// Method Definition Index: 111732
+// Method Definition Index: 111753
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStream_set_IsWriting_mA97FE16CF35261FE314E4E406CCBFF086166E985 (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -29660,7 +29660,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStream_set_IsWriting_mA97FE16CF352
 		return;
 	}
 }
-// Method Definition Index: 111733
+// Method Definition Index: 111754
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonStream_get_IsReading_mF1B02DA0993778BB3B349BE8BAABC01A7DC43ABC (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29670,7 +29670,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonStream_get_IsReading_mF1B02DA09937
 		return (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
 	}
 }
-// Method Definition Index: 111734
+// Method Definition Index: 111755
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PhotonStream_get_Count_mDBE1813CC84C9CAC542A91825C0CCFE0CC3E5AAC (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29703,7 +29703,7 @@ IL_0011:
 		return L_3;
 	}
 }
-// Method Definition Index: 111735
+// Method Definition Index: 111756
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStream__ctor_m3571B3BD89D11A7D090030887EB9373ED1E0B605 (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, bool ___0_write, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_incomingData, const RuntimeMethod* method) 
 {
 	{
@@ -29739,7 +29739,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 111736
+// Method Definition Index: 111757
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStream_SetReadStream_m0297DC69AAF1486B25A15B052218B20280471C3A (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___0_incomingData, int32_t ___1_pos, const RuntimeMethod* method) 
 {
 	{
@@ -29756,7 +29756,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStream_SetReadStream_m0297DC69AAF1
 		return;
 	}
 }
-// Method Definition Index: 111737
+// Method Definition Index: 111758
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStream_SetWriteStream_mE1B8B0BAFD6616D33A74579027337383DC9240D7 (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* ___0_newWriteData, int32_t ___1_pos, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29811,7 +29811,7 @@ IL_0033:
 		return;
 	}
 }
-// Method Definition Index: 111738
+// Method Definition Index: 111759
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* PhotonStream_GetWriteStream_m4D56501DC117B3247495B05A68D76F3C04E066AE (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29820,7 +29820,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9
 		return L_0;
 	}
 }
-// Method Definition Index: 111739
+// Method Definition Index: 111760
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStream_ResetWriteStream_m99014C8A2D73CC3FC27DA97171D50C8C2B5192AE (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29838,7 +29838,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStream_ResetWriteStream_m99014C8A2
 		return;
 	}
 }
-// Method Definition Index: 111740
+// Method Definition Index: 111761
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PhotonStream_ReceiveNext_m364CE7D424FA3F237662BC8A89D7AA6BDA6335C0 (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29880,7 +29880,7 @@ IL_0014:
 		return L_4;
 	}
 }
-// Method Definition Index: 111741
+// Method Definition Index: 111762
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PhotonStream_PeekNext_mB492CFC4AD4B4E613C837AE1AFB29395321271BD (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29919,7 +29919,7 @@ IL_0014:
 		return L_4;
 	}
 }
-// Method Definition Index: 111742
+// Method Definition Index: 111763
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStream_SendNext_mC4D9796E0A8F4866B7EE983B7F161A55A2FCD5DC (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, RuntimeObject* ___0_obj, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29958,7 +29958,7 @@ IL_0013:
 		return;
 	}
 }
-// Method Definition Index: 111743
+// Method Definition Index: 111764
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PhotonStream_CopyToListAndClear_mCA48DEED6A9DF5D2AD2C1166AF34D5E1D7356DF0 (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* ___0_target, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29997,7 +29997,7 @@ IL_000a:
 		return (bool)1;
 	}
 }
-// Method Definition Index: 111744
+// Method Definition Index: 111765
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* PhotonStream_ToArray_m786275E8115852FBDAF827B5E85BC39182282525 (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30029,7 +30029,7 @@ IL_000f:
 		return L_3;
 	}
 }
-// Method Definition Index: 111745
+// Method Definition Index: 111766
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStream_Serialize_m4C99453C8B7038984474B43DA598920512AEEB47 (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, bool* ___0_myBool, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30090,7 +30090,7 @@ IL_004d:
 		return;
 	}
 }
-// Method Definition Index: 111746
+// Method Definition Index: 111767
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStream_Serialize_mA25FC4CAABF6F2E79DEC9876E95EC5225BD3AAE7 (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, int32_t* ___0_myInt, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30151,7 +30151,7 @@ IL_004d:
 		return;
 	}
 }
-// Method Definition Index: 111747
+// Method Definition Index: 111768
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStream_Serialize_m54729BEBD100EECC88566A017B3775F581CA084E (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, String_t** ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30211,7 +30211,7 @@ IL_0048:
 		return;
 	}
 }
-// Method Definition Index: 111748
+// Method Definition Index: 111769
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStream_Serialize_m9EC8108CB0A0E0F76A93EE07C3ACE723284F8851 (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, Il2CppChar* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30272,7 +30272,7 @@ IL_004f:
 		return;
 	}
 }
-// Method Definition Index: 111749
+// Method Definition Index: 111770
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStream_Serialize_mAFC472D7E489E931F687A5D28E303E85C4A7DFB9 (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, uint8_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30333,7 +30333,7 @@ IL_004d:
 		return;
 	}
 }
-// Method Definition Index: 111750
+// Method Definition Index: 111771
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStream_Serialize_mD46955B05B99D1DA7FE1D883B781C72A4C0FF467 (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, int16_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30394,7 +30394,7 @@ IL_004d:
 		return;
 	}
 }
-// Method Definition Index: 111751
+// Method Definition Index: 111772
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStream_Serialize_mAE3ADCE41EDF69B5B51D6BBB3C018645D47E6CA1 (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, float* ___0_obj, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30455,7 +30455,7 @@ IL_004d:
 		return;
 	}
 }
-// Method Definition Index: 111752
+// Method Definition Index: 111773
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStream_Serialize_m5E31BD3AD8F7453EC92501DB67CA7076B117ABB9 (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C** ___0_obj, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30516,7 +30516,7 @@ IL_0048:
 		return;
 	}
 }
-// Method Definition Index: 111753
+// Method Definition Index: 111774
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStream_Serialize_mAB9D2F2F7FE70C473B9E960E4CD0F21D450FCE9B (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_obj, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30578,7 +30578,7 @@ IL_0055:
 		return;
 	}
 }
-// Method Definition Index: 111754
+// Method Definition Index: 111775
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStream_Serialize_m5D5CDD24B433089F0A92E354CA5FF80CC7EF5603 (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* ___0_obj, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30640,7 +30640,7 @@ IL_0055:
 		return;
 	}
 }
-// Method Definition Index: 111755
+// Method Definition Index: 111776
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PhotonStream_Serialize_mFD4F571A81E5F921E52AD30F2A2D34451A7BD185 (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974* ___0_obj, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30705,7 +30705,7 @@ IL_0055:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 111162
+// Method Definition Index: 111183
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Player_get_ActorNumber_mE177B60195A5329B1E5D3012295DB0098B7A0F3A_inline (Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30714,7 +30714,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Player_get_ActorNumber_mE
 		return L_0;
 	}
 }
-// Method Definition Index: 110828
+// Method Definition Index: 110849
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ConnectionHandler_set_Client_m3ABCA8BEB50CC58254153280CE8F60154D42E29B_inline (ConnectionHandler_t94DB2DB95E1E5AC42D211A71B3829706DCF6ECB4* __this, LoadBalancingClient_tC710D2A97D5ACB31FCA10E3D3A3266DBE89373A4* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -30725,7 +30725,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ConnectionHandler_set_Client
 		return;
 	}
 }
-// Method Definition Index: 111465
+// Method Definition Index: 111486
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool PhotonNetwork_get_IsMessageQueueRunning_m6AC527F21843CC4C70526CC8044532E3C1CE159E_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30741,7 +30741,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool PhotonNetwork_get_IsMessageQ
 		return L_0;
 	}
 }
-// Method Definition Index: 110877
+// Method Definition Index: 110898
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR LoadBalancingPeer_t8C350A611B061F0EA1DE76C03AFD0CE19070E81F* LoadBalancingClient_get_LoadBalancingPeer_mF3097AB6F64148B7BF7B1AEFA7FB37DE30AC30C5_inline (LoadBalancingClient_tC710D2A97D5ACB31FCA10E3D3A3266DBE89373A4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30750,7 +30750,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR LoadBalancingPeer_t8C350A611B061F
 		return L_0;
 	}
 }
-// Method Definition Index: 111658
+// Method Definition Index: 111679
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PhotonView_get_OwnerActorNr_mD9C14958B5CC4A817C6720FD0BF37A9B61A47FDF_inline (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30759,7 +30759,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PhotonView_get_OwnerActor
 		return L_0;
 	}
 }
-// Method Definition Index: 111652
+// Method Definition Index: 111673
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PhotonView_get_CreatorActorNr_m995A3F297ABAF45C435EBD53F94A09EA0E8101DA_inline (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30768,7 +30768,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PhotonView_get_CreatorAct
 		return L_0;
 	}
 }
-// Method Definition Index: 111662
+// Method Definition Index: 111683
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PhotonView_get_ViewID_m69795CA0AB8AB13740BEDAD899BED88745F4C8A5_inline (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30777,7 +30777,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PhotonView_get_ViewID_m69
 		return L_0;
 	}
 }
-// Method Definition Index: 111170
+// Method Definition Index: 111191
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Player_get_IsInactive_m4DDCB652FA77A7DD38F02922C4E411EA4647ED9B_inline (Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30786,7 +30786,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Player_get_IsInactive_m4DDCB
 		return L_0;
 	}
 }
-// Method Definition Index: 111660
+// Method Definition Index: 111681
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PhotonView_get_ControllerActorNr_m055FD3D197F59F69B929D262A790828C7AD73CA7_inline (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30795,7 +30795,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PhotonView_get_Controller
 		return L_0;
 	}
 }
-// Method Definition Index: 111281
+// Method Definition Index: 111302
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Room_get_AutoCleanUp_m39EDB8FDC6F3A0798F29FFD08DB41C3B24150B96_inline (Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30804,7 +30804,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Room_get_AutoCleanUp_m39EDB8
 		return L_0;
 	}
 }
-// Method Definition Index: 110882
+// Method Definition Index: 110903
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void LoadBalancingClient_set_AppVersion_mA8BB8398B8C4E5D708A8F52306507330EBA6E138_inline (LoadBalancingClient_tC710D2A97D5ACB31FCA10E3D3A3266DBE89373A4* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -30815,7 +30815,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void LoadBalancingClient_set_AppV
 		return;
 	}
 }
-// Method Definition Index: 110881
+// Method Definition Index: 110902
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* LoadBalancingClient_get_AppVersion_mA2E5DE4671D1C7BD67296921DBD776E61F63E388_inline (LoadBalancingClient_tC710D2A97D5ACB31FCA10E3D3A3266DBE89373A4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30824,7 +30824,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* LoadBalancingClient_get
 		return L_0;
 	}
 }
-// Method Definition Index: 110939
+// Method Definition Index: 110960
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* LoadBalancingClient_get_CloudRegion_m0093F59A916A2AC5BB01A653D31ED2A45C9421F0_inline (LoadBalancingClient_tC710D2A97D5ACB31FCA10E3D3A3266DBE89373A4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30833,7 +30833,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* LoadBalancingClient_get
 		return L_0;
 	}
 }
-// Method Definition Index: 110941
+// Method Definition Index: 110962
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* LoadBalancingClient_get_CurrentCluster_m3747E54023EF073AD0FD94EF7F53285E301FC1A1_inline (LoadBalancingClient_tC710D2A97D5ACB31FCA10E3D3A3266DBE89373A4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30842,7 +30842,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* LoadBalancingClient_get
 		return L_0;
 	}
 }
-// Method Definition Index: 111455
+// Method Definition Index: 111476
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool PhotonNetwork_get_OfflineMode_m57596042EE764187C75DEAC48E6F420799C192C2_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30858,7 +30858,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool PhotonNetwork_get_OfflineMod
 		return L_0;
 	}
 }
-// Method Definition Index: 110908
+// Method Definition Index: 110929
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t LoadBalancingClient_get_State_m8553D8C2483058BD64DDED8EC2648AE77836D12C_inline (LoadBalancingClient_tC710D2A97D5ACB31FCA10E3D3A3266DBE89373A4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30867,7 +30867,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t LoadBalancingClient_get_S
 		return L_0;
 	}
 }
-// Method Definition Index: 110904
+// Method Definition Index: 110925
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t LoadBalancingClient_get_Server_mA8B81137D1F683A5F4D926B768AF3A568ED0F201_inline (LoadBalancingClient_tC710D2A97D5ACB31FCA10E3D3A3266DBE89373A4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30876,7 +30876,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t LoadBalancingClient_get_S
 		return L_0;
 	}
 }
-// Method Definition Index: 110887
+// Method Definition Index: 110908
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AuthenticationValues_tD40B2D956BF978BFB23657901557FD46EC8601C7* LoadBalancingClient_get_AuthValues_m58A41749A2B67F2B76EDD8C8B28A32FAA60977AA_inline (LoadBalancingClient_tC710D2A97D5ACB31FCA10E3D3A3266DBE89373A4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30885,7 +30885,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AuthenticationValues_tD40B2D956BF
 		return L_0;
 	}
 }
-// Method Definition Index: 110888
+// Method Definition Index: 110909
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void LoadBalancingClient_set_AuthValues_mAFB66C3CFA04587CBA1A60711581B2BA6C6FD84C_inline (LoadBalancingClient_tC710D2A97D5ACB31FCA10E3D3A3266DBE89373A4* __this, AuthenticationValues_tD40B2D956BF978BFB23657901557FD46EC8601C7* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -30896,7 +30896,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void LoadBalancingClient_set_Auth
 		return;
 	}
 }
-// Method Definition Index: 110921
+// Method Definition Index: 110942
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR TypedLobby_t29F38D993E984979E53A9212143F1B770EEC6DB9* LoadBalancingClient_get_CurrentLobby_mF4197912E9A2A11BAD29D87BC0FB8BD3F53D44D0_inline (LoadBalancingClient_tC710D2A97D5ACB31FCA10E3D3A3266DBE89373A4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30905,7 +30905,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR TypedLobby_t29F38D993E984979E53A9
 		return L_0;
 	}
 }
-// Method Definition Index: 110929
+// Method Definition Index: 110950
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* LoadBalancingClient_get_CurrentRoom_mADB06D45AD1F8289D93F08F322C9FDB694EAC291_inline (LoadBalancingClient_tC710D2A97D5ACB31FCA10E3D3A3266DBE89373A4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30914,7 +30914,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Room_t9CCA5C06B8CE2E5E1EE24AD1736
 		return L_0;
 	}
 }
-// Method Definition Index: 110923
+// Method Definition Index: 110944
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* LoadBalancingClient_get_LocalPlayer_mCD50C311294952811F343BFA4F7FCD055821A4A4_inline (LoadBalancingClient_tC710D2A97D5ACB31FCA10E3D3A3266DBE89373A4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30923,7 +30923,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Player_tC864A64FC55FA6E30EFD6B6FF
 		return L_0;
 	}
 }
-// Method Definition Index: 111271
+// Method Definition Index: 111292
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Dictionary_2_t090B48BACBD1134A0E2C74084CF2392C71A6812B* Room_get_Players_m4EC3800DE15506B277257D1EF67C6BCFBBE31065_inline (Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30932,7 +30932,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Dictionary_2_t090B48BACBD1134A0E2
 		return L_0;
 	}
 }
-// Method Definition Index: 110930
+// Method Definition Index: 110951
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void LoadBalancingClient_set_CurrentRoom_m54F077811E8C961FB7EBBA1F5A1878E1FF57B8D5_inline (LoadBalancingClient_tC710D2A97D5ACB31FCA10E3D3A3266DBE89373A4* __this, Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -30951,7 +30951,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Stopwatch_get_IsRunning_mB1C
 		return L_0;
 	}
 }
-// Method Definition Index: 111278
+// Method Definition Index: 111299
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Room_get_MasterClientId_mCE5793A018B91562F4EB190DBFEB3E87A882104D_inline (Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30960,7 +30960,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Room_get_MasterClientId_m
 		return L_0;
 	}
 }
-// Method Definition Index: 110932
+// Method Definition Index: 110953
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t LoadBalancingClient_get_PlayersOnMasterCount_m875B8F23320B81FA78E929BC18145E9B16DF3AB1_inline (LoadBalancingClient_tC710D2A97D5ACB31FCA10E3D3A3266DBE89373A4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30969,7 +30969,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t LoadBalancingClient_get_P
 		return L_0;
 	}
 }
-// Method Definition Index: 110934
+// Method Definition Index: 110955
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t LoadBalancingClient_get_PlayersInRoomsCount_mD9E006F3B3032AFB084AAE111557EB6304FD37BA_inline (LoadBalancingClient_tC710D2A97D5ACB31FCA10E3D3A3266DBE89373A4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30978,7 +30978,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t LoadBalancingClient_get_P
 		return L_0;
 	}
 }
-// Method Definition Index: 110936
+// Method Definition Index: 110957
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t LoadBalancingClient_get_RoomsCount_m9C8AE96B6A5002695B2D3616C7DF0C1459AF3F17_inline (LoadBalancingClient_tC710D2A97D5ACB31FCA10E3D3A3266DBE89373A4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -30987,7 +30987,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t LoadBalancingClient_get_R
 		return L_0;
 	}
 }
-// Method Definition Index: 102210
+// Method Definition Index: 102231
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PhotonPeer_set_TransportProtocol_mAF4EE9345BAC9F2E8540CE79F8A791BD3E13014C_inline (PhotonPeer_t49659FA3F71A8C67E0A1922FBA955CCBEF14DD9C* __this, uint8_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -30996,7 +30996,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PhotonPeer_set_TransportProt
 		return;
 	}
 }
-// Method Definition Index: 110890
+// Method Definition Index: 110911
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void LoadBalancingClient_set_ExpectedProtocol_m45D91A66DA18AB07ECD45D1DE1DF244BD34FE72B_inline (LoadBalancingClient_tC710D2A97D5ACB31FCA10E3D3A3266DBE89373A4* __this, Nullable_1_tC61504D4999670A5A2480A3B5CB4AC8A71EEE32E ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -31006,7 +31006,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void LoadBalancingClient_set_Expe
 		return;
 	}
 }
-// Method Definition Index: 110898
+// Method Definition Index: 110919
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void LoadBalancingClient_set_EnableProtocolFallback_mC5C15088260FAB02544DC4EA010542F678D1485B_inline (LoadBalancingClient_tC710D2A97D5ACB31FCA10E3D3A3266DBE89373A4* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -31016,7 +31016,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void LoadBalancingClient_set_Enab
 		return;
 	}
 }
-// Method Definition Index: 111466
+// Method Definition Index: 111487
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PhotonNetwork_set_IsMessageQueueRunning_m7CF18DBEA443B8ED0A71BE59EE584BCB54D817DE_inline (bool ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31034,7 +31034,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PhotonNetwork_set_IsMessageQ
 		return;
 	}
 }
-// Method Definition Index: 110884
+// Method Definition Index: 110905
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void LoadBalancingClient_set_AppId_m6D235FB4807898D6941EF26C9F355755B13EFF34_inline (LoadBalancingClient_tC710D2A97D5ACB31FCA10E3D3A3266DBE89373A4* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -31045,7 +31045,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void LoadBalancingClient_set_AppI
 		return;
 	}
 }
-// Method Definition Index: 111140
+// Method Definition Index: 111161
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* AuthenticationValues_get_UserId_m5589924F18733494DEC1218392BCB531F45A06A8_inline (AuthenticationValues_tD40B2D956BF978BFB23657901557FD46EC8601C7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31054,7 +31054,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* AuthenticationValues_ge
 		return L_0;
 	}
 }
-// Method Definition Index: 111141
+// Method Definition Index: 111162
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AuthenticationValues_set_UserId_mF5066A60EE43029EDB6649E84D84D183013D8002_inline (AuthenticationValues_tD40B2D956BF978BFB23657901557FD46EC8601C7* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -31065,7 +31065,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AuthenticationValues_set_Use
 		return;
 	}
 }
-// Method Definition Index: 110893
+// Method Definition Index: 110914
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void LoadBalancingClient_set_IsUsingNameServer_m07769376816B7FF852706CDB68A33A9AC9FD02DC_inline (LoadBalancingClient_tC710D2A97D5ACB31FCA10E3D3A3266DBE89373A4* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -31075,7 +31075,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void LoadBalancingClient_set_IsUs
 		return;
 	}
 }
-// Method Definition Index: 110901
+// Method Definition Index: 110922
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void LoadBalancingClient_set_MasterServerAddress_m0334DAB73E03AC500ACDD9EE580564874D8241BF_inline (LoadBalancingClient_tC710D2A97D5ACB31FCA10E3D3A3266DBE89373A4* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -31086,7 +31086,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void LoadBalancingClient_set_Mast
 		return;
 	}
 }
-// Method Definition Index: 110900
+// Method Definition Index: 110921
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* LoadBalancingClient_get_MasterServerAddress_m0A6D1FC37984AC51431C04ABAB52986F7D940F39_inline (LoadBalancingClient_tC710D2A97D5ACB31FCA10E3D3A3266DBE89373A4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31095,7 +31095,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* LoadBalancingClient_get
 		return L_0;
 	}
 }
-// Method Definition Index: 111172
+// Method Definition Index: 111193
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Hashtable_tD626399B3ADFD501225241D7366103F35472542A* Player_get_CustomProperties_m398B81FB1DEE02243650B8CB5FBF5C7F1B8928D6_inline (Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31104,7 +31104,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Hashtable_tD626399B3ADFD501225241
 		return L_0;
 	}
 }
-// Method Definition Index: 111274
+// Method Definition Index: 111295
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Room_get_PlayerTtl_m091CABB26DF4C1E1E12ADEF25F8734218CD09773_inline (Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31113,7 +31113,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Room_get_PlayerTtl_m091CA
 		return L_0;
 	}
 }
-// Method Definition Index: 111259
+// Method Definition Index: 111280
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Room_set_LoadBalancingClient_mB8303EC161066BECFC6136E20976E45C3ADD19EC_inline (Room_t9CCA5C06B8CE2E5E1EE24AD17360F218C4E36373* __this, LoadBalancingClient_tC710D2A97D5ACB31FCA10E3D3A3266DBE89373A4* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -31124,7 +31124,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Room_set_LoadBalancingClient
 		return;
 	}
 }
-// Method Definition Index: 111173
+// Method Definition Index: 111194
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Player_set_CustomProperties_m742A63E721EDE09454EE66FE53508E3E6FFFDD8D_inline (Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* __this, Hashtable_tD626399B3ADFD501225241D7366103F35472542A* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -31181,7 +31181,7 @@ IL_0009:
 		return L_1;
 	}
 }
-// Method Definition Index: 111641
+// Method Definition Index: 111662
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PhotonView_set_Prefix_mEE024D4A0CDF4553CC8F7280D8EC3B1604113524_inline (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -31192,7 +31192,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PhotonView_set_Prefix_mEE024
 		return;
 	}
 }
-// Method Definition Index: 111643
+// Method Definition Index: 111664
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PhotonView_set_InstantiationData_m927591A1EC7DEA1BA092943D816304D64A9F318F_inline (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -31242,7 +31242,7 @@ IL_000e:
 		return L_3;
 	}
 }
-// Method Definition Index: 111457
+// Method Definition Index: 111478
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool PhotonNetwork_get_AutomaticallySyncScene_m3CA1C229D9C984DCF96D64D27CEBD2F0E5FE4CF0_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31258,7 +31258,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool PhotonNetwork_get_Automatica
 		return L_0;
 	}
 }
-// Method Definition Index: 111656
+// Method Definition Index: 111677
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* PhotonView_get_Owner_m99D611AD5C17B06E4490F75CFAC02C26AABC4A21_inline (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31267,7 +31267,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Player_tC864A64FC55FA6E30EFD6B6FF
 		return L_0;
 	}
 }
-// Method Definition Index: 111647
+// Method Definition Index: 111668
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool PhotonView_get_IsMine_mE26FB70A42C0D92C66536B45D7A7F8F491C8D648_inline (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31276,7 +31276,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool PhotonView_get_IsMine_mE26FB
 		return L_0;
 	}
 }
-// Method Definition Index: 111738
+// Method Definition Index: 111759
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* PhotonStream_GetWriteStream_m4D56501DC117B3247495B05A68D76F3C04E066AE_inline (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31285,7 +31285,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR List_1_tA239CB83DE5615F348BB0507E
 		return L_0;
 	}
 }
-// Method Definition Index: 111308
+// Method Definition Index: 111329
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Hashtable_tD626399B3ADFD501225241D7366103F35472542A* RoomInfo_get_CustomProperties_mE54DDDE221FC51475970867611765A4205AFD422_inline (RoomInfo_t4C5919F4F2B1DCDEA81D1522AFD5008072A7D29D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31294,7 +31294,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Hashtable_tD626399B3ADFD501225241
 		return L_0;
 	}
 }
-// Method Definition Index: 111650
+// Method Definition Index: 111671
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* PhotonView_get_Controller_m1C0F02953F5BDC4A9AA2AA028ACBC19649CE9E59_inline (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31303,7 +31303,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Player_tC864A64FC55FA6E30EFD6B6FF
 		return L_0;
 	}
 }
-// Method Definition Index: 111189
+// Method Definition Index: 111210
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Region_get_Code_m25CDC61EBD0A1EDEA277235D87D55869A18B9122_inline (Region_tD981338A8FBC28C39100FF9111854EC8ABE8619A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31312,7 +31312,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Region_get_Code_m25CDC6
 		return L_0;
 	}
 }
-// Method Definition Index: 111657
+// Method Definition Index: 111678
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PhotonView_set_Owner_mC4ADCCA911F918015BCB71EBD74E4BB5D67AF9A7_inline (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -31323,7 +31323,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PhotonView_set_Owner_mC4ADCC
 		return;
 	}
 }
-// Method Definition Index: 111655
+// Method Definition Index: 111676
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PhotonView_set_AmOwner_mA1CE2BB54AF0F1D129E38B378AA201E5A13BC77A_inline (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -31333,7 +31333,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PhotonView_set_AmOwner_mA1CE
 		return;
 	}
 }
-// Method Definition Index: 111651
+// Method Definition Index: 111672
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PhotonView_set_Controller_mE75B8864554CA8DC9D0076455168DD179E990826_inline (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, Player_tC864A64FC55FA6E30EFD6B6FF314C9725DDA363C* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -31344,7 +31344,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PhotonView_set_Controller_mE
 		return;
 	}
 }
-// Method Definition Index: 111648
+// Method Definition Index: 111669
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PhotonView_set_IsMine_m492DED79558F5A91E4DD6191DEBA7D03FF221AE8_inline (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -31354,7 +31354,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PhotonView_set_IsMine_m492DE
 		return;
 	}
 }
-// Method Definition Index: 111653
+// Method Definition Index: 111674
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PhotonView_set_CreatorActorNr_m00B775FF87C1E39410AFD70CD14C9863D522683D_inline (PhotonView_t43F3D22FF3D00F7824E82D741D70F9CB55642E6B* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -31364,7 +31364,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PhotonView_set_CreatorActorN
 		return;
 	}
 }
-// Method Definition Index: 111728
+// Method Definition Index: 111749
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PhotonMessageInfo_get_SentServerTimestamp_m6B625049D52B49190920E50BF327A0CED525C635_inline (PhotonMessageInfo_tBA8653D413ADDF1C1329026FA1B84F1BD4F203CA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31373,7 +31373,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PhotonMessageInfo_get_Sen
 		return L_0;
 	}
 }
-// Method Definition Index: 111731
+// Method Definition Index: 111752
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool PhotonStream_get_IsWriting_m7D9C8E96E51841AC62FC8884C2F8222821BD5ABE_inline (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31382,7 +31382,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool PhotonStream_get_IsWriting_m
 		return L_0;
 	}
 }
-// Method Definition Index: 111732
+// Method Definition Index: 111753
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PhotonStream_set_IsWriting_mA97FE16CF35261FE314E4E406CCBFF086166E985_inline (PhotonStream_t51D26D86E501F1931A26F2CF1C7D915D690CBD2E* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -31484,7 +31484,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Cur
 		return L_0;
 	}
 }
-// Method Definition Index: 92625
+// Method Definition Index: 92646
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m139A176CD271A0532D75BE08DA7831C8C45CE28F_gshared_inline (Enumerator_t72556E98D7DDBE118A973D782D523D15A96461C8* __this, const RuntimeMethod* method) 
 {
 	{
