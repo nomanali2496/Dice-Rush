@@ -1,0 +1,1105 @@
+fileFormatVersion: 2
+guid: c0bb44c5babcd50479699479f7a9262d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8306743035186617787
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_0
+  - first:
+      213: -4139508922103492826
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_1
+  - first:
+      213: -6217147621712499656
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_2
+  - first:
+      213: -4341964496063449397
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_3
+  - first:
+      213: 6752750173422878111
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_4
+  - first:
+      213: -36950333281616336
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_5
+  - first:
+      213: -7645486954366614073
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_6
+  - first:
+      213: -6309038506876188248
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_7
+  - first:
+      213: 1057126937365129204
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_8
+  - first:
+      213: -9052228854860312371
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_9
+  - first:
+      213: 8278826180752943339
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_10
+  - first:
+      213: -1792281795178447998
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_11
+  - first:
+      213: -4565575878066386007
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_12
+  - first:
+      213: -4417170465341342406
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_13
+  - first:
+      213: -7254804866316251780
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_14
+  - first:
+      213: 3483820460219644035
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_15
+  - first:
+      213: -1461621617493326461
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_16
+  - first:
+      213: -1209713234011105060
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_17
+  - first:
+      213: -1288744043805792921
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_18
+  - first:
+      213: -3824973163793580014
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_19
+  - first:
+      213: 4842329174734388115
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_20
+  - first:
+      213: -962688604020936474
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_21
+  - first:
+      213: 4372628627744251243
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_22
+  - first:
+      213: -4707889051043295893
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_23
+  - first:
+      213: 6139738346442106075
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_24
+  - first:
+      213: 200959573861055525
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_25
+  - first:
+      213: 1861924601130089061
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_26
+  - first:
+      213: -8986461599196756620
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_27
+  - first:
+      213: 2499972352890632493
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_28
+  - first:
+      213: 2766977374232639125
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_29
+  - first:
+      213: 583676424925600293
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_30
+  - first:
+      213: 301362279652341974
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_31
+  - first:
+      213: -25536695337666782
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_32
+  - first:
+      213: -6287169356043763810
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_33
+  - first:
+      213: 2453128755316951598
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_34
+  - first:
+      213: -2203166072901181450
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_35
+  - first:
+      213: 4719939095658734835
+    second: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 229
+        width: 109
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbd9fbc87ca774370800000000000000
+      internalID: 8306743035186617787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_1
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 229
+        width: 84
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62f067141928d86c0800000000000000
+      internalID: -4139508922103492826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_2
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 228
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83c69ab8d2148b9a0800000000000000
+      internalID: -6217147621712499656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_3
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 227
+        width: 130
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc6b7c8ab4e3eb3c0800000000000000
+      internalID: -4341964496063449397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_4
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 227
+        width: 96
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9df3df418696bd50800000000000000
+      internalID: 6752750173422878111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_5
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 229
+        width: 81
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03eba6e1ed9bc7ff0800000000000000
+      internalID: -36950333281616336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_6
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 228
+        width: 101
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c5481e5f16c5e590800000000000000
+      internalID: -7645486954366614073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_7
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 228
+        width: 112
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a9426b97eac178a0800000000000000
+      internalID: -6309038506876188248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_8
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 227
+        width: 130
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f72520495babae00800000000000000
+      internalID: 1057126937365129204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_9
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 228
+        width: 185
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc0928831d5006280800000000000000
+      internalID: -9052228854860312371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_10
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 227
+        width: 119
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be8abfc5c8c44e270800000000000000
+      internalID: 8278826180752943339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_11
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 227
+        width: 116
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28b3df404398027e0800000000000000
+      internalID: -1792281795178447998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_12
+      rect:
+        serializedVersion: 2
+        x: 1598
+        y: 228
+        width: 112
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9abc2c8ade0d3a0c0800000000000000
+      internalID: -4565575878066386007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_13
+      rect:
+        serializedVersion: 2
+        x: 1725
+        y: 229
+        width: 80
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3d7bfc6dde03b2c0800000000000000
+      internalID: -4417170465341342406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_14
+      rect:
+        serializedVersion: 2
+        x: 1810
+        y: 227
+        width: 130
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7dc1746961c15b90800000000000000
+      internalID: -7254804866316251780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_15
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 227
+        width: 103
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38831a02044095030800000000000000
+      internalID: 3483820460219644035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_16
+      rect:
+        serializedVersion: 2
+        x: 2066
+        y: 227
+        width: 116
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 385474502e647bbe0800000000000000
+      internalID: -1461621617493326461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_17
+      rect:
+        serializedVersion: 2
+        x: 2226
+        y: 227
+        width: 83
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd8dda6193c363fe0800000000000000
+      internalID: -1209713234011105060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_18
+      rect:
+        serializedVersion: 2
+        x: 2322
+        y: 227
+        width: 108
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7652e86ce167d1ee0800000000000000
+      internalID: -1288744043805792921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_19
+      rect:
+        serializedVersion: 2
+        x: 2440
+        y: 229
+        width: 84
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2108ea05c27faeac0800000000000000
+      internalID: -3824973163793580014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_20
+      rect:
+        serializedVersion: 2
+        x: 2538
+        y: 229
+        width: 84
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39bbd898ab8633340800000000000000
+      internalID: 4842329174734388115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_21
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 0
+        width: 101
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e0f300b0d7d3a2f0800000000000000
+      internalID: -962688604020936474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_22
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 0
+        width: 130
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6d566bd192beac30800000000000000
+      internalID: 4372628627744251243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_23
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 0
+        width: 116
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6d0d9ef9d73aaeb0800000000000000
+      internalID: -4707889051043295893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_24
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 1
+        width: 84
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd4a6811f7bb43550800000000000000
+      internalID: 6139738346442106075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_25
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 0
+        width: 113
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52cb33eeaa3f9c200800000000000000
+      internalID: 200959573861055525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_26
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 0
+        width: 97
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56a7be05f82e6d910800000000000000
+      internalID: 1861924601130089061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_27
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 18
+        width: 106
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4754030b9cca94380800000000000000
+      internalID: -8986461599196756620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_28
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 1
+        width: 104
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d29f75a0c9fa1b220800000000000000
+      internalID: 2499972352890632493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_29
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 0
+        width: 130
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 596fda40347466620800000000000000
+      internalID: 2766977374232639125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_30
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 0
+        width: 112
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52ad573bd92a91800800000000000000
+      internalID: 583676424925600293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_31
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 115
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d8316b8567ae2400800000000000000
+      internalID: 301362279652341974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_32
+      rect:
+        serializedVersion: 2
+        x: 1725
+        y: 0
+        width: 97
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22739a9c28645aff0800000000000000
+      internalID: -25536695337666782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_33
+      rect:
+        serializedVersion: 2
+        x: 1869
+        y: 0
+        width: 104
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9f3a4218cc7fb8a0800000000000000
+      internalID: -6287169356043763810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_34
+      rect:
+        serializedVersion: 2
+        x: 1978
+        y: 0
+        width: 128
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2a86f01b934b0220800000000000000
+      internalID: 2453128755316951598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_35
+      rect:
+        serializedVersion: 2
+        x: 2112
+        y: 0
+        width: 97
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ff588b2128cc61e0800000000000000
+      internalID: -2203166072901181450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_36
+      rect:
+        serializedVersion: 2
+        x: 2223
+        y: 1
+        width: 111
+        height: 143
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f4a736a997908140800000000000000
+      internalID: 4719939095658734835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_0: 8306743035186617787
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_1: -4139508922103492826
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_10: 8278826180752943339
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_11: -1792281795178447998
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_12: -4565575878066386007
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_13: -4417170465341342406
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_14: -7254804866316251780
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_15: 3483820460219644035
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_16: -1461621617493326461
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_17: -1209713234011105060
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_18: -1288744043805792921
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_19: -3824973163793580014
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_2: -6217147621712499656
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_20: 4842329174734388115
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_21: -962688604020936474
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_22: 4372628627744251243
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_23: -4707889051043295893
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_24: 6139738346442106075
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_25: 200959573861055525
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_26: 1861924601130089061
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_27: -8986461599196756620
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_28: 2499972352890632493
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_29: 2766977374232639125
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_3: -4341964496063449397
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_30: 583676424925600293
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_31: 301362279652341974
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_32: -25536695337666782
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_33: -6287169356043763810
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_34: 2453128755316951598
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_35: -2203166072901181450
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_36: 4719939095658734835
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_4: 6752750173422878111
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_5: -36950333281616336
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_6: -7645486954366614073
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_7: -6309038506876188248
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_8: 1057126937365129204
+      DEPOSIT NOW & UNLOCK FREE TOKENS + BONUS CASH_9: -9052228854860312371
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
