@@ -2286,9 +2286,9 @@ public class GameManager : MonoBehaviour
             // Always set prize text if it exists (even if sprite is missing)
             if (prizeText != null)
             {
-                prizeText.text = "$" + PlayerProfileUI.FormatCash(cashPrize);
+                prizeText.text = "$" + CurrencyDisplayUI.FormatCash(cashPrize);
                 prizeText.gameObject.SetActive(true);
-                Debug.Log($"[GameManager] Set prize text to ${PlayerProfileUI.FormatCash(cashPrize)} for place {placeNumber}");
+                Debug.Log($"[GameManager] Set prize text to ${CurrencyDisplayUI.FormatCash(cashPrize)} for place {placeNumber}");
             }
             else
             {
@@ -2320,9 +2320,9 @@ public class GameManager : MonoBehaviour
             // Always set prize text if it exists (even if sprite is missing)
             if (prizeText != null)
             {
-                prizeText.text = PlayerProfileUI.FormatCoins(chipsPrize);
+                prizeText.text = CurrencyDisplayUI.FormatCoins(chipsPrize);
                 prizeText.gameObject.SetActive(true);
-                Debug.Log($"[GameManager] Set prize text to {PlayerProfileUI.FormatCoins(chipsPrize)} chips for place {placeNumber}");
+                Debug.Log($"[GameManager] Set prize text to {CurrencyDisplayUI.FormatCoins(chipsPrize)} chips for place {placeNumber}");
             }
             else
             {
@@ -3329,7 +3329,7 @@ public class GameManager : MonoBehaviour
         PlayerProfileUI playerProfileUI = FindObjectOfType<PlayerProfileUI>(true);
         if (playerProfileUI != null)
         {
-            playerProfileUI.UpdateAllCurrencyDisplays(
+            CurrencyDisplayUI.TriggerVisualAnimationTick(
                 PlayFabManager.Instance.currentPlayerData.coins,
                 PlayFabManager.Instance.currentPlayerData.cash
             );

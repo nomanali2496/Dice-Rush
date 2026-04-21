@@ -11,43 +11,11 @@ public class PlayerProfileUI : MonoBehaviour
     [SerializeField] private TMP_InputField playerNameInputField; // InputField for editing player name
     [SerializeField] private TextMeshProUGUI emailText;
     [SerializeField] private TextMeshProUGUI helpAndSupportEmailText;
-    [SerializeField] private TextMeshProUGUI cashText;
-    [SerializeField] private TextMeshProUGUI coinsText;
-    [SerializeField] private TextMeshProUGUI accountCashText; // Account cash display (aligned with other currency displays)
-    [SerializeField] private TextMeshProUGUI accountCashTextShadow;
     [Tooltip("Image shown when a PRESET avatar is selected (from the avatar buttons)")]
     [SerializeField] private Image profileImageSprite;
     
     [Tooltip("Image shown when a CUSTOM photo is picked from the gallery — size this larger than the mask in the Inspector for the zoom effect")]
     [SerializeField] private Image profileImageCustom;
-    
-    [Header("Lobby UI References")]
-    [SerializeField] private TextMeshProUGUI lobbyChipsText; // Chips display in lobby screen
-    [SerializeField] private TextMeshProUGUI lobbyCashText; // Cash display in lobby screen
-
-    [Header("Gameplay UI References")]
-    [SerializeField] private TextMeshProUGUI gameplayChipsText; // Chips display in gameplay screen
-    [SerializeField] private TextMeshProUGUI gameplayCashText; // Cash display in gameplay screen
-    
-    [Header("Winner Screen UI References")]
-    [SerializeField] private TextMeshProUGUI winnerScreenChipsText; // Chips display in winner screen
-    [SerializeField] private TextMeshProUGUI winnerScreenCashText; // Cash display in winner screen
-    
-    [Header("Daily Reward UI References")]
-    [SerializeField] private TextMeshProUGUI dailyRewardChipsText; // Chips display in daily reward panel
-    [SerializeField] private TextMeshProUGUI dailyRewardCashText; // Cash display in daily reward panel
-    
-    [Header("1st Place Prize UI")]
-    [SerializeField] private Image firstPlacePrizeIcon; // 1st place prize icon image (shows cash or chips sprite)
-    [SerializeField] private TextMeshProUGUI firstPlacePrizeText; // 1st place prize text (shows cash or chips value)
-    
-    [Header("2nd Place Prize UI")]
-    [SerializeField] private Image secondPlacePrizeIcon; // 2nd place prize icon image (shows cash or chips sprite)
-    [SerializeField] private TextMeshProUGUI secondPlacePrizeText; // 2nd place prize text (shows cash or chips value)
-    
-    [Header("3rd Place Prize UI")]
-    [SerializeField] private Image thirdPlacePrizeIcon; // 3rd place prize icon image (shows cash or chips sprite)
-    [SerializeField] private TextMeshProUGUI thirdPlacePrizeText; // 3rd place prize text (shows cash or chips value)
     
     [Header("Buttons")]
     [SerializeField] private Button editNameButton; // Button to edit/save player name
@@ -65,9 +33,6 @@ public class PlayerProfileUI : MonoBehaviour
     [SerializeField] private string saveButtonText = "Save";
     [SerializeField] private int maxImageSize = 512; // Max width/height for uploaded images
     
-    [Header("Currency Formatting")]
-    [SerializeField] private string cashPrefix = "Cash: $";
-    [SerializeField] private string coinsPrefix = "Coins: ";
     [SerializeField] private GameObject AvatarDisplay;
     
     [Header("Panel References for Logout")]
@@ -247,7 +212,7 @@ public class PlayerProfileUI : MonoBehaviour
         if (data != null)
         {
             Debug.Log($"[PlayerProfileUI] Received data - Name: {data.playerName}, Cash: {data.cash}, Coins: {data.coins}");
-            Debug.Log($"[PlayerProfileUI] Formatted Cash: {FormatCash(data.cash)}, Formatted Coins: {FormatCoins(data.coins)}");
+            Debug.Log($"[PlayerProfileUI] Formatted Cash: {CurrencyDisplayUI.FormatCash(data.cash)}, Formatted Coins: {CurrencyDisplayUI.FormatCoins(data.coins)}");
         }
         UpdateUI(data);
     }
@@ -277,7 +242,7 @@ public class PlayerProfileUI : MonoBehaviour
         }
         
         Debug.Log($"[PlayerProfileUI] Updating UI with: Name={data.playerName}, Email={data.email}, Cash={data.cash}, Coins={data.coins}");
-        Debug.Log($"[PlayerProfileUI] Formatting - Cash: {data.cash} -> {FormatCash(data.cash)}, Coins: {data.coins} -> {FormatCoins(data.coins)}");
+        Debug.Log($"[PlayerProfileUI] Formatting - Cash: {data.cash} -> {CurrencyDisplayUI.FormatCash(data.cash)}, Coins: {data.coins} -> {CurrencyDisplayUI.FormatCoins(data.coins)}");
         
         // Update name - Support InputField
         // Only update if not in edit mode (to avoid interrupting user's typing)
@@ -311,47 +276,7 @@ public class PlayerProfileUI : MonoBehaviour
             Debug.LogWarning("[PlayerProfileUI] emailText is null!");
         }
         
-        // Update cash (Main Menu) - cash is stored as float
-        if (cashText != null)
-        {
-            cashText.text = cashPrefix + FormatCash(data.cash);
-            Debug.Log($"[PlayerProfileUI] Set cashText to: {cashText.text}");
-        }
-        else
-        {
-            Debug.LogWarning("[PlayerProfileUI] cashText is null!");
-        }
-        
-        // Update account cash display - cash is stored as float
-        if (accountCashText != null)
-        {
-            accountCashText.text = cashPrefix + data.cash;
-            accountCashTextShadow.text =  accountCashText.text;
-        }
-        
-        // Update coins (Main Menu)
-        if (coinsText != null)
-        {
-            coinsText.text = coinsPrefix + FormatCoins(data.coins);
-            Debug.Log($"[PlayerProfileUI] Set coinsText to: {coinsText.text}");
-        }
-        else
-        {
-            Debug.LogWarning("[PlayerProfileUI] coinsText is null!");
-        }
-        
-        // Update Gameplay UI
-        UpdateGameplayCurrency(data.coins, data.cash);
-        
-        // Update Winner Screen UI
-        UpdateWinnerScreenCurrency(data.coins, data.cash);
-        
-        // Update Daily Reward UI
-        UpdateDailyRewardCurrency(data.coins, data.cash);
-        
-        // Update Lobby UI
-        UpdateLobbyCurrency(data.coins, data.cash);
-        
+
         // Update profile image
         if (!string.IsNullOrEmpty(data.imageUrl))
         {
@@ -411,91 +336,7 @@ public class PlayerProfileUI : MonoBehaviour
             emailText.text = "Not logged in";
         helpAndSupportEmailText.text = emailText.text;
         
-        // Use formatting methods for consistency (even though 0 doesn't need formatting)
-        if (cashText != null)
-            cashText.text = cashPrefix + FormatCash(0f);
-        
-        if (accountCashText != null)
-            accountCashText.text = cashPrefix + FormatCash(0f);
-        
-        if (coinsText != null)
-            coinsText.text = coinsPrefix + FormatCoins(0);
-        
-        // Update Gameplay UI with default values
-        UpdateGameplayCurrency(0, 0);
-        
-        // Update Winner Screen UI with default values
-        UpdateWinnerScreenCurrency(0, 0);
-        
-        // Update Daily Reward UI with default values
-        UpdateDailyRewardCurrency(0, 0);
-        
-        // Update Lobby UI with default values
-        UpdateLobbyCurrency(0, 0);
-    }
-    
-    /// <summary>
-    /// Updates lobby screen chips and cash displays - cash is stored as float
-    /// </summary>
-    private void UpdateLobbyCurrency(int chips, float cash)
-    {
-        if (lobbyChipsText != null)
-        {
-            lobbyChipsText.text = coinsPrefix + FormatCoins(chips);
-        }
-        
-        if (lobbyCashText != null)
-        {
-            lobbyCashText.text = cashPrefix + FormatCash(cash);
-        }
-    }
 
-    /// <summary>
-    /// Updates gameplay screen chips and cash displays - cash is stored as float
-    /// </summary>
-    private void UpdateGameplayCurrency(int chips, float cash)
-    {
-        if (gameplayChipsText != null)
-        {
-            gameplayChipsText.text = coinsPrefix + FormatCoins(chips);
-        }
-        
-        if (gameplayCashText != null)
-        {
-            gameplayCashText.text = cashPrefix + FormatCash(cash);
-        }
-    }
-    
-    /// <summary>
-    /// Updates winner screen chips and cash displays - cash is stored as float
-    /// </summary>
-    private void UpdateWinnerScreenCurrency(int chips, float cash)
-    {
-        if (winnerScreenChipsText != null)
-        {
-            winnerScreenChipsText.text = coinsPrefix + FormatCoins(chips);
-        }
-        
-        if (winnerScreenCashText != null)
-        {
-            winnerScreenCashText.text = cashPrefix + FormatCash(cash);
-        }
-    }
-    
-    /// <summary>
-    /// Updates daily reward panel chips and cash displays - cash is stored as float
-    /// </summary>
-    private void UpdateDailyRewardCurrency(int chips, float cash)
-    {
-        if (dailyRewardChipsText != null)
-        {
-            dailyRewardChipsText.text = coinsPrefix + FormatCoins(chips);
-        }
-        
-        if (dailyRewardCashText != null)
-        {
-            dailyRewardCashText.text = cashPrefix + FormatCash(cash);
-        }
     }
     
     /// <summary>
@@ -900,227 +741,6 @@ public class PlayerProfileUI : MonoBehaviour
         Debug.LogWarning($"[PlayerProfileUI] Could not load avatar sprite at index {selectedIndex}.");
     }
     
-    #region Public Helper Methods
-    
-    /// <summary>
-    /// Manually force UI update with current PlayFab data
-    /// Call this if UI is not updating automatically
-    /// </summary>
-    public void ForceUpdateUI()
-    {
-        Debug.Log("[PlayerProfileUI] ForceUpdateUI called manually");
-        
-        if (PlayFabManager.Instance != null && PlayFabManager.Instance.currentPlayerData != null)
-        {
-            Debug.Log("[PlayerProfileUI] Forcing UI update with current data");
-            UpdateUI(PlayFabManager.Instance.currentPlayerData);
-        }
-        else
-        {
-            Debug.LogWarning("[PlayerProfileUI] Cannot force update - no data available");
-            RefreshPlayerData();
-        }
-    }
-    
-    /// <summary>
-    /// Update displayed cash value (all screens) - cash is stored as float
-    /// </summary>
-    public void UpdateCashDisplay(float amount)
-    {
-        // Update Main Menu
-        if (cashText != null)
-        {
-            cashText.text = cashPrefix + FormatCash(amount);
-        }
-        
-        // Update Account Cash
-        if (accountCashText != null)
-        {
-            accountCashText.text = cashPrefix + FormatCash(amount);
-        }
-        
-        // Update Gameplay
-        if (gameplayCashText != null)
-        {
-            gameplayCashText.text = cashPrefix + FormatCash(amount);
-        }
-        
-        // Update Winner Screen
-        if (winnerScreenCashText != null)
-        {
-            winnerScreenCashText.text = cashPrefix + FormatCash(amount);
-        }
-        
-        // Update Daily Reward Panel
-        if (dailyRewardCashText != null)
-        {
-            dailyRewardCashText.text = cashPrefix + FormatCash(amount);
-        }
-    }
-    
-    /// <summary>
-    /// Update displayed coins value (all screens)
-    /// </summary>
-    public void UpdateCoinsDisplay(int amount)
-    {
-        // Update Main Menu
-        if (coinsText != null)
-        {
-            coinsText.text = coinsPrefix + FormatCoins(amount);
-        }
-        
-        // Update Gameplay
-        if (gameplayChipsText != null)
-        {
-            gameplayChipsText.text = coinsPrefix + FormatCoins(amount);
-        }
-        
-        // Update Winner Screen
-        if (winnerScreenChipsText != null)
-        {
-            winnerScreenChipsText.text = coinsPrefix + FormatCoins(amount);
-        }
-        
-        // Update Daily Reward Panel
-        if (dailyRewardChipsText != null)
-        {
-            dailyRewardChipsText.text = coinsPrefix + FormatCoins(amount);
-        }
-    }
-    
-    /// <summary>
-    /// Gets the 1st place prize icon image
-    /// </summary>
-    public Image GetFirstPlacePrizeIcon()
-    {
-        return firstPlacePrizeIcon;
-    }
-    
-    /// <summary>
-    /// Gets the 1st place prize text
-    /// </summary>
-    public TextMeshProUGUI GetFirstPlacePrizeText()
-    {
-        return firstPlacePrizeText;
-    }
-    
-    /// <summary>
-    /// Gets the 2nd place prize icon image
-    /// </summary>
-    public Image GetSecondPlacePrizeIcon()
-    {
-        return secondPlacePrizeIcon;
-    }
-    
-    /// <summary>
-    /// Gets the 2nd place prize text
-    /// </summary>
-    public TextMeshProUGUI GetSecondPlacePrizeText()
-    {
-        return secondPlacePrizeText;
-    }
-    
-    /// <summary>
-    /// Gets the 3rd place prize icon image
-    /// </summary>
-    public Image GetThirdPlacePrizeIcon()
-    {
-        return thirdPlacePrizeIcon;
-    }
-    
-    /// <summary>
-    /// Gets the 3rd place prize text
-    /// </summary>
-    public TextMeshProUGUI GetThirdPlacePrizeText()
-    {
-        return thirdPlacePrizeText;
-    }
-    
-    /// <summary>
-    /// Update all currency displays (chips and cash) across all screens
-    /// </summary>
-    public void UpdateAllCurrencyDisplays(int chips, float cash)
-    {
-        UpdateCoinsDisplay(chips);
-        UpdateCashDisplay(cash);
-    }
-    
-    /// <summary>
-    /// Format cash value intelligently:
-    /// - Values >= 1000: convert to "k" notation (e.g., "1k", "1.5k", "10k")
-    /// - Values < 1000: 
-    ///   - If 2 digits or less before decimal (e.g., 99.9): show decimals
-    ///   - If 3+ digits before decimal (e.g., 999.9): round to integer (999)
-    /// </summary>
-    public static string FormatCash(float amount)
-    {
-        // Convert to "k" notation if >= 1000
-        if (amount >= 1000f)
-        {
-            float kValue = amount / 1000f;
-            // Check if it's a whole number in k (using epsilon for floating point comparison)
-            if (Mathf.Abs(kValue - Mathf.RoundToInt(kValue)) < 0.001f)
-            {
-                return Mathf.RoundToInt(kValue).ToString() + "k";
-            }
-            else
-            {
-                // Show up to 1 decimal place for k notation, removing trailing zeros
-                return kValue.ToString("0.#") + "k";
-            }
-        }
-        
-        // For values < 1000
-        int wholeNumberPart = Mathf.FloorToInt(amount);
-        
-        // If 3+ digits before decimal point (>= 100), truncate to integer (don't round)
-        if (wholeNumberPart >= 100)
-        {
-            return wholeNumberPart.ToString();
-        }
-        
-        // If 2 digits or less before decimal point (< 100), show decimals if present
-        // Check if it's a whole number
-        if (Mathf.Abs(amount - Mathf.RoundToInt(amount)) < 0.001f)
-        {
-            // Whole number - show without decimals
-            return Mathf.RoundToInt(amount).ToString();
-        }
-        else
-        {
-            // Has decimals - show up to 2 decimal places, removing trailing zeros
-            return amount.ToString("0.##");
-        }
-    }
-    
-    /// <summary>
-    /// Format coins/chips value intelligently:
-    /// - Values >= 1000: convert to "k" notation (e.g., "1k", "1.5k", "10k")
-    /// - Values < 1000: show as whole number
-    /// </summary>
-    public static string FormatCoins(int amount)
-    {
-        // Convert to "k" notation if >= 1000
-        if (amount >= 1000)
-        {
-            float kValue = amount / 1000f;
-            // Check if it's a whole number in k (using epsilon for floating point comparison)
-            if (Mathf.Abs(kValue - Mathf.RoundToInt(kValue)) < 0.001f)
-            {
-                return Mathf.RoundToInt(kValue).ToString() + "k";
-            }
-            else
-            {
-                // Show up to 1 decimal place for k notation, removing trailing zeros
-                return kValue.ToString("0.#") + "k";
-            }
-        }
-        
-        // For values < 1000, show as whole number
-        return amount.ToString();
-    }
-    
-    #endregion
     
     #region Custom Image Selection
     

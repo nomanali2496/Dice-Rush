@@ -21,6 +21,8 @@ public class PlayFabManager : MonoBehaviour
     public Action<bool> OnPlayerDataSaved;
     public Action<string, float, int, string> OnRewardClaimed; // Action: Message, Cash, Chips, RankingsJSON
     
+    public static event Action<CurrencyType, float> OnCurrencyUpdated;
+    
     // Reward keys
     public const string PENDING_CASH_KEY = "PendingCashReward";
     public const string PENDING_CHIPS_KEY = "PendingChipsReward";
@@ -865,6 +867,10 @@ public class PlayFabManager : MonoBehaviour
         
         Debug.Log("[PlayFabManager] Invoking OnPlayerDataLoaded event...");
         OnPlayerDataLoaded?.Invoke(currentPlayerData);
+
+        // Fire currency updates for UI initialization
+        OnCurrencyUpdated?.Invoke(CurrencyType.Cash, currentPlayerData.cash);
+        OnCurrencyUpdated?.Invoke(CurrencyType.Coins, currentPlayerData.coins);
         
         // Check for pending Branch referral after data is loaded
         if (BranchInit.instance != null)
@@ -937,6 +943,9 @@ public class PlayFabManager : MonoBehaviour
                 currentPlayerData.cash += cashVal;
                 currentPlayerData.coins += chipVal;
                 
+                if (cashVal > 0) OnCurrencyUpdated?.Invoke(CurrencyType.Cash, currentPlayerData.cash);
+                if (chipVal > 0) OnCurrencyUpdated?.Invoke(CurrencyType.Coins, currentPlayerData.coins);
+                
                 // Notify UI
                 OnRewardClaimed?.Invoke(msg, cashVal, chipVal, rankingsJson);
                 
@@ -976,6 +985,7 @@ public class PlayFabManager : MonoBehaviour
     {
         isAwardingPrize = true;
         currentPlayerData.cash += amount;
+        OnCurrencyUpdated?.Invoke(CurrencyType.Cash, currentPlayerData.cash);
         Debug.Log($"[PlayFabManager] 💰 AddCash: +{amount} → New balance: {currentPlayerData.cash}");
         SavePlayerData();
     }
@@ -988,6 +998,7 @@ public class PlayFabManager : MonoBehaviour
     {
         isAwardingPrize = true;
         currentPlayerData.coins += amount;
+        OnCurrencyUpdated?.Invoke(CurrencyType.Coins, currentPlayerData.coins);
         Debug.Log($"[PlayFabManager] 🪙 AddCoins: +{amount} → New balance: {currentPlayerData.coins}");
         SavePlayerData();
     }
@@ -1000,6 +1011,7 @@ public class PlayFabManager : MonoBehaviour
         if (currentPlayerData.cash >= amount)
         {
             currentPlayerData.cash -= amount;
+            OnCurrencyUpdated?.Invoke(CurrencyType.Cash, currentPlayerData.cash);
             SavePlayerData();
             return true;
         }
@@ -1014,6 +1026,7 @@ public class PlayFabManager : MonoBehaviour
         if (currentPlayerData.coins >= amount)
         {
             currentPlayerData.coins -= amount;
+            OnCurrencyUpdated?.Invoke(CurrencyType.Coins, currentPlayerData.coins);
             SavePlayerData();
             return true;
         }

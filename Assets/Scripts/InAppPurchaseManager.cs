@@ -486,7 +486,7 @@ public class InAppPurchaseManager : MonoBehaviour
         // Update all UI displays using PlayerProfileUI
         if (playerProfileUI != null)
         {
-            playerProfileUI.UpdateAllCurrencyDisplays(chips, cash);
+            CurrencyDisplayUI.TriggerVisualAnimationTick(chips, cash);
         }
         else
         {

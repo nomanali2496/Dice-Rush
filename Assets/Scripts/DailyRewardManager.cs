@@ -420,7 +420,7 @@ public class DailyRewardManager : MonoBehaviour
             // Update UI to show initial values (before animation)
             if (playerProfileUI != null)
             {
-                playerProfileUI.UpdateAllCurrencyDisplays(initialChips, initialCash);
+                CurrencyDisplayUI.TriggerVisualAnimationTick(initialChips, initialCash);
             }
         }
         
@@ -457,7 +457,7 @@ public class DailyRewardManager : MonoBehaviour
             if (PlayFabManager.Instance != null && PlayFabManager.Instance.currentPlayerData != null)
             {
                 PlayerData data = PlayFabManager.Instance.currentPlayerData;
-                playerProfileUI.UpdateAllCurrencyDisplays(data.coins, data.cash);
+                CurrencyDisplayUI.TriggerVisualAnimationTick(data.coins, data.cash);
             }
         }
         
@@ -740,7 +740,7 @@ public class DailyRewardManager : MonoBehaviour
                 // Update UI display
                 if (playerProfileUI != null)
                 {
-                    playerProfileUI.UpdateAllCurrencyDisplays(currentAnimatedChips, currentAnimatedCash);
+                    CurrencyDisplayUI.TriggerVisualAnimationTick(currentAnimatedChips, currentAnimatedCash);
                 }
                 
                 countUpApplied = true;
@@ -849,7 +849,7 @@ public class DailyRewardManager : MonoBehaviour
         if (playerProfileUI != null && PlayFabManager.Instance.currentPlayerData != null)
         {
             PlayerData data = PlayFabManager.Instance.currentPlayerData;
-            playerProfileUI.UpdateAllCurrencyDisplays(data.coins, data.cash);
+            CurrencyDisplayUI.TriggerVisualAnimationTick(data.coins, data.cash);
             Debug.Log("[DailyRewardManager] Updated UI displays with new currency values");
         }
         else

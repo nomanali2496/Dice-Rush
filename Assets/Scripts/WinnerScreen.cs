@@ -141,7 +141,7 @@ public class WinnerScreen : MonoBehaviour
                 // Update UI to show initial values (before animation)
                 if (playerProfileUI != null)
                 {
-                    playerProfileUI.UpdateAllCurrencyDisplays(initialChips, initialCash);
+                    CurrencyDisplayUI.TriggerVisualAnimationTick(initialChips, initialCash);
                 }
             }
             
@@ -439,7 +439,7 @@ public class WinnerScreen : MonoBehaviour
         yield return new WaitForSeconds(animationDuration + 0.1f);
         if (playerProfileUI != null)
         {
-            playerProfileUI.UpdateAllCurrencyDisplays(targetChips, targetCash);
+            CurrencyDisplayUI.TriggerVisualAnimationTick(targetChips, targetCash);
         }
         
         yield return null;
@@ -615,7 +615,7 @@ public class WinnerScreen : MonoBehaviour
                 // Update UI display
                 if (playerProfileUI != null)
                 {
-                    playerProfileUI.UpdateAllCurrencyDisplays(currentAnimatedChips, currentAnimatedCash);
+                    CurrencyDisplayUI.TriggerVisualAnimationTick(currentAnimatedChips, currentAnimatedCash);
                 }
                 
                 countUpApplied = true;
