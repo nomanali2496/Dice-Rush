@@ -45,10 +45,6 @@ public class WinnerScreen : MonoBehaviour
     [Header("Prefab for Animated Sprites")]
     [SerializeField] private GameObject animatedSpritePrefab; // Prefab for animated cash/chips sprites (should have Image component)
     
-    [Header("Sound Effects")]
-    [SerializeField] private AudioClip cashSound; // Sound to play for each cash particle
-    [SerializeField] private AudioClip chipsSound; // Sound to play for each chip particle
-    
     private GameManager gameManager;
     private PlayerProfileUI playerProfileUI;
     private List<GameObject> activeAnimations = new List<GameObject>(); // Track active animation objects
@@ -652,21 +648,20 @@ public class WinnerScreen : MonoBehaviour
     /// </summary>
     private void PlayParticleSound(bool isCash)
     {
-        // Check if sound is enabled in SettingManager
-        if (SettingManager.instance != null && !SettingManager.instance.IsSoundEnabled())
+        if (SoundManager.instance != null)
         {
-            return; // Sound is disabled, don't play
-        }
-        
-        AudioClip soundToPlay = isCash ? cashSound : chipsSound;
-        
-        if (soundToPlay != null)
-        {
-            AudioSource.PlayClipAtPoint(soundToPlay, Camera.main.transform.position);
+            if (isCash)
+            {
+                SoundManager.instance.PlayCash();
+            }
+            else
+            {
+                SoundManager.instance.PlayChips();
+            }
         }
         else
         {
-            Debug.LogWarning($"[WinnerScreen] {(isCash ? "Cash" : "Chips")} sound not assigned!");
+            Debug.LogWarning("[WinnerScreen] SoundManager instance not found!");
         }
     }
     
