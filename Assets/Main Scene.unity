@@ -10432,7 +10432,6 @@ GameObject:
   - component: {fileID: 314033591}
   - component: {fileID: 314033594}
   - component: {fileID: 314033593}
-  - component: {fileID: 314033592}
   - component: {fileID: 314033595}
   m_Layer: 5
   m_Name: LoadingScreen
@@ -10464,24 +10463,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &314033592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 314033590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 456fdab19ec1c7f4992d71703bb2722b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SplashScreen
-  progressSlider: {fileID: 0}
-  loadingDuration: 3
-  minLoadingTime: 1
-  fillSpeed: 2
-  useSmoothFill: 1
-  gamePanel: {fileID: 407583426}
 --- !u!114 &314033593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13709,7 +13690,6 @@ GameObject:
   - component: {fileID: 416799080}
   - component: {fileID: 416799084}
   - component: {fileID: 416799083}
-  - component: {fileID: 416799082}
   - component: {fileID: 416799081}
   m_Layer: 5
   m_Name: LoadingWinnerPanel
@@ -13766,24 +13746,6 @@ MonoBehaviour:
   backgroundTag: Background
   targetCamera: {fileID: 0}
   resetOffset: 0.01
---- !u!114 &416799082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 416799079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 456fdab19ec1c7f4992d71703bb2722b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SplashScreen
-  progressSlider: {fileID: 0}
-  loadingDuration: 3
-  minLoadingTime: 1
-  fillSpeed: 2
-  useSmoothFill: 1
-  gamePanel: {fileID: 407583426}
 --- !u!114 &416799083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20799,7 +20761,6 @@ GameObject:
   m_Component:
   - component: {fileID: 658066940}
   - component: {fileID: 658066941}
-  - component: {fileID: 658066942}
   m_Layer: 5
   m_Name: UpperButtons
   m_TagString: Untagged
@@ -20856,18 +20817,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &658066942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 658066939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28afc967a8d16574cb6cccc535fdfbff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClickButtonSound
 --- !u!1 &658142189 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5935807496776751805, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
@@ -28724,7 +28673,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 943505940}
-  - component: {fileID: 943505941}
   - component: {fileID: 943505942}
   m_Layer: 0
   m_Name: SoundManager
@@ -28748,18 +28696,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &943505941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 943505938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28afc967a8d16574cb6cccc535fdfbff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!114 &943505942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32532,7 +32468,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1088987541}
   - component: {fileID: 1088987542}
-  - component: {fileID: 1088987543}
   m_Layer: 5
   m_Name: Fields and Button
   m_TagString: Untagged
@@ -32590,18 +32525,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &1088987543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1088987540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28afc967a8d16574cb6cccc535fdfbff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClickButtonSound
 --- !u!1 &1089765429
 GameObject:
   m_ObjectHideFlags: 0
@@ -37406,7 +37329,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1266852448}
-  - component: {fileID: 1266852449}
   m_Layer: 5
   m_Name: UpperButtons
   m_TagString: Untagged
@@ -37435,18 +37357,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1266852449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1266852447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28afc967a8d16574cb6cccc535fdfbff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClickButtonSound
 --- !u!1 &1268866685 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1725772784642469859, guid: e12789b63cca8294a88718096180be21, type: 3}
@@ -41450,7 +41360,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1356579009}
-  - component: {fileID: 1356579010}
   m_Layer: 5
   m_Name: UpperButtons
   m_TagString: Untagged
@@ -41479,18 +41388,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1356579010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1356579008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28afc967a8d16574cb6cccc535fdfbff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClickButtonSound
 --- !u!1 &1358700592
 GameObject:
   m_ObjectHideFlags: 0
@@ -41501,7 +41398,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1358700593}
   - component: {fileID: 1358700594}
-  - component: {fileID: 1358700595}
   m_Layer: 5
   m_Name: Term/PrivacyButtons
   m_TagString: Untagged
@@ -41556,18 +41452,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &1358700595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1358700592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28afc967a8d16574cb6cccc535fdfbff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClickButtonSound
 --- !u!1001 &1363917295
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60891,7 +60775,6 @@ GameObject:
   - component: {fileID: 2021851056}
   - component: {fileID: 2021851060}
   - component: {fileID: 2021851059}
-  - component: {fileID: 2021851058}
   - component: {fileID: 2021851057}
   m_Layer: 5
   m_Name: WaitingPanel
@@ -60948,24 +60831,6 @@ MonoBehaviour:
   backgroundTag: Background
   targetCamera: {fileID: 0}
   resetOffset: 0.01
---- !u!114 &2021851058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2021851055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 456fdab19ec1c7f4992d71703bb2722b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SplashScreen
-  progressSlider: {fileID: 0}
-  loadingDuration: 3
-  minLoadingTime: 1
-  fillSpeed: 2
-  useSmoothFill: 1
-  gamePanel: {fileID: 407583426}
 --- !u!114 &2021851059
 MonoBehaviour:
   m_ObjectHideFlags: 0

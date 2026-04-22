@@ -65,7 +65,7 @@ MonoBehaviour:
   backgroundSprite1: {fileID: 21300000, guid: db6253f65d5ccca4dae0ee4c4c10f8ba, type: 3}
   backgroundSprite2: {fileID: 21300000, guid: 71de092f54cfa254faaa2626650f0f94, type: 3}
   backgroundSprite3: {fileID: 21300000, guid: 007fa645c889ab247be4b13c44743f09, type: 3}
-  backgroundSprite4: {fileID: 21300000, guid: 5dfa3529cfbaec34aa3cc0bb7e900516, type: 3}
+  backgroundSprite4: {fileID: 21300000, guid: c1759b4e699f1ae4f9ed1c4a4ee4a1d1, type: 3}
   backgroundSprite5: {fileID: 21300000, guid: b1dd7454085e25f4894ab8fb1f4f8ce6, type: 3}
   backgroundSprite6: {fileID: 21300000, guid: ce0694673173abd4c939ffdbd49ba833, type: 3}
   backgroundSprite7: {fileID: 21300000, guid: a7e874a3dba574d41be9679deaa8631e, type: 3}
