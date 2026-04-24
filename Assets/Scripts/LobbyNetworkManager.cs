@@ -466,8 +466,9 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
 
         if (waitingPanel != null) waitingPanel.SetActive(false);
         
-        LobbyManager lobbyManager = FindObjectOfType<LobbyManager>();
-        if (lobbyManager != null && currentSelectedConfig != null)
+        HorizontalLobbyManager horizontalLobbyManager = FindObjectOfType<HorizontalLobbyManager>();
+        
+        if (horizontalLobbyManager != null && currentSelectedConfig != null)
         {
             // No CPUs functionality: only real humans.
             int humanPlayers = PhotonNetwork.CurrentRoom.PlayerCount;
@@ -495,7 +496,7 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
             }
             
             // Pass the number of CPUs needed to the LobbyManager first (start the game visually)
-            lobbyManager.StartGameFromNetwork(currentSelectedConfig.lobbyIndex, neededCPUs);
+            horizontalLobbyManager.StartGameFromNetwork(currentSelectedConfig.lobbyIndex, neededCPUs);
 
             // NEW: Save the lobby prizes (rules) to PlayFab Match Shared Data
             // This ensures that even if you disconnect, the server knows exactly what the prizes were.
