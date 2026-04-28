@@ -110,18 +110,37 @@ public class AuthenticationManager : MonoBehaviour
         // This prevents the login screen from flashing briefly
         if (BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
         {
-            Debug.Log("[AuthenticationManager] Backend JWT found, hiding login screen and showing splash");
-            HideLoginScreen();
-            ShowSplashScreenPanel();
-            SetLoadingState(false);
-            UpdateStatusText("");
+            Debug.Log("[AuthenticationManager] Backend JWT found, fetching profile data...");
+            SetLoadingState(true);
+            UpdateStatusText("Restoring session...");
             
-            if (PlayFabManager.Instance != null)
+            BackendAuthService.Instance.GetProfile((success, message) => 
             {
-                PlayFabManager.Instance.LoadPlayerData();
-            }
-            
-            OnAuthenticationSuccess?.Invoke();
+                if (success)
+                {
+                    Debug.Log("[AuthenticationManager] Backend profile restored successfully!");
+                    HideLoginScreen();
+                    ShowSplashScreenPanel();
+                    SetLoadingState(false);
+                    UpdateStatusText("");
+                    
+                    if (PlayFabManager.Instance != null)
+                    {
+                        PlayFabManager.Instance.LoadPlayerData();
+                    }
+                    
+                    OnAuthenticationSuccess?.Invoke();
+                }
+                else
+                {
+                    Debug.LogWarning("[AuthenticationManager] Backend session restore failed: " + message);
+                    // If JWT is expired or invalid, clear it and show login
+                    BackendAuthService.ClearJWT();
+                    ShowLoginRegisterPanel();
+                    ShowLoginSection();
+                    SetLoadingState(false);
+                }
+            });
             return;
         }
         else if (PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
@@ -530,15 +549,27 @@ public class AuthenticationManager : MonoBehaviour
         string customId = SystemInfo.deviceUniqueIdentifier;
         Debug.Log($"[AuthenticationManager] Attempting auto-login with device ID: {customId}");
         
-        if (PlayFabManager.Instance != null)
+        if (BackendAuthService.Instance != null)
         {
-            // The OnLoginComplete callback will handle the result
-            // We use isAttemptingAutoLogin flag to handle failures silently
-            PlayFabManager.Instance.LoginWithCustomId(customId, true);
+            BackendAuthService.Instance.GuestLogin(customId, (success, message) => 
+            {
+                if (success)
+                {
+                    OnLoginComplete(true);
+                }
+                else
+                {
+                    Debug.LogWarning("[AuthenticationManager] Guest auto-login failed: " + message);
+                    isAttemptingAutoLogin = false;
+                    ShowLoginRegisterPanel();
+                    ShowLoginSection();
+                    SetLoadingState(false);
+                }
+            });
         }
         else
         {
-            Debug.LogWarning("[AuthenticationManager] PlayFabManager not found, showing login panel");
+            Debug.LogWarning("[AuthenticationManager] BackendAuthService not found, showing login panel");
             isAttemptingAutoLogin = false;
             ShowLoginRegisterPanel();
             ShowLoginSection();
@@ -756,13 +787,29 @@ public class AuthenticationManager : MonoBehaviour
         
         string customId = SystemInfo.deviceUniqueIdentifier;
         
-        if (PlayFabManager.Instance != null)
+        if (BackendAuthService.Instance != null)
         {
-            PlayFabManager.Instance.LoginWithCustomId(customId);
+            BackendAuthService.Instance.GuestLogin(customId, (success, message) => 
+            {
+                if (success)
+                {
+                    OnLoginComplete(true);
+                }
+                else
+                {
+                    UpdateStatusText(message);
+                    SetLoadingState(false);
+                    // Show internet panel if network error
+                    if (message.ToLower().Contains("network") || message.ToLower().Contains("connect"))
+                    {
+                        ShowInternetPanel(OnGuestLoginClicked);
+                    }
+                }
+            });
         }
         else
         {
-            UpdateStatusText("Error: PlayFabManager not found!");
+            UpdateStatusText("Error: BackendAuthService not found!");
             SetLoadingState(false);
         }
     }

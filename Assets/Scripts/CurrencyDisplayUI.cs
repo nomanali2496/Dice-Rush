@@ -27,25 +27,27 @@ public class CurrencyDisplayUI : MonoBehaviour
     private void OnEnable()
     {
         // Subscribe to changes globally
-        PlayFabManager.OnCurrencyUpdated += HandleCurrencyUpdated;
+        PlayerModel.OnDataUpdated += HandleDataUpdated;
         OnCurrencyVisualTick += HandleCurrencyUpdated;
         
         // Fetch current value to initialize instantly
-        if (PlayFabManager.Instance != null && PlayFabManager.Instance.currentPlayerData != null)
-        {
-            float initialValue = currencyToWatch == CurrencyType.Cash 
-                ? PlayFabManager.Instance.currentPlayerData.cash 
-                : PlayFabManager.Instance.currentPlayerData.coins;
-                
-            HandleCurrencyUpdated(currencyToWatch, initialValue);
-        }
+        HandleDataUpdated();
     }
 
     private void OnDisable()
     {
         // Unsubscribe to avoid memory leaks
-        PlayFabManager.OnCurrencyUpdated -= HandleCurrencyUpdated;
+        PlayerModel.OnDataUpdated -= HandleDataUpdated;
         OnCurrencyVisualTick -= HandleCurrencyUpdated;
+    }
+
+    private void HandleDataUpdated()
+    {
+        float newValue = currencyToWatch == CurrencyType.Cash 
+            ? PlayerModel.CashBalance 
+            : PlayerModel.Coins;
+            
+        HandleCurrencyUpdated(currencyToWatch, newValue);
     }
 
     /// <summary>

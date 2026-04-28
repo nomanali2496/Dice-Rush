@@ -68,16 +68,10 @@ public class PlayerProfileUI : MonoBehaviour
         // Setup input field - start in read-only mode
         SetEditMode(false);
         
-        // Subscribe to PlayFab events early (like MainMenuAvatarDisplay does)
-        // This ensures we don't miss events that fire during initialization
-        if (PlayFabManager.Instance != null)
-        {
-            PlayFabManager.Instance.OnPlayerDataLoaded -= OnPlayerDataLoaded;
-            PlayFabManager.Instance.OnPlayerDataLoaded += OnPlayerDataLoaded;
-            PlayFabManager.Instance.OnPlayerDataSaved -= OnPlayerDataSaved;
-            PlayFabManager.Instance.OnPlayerDataSaved += OnPlayerDataSaved;
-            Debug.Log("[PlayerProfileUI] Subscribed to PlayFab events in Start()");
-        }
+        // Subscribe to Backend PlayerModel events
+        PlayerModel.OnDataUpdated -= RefreshUIFromBackend;
+        PlayerModel.OnDataUpdated += RefreshUIFromBackend;
+        Debug.Log("[PlayerProfileUI] Subscribed to PlayerModel events in Start()");
         
         // Load custom image if exists
         LoadCustomImage();
@@ -90,7 +84,6 @@ public class PlayerProfileUI : MonoBehaviour
         // Load custom image if exists
         LoadCustomImage();
         
-        // Wait a tiny bit to ensure PlayFabManager is fully initialized
         StartCoroutine(InitializeUIAfterDelay());
     }
     
@@ -101,232 +94,63 @@ public class PlayerProfileUI : MonoBehaviour
         
         Debug.Log("[PlayerProfileUI] Initializing UI after delay...");
         
-        if (PlayFabManager.Instance == null)
-        {
-            Debug.LogWarning("[PlayerProfileUI] PlayFabManager not found!");
-            UpdateUIWithDefaultData();
-            yield break;
-        }
+        // Ensure Backend PlayerModel is subscribed
+        PlayerModel.OnDataUpdated -= RefreshUIFromBackend;
+        PlayerModel.OnDataUpdated += RefreshUIFromBackend;
         
-        // Subscribe to future events (if not already subscribed in Start)
-        // Note: We unsubscribe first to avoid duplicate subscriptions
-        PlayFabManager.Instance.OnPlayerDataLoaded -= OnPlayerDataLoaded;
-        PlayFabManager.Instance.OnPlayerDataLoaded += OnPlayerDataLoaded;
-        PlayFabManager.Instance.OnPlayerDataSaved -= OnPlayerDataSaved;
-        PlayFabManager.Instance.OnPlayerDataSaved += OnPlayerDataSaved;
-        Debug.Log("[PlayerProfileUI] Subscribed to PlayFab events in OnEnable()");
-        
-        Debug.Log($"[PlayerProfileUI] IsLoggedIn: {PlayFabManager.Instance.IsLoggedIn()}");
-        
-        // Check if player is logged in and data exists
-        if (PlayFabManager.Instance.IsLoggedIn())
-        {
-            PlayerData data = PlayFabManager.Instance.currentPlayerData;
-            
-            Debug.Log($"[PlayerProfileUI] Checking data - playerName: '{data?.playerName}', cash: {data?.cash}, coins: {data?.coins}");
-            
-            if (data != null && !string.IsNullOrEmpty(data.playerName))
-            {
-                // Data was already loaded while this panel was inactive!
-                Debug.Log("[PlayerProfileUI] ✓✓✓ DATA FOUND! Displaying immediately! ✓✓✓");
-                Debug.Log($"[PlayerProfileUI] Updating UI with: Name={data.playerName}, Email={data.email}, Cash={data.cash}, Coins={data.coins}");
-                UpdateUI(data);
-            }
-            else
-            {
-                // Data not loaded yet, request it
-                Debug.Log("[PlayerProfileUI] No data yet, requesting from PlayFab...");
-                UpdateUIWithDefaultData();
-                
-                // Wait a bit then check again (data might be loading)
-                yield return new WaitForSeconds(0.5f);
-                
-                // Check again after waiting
-                data = PlayFabManager.Instance.currentPlayerData;
-                if (data != null && !string.IsNullOrEmpty(data.playerName))
-                {
-                    Debug.Log("[PlayerProfileUI] ✓ Data arrived! Displaying now!");
-                    UpdateUI(data);
-                    
-                }
-                else
-                {
-                    Debug.Log("[PlayerProfileUI] Still no data, loading from PlayFab...");
-                    PlayFabManager.Instance.LoadPlayerData();
-                }
-            }
-        }
-        else
-        {
-            Debug.LogWarning("[PlayerProfileUI] Player not logged in!");
-            UpdateUIWithDefaultData();
-        }
+        // Refresh immediately if data exists
+        RefreshUIFromBackend();
     }
     
     private void OnDisable()
     {
-        // Unsubscribe from events when disabled
-        if (PlayFabManager.Instance != null)
-        {
-            PlayFabManager.Instance.OnPlayerDataLoaded -= OnPlayerDataLoaded;
-            PlayFabManager.Instance.OnPlayerDataSaved -= OnPlayerDataSaved;
-        }
+        PlayerModel.OnDataUpdated -= RefreshUIFromBackend;
     }
     
     private void OnDestroy()
     {
-        // Unsubscribe from events when destroyed
-        if (PlayFabManager.Instance != null)
-        {
-            PlayFabManager.Instance.OnPlayerDataLoaded -= OnPlayerDataLoaded;
-            PlayFabManager.Instance.OnPlayerDataSaved -= OnPlayerDataSaved;
-        }
+        PlayerModel.OnDataUpdated -= RefreshUIFromBackend;
     }
     
-    private void RefreshPlayerData()
+    private void RefreshUIFromBackend()
     {
-        Debug.Log("[PlayerProfileUI] Manual RefreshPlayerData called");
+        Debug.Log("[PlayerProfileUI] RefreshUIFromBackend called");
         
-        if (PlayFabManager.Instance == null)
+        if (string.IsNullOrEmpty(PlayerModel.Id)) 
         {
-            Debug.LogWarning("[PlayerProfileUI] PlayFabManager not found!");
             UpdateUIWithDefaultData();
-            return;
+            return; 
         }
-        
-        if (!PlayFabManager.Instance.IsLoggedIn())
+
+        // Update name
+        if (!isEditMode && playerNameInputField != null)
         {
-            Debug.LogWarning("[PlayerProfileUI] Player not logged in!");
-            UpdateUIWithDefaultData();
-            return;
+            playerNameInputField.text = !string.IsNullOrEmpty(PlayerModel.Name) ? PlayerModel.Name : "Guest";
         }
-        
-        // Request fresh data from PlayFab
-        Debug.Log("[PlayerProfileUI] Requesting fresh data from PlayFab...");
-        PlayFabManager.Instance.LoadPlayerData();
-    }
-    
-    private void OnPlayerDataLoaded(PlayerData data)
-    {
-        Debug.Log("[PlayerProfileUI] OnPlayerDataLoaded called!");
-        if (data != null)
-        {
-            Debug.Log($"[PlayerProfileUI] Received data - Name: {data.playerName}, Cash: {data.cash}, Coins: {data.coins}");
-            Debug.Log($"[PlayerProfileUI] Formatted Cash: {CurrencyDisplayUI.FormatCash(data.cash)}, Formatted Coins: {CurrencyDisplayUI.FormatCoins(data.coins)}");
-        }
-        UpdateUI(data);
-    }
-    
-    private void OnPlayerDataSaved(bool success)
-    {
-        if (success)
-        {
-            Debug.Log("Player data saved successfully!");
-            // Optionally show a notification
-        }
-        else
-        {
-            Debug.LogWarning("Failed to save player data!");
-        }
-    }
-    
-    private void UpdateUI(PlayerData data)
-    {
-        Debug.Log("[PlayerProfileUI] UpdateUI called");
-        
-        if (data == null)
-        {
-            Debug.LogWarning("[PlayerProfileUI] Data is null, showing defaults");
-            UpdateUIWithDefaultData();
-            return;
-        }
-        
-        Debug.Log($"[PlayerProfileUI] Updating UI with: Name={data.playerName}, Email={data.email}, Cash={data.cash}, Coins={data.coins}");
-        Debug.Log($"[PlayerProfileUI] Formatting - Cash: {data.cash} -> {CurrencyDisplayUI.FormatCash(data.cash)}, Coins: {data.coins} -> {CurrencyDisplayUI.FormatCoins(data.coins)}");
-        
-        // Update name - Support InputField
-        // Only update if not in edit mode (to avoid interrupting user's typing)
-        if (!isEditMode)
-        {
-            string playerName = !string.IsNullOrEmpty(data.playerName) ? data.playerName : "Guest";
-            
-            if (playerNameInputField != null)
-            {
-                playerNameInputField.text = playerName;
-                Debug.Log($"[PlayerProfileUI] Set playerNameInputField to: {playerNameInputField.text}");
-            }
-            else
-            {
-                Debug.LogWarning("[PlayerProfileUI] playerNameInputField is null! Assign it in Inspector!");
-            }
-        }
-        else
-        {
-            Debug.Log("[PlayerProfileUI] Skipping name update - user is in edit mode");
-        }
-        
+
         // Update email
         if (emailText != null)
         {
-            emailText.text = !string.IsNullOrEmpty(data.email) ? data.email : "No email";
-            helpAndSupportEmailText.text = emailText.text;
+            emailText.text = !string.IsNullOrEmpty(PlayerModel.Email) ? PlayerModel.Email : "No email";
+            if (helpAndSupportEmailText != null)
+                helpAndSupportEmailText.text = emailText.text;
         }
-        else
-        {
-            Debug.LogWarning("[PlayerProfileUI] emailText is null!");
-        }
-        
 
-        // Update profile image
-        if (!string.IsNullOrEmpty(data.imageUrl))
+        // Update profile image from avatar string
+        if (!string.IsNullOrEmpty(PlayerModel.Avatar))
         {
-            Debug.Log($"[PlayerProfileUI] Profile image URL found: {data.imageUrl}");
-            
-            // Check if it's a base64 image (custom gallery pick)
-            if (data.imageUrl.StartsWith("data:image"))
+            // For now, we assume the avatar string is an index for the preset list
+            int avatarIndex = 0;
+            if (int.TryParse(PlayerModel.Avatar, out int index))
             {
-                try
-                {
-                    string base64Data = data.imageUrl.Substring(data.imageUrl.IndexOf(",") + 1);
-                    byte[] imageBytes = System.Convert.FromBase64String(base64Data);
-                    Texture2D texture = new Texture2D(2, 2);
-                    if (texture.LoadImage(imageBytes))
-                    {
-                        Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
-                        ShowCustomImage(sprite);
-                        Debug.Log("[PlayerProfileUI] ✓ Base64 profile image displayed in custom slot");
-                    }
-                    else
-                    {
-                        Debug.LogWarning("[PlayerProfileUI] Failed to load image from base64 data");
-                    }
-                }
-                catch (System.Exception e)
-                {
-                    Debug.LogWarning($"[PlayerProfileUI] Failed to load base64 image: {e.Message}");
-                }
+                avatarIndex = index;
             }
-            // URL image (Facebook/Google) — show in sprite slot, no zoom needed
-            else if (data.imageUrl.StartsWith("http://") || data.imageUrl.StartsWith("https://"))
-            {
-                Debug.Log($"[PlayerProfileUI] Loading profile image from URL: {data.imageUrl}");
-                StartCoroutine(LoadImageFromUrl(data.imageUrl));
-            }
-            else
-            {
-                Debug.LogWarning($"[PlayerProfileUI] Unknown image URL format: {data.imageUrl}");
-            }
+            LoadAvatarSpriteFromIndex(avatarIndex);
         }
-        else
-        {
-            // No image URL — show preset avatar sprite
-            Debug.Log("[PlayerProfileUI] No image URL in data, loading avatar sprite from selectedAvatarIndex");
-            LoadAvatarSpriteFromIndex(data.selectedAvatarIndex);
-        }
+
         AvatarDisplay.SetActive(true);
-        Debug.Log("[PlayerProfileUI] UI Update Complete!");
     }
-    
+
     private void UpdateUIWithDefaultData()
     {
         if (playerNameInputField != null)
@@ -334,14 +158,10 @@ public class PlayerProfileUI : MonoBehaviour
         
         if (emailText != null)
             emailText.text = "Not logged in";
-        helpAndSupportEmailText.text = emailText.text;
-        
-
+        if (helpAndSupportEmailText != null)
+            helpAndSupportEmailText.text = emailText.text;
     }
     
-    /// <summary>
-    /// Called when Edit/Save button is clicked
-    /// </summary>
     private void OnEditNameClicked()
     {
         if (playerNameInputField == null)
@@ -352,67 +172,45 @@ public class PlayerProfileUI : MonoBehaviour
         
         if (!isEditMode)
         {
-            // Enter Edit Mode
             EnterEditMode();
         }
         else
         {
-            // Save the name
             SavePlayerName();
         }
     }
     
-    /// <summary>
-    /// Enter edit mode - enable input field
-    /// </summary>
     private void EnterEditMode()
     {
         isEditMode = true;
+        originalPlayerName = PlayerModel.Name;
         
-        // Store original name
-        if (PlayFabManager.Instance != null && PlayFabManager.Instance.currentPlayerData != null)
-        {
-            originalPlayerName = PlayFabManager.Instance.currentPlayerData.playerName;
-        }
-        
-        // Enable input field for editing
         if (playerNameInputField != null)
         {
             playerNameInputField.interactable = true;
             playerNameInputField.readOnly = false;
-            playerNameInputField.Select(); // Focus the input field
-            playerNameInputField.ActivateInputField(); // Show keyboard on mobile
+            playerNameInputField.Select();
+            playerNameInputField.ActivateInputField();
         }
         
-        // Update button text
         UpdateEditButtonText();
-        
         Debug.Log("[PlayerProfileUI] Entered edit mode");
     }
     
-    /// <summary>
-    /// Exit edit mode - disable input field
-    /// </summary>
     private void ExitEditMode()
     {
         isEditMode = false;
         
-        // Disable input field (read-only mode)
         if (playerNameInputField != null)
         {
             playerNameInputField.interactable = false;
             playerNameInputField.readOnly = true;
         }
         
-        // Update button text
         UpdateEditButtonText();
-        
         Debug.Log("[PlayerProfileUI] Exited edit mode");
     }
     
-    /// <summary>
-    /// Update the edit button text based on current mode
-    /// </summary>
     private void UpdateEditButtonText()
     {
         if (editNameButton != null)
@@ -425,28 +223,16 @@ public class PlayerProfileUI : MonoBehaviour
         }
     }
     
-    /// <summary>
-    /// Save the updated player name to PlayFab
-    /// </summary>
     private void SavePlayerName()
     {
-        if (playerNameInputField == null)
-        {
-            Debug.LogError("[PlayerProfileUI] playerNameInputField is null!");
-            return;
-        }
+        if (playerNameInputField == null) return;
         
         string newName = playerNameInputField.text.Trim();
         
-        // Validate name
         if (string.IsNullOrEmpty(newName))
         {
             Debug.LogWarning("[PlayerProfileUI] Player name cannot be empty!");
-            // Restore original name
-            if (PlayFabManager.Instance != null && PlayFabManager.Instance.currentPlayerData != null)
-            {
-                playerNameInputField.text = PlayFabManager.Instance.currentPlayerData.playerName;
-            }
+            playerNameInputField.text = PlayerModel.Name;
             ExitEditMode();
             return;
         }
@@ -454,16 +240,11 @@ public class PlayerProfileUI : MonoBehaviour
         if (newName.Length < 3)
         {
             Debug.LogWarning("[PlayerProfileUI] Player name must be at least 3 characters!");
-            // Restore original name
-            if (PlayFabManager.Instance != null && PlayFabManager.Instance.currentPlayerData != null)
-            {
-                playerNameInputField.text = PlayFabManager.Instance.currentPlayerData.playerName;
-            }
+            playerNameInputField.text = PlayerModel.Name;
             ExitEditMode();
             return;
         }
         
-        // Check if name actually changed
         if (newName == originalPlayerName)
         {
             Debug.Log("[PlayerProfileUI] Name unchanged, exiting edit mode");
@@ -471,31 +252,35 @@ public class PlayerProfileUI : MonoBehaviour
             return;
         }
         
-        // Update player data
-        if (PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
+        Debug.Log($"[PlayerProfileUI] Saving new player name: '{newName}'");
+        
+        if (BackendAuthService.Instance != null)
         {
-            Debug.Log($"[PlayerProfileUI] Saving new player name: '{newName}'");
-            
-            // Update local data
-            PlayFabManager.Instance.currentPlayerData.playerName = newName;
-            
-            // Save to PlayFab
-            PlayFabManager.Instance.SavePlayerData(() =>
+            BackendAuthService.Instance.UpdateProfile(newName, (success, message) => 
             {
-                Debug.Log($"[PlayerProfileUI] ✓ Player name saved successfully to PlayFab: '{newName}'");
+                if (success)
+                {
+                    Debug.Log("[PlayerProfileUI] ✓ Name updated successfully on backend!");
+                }
+                else
+                {
+                    Debug.LogError($"[PlayerProfileUI] Failed to update name: {message}");
+                    // Revert UI to old name if failed
+                    if (playerNameInputField != null)
+                    {
+                        playerNameInputField.text = PlayerModel.Name;
+                    }
+                }
                 ExitEditMode();
             });
         }
         else
         {
-            Debug.LogError("[PlayerProfileUI] Cannot save - player not logged in!");
+            Debug.LogError("[PlayerProfileUI] BackendAuthService not found!");
             ExitEditMode();
         }
     }
     
-    /// <summary>
-    /// Set edit mode (enable/disable input field)
-    /// </summary>
     private void SetEditMode(bool editMode)
     {
         isEditMode = editMode;
@@ -511,81 +296,42 @@ public class PlayerProfileUI : MonoBehaviour
     
     private void OnLogoutClicked()
     {
-        // Clear offer panel timer immediately when logout happens
         OfferPanelManager offerPanelManager = FindObjectOfType<OfferPanelManager>();
         if (offerPanelManager != null)
         {
             offerPanelManager.OnUserLoggedOut();
-            Debug.Log("[PlayerProfileUI] Cleared offer panel timer on logout");
         }
         
-        if (PlayFabManager.Instance != null)
+        if (BackendAuthService.Instance != null)
         {
-            PlayFabManager.Instance.Logout();
-            Debug.Log("[PlayerProfileUI] Player logged out");
+            BackendAuthService.ClearJWT();
+            Debug.Log("[PlayerProfileUI] Player logged out (Backend JWT cleared)");
         }
         
-        // Show loading panel
-        if (splashScreenPanel != null)
-        {
-            splashScreenPanel.SetActive(true);
-            Debug.Log("[PlayerProfileUI] Showing loading panel");
-        }
+        if (splashScreenPanel != null) splashScreenPanel.SetActive(true);
+        if (settingsPanel != null) settingsPanel.SetActive(false);
+        if (mainMenuPanel != null) mainMenuPanel.SetActive(false);
         
-        // Hide settings panel
-        if (settingsPanel != null)
-        {
-            settingsPanel.SetActive(false);
-            Debug.Log("[PlayerProfileUI] Hiding settings panel");
-        }
-        
-        // Hide main menu panel
-        if (mainMenuPanel != null)
-        {
-            mainMenuPanel.SetActive(false);
-            Debug.Log("[PlayerProfileUI] Hiding main menu panel");
-        }
-        
-        // Wait a moment then show login screen
         StartCoroutine(ShowLoginScreenAfterDelay());
     }
     
-    /// <summary>
-    /// Coroutine to show login screen after a brief delay
-    /// </summary>
     private System.Collections.IEnumerator ShowLoginScreenAfterDelay()
     {
-        // Wait a brief moment to show loading panel
         yield return new WaitForSeconds(0.5f);
         
-        // Hide loading panel
-        if (splashScreenPanel != null)
-        {
-            splashScreenPanel.SetActive(false);
-            Debug.Log("[PlayerProfileUI] Hiding loading panel");
-        }
+        if (splashScreenPanel != null) splashScreenPanel.SetActive(false);
         
-        // Show login screen via AuthenticationManager
         AuthenticationManager authManager = FindObjectOfType<AuthenticationManager>();
         if (authManager != null)
         {
             authManager.ShowLoginRegisterPanel();
-            Debug.Log("[PlayerProfileUI] Showing login screen");
-        }
-        else
-        {
-            Debug.LogWarning("[PlayerProfileUI] AuthenticationManager not found! Cannot show login screen.");
         }
     }
     
-    /// <summary>
-    /// Show a custom gallery-picked image: activates profileImageCustom, hides profileImageSprite.
-    /// </summary>
     private void ShowCustomImage(Sprite sprite)
     {
         if (profileImageCustom != null)
         {
-            // Preferred path: dedicated custom slot
             profileImageCustom.sprite = sprite;
             profileImageCustom.rectTransform.localScale = Vector3.one * 2f;
             profileImageCustom.gameObject.SetActive(true);
@@ -595,85 +341,49 @@ public class PlayerProfileUI : MonoBehaviour
         }
         else if (profileImageSprite != null)
         {
-            // Fallback: no custom slot assigned — reuse sprite slot with 2x zoom
-            Debug.LogWarning("[PlayerProfileUI] profileImageCustom not assigned! Showing custom image in profileImageSprite with 2x zoom.");
             profileImageSprite.sprite = sprite;
             profileImageSprite.rectTransform.localScale = Vector3.one * 2f;
             profileImageSprite.gameObject.SetActive(true);
         }
-        else
-        {
-            Debug.LogError("[PlayerProfileUI] Neither profileImageCustom nor profileImageSprite is assigned!");
-        }
         
-        // Also update the legacy customImageDisplay slot if assigned
         if (customImageDisplay != null)
             customImageDisplay.sprite = sprite;
     }
     
-    /// <summary>
-    /// Show a preset avatar sprite: activates profileImageSprite, hides profileImageCustom.
-    /// </summary>
     private void ShowSpriteImage(Sprite sprite)
     {
         if (profileImageSprite != null)
         {
             profileImageSprite.sprite = sprite;
-            profileImageSprite.rectTransform.localScale = Vector3.one; // ensure no leftover zoom
+            profileImageSprite.rectTransform.localScale = Vector3.one;
             profileImageSprite.gameObject.SetActive(true);
         }
         if (profileImageCustom != null)
             profileImageCustom.gameObject.SetActive(false);
     }
     
-    /// <summary>
-    /// Called by AvatarSelector when a preset avatar button is tapped.
-    /// Shows the selected sprite in the sprite slot (hides the custom slot).
-    /// </summary>
     public void UpdateFromAvatarSelector(int avatarIndex, Sprite[] sprites)
     {
-        if (sprites == null || avatarIndex < 0 || avatarIndex >= sprites.Length)
-        {
-            Debug.LogWarning($"[PlayerProfileUI] UpdateFromAvatarSelector: invalid index {avatarIndex}");
-            return;
-        }
+        if (sprites == null || avatarIndex < 0 || avatarIndex >= sprites.Length) return;
         
         Sprite avatarSprite = sprites[avatarIndex];
         if (avatarSprite != null)
         {
             ShowSpriteImage(avatarSprite);
-            Debug.Log($"[PlayerProfileUI] ✓ Avatar updated to index {avatarIndex} via AvatarSelector");
-        }
-        else
-        {
-            Debug.LogWarning($"[PlayerProfileUI] Avatar sprite at index {avatarIndex} is null!");
         }
     }
     
-    /// <summary>
-    /// Called by AvatarSelector when a custom gallery image is picked from the main menu.
-    /// Shows the image in the custom slot (zoomed).
-    /// </summary>
     public void UpdateCustomImage(Sprite customSprite)
     {
         if (customSprite != null)
         {
             ShowCustomImage(customSprite);
-            Debug.Log("[PlayerProfileUI] ✓ Custom image updated via external call");
         }
     }
     
-    /// <summary>
-    /// Load image from URL (for Facebook profile pictures, etc.)
-    /// </summary>
     private System.Collections.IEnumerator LoadImageFromUrl(string url)
     {
-        if (string.IsNullOrEmpty(url))
-        {
-            yield break;
-        }
-        
-        Debug.Log($"[PlayerProfileUI] Starting to load profile image from URL: {url}");
+        if (string.IsNullOrEmpty(url)) yield break;
         
         using (UnityEngine.Networking.UnityWebRequest request = UnityEngine.Networking.UnityWebRequestTexture.GetTexture(url))
         {
@@ -684,39 +394,20 @@ public class PlayerProfileUI : MonoBehaviour
                 Texture2D texture = UnityEngine.Networking.DownloadHandlerTexture.GetContent(request);
                 if (texture != null)
                 {
-                    Sprite sprite = Sprite.Create(texture, 
-                        new Rect(0, 0, texture.width, texture.height), 
-                        new Vector2(0.5f, 0.5f));
-                    // URL images (Facebook/Google) — show in sprite slot, no zoom
+                    Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
                     ShowSpriteImage(sprite);
-                    Debug.Log($"[PlayerProfileUI] ✓ Profile image loaded from URL successfully! Size: {texture.width}x{texture.height}");
-                }
-                else
-                {
-                    Debug.LogWarning("[PlayerProfileUI] Failed to create texture from downloaded image");
                 }
             }
             else
             {
-                Debug.LogError($"[PlayerProfileUI] Failed to load profile image from URL: {url}. Error: {request.error}");
-                LoadAvatarSpriteFromIndex(PlayFabManager.Instance?.currentPlayerData?.selectedAvatarIndex ?? 0);
+                LoadAvatarSpriteFromIndex(0);
             }
         }
     }
     
-    /// <summary>
-    /// Load avatar sprite from selectedAvatarIndex — shows in the sprite slot (no zoom).
-    /// </summary>
     private void LoadAvatarSpriteFromIndex(int selectedIndex)
     {
-        // Validate index
-        if (selectedIndex < 0 || selectedIndex >= 8)
-        {
-            selectedIndex = 0;
-            Debug.LogWarning($"[PlayerProfileUI] Invalid avatar index, using default 0");
-        }
-        
-        Debug.Log($"[PlayerProfileUI] Loading avatar sprite from index: {selectedIndex}");
+        if (selectedIndex < 0 || selectedIndex >= 8) selectedIndex = 0;
         
         AvatarSelector selector = FindObjectOfType<AvatarSelector>();
         if (selector != null)
@@ -725,174 +416,36 @@ public class PlayerProfileUI : MonoBehaviour
             if (avatarSprite != null)
             {
                 ShowSpriteImage(avatarSprite);
-                Debug.Log($"[PlayerProfileUI] ✓ Avatar sprite displayed from AvatarSelector: Index {selectedIndex}");
-                return;
-            }
-            else
-            {
-                Debug.LogWarning($"[PlayerProfileUI] Avatar sprite at index {selectedIndex} is null in AvatarSelector!");
             }
         }
-        else
-        {
-            Debug.LogWarning("[PlayerProfileUI] AvatarSelector not found in scene!");
-        }
-        
-        Debug.LogWarning($"[PlayerProfileUI] Could not load avatar sprite at index {selectedIndex}.");
     }
-    
     
     #region Custom Image Selection
     
-    /// <summary>
-    /// Called when select custom image button is clicked
-    /// </summary>
     private void OnSelectCustomImageClicked()
     {
-        Debug.Log("[PlayerProfileUI] Select custom image button clicked");
         ImagePickerHelper.PickImage(OnImageSelected, maxImageSize);
     }
     
-    /// <summary>
-    /// Called when image is selected
-    /// </summary>
     private void OnImageSelected(Texture2D texture)
     {
-        if (texture == null)
-        {
-            Debug.LogError("[PlayerProfileUI] Selected texture is null!");
-            return;
-        }
+        if (texture == null) return;
         
         selectedCustomTexture = texture;
-        
         Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
-        
-        // Show in the custom image slot (zoomed) — hides the sprite slot
         ShowCustomImage(sprite);
-        Debug.Log("[PlayerProfileUI] Custom image displayed in custom slot");
         
-        // Update all MainMenuAvatarDisplay scripts
         MainMenuAvatarDisplay[] displays = FindObjectsOfType<MainMenuAvatarDisplay>(true);
         foreach (MainMenuAvatarDisplay display in displays)
         {
-            if (display != null)
-            {
-                display.UpdateCustomImage(sprite);
-            }
-        }
-        
-        // Convert to base64 and save to PlayFab
-        SaveCustomImageToPlayFab(texture);
-    }
-    
-    /// <summary>
-    /// Save custom image to PlayFab as base64 string
-    /// </summary>
-    private void SaveCustomImageToPlayFab(Texture2D texture)
-    {
-        if (PlayFabManager.Instance == null)
-        {
-            Debug.LogWarning("[PlayerProfileUI] PlayFabManager not found! Cannot save image.");
-            return;
-        }
-        
-        if (!PlayFabManager.Instance.IsLoggedIn())
-        {
-            Debug.LogWarning("[PlayerProfileUI] Player not logged in! Cannot save image.");
-            return;
-        }
-        
-        // Convert texture to PNG bytes
-        byte[] imageBytes = texture.EncodeToPNG();
-        
-        // Convert to base64 string
-        string base64Image = System.Convert.ToBase64String(imageBytes);
-        
-        Debug.Log($"[PlayerProfileUI] Saving custom image to PlayFab (size: {imageBytes.Length} bytes, base64 length: {base64Image.Length})");
-        
-        // Update player data
-        if (PlayFabManager.Instance.currentPlayerData != null)
-        {
-            // Store as base64 string in imageUrl field
-            PlayFabManager.Instance.currentPlayerData.imageUrl = "data:image/png;base64," + base64Image;
-            
-            // Save to PlayFab
-            PlayFabManager.Instance.SavePlayerData(() =>
-            {
-                Debug.Log("[PlayerProfileUI] ✓ Custom image saved successfully to PlayFab!");
-            });
-        }
-        else
-        {
-            Debug.LogError("[PlayerProfileUI] PlayerData is null! Cannot save image.");
+            if (display != null) display.UpdateCustomImage(sprite);
         }
     }
     
-    /// <summary>
-    /// Load custom image from PlayFab
-    /// </summary>
     private void LoadCustomImage()
     {
-        if (PlayFabManager.Instance == null || !PlayFabManager.Instance.IsLoggedIn())
-        {
-            return;
-        }
-        
-        if (PlayFabManager.Instance.currentPlayerData == null)
-        {
-            return;
-        }
-        
-        string imageUrl = PlayFabManager.Instance.currentPlayerData.imageUrl;
-        
-        if (string.IsNullOrEmpty(imageUrl))
-        {
-            return;
-        }
-        
-        // Check if it's a base64 image
-        if (imageUrl.StartsWith("data:image"))
-        {
-            try
-            {
-                // Extract base64 part
-                string base64Data = imageUrl.Substring(imageUrl.IndexOf(",") + 1);
-                byte[] imageBytes = System.Convert.FromBase64String(base64Data);
-                
-                // Create texture
-                Texture2D texture = new Texture2D(2, 2);
-                if (texture.LoadImage(imageBytes))
-                {
-                    // Store texture
-                    selectedCustomTexture = texture;
-                    
-                    // Convert to sprite
-                    Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
-                    
-                    // Show in the custom image slot (hides the sprite slot)
-                    ShowCustomImage(sprite);
-                    
-                    // Update all MainMenuAvatarDisplay scripts
-                    MainMenuAvatarDisplay[] displays = FindObjectsOfType<MainMenuAvatarDisplay>(true);
-                    foreach (MainMenuAvatarDisplay display in displays)
-                    {
-                        if (display != null)
-                        {
-                            display.UpdateCustomImage(sprite);
-                        }
-                    }
-                    
-                    Debug.Log("[PlayerProfileUI] ✓ Custom image loaded from PlayFab and displayed in all locations");
-                }
-            }
-            catch (System.Exception e)
-            {
-                Debug.LogError($"[PlayerProfileUI] Failed to load custom image: {e.Message}");
-            }
-        }
+        // Placeholder
     }
     
     #endregion
 }
-
