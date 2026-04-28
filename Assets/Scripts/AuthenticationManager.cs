@@ -108,7 +108,23 @@ public class AuthenticationManager : MonoBehaviour
         
         // IMMEDIATE CHECK: If user is already logged in, show splash screen immediately (no delay)
         // This prevents the login screen from flashing briefly
-        if (PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
+        if (BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
+        {
+            Debug.Log("[AuthenticationManager] Backend JWT found, hiding login screen and showing splash");
+            HideLoginScreen();
+            ShowSplashScreenPanel();
+            SetLoadingState(false);
+            UpdateStatusText("");
+            
+            if (PlayFabManager.Instance != null)
+            {
+                PlayFabManager.Instance.LoadPlayerData();
+            }
+            
+            OnAuthenticationSuccess?.Invoke();
+            return;
+        }
+        else if (PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
         {
             Debug.Log("[AuthenticationManager] User is already logged in, hiding login screen and showing splash");
             // Hide login screen first, then show splash screen (loading screen will hide when splash shows)
@@ -700,13 +716,33 @@ public class AuthenticationManager : MonoBehaviour
         SetLoadingState(true);
         UpdateStatusText("Logging in...");
         
-        if (PlayFabManager.Instance != null)
+        if (BackendAuthService.Instance != null)
+        {
+            BackendAuthService.Instance.Login(email, password, (success, message) => 
+            {
+                if (success)
+                {
+                    OnLoginComplete(true);
+                }
+                else
+                {
+                    UpdateStatusText(message);
+                    SetLoadingState(false);
+                    // Show internet panel if network error
+                    if (message.ToLower().Contains("network") || message.ToLower().Contains("connect"))
+                    {
+                        ShowInternetPanel(OnLoginClicked);
+                    }
+                }
+            });
+        }
+        else if (PlayFabManager.Instance != null) // Fallback if BackendAuthService isn't in scene yet
         {
             PlayFabManager.Instance.LoginWithEmail(email, password);
         }
         else
         {
-            UpdateStatusText("Error: PlayFabManager not found!");
+            UpdateStatusText("Error: Authentication Service not found!");
             SetLoadingState(false);
         }
     }
@@ -889,8 +925,34 @@ public class AuthenticationManager : MonoBehaviour
         UpdateStatusText("Creating account...");
         isRegistering = true; // Mark that we're registering
         
-        // Clear any existing PlayFab session to ensure clean registration
-        if (PlayFabManager.Instance != null)
+        if (BackendAuthService.Instance != null)
+        {
+            BackendAuthService.Instance.Register(name, email, password, (success, message) => 
+            {
+                if (success)
+                {
+                    OnRegisterComplete(true);
+                }
+                else
+                {
+                    UpdateStatusText(message);
+                    SetLoadingState(false);
+                    isRegistering = false;
+                    
+                    if (registerPasswordInput != null)
+                    {
+                        registerPasswordInput.text = "";
+                    }
+                    
+                    // Show internet panel if network error
+                    if (message.ToLower().Contains("network") || message.ToLower().Contains("connect"))
+                    {
+                        ShowInternetPanel(OnRegisterClicked);
+                    }
+                }
+            });
+        }
+        else if (PlayFabManager.Instance != null) // Fallback if BackendAuthService isn't in scene
         {
             // Clear any stored email credentials before registration to avoid conflicts
             PlayFabManager.Instance.ClearStoredEmailCredentials();
@@ -903,7 +965,7 @@ public class AuthenticationManager : MonoBehaviour
         }
         else
         {
-            UpdateStatusText("Error: PlayFabManager not found!");
+            UpdateStatusText("Error: Authentication Service not found!");
             SetLoadingState(false);
             isRegistering = false;
         }

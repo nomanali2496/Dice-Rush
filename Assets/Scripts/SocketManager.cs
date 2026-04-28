@@ -3,14 +3,18 @@ using System;
 using BestHTTP.SocketIO3;
 using BestHTTP.SocketIO3.Events;
 
-public class SimpleSocketClient : MonoBehaviour
+public class SocketManager : MonoBehaviour
 {
-    private SocketManager ioManager;
+    private BestHTTP.SocketIO3.SocketManager ioManager;
+
+    [Header("Server Settings")]
+    [Tooltip("The Ngrok URL or Backend URL")]
+    [SerializeField] private string serverUrl = "https://unclog-goggles-drastic.ngrok-free.dev";
 
     void Start()
     {
         // 1. Point to the Ngrok URL. Removed query params because they crash the backend's Node.js message parser.
-        Uri serverUri = new Uri("https://unclog-goggles-drastic.ngrok-free.dev");
+        Uri serverUri = new Uri(serverUrl);
 
         // 2. Set up options to match your backend's requirements
         SocketOptions options = new SocketOptions
@@ -19,7 +23,7 @@ public class SimpleSocketClient : MonoBehaviour
             AutoConnect = true,
             // Pass the token and inject the version strings to bypass the "Version Mismatch" block
             Auth = (manager, socket) => new { 
-                token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZWY1N2VmYzc5YTg0NDNlMDM1NjZiMiIsInNlc3Npb25JZCI6IjY2ZTgyNTgwLTdiMDctNDk1NS05OGU0LTFjNWM5YjNhNTdmZCIsImlhdCI6MTc3NzMwMDk4MywiZXhwIjoxNzc5ODkyOTgzfQ.ehH_awxUNtiy9B-ebmnXsCIG0QRc2JZn4k_BotIQx8M",
+                token = BackendAuthService.HasStoredJWT() ? BackendAuthService.GetStoredJWT() : "",
                 version = "1.0.1",
                 clientVersion = "1.0.1",
                 v = "1.0.1"
@@ -28,7 +32,7 @@ public class SimpleSocketClient : MonoBehaviour
 
         Debug.Log("Attempting Socket.IO Handshake...");
         
-        ioManager = new SocketManager(serverUri, options);
+        ioManager = new BestHTTP.SocketIO3.SocketManager(serverUri, options);
 
         // 3. Listen for Socket.IO specific events
         ioManager.Socket.On<ConnectResponse>(SocketIOEventTypes.Connect, OnSocketConnected);
