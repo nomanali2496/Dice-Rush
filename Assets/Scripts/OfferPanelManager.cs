@@ -110,6 +110,13 @@ public class OfferPanelManager : MonoBehaviour
         
         // Setup close buttons if provided
         // SetupCloseButtons();
+
+        // Check if already logged in (fallback in case we missed the AuthenticationManager event because this GameObject was disabled)
+        if (!hasLoggedIn && (BackendAuthService.HasStoredJWT() || (PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())))
+        {
+            Debug.Log("[OfferPanelManager] Already logged in at Start, triggering OnUserLoggedIn manually.");
+            OnUserLoggedIn();
+        }
     }
     
     private void OnDestroy()
@@ -134,29 +141,32 @@ public class OfferPanelManager : MonoBehaviour
         hasLoggedIn = true;
         
         // Get the current user's PlayFab ID for account-specific storage
+        string newUserId = "";
         if (PlayFabManager.Instance != null)
         {
-            currentUserId = PlayFabManager.Instance.GetPlayFabId();
-            if (string.IsNullOrEmpty(currentUserId))
-            {
-                Debug.LogWarning("[OfferPanelManager] PlayFabId is empty, using device-based storage (not account-specific)");
-            }
-            else
-            {
-                Debug.Log($"[OfferPanelManager] User logged in with PlayFabId: {currentUserId}");
-            }
+            newUserId = PlayFabManager.Instance.GetPlayFabId();
         }
-        else
+
+        // Only update the ID if we actually got a valid one (avoids losing ID during session transitions)
+        if (!string.IsNullOrEmpty(newUserId))
         {
-            Debug.LogWarning("[OfferPanelManager] PlayFabManager not found, using device-based storage (not account-specific)");
-            currentUserId = ""; // Fallback to device-based storage
+            currentUserId = newUserId;
         }
         
+        // CRITICAL FIX: If we have already determined that offers should be shown or skipped 
+        // THIS session, do not run this logic again. This prevents the "double-pop" bug 
+        // that happens when the account ID becomes available slightly after the initial start.
+        if (hasShownOfferThisSession)
+        {
+            Debug.Log($"[OfferPanelManager] User logged in, but session offers are already handled. hasShownOfferThisSession={hasShownOfferThisSession}");
+            return;
+        }
+
         // Check if offers have been shown today
         bool hasShownToday = HasShownOffersToday();
         
-        // Only reset flags if offers haven't been shown today
-        if (!hasShownToday)
+        // Only reset flags if offers haven't been shown today (or if showOnEveryLogin is true)
+        if (!hasShownToday || showOnEveryLogin)
         {
             // Generate 3 random panel indices
             GenerateRandomPanelIndices();
@@ -164,7 +174,7 @@ public class OfferPanelManager : MonoBehaviour
             isShowingPanelsSequence = false; // Reset sequence flag
             hasShownAfterMainMenuActivation = false; // Reset flag so offer panels can show again
             hasShownOfferThisSession = false; // Reset session flag
-            Debug.Log("[OfferPanelManager] User logged in, offers haven't been shown today. Will show 3 random offers when main menu activates.");
+            Debug.Log($"[OfferPanelManager] User logged in. hasShownToday={hasShownToday}, showOnEveryLogin={showOnEveryLogin}. Will show 3 random offers when main menu activates.");
         }
         else
         {
@@ -244,22 +254,44 @@ public class OfferPanelManager : MonoBehaviour
             {
                 // Check if we should show offer panel (must not have shown today AND not shown this session)
                 bool hasShownToday = HasShownOffersToday();
-                if (hasShownToday || hasShownOfferThisSession)
+                
+                // If showOnEveryLogin is true, we ignore hasShownToday
+                if ((hasShownToday && !showOnEveryLogin) || hasShownOfferThisSession)
                 {
                     yield return new WaitForSeconds(0.5f); // Check every 0.5 seconds
                     continue;
                 }
                 
+                // Wait for DailyRewardManager to load its status from the backend
+                if (dailyRewardManager != null && !dailyRewardManager.IsStatusLoaded)
+                {
+                    yield return new WaitForSeconds(0.1f);
+                    continue;
+                }
+
+                // If we know we cannot claim a reward, don't wait for the reward panel
+                if (dailyRewardManager != null && dailyRewardManager.IsStatusLoaded && !dailyRewardManager.CanClaim)
+                {
+                    hasDailyRewardPanelClosed = true;
+                }
+
                 // Trigger daily reward panel to show when main menu first activates
+                // (DailyRewardManager also does this independently if CanClaim is true)
                 if (!hasTriggeredDailyRewardPanel && dailyRewardManager != null)
                 {
                     hasTriggeredDailyRewardPanel = true;
-                    dailyRewardManager.ShowPanel();
-                    Debug.Log("[OfferPanelManager] Triggered daily reward panel to show");
+                    if (dailyRewardManager.CanClaim)
+                    {
+                        dailyRewardManager.ShowPanel();
+                        Debug.Log("[OfferPanelManager] Triggered daily reward panel to show");
+                    }
+                    else
+                    {
+                        Debug.Log("[OfferPanelManager] Daily reward cannot be claimed today, skipping show.");
+                    }
                 }
                 
                 // Wait for daily reward panel to close first
-                // Only rely on the event - don't check panel state directly to avoid timing issues
                 if (!hasDailyRewardPanelClosed)
                 {
                     // If DailyRewardManager exists, we MUST wait for the OnDailyRewardPanelClosed event

@@ -291,6 +291,71 @@ public class BackendAuthService : MonoBehaviour
     }
 
     /// <summary>
+    /// Updates the user's currency (cash and coins) on the backend.
+    /// </summary>
+    public void UpdateCurrency(int cashBalance, int coins, Action<bool, string> onComplete)
+    {
+        if (!HasStoredJWT())
+        {
+            onComplete?.Invoke(false, "No stored JWT found.");
+            return;
+        }
+        StartCoroutine(UpdateCurrencyCoroutine(cashBalance, coins, onComplete));
+    }
+
+    private IEnumerator UpdateCurrencyCoroutine(int cashBalance, int coins, Action<bool, string> onComplete)
+    {
+        string url = baseUrl.TrimEnd('/') + "/api/auth/profile"; 
+        string token = GetStoredJWT();
+        
+        string jsonData = $"{{\"cashBalance\":{cashBalance}, \"coins\":{coins}}}";
+
+        using (UnityWebRequest request = new UnityWebRequest(url, "PATCH"))
+        {
+            byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonData);
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+            request.SetRequestHeader("Authorization", "Bearer " + token);
+
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                try
+                {
+                    AuthResponse response = JsonUtility.FromJson<AuthResponse>(request.downloadHandler.text);
+                    if (response != null && response.user != null)
+                    {
+                        PlayerModel.UpdateData(
+                            response.user.id, response.user.name, response.user.email,
+                            response.user.wins, response.user.losses, response.user.balance,
+                            response.user.cashBalance, response.user.bonusBalance, response.user.winningBalance,
+                            response.user.coins, response.user.avatar, response.user.xp,
+                            response.user.level, response.user.role
+                        );
+                        onComplete?.Invoke(true, "Currency updated successfully!");
+                    }
+                    else
+                    {
+                        onComplete?.Invoke(false, "Failed to parse updated user data.");
+                    }
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError($"[BackendAuthService] UpdateCurrency Parse Error: {e.Message}");
+                    onComplete?.Invoke(false, "JSON parsing failed.");
+                }
+            }
+            else
+            {
+                Debug.LogError($"[BackendAuthService] UpdateCurrency Error: {request.error} | {request.downloadHandler.text}");
+                onComplete?.Invoke(false, request.downloadHandler.text);
+            }
+        }
+    }
+
+    /// <summary>
     /// Fetches the user's latest profile data from the backend using the stored JWT.
     /// </summary>
     public void GetProfile(Action<bool, string> onComplete)

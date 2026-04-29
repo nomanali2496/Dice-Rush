@@ -51,7 +51,10 @@ public class DailyRewardManager : MonoBehaviour
     [Header("Debug Info")]
     [SerializeField] private int currentDay = 1;
     [SerializeField] private bool canClaim = false;
+    public bool CanClaim => canClaim;
     [SerializeField] private bool hasTriggeredThisSession = false;
+    private bool isStatusLoaded = false;
+    public bool IsStatusLoaded => isStatusLoaded;
 
     private List<GameObject> activeAnimations = new List<GameObject>();
     private PlayerProfileUI playerProfileUI;
@@ -153,6 +156,7 @@ public class DailyRewardManager : MonoBehaviour
 
         BackendAuthService.Instance.GetDailyRewardStatus((success, response) => 
         {
+            isStatusLoaded = true;
             if (success && response != null && response.data != null)
             {
                 serverRewards = response.data.rewards;
@@ -225,6 +229,22 @@ public class DailyRewardManager : MonoBehaviour
                         response.user.level, response.user.role
                     );
                 }
+
+                // Explicitly push the updated currency values to the backend profile endpoint
+                int newTotalCoins = coinsBefore + coinsReward;
+                int newTotalCash = Mathf.RoundToInt(cashBefore + cashReward);
+
+                BackendAuthService.Instance.UpdateCurrency(newTotalCash, newTotalCoins, (profileSuccess, message) => 
+                {
+                    if (profileSuccess)
+                    {
+                        Debug.Log("[DailyRewardManager] Currency successfully synced to backend profile.");
+                    }
+                    else
+                    {
+                        Debug.LogError("[DailyRewardManager] Failed to sync currency to backend profile: " + message);
+                    }
+                });
 
                 StartCoroutine(PlayRewardAnimationAndFinish(coinsReward, cashReward, dayToAnimate, coinsBefore, cashBefore));
             }
