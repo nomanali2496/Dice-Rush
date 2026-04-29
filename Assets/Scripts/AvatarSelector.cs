@@ -3,8 +3,9 @@ using UnityEngine.UI;
 using TMPro;
 
 /// <summary>
-/// Handles avatar and background selection with 8 buttons
-/// Saves selection to PlayFab
+/// Handles avatar and background selection with 8 buttons.
+/// PURE FRONTEND: Handles button clicks and UI updates only.
+/// Calls BackendAuthService for all network/data operations.
 /// </summary>
 public class AvatarSelector : MonoBehaviour
 {
@@ -12,986 +13,170 @@ public class AvatarSelector : MonoBehaviour
     [SerializeField] private Button[] avatarButtons = new Button[8];
     
     [Header("Avatar Images (8 avatars)")]
-    [Tooltip("The avatar images/sprites for each selection")]
     [SerializeField] private Sprite[] avatarSprites = new Sprite[8];
     
     [Header("Background Images (8 backgrounds)")]
-    [Tooltip("The background images/sprites for each selection")]
     [SerializeField] private Sprite[] backgroundSprites = new Sprite[8];
     
     [Header("Display References")]
-    [Tooltip("Image component to display selected avatar")]
     [SerializeField] private Image selectedAvatarDisplay;
-    
-    [Tooltip("Image component to display selected background")]
     [SerializeField] private Image selectedBackgroundDisplay;
-    
-    [Header("Main Menu Display")]
-    [Tooltip("Image component in main menu to show selected avatar")]
     [SerializeField] private Image mainMenuAvatarDisplay;
     
     [Header("Button Highlight")]
-    [Tooltip("Optional: Visual indicator for selected button")]
     [SerializeField] private GameObject[] buttonHighlights = new GameObject[8];
     
     [Header("Custom Image Upload")]
-    [Tooltip("Button to select custom image from device")]
     [SerializeField] private Button selectCustomImageButton;
-    
-    [Tooltip("Image component to display selected custom image")]
     [SerializeField] private Image customImageDisplay;
     
     [Header("Watch Video UI")]
-    [Tooltip("Text component for watch video button")]
     [SerializeField] private TMP_Text watchVideoText;
     
-    [Tooltip("Chips sprite name or index to show as postfix in text (TMP Sprite Asset)")]
-    [SerializeField] private string chipsSpriteName = "chips";
-    
-    [Tooltip("Vertical offset for chips sprite (positive = up, negative = down)")]
-    [SerializeField] private float chipsSpriteVerticalOffset = 0.15f;
-    
-    [Tooltip("Scale for chips sprite (1.0 = normal size, 0.8 = smaller, 1.2 = larger)")]
-    [SerializeField] private float chipsSpriteScale = 0.8f;
-    
     [Header("Settings")]
-    [SerializeField] private bool saveToPlayFabOnSelect = true;
     [SerializeField] private bool showSelectionFeedback = true;
-    [SerializeField] private int maxImageSize = 512; // Max width/height for uploaded images
+    [SerializeField] private int maxImageSize = 512; 
     
     private int currentSelectedIndex = 0;
-    private Texture2D selectedCustomTexture;
-    
+
     private void Start()
     {
         // Setup button listeners
         for (int i = 0; i < avatarButtons.Length; i++)
         {
-            int index = i; // Capture index for closure
+            int index = i; 
             if (avatarButtons[i] != null)
-            {
                 avatarButtons[i].onClick.AddListener(() => OnAvatarButtonClicked(index));
-            }
         }
         
-        // Setup custom image button
         if (selectCustomImageButton != null)
-        {
             selectCustomImageButton.onClick.AddListener(OnSelectCustomImageClicked);
-        }
         
-        // Subscribe to PlayFab events
-        if (PlayFabManager.Instance != null)
-        {
-            PlayFabManager.Instance.OnPlayerDataLoaded += OnPlayerDataLoaded;
-        }
+        // Purely event-driven UI refresh
+        PlayerModel.OnDataUpdated += RefreshUI;
         
-        // Load saved selection from PlayFab
-        LoadSavedSelection();
-        
-        // Load custom image if exists
-        LoadCustomImage();
-        
-        // Setup watch video text with chips icon
+        RefreshUI();
         SetupWatchVideoText();
     }
     
-    private void OnDestroy()
-    {
-        // Unsubscribe from events
-        if (PlayFabManager.Instance != null)
-        {
-            PlayFabManager.Instance.OnPlayerDataLoaded -= OnPlayerDataLoaded;
-        }
-    }
-    
-    private void OnPlayerDataLoaded(PlayerData data)
-    {
-        // Refresh selection when PlayFab data is loaded
-        // But don't update main menu (it's already showing correct avatar)
-        if (data != null)
-        {
-            Debug.Log("[AvatarSelector] PlayFab data loaded, refreshing selection (without updating main menu)...");
-            LoadSavedSelectionWithoutMainMenuUpdate();
-        }
-    }
-    
+    private void OnDestroy() => PlayerModel.OnDataUpdated -= RefreshUI;
+    private void OnEnable() => RefreshUI();
+
     /// <summary>
-    /// Called when an avatar button is clicked
+    /// Update UI based on PlayerModel state.
+    /// No mixing: Networking is handled by asking BackendAuthService to fetch the image.
     /// </summary>
-    private void OnAvatarButtonClicked(int index)
+    public void RefreshUI()
     {
-        if (index < 0 || index >= avatarButtons.Length)
+        string avatarData = PlayerModel.Avatar;
+
+        // 1. Determine if we are showing a preset or a custom URL
+        if (int.TryParse(avatarData, out int index))
         {
-            Debug.LogWarning($"[AvatarSelector] Invalid button index: {index}");
-            return;
+            currentSelectedIndex = index;
+            ShowPreset(index);
         }
-        
-        Debug.Log($"[AvatarSelector] Avatar button {index} clicked");
-        
-        // IMPORTANT: Clear custom image when selecting a sprite avatar
-        // This ensures the sprite is shown instead of the custom image
-        if (PlayFabManager.Instance != null && PlayFabManager.Instance.currentPlayerData != null)
+        else if (!string.IsNullOrEmpty(avatarData) && avatarData.StartsWith("http"))
         {
-            // Clear the custom image URL so sprite selection takes priority
-            PlayFabManager.Instance.currentPlayerData.imageUrl = "";
-            selectedCustomTexture = null; // Clear the texture reference
-            Debug.Log("[AvatarSelector] Cleared custom image - sprite selection will be used");
-        }
-        
-        // Update selection
-        currentSelectedIndex = index;
-        
-        // Update UI
-        UpdateSelectionDisplay();
-        
-        // Save to PlayFab
-        if (saveToPlayFabOnSelect)
-        {
-            SaveSelectionToPlayFab();
-        }
-        
-        // Show feedback
-        if (showSelectionFeedback)
-        {
-            ShowSelectionFeedback(index);
-        }
-    }
-    
-    /// <summary>
-    /// Update the display to show selected avatar and background
-    /// </summary>
-    private void UpdateSelectionDisplay()
-    {
-        // Update avatar display
-        if (selectedAvatarDisplay != null && currentSelectedIndex < avatarSprites.Length)
-        {
-            if (avatarSprites[currentSelectedIndex] != null)
-            {
-                selectedAvatarDisplay.sprite = avatarSprites[currentSelectedIndex];
-                Debug.Log($"[AvatarSelector] Updated avatar display to index {currentSelectedIndex}");
-            }
-        }
-        
-        // Update background display
-        if (selectedBackgroundDisplay != null && currentSelectedIndex < backgroundSprites.Length)
-        {
-            if (backgroundSprites[currentSelectedIndex] != null)
-            {
-                selectedBackgroundDisplay.sprite = backgroundSprites[currentSelectedIndex];
-                Debug.Log($"[AvatarSelector] Updated background display to index {currentSelectedIndex}");
-            }
-        }
-        
-        // Update main menu avatar display
-        UpdateMainMenuAvatar();
-        
-        // Update button highlights
-        UpdateButtonHighlights();
-    }
-    
-    /// <summary>
-    /// Update the main menu avatar display
-    /// </summary>
-    private void UpdateMainMenuAvatar()
-    {
-        // Update direct reference (if assigned)
-        UpdateMainMenuAvatarDisplay();
-        
-        // Update all MainMenuAvatarDisplay scripts in scene (immediate update)
-        UpdateMainMenuAvatarDisplayViaScript();
-    }
-    
-    /// <summary>
-    /// Public method to update main menu avatar display (via direct reference)
-    /// </summary>
-    public void UpdateMainMenuAvatarDisplay()
-    {
-        if (mainMenuAvatarDisplay == null)
-        {
-            return; // No main menu display assigned
-        }
-        
-        // Use current selected index (immediate update)
-        int avatarIndex = currentSelectedIndex;
-        
-        // Validate index
-        if (avatarIndex < 0 || avatarIndex >= avatarSprites.Length)
-        {
-            avatarIndex = 0; // Default to first avatar
-        }
-        
-        // Update the display immediately
-        if (avatarSprites[avatarIndex] != null)
-        {
-            mainMenuAvatarDisplay.sprite = avatarSprites[avatarIndex];
-            Debug.Log($"[AvatarSelector] Updated main menu avatar display (direct) to index {avatarIndex}");
+            currentSelectedIndex = -1;
+            // ASYNC LOAD: We ask the backend for the image. UI doesn't know about UnityWebRequest.
+            BackendAuthService.Instance.GetImage(avatarData, (texture) => {
+                if (texture != null)
+                {
+                    Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+                    ApplyCustomSprite(sprite);
+                }
+            });
         }
         else
         {
-            Debug.LogWarning($"[AvatarSelector] Avatar sprite at index {avatarIndex} is null!");
+            ShowPreset(0);
         }
+        
+        UpdateButtonHighlights();
     }
-    
-    /// <summary>
-    /// Update main menu avatar via MainMenuAvatarDisplay script
-    /// This finds and updates all MainMenuAvatarDisplay scripts in the scene immediately
-    /// </summary>
-    private void UpdateMainMenuAvatarDisplayViaScript()
+
+    private void ShowPreset(int index)
     {
-        // Update all MainMenuAvatarDisplay scripts in the scene (even if inactive)
+        if (index < 0 || index >= avatarSprites.Length) index = 0;
+        Sprite sprite = avatarSprites[index];
+
+        if (selectedAvatarDisplay != null) selectedAvatarDisplay.sprite = sprite;
+        if (mainMenuAvatarDisplay != null) mainMenuAvatarDisplay.sprite = sprite;
+
+        UpdateExternalDisplays(sprite, index);
+    }
+
+    private void ApplyCustomSprite(Sprite sprite)
+    {
+        if (selectedAvatarDisplay != null) selectedAvatarDisplay.sprite = sprite;
+        if (mainMenuAvatarDisplay != null) mainMenuAvatarDisplay.sprite = sprite;
+        if (customImageDisplay != null) customImageDisplay.sprite = sprite;
+
+        UpdateExternalDisplays(sprite, -1);
+    }
+
+    private void UpdateExternalDisplays(Sprite sprite, int index)
+    {
+        // Broadcast update to other UI scripts
         MainMenuAvatarDisplay[] displays = FindObjectsOfType<MainMenuAvatarDisplay>(true);
-        if (displays != null && displays.Length > 0)
+        foreach (var display in displays)
         {
-            foreach (MainMenuAvatarDisplay display in displays)
-            {
-                if (display != null)
-                {
-                    display.UpdateFromAvatarSelector(currentSelectedIndex, avatarSprites);
-                    Debug.Log($"[AvatarSelector] Updated MainMenuAvatarDisplay with index {currentSelectedIndex}");
-                }
-            }
+            if (index >= 0) display.UpdateFromAvatarSelector(index, avatarSprites);
+            else display.UpdateCustomImage(sprite);
         }
-        
-        // Also update PlayerProfileUI if it's open — it has its own image slots
+
         PlayerProfileUI[] profileUIs = FindObjectsOfType<PlayerProfileUI>(true);
-        if (profileUIs != null && profileUIs.Length > 0)
+        foreach (var ui in profileUIs)
         {
-            foreach (PlayerProfileUI profileUI in profileUIs)
-            {
-                if (profileUI != null)
-                {
-                    profileUI.UpdateFromAvatarSelector(currentSelectedIndex, avatarSprites);
-                }
-            }
-        }
-        
-        // Also update LeaderboardManager if it's in the scene
-        LeaderboardManager[] leaderboardManagers = FindObjectsOfType<LeaderboardManager>(true);
-        if (leaderboardManagers != null && leaderboardManagers.Length > 0)
-        {
-            foreach (LeaderboardManager lbm in leaderboardManagers)
-            {
-                if (lbm != null)
-                {
-                    lbm.SyncAvatarFromMainMenu();
-                    Debug.Log("[AvatarSelector] Updated LeaderboardManager avatar/name sync");
-                }
-            }
+            if (index >= 0) ui.UpdateFromAvatarSelector(index, avatarSprites);
+            else ui.UpdateCustomImage(sprite);
         }
     }
-    
-    /// <summary>
-    /// Update button highlight indicators
-    /// </summary>
+
+    private void OnAvatarButtonClicked(int index)
+    {
+        if (index < 0 || index >= avatarButtons.Length) return;
+        
+        // PURE UI: Just trigger the service call
+        BackendAuthService.Instance.UpdateProfile(PlayerModel.Name, index.ToString());
+
+        if (showSelectionFeedback) ShowSelectionFeedback(index);
+    }
+
+    private void OnSelectCustomImageClicked()
+    {
+        ImagePickerHelper.PickImage(OnImageSelected, maxImageSize);
+    }
+
+    private void OnImageSelected(Texture2D texture)
+    {
+        if (texture == null) return;
+        
+        // PURE UI: Prepare data and trigger service call
+        byte[] imageBytes = texture.EncodeToJPG(75);
+        BackendAuthService.Instance.UploadAvatar(imageBytes, (success, result) => {
+            if (!success) Debug.LogError("[AvatarSelector] Upload failed: " + result);
+        });
+    }
+
     private void UpdateButtonHighlights()
     {
         for (int i = 0; i < buttonHighlights.Length; i++)
         {
             if (buttonHighlights[i] != null)
-            {
-                // Show highlight only on selected button
                 buttonHighlights[i].SetActive(i == currentSelectedIndex);
-            }
         }
     }
-    
-    /// <summary>
-    /// Show visual feedback when selection is made
-    /// </summary>
-    private void ShowSelectionFeedback(int index)
-    {
-        // Optional: Add animation, sound, or visual effect here
-        Debug.Log($"[AvatarSelector] Selection feedback for index {index}");
-        
-        // Example: Scale animation on button
-        if (avatarButtons[index] != null)
-        {
-            // You can add animation here if needed
-            // LeanTween.scale(avatarButtons[index].gameObject, Vector3.one * 1.1f, 0.2f)
-            //     .setEase(LeanTweenType.easeOutBack);
-        }
-    }
-    
-    /// <summary>
-    /// Save selection to PlayFab
-    /// </summary>
-    private void SaveSelectionToPlayFab()
-    {
-        if (PlayFabManager.Instance == null)
-        {
-            Debug.LogWarning("[AvatarSelector] PlayFabManager not found! Cannot save selection.");
-            return;
-        }
-        
-        if (!PlayFabManager.Instance.IsLoggedIn())
-        {
-            Debug.LogWarning("[AvatarSelector] Player not logged in! Cannot save selection.");
-            return;
-        }
-        
-        Debug.Log($"[AvatarSelector] Saving selection to PlayFab - Avatar: {currentSelectedIndex}, Background: {currentSelectedIndex}");
-        
-        // Update player data
-        if (PlayFabManager.Instance.currentPlayerData != null)
-        {
-            PlayFabManager.Instance.currentPlayerData.selectedAvatarIndex = currentSelectedIndex;
-            PlayFabManager.Instance.currentPlayerData.selectedBackgroundIndex = currentSelectedIndex;
-            
-            // IMPORTANT: Clear custom image URL when saving sprite selection
-            // This ensures sprite takes priority over custom image
-            if (!string.IsNullOrEmpty(PlayFabManager.Instance.currentPlayerData.imageUrl) && 
-                PlayFabManager.Instance.currentPlayerData.imageUrl.StartsWith("data:image"))
-            {
-                PlayFabManager.Instance.currentPlayerData.imageUrl = "";
-                selectedCustomTexture = null;
-                Debug.Log("[AvatarSelector] Cleared custom image URL - sprite selection will be used");
-            }
-            
-            // Save to PlayFab
-            PlayFabManager.Instance.SavePlayerData(() =>
-            {
-                Debug.Log($"[AvatarSelector] ✓ Selection saved successfully to PlayFab!");
-            });
-        }
-        else
-        {
-            Debug.LogError("[AvatarSelector] PlayerData is null! Cannot save selection.");
-        }
-    }
-    
-    /// <summary>
-    /// Load saved selection from PlayFab
-    /// </summary>
-    private void LoadSavedSelection()
-    {
-        if (PlayFabManager.Instance == null)
-        {
-            Debug.LogWarning("[AvatarSelector] PlayFabManager not found! Cannot load selection.");
-            return;
-        }
-        
-        if (!PlayFabManager.Instance.IsLoggedIn())
-        {
-            Debug.LogWarning("[AvatarSelector] Player not logged in! Cannot load selection.");
-            return;
-        }
-        
-        if (PlayFabManager.Instance.currentPlayerData != null)
-        {
-            // Check if there's a URL image (Facebook/Google profile picture) - if yes, don't update main menu
-            string imageUrl = PlayFabManager.Instance.currentPlayerData.imageUrl;
-            bool hasUrlImage = !string.IsNullOrEmpty(imageUrl) && 
-                              (imageUrl.StartsWith("http://") || imageUrl.StartsWith("https://"));
-            
-            // Use avatar index, or default to 0
-            int savedIndex = PlayFabManager.Instance.currentPlayerData.selectedAvatarIndex;
-            
-            // Validate index
-            if (savedIndex >= 0 && savedIndex < avatarButtons.Length)
-            {
-                currentSelectedIndex = savedIndex;
-                Debug.Log($"[AvatarSelector] Loaded saved selection: Index {savedIndex}");
-            }
-            else
-            {
-                currentSelectedIndex = 0;
-                Debug.Log($"[AvatarSelector] Invalid saved index ({savedIndex}), using default (0)");
-            }
-            
-            // If there's a URL image, only update local displays (don't update main menu)
-            // This prevents overwriting the Facebook/Google profile picture in main menu
-            if (hasUrlImage)
-            {
-                Debug.Log("[AvatarSelector] URL image detected - updating local displays only (not main menu)");
-                UpdateLocalDisplaysOnly();
-            }
-            else
-            {
-                // No URL image, update all displays including main menu
-                UpdateSelectionDisplay();
-            }
-        }
-        else
-        {
-            Debug.LogWarning("[AvatarSelector] PlayerData is null! Using default selection.");
-            currentSelectedIndex = 0;
-            UpdateSelectionDisplay();
-        }
-    }
-    
-    /// <summary>
-    /// Manually refresh selection from PlayFab
-    /// Call this after PlayFab data is loaded
-    /// </summary>
-    public void RefreshSelection()
-    {
-        LoadSavedSelection();
-    }
-    
-    /// <summary>
-    /// Get currently selected avatar index
-    /// </summary>
-    public int GetSelectedAvatarIndex()
-    {
-        return currentSelectedIndex;
-    }
-    
-    /// <summary>
-    /// Get currently selected background index
-    /// </summary>
-    public int GetSelectedBackgroundIndex()
-    {
-        return currentSelectedIndex;
-    }
-    
-    /// <summary>
-    /// Get selected avatar sprite
-    /// </summary>
-    public Sprite GetSelectedAvatarSprite()
-    {
-        if (currentSelectedIndex >= 0 && currentSelectedIndex < avatarSprites.Length)
-        {
-            return avatarSprites[currentSelectedIndex];
-        }
-        return null;
-    }
-    
-    /// <summary>
-    /// Get selected background sprite
-    /// </summary>
-    public Sprite GetSelectedBackgroundSprite()
-    {
-        if (currentSelectedIndex >= 0 && currentSelectedIndex < backgroundSprites.Length)
-        {
-            return backgroundSprites[currentSelectedIndex];
-        }
-        return null;
-    }
-    
-    /// <summary>
-    /// Get avatar sprites array (for MainMenuAvatarDisplay to use)
-    /// </summary>
-    public Sprite[] GetAvatarSprites()
-    {
-        return avatarSprites;
-    }
-    
-    /// <summary>
-    /// Get avatar sprite by index (for MainMenuAvatarDisplay to use)
-    /// </summary>
-    public Sprite GetAvatarSpriteByIndex(int index)
-    {
-        if (index >= 0 && index < avatarSprites.Length)
-        {
-            return avatarSprites[index];
-        }
-        return null;
-    }
-    
-    /// <summary>
-    /// Programmatically select an avatar (without saving)
-    /// </summary>
-    public void SelectAvatar(int index, bool saveToPlayFab = false)
-    {
-        if (index < 0 || index >= avatarButtons.Length)
-        {
-            Debug.LogWarning($"[AvatarSelector] Invalid index: {index}");
-            return;
-        }
-        
-        currentSelectedIndex = index;
-        UpdateSelectionDisplay();
-        
-        if (saveToPlayFab)
-        {
-            SaveSelectionToPlayFab();
-        }
-    }
-    
-    private void OnEnable()
-    {
-        // Refresh selection when this panel becomes active
-        // BUT don't update main menu display (it's already showing correct avatar)
-        if (PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
-        {
-            // First load custom image if it exists
-            LoadCustomImage();
-            // Then load sprite selection
-            Invoke(nameof(LoadSavedSelectionWithoutMainMenuUpdate), 0.1f);
-        }
-    }
-    
-    /// <summary>
-    /// Load saved selection without updating main menu (to avoid resetting it)
-    /// </summary>
-    private void LoadSavedSelectionWithoutMainMenuUpdate()
-    {
-        if (PlayFabManager.Instance == null)
-        {
-            Debug.LogWarning("[AvatarSelector] PlayFabManager not found! Cannot load selection.");
-            return;
-        }
-        
-        if (!PlayFabManager.Instance.IsLoggedIn())
-        {
-            Debug.LogWarning("[AvatarSelector] Player not logged in! Cannot load selection.");
-            return;
-        }
-        
-        if (PlayFabManager.Instance.currentPlayerData != null)
-        {
-            // Use avatar index, or default to 0
-            int savedIndex = PlayFabManager.Instance.currentPlayerData.selectedAvatarIndex;
-            
-            // Validate index
-            if (savedIndex >= 0 && savedIndex < avatarButtons.Length)
-            {
-                currentSelectedIndex = savedIndex;
-                Debug.Log($"[AvatarSelector] Loaded saved selection: Index {savedIndex} (without updating main menu)");
-            }
-            else
-            {
-                currentSelectedIndex = 0;
-                Debug.Log($"[AvatarSelector] Invalid saved index ({savedIndex}), using default (0)");
-            }
-            
-            // Update local displays only (NOT main menu)
-            UpdateLocalDisplaysOnly();
-        }
-        else
-        {
-            Debug.LogWarning("[AvatarSelector] PlayerData is null! Using default selection.");
-            currentSelectedIndex = 0;
-            UpdateLocalDisplaysOnly();
-        }
-    }
-    
-    /// <summary>
-    /// Update only local displays (avatar selector panel), NOT main menu
-    /// </summary>
-    private void UpdateLocalDisplaysOnly()
-    {
-        // FIRST: Check if there's a custom uploaded image or URL image - if yes, show that instead of sprite
-        if (PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
-        {
-            if (PlayFabManager.Instance.currentPlayerData != null)
-            {
-                string imageUrl = PlayFabManager.Instance.currentPlayerData.imageUrl;
-                
-                if (!string.IsNullOrEmpty(imageUrl))
-                {
-                    // Check if it's a custom base64 image
-                    if (imageUrl.StartsWith("data:image"))
-                    {
-                        // Custom image exists - make sure it's loaded and displayed
-                        if (selectedCustomTexture != null)
-                        {
-                            // Convert to sprite if needed
-                            Sprite customSprite = Sprite.Create(selectedCustomTexture, 
-                                new Rect(0, 0, selectedCustomTexture.width, selectedCustomTexture.height), 
-                                new Vector2(0.5f, 0.5f));
-                            
-                            // Update selected avatar display with custom image
-                            if (selectedAvatarDisplay != null)
-                            {
-                                selectedAvatarDisplay.sprite = customSprite;
-                                Debug.Log("[AvatarSelector] Showing custom image in selectedAvatarDisplay");
-                            }
-                            
-                            // Update background display (in selector panel)
-                            if (selectedBackgroundDisplay != null && currentSelectedIndex < backgroundSprites.Length)
-                            {
-                                if (backgroundSprites[currentSelectedIndex] != null)
-                                {
-                                    selectedBackgroundDisplay.sprite = backgroundSprites[currentSelectedIndex];
-                                }
-                            }
-                            
-                            // Update button highlights
-                            UpdateButtonHighlights();
-                            
-                            // DO NOT update main menu here - it's already showing the correct avatar!
-                            return; // Exit early - custom image is displayed
-                        }
-                        else
-                        {
-                            // Custom image exists in PlayFab but texture not loaded - load it
-                            LoadCustomImage();
-                            return; // LoadCustomImage will update the display
-                        }
-                    }
-                    // Check if it's a URL (Facebook profile picture, Google profile picture, etc.)
-                    else if (imageUrl.StartsWith("http://") || imageUrl.StartsWith("https://"))
-                    {
-                        // URL image exists - load it via coroutine
-                        Debug.Log($"[AvatarSelector] Loading profile image from URL in selectedAvatarDisplay: {imageUrl}");
-                        StartCoroutine(LoadImageFromUrlForSelector(imageUrl));
-                        return; // Exit early - URL image is being loaded
-                    }
-                }
-            }
-        }
-        
-        // No custom image or URL image, show sprite selection
-        // Update avatar display (in selector panel)
-        if (selectedAvatarDisplay != null && currentSelectedIndex < avatarSprites.Length)
-        {
-            if (avatarSprites[currentSelectedIndex] != null)
-            {
-                selectedAvatarDisplay.sprite = avatarSprites[currentSelectedIndex];
-                Debug.Log($"[AvatarSelector] Showing sprite at index {currentSelectedIndex} in selectedAvatarDisplay");
-            }
-        }
-        
-        // Update background display (in selector panel)
-        if (selectedBackgroundDisplay != null && currentSelectedIndex < backgroundSprites.Length)
-        {
-            if (backgroundSprites[currentSelectedIndex] != null)
-            {
-                selectedBackgroundDisplay.sprite = backgroundSprites[currentSelectedIndex];
-            }
-        }
-        
-        // Update button highlights
-        UpdateButtonHighlights();
-        
-        // DO NOT update main menu here - it's already showing the correct avatar!
-    }
-    
-    /// <summary>
-    /// Load image from URL for the avatar selector display (Facebook/Google profile pictures, etc.)
-    /// </summary>
-    private System.Collections.IEnumerator LoadImageFromUrlForSelector(string url)
-    {
-        if (selectedAvatarDisplay == null || string.IsNullOrEmpty(url))
-        {
-            yield break;
-        }
-        
-        Debug.Log($"[AvatarSelector] Starting to load image from URL for selectedAvatarDisplay: {url}");
-        
-        using (UnityEngine.Networking.UnityWebRequest request = UnityEngine.Networking.UnityWebRequestTexture.GetTexture(url))
-        {
-            yield return request.SendWebRequest();
-            
-            if (request.result == UnityEngine.Networking.UnityWebRequest.Result.Success)
-            {
-                Texture2D texture = UnityEngine.Networking.DownloadHandlerTexture.GetContent(request);
-                if (texture != null && selectedAvatarDisplay != null)
-                {
-                    Sprite sprite = Sprite.Create(texture, 
-                        new Rect(0, 0, texture.width, texture.height), 
-                        new Vector2(0.5f, 0.5f));
-                    selectedAvatarDisplay.sprite = sprite;
-                    Debug.Log($"[AvatarSelector] ✓ Profile image loaded from URL successfully in selectedAvatarDisplay! Size: {texture.width}x{texture.height}");
-                    
-                    // Update background display (in selector panel)
-                    if (selectedBackgroundDisplay != null && currentSelectedIndex < backgroundSprites.Length)
-                    {
-                        if (backgroundSprites[currentSelectedIndex] != null)
-                        {
-                            selectedBackgroundDisplay.sprite = backgroundSprites[currentSelectedIndex];
-                        }
-                    }
-                    
-                    // Update button highlights
-                    UpdateButtonHighlights();
-                }
-                else
-                {
-                    Debug.LogWarning("[AvatarSelector] Failed to create texture from downloaded image");
-                    // Fall back to sprite selection
-                    ShowSpriteSelection();
-                }
-            }
-            else
-            {
-                Debug.LogError($"[AvatarSelector] Failed to load profile image from URL: {url}. Error: {request.error}");
-                // Fall back to sprite selection
-                ShowSpriteSelection();
-            }
-        }
-    }
-    
-    /// <summary>
-    /// Show sprite selection (fallback when URL image fails)
-    /// </summary>
-    private void ShowSpriteSelection()
-    {
-        // Update avatar display (in selector panel)
-        if (selectedAvatarDisplay != null && currentSelectedIndex < avatarSprites.Length)
-        {
-            if (avatarSprites[currentSelectedIndex] != null)
-            {
-                selectedAvatarDisplay.sprite = avatarSprites[currentSelectedIndex];
-                Debug.Log($"[AvatarSelector] Showing sprite at index {currentSelectedIndex} in selectedAvatarDisplay (fallback)");
-            }
-        }
-        
-        // Update background display (in selector panel)
-        if (selectedBackgroundDisplay != null && currentSelectedIndex < backgroundSprites.Length)
-        {
-            if (backgroundSprites[currentSelectedIndex] != null)
-            {
-                selectedBackgroundDisplay.sprite = backgroundSprites[currentSelectedIndex];
-            }
-        }
-        
-        // Update button highlights
-        UpdateButtonHighlights();
-    }
-    
-    /// <summary>
-    /// Update main menu avatar display
-    /// Call this from main menu script to refresh the display
-    /// </summary>
-    public void RefreshMainMenuAvatar()
-    {
-        UpdateMainMenuAvatar();
-    }
-    
-    /// <summary>
-    /// Setup watch video text with chips icon as postfix
-    /// </summary>
+
+    private void ShowSelectionFeedback(int index) { }
+
     private void SetupWatchVideoText()
     {
         if (watchVideoText != null)
-        {
-            // Set the text to "Watch Video and Earn 10" with inline chips sprite
-            // The sprite includes:
-            // - voffset: vertical positioning (lifts sprite up/down)
-            // - size: scaling (makes sprite smaller to reduce width and prevent wrapping)
-            string textWithSprite = $"Watch Video and Earn 10   <voffset={chipsSpriteVerticalOffset}em><size={chipsSpriteScale * 100}%><sprite name=\"{chipsSpriteName}\"></size><voffset=0em>";
-            
-            watchVideoText.text = textWithSprite;
-            Debug.Log($"[AvatarSelector] Watch video text set with inline chips sprite (offset: {chipsSpriteVerticalOffset}em, scale: {chipsSpriteScale}): '{textWithSprite}'");
-        }
+            watchVideoText.text = "Watch Video and Earn 10 <sprite name=\"chips\">";
     }
-    
-    #region Custom Image Selection
-    
-    /// <summary>
-    /// Called when select custom image button is clicked
-    /// </summary>
-    private void OnSelectCustomImageClicked()
-    {
-        Debug.Log("[AvatarSelector] Select custom image button clicked");
-        ImagePickerHelper.PickImage(OnImageSelected, maxImageSize);
-    }
-    
-    /// <summary>
-    /// Called when image is selected
-    /// </summary>
-    private void OnImageSelected(Texture2D texture)
-    {
-        if (texture == null)
-        {
-            Debug.LogError("[AvatarSelector] Selected texture is null!");
-            return;
-        }
-        
-        selectedCustomTexture = texture;
-        
-        Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
-        
-        // Update local display
-        if (customImageDisplay != null)
-        {
-            customImageDisplay.sprite = sprite;
-            Debug.Log("[AvatarSelector] Custom image displayed");
-        }
-        
-        // Update main menu direct reference
-        if (mainMenuAvatarDisplay != null)
-        {
-            mainMenuAvatarDisplay.sprite = sprite;
-            Debug.Log("[AvatarSelector] Custom image updated in main menu");
-        }
-        
-        // Update all MainMenuAvatarDisplay scripts
-        MainMenuAvatarDisplay[] displays = FindObjectsOfType<MainMenuAvatarDisplay>(true);
-        foreach (MainMenuAvatarDisplay display in displays)
-        {
-            if (display != null)
-                display.UpdateCustomImage(sprite);
-        }
-        
-        // Update PlayerProfileUI if open — so profile panel also shows the new custom image
-        PlayerProfileUI[] profileUIs = FindObjectsOfType<PlayerProfileUI>(true);
-        foreach (PlayerProfileUI profileUI in profileUIs)
-        {
-            if (profileUI != null)
-            {
-                profileUI.UpdateCustomImage(sprite);
-                Debug.Log("[AvatarSelector] Custom image pushed to PlayerProfileUI");
-            }
-        }
 
-        // Update LeaderboardManager if open
-        LeaderboardManager[] leaderboardManagers = FindObjectsOfType<LeaderboardManager>(true);
-        foreach (LeaderboardManager lbm in leaderboardManagers)
-        {
-            if (lbm != null)
-            {
-                lbm.SyncAvatarFromMainMenu();
-                Debug.Log("[AvatarSelector] Custom gallery image pushed to LeaderboardManager");
-            }
-        }
-        
-        // Convert to base64 and save to PlayFab
-        SaveCustomImageToPlayFab(texture);
-    }
-    
-    
-    /// <summary>
-    /// Save custom image to PlayFab as base64 string
-    /// IMPORTANT: We must resize and compress the image BEFORE saving to PlayFab because
-    /// PlayFab has a character limit on UserData fields. Full-res images will be silently dropped.
-    /// </summary>
-    private void SaveCustomImageToPlayFab(Texture2D texture)
-    {
-        if (PlayFabManager.Instance == null)
-        {
-            Debug.LogWarning("[AvatarSelector] PlayFabManager not found! Cannot save image.");
-            return;
-        }
-        
-        if (!PlayFabManager.Instance.IsLoggedIn())
-        {
-            Debug.LogWarning("[AvatarSelector] Player not logged in! Cannot save image.");
-            return;
-        }
-
-        // Resize to 128x128 for PlayFab storage compatibility (keep base64 string short)
-        int size = 128;
-        RenderTexture rt = RenderTexture.GetTemporary(size, size);
-        Graphics.Blit(texture, rt);
-        RenderTexture previous = RenderTexture.active;
-        RenderTexture.active = rt;
-        
-        Texture2D smallTexture = new Texture2D(size, size);
-        smallTexture.ReadPixels(new Rect(0, 0, size, size), 0, 0);
-        smallTexture.Apply();
-        
-        RenderTexture.active = previous;
-        RenderTexture.ReleaseTemporary(rt);
-
-        // Encode to low-quality JPG to stay under character limits (around 5-8KB base64)
-        byte[] imageBytes = smallTexture.EncodeToJPG(50);
-        Destroy(smallTexture);
-        
-        // Convert to base64 string
-        string base64Image = System.Convert.ToBase64String(imageBytes);
-        
-        Debug.Log($"[AvatarSelector] Saving compressed custom image to PlayFab (size: {imageBytes.Length} bytes, base64 length: {base64Image.Length})");
-        
-        // Update player data
-        if (PlayFabManager.Instance.currentPlayerData != null)
-        {
-            // Store as base64 string in imageUrl field
-            PlayFabManager.Instance.currentPlayerData.imageUrl = "data:image/jpg;base64," + base64Image;
-            
-            // Save to PlayFab
-            PlayFabManager.Instance.SavePlayerData(() =>
-            {
-                Debug.Log("[AvatarSelector] ✓ Compressed custom image saved successfully to PlayFab!");
-            });
-        }
-    }
-    
-    /// <summary>
-    /// Load custom image from PlayFab
-    /// </summary>
-    private void LoadCustomImage()
-    {
-        if (PlayFabManager.Instance == null || !PlayFabManager.Instance.IsLoggedIn())
-        {
-            return;
-        }
-        
-        if (PlayFabManager.Instance.currentPlayerData == null)
-        {
-            return;
-        }
-        
-        string imageUrl = PlayFabManager.Instance.currentPlayerData.imageUrl;
-        
-        if (string.IsNullOrEmpty(imageUrl))
-        {
-            return;
-        }
-        
-        // Check if it's a base64 image
-        if (imageUrl.StartsWith("data:image"))
-        {
-            try
-            {
-                // Extract base64 part
-                string base64Data = imageUrl.Substring(imageUrl.IndexOf(",") + 1);
-                byte[] imageBytes = System.Convert.FromBase64String(base64Data);
-                
-                // Create texture
-                Texture2D texture = new Texture2D(2, 2);
-                if (texture.LoadImage(imageBytes))
-                {
-                    // Store texture
-                    selectedCustomTexture = texture;
-                    
-                    // Convert to sprite
-                    Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
-                    
-                    // Update custom image display (if separate display exists)
-                    if (customImageDisplay != null)
-                    {
-                        customImageDisplay.sprite = sprite;
-                        Debug.Log("[AvatarSelector] Custom image loaded in customImageDisplay");
-                    }
-                    
-                    // IMPORTANT: Update selected avatar display (the main display in selector panel)
-                    if (selectedAvatarDisplay != null)
-                    {
-                        selectedAvatarDisplay.sprite = sprite;
-                        Debug.Log("[AvatarSelector] ✓ Custom image loaded in selectedAvatarDisplay");
-                    }
-                    
-                    // Update main menu display
-                    if (mainMenuAvatarDisplay != null)
-                    {
-                        mainMenuAvatarDisplay.sprite = sprite;
-                        Debug.Log("[AvatarSelector] Custom image loaded in mainMenuAvatarDisplay");
-                    }
-                    
-                    // Update all MainMenuAvatarDisplay scripts
-                    MainMenuAvatarDisplay[] displays = FindObjectsOfType<MainMenuAvatarDisplay>(true);
-                    foreach (MainMenuAvatarDisplay display in displays)
-                    {
-                        if (display != null)
-                        {
-                            display.UpdateCustomImage(sprite);
-                        }
-                    }
-
-                    // Update LeaderboardManager if open
-                    LeaderboardManager[] leaderboardManagers = FindObjectsOfType<LeaderboardManager>(true);
-                    foreach (LeaderboardManager lbm in leaderboardManagers)
-                    {
-                        if (lbm != null)
-                        {
-                            lbm.SyncAvatarFromMainMenu();
-                        }
-                    }
-                    
-                    Debug.Log("[AvatarSelector] ✓ Custom image loaded from PlayFab and displayed in all locations");
-                }
-            }
-            catch (System.Exception e)
-            {
-                Debug.LogError($"[AvatarSelector] Failed to load custom image: {e.Message}");
-            }
-        }
-    }
-    
-    #endregion
+    // Public helper for other scripts
+    public Sprite GetAvatarSpriteByIndex(int index) => (index >= 0 && index < avatarSprites.Length) ? avatarSprites[index] : null;
 }
-

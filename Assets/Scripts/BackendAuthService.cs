@@ -47,6 +47,7 @@ public class BackendAuthService : MonoBehaviour
     /// </summary>
     public void Register(string username, string email, string password, Action<bool, string> onComplete)
     {
+        Debug.Log($"<color=#00ffff>[BackendAuthService] POST Request: /api/auth/register | Username: {username}, Email: {email}</color>");
         StartCoroutine(RegisterCoroutine(username, email, password, onComplete));
     }
 
@@ -66,6 +67,7 @@ public class BackendAuthService : MonoBehaviour
 
             if (request.result == UnityWebRequest.Result.Success)
             {
+                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Register Result: {request.downloadHandler.text}</color>");
                 try
                 {
                     AuthResponse response = JsonUtility.FromJson<AuthResponse>(request.downloadHandler.text);
@@ -91,7 +93,7 @@ public class BackendAuthService : MonoBehaviour
             }
             else
             {
-                Debug.LogError($"[BackendAuthService] Register Error: {request.error} | {request.downloadHandler.text}");
+                Debug.LogError($"<color=#ff0000>[BackendAuthService] Register Error: {request.error} | {request.downloadHandler.text}</color>");
                 onComplete?.Invoke(false, request.downloadHandler.text);
             }
         }
@@ -102,6 +104,7 @@ public class BackendAuthService : MonoBehaviour
     /// </summary>
     public void Login(string email, string password, Action<bool, string> onComplete)
     {
+        Debug.Log($"<color=#00ffff>[BackendAuthService] POST Request: /api/auth/login | Email: {email}</color>");
         StartCoroutine(LoginCoroutine(email, password, onComplete));
     }
 
@@ -121,6 +124,7 @@ public class BackendAuthService : MonoBehaviour
 
             if (request.result == UnityWebRequest.Result.Success)
             {
+                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Login Result: {request.downloadHandler.text}</color>");
                 try
                 {
                     AuthResponse response = JsonUtility.FromJson<AuthResponse>(request.downloadHandler.text);
@@ -149,13 +153,13 @@ public class BackendAuthService : MonoBehaviour
                 }
                 catch (Exception e)
                 {
-                    Debug.LogError($"[BackendAuthService] JSON Parse Error: {e.Message}");
+                    Debug.LogError($"<color=#ff0000>[BackendAuthService] JSON Parse Error: {e.Message}</color>");
                     onComplete?.Invoke(false, "Failed to parse server response.");
                 }
             }
             else
             {
-                Debug.LogError($"[BackendAuthService] Login Error: {request.error} | {request.downloadHandler.text}");
+                Debug.LogError($"<color=#ff0000>[BackendAuthService] Login Error: {request.error} | {request.downloadHandler.text}</color>");
                 onComplete?.Invoke(false, request.downloadHandler.text);
             }
         }
@@ -166,6 +170,7 @@ public class BackendAuthService : MonoBehaviour
     /// </summary>
     public void GuestLogin(string deviceId, Action<bool, string> onComplete)
     {
+        Debug.Log($"<color=#00ffff>[BackendAuthService] POST Request: /api/auth/guest-login | Device: {deviceId}</color>");
         StartCoroutine(GuestLoginCoroutine(deviceId, onComplete));
     }
 
@@ -185,6 +190,7 @@ public class BackendAuthService : MonoBehaviour
 
             if (request.result == UnityWebRequest.Result.Success)
             {
+                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Guest Login Result: {request.downloadHandler.text}</color>");
                 try
                 {
                     AuthResponse response = JsonUtility.FromJson<AuthResponse>(request.downloadHandler.text);
@@ -213,37 +219,46 @@ public class BackendAuthService : MonoBehaviour
                 }
                 catch (Exception e)
                 {
-                    Debug.LogError($"[BackendAuthService] JSON Parse Error: {e.Message}");
+                    Debug.LogError($"<color=#ff0000>[BackendAuthService] JSON Parse Error: {e.Message}</color>");
                     onComplete?.Invoke(false, "Failed to parse server response.");
                 }
             }
             else
             {
-                Debug.LogError($"[BackendAuthService] Guest Login Error: {request.error} | {request.downloadHandler.text}");
+                Debug.LogError($"<color=#ff0000>[BackendAuthService] Guest Login Error: {request.error} | {request.downloadHandler.text}</color>");
                 onComplete?.Invoke(false, request.downloadHandler.text);
             }
         }
     }
 
     /// <summary>
-    /// Updates the user's profile (e.g., name) on the backend.
+    /// Updates the user's profile (e.g., name or preset avatar) on the backend.
     /// </summary>
-    public void UpdateProfile(string newName, Action<bool, string> onComplete)
+    public void UpdateProfile(string newName, string avatar = null, Action<bool, string> onComplete = null)
     {
         if (!HasStoredJWT())
         {
             onComplete?.Invoke(false, "No stored JWT found.");
             return;
         }
-        StartCoroutine(UpdateProfileCoroutine(newName, onComplete));
+        Debug.Log($"<color=#00ffff>[BackendAuthService] PATCH Request: /api/auth/profile | Name: {newName}, Avatar: {avatar}</color>");
+        StartCoroutine(UpdateProfileCoroutine(newName, avatar, onComplete));
     }
 
-    private IEnumerator UpdateProfileCoroutine(string newName, Action<bool, string> onComplete)
+    private IEnumerator UpdateProfileCoroutine(string newName, string avatar, Action<bool, string> onComplete)
     {
         string url = baseUrl.TrimEnd('/') + "/api/auth/profile"; 
         string token = GetStoredJWT();
         
-        string jsonData = $"{{\"name\":\"{newName}\"}}";
+        string jsonData;
+        if (string.IsNullOrEmpty(avatar))
+        {
+            jsonData = $"{{\"name\":\"{newName}\"}}";
+        }
+        else
+        {
+            jsonData = $"{{\"name\":\"{newName}\", \"avatar\":\"{avatar}\"}}";
+        }
 
         using (UnityWebRequest request = new UnityWebRequest(url, "PATCH"))
         {
@@ -257,6 +272,7 @@ public class BackendAuthService : MonoBehaviour
 
             if (request.result == UnityWebRequest.Result.Success)
             {
+                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Profile Updated: {request.downloadHandler.text}</color>");
                 try
                 {
                     AuthResponse response = JsonUtility.FromJson<AuthResponse>(request.downloadHandler.text);
@@ -278,13 +294,77 @@ public class BackendAuthService : MonoBehaviour
                 }
                 catch (Exception e)
                 {
-                    Debug.LogError($"[BackendAuthService] UpdateProfile Parse Error: {e.Message}");
+                    Debug.LogError($"<color=#ff0000>[BackendAuthService] UpdateProfile Parse Error: {e.Message}</color>");
                     onComplete?.Invoke(false, "JSON parsing failed.");
                 }
             }
             else
             {
-                Debug.LogError($"[BackendAuthService] UpdateProfile Error: {request.error} | {request.downloadHandler.text}");
+                Debug.LogError($"<color=#ff0000>[BackendAuthService] UpdateProfile Error: {request.error} | {request.downloadHandler.text}</color>");
+                onComplete?.Invoke(false, request.downloadHandler.text);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Uploads a custom avatar image to the backend.
+    /// </summary>
+    public void UploadAvatar(byte[] imageBytes, Action<bool, string> onComplete)
+    {
+        if (!HasStoredJWT())
+        {
+            onComplete?.Invoke(false, "No stored JWT found.");
+            return;
+        }
+        Debug.Log("<color=#00ffff>[BackendAuthService] POST Request: /api/auth/upload-avatar (Multipart Image Upload)</color>");
+        StartCoroutine(UploadAvatarCoroutine(imageBytes, onComplete));
+    }
+
+    private IEnumerator UploadAvatarCoroutine(byte[] imageBytes, Action<bool, string> onComplete)
+    {
+        string url = baseUrl.TrimEnd('/') + "/api/auth/upload-avatar";
+        string token = GetStoredJWT();
+
+        List<IMultipartFormSection> formData = new List<IMultipartFormSection>();
+        // Key "avatar" matches the expected field in most backend image upload configurations
+        formData.Add(new MultipartFormFileSection("avatar", imageBytes, "avatar.jpg", "image/jpeg"));
+
+        using (UnityWebRequest request = UnityWebRequest.Post(url, formData))
+        {
+            request.SetRequestHeader("Authorization", "Bearer " + token);
+
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                try
+                {
+                    AuthResponse response = JsonUtility.FromJson<AuthResponse>(request.downloadHandler.text);
+                    if (response != null && response.user != null)
+                    {
+                        PlayerModel.UpdateData(
+                            response.user.id, response.user.name, response.user.email,
+                            response.user.wins, response.user.losses, response.user.balance,
+                            response.user.cashBalance, response.user.bonusBalance, response.user.winningBalance,
+                            response.user.coins, response.user.avatar, response.user.xp,
+                            response.user.level, response.user.role
+                        );
+                        onComplete?.Invoke(true, response.avatar);
+                    }
+                    else
+                    {
+                        onComplete?.Invoke(false, "Failed to parse upload response.");
+                    }
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError($"[BackendAuthService] UploadAvatar Parse Error: {e.Message}");
+                    onComplete?.Invoke(false, "JSON parsing failed.");
+                }
+            }
+            else
+            {
+                Debug.LogError($"[BackendAuthService] UploadAvatar Error: {request.error} | {request.downloadHandler.text}");
                 onComplete?.Invoke(false, request.downloadHandler.text);
             }
         }
@@ -488,6 +568,36 @@ public class BackendAuthService : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Downloads an image from a URL. Centralizes networking logic away from UI scripts.
+    /// </summary>
+    public void GetImage(string url, Action<Texture2D> onComplete)
+    {
+        if (string.IsNullOrEmpty(url)) return;
+        Debug.Log($"<color=#00ffff>[BackendAuthService] GET Request (Image): {url}</color>");
+        StartCoroutine(GetImageCoroutine(url, onComplete));
+    }
+
+    private IEnumerator GetImageCoroutine(string url, Action<Texture2D> onComplete)
+    {
+        using (UnityWebRequest request = UnityWebRequestTexture.GetTexture(url))
+        {
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Image Downloaded: {url}</color>");
+                Texture2D texture = DownloadHandlerTexture.GetContent(request);
+                onComplete?.Invoke(texture);
+            }
+            else
+            {
+                Debug.LogError($"<color=#ff0000>[BackendAuthService] ERROR: Image Download Failed: {url} | {request.error}</color>");
+                onComplete?.Invoke(null);
+            }
+        }
+    }
+
     [Serializable]
     public class DailyRewardStatusResponse
     {
@@ -520,6 +630,7 @@ public class BackendAuthService : MonoBehaviour
         public bool success;
         public string token;
         public string message;
+        public string avatar; // Explicitly added for upload response
         public BackendUser user;
     }
 

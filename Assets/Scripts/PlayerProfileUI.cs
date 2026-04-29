@@ -3,449 +3,198 @@ using UnityEngine.UI;
 using TMPro;
 
 /// <summary>
-/// Displays and manages player profile information
+/// Displays and manages player profile information.
+/// PURE FRONTEND: Handles button clicks and UI text/image assignments only.
+/// All API calls and image downloads are delegated to BackendAuthService.
 /// </summary>
 public class PlayerProfileUI : MonoBehaviour
 {
     [Header("UI References")]
-    [SerializeField] private TMP_InputField playerNameInputField; // InputField for editing player name
+    [SerializeField] private TMP_InputField playerNameInputField;
     [SerializeField] private TextMeshProUGUI emailText;
     [SerializeField] private TextMeshProUGUI helpAndSupportEmailText;
-    [Tooltip("Image shown when a PRESET avatar is selected (from the avatar buttons)")]
     [SerializeField] private Image profileImageSprite;
-    
-    [Tooltip("Image shown when a CUSTOM photo is picked from the gallery — size this larger than the mask in the Inspector for the zoom effect")]
     [SerializeField] private Image profileImageCustom;
     
     [Header("Buttons")]
-    [SerializeField] private Button editNameButton; // Button to edit/save player name
+    [SerializeField] private Button editNameButton;
     [SerializeField] private Button logoutButton;
-    
-    [Header("Custom Image Upload")]
-    [Tooltip("Button to select custom image from device")]
     [SerializeField] private Button selectCustomImageButton;
-    
-    [Tooltip("Image component to display selected custom image (same as profileImageCustom, optional separate slot)")]
-    [SerializeField] private Image customImageDisplay;
     
     [Header("Edit Mode Settings")]
     [SerializeField] private string editButtonText = "Edit";
     [SerializeField] private string saveButtonText = "Save";
-    [SerializeField] private int maxImageSize = 512; // Max width/height for uploaded images
-    
+    [SerializeField] private int maxImageSize = 512;
     [SerializeField] private GameObject AvatarDisplay;
     
-    [Header("Panel References for Logout")]
-    [SerializeField] private GameObject settingsPanel; // Settings panel to hide on logout
-    [SerializeField] private GameObject mainMenuPanel; // Main menu panel to hide on logout
-    [SerializeField] private GameObject splashScreenPanel; // Loading panel to show on logout
+    [Header("Logout Panels")]
+    [SerializeField] private GameObject settingsPanel;
+    [SerializeField] private GameObject mainMenuPanel;
+    [SerializeField] private GameObject splashScreenPanel;
     
     private bool isEditMode = false;
-    private string originalPlayerName = ""; // Store original name when entering edit mode
-    private Texture2D selectedCustomTexture; // Store selected custom texture
-    
+    private string originalPlayerName = "";
+
     private void Start()
     {
-        // Hide the custom image slot by default — sprite slot is shown until a custom image is loaded
-        if (profileImageCustom != null)
-            profileImageCustom.gameObject.SetActive(false);
-        if (profileImageSprite != null)
-            profileImageSprite.gameObject.SetActive(true);
+        if (editNameButton != null) editNameButton.onClick.AddListener(OnEditNameClicked);
+        if (logoutButton != null) logoutButton.onClick.AddListener(OnLogoutClicked);
+        if (selectCustomImageButton != null) selectCustomImageButton.onClick.AddListener(OnSelectCustomImageClicked);
         
-        // Add button listeners
-        if (editNameButton != null)
-            editNameButton.onClick.AddListener(OnEditNameClicked);
-        
-        if (logoutButton != null)
-            logoutButton.onClick.AddListener(OnLogoutClicked);
-        
-        // Setup custom image button
-        if (selectCustomImageButton != null)
-        {
-            selectCustomImageButton.onClick.AddListener(OnSelectCustomImageClicked);
-        }
-        
-        // Setup input field - start in read-only mode
         SetEditMode(false);
-        
-        // Subscribe to Backend PlayerModel events
-        PlayerModel.OnDataUpdated -= RefreshUIFromBackend;
-        PlayerModel.OnDataUpdated += RefreshUIFromBackend;
-        Debug.Log("[PlayerProfileUI] Subscribed to PlayerModel events in Start()");
-        
-        // Load custom image if exists
-        LoadCustomImage();
+        PlayerModel.OnDataUpdated += RefreshUI;
+        RefreshUI();
     }
     
-    private void OnEnable()
+    private void OnEnable() => RefreshUI();
+    private void OnDestroy() => PlayerModel.OnDataUpdated -= RefreshUI;
+
+    /// <summary>
+    /// Update Profile UI based on PlayerModel state.
+    /// Purely delegates networking to BackendAuthService.
+    /// </summary>
+    public void RefreshUI()
     {
-        Debug.Log("[PlayerProfileUI] ===== PANEL ENABLED =====");
-        
-        // Load custom image if exists
-        LoadCustomImage();
-        
-        StartCoroutine(InitializeUIAfterDelay());
-    }
-    
-    private System.Collections.IEnumerator InitializeUIAfterDelay()
-    {
-        // Wait one frame to ensure everything is set up
-        yield return null;
-        
-        Debug.Log("[PlayerProfileUI] Initializing UI after delay...");
-        
-        // Ensure Backend PlayerModel is subscribed
-        PlayerModel.OnDataUpdated -= RefreshUIFromBackend;
-        PlayerModel.OnDataUpdated += RefreshUIFromBackend;
-        
-        // Refresh immediately if data exists
-        RefreshUIFromBackend();
-    }
-    
-    private void OnDisable()
-    {
-        PlayerModel.OnDataUpdated -= RefreshUIFromBackend;
-    }
-    
-    private void OnDestroy()
-    {
-        PlayerModel.OnDataUpdated -= RefreshUIFromBackend;
-    }
-    
-    private void RefreshUIFromBackend()
-    {
-        Debug.Log("[PlayerProfileUI] RefreshUIFromBackend called");
-        
         if (string.IsNullOrEmpty(PlayerModel.Id)) 
         {
             UpdateUIWithDefaultData();
             return; 
         }
 
-        // Update name
         if (!isEditMode && playerNameInputField != null)
-        {
             playerNameInputField.text = !string.IsNullOrEmpty(PlayerModel.Name) ? PlayerModel.Name : "Guest";
-        }
 
-        // Update email
         if (emailText != null)
         {
             emailText.text = !string.IsNullOrEmpty(PlayerModel.Email) ? PlayerModel.Email : "No email";
-            if (helpAndSupportEmailText != null)
-                helpAndSupportEmailText.text = emailText.text;
+            if (helpAndSupportEmailText != null) helpAndSupportEmailText.text = emailText.text;
         }
 
-        // Update profile image from avatar string
-        if (!string.IsNullOrEmpty(PlayerModel.Avatar))
-        {
-            // For now, we assume the avatar string is an index for the preset list
-            int avatarIndex = 0;
-            if (int.TryParse(PlayerModel.Avatar, out int index))
-            {
-                avatarIndex = index;
-            }
-            LoadAvatarSpriteFromIndex(avatarIndex);
-        }
-
-        AvatarDisplay.SetActive(true);
+        UpdateAvatarDisplay(PlayerModel.Avatar);
+        if (AvatarDisplay != null) AvatarDisplay.SetActive(true);
     }
 
-    private void UpdateUIWithDefaultData()
+    private void UpdateAvatarDisplay(string avatarData)
     {
-        if (playerNameInputField != null)
-            playerNameInputField.text = "Guest";
-        
-        if (emailText != null)
-            emailText.text = "Not logged in";
-        if (helpAndSupportEmailText != null)
-            helpAndSupportEmailText.text = emailText.text;
-    }
-    
-    private void OnEditNameClicked()
-    {
-        if (playerNameInputField == null)
+        if (string.IsNullOrEmpty(avatarData))
         {
-            Debug.LogError("[PlayerProfileUI] playerNameInputField is null! Cannot edit name.");
-            return;
+            ShowPreset(0);
         }
-        
-        if (!isEditMode)
+        else if (avatarData.StartsWith("http"))
         {
-            EnterEditMode();
-        }
-        else
-        {
-            SavePlayerName();
-        }
-    }
-    
-    private void EnterEditMode()
-    {
-        isEditMode = true;
-        originalPlayerName = PlayerModel.Name;
-        
-        if (playerNameInputField != null)
-        {
-            playerNameInputField.interactable = true;
-            playerNameInputField.readOnly = false;
-            playerNameInputField.Select();
-            playerNameInputField.ActivateInputField();
-        }
-        
-        UpdateEditButtonText();
-        Debug.Log("[PlayerProfileUI] Entered edit mode");
-    }
-    
-    private void ExitEditMode()
-    {
-        isEditMode = false;
-        
-        if (playerNameInputField != null)
-        {
-            playerNameInputField.interactable = false;
-            playerNameInputField.readOnly = true;
-        }
-        
-        UpdateEditButtonText();
-        Debug.Log("[PlayerProfileUI] Exited edit mode");
-    }
-    
-    private void UpdateEditButtonText()
-    {
-        if (editNameButton != null)
-        {
-            TextMeshProUGUI buttonText = editNameButton.GetComponentInChildren<TextMeshProUGUI>();
-            if (buttonText != null)
-            {
-                buttonText.text = isEditMode ? saveButtonText : editButtonText;
-            }
-        }
-    }
-    
-    private void SavePlayerName()
-    {
-        if (playerNameInputField == null) return;
-        
-        string newName = playerNameInputField.text.Trim();
-        
-        if (string.IsNullOrEmpty(newName))
-        {
-            Debug.LogWarning("[PlayerProfileUI] Player name cannot be empty!");
-            playerNameInputField.text = PlayerModel.Name;
-            ExitEditMode();
-            return;
-        }
-        
-        if (newName.Length < 3)
-        {
-            Debug.LogWarning("[PlayerProfileUI] Player name must be at least 3 characters!");
-            playerNameInputField.text = PlayerModel.Name;
-            ExitEditMode();
-            return;
-        }
-        
-        if (newName == originalPlayerName)
-        {
-            Debug.Log("[PlayerProfileUI] Name unchanged, exiting edit mode");
-            ExitEditMode();
-            return;
-        }
-        
-        Debug.Log($"[PlayerProfileUI] Saving new player name: '{newName}'");
-        
-        if (BackendAuthService.Instance != null)
-        {
-            BackendAuthService.Instance.UpdateProfile(newName, (success, message) => 
-            {
-                if (success)
+            // PURE UI: Delegate download to service
+            BackendAuthService.Instance.GetImage(avatarData, (texture) => {
+                if (texture != null)
                 {
-                    Debug.Log("[PlayerProfileUI] ✓ Name updated successfully on backend!");
+                    Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+                    ShowCustom(sprite);
                 }
-                else
-                {
-                    Debug.LogError($"[PlayerProfileUI] Failed to update name: {message}");
-                    // Revert UI to old name if failed
-                    if (playerNameInputField != null)
-                    {
-                        playerNameInputField.text = PlayerModel.Name;
-                    }
-                }
-                ExitEditMode();
             });
         }
+        else if (int.TryParse(avatarData, out int index))
+        {
+            ShowPreset(index);
+        }
         else
         {
-            Debug.LogError("[PlayerProfileUI] BackendAuthService not found!");
-            ExitEditMode();
+            ShowPreset(0);
         }
     }
-    
-    private void SetEditMode(bool editMode)
+
+    private void ShowPreset(int index)
     {
-        isEditMode = editMode;
+        if (index < 0 || index >= 8) index = 0;
         
-        if (playerNameInputField != null)
-        {
-            playerNameInputField.interactable = editMode;
-            playerNameInputField.readOnly = !editMode;
-        }
-        
-        UpdateEditButtonText();
-    }
-    
-    private void OnLogoutClicked()
-    {
-        OfferPanelManager offerPanelManager = FindObjectOfType<OfferPanelManager>();
-        if (offerPanelManager != null)
-        {
-            offerPanelManager.OnUserLoggedOut();
-        }
-        
-        if (BackendAuthService.Instance != null)
-        {
-            BackendAuthService.ClearJWT();
-            Debug.Log("[PlayerProfileUI] Player logged out (Backend JWT cleared)");
-        }
-        
-        if (splashScreenPanel != null) splashScreenPanel.SetActive(true);
-        if (settingsPanel != null) settingsPanel.SetActive(false);
-        if (mainMenuPanel != null) mainMenuPanel.SetActive(false);
-        
-        StartCoroutine(ShowLoginScreenAfterDelay());
-    }
-    
-    private System.Collections.IEnumerator ShowLoginScreenAfterDelay()
-    {
-        yield return new WaitForSeconds(0.5f);
-        
-        if (splashScreenPanel != null) splashScreenPanel.SetActive(false);
-        
-        AuthenticationManager authManager = FindObjectOfType<AuthenticationManager>();
-        if (authManager != null)
-        {
-            authManager.ShowLoginRegisterPanel();
-        }
-    }
-    
-    private void ShowCustomImage(Sprite sprite)
-    {
-        if (profileImageCustom != null)
-        {
-            profileImageCustom.sprite = sprite;
-            profileImageCustom.rectTransform.localScale = Vector3.one * 2f;
-            profileImageCustom.gameObject.SetActive(true);
-            
-            if (profileImageSprite != null)
-                profileImageSprite.gameObject.SetActive(false);
-        }
-        else if (profileImageSprite != null)
-        {
-            profileImageSprite.sprite = sprite;
-            profileImageSprite.rectTransform.localScale = Vector3.one * 2f;
-            profileImageSprite.gameObject.SetActive(true);
-        }
-        
-        if (customImageDisplay != null)
-            customImageDisplay.sprite = sprite;
-    }
-    
-    private void ShowSpriteImage(Sprite sprite)
-    {
+        AvatarSelector selector = FindObjectOfType<AvatarSelector>();
+        Sprite sprite = selector != null ? selector.GetAvatarSpriteByIndex(index) : null;
+
         if (profileImageSprite != null)
         {
             profileImageSprite.sprite = sprite;
             profileImageSprite.rectTransform.localScale = Vector3.one;
             profileImageSprite.gameObject.SetActive(true);
         }
+        if (profileImageCustom != null) profileImageCustom.gameObject.SetActive(false);
+    }
+
+    private void ShowCustom(Sprite sprite)
+    {
         if (profileImageCustom != null)
-            profileImageCustom.gameObject.SetActive(false);
-    }
-    
-    public void UpdateFromAvatarSelector(int avatarIndex, Sprite[] sprites)
-    {
-        if (sprites == null || avatarIndex < 0 || avatarIndex >= sprites.Length) return;
-        
-        Sprite avatarSprite = sprites[avatarIndex];
-        if (avatarSprite != null)
         {
-            ShowSpriteImage(avatarSprite);
+            profileImageCustom.sprite = sprite;
+            profileImageCustom.rectTransform.localScale = Vector3.one * 2f;
+            profileImageCustom.gameObject.SetActive(true);
+            if (profileImageSprite != null) profileImageSprite.gameObject.SetActive(false);
         }
     }
-    
-    public void UpdateCustomImage(Sprite customSprite)
+
+    private void UpdateUIWithDefaultData()
     {
-        if (customSprite != null)
-        {
-            ShowCustomImage(customSprite);
-        }
+        if (playerNameInputField != null) playerNameInputField.text = "Guest";
+        if (emailText != null) emailText.text = "Not logged in";
     }
-    
-    private System.Collections.IEnumerator LoadImageFromUrl(string url)
+
+    private void OnEditNameClicked()
     {
-        if (string.IsNullOrEmpty(url)) yield break;
+        if (playerNameInputField == null) return;
         
-        using (UnityEngine.Networking.UnityWebRequest request = UnityEngine.Networking.UnityWebRequestTexture.GetTexture(url))
+        if (!isEditMode)
         {
-            yield return request.SendWebRequest();
+            isEditMode = true;
+            originalPlayerName = PlayerModel.Name;
+            playerNameInputField.interactable = true;
+            playerNameInputField.ActivateInputField();
+        }
+        else
+        {
+            string newName = playerNameInputField.text.Trim();
+            if (!string.IsNullOrEmpty(newName) && newName != originalPlayerName)
+                BackendAuthService.Instance.UpdateProfile(newName); // PURE UI: Just trigger the service
             
-            if (request.result == UnityEngine.Networking.UnityWebRequest.Result.Success)
-            {
-                Texture2D texture = UnityEngine.Networking.DownloadHandlerTexture.GetContent(request);
-                if (texture != null)
-                {
-                    Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
-                    ShowSpriteImage(sprite);
-                }
-            }
-            else
-            {
-                LoadAvatarSpriteFromIndex(0);
-            }
+            isEditMode = false;
+            playerNameInputField.interactable = false;
         }
+        UpdateEditButtonText();
     }
-    
-    private void LoadAvatarSpriteFromIndex(int selectedIndex)
+
+    private void OnLogoutClicked()
     {
-        if (selectedIndex < 0 || selectedIndex >= 8) selectedIndex = 0;
-        
-        AvatarSelector selector = FindObjectOfType<AvatarSelector>();
-        if (selector != null)
-        {
-            Sprite avatarSprite = selector.GetAvatarSpriteByIndex(selectedIndex);
-            if (avatarSprite != null)
-            {
-                ShowSpriteImage(avatarSprite);
-            }
-        }
+        BackendAuthService.ClearJWT();
+        if (splashScreenPanel != null) splashScreenPanel.SetActive(true);
+        if (settingsPanel != null) settingsPanel.SetActive(false);
+        if (mainMenuPanel != null) mainMenuPanel.SetActive(false);
+        Invoke(nameof(ShowLoginScreen), 0.5f);
     }
-    
-    #region Custom Image Selection
-    
+
+    private void ShowLoginScreen()
+    {
+        if (splashScreenPanel != null) splashScreenPanel.SetActive(false);
+        AuthenticationManager auth = FindObjectOfType<AuthenticationManager>();
+        if (auth != null) auth.ShowLoginRegisterPanel();
+    }
+
     private void OnSelectCustomImageClicked()
     {
         ImagePickerHelper.PickImage(OnImageSelected, maxImageSize);
     }
-    
+
     private void OnImageSelected(Texture2D texture)
     {
         if (texture == null) return;
-        
-        selectedCustomTexture = texture;
-        Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
-        ShowCustomImage(sprite);
-        
-        MainMenuAvatarDisplay[] displays = FindObjectsOfType<MainMenuAvatarDisplay>(true);
-        foreach (MainMenuAvatarDisplay display in displays)
+        byte[] imageBytes = texture.EncodeToJPG(75);
+        BackendAuthService.Instance.UploadAvatar(imageBytes, (success, result) => { });
+    }
+
+    private void SetEditMode(bool editMode) { /* Helper */ }
+    private void UpdateEditButtonText()
+    {
+        if (editNameButton != null)
         {
-            if (display != null) display.UpdateCustomImage(sprite);
+            TextMeshProUGUI text = editNameButton.GetComponentInChildren<TextMeshProUGUI>();
+            if (text != null) text.text = isEditMode ? saveButtonText : editButtonText;
         }
     }
-    
-    private void LoadCustomImage()
-    {
-        // Placeholder
-    }
-    
-    #endregion
+
+    public void UpdateFromAvatarSelector(int index, Sprite[] s) => ShowPreset(index);
+    public void UpdateCustomImage(Sprite s) => ShowCustom(s);
 }
