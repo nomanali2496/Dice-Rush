@@ -47,6 +47,8 @@ public class OfferPanelManager : MonoBehaviour
     private bool hasTriggeredDailyRewardPanel = false; // Track if we've already triggered the daily reward panel for this login
     private bool hasShownAfterMainMenuActivation = false; // Track if we've shown offer panels after main menu activation for this login
     private bool isWaitingForNextPanel = false; // Prevent duplicate triggers when waiting for next panel
+    private bool isApiDataLoaded = false; // Track if offer data has been fetched from backend
+    private List<string> apiOfferStrings = new List<string>(); // Stores raw offer strings from API
     
     private const string LAST_OFFER_SHOWN_TIMESTAMP_KEY_PREFIX = "OfferPanelManager_LastShownTimestamp_";
     
@@ -139,6 +141,8 @@ public class OfferPanelManager : MonoBehaviour
     private void OnUserLoggedIn()
     {
         hasLoggedIn = true;
+        isApiDataLoaded = false;
+        apiOfferStrings.Clear();
         
         // Get the current user's PlayFab ID for account-specific storage
         string newUserId = "";
@@ -147,58 +151,58 @@ public class OfferPanelManager : MonoBehaviour
             newUserId = PlayFabManager.Instance.GetPlayFabId();
         }
 
-        // Only update the ID if we actually got a valid one (avoids losing ID during session transitions)
+        // Only update the ID if we actually got a valid one
         if (!string.IsNullOrEmpty(newUserId))
         {
             currentUserId = newUserId;
         }
         
-        // CRITICAL FIX: If we have already determined that offers should be shown or skipped 
-        // THIS session, do not run this logic again. This prevents the "double-pop" bug 
-        // that happens when the account ID becomes available slightly after the initial start.
-        if (hasShownOfferThisSession)
+        // Fetch daily offers from backend
+        if (BackendAuthService.Instance != null)
         {
-            Debug.Log($"[OfferPanelManager] User logged in, but session offers are already handled. hasShownOfferThisSession={hasShownOfferThisSession}");
-            return;
-        }
-
-        // Check if offers have been shown today
-        bool hasShownToday = HasShownOffersToday();
-        
-        // Only reset flags if offers haven't been shown today (or if showOnEveryLogin is true)
-        if (!hasShownToday || showOnEveryLogin)
-        {
-            // Generate 3 random panel indices
-            GenerateRandomPanelIndices();
-            nextPanelIndexToShow = 0; // Reset to show panels from the beginning
-            isShowingPanelsSequence = false; // Reset sequence flag
-            hasShownAfterMainMenuActivation = false; // Reset flag so offer panels can show again
-            hasShownOfferThisSession = false; // Reset session flag
-            Debug.Log($"[OfferPanelManager] User logged in. hasShownToday={hasShownToday}, showOnEveryLogin={showOnEveryLogin}. Will show 3 random offers when main menu activates.");
+            Debug.Log("[OfferPanelManager] Fetching daily offers from backend...");
+            BackendAuthService.Instance.GetDailyOffers((success, response) => {
+                if (success && response != null && response.data != null)
+                {
+                    apiOfferStrings = response.data.offers;
+                    Debug.Log($"[OfferPanelManager] Received {apiOfferStrings.Count} offers from backend: {string.Join(", ", apiOfferStrings)}");
+                    
+                    // Update debug info
+                    if (!string.IsNullOrEmpty(response.data.lastShown))
+                    {
+                        lastShownDate = response.data.lastShown;
+                    }
+                    
+                    // Map strings to indices and prepare sequence
+                    MapOfferStringsToIndices(apiOfferStrings);
+                }
+                else
+                {
+                    Debug.LogWarning("[OfferPanelManager] Failed to fetch daily offers from backend or no offers available today.");
+                    selectedPanelIndices.Clear();
+                }
+                isApiDataLoaded = true;
+            });
         }
         else
         {
-            // Offers already shown today, don't reset flags
-            hasShownOfferThisSession = true; // Mark as shown to prevent showing again
-            Debug.Log("[OfferPanelManager] User logged in, but offers have already been shown today. Skipping offer display.");
+            Debug.LogError("[OfferPanelManager] BackendAuthService Instance not found!");
+            isApiDataLoaded = true;
         }
-        
-        hasTriggeredDailyRewardPanel = false; // Reset flag so daily reward panel can show again on next login
-        isWaitingForNextPanel = false; // Reset waiting flag
-        
-        // Always wait for daily reward panel to close (it will open when main menu activates)
-        // Initialize as false so we wait for the daily reward panel to close
+
+        // Reset sequence flags
+        nextPanelIndexToShow = 0;
+        isShowingPanelsSequence = false;
+        hasShownAfterMainMenuActivation = false;
+        hasShownOfferThisSession = false;
+        hasTriggeredDailyRewardPanel = false;
+        isWaitingForNextPanel = false;
         hasDailyRewardPanelClosed = false;
         
-        // Only set to true if daily reward manager doesn't exist (meaning no daily reward panel will show)
+        // Only set to true if daily reward manager doesn't exist
         if (dailyRewardManager == null)
         {
             hasDailyRewardPanelClosed = true;
-            Debug.Log("[OfferPanelManager] DailyRewardManager not found, will show offer panel without waiting.");
-        }
-        else
-        {
-            Debug.Log("[OfferPanelManager] Will wait for daily reward panel to close before showing offer panel. Daily reward panel will open when main menu activates.");
         }
     }
     
@@ -252,13 +256,17 @@ public class OfferPanelManager : MonoBehaviour
             // Check if main menu is active and user has logged in
             if (mainMenuScreen != null && mainMenuScreen.activeSelf && hasLoggedIn)
             {
-                // Check if we should show offer panel (must not have shown today AND not shown this session)
-                bool hasShownToday = HasShownOffersToday();
-                
-                // If showOnEveryLogin is true, we ignore hasShownToday
-                if ((hasShownToday && !showOnEveryLogin) || hasShownOfferThisSession)
+                // Wait for API data to be loaded
+                if (!isApiDataLoaded)
                 {
-                    yield return new WaitForSeconds(0.5f); // Check every 0.5 seconds
+                    yield return new WaitForSeconds(0.1f);
+                    continue;
+                }
+
+                // If no offers were returned by API, skip everything
+                if (selectedPanelIndices.Count == 0 || hasShownOfferThisSession)
+                {
+                    yield return new WaitForSeconds(0.5f);
                     continue;
                 }
                 
@@ -359,6 +367,44 @@ public class OfferPanelManager : MonoBehaviour
         selectedPanelIndices = validIndices.Take(panelsToSelect).ToList();
         
         Debug.Log($"[OfferPanelManager] Generated {selectedPanelIndices.Count} random panel indices: {string.Join(", ", selectedPanelIndices)}");
+    }
+
+    /// <summary>
+    /// Maps offer strings from backend API to panel indices
+    /// </summary>
+    private void MapOfferStringsToIndices(List<string> offerNames)
+    {
+        selectedPanelIndices.Clear();
+        if (offerNames == null) return;
+
+        foreach (string name in offerNames)
+        {
+            // Mapping logic: "offer1.png" -> index 0, "offer2.png" -> index 1, etc.
+            int index = ParseOfferIndexFromName(name);
+            if (index >= 0 && index < offerPanels.Length && offerPanels[index] != null)
+            {
+                selectedPanelIndices.Add(index);
+            }
+        }
+        
+        Debug.Log($"[OfferPanelManager] Mapped API offers to indices: {string.Join(", ", selectedPanelIndices)}");
+    }
+
+    /// <summary>
+    /// Extracts the numeric index from a string like "offer1.png"
+    /// </summary>
+    private int ParseOfferIndexFromName(string name)
+    {
+        if (string.IsNullOrEmpty(name)) return -1;
+        
+        // Look for the first number in the string
+        string numberString = new string(name.Where(char.IsDigit).ToArray());
+        if (int.TryParse(numberString, out int number))
+        {
+            // Assuming 1-based naming in assets, convert to 0-based index
+            return number - 1;
+        }
+        return -1;
     }
     
     /// <summary>

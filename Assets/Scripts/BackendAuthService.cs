@@ -629,6 +629,57 @@ public class BackendAuthService : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Fetches the daily offers from the backend.
+    /// </summary>
+    public void GetDailyOffers(Action<bool, DailyOffersResponse> onComplete)
+    {
+        if (!HasStoredJWT())
+        {
+            onComplete?.Invoke(false, null);
+            return;
+        }
+        StartCoroutine(GetDailyOffersCoroutine(onComplete));
+    }
+
+    private IEnumerator GetDailyOffersCoroutine(Action<bool, DailyOffersResponse> onComplete)
+    {
+        string url = baseUrl.TrimEnd('/') + "/api/offers/daily";
+        string token = GetStoredJWT();
+
+        using (UnityWebRequest request = UnityWebRequest.Get(url))
+        {
+            request.SetRequestHeader("Authorization", "Bearer " + token);
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Daily Offers Result: {request.downloadHandler.text}</color>");
+                DailyOffersResponse response = JsonUtility.FromJson<DailyOffersResponse>(request.downloadHandler.text);
+                onComplete?.Invoke(true, response);
+            }
+            else
+            {
+                Debug.LogError($"[BackendAuthService] GetDailyOffers Error: {request.error}");
+                onComplete?.Invoke(false, null);
+            }
+        }
+    }
+
+    [Serializable]
+    public class DailyOffersResponse
+    {
+        public bool success;
+        public DailyOffersData data;
+    }
+
+    [Serializable]
+    public class DailyOffersData
+    {
+        public List<string> offers;
+        public string lastShown;
+    }
+
     [Serializable]
     public class DailyRewardStatusResponse
     {
