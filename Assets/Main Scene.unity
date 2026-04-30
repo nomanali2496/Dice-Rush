@@ -13874,7 +13874,7 @@ MonoBehaviour:
   - {fileID: 1715244397}
   mainMenuScreen: {fileID: 407583426}
   showDelay: 1
-  showOnEveryLogin: 1
+  showOnEveryLogin: 0
   delayBetweenPanels: 0.5
   animationDuration: 0.5
   scaleCurve:
