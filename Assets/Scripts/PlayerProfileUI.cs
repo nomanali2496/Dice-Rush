@@ -15,6 +15,7 @@ public class PlayerProfileUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI helpAndSupportEmailText;
     [SerializeField] private Image profileImageSprite;
     [SerializeField] private Image profileImageCustom;
+    [SerializeField] private Image profileBackgroundDisplay;
     
     [Header("Buttons")]
     [SerializeField] private Button editNameButton;
@@ -105,8 +106,7 @@ public class PlayerProfileUI : MonoBehaviour
     {
         if (index < 0 || index >= 8) index = 0;
         
-        AvatarSelector selector = FindObjectOfType<AvatarSelector>();
-        Sprite sprite = selector != null ? selector.GetAvatarSpriteByIndex(index) : null;
+        Sprite sprite = AvatarSelector.Instance != null ? AvatarSelector.Instance.GetAvatarSpriteByIndex(index) : null;
 
         if (profileImageSprite != null)
         {
@@ -115,6 +115,12 @@ public class PlayerProfileUI : MonoBehaviour
             profileImageSprite.gameObject.SetActive(true);
         }
         if (profileImageCustom != null) profileImageCustom.gameObject.SetActive(false);
+        
+        if (profileBackgroundDisplay != null)
+        {
+            Sprite bgSprite = AvatarSelector.Instance != null ? AvatarSelector.Instance.GetBackgroundSpriteByIndex(index) : null;
+            profileBackgroundDisplay.sprite = bgSprite;
+        }
     }
 
     private void ShowCustom(Sprite sprite)
@@ -194,7 +200,4 @@ public class PlayerProfileUI : MonoBehaviour
             if (text != null) text.text = isEditMode ? saveButtonText : editButtonText;
         }
     }
-
-    public void UpdateFromAvatarSelector(int index, Sprite[] s) => ShowPreset(index);
-    public void UpdateCustomImage(Sprite s) => ShowCustom(s);
 }

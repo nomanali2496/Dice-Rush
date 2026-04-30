@@ -12,16 +12,20 @@ public class MainMenuAvatarDisplay : MonoBehaviour
     [SerializeField] private Image avatarImageSprite;
     [SerializeField] private Image avatarImageCustom;
     
-    [Header("Avatar Sprites")]
-    [SerializeField] private Sprite[] avatarSprites = new Sprite[8];
-    
     [Header("Settings")]
     [SerializeField] private bool autoRefreshOnEnable = true;
+    [SerializeField] private int maxImageSize = 512;
+    
+    [Header("Custom Upload (Optional)")]
+    [SerializeField] private Button selectCustomImageButton;
     
     private string lastAvatarData = "";
 
     private void Start()
     {
+        if (selectCustomImageButton != null)
+            selectCustomImageButton.onClick.AddListener(OnSelectCustomImageClicked);
+            
         PlayerModel.OnDataUpdated += Refresh;
         Refresh();
     }
@@ -72,9 +76,7 @@ public class MainMenuAvatarDisplay : MonoBehaviour
 
     private void ShowPreset(int index)
     {
-        if (index < 0 || index >= avatarSprites.Length) index = 0;
-        
-        Sprite sprite = avatarSprites[index];
+        Sprite sprite = AvatarSelector.Instance != null ? AvatarSelector.Instance.GetAvatarSpriteByIndex(index) : null;
         if (avatarImageSprite != null)
         {
             avatarImageSprite.sprite = sprite;
@@ -99,9 +101,7 @@ public class MainMenuAvatarDisplay : MonoBehaviour
         NotifyLeaderboard();
     }
 
-    // Callbacks for immediate updates from other scripts
-    public void UpdateFromAvatarSelector(int avatarIndex, Sprite[] sprites) => ShowPreset(avatarIndex);
-    public void UpdateCustomImage(Sprite customSprite) => ShowCustom(customSprite);
+
 
     public Sprite GetCurrentAvatarSprite()
     {
@@ -122,5 +122,20 @@ public class MainMenuAvatarDisplay : MonoBehaviour
         {
             if (lbm != null) lbm.SyncAvatarFromMainMenu();
         }
+    }
+
+    private void OnSelectCustomImageClicked()
+    {
+        ImagePickerHelper.PickImage(OnImageSelected, maxImageSize);
+    }
+
+    private void OnImageSelected(Texture2D texture)
+    {
+        if (texture == null) return;
+        
+        byte[] imageBytes = texture.EncodeToJPG(75);
+        BackendAuthService.Instance.UploadAvatar(imageBytes, (success, result) => {
+            if (!success) Debug.LogError("[MainMenuAvatarDisplay] Upload failed: " + result);
+        });
     }
 }

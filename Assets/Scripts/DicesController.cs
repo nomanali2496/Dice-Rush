@@ -104,57 +104,7 @@ public class DicesController : MonoBehaviour
         if (faceRotations == null || faceRotations.Length != 6)
         {
             Debug.LogError("[DicesController] faceRotations array must have exactly 6 elements!");
-            return;
         }
-        
-        // Expected rotations based on user's mapping
-        Vector3[] expectedRotations = new Vector3[]
-        {
-            new Vector3(0, 90, 0),      // Face 1 (value 1) - (0, 90, 0) = value 1
-            new Vector3(0, 0, 0),       // Face 2 (value 2) - (0, 0, 0) = value 2
-            new Vector3(90, 0, 0),      // Face 3 (value 3) - (90, 0, 0) = value 3
-            new Vector3(180, 0, 0),     // Face 4 (value 4) - (180, 0, 0) = value 4
-            new Vector3(0, 270, 0),     // Face 5 (value 5) - (0, 270, 0) = value 5
-            new Vector3(270, 0, 0)      // Face 6 (value 6) - (270, 0, 0) = value 6
-        };
-        
-        bool hasErrors = false;
-        Debug.Log("=== VALIDATING faceRotations ARRAY ===");
-        for (int i = 0; i < 6; i++)
-        {
-            Vector3 actual = faceRotations[i];
-            Vector3 expected = expectedRotations[i];
-            
-            // Normalize both for comparison (handles -90 = 270, 360 = 0, etc.)
-            Vector3 normalizedActual = NormalizeEulerForComparison(actual);
-            Vector3 normalizedExpected = NormalizeEulerForComparison(expected);
-            
-            // Check if rotations match (with small tolerance for floating point)
-            float distance = Vector3.Distance(normalizedActual, normalizedExpected);
-            if (distance > 0.1f)
-            {
-                Debug.LogError($"[DicesController] ❌ faceRotations[{i}] (Face {i + 1}, Value {i + 1}) is WRONG!");
-                Debug.LogError($"   Expected: {expected} (normalized: {normalizedExpected})");
-                Debug.LogError($"   Actual:   {actual} (normalized: {normalizedActual})");
-                Debug.LogError($"   Distance: {distance}");
-                Debug.LogError($"   Please fix Element {i} in the Inspector to: X={expected.x}, Y={expected.y}, Z={expected.z}");
-                hasErrors = true;
-            }
-            else
-            {
-                Debug.Log($"[DicesController] ✓ faceRotations[{i}] (Face {i + 1}, Value {i + 1}) is correct: {actual} (normalized: {normalizedActual})");
-            }
-        }
-        
-        if (!hasErrors)
-        {
-            Debug.Log("[DicesController] ✅ faceRotations array is correctly configured!");
-        }
-        else
-        {
-            Debug.LogError("[DicesController] ⚠️ Please fix the faceRotations array in the Inspector! The values are in the wrong order or incorrect.");
-        }
-        Debug.Log("=====================================");
     }
     
     /// <summary>

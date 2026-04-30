@@ -132,9 +132,6 @@ public class SplashScreen : MonoBehaviour
         {
             Debug.Log("[SplashScreen] Activating GamePanel...");
             gamePanel.SetActive(true);
-            
-            // Give the panel a moment to activate, then verify PlayerProfileUI
-            StartCoroutine(VerifyGamePanelActivated());
         }
         else
         {
@@ -143,24 +140,6 @@ public class SplashScreen : MonoBehaviour
         
         // Notify listeners
         OnLoadingCompleteEvent?.Invoke();
-    }
-    
-    private System.Collections.IEnumerator VerifyGamePanelActivated()
-    {
-        yield return new WaitForSeconds(0.2f);
-        
-        Debug.Log($"[SplashScreen] GamePanel active state: {gamePanel.activeSelf}");
-        
-        // Find and verify PlayerProfileUI
-        PlayerProfileUI profileUI = gamePanel.GetComponentInChildren<PlayerProfileUI>(true);
-        if (profileUI != null)
-        {
-            Debug.Log($"[SplashScreen] Found PlayerProfileUI! GameObject active: {profileUI.gameObject.activeSelf}");
-        }
-        else
-        {
-            Debug.LogWarning("[SplashScreen] PlayerProfileUI NOT FOUND in GamePanel!");
-        }
     }
 
     /// <summary>

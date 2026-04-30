@@ -55,7 +55,7 @@ public class BranchInit : MonoBehaviour
     {
         if (error != null)
         {
-            Debug.LogError("[BranchInit] ❌ Branch initialization FAILED: " + error);
+            Debug.Log("[BranchInit] ❌ Branch initialization FAILED: " + error);
             isBranchInitialized = false;
             return;
         }

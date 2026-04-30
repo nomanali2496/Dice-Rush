@@ -9,6 +9,8 @@ using TMPro;
 /// </summary>
 public class AvatarSelector : MonoBehaviour
 {
+    public static AvatarSelector Instance { get; private set; }
+
     [Header("Selection Buttons (8 buttons)")]
     [SerializeField] private Button[] avatarButtons = new Button[8];
     
@@ -18,26 +20,22 @@ public class AvatarSelector : MonoBehaviour
     [Header("Background Images (8 backgrounds)")]
     [SerializeField] private Sprite[] backgroundSprites = new Sprite[8];
     
-    [Header("Display References")]
-    [SerializeField] private Image selectedAvatarDisplay;
-    [SerializeField] private Image selectedBackgroundDisplay;
-    [SerializeField] private Image mainMenuAvatarDisplay;
-    
     [Header("Button Highlight")]
     [SerializeField] private GameObject[] buttonHighlights = new GameObject[8];
     
-    [Header("Custom Image Upload")]
-    [SerializeField] private Button selectCustomImageButton;
-    [SerializeField] private Image customImageDisplay;
-    
+
     [Header("Watch Video UI")]
     [SerializeField] private TMP_Text watchVideoText;
     
     [Header("Settings")]
     [SerializeField] private bool showSelectionFeedback = true;
-    [SerializeField] private int maxImageSize = 512; 
     
     private int currentSelectedIndex = 0;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -48,10 +46,6 @@ public class AvatarSelector : MonoBehaviour
             if (avatarButtons[i] != null)
                 avatarButtons[i].onClick.AddListener(() => OnAvatarButtonClicked(index));
         }
-        
-        if (selectCustomImageButton != null)
-            selectCustomImageButton.onClick.AddListener(OnSelectCustomImageClicked);
-        
         // Purely event-driven UI refresh
         PlayerModel.OnDataUpdated += RefreshUI;
         
@@ -99,39 +93,10 @@ public class AvatarSelector : MonoBehaviour
     private void ShowPreset(int index)
     {
         if (index < 0 || index >= avatarSprites.Length) index = 0;
-        Sprite sprite = avatarSprites[index];
-
-        if (selectedAvatarDisplay != null) selectedAvatarDisplay.sprite = sprite;
-        if (mainMenuAvatarDisplay != null) mainMenuAvatarDisplay.sprite = sprite;
-
-        UpdateExternalDisplays(sprite, index);
     }
 
     private void ApplyCustomSprite(Sprite sprite)
     {
-        if (selectedAvatarDisplay != null) selectedAvatarDisplay.sprite = sprite;
-        if (mainMenuAvatarDisplay != null) mainMenuAvatarDisplay.sprite = sprite;
-        if (customImageDisplay != null) customImageDisplay.sprite = sprite;
-
-        UpdateExternalDisplays(sprite, -1);
-    }
-
-    private void UpdateExternalDisplays(Sprite sprite, int index)
-    {
-        // Broadcast update to other UI scripts
-        MainMenuAvatarDisplay[] displays = FindObjectsOfType<MainMenuAvatarDisplay>(true);
-        foreach (var display in displays)
-        {
-            if (index >= 0) display.UpdateFromAvatarSelector(index, avatarSprites);
-            else display.UpdateCustomImage(sprite);
-        }
-
-        PlayerProfileUI[] profileUIs = FindObjectsOfType<PlayerProfileUI>(true);
-        foreach (var ui in profileUIs)
-        {
-            if (index >= 0) ui.UpdateFromAvatarSelector(index, avatarSprites);
-            else ui.UpdateCustomImage(sprite);
-        }
     }
 
     private void OnAvatarButtonClicked(int index)
@@ -142,22 +107,6 @@ public class AvatarSelector : MonoBehaviour
         BackendAuthService.Instance.UpdateProfile(PlayerModel.Name, index.ToString());
 
         if (showSelectionFeedback) ShowSelectionFeedback(index);
-    }
-
-    private void OnSelectCustomImageClicked()
-    {
-        ImagePickerHelper.PickImage(OnImageSelected, maxImageSize);
-    }
-
-    private void OnImageSelected(Texture2D texture)
-    {
-        if (texture == null) return;
-        
-        // PURE UI: Prepare data and trigger service call
-        byte[] imageBytes = texture.EncodeToJPG(75);
-        BackendAuthService.Instance.UploadAvatar(imageBytes, (success, result) => {
-            if (!success) Debug.LogError("[AvatarSelector] Upload failed: " + result);
-        });
     }
 
     private void UpdateButtonHighlights()
@@ -179,4 +128,5 @@ public class AvatarSelector : MonoBehaviour
 
     // Public helper for other scripts
     public Sprite GetAvatarSpriteByIndex(int index) => (index >= 0 && index < avatarSprites.Length) ? avatarSprites[index] : null;
+    public Sprite GetBackgroundSpriteByIndex(int index) => (index >= 0 && index < backgroundSprites.Length) ? backgroundSprites[index] : null;
 }

@@ -568,32 +568,63 @@ public class BackendAuthService : MonoBehaviour
         }
     }
 
+    private Dictionary<string, List<Action<Texture2D>>> _inFlightImageRequests = new Dictionary<string, List<Action<Texture2D>>>();
+    private Dictionary<string, Texture2D> _imageCache = new Dictionary<string, Texture2D>();
+
     /// <summary>
     /// Downloads an image from a URL. Centralizes networking logic away from UI scripts.
+    /// Uses in-flight tracking and caching to prevent duplicate network requests.
     /// </summary>
     public void GetImage(string url, Action<Texture2D> onComplete)
     {
         if (string.IsNullOrEmpty(url)) return;
+
+        // 1. Check if already cached
+        if (_imageCache.TryGetValue(url, out Texture2D cachedTexture) && cachedTexture != null)
+        {
+            onComplete?.Invoke(cachedTexture);
+            return;
+        }
+
+        // 2. Check if already downloading (in-flight)
+        if (_inFlightImageRequests.ContainsKey(url))
+        {
+            _inFlightImageRequests[url].Add(onComplete);
+            return; // Wait for the active download to finish
+        }
+
+        // 3. Start a new download
+        _inFlightImageRequests[url] = new List<Action<Texture2D>> { onComplete };
         Debug.Log($"<color=#00ffff>[BackendAuthService] GET Request (Image): {url}</color>");
-        StartCoroutine(GetImageCoroutine(url, onComplete));
+        StartCoroutine(GetImageCoroutine(url));
     }
 
-    private IEnumerator GetImageCoroutine(string url, Action<Texture2D> onComplete)
+    private IEnumerator GetImageCoroutine(string url)
     {
         using (UnityWebRequest request = UnityWebRequestTexture.GetTexture(url))
         {
             yield return request.SendWebRequest();
 
+            Texture2D texture = null;
             if (request.result == UnityWebRequest.Result.Success)
             {
                 Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Image Downloaded: {url}</color>");
-                Texture2D texture = DownloadHandlerTexture.GetContent(request);
-                onComplete?.Invoke(texture);
+                texture = DownloadHandlerTexture.GetContent(request);
+                _imageCache[url] = texture; // Cache the successful result
             }
             else
             {
                 Debug.LogError($"<color=#ff0000>[BackendAuthService] ERROR: Image Download Failed: {url} | {request.error}</color>");
-                onComplete?.Invoke(null);
+            }
+
+            // Fire all waiting callbacks
+            if (_inFlightImageRequests.TryGetValue(url, out var callbacks))
+            {
+                _inFlightImageRequests.Remove(url);
+                foreach (var callback in callbacks)
+                {
+                    callback?.Invoke(texture);
+                }
             }
         }
     }
