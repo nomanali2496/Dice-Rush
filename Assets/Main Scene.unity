@@ -15173,151 +15173,6 @@ MonoBehaviour:
   slideDistance: 1500
   centerRowScale: 1
   gameplayObject: {fileID: 1502321585}
-  lobbyConfigurations:
-  - lobbyIndex: 0
-    numberOfPlayers: 2
-    lobbyName: Combo Dice
-    gameTimer: 105
-    entryFeeCash: 5
-    entryFeeChips: 0
-    firstPlaceCash: 7
-    firstPlaceChips: 0
-    secondPlaceCash: 0.5
-    secondPlaceChips: 0
-    thirdPlaceCash: 0
-    thirdPlaceChips: 0
-  - lobbyIndex: 1
-    numberOfPlayers: 3
-    lobbyName: Triple Chance
-    gameTimer: 105
-    entryFeeCash: 3
-    entryFeeChips: 0
-    firstPlaceCash: 4
-    firstPlaceChips: 0
-    secondPlaceCash: 1.5
-    secondPlaceChips: 0
-    thirdPlaceCash: 0
-    thirdPlaceChips: 0
-  - lobbyIndex: 2
-    numberOfPlayers: 5
-    lobbyName: Treasure Roll
-    gameTimer: 105
-    entryFeeCash: 1
-    entryFeeChips: 0
-    firstPlaceCash: 2
-    firstPlaceChips: 0
-    secondPlaceCash: 1
-    secondPlaceChips: 0
-    thirdPlaceCash: 0.4
-    thirdPlaceChips: 0
-  - lobbyIndex: 3
-    numberOfPlayers: 6
-    lobbyName: Lucky Rollers
-    gameTimer: 105
-    entryFeeCash: 3
-    entryFeeChips: 0
-    firstPlaceCash: 6.7
-    firstPlaceChips: 0
-    secondPlaceCash: 3.8
-    secondPlaceChips: 0
-    thirdPlaceCash: 1.5
-    thirdPlaceChips: 0
-  - lobbyIndex: 4
-    numberOfPlayers: 5
-    lobbyName: The Yatch Club
-    gameTimer: 105
-    entryFeeCash: 12
-    entryFeeChips: 0
-    firstPlaceCash: 28
-    firstPlaceChips: 0
-    secondPlaceCash: 8
-    secondPlaceChips: 0
-    thirdPlaceCash: 4
-    thirdPlaceChips: 0
-  - lobbyIndex: 5
-    numberOfPlayers: 4
-    lobbyName: Dice Royale
-    gameTimer: 105
-    entryFeeCash: 3.5
-    entryFeeChips: 0
-    firstPlaceCash: 8
-    firstPlaceChips: 0
-    secondPlaceCash: 1
-    secondPlaceChips: 0
-    thirdPlaceCash: 0.4
-    thirdPlaceChips: 0
-  - lobbyIndex: 6
-    numberOfPlayers: 4
-    lobbyName: Dice Race
-    gameTimer: 105
-    entryFeeCash: 6
-    entryFeeChips: 0
-    firstPlaceCash: 10.5
-    firstPlaceChips: 0
-    secondPlaceCash: 4.5
-    secondPlaceChips: 0
-    thirdPlaceCash: 1
-    thirdPlaceChips: 0
-  - lobbyIndex: 7
-    numberOfPlayers: 3
-    lobbyName: Roll on the Beach
-    gameTimer: 105
-    entryFeeCash: 5
-    entryFeeChips: 0
-    firstPlaceCash: 7.8
-    firstPlaceChips: 0
-    secondPlaceCash: 2.2
-    secondPlaceChips: 0
-    thirdPlaceCash: 0
-    thirdPlaceChips: 0
-  - lobbyIndex: 8
-    numberOfPlayers: 5
-    lobbyName: Mega Rush
-    gameTimer: 105
-    entryFeeCash: 6
-    entryFeeChips: 0
-    firstPlaceCash: 12
-    firstPlaceChips: 0
-    secondPlaceCash: 6
-    secondPlaceChips: 0
-    thirdPlaceCash: 2
-    thirdPlaceChips: 0
-  - lobbyIndex: 9
-    numberOfPlayers: 5
-    lobbyName: 'Golden Throw '
-    gameTimer: 105
-    entryFeeCash: 1
-    entryFeeChips: 600
-    firstPlaceCash: 3
-    firstPlaceChips: 0
-    secondPlaceCash: 2
-    secondPlaceChips: 0
-    thirdPlaceCash: 1.2
-    thirdPlaceChips: 0
-  - lobbyIndex: 10
-    numberOfPlayers: 4
-    lobbyName: Token Mania
-    gameTimer: 105
-    entryFeeCash: 0
-    entryFeeChips: 1200
-    firstPlaceCash: 2.5
-    firstPlaceChips: 0
-    secondPlaceCash: 1
-    secondPlaceChips: 0
-    thirdPlaceCash: 0
-    thirdPlaceChips: 0
-  - lobbyIndex: 11
-    numberOfPlayers: 5
-    lobbyName: Dice Island
-    gameTimer: 105
-    entryFeeCash: 0
-    entryFeeChips: 30
-    firstPlaceCash: 0
-    firstPlaceChips: 55
-    secondPlaceCash: 0
-    secondPlaceChips: 40
-    thirdPlaceCash: 30
-    thirdPlaceChips: 0
   dotButtons:
   - {fileID: 304123357}
   - {fileID: 1656026090}
@@ -56072,6 +55927,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+--- !u!1 &1903059850
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1903059852}
+  - component: {fileID: 1903059851}
+  m_Layer: 0
+  m_Name: DebugViewer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1903059851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903059850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ead09e135bbb04f90b52b3461b4949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameDebugViewer
+  playerName: 
+  cashBalance: 0
+  coins: 0
+  level: 0
+  xp: 0
+  isLobbyDataLoaded: 0
+  lobbyConfigurations: []
+--- !u!4 &1903059852
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903059850}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.80155, y: 1.6847, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1903483443
 GameObject:
   m_ObjectHideFlags: 0
@@ -70371,3 +70277,4 @@ SceneRoots:
   - {fileID: 983329196}
   - {fileID: 546249673}
   - {fileID: 302362806}
+  - {fileID: 1903059852}
