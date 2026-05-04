@@ -264,7 +264,8 @@ public class OfferPanelManager : MonoBehaviour
                 }
 
                 // If no offers were returned by API, skip everything
-                if (selectedPanelIndices.Count == 0 || hasShownOfferThisSession)
+                // Also skip if we already showed offers today (and we don't want to show on every login)
+                if (selectedPanelIndices.Count == 0 || hasShownOfferThisSession || (!showOnEveryLogin && HasShownOffersToday()))
                 {
                     yield return new WaitForSeconds(0.5f);
                     continue;
@@ -765,6 +766,22 @@ public class OfferPanelManager : MonoBehaviour
     /// </summary>
     private bool HasShownOffersToday()
     {
+        DateTime now = DateTime.Now;
+
+        // 1. Check API response first (in case player played on another device)
+        if (!string.IsNullOrEmpty(lastShownDate) && lastShownDate != "N/A" && lastShownDate != "Waiting for login..." && lastShownDate != "Invalid" && lastShownDate != "Never")
+        {
+            if (DateTime.TryParse(lastShownDate, out DateTime apiLastShown))
+            {
+                // apiLastShown will automatically be converted to local time if the string contains a 'Z' or timezone
+                if (apiLastShown.Date == now.Date)
+                {
+                    return true;
+                }
+            }
+        }
+
+        // 2. Check local PlayerPrefs
         string key = GetOfferTimestampKey();
         
         if (!PlayerPrefs.HasKey(key))
@@ -776,8 +793,6 @@ public class OfferPanelManager : MonoBehaviour
         
         if (DateTime.TryParse(lastShownTimestampString, out DateTime lastShownTime))
         {
-            DateTime now = DateTime.Now;
-            
             // Check if last shown date is the same as today's date
             return lastShownTime.Date == now.Date;
         }
