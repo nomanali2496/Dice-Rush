@@ -5,32 +5,61 @@ using BestHTTP.SocketIO3.Events;
 
 public class SocketManager : MonoBehaviour
 {
+    public static SocketManager Instance { get; private set; }
+    
     private BestHTTP.SocketIO3.SocketManager ioManager;
+    public BestHTTP.SocketIO3.Socket Socket => ioManager?.Socket;
 
     [Header("Server Settings")]
     [Tooltip("The Ngrok URL or Backend URL")]
     [SerializeField] private string serverUrl = "https://unclog-goggles-drastic.ngrok-free.dev";
 
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
     void Start()
     {
-        // 1. Point to the Ngrok URL. Removed query params because they crash the backend's Node.js message parser.
+        // Connection is no longer automatic on start.
+        // It will be triggered by BackendAuthService after successful login.
+    }
+
+    public void ConnectToServer()
+    {
+        if (!BackendAuthService.HasStoredJWT())
+        {
+            Debug.LogWarning("[SocketManager] Cannot connect to Socket: No JWT token found.");
+            return;
+        }
+
+        if (ioManager != null && ioManager.State == BestHTTP.SocketIO3.SocketManager.States.Open)
+        {
+            Debug.Log("[SocketManager] Socket is already connected.");
+            return;
+        }
+
         Uri serverUri = new Uri(serverUrl);
 
-        // 2. Set up options to match your backend's requirements
         SocketOptions options = new SocketOptions
         {
             ConnectWith = BestHTTP.SocketIO3.Transports.TransportTypes.WebSocket,
-            AutoConnect = true,
-            // Pass the token and inject the version strings to bypass the "Version Mismatch" block
+            AutoConnect = false, // Connecting manually
             Auth = (manager, socket) => new { 
-                token = BackendAuthService.HasStoredJWT() ? BackendAuthService.GetStoredJWT() : "",
+                token = BackendAuthService.GetStoredJWT(),
                 version = "1.0.1",
                 clientVersion = "1.0.1",
                 v = "1.0.1"
             }
         };
 
-        Debug.Log("Attempting Socket.IO Handshake...");
+        Debug.Log("[SocketManager] Attempting Socket.IO Handshake...");
         
         ioManager = new BestHTTP.SocketIO3.SocketManager(serverUri, options);
 
@@ -38,6 +67,8 @@ public class SocketManager : MonoBehaviour
         ioManager.Socket.On<ConnectResponse>(SocketIOEventTypes.Connect, OnSocketConnected);
         ioManager.Socket.On(SocketIOEventTypes.Disconnect, OnSocketDisconnected);
         ioManager.Socket.On<Error>(SocketIOEventTypes.Error, OnSocketError);
+
+        ioManager.Open();
     }
 
     private void OnSocketConnected(ConnectResponse resp)
@@ -62,4 +93,18 @@ public class SocketManager : MonoBehaviour
             ioManager.Close();
         }
     }
+}
+
+[System.Serializable]
+public class FindMatchPayload
+{
+    public string mode;
+    public int stake;
+}
+
+[System.Serializable]
+public class StartGameData
+{
+    // Define properties here based on your backend payload. e.g.:
+    // public string matchId;
 }

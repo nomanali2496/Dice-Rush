@@ -85,6 +85,11 @@ public class BackendAuthService : MonoBehaviour
                     {
                         PlayerPrefs.SetString(JWT_PREF_KEY, response.token);
                         PlayerPrefs.Save();
+                        
+                        if (SocketManager.Instance != null)
+                        {
+                            SocketManager.Instance.ConnectToServer();
+                        }
                     }
                 }
                 catch { }
@@ -144,6 +149,12 @@ public class BackendAuthService : MonoBehaviour
 
                         PlayerPrefs.SetString(JWT_PREF_KEY, response.token);
                         PlayerPrefs.Save();
+                        
+                        if (SocketManager.Instance != null)
+                        {
+                            SocketManager.Instance.ConnectToServer();
+                        }
+                        
                         onComplete?.Invoke(true, "Login successful!");
                     }
                     else
@@ -210,6 +221,12 @@ public class BackendAuthService : MonoBehaviour
 
                         PlayerPrefs.SetString(JWT_PREF_KEY, response.token);
                         PlayerPrefs.Save();
+                        
+                        if (SocketManager.Instance != null)
+                        {
+                            SocketManager.Instance.ConnectToServer();
+                        }
+                        
                         onComplete?.Invoke(true, "Guest Login successful!");
                     }
                     else
@@ -474,6 +491,12 @@ public class BackendAuthService : MonoBehaviour
                             response.user.coins, response.user.avatar, response.user.xp,
                             response.user.level, response.user.role
                         );
+                        
+                        if (SocketManager.Instance != null)
+                        {
+                            SocketManager.Instance.ConnectToServer();
+                        }
+                        
                         onComplete?.Invoke(true, "Profile loaded successfully!");
                     }
                     else
