@@ -106,5 +106,12 @@ public class FindMatchPayload
 public class StartGameData
 {
     // Define properties here based on your backend payload. e.g.:
-    // public string matchId;
+    public string matchId;
+}
+
+[System.Serializable]
+public class MatchmakingUpdateData
+{
+    public int current;
+    public int target;
 }

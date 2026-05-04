@@ -15173,6 +15173,8 @@ MonoBehaviour:
   slideDistance: 1500
   centerRowScale: 1
   gameplayObject: {fileID: 1502321585}
+  waitingPanel: {fileID: 2021851055}
+  waitingStatusText: {fileID: 1009527265}
   dotButtons:
   - {fileID: 304123357}
   - {fileID: 1656026090}
@@ -20261,7 +20263,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &638413961
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30168,7 +30170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1009527264
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30185,8 +30187,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 681.4}
-  m_SizeDelta: {x: 1021.9, y: 218.5}
+  m_AnchoredPosition: {x: 0, y: 568.5}
+  m_SizeDelta: {x: 1021.9, y: 444.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1009527265
 MonoBehaviour:
@@ -30235,7 +30237,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 170.7
+  m_fontSize: 194.35
   m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -60702,7 +60704,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2021851055}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b166dc7a6a8f9364caf0b664d5729d12, type: 3}
   m_Name: 

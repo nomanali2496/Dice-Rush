@@ -32,6 +32,10 @@ public class HorizontalLobbyManager : MonoBehaviour
     [Header("Gameplay Object")]
     [SerializeField] private GameObject gameplayObject; // Gameplay object to open when play button is clicked
     
+    [Header("Matchmaking UI")]
+    [SerializeField] private GameObject waitingPanel; // Panel to show while finding match
+    [SerializeField] private TMPro.TextMeshProUGUI waitingStatusText; // Text to update with player count
+    
     [Header("Lobby Game Objects Settings")]
     private const int BACKGROUND_COUNT = 12; // Total number of background sprites (0-11)
     
@@ -61,9 +65,16 @@ public class HorizontalLobbyManager : MonoBehaviour
     // Auto-select flag to prevent re-selecting on every enable
     private bool hasAutoSelectedOnce = false;
     
+    // Tracks the lobby they are currently matchmaking for
+    private int _pendingLobbyIndex = -1;
+    
     private void Start()
     {
         LobbyModel.OnConfigurationsUpdated += RefreshAllPlayButtons;
+        MatchmakingModel.OnMatchFound += HandleMatchFound;
+        MatchmakingModel.OnMatchmakingFailed += HandleMatchError;
+        MatchmakingModel.OnMatchmakingUpdated += HandleMatchmakingUpdated;
+        
         LobbyModel.FetchConfigurations();
         
         InitializeLobbyRows();
@@ -134,6 +145,9 @@ public class HorizontalLobbyManager : MonoBehaviour
     private void OnDestroy()
     {
         LobbyModel.OnConfigurationsUpdated -= RefreshAllPlayButtons;
+        MatchmakingModel.OnMatchFound -= HandleMatchFound;
+        MatchmakingModel.OnMatchmakingFailed -= HandleMatchError;
+        MatchmakingModel.OnMatchmakingUpdated -= HandleMatchmakingUpdated;
         
         // Unsubscribe from events
         PlayerModel.OnDataUpdated -= OnPlayerDataUpdated;
@@ -647,13 +661,53 @@ public class HorizontalLobbyManager : MonoBehaviour
         LobbyConfig config = GetLobbyConfig(lobbyIndex);
         if (config == null) return;
 
-        if (LobbyNetworkManager.Instance != null)
+        _pendingLobbyIndex = lobbyIndex;
+        
+        // Calculate the fee (prioritize cash, fallback to chips)
+        int entryFee = config.entryFeeCash > 0 ? (int)config.entryFeeCash : config.entryFeeChips;
+        
+        // Mode is based on player count, e.g. "2p" or "5p"
+        string mode = $"{config.numberOfPlayers}p"; 
+
+        Debug.Log($"[HorizontalLobbyManager] UI Button Clicked. Requesting match via Middle Layer: Mode {mode}, Stake {entryFee}");
+        
+        if (waitingPanel != null) waitingPanel.SetActive(true);
+        if (waitingStatusText != null) waitingStatusText.text = "Waiting for players...";
+        
+        // Trigger the middle layer
+        MatchmakingModel.FindMatch(mode, entryFee);
+    }
+
+    private void HandleMatchFound(StartGameData data)
+    {
+        Debug.Log("[HorizontalLobbyManager] Match Found event received from middle layer!");
+        if (waitingPanel != null) waitingPanel.SetActive(false);
+        
+        if (_pendingLobbyIndex >= 0)
         {
-            LobbyNetworkManager.Instance.JoinLobbyRoom(config);
+            StartGameFromNetwork(_pendingLobbyIndex);
         }
-        else
+    }
+
+    private void HandleMatchError(string errorMessage)
+    {
+        Debug.LogError("[HorizontalLobbyManager] Matchmaking error: " + errorMessage);
+        if (waitingPanel != null) waitingPanel.SetActive(false);
+        // Future: Show a popup to the user
+    }
+
+    private void HandleMatchmakingUpdated(int current, int target)
+    {
+        if (waitingStatusText != null)
         {
-            StartGameFromNetwork(lobbyIndex);
+            if (target > 0)
+            {
+                waitingStatusText.text = $"Players: {current}/{target}";
+            }
+            else
+            {
+                waitingStatusText.text = $"Waiting for players...";
+            }
         }
     }
 
