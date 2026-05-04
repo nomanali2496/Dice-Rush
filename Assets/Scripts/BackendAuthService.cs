@@ -666,6 +666,49 @@ public class BackendAuthService : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Fetches the lobby configurations from the backend.
+    /// </summary>
+    public void GetLobbyConfigurations(Action<bool, LobbyApiResponse> onComplete)
+    {
+        StartCoroutine(GetLobbyConfigurationsCoroutine(onComplete));
+    }
+
+    private IEnumerator GetLobbyConfigurationsCoroutine(Action<bool, LobbyApiResponse> onComplete)
+    {
+        string url = baseUrl.TrimEnd('/') + "/api/lobby";
+
+        using (UnityWebRequest request = UnityWebRequest.Get(url))
+        {
+            if (HasStoredJWT())
+            {
+                request.SetRequestHeader("Authorization", "Bearer " + GetStoredJWT());
+            }
+            
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Lobby Config Result: {request.downloadHandler.text}</color>");
+                try
+                {
+                    LobbyApiResponse response = JsonUtility.FromJson<LobbyApiResponse>(request.downloadHandler.text);
+                    onComplete?.Invoke(true, response);
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError($"[BackendAuthService] GetLobbyConfigurations Parse Error: {e.Message}");
+                    onComplete?.Invoke(false, null);
+                }
+            }
+            else
+            {
+                Debug.LogError($"[BackendAuthService] GetLobbyConfigurations Error: {request.error}");
+                onComplete?.Invoke(false, null);
+            }
+        }
+    }
+
     [Serializable]
     public class DailyOffersResponse
     {
@@ -733,5 +776,35 @@ public class BackendAuthService : MonoBehaviour
         public int xp;
         public int level;
         public string role;
+    }
+
+    [Serializable]
+    public class LobbyApiResponse
+    {
+        public bool success;
+        public int count;
+        public List<LobbyApiData> data;
+    }
+
+    [Serializable]
+    public class LobbyApiData
+    {
+        public string id;
+        public string name;
+        public string image;
+        public string mode;
+        public int playerCount;
+        public string description;
+        public int lobbyIndex;
+        public int gameTimer;
+        public float entryFeeCash;
+        public int entryFeeChips;
+        public float firstPlaceCash;
+        public int firstPlaceChips;
+        public float secondPlaceCash;
+        public int secondPlaceChips;
+        public float thirdPlaceCash;
+        public int thirdPlaceChips;
+        public bool enabled;
     }
 }

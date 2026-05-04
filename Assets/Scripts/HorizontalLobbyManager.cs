@@ -35,9 +35,6 @@ public class HorizontalLobbyManager : MonoBehaviour
     [Header("Lobby Game Objects Settings")]
     private const int BACKGROUND_COUNT = 12; // Total number of background sprites (0-11)
     
-    [Header("Lobby Configurations")]
-    [SerializeField] private LobbyConfig[] lobbyConfigurations = new LobbyConfig[12]; // 12 lobby configurations (can be set in inspector)
-    
     // Lobby scroll management
     private LobbyGameObjectData[] _lobbyObjectsData; // Array of all 12 lobby objects
     private int currentScrollIndex = 0; // Current scroll position
@@ -66,15 +63,14 @@ public class HorizontalLobbyManager : MonoBehaviour
     
     private void Start()
     {
-        InitializeLobbyConfigurations();
+        LobbyModel.OnConfigurationsUpdated += RefreshAllPlayButtons;
+        LobbyModel.FetchConfigurations();
+        
         InitializeLobbyRows();
         SetupScrollButtons();
         
-        // Subscribe to PlayFab events to update when player data loads
-        if (PlayFabManager.Instance != null)
-        {
-            PlayFabManager.Instance.OnPlayerDataLoaded += OnPlayerDataLoaded;
-        }
+        // Subscribe to PlayerModel events to update when backend data loads
+        PlayerModel.OnDataUpdated += OnPlayerDataUpdated;
     }
     
     private IEnumerator InitializeButtonsRoutine()
@@ -86,24 +82,21 @@ public class HorizontalLobbyManager : MonoBehaviour
         {
             RefreshAllPlayButtons();
             
-            // Auto-select lobby based on balance (only on first load and when data is actually loaded)
-            if (!hasAutoSelectedOnce && PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
+            // Auto-select lobby based on balance (only on first load)
+            if (!hasAutoSelectedOnce)
             {
-                var playerData = PlayFabManager.Instance.currentPlayerData;
-                
-                // Check if player data is actually populated (not just default zeros)
-                // We'll assume if either cash > 0 OR coins > 0, the data is loaded
-                bool dataLooksLoaded = playerData != null && (playerData.cash > 0 || playerData.coins > 0);
+                // Check if player data is actually populated
+                bool dataLooksLoaded = (PlayerModel.CashBalance > 0 || PlayerModel.Coins > 0);
                 
                 if (dataLooksLoaded)
                 {
-                    Debug.Log($"[HorizontalLobbyManager] Player data loaded after {elapsed}s - Cash: ${playerData.cash}, Chips: {playerData.coins}");
+                    Debug.Log($"[HorizontalLobbyManager] Player data loaded after {elapsed}s - Cash: ${PlayerModel.CashBalance}, Chips: {PlayerModel.Coins}");
                     AutoSelectLobbyBasedOnBalance();
                     hasAutoSelectedOnce = true; // Mark as done, don't auto-select again
                 }
                 else if (elapsed < 4.5f)
                 {
-                    Debug.Log($"[HorizontalLobbyManager] Waiting for player data to load... (elapsed: {elapsed}s, Cash: ${playerData?.cash ?? 0}, Chips: {playerData?.coins ?? 0})");
+                    Debug.Log($"[HorizontalLobbyManager] Waiting for player data to load... (elapsed: {elapsed}s, Cash: ${PlayerModel.CashBalance}, Chips: {PlayerModel.Coins})");
                 }
             }
             
@@ -111,11 +104,10 @@ public class HorizontalLobbyManager : MonoBehaviour
             elapsed += 0.5f;
         }
         
-        // Final attempt after 5 seconds even if data shows zeros (edge case: player truly has $0 and 0 chips)
-        if (!hasAutoSelectedOnce && PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
+        // Final attempt after 5 seconds even if data shows zeros
+        if (!hasAutoSelectedOnce)
         {
-            var playerData = PlayFabManager.Instance.currentPlayerData;
-            Debug.LogWarning($"[HorizontalLobbyManager] Final auto-select attempt after 5 seconds with Cash: ${playerData?.cash ?? 0}, Chips: {playerData?.coins ?? 0}");
+            Debug.LogWarning($"[HorizontalLobbyManager] Final auto-select attempt after 5 seconds with Cash: ${PlayerModel.CashBalance}, Chips: {PlayerModel.Coins}");
             AutoSelectLobbyBasedOnBalance();
             hasAutoSelectedOnce = true;
         }
@@ -141,33 +133,27 @@ public class HorizontalLobbyManager : MonoBehaviour
 
     private void OnDestroy()
     {
+        LobbyModel.OnConfigurationsUpdated -= RefreshAllPlayButtons;
+        
         // Unsubscribe from events
-        if (PlayFabManager.Instance != null)
-        {
-            PlayFabManager.Instance.OnPlayerDataLoaded -= OnPlayerDataLoaded;
-        }
+        PlayerModel.OnDataUpdated -= OnPlayerDataUpdated;
     }
     
     /// <summary>
-    /// Event handler for when PlayFab player data is loaded
+    /// Event handler for when PlayerModel data is updated from backend
     /// Ensures lobby buttons refresh immediately even if internet was slow
     /// </summary>
-    private void OnPlayerDataLoaded(PlayerData data)
+    private void OnPlayerDataUpdated()
     {
-        Debug.Log($"[HorizontalLobbyManager] Player data loaded event received. Refreshing all play buttons...");
+        Debug.Log($"[HorizontalLobbyManager] Player data updated event received. Refreshing all play buttons...");
         RefreshAllPlayButtons();
         
         // If we haven't auto-selected yet, do it now that data is definitely ready
-        if (!hasAutoSelectedOnce && isLoggedIn())
+        if (!hasAutoSelectedOnce)
         {
              AutoSelectLobbyBasedOnBalance();
              hasAutoSelectedOnce = true;
         }
-    }
-
-    private bool isLoggedIn()
-    {
-        return PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn();
     }
     
     private void Update()
@@ -487,12 +473,8 @@ public class HorizontalLobbyManager : MonoBehaviour
     
     private void AutoSelectLobbyBasedOnBalance()
     {
-        if (PlayFabManager.Instance == null || !PlayFabManager.Instance.IsLoggedIn()) return;
-        var playerData = PlayFabManager.Instance.currentPlayerData;
-        if (playerData == null) return;
-        
-        int selectedLobbyIndex = FindFirstAffordableCashLobby(playerData.cash);
-        if (selectedLobbyIndex < 0) selectedLobbyIndex = FindFirstAffordableChipsOnlyLobby(playerData.coins);
+        int selectedLobbyIndex = FindFirstAffordableCashLobby(PlayerModel.CashBalance);
+        if (selectedLobbyIndex < 0) selectedLobbyIndex = FindFirstAffordableChipsOnlyLobby(PlayerModel.Coins);
         
         if (selectedLobbyIndex >= 0 && selectedLobbyIndex != currentScrollIndex)
         {
@@ -637,64 +619,27 @@ public class HorizontalLobbyManager : MonoBehaviour
         isSwiping = false;
     }
     
-    private void InitializeLobbyConfigurations()
-    {
-        if (lobbyConfigurations == null || lobbyConfigurations.Length != BACKGROUND_COUNT)
-        {
-            lobbyConfigurations = new LobbyConfig[BACKGROUND_COUNT];
-        }
-        
-        for (int i = 0; i < BACKGROUND_COUNT; i++)
-        {
-            if (lobbyConfigurations[i] == null)
-            {
-                lobbyConfigurations[i] = new LobbyConfig(
-                    index: i,
-                    players: 2,
-                    entryCash: 0f,
-                    entryChips: 10,
-                    firstCash: 0f,
-                    firstChips: 20,
-                    secondCash: 0f,
-                    secondChips: 10,
-                    thirdCash: 0f,
-                    thirdChips: 5,
-                    duration: 60f
-                );
-            }
-        }
-    }
-    
     public LobbyConfig GetLobbyConfig(int lobbyIndex)
     {
-        if (lobbyConfigurations != null && lobbyIndex >= 0 && lobbyIndex < lobbyConfigurations.Length)
-        {
-            return lobbyConfigurations[lobbyIndex];
-        }
-        return null;
+        return LobbyModel.GetConfig(lobbyIndex);
     }
     
     public bool CanPlayerAffordEntryFee(int lobbyIndex)
     {
-        if (PlayFabManager.Instance == null || !PlayFabManager.Instance.IsLoggedIn()) return false;
-        
         LobbyConfig config = GetLobbyConfig(lobbyIndex);
         if (config == null) return false; 
         
-        var data = PlayFabManager.Instance.currentPlayerData;
-        
-        if (config.entryFeeCash > 0f && data.cash < config.entryFeeCash) return false; 
-        if (config.entryFeeChips > 0 && data.coins < config.entryFeeChips) return false; 
+        if (config.entryFeeCash > 0f && PlayerModel.CashBalance < config.entryFeeCash) return false; 
+        if (config.entryFeeChips > 0 && PlayerModel.Coins < config.entryFeeChips) return false; 
         
         return true; 
     }
     
     public void SetLobbyConfig(int lobbyIndex, LobbyConfig config)
     {
-        if (lobbyConfigurations != null && lobbyIndex >= 0 && lobbyIndex < lobbyConfigurations.Length)
-        {
-            lobbyConfigurations[lobbyIndex] = config;
-        }
+        // Now handled via LobbyModel if needed.
+        // Direct modification is disabled to ensure SSOT (Single Source of Truth).
+        Debug.LogWarning("[HorizontalLobbyManager] SetLobbyConfig called. Use LobbyModel to update configurations.");
     }
     
     public void OpenGameplayObject(int lobbyIndex = -1)
