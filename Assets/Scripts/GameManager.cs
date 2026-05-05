@@ -115,6 +115,7 @@ public class GameManager : MonoBehaviour
     
     // Current lobby configuration
     private LobbyConfig currentLobbyConfig; // Current lobby configuration being played
+    private StartGameData currentMatchData; // Current Socket.io match data
     
     // Individual NumberGrid instances (one per player/CPU)
     private NumberGrid playerNumberGrid; // Player's own NumberGrid instance
@@ -2677,37 +2678,59 @@ public class GameManager : MonoBehaviour
             return;
         }
         
-        // Create a copy of available avatars to avoid duplicates
+        // If we have backend data, use the exact avatar provided
+        if (currentMatchData != null && currentMatchData.playerAvatars != null && currentMatchData.playerAvatars.Count > 0)
+        {
+            // For now, assume the first opponent in the payload is the CPU opponent
+            // Get all avatar values from the backend
+            List<string> backendAvatars = new List<string>(currentMatchData.playerAvatars.Values);
+            
+            // Assign avatars based on backend data (fallback to index 0 if not found)
+            for (int i = 0; i < cpuProfileImages.Length && i < numberOfCPUs; i++)
+            {
+                if (cpuProfileImages[i] == null) continue;
+                
+                // Pick the opponent's avatar string (skipping the first one if we assume it's the player, but for now we just map them)
+                string avatarStr = (i < backendAvatars.Count) ? backendAvatars[i] : "0";
+                
+                // Try to parse it to an index (e.g. "3" -> index 3), or just pick a random one if it's a string like "avatarBoy"
+                if (int.TryParse(avatarStr, out int avatarIndex) && avatarIndex >= 0 && avatarIndex < availableCPUAvatars.Count)
+                {
+                    cpuProfileImages[i].sprite = availableCPUAvatars[avatarIndex];
+                }
+                else
+                {
+                    // Fallback to a random avatar or specific string mapping
+                    cpuProfileImages[i].sprite = availableCPUAvatars[Random.Range(0, availableCPUAvatars.Count)];
+                }
+                
+                Debug.Log($"[GameManager] Assigned profile image to CPU {i + 1} from backend data: {avatarStr}");
+            }
+            return;
+        }
+        
+        // Fallback to random if no backend data
         List<Sprite> availableAvatars = new List<Sprite>(availableCPUAvatars);
         
         // Assign random avatars to each CPU
         for (int i = 0; i < cpuProfileImages.Length && i < numberOfCPUs; i++)
         {
-            if (cpuProfileImages[i] == null)
-            {
-                continue;
-            }
+            if (cpuProfileImages[i] == null) continue;
             
             if (availableAvatars.Count == 0)
             {
-                // If we run out of unique avatars, reset the list
                 availableAvatars = new List<Sprite>(availableCPUAvatars);
             }
             
-            // Randomly select an avatar
             int randomIndex = Random.Range(0, availableAvatars.Count);
-            Sprite selectedAvatar = availableAvatars[randomIndex];
+            cpuProfileImages[i].sprite = availableAvatars[randomIndex];
             
-            // Assign to CPU profile image
-            cpuProfileImages[i].sprite = selectedAvatar;
-            
-            // Remove from available list to avoid duplicates (if we have enough avatars)
             if (availableAvatars.Count > numberOfCPUs)
             {
                 availableAvatars.RemoveAt(randomIndex);
             }
             
-            Debug.Log($"[GameManager] Assigned profile image to CPU {i + 1}");
+            Debug.Log($"[GameManager] Assigned random profile image to CPU {i + 1}");
         }
     }
     
@@ -3064,6 +3087,7 @@ public class GameManager : MonoBehaviour
         
         // Clear current lobby config (will be set when new game starts)
         currentLobbyConfig = null;
+        currentMatchData = null;
         participantsAtStart.Clear();
         lastKnownPlayFabIds.Clear();
         playerRecoveryData.Clear();
@@ -3078,7 +3102,7 @@ public class GameManager : MonoBehaviour
     /// Configures the game from a lobby configuration
     /// Sets number of CPUs, handles entry fee, and stores prize information
     /// </summary>
-    public void ConfigureGameFromLobby(LobbyConfig config, int overrideCPUs = -1)
+    public void ConfigureGameFromLobby(LobbyConfig config, int overrideCPUs = -1, StartGameData matchData = null)
     {
         if (config == null)
         {
@@ -3117,9 +3141,18 @@ public class GameManager : MonoBehaviour
         
         // Set new lobby configuration
         currentLobbyConfig = config;
+        currentMatchData = matchData;
         
         // Update game duration from lobby configuration
-        this.gameTimer = config.gameTimer;
+        if (currentMatchData != null && currentMatchData.duration > 0)
+        {
+            this.gameTimer = currentMatchData.duration;
+            Debug.Log($"[GameManager] Overriding timer with backend duration: {this.gameTimer}s");
+        }
+        else
+        {
+            this.gameTimer = config.gameTimer;
+        }
         this.currentTimer = this.gameTimer;
         
         // Set number of CPUs based on lobby configuration or network override
@@ -3561,6 +3594,16 @@ public class GameManager : MonoBehaviour
         return currentLobbyConfig;
     }
     
+    public string GetCurrentRoomId()
+    {
+        return currentMatchData?.roomId;
+    }
+
+    public StartGameData GetCurrentMatchData()
+    {
+        return currentMatchData;
+    }
+    
     /// <summary>
     /// Creates individual NumberGrid instances for player and each CPU
     /// Each player/CPU gets their own independent board
@@ -3638,6 +3681,18 @@ public class GameManager : MonoBehaviour
         
         // Assign grids to DicesController and CPUs
         AssignGridsToControllers();
+        
+        // If we have a matrix from the backend, apply it to all grids so they match exactly
+        if (currentMatchData != null && currentMatchData.matrix != null && currentMatchData.matrix.Length == 25)
+        {
+            foreach (NumberGrid grid in allNumberGrids)
+            {
+                if (grid != null)
+                {
+                    grid.GenerateGridFromMatrix(currentMatchData.matrix);
+                }
+            }
+        }
     }
     
     /// <summary>

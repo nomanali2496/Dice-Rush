@@ -107,6 +107,7 @@ public class NumberGrid : MonoBehaviour
     
     private List<BoxData> boxDataList = new List<BoxData>(); // List to store all box data
     private List<GameObject> instantiatedBoxes = new List<GameObject>(); // List to store all instantiated boxes (for cleanup)
+    private bool gridGenerated = false; // Flag to prevent double generation
     private const int MIN_NUMBER = 2;
     private const int MAX_NUMBER = 12;
     private const int POWERUP_COUNT = 3;
@@ -149,10 +150,14 @@ public class NumberGrid : MonoBehaviour
             powerupTimerText.gameObject.SetActive(false);
         }
         
-        GenerateGrid();
+        // Only generate a random grid if one hasn't been provided by the server yet
+        if (!gridGenerated)
+        {
+            GenerateGrid();
+        }
+        
         // Initially disable all buttons until dice are rolled
         UpdateBoxInteractability();
-        // Timer is automatically started by GenerateGrid()
     }
 
     /// <summary>
@@ -275,11 +280,49 @@ public class NumberGrid : MonoBehaviour
         Debug.Log($"[NumberGrid] Grid scale calculated - Available: {availableWidth:F2}x{availableHeight:F2}, Scale Factor: {scaleFactor:F3}, Cell Size: {currentCellSizeX:F2}x{currentCellSizeY:F2}, Grid Size: {actualGridWidth:F2}x{actualGridHeight:F2}, Start Position: {startPosition}");
     }
     
+    public void GenerateGridFromMatrix(int[] matrix)
+    {
+        gridGenerated = true; // Set flag so Start() doesn't overwrite this
+        ClearGrid();
+        CalculateGridScale();
+        currentDiceSumPlayer = -1;
+        currentDiceSumCPU = -1;
+        cpuDiceSums.Clear();
+        cpuRollIds.Clear();
+
+        if (matrix == null || matrix.Length != 25)
+        {
+            Debug.LogError("[NumberGrid] Invalid matrix length! Falling back to random generation.");
+            GenerateGrid();
+            return;
+        }
+
+        for (int i = 0; i < matrix.Length; i++)
+        {
+            int number = matrix[i];
+            // If the matrix value is 0 or -1, treat it as a powerup (assuming standard implementation for now)
+            if (number <= 0)
+            {
+                // Just use a random powerup index for now if the matrix doesn't specify which one
+                int powerupIndex = UnityEngine.Random.Range(0, powerupSprites.Length);
+                CreatePowerupBox(powerupIndex, i);
+            }
+            else
+            {
+                CreateNumberBox(number, i);
+            }
+        }
+        
+        StartCoroutine(DelayedTimerStartAfterGrid());
+        Debug.Log("[NumberGrid] Grid generated successfully from backend matrix!");
+    }
+
     /// <summary>
     /// Generates the 5x5 grid with random positioning
     /// </summary>
     public void GenerateGrid()
     {
+        gridGenerated = true;
         // Clear existing boxes if any
         ClearGrid();
         

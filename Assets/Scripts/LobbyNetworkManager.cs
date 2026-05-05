@@ -496,7 +496,7 @@ public class LobbyNetworkManager : MonoBehaviourPunCallbacks
             }
             
             // Pass the number of CPUs needed to the LobbyManager first (start the game visually)
-            horizontalLobbyManager.StartGameFromNetwork(currentSelectedConfig.lobbyIndex, neededCPUs);
+            horizontalLobbyManager.StartGameFromNetwork(currentSelectedConfig.lobbyIndex, null, neededCPUs);
 
             // NEW: Save the lobby prizes (rules) to PlayFab Match Shared Data
             // This ensures that even if you disconnect, the server knows exactly what the prizes were.

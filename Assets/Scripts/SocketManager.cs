@@ -41,7 +41,7 @@ public class SocketManager : MonoBehaviour
 
         if (ioManager != null && ioManager.State == BestHTTP.SocketIO3.SocketManager.States.Open)
         {
-            Debug.Log("[SocketManager] Socket is already connected.");
+            Debug.Log("<color=#00FF00>✅ [SocketManager] Socket is already connected.</color>");
             return;
         }
 
@@ -59,7 +59,7 @@ public class SocketManager : MonoBehaviour
             }
         };
 
-        Debug.Log("[SocketManager] Attempting Socket.IO Handshake...");
+        Debug.Log("<color=#FFA500>⬆️ [Socket EMIT] Attempting Socket.IO Handshake...</color>");
         
         ioManager = new BestHTTP.SocketIO3.SocketManager(serverUri, options);
 
@@ -73,17 +73,17 @@ public class SocketManager : MonoBehaviour
 
     private void OnSocketConnected(ConnectResponse resp)
     {
-        Debug.Log("🎉 Socket.IO Connected successfully! The backend accepted the connection.");
+        Debug.Log("<color=#00FF00>🎉 ⬇️ [Socket ON] Connected successfully! The backend accepted the connection.</color>");
     }
 
     private void OnSocketDisconnected()
     {
-        Debug.LogWarning("Socket.IO Disconnected from server.");
+        Debug.LogWarning("⚠️ <color=#FFA500>⬇️ [Socket ON] Disconnected from server.</color>");
     }
 
     private void OnSocketError(Error err)
     {
-        Debug.LogError("Socket.IO Error: " + (err != null ? err.message : "Unknown Error"));
+        Debug.LogError("❌ <color=#FF0000>⬇️ [Socket ERROR] " + (err != null ? err.message : "Unknown Error") + "</color>");
     }
 
     private void OnDestroy()
@@ -105,8 +105,12 @@ public class FindMatchPayload
 [System.Serializable]
 public class StartGameData
 {
-    // Define properties here based on your backend payload. e.g.:
-    public string matchId;
+    public string roomId;
+    public int[] matrix;
+    public System.Collections.Generic.Dictionary<string, string> playerSides;
+    public System.Collections.Generic.Dictionary<string, string> playerAvatars;
+    public int duration;
+    public int stake;
 }
 
 [System.Serializable]

@@ -19,6 +19,9 @@ public class GameDebugViewer : MonoBehaviour
     public bool isLobbyDataLoaded;
     [Tooltip("The 12 live lobby configurations downloaded from the server.")]
     public List<LobbyConfig> lobbyConfigurations = new List<LobbyConfig>();
+    
+    [Header("Active Match (Socket.IO)")]
+    public StartGameData currentMatch;
 
     private void Update()
     {
@@ -49,6 +52,13 @@ public class GameDebugViewer : MonoBehaviour
             {
                 lobbyConfigurations[i] = LobbyModel.Configurations[i];
             }
+        }
+        
+        // Update Match Data
+        GameManager gm = FindObjectOfType<GameManager>();
+        if (gm != null)
+        {
+            currentMatch = gm.GetCurrentMatchData();
         }
     }
 }

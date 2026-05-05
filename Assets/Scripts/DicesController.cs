@@ -72,6 +72,19 @@ public class DicesController : MonoBehaviour
         
         // Validate faceRotations array
         ValidateFaceRotations();
+        
+        // Subscribe to server events
+        MatchmakingModel.OnDiceRolledEvent += HandleServerDiceRolled;
+    }
+    
+    private void OnDestroy()
+    {
+        // Unsubscribe to avoid memory leaks
+        MatchmakingModel.OnDiceRolledEvent -= HandleServerDiceRolled;
+        
+        // Clean up coroutines
+        if (rollCoroutine1 != null) StopCoroutine(rollCoroutine1);
+        if (rollCoroutine2 != null) StopCoroutine(rollCoroutine2);
     }
     
     /// <summary>
@@ -108,7 +121,7 @@ public class DicesController : MonoBehaviour
     }
     
     /// <summary>
-    /// Rolls both dice to random faces
+    /// Requests a dice roll from the server
     /// </summary>
     public void RollDices()
     {
@@ -124,11 +137,17 @@ public class DicesController : MonoBehaviour
             return;
         }
         
-        // Generate random face values (1-6)
-        targetDice1Value = Random.Range(1, 7);
-        targetDice2Value = Random.Range(1, 7);
+        // Get the current room ID from GameManager
+        GameManager gm = FindObjectOfType<GameManager>();
+        string roomId = gm != null ? gm.GetCurrentRoomId() : null;
         
-        // Start rolling animation
+        if (string.IsNullOrEmpty(roomId))
+        {
+            Debug.LogError("[DicesController] Cannot roll dice - no active match found!");
+            return;
+        }
+        
+        // Start "rolling" state (waiting for server)
         isRolling = true;
         
         // Disable button during roll
@@ -136,6 +155,26 @@ public class DicesController : MonoBehaviour
         {
             rollButton.interactable = false;
         }
+        
+        // Ask the server to roll
+        MatchmakingModel.RequestDiceRoll(roomId);
+    }
+
+    /// <summary>
+    /// Called when the server broadcasts the dice roll result
+    /// </summary>
+    private void HandleServerDiceRolled(DiceRolledData data)
+    {
+        // We might want to check if the roll was by this user or the CPU,
+        // but since Dice Rush often shares the same dice roll for both,
+        // we'll just animate it anyway.
+        
+        targetDice1Value = data.d1;
+        targetDice2Value = data.d2;
+        
+        // Ensure we are in rolling state (even if CPU rolled)
+        isRolling = true;
+        if (rollButton != null) rollButton.interactable = false;
         
         // Reset completion counter
         completedRolls = 0;
@@ -584,13 +623,6 @@ public class DicesController : MonoBehaviour
         {
             diceSumTextLegacy.text = "";
         }
-    }
-    
-    private void OnDestroy()
-    {
-        // Clean up coroutines
-        if (rollCoroutine1 != null) StopCoroutine(rollCoroutine1);
-        if (rollCoroutine2 != null) StopCoroutine(rollCoroutine2);
     }
     
     #region Test Methods

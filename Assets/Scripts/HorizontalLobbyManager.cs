@@ -685,7 +685,7 @@ public class HorizontalLobbyManager : MonoBehaviour
         
         if (_pendingLobbyIndex >= 0)
         {
-            StartGameFromNetwork(_pendingLobbyIndex);
+            StartGameFromNetwork(_pendingLobbyIndex, data, -1);
         }
     }
 
@@ -711,7 +711,7 @@ public class HorizontalLobbyManager : MonoBehaviour
         }
     }
 
-    public void StartGameFromNetwork(int lobbyIndex, int overrideCPUs = -1)
+    public void StartGameFromNetwork(int lobbyIndex, StartGameData matchData = null, int overrideCPUs = -1)
     {
         if (gameplayObject != null)
         {
@@ -721,7 +721,7 @@ public class HorizontalLobbyManager : MonoBehaviour
             if (gameManager != null && config != null)
             {
                 if (gameplayObject.activeSelf) gameplayObject.SetActive(false);
-                gameManager.ConfigureGameFromLobby(config, overrideCPUs);
+                gameManager.ConfigureGameFromLobby(config, overrideCPUs, matchData);
             }
             
             gameplayObject.SetActive(true);

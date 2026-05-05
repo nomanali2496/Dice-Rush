@@ -21,7 +21,7 @@ public static class MatchmakingModel
     {
         if (SocketManager.Instance == null || SocketManager.Instance.Socket == null)
         {
-            Debug.LogError("[MatchmakingModel] SocketManager is not ready!");
+            Debug.LogError("❌ <color=#FF0000>[Socket ERROR] SocketManager is not ready!</color>");
             OnMatchmakingFailed?.Invoke("Connection to server lost.");
             return;
         }
@@ -36,7 +36,7 @@ public static class MatchmakingModel
         };
 
         SocketManager.Instance.Socket.Emit("findMatch", payload);
-        Debug.Log($"[MatchmakingModel] Emitted 'findMatch' for mode '{mode}' with stake {stake}...");
+        Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'findMatch' for mode '{mode}' with stake {stake}...</color>");
     }
 
     public static void CancelSearch()
@@ -57,10 +57,10 @@ public static class MatchmakingModel
         socket.On<Error>("error", HandleError);
         socket.On<MatchmakingUpdateData>("matchmakingUpdate", HandleMatchmakingUpdate);
         
-        // Setup empty placeholders for other events shown in Postman
-        socket.On<string>("diceRolled", (data) => Debug.Log("[MatchmakingModel] diceRolled: " + data));
-        socket.On<string>("numberLocked", (data) => Debug.Log("[MatchmakingModel] numberLocked: " + data));
-        socket.On<string>("gameOver", (data) => Debug.Log("[MatchmakingModel] gameOver: " + data));
+        // Gameplay events
+        socket.On<DiceRolledData>("diceRolled", HandleDiceRolled);
+        socket.On<NumberLockedData>("numberLocked", HandleNumberLocked);
+        socket.On<string>("gameOver", (data) => Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'gameOver': " + data + "</color>"));
 
         listenersAdded = true;
     }
@@ -68,7 +68,7 @@ public static class MatchmakingModel
     private static void HandleStartGame(StartGameData data)
     {
         IsSearching = false;
-        Debug.Log($"[MatchmakingModel] Match Found! ID: {data?.matchId}");
+        Debug.Log($"<color=#00FFFF>⬇️ [Socket ON] 'startGame' received! Match ID: {data?.roomId}</color>");
         OnMatchFound?.Invoke(data);
     }
 
@@ -76,7 +76,7 @@ public static class MatchmakingModel
     {
         IsSearching = false;
         string msg = error != null ? error.message : "Unknown Server Error";
-        Debug.LogError("[MatchmakingModel] Server Error: " + msg);
+        Debug.LogError($"❌ <color=#FF0000>[Socket ERROR] 'error' received: {msg}</color>");
         OnMatchmakingFailed?.Invoke(msg);
     }
 
@@ -84,8 +84,56 @@ public static class MatchmakingModel
     {
         if (data != null)
         {
-            Debug.Log($"[MatchmakingModel] Queue Update: {data.current}/{data.target}");
+            Debug.Log($"<color=#00FFFF>⬇️ [Socket ON] 'matchmakingUpdate' Queue: {data.current}/{data.target}</color>");
             OnMatchmakingUpdated?.Invoke(data.current, data.target);
         }
     }
+
+    // --- GAMEPLAY EVENTS ---
+    public static event Action<DiceRolledData> OnDiceRolledEvent;
+    public static event Action<NumberLockedData> OnNumberLockedEvent;
+
+    public static void RequestDiceRoll(string roomId)
+    {
+        if (SocketManager.Instance?.Socket == null) return;
+
+        RollDiceRequestPayload payload = new RollDiceRequestPayload { roomId = roomId };
+        SocketManager.Instance.Socket.Emit("rollDiceRequest", payload);
+        Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'rollDiceRequest' for room {roomId}</color>");
+    }
+
+    private static void HandleDiceRolled(DiceRolledData data)
+    {
+        Debug.Log($"<color=#00FFFF>⬇️ [Socket ON] 'diceRolled': sum={data.sum} by {data.userId}</color>");
+        OnDiceRolledEvent?.Invoke(data);
+    }
+
+    private static void HandleNumberLocked(NumberLockedData data)
+    {
+        Debug.Log($"<color=#00FFFF>⬇️ [Socket ON] 'numberLocked': index={data.index} by {data.userId}</color>");
+        OnNumberLockedEvent?.Invoke(data);
+    }
+}
+
+[Serializable]
+public class RollDiceRequestPayload
+{
+    public string roomId;
+}
+
+[Serializable]
+public class DiceRolledData
+{
+    public int d1;
+    public int d2;
+    public int sum;
+    public string userId;
+}
+
+[Serializable]
+public class NumberLockedData
+{
+    public int index;
+    public string userId;
+    public int val;
 }
