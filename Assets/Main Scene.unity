@@ -21748,6 +21748,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3903625018092954011, guid: c0efaed249119934eac021f344791969, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7239759311811405111, guid: c0efaed249119934eac021f344791969, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.70394737
@@ -64586,7 +64590,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2103533192
 RectTransform:
   m_ObjectHideFlags: 0

@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -284,8 +284,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6db33e2a4f3c802489b837b374d2caba, type: 3}
   - {fileID: 21300000, guid: 97c8d487efaa39348bcc0dcb31307ff8, type: 3}
   - {fileID: 21300000, guid: b66537b6af42a8948b71496f08efa236, type: 3}
-  - {fileID: 21300000, guid: 9159d693b1cb69546a1ea7020bf7c0da, type: 3}
-  - {fileID: 21300000, guid: a9e82889ca273b14cb4dda8bc54c28bd, type: 3}
   coinPrefab: {fileID: 4424766503822717269, guid: 694cb4db5937eb84294333d2d22cf569, type: 3}
   maxCoins: 30
   spawnInterval: 0.2
