@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 /// <summary>
 /// Automatically scales Grid Layout Group cell size and spacing based on screen resolution
@@ -21,9 +22,25 @@ public class ShopGridScaler : MonoBehaviour
     
     [Header("References")]
     [SerializeField] private GridLayoutGroup gridLayoutGroup; // Grid Layout Group component (auto-assigned if null)
+    [SerializeField] private RectTransform cashBar; // Reference to Cash bar
+    [SerializeField] private RectTransform coinsBar; // Reference to Coins bar
+    [SerializeField] private RectTransform upperTitle; // Reference to Upper Title (e.g. "GET COINS")
+    [SerializeField] private RectTransform lowerTitle; // Reference to Lower Title
+    
+    // Storage for original offsets (for anchored elements)
+    private Dictionary<RectTransform, Vector4> originalOffsets = new Dictionary<RectTransform, Vector4>();
     
     private RectTransform rectTransform;
     private float scaleFactor = 1f;
+
+    private void Awake()
+    {
+        // Store original offsets for all anchored elements before any scaling happens
+        StoreOriginalOffsets(cashBar);
+        StoreOriginalOffsets(coinsBar);
+        StoreOriginalOffsets(upperTitle);
+        StoreOriginalOffsets(lowerTitle);
+    }
     
     private void Start()
     {
@@ -60,16 +77,23 @@ public class ShopGridScaler : MonoBehaviour
         float currentWidth = rectTransform.rect.width;
         float currentHeight = rectTransform.rect.height;
         
-        // Subtract padding from available space
-        float availableWidth = currentWidth - (paddingLeft + paddingRight);
-        float availableHeight = currentHeight - (paddingTop + paddingBottom);
+        // Calculate scale factors based on screen vs reference
+        float scaleFactorX = Screen.width / referenceParentSize.x;
+        float scaleFactorY = Screen.height / 3216f; // Use total screen height for layout-wide scaling
         
-        // Calculate scale factors based on width and height
-        float scaleX = availableWidth / referenceParentSize.x;
-        float scaleY = availableHeight / referenceParentSize.y;
+        // Use smart scaling logic from LobbyScaler
+        float maxScale = Mathf.Max(scaleFactorX, scaleFactorY);
+        float scaledWidth = referenceParentSize.x * maxScale;
+        float scaledHeight = 3216f * maxScale;
         
-        // Use the smaller scale factor to maintain aspect ratio
-        scaleFactor = Mathf.Min(scaleX, scaleY);
+        if (scaledWidth > Screen.width || scaledHeight > Screen.height)
+        {
+            scaleFactor = Mathf.Min(scaleFactorX, scaleFactorY);
+        }
+        else
+        {
+            scaleFactor = maxScale;
+        }
         
         // Calculate scaled cell size
         Vector2 scaledCellSize = new Vector2(
@@ -94,11 +118,43 @@ public class ShopGridScaler : MonoBehaviour
             Mathf.RoundToInt(paddingTop),
             Mathf.RoundToInt(paddingBottom)
         );
+
+        // Scale other UI elements using Offset Scaling (Marginal scaling)
+        ScaleByOffset(cashBar);
+        ScaleByOffset(coinsBar);
+        ScaleByOffset(upperTitle);
+        ScaleByOffset(lowerTitle);
         
         // Log results
-        Debug.Log($"[ShopGridScaler] ====== SCALE CALCULATION ====== Screen: {Screen.width}x{Screen.height} | Parent Size: {currentWidth:F2}x{currentHeight:F2} | Available: {availableWidth:F2}x{availableHeight:F2}");
-        Debug.Log($"[ShopGridScaler] Scale Factor: {scaleFactor:F3} | Cell Size: {scaledCellSize.x:F2}x{scaledCellSize.y:F2} | Spacing: {scaledSpacing.x:F2}x{scaledSpacing.y:F2}");
+        Debug.Log($"[ShopGridScaler] ====== SCALE CALCULATION ====== Screen: {Screen.width}x{Screen.height} | Scale Factor: {scaleFactor:F3}");
+        Debug.Log($"[ShopGridScaler] Cell Size: {scaledCellSize.x:F2}x{scaledCellSize.y:F2} | Spacing: {scaledSpacing.x:F2}x{scaledSpacing.y:F2}");
         Debug.Log($"[ShopGridScaler] Padding: L{paddingLeft:F0} R{paddingRight:F0} T{paddingTop:F0} B{paddingBottom:F0}");
+    }
+
+    private void StoreOriginalOffsets(RectTransform element)
+    {
+        if (element != null && !originalOffsets.ContainsKey(element))
+        {
+            float left = element.offsetMin.x;
+            float bottom = element.offsetMin.y;
+            float right = -element.offsetMax.x;
+            float top = -element.offsetMax.y;
+            originalOffsets[element] = new Vector4(left, right, top, bottom);
+        }
+    }
+
+    private void ScaleByOffset(RectTransform element)
+    {
+        if (element == null || !originalOffsets.ContainsKey(element)) return;
+
+        Vector4 offsets = originalOffsets[element];
+        float scaledLeft = offsets.x * scaleFactor;
+        float scaledRight = offsets.y * scaleFactor;
+        float scaledTop = offsets.z * scaleFactor;
+        float scaledBottom = offsets.w * scaleFactor;
+
+        element.offsetMin = new Vector2(scaledLeft, scaledBottom);
+        element.offsetMax = new Vector2(-scaledRight, -scaledTop);
     }
     
     /// <summary>
