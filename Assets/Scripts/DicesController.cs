@@ -75,21 +75,20 @@ public class DicesController : MonoBehaviour
         
         // Subscribe to server events
         MatchmakingModel.OnDiceRolledEvent += HandleServerDiceRolled;
+        MatchmakingModel.OnSocketErrorEvent += HandleSocketError;
     }
     
     private void OnDestroy()
     {
         // Unsubscribe to avoid memory leaks
         MatchmakingModel.OnDiceRolledEvent -= HandleServerDiceRolled;
+        MatchmakingModel.OnSocketErrorEvent -= HandleSocketError;
         
         // Clean up coroutines
         if (rollCoroutine1 != null) StopCoroutine(rollCoroutine1);
         if (rollCoroutine2 != null) StopCoroutine(rollCoroutine2);
     }
     
-    /// <summary>
-    /// Normalizes euler angles to handle equivalent rotations (e.g., -90 = 270, 360 = 0)
-    /// </summary>
     private Vector3 NormalizeEulerForComparison(Vector3 euler)
     {
         float x = NormalizeAngle(euler.x);
@@ -194,6 +193,22 @@ public class DicesController : MonoBehaviour
             completedRolls++;
             CheckRollComplete();
         }));
+    }
+
+    /// <summary>
+    /// Resets the roll state if the server returns an error
+    /// </summary>
+    private void HandleSocketError(string error)
+    {
+        if (isRolling && (error.Contains("roll") || error.Contains("Pending")))
+        {
+            Debug.Log("[DicesController] Resetting roll state due to server error: " + error);
+            isRolling = false;
+            if (rollButton != null)
+            {
+                rollButton.interactable = true;
+            }
+        }
     }
     
     /// <summary>

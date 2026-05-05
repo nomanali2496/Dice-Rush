@@ -68,16 +68,25 @@ public static class MatchmakingModel
     private static void HandleStartGame(StartGameData data)
     {
         IsSearching = false;
-        Debug.Log($"<color=#00FFFF>⬇️ [Socket ON] 'startGame' received! Match ID: {data?.roomId}</color>");
+        Debug.Log($"<color=#00FFFF>⬇️ [Socket ON] 'startGame' received! Match ID: {data?.roomId}, Matrix Size: {data?.matrix?.Length}</color>");
+        
+        // Reset sequence for new match
         OnMatchFound?.Invoke(data);
     }
 
     private static void HandleError(Error error)
     {
-        IsSearching = false;
         string msg = error != null ? error.message : "Unknown Server Error";
         Debug.LogError($"❌ <color=#FF0000>[Socket ERROR] 'error' received: {msg}</color>");
-        OnMatchmakingFailed?.Invoke(msg);
+        
+        // Only trigger matchmaking failure if we were actually searching
+        if (IsSearching)
+        {
+            IsSearching = false;
+            OnMatchmakingFailed?.Invoke(msg);
+        }
+        
+        OnSocketErrorEvent?.Invoke(msg);
     }
 
     private static void HandleMatchmakingUpdate(MatchmakingUpdateData data)
@@ -92,6 +101,7 @@ public static class MatchmakingModel
     // --- GAMEPLAY EVENTS ---
     public static event Action<DiceRolledData> OnDiceRolledEvent;
     public static event Action<NumberLockedData> OnNumberLockedEvent;
+    public static event Action<string> OnSocketErrorEvent;
 
     public static void RequestDiceRoll(string roomId)
     {
@@ -104,15 +114,39 @@ public static class MatchmakingModel
 
     private static void HandleDiceRolled(DiceRolledData data)
     {
-        Debug.Log($"<color=#00FFFF>⬇️ [Socket ON] 'diceRolled': sum={data.sum} by {data.userId}</color>");
+        Debug.Log($"<color=#00FFFF>⬇️ [Socket ON] 'diceRolled': d1={data.d1}, d2={data.d2}, sum={data.sum} by {data.userId}</color>");
         OnDiceRolledEvent?.Invoke(data);
+    }
+
+    public static void EmitTapNumber(string roomId, int index, int val, int sequence)
+    {
+        if (SocketManager.Instance?.Socket == null) return;
+
+        TapNumberPayload payload = new TapNumberPayload
+        {
+            roomId = roomId,
+            index = index,
+            val = val,
+            sequence = sequence
+        };
+        SocketManager.Instance.Socket.Emit("tapNumber", payload);
+        Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'tapNumber' for room {roomId} | index={index}, val={val}, seq={sequence}</color>");
     }
 
     private static void HandleNumberLocked(NumberLockedData data)
     {
-        Debug.Log($"<color=#00FFFF>⬇️ [Socket ON] 'numberLocked': index={data.index} by {data.userId}</color>");
+        Debug.Log($"<color=#00FFFF>⬇️ [Socket ON] 'numberLocked': index={data.index} by {data.userId}, val={data.val}</color>");
         OnNumberLockedEvent?.Invoke(data);
     }
+}
+
+[Serializable]
+public class TapNumberPayload
+{
+    public string roomId;
+    public int index;
+    public int val;
+    public int sequence;
 }
 
 [Serializable]

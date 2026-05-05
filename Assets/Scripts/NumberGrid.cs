@@ -108,6 +108,8 @@ public class NumberGrid : MonoBehaviour
     private List<BoxData> boxDataList = new List<BoxData>(); // List to store all box data
     private List<GameObject> instantiatedBoxes = new List<GameObject>(); // List to store all instantiated boxes (for cleanup)
     private bool gridGenerated = false; // Flag to prevent double generation
+    private string ownerUserId; // The Socket.io User ID that owns this grid
+    private int tapSequence = 0; // Sequence counter for anti-cheat
     private const int MIN_NUMBER = 2;
     private const int MAX_NUMBER = 12;
     private const int POWERUP_COUNT = 3;
@@ -155,6 +157,9 @@ public class NumberGrid : MonoBehaviour
         {
             GenerateGrid();
         }
+        
+        // Subscribe to server events
+        MatchmakingModel.OnNumberLockedEvent += HandleServerNumberLocked;
         
         // Initially disable all buttons until dice are rolled
         UpdateBoxInteractability();
@@ -280,9 +285,15 @@ public class NumberGrid : MonoBehaviour
         Debug.Log($"[NumberGrid] Grid scale calculated - Available: {availableWidth:F2}x{availableHeight:F2}, Scale Factor: {scaleFactor:F3}, Cell Size: {currentCellSizeX:F2}x{currentCellSizeY:F2}, Grid Size: {actualGridWidth:F2}x{actualGridHeight:F2}, Start Position: {startPosition}");
     }
     
+    public void SetOwner(string userId)
+    {
+        this.ownerUserId = userId;
+    }
+    
     public void GenerateGridFromMatrix(int[] matrix)
     {
         gridGenerated = true; // Set flag so Start() doesn't overwrite this
+        tapSequence = 0; // Reset sequence for new match
         ClearGrid();
         CalculateGridScale();
         currentDiceSumPlayer = -1;
@@ -860,12 +871,56 @@ public class NumberGrid : MonoBehaviour
             return;
         }
         
+        // EMIT TAP TO SERVER instead of locking locally
+        GameManager gm = FindObjectOfType<GameManager>();
+        string roomId = gm != null ? gm.GetCurrentRoomId() : null;
+        
+        if (!string.IsNullOrEmpty(roomId))
+        {
+            // Find index of this boxData in our list
+            int index = boxDataList.IndexOf(boxData);
+            if (index != -1)
+            {
+                tapSequence++;
+                MatchmakingModel.EmitTapNumber(roomId, index, boxData.number, tapSequence);
+            }
+        }
+        else
+        {
+            // Fallback for offline/Photon testing (original logic)
+            PerformLocalBoxLock(boxData, PlayerType.Player);
+        }
+    }
+
+    /// <summary>
+    /// Processes a number lock confirmation from the server
+    /// </summary>
+    private void HandleServerNumberLocked(NumberLockedData data)
+    {
+        // Check if this lock belongs to this grid's owner
+        if (data.userId != ownerUserId) return;
+        
+        if (data.index >= 0 && data.index < boxDataList.Count)
+        {
+            BoxData boxData = boxDataList[data.index];
+            if (!boxData.isSelected)
+            {
+                PerformLocalBoxLock(boxData, PlayerType.Player);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Physically locks a box on the grid
+    /// </summary>
+    private void PerformLocalBoxLock(BoxData boxData, PlayerType playerType)
+    {
         // Mark as selected (this locks the selection)
         boxData.isSelected = true;
-        boxData.selectedByPlayer = PlayerType.Player; // Player selection
-        boxData.selectedByCPUIndex = -1; // Not a CPU selection
-        boxData.selectedInRollSum = currentDiceSumPlayer; // Track which roll this was selected in
-        boxData.selectedInRollId = currentRollIdPlayer; // Track which roll ID this was selected in
+        boxData.selectedByPlayer = playerType;
+        boxData.selectedByCPUIndex = -1;
+        boxData.selectedInRollSum = (playerType == PlayerType.Player) ? currentDiceSumPlayer : currentDiceSumCPU;
+        boxData.selectedInRollId = (playerType == PlayerType.Player) ? currentRollIdPlayer : currentRollIdCPU;
         
         // Disable this button (permanently locked)
         if (boxData.selectButton != null)
@@ -882,7 +937,7 @@ public class NumberGrid : MonoBehaviour
         // Trigger event
         OnBoxSelected?.Invoke(this, boxData.number, boxData.boxObject);
         
-        Debug.Log($"[NumberGrid] Box with number {boxData.number} selected and locked!");
+        Debug.Log($"[NumberGrid] Box with index {boxDataList.IndexOf(boxData)} (number {boxData.number}) locked by server!");
         
         // Check if all boxes are selected
         CheckIfAllBoxesSelected();
@@ -1774,6 +1829,7 @@ public class NumberGrid : MonoBehaviour
     
     private void OnDestroy()
     {
+        MatchmakingModel.OnNumberLockedEvent -= HandleServerNumberLocked;
         StopPowerupTimer();
         ClearGrid();
     }

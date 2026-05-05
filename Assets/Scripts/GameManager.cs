@@ -3649,12 +3649,15 @@ public class GameManager : MonoBehaviour
             // Subscribe to player grid events
             playerNumberGrid.OnAllBoxesSelected += OnAllBoxesSelected;
             playerNumberGrid.OnBoxSelected += OnBoxSelected;
-            playerNumberGrid.OnWrongBoxSelected += OnWrongBoxSelected; // Subscribe to wrong click event
+            playerNumberGrid.OnWrongBoxSelected += OnWrongBoxSelected;
+            
+            // Set the owner ID for Socket.io communication
+            playerNumberGrid.SetOwner(PlayerModel.Id);
+            
             // Ensure player grid is active and visible
             playerNumberGrid.gameObject.SetActive(true);
-            // Hide CPU grids visually (only show player's grid)
-            // Player grid stays visible at default position
-            Debug.Log("[GameManager] Created player's NumberGrid");
+            
+            Debug.Log($"[GameManager] Created player's NumberGrid with owner ID: {PlayerModel.Id}");
         }
         
         // Create CPU NumberGrids (hidden off-screen or in separate area)
@@ -3672,9 +3675,22 @@ public class GameManager : MonoBehaviour
                 
                 // Hide CPU grids from view (position off-screen or disable renderer)
                 // We can position them far off-screen or disable the GameObject
-                cpuGrid.gameObject.SetActive(false); // Hide CPU grids completely
-                // Alternative: Position off-screen: cpuGrid.transform.localPosition = new Vector3(10000 + i * 1000, 0, 0);
+                // Set CPU owner ID from MatchData if available
+                if (currentMatchData != null && currentMatchData.playerSides != null)
+                {
+                    // Find the ID that is NOT the player
+                    foreach (var pair in currentMatchData.playerSides)
+                    {
+                        if (pair.Key != PlayerModel.Id)
+                        {
+                            cpuGrid.SetOwner(pair.Key);
+                            Debug.Log($"[GameManager] Assigned CPU grid {i} to server user: {pair.Key}");
+                            break; // For 1v1, only one other player
+                        }
+                    }
+                }
                 
+                cpuGrid.gameObject.SetActive(false); // Hide CPU grids completely
                 Debug.Log($"[GameManager] Created CPU {i}'s NumberGrid (hidden)");
             }
         }
