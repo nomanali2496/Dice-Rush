@@ -147,6 +147,10 @@ public class GameManager : MonoBehaviour
     private const int MAX_PLAYFAB_RETRIES = 5;
     private Coroutine retryCoroutine;
     private Coroutine reconnectSyncCoroutine;
+
+    // Events for separate frontend/backend handling
+    public static System.Action OnGameStarted;
+    public static System.Action OnGameEnded;
     
     private void Start()
     {
@@ -578,6 +582,9 @@ public class GameManager : MonoBehaviour
             SettingManager.instance.OnCountdownComplete();
             Debug.Log("[GameManager] Countdown complete - signaled SettingManager to start gameplay music");
         }
+        
+        // Fire event for clean frontend separation
+        OnGameStarted?.Invoke();
         
         // Start powerup timers for all grids (player and CPUs) after countdown completes
         StartAllPowerupTimers();
@@ -2041,8 +2048,11 @@ public class GameManager : MonoBehaviour
             gameplayScreen.SetActive(false);
         }
         
-        // Show winner screen
-        if (winnerScreen != null)
+        // Fire event for clean frontend separation
+        OnGameEnded?.Invoke();
+        
+        // Show winner screen with animation
+        if (winnerScreenScript != null)
         {
             winnerScreen.SetActive(true);
         }

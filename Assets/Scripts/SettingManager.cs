@@ -23,11 +23,9 @@ public class SettingManager : MonoBehaviour
     [SerializeField] private string currentUserId = ""; // Current user's PlayFab ID (for account-specific storage)
     [SerializeField] private string storageKey = "N/A"; // PlayerPrefs key being used for storage
     
-    // PlayerPrefs key prefix for music setting (account-specific)
-    private const string MUSIC_ENABLED_KEY_PREFIX = "MusicEnabled_";
-    
-    // PlayerPrefs key prefix for sound setting (account-specific)
-    private const string SOUND_ENABLED_KEY_PREFIX = "SoundEnabled_";
+    // PlayerPrefs keys for music and sound (device-wide)
+    private const string MUSIC_ENABLED_KEY = "MusicEnabled";
+    private const string SOUND_ENABLED_KEY = "SoundEnabled";
     
     private bool isMusicEnabled = true; // Default music state (enabled)
     private bool isSoundEnabled = true; // Default sound state (enabled)
@@ -51,11 +49,24 @@ public class SettingManager : MonoBehaviour
         if (authManager != null)
         {
             authManager.OnAuthenticationSuccess += OnUserLoggedIn;
-            Debug.Log("[SettingManager] Successfully subscribed to AuthenticationManager events");
         }
-        else
+
+        // Subscribe to clean logic events for music shifting
+        MatchmakingModel.OnMatchFound += HandleMatchFound;
+        MatchmakingModel.OnMatchmakingFailed += HandleMatchmakingFailed;
+        GameManager.OnGameStarted += HandleGameStarted;
+        GameManager.OnGameEnded += HandleGameEnded;
+        
+        // Ensure music is stopped initially (before login)
+        if (SoundManager.instance != null)
         {
-            Debug.LogWarning("[SettingManager] AuthenticationManager not found! Settings will use device-based storage.");
+            SoundManager.instance.StopAllMusic();
+        }
+        
+        // Check if user is already logged in (Server JWT)
+        if (BackendAuthService.HasStoredJWT())
+        {
+            OnUserLoggedIn();
         }
         
         // Initialize state tracker
@@ -63,95 +74,69 @@ public class SettingManager : MonoBehaviour
         {
             lastMainMenuActiveState = mainMenu.activeInHierarchy;
         }
-        if (gameplayScreen != null)
-        {
-            lastGameplayActiveState = gameplayScreen.activeInHierarchy;
-        }
         
-        // Ensure music is stopped initially (before login)
-        if (SoundManager.instance != null)
-        {
-            SoundManager.instance.StopAllMusic();
-        }
-        Debug.Log("[SettingManager] All music muted until user logs in");
-        
-        // Check if user is already logged in (in case Start() runs after login)
-        if (PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
-        {
-            OnUserLoggedIn();
-        }
-        else
-        {
-            // User not logged in yet - don't load or apply settings yet
-            // Settings will be loaded when user logs in
-            Debug.Log("[SettingManager] User not logged in - music will start after login");
-        }
-        
-        // Setup music toggle listener
-        if (musicToggle != null)
-        {
-            musicToggle.onValueChanged.AddListener(OnMusicToggleChanged);
-            // Set toggle to default (will be updated after login)
-            musicToggle.isOn = true; // Default, will be updated after login
-        }
-        else
-        {
-            Debug.LogWarning("[SettingManager] Music toggle not assigned! Please assign it in the Inspector.");
-        }
-        
-        // Setup sound toggle listener
-        if (soundToggle != null)
-        {
-            soundToggle.onValueChanged.AddListener(OnSoundToggleChanged);
-            // Set toggle to default (will be updated after login)
-            soundToggle.isOn = true; // Default, will be updated after login
-        }
-        else
-        {
-            Debug.LogWarning("[SettingManager] Sound toggle not assigned! Please assign it in the Inspector.");
-        }
-        
-
+        // Setup toggles
+        if (musicToggle != null) musicToggle.onValueChanged.AddListener(OnMusicToggleChanged);
+        if (soundToggle != null) soundToggle.onValueChanged.AddListener(OnSoundToggleChanged);
     }
 
     private void Update()
     {
-        // 1. Check Main Menu state changes
+        // Check if Main Menu just became active (e.g., after Splash Screen finishes)
         if (mainMenu != null)
         {
             bool isMainMenuActive = mainMenu.activeInHierarchy;
             if (isMainMenuActive != lastMainMenuActiveState)
             {
                 lastMainMenuActiveState = isMainMenuActive;
-                Debug.Log($"[SettingManager] Main Menu active state changed to: {isMainMenuActive}. Refreshing music.");
-                ApplyMusicSetting();
-            }
-        }
-
-        // 2. Check Gameplay state changes
-        if (gameplayScreen != null)
-        {
-            bool isGameplayActive = gameplayScreen.activeInHierarchy;
-            if (isGameplayActive != lastGameplayActiveState)
-            {
-                lastGameplayActiveState = isGameplayActive;
-                Debug.Log($"[SettingManager] Gameplay active state changed to: {isGameplayActive}. Refreshing music.");
-                
-                // If gameplay just became active, set countdown flag to delay music
-                if (isGameplayActive)
+                if (isMainMenuActive)
                 {
-                    isCountdownActive = true;
-                    Debug.Log("[SettingManager] Gameplay activated - waiting for countdown to complete before starting music");
-                }
-                else
-                {
-                    // Gameplay deactivated, apply music setting immediately (stop gameplay music)
-                    isCountdownActive = false;
+                    Debug.Log("[SettingManager] Main Menu became active. Checking music...");
                     ApplyMusicSetting();
                 }
             }
         }
     }
+
+    #region Event Handlers
+    
+    private void HandleMatchFound(StartGameData data)
+    {
+        // Stop lobby music as soon as match is found (during loading/transition)
+        if (SoundManager.instance != null)
+        {
+            SoundManager.instance.StopBackgroundMusic();
+        }
+    }
+
+    private void HandleMatchmakingFailed(string error)
+    {
+        // Resume lobby music if match fails
+        ApplyMusicSetting();
+    }
+
+    private void HandleGameStarted()
+    {
+        // Play gameplay music when countdown is done
+        if (isMusicEnabled && SoundManager.instance != null)
+        {
+            // HARD STOP for background music to ensure no overlap
+            SoundManager.instance.StopBackgroundMusic();
+            SoundManager.instance.PlayGameplayMusic();
+        }
+    }
+
+    private void HandleGameEnded()
+    {
+        // Return to lobby music when results screen appears
+        if (SoundManager.instance != null)
+        {
+            SoundManager.instance.StopGameplayMusic();
+            ApplyMusicSetting(); // Re-applies lobby music if enabled
+        }
+    }
+    
+    #endregion
     
     /// <summary>
     /// Called when user successfully logs in - gets the user ID for account-specific storage
@@ -160,23 +145,15 @@ public class SettingManager : MonoBehaviour
     {
         hasUserLoggedIn = true;
         
-        // Get the current user's PlayFab ID for account-specific storage
-        if (PlayFabManager.Instance != null)
+        // Get the current user's ID for account-specific storage (if needed later)
+        currentUserId = PlayerModel.Id;
+        if (string.IsNullOrEmpty(currentUserId))
         {
-            currentUserId = PlayFabManager.Instance.GetPlayFabId();
-            if (string.IsNullOrEmpty(currentUserId))
-            {
-                Debug.LogWarning("[SettingManager] PlayFabId is empty, using device-based storage (not account-specific)");
-            }
-            else
-            {
-                Debug.Log($"[SettingManager] User logged in with PlayFabId: {currentUserId}");
-            }
+            Debug.LogWarning("[SettingManager] User ID is empty, using device-based storage");
         }
         else
         {
-            Debug.LogWarning("[SettingManager] PlayFabManager not found, using device-based storage (not account-specific)");
-            currentUserId = ""; // Fallback to device-based storage
+            Debug.Log($"[SettingManager] User logged in with ID: {currentUserId}");
         }
         
         // Update storage key immediately
@@ -270,61 +247,34 @@ public class SettingManager : MonoBehaviour
     /// </summary>
     public void ApplyMusicSetting()
     {
-        // 1. Check Login Status
-        bool isLoggedIn = hasUserLoggedIn;
-        if (PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
-        {
-            isLoggedIn = true;
-        }
+        Debug.Log($"[SettingManager] Applying Music Setting... Enabled: {isMusicEnabled}");
 
-        if (!isLoggedIn)
+        // 1. Check Login Status (Custom Server JWT)
+        if (BackendAuthService.Instance == null || !BackendAuthService.HasStoredJWT())
         {
+            Debug.Log("[SettingManager] Not logged in to server yet. Stopping music.");
             StopAllMusic();
             return;
         }
 
-        // 2. Determine Logic based on Screens
-        bool isGameplayActive = (gameplayScreen != null && gameplayScreen.activeInHierarchy);
-        bool isMainMenuActive = (mainMenu != null && mainMenu.activeInHierarchy);
-        
-        // "Gameplay" music plays ONLY if Gameplay is active AND countdown is NOT active
-        bool shouldPlayGameplay = isGameplayActive && !isCountdownActive;
-        
-        // "Normal" music plays ONLY if Gameplay is NOT active AND Main Menu IS active
-        bool shouldPlayNormal = !isGameplayActive && isMainMenuActive;
+        // 2. Check if Main Menu is actually visible
+        bool isMenuActive = (mainMenu != null && mainMenu.activeInHierarchy);
+        Debug.Log($"[SettingManager] Menu Active: {isMenuActive}");
 
-        // 3. Apply Settings (Toggle Check)
+        // 3. Apply Settings
         if (isMusicEnabled)
         {
-            // --- GAMEPLAY MUSIC ---
-            if (shouldPlayGameplay)
+            if (isMenuActive)
             {
-                // Stop background music and play gameplay music
-                if (SoundManager.instance != null)
-                {
-                    SoundManager.instance.StopBackgroundMusic();
-                    SoundManager.instance.PlayGameplayMusic();
-                }
+                if (SoundManager.instance == null) SoundManager.instance = FindObjectOfType<SoundManager>();
+                if (SoundManager.instance != null) SoundManager.instance.PlayBackgroundMusic();
             }
-            // --- NORMAL / MAIN MENU MUSIC ---
-            else if (shouldPlayNormal)
-            {
-                // Stop gameplay music and play background music
-                if (SoundManager.instance != null)
-                {
-                    SoundManager.instance.StopGameplayMusic();
-                    SoundManager.instance.PlayBackgroundMusic();
-                }
-            }
-            else
-            {
-                // Neither screen is active, stop all music
-                StopAllMusic();
-            }
+            // (Note: Gameplay music is handled by its own event-driven logic)
         }
         else
         {
-            // Music Disabled Globally
+            // Music disabled globally - stop EVERYTHING
+            Debug.Log("[SettingManager] Music disabled. Stopping all music sources.");
             StopAllMusic();
         }
     }
@@ -338,29 +288,19 @@ public class SettingManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Gets the account-specific PlayerPrefs key for storing music setting
+    /// Gets the PlayerPrefs key for storing music setting
     /// </summary>
     private string GetMusicEnabledKey()
     {
-        if (string.IsNullOrEmpty(currentUserId))
-        {
-            // Fallback to device-based storage if no user ID
-            return MUSIC_ENABLED_KEY_PREFIX + "Device";
-        }
-        return MUSIC_ENABLED_KEY_PREFIX + currentUserId;
+        return MUSIC_ENABLED_KEY;
     }
     
     /// <summary>
-    /// Gets the account-specific PlayerPrefs key for storing sound setting
+    /// Gets the PlayerPrefs key for storing sound setting
     /// </summary>
     private string GetSoundEnabledKey()
     {
-        if (string.IsNullOrEmpty(currentUserId))
-        {
-            // Fallback to device-based storage if no user ID
-            return SOUND_ENABLED_KEY_PREFIX + "Device";
-        }
-        return SOUND_ENABLED_KEY_PREFIX + currentUserId;
+        return SOUND_ENABLED_KEY;
     }
     
     /// <summary>
@@ -497,6 +437,11 @@ public class SettingManager : MonoBehaviour
         {
             authManager.OnAuthenticationSuccess -= OnUserLoggedIn;
         }
+
+        MatchmakingModel.OnMatchFound -= HandleMatchFound;
+        MatchmakingModel.OnMatchmakingFailed -= HandleMatchmakingFailed;
+        GameManager.OnGameStarted -= HandleGameStarted;
+        GameManager.OnGameEnded -= HandleGameEnded;
         
         // Unsubscribe from toggle events
         if (musicToggle != null)
