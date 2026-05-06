@@ -131,6 +131,7 @@ public class NumberGrid : MonoBehaviour
     // Powerup timer system
     private Coroutine powerupTimerCoroutine; // Coroutine for powerup timer
     private BoxData currentlyVisiblePowerup = null; // Currently visible powerup box
+    private BoxData lastTappedBoxData = null; // Track last tapped box for feedback
     private System.Random powerupRandom = new System.Random(); // Random for powerup selection
     
     // Events
@@ -160,6 +161,7 @@ public class NumberGrid : MonoBehaviour
         
         // Subscribe to server events
         MatchmakingModel.OnNumberLockedEvent += HandleServerNumberLocked;
+        MatchmakingModel.OnTapResultEvent += HandleServerTapResult;
         
         // Initially disable all buttons until dice are rolled
         UpdateBoxInteractability();
@@ -767,6 +769,7 @@ public class NumberGrid : MonoBehaviour
         {
             currentRollIdPlayer++;
             currentDiceSumPlayer = sum;
+            tapSequence = 0; // Reset sequence for anti-cheat on every new roll
         }
         else // CPU
         {
@@ -855,22 +858,12 @@ public class NumberGrid : MonoBehaviour
             return;
         }
         
-        if (currentDiceSumPlayer <= 0 || boxData.number != currentDiceSumPlayer)
-        {
-            Debug.LogWarning($"[NumberGrid] Cannot select box with number {boxData.number}. Current player dice sum is {currentDiceSumPlayer}!");
-            OnWrongBoxSelected?.Invoke(this, boxData.number, boxData.boxObject);
-            return;
-        }
+        // REMOVED local checks for dice sum and duplicate taps.
+        // We now send EVERY tap to the server so it can validate and penalize (-50) if wrong.
         
-        // Check if another box with the same number is already selected by PLAYER in THIS roll
-        // Prevent selecting a second box with the same number in the same roll (only for this player)
-        bool anotherBoxSelectedInThisRoll = IsAnyBoxWithNumberSelectedInCurrentRoll(boxData.number, PlayerType.Player, -1);
-        if (anotherBoxSelectedInThisRoll)
-        {
-            Debug.LogWarning($"[NumberGrid] Another box with number {boxData.number} is already selected by Player in this roll (sum: {currentDiceSumPlayer}). Cannot select another one until next roll.");
-            return;
-        }
-        
+        // Store this as the last tapped box for visual feedback from server
+        lastTappedBoxData = boxData;
+
         // EMIT TAP TO SERVER instead of locking locally
         GameManager gm = FindObjectOfType<GameManager>();
         string roomId = gm != null ? gm.GetCurrentRoomId() : null;
@@ -881,8 +874,8 @@ public class NumberGrid : MonoBehaviour
             int index = boxDataList.IndexOf(boxData);
             if (index != -1)
             {
-                tapSequence++;
                 MatchmakingModel.EmitTapNumber(roomId, index, boxData.number, tapSequence);
+                tapSequence++; // Increment AFTER sending so the first tap is 0
             }
         }
         else
@@ -907,6 +900,23 @@ public class NumberGrid : MonoBehaviour
             {
                 PerformLocalBoxLock(boxData, PlayerType.Player);
             }
+        }
+    }
+
+    private void HandleServerTapResult(TapResultData data)
+    {
+        if (!data.correct)
+        {
+            // Trigger the "Wrong" visual effect on the specific box that was tapped
+            GameObject targetObj = (lastTappedBoxData != null) ? lastTappedBoxData.boxObject : null;
+            int num = (lastTappedBoxData != null) ? lastTappedBoxData.number : -1;
+            
+            OnWrongBoxSelected?.Invoke(this, num, targetObj); 
+            Debug.Log("<color=#FF0000>❌ Server says: WRONG TAP!</color>");
+        }
+        else
+        {
+            Debug.Log("<color=#00FF00>✅ Server says: CORRECT TAP!</color>");
         }
     }
 

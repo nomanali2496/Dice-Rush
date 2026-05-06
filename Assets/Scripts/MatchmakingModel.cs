@@ -15,6 +15,9 @@ public static class MatchmakingModel
     public static event Action<string> OnMatchmakingFailed;
     public static event Action<int, int> OnMatchmakingUpdated;
 
+    private static string lastMode;
+    private static int lastStake;
+    private static string lastLobbyId;
     private static bool listenersAdded = false;
 
     public static void FindMatch(string mode, int stake, string lobbyId)
@@ -25,6 +28,10 @@ public static class MatchmakingModel
             OnMatchmakingFailed?.Invoke("Connection to server lost.");
             return;
         }
+
+        lastMode = mode;
+        lastStake = stake;
+        lastLobbyId = lobbyId;
 
         IsSearching = true;
         EnsureListenersAdded();
@@ -42,9 +49,20 @@ public static class MatchmakingModel
 
     public static void CancelSearch()
     {
+        if (SocketManager.Instance != null && SocketManager.Instance.Socket != null && IsSearching)
+        {
+            FindMatchPayload payload = new FindMatchPayload 
+            { 
+                mode = lastMode, 
+                stake = lastStake,
+                lobbyId = lastLobbyId
+            };
+            
+            SocketManager.Instance.Socket.Emit("cancelMatchmaking", payload);
+            Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'cancelMatchmaking' for Lobby: {lastLobbyId}</color>");
+        }
+        
         IsSearching = false;
-        // Optionally emit a cancel event if your backend supports it
-        // SocketManager.Instance?.Socket?.Emit("cancelMatch");
     }
 
     private static void EnsureListenersAdded()
@@ -75,6 +93,7 @@ public static class MatchmakingModel
         // Gameplay events
         socket.On<DiceRolledData>("diceRolled", HandleDiceRolled);
         socket.On<NumberLockedData>("numberLocked", HandleNumberLocked);
+        socket.On<TapResultData>("tapResult", HandleTapResult);
         socket.On<string>("gameOver", (data) => Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'gameOver': " + data + "</color>"));
 
         listenersAdded = true;
@@ -116,6 +135,7 @@ public static class MatchmakingModel
     // --- GAMEPLAY EVENTS ---
     public static event Action<DiceRolledData> OnDiceRolledEvent;
     public static event Action<NumberLockedData> OnNumberLockedEvent;
+    public static event Action<TapResultData> OnTapResultEvent;
     public static event Action<string> OnSocketErrorEvent;
 
     public static void RequestDiceRoll(string roomId)
@@ -150,8 +170,14 @@ public static class MatchmakingModel
 
     private static void HandleNumberLocked(NumberLockedData data)
     {
-        Debug.Log($"<color=#00FFFF>⬇️ [Socket ON] 'numberLocked': index={data.index} by {data.userId}, val={data.val}</color>");
+        Debug.Log($"<color=#00FFFF>⬇️ [Socket ON] 'numberLocked': index={data.index} by {data.userId}, val={data.val}, score={data.score}</color>");
         OnNumberLockedEvent?.Invoke(data);
+    }
+
+    private static void HandleTapResult(TapResultData data)
+    {
+        Debug.Log($"<color=#00FFFF>⬇️ [Socket ON] 'tapResult': correct={data.correct}, delta={data.scoreDelta}, total={data.score}</color>");
+        OnTapResultEvent?.Invoke(data);
     }
 }
 
@@ -185,4 +211,13 @@ public class NumberLockedData
     public int index;
     public string userId;
     public int val;
+    public int score;
+}
+
+[Serializable]
+public class TapResultData
+{
+    public bool correct;
+    public int scoreDelta;
+    public int score;
 }

@@ -157,12 +157,7 @@ public class GameManager : MonoBehaviour
         // Store initial game timer for resetting later
         initialGameTimer = gameTimer;
 
-        // Subscribe to PlayFab events to update when player data loads
-        if (PlayFabManager.Instance != null)
-        {
-            PlayFabManager.Instance.OnPlayerDataLoaded += OnPlayerDataLoaded;
-            PlayFabManager.Instance.OnRewardClaimed += OnOfflineRewardClaimed;
-        }
+        // PlayFab subscriptions removed as we are using custom backend
         
         // Subscribe to NumberGrid event for when all boxes are selected (legacy - will be updated when individual grids are created)
         if (numberGrid != null)
@@ -1023,68 +1018,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void SyncMatchDataToPlayFab(int score, double timestamp, bool force = false)
     {
-        if (PlayFabManager.Instance == null)
-        {
-            Debug.LogWarning("[GameManager] ❌ Cannot sync to PlayFab: PlayFabManager.Instance is NULL");
-            return;
-        }
-
-        if (!PlayFabManager.Instance.IsLoggedIn())
-        {
-            Debug.LogWarning("[GameManager] ❌ Cannot sync to PlayFab: Player is NOT logged into PlayFab");
-            return;
-        }
-
-        // Apply debounce unless forced (force is used for reconnection and match-end syncs)
-        if (!force && Time.time - lastPlayFabSyncTime < PLAYFAB_SYNC_DEBOUNCE)
-        {
-            return;
-        }
-        lastPlayFabSyncTime = Time.time;
-
-        var data = new Dictionary<string, string>
-        {
-            { PLAYFAB_MATCH_SCORE_KEY, score.ToString() },
-            { PLAYFAB_MATCH_TIME_KEY, timestamp.ToString("F2") }
-        };
-
-        Debug.Log($"[GameManager] ☁️ Attempting PlayFab UpdateUserData: Score={score}, Time={timestamp:F2}...");
-
-        PlayFab.PlayFabClientAPI.UpdateUserData(new PlayFab.ClientModels.UpdateUserDataRequest
-        {
-            Data = data,
-            Permission = PlayFab.ClientModels.UserDataPermission.Public
-        }, 
-        result => {
-            playfabRetryCount = 0; // Reset counter on success
-            Debug.Log($"[GameManager] ✅ PlayFab Sync SUCCESS! (Score: {score})");
-        },
-        error => {
-            bool isConnectionError = error.Error == PlayFab.PlayFabErrorCode.ServiceUnavailable || 
-                                    error.ErrorMessage.Contains("Cannot connect") ||
-                                    error.ErrorMessage.Contains("destination host");
-
-            if (isConnectionError && playfabRetryCount < MAX_PLAYFAB_RETRIES && isGameActive)
-            {
-                playfabRetryCount++;
-                Debug.LogWarning($"[GameManager] ⚠️ PlayFab sync failed (connection warm-up). Retrying in 5s... (Attempt {playfabRetryCount}/{MAX_PLAYFAB_RETRIES})");
-                
-                if (retryCoroutine != null) StopCoroutine(retryCoroutine);
-                retryCoroutine = StartCoroutine(RetrySync(score, timestamp));
-            }
-            else
-            {
-                Debug.LogWarning($"[GameManager] ❌ PlayFab Sync FAILED: {error.GenerateErrorReport()} (Score: {score})");
-            }
-        }
-        );
-    }
-
-    private System.Collections.IEnumerator RetrySync(int score, double timestamp)
-    {
-        yield return new WaitForSeconds(5.0f);
-        SyncMatchDataToPlayFab(score, timestamp, true); // Force retries so they aren't blocked by the timer
-        retryCoroutine = null;
+        // PlayFab sync disabled - using custom backend
     }
 
     public void ReSyncScoreToPhoton(bool force = false)
@@ -1311,6 +1245,20 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void OnQuitButtonClicked()
     {
+        // 0. If we are currently searching for a match, cancel it immediately
+        if (MatchmakingModel.IsSearching)
+        {
+            MatchmakingModel.CancelSearch();
+            
+            // Also ensure the waiting panel is hidden if we quit during matchmaking
+            HorizontalLobbyManager lobbyManager = FindObjectOfType<HorizontalLobbyManager>();
+            if (lobbyManager != null)
+            {
+                // We'll add a public method to HorizontalLobbyManager to hide the panel
+                lobbyManager.HideWaitingPanel();
+            }
+        }
+
         if (!isGameActive)
         {
             // Even if game is not active, we should still leave the room if we're in one
@@ -1323,18 +1271,7 @@ public class GameManager : MonoBehaviour
         
         Debug.Log("[GameManager] Player quit! Returning to lobby...");
         
-        // 1. Force a final score sync to PlayFab before leaving so other players recover our correct score
-        if (playerNumberGrid != null)
-        {
-            Dictionary<string, int> counts = playerNumberGrid.GetSelectionCounts();
-            int score = 0;
-            foreach (var kvp in counts) score += kvp.Value;
-            double time = Photon.Pun.PhotonNetwork.InRoom ? Photon.Pun.PhotonNetwork.Time : (double)Time.time;
-            
-            // Bypass debounce for this final critical sync
-            SyncMatchDataToPlayFab(score, time);
-            Debug.Log($"[GameManager] Final quit sync to PlayFab: {score} at {time:F2}");
-        }
+        // 1. PlayFab sync removed as we are using custom backend
 
         // 2. Leave Room instantly if we're in one
         if (Photon.Pun.PhotonNetwork.InRoom)

@@ -737,6 +737,11 @@ public class HorizontalLobbyManager : MonoBehaviour
         }
     }
 
+    public void HideWaitingPanel()
+    {
+        if (waitingPanel != null) waitingPanel.SetActive(false);
+    }
+
     public void StartGameFromNetwork(int lobbyIndex, StartGameData matchData = null, int overrideCPUs = -1)
     {
         if (gameplayObject != null)
