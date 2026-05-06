@@ -100,6 +100,7 @@ public class FindMatchPayload
 {
     public string mode;
     public int stake;
+    public string lobbyId;
 }
 
 [System.Serializable]
@@ -107,10 +108,20 @@ public class StartGameData
 {
     public string roomId;
     public int[] matrix;
-    public System.Collections.Generic.Dictionary<string, string> playerSides;
-    public System.Collections.Generic.Dictionary<string, string> playerAvatars;
     public int duration;
-    public int stake;
+    public float stake;
+    public int winConditionTarget; // Added from your JSON
+    
+    public System.Collections.Generic.Dictionary<string, string> playerSides;
+    public System.Collections.Generic.Dictionary<string, PlayerAvatarInfo> playerAvatars;
+}
+
+[System.Serializable]
+public class PlayerAvatarInfo
+{
+    public string name;
+    public string avatar;
+    public bool isBot;
 }
 
 [System.Serializable]

@@ -37,10 +37,10 @@ public class HorizontalLobbyManager : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI waitingStatusText; // Text to update with player count
     
     [Header("Lobby Game Objects Settings")]
-    private const int BACKGROUND_COUNT = 12; // Total number of background sprites (0-11)
+    private int BACKGROUND_COUNT => LobbyModel.Configurations.Length; 
     
     // Lobby scroll management
-    private LobbyGameObjectData[] _lobbyObjectsData; // Array of all 12 lobby objects
+    private LobbyGameObjectData[] _lobbyObjectsData; // Array of current lobby objects
     private int currentScrollIndex = 0; // Current scroll position
     private bool isScrollAnimating = false; // Prevents multiple scrolls at once
     
@@ -48,10 +48,13 @@ public class HorizontalLobbyManager : MonoBehaviour
     private List<LobbyRowCellView> allLobbyItems = new List<LobbyRowCellView>();
     private Transform centerAnchor;
     
-    [Header("Dot Navigation")]
-    [SerializeField] private Button[] dotButtons; // Dot buttons for navigation
+    [Header("Dot Navigation (Dynamic)")]
+    [SerializeField] private GameObject dotPrefab; // Prefab for a single dot button
+    [SerializeField] private Transform dotsContainer; // Layout group parent for dots
     [SerializeField] private Sprite selectedDotImage; // Image to show when dot is selected
     [SerializeField] private Sprite unselectedDotImage; // Image to show when dot is not selected
+    
+    private List<Button> dynamicDots = new List<Button>(); // List of instantiated dots
 
 
     
@@ -70,7 +73,7 @@ public class HorizontalLobbyManager : MonoBehaviour
     
     private void Start()
     {
-        LobbyModel.OnConfigurationsUpdated += RefreshAllPlayButtons;
+        LobbyModel.OnConfigurationsUpdated += HandleLobbyDataUpdated;
         MatchmakingModel.OnMatchFound += HandleMatchFound;
         MatchmakingModel.OnMatchmakingFailed += HandleMatchError;
         MatchmakingModel.OnMatchmakingUpdated += HandleMatchmakingUpdated;
@@ -144,7 +147,7 @@ public class HorizontalLobbyManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        LobbyModel.OnConfigurationsUpdated -= RefreshAllPlayButtons;
+        LobbyModel.OnConfigurationsUpdated -= HandleLobbyDataUpdated;
         MatchmakingModel.OnMatchFound -= HandleMatchFound;
         MatchmakingModel.OnMatchmakingFailed -= HandleMatchError;
         MatchmakingModel.OnMatchmakingUpdated -= HandleMatchmakingUpdated;
@@ -185,8 +188,8 @@ public class HorizontalLobbyManager : MonoBehaviour
     /// </summary>
     private void InitializeLobbyRows()
     {
-        // 1. Setup Anchors from existing assignments
-        if (centerRow != null) centerAnchor = centerRow.transform;
+        // 1. Setup Anchors - Use the PARENT of the row so we don't disable the new items
+        if (centerRow != null) centerAnchor = centerRow.transform.parent;
         
         if (centerAnchor == null)
         {
@@ -198,14 +201,21 @@ public class HorizontalLobbyManager : MonoBehaviour
         _lobbyObjectsData = new LobbyGameObjectData[BACKGROUND_COUNT];
         for (int i = 0; i < BACKGROUND_COUNT; i++)
         {
-            _lobbyObjectsData[i] = new LobbyGameObjectData(i, i);
+            LobbyConfig config = LobbyModel.GetConfig(i);
+            string imageUrl = config != null ? config.imageUrl : "";
+            string lobbyId = config != null ? config.lobbyId : "";
+            _lobbyObjectsData[i] = new LobbyGameObjectData(i, i, lobbyId, imageUrl);
         }
         
         // 3. Instantiate Layout Items (Pool)
         LobbyRowCellView prefab = centerRow;
         
         // Prepare container
-        // Clear existing list
+        // Clear existing items if re-initializing
+        foreach(var item in allLobbyItems)
+        {
+            if (item != null) Destroy(item.gameObject);
+        }
         allLobbyItems.Clear();
         
         for (int i = 0; i < BACKGROUND_COUNT; i++)
@@ -213,6 +223,17 @@ public class HorizontalLobbyManager : MonoBehaviour
             // Instantiate new item
             LobbyRowCellView newItem = Instantiate(prefab);
             newItem.name = $"LobbyItem_{i}";
+            
+            // Ensure the clone is active and script is enabled 
+            // (in case the template was already disabled)
+            newItem.gameObject.SetActive(true);
+            newItem.enabled = true;
+            
+            // DEEP ENABLE: Ensure all visual children are also turned on
+            foreach (Transform child in newItem.transform)
+            {
+                child.gameObject.SetActive(true);
+            }
             
             // Setup Data
             newItem.SetData(_lobbyObjectsData[i]);
@@ -241,8 +262,7 @@ public class HorizontalLobbyManager : MonoBehaviour
         UpdateLobbyPositions(true, 0);
         
         // Setup Dots
-        SetupDotButtons();
-        UpdateDotButtons();
+        InitializeDotNavigation();
         
         Debug.Log($"[HorizontalLobbyManager] Initialized {BACKGROUND_COUNT} dynamic lobby items for horizontal carousel");
     }
@@ -256,10 +276,15 @@ public class HorizontalLobbyManager : MonoBehaviour
             if (row.GetComponent<CanvasGroup>() != null) row.GetComponent<CanvasGroup>().alpha = 0f;
             row.enabled = false; // Disable the script
             
-            // Hide children if any (clean anchor)
+            // Hide only the IMMEDIATE children of the original row (visuals)
+            // but NOT the new lobby items we just instantiated
             foreach(Transform child in row.transform)
             {
-                child.gameObject.SetActive(false);
+                // Safety check: Don't disable items that are part of our new list
+                bool isNewItem = false;
+                foreach(var item in allLobbyItems) { if(item.transform == child) isNewItem = true; }
+                
+                if (!isNewItem) child.gameObject.SetActive(false);
             }
         }
     }
@@ -666,16 +691,17 @@ public class HorizontalLobbyManager : MonoBehaviour
         // Calculate the fee (prioritize cash, fallback to chips)
         int entryFee = config.entryFeeCash > 0 ? (int)config.entryFeeCash : config.entryFeeChips;
         
-        // Mode is based on player count, e.g. "2p" or "5p"
-        string mode = $"{config.numberOfPlayers}p"; 
+        // Use the official mode and ID from the backend database
+        string mode = !string.IsNullOrEmpty(config.mode) ? config.mode : $"{config.numberOfPlayers}p"; 
+        string lobbyId = config.lobbyId;
 
-        Debug.Log($"[HorizontalLobbyManager] UI Button Clicked. Requesting match via Middle Layer: Mode {mode}, Stake {entryFee}");
+        Debug.Log($"[HorizontalLobbyManager] UI Button Clicked. Requesting match: ID {lobbyId}, Mode {mode}, Stake {entryFee}");
         
         if (waitingPanel != null) waitingPanel.SetActive(true);
         if (waitingStatusText != null) waitingStatusText.text = "Waiting for players...";
         
         // Trigger the middle layer
-        MatchmakingModel.FindMatch(mode, entryFee);
+        MatchmakingModel.FindMatch(mode, entryFee, lobbyId);
     }
 
     private void HandleMatchFound(StartGameData data)
@@ -728,6 +754,14 @@ public class HorizontalLobbyManager : MonoBehaviour
         }
     }
     
+    private void HandleLobbyDataUpdated()
+    {
+        Debug.Log($"[HorizontalLobbyManager] Lobby data updated. Re-initializing {BACKGROUND_COUNT} rows.");
+        InitializeLobbyRows();
+        InitializeDotNavigation(); // Re-create navigation dots for the new count
+        RefreshAllPlayButtons();
+    }
+
     public void RefreshAllPlayButtons()
     {
         if (allLobbyItems != null)
@@ -740,19 +774,34 @@ public class HorizontalLobbyManager : MonoBehaviour
     }
     #endregion
     
-    private void SetupDotButtons()
+    private void InitializeDotNavigation()
     {
-        if (dotButtons == null) return;
+        if (dotPrefab == null || dotsContainer == null) return;
         
-        for (int i = 0; i < dotButtons.Length; i++)
+        // 1. Clear existing dots
+        foreach (var dot in dynamicDots)
         {
-            if (dotButtons[i] != null)
+            if (dot != null) Destroy(dot.gameObject);
+        }
+        dynamicDots.Clear();
+        
+        // 2. Create new dots based on lobby count
+        for (int i = 0; i < BACKGROUND_COUNT; i++)
+        {
+            GameObject dotObj = Instantiate(dotPrefab, dotsContainer);
+            Button dotBtn = dotObj.GetComponent<Button>();
+            
+            if (dotBtn != null)
             {
-                int index = i; 
-                dotButtons[i].onClick.RemoveAllListeners();
-                dotButtons[i].onClick.AddListener(() => OnDotButtonClicked(index));
+                int index = i;
+                dotBtn.onClick.RemoveAllListeners();
+                dotBtn.onClick.AddListener(() => OnDotButtonClicked(index));
+                dynamicDots.Add(dotBtn);
             }
         }
+        
+        // 3. Highlight the current dot
+        UpdateDotButtons();
     }
 
     private void OnDotButtonClicked(int targetIndex)
@@ -769,16 +818,16 @@ public class HorizontalLobbyManager : MonoBehaviour
 
     private void UpdateDotButtons()
     {
-        if (dotButtons == null) return;
+        if (dynamicDots == null || dynamicDots.Count == 0) return;
         
         int activeDotIndex = currentScrollIndex;
         
-        for (int i = 0; i < dotButtons.Length; i++)
+        for (int i = 0; i < dynamicDots.Count; i++)
         {
-            if (dotButtons[i] != null)
+            if (dynamicDots[i] != null)
             {
-                Image dotImage = dotButtons[i].GetComponent<Image>();
-                RectTransform dotRect = dotButtons[i].GetComponent<RectTransform>();
+                Image dotImage = dynamicDots[i].GetComponent<Image>();
+                RectTransform dotRect = dynamicDots[i].GetComponent<RectTransform>();
                 
                 if (dotImage != null)
                 {
@@ -792,7 +841,7 @@ public class HorizontalLobbyManager : MonoBehaviour
                         if (dotRect != null)
                         {
                             dotRect.DOKill();
-                            dotRect.DOScale(1.4f, 0.2f).SetEase(Ease.OutBack);
+                            dotRect.DOScale(1.0f, 0.2f).SetEase(Ease.OutBack);
                         }
                     }
                     else

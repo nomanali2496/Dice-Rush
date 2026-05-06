@@ -8,21 +8,22 @@ using UnityEngine;
 /// </summary>
 public static class LobbyModel
 {
-    public static LobbyConfig[] Configurations { get; private set; } = new LobbyConfig[12];
+    public static LobbyConfig[] Configurations { get; private set; } = new LobbyConfig[0];
     public static bool IsLoaded { get; private set; } = false;
     
     // Event fired whenever the lobby configurations update from the server
     public static event Action OnConfigurationsUpdated;
 
-    // Static constructor sets up default fallback values
+    // Static constructor
     static LobbyModel()
     {
-        InitializeDefaults();
+        // Start with empty or small default if needed, but FetchConfigurations will resize it.
     }
 
-    private static void InitializeDefaults()
+    private static void InitializeDefaults(int count)
     {
-        for (int i = 0; i < 12; i++)
+        Configurations = new LobbyConfig[count];
+        for (int i = 0; i < count; i++)
         {
             Configurations[i] = new LobbyConfig(
                 index: i,
@@ -68,12 +69,20 @@ public static class LobbyModel
 
     private static void UpdateConfigurations(List<BackendAuthService.LobbyApiData> apiData)
     {
-        foreach (var apiConfig in apiData)
+        // Resize the configuration array to match exactly what the server returned
+        Configurations = new LobbyConfig[apiData.Count];
+
+        for (int i = 0; i < apiData.Count; i++)
         {
-            if (apiConfig.lobbyIndex >= 0 && apiConfig.lobbyIndex < Configurations.Length)
+            var apiConfig = apiData[i];
+            
+            // Use the loop index (i) as the SSOT index.
+            int indexToUse = i;
+
+            if (indexToUse >= 0 && indexToUse < Configurations.Length)
             {
                 LobbyConfig newConfig = new LobbyConfig(
-                    apiConfig.lobbyIndex,
+                    indexToUse,
                     apiConfig.playerCount,
                     apiConfig.entryFeeCash,
                     apiConfig.entryFeeChips,
@@ -87,7 +96,11 @@ public static class LobbyModel
                 );
                 
                 newConfig.lobbyName = apiConfig.name;
-                Configurations[apiConfig.lobbyIndex] = newConfig;
+                newConfig.lobbyId = apiConfig.id; // Map the database slug
+                newConfig.mode = apiConfig.mode; // Map the database mode ("2p", "5p", etc)
+                newConfig.imageUrl = apiConfig.image; // Map the remote image path
+                
+                Configurations[indexToUse] = newConfig;
             }
         }
         
@@ -102,5 +115,21 @@ public static class LobbyModel
             return Configurations[index];
         }
         return null;
+    }
+
+    /// <summary>
+    /// Middle Layer method to request a sprite for a specific lobby.
+    /// Decouples the UI from the Backend Service.
+    /// </summary>
+    public static void LoadLobbySprite(string imageUrl, Action<Sprite> onComplete)
+    {
+        if (BackendAuthService.Instance != null)
+        {
+            BackendAuthService.Instance.LoadRemoteSprite(imageUrl, onComplete);
+        }
+        else
+        {
+            onComplete?.Invoke(null);
+        }
     }
 }

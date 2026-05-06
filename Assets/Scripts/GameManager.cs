@@ -2692,8 +2692,11 @@ public class GameManager : MonoBehaviour
         if (currentMatchData != null && currentMatchData.playerAvatars != null && currentMatchData.playerAvatars.Count > 0)
         {
             // For now, assume the first opponent in the payload is the CPU opponent
-            // Get all avatar values from the backend
-            List<string> backendAvatars = new List<string>(currentMatchData.playerAvatars.Values);
+            // Get all avatar strings from the backend info objects
+            List<string> backendAvatars = new List<string>();
+            foreach (var info in currentMatchData.playerAvatars.Values) {
+                backendAvatars.Add(info.avatar);
+            }
             
             // Assign avatars based on backend data (fallback to index 0 if not found)
             for (int i = 0; i < cpuProfileImages.Length && i < numberOfCPUs; i++)

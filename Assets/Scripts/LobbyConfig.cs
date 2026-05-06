@@ -11,6 +11,9 @@ public class LobbyConfig
     public int lobbyIndex; // Index of this lobby (0-12)
     public int numberOfPlayers; // Total number of players (1 player + CPUs)
     public string lobbyName; // Optional name for the lobby
+    public string lobbyId; // Unique ID from database (e.g. "combo-dice")
+    public string mode; // Mode from database (e.g. "2p")
+    public string imageUrl; // Remote image path
     public float gameTimer = 60f; // Match duration in seconds
     
     [Header("Entry Fee")]

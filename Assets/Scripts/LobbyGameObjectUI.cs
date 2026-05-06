@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using EnhancedUI.EnhancedScroller;
 using System.Collections;
+using System.Collections.Generic;
 
 /// <summary>
 /// Data class to hold lobby game object information
@@ -10,13 +11,17 @@ using System.Collections;
 [System.Serializable]
 public class LobbyGameObjectData
 {
-    public int backgroundIndex; // Index of background sprite to use (0-12 for 13 backgrounds)
-    public int lobbyIndex; // Index of the lobby (0-12 for 13 lobbies)
+    public int backgroundIndex; // Legacy fallback index
+    public int lobbyIndex; // Index of the lobby
+    public string lobbyId; // Matches the database ID (e.g. "combo-dice")
+    public string imageUrl; // URL/Path for dynamic remote images
     
-    public LobbyGameObjectData(int backgroundIndex, int lobbyIndex)
+    public LobbyGameObjectData(int backgroundIndex, int lobbyIndex, string lobbyId = "", string imageUrl = "")
     {
         this.backgroundIndex = backgroundIndex;
         this.lobbyIndex = lobbyIndex;
+        this.lobbyId = lobbyId;
+        this.imageUrl = imageUrl;
     }
     
     // Legacy constructor for backward compatibility
@@ -45,20 +50,15 @@ public class LobbyGameObjectUI : EnhancedScrollerCellView, IPointerEnterHandler,
     [SerializeField] private float animationDuration = 0.3f; // Duration of scale animation in seconds
     [SerializeField] private AnimationCurve scaleCurve; // Animation curve for smooth scaling (set in inspector, defaults to smooth ease)
     
-    [Header("Background Sprites (13 Sprites)")]
-    [SerializeField] private Sprite backgroundSprite0; // Background sprite 0
-    [SerializeField] private Sprite backgroundSprite1; // Background sprite 1
-    [SerializeField] private Sprite backgroundSprite2; // Background sprite 2
-    [SerializeField] private Sprite backgroundSprite3; // Background sprite 3
-    [SerializeField] private Sprite backgroundSprite4; // Background sprite 4
-    [SerializeField] private Sprite backgroundSprite5; // Background sprite 5
-    [SerializeField] private Sprite backgroundSprite6; // Background sprite 6
-    [SerializeField] private Sprite backgroundSprite7; // Background sprite 7
-    [SerializeField] private Sprite backgroundSprite8; // Background sprite 8
-    // [SerializeField] private Sprite backgroundSprite9; // Background sprite 9
-    [SerializeField] private Sprite backgroundSprite10; // Background sprite 10
-    [SerializeField] private Sprite backgroundSprite11; // Background sprite 11
-    [SerializeField] private Sprite backgroundSprite12; // Background sprite 12
+    [Header("ID-Based Sprite Mapping")]
+    [SerializeField] private List<LobbyVisualMapping> spriteMappings = new List<LobbyVisualMapping>();
+    
+    [System.Serializable]
+    public class LobbyVisualMapping
+    {
+        public string lobbyId; // Matches the "id" from your API (e.g. "combo-dice")
+        public Sprite sprite;
+    }
     
     private LobbyGameObjectData currentData;
     private RectTransform rectTransform;
@@ -135,73 +135,71 @@ public class LobbyGameObjectUI : EnhancedScrollerCellView, IPointerEnterHandler,
     }
     
     /// <summary>
-    /// Sets up the background sprite based on the index
-    /// This method can still be called directly if not using Enhanced Scroller
+    /// Sets up the background sprite based on the lobbyId or fallback index
     /// </summary>
-    /// <param name="backgroundIndex">Index of background sprite to use (0-12)</param>
-    public void SetupBackground(int backgroundIndex)
+    public void SetupBackground(int fallbackIndex)
     {
-        if (backgroundImage == null)
+        if (backgroundImage == null) return;
+        
+        // 1. Try to find sprite by ID (Recommended Mode)
+        if (currentData != null && !string.IsNullOrEmpty(currentData.lobbyId))
         {
-            Debug.LogWarning("[LobbyGameObjectUI] Background Image is not assigned!");
+            Sprite mappedSprite = GetSpriteById(currentData.lobbyId);
+            if (mappedSprite != null)
+            {
+                backgroundImage.sprite = mappedSprite;
+                backgroundImage.enabled = true;
+                return;
+            }
+        }
+
+        // 2. Fallback to Dynamic URL if provided
+        if (currentData != null && !string.IsNullOrEmpty(currentData.imageUrl))
+        {
+            LobbyModel.LoadLobbySprite(currentData.imageUrl, (downloadedSprite) => {
+                if (downloadedSprite != null)
+                {
+                    backgroundImage.sprite = downloadedSprite;
+                    backgroundImage.enabled = true;
+                }
+                else
+                {
+                    ApplyLocalSprite(fallbackIndex);
+                }
+            });
             return;
         }
+
+        // 3. Last Fallback: Use numeric index
+        ApplyLocalSprite(fallbackIndex);
+    }
+
+    private Sprite GetSpriteById(string id)
+    {
+        if (spriteMappings == null) return null;
         
-        // Clamp index to valid range (0-12)
-        backgroundIndex = Mathf.Clamp(backgroundIndex, 0, 12);
-        
-        // Get the sprite based on index
-        Sprite targetSprite = GetBackgroundSprite(backgroundIndex);
-        
-        if (targetSprite != null)
+        foreach (var mapping in spriteMappings)
         {
-            backgroundImage.sprite = targetSprite;
+            if (mapping != null && mapping.lobbyId == id)
+            {
+                return mapping.sprite;
+            }
+        }
+        return null;
+    }
+
+    private void ApplyLocalSprite(int index)
+    {
+        // Simple fallback if no mappings exist
+        if (spriteMappings != null && index >= 0 && index < spriteMappings.Count)
+        {
+            backgroundImage.sprite = spriteMappings[index].sprite;
             backgroundImage.enabled = true;
         }
         else
         {
-            Debug.LogWarning($"[LobbyGameObjectUI] Background sprite at index {backgroundIndex} is not assigned!");
-            backgroundImage.enabled = false;
-        }
-    }
-    
-    /// <summary>
-    /// Gets the background sprite based on index
-    /// </summary>
-    /// <param name="index">Index of the background sprite (0-12)</param>
-    /// <returns>The sprite at the given index, or null if not assigned</returns>
-    private Sprite GetBackgroundSprite(int index)
-    {
-        switch (index)
-        {
-            case 0: return backgroundSprite0;
-            case 1: return backgroundSprite1;
-            case 2: return backgroundSprite2;
-            case 3: return backgroundSprite3;
-            case 4: return backgroundSprite4;
-            case 5: return backgroundSprite5;
-            case 6: return backgroundSprite6;
-            case 7: return backgroundSprite7;
-            case 8: return backgroundSprite8;
-            // case 9: return backgroundSprite9;
-            case 9: return backgroundSprite10;
-            case 10: return backgroundSprite11;
-            case 11: return backgroundSprite12;
-            default: return null;
-        }
-    }
-    
-    /// <summary>
-    /// Updates only the background without changing other properties
-    /// </summary>
-    public void UpdateBackground(int backgroundIndex)
-    {
-        SetupBackground(backgroundIndex);
-        
-        // Update current data if exists
-        if (currentData != null)
-        {
-            currentData.backgroundIndex = backgroundIndex;
+            // If even fallback fails, we can't show anything
+            backgroundImage.enabled = (backgroundImage.sprite != null);
         }
     }
     
@@ -219,49 +217,6 @@ public class LobbyGameObjectUI : EnhancedScrollerCellView, IPointerEnterHandler,
     public int GetCurrentBackgroundIndex()
     {
         return currentData != null ? currentData.backgroundIndex : -1;
-    }
-    
-    /// <summary>
-    /// Sets all 13 background sprites at once (useful for initialization)
-    /// </summary>
-    public void SetBackgroundSprites(Sprite[] sprites)
-    {
-        if (sprites == null || sprites.Length == 0)
-        {
-            Debug.LogWarning("[LobbyGameObjectUI] Sprites array is null or empty!");
-            return;
-        }
-        
-        // Set sprites up to index 12 (13 sprites total)
-        int maxIndex = Mathf.Min(sprites.Length, 13);
-        
-        for (int i = 0; i < maxIndex; i++)
-        {
-            SetBackgroundSpriteAtIndex(i, sprites[i]);
-        }
-    }
-    
-    /// <summary>
-    /// Sets a specific background sprite at a given index
-    /// </summary>
-    private void SetBackgroundSpriteAtIndex(int index, Sprite sprite)
-    {
-        switch (index)
-        {
-            case 0: backgroundSprite0 = sprite; break;
-            case 1: backgroundSprite1 = sprite; break;
-            case 2: backgroundSprite2 = sprite; break;
-            case 3: backgroundSprite3 = sprite; break;
-            case 4: backgroundSprite4 = sprite; break;
-            case 5: backgroundSprite5 = sprite; break;
-            case 6: backgroundSprite6 = sprite; break;
-            case 7: backgroundSprite7 = sprite; break;
-            case 8: backgroundSprite8 = sprite; break;
-            // case 9: backgroundSprite9 = sprite; break;
-            case 9: backgroundSprite10 = sprite; break;
-            case 10: backgroundSprite11 = sprite; break;
-            case 11: backgroundSprite12 = sprite; break;
-        }
     }
     
     /// <summary>

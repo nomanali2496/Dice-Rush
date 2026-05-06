@@ -17,7 +17,7 @@ public static class MatchmakingModel
 
     private static bool listenersAdded = false;
 
-    public static void FindMatch(string mode, int stake)
+    public static void FindMatch(string mode, int stake, string lobbyId)
     {
         if (SocketManager.Instance == null || SocketManager.Instance.Socket == null)
         {
@@ -32,11 +32,12 @@ public static class MatchmakingModel
         FindMatchPayload payload = new FindMatchPayload 
         { 
             mode = mode, 
-            stake = stake 
+            stake = stake,
+            lobbyId = lobbyId
         };
 
         SocketManager.Instance.Socket.Emit("findMatch", payload);
-        Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'findMatch' for mode '{mode}' with stake {stake}...</color>");
+        Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'findMatch' for mode '{mode}' with stake {stake} (Lobby: {lobbyId})...</color>");
     }
 
     public static void CancelSearch()
@@ -52,8 +53,22 @@ public static class MatchmakingModel
         if (SocketManager.Instance == null || SocketManager.Instance.Socket == null) return;
 
         var socket = SocketManager.Instance.Socket;
-
-        socket.On<StartGameData>("startGame", HandleStartGame);
+        
+        // Use JsonData as the generic type. This is the most stable way to handle 
+        // complex JSON in BestHTTP without triggering 'constructor not found' errors.
+        socket.On<BestHTTP.JSON.LitJson.JsonData>("startGame", (jsonData) => {
+            try {
+                if (jsonData != null) {
+                    // Convert the raw JsonData to our typed class
+                    string json = jsonData.ToJson();
+                    StartGameData data = BestHTTP.JSON.LitJson.JsonMapper.ToObject<StartGameData>(json);
+                    HandleStartGame(data);
+                }
+            } catch (Exception e) {
+                Debug.LogError($"[MatchmakingModel] JsonData parse failed for startGame: {e.Message}");
+            }
+        });
+        
         socket.On<Error>("error", HandleError);
         socket.On<MatchmakingUpdateData>("matchmakingUpdate", HandleMatchmakingUpdate);
         

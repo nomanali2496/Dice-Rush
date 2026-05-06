@@ -15,6 +15,8 @@ public class BackendAuthService : MonoBehaviour
 
     private const string JWT_PREF_KEY = "CustomBackendJWT";
 
+    private Dictionary<string, Sprite> _spriteCache = new Dictionary<string, Sprite>();
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -24,6 +26,63 @@ public class BackendAuthService : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
+    }
+
+    /// <summary>
+    /// Loads a sprite from a remote URL or returns it from cache if available.
+    /// Follows clean architecture by acting as the low-level provider.
+    /// </summary>
+    public void LoadRemoteSprite(string imagePath, Action<Sprite> onComplete)
+    {
+        if (string.IsNullOrEmpty(imagePath))
+        {
+            onComplete?.Invoke(null);
+            return;
+        }
+
+        // 1. Check cache first
+        if (_spriteCache.ContainsKey(imagePath))
+        {
+            onComplete?.Invoke(_spriteCache[imagePath]);
+            return;
+        }
+
+        // 2. Download if not in cache
+        StartCoroutine(DownloadSpriteCoroutine(imagePath, onComplete));
+    }
+
+    private IEnumerator DownloadSpriteCoroutine(string imagePath, Action<Sprite> onComplete)
+    {
+        // 1. Construct and Encode URL (Handles spaces in filenames like "COMBO DICE.webp")
+        string relativePath = imagePath.StartsWith("/") ? imagePath : "/" + imagePath;
+        string fullUrl = baseUrl.TrimEnd('/') + relativePath;
+        fullUrl = System.Uri.EscapeUriString(fullUrl);
+
+        using (UnityWebRequest request = UnityWebRequestTexture.GetTexture(fullUrl))
+        {
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Texture2D texture = DownloadHandlerTexture.GetContent(request);
+                
+                // Create a sprite from the texture
+                Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+                
+                // Add to cache
+                if (!_spriteCache.ContainsKey(imagePath))
+                {
+                    _spriteCache.Add(imagePath, sprite);
+                }
+                
+                onComplete?.Invoke(sprite);
+            }
+            else
+            {
+                Debug.LogWarning($"[BackendAuthService] Image Download Failed: {fullUrl} | Error: {request.error}");
+                onComplete?.Invoke(null);
+            }
+        }
     }
 
     public static string GetStoredJWT()
