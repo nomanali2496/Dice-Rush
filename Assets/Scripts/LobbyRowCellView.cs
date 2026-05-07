@@ -23,7 +23,6 @@ public class LobbyRowCellView : EnhancedScrollerCellView, IPointerDownHandler, I
     [SerializeField] private float buttonAnimationDuration = 0.2f; // Duration of button scale animation in seconds
     [SerializeField] private Ease buttonScaleEase = Ease.OutBack; // Easing function for button scale animation
     
-    private LobbyManager lobbyManager;
     private HorizontalLobbyManager horizontalLobbyManager;
     private Dictionary<Button, DOTweenTween> buttonTweens = new Dictionary<Button, DOTweenTween>();
     private Dictionary<Button, Vector3> buttonOriginalScales = new Dictionary<Button, Vector3>();
@@ -41,8 +40,7 @@ public class LobbyRowCellView : EnhancedScrollerCellView, IPointerDownHandler, I
     
     private void Awake()
     {
-        // Find Managers in the scene
-        lobbyManager = FindObjectOfType<LobbyManager>();
+        // Find HorizontalLobbyManager in the scene
         horizontalLobbyManager = FindObjectOfType<HorizontalLobbyManager>();
         
         // Setup button listener and hover animation
@@ -99,36 +97,17 @@ public class LobbyRowCellView : EnhancedScrollerCellView, IPointerDownHandler, I
     }
 
     /// <summary>
-    /// Update the selected visual state
-    /// </summary>
-    public void SetSelectedState(bool isSelected)
-    {
-        if (item != null)
-        {
-            item.SetSelectedState(isSelected);
-        }
-    }
-    
-    /// <summary>
     /// Updates the interactability of a play button based on whether player can afford entry fee
     /// </summary>
     private void UpdatePlayButtonInteractability(Button playButton, int lobbyIndex)
     {
-        if (playButton == null || (lobbyManager == null && horizontalLobbyManager == null))
+        if (playButton == null || horizontalLobbyManager == null)
         {
             return;
         }
         
         // Check if player can afford entry fee
-        bool canAfford = false;
-        if (horizontalLobbyManager != null)
-        {
-            canAfford = horizontalLobbyManager.CanPlayerAffordEntryFee(lobbyIndex);
-        }
-        else if (lobbyManager != null)
-        {
-            canAfford = lobbyManager.CanPlayerAffordEntryFee(lobbyIndex);
-        }
+        bool canAfford = horizontalLobbyManager.CanPlayerAffordEntryFee(lobbyIndex);
 
         playButton.interactable = canAfford;
         
@@ -168,13 +147,9 @@ public class LobbyRowCellView : EnhancedScrollerCellView, IPointerDownHandler, I
                 {
                     horizontalLobbyManager.OpenGameplayObject(data.lobbyIndex);
                 }
-                else if (lobbyManager != null)
-                {
-                    lobbyManager.OpenGameplayObject(data.lobbyIndex);
-                }
                 else
                 {
-                    Debug.LogWarning("[LobbyRowCellView] No LobbyManager found! Cannot open gameplay object.");
+                    Debug.LogWarning("[LobbyRowCellView] No HorizontalLobbyManager found! Cannot open gameplay object.");
                 }
             }
         }
@@ -335,7 +310,18 @@ public class LobbyRowCellView : EnhancedScrollerCellView, IPointerDownHandler, I
     
     #endregion
     
-    #region Swipe Detection (Forward to LobbyManager)
+    /// <summary>
+    /// Update the selected visual state
+    /// </summary>
+    public void SetSelectedState(bool isSelected)
+    {
+        if (item != null)
+        {
+            item.SetSelectedState(isSelected);
+        }
+    }
+
+    #region Swipe Detection (Forward to HorizontalLobbyManager)
     
     /// <summary>
     /// Called when pointer/touch begins on this lobby card
@@ -374,25 +360,6 @@ public class LobbyRowCellView : EnhancedScrollerCellView, IPointerDownHandler, I
                 {
                     if (swipeDelta.x < 0) horizontalLobbyManager.ScrollRight();
                     else horizontalLobbyManager.ScrollLeft();
-                }
-            }
-        }
-        else if (lobbyManager != null)
-        {
-            if (Mathf.Abs(swipeDelta.y) > swipeThreshold && Mathf.Abs(swipeDelta.y) > Mathf.Abs(swipeDelta.x))
-            {
-                if (useVelocityScrolling)
-                {
-                    float swipeDistance = Mathf.Abs(swipeDelta.y);
-                    int itemsToScroll = Mathf.Clamp(Mathf.RoundToInt(swipeDistance / pixelsPerItem), 1, maxScrollItems);
-                    
-                    if (swipeDelta.y < 0) lobbyManager.ScrollMultiple(itemsToScroll);
-                    else lobbyManager.ScrollMultiple(-itemsToScroll);
-                }
-                else
-                {
-                    if (swipeDelta.y < 0) lobbyManager.ScrollDown();
-                    else lobbyManager.ScrollUp();
                 }
             }
         }

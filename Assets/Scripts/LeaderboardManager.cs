@@ -49,28 +49,16 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
     private void Start()
     {
         InitializeLeaderboard();
-        if (PlayFabManager.Instance != null)
-        {
-            PlayFabManager.Instance.OnPlayerDataLoaded += OnPlayerDataLoaded;
-            
-            // IF ALREADY LOGGED IN: Sync immediately
-            if (PlayFabManager.Instance.IsLoggedIn() && PlayFabManager.Instance.currentPlayerData != null)
-            {
-                Debug.Log("[LeaderboardManager] Player already logged in, performing initial sync.");
-                UpdateUserFixedRow();
-            }
-        }
+        
+        // Initial sync of user row
+        UpdateUserFixedRow();
     }
     
     private void OnDestroy()
     {
-        if (PlayFabManager.Instance != null)
-        {
-            PlayFabManager.Instance.OnPlayerDataLoaded -= OnPlayerDataLoaded;
-        }
     }
-    
-    private void OnPlayerDataLoaded(PlayerData data)
+
+    private void OnPlayerDataUpdated()
     {
         if (gameObject.activeInHierarchy)
         {
@@ -86,6 +74,8 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
     
     private void OnEnable()
     {
+        PlayerModel.OnDataUpdated += OnPlayerDataUpdated;
+        
         if (isInitialized)
         {
             RefreshLeaderboard();
@@ -100,6 +90,11 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
         {
             StartCoroutine(SyncAvatarDelayed());
         }
+    }
+
+    private void OnDisable()
+    {
+        PlayerModel.OnDataUpdated -= OnPlayerDataUpdated;
     }
     
     private IEnumerator SyncAvatarDelayed()
@@ -166,11 +161,7 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
         }
         
         System.Random random = new System.Random();
-        string loggedInUsername = "Guest User";
-        if (PlayFabManager.Instance != null && PlayFabManager.Instance.currentPlayerData != null && !string.IsNullOrEmpty(PlayFabManager.Instance.currentPlayerData.playerName))
-        {
-            loggedInUsername = PlayFabManager.Instance.currentPlayerData.playerName;
-        }
+        string loggedInUsername = !string.IsNullOrEmpty(PlayerModel.Name) ? PlayerModel.Name : "Guest User";
         
         for (int i = 0; i < testDataCount; i++)
         {
@@ -246,13 +237,7 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
         _filteredIndices.Clear();
 
         // Match the exact same fallback logic used in LoadTestData
-        string loggedInUsername = "Guest User";
-        if (PlayFabManager.Instance != null &&
-            PlayFabManager.Instance.currentPlayerData != null &&
-            !string.IsNullOrEmpty(PlayFabManager.Instance.currentPlayerData.playerName))
-        {
-            loggedInUsername = PlayFabManager.Instance.currentPlayerData.playerName;
-        }
+        string loggedInUsername = !string.IsNullOrEmpty(PlayerModel.Name) ? PlayerModel.Name : "Guest User";
 
         for (int i = 0; i < (_leaderboardData != null ? _leaderboardData.Count : 0); i++)
         {
@@ -351,15 +336,12 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
     
     private void UpdateUserFixedRow()
     {
-        if (PlayFabManager.Instance == null || PlayFabManager.Instance.currentPlayerData == null) return;
-        PlayerData playerData = PlayFabManager.Instance.currentPlayerData;
-        
-        if (_leaderboardData != null && !string.IsNullOrEmpty(playerData.playerName))
+        if (_leaderboardData != null && !string.IsNullOrEmpty(PlayerModel.Name))
         {
             _userData = null;
             for (int i = 0; i < _leaderboardData.Count; i++)
             {
-                if (_leaderboardData[i] != null && _leaderboardData[i].username == playerData.playerName)
+                if (_leaderboardData[i] != null && _leaderboardData[i].username == PlayerModel.Name)
                 {
                     _userData = _leaderboardData[i];
                     break;
@@ -367,7 +349,7 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
             }
         }
 
-        if (userFixedName != null) userFixedName.text = !string.IsNullOrEmpty(playerData.playerName) ? playerData.playerName : "Guest";
+        if (userFixedName != null) userFixedName.text = !string.IsNullOrEmpty(PlayerModel.Name) ? PlayerModel.Name : "Guest";
         if (userFixedScore != null) userFixedScore.text = (_userData != null) ? _userData.score.ToString() : "0";
 
         if ((userFixedAvatar != null || userFixedAvatarCustom != null) && mainMenuAvatarDisplay != null)
@@ -486,11 +468,10 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
             _userData.avatarSprite = currentAvatar;
             _userData.isCustom = mainMenuAvatarDisplay.IsShowingCustomAvatar();
         }
-        else if (PlayFabManager.Instance != null && PlayFabManager.Instance.currentPlayerData != null)
+        else 
         {
             // Fallback: search by username if _userData ref isn't set yet
-            string pName = PlayFabManager.Instance.currentPlayerData.playerName;
-            if (string.IsNullOrEmpty(pName)) pName = "Guest User";
+            string pName = !string.IsNullOrEmpty(PlayerModel.Name) ? PlayerModel.Name : "Guest User";
             if (_leaderboardData != null)
             {
                 for (int i = 0; i < _leaderboardData.Count; i++)

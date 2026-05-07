@@ -27,29 +27,13 @@ public class DiagnosticHelper : MonoBehaviour
         Debug.Log("========== DIAGNOSTIC CHECK ==========");
         
         // Check PlayFabManager
-        if (PlayFabManager.Instance != null)
-        {
-            Debug.Log($"✓ PlayFabManager exists");
-            Debug.Log($"  - IsLoggedIn: {PlayFabManager.Instance.IsLoggedIn()}");
-            
-            if (PlayFabManager.Instance.currentPlayerData != null)
-            {
-                var data = PlayFabManager.Instance.currentPlayerData;
-                Debug.Log($"  - PlayerData exists:");
-                Debug.Log($"    Name: '{data.playerName}'");
-                Debug.Log($"    Email: '{data.email}'");
-                Debug.Log($"    Cash: {data.cash}");
-                Debug.Log($"    Coins: {data.coins}");
-            }
-            else
-            {
-                Debug.LogWarning("  - PlayerData is NULL!");
-            }
-        }
-        else
-        {
-            Debug.LogError("✗ PlayFabManager NOT FOUND!");
-        }
+        // Check PlayerModel
+        Debug.Log($"✓ PlayerModel Info:");
+        Debug.Log($"  - Id: {PlayerModel.Id}");
+        Debug.Log($"  - Name: '{PlayerModel.Name}'");
+        Debug.Log($"  - Email: '{PlayerModel.Email}'");
+        Debug.Log($"  - CashBalance: {PlayerModel.CashBalance}");
+        Debug.Log($"  - Coins: {PlayerModel.Coins}");
         
         // Check PlayerProfileUI
         PlayerProfileUI[] profileUIs = FindObjectsOfType<PlayerProfileUI>(true);

@@ -3,7 +3,6 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 using System.Reflection;
-using PlayFab;
 
 /// <summary>
 /// Handles Login and Registration in a single scene
@@ -58,9 +57,6 @@ public class AuthenticationManager : MonoBehaviour
     
     private void Start()
     {
-        // Initialize PlayFab
-        InitializePlayFab();
-        
         // Setup button listeners
         if (loginButton != null)
             loginButton.onClick.AddListener(OnLoginClicked);
@@ -96,18 +92,10 @@ public class AuthenticationManager : MonoBehaviour
         if (internetPanel != null)
             internetPanel.SetActive(false);
         
-        // Subscribe to PlayFab events
-        if (PlayFabManager.Instance != null)
-        {
-            PlayFabManager.Instance.OnLoginComplete += OnLoginComplete;
-            PlayFabManager.Instance.OnRegisterComplete += OnRegisterComplete;
-        }
-        
         // Show loading screen initially (covers everything)
         ShowLoadingScreen();
         
         // IMMEDIATE CHECK: If user is already logged in, show splash screen immediately (no delay)
-        // This prevents the login screen from flashing briefly
         if (BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
         {
             Debug.Log("[AuthenticationManager] Backend JWT found, fetching profile data...");
@@ -124,11 +112,6 @@ public class AuthenticationManager : MonoBehaviour
                     SetLoadingState(false);
                     UpdateStatusText("");
                     
-                    if (PlayFabManager.Instance != null)
-                    {
-                        PlayFabManager.Instance.LoadPlayerData();
-                    }
-                    
                     OnAuthenticationSuccess?.Invoke();
                 }
                 else
@@ -143,47 +126,17 @@ public class AuthenticationManager : MonoBehaviour
             });
             return;
         }
-        else if (PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
-        {
-            Debug.Log("[AuthenticationManager] User is already logged in, hiding login screen and showing splash");
-            // Hide login screen first, then show splash screen (loading screen will hide when splash shows)
-            HideLoginScreen();
-            ShowSplashScreenPanel();
-            SetLoadingState(false);
-            UpdateStatusText("");
-            
-            // CRITICAL FIX: We must call LoadPlayerData even if already logged in.
-            // This ensures CheckForPendingRewards runs to show the winner screen 
-            // if the player won a prize while away. The DIRECT_PRIZE_KEY handles
-            // preventing duplicate "ghost" screens if they already saw it live.
-            PlayFabManager.Instance.LoadPlayerData();
-            
-            OnAuthenticationSuccess?.Invoke();
-            return; // Already logged in, no need for auto-login
-        }
         
-        // If not logged in, attempt auto-login (will show login panel if auto-login fails)
+        // If not logged in, attempt auto-login
         AttemptAutoLogin();
     }
     
     private void OnDestroy()
     {
-        if (PlayFabManager.Instance != null)
-        {
-            PlayFabManager.Instance.OnLoginComplete -= OnLoginComplete;
-            PlayFabManager.Instance.OnRegisterComplete -= OnRegisterComplete;
-        }
     }
     
-    private void InitializePlayFab()
+    private void InitializeSocialManagers()
     {
-        if (PlayFabManager.Instance == null)
-        {
-            GameObject playfabObj = new GameObject("PlayFabManager");
-            playfabObj.AddComponent<PlayFabManager>();
-            Debug.Log("PlayFabManager initialized");
-        }
-        
         // Initialize GoogleSignInManager if it doesn't exist
         if (GoogleSignInManager.Instance == null)
         {
@@ -207,93 +160,39 @@ public class AuthenticationManager : MonoBehaviour
     private void AttemptAutoLogin()
     {
         lastAttemptedAction = AttemptAutoLogin;
-        // Wait a frame to ensure PlayFabManager is fully initialized
         StartCoroutine(AttemptAutoLoginCoroutine());
     }
     
     private System.Collections.IEnumerator AttemptAutoLoginCoroutine()
     {
-        // Wait a frame for PlayFabManager to initialize
-        yield return null;
+        yield return null; // Wait a frame for instance stabilization
         
-        if (PlayFabManager.Instance == null)
+        // Check if there's an existing backend session
+        if (BackendAuthService.HasStoredJWT())
         {
-            Debug.LogWarning("[AuthenticationManager] PlayFabManager not found, showing login panel");
-            // Hide loading screen and show login panel
-            ShowLoginRegisterPanel();
-            ShowLoginSection();
-            SetLoadingState(false);
-            UpdateStatusText("");
-            yield break;
-        }
-        
-        // Note: We already checked IsLoggedIn() in Start() immediately, so we skip that check here
-        // This coroutine only runs if user is NOT already logged in
-        
-        // First check: If user has explicitly logged out, don't attempt auto-login
-        if (PlayFabManager.Instance.HasUserExplicitlyLoggedOut())
-        {
-            Debug.Log("[AuthenticationManager] User has explicitly logged out, showing login panel (no auto-login)");
-            isAttemptingAutoLogin = false;
-            // Hide loading screen and show login panel
-            ShowLoginRegisterPanel();
-            ShowLoginSection();
-            SetLoadingState(false);
-            UpdateStatusText("");
-            yield break;
-        }
-        
-        SetLoadingState(true);
-        UpdateStatusText("Checking for saved session...");
-        isAttemptingAutoLogin = true;
-        
-        // Check if this is a new device
-        bool isNewDevice = PlayFabManager.Instance.IsNewDevice();
-        if (isNewDevice)
-        {
-            Debug.Log("[AuthenticationManager] New device detected - showing login screen");
-            // On new device, always show login screen instead of auto-login
-            isAttemptingAutoLogin = false;
-            ShowLoginRegisterPanel();
-            ShowLoginSection();
-            SetLoadingState(false);
-            UpdateStatusText("");
-            yield break;
-        }
-        
-        // Third check: Check if there's an existing PlayFab session
-        if (PlayFabManager.Instance.HasExistingSession())
-        {
-            Debug.Log("[AuthenticationManager] Existing session found, attempting to restore...");
+            Debug.Log("[AuthenticationManager] Existing JWT session found, attempting to restore...");
+            SetLoadingState(true);
             UpdateStatusText("Restoring session...");
+            isAttemptingAutoLogin = true;
             
-            PlayFabManager.Instance.RestoreSession((success) =>
+            BackendAuthService.Instance.GetProfile((success, message) => 
             {
                 if (success)
                 {
                     Debug.Log("[AuthenticationManager] Session restored successfully!");
-                    UpdateStatusText("Welcome back!");
-                    isAttemptingAutoLogin = false;
-                    
-                    // Show splash screen after successful session restore
-                    Invoke(nameof(ShowSplashScreenPanel), 0.5f);
-                    
-                    // Notify listeners
-                    OnAuthenticationSuccess?.Invoke();
+                    OnLoginComplete(true);
                 }
                 else
                 {
-                    Debug.Log("[AuthenticationManager] Session restore failed, checking last login method...");
-                    // Session restore failed - check what login method was used last
+                    Debug.Log("[AuthenticationManager] Session restore failed: " + message);
+                    BackendAuthService.ClearJWT(); // Clear stale token
                     HandleSessionRestoreFailed();
                 }
-                SetLoadingState(false);
             });
         }
         else
         {
-            Debug.Log("[AuthenticationManager] No existing session, checking last login method...");
-            // No existing session - check what login method was used last
+            Debug.Log("[AuthenticationManager] No existing session found, showing login panel");
             HandleSessionRestoreFailed();
         }
     }
@@ -303,8 +202,8 @@ public class AuthenticationManager : MonoBehaviour
     /// </summary>
     private void HandleSessionRestoreFailed()
     {
-        string lastLoginMethod = PlayFabManager.Instance.GetLastLoginMethod();
-        Debug.Log($"[AuthenticationManager] Last login method was: {lastLoginMethod ?? "Unknown"}");
+        string lastLoginMethod = PlayerPrefs.GetString("LastLoginMethod", "Unknown");
+        Debug.Log($"[AuthenticationManager] Last login method was: {lastLoginMethod}");
         
         // Only auto-login as guest if the last login was actually guest
         if (lastLoginMethod == "Guest")
@@ -368,7 +267,7 @@ public class AuthenticationManager : MonoBehaviour
     
     private void OnSilentGoogleSignInSuccess(string serverAuthCode, string idToken, string email, string displayName, string photoUrl)
     {
-        Debug.Log($"[AuthenticationManager] Silent Google Sign-In successful! Restoring PlayFab session...");
+        Debug.Log($"[AuthenticationManager] Silent Google Sign-In successful! Restoring session...");
         
         // Unsubscribe from events first
         if (GoogleSignInManager.Instance != null)
@@ -377,16 +276,30 @@ public class AuthenticationManager : MonoBehaviour
             GoogleSignInManager.Instance.OnGoogleSignInFailure -= OnSilentGoogleSignInFailure;
         }
         
-        UpdateStatusText("Logging into PlayFab...");
+        UpdateStatusText("Logging into Backend...");
         
-        if (PlayFabManager.Instance != null)
+        if (BackendAuthService.Instance != null)
         {
-            // Login to PlayFab with Google auth code
-            PlayFabManager.Instance.LoginWithGoogle(serverAuthCode, email, displayName, photoUrl);
+            // Login to Backend with Google auth code
+            BackendAuthService.Instance.GoogleLogin(serverAuthCode, (success, message) => 
+            {
+                if (success)
+                {
+                    PlayerPrefs.SetString("LastLoginMethod", "Google");
+                    PlayerPrefs.Save();
+                    OnLoginComplete(true);
+                }
+                else
+                {
+                    UpdateStatusText(message);
+                    SetLoadingState(false);
+                    isAttemptingAutoLogin = false;
+                }
+            });
         }
         else
         {
-            UpdateStatusText("Error: PlayFabManager not found!");
+            UpdateStatusText("Error: Backend Service not found!");
             SetLoadingState(false);
             isAttemptingAutoLogin = false;
         }
@@ -452,7 +365,7 @@ public class AuthenticationManager : MonoBehaviour
     
     private void OnSilentFacebookSignInSuccess(string accessToken, string facebookName, string facebookEmail, string facebookImageUrl)
     {
-        Debug.Log($"[AuthenticationManager] Silent Facebook Sign-In successful! Restoring PlayFab session...");
+        Debug.Log($"[AuthenticationManager] Silent Facebook Sign-In successful! Restoring session...");
         
         // Unsubscribe from events first
         if (FacebookSignInManager.Instance != null)
@@ -461,16 +374,30 @@ public class AuthenticationManager : MonoBehaviour
             FacebookSignInManager.Instance.OnFacebookSignInFailure -= OnSilentFacebookSignInFailure;
         }
         
-        UpdateStatusText("Logging into PlayFab...");
+        UpdateStatusText("Logging into Backend...");
         
-        if (PlayFabManager.Instance != null)
+        if (BackendAuthService.Instance != null)
         {
-            // Login to PlayFab with Facebook access token
-            PlayFabManager.Instance.LoginWithFacebook(accessToken, facebookName, facebookEmail, facebookImageUrl);
+            // Login to Backend with Facebook access token
+            BackendAuthService.Instance.FacebookLogin(accessToken, (success, message) => 
+            {
+                if (success)
+                {
+                    PlayerPrefs.SetString("LastLoginMethod", "Facebook");
+                    PlayerPrefs.Save();
+                    OnLoginComplete(true);
+                }
+                else
+                {
+                    UpdateStatusText(message);
+                    SetLoadingState(false);
+                    isAttemptingAutoLogin = false;
+                }
+            });
         }
         else
         {
-            UpdateStatusText("Error: PlayFabManager not found!");
+            UpdateStatusText("Error: Backend Service not found!");
             SetLoadingState(false);
             isAttemptingAutoLogin = false;
         }
@@ -509,33 +436,13 @@ public class AuthenticationManager : MonoBehaviour
         lastAttemptedAction = AttemptEmailAutoLogin;
         UpdateStatusText("Restoring email login...");
         
-        if (PlayFabManager.Instance != null)
-        {
-            // This will attempt login if credentials are stored, or return false if not
-            PlayFabManager.Instance.AttemptAutoLoginWithEmail((success) =>
-            {
-                if (!success)
-                {
-                    // No stored credentials or login failed - show login screen
-                    Debug.Log("[AuthenticationManager] Email auto-login failed - showing login screen");
-                    isAttemptingAutoLogin = false;
-                    ShowLoginRegisterPanel();
-                    ShowLoginSection();
-                    SetLoadingState(false);
-                    UpdateStatusText("");
-                }
-                // If success, OnLoginComplete will be called automatically
-            });
-        }
-        else
-        {
-            Debug.LogWarning("[AuthenticationManager] PlayFabManager not found, showing login screen");
-            isAttemptingAutoLogin = false;
-            ShowLoginRegisterPanel();
-            ShowLoginSection();
-            SetLoadingState(false);
-            UpdateStatusText("");
-        }
+        // Manual email login is required if JWT is expired.
+        Debug.Log("[AuthenticationManager] Email auto-login requires manual login - showing login screen");
+        isAttemptingAutoLogin = false;
+        ShowLoginRegisterPanel();
+        ShowLoginSection();
+        SetLoadingState(false);
+        UpdateStatusText("");
     }
     
     /// <summary>
@@ -567,15 +474,11 @@ public class AuthenticationManager : MonoBehaviour
                 }
             });
         }
-        else
-        {
-            Debug.LogWarning("[AuthenticationManager] BackendAuthService not found, showing login panel");
-            isAttemptingAutoLogin = false;
-            ShowLoginRegisterPanel();
-            ShowLoginSection();
-            SetLoadingState(false);
-            UpdateStatusText("");
-        }
+        isAttemptingAutoLogin = false;
+        ShowLoginRegisterPanel();
+        ShowLoginSection();
+        SetLoadingState(false);
+        UpdateStatusText("");
     }
     
     #region Panel Management
@@ -586,7 +489,7 @@ public class AuthenticationManager : MonoBehaviour
     public void ShowLoginRegisterPanel()
     {
         // Don't show login panel if user is already logged in
-        if (PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
+        if (BackendAuthService.HasStoredJWT())
         {
             Debug.Log("[AuthenticationManager] User is already logged in, preventing login panel from showing");
             ShowSplashScreenPanel();
@@ -753,6 +656,8 @@ public class AuthenticationManager : MonoBehaviour
             {
                 if (success)
                 {
+                    PlayerPrefs.SetString("LastLoginMethod", "Email");
+                    PlayerPrefs.Save();
                     OnLoginComplete(true);
                 }
                 else
@@ -766,10 +671,6 @@ public class AuthenticationManager : MonoBehaviour
                     }
                 }
             });
-        }
-        else if (PlayFabManager.Instance != null) // Fallback if BackendAuthService isn't in scene yet
-        {
-            PlayFabManager.Instance.LoginWithEmail(email, password);
         }
         else
         {
@@ -839,17 +740,29 @@ public class AuthenticationManager : MonoBehaviour
     
     private void OnGoogleSignInSuccess(string serverAuthCode, string idToken, string email, string displayName, string photoUrl)
     {
-        Debug.Log($"[AuthenticationManager] Google Sign-In successful, logging into PlayFab... Email: {email}, Name: {displayName}");
-        UpdateStatusText("Logging into PlayFab...");
+        Debug.Log($"[AuthenticationManager] Google Sign-In successful, logging into Backend... Email: {email}, Name: {displayName}");
+        UpdateStatusText("Logging into Backend...");
         
-        if (PlayFabManager.Instance != null)
+        if (BackendAuthService.Instance != null)
         {
-            // PlayFab requires ServerAuthCode, and we pass Google profile data
-            PlayFabManager.Instance.LoginWithGoogle(serverAuthCode, email, displayName, photoUrl);
+            BackendAuthService.Instance.GoogleLogin(idToken, (success, message) => 
+            {
+                if (success)
+                {
+                    PlayerPrefs.SetString("LastLoginMethod", "Google");
+                    PlayerPrefs.Save();
+                    OnLoginComplete(true);
+                }
+                else
+                {
+                    UpdateStatusText(message);
+                    SetLoadingState(false);
+                }
+            });
         }
         else
         {
-            UpdateStatusText("Error: PlayFabManager not found!");
+            UpdateStatusText("Error: BackendAuthService not found!");
             SetLoadingState(false);
         }
         
@@ -906,17 +819,29 @@ public class AuthenticationManager : MonoBehaviour
     
     private void OnFacebookSignInSuccess(string accessToken, string facebookName, string facebookEmail, string facebookImageUrl)
     {
-        Debug.Log($"[AuthenticationManager] Facebook Sign-In successful, logging into PlayFab... Name: {facebookName}, Email: {facebookEmail}, ImageURL: {facebookImageUrl}");
-        UpdateStatusText("Logging into PlayFab...");
+        Debug.Log($"[AuthenticationManager] Facebook Sign-In successful, logging into Backend... Name: {facebookName}, Email: {facebookEmail}");
+        UpdateStatusText("Logging into Backend...");
         
-        if (PlayFabManager.Instance != null)
+        if (BackendAuthService.Instance != null)
         {
-            // Pass Facebook profile data (including avatar) to PlayFab
-            PlayFabManager.Instance.LoginWithFacebook(accessToken, facebookName, facebookEmail, facebookImageUrl);
+            BackendAuthService.Instance.FacebookLogin(accessToken, (success, message) => 
+            {
+                if (success)
+                {
+                    PlayerPrefs.SetString("LastLoginMethod", "Facebook");
+                    PlayerPrefs.Save();
+                    OnLoginComplete(true);
+                }
+                else
+                {
+                    UpdateStatusText(message);
+                    SetLoadingState(false);
+                }
+            });
         }
         else
         {
-            UpdateStatusText("Error: PlayFabManager not found!");
+            UpdateStatusText("Error: BackendAuthService not found!");
             SetLoadingState(false);
         }
         
@@ -999,23 +924,13 @@ public class AuthenticationManager : MonoBehaviour
                 }
             });
         }
-        else if (PlayFabManager.Instance != null) // Fallback if BackendAuthService isn't in scene
-        {
-            // Clear any stored email credentials before registration to avoid conflicts
-            PlayFabManager.Instance.ClearStoredEmailCredentials();
-            
-            // Clear any existing PlayFab session
-            PlayFabClientAPI.ForgetAllCredentials();
-            
-            // Register the new account
-            PlayFabManager.Instance.RegisterPlayer(email, password, name);
-        }
         else
         {
-            UpdateStatusText("Error: Authentication Service not found!");
+            UpdateStatusText("Error: BackendAuthService not found!");
             SetLoadingState(false);
             isRegistering = false;
         }
+
     }
     
     private bool ValidateRegistration(string name, string email, string password)
@@ -1107,24 +1022,10 @@ public class AuthenticationManager : MonoBehaviour
             else
             {
                 // Manual login failed, show error message
-                // Try to get a more specific error message from PlayFabManager
-                string errorMsg = "";
-                if (PlayFabManager.Instance != null)
-                {
-                    errorMsg = PlayFabManager.Instance.GetLastErrorMessage();
-                }
-                
-                if (!string.IsNullOrEmpty(errorMsg))
-                {
-                    UpdateStatusText(errorMsg);
-                }
-                else
-                {
-                    UpdateStatusText("Login failed! Please check your credentials.");
-                }
+                UpdateStatusText("Login failed! Please check your credentials.");
 
                 // If login failed due to network, show internet panel
-                if (Application.internetReachability == NetworkReachability.NotReachable || (errorMsg != null && errorMsg.ToLower().Contains("network")))
+                if (Application.internetReachability == NetworkReachability.NotReachable)
                 {
                     ShowInternetPanel(lastAttemptedAction);
                 }
@@ -1135,56 +1036,29 @@ public class AuthenticationManager : MonoBehaviour
     private void OnRegisterComplete(bool success)
     {
         SetLoadingState(false);
-        isRegistering = false; // Reset registration flag
+        isRegistering = false;
         
         if (success)
         {
             UpdateStatusText("Registration successful! Logging you in...");
-            
-            // User is automatically logged in by PlayFab after registration
             Debug.Log("[AuthenticationManager] User registered and logged in automatically with NEW account!");
             
-            // Clear registration input fields
             ClearRegistrationFields();
-            
-            // Hide the registration screen after 3.5 seconds
-            // This gives user time to see the success message
             Invoke(nameof(HideRegisterScreen), 3.5f);
-            
-            // Show splash screen after successful registration
             Invoke(nameof(ShowSplashScreenPanel), 0.5f);
-            
-            // Notify listeners
             OnAuthenticationSuccess?.Invoke();
         }
         else
         {
-            // Registration failed - clear the flag
             isRegistering = false;
+            UpdateStatusText("Registration failed! Email might already be in use.");
             
-            // Try to get a more specific error message from PlayFabManager
-            string errorMsg = "";
-            if (PlayFabManager.Instance != null)
-            {
-                errorMsg = PlayFabManager.Instance.GetLastErrorMessage();
-            }
-            
-            if (!string.IsNullOrEmpty(errorMsg))
-            {
-                UpdateStatusText(errorMsg);
-            }
-            else
-            {
-                UpdateStatusText("Registration failed! Email might already be in use.");
-            }
-            
-            // If registration failed due to network, show internet panel
-            if (Application.internetReachability == NetworkReachability.NotReachable || (errorMsg != null && errorMsg.ToLower().Contains("network")))
+            if (Application.internetReachability == NetworkReachability.NotReachable)
             {
                 ShowInternetPanel(OnRegisterClicked);
             }
-            
-            // Clear password field on failure (keep name and email for user convenience)
+
+            // Clear password field on failure
             if (registerPasswordInput != null)
             {
                 registerPasswordInput.text = "";

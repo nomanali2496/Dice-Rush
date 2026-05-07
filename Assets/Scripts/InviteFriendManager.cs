@@ -69,8 +69,8 @@ public class InviteFriendManager : MonoBehaviour, IEnhancedScrollerDelegate
             return;
         }
         
-        // Load referred users from PlayFab (use coroutine to wait for scroller initialization)
-        StartCoroutine(LoadReferredUsersDelayed());
+        // Load data (falling back to test data as PlayFab is removed)
+        StartCoroutine(LoadTestDataDelayed());
         isInitialized = true;
     }
     
@@ -87,15 +87,14 @@ public class InviteFriendManager : MonoBehaviour, IEnhancedScrollerDelegate
         {
             scroller.Delegate = this;
             
-            // Reload data if we have data (use coroutine to wait for scroller initialization)
+            // Reload data if we have data
             if (_friendsData != null && _friendsData.Count > 0)
             {
                 StartCoroutine(ReloadDataDelayed());
             }
             else
             {
-                // If no data, load referred users from PlayFab
-                StartCoroutine(LoadReferredUsersDelayed());
+                StartCoroutine(LoadTestDataDelayed());
             }
         }
     }
@@ -115,15 +114,6 @@ public class InviteFriendManager : MonoBehaviour, IEnhancedScrollerDelegate
     }
     
     /// <summary>
-    /// Coroutine to load referred users from PlayFab after waiting a frame (ensures scroller is initialized)
-    /// </summary>
-    private IEnumerator LoadReferredUsersDelayed()
-    {
-        yield return null; // Wait one frame for scroller to initialize
-        LoadReferredUsersFromPlayFab();
-    }
-    
-    /// <summary>
     /// Coroutine to load test data after waiting a frame (ensures scroller is initialized)
     /// </summary>
     private IEnumerator LoadTestDataDelayed()
@@ -133,90 +123,12 @@ public class InviteFriendManager : MonoBehaviour, IEnhancedScrollerDelegate
     }
     
     /// <summary>
-    /// Loads referred users from PlayFab (people who installed the app using your invite link)
+    /// Loads friends data (stub for future socket integration)
     /// </summary>
-    public void LoadReferredUsersFromPlayFab()
+    public void LoadFriendsData()
     {
-        if (PlayFabManager.Instance == null || !PlayFabManager.Instance.IsLoggedIn())
-        {
-            Debug.LogWarning("[InviteFriendManager] Cannot load referred users - not logged into PlayFab. Loading test data instead.");
-            LoadTestData();
-            return;
-        }
-        
-        Debug.Log("[InviteFriendManager] Loading referred users from PlayFab...");
-        
-        PlayFabManager.Instance.GetMyReferredUsers((referredUsers) =>
-        {
-            if (_friendsData == null)
-            {
-                _friendsData = new SmallList<FriendRowData>();
-            }
-            else
-            {
-                _friendsData.Clear();
-            }
-            
-            if (referredUsers != null && referredUsers.Count > 0)
-            {
-                Debug.Log($"[InviteFriendManager] Found {referredUsers.Count} referred users from PlayFab");
-                
-                // Convert referred users to FriendRowData
-                foreach (var referredUser in referredUsers)
-                {
-                    // Start loading image from URL (will be set asynchronously)
-                    Sprite avatar = null;
-                    
-                    // If user has an image URL, load it
-                    if (!string.IsNullOrEmpty(referredUser.imageUrl))
-                    {
-                        StartCoroutine(LoadImageFromURL(referredUser.imageUrl, referredUser.playFabId, (loadedSprite) =>
-                        {
-                            // Update the avatar for this specific user
-                            UpdateFriendAvatar(referredUser.playFabId, loadedSprite);
-                        }));
-                    }
-                    else
-                    {
-                        // Fallback to random test avatar if no image URL
-                        if (testAvatars != null && testAvatars.Length > 0)
-                        {
-                            System.Random random = new System.Random(referredUser.playFabId.GetHashCode());
-                            avatar = testAvatars[random.Next(0, testAvatars.Length)];
-                        }
-                    }
-                    
-                    // For now, we'll set online status to false (you can implement real-time status later)
-                    bool isOnline = false;
-                    
-                    _friendsData.Add(new FriendRowData(
-                        referredUser.playerName,
-                        referredUser.playFabId,
-                        avatar,
-                        isOnline
-                    ));
-                }
-            }
-            else
-            {
-                Debug.Log("[InviteFriendManager] No referred users found in PlayFab");
-            }
-            
-            // Reload the scroller with new data
-            if (scroller != null && scroller.gameObject.activeInHierarchy)
-            {
-                if (scroller.Delegate == null)
-                {
-                    scroller.Delegate = this;
-                }
-                scroller.ReloadData();
-            }
-            
-            // Update total invites text
-            UpdateTotalInvitesText();
-            
-            Debug.Log($"[InviteFriendManager] Loaded {_friendsData.Count} referred users from PlayFab");
-        });
+        Debug.Log("[InviteFriendManager] Loading friends data (falling back to test data)...");
+        LoadTestData();
     }
     
     /// <summary>

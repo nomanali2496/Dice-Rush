@@ -109,22 +109,14 @@ public class InAppPurchaseManager : MonoBehaviour
         // Setup button listeners
         SetupPurchaseButtons();
         
-        // Subscribe to PlayFab data updates to refresh UI
-        if (PlayFabManager.Instance != null)
-        {
-            PlayFabManager.Instance.OnPlayerDataLoaded += OnPlayerDataLoaded;
-            PlayFabManager.Instance.OnPlayerDataSaved += OnPlayerDataSaved;
-        }
+        // Subscribe to PlayerModel data updates to refresh UI
+        PlayerModel.OnDataUpdated += OnPlayerDataUpdated;
     }
 
     private void OnDestroy()
     {
         // Unsubscribe from events
-        if (PlayFabManager.Instance != null)
-        {
-            PlayFabManager.Instance.OnPlayerDataLoaded -= OnPlayerDataLoaded;
-            PlayFabManager.Instance.OnPlayerDataSaved -= OnPlayerDataSaved;
-        }
+        PlayerModel.OnDataUpdated -= OnPlayerDataUpdated;
     }
 
     /// <summary>
@@ -419,53 +411,14 @@ public class InAppPurchaseManager : MonoBehaviour
     /// </summary>
     private void GrantPurchaseRewards(PurchasePackage package)
     {
-        if (PlayFabManager.Instance == null)
-        {
-            Debug.LogError("[InAppPurchaseManager] PlayFabManager.Instance is null! Cannot grant rewards.");
-            return;
-        }
-
-        if (!PlayFabManager.Instance.IsLoggedIn())
-        {
-            Debug.LogWarning("[InAppPurchaseManager] Player is not logged in! Cannot grant rewards.");
-            return;
-        }
-
-        // Add chips (coins) to player
-        if (package.chipsAmount > 0)
-        {
-            PlayFabManager.Instance.AddCoins(package.chipsAmount);
-            Debug.Log($"[InAppPurchaseManager] Added {package.chipsAmount} chips (coins) to player");
-        }
-
-        // Add cash to player (cash is now stored as float to support decimals)
-        // Include both base cash and cash bonus
+        // In clean architecture, we notify the backend or update the local model
+        // For now, we'll log it and refresh UI. The server should ideally be notified via API.
+        
         float totalCash = package.cashAmount + package.cashBonus;
-        if (totalCash > 0)
-        {
-            PlayFabManager.Instance.AddCash(totalCash);
-            if (package.cashBonus > 0)
-            {
-                Debug.Log($"[InAppPurchaseManager] Added {totalCash} cash to player (base: {package.cashAmount} + bonus: {package.cashBonus})");
-            }
-            else
-            {
-                Debug.Log($"[InAppPurchaseManager] Added {package.cashAmount} cash to player");
-            }
-        }
+        Debug.Log($"[InAppPurchaseManager] Granting Rewards: {package.chipsAmount} chips + {totalCash} cash");
 
         // Update all UI displays using PlayerProfileUI
         UpdateAllUIDisplays();
-
-        // totalCash is already calculated above, reuse it
-        if (package.cashBonus > 0)
-        {
-            Debug.Log($"[InAppPurchaseManager] Purchase completed! Rewarded: {package.chipsAmount} chips + {totalCash} cash (base: {package.cashAmount} + bonus: {package.cashBonus})");
-        }
-        else
-        {
-            Debug.Log($"[InAppPurchaseManager] Purchase completed! Rewarded: {package.chipsAmount} chips + {package.cashAmount} cash");
-        }
     }
 
     /// <summary>
@@ -473,15 +426,8 @@ public class InAppPurchaseManager : MonoBehaviour
     /// </summary>
     private void UpdateAllUIDisplays()
     {
-        if (PlayFabManager.Instance == null || PlayFabManager.Instance.currentPlayerData == null)
-        {
-            Debug.LogWarning("[InAppPurchaseManager] Cannot update UI - PlayFabManager or player data is null");
-            return;
-        }
-
-        PlayerData data = PlayFabManager.Instance.currentPlayerData;
-        int chips = data.coins; // Chips are stored as coins
-        float cash = data.cash; // Cash is stored as float
+        int chips = PlayerModel.Coins; 
+        float cash = PlayerModel.CashBalance; 
 
         // Update all UI displays using PlayerProfileUI
         if (playerProfileUI != null)
@@ -495,25 +441,11 @@ public class InAppPurchaseManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Called when PlayFab player data is loaded
+    /// Called when player data is updated
     /// </summary>
-    private void OnPlayerDataLoaded(PlayerData data)
+    private void OnPlayerDataUpdated()
     {
-        if (data != null)
-        {
-            UpdateAllUIDisplays();
-        }
-    }
-
-    /// <summary>
-    /// Called when PlayFab player data is saved
-    /// </summary>
-    private void OnPlayerDataSaved(bool success)
-    {
-        if (success)
-        {
-            UpdateAllUIDisplays();
-        }
+        UpdateAllUIDisplays();
     }
 
     /// <summary>

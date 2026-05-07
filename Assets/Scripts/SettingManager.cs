@@ -20,7 +20,7 @@ public class SettingManager : MonoBehaviour
     [SerializeField] private GameObject gameplayScreen; // Reference to Gameplay GameObject
     
     [Header("Debug Info")]
-    [SerializeField] private string currentUserId = ""; // Current user's PlayFab ID (for account-specific storage)
+    [SerializeField] private string currentUserId = ""; // Current user ID (for account-specific storage)
     [SerializeField] private string storageKey = "N/A"; // PlayerPrefs key being used for storage
     
     // PlayerPrefs keys for music and sound (device-wide)

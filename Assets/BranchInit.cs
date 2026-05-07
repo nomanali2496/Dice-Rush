@@ -179,7 +179,7 @@ public class BranchInit : MonoBehaviour
                 Debug.Log("[BranchInit] Referral data saved. Will be processed after PlayFab login.");
                 
                 // Try to process referral if already logged in
-                if (PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
+                if (BackendAuthService.HasStoredJWT() && !string.IsNullOrEmpty(PlayerModel.Id))
                 {
                     ProcessReferralAfterLogin(inviterPlayFabId, inviterName);
                 }
@@ -210,16 +210,16 @@ public class BranchInit : MonoBehaviour
     /// </summary>
     public void ProcessReferralAfterLogin(string inviterPlayFabId, string inviterName = null)
     {
-        if (PlayFabManager.Instance == null || !PlayFabManager.Instance.IsLoggedIn())
+        if (!BackendAuthService.HasStoredJWT() || string.IsNullOrEmpty(PlayerModel.Id))
         {
-            Debug.LogWarning("[BranchInit] Cannot process referral - not logged into PlayFab");
+            Debug.LogWarning("[BranchInit] Cannot process referral - not logged in");
             return;
         }
         
-        string currentUserPlayFabId = PlayFabManager.Instance.GetPlayFabId();
+        string currentUserPlayFabId = PlayerModel.Id;
         if (string.IsNullOrEmpty(currentUserPlayFabId))
         {
-            Debug.LogWarning("[BranchInit] Cannot process referral - no PlayFab ID");
+            Debug.LogWarning("[BranchInit] Cannot process referral - no player ID");
             return;
         }
         
@@ -232,7 +232,15 @@ public class BranchInit : MonoBehaviour
         
         Debug.Log($"[BranchInit] Processing referral: {currentUserPlayFabId} was referred by {inviterPlayFabId}");
         
-        // Save referral to PlayFab
+        // TODO: Implement SaveReferralData in BackendAuthService
+        Debug.Log("[BranchInit] Referral saving to custom backend is not implemented yet.");
+        
+        // Clear pending referral flags (assuming success for now to avoid repeat logs)
+        PlayerPrefs.DeleteKey("PendingReferrerPlayFabId");
+        PlayerPrefs.DeleteKey("PendingReferrerName");
+        PlayerPrefs.DeleteKey("HasPendingReferral");
+        PlayerPrefs.Save();
+/*
         PlayFabManager.Instance.SaveReferralData(inviterPlayFabId, inviterName, (success) =>
         {
             if (success)
@@ -250,6 +258,7 @@ public class BranchInit : MonoBehaviour
                 Debug.LogError("[BranchInit] ❌ Failed to save referral data to PlayFab");
             }
         });
+*/
     }
     
     /// <summary>
@@ -302,12 +311,11 @@ public class BranchInit : MonoBehaviour
             // Create link properties first
             BranchLinkProperties linkProperties = new BranchLinkProperties();
             
-            // Add current user's PlayFab ID and name to the invite link
-            if (PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())
+            // Add current user's ID and name to the invite link
+            if (BackendAuthService.HasStoredJWT() && !string.IsNullOrEmpty(PlayerModel.Id))
             {
-                string inviterPlayFabId = PlayFabManager.Instance.GetPlayFabId();
-                string inviterName = PlayFabManager.Instance.currentPlayerData != null ? 
-                    PlayFabManager.Instance.currentPlayerData.playerName : "Player";
+                string inviterPlayFabId = PlayerModel.Id;
+                string inviterName = !string.IsNullOrEmpty(PlayerModel.Name) ? PlayerModel.Name : "Player";
                 
                 universalObject.metadata.AddCustomMetadata("inviter_playfab_id", inviterPlayFabId);
                 universalObject.metadata.AddCustomMetadata("inviter_name", inviterName);
@@ -320,7 +328,7 @@ public class BranchInit : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("[BranchInit] User not logged into PlayFab - invite link created without referrer info");
+                Debug.LogWarning("[BranchInit] User not logged in - invite link created without referrer info");
             }
             linkProperties.feature = "invite";
             linkProperties.channel = "app_invite";

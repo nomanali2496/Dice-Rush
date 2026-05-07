@@ -12,7 +12,8 @@ using DG.Tweening;
 public enum PlayerType
 {
     Player,
-    CPU
+    CPU,
+    Network
 }
 
 /// <summary>

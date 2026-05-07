@@ -1,9 +1,7 @@
 using System;
 using UnityEngine;
 
-/// <summary>
-/// Stores player data that will be saved to PlayFab
-/// </summary>
+/// Stores player data for the game backend
 [Serializable]
 public class PlayerData
 {

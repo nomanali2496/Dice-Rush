@@ -23,22 +23,22 @@ public class SwipeTouchZone : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     private Vector2 swipeStartPos;
     private bool isSwiping = false;
     
-    // Reference to LobbyManager
-    private LobbyManager lobbyManager;
+    // Reference to HorizontalLobbyManager
+    private HorizontalLobbyManager horizontalLobbyManager;
     
     private void Start()
     {
-        // Find LobbyManager in the scene
-        lobbyManager = FindObjectOfType<LobbyManager>();
+        // Find HorizontalLobbyManager in the scene
+        horizontalLobbyManager = FindObjectOfType<HorizontalLobbyManager>();
         
-        if (lobbyManager == null)
+        if (horizontalLobbyManager == null)
         {
-            Debug.LogError("[SwipeTouchZone] LobbyManager not found! Swipe detection will not work.");
+            Debug.LogError("[SwipeTouchZone] HorizontalLobbyManager not found! Swipe detection will not work.");
         }
         else
         {
             if (showDebugLogs)
-                Debug.Log("[SwipeTouchZone] Successfully connected to LobbyManager");
+                Debug.Log("[SwipeTouchZone] Successfully connected to HorizontalLobbyManager");
         }
     }
     
@@ -69,54 +69,54 @@ public class SwipeTouchZone : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         if (showDebugLogs)
             Debug.Log($"[SwipeTouchZone] Swipe ended at: {swipeEndPos}, Delta: {swipeDelta}");
         
-        // Check if swipe is long enough (primarily vertical)
-        if (Mathf.Abs(swipeDelta.y) > swipeThreshold)
+        // Check if swipe is long enough (primarily horizontal for HorizontalLobbyManager)
+        if (Mathf.Abs(swipeDelta.x) > swipeThreshold)
         {
-            // Ensure vertical swipe is more dominant than horizontal
-            if (Mathf.Abs(swipeDelta.y) > Mathf.Abs(swipeDelta.x))
+            // Ensure horizontal swipe is more dominant than vertical
+            if (Mathf.Abs(swipeDelta.x) > Mathf.Abs(swipeDelta.y))
             {
-                if (lobbyManager != null)
+                if (horizontalLobbyManager != null)
                 {
                     if (useVelocityScrolling)
                     {
                         // Calculate how many items to scroll based on swipe distance
-                        float swipeDistance = Mathf.Abs(swipeDelta.y);
+                        float swipeDistance = Mathf.Abs(swipeDelta.x);
                         int itemsToScroll = Mathf.RoundToInt(swipeDistance / pixelsPerItem);
                         
                         // Clamp to max scroll items
                         itemsToScroll = Mathf.Clamp(itemsToScroll, 1, maxScrollItems);
                         
-                        // Swipe up = scroll down (show next items)
-                        if (swipeDelta.y < 0)
+                        // Swipe left = scroll right (show next items)
+                        if (swipeDelta.x < 0)
                         {
                             if (showDebugLogs)
-                                Debug.Log($"[SwipeTouchZone] Swipe UP detected ({swipeDistance:F0}px) -> Scroll DOWN by {itemsToScroll} items");
-                            lobbyManager.ScrollMultiple(itemsToScroll);
+                                Debug.Log($"[SwipeTouchZone] Swipe LEFT detected ({swipeDistance:F0}px) -> Scroll RIGHT by {itemsToScroll} items");
+                            horizontalLobbyManager.ScrollMultiple(itemsToScroll);
                         }
-                        // Swipe down = scroll up (show previous items)
+                        // Swipe right = scroll left (show previous items)
                         else
                         {
                             if (showDebugLogs)
-                                Debug.Log($"[SwipeTouchZone] Swipe DOWN detected ({swipeDistance:F0}px) -> Scroll UP by {itemsToScroll} items");
-                            lobbyManager.ScrollMultiple(-itemsToScroll);
+                                Debug.Log($"[SwipeTouchZone] Swipe RIGHT detected ({swipeDistance:F0}px) -> Scroll LEFT by {itemsToScroll} items");
+                            horizontalLobbyManager.ScrollMultiple(-itemsToScroll);
                         }
                     }
                     else
                     {
-                        // Single-step scrolling (original behavior)
-                        // Swipe up = scroll down (show next items)
-                        if (swipeDelta.y < 0)
+                        // Single-step scrolling
+                        // Swipe left = scroll right (show next items)
+                        if (swipeDelta.x < 0)
                         {
                             if (showDebugLogs)
-                                Debug.Log("[SwipeTouchZone] Swipe UP detected -> Scroll DOWN");
-                            lobbyManager.ScrollDown();
+                                Debug.Log("[SwipeTouchZone] Swipe LEFT detected -> Scroll RIGHT");
+                            horizontalLobbyManager.ScrollRight();
                         }
-                        // Swipe down = scroll up (show previous items)
+                        // Swipe right = scroll left (show previous items)
                         else
                         {
                             if (showDebugLogs)
-                                Debug.Log("[SwipeTouchZone] Swipe DOWN detected -> Scroll UP");
-                            lobbyManager.ScrollUp();
+                                Debug.Log("[SwipeTouchZone] Swipe RIGHT detected -> Scroll LEFT");
+                            horizontalLobbyManager.ScrollLeft();
                         }
                     }
                 }

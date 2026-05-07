@@ -52,7 +52,7 @@ public class OfferPanelManager : MonoBehaviour
     
     private const string LAST_OFFER_SHOWN_TIMESTAMP_KEY_PREFIX = "OfferPanelManager_LastShownTimestamp_";
     
-    private string currentUserId = ""; // Store current user's PlayFab ID for account-specific storage
+    private string currentUserId = ""; // Store current user ID for account-specific storage
     
     private AuthenticationManager authManager;
     private DailyRewardManager dailyRewardManager;
@@ -113,8 +113,8 @@ public class OfferPanelManager : MonoBehaviour
         // Setup close buttons if provided
         // SetupCloseButtons();
 
-        // Check if already logged in (fallback in case we missed the AuthenticationManager event because this GameObject was disabled)
-        if (!hasLoggedIn && (BackendAuthService.HasStoredJWT() || (PlayFabManager.Instance != null && PlayFabManager.Instance.IsLoggedIn())))
+        // Check if already logged in
+        if (!hasLoggedIn && BackendAuthService.HasStoredJWT())
         {
             Debug.Log("[OfferPanelManager] Already logged in at Start, triggering OnUserLoggedIn manually.");
             OnUserLoggedIn();
@@ -144,12 +144,8 @@ public class OfferPanelManager : MonoBehaviour
         isApiDataLoaded = false;
         apiOfferStrings.Clear();
         
-        // Get the current user's PlayFab ID for account-specific storage
-        string newUserId = "";
-        if (PlayFabManager.Instance != null)
-        {
-            newUserId = PlayFabManager.Instance.GetPlayFabId();
-        }
+        // Get the current user ID for account-specific storage
+        string newUserId = PlayerModel.Id;
 
         // Only update the ID if we actually got a valid one
         if (!string.IsNullOrEmpty(newUserId))

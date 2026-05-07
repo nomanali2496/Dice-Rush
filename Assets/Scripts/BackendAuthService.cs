@@ -308,6 +308,87 @@ public class BackendAuthService : MonoBehaviour
     }
 
     /// <summary>
+    /// Sends a Google Login request to the custom Node.js server.
+    /// </summary>
+    public void GoogleLogin(string idToken, Action<bool, string> onComplete)
+    {
+        Debug.Log($"<color=#00ffff>[BackendAuthService] POST Request: /api/auth/google | Token provided</color>");
+        StartCoroutine(SocialLoginCoroutine("/api/auth/google", idToken, onComplete));
+    }
+
+    /// <summary>
+    /// Sends a Facebook Login request to the custom Node.js server.
+    /// </summary>
+    public void FacebookLogin(string accessToken, Action<bool, string> onComplete)
+    {
+        Debug.Log($"<color=#00ffff>[BackendAuthService] POST Request: /api/auth/facebook | Token provided</color>");
+        StartCoroutine(SocialLoginCoroutine("/api/auth/facebook", accessToken, onComplete));
+    }
+
+    private IEnumerator SocialLoginCoroutine(string endpoint, string token, Action<bool, string> onComplete)
+    {
+        string url = baseUrl.TrimEnd('/') + endpoint; 
+        string jsonData = $"{{\"token\":\"{token}\"}}";
+
+        using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+        {
+            byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonData);
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Social Login Result: {request.downloadHandler.text}</color>");
+                try
+                {
+                    AuthResponse response = JsonUtility.FromJson<AuthResponse>(request.downloadHandler.text);
+                    
+                    if (!string.IsNullOrEmpty(response.token))
+                    {
+                        if (response.user != null && !string.IsNullOrEmpty(response.user.id))
+                        {
+                            PlayerModel.UpdateData(
+                                response.user.id, response.user.name, response.user.email,
+                                response.user.wins, response.user.losses, response.user.balance,
+                                response.user.cashBalance, response.user.bonusBalance, response.user.winningBalance,
+                                response.user.coins, response.user.avatar, response.user.xp,
+                                response.user.level, response.user.role
+                            );
+                        }
+
+                        PlayerPrefs.SetString(JWT_PREF_KEY, response.token);
+                        PlayerPrefs.Save();
+                        
+                        if (SocketManager.Instance != null)
+                        {
+                            SocketManager.Instance.ConnectToServer();
+                        }
+                        
+                        onComplete?.Invoke(true, "Social Login successful!");
+                    }
+                    else
+                    {
+                        onComplete?.Invoke(false, "Social Login succeeded, but no token was returned.");
+                    }
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError($"<color=#ff0000>[BackendAuthService] JSON Parse Error: {e.Message}</color>");
+                    onComplete?.Invoke(false, "Failed to parse server response.");
+                }
+            }
+            else
+            {
+                Debug.LogError($"<color=#ff0000>[BackendAuthService] Social Login Error: {request.error} | {request.downloadHandler.text}</color>");
+                onComplete?.Invoke(false, request.downloadHandler.text);
+            }
+        }
+    }
+
+    /// <summary>
     /// Updates the user's profile (e.g., name or preset avatar) on the backend.
     /// </summary>
     public void UpdateProfile(string newName, string avatar = null, Action<bool, string> onComplete = null)

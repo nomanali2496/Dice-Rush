@@ -1,7 +1,7 @@
 using UnityEngine;
 
 /// <summary>
-/// Simple debug script to verify PlayFab data is loading correctly
+/// Simple debug script to verify PlayerModel data is loading correctly
 /// Attach to any GameObject to see player data in Console
 /// </summary>
 public class PlayerDataDebugger : MonoBehaviour
@@ -14,10 +14,7 @@ public class PlayerDataDebugger : MonoBehaviour
     
     private void Start()
     {
-        if (PlayFabManager.Instance != null)
-        {
-            PlayFabManager.Instance.OnPlayerDataLoaded += OnDataLoaded;
-        }
+        PlayerModel.OnDataUpdated += OnDataLoaded;
     }
     
     private void Update()
@@ -32,48 +29,29 @@ public class PlayerDataDebugger : MonoBehaviour
         }
     }
     
-    private void OnDataLoaded(PlayerData data)
+    private void OnDataLoaded()
     {
-        Debug.Log("=== PLAYER DATA LOADED ===");
-        Debug.Log($"Name: {data.playerName}");
-        Debug.Log($"Email: {data.email}");
-        Debug.Log($"Cash: {data.cash}");
-        Debug.Log($"Coins: {data.coins}");
-        Debug.Log($"Image URL: {data.imageUrl}");
+        Debug.Log("=== PLAYER DATA UPDATED ===");
+        Debug.Log($"Name: {PlayerModel.Name}");
+        Debug.Log($"Cash: {PlayerModel.CashBalance}");
+        Debug.Log($"Coins: {PlayerModel.Coins}");
+        Debug.Log($"Level: {PlayerModel.Level}");
         Debug.Log("=========================");
     }
     
     private void LogPlayerData()
     {
-        if (PlayFabManager.Instance == null)
+        if (string.IsNullOrEmpty(PlayerModel.Id))
         {
-            Debug.LogWarning("PlayFabManager not found!");
+            Debug.Log("Player not logged in yet (No ID)...");
             return;
         }
         
-        if (!PlayFabManager.Instance.IsLoggedIn())
-        {
-            Debug.Log("Player not logged in yet...");
-            return;
-        }
-        
-        PlayerData data = PlayFabManager.Instance.currentPlayerData;
-        if (data != null)
-        {
-            Debug.Log($"[Player Data] Name: {data.playerName}, Cash: {data.cash}, Coins: {data.coins}");
-        }
-        else
-        {
-            Debug.LogWarning("Player data is null!");
-        }
+        Debug.Log($"[Player Data] Name: {PlayerModel.Name}, Cash: {PlayerModel.CashBalance}, Coins: {PlayerModel.Coins}");
     }
     
     private void OnDestroy()
     {
-        if (PlayFabManager.Instance != null)
-        {
-            PlayFabManager.Instance.OnPlayerDataLoaded -= OnDataLoaded;
-        }
+        PlayerModel.OnDataUpdated -= OnDataLoaded;
     }
 }
-

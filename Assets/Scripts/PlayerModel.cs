@@ -16,6 +16,7 @@ public static class PlayerModel
     public static int Xp { get; private set; }
     public static int Level { get; private set; }
     public static string Role { get; private set; }
+    public static int SelectedAvatarIndex { get; private set; }
 
     // Event fired whenever the player data changes
     public static event Action OnDataUpdated;
@@ -27,7 +28,7 @@ public static class PlayerModel
     public static void UpdateData(
         string id, string name, string email, int wins, int losses,
         int balance, int cashBalance, int bonusBalance, int winningBalance, int coins,
-        string avatar, int xp, int level, string role)
+        string avatar, int xp, int level, string role, int selectedAvatarIndex = 0)
     {
         Id = id;
         Name = name;
@@ -43,6 +44,7 @@ public static class PlayerModel
         Xp = xp;
         Level = level;
         Role = role;
+        SelectedAvatarIndex = selectedAvatarIndex;
 
         OnDataUpdated?.Invoke();
     }

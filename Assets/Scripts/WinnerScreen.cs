@@ -85,18 +85,16 @@ public class WinnerScreen : MonoBehaviour
             return;
         }
         
-        // Get initial cash and chips values (before prize was awarded)
-        if (PlayFabManager.Instance != null && PlayFabManager.Instance.currentPlayerData != null)
-        {
-            // The prize was already awarded, so we need to subtract it to get initial value
-            // We'll get the current value and subtract the prize we're about to animate
-        }
-        
         // Check if player is in top 3
         bool playerInTop3 = false;
         int playerPlace = -1;
         float playerCashPrize = 0f;
         int playerChipsPrize = 0;
+        
+        // Get initial cash and chips values (before prize was awarded)
+        // Prize was already awarded to PlayerModel, so initial value is current - prize
+        initialCash = PlayerModel.CashBalance - playerCashPrize;
+        initialChips = PlayerModel.Coins - playerChipsPrize;
         
         // Check top 3 positions
         for (int i = 0; i < rankings.Count && i < 3; i++)
@@ -121,24 +119,21 @@ public class WinnerScreen : MonoBehaviour
         if (playerInTop3)
         {
             // Get current values (prizes were already awarded)
-            if (PlayFabManager.Instance != null && PlayFabManager.Instance.currentPlayerData != null)
+            targetCash = PlayerModel.CashBalance;
+            targetChips = PlayerModel.Coins;
+            
+            // Calculate initial values (current - prize)
+            initialCash = targetCash - playerCashPrize;
+            initialChips = targetChips - (int)playerChipsPrize;
+            
+            // Set current animated values to initial
+            currentAnimatedCash = initialCash;
+            currentAnimatedChips = initialChips;
+            
+            // Update UI to show initial values (before animation)
+            if (playerProfileUI != null)
             {
-                targetCash = PlayFabManager.Instance.currentPlayerData.cash;
-                targetChips = PlayFabManager.Instance.currentPlayerData.coins;
-                
-                // Calculate initial values (current - prize)
-                initialCash = targetCash - playerCashPrize;
-                initialChips = targetChips - playerChipsPrize;
-                
-                // Set current animated values to initial
-                currentAnimatedCash = initialCash;
-                currentAnimatedChips = initialChips;
-                
-                // Update UI to show initial values (before animation)
-                if (playerProfileUI != null)
-                {
-                    CurrencyDisplayUI.TriggerVisualAnimationTick(initialChips, initialCash);
-                }
+                CurrencyDisplayUI.TriggerVisualAnimationTick(initialChips, initialCash);
             }
             
             Debug.Log($"[WinnerScreen] Player is in {playerPlace}st place! Playing animation for {playerCashPrize} cash and {playerChipsPrize} chips");
