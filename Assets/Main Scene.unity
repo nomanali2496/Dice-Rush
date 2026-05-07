@@ -14920,7 +14920,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 474178699}
-  - component: {fileID: 474178701}
   - component: {fileID: 474178702}
   m_Layer: 0
   m_Name: LobbyManager
@@ -14944,21 +14943,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &474178701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 474178698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b3aa629ba654234fa5816b4f7d378a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LobbyNetworkManager
-  waitingPanel: {fileID: 2021851055}
-  statusText: {fileID: 638413962}
-  cancelButton: {fileID: 0}
 --- !u!114 &474178702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62189,13 +62173,13 @@ MonoBehaviour:
   timerText: {fileID: 294171673}
   timerTextLegacy: {fileID: 0}
   gameTimer: 105
-  countdownText: {fileID: 1576471693}
-  countdownTextShadow: {fileID: 762145800}
-  countdownDuration: 1
   winnerScreen: {fileID: 1620104683}
   winnerScreenScript: {fileID: 1620104688}
   winnerScreenLobbyButton: {fileID: 1663080490}
   calculateLoadingScreen: {fileID: 416799079}
+  countdownText: {fileID: 1576471693}
+  countdownTextShadow: {fileID: 762145800}
+  countdownDuration: 1
   winnerProfileImage: {fileID: 1964234723}
   winnerProfileImageCustom: {fileID: 865509120}
   winnerOutlineImage: {fileID: 1964234722}

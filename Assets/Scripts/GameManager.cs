@@ -809,6 +809,16 @@ public class GameManager : MonoBehaviour
         
         Debug.Log("[GameManager] Player quit! Returning to lobby...");
 
+        // Notify server about forfeit if in a room
+        if (currentMatchData != null && !string.IsNullOrEmpty(currentMatchData.roomId))
+        {
+            if (SocketManager.Instance != null && SocketManager.Instance.Socket != null)
+            {
+                Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'forfeitMatch' for Room: {currentMatchData.roomId}</color>");
+                SocketManager.Instance.Socket.Emit("forfeitMatch", new ForfeitPayload { roomId = currentMatchData.roomId });
+            }
+        }
+
         
         // Calculate total number of players (1 player + CPUs)
         int totalPlayers = 1; // Always 1 human player
@@ -2707,4 +2717,10 @@ public class OfflinePlayerEntry {
     public int chips;
     public int avatarIdx;
     public string customImg;
+}
+
+[System.Serializable]
+public class ForfeitPayload
+{
+    public string roomId;
 }
