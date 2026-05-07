@@ -109,7 +109,10 @@ public class NumberGrid : MonoBehaviour
     private List<GameObject> instantiatedBoxes = new List<GameObject>(); // List to store all instantiated boxes (for cleanup)
     private bool gridGenerated = false; // Flag to prevent double generation
     private string ownerUserId; // The Socket.io User ID that owns this grid
-    private int tapSequence = 0; // Sequence counter for anti-cheat
+    private int tapSequence = 0; // Sequence number for tap validation
+    private Coroutine serverPowerupUIUpdateCoroutine;
+    
+    // --- BOX DATA & PREFABS ---
     private const int MIN_NUMBER = 2;
     private const int MAX_NUMBER = 12;
     private const int POWERUP_COUNT = 3;
@@ -162,6 +165,8 @@ public class NumberGrid : MonoBehaviour
         // Subscribe to server events
         MatchmakingModel.OnNumberLockedEvent += HandleServerNumberLocked;
         MatchmakingModel.OnTapResultEvent += HandleServerTapResult;
+        MatchmakingModel.OnIconActivatedEvent += HandleServerIconActivated;
+        MatchmakingModel.OnIconExpiredEvent += HandleServerIconExpired;
         
         // Initially disable all buttons until dice are rolled
         UpdateBoxInteractability();
@@ -898,7 +903,26 @@ public class NumberGrid : MonoBehaviour
             BoxData boxData = boxDataList[data.index];
             if (!boxData.isSelected)
             {
-                PerformLocalBoxLock(boxData, PlayerType.Player);
+                if (boxData.isPowerup)
+                {
+                    // Powerup lock handled specifically to stop timers and pulsar effects
+                    LockPowerup(boxData, PlayerType.Player, -1);
+                    
+                    // Trigger events (same as OnPowerupButtonClicked)
+                    OnBoxSelected?.Invoke(this, -1, boxData.boxObject);
+                    CheckIfAllBoxesSelected();
+                }
+                else
+                {
+                    PerformLocalBoxLock(boxData, PlayerType.Player);
+                }
+
+                // Stop server-driven powerup UI update if this was the active powerup
+                if (currentlyVisiblePowerup == boxData && serverPowerupUIUpdateCoroutine != null)
+                {
+                    StopCoroutine(serverPowerupUIUpdateCoroutine);
+                    serverPowerupUIUpdateCoroutine = null;
+                }
             }
         }
     }
@@ -938,8 +962,8 @@ public class NumberGrid : MonoBehaviour
             boxData.selectButton.interactable = false;
         }
         
-        // Show highlight (only for number boxes, not powerups)
-        if (boxData.highlightImage != null && !boxData.isPowerup)
+        // Show highlight
+        if (boxData.highlightImage != null)
         {
             boxData.highlightImage.gameObject.SetActive(true);
         }
@@ -1401,6 +1425,15 @@ public class NumberGrid : MonoBehaviour
         }
         
         StopPowerupTimer(); // Stop any existing timer
+
+        // If we are in a server-driven match, do NOT start the local timer loop.
+        // Powerups will be activated by 'iconActivated' events from the server.
+        GameManager gm = FindObjectOfType<GameManager>();
+        if (gm != null && !string.IsNullOrEmpty(gm.GetCurrentRoomId()))
+        {
+            Debug.Log("[NumberGrid] Server-driven match detected. Local powerup timer loop disabled.");
+            return;
+        }
         
         // Only start if we have powerup boxes
         int powerupCount = boxDataList.Count(b => b.isPowerup);
@@ -1689,16 +1722,38 @@ public class NumberGrid : MonoBehaviour
             return;
         }
         
-        // Lock the powerup (keep it visible but locked)
-        LockPowerup(boxData, PlayerType.Player, -1);
+        // Store this as the last tapped box for visual feedback from server
+        lastTappedBoxData = boxData;
+
+        // EMIT TAP TO SERVER instead of locking locally
+        // This ensures the server validates the tap and broadcasts the lock to all players
+        GameManager gm = FindObjectOfType<GameManager>();
+        string roomId = gm != null ? gm.GetCurrentRoomId() : null;
         
-        // Trigger event (use -1 or 0 as number for powerups)
-        OnBoxSelected?.Invoke(this, -1, boxData.boxObject);
-        
-        Debug.Log($"[NumberGrid] Powerup selected and locked!");
-        
-        // Check if all boxes are selected
-        CheckIfAllBoxesSelected();
+        if (!string.IsNullOrEmpty(roomId))
+        {
+            // Find index of this boxData in our list
+            int index = boxDataList.IndexOf(boxData);
+            if (index != -1)
+            {
+                // Send 0 for powerups as per backend contract
+                Debug.Log($"[NumberGrid] Emitting powerup tap: index={index}, sequence={tapSequence}");
+                MatchmakingModel.EmitTapNumber(roomId, index, 0, tapSequence);
+                tapSequence++; // Increment AFTER sending so the first tap is 0
+            }
+        }
+        else
+        {
+            // Fallback for offline/Photon testing (original logic)
+            Debug.Log("[NumberGrid] No active match, locking powerup locally.");
+            LockPowerup(boxData, PlayerType.Player, -1);
+            
+            // Trigger event (use -1 or 0 as number for powerups)
+            OnBoxSelected?.Invoke(this, -1, boxData.boxObject);
+            
+            // Check if all boxes are selected
+            CheckIfAllBoxesSelected();
+        }
     }
     
     /// <summary>
@@ -1839,9 +1894,95 @@ public class NumberGrid : MonoBehaviour
     
     private void OnDestroy()
     {
+        // Unsubscribe from server events
         MatchmakingModel.OnNumberLockedEvent -= HandleServerNumberLocked;
+        MatchmakingModel.OnTapResultEvent -= HandleServerTapResult;
+        MatchmakingModel.OnIconActivatedEvent -= HandleServerIconActivated;
+        MatchmakingModel.OnIconExpiredEvent -= HandleServerIconExpired;
+
         StopPowerupTimer();
         ClearGrid();
     }
+
+    #region Server Powerup Handling
+
+    /// <summary>
+    /// Called when the server activates a powerup (icon)
+    /// </summary>
+    private void HandleServerIconActivated(IconActivatedData data)
+    {
+        if (data.index >= 0 && data.index < boxDataList.Count)
+        {
+            BoxData boxData = boxDataList[data.index];
+            if (boxData.isPowerup)
+            {
+                Debug.Log($"[NumberGrid] Server activated powerup at index {data.index} for {data.duration}ms");
+                ShowPowerup(boxData);
+                
+                // Update UI based on server duration
+                if (serverPowerupUIUpdateCoroutine != null) StopCoroutine(serverPowerupUIUpdateCoroutine);
+                serverPowerupUIUpdateCoroutine = StartCoroutine(ServerPowerupUIUpdate(boxData, data.duration / 1000f));
+            }
+        }
+    }
+
+    /// <summary>
+    /// Called when the server signals that a powerup has expired
+    /// </summary>
+    private void HandleServerIconExpired(IconExpiredData data)
+    {
+        if (data.index >= 0 && data.index < boxDataList.Count)
+        {
+            BoxData boxData = boxDataList[data.index];
+            if (currentlyVisiblePowerup == boxData)
+            {
+                Debug.Log($"[NumberGrid] Server powerup at index {data.index} expired.");
+                
+                if (serverPowerupUIUpdateCoroutine != null)
+                {
+                    StopCoroutine(serverPowerupUIUpdateCoroutine);
+                    serverPowerupUIUpdateCoroutine = null;
+                }
+                
+                if (!boxData.isSelected)
+                {
+                    HidePowerup(boxData);
+                }
+            }
+        }
+    }
+
+    /// <summary>
+    /// Coroutine that updates the powerup timer UI for server-driven powerups
+    /// </summary>
+    private IEnumerator ServerPowerupUIUpdate(BoxData boxData, float duration)
+    {
+        float elapsed = 0f;
+        while (elapsed < duration)
+        {
+            // If the powerup is locked (by this player or another), stop updating
+            if (boxData.isSelected) yield break;
+            
+            elapsed += Time.deltaTime;
+            
+            // Update slider (0 to 1)
+            if (powerupTimerSlider != null)
+            {
+                powerupTimerSlider.value = elapsed / duration;
+            }
+            
+            // Update text (seconds remaining)
+            if (powerupTimerText != null)
+            {
+                powerupTimerText.text = Mathf.CeilToInt(duration - elapsed).ToString();
+            }
+            
+            yield return null;
+        }
+        
+        serverPowerupUIUpdateCoroutine = null;
+    }
+
+    #endregion
 }
 

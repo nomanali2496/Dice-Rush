@@ -94,6 +94,8 @@ public static class MatchmakingModel
         socket.On<DiceRolledData>("diceRolled", HandleDiceRolled);
         socket.On<NumberLockedData>("numberLocked", HandleNumberLocked);
         socket.On<TapResultData>("tapResult", HandleTapResult);
+        socket.On<IconActivatedData>("iconActivated", HandleIconActivated);
+        socket.On<IconExpiredData>("iconExpired", HandleIconExpired);
         socket.On<string>("gameOver", (data) => Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'gameOver': " + data + "</color>"));
 
         listenersAdded = true;
@@ -136,6 +138,8 @@ public static class MatchmakingModel
     public static event Action<DiceRolledData> OnDiceRolledEvent;
     public static event Action<NumberLockedData> OnNumberLockedEvent;
     public static event Action<TapResultData> OnTapResultEvent;
+    public static event Action<IconActivatedData> OnIconActivatedEvent;
+    public static event Action<IconExpiredData> OnIconExpiredEvent;
     public static event Action<string> OnSocketErrorEvent;
 
     public static void RequestDiceRoll(string roomId)
@@ -179,6 +183,18 @@ public static class MatchmakingModel
         Debug.Log($"<color=#00FFFF>⬇️ [Socket ON] 'tapResult': correct={data.correct}, delta={data.scoreDelta}, total={data.score}</color>");
         OnTapResultEvent?.Invoke(data);
     }
+
+    private static void HandleIconActivated(IconActivatedData data)
+    {
+        Debug.Log($"<color=#00FFFF>⬇️ [Socket ON] 'iconActivated': index={data.index}, duration={data.duration}</color>");
+        OnIconActivatedEvent?.Invoke(data);
+    }
+
+    private static void HandleIconExpired(IconExpiredData data)
+    {
+        Debug.Log($"<color=#00FFFF>⬇️ [Socket ON] 'iconExpired': index={data.index}</color>");
+        OnIconExpiredEvent?.Invoke(data);
+    }
 }
 
 [Serializable]
@@ -220,4 +236,17 @@ public class TapResultData
     public bool correct;
     public int scoreDelta;
     public int score;
+}
+
+[Serializable]
+public class IconActivatedData
+{
+    public int index;
+    public int duration;
+}
+
+[Serializable]
+public class IconExpiredData
+{
+    public int index;
 }
