@@ -29,6 +29,27 @@ public class WinnerScreen : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI thirdPlacePrizeText; // Alternative: 3rd place prize text (will use its RectTransform)
     [SerializeField] private Image thirdPlacePrizeIcon; // 3rd place prize icon image (shows cash or chips sprite)
     
+    [Header("1st Place Podium UI")]
+    [SerializeField] private Image winnerProfileImage;
+    [SerializeField] private Image winnerProfileImageCustom;
+    [SerializeField] private Image winnerOutlineImage;
+    [SerializeField] private Image winnerFrameImage;
+    [SerializeField] private TMPro.TextMeshProUGUI winnerNameText;
+
+    [Header("2nd Place Podium UI")]
+    [SerializeField] private Image secondPlaceProfileImage;
+    [SerializeField] private Image secondPlaceProfileImageCustom;
+    [SerializeField] private Image secondPlaceOutlineImage;
+    [SerializeField] private Image secondPlaceFrameImage;
+    [SerializeField] private TMPro.TextMeshProUGUI secondPlaceNameText;
+
+    [Header("3rd Place Podium UI")]
+    [SerializeField] private Image thirdPlaceProfileImage;
+    [SerializeField] private Image thirdPlaceProfileImageCustom;
+    [SerializeField] private Image thirdPlaceOutlineImage;
+    [SerializeField] private Image thirdPlaceFrameImage;
+    [SerializeField] private TMPro.TextMeshProUGUI thirdPlaceNameText;
+    
     [Header("Target Position (Top Display)")]
     [SerializeField] private RectTransform targetCashPosition; // Target position for cash (top display)
     [SerializeField] private RectTransform targetChipsPosition; // Target position for chips (top display)
@@ -697,51 +718,175 @@ public class WinnerScreen : MonoBehaviour
     }
     
     /// <summary>
-    /// Gets the 1st place prize icon image
+    /// Resets all winner screen UI elements
     /// </summary>
-    public Image GetFirstPlacePrizeIcon()
+    public void ResetUI()
     {
-        return firstPlacePrizeIcon;
+        HidePlace(winnerProfileImage, winnerOutlineImage, winnerFrameImage, winnerNameText, firstPlacePrizeIcon, firstPlacePrizeText);
+        HidePlace(secondPlaceProfileImage, secondPlaceOutlineImage, secondPlaceFrameImage, secondPlaceNameText, secondPlacePrizeIcon, secondPlacePrizeText);
+        HidePlace(thirdPlaceProfileImage, thirdPlaceOutlineImage, thirdPlaceFrameImage, thirdPlaceNameText, thirdPlacePrizeIcon, thirdPlacePrizeText);
+        
+        if (winnerProfileImageCustom != null) winnerProfileImageCustom.gameObject.SetActive(false);
+        if (secondPlaceProfileImageCustom != null) secondPlaceProfileImageCustom.gameObject.SetActive(false);
+        if (thirdPlaceProfileImageCustom != null) thirdPlaceProfileImageCustom.gameObject.SetActive(false);
     }
-    
+
     /// <summary>
-    /// Gets the 1st place prize text
+    /// Sets up the podium results using data from the server
     /// </summary>
-    public TMPro.TextMeshProUGUI GetFirstPlacePrizeText()
+    public void SetupWinnerResults(List<(PlayerType playerType, int opponentIndex, int count, double time, string userId)> rankings, GameOverData serverData)
     {
-        return firstPlacePrizeText;
+        if (rankings == null || rankings.Count == 0) return;
+
+        ResetUI();
+
+        for (int i = 0; i < 3 && i < rankings.Count; i++)
+        {
+            var r = rankings[i];
+            int place = i + 1;
+
+            // Prize data
+            float cash = 0f;
+            int chips = 0;
+            if (serverData != null && serverData.earnings != null && serverData.earnings.TryGetValue(r.userId, out double earning))
+            {
+                cash = (float)earning;
+            }
+
+            // Name and Avatar
+            string displayName = (r.playerType == PlayerType.Player) ? "YOU" : "Opponent";
+            int avatarIdx = -1;
+            string customImg = "";
+
+            if (serverData != null && serverData.players != null && serverData.players.TryGetValue(r.userId, out PlayerAvatarInfo info))
+            {
+                if (r.playerType != PlayerType.Player) displayName = info.name;
+                if (!string.IsNullOrEmpty(info.avatar))
+                {
+                    if (int.TryParse(info.avatar, out int idx)) avatarIdx = idx;
+                    else if (info.avatar.Length > 50) customImg = info.avatar;
+                }
+            }
+
+            // UI Slots
+            Image pImg = (place == 1) ? winnerProfileImage : (place == 2) ? secondPlaceProfileImage : thirdPlaceProfileImage;
+            Image pImgC = (place == 1) ? winnerProfileImageCustom : (place == 2) ? secondPlaceProfileImageCustom : thirdPlaceProfileImageCustom;
+            Image pOut = (place == 1) ? winnerOutlineImage : (place == 2) ? secondPlaceOutlineImage : thirdPlaceOutlineImage;
+            Image pFrm = (place == 1) ? winnerFrameImage : (place == 2) ? secondPlaceFrameImage : thirdPlaceFrameImage;
+            TMPro.TextMeshProUGUI pName = (place == 1) ? winnerNameText : (place == 2) ? secondPlaceNameText : thirdPlaceNameText;
+            Image pIcon = (place == 1) ? firstPlacePrizeIcon : (place == 2) ? secondPlacePrizeIcon : thirdPlacePrizeIcon;
+            TMPro.TextMeshProUGUI pText = (place == 1) ? firstPlacePrizeText : (place == 2) ? secondPlacePrizeText : thirdPlacePrizeText;
+
+            DisplayPlace(place, r.playerType, r.opponentIndex, r.count, pImg, pImgC, pOut, pFrm, pName, pIcon, pText, cash, chips, displayName, avatarIdx, customImg);
+        }
     }
-    
-    /// <summary>
-    /// Gets the 2nd place prize icon image
-    /// </summary>
-    public Image GetSecondPlacePrizeIcon()
+
+    private void DisplayPlace(int placeNumber, PlayerType playerType, int opponentIndex, int score,
+                            Image profileImage, Image profileImageCustom, Image outlineImage, Image frameImage, 
+                            TMPro.TextMeshProUGUI nameText, Image prizeIcon, TMPro.TextMeshProUGUI prizeText, 
+                            float cashPrize, int chipsPrize, string overrideName, int overrideAvatarIdx, string overrideCustomImg)
     {
-        return secondPlacePrizeIcon;
+        // Activate basics
+        if (profileImage != null) profileImage.gameObject.SetActive(true);
+        if (outlineImage != null) outlineImage.gameObject.SetActive(true);
+        if (frameImage != null) frameImage.gameObject.SetActive(true);
+        if (nameText != null) nameText.gameObject.SetActive(true);
+
+        // Set profile image
+        if (profileImage != null || profileImageCustom != null)
+        {
+            if (playerType == PlayerType.Player && opponentIndex == -1) // Local Player
+            {
+                bool customProfileMatched = false;
+                if (!string.IsNullOrEmpty(overrideCustomImg))
+                {
+                    try
+                    {
+                        byte[] bytes = System.Convert.FromBase64String(overrideCustomImg);
+                        Texture2D tex = new Texture2D(2, 2);
+                        if (tex.LoadImage(bytes))
+                        {
+                            Sprite customSprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+                            SetProfileSlot(profileImage, profileImageCustom, customSprite, true);
+                            customProfileMatched = true;
+                        }
+                    }
+                    catch { }
+                }
+
+                if (!customProfileMatched && gameManager != null)
+                {
+                    // Strictly use server-provided avatar index (e.g., "7")
+                    if (overrideAvatarIdx >= 0)
+                    {
+                        SetProfileSlot(profileImage, profileImageCustom, gameManager.GetAvatarSprite(overrideAvatarIdx.ToString()), false);
+                    }
+                    else
+                    {
+                        // Default fallback if server sent no data
+                        SetProfileSlot(profileImage, profileImageCustom, gameManager.GetAvatarSprite("0"), false);
+                    }
+                }
+            }
+            else // Opponent or other players
+            {
+                if (gameManager != null)
+                {
+                    SetProfileSlot(profileImage, profileImageCustom, gameManager.GetAvatarSprite(overrideAvatarIdx.ToString()), false);
+                }
+            }
+        }
+
+        // Outline color
+        if (outlineImage != null && gameManager != null)
+        {
+            if (playerType == PlayerType.Player && opponentIndex == -1) outlineImage.color = gameManager.GetPlayerOutlineColor();
+            else outlineImage.color = gameManager.GetOpponentOutlineColor(opponentIndex);
+        }
+
+        // Name
+        if (nameText != null) nameText.text = overrideName;
+
+        // Prizes (Logic from GameManager fix)
+        bool isCashMatch = true;
+        if (gameManager != null && gameManager.GetCurrentLobbyConfig() != null) isCashMatch = gameManager.GetCurrentLobbyConfig().entryFeeCash > 0;
+
+        if (cashPrize > 0f || (isCashMatch && chipsPrize == 0))
+        {
+            if (prizeIcon != null) { prizeIcon.sprite = cashSprite; prizeIcon.gameObject.SetActive(true); }
+            if (prizeText != null) { prizeText.text = "$" + CurrencyDisplayUI.FormatCash(cashPrize); prizeText.gameObject.SetActive(true); }
+        }
+        else
+        {
+            if (prizeIcon != null) { prizeIcon.sprite = chipsSprite; prizeIcon.gameObject.SetActive(true); }
+            if (prizeText != null) { prizeText.text = chipsPrize.ToString(); prizeText.gameObject.SetActive(true); }
+        }
     }
-    
-    /// <summary>
-    /// Gets the 2nd place prize text
-    /// </summary>
-    public TMPro.TextMeshProUGUI GetSecondPlacePrizeText()
+
+    private void HidePlace(Image profileImage, Image outlineImage, Image frameImage, TMPro.TextMeshProUGUI nameText, Image prizeIcon, TMPro.TextMeshProUGUI prizeText)
     {
-        return secondPlacePrizeText;
+        if (profileImage != null) profileImage.gameObject.SetActive(false);
+        if (outlineImage != null) outlineImage.gameObject.SetActive(false);
+        if (frameImage != null) frameImage.gameObject.SetActive(false);
+        if (nameText != null) nameText.gameObject.SetActive(false);
+        if (prizeIcon != null) prizeIcon.gameObject.SetActive(false);
+        if (prizeText != null) prizeText.gameObject.SetActive(false);
     }
-    
-    /// <summary>
-    /// Gets the 3rd place prize icon image
-    /// </summary>
-    public Image GetThirdPlacePrizeIcon()
+
+    private void SetProfileSlot(Image spriteSlot, Image customSlot, Sprite sprite, bool isCustom)
     {
-        return thirdPlacePrizeIcon;
-    }
-    
-    /// <summary>
-    /// Gets the 3rd place prize text
-    /// </summary>
-    public TMPro.TextMeshProUGUI GetThirdPlacePrizeText()
-    {
-        return thirdPlacePrizeText;
+        if (spriteSlot != null) spriteSlot.gameObject.SetActive(false);
+        if (customSlot != null) customSlot.gameObject.SetActive(false);
+        if (sprite == null) return;
+
+        if (isCustom)
+        {
+            if (customSlot != null) { customSlot.sprite = sprite; customSlot.rectTransform.localScale = Vector3.one * 2f; customSlot.gameObject.SetActive(true); }
+        }
+        else
+        {
+            if (spriteSlot != null) { spriteSlot.sprite = sprite; spriteSlot.rectTransform.localScale = Vector3.one; spriteSlot.gameObject.SetActive(true); }
+        }
     }
 }
 

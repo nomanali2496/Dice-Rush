@@ -10122,7 +10122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &314033591
 RectTransform:
   m_ObjectHideFlags: 0
@@ -49325,6 +49325,21 @@ MonoBehaviour:
   thirdPlacePrizePosition: {fileID: 280649754}
   thirdPlacePrizeText: {fileID: 973023874}
   thirdPlacePrizeIcon: {fileID: 1293086537}
+  winnerProfileImage: {fileID: 1964234723}
+  winnerProfileImageCustom: {fileID: 865509120}
+  winnerOutlineImage: {fileID: 1964234722}
+  winnerFrameImage: {fileID: 0}
+  winnerNameText: {fileID: 62748786}
+  secondPlaceProfileImage: {fileID: 810070303}
+  secondPlaceProfileImageCustom: {fileID: 1273365223}
+  secondPlaceOutlineImage: {fileID: 0}
+  secondPlaceFrameImage: {fileID: 2145205769}
+  secondPlaceNameText: {fileID: 1104086343}
+  thirdPlaceProfileImage: {fileID: 527630284}
+  thirdPlaceProfileImageCustom: {fileID: 27660297}
+  thirdPlaceOutlineImage: {fileID: 0}
+  thirdPlaceFrameImage: {fileID: 166587384}
+  thirdPlaceNameText: {fileID: 1276840507}
   targetCashPosition: {fileID: 1042256181}
   targetChipsPosition: {fileID: 1785389101}
   animationDuration: 0.5
@@ -62178,24 +62193,8 @@ MonoBehaviour:
   countdownText: {fileID: 1576471693}
   countdownTextShadow: {fileID: 762145800}
   countdownDuration: 1
-  winnerProfileImage: {fileID: 1964234723}
-  winnerProfileImageCustom: {fileID: 865509120}
-  winnerOutlineImage: {fileID: 1964234722}
-  winnerFrameImage: {fileID: 0}
-  winnerNameText: {fileID: 62748786}
-  winnerNameTextLegacy: {fileID: 0}
-  secondPlaceProfileImage: {fileID: 810070303}
-  secondPlaceProfileImageCustom: {fileID: 1273365223}
-  secondPlaceOutlineImage: {fileID: 0}
-  secondPlaceFrameImage: {fileID: 2145205769}
-  secondPlaceNameText: {fileID: 1104086343}
-  secondPlaceNameTextLegacy: {fileID: 0}
-  thirdPlaceProfileImage: {fileID: 527630284}
-  thirdPlaceProfileImageCustom: {fileID: 27660297}
-  thirdPlaceOutlineImage: {fileID: 0}
-  thirdPlaceFrameImage: {fileID: 166587384}
-  thirdPlaceNameText: {fileID: 1276840507}
-  thirdPlaceNameTextLegacy: {fileID: 0}
+  playerOutlineColor: {r: 0, g: 0, b: 0, a: 0}
+  opponentOutlineColors: []
 --- !u!4 &2074960813
 Transform:
   m_ObjectHideFlags: 0

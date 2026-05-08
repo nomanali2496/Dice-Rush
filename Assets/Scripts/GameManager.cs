@@ -82,34 +82,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI countdownTextShadow; // Countdown text shadow display ("3", "2", "1")
     [SerializeField] private float countdownDuration = 1f; // Duration for each countdown number (in seconds)
     
-    [Header("1st Place")]
-    [SerializeField] private Image winnerProfileImage; // Winner's profile image display
-    [SerializeField] private Image winnerProfileImageCustom; // Winner's profile image (custom/zoomed)
-    [SerializeField] private Image winnerOutlineImage; // Winner's outline image display
-    [SerializeField] private Image winnerFrameImage; // Winner's frame image display
-    [SerializeField] private TMPro.TextMeshProUGUI winnerNameText; // Winner's name text (TextMeshProUGUI)
-    [SerializeField] private Text winnerNameTextLegacy; // Winner's name text (Legacy Text - use if not using TextMeshPro)
+    [SerializeField] private Color playerOutlineColor = Color.white;
+    [SerializeField] private Color[] opponentOutlineColors;
     
-    [Header("2nd Place")]
-    [SerializeField] private Image secondPlaceProfileImage; // 2nd place profile image display
-    [SerializeField] private Image secondPlaceProfileImageCustom; // 2nd place profile image (custom/zoomed)
-    [SerializeField] private Image secondPlaceOutlineImage; // 2nd place outline image display
-    [SerializeField] private Image secondPlaceFrameImage; // 2nd place frame image display
-    [SerializeField] private TMPro.TextMeshProUGUI secondPlaceNameText; // 2nd place name text (TextMeshProUGUI)
-    [SerializeField] private Text secondPlaceNameTextLegacy; // 2nd place name text (Legacy Text - use if not using TextMeshPro)
-    
-    [Header("3rd Place")]
-    [SerializeField] private Image thirdPlaceProfileImage; // 3rd place profile image display
-    [SerializeField] private Image thirdPlaceProfileImageCustom; // 3rd place profile image (custom/zoomed)
-    [SerializeField] private Image thirdPlaceOutlineImage; // 3rd place outline image display
-    [SerializeField] private Image thirdPlaceFrameImage; // 3rd place frame image display
-    [SerializeField] private TMPro.TextMeshProUGUI thirdPlaceNameText; // 3rd place name text (TextMeshProUGUI)
-    [SerializeField] private Text thirdPlaceNameTextLegacy; // 3rd place name text (Legacy Text - use if not using TextMeshPro)
+    [Header("UI Panels")]
     
     private Sprite playerSelectedAvatar; // Store player's selected avatar sprite
     private List<Sprite> availableOpponentAvatars; // List of available avatars for opponents
-    private Color playerOutlineColor; // Store player's outline color
-    private Color[] opponentOutlineColors; // Store opponent outline colors
     
     [Header("Network Caching")]
     private Dictionary<int, string> cachedNetworkNames = new Dictionary<int, string>();
@@ -279,8 +258,18 @@ public class GameManager : MonoBehaviour
             calculateLoadingScreen.SetActive(false);
         }
 
-        // Show the screen with full server data
-        ShowWinnerScreen(rankings, data);
+        // Setup the new WinnerScreen logic
+        if (winnerScreenScript != null)
+        {
+            winnerScreenScript.SetupWinnerResults(rankings, data);
+        }
+
+        // Show the panel
+        if (winnerScreen != null)
+        {
+            winnerScreen.SetActive(true);
+            winnerScreenShown = true;
+        }
     }
 
     private void HandleServerNumberLocked(NumberLockedData data)
@@ -358,103 +347,15 @@ public class GameManager : MonoBehaviour
         lastAwardedCash = cash;
         lastAwardedChips = chips;
         prizesAwardedForThisMatch = true;
-
-        // 2. Identify the place from message
-        int playerPlace = 1;
-        if (message.Contains("1st")) playerPlace = 1;
-        else if (message.Contains("2nd")) playerPlace = 3; // Correct 2nd vs 3rd if needed
-        else if (message.Contains("3rd")) playerPlace = 3;
-
-        // 3. Setup Podium
-        ResetWinnerScreenUI();
         
-        // Try parsing full rankings snapshot
-        OfflinePodiumSnapshot snapshot = null;
-        if (!string.IsNullOrEmpty(rankingsJson))
-        {
-            try { snapshot = JsonUtility.FromJson<OfflinePodiumSnapshot>(rankingsJson); } 
-            catch { Debug.LogWarning("[GameManager] Failed to parse podium snapshot JSON."); }
-        }
-
-        if (snapshot != null && snapshot.topThree.Count > 0)
-        {
-            Debug.Log($"[GameManager] 🥇 Displaying FULL PODIUM for offline win ({snapshot.topThree.Count} entries).");
-            
-            for (int i = 0; i < snapshot.topThree.Count; i++)
-            {
-                var entry = snapshot.topThree[i];
-                int place = i + 1;
-                
-                Image pIcon = null;
-                TMPro.TextMeshProUGUI pText = null;
-                Image pIconSmall = null;
-                
-                switch (place) {
-                    case 1: pIcon = ws.GetFirstPlacePrizeIcon(); pText = ws.GetFirstPlacePrizeText(); break;
-                    case 2: pIcon = ws.GetSecondPlacePrizeIcon(); pText = ws.GetSecondPlacePrizeText(); break;
-                    case 3: pIcon = ws.GetThirdPlacePrizeIcon(); pText = ws.GetThirdPlacePrizeText(); break;
-                }
-
-                // FIX: If this entry in the snapshot is the LOCAL PLAYER watching the screen, always show them as "YOU"
-                if (!string.IsNullOrEmpty(entry.pfId) && entry.pfId == PlayerModel.Id)
-                {
-                    // opponentIdx = -1 forces DisplayPlace to use local player logic/high-quality avatar
-                    DisplayPlace(place, PlayerType.Player, -1, 0,
-                                 GetProfileImageForPod(place), GetProfileImageCustomForPod(place), GetOutlineImageForPod(place), GetFrameImageForPod(place), GetNameTextForPod(place), null,
-                                 pIcon, pText, null,
-                                 entry.cash, entry.chips);
-                }
-                else 
-                {
-                    // Use the snapshot's saved name and avatar index
-                    DisplayPlace(place, entry.type, entry.opponentIdx, 0,
-                                 GetProfileImageForPod(place), GetProfileImageCustomForPod(place), GetOutlineImageForPod(place), GetFrameImageForPod(place), GetNameTextForPod(place), null,
-                                 pIcon, pText, null,
-                                 entry.cash, entry.chips, entry.name, entry.avatarIdx, entry.customImg);
-                }
-            }
-
-            // Hide pods that were not in snapshot
-            if (snapshot.topThree.Count < 2) HidePlace(secondPlaceProfileImage, secondPlaceOutlineImage, secondPlaceFrameImage, secondPlaceNameText, secondPlaceNameTextLegacy, null, null, null);
-            if (snapshot.topThree.Count < 3) HidePlace(thirdPlaceProfileImage, thirdPlaceOutlineImage, thirdPlaceFrameImage, thirdPlaceNameText, thirdPlaceNameTextLegacy, null, null, null);
-        }
-        else
-        {
-            Debug.Log($"[GameManager] 🥈 No podium snapshot found. Displaying only the local player on Rank {playerPlace}.");
-            DisplayPlace(playerPlace, PlayerType.Player, -1, 0, GetProfileImageForPod(playerPlace), GetProfileImageCustomForPod(playerPlace), GetOutlineImageForPod(playerPlace), GetFrameImageForPod(playerPlace), GetNameTextForPod(playerPlace), null, null, null, null, cash, chips);
-        }
-
-        // 4. (Profile load moved to start)
-
-        // 5. Activate visuals
+        // Activate visuals
         if (winnerScreen != null) winnerScreen.SetActive(true);
 
-        // 6. Trigger animation
+        // Trigger animation
         if (ws != null) {
-            List<(PlayerType, int, int)> uiRankings = new List<(PlayerType, int, int)>();
-            
-            // Explicitly build a 3-person list (1st, 2nd, 3rd) and place YOU in your exact rank.
-            // This ensures the animation starting position is always 100% accurate to the podium.
-            for (int i = 1; i <= 3; i++)
-            {
-                if (i == playerPlace) {
-                    uiRankings.Add((PlayerType.Player, -1, 0)); // Add local player at their real rank
-                } else {
-                    uiRankings.Add((PlayerType.CPU, -2, 0)); // Add placeholder for other ranks
-                }
-            }
-            
-            ws.PlayAnimationIfPlayerInTop3(uiRankings, currentLobbyConfig);
+            ws.PlayAnimationIfPlayerInTop3(null, currentLobbyConfig);
         }
     }
-
-    // Helpers for pod access
-    private Image GetProfileImageForPod(int place) { return place == 1 ? winnerProfileImage : place == 2 ? secondPlaceProfileImage : thirdPlaceProfileImage; }
-    private Image GetProfileImageCustomForPod(int place) { return place == 1 ? winnerProfileImageCustom : place == 2 ? secondPlaceProfileImageCustom : thirdPlaceProfileImageCustom; }
-    private Image GetOutlineImageForPod(int place) { return place == 1 ? winnerOutlineImage : place == 2 ? secondPlaceOutlineImage : thirdPlaceOutlineImage; }
-    private Image GetFrameImageForPod(int place) { return place == 1 ? winnerFrameImage : place == 2 ? secondPlaceFrameImage : thirdPlaceFrameImage; }
-    private TMPro.TextMeshProUGUI GetNameTextForPod(int place) { return place == 1 ? winnerNameText : place == 2 ? secondPlaceNameText : thirdPlaceNameText; }
-
 
     /// <summary>
     /// Starts the game timer countdown (with "3, 2, 1" countdown first)
@@ -907,87 +808,6 @@ public class GameManager : MonoBehaviour
 
 
     /// <summary>
-    /// Shows the winner screen with 1st, 2nd, and 3rd place information
-    /// </summary>
-    private void ShowWinnerScreen(List<(PlayerType playerType, int opponentIndex, int count, double time, string userId)> rankings, GameOverData serverData = null)
-    {
-        if (rankings == null || rankings.Count == 0) return;
-        
-        winnerScreenShown = true;
-        
-        // Reset winner screen UI first
-        ResetWinnerScreenUI();
-        
-        // Display top 3
-        for (int i = 0; i < 3 && i < rankings.Count; i++)
-        {
-            var r = rankings[i];
-            int place = i + 1;
-
-            // Get prize for this specific player from server data
-            float cash = 0f;
-            int chips = 0;
-            if (serverData != null && serverData.earnings != null && serverData.earnings.TryGetValue(r.userId, out double earning))
-            {
-                cash = (float)earning;
-            }
-
-            // Get name and avatar from server data
-            string displayName = (r.playerType == PlayerType.Player) ? "YOU" : "Opponent";
-            int avatarIdx = -1;
-            string customImg = "";
-
-            if (serverData != null && serverData.players != null && serverData.players.TryGetValue(r.userId, out PlayerAvatarInfo info))
-            {
-                if (r.playerType != PlayerType.Player) displayName = info.name;
-                
-                // Parse avatar index or custom image
-                if (!string.IsNullOrEmpty(info.avatar))
-                {
-                    if (int.TryParse(info.avatar, out int idx)) avatarIdx = idx;
-                    else if (info.avatar.Length > 50) customImg = info.avatar; // Likely a base64 string
-                }
-            }
-
-            // Select correct UI components based on place
-            Image pImg = (place == 1) ? winnerProfileImage : (place == 2) ? secondPlaceProfileImage : thirdPlaceProfileImage;
-            Image pImgC = (place == 1) ? winnerProfileImageCustom : (place == 2) ? secondPlaceProfileImageCustom : thirdPlaceProfileImageCustom;
-            Image pOut = (place == 1) ? winnerOutlineImage : (place == 2) ? secondPlaceOutlineImage : thirdPlaceOutlineImage;
-            Image pFrm = (place == 1) ? winnerFrameImage : (place == 2) ? secondPlaceFrameImage : thirdPlaceFrameImage;
-            TMPro.TextMeshProUGUI pName = (place == 1) ? winnerNameText : (place == 2) ? secondPlaceNameText : thirdPlaceNameText;
-            Text pNameL = (place == 1) ? winnerNameTextLegacy : (place == 2) ? secondPlaceNameTextLegacy : thirdPlaceNameTextLegacy;
-            
-            Image pIcon = null;
-            TMPro.TextMeshProUGUI pText = null;
-            if (winnerScreenScript != null)
-            {
-                pIcon = (place == 1) ? winnerScreenScript.GetFirstPlacePrizeIcon() : (place == 2) ? winnerScreenScript.GetSecondPlacePrizeIcon() : winnerScreenScript.GetThirdPlacePrizeIcon();
-                pText = (place == 1) ? winnerScreenScript.GetFirstPlacePrizeText() : (place == 2) ? winnerScreenScript.GetSecondPlacePrizeText() : winnerScreenScript.GetThirdPlacePrizeText();
-            }
-
-            DisplayPlace(place, r.playerType, r.opponentIndex, r.count,
-                         pImg, pImgC, pOut, pFrm, pName, pNameL,
-                         pIcon, pText, null, cash, chips,
-                         displayName, avatarIdx, customImg);
-        }
-
-        // Hide places that are not occupied
-        if (rankings.Count < 2) HidePlace(secondPlaceProfileImage, secondPlaceOutlineImage, secondPlaceFrameImage, secondPlaceNameText, secondPlaceNameTextLegacy, null, null, null);
-        if (rankings.Count < 3) HidePlace(thirdPlaceProfileImage, thirdPlaceOutlineImage, thirdPlaceFrameImage, thirdPlaceNameText, thirdPlaceNameTextLegacy, null, null, null);
-
-        // Activate visuals
-        if (winnerScreen != null) winnerScreen.SetActive(true);
-
-        // Trigger animation
-        if (winnerScreenScript != null)
-        {
-            List<(PlayerType, int, int)> uiRankings = new List<(PlayerType, int, int)>();
-            foreach (var r in rankings) uiRankings.Add((r.playerType, r.opponentIndex, r.count));
-            winnerScreenScript.PlayAnimationIfPlayerInTop3(uiRankings, currentLobbyConfig);
-        }
-    }
-    
-    /// <summary>
     /// Gets the WinnerScreen script reference (ensures it's initialized)
     /// </summary>
     private WinnerScreen GetWinnerScreenScript()
@@ -1007,274 +827,12 @@ public class GameManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Displays a place (1st, 2nd, or 3rd) with profile image, outline, frame, name, prize icon, and prize text
+    /// Resets the winner screen UI to ensure clean state for next game
     /// </summary>
-    private void DisplayPlace(int placeNumber, PlayerType playerType, int opponentIndex, int selectionCount,
-                             Image profileImage, Image profileImageCustom, Image outlineImage, Image frameImage, TMPro.TextMeshProUGUI nameText, Text nameTextLegacy,
-                             Image prizeIcon, TMPro.TextMeshProUGUI prizeText, Text prizeTextLegacy,
-                             float cashPrize, int chipsPrize, string overrideName = "", int overrideAvatarIdx = -1, string overrideCustomImg = "")
+    private void ResetWinnerScreenUI()
     {
-        // Activate UI elements first (in case they were hidden in previous game)
-        if (profileImage != null)
-        {
-            profileImage.gameObject.SetActive(true);
-        }
-        if (outlineImage != null)
-        {
-            outlineImage.gameObject.SetActive(true);
-        }
-        if (frameImage != null)
-        {
-            frameImage.gameObject.SetActive(true);
-        }
-        if (nameText != null)
-        {
-            nameText.gameObject.SetActive(true);
-        }
-        if (nameTextLegacy != null)
-        {
-            nameTextLegacy.gameObject.SetActive(true);
-        }
-        
-        // Set profile image
-        if (profileImage != null || profileImageCustom != null)
-        {
-            if (playerType == PlayerType.Player)
-            {
-                bool customProfileMatched = false;
-
-                // Priority 1: Use Offline Snapshot Custom Image (Match Recovery)
-                // We check this FIRST so match history overrides generic shortcuts
-                if (!string.IsNullOrEmpty(overrideCustomImg))
-                {
-                    try
-                    {
-                        byte[] bytes = System.Convert.FromBase64String(overrideCustomImg);
-                        Texture2D tex = new Texture2D(2, 2);
-                        if (tex.LoadImage(bytes))
-                        {
-                            Sprite customSprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
-                            SetProfileSlot(profileImage, profileImageCustom, customSprite, true);
-                            customProfileMatched = true;
-                            Debug.Log($"[GameManager] Winner podium: used SAVED snapshot picture for place {placeNumber}");
-                        }
-                    }
-                    catch (System.Exception ex) { Debug.LogWarning($"[GameManager] Failed to decode saved photo: {ex.Message}"); }
-                }
-
-                // Priority 2: Use Offline Snapshot Avatar Index (Match Recovery Fallback)
-                if (!customProfileMatched && overrideAvatarIdx >= 0)
-                {
-                    if (availableProfileSprites != null && overrideAvatarIdx < availableProfileSprites.Length)
-                    {
-                        SetProfileSlot(profileImage, profileImageCustom, availableProfileSprites[overrideAvatarIdx], false);
-                        customProfileMatched = true;
-                        Debug.Log($"[GameManager] Winner podium: used SAVED avatar index {overrideAvatarIdx} for place {placeNumber}");
-                    }
-                }
-
-                // Priority 3: Live Logic (Only if snapshot was empty)
-                if (!customProfileMatched)
-                {
-                    if (opponentIndex == -1) // Local Player
-                    {
-                        // Use standard player avatar from profile
-                        bool isCustomLocally = (playerProfileImageCustom != null && playerProfileImageCustom.gameObject.activeSelf) 
-                                            || (mainMenuAvatarDisplay != null && mainMenuAvatarDisplay.IsShowingCustomAvatar());
-
-                        if (playerSelectedAvatar != null)
-                        {
-                            SetProfileSlot(profileImage, profileImageCustom, playerSelectedAvatar, isCustomLocally);
-                            customProfileMatched = true;
-                            Debug.Log($"[GameManager] Winner podium: local player avatar assigned.");
-                        }
-                    }
-                    else if (opponentIndex <= -100) // Network Human
-                    {
-                        int actorNumber = Mathf.Abs(opponentIndex + 100);
-
-                        // Priority A: Use Cached High-Quality Custom Avatar
-                        if (cachedNetworkAvatars.TryGetValue(actorNumber, out Sprite cachedSprite))
-                        {
-                            SetProfileSlot(profileImage, profileImageCustom, cachedSprite, true);
-                            customProfileMatched = true;
-                        }
-                        else if (cachedNetworkAvatarIndices.TryGetValue(actorNumber, out int cachedIdx))
-                        {
-                            // Priority B: Use Cached Basic Avatar Index
-                            if (availableProfileSprites != null && cachedIdx < availableProfileSprites.Length)
-                            {
-                                SetProfileSlot(profileImage, profileImageCustom, availableProfileSprites[cachedIdx], false);
-                                customProfileMatched = true;
-                            }
-                        }
-                    }
-                }
-
-                // Final Fallback: Default icon if all else failed
-                if (!customProfileMatched && availableProfileSprites != null && availableProfileSprites.Length > 0)
-                {
-                    SetProfileSlot(profileImage, profileImageCustom, availableProfileSprites[0], false);
-                }
-            }
-            else // Network Opponent (Human or Bot)
-            {
-                if (opponentProfileImages != null && opponentIndex >= 0 && opponentIndex < opponentProfileImages.Length)
-                {
-                    if (opponentProfileImages[opponentIndex] != null && opponentProfileImages[opponentIndex].sprite != null)
-                    {
-                        SetProfileSlot(profileImage, profileImageCustom, opponentProfileImages[opponentIndex].sprite, false);
-                    }
-                }
-            }
-        }
-        
-        // Set outline color
-        if (outlineImage != null)
-        {
-            if (playerType == PlayerType.Player)
-            {
-                if (opponentIndex == -1) // Local Player
-                {
-                    outlineImage.color = playerOutlineColor;
-                }
-                else // Network Human
-                {
-                    // Use a distinct color for network humans if available, or just white/default
-                    outlineImage.color = Color.white;
-                }
-            }
-            else // Opponent
-            {
-                if (opponentOutlineColors != null && opponentIndex >= 0 && opponentIndex < opponentOutlineColors.Length)
-                {
-                    outlineImage.color = opponentOutlineColors[opponentIndex];
-                }
-            }
-        }
-        
-        // Set name (use override if provided for offline recovery)
-        string playerName = !string.IsNullOrEmpty(overrideName) ? overrideName : GetWinnerName(playerType, opponentIndex);
-        if (nameText != null)
-        {
-            nameText.text = playerName;
-        }
-        if (nameTextLegacy != null)
-        {
-            nameTextLegacy.text = playerName;
-        }
-        
-        // Get sprites from WinnerScreen
-        WinnerScreen winnerScreenComponent = GetWinnerScreenScript();
-        Sprite cashSprite = winnerScreenComponent != null ? winnerScreenComponent.GetCashSprite() : null;
-        Sprite chipsSprite = winnerScreenComponent != null ? winnerScreenComponent.GetChipsSprite() : null;
-        
-        Debug.Log($"[GameManager] DisplayPlace - Place: {placeNumber}, Cash: {cashPrize}, Chips: {chipsPrize}");
-        Debug.Log($"[GameManager] PrizeIcon: {prizeIcon != null}, PrizeText: {prizeText != null}");
-        Debug.Log($"[GameManager] CashSprite: {cashSprite != null}, ChipsSprite: {chipsSprite != null}");
-        
-        // If we have a prize (even 0), we want to show it if we know the match type
-        bool isCashMatch = true; // Default to cash
-        if (currentLobbyConfig != null) isCashMatch = currentLobbyConfig.entryFeeCash > 0;
-        else if (chipsPrize > 0) isCashMatch = false;
-
-        if (cashPrize > 0f || (isCashMatch && chipsPrize == 0))
-        {
-            // Show cash prize (even if 0)
-            if (prizeIcon != null)
-            {
-                if (cashSprite != null)
-                {
-                    prizeIcon.sprite = cashSprite;
-                    prizeIcon.gameObject.SetActive(true);
-                }
-                else prizeIcon.gameObject.SetActive(false);
-            }
-            
-            if (prizeText != null)
-            {
-                prizeText.text = "$" + CurrencyDisplayUI.FormatCash(cashPrize);
-                prizeText.gameObject.SetActive(true);
-            }
-        }
-        else if (chipsPrize > 0 || (!isCashMatch && cashPrize == 0))
-        {
-            // Show chips prize (even if 0)
-            if (prizeIcon != null)
-            {
-                if (chipsSprite != null)
-                {
-                    prizeIcon.sprite = chipsSprite;
-                    prizeIcon.gameObject.SetActive(true);
-                }
-                else prizeIcon.gameObject.SetActive(false);
-            }
-            
-            if (prizeText != null)
-            {
-                prizeText.text = chipsPrize.ToString();
-                prizeText.gameObject.SetActive(true);
-            }
-        }
-        else
-        {
-            // Hide prize UI only if we really have no data
-            if (prizeIcon != null) prizeIcon.gameObject.SetActive(false);
-            if (prizeText != null) prizeText.gameObject.SetActive(false);
-        }
+        if (winnerScreenScript != null) winnerScreenScript.ResetUI();
     }
-    
-    /// <summary>
-    /// Hides a place UI (for when there are fewer than 3 players)
-    /// </summary>
-    private void HidePlace(Image profileImage, Image outlineImage, Image frameImage, TMPro.TextMeshProUGUI nameText, Text nameTextLegacy,
-                          Image prizeIcon, TMPro.TextMeshProUGUI prizeText, Text prizeTextLegacy)
-    {
-        if (profileImage != null)
-        {
-            profileImage.gameObject.SetActive(false);
-        }
-        if (outlineImage != null)
-        {
-            outlineImage.gameObject.SetActive(false);
-        }
-        if (frameImage != null)
-        {
-            frameImage.gameObject.SetActive(false);
-        }
-        if (nameText != null)
-        {
-            nameText.gameObject.SetActive(false);
-        }
-        if (nameTextLegacy != null)
-        {
-            nameTextLegacy.gameObject.SetActive(false);
-        }
-        if (prizeIcon != null)
-        {
-            prizeIcon.gameObject.SetActive(false);
-        }
-        if (prizeText != null)
-        {
-            prizeText.gameObject.SetActive(false);
-        }
-    }
-    
-    /// <summary>
-    /// Gets the display name 
-    private string GetWinnerName(PlayerType playerType, int opponentIndex)
-    {
-        if (playerType == PlayerType.Player)
-        {
-            return "YOU";
-        }
-        else // Network Opponent
-        {
-            return "Opponent";
-        }
-    }
-
-
     
     /// <summary>
     /// Called when PlayFab player data is loaded
@@ -1426,7 +984,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private Sprite GetAvatarSprite(string avatarKey)
+    public Sprite GetAvatarSprite(string avatarKey)
     {
         // Try to parse index if it's a number, or use a default
         if (int.TryParse(avatarKey, out int index) && availableProfileSprites != null && index >= 0 && index < availableProfileSprites.Length)
@@ -1601,7 +1159,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Parses a hex color string to Unity Color
     /// </summary>
-    private Color ParseHexColor(string hex)
+    public Color ParseHexColor(string hex)
     {
         if (ColorUtility.TryParseHtmlString(hex, out Color color))
         {
@@ -1801,125 +1359,6 @@ public class GameManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Resets the winner screen UI to ensure clean state for next game
-    /// </summary>
-    private void ResetWinnerScreenUI()
-    {
-        // Reset 1st place UI
-        if (winnerProfileImage != null)
-        {
-            winnerProfileImage.gameObject.SetActive(true);
-        }
-        if (winnerOutlineImage != null)
-        {
-            winnerOutlineImage.gameObject.SetActive(true);
-        }
-        if (winnerFrameImage != null)
-        {
-            winnerFrameImage.gameObject.SetActive(true);
-        }
-        if (winnerNameText != null)
-        {
-            winnerNameText.gameObject.SetActive(true);
-        }
-        if (winnerNameTextLegacy != null)
-        {
-            winnerNameTextLegacy.gameObject.SetActive(true);
-        }
-        // Ensure WinnerScreen script reference is initialized
-        if (winnerScreenScript == null && winnerScreen != null)
-        {
-            winnerScreenScript = winnerScreen.GetComponent<WinnerScreen>();
-        }
-        
-        if (winnerScreenScript != null)
-        {
-            Image firstPrizeIconReset = winnerScreenScript.GetFirstPlacePrizeIcon();
-            TMPro.TextMeshProUGUI firstPrizeTextReset = winnerScreenScript.GetFirstPlacePrizeText();
-            if (firstPrizeIconReset != null)
-            {
-                firstPrizeIconReset.gameObject.SetActive(true);
-            }
-            if (firstPrizeTextReset != null)
-            {
-                firstPrizeTextReset.gameObject.SetActive(true);
-            }
-        }
-        
-        // Reset 2nd place UI
-        if (secondPlaceProfileImage != null)
-        {
-            secondPlaceProfileImage.gameObject.SetActive(true);
-        }
-        if (secondPlaceOutlineImage != null)
-        {
-            secondPlaceOutlineImage.gameObject.SetActive(true);
-        }
-        if (secondPlaceFrameImage != null)
-        {
-            secondPlaceFrameImage.gameObject.SetActive(true);
-        }
-        if (secondPlaceNameText != null)
-        {
-            secondPlaceNameText.gameObject.SetActive(true);
-        }
-        if (secondPlaceNameTextLegacy != null)
-        {
-            secondPlaceNameTextLegacy.gameObject.SetActive(true);
-        }
-        if (winnerScreenScript != null)
-        {
-            Image secondPrizeIconReset = winnerScreenScript.GetSecondPlacePrizeIcon();
-            TMPro.TextMeshProUGUI secondPrizeTextReset = winnerScreenScript.GetSecondPlacePrizeText();
-            if (secondPrizeIconReset != null)
-            {
-                secondPrizeIconReset.gameObject.SetActive(true);
-            }
-            if (secondPrizeTextReset != null)
-            {
-                secondPrizeTextReset.gameObject.SetActive(true);
-            }
-        }
-        
-        // Reset 3rd place UI
-        if (thirdPlaceProfileImage != null)
-        {
-            thirdPlaceProfileImage.gameObject.SetActive(true);
-        }
-        if (thirdPlaceOutlineImage != null)
-        {
-            thirdPlaceOutlineImage.gameObject.SetActive(true);
-        }
-        if (thirdPlaceFrameImage != null)
-        {
-            thirdPlaceFrameImage.gameObject.SetActive(true);
-        }
-        if (thirdPlaceNameText != null)
-        {
-            thirdPlaceNameText.gameObject.SetActive(true);
-        }
-        if (thirdPlaceNameTextLegacy != null)
-        {
-            thirdPlaceNameTextLegacy.gameObject.SetActive(true);
-        }
-        if (winnerScreenScript != null)
-        {
-            Image thirdPrizeIconReset = winnerScreenScript.GetThirdPlacePrizeIcon();
-            TMPro.TextMeshProUGUI thirdPrizeTextReset = winnerScreenScript.GetThirdPlacePrizeText();
-            if (thirdPrizeIconReset != null)
-            {
-                thirdPrizeIconReset.gameObject.SetActive(true);
-            }
-            if (thirdPrizeTextReset != null)
-            {
-                thirdPrizeTextReset.gameObject.SetActive(true);
-            }
-        }
-        
-        Debug.Log("[GameManager] Winner screen UI reset");
-    }
-    
-    /// <summary>
     /// Awards prizes based on current lobby configuration and player rankings
     /// </summary>
     private void AwardPrizes(List<(PlayerType playerType, int cpuIndex, int count, double time, string userId)> rankings)
@@ -1928,9 +1367,6 @@ public class GameManager : MonoBehaviour
         prizesAwardedForThisMatch = true;
 
         Debug.Log("[GameManager] Awarding prizes (visual only, server handles data).");
-        
-        // Show winner screen
-        ShowWinnerScreen(rankings);
     }
     
     /// <summary>
@@ -2221,8 +1657,17 @@ public class GameManager : MonoBehaviour
         }
         
     }
+    
+    public Color GetPlayerOutlineColor() => playerOutlineColor;
+    
+    public Color GetOpponentOutlineColor(int index)
+    {
+        if (opponentOutlineColors != null && index >= 0 && index < opponentOutlineColors.Length)
+            return opponentOutlineColors[index];
+        return Color.white;
+    }
 
-    private void SetProfileSlot(Image spriteSlot, Image customSlot, Sprite sprite, bool isCustom)
+    public void SetProfileSlot(Image spriteSlot, Image customSlot, Sprite sprite, bool isCustom)
     {
         if (spriteSlot != null) spriteSlot.gameObject.SetActive(false);
         if (customSlot != null) customSlot.gameObject.SetActive(false);
