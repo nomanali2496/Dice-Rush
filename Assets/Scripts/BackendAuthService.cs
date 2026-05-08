@@ -668,6 +668,7 @@ public class BackendAuthService : MonoBehaviour
             onComplete?.Invoke(false, null);
             return;
         }
+        Debug.Log("<color=#00ffff>[BackendAuthService] GET Request: /api/rewards/status</color>");
         StartCoroutine(GetDailyRewardStatusCoroutine(onComplete));
     }
 
@@ -683,12 +684,13 @@ public class BackendAuthService : MonoBehaviour
 
             if (request.result == UnityWebRequest.Result.Success)
             {
+                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: GetDailyRewardStatus Result: {request.downloadHandler.text}</color>");
                 DailyRewardStatusResponse response = JsonUtility.FromJson<DailyRewardStatusResponse>(request.downloadHandler.text);
                 onComplete?.Invoke(true, response);
             }
             else
             {
-                Debug.LogError($"[BackendAuthService] GetDailyRewardStatus Error: {request.error}");
+                Debug.LogError($"<color=#ff0000>[BackendAuthService] GetDailyRewardStatus Error: {request.error} | {request.downloadHandler.text}</color>");
                 onComplete?.Invoke(false, null);
             }
         }
@@ -704,6 +706,7 @@ public class BackendAuthService : MonoBehaviour
             onComplete?.Invoke(false, null);
             return;
         }
+        Debug.Log("<color=#00ffff>[BackendAuthService] POST Request: /api/rewards/claim</color>");
         StartCoroutine(ClaimDailyRewardCoroutine(onComplete));
     }
 
@@ -720,12 +723,13 @@ public class BackendAuthService : MonoBehaviour
 
             if (request.result == UnityWebRequest.Result.Success)
             {
+                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: ClaimDailyReward Result: {request.downloadHandler.text}</color>");
                 DailyRewardStatusResponse response = JsonUtility.FromJson<DailyRewardStatusResponse>(request.downloadHandler.text);
                 onComplete?.Invoke(true, response);
             }
             else
             {
-                Debug.LogError($"[BackendAuthService] ClaimDailyReward Error: {request.error} | {request.downloadHandler.text}");
+                Debug.LogError($"<color=#ff0000>[BackendAuthService] ClaimDailyReward Error: {request.error} | {request.downloadHandler.text}</color>");
                 onComplete?.Invoke(false, null);
             }
         }
