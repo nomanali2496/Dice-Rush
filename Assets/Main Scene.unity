@@ -10122,7 +10122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &314033591
 RectTransform:
   m_ObjectHideFlags: 0
@@ -62149,10 +62149,8 @@ MonoBehaviour:
   playerProfileImageCustom: {fileID: 1702580697}
   playerOutlineImage: {fileID: 1641472762}
   mainMenuAvatarDisplay: {fileID: 0}
-  cpuPlayers: []
-  cpuProfileImages: []
-  cpuOutlineImages: []
-  numberOfCPUs: 1
+  opponentProfileImages: []
+  opponentOutlineImages: []
   availableProfileSprites:
   - {fileID: 21300000, guid: f0e7973bcaf5df440b0e4c73a8c7f065, type: 3}
   - {fileID: 21300000, guid: 1e1f3651abeee594da097bb087416479, type: 3}

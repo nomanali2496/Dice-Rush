@@ -196,6 +196,13 @@ public class GameManager : MonoBehaviour
     private void HandleServerGameOver(GameOverData data)
     {
         if (data == null) return;
+        
+        // If the player already quit manually or the game was already reset, ignore the server gameOver
+        if (!isGameActive)
+        {
+            Debug.Log("[GameManager] Game already inactive, ignoring gameOver event.");
+            return;
+        }
 
         Debug.Log($"<color=#00FFFF>⬇️ [GameManager] Server GameOver received. Winner: {data.winnerId}, Reason: {data.reason}</color>");
         
@@ -247,8 +254,33 @@ public class GameManager : MonoBehaviour
         // Sort rankings by score (descending)
         rankings.Sort((a, b) => b.count.CompareTo(a.count));
 
-        // Show the screen
-        ShowWinnerScreen(rankings);
+        // Show loading screen first
+        if (calculateLoadingScreen != null)
+        {
+            calculateLoadingScreen.SetActive(true);
+            Debug.Log("[GameManager] Show calculateLoadingScreen before winner screen");
+        }
+
+        // Show the winner screen after a short delay
+        StartCoroutine(ShowWinnerScreenWithDelay(rankings, data));
+    }
+
+    /// <summary>
+    /// Waits for a short duration with the loading screen active before showing the winner screen
+    /// </summary>
+    private System.Collections.IEnumerator ShowWinnerScreenWithDelay(List<(PlayerType playerType, int opponentIndex, int count, double time, string userId)> rankings, GameOverData data)
+    {
+        // Wait for 2.5 seconds to "calculate" results
+        yield return new WaitForSeconds(2.5f);
+
+        // Hide loading screen
+        if (calculateLoadingScreen != null)
+        {
+            calculateLoadingScreen.SetActive(false);
+        }
+
+        // Show the screen with full server data
+        ShowWinnerScreen(rankings, data);
     }
 
     private void HandleServerNumberLocked(NumberLockedData data)
@@ -877,7 +909,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Shows the winner screen with 1st, 2nd, and 3rd place information
     /// </summary>
-    private void ShowWinnerScreen(List<(PlayerType playerType, int opponentIndex, int count, double time, string userId)> rankings)
+    private void ShowWinnerScreen(List<(PlayerType playerType, int opponentIndex, int count, double time, string userId)> rankings, GameOverData serverData = null)
     {
         if (rankings == null || rankings.Count == 0) return;
         
@@ -887,21 +919,59 @@ public class GameManager : MonoBehaviour
         ResetWinnerScreenUI();
         
         // Display top 3
-        if (rankings.Count >= 1)
+        for (int i = 0; i < 3 && i < rankings.Count; i++)
         {
-            var firstPlace = rankings[0];
-            float firstCash = lastAwardedCash; // For now, we only show the local player's prize
-            int firstChips = lastAwardedChips;
+            var r = rankings[i];
+            int place = i + 1;
+
+            // Get prize for this specific player from server data
+            float cash = 0f;
+            int chips = 0;
+            if (serverData != null && serverData.earnings != null && serverData.earnings.TryGetValue(r.userId, out double earning))
+            {
+                cash = (float)earning;
+            }
+
+            // Get name and avatar from server data
+            string displayName = (r.playerType == PlayerType.Player) ? "YOU" : "Opponent";
+            int avatarIdx = -1;
+            string customImg = "";
+
+            if (serverData != null && serverData.players != null && serverData.players.TryGetValue(r.userId, out PlayerAvatarInfo info))
+            {
+                if (r.playerType != PlayerType.Player) displayName = info.name;
+                
+                // Parse avatar index or custom image
+                if (!string.IsNullOrEmpty(info.avatar))
+                {
+                    if (int.TryParse(info.avatar, out int idx)) avatarIdx = idx;
+                    else if (info.avatar.Length > 50) customImg = info.avatar; // Likely a base64 string
+                }
+            }
+
+            // Select correct UI components based on place
+            Image pImg = (place == 1) ? winnerProfileImage : (place == 2) ? secondPlaceProfileImage : thirdPlaceProfileImage;
+            Image pImgC = (place == 1) ? winnerProfileImageCustom : (place == 2) ? secondPlaceProfileImageCustom : thirdPlaceProfileImageCustom;
+            Image pOut = (place == 1) ? winnerOutlineImage : (place == 2) ? secondPlaceOutlineImage : thirdPlaceOutlineImage;
+            Image pFrm = (place == 1) ? winnerFrameImage : (place == 2) ? secondPlaceFrameImage : thirdPlaceFrameImage;
+            TMPro.TextMeshProUGUI pName = (place == 1) ? winnerNameText : (place == 2) ? secondPlaceNameText : thirdPlaceNameText;
+            Text pNameL = (place == 1) ? winnerNameTextLegacy : (place == 2) ? secondPlaceNameTextLegacy : thirdPlaceNameTextLegacy;
             
-            DisplayPlace(1, firstPlace.playerType, firstPlace.opponentIndex, firstPlace.count,
-                         winnerProfileImage, winnerProfileImageCustom, winnerOutlineImage, winnerFrameImage, winnerNameText, winnerNameTextLegacy,
-                         winnerScreenScript != null ? winnerScreenScript.GetFirstPlacePrizeIcon() : null,
-                         winnerScreenScript != null ? winnerScreenScript.GetFirstPlacePrizeText() : null,
-                         null, firstCash, firstChips,
-                         (firstPlace.playerType == PlayerType.Network) ? "Opponent" : "");
+            Image pIcon = null;
+            TMPro.TextMeshProUGUI pText = null;
+            if (winnerScreenScript != null)
+            {
+                pIcon = (place == 1) ? winnerScreenScript.GetFirstPlacePrizeIcon() : (place == 2) ? winnerScreenScript.GetSecondPlacePrizeIcon() : winnerScreenScript.GetThirdPlacePrizeIcon();
+                pText = (place == 1) ? winnerScreenScript.GetFirstPlacePrizeText() : (place == 2) ? winnerScreenScript.GetSecondPlacePrizeText() : winnerScreenScript.GetThirdPlacePrizeText();
+            }
+
+            DisplayPlace(place, r.playerType, r.opponentIndex, r.count,
+                         pImg, pImgC, pOut, pFrm, pName, pNameL,
+                         pIcon, pText, null, cash, chips,
+                         displayName, avatarIdx, customImg);
         }
 
-        // Hide 2nd and 3rd if not present
+        // Hide places that are not occupied
         if (rankings.Count < 2) HidePlace(secondPlaceProfileImage, secondPlaceOutlineImage, secondPlaceFrameImage, secondPlaceNameText, secondPlaceNameTextLegacy, null, null, null);
         if (rankings.Count < 3) HidePlace(thirdPlaceProfileImage, thirdPlaceOutlineImage, thirdPlaceFrameImage, thirdPlaceNameText, thirdPlaceNameTextLegacy, null, null, null);
 
@@ -1103,87 +1173,54 @@ public class GameManager : MonoBehaviour
         Debug.Log($"[GameManager] PrizeIcon: {prizeIcon != null}, PrizeText: {prizeText != null}");
         Debug.Log($"[GameManager] CashSprite: {cashSprite != null}, ChipsSprite: {chipsSprite != null}");
         
-        // Set prize icon and text (only one prize type exists at a time - cash OR chips)
-        if (cashPrize > 0f)
+        // If we have a prize (even 0), we want to show it if we know the match type
+        bool isCashMatch = true; // Default to cash
+        if (currentLobbyConfig != null) isCashMatch = currentLobbyConfig.entryFeeCash > 0;
+        else if (chipsPrize > 0) isCashMatch = false;
+
+        if (cashPrize > 0f || (isCashMatch && chipsPrize == 0))
         {
-            // Show cash prize
+            // Show cash prize (even if 0)
             if (prizeIcon != null)
             {
                 if (cashSprite != null)
                 {
                     prizeIcon.sprite = cashSprite;
                     prizeIcon.gameObject.SetActive(true);
-                    Debug.Log($"[GameManager] Set cash sprite to prize icon for place {placeNumber}");
                 }
-                else
-                {
-                    Debug.LogWarning($"[GameManager] Cash sprite is null! Cannot set prize icon for place {placeNumber}");
-                    prizeIcon.gameObject.SetActive(false);
-                }
-            }
-            else
-            {
-                Debug.LogWarning($"[GameManager] Prize icon is null for place {placeNumber}!");
+                else prizeIcon.gameObject.SetActive(false);
             }
             
-            // Always set prize text if it exists (even if sprite is missing)
             if (prizeText != null)
             {
                 prizeText.text = "$" + CurrencyDisplayUI.FormatCash(cashPrize);
                 prizeText.gameObject.SetActive(true);
-                Debug.Log($"[GameManager] Set prize text to ${CurrencyDisplayUI.FormatCash(cashPrize)} for place {placeNumber}");
-            }
-            else
-            {
-                Debug.LogError($"[GameManager] Prize text is null for place {placeNumber}! Make sure it's assigned in PlayerProfileUI.");
             }
         }
-        else if (chipsPrize > 0)
+        else if (chipsPrize > 0 || (!isCashMatch && cashPrize == 0))
         {
-            // Show chips prize
+            // Show chips prize (even if 0)
             if (prizeIcon != null)
             {
                 if (chipsSprite != null)
                 {
                     prizeIcon.sprite = chipsSprite;
                     prizeIcon.gameObject.SetActive(true);
-                    Debug.Log($"[GameManager] Set chips sprite to prize icon for place {placeNumber}");
                 }
-                else
-                {
-                    Debug.LogWarning($"[GameManager] Chips sprite is null! Cannot set prize icon for place {placeNumber}");
-                    prizeIcon.gameObject.SetActive(false);
-                }
-            }
-            else
-            {
-                Debug.LogWarning($"[GameManager] Prize icon is null for place {placeNumber}!");
+                else prizeIcon.gameObject.SetActive(false);
             }
             
-            // Always set prize text if it exists (even if sprite is missing)
             if (prizeText != null)
             {
-                prizeText.text = CurrencyDisplayUI.FormatCoins(chipsPrize);
+                prizeText.text = chipsPrize.ToString();
                 prizeText.gameObject.SetActive(true);
-                Debug.Log($"[GameManager] Set prize text to {CurrencyDisplayUI.FormatCoins(chipsPrize)} chips for place {placeNumber}");
-            }
-            else
-            {
-                Debug.LogError($"[GameManager] Prize text is null for place {placeNumber}! Make sure it's assigned in PlayerProfileUI.");
             }
         }
         else
         {
-            // Hide prize icon and text if no prize
-            if (prizeIcon != null)
-            {
-                prizeIcon.gameObject.SetActive(false);
-            }
-            if (prizeText != null)
-            {
-                prizeText.gameObject.SetActive(false);
-            }
-            Debug.Log($"[GameManager] No prize for place {placeNumber}, hiding icon and text");
+            // Hide prize UI only if we really have no data
+            if (prizeIcon != null) prizeIcon.gameObject.SetActive(false);
+            if (prizeText != null) prizeText.gameObject.SetActive(false);
         }
     }
     

@@ -332,7 +332,10 @@ public class NumberGrid : MonoBehaviour
             }
         }
         
-        StartCoroutine(DelayedTimerStartAfterGrid());
+        if (gameObject.activeInHierarchy)
+        {
+            StartCoroutine(DelayedTimerStartAfterGrid());
+        }
         Debug.Log("[NumberGrid] Grid generated successfully from backend matrix!");
     }
 
@@ -421,7 +424,10 @@ public class NumberGrid : MonoBehaviour
         }
         
         // Restart powerup timer after grid is generated (wait one frame to ensure all boxes are created)
-        StartCoroutine(DelayedTimerStartAfterGrid());
+        if (gameObject.activeInHierarchy)
+        {
+            StartCoroutine(DelayedTimerStartAfterGrid());
+        }
     }
     
     /// <summary>

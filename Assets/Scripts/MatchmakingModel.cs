@@ -364,6 +364,7 @@ public class GameOverData
     public System.Collections.Generic.Dictionary<string, int> scores;
     public System.Collections.Generic.Dictionary<string, int> totalLocks;
     public System.Collections.Generic.Dictionary<string, double> earnings;
+    public System.Collections.Generic.Dictionary<string, PlayerAvatarInfo> players;
 }
 
 [Serializable]
