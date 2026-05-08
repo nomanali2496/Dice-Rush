@@ -844,6 +844,7 @@ public class BackendAuthService : MonoBehaviour
     private IEnumerator GetLobbyConfigurationsCoroutine(Action<bool, LobbyApiResponse> onComplete)
     {
         string url = baseUrl.TrimEnd('/') + "/api/lobby";
+        Debug.Log($"<color=#FFA500>⬆️ [GET] Lobby Configurations: {url}</color>");
 
         using (UnityWebRequest request = UnityWebRequest.Get(url))
         {

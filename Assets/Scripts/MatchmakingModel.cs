@@ -18,7 +18,7 @@ public static class MatchmakingModel
     private static string lastMode;
     private static int lastStake;
     private static string lastLobbyId;
-    private static bool listenersAdded = false;
+    private static BestHTTP.SocketIO3.Socket lastSocket;
 
     public static void FindMatch(string mode, int stake, string lobbyId)
     {
@@ -65,12 +65,13 @@ public static class MatchmakingModel
         IsSearching = false;
     }
 
-    private static void EnsureListenersAdded()
+    public static void EnsureListenersAdded()
     {
-        if (listenersAdded) return;
-        if (SocketManager.Instance == null || SocketManager.Instance.Socket == null) return;
-
         var socket = SocketManager.Instance.Socket;
+        if (socket == null || lastSocket == socket) return;
+
+        Debug.Log("<color=#00FFFF>🔄 [MatchmakingModel] Adding socket listeners to new socket instance...</color>");
+        lastSocket = socket;
         
         // Use JsonData as the generic type. This is the most stable way to handle 
         // complex JSON in BestHTTP without triggering 'constructor not found' errors.
@@ -91,14 +92,91 @@ public static class MatchmakingModel
         socket.On<MatchmakingUpdateData>("matchmakingUpdate", HandleMatchmakingUpdate);
         
         // Gameplay events
-        socket.On<DiceRolledData>("diceRolled", HandleDiceRolled);
-        socket.On<NumberLockedData>("numberLocked", HandleNumberLocked);
-        socket.On<TapResultData>("tapResult", HandleTapResult);
-        socket.On<IconActivatedData>("iconActivated", HandleIconActivated);
-        socket.On<IconExpiredData>("iconExpired", HandleIconExpired);
-        socket.On<string>("gameOver", (data) => Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'gameOver': " + data + "</color>"));
+        socket.On<BestHTTP.JSON.LitJson.JsonData>("diceRolled", (jsonData) => {
+            if (jsonData != null) {
+                string json = jsonData.ToJson();
+                Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'diceRolled' raw: " + json + "</color>");
+                DiceRolledData data = BestHTTP.JSON.LitJson.JsonMapper.ToObject<DiceRolledData>(json);
+                HandleDiceRolled(data);
+            }
+        });
 
-        listenersAdded = true;
+        socket.On<BestHTTP.JSON.LitJson.JsonData>("numberLocked", (jsonData) => {
+            if (jsonData != null) {
+                string json = jsonData.ToJson();
+                Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'numberLocked' raw: " + json + "</color>");
+                NumberLockedData data = BestHTTP.JSON.LitJson.JsonMapper.ToObject<NumberLockedData>(json);
+                HandleNumberLocked(data);
+            }
+        });
+
+        socket.On<BestHTTP.JSON.LitJson.JsonData>("tapResult", (jsonData) => {
+            if (jsonData != null) {
+                string json = jsonData.ToJson();
+                Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'tapResult' raw: " + json + "</color>");
+                TapResultData data = BestHTTP.JSON.LitJson.JsonMapper.ToObject<TapResultData>(json);
+                HandleTapResult(data);
+            }
+        });
+
+        socket.On<BestHTTP.JSON.LitJson.JsonData>("iconActivated", (jsonData) => {
+            if (jsonData != null) {
+                string json = jsonData.ToJson();
+                Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'iconActivated' raw: " + json + "</color>");
+                IconActivatedData data = BestHTTP.JSON.LitJson.JsonMapper.ToObject<IconActivatedData>(json);
+                OnIconActivatedEvent?.Invoke(data);
+            }
+        });
+
+        socket.On<BestHTTP.JSON.LitJson.JsonData>("iconExpired", (jsonData) => {
+            if (jsonData != null) {
+                string json = jsonData.ToJson();
+                Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'iconExpired' raw: " + json + "</color>");
+                IconExpiredData data = BestHTTP.JSON.LitJson.JsonMapper.ToObject<IconExpiredData>(json);
+                OnIconExpiredEvent?.Invoke(data);
+            }
+        });
+
+        socket.On<BestHTTP.JSON.LitJson.JsonData>("playerMilestone", (jsonData) => {
+            if (jsonData != null) {
+                string json = jsonData.ToJson();
+                Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'playerMilestone' raw: " + json + "</color>");
+                PlayerMilestoneData data = BestHTTP.JSON.LitJson.JsonMapper.ToObject<PlayerMilestoneData>(json);
+                OnPlayerMilestoneEvent?.Invoke(data);
+            }
+        });
+
+        socket.On<BestHTTP.JSON.LitJson.JsonData>("gameOver", (jsonData) => {
+            try {
+                if (jsonData != null) {
+                    string json = jsonData.ToJson();
+                    Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'gameOver' received: " + json + "</color>");
+                    
+                    GameOverData data = BestHTTP.JSON.LitJson.JsonMapper.ToObject<GameOverData>(json);
+                    OnGameOverEvent?.Invoke(data);
+                }
+            } catch (Exception e) {
+                Debug.LogError($"[MatchmakingModel] JsonData parse failed for gameOver: {e.Message}");
+            }
+        });
+
+        socket.On<BestHTTP.JSON.LitJson.JsonData>("matchRecovered", (jsonData) => {
+            try {
+                if (jsonData != null) {
+                    string json = jsonData.ToJson();
+                    Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'matchRecovered' received: " + json + "</color>");
+                    
+                    StartGameData data = BestHTTP.JSON.LitJson.JsonMapper.ToObject<StartGameData>(json);
+                    
+                    // Auto-join room on recovery
+                    SocketManager.Instance.Socket.Emit("joinRoom", new JoinRoomPayload { roomId = data.roomId });
+                    
+                    OnMatchFound?.Invoke(data);
+                }
+            } catch (Exception e) {
+                Debug.LogError($"[MatchmakingModel] JsonData parse failed for matchRecovered: {e.Message}");
+            }
+        });
     }
 
     private static void HandleStartGame(StartGameData data)
@@ -106,7 +184,22 @@ public static class MatchmakingModel
         IsSearching = false;
         Debug.Log($"<color=#00FFFF>⬇️ [Socket ON] 'startGame' received! Match ID: {data?.roomId}, Matrix Size: {data?.matrix?.Length}</color>");
         
-        // Reset sequence for new match
+        // Fix: Emit 'joinRoom' so the server adds this socket to the match room
+        if (SocketManager.Instance != null && SocketManager.Instance.Socket != null && data != null)
+        {
+            SocketManager.Instance.Socket.Emit("joinRoom", new JoinRoomPayload { roomId = data.roomId });
+            Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'joinRoom' for room {data.roomId}</color>");
+        }
+
+        if (OnMatchFound == null)
+        {
+            Debug.LogError("❌ [MatchmakingModel] OnMatchFound has NO SUBSCRIBERS! The LobbyManager is not listening.");
+        }
+        else
+        {
+            Debug.Log($"[MatchmakingModel] Invoking OnMatchFound for {OnMatchFound.GetInvocationList().Length} subscribers.");
+        }
+
         OnMatchFound?.Invoke(data);
     }
 
@@ -140,6 +233,8 @@ public static class MatchmakingModel
     public static event Action<TapResultData> OnTapResultEvent;
     public static event Action<IconActivatedData> OnIconActivatedEvent;
     public static event Action<IconExpiredData> OnIconExpiredEvent;
+    public static event Action<PlayerMilestoneData> OnPlayerMilestoneEvent;
+    public static event Action<GameOverData> OnGameOverEvent;
     public static event Action<string> OnSocketErrorEvent;
 
     public static void RequestDiceRoll(string roomId)
@@ -174,7 +269,7 @@ public static class MatchmakingModel
 
     private static void HandleNumberLocked(NumberLockedData data)
     {
-        Debug.Log($"<color=#00FFFF>⬇️ [Socket ON] 'numberLocked': index={data.index} by {data.userId}, val={data.val}, score={data.score}</color>");
+        Debug.Log($"<color=#00FFFF>⬇️ [Socket ON] 'numberLocked': index={data.index} by {data.userId}, cellValue={data.cellValue}, score={data.score}</color>");
         OnNumberLockedEvent?.Invoke(data);
     }
 
@@ -226,7 +321,7 @@ public class NumberLockedData
 {
     public int index;
     public string userId;
-    public int val;
+    public int cellValue;
     public int score;
 }
 
@@ -249,4 +344,30 @@ public class IconActivatedData
 public class IconExpiredData
 {
     public int index;
+}
+
+[Serializable]
+public class PlayerMilestoneData
+{
+    public string userId;
+    public bool reachedWinTarget;
+    public int score;
+}
+
+[Serializable]
+public class GameOverData
+{
+    public string winnerId;
+    public string reason;
+    public double stake;
+    public double prizePool;
+    public System.Collections.Generic.Dictionary<string, int> scores;
+    public System.Collections.Generic.Dictionary<string, int> totalLocks;
+    public System.Collections.Generic.Dictionary<string, double> earnings;
+}
+
+[Serializable]
+public class JoinRoomPayload
+{
+    public string roomId;
 }

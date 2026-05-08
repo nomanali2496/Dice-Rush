@@ -213,4 +213,17 @@ public class ScoreFeedbackUIManager : MonoBehaviour
             Debug.LogWarning("[ScoreFeedbackUIManager] Target Score Display is missing!");
         }
     }
+
+    /// <summary>
+    /// Resets the current display score to zero and updates the UI.
+    /// </summary>
+    public void ResetScore()
+    {
+        currentDisplayScore = 0;
+        if (targetScoreDisplay != null)
+        {
+            targetScoreDisplay.text = ""; // Empty space instead of "0"
+            targetScoreDisplay.color = originalTargetColor;
+        }
+    }
 }

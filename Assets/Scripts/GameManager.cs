@@ -17,11 +17,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Image playerOutlineImage; // Player's outline image (for color assignment)
     [SerializeField] private MainMenuAvatarDisplay mainMenuAvatarDisplay; // Reference to main menu avatar display (to get user's selected avatar)
     
-    [Header("CPU Profiles")]
-    [SerializeField] private CPU[] cpuPlayers; // Array of CPU player scripts
-    [SerializeField] private Image[] cpuProfileImages; // Array of CPU profile image displays (must match cpuPlayers length)
-    [SerializeField] private Image[] cpuOutlineImages; // Array of CPU outline images (for color assignment, must match cpuPlayers length)
-    [SerializeField] private int numberOfCPUs = 1; // Number of CPUs to use (1 or more)
+    [Header("Opponent Profiles")]
+    [SerializeField] private Image[] opponentProfileImages; // Array of profile image displays for opponents
+    [SerializeField] private Image[] opponentOutlineImages; // Array of outline images for opponents
     
     [Header("Profile Image Settings")]
     [SerializeField] private Sprite[] availableProfileSprites; // Available profile sprites for CPUs (random selection)
@@ -73,6 +71,8 @@ public class GameManager : MonoBehaviour
     private float lastAwardedCash = 0f;
     private int lastAwardedChips = 0;
     private bool prizesAwardedForThisMatch = false; // Prevents infinite loop/duplicate prizes
+    private bool winnerScreenShown = false; // Track if we've already displayed the results
+    private bool isWaitingForServer = false; // Track if we are waiting for server gameOver
     private int localMatchScore = 0; // The persistent running score for the local player match
     
     public (float cash, int chips) GetLastAwardedPrize() => (lastAwardedCash, lastAwardedChips);
@@ -107,9 +107,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text thirdPlaceNameTextLegacy; // 3rd place name text (Legacy Text - use if not using TextMeshPro)
     
     private Sprite playerSelectedAvatar; // Store player's selected avatar sprite
-    private List<Sprite> availableCPUAvatars; // List of available avatars for CPUs
+    private List<Sprite> availableOpponentAvatars; // List of available avatars for opponents
     private Color playerOutlineColor; // Store player's outline color
-    private Color[] cpuOutlineColors; // Store CPU outline colors
+    private Color[] opponentOutlineColors; // Store opponent outline colors
     
     [Header("Network Caching")]
     private Dictionary<int, string> cachedNetworkNames = new Dictionary<int, string>();
@@ -120,9 +120,9 @@ public class GameManager : MonoBehaviour
     private const float CUSTOM_AVATAR_SCALE = 2.0f;
     private bool wasInRoomLastFrame = false;
     
-    // Individual NumberGrid instances (one per player/CPU)
+    // Individual NumberGrid instances (one per player/opponent)
     private NumberGrid playerNumberGrid; // Player's own NumberGrid instance
-    private Dictionary<int, NumberGrid> cpuNumberGrids = new Dictionary<int, NumberGrid>(); // CPU NumberGrid instances by CPU index
+    private Dictionary<int, NumberGrid> opponentNumberGrids = new Dictionary<int, NumberGrid>(); // Opponent NumberGrid instances by index
     private List<NumberGrid> allNumberGrids = new List<NumberGrid>(); // All NumberGrid instances (for cleanup)
     
     // Cache refresh timing
@@ -164,9 +164,8 @@ public class GameManager : MonoBehaviour
             winnerScreenLobbyButton.onClick.AddListener(OnWinnerLobbyButtonClicked);
         }
         
-        // Wait a bit for PlayFab and MainMenuAvatarDisplay to load avatar
+        // Initialize profiles
         StartCoroutine(InitializeProfilesDelayed());
-        SetupCPUs();
         
         // Hide screens initially
         if (winnerScreen != null)
@@ -191,6 +190,65 @@ public class GameManager : MonoBehaviour
 
         // Subscribe to Socket events
         MatchmakingModel.OnNumberLockedEvent += HandleServerNumberLocked;
+        MatchmakingModel.OnGameOverEvent += HandleServerGameOver;
+    }
+
+    private void HandleServerGameOver(GameOverData data)
+    {
+        if (data == null) return;
+
+        Debug.Log($"<color=#00FFFF>⬇️ [GameManager] Server GameOver received. Winner: {data.winnerId}, Reason: {data.reason}</color>");
+        
+        // Hide the "Calculating Results" screen if it was shown
+        if (calculateLoadingScreen != null) calculateLoadingScreen.SetActive(false);
+
+        // If we already showed the screen (e.g. in Solo mode or duplicate packet), ignore
+        if (winnerScreenShown) 
+        {
+            Debug.Log("[GameManager] Winner screen already shown. Skipping server gameOver trigger.");
+            return;
+        }
+
+        isGameActive = false;
+        timerStarted = false;
+        isWaitingForServer = false;
+
+        // Stop local timer coroutine
+        if (timerCoroutine != null)
+        {
+            StopCoroutine(timerCoroutine);
+            timerCoroutine = null;
+        }
+
+        // Convert server rankings to the format expected by ShowWinnerScreen
+        // List<(PlayerType playerType, int opponentIndex, int count, double time, string userId)>
+        var rankings = new List<(PlayerType playerType, int opponentIndex, int count, double time, string userId)>();
+
+        // Set the official prizes from server data
+        lastAwardedCash = (float)data.earnings.GetValueOrDefault(PlayerModel.Id, 0);
+        lastAwardedChips = 0;
+
+        if (data.scores != null)
+        {
+            int oppIdx = 0;
+            foreach (var kvp in data.scores)
+            {
+                string userId = kvp.Key;
+                int score = kvp.Value;
+                
+                PlayerType type = (userId == PlayerModel.Id) ? PlayerType.Player : PlayerType.Network;
+                double time = (userId == data.winnerId) ? 0 : 999.0;
+
+                int index = (type == PlayerType.Player) ? -1 : oppIdx++;
+                rankings.Add((type, index, score, time, userId));
+            }
+        }
+
+        // Sort rankings by score (descending)
+        rankings.Sort((a, b) => b.count.CompareTo(a.count));
+
+        // Show the screen
+        ShowWinnerScreen(rankings);
     }
 
     private void HandleServerNumberLocked(NumberLockedData data)
@@ -220,7 +278,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         // Check if gameplay screen just became active (to start timer)
-        if (gameplayScreen != null && gameplayScreen.activeSelf && !timerStarted)
+        if (gameplayScreen != null && gameplayScreen.activeSelf && !timerStarted && !winnerScreenShown && !isWaitingForServer)
         {
             Debug.Log("[GameManager] Gameplay screen is active, starting timer...");
             OnGameplayScreenActivated();
@@ -229,11 +287,7 @@ public class GameManager : MonoBehaviour
 
 
     /// <summary>
-    /// Called when a pending reward is claimed from PlayFab (match won while away)
-    /// Shows the winner screen UI even when returning after a disconnect.
-    /// </summary>
-    /// <summary>
-    /// Called when a pending reward is claimed from PlayFab (match won while away)
+    /// Called when a pending reward is claimed (match won while away)
     /// Shows the winner screen UI even when returning after a disconnect.
     /// </summary>
     private void OnOfflineRewardClaimed(string message, float cash, int chips, string rankingsJson)
@@ -312,7 +366,7 @@ public class GameManager : MonoBehaviour
                 // FIX: If this entry in the snapshot is the LOCAL PLAYER watching the screen, always show them as "YOU"
                 if (!string.IsNullOrEmpty(entry.pfId) && entry.pfId == PlayerModel.Id)
                 {
-                    // cpuIdx = -1 forces DisplayPlace to use local player logic/high-quality avatar
+                    // opponentIdx = -1 forces DisplayPlace to use local player logic/high-quality avatar
                     DisplayPlace(place, PlayerType.Player, -1, 0,
                                  GetProfileImageForPod(place), GetProfileImageCustomForPod(place), GetOutlineImageForPod(place), GetFrameImageForPod(place), GetNameTextForPod(place), null,
                                  pIcon, pText, null,
@@ -321,7 +375,7 @@ public class GameManager : MonoBehaviour
                 else 
                 {
                     // Use the snapshot's saved name and avatar index
-                    DisplayPlace(place, entry.type, entry.cpuIdx, 0,
+                    DisplayPlace(place, entry.type, entry.opponentIdx, 0,
                                  GetProfileImageForPod(place), GetProfileImageCustomForPod(place), GetOutlineImageForPod(place), GetFrameImageForPod(place), GetNameTextForPod(place), null,
                                  pIcon, pText, null,
                                  entry.cash, entry.chips, entry.name, entry.avatarIdx, entry.customImg);
@@ -391,6 +445,12 @@ public class GameManager : MonoBehaviour
         lastAwardedChips = 0;
         prizesAwardedForThisMatch = false;
         localMatchScore = 0; 
+        
+        // Reset score UI
+        if (ScoreFeedbackUIManager.Instance != null)
+        {
+            ScoreFeedbackUIManager.Instance.ResetScore();
+        }
         
         timerCoroutine = StartCoroutine(CountdownBeforeStart());
         Debug.Log("[GameManager] Starting match. Score reset to 0.");
@@ -490,13 +550,13 @@ public class GameManager : MonoBehaviour
             Debug.Log("[GameManager] Started powerup timer for player grid");
         }
         
-        // Start all CPU powerup timers
-        foreach (var kvp in cpuNumberGrids)
+        // Start all opponent powerup timers
+        foreach (var kvp in opponentNumberGrids)
         {
             if (kvp.Value != null)
             {
                 kvp.Value.StartPowerupTimerFromGameManager();
-                Debug.Log($"[GameManager] Started powerup timer for CPU {kvp.Key} grid");
+                Debug.Log($"[GameManager] Started powerup timer for Opponent {kvp.Key} grid");
             }
         }
     }
@@ -570,22 +630,18 @@ public class GameManager : MonoBehaviour
             timerCoroutine = null;
         }
 
-        // Stop all CPU rolling
-        if (cpuPlayers != null)
-        {
-            foreach (CPU cpu in cpuPlayers)
-            {
-                if (cpu != null) cpu.StopAutoRolling();
-            }
+        // Multiplayer: Wait for server (Always required now)
+        Debug.Log("[GameManager] Local timer expired. Waiting for server 'gameOver' event...");
+        
+        // Debug Socket State
+        if (SocketManager.Instance != null && SocketManager.Instance.Socket != null) {
+            Debug.Log($"[GameManager] Socket Status: {SocketManager.Instance.Socket.IsOpen} | ID: {SocketManager.Instance.Socket.Id}");
+        } else {
+            Debug.LogWarning("[GameManager] SocketManager or Socket is NULL at game end!");
         }
-        
-        var rankings = GetRankings();
-        
-        // Award prizes
-        AwardPrizes(rankings);
-        
-        // Show winner screen
-        ShowWinnerScreen(rankings);
+
+        isWaitingForServer = true;
+        if (calculateLoadingScreen != null) calculateLoadingScreen.SetActive(true);
     }
 
     /// <summary>
@@ -614,6 +670,7 @@ public class GameManager : MonoBehaviour
     {
         // Unsubscribe from Socket events
         MatchmakingModel.OnNumberLockedEvent -= HandleServerNumberLocked;
+        MatchmakingModel.OnGameOverEvent -= HandleServerGameOver;
 
         if (numberGrid != null)
         {
@@ -639,8 +696,8 @@ public class GameManager : MonoBehaviour
         int ownerKey = -1; // Default to local player
         if (grid != playerNumberGrid)
         {
-            // Check CPUs
-            foreach (var kvp in cpuNumberGrids)
+            // Check Opponents
+            foreach (var kvp in opponentNumberGrids)
             {
                 if (kvp.Value == grid) { ownerKey = kvp.Key; break; }
             }
@@ -672,7 +729,6 @@ public class GameManager : MonoBehaviour
                 localMatchScore += 100;
                 Debug.Log($"[GameManager] ✅ Correct Number! +100 Points (Total: {localMatchScore})");
 
-                // Trigger visual feedback
                 if (ScoreFeedbackUIManager.Instance != null && boxObject != null)
                 {
                     ScoreFeedbackUIManager.Instance.ShowScoreFeedback(100, boxObject.transform.position);
@@ -757,27 +813,10 @@ public class GameManager : MonoBehaviour
             timerCoroutine = null;
         }
         
-        // Stop all CPU rolling
-        if (cpuPlayers != null)
-        {
-            foreach (CPU cpu in cpuPlayers)
-            {
-                if (cpu != null) cpu.StopAutoRolling();
-            }
-        }
-        
-        // Add completion bonus if it was the local player
-        localMatchScore += 1200;
-        Debug.Log($"[GameManager] 🏆 TABLE COMPLETE! +1200 Points (Total: {localMatchScore})");
-        
-        // Get rankings (top 3)
-        var rankings = GetRankings();
-        
-        // Award prizes
-        AwardPrizes(rankings);
-        
-        // Show winner screen
-        ShowWinnerScreen(rankings);
+        // Multiplayer: Wait for server (Always required now)
+        Debug.Log("[GameManager] Board complete locally. Waiting for server 'gameOver' event...");
+        isWaitingForServer = true;
+        if (calculateLoadingScreen != null) calculateLoadingScreen.SetActive(true);
     }
     
     /// <summary>
@@ -819,337 +858,62 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        
-        // Calculate total number of players (1 player + CPUs)
-        int totalPlayers = 1; // Always 1 human player
-        if (currentLobbyConfig != null)
-        {
-            totalPlayers += currentLobbyConfig.GetNumberOfCPUs();
-        }
-        
-        Debug.Log($"[GameManager] Total players: {totalPlayers}");
-        
-        // Stop timer for the player
-        if (timerCoroutine != null)
-        {
-            StopCoroutine(timerCoroutine);
-            timerCoroutine = null;
-        }
-        
-        // Close quit panel if it's open
-        if (quitPanel != null && quitPanel.activeSelf)
-        {
-            quitPanel.SetActive(false);
-            Debug.Log("[GameManager] Quit panel closed");
-        }
-        
-        // If only 2 players total (player + 1 CPU), end game for CPU
-        // CPU wins but player doesn't see winner screen
-        if (totalPlayers == 2)
-        {
-            Debug.Log("[GameManager] Only 2 players - ending game for CPU (player won't see winner screen)");
-            
-            isGameActive = false;
-            timerStarted = false;
-            
-            // Stop all CPU rolling
-            if (cpuPlayers != null)
-            {
-                foreach (CPU cpu in cpuPlayers)
-                {
-                    if (cpu != null)
-                    {
-                        cpu.StopAutoRolling();
-                    }
-                }
-            }
-            
-            // Reset game state
-            ResetGameState();
-        }
-        else // More than 2 players - CPUs continue playing
-        {
-            Debug.Log("[GameManager] More than 2 players - CPUs continue playing");
-            // Don't set isGameActive to false - game continues for CPUs
-            // Don't stop CPU rolling - they keep playing
-            // Don't reset game state - game is still active for others
-        }
-        
-        // Hide gameplay screen - player returns to lobby
+        // Hide gameplay screen and quit panel
         if (gameplayScreen != null)
         {
             gameplayScreen.SetActive(false);
             Debug.Log("[GameManager] Gameplay screen hidden - player returned to lobby");
         }
         
-        // Do NOT show winner screen - player goes straight to lobby
-        // Do NOT award prizes - player gets nothing for quitting
+        if (quitPanel != null)
+        {
+            quitPanel.SetActive(false);
+        }
+        
+        ResetGameState();
     }
 
-    /// <summary>
-    /// Gets the top 3 rankings from individual board selection counts
-    /// Returns: List of tuples (PlayerType, cpuIndex, selectionCount, time, userId) sorted by count (descending)
-    /// </summary>
-    private List<(PlayerType playerType, int cpuIndex, int count, double time, string userId)> GetRankings()
-    {
-        List<(PlayerType playerType, int cpuIndex, int count, double time, string userId)> rankings = new List<(PlayerType, int, int, double, string)>();
-        
-        // 1. Prepare Local Player entry
-        int playerCount = localMatchScore; 
-        if (playerNumberGrid != null)
-        {
-            int gridPoints = playerNumberGrid.GetTotalPoints("Player");
-            if (gridPoints > playerCount) playerCount = gridPoints;
-        }
 
-        double playerTime = playerLastScoreTime.ContainsKey(-1) ? playerLastScoreTime[-1] : (double)Time.time;
-        string playerUserId = PlayerModel.Id;
-
-        rankings.Add((PlayerType.Player, -1, playerCount, playerTime, playerUserId));
-        
-        // 2. Process Online Players (Socket-driven)
-        if (currentMatchData != null && currentMatchData.playerAvatars != null)
-        {
-            foreach (var kvp in currentMatchData.playerAvatars)
-            {
-                string userId = kvp.Key;
-                if (userId == PlayerModel.Id) continue;
-
-                int score = networkPlayerScores.ContainsKey(userId) ? networkPlayerScores[userId] : 0;
-                double time = networkPlayerTimes.ContainsKey(userId) ? networkPlayerTimes[userId] : 9999.0;
-                
-                rankings.Add((PlayerType.Network, -1, score, time, userId));
-            }
-        }
-        
-        // 3. Count each CPU's selections from their own board (Solo play only)
-        bool isMultiplayerMatch = currentMatchData != null;
-        if (!isMultiplayerMatch && cpuNumberGrids.Count > 0)
-        {
-            foreach (int cpuIdx in cpuNumberGrids.Keys)
-            {
-                int cpuCount = cpuNumberGrids[cpuIdx].GetTotalPoints($"CPU_{cpuIdx}");
-                double cpuTime = playerLastScoreTime.ContainsKey(cpuIdx) ? playerLastScoreTime[cpuIdx] : (double)Time.time;
-                rankings.Add((PlayerType.CPU, cpuIdx, cpuCount, cpuTime, ""));
-            }
-        }
-
-        // Final Sort: 
-        // 1. By Count (descending)
-        // 2. By Time (ascending)
-        rankings.Sort((a, b) => {
-            int scoreCompare = b.count.CompareTo(a.count);
-            if (scoreCompare != 0) return scoreCompare;
-            return a.time.CompareTo(b.time);
-        });
-        
-        // Return top 3
-        return rankings.Count > 3 ? rankings.GetRange(0, 3) : rankings;
-    }
-    
     /// <summary>
     /// Shows the winner screen with 1st, 2nd, and 3rd place information
     /// </summary>
-    private void ShowWinnerScreen(List<(PlayerType playerType, int cpuIndex, int count, double time, string userId)> rankings)
+    private void ShowWinnerScreen(List<(PlayerType playerType, int opponentIndex, int count, double time, string userId)> rankings)
     {
-        if (winnerScreen == null)
-        {
-            Debug.LogWarning("[GameManager] Winner screen not assigned!");
-            return;
-        }
+        if (rankings == null || rankings.Count == 0) return;
         
-        // Store lobby config before resetting (needed for animation)
-        LobbyConfig configForAnimation = currentLobbyConfig;
+        winnerScreenShown = true;
         
-        // Ensure WinnerScreen script reference is initialized (needed for sprites)
-        if (winnerScreenScript == null && winnerScreen != null)
-        {
-            winnerScreenScript = winnerScreen.GetComponent<WinnerScreen>();
-        }
+        // Reset winner screen UI first
+        ResetWinnerScreenUI();
         
-        // Ensure WinnerScreen script reference is initialized (needed for sprites and prize UI)
-        if (winnerScreenScript == null && winnerScreen != null)
-        {
-            winnerScreenScript = winnerScreen.GetComponent<WinnerScreen>();
-        }
-        
-        if (winnerScreenScript == null)
-        {
-            Debug.LogError("[GameManager] WinnerScreen script not found! Cannot display prize icons and texts. Make sure WinnerScreen script is attached to the winner screen GameObject.");
-        }
-        else
-        {
-            Debug.Log($"[GameManager] WinnerScreen script found successfully");
-        }
-        
-        // Display 1st place (only if there's a prize)
-        if (rankings.Count > 0)
+        // Display top 3
+        if (rankings.Count >= 1)
         {
             var firstPlace = rankings[0];
-            float firstCash = currentLobbyConfig != null ? currentLobbyConfig.firstPlaceCash : 0f;
-            int firstChips = currentLobbyConfig != null ? currentLobbyConfig.firstPlaceChips : 0;
-            // Get prize UI from WinnerScreen
-            Image firstPrizeIcon = winnerScreenScript != null ? winnerScreenScript.GetFirstPlacePrizeIcon() : null;
-            TMPro.TextMeshProUGUI firstPrizeText = winnerScreenScript != null ? winnerScreenScript.GetFirstPlacePrizeText() : null;
+            float firstCash = lastAwardedCash; // For now, we only show the local player's prize
+            int firstChips = lastAwardedChips;
             
-            // Check if there's any prize for 1st place
-            if (firstCash > 0f || firstChips > 0)
-            {
-                if (winnerScreenScript != null)
-                {
-                    if (firstPrizeIcon == null)
-                    {
-                        Debug.LogError("[GameManager] First place prize icon is null! Please assign 'firstPlacePrizeIcon' in WinnerScreen component in Unity Inspector.");
-                    }
-                    if (firstPrizeText == null)
-                    {
-                        Debug.LogError("[GameManager] First place prize text is null! Please assign 'firstPlacePrizeText' in WinnerScreen component in Unity Inspector.");
-                    }
-                    if (firstPrizeIcon != null && firstPrizeText != null)
-                    {
-                        Debug.Log("[GameManager] First place prize UI references are valid");
-                    }
-                }
-                
-                DisplayPlace(1, firstPlace.playerType, firstPlace.cpuIndex, firstPlace.count,
-                            winnerProfileImage, winnerProfileImageCustom, winnerOutlineImage, winnerFrameImage, winnerNameText, winnerNameTextLegacy,
-                            firstPrizeIcon, firstPrizeText, null,
-                            firstCash, firstChips);
-                Debug.Log($"[GameManager] 1st Place: {GetWinnerName(firstPlace.playerType, firstPlace.cpuIndex)} ({firstPlace.playerType}, CPU index: {firstPlace.cpuIndex}) with {firstPlace.count} selected boxes! Prize: {firstCash} cash, {firstChips} chips");
-            }
-            else
-            {
-                // No prize for 1st place, hide it
-                HidePlace(winnerProfileImage, winnerOutlineImage, winnerFrameImage, winnerNameText, winnerNameTextLegacy,
-                         firstPrizeIcon, firstPrizeText, null);
-                Debug.Log("[GameManager] No prize for 1st place (cash and chips are both 0), hiding 1st place UI");
-            }
+            DisplayPlace(1, firstPlace.playerType, firstPlace.opponentIndex, firstPlace.count,
+                         winnerProfileImage, winnerProfileImageCustom, winnerOutlineImage, winnerFrameImage, winnerNameText, winnerNameTextLegacy,
+                         winnerScreenScript != null ? winnerScreenScript.GetFirstPlacePrizeIcon() : null,
+                         winnerScreenScript != null ? winnerScreenScript.GetFirstPlacePrizeText() : null,
+                         null, firstCash, firstChips,
+                         (firstPlace.playerType == PlayerType.Network) ? "Opponent" : "");
         }
-        
-        // Display 2nd place (only if there's a prize)
-        if (rankings.Count > 1)
-        {
-            var secondPlace = rankings[1];
-            float secondCash = currentLobbyConfig != null ? currentLobbyConfig.secondPlaceCash : 0f;
-            int secondChips = currentLobbyConfig != null ? currentLobbyConfig.secondPlaceChips : 0;
-            // Get prize UI from WinnerScreen
-            Image secondPrizeIcon = winnerScreenScript != null ? winnerScreenScript.GetSecondPlacePrizeIcon() : null;
-            TMPro.TextMeshProUGUI secondPrizeText = winnerScreenScript != null ? winnerScreenScript.GetSecondPlacePrizeText() : null;
-            
-            // Check if there's any prize for 2nd place
-            if (secondCash > 0f || secondChips > 0)
-            {
-                DisplayPlace(2, secondPlace.playerType, secondPlace.cpuIndex, secondPlace.count,
-                            secondPlaceProfileImage, secondPlaceProfileImageCustom, secondPlaceOutlineImage, secondPlaceFrameImage, secondPlaceNameText, secondPlaceNameTextLegacy,
-                            secondPrizeIcon, secondPrizeText, null,
-                            secondCash, secondChips);
-                Debug.Log($"[GameManager] 2nd Place: {GetWinnerName(secondPlace.playerType, secondPlace.cpuIndex)} ({secondPlace.playerType}, CPU index: {secondPlace.cpuIndex}) with {secondPlace.count} selected boxes! Prize: {secondCash} cash, {secondChips} chips");
-            }
-            else
-            {
-                // No prize for 2nd place, hide it
-                HidePlace(secondPlaceProfileImage, secondPlaceOutlineImage, secondPlaceFrameImage, secondPlaceNameText, secondPlaceNameTextLegacy,
-                         secondPrizeIcon, secondPrizeText, null);
-                Debug.Log("[GameManager] No prize for 2nd place (cash and chips are both 0), hiding 2nd place UI");
-            }
-        }
-        else
-        {
-            // Hide 2nd place UI if no 2nd place
-            Image secondPrizeIconHide = winnerScreenScript != null ? winnerScreenScript.GetSecondPlacePrizeIcon() : null;
-            TMPro.TextMeshProUGUI secondPrizeTextHide = winnerScreenScript != null ? winnerScreenScript.GetSecondPlacePrizeText() : null;
-            HidePlace(secondPlaceProfileImage, secondPlaceOutlineImage, secondPlaceFrameImage, secondPlaceNameText, secondPlaceNameTextLegacy,
-                     secondPrizeIconHide, secondPrizeTextHide, null);
-        }
-        
-        // Display 3rd place (only if there's a prize)
-        if (rankings.Count > 2)
-        {
-            var thirdPlace = rankings[2];
-            float thirdCash = currentLobbyConfig != null ? currentLobbyConfig.thirdPlaceCash : 0f;
-            int thirdChips = currentLobbyConfig != null ? currentLobbyConfig.thirdPlaceChips : 0;
-            // Get prize UI from WinnerScreen
-            Image thirdPrizeIcon = winnerScreenScript != null ? winnerScreenScript.GetThirdPlacePrizeIcon() : null;
-            TMPro.TextMeshProUGUI thirdPrizeText = winnerScreenScript != null ? winnerScreenScript.GetThirdPlacePrizeText() : null;
-            
-            // Check if there's any prize for 3rd place
-            if (thirdCash > 0f || thirdChips > 0)
-            {
-                if (winnerScreenScript != null)
-                {
-                    if (thirdPrizeIcon == null)
-                    {
-                        Debug.LogError("[GameManager] Third place prize icon is null! Please assign 'thirdPlacePrizeIcon' in WinnerScreen component in Unity Inspector.");
-                    }
-                    if (thirdPrizeText == null)
-                    {
-                        Debug.LogError("[GameManager] Third place prize text is null! Please assign 'thirdPlacePrizeText' in WinnerScreen component in Unity Inspector.");
-                    }
-                }
-                
-                DisplayPlace(3, thirdPlace.playerType, thirdPlace.cpuIndex, thirdPlace.count,
-                            thirdPlaceProfileImage, thirdPlaceProfileImageCustom, thirdPlaceOutlineImage, thirdPlaceFrameImage, thirdPlaceNameText, thirdPlaceNameTextLegacy,
-                            thirdPrizeIcon, thirdPrizeText, null,
-                            thirdCash, thirdChips);
-                Debug.Log($"[GameManager] 3rd Place: {GetWinnerName(thirdPlace.playerType, thirdPlace.cpuIndex)} ({thirdPlace.playerType}, CPU index: {thirdPlace.cpuIndex}) with {thirdPlace.count} selected boxes! Prize: {thirdCash} cash, {thirdChips} chips");
-            }
-            else
-            {
-                // No prize for 3rd place, hide it
-                HidePlace(thirdPlaceProfileImage, thirdPlaceOutlineImage, thirdPlaceFrameImage, thirdPlaceNameText, thirdPlaceNameTextLegacy,
-                         thirdPrizeIcon, thirdPrizeText, null);
-                Debug.Log("[GameManager] No prize for 3rd place (cash and chips are both 0), hiding 3rd place UI");
-            }
-        }
-        else
-        {
-            // Hide 3rd place UI if no 3rd place
-            Image thirdPrizeIconHide = winnerScreenScript != null ? winnerScreenScript.GetThirdPlacePrizeIcon() : null;
-            TMPro.TextMeshProUGUI thirdPrizeTextHide = winnerScreenScript != null ? winnerScreenScript.GetThirdPlacePrizeText() : null;
-            HidePlace(thirdPlaceProfileImage, thirdPlaceOutlineImage, thirdPlaceFrameImage, thirdPlaceNameText, thirdPlaceNameTextLegacy,
-                     thirdPrizeIconHide, thirdPrizeTextHide, null);
-        }
-        
-        // Hide gameplay screen
-        if (gameplayScreen != null)
-        {
-            gameplayScreen.SetActive(false);
-        }
-        
-        // Fire event for clean frontend separation
-        OnGameEnded?.Invoke();
-        
-        // Show winner screen with animation
+
+        // Hide 2nd and 3rd if not present
+        if (rankings.Count < 2) HidePlace(secondPlaceProfileImage, secondPlaceOutlineImage, secondPlaceFrameImage, secondPlaceNameText, secondPlaceNameTextLegacy, null, null, null);
+        if (rankings.Count < 3) HidePlace(thirdPlaceProfileImage, thirdPlaceOutlineImage, thirdPlaceFrameImage, thirdPlaceNameText, thirdPlaceNameTextLegacy, null, null, null);
+
+        // Activate visuals
+        if (winnerScreen != null) winnerScreen.SetActive(true);
+
+        // Trigger animation
         if (winnerScreenScript != null)
         {
-            winnerScreen.SetActive(true);
-        }
-        
-        // Trigger winner screen animation if player is in top 3 (use stored config)
-        if (configForAnimation != null)
-        {
-            // Try to find WinnerScreen script if not assigned
-            if (winnerScreenScript == null && winnerScreen != null)
-            {
-                winnerScreenScript = winnerScreen.GetComponent<WinnerScreen>();
-            }
-            
-            if (winnerScreenScript != null)
-            {
-                // Convert 4-tuple rankings to 3-tuple for existing UI methods
-                List<(PlayerType, int, int)> uiRankings = new List<(PlayerType, int, int)>();
-                foreach (var r in rankings) uiRankings.Add((r.playerType, r.cpuIndex, r.count));
-                
-                winnerScreenScript.PlayAnimationIfPlayerInTop3(uiRankings, configForAnimation);
-            }
-            else
-            {
-                Debug.LogWarning("[GameManager] WinnerScreen script not found! Make sure WinnerScreen script is attached to the winner screen GameObject.");
-            }
-        }
-        else
-        {
-            Debug.LogWarning("[GameManager] No lobby config available for winner screen animation!");
+            List<(PlayerType, int, int)> uiRankings = new List<(PlayerType, int, int)>();
+            foreach (var r in rankings) uiRankings.Add((r.playerType, r.opponentIndex, r.count));
+            winnerScreenScript.PlayAnimationIfPlayerInTop3(uiRankings, currentLobbyConfig);
         }
     }
     
@@ -1175,10 +939,10 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Displays a place (1st, 2nd, or 3rd) with profile image, outline, frame, name, prize icon, and prize text
     /// </summary>
-    private void DisplayPlace(int placeNumber, PlayerType playerType, int cpuIndex, int selectionCount,
-                              Image profileImage, Image profileImageCustom, Image outlineImage, Image frameImage, TMPro.TextMeshProUGUI nameText, Text nameTextLegacy,
-                              Image prizeIcon, TMPro.TextMeshProUGUI prizeText, Text prizeTextLegacy,
-                              float cashPrize, int chipsPrize, string overrideName = null, int overrideAvatarIdx = -1, string overrideCustomBase64 = null)
+    private void DisplayPlace(int placeNumber, PlayerType playerType, int opponentIndex, int selectionCount,
+                             Image profileImage, Image profileImageCustom, Image outlineImage, Image frameImage, TMPro.TextMeshProUGUI nameText, Text nameTextLegacy,
+                             Image prizeIcon, TMPro.TextMeshProUGUI prizeText, Text prizeTextLegacy,
+                             float cashPrize, int chipsPrize, string overrideName = "", int overrideAvatarIdx = -1, string overrideCustomImg = "")
     {
         // Activate UI elements first (in case they were hidden in previous game)
         if (profileImage != null)
@@ -1211,11 +975,11 @@ public class GameManager : MonoBehaviour
 
                 // Priority 1: Use Offline Snapshot Custom Image (Match Recovery)
                 // We check this FIRST so match history overrides generic shortcuts
-                if (!string.IsNullOrEmpty(overrideCustomBase64))
+                if (!string.IsNullOrEmpty(overrideCustomImg))
                 {
                     try
                     {
-                        byte[] bytes = System.Convert.FromBase64String(overrideCustomBase64);
+                        byte[] bytes = System.Convert.FromBase64String(overrideCustomImg);
                         Texture2D tex = new Texture2D(2, 2);
                         if (tex.LoadImage(bytes))
                         {
@@ -1242,7 +1006,7 @@ public class GameManager : MonoBehaviour
                 // Priority 3: Live Logic (Only if snapshot was empty)
                 if (!customProfileMatched)
                 {
-                    if (cpuIndex == -1) // Local Player
+                    if (opponentIndex == -1) // Local Player
                     {
                         // Use standard player avatar from profile
                         bool isCustomLocally = (playerProfileImageCustom != null && playerProfileImageCustom.gameObject.activeSelf) 
@@ -1255,9 +1019,9 @@ public class GameManager : MonoBehaviour
                             Debug.Log($"[GameManager] Winner podium: local player avatar assigned.");
                         }
                     }
-                    else if (cpuIndex <= -100) // Network Human
+                    else if (opponentIndex <= -100) // Network Human
                     {
-                        int actorNumber = Mathf.Abs(cpuIndex + 100);
+                        int actorNumber = Mathf.Abs(opponentIndex + 100);
 
                         // Priority A: Use Cached High-Quality Custom Avatar
                         if (cachedNetworkAvatars.TryGetValue(actorNumber, out Sprite cachedSprite))
@@ -1283,13 +1047,13 @@ public class GameManager : MonoBehaviour
                     SetProfileSlot(profileImage, profileImageCustom, availableProfileSprites[0], false);
                 }
             }
-            else // CPU
+            else // Network Opponent (Human or Bot)
             {
-                if (cpuProfileImages != null && cpuIndex >= 0 && cpuIndex < cpuProfileImages.Length)
+                if (opponentProfileImages != null && opponentIndex >= 0 && opponentIndex < opponentProfileImages.Length)
                 {
-                    if (cpuProfileImages[cpuIndex] != null && cpuProfileImages[cpuIndex].sprite != null)
+                    if (opponentProfileImages[opponentIndex] != null && opponentProfileImages[opponentIndex].sprite != null)
                     {
-                        SetProfileSlot(profileImage, profileImageCustom, cpuProfileImages[cpuIndex].sprite, false);
+                        SetProfileSlot(profileImage, profileImageCustom, opponentProfileImages[opponentIndex].sprite, false);
                     }
                 }
             }
@@ -1300,7 +1064,7 @@ public class GameManager : MonoBehaviour
         {
             if (playerType == PlayerType.Player)
             {
-                if (cpuIndex == -1) // Local Player
+                if (opponentIndex == -1) // Local Player
                 {
                     outlineImage.color = playerOutlineColor;
                 }
@@ -1310,17 +1074,17 @@ public class GameManager : MonoBehaviour
                     outlineImage.color = Color.white;
                 }
             }
-            else // CPU
+            else // Opponent
             {
-                if (cpuOutlineColors != null && cpuIndex >= 0 && cpuIndex < cpuOutlineColors.Length)
+                if (opponentOutlineColors != null && opponentIndex >= 0 && opponentIndex < opponentOutlineColors.Length)
                 {
-                    outlineImage.color = cpuOutlineColors[cpuIndex];
+                    outlineImage.color = opponentOutlineColors[opponentIndex];
                 }
             }
         }
         
         // Set name (use override if provided for offline recovery)
-        string playerName = !string.IsNullOrEmpty(overrideName) ? overrideName : GetWinnerName(playerType, cpuIndex);
+        string playerName = !string.IsNullOrEmpty(overrideName) ? overrideName : GetWinnerName(playerType, opponentIndex);
         if (nameText != null)
         {
             nameText.text = playerName;
@@ -1460,55 +1224,20 @@ public class GameManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Gets the display name for a winner
-    /// </summary>
-    private string GetWinnerName(PlayerType playerType, int cpuIndex)
+    /// Gets the display name 
+    private string GetWinnerName(PlayerType playerType, int opponentIndex)
     {
         if (playerType == PlayerType.Player)
         {
-            if (cpuIndex == -1)
-            {
-                return "You";
-            }
-            else if (cpuIndex <= -100)
-            {
-                // Network Player
-                int actorNumber = Mathf.Abs(cpuIndex + 100);
-
-                // Use currentMatchData to get names for network players
-                if (currentMatchData != null && currentMatchData.playerAvatars != null)
-                {
-                    // Find player with this actorNumber or mapping (assuming userId is used)
-                    // For now, return generic "Opponent" if not found in cache
-                    return "Opponent";
-                }
-
-
-                // Priority 2: Return cached name if it exists
-                if (cachedNetworkNames.TryGetValue(actorNumber, out string cachedName) && !string.IsNullOrEmpty(cachedName))
-                {
-                    return cachedName;
-                }
-
-                // Final fallback
-                return $"Player {actorNumber}";
-            }
-            return "Player";
+            return "YOU";
         }
-        else // CPU
+        else // Network Opponent
         {
-            // CPU names: Index 0 = Charles, Index 1 = John
-            switch (cpuIndex)
-            {
-                case 0:
-                    return "Charles";
-                case 1:
-                    return "John";
-                default:
-                    return $"CPU {cpuIndex + 1}";
-            }
+            return "Opponent";
         }
     }
+
+
     
     /// <summary>
     /// Called when PlayFab player data is loaded
@@ -1543,20 +1272,11 @@ public class GameManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Initializes player and CPU profiles
-    /// </summary>
     private void InitializeProfiles()
     {
-        // Get player's profile image from main menu
         LoadPlayerProfileImage();
         
-        // Setup available CPU avatars
-        SetupAvailableCPUAvatars();
-        
-        // Assign random profile images to CPUs
-        AssignCPUProfileImages();
-        
-        // Assign random colors to outline images
+        // Opponents will be set up during ConfigureGameFromLobby when matchData arrives
         AssignOutlineColors();
     }
     
@@ -1629,191 +1349,54 @@ public class GameManager : MonoBehaviour
         Debug.LogWarning("[GameManager] Could not load player profile image from main menu. Using default or assigned sprite.");
     }
     
-    /// <summary>
-    /// Sets up available CPU avatars (excluding player's avatar if option is enabled)
-    /// </summary>
-    private void SetupAvailableCPUAvatars()
-    {
-        availableCPUAvatars = new List<Sprite>();
-        
-        // Add all available profile sprites
-        if (availableProfileSprites != null && availableProfileSprites.Length > 0)
-        {
-            foreach (Sprite sprite in availableProfileSprites)
-            {
-                if (sprite != null)
-                {
-                    // If exclude option is enabled, don't add player's avatar
-                    if (excludePlayerAvatarFromCPU && playerSelectedAvatar != null)
-                    {
-                        if (sprite == playerSelectedAvatar)
-                        {
-                            continue; // Skip player's avatar
-                        }
-                    }
-                    availableCPUAvatars.Add(sprite);
-                }
-            }
-        }
-        
-        // If no sprites assigned, try to get from AvatarSelector
-        if (availableCPUAvatars.Count == 0)
-        {
-            AvatarSelector avatarSelector = FindObjectOfType<AvatarSelector>();
-            if (avatarSelector != null)
-            {
-                // Get all avatar sprites from AvatarSelector
-                for (int i = 0; i < 8; i++) // Assuming 8 avatars
-                {
-                    Sprite sprite = avatarSelector.GetAvatarSpriteByIndex(i);
-                    if (sprite != null)
-                    {
-                        // If exclude option is enabled, don't add player's avatar
-                        if (excludePlayerAvatarFromCPU && playerSelectedAvatar != null)
-                        {
-                            if (sprite == playerSelectedAvatar)
-                            {
-                                continue; // Skip player's avatar
-                            }
-                        }
-                        availableCPUAvatars.Add(sprite);
-                    }
-                }
-            }
-        }
-        
-        if (availableCPUAvatars.Count == 0)
-        {
-            Debug.LogWarning("[GameManager] No available CPU avatars found! CPUs will not have profile images.");
-        }
-    }
+    
     
     /// <summary>
-    /// Assigns random profile images to CPUs
+    /// Sets the number of active opponents based on server data
     /// </summary>
-    private void AssignCPUProfileImages()
+    private void SetUpOpponentsFromMatch(StartGameData matchData)
     {
-        if (cpuProfileImages == null || cpuProfileImages.Length == 0)
+        if (matchData == null || matchData.playerAvatars == null) return;
+
+        int opponentCount = 0;
+        foreach (var pair in matchData.playerAvatars)
         {
-            Debug.LogWarning("[GameManager] CPU profile images array is empty!");
-            return;
-        }
-        
-        if (availableCPUAvatars == null || availableCPUAvatars.Count == 0)
-        {
-            Debug.LogWarning("[GameManager] No available CPU avatars to assign!");
-            return;
-        }
-        
-        // If we have backend data, use the exact avatar provided
-        if (currentMatchData != null && currentMatchData.playerAvatars != null && currentMatchData.playerAvatars.Count > 0)
-        {
-            // For now, assume the first opponent in the payload is the CPU opponent
-            // Get all avatar strings from the backend info objects
-            List<string> backendAvatars = new List<string>();
-            foreach (var info in currentMatchData.playerAvatars.Values) {
-                backendAvatars.Add(info.avatar);
-            }
+            if (pair.Key == PlayerModel.Id) continue; // Skip local player
             
-            // Assign avatars based on backend data (fallback to index 0 if not found)
-            for (int i = 0; i < cpuProfileImages.Length && i < numberOfCPUs; i++)
+            if (opponentCount < opponentProfileImages.Length)
             {
-                if (cpuProfileImages[i] == null) continue;
+                // Set name and avatar for opponent
+                string opponentId = pair.Key;
+                PlayerAvatarInfo info = pair.Value;
                 
-                // Pick the opponent's avatar string (skipping the first one if we assume it's the player, but for now we just map them)
-                string avatarStr = (i < backendAvatars.Count) ? backendAvatars[i] : "0";
-                
-                // Try to parse it to an index (e.g. "3" -> index 3), or just pick a random one if it's a string like "avatarBoy"
-                if (int.TryParse(avatarStr, out int avatarIndex) && avatarIndex >= 0 && avatarIndex < availableCPUAvatars.Count)
+                // Show the profile image
+                if (opponentProfileImages[opponentCount] != null)
                 {
-                    cpuProfileImages[i].sprite = availableCPUAvatars[avatarIndex];
-                }
-                else
-                {
-                    // Fallback to a random avatar or specific string mapping
-                    cpuProfileImages[i].sprite = availableCPUAvatars[Random.Range(0, availableCPUAvatars.Count)];
+                    opponentProfileImages[opponentCount].gameObject.SetActive(true);
+                    // Use a helper to load the avatar (assuming index or name mapping exists)
+                    opponentProfileImages[opponentCount].sprite = GetAvatarSprite(info.avatar);
                 }
                 
-                Debug.Log($"[GameManager] Assigned profile image to CPU {i + 1} from backend data: {avatarStr}");
+                opponentCount++;
             }
-            return;
         }
         
-        // Fallback to random if no backend data
-        List<Sprite> availableAvatars = new List<Sprite>(availableCPUAvatars);
-        
-        // Assign random avatars to each CPU
-        for (int i = 0; i < cpuProfileImages.Length && i < numberOfCPUs; i++)
+        // Hide remaining slots
+        for (int i = opponentCount; i < opponentProfileImages.Length; i++)
         {
-            if (cpuProfileImages[i] == null) continue;
-            
-            if (availableAvatars.Count == 0)
-            {
-                availableAvatars = new List<Sprite>(availableCPUAvatars);
-            }
-            
-            int randomIndex = Random.Range(0, availableAvatars.Count);
-            cpuProfileImages[i].sprite = availableAvatars[randomIndex];
-            
-            if (availableAvatars.Count > numberOfCPUs)
-            {
-                availableAvatars.RemoveAt(randomIndex);
-            }
-            
-            Debug.Log($"[GameManager] Assigned random profile image to CPU {i + 1}");
+            if (opponentProfileImages[i] != null) opponentProfileImages[i].gameObject.SetActive(false);
+            if (opponentOutlineImages[i] != null) opponentOutlineImages[i].gameObject.SetActive(false);
         }
     }
-    
-    /// <summary>
-    /// Sets up CPU players based on numberOfCPUs
-    /// Enables/disables CPU GameObjects and their scripts based on the number needed
-    /// </summary>
-    private void SetupCPUs()
+
+    private Sprite GetAvatarSprite(string avatarKey)
     {
-        if (cpuPlayers == null || cpuPlayers.Length == 0)
-        {
-            Debug.LogWarning("[GameManager] CPU players array is empty!");
-            return;
-        }
+        // Try to parse index if it's a number, or use a default
+        if (int.TryParse(avatarKey, out int index) && availableProfileSprites != null && index >= 0 && index < availableProfileSprites.Length)
+            return availableProfileSprites[index];
         
-        // Enable only the specified number of CPUs
-        for (int i = 0; i < cpuPlayers.Length; i++)
-        {
-            if (cpuPlayers[i] != null)
-            {
-                if (i < numberOfCPUs)
-                {
-                    // Enable CPU GameObject
-                    cpuPlayers[i].gameObject.SetActive(true);
-                    // Set the CPU index
-                    cpuPlayers[i].SetCPUIndex(i);
-                    // Enable CPU script
-                    cpuPlayers[i].SetCPUEnabled(true);
-                    Debug.Log($"[GameManager] CPU {i + 1} GameObject enabled with index {i} and started rolling");
-                }
-                else
-                {
-                    // Disable CPU script first
-                    cpuPlayers[i].SetCPUEnabled(false);
-                    // Disable CPU GameObject
-                    cpuPlayers[i].gameObject.SetActive(false);
-                    Debug.Log($"[GameManager] CPU {i + 1} GameObject disabled");
-                }
-            }
-        }
-        
-        Debug.Log($"[GameManager] Total CPUs active: {numberOfCPUs} out of {cpuPlayers.Length}");
-    }
-    
-    /// <summary>
-    /// Sets the number of CPUs to use
-    /// </summary>
-    public void SetNumberOfCPUs(int count)
-    {
-        numberOfCPUs = Mathf.Clamp(count, 1, cpuPlayers != null ? cpuPlayers.Length : 1);
-        SetupCPUs();
-        AssignCPUProfileImages(); // Reassign profile images
-        Debug.Log($"[GameManager] Number of CPUs set to {numberOfCPUs}");
+        // Fallback to random or boy/girl default
+        return (availableProfileSprites != null && availableProfileSprites.Length > 0) ? availableProfileSprites[0] : null;
     }
     
     /// <summary>
@@ -1825,37 +1408,11 @@ public class GameManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Manually reassign CPU profile images
-    /// </summary>
-    public void ReassignCPUProfiles()
-    {
-        SetupAvailableCPUAvatars();
-        AssignCPUProfileImages();
-    }
-    
-    /// <summary>
-    /// Gets the player's selected avatar sprite
-    /// </summary>
-    public Sprite GetPlayerAvatar()
-    {
-        return playerSelectedAvatar;
-    }
-    
-    /// <summary>
-    /// Gets the number of active CPUs
-    /// </summary>
-    public int GetNumberOfCPUs()
-    {
-        return numberOfCPUs;
-    }
-    
-    /// <summary>
-    /// Assigns random colors to outline images for player and CPUs (ensures no duplicates)
+    /// Assigns random colors to outline images for player and opponents
     /// </summary>
     private void AssignOutlineColors()
     {
-        // Initialize CPU outline colors array
-        cpuOutlineColors = new Color[cpuPlayers != null ? cpuPlayers.Length : 0];
+        // Colors will be assigned to player and opponents based on match data
         
         // Available colors from hex values
         Color[] availableColors = new Color[]
@@ -1871,8 +1428,10 @@ public class GameManager : MonoBehaviour
         // Create a list of available colors to assign (ensures uniqueness)
         List<Color> availableColorsList = new List<Color>(availableColors);
         
-        // Calculate total number of players (1 player + numberOfCPUs)
-        int totalPlayers = 1 + numberOfCPUs;
+        // Calculate total number of players from match data
+        int totalPlayers = (currentMatchData != null && currentMatchData.playerAvatars != null) 
+                          ? currentMatchData.playerAvatars.Count 
+                          : 1;
         
         // Check if we have enough colors for all players
         if (totalPlayers > availableColors.Length)
@@ -1904,37 +1463,38 @@ public class GameManager : MonoBehaviour
             Debug.LogWarning("[GameManager] Player outline image not assigned!");
         }
         
-        // Assign unique colors to CPU outlines
-        if (cpuOutlineImages != null && cpuOutlineImages.Length > 0)
+        // Assign unique colors to Opponent outlines
+        if (opponentOutlineImages != null && opponentOutlineImages.Length > 0)
         {
-            for (int i = 0; i < cpuOutlineImages.Length && i < numberOfCPUs; i++)
+            int opponentCount = 0;
+            if (currentMatchData != null && currentMatchData.playerAvatars != null)
             {
-                if (cpuOutlineImages[i] != null)
+                foreach (var pair in currentMatchData.playerAvatars)
                 {
-                    if (availableColorsList.Count > 0)
+                    if (pair.Key == PlayerModel.Id) continue; // Skip local player
+                    
+                    if (opponentCount < opponentOutlineImages.Length && opponentCount < opponentOutlineColors.Length)
                     {
-                        // Pick a random color from remaining available colors
-                        int randomIndex = Random.Range(0, availableColorsList.Count);
-                        Color selectedColor = availableColorsList[randomIndex];
-                        cpuOutlineColors[i] = selectedColor; // Store the color
-                        cpuOutlineImages[i].color = selectedColor;
-                        availableColorsList.RemoveAt(randomIndex); // Remove from available list
-                        Debug.Log($"[GameManager] Assigned unique color to CPU {i + 1} outline: {selectedColor}");
-                    }
-                    else
-                    {
-                        // Fallback: cycle through colors if we run out
-                        Color fallbackColor = availableColors[i % availableColors.Length];
-                        cpuOutlineColors[i] = fallbackColor;
-                        cpuOutlineImages[i].color = fallbackColor;
-                        Debug.LogWarning($"[GameManager] Using fallback color for CPU {i + 1}: {fallbackColor}");
+                        if (opponentOutlineImages[opponentCount] != null)
+                        {
+                            if (availableColorsList.Count > 0)
+                            {
+                                int randomIndex = Random.Range(0, availableColorsList.Count);
+                                Color selectedColor = availableColorsList[randomIndex];
+                                opponentOutlineColors[opponentCount] = selectedColor;
+                                opponentOutlineImages[opponentCount].color = selectedColor;
+                                availableColorsList.RemoveAt(randomIndex);
+                                Debug.Log($"[GameManager] Assigned color to Opponent {opponentCount + 1}: {selectedColor}");
+                            }
+                        }
+                        opponentCount++;
                     }
                 }
             }
         }
         else
         {
-            Debug.LogWarning("[GameManager] CPU outline images array is empty or not assigned!");
+            Debug.LogWarning("[GameManager] Opponent outline images array is empty or not assigned!");
         }
         
         // Update NumberGrid with the outline colors
@@ -1951,12 +1511,12 @@ public class GameManager : MonoBehaviour
             // Set player outline color
             numberGrid.SetPlayerOutlineColor(playerOutlineColor);
             
-            // Set CPU outline colors
-            if (cpuOutlineColors != null)
+            // Set opponent outline colors
+            if (opponentOutlineColors != null)
             {
-                for (int i = 0; i < cpuOutlineColors.Length && i < numberOfCPUs; i++)
+                for (int i = 0; i < opponentOutlineColors.Length; i++)
                 {
-                    numberGrid.SetCPUOutlineColor(i, cpuOutlineColors[i]);
+                    numberGrid.SetCPUOutlineColor(i, opponentOutlineColors[i]);
                 }
             }
         }
@@ -1965,17 +1525,17 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Gets the outline color for a specific player type
     /// </summary>
-    public Color GetOutlineColor(PlayerType playerType, int cpuIndex = 0)
+    public Color GetOutlineColor(PlayerType playerType, int opponentIndex = 0)
     {
         if (playerType == PlayerType.Player)
         {
             return playerOutlineColor;
         }
-        else // CPU
+        else // Opponent
         {
-            if (cpuOutlineColors != null && cpuIndex >= 0 && cpuIndex < cpuOutlineColors.Length)
+            if (opponentOutlineColors != null && opponentIndex >= 0 && opponentIndex < opponentOutlineColors.Length)
             {
-                return cpuOutlineColors[cpuIndex];
+                return opponentOutlineColors[opponentIndex];
             }
             return Color.red; // Default fallback
         }
@@ -2047,26 +1607,25 @@ public class GameManager : MonoBehaviour
             playerOutlineImage.fillAmount = fillAmount;
         }
         
-        // Update CPU outline fills from each CPU's own board
-        if (cpuOutlineImages != null)
+        // Update Opponent outline fills from each opponent's board
+        if (opponentOutlineImages != null)
         {
-            for (int i = 0; i < cpuOutlineImages.Length && i < numberOfCPUs; i++)
+            for (int i = 0; i < opponentOutlineImages.Length; i++)
             {
-                if (cpuOutlineImages[i] != null)
+                if (opponentOutlineImages[i] != null && opponentOutlineImages[i].gameObject.activeSelf)
                 {
-                    int cpuCount = 0;
-                    if (cpuNumberGrids.ContainsKey(i) && cpuNumberGrids[i] != null)
+                    int oppCount = 0;
+                    if (opponentNumberGrids.ContainsKey(i) && opponentNumberGrids[i] != null)
                     {
-                        Dictionary<string, int> cpuSelectionCounts = cpuNumberGrids[i].GetSelectionCounts();
-                        // Sum all selections from this CPU's board
-                        foreach (var kvp in cpuSelectionCounts)
+                        Dictionary<string, int> oppSelectionCounts = opponentNumberGrids[i].GetSelectionCounts();
+                        foreach (var kvp in oppSelectionCounts)
                         {
-                            cpuCount += kvp.Value;
+                            oppCount += kvp.Value;
                         }
                     }
-                    float fillAmount = cpuCount * FILL_PER_SELECTION;
-                    fillAmount = Mathf.Clamp01(fillAmount); // Clamp between 0 and 1
-                    cpuOutlineImages[i].fillAmount = fillAmount;
+                    float fillAmount = oppCount * FILL_PER_SELECTION;
+                    fillAmount = Mathf.Clamp01(fillAmount);
+                    opponentOutlineImages[i].fillAmount = fillAmount;
                 }
             }
         }
@@ -2083,14 +1642,14 @@ public class GameManager : MonoBehaviour
             playerOutlineImage.fillAmount = 0f;
         }
         
-        // Reset CPU outline fills
-        if (cpuOutlineImages != null)
+        // Reset Opponent outline fills
+        if (opponentOutlineImages != null)
         {
-            for (int i = 0; i < cpuOutlineImages.Length; i++)
+            for (int i = 0; i < opponentOutlineImages.Length; i++)
             {
-                if (cpuOutlineImages[i] != null)
+                if (opponentOutlineImages[i] != null)
                 {
-                    cpuOutlineImages[i].fillAmount = 0f;
+                    opponentOutlineImages[i].fillAmount = 0f;
                 }
             }
         }
@@ -2112,6 +1671,9 @@ public class GameManager : MonoBehaviour
         // Reset flags
         isGameActive = false;
         timerStarted = false;
+        winnerScreenShown = false;
+        isWaitingForServer = false;
+        prizesAwardedForThisMatch = false;
         gameTimer = initialGameTimer; // Reset timer back to its original value after match ends
         currentTimer = gameTimer; // Reset to default timer value
         
@@ -2122,6 +1684,15 @@ public class GameManager : MonoBehaviour
         // Reset outline fill amounts
         ResetOutlineFillAmounts();
         
+        if (calculateLoadingScreen != null) calculateLoadingScreen.SetActive(false);
+        if (quitPanel != null) quitPanel.SetActive(false);
+        
+        // Reset score UI
+        if (ScoreFeedbackUIManager.Instance != null)
+        {
+            ScoreFeedbackUIManager.Instance.ResetScore();
+        }
+
         Debug.Log("[GameManager] Game state reset");
     }
     
@@ -2153,48 +1724,38 @@ public class GameManager : MonoBehaviour
         // Reset outline fill amounts for new game
         ResetOutlineFillAmounts();
         
-        // Stop all CPUs before resetting
-        if (cpuPlayers != null)
-        {
-            foreach (CPU cpu in cpuPlayers)
-            {
-                if (cpu != null)
-                {
-                    cpu.StopAutoRolling();
-                }
-            }
-            Debug.Log("[GameManager] All CPUs stopped");
-        }
+        Debug.Log("[GameManager] Board reset for new match.");
         
         // Set new lobby configuration
         currentLobbyConfig = config;
         currentMatchData = matchData;
         
-        // Update game duration from lobby configuration
-        if (currentMatchData != null && currentMatchData.duration > 0)
+        if (matchData == null)
         {
-            this.gameTimer = currentMatchData.duration;
-            Debug.Log($"[GameManager] Overriding timer with backend duration: {this.gameTimer}s");
+            Debug.LogError("❌ [GameManager] CRITICAL ERROR: Attempted to start game WITHOUT matchData. Aborting.");
+            return;
+        }
+
+        Debug.Log($"[GameManager] ✅ Server match initialized. Room: {matchData.roomId}, Duration: {matchData.duration}s");
+
+        // Update game duration from server data
+        if (matchData.duration > 0)
+        {
+            this.gameTimer = matchData.duration;
         }
         else
         {
             this.gameTimer = config.gameTimer;
         }
+        
         this.currentTimer = this.gameTimer;
         
-        // Set number of CPUs based on lobby configuration or network override
-        int numberOfCPUs = overrideCPUs >= 0 ? overrideCPUs : config.GetNumberOfCPUs();
+        // Setup Opponents and Grids
+        SetUpOpponentsFromMatch(matchData);
+        CreateIndividualNumberGrids(matchData);
         
-        // Create individual NumberGrid instances for player and each CPU
-        CreateIndividualNumberGrids(numberOfCPUs);
+        Debug.Log($"[GameManager] Game configured from Lobby: {config.lobbyName}. Participants: {matchData.playerAvatars.Count}");
         
-        // Wait a frame to ensure NumberGrids are fully created before restarting CPUs
-        StartCoroutine(ConfigureCPUsAfterDelay(numberOfCPUs));
-        
-        Debug.Log($"[GameManager] Game configured from Lobby {config.lobbyIndex }: {config.numberOfPlayers} players ({numberOfCPUs} CPUs spawned) Name = {config.lobbyName}");
-        
-        // Handle entry fee - Removed as server handles this
-
         // Clear network caches for a fresh game session
         cachedNetworkNames.Clear();
         cachedNetworkAvatars.Clear();
@@ -2322,20 +1883,6 @@ public class GameManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Coroutine to configure CPUs after a small delay to ensure NumberGrid is ready
-    /// </summary>
-    private System.Collections.IEnumerator ConfigureCPUsAfterDelay(int numberOfCPUs)
-    {
-        // Wait a frame to ensure NumberGrid is fully regenerated
-        yield return null;
-        
-        // Now set number of CPUs (this will enable and start them)
-        SetNumberOfCPUs(numberOfCPUs);
-        
-        Debug.Log("[GameManager] CPUs configured and started after NumberGrid regeneration");
-    }
-    
-    /// <summary>
     /// Awards prizes based on current lobby configuration and player rankings
     /// </summary>
     private void AwardPrizes(List<(PlayerType playerType, int cpuIndex, int count, double time, string userId)> rankings)
@@ -2383,10 +1930,9 @@ public class GameManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Creates individual NumberGrid instances for player and each CPU
-    /// Each player/CPU gets their own independent board
+    /// Creates individual NumberGrid instances for player and each opponent
     /// </summary>
-    private void CreateIndividualNumberGrids(int numberOfCPUs)
+    private void CreateIndividualNumberGrids(StartGameData matchData)
     {
         // Clean up existing individual grids first
         DestroyIndividualNumberGrids();
@@ -2438,42 +1984,30 @@ public class GameManager : MonoBehaviour
             Debug.Log($"[GameManager] Created player's NumberGrid with owner ID: {PlayerModel.Id}");
         }
         
-        // Create CPU NumberGrids (hidden off-screen or in separate area)
-        for (int i = 0; i < numberOfCPUs; i++)
+        // Create Opponent NumberGrids
+        int opponentIdx = 0;
+        foreach (var pair in matchData.playerAvatars)
         {
-            NumberGrid cpuGrid = CreateNumberGridInstance($"CPUGrid_{i}", parentTransform);
-            if (cpuGrid != null)
+            if (pair.Key == PlayerModel.Id) continue; // Skip player
+
+            NumberGrid oppGrid = CreateNumberGridInstance($"OpponentGrid_{pair.Key}", parentTransform);
+            if (oppGrid != null)
             {
-                cpuNumberGrids[i] = cpuGrid;
-                allNumberGrids.Add(cpuGrid);
+                oppGrid.SetOwner(pair.Key);
+                opponentNumberGrids[opponentIdx] = oppGrid;
+                allNumberGrids.Add(oppGrid);
                 
-                // Subscribe to CPU grid events (game ends if any board is completed)
-                cpuGrid.OnAllBoxesSelected += OnAllBoxesSelected;
-                cpuGrid.OnBoxSelected += OnBoxSelected;
+                // Subscribe to events
+                oppGrid.OnAllBoxesSelected += OnAllBoxesSelected;
+                oppGrid.OnBoxSelected += OnBoxSelected;
                 
-                // Hide CPU grids from view (position off-screen or disable renderer)
-                // We can position them far off-screen or disable the GameObject
-                // Set CPU owner ID from MatchData if available
-                if (currentMatchData != null && currentMatchData.playerSides != null)
-                {
-                    // Find the ID that is NOT the player
-                    foreach (var pair in currentMatchData.playerSides)
-                    {
-                        if (pair.Key != PlayerModel.Id)
-                        {
-                            cpuGrid.SetOwner(pair.Key);
-                            Debug.Log($"[GameManager] Assigned CPU grid {i} to server user: {pair.Key}");
-                            break; // For 1v1, only one other player
-                        }
-                    }
-                }
-                
-                cpuGrid.gameObject.SetActive(false); // Hide CPU grids completely
-                Debug.Log($"[GameManager] Created CPU {i}'s NumberGrid (hidden)");
+                oppGrid.gameObject.SetActive(false); // Hidden from main view
+                Debug.Log($"[GameManager] Created grid for opponent: {pair.Key}");
+                opponentIdx++;
             }
         }
         
-        // Assign grids to DicesController and CPUs
+        // Assign grids to DicesController
         AssignGridsToControllers();
         
         // If we have a matrix from the backend, apply it to all grids so they match exactly
@@ -2578,7 +2112,7 @@ public class GameManager : MonoBehaviour
         }
         
         allNumberGrids.Clear();
-        cpuNumberGrids.Clear();
+        opponentNumberGrids.Clear();
         playerNumberGrid = null;
         
         Debug.Log("[GameManager] Destroyed all individual NumberGrid instances");
@@ -2649,28 +2183,6 @@ public class GameManager : MonoBehaviour
             }
         }
         
-        // Assign CPU grids to CPU scripts
-        if (cpuPlayers != null)
-        {
-            for (int i = 0; i < cpuPlayers.Length; i++)
-            {
-                if (cpuPlayers[i] != null && cpuNumberGrids.ContainsKey(i))
-                {
-                    // Use reflection to set the numberGrid field in CPU
-                    var field = typeof(CPU).GetField("numberGrid", 
-                        System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-                    if (field != null)
-                    {
-                        field.SetValue(cpuPlayers[i], cpuNumberGrids[i]);
-                        Debug.Log($"[GameManager] Assigned CPU {i}'s NumberGrid to CPU script");
-                    }
-                    else
-                    {
-                        Debug.LogWarning($"[GameManager] Could not find numberGrid field in CPU {i}!");
-                    }
-                }
-            }
-        }
     }
 
     private void SetProfileSlot(Image spriteSlot, Image customSlot, Sprite sprite, bool isCustom)
@@ -2712,7 +2224,7 @@ public class OfflinePlayerEntry {
     public string name;
     public string pfId;
     public PlayerType type;
-    public int cpuIdx;
+    public int opponentIdx;
     public float cash;
     public int chips;
     public int avatarIdx;

@@ -68,6 +68,8 @@ public class SocketManager : MonoBehaviour
         ioManager.Socket.On(SocketIOEventTypes.Disconnect, OnSocketDisconnected);
         ioManager.Socket.On<Error>(SocketIOEventTypes.Error, OnSocketError);
 
+        Debug.Log("<color=#FFA500>⬆️ [Socket EMIT] Handshake initialized. Waiting for 'connect' event...</color>");
+
         ioManager.Open();
     }
 
