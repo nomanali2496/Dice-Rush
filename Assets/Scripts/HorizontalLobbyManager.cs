@@ -129,6 +129,14 @@ public class HorizontalLobbyManager : MonoBehaviour
     
     private void OnEnable()
     {
+        // Refresh profile data from backend to ensure balance is up to date
+        if (BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
+        {
+            BackendAuthService.Instance.GetProfile((success, message) => {
+                if (success) Debug.Log("[HorizontalLobbyManager] Profile refreshed successfully on Enable.");
+            });
+        }
+
         // Ensure background music is playing if settings allow (e.g. returning from game)
         if (SettingManager.instance != null)
         {
@@ -707,6 +715,13 @@ public class HorizontalLobbyManager : MonoBehaviour
     private void HandleMatchFound(StartGameData data)
     {
         Debug.Log("[HorizontalLobbyManager] Match Found event received from middle layer!");
+        
+        // Refresh profile from backend to sync the balance deduction now that the game has started
+        if (BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
+        {
+            BackendAuthService.Instance.GetProfile(null);
+        }
+
         if (waitingPanel != null) waitingPanel.SetActive(false);
         
         if (_pendingLobbyIndex >= 0)

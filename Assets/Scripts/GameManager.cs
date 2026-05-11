@@ -185,6 +185,12 @@ public class GameManager : MonoBehaviour
 
         Debug.Log($"<color=#00FFFF>⬇️ [GameManager] Server GameOver received. Winner: {data.winnerId}, Reason: {data.reason}</color>");
         
+        // Refresh profile from backend to sync final balance and winnings
+        if (BackendAuthService.Instance != null)
+        {
+            BackendAuthService.Instance.GetProfile(null);
+        }
+        
         // Hide the "Calculating Results" screen if it was shown
         if (calculateLoadingScreen != null) calculateLoadingScreen.SetActive(false);
 
