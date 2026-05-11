@@ -120,7 +120,7 @@ public class FacebookSignInManager : MonoBehaviour
         
         Debug.Log("[FacebookSignInManager] Starting Facebook Sign-In...");
         
-        // Request permissions: public_profile and email (required for PlayFab)
+        // Request permissions: public_profile and email
         List<string> permissions = new List<string> { "public_profile", "email" };
         
         FB.LogInWithReadPermissions(permissions, OnFacebookLoginCallback);

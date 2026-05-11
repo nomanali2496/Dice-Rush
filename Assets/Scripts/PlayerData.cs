@@ -7,7 +7,7 @@ public class PlayerData
 {
     public string playerName;
     public string email;
-    public string playFabId;
+    public string userId;
     public float cash;
     public int coins;
     public string imageUrl;
@@ -18,7 +18,7 @@ public class PlayerData
     {
         playerName = "";
         email = "";
-        playFabId = "";
+        userId = "";
         cash = 0;
         coins = 0;
         imageUrl = "";
@@ -30,7 +30,7 @@ public class PlayerData
     {
         playerName = name;
         email = emailAddress;
-        playFabId = id;
+        userId = id;
         cash = initialCash;
         coins = initialCoins;
         imageUrl = "";

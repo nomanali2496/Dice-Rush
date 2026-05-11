@@ -3,7 +3,7 @@ using TMPro;
 
 /// <summary>
 /// Modular UI component that automatically updates a TextMeshPro 
-/// element whenever its target currency changes in PlayFabManager.
+/// element whenever its target currency changes.
 /// </summary>
 [RequireComponent(typeof(TextMeshProUGUI))]
 public class CurrencyDisplayUI : MonoBehaviour

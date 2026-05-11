@@ -8,14 +8,14 @@ using UnityEngine;
 [Serializable]
 public class ReferredUserData
 {
-    public string playFabId;
+    public string userId;
     public string playerName;
     public string imageUrl; // Profile image URL
     public string referredDate; // ISO 8601 format
     
     public ReferredUserData()
     {
-        playFabId = "";
+        userId = "";
         playerName = "";
         imageUrl = "";
         referredDate = "";

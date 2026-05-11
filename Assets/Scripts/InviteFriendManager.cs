@@ -69,7 +69,7 @@ public class InviteFriendManager : MonoBehaviour, IEnhancedScrollerDelegate
             return;
         }
         
-        // Load data (falling back to test data as PlayFab is removed)
+        // Load data (falling back to test data)
         StartCoroutine(LoadTestDataDelayed());
         isInitialized = true;
     }
@@ -382,7 +382,7 @@ public class InviteFriendManager : MonoBehaviour, IEnhancedScrollerDelegate
     /// <summary>
     /// Loads an image from a URL or base64 data URI and converts it to a Sprite
     /// </summary>
-    private IEnumerator LoadImageFromURL(string imageUrl, string playFabId, System.Action<Sprite> onComplete)
+    private IEnumerator LoadImageFromURL(string imageUrl, string userId, System.Action<Sprite> onComplete)
     {
         if (string.IsNullOrEmpty(imageUrl))
         {
@@ -410,14 +410,14 @@ public class InviteFriendManager : MonoBehaviour, IEnhancedScrollerDelegate
                         new Vector2(0.5f, 0.5f)
                     );
                     
-                    Debug.Log($"[InviteFriendManager] Successfully loaded base64 image for {playFabId}");
+                    Debug.Log($"[InviteFriendManager] Successfully loaded base64 image for {userId}");
                     onComplete?.Invoke(sprite);
                     yield break;
                 }
             }
             catch (System.Exception e)
             {
-                Debug.LogWarning($"[InviteFriendManager] Failed to load base64 image for {playFabId}: {e.Message}");
+                Debug.LogWarning($"[InviteFriendManager] Failed to load base64 image for {userId}: {e.Message}");
             }
         }
         
@@ -438,7 +438,7 @@ public class InviteFriendManager : MonoBehaviour, IEnhancedScrollerDelegate
                         new Vector2(0.5f, 0.5f)
                     );
                     
-                    Debug.Log($"[InviteFriendManager] Successfully loaded image from URL for {playFabId}");
+                    Debug.Log($"[InviteFriendManager] Successfully loaded image from URL for {userId}");
                     onComplete?.Invoke(sprite);
                 }
                 else
@@ -456,15 +456,15 @@ public class InviteFriendManager : MonoBehaviour, IEnhancedScrollerDelegate
     }
     
     /// <summary>
-    /// Updates the avatar for a specific friend by their PlayFab ID
+    /// Updates the avatar for a specific friend by their ID
     /// </summary>
-    private void UpdateFriendAvatar(string playFabId, Sprite newAvatar)
+    private void UpdateFriendAvatar(string userId, Sprite newAvatar)
     {
         if (_friendsData == null) return;
         
         for (int i = 0; i < _friendsData.Count; i++)
         {
-            if (_friendsData[i].friendId == playFabId)
+            if (_friendsData[i].friendId == userId)
             {
                 _friendsData[i].avatarSprite = newAvatar;
                 

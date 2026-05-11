@@ -26,7 +26,6 @@ public class DiagnosticHelper : MonoBehaviour
     {
         Debug.Log("========== DIAGNOSTIC CHECK ==========");
         
-        // Check PlayFabManager
         // Check PlayerModel
         Debug.Log($"✓ PlayerModel Info:");
         Debug.Log($"  - Id: {PlayerModel.Id}");

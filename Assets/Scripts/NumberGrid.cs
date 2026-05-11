@@ -908,7 +908,7 @@ public class NumberGrid : MonoBehaviour
         }
         else
         {
-            // Fallback for offline/Photon testing (original logic)
+            // Fallback for offline/network testing (original logic)
             PerformLocalBoxLock(boxData, PlayerType.Player);
         }
     }
@@ -1767,7 +1767,7 @@ public class NumberGrid : MonoBehaviour
         }
         else
         {
-            // Fallback for offline/Photon testing (original logic)
+            // Fallback for offline/network testing (original logic)
             Debug.Log("[NumberGrid] No active match, locking powerup locally.");
             LockPowerup(boxData, PlayerType.Player, -1);
             

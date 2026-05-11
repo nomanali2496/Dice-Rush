@@ -104,7 +104,7 @@ public class GoogleSignInManager : MonoBehaviour
             {
                 WebClientId = webClientId,
                 RequestIdToken = true,
-                RequestAuthCode = true, // Required for PlayFab (this gives us ServerAuthCode)
+                RequestAuthCode = true, // gives us ServerAuthCode
                 RequestEmail = true,
                 RequestProfile = true
             };
@@ -221,7 +221,7 @@ public class GoogleSignInManager : MonoBehaviour
                 $"[GoogleSignInManager] Google Sign-In successful! Email: {signInResult.Email}, DisplayName: {signInResult.DisplayName}";
             Debug.Log(logMessage);
             
-            // Get the auth code (this is the ServerAuthCode for PlayFab)
+            // Get the auth code (this is the ServerAuthCode)
             string authCode = signInResult.AuthCode;
             string idToken = signInResult.IdToken;
             string email = signInResult.Email ?? "";

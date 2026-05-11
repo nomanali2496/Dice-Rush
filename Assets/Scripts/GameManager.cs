@@ -122,7 +122,7 @@ public class GameManager : MonoBehaviour
         // Store initial game timer for resetting later
         initialGameTimer = gameTimer;
 
-        // PlayFab subscriptions removed as we are using custom backend
+        // Subscriptions removed as we are using custom backend
         
         // Subscribe to NumberGrid event for when all boxes are selected (legacy - will be updated when individual grids are created)
         if (numberGrid != null)
@@ -513,7 +513,7 @@ public class GameManager : MonoBehaviour
             // As soon as UpdateTimerDisplay find the network key, it will OVERWRITE this local value.
             currentTimer -= 0.5f;
             
-            // Update display (this also resyncs currentTimer from Photon if in a room)
+            // Update display (this also resyncs currentTimer from network if in a room)
             UpdateTimerDisplay();
         }
         
@@ -635,7 +635,7 @@ public class GameManager : MonoBehaviour
                 if (kvp.Value == grid) { ownerKey = kvp.Key; break; }
             }
             // If not local and not CPU, it could be a network grid? 
-            // In your current architecture, human opponents use scores from Photon properties instead of grids.
+            // In your current architecture, human opponents use scores from server properties instead of grids.
         }
 
         // 2. Record the time of this score achievement for tie-breakers
@@ -835,7 +835,7 @@ public class GameManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Called when PlayFab player data is loaded
+    /// Called when player data is loaded
     /// </summary>
     private void OnPlayerDataLoaded(PlayerData data)
     {
@@ -847,7 +847,7 @@ public class GameManager : MonoBehaviour
     }
     
     /// <summary>
-    /// Coroutine to retry loading player profile after PlayFab data loads
+    /// Coroutine to retry loading player profile after data loads
     /// </summary>
     private System.Collections.IEnumerator RetryLoadPlayerProfile()
     {
@@ -860,7 +860,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private System.Collections.IEnumerator InitializeProfilesDelayed()
     {
-        // Wait for PlayFab to initialize and MainMenuAvatarDisplay to load avatar
+        // Wait for backend to initialize and MainMenuAvatarDisplay to load avatar
         yield return new WaitForSeconds(1.5f);
         
         InitializeProfiles();
