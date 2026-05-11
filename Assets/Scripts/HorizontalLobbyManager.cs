@@ -32,9 +32,9 @@ public class HorizontalLobbyManager : MonoBehaviour
     [Header("Gameplay Object")]
     [SerializeField] private GameObject gameplayObject; // Gameplay object to open when play button is clicked
     
-    [Header("Matchmaking UI")]
-    [SerializeField] private GameObject waitingPanel; // Panel to show while finding match
-    [SerializeField] private TMPro.TextMeshProUGUI waitingStatusText; // Text to update with player count
+    [Header("UI Panels")]
+    [SerializeField] private GameObject waitingPanel;
+    [SerializeField] private TMPro.TextMeshProUGUI waitingStatusText;
     
     [Header("Lobby Game Objects Settings")]
     private int BACKGROUND_COUNT => LobbyModel.Configurations.Length; 
@@ -151,6 +151,14 @@ public class HorizontalLobbyManager : MonoBehaviour
 
         // Start retry routine to ensure buttons light up when data is ready (e.g. after returning from game)
         StartCoroutine(InitializeButtonsRoutine());
+        
+        // Subscribe to events
+        MatchmakingModel.OnMatchFound += HandleMatchFound;
+    }
+    
+    private void OnDisable()
+    {
+        MatchmakingModel.OnMatchFound -= HandleMatchFound;
     }
 
     private void OnDestroy()
@@ -724,10 +732,8 @@ public class HorizontalLobbyManager : MonoBehaviour
 
         if (waitingPanel != null) waitingPanel.SetActive(false);
         
-        if (_pendingLobbyIndex >= 0)
-        {
-            StartGameFromNetwork(_pendingLobbyIndex, data, -1);
-        }
+        // Even if _pendingLobbyIndex is -1 (meaning it's a recovered match), we still start the game
+        StartGameFromNetwork(_pendingLobbyIndex, data, -1);
     }
 
     private void HandleMatchError(string errorMessage)
@@ -761,7 +767,19 @@ public class HorizontalLobbyManager : MonoBehaviour
     {
         if (gameplayObject != null)
         {
-            LobbyConfig config = (lobbyIndex >= 0 && lobbyIndex < BACKGROUND_COUNT) ? GetLobbyConfig(lobbyIndex) : null;
+            LobbyConfig config = null;
+            if (lobbyIndex >= 0 && lobbyIndex < BACKGROUND_COUNT)
+            {
+                config = GetLobbyConfig(lobbyIndex);
+            }
+            else if (matchData != null)
+            {
+                // Reconstruct a pseudo-config for recovered matches
+                config = new LobbyConfig(-1, 2, matchData.stake, 0, 0f, 0, 0f, 0, 0f, 0);
+                config.lobbyId = "recovered_match";
+                config.mode = matchData.roomId;
+            }
+
             GameManager gameManager = FindObjectOfType<GameManager>();
             
             if (gameManager != null && config != null)

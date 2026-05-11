@@ -31,6 +31,33 @@ public class SocketManager : MonoBehaviour
         // It will be triggered by BackendAuthService after successful login.
     }
 
+    private void OnApplicationFocus(bool focus)
+    {
+        if (focus)
+        {
+            Debug.Log("[SocketManager] App focused. Checking socket state and syncing profile...");
+
+            // Fetch latest profile to sync active match state and auto-reconnect socket if needed
+            if (BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
+            {
+                BackendAuthService.Instance.GetProfile((success, message) => 
+                {
+                    if (success && !string.IsNullOrEmpty(PlayerModel.ActiveRoomId) && !string.IsNullOrEmpty(PlayerModel.ActiveMatchId))
+                    {
+                        // We do not auto-reconnect here anymore. 
+                        // PlayerModel.OnDataUpdated will fire and MatchRecoveryUIManager will show the prompt if appropriate.
+                    }
+                });
+            }
+            else if (ioManager != null && ioManager.State != BestHTTP.SocketIO3.SocketManager.States.Open)
+            {
+                Debug.Log("[SocketManager] Socket not open on focus. Reconnecting...");
+                ConnectToServer();
+            }
+        }
+    }
+
+
     public void ConnectToServer()
     {
         if (!BackendAuthService.HasStoredJWT())
@@ -76,6 +103,8 @@ public class SocketManager : MonoBehaviour
     private void OnSocketConnected(ConnectResponse resp)
     {
         Debug.Log("<color=#00FF00>🎉 ⬇️ [Socket ON] Connected successfully! The backend accepted the connection.</color>");
+        
+        // We no longer auto-emit reconnectMatch here. The MatchRecoveryUIManager handles asking the player first.
     }
 
     private void OnSocketDisconnected()
@@ -116,6 +145,40 @@ public class StartGameData
     
     public System.Collections.Generic.Dictionary<string, string> playerSides;
     public System.Collections.Generic.Dictionary<string, PlayerAvatarInfo> playerAvatars;
+    
+    // Recovery fields
+    public int timeRemaining; // Seconds left in match
+    public long gameplayStartsAt; // Unix ms timestamp when gameplay begins
+    public int countdown; // Seconds of countdown before gameplay
+    public System.Collections.Generic.Dictionary<string, PlayerGameState> gameState; // Current state of each player
+}
+
+[System.Serializable]
+public class RecoveredGameData
+{
+    public string roomId;
+    public int[] matrix;
+    public int duration;
+    public int winConditionTarget;
+    public int timeRemaining;
+    public long gameplayStartsAt;
+    public int currentSum;
+    public bool hasPendingRoll;
+    
+    public System.Collections.Generic.Dictionary<string, string> playerSides;
+    public System.Collections.Generic.Dictionary<string, string> playerAvatars;
+    public System.Collections.Generic.Dictionary<string, int[]> allLockedIndices;
+}
+
+[System.Serializable]
+public class PlayerGameState
+{
+    public int currentSum;
+    public int[] lockedIndices;
+    public int score;
+    public bool reachedWinTarget;
+    public double reachedWinTargetTime;
+    public string side;
 }
 
 [System.Serializable]

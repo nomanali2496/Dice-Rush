@@ -10,7 +10,6 @@ public static class MatchmakingModel
 {
     public static bool IsSearching { get; private set; }
     
-    // UI Events
     public static event Action<StartGameData> OnMatchFound;
     public static event Action<string> OnMatchmakingFailed;
     public static event Action<int, int> OnMatchmakingUpdated;
@@ -164,17 +163,69 @@ public static class MatchmakingModel
             try {
                 if (jsonData != null) {
                     string json = jsonData.ToJson();
-                    Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'matchRecovered' received: " + json + "</color>");
+                    Debug.Log("<color=#FF00FF>🔥 [AUTO-RECOVERY] 'matchRecovered' packet received!</color>");
+                    Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'matchRecovered' payload: " + json + "</color>");
                     
-                    StartGameData data = BestHTTP.JSON.LitJson.JsonMapper.ToObject<StartGameData>(json);
+                    RecoveredGameData recovered = BestHTTP.JSON.LitJson.JsonMapper.ToObject<RecoveredGameData>(json);
                     
-                    // Auto-join room on recovery
+                    // Map RecoveredGameData to StartGameData
+                    StartGameData data = new StartGameData();
+                    data.roomId = recovered.roomId;
+                    data.matrix = recovered.matrix;
+                    data.duration = recovered.duration;
+                    data.winConditionTarget = recovered.winConditionTarget;
+                    data.playerSides = recovered.playerSides;
+                    data.timeRemaining = recovered.timeRemaining;
+                    data.gameplayStartsAt = recovered.gameplayStartsAt;
+                    
+                    // The server payload is missing stake, so we fallback to 0 (UI will just show 0 fee)
+                    data.stake = 0f;
+                    
+                    data.playerAvatars = new System.Collections.Generic.Dictionary<string, PlayerAvatarInfo>();
+                    if (recovered.playerAvatars != null)
+                    {
+                        foreach (var kvp in recovered.playerAvatars)
+                        {
+                            bool isBot = kvp.Key.StartsWith("bot");
+                            data.playerAvatars[kvp.Key] = new PlayerAvatarInfo {
+                                name = isBot ? "Bot" : "Player", // We don't have the real name in the payload, but the avatar is there
+                                avatar = kvp.Value,
+                                isBot = isBot
+                            };
+                        }
+                    }
+                    
+                    data.gameState = new System.Collections.Generic.Dictionary<string, PlayerGameState>();
+                    if (recovered.allLockedIndices != null)
+                    {
+                        foreach (var kvp in recovered.allLockedIndices)
+                        {
+                            data.gameState[kvp.Key] = new PlayerGameState {
+                                lockedIndices = kvp.Value,
+                                score = kvp.Value.Length * 50 // Rough score based on locked boxes
+                            };
+                        }
+                    }
+                    
+                    // The user explicitly requested to rejoin, so we pull them into the room
                     SocketManager.Instance.Socket.Emit("joinRoom", new JoinRoomPayload { roomId = data.roomId });
-                    
                     OnMatchFound?.Invoke(data);
                 }
             } catch (Exception e) {
                 Debug.LogError($"[MatchmakingModel] JsonData parse failed for matchRecovered: {e.Message}");
+            }
+        });
+
+        socket.On<BestHTTP.JSON.LitJson.JsonData>("countdown", (jsonData) => {
+            try {
+                if (jsonData != null) {
+                    string json = jsonData.ToJson();
+                    Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'countdown' received: " + json + "</color>");
+                    CountdownData data = BestHTTP.JSON.LitJson.JsonMapper.ToObject<CountdownData>(json);
+                    OnCountdownEvent?.Invoke(data);
+                }
+            } catch (Exception e) {
+                Debug.LogError($"[MatchmakingModel] JsonData parse failed for countdown: {e.Message}");
             }
         });
     }
@@ -235,6 +286,7 @@ public static class MatchmakingModel
     public static event Action<IconExpiredData> OnIconExpiredEvent;
     public static event Action<PlayerMilestoneData> OnPlayerMilestoneEvent;
     public static event Action<GameOverData> OnGameOverEvent;
+    public static event Action<CountdownData> OnCountdownEvent;
     public static event Action<string> OnSocketErrorEvent;
 
     public static void RequestDiceRoll(string roomId)
@@ -285,11 +337,29 @@ public static class MatchmakingModel
         OnIconActivatedEvent?.Invoke(data);
     }
 
+    public static void ReconnectMatch(string activeMatchId, string activeRoomId)
+    {
+        if (SocketManager.Instance?.Socket == null) return;
+        
+        EnsureListenersAdded();
+
+        ReconnectMatchPayload payload = new ReconnectMatchPayload { activeMatchId = activeMatchId, activeRoomId = activeRoomId };
+        SocketManager.Instance.Socket.Emit("reconnectMatch", payload);
+        Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'reconnectMatch' for match {activeMatchId} in room {activeRoomId}</color>");
+    }
+
     private static void HandleIconExpired(IconExpiredData data)
     {
         Debug.Log($"<color=#00FFFF>⬇️ [Socket ON] 'iconExpired': index={data.index}</color>");
         OnIconExpiredEvent?.Invoke(data);
     }
+}
+
+[Serializable]
+public class ReconnectMatchPayload
+{
+    public string activeMatchId;
+    public string activeRoomId;
 }
 
 [Serializable]
@@ -369,6 +439,18 @@ public class GameOverData
 
 [Serializable]
 public class JoinRoomPayload
+{
+    public string roomId;
+}
+
+[Serializable]
+public class CountdownData
+{
+    public int count;
+}
+
+[Serializable]
+public class ForfeitMatchPayload
 {
     public string roomId;
 }

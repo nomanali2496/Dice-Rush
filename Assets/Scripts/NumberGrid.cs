@@ -2007,5 +2007,35 @@ public class NumberGrid : MonoBehaviour
     }
 
     #endregion
+
+    public string GetOwnerId() => ownerUserId;
+
+    public void RestoreLockedIndices(int[] indices, int newScore)
+    {
+        if (indices == null || boxDataList == null) return;
+
+        foreach (int index in indices)
+        {
+            if (index >= 0 && index < boxDataList.Count)
+            {
+                BoxData box = boxDataList[index];
+                if (box != null && !box.isSelected)
+                {
+                    box.isSelected = true;
+                    if (box.highlightImage != null)
+                    {
+                        box.highlightImage.gameObject.SetActive(true);
+                        // Ensure it's opaque immediately
+                        box.highlightImage.color = new Color(box.highlightImage.color.r, box.highlightImage.color.g, box.highlightImage.color.b, 1f);
+                    }
+                    if (box.selectButton != null)
+                    {
+                        box.selectButton.interactable = false;
+                    }
+                }
+            }
+        }
+        Debug.Log($"[NumberGrid] Restored {indices.Length} locked indices for {ownerUserId}");
+    }
 }
 

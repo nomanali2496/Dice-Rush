@@ -137,7 +137,8 @@ public class BackendAuthService : MonoBehaviour
                             response.user.wins, response.user.losses, response.user.balance,
                             response.user.cashBalance, response.user.bonusBalance, response.user.winningBalance,
                             response.user.coins, response.user.avatar, response.user.xp,
-                            response.user.level, response.user.role
+                            response.user.level, response.user.role, 0,
+                            response.user.activeMatchId, response.user.activeRoomId
                         );
                     }
                     if (response != null && !string.IsNullOrEmpty(response.token))
@@ -202,7 +203,8 @@ public class BackendAuthService : MonoBehaviour
                                 response.user.wins, response.user.losses, response.user.balance,
                                 response.user.cashBalance, response.user.bonusBalance, response.user.winningBalance,
                                 response.user.coins, response.user.avatar, response.user.xp,
-                                response.user.level, response.user.role
+                                response.user.level, response.user.role, 0,
+                                response.user.activeMatchId, response.user.activeRoomId
                             );
                         }
 
@@ -274,7 +276,8 @@ public class BackendAuthService : MonoBehaviour
                                 response.user.wins, response.user.losses, response.user.balance,
                                 response.user.cashBalance, response.user.bonusBalance, response.user.winningBalance,
                                 response.user.coins, response.user.avatar, response.user.xp,
-                                response.user.level, response.user.role
+                                response.user.level, response.user.role, 0,
+                                response.user.activeMatchId, response.user.activeRoomId
                             );
                         }
 
@@ -355,7 +358,8 @@ public class BackendAuthService : MonoBehaviour
                                 response.user.wins, response.user.losses, response.user.balance,
                                 response.user.cashBalance, response.user.bonusBalance, response.user.winningBalance,
                                 response.user.coins, response.user.avatar, response.user.xp,
-                                response.user.level, response.user.role
+                                response.user.level, response.user.role, 0,
+                                response.user.activeMatchId, response.user.activeRoomId
                             );
                         }
 
@@ -440,7 +444,8 @@ public class BackendAuthService : MonoBehaviour
                             response.user.wins, response.user.losses, response.user.balance,
                             response.user.cashBalance, response.user.bonusBalance, response.user.winningBalance,
                             response.user.coins, response.user.avatar, response.user.xp,
-                            response.user.level, response.user.role
+                            response.user.level, response.user.role, 0,
+                            response.user.activeMatchId, response.user.activeRoomId
                         );
                         onComplete?.Invoke(true, "Profile updated successfully!");
                     }
@@ -504,7 +509,8 @@ public class BackendAuthService : MonoBehaviour
                             response.user.wins, response.user.losses, response.user.balance,
                             response.user.cashBalance, response.user.bonusBalance, response.user.winningBalance,
                             response.user.coins, response.user.avatar, response.user.xp,
-                            response.user.level, response.user.role
+                            response.user.level, response.user.role, 0,
+                            response.user.activeMatchId, response.user.activeRoomId
                         );
                         onComplete?.Invoke(true, response.avatar);
                     }
@@ -569,7 +575,8 @@ public class BackendAuthService : MonoBehaviour
                             response.user.wins, response.user.losses, response.user.balance,
                             response.user.cashBalance, response.user.bonusBalance, response.user.winningBalance,
                             response.user.coins, response.user.avatar, response.user.xp,
-                            response.user.level, response.user.role
+                            response.user.level, response.user.role, 0,
+                            response.user.activeMatchId, response.user.activeRoomId
                         );
                         onComplete?.Invoke(true, "Currency updated successfully!");
                     }
@@ -629,7 +636,8 @@ public class BackendAuthService : MonoBehaviour
                             response.user.wins, response.user.losses, response.user.balance,
                             response.user.cashBalance, response.user.bonusBalance, response.user.winningBalance,
                             response.user.coins, response.user.avatar, response.user.xp,
-                            response.user.level, response.user.role
+                            response.user.level, response.user.role, 0,
+                            response.user.activeMatchId, response.user.activeRoomId
                         );
                         
                         if (SocketManager.Instance != null)
@@ -944,6 +952,8 @@ public class BackendAuthService : MonoBehaviour
         public int xp;
         public int level;
         public string role;
+        public string activeMatchId;
+        public string activeRoomId;
     }
 
     [Serializable]
