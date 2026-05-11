@@ -201,6 +201,7 @@ public class GameManager : MonoBehaviour
             return;
         }
 
+        winnerScreenShown = true;
         isGameActive = false;
         timerStarted = false;
         isWaitingForServer = false;
