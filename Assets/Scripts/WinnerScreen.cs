@@ -35,6 +35,7 @@ public class WinnerScreen : MonoBehaviour
     [SerializeField] private Image winnerOutlineImage;
     [SerializeField] private Image winnerFrameImage;
     [SerializeField] private TMPro.TextMeshProUGUI winnerNameText;
+    [SerializeField] private TMPro.TextMeshProUGUI winnerScoreText;
 
     [Header("2nd Place Podium UI")]
     [SerializeField] private Image secondPlaceProfileImage;
@@ -42,6 +43,7 @@ public class WinnerScreen : MonoBehaviour
     [SerializeField] private Image secondPlaceOutlineImage;
     [SerializeField] private Image secondPlaceFrameImage;
     [SerializeField] private TMPro.TextMeshProUGUI secondPlaceNameText;
+    [SerializeField] private TMPro.TextMeshProUGUI secondPlaceScoreText;
 
     [Header("3rd Place Podium UI")]
     [SerializeField] private Image thirdPlaceProfileImage;
@@ -49,6 +51,7 @@ public class WinnerScreen : MonoBehaviour
     [SerializeField] private Image thirdPlaceOutlineImage;
     [SerializeField] private Image thirdPlaceFrameImage;
     [SerializeField] private TMPro.TextMeshProUGUI thirdPlaceNameText;
+    [SerializeField] private TMPro.TextMeshProUGUI thirdPlaceScoreText;
     
     [Header("Target Position (Top Display)")]
     [SerializeField] private RectTransform targetCashPosition; // Target position for cash (top display)
@@ -722,9 +725,9 @@ public class WinnerScreen : MonoBehaviour
     /// </summary>
     public void ResetUI()
     {
-        HidePlace(winnerProfileImage, winnerOutlineImage, winnerFrameImage, winnerNameText, firstPlacePrizeIcon, firstPlacePrizeText);
-        HidePlace(secondPlaceProfileImage, secondPlaceOutlineImage, secondPlaceFrameImage, secondPlaceNameText, secondPlacePrizeIcon, secondPlacePrizeText);
-        HidePlace(thirdPlaceProfileImage, thirdPlaceOutlineImage, thirdPlaceFrameImage, thirdPlaceNameText, thirdPlacePrizeIcon, thirdPlacePrizeText);
+        HidePlace(winnerProfileImage, winnerOutlineImage, winnerFrameImage, winnerNameText, winnerScoreText, firstPlacePrizeIcon, firstPlacePrizeText);
+        HidePlace(secondPlaceProfileImage, secondPlaceOutlineImage, secondPlaceFrameImage, secondPlaceNameText, secondPlaceScoreText, secondPlacePrizeIcon, secondPlacePrizeText);
+        HidePlace(thirdPlaceProfileImage, thirdPlaceOutlineImage, thirdPlaceFrameImage, thirdPlaceNameText, thirdPlaceScoreText, thirdPlacePrizeIcon, thirdPlacePrizeText);
         
         if (winnerProfileImageCustom != null) winnerProfileImageCustom.gameObject.SetActive(false);
         if (secondPlaceProfileImageCustom != null) secondPlaceProfileImageCustom.gameObject.SetActive(false);
@@ -774,16 +777,17 @@ public class WinnerScreen : MonoBehaviour
             Image pOut = (place == 1) ? winnerOutlineImage : (place == 2) ? secondPlaceOutlineImage : thirdPlaceOutlineImage;
             Image pFrm = (place == 1) ? winnerFrameImage : (place == 2) ? secondPlaceFrameImage : thirdPlaceFrameImage;
             TMPro.TextMeshProUGUI pName = (place == 1) ? winnerNameText : (place == 2) ? secondPlaceNameText : thirdPlaceNameText;
+            TMPro.TextMeshProUGUI pScore = (place == 1) ? winnerScoreText : (place == 2) ? secondPlaceScoreText : thirdPlaceScoreText;
             Image pIcon = (place == 1) ? firstPlacePrizeIcon : (place == 2) ? secondPlacePrizeIcon : thirdPlacePrizeIcon;
             TMPro.TextMeshProUGUI pText = (place == 1) ? firstPlacePrizeText : (place == 2) ? secondPlacePrizeText : thirdPlacePrizeText;
 
-            DisplayPlace(place, r.playerType, r.opponentIndex, r.count, pImg, pImgC, pOut, pFrm, pName, pIcon, pText, cash, chips, displayName, avatarIdx, customImg);
+            DisplayPlace(place, r.playerType, r.opponentIndex, r.count, pImg, pImgC, pOut, pFrm, pName, pScore, pIcon, pText, cash, chips, displayName, avatarIdx, customImg);
         }
     }
 
     private void DisplayPlace(int placeNumber, PlayerType playerType, int opponentIndex, int score,
                             Image profileImage, Image profileImageCustom, Image outlineImage, Image frameImage, 
-                            TMPro.TextMeshProUGUI nameText, Image prizeIcon, TMPro.TextMeshProUGUI prizeText, 
+                            TMPro.TextMeshProUGUI nameText, TMPro.TextMeshProUGUI scoreText, Image prizeIcon, TMPro.TextMeshProUGUI prizeText, 
                             float cashPrize, int chipsPrize, string overrideName, int overrideAvatarIdx, string overrideCustomImg)
     {
         // Activate basics
@@ -791,6 +795,7 @@ public class WinnerScreen : MonoBehaviour
         if (outlineImage != null) outlineImage.gameObject.SetActive(true);
         if (frameImage != null) frameImage.gameObject.SetActive(true);
         if (nameText != null) nameText.gameObject.SetActive(true);
+        if (scoreText != null) scoreText.gameObject.SetActive(true);
 
         // Set profile image
         if (profileImage != null || profileImageCustom != null)
@@ -847,6 +852,9 @@ public class WinnerScreen : MonoBehaviour
         // Name
         if (nameText != null) nameText.text = overrideName;
 
+        // Score
+        if (scoreText != null) scoreText.text = score.ToString();
+
         // Prizes (Logic from GameManager fix)
         bool isCashMatch = true;
         if (gameManager != null && gameManager.GetCurrentLobbyConfig() != null) isCashMatch = gameManager.GetCurrentLobbyConfig().entryFeeCash > 0;
@@ -863,12 +871,13 @@ public class WinnerScreen : MonoBehaviour
         }
     }
 
-    private void HidePlace(Image profileImage, Image outlineImage, Image frameImage, TMPro.TextMeshProUGUI nameText, Image prizeIcon, TMPro.TextMeshProUGUI prizeText)
+    private void HidePlace(Image profileImage, Image outlineImage, Image frameImage, TMPro.TextMeshProUGUI nameText, TMPro.TextMeshProUGUI scoreText, Image prizeIcon, TMPro.TextMeshProUGUI prizeText)
     {
         if (profileImage != null) profileImage.gameObject.SetActive(false);
         if (outlineImage != null) outlineImage.gameObject.SetActive(false);
         if (frameImage != null) frameImage.gameObject.SetActive(false);
         if (nameText != null) nameText.gameObject.SetActive(false);
+        if (scoreText != null) scoreText.gameObject.SetActive(false);
         if (prizeIcon != null) prizeIcon.gameObject.SetActive(false);
         if (prizeText != null) prizeText.gameObject.SetActive(false);
     }
