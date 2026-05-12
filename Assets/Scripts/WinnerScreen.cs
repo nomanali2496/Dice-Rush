@@ -97,7 +97,7 @@ public class WinnerScreen : MonoBehaviour
     /// Called by GameManager to trigger animation with rankings
     /// This is the preferred method as it uses the exact same rankings as GameManager
     /// </summary>
-    public void PlayAnimationIfPlayerInTop3(List<(PlayerType playerType, int cpuIndex, int count)> rankings, LobbyConfig config)
+    public void PlayAnimationIfPlayerInTop3(List<(PlayerType playerType, int opponentIndex, int count, double time, string userId)> rankings, LobbyConfig config)
     {
         // Ensure references are valid (important if called immediately after SetActive(true))
         if (gameManager == null) gameManager = FindObjectOfType<GameManager>();
@@ -123,9 +123,9 @@ public class WinnerScreen : MonoBehaviour
         // Check top 3 positions
         for (int i = 0; i < rankings.Count && i < 3; i++)
         {
-            // IMPORTANT: Only trigger animation if the player at this rank is the LOCAL player (cpuIndex == -1)
-            // In multiplayer, other human players also have PlayerType.Player but different cpuIndices
-            if (rankings[i].playerType == PlayerType.Player && rankings[i].cpuIndex == -1)
+            // IMPORTANT: Only trigger animation if the player at this rank is the LOCAL player (opponentIndex == -1)
+            // In multiplayer, other human players also have PlayerType.Player but different opponentIndices
+            if (rankings[i].playerType == PlayerType.Player && rankings[i].opponentIndex == -1)
             {
                 playerInTop3 = true;
                 playerPlace = i + 1; // 1, 2, or 3

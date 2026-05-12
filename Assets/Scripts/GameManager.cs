@@ -289,6 +289,12 @@ public class GameManager : MonoBehaviour
         {
             winnerScreen.SetActive(true);
             winnerScreenShown = true;
+            
+            // NEW: Trigger the prize animation for the local player if they won something
+            if (winnerScreenScript != null)
+            {
+                winnerScreenScript.PlayAnimationIfPlayerInTop3(rankings, currentLobbyConfig);
+            }
         }
     }
 
