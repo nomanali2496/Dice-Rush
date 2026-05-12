@@ -112,6 +112,16 @@ public class SocketManager : MonoBehaviour
         Debug.LogWarning("⚠️ <color=#FFA500>⬇️ [Socket ON] Disconnected from server.</color>");
     }
 
+    public void Disconnect()
+    {
+        if (ioManager != null)
+        {
+            ioManager.Close();
+            ioManager = null;
+            Debug.Log("<color=#FFA500>⬇️ [SocketManager] Disconnected and cleared.</color>");
+        }
+    }
+
     private void OnSocketError(Error err)
     {
         Debug.LogError("❌ <color=#FF0000>⬇️ [Socket ERROR] " + (err != null ? err.message : "Unknown Error") + "</color>");

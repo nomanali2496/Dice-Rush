@@ -99,6 +99,55 @@ public class BackendAuthService : MonoBehaviour
     {
         PlayerPrefs.DeleteKey(JWT_PREF_KEY);
         PlayerPrefs.Save();
+        PlayerModel.UpdateData(null, null, null, 0, 0, 0, 0, 0, 0, 0, null, 0, 0, null, 0, null, null);
+    }
+
+    /// <summary>
+    /// Sends a Logout request to the custom Node.js server.
+    /// Clears active match state server-side and local JWT.
+    /// </summary>
+    public void Logout(Action<bool, string> onComplete = null)
+    {
+        if (!HasStoredJWT())
+        {
+            onComplete?.Invoke(false, "No stored JWT found.");
+            return;
+        }
+        Debug.Log("<color=#00ffff>[BackendAuthService] POST Request: /api/auth/logout</color>");
+        StartCoroutine(LogoutCoroutine(onComplete));
+    }
+
+    private IEnumerator LogoutCoroutine(Action<bool, string> onComplete)
+    {
+        string url = baseUrl.TrimEnd('/') + "/api/auth/logout";
+        string token = GetStoredJWT();
+
+        using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+        {
+            request.SetRequestHeader("Authorization", "Bearer " + token);
+            request.downloadHandler = new DownloadHandlerBuffer();
+
+            yield return request.SendWebRequest();
+
+            // Always clear local data even if the request fails (to allow logout in offline mode)
+            ClearJWT();
+            
+            if (SocketManager.Instance != null)
+            {
+                SocketManager.Instance.Disconnect();
+            }
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Logout Result: {request.downloadHandler.text}</color>");
+                onComplete?.Invoke(true, "Logout successful!");
+            }
+            else
+            {
+                Debug.LogWarning($"<color=#ff0000>[BackendAuthService] Logout Server Error: {request.error}. Local state cleared anyway.</color>");
+                onComplete?.Invoke(false, request.error);
+            }
+        }
     }
 
     /// <summary>
@@ -626,6 +675,7 @@ public class BackendAuthService : MonoBehaviour
 
             if (request.result == UnityWebRequest.Result.Success)
             {
+                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Profile Result: {request.downloadHandler.text}</color>");
                 try
                 {
                     AuthResponse response = JsonUtility.FromJson<AuthResponse>(request.downloadHandler.text);

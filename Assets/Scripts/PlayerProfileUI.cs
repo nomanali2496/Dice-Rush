@@ -165,11 +165,25 @@ public class PlayerProfileUI : MonoBehaviour
 
     private void OnLogoutClicked()
     {
-        BackendAuthService.ClearJWT();
+        // 1. Show splash/loading immediately
         if (splashScreenPanel != null) splashScreenPanel.SetActive(true);
         if (settingsPanel != null) settingsPanel.SetActive(false);
         if (mainMenuPanel != null) mainMenuPanel.SetActive(false);
-        Invoke(nameof(ShowLoginScreen), 0.5f);
+
+        // 2. Call the backend to clear session
+        if (BackendAuthService.Instance != null)
+        {
+            BackendAuthService.Instance.Logout((success, message) => {
+                // Local cleanup is handled inside the Logout service method
+                ShowLoginScreen();
+            });
+        }
+        else
+        {
+            // Fallback if service is missing
+            BackendAuthService.ClearJWT();
+            ShowLoginScreen();
+        }
     }
 
     private void ShowLoginScreen()

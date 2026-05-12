@@ -210,8 +210,14 @@ public class GameManager : MonoBehaviour
         timerStarted = false;
         isWaitingForServer = false;
 
-        // Clear recovery persistence
-        // Handled by backend profile state now
+        // Clear recovery persistence locally so the lobby doesn't prompt for rejoin
+        PlayerModel.UpdateData(
+            PlayerModel.Id, PlayerModel.Name, PlayerModel.Email,
+            PlayerModel.Wins, PlayerModel.Losses, PlayerModel.Balance,
+            PlayerModel.CashBalance, PlayerModel.BonusBalance, PlayerModel.WinningBalance,
+            PlayerModel.Coins, PlayerModel.Avatar, PlayerModel.Xp, PlayerModel.Level, PlayerModel.Role,
+            PlayerModel.SelectedAvatarIndex, null, null
+        );
 
         // Stop local timer coroutine
         if (timerCoroutine != null)

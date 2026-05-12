@@ -26,6 +26,9 @@ public class MatchRecoveryUIManager : MonoBehaviour
         
         // Listen for match found to hide loading panel
         MatchmakingModel.OnMatchFound += HandleMatchFound;
+
+        // Listen for game over to prevent immediate re-prompting
+        MatchmakingModel.OnGameOverEvent += HandleGameOver;
         
         // Start monitoring for Main Menu activation
         StartCoroutine(MonitorMainMenuActivation());
@@ -38,6 +41,14 @@ public class MatchRecoveryUIManager : MonoBehaviour
         if (btnCancelMatch != null) btnCancelMatch.onClick.RemoveListener(OnCancelRecoveryClicked);
         PlayerModel.OnDataUpdated -= CheckForActiveMatch;
         MatchmakingModel.OnMatchFound -= HandleMatchFound;
+        MatchmakingModel.OnGameOverEvent -= HandleGameOver;
+    }
+
+    private void HandleGameOver(GameOverData data)
+    {
+        // When a game ends, we are definitely NOT in a recoverable state anymore.
+        // Lock recovery checks for this session instance.
+        hasCheckedForRecovery = true; 
     }
 
     private void HandleMatchFound(StartGameData data)
