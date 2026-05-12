@@ -33,26 +33,33 @@ public class SocketManager : MonoBehaviour
 
     private void OnApplicationFocus(bool focus)
     {
-        if (focus)
-        {
-            Debug.Log("[SocketManager] App focused. Checking socket state and syncing profile...");
+        Debug.Log($"<color=#AFEEEE>[SocketManager] OnApplicationFocus: {focus}</color>");
+        if (focus) HandleAppResume();
+    }
 
-            // Fetch latest profile to sync active match state and auto-reconnect socket if needed
-            if (BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
+    private void OnApplicationPause(bool pause)
+    {
+        Debug.Log($"<color=#AFEEEE>[SocketManager] OnApplicationPause: {pause}</color>");
+        if (pause)
+        {
+            Debug.Log("<color=#FF6347>⚠️ [SocketManager] App backgrounded. Triggering disconnect...</color>");
+            Disconnect();
+        }
+        else
+        {
+            HandleAppResume();
+        }
+    }
+
+    private void HandleAppResume()
+    {
+        if (BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
+        {
+            if (ioManager == null || ioManager.State != BestHTTP.SocketIO3.SocketManager.States.Open)
             {
-                BackendAuthService.Instance.GetProfile((success, message) => 
-                {
-                    if (success && !string.IsNullOrEmpty(PlayerModel.ActiveRoomId) && !string.IsNullOrEmpty(PlayerModel.ActiveMatchId))
-                    {
-                        // We do not auto-reconnect here anymore. 
-                        // PlayerModel.OnDataUpdated will fire and MatchRecoveryUIManager will show the prompt if appropriate.
-                    }
-                });
-            }
-            else if (ioManager != null && ioManager.State != BestHTTP.SocketIO3.SocketManager.States.Open)
-            {
-                Debug.Log("[SocketManager] Socket not open on focus. Reconnecting...");
+                Debug.Log("<color=#98FB98>⬆️ [SocketManager] App resumed. Triggering reconnection...</color>");
                 ConnectToServer();
+                BackendAuthService.Instance.GetProfile((s, m) => { });
             }
         }
     }
@@ -60,15 +67,17 @@ public class SocketManager : MonoBehaviour
 
     public void ConnectToServer()
     {
+        Debug.Log("<color=#98FB98>🔄 [SocketManager] Starting ConnectToServer flow...</color>");
+
         if (!BackendAuthService.HasStoredJWT())
         {
-            Debug.LogWarning("[SocketManager] Cannot connect to Socket: No JWT token found.");
+            Debug.LogError("[SocketManager] Cannot connect: No JWT token found in storage.");
             return;
         }
 
         if (ioManager != null && ioManager.State == BestHTTP.SocketIO3.SocketManager.States.Open)
         {
-            Debug.Log("<color=#00FF00>✅ [SocketManager] Socket is already connected.</color>");
+            Debug.Log("<color=#00FF00>✅ [SocketManager] Socket already connected. Skipping handshake.</color>");
             return;
         }
 
@@ -116,9 +125,14 @@ public class SocketManager : MonoBehaviour
     {
         if (ioManager != null)
         {
+            Debug.Log("<color=#FFA500>⬇️ [SocketManager] Closing Socket.IO connection and clearing manager...</color>");
             ioManager.Close();
             ioManager = null;
-            Debug.Log("<color=#FFA500>⬇️ [SocketManager] Disconnected and cleared.</color>");
+            Debug.Log("<color=#00FFFF>✅ [SocketManager] Socket successfully DISCONNECTED.</color>");
+        }
+        else
+        {
+            Debug.Log("[SocketManager] Disconnect called but ioManager was already null.");
         }
     }
 
