@@ -403,12 +403,23 @@ public class GameManager : MonoBehaviour
         lastAwardedCash = 0f;
         lastAwardedChips = 0;
         prizesAwardedForThisMatch = false;
-        localMatchScore = 0; 
         
-        // Reset score UI
-        if (ScoreFeedbackUIManager.Instance != null)
+        // Reset score UI ONLY if this is a fresh game (not a recovery)
+        if (currentMatchData == null || currentMatchData.timeRemaining <= 0)
         {
-            ScoreFeedbackUIManager.Instance.ResetScore();
+            localMatchScore = 0; 
+            if (ScoreFeedbackUIManager.Instance != null)
+            {
+                ScoreFeedbackUIManager.Instance.ResetScore();
+            }
+        }
+        else
+        {
+            // For recovery, ensure the UI is showing the current recovered score
+            if (ScoreFeedbackUIManager.Instance != null)
+            {
+                ScoreFeedbackUIManager.Instance.SetScore(localMatchScore);
+            }
         }
         
         if (currentMatchData != null && currentMatchData.timeRemaining > 0)
@@ -1408,6 +1419,22 @@ public class GameManager : MonoBehaviour
         // Setup Opponents and Grids
         SetUpOpponentsFromMatch(matchData);
         CreateIndividualNumberGrids(matchData);
+        
+        // Handle Match Recovery Score sync
+        if (matchData.gameState != null && matchData.gameState.ContainsKey(PlayerModel.Id))
+        {
+            localMatchScore = matchData.gameState[PlayerModel.Id].score;
+            if (ScoreFeedbackUIManager.Instance != null)
+            {
+                ScoreFeedbackUIManager.Instance.SetScore(localMatchScore);
+            }
+            Debug.Log($"[GameManager] Match recovered. Syncing local score to: {localMatchScore}");
+        }
+        else
+        {
+            localMatchScore = 0;
+            if (ScoreFeedbackUIManager.Instance != null) ScoreFeedbackUIManager.Instance.ResetScore();
+        }
         
         Debug.Log($"[GameManager] Game configured from Lobby: {config.lobbyName}. Participants: {matchData.playerAvatars.Count}");
         

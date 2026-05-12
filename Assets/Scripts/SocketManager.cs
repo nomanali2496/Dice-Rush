@@ -177,22 +177,7 @@ public class StartGameData
     public System.Collections.Generic.Dictionary<string, PlayerGameState> gameState; // Current state of each player
 }
 
-[System.Serializable]
-public class RecoveredGameData
-{
-    public string roomId;
-    public int[] matrix;
-    public int duration;
-    public int winConditionTarget;
-    public int timeRemaining;
-    public long gameplayStartsAt;
-    public int currentSum;
-    public bool hasPendingRoll;
-    
-    public System.Collections.Generic.Dictionary<string, string> playerSides;
-    public System.Collections.Generic.Dictionary<string, string> playerAvatars;
-    public System.Collections.Generic.Dictionary<string, int[]> allLockedIndices;
-}
+// RecoveredGameData removed. Use StartGameData instead as it matches the server payload.
 
 [System.Serializable]
 public class PlayerGameState

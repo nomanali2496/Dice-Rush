@@ -188,6 +188,25 @@ public class ScoreFeedbackUIManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Force-sets the current score and updates the UI instantly.
+    /// Used for match recovery or initial state synchronization.
+    /// </summary>
+    public void SetScore(int newScore)
+    {
+        currentDisplayScore = newScore;
+        if (targetScoreDisplay != null)
+        {
+            targetScoreDisplay.text = newScore.ToString();
+            targetScoreDisplay.color = originalTargetColor;
+            
+            // Re-sync visual in case we were in the middle of an animation
+            targetScoreDisplay.DOKill();
+            targetScoreDisplay.transform.DOKill();
+            targetScoreDisplay.transform.localScale = Vector3.one;
+        }
+    }
+
     private void UpdateTargetScore(int scoreChange)
     {
         if (targetScoreDisplay != null)

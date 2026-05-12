@@ -166,46 +166,8 @@ public static class MatchmakingModel
                     Debug.Log("<color=#FF00FF>🔥 [AUTO-RECOVERY] 'matchRecovered' packet received!</color>");
                     Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'matchRecovered' payload: " + json + "</color>");
                     
-                    RecoveredGameData recovered = BestHTTP.JSON.LitJson.JsonMapper.ToObject<RecoveredGameData>(json);
-                    
-                    // Map RecoveredGameData to StartGameData
-                    StartGameData data = new StartGameData();
-                    data.roomId = recovered.roomId;
-                    data.matrix = recovered.matrix;
-                    data.duration = recovered.duration;
-                    data.winConditionTarget = recovered.winConditionTarget;
-                    data.playerSides = recovered.playerSides;
-                    data.timeRemaining = recovered.timeRemaining;
-                    data.gameplayStartsAt = recovered.gameplayStartsAt;
-                    
-                    // The server payload is missing stake, so we fallback to 0 (UI will just show 0 fee)
-                    data.stake = 0f;
-                    
-                    data.playerAvatars = new System.Collections.Generic.Dictionary<string, PlayerAvatarInfo>();
-                    if (recovered.playerAvatars != null)
-                    {
-                        foreach (var kvp in recovered.playerAvatars)
-                        {
-                            bool isBot = kvp.Key.StartsWith("bot");
-                            data.playerAvatars[kvp.Key] = new PlayerAvatarInfo {
-                                name = isBot ? "Bot" : "Player", // We don't have the real name in the payload, but the avatar is there
-                                avatar = kvp.Value,
-                                isBot = isBot
-                            };
-                        }
-                    }
-                    
-                    data.gameState = new System.Collections.Generic.Dictionary<string, PlayerGameState>();
-                    if (recovered.allLockedIndices != null)
-                    {
-                        foreach (var kvp in recovered.allLockedIndices)
-                        {
-                            data.gameState[kvp.Key] = new PlayerGameState {
-                                lockedIndices = kvp.Value,
-                                score = kvp.Value.Length * 50 // Rough score based on locked boxes
-                            };
-                        }
-                    }
+                    // Directly parse into StartGameData as the payload now matches the structure perfectly
+                    StartGameData data = BestHTTP.JSON.LitJson.JsonMapper.ToObject<StartGameData>(json);
                     
                     // The user explicitly requested to rejoin, so we pull them into the room
                     SocketManager.Instance.Socket.Emit("joinRoom", new JoinRoomPayload { roomId = data.roomId });
