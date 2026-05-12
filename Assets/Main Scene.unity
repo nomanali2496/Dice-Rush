@@ -11632,6 +11632,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MatchRecoveryUIManager
   recoveryPromptPanel: {fileID: 96568295}
+  mainMenuScreen: {fileID: 407583426}
+  loadingPanel: {fileID: 416799079}
   btnRejoinMatch: {fileID: 963732441}
   btnCancelMatch: {fileID: 1484931467}
 --- !u!4 &350092423
