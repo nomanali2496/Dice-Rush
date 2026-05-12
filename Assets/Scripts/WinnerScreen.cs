@@ -758,17 +758,12 @@ public class WinnerScreen : MonoBehaviour
 
             // Name and Avatar
             string displayName = (r.playerType == PlayerType.Player) ? "YOU" : "Opponent";
-            int avatarIdx = -1;
-            string customImg = "";
+            string avatarKey = "0";
 
             if (serverData != null && serverData.players != null && serverData.players.TryGetValue(r.userId, out PlayerAvatarInfo info))
             {
                 if (r.playerType != PlayerType.Player) displayName = info.name;
-                if (!string.IsNullOrEmpty(info.avatar))
-                {
-                    if (int.TryParse(info.avatar, out int idx)) avatarIdx = idx;
-                    else if (info.avatar.Length > 50) customImg = info.avatar;
-                }
+                avatarKey = info.avatar;
             }
 
             // UI Slots
@@ -781,14 +776,14 @@ public class WinnerScreen : MonoBehaviour
             Image pIcon = (place == 1) ? firstPlacePrizeIcon : (place == 2) ? secondPlacePrizeIcon : thirdPlacePrizeIcon;
             TMPro.TextMeshProUGUI pText = (place == 1) ? firstPlacePrizeText : (place == 2) ? secondPlacePrizeText : thirdPlacePrizeText;
 
-            DisplayPlace(place, r.playerType, r.opponentIndex, r.count, pImg, pImgC, pOut, pFrm, pName, pScore, pIcon, pText, cash, chips, displayName, avatarIdx, customImg);
+            DisplayPlace(place, r.playerType, r.opponentIndex, r.count, pImg, pImgC, pOut, pFrm, pName, pScore, pIcon, pText, cash, chips, displayName, avatarKey);
         }
     }
 
     private void DisplayPlace(int placeNumber, PlayerType playerType, int opponentIndex, int score,
                             Image profileImage, Image profileImageCustom, Image outlineImage, Image frameImage, 
                             TMPro.TextMeshProUGUI nameText, TMPro.TextMeshProUGUI scoreText, Image prizeIcon, TMPro.TextMeshProUGUI prizeText, 
-                            float cashPrize, int chipsPrize, string overrideName, int overrideAvatarIdx, string overrideCustomImg)
+                            float cashPrize, int chipsPrize, string overrideName, string avatarKey)
     {
         // Activate basics
         if (profileImage != null) profileImage.gameObject.SetActive(true);
@@ -800,46 +795,7 @@ public class WinnerScreen : MonoBehaviour
         // Set profile image
         if (profileImage != null || profileImageCustom != null)
         {
-            if (playerType == PlayerType.Player && opponentIndex == -1) // Local Player
-            {
-                bool customProfileMatched = false;
-                if (!string.IsNullOrEmpty(overrideCustomImg))
-                {
-                    try
-                    {
-                        byte[] bytes = System.Convert.FromBase64String(overrideCustomImg);
-                        Texture2D tex = new Texture2D(2, 2);
-                        if (tex.LoadImage(bytes))
-                        {
-                            Sprite customSprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
-                            SetProfileSlot(profileImage, profileImageCustom, customSprite, true);
-                            customProfileMatched = true;
-                        }
-                    }
-                    catch { }
-                }
-
-                if (!customProfileMatched && gameManager != null)
-                {
-                    // Strictly use server-provided avatar index (e.g., "7")
-                    if (overrideAvatarIdx >= 0)
-                    {
-                        SetProfileSlot(profileImage, profileImageCustom, gameManager.GetAvatarSprite(overrideAvatarIdx.ToString()), false);
-                    }
-                    else
-                    {
-                        // Default fallback if server sent no data
-                        SetProfileSlot(profileImage, profileImageCustom, gameManager.GetAvatarSprite("0"), false);
-                    }
-                }
-            }
-            else // Opponent or other players
-            {
-                if (gameManager != null)
-                {
-                    SetProfileSlot(profileImage, profileImageCustom, gameManager.GetAvatarSprite(overrideAvatarIdx.ToString()), false);
-                }
-            }
+            SetProfileSlot(profileImage, profileImageCustom, avatarKey);
         }
 
         // Outline color
@@ -882,19 +838,33 @@ public class WinnerScreen : MonoBehaviour
         if (prizeText != null) prizeText.gameObject.SetActive(false);
     }
 
-    private void SetProfileSlot(Image spriteSlot, Image customSlot, Sprite sprite, bool isCustom)
+    private void SetProfileSlot(Image spriteSlot, Image customSlot, string avatarKey)
     {
         if (spriteSlot != null) spriteSlot.gameObject.SetActive(false);
         if (customSlot != null) customSlot.gameObject.SetActive(false);
-        if (sprite == null) return;
+        if (string.IsNullOrEmpty(avatarKey)) return;
 
-        if (isCustom)
+        // Use GameManager helper to handle both URLs and presets
+        if (gameManager != null)
         {
-            if (customSlot != null) { customSlot.sprite = sprite; customSlot.rectTransform.localScale = Vector3.one * 2f; customSlot.gameObject.SetActive(true); }
-        }
-        else
-        {
-            if (spriteSlot != null) { spriteSlot.sprite = sprite; spriteSlot.rectTransform.localScale = Vector3.one; spriteSlot.gameObject.SetActive(true); }
+            if (avatarKey.StartsWith("http"))
+            {
+                // Custom URLs always go into the custom/circular slot
+                if (customSlot != null)
+                {
+                    customSlot.gameObject.SetActive(true);
+                    gameManager.AssignAvatarAsync(customSlot, avatarKey);
+                }
+            }
+            else
+            {
+                // Presets go into the standard slot
+                if (spriteSlot != null)
+                {
+                    spriteSlot.gameObject.SetActive(true);
+                    gameManager.AssignAvatarAsync(spriteSlot, avatarKey);
+                }
+            }
         }
     }
 }

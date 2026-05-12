@@ -934,11 +934,23 @@ public class GameManager : MonoBehaviour
             Debug.LogWarning("[GameManager] Player profile image not assigned!");
             return;
         }
+
+        // 1. Check if the backend has a custom avatar URL (v2.3 contract)
+        if (!string.IsNullOrEmpty(PlayerModel.Avatar) && PlayerModel.Avatar.StartsWith("http"))
+        {
+            if (playerProfileImageCustom != null)
+            {
+                playerProfileImageCustom.gameObject.SetActive(true);
+                AssignAvatarAsync(playerProfileImageCustom, PlayerModel.Avatar);
+            }
+            if (playerProfileImage != null) playerProfileImage.gameObject.SetActive(false);
+            Debug.Log("[GameManager] Player profile image loaded from Backend URL");
+            return;
+        }
         
-        // Try to get avatar from MainMenuAvatarDisplay
+        // 2. Fallback to MainMenuAvatarDisplay (Local Gallery/Presets)
         if (mainMenuAvatarDisplay != null)
         {
-            // Use the public method to get the current avatar sprite
             Sprite avatarSprite = mainMenuAvatarDisplay.GetCurrentAvatarSprite();
             bool isCustom = mainMenuAvatarDisplay.IsShowingCustomAvatar();
 
@@ -955,7 +967,6 @@ public class GameManager : MonoBehaviour
                         playerProfileImageCustom.gameObject.SetActive(true);
                     }
                     if (playerProfileImage != null) playerProfileImage.gameObject.SetActive(false);
-                    Debug.Log("[GameManager] Player profile image loaded from MainMenuAvatarDisplay (Custom/Zoomed)");
                 }
                 else
                 {
@@ -966,31 +977,24 @@ public class GameManager : MonoBehaviour
                         playerProfileImage.gameObject.SetActive(true);
                     }
                     if (playerProfileImageCustom != null) playerProfileImageCustom.gameObject.SetActive(false);
-                    Debug.Log("[GameManager] Player profile image loaded from MainMenuAvatarDisplay (Standard)");
                 }
                 return;
             }
         }
         
-        // Try to get from AvatarSelector
+        // 3. Fallback to AvatarSelector
         AvatarSelector avatarSelector = FindObjectOfType<AvatarSelector>();
         if (avatarSelector != null)
         {
-            // Try to get current selected avatar
-            // Get selected avatar index from PlayerModel
             int selectedIndex = PlayerModel.SelectedAvatarIndex;
-            
             Sprite avatarSprite = avatarSelector.GetAvatarSpriteByIndex(selectedIndex);
             if (avatarSprite != null)
             {
                 playerSelectedAvatar = avatarSprite;
                 if (playerProfileImage != null) playerProfileImage.sprite = playerSelectedAvatar;
-                Debug.Log($"[GameManager] Player profile image loaded from AvatarSelector (index: {selectedIndex})");
                 return;
             }
         }
-        
-        Debug.LogWarning("[GameManager] Could not load player profile image from main menu. Using default or assigned sprite.");
     }
     
     
@@ -1014,11 +1018,15 @@ public class GameManager : MonoBehaviour
                 PlayerAvatarInfo info = pair.Value;
                 
                 // Show the profile image
-                if (opponentProfileImages[opponentCount] != null)
+                if (opponentCount < opponentProfileImages.Length)
                 {
                     opponentProfileImages[opponentCount].gameObject.SetActive(true);
-                    // Use a helper to load the avatar (assuming index or name mapping exists)
-                    opponentProfileImages[opponentCount].sprite = GetAvatarSprite(info.avatar);
+                    AssignAvatarAsync(opponentProfileImages[opponentCount], info.avatar);
+                    
+                    if (opponentOutlineImages[opponentCount] != null)
+                    {
+                        opponentOutlineImages[opponentCount].gameObject.SetActive(true);
+                    }
                 }
                 
                 opponentCount++;
@@ -1035,13 +1043,55 @@ public class GameManager : MonoBehaviour
 
     public Sprite GetAvatarSprite(string avatarKey)
     {
-        // Try to parse index if it's a number, or use a default
+        // If it's a URL, we can't return a sprite immediately (use AssignAvatarAsync instead)
+        if (string.IsNullOrEmpty(avatarKey) || avatarKey.StartsWith("http"))
+        {
+            return (availableProfileSprites != null && availableProfileSprites.Length > 0) ? availableProfileSprites[0] : null;
+        }
+
+        // Try to parse index if it's a number
         if (int.TryParse(avatarKey, out int index) && availableProfileSprites != null && index >= 0 && index < availableProfileSprites.Length)
             return availableProfileSprites[index];
         
-        // Fallback to random or boy/girl default
+        // Fallback to presets by name (if applicable)
+        if (avatarKey == "avatarBoy" && availableProfileSprites.Length > 0) return availableProfileSprites[0];
+        if (avatarKey == "avatarGirl" && availableProfileSprites.Length > 1) return availableProfileSprites[1];
+
+        // Fallback to first sprite
         return (availableProfileSprites != null && availableProfileSprites.Length > 0) ? availableProfileSprites[0] : null;
     }
+
+    /// <summary>
+    /// Assigns an avatar to an Image component. Handles both local presets and remote URLs (v2.3 contract).
+    /// </summary>
+    public void AssignAvatarAsync(Image target, string avatarKey, bool zoomIfLocalCustom = false)
+    {
+        if (target == null) return;
+
+        if (!string.IsNullOrEmpty(avatarKey) && avatarKey.StartsWith("http"))
+        {
+            // Remote URL - Download via BackendAuthService
+            if (BackendAuthService.Instance != null)
+            {
+                BackendAuthService.Instance.GetImage(avatarKey, (tex) => {
+                    if (tex != null && target != null)
+                    {
+                        Sprite s = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+                        target.sprite = s;
+                        // Remote custom avatars are already 512x512 circular, so we don't need the 2x zoom
+                        target.rectTransform.localScale = Vector3.one; 
+                    }
+                });
+            }
+        }
+        else
+        {
+            // Local preset
+            target.sprite = GetAvatarSprite(avatarKey);
+            target.rectTransform.localScale = zoomIfLocalCustom ? Vector3.one * 2f : Vector3.one;
+        }
+    }
+
     
     /// <summary>
     /// Manually refresh player profile image
