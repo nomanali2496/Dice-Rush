@@ -189,6 +189,9 @@ public class GameManager : MonoBehaviour
 
         Debug.Log($"<color=#00FFFF>⬇️ [GameManager] Server GameOver received. Winner: {data.winnerId}, Reason: {data.reason}</color>");
         
+        // Notify listeners (like SettingManager) that gameplay music should stop
+        OnGameEnded?.Invoke();
+        
         // Refresh profile from backend to sync final balance and winnings
         if (BackendAuthService.Instance != null)
         {
@@ -278,23 +281,20 @@ public class GameManager : MonoBehaviour
             calculateLoadingScreen.SetActive(false);
         }
 
-        // Setup the new WinnerScreen logic
-        if (winnerScreenScript != null)
-        {
-            winnerScreenScript.SetupWinnerResults(rankings, data);
-        }
-
-        // Show the panel
+        // Show the panel first so Awake/Start runs
         if (winnerScreen != null)
         {
             winnerScreen.SetActive(true);
             winnerScreenShown = true;
-            
+        }
+
+        // Setup the new WinnerScreen logic
+        if (winnerScreenScript != null)
+        {
+            winnerScreenScript.SetupWinnerResults(rankings, data);
+
             // NEW: Trigger the prize animation for the local player if they won something
-            if (winnerScreenScript != null)
-            {
-                winnerScreenScript.PlayAnimationIfPlayerInTop3(rankings, currentLobbyConfig);
-            }
+            winnerScreenScript.PlayAnimationIfPlayerInTop3(rankings, currentLobbyConfig);
         }
     }
 
@@ -633,6 +633,9 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("[GameManager] Winner lobby button clicked.");
         
+        // Safety: Ensure gameplay music is stopped
+        OnGameEnded?.Invoke();
+
         // Return to lobby by disabling gameplay screen
         if (gameplayScreen != null)
         {
@@ -829,6 +832,9 @@ public class GameManager : MonoBehaviour
         }
         
         Debug.Log("[GameManager] Player quit! Returning to lobby...");
+        
+        // Notify listeners (like SettingManager) that gameplay music should stop
+        OnGameEnded?.Invoke();
 
         // Notify server about forfeit if in a room
         if (currentMatchData != null && !string.IsNullOrEmpty(currentMatchData.roomId))
@@ -1078,8 +1084,7 @@ public class GameManager : MonoBehaviour
                     {
                         Sprite s = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
                         target.sprite = s;
-                        // Remote custom avatars are already 512x512 circular, so we don't need the 2x zoom
-                        target.rectTransform.localScale = Vector3.one; 
+                        // Scale override removed to respect Editor settings
                     }
                 });
             }
@@ -1088,7 +1093,7 @@ public class GameManager : MonoBehaviour
         {
             // Local preset
             target.sprite = GetAvatarSprite(avatarKey);
-            target.rectTransform.localScale = zoomIfLocalCustom ? Vector3.one * 2f : Vector3.one;
+            // Scale override removed to respect Editor settings
         }
     }
 

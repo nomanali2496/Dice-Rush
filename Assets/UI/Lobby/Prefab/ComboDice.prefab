@@ -74,6 +74,18 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 426950b52b447334087a3a93d9d974ab, type: 3}
   - lobbyId: lucky-rollers
     sprite: {fileID: 21300000, guid: 007fa645c889ab247be4b13c44743f09, type: 3}
+  - lobbyId: the-yatch-club
+    sprite: {fileID: 21300000, guid: 5dfa3529cfbaec34aa3cc0bb7e900516, type: 3}
+  - lobbyId: mega-rush
+    sprite: {fileID: 21300000, guid: 5c87fde5146317648be2567ad90db9f9, type: 3}
+  - lobbyId: roll-on-the-beach
+    sprite: {fileID: 21300000, guid: 665f009c80cbb1d4db44755c616e13d7, type: 3}
+  - lobbyId: treasure-roll
+    sprite: {fileID: 21300000, guid: 71de092f54cfa254faaa2626650f0f94, type: 3}
+  - lobbyId: token-mania
+    sprite: {fileID: 21300000, guid: 874790312afe6f7408330eed790e0d2e, type: 3}
+  - lobbyId: triple-chance
+    sprite: {fileID: 21300000, guid: db6253f65d5ccca4dae0ee4c4c10f8ba, type: 3}
 --- !u!1 &4896836788611776765
 GameObject:
   m_ObjectHideFlags: 0

@@ -81,7 +81,7 @@ public class WinnerScreen : MonoBehaviour
     private float currentAnimatedCash = 0f;
     private int currentAnimatedChips = 0;
     
-    private void Start()
+    private void Awake()
     {
         gameManager = FindObjectOfType<GameManager>();
         playerProfileUI = FindObjectOfType<PlayerProfileUI>();
@@ -845,6 +845,8 @@ public class WinnerScreen : MonoBehaviour
         if (string.IsNullOrEmpty(avatarKey)) return;
 
         // Use GameManager helper to handle both URLs and presets
+        if (gameManager == null) gameManager = FindObjectOfType<GameManager>();
+        
         if (gameManager != null)
         {
             if (avatarKey.StartsWith("http"))

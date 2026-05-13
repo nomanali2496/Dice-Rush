@@ -111,7 +111,7 @@ public class PlayerProfileUI : MonoBehaviour
         if (profileImageSprite != null)
         {
             profileImageSprite.sprite = sprite;
-            profileImageSprite.rectTransform.localScale = Vector3.one;
+            // Scale override removed to respect Editor settings
             profileImageSprite.gameObject.SetActive(true);
         }
         if (profileImageCustom != null) profileImageCustom.gameObject.SetActive(false);
@@ -128,7 +128,7 @@ public class PlayerProfileUI : MonoBehaviour
         if (profileImageCustom != null)
         {
             profileImageCustom.sprite = sprite;
-            profileImageCustom.rectTransform.localScale = Vector3.one * 2f;
+            // Scale override removed to respect Editor settings
             profileImageCustom.gameObject.SetActive(true);
             if (profileImageSprite != null) profileImageSprite.gameObject.SetActive(false);
         }
