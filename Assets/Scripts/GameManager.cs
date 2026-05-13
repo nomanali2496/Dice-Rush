@@ -849,7 +849,7 @@ public class GameManager : MonoBehaviour
             if (SocketManager.Instance != null && SocketManager.Instance.Socket != null)
             {
                 Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'forfeitMatch' for Room: {currentMatchData.roomId}</color>");
-                SocketManager.Instance.Socket.Emit("forfeitMatch", new ForfeitPayload { roomId = currentMatchData.roomId });
+                SocketManager.Instance.Socket.Emit("forfeitMatch", new ForfeitMatchPayload { roomId = currentMatchData.roomId });
             }
         }
 
@@ -1878,10 +1878,4 @@ public class OfflinePlayerEntry {
     public int chips;
     public int avatarIdx;
     public string customImg;
-}
-
-[System.Serializable]
-public class ForfeitPayload
-{
-    public string roomId;
 }

@@ -130,7 +130,10 @@ public class MatchRecoveryUIManager : MonoBehaviour
         
         if (SocketManager.Instance?.Socket != null)
         {
-            Debug.Log($"[MatchRecoveryUI] Player canceled recovery. Emitting forfeitMatch.");
+            // Ensure we are listening for the 'gameOver' response from the server
+            MatchmakingModel.EnsureListenersAdded();
+
+            Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'forfeitMatch' for Room: {PlayerModel.ActiveRoomId}</color>");
             SocketManager.Instance.Socket.Emit("forfeitMatch", new ForfeitMatchPayload { roomId = PlayerModel.ActiveRoomId });
         }
         
