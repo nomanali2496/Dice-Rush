@@ -6,6 +6,10 @@ public class ScoreFeedbackUIManager : MonoBehaviour
 {
     public static ScoreFeedbackUIManager Instance;
 
+    [Header("Reference Scaling")]
+    [SerializeField] private Vector2 referenceScreenSize = new Vector2(1440f, 3216f);
+    [SerializeField] private bool scaleWithGameplayReference = true;
+
     [Header("Sprites Configuration")]
     [SerializeField] private Sprite goodSprite;    // For +100
     [SerializeField] private Sprite greatSprite;   // For +200
@@ -36,6 +40,7 @@ public class ScoreFeedbackUIManager : MonoBehaviour
 
     private int currentDisplayScore = 0;
     private TMPro.TextMeshProUGUI targetScoreDisplay;
+    private RectTransform gameplayRoot;
 
     private void Awake()
     {
@@ -51,6 +56,12 @@ public class ScoreFeedbackUIManager : MonoBehaviour
 
     private void Start()
     {
+        GamePlayReferenceScaler referenceScaler = GetComponentInParent<GamePlayReferenceScaler>();
+        if (referenceScaler != null)
+        {
+            gameplayRoot = referenceScaler.GetComponent<RectTransform>();
+        }
+
         if (pointsTarget != null)
         {
             targetScoreDisplay = pointsTarget.GetComponent<TMPro.TextMeshProUGUI>();
@@ -101,6 +112,8 @@ public class ScoreFeedbackUIManager : MonoBehaviour
         GameObject feedback = Instantiate(feedbackPrefab, transform);
         feedback.transform.localPosition = Vector3.zero; // Center relative to this Canvas manager
 
+        float referenceScale = GetReferenceScale();
+
         // Reset scale first
         feedback.transform.localScale = Vector3.zero;
 
@@ -115,13 +128,18 @@ public class ScoreFeedbackUIManager : MonoBehaviour
         {
             feedbackImage.sprite = spriteToUse;
             feedbackImage.SetNativeSize();
+            RectTransform feedbackRect = feedback.GetComponent<RectTransform>();
+            if (feedbackRect != null)
+            {
+                feedbackRect.sizeDelta *= referenceScale;
+            }
             
             // Initial animation: Scale up with pop
             feedback.transform.DOScale(Vector3.one * scaleMultiplier, 0.4f).SetEase(Ease.OutBack);
 
             // Floating animation: Move up and fade out from CENTER
             Vector3 startPos = feedback.transform.position;
-            feedback.transform.DOMoveY(startPos.y + floatingDistance, spriteShowDuration).SetEase(Ease.OutQuad);
+            feedback.transform.DOMoveY(startPos.y + floatingDistance * referenceScale, spriteShowDuration).SetEase(Ease.OutQuad);
             feedbackImage.DOFade(0f, spriteShowDuration * 0.4f).SetDelay(spriteShowDuration * 0.6f);
 
             // Clean up
@@ -144,6 +162,7 @@ public class ScoreFeedbackUIManager : MonoBehaviour
     {
         GameObject textObj = Instantiate(pointsTextPrefab, transform);
         textObj.transform.position = startPosition;
+        float referenceScale = GetReferenceScale();
 
         // Find all TextMeshProUGUI components (Main + Shadow/Outline)
         TMPro.TextMeshProUGUI[] texts = textObj.GetComponentsInChildren<TMPro.TextMeshProUGUI>();
@@ -160,7 +179,7 @@ public class ScoreFeedbackUIManager : MonoBehaviour
             
             // Initial pop
             textObj.transform.localScale = Vector3.zero;
-            textObj.transform.DOScale(Vector3.one, 0.3f).SetEase(Ease.OutBack);
+            textObj.transform.DOScale(Vector3.one * referenceScale, 0.3f).SetEase(Ease.OutBack);
 
             // Move to target AND Zoom out (Scale down)
             textObj.transform.DOMove(pointsTarget.position, flyToTargetDuration)
@@ -176,7 +195,7 @@ public class ScoreFeedbackUIManager : MonoBehaviour
                 });
             
             // Zoom out animation: Scale towards endScale instead of zero
-            textObj.transform.DOScale(Vector3.one * endScale, flyToTargetDuration)
+            textObj.transform.DOScale(Vector3.one * endScale * referenceScale, flyToTargetDuration)
                 .SetDelay(secondaryDelay)
                 .SetEase(Ease.InBack);
             
@@ -244,5 +263,21 @@ public class ScoreFeedbackUIManager : MonoBehaviour
             targetScoreDisplay.text = ""; // Empty space instead of "0"
             targetScoreDisplay.color = originalTargetColor;
         }
+    }
+
+    private float GetReferenceScale()
+    {
+        if (!scaleWithGameplayReference || referenceScreenSize.x <= 0f || referenceScreenSize.y <= 0f)
+        {
+            return 1f;
+        }
+
+        RectTransform scaleRoot = gameplayRoot != null ? gameplayRoot : transform.root as RectTransform;
+        if (scaleRoot == null || scaleRoot.rect.width <= 0f || scaleRoot.rect.height <= 0f)
+        {
+            return 1f;
+        }
+
+        return Mathf.Min(scaleRoot.rect.width / referenceScreenSize.x, scaleRoot.rect.height / referenceScreenSize.y);
     }
 }

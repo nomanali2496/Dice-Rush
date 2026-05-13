@@ -464,9 +464,10 @@ public class GameManager : MonoBehaviour
                 countdownTextShadow.transform.localScale = Vector3.zero;
                 countdownTextShadow.alpha = 0f;
                 
-                countdownText.transform.DOScale(Vector3.one * 1.5f, 0.3f).SetEase(DG.Tweening.Ease.OutBack);
+                float countdownScale = 1.5f * GetGameplayReferenceScale(countdownText.transform);
+                countdownText.transform.DOScale(Vector3.one * countdownScale, 0.3f).SetEase(DG.Tweening.Ease.OutBack);
                 countdownText.DOFade(1f, 0.3f);
-                countdownTextShadow.transform.DOScale(Vector3.one * 1.5f, 0.3f).SetEase(DG.Tweening.Ease.OutBack);
+                countdownTextShadow.transform.DOScale(Vector3.one * countdownScale, 0.3f).SetEase(DG.Tweening.Ease.OutBack);
                 countdownTextShadow.DOFade(1f, 0.3f);
             }
             
@@ -509,6 +510,12 @@ public class GameManager : MonoBehaviour
         if (timerCoroutine != null) StopCoroutine(timerCoroutine);
         timerCoroutine = StartCoroutine(TimerCountdown());
         Debug.Log($"[GameManager] Server countdown complete! Game timer started: {gameTimer} seconds");
+    }
+
+    private float GetGameplayReferenceScale(Transform source)
+    {
+        GamePlayReferenceScaler scaler = source != null ? source.GetComponentInParent<GamePlayReferenceScaler>() : null;
+        return scaler != null ? scaler.CurrentScale : 1f;
     }
     
     /// <summary>
