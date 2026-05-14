@@ -11,6 +11,18 @@ using DG.Tweening;
 /// </summary>
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+            return;
+        }
+        Instance = this;
+    }
+
     [Header("Player Profile")]
     [SerializeField] private Image playerProfileImage; // Player's profile image display
     [SerializeField] private Image playerProfileImageCustom; // Player's profile image (custom/zoomed)
@@ -75,6 +87,8 @@ public class GameManager : MonoBehaviour
     private bool prizesAwardedForThisMatch = false; // Prevents infinite loop/duplicate prizes
     private bool winnerScreenShown = false; // Track if we've already displayed the results
     private bool isWaitingForServer = false; // Track if we are waiting for server gameOver
+    private bool localPlayerForfeited = false; // Prevents winner UI after this user forfeits
+    private Coroutine winnerScreenDelayCoroutine;
     private int localMatchScore = 0; // The persistent running score for the local player match
     
     public (float cash, int chips) GetLastAwardedPrize() => (lastAwardedCash, lastAwardedChips);
@@ -178,6 +192,14 @@ public class GameManager : MonoBehaviour
     private void HandleServerGameOver(GameOverData data)
     {
         if (data == null) return;
+
+        bool localForfeitPending = MatchmakingModel.ConsumeLocalForfeitPending();
+        if (localPlayerForfeited || localForfeitPending)
+        {
+            Debug.Log("[GameManager] Local player forfeited. Consuming server gameOver without showing winner screen.");
+            CompleteForfeitCleanup();
+            return;
+        }
         
         // If the player manually quit, ignore the server gameOver.
         // BUT if the local timer just expired and we are waiting for the server, process it!
@@ -188,7 +210,7 @@ public class GameManager : MonoBehaviour
         }
 
         Debug.Log($"<color=#00FFFF>⬇️ [GameManager] Server GameOver received. Winner: {data.winnerId}, Reason: {data.reason}</color>");
-        
+
         // Notify listeners (like SettingManager) that gameplay music should stop
         OnGameEnded?.Invoke();
         
@@ -264,7 +286,33 @@ public class GameManager : MonoBehaviour
         }
 
         // Show the winner screen after a short delay
-        StartCoroutine(ShowWinnerScreenWithDelay(rankings, data));
+        winnerScreenDelayCoroutine = StartCoroutine(ShowWinnerScreenWithDelay(rankings, data));
+    }
+
+    private void CompleteForfeitCleanup()
+    {
+        OnGameEnded?.Invoke();
+
+        if (winnerScreenDelayCoroutine != null)
+        {
+            StopCoroutine(winnerScreenDelayCoroutine);
+            winnerScreenDelayCoroutine = null;
+        }
+
+        if (calculateLoadingScreen != null) calculateLoadingScreen.SetActive(false);
+        if (winnerScreen != null) winnerScreen.SetActive(false);
+        if (gameplayScreen != null) gameplayScreen.SetActive(false);
+
+        PlayerModel.UpdateData(
+            PlayerModel.Id, PlayerModel.Name, PlayerModel.Email,
+            PlayerModel.Wins, PlayerModel.Losses, PlayerModel.Balance,
+            PlayerModel.CashBalance, PlayerModel.BonusBalance, PlayerModel.WinningBalance,
+            PlayerModel.Coins, PlayerModel.Avatar, PlayerModel.Xp, PlayerModel.Level, PlayerModel.Role,
+            PlayerModel.SelectedAvatarIndex, null, null
+        );
+
+        ResetGameState();
+        localPlayerForfeited = false;
     }
 
     /// <summary>
@@ -274,6 +322,12 @@ public class GameManager : MonoBehaviour
     {
         // Wait for 2.5 seconds to "calculate" results
         yield return new WaitForSeconds(2.5f);
+
+        if (localPlayerForfeited)
+        {
+            winnerScreenDelayCoroutine = null;
+            yield break;
+        }
 
         // Hide loading screen
         if (calculateLoadingScreen != null)
@@ -296,6 +350,8 @@ public class GameManager : MonoBehaviour
             // NEW: Trigger the prize animation for the local player if they won something
             winnerScreenScript.PlayAnimationIfPlayerInTop3(rankings, currentLobbyConfig);
         }
+
+        winnerScreenDelayCoroutine = null;
     }
 
     private void HandleServerNumberLocked(NumberLockedData data)
@@ -839,6 +895,7 @@ public class GameManager : MonoBehaviour
         }
         
         Debug.Log("[GameManager] Player quit! Returning to lobby...");
+        localPlayerForfeited = true;
         
         // Notify listeners (like SettingManager) that gameplay music should stop
         OnGameEnded?.Invoke();
@@ -846,11 +903,13 @@ public class GameManager : MonoBehaviour
         // Notify server about forfeit if in a room
         if (currentMatchData != null && !string.IsNullOrEmpty(currentMatchData.roomId))
         {
-            if (SocketManager.Instance != null && SocketManager.Instance.Socket != null)
-            {
-                Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'forfeitMatch' for Room: {currentMatchData.roomId}</color>");
-                SocketManager.Instance.Socket.Emit("forfeitMatch", new ForfeitMatchPayload { roomId = currentMatchData.roomId });
-            }
+            MatchmakingModel.ForfeitMatch(currentMatchData.roomId);
+        }
+
+        if (winnerScreenDelayCoroutine != null)
+        {
+            StopCoroutine(winnerScreenDelayCoroutine);
+            winnerScreenDelayCoroutine = null;
         }
 
         // Hide gameplay screen and quit panel
@@ -864,6 +923,9 @@ public class GameManager : MonoBehaviour
         {
             quitPanel.SetActive(false);
         }
+
+        if (calculateLoadingScreen != null) calculateLoadingScreen.SetActive(false);
+        if (winnerScreen != null) winnerScreen.SetActive(false);
         
         ResetGameState();
     }
@@ -1413,6 +1475,8 @@ public class GameManager : MonoBehaviour
     public void ConfigureGameFromLobby(LobbyConfig config, int overrideCPUs = -1, StartGameData matchData = null)
     {
         Debug.Log($"[GameManager] Configuring game for lobby: {config.lobbyId}, matchData provided: {matchData != null}");
+        localPlayerForfeited = false;
+        MatchmakingModel.ClearLocalForfeitPending();
         
         // If we are recovering a match from the prompt, the gameplayScreen is already hidden. We must ensure it's shown.
         if (gameplayScreen != null && !gameplayScreen.activeSelf)

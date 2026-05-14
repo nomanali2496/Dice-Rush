@@ -130,11 +130,7 @@ public class MatchRecoveryUIManager : MonoBehaviour
         
         if (SocketManager.Instance?.Socket != null)
         {
-            // Ensure we are listening for the 'gameOver' response from the server
-            MatchmakingModel.EnsureListenersAdded();
-
-            Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'forfeitMatch' for Room: {PlayerModel.ActiveRoomId}</color>");
-            SocketManager.Instance.Socket.Emit("forfeitMatch", new ForfeitMatchPayload { roomId = PlayerModel.ActiveRoomId });
+            MatchmakingModel.ForfeitMatch(PlayerModel.ActiveRoomId, true);
         }
         
         // Clear local active match IDs so it stops prompting

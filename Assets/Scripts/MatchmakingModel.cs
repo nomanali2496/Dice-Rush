@@ -18,6 +18,7 @@ public static class MatchmakingModel
     private static int lastStake;
     private static string lastLobbyId;
     private static BestHTTP.SocketIO3.Socket lastSocket;
+    private static bool localForfeitPending;
 
     public static void FindMatch(string mode, int stake, string lobbyId)
     {
@@ -308,6 +309,36 @@ public static class MatchmakingModel
         ReconnectMatchPayload payload = new ReconnectMatchPayload { activeMatchId = activeMatchId, activeRoomId = activeRoomId };
         SocketManager.Instance.Socket.Emit("reconnectMatch", payload);
         Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'reconnectMatch' for match {activeMatchId} in room {activeRoomId}</color>");
+    }
+
+    public static void ForfeitMatch(string roomId, bool joinRoomFirst = false)
+    {
+        if (SocketManager.Instance?.Socket == null || string.IsNullOrEmpty(roomId)) return;
+
+        EnsureListenersAdded();
+        localForfeitPending = true;
+
+        if (joinRoomFirst)
+        {
+            SocketManager.Instance.Socket.Emit("joinRoom", new JoinRoomPayload { roomId = roomId });
+            Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'joinRoom' before forfeit for room {roomId}</color>");
+        }
+
+        Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'forfeitMatch' for Room: {roomId}</color>");
+        SocketManager.Instance.Socket.Emit("forfeitMatch", new ForfeitMatchPayload { roomId = roomId });
+    }
+
+    public static bool ConsumeLocalForfeitPending()
+    {
+        if (!localForfeitPending) return false;
+
+        localForfeitPending = false;
+        return true;
+    }
+
+    public static void ClearLocalForfeitPending()
+    {
+        localForfeitPending = false;
     }
 
     private static void HandleIconExpired(IconExpiredData data)

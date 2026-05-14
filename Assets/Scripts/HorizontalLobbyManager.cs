@@ -74,7 +74,6 @@ public class HorizontalLobbyManager : MonoBehaviour
     private void Start()
     {
         LobbyModel.OnConfigurationsUpdated += HandleLobbyDataUpdated;
-        MatchmakingModel.OnMatchFound += HandleMatchFound;
         MatchmakingModel.OnMatchmakingFailed += HandleMatchError;
         MatchmakingModel.OnMatchmakingUpdated += HandleMatchmakingUpdated;
         
@@ -129,13 +128,8 @@ public class HorizontalLobbyManager : MonoBehaviour
     
     private void OnEnable()
     {
-        // Refresh profile data from backend to ensure balance is up to date
-        if (BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
-        {
-            BackendAuthService.Instance.GetProfile((success, message) => {
-                if (success) Debug.Log("[HorizontalLobbyManager] Profile refreshed successfully on Enable.");
-            });
-        }
+        // Refresh lobby rows when GameObject becomes active
+        if (_lobbyObjectsData != null && _lobbyObjectsData.Length > 0)
 
         // Ensure background music is playing if settings allow (e.g. returning from game)
         if (SettingManager.instance != null)
@@ -724,8 +718,12 @@ public class HorizontalLobbyManager : MonoBehaviour
     {
         Debug.Log("[HorizontalLobbyManager] Match Found event received from middle layer!");
         
-        // Refresh profile from backend to sync the balance deduction now that the game has started
-        if (BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
+        // Only refresh profile for NEW matches to sync balance deduction.
+        // Skip it for recovered matches (resume) to keep the flow silent as requested.
+        GameManager gm = GameManager.Instance;
+        bool isAlreadyInGame = gm != null && gm.IsGameplayScreenActive;
+
+        if (!isAlreadyInGame && BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
         {
             BackendAuthService.Instance.GetProfile(null);
         }

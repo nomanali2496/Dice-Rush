@@ -59,7 +59,31 @@ public class SocketManager : MonoBehaviour
             {
                 Debug.Log("<color=#98FB98>⬆️ [SocketManager] App resumed. Triggering reconnection...</color>");
                 ConnectToServer();
-                BackendAuthService.Instance.GetProfile((s, m) => { });
+            }
+            else
+            {
+                // Already connected, just ensure match sync if in-game
+                CheckAndTriggerMatchSync();
+            }
+        }
+    }
+
+    /// <summary>
+    /// Checks if the player is currently in a match and triggers the sync if so.
+    /// Used for seamless resume without showing the recovery panel.
+    /// </summary>
+    private void CheckAndTriggerMatchSync()
+    {
+        if (GameManager.Instance != null && GameManager.Instance.IsGameplayScreenActive)
+        {
+            if (!string.IsNullOrEmpty(PlayerModel.ActiveMatchId) && !string.IsNullOrEmpty(PlayerModel.ActiveRoomId))
+            {
+                Debug.Log("<color=#FFA500>🔄 [SocketManager] Auto-triggering match sync on resume...</color>");
+                MatchmakingModel.ReconnectMatch(PlayerModel.ActiveMatchId, PlayerModel.ActiveRoomId);
+            }
+            else
+            {
+                Debug.LogWarning("[SocketManager] Resume: Gameplay active but no ActiveMatchId found in PlayerModel!");
             }
         }
     }
@@ -113,7 +137,8 @@ public class SocketManager : MonoBehaviour
     {
         Debug.Log("<color=#00FF00>🎉 ⬇️ [Socket ON] Connected successfully! The backend accepted the connection.</color>");
         
-        // We no longer auto-emit reconnectMatch here. The MatchRecoveryUIManager handles asking the player first.
+        // Seamlessly sync match data if the player resumed directly into the gameplay screen
+        CheckAndTriggerMatchSync();
     }
 
     private void OnSocketDisconnected()

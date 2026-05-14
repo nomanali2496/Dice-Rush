@@ -316,29 +316,16 @@ public class NumberGrid : MonoBehaviour
             return;
         }
 
-        // Create a shuffled list of available powerup sprite indices to ensure uniqueness
-        List<int> availablePowerupIndices = new List<int>();
-        for (int p = 0; p < powerupSprites.Length; p++) availablePowerupIndices.Add(p);
-        ShuffleList(availablePowerupIndices);
         int powerupAssignmentCount = 0;
-
         for (int i = 0; i < matrix.Length; i++)
         {
             int number = matrix[i];
             if (number <= 0)
             {
-                // Use the next unique powerup sprite from our shuffled list
-                int spriteIdx = 0;
-                if (powerupAssignmentCount < availablePowerupIndices.Count)
-                {
-                    spriteIdx = availablePowerupIndices[powerupAssignmentCount];
-                    powerupAssignmentCount++;
-                }
-                else
-                {
-                    // Fallback if there are more than 3 powerups (shouldn't happen)
-                    spriteIdx = UnityEngine.Random.Range(0, powerupSprites.Length);
-                }
+                // Assign sprites sequentially based on the order they appear in the matrix
+                // This ensures that the same cell always gets the same sprite during recovery.
+                int spriteIdx = powerupAssignmentCount % powerupSprites.Length;
+                powerupAssignmentCount++;
                 
                 CreatePowerupBox(spriteIdx, i);
             }
