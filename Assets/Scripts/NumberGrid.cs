@@ -1967,24 +1967,27 @@ public class NumberGrid : MonoBehaviour
     /// </summary>
     private IEnumerator ServerPowerupUIUpdate(BoxData boxData, float duration)
     {
-        float elapsed = 0f;
-        while (elapsed < duration)
+        System.DateTime startTime = System.DateTime.UtcNow;
+        System.DateTime endTime = startTime.AddSeconds(duration);
+        
+        while (System.DateTime.UtcNow < endTime)
         {
             // If the powerup is locked (by this player or another), stop updating
             if (boxData.isSelected) yield break;
             
-            elapsed += Time.deltaTime;
+            float remainingSeconds = (float)(endTime - System.DateTime.UtcNow).TotalSeconds;
+            float elapsed = duration - remainingSeconds;
             
-            // Update slider (0 to 1)
+            // Update slider (0 to 1) - now tracks real-world time even after pause/resume
             if (powerupTimerSlider != null)
             {
-                powerupTimerSlider.value = elapsed / duration;
+                powerupTimerSlider.value = Mathf.Clamp01(elapsed / duration);
             }
             
             // Update text (seconds remaining)
             if (powerupTimerText != null)
             {
-                powerupTimerText.text = Mathf.CeilToInt(duration - elapsed).ToString();
+                powerupTimerText.text = Mathf.CeilToInt(remainingSeconds).ToString();
             }
             
             yield return null;
