@@ -172,6 +172,8 @@ public static class MatchmakingModel
                     
                     // The user explicitly requested to rejoin, so we pull them into the room
                     SocketManager.Instance.Socket.Emit("joinRoom", new JoinRoomPayload { roomId = data.roomId });
+                    
+                    IsSearching = false; // Ensure search state is cleared on recovery
                     OnMatchFound?.Invoke(data);
                 }
             } catch (Exception e) {
@@ -238,6 +240,19 @@ public static class MatchmakingModel
         {
             Debug.Log($"<color=#00FFFF>⬇️ [Socket ON] 'matchmakingUpdate' Queue: {data.current}/{data.target}</color>");
             OnMatchmakingUpdated?.Invoke(data.current, data.target);
+        }
+    }
+
+    /// <summary>
+    /// Re-triggers the matchmaking search if the app was resumed during a pending search.
+    /// Since the socket disconnected, the server cleared the old search.
+    /// </summary>
+    public static void ReTriggerSearchAfterReconnect()
+    {
+        if (IsSearching && !string.IsNullOrEmpty(lastMode))
+        {
+            Debug.Log("<color=#FFA500>🔄 [MatchmakingModel] App resumed during search. Re-triggering 'findMatch'...</color>");
+            FindMatch(lastMode, lastStake, lastLobbyId);
         }
     }
 

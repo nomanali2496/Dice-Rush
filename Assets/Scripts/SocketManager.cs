@@ -86,6 +86,12 @@ public class SocketManager : MonoBehaviour
                 Debug.LogWarning("[SocketManager] Resume: Gameplay active but no ActiveMatchId found in PlayerModel!");
             }
         }
+        else if (MatchmakingModel.IsSearching)
+        {
+            // If we were searching but not in a game yet, re-trigger the search
+            // Since the socket disconnected, the server removed the old socket from the queue.
+            MatchmakingModel.ReTriggerSearchAfterReconnect();
+        }
     }
 
 
