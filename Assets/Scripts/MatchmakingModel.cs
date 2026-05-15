@@ -9,6 +9,7 @@ using BestHTTP.SocketIO3.Events;
 public static class MatchmakingModel
 {
     public static bool IsSearching { get; private set; }
+    public static bool ReconnectPending { get { return reconnectPending; } set { reconnectPending = value; } }
     
     public static event Action<StartGameData> OnMatchFound;
     public static event Action<string> OnMatchmakingFailed;
@@ -19,21 +20,25 @@ public static class MatchmakingModel
     private static string lastLobbyId;
     private static BestHTTP.SocketIO3.Socket lastSocket;
     private static bool localForfeitPending;
+    private static bool reconnectPending;
 
     public static void FindMatch(string mode, int stake, string lobbyId)
     {
-        if (SocketManager.Instance == null || SocketManager.Instance.Socket == null)
-        {
-            Debug.LogError("❌ <color=#FF0000>[Socket ERROR] SocketManager is not ready!</color>");
-            OnMatchmakingFailed?.Invoke("Connection to server lost.");
-            return;
-        }
-
         lastMode = mode;
         lastStake = stake;
         lastLobbyId = lobbyId;
-
         IsSearching = true;
+
+        if (SocketManager.Instance == null) return;
+
+        // If not connected, connect first. The connection callback will handle the emit via sync logic.
+        if (SocketManager.Instance.Socket == null || SocketManager.Instance.Socket.Manager.State != BestHTTP.SocketIO3.SocketManager.States.Open)
+        {
+            Debug.Log("<color=#FFA500>🔄 [MatchmakingModel] Socket not connected. Triggering connection before search...</color>");
+            SocketManager.Instance.ConnectToServer();
+            return;
+        }
+
         EnsureListenersAdded();
 
         FindMatchPayload payload = new FindMatchPayload 
@@ -60,6 +65,9 @@ public static class MatchmakingModel
             
             SocketManager.Instance.Socket.Emit("cancelMatchmaking", payload);
             Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'cancelMatchmaking' for Lobby: {lastLobbyId}</color>");
+            
+            // Disconnect socket as we are leaving the matchmaking phase
+            SocketManager.Instance.Disconnect();
         }
         
         IsSearching = false;
@@ -219,10 +227,27 @@ public static class MatchmakingModel
         OnMatchFound?.Invoke(data);
     }
 
-    private static void HandleError(Error error)
+    private static void HandleError(BestHTTP.SocketIO3.Error err)
     {
-        string msg = error != null ? error.message : "Unknown Server Error";
+        if (err == null) return;
+        string msg = err.message ?? "Unknown Server Error";
         Debug.LogError($"❌ <color=#FF0000>[Socket ERROR] 'error' received: {msg}</color>");
+
+        // NEW: Handle the specific case where the player is already in a match (e.g., resumed app after match found)
+        if (msg.Contains("Already in a match"))
+        {
+            Debug.Log("<color=#00FFFF>🔄 [MatchmakingModel] 'Already in a match' detected. Stopping search and refreshing profile for recovery...</color>");
+            IsSearching = false;
+
+            // Trigger profile refresh to get the activeMatchId/activeRoomId
+            if (BackendAuthService.Instance != null)
+            {
+                BackendAuthService.Instance.GetProfile((success, error) => {
+                    if (success) Debug.Log("<color=#00FF00>✅ [MatchmakingModel] Profile refreshed successfully after recovery detection.</color>");
+                });
+            }
+            return;
+        }
         
         // Only trigger matchmaking failure if we were actually searching
         if (IsSearching)
@@ -317,8 +342,17 @@ public static class MatchmakingModel
 
     public static void ReconnectMatch(string activeMatchId, string activeRoomId)
     {
-        if (SocketManager.Instance?.Socket == null) return;
-        
+        if (SocketManager.Instance == null) return;
+
+        // If not connected, connect first. The connection callback will handle the sync.
+        if (SocketManager.Instance.Socket == null || SocketManager.Instance.Socket.Manager.State != BestHTTP.SocketIO3.SocketManager.States.Open)
+        {
+            Debug.Log("<color=#FFA500>🔄 [MatchmakingModel] Socket not connected for recovery. Triggering connection...</color>");
+            reconnectPending = true;
+            SocketManager.Instance.ConnectToServer();
+            return;
+        }
+
         EnsureListenersAdded();
 
         ReconnectMatchPayload payload = new ReconnectMatchPayload { activeMatchId = activeMatchId, activeRoomId = activeRoomId };
@@ -328,10 +362,20 @@ public static class MatchmakingModel
 
     public static void ForfeitMatch(string roomId, bool joinRoomFirst = false)
     {
-        if (SocketManager.Instance?.Socket == null || string.IsNullOrEmpty(roomId)) return;
+        if (SocketManager.Instance == null || string.IsNullOrEmpty(roomId)) return;
+
+        localForfeitPending = true;
+        lastLobbyId = roomId; // Reuse lastLobbyId to store roomId for pending forfeit
+
+        // If not connected, connect first. The connection callback will handle the forfeit via sync logic.
+        if (SocketManager.Instance.Socket == null || SocketManager.Instance.Socket.Manager.State != BestHTTP.SocketIO3.SocketManager.States.Open)
+        {
+            Debug.Log("<color=#FFA500>🔄 [MatchmakingModel] Socket not connected for forfeit. Triggering connection...</color>");
+            SocketManager.Instance.ConnectToServer();
+            return;
+        }
 
         EnsureListenersAdded();
-        localForfeitPending = true;
 
         if (joinRoomFirst)
         {
@@ -350,6 +394,11 @@ public static class MatchmakingModel
         localForfeitPending = false;
         return true;
     }
+
+    public static bool IsForfeitPending() => localForfeitPending;
+    public static string GetPendingForfeitRoomId() => lastLobbyId;
+
+    public static bool IsReconnectPending() => reconnectPending;
 
     public static void ClearLocalForfeitPending()
     {

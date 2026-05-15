@@ -127,8 +127,9 @@ public class MatchRecoveryUIManager : MonoBehaviour
         if (SoundManager.instance != null) SoundManager.instance.PlayTap();
         
         if (recoveryPromptPanel != null) recoveryPromptPanel.SetActive(false);
+        if (loadingPanel != null) loadingPanel.SetActive(true); // Show loading until gameOver confirms forfeit
         
-        if (SocketManager.Instance?.Socket != null)
+        if (SocketManager.Instance != null)
         {
             MatchmakingModel.ForfeitMatch(PlayerModel.ActiveRoomId, true);
         }

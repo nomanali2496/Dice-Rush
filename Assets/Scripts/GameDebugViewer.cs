@@ -20,7 +20,11 @@ public class GameDebugViewer : MonoBehaviour
     [Tooltip("The 12 live lobby configurations downloaded from the server.")]
     public List<LobbyConfig> lobbyConfigurations = new List<LobbyConfig>();
     
-    [Header("Active Match (Socket.IO)")]
+    [Header("Socket.IO Status (Live)")]
+    public string socketState = "Not Initialized";
+    public string activeMatchId;
+    public string activeRoomId;
+    public string serverUrl;
     public StartGameData currentMatch;
 
     private void Update()
@@ -31,6 +35,24 @@ public class GameDebugViewer : MonoBehaviour
         coins = PlayerModel.Coins;
         level = PlayerModel.Level;
         xp = PlayerModel.Xp;
+
+        // Update Socket Status
+        if (SocketManager.Instance != null)
+        {
+            serverUrl = SocketManager.Instance.GetServerUrl();
+            var socket = SocketManager.Instance.Socket;
+            if (socket == null)
+            {
+                socketState = "Socket Null";
+            }
+            else
+            {
+                socketState = socket.Manager.State.ToString();
+            }
+        }
+        
+        activeMatchId = PlayerModel.ActiveMatchId;
+        activeRoomId = PlayerModel.ActiveRoomId;
 
         // Update Lobby Data
         isLobbyDataLoaded = LobbyModel.IsLoaded;

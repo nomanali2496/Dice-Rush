@@ -16,6 +16,8 @@ public class SocketManager : MonoBehaviour
     [Tooltip("The Ngrok URL or Backend URL")]
     [SerializeField] private string serverUrl = "https://unclog-goggles-drastic.ngrok-free.dev";
 
+    public string GetServerUrl() => serverUrl;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -57,15 +59,26 @@ public class SocketManager : MonoBehaviour
     {
         if (BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
         {
-            if (ioManager == null || ioManager.State != BestHTTP.SocketIO3.SocketManager.States.Open)
+            // ONLY connect if we are in gameplay or searching
+            bool isGameplayActive = GameManager.Instance != null && GameManager.Instance.IsGameplayScreenActive;
+            bool shouldConnect = isGameplayActive || MatchmakingModel.IsSearching;
+
+            if (shouldConnect)
             {
-                Debug.Log("<color=#98FB98>⬆️ [SocketManager] App resumed. Triggering reconnection...</color>");
-                ConnectToServer();
+                if (ioManager == null || ioManager.State != BestHTTP.SocketIO3.SocketManager.States.Open)
+                {
+                    Debug.Log("<color=#98FB98>⬆️ [SocketManager] App resumed (Gameplay/Search active). Triggering reconnection...</color>");
+                    ConnectToServer();
+                }
+                else
+                {
+                    // Already connected, just ensure match sync if in-game
+                    CheckAndTriggerMatchSync();
+                }
             }
             else
             {
-                // Already connected, just ensure match sync if in-game
-                CheckAndTriggerMatchSync();
+                Debug.Log("<color=#AFEEEE>[SocketManager] App resumed but no active match/search. Staying disconnected.</color>");
             }
         }
     }
@@ -94,6 +107,27 @@ public class SocketManager : MonoBehaviour
             {
                 Debug.LogWarning("[SocketManager] Sync: Gameplay active but no Match/Room ID found! Reconnection aborted.");
             }
+        }
+        else if (MatchmakingModel.IsReconnectPending())
+        {
+            // If we connected because the user clicked "Rejoin" from the lobby prompt
+            string matchId = PlayerModel.ActiveMatchId;
+            string roomId = PlayerModel.ActiveRoomId;
+            
+            if (!string.IsNullOrEmpty(matchId) && !string.IsNullOrEmpty(roomId))
+            {
+                Debug.Log($"<color=#FFA500>🔄 [SocketManager] Rejoin Pending: Triggering match sync for Match:{matchId} Room:{roomId}</color>");
+                MatchmakingModel.ReconnectMatch(matchId, roomId);
+            }
+            // Clear the flag after triggering
+            MatchmakingModel.ReconnectPending = false;
+        }
+        else if (MatchmakingModel.IsForfeitPending())
+        {
+            // If we connected just to forfeit, trigger it now
+            string roomId = MatchmakingModel.GetPendingForfeitRoomId();
+            Debug.Log($"<color=#FFA500>🔄 [SocketManager] Triggering pending forfeit for Room:{roomId}</color>");
+            MatchmakingModel.ForfeitMatch(roomId, true);
         }
         else if (MatchmakingModel.IsSearching)
         {
@@ -217,10 +251,9 @@ public class SocketManager : MonoBehaviour
     {
         if (ioManager != null)
         {
-            Debug.Log("<color=#FFA500>⬇️ [SocketManager] Closing Socket.IO connection and clearing manager...</color>");
+            Debug.Log("<color=#FF6347>⚠️ [SocketManager] Disconnecting and clearing ioManager...</color>");
             ioManager.Close();
             ioManager = null;
-            Debug.Log("<color=#00FFFF>✅ [SocketManager] Socket successfully DISCONNECTED.</color>");
         }
         else
         {
@@ -232,6 +265,22 @@ public class SocketManager : MonoBehaviour
     {
         Debug.LogError("❌ <color=#FF0000>⬇️ [Socket ERROR] " + (err != null ? err.message : "Unknown Error") + "</color>");
         TriggerSilentRecoveryIfInGame();
+    }
+
+    /// <summary>
+    /// Waits for a specified duration before disconnecting.
+    /// Useful for ensuring 'forfeit' or 'leave' messages are sent before the socket closes.
+    /// </summary>
+    public void DisconnectDelayed(float delay)
+    {
+        StartCoroutine(DisconnectCoroutine(delay));
+    }
+
+    private System.Collections.IEnumerator DisconnectCoroutine(float delay)
+    {
+        Debug.Log($"<color=#FFD700>⏳ [SocketManager] Delayed disconnect triggered ({delay}s)...</color>");
+        yield return new WaitForSeconds(delay);
+        Disconnect();
     }
 
     private void OnDestroy()

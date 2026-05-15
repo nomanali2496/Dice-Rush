@@ -478,26 +478,95 @@ public class GameManager : MonoBehaviour
             }
         }
         
-        if (currentMatchData != null && currentMatchData.timeRemaining > 0)
+        long currentTimeMs = System.DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+        bool isRecovery = currentMatchData != null && (currentMatchData.timeRemaining > 0 || currentTimeMs >= currentMatchData.gameplayStartsAt);
+
+        if (isRecovery)
         {
             // Skip countdown for recovery
-            currentTimer = gameTimer;
+            if (currentMatchData != null && currentMatchData.gameplayStartsAt > 0)
+            {
+                double elapsedSeconds = (currentTimeMs - currentMatchData.gameplayStartsAt) / 1000.0;
+                float durationToUse = currentMatchData.duration > 0 ? currentMatchData.duration : gameTimer;
+                currentTimer = Mathf.Max(0, durationToUse - (float)elapsedSeconds);
+            }
+            else
+            {
+                currentTimer = gameTimer;
+            }
+
             isGameActive = true;
+            if (timerCoroutine != null) StopCoroutine(timerCoroutine);
             timerCoroutine = StartCoroutine(TimerCountdown());
-            Debug.Log("[GameManager] Match recovery detected. Skipping countdown.");
+            
+            // Ensure UI is correct for active game
+            if (timerText != null) timerText.gameObject.SetActive(true);
+            if (timerTextLegacy != null) timerTextLegacy.gameObject.SetActive(true);
+            if (countdownText != null) countdownText.gameObject.SetActive(false);
+            
+            if (playerDicesController != null) 
+            {
+                playerDicesController.ResetRollingState();
+            }
+            
+            Debug.Log($"[GameManager] Match recovery detected. Skipping countdown. Adjusted Timer: {currentTimer}");
         }
         else
         {
-            // Hide timer and disable interaction while waiting for server countdown
-            if (timerText != null) timerText.gameObject.SetActive(false);
-            if (timerTextLegacy != null) timerTextLegacy.gameObject.SetActive(false);
-            if (playerDicesController != null) playerDicesController.SetRollButtonInteractable(false);
-            Debug.Log("[GameManager] Match started locally. Waiting for server countdown ticks...");
+            // We are either in countdown or waiting for it
+            if (currentMatchData != null && currentMatchData.gameplayStartsAt > 0)
+            {
+                // We are in the countdown phase!
+                float secondsUntilStart = (float)(currentMatchData.gameplayStartsAt - currentTimeMs) / 1000f;
+                Debug.Log($"[GameManager] Rejoined during countdown. Seconds until start: {secondsUntilStart}");
+                
+                if (secondsUntilStart > 0)
+                {
+                    StartCoroutine(HandleRejoinedCountdown(secondsUntilStart));
+                }
+                else
+                {
+                    StartCoroutine(FinishCountdownSequence());
+                }
+            }
+            else
+            {
+                // Fresh start - hide timer and wait for server countdown ticks
+                if (timerText != null) timerText.gameObject.SetActive(false);
+                if (timerTextLegacy != null) timerTextLegacy.gameObject.SetActive(false);
+                if (playerDicesController != null) playerDicesController.SetRollButtonInteractable(false);
+                Debug.Log("[GameManager] Match started locally. Waiting for server countdown ticks...");
+            }
         }
 
         Debug.Log("[GameManager] Starting match. Score reset to 0.");
     }
     
+    private System.Collections.IEnumerator HandleRejoinedCountdown(float secondsToWait)
+    {
+        // Setup countdown UI
+        if (countdownText != null && countdownTextShadow != null)
+        {
+            countdownText.gameObject.SetActive(true);
+            countdownTextShadow.gameObject.SetActive(true);
+            
+            // Just show "..." or a generic message while waiting for the exact start
+            countdownText.text = "...";
+            countdownTextShadow.text = "...";
+        }
+        
+        // Hide game timer
+        if (timerText != null) timerText.gameObject.SetActive(false);
+        if (timerTextLegacy != null) timerTextLegacy.gameObject.SetActive(false);
+        if (playerDicesController != null) playerDicesController.SetRollButtonInteractable(false);
+
+        // Wait for the remaining duration
+        yield return new WaitForSeconds(secondsToWait);
+        
+        // Finalize start
+        StartCoroutine(FinishCountdownSequence());
+    }
+
     private void HandleServerCountdown(CountdownData data)
     {
         if (data == null) return;
@@ -558,7 +627,10 @@ public class GameManager : MonoBehaviour
         OnGameStarted?.Invoke();
         StartAllPowerupTimers();
         
-        if (playerDicesController != null) playerDicesController.SetRollButtonInteractable(true);
+        if (playerDicesController != null) 
+        {
+            playerDicesController.ResetRollingState();
+        }
         
         currentTimer = gameTimer;
         isGameActive = true;
@@ -894,9 +966,15 @@ public class GameManager : MonoBehaviour
             return; // Game already ended
         }
         
-        Debug.Log("[GameManager] Player quit! Returning to lobby...");
+        Debug.Log("[GameManager] Player forfeit requested. Waiting for server confirmation...");
         localPlayerForfeited = true;
         
+        // Show loading screen while waiting for server to acknowledge forfeit
+        if (calculateLoadingScreen != null)
+        {
+            calculateLoadingScreen.SetActive(true);
+        }
+
         // Notify listeners (like SettingManager) that gameplay music should stop
         OnGameEnded?.Invoke();
 
@@ -905,29 +983,6 @@ public class GameManager : MonoBehaviour
         {
             MatchmakingModel.ForfeitMatch(currentMatchData.roomId);
         }
-
-        if (winnerScreenDelayCoroutine != null)
-        {
-            StopCoroutine(winnerScreenDelayCoroutine);
-            winnerScreenDelayCoroutine = null;
-        }
-
-        // Hide gameplay screen and quit panel
-        if (gameplayScreen != null)
-        {
-            gameplayScreen.SetActive(false);
-            Debug.Log("[GameManager] Gameplay screen hidden - player returned to lobby");
-        }
-        
-        if (quitPanel != null)
-        {
-            quitPanel.SetActive(false);
-        }
-
-        if (calculateLoadingScreen != null) calculateLoadingScreen.SetActive(false);
-        if (winnerScreen != null) winnerScreen.SetActive(false);
-        
-        ResetGameState();
     }
 
 
@@ -1465,7 +1520,20 @@ public class GameManager : MonoBehaviour
             ScoreFeedbackUIManager.Instance.ResetScore();
         }
 
-        Debug.Log("[GameManager] Game state reset");
+        // Disconnect socket when returning to lobby/resetting game state
+        if (SocketManager.Instance != null)
+        {
+            // If we just sent a forfeit, give the socket a moment to actually send the packet 
+            // before closing the connection.
+            if (MatchmakingModel.IsForfeitPending())
+            {
+                SocketManager.Instance.DisconnectDelayed(0.5f);
+            }
+            else
+            {
+                SocketManager.Instance.Disconnect();
+            }
+        }
     }
     
     /// <summary>

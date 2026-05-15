@@ -44,6 +44,7 @@ public class DicesController : MonoBehaviour
     private bool isRolling = false; // Flag to prevent multiple simultaneous rolls
     private Coroutine rollCoroutine1; // Coroutine for dice 1
     private Coroutine rollCoroutine2; // Coroutine for dice 2
+    private Coroutine processCoroutine; // Coroutine for post-roll processing
     private int completedRolls = 0; // Counter for completed dice rolls
     private int targetDice1Value = 1; // Target value for dice 1
     private int targetDice2Value = 1; // Target value for dice 2
@@ -87,6 +88,7 @@ public class DicesController : MonoBehaviour
         // Clean up coroutines
         if (rollCoroutine1 != null) StopCoroutine(rollCoroutine1);
         if (rollCoroutine2 != null) StopCoroutine(rollCoroutine2);
+        if (processCoroutine != null) StopCoroutine(processCoroutine);
     }
     
     private Vector3 NormalizeEulerForComparison(Vector3 euler)
@@ -181,6 +183,7 @@ public class DicesController : MonoBehaviour
         // Start coroutines for both dice
         if (rollCoroutine1 != null) StopCoroutine(rollCoroutine1);
         if (rollCoroutine2 != null) StopCoroutine(rollCoroutine2);
+        if (processCoroutine != null) StopCoroutine(processCoroutine);
         
         rollCoroutine1 = StartCoroutine(RollDiceCoroutine(dice1, targetDice1Value, () =>
         {
@@ -340,7 +343,8 @@ public class DicesController : MonoBehaviour
             }
             
             // Wait one frame to ensure rotations are fully applied, then get actual values
-            StartCoroutine(ProcessRollComplete());
+            if (processCoroutine != null) StopCoroutine(processCoroutine);
+            processCoroutine = StartCoroutine(ProcessRollComplete());
         }
     }
     
@@ -603,6 +607,41 @@ public class DicesController : MonoBehaviour
         if (rollButton != null)
         {
             rollButton.interactable = interactable;
+        }
+    }
+
+    /// <summary>
+    /// Resets the rolling state and stops any active roll coroutines.
+    /// Used when recovering a match to ensure the dice state is clean.
+    /// </summary>
+    public void ResetRollingState()
+    {
+        isRolling = false;
+        completedRolls = 0;
+        
+        if (rollCoroutine1 != null) StopCoroutine(rollCoroutine1);
+        if (rollCoroutine2 != null) StopCoroutine(rollCoroutine2);
+        if (processCoroutine != null) StopCoroutine(processCoroutine);
+        
+        // Force dice to snap to their last known valid orientations
+        // This prevents them from starting the next roll from a tilted position
+        if (dice1 != null && targetDice1Value >= 1 && targetDice1Value <= 6)
+        {
+            Vector3 rot = faceRotations[targetDice1Value - 1];
+            if (dice1.transform.parent != null) dice1.transform.localRotation = Quaternion.Euler(rot);
+            else dice1.transform.rotation = Quaternion.Euler(rot);
+        }
+        
+        if (dice2 != null && targetDice2Value >= 1 && targetDice2Value <= 6)
+        {
+            Vector3 rot = faceRotations[targetDice2Value - 1];
+            if (dice2.transform.parent != null) dice2.transform.localRotation = Quaternion.Euler(rot);
+            else dice2.transform.rotation = Quaternion.Euler(rot);
+        }
+        
+        if (rollButton != null)
+        {
+            rollButton.interactable = true;
         }
     }
 

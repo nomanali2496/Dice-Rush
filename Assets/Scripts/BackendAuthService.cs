@@ -194,11 +194,6 @@ public class BackendAuthService : MonoBehaviour
                     {
                         PlayerPrefs.SetString(JWT_PREF_KEY, response.token);
                         PlayerPrefs.Save();
-                        
-                        if (SocketManager.Instance != null)
-                        {
-                            SocketManager.Instance.ConnectToServer();
-                        }
                     }
                 }
                 catch { }
@@ -259,11 +254,6 @@ public class BackendAuthService : MonoBehaviour
 
                         PlayerPrefs.SetString(JWT_PREF_KEY, response.token);
                         PlayerPrefs.Save();
-                        
-                        if (SocketManager.Instance != null)
-                        {
-                            SocketManager.Instance.ConnectToServer();
-                        }
                         
                         onComplete?.Invoke(true, "Login successful!");
                     }
@@ -332,11 +322,6 @@ public class BackendAuthService : MonoBehaviour
 
                         PlayerPrefs.SetString(JWT_PREF_KEY, response.token);
                         PlayerPrefs.Save();
-                        
-                        if (SocketManager.Instance != null)
-                        {
-                            SocketManager.Instance.ConnectToServer();
-                        }
                         
                         onComplete?.Invoke(true, "Guest Login successful!");
                     }
@@ -414,11 +399,6 @@ public class BackendAuthService : MonoBehaviour
 
                         PlayerPrefs.SetString(JWT_PREF_KEY, response.token);
                         PlayerPrefs.Save();
-                        
-                        if (SocketManager.Instance != null)
-                        {
-                            SocketManager.Instance.ConnectToServer();
-                        }
                         
                         onComplete?.Invoke(true, "Social Login successful!");
                     }
@@ -689,11 +669,6 @@ public class BackendAuthService : MonoBehaviour
                             response.user.level, response.user.role, 0,
                             response.user.activeMatchId, response.user.activeRoomId
                         );
-                        
-                        if (SocketManager.Instance != null)
-                        {
-                            SocketManager.Instance.ConnectToServer();
-                        }
                         
                         onComplete?.Invoke(true, "Profile loaded successfully!");
                     }
