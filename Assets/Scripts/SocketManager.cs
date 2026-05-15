@@ -10,6 +10,8 @@ public class SocketManager : MonoBehaviour
     private BestHTTP.SocketIO3.SocketManager ioManager;
     public BestHTTP.SocketIO3.Socket Socket => ioManager?.Socket;
 
+    private Coroutine internetMonitorCoroutine;
+
     [Header("Server Settings")]
     [Tooltip("The Ngrok URL or Backend URL")]
     [SerializeField] private string serverUrl = "https://unclog-goggles-drastic.ngrok-free.dev";
@@ -76,20 +78,26 @@ public class SocketManager : MonoBehaviour
     {
         if (GameManager.Instance != null && GameManager.Instance.IsGameplayScreenActive)
         {
-            if (!string.IsNullOrEmpty(PlayerModel.ActiveMatchId) && !string.IsNullOrEmpty(PlayerModel.ActiveRoomId))
+            string matchId = PlayerModel.ActiveMatchId;
+            string roomId = PlayerModel.ActiveRoomId;
+
+            // Fallback to GameManager's active data if PlayerModel cache is empty (silent recovery case)
+            if (string.IsNullOrEmpty(matchId)) matchId = GameManager.Instance.GetCurrentRoomId();
+            if (string.IsNullOrEmpty(roomId)) roomId = GameManager.Instance.GetCurrentRoomId();
+
+            if (!string.IsNullOrEmpty(matchId) && !string.IsNullOrEmpty(roomId))
             {
-                Debug.Log("<color=#FFA500>🔄 [SocketManager] Auto-triggering match sync on resume...</color>");
-                MatchmakingModel.ReconnectMatch(PlayerModel.ActiveMatchId, PlayerModel.ActiveRoomId);
+                Debug.Log($"<color=#FFA500>🔄 [SocketManager] Auto-triggering match sync for Match:{matchId} Room:{roomId}</color>");
+                MatchmakingModel.ReconnectMatch(matchId, roomId);
             }
             else
             {
-                Debug.LogWarning("[SocketManager] Resume: Gameplay active but no ActiveMatchId found in PlayerModel!");
+                Debug.LogWarning("[SocketManager] Sync: Gameplay active but no Match/Room ID found! Reconnection aborted.");
             }
         }
         else if (MatchmakingModel.IsSearching)
         {
             // If we were searching but not in a game yet, re-trigger the search
-            // Since the socket disconnected, the server removed the old socket from the queue.
             MatchmakingModel.ReTriggerSearchAfterReconnect();
         }
     }
@@ -105,9 +113,9 @@ public class SocketManager : MonoBehaviour
             return;
         }
 
-        if (ioManager != null && ioManager.State == BestHTTP.SocketIO3.SocketManager.States.Open)
+        if (ioManager != null && (ioManager.State == BestHTTP.SocketIO3.SocketManager.States.Open || ioManager.State == BestHTTP.SocketIO3.SocketManager.States.Opening))
         {
-            Debug.Log("<color=#00FF00>✅ [SocketManager] Socket already connected. Skipping handshake.</color>");
+            Debug.Log("<color=#00FF00>✅ [SocketManager] Socket already connected or connecting. Skipping.</color>");
             return;
         }
 
@@ -150,6 +158,59 @@ public class SocketManager : MonoBehaviour
     private void OnSocketDisconnected()
     {
         Debug.LogWarning("⚠️ <color=#FFA500>⬇️ [Socket ON] Disconnected from server.</color>");
+        TriggerSilentRecoveryIfInGame();
+    }
+
+    private void TriggerSilentRecoveryIfInGame()
+    {
+        if (GameManager.Instance != null && GameManager.Instance.IsGameplayScreenActive)
+        {
+            if (internetMonitorCoroutine == null)
+            {
+                internetMonitorCoroutine = StartCoroutine(MonitorInternetAndReconnect());
+            }
+        }
+    }
+
+    private System.Collections.IEnumerator MonitorInternetAndReconnect()
+    {
+        Debug.Log("<color=#00FFFF>🔍 [SocketManager] Silent internet monitor started...</color>");
+        
+        while (true)
+        {
+            // 1. Check if internet is physically reachable
+            if (Application.internetReachability != NetworkReachability.NotReachable)
+            {
+                // 2. Only attempt connection if not already open or opening
+                if (ioManager == null || (ioManager.State != BestHTTP.SocketIO3.SocketManager.States.Open && ioManager.State != BestHTTP.SocketIO3.SocketManager.States.Opening))
+                {
+                    Debug.Log("<color=#98FB98>🌐 [SocketManager] Internet restored! Attempting silent reconnect...</color>");
+                    ConnectToServer();
+                }
+                
+                // 3. Give it a moment to connect
+                yield return new WaitForSeconds(3f);
+                
+                // 4. If we are now open, we can stop the monitor (OnSocketConnected will handle match sync)
+                if (ioManager != null && ioManager.State == BestHTTP.SocketIO3.SocketManager.States.Open)
+                {
+                    Debug.Log("<color=#00FF00>✅ [SocketManager] Silent reconnect successful! Monitor stopping.</color>");
+                    internetMonitorCoroutine = null;
+                    yield break;
+                }
+            }
+            
+            // Check every 2 seconds
+            yield return new WaitForSeconds(2f);
+            
+            // Safety: Stop monitoring if we are no longer in gameplay (e.g., game ended while offline)
+            if (GameManager.Instance == null || !GameManager.Instance.IsGameplayScreenActive)
+            {
+                Debug.Log("<color=#FFA500>⏹️ [SocketManager] Gameplay ended. Stopping internet monitor.</color>");
+                internetMonitorCoroutine = null;
+                yield break;
+            }
+        }
     }
 
     public void Disconnect()
@@ -170,6 +231,7 @@ public class SocketManager : MonoBehaviour
     private void OnSocketError(Error err)
     {
         Debug.LogError("❌ <color=#FF0000>⬇️ [Socket ERROR] " + (err != null ? err.message : "Unknown Error") + "</color>");
+        TriggerSilentRecoveryIfInGame();
     }
 
     private void OnDestroy()
