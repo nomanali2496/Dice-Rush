@@ -114,7 +114,7 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
             Debug.LogError("[LeaderboardManager] Enhanced Scroller not assigned!");
             return;
         }
-        StartCoroutine(LoadTestDataDelayed());
+        StartCoroutine(LoadRealLeaderboardDelayed());
         isInitialized = true;
     }
     
@@ -129,7 +129,7 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
             }
             else
             {
-                StartCoroutine(LoadTestDataDelayed());
+                StartCoroutine(LoadRealLeaderboardDelayed());
             }
         }
     }
@@ -143,12 +143,246 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
         }
     }
     
-    private IEnumerator LoadTestDataDelayed()
+    private IEnumerator LoadRealLeaderboardDelayed()
     {
         yield return null;
-        LoadTestData();
+        LoadRealLeaderboard();
     }
-    
+
+    /// <summary>
+    /// Loads the real leaderboard from the backend API. Falls back to test data if offline or failed.
+    /// </summary>
+    public void LoadRealLeaderboard()
+    {
+        if (BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
+        {
+            Debug.Log("[LeaderboardManager] Requesting real leaderboard from backend...");
+            BackendAuthService.Instance.GetLeaderboard(testDataCount, (success, response) =>
+            {
+                if (success && response != null && response.leaderboard != null)
+                {
+                    PopulateRealLeaderboard(response);
+                }
+                else
+                {
+                    Debug.LogWarning("[LeaderboardManager] Backend leaderboard fetch failed. Falling back to test data.");
+                    LoadTestData();
+                }
+            });
+        }
+        else
+        {
+            Debug.Log("[LeaderboardManager] No active JWT or BackendAuthService missing. Loading test data.");
+            LoadTestData();
+        }
+    }
+
+    /// <summary>
+    /// Populates real leaderboard data parsed from the backend API response.
+    /// </summary>
+    private void PopulateRealLeaderboard(BackendAuthService.LeaderboardResponse response)
+    {
+        if (_leaderboardData == null)
+        {
+            _leaderboardData = new SmallList<LeaderboardRowData>();
+        }
+        else
+        {
+            _leaderboardData.Clear();
+        }
+
+        _userData = null;
+        string loggedInUsername = !string.IsNullOrEmpty(PlayerModel.Name) ? PlayerModel.Name : "Guest User";
+
+        // 1. Map top players from backend
+        foreach (var item in response.leaderboard)
+        {
+            int position = item.rank;
+            string username = item.name;
+            int score = item.wins; // Ranked by wins
+            
+            Sprite avatarSprite = null;
+            bool isRowCustom = false;
+            string avatarKey = item.avatar;
+
+            // If it is the logged-in user, use local sync or the raw URL
+            if (item.userId == PlayerModel.Id || username == loggedInUsername)
+            {
+                if (mainMenuAvatarDisplay != null)
+                {
+                    avatarSprite = mainMenuAvatarDisplay.GetCurrentAvatarSprite();
+                    isRowCustom = mainMenuAvatarDisplay.IsShowingCustomAvatar();
+                }
+            }
+
+            // Fallback for presets or local fallback if avatarSprite is still null
+            if (avatarSprite == null)
+            {
+                if (string.IsNullOrEmpty(avatarKey) || !avatarKey.StartsWith("http"))
+                {
+                    // Preset
+                    avatarSprite = GetPresetAvatar(avatarKey);
+                    isRowCustom = false;
+                }
+                else
+                {
+                    // It is a remote S3 custom URL. The cell itself will fetch it asynchronously
+                    isRowCustom = true;
+                }
+            }
+
+            LeaderboardRowData data = new LeaderboardRowData(position, username, score, avatarSprite, isRowCustom, avatarKey);
+            _leaderboardData.Add(data);
+
+            if (item.userId == PlayerModel.Id || username == loggedInUsername)
+            {
+                _userData = data;
+            }
+        }
+
+        // 2. Handle the user's fixed row manually if user is not in the top leaderboard list returned
+        if (_userData == null && response.me != null)
+        {
+            int userPos = response.me.rank;
+            string userName = response.me.name;
+            int userScore = response.me.wins;
+            string userAvatarKey = response.me.avatar;
+
+            Sprite userAvatarSprite = null;
+            bool userCustom = false;
+            if (mainMenuAvatarDisplay != null)
+            {
+                userAvatarSprite = mainMenuAvatarDisplay.GetCurrentAvatarSprite();
+                userCustom = mainMenuAvatarDisplay.IsShowingCustomAvatar();
+            }
+
+            if (userAvatarSprite == null)
+            {
+                if (string.IsNullOrEmpty(userAvatarKey) || !userAvatarKey.StartsWith("http"))
+                {
+                    userAvatarSprite = GetPresetAvatar(userAvatarKey);
+                }
+                else
+                {
+                    userCustom = true;
+                }
+            }
+
+            _userData = new LeaderboardRowData(userPos, userName, userScore, userAvatarSprite, userCustom, userAvatarKey);
+        }
+
+        // 3. Update the UI
+        RebuildFilteredIndices();
+        UpdateTop3AvatarsReal(response.leaderboard);
+        UpdateUserFixedRow();
+
+        if (scroller != null && scroller.gameObject.activeInHierarchy)
+        {
+            if (scroller.Delegate == null) scroller.Delegate = this;
+            scroller.ReloadData();
+        }
+
+        Debug.Log($"[LeaderboardManager] Successfully populated {response.leaderboard.Count} real leaderboard entries.");
+    }
+
+    /// <summary>
+    /// Gets local preset avatar sprite based on key string.
+    /// </summary>
+    private Sprite GetPresetAvatar(string avatarKey)
+    {
+        if (avatarKey == "avatarGirl" && testAvatars != null && testAvatars.Length > 1) return testAvatars[1];
+        if (testAvatars != null && testAvatars.Length > 0) return testAvatars[0];
+        return null;
+    }
+
+    /// <summary>
+    /// Updates the top 3 podium slot pictures with real/custom backend images.
+    /// </summary>
+    private void UpdateTop3AvatarsReal(System.Collections.Generic.List<BackendAuthService.LeaderboardItem> items)
+    {
+        if (items == null || items.Count == 0)
+        {
+            if (firstPlaceAvatarImage != null) firstPlaceAvatarImage.sprite = null;
+            if (firstPlaceAvatarCustom != null) firstPlaceAvatarCustom.sprite = null;
+            if (secondPlaceAvatarImage != null) secondPlaceAvatarImage.sprite = null;
+            if (secondPlaceAvatarCustom != null) secondPlaceAvatarCustom.sprite = null;
+            if (thirdPlaceAvatarImage != null) thirdPlaceAvatarImage.sprite = null;
+            if (thirdPlaceAvatarCustom != null) thirdPlaceAvatarCustom.sprite = null;
+            return;
+        }
+
+        if (firstPlaceAvatarImage != null || firstPlaceAvatarCustom != null)
+        {
+            var item = items.Count > 0 ? items[0] : null;
+            SetTop3SlotReal(firstPlaceAvatarImage, firstPlaceAvatarCustom, item);
+        }
+
+        if (secondPlaceAvatarImage != null || secondPlaceAvatarCustom != null)
+        {
+            var item = items.Count > 1 ? items[1] : null;
+            SetTop3SlotReal(secondPlaceAvatarImage, secondPlaceAvatarCustom, item);
+        }
+
+        if (thirdPlaceAvatarImage != null || thirdPlaceAvatarCustom != null)
+        {
+            var item = items.Count > 2 ? items[2] : null;
+            SetTop3SlotReal(thirdPlaceAvatarImage, thirdPlaceAvatarCustom, item);
+        }
+    }
+
+    /// <summary>
+    /// Helper to assign real top 3 slot image dynamically.
+    /// </summary>
+    private void SetTop3SlotReal(Image spriteSlot, Image customSlot, BackendAuthService.LeaderboardItem item)
+    {
+        if (item == null)
+        {
+            if (spriteSlot != null) spriteSlot.gameObject.SetActive(false);
+            if (customSlot != null) customSlot.gameObject.SetActive(false);
+            return;
+        }
+
+        string avatarKey = item.avatar;
+        bool isUser = item.userId == PlayerModel.Id;
+
+        // If it's the logged in user, always prefer the live MainMenu avatar
+        if (isUser && mainMenuAvatarDisplay != null)
+        {
+            Sprite s = mainMenuAvatarDisplay.GetCurrentAvatarSprite();
+            bool isC = mainMenuAvatarDisplay.IsShowingCustomAvatar();
+            SetTop3Slot(spriteSlot, customSlot, s, isC);
+            return;
+        }
+
+        if (!string.IsNullOrEmpty(avatarKey) && avatarKey.StartsWith("http"))
+        {
+            if (customSlot != null)
+            {
+                customSlot.sprite = null; // Clear old/stale visual
+                customSlot.gameObject.SetActive(true);
+
+                if (BackendAuthService.Instance != null)
+                {
+                    BackendAuthService.Instance.GetImage(avatarKey, (tex) => {
+                        if (tex != null && customSlot != null)
+                        {
+                            Sprite s = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+                            customSlot.sprite = s;
+                            customSlot.rectTransform.localScale = Vector3.one * 2f;
+                        }
+                    });
+                }
+            }
+            if (spriteSlot != null) spriteSlot.gameObject.SetActive(false);
+        }
+        else
+        {
+            // Local preset
+            Sprite s = GetPresetAvatar(avatarKey);
+            SetTop3Slot(spriteSlot, customSlot, s, false);
+        }
+    }
+
     public void LoadTestData()
     {
         if (_leaderboardData == null)
@@ -336,9 +570,9 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
     
     private void UpdateUserFixedRow()
     {
-        if (_leaderboardData != null && !string.IsNullOrEmpty(PlayerModel.Name))
+        // Only search inside leaderboard list if _userData has not been manually populated by the server response
+        if (_userData == null && _leaderboardData != null && !string.IsNullOrEmpty(PlayerModel.Name))
         {
-            _userData = null;
             for (int i = 0; i < _leaderboardData.Count; i++)
             {
                 if (_leaderboardData[i] != null && _leaderboardData[i].username == PlayerModel.Name)
@@ -352,38 +586,85 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
         if (userFixedName != null) userFixedName.text = !string.IsNullOrEmpty(PlayerModel.Name) ? PlayerModel.Name : "Guest";
         if (userFixedScore != null) userFixedScore.text = (_userData != null) ? _userData.score.ToString() : "0";
 
-        if ((userFixedAvatar != null || userFixedAvatarCustom != null) && mainMenuAvatarDisplay != null)
+        if (userFixedAvatar != null || userFixedAvatarCustom != null)
         {
-            Sprite mainMenuSprite = mainMenuAvatarDisplay.GetCurrentAvatarSprite();
-            bool isC = mainMenuAvatarDisplay.IsShowingCustomAvatar();
-            
-            if (mainMenuSprite != null) 
+            // 1. Try S3 Custom/Remote URL from _userData first
+            if (_userData != null && !string.IsNullOrEmpty(_userData.avatarKey) && _userData.avatarKey.StartsWith("http"))
             {
-                if (isC)
+                if (userFixedAvatarCustom != null)
                 {
-                    if (userFixedAvatarCustom != null)
+                    userFixedAvatarCustom.sprite = null; // Clear old
+                    userFixedAvatarCustom.gameObject.SetActive(true);
+                    
+                    string targetKey = _userData.avatarKey;
+                    if (BackendAuthService.Instance != null)
                     {
-                        userFixedAvatarCustom.sprite = mainMenuSprite;
-                        userFixedAvatarCustom.rectTransform.localScale = Vector3.one * 2f;
-                        userFixedAvatarCustom.gameObject.SetActive(true);
+                        BackendAuthService.Instance.GetImage(targetKey, (tex) => {
+                            if (tex != null && userFixedAvatarCustom != null && _userData != null && _userData.avatarKey == targetKey)
+                            {
+                                Sprite s = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+                                userFixedAvatarCustom.sprite = s;
+                                userFixedAvatarCustom.rectTransform.localScale = Vector3.one * 2f;
+                            }
+                        });
                     }
-                    if (userFixedAvatar != null) userFixedAvatar.gameObject.SetActive(false);
+                }
+                if (userFixedAvatar != null) userFixedAvatar.gameObject.SetActive(false);
+            }
+            // 2. Try MainMenuAvatarDisplay next
+            else if (mainMenuAvatarDisplay != null)
+            {
+                Sprite mainMenuSprite = mainMenuAvatarDisplay.GetCurrentAvatarSprite();
+                bool isC = mainMenuAvatarDisplay.IsShowingCustomAvatar();
+                
+                if (mainMenuSprite != null) 
+                {
+                    if (isC)
+                    {
+                        if (userFixedAvatarCustom != null)
+                        {
+                            userFixedAvatarCustom.sprite = mainMenuSprite;
+                            userFixedAvatarCustom.rectTransform.localScale = Vector3.one * 2f;
+                            userFixedAvatarCustom.gameObject.SetActive(true);
+                        }
+                        if (userFixedAvatar != null) userFixedAvatar.gameObject.SetActive(false);
+                    }
+                    else
+                    {
+                        if (userFixedAvatar != null)
+                        {
+                            userFixedAvatar.sprite = mainMenuSprite;
+                            userFixedAvatar.rectTransform.localScale = Vector3.one;
+                            userFixedAvatar.gameObject.SetActive(true);
+                        }
+                        if (userFixedAvatarCustom != null) userFixedAvatarCustom.gameObject.SetActive(false);
+                    }
+                    Debug.Log($"[LeaderboardManager] Synced avatar from MainMenu (Custom: {isC})");
                 }
                 else
                 {
+                    // Fallback preset
+                    Sprite fallbackPreset = GetPresetAvatar(_userData != null ? _userData.avatarKey : "avatarBoy");
                     if (userFixedAvatar != null)
                     {
-                        userFixedAvatar.sprite = mainMenuSprite;
+                        userFixedAvatar.sprite = fallbackPreset;
                         userFixedAvatar.rectTransform.localScale = Vector3.one;
                         userFixedAvatar.gameObject.SetActive(true);
                     }
                     if (userFixedAvatarCustom != null) userFixedAvatarCustom.gameObject.SetActive(false);
                 }
-                Debug.Log($"[LeaderboardManager] Synced avatar from MainMenu (Custom: {isC})");
             }
+            // 3. Absolute Fallback preset
             else
             {
-                Debug.LogWarning("[LeaderboardManager] MainMenuAvatarDisplay returned null sprite!");
+                Sprite fallbackPreset = GetPresetAvatar(_userData != null ? _userData.avatarKey : "avatarBoy");
+                if (userFixedAvatar != null)
+                {
+                    userFixedAvatar.sprite = fallbackPreset;
+                    userFixedAvatar.rectTransform.localScale = Vector3.one;
+                    userFixedAvatar.gameObject.SetActive(true);
+                }
+                if (userFixedAvatarCustom != null) userFixedAvatarCustom.gameObject.SetActive(false);
             }
         }
 

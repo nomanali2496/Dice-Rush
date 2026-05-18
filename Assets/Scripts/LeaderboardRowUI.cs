@@ -14,14 +14,16 @@ public class LeaderboardRowData
     public int score;
     public Sprite avatarSprite;
     public bool isCustom;
+    public string avatarKey; // URL or preset key from backend
     
-    public LeaderboardRowData(int position, string username, int score, Sprite avatarSprite = null, bool isCustom = false)
+    public LeaderboardRowData(int position, string username, int score, Sprite avatarSprite = null, bool isCustom = false, string avatarKey = "")
     {
         this.position = position;
         this.username = username;
         this.score = score;
         this.avatarSprite = avatarSprite;
         this.isCustom = isCustom;
+        this.avatarKey = avatarKey;
     }
 }
 
@@ -84,13 +86,13 @@ public class LeaderboardRowUI : EnhancedScrollerCellView
     public void SetData(LeaderboardRowData data)
     {
         currentData = data;
-        SetupRow(data.position, data.username, data.score, data.avatarSprite, data.isCustom);
+        SetupRow(data.position, data.username, data.score, data.avatarSprite, data.isCustom, data.avatarKey);
     }
     
     /// <summary>
     /// Sets up the leaderboard row with the specified position, username, score, and avatar
     /// </summary>
-    public void SetupRow(int position, string username, int score, Sprite avatarSprite = null, bool isCustom = false)
+    public void SetupRow(int position, string username, int score, Sprite avatarSprite = null, bool isCustom = false, string avatarKey = "")
     {
         currentPosition = position;
         
@@ -101,7 +103,31 @@ public class LeaderboardRowUI : EnhancedScrollerCellView
         SetupProfileBackground(position);
         
         // Setup avatar display
-        if (isCustom)
+        if (!string.IsNullOrEmpty(avatarKey) && avatarKey.StartsWith("http"))
+        {
+            if (avatarImageCustom != null)
+            {
+                avatarImageCustom.sprite = null; // Clear old/reused cell sprite
+                avatarImageCustom.gameObject.SetActive(true);
+                
+                // Fetch the remote image asynchronously
+                if (BackendAuthService.Instance != null)
+                {
+                    string targetKey = avatarKey; // Closure-local copy
+                    BackendAuthService.Instance.GetImage(targetKey, (tex) => {
+                        if (tex != null && this != null && currentData != null && currentData.avatarKey == targetKey)
+                        {
+                            Sprite s = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+                            avatarImageCustom.sprite = s;
+                            avatarImageCustom.rectTransform.localScale = Vector3.one * 2f;
+                        }
+                    });
+                }
+            }
+            if (avatarImage != null)
+                avatarImage.gameObject.SetActive(false);
+        }
+        else if (isCustom)
         {
             if (avatarImageCustom != null)
             {

@@ -830,6 +830,58 @@ public class BackendAuthService : MonoBehaviour
     }
 
     /// <summary>
+    /// Fetches the global leaderboard from the backend.
+    /// </summary>
+    public void GetLeaderboard(int limit, Action<bool, LeaderboardResponse> onComplete)
+    {
+        if (!HasStoredJWT())
+        {
+            onComplete?.Invoke(false, null);
+            return;
+        }
+        StartCoroutine(GetLeaderboardCoroutine(limit, onComplete));
+    }
+
+    private IEnumerator GetLeaderboardCoroutine(int limit, Action<bool, LeaderboardResponse> onComplete)
+    {
+        string url = baseUrl.TrimEnd('/') + "/api/leaderboard?limit=" + limit;
+        string token = GetStoredJWT();
+
+        using (UnityWebRequest request = UnityWebRequest.Get(url))
+        {
+            request.SetRequestHeader("Authorization", "Bearer " + token);
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Leaderboard Result: {request.downloadHandler.text}</color>");
+                try
+                {
+                    LeaderboardResponse response = JsonUtility.FromJson<LeaderboardResponse>(request.downloadHandler.text);
+                    if (response != null && response.success)
+                    {
+                        onComplete?.Invoke(true, response);
+                    }
+                    else
+                    {
+                        onComplete?.Invoke(false, null);
+                    }
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError($"[BackendAuthService] GetLeaderboard Parse Error: {e.Message}");
+                    onComplete?.Invoke(false, null);
+                }
+            }
+            else
+            {
+                Debug.LogError($"[BackendAuthService] GetLeaderboard Error: {request.error}");
+                onComplete?.Invoke(false, null);
+            }
+        }
+    }
+
+    /// <summary>
     /// Fetches the transaction history from the backend.
     /// </summary>
     public void GetTransactionHistory(Action<bool, List<TransactionHistoryItem>> onComplete)
@@ -1079,5 +1131,35 @@ public class BackendAuthService : MonoBehaviour
         public string status;
         public string method;
         public string createdAt;
+    }
+
+    [Serializable]
+    public class LeaderboardResponse
+    {
+        public bool success;
+        public LeaderboardMe me;
+        public List<LeaderboardItem> leaderboard;
+    }
+
+    [Serializable]
+    public class LeaderboardMe
+    {
+        public int rank;
+        public string userId;
+        public string name;
+        public string avatar;
+        public int wins;
+        public int losses;
+    }
+
+    [Serializable]
+    public class LeaderboardItem
+    {
+        public int rank;
+        public string userId;
+        public string name;
+        public string avatar;
+        public int wins;
+        public int losses;
     }
 }
