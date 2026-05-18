@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System;
@@ -120,10 +120,32 @@ public class BranchUniversalObject {
 		}
 		if (data.ContainsKey("metadata")) {
 			if (data["metadata"] != null) {
-				Dictionary<string, object> metaTemp = data["metadata"] as Dictionary<string, object>;
-
-				if (metaTemp != null) {
-					metadata.loadFromDictionary (metaTemp);
+				if (data["metadata"] is Dictionary<string, object> metaTemp)
+				{
+					metadata.loadFromDictionary(metaTemp);
+				}
+				else if (data["metadata"] is string metaJson)
+				{
+					metadata.loadFromJson(metaJson);
+				}
+				else
+				{
+					string rawMetadata = data["metadata"].ToString();
+					if (!string.IsNullOrEmpty(rawMetadata))
+					{
+						if (rawMetadata.TrimStart().StartsWith("{"))
+						{
+							metadata.loadFromJson(rawMetadata);
+						}
+						else
+						{
+							var dict = BranchThirdParty_MiniJSON.Json.Deserialize(rawMetadata) as Dictionary<string, object>;
+							if (dict != null)
+							{
+								metadata.loadFromDictionary(dict);
+							}
+						}
+					}
 				}
 			}
 		}
