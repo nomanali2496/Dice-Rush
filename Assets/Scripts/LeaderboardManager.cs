@@ -60,16 +60,22 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
 
     private void OnPlayerDataUpdated()
     {
+        // Clear the stale cached user data and row data
+        _userData = null;
+        
         if (gameObject.activeInHierarchy)
         {
-            StartCoroutine(UpdateFixedRowDelayed());
+            // Re-fetch the live server rankings instantly
+            LoadRealLeaderboard();
         }
-    }
-    
-    private IEnumerator UpdateFixedRowDelayed()
-    {
-        yield return null;
-        UpdateUserFixedRow();
+        else
+        {
+            // Clear the list so that next time the panel opens, it is forced to do a fresh fetch
+            if (_leaderboardData != null)
+            {
+                _leaderboardData.Clear();
+            }
+        }
     }
     
     private void OnEnable()
@@ -123,14 +129,7 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
         if (scroller != null)
         {
             scroller.Delegate = this;
-            if (_leaderboardData != null && _leaderboardData.Count > 0)
-            {
-                StartCoroutine(ReloadDataDelayed());
-            }
-            else
-            {
-                StartCoroutine(LoadRealLeaderboardDelayed());
-            }
+            StartCoroutine(LoadRealLeaderboardDelayed());
         }
     }
     
@@ -606,7 +605,7 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
                                 userFixedAvatarCustom.sprite = s;
                                 userFixedAvatarCustom.rectTransform.localScale = Vector3.one * 2f;
                             }
-                        });
+                        }, true);
                     }
                 }
                 if (userFixedAvatar != null) userFixedAvatar.gameObject.SetActive(false);

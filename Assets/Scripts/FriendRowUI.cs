@@ -13,13 +13,15 @@ public class FriendRowData
     public string friendId;
     public Sprite avatarSprite;
     public bool isOnline;
+    public string avatarKey;
     
-    public FriendRowData(string friendName, string friendId, Sprite avatarSprite = null, bool isOnline = false)
+    public FriendRowData(string friendName, string friendId, Sprite avatarSprite = null, bool isOnline = false, string avatarKey = "")
     {
         this.friendName = friendName;
         this.friendId = friendId;
         this.avatarSprite = avatarSprite;
         this.isOnline = isOnline;
+        this.avatarKey = avatarKey;
     }
 }
 
@@ -60,7 +62,7 @@ public class FriendRowUI : EnhancedScrollerCellView
         // Apply scaling every time (Enhanced Scroller recycles cells)
         ApplyScaling();
         
-        SetupRow(data.friendName, data.friendId, data.avatarSprite, data.isOnline);
+        SetupRow(data.friendName, data.friendId, data.avatarSprite, data.isOnline, data.avatarKey);
     }
     
     /// <summary>
@@ -97,12 +99,31 @@ public class FriendRowUI : EnhancedScrollerCellView
     /// <param name="friendId">Friend's ID</param>
     /// <param name="avatarSprite">Friend's avatar sprite (optional)</param>
     /// <param name="isOnline">Whether the friend is online</param>
-    public void SetupRow(string friendName, string friendId, Sprite avatarSprite = null, bool isOnline = false)
+    /// <param name="avatarKey">The remote or preset key for the avatar</param>
+    public void SetupRow(string friendName, string friendId, Sprite avatarSprite = null, bool isOnline = false, string avatarKey = "")
     {
         // Setup avatar
         if (avatarImage != null)
         {
-            if (avatarSprite != null)
+            if (!string.IsNullOrEmpty(avatarKey) && avatarKey.StartsWith("http"))
+            {
+                avatarImage.sprite = null; // Clear old/stale
+                avatarImage.enabled = true;
+
+                if (BackendAuthService.Instance != null)
+                {
+                    string targetKey = avatarKey;
+                    BackendAuthService.Instance.GetImage(targetKey, (tex) => {
+                        if (tex != null && this != null && currentData != null && currentData.avatarKey == targetKey)
+                        {
+                            Sprite s = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+                            avatarImage.sprite = s;
+                            avatarImage.enabled = true;
+                        }
+                    });
+                }
+            }
+            else if (avatarSprite != null)
             {
                 avatarImage.sprite = avatarSprite;
                 avatarImage.enabled = true;

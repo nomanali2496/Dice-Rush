@@ -110,10 +110,11 @@ public class LeaderboardRowUI : EnhancedScrollerCellView
                 avatarImageCustom.sprite = null; // Clear old/reused cell sprite
                 avatarImageCustom.gameObject.SetActive(true);
                 
-                // Fetch the remote image asynchronously
+                // Fetch the remote image asynchronously (force-refresh if it's the logged-in user)
                 if (BackendAuthService.Instance != null)
                 {
                     string targetKey = avatarKey; // Closure-local copy
+                    bool isUser = (username == PlayerModel.Name) || (currentData != null && currentData.username == PlayerModel.Name);
                     BackendAuthService.Instance.GetImage(targetKey, (tex) => {
                         if (tex != null && this != null && currentData != null && currentData.avatarKey == targetKey)
                         {
@@ -121,7 +122,7 @@ public class LeaderboardRowUI : EnhancedScrollerCellView
                             avatarImageCustom.sprite = s;
                             avatarImageCustom.rectTransform.localScale = Vector3.one * 2f;
                         }
-                    });
+                    }, isUser);
                 }
             }
             if (avatarImage != null)

@@ -63,26 +63,13 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
         isInitialized = true;
     }
     
-    /// <summary>
-    /// Refreshes the transaction history when GameObject becomes active again
-    /// </summary>
     private void RefreshTransactionHistory()
     {
         // Ensure delegate is set
         if (scroller != null)
         {
             scroller.Delegate = this;
-            
-            // Reload data if we have data (use coroutine to wait for scroller initialization)
-            if (_transactionData != null && _transactionData.Count > 0)
-            {
-                StartCoroutine(ReloadDataDelayed());
-            }
-            else
-            {
-                // If no data, load data
-                StartCoroutine(LoadDataDelayed());
-            }
+            StartCoroutine(LoadDataDelayed());
         }
     }
     

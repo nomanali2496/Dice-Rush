@@ -69,14 +69,11 @@ public class InviteFriendManager : MonoBehaviour, IEnhancedScrollerDelegate
             return;
         }
         
-        // Load data (falling back to test data)
-        StartCoroutine(LoadTestDataDelayed());
+        // Load real data
+        StartCoroutine(LoadRealFriendsDataDelayed());
         isInitialized = true;
     }
     
-    /// <summary>
-    /// Refreshes the friends list when GameObject becomes active again
-    /// </summary>
     private void RefreshFriendsList()
     {
         // Update total invites text immediately
@@ -86,16 +83,7 @@ public class InviteFriendManager : MonoBehaviour, IEnhancedScrollerDelegate
         if (scroller != null)
         {
             scroller.Delegate = this;
-            
-            // Reload data if we have data
-            if (_friendsData != null && _friendsData.Count > 0)
-            {
-                StartCoroutine(ReloadDataDelayed());
-            }
-            else
-            {
-                StartCoroutine(LoadTestDataDelayed());
-            }
+            StartCoroutine(LoadRealFriendsDataDelayed());
         }
     }
     
@@ -114,23 +102,107 @@ public class InviteFriendManager : MonoBehaviour, IEnhancedScrollerDelegate
     }
     
     /// <summary>
-    /// Coroutine to load test data after waiting a frame (ensures scroller is initialized)
+    /// Coroutine to load real friends data after waiting a frame (ensures scroller is initialized)
     /// </summary>
-    private IEnumerator LoadTestDataDelayed()
+    private IEnumerator LoadRealFriendsDataDelayed()
     {
         yield return null; // Wait one frame for scroller to initialize
-        LoadTestData();
+        LoadRealFriendsData();
     }
     
     /// <summary>
-    /// Loads friends data (stub for future socket integration)
+    /// Loads friends data from the backend API.
     /// </summary>
     public void LoadFriendsData()
     {
-        Debug.Log("[InviteFriendManager] Loading friends data (falling back to test data)...");
-        LoadTestData();
+        Debug.Log("[InviteFriendManager] Loading live friends data...");
+        LoadRealFriendsData();
     }
     
+    /// <summary>
+    /// Loads the real friends from the backend. Falls back to test data if offline or failed.
+    /// </summary>
+    public void LoadRealFriendsData()
+    {
+        if (BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
+        {
+            Debug.Log("[InviteFriendManager] Requesting real invite history from backend...");
+            BackendAuthService.Instance.GetInviteHistory((success, list) =>
+            {
+                if (success && list != null)
+                {
+                    PopulateRealFriendsData(list);
+                }
+                else
+                {
+                    Debug.LogWarning("[InviteFriendManager] Backend invite history fetch failed. Falling back to test data.");
+                    LoadTestData();
+                }
+            });
+        }
+        else
+        {
+            Debug.Log("[InviteFriendManager] No active JWT or BackendAuthService missing. Loading test data.");
+            LoadTestData();
+        }
+    }
+
+    /// <summary>
+    /// Populates real friends list data parsed from the backend API.
+    /// </summary>
+    private void PopulateRealFriendsData(System.Collections.Generic.List<BackendAuthService.InviteHistoryItem> list)
+    {
+        if (_friendsData == null)
+        {
+            _friendsData = new SmallList<FriendRowData>();
+        }
+        else
+        {
+            _friendsData.Clear();
+        }
+
+        foreach (var item in list)
+        {
+            string friendName = item.name;
+            string friendId = item.userId;
+            bool isOnline = item.isOnline;
+            
+            // Map preset or URL
+            Sprite avatarSprite = null;
+            string avatarKey = item.avatar;
+
+            if (string.IsNullOrEmpty(avatarKey) || !avatarKey.StartsWith("http"))
+            {
+                // Preset key
+                if (avatarKey == "avatarGirl" && testAvatars != null && testAvatars.Length > 1)
+                {
+                    avatarSprite = testAvatars[1];
+                }
+                else if (testAvatars != null && testAvatars.Length > 0)
+                {
+                    avatarSprite = testAvatars[0];
+                }
+            }
+
+            _friendsData.Add(new FriendRowData(friendName, friendId, avatarSprite, isOnline, avatarKey));
+        }
+
+        // Reload the scroller with new data (only if scroller is active and initialized)
+        if (scroller != null && scroller.gameObject.activeInHierarchy)
+        {
+            if (scroller.Delegate == null)
+            {
+                scroller.Delegate = this;
+            }
+            scroller.ReloadData();
+        }
+        
+        // Update total invites text
+        UpdateTotalInvitesText();
+        
+        Debug.Log($"[InviteFriendManager] Loaded {_friendsData.Count} real friends");
+    }
+
     /// <summary>
     /// Loads test friends data for testing purposes
     /// </summary>

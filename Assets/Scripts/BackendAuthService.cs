@@ -775,12 +775,12 @@ public class BackendAuthService : MonoBehaviour
     /// Downloads an image from a URL. Centralizes networking logic away from UI scripts.
     /// Uses in-flight tracking and caching to prevent duplicate network requests.
     /// </summary>
-    public void GetImage(string url, Action<Texture2D> onComplete)
+    public void GetImage(string url, Action<Texture2D> onComplete, bool forceRefresh = false)
     {
         if (string.IsNullOrEmpty(url)) return;
 
-        // 1. Check if already cached
-        if (_imageCache.TryGetValue(url, out Texture2D cachedTexture) && cachedTexture != null)
+        // 1. Check if already cached (skip if forcing refresh)
+        if (!forceRefresh && _imageCache.TryGetValue(url, out Texture2D cachedTexture) && cachedTexture != null)
         {
             onComplete?.Invoke(cachedTexture);
             return;
@@ -795,7 +795,7 @@ public class BackendAuthService : MonoBehaviour
 
         // 3. Start a new download
         _inFlightImageRequests[url] = new List<Action<Texture2D>> { onComplete };
-        Debug.Log($"<color=#00ffff>[BackendAuthService] GET Request (Image): {url}</color>");
+        Debug.Log($"<color=#00ffff>[BackendAuthService] GET Request (Image) [ForceRefresh: {forceRefresh}]: {url}</color>");
         StartCoroutine(GetImageCoroutine(url));
     }
 
@@ -876,6 +876,100 @@ public class BackendAuthService : MonoBehaviour
             else
             {
                 Debug.LogError($"[BackendAuthService] GetLeaderboard Error: {request.error}");
+                onComplete?.Invoke(false, null);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Submits the inviter ID (from Branch deep link) to the backend.
+    /// </summary>
+    public void SubmitInviter(string inviterId, Action<bool> onComplete)
+    {
+        if (!HasStoredJWT() || string.IsNullOrEmpty(inviterId))
+        {
+            onComplete?.Invoke(false);
+            return;
+        }
+        StartCoroutine(SubmitInviterCoroutine(inviterId, onComplete));
+    }
+
+    private IEnumerator SubmitInviterCoroutine(string inviterId, Action<bool> onComplete)
+    {
+        string url = baseUrl.TrimEnd('/') + "/api/invites/invitedby";
+        string token = GetStoredJWT();
+        string jsonPayload = "{\"inviterId\":\"" + inviterId + "\"}";
+
+        using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+        {
+            byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonPayload);
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+            request.SetRequestHeader("Authorization", "Bearer " + token);
+
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Submit Inviter Result: {request.downloadHandler.text}</color>");
+                onComplete?.Invoke(true);
+            }
+            else
+            {
+                Debug.LogError($"[BackendAuthService] SubmitInviter Error: {request.error}");
+                onComplete?.Invoke(false);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Fetches the invite history from the backend.
+    /// </summary>
+    public void GetInviteHistory(Action<bool, List<InviteHistoryItem>> onComplete)
+    {
+        if (!HasStoredJWT())
+        {
+            onComplete?.Invoke(false, null);
+            return;
+        }
+        StartCoroutine(GetInviteHistoryCoroutine(onComplete));
+    }
+
+    private IEnumerator GetInviteHistoryCoroutine(Action<bool, List<InviteHistoryItem>> onComplete)
+    {
+        string url = baseUrl.TrimEnd('/') + "/api/invites/history";
+        string token = GetStoredJWT();
+
+        using (UnityWebRequest request = UnityWebRequest.Get(url))
+        {
+            request.SetRequestHeader("Authorization", "Bearer " + token);
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Invite History Result: {request.downloadHandler.text}</color>");
+                try
+                {
+                    InviteHistoryResponse response = JsonUtility.FromJson<InviteHistoryResponse>(request.downloadHandler.text);
+                    if (response != null && response.success)
+                    {
+                        onComplete?.Invoke(true, response.data);
+                    }
+                    else
+                    {
+                        onComplete?.Invoke(false, null);
+                    }
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError($"[BackendAuthService] GetInviteHistory Parse Error: {e.Message}");
+                    onComplete?.Invoke(false, null);
+                }
+            }
+            else
+            {
+                Debug.LogError($"[BackendAuthService] GetInviteHistory Error: {request.error}");
                 onComplete?.Invoke(false, null);
             }
         }
@@ -1161,5 +1255,32 @@ public class BackendAuthService : MonoBehaviour
         public string avatar;
         public int wins;
         public int losses;
+    }
+
+    [Serializable]
+    public class InvitedByResponse
+    {
+        public bool success;
+        public bool alreadyAssigned;
+    }
+
+    [Serializable]
+    public class InviteHistoryResponse
+    {
+        public bool success;
+        public int count;
+        public List<InviteHistoryItem> data;
+    }
+
+    [Serializable]
+    public class InviteHistoryItem
+    {
+        public string userId;
+        public string name;
+        public string avatar;
+        public int wins;
+        public int losses;
+        public bool isOnline;
+        public string joinedAt;
     }
 }

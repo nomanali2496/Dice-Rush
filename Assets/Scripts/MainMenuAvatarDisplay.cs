@@ -26,7 +26,7 @@ public class MainMenuAvatarDisplay : MonoBehaviour
         if (selectCustomImageButton != null)
             selectCustomImageButton.onClick.AddListener(OnSelectCustomImageClicked);
             
-        PlayerModel.OnDataUpdated += Refresh;
+        PlayerModel.OnDataUpdated += OnPlayerModelUpdated;
         Refresh();
     }
     
@@ -35,7 +35,12 @@ public class MainMenuAvatarDisplay : MonoBehaviour
         if (autoRefreshOnEnable) Refresh();
     }
     
-    private void OnDestroy() => PlayerModel.OnDataUpdated -= Refresh;
+    private void OnDestroy() => PlayerModel.OnDataUpdated -= OnPlayerModelUpdated;
+
+    private void OnPlayerModelUpdated()
+    {
+        Refresh(true);
+    }
 
     /// <summary>
     /// Update display based on PlayerModel data.
@@ -43,10 +48,15 @@ public class MainMenuAvatarDisplay : MonoBehaviour
     /// </summary>
     public void Refresh()
     {
+        Refresh(false);
+    }
+
+    public void Refresh(bool force)
+    {
         string avatarData = PlayerModel.Avatar;
 
-        // Skip redundant updates
-        if (avatarData == lastAvatarData && GetCurrentAvatarSprite() != null) return;
+        // Skip redundant updates unless forced
+        if (!force && avatarData == lastAvatarData && GetCurrentAvatarSprite() != null) return;
         lastAvatarData = avatarData;
 
         if (string.IsNullOrEmpty(avatarData))
@@ -62,7 +72,7 @@ public class MainMenuAvatarDisplay : MonoBehaviour
                     Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
                     ShowCustom(sprite);
                 }
-            });
+            }, force);
         }
         else if (int.TryParse(avatarData, out int index))
         {

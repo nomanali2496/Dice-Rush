@@ -96,79 +96,97 @@ public class BranchInit : MonoBehaviour
 
         Debug.Log("[BranchInit] Processing deep link data...");
         
-        // Check if this is a first-time open from a Branch link
         bool isFirstSession = false;
         bool clickedBranchLink = false;
         
-        if (linkProps.controlParams.ContainsKey("+is_first_session"))
-        {
-            object firstSessionValue = linkProps.controlParams["+is_first_session"];
-            if (firstSessionValue is bool)
-            {
-                isFirstSession = (bool)firstSessionValue;
-            }
-            else if (firstSessionValue is string)
-            {
-                bool.TryParse((string)firstSessionValue, out isFirstSession);
-            }
-        }
-        
+        // 1. Try reading clicked status from controlParams
         if (linkProps.controlParams.ContainsKey("+clicked_branch_link"))
         {
             object clickedValue = linkProps.controlParams["+clicked_branch_link"];
-            if (clickedValue is bool)
+            if (clickedValue is bool) clickedBranchLink = (bool)clickedValue;
+            else if (clickedValue is string) bool.TryParse((string)clickedValue, out clickedBranchLink);
+        }
+        if (linkProps.controlParams.ContainsKey("+is_first_session"))
+        {
+            object firstSessionValue = linkProps.controlParams["+is_first_session"];
+            if (firstSessionValue is bool) isFirstSession = (bool)firstSessionValue;
+            else if (firstSessionValue is string) bool.TryParse((string)firstSessionValue, out isFirstSession);
+        }
+        
+        // 2. Try reading clicked status from universalObject metadata (since Android bridge serializes it here)
+        if (buo != null && buo.metadata != null)
+        {
+            Dictionary<string, string> customMetadata = buo.metadata.GetCustomMetadata();
+            if (customMetadata != null)
             {
-                clickedBranchLink = (bool)clickedValue;
-            }
-            else if (clickedValue is string)
-            {
-                bool.TryParse((string)clickedValue, out clickedBranchLink);
+                if (customMetadata.ContainsKey("+clicked_branch_link"))
+                {
+                    bool.TryParse(customMetadata["+clicked_branch_link"], out bool clicked);
+                    if (clicked) clickedBranchLink = true;
+                }
+                if (customMetadata.ContainsKey("+is_first_session"))
+                {
+                    bool.TryParse(customMetadata["+is_first_session"], out bool first);
+                    if (first) isFirstSession = true;
+                }
             }
         }
         
-        // If this is first session from Branch link, save referral data
-        if (isFirstSession && clickedBranchLink)
+        // Extract referrer information from either source
+        string inviterUserId = null;
+        string inviterName = null;
+        
+        // Try controlParams first
+        if (linkProps.controlParams.ContainsKey("inviter_user_id"))
         {
-            Debug.Log("[BranchInit] 🎉 First-time open from Branch link detected!");
-            
-            // Extract referrer information
-            string inviterPlayFabId = null;
-            string inviterName = null;
-            
-            // Try to get from control params first
-            if (linkProps.controlParams.ContainsKey("inviter_playfab_id"))
+            inviterUserId = linkProps.controlParams["inviter_user_id"].ToString();
+        }
+        else if (linkProps.controlParams.ContainsKey("inviter_playfab_id"))
+        {
+            inviterUserId = linkProps.controlParams["inviter_playfab_id"].ToString();
+        }
+        
+        if (linkProps.controlParams.ContainsKey("inviter_name"))
+        {
+            inviterName = linkProps.controlParams["inviter_name"].ToString();
+        }
+        
+        // Fallback to buo.metadata custom metadata dictionary
+        if (buo != null && buo.metadata != null)
+        {
+            Dictionary<string, string> customMetadata = buo.metadata.GetCustomMetadata();
+            if (customMetadata != null)
             {
-                inviterPlayFabId = linkProps.controlParams["inviter_playfab_id"].ToString();
-            }
-            else if (buo != null && buo.metadata != null)
-            {
-                // Try to get from universal object metadata
-                Dictionary<string, string> customMetadata = buo.metadata.GetCustomMetadata();
-                if (customMetadata != null && customMetadata.ContainsKey("inviter_playfab_id"))
+                if (string.IsNullOrEmpty(inviterUserId))
                 {
-                    inviterPlayFabId = customMetadata["inviter_playfab_id"];
+                    if (customMetadata.ContainsKey("inviter_user_id"))
+                    {
+                        inviterUserId = customMetadata["inviter_user_id"];
+                    }
+                    else if (customMetadata.ContainsKey("inviter_playfab_id"))
+                    {
+                        inviterUserId = customMetadata["inviter_playfab_id"];
+                    }
                 }
-            }
-            
-            if (linkProps.controlParams.ContainsKey("inviter_name"))
-            {
-                inviterName = linkProps.controlParams["inviter_name"].ToString();
-            }
-            else if (buo != null && buo.metadata != null)
-            {
-                Dictionary<string, string> customMetadata = buo.metadata.GetCustomMetadata();
-                if (customMetadata != null && customMetadata.ContainsKey("inviter_name"))
+                if (string.IsNullOrEmpty(inviterName) && customMetadata.ContainsKey("inviter_name"))
                 {
                     inviterName = customMetadata["inviter_name"];
                 }
             }
+        }
+        
+        // Save referral data if the app was opened via a Branch link click
+        if (clickedBranchLink)
+        {
+            Debug.Log("[BranchInit] 🎉 Branch deep link click detected!");
             
-            if (!string.IsNullOrEmpty(inviterPlayFabId))
+            if (!string.IsNullOrEmpty(inviterUserId))
             {
-                Debug.Log($"[BranchInit] Referrer found - ID: {inviterPlayFabId}, Name: {inviterName ?? "Unknown"}");
+                Debug.Log($"[BranchInit] Referrer found - ID: {inviterUserId}, Name: {inviterName ?? "Unknown"}");
                 
-                // Store referral data temporarily until PlayFab login completes
-                PlayerPrefs.SetString("PendingReferrerPlayFabId", inviterPlayFabId);
+                // Store referral data temporarily until login completes
+                PlayerPrefs.SetString("PendingReferrerUserId", inviterUserId);
+                PlayerPrefs.SetString("PendingReferrerPlayFabId", inviterUserId);
                 if (!string.IsNullOrEmpty(inviterName))
                 {
                     PlayerPrefs.SetString("PendingReferrerName", inviterName);
@@ -176,24 +194,37 @@ public class BranchInit : MonoBehaviour
                 PlayerPrefs.SetInt("HasPendingReferral", 1);
                 PlayerPrefs.Save();
                 
-                Debug.Log("[BranchInit] Referral data saved. Will be processed after PlayFab login.");
+                Debug.Log("[BranchInit] Referral data saved. Will be processed after login.");
                 
                 // Try to process referral if already logged in
                 if (BackendAuthService.HasStoredJWT() && !string.IsNullOrEmpty(PlayerModel.Id))
                 {
-                    ProcessReferralAfterLogin(inviterPlayFabId, inviterName);
+                    ProcessReferralAfterLogin(inviterUserId, inviterName);
                 }
             }
             else
             {
-                Debug.LogWarning("[BranchInit] No referrer information found in Branch link");
+                Debug.LogWarning("[BranchInit] No referrer information found in Branch link custom metadata or params");
             }
         }
         
         // Check if user came from an invite link
+        string inviteType = null;
         if (linkProps.controlParams.ContainsKey("invite_type"))
         {
-            string inviteType = linkProps.controlParams["invite_type"].ToString();
+            inviteType = linkProps.controlParams["invite_type"].ToString();
+        }
+        else if (buo != null && buo.metadata != null)
+        {
+            Dictionary<string, string> customMetadata = buo.metadata.GetCustomMetadata();
+            if (customMetadata != null && customMetadata.ContainsKey("invite_type"))
+            {
+                inviteType = customMetadata["invite_type"];
+            }
+        }
+        
+        if (!string.IsNullOrEmpty(inviteType))
+        {
             Debug.Log($"[BranchInit] 🎁 Invite detected! Type: {inviteType}");
         }
         
@@ -205,10 +236,9 @@ public class BranchInit : MonoBehaviour
     }
     
     /// <summary>
-    /// Process referral after PlayFab login completes
-    /// This should be called from PlayFabManager after login
+    /// Process referral after backend login completes
     /// </summary>
-    public void ProcessReferralAfterLogin(string inviterPlayFabId, string inviterName = null)
+    public void ProcessReferralAfterLogin(string inviterId, string inviterName = null)
     {
         if (!BackendAuthService.HasStoredJWT() || string.IsNullOrEmpty(PlayerModel.Id))
         {
@@ -216,66 +246,57 @@ public class BranchInit : MonoBehaviour
             return;
         }
         
-        string currentUserPlayFabId = PlayerModel.Id;
-        if (string.IsNullOrEmpty(currentUserPlayFabId))
-        {
-            Debug.LogWarning("[BranchInit] Cannot process referral - no player ID");
-            return;
-        }
+        string currentUserId = PlayerModel.Id;
         
         // Don't process if user referred themselves
-        if (currentUserPlayFabId == inviterPlayFabId)
+        if (currentUserId == inviterId)
         {
             Debug.Log("[BranchInit] User cannot refer themselves - skipping referral");
             return;
         }
         
-        Debug.Log($"[BranchInit] Processing referral: {currentUserPlayFabId} was referred by {inviterPlayFabId}");
+        Debug.Log($"[BranchInit] Processing referral: {currentUserId} was referred by {inviterId}");
         
-        // TODO: Implement SaveReferralData in BackendAuthService
-        Debug.Log("[BranchInit] Referral saving to custom backend is not implemented yet.");
-        
-        // Clear pending referral flags (assuming success for now to avoid repeat logs)
-        PlayerPrefs.DeleteKey("PendingReferrerPlayFabId");
-        PlayerPrefs.DeleteKey("PendingReferrerName");
-        PlayerPrefs.DeleteKey("HasPendingReferral");
-        PlayerPrefs.Save();
-/*
-        PlayFabManager.Instance.SaveReferralData(inviterPlayFabId, inviterName, (success) =>
+        if (BackendAuthService.Instance != null)
         {
-            if (success)
-            {
-                Debug.Log("[BranchInit] ✅ Referral data saved to PlayFab successfully!");
+            BackendAuthService.Instance.SubmitInviter(inviterId, (success) => {
+                if (success)
+                {
+                    Debug.Log("[BranchInit] ✅ Referral inviter assigned successfully!");
+                }
+                else
+                {
+                    Debug.LogWarning("[BranchInit] Referral inviter assignment failed or was already assigned.");
+                }
                 
                 // Clear pending referral flags
+                PlayerPrefs.DeleteKey("PendingReferrerUserId");
                 PlayerPrefs.DeleteKey("PendingReferrerPlayFabId");
                 PlayerPrefs.DeleteKey("PendingReferrerName");
                 PlayerPrefs.DeleteKey("HasPendingReferral");
                 PlayerPrefs.Save();
-            }
-            else
-            {
-                Debug.LogError("[BranchInit] ❌ Failed to save referral data to PlayFab");
-            }
-        });
-*/
+            });
+        }
     }
     
     /// <summary>
-    /// Check for pending referral after PlayFab login
-    /// Call this from PlayFabManager after successful login
+    /// Check for pending referral after backend login
     /// </summary>
     public void CheckPendingReferral()
     {
         if (PlayerPrefs.GetInt("HasPendingReferral", 0) == 1)
         {
-            string inviterPlayFabId = PlayerPrefs.GetString("PendingReferrerPlayFabId", "");
+            string inviterId = PlayerPrefs.GetString("PendingReferrerUserId", "");
+            if (string.IsNullOrEmpty(inviterId))
+            {
+                inviterId = PlayerPrefs.GetString("PendingReferrerPlayFabId", "");
+            }
             string inviterName = PlayerPrefs.GetString("PendingReferrerName", "");
             
-            if (!string.IsNullOrEmpty(inviterPlayFabId))
+            if (!string.IsNullOrEmpty(inviterId))
             {
                 Debug.Log("[BranchInit] Found pending referral, processing now...");
-                ProcessReferralAfterLogin(inviterPlayFabId, inviterName);
+                ProcessReferralAfterLogin(inviterId, inviterName);
             }
         }
     }
@@ -314,17 +335,19 @@ public class BranchInit : MonoBehaviour
             // Add current user's ID and name to the invite link
             if (BackendAuthService.HasStoredJWT() && !string.IsNullOrEmpty(PlayerModel.Id))
             {
-                string inviterPlayFabId = PlayerModel.Id;
+                string inviterUserId = PlayerModel.Id;
                 string inviterName = !string.IsNullOrEmpty(PlayerModel.Name) ? PlayerModel.Name : "Player";
                 
-                universalObject.metadata.AddCustomMetadata("inviter_playfab_id", inviterPlayFabId);
+                universalObject.metadata.AddCustomMetadata("inviter_user_id", inviterUserId);
+                universalObject.metadata.AddCustomMetadata("inviter_playfab_id", inviterUserId);
                 universalObject.metadata.AddCustomMetadata("inviter_name", inviterName);
                 
                 // Also add to control params so it's easily accessible
-                linkProperties.controlParams.Add("inviter_playfab_id", inviterPlayFabId);
+                linkProperties.controlParams.Add("inviter_user_id", inviterUserId);
+                linkProperties.controlParams.Add("inviter_playfab_id", inviterUserId);
                 linkProperties.controlParams.Add("inviter_name", inviterName);
                 
-                Debug.Log($"[BranchInit] Added referrer info to invite link - ID: {inviterPlayFabId}, Name: {inviterName}");
+                Debug.Log($"[BranchInit] Added referrer info to invite link - ID: {inviterUserId}, Name: {inviterName}");
             }
             else
             {
