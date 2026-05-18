@@ -58,8 +58,8 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
             return;
         }
         
-        // Load test data on start (use coroutine to wait for scroller initialization)
-        StartCoroutine(LoadTestDataDelayed());
+        // Load data on start (use coroutine to wait for scroller initialization)
+        StartCoroutine(LoadDataDelayed());
         isInitialized = true;
     }
     
@@ -80,8 +80,8 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
             }
             else
             {
-                // If no data, load test data
-                StartCoroutine(LoadTestDataDelayed());
+                // If no data, load data
+                StartCoroutine(LoadDataDelayed());
             }
         }
     }
@@ -99,14 +99,103 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
     }
     
     /// <summary>
-    /// Coroutine to load test data after waiting a frame (ensures scroller is initialized)
+    /// Coroutine to load data after waiting a frame (ensures scroller is initialized)
     /// </summary>
-    private IEnumerator LoadTestDataDelayed()
+    private IEnumerator LoadDataDelayed()
     {
         yield return null; // Wait one frame for scroller to initialize
-        LoadTestData();
+        LoadTransactionHistory();
     }
-    
+
+    /// <summary>
+    /// Loads transaction history data, falling back to test data if the API call fails or is not logged in.
+    /// </summary>
+    public void LoadTransactionHistory()
+    {
+        if (BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
+        {
+            Debug.Log("[AccountManager] Requesting transaction history from backend...");
+            BackendAuthService.Instance.GetTransactionHistory((success, items) =>
+            {
+                if (success && items != null)
+                {
+                    PopulateRealData(items);
+                }
+                else
+                {
+                    Debug.LogWarning("[AccountManager] Backend transaction history load failed. Falling back to test data.");
+                    LoadTestData();
+                }
+            });
+        }
+        else
+        {
+            Debug.Log("[AccountManager] No active JWT or BackendAuthService missing. Loading test data.");
+            LoadTestData();
+        }
+    }
+
+    /// <summary>
+    /// Populates real transaction history data parsed from the backend API.
+    /// </summary>
+    private void PopulateRealData(System.Collections.Generic.List<BackendAuthService.TransactionHistoryItem> items)
+    {
+        if (_transactionData == null)
+        {
+            _transactionData = new SmallList<TransactionHistoryRowData>();
+        }
+        else
+        {
+            _transactionData.Clear();
+        }
+
+        foreach (var item in items)
+        {
+            // Parse date from ISO timestamp (e.g. "2026-05-18T10:22:45.000Z")
+            string dateString = "";
+            if (System.DateTime.TryParse(item.createdAt, out System.DateTime parsedDate))
+            {
+                dateString = parsedDate.ToString("MM/dd/yy");
+            }
+            else
+            {
+                dateString = System.DateTime.Now.ToString("MM/dd/yy"); // fallback
+            }
+
+            // Map status string to TransactionStatus enum
+            TransactionStatus status = TransactionStatus.Pending;
+            if (!string.IsNullOrEmpty(item.status))
+            {
+                string statusLower = item.status.ToLower();
+                if (statusLower == "successful" || statusLower == "success" || statusLower == "completed")
+                {
+                    status = TransactionStatus.Successful;
+                }
+                else if (statusLower == "cancelled" || statusLower == "cancel" || statusLower == "failed")
+                {
+                    status = TransactionStatus.Cancel;
+                }
+            }
+
+            _transactionData.Add(new TransactionHistoryRowData(dateString, item.amount, status));
+        }
+
+        // Sort by date (newest first)
+        SortTransactionsByDate();
+
+        // Reload scroller
+        if (scroller != null && scroller.gameObject.activeInHierarchy)
+        {
+            if (scroller.Delegate == null)
+            {
+                scroller.Delegate = this;
+            }
+            scroller.ReloadData();
+        }
+
+        Debug.Log($"[AccountManager] Successfully loaded {items.Count} real transactions from backend");
+    }
+
     /// <summary>
     /// Loads test transaction history data for testing purposes
     /// </summary>

@@ -8139,25 +8139,33 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8266724459619458920, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
+      propertyPath: backgroundImage
+      value: 
+      objectReference: {fileID: 614309186}
+    - target: {fileID: 8266724459619458920, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
+      propertyPath: unselectedOverlayImage
+      value: 
+      objectReference: {fileID: 1883938211}
+    - target: {fileID: 8266724459619458920, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
       propertyPath: spriteMappings.Array.size
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8266724459619458920, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
       propertyPath: spriteMappings.Array.data[6].sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 007fa645c889ab247be4b13c44743f09, type: 3}
+      objectReference: {fileID: 21300000, guid: 5dfa3529cfbaec34aa3cc0bb7e900516, type: 3}
     - target: {fileID: 8266724459619458920, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
       propertyPath: spriteMappings.Array.data[7].sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 007fa645c889ab247be4b13c44743f09, type: 3}
+      objectReference: {fileID: 21300000, guid: 5c87fde5146317648be2567ad90db9f9, type: 3}
     - target: {fileID: 8266724459619458920, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
       propertyPath: spriteMappings.Array.data[8].sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 007fa645c889ab247be4b13c44743f09, type: 3}
+      objectReference: {fileID: 21300000, guid: 665f009c80cbb1d4db44755c616e13d7, type: 3}
     - target: {fileID: 8266724459619458920, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
       propertyPath: spriteMappings.Array.data[9].sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 007fa645c889ab247be4b13c44743f09, type: 3}
+      objectReference: {fileID: 21300000, guid: 71de092f54cfa254faaa2626650f0f94, type: 3}
     - target: {fileID: 8266724459619458920, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
       propertyPath: spriteMappings.Array.data[10].sprite
       value: 
@@ -8165,7 +8173,7 @@ PrefabInstance:
     - target: {fileID: 8266724459619458920, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
       propertyPath: spriteMappings.Array.data[11].sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 874790312afe6f7408330eed790e0d2e, type: 3}
+      objectReference: {fileID: 21300000, guid: db6253f65d5ccca4dae0ee4c4c10f8ba, type: 3}
     - target: {fileID: 8266724459619458920, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
       propertyPath: spriteMappings.Array.data[6].lobbyId
       value: the-yatch-club
@@ -8180,7 +8188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8266724459619458920, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
       propertyPath: spriteMappings.Array.data[9].lobbyId
-      value: roll-on-the-beach
+      value: treasure-roll
       objectReference: {fileID: 0}
     - target: {fileID: 8266724459619458920, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
       propertyPath: spriteMappings.Array.data[10].lobbyId
@@ -19912,6 +19920,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 612922860}
   m_CullTransparentMesh: 1
+--- !u!114 &614309186 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4649618190832133618, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
+  m_PrefabInstance: {fileID: 231189515}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1001 &617115564
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56670,6 +56689,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28afc967a8d16574cb6cccc535fdfbff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickButtonSound
+--- !u!114 &1883938211 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4339345833458865914, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
+  m_PrefabInstance: {fileID: 231189515}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &1886133718
 GameObject:
   m_ObjectHideFlags: 0

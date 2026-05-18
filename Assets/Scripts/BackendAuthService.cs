@@ -830,6 +830,58 @@ public class BackendAuthService : MonoBehaviour
     }
 
     /// <summary>
+    /// Fetches the transaction history from the backend.
+    /// </summary>
+    public void GetTransactionHistory(Action<bool, List<TransactionHistoryItem>> onComplete)
+    {
+        if (!HasStoredJWT())
+        {
+            onComplete?.Invoke(false, null);
+            return;
+        }
+        StartCoroutine(GetTransactionHistoryCoroutine(onComplete));
+    }
+
+    private IEnumerator GetTransactionHistoryCoroutine(Action<bool, List<TransactionHistoryItem>> onComplete)
+    {
+        string url = baseUrl.TrimEnd('/') + "/api/wallet/history";
+        string token = GetStoredJWT();
+
+        using (UnityWebRequest request = UnityWebRequest.Get(url))
+        {
+            request.SetRequestHeader("Authorization", "Bearer " + token);
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Transaction History Result: {request.downloadHandler.text}</color>");
+                try
+                {
+                    TransactionHistoryResponse response = JsonUtility.FromJson<TransactionHistoryResponse>(request.downloadHandler.text);
+                    if (response != null && response.success)
+                    {
+                        onComplete?.Invoke(true, response.data);
+                    }
+                    else
+                    {
+                        onComplete?.Invoke(false, null);
+                    }
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError($"[BackendAuthService] GetTransactionHistory Parse Error: {e.Message}");
+                    onComplete?.Invoke(false, null);
+                }
+            }
+            else
+            {
+                Debug.LogError($"[BackendAuthService] GetTransactionHistory Error: {request.error}");
+                onComplete?.Invoke(false, null);
+            }
+        }
+    }
+
+    /// <summary>
     /// Fetches the daily offers from the backend.
     /// </summary>
     public void GetDailyOffers(Action<bool, DailyOffersResponse> onComplete)
@@ -1009,5 +1061,23 @@ public class BackendAuthService : MonoBehaviour
         public float thirdPlaceCash;
         public int thirdPlaceChips;
         public bool enabled;
+    }
+
+    [Serializable]
+    public class TransactionHistoryResponse
+    {
+        public bool success;
+        public List<TransactionHistoryItem> data;
+    }
+
+    [Serializable]
+    public class TransactionHistoryItem
+    {
+        public string id;
+        public float amount;
+        public string type;
+        public string status;
+        public string method;
+        public string createdAt;
     }
 }

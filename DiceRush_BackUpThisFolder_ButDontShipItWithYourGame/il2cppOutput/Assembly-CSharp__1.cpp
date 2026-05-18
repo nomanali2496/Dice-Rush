@@ -3000,6 +3000,7 @@ struct GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6  : public M
 struct SocketManager_tFA162C4D30D5A71D0A5F10FDA0CF83B2B1101650  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
 	SocketManager_t9C12BA984FC53ED71043411FFEEEE4794A8C8AFB* ___ioManager;
+	Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* ___internetMonitorCoroutine;
 	String_t* ___serverUrl;
 };
 struct UIBehaviour_tB9D4295827BD2EEDEF0749200C6CA7090C742A9D  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
@@ -4621,8 +4622,6 @@ inline AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* JsonUtility_FromJ
 {
 	return ((  AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* (*) (String_t*, const RuntimeMethod*))JsonUtility_FromJson_TisRuntimeObject_m0CCF0FE109BF4C85AECC9C5D0DBB43422A24FB40_gshared)(___0_json, method);
 }
-IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR SocketManager_tFA162C4D30D5A71D0A5F10FDA0CF83B2B1101650* SocketManager_get_Instance_mFAF3D466262B9D9A471AB4FF8165EACB053F8CBC_inline (const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SocketManager_ConnectToServer_m0F05BC97902DFBE299CC7D4C9A7A0AF78E61A0BD (SocketManager_tFA162C4D30D5A71D0A5F10FDA0CF83B2B1101650* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGuestLoginCoroutineU3Ed__20_U3CU3Em__Finally1_m6F6944D5CE0F3DBDACCD7552FCA51F60EF99248D (U3CGuestLoginCoroutineU3Ed__20_tB50AAD53DB55B8E07DD4EC1376345C96771E1A99* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGuestLoginCoroutineU3Ed__20_System_IDisposable_Dispose_mEB3FDEE3E66014342F8DC747904DC0CF359C5313 (U3CGuestLoginCoroutineU3Ed__20_tB50AAD53DB55B8E07DD4EC1376345C96771E1A99* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UploadHandlerRaw__ctor_m168C957B67E29CB3072E3542044D37E2F16C42B7 (UploadHandlerRaw_t0A24CF320CDF16F1BC6C5C086DE71A1908CBB91A* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_data, const RuntimeMethod* method) ;
@@ -4631,6 +4630,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoginCoroutineU3Ed__18_U3CU3Em__Final
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoginCoroutineU3Ed__18_System_IDisposable_Dispose_mDEE1F40D4290765C427EB6453A32BCCE30884A9F (U3CLoginCoroutineU3Ed__18_t607AC587B349729AF10A327483A062FDEDED29F1* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLogoutCoroutineU3Ed__14_U3CU3Em__Finally1_m7F14840B7F99C11F8A2707D9B89D90738E54E163 (U3CLogoutCoroutineU3Ed__14_tB4D8BD40815F0AA11DC3225A3F48B959E414A3A9* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLogoutCoroutineU3Ed__14_System_IDisposable_Dispose_mF39BC368F018614FF7FC8A36CBA6C19FD9436C97 (U3CLogoutCoroutineU3Ed__14_tB4D8BD40815F0AA11DC3225A3F48B959E414A3A9* __this, const RuntimeMethod* method) ;
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR SocketManager_tFA162C4D30D5A71D0A5F10FDA0CF83B2B1101650* SocketManager_get_Instance_mFAF3D466262B9D9A471AB4FF8165EACB053F8CBC_inline (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SocketManager_Disconnect_m330C476C6998F28DA27408F8DDFB7C8F0B02A266 (SocketManager_tFA162C4D30D5A71D0A5F10FDA0CF83B2B1101650* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRegisterCoroutineU3Ed__16_U3CU3Em__Finally1_m84A44D931A8D14D4C7121465B62F95B3F3E9B2D0 (U3CRegisterCoroutineU3Ed__16_tABAB89455B01D6E74FE6A1B0D334324A415F91F6* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRegisterCoroutineU3Ed__16_System_IDisposable_Dispose_mD20F335802FCDBCF3E5C164622DAF0A0D63E5EFF (U3CRegisterCoroutineU3Ed__16_tABAB89455B01D6E74FE6A1B0D334324A415F91F6* __this, const RuntimeMethod* method) ;
@@ -4649,7 +4649,7 @@ inline void List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4 (List
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92338
+// Method Definition Index: 88157
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsInitManager_InitButton_m91585B7DDF180D6DC885ED0698860F4C2BC55C4E (FBWindowsInitManager_t6CE7789E68FC5CDE6A9164B0B8D010DE826B31F8* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4692,7 +4692,7 @@ IL_0026:
 		return;
 	}
 }
-// Method Definition Index: 92339
+// Method Definition Index: 88158
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsInitManager_InitCallback_m9C355A126124B28332B2E50C87AEF92353909500 (FBWindowsInitManager_t6CE7789E68FC5CDE6A9164B0B8D010DE826B31F8* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4742,7 +4742,7 @@ IL_002c:
 		return;
 	}
 }
-// Method Definition Index: 92340
+// Method Definition Index: 88159
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsInitManager_OnHideUnity_mEA7D93BF70509FD8D85613E7B328F21047B09C40 (FBWindowsInitManager_t6CE7789E68FC5CDE6A9164B0B8D010DE826B31F8* __this, bool ___0_isGameShown, const RuntimeMethod* method) 
 {
 	{
@@ -4767,7 +4767,7 @@ IL_000e:
 		return;
 	}
 }
-// Method Definition Index: 92341
+// Method Definition Index: 88160
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsInitManager__ctor_mE3DF8EE9E8FA9BE75F842720E968914DE8D45C8D (FBWindowsInitManager_t6CE7789E68FC5CDE6A9164B0B8D010DE826B31F8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4783,7 +4783,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsInitManager__ctor_mE3DF8EE9E8FA
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92342
+// Method Definition Index: 88161
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsLoginManager_LogInReadButton_mD464AA50450B8DCF2BF31AE166EDE4E6EDB78452 (FBWindowsLoginManager_t7D3F2D62743ACFE0E57134C78B31BC00288FDFC3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4831,7 +4831,7 @@ IL_002c:
 		return;
 	}
 }
-// Method Definition Index: 92343
+// Method Definition Index: 88162
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsLoginManager_LogInPublishButton_mF4A5194A80AA8E3513F8D072E92A0E8693790293 (FBWindowsLoginManager_t7D3F2D62743ACFE0E57134C78B31BC00288FDFC3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4879,7 +4879,7 @@ IL_002c:
 		return;
 	}
 }
-// Method Definition Index: 92344
+// Method Definition Index: 88163
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsLoginManager_LogOutButton_mE63114361311C63C41D30BAEDD7D25837F2EA0BC (FBWindowsLoginManager_t7D3F2D62743ACFE0E57134C78B31BC00288FDFC3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4921,7 +4921,7 @@ IL_001d:
 		return;
 	}
 }
-// Method Definition Index: 92345
+// Method Definition Index: 88164
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsLoginManager_AuthCallback_m1EA6C32AE674B4507BB9AF164B65D5B1F10D4448 (FBWindowsLoginManager_t7D3F2D62743ACFE0E57134C78B31BC00288FDFC3* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5090,7 +5090,7 @@ IL_0092:
 		return;
 	}
 }
-// Method Definition Index: 92346
+// Method Definition Index: 88165
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsLoginManager_GetCurrentProfile_m286865D50DF36DD633A27B3BA88B4129E93FC458 (FBWindowsLoginManager_t7D3F2D62743ACFE0E57134C78B31BC00288FDFC3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5137,7 +5137,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsLoginManager_GetCurrentProfile_
 		return;
 	}
 }
-// Method Definition Index: 92347
+// Method Definition Index: 88166
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsLoginManager_GetUserLocale_mFC499F14C482D25EC8E63CBEE811AE2231AE716D (FBWindowsLoginManager_t7D3F2D62743ACFE0E57134C78B31BC00288FDFC3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5168,7 +5168,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsLoginManager_GetUserLocale_mFC4
 		return;
 	}
 }
-// Method Definition Index: 92348
+// Method Definition Index: 88167
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FBWindowsLoginManager_LoadPictureFromUrl_mC19CD6E89FEBFC0AE1360BA22D255BC4AFF3FB29 (FBWindowsLoginManager_t7D3F2D62743ACFE0E57134C78B31BC00288FDFC3* __this, String_t* ___0_url, RawImage_tFF12F7DB574FBDC1863CF607C7A12A5D9F8D6179* ___1_itemImage, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5193,7 +5193,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FBWindowsLoginManager_LoadPict
 		return L_3;
 	}
 }
-// Method Definition Index: 92349
+// Method Definition Index: 88168
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsLoginManager__ctor_m341EF79AEF1BCDB243A3045D2CDE6FF9DCE47137 (FBWindowsLoginManager_t7D3F2D62743ACFE0E57134C78B31BC00288FDFC3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5201,7 +5201,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsLoginManager__ctor_m341EF79AEF1
 		return;
 	}
 }
-// Method Definition Index: 92350
+// Method Definition Index: 88169
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsLoginManager_U3CGetCurrentProfileU3Eb__8_0_m170EA42BAD2A057D3413A29A91A6F05FD065A5C4 (FBWindowsLoginManager_t7D3F2D62743ACFE0E57134C78B31BC00288FDFC3* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5380,7 +5380,7 @@ IL_012d:
 		return;
 	}
 }
-// Method Definition Index: 92351
+// Method Definition Index: 88170
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsLoginManager_U3CGetUserLocaleU3Eb__9_0_m695B3860401653E9CD71D3F6BC016E565500C04D (FBWindowsLoginManager_t7D3F2D62743ACFE0E57134C78B31BC00288FDFC3* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5441,7 +5441,7 @@ IL_0024:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92352
+// Method Definition Index: 88171
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadPictureFromUrlU3Ed__10__ctor_m9EEB7A63008A932E079C0A3EDEFFB926F0745D4E (U3CLoadPictureFromUrlU3Ed__10_t18320EC23486317C6406BA587EB9AA6063B55A84* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -5451,14 +5451,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadPictureFromUrlU3Ed__10__ctor_m9EE
 		return;
 	}
 }
-// Method Definition Index: 92353
+// Method Definition Index: 88172
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadPictureFromUrlU3Ed__10_System_IDisposable_Dispose_mF6AA89FF0A768DDDCD3D16DFB8BEE290C43AFD37 (U3CLoadPictureFromUrlU3Ed__10_t18320EC23486317C6406BA587EB9AA6063B55A84* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 92354
+// Method Definition Index: 88173
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CLoadPictureFromUrlU3Ed__10_MoveNext_m49F1F8C7737731DD774E4070550E2D7746EA93E5 (U3CLoadPictureFromUrlU3Ed__10_t18320EC23486317C6406BA587EB9AA6063B55A84* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5535,7 +5535,7 @@ IL_004c:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 92355
+// Method Definition Index: 88174
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadPictureFromUrlU3Ed__10_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mB3FA154E2B68AE513F7B0A987C6C4AC77C6C0D35 (U3CLoadPictureFromUrlU3Ed__10_t18320EC23486317C6406BA587EB9AA6063B55A84* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5543,7 +5543,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadPictureFromUrlU3Ed__10_
 		return L_0;
 	}
 }
-// Method Definition Index: 92356
+// Method Definition Index: 88175
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadPictureFromUrlU3Ed__10_System_Collections_IEnumerator_Reset_mB1EE45887C3F812C92F230C0E43C498C88BC625E (U3CLoadPictureFromUrlU3Ed__10_t18320EC23486317C6406BA587EB9AA6063B55A84* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5552,7 +5552,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadPictureFromUrlU3Ed__10_System_Col
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CLoadPictureFromUrlU3Ed__10_System_Collections_IEnumerator_Reset_mB1EE45887C3F812C92F230C0E43C498C88BC625E_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 92357
+// Method Definition Index: 88176
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadPictureFromUrlU3Ed__10_System_Collections_IEnumerator_get_Current_m50EBA0B4A78657063B0B26E5E41E26B8378EEACF (U3CLoadPictureFromUrlU3Ed__10_t18320EC23486317C6406BA587EB9AA6063B55A84* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5568,7 +5568,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadPictureFromUrlU3Ed__10_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92358
+// Method Definition Index: 88177
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsLogsManager_Awake_mDA9315E97E655112AAF12CE8DC662295101E3776 (FBWindowsLogsManager_tD9BB2C060A67D5415932BAC54D4D5F781336B493* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5586,7 +5586,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsLogsManager_Awake_mDA9315E97E65
 		return;
 	}
 }
-// Method Definition Index: 92359
+// Method Definition Index: 88178
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsLogsManager_DebugLog_m3B4802A0C38BC8BA51F4CE22D774DFC48A2B1B7D (FBWindowsLogsManager_tD9BB2C060A67D5415932BAC54D4D5F781336B493* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5614,7 +5614,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsLogsManager_DebugLog_m3B4802A0C
 		return;
 	}
 }
-// Method Definition Index: 92360
+// Method Definition Index: 88179
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsLogsManager_DebugErrorLog_m113DD71EC8DE8EC5C4763796B6C47E14CD4F3F11 (FBWindowsLogsManager_tD9BB2C060A67D5415932BAC54D4D5F781336B493* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5642,7 +5642,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsLogsManager_DebugErrorLog_m113D
 		return;
 	}
 }
-// Method Definition Index: 92361
+// Method Definition Index: 88180
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsLogsManager_DebugWarningLog_mB3950B0DB164858F93DA7E26A7AF770EEB3B7430 (FBWindowsLogsManager_tD9BB2C060A67D5415932BAC54D4D5F781336B493* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5670,7 +5670,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsLogsManager_DebugWarningLog_mB3
 		return;
 	}
 }
-// Method Definition Index: 92362
+// Method Definition Index: 88181
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsLogsManager_DebugClean_mDD86E796937794CA11126DE45D17C12B39BEB659 (FBWindowsLogsManager_tD9BB2C060A67D5415932BAC54D4D5F781336B493* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5688,7 +5688,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsLogsManager_DebugClean_mDD86E79
 		return;
 	}
 }
-// Method Definition Index: 92363
+// Method Definition Index: 88182
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsLogsManager_ScrollToTheBottom_mA235CC0E40A34876554DDD563DF7C7DC7FF178A6 (FBWindowsLogsManager_tD9BB2C060A67D5415932BAC54D4D5F781336B493* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5702,7 +5702,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsLogsManager_ScrollToTheBottom_m
 		return;
 	}
 }
-// Method Definition Index: 92364
+// Method Definition Index: 88183
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsLogsManager__ctor_m2CDF3DCD98FDEFC87A323950CC22C38C837B1F19 (FBWindowsLogsManager_tD9BB2C060A67D5415932BAC54D4D5F781336B493* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5718,7 +5718,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsLogsManager__ctor_m2CDF3DCD98FD
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92365
+// Method Definition Index: 88184
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsPhysicalGamepadManager_Start_m0D7AE798B36C464F70E10970926D44B0B53B0D3B (FBWindowsPhysicalGamepadManager_t4842A09D00992F725AB4A4C74D67B14CFA14B5F5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5736,7 +5736,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsPhysicalGamepadManager_Start_m0
 		return;
 	}
 }
-// Method Definition Index: 92366
+// Method Definition Index: 88185
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsPhysicalGamepadManager__ctor_m9E9E1CDE0E4211430B25C1D7677547E5EB1B6CE3 (FBWindowsPhysicalGamepadManager_t4842A09D00992F725AB4A4C74D67B14CFA14B5F5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5752,7 +5752,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsPhysicalGamepadManager__ctor_m9
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92367
+// Method Definition Index: 88186
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsPurchaseManager_GetCatalogButton_mB285FE3F2C1AE92041601DE223130E205DE91769 (FBWindowsPurchaseManager_t12C6B4F454009EC79F91E03134BBE00EC88E1A90* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5798,7 +5798,7 @@ IL_0029:
 		return;
 	}
 }
-// Method Definition Index: 92368
+// Method Definition Index: 88187
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsPurchaseManager_ProcessGetCatalog_mBC691143EF994F995AF20C4185E0E3DBA6F9FCE8 (FBWindowsPurchaseManager_t12C6B4F454009EC79F91E03134BBE00EC88E1A90* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6137,7 +6137,7 @@ IL_017b:
 		return;
 	}
 }
-// Method Definition Index: 92369
+// Method Definition Index: 88188
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FBWindowsPurchaseManager_LoadPictureFromUrl_m8F576F8433A34198C9775644188EFCADBC0C6E6F (FBWindowsPurchaseManager_t12C6B4F454009EC79F91E03134BBE00EC88E1A90* __this, String_t* ___0_url, RawImage_tFF12F7DB574FBDC1863CF607C7A12A5D9F8D6179* ___1_itemImage, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6162,7 +6162,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FBWindowsPurchaseManager_LoadP
 		return L_3;
 	}
 }
-// Method Definition Index: 92370
+// Method Definition Index: 88189
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsPurchaseManager_ProcessPurchase_mA20D49D3AAB967C089CE41DF3DA8A0351A6D6CD2 (FBWindowsPurchaseManager_t12C6B4F454009EC79F91E03134BBE00EC88E1A90* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6407,7 +6407,7 @@ IL_01e8:
 		return;
 	}
 }
-// Method Definition Index: 92371
+// Method Definition Index: 88190
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsPurchaseManager_GetPurchases_mCB24A00C33F68F6CB1ADFF31F3840F124338750A (FBWindowsPurchaseManager_t12C6B4F454009EC79F91E03134BBE00EC88E1A90* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6433,7 +6433,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsPurchaseManager_GetPurchases_mC
 		return;
 	}
 }
-// Method Definition Index: 92372
+// Method Definition Index: 88191
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsPurchaseManager_processPurchases_m4751E163AB4A2B005B1D84EFBC2A2D37C3BF535C (FBWindowsPurchaseManager_t12C6B4F454009EC79F91E03134BBE00EC88E1A90* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6772,7 +6772,7 @@ IL_015c:
 		return;
 	}
 }
-// Method Definition Index: 92373
+// Method Definition Index: 88192
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsPurchaseManager__ctor_m67504549059953A95E28473A82D9071D40D5A84A (FBWindowsPurchaseManager_t12C6B4F454009EC79F91E03134BBE00EC88E1A90* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6788,7 +6788,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsPurchaseManager__ctor_m67504549
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92374
+// Method Definition Index: 88193
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass5_0__ctor_m8E0D79554FD9F8DDF8F151F779BEC80486594EC0 (U3CU3Ec__DisplayClass5_0_t64E0F62C2ECF411CA661790AFD6856240D1EBF8A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6796,7 +6796,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass5_0__ctor_m8E0D7955
 		return;
 	}
 }
-// Method Definition Index: 92375
+// Method Definition Index: 88194
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass5_0_U3CProcessGetCatalogU3Eb__0_m4CF890B17D5B9D50CD263816F450456E16AFD1FE (U3CU3Ec__DisplayClass5_0_t64E0F62C2ECF411CA661790AFD6856240D1EBF8A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6830,7 +6830,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass5_0_U3CProcessGetCa
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92376
+// Method Definition Index: 88195
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass9_0__ctor_m56D4F574162DAA0DC9EA9494462CCD617008F901 (U3CU3Ec__DisplayClass9_0_t7F2EFEBE4FFFC4C40EEDFAEDD0F56169321128B2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6838,7 +6838,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass9_0__ctor_m56D4F574
 		return;
 	}
 }
-// Method Definition Index: 92377
+// Method Definition Index: 88196
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass9_0_U3CprocessPurchasesU3Eb__0_m672EF6F8DAEF89BA3DD0BFA610B30D9F01130E6B (U3CU3Ec__DisplayClass9_0_t7F2EFEBE4FFFC4C40EEDFAEDD0F56169321128B2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6902,7 +6902,7 @@ IL_002a:
 		return;
 	}
 }
-// Method Definition Index: 92378
+// Method Definition Index: 88197
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass9_0_U3CprocessPurchasesU3Eb__1_m16A8CAD55992864B2DE76CFC1ECE2B903727225B (U3CU3Ec__DisplayClass9_0_t7F2EFEBE4FFFC4C40EEDFAEDD0F56169321128B2* __this, RuntimeObject* ___0_consumeResult, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6971,7 +6971,7 @@ IL_0045:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92379
+// Method Definition Index: 88198
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadPictureFromUrlU3Ed__6__ctor_mFCAC1E0CD9AFEF9D4FC7C2B08FC7525F559DA8A2 (U3CLoadPictureFromUrlU3Ed__6_t3150D82F3DC0D88A22B1B99C4F1691FB88033CE0* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -6981,14 +6981,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadPictureFromUrlU3Ed__6__ctor_mFCAC
 		return;
 	}
 }
-// Method Definition Index: 92380
+// Method Definition Index: 88199
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadPictureFromUrlU3Ed__6_System_IDisposable_Dispose_m8C674AE011C63B72DCEFF7368DA58D764B79C3EA (U3CLoadPictureFromUrlU3Ed__6_t3150D82F3DC0D88A22B1B99C4F1691FB88033CE0* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 92381
+// Method Definition Index: 88200
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CLoadPictureFromUrlU3Ed__6_MoveNext_m1A03D1B07139C8798F268EAA92134F89793604AF (U3CLoadPictureFromUrlU3Ed__6_t3150D82F3DC0D88A22B1B99C4F1691FB88033CE0* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7065,7 +7065,7 @@ IL_004c:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 92382
+// Method Definition Index: 88201
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadPictureFromUrlU3Ed__6_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m0F863DD15052B9E3A586A1328846AF3C233EBA15 (U3CLoadPictureFromUrlU3Ed__6_t3150D82F3DC0D88A22B1B99C4F1691FB88033CE0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7073,7 +7073,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadPictureFromUrlU3Ed__6_S
 		return L_0;
 	}
 }
-// Method Definition Index: 92383
+// Method Definition Index: 88202
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadPictureFromUrlU3Ed__6_System_Collections_IEnumerator_Reset_m89151C82740561EB785AF5B2A4AB8303F214CF0A (U3CLoadPictureFromUrlU3Ed__6_t3150D82F3DC0D88A22B1B99C4F1691FB88033CE0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7082,7 +7082,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadPictureFromUrlU3Ed__6_System_Coll
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CLoadPictureFromUrlU3Ed__6_System_Collections_IEnumerator_Reset_m89151C82740561EB785AF5B2A4AB8303F214CF0A_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 92384
+// Method Definition Index: 88203
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadPictureFromUrlU3Ed__6_System_Collections_IEnumerator_get_Current_m44D460CB604C85FBE166902DEE8B3AF96DF5E19B (U3CLoadPictureFromUrlU3Ed__6_t3150D82F3DC0D88A22B1B99C4F1691FB88033CE0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7098,7 +7098,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadPictureFromUrlU3Ed__6_S
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92385
+// Method Definition Index: 88204
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsReferralsManager_OnEnable_m11E41F262A7428565500BFF9C5A7DB5B38CF179F (FBWindowsReferralsManager_t9CA2FA5496BC36B284A978719FF67450960229EE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7111,7 +7111,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsReferralsManager_OnEnable_m11E4
 		return;
 	}
 }
-// Method Definition Index: 92386
+// Method Definition Index: 88205
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsReferralsManager_CreateReferral_m580280D400D783D45C57EADC27033277449BA228 (FBWindowsReferralsManager_t9CA2FA5496BC36B284A978719FF67450960229EE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7139,7 +7139,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsReferralsManager_CreateReferral
 		return;
 	}
 }
-// Method Definition Index: 92387
+// Method Definition Index: 88206
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsReferralsManager_CallbackReferralsCreate_m4A1E71723FE327C4A204B707F1C219146708002D (FBWindowsReferralsManager_t9CA2FA5496BC36B284A978719FF67450960229EE* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7219,7 +7219,7 @@ IL_0035:
 		return;
 	}
 }
-// Method Definition Index: 92388
+// Method Definition Index: 88207
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsReferralsManager_GetDataReferral_mA4104959337E0479EBD4EA2FD051B9A5437D3C36 (FBWindowsReferralsManager_t9CA2FA5496BC36B284A978719FF67450960229EE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7243,7 +7243,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsReferralsManager_GetDataReferra
 		return;
 	}
 }
-// Method Definition Index: 92389
+// Method Definition Index: 88208
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsReferralsManager_CallbackReferralsGetData_m0D44996581E4AF71AB787B74793871E41252E35A (FBWindowsReferralsManager_t9CA2FA5496BC36B284A978719FF67450960229EE* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7315,7 +7315,7 @@ IL_0035:
 		return;
 	}
 }
-// Method Definition Index: 92390
+// Method Definition Index: 88209
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsReferralsManager__ctor_m2B24A9361A1DAC69C8A4AAD31B4E711C110886F4 (FBWindowsReferralsManager_t9CA2FA5496BC36B284A978719FF67450960229EE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7340,7 +7340,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsReferralsManager__ctor_m2B24A93
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92391
+// Method Definition Index: 88210
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsShareManager_Button_UploadImage_m1FFD7CDC7EF00577C2D8DE56396794E10A6338EC (FBWindowsShareManager_t1B571C791052784B5F3BF7EB91D7D44BC8E197C2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7408,7 +7408,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsShareManager_Button_UploadImage
 		return;
 	}
 }
-// Method Definition Index: 92392
+// Method Definition Index: 88211
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsShareManager_Button_UploadVideo_m71548715579F703D2AAAD7BD9EAC85B03E96CAF5 (FBWindowsShareManager_t1B571C791052784B5F3BF7EB91D7D44BC8E197C2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7476,7 +7476,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsShareManager_Button_UploadVideo
 		return;
 	}
 }
-// Method Definition Index: 92393
+// Method Definition Index: 88212
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsShareManager_CallbackUploadImage_m23D3F141ABD3F7B5C1ED2495125B844A04271A51 (FBWindowsShareManager_t1B571C791052784B5F3BF7EB91D7D44BC8E197C2* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7541,7 +7541,7 @@ IL_0041:
 		return;
 	}
 }
-// Method Definition Index: 92394
+// Method Definition Index: 88213
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsShareManager_CallbackUploadVideo_mD73A78415B614804367AC60041621D43CAA62B2D (FBWindowsShareManager_t1B571C791052784B5F3BF7EB91D7D44BC8E197C2* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7606,7 +7606,7 @@ IL_0041:
 		return;
 	}
 }
-// Method Definition Index: 92395
+// Method Definition Index: 88214
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsShareManager__ctor_m71A6FCB04FFEF4335E4A2871F560DF65149043A2 (FBWindowsShareManager_t1B571C791052784B5F3BF7EB91D7D44BC8E197C2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7622,7 +7622,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsShareManager__ctor_m71A6FCB04FF
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92396
+// Method Definition Index: 88215
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsSoftKeyboardManager_SetSoftKeyboardOpenButton_m017F41AE3D6EB831CAC37D5B5B08EE542C4553FB (FBWindowsSoftKeyboardManager_t7C69633E7CC2570902C1D97E0971093FBE738135* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7646,7 +7646,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsSoftKeyboardManager_SetSoftKeyb
 		return;
 	}
 }
-// Method Definition Index: 92397
+// Method Definition Index: 88216
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsSoftKeyboardManager_CallbackSetSoftKeyboardOpen_m5BC943873544190661B30749EB4E212E39272E13 (FBWindowsSoftKeyboardManager_t7C69633E7CC2570902C1D97E0971093FBE738135* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7707,7 +7707,7 @@ IL_0035:
 		return;
 	}
 }
-// Method Definition Index: 92398
+// Method Definition Index: 88217
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsSoftKeyboardManager__ctor_m3ED26295A8E16065E7B132B22E6888B01A96B6D7 (FBWindowsSoftKeyboardManager_t7C69633E7CC2570902C1D97E0971093FBE738135* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7723,7 +7723,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsSoftKeyboardManager__ctor_m3ED2
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92399
+// Method Definition Index: 88218
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* FBWindowsTournamentsManager_ConvertDataToDict_m957B59DCBCBBA8ADB9BF14CAC897915650000123 (FBWindowsTournamentsManager_t285B80D00FAADEF039560A7368F3AEC117254DFE* __this, String_t* ___0_UTF8String, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7923,7 +7923,7 @@ IL_00bb:
 		return L_31;
 	}
 }
-// Method Definition Index: 92400
+// Method Definition Index: 88219
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsTournamentsManager_Button_CreateTournament_m48593D0E8A103A49FCE369372C59D67668D79E63 (FBWindowsTournamentsManager_t285B80D00FAADEF039560A7368F3AEC117254DFE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8001,7 +8001,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsTournamentsManager_Button_Creat
 		return;
 	}
 }
-// Method Definition Index: 92401
+// Method Definition Index: 88220
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsTournamentsManager_CallbackCreateTournament_mA8C1C64D80F7D1092EF621BDB587E3856FB16219 (FBWindowsTournamentsManager_t285B80D00FAADEF039560A7368F3AEC117254DFE* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8047,7 +8047,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92402
+// Method Definition Index: 88221
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsTournamentsManager_Button_PostSessionScore_m9D92F41F413320DB5633DFF143DA3649D975FBE6 (FBWindowsTournamentsManager_t285B80D00FAADEF039560A7368F3AEC117254DFE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8074,7 +8074,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsTournamentsManager_Button_PostS
 		return;
 	}
 }
-// Method Definition Index: 92403
+// Method Definition Index: 88222
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsTournamentsManager_CallbackPostSessionScore_mB9180114F19BE46EBC92B4093577F1DC4ECFCAFA (FBWindowsTournamentsManager_t285B80D00FAADEF039560A7368F3AEC117254DFE* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8120,7 +8120,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92404
+// Method Definition Index: 88223
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsTournamentsManager_Button_PostTournamentScore_mCDDDD7549C629288461E228D9A6CB2CBE8792BAB (FBWindowsTournamentsManager_t285B80D00FAADEF039560A7368F3AEC117254DFE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8147,7 +8147,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsTournamentsManager_Button_PostT
 		return;
 	}
 }
-// Method Definition Index: 92405
+// Method Definition Index: 88224
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsTournamentsManager_CallbackPostTournamentScore_mE8DF6C42C53FBCE134D892AA48C5379CEF8B7BBF (FBWindowsTournamentsManager_t285B80D00FAADEF039560A7368F3AEC117254DFE* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8193,7 +8193,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92406
+// Method Definition Index: 88225
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsTournamentsManager_Button_ShareTournament_m2993547EA9296BF2A66B87BB4BDBBED59AFB5F33 (FBWindowsTournamentsManager_t285B80D00FAADEF039560A7368F3AEC117254DFE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8226,7 +8226,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsTournamentsManager_Button_Share
 		return;
 	}
 }
-// Method Definition Index: 92407
+// Method Definition Index: 88226
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsTournamentsManager_CallbackShareTournament_m42520665AC25B3C5AA001A98A7AC9F63E114D720 (FBWindowsTournamentsManager_t285B80D00FAADEF039560A7368F3AEC117254DFE* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8272,7 +8272,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92408
+// Method Definition Index: 88227
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsTournamentsManager_Button_GetTournament_mF86D25202EA500123CC2A1A0E910E467627FA915 (FBWindowsTournamentsManager_t285B80D00FAADEF039560A7368F3AEC117254DFE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8293,7 +8293,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsTournamentsManager_Button_GetTo
 		return;
 	}
 }
-// Method Definition Index: 92409
+// Method Definition Index: 88228
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsTournamentsManager_CallbackGetTournament_m62C3F26B7629D13AD79547392BF904925A5B7FF0 (FBWindowsTournamentsManager_t285B80D00FAADEF039560A7368F3AEC117254DFE* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8339,7 +8339,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92410
+// Method Definition Index: 88229
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsTournamentsManager__ctor_m65AFDD841835BB7A8550C12F089A9A5CC6D1ACE4 (FBWindowsTournamentsManager_t285B80D00FAADEF039560A7368F3AEC117254DFE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8355,7 +8355,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsTournamentsManager__ctor_m65AFD
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92411
+// Method Definition Index: 88230
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsVirtualGamepadManager_SetVirtualGamepadLayout_mDE6BE733314A7BA7A039F1ADE930948BDD491619 (FBWindowsVirtualGamepadManager_t78A9015F9D37D42FF8AAF6B7B9DD6164EA184174* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8389,7 +8389,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsVirtualGamepadManager_SetVirtua
 		return;
 	}
 }
-// Method Definition Index: 92412
+// Method Definition Index: 88231
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsVirtualGamepadManager_CallbackSetVirtualGamepadLayout_m048B38EA808953D897CC2599977DF0DFE7BBABBA (FBWindowsVirtualGamepadManager_t78A9015F9D37D42FF8AAF6B7B9DD6164EA184174* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8450,7 +8450,7 @@ IL_0035:
 		return;
 	}
 }
-// Method Definition Index: 92413
+// Method Definition Index: 88232
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsVirtualGamepadManager__ctor_mF19C463251E64906F96CDD79C29649B2E379A2AF (FBWindowsVirtualGamepadManager_t78A9015F9D37D42FF8AAF6B7B9DD6164EA184174* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8466,7 +8466,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FBWindowsVirtualGamepadManager__ctor_mF1
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92414
+// Method Definition Index: 88233
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountManager_Start_m660B305A650437D95EA4B40BD4072D78463C2BE5 (AccountManager_tB407C1E8BEB6D707E33A9C36671B7F12BE0254D5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8476,7 +8476,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountManager_Start_m660B305A650437D95E
 		return;
 	}
 }
-// Method Definition Index: 92415
+// Method Definition Index: 88234
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountManager_OnEnable_mA29E93D8BE6185381B876627B0DE6DE79C5358E3 (AccountManager_tB407C1E8BEB6D707E33A9C36671B7F12BE0254D5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8501,7 +8501,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 92416
+// Method Definition Index: 88235
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountManager_InitializeTransactionHistory_m784ACBA493913D79BA85F878D4C512780B6EA43C (AccountManager_tB407C1E8BEB6D707E33A9C36671B7F12BE0254D5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8553,7 +8553,7 @@ IL_0027:
 		return;
 	}
 }
-// Method Definition Index: 92417
+// Method Definition Index: 88236
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountManager_RefreshTransactionHistory_mC750A6B001676371AF7BD3A9E448614DD70AB57C (AccountManager_tB407C1E8BEB6D707E33A9C36671B7F12BE0254D5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8618,7 +8618,7 @@ IL_004b:
 		return;
 	}
 }
-// Method Definition Index: 92418
+// Method Definition Index: 88237
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AccountManager_ReloadDataDelayed_mD534FE397C0C4544D47BD14ABC3AF0CF90090BDA (AccountManager_tB407C1E8BEB6D707E33A9C36671B7F12BE0254D5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8637,7 +8637,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AccountManager_ReloadDataDelay
 		return L_1;
 	}
 }
-// Method Definition Index: 92419
+// Method Definition Index: 88238
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AccountManager_LoadTestDataDelayed_m87CEF4ED01DAF32251556BCD418E6A9415377D66 (AccountManager_tB407C1E8BEB6D707E33A9C36671B7F12BE0254D5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8656,7 +8656,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AccountManager_LoadTestDataDel
 		return L_1;
 	}
 }
-// Method Definition Index: 92420
+// Method Definition Index: 88239
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountManager_LoadTestData_mF17EDF1F80912FD39A174C5B511DE54C518874B8 (AccountManager_tB407C1E8BEB6D707E33A9C36671B7F12BE0254D5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8885,7 +8885,7 @@ IL_010a:
 		return;
 	}
 }
-// Method Definition Index: 92421
+// Method Definition Index: 88240
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountManager_SortTransactionsByDate_m73C1C514A8DCE940947D622CC2A23BAE0DE52029 (AccountManager_tB407C1E8BEB6D707E33A9C36671B7F12BE0254D5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9032,7 +9032,7 @@ IL_0097:
 		return;
 	}
 }
-// Method Definition Index: 92422
+// Method Definition Index: 88241
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountManager_AddTransaction_m8A1FE503023A48309F6DFA075584588C899EA4F5 (AccountManager_tB407C1E8BEB6D707E33A9C36671B7F12BE0254D5* __this, String_t* ___0_date, float ___1_amount, int32_t ___2_status, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9129,7 +9129,7 @@ IL_0075:
 		return;
 	}
 }
-// Method Definition Index: 92423
+// Method Definition Index: 88242
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountManager_AddTransaction_m2546F90F55B0021ED6731CA7227047F706DBCC2F (AccountManager_tB407C1E8BEB6D707E33A9C36671B7F12BE0254D5* __this, float ___0_amount, int32_t ___1_status, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9160,7 +9160,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountManager_AddTransaction_m2546F90F5
 		return;
 	}
 }
-// Method Definition Index: 92424
+// Method Definition Index: 88243
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountManager_ClearData_mE17C667059619184D4BB5BBA64E7A776CE94A46D (AccountManager_tB407C1E8BEB6D707E33A9C36671B7F12BE0254D5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9247,7 +9247,7 @@ IL_005c:
 		return;
 	}
 }
-// Method Definition Index: 92425
+// Method Definition Index: 88244
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountManager_SetCellSizeAndReload_mD86BEBA7912C4778F7A0DD2DC47D6E3B3ACE973E (AccountManager_tB407C1E8BEB6D707E33A9C36671B7F12BE0254D5* __this, float ___0_newCellSize, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9325,7 +9325,7 @@ IL_0050:
 		return;
 	}
 }
-// Method Definition Index: 92426
+// Method Definition Index: 88245
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t AccountManager_GetNumberOfCells_mC21B5690CE2D5F9680248ED167351C0FC5387DB0 (AccountManager_tB407C1E8BEB6D707E33A9C36671B7F12BE0254D5* __this, EnhancedScroller_tD5E71E91F48EE1CC6DAC4B1D78875825FF2682E2* ___0_scroller, const RuntimeMethod* method) 
 {
 	{
@@ -9348,7 +9348,7 @@ IL_000a:
 		return L_2;
 	}
 }
-// Method Definition Index: 92427
+// Method Definition Index: 88246
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float AccountManager_GetCellViewSize_mFF87C6B9E5CDAEDF6D935C040FC73999DECDC7BB (AccountManager_tB407C1E8BEB6D707E33A9C36671B7F12BE0254D5* __this, EnhancedScroller_tD5E71E91F48EE1CC6DAC4B1D78875825FF2682E2* ___0_scroller, int32_t ___1_dataIndex, const RuntimeMethod* method) 
 {
 	{
@@ -9357,7 +9357,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float AccountManager_GetCellViewSize_mFF87C6B
 		return L_0;
 	}
 }
-// Method Definition Index: 92428
+// Method Definition Index: 88247
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR EnhancedScrollerCellView_t0E4B9F9BDB42D0C61EC6CAE7BA775D17D9FAA409* AccountManager_GetCellView_m2B8773B441A118BA36963B4333936EFAD92BF02A (AccountManager_tB407C1E8BEB6D707E33A9C36671B7F12BE0254D5* __this, EnhancedScroller_tD5E71E91F48EE1CC6DAC4B1D78875825FF2682E2* ___0_scroller, int32_t ___1_dataIndex, int32_t ___2_cellIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9480,7 +9480,7 @@ IL_0096:
 		return L_24;
 	}
 }
-// Method Definition Index: 92429
+// Method Definition Index: 88248
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountManager_LoadSmallTestData_mA042A0E8C3F163E7F65ACA94D90010E712890164 (AccountManager_tB407C1E8BEB6D707E33A9C36671B7F12BE0254D5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9492,7 +9492,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountManager_LoadSmallTestData_mA042A0
 		return;
 	}
 }
-// Method Definition Index: 92430
+// Method Definition Index: 88249
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountManager_LoadLargeTestData_mFCE35C364B75D90A77FE14897CCAF6AE7DF9B346 (AccountManager_tB407C1E8BEB6D707E33A9C36671B7F12BE0254D5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9504,7 +9504,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountManager_LoadLargeTestData_mFCE35C
 		return;
 	}
 }
-// Method Definition Index: 92431
+// Method Definition Index: 88250
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountManager_ScrollToTop_m6C50EB485FD3A6A3E2C7D5A7E5475E67E299178F (AccountManager_tB407C1E8BEB6D707E33A9C36671B7F12BE0254D5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9537,7 +9537,7 @@ IL_002e:
 		return;
 	}
 }
-// Method Definition Index: 92432
+// Method Definition Index: 88251
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountManager_AddTestTransaction_m31A28D1D16E1F220686E24003F37A4A4C5F8169A (AccountManager_tB407C1E8BEB6D707E33A9C36671B7F12BE0254D5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9585,7 +9585,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountManager_AddTestTransaction_m31A28
 		return;
 	}
 }
-// Method Definition Index: 92433
+// Method Definition Index: 88252
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountManager__ctor_mDA58BAB164DD04A066EC532508A781431EB07D8B (AccountManager_tB407C1E8BEB6D707E33A9C36671B7F12BE0254D5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9605,7 +9605,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountManager__ctor_mDA58BAB164DD04A066
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92434
+// Method Definition Index: 88253
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadTestDataDelayedU3Ed__11__ctor_m882D5FFF30687AF30A3253262399C93F84182B15 (U3CLoadTestDataDelayedU3Ed__11_tF9CFC856FDFCE49C2949C45D74D704E1F15D81A5* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -9615,14 +9615,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadTestDataDelayedU3Ed__11__ctor_m88
 		return;
 	}
 }
-// Method Definition Index: 92435
+// Method Definition Index: 88254
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadTestDataDelayedU3Ed__11_System_IDisposable_Dispose_m64A98EADD99580076FFE0A4DD25FB920D51E3F62 (U3CLoadTestDataDelayedU3Ed__11_tF9CFC856FDFCE49C2949C45D74D704E1F15D81A5* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 92436
+// Method Definition Index: 88255
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CLoadTestDataDelayedU3Ed__11_MoveNext_m7F4835A0C593A5AA6B5D8047CBA199B505FBDD09 (U3CLoadTestDataDelayedU3Ed__11_tF9CFC856FDFCE49C2949C45D74D704E1F15D81A5* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -9670,7 +9670,7 @@ IL_002e:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 92437
+// Method Definition Index: 88256
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadTestDataDelayedU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mCEBD808423F444F9FD8D95D2943A87C5D514B6D5 (U3CLoadTestDataDelayedU3Ed__11_tF9CFC856FDFCE49C2949C45D74D704E1F15D81A5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9678,7 +9678,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadTestDataDelayedU3Ed__11
 		return L_0;
 	}
 }
-// Method Definition Index: 92438
+// Method Definition Index: 88257
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadTestDataDelayedU3Ed__11_System_Collections_IEnumerator_Reset_m8459350D01646F5259EA2E400E75EA9A6F915432 (U3CLoadTestDataDelayedU3Ed__11_tF9CFC856FDFCE49C2949C45D74D704E1F15D81A5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9687,7 +9687,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadTestDataDelayedU3Ed__11_System_Co
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CLoadTestDataDelayedU3Ed__11_System_Collections_IEnumerator_Reset_m8459350D01646F5259EA2E400E75EA9A6F915432_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 92439
+// Method Definition Index: 88258
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadTestDataDelayedU3Ed__11_System_Collections_IEnumerator_get_Current_m069565E32AA5325F5FEF7213AB97A06B0BAD0377 (U3CLoadTestDataDelayedU3Ed__11_tF9CFC856FDFCE49C2949C45D74D704E1F15D81A5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9703,7 +9703,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadTestDataDelayedU3Ed__11
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92440
+// Method Definition Index: 88259
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CReloadDataDelayedU3Ed__10__ctor_m1A3D62C6A5CACD0583395C5B43FDB7E78A8475E9 (U3CReloadDataDelayedU3Ed__10_t18F3977C30278BA938C1E54F25B709A697CCBC94* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -9713,14 +9713,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CReloadDataDelayedU3Ed__10__ctor_m1A3D
 		return;
 	}
 }
-// Method Definition Index: 92441
+// Method Definition Index: 88260
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CReloadDataDelayedU3Ed__10_System_IDisposable_Dispose_mE617DFDBF0A7ADEF0C96D8F0F7E7DA4CC4F026AE (U3CReloadDataDelayedU3Ed__10_t18F3977C30278BA938C1E54F25B709A697CCBC94* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 92442
+// Method Definition Index: 88261
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CReloadDataDelayedU3Ed__10_MoveNext_m16B6601036005761FF760CE850A4D597B54AF251 (U3CReloadDataDelayedU3Ed__10_t18F3977C30278BA938C1E54F25B709A697CCBC94* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9808,7 +9808,7 @@ IL_0065:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 92443
+// Method Definition Index: 88262
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CReloadDataDelayedU3Ed__10_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m96CA113285C08E2C8C6F1AA4901D1355EB3BD29B (U3CReloadDataDelayedU3Ed__10_t18F3977C30278BA938C1E54F25B709A697CCBC94* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9816,7 +9816,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CReloadDataDelayedU3Ed__10_S
 		return L_0;
 	}
 }
-// Method Definition Index: 92444
+// Method Definition Index: 88263
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CReloadDataDelayedU3Ed__10_System_Collections_IEnumerator_Reset_mA6E6FA65A55D831AC789EF66F6253BE5E6B9DBEA (U3CReloadDataDelayedU3Ed__10_t18F3977C30278BA938C1E54F25B709A697CCBC94* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9825,7 +9825,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CReloadDataDelayedU3Ed__10_System_Coll
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CReloadDataDelayedU3Ed__10_System_Collections_IEnumerator_Reset_mA6E6FA65A55D831AC789EF66F6253BE5E6B9DBEA_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 92445
+// Method Definition Index: 88264
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CReloadDataDelayedU3Ed__10_System_Collections_IEnumerator_get_Current_mFC5442AADCA1E319C2052B40BBB66F4636C7950E (U3CReloadDataDelayedU3Ed__10_t18F3977C30278BA938C1E54F25B709A697CCBC94* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9841,7 +9841,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CReloadDataDelayedU3Ed__10_S
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92446
+// Method Definition Index: 88265
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountPanelScaler_Awake_m595A6743DEEFDEF6F7D1B6D47C6FF4EDD840168A (AccountPanelScaler_t0AB0E5CB7826EF4F461C57C8F014A1D1C916EBEE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9995,7 +9995,7 @@ IL_0103:
 		return;
 	}
 }
-// Method Definition Index: 92447
+// Method Definition Index: 88266
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountPanelScaler_Start_mBD5E4BD498BD2ACAE01887B55C235F735DFF777C (AccountPanelScaler_t0AB0E5CB7826EF4F461C57C8F014A1D1C916EBEE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10005,7 +10005,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountPanelScaler_Start_mBD5E4BD498BD2A
 		return;
 	}
 }
-// Method Definition Index: 92448
+// Method Definition Index: 88267
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountPanelScaler_StoreOriginalOffsets_mD2AC4EAC29EC6BCBD7980B56B8BB419A96D48162 (AccountPanelScaler_t0AB0E5CB7826EF4F461C57C8F014A1D1C916EBEE* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3* ___1_offsets, String_t* ___2_elementName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10102,7 +10102,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountPanelScaler_StoreOriginalOffsets_
 		return;
 	}
 }
-// Method Definition Index: 92449
+// Method Definition Index: 88268
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountPanelScaler_ApplyScaling_mDFAB0DF71EFC06899C2737556411F6C56F5F7793 (AccountPanelScaler_t0AB0E5CB7826EF4F461C57C8F014A1D1C916EBEE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10264,7 +10264,7 @@ IL_0070:
 		return;
 	}
 }
-// Method Definition Index: 92450
+// Method Definition Index: 88269
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountPanelScaler_ScaleUpperPart_m71871CA5E5A35400569B677760CA655F6E84A8E8 (AccountPanelScaler_t0AB0E5CB7826EF4F461C57C8F014A1D1C916EBEE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10374,7 +10374,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 92451
+// Method Definition Index: 88270
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountPanelScaler_ScaleLowerPart_m9A57272A58548926B60CD1F622B0813CF4A0D964 (AccountPanelScaler_t0AB0E5CB7826EF4F461C57C8F014A1D1C916EBEE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10484,7 +10484,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 92452
+// Method Definition Index: 88271
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountPanelScaler_ScaleTitle_mE2BB63A4B2C4A3DF276909AEB56663F349B4D4A9 (AccountPanelScaler_t0AB0E5CB7826EF4F461C57C8F014A1D1C916EBEE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10594,7 +10594,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 92453
+// Method Definition Index: 88272
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountPanelScaler_ScaleCloseButton_m0F376E5AEE92D70898ECBD2117B1728F973E5A32 (AccountPanelScaler_t0AB0E5CB7826EF4F461C57C8F014A1D1C916EBEE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10704,7 +10704,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 92454
+// Method Definition Index: 88273
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountPanelScaler_ScaleUpperButton_mF265C89A86D4F5C6362440F1986D6F77608BF2ED (AccountPanelScaler_t0AB0E5CB7826EF4F461C57C8F014A1D1C916EBEE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10814,7 +10814,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 92455
+// Method Definition Index: 88274
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountPanelScaler_ScalePanel1_m89BE4AF6935B1CB125CFADA2CD323FDE337B4423 (AccountPanelScaler_t0AB0E5CB7826EF4F461C57C8F014A1D1C916EBEE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10924,7 +10924,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 92456
+// Method Definition Index: 88275
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountPanelScaler_ScalePanel2_m4BAD8FBB842A8ABF3BC20FB5664130CB0086D3FE (AccountPanelScaler_t0AB0E5CB7826EF4F461C57C8F014A1D1C916EBEE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11034,7 +11034,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 92457
+// Method Definition Index: 88276
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountPanelScaler_RecalculateScaling_m6A7E084A18775F11B2C7DD7A4322C1DF986A4E40 (AccountPanelScaler_t0AB0E5CB7826EF4F461C57C8F014A1D1C916EBEE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11044,7 +11044,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountPanelScaler_RecalculateScaling_m6
 		return;
 	}
 }
-// Method Definition Index: 92458
+// Method Definition Index: 88277
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountPanelScaler__ctor_m43C207A2BB4A2069FB05A5A79012353A496A1744 (AccountPanelScaler_t0AB0E5CB7826EF4F461C57C8F014A1D1C916EBEE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11067,7 +11067,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountPanelScaler__ctor_m43C207A2BB4A20
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92459
+// Method Definition Index: 88278
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float AccountRowScaler_get_ScaledCellSize_m906AF28D6451A563B5F98DCF1883A78BCB979719 (AccountRowScaler_t1CD95C77BC4050944DEAAD0F7A317A45D6176B39* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11076,7 +11076,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float AccountRowScaler_get_ScaledCellSize_m90
 		return L_0;
 	}
 }
-// Method Definition Index: 92460
+// Method Definition Index: 88279
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float AccountRowScaler_get_ScaledSpacing_m995BE1998C03C26B68ABCA1AF231ABF723ACB50E (AccountRowScaler_t1CD95C77BC4050944DEAAD0F7A317A45D6176B39* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11085,7 +11085,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float AccountRowScaler_get_ScaledSpacing_m995
 		return L_0;
 	}
 }
-// Method Definition Index: 92461
+// Method Definition Index: 88280
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float AccountRowScaler_get_ScaleFactorX_m6BD7B67DBDFEEC57CA0966A3C8A27B331914E483 (AccountRowScaler_t1CD95C77BC4050944DEAAD0F7A317A45D6176B39* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11094,7 +11094,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float AccountRowScaler_get_ScaleFactorX_m6BD7
 		return L_0;
 	}
 }
-// Method Definition Index: 92462
+// Method Definition Index: 88281
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float AccountRowScaler_get_ScaleFactorY_m104D4CEC9456C1CCD0593A9267C3F5B1F9812D92 (AccountRowScaler_t1CD95C77BC4050944DEAAD0F7A317A45D6176B39* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11103,7 +11103,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float AccountRowScaler_get_ScaleFactorY_m104D
 		return L_0;
 	}
 }
-// Method Definition Index: 92463
+// Method Definition Index: 88282
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountRowScaler_Awake_mB35665C72E2116A2E95C50154587084F209DEC4F (AccountRowScaler_t1CD95C77BC4050944DEAAD0F7A317A45D6176B39* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11163,7 +11163,7 @@ IL_003c:
 		return;
 	}
 }
-// Method Definition Index: 92464
+// Method Definition Index: 88283
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountRowScaler_Start_mC10B60BD1BBE24A70763EC77AB6B53A28AB0EBB5 (AccountRowScaler_t1CD95C77BC4050944DEAAD0F7A317A45D6176B39* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11173,7 +11173,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountRowScaler_Start_mC10B60BD1BBE24A7
 		return;
 	}
 }
-// Method Definition Index: 92465
+// Method Definition Index: 88284
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountRowScaler_ApplyScaling_mE16A1DE676CF0BB58B7A59219E0D9010542F1F58 (AccountRowScaler_t1CD95C77BC4050944DEAAD0F7A317A45D6176B39* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11288,7 +11288,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountRowScaler_ApplyScaling_mE16A1DE67
 		return;
 	}
 }
-// Method Definition Index: 92466
+// Method Definition Index: 88285
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountRowScaler_ApplyScrollerSettings_m54FE48B6595172610D998B1C00C07AC27ABF5960 (AccountRowScaler_t1CD95C77BC4050944DEAAD0F7A317A45D6176B39* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11338,7 +11338,7 @@ IL_0019:
 		return;
 	}
 }
-// Method Definition Index: 92467
+// Method Definition Index: 88286
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountRowScaler_ScaleRowElements_m1DD2819299FD1367E829AC3102F6F7DD4F6B3F91 (AccountRowScaler_t1CD95C77BC4050944DEAAD0F7A317A45D6176B39* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_profileImage, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___1_statusImage, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___2_textContainer, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___3_lineImage, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11435,7 +11435,7 @@ IL_0058:
 		return;
 	}
 }
-// Method Definition Index: 92468
+// Method Definition Index: 88287
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountRowScaler_ScaleElementOffsets_mD0B4B999C460B130CB8ED6AAD249067CCDC9BFEA (AccountRowScaler_t1CD95C77BC4050944DEAAD0F7A317A45D6176B39* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, float ___1_scale, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -11475,7 +11475,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountRowScaler_ScaleElementOffsets_mD0
 		return;
 	}
 }
-// Method Definition Index: 92469
+// Method Definition Index: 88288
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountRowScaler_RecalculateScaling_m800AE2FCFF22965AEE90959404358C455E94475F (AccountRowScaler_t1CD95C77BC4050944DEAAD0F7A317A45D6176B39* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11485,7 +11485,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountRowScaler_RecalculateScaling_m800
 		return;
 	}
 }
-// Method Definition Index: 92470
+// Method Definition Index: 88289
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountRowScaler__ctor_mB49C70E2F706FE8C676B029F365C9FBA80F30E7D (AccountRowScaler_t1CD95C77BC4050944DEAAD0F7A317A45D6176B39* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11514,7 +11514,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AccountRowScaler__ctor_mB49C70E2F706FE8C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92471
+// Method Definition Index: 88290
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_Start_mC70674E19908BCE7816B9D0EE02F927A501502C1 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11868,7 +11868,7 @@ IL_020b:
 		return;
 	}
 }
-// Method Definition Index: 92472
+// Method Definition Index: 88291
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnDestroy_m59EA080F5A3F6F3209B57773776FE2308E9D12CB (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11876,7 +11876,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnDestroy_m59EA080
 		return;
 	}
 }
-// Method Definition Index: 92473
+// Method Definition Index: 88292
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_InitializeSocialManagers_m6DB399681BA7B8E307212B224C9A31446B45A292 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11950,7 +11950,7 @@ IL_004e:
 		return;
 	}
 }
-// Method Definition Index: 92474
+// Method Definition Index: 88293
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_AttemptAutoLogin_m9828364511180EBEE8DB5ED608731CFAB2B0B2B0 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11975,7 +11975,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_AttemptAutoLogin_m
 		return;
 	}
 }
-// Method Definition Index: 92475
+// Method Definition Index: 88294
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AuthenticationManager_AttemptAutoLoginCoroutine_m083BAB73A37A498DADA8BCDB1B82396284660766 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11994,7 +11994,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AuthenticationManager_AttemptA
 		return L_1;
 	}
 }
-// Method Definition Index: 92476
+// Method Definition Index: 88295
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_HandleSessionRestoreFailed_mA8A6A6F0DD578EC0343C8585AAC301809BBD516D (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12125,7 +12125,7 @@ IL_0098:
 		return;
 	}
 }
-// Method Definition Index: 92477
+// Method Definition Index: 88296
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_AttemptSilentGoogleLogin_m369E9970889D5DBF7B3BE21BC1A54EAF2936976A (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12209,7 +12209,7 @@ IL_0081:
 		return;
 	}
 }
-// Method Definition Index: 92478
+// Method Definition Index: 88297
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnSilentGoogleSignInSuccess_m53E4C53FBACA5F947FE2FA90EF7FDBF2DF7C4FF5 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, String_t* ___0_serverAuthCode, String_t* ___1_idToken, String_t* ___2_email, String_t* ___3_displayName, String_t* ___4_photoUrl, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12325,7 +12325,7 @@ IL_0093:
 		return;
 	}
 }
-// Method Definition Index: 92479
+// Method Definition Index: 88298
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnSilentGoogleSignInFailure_m4AC6C7295B0688F81369735EC010E29F4A5FA793 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, String_t* ___0_error, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12449,7 +12449,7 @@ IL_00c1:
 		return;
 	}
 }
-// Method Definition Index: 92480
+// Method Definition Index: 88299
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_AttemptSilentFacebookLogin_m87BBDCDAE8996DCFCB11ECB6870890C8CEBD62EA (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12533,7 +12533,7 @@ IL_0084:
 		return;
 	}
 }
-// Method Definition Index: 92481
+// Method Definition Index: 88300
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AuthenticationManager_AttemptSilentFacebookLoginCoroutine_m530DE68BDCA433FF9FAE6AF3F3A56E0FE34503F1 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12548,7 +12548,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AuthenticationManager_AttemptS
 		return L_0;
 	}
 }
-// Method Definition Index: 92482
+// Method Definition Index: 88301
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnSilentFacebookSignInSuccess_m9BB2C205C79DA9B6F0F9EEA9E9F2968A54532A85 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, String_t* ___0_accessToken, String_t* ___1_facebookName, String_t* ___2_facebookEmail, String_t* ___3_facebookImageUrl, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12664,7 +12664,7 @@ IL_0093:
 		return;
 	}
 }
-// Method Definition Index: 92483
+// Method Definition Index: 88302
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnSilentFacebookSignInFailure_m5BC315FFDD05E033AEB4D9D1A67A957B8CA74E75 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, String_t* ___0_error, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12788,7 +12788,7 @@ IL_00c1:
 		return;
 	}
 }
-// Method Definition Index: 92484
+// Method Definition Index: 88303
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_AttemptEmailAutoLogin_mBA294A805E4CD537206820D560B033CE68E36A11 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12827,7 +12827,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_AttemptEmailAutoLo
 		return;
 	}
 }
-// Method Definition Index: 92485
+// Method Definition Index: 88304
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_AttemptDeviceIdLogin_mE272E55F8325133C7070A3CAEEA1CBB2A04EFC7A (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12915,7 +12915,7 @@ IL_0057:
 		return;
 	}
 }
-// Method Definition Index: 92486
+// Method Definition Index: 88305
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_ShowLoginRegisterPanel_m21DE469CDDD44431DCEF71E3707669A734D26945 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12991,7 +12991,7 @@ IL_0052:
 		return;
 	}
 }
-// Method Definition Index: 92487
+// Method Definition Index: 88306
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_HideLoginScreen_mE4C891E6AEF81B9D45065E0AFF543D8BE13AE836 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13024,7 +13024,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92488
+// Method Definition Index: 88307
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_HideRegisterScreen_mD37311E2850BB1BE97DB568B1EA10AAD3BE922BC (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13057,7 +13057,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92489
+// Method Definition Index: 88308
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_ShowLoadingScreen_m24C022312F5B86F8A8E96EFDE868AFFC19E7FD23 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13090,7 +13090,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92490
+// Method Definition Index: 88309
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_HideLoadingScreen_mA1220E79C3920FA95C99088DB6E39918AE93FE92 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13123,7 +13123,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92491
+// Method Definition Index: 88310
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_ShowSplashScreenPanel_m14BE8C62FE04E5AC2A435C3E253633BFF5F6C50B (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13160,7 +13160,7 @@ IL_0026:
 		return;
 	}
 }
-// Method Definition Index: 92492
+// Method Definition Index: 88311
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_ShowSplashScreenPanelPublic_m6EE721F55EF4D56F608B61ACEFBB2C1AFB49AE2B (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13170,7 +13170,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_ShowSplashScreenPa
 		return;
 	}
 }
-// Method Definition Index: 92493
+// Method Definition Index: 88312
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_ShowLoginSection_m670CFC80752732186E6D1A6AD4D43C803103C379 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13225,7 +13225,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 92494
+// Method Definition Index: 88313
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_ShowRegisterSection_m920C81640F9422E792829B567426C75CBB46183D (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13280,7 +13280,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 92495
+// Method Definition Index: 88314
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnRetryClicked_m83B20193FF31198E249F1CA771ED41196CDE3175 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13352,7 +13352,7 @@ IL_004d:
 		return;
 	}
 }
-// Method Definition Index: 92496
+// Method Definition Index: 88315
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_ShowInternetPanel_mC9E2FAD91BF317E07B97864C914B172F6722CF2E (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___0_retryAction, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13413,7 +13413,7 @@ IL_0038:
 		return;
 	}
 }
-// Method Definition Index: 92497
+// Method Definition Index: 88316
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AuthenticationManager_CheckInternetAndAction_mB38E5276654BF050C34C8A79E54C8803D76DFD4F (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___0_action, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13450,7 +13450,7 @@ IL_0017:
 		return (bool)1;
 	}
 }
-// Method Definition Index: 92498
+// Method Definition Index: 88317
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnLoginClicked_mF7E86DEDB98CE37D6D11B1771F59D0B91FE4B650 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13647,7 +13647,7 @@ IL_00c0:
 		return;
 	}
 }
-// Method Definition Index: 92499
+// Method Definition Index: 88318
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnGuestLoginClicked_mAA02F249B12523A65859A9E9989E1F8BDE85DE36 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13738,7 +13738,7 @@ IL_0052:
 		return;
 	}
 }
-// Method Definition Index: 92500
+// Method Definition Index: 88319
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnGoogleLoginClicked_m3C813BD21A331A0F865E6F4F8FC4AC7ECB2E44C3 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13833,7 +13833,7 @@ IL_008b:
 		return;
 	}
 }
-// Method Definition Index: 92501
+// Method Definition Index: 88320
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnGoogleSignInSuccess_m29EE02DF09693D64F5D5366798E2F02DA572E5E3 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, String_t* ___0_serverAuthCode, String_t* ___1_idToken, String_t* ___2_email, String_t* ___3_displayName, String_t* ___4_photoUrl, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13955,7 +13955,7 @@ IL_00b3:
 		return;
 	}
 }
-// Method Definition Index: 92502
+// Method Definition Index: 88321
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnGoogleSignInFailure_m65E3C0D2C1EBFDD24B33F3B96EAD50D1ED394627 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, String_t* ___0_error, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14075,7 +14075,7 @@ IL_00af:
 		return;
 	}
 }
-// Method Definition Index: 92503
+// Method Definition Index: 88322
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnFacebookLoginClicked_m64BD07E7971B88C62990FDAD5771981EDE2E511A (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14170,7 +14170,7 @@ IL_008b:
 		return;
 	}
 }
-// Method Definition Index: 92504
+// Method Definition Index: 88323
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnFacebookSignInSuccess_m0A67983D056BBD4FCCA063B304B822FBC22D270A (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, String_t* ___0_accessToken, String_t* ___1_facebookName, String_t* ___2_facebookEmail, String_t* ___3_facebookImageUrl, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14292,7 +14292,7 @@ IL_00b2:
 		return;
 	}
 }
-// Method Definition Index: 92505
+// Method Definition Index: 88324
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnFacebookSignInFailure_m578A9A2D87DB0D6F37E15C4F28A7430D3869992A (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, String_t* ___0_error, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14412,7 +14412,7 @@ IL_00af:
 		return;
 	}
 }
-// Method Definition Index: 92506
+// Method Definition Index: 88325
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnRegisterClicked_m16F8B96F894EB7BD94A0B33C3A3C4900E8B65CC1 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14626,7 +14626,7 @@ IL_00d8:
 		return;
 	}
 }
-// Method Definition Index: 92507
+// Method Definition Index: 88326
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AuthenticationManager_ValidateRegistration_mC1467462E537FB35F31907B39A24426DE75F4256 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, String_t* ___0_name, String_t* ___1_email, String_t* ___2_password, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14741,7 +14741,7 @@ IL_0080:
 		return (bool)1;
 	}
 }
-// Method Definition Index: 92508
+// Method Definition Index: 88327
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnLoginComplete_mE9A0629E6C56431AB174D46F4198F71C66E0F6EB (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, bool ___0_success, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14887,7 +14887,7 @@ IL_00be:
 		return;
 	}
 }
-// Method Definition Index: 92509
+// Method Definition Index: 88328
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnRegisterComplete_mC0936B08DA880C8C0D45F79A18A9F3679EC8F781 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, bool ___0_success, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15000,7 +15000,7 @@ IL_00a6:
 		return;
 	}
 }
-// Method Definition Index: 92510
+// Method Definition Index: 88329
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_ClearRegistrationFields_m3E9C75703AE7FFE3614EBBE9CF8E53F0FF05FCE9 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15085,7 +15085,7 @@ IL_0078:
 		return;
 	}
 }
-// Method Definition Index: 92511
+// Method Definition Index: 88330
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_SetLoadingState_m88E5DD968E80A68B0FDED1DFC2E1D237921C9B8A (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, bool ___0_isLoading, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15239,7 +15239,7 @@ IL_00cb:
 		return;
 	}
 }
-// Method Definition Index: 92512
+// Method Definition Index: 88331
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	{
@@ -15247,7 +15247,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_UpdateStatusText_m
 		return;
 	}
 }
-// Method Definition Index: 92513
+// Method Definition Index: 88332
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AuthenticationManager_IsValidEmail_mB70439E6AE4D5CEFF31D8BF437D890CABA1BDE99 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, String_t* ___0_email, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15301,7 +15301,7 @@ IL_0019:
 		return L_6;
 	}
 }
-// Method Definition Index: 92514
+// Method Definition Index: 88333
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnLoginPasswordToggleChanged_m540B65BC02511EC77904A6C62F9EF4E8C9639C2D (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, bool ___0_isOn, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15369,7 +15369,7 @@ IL_0028:
 		return;
 	}
 }
-// Method Definition Index: 92515
+// Method Definition Index: 88334
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnRegisterPasswordToggleChanged_mABF8AEDF3DAEB9E2B6506BBFF07BFEE72435F9AA (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, bool ___0_isOn, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15437,7 +15437,7 @@ IL_0028:
 		return;
 	}
 }
-// Method Definition Index: 92516
+// Method Definition Index: 88335
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager__ctor_m65FAD294B94A823DC9C97B94412E836B513F54AB (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15447,7 +15447,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager__ctor_m65FAD294B94
 		return;
 	}
 }
-// Method Definition Index: 92517
+// Method Definition Index: 88336
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_U3CStartU3Eb__28_0_m7D5D73EB3F2E65103A9C7989F4DAE9254875C836 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15456,7 +15456,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_U3CStartU3Eb__28_0
 		return;
 	}
 }
-// Method Definition Index: 92518
+// Method Definition Index: 88337
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_U3CStartU3Eb__28_1_m0E895E5686AA7D4F8A8186C07FE93E86ACF2D743 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15465,7 +15465,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_U3CStartU3Eb__28_1
 		return;
 	}
 }
-// Method Definition Index: 92519
+// Method Definition Index: 88338
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_U3CStartU3Eb__28_2_mCC9585B85DB61C07DC0926F509DA86184D1AD88E (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, bool ___0_success, String_t* ___1_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15540,7 +15540,7 @@ IL_003c:
 		return;
 	}
 }
-// Method Definition Index: 92520
+// Method Definition Index: 88339
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_U3CAttemptAutoLoginCoroutineU3Eb__32_0_m4E9B77D42793608B2F7428101CA434A54067D7C4 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, bool ___0_success, String_t* ___1_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15584,7 +15584,7 @@ IL_0015:
 		return;
 	}
 }
-// Method Definition Index: 92521
+// Method Definition Index: 88340
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_U3COnSilentGoogleSignInSuccessU3Eb__35_0_mEAB47C38512C63D547A86CFB5DFAECA47B1C23DD (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, bool ___0_success, String_t* ___1_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15625,7 +15625,7 @@ IL_001f:
 		return;
 	}
 }
-// Method Definition Index: 92522
+// Method Definition Index: 88341
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_U3COnSilentFacebookSignInSuccessU3Eb__39_0_m7440E71FED1D512D90956241BF069A01AE3171D1 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, bool ___0_success, String_t* ___1_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15666,7 +15666,7 @@ IL_001f:
 		return;
 	}
 }
-// Method Definition Index: 92523
+// Method Definition Index: 88342
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_U3CAttemptDeviceIdLoginU3Eb__42_0_m89E1C6B76A092F7F2745438412D12DD8C6675430 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, bool ___0_success, String_t* ___1_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15710,7 +15710,7 @@ IL_000b:
 		return;
 	}
 }
-// Method Definition Index: 92524
+// Method Definition Index: 88343
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_U3COnLoginClickedU3Eb__55_0_mABD4371E7A8BBFE78CB80082F93B6641DDBCB137 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, bool ___0_success, String_t* ___1_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15790,7 +15790,7 @@ IL_0063:
 		return;
 	}
 }
-// Method Definition Index: 92525
+// Method Definition Index: 88344
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_U3COnGuestLoginClickedU3Eb__56_0_mCDD72BF210F8844AEE277A78E982AA62E2E1030E (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, bool ___0_success, String_t* ___1_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15864,7 +15864,7 @@ IL_004f:
 		return;
 	}
 }
-// Method Definition Index: 92526
+// Method Definition Index: 88345
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_U3COnGoogleSignInSuccessU3Eb__58_0_m8A352F7A5AE67107E6259502D9D81532BE685883 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, bool ___0_success, String_t* ___1_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15903,7 +15903,7 @@ IL_001f:
 		return;
 	}
 }
-// Method Definition Index: 92527
+// Method Definition Index: 88346
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_U3COnFacebookSignInSuccessU3Eb__61_0_m5B046C51BFA216D961565262A216619B9F0586EC (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, bool ___0_success, String_t* ___1_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15942,7 +15942,7 @@ IL_001f:
 		return;
 	}
 }
-// Method Definition Index: 92528
+// Method Definition Index: 88347
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_U3COnRegisterClickedU3Eb__63_0_mA257A404E513693D05544E68F132A11FC8516C39 (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, bool ___0_success, String_t* ___1_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16047,7 +16047,7 @@ IL_0074:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92529
+// Method Definition Index: 88348
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAttemptAutoLoginCoroutineU3Ed__32__ctor_m6A6D25D2C69523683EA911EE6669302B2EF4217B (U3CAttemptAutoLoginCoroutineU3Ed__32_tEAC4819F2A8665D10B2E59A8FBEB5D02D4DDDD6A* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -16057,14 +16057,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAttemptAutoLoginCoroutineU3Ed__32__ct
 		return;
 	}
 }
-// Method Definition Index: 92530
+// Method Definition Index: 88349
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAttemptAutoLoginCoroutineU3Ed__32_System_IDisposable_Dispose_mF9027D1D5358932CB48BC0776D0D9E84E82BFFAC (U3CAttemptAutoLoginCoroutineU3Ed__32_tEAC4819F2A8665D10B2E59A8FBEB5D02D4DDDD6A* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 92531
+// Method Definition Index: 88350
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CAttemptAutoLoginCoroutineU3Ed__32_MoveNext_mB84B8F039120F6A94EADD8D1658045EC4AD4451A (U3CAttemptAutoLoginCoroutineU3Ed__32_tEAC4819F2A8665D10B2E59A8FBEB5D02D4DDDD6A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16180,7 +16180,7 @@ IL_0087:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 92532
+// Method Definition Index: 88351
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAttemptAutoLoginCoroutineU3Ed__32_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mA27787B5D59A0CFC622BC7988DDB1293E6F6AE28 (U3CAttemptAutoLoginCoroutineU3Ed__32_tEAC4819F2A8665D10B2E59A8FBEB5D02D4DDDD6A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16188,7 +16188,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAttemptAutoLoginCoroutineU3
 		return L_0;
 	}
 }
-// Method Definition Index: 92533
+// Method Definition Index: 88352
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAttemptAutoLoginCoroutineU3Ed__32_System_Collections_IEnumerator_Reset_mEB86B2917A9314E4349632AA518A633004540ECC (U3CAttemptAutoLoginCoroutineU3Ed__32_tEAC4819F2A8665D10B2E59A8FBEB5D02D4DDDD6A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16197,7 +16197,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAttemptAutoLoginCoroutineU3Ed__32_Sys
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CAttemptAutoLoginCoroutineU3Ed__32_System_Collections_IEnumerator_Reset_mEB86B2917A9314E4349632AA518A633004540ECC_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 92534
+// Method Definition Index: 88353
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAttemptAutoLoginCoroutineU3Ed__32_System_Collections_IEnumerator_get_Current_mE4E47DA29AE8114230D8DC273DFDAA47466D1ABB (U3CAttemptAutoLoginCoroutineU3Ed__32_tEAC4819F2A8665D10B2E59A8FBEB5D02D4DDDD6A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16213,7 +16213,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAttemptAutoLoginCoroutineU3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92535
+// Method Definition Index: 88354
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAttemptSilentFacebookLoginCoroutineU3Ed__38__ctor_mC170B5883C8E1EF9641770CF6D2B3023C1328136 (U3CAttemptSilentFacebookLoginCoroutineU3Ed__38_tF298790DFF26BA34743EF7BE2664AA3A61B833C0* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -16223,14 +16223,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAttemptSilentFacebookLoginCoroutineU3
 		return;
 	}
 }
-// Method Definition Index: 92536
+// Method Definition Index: 88355
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAttemptSilentFacebookLoginCoroutineU3Ed__38_System_IDisposable_Dispose_m07D7FCF2AC96217B3D681DC31BE7AE53A3D97EBE (U3CAttemptSilentFacebookLoginCoroutineU3Ed__38_tF298790DFF26BA34743EF7BE2664AA3A61B833C0* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 92537
+// Method Definition Index: 88356
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CAttemptSilentFacebookLoginCoroutineU3Ed__38_MoveNext_mC417D5B9D9DB5398C9B825EF0CA70A99893A6BF7 (U3CAttemptSilentFacebookLoginCoroutineU3Ed__38_tF298790DFF26BA34743EF7BE2664AA3A61B833C0* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16284,7 +16284,7 @@ IL_0030:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 92538
+// Method Definition Index: 88357
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAttemptSilentFacebookLoginCoroutineU3Ed__38_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mB9870F7AD3A4F9BFF6DFECC5B5985F0AB483AB3E (U3CAttemptSilentFacebookLoginCoroutineU3Ed__38_tF298790DFF26BA34743EF7BE2664AA3A61B833C0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16292,7 +16292,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAttemptSilentFacebookLoginC
 		return L_0;
 	}
 }
-// Method Definition Index: 92539
+// Method Definition Index: 88358
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAttemptSilentFacebookLoginCoroutineU3Ed__38_System_Collections_IEnumerator_Reset_mF6CF59A07F13C8D748559D1AE8B8999E047E5368 (U3CAttemptSilentFacebookLoginCoroutineU3Ed__38_tF298790DFF26BA34743EF7BE2664AA3A61B833C0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16301,7 +16301,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAttemptSilentFacebookLoginCoroutineU3
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CAttemptSilentFacebookLoginCoroutineU3Ed__38_System_Collections_IEnumerator_Reset_mF6CF59A07F13C8D748559D1AE8B8999E047E5368_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 92540
+// Method Definition Index: 88359
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAttemptSilentFacebookLoginCoroutineU3Ed__38_System_Collections_IEnumerator_get_Current_m7BFFDB797CA010E0A51573C0456AA04DC9C26F17 (U3CAttemptSilentFacebookLoginCoroutineU3Ed__38_tF298790DFF26BA34743EF7BE2664AA3A61B833C0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16317,7 +16317,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAttemptSilentFacebookLoginC
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92541
+// Method Definition Index: 88360
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* AvatarSelector_get_Instance_m24649C0486FBE07A36A2431B1AA28F8CB8BC20FE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16332,7 +16332,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6
 		return L_0;
 	}
 }
-// Method Definition Index: 92542
+// Method Definition Index: 88361
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AvatarSelector_set_Instance_m246F33937B6087D0671E93CE13340A155F9C48A7 (AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16349,7 +16349,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AvatarSelector_set_Instance_m246F33937B6
 		return;
 	}
 }
-// Method Definition Index: 92543
+// Method Definition Index: 88362
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AvatarSelector_Awake_m7ED690CB44C41AE43392BA1C0F86BA57D3DC5B37 (AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16359,7 +16359,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AvatarSelector_Awake_m7ED690CB44C41AE433
 		return;
 	}
 }
-// Method Definition Index: 92544
+// Method Definition Index: 88363
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AvatarSelector_Start_m1D36195B08B56F1603DC00E9F90E8AD5A1B5A1E3 (AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16457,7 +16457,7 @@ IL_004a:
 		return;
 	}
 }
-// Method Definition Index: 92545
+// Method Definition Index: 88364
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AvatarSelector_OnDestroy_m242E91A76E1D72359E034FFD487001967D995D0A (AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16475,7 +16475,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AvatarSelector_OnDestroy_m242E91A76E1D72
 		return;
 	}
 }
-// Method Definition Index: 92546
+// Method Definition Index: 88365
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AvatarSelector_OnEnable_m85A8ADD3DFF023AD5E280E8703CD74E969582298 (AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16484,7 +16484,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AvatarSelector_OnEnable_m85A8ADD3DFF023A
 		return;
 	}
 }
-// Method Definition Index: 92547
+// Method Definition Index: 88366
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AvatarSelector_RefreshUI_m10986C71804F9E7B1C5EEDAEA52455BA9025327F (AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16576,7 +16576,7 @@ IL_005c:
 		return;
 	}
 }
-// Method Definition Index: 92548
+// Method Definition Index: 88367
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AvatarSelector_ShowPreset_m84C2C35B8064C32AFDF730146B700C24D2E4A4FD (AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	{
@@ -16609,7 +16609,7 @@ IL_0012:
 		return;
 	}
 }
-// Method Definition Index: 92549
+// Method Definition Index: 88368
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AvatarSelector_ApplyCustomSprite_mFA587BF8697338C42BF537FA490CE1D9F2D6611F (AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* __this, Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___0_sprite, const RuntimeMethod* method) 
 {
 	{
@@ -16617,7 +16617,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AvatarSelector_ApplyCustomSprite_mFA587B
 		return;
 	}
 }
-// Method Definition Index: 92550
+// Method Definition Index: 88369
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AvatarSelector_OnAvatarButtonClicked_m2AE6AF6BBEF4BD5ACB0A2C298DE13A197665456F (AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	{
@@ -16674,7 +16674,7 @@ IL_0036:
 		return;
 	}
 }
-// Method Definition Index: 92551
+// Method Definition Index: 88370
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AvatarSelector_UpdateButtonHighlights_m352AD7C4C056793FC56458FF03D63D080516C0F7 (AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16742,7 +16742,7 @@ IL_002e:
 		return;
 	}
 }
-// Method Definition Index: 92552
+// Method Definition Index: 88371
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AvatarSelector_ShowSelectionFeedback_m829B89817C129A212B116A0D1A94D28FCB8CBB52 (AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	{
@@ -16750,7 +16750,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AvatarSelector_ShowSelectionFeedback_m82
 		return;
 	}
 }
-// Method Definition Index: 92553
+// Method Definition Index: 88372
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AvatarSelector_SetupWatchVideoText_mBF933CF7A58A5AEB2336F47FA92518C3649F0E14 (AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16784,7 +16784,7 @@ IL_001e:
 		return;
 	}
 }
-// Method Definition Index: 92554
+// Method Definition Index: 88373
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* AvatarSelector_GetAvatarSpriteByIndex_m13A49F82BFEDBB331E6F7C8469C48EF0669E7C14 (AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	{
@@ -16820,7 +16820,7 @@ IL_0011:
 		return L_6;
 	}
 }
-// Method Definition Index: 92555
+// Method Definition Index: 88374
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* AvatarSelector_GetBackgroundSpriteByIndex_mC8480E104A1D6A3EC5E5AC3AE485B415D92E842A (AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	{
@@ -16856,7 +16856,7 @@ IL_0011:
 		return L_6;
 	}
 }
-// Method Definition Index: 92556
+// Method Definition Index: 88375
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AvatarSelector__ctor_mAC74C614E6B5DAE34FC5484226C81FA2E0356B6F (AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16890,7 +16890,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AvatarSelector__ctor_mAC74C614E6B5DAE34F
 		return;
 	}
 }
-// Method Definition Index: 92557
+// Method Definition Index: 88376
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AvatarSelector_U3CRefreshUIU3Eb__15_0_mF07DB1B320A486558B64E7FC60F1255CB44A56B5 (AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* __this, Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___0_texture, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16950,7 +16950,7 @@ IL_0043:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92558
+// Method Definition Index: 88377
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass12_0__ctor_m503FC64F2BD2D517D671225942583BB4BFC55BBE (U3CU3Ec__DisplayClass12_0_t7454464650E4E1BD969967947364282C1003E331* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16958,7 +16958,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass12_0__ctor_m503FC64
 		return;
 	}
 }
-// Method Definition Index: 92559
+// Method Definition Index: 88378
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass12_0_U3CStartU3Eb__0_m5CD266407794D18495988EACCD3F7D5610F7E70D (U3CU3Ec__DisplayClass12_0_t7454464650E4E1BD969967947364282C1003E331* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16978,7 +16978,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass12_0_U3CStartU3Eb__
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92560
+// Method Definition Index: 88379
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* BackendAuthService_get_Instance_m74239149FFCCCF5A49AF965DCA0565780B051110 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16993,7 +16993,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR BackendAuthService_t71F3E2DE248AE9E4AEABCD450
 		return L_0;
 	}
 }
-// Method Definition Index: 92561
+// Method Definition Index: 88380
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_set_Instance_mF02D8893189C766887B4A553984FD270455A2B11 (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17010,7 +17010,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_set_Instance_mF02D889
 		return;
 	}
 }
-// Method Definition Index: 92562
+// Method Definition Index: 88381
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_Awake_m11D0C91578129B6D678AD58A207B43B07CE0DF90 (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17065,7 +17065,7 @@ IL_0026:
 		return;
 	}
 }
-// Method Definition Index: 92563
+// Method Definition Index: 88382
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_LoadRemoteSprite_m914D52189DA337AA121584C49167F8E809484F17 (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, String_t* ___0_imagePath, Action_1_tE15E022A737A08DAA5B691BB69C63DE906C3C94F* ___1_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17156,7 +17156,7 @@ IL_0037:
 		return;
 	}
 }
-// Method Definition Index: 92564
+// Method Definition Index: 88383
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_DownloadSpriteCoroutine_m44FF6159527C49BF3362DB2756E2AB16F3AF92C8 (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, String_t* ___0_imagePath, Action_1_tE15E022A737A08DAA5B691BB69C63DE906C3C94F* ___1_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17185,7 +17185,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_DownloadSpr
 		return L_4;
 	}
 }
-// Method Definition Index: 92565
+// Method Definition Index: 88384
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* BackendAuthService_GetStoredJWT_m6CEB0F7B503CC5FBE659428203090712661F270C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17202,7 +17202,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* BackendAuthService_GetStoredJWT_m6C
 		return L_1;
 	}
 }
-// Method Definition Index: 92566
+// Method Definition Index: 88385
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BackendAuthService_HasStoredJWT_m77D0CD676518CB836991BD62A63D14AC96014601 (const RuntimeMethod* method) 
 {
 	{
@@ -17214,7 +17214,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BackendAuthService_HasStoredJWT_m77D0CD6
 		return (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
 	}
 }
-// Method Definition Index: 92567
+// Method Definition Index: 88386
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_ClearJWT_m66B8AB032F99B06D2EA15665E8F27DC2F775622F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17234,7 +17234,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_ClearJWT_m66B8AB032F9
 		return;
 	}
 }
-// Method Definition Index: 92568
+// Method Definition Index: 88387
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_Logout_mF9D75C635F959D5745DA290C7ED4072E9CDE53B1 (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* ___0_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17289,7 +17289,7 @@ IL_0017:
 		return;
 	}
 }
-// Method Definition Index: 92569
+// Method Definition Index: 88388
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_LogoutCoroutine_m1815A7A02B994250C14C4AD17492F4503474336A (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* ___0_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17313,7 +17313,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_LogoutCorou
 		return L_2;
 	}
 }
-// Method Definition Index: 92570
+// Method Definition Index: 88389
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_Register_m6CC4E24CC5C26A5367A960C5AF188296A71B4D0C (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, String_t* ___0_username, String_t* ___1_email, String_t* ___2_password, Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* ___3_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17363,7 +17363,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_Register_m6CC4E24CC5C
 		return;
 	}
 }
-// Method Definition Index: 92571
+// Method Definition Index: 88390
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_RegisterCoroutine_mF402F25D0E18958A8850149F109CE3EAE006A784 (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, String_t* ___0_username, String_t* ___1_email, String_t* ___2_password, Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* ___3_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17402,7 +17402,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_RegisterCor
 		return L_8;
 	}
 }
-// Method Definition Index: 92572
+// Method Definition Index: 88391
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_Login_mB51D520E568DC19D6D15D5911A4604006F46E1DC (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, String_t* ___0_email, String_t* ___1_password, Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* ___2_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17414,13 +17414,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_Login_mB51D520E568DC1
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:221>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:216>
 		String_t* L_0 = ___0_email;
 		String_t* L_1;
 		L_1 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralF2746659F26ED69A7DD448913692CBE33472F7CB, L_0, _stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_1, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:222>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:217>
 		String_t* L_2 = ___0_email;
 		String_t* L_3 = ___1_password;
 		Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_4 = ___2_onComplete;
@@ -17428,11 +17428,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_Login_mB51D520E568DC1
 		L_5 = BackendAuthService_LoginCoroutine_m8D78A18DB605AD6AB094934AEBCFAE7C8F958791(__this, L_2, L_3, L_4, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_6;
 		L_6 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_5, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:223>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:218>
 		return;
 	}
 }
-// Method Definition Index: 92573
+// Method Definition Index: 88392
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_LoginCoroutine_m8D78A18DB605AD6AB094934AEBCFAE7C8F958791 (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, String_t* ___0_email, String_t* ___1_password, Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* ___2_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17466,7 +17466,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_LoginCorout
 		return L_6;
 	}
 }
-// Method Definition Index: 92574
+// Method Definition Index: 88393
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_GuestLogin_m0BB6B3B9E3A66C7B3C108D1F07140A670681A664 (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, String_t* ___0_deviceId, Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* ___1_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17478,24 +17478,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_GuestLogin_m0BB6B3B9E
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:294>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:284>
 		String_t* L_0 = ___0_deviceId;
 		String_t* L_1;
 		L_1 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralBC34E41BDD12C38096F27555430089BBE31616D5, L_0, _stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_1, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:295>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:285>
 		String_t* L_2 = ___0_deviceId;
 		Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_3 = ___1_onComplete;
 		RuntimeObject* L_4;
 		L_4 = BackendAuthService_GuestLoginCoroutine_mEFD7C08C7857DC1BAF43970485F8ED58AD2C8FD9(__this, L_2, L_3, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_5;
 		L_5 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_4, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:296>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:286>
 		return;
 	}
 }
-// Method Definition Index: 92575
+// Method Definition Index: 88394
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_GuestLoginCoroutine_mEFD7C08C7857DC1BAF43970485F8ED58AD2C8FD9 (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, String_t* ___0_deviceId, Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* ___1_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17524,7 +17524,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_GuestLoginC
 		return L_4;
 	}
 }
-// Method Definition Index: 92576
+// Method Definition Index: 88395
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_GoogleLogin_m712E54D54170F0C03CCCE8083D2355CEB5D3ECE5 (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, String_t* ___0_idToken, Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* ___1_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17536,21 +17536,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_GoogleLogin_m712E54D5
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:367>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:352>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralBE3358CF36311872FB83B5E8E4B44AFBF5F972DC, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:368>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:353>
 		String_t* L_0 = ___0_idToken;
 		Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_1 = ___1_onComplete;
 		RuntimeObject* L_2;
 		L_2 = BackendAuthService_SocialLoginCoroutine_m7FC2239F16C564083DCB5B41BF0BEA2A08279C4C(__this, _stringLiteralF93224EA234245ED9082BD6CD249CD079DC190CD, L_0, L_1, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_3;
 		L_3 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_2, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:369>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:354>
 		return;
 	}
 }
-// Method Definition Index: 92577
+// Method Definition Index: 88396
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_FacebookLogin_m4C060C1591BFFF7D777C23A2F35B078972D330D8 (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, String_t* ___0_accessToken, Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* ___1_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17562,21 +17562,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_FacebookLogin_m4C060C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:376>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:361>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral325506EC1D9F97394BA16C1336F829753E7AA10B, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:377>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:362>
 		String_t* L_0 = ___0_accessToken;
 		Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_1 = ___1_onComplete;
 		RuntimeObject* L_2;
 		L_2 = BackendAuthService_SocialLoginCoroutine_m7FC2239F16C564083DCB5B41BF0BEA2A08279C4C(__this, _stringLiteralB38E0782934FB9A908B399F3D5825E93EA790896, L_0, L_1, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_3;
 		L_3 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_2, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:378>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:363>
 		return;
 	}
 }
-// Method Definition Index: 92578
+// Method Definition Index: 88397
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_SocialLoginCoroutine_m7FC2239F16C564083DCB5B41BF0BEA2A08279C4C (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, String_t* ___0_endpoint, String_t* ___1_token, Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* ___2_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17610,7 +17610,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_SocialLogin
 		return L_6;
 	}
 }
-// Method Definition Index: 92579
+// Method Definition Index: 88398
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_UpdateProfile_mE01AA8E20D90466DDA8846FE68E702DDB50546A8 (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, String_t* ___0_newName, String_t* ___1_avatar, Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* ___2_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17625,7 +17625,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_UpdateProfile_mE01AA8
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:449>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:429>
 		bool L_0;
 		L_0 = BackendAuthService_HasStoredJWT_m77D0CD676518CB836991BD62A63D14AC96014601(NULL);
 		if (L_0)
@@ -17634,7 +17634,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_UpdateProfile_mE01AA8
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:451>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:431>
 		Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_1 = ___2_onComplete;
 		if (!L_1)
 		{
@@ -17649,13 +17649,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_UpdateProfile_mE01AA8
 
 IL_0016:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:452>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:432>
 		return;
 	}
 
 IL_0017:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:454>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:434>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_3 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_4 = L_3;
 		NullCheck(L_4);
@@ -17678,7 +17678,7 @@ IL_0017:
 		L_11 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_10, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_11, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:455>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:435>
 		String_t* L_12 = ___0_newName;
 		String_t* L_13 = ___1_avatar;
 		Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_14 = ___2_onComplete;
@@ -17686,11 +17686,11 @@ IL_0017:
 		L_15 = BackendAuthService_UpdateProfileCoroutine_m392FFCADE9D579367480AD7614E43E0D20B00890(__this, L_12, L_13, L_14, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_16;
 		L_16 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_15, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:456>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:436>
 		return;
 	}
 }
-// Method Definition Index: 92580
+// Method Definition Index: 88399
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_UpdateProfileCoroutine_m392FFCADE9D579367480AD7614E43E0D20B00890 (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, String_t* ___0_newName, String_t* ___1_avatar, Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* ___2_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17724,7 +17724,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_UpdateProfi
 		return L_6;
 	}
 }
-// Method Definition Index: 92581
+// Method Definition Index: 88400
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_UploadAvatar_m1506F88D7FADA089D71FC3C98D89EB6AEE04074C (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_imageBytes, Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* ___1_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17736,7 +17736,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_UploadAvatar_m1506F88
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:525>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:505>
 		bool L_0;
 		L_0 = BackendAuthService_HasStoredJWT_m77D0CD676518CB836991BD62A63D14AC96014601(NULL);
 		if (L_0)
@@ -17745,7 +17745,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_UploadAvatar_m1506F88
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:527>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:507>
 		Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_1 = ___1_onComplete;
 		if (!L_1)
 		{
@@ -17760,27 +17760,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_UploadAvatar_m1506F88
 
 IL_0016:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:528>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:508>
 		return;
 	}
 
 IL_0017:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:530>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:510>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral9C35A01FB12AB6944116C9852AE9B46F3366CE6E, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:531>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:511>
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3 = ___0_imageBytes;
 		Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_4 = ___1_onComplete;
 		RuntimeObject* L_5;
 		L_5 = BackendAuthService_UploadAvatarCoroutine_mFA84BB8D05C2316854A438B066C2B2F9A1D4BCC5(__this, L_3, L_4, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_6;
 		L_6 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_5, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:532>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:512>
 		return;
 	}
 }
-// Method Definition Index: 92582
+// Method Definition Index: 88401
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_UploadAvatarCoroutine_mFA84BB8D05C2316854A438B066C2B2F9A1D4BCC5 (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_imageBytes, Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* ___1_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17809,7 +17809,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_UploadAvata
 		return L_4;
 	}
 }
-// Method Definition Index: 92583
+// Method Definition Index: 88402
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_UpdateCurrency_m14DE503991EBDEA44F863EFFC42CE18D42983916 (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, int32_t ___0_cashBalance, int32_t ___1_coins, Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* ___2_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17819,7 +17819,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_UpdateCurrency_m14DE5
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:590>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:570>
 		bool L_0;
 		L_0 = BackendAuthService_HasStoredJWT_m77D0CD676518CB836991BD62A63D14AC96014601(NULL);
 		if (L_0)
@@ -17828,7 +17828,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_UpdateCurrency_m14DE5
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:592>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:572>
 		Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_1 = ___2_onComplete;
 		if (!L_1)
 		{
@@ -17843,13 +17843,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_UpdateCurrency_m14DE5
 
 IL_0016:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:593>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:573>
 		return;
 	}
 
 IL_0017:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:595>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:575>
 		int32_t L_3 = ___0_cashBalance;
 		int32_t L_4 = ___1_coins;
 		Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_5 = ___2_onComplete;
@@ -17857,11 +17857,11 @@ IL_0017:
 		L_6 = BackendAuthService_UpdateCurrencyCoroutine_mFAEB13459529B35A2CDC66EF0758013AEE1914FF(__this, L_3, L_4, L_5, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_7;
 		L_7 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_6, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:596>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:576>
 		return;
 	}
 }
-// Method Definition Index: 92584
+// Method Definition Index: 88403
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_UpdateCurrencyCoroutine_mFAEB13459529B35A2CDC66EF0758013AEE1914FF (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, int32_t ___0_cashBalance, int32_t ___1_coins, Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* ___2_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17893,7 +17893,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_UpdateCurre
 		return L_6;
 	}
 }
-// Method Definition Index: 92585
+// Method Definition Index: 88404
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_GetProfile_m3376681BA9E36F3D2A3D4481800467F9B5EE30C1 (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* ___0_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17903,7 +17903,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_GetProfile_m3376681BA
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:656>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:636>
 		bool L_0;
 		L_0 = BackendAuthService_HasStoredJWT_m77D0CD676518CB836991BD62A63D14AC96014601(NULL);
 		if (L_0)
@@ -17912,7 +17912,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_GetProfile_m3376681BA
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:658>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:638>
 		Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_1 = ___0_onComplete;
 		if (!L_1)
 		{
@@ -17927,23 +17927,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_GetProfile_m3376681BA
 
 IL_0016:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:659>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:639>
 		return;
 	}
 
 IL_0017:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:661>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:641>
 		Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_3 = ___0_onComplete;
 		RuntimeObject* L_4;
 		L_4 = BackendAuthService_GetProfileCoroutine_m6A90F1AE182A3FF6B236738898776744124A25D3(__this, L_3, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_5;
 		L_5 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_4, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:662>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:642>
 		return;
 	}
 }
-// Method Definition Index: 92586
+// Method Definition Index: 88405
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_GetProfileCoroutine_m6A90F1AE182A3FF6B236738898776744124A25D3 (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* ___0_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17967,7 +17967,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_GetProfileC
 		return L_2;
 	}
 }
-// Method Definition Index: 92587
+// Method Definition Index: 88406
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_GetDailyRewardStatus_m3E10CE6876B2ACF8822FAC5904DEF7BF85BB4016 (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, Action_2_t74D9CF7357517E276161403D7DDF2F7366A330C4* ___0_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17978,7 +17978,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_GetDailyRewardStatus_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:724>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:699>
 		bool L_0;
 		L_0 = BackendAuthService_HasStoredJWT_m77D0CD676518CB836991BD62A63D14AC96014601(NULL);
 		if (L_0)
@@ -17987,7 +17987,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_GetDailyRewardStatus_
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:726>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:701>
 		Action_2_t74D9CF7357517E276161403D7DDF2F7366A330C4* L_1 = ___0_onComplete;
 		if (!L_1)
 		{
@@ -18002,26 +18002,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_GetDailyRewardStatus_
 
 IL_0012:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:727>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:702>
 		return;
 	}
 
 IL_0013:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:729>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:704>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralF133F44D2661EE756C67E21C8D2D4B6350994D94, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:730>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:705>
 		Action_2_t74D9CF7357517E276161403D7DDF2F7366A330C4* L_3 = ___0_onComplete;
 		RuntimeObject* L_4;
 		L_4 = BackendAuthService_GetDailyRewardStatusCoroutine_m2DA911D866EF9E94C2AEE92B782DC6EFDF533BAA(__this, L_3, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_5;
 		L_5 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_4, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:731>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:706>
 		return;
 	}
 }
-// Method Definition Index: 92588
+// Method Definition Index: 88407
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_GetDailyRewardStatusCoroutine_m2DA911D866EF9E94C2AEE92B782DC6EFDF533BAA (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, Action_2_t74D9CF7357517E276161403D7DDF2F7366A330C4* ___0_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18045,7 +18045,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_GetDailyRew
 		return L_2;
 	}
 }
-// Method Definition Index: 92589
+// Method Definition Index: 88408
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_ClaimDailyReward_mFF6A50CE7C5A40F70FEFFE23EBB6810F358067A4 (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, Action_2_t74D9CF7357517E276161403D7DDF2F7366A330C4* ___0_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18056,7 +18056,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_ClaimDailyReward_mFF6
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:762>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:737>
 		bool L_0;
 		L_0 = BackendAuthService_HasStoredJWT_m77D0CD676518CB836991BD62A63D14AC96014601(NULL);
 		if (L_0)
@@ -18065,7 +18065,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_ClaimDailyReward_mFF6
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:764>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:739>
 		Action_2_t74D9CF7357517E276161403D7DDF2F7366A330C4* L_1 = ___0_onComplete;
 		if (!L_1)
 		{
@@ -18080,26 +18080,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_ClaimDailyReward_mFF6
 
 IL_0012:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:765>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:740>
 		return;
 	}
 
 IL_0013:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:767>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:742>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral87E28390ECE2C1AC0AAE94133F11C7A215D75E78, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:768>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:743>
 		Action_2_t74D9CF7357517E276161403D7DDF2F7366A330C4* L_3 = ___0_onComplete;
 		RuntimeObject* L_4;
 		L_4 = BackendAuthService_ClaimDailyRewardCoroutine_m7E139E31900104CD2ED15113896B3E08886A7B4E(__this, L_3, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_5;
 		L_5 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_4, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:769>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:744>
 		return;
 	}
 }
-// Method Definition Index: 92590
+// Method Definition Index: 88409
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_ClaimDailyRewardCoroutine_m7E139E31900104CD2ED15113896B3E08886A7B4E (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, Action_2_t74D9CF7357517E276161403D7DDF2F7366A330C4* ___0_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18123,7 +18123,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_ClaimDailyR
 		return L_2;
 	}
 }
-// Method Definition Index: 92591
+// Method Definition Index: 88410
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_GetImage_mA6B207268CF5BB9E260A32EC3A68A1506CD5DE4F (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, String_t* ___0_url, Action_1_tD7F74291FAA5A362F4A5F48D4E1CF3ED51FA6A33* ___1_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18144,7 +18144,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_GetImage_mA6B207268CF
 	}
 	Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* V_0 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:805>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:780>
 		String_t* L_0 = ___0_url;
 		bool L_1;
 		L_1 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_0, NULL);
@@ -18154,13 +18154,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_GetImage_mA6B207268CF
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:805>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:780>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:808>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:783>
 		Dictionary_2_tB30C9EC7EAE1268D7EE7936DB4C6E64DD28387CA* L_2 = __this->____imageCache;
 		String_t* L_3 = ___0_url;
 		NullCheck(L_2);
@@ -18182,7 +18182,7 @@ IL_0009:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:810>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:785>
 		Action_1_tD7F74291FAA5A362F4A5F48D4E1CF3ED51FA6A33* L_7 = ___1_onComplete;
 		if (!L_7)
 		{
@@ -18198,13 +18198,13 @@ IL_0009:
 
 IL_002c:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:811>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:786>
 		return;
 	}
 
 IL_002d:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:815>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:790>
 		Dictionary_2_tEACBA39872E30FF21C316FAC7BDC681AFFEE7B98* L_10 = __this->____inFlightImageRequests;
 		String_t* L_11 = ___0_url;
 		NullCheck(L_10);
@@ -18216,7 +18216,7 @@ IL_002d:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:817>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:792>
 		Dictionary_2_tEACBA39872E30FF21C316FAC7BDC681AFFEE7B98* L_13 = __this->____inFlightImageRequests;
 		String_t* L_14 = ___0_url;
 		NullCheck(L_13);
@@ -18225,13 +18225,13 @@ IL_002d:
 		Action_1_tD7F74291FAA5A362F4A5F48D4E1CF3ED51FA6A33* L_16 = ___1_onComplete;
 		NullCheck(L_15);
 		List_1_Add_m1E698B15879455EEDF892963823D0662AF99E810_inline(L_15, L_16, List_1_Add_m1E698B15879455EEDF892963823D0662AF99E810_RuntimeMethod_var);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:818>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:793>
 		return;
 	}
 
 IL_004e:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:822>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:797>
 		Dictionary_2_tEACBA39872E30FF21C316FAC7BDC681AFFEE7B98* L_17 = __this->____inFlightImageRequests;
 		String_t* L_18 = ___0_url;
 		List_1_t3443D352DECF3634069327D8BBD8049C40E35583* L_19 = (List_1_t3443D352DECF3634069327D8BBD8049C40E35583*)il2cpp_codegen_object_new(List_1_t3443D352DECF3634069327D8BBD8049C40E35583_il2cpp_TypeInfo_var);
@@ -18242,23 +18242,23 @@ IL_004e:
 		List_1_Add_m1E698B15879455EEDF892963823D0662AF99E810_inline(L_20, L_21, List_1_Add_m1E698B15879455EEDF892963823D0662AF99E810_RuntimeMethod_var);
 		NullCheck(L_17);
 		Dictionary_2_set_Item_mE7EBBF4F53C1CCBF1C1221F8255DAA8809444935(L_17, L_18, L_20, Dictionary_2_set_Item_mE7EBBF4F53C1CCBF1C1221F8255DAA8809444935_RuntimeMethod_var);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:823>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:798>
 		String_t* L_22 = ___0_url;
 		String_t* L_23;
 		L_23 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral74045AE3ABD91C0FB50743124FEC0ACEC6E0F8E3, L_22, _stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_23, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:824>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:799>
 		String_t* L_24 = ___0_url;
 		RuntimeObject* L_25;
 		L_25 = BackendAuthService_GetImageCoroutine_m3CF439AAB6218CE0B1DE93BE3FF73F1054B1BDE4(__this, L_24, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_26;
 		L_26 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_25, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:825>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:800>
 		return;
 	}
 }
-// Method Definition Index: 92592
+// Method Definition Index: 88411
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_GetImageCoroutine_m3CF439AAB6218CE0B1DE93BE3FF73F1054B1BDE4 (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, String_t* ___0_url, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18282,11 +18282,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_GetImageCor
 		return L_2;
 	}
 }
-// Method Definition Index: 92593
+// Method Definition Index: 88412
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_GetDailyOffers_m8C397EEEC360A639F79ABF751099E68863E4CCF2 (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, Action_2_t942C54674EA4AD68943D8ACD4EE527AD1166EBA3* ___0_onComplete, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:862>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:837>
 		bool L_0;
 		L_0 = BackendAuthService_HasStoredJWT_m77D0CD676518CB836991BD62A63D14AC96014601(NULL);
 		if (L_0)
@@ -18295,7 +18295,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_GetDailyOffers_m8C397
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:864>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:839>
 		Action_2_t942C54674EA4AD68943D8ACD4EE527AD1166EBA3* L_1 = ___0_onComplete;
 		if (!L_1)
 		{
@@ -18310,23 +18310,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_GetDailyOffers_m8C397
 
 IL_0012:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:865>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:840>
 		return;
 	}
 
 IL_0013:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:867>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:842>
 		Action_2_t942C54674EA4AD68943D8ACD4EE527AD1166EBA3* L_3 = ___0_onComplete;
 		RuntimeObject* L_4;
 		L_4 = BackendAuthService_GetDailyOffersCoroutine_mC033A122483D4AAC2C674F0AD372A54F47B7F508(__this, L_3, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_5;
 		L_5 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_4, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:868>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:843>
 		return;
 	}
 }
-// Method Definition Index: 92594
+// Method Definition Index: 88413
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_GetDailyOffersCoroutine_mC033A122483D4AAC2C674F0AD372A54F47B7F508 (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, Action_2_t942C54674EA4AD68943D8ACD4EE527AD1166EBA3* ___0_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18350,21 +18350,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_GetDailyOff
 		return L_2;
 	}
 }
-// Method Definition Index: 92595
+// Method Definition Index: 88414
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService_GetLobbyConfigurations_m915A8AFFC2E846E25EB632C011A3808BB32BD658 (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, Action_2_tC9FAC49A789EE6D30AD45BF97FB50EB5226CA096* ___0_onComplete, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:899>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:874>
 		Action_2_tC9FAC49A789EE6D30AD45BF97FB50EB5226CA096* L_0 = ___0_onComplete;
 		RuntimeObject* L_1;
 		L_1 = BackendAuthService_GetLobbyConfigurationsCoroutine_m9987F2C4BA81940FEE326B9E51642614A8FE6404(__this, L_0, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_2;
 		L_2 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_1, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:900>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:875>
 		return;
 	}
 }
-// Method Definition Index: 92596
+// Method Definition Index: 88415
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_GetLobbyConfigurationsCoroutine_m9987F2C4BA81940FEE326B9E51642614A8FE6404 (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, Action_2_tC9FAC49A789EE6D30AD45BF97FB50EB5226CA096* ___0_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18388,7 +18388,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* BackendAuthService_GetLobbyCon
 		return L_2;
 	}
 }
-// Method Definition Index: 92597
+// Method Definition Index: 88416
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService__ctor_mBA42BDDC95BBD50B23C4A0D96AD497143729F61A (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18412,12 +18412,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService__ctor_mBA42BDDC95BBD5
 		Dictionary_2__ctor_mDAFC0246415FCD20B4DFA892990A1AAA6F27C334(L_0, Dictionary_2__ctor_mDAFC0246415FCD20B4DFA892990A1AAA6F27C334_RuntimeMethod_var);
 		__this->____spriteCache = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____spriteCache), (void*)L_0);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:796>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:771>
 		Dictionary_2_tEACBA39872E30FF21C316FAC7BDC681AFFEE7B98* L_1 = (Dictionary_2_tEACBA39872E30FF21C316FAC7BDC681AFFEE7B98*)il2cpp_codegen_object_new(Dictionary_2_tEACBA39872E30FF21C316FAC7BDC681AFFEE7B98_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_m6DFA9F770BAA55FBA07D20DAB702AFF544C4837D(L_1, Dictionary_2__ctor_m6DFA9F770BAA55FBA07D20DAB702AFF544C4837D_RuntimeMethod_var);
 		__this->____inFlightImageRequests = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____inFlightImageRequests), (void*)L_1);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:797>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:772>
 		Dictionary_2_tB30C9EC7EAE1268D7EE7936DB4C6E64DD28387CA* L_2 = (Dictionary_2_tB30C9EC7EAE1268D7EE7936DB4C6E64DD28387CA*)il2cpp_codegen_object_new(Dictionary_2_tB30C9EC7EAE1268D7EE7936DB4C6E64DD28387CA_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_m059109E7A19FB7E7C9767891097C9F05942098D3(L_2, Dictionary_2__ctor_m059109E7A19FB7E7C9767891097C9F05942098D3_RuntimeMethod_var);
 		__this->____imageCache = L_2;
@@ -18434,7 +18434,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendAuthService__ctor_mBA42BDDC95BBD5
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92598
+// Method Definition Index: 88417
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyOffersResponse__ctor_mBC12974FD9B7BB5AC2A253863B73967E2DC2A10B (DailyOffersResponse_tB6AEE2E3D5420B8B6BD17C5CDDBF9BF0679FED7B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18450,7 +18450,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyOffersResponse__ctor_mBC12974FD9B7B
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92599
+// Method Definition Index: 88418
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyOffersData__ctor_m22BD2AEB146A1D6D46AB78347FD74F9D7B7DB15B (DailyOffersData_tBA841DDDF6F8C07D26A410A9CCDBA645389B5DA6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18466,7 +18466,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyOffersData__ctor_m22BD2AEB146A1D6D4
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92600
+// Method Definition Index: 88419
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardStatusResponse__ctor_m811C1E1E712D47CEF0215A4BB3F84533881ABE3C (DailyRewardStatusResponse_t7DC635CE35F9E4C87A84498F3D37136661C5A5D4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18482,7 +18482,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardStatusResponse__ctor_m811C1E1
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92601
+// Method Definition Index: 88420
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardDataPayload__ctor_m6011EC4F03D5B0422756188B165B7A8879EA822C (DailyRewardDataPayload_t92B48EF7A76FBE539B01B6AD7645DC447FD94F42* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18498,7 +18498,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardDataPayload__ctor_m6011EC4F03
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92602
+// Method Definition Index: 88421
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RewardItem__ctor_mD6E8F3B7E1A8F2A8A76646D40559E3F3D0DC9E31 (RewardItem_t1372E7C0500EDA59968C3F02335B76B280ECE10F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18514,7 +18514,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RewardItem__ctor_mD6E8F3B7E1A8F2A8A76646
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92603
+// Method Definition Index: 88422
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthResponse__ctor_mC408E7FD4F011AB3FECE98817322B12DC7BE6F0B (AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18530,7 +18530,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthResponse__ctor_mC408E7FD4F011AB3FECE
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92604
+// Method Definition Index: 88423
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendUser__ctor_m91361C766C37F6D5254BEAD1543618F85FD61D19 (BackendUser_tA2639E54D80A1230B398FBFC497B719A95FDC362* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18546,7 +18546,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendUser__ctor_m91361C766C37F6D5254BE
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92605
+// Method Definition Index: 88424
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyApiResponse__ctor_m706409D5047279753AFC84CD2251D1FC284724DB (LobbyApiResponse_tB2F91081B46437DEE75567FD82745912568B0D7D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18562,7 +18562,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyApiResponse__ctor_m706409D504727975
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92606
+// Method Definition Index: 88425
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyApiData__ctor_m7CB0F2A458CB0C1B98EFBD959DD20074DF1DA35B (LobbyApiData_t70BA3B153F02CD089186C2362C92AF652F865124* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18578,7 +18578,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyApiData__ctor_m7CB0F2A458CB0C1B98EF
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92607
+// Method Definition Index: 88426
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CClaimDailyRewardCoroutineU3Ed__35__ctor_m0ED2418F4D281447963E529426B21CF18E069BA9 (U3CClaimDailyRewardCoroutineU3Ed__35_t961C2F82C7F7CFC551EFC98C69335CAA3AB88910* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -18588,7 +18588,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CClaimDailyRewardCoroutineU3Ed__35__ct
 		return;
 	}
 }
-// Method Definition Index: 92608
+// Method Definition Index: 88427
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CClaimDailyRewardCoroutineU3Ed__35_System_IDisposable_Dispose_mD2E56F6B28E256608EDCAB236DEFC9B5F1D5C7B8 (U3CClaimDailyRewardCoroutineU3Ed__35_t961C2F82C7F7CFC551EFC98C69335CAA3AB88910* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -18637,7 +18637,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92609
+// Method Definition Index: 88428
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CClaimDailyRewardCoroutineU3Ed__35_MoveNext_mBCB68EEA40B3F05DD0F64EED31946B5074701A18 (U3CClaimDailyRewardCoroutineU3Ed__35_t961C2F82C7F7CFC551EFC98C69335CAA3AB88910* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18706,7 +18706,7 @@ FAULT_017d:
 IL_001f_1:
 			{
 				__this->___U3CU3E1__state = (-1);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:773>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:748>
 				BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_4 = V_2;
 				NullCheck(L_4);
 				String_t* L_5 = L_4->___baseUrl;
@@ -18716,31 +18716,31 @@ IL_001f_1:
 				String_t* L_7;
 				L_7 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_6, _stringLiteralFE0F995AA151DB94CB8750803F90BFA5F9AA974F, NULL);
 				V_3 = L_7;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:774>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:749>
 				String_t* L_8;
 				L_8 = BackendAuthService_GetStoredJWT_m6CEB0F7B503CC5FBE659428203090712661F270C(NULL);
 				V_4 = L_8;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:776>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:751>
 				String_t* L_9 = V_3;
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_10 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)il2cpp_codegen_object_new(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F_il2cpp_TypeInfo_var);
 				UnityWebRequest__ctor_mD4739B0BF1C4937479A83B24B531C6B819712A3E(L_10, L_9, _stringLiteral14E338D17C42E552FA7AF42CDAE40CA1F0E8A04D, NULL);
 				__this->___U3CrequestU3E5__2 = L_10;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)L_10);
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:778>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:753>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_11 = __this->___U3CrequestU3E5__2;
 				String_t* L_12 = V_4;
 				String_t* L_13;
 				L_13 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralC2DA60AE96E2C9EF3EAF20897A5AA957AFDF64EC, L_12, NULL);
 				NullCheck(L_11);
 				UnityWebRequest_SetRequestHeader_m099734EB787B7269B62AB2236A5A4F7D35AF8BC5(L_11, _stringLiteral9D5A3AE3D2B0B5E5AF5AB489000D9B88FA11E907, L_13, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:779>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:754>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_14 = __this->___U3CrequestU3E5__2;
 				DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974* L_15 = (DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974*)il2cpp_codegen_object_new(DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974_il2cpp_TypeInfo_var);
 				DownloadHandlerBuffer__ctor_m5EE7C9E8AB468B2B937A7C9C66B4176A884147AF(L_15, NULL);
 				NullCheck(L_14);
 				UnityWebRequest_set_downloadHandler_m6CB94492012097DFC44E5773D1A627753788292F(L_14, L_15, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:780>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:755>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_16 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_16);
 				UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* L_17;
@@ -18755,7 +18755,7 @@ IL_001f_1:
 IL_00a9_1:
 			{
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:782>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:757>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_18 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_18);
 				int32_t L_19;
@@ -18766,7 +18766,7 @@ IL_00a9_1:
 				}
 			}
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:784>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:759>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_20 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_20);
 				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_21;
@@ -18778,7 +18778,7 @@ IL_00a9_1:
 				L_23 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral13FBBBA67FC50C008BA4DF52D244B10ADD8C0509, L_22, _stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_23, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:785>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:760>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_24 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_24);
 				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_25;
@@ -18789,7 +18789,7 @@ IL_00a9_1:
 				DailyRewardStatusResponse_t7DC635CE35F9E4C87A84498F3D37136661C5A5D4* L_27;
 				L_27 = JsonUtility_FromJson_TisDailyRewardStatusResponse_t7DC635CE35F9E4C87A84498F3D37136661C5A5D4_m14458B521D302BF83CAE77DFC758096C3FCC8C31(L_26, JsonUtility_FromJson_TisDailyRewardStatusResponse_t7DC635CE35F9E4C87A84498F3D37136661C5A5D4_m14458B521D302BF83CAE77DFC758096C3FCC8C31_RuntimeMethod_var);
 				V_5 = L_27;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:786>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:761>
 				Action_2_t74D9CF7357517E276161403D7DDF2F7366A330C4* L_28 = __this->___onComplete;
 				Action_2_t74D9CF7357517E276161403D7DDF2F7366A330C4* L_29 = L_28;
 				if (L_29)
@@ -18813,7 +18813,7 @@ IL_0106_1:
 
 IL_0110_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:790>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:765>
 				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_31 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
 				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_32 = L_31;
 				NullCheck(L_32);
@@ -18845,7 +18845,7 @@ IL_0110_1:
 				L_42 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_41, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_42, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:791>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:766>
 				Action_2_t74D9CF7357517E276161403D7DDF2F7366A330C4* L_43 = __this->___onComplete;
 				Action_2_t74D9CF7357517E276161403D7DDF2F7366A330C4* L_44 = L_43;
 				if (L_44)
@@ -18867,11 +18867,11 @@ IL_0165_1:
 
 IL_016c_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:793>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:768>
 				U3CClaimDailyRewardCoroutineU3Ed__35_U3CU3Em__Finally1_m64DC350C2158B0002C83700962CCD635A7D2D85B(__this, NULL);
 				__this->___U3CrequestU3E5__2 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:794>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:769>
 				V_0 = (bool)0;
 				goto IL_0184;
 			}
@@ -18888,7 +18888,7 @@ IL_0184:
 		return L_45;
 	}
 }
-// Method Definition Index: 92610
+// Method Definition Index: 88429
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CClaimDailyRewardCoroutineU3Ed__35_U3CU3Em__Finally1_m64DC350C2158B0002C83700962CCD635A7D2D85B (U3CClaimDailyRewardCoroutineU3Ed__35_t961C2F82C7F7CFC551EFC98C69335CAA3AB88910* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18916,7 +18916,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92611
+// Method Definition Index: 88430
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CClaimDailyRewardCoroutineU3Ed__35_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m77503E977D3A5B298C5C9FED9B924C027F1C6EF6 (U3CClaimDailyRewardCoroutineU3Ed__35_t961C2F82C7F7CFC551EFC98C69335CAA3AB88910* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18924,7 +18924,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CClaimDailyRewardCoroutineU3
 		return L_0;
 	}
 }
-// Method Definition Index: 92612
+// Method Definition Index: 88431
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CClaimDailyRewardCoroutineU3Ed__35_System_Collections_IEnumerator_Reset_mAEC91D595DECE9B6C78EE2C842077C157FF9202D (U3CClaimDailyRewardCoroutineU3Ed__35_t961C2F82C7F7CFC551EFC98C69335CAA3AB88910* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18933,7 +18933,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CClaimDailyRewardCoroutineU3Ed__35_Sys
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CClaimDailyRewardCoroutineU3Ed__35_System_Collections_IEnumerator_Reset_mAEC91D595DECE9B6C78EE2C842077C157FF9202D_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 92613
+// Method Definition Index: 88432
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CClaimDailyRewardCoroutineU3Ed__35_System_Collections_IEnumerator_get_Current_mA6C97C467C77DB93882267B28DD331F310820DD8 (U3CClaimDailyRewardCoroutineU3Ed__35_t961C2F82C7F7CFC551EFC98C69335CAA3AB88910* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18949,7 +18949,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CClaimDailyRewardCoroutineU3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92614
+// Method Definition Index: 88433
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDownloadSpriteCoroutineU3Ed__9__ctor_mFD436EDA4FD4F348B72896B0419BAAF45CC1597D (U3CDownloadSpriteCoroutineU3Ed__9_t711A7B1D32D012F51931BAA3DD3E7BE24B2241A7* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -18959,7 +18959,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDownloadSpriteCoroutineU3Ed__9__ctor_
 		return;
 	}
 }
-// Method Definition Index: 92615
+// Method Definition Index: 88434
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDownloadSpriteCoroutineU3Ed__9_System_IDisposable_Dispose_m5D60CB279E241BA69ADA0E0D267BF68E646D683B (U3CDownloadSpriteCoroutineU3Ed__9_t711A7B1D32D012F51931BAA3DD3E7BE24B2241A7* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -19008,7 +19008,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92616
+// Method Definition Index: 88435
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CDownloadSpriteCoroutineU3Ed__9_MoveNext_m1F8BD5C4EEA3519307D7603454B24A1E3B444571 (U3CDownloadSpriteCoroutineU3Ed__9_t711A7B1D32D012F51931BAA3DD3E7BE24B2241A7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19278,7 +19278,7 @@ IL_0197:
 		return L_49;
 	}
 }
-// Method Definition Index: 92617
+// Method Definition Index: 88436
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDownloadSpriteCoroutineU3Ed__9_U3CU3Em__Finally1_mBD21C7F9338FE693DE67D88C9A8C973993BA4DFC (U3CDownloadSpriteCoroutineU3Ed__9_t711A7B1D32D012F51931BAA3DD3E7BE24B2241A7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19306,7 +19306,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92618
+// Method Definition Index: 88437
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDownloadSpriteCoroutineU3Ed__9_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m72992313612450D2C80569ED860416231353D869 (U3CDownloadSpriteCoroutineU3Ed__9_t711A7B1D32D012F51931BAA3DD3E7BE24B2241A7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19314,7 +19314,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDownloadSpriteCoroutineU3Ed
 		return L_0;
 	}
 }
-// Method Definition Index: 92619
+// Method Definition Index: 88438
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDownloadSpriteCoroutineU3Ed__9_System_Collections_IEnumerator_Reset_m8A37C2EB0AA90CE7CE126D430FDF0466DEA8492F (U3CDownloadSpriteCoroutineU3Ed__9_t711A7B1D32D012F51931BAA3DD3E7BE24B2241A7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19323,7 +19323,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDownloadSpriteCoroutineU3Ed__9_System
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CDownloadSpriteCoroutineU3Ed__9_System_Collections_IEnumerator_Reset_m8A37C2EB0AA90CE7CE126D430FDF0466DEA8492F_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 92620
+// Method Definition Index: 88439
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDownloadSpriteCoroutineU3Ed__9_System_Collections_IEnumerator_get_Current_mBEC4BB6D95D03636728B89D504F626E7FE45A5C0 (U3CDownloadSpriteCoroutineU3Ed__9_t711A7B1D32D012F51931BAA3DD3E7BE24B2241A7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19339,7 +19339,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDownloadSpriteCoroutineU3Ed
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92621
+// Method Definition Index: 88440
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetDailyOffersCoroutineU3Ed__41__ctor_m158F525EF11FA6EA7B7F9B8BB569EC845DAC4235 (U3CGetDailyOffersCoroutineU3Ed__41_t1EDCCB1CFB938AE9FBFCAB762CE9153995A9C1AC* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -19349,7 +19349,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetDailyOffersCoroutineU3Ed__41__ctor
 		return;
 	}
 }
-// Method Definition Index: 92622
+// Method Definition Index: 88441
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetDailyOffersCoroutineU3Ed__41_System_IDisposable_Dispose_mE5A67EF16FD68EB437B160469C185DB72C6156CF (U3CGetDailyOffersCoroutineU3Ed__41_t1EDCCB1CFB938AE9FBFCAB762CE9153995A9C1AC* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -19398,7 +19398,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92623
+// Method Definition Index: 88442
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CGetDailyOffersCoroutineU3Ed__41_MoveNext_mC2EF01A2E4B596090B02774D22C79AA2D3F186AB (U3CGetDailyOffersCoroutineU3Ed__41_t1EDCCB1CFB938AE9FBFCAB762CE9153995A9C1AC* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19462,7 +19462,7 @@ FAULT_0136:
 IL_001c_1:
 			{
 				__this->___U3CU3E1__state = (-1);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:872>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:847>
 				BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_4 = V_2;
 				NullCheck(L_4);
 				String_t* L_5 = L_4->___baseUrl;
@@ -19472,25 +19472,25 @@ IL_001c_1:
 				String_t* L_7;
 				L_7 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_6, _stringLiteral70049E51A03F96377492F7274A0E8CDF556139E9, NULL);
 				V_3 = L_7;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:873>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:848>
 				String_t* L_8;
 				L_8 = BackendAuthService_GetStoredJWT_m6CEB0F7B503CC5FBE659428203090712661F270C(NULL);
 				V_4 = L_8;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:875>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:850>
 				String_t* L_9 = V_3;
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_10;
 				L_10 = UnityWebRequest_Get_m1A332EE069BB5052368307F254A5A7627BB5FD86(L_9, NULL);
 				__this->___U3CrequestU3E5__2 = L_10;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)L_10);
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:877>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:852>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_11 = __this->___U3CrequestU3E5__2;
 				String_t* L_12 = V_4;
 				String_t* L_13;
 				L_13 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralC2DA60AE96E2C9EF3EAF20897A5AA957AFDF64EC, L_12, NULL);
 				NullCheck(L_11);
 				UnityWebRequest_SetRequestHeader_m099734EB787B7269B62AB2236A5A4F7D35AF8BC5(L_11, _stringLiteral9D5A3AE3D2B0B5E5AF5AB489000D9B88FA11E907, L_13, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:878>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:853>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_14 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_14);
 				UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* L_15;
@@ -19505,7 +19505,7 @@ IL_001c_1:
 IL_0091_1:
 			{
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:880>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:855>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_16 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_16);
 				int32_t L_17;
@@ -19516,7 +19516,7 @@ IL_0091_1:
 				}
 			}
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:882>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:857>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_18 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_18);
 				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_19;
@@ -19528,7 +19528,7 @@ IL_0091_1:
 				L_21 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral01B951690B6FC105B683C6FB82F9C4C34C3975AD, L_20, _stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_21, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:883>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:858>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_22 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_22);
 				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_23;
@@ -19539,7 +19539,7 @@ IL_0091_1:
 				DailyOffersResponse_tB6AEE2E3D5420B8B6BD17C5CDDBF9BF0679FED7B* L_25;
 				L_25 = JsonUtility_FromJson_TisDailyOffersResponse_tB6AEE2E3D5420B8B6BD17C5CDDBF9BF0679FED7B_mDD9E60F13851DA68ABC50921B8F97415F2E558F5(L_24, JsonUtility_FromJson_TisDailyOffersResponse_tB6AEE2E3D5420B8B6BD17C5CDDBF9BF0679FED7B_mDD9E60F13851DA68ABC50921B8F97415F2E558F5_RuntimeMethod_var);
 				V_5 = L_25;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:884>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:859>
 				Action_2_t942C54674EA4AD68943D8ACD4EE527AD1166EBA3* L_26 = __this->___onComplete;
 				Action_2_t942C54674EA4AD68943D8ACD4EE527AD1166EBA3* L_27 = L_26;
 				if (L_27)
@@ -19563,7 +19563,7 @@ IL_00ee_1:
 
 IL_00f8_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:888>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:863>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_29 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_29);
 				String_t* L_30;
@@ -19572,7 +19572,7 @@ IL_00f8_1:
 				L_31 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralCE7B2EC978D8DE22D80C142F9F69ADA7087B1CB1, L_30, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_31, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:889>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:864>
 				Action_2_t942C54674EA4AD68943D8ACD4EE527AD1166EBA3* L_32 = __this->___onComplete;
 				Action_2_t942C54674EA4AD68943D8ACD4EE527AD1166EBA3* L_33 = L_32;
 				if (L_33)
@@ -19594,11 +19594,11 @@ IL_011e_1:
 
 IL_0125_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:891>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:866>
 				U3CGetDailyOffersCoroutineU3Ed__41_U3CU3Em__Finally1_mBAA0B25AE56C3B9407CC9B5295DD65283245B5C2(__this, NULL);
 				__this->___U3CrequestU3E5__2 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:892>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:867>
 				V_0 = (bool)0;
 				goto IL_013d;
 			}
@@ -19615,7 +19615,7 @@ IL_013d:
 		return L_34;
 	}
 }
-// Method Definition Index: 92624
+// Method Definition Index: 88443
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetDailyOffersCoroutineU3Ed__41_U3CU3Em__Finally1_mBAA0B25AE56C3B9407CC9B5295DD65283245B5C2 (U3CGetDailyOffersCoroutineU3Ed__41_t1EDCCB1CFB938AE9FBFCAB762CE9153995A9C1AC* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19643,7 +19643,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92625
+// Method Definition Index: 88444
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetDailyOffersCoroutineU3Ed__41_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m9FB9DD93F3B5E8401CC272B5BCB3DD35EDAB6EA1 (U3CGetDailyOffersCoroutineU3Ed__41_t1EDCCB1CFB938AE9FBFCAB762CE9153995A9C1AC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19651,7 +19651,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetDailyOffersCoroutineU3Ed
 		return L_0;
 	}
 }
-// Method Definition Index: 92626
+// Method Definition Index: 88445
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetDailyOffersCoroutineU3Ed__41_System_Collections_IEnumerator_Reset_m468AFD8E39C4445353B46AF648C0AFBC40FF131C (U3CGetDailyOffersCoroutineU3Ed__41_t1EDCCB1CFB938AE9FBFCAB762CE9153995A9C1AC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19660,7 +19660,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetDailyOffersCoroutineU3Ed__41_Syste
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CGetDailyOffersCoroutineU3Ed__41_System_Collections_IEnumerator_Reset_m468AFD8E39C4445353B46AF648C0AFBC40FF131C_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 92627
+// Method Definition Index: 88446
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetDailyOffersCoroutineU3Ed__41_System_Collections_IEnumerator_get_Current_m0A0B6B39107D4B86ED6D49E45FA45E0B84DB6D5B (U3CGetDailyOffersCoroutineU3Ed__41_t1EDCCB1CFB938AE9FBFCAB762CE9153995A9C1AC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19676,7 +19676,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetDailyOffersCoroutineU3Ed
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92628
+// Method Definition Index: 88447
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetDailyRewardStatusCoroutineU3Ed__33__ctor_mEE71A010AAE06E4241498881D0A60F9E9E846B2B (U3CGetDailyRewardStatusCoroutineU3Ed__33_t0FAE226EF56B753C142A34E10C09A7DCADECFFE7* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -19686,7 +19686,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetDailyRewardStatusCoroutineU3Ed__33
 		return;
 	}
 }
-// Method Definition Index: 92629
+// Method Definition Index: 88448
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetDailyRewardStatusCoroutineU3Ed__33_System_IDisposable_Dispose_m430CAE0BB08A108F3749EE1F8932F4B2A22DE558 (U3CGetDailyRewardStatusCoroutineU3Ed__33_t0FAE226EF56B753C142A34E10C09A7DCADECFFE7* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -19735,7 +19735,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92630
+// Method Definition Index: 88449
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CGetDailyRewardStatusCoroutineU3Ed__33_MoveNext_m498DAE07F17860B34CDED7805049D7FEAD3E2100 (U3CGetDailyRewardStatusCoroutineU3Ed__33_t0FAE226EF56B753C142A34E10C09A7DCADECFFE7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19801,7 +19801,7 @@ FAULT_0165:
 IL_001c_1:
 			{
 				__this->___U3CU3E1__state = (-1);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:735>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:710>
 				BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_4 = V_2;
 				NullCheck(L_4);
 				String_t* L_5 = L_4->___baseUrl;
@@ -19811,25 +19811,25 @@ IL_001c_1:
 				String_t* L_7;
 				L_7 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_6, _stringLiteral0BF999BD74105072843817D66DF02886646F651B, NULL);
 				V_3 = L_7;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:736>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:711>
 				String_t* L_8;
 				L_8 = BackendAuthService_GetStoredJWT_m6CEB0F7B503CC5FBE659428203090712661F270C(NULL);
 				V_4 = L_8;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:738>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:713>
 				String_t* L_9 = V_3;
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_10;
 				L_10 = UnityWebRequest_Get_m1A332EE069BB5052368307F254A5A7627BB5FD86(L_9, NULL);
 				__this->___U3CrequestU3E5__2 = L_10;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)L_10);
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:740>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:715>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_11 = __this->___U3CrequestU3E5__2;
 				String_t* L_12 = V_4;
 				String_t* L_13;
 				L_13 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralC2DA60AE96E2C9EF3EAF20897A5AA957AFDF64EC, L_12, NULL);
 				NullCheck(L_11);
 				UnityWebRequest_SetRequestHeader_m099734EB787B7269B62AB2236A5A4F7D35AF8BC5(L_11, _stringLiteral9D5A3AE3D2B0B5E5AF5AB489000D9B88FA11E907, L_13, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:741>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:716>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_14 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_14);
 				UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* L_15;
@@ -19844,7 +19844,7 @@ IL_001c_1:
 IL_0091_1:
 			{
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:743>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:718>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_16 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_16);
 				int32_t L_17;
@@ -19855,7 +19855,7 @@ IL_0091_1:
 				}
 			}
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:745>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:720>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_18 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_18);
 				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_19;
@@ -19867,7 +19867,7 @@ IL_0091_1:
 				L_21 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral3FC8CADF0037C6F448507D913BE02671675AB0E5, L_20, _stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_21, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:746>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:721>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_22 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_22);
 				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_23;
@@ -19878,7 +19878,7 @@ IL_0091_1:
 				DailyRewardStatusResponse_t7DC635CE35F9E4C87A84498F3D37136661C5A5D4* L_25;
 				L_25 = JsonUtility_FromJson_TisDailyRewardStatusResponse_t7DC635CE35F9E4C87A84498F3D37136661C5A5D4_m14458B521D302BF83CAE77DFC758096C3FCC8C31(L_24, JsonUtility_FromJson_TisDailyRewardStatusResponse_t7DC635CE35F9E4C87A84498F3D37136661C5A5D4_m14458B521D302BF83CAE77DFC758096C3FCC8C31_RuntimeMethod_var);
 				V_5 = L_25;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:747>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:722>
 				Action_2_t74D9CF7357517E276161403D7DDF2F7366A330C4* L_26 = __this->___onComplete;
 				Action_2_t74D9CF7357517E276161403D7DDF2F7366A330C4* L_27 = L_26;
 				if (L_27)
@@ -19902,7 +19902,7 @@ IL_00ee_1:
 
 IL_00f8_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:751>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:726>
 				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_29 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
 				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_30 = L_29;
 				NullCheck(L_30);
@@ -19934,7 +19934,7 @@ IL_00f8_1:
 				L_40 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_39, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_40, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:752>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:727>
 				Action_2_t74D9CF7357517E276161403D7DDF2F7366A330C4* L_41 = __this->___onComplete;
 				Action_2_t74D9CF7357517E276161403D7DDF2F7366A330C4* L_42 = L_41;
 				if (L_42)
@@ -19956,11 +19956,11 @@ IL_014d_1:
 
 IL_0154_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:754>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:729>
 				U3CGetDailyRewardStatusCoroutineU3Ed__33_U3CU3Em__Finally1_m01ABBE49FEAD21A90DD8D6D5A781930014D65576(__this, NULL);
 				__this->___U3CrequestU3E5__2 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:755>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:730>
 				V_0 = (bool)0;
 				goto IL_016c;
 			}
@@ -19977,7 +19977,7 @@ IL_016c:
 		return L_43;
 	}
 }
-// Method Definition Index: 92631
+// Method Definition Index: 88450
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetDailyRewardStatusCoroutineU3Ed__33_U3CU3Em__Finally1_m01ABBE49FEAD21A90DD8D6D5A781930014D65576 (U3CGetDailyRewardStatusCoroutineU3Ed__33_t0FAE226EF56B753C142A34E10C09A7DCADECFFE7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20005,7 +20005,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92632
+// Method Definition Index: 88451
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetDailyRewardStatusCoroutineU3Ed__33_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m35A52B1735A2E81EA7D549D897F3AC297292DC9D (U3CGetDailyRewardStatusCoroutineU3Ed__33_t0FAE226EF56B753C142A34E10C09A7DCADECFFE7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20013,7 +20013,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetDailyRewardStatusCorouti
 		return L_0;
 	}
 }
-// Method Definition Index: 92633
+// Method Definition Index: 88452
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetDailyRewardStatusCoroutineU3Ed__33_System_Collections_IEnumerator_Reset_m321F2E08ECF3AD72AC16C028C49C255C8FC4E790 (U3CGetDailyRewardStatusCoroutineU3Ed__33_t0FAE226EF56B753C142A34E10C09A7DCADECFFE7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20022,7 +20022,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetDailyRewardStatusCoroutineU3Ed__33
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CGetDailyRewardStatusCoroutineU3Ed__33_System_Collections_IEnumerator_Reset_m321F2E08ECF3AD72AC16C028C49C255C8FC4E790_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 92634
+// Method Definition Index: 88453
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetDailyRewardStatusCoroutineU3Ed__33_System_Collections_IEnumerator_get_Current_m174A5F9CCD8FFD8383867A47ED6FB8B40AD5CC34 (U3CGetDailyRewardStatusCoroutineU3Ed__33_t0FAE226EF56B753C142A34E10C09A7DCADECFFE7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20038,7 +20038,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetDailyRewardStatusCorouti
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92635
+// Method Definition Index: 88454
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetImageCoroutineU3Ed__39__ctor_mFEACBC3DC8CE7D211FDC48C40344B41103F635F6 (U3CGetImageCoroutineU3Ed__39_t06EF8222A0AC4AA2C1E7FCAB1FAFD76AFC732A17* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -20048,7 +20048,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetImageCoroutineU3Ed__39__ctor_mFEAC
 		return;
 	}
 }
-// Method Definition Index: 92636
+// Method Definition Index: 88455
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetImageCoroutineU3Ed__39_System_IDisposable_Dispose_mA051152A8AB234E63ECEC771D34CCAC5A7428BA0 (U3CGetImageCoroutineU3Ed__39_t06EF8222A0AC4AA2C1E7FCAB1FAFD76AFC732A17* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -20097,7 +20097,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92637
+// Method Definition Index: 88456
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CGetImageCoroutineU3Ed__39_MoveNext_mFD36782DEB150A5DB13648DFA4714A44C54B117C (U3CGetImageCoroutineU3Ed__39_t06EF8222A0AC4AA2C1E7FCAB1FAFD76AFC732A17* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20165,14 +20165,14 @@ FAULT_015b:
 IL_001c_1:
 			{
 				__this->___U3CU3E1__state = (-1);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:829>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:804>
 				String_t* L_4 = __this->___url;
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_5;
 				L_5 = UnityWebRequestTexture_GetTexture_mEEC74BBC5190D4012A0B87C5D439AF59E22EF2EF(L_4, NULL);
 				__this->___U3CrequestU3E5__2 = L_5;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)L_5);
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:831>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:806>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_6 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_6);
 				UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* L_7;
@@ -20187,9 +20187,9 @@ IL_001c_1:
 IL_005b_1:
 			{
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:833>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:808>
 				V_3 = (Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4*)NULL;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:834>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:809>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_8 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_8);
 				int32_t L_9;
@@ -20200,18 +20200,18 @@ IL_005b_1:
 				}
 			}
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:836>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:811>
 				String_t* L_10 = __this->___url;
 				String_t* L_11;
 				L_11 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral28D0DEEFC05C8377B7B7C6EBE1E9525B6023CF03, L_10, _stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_11, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:837>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:812>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_12 = __this->___U3CrequestU3E5__2;
 				Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_13;
 				L_13 = DownloadHandlerTexture_GetContent_m86BC88F58305A1B21C21CE7D82658197932EFB18(L_12, NULL);
 				V_3 = L_13;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:838>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:813>
 				BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_14 = V_2;
 				NullCheck(L_14);
 				Dictionary_2_tB30C9EC7EAE1268D7EE7936DB4C6E64DD28387CA* L_15 = L_14->____imageCache;
@@ -20224,7 +20224,7 @@ IL_005b_1:
 
 IL_00ad_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:842>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:817>
 				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_18 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
 				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_19 = L_18;
 				NullCheck(L_19);
@@ -20254,7 +20254,7 @@ IL_00ad_1:
 
 IL_00ec_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:846>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:821>
 				BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_28 = V_2;
 				NullCheck(L_28);
 				Dictionary_2_tEACBA39872E30FF21C316FAC7BDC681AFFEE7B98* L_29 = L_28->____inFlightImageRequests;
@@ -20268,7 +20268,7 @@ IL_00ec_1:
 				}
 			}
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:848>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:823>
 				BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_32 = V_2;
 				NullCheck(L_32);
 				Dictionary_2_tEACBA39872E30FF21C316FAC7BDC681AFFEE7B98* L_33 = L_32->____inFlightImageRequests;
@@ -20276,7 +20276,7 @@ IL_00ec_1:
 				NullCheck(L_33);
 				bool L_35;
 				L_35 = Dictionary_2_Remove_m1A71FB6C830EED8F343F55CEC7BC9338B014F47F(L_33, L_34, Dictionary_2_Remove_m1A71FB6C830EED8F343F55CEC7BC9338B014F47F_RuntimeMethod_var);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:849>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:824>
 				List_1_t3443D352DECF3634069327D8BBD8049C40E35583* L_36 = V_4;
 				NullCheck(L_36);
 				Enumerator_t3E273B94481052760190579020B4B111CB6AFED1 L_37;
@@ -20301,10 +20301,10 @@ FINALLY_013c_1:
 
 IL_011e_2:
 					{
-						//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:849>
+						//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:824>
 						Action_1_tD7F74291FAA5A362F4A5F48D4E1CF3ED51FA6A33* L_38;
 						L_38 = Enumerator_get_Current_m6AA09A59B3483DD7C25F030A553C2E2070213334_inline((&V_5), Enumerator_get_Current_m6AA09A59B3483DD7C25F030A553C2E2070213334_RuntimeMethod_var);
-						//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:851>
+						//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:826>
 						Action_1_tD7F74291FAA5A362F4A5F48D4E1CF3ED51FA6A33* L_39 = L_38;
 						if (L_39)
 						{
@@ -20326,7 +20326,7 @@ IL_012b_2:
 
 IL_0131_2:
 					{
-						//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:849>
+						//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:824>
 						bool L_41;
 						L_41 = Enumerator_MoveNext_m931CB420178BFBEA39F36C97C87E7DB4A40FE6BB((&V_5), Enumerator_MoveNext_m931CB420178BFBEA39F36C97C87E7DB4A40FE6BB_RuntimeMethod_var);
 						if (L_41)
@@ -20346,11 +20346,11 @@ IL_0131_2:
 
 IL_014a_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:854>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:829>
 				U3CGetImageCoroutineU3Ed__39_U3CU3Em__Finally1_m75B60780177B9B96B49977580916CD5D9D56AC02(__this, NULL);
 				__this->___U3CrequestU3E5__2 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:855>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:830>
 				V_0 = (bool)0;
 				goto IL_0162;
 			}
@@ -20367,7 +20367,7 @@ IL_0162:
 		return L_42;
 	}
 }
-// Method Definition Index: 92638
+// Method Definition Index: 88457
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetImageCoroutineU3Ed__39_U3CU3Em__Finally1_m75B60780177B9B96B49977580916CD5D9D56AC02 (U3CGetImageCoroutineU3Ed__39_t06EF8222A0AC4AA2C1E7FCAB1FAFD76AFC732A17* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20395,7 +20395,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92639
+// Method Definition Index: 88458
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetImageCoroutineU3Ed__39_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m69EE39DBF53AAAEE58436E4C6C466C57A244A655 (U3CGetImageCoroutineU3Ed__39_t06EF8222A0AC4AA2C1E7FCAB1FAFD76AFC732A17* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20403,7 +20403,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetImageCoroutineU3Ed__39_S
 		return L_0;
 	}
 }
-// Method Definition Index: 92640
+// Method Definition Index: 88459
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetImageCoroutineU3Ed__39_System_Collections_IEnumerator_Reset_m9F82A5DAD28B3E457E509BCD241D42C4143FE962 (U3CGetImageCoroutineU3Ed__39_t06EF8222A0AC4AA2C1E7FCAB1FAFD76AFC732A17* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20412,7 +20412,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetImageCoroutineU3Ed__39_System_Coll
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CGetImageCoroutineU3Ed__39_System_Collections_IEnumerator_Reset_m9F82A5DAD28B3E457E509BCD241D42C4143FE962_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 92641
+// Method Definition Index: 88460
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetImageCoroutineU3Ed__39_System_Collections_IEnumerator_get_Current_m052ADEA894D459A591248B5B5DEBF44FEACC7E63 (U3CGetImageCoroutineU3Ed__39_t06EF8222A0AC4AA2C1E7FCAB1FAFD76AFC732A17* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20428,7 +20428,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetImageCoroutineU3Ed__39_S
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92642
+// Method Definition Index: 88461
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetLobbyConfigurationsCoroutineU3Ed__43__ctor_mA635CC7548189E11B833977C0B066ECD3B5DA46E (U3CGetLobbyConfigurationsCoroutineU3Ed__43_t905229DE75B03233B3BDCBE3A2C6055AA5DDCC2A* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -20438,7 +20438,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetLobbyConfigurationsCoroutineU3Ed__
 		return;
 	}
 }
-// Method Definition Index: 92643
+// Method Definition Index: 88462
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetLobbyConfigurationsCoroutineU3Ed__43_System_IDisposable_Dispose_m8EC9B715559E01364F7C6B0177041CAEE23F5EDD (U3CGetLobbyConfigurationsCoroutineU3Ed__43_t905229DE75B03233B3BDCBE3A2C6055AA5DDCC2A* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -20487,7 +20487,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92644
+// Method Definition Index: 88463
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CGetLobbyConfigurationsCoroutineU3Ed__43_MoveNext_m2F2834E2FF8416DB68AD6AE225389011C03AB7BD (U3CGetLobbyConfigurationsCoroutineU3Ed__43_t905229DE75B03233B3BDCBE3A2C6055AA5DDCC2A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20555,7 +20555,7 @@ FAULT_017e:
 IL_001f_1:
 			{
 				__this->___U3CU3E1__state = (-1);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:904>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:879>
 				BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_4 = V_2;
 				NullCheck(L_4);
 				String_t* L_5 = L_4->___baseUrl;
@@ -20565,20 +20565,20 @@ IL_001f_1:
 				String_t* L_7;
 				L_7 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_6, _stringLiteral84117BA2863F864EF03F62A5C32BE69AD625A5FE, NULL);
 				V_3 = L_7;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:905>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:880>
 				String_t* L_8 = V_3;
 				String_t* L_9;
 				L_9 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral999593ADCFBD65AA4F14D4D5FD2C91125289FD62, L_8, _stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_9, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:907>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:882>
 				String_t* L_10 = V_3;
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_11;
 				L_11 = UnityWebRequest_Get_m1A332EE069BB5052368307F254A5A7627BB5FD86(L_10, NULL);
 				__this->___U3CrequestU3E5__2 = L_11;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)L_11);
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:909>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:884>
 				bool L_12;
 				L_12 = BackendAuthService_HasStoredJWT_m77D0CD676518CB836991BD62A63D14AC96014601(NULL);
 				if (!L_12)
@@ -20587,7 +20587,7 @@ IL_001f_1:
 				}
 			}
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:911>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:886>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_13 = __this->___U3CrequestU3E5__2;
 				String_t* L_14;
 				L_14 = BackendAuthService_GetStoredJWT_m6CEB0F7B503CC5FBE659428203090712661F270C(NULL);
@@ -20599,7 +20599,7 @@ IL_001f_1:
 
 IL_008d_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:914>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:889>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_16 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_16);
 				UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* L_17;
@@ -20614,7 +20614,7 @@ IL_008d_1:
 IL_00ac_1:
 			{
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:916>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:891>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_18 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_18);
 				int32_t L_19;
@@ -20625,7 +20625,7 @@ IL_00ac_1:
 				}
 			}
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:918>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:893>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_20 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_20);
 				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_21;
@@ -20641,7 +20641,7 @@ IL_00ac_1:
 			try
 			{
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:921>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:896>
 					UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_24 = __this->___U3CrequestU3E5__2;
 					NullCheck(L_24);
 					DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_25;
@@ -20652,7 +20652,7 @@ IL_00ac_1:
 					LobbyApiResponse_tB2F91081B46437DEE75567FD82745912568B0D7D* L_27;
 					L_27 = JsonUtility_FromJson_TisLobbyApiResponse_tB2F91081B46437DEE75567FD82745912568B0D7D_mA5A8B018ABFCE9913A4EEEEE84844E1EF42E6C14(L_26, JsonUtility_FromJson_TisLobbyApiResponse_tB2F91081B46437DEE75567FD82745912568B0D7D_mA5A8B018ABFCE9913A4EEEEE84844E1EF42E6C14_RuntimeMethod_var);
 					V_4 = L_27;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:922>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:897>
 					Action_2_tC9FAC49A789EE6D30AD45BF97FB50EB5226CA096* L_28 = __this->___onComplete;
 					Action_2_tC9FAC49A789EE6D30AD45BF97FB50EB5226CA096* L_29 = L_28;
 					if (L_29)
@@ -20675,7 +20675,7 @@ IL_0109_2:
 
 IL_0111_2:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:923>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:898>
 					goto IL_016d_1;
 				}
 			}
@@ -20693,9 +20693,9 @@ CATCH_0113_1:
 			{
 				{
 					Exception_t* L_31 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:924>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:899>
 					V_5 = L_31;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:926>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:901>
 					Exception_t* L_32 = V_5;
 					NullCheck(L_32);
 					String_t* L_33;
@@ -20704,7 +20704,7 @@ CATCH_0113_1:
 					L_34 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral4D7DED9300D82A7E6C962879BA2716E9B7D50907)), L_33, NULL);
 					il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
 					Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_34, NULL);
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:927>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:902>
 					Action_2_tC9FAC49A789EE6D30AD45BF97FB50EB5226CA096* L_35 = __this->___onComplete;
 					Action_2_tC9FAC49A789EE6D30AD45BF97FB50EB5226CA096* L_36 = L_35;
 					if (L_36)
@@ -20726,7 +20726,7 @@ IL_0137_1:
 
 IL_013e_1:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:928>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:903>
 					IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
 					goto IL_016d_1;
 				}
@@ -20734,7 +20734,7 @@ IL_013e_1:
 
 IL_0140_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:932>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:907>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_37 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_37);
 				String_t* L_38;
@@ -20743,7 +20743,7 @@ IL_0140_1:
 				L_39 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral4DBB0FFB6AEDB1B53CB37602F2302F51CB392F7C, L_38, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_39, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:933>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:908>
 				Action_2_tC9FAC49A789EE6D30AD45BF97FB50EB5226CA096* L_40 = __this->___onComplete;
 				Action_2_tC9FAC49A789EE6D30AD45BF97FB50EB5226CA096* L_41 = L_40;
 				if (L_41)
@@ -20765,11 +20765,11 @@ IL_0166_1:
 
 IL_016d_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:935>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:910>
 				U3CGetLobbyConfigurationsCoroutineU3Ed__43_U3CU3Em__Finally1_m75207868092C78497539CB9064EA70220F441DDE(__this, NULL);
 				__this->___U3CrequestU3E5__2 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:936>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:911>
 				V_0 = (bool)0;
 				goto IL_0185;
 			}
@@ -20786,7 +20786,7 @@ IL_0185:
 		return L_42;
 	}
 }
-// Method Definition Index: 92645
+// Method Definition Index: 88464
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetLobbyConfigurationsCoroutineU3Ed__43_U3CU3Em__Finally1_m75207868092C78497539CB9064EA70220F441DDE (U3CGetLobbyConfigurationsCoroutineU3Ed__43_t905229DE75B03233B3BDCBE3A2C6055AA5DDCC2A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20814,7 +20814,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92646
+// Method Definition Index: 88465
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetLobbyConfigurationsCoroutineU3Ed__43_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m508744B380ADAF5E3FC699F59CBBF48ACF506CA7 (U3CGetLobbyConfigurationsCoroutineU3Ed__43_t905229DE75B03233B3BDCBE3A2C6055AA5DDCC2A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20822,7 +20822,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetLobbyConfigurationsCorou
 		return L_0;
 	}
 }
-// Method Definition Index: 92647
+// Method Definition Index: 88466
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetLobbyConfigurationsCoroutineU3Ed__43_System_Collections_IEnumerator_Reset_m6BD77FED44AF401D19E5759930036ECE2D569C16 (U3CGetLobbyConfigurationsCoroutineU3Ed__43_t905229DE75B03233B3BDCBE3A2C6055AA5DDCC2A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20831,7 +20831,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetLobbyConfigurationsCoroutineU3Ed__
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CGetLobbyConfigurationsCoroutineU3Ed__43_System_Collections_IEnumerator_Reset_m6BD77FED44AF401D19E5759930036ECE2D569C16_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 92648
+// Method Definition Index: 88467
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetLobbyConfigurationsCoroutineU3Ed__43_System_Collections_IEnumerator_get_Current_mB816CC4097F077A19314C2DCF7ED98983A3D2886 (U3CGetLobbyConfigurationsCoroutineU3Ed__43_t905229DE75B03233B3BDCBE3A2C6055AA5DDCC2A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20847,7 +20847,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetLobbyConfigurationsCorou
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92649
+// Method Definition Index: 88468
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetProfileCoroutineU3Ed__31__ctor_m86619B8AA9C39666644C572685A612AEE280B8ED (U3CGetProfileCoroutineU3Ed__31_tDC5DB4193CAF89FA662FAADFAF61A8C05D3950F3* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -20857,7 +20857,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetProfileCoroutineU3Ed__31__ctor_m86
 		return;
 	}
 }
-// Method Definition Index: 92650
+// Method Definition Index: 88469
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetProfileCoroutineU3Ed__31_System_IDisposable_Dispose_m75C2BCDFD5BECB8721C19C691676A83A65B30375 (U3CGetProfileCoroutineU3Ed__31_tDC5DB4193CAF89FA662FAADFAF61A8C05D3950F3* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -20906,7 +20906,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92651
+// Method Definition Index: 88470
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CGetProfileCoroutineU3Ed__31_MoveNext_m1A35DFEAE2201E53F8EE4814F77BD21866E169FA (U3CGetProfileCoroutineU3Ed__31_tDC5DB4193CAF89FA662FAADFAF61A8C05D3950F3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20915,7 +20915,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CGetProfileCoroutineU3Ed__31_MoveNext_
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JsonUtility_FromJson_TisAuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A_mF146DB41680B3594E729E54FE1C4D9BD5F249B6F_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral27C13220C6445946A518B078B64A009CFFBD1B5C);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2C2B0937E2ACB9BED6207E6C06AC6F93233030A6);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral69B007CFEBF81E97710F07C76FD1EDF2DADA5997);
@@ -20934,19 +20933,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CGetProfileCoroutineU3Ed__31_MoveNext_
 	AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* V_5 = NULL;
 	Exception_t* V_6 = NULL;
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B10_0 = NULL;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B9_0 = NULL;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B13_0 = NULL;
 	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B12_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B11_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B15_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B14_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B19_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B18_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B23_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B22_0 = NULL;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B17_0 = NULL;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B16_0 = NULL;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B21_0 = NULL;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B20_0 = NULL;
 	{
 		auto __finallyBlock = il2cpp::utils::Fault([&]
 		{
 
-FAULT_0298:
+FAULT_0281:
 			{
 				U3CGetProfileCoroutineU3Ed__31_System_IDisposable_Dispose_m75C2BCDFD5BECB8721C19C691676A83A65B30375(__this, NULL);
 				return;
@@ -20974,13 +20973,13 @@ FAULT_0298:
 			}
 			{
 				V_0 = (bool)0;
-				goto IL_029f;
+				goto IL_0288;
 			}
 
 IL_001f_1:
 			{
 				__this->___U3CU3E1__state = (-1);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:666>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:646>
 				BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_4 = V_2;
 				NullCheck(L_4);
 				String_t* L_5 = L_4->___baseUrl;
@@ -20990,31 +20989,31 @@ IL_001f_1:
 				String_t* L_7;
 				L_7 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_6, _stringLiteral2C2B0937E2ACB9BED6207E6C06AC6F93233030A6, NULL);
 				V_3 = L_7;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:667>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:647>
 				String_t* L_8;
 				L_8 = BackendAuthService_GetStoredJWT_m6CEB0F7B503CC5FBE659428203090712661F270C(NULL);
 				V_4 = L_8;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:669>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:649>
 				String_t* L_9 = V_3;
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_10;
 				L_10 = UnityWebRequest_Get_m1A332EE069BB5052368307F254A5A7627BB5FD86(L_9, NULL);
 				__this->___U3CrequestU3E5__2 = L_10;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)L_10);
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:671>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:651>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_11 = __this->___U3CrequestU3E5__2;
 				String_t* L_12 = V_4;
 				String_t* L_13;
 				L_13 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralC2DA60AE96E2C9EF3EAF20897A5AA957AFDF64EC, L_12, NULL);
 				NullCheck(L_11);
 				UnityWebRequest_SetRequestHeader_m099734EB787B7269B62AB2236A5A4F7D35AF8BC5(L_11, _stringLiteral9D5A3AE3D2B0B5E5AF5AB489000D9B88FA11E907, L_13, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:672>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:652>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_14 = __this->___U3CrequestU3E5__2;
 				DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974* L_15 = (DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974*)il2cpp_codegen_object_new(DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974_il2cpp_TypeInfo_var);
 				DownloadHandlerBuffer__ctor_m5EE7C9E8AB468B2B937A7C9C66B4176A884147AF(L_15, NULL);
 				NullCheck(L_14);
 				UnityWebRequest_set_downloadHandler_m6CB94492012097DFC44E5773D1A627753788292F(L_14, L_15, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:674>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:654>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_16 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_16);
 				UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* L_17;
@@ -21023,24 +21022,24 @@ IL_001f_1:
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)L_17);
 				__this->___U3CU3E1__state = 1;
 				V_0 = (bool)1;
-				goto IL_029f;
+				goto IL_0288;
 			}
 
 IL_00a4_1:
 			{
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:676>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:656>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_18 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_18);
 				int32_t L_19;
 				L_19 = UnityWebRequest_get_result_mEF83848C5FCFB5E307CE4B57E42BF02FC9AED449(L_18, NULL);
 				if ((!(((uint32_t)L_19) == ((uint32_t)1))))
 				{
-					goto IL_024b_1;
+					goto IL_0234_1;
 				}
 			}
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:678>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:658>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_20 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_20);
 				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_21;
@@ -21056,7 +21055,7 @@ IL_00a4_1:
 			try
 			{
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:681>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:661>
 					UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_24 = __this->___U3CrequestU3E5__2;
 					NullCheck(L_24);
 					DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_25;
@@ -21067,11 +21066,11 @@ IL_00a4_1:
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_27;
 					L_27 = JsonUtility_FromJson_TisAuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A_mF146DB41680B3594E729E54FE1C4D9BD5F249B6F(L_26, JsonUtility_FromJson_TisAuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A_mF146DB41680B3594E729E54FE1C4D9BD5F249B6F_RuntimeMethod_var);
 					V_5 = L_27;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:682>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:662>
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_28 = V_5;
 					if (!L_28)
 					{
-						goto IL_0201_2;
+						goto IL_01ea_2;
 					}
 				}
 				{
@@ -21080,18 +21079,18 @@ IL_00a4_1:
 					BackendUser_tA2639E54D80A1230B398FBFC497B719A95FDC362* L_30 = L_29->___user;
 					if (!L_30)
 					{
-						goto IL_0201_2;
+						goto IL_01ea_2;
 					}
 				}
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:684>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:685>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:686>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:687>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:688>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:689>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:690>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:691>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:664>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:665>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:666>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:667>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:668>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:669>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:670>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:671>
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_31 = V_5;
 					NullCheck(L_31);
 					BackendUser_tA2639E54D80A1230B398FBFC497B719A95FDC362* L_32 = L_31->___user;
@@ -21173,74 +21172,53 @@ IL_00a4_1:
 					NullCheck(L_77);
 					String_t* L_78 = L_77->___activeRoomId;
 					PlayerModel_UpdateData_m40EC379F66AF3DAC9BA17361756CF24869A6EED0(L_33, L_36, L_39, L_42, L_45, L_48, L_51, L_54, L_57, L_60, L_63, L_66, L_69, L_72, 0, L_75, L_78, NULL);
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:693>
-					SocketManager_tFA162C4D30D5A71D0A5F10FDA0CF83B2B1101650* L_79;
-					L_79 = SocketManager_get_Instance_mFAF3D466262B9D9A471AB4FF8165EACB053F8CBC_inline(NULL);
-					il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-					bool L_80;
-					L_80 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_79, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-					if (!L_80)
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:673>
+					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_79 = __this->___onComplete;
+					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_80 = L_79;
+					if (L_80)
 					{
-						goto IL_01e8_2;
+						G_B10_0 = L_80;
+						goto IL_01dd_2;
 					}
+					G_B9_0 = L_80;
 				}
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:695>
-					SocketManager_tFA162C4D30D5A71D0A5F10FDA0CF83B2B1101650* L_81;
-					L_81 = SocketManager_get_Instance_mFAF3D466262B9D9A471AB4FF8165EACB053F8CBC_inline(NULL);
-					NullCheck(L_81);
-					SocketManager_ConnectToServer_m0F05BC97902DFBE299CC7D4C9A7A0AF78E61A0BD(L_81, NULL);
+					goto IL_0201_2;
 				}
 
-IL_01e8_2:
+IL_01dd_2:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:698>
-					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_82 = __this->___onComplete;
-					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_83 = L_82;
-					if (L_83)
-					{
-						G_B12_0 = L_83;
-						goto IL_01f4_2;
-					}
-					G_B11_0 = L_83;
-				}
-				{
-					goto IL_0218_2;
+					NullCheck(G_B10_0);
+					Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B10_0, (bool)1, _stringLiteral69B007CFEBF81E97710F07C76FD1EDF2DADA5997, NULL);
+					goto IL_0201_2;
 				}
 
-IL_01f4_2:
+IL_01ea_2:
 				{
-					NullCheck(G_B12_0);
-					Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B12_0, (bool)1, _stringLiteral69B007CFEBF81E97710F07C76FD1EDF2DADA5997, NULL);
-					goto IL_0218_2;
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:677>
+					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_81 = __this->___onComplete;
+					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_82 = L_81;
+					if (L_82)
+					{
+						G_B13_0 = L_82;
+						goto IL_01f6_2;
+					}
+					G_B12_0 = L_82;
+				}
+				{
+					goto IL_0201_2;
+				}
+
+IL_01f6_2:
+				{
+					NullCheck(G_B13_0);
+					Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B13_0, (bool)0, _stringLiteral27C13220C6445946A518B078B64A009CFFBD1B5C, NULL);
 				}
 
 IL_0201_2:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:702>
-					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_84 = __this->___onComplete;
-					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_85 = L_84;
-					if (L_85)
-					{
-						G_B15_0 = L_85;
-						goto IL_020d_2;
-					}
-					G_B14_0 = L_85;
-				}
-				{
-					goto IL_0218_2;
-				}
-
-IL_020d_2:
-				{
-					NullCheck(G_B15_0);
-					Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B15_0, (bool)0, _stringLiteral27C13220C6445946A518B078B64A009CFFBD1B5C, NULL);
-				}
-
-IL_0218_2:
-				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:704>
-					goto IL_0287_1;
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:679>
+					goto IL_0270_1;
 				}
 			}
 			catch(Il2CppExceptionWrapper& e)
@@ -21248,101 +21226,101 @@ IL_0218_2:
 				if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
 				{
 					IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
-					goto CATCH_021a_1;
+					goto CATCH_0203_1;
 				}
 				throw e;
 			}
 
-CATCH_021a_1:
+CATCH_0203_1:
 			{
 				{
-					Exception_t* L_86 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:705>
-					V_6 = L_86;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:707>
-					Exception_t* L_87 = V_6;
-					NullCheck(L_87);
-					String_t* L_88;
-					L_88 = VirtualFuncInvoker0< String_t* >::Invoke(5, L_87);
-					String_t* L_89;
-					L_89 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7729C66D881DCAFC813236D2BE497A35473231E9)), L_88, NULL);
+					Exception_t* L_83 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:680>
+					V_6 = L_83;
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:682>
+					Exception_t* L_84 = V_6;
+					NullCheck(L_84);
+					String_t* L_85;
+					L_85 = VirtualFuncInvoker0< String_t* >::Invoke(5, L_84);
+					String_t* L_86;
+					L_86 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7729C66D881DCAFC813236D2BE497A35473231E9)), L_85, NULL);
 					il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
-					Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_89, NULL);
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:708>
-					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_90 = __this->___onComplete;
-					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_91 = L_90;
-					if (L_91)
+					Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_86, NULL);
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:683>
+					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_87 = __this->___onComplete;
+					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_88 = L_87;
+					if (L_88)
 					{
-						G_B19_0 = L_91;
-						goto IL_023e_1;
+						G_B17_0 = L_88;
+						goto IL_0227_1;
 					}
-					G_B18_0 = L_91;
+					G_B16_0 = L_88;
 				}
 				{
-					goto IL_0249_1;
-				}
-
-IL_023e_1:
-				{
-					NullCheck(G_B19_0);
-					Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B19_0, (bool)0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral9D283EF511514BD273AEF8ADEB03A4F10C76FB2C)), NULL);
+					goto IL_0232_1;
 				}
 
-IL_0249_1:
+IL_0227_1:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:709>
+					NullCheck(G_B17_0);
+					Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B17_0, (bool)0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral9D283EF511514BD273AEF8ADEB03A4F10C76FB2C)), NULL);
+				}
+
+IL_0232_1:
+				{
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:684>
 					IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
-					goto IL_0287_1;
+					goto IL_0270_1;
 				}
 			}
 
-IL_024b_1:
+IL_0234_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:713>
-				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_92 = __this->___U3CrequestU3E5__2;
-				NullCheck(L_92);
-				String_t* L_93;
-				L_93 = UnityWebRequest_get_error_m20A5D813ED59118B7AA1D1E2EB5250178B1F5B6F(L_92, NULL);
-				String_t* L_94;
-				L_94 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral926495E1CBB6CCE8D187ED96BCE633F726BB5E61, L_93, NULL);
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:688>
+				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_89 = __this->___U3CrequestU3E5__2;
+				NullCheck(L_89);
+				String_t* L_90;
+				L_90 = UnityWebRequest_get_error_m20A5D813ED59118B7AA1D1E2EB5250178B1F5B6F(L_89, NULL);
+				String_t* L_91;
+				L_91 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral926495E1CBB6CCE8D187ED96BCE633F726BB5E61, L_90, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_94, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:714>
-				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_95 = __this->___onComplete;
-				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_96 = L_95;
-				if (L_96)
+				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_91, NULL);
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:689>
+				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_92 = __this->___onComplete;
+				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_93 = L_92;
+				if (L_93)
 				{
-					G_B23_0 = L_96;
-					goto IL_0271_1;
+					G_B21_0 = L_93;
+					goto IL_025a_1;
 				}
-				G_B22_0 = L_96;
+				G_B20_0 = L_93;
 			}
 			{
-				goto IL_0287_1;
-			}
-
-IL_0271_1:
-			{
-				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_97 = __this->___U3CrequestU3E5__2;
-				NullCheck(L_97);
-				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_98;
-				L_98 = UnityWebRequest_get_downloadHandler_m1AA91B23D9D594A4F4FE2975FC356C508528F1D5(L_97, NULL);
-				NullCheck(L_98);
-				String_t* L_99;
-				L_99 = DownloadHandler_get_text_mA6DE5CB2647A21E577B963708DC3D0DA4DBFE7D8(L_98, NULL);
-				NullCheck(G_B23_0);
-				Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B23_0, (bool)0, L_99, NULL);
+				goto IL_0270_1;
 			}
 
-IL_0287_1:
+IL_025a_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:716>
+				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_94 = __this->___U3CrequestU3E5__2;
+				NullCheck(L_94);
+				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_95;
+				L_95 = UnityWebRequest_get_downloadHandler_m1AA91B23D9D594A4F4FE2975FC356C508528F1D5(L_94, NULL);
+				NullCheck(L_95);
+				String_t* L_96;
+				L_96 = DownloadHandler_get_text_mA6DE5CB2647A21E577B963708DC3D0DA4DBFE7D8(L_95, NULL);
+				NullCheck(G_B21_0);
+				Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B21_0, (bool)0, L_96, NULL);
+			}
+
+IL_0270_1:
+			{
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:691>
 				U3CGetProfileCoroutineU3Ed__31_U3CU3Em__Finally1_m9CF98176E2F75C10A6D8C4F83DB24CA5DDEB3591(__this, NULL);
 				__this->___U3CrequestU3E5__2 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:717>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:692>
 				V_0 = (bool)0;
-				goto IL_029f;
+				goto IL_0288;
 			}
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -21351,13 +21329,13 @@ IL_0287_1:
 		}
 	}
 
-IL_029f:
+IL_0288:
 	{
-		bool L_100 = V_0;
-		return L_100;
+		bool L_97 = V_0;
+		return L_97;
 	}
 }
-// Method Definition Index: 92652
+// Method Definition Index: 88471
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetProfileCoroutineU3Ed__31_U3CU3Em__Finally1_m9CF98176E2F75C10A6D8C4F83DB24CA5DDEB3591 (U3CGetProfileCoroutineU3Ed__31_tDC5DB4193CAF89FA662FAADFAF61A8C05D3950F3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21385,7 +21363,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92653
+// Method Definition Index: 88472
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetProfileCoroutineU3Ed__31_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDA3E8234E08C49E05FC2C1A395DFA4D61426CCF3 (U3CGetProfileCoroutineU3Ed__31_tDC5DB4193CAF89FA662FAADFAF61A8C05D3950F3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -21393,7 +21371,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetProfileCoroutineU3Ed__31
 		return L_0;
 	}
 }
-// Method Definition Index: 92654
+// Method Definition Index: 88473
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetProfileCoroutineU3Ed__31_System_Collections_IEnumerator_Reset_m8FF1E0A0F0E2C0CAC0BBAE5BC42FC3B73BAD7E21 (U3CGetProfileCoroutineU3Ed__31_tDC5DB4193CAF89FA662FAADFAF61A8C05D3950F3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -21402,7 +21380,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetProfileCoroutineU3Ed__31_System_Co
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CGetProfileCoroutineU3Ed__31_System_Collections_IEnumerator_Reset_m8FF1E0A0F0E2C0CAC0BBAE5BC42FC3B73BAD7E21_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 92655
+// Method Definition Index: 88474
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetProfileCoroutineU3Ed__31_System_Collections_IEnumerator_get_Current_m278EEDB9005401445F6E8AE2FABB5FF14E0DD9A5 (U3CGetProfileCoroutineU3Ed__31_tDC5DB4193CAF89FA662FAADFAF61A8C05D3950F3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -21418,7 +21396,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetProfileCoroutineU3Ed__31
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92656
+// Method Definition Index: 88475
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGuestLoginCoroutineU3Ed__20__ctor_mD864B66CD1F4A1CAFA58E193EEE928769B0BBC46 (U3CGuestLoginCoroutineU3Ed__20_tB50AAD53DB55B8E07DD4EC1376345C96771E1A99* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -21428,7 +21406,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGuestLoginCoroutineU3Ed__20__ctor_mD8
 		return;
 	}
 }
-// Method Definition Index: 92657
+// Method Definition Index: 88476
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGuestLoginCoroutineU3Ed__20_System_IDisposable_Dispose_mEB3FDEE3E66014342F8DC747904DC0CF359C5313 (U3CGuestLoginCoroutineU3Ed__20_tB50AAD53DB55B8E07DD4EC1376345C96771E1A99* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -21477,7 +21455,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92658
+// Method Definition Index: 88477
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CGuestLoginCoroutineU3Ed__20_MoveNext_mE133E7FE4039389FC78E619079B9997A3C256FE2 (U3CGuestLoginCoroutineU3Ed__20_tB50AAD53DB55B8E07DD4EC1376345C96771E1A99* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21486,7 +21464,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CGuestLoginCoroutineU3Ed__20_MoveNext_
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JsonUtility_FromJson_TisAuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A_mF146DB41680B3594E729E54FE1C4D9BD5F249B6F_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UploadHandlerRaw_t0A24CF320CDF16F1BC6C5C086DE71A1908CBB91A_il2cpp_TypeInfo_var);
@@ -21514,19 +21491,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CGuestLoginCoroutineU3Ed__20_MoveNext_
 	AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* V_6 = NULL;
 	Exception_t* V_7 = NULL;
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B12_0 = NULL;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B11_0 = NULL;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B15_0 = NULL;
 	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B14_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B13_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B17_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B16_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B21_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B20_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B25_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B24_0 = NULL;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B19_0 = NULL;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B18_0 = NULL;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B23_0 = NULL;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B22_0 = NULL;
 	{
 		auto __finallyBlock = il2cpp::utils::Fault([&]
 		{
 
-FAULT_0333:
+FAULT_031c:
 			{
 				U3CGuestLoginCoroutineU3Ed__20_System_IDisposable_Dispose_mEB3FDEE3E66014342F8DC747904DC0CF359C5313(__this, NULL);
 				return;
@@ -21554,13 +21531,13 @@ FAULT_0333:
 			}
 			{
 				V_0 = (bool)0;
-				goto IL_033a;
+				goto IL_0323;
 			}
 
 IL_001f_1:
 			{
 				__this->___U3CU3E1__state = (-1);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:300>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:290>
 				BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_4 = V_2;
 				NullCheck(L_4);
 				String_t* L_5 = L_4->___baseUrl;
@@ -21570,19 +21547,19 @@ IL_001f_1:
 				String_t* L_7;
 				L_7 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_6, _stringLiteral9CD9633351DCD21E9E1B84C57133D432749904FF, NULL);
 				V_3 = L_7;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:301>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:291>
 				String_t* L_8 = __this->___deviceId;
 				String_t* L_9;
 				L_9 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralDE8BC21A2C8E5790A4694F281E835357D929ED5A, L_8, _stringLiteralD5F2751FCD979A5D75A2B143601934884E0565F4, NULL);
 				V_4 = L_9;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:303>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:293>
 				String_t* L_10 = V_3;
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_11 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)il2cpp_codegen_object_new(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F_il2cpp_TypeInfo_var);
 				UnityWebRequest__ctor_mD4739B0BF1C4937479A83B24B531C6B819712A3E(L_11, L_10, _stringLiteral14E338D17C42E552FA7AF42CDAE40CA1F0E8A04D, NULL);
 				__this->___U3CrequestU3E5__2 = L_11;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)L_11);
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:305>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:295>
 				Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* L_12;
 				L_12 = Encoding_get_UTF8_m9FA98A53CE96FD6D02982625C5246DD36C1235C9(NULL);
 				String_t* L_13 = V_4;
@@ -21590,24 +21567,24 @@ IL_001f_1:
 				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_14;
 				L_14 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(19, L_12, L_13);
 				V_5 = L_14;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:306>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:296>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_15 = __this->___U3CrequestU3E5__2;
 				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_16 = V_5;
 				UploadHandlerRaw_t0A24CF320CDF16F1BC6C5C086DE71A1908CBB91A* L_17 = (UploadHandlerRaw_t0A24CF320CDF16F1BC6C5C086DE71A1908CBB91A*)il2cpp_codegen_object_new(UploadHandlerRaw_t0A24CF320CDF16F1BC6C5C086DE71A1908CBB91A_il2cpp_TypeInfo_var);
 				UploadHandlerRaw__ctor_m168C957B67E29CB3072E3542044D37E2F16C42B7(L_17, L_16, NULL);
 				NullCheck(L_15);
 				UnityWebRequest_set_uploadHandler_m68F346550136DE178C79238944985892196027FE(L_15, L_17, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:307>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:297>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_18 = __this->___U3CrequestU3E5__2;
 				DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974* L_19 = (DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974*)il2cpp_codegen_object_new(DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974_il2cpp_TypeInfo_var);
 				DownloadHandlerBuffer__ctor_m5EE7C9E8AB468B2B937A7C9C66B4176A884147AF(L_19, NULL);
 				NullCheck(L_18);
 				UnityWebRequest_set_downloadHandler_m6CB94492012097DFC44E5773D1A627753788292F(L_18, L_19, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:308>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:298>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_20 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_20);
 				UnityWebRequest_SetRequestHeader_m099734EB787B7269B62AB2236A5A4F7D35AF8BC5(L_20, _stringLiteral5B58EBE31E594BF8FA4BEA3CD075473149322B18, _stringLiteral64058CC688A96A90239811EF06C9D20DB0499C3E, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:310>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:300>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_21 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_21);
 				UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* L_22;
@@ -21616,24 +21593,24 @@ IL_001f_1:
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)L_22);
 				__this->___U3CU3E1__state = 1;
 				V_0 = (bool)1;
-				goto IL_033a;
+				goto IL_0323;
 			}
 
 IL_00d2_1:
 			{
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:312>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:302>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_23 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_23);
 				int32_t L_24;
 				L_24 = UnityWebRequest_get_result_mEF83848C5FCFB5E307CE4B57E42BF02FC9AED449(L_23, NULL);
 				if ((!(((uint32_t)L_24) == ((uint32_t)1))))
 				{
-					goto IL_02b7_1;
+					goto IL_02a0_1;
 				}
 			}
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:314>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:304>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_25 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_25);
 				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_26;
@@ -21649,7 +21626,7 @@ IL_00d2_1:
 			try
 			{
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:317>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:307>
 					UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_29 = __this->___U3CrequestU3E5__2;
 					NullCheck(L_29);
 					DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_30;
@@ -21660,7 +21637,7 @@ IL_00d2_1:
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_32;
 					L_32 = JsonUtility_FromJson_TisAuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A_mF146DB41680B3594E729E54FE1C4D9BD5F249B6F(L_31, JsonUtility_FromJson_TisAuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A_mF146DB41680B3594E729E54FE1C4D9BD5F249B6F_RuntimeMethod_var);
 					V_6 = L_32;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:319>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:309>
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_33 = V_6;
 					NullCheck(L_33);
 					String_t* L_34 = L_33->___token;
@@ -21668,11 +21645,11 @@ IL_00d2_1:
 					L_35 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_34, NULL);
 					if (L_35)
 					{
-						goto IL_0265_2;
+						goto IL_024e_2;
 					}
 				}
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:321>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:311>
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_36 = V_6;
 					NullCheck(L_36);
 					BackendUser_tA2639E54D80A1230B398FBFC497B719A95FDC362* L_37 = L_36->___user;
@@ -21695,14 +21672,14 @@ IL_00d2_1:
 					}
 				}
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:323>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:324>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:325>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:326>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:327>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:328>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:329>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:330>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:313>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:314>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:315>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:316>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:317>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:318>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:319>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:320>
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_42 = V_6;
 					NullCheck(L_42);
 					BackendUser_tA2639E54D80A1230B398FBFC497B719A95FDC362* L_43 = L_42->___user;
@@ -21788,81 +21765,60 @@ IL_00d2_1:
 
 IL_021f_2:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:333>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:323>
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_90 = V_6;
 					NullCheck(L_90);
 					String_t* L_91 = L_90->___token;
 					PlayerPrefs_SetString_mF4F457C81BB75F0213547C6287BA36E15E1F0256(_stringLiteral1D4A865959E4C17CC8A5EEBF03C147BB37BE1106, L_91, NULL);
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:334>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:324>
 					PlayerPrefs_Save_m82567E045D69C838112EA204B60C144D4C1EA3AE(NULL);
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:336>
-					SocketManager_tFA162C4D30D5A71D0A5F10FDA0CF83B2B1101650* L_92;
-					L_92 = SocketManager_get_Instance_mFAF3D466262B9D9A471AB4FF8165EACB053F8CBC_inline(NULL);
-					il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-					bool L_93;
-					L_93 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_92, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-					if (!L_93)
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:326>
+					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_92 = __this->___onComplete;
+					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_93 = L_92;
+					if (L_93)
 					{
-						goto IL_024c_2;
+						G_B12_0 = L_93;
+						goto IL_0241_2;
 					}
+					G_B11_0 = L_93;
 				}
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:338>
-					SocketManager_tFA162C4D30D5A71D0A5F10FDA0CF83B2B1101650* L_94;
-					L_94 = SocketManager_get_Instance_mFAF3D466262B9D9A471AB4FF8165EACB053F8CBC_inline(NULL);
-					NullCheck(L_94);
-					SocketManager_ConnectToServer_m0F05BC97902DFBE299CC7D4C9A7A0AF78E61A0BD(L_94, NULL);
+					goto IL_0265_2;
 				}
 
-IL_024c_2:
+IL_0241_2:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:341>
-					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_95 = __this->___onComplete;
-					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_96 = L_95;
-					if (L_96)
-					{
-						G_B14_0 = L_96;
-						goto IL_0258_2;
-					}
-					G_B13_0 = L_96;
-				}
-				{
-					goto IL_027c_2;
+					NullCheck(G_B12_0);
+					Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B12_0, (bool)1, _stringLiteral8E605C8BDFCF43FA32C02DD7EA6F8D676D1B6B22, NULL);
+					goto IL_0265_2;
 				}
 
-IL_0258_2:
+IL_024e_2:
 				{
-					NullCheck(G_B14_0);
-					Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B14_0, (bool)1, _stringLiteral8E605C8BDFCF43FA32C02DD7EA6F8D676D1B6B22, NULL);
-					goto IL_027c_2;
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:330>
+					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_94 = __this->___onComplete;
+					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_95 = L_94;
+					if (L_95)
+					{
+						G_B15_0 = L_95;
+						goto IL_025a_2;
+					}
+					G_B14_0 = L_95;
+				}
+				{
+					goto IL_0265_2;
+				}
+
+IL_025a_2:
+				{
+					NullCheck(G_B15_0);
+					Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B15_0, (bool)0, _stringLiteral632B1AF20F195E28909A8E1FD75C5472F2F5FD8F, NULL);
 				}
 
 IL_0265_2:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:345>
-					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_97 = __this->___onComplete;
-					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_98 = L_97;
-					if (L_98)
-					{
-						G_B17_0 = L_98;
-						goto IL_0271_2;
-					}
-					G_B16_0 = L_98;
-				}
-				{
-					goto IL_027c_2;
-				}
-
-IL_0271_2:
-				{
-					NullCheck(G_B17_0);
-					Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B17_0, (bool)0, _stringLiteral632B1AF20F195E28909A8E1FD75C5472F2F5FD8F, NULL);
-				}
-
-IL_027c_2:
-				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:347>
-					goto IL_0322_1;
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:332>
+					goto IL_030b_1;
 				}
 			}
 			catch(Il2CppExceptionWrapper& e)
@@ -21870,124 +21826,124 @@ IL_027c_2:
 				if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
 				{
 					IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
-					goto CATCH_0281_1;
+					goto CATCH_026a_1;
 				}
 				throw e;
 			}
 
-CATCH_0281_1:
+CATCH_026a_1:
 			{
 				{
-					Exception_t* L_99 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:348>
-					V_7 = L_99;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:350>
-					Exception_t* L_100 = V_7;
-					NullCheck(L_100);
-					String_t* L_101;
-					L_101 = VirtualFuncInvoker0< String_t* >::Invoke(5, L_100);
-					String_t* L_102;
-					L_102 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralDDFC0C3391E622DDBED7B2B1F6F14438A6EA672E)), L_101, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2)), NULL);
+					Exception_t* L_96 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:333>
+					V_7 = L_96;
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:335>
+					Exception_t* L_97 = V_7;
+					NullCheck(L_97);
+					String_t* L_98;
+					L_98 = VirtualFuncInvoker0< String_t* >::Invoke(5, L_97);
+					String_t* L_99;
+					L_99 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralDDFC0C3391E622DDBED7B2B1F6F14438A6EA672E)), L_98, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2)), NULL);
 					il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
-					Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_102, NULL);
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:351>
-					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_103 = __this->___onComplete;
-					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_104 = L_103;
-					if (L_104)
+					Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_99, NULL);
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:336>
+					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_100 = __this->___onComplete;
+					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_101 = L_100;
+					if (L_101)
 					{
-						G_B21_0 = L_104;
-						goto IL_02aa_1;
+						G_B19_0 = L_101;
+						goto IL_0293_1;
 					}
-					G_B20_0 = L_104;
+					G_B18_0 = L_101;
 				}
 				{
-					goto IL_02b5_1;
-				}
-
-IL_02aa_1:
-				{
-					NullCheck(G_B21_0);
-					Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B21_0, (bool)0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral70F56CAC45C03B4D956BF4927C64568A323EE99A)), NULL);
+					goto IL_029e_1;
 				}
 
-IL_02b5_1:
+IL_0293_1:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:352>
+					NullCheck(G_B19_0);
+					Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B19_0, (bool)0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral70F56CAC45C03B4D956BF4927C64568A323EE99A)), NULL);
+				}
+
+IL_029e_1:
+				{
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:337>
 					IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
-					goto IL_0322_1;
+					goto IL_030b_1;
 				}
 			}
 
-IL_02b7_1:
+IL_02a0_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:356>
-				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_105 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
-				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_106 = L_105;
-				NullCheck(L_106);
-				(L_106)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral70810298C711046A680CDD10EECD1B2A3890476C);
-				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_107 = L_106;
-				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_108 = __this->___U3CrequestU3E5__2;
-				NullCheck(L_108);
-				String_t* L_109;
-				L_109 = UnityWebRequest_get_error_m20A5D813ED59118B7AA1D1E2EB5250178B1F5B6F(L_108, NULL);
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:341>
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_102 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_103 = L_102;
+				NullCheck(L_103);
+				(L_103)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral70810298C711046A680CDD10EECD1B2A3890476C);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_104 = L_103;
+				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_105 = __this->___U3CrequestU3E5__2;
+				NullCheck(L_105);
+				String_t* L_106;
+				L_106 = UnityWebRequest_get_error_m20A5D813ED59118B7AA1D1E2EB5250178B1F5B6F(L_105, NULL);
+				NullCheck(L_104);
+				(L_104)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)L_106);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_107 = L_104;
 				NullCheck(L_107);
-				(L_107)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)L_109);
-				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_110 = L_107;
+				(L_107)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteralBD2155E54D0A0EF69D6B035ACE4FB0D1E5C8A136);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_108 = L_107;
+				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_109 = __this->___U3CrequestU3E5__2;
+				NullCheck(L_109);
+				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_110;
+				L_110 = UnityWebRequest_get_downloadHandler_m1AA91B23D9D594A4F4FE2975FC356C508528F1D5(L_109, NULL);
 				NullCheck(L_110);
-				(L_110)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteralBD2155E54D0A0EF69D6B035ACE4FB0D1E5C8A136);
-				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_111 = L_110;
-				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_112 = __this->___U3CrequestU3E5__2;
+				String_t* L_111;
+				L_111 = DownloadHandler_get_text_mA6DE5CB2647A21E577B963708DC3D0DA4DBFE7D8(L_110, NULL);
+				NullCheck(L_108);
+				(L_108)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)L_111);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_112 = L_108;
 				NullCheck(L_112);
-				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_113;
-				L_113 = UnityWebRequest_get_downloadHandler_m1AA91B23D9D594A4F4FE2975FC356C508528F1D5(L_112, NULL);
-				NullCheck(L_113);
-				String_t* L_114;
-				L_114 = DownloadHandler_get_text_mA6DE5CB2647A21E577B963708DC3D0DA4DBFE7D8(L_113, NULL);
-				NullCheck(L_111);
-				(L_111)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)L_114);
-				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_115 = L_111;
-				NullCheck(L_115);
-				(L_115)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2);
-				String_t* L_116;
-				L_116 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_115, NULL);
+				(L_112)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2);
+				String_t* L_113;
+				L_113 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_112, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_116, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:357>
-				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_117 = __this->___onComplete;
-				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_118 = L_117;
-				if (L_118)
+				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_113, NULL);
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:342>
+				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_114 = __this->___onComplete;
+				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_115 = L_114;
+				if (L_115)
 				{
-					G_B25_0 = L_118;
-					goto IL_030c_1;
+					G_B23_0 = L_115;
+					goto IL_02f5_1;
 				}
-				G_B24_0 = L_118;
+				G_B22_0 = L_115;
 			}
 			{
-				goto IL_0322_1;
-			}
-
-IL_030c_1:
-			{
-				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_119 = __this->___U3CrequestU3E5__2;
-				NullCheck(L_119);
-				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_120;
-				L_120 = UnityWebRequest_get_downloadHandler_m1AA91B23D9D594A4F4FE2975FC356C508528F1D5(L_119, NULL);
-				NullCheck(L_120);
-				String_t* L_121;
-				L_121 = DownloadHandler_get_text_mA6DE5CB2647A21E577B963708DC3D0DA4DBFE7D8(L_120, NULL);
-				NullCheck(G_B25_0);
-				Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B25_0, (bool)0, L_121, NULL);
+				goto IL_030b_1;
 			}
 
-IL_0322_1:
+IL_02f5_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:359>
+				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_116 = __this->___U3CrequestU3E5__2;
+				NullCheck(L_116);
+				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_117;
+				L_117 = UnityWebRequest_get_downloadHandler_m1AA91B23D9D594A4F4FE2975FC356C508528F1D5(L_116, NULL);
+				NullCheck(L_117);
+				String_t* L_118;
+				L_118 = DownloadHandler_get_text_mA6DE5CB2647A21E577B963708DC3D0DA4DBFE7D8(L_117, NULL);
+				NullCheck(G_B23_0);
+				Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B23_0, (bool)0, L_118, NULL);
+			}
+
+IL_030b_1:
+			{
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:344>
 				U3CGuestLoginCoroutineU3Ed__20_U3CU3Em__Finally1_m6F6944D5CE0F3DBDACCD7552FCA51F60EF99248D(__this, NULL);
 				__this->___U3CrequestU3E5__2 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:360>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:345>
 				V_0 = (bool)0;
-				goto IL_033a;
+				goto IL_0323;
 			}
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -21996,13 +21952,13 @@ IL_0322_1:
 		}
 	}
 
-IL_033a:
+IL_0323:
 	{
-		bool L_122 = V_0;
-		return L_122;
+		bool L_119 = V_0;
+		return L_119;
 	}
 }
-// Method Definition Index: 92659
+// Method Definition Index: 88478
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGuestLoginCoroutineU3Ed__20_U3CU3Em__Finally1_m6F6944D5CE0F3DBDACCD7552FCA51F60EF99248D (U3CGuestLoginCoroutineU3Ed__20_tB50AAD53DB55B8E07DD4EC1376345C96771E1A99* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22030,7 +21986,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92660
+// Method Definition Index: 88479
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGuestLoginCoroutineU3Ed__20_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m4B362FAC4711D63460AC2A22027B4BC96A44C79C (U3CGuestLoginCoroutineU3Ed__20_tB50AAD53DB55B8E07DD4EC1376345C96771E1A99* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22038,7 +21994,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGuestLoginCoroutineU3Ed__20
 		return L_0;
 	}
 }
-// Method Definition Index: 92661
+// Method Definition Index: 88480
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGuestLoginCoroutineU3Ed__20_System_Collections_IEnumerator_Reset_mCCC188B7A27BE05E96D1B40FC7AA0AB074E13EED (U3CGuestLoginCoroutineU3Ed__20_tB50AAD53DB55B8E07DD4EC1376345C96771E1A99* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22047,7 +22003,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGuestLoginCoroutineU3Ed__20_System_Co
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CGuestLoginCoroutineU3Ed__20_System_Collections_IEnumerator_Reset_mCCC188B7A27BE05E96D1B40FC7AA0AB074E13EED_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 92662
+// Method Definition Index: 88481
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGuestLoginCoroutineU3Ed__20_System_Collections_IEnumerator_get_Current_mD1A279BD3A94D0456EFEB6C9F39F95A98771D49F (U3CGuestLoginCoroutineU3Ed__20_tB50AAD53DB55B8E07DD4EC1376345C96771E1A99* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22063,7 +22019,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGuestLoginCoroutineU3Ed__20
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92663
+// Method Definition Index: 88482
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoginCoroutineU3Ed__18__ctor_m2B42B08E2842DB90F865378794D2EA83A783F36D (U3CLoginCoroutineU3Ed__18_t607AC587B349729AF10A327483A062FDEDED29F1* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -22073,7 +22029,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoginCoroutineU3Ed__18__ctor_m2B42B08
 		return;
 	}
 }
-// Method Definition Index: 92664
+// Method Definition Index: 88483
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoginCoroutineU3Ed__18_System_IDisposable_Dispose_mDEE1F40D4290765C427EB6453A32BCCE30884A9F (U3CLoginCoroutineU3Ed__18_t607AC587B349729AF10A327483A062FDEDED29F1* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -22122,7 +22078,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92665
+// Method Definition Index: 88484
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CLoginCoroutineU3Ed__18_MoveNext_m8D2383C5C791A6991265A84BEF16A537279E780F (U3CLoginCoroutineU3Ed__18_t607AC587B349729AF10A327483A062FDEDED29F1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22131,7 +22087,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CLoginCoroutineU3Ed__18_MoveNext_m8D23
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JsonUtility_FromJson_TisAuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A_mF146DB41680B3594E729E54FE1C4D9BD5F249B6F_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UploadHandlerRaw_t0A24CF320CDF16F1BC6C5C086DE71A1908CBB91A_il2cpp_TypeInfo_var);
@@ -22160,19 +22115,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CLoginCoroutineU3Ed__18_MoveNext_m8D23
 	AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* V_6 = NULL;
 	Exception_t* V_7 = NULL;
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B12_0 = NULL;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B11_0 = NULL;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B15_0 = NULL;
 	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B14_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B13_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B17_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B16_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B21_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B20_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B25_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B24_0 = NULL;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B19_0 = NULL;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B18_0 = NULL;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B23_0 = NULL;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B22_0 = NULL;
 	{
 		auto __finallyBlock = il2cpp::utils::Fault([&]
 		{
 
-FAULT_0353:
+FAULT_033c:
 			{
 				U3CLoginCoroutineU3Ed__18_System_IDisposable_Dispose_mDEE1F40D4290765C427EB6453A32BCCE30884A9F(__this, NULL);
 				return;
@@ -22200,13 +22155,13 @@ FAULT_0353:
 			}
 			{
 				V_0 = (bool)0;
-				goto IL_035a;
+				goto IL_0343;
 			}
 
 IL_001f_1:
 			{
 				__this->___U3CU3E1__state = (-1);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:227>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:222>
 				BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_4 = V_2;
 				NullCheck(L_4);
 				String_t* L_5 = L_4->___baseUrl;
@@ -22216,7 +22171,7 @@ IL_001f_1:
 				String_t* L_7;
 				L_7 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_6, _stringLiteral9F0F86B41AAE7C01C8539D4C357662F58EB404BE, NULL);
 				V_3 = L_7;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:228>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:223>
 				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_8 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
 				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_9 = L_8;
 				NullCheck(L_9);
@@ -22238,14 +22193,14 @@ IL_001f_1:
 				String_t* L_16;
 				L_16 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_15, NULL);
 				V_4 = L_16;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:230>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:225>
 				String_t* L_17 = V_3;
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_18 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)il2cpp_codegen_object_new(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F_il2cpp_TypeInfo_var);
 				UnityWebRequest__ctor_mD4739B0BF1C4937479A83B24B531C6B819712A3E(L_18, L_17, _stringLiteral14E338D17C42E552FA7AF42CDAE40CA1F0E8A04D, NULL);
 				__this->___U3CrequestU3E5__2 = L_18;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)L_18);
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:232>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:227>
 				Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* L_19;
 				L_19 = Encoding_get_UTF8_m9FA98A53CE96FD6D02982625C5246DD36C1235C9(NULL);
 				String_t* L_20 = V_4;
@@ -22253,24 +22208,24 @@ IL_001f_1:
 				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_21;
 				L_21 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(19, L_19, L_20);
 				V_5 = L_21;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:233>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:228>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_22 = __this->___U3CrequestU3E5__2;
 				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_23 = V_5;
 				UploadHandlerRaw_t0A24CF320CDF16F1BC6C5C086DE71A1908CBB91A* L_24 = (UploadHandlerRaw_t0A24CF320CDF16F1BC6C5C086DE71A1908CBB91A*)il2cpp_codegen_object_new(UploadHandlerRaw_t0A24CF320CDF16F1BC6C5C086DE71A1908CBB91A_il2cpp_TypeInfo_var);
 				UploadHandlerRaw__ctor_m168C957B67E29CB3072E3542044D37E2F16C42B7(L_24, L_23, NULL);
 				NullCheck(L_22);
 				UnityWebRequest_set_uploadHandler_m68F346550136DE178C79238944985892196027FE(L_22, L_24, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:234>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:229>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_25 = __this->___U3CrequestU3E5__2;
 				DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974* L_26 = (DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974*)il2cpp_codegen_object_new(DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974_il2cpp_TypeInfo_var);
 				DownloadHandlerBuffer__ctor_m5EE7C9E8AB468B2B937A7C9C66B4176A884147AF(L_26, NULL);
 				NullCheck(L_25);
 				UnityWebRequest_set_downloadHandler_m6CB94492012097DFC44E5773D1A627753788292F(L_25, L_26, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:235>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:230>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_27 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_27);
 				UnityWebRequest_SetRequestHeader_m099734EB787B7269B62AB2236A5A4F7D35AF8BC5(L_27, _stringLiteral5B58EBE31E594BF8FA4BEA3CD075473149322B18, _stringLiteral64058CC688A96A90239811EF06C9D20DB0499C3E, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:237>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:232>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_28 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_28);
 				UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* L_29;
@@ -22279,24 +22234,24 @@ IL_001f_1:
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)L_29);
 				__this->___U3CU3E1__state = 1;
 				V_0 = (bool)1;
-				goto IL_035a;
+				goto IL_0343;
 			}
 
 IL_00f2_1:
 			{
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:239>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:234>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_30 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_30);
 				int32_t L_31;
 				L_31 = UnityWebRequest_get_result_mEF83848C5FCFB5E307CE4B57E42BF02FC9AED449(L_30, NULL);
 				if ((!(((uint32_t)L_31) == ((uint32_t)1))))
 				{
-					goto IL_02d7_1;
+					goto IL_02c0_1;
 				}
 			}
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:241>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:236>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_32 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_32);
 				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_33;
@@ -22312,7 +22267,7 @@ IL_00f2_1:
 			try
 			{
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:244>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:239>
 					UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_36 = __this->___U3CrequestU3E5__2;
 					NullCheck(L_36);
 					DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_37;
@@ -22323,7 +22278,7 @@ IL_00f2_1:
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_39;
 					L_39 = JsonUtility_FromJson_TisAuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A_mF146DB41680B3594E729E54FE1C4D9BD5F249B6F(L_38, JsonUtility_FromJson_TisAuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A_mF146DB41680B3594E729E54FE1C4D9BD5F249B6F_RuntimeMethod_var);
 					V_6 = L_39;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:246>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:241>
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_40 = V_6;
 					NullCheck(L_40);
 					String_t* L_41 = L_40->___token;
@@ -22331,11 +22286,11 @@ IL_00f2_1:
 					L_42 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_41, NULL);
 					if (L_42)
 					{
-						goto IL_0285_2;
+						goto IL_026e_2;
 					}
 				}
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:248>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:243>
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_43 = V_6;
 					NullCheck(L_43);
 					BackendUser_tA2639E54D80A1230B398FBFC497B719A95FDC362* L_44 = L_43->___user;
@@ -22358,14 +22313,14 @@ IL_00f2_1:
 					}
 				}
 				{
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:245>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:246>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:247>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:248>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:249>
 					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:250>
 					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:251>
 					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:252>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:253>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:254>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:255>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:256>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:257>
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_49 = V_6;
 					NullCheck(L_49);
 					BackendUser_tA2639E54D80A1230B398FBFC497B719A95FDC362* L_50 = L_49->___user;
@@ -22451,81 +22406,60 @@ IL_00f2_1:
 
 IL_023f_2:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:260>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:255>
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_97 = V_6;
 					NullCheck(L_97);
 					String_t* L_98 = L_97->___token;
 					PlayerPrefs_SetString_mF4F457C81BB75F0213547C6287BA36E15E1F0256(_stringLiteral1D4A865959E4C17CC8A5EEBF03C147BB37BE1106, L_98, NULL);
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:261>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:256>
 					PlayerPrefs_Save_m82567E045D69C838112EA204B60C144D4C1EA3AE(NULL);
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:263>
-					SocketManager_tFA162C4D30D5A71D0A5F10FDA0CF83B2B1101650* L_99;
-					L_99 = SocketManager_get_Instance_mFAF3D466262B9D9A471AB4FF8165EACB053F8CBC_inline(NULL);
-					il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-					bool L_100;
-					L_100 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_99, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-					if (!L_100)
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:258>
+					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_99 = __this->___onComplete;
+					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_100 = L_99;
+					if (L_100)
 					{
-						goto IL_026c_2;
+						G_B12_0 = L_100;
+						goto IL_0261_2;
 					}
+					G_B11_0 = L_100;
 				}
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:265>
-					SocketManager_tFA162C4D30D5A71D0A5F10FDA0CF83B2B1101650* L_101;
-					L_101 = SocketManager_get_Instance_mFAF3D466262B9D9A471AB4FF8165EACB053F8CBC_inline(NULL);
-					NullCheck(L_101);
-					SocketManager_ConnectToServer_m0F05BC97902DFBE299CC7D4C9A7A0AF78E61A0BD(L_101, NULL);
+					goto IL_0285_2;
 				}
 
-IL_026c_2:
+IL_0261_2:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:268>
-					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_102 = __this->___onComplete;
-					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_103 = L_102;
-					if (L_103)
-					{
-						G_B14_0 = L_103;
-						goto IL_0278_2;
-					}
-					G_B13_0 = L_103;
-				}
-				{
-					goto IL_029c_2;
+					NullCheck(G_B12_0);
+					Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B12_0, (bool)1, _stringLiteralBADE97C4AA404073B75CFEC3FD409B872E3698A4, NULL);
+					goto IL_0285_2;
 				}
 
-IL_0278_2:
+IL_026e_2:
 				{
-					NullCheck(G_B14_0);
-					Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B14_0, (bool)1, _stringLiteralBADE97C4AA404073B75CFEC3FD409B872E3698A4, NULL);
-					goto IL_029c_2;
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:262>
+					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_101 = __this->___onComplete;
+					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_102 = L_101;
+					if (L_102)
+					{
+						G_B15_0 = L_102;
+						goto IL_027a_2;
+					}
+					G_B14_0 = L_102;
+				}
+				{
+					goto IL_0285_2;
+				}
+
+IL_027a_2:
+				{
+					NullCheck(G_B15_0);
+					Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B15_0, (bool)0, _stringLiteral86B231957A607B7F56B24CBC959ABEC67FE59B31, NULL);
 				}
 
 IL_0285_2:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:272>
-					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_104 = __this->___onComplete;
-					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_105 = L_104;
-					if (L_105)
-					{
-						G_B17_0 = L_105;
-						goto IL_0291_2;
-					}
-					G_B16_0 = L_105;
-				}
-				{
-					goto IL_029c_2;
-				}
-
-IL_0291_2:
-				{
-					NullCheck(G_B17_0);
-					Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B17_0, (bool)0, _stringLiteral86B231957A607B7F56B24CBC959ABEC67FE59B31, NULL);
-				}
-
-IL_029c_2:
-				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:274>
-					goto IL_0342_1;
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:264>
+					goto IL_032b_1;
 				}
 			}
 			catch(Il2CppExceptionWrapper& e)
@@ -22533,124 +22467,124 @@ IL_029c_2:
 				if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
 				{
 					IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
-					goto CATCH_02a1_1;
+					goto CATCH_028a_1;
 				}
 				throw e;
 			}
 
-CATCH_02a1_1:
+CATCH_028a_1:
 			{
 				{
-					Exception_t* L_106 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:275>
-					V_7 = L_106;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:277>
-					Exception_t* L_107 = V_7;
-					NullCheck(L_107);
-					String_t* L_108;
-					L_108 = VirtualFuncInvoker0< String_t* >::Invoke(5, L_107);
-					String_t* L_109;
-					L_109 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralDDFC0C3391E622DDBED7B2B1F6F14438A6EA672E)), L_108, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2)), NULL);
+					Exception_t* L_103 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:265>
+					V_7 = L_103;
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:267>
+					Exception_t* L_104 = V_7;
+					NullCheck(L_104);
+					String_t* L_105;
+					L_105 = VirtualFuncInvoker0< String_t* >::Invoke(5, L_104);
+					String_t* L_106;
+					L_106 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralDDFC0C3391E622DDBED7B2B1F6F14438A6EA672E)), L_105, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2)), NULL);
 					il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
-					Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_109, NULL);
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:278>
-					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_110 = __this->___onComplete;
-					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_111 = L_110;
-					if (L_111)
+					Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_106, NULL);
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:268>
+					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_107 = __this->___onComplete;
+					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_108 = L_107;
+					if (L_108)
 					{
-						G_B21_0 = L_111;
-						goto IL_02ca_1;
+						G_B19_0 = L_108;
+						goto IL_02b3_1;
 					}
-					G_B20_0 = L_111;
+					G_B18_0 = L_108;
 				}
 				{
-					goto IL_02d5_1;
-				}
-
-IL_02ca_1:
-				{
-					NullCheck(G_B21_0);
-					Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B21_0, (bool)0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral70F56CAC45C03B4D956BF4927C64568A323EE99A)), NULL);
+					goto IL_02be_1;
 				}
 
-IL_02d5_1:
+IL_02b3_1:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:279>
+					NullCheck(G_B19_0);
+					Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B19_0, (bool)0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral70F56CAC45C03B4D956BF4927C64568A323EE99A)), NULL);
+				}
+
+IL_02be_1:
+				{
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:269>
 					IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
-					goto IL_0342_1;
+					goto IL_032b_1;
 				}
 			}
 
-IL_02d7_1:
+IL_02c0_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:283>
-				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_112 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
-				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_113 = L_112;
-				NullCheck(L_113);
-				(L_113)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral6E6D7E19D9DDF1D5C2F671E07E1D8A0ABF26B954);
-				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_114 = L_113;
-				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_115 = __this->___U3CrequestU3E5__2;
-				NullCheck(L_115);
-				String_t* L_116;
-				L_116 = UnityWebRequest_get_error_m20A5D813ED59118B7AA1D1E2EB5250178B1F5B6F(L_115, NULL);
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:273>
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_109 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_110 = L_109;
+				NullCheck(L_110);
+				(L_110)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral6E6D7E19D9DDF1D5C2F671E07E1D8A0ABF26B954);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_111 = L_110;
+				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_112 = __this->___U3CrequestU3E5__2;
+				NullCheck(L_112);
+				String_t* L_113;
+				L_113 = UnityWebRequest_get_error_m20A5D813ED59118B7AA1D1E2EB5250178B1F5B6F(L_112, NULL);
+				NullCheck(L_111);
+				(L_111)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)L_113);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_114 = L_111;
 				NullCheck(L_114);
-				(L_114)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)L_116);
-				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_117 = L_114;
+				(L_114)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteralBD2155E54D0A0EF69D6B035ACE4FB0D1E5C8A136);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_115 = L_114;
+				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_116 = __this->___U3CrequestU3E5__2;
+				NullCheck(L_116);
+				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_117;
+				L_117 = UnityWebRequest_get_downloadHandler_m1AA91B23D9D594A4F4FE2975FC356C508528F1D5(L_116, NULL);
 				NullCheck(L_117);
-				(L_117)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteralBD2155E54D0A0EF69D6B035ACE4FB0D1E5C8A136);
-				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_118 = L_117;
-				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_119 = __this->___U3CrequestU3E5__2;
+				String_t* L_118;
+				L_118 = DownloadHandler_get_text_mA6DE5CB2647A21E577B963708DC3D0DA4DBFE7D8(L_117, NULL);
+				NullCheck(L_115);
+				(L_115)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)L_118);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_119 = L_115;
 				NullCheck(L_119);
-				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_120;
-				L_120 = UnityWebRequest_get_downloadHandler_m1AA91B23D9D594A4F4FE2975FC356C508528F1D5(L_119, NULL);
-				NullCheck(L_120);
-				String_t* L_121;
-				L_121 = DownloadHandler_get_text_mA6DE5CB2647A21E577B963708DC3D0DA4DBFE7D8(L_120, NULL);
-				NullCheck(L_118);
-				(L_118)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)L_121);
-				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_122 = L_118;
-				NullCheck(L_122);
-				(L_122)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2);
-				String_t* L_123;
-				L_123 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_122, NULL);
+				(L_119)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2);
+				String_t* L_120;
+				L_120 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_119, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_123, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:284>
-				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_124 = __this->___onComplete;
-				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_125 = L_124;
-				if (L_125)
+				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_120, NULL);
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:274>
+				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_121 = __this->___onComplete;
+				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_122 = L_121;
+				if (L_122)
 				{
-					G_B25_0 = L_125;
-					goto IL_032c_1;
+					G_B23_0 = L_122;
+					goto IL_0315_1;
 				}
-				G_B24_0 = L_125;
+				G_B22_0 = L_122;
 			}
 			{
-				goto IL_0342_1;
-			}
-
-IL_032c_1:
-			{
-				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_126 = __this->___U3CrequestU3E5__2;
-				NullCheck(L_126);
-				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_127;
-				L_127 = UnityWebRequest_get_downloadHandler_m1AA91B23D9D594A4F4FE2975FC356C508528F1D5(L_126, NULL);
-				NullCheck(L_127);
-				String_t* L_128;
-				L_128 = DownloadHandler_get_text_mA6DE5CB2647A21E577B963708DC3D0DA4DBFE7D8(L_127, NULL);
-				NullCheck(G_B25_0);
-				Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B25_0, (bool)0, L_128, NULL);
+				goto IL_032b_1;
 			}
 
-IL_0342_1:
+IL_0315_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:286>
+				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_123 = __this->___U3CrequestU3E5__2;
+				NullCheck(L_123);
+				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_124;
+				L_124 = UnityWebRequest_get_downloadHandler_m1AA91B23D9D594A4F4FE2975FC356C508528F1D5(L_123, NULL);
+				NullCheck(L_124);
+				String_t* L_125;
+				L_125 = DownloadHandler_get_text_mA6DE5CB2647A21E577B963708DC3D0DA4DBFE7D8(L_124, NULL);
+				NullCheck(G_B23_0);
+				Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B23_0, (bool)0, L_125, NULL);
+			}
+
+IL_032b_1:
+			{
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:276>
 				U3CLoginCoroutineU3Ed__18_U3CU3Em__Finally1_m1D54DBE1E669A3BF344AFEDB10B274605A99397C(__this, NULL);
 				__this->___U3CrequestU3E5__2 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:287>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:277>
 				V_0 = (bool)0;
-				goto IL_035a;
+				goto IL_0343;
 			}
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -22659,13 +22593,13 @@ IL_0342_1:
 		}
 	}
 
-IL_035a:
+IL_0343:
 	{
-		bool L_129 = V_0;
-		return L_129;
+		bool L_126 = V_0;
+		return L_126;
 	}
 }
-// Method Definition Index: 92666
+// Method Definition Index: 88485
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoginCoroutineU3Ed__18_U3CU3Em__Finally1_m1D54DBE1E669A3BF344AFEDB10B274605A99397C (U3CLoginCoroutineU3Ed__18_t607AC587B349729AF10A327483A062FDEDED29F1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22693,7 +22627,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92667
+// Method Definition Index: 88486
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoginCoroutineU3Ed__18_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mCDE0A425B6A93DE2F8AA347A14BC692B79BEF045 (U3CLoginCoroutineU3Ed__18_t607AC587B349729AF10A327483A062FDEDED29F1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22701,7 +22635,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoginCoroutineU3Ed__18_Syst
 		return L_0;
 	}
 }
-// Method Definition Index: 92668
+// Method Definition Index: 88487
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoginCoroutineU3Ed__18_System_Collections_IEnumerator_Reset_m6D31BAE7338014BED318E9F75139D902E269D40F (U3CLoginCoroutineU3Ed__18_t607AC587B349729AF10A327483A062FDEDED29F1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22710,7 +22644,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoginCoroutineU3Ed__18_System_Collect
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CLoginCoroutineU3Ed__18_System_Collections_IEnumerator_Reset_m6D31BAE7338014BED318E9F75139D902E269D40F_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 92669
+// Method Definition Index: 88488
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoginCoroutineU3Ed__18_System_Collections_IEnumerator_get_Current_mECBE1B19F302FCF1A36C779696A836F9A6C23A95 (U3CLoginCoroutineU3Ed__18_t607AC587B349729AF10A327483A062FDEDED29F1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22726,7 +22660,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoginCoroutineU3Ed__18_Syst
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92670
+// Method Definition Index: 88489
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLogoutCoroutineU3Ed__14__ctor_mF9707B41FA4C12E45515A31EDD97422C014EE79F (U3CLogoutCoroutineU3Ed__14_tB4D8BD40815F0AA11DC3225A3F48B959E414A3A9* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -22736,7 +22670,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLogoutCoroutineU3Ed__14__ctor_mF9707B
 		return;
 	}
 }
-// Method Definition Index: 92671
+// Method Definition Index: 88490
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLogoutCoroutineU3Ed__14_System_IDisposable_Dispose_mF39BC368F018614FF7FC8A36CBA6C19FD9436C97 (U3CLogoutCoroutineU3Ed__14_tB4D8BD40815F0AA11DC3225A3F48B959E414A3A9* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -22785,7 +22719,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92672
+// Method Definition Index: 88491
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CLogoutCoroutineU3Ed__14_MoveNext_m606E3BEED6BDEFCB6003112883ED2231CF7459CB (U3CLogoutCoroutineU3Ed__14_tB4D8BD40815F0AA11DC3225A3F48B959E414A3A9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23027,7 +22961,7 @@ IL_016c:
 		return L_36;
 	}
 }
-// Method Definition Index: 92673
+// Method Definition Index: 88492
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLogoutCoroutineU3Ed__14_U3CU3Em__Finally1_m7F14840B7F99C11F8A2707D9B89D90738E54E163 (U3CLogoutCoroutineU3Ed__14_tB4D8BD40815F0AA11DC3225A3F48B959E414A3A9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23055,7 +22989,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92674
+// Method Definition Index: 88493
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLogoutCoroutineU3Ed__14_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m55DADBE9BB7402523FF0A613D06A2699866C13F3 (U3CLogoutCoroutineU3Ed__14_tB4D8BD40815F0AA11DC3225A3F48B959E414A3A9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23063,7 +22997,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLogoutCoroutineU3Ed__14_Sys
 		return L_0;
 	}
 }
-// Method Definition Index: 92675
+// Method Definition Index: 88494
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLogoutCoroutineU3Ed__14_System_Collections_IEnumerator_Reset_mFEDC89B66750843B4B3E23003D59DAEA1E1BF1A1 (U3CLogoutCoroutineU3Ed__14_tB4D8BD40815F0AA11DC3225A3F48B959E414A3A9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23072,7 +23006,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLogoutCoroutineU3Ed__14_System_Collec
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CLogoutCoroutineU3Ed__14_System_Collections_IEnumerator_Reset_mFEDC89B66750843B4B3E23003D59DAEA1E1BF1A1_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 92676
+// Method Definition Index: 88495
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLogoutCoroutineU3Ed__14_System_Collections_IEnumerator_get_Current_mB43A5BD01EFA16BDE2CE1088568836364CDE262B (U3CLogoutCoroutineU3Ed__14_tB4D8BD40815F0AA11DC3225A3F48B959E414A3A9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23088,7 +23022,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLogoutCoroutineU3Ed__14_Sys
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92677
+// Method Definition Index: 88496
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRegisterCoroutineU3Ed__16__ctor_mE5B17773C95DC32024337FCAF0B75D1032C52BA6 (U3CRegisterCoroutineU3Ed__16_tABAB89455B01D6E74FE6A1B0D334324A415F91F6* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -23098,7 +23032,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRegisterCoroutineU3Ed__16__ctor_mE5B1
 		return;
 	}
 }
-// Method Definition Index: 92678
+// Method Definition Index: 88497
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRegisterCoroutineU3Ed__16_System_IDisposable_Dispose_mD20F335802FCDBCF3E5C164622DAF0A0D63E5EFF (U3CRegisterCoroutineU3Ed__16_tABAB89455B01D6E74FE6A1B0D334324A415F91F6* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -23147,7 +23081,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92679
+// Method Definition Index: 88498
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CRegisterCoroutineU3Ed__16_MoveNext_m0FC09FE12C56263B93BBEC06DBC3308239E93862 (U3CRegisterCoroutineU3Ed__16_tABAB89455B01D6E74FE6A1B0D334324A415F91F6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23156,7 +23090,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CRegisterCoroutineU3Ed__16_MoveNext_m0
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JsonUtility_FromJson_TisAuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A_mF146DB41680B3594E729E54FE1C4D9BD5F249B6F_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UploadHandlerRaw_t0A24CF320CDF16F1BC6C5C086DE71A1908CBB91A_il2cpp_TypeInfo_var);
@@ -23184,15 +23117,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CRegisterCoroutineU3Ed__16_MoveNext_m0
 	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* V_5 = NULL;
 	AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* V_6 = NULL;
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B18_0 = NULL;
 	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B17_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B21_0 = NULL;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B16_0 = NULL;
 	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B20_0 = NULL;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B19_0 = NULL;
 	{
 		auto __finallyBlock = il2cpp::utils::Fault([&]
 		{
 
-FAULT_031f:
+FAULT_0308:
 			{
 				U3CRegisterCoroutineU3Ed__16_System_IDisposable_Dispose_mD20F335802FCDBCF3E5C164622DAF0A0D63E5EFF(__this, NULL);
 				return;
@@ -23220,7 +23153,7 @@ FAULT_031f:
 			}
 			{
 				V_0 = (bool)0;
-				goto IL_0326;
+				goto IL_030f;
 			}
 
 IL_001f_1:
@@ -23306,7 +23239,7 @@ IL_001f_1:
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)L_32);
 				__this->___U3CU3E1__state = 1;
 				V_0 = (bool)1;
-				goto IL_0326;
+				goto IL_030f;
 			}
 
 IL_0103_1:
@@ -23319,7 +23252,7 @@ IL_0103_1:
 				L_34 = UnityWebRequest_get_result_mEF83848C5FCFB5E307CE4B57E42BF02FC9AED449(L_33, NULL);
 				if ((!(((uint32_t)L_34) == ((uint32_t)1))))
 				{
-					goto IL_02a3_1;
+					goto IL_028c_1;
 				}
 			}
 			{
@@ -23477,7 +23410,7 @@ IL_0246_2:
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_98 = V_6;
 					if (!L_98)
 					{
-						goto IL_0285_2;
+						goto IL_026e_2;
 					}
 				}
 				{
@@ -23488,7 +23421,7 @@ IL_0246_2:
 					L_101 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_100, NULL);
 					if (L_101)
 					{
-						goto IL_0285_2;
+						goto IL_026e_2;
 					}
 				}
 				{
@@ -23499,29 +23432,12 @@ IL_0246_2:
 					PlayerPrefs_SetString_mF4F457C81BB75F0213547C6287BA36E15E1F0256(_stringLiteral1D4A865959E4C17CC8A5EEBF03C147BB37BE1106, L_103, NULL);
 					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:196>
 					PlayerPrefs_Save_m82567E045D69C838112EA204B60C144D4C1EA3AE(NULL);
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:198>
-					SocketManager_tFA162C4D30D5A71D0A5F10FDA0CF83B2B1101650* L_104;
-					L_104 = SocketManager_get_Instance_mFAF3D466262B9D9A471AB4FF8165EACB053F8CBC_inline(NULL);
-					il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-					bool L_105;
-					L_105 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_104, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-					if (!L_105)
-					{
-						goto IL_0285_2;
-					}
-				}
-				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:200>
-					SocketManager_tFA162C4D30D5A71D0A5F10FDA0CF83B2B1101650* L_106;
-					L_106 = SocketManager_get_Instance_mFAF3D466262B9D9A471AB4FF8165EACB053F8CBC_inline(NULL);
-					NullCheck(L_106);
-					SocketManager_ConnectToServer_m0F05BC97902DFBE299CC7D4C9A7A0AF78E61A0BD(L_106, NULL);
 				}
 
-IL_0285_2:
+IL_026e_2:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:203>
-					goto IL_028a_1;
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:198>
+					goto IL_0273_1;
 				}
 			}
 			catch(Il2CppExceptionWrapper& e)
@@ -23529,113 +23445,113 @@ IL_0285_2:
 				if(il2cpp_codegen_class_is_assignable_from (il2cpp_defaults.object_class, il2cpp_codegen_object_class(e.ex)))
 				{
 					IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
-					goto CATCH_0287_1;
+					goto CATCH_0270_1;
 				}
 				throw e;
 			}
 
-CATCH_0287_1:
+CATCH_0270_1:
 			{
-				RuntimeObject* L_107 = ((RuntimeObject*)IL2CPP_GET_ACTIVE_EXCEPTION(RuntimeObject*));;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:204>
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:204>
+				RuntimeObject* L_104 = ((RuntimeObject*)IL2CPP_GET_ACTIVE_EXCEPTION(RuntimeObject*));;
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:199>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:199>
 				IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
-				goto IL_028a_1;
+				goto IL_0273_1;
 			}
 
-IL_028a_1:
+IL_0273_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:206>
-				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_108 = __this->___onComplete;
-				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_109 = L_108;
-				if (L_109)
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:201>
+				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_105 = __this->___onComplete;
+				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_106 = L_105;
+				if (L_106)
 				{
-					G_B18_0 = L_109;
-					goto IL_0296_1;
+					G_B17_0 = L_106;
+					goto IL_027f_1;
 				}
-				G_B17_0 = L_109;
+				G_B16_0 = L_106;
 			}
 			{
-				goto IL_030e_1;
-			}
-
-IL_0296_1:
-			{
-				NullCheck(G_B18_0);
-				Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B18_0, (bool)1, _stringLiteralEDED6906ED82F86EE41A8EE8880EA47372282B2E, NULL);
-				goto IL_030e_1;
+				goto IL_02f7_1;
 			}
 
-IL_02a3_1:
+IL_027f_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:210>
-				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_110 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
-				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_111 = L_110;
-				NullCheck(L_111);
-				(L_111)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral4CDB1C11DEA62A677FC8CB751330F6D336888E8C);
-				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_112 = L_111;
-				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_113 = __this->___U3CrequestU3E5__2;
-				NullCheck(L_113);
-				String_t* L_114;
-				L_114 = UnityWebRequest_get_error_m20A5D813ED59118B7AA1D1E2EB5250178B1F5B6F(L_113, NULL);
+				NullCheck(G_B17_0);
+				Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B17_0, (bool)1, _stringLiteralEDED6906ED82F86EE41A8EE8880EA47372282B2E, NULL);
+				goto IL_02f7_1;
+			}
+
+IL_028c_1:
+			{
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:205>
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_107 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_108 = L_107;
+				NullCheck(L_108);
+				(L_108)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral4CDB1C11DEA62A677FC8CB751330F6D336888E8C);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_109 = L_108;
+				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_110 = __this->___U3CrequestU3E5__2;
+				NullCheck(L_110);
+				String_t* L_111;
+				L_111 = UnityWebRequest_get_error_m20A5D813ED59118B7AA1D1E2EB5250178B1F5B6F(L_110, NULL);
+				NullCheck(L_109);
+				(L_109)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)L_111);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_112 = L_109;
 				NullCheck(L_112);
-				(L_112)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)L_114);
-				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_115 = L_112;
+				(L_112)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteralBD2155E54D0A0EF69D6B035ACE4FB0D1E5C8A136);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_113 = L_112;
+				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_114 = __this->___U3CrequestU3E5__2;
+				NullCheck(L_114);
+				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_115;
+				L_115 = UnityWebRequest_get_downloadHandler_m1AA91B23D9D594A4F4FE2975FC356C508528F1D5(L_114, NULL);
 				NullCheck(L_115);
-				(L_115)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteralBD2155E54D0A0EF69D6B035ACE4FB0D1E5C8A136);
-				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_116 = L_115;
-				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_117 = __this->___U3CrequestU3E5__2;
+				String_t* L_116;
+				L_116 = DownloadHandler_get_text_mA6DE5CB2647A21E577B963708DC3D0DA4DBFE7D8(L_115, NULL);
+				NullCheck(L_113);
+				(L_113)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)L_116);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_117 = L_113;
 				NullCheck(L_117);
-				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_118;
-				L_118 = UnityWebRequest_get_downloadHandler_m1AA91B23D9D594A4F4FE2975FC356C508528F1D5(L_117, NULL);
-				NullCheck(L_118);
-				String_t* L_119;
-				L_119 = DownloadHandler_get_text_mA6DE5CB2647A21E577B963708DC3D0DA4DBFE7D8(L_118, NULL);
-				NullCheck(L_116);
-				(L_116)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)L_119);
-				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_120 = L_116;
-				NullCheck(L_120);
-				(L_120)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2);
-				String_t* L_121;
-				L_121 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_120, NULL);
+				(L_117)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2);
+				String_t* L_118;
+				L_118 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_117, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_121, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:211>
-				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_122 = __this->___onComplete;
-				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_123 = L_122;
-				if (L_123)
+				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_118, NULL);
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:206>
+				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_119 = __this->___onComplete;
+				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_120 = L_119;
+				if (L_120)
 				{
-					G_B21_0 = L_123;
-					goto IL_02f8_1;
+					G_B20_0 = L_120;
+					goto IL_02e1_1;
 				}
-				G_B20_0 = L_123;
+				G_B19_0 = L_120;
 			}
 			{
-				goto IL_030e_1;
-			}
-
-IL_02f8_1:
-			{
-				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_124 = __this->___U3CrequestU3E5__2;
-				NullCheck(L_124);
-				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_125;
-				L_125 = UnityWebRequest_get_downloadHandler_m1AA91B23D9D594A4F4FE2975FC356C508528F1D5(L_124, NULL);
-				NullCheck(L_125);
-				String_t* L_126;
-				L_126 = DownloadHandler_get_text_mA6DE5CB2647A21E577B963708DC3D0DA4DBFE7D8(L_125, NULL);
-				NullCheck(G_B21_0);
-				Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B21_0, (bool)0, L_126, NULL);
+				goto IL_02f7_1;
 			}
 
-IL_030e_1:
+IL_02e1_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:213>
+				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_121 = __this->___U3CrequestU3E5__2;
+				NullCheck(L_121);
+				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_122;
+				L_122 = UnityWebRequest_get_downloadHandler_m1AA91B23D9D594A4F4FE2975FC356C508528F1D5(L_121, NULL);
+				NullCheck(L_122);
+				String_t* L_123;
+				L_123 = DownloadHandler_get_text_mA6DE5CB2647A21E577B963708DC3D0DA4DBFE7D8(L_122, NULL);
+				NullCheck(G_B20_0);
+				Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B20_0, (bool)0, L_123, NULL);
+			}
+
+IL_02f7_1:
+			{
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:208>
 				U3CRegisterCoroutineU3Ed__16_U3CU3Em__Finally1_m84A44D931A8D14D4C7121465B62F95B3F3E9B2D0(__this, NULL);
 				__this->___U3CrequestU3E5__2 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:214>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:209>
 				V_0 = (bool)0;
-				goto IL_0326;
+				goto IL_030f;
 			}
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -23644,13 +23560,13 @@ IL_030e_1:
 		}
 	}
 
-IL_0326:
+IL_030f:
 	{
-		bool L_127 = V_0;
-		return L_127;
+		bool L_124 = V_0;
+		return L_124;
 	}
 }
-// Method Definition Index: 92680
+// Method Definition Index: 88499
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRegisterCoroutineU3Ed__16_U3CU3Em__Finally1_m84A44D931A8D14D4C7121465B62F95B3F3E9B2D0 (U3CRegisterCoroutineU3Ed__16_tABAB89455B01D6E74FE6A1B0D334324A415F91F6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23678,7 +23594,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92681
+// Method Definition Index: 88500
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRegisterCoroutineU3Ed__16_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m037C215D42C2DAE354A5993934E502FDF5F18983 (U3CRegisterCoroutineU3Ed__16_tABAB89455B01D6E74FE6A1B0D334324A415F91F6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23686,7 +23602,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRegisterCoroutineU3Ed__16_S
 		return L_0;
 	}
 }
-// Method Definition Index: 92682
+// Method Definition Index: 88501
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRegisterCoroutineU3Ed__16_System_Collections_IEnumerator_Reset_m4291413D4F3B33C3D6E14C194F11FD93927DFE00 (U3CRegisterCoroutineU3Ed__16_tABAB89455B01D6E74FE6A1B0D334324A415F91F6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23695,7 +23611,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRegisterCoroutineU3Ed__16_System_Coll
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CRegisterCoroutineU3Ed__16_System_Collections_IEnumerator_Reset_m4291413D4F3B33C3D6E14C194F11FD93927DFE00_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 92683
+// Method Definition Index: 88502
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRegisterCoroutineU3Ed__16_System_Collections_IEnumerator_get_Current_m9DA5273E2E8F5DB018BBFF186E7B6DCC20B8F1B1 (U3CRegisterCoroutineU3Ed__16_tABAB89455B01D6E74FE6A1B0D334324A415F91F6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23711,7 +23627,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRegisterCoroutineU3Ed__16_S
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92684
+// Method Definition Index: 88503
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSocialLoginCoroutineU3Ed__23__ctor_mAA2277E4ADADBD8CA82F93E49E5ED001CC697CF7 (U3CSocialLoginCoroutineU3Ed__23_tBD48302047C259026991E99B14FDAA2911B91A54* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -23721,7 +23637,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSocialLoginCoroutineU3Ed__23__ctor_mA
 		return;
 	}
 }
-// Method Definition Index: 92685
+// Method Definition Index: 88504
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSocialLoginCoroutineU3Ed__23_System_IDisposable_Dispose_m1AF2D398A36DC08F1392115E6C23D06BD0CFFB7A (U3CSocialLoginCoroutineU3Ed__23_tBD48302047C259026991E99B14FDAA2911B91A54* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -23770,7 +23686,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92686
+// Method Definition Index: 88505
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CSocialLoginCoroutineU3Ed__23_MoveNext_mF1DD2A7D996387BA18F00B02F5B977261167C622 (U3CSocialLoginCoroutineU3Ed__23_tBD48302047C259026991E99B14FDAA2911B91A54* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23779,7 +23695,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CSocialLoginCoroutineU3Ed__23_MoveNext
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&JsonUtility_FromJson_TisAuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A_mF146DB41680B3594E729E54FE1C4D9BD5F249B6F_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UploadHandlerRaw_t0A24CF320CDF16F1BC6C5C086DE71A1908CBB91A_il2cpp_TypeInfo_var);
@@ -23806,19 +23721,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CSocialLoginCoroutineU3Ed__23_MoveNext
 	AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* V_6 = NULL;
 	Exception_t* V_7 = NULL;
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B12_0 = NULL;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B11_0 = NULL;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B15_0 = NULL;
 	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B14_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B13_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B17_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B16_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B21_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B20_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B25_0 = NULL;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B24_0 = NULL;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B19_0 = NULL;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B18_0 = NULL;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B23_0 = NULL;
+	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* G_B22_0 = NULL;
 	{
 		auto __finallyBlock = il2cpp::utils::Fault([&]
 		{
 
-FAULT_0334:
+FAULT_031d:
 			{
 				U3CSocialLoginCoroutineU3Ed__23_System_IDisposable_Dispose_m1AF2D398A36DC08F1392115E6C23D06BD0CFFB7A(__this, NULL);
 				return;
@@ -23846,13 +23761,13 @@ FAULT_0334:
 			}
 			{
 				V_0 = (bool)0;
-				goto IL_033b;
+				goto IL_0324;
 			}
 
 IL_001f_1:
 			{
 				__this->___U3CU3E1__state = (-1);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:382>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:367>
 				BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_4 = V_2;
 				NullCheck(L_4);
 				String_t* L_5 = L_4->___baseUrl;
@@ -23863,19 +23778,19 @@ IL_001f_1:
 				String_t* L_8;
 				L_8 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_6, L_7, NULL);
 				V_3 = L_8;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:383>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:368>
 				String_t* L_9 = __this->___token;
 				String_t* L_10;
 				L_10 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral66C94125D1EF982A1326CF1E94A7AE24B10ADE96, L_9, _stringLiteralD5F2751FCD979A5D75A2B143601934884E0565F4, NULL);
 				V_4 = L_10;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:385>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:370>
 				String_t* L_11 = V_3;
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_12 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)il2cpp_codegen_object_new(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F_il2cpp_TypeInfo_var);
 				UnityWebRequest__ctor_mD4739B0BF1C4937479A83B24B531C6B819712A3E(L_12, L_11, _stringLiteral14E338D17C42E552FA7AF42CDAE40CA1F0E8A04D, NULL);
 				__this->___U3CrequestU3E5__2 = L_12;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)L_12);
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:387>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:372>
 				Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* L_13;
 				L_13 = Encoding_get_UTF8_m9FA98A53CE96FD6D02982625C5246DD36C1235C9(NULL);
 				String_t* L_14 = V_4;
@@ -23883,24 +23798,24 @@ IL_001f_1:
 				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_15;
 				L_15 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(19, L_13, L_14);
 				V_5 = L_15;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:388>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:373>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_16 = __this->___U3CrequestU3E5__2;
 				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_17 = V_5;
 				UploadHandlerRaw_t0A24CF320CDF16F1BC6C5C086DE71A1908CBB91A* L_18 = (UploadHandlerRaw_t0A24CF320CDF16F1BC6C5C086DE71A1908CBB91A*)il2cpp_codegen_object_new(UploadHandlerRaw_t0A24CF320CDF16F1BC6C5C086DE71A1908CBB91A_il2cpp_TypeInfo_var);
 				UploadHandlerRaw__ctor_m168C957B67E29CB3072E3542044D37E2F16C42B7(L_18, L_17, NULL);
 				NullCheck(L_16);
 				UnityWebRequest_set_uploadHandler_m68F346550136DE178C79238944985892196027FE(L_16, L_18, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:389>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:374>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_19 = __this->___U3CrequestU3E5__2;
 				DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974* L_20 = (DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974*)il2cpp_codegen_object_new(DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974_il2cpp_TypeInfo_var);
 				DownloadHandlerBuffer__ctor_m5EE7C9E8AB468B2B937A7C9C66B4176A884147AF(L_20, NULL);
 				NullCheck(L_19);
 				UnityWebRequest_set_downloadHandler_m6CB94492012097DFC44E5773D1A627753788292F(L_19, L_20, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:390>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:375>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_21 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_21);
 				UnityWebRequest_SetRequestHeader_m099734EB787B7269B62AB2236A5A4F7D35AF8BC5(L_21, _stringLiteral5B58EBE31E594BF8FA4BEA3CD075473149322B18, _stringLiteral64058CC688A96A90239811EF06C9D20DB0499C3E, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:392>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:377>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_22 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_22);
 				UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* L_23;
@@ -23909,24 +23824,24 @@ IL_001f_1:
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)L_23);
 				__this->___U3CU3E1__state = 1;
 				V_0 = (bool)1;
-				goto IL_033b;
+				goto IL_0324;
 			}
 
 IL_00d3_1:
 			{
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:394>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:379>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_24 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_24);
 				int32_t L_25;
 				L_25 = UnityWebRequest_get_result_mEF83848C5FCFB5E307CE4B57E42BF02FC9AED449(L_24, NULL);
 				if ((!(((uint32_t)L_25) == ((uint32_t)1))))
 				{
-					goto IL_02b8_1;
+					goto IL_02a1_1;
 				}
 			}
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:396>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:381>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_26 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_26);
 				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_27;
@@ -23942,7 +23857,7 @@ IL_00d3_1:
 			try
 			{
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:399>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:384>
 					UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_30 = __this->___U3CrequestU3E5__2;
 					NullCheck(L_30);
 					DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_31;
@@ -23953,7 +23868,7 @@ IL_00d3_1:
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_33;
 					L_33 = JsonUtility_FromJson_TisAuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A_mF146DB41680B3594E729E54FE1C4D9BD5F249B6F(L_32, JsonUtility_FromJson_TisAuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A_mF146DB41680B3594E729E54FE1C4D9BD5F249B6F_RuntimeMethod_var);
 					V_6 = L_33;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:401>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:386>
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_34 = V_6;
 					NullCheck(L_34);
 					String_t* L_35 = L_34->___token;
@@ -23961,11 +23876,11 @@ IL_00d3_1:
 					L_36 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_35, NULL);
 					if (L_36)
 					{
-						goto IL_0266_2;
+						goto IL_024f_2;
 					}
 				}
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:403>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:388>
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_37 = V_6;
 					NullCheck(L_37);
 					BackendUser_tA2639E54D80A1230B398FBFC497B719A95FDC362* L_38 = L_37->___user;
@@ -23988,14 +23903,14 @@ IL_00d3_1:
 					}
 				}
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:405>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:406>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:407>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:408>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:409>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:410>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:411>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:412>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:390>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:391>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:392>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:393>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:394>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:395>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:396>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:397>
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_43 = V_6;
 					NullCheck(L_43);
 					BackendUser_tA2639E54D80A1230B398FBFC497B719A95FDC362* L_44 = L_43->___user;
@@ -24081,81 +23996,60 @@ IL_00d3_1:
 
 IL_0220_2:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:415>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:400>
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_91 = V_6;
 					NullCheck(L_91);
 					String_t* L_92 = L_91->___token;
 					PlayerPrefs_SetString_mF4F457C81BB75F0213547C6287BA36E15E1F0256(_stringLiteral1D4A865959E4C17CC8A5EEBF03C147BB37BE1106, L_92, NULL);
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:416>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:401>
 					PlayerPrefs_Save_m82567E045D69C838112EA204B60C144D4C1EA3AE(NULL);
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:418>
-					SocketManager_tFA162C4D30D5A71D0A5F10FDA0CF83B2B1101650* L_93;
-					L_93 = SocketManager_get_Instance_mFAF3D466262B9D9A471AB4FF8165EACB053F8CBC_inline(NULL);
-					il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-					bool L_94;
-					L_94 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_93, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-					if (!L_94)
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:403>
+					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_93 = __this->___onComplete;
+					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_94 = L_93;
+					if (L_94)
 					{
-						goto IL_024d_2;
+						G_B12_0 = L_94;
+						goto IL_0242_2;
 					}
+					G_B11_0 = L_94;
 				}
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:420>
-					SocketManager_tFA162C4D30D5A71D0A5F10FDA0CF83B2B1101650* L_95;
-					L_95 = SocketManager_get_Instance_mFAF3D466262B9D9A471AB4FF8165EACB053F8CBC_inline(NULL);
-					NullCheck(L_95);
-					SocketManager_ConnectToServer_m0F05BC97902DFBE299CC7D4C9A7A0AF78E61A0BD(L_95, NULL);
+					goto IL_0266_2;
 				}
 
-IL_024d_2:
+IL_0242_2:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:423>
-					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_96 = __this->___onComplete;
-					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_97 = L_96;
-					if (L_97)
-					{
-						G_B14_0 = L_97;
-						goto IL_0259_2;
-					}
-					G_B13_0 = L_97;
-				}
-				{
-					goto IL_027d_2;
+					NullCheck(G_B12_0);
+					Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B12_0, (bool)1, _stringLiteral1D4AD270B1EC8ECB3AB04FBD15F98B5D77667CFD, NULL);
+					goto IL_0266_2;
 				}
 
-IL_0259_2:
+IL_024f_2:
 				{
-					NullCheck(G_B14_0);
-					Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B14_0, (bool)1, _stringLiteral1D4AD270B1EC8ECB3AB04FBD15F98B5D77667CFD, NULL);
-					goto IL_027d_2;
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:407>
+					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_95 = __this->___onComplete;
+					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_96 = L_95;
+					if (L_96)
+					{
+						G_B15_0 = L_96;
+						goto IL_025b_2;
+					}
+					G_B14_0 = L_96;
+				}
+				{
+					goto IL_0266_2;
+				}
+
+IL_025b_2:
+				{
+					NullCheck(G_B15_0);
+					Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B15_0, (bool)0, _stringLiteralEB12E4DB624CF9D36F816625A8F7FA4F6976D3C3, NULL);
 				}
 
 IL_0266_2:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:427>
-					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_98 = __this->___onComplete;
-					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_99 = L_98;
-					if (L_99)
-					{
-						G_B17_0 = L_99;
-						goto IL_0272_2;
-					}
-					G_B16_0 = L_99;
-				}
-				{
-					goto IL_027d_2;
-				}
-
-IL_0272_2:
-				{
-					NullCheck(G_B17_0);
-					Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B17_0, (bool)0, _stringLiteralEB12E4DB624CF9D36F816625A8F7FA4F6976D3C3, NULL);
-				}
-
-IL_027d_2:
-				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:429>
-					goto IL_0323_1;
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:409>
+					goto IL_030c_1;
 				}
 			}
 			catch(Il2CppExceptionWrapper& e)
@@ -24163,124 +24057,124 @@ IL_027d_2:
 				if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
 				{
 					IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
-					goto CATCH_0282_1;
+					goto CATCH_026b_1;
 				}
 				throw e;
 			}
 
-CATCH_0282_1:
+CATCH_026b_1:
 			{
 				{
-					Exception_t* L_100 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:430>
-					V_7 = L_100;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:432>
-					Exception_t* L_101 = V_7;
-					NullCheck(L_101);
-					String_t* L_102;
-					L_102 = VirtualFuncInvoker0< String_t* >::Invoke(5, L_101);
-					String_t* L_103;
-					L_103 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralDDFC0C3391E622DDBED7B2B1F6F14438A6EA672E)), L_102, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2)), NULL);
+					Exception_t* L_97 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:410>
+					V_7 = L_97;
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:412>
+					Exception_t* L_98 = V_7;
+					NullCheck(L_98);
+					String_t* L_99;
+					L_99 = VirtualFuncInvoker0< String_t* >::Invoke(5, L_98);
+					String_t* L_100;
+					L_100 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralDDFC0C3391E622DDBED7B2B1F6F14438A6EA672E)), L_99, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2)), NULL);
 					il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
-					Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_103, NULL);
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:433>
-					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_104 = __this->___onComplete;
-					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_105 = L_104;
-					if (L_105)
+					Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_100, NULL);
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:413>
+					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_101 = __this->___onComplete;
+					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_102 = L_101;
+					if (L_102)
 					{
-						G_B21_0 = L_105;
-						goto IL_02ab_1;
+						G_B19_0 = L_102;
+						goto IL_0294_1;
 					}
-					G_B20_0 = L_105;
+					G_B18_0 = L_102;
 				}
 				{
-					goto IL_02b6_1;
-				}
-
-IL_02ab_1:
-				{
-					NullCheck(G_B21_0);
-					Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B21_0, (bool)0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral70F56CAC45C03B4D956BF4927C64568A323EE99A)), NULL);
+					goto IL_029f_1;
 				}
 
-IL_02b6_1:
+IL_0294_1:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:434>
+					NullCheck(G_B19_0);
+					Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B19_0, (bool)0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral70F56CAC45C03B4D956BF4927C64568A323EE99A)), NULL);
+				}
+
+IL_029f_1:
+				{
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:414>
 					IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
-					goto IL_0323_1;
+					goto IL_030c_1;
 				}
 			}
 
-IL_02b8_1:
+IL_02a1_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:438>
-				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_106 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
-				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_107 = L_106;
-				NullCheck(L_107);
-				(L_107)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral193B9C9ECA70DF7FB940028BC3AB89C0DB314E82);
-				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_108 = L_107;
-				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_109 = __this->___U3CrequestU3E5__2;
-				NullCheck(L_109);
-				String_t* L_110;
-				L_110 = UnityWebRequest_get_error_m20A5D813ED59118B7AA1D1E2EB5250178B1F5B6F(L_109, NULL);
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:418>
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_103 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_104 = L_103;
+				NullCheck(L_104);
+				(L_104)->SetAt(static_cast<il2cpp_array_size_t>(0), (String_t*)_stringLiteral193B9C9ECA70DF7FB940028BC3AB89C0DB314E82);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_105 = L_104;
+				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_106 = __this->___U3CrequestU3E5__2;
+				NullCheck(L_106);
+				String_t* L_107;
+				L_107 = UnityWebRequest_get_error_m20A5D813ED59118B7AA1D1E2EB5250178B1F5B6F(L_106, NULL);
+				NullCheck(L_105);
+				(L_105)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)L_107);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_108 = L_105;
 				NullCheck(L_108);
-				(L_108)->SetAt(static_cast<il2cpp_array_size_t>(1), (String_t*)L_110);
-				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_111 = L_108;
+				(L_108)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteralBD2155E54D0A0EF69D6B035ACE4FB0D1E5C8A136);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_109 = L_108;
+				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_110 = __this->___U3CrequestU3E5__2;
+				NullCheck(L_110);
+				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_111;
+				L_111 = UnityWebRequest_get_downloadHandler_m1AA91B23D9D594A4F4FE2975FC356C508528F1D5(L_110, NULL);
 				NullCheck(L_111);
-				(L_111)->SetAt(static_cast<il2cpp_array_size_t>(2), (String_t*)_stringLiteralBD2155E54D0A0EF69D6B035ACE4FB0D1E5C8A136);
-				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_112 = L_111;
-				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_113 = __this->___U3CrequestU3E5__2;
+				String_t* L_112;
+				L_112 = DownloadHandler_get_text_mA6DE5CB2647A21E577B963708DC3D0DA4DBFE7D8(L_111, NULL);
+				NullCheck(L_109);
+				(L_109)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)L_112);
+				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_113 = L_109;
 				NullCheck(L_113);
-				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_114;
-				L_114 = UnityWebRequest_get_downloadHandler_m1AA91B23D9D594A4F4FE2975FC356C508528F1D5(L_113, NULL);
-				NullCheck(L_114);
-				String_t* L_115;
-				L_115 = DownloadHandler_get_text_mA6DE5CB2647A21E577B963708DC3D0DA4DBFE7D8(L_114, NULL);
-				NullCheck(L_112);
-				(L_112)->SetAt(static_cast<il2cpp_array_size_t>(3), (String_t*)L_115);
-				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_116 = L_112;
-				NullCheck(L_116);
-				(L_116)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2);
-				String_t* L_117;
-				L_117 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_116, NULL);
+				(L_113)->SetAt(static_cast<il2cpp_array_size_t>(4), (String_t*)_stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2);
+				String_t* L_114;
+				L_114 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_113, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_117, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:439>
-				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_118 = __this->___onComplete;
-				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_119 = L_118;
-				if (L_119)
+				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_114, NULL);
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:419>
+				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_115 = __this->___onComplete;
+				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_116 = L_115;
+				if (L_116)
 				{
-					G_B25_0 = L_119;
-					goto IL_030d_1;
+					G_B23_0 = L_116;
+					goto IL_02f6_1;
 				}
-				G_B24_0 = L_119;
+				G_B22_0 = L_116;
 			}
 			{
-				goto IL_0323_1;
-			}
-
-IL_030d_1:
-			{
-				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_120 = __this->___U3CrequestU3E5__2;
-				NullCheck(L_120);
-				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_121;
-				L_121 = UnityWebRequest_get_downloadHandler_m1AA91B23D9D594A4F4FE2975FC356C508528F1D5(L_120, NULL);
-				NullCheck(L_121);
-				String_t* L_122;
-				L_122 = DownloadHandler_get_text_mA6DE5CB2647A21E577B963708DC3D0DA4DBFE7D8(L_121, NULL);
-				NullCheck(G_B25_0);
-				Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B25_0, (bool)0, L_122, NULL);
+				goto IL_030c_1;
 			}
 
-IL_0323_1:
+IL_02f6_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:441>
+				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_117 = __this->___U3CrequestU3E5__2;
+				NullCheck(L_117);
+				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_118;
+				L_118 = UnityWebRequest_get_downloadHandler_m1AA91B23D9D594A4F4FE2975FC356C508528F1D5(L_117, NULL);
+				NullCheck(L_118);
+				String_t* L_119;
+				L_119 = DownloadHandler_get_text_mA6DE5CB2647A21E577B963708DC3D0DA4DBFE7D8(L_118, NULL);
+				NullCheck(G_B23_0);
+				Action_2_Invoke_mEBF6CAF1B381E482329CEE02CB25A980B145CB3E_inline(G_B23_0, (bool)0, L_119, NULL);
+			}
+
+IL_030c_1:
+			{
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:421>
 				U3CSocialLoginCoroutineU3Ed__23_U3CU3Em__Finally1_m0F01E1F156E69F0112522F973FDEA8035D1AA051(__this, NULL);
 				__this->___U3CrequestU3E5__2 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:442>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:422>
 				V_0 = (bool)0;
-				goto IL_033b;
+				goto IL_0324;
 			}
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -24289,13 +24183,13 @@ IL_0323_1:
 		}
 	}
 
-IL_033b:
+IL_0324:
 	{
-		bool L_123 = V_0;
-		return L_123;
+		bool L_120 = V_0;
+		return L_120;
 	}
 }
-// Method Definition Index: 92687
+// Method Definition Index: 88506
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSocialLoginCoroutineU3Ed__23_U3CU3Em__Finally1_m0F01E1F156E69F0112522F973FDEA8035D1AA051 (U3CSocialLoginCoroutineU3Ed__23_tBD48302047C259026991E99B14FDAA2911B91A54* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24323,7 +24217,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92688
+// Method Definition Index: 88507
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSocialLoginCoroutineU3Ed__23_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mFAB3C349E5EC9299F6780297C9CA18E1602284EB (U3CSocialLoginCoroutineU3Ed__23_tBD48302047C259026991E99B14FDAA2911B91A54* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24331,7 +24225,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSocialLoginCoroutineU3Ed__2
 		return L_0;
 	}
 }
-// Method Definition Index: 92689
+// Method Definition Index: 88508
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSocialLoginCoroutineU3Ed__23_System_Collections_IEnumerator_Reset_mFAFF82E4F14D1B3702B8AB559B4F4DB455F7F67C (U3CSocialLoginCoroutineU3Ed__23_tBD48302047C259026991E99B14FDAA2911B91A54* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24340,7 +24234,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSocialLoginCoroutineU3Ed__23_System_C
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CSocialLoginCoroutineU3Ed__23_System_Collections_IEnumerator_Reset_mFAFF82E4F14D1B3702B8AB559B4F4DB455F7F67C_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 92690
+// Method Definition Index: 88509
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSocialLoginCoroutineU3Ed__23_System_Collections_IEnumerator_get_Current_m728C4A84788E982B6810481294B30F7BF6C4037D (U3CSocialLoginCoroutineU3Ed__23_tBD48302047C259026991E99B14FDAA2911B91A54* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24356,7 +24250,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSocialLoginCoroutineU3Ed__2
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92691
+// Method Definition Index: 88510
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateCurrencyCoroutineU3Ed__29__ctor_mA577804C35024875265D57509B7788CEFBD50570 (U3CUpdateCurrencyCoroutineU3Ed__29_t1A99D6C2FF8E2EA388945314C02329167A7F1AB8* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -24366,7 +24260,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateCurrencyCoroutineU3Ed__29__ctor
 		return;
 	}
 }
-// Method Definition Index: 92692
+// Method Definition Index: 88511
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateCurrencyCoroutineU3Ed__29_System_IDisposable_Dispose_m499C52AEADB5FDC2D88C51D602A607C963508900 (U3CUpdateCurrencyCoroutineU3Ed__29_t1A99D6C2FF8E2EA388945314C02329167A7F1AB8* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -24415,7 +24309,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92693
+// Method Definition Index: 88512
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CUpdateCurrencyCoroutineU3Ed__29_MoveNext_m53B0C22406A143ABD01E1C78078E7D2C489083A9 (U3CUpdateCurrencyCoroutineU3Ed__29_t1A99D6C2FF8E2EA388945314C02329167A7F1AB8* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24495,7 +24389,7 @@ FAULT_02d1:
 IL_001f_1:
 			{
 				__this->___U3CU3E1__state = (-1);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:600>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:580>
 				BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_4 = V_2;
 				NullCheck(L_4);
 				String_t* L_5 = L_4->___baseUrl;
@@ -24505,11 +24399,11 @@ IL_001f_1:
 				String_t* L_7;
 				L_7 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_6, _stringLiteralBCF07062F42AC081FF83710932849A126BDCA80E, NULL);
 				V_3 = L_7;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:601>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:581>
 				String_t* L_8;
 				L_8 = BackendAuthService_GetStoredJWT_m6CEB0F7B503CC5FBE659428203090712661F270C(NULL);
 				V_4 = L_8;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:603>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:583>
 				int32_t L_9 = __this->___cashBalance;
 				int32_t L_10 = L_9;
 				RuntimeObject* L_11 = Box(il2cpp_defaults.int32_class, &L_10);
@@ -24519,14 +24413,14 @@ IL_001f_1:
 				String_t* L_15;
 				L_15 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral0CC46ABE8D30640F8B3E8CB6DCDF0825E3761CC6, L_11, L_14, NULL);
 				V_5 = L_15;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:605>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:585>
 				String_t* L_16 = V_3;
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_17 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)il2cpp_codegen_object_new(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F_il2cpp_TypeInfo_var);
 				UnityWebRequest__ctor_mD4739B0BF1C4937479A83B24B531C6B819712A3E(L_17, L_16, _stringLiteralA9145BA894AC681C06F6E921F9054DBC4A6037E9, NULL);
 				__this->___U3CrequestU3E5__2 = L_17;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)L_17);
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:607>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:587>
 				Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* L_18;
 				L_18 = Encoding_get_UTF8_m9FA98A53CE96FD6D02982625C5246DD36C1235C9(NULL);
 				String_t* L_19 = V_5;
@@ -24534,31 +24428,31 @@ IL_001f_1:
 				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_20;
 				L_20 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(19, L_18, L_19);
 				V_6 = L_20;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:608>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:588>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_21 = __this->___U3CrequestU3E5__2;
 				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_22 = V_6;
 				UploadHandlerRaw_t0A24CF320CDF16F1BC6C5C086DE71A1908CBB91A* L_23 = (UploadHandlerRaw_t0A24CF320CDF16F1BC6C5C086DE71A1908CBB91A*)il2cpp_codegen_object_new(UploadHandlerRaw_t0A24CF320CDF16F1BC6C5C086DE71A1908CBB91A_il2cpp_TypeInfo_var);
 				UploadHandlerRaw__ctor_m168C957B67E29CB3072E3542044D37E2F16C42B7(L_23, L_22, NULL);
 				NullCheck(L_21);
 				UnityWebRequest_set_uploadHandler_m68F346550136DE178C79238944985892196027FE(L_21, L_23, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:609>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:589>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_24 = __this->___U3CrequestU3E5__2;
 				DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974* L_25 = (DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974*)il2cpp_codegen_object_new(DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974_il2cpp_TypeInfo_var);
 				DownloadHandlerBuffer__ctor_m5EE7C9E8AB468B2B937A7C9C66B4176A884147AF(L_25, NULL);
 				NullCheck(L_24);
 				UnityWebRequest_set_downloadHandler_m6CB94492012097DFC44E5773D1A627753788292F(L_24, L_25, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:610>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:590>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_26 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_26);
 				UnityWebRequest_SetRequestHeader_m099734EB787B7269B62AB2236A5A4F7D35AF8BC5(L_26, _stringLiteral5B58EBE31E594BF8FA4BEA3CD075473149322B18, _stringLiteral64058CC688A96A90239811EF06C9D20DB0499C3E, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:611>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:591>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_27 = __this->___U3CrequestU3E5__2;
 				String_t* L_28 = V_4;
 				String_t* L_29;
 				L_29 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralC2DA60AE96E2C9EF3EAF20897A5AA957AFDF64EC, L_28, NULL);
 				NullCheck(L_27);
 				UnityWebRequest_SetRequestHeader_m099734EB787B7269B62AB2236A5A4F7D35AF8BC5(L_27, _stringLiteral9D5A3AE3D2B0B5E5AF5AB489000D9B88FA11E907, L_29, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:613>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:593>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_30 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_30);
 				UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* L_31;
@@ -24573,7 +24467,7 @@ IL_001f_1:
 IL_0100_1:
 			{
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:615>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:595>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_32 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_32);
 				int32_t L_33;
@@ -24586,7 +24480,7 @@ IL_0100_1:
 			try
 			{
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:619>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:599>
 					UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_34 = __this->___U3CrequestU3E5__2;
 					NullCheck(L_34);
 					DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_35;
@@ -24597,7 +24491,7 @@ IL_0100_1:
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_37;
 					L_37 = JsonUtility_FromJson_TisAuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A_mF146DB41680B3594E729E54FE1C4D9BD5F249B6F(L_36, JsonUtility_FromJson_TisAuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A_mF146DB41680B3594E729E54FE1C4D9BD5F249B6F_RuntimeMethod_var);
 					V_7 = L_37;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:620>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:600>
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_38 = V_7;
 					if (!L_38)
 					{
@@ -24614,14 +24508,14 @@ IL_0100_1:
 					}
 				}
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:622>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:623>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:624>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:625>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:626>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:627>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:628>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:629>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:602>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:603>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:604>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:605>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:606>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:607>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:608>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:609>
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_41 = V_7;
 					NullCheck(L_41);
 					BackendUser_tA2639E54D80A1230B398FBFC497B719A95FDC362* L_42 = L_41->___user;
@@ -24703,7 +24597,7 @@ IL_0100_1:
 					NullCheck(L_87);
 					String_t* L_88 = L_87->___activeRoomId;
 					PlayerModel_UpdateData_m40EC379F66AF3DAC9BA17361756CF24869A6EED0(L_43, L_46, L_49, L_52, L_55, L_58, L_61, L_64, L_67, L_70, L_73, L_76, L_79, L_82, 0, L_85, L_88, NULL);
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:630>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:610>
 					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_89 = __this->___onComplete;
 					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_90 = L_89;
 					if (L_90)
@@ -24726,7 +24620,7 @@ IL_0215_2:
 
 IL_0222_2:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:634>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:614>
 					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_91 = __this->___onComplete;
 					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_92 = L_91;
 					if (L_92)
@@ -24748,7 +24642,7 @@ IL_022e_2:
 
 IL_0239_2:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:636>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:616>
 					goto IL_02c0_1;
 				}
 			}
@@ -24766,9 +24660,9 @@ CATCH_023e_1:
 			{
 				{
 					Exception_t* L_93 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:637>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:617>
 					V_8 = L_93;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:639>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:619>
 					Exception_t* L_94 = V_8;
 					NullCheck(L_94);
 					String_t* L_95;
@@ -24777,7 +24671,7 @@ CATCH_023e_1:
 					L_96 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral629CB59593FC99228CF2595AEA18714A49BF1E96)), L_95, NULL);
 					il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
 					Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_96, NULL);
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:640>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:620>
 					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_97 = __this->___onComplete;
 					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_98 = L_97;
 					if (L_98)
@@ -24799,7 +24693,7 @@ IL_0262_1:
 
 IL_026d_1:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:641>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:621>
 					IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
 					goto IL_02c0_1;
 				}
@@ -24807,7 +24701,7 @@ IL_026d_1:
 
 IL_026f_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:645>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:625>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_99 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_99);
 				String_t* L_100;
@@ -24823,7 +24717,7 @@ IL_026f_1:
 				L_104 = String_Concat_m093934F71A9B351911EE46311674ED463B180006(_stringLiteral1140900E3F14D75B5F69CFBD24D4FBDDC114808F, L_100, _stringLiteralBD2155E54D0A0EF69D6B035ACE4FB0D1E5C8A136, L_103, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_104, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:646>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:626>
 				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_105 = __this->___onComplete;
 				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_106 = L_105;
 				if (L_106)
@@ -24852,11 +24746,11 @@ IL_02aa_1:
 
 IL_02c0_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:648>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:628>
 				U3CUpdateCurrencyCoroutineU3Ed__29_U3CU3Em__Finally1_m7D9E0F24EC4878A625C8C54D388F7B99730ED71F(__this, NULL);
 				__this->___U3CrequestU3E5__2 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:649>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:629>
 				V_0 = (bool)0;
 				goto IL_02d8;
 			}
@@ -24873,7 +24767,7 @@ IL_02d8:
 		return L_110;
 	}
 }
-// Method Definition Index: 92694
+// Method Definition Index: 88513
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateCurrencyCoroutineU3Ed__29_U3CU3Em__Finally1_m7D9E0F24EC4878A625C8C54D388F7B99730ED71F (U3CUpdateCurrencyCoroutineU3Ed__29_t1A99D6C2FF8E2EA388945314C02329167A7F1AB8* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24901,7 +24795,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92695
+// Method Definition Index: 88514
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CUpdateCurrencyCoroutineU3Ed__29_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m309E4E2973EF62497632EAB41D272582B9017071 (U3CUpdateCurrencyCoroutineU3Ed__29_t1A99D6C2FF8E2EA388945314C02329167A7F1AB8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24909,7 +24803,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CUpdateCurrencyCoroutineU3Ed
 		return L_0;
 	}
 }
-// Method Definition Index: 92696
+// Method Definition Index: 88515
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateCurrencyCoroutineU3Ed__29_System_Collections_IEnumerator_Reset_m064B2381594B774E2EAABC9D07F16BEB0F2DFCAA (U3CUpdateCurrencyCoroutineU3Ed__29_t1A99D6C2FF8E2EA388945314C02329167A7F1AB8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24918,7 +24812,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateCurrencyCoroutineU3Ed__29_Syste
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CUpdateCurrencyCoroutineU3Ed__29_System_Collections_IEnumerator_Reset_m064B2381594B774E2EAABC9D07F16BEB0F2DFCAA_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 92697
+// Method Definition Index: 88516
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CUpdateCurrencyCoroutineU3Ed__29_System_Collections_IEnumerator_get_Current_mDE3CC57391D495421EB800E0CAE72777077B9780 (U3CUpdateCurrencyCoroutineU3Ed__29_t1A99D6C2FF8E2EA388945314C02329167A7F1AB8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24934,7 +24828,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CUpdateCurrencyCoroutineU3Ed
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 92698
+// Method Definition Index: 88517
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateProfileCoroutineU3Ed__25__ctor_m636672F1CBE5E1A73A39B7FF617CA5385EB8B0F6 (U3CUpdateProfileCoroutineU3Ed__25_t8A3EA5DAAE6E3E72605FBE0361996C9EAE83AA21* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -24944,7 +24838,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateProfileCoroutineU3Ed__25__ctor_
 		return;
 	}
 }
-// Method Definition Index: 92699
+// Method Definition Index: 88518
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateProfileCoroutineU3Ed__25_System_IDisposable_Dispose_mC7B8B7AFB53F6B20869C8460DE456A6F2B076BB3 (U3CUpdateProfileCoroutineU3Ed__25_t8A3EA5DAAE6E3E72605FBE0361996C9EAE83AA21* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -24993,7 +24887,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92700
+// Method Definition Index: 88519
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CUpdateProfileCoroutineU3Ed__25_MoveNext_mD2C831A151631F162C295CCF50AEF33DC368D579 (U3CUpdateProfileCoroutineU3Ed__25_t8A3EA5DAAE6E3E72605FBE0361996C9EAE83AA21* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25078,7 +24972,7 @@ FAULT_034f:
 IL_001f_1:
 			{
 				__this->___U3CU3E1__state = (-1);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:460>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:440>
 				BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_4 = V_2;
 				NullCheck(L_4);
 				String_t* L_5 = L_4->___baseUrl;
@@ -25088,11 +24982,11 @@ IL_001f_1:
 				String_t* L_7;
 				L_7 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_6, _stringLiteralBCF07062F42AC081FF83710932849A126BDCA80E, NULL);
 				V_3 = L_7;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:461>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:441>
 				String_t* L_8;
 				L_8 = BackendAuthService_GetStoredJWT_m6CEB0F7B503CC5FBE659428203090712661F270C(NULL);
 				V_4 = L_8;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:464>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:444>
 				String_t* L_9 = __this->___avatar;
 				bool L_10;
 				L_10 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_9, NULL);
@@ -25102,7 +24996,7 @@ IL_001f_1:
 				}
 			}
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:466>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:446>
 				String_t* L_11 = __this->___newName;
 				String_t* L_12;
 				L_12 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralA91689C8285E607DFBF26CFC3112043BAAFBCEB9, L_11, _stringLiteralD5F2751FCD979A5D75A2B143601934884E0565F4, NULL);
@@ -25112,7 +25006,7 @@ IL_001f_1:
 
 IL_006b_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:470>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:450>
 				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_13 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
 				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_14 = L_13;
 				NullCheck(L_14);
@@ -25138,14 +25032,14 @@ IL_006b_1:
 
 IL_00a2_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:473>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:453>
 				String_t* L_22 = V_3;
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_23 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)il2cpp_codegen_object_new(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F_il2cpp_TypeInfo_var);
 				UnityWebRequest__ctor_mD4739B0BF1C4937479A83B24B531C6B819712A3E(L_23, L_22, _stringLiteralA9145BA894AC681C06F6E921F9054DBC4A6037E9, NULL);
 				__this->___U3CrequestU3E5__2 = L_23;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)L_23);
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:475>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:455>
 				Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* L_24;
 				L_24 = Encoding_get_UTF8_m9FA98A53CE96FD6D02982625C5246DD36C1235C9(NULL);
 				String_t* L_25 = V_5;
@@ -25153,31 +25047,31 @@ IL_00a2_1:
 				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_26;
 				L_26 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(19, L_24, L_25);
 				V_6 = L_26;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:476>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:456>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_27 = __this->___U3CrequestU3E5__2;
 				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_28 = V_6;
 				UploadHandlerRaw_t0A24CF320CDF16F1BC6C5C086DE71A1908CBB91A* L_29 = (UploadHandlerRaw_t0A24CF320CDF16F1BC6C5C086DE71A1908CBB91A*)il2cpp_codegen_object_new(UploadHandlerRaw_t0A24CF320CDF16F1BC6C5C086DE71A1908CBB91A_il2cpp_TypeInfo_var);
 				UploadHandlerRaw__ctor_m168C957B67E29CB3072E3542044D37E2F16C42B7(L_29, L_28, NULL);
 				NullCheck(L_27);
 				UnityWebRequest_set_uploadHandler_m68F346550136DE178C79238944985892196027FE(L_27, L_29, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:477>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:457>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_30 = __this->___U3CrequestU3E5__2;
 				DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974* L_31 = (DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974*)il2cpp_codegen_object_new(DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974_il2cpp_TypeInfo_var);
 				DownloadHandlerBuffer__ctor_m5EE7C9E8AB468B2B937A7C9C66B4176A884147AF(L_31, NULL);
 				NullCheck(L_30);
 				UnityWebRequest_set_downloadHandler_m6CB94492012097DFC44E5773D1A627753788292F(L_30, L_31, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:478>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:458>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_32 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_32);
 				UnityWebRequest_SetRequestHeader_m099734EB787B7269B62AB2236A5A4F7D35AF8BC5(L_32, _stringLiteral5B58EBE31E594BF8FA4BEA3CD075473149322B18, _stringLiteral64058CC688A96A90239811EF06C9D20DB0499C3E, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:479>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:459>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_33 = __this->___U3CrequestU3E5__2;
 				String_t* L_34 = V_4;
 				String_t* L_35;
 				L_35 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralC2DA60AE96E2C9EF3EAF20897A5AA957AFDF64EC, L_34, NULL);
 				NullCheck(L_33);
 				UnityWebRequest_SetRequestHeader_m099734EB787B7269B62AB2236A5A4F7D35AF8BC5(L_33, _stringLiteral9D5A3AE3D2B0B5E5AF5AB489000D9B88FA11E907, L_35, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:481>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:461>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_36 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_36);
 				UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* L_37;
@@ -25192,7 +25086,7 @@ IL_00a2_1:
 IL_013b_1:
 			{
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:483>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:463>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_38 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_38);
 				int32_t L_39;
@@ -25203,7 +25097,7 @@ IL_013b_1:
 				}
 			}
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:485>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:465>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_40 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_40);
 				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_41;
@@ -25219,7 +25113,7 @@ IL_013b_1:
 			try
 			{
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:488>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:468>
 					UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_44 = __this->___U3CrequestU3E5__2;
 					NullCheck(L_44);
 					DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_45;
@@ -25230,7 +25124,7 @@ IL_013b_1:
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_47;
 					L_47 = JsonUtility_FromJson_TisAuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A_mF146DB41680B3594E729E54FE1C4D9BD5F249B6F(L_46, JsonUtility_FromJson_TisAuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A_mF146DB41680B3594E729E54FE1C4D9BD5F249B6F_RuntimeMethod_var);
 					V_7 = L_47;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:489>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:469>
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_48 = V_7;
 					if (!L_48)
 					{
@@ -25247,14 +25141,14 @@ IL_013b_1:
 					}
 				}
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:491>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:492>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:493>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:494>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:495>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:496>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:497>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:498>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:471>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:472>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:473>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:474>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:475>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:476>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:477>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:478>
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_51 = V_7;
 					NullCheck(L_51);
 					BackendUser_tA2639E54D80A1230B398FBFC497B719A95FDC362* L_52 = L_51->___user;
@@ -25336,7 +25230,7 @@ IL_013b_1:
 					NullCheck(L_97);
 					String_t* L_98 = L_97->___activeRoomId;
 					PlayerModel_UpdateData_m40EC379F66AF3DAC9BA17361756CF24869A6EED0(L_53, L_56, L_59, L_62, L_65, L_68, L_71, L_74, L_77, L_80, L_83, L_86, L_89, L_92, 0, L_95, L_98, NULL);
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:499>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:479>
 					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_99 = __this->___onComplete;
 					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_100 = L_99;
 					if (L_100)
@@ -25359,7 +25253,7 @@ IL_0274_2:
 
 IL_0281_2:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:503>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:483>
 					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_101 = __this->___onComplete;
 					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_102 = L_101;
 					if (L_102)
@@ -25381,7 +25275,7 @@ IL_028d_2:
 
 IL_0298_2:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:505>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:485>
 					goto IL_033e_1;
 				}
 			}
@@ -25399,9 +25293,9 @@ CATCH_029d_1:
 			{
 				{
 					Exception_t* L_103 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:506>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:486>
 					V_8 = L_103;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:508>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:488>
 					Exception_t* L_104 = V_8;
 					NullCheck(L_104);
 					String_t* L_105;
@@ -25410,7 +25304,7 @@ CATCH_029d_1:
 					L_106 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral29247ED7462DB05F52CB0F908817EEDDA12A033A)), L_105, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2)), NULL);
 					il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
 					Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_106, NULL);
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:509>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:489>
 					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_107 = __this->___onComplete;
 					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_108 = L_107;
 					if (L_108)
@@ -25432,7 +25326,7 @@ IL_02c6_1:
 
 IL_02d1_1:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:510>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:490>
 					IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
 					goto IL_033e_1;
 				}
@@ -25440,7 +25334,7 @@ IL_02d1_1:
 
 IL_02d3_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:514>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:494>
 				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_109 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
 				StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_110 = L_109;
 				NullCheck(L_110);
@@ -25472,7 +25366,7 @@ IL_02d3_1:
 				L_120 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_119, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_120, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:515>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:495>
 				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_121 = __this->___onComplete;
 				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_122 = L_121;
 				if (L_122)
@@ -25501,11 +25395,11 @@ IL_0328_1:
 
 IL_033e_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:517>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:497>
 				U3CUpdateProfileCoroutineU3Ed__25_U3CU3Em__Finally1_m94070B3607412CB48B17841FD778D17593B02326(__this, NULL);
 				__this->___U3CrequestU3E5__2 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:518>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:498>
 				V_0 = (bool)0;
 				goto IL_0356;
 			}
@@ -25522,7 +25416,7 @@ IL_0356:
 		return L_126;
 	}
 }
-// Method Definition Index: 92701
+// Method Definition Index: 88520
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateProfileCoroutineU3Ed__25_U3CU3Em__Finally1_m94070B3607412CB48B17841FD778D17593B02326 (U3CUpdateProfileCoroutineU3Ed__25_t8A3EA5DAAE6E3E72605FBE0361996C9EAE83AA21* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25550,7 +25444,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 92702
+// Method Definition Index: 88521
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CUpdateProfileCoroutineU3Ed__25_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m2D827DC188A2422FFBB3FAEBFC142D6EFA71D19A (U3CUpdateProfileCoroutineU3Ed__25_t8A3EA5DAAE6E3E72605FBE0361996C9EAE83AA21* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25558,7 +25452,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CUpdateProfileCoroutineU3Ed_
 		return L_0;
 	}
 }
-// Method Definition Index: 92703
+// Method Definition Index: 88522
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateProfileCoroutineU3Ed__25_System_Collections_IEnumerator_Reset_mDAFF0DD0BE48968D44F47CE4FB1051C4D0FAAAB3 (U3CUpdateProfileCoroutineU3Ed__25_t8A3EA5DAAE6E3E72605FBE0361996C9EAE83AA21* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25567,7 +25461,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateProfileCoroutineU3Ed__25_System
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CUpdateProfileCoroutineU3Ed__25_System_Collections_IEnumerator_Reset_mDAFF0DD0BE48968D44F47CE4FB1051C4D0FAAAB3_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 92704
+// Method Definition Index: 88523
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CUpdateProfileCoroutineU3Ed__25_System_Collections_IEnumerator_get_Current_m50C5BCF51AC35208C71DB289A20EE1B6BA119646 (U3CUpdateProfileCoroutineU3Ed__25_t8A3EA5DAAE6E3E72605FBE0361996C9EAE83AA21* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25578,7 +25472,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CUpdateProfileCoroutineU3Ed_
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 111228
+// Method Definition Index: 111279
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* InputField_get_text_m6E0796350FF559505E4DF17311803962699D6704_inline (InputField_tABEA115F23FBD374EBE80D4FAC1D15BD6E37A140* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25587,7 +25481,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* InputField_get_text_m6E
 		return L_0;
 	}
 }
-// Method Definition Index: 118474
+// Method Definition Index: 118525
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AccessToken_t73BAE9F45493316E7FF33A14EECB3D77E8C0D346* AccessToken_get_CurrentAccessToken_m79A35A353C7FCFB189F95F9D9BF96763CB085D75_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25601,7 +25495,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AccessToken_t73BAE9F45493316E7FF3
 		return L_0;
 	}
 }
-// Method Definition Index: 118482
+// Method Definition Index: 118533
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* AccessToken_get_UserId_m8684C2DBD8FFBC95E21AF907CB5CF3757AF4AC9B_inline (AccessToken_t73BAE9F45493316E7FF33A14EECB3D77E8C0D346* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25609,7 +25503,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* AccessToken_get_UserId_
 		return L_0;
 	}
 }
-// Method Definition Index: 118480
+// Method Definition Index: 118531
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* AccessToken_get_Permissions_m163DF13B8E34880F6A6F10B30F586B0A5CCAA75E_inline (AccessToken_t73BAE9F45493316E7FF33A14EECB3D77E8C0D346* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25617,7 +25511,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* AccessToken_get_Pe
 		return L_0;
 	}
 }
-// Method Definition Index: 119345
+// Method Definition Index: 119396
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Profile_get_UserID_mB51D862E1F692B3CFA1C5AC0143225C71AD57783_inline (Profile_t80D50211DC9ED35561A8B96A45C9C79AF07E5CF7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25625,7 +25519,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Profile_get_UserID_mB51
 		return L_0;
 	}
 }
-// Method Definition Index: 119353
+// Method Definition Index: 119404
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Profile_get_Name_m0279C588AEA8EA49BFA218CD215EA6C45F2643BA_inline (Profile_t80D50211DC9ED35561A8B96A45C9C79AF07E5CF7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25633,7 +25527,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Profile_get_Name_m0279C
 		return L_0;
 	}
 }
-// Method Definition Index: 119347
+// Method Definition Index: 119398
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Profile_get_FirstName_m2CDEC447FF2ADA15811B31E1B9067C9E07DE2461_inline (Profile_t80D50211DC9ED35561A8B96A45C9C79AF07E5CF7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25641,7 +25535,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Profile_get_FirstName_m
 		return L_0;
 	}
 }
-// Method Definition Index: 119355
+// Method Definition Index: 119406
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Profile_get_Email_m8D46DA0CAB2B30BE8A0486097FC1A849D7B5C374_inline (Profile_t80D50211DC9ED35561A8B96A45C9C79AF07E5CF7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25649,7 +25543,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Profile_get_Email_m8D46
 		return L_0;
 	}
 }
-// Method Definition Index: 119357
+// Method Definition Index: 119408
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Profile_get_ImageURL_m2706FE916BF599E4CE4DCABFF7C70FD62A891759_inline (Profile_t80D50211DC9ED35561A8B96A45C9C79AF07E5CF7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25657,7 +25551,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Profile_get_ImageURL_m2
 		return L_0;
 	}
 }
-// Method Definition Index: 119351
+// Method Definition Index: 119402
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Profile_get_LastName_m87E2D288A2CBFCE5E30483A99E2DF77F529D19ED_inline (Profile_t80D50211DC9ED35561A8B96A45C9C79AF07E5CF7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25665,7 +25559,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Profile_get_LastName_m8
 		return L_0;
 	}
 }
-// Method Definition Index: 118895
+// Method Definition Index: 118946
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Product_get_Title_m7E5E55AA9B8F3E29A3407487E50F8445CC6499CB_inline (Product_t55A2FB5E6C13AC042B41E8BB798D886EEFBF5D78* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25673,7 +25567,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Product_get_Title_m7E5E
 		return L_0;
 	}
 }
-// Method Definition Index: 118899
+// Method Definition Index: 118950
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Product_get_Description_m66613E8D2E3302AA58B5086254A7F6F2F33B2CA5_inline (Product_t55A2FB5E6C13AC042B41E8BB798D886EEFBF5D78* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25681,7 +25575,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Product_get_Description
 		return L_0;
 	}
 }
-// Method Definition Index: 118903
+// Method Definition Index: 118954
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Product_get_Price_mE4DED2E929AA3D8B5D7C810915BCB53972F30A44_inline (Product_t55A2FB5E6C13AC042B41E8BB798D886EEFBF5D78* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25689,7 +25583,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Product_get_Price_mE4DE
 		return L_0;
 	}
 }
-// Method Definition Index: 110832
+// Method Definition Index: 110883
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline (Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25698,7 +25592,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ButtonClickedEvent_t8EA72E90B3BD1
 		return L_0;
 	}
 }
-// Method Definition Index: 118901
+// Method Definition Index: 118952
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Product_get_ImageURI_mA0D6AE68CCC62FA570904C45DCBDA0BA1D8FAF29_inline (Product_t55A2FB5E6C13AC042B41E8BB798D886EEFBF5D78* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25706,7 +25600,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Product_get_ImageURI_mA
 		return L_0;
 	}
 }
-// Method Definition Index: 118919
+// Method Definition Index: 118970
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Purchase_get_ProductID_m24DF0DCB0A71046522E7AA78D64279EBFAEDE07C_inline (Purchase_t4D22EDC9A0B3FFA9161757D96B5781F47C814081* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25714,7 +25608,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Purchase_get_ProductID_
 		return L_0;
 	}
 }
-// Method Definition Index: 118913
+// Method Definition Index: 118964
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Purchase_get_IsConsumed_m1F285E30854A583DFD654ED97A82665A5CD99572_inline (Purchase_t4D22EDC9A0B3FFA9161757D96B5781F47C814081* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25722,7 +25616,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Purchase_get_IsConsumed_m1F2
 		return L_0;
 	}
 }
-// Method Definition Index: 118911
+// Method Definition Index: 118962
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Purchase_get_DeveloperPayload_m43B94D945BDF1639D9073BA53269F655A3C689F8_inline (Purchase_t4D22EDC9A0B3FFA9161757D96B5781F47C814081* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25730,7 +25624,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Purchase_get_DeveloperP
 		return L_0;
 	}
 }
-// Method Definition Index: 118917
+// Method Definition Index: 118968
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Purchase_get_PaymentID_m14F3755B9E1534921949B9FCC8A1535A3BFD1059_inline (Purchase_t4D22EDC9A0B3FFA9161757D96B5781F47C814081* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25738,7 +25632,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Purchase_get_PaymentID_
 		return L_0;
 	}
 }
-// Method Definition Index: 118915
+// Method Definition Index: 118966
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Purchase_get_PaymentActionType_m020901427B34B10A1BA43357297900D5DD48AAAF_inline (Purchase_t4D22EDC9A0B3FFA9161757D96B5781F47C814081* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25746,7 +25640,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Purchase_get_PaymentAct
 		return L_0;
 	}
 }
-// Method Definition Index: 118921
+// Method Definition Index: 118972
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Purchase_get_PurchasePlatform_m8419DCCE9164F4A18FD2D1DBF0D6751A3D1EE795_inline (Purchase_t4D22EDC9A0B3FFA9161757D96B5781F47C814081* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25754,7 +25648,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Purchase_get_PurchasePl
 		return L_0;
 	}
 }
-// Method Definition Index: 118923
+// Method Definition Index: 118974
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR CurrencyAmount_tB324E19D924C37EAF0DA881C0126615A0622D363* Purchase_get_PurchasePrice_m93DAC9D9BF22A8858533BE66DEF471A9B7DAD9B8_inline (Purchase_t4D22EDC9A0B3FFA9161757D96B5781F47C814081* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25762,7 +25656,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR CurrencyAmount_tB324E19D924C37EAF
 		return L_0;
 	}
 }
-// Method Definition Index: 118889
+// Method Definition Index: 118940
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* CurrencyAmount_get_Amount_m963F8E41962B6FECC925128EFB3F9AF0496ECEAA_inline (CurrencyAmount_tB324E19D924C37EAF0DA881C0126615A0622D363* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25770,7 +25664,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* CurrencyAmount_get_Amou
 		return L_0;
 	}
 }
-// Method Definition Index: 118891
+// Method Definition Index: 118942
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* CurrencyAmount_get_Currency_m186DD6A83F076775C8C4A7FD30778B3364536B8A_inline (CurrencyAmount_tB324E19D924C37EAF0DA881C0126615A0622D363* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25778,7 +25672,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* CurrencyAmount_get_Curr
 		return L_0;
 	}
 }
-// Method Definition Index: 118925
+// Method Definition Index: 118976
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D Purchase_get_PurchaseTime_m82743C9C46A953C93DA92AFE1779AFDB6E862928_inline (Purchase_t4D22EDC9A0B3FFA9161757D96B5781F47C814081* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25786,7 +25680,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89
 		return L_0;
 	}
 }
-// Method Definition Index: 118927
+// Method Definition Index: 118978
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Purchase_get_PurchaseToken_m1F0140FBF6B7D83643370716F643CE7A0692553F_inline (Purchase_t4D22EDC9A0B3FFA9161757D96B5781F47C814081* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25794,7 +25688,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Purchase_get_PurchaseTo
 		return L_0;
 	}
 }
-// Method Definition Index: 118929
+// Method Definition Index: 118980
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Purchase_get_SignedRequest_m132AC8B0548B20ED58F31FAED78797E4DDD30097_inline (Purchase_t4D22EDC9A0B3FFA9161757D96B5781F47C814081* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25802,7 +25696,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Purchase_get_SignedRequ
 		return L_0;
 	}
 }
-// Method Definition Index: 118897
+// Method Definition Index: 118948
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Product_get_ProductID_m77FDDBECEEBE09AE0265EA56CE808BD0C3454D27_inline (Product_t55A2FB5E6C13AC042B41E8BB798D886EEFBF5D78* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25810,7 +25704,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Product_get_ProductID_m
 		return L_0;
 	}
 }
-// Method Definition Index: 112074
+// Method Definition Index: 112125
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Toggle_get_isOn_m89A609E936CD67F460E336CA8E03C4047BFB6619_inline (Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25819,7 +25713,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Toggle_get_isOn_m89A609E936C
 		return L_0;
 	}
 }
-// Method Definition Index: 110947
+// Method Definition Index: 110998
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Dropdown_get_value_m386913162D5E273B762657FE5156DC567602BC3C_inline (Dropdown_t54C0BDC1441E058BE37E796F68886671C270EF89* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25828,7 +25722,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Dropdown_get_value_m38691
 		return L_0;
 	}
 }
-// Method Definition Index: 110992
+// Method Definition Index: 111043
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* OptionData_get_text_m147C3EFE4B7D157914D2C6CF653B32CE2D987AF1_inline (OptionData_t68DC820D58A3ABBAE844326B15A7F14D48FAE55F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25837,7 +25731,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* OptionData_get_text_m14
 		return L_0;
 	}
 }
-// Method Definition Index: 94428
+// Method Definition Index: 90298
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* EnhancedScroller_get_Delegate_m5350A1621C33E5FF245C0A162C8DA77B373940F9_inline (EnhancedScroller_tD5E71E91F48EE1CC6DAC4B1D78875825FF2682E2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25971,7 +25865,7 @@ IL_0019:
 		return L_7;
 	}
 }
-// Method Definition Index: 92560
+// Method Definition Index: 88379
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* BackendAuthService_get_Instance_m74239149FFCCCF5A49AF965DCA0565780B051110_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25986,7 +25880,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR BackendAuthService_t71F3E2DE248AE
 		return L_0;
 	}
 }
-// Method Definition Index: 93032
+// Method Definition Index: 88877
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6* GoogleSignInManager_get_Instance_mFD8D44E4D007DDA960DBB9ACC5681D1B350A35F5_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26001,7 +25895,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GoogleSignInManager_t0D78FF3BAC62
 		return L_0;
 	}
 }
-// Method Definition Index: 92850
+// Method Definition Index: 88670
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* FacebookSignInManager_get_Instance_m2646A1436D1F6ABD8A9572F42AAA6FEEEB966306_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26022,7 +25916,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_Invoke_m7126A54DACA72
 	typedef void (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 102773
+// Method Definition Index: 102824
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A_inline (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26039,7 +25933,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m42625D
 		return L_0;
 	}
 }
-// Method Definition Index: 92542
+// Method Definition Index: 88361
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AvatarSelector_set_Instance_m246F33937B6087D0671E93CE13340A155F9C48A7_inline (AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26056,7 +25950,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AvatarSelector_set_Instance_
 		return;
 	}
 }
-// Method Definition Index: 93761
+// Method Definition Index: 89613
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Avatar_mE3D8C1BE3E6D46C3AE3837FA63789AA9A95EAEDD_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26071,7 +25965,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Avatar_
 		return L_0;
 	}
 }
-// Method Definition Index: 93743
+// Method Definition Index: 89595
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Name_mC2FF8F628463BB165429DADD4D06B7B8DF621276_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26101,7 +25995,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect__ctor_m18C3033D135097BE
 		return;
 	}
 }
-// Method Definition Index: 92561
+// Method Definition Index: 88380
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void BackendAuthService_set_Instance_mF02D8893189C766887B4A553984FD270455A2B11_inline (BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26118,7 +26012,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void BackendAuthService_set_Insta
 		return;
 	}
 }
-// Method Definition Index: 93881
+// Method Definition Index: 89734
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR SocketManager_tFA162C4D30D5A71D0A5F10FDA0CF83B2B1101650* SocketManager_get_Instance_mFAF3D466262B9D9A471AB4FF8165EACB053F8CBC_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
