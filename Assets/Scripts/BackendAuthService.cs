@@ -988,6 +988,48 @@ public class BackendAuthService : MonoBehaviour
     }
 
     /// <summary>
+    /// Sends a cash withdrawal request to the backend.
+    /// </summary>
+    public void Withdraw(float amount, Action<bool, string> onComplete)
+    {
+        if (!HasStoredJWT())
+        {
+            onComplete?.Invoke(false, "Unauthorized: No stored JWT");
+            return;
+        }
+        StartCoroutine(WithdrawCoroutine(amount, onComplete));
+    }
+
+    private IEnumerator WithdrawCoroutine(float amount, Action<bool, string> onComplete)
+    {
+        string url = baseUrl.TrimEnd('/') + "/api/wallet/withdraw";
+        string token = GetStoredJWT();
+        string jsonPayload = "{\"amount\":" + amount.ToString("F2", System.Globalization.CultureInfo.InvariantCulture) + "}";
+
+        using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+        {
+            byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonPayload);
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+            request.SetRequestHeader("Authorization", "Bearer " + token);
+
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Withdrawal Result: {request.downloadHandler.text}</color>");
+                onComplete?.Invoke(true, request.downloadHandler.text);
+            }
+            else
+            {
+                Debug.LogError($"[BackendAuthService] Withdraw Error: {request.error} | {request.downloadHandler.text}");
+                onComplete?.Invoke(false, request.downloadHandler.text);
+            }
+        }
+    }
+
+    /// <summary>
     /// Fetches the invite history from the backend.
     /// </summary>
     public void GetInviteHistory(Action<bool, List<InviteHistoryItem>> onComplete)

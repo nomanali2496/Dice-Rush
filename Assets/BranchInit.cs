@@ -196,10 +196,18 @@ public class BranchInit : MonoBehaviour
                 
                 Debug.Log("[BranchInit] Referral data saved. Will be processed after login.");
                 
-                // Try to process referral if already logged in
+                // Try to process referral if already logged in (but only if it's a new registration flag)
                 if (BackendAuthService.HasStoredJWT() && !string.IsNullOrEmpty(PlayerModel.Id))
                 {
-                    ProcessReferralAfterLogin(inviterUserId, inviterName);
+                    if (PlayerPrefs.GetInt("IsNewUserRegistration", 0) == 1)
+                    {
+                        ProcessReferralAfterLogin(inviterUserId, inviterName);
+                    }
+                    else
+                    {
+                        Debug.Log("[BranchInit] Deep link detected, but skipped referral assignment because user is already logged in (existing user).");
+                        ClearPendingReferralFlags();
+                    }
                 }
             }
             else
@@ -270,35 +278,50 @@ public class BranchInit : MonoBehaviour
                 }
                 
                 // Clear pending referral flags
-                PlayerPrefs.DeleteKey("PendingReferrerUserId");
-                PlayerPrefs.DeleteKey("PendingReferrerPlayFabId");
-                PlayerPrefs.DeleteKey("PendingReferrerName");
-                PlayerPrefs.DeleteKey("HasPendingReferral");
-                PlayerPrefs.Save();
+                ClearPendingReferralFlags();
             });
         }
     }
     
-    /// <summary>
-    /// Check for pending referral after backend login
-    /// </summary>
     public void CheckPendingReferral()
     {
         if (PlayerPrefs.GetInt("HasPendingReferral", 0) == 1)
         {
-            string inviterId = PlayerPrefs.GetString("PendingReferrerUserId", "");
-            if (string.IsNullOrEmpty(inviterId))
+            if (PlayerPrefs.GetInt("IsNewUserRegistration", 0) == 1)
             {
-                inviterId = PlayerPrefs.GetString("PendingReferrerPlayFabId", "");
+                string inviterId = PlayerPrefs.GetString("PendingReferrerUserId", "");
+                if (string.IsNullOrEmpty(inviterId))
+                {
+                    inviterId = PlayerPrefs.GetString("PendingReferrerPlayFabId", "");
+                }
+                string inviterName = PlayerPrefs.GetString("PendingReferrerName", "");
+                
+                if (!string.IsNullOrEmpty(inviterId))
+                {
+                    Debug.Log("[BranchInit] Found pending referral for new registration, processing now...");
+                    ProcessReferralAfterLogin(inviterId, inviterName);
+                }
             }
-            string inviterName = PlayerPrefs.GetString("PendingReferrerName", "");
-            
-            if (!string.IsNullOrEmpty(inviterId))
+            else
             {
-                Debug.Log("[BranchInit] Found pending referral, processing now...");
-                ProcessReferralAfterLogin(inviterId, inviterName);
+                Debug.Log("[BranchInit] Pending referral found, but skipped because user is not a brand new registration.");
+                ClearPendingReferralFlags();
             }
         }
+    }
+
+    /// <summary>
+    /// Clears all pending referral flags from PlayerPrefs
+    /// </summary>
+    public void ClearPendingReferralFlags()
+    {
+        PlayerPrefs.DeleteKey("PendingReferrerUserId");
+        PlayerPrefs.DeleteKey("PendingReferrerPlayFabId");
+        PlayerPrefs.DeleteKey("PendingReferrerName");
+        PlayerPrefs.DeleteKey("HasPendingReferral");
+        PlayerPrefs.DeleteKey("IsNewUserRegistration");
+        PlayerPrefs.Save();
+        Debug.Log("[BranchInit] Cleared all pending referral flags.");
     }
 
     /// <summary>

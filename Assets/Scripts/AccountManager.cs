@@ -16,6 +16,10 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
     [Header("Test Settings")]
     [SerializeField] private int testDataCount = 30; // Number of test transactions to generate
     [SerializeField] private float cellSize = 100f; // Height of each transaction row cell
+
+    [Header("Withdrawal References")]
+    [SerializeField] private UnityEngine.UI.Button withdrawButton;
+    [SerializeField] private TMPro.TMP_InputField withdrawAmountInput;
     
     /// <summary>
     /// Internal representation of transaction history data
@@ -27,6 +31,15 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
     private void Start()
     {
         InitializeTransactionHistory();
+        if (withdrawButton != null)
+        {
+            withdrawButton.onClick.AddListener(OnWithdrawClicked);
+        }
+        if (withdrawAmountInput != null)
+        {
+            withdrawAmountInput.text = "$";
+            withdrawAmountInput.onValueChanged.AddListener(OnAmountValueChanged);
+        }
     }
     
     private void OnEnable()
@@ -454,6 +467,86 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
         TransactionStatus status = (TransactionStatus)random.Next(0, 3);
         AddTransaction(amount, status);
         Debug.Log($"[AccountManager] Added test transaction: ${amount:F2} - {status}");
+    }
+    
+    private void OnWithdrawClicked()
+    {
+        float amount = 10.00f;
+        if (withdrawAmountInput != null)
+        {
+            string amountText = withdrawAmountInput.text.Trim();
+            if (amountText.StartsWith("$"))
+            {
+                amountText = amountText.Substring(1).Trim();
+            }
+            if (float.TryParse(amountText, out float parsedAmount))
+            {
+                amount = parsedAmount;
+            }
+        }
+
+        if (withdrawButton != null)
+        {
+            withdrawButton.interactable = false;
+        }
+
+        if (BackendAuthService.Instance != null)
+        {
+            BackendAuthService.Instance.Withdraw(amount, (success, response) =>
+            {
+                if (withdrawButton != null)
+                {
+                    withdrawButton.interactable = true;
+                }
+
+                if (success)
+                {
+                    Debug.Log($"[AccountManager] Withdrawal of ${amount:F2} successful!");
+                    
+                    if (withdrawAmountInput != null)
+                    {
+                        withdrawAmountInput.text = "$";
+                    }
+                    
+                    // Refresh transaction history to show new withdrawal entry
+                    RefreshTransactionHistory();
+                }
+                else
+                {
+                    Debug.LogError($"[AccountManager] Withdrawal failed: {response}");
+                }
+            });
+        }
+        else
+        {
+            if (withdrawButton != null)
+            {
+                withdrawButton.interactable = true;
+            }
+            Debug.LogError("[AccountManager] BackendAuthService Instance is null!");
+        }
+    }
+    
+    private void OnAmountValueChanged(string value)
+    {
+        if (withdrawAmountInput == null) return;
+        
+        // Remove listener temporarily to prevent recursion
+        withdrawAmountInput.onValueChanged.RemoveListener(OnAmountValueChanged);
+        
+        if (string.IsNullOrEmpty(value))
+        {
+            withdrawAmountInput.text = "$";
+            withdrawAmountInput.caretPosition = 1;
+        }
+        else if (!value.StartsWith("$"))
+        {
+            withdrawAmountInput.text = "$" + value.Replace("$", "");
+            withdrawAmountInput.caretPosition = withdrawAmountInput.text.Length;
+        }
+        
+        // Restore listener
+        withdrawAmountInput.onValueChanged.AddListener(OnAmountValueChanged);
     }
     
     #endregion

@@ -1043,9 +1043,20 @@ public class AuthenticationManager : MonoBehaviour
             UpdateStatusText("Registration successful! Logging you in...");
             Debug.Log("[AuthenticationManager] User registered and logged in automatically with NEW account!");
             
+            // Set flag to indicate this is a brand new user registration
+            PlayerPrefs.SetInt("IsNewUserRegistration", 1);
+            PlayerPrefs.Save();
+            
             ClearRegistrationFields();
             Invoke(nameof(HideRegisterScreen), 3.5f);
             Invoke(nameof(ShowSplashScreenPanel), 0.5f);
+
+            // Process any pending referrals for this new registration
+            if (BranchInit.instance != null)
+            {
+                BranchInit.instance.CheckPendingReferral();
+            }
+            
             OnAuthenticationSuccess?.Invoke();
         }
         else
