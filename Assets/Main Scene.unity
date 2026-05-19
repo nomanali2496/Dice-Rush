@@ -3030,6 +3030,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &93536255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 93536256}
+  m_Layer: 5
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &93536256
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93536255}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1502321586}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.4652778, y: 0.56100744}
+  m_AnchorMax: {x: 0.5347222, y: 0.592102}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &95545617
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10154,7 +10189,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 58.95
+  m_fontSize: 66.1
   m_fontSizeBase: 69.28
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -16369,6 +16404,7 @@ MonoBehaviour:
   feedbackPrefab: {fileID: 1048062943636153387, guid: 3c845f330ba7dab42b85d3c234dc6406, type: 3}
   pointsTextPrefab: {fileID: 5457951867292248810, guid: 87a847b862e99fe478c9ef3c8cbefda2, type: 3}
   pointsTarget: {fileID: 653184563}
+  startPositionReference: {fileID: 93536256}
   positiveColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   negativeColor: {r: 1, g: 0, b: 0, a: 1}
   spriteShowDuration: 1.5
@@ -27880,7 +27916,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48.75
+  m_fontSize: 56.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -47901,6 +47937,7 @@ RectTransform:
   - {fileID: 1309974095}
   - {fileID: 5460925329309081659}
   - {fileID: 1909319756}
+  - {fileID: 93536256}
   - {fileID: 1599421951}
   - {fileID: 653184563}
   - {fileID: 347553832}

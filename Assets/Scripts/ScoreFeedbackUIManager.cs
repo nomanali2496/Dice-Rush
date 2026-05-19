@@ -25,6 +25,9 @@ public class ScoreFeedbackUIManager : MonoBehaviour
     [SerializeField, Tooltip("The UI target where points should fly towards")] 
     private RectTransform pointsTarget; 
 
+    [SerializeField, Tooltip("Optional UI starting position reference where feedback should spawn from")] 
+    private RectTransform startPositionReference; 
+
     [Header("Colors")]
     [SerializeField] private Color positiveColor = Color.yellow;
     [SerializeField] private Color negativeColor = Color.red;
@@ -81,6 +84,7 @@ public class ScoreFeedbackUIManager : MonoBehaviour
     /// <param name="targetPosition">The world position where the feedback should appear.</param>
     public void ShowScoreFeedback(int scoreChange, Vector3 targetPosition)
     {
+        Vector3 startPosition = startPositionReference != null ? startPositionReference.position : targetPosition;
         Sprite spriteToUse = null;
 
         if (scoreChange == 100)
@@ -108,9 +112,9 @@ public class ScoreFeedbackUIManager : MonoBehaviour
             return;
         }
 
-        // Instantiate the sprite feedback (IMAGE) in the CENTER of the manager (usually screen center)
+        // Instantiate the sprite feedback (IMAGE) at the target position reference
         GameObject feedback = Instantiate(feedbackPrefab, transform);
-        feedback.transform.localPosition = Vector3.zero; // Center relative to this Canvas manager
+        feedback.transform.position = startPosition;
 
         float referenceScale = GetReferenceScale();
 
@@ -137,7 +141,7 @@ public class ScoreFeedbackUIManager : MonoBehaviour
             // Initial animation: Scale up with pop
             feedback.transform.DOScale(Vector3.one * scaleMultiplier, 0.4f).SetEase(Ease.OutBack);
 
-            // Floating animation: Move up and fade out from CENTER
+            // Floating animation: Move up and fade out from the starting position reference
             Vector3 startPos = feedback.transform.position;
             feedback.transform.DOMoveY(startPos.y + floatingDistance * referenceScale, spriteShowDuration).SetEase(Ease.OutQuad);
             feedbackImage.DOFade(0f, spriteShowDuration * 0.4f).SetDelay(spriteShowDuration * 0.6f);
@@ -145,10 +149,10 @@ public class ScoreFeedbackUIManager : MonoBehaviour
             // Clean up
             Destroy(feedback, spriteShowDuration + 0.1f);
 
-            // Trigger secondary animation: Text flying to target (still starts from BOX position)
+            // Trigger secondary animation: Text flying to target
             if (pointsTextPrefab != null && pointsTarget != null)
             {
-                AnimateTextToTarget(scoreChange, targetPosition);
+                AnimateTextToTarget(scoreChange, startPosition);
             }
         }
         else
@@ -184,7 +188,7 @@ public class ScoreFeedbackUIManager : MonoBehaviour
             // Move to target AND Zoom out (Scale down)
             textObj.transform.DOMove(pointsTarget.position, flyToTargetDuration)
                 .SetDelay(secondaryDelay)
-                .SetEase(Ease.InBack)
+                .SetEase(Ease.InQuad)
                 .OnComplete(() => {
                     // Update the target score display
                     UpdateTargetScore(scoreChange);
@@ -197,7 +201,7 @@ public class ScoreFeedbackUIManager : MonoBehaviour
             // Zoom out animation: Scale towards endScale instead of zero
             textObj.transform.DOScale(Vector3.one * endScale * referenceScale, flyToTargetDuration)
                 .SetDelay(secondaryDelay)
-                .SetEase(Ease.InBack);
+                .SetEase(Ease.InQuad);
             
             // Note: Removed DOFade here so it stays solid until it reaches the target (as requested)
         }
