@@ -58,24 +58,58 @@ public class BackendAuthService : MonoBehaviour
         string fullUrl = baseUrl.TrimEnd('/') + relativePath;
         fullUrl = System.Uri.EscapeUriString(fullUrl);
 
-        using (UnityWebRequest request = UnityWebRequestTexture.GetTexture(fullUrl))
+        using (UnityWebRequest request = new UnityWebRequest(fullUrl, "GET"))
         {
+            request.downloadHandler = new DownloadHandlerBuffer();
             yield return request.SendWebRequest();
 
             if (request.result == UnityWebRequest.Result.Success)
             {
-                Texture2D texture = DownloadHandlerTexture.GetContent(request);
-                
-                // Create a sprite from the texture
-                Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
-                
-                // Add to cache
-                if (!_spriteCache.ContainsKey(imagePath))
+                string contentType = request.GetResponseHeader("Content-Type");
+                bool isHtml = !string.IsNullOrEmpty(contentType) && contentType.ToLower().Contains("text/html");
+
+                byte[] data = request.downloadHandler.data;
+                if (!isHtml && data != null && data.Length > 4)
                 {
-                    _spriteCache.Add(imagePath, sprite);
+                    string prefix = Encoding.UTF8.GetString(data, 0, Mathf.Min(data.Length, 10)).ToLower();
+                    if (prefix.StartsWith("<!do") || prefix.StartsWith("<htm") || prefix.StartsWith("<html"))
+                    {
+                        isHtml = true;
+                    }
                 }
-                
-                onComplete?.Invoke(sprite);
+
+                if (isHtml)
+                {
+                    Debug.Log($"[BackendAuthService] Image Download Failed (Server returned HTML instead of image): {fullUrl}");
+                    onComplete?.Invoke(null);
+                }
+                else if (data != null && data.Length > 0)
+                {
+                    Texture2D texture = new Texture2D(2, 2);
+                    if (texture.LoadImage(data))
+                    {
+                        // Create a sprite from the texture
+                        Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+                        
+                        // Add to cache
+                        if (!_spriteCache.ContainsKey(imagePath))
+                        {
+                            _spriteCache.Add(imagePath, sprite);
+                        }
+                        
+                        onComplete?.Invoke(sprite);
+                    }
+                    else
+                    {
+                        Debug.LogError($"[BackendAuthService] Failed to parse downloaded sprite bytes: {fullUrl}");
+                        Destroy(texture);
+                        onComplete?.Invoke(null);
+                    }
+                }
+                else
+                {
+                    onComplete?.Invoke(null);
+                }
             }
             else
             {
@@ -801,16 +835,46 @@ public class BackendAuthService : MonoBehaviour
 
     private IEnumerator GetImageCoroutine(string url)
     {
-        using (UnityWebRequest request = UnityWebRequestTexture.GetTexture(url))
+        using (UnityWebRequest request = new UnityWebRequest(url, "GET"))
         {
+            request.downloadHandler = new DownloadHandlerBuffer();
             yield return request.SendWebRequest();
 
             Texture2D texture = null;
             if (request.result == UnityWebRequest.Result.Success)
             {
-                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Image Downloaded: {url}</color>");
-                texture = DownloadHandlerTexture.GetContent(request);
-                _imageCache[url] = texture; // Cache the successful result
+                string contentType = request.GetResponseHeader("Content-Type");
+                bool isHtml = !string.IsNullOrEmpty(contentType) && contentType.ToLower().Contains("text/html");
+
+                byte[] data = request.downloadHandler.data;
+                if (!isHtml && data != null && data.Length > 4)
+                {
+                    string prefix = Encoding.UTF8.GetString(data, 0, Mathf.Min(data.Length, 10)).ToLower();
+                    if (prefix.StartsWith("<!do") || prefix.StartsWith("<htm") || prefix.StartsWith("<html"))
+                    {
+                        isHtml = true;
+                    }
+                }
+
+                if (isHtml)
+                {
+                    Debug.Log($"[BackendAuthService] Image not found (Server returned HTML instead of image): {url}");
+                }
+                else if (data != null && data.Length > 0)
+                {
+                    texture = new Texture2D(2, 2);
+                    if (texture.LoadImage(data))
+                    {
+                        Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Image Downloaded: {url}</color>");
+                        _imageCache[url] = texture; // Cache the successful result
+                    }
+                    else
+                    {
+                        Debug.LogError($"<color=#ff0000>[BackendAuthService] ERROR: Failed to parse downloaded bytes into Texture2D: {url}</color>");
+                        Destroy(texture);
+                        texture = null;
+                    }
+                }
             }
             else
             {

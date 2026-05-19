@@ -494,28 +494,55 @@ public class InviteFriendManager : MonoBehaviour, IEnhancedScrollerDelegate
         }
         
         // Try loading as regular URL
-        using (UnityWebRequest www = UnityWebRequestTexture.GetTexture(imageUrl))
+        using (UnityWebRequest www = new UnityWebRequest(imageUrl, "GET"))
         {
+            www.downloadHandler = new DownloadHandlerBuffer();
             yield return www.SendWebRequest();
             
             if (www.result == UnityWebRequest.Result.Success)
             {
-                Texture2D texture = DownloadHandlerTexture.GetContent(www);
-                if (texture != null)
+                string contentType = www.GetResponseHeader("Content-Type");
+                bool isHtml = !string.IsNullOrEmpty(contentType) && contentType.ToLower().Contains("text/html");
+
+                byte[] data = www.downloadHandler.data;
+                if (!isHtml && data != null && data.Length > 4)
                 {
-                    // Create sprite from texture
-                    Sprite sprite = Sprite.Create(
-                        texture,
-                        new Rect(0, 0, texture.width, texture.height),
-                        new Vector2(0.5f, 0.5f)
-                    );
-                    
-                    Debug.Log($"[InviteFriendManager] Successfully loaded image from URL for {userId}");
-                    onComplete?.Invoke(sprite);
+                    string prefix = System.Text.Encoding.UTF8.GetString(data, 0, Mathf.Min(data.Length, 10)).ToLower();
+                    if (prefix.StartsWith("<!do") || prefix.StartsWith("<htm") || prefix.StartsWith("<html"))
+                    {
+                        isHtml = true;
+                    }
+                }
+
+                if (isHtml)
+                {
+                    Debug.Log($"[InviteFriendManager] Failed to load image from URL (Server returned HTML instead of image): {imageUrl}");
+                    onComplete?.Invoke(null);
+                }
+                else if (data != null && data.Length > 0)
+                {
+                    Texture2D texture = new Texture2D(2, 2);
+                    if (texture.LoadImage(data))
+                    {
+                        // Create sprite from texture
+                        Sprite sprite = Sprite.Create(
+                            texture,
+                            new Rect(0, 0, texture.width, texture.height),
+                            new Vector2(0.5f, 0.5f)
+                        );
+                        
+                        Debug.Log($"[InviteFriendManager] Successfully loaded image from URL for {userId}");
+                        onComplete?.Invoke(sprite);
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"[InviteFriendManager] Failed to parse downloaded texture bytes from image URL: {imageUrl}");
+                        Destroy(texture);
+                        onComplete?.Invoke(null);
+                    }
                 }
                 else
                 {
-                    Debug.LogWarning($"[InviteFriendManager] Failed to create texture from image URL: {imageUrl}");
                     onComplete?.Invoke(null);
                 }
             }

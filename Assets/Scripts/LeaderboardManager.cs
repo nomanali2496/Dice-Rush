@@ -289,7 +289,41 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
     /// </summary>
     private Sprite GetPresetAvatar(string avatarKey)
     {
-        if (avatarKey == "avatarGirl" && testAvatars != null && testAvatars.Length > 1) return testAvatars[1];
+        if (string.IsNullOrEmpty(avatarKey))
+        {
+            if (AvatarSelector.Instance != null) return AvatarSelector.Instance.GetAvatarSpriteByIndex(0);
+            if (testAvatars != null && testAvatars.Length > 0) return testAvatars[0];
+            return null;
+        }
+
+        // Handle old string presets
+        if (avatarKey == "avatarGirl")
+        {
+            if (AvatarSelector.Instance != null) return AvatarSelector.Instance.GetAvatarSpriteByIndex(1);
+            if (testAvatars != null && testAvatars.Length > 1) return testAvatars[1];
+        }
+        if (avatarKey == "avatarBoy")
+        {
+            if (AvatarSelector.Instance != null) return AvatarSelector.Instance.GetAvatarSpriteByIndex(0);
+            if (testAvatars != null && testAvatars.Length > 0) return testAvatars[0];
+        }
+
+        // Handle numeric index presets (0-7)
+        if (int.TryParse(avatarKey, out int index))
+        {
+            if (AvatarSelector.Instance != null)
+            {
+                Sprite sp = AvatarSelector.Instance.GetAvatarSpriteByIndex(index);
+                if (sp != null) return sp;
+            }
+            if (testAvatars != null && index >= 0 && index < testAvatars.Length)
+            {
+                return testAvatars[index];
+            }
+        }
+
+        // Default fallback
+        if (AvatarSelector.Instance != null) return AvatarSelector.Instance.GetAvatarSpriteByIndex(0);
         if (testAvatars != null && testAvatars.Length > 0) return testAvatars[0];
         return null;
     }
@@ -747,6 +781,7 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
         {
             _userData.avatarSprite = currentAvatar;
             _userData.isCustom = mainMenuAvatarDisplay.IsShowingCustomAvatar();
+            _userData.avatarKey = PlayerModel.Avatar;
         }
         else 
         {
@@ -759,6 +794,8 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
                     if (_leaderboardData[i] != null && _leaderboardData[i].username == pName)
                     {
                         _leaderboardData[i].avatarSprite = currentAvatar;
+                        _leaderboardData[i].isCustom = mainMenuAvatarDisplay.IsShowingCustomAvatar();
+                        _leaderboardData[i].avatarKey = PlayerModel.Avatar;
                         // Cache the reference for future calls
                         _userData = _leaderboardData[i];
                         break;
