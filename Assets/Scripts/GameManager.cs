@@ -1530,18 +1530,15 @@ public class GameManager : MonoBehaviour
         }
 
         // Disconnect socket when returning to lobby/resetting game state
-        if (SocketManager.Instance != null)
+        // [MODIFIED]: We no longer disconnect here. The socket stays alive in the lobby
+        // to allow for instant rematching without reconnection delays.
+        // Disconnection is now handled by the Back button in HorizontalLobbyManager.
+        if (SocketManager.Instance != null && MatchmakingModel.IsForfeitPending())
         {
             // If we just sent a forfeit, give the socket a moment to actually send the packet 
-            // before closing the connection.
-            if (MatchmakingModel.IsForfeitPending())
-            {
-                SocketManager.Instance.DisconnectDelayed(0.5f);
-            }
-            else
-            {
-                SocketManager.Instance.Disconnect();
-            }
+            // but DO NOT completely disconnect. Just clear the pending state.
+            // Let the server clean up the match state, but keep the connection open for the next match.
+            // (The actual DisconnectDelayed call was removed here)
         }
     }
     

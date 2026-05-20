@@ -36,6 +36,7 @@ public class HorizontalLobbyManager : MonoBehaviour
     [SerializeField] private GameObject waitingPanel;
     [SerializeField] private TMPro.TextMeshProUGUI waitingStatusText;
     [SerializeField] private Button cancelMatchmakingButton; // Close button on the waiting panel
+    [SerializeField] private Button disconnectSocketButton; // Back button to leave lobby and disconnect
     
     [Header("Lobby Game Objects Settings")]
     private int BACKGROUND_COUNT => LobbyModel.Configurations.Length; 
@@ -86,6 +87,18 @@ public class HorizontalLobbyManager : MonoBehaviour
         // Wire cancel matchmaking button
         if (cancelMatchmakingButton != null)
             cancelMatchmakingButton.onClick.AddListener(OnCancelMatchmaking);
+            
+        // Wire back/disconnect button
+        if (disconnectSocketButton != null)
+        {
+            disconnectSocketButton.onClick.AddListener(() => {
+                if (SocketManager.Instance != null)
+                {
+                    Debug.Log("<color=#FF6347>⚠️ [Lobby] Back button clicked. Disconnecting socket...</color>");
+                    SocketManager.Instance.Disconnect();
+                }
+            });
+        }
         
         // Subscribe to PlayerModel events to update when backend data loads
         PlayerModel.OnDataUpdated += OnPlayerDataUpdated;
