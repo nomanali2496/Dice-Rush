@@ -219,34 +219,7 @@ public class DailyRewardManager : MonoBehaviour
                     cashReward = reward.cash;
                 }
 
-                if (response.user != null)
-                {
-                    PlayerModel.UpdateData(
-                        response.user.id, response.user.name, response.user.email,
-                        response.user.wins, response.user.losses, response.user.balance,
-                        response.user.cashBalance, response.user.bonusBalance, response.user.winningBalance,
-                        response.user.coins, response.user.avatar, response.user.xp,
-                        response.user.level, response.user.role
-                    );
-                }
-
-                // Explicitly push the updated currency values to the backend profile endpoint
-                int newTotalCoins = coinsBefore + coinsReward;
-                int newTotalCash = Mathf.RoundToInt(cashBefore + cashReward);
-
-                BackendAuthService.Instance.UpdateCurrency(newTotalCash, newTotalCoins, (profileSuccess, message) => 
-                {
-                    if (profileSuccess)
-                    {
-                        Debug.Log("[DailyRewardManager] Currency successfully synced to backend profile.");
-                    }
-                    else
-                    {
-                        Debug.LogError("[DailyRewardManager] Failed to sync currency to backend profile: " + message);
-                    }
-                });
-
-                StartCoroutine(PlayRewardAnimationAndFinish(coinsReward, cashReward, dayToAnimate, coinsBefore, cashBefore));
+                StartCoroutine(PlayRewardAnimationAndFinish(coinsReward, cashReward, dayToAnimate, coinsBefore, cashBefore, response));
             }
             else
             {
@@ -255,7 +228,7 @@ public class DailyRewardManager : MonoBehaviour
         });
     }
 
-    private IEnumerator PlayRewardAnimationAndFinish(int coins, float cash, int day, int coinsBefore, float cashBefore)
+    private IEnumerator PlayRewardAnimationAndFinish(int coins, float cash, int day, int coinsBefore, float cashBefore, BackendAuthService.DailyRewardStatusResponse response)
     {
         currentAnimatedCash = cashBefore;
         currentAnimatedChips = coinsBefore;
@@ -264,6 +237,36 @@ public class DailyRewardManager : MonoBehaviour
         if (cash > 0) PlayRewardAnimation(cash, true, day);
 
         yield return new WaitForSeconds(animationDuration + (delayBetweenParticles * maxParticles) + 0.2f);
+
+        // Explicitly push the updated currency values to the backend profile endpoint
+        int newTotalCoins = coinsBefore + coins;
+        int newTotalCash = Mathf.RoundToInt(cashBefore + cash);
+
+        if (response != null && response.user != null)
+        {
+            int finalCoins = response.user.coins > 0 ? response.user.coins : newTotalCoins;
+            int finalCash = response.user.cashBalance > 0 ? response.user.cashBalance : newTotalCash;
+
+            PlayerModel.UpdateData(
+                response.user.id, response.user.name, response.user.email,
+                response.user.wins, response.user.losses, response.user.balance,
+                finalCash, response.user.bonusBalance, response.user.winningBalance,
+                finalCoins, response.user.avatar, response.user.xp,
+                response.user.level, response.user.role
+            );
+        }
+
+        BackendAuthService.Instance.UpdateCurrency(newTotalCash, newTotalCoins, (profileSuccess, message) => 
+        {
+            if (profileSuccess)
+            {
+                Debug.Log("[DailyRewardManager] Currency successfully synced to backend profile.");
+            }
+            else
+            {
+                Debug.LogError("[DailyRewardManager] Failed to sync currency to backend profile: " + message);
+            }
+        });
 
         OnRewardCollected?.Invoke(day, coins, cash);
         canClaim = false;

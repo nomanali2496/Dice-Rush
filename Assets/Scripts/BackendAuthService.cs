@@ -633,11 +633,14 @@ public class BackendAuthService : MonoBehaviour
                     AuthResponse response = JsonUtility.FromJson<AuthResponse>(request.downloadHandler.text);
                     if (response != null && response.user != null)
                     {
+                        int finalCoins = response.user.coins > 0 ? response.user.coins : coins;
+                        int finalCash = response.user.cashBalance > 0 ? response.user.cashBalance : cashBalance;
+
                         PlayerModel.UpdateData(
                             response.user.id, response.user.name, response.user.email,
                             response.user.wins, response.user.losses, response.user.balance,
-                            response.user.cashBalance, response.user.bonusBalance, response.user.winningBalance,
-                            response.user.coins, response.user.avatar, response.user.xp,
+                            finalCash, response.user.bonusBalance, response.user.winningBalance,
+                            finalCoins, response.user.avatar, response.user.xp,
                             response.user.level, response.user.role, 0,
                             response.user.activeMatchId, response.user.activeRoomId
                         );
