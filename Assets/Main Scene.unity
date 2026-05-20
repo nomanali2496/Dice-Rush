@@ -15694,7 +15694,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &472170759
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17518,7 +17518,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 525781246}
-  - component: {fileID: 525781247}
   m_Layer: 5
   m_Name: Profile
   m_TagString: Untagged
@@ -17547,18 +17546,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &525781247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 525781245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb1ce983ddfaebb419c34eda4a4d02ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AvatarImage
 --- !u!114 &527630284 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9050724113127981179, guid: 928a6acf9855de044b42e248559ac574, type: 3}
@@ -26509,7 +26496,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 830412374}
-  - component: {fileID: 830412375}
   m_Layer: 5
   m_Name: User'sPorfile
   m_TagString: Untagged
@@ -26537,18 +26523,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &830412375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 830412373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb1ce983ddfaebb419c34eda4a4d02ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AvatarImage
 --- !u!1 &830835356
 GameObject:
   m_ObjectHideFlags: 0
@@ -29236,6 +29210,8 @@ MonoBehaviour:
   countdownClip: {fileID: 8300000, guid: bcb02693ae8bf9d4d89582532bd856d7, type: 3}
   cashClip: {fileID: 8300000, guid: 208941914fc9c10468cd7077352cb50b, type: 3}
   chipsClip: {fileID: 8300000, guid: 67a381b6524c7644ebde94ade51db146, type: 3}
+  correctClip: {fileID: 8300000, guid: e7e71057f58d6f942b8cb76605b35e74, type: 3}
+  wrongClip: {fileID: 8300000, guid: a69cafc04d40e5e43ba3a0d8e78981e4, type: 3}
 --- !u!1 &953618517
 GameObject:
   m_ObjectHideFlags: 0
@@ -33829,7 +33805,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1100708412
 RectTransform:
   m_ObjectHideFlags: 0
@@ -61207,8 +61183,8 @@ RectTransform:
   m_GameObject: {fileID: 1981988811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 495567086}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

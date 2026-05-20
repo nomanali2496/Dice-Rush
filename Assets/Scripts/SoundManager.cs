@@ -28,6 +28,8 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClip countdownClip; // Countdown sound (3, 2, 1)
     [SerializeField] private AudioClip cashClip; // Cash reward sound
     [SerializeField] private AudioClip chipsClip; // Chips reward sound
+    [SerializeField] private AudioClip correctClip; // Correct answer/selection sound
+    [SerializeField] private AudioClip wrongClip; // Wrong answer/selection sound
     
     private void Awake()
     {
@@ -261,6 +263,36 @@ public class SoundManager : MonoBehaviour
         else
         {
             Debug.LogWarning("[SoundManager] Chips clip not assigned!");
+        }
+    }
+    
+    /// <summary>
+    /// Plays correct answer/selection sound effect
+    /// </summary>
+    public void PlayCorrect()
+    {
+        if (correctClip != null)
+        {
+            PlaySFX(correctClip);
+        }
+        else
+        {
+            Debug.LogWarning("[SoundManager] Correct clip not assigned!");
+        }
+    }
+    
+    /// <summary>
+    /// Plays wrong answer/selection sound effect
+    /// </summary>
+    public void PlayWrong()
+    {
+        if (wrongClip != null)
+        {
+            PlaySFX(wrongClip);
+        }
+        else
+        {
+            Debug.LogWarning("[SoundManager] Wrong clip not assigned!");
         }
     }
     

@@ -836,6 +836,9 @@ public class GameManager : MonoBehaviour
         // 3. Update local score for local player
         if (ownerKey == -1) 
         {
+            // Play Correct Sound
+            if (SoundManager.instance != null) SoundManager.instance.PlayCorrect();
+
             // NEW SCORING: 
             // - Selecting correct number: +100
             // - Selecting icon (if number is -1): +200
@@ -870,6 +873,9 @@ public class GameManager : MonoBehaviour
         {
             localMatchScore -= 50;
             Debug.Log($"[GameManager] ❌ Wrong Number Clicked! -50 Points (Total: {localMatchScore})");
+
+            // Play Wrong Sound
+            if (SoundManager.instance != null) SoundManager.instance.PlayWrong();
 
             // Trigger visual feedback
             if (ScoreFeedbackUIManager.Instance != null && boxObject != null)
