@@ -218,6 +218,15 @@ public class ScoreFeedbackUIManager : MonoBehaviour
     public void SetScore(int newScore)
     {
         currentDisplayScore = newScore;
+        
+        // Lazy-initialize targetScoreDisplay if it is null (fixes recovery race condition)
+        if (targetScoreDisplay == null && pointsTarget != null)
+        {
+            targetScoreDisplay = pointsTarget.GetComponent<TMPro.TextMeshProUGUI>();
+            if (targetScoreDisplay == null) targetScoreDisplay = pointsTarget.GetComponentInChildren<TMPro.TextMeshProUGUI>();
+            if (targetScoreDisplay != null) originalTargetColor = targetScoreDisplay.color;
+        }
+
         if (targetScoreDisplay != null)
         {
             targetScoreDisplay.text = newScore.ToString();
@@ -262,6 +271,15 @@ public class ScoreFeedbackUIManager : MonoBehaviour
     public void ResetScore()
     {
         currentDisplayScore = 0;
+
+        // Lazy-initialize targetScoreDisplay if it is null
+        if (targetScoreDisplay == null && pointsTarget != null)
+        {
+            targetScoreDisplay = pointsTarget.GetComponent<TMPro.TextMeshProUGUI>();
+            if (targetScoreDisplay == null) targetScoreDisplay = pointsTarget.GetComponentInChildren<TMPro.TextMeshProUGUI>();
+            if (targetScoreDisplay != null) originalTargetColor = targetScoreDisplay.color;
+        }
+
         if (targetScoreDisplay != null)
         {
             targetScoreDisplay.text = ""; // Empty space instead of "0"
