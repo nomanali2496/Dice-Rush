@@ -35,6 +35,7 @@ public class HorizontalLobbyManager : MonoBehaviour
     [Header("UI Panels")]
     [SerializeField] private GameObject waitingPanel;
     [SerializeField] private TMPro.TextMeshProUGUI waitingStatusText;
+    [SerializeField] private Button cancelMatchmakingButton; // Close button on the waiting panel
     
     [Header("Lobby Game Objects Settings")]
     private int BACKGROUND_COUNT => LobbyModel.Configurations.Length; 
@@ -81,6 +82,10 @@ public class HorizontalLobbyManager : MonoBehaviour
         
         InitializeLobbyRows();
         SetupScrollButtons();
+        
+        // Wire cancel matchmaking button
+        if (cancelMatchmakingButton != null)
+            cancelMatchmakingButton.onClick.AddListener(OnCancelMatchmaking);
         
         // Subscribe to PlayerModel events to update when backend data loads
         PlayerModel.OnDataUpdated += OnPlayerDataUpdated;
@@ -759,6 +764,21 @@ public class HorizontalLobbyManager : MonoBehaviour
     public void HideWaitingPanel()
     {
         if (waitingPanel != null) waitingPanel.SetActive(false);
+    }
+
+    /// <summary>
+    /// Called by the close/cancel button on the waiting panel.
+    /// Emits 'cancelMatchmaking' with the current lobbyId and hides the panel.
+    /// </summary>
+    public void OnCancelMatchmaking()
+    {
+        Debug.Log("[HorizontalLobbyManager] Cancel matchmaking button pressed.");
+        
+        // CancelSearch() internally emits 'cancelMatchmaking' with { lobbyId } via the socket
+        MatchmakingModel.CancelSearch();
+        
+        if (waitingPanel != null) waitingPanel.SetActive(false);
+        _pendingLobbyIndex = -1;
     }
 
     public void StartGameFromNetwork(int lobbyIndex, StartGameData matchData = null, int overrideCPUs = -1)

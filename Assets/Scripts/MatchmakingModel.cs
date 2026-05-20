@@ -56,21 +56,26 @@ public static class MatchmakingModel
     {
         if (SocketManager.Instance != null && SocketManager.Instance.Socket != null && IsSearching)
         {
-            FindMatchPayload payload = new FindMatchPayload 
+            // Only send lobbyId — that's all the server needs to remove the player from the queue
+            CancelMatchmakingPayload payload = new CancelMatchmakingPayload 
             { 
-                mode = lastMode, 
-                stake = lastStake,
                 lobbyId = lastLobbyId
             };
             
             SocketManager.Instance.Socket.Emit("cancelMatchmaking", payload);
             Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'cancelMatchmaking' for Lobby: {lastLobbyId}</color>");
             
-            // Disconnect socket as we are leaving the matchmaking phase
-            SocketManager.Instance.Disconnect();
+            // DO NOT disconnect the socket here.
+            // Disconnecting immediately drops the cancel event before the server processes it,
+            // leaving activeMatchId on the user in the DB. When the user clicks Play again,
+            // the reconnect triggers "Already in a match" → recovery panel appears.
+            // Keeping the socket alive ensures cancel reaches the server cleanly.
         }
         
         IsSearching = false;
+        lastMode = string.Empty;
+        lastStake = 0;
+        lastLobbyId = string.Empty;
     }
 
     public static void EnsureListenersAdded()
@@ -510,4 +515,10 @@ public class CountdownData
 public class ForfeitMatchPayload
 {
     public string roomId;
+}
+
+[Serializable]
+public class CancelMatchmakingPayload
+{
+    public string lobbyId;
 }
