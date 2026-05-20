@@ -17,6 +17,12 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
     [SerializeField] private int testDataCount = 30; // Number of test transactions to generate
     [SerializeField] private float cellSize = 100f; // Height of each transaction row cell
 
+    [Header("Balance Display")]
+    [SerializeField] private TMPro.TextMeshProUGUI accountBalanceText;        // Main account balance label
+    [SerializeField] private TMPro.TextMeshProUGUI accountBalanceShadowText;  // Shadow copy of account balance
+    [SerializeField] private TMPro.TextMeshProUGUI winningBalanceText;        // Main winning balance label
+    [SerializeField] private TMPro.TextMeshProUGUI winningBalanceShadowText;  // Shadow copy of winning balance
+
     [Header("Withdrawal References")]
     [SerializeField] private UnityEngine.UI.Button withdrawButton;
     [SerializeField] private TMPro.TMP_InputField withdrawAmountInput;
@@ -44,6 +50,9 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
     
     private void OnEnable()
     {
+        // Subscribe to PlayerModel updates so balance refreshes whenever data changes
+        PlayerModel.OnDataUpdated += RefreshBalanceUI;
+
         // Reinitialize when GameObject becomes active
         if (isInitialized)
         {
@@ -53,6 +62,43 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
         {
             InitializeTransactionHistory();
         }
+
+        // Fetch latest profile from backend to show live balance
+        if (BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
+        {
+            BackendAuthService.Instance.GetProfile((success, msg) =>
+            {
+                if (!success)
+                    Debug.LogWarning("[AccountManager] GetProfile failed: " + msg);
+            });
+        }
+        else
+        {
+            // PlayerModel already has cached data — display it immediately
+            RefreshBalanceUI();
+        }
+    }
+
+    private void OnDisable()
+    {
+        PlayerModel.OnDataUpdated -= RefreshBalanceUI;
+    }
+
+    /// <summary>
+    /// Updates the account balance and winning balance labels (and their shadows)
+    /// from the current PlayerModel values.
+    /// </summary>
+    private void RefreshBalanceUI()
+    {
+        string cashText    = $"${PlayerModel.CashBalance:F2}";
+        string winningText = $"${PlayerModel.WinningBalance:F2}";
+
+        if (accountBalanceText       != null) accountBalanceText.text       = cashText;
+        if (accountBalanceShadowText != null) accountBalanceShadowText.text = cashText;
+        if (winningBalanceText       != null) winningBalanceText.text       = winningText;
+        if (winningBalanceShadowText != null) winningBalanceShadowText.text = winningText;
+
+        Debug.Log($"[AccountManager] Balance UI refreshed — Cash: {cashText}, Winning: {winningText}");
     }
     
     /// <summary>

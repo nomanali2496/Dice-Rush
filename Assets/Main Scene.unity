@@ -14660,6 +14660,10 @@ MonoBehaviour:
   cellViewPrefab: {fileID: 2392267316293072629, guid: 073dedd209a941c4fb1a70f52d1b3767, type: 3}
   testDataCount: 0
   cellSize: 100
+  accountBalanceText: {fileID: 706904679}
+  accountBalanceShadowText: {fileID: 1184349702}
+  winningBalanceText: {fileID: 1699843613}
+  winningBalanceShadowText: {fileID: 369834239}
   withdrawButton: {fileID: 811596906}
   withdrawAmountInput: {fileID: 100721505}
 --- !u!4 &436674971
@@ -58943,7 +58947,7 @@ MonoBehaviour:
   particlesPerCash: 0.5
   particlesPerChip: 0.1
   maxParticles: 20
-  delayBetweenParticles: 0.2
+  delayBetweenParticles: 0.01
   animatedSpritePrefab: {fileID: 0}
   currentDay: 2
   canClaim: 0
@@ -72494,15 +72498,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1162559560897828473, guid: 590116b256728294394a3354f86c01dc, type: 3}
       propertyPath: paddingTop
-      value: 60
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1162559560897828473, guid: 590116b256728294394a3354f86c01dc, type: 3}
       propertyPath: paddingLeft
-      value: 60
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1162559560897828473, guid: 590116b256728294394a3354f86c01dc, type: 3}
       propertyPath: paddingRight
-      value: 60
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1162559560897828473, guid: 590116b256728294394a3354f86c01dc, type: 3}
       propertyPath: sliderParent
@@ -72510,7 +72514,7 @@ PrefabInstance:
       objectReference: {fileID: 75685190}
     - target: {fileID: 1162559560897828473, guid: 590116b256728294394a3354f86c01dc, type: 3}
       propertyPath: paddingBottom
-      value: 60
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1162559560897828473, guid: 590116b256728294394a3354f86c01dc, type: 3}
       propertyPath: powerupTimerText
