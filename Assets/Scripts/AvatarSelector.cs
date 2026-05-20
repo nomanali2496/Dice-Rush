@@ -123,7 +123,7 @@ public class AvatarSelector : MonoBehaviour
     private void SetupWatchVideoText()
     {
         if (watchVideoText != null)
-            watchVideoText.text = "Watch Video and Earn 10 <sprite name=\"chips\">";
+            watchVideoText.text = "Watch Video and Earn 10   <voffset=0.25em><sprite name=\"chips 1\"></voffset>";
     }
 
     // Public helper for other scripts
