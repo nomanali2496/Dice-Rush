@@ -343,14 +343,14 @@ public class BranchInit : MonoBehaviour
             // Create Branch Universal Object for the invite
             BranchUniversalObject universalObject = new BranchUniversalObject();
             universalObject.canonicalIdentifier = "invite_friend";
-            universalObject.title = "Join Dice Rush!";
-            universalObject.contentDescription = "Play Dice Rush with me! Use my invite link to get started.";
+            universalObject.title = "Join Blingo Dice";
+            universalObject.contentDescription = "Play Blingo Dice with me! Use my invite link to get started.";
             universalObject.contentIndexMode = 0;
             universalObject.localIndexMode = 0;
 
             // Add custom metadata
             universalObject.metadata.AddCustomMetadata("invite_type", "friend_invite");
-            universalObject.metadata.AddCustomMetadata("app_name", "Dice Rush");
+            universalObject.metadata.AddCustomMetadata("app_name", "Blingo Dice");
             
             // Create link properties first
             BranchLinkProperties linkProperties = new BranchLinkProperties();
@@ -379,7 +379,7 @@ public class BranchInit : MonoBehaviour
             linkProperties.feature = "invite";
             linkProperties.channel = "app_invite";
             linkProperties.tags.Add("friend_invite");
-            linkProperties.tags.Add("dice_rush");
+            linkProperties.tags.Add("blingo_dice");
             
             // Set control parameters (these will be passed when link is clicked)
             linkProperties.controlParams.Add("invite_type", "friend_invite");
@@ -418,7 +418,7 @@ public class BranchInit : MonoBehaviour
     {
         Debug.Log("[BranchInit] Sharing invite link...");
         
-        string shareMessage = "Join me in Dice Rush! Use my invite link: " + url;
+        string shareMessage = "Join me in Blingo Dice! Use my invite link: " + url;
         
         // Use Branch's shareLink method which handles native sharing
         Branch.shareLink(universalObject, linkProperties, shareMessage, (parameters, error) =>
@@ -456,8 +456,8 @@ public class BranchInit : MonoBehaviour
 
         BranchUniversalObject universalObject = new BranchUniversalObject();
         universalObject.canonicalIdentifier = "invite_friend";
-        universalObject.title = "Join Dice Rush!";
-        universalObject.contentDescription = "Play Dice Rush with me!";
+        universalObject.title = "Join Blingo Dice";
+        universalObject.contentDescription = "Play Blingo Dice with me!";
 
         BranchLinkProperties linkProperties = new BranchLinkProperties();
         linkProperties.feature = "invite";
