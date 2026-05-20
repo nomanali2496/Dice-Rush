@@ -22,6 +22,7 @@ public class DailyRewardManager : MonoBehaviour
     [Header("Collect Button")]
     [SerializeField] private Button collectButton;
     [SerializeField] private Button closeButton;
+    [SerializeField] private Button[] dayButtons = new Button[7]; // Assign all 7 day buttons here
     
     [Header("Settings")]
     [SerializeField] private float autoCloseDelay = 0.5f;
@@ -37,13 +38,13 @@ public class DailyRewardManager : MonoBehaviour
     [SerializeField] private Sprite chipsSprite;
     
     [Header("Animation Settings")]
-    [SerializeField] private float animationDuration = 1.5f;
+    [SerializeField] private float animationDuration = 0.6f;
     [SerializeField] private AnimationCurve movementCurve = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
     [SerializeField] private int baseParticles = 3;
     [SerializeField] private float particlesPerCash = 0.5f;
     [SerializeField] private float particlesPerChip = 0.1f;
     [SerializeField] private int maxParticles = 20;
-    [SerializeField] private float delayBetweenParticles = 0.1f;
+    [SerializeField] private float delayBetweenParticles = 0.05f;
     
     [Header("Animation - Prefab")]
     [SerializeField] private GameObject animatedSpritePrefab;
@@ -77,6 +78,16 @@ public class DailyRewardManager : MonoBehaviour
         if (collectButton != null)
         {
             collectButton.onClick.AddListener(CollectCurrentDayReward);
+        }
+
+        // Wire each day button to collect reward when clicked (assign in Inspector)
+        for (int i = 0; i < dayButtons.Length; i++)
+        {
+            if (dayButtons[i] != null)
+            {
+                dayButtons[i].onClick.RemoveAllListeners();
+                dayButtons[i].onClick.AddListener(CollectCurrentDayReward);
+            }
         }
 
         // Subscribe to login events
@@ -192,6 +203,13 @@ public class DailyRewardManager : MonoBehaviour
         {
             collectButton.interactable = canClaim;
         }
+        
+        // Also control all day buttons interactable state
+        for (int i = 0; i < dayButtons.Length; i++)
+        {
+            if (dayButtons[i] != null)
+                dayButtons[i].interactable = canClaim;
+        }
     }
 
     public void CollectCurrentDayReward()
@@ -272,7 +290,7 @@ public class DailyRewardManager : MonoBehaviour
         canClaim = false;
         UpdateUI();
 
-        yield return new WaitForSeconds(autoCloseDelay);
+        // Close the panel immediately after reward is collected
         ClosePanel();
     }
 
