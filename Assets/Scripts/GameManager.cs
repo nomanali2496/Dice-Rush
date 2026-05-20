@@ -550,9 +550,12 @@ public class GameManager : MonoBehaviour
             countdownText.gameObject.SetActive(true);
             countdownTextShadow.gameObject.SetActive(true);
             
-            // Just show "..." or a generic message while waiting for the exact start
-            countdownText.text = "...";
-            countdownTextShadow.text = "...";
+            // Just show "..." or a generic message while waiting for the exact start if a number isn't already set
+            if (string.IsNullOrEmpty(countdownText.text) || countdownText.text == "..." || !int.TryParse(countdownText.text, out _))
+            {
+                countdownText.text = "...";
+                countdownTextShadow.text = "...";
+            }
         }
         
         // Hide game timer

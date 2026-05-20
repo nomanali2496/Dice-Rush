@@ -67857,6 +67857,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3079440045171344741, guid: 87a847b862e99fe478c9ef3c8cbefda2, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.2756764
+      objectReference: {fileID: 0}
+    - target: {fileID: 3079440045171344741, guid: 87a847b862e99fe478c9ef3c8cbefda2, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.990566
+      objectReference: {fileID: 0}
+    - target: {fileID: 3079440045171344741, guid: 87a847b862e99fe478c9ef3c8cbefda2, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.29079342
+      objectReference: {fileID: 0}
+    - target: {fileID: 3079440045171344741, guid: 87a847b862e99fe478c9ef3c8cbefda2, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4282842442
+      objectReference: {fileID: 0}
     - target: {fileID: 5457951867292248810, guid: 87a847b862e99fe478c9ef3c8cbefda2, type: 3}
       propertyPath: m_Name
       value: CountdownTextShadow
