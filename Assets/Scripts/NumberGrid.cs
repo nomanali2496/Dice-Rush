@@ -873,13 +873,18 @@ public class NumberGrid : MonoBehaviour
             return;
         }
         
-        // REMOVED local checks for dice sum and duplicate taps.
-        // We now send EVERY tap to the server so it can validate and penalize (-50) if wrong.
+        // --- OPTIMISTIC UI / CLIENT-SIDE PREDICTION ---
+        // If the tap matches our local dice sum and hasn't been selected in this roll, optimistically lock it for instant feedback
+        if (currentDiceSumPlayer > 0 && boxData.number == currentDiceSumPlayer && !IsAnyBoxWithNumberSelectedInCurrentRoll(boxData.number, PlayerType.Player))
+        {
+            Debug.Log("<color=#00FF00>⚡ [Client-Side Prediction] Optimistically locking valid tap instantly.</color>");
+            PerformLocalBoxLock(boxData, PlayerType.Player);
+        }
         
         // Store this as the last tapped box for visual feedback from server
         lastTappedBoxData = boxData;
 
-        // EMIT TAP TO SERVER instead of locking locally
+        // EMIT TAP TO SERVER
         GameManager gm = FindObjectOfType<GameManager>();
         string roomId = gm != null ? gm.GetCurrentRoomId() : null;
         
@@ -895,8 +900,11 @@ public class NumberGrid : MonoBehaviour
         }
         else
         {
-            // Fallback for offline/network testing (original logic)
-            PerformLocalBoxLock(boxData, PlayerType.Player);
+            // Fallback for offline/network testing
+            if (!boxData.isSelected)
+            {
+                PerformLocalBoxLock(boxData, PlayerType.Player);
+            }
         }
     }
 
@@ -934,6 +942,39 @@ public class NumberGrid : MonoBehaviour
                     serverPowerupUIUpdateCoroutine = null;
                 }
             }
+            else 
+            {
+                // Box is already selected (likely via Client-Side Prediction)
+                Debug.Log($"<color=#00FF00>✅ [NumberGrid] Server confirmed lock for box {data.index}. (Already optimistically locked)</color>");
+            }
+        }
+    }
+
+    /// <summary>
+    /// Rolls back an optimistically locked box if the server rejects it
+    /// </summary>
+    private void RollbackBoxLock(BoxData boxData)
+    {
+        if (boxData == null) return;
+        
+        Debug.Log($"<color=#FFA500>↩️ [Client-Side Prediction] Rolling back optimistic lock for box index {boxDataList.IndexOf(boxData)} (number {boxData.number})</color>");
+        
+        boxData.isSelected = false;
+        boxData.selectedByPlayer = PlayerType.Player;
+        boxData.selectedByCPUIndex = -1;
+        boxData.selectedInRollSum = -1;
+        boxData.selectedInRollId = -1;
+        
+        // Re-enable button
+        if (boxData.selectButton != null)
+        {
+            boxData.selectButton.interactable = true;
+        }
+        
+        // Hide highlight
+        if (boxData.highlightImage != null)
+        {
+            boxData.highlightImage.gameObject.SetActive(false);
         }
     }
 
@@ -941,6 +982,12 @@ public class NumberGrid : MonoBehaviour
     {
         if (!data.correct)
         {
+            // Rollback the optimistic lock if it was locked
+            if (lastTappedBoxData != null && lastTappedBoxData.isSelected && lastTappedBoxData.selectedByPlayer == PlayerType.Player)
+            {
+                RollbackBoxLock(lastTappedBoxData);
+            }
+            
             // Trigger the "Wrong" visual effect on the specific box that was tapped
             GameObject targetObj = (lastTappedBoxData != null) ? lastTappedBoxData.boxObject : null;
             int num = (lastTappedBoxData != null) ? lastTappedBoxData.number : -1;
@@ -950,7 +997,7 @@ public class NumberGrid : MonoBehaviour
         }
         else
         {
-            Debug.Log("<color=#00FF00>✅ Server says: CORRECT TAP!</color>");
+            Debug.Log("<color=#00FF00>✅ Server says: CORRECT TAP! Optimistic lock confirmed.</color>");
         }
     }
 
