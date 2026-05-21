@@ -372,10 +372,95 @@ public class BackendAuthService : MonoBehaviour
         StartCoroutine(SocialLoginCoroutine("/api/auth/facebook", accessToken, onComplete));
     }
 
+    /// <summary>
+    /// Sends an Apple Login request to the custom Node.js server.
+    /// </summary>
+    public void AppleLogin(string identityToken, string displayName, Action<bool, string> onComplete)
+    {
+        Debug.Log($"<color=#00ffff>[BackendAuthService] POST Request: /api/auth/apple | Token provided</color>");
+        
+        string firstName = "";
+        string lastName = "";
+        
+        if (!string.IsNullOrEmpty(displayName))
+        {
+            string[] names = displayName.Split(' ');
+            firstName = names[0];
+            if (names.Length > 1)
+            {
+                lastName = displayName.Substring(firstName.Length).Trim();
+            }
+        }
+        
+        string jsonData = $"{{\"idToken\":\"{identityToken}\", \"user\": {{\"name\": {{\"firstName\": \"{firstName}\", \"lastName\": \"{lastName}\"}}}}}}";
+        
+        StartCoroutine(CustomPayloadLoginCoroutine("/api/auth/apple", jsonData, onComplete));
+    }
+
     private IEnumerator SocialLoginCoroutine(string endpoint, string token, Action<bool, string> onComplete)
     {
         string url = baseUrl.TrimEnd('/') + endpoint; 
         string jsonData = $"{{\"token\":\"{token}\", \"idToken\":\"{token}\"}}";
+        
+        Debug.Log($"[BackendAuthService] DIAGNOSTIC - Sending payload to {endpoint}: {jsonData}");
+        
+        using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+        {
+            byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonData);
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Social Login Result: {request.downloadHandler.text}</color>");
+                try
+                {
+                    AuthResponse response = JsonUtility.FromJson<AuthResponse>(request.downloadHandler.text);
+                    
+                    if (!string.IsNullOrEmpty(response.token))
+                    {
+                        if (response.user != null && !string.IsNullOrEmpty(response.user.id))
+                        {
+                            PlayerModel.UpdateData(
+                                response.user.id, response.user.name, response.user.email,
+                                response.user.wins, response.user.losses, response.user.balance,
+                                response.user.cashBalance, response.user.bonusBalance, response.user.winningBalance,
+                                response.user.coins, response.user.avatar, response.user.xp,
+                                response.user.level, response.user.role, 0,
+                                response.user.activeMatchId, response.user.activeRoomId
+                            );
+                        }
+
+                        PlayerPrefs.SetString(JWT_PREF_KEY, response.token);
+                        PlayerPrefs.Save();
+                        
+                        onComplete?.Invoke(true, "Social Login successful!");
+                    }
+                    else
+                    {
+                        onComplete?.Invoke(false, "Social Login succeeded, but no token was returned.");
+                    }
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError($"<color=#ff0000>[BackendAuthService] JSON Parse Error: {e.Message}</color>");
+                    onComplete?.Invoke(false, "Failed to parse server response.");
+                }
+            }
+            else
+            {
+                Debug.LogError($"<color=#ff0000>[BackendAuthService] Social Login Error: {request.error} | {request.downloadHandler.text}</color>");
+                onComplete?.Invoke(false, request.downloadHandler.text);
+            }
+        }
+    }
+
+    private IEnumerator CustomPayloadLoginCoroutine(string endpoint, string jsonData, Action<bool, string> onComplete)
+    {
+        string url = baseUrl.TrimEnd('/') + endpoint; 
         
         Debug.Log($"[BackendAuthService] DIAGNOSTIC - Sending payload to {endpoint}: {jsonData}");
         

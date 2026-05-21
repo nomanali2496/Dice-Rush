@@ -30,6 +30,7 @@ public class AuthenticationManager : MonoBehaviour
     [SerializeField] private Button guestLoginButton;
     [SerializeField] private Button googleLoginButton;
     [SerializeField] private Button facebookLoginButton;
+    [SerializeField] private Button appleLoginButton;
     [SerializeField] private Toggle loginPasswordToggle;
     
     [Header("Registration UI")]
@@ -41,6 +42,7 @@ public class AuthenticationManager : MonoBehaviour
     [SerializeField] private Toggle registerPasswordToggle;
     [SerializeField] private Button registerGoogleButton;
     [SerializeField] private Button registerFacebookButton;
+    [SerializeField] private Button registerAppleButton;
     
     [Header("Status")]
     // [SerializeField] private TextMeshProUGUI statusText;
@@ -61,6 +63,12 @@ public class AuthenticationManager : MonoBehaviour
     {
         // Initialize Facebook and Google sign-in managers
         InitializeSocialManagers();
+        
+        #if UNITY_ANDROID && !UNITY_EDITOR
+        // Hide Apple Login buttons on Android devices
+        if (appleLoginButton != null) appleLoginButton.gameObject.SetActive(false);
+        if (registerAppleButton != null) registerAppleButton.gameObject.SetActive(false);
+        #endif
         
         // Setup button listeners
         if (loginButton != null)
@@ -83,6 +91,12 @@ public class AuthenticationManager : MonoBehaviour
             
         if (registerFacebookButton != null)
             registerFacebookButton.onClick.AddListener(OnFacebookLoginClicked);
+            
+        if (appleLoginButton != null)
+            appleLoginButton.onClick.AddListener(OnAppleLoginClicked);
+            
+        if (registerAppleButton != null)
+            registerAppleButton.onClick.AddListener(OnAppleLoginClicked);
         
         if (switchToRegisterButton != null)
             switchToRegisterButton.onClick.AddListener(() => ShowRegisterSection());
@@ -239,6 +253,16 @@ public class AuthenticationManager : MonoBehaviour
             // Try to auto-login with stored email credentials
             Debug.Log("[AuthenticationManager] Last login was Email - attempting auto-login with stored credentials...");
             AttemptEmailAutoLogin();
+        }
+        else if (lastLoginMethod == "Apple")
+        {
+            // Manual Apple login is required (silent login not fully supported natively via this flow without quick login checks)
+            Debug.Log("[AuthenticationManager] Last login was Apple - showing login screen");
+            isAttemptingAutoLogin = false;
+            ShowLoginRegisterPanel();
+            ShowLoginSection();
+            SetLoadingState(false);
+            UpdateStatusText("");
         }
         else
         {
@@ -892,6 +916,62 @@ public class AuthenticationManager : MonoBehaviour
         if (Application.internetReachability == NetworkReachability.NotReachable || (error != null && error.ToLower().Contains("network")))
         {
             ShowInternetPanel(OnFacebookLoginClicked);
+        }
+    }
+    
+    private void OnAppleLoginClicked()
+    {
+        if (!CheckInternetAndAction(OnAppleLoginClicked)) return;
+        
+        UpdateStatusText("Signing in with Apple...");
+        
+        if (AppleAuthenticationManager.Instance != null)
+        {
+            AppleAuthenticationManager.AfterAuthenticationResp = HandleAppleLoginResponse;
+            AppleAuthenticationManager.Instance.PerformAppleLogin();
+        }
+        else
+        {
+            UpdateStatusText("Error: AppleAuthenticationManager not found!");
+            SetLoadingState(false);
+        }
+    }
+    
+    private void HandleAppleLoginResponse(bool success, string token, string displayName)
+    {
+        if (success)
+        {
+            Debug.Log($"[AuthenticationManager] Apple Sign-In successful, logging into Backend... Name: {displayName}");
+            UpdateStatusText("Logging into Backend...");
+            
+            if (BackendAuthService.Instance != null)
+            {
+                BackendAuthService.Instance.AppleLogin(token, displayName, (backendSuccess, message) => 
+                {
+                    if (backendSuccess)
+                    {
+                        PlayerPrefs.SetString("LastLoginMethod", "Apple");
+                        PlayerPrefs.Save();
+                        OnLoginComplete(true);
+                    }
+                    else
+                    {
+                        UpdateStatusText(message);
+                        SetLoadingState(false);
+                    }
+                });
+            }
+            else
+            {
+                UpdateStatusText("Error: BackendAuthService not found!");
+                SetLoadingState(false);
+            }
+        }
+        else
+        {
+            Debug.LogError($"[AuthenticationManager] Apple Sign-In failed: {token}");
+            UpdateStatusText($"Apple Sign-In failed: {token}");
+            SetLoadingState(false);
         }
     }
     

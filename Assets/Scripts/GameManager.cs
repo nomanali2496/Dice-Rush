@@ -187,6 +187,8 @@ public class GameManager : MonoBehaviour
         MatchmakingModel.OnNumberLockedEvent += HandleServerNumberLocked;
         MatchmakingModel.OnGameOverEvent += HandleServerGameOver;
         MatchmakingModel.OnCountdownEvent += HandleServerCountdown;
+        MatchmakingModel.OnDiceRolledEvent += HandleServerDiceRolled;
+        MatchmakingModel.OnTapResultEvent += HandleServerTapResult;
     }
 
     private void HandleServerGameOver(GameOverData data)
@@ -356,11 +358,50 @@ public class GameManager : MonoBehaviour
 
     private void HandleServerNumberLocked(NumberLockedData data)
     {
-        if (data != null && data.userId != PlayerModel.Id)
+        if (data != null)
         {
-            networkPlayerScores[data.userId] = data.score;
-            networkPlayerTimes[data.userId] = GetEstimatedServerTime();
-            Debug.Log($"[GameManager] Sync: Player {data.userId} updated score to: {data.score}");
+            if (data.userId != PlayerModel.Id)
+            {
+                networkPlayerScores[data.userId] = data.score;
+                networkPlayerTimes[data.userId] = GetEstimatedServerTime();
+                Debug.Log($"[GameManager] Sync: Player {data.userId} updated score to: {data.score}");
+            }
+            else
+            {
+                // We keep track of the local player's true server score but DO NOT force the UI to update immediately.
+                networkPlayerScores[data.userId] = data.score;
+                Debug.Log($"[GameManager] Silent Sync: Local player true server score is: {data.score}");
+            }
+        }
+    }
+
+    private void HandleServerDiceRolled(DiceRolledData data)
+    {
+        // When the dice rolls, the previous round is OVER. No more pending rapid taps.
+        // If there is a discrepancy between our optimistic score and the server's true score,
+        // it means a tap was dropped/rejected silently. We correct the UI now.
+        if (networkPlayerScores.TryGetValue(PlayerModel.Id, out int trueServerScore))
+        {
+            if (localMatchScore != trueServerScore)
+            {
+                Debug.Log($"[GameManager] Dice Roll Correction: UI Score ({localMatchScore}) differs from Server Score ({trueServerScore}). Correcting UI.");
+                localMatchScore = trueServerScore;
+                
+                if (ScoreFeedbackUIManager.Instance != null)
+                {
+                    ScoreFeedbackUIManager.Instance.SetScore(localMatchScore);
+                }
+            }
+        }
+    }
+
+    private void HandleServerTapResult(TapResultData data)
+    {
+        if (data != null)
+        {
+            // Silently update the local player's true server score (especially important for -50 wrong tap penalties)
+            networkPlayerScores[PlayerModel.Id] = data.score;
+            Debug.Log($"[GameManager] Silent Sync: Local player true server score updated from TapResult to: {data.score}");
         }
     }
     
@@ -794,6 +835,8 @@ public class GameManager : MonoBehaviour
         MatchmakingModel.OnNumberLockedEvent -= HandleServerNumberLocked;
         MatchmakingModel.OnGameOverEvent -= HandleServerGameOver;
         MatchmakingModel.OnCountdownEvent -= HandleServerCountdown;
+        MatchmakingModel.OnDiceRolledEvent -= HandleServerDiceRolled;
+        MatchmakingModel.OnTapResultEvent -= HandleServerTapResult;
 
         if (numberGrid != null)
         {

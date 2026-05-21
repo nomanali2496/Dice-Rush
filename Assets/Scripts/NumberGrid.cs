@@ -120,6 +120,7 @@ public class NumberGrid : MonoBehaviour
     
     // Separate tracking for Player and CPU
     private int currentDiceSumPlayer = -1; // Current dice sum for Player (-1 means no sum set yet)
+    private bool hasTappedThisRollPlayer = false; // Prevents multiple taps per roll
     private int currentDiceSumCPU = -1; // Current dice sum for CPU (-1 means no sum set yet) - DEPRECATED: Use cpuDiceSums instead
     private int currentRollIdPlayer = 0; // Roll ID for Player
     private int currentRollIdCPU = 0; // Roll ID for CPU - DEPRECATED: Use cpuRollIds instead
@@ -785,6 +786,7 @@ public class NumberGrid : MonoBehaviour
             currentRollIdPlayer++;
             currentDiceSumPlayer = sum;
             tapSequence = 0; // Reset sequence for anti-cheat on every new roll
+            hasTappedThisRollPlayer = false; // Allow tapping for this new roll
         }
         else // CPU
         {
@@ -861,11 +863,21 @@ public class NumberGrid : MonoBehaviour
     /// </summary>
     private void OnBoxButtonClicked(BoxData boxData)
     {
+        if (hasTappedThisRollPlayer)
+        {
+            // Player already tapped a box this roll - completely lock out further taps
+            Debug.LogWarning("[NumberGrid] Player already tapped this roll. Wait for the next roll!");
+            return;
+        }
+
         if (boxData.isSelected)
         {
             // Box is already selected and locked - do nothing
             return;
         }
+        
+        // Lock the board so the player cannot tap again this roll
+        hasTappedThisRollPlayer = true;
         
         if (boxData.isPowerup)
         {
