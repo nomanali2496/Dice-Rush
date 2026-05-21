@@ -252,7 +252,7 @@ struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915
 	};
 };
 #pragma pack(push, tp, 1)
-struct __StaticArrayInitTypeSizeU3D10701_t5004FB369C5D13DE2D35DA13A858684FCF816EFC 
+struct __StaticArrayInitTypeSizeU3D10731_t001F670DABBC72FD188309C1788E9B60C5FD76F8 
 {
 	union
 	{
@@ -262,7 +262,7 @@ struct __StaticArrayInitTypeSizeU3D10701_t5004FB369C5D13DE2D35DA13A858684FCF816E
 			{
 			};
 		};
-		uint8_t __StaticArrayInitTypeSizeU3D10701_t5004FB369C5D13DE2D35DA13A858684FCF816EFC__padding[10701];
+		uint8_t __StaticArrayInitTypeSizeU3D10731_t001F670DABBC72FD188309C1788E9B60C5FD76F8__padding[10731];
 	};
 };
 #pragma pack(pop, tp)
@@ -287,8 +287,8 @@ struct TOKEN_tE9BCDD18E51944946561C64814AAC2886E9852A0
 };
 struct U3CPrivateImplementationDetailsU3E_t0F5473E849A5A5185A9F4C5246F0C32816C49FCA_StaticFields
 {
-	__StaticArrayInitTypeSizeU3D17035_t41C533685FA042A2524D5C8213D12D0A84520049 ___AF1DEBD6AED8146AAD8B3A004B7FCE5AC259D551D1C96D71A0193AB89062BFCD;
-	__StaticArrayInitTypeSizeU3D10701_t5004FB369C5D13DE2D35DA13A858684FCF816EFC ___FB52CA412586E42B23730513B22936AB13BC86C53D65776419DB03081DEEB1F7;
+	__StaticArrayInitTypeSizeU3D10731_t001F670DABBC72FD188309C1788E9B60C5FD76F8 ___47AEC37DE9871366160F3199ABC853545AFF2CAD49D13426D8A519AB63147281;
+	__StaticArrayInitTypeSizeU3D17035_t41C533685FA042A2524D5C8213D12D0A84520049 ___BF6824D10AACF6A790B6B6AAD653ECB336C018185FE47ECD339583752FA1ABBD;
 };
 struct String_t_StaticFields
 {
@@ -380,7 +380,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Double_ToString_m70EC76E1DAD7E8B5B4
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 90935
+// Method Definition Index: 90961
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Serializer__ctor_m1AC65B7201AF35020621757EDA9CF2F517123614 (Serializer_t080A530C38A3C9BBE2EB8CB81F36149BCFE25635* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -401,7 +401,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Serializer__ctor_m1AC65B7201AF3502062175
 		return;
 	}
 }
-// Method Definition Index: 90936
+// Method Definition Index: 90962
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Serializer_Serialize_m70E06BB55F5615FF0EDE474912A8C2FEDBFBBE10 (RuntimeObject* ___0_obj, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -428,7 +428,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Serializer_Serialize_m70E06BB55F561
 		return L_4;
 	}
 }
-// Method Definition Index: 90937
+// Method Definition Index: 90963
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Serializer_SerializeValue_m952078ABBCE9FDAF9FC44028879BBF5FC10C1030 (Serializer_t080A530C38A3C9BBE2EB8CB81F36149BCFE25635* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -586,7 +586,7 @@ IL_008f:
 		return;
 	}
 }
-// Method Definition Index: 90938
+// Method Definition Index: 90964
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Serializer_SerializeObject_mEE17BC69DDCF30AD22C910401562491ADABE5426 (Serializer_t080A530C38A3C9BBE2EB8CB81F36149BCFE25635* __this, RuntimeObject* ___0_obj, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -733,7 +733,7 @@ IL_007a:
 		return;
 	}
 }
-// Method Definition Index: 90939
+// Method Definition Index: 90965
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Serializer_SerializeArray_mD635B32B9406AF9608B71640F32C16AB828138BB (Serializer_t080A530C38A3C9BBE2EB8CB81F36149BCFE25635* __this, RuntimeObject* ___0_anArray, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -861,7 +861,7 @@ IL_0055:
 		return;
 	}
 }
-// Method Definition Index: 90940
+// Method Definition Index: 90966
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Serializer_SerializeString_mB658D7F56B6D171FE905FE62A98E59DAC6050BDB (Serializer_t080A530C38A3C9BBE2EB8CB81F36149BCFE25635* __this, String_t* ___0_str, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1108,7 +1108,7 @@ IL_012d:
 		return;
 	}
 }
-// Method Definition Index: 90941
+// Method Definition Index: 90967
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Serializer_SerializeOther_m5A394D1B6C91B809DFBF69B4F3B9FAE531853841 (Serializer_t080A530C38A3C9BBE2EB8CB81F36149BCFE25635* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;

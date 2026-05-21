@@ -3025,6 +3025,8 @@ MonoBehaviour:
   registerPasswordInput: {fileID: 1456264678}
   registerButton: {fileID: 477676731}
   registerPasswordToggle: {fileID: 547368177}
+  registerGoogleButton: {fileID: 1197553821}
+  registerFacebookButton: {fileID: 1555826397}
   minPasswordLength: 6
 --- !u!4 &93007937
 Transform:
@@ -52919,10 +52921,10 @@ RectTransform:
   - {fileID: 1140856341}
   m_Father: {fileID: 1676726132}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11, y: -1160.5}
-  m_SizeDelta: {x: 1076, y: 327}
+  m_AnchorMin: {x: 0.11875, y: 0.08830846}
+  m_AnchorMax: {x: 0.8659722, y: 0.18998756}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1673241482
 MonoBehaviour:

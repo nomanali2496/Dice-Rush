@@ -39,6 +39,8 @@ public class AuthenticationManager : MonoBehaviour
     // [SerializeField] private TMP_InputField registerConfirmPasswordInput;
     [SerializeField] private Button registerButton;
     [SerializeField] private Toggle registerPasswordToggle;
+    [SerializeField] private Button registerGoogleButton;
+    [SerializeField] private Button registerFacebookButton;
     
     [Header("Status")]
     // [SerializeField] private TextMeshProUGUI statusText;
@@ -57,6 +59,9 @@ public class AuthenticationManager : MonoBehaviour
     
     private void Start()
     {
+        // Initialize Facebook and Google sign-in managers
+        InitializeSocialManagers();
+        
         // Setup button listeners
         if (loginButton != null)
             loginButton.onClick.AddListener(OnLoginClicked);
@@ -72,6 +77,12 @@ public class AuthenticationManager : MonoBehaviour
         
         if (facebookLoginButton != null)
             facebookLoginButton.onClick.AddListener(OnFacebookLoginClicked);
+            
+        if (registerGoogleButton != null)
+            registerGoogleButton.onClick.AddListener(OnGoogleLoginClicked);
+            
+        if (registerFacebookButton != null)
+            registerFacebookButton.onClick.AddListener(OnFacebookLoginClicked);
         
         if (switchToRegisterButton != null)
             switchToRegisterButton.onClick.AddListener(() => ShowRegisterSection());
@@ -741,8 +752,17 @@ public class AuthenticationManager : MonoBehaviour
     private void OnGoogleSignInSuccess(string serverAuthCode, string idToken, string email, string displayName, string photoUrl)
     {
         Debug.Log($"[AuthenticationManager] Google Sign-In successful, logging into Backend... Email: {email}, Name: {displayName}");
+        Debug.Log($"[AuthenticationManager] DIAGNOSTIC - idToken length: {(string.IsNullOrEmpty(idToken) ? 0 : idToken.Length)}");
+        Debug.Log($"[AuthenticationManager] DIAGNOSTIC - serverAuthCode length: {(string.IsNullOrEmpty(serverAuthCode) ? 0 : serverAuthCode.Length)}");
         UpdateStatusText("Logging into Backend...");
         
+        if (string.IsNullOrEmpty(idToken))
+        {
+            UpdateStatusText("Error: Google did not return an ID Token. Check your Web Client ID.");
+            SetLoadingState(false);
+            return;
+        }
+
         if (BackendAuthService.Instance != null)
         {
             BackendAuthService.Instance.GoogleLogin(idToken, (success, message) => 
@@ -796,13 +816,14 @@ public class AuthenticationManager : MonoBehaviour
     
     private void OnFacebookLoginClicked()
     {
+        Debug.Log(">>> [AuthenticationManager] OnFacebookLoginClicked FIRED! <<<");
         if (!CheckInternetAndAction(OnFacebookLoginClicked)) return;
         
-        SetLoadingState(true);
         UpdateStatusText("Signing in with Facebook...");
         
         if (FacebookSignInManager.Instance != null)
         {
+            Debug.Log(">>> [AuthenticationManager] FacebookSignInManager.Instance exists. Calling SignInWithFacebook... <<<");
             // Subscribe to Facebook Sign-In events
             FacebookSignInManager.Instance.OnFacebookSignInSuccess += OnFacebookSignInSuccess;
             FacebookSignInManager.Instance.OnFacebookSignInFailure += OnFacebookSignInFailure;
@@ -812,6 +833,7 @@ public class AuthenticationManager : MonoBehaviour
         }
         else
         {
+            Debug.LogError(">>> [AuthenticationManager] ERROR: FacebookSignInManager.Instance is NULL! <<<");
             UpdateStatusText("Error: FacebookSignInManager not found!");
             SetLoadingState(false);
         }

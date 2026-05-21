@@ -375,8 +375,10 @@ public class BackendAuthService : MonoBehaviour
     private IEnumerator SocialLoginCoroutine(string endpoint, string token, Action<bool, string> onComplete)
     {
         string url = baseUrl.TrimEnd('/') + endpoint; 
-        string jsonData = $"{{\"token\":\"{token}\"}}";
-
+        string jsonData = $"{{\"token\":\"{token}\", \"idToken\":\"{token}\"}}";
+        
+        Debug.Log($"[BackendAuthService] DIAGNOSTIC - Sending payload to {endpoint}: {jsonData}");
+        
         using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
         {
             byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonData);
