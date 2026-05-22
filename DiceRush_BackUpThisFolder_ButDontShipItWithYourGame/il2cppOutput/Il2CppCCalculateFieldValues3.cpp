@@ -3585,7 +3585,7 @@ struct ImmutableCollectionTypeInfo_tABA4F728A9A2BA1C6AB88F6BFD1FF9F0C936E685  : 
 };
 struct U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8  : public RuntimeObject
 {
-	int32_t ___packageIndex;
+	int32_t ___finalPackageIndex;
 	InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* ___U3CU3E4__this;
 };
 struct U3CU3Ec__DisplayClass38_0_t0B9CEE1979C188EC1541980C56003864AD595E9F  : public RuntimeObject
@@ -35829,7 +35829,7 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable10782[4] =
 	static_cast<int32_t>(offsetof(PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053, ___chipsAmount)),static_cast<int32_t>(offsetof(PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053, ___cashAmount)),static_cast<int32_t>(offsetof(PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053, ___cashBonus)),static_cast<int32_t>(offsetof(PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053, ___productId)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable10783[2] = 
 {
-	static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8, ___packageIndex)),static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8, ___U3CU3E4__this)),};
+	static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8, ___finalPackageIndex)),static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8, ___U3CU3E4__this)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable10784[3] = 
 {
 	static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass38_0_t0B9CEE1979C188EC1541980C56003864AD595E9F, ___U3CU3E4__this)),static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass38_0_t0B9CEE1979C188EC1541980C56003864AD595E9F, ___package)),static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass38_0_t0B9CEE1979C188EC1541980C56003864AD595E9F, ___totalCash)),};

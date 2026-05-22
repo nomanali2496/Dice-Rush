@@ -18130,8 +18130,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnFacebookLoginCli
 IL_001f:
 	{
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:846>
+		AuthenticationManager_SetLoadingState_m88E5DD968E80A68B0FDED1DFC2E1D237921C9B8A(__this, (bool)1, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:847>
 		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteral3840DBF693C414E70E76218D6DB0E9B3398C3ECC, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:848>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:849>
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_2;
 		L_2 = FacebookSignInManager_get_Instance_m2646A1436D1F6ABD8A9572F42AAA6FEEEB966306_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -18139,14 +18141,14 @@ IL_001f:
 		L_3 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_2, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_3)
 		{
-			goto IL_0098;
+			goto IL_009f;
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:850>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:851>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralE6522EE39A9D598E916765EB1EE96396B87BBE3E, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:852>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:853>
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_4;
 		L_4 = FacebookSignInManager_get_Instance_m2646A1436D1F6ABD8A9572F42AAA6FEEEB966306_inline(NULL);
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_5 = L_4;
@@ -18159,7 +18161,7 @@ IL_001f:
 		NullCheck(L_5);
 		L_5->___OnFacebookSignInSuccess = ((Action_4_tCFD3F346D48D585C5AD759BFABECC1400FB2CFCA*)Castclass((RuntimeObject*)L_8, Action_4_tCFD3F346D48D585C5AD759BFABECC1400FB2CFCA_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&L_5->___OnFacebookSignInSuccess), (void*)((Action_4_tCFD3F346D48D585C5AD759BFABECC1400FB2CFCA*)Castclass((RuntimeObject*)L_8, Action_4_tCFD3F346D48D585C5AD759BFABECC1400FB2CFCA_il2cpp_TypeInfo_var)));
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:853>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:854>
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_9;
 		L_9 = FacebookSignInManager_get_Instance_m2646A1436D1F6ABD8A9572F42AAA6FEEEB966306_inline(NULL);
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_10 = L_9;
@@ -18172,7 +18174,7 @@ IL_001f:
 		NullCheck(L_10);
 		L_10->___OnFacebookSignInFailure = ((Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A*)Castclass((RuntimeObject*)L_13, Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&L_10->___OnFacebookSignInFailure), (void*)((Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A*)Castclass((RuntimeObject*)L_13, Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A_il2cpp_TypeInfo_var)));
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:856>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:857>
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_14;
 		L_14 = FacebookSignInManager_get_Instance_m2646A1436D1F6ABD8A9572F42AAA6FEEEB966306_inline(NULL);
 		NullCheck(L_14);
@@ -18180,16 +18182,16 @@ IL_001f:
 		return;
 	}
 
-IL_0098:
+IL_009f:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:860>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:861>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral550A4B8497D8BFB0B51BBB86B3E583A4FA879B9C, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:861>
-		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteralC2D124A9A5E06E128F2DED2CB5D016E750516BEE, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:862>
+		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteralC2D124A9A5E06E128F2DED2CB5D016E750516BEE, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:863>
 		AuthenticationManager_SetLoadingState_m88E5DD968E80A68B0FDED1DFC2E1D237921C9B8A(__this, (bool)0, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:864>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:865>
 		return;
 	}
 }
@@ -18214,16 +18216,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnFacebookSignInSu
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:868>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:869>
 		String_t* L_0 = ___1_facebookName;
 		String_t* L_1 = ___2_facebookEmail;
 		String_t* L_2;
 		L_2 = String_Concat_m093934F71A9B351911EE46311674ED463B180006(_stringLiteralD075075ACB398F66258E0B10DC5FFC40AECCDFCD, L_0, _stringLiteral9D712CE4F27CFC2CFDA4810A13521813A202532B, L_1, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_2, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:869>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:870>
 		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteral958528DDE7926AA260B5545DB856721D102F1E8C, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:871>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:872>
 		BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_3;
 		L_3 = BackendAuthService_get_Instance_m74239149FFCCCF5A49AF965DCA0565780B051110_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -18235,7 +18237,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnFacebookSignInSu
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:873>
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:874>
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:875>
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:876>
@@ -18249,6 +18250,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnFacebookSignInSu
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:884>
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:885>
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:886>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:887>
 		BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_5;
 		L_5 = BackendAuthService_get_Instance_m74239149FFCCCF5A49AF965DCA0565780B051110_inline(NULL);
 		String_t* L_6 = ___0_accessToken;
@@ -18261,15 +18263,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnFacebookSignInSu
 
 IL_0047:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:890>
-		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteral6BFD724FF9BD0A305A47B2EA890B5498BCCF0D33, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:891>
+		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteral6BFD724FF9BD0A305A47B2EA890B5498BCCF0D33, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:892>
 		AuthenticationManager_SetLoadingState_m88E5DD968E80A68B0FDED1DFC2E1D237921C9B8A(__this, (bool)0, NULL);
 	}
 
 IL_0059:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:895>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:896>
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_8;
 		L_8 = FacebookSignInManager_get_Instance_m2646A1436D1F6ABD8A9572F42AAA6FEEEB966306_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -18281,7 +18283,7 @@ IL_0059:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:897>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:898>
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_10;
 		L_10 = FacebookSignInManager_get_Instance_m2646A1436D1F6ABD8A9572F42AAA6FEEEB966306_inline(NULL);
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_11 = L_10;
@@ -18294,7 +18296,7 @@ IL_0059:
 		NullCheck(L_11);
 		L_11->___OnFacebookSignInSuccess = ((Action_4_tCFD3F346D48D585C5AD759BFABECC1400FB2CFCA*)Castclass((RuntimeObject*)L_14, Action_4_tCFD3F346D48D585C5AD759BFABECC1400FB2CFCA_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&L_11->___OnFacebookSignInSuccess), (void*)((Action_4_tCFD3F346D48D585C5AD759BFABECC1400FB2CFCA*)Castclass((RuntimeObject*)L_14, Action_4_tCFD3F346D48D585C5AD759BFABECC1400FB2CFCA_il2cpp_TypeInfo_var)));
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:898>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:899>
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_15;
 		L_15 = FacebookSignInManager_get_Instance_m2646A1436D1F6ABD8A9572F42AAA6FEEEB966306_inline(NULL);
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_16 = L_15;
@@ -18311,7 +18313,7 @@ IL_0059:
 
 IL_00b2:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:900>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:901>
 		return;
 	}
 }
@@ -18336,20 +18338,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnFacebookSignInFa
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:904>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:905>
 		String_t* L_0 = ___0_error;
 		String_t* L_1;
 		L_1 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralEDC0DF8B6F804A650AE4510DA62ABC5298879859, L_0, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_1, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:905>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:906>
 		String_t* L_2 = ___0_error;
 		String_t* L_3;
 		L_3 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral03C84EB6C85BE7659310518BBF0EB6CFFEEFF91A, L_2, NULL);
 		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, L_3, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:906>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:907>
 		AuthenticationManager_SetLoadingState_m88E5DD968E80A68B0FDED1DFC2E1D237921C9B8A(__this, (bool)0, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:909>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:910>
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_4;
 		L_4 = FacebookSignInManager_get_Instance_m2646A1436D1F6ABD8A9572F42AAA6FEEEB966306_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -18361,7 +18363,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnFacebookSignInFa
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:911>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:912>
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_6;
 		L_6 = FacebookSignInManager_get_Instance_m2646A1436D1F6ABD8A9572F42AAA6FEEEB966306_inline(NULL);
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_7 = L_6;
@@ -18374,7 +18376,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnFacebookSignInFa
 		NullCheck(L_7);
 		L_7->___OnFacebookSignInSuccess = ((Action_4_tCFD3F346D48D585C5AD759BFABECC1400FB2CFCA*)Castclass((RuntimeObject*)L_10, Action_4_tCFD3F346D48D585C5AD759BFABECC1400FB2CFCA_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&L_7->___OnFacebookSignInSuccess), (void*)((Action_4_tCFD3F346D48D585C5AD759BFABECC1400FB2CFCA*)Castclass((RuntimeObject*)L_10, Action_4_tCFD3F346D48D585C5AD759BFABECC1400FB2CFCA_il2cpp_TypeInfo_var)));
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:912>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:913>
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_11;
 		L_11 = FacebookSignInManager_get_Instance_m2646A1436D1F6ABD8A9572F42AAA6FEEEB966306_inline(NULL);
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_12 = L_11;
@@ -18391,7 +18393,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnFacebookSignInFa
 
 IL_0081:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:916>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:917>
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		int32_t L_16;
 		L_16 = Application_get_internetReachability_m3FECA8BA005340369BB952CE8CDF3E1A53F3BA0E(NULL);
@@ -18423,7 +18425,7 @@ IL_0081:
 
 IL_009d:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:918>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:919>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_21 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_21, __this, (intptr_t)((void*)AuthenticationManager_OnFacebookLoginClicked_m64BD07E7971B88C62990FDAD5771981EDE2E511A_RuntimeMethod_var), NULL);
 		AuthenticationManager_ShowInternetPanel_mC9E2FAD91BF317E07B97864C914B172F6722CF2E(__this, L_21, NULL);
@@ -18431,7 +18433,7 @@ IL_009d:
 
 IL_00af:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:920>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:921>
 		return;
 	}
 }
@@ -18452,7 +18454,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnAppleLoginClicke
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:924>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:925>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_0 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_0, __this, (intptr_t)((void*)AuthenticationManager_OnAppleLoginClicked_m3E2918BDAA288D47690E38705EFE6BEC90482F5C_RuntimeMethod_var), NULL);
 		bool L_1;
@@ -18463,15 +18465,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnAppleLoginClicke
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:924>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:925>
 		return;
 	}
 
 IL_0015:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:926>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:927>
 		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteral5853E6F00D89313184541D17BCA44683C45007E3, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:928>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:929>
 		AppleAuthenticationManager_tD8E0F3C2C69D40BDF6B84D0E3ED83794CA79CC47* L_2 = ((AppleAuthenticationManager_tD8E0F3C2C69D40BDF6B84D0E3ED83794CA79CC47_StaticFields*)il2cpp_codegen_static_fields_for(AppleAuthenticationManager_tD8E0F3C2C69D40BDF6B84D0E3ED83794CA79CC47_il2cpp_TypeInfo_var))->___Instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
@@ -18482,12 +18484,12 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:930>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:931>
 		Action_3_t47E9CF1E65520D47EFEF70D153A098B729C5CB10* L_4 = (Action_3_t47E9CF1E65520D47EFEF70D153A098B729C5CB10*)il2cpp_codegen_object_new(Action_3_t47E9CF1E65520D47EFEF70D153A098B729C5CB10_il2cpp_TypeInfo_var);
 		Action_3__ctor_m56CA22698A116497413E0FBC601D7C4C01E9E266(L_4, __this, (intptr_t)((void*)AuthenticationManager_HandleAppleLoginResponse_m55C961E19F1F4550EECEF1E930CC21FE6F79081D_RuntimeMethod_var), NULL);
 		((AppleAuthenticationManager_tD8E0F3C2C69D40BDF6B84D0E3ED83794CA79CC47_StaticFields*)il2cpp_codegen_static_fields_for(AppleAuthenticationManager_tD8E0F3C2C69D40BDF6B84D0E3ED83794CA79CC47_il2cpp_TypeInfo_var))->___AfterAuthenticationResp = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&((AppleAuthenticationManager_tD8E0F3C2C69D40BDF6B84D0E3ED83794CA79CC47_StaticFields*)il2cpp_codegen_static_fields_for(AppleAuthenticationManager_tD8E0F3C2C69D40BDF6B84D0E3ED83794CA79CC47_il2cpp_TypeInfo_var))->___AfterAuthenticationResp), (void*)L_4);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:931>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:932>
 		AppleAuthenticationManager_tD8E0F3C2C69D40BDF6B84D0E3ED83794CA79CC47* L_5 = ((AppleAuthenticationManager_tD8E0F3C2C69D40BDF6B84D0E3ED83794CA79CC47_StaticFields*)il2cpp_codegen_static_fields_for(AppleAuthenticationManager_tD8E0F3C2C69D40BDF6B84D0E3ED83794CA79CC47_il2cpp_TypeInfo_var))->___Instance;
 		NullCheck(L_5);
 		AppleAuthenticationManager_PerformAppleLogin_mFBA158F5BFD6EBEDE9E8229DA2BE202E1C439A2F(L_5, NULL);
@@ -18496,11 +18498,11 @@ IL_0015:
 
 IL_0049:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:935>
-		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteral5005DF65225532E9E09D3FD0AF84D8AF921C63A0, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:936>
+		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteral5005DF65225532E9E09D3FD0AF84D8AF921C63A0, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:937>
 		AuthenticationManager_SetLoadingState_m88E5DD968E80A68B0FDED1DFC2E1D237921C9B8A(__this, (bool)0, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:938>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:939>
 		return;
 	}
 }
@@ -18522,7 +18524,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_HandleAppleLoginRe
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:942>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:943>
 		bool L_0 = ___0_success;
 		if (!L_0)
 		{
@@ -18530,15 +18532,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_HandleAppleLoginRe
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:944>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:945>
 		String_t* L_1 = ___2_displayName;
 		String_t* L_2;
 		L_2 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralF195931DE0DA85D80F00023BD41E25B5F130CEC6, L_1, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_2, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:945>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:946>
 		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteral958528DDE7926AA260B5545DB856721D102F1E8C, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:947>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:948>
 		BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_3;
 		L_3 = BackendAuthService_get_Instance_m74239149FFCCCF5A49AF965DCA0565780B051110_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -18550,7 +18552,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_HandleAppleLoginRe
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:949>
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:950>
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:951>
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:952>
@@ -18564,6 +18565,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_HandleAppleLoginRe
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:960>
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:961>
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:962>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:963>
 		BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_5;
 		L_5 = BackendAuthService_get_Instance_m74239149FFCCCF5A49AF965DCA0565780B051110_inline(NULL);
 		String_t* L_6 = ___1_token;
@@ -18577,29 +18579,29 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_HandleAppleLoginRe
 
 IL_0044:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:966>
-		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteral6BFD724FF9BD0A305A47B2EA890B5498BCCF0D33, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:967>
+		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteral6BFD724FF9BD0A305A47B2EA890B5498BCCF0D33, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:968>
 		AuthenticationManager_SetLoadingState_m88E5DD968E80A68B0FDED1DFC2E1D237921C9B8A(__this, (bool)0, NULL);
 		return;
 	}
 
 IL_0057:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:972>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:973>
 		String_t* L_9 = ___1_token;
 		String_t* L_10;
 		L_10 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral7FF2C75004CC35FDD9FE33339257C1D6F1104E4C, L_9, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_10, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:973>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:974>
 		String_t* L_11 = ___1_token;
 		String_t* L_12;
 		L_12 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral5FAF34DD602FAF78B92D76692DC339D82FE764F7, L_11, NULL);
 		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, L_12, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:974>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:975>
 		AuthenticationManager_SetLoadingState_m88E5DD968E80A68B0FDED1DFC2E1D237921C9B8A(__this, (bool)0, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:976>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:977>
 		return;
 	}
 }
@@ -18629,7 +18631,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnRegisterClicked_
 	String_t* G_B8_0 = NULL;
 	String_t* G_B11_0 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:984>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:985>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_0 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_0, __this, (intptr_t)((void*)AuthenticationManager_OnRegisterClicked_m16F8B96F894EB7BD94A0B33C3A3C4900E8B65CC1_RuntimeMethod_var), NULL);
 		bool L_1;
@@ -18640,13 +18642,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnRegisterClicked_
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:984>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:985>
 		return;
 	}
 
 IL_0015:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:986>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:987>
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_2 = __this->___registerNameInput;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
@@ -18673,7 +18675,7 @@ IL_002a:
 IL_0035:
 	{
 		V_0 = G_B5_0;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:987>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:988>
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_6 = __this->___registerEmailInput;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_7;
@@ -18700,7 +18702,7 @@ IL_004b:
 IL_0056:
 	{
 		V_1 = G_B8_0;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:988>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:989>
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_10 = __this->___registerPasswordInput;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_11;
@@ -18727,10 +18729,10 @@ IL_006c:
 IL_0077:
 	{
 		V_2 = G_B11_0;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:990>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:991>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralF2F086189B26212ADEE86AD14210C2BFDFB8780F, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:991>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:992>
 		String_t* L_14 = V_0;
 		String_t* L_15 = V_1;
 		String_t* L_16 = V_2;
@@ -18742,22 +18744,22 @@ IL_0077:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:993>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:994>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral80F0CBE9DB69D849D237F8CEE612BF834912DB90, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:995>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:996>
 		return;
 	}
 
 IL_0098:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:998>
-		AuthenticationManager_SetLoadingState_m88E5DD968E80A68B0FDED1DFC2E1D237921C9B8A(__this, (bool)1, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:999>
-		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteral4E28A2C64407645099B14B0E2B5C11769F302D49, NULL);
+		AuthenticationManager_SetLoadingState_m88E5DD968E80A68B0FDED1DFC2E1D237921C9B8A(__this, (bool)1, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1000>
+		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteral4E28A2C64407645099B14B0E2B5C11769F302D49, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1001>
 		__this->___isRegistering = (bool)1;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1002>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1003>
 		BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_18;
 		L_18 = BackendAuthService_get_Instance_m74239149FFCCCF5A49AF965DCA0565780B051110_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -18769,7 +18771,6 @@ IL_0098:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1004>
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1005>
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1006>
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1007>
@@ -18793,6 +18794,7 @@ IL_0098:
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1025>
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1026>
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1027>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1028>
 		BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_20;
 		L_20 = BackendAuthService_get_Instance_m74239149FFCCCF5A49AF965DCA0565780B051110_inline(NULL);
 		String_t* L_21 = V_0;
@@ -18807,13 +18809,13 @@ IL_0098:
 
 IL_00d8:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1031>
-		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteral6BFD724FF9BD0A305A47B2EA890B5498BCCF0D33, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1032>
-		AuthenticationManager_SetLoadingState_m88E5DD968E80A68B0FDED1DFC2E1D237921C9B8A(__this, (bool)0, NULL);
+		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteral6BFD724FF9BD0A305A47B2EA890B5498BCCF0D33, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1033>
+		AuthenticationManager_SetLoadingState_m88E5DD968E80A68B0FDED1DFC2E1D237921C9B8A(__this, (bool)0, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1034>
 		__this->___isRegistering = (bool)0;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1036>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1037>
 		return;
 	}
 }
@@ -18831,7 +18833,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AuthenticationManager_ValidateRegistrati
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1040>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1041>
 		String_t* L_0 = ___0_name;
 		bool L_1;
 		L_1 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_0, NULL);
@@ -18841,15 +18843,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AuthenticationManager_ValidateRegistrati
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1042>
-		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteralFE10F6FADEF94ACA9664094ABB30BB1E231CE54C, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1043>
+		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteralFE10F6FADEF94ACA9664094ABB30BB1E231CE54C, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1044>
 		return (bool)0;
 	}
 
 IL_0015:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1046>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1047>
 		String_t* L_2 = ___1_email;
 		bool L_3;
 		L_3 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_2, NULL);
@@ -18859,15 +18861,15 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1048>
-		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteral7AC02025121A806F17498F2833EDA85D90A93024, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1049>
+		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteral7AC02025121A806F17498F2833EDA85D90A93024, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1050>
 		return (bool)0;
 	}
 
 IL_002a:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1052>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1053>
 		String_t* L_4 = ___1_email;
 		bool L_5;
 		L_5 = AuthenticationManager_IsValidEmail_mB70439E6AE4D5CEFF31D8BF437D890CABA1BDE99(__this, L_4, NULL);
@@ -18877,15 +18879,15 @@ IL_002a:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1054>
-		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteralBC8A3E3DCBEA7D3E542C008818921D1693E1113B, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1055>
+		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteralBC8A3E3DCBEA7D3E542C008818921D1693E1113B, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1056>
 		return (bool)0;
 	}
 
 IL_0040:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1058>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1059>
 		String_t* L_6 = ___2_password;
 		bool L_7;
 		L_7 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_6, NULL);
@@ -18895,15 +18897,15 @@ IL_0040:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1060>
-		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteralEAB9D58B9A8817C77B1A675D0808726A17AE827F, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1061>
+		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteralEAB9D58B9A8817C77B1A675D0808726A17AE827F, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1062>
 		return (bool)0;
 	}
 
 IL_0055:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1064>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1065>
 		String_t* L_8 = ___2_password;
 		NullCheck(L_8);
 		int32_t L_9;
@@ -18915,20 +18917,20 @@ IL_0055:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1066>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1067>
 		int32_t L_11 = __this->___minPasswordLength;
 		int32_t L_12 = L_11;
 		RuntimeObject* L_13 = Box(il2cpp_defaults.int32_class, &L_12);
 		String_t* L_14;
 		L_14 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral3D9DECF1BD283A9839E80E678BCC67C7F8FC8C50, L_13, NULL);
 		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, L_14, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1067>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1068>
 		return (bool)0;
 	}
 
 IL_0080:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1076>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1077>
 		return (bool)1;
 	}
 }
@@ -18953,7 +18955,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnLoginComplete_mE
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B8_0 = NULL;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B7_0 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1086>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1087>
 		bool L_0 = __this->___isRegistering;
 		if (!L_0)
 		{
@@ -18961,18 +18963,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnLoginComplete_mE
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1088>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1089>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral12D976B26060D27072F99B50A7A46A30EB8F6319, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1089>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1090>
 		return;
 	}
 
 IL_0013:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1092>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1093>
 		AuthenticationManager_SetLoadingState_m88E5DD968E80A68B0FDED1DFC2E1D237921C9B8A(__this, (bool)0, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1094>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1095>
 		bool L_1 = ___0_success;
 		if (!L_1)
 		{
@@ -18980,7 +18982,7 @@ IL_0013:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1096>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1097>
 		bool L_2 = __this->___isAttemptingAutoLogin;
 		if (!L_2)
 		{
@@ -18988,27 +18990,27 @@ IL_0013:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1098>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1099>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralBE4D768E91F774921094D8C1255054F40F9A79B3, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1099>
-		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteral206CA668554DD4480BB45D5B18CE585CD5E04EA0, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1100>
+		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteral206CA668554DD4480BB45D5B18CE585CD5E04EA0, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1101>
 		__this->___isAttemptingAutoLogin = (bool)0;
 		goto IL_004e;
 	}
 
 IL_0043:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1104>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1105>
 		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteralBADE97C4AA404073B75CFEC3FD409B872E3698A4, NULL);
 	}
 
 IL_004e:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1108>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1109>
 		MonoBehaviour_Invoke_mF724350C59362B0F1BFE26383209A274A29A63FB(__this, _stringLiteral5AC038A508DEB5C93D43FA940F4F7D8C0553D8A9, (0.5f), NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1111>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1112>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_3 = __this->___OnAuthenticationSuccess;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_4 = L_3;
 		if (L_4)
@@ -19031,7 +19033,7 @@ IL_0069:
 
 IL_006f:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1115>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1116>
 		bool L_5 = __this->___isAttemptingAutoLogin;
 		if (!L_5)
 		{
@@ -19039,25 +19041,25 @@ IL_006f:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1118>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1119>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral3213B3C069723840E181EB3C664930B2157BB7D7, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1119>
-		__this->___isAttemptingAutoLogin = (bool)0;
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1120>
-		AuthenticationManager_ShowLoginRegisterPanel_m21DE469CDDD44431DCEF71E3707669A734D26945(__this, NULL);
+		__this->___isAttemptingAutoLogin = (bool)0;
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1121>
-		AuthenticationManager_ShowLoginSection_m670CFC80752732186E6D1A6AD4D43C803103C379(__this, NULL);
+		AuthenticationManager_ShowLoginRegisterPanel_m21DE469CDDD44431DCEF71E3707669A734D26945(__this, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1122>
+		AuthenticationManager_ShowLoginSection_m670CFC80752732186E6D1A6AD4D43C803103C379(__this, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1123>
 		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
 		return;
 	}
 
 IL_00a0:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1127>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1128>
 		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteral0DDAFFD91C31DFEAB56718AD26CE6CB5C018DC56, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1130>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1131>
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		int32_t L_6;
 		L_6 = Application_get_internetReachability_m3FECA8BA005340369BB952CE8CDF3E1A53F3BA0E(NULL);
@@ -19067,14 +19069,14 @@ IL_00a0:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1132>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1133>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_7 = __this->___lastAttemptedAction;
 		AuthenticationManager_ShowInternetPanel_mC9E2FAD91BF317E07B97864C914B172F6722CF2E(__this, L_7, NULL);
 	}
 
 IL_00be:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1136>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1137>
 		return;
 	}
 }
@@ -19102,11 +19104,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnRegisterComplete
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B5_0 = NULL;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B4_0 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1140>
-		AuthenticationManager_SetLoadingState_m88E5DD968E80A68B0FDED1DFC2E1D237921C9B8A(__this, (bool)0, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1141>
+		AuthenticationManager_SetLoadingState_m88E5DD968E80A68B0FDED1DFC2E1D237921C9B8A(__this, (bool)0, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1142>
 		__this->___isRegistering = (bool)0;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1143>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1144>
 		bool L_0 = ___0_success;
 		if (!L_0)
 		{
@@ -19114,22 +19116,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnRegisterComplete
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1145>
-		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteralBC01E932820DE4A459F615B2DEF0CCBCB8EA23C5, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1146>
+		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteralBC01E932820DE4A459F615B2DEF0CCBCB8EA23C5, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1147>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralC9D0F3B6436C50B8DBE7F78CC5C072827D89E11A, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1149>
-		PlayerPrefs_SetInt_m956D3E2DB966F20CF42F842880DDF9E2BE94D948(_stringLiteral90E0789D8CBD2EE0A9C7C1AAA195A827DA1DBCF0, 1, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1150>
+		PlayerPrefs_SetInt_m956D3E2DB966F20CF42F842880DDF9E2BE94D948(_stringLiteral90E0789D8CBD2EE0A9C7C1AAA195A827DA1DBCF0, 1, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1151>
 		PlayerPrefs_Save_m82567E045D69C838112EA204B60C144D4C1EA3AE(NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1152>
-		AuthenticationManager_ClearRegistrationFields_m3E9C75703AE7FFE3614EBBE9CF8E53F0FF05FCE9(__this, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1153>
-		MonoBehaviour_Invoke_mF724350C59362B0F1BFE26383209A274A29A63FB(__this, _stringLiteral2119C9CEA5FAEBDBE7397D7B996DEE29038751ED, (3.5f), NULL);
+		AuthenticationManager_ClearRegistrationFields_m3E9C75703AE7FFE3614EBBE9CF8E53F0FF05FCE9(__this, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1154>
+		MonoBehaviour_Invoke_mF724350C59362B0F1BFE26383209A274A29A63FB(__this, _stringLiteral2119C9CEA5FAEBDBE7397D7B996DEE29038751ED, (3.5f), NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1155>
 		MonoBehaviour_Invoke_mF724350C59362B0F1BFE26383209A274A29A63FB(__this, _stringLiteral5AC038A508DEB5C93D43FA940F4F7D8C0553D8A9, (0.5f), NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1157>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1158>
 		BranchInit_tD8F44873A370D900DA6E254AED758BEF7DC9ECD0* L_1 = ((BranchInit_tD8F44873A370D900DA6E254AED758BEF7DC9ECD0_StaticFields*)il2cpp_codegen_static_fields_for(BranchInit_tD8F44873A370D900DA6E254AED758BEF7DC9ECD0_il2cpp_TypeInfo_var))->___instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
@@ -19140,7 +19142,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnRegisterComplete
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1159>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1160>
 		BranchInit_tD8F44873A370D900DA6E254AED758BEF7DC9ECD0* L_3 = ((BranchInit_tD8F44873A370D900DA6E254AED758BEF7DC9ECD0_StaticFields*)il2cpp_codegen_static_fields_for(BranchInit_tD8F44873A370D900DA6E254AED758BEF7DC9ECD0_il2cpp_TypeInfo_var))->___instance;
 		NullCheck(L_3);
 		BranchInit_CheckPendingReferral_m7FF2287FC6E4F03568C6F61654105DB26372B1BD(L_3, NULL);
@@ -19148,7 +19150,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnRegisterComplete
 
 IL_0073:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1162>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1163>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_4 = __this->___OnAuthenticationSuccess;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_5 = L_4;
 		if (L_5)
@@ -19171,11 +19173,11 @@ IL_007e:
 
 IL_0084:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1166>
-		__this->___isRegistering = (bool)0;
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1167>
+		__this->___isRegistering = (bool)0;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1168>
 		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, _stringLiteralE04A0D92E36DE0726F3E240D7F12EDD8982865DB, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1169>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1170>
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		int32_t L_6;
 		L_6 = Application_get_internetReachability_m3FECA8BA005340369BB952CE8CDF3E1A53F3BA0E(NULL);
@@ -19185,7 +19187,7 @@ IL_0084:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1171>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1172>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_7 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_7, __this, (intptr_t)((void*)AuthenticationManager_OnRegisterClicked_m16F8B96F894EB7BD94A0B33C3A3C4900E8B65CC1_RuntimeMethod_var), NULL);
 		AuthenticationManager_ShowInternetPanel_mC9E2FAD91BF317E07B97864C914B172F6722CF2E(__this, L_7, NULL);
@@ -19193,7 +19195,7 @@ IL_0084:
 
 IL_00af:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1175>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1176>
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_8 = __this->___registerPasswordInput;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -19204,7 +19206,7 @@ IL_00af:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1177>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1178>
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_10 = __this->___registerPasswordInput;
 		NullCheck(L_10);
 		TMP_InputField_set_text_m684E9CDA2D9E82D1C497B5E03DBE79C00584FF62(L_10, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
@@ -19212,7 +19214,7 @@ IL_00af:
 
 IL_00cd:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1180>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1181>
 		return;
 	}
 }
@@ -19231,7 +19233,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_ClearRegistrationF
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1187>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1188>
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_0 = __this->___registerNameInput;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -19242,18 +19244,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_ClearRegistrationF
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1189>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1190>
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_2 = __this->___registerNameInput;
 		NullCheck(L_2);
 		TMP_InputField_set_text_m684E9CDA2D9E82D1C497B5E03DBE79C00584FF62(L_2, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1190>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1191>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral12FC35AB439C7DC02CD56EFD7717B17531ABB109, NULL);
 	}
 
 IL_0028:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1193>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1194>
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_3 = __this->___registerEmailInput;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_4;
@@ -19264,18 +19266,18 @@ IL_0028:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1195>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1196>
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_5 = __this->___registerEmailInput;
 		NullCheck(L_5);
 		TMP_InputField_set_text_m684E9CDA2D9E82D1C497B5E03DBE79C00584FF62(L_5, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1196>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1197>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralCA66AAC797E46ED284EB1A2E68513269945F2204, NULL);
 	}
 
 IL_0050:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1199>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1200>
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_6 = __this->___registerPasswordInput;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_7;
@@ -19286,18 +19288,18 @@ IL_0050:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1201>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1202>
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_8 = __this->___registerPasswordInput;
 		NullCheck(L_8);
 		TMP_InputField_set_text_m684E9CDA2D9E82D1C497B5E03DBE79C00584FF62(L_8, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1202>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1203>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralE7D8012B3EB2041FD9B968CB102EE3BD45B23945, NULL);
 	}
 
 IL_0078:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1204>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1205>
 		return;
 	}
 }
@@ -19311,7 +19313,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_SetLoadingState_m8
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1215>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1216>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = __this->___loginButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -19322,7 +19324,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_SetLoadingState_m8
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1216>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1217>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_2 = __this->___loginButton;
 		bool L_3 = ___0_isLoading;
 		NullCheck(L_2);
@@ -19331,7 +19333,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_SetLoadingState_m8
 
 IL_001d:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1218>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1219>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_4 = __this->___registerButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_5;
@@ -19342,7 +19344,7 @@ IL_001d:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1219>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1220>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_6 = __this->___registerButton;
 		bool L_7 = ___0_isLoading;
 		NullCheck(L_6);
@@ -19351,7 +19353,7 @@ IL_001d:
 
 IL_003a:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1221>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1222>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_8 = __this->___guestLoginButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -19362,7 +19364,7 @@ IL_003a:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1222>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1223>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_10 = __this->___guestLoginButton;
 		bool L_11 = ___0_isLoading;
 		NullCheck(L_10);
@@ -19371,7 +19373,7 @@ IL_003a:
 
 IL_0057:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1224>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1225>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_12 = __this->___googleLoginButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_13;
@@ -19382,7 +19384,7 @@ IL_0057:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1225>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1226>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_14 = __this->___googleLoginButton;
 		bool L_15 = ___0_isLoading;
 		NullCheck(L_14);
@@ -19391,7 +19393,7 @@ IL_0057:
 
 IL_0074:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1227>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1228>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_16 = __this->___facebookLoginButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_17;
@@ -19402,7 +19404,7 @@ IL_0074:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1228>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1229>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_18 = __this->___facebookLoginButton;
 		bool L_19 = ___0_isLoading;
 		NullCheck(L_18);
@@ -19411,7 +19413,7 @@ IL_0074:
 
 IL_0091:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1230>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1231>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_20 = __this->___switchToRegisterButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_21;
@@ -19422,7 +19424,7 @@ IL_0091:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1231>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1232>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_22 = __this->___switchToRegisterButton;
 		bool L_23 = ___0_isLoading;
 		NullCheck(L_22);
@@ -19431,7 +19433,7 @@ IL_0091:
 
 IL_00ae:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1233>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1234>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_24 = __this->___switchToLoginButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_25;
@@ -19442,7 +19444,7 @@ IL_00ae:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1234>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1235>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_26 = __this->___switchToLoginButton;
 		bool L_27 = ___0_isLoading;
 		NullCheck(L_26);
@@ -19451,7 +19453,7 @@ IL_00ae:
 
 IL_00cb:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1235>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1236>
 		return;
 	}
 }
@@ -19459,7 +19461,7 @@ IL_00cb:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D (AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1241>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1242>
 		return;
 	}
 }
@@ -19476,11 +19478,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AuthenticationManager_IsValidEmail_mB704
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
 	try
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1247>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1248>
 		String_t* L_0 = ___0_email;
 		MailAddress_t543FDACEABCE85F9DE9586D333CF45D6259AB51F* L_1 = (MailAddress_t543FDACEABCE85F9DE9586D333CF45D6259AB51F*)il2cpp_codegen_object_new(MailAddress_t543FDACEABCE85F9DE9586D333CF45D6259AB51F_il2cpp_TypeInfo_var);
 		MailAddress__ctor_mC6FA396A5BAA990FCCBACD753EA397E29DF971A8(L_1, L_0, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1248>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1249>
 		NullCheck(L_1);
 		String_t* L_2;
 		L_2 = MailAddress_get_Address_mF669BEE1774AAA9F3C355A403093DE0F27278146(L_1, NULL);
@@ -19503,8 +19505,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AuthenticationManager_IsValidEmail_mB704
 CATCH_0014:
 	{
 		RuntimeObject* L_5 = ((RuntimeObject*)IL2CPP_GET_ACTIVE_EXCEPTION(RuntimeObject*));;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1250>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1252>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1251>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1253>
 		V_0 = (bool)0;
 		IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
 		goto IL_0019;
@@ -19512,7 +19514,7 @@ CATCH_0014:
 
 IL_0019:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1254>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1255>
 		bool L_6 = V_0;
 		return L_6;
 	}
@@ -19531,7 +19533,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnLoginPasswordTog
 	int32_t G_B5_0 = 0;
 	TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* G_B5_1 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1258>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1259>
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_0 = __this->___loginPasswordInput;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -19542,16 +19544,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnLoginPasswordTog
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1258>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1259>
 		return;
 	}
 
 IL_000f:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1260>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1261>
 		bool L_2 = ___0_isOn;
 		__this->___isLoginPasswordVisible = L_2;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1261>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1262>
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_3 = __this->___loginPasswordInput;
 		bool L_4 = __this->___isLoginPasswordVisible;
 		if (L_4)
@@ -19577,11 +19579,11 @@ IL_0028:
 	{
 		NullCheck(G_B5_1);
 		TMP_InputField_set_contentType_mB9BCF78B6868FBB3CDE671DDF008E3716D3ADC91(G_B5_1, G_B5_0, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1262>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1263>
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_5 = __this->___loginPasswordInput;
 		NullCheck(L_5);
 		TMP_InputField_ForceLabelUpdate_m06F01A5D3EF44553E23404EC82D65B405A842C11(L_5, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1263>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1264>
 		return;
 	}
 }
@@ -19599,7 +19601,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnRegisterPassword
 	int32_t G_B5_0 = 0;
 	TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* G_B5_1 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1267>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1268>
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_0 = __this->___registerPasswordInput;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -19610,16 +19612,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_OnRegisterPassword
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1267>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1268>
 		return;
 	}
 
 IL_000f:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1269>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1270>
 		bool L_2 = ___0_isOn;
 		__this->___isRegisterPasswordVisible = L_2;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1270>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1271>
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_3 = __this->___registerPasswordInput;
 		bool L_4 = __this->___isRegisterPasswordVisible;
 		if (L_4)
@@ -19645,11 +19647,11 @@ IL_0028:
 	{
 		NullCheck(G_B5_1);
 		TMP_InputField_set_contentType_mB9BCF78B6868FBB3CDE671DDF008E3716D3ADC91(G_B5_1, G_B5_0, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1271>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1272>
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_5 = __this->___registerPasswordInput;
 		NullCheck(L_5);
 		TMP_InputField_ForceLabelUpdate_m06F01A5D3EF44553E23404EC82D65B405A842C11(L_5, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1272>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1273>
 		return;
 	}
 }
@@ -20130,7 +20132,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_U3COnFacebookSignI
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:875>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:876>
 		bool L_0 = ___0_success;
 		if (!L_0)
 		{
@@ -20138,23 +20140,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_U3COnFacebookSignI
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:877>
-		PlayerPrefs_SetString_mF4F457C81BB75F0213547C6287BA36E15E1F0256(_stringLiteral7BF6CC6C4E813C8A7E712B81C941574930D72960, _stringLiteral25DFFD6E58E4EDAD41F8C52C6134E56DCDFC25E6, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:878>
-		PlayerPrefs_Save_m82567E045D69C838112EA204B60C144D4C1EA3AE(NULL);
+		PlayerPrefs_SetString_mF4F457C81BB75F0213547C6287BA36E15E1F0256(_stringLiteral7BF6CC6C4E813C8A7E712B81C941574930D72960, _stringLiteral25DFFD6E58E4EDAD41F8C52C6134E56DCDFC25E6, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:879>
+		PlayerPrefs_Save_m82567E045D69C838112EA204B60C144D4C1EA3AE(NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:880>
 		AuthenticationManager_OnLoginComplete_mE9A0629E6C56431AB174D46F4198F71C66E0F6EB(__this, (bool)1, NULL);
 		return;
 	}
 
 IL_001f:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:883>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:884>
 		String_t* L_1 = ___1_message;
 		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, L_1, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:884>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:885>
 		AuthenticationManager_SetLoadingState_m88E5DD968E80A68B0FDED1DFC2E1D237921C9B8A(__this, (bool)0, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:886>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:887>
 		return;
 	}
 }
@@ -20169,7 +20171,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_U3CHandleAppleLogi
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:951>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:952>
 		bool L_0 = ___0_backendSuccess;
 		if (!L_0)
 		{
@@ -20177,23 +20179,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_U3CHandleAppleLogi
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:953>
-		PlayerPrefs_SetString_mF4F457C81BB75F0213547C6287BA36E15E1F0256(_stringLiteral7BF6CC6C4E813C8A7E712B81C941574930D72960, _stringLiteral27862913227F95E01CAC52A0248569DAB0AFDD35, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:954>
-		PlayerPrefs_Save_m82567E045D69C838112EA204B60C144D4C1EA3AE(NULL);
+		PlayerPrefs_SetString_mF4F457C81BB75F0213547C6287BA36E15E1F0256(_stringLiteral7BF6CC6C4E813C8A7E712B81C941574930D72960, _stringLiteral27862913227F95E01CAC52A0248569DAB0AFDD35, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:955>
+		PlayerPrefs_Save_m82567E045D69C838112EA204B60C144D4C1EA3AE(NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:956>
 		AuthenticationManager_OnLoginComplete_mE9A0629E6C56431AB174D46F4198F71C66E0F6EB(__this, (bool)1, NULL);
 		return;
 	}
 
 IL_001f:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:959>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:960>
 		String_t* L_1 = ___1_message;
 		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, L_1, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:960>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:961>
 		AuthenticationManager_SetLoadingState_m88E5DD968E80A68B0FDED1DFC2E1D237921C9B8A(__this, (bool)0, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:962>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:963>
 		return;
 	}
 }
@@ -20212,7 +20214,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_U3COnRegisterClick
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1006>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1007>
 		bool L_0 = ___0_success;
 		if (!L_0)
 		{
@@ -20220,21 +20222,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AuthenticationManager_U3COnRegisterClick
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1008>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1009>
 		AuthenticationManager_OnRegisterComplete_mC0936B08DA880C8C0D45F79A18A9F3679EC8F781(__this, (bool)1, NULL);
 		return;
 	}
 
 IL_000b:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1012>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1013>
 		String_t* L_1 = ___1_message;
 		AuthenticationManager_UpdateStatusText_m044481B296B6F7C9DC0BB710192D952542AEC55D(__this, L_1, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1013>
-		AuthenticationManager_SetLoadingState_m88E5DD968E80A68B0FDED1DFC2E1D237921C9B8A(__this, (bool)0, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1014>
+		AuthenticationManager_SetLoadingState_m88E5DD968E80A68B0FDED1DFC2E1D237921C9B8A(__this, (bool)0, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1015>
 		__this->___isRegistering = (bool)0;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1016>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1017>
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_2 = __this->___registerPasswordInput;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
@@ -20245,7 +20247,7 @@ IL_000b:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1018>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1019>
 		TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* L_4 = __this->___registerPasswordInput;
 		NullCheck(L_4);
 		TMP_InputField_set_text_m684E9CDA2D9E82D1C497B5E03DBE79C00584FF62(L_4, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
@@ -20253,7 +20255,7 @@ IL_000b:
 
 IL_003e:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1022>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1023>
 		String_t* L_5 = ___1_message;
 		NullCheck(L_5);
 		String_t* L_6;
@@ -20282,7 +20284,7 @@ IL_003e:
 
 IL_0062:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1024>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1025>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_11 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_11, __this, (intptr_t)((void*)AuthenticationManager_OnRegisterClicked_m16F8B96F894EB7BD94A0B33C3A3C4900E8B65CC1_RuntimeMethod_var), NULL);
 		AuthenticationManager_ShowInternetPanel_mC9E2FAD91BF317E07B97864C914B172F6722CF2E(__this, L_11, NULL);
@@ -20290,7 +20292,7 @@ IL_0062:
 
 IL_0074:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1027>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/AuthenticationManager.cs:1028>
 		return;
 	}
 }

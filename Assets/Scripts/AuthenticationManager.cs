@@ -843,6 +843,7 @@ public class AuthenticationManager : MonoBehaviour
         Debug.Log(">>> [AuthenticationManager] OnFacebookLoginClicked FIRED! <<<");
         if (!CheckInternetAndAction(OnFacebookLoginClicked)) return;
         
+        SetLoadingState(true);
         UpdateStatusText("Signing in with Facebook...");
         
         if (FacebookSignInManager.Instance != null)

@@ -243,7 +243,7 @@ public class FacebookSignInManager : MonoBehaviour
             
             // Use Graph API to fetch profile data (works on Android and iOS)
             // Request fields: name, email, picture (with width and height for better quality)
-            string graphQuery = "/me?fields=name,email,picture.width(200).height(200)";
+            string graphQuery = "/me?fields=name,email,picture.width(480).height(480)";
             
             FB.API(graphQuery, HttpMethod.GET, (IGraphResult result) =>
             {

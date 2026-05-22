@@ -7520,7 +7520,7 @@ struct U3CU3Ec__DisplayClass0_0_t2BDE1F2F6C4F5DC6FB326710D4A4CE7D7B37BAD4  : pub
 };
 struct U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8  : public RuntimeObject
 {
-	int32_t ___packageIndex;
+	int32_t ___finalPackageIndex;
 	InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* ___U3CU3E4__this;
 };
 struct U3CU3Ec__DisplayClass38_0_t0B9CEE1979C188EC1541980C56003864AD595E9F  : public RuntimeObject

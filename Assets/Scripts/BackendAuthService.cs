@@ -400,7 +400,7 @@ public class BackendAuthService : MonoBehaviour
     private IEnumerator SocialLoginCoroutine(string endpoint, string token, Action<bool, string> onComplete)
     {
         string url = baseUrl.TrimEnd('/') + endpoint; 
-        string jsonData = $"{{\"token\":\"{token}\", \"idToken\":\"{token}\"}}";
+        string jsonData = $"{{\"token\":\"{token}\", \"idToken\":\"{token}\", \"accessToken\":\"{token}\", \"access_token\":\"{token}\"}}";
         
         Debug.Log($"[BackendAuthService] DIAGNOSTIC - Sending payload to {endpoint}: {jsonData}");
         

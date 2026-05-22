@@ -456,7 +456,6 @@ struct U3CInitializeButtonsRoutineU3Ed__32_tD223EB689F3349055188D528FE3E88942622
 struct U3CU3Ec__DisplayClass0_0_t2BDE1F2F6C4F5DC6FB326710D4A4CE7D7B37BAD4;
 struct U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8;
 struct U3CU3Ec__DisplayClass38_0_t0B9CEE1979C188EC1541980C56003864AD595E9F;
-struct U3CU3Ec__DisplayClass38_1_t68CAFB3AD276B881C840C5978F38D869DCE0133C;
 struct U3CSimulateLocalPaymentCoroutineU3Ed__40_t084363AC5A9801EC2D8363DCD9BC8077930EF5BC;
 struct PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053;
 struct CullStateChangedEvent_t6073CD0D951EC1256BF74B8F9107D68FC89B99B8;
@@ -467,7 +466,6 @@ struct MissingCharacterEventCallback_t955241181324E0FEF9A9BDBA400E8780F8979DE6;
 struct ContingentProperties_t3FA59480914505CEA917B1002EC675F29D0CB540;
 
 IL2CPP_EXTERN_C RuntimeClass* Action_1_t0153C54893BA1F19BA8C8561E443C561A6CC9E82_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Action_1_t5A945E82BE3E1C2882BF73EE0A189EC3A2B47541_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Action_1_t7F5858BDA2C68D2E6D97CB0B2580BBCE46966C58_il2cpp_TypeInfo_var;
@@ -563,7 +561,6 @@ IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass113_0_tE436317B364C753EE63422
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass130_0_t27FB5F371E29D7555F37753F2ABABEB089E7EB85_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass38_0_t0B9CEE1979C188EC1541980C56003864AD595E9F_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass38_1_t68CAFB3AD276B881C840C5978F38D869DCE0133C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec__DisplayClass69_0_t3D4A324507AD421AB68281B163F81F5684B72E6A_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_t934A682FC7A2310EB64DF8FB184FC75102272AA5_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_tF2A51407DDFFBB7E130A082E1A9AE06F230439BF_il2cpp_TypeInfo_var;
@@ -601,7 +598,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteral1517A0AF3E64CB664275572ADC31F113164A2EB9
 IL2CPP_EXTERN_C String_t* _stringLiteral171F06CC810502DC7E5D6AC0423843C349A3AB4E;
 IL2CPP_EXTERN_C String_t* _stringLiteral17ABE7AD4A4BC5737301F6AA3EA15C73AFCF8FD5;
 IL2CPP_EXTERN_C String_t* _stringLiteral184D80A34FCC2A12FCDA6162C0675F07FE234179;
-IL2CPP_EXTERN_C String_t* _stringLiteral1A0306B1D062074071A8A89BAA16AA440C565C75;
 IL2CPP_EXTERN_C String_t* _stringLiteral1A0ECA4A6F03AD0F648660D6ECF73EF2323CC457;
 IL2CPP_EXTERN_C String_t* _stringLiteral1A55BD7F621379C9220AC5AAFCAF198A0B544AF5;
 IL2CPP_EXTERN_C String_t* _stringLiteral1B1F4A908086BA81EBD7E0A9E211223D50576957;
@@ -642,6 +638,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral42CFB2A25E0928DEA9C8CF0614EC5BADADE5311F
 IL2CPP_EXTERN_C String_t* _stringLiteral43CAE3A62CD915D3AD632A6E5A16F1E50EFE7408;
 IL2CPP_EXTERN_C String_t* _stringLiteral44267183A33B8CD828399FCEEF6CF5CFD326D4C5;
 IL2CPP_EXTERN_C String_t* _stringLiteral4537C2C2CF0C54002B323BCE920F8D6E2CB11DB1;
+IL2CPP_EXTERN_C String_t* _stringLiteral460C9F5151A8C9DEAF527895A4F35759D1C4E7DC;
 IL2CPP_EXTERN_C String_t* _stringLiteral46EE36BE9094871DA95A16B3A72CF907F3A3BE95;
 IL2CPP_EXTERN_C String_t* _stringLiteral481BF6500F8C92C53F75EFF1BF09E9C445DC4BFA;
 IL2CPP_EXTERN_C String_t* _stringLiteral4874A59C4350083D145ECA070B47BD98B14675CE;
@@ -686,9 +683,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral6887B39C0E260761EBBA6B9CBA4958E2FEA7B610
 IL2CPP_EXTERN_C String_t* _stringLiteral68B313F7A3DF0FFA56FC723A4A0D4DDEE73DC555;
 IL2CPP_EXTERN_C String_t* _stringLiteral6911388BC9221F9FB04BCE8251A3D1F6A63D51C2;
 IL2CPP_EXTERN_C String_t* _stringLiteral6AEA0E3E1CECCE030A92E8405D3EA8BB043E96AA;
-IL2CPP_EXTERN_C String_t* _stringLiteral6B5ED4E4357BEEC341E0500D30A810DF4489A799;
 IL2CPP_EXTERN_C String_t* _stringLiteral6BD498CC7C1E3F2741AF3DC2CA82A46B744812F6;
-IL2CPP_EXTERN_C String_t* _stringLiteral6F6DC295090526C1D44EB9CD347830A9991CBAED;
 IL2CPP_EXTERN_C String_t* _stringLiteral70048A18DD49074F51288054256B8012426254F4;
 IL2CPP_EXTERN_C String_t* _stringLiteral7090771DBB8AE34FA2BB44CDFCC730D6AF13EA30;
 IL2CPP_EXTERN_C String_t* _stringLiteral70B23BD8C5FB8BE064267833D6B461A7D38F974E;
@@ -713,6 +708,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral991AF3E850D0530F2AE98F7C8F0D3D6A22725881
 IL2CPP_EXTERN_C String_t* _stringLiteral9984570FBA2533A7DE193EBF24BF1EF0C6ADC483;
 IL2CPP_EXTERN_C String_t* _stringLiteral9A26B0D8F85CAF8277F7DC8E2566431B1B5FBB4A;
 IL2CPP_EXTERN_C String_t* _stringLiteral9A2DF2D704036EA94FDC9F91EB31FD1022342684;
+IL2CPP_EXTERN_C String_t* _stringLiteral9E47656461801871BD77D1C0716DBD07703B2A96;
 IL2CPP_EXTERN_C String_t* _stringLiteral9E50BFB8690610DB95F7C3F451F32F304338855E;
 IL2CPP_EXTERN_C String_t* _stringLiteral9FC58BE1291CA2845CA17EA2CAE28747CF8C3902;
 IL2CPP_EXTERN_C String_t* _stringLiteral9FD5E96A4CAB41F2F7579307E7708BFFC2174B31;
@@ -727,7 +723,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteralA7F7727129351B7DEF305350F25303513E266ACC
 IL2CPP_EXTERN_C String_t* _stringLiteralAAAA79A22DEF75A2A401C66BAE00BB7DAEA13B52;
 IL2CPP_EXTERN_C String_t* _stringLiteralAB882B6CF427149F677F650E0B27DDEA6363ABC0;
 IL2CPP_EXTERN_C String_t* _stringLiteralABF7F26965947AEA0CDB9E779C6671C29CC9ED29;
-IL2CPP_EXTERN_C String_t* _stringLiteralAC9F90C30E0265418E8CAF1A17A5432137E954E0;
 IL2CPP_EXTERN_C String_t* _stringLiteralADAD5A26F4A1FBD0882427A796DF0FEADA2CBD5F;
 IL2CPP_EXTERN_C String_t* _stringLiteralAF06CECF344EA3B0926D28E01DC53AE71302E7A6;
 IL2CPP_EXTERN_C String_t* _stringLiteralB02444D0CDB2F51BC5549E32B40DB31E12DB423B;
@@ -736,6 +731,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralB035BC8E792720F3F2325A34F0A598349705D1D3
 IL2CPP_EXTERN_C String_t* _stringLiteralB14BBBDB50644402EA96F4B12E67F0EC9219AC0A;
 IL2CPP_EXTERN_C String_t* _stringLiteralB16B4FABDB7454C3E5ABDE803E4FB699A62CD28F;
 IL2CPP_EXTERN_C String_t* _stringLiteralB24B4FD2CFF089E4C0835E83AB2D093EC8786153;
+IL2CPP_EXTERN_C String_t* _stringLiteralB5C6797AEE507D8B76E83883F4F36B0F87D48642;
 IL2CPP_EXTERN_C String_t* _stringLiteralB6C15A8FBDE71584CD3ED5714C8795376AA35B35;
 IL2CPP_EXTERN_C String_t* _stringLiteralB7CAE37367E2FD266A137BF6E8CFF30951FBEDE1;
 IL2CPP_EXTERN_C String_t* _stringLiteralBD52831205E25C82D8151F601D21E4D131BEBF7C;
@@ -745,10 +741,10 @@ IL2CPP_EXTERN_C String_t* _stringLiteralC27676F2828277DCDFA353B519352944BC29950B
 IL2CPP_EXTERN_C String_t* _stringLiteralC5A20DABE89F40C2022EF9972FEEF9F05DEDD5D0;
 IL2CPP_EXTERN_C String_t* _stringLiteralC5A2BA8A60A7DA8BAF77319D578DB371A78264E7;
 IL2CPP_EXTERN_C String_t* _stringLiteralC6BB29BD0975822BD8658F4183EEDB03987B1527;
+IL2CPP_EXTERN_C String_t* _stringLiteralC6EF9A36694795F1C24D55F2215B40271D713243;
 IL2CPP_EXTERN_C String_t* _stringLiteralC86A014C330FBAE45F3A39C455CEA57EF802C3FA;
 IL2CPP_EXTERN_C String_t* _stringLiteralC91D558E9E428D20C826A34288FC2AF1D766FCD2;
 IL2CPP_EXTERN_C String_t* _stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2;
-IL2CPP_EXTERN_C String_t* _stringLiteralCE36BBF509FE3C42A20671D5B7F4E88C22BB2B7A;
 IL2CPP_EXTERN_C String_t* _stringLiteralCEFCE74D6D085D56EDADED427207FC35BE0F4A0B;
 IL2CPP_EXTERN_C String_t* _stringLiteralCF256908A601FADA55B6E0B02518321CF397E1C2;
 IL2CPP_EXTERN_C String_t* _stringLiteralD07E39FDE58BAB5F0A8A37E5E43F90D70F856134;
@@ -767,6 +763,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralDBD54E16A6C2C3DAC8D80352632BC4D1CDB8C793
 IL2CPP_EXTERN_C String_t* _stringLiteralDC4877CE203C664A8951F37630E1B08052821B41;
 IL2CPP_EXTERN_C String_t* _stringLiteralDDA26CBE620DAAC4B425B8ACB222A5EA83C991F7;
 IL2CPP_EXTERN_C String_t* _stringLiteralDDADD3827A4707934B7E8293869E7636FACA775D;
+IL2CPP_EXTERN_C String_t* _stringLiteralDDE2EB43D5B464EAB7354695B3CF268EEF615814;
 IL2CPP_EXTERN_C String_t* _stringLiteralDEF46719EC6A0DFBAB9AC0AE912802C9D772089B;
 IL2CPP_EXTERN_C String_t* _stringLiteralDEFB829B90809544235DDEA838A8F1FCAF3F2144;
 IL2CPP_EXTERN_C String_t* _stringLiteralDF2C292098B44964756449A4C3BE78E923CB9BC2;
@@ -966,7 +963,6 @@ IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass113_0_U3CAssignAvatarA
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass130_0_U3CCreateIndividualNumberGridsU3Eb__0_m9CAD3178CFCA2A831ABA27A0D82E554799865B94_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass37_0_U3CSetupPurchaseButtonsU3Eb__0_m0BEFFF223635F0F81B09AF1F4FAC554606D47E9D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass38_0_U3COnPurchaseButtonClickedU3Eb__0_m7EBD4E3E8AB40D1147D7B3BADB3A5652B0DBA7A3_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass38_1_U3COnPurchaseButtonClickedU3Eb__1_m35CC3FF5C3CDF3283CCDE2607D6E0E2720E016C0_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec__DisplayClass69_0_U3CInitializeDotNavigationU3Eb__0_m834FA6D437EAC5DFD0E4EF94847524AF7784A0A1_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* ValueTuple_2__ctor_m97781CA41AC31FBC101049FC8A679C53E01EA32E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* ValueTuple_5__ctor_m3AEC6AA38A3781F4515E75DF1395EE2A65633C10_RuntimeMethod_var;
@@ -1530,7 +1526,7 @@ struct U3CU3Ec__DisplayClass0_0_t2BDE1F2F6C4F5DC6FB326710D4A4CE7D7B37BAD4  : pub
 };
 struct U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8  : public RuntimeObject
 {
-	int32_t ___packageIndex;
+	int32_t ___finalPackageIndex;
 	InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* ___U3CU3E4__this;
 };
 struct U3CU3Ec__DisplayClass38_0_t0B9CEE1979C188EC1541980C56003864AD595E9F  : public RuntimeObject
@@ -1538,12 +1534,6 @@ struct U3CU3Ec__DisplayClass38_0_t0B9CEE1979C188EC1541980C56003864AD595E9F  : pu
 	InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* ___U3CU3E4__this;
 	PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053* ___package;
 	float ___totalCash;
-};
-struct U3CU3Ec__DisplayClass38_1_t68CAFB3AD276B881C840C5978F38D869DCE0133C  : public RuntimeObject
-{
-	DepositResponse_tA838A655C1B9DBB23DA1195CB1B36D57105B430F* ___depositResponse;
-	U3CU3Ec__DisplayClass38_0_t0B9CEE1979C188EC1541980C56003864AD595E9F* ___CSU24U3CU3E8__locals1;
-	Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* ___U3CU3E9__2;
 };
 struct U3CSimulateLocalPaymentCoroutineU3Ed__40_t084363AC5A9801EC2D8363DCD9BC8077930EF5BC  : public RuntimeObject
 {
@@ -4963,7 +4953,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m05F523BA9BEBF58F2272
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameObject_GetComponentInChildren_TisRuntimeObject_mED181B37054A10395CA356010754C7DFC685893C_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_2__ctor_m910EDF0572CB2F28E45048A2EB215E25296E58BD_gshared (Action_2_t4E94B0FCA1084D7868DB11A50767A4916CA3D3FB* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_3_Invoke_mE5A04F612FC40BDAD641E44B30D0E295E5FC7A89_gshared_inline (Action_3_t898ED95135EB9FEE7744335EDFF07E655CA29539* __this, int32_t ___0_arg1, float ___1_arg2, RuntimeObject* ___2_arg3, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1__ctor_mA8C3AC97D1F076EA5D1D0C10CEE6BD3E94711501_gshared (Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void List_1_AddWithResize_mC08D893BD6C33A59848665B4DAD1CF5981D26FE8_gshared (List_1_t26E939DECDD3BEC5C72E500EEB3B4DFCB06E1594* __this, ValueTuple_5_tA6BB3099C01BC5080A61EC2D851EE5AB0F9B33C8 ___0_item, const RuntimeMethod* method) ;
 
@@ -5946,12 +5935,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* ProductMetadata_get_loc
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_UpdateAllUIDisplays_m3A53B992A39B6636DD0A2831286E9424415FA77F (InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CurrencyDisplayUI_TriggerVisualAnimationTick_mD5D3370039680B42715B6DCC4D6E3CA4B864BF88 (int32_t ___0_chips, float ___1_cash, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PurchasePackage__ctor_m9AC61414FE96F602D6B9750AB7AFA7C0A8EE0311 (PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass38_1__ctor_mAE42EAFDA494AAB13EC9331778C60CEE8AF358AC (U3CU3Ec__DisplayClass38_1_t68CAFB3AD276B881C840C5978F38D869DCE0133C* __this, const RuntimeMethod* method) ;
-inline void Action_1__ctor_mA8C3AC97D1F076EA5D1D0C10CEE6BD3E94711501 (Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method)
-{
-	((  void (*) (Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C*, RuntimeObject*, intptr_t, const RuntimeMethod*))Action_1__ctor_mA8C3AC97D1F076EA5D1D0C10CEE6BD3E94711501_gshared)(__this, ___0_object, ___1_method, method);
-}
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_TriggerLocalCheckoutFlow_mA35F7B4FA9796D3B8417D6FC37F7F281DC64CB86 (InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* __this, DepositResponse_tA838A655C1B9DBB23DA1195CB1B36D57105B430F* ___0_depositResponse, Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* ___1_onComplete, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_x_mB267B718E0D067F2BAE31BA477647FBF964916EB_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_y_mC733E8D49F3CE21B2A3D40A1B72D687F22C97F49_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Array_Clear_m50BAA3751899858B097D3FF2ED31F284703FE5CB (RuntimeArray* ___0_array, int32_t ___1_index, int32_t ___2_length, const RuntimeMethod* method) ;
@@ -25295,10 +25278,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_SetupPurchaseButton
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass37_0_U3CSetupPurchaseButtonsU3Eb__0_m0BEFFF223635F0F81B09AF1F4FAC554606D47E9D_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1A0306B1D062074071A8A89BAA16AA440C565C75);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2CD4B7F9122D40B4B607F3E8F10A3F64A6F61BE3);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralAC9F90C30E0265418E8CAF1A17A5432137E954E0);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralCE36BBF509FE3C42A20671D5B7F4E88C22BB2B7A);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral460C9F5151A8C9DEAF527895A4F35759D1C4E7DC);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9E47656461801871BD77D1C0716DBD07703B2A96);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralB5C6797AEE507D8B76E83883F4F36B0F87D48642);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC6EF9A36694795F1C24D55F2215B40271D713243);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDDE2EB43D5B464EAB7354695B3CF268EEF615814);
 		s_Il2CppMethodInitialized = true;
 	}
 	OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* V_0 = NULL;
@@ -25308,362 +25293,429 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_SetupPurchaseButton
 	Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* V_4 = NULL;
 	int32_t V_5 = 0;
 	U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8* V_6 = NULL;
-	float V_7 = 0.0f;
+	int32_t V_7 = 0;
+	float V_8 = 0.0f;
+	int32_t G_B11_0 = 0;
 	{
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:127>
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_0 = __this->___purchaseButtons;
-		if (!L_0)
+		if (L_0)
 		{
-			goto IL_0014;
+			goto IL_0013;
 		}
 	}
-	{
-		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_1 = __this->___purchaseButtons;
-		NullCheck(L_1);
-		if ((((int32_t)((int32_t)(((RuntimeArray*)L_1)->max_length))) == ((int32_t)((int32_t)13))))
-		{
-			goto IL_001f;
-		}
-	}
-
-IL_0014:
 	{
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:129>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteralCE36BBF509FE3C42A20671D5B7F4E88C22BB2B7A, NULL);
+		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteralC6EF9A36694795F1C24D55F2215B40271D713243, NULL);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:130>
 		return;
 	}
 
-IL_001f:
+IL_0013:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:134>
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* L_2;
-		L_2 = Object_FindObjectOfType_TisOffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416_m6EF421640DB810988378EA963D0E76511233F57E(Object_FindObjectOfType_TisOffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416_m6EF421640DB810988378EA963D0E76511233F57E_RuntimeMethod_var);
-		V_0 = L_2;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:133>
+		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_1 = __this->___purchaseButtons;
+		NullCheck(L_1);
+		if ((((int32_t)((int32_t)(((RuntimeArray*)L_1)->max_length))) == ((int32_t)((int32_t)13))))
+		{
+			goto IL_0047;
+		}
+	}
+	{
+		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_2 = __this->___purchaseButtons;
+		NullCheck(L_2);
+		if ((((int32_t)((int32_t)(((RuntimeArray*)L_2)->max_length))) == ((int32_t)((int32_t)20))))
+		{
+			goto IL_0047;
+		}
+	}
+	{
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:135>
-		OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* L_3 = V_0;
-		bool L_4;
-		L_4 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_3, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_4)
-		{
-			goto IL_00a5;
-		}
-	}
-	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:137>
-		OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* L_5 = V_0;
-		NullCheck(L_5);
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_6;
-		L_6 = OffersCarouselManager_GetOfferItems_m42046F58AFCA2FE749F4403F755082780F0CFC30_inline(L_5, NULL);
-		V_1 = L_6;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:138>
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_7 = V_1;
-		if (!L_7)
-		{
-			goto IL_00a5;
-		}
-	}
-	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:140>
-		V_2 = 0;
-		goto IL_009f;
+		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_3 = __this->___purchaseButtons;
+		NullCheck(L_3);
+		int32_t L_4 = ((int32_t)(((RuntimeArray*)L_3)->max_length));
+		RuntimeObject* L_5 = Box(il2cpp_defaults.int32_class, &L_4);
+		String_t* L_6;
+		L_6 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralB5C6797AEE507D8B76E83883F4F36B0F87D48642, L_5, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_6, NULL);
 	}
 
-IL_003c:
+IL_0047:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:142>
-		int32_t L_8 = V_2;
-		V_3 = ((int32_t)il2cpp_codegen_add(6, L_8));
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:143>
-		int32_t L_9 = V_3;
-		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_10 = __this->___purchaseButtons;
-		NullCheck(L_10);
-		if ((((int32_t)L_9) >= ((int32_t)((int32_t)(((RuntimeArray*)L_10)->max_length)))))
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:139>
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* L_7;
+		L_7 = Object_FindObjectOfType_TisOffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416_m6EF421640DB810988378EA963D0E76511233F57E(Object_FindObjectOfType_TisOffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416_m6EF421640DB810988378EA963D0E76511233F57E_RuntimeMethod_var);
+		V_0 = L_7;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:140>
+		OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* L_8 = V_0;
+		bool L_9;
+		L_9 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_8, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_9)
 		{
-			goto IL_009b;
+			goto IL_00ee;
 		}
 	}
 	{
-		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_11 = __this->___purchaseButtons;
-		int32_t L_12 = V_3;
-		NullCheck(L_11);
-		int32_t L_13 = L_12;
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_14 = (L_11)->GetAt(static_cast<il2cpp_array_size_t>(L_13));
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_15;
-		L_15 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_14, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_15)
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:142>
+		OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* L_10 = V_0;
+		NullCheck(L_10);
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_11;
+		L_11 = OffersCarouselManager_GetOfferItems_m42046F58AFCA2FE749F4403F755082780F0CFC30_inline(L_10, NULL);
+		V_1 = L_11;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:143>
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_12 = V_1;
+		if (!L_12)
 		{
-			goto IL_009b;
+			goto IL_00ee;
 		}
 	}
 	{
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:145>
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_16 = V_1;
-		int32_t L_17 = V_2;
-		NullCheck(L_16);
-		int32_t L_18 = L_17;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_19 = (L_16)->GetAt(static_cast<il2cpp_array_size_t>(L_18));
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_20;
-		L_20 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_19, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_20)
+		V_2 = 0;
+		goto IL_00e5;
+	}
+
+IL_006a:
+	{
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:149>
+		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_13 = __this->___purchaseButtons;
+		NullCheck(L_13);
+		if ((((int32_t)((int32_t)(((RuntimeArray*)L_13)->max_length))) == ((int32_t)((int32_t)20))))
 		{
-			goto IL_009b;
+			goto IL_007b;
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:147>
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_21 = V_1;
-		int32_t L_22 = V_2;
-		NullCheck(L_21);
-		int32_t L_23 = L_22;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_24 = (L_21)->GetAt(static_cast<il2cpp_array_size_t>(L_23));
-		NullCheck(L_24);
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_25;
-		L_25 = GameObject_GetComponentInChildren_TisButton_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098_mC24167312F3DB38FB43365A8583DA381DB6EAA4A(L_24, GameObject_GetComponentInChildren_TisButton_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098_mC24167312F3DB38FB43365A8583DA381DB6EAA4A_RuntimeMethod_var);
-		V_4 = L_25;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:148>
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_26 = V_4;
+		int32_t L_14 = V_2;
+		G_B11_0 = ((int32_t)il2cpp_codegen_add(6, L_14));
+		goto IL_007f;
+	}
+
+IL_007b:
+	{
+		int32_t L_15 = V_2;
+		G_B11_0 = ((int32_t)il2cpp_codegen_add(((int32_t)13), L_15));
+	}
+
+IL_007f:
+	{
+		V_3 = G_B11_0;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:151>
+		int32_t L_16 = V_3;
+		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_17 = __this->___purchaseButtons;
+		NullCheck(L_17);
+		if ((((int32_t)L_16) >= ((int32_t)((int32_t)(((RuntimeArray*)L_17)->max_length)))))
+		{
+			goto IL_00e1;
+		}
+	}
+	{
+		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_18 = __this->___purchaseButtons;
+		int32_t L_19 = V_3;
+		NullCheck(L_18);
+		int32_t L_20 = L_19;
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_21 = (L_18)->GetAt(static_cast<il2cpp_array_size_t>(L_20));
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_22;
+		L_22 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_21, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_22)
+		{
+			goto IL_00e1;
+		}
+	}
+	{
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:153>
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_23 = V_1;
+		int32_t L_24 = V_2;
+		NullCheck(L_23);
+		int32_t L_25 = L_24;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_26 = (L_23)->GetAt(static_cast<il2cpp_array_size_t>(L_25));
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_27;
 		L_27 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_26, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_27)
 		{
-			goto IL_009b;
+			goto IL_00e1;
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:150>
-		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_28 = __this->___purchaseButtons;
-		int32_t L_29 = V_3;
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_30 = V_4;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:155>
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_28 = V_1;
+		int32_t L_29 = V_2;
 		NullCheck(L_28);
-		ArrayElementTypeCheck (L_28, L_30);
-		(L_28)->SetAt(static_cast<il2cpp_array_size_t>(L_29), (Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098*)L_30);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:151>
-		int32_t L_31 = V_2;
-		int32_t L_32 = ((int32_t)il2cpp_codegen_add(L_31, 1));
-		RuntimeObject* L_33 = Box(il2cpp_defaults.int32_class, &L_32);
-		String_t* L_34;
-		L_34 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral1A0306B1D062074071A8A89BAA16AA440C565C75, L_33, NULL);
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_34, NULL);
-	}
-
-IL_009b:
-	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:140>
-		int32_t L_35 = V_2;
-		V_2 = ((int32_t)il2cpp_codegen_add(L_35, 1));
-	}
-
-IL_009f:
-	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:140>
-		int32_t L_36 = V_2;
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_37 = V_1;
-		NullCheck(L_37);
-		if ((((int32_t)L_36) < ((int32_t)((int32_t)(((RuntimeArray*)L_37)->max_length)))))
-		{
-			goto IL_003c;
-		}
-	}
-
-IL_00a5:
-	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:159>
-		V_5 = 0;
-		goto IL_01d1;
-	}
-
-IL_00ad:
-	{
-		U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8* L_38 = (U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8*)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8_il2cpp_TypeInfo_var);
-		U3CU3Ec__DisplayClass37_0__ctor_m456B3FE78677607D4A6396046549BA21691AE409(L_38, NULL);
-		V_6 = L_38;
-		U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8* L_39 = V_6;
-		NullCheck(L_39);
-		L_39->___U3CU3E4__this = __this;
-		Il2CppCodeGenWriteBarrier((void**)(&L_39->___U3CU3E4__this), (void*)__this);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:161>
-		U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8* L_40 = V_6;
-		int32_t L_41 = V_5;
-		NullCheck(L_40);
-		L_40->___packageIndex = L_41;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:162>
-		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_42 = __this->___purchaseButtons;
-		int32_t L_43 = V_5;
-		NullCheck(L_42);
-		int32_t L_44 = L_43;
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_45 = (L_42)->GetAt(static_cast<il2cpp_array_size_t>(L_44));
+		int32_t L_30 = L_29;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_31 = (L_28)->GetAt(static_cast<il2cpp_array_size_t>(L_30));
+		NullCheck(L_31);
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_32;
+		L_32 = GameObject_GetComponentInChildren_TisButton_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098_mC24167312F3DB38FB43365A8583DA381DB6EAA4A(L_31, GameObject_GetComponentInChildren_TisButton_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098_mC24167312F3DB38FB43365A8583DA381DB6EAA4A_RuntimeMethod_var);
+		V_4 = L_32;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:156>
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_33 = V_4;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_46;
-		L_46 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_45, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_46)
+		bool L_34;
+		L_34 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_33, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_34)
 		{
-			goto IL_01b3;
+			goto IL_00e1;
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:164>
-		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_47 = __this->___purchaseButtons;
-		int32_t L_48 = V_5;
-		NullCheck(L_47);
-		int32_t L_49 = L_48;
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_50 = (L_47)->GetAt(static_cast<il2cpp_array_size_t>(L_49));
-		NullCheck(L_50);
-		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_51;
-		L_51 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline(L_50, NULL);
-		NullCheck(L_51);
-		UnityEventBase_RemoveAllListeners_m6E68297189537543B0C72FE38804646CA204D076(L_51, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:165>
-		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_52 = __this->___purchaseButtons;
-		int32_t L_53 = V_5;
-		NullCheck(L_52);
-		int32_t L_54 = L_53;
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_55 = (L_52)->GetAt(static_cast<il2cpp_array_size_t>(L_54));
-		NullCheck(L_55);
-		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_56;
-		L_56 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline(L_55, NULL);
-		U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8* L_57 = V_6;
-		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_58 = (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7*)il2cpp_codegen_object_new(UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
-		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_58, L_57, (intptr_t)((void*)U3CU3Ec__DisplayClass37_0_U3CSetupPurchaseButtonsU3Eb__0_m0BEFFF223635F0F81B09AF1F4FAC554606D47E9D_RuntimeMethod_var), NULL);
-		NullCheck(L_56);
-		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_56, L_58, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:166>
-		PurchasePackageU5BU5D_t4F889F1228A6A92DD3ABEC8CCD34959EDF19ED03* L_59 = __this->___purchasePackages;
-		U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8* L_60 = V_6;
-		NullCheck(L_60);
-		int32_t L_61 = L_60->___packageIndex;
-		NullCheck(L_59);
-		int32_t L_62 = L_61;
-		PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053* L_63 = (L_59)->GetAt(static_cast<il2cpp_array_size_t>(L_62));
-		NullCheck(L_63);
-		float L_64 = L_63->___cashAmount;
-		PurchasePackageU5BU5D_t4F889F1228A6A92DD3ABEC8CCD34959EDF19ED03* L_65 = __this->___purchasePackages;
-		U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8* L_66 = V_6;
-		NullCheck(L_66);
-		int32_t L_67 = L_66->___packageIndex;
-		NullCheck(L_65);
-		int32_t L_68 = L_67;
-		PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053* L_69 = (L_65)->GetAt(static_cast<il2cpp_array_size_t>(L_68));
-		NullCheck(L_69);
-		float L_70 = L_69->___cashBonus;
-		V_7 = ((float)il2cpp_codegen_add(L_64, L_70));
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:167>
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_71 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)5);
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_72 = L_71;
-		int32_t L_73 = V_5;
-		int32_t L_74 = ((int32_t)il2cpp_codegen_add(L_73, 1));
-		RuntimeObject* L_75 = Box(il2cpp_defaults.int32_class, &L_74);
-		NullCheck(L_72);
-		ArrayElementTypeCheck (L_72, L_75);
-		(L_72)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_75);
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_76 = L_72;
-		PurchasePackageU5BU5D_t4F889F1228A6A92DD3ABEC8CCD34959EDF19ED03* L_77 = __this->___purchasePackages;
-		U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8* L_78 = V_6;
-		NullCheck(L_78);
-		int32_t L_79 = L_78->___packageIndex;
-		NullCheck(L_77);
-		int32_t L_80 = L_79;
-		PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053* L_81 = (L_77)->GetAt(static_cast<il2cpp_array_size_t>(L_80));
-		NullCheck(L_81);
-		int32_t L_82 = L_81->___chipsAmount;
-		int32_t L_83 = L_82;
-		RuntimeObject* L_84 = Box(il2cpp_defaults.int32_class, &L_83);
-		NullCheck(L_76);
-		ArrayElementTypeCheck (L_76, L_84);
-		(L_76)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)L_84);
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_85 = L_76;
-		float L_86 = V_7;
-		float L_87 = L_86;
-		RuntimeObject* L_88 = Box(il2cpp_defaults.single_class, &L_87);
-		NullCheck(L_85);
-		ArrayElementTypeCheck (L_85, L_88);
-		(L_85)->SetAt(static_cast<il2cpp_array_size_t>(2), (RuntimeObject*)L_88);
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_89 = L_85;
-		PurchasePackageU5BU5D_t4F889F1228A6A92DD3ABEC8CCD34959EDF19ED03* L_90 = __this->___purchasePackages;
-		U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8* L_91 = V_6;
-		NullCheck(L_91);
-		int32_t L_92 = L_91->___packageIndex;
-		NullCheck(L_90);
-		int32_t L_93 = L_92;
-		PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053* L_94 = (L_90)->GetAt(static_cast<il2cpp_array_size_t>(L_93));
-		NullCheck(L_94);
-		float L_95 = L_94->___cashAmount;
-		float L_96 = L_95;
-		RuntimeObject* L_97 = Box(il2cpp_defaults.single_class, &L_96);
-		NullCheck(L_89);
-		ArrayElementTypeCheck (L_89, L_97);
-		(L_89)->SetAt(static_cast<il2cpp_array_size_t>(3), (RuntimeObject*)L_97);
-		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_98 = L_89;
-		PurchasePackageU5BU5D_t4F889F1228A6A92DD3ABEC8CCD34959EDF19ED03* L_99 = __this->___purchasePackages;
-		U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8* L_100 = V_6;
-		NullCheck(L_100);
-		int32_t L_101 = L_100->___packageIndex;
-		NullCheck(L_99);
-		int32_t L_102 = L_101;
-		PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053* L_103 = (L_99)->GetAt(static_cast<il2cpp_array_size_t>(L_102));
-		NullCheck(L_103);
-		float L_104 = L_103->___cashBonus;
-		float L_105 = L_104;
-		RuntimeObject* L_106 = Box(il2cpp_defaults.single_class, &L_105);
-		NullCheck(L_98);
-		ArrayElementTypeCheck (L_98, L_106);
-		(L_98)->SetAt(static_cast<il2cpp_array_size_t>(4), (RuntimeObject*)L_106);
-		String_t* L_107;
-		L_107 = String_Format_m918500C1EFB475181349A79989BB79BB36102894(_stringLiteralAC9F90C30E0265418E8CAF1A17A5432137E954E0, L_98, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:158>
+		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_35 = __this->___purchaseButtons;
+		int32_t L_36 = V_3;
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_37 = V_4;
+		NullCheck(L_35);
+		ArrayElementTypeCheck (L_35, L_37);
+		(L_35)->SetAt(static_cast<il2cpp_array_size_t>(L_36), (Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098*)L_37);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:159>
+		int32_t L_38 = V_2;
+		int32_t L_39 = ((int32_t)il2cpp_codegen_add(L_38, 1));
+		RuntimeObject* L_40 = Box(il2cpp_defaults.int32_class, &L_39);
+		int32_t L_41 = V_3;
+		int32_t L_42 = L_41;
+		RuntimeObject* L_43 = Box(il2cpp_defaults.int32_class, &L_42);
+		String_t* L_44;
+		L_44 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral9E47656461801871BD77D1C0716DBD07703B2A96, L_40, L_43, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_107, NULL);
-		goto IL_01cb;
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_44, NULL);
 	}
 
-IL_01b3:
+IL_00e1:
+	{
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:145>
+		int32_t L_45 = V_2;
+		V_2 = ((int32_t)il2cpp_codegen_add(L_45, 1));
+	}
+
+IL_00e5:
+	{
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:145>
+		int32_t L_46 = V_2;
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_47 = V_1;
+		NullCheck(L_47);
+		if ((((int32_t)L_46) < ((int32_t)((int32_t)(((RuntimeArray*)L_47)->max_length)))))
+		{
+			goto IL_006a;
+		}
+	}
+
+IL_00ee:
+	{
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:167>
+		V_5 = 0;
+		goto IL_022a;
+	}
+
+IL_00f6:
+	{
+		U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8* L_48 = (U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8*)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8_il2cpp_TypeInfo_var);
+		U3CU3Ec__DisplayClass37_0__ctor_m456B3FE78677607D4A6396046549BA21691AE409(L_48, NULL);
+		V_6 = L_48;
+		U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8* L_49 = V_6;
+		NullCheck(L_49);
+		L_49->___U3CU3E4__this = __this;
+		Il2CppCodeGenWriteBarrier((void**)(&L_49->___U3CU3E4__this), (void*)__this);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:169>
+		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_50 = __this->___purchaseButtons;
+		int32_t L_51 = V_5;
+		NullCheck(L_50);
+		int32_t L_52 = L_51;
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_53 = (L_50)->GetAt(static_cast<il2cpp_array_size_t>(L_52));
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_54;
+		L_54 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_53, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_54)
+		{
+			goto IL_0133;
+		}
+	}
 	{
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:171>
-		int32_t L_108 = V_5;
-		int32_t L_109 = ((int32_t)il2cpp_codegen_add(L_108, 1));
-		RuntimeObject* L_110 = Box(il2cpp_defaults.int32_class, &L_109);
-		String_t* L_111;
-		L_111 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral2CD4B7F9122D40B4B607F3E8F10A3F64A6F61BE3, L_110, NULL);
+		int32_t L_55 = V_5;
+		int32_t L_56 = ((int32_t)il2cpp_codegen_add(L_55, 1));
+		RuntimeObject* L_57 = Box(il2cpp_defaults.int32_class, &L_56);
+		String_t* L_58;
+		L_58 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral2CD4B7F9122D40B4B607F3E8F10A3F64A6F61BE3, L_57, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_111, NULL);
+		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_58, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:172>
+		goto IL_0224;
 	}
 
-IL_01cb:
+IL_0133:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:159>
-		int32_t L_112 = V_5;
-		V_5 = ((int32_t)il2cpp_codegen_add(L_112, 1));
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:176>
+		int32_t L_59 = V_5;
+		V_7 = L_59;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:177>
+		int32_t L_60 = V_5;
+		if ((((int32_t)L_60) < ((int32_t)((int32_t)13))))
+		{
+			goto IL_0149;
+		}
+	}
+	{
+		int32_t L_61 = V_5;
+		if ((((int32_t)L_61) >= ((int32_t)((int32_t)20))))
+		{
+			goto IL_0149;
+		}
+	}
+	{
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:179>
+		int32_t L_62 = V_5;
+		V_7 = ((int32_t)il2cpp_codegen_subtract(L_62, 7));
 	}
 
-IL_01d1:
+IL_0149:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:159>
-		int32_t L_113 = V_5;
-		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_114 = __this->___purchaseButtons;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:182>
+		int32_t L_63 = V_7;
+		if ((((int32_t)L_63) < ((int32_t)0)))
+		{
+			goto IL_015a;
+		}
+	}
+	{
+		int32_t L_64 = V_7;
+		PurchasePackageU5BU5D_t4F889F1228A6A92DD3ABEC8CCD34959EDF19ED03* L_65 = __this->___purchasePackages;
+		NullCheck(L_65);
+		if ((((int32_t)L_64) < ((int32_t)((int32_t)(((RuntimeArray*)L_65)->max_length)))))
+		{
+			goto IL_017c;
+		}
+	}
+
+IL_015a:
+	{
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:184>
+		int32_t L_66 = V_5;
+		int32_t L_67 = L_66;
+		RuntimeObject* L_68 = Box(il2cpp_defaults.int32_class, &L_67);
+		int32_t L_69 = V_7;
+		int32_t L_70 = L_69;
+		RuntimeObject* L_71 = Box(il2cpp_defaults.int32_class, &L_70);
+		String_t* L_72;
+		L_72 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralDDE2EB43D5B464EAB7354695B3CF268EEF615814, L_68, L_71, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_72, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:185>
+		goto IL_0224;
+	}
+
+IL_017c:
+	{
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:188>
+		U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8* L_73 = V_6;
+		int32_t L_74 = V_7;
+		NullCheck(L_73);
+		L_73->___finalPackageIndex = L_74;
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:189>
+		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_75 = __this->___purchaseButtons;
+		int32_t L_76 = V_5;
+		NullCheck(L_75);
+		int32_t L_77 = L_76;
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_78 = (L_75)->GetAt(static_cast<il2cpp_array_size_t>(L_77));
+		NullCheck(L_78);
+		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_79;
+		L_79 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline(L_78, NULL);
+		NullCheck(L_79);
+		UnityEventBase_RemoveAllListeners_m6E68297189537543B0C72FE38804646CA204D076(L_79, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:190>
+		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_80 = __this->___purchaseButtons;
+		int32_t L_81 = V_5;
+		NullCheck(L_80);
+		int32_t L_82 = L_81;
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_83 = (L_80)->GetAt(static_cast<il2cpp_array_size_t>(L_82));
+		NullCheck(L_83);
+		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_84;
+		L_84 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline(L_83, NULL);
+		U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8* L_85 = V_6;
+		UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7* L_86 = (UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7*)il2cpp_codegen_object_new(UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
+		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_86, L_85, (intptr_t)((void*)U3CU3Ec__DisplayClass37_0_U3CSetupPurchaseButtonsU3Eb__0_m0BEFFF223635F0F81B09AF1F4FAC554606D47E9D_RuntimeMethod_var), NULL);
+		NullCheck(L_84);
+		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_84, L_86, NULL);
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:192>
+		PurchasePackageU5BU5D_t4F889F1228A6A92DD3ABEC8CCD34959EDF19ED03* L_87 = __this->___purchasePackages;
+		int32_t L_88 = V_7;
+		NullCheck(L_87);
+		int32_t L_89 = L_88;
+		PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053* L_90 = (L_87)->GetAt(static_cast<il2cpp_array_size_t>(L_89));
+		NullCheck(L_90);
+		float L_91 = L_90->___cashAmount;
+		PurchasePackageU5BU5D_t4F889F1228A6A92DD3ABEC8CCD34959EDF19ED03* L_92 = __this->___purchasePackages;
+		int32_t L_93 = V_7;
+		NullCheck(L_92);
+		int32_t L_94 = L_93;
+		PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053* L_95 = (L_92)->GetAt(static_cast<il2cpp_array_size_t>(L_94));
+		NullCheck(L_95);
+		float L_96 = L_95->___cashBonus;
+		V_8 = ((float)il2cpp_codegen_add(L_91, L_96));
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:193>
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_97 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)4);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_98 = L_97;
+		int32_t L_99 = V_5;
+		int32_t L_100 = ((int32_t)il2cpp_codegen_add(L_99, 1));
+		RuntimeObject* L_101 = Box(il2cpp_defaults.int32_class, &L_100);
+		NullCheck(L_98);
+		ArrayElementTypeCheck (L_98, L_101);
+		(L_98)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject*)L_101);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_102 = L_98;
+		int32_t L_103 = V_7;
+		int32_t L_104 = ((int32_t)il2cpp_codegen_add(L_103, 1));
+		RuntimeObject* L_105 = Box(il2cpp_defaults.int32_class, &L_104);
+		NullCheck(L_102);
+		ArrayElementTypeCheck (L_102, L_105);
+		(L_102)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject*)L_105);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_106 = L_102;
+		PurchasePackageU5BU5D_t4F889F1228A6A92DD3ABEC8CCD34959EDF19ED03* L_107 = __this->___purchasePackages;
+		int32_t L_108 = V_7;
+		NullCheck(L_107);
+		int32_t L_109 = L_108;
+		PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053* L_110 = (L_107)->GetAt(static_cast<il2cpp_array_size_t>(L_109));
+		NullCheck(L_110);
+		int32_t L_111 = L_110->___chipsAmount;
+		int32_t L_112 = L_111;
+		RuntimeObject* L_113 = Box(il2cpp_defaults.int32_class, &L_112);
+		NullCheck(L_106);
+		ArrayElementTypeCheck (L_106, L_113);
+		(L_106)->SetAt(static_cast<il2cpp_array_size_t>(2), (RuntimeObject*)L_113);
+		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_114 = L_106;
+		float L_115 = V_8;
+		float L_116 = L_115;
+		RuntimeObject* L_117 = Box(il2cpp_defaults.single_class, &L_116);
 		NullCheck(L_114);
-		if ((((int32_t)L_113) >= ((int32_t)((int32_t)(((RuntimeArray*)L_114)->max_length)))))
-		{
-			goto IL_01ec;
-		}
-	}
-	{
-		int32_t L_115 = V_5;
-		PurchasePackageU5BU5D_t4F889F1228A6A92DD3ABEC8CCD34959EDF19ED03* L_116 = __this->___purchasePackages;
-		NullCheck(L_116);
-		if ((((int32_t)L_115) < ((int32_t)((int32_t)(((RuntimeArray*)L_116)->max_length)))))
-		{
-			goto IL_00ad;
-		}
+		ArrayElementTypeCheck (L_114, L_117);
+		(L_114)->SetAt(static_cast<il2cpp_array_size_t>(3), (RuntimeObject*)L_117);
+		String_t* L_118;
+		L_118 = String_Format_m918500C1EFB475181349A79989BB79BB36102894(_stringLiteral460C9F5151A8C9DEAF527895A4F35759D1C4E7DC, L_114, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_118, NULL);
 	}
 
-IL_01ec:
+IL_0224:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:174>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:167>
+		int32_t L_119 = V_5;
+		V_5 = ((int32_t)il2cpp_codegen_add(L_119, 1));
+	}
+
+IL_022a:
+	{
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:167>
+		int32_t L_120 = V_5;
+		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_121 = __this->___purchaseButtons;
+		NullCheck(L_121);
+		if ((((int32_t)L_120) < ((int32_t)((int32_t)(((RuntimeArray*)L_121)->max_length)))))
+		{
+			goto IL_00f6;
+		}
+	}
+	{
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:195>
 		return;
 	}
 }
@@ -25695,7 +25747,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_OnPurchaseButtonCli
 		NullCheck(L_1);
 		L_1->___U3CU3E4__this = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this), (void*)__this);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:181>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:202>
 		int32_t L_2 = ___0_packageIndex;
 		if ((((int32_t)L_2) < ((int32_t)0)))
 		{
@@ -25714,7 +25766,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_OnPurchaseButtonCli
 
 IL_001c:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:183>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:204>
 		int32_t L_5 = ___0_packageIndex;
 		int32_t L_6 = L_5;
 		RuntimeObject* L_7 = Box(il2cpp_defaults.int32_class, &L_6);
@@ -25722,13 +25774,13 @@ IL_001c:
 		L_8 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral08D026070ECD978D7315EB6FD0DDC7A66D8400D4, L_7, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_8, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:184>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:205>
 		return;
 	}
 
 IL_0032:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:187>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:208>
 		U3CU3Ec__DisplayClass38_0_t0B9CEE1979C188EC1541980C56003864AD595E9F* L_9 = V_0;
 		PurchasePackageU5BU5D_t4F889F1228A6A92DD3ABEC8CCD34959EDF19ED03* L_10 = __this->___purchasePackages;
 		int32_t L_11 = ___0_packageIndex;
@@ -25738,7 +25790,7 @@ IL_0032:
 		NullCheck(L_9);
 		L_9->___package = L_13;
 		Il2CppCodeGenWriteBarrier((void**)(&L_9->___package), (void*)L_13);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:188>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:209>
 		U3CU3Ec__DisplayClass38_0_t0B9CEE1979C188EC1541980C56003864AD595E9F* L_14 = V_0;
 		U3CU3Ec__DisplayClass38_0_t0B9CEE1979C188EC1541980C56003864AD595E9F* L_15 = V_0;
 		NullCheck(L_15);
@@ -25752,7 +25804,7 @@ IL_0032:
 		float L_20 = L_19->___cashBonus;
 		NullCheck(L_14);
 		L_14->___totalCash = ((float)il2cpp_codegen_add(L_17, L_20));
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:190>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:211>
 		int32_t L_21 = ___0_packageIndex;
 		int32_t L_22 = ((int32_t)il2cpp_codegen_add(L_21, 1));
 		RuntimeObject* L_23 = Box(il2cpp_defaults.int32_class, &L_22);
@@ -25772,7 +25824,7 @@ IL_0032:
 		L_33 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteralC5A20DABE89F40C2022EF9972FEEF9F05DEDD5D0, L_23, L_28, L_32, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_33, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:192>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:213>
 		BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_34;
 		L_34 = BackendAuthService_get_Instance_m74239149FFCCCF5A49AF965DCA0565780B051110_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -25784,10 +25836,10 @@ IL_0032:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:194>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:215>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral74592AA184CC56E984E8C0E28C958F2A24FA7D0B, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:195>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:216>
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_36 = __this->___PurchaseFailed;
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_37 = L_36;
 		if (L_37)
@@ -25805,33 +25857,12 @@ IL_00b1:
 	{
 		NullCheck(G_B6_0);
 		Action_1_Invoke_m690438AAE38F9762172E3AE0A33D0B42ACD35790_inline(G_B6_0, _stringLiteralB02444D0CDB2F51BC5549E32B40DB31E12DB423B, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:196>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:217>
 		return;
 	}
 
 IL_00bc:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:200>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:201>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:202>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:203>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:204>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:205>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:206>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:207>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:208>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:209>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:210>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:211>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:212>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:213>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:214>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:215>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:216>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:217>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:218>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:219>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:220>
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:221>
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:222>
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:223>
@@ -25848,6 +25879,27 @@ IL_00bc:
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:234>
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:235>
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:236>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:237>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:238>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:239>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:240>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:241>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:242>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:243>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:244>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:245>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:246>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:247>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:248>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:249>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:250>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:251>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:252>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:253>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:254>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:255>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:256>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:257>
 		BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_38;
 		L_38 = BackendAuthService_get_Instance_m74239149FFCCCF5A49AF965DCA0565780B051110_inline(NULL);
 		U3CU3Ec__DisplayClass38_0_t0B9CEE1979C188EC1541980C56003864AD595E9F* L_39 = V_0;
@@ -25863,7 +25915,7 @@ IL_00bc:
 		Action_2__ctor_mF67A4826B6795B0CA98A4BEB7D8F5E3FAF247D1C(L_45, L_44, (intptr_t)((void*)U3CU3Ec__DisplayClass38_0_U3COnPurchaseButtonClickedU3Eb__0_m7EBD4E3E8AB40D1147D7B3BADB3A5652B0DBA7A3_RuntimeMethod_var), NULL);
 		NullCheck(L_38);
 		BackendAuthService_Deposit_m985542F223B21012FC8E7A5B2EB5566A3A4DEA7E(L_38, L_40, L_43, L_45, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:237>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:258>
 		return;
 	}
 }
@@ -25878,7 +25930,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_TriggerLocalCheckou
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:245>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:266>
 		DepositResponse_tA838A655C1B9DBB23DA1195CB1B36D57105B430F* L_0 = ___0_depositResponse;
 		NullCheck(L_0);
 		String_t* L_1 = L_0->___paymentIntentId;
@@ -25886,13 +25938,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_TriggerLocalCheckou
 		L_2 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral74841280964C35F479DCB435A7BCAF7C2313F296, L_1, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_2, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:246>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:267>
 		Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* L_3 = ___1_onComplete;
 		RuntimeObject* L_4;
 		L_4 = InAppPurchaseManager_SimulateLocalPaymentCoroutine_mB6F4FC95382890B8CCFFB686FD2E9C81BB28C9B0(__this, L_3, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_5;
 		L_5 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_4, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:247>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:268>
 		return;
 	}
 }
@@ -25920,7 +25972,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* InAppPurchaseManager_SimulateL
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuyPackage1_m50FB4B0FF5198619E2C8472761974B698AC486CA (InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:258>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:279>
 		InAppPurchaseManager_OnPurchaseButtonClicked_mAC7CADA46ECB0DFA0F1B23692CDB70A405890B42(__this, 0, NULL);
 		return;
 	}
@@ -25929,7 +25981,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuyPackage1_m50FB4B
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuyPackage2_mC0354D5220BDEB2BE3E4D675E3661A9A61F7B4D5 (InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:259>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:280>
 		InAppPurchaseManager_OnPurchaseButtonClicked_mAC7CADA46ECB0DFA0F1B23692CDB70A405890B42(__this, 1, NULL);
 		return;
 	}
@@ -25938,7 +25990,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuyPackage2_mC0354D
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuyPackage3_m9A1A3AF6E7870F5024A67D5C04530668907437D5 (InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:260>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:281>
 		InAppPurchaseManager_OnPurchaseButtonClicked_mAC7CADA46ECB0DFA0F1B23692CDB70A405890B42(__this, 2, NULL);
 		return;
 	}
@@ -25947,7 +25999,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuyPackage3_m9A1A3A
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuyPackage4_m20338C7C837D99A51E68683C1A258B542010BDB2 (InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:261>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:282>
 		InAppPurchaseManager_OnPurchaseButtonClicked_mAC7CADA46ECB0DFA0F1B23692CDB70A405890B42(__this, 3, NULL);
 		return;
 	}
@@ -25956,7 +26008,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuyPackage4_m20338C
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuyPackage5_m388F85F88FF0850B8177E35F14476D23A506F32B (InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:262>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:283>
 		InAppPurchaseManager_OnPurchaseButtonClicked_mAC7CADA46ECB0DFA0F1B23692CDB70A405890B42(__this, 4, NULL);
 		return;
 	}
@@ -25965,7 +26017,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuyPackage5_m388F85
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuyPackage6_m5D755B63E9BD7E9CDD643BC4F2496723936B93F9 (InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:263>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:284>
 		InAppPurchaseManager_OnPurchaseButtonClicked_mAC7CADA46ECB0DFA0F1B23692CDB70A405890B42(__this, 5, NULL);
 		return;
 	}
@@ -25974,7 +26026,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuyPackage6_m5D755B
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuyPremiumValue_m4C1DB6EC820C87113EBF7C9DB3F43424BD8AB3B9 (InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:266>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:287>
 		InAppPurchaseManager_OnPurchaseButtonClicked_mAC7CADA46ECB0DFA0F1B23692CDB70A405890B42(__this, 6, NULL);
 		return;
 	}
@@ -25983,7 +26035,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuyPremiumValue_m4C
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuyBestOffers_mD14C5D3E2EC25F9D10E38CB5C3CCA253B597C5EB (InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:267>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:288>
 		InAppPurchaseManager_OnPurchaseButtonClicked_mAC7CADA46ECB0DFA0F1B23692CDB70A405890B42(__this, 7, NULL);
 		return;
 	}
@@ -25992,7 +26044,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuyBestOffers_mD14C
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuyQuickBoost_m99F26EF96D68B7ADF6C27833F61C1E0315915E81 (InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:268>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:289>
 		InAppPurchaseManager_OnPurchaseButtonClicked_mAC7CADA46ECB0DFA0F1B23692CDB70A405890B42(__this, 8, NULL);
 		return;
 	}
@@ -26001,7 +26053,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuyQuickBoost_m99F2
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuyMegaBundle_m667A3B6E940A5B266DB7D4CCF8DCBA892A348E4F (InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:269>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:290>
 		InAppPurchaseManager_OnPurchaseButtonClicked_mAC7CADA46ECB0DFA0F1B23692CDB70A405890B42(__this, ((int32_t)9), NULL);
 		return;
 	}
@@ -26010,7 +26062,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuyMegaBundle_m667A
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuyPowerDeal_m2F19394FE34A1FE754360287444EF48B905A5977 (InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:270>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:291>
 		InAppPurchaseManager_OnPurchaseButtonClicked_mAC7CADA46ECB0DFA0F1B23692CDB70A405890B42(__this, ((int32_t)10), NULL);
 		return;
 	}
@@ -26019,7 +26071,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuyPowerDeal_m2F193
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuyBonusPlus_m05FAAC0C9AE6A57B65A7DB1B3E0C47CD36782098 (InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:271>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:292>
 		InAppPurchaseManager_OnPurchaseButtonClicked_mAC7CADA46ECB0DFA0F1B23692CDB70A405890B42(__this, ((int32_t)11), NULL);
 		return;
 	}
@@ -26028,7 +26080,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuyBonusPlus_m05FAA
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuySmartStarter_mBA15D69BC51B7F63463B06D1CB3E6C9B47651E42 (InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:272>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:293>
 		InAppPurchaseManager_OnPurchaseButtonClicked_mAC7CADA46ECB0DFA0F1B23692CDB70A405890B42(__this, ((int32_t)12), NULL);
 		return;
 	}
@@ -26050,7 +26102,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_InitializePurchasin
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B3_0 = NULL;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B2_0 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:280>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:301>
 		bool L_0;
 		L_0 = InAppPurchaseManager_IsInitialized_m0A7F0F8EA2A5871B42427AB612CC5B0E3A2E8C79(__this, NULL);
 		if (!L_0)
@@ -26059,7 +26111,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_InitializePurchasin
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:282>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:303>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_1 = __this->___OnPurchaseInitialized;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_2 = L_1;
 		if (L_2)
@@ -26077,26 +26129,26 @@ IL_0013:
 	{
 		NullCheck(G_B3_0);
 		Action_Invoke_m7126A54DACA72B845424072887B5F3A51FC3808E_inline(G_B3_0, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:283>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:304>
 		return;
 	}
 
 IL_0019:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:286>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:307>
 		StandardPurchasingModule_t6315FB7ACF4218A4D1608B1FE9AD62B699277176* L_3;
 		L_3 = StandardPurchasingModule_Instance_m230FCCC31020426BB4C1BEDF2B74D800AF85048F(NULL);
 		ConfigurationBuilder_t8C3A3A957E50D9AD38933533B5862D10D15904F7* L_4;
 		L_4 = ConfigurationBuilder_Instance_mD09C0D3968F9311D5D154ED383875C2FD4D939D4(L_3, NULL);
 		V_0 = L_4;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:289>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:310>
 		V_1 = 0;
 		goto IL_0070;
 	}
 
 IL_0028:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:291>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:312>
 		PurchasePackageU5BU5D_t4F889F1228A6A92DD3ABEC8CCD34959EDF19ED03* L_5 = __this->___purchasePackages;
 		int32_t L_6 = V_1;
 		NullCheck(L_5);
@@ -26112,7 +26164,7 @@ IL_0028:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:293>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:314>
 		ConfigurationBuilder_t8C3A3A957E50D9AD38933533B5862D10D15904F7* L_11 = V_0;
 		PurchasePackageU5BU5D_t4F889F1228A6A92DD3ABEC8CCD34959EDF19ED03* L_12 = __this->___purchasePackages;
 		int32_t L_13 = V_1;
@@ -26123,7 +26175,7 @@ IL_0028:
 		String_t* L_16 = L_15->___productId;
 		NullCheck(L_11);
 		ConfigurationBuilder_AddProduct_m3EC5C6DF7C6FEFC54BA4C6E2136E82CD46030489(L_11, L_16, 0, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:294>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:315>
 		PurchasePackageU5BU5D_t4F889F1228A6A92DD3ABEC8CCD34959EDF19ED03* L_17 = __this->___purchasePackages;
 		int32_t L_18 = V_1;
 		NullCheck(L_17);
@@ -26139,14 +26191,14 @@ IL_0028:
 
 IL_006c:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:289>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:310>
 		int32_t L_23 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_23, 1));
 	}
 
 IL_0070:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:289>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:310>
 		int32_t L_24 = V_1;
 		PurchasePackageU5BU5D_t4F889F1228A6A92DD3ABEC8CCD34959EDF19ED03* L_25 = __this->___purchasePackages;
 		NullCheck(L_25);
@@ -26156,14 +26208,14 @@ IL_0070:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:298>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:319>
 		ConfigurationBuilder_t8C3A3A957E50D9AD38933533B5862D10D15904F7* L_26 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(UnityPurchasing_tE8A2DEA921C436AB34CE323A92C915071F3B263B_il2cpp_TypeInfo_var);
 		UnityPurchasing_Initialize_m3BBAA70170C9C38FE62487710D3F0BAEB48E7AC3(__this, L_26, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:299>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:320>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral991AF3E850D0530F2AE98F7C8F0D3D6A22725881, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:300>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:321>
 		return;
 	}
 }
@@ -26171,7 +26223,7 @@ IL_0070:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool InAppPurchaseManager_IsInitialized_m0A7F0F8EA2A5871B42427AB612CC5B0E3A2E8C79 (InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:307>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:328>
 		bool L_0 = __this->___isInitialized;
 		if (!L_0)
 		{
@@ -26218,7 +26270,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuyProductID_m6521B
 	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* G_B9_0 = NULL;
 	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* G_B8_0 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:315>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:336>
 		bool L_0;
 		L_0 = InAppPurchaseManager_IsInitialized_m0A7F0F8EA2A5871B42427AB612CC5B0E3A2E8C79(__this, NULL);
 		if (L_0)
@@ -26227,10 +26279,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_BuyProductID_m6521B
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:317>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:338>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteralF2872231A8B47CD570DDD3410E2855B434C1AD25, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:318>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:339>
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_1 = __this->___PurchaseFailed;
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_2 = L_1;
 		if (L_2)
@@ -26248,13 +26300,13 @@ IL_001d:
 	{
 		NullCheck(G_B3_0);
 		Action_1_Invoke_m690438AAE38F9762172E3AE0A33D0B42ACD35790_inline(G_B3_0, _stringLiteralA236A5CD6BD03F37A695988EB16144E5D320B438, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:319>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:340>
 		return;
 	}
 
 IL_0028:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:322>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:343>
 		RuntimeObject* L_3 = __this->___storeController;
 		NullCheck(L_3);
 		ProductCollection_t6B665855EBADEF58F03A071CA61997E8F4A78046* L_4;
@@ -26264,7 +26316,7 @@ IL_0028:
 		Product_tD279BF775D345330FEE8405D2F53EC5D6B971C76* L_6;
 		L_6 = ProductCollection_WithID_mFF6DF2342D23A940138D62FCD9F20A995A16CEAE(L_4, L_5, NULL);
 		V_0 = L_6;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:323>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:344>
 		Product_tD279BF775D345330FEE8405D2F53EC5D6B971C76* L_7 = V_0;
 		if (!L_7)
 		{
@@ -26282,13 +26334,13 @@ IL_0028:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:325>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:346>
 		String_t* L_10 = ___0_productId;
 		String_t* L_11;
 		L_11 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralA7F7727129351B7DEF305350F25303513E266ACC, L_10, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_11, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:326>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:347>
 		RuntimeObject* L_12 = __this->___storeController;
 		Product_tD279BF775D345330FEE8405D2F53EC5D6B971C76* L_13 = V_0;
 		NullCheck(L_12);
@@ -26298,13 +26350,13 @@ IL_0028:
 
 IL_0062:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:330>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:351>
 		String_t* L_14 = ___0_productId;
 		String_t* L_15;
 		L_15 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralFA0020A6CCBF70ACCDF7FFDC8A5E4484DDAA9CBC, L_14, _stringLiteral13E5F6A5D64554F0BAB44238445D2005D89F2AA7, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_15, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:331>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:352>
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_16 = __this->___PurchaseFailed;
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_17 = L_16;
 		if (L_17)
@@ -26325,7 +26377,7 @@ IL_0082:
 		L_19 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralE051DE51E555C4909BC611FDE5A6E5358CEC6183, L_18, _stringLiteral429D8F132170CDADF68E7EFEA1640AD07E6A5409, NULL);
 		NullCheck(G_B9_0);
 		Action_1_Invoke_m690438AAE38F9762172E3AE0A33D0B42ACD35790_inline(G_B9_0, L_19, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:333>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:354>
 		return;
 	}
 }
@@ -26349,7 +26401,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_RestorePurchases_m9
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:340>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:361>
 		bool L_0;
 		L_0 = InAppPurchaseManager_IsInitialized_m0A7F0F8EA2A5871B42427AB612CC5B0E3A2E8C79(__this, NULL);
 		if (L_0)
@@ -26358,17 +26410,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_RestorePurchases_m9
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:342>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:363>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteralD1C58CD56B71830AA8E096B5CC0165AD9E2710D1, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:343>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:364>
 		return;
 	}
 
 IL_0013:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:346>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:347>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:367>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:368>
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		int32_t L_1;
 		L_1 = Application_get_platform_m59EF7D6155D18891B24767F83F388160B1FF2138(NULL);
@@ -26389,10 +26441,10 @@ IL_0013:
 
 IL_0023:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:349>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:370>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral7090771DBB8AE34FA2BB44CDFCC730D6AF13EA30, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:350>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:371>
 		RuntimeObject* L_3 = __this->___extensionProvider;
 		NullCheck(L_3);
 		RuntimeObject* L_4;
@@ -26406,7 +26458,7 @@ IL_0023:
 
 IL_004a:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:352>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:373>
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		int32_t L_6;
 		L_6 = Application_get_platform_m59EF7D6155D18891B24767F83F388160B1FF2138(NULL);
@@ -26416,10 +26468,10 @@ IL_004a:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:354>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:375>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral7090771DBB8AE34FA2BB44CDFCC730D6AF13EA30, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:355>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:376>
 		RuntimeObject* L_7 = __this->___extensionProvider;
 		NullCheck(L_7);
 		RuntimeObject* L_8;
@@ -26433,10 +26485,10 @@ IL_004a:
 
 IL_007a:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:359>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:380>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral243BE73BDDA329F63760DB9AC23376FF998E0B6C, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:361>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:382>
 		return;
 	}
 }
@@ -26452,7 +26504,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_OnRestoreResult_mC7
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:365>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:386>
 		bool L_0 = ___0_success;
 		if (!L_0)
 		{
@@ -26460,7 +26512,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_OnRestoreResult_mC7
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:367>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:388>
 		String_t* L_1 = ___1_message;
 		String_t* L_2;
 		L_2 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral1A0ECA4A6F03AD0F648660D6ECF73EF2323CC457, L_1, NULL);
@@ -26471,13 +26523,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_OnRestoreResult_mC7
 
 IL_0014:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:371>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:392>
 		String_t* L_3 = ___1_message;
 		String_t* L_4;
 		L_4 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralDEF46719EC6A0DFBAB9AC0AE912802C9D772089B, L_3, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_4, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:373>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:394>
 		return;
 	}
 }
@@ -26494,20 +26546,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_OnInitialized_m15FC
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B2_0 = NULL;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B1_0 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:378>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:399>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral599652E59B43B6B5DD20A7552A1F6B9411C9C45C, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:379>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:400>
 		RuntimeObject* L_0 = ___0_controller;
 		__this->___storeController = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___storeController), (void*)L_0);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:380>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:401>
 		RuntimeObject* L_1 = ___1_extensions;
 		__this->___extensionProvider = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___extensionProvider), (void*)L_1);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:381>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:402>
 		__this->___isInitialized = (bool)1;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:382>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:403>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_2 = __this->___OnPurchaseInitialized;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_3 = L_2;
 		if (L_3)
@@ -26525,7 +26577,7 @@ IL_002a:
 	{
 		NullCheck(G_B2_0);
 		Action_Invoke_m7126A54DACA72B845424072887B5F3A51FC3808E_inline(G_B2_0, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:383>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:404>
 		return;
 	}
 }
@@ -26544,7 +26596,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_OnInitializeFailed_
 	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* G_B2_0 = NULL;
 	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* G_B1_0 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:387>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:408>
 		int32_t L_0 = ___0_error;
 		int32_t L_1 = L_0;
 		RuntimeObject* L_2 = Box(InitializationFailureReason_tE917F5798094FC77A3DB6F77BC76D28DAFBFAF6E_il2cpp_TypeInfo_var, &L_1);
@@ -26552,7 +26604,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_OnInitializeFailed_
 		L_3 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral1DD2CC38752C86EA44AAC2FD0905246584204216, L_2, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_3, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:388>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:409>
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_4 = __this->___PurchaseFailed;
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_5 = L_4;
 		if (L_5)
@@ -26579,9 +26631,9 @@ IL_0021:
 
 IL_0036:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:389>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:410>
 		__this->___isInitialized = (bool)0;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:390>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:411>
 		return;
 	}
 }
@@ -26600,7 +26652,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_OnInitializeFailed_
 	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* G_B2_0 = NULL;
 	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* G_B1_0 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:394>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:415>
 		int32_t L_0 = ___0_error;
 		int32_t L_1 = L_0;
 		RuntimeObject* L_2 = Box(InitializationFailureReason_tE917F5798094FC77A3DB6F77BC76D28DAFBFAF6E_il2cpp_TypeInfo_var, &L_1);
@@ -26609,7 +26661,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_OnInitializeFailed_
 		L_4 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral481BF6500F8C92C53F75EFF1BF09E9C445DC4BFA, L_2, L_3, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_4, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:395>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:416>
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_5 = __this->___PurchaseFailed;
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_6 = L_5;
 		if (L_6)
@@ -26637,9 +26689,9 @@ IL_0022:
 
 IL_0038:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:396>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:417>
 		__this->___isInitialized = (bool)0;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:397>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:418>
 		return;
 	}
 }
@@ -26664,7 +26716,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t InAppPurchaseManager_ProcessPurchase_
 	Action_3_t5E914D59BC31AAE44A0FE411A5376A095F347A2B* G_B12_0 = NULL;
 	Action_3_t5E914D59BC31AAE44A0FE411A5376A095F347A2B* G_B11_0 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:401>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:422>
 		PurchaseEventArgs_tE641DC25170CD34D79C44BCB85F67688EE9B6CD7* L_0 = ___0_args;
 		NullCheck(L_0);
 		Product_tD279BF775D345330FEE8405D2F53EC5D6B971C76* L_1;
@@ -26676,22 +26728,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t InAppPurchaseManager_ProcessPurchase_
 		String_t* L_3;
 		L_3 = ProductDefinition_get_id_mB6D0D1382CB55ED6D3BB44669B66B83135E50C46_inline(L_2, NULL);
 		V_0 = L_3;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:402>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:423>
 		String_t* L_4 = V_0;
 		String_t* L_5;
 		L_5 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral38AB9817A42C55E6D213CFA3D83252DC2727060E, L_4, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_5, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:405>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:426>
 		V_1 = (PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053*)NULL;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:406>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:427>
 		V_3 = 0;
 		goto IL_004b;
 	}
 
 IL_0027:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:408>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:429>
 		PurchasePackageU5BU5D_t4F889F1228A6A92DD3ABEC8CCD34959EDF19ED03* L_6 = __this->___purchasePackages;
 		int32_t L_7 = V_3;
 		NullCheck(L_6);
@@ -26708,27 +26760,27 @@ IL_0027:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:410>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:431>
 		PurchasePackageU5BU5D_t4F889F1228A6A92DD3ABEC8CCD34959EDF19ED03* L_13 = __this->___purchasePackages;
 		int32_t L_14 = V_3;
 		NullCheck(L_13);
 		int32_t L_15 = L_14;
 		PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053* L_16 = (L_13)->GetAt(static_cast<il2cpp_array_size_t>(L_15));
 		V_1 = L_16;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:411>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:432>
 		goto IL_0056;
 	}
 
 IL_0047:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:406>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:427>
 		int32_t L_17 = V_3;
 		V_3 = ((int32_t)il2cpp_codegen_add(L_17, 1));
 	}
 
 IL_004b:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:406>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:427>
 		int32_t L_18 = V_3;
 		PurchasePackageU5BU5D_t4F889F1228A6A92DD3ABEC8CCD34959EDF19ED03* L_19 = __this->___purchasePackages;
 		NullCheck(L_19);
@@ -26740,7 +26792,7 @@ IL_004b:
 
 IL_0056:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:415>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:436>
 		PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053* L_20 = V_1;
 		if (L_20)
 		{
@@ -26748,13 +26800,13 @@ IL_0056:
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:417>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:438>
 		String_t* L_21 = V_0;
 		String_t* L_22;
 		L_22 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral3CC3DBB3A85FDB3FC7C074D20EC077A512875915, L_21, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_22, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:418>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:439>
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_23 = __this->___PurchaseFailed;
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_24 = L_23;
 		if (L_24)
@@ -26779,16 +26831,16 @@ IL_0075:
 
 IL_0085:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:419>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:440>
 		return (int32_t)(0);
 	}
 
 IL_0087:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:423>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:444>
 		PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053* L_27 = V_1;
 		InAppPurchaseManager_GrantPurchaseRewards_m2B43AE76229F1E3DEACCC21E187526F32D138F18(__this, L_27, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:424>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:445>
 		PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053* L_28 = V_1;
 		NullCheck(L_28);
 		float L_29 = L_28->___cashAmount;
@@ -26796,7 +26848,7 @@ IL_0087:
 		NullCheck(L_30);
 		float L_31 = L_30->___cashBonus;
 		V_2 = ((float)il2cpp_codegen_add(L_29, L_31));
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:425>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:446>
 		Action_3_t5E914D59BC31AAE44A0FE411A5376A095F347A2B* L_32 = __this->___OnPurchaseSuccess;
 		Action_3_t5E914D59BC31AAE44A0FE411A5376A095F347A2B* L_33 = L_32;
 		if (L_33)
@@ -26823,7 +26875,7 @@ IL_00a8:
 
 IL_00b5:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:427>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:448>
 		return (int32_t)(0);
 	}
 }
@@ -26841,7 +26893,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_OnPurchaseFailed_mB
 	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* G_B2_0 = NULL;
 	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* G_B1_0 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:433>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:454>
 		Product_tD279BF775D345330FEE8405D2F53EC5D6B971C76* L_0 = ___0_product;
 		NullCheck(L_0);
 		ProductDefinition_tB486F56477C49E81BA6704C2DD31F373CDCCC1BD* L_1;
@@ -26856,7 +26908,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_OnPurchaseFailed_mB
 		L_6 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral1F9E21D0F481CFE536EE502D5D7A836771C0D898, L_2, L_5, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_6, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:434>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:455>
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_7 = __this->___PurchaseFailed;
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_8 = L_7;
 		if (L_8)
@@ -26877,7 +26929,7 @@ IL_002b:
 		L_10 = Enum_ToString_m946B0B83C4470457D0FF555D862022C72BB55741((Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2*)(&L_9), NULL);
 		NullCheck(G_B2_0);
 		Action_1_Invoke_m690438AAE38F9762172E3AE0A33D0B42ACD35790_inline(G_B2_0, L_10, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:435>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:456>
 		return;
 	}
 }
@@ -26895,7 +26947,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_OnPurchaseFailed_m8
 	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* G_B2_0 = NULL;
 	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* G_B1_0 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:440>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:461>
 		Product_tD279BF775D345330FEE8405D2F53EC5D6B971C76* L_0 = ___0_product;
 		NullCheck(L_0);
 		ProductDefinition_tB486F56477C49E81BA6704C2DD31F373CDCCC1BD* L_1;
@@ -26917,7 +26969,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_OnPurchaseFailed_m8
 		L_9 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteral5F5D48A8F930D4657FD722322B0F9AB096125CAA, L_2, L_6, L_8, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_9, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:441>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:462>
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_10 = __this->___PurchaseFailed;
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_11 = L_10;
 		if (L_11)
@@ -26939,7 +26991,7 @@ IL_0036:
 		L_13 = PurchaseFailureDescription_get_message_mC34364558B2C00B589EE42393F91945960DC4438_inline(L_12, NULL);
 		NullCheck(G_B2_0);
 		Action_1_Invoke_m690438AAE38F9762172E3AE0A33D0B42ACD35790_inline(G_B2_0, L_13, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:442>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:463>
 		return;
 	}
 }
@@ -26955,7 +27007,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* InAppPurchaseManager_GetProductPric
 	}
 	Product_tD279BF775D345330FEE8405D2F53EC5D6B971C76* V_0 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:449>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:470>
 		bool L_0;
 		L_0 = InAppPurchaseManager_IsInitialized_m0A7F0F8EA2A5871B42427AB612CC5B0E3A2E8C79(__this, NULL);
 		if (!L_0)
@@ -26964,7 +27016,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* InAppPurchaseManager_GetProductPric
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:451>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:472>
 		RuntimeObject* L_1 = __this->___storeController;
 		NullCheck(L_1);
 		ProductCollection_t6B665855EBADEF58F03A071CA61997E8F4A78046* L_2;
@@ -26974,7 +27026,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* InAppPurchaseManager_GetProductPric
 		Product_tD279BF775D345330FEE8405D2F53EC5D6B971C76* L_4;
 		L_4 = ProductCollection_WithID_mFF6DF2342D23A940138D62FCD9F20A995A16CEAE(L_2, L_3, NULL);
 		V_0 = L_4;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:452>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:473>
 		Product_tD279BF775D345330FEE8405D2F53EC5D6B971C76* L_5 = V_0;
 		if (!L_5)
 		{
@@ -26992,7 +27044,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* InAppPurchaseManager_GetProductPric
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:454>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:475>
 		Product_tD279BF775D345330FEE8405D2F53EC5D6B971C76* L_8 = V_0;
 		NullCheck(L_8);
 		ProductMetadata_t2D6C6454A305A6790D8903169E3B136EB13417E1* L_9;
@@ -27005,7 +27057,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* InAppPurchaseManager_GetProductPric
 
 IL_0031:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:458>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:479>
 		return _stringLiteral0D3978A1643890E19354CE21F56D3CF2ADDA137B;
 	}
 }
@@ -27020,7 +27072,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool InAppPurchaseManager_IsProductAvailable_
 	}
 	Product_tD279BF775D345330FEE8405D2F53EC5D6B971C76* V_0 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:466>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:487>
 		bool L_0;
 		L_0 = InAppPurchaseManager_IsInitialized_m0A7F0F8EA2A5871B42427AB612CC5B0E3A2E8C79(__this, NULL);
 		if (L_0)
@@ -27029,13 +27081,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool InAppPurchaseManager_IsProductAvailable_
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:467>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:488>
 		return (bool)0;
 	}
 
 IL_000a:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:469>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:490>
 		RuntimeObject* L_1 = __this->___storeController;
 		NullCheck(L_1);
 		ProductCollection_t6B665855EBADEF58F03A071CA61997E8F4A78046* L_2;
@@ -27045,7 +27097,7 @@ IL_000a:
 		Product_tD279BF775D345330FEE8405D2F53EC5D6B971C76* L_4;
 		L_4 = ProductCollection_WithID_mFF6DF2342D23A940138D62FCD9F20A995A16CEAE(L_2, L_3, NULL);
 		V_0 = L_4;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:470>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:491>
 		Product_tD279BF775D345330FEE8405D2F53EC5D6B971C76* L_5 = V_0;
 		if (!L_5)
 		{
@@ -27072,10 +27124,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_ProcessPurchaseDire
 	Action_3_t5E914D59BC31AAE44A0FE411A5376A095F347A2B* G_B2_0 = NULL;
 	Action_3_t5E914D59BC31AAE44A0FE411A5376A095F347A2B* G_B1_0 = NULL;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:479>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:500>
 		PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053* L_0 = ___0_package;
 		InAppPurchaseManager_GrantPurchaseRewards_m2B43AE76229F1E3DEACCC21E187526F32D138F18(__this, L_0, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:480>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:501>
 		PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053* L_1 = ___0_package;
 		NullCheck(L_1);
 		float L_2 = L_1->___cashAmount;
@@ -27083,7 +27135,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_ProcessPurchaseDire
 		NullCheck(L_3);
 		float L_4 = L_3->___cashBonus;
 		V_0 = ((float)il2cpp_codegen_add(L_2, L_4));
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:481>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:502>
 		Action_3_t5E914D59BC31AAE44A0FE411A5376A095F347A2B* L_5 = __this->___OnPurchaseSuccess;
 		Action_3_t5E914D59BC31AAE44A0FE411A5376A095F347A2B* L_6 = L_5;
 		if (L_6)
@@ -27108,7 +27160,7 @@ IL_0020:
 		String_t* L_11 = L_10->___productId;
 		NullCheck(G_B2_0);
 		Action_3_Invoke_m1562D3C248F692FD34406E2FE34AE41A32855BA1_inline(G_B2_0, L_8, L_9, L_11, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:482>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:503>
 		return;
 	}
 }
@@ -27124,7 +27176,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_GrantPurchaseReward
 	}
 	float V_0 = 0.0f;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:492>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:513>
 		PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053* L_0 = ___0_package;
 		NullCheck(L_0);
 		float L_1 = L_0->___cashAmount;
@@ -27132,7 +27184,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_GrantPurchaseReward
 		NullCheck(L_2);
 		float L_3 = L_2->___cashBonus;
 		V_0 = ((float)il2cpp_codegen_add(L_1, L_3));
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:493>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:514>
 		PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053* L_4 = ___0_package;
 		NullCheck(L_4);
 		int32_t L_5 = L_4->___chipsAmount;
@@ -27145,9 +27197,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_GrantPurchaseReward
 		L_11 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral9A26B0D8F85CAF8277F7DC8E2566431B1B5FBB4A, L_7, L_10, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_11, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:496>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:517>
 		InAppPurchaseManager_UpdateAllUIDisplays_m3A53B992A39B6636DD0A2831286E9424415FA77F(__this, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:497>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:518>
 		return;
 	}
 }
@@ -27165,15 +27217,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_UpdateAllUIDisplays
 	int32_t V_0 = 0;
 	float V_1 = 0.0f;
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:504>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:525>
 		int32_t L_0;
 		L_0 = PlayerModel_get_Coins_m4C02B7FEEBA8E8E63B180510D565F9FA8B33F37A_inline(NULL);
 		V_0 = L_0;
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:505>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:526>
 		int32_t L_1;
 		L_1 = PlayerModel_get_CashBalance_m0E3FB6888B6E28878E0F553CB0A96C2947BFEFAC_inline(NULL);
 		V_1 = ((float)L_1);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:508>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:529>
 		PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* L_2 = __this->___playerProfileUI;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
@@ -27184,7 +27236,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_UpdateAllUIDisplays
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:510>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:531>
 		int32_t L_4 = V_0;
 		float L_5 = V_1;
 		CurrencyDisplayUI_TriggerVisualAnimationTick_mD5D3370039680B42715B6DCC4D6E3CA4B864BF88(L_4, L_5, NULL);
@@ -27193,10 +27245,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_UpdateAllUIDisplays
 
 IL_0023:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:514>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:535>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral9FC58BE1291CA2845CA17EA2CAE28747CF8C3902, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:516>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:537>
 		return;
 	}
 }
@@ -27204,9 +27256,9 @@ IL_0023:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_OnPlayerDataUpdated_mFC0C45AC7CBF65CDE9B0AD079E1C2E6368EB993E (InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:523>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:544>
 		InAppPurchaseManager_UpdateAllUIDisplays_m3A53B992A39B6636DD0A2831286E9424415FA77F(__this, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:524>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:545>
 		return;
 	}
 }
@@ -27214,9 +27266,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_OnPlayerDataUpdated
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_RefreshAllUI_m6504F562C23C4E80DF500D606CA6BDD8B618BD43 (InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:532>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:553>
 		InAppPurchaseManager_UpdateAllUIDisplays_m3A53B992A39B6636DD0A2831286E9424415FA77F(__this, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:533>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:554>
 		return;
 	}
 }
@@ -27224,11 +27276,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_RefreshAllUI_m6504F
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_SetPlayerProfileUI_m20ECF174E6E89A37DF6F36630ECEE2E2FE9AAB91 (InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* __this, PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* ___0_ui, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:540>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:561>
 		PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* L_0 = ___0_ui;
 		__this->___playerProfileUI = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___playerProfileUI), (void*)L_0);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:541>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:562>
 		return;
 	}
 }
@@ -27236,7 +27288,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_SetPlayerProfileUI_
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053* InAppPurchaseManager_GetPurchasePackage_m6CE52F446F64F44228C0E2686BCB78FF693255ED (InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:548>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:569>
 		int32_t L_0 = ___0_index;
 		if ((((int32_t)L_0) < ((int32_t)0)))
 		{
@@ -27253,7 +27305,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PurchasePackage_t0772BD5250C6C6F248AD9B8E6836
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:550>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:571>
 		PurchasePackageU5BU5D_t4F889F1228A6A92DD3ABEC8CCD34959EDF19ED03* L_3 = __this->___purchasePackages;
 		int32_t L_4 = ___0_index;
 		NullCheck(L_3);
@@ -27264,7 +27316,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PurchasePackage_t0772BD5250C6C6F248AD9B8E6836
 
 IL_0018:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:552>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:573>
 		return (PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053*)NULL;
 	}
 }
@@ -27278,7 +27330,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_SetPurchasePanelAct
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:560>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:581>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___purchasePanel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -27289,7 +27341,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_SetPurchasePanelAct
 		}
 	}
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:562>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:583>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___purchasePanel;
 		bool L_3 = ___0_active;
 		NullCheck(L_2);
@@ -27298,7 +27350,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager_SetPurchasePanelAct
 
 IL_001a:
 	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:564>
+		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:585>
 		return;
 	}
 }
@@ -27597,196 +27649,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InAppPurchaseManager__ctor_m298C4CD361D9
 		__this->___purchasePackages = L_73;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___purchasePackages), (void*)L_73);
 		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:72>
-		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_79 = (ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF*)(ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF*)SZArrayNew(ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF_il2cpp_TypeInfo_var, (uint32_t)((int32_t)13));
+		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_79 = (ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF*)(ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF*)SZArrayNew(ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF_il2cpp_TypeInfo_var, (uint32_t)((int32_t)20));
 		__this->___purchaseButtons = L_79;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___purchaseButtons), (void*)L_79);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// Method Definition Index: 89147
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PurchasePackage__ctor_m9AC61414FE96F602D6B9750AB7AFA7C0A8EE0311 (PurchasePackage_t0772BD5250C6C6F248AD9B8E6836702C5220F053* __this, const RuntimeMethod* method) 
-{
-	{
-		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// Method Definition Index: 89148
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass37_0__ctor_m456B3FE78677607D4A6396046549BA21691AE409 (U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8* __this, const RuntimeMethod* method) 
-{
-	{
-		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		return;
-	}
-}
-// Method Definition Index: 89149
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass37_0_U3CSetupPurchaseButtonsU3Eb__0_m0BEFFF223635F0F81B09AF1F4FAC554606D47E9D (U3CU3Ec__DisplayClass37_0_t9C232BF5EC7736F7A27907DE9B85E40016C526A8* __this, const RuntimeMethod* method) 
-{
-	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:165>
-		InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* L_0 = __this->___U3CU3E4__this;
-		int32_t L_1 = __this->___packageIndex;
-		NullCheck(L_0);
-		InAppPurchaseManager_OnPurchaseButtonClicked_mAC7CADA46ECB0DFA0F1B23692CDB70A405890B42(L_0, L_1, NULL);
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// Method Definition Index: 89150
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass38_0__ctor_m9CDA23931FD1375CCB3B19DCF775ADDA66A9D6D5 (U3CU3Ec__DisplayClass38_0_t0B9CEE1979C188EC1541980C56003864AD595E9F* __this, const RuntimeMethod* method) 
-{
-	{
-		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		return;
-	}
-}
-// Method Definition Index: 89151
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass38_0_U3COnPurchaseButtonClickedU3Eb__0_m7EBD4E3E8AB40D1147D7B3BADB3A5652B0DBA7A3 (U3CU3Ec__DisplayClass38_0_t0B9CEE1979C188EC1541980C56003864AD595E9F* __this, bool ___0_depositSuccess, DepositResponse_tA838A655C1B9DBB23DA1195CB1B36D57105B430F* ___1_depositResponse, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass38_1_U3COnPurchaseButtonClickedU3Eb__1_m35CC3FF5C3CDF3283CCDE2607D6E0E2720E016C0_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec__DisplayClass38_1_t68CAFB3AD276B881C840C5978F38D869DCE0133C_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral6B5ED4E4357BEEC341E0500D30A810DF4489A799);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral6F6DC295090526C1D44EB9CD347830A9991CBAED);
-		s_Il2CppMethodInitialized = true;
-	}
-	U3CU3Ec__DisplayClass38_1_t68CAFB3AD276B881C840C5978F38D869DCE0133C* V_0 = NULL;
-	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* G_B6_0 = NULL;
-	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* G_B5_0 = NULL;
-	{
-		U3CU3Ec__DisplayClass38_1_t68CAFB3AD276B881C840C5978F38D869DCE0133C* L_0 = (U3CU3Ec__DisplayClass38_1_t68CAFB3AD276B881C840C5978F38D869DCE0133C*)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass38_1_t68CAFB3AD276B881C840C5978F38D869DCE0133C_il2cpp_TypeInfo_var);
-		U3CU3Ec__DisplayClass38_1__ctor_mAE42EAFDA494AAB13EC9331778C60CEE8AF358AC(L_0, NULL);
-		V_0 = L_0;
-		U3CU3Ec__DisplayClass38_1_t68CAFB3AD276B881C840C5978F38D869DCE0133C* L_1 = V_0;
-		NullCheck(L_1);
-		L_1->___CSU24U3CU3E8__locals1 = __this;
-		Il2CppCodeGenWriteBarrier((void**)(&L_1->___CSU24U3CU3E8__locals1), (void*)__this);
-		U3CU3Ec__DisplayClass38_1_t68CAFB3AD276B881C840C5978F38D869DCE0133C* L_2 = V_0;
-		DepositResponse_tA838A655C1B9DBB23DA1195CB1B36D57105B430F* L_3 = ___1_depositResponse;
-		NullCheck(L_2);
-		L_2->___depositResponse = L_3;
-		Il2CppCodeGenWriteBarrier((void**)(&L_2->___depositResponse), (void*)L_3);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:202>
-		bool L_4 = ___0_depositSuccess;
-		if (!L_4)
-		{
-			goto IL_004f;
-		}
-	}
-	{
-		U3CU3Ec__DisplayClass38_1_t68CAFB3AD276B881C840C5978F38D869DCE0133C* L_5 = V_0;
-		NullCheck(L_5);
-		DepositResponse_tA838A655C1B9DBB23DA1195CB1B36D57105B430F* L_6 = L_5->___depositResponse;
-		if (!L_6)
-		{
-			goto IL_004f;
-		}
-	}
-	{
-		U3CU3Ec__DisplayClass38_1_t68CAFB3AD276B881C840C5978F38D869DCE0133C* L_7 = V_0;
-		NullCheck(L_7);
-		DepositResponse_tA838A655C1B9DBB23DA1195CB1B36D57105B430F* L_8 = L_7->___depositResponse;
-		NullCheck(L_8);
-		String_t* L_9 = L_8->___paymentIntentId;
-		bool L_10;
-		L_10 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_9, NULL);
-		if (L_10)
-		{
-			goto IL_004f;
-		}
-	}
-	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:205>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:206>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:207>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:208>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:209>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:210>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:211>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:212>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:213>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:214>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:215>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:216>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:217>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:218>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:219>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:220>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:221>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:222>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:223>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:224>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:225>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:226>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:227>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:228>
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:229>
-		InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* L_11 = __this->___U3CU3E4__this;
-		U3CU3Ec__DisplayClass38_1_t68CAFB3AD276B881C840C5978F38D869DCE0133C* L_12 = V_0;
-		NullCheck(L_12);
-		DepositResponse_tA838A655C1B9DBB23DA1195CB1B36D57105B430F* L_13 = L_12->___depositResponse;
-		U3CU3Ec__DisplayClass38_1_t68CAFB3AD276B881C840C5978F38D869DCE0133C* L_14 = V_0;
-		Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* L_15 = (Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C*)il2cpp_codegen_object_new(Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C_il2cpp_TypeInfo_var);
-		Action_1__ctor_mA8C3AC97D1F076EA5D1D0C10CEE6BD3E94711501(L_15, L_14, (intptr_t)((void*)U3CU3Ec__DisplayClass38_1_U3COnPurchaseButtonClickedU3Eb__1_m35CC3FF5C3CDF3283CCDE2607D6E0E2720E016C0_RuntimeMethod_var), NULL);
-		NullCheck(L_11);
-		InAppPurchaseManager_TriggerLocalCheckoutFlow_mA35F7B4FA9796D3B8417D6FC37F7F281DC64CB86(L_11, L_13, L_15, NULL);
-		return;
-	}
-
-IL_004f:
-	{
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:233>
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral6B5ED4E4357BEEC341E0500D30A810DF4489A799, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:234>
-		InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* L_16 = __this->___U3CU3E4__this;
-		NullCheck(L_16);
-		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_17 = L_16->___PurchaseFailed;
-		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_18 = L_17;
-		if (L_18)
-		{
-			G_B6_0 = L_18;
-			goto IL_0069;
-		}
-		G_B5_0 = L_18;
-	}
-	{
-		return;
-	}
-
-IL_0069:
-	{
-		NullCheck(G_B6_0);
-		Action_1_Invoke_m690438AAE38F9762172E3AE0A33D0B42ACD35790_inline(G_B6_0, _stringLiteral6F6DC295090526C1D44EB9CD347830A9991CBAED, NULL);
-		//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/InAppPurchaseManager.cs:236>
 		return;
 	}
 }
