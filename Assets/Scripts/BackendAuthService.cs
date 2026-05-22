@@ -1190,6 +1190,136 @@ public class BackendAuthService : MonoBehaviour
         }
     }
 
+    [Serializable]
+    public class DepositResponse
+    {
+        public bool success;
+        public string paymentIntentId;
+        public string clientSecret;
+        public string message;
+    }
+
+    /// <summary>
+    /// Initiates a deposit request to obtain a payment intent.
+    /// </summary>
+    public void Deposit(float amount, string productId, Action<bool, DepositResponse> onComplete)
+    {
+        if (!HasStoredJWT())
+        {
+            onComplete?.Invoke(false, null);
+            return;
+        }
+        StartCoroutine(DepositCoroutine(amount, productId, onComplete));
+    }
+
+    private IEnumerator DepositCoroutine(float amount, string productId, Action<bool, DepositResponse> onComplete)
+    {
+        string url = baseUrl.TrimEnd('/') + "/api/wallet/deposit";
+        string token = GetStoredJWT();
+        string jsonPayload = $"{{\"amount\":{amount.ToString("F2", System.Globalization.CultureInfo.InvariantCulture)},\"productId\":\"{productId}\"}}";
+
+        using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+        {
+            byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonPayload);
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+            request.SetRequestHeader("Authorization", "Bearer " + token);
+
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Deposit Result: {request.downloadHandler.text}</color>");
+                try
+                {
+                    DepositResponse response = JsonUtility.FromJson<DepositResponse>(request.downloadHandler.text);
+                    onComplete?.Invoke(true, response);
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError($"[BackendAuthService] Deposit Parse Error: {e.Message}");
+                    onComplete?.Invoke(false, null);
+                }
+            }
+            else
+            {
+                Debug.LogError($"[BackendAuthService] Deposit Error: {request.error} | {request.downloadHandler.text}");
+                onComplete?.Invoke(false, null);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Synchronizes the completed payment intent with the server.
+    /// </summary>
+    public void SyncDeposit(string paymentIntentId, Action<bool, string> onComplete)
+    {
+        if (!HasStoredJWT())
+        {
+            onComplete?.Invoke(false, "Unauthorized: No stored JWT");
+            return;
+        }
+        StartCoroutine(SyncDepositCoroutine(paymentIntentId, onComplete));
+    }
+
+    private IEnumerator SyncDepositCoroutine(string paymentIntentId, Action<bool, string> onComplete)
+    {
+        string url = baseUrl.TrimEnd('/') + "/api/wallet/sync-deposit/" + paymentIntentId;
+        string token = GetStoredJWT();
+
+        using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+        {
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Authorization", "Bearer " + token);
+
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Sync Deposit Result: {request.downloadHandler.text}</color>");
+                try
+                {
+                    AuthResponse response = JsonUtility.FromJson<AuthResponse>(request.downloadHandler.text);
+                    if (response != null && response.user != null && !string.IsNullOrEmpty(response.user.id))
+                    {
+                        PlayerModel.UpdateData(
+                            response.user.id, response.user.name, response.user.email,
+                            response.user.wins, response.user.losses, response.user.balance,
+                            response.user.cashBalance, response.user.bonusBalance, response.user.winningBalance,
+                            response.user.coins, response.user.avatar, response.user.xp,
+                            response.user.level, response.user.role, 0,
+                            response.user.activeMatchId, response.user.activeRoomId
+                        );
+                        onComplete?.Invoke(true, "Deposit synced successfully!");
+                    }
+                    else
+                    {
+                        if (response != null && response.success)
+                        {
+                            Debug.LogWarning("[BackendAuthService] Deposit sync succeeded but no user wallet data was returned. Keeping current local balances.");
+                            onComplete?.Invoke(true, "Deposit synced successfully (local balance unchanged).");
+                        }
+                        else
+                        {
+                            onComplete?.Invoke(false, "Failed to parse updated user data.");
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError($"[BackendAuthService] Sync Deposit Parse Error: {e.Message}");
+                    onComplete?.Invoke(false, "JSON parsing failed.");
+                }
+            }
+            else
+            {
+                Debug.LogError($"[BackendAuthService] Sync Deposit Error: {request.error} | {request.downloadHandler.text}");
+                onComplete?.Invoke(false, request.downloadHandler.text);
+            }
+        }
+    }
+
     /// <summary>
     /// Fetches the daily offers from the backend.
     /// </summary>

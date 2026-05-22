@@ -593,6 +593,14 @@ public class OffersCarouselManager : MonoBehaviour
     }
     
     /// <summary>
+    /// Gets all offer carousel items.
+    /// </summary>
+    public GameObject[] GetOfferItems()
+    {
+        return offerItems;
+    }
+
+    /// <summary>
     /// Editor helper: Refresh visual states (for testing in editor)
     /// </summary>
     [ContextMenu("Refresh Visual States")]

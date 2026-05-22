@@ -68,8 +68,8 @@ public class InAppPurchaseManager : MonoBehaviour
         new PurchasePackage { chipsAmount = 160, cashAmount = 12f, cashBonus = 2.4f, productId = PRODUCT_ID_SMART_STARTER }      // Smart Starter: $12
     };
 
-    [Header("Purchase Buttons (13 total: 6 regular + 7 offer panels)")]
-    [SerializeField] private Button[] purchaseButtons = new Button[13]; // 13 purchase buttons
+    [Header("Purchase Buttons (20 total: 6 regular + 7 offer panels + 7 carousel panels)")]
+    [SerializeField] private Button[] purchaseButtons = new Button[20]; // 20 purchase buttons
 
     [Header("UI Manager Reference")]
     [SerializeField] private PlayerProfileUI playerProfileUI; // Reference to PlayerProfileUI for updating all currency displays
@@ -124,26 +124,73 @@ public class InAppPurchaseManager : MonoBehaviour
     /// </summary>
     private void SetupPurchaseButtons()
     {
-        if (purchaseButtons == null || purchaseButtons.Length != 13)
+        if (purchaseButtons == null)
         {
-            Debug.LogWarning("[InAppPurchaseManager] Purchase buttons array is not properly set up! Expected 13 buttons.");
+            Debug.LogError("[InAppPurchaseManager] Purchase buttons array is null!");
             return;
         }
 
-        for (int i = 0; i < purchaseButtons.Length && i < purchasePackages.Length; i++)
+        if (purchaseButtons.Length != 13 && purchaseButtons.Length != 20)
         {
-            int packageIndex = i; // Capture index for closure
-            if (purchaseButtons[i] != null)
+            Debug.LogWarning($"[InAppPurchaseManager] Purchase buttons array size is {purchaseButtons.Length}. Expected 13 or 20 buttons.");
+        }
+
+        // Auto-find offer buttons from the carousel if missing in the inspector
+        OffersCarouselManager carousel = FindObjectOfType<OffersCarouselManager>();
+        if (carousel != null)
+        {
+            GameObject[] carouselOffers = carousel.GetOfferItems();
+            if (carouselOffers != null)
             {
-                purchaseButtons[i].onClick.RemoveAllListeners();
-                purchaseButtons[i].onClick.AddListener(() => OnPurchaseButtonClicked(packageIndex));
-                float totalCash = purchasePackages[packageIndex].cashAmount + purchasePackages[packageIndex].cashBonus;
-                Debug.Log($"[InAppPurchaseManager] Setup purchase button {i + 1}: {purchasePackages[packageIndex].chipsAmount} chips + {totalCash} cash (base: {purchasePackages[packageIndex].cashAmount} + bonus: {purchasePackages[packageIndex].cashBonus})");
+                for (int i = 0; i < carouselOffers.Length; i++)
+                {
+                    // If array length is 20, carousel buttons are at indices 13 to 19.
+                    // If array length is 13, carousel buttons are at indices 6 to 12.
+                    int buttonIndex = (purchaseButtons.Length == 20) ? (13 + i) : (6 + i);
+                    
+                    if (buttonIndex < purchaseButtons.Length && purchaseButtons[buttonIndex] == null)
+                    {
+                        if (carouselOffers[i] != null)
+                        {
+                            Button btn = carouselOffers[i].GetComponentInChildren<Button>();
+                            if (btn != null)
+                            {
+                                purchaseButtons[buttonIndex] = btn;
+                                Debug.Log($"[InAppPurchaseManager] Auto-referenced Carousel Offer Button {i + 1} at index {buttonIndex}.");
+                            }
+                        }
+                    }
+                }
             }
-            else
+        }
+
+        for (int i = 0; i < purchaseButtons.Length; i++)
+        {
+            if (purchaseButtons[i] == null)
             {
                 Debug.LogWarning($"[InAppPurchaseManager] Purchase button {i + 1} is null!");
+                continue;
             }
+
+            // Map button index to package index
+            int packageIndex = i;
+            if (i >= 13 && i < 20)
+            {
+                packageIndex = i - 7; // Map buttons 13-19 to packages 6-12
+            }
+
+            if (packageIndex < 0 || packageIndex >= purchasePackages.Length)
+            {
+                Debug.LogWarning($"[InAppPurchaseManager] Button index {i} maps to out-of-bounds package index {packageIndex}!");
+                continue;
+            }
+
+            int finalPackageIndex = packageIndex; // Capture index for closure
+            purchaseButtons[i].onClick.RemoveAllListeners();
+            purchaseButtons[i].onClick.AddListener(() => OnPurchaseButtonClicked(finalPackageIndex));
+            
+            float totalCash = purchasePackages[packageIndex].cashAmount + purchasePackages[packageIndex].cashBonus;
+            Debug.Log($"[InAppPurchaseManager] Setup purchase button {i + 1} (maps to package {packageIndex + 1}): {purchasePackages[packageIndex].chipsAmount} chips + {totalCash} cash");
         }
     }
 
@@ -159,25 +206,74 @@ public class InAppPurchaseManager : MonoBehaviour
         }
 
         PurchasePackage package = purchasePackages[packageIndex];
-        Debug.Log($"[InAppPurchaseManager] Purchase button {packageIndex + 1} clicked! Package: {package.chipsAmount} chips + {package.cashAmount} cash");
+        float totalCash = package.cashAmount + package.cashBonus;
 
-#if UNITY_PURCHASING
-        // Use Unity IAP if initialized
-        if (IsInitialized())
+        Debug.Log($"[InAppPurchaseManager] Purchase button {packageIndex + 1} clicked! Package: {package.chipsAmount} chips + {totalCash} cash");
+
+        if (BackendAuthService.Instance == null)
         {
-            BuyProductID(package.productId);
+            Debug.LogError("[InAppPurchaseManager] BackendAuthService Instance is null! Cannot initiate deposit.");
+            PurchaseFailed?.Invoke("Backend unavailable");
+            return;
         }
-        else
+
+        // 1. Create deposit intent on backend API
+        BackendAuthService.Instance.Deposit(totalCash, package.productId, (depositSuccess, depositResponse) =>
         {
-            Debug.LogError("[InAppPurchaseManager] Unity IAP not initialized. Cannot purchase.");
-            PurchaseFailed?.Invoke("IAP not initialized");
-        }
-#else
-        // Unity IAP not available - use direct purchase for testing
-        Debug.LogWarning("[InAppPurchaseManager] Unity IAP not available. Using direct purchase mode.");
-        ProcessPurchaseDirectly(package);
-#endif
+            if (depositSuccess && depositResponse != null && !string.IsNullOrEmpty(depositResponse.paymentIntentId))
+            {
+                // 2. Trigger the local/client-side checkout flow (e.g. Stripe checkout screen / Webview)
+                TriggerLocalCheckoutFlow(depositResponse, (checkoutSuccess) =>
+                {
+                    if (checkoutSuccess)
+                      {
+                        // 3. Notify backend API to synchronize wallet balances
+                        BackendAuthService.Instance.SyncDeposit(depositResponse.paymentIntentId, (syncSuccess, syncMsg) =>
+                        {
+                            if (syncSuccess)
+                            {
+                                Debug.Log($"[InAppPurchaseManager] SUCCESS: Synced deposit for intent: {depositResponse.paymentIntentId}");
+                                OnPurchaseSuccess?.Invoke(package.chipsAmount, totalCash, package.productId);
+                            }
+                            else
+                            {
+                                Debug.LogError($"[InAppPurchaseManager] Payment succeeded locally but server sync failed: {syncMsg}");
+                                PurchaseFailed?.Invoke("Verification sync failed");
+                            }
+                        });
+                    }
+                    else
+                    {
+                        Debug.LogWarning("[InAppPurchaseManager] Local payment flow was cancelled or failed.");
+                        PurchaseFailed?.Invoke("Payment failed");
+                    }
+                });
+            }
+            else
+            {
+                Debug.LogError("[InAppPurchaseManager] Server failed to initiate deposit intent.");
+                PurchaseFailed?.Invoke("Deposit initiation failed");
+            }
+        });
     }
+
+    /// <summary>
+    /// Handles the local checkout/payment gateway integration.
+    /// Replace the mock coroutine below with your Stripe, Razorpay, or custom checkout SDK call.
+    /// </summary>
+    private void TriggerLocalCheckoutFlow(BackendAuthService.DepositResponse depositResponse, Action<bool> onComplete)
+    {
+        Debug.Log($"[InAppPurchaseManager] Initiating local payment checkout for intent: {depositResponse.paymentIntentId}");
+        StartCoroutine(SimulateLocalPaymentCoroutine(onComplete));
+    }
+
+    private System.Collections.IEnumerator SimulateLocalPaymentCoroutine(Action<bool> onComplete)
+    {
+        // Simulate local network/SDK checkout processing delay
+        yield return new WaitForSeconds(1.0f);
+        onComplete?.Invoke(true); // Return success
+    }
+
 
     // Public methods for direct purchase calls - Regular Packages
     public void BuyPackage1() => OnPurchaseButtonClicked(0);

@@ -7771,6 +7771,21 @@ struct AnimatorStateInfo_t1F47379289C7CE7FD588FBC3BBD79A777243B6B2
 	int32_t ___m_Tag;
 	int32_t ___m_Loop;
 };
+struct AppleAuthQuickLoginArgs_tBB2B39ED7803A5FA6916A70CB519F33099AAE38C 
+{
+	String_t* ___Nonce;
+	String_t* ___State;
+};
+struct AppleAuthQuickLoginArgs_tBB2B39ED7803A5FA6916A70CB519F33099AAE38C_marshaled_pinvoke
+{
+	char* ___Nonce;
+	char* ___State;
+};
+struct AppleAuthQuickLoginArgs_tBB2B39ED7803A5FA6916A70CB519F33099AAE38C_marshaled_com
+{
+	Il2CppChar* ___Nonce;
+	Il2CppChar* ___State;
+};
 struct ArrayMetadata_tBEFB514CF36C7DB76B6E2EF87665D7F1675D846B 
 {
 	Type_t* ___element_type;
@@ -16866,6 +16881,30 @@ struct DrawStatistics_t4AF06C67CEC7B97509EBAD48E3EE908301598E6F
 struct Rune_tE8DB196113D1DBF48E710C120CC50D2AD7D5915E 
 {
 	int32_t ___value;
+};
+struct MonoScriptData_tEA39788D8AD249640255A82FD59F98E8EFC38CDE 
+{
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___FilePathsData;
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___TypesData;
+	int32_t ___TotalTypes;
+	int32_t ___TotalFiles;
+	bool ___IsEditorOnly;
+};
+struct MonoScriptData_tEA39788D8AD249640255A82FD59F98E8EFC38CDE_marshaled_pinvoke
+{
+	Il2CppSafeArray* ___FilePathsData;
+	Il2CppSafeArray* ___TypesData;
+	int32_t ___TotalTypes;
+	int32_t ___TotalFiles;
+	int32_t ___IsEditorOnly;
+};
+struct MonoScriptData_tEA39788D8AD249640255A82FD59F98E8EFC38CDE_marshaled_com
+{
+	Il2CppSafeArray* ___FilePathsData;
+	Il2CppSafeArray* ___TypesData;
+	int32_t ___TotalTypes;
+	int32_t ___TotalFiles;
+	int32_t ___IsEditorOnly;
 };
 struct MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E 
 {
@@ -32991,6 +33030,10 @@ struct LogBehaviour_t2FD320D27583DB4381604A338ACB97E18D9AEB2D
 {
 	int32_t ___value__;
 };
+struct LoginOptions_tCE8EEC9FDEB77C68C6E145F3172DB07F3817E164 
+{
+	int32_t ___value__;
+};
 struct Loglevels_t74E7EA8D4D4DE4BBC275CBBE5A0A6349A3F8B5CB 
 {
 	int32_t ___value__;
@@ -43331,6 +43374,24 @@ struct AnimationScriptPlayable_t1326433F6848D93D7D90BC54B4AB6649A5D59127
 struct AnimatorControllerPlayable_tADDCB301674D6243EFE1BD032E7D118FD091210A 
 {
 	PlayableHandle_t5D6A01EF94382EFEDC047202F71DF882769654D4 ___m_Handle;
+};
+struct AppleAuthLoginArgs_tEC38AFD6B2C1CCBD455014707F0E505CDF8972B4 
+{
+	int32_t ___Options;
+	String_t* ___Nonce;
+	String_t* ___State;
+};
+struct AppleAuthLoginArgs_tEC38AFD6B2C1CCBD455014707F0E505CDF8972B4_marshaled_pinvoke
+{
+	int32_t ___Options;
+	char* ___Nonce;
+	char* ___State;
+};
+struct AppleAuthLoginArgs_tEC38AFD6B2C1CCBD455014707F0E505CDF8972B4_marshaled_com
+{
+	int32_t ___Options;
+	Il2CppChar* ___Nonce;
+	Il2CppChar* ___State;
 };
 struct AsyncTaskMethodBuilder_t7A5128C134547B5918EB1AA24FE47ED4C1DF3F06 
 {
@@ -84730,6 +84791,18 @@ void RuntimeInvoker_TrueVoid_t4861ACF8F4594C3437BB48B6E56783494B843915_Alloc_t78
 {
 	typedef void (*Func)(void* obj, Alloc_t78312CFE58F38082281E80E297AE6176BD2BD8AE p1, RuntimeObject* p2, RuntimeObject* p3, const RuntimeMethod* method);
 	((Func)methodPointer)(obj, *((Alloc_t78312CFE58F38082281E80E297AE6176BD2BD8AE*)args[0]), (RuntimeObject*)args[1], (RuntimeObject*)args[2], methodMetadata);
+}
+
+void RuntimeInvoker_TrueVoid_t4861ACF8F4594C3437BB48B6E56783494B843915_AppleAuthLoginArgs_tEC38AFD6B2C1CCBD455014707F0E505CDF8972B4_RuntimeObject_RuntimeObject (Il2CppMethodPointer methodPointer, const RuntimeMethod* methodMetadata, void* obj, void** args, void* returnAddress)
+{
+	typedef void (*Func)(void* obj, AppleAuthLoginArgs_tEC38AFD6B2C1CCBD455014707F0E505CDF8972B4 p1, RuntimeObject* p2, RuntimeObject* p3, const RuntimeMethod* method);
+	((Func)methodPointer)(obj, *((AppleAuthLoginArgs_tEC38AFD6B2C1CCBD455014707F0E505CDF8972B4*)args[0]), (RuntimeObject*)args[1], (RuntimeObject*)args[2], methodMetadata);
+}
+
+void RuntimeInvoker_TrueVoid_t4861ACF8F4594C3437BB48B6E56783494B843915_AppleAuthQuickLoginArgs_tBB2B39ED7803A5FA6916A70CB519F33099AAE38C_RuntimeObject_RuntimeObject (Il2CppMethodPointer methodPointer, const RuntimeMethod* methodMetadata, void* obj, void** args, void* returnAddress)
+{
+	typedef void (*Func)(void* obj, AppleAuthQuickLoginArgs_tBB2B39ED7803A5FA6916A70CB519F33099AAE38C p1, RuntimeObject* p2, RuntimeObject* p3, const RuntimeMethod* method);
+	((Func)methodPointer)(obj, *((AppleAuthQuickLoginArgs_tBB2B39ED7803A5FA6916A70CB519F33099AAE38C*)args[0]), (RuntimeObject*)args[1], (RuntimeObject*)args[2], methodMetadata);
 }
 
 void RuntimeInvoker_TrueVoid_t4861ACF8F4594C3437BB48B6E56783494B843915_Byte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_VoidU2A_t104EAEFBD2D237A8C29618913DA9B4D99355E965_VoidU2A_t104EAEFBD2D237A8C29618913DA9B4D99355E965 (Il2CppMethodPointer methodPointer, const RuntimeMethod* methodMetadata, void* obj, void** args, void* returnAddress)
@@ -247182,6 +247255,12 @@ void RuntimeInvoker_FalseRune_tE8DB196113D1DBF48E710C120CC50D2AD7D5915E (Il2CppM
 	*((Rune_tE8DB196113D1DBF48E710C120CC50D2AD7D5915E*)returnAddress) = ((Func)methodPointer)(methodMetadata);
 }
 
+void RuntimeInvoker_FalseMonoScriptData_tEA39788D8AD249640255A82FD59F98E8EFC38CDE (Il2CppMethodPointer methodPointer, const RuntimeMethod* methodMetadata, void* obj, void** args, void* returnAddress)
+{
+	typedef MonoScriptData_tEA39788D8AD249640255A82FD59F98E8EFC38CDE (*Func)(const RuntimeMethod* method);
+	*((MonoScriptData_tEA39788D8AD249640255A82FD59F98E8EFC38CDE*)returnAddress) = ((Func)methodPointer)(methodMetadata);
+}
+
 void RuntimeInvoker_FalseMonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E (Il2CppMethodPointer methodPointer, const RuntimeMethod* methodMetadata, void* obj, void** args, void* returnAddress)
 {
 	typedef MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E (*Func)(const RuntimeMethod* method);
@@ -247375,7 +247454,7 @@ void RuntimeInvoker_FalseMonoScriptData_t7C1EFF89409588A65507FDF01648DD5646A1DA3
 }
 
 IL2CPP_EXTERN_C const InvokerMethod g_Il2CppInvokerPointers[];
-const InvokerMethod g_Il2CppInvokerPointers[28878] = 
+const InvokerMethod g_Il2CppInvokerPointers[28881] = 
 {
 	RuntimeInvoker_F57671A1A271362DE5576D4120520430DEAD6EAE,
 	RuntimeInvoker_7C7502B48E2131BE322E25A4A5423517C2046CC6,
@@ -250350,6 +250429,8 @@ const InvokerMethod g_Il2CppInvokerPointers[28878] =
 	RuntimeInvoker_TrueVoid_t4861ACF8F4594C3437BB48B6E56783494B843915_VoidU2A_t104EAEFBD2D237A8C29618913DA9B4D99355E965_unitytls_x509_ref_t9CEB17766B4144117333AB50379B21A357FA4333_VoidU2A_t104EAEFBD2D237A8C29618913DA9B4D99355E965,
 	RuntimeInvoker_TrueVoid_t4861ACF8F4594C3437BB48B6E56783494B843915_VoidU2A_t104EAEFBD2D237A8C29618913DA9B4D99355E965_unitytls_x509list_ref_t6C5C1CF0B720516A681CB741104A164FD8B3CF17_VoidU2A_t104EAEFBD2D237A8C29618913DA9B4D99355E965,
 	RuntimeInvoker_TrueVoid_t4861ACF8F4594C3437BB48B6E56783494B843915_Alloc_t78312CFE58F38082281E80E297AE6176BD2BD8AE_RuntimeObject_RuntimeObject,
+	RuntimeInvoker_TrueVoid_t4861ACF8F4594C3437BB48B6E56783494B843915_AppleAuthLoginArgs_tEC38AFD6B2C1CCBD455014707F0E505CDF8972B4_RuntimeObject_RuntimeObject,
+	RuntimeInvoker_TrueVoid_t4861ACF8F4594C3437BB48B6E56783494B843915_AppleAuthQuickLoginArgs_tBB2B39ED7803A5FA6916A70CB519F33099AAE38C_RuntimeObject_RuntimeObject,
 	RuntimeInvoker_TrueVoid_t4861ACF8F4594C3437BB48B6E56783494B843915_Byte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_VoidU2A_t104EAEFBD2D237A8C29618913DA9B4D99355E965_VoidU2A_t104EAEFBD2D237A8C29618913DA9B4D99355E965,
 	RuntimeInvoker_TrueVoid_t4861ACF8F4594C3437BB48B6E56783494B843915_Byte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_Byte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_Byte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3,
 	RuntimeInvoker_TrueVoid_t4861ACF8F4594C3437BB48B6E56783494B843915_Byte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_Byte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_Color_tD001788D726C3A7F1379BEED0260B9591F440C1F,
@@ -276223,6 +276304,7 @@ const InvokerMethod g_Il2CppInvokerPointers[28878] =
 	RuntimeInvoker_FalseSettings_t3BEFDFF2C1A3D3A215DAF7B76E735B1BFB946C92,
 	RuntimeInvoker_FalseGlobalState_tFDD5D3FE93083EE02E4E8987E61A5D7D5F5CE61A,
 	RuntimeInvoker_FalseRune_tE8DB196113D1DBF48E710C120CC50D2AD7D5915E,
+	RuntimeInvoker_FalseMonoScriptData_tEA39788D8AD249640255A82FD59F98E8EFC38CDE,
 	RuntimeInvoker_FalseMonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E,
 	RuntimeInvoker_FalseMonoScriptData_t3405F29D573A6DFAAC547345A6BDBBE41CF54685,
 	RuntimeInvoker_FalseMonoScriptData_tBBC8FD8F40D716A1C8B4F9D883D3B121E356881C,

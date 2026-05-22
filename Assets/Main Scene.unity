@@ -6051,6 +6051,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28afc967a8d16574cb6cccc535fdfbff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickButtonSound
+--- !u!114 &161226003 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8245379856962099976, guid: c0efaed249119934eac021f344791969, type: 3}
+  m_PrefabInstance: {fileID: 1068091710}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161225996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!114 &166587384 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6982734800456607631, guid: 928a6acf9855de044b42e248559ac574, type: 3}
@@ -8467,6 +8478,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28afc967a8d16574cb6cccc535fdfbff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickButtonSound
+--- !u!114 &235708222 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8245379856962099976, guid: c0efaed249119934eac021f344791969, type: 3}
+  m_PrefabInstance: {fileID: 210023363}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 235708215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &239269780
 GameObject:
   m_ObjectHideFlags: 0
@@ -12073,6 +12095,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28afc967a8d16574cb6cccc535fdfbff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickButtonSound
+--- !u!114 &342111402 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8245379856962099976, guid: c0efaed249119934eac021f344791969, type: 3}
+  m_PrefabInstance: {fileID: 150620882}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342111395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &347553831
 GameObject:
   m_ObjectHideFlags: 0
@@ -17177,6 +17210,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28afc967a8d16574cb6cccc535fdfbff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickButtonSound
+--- !u!114 &506806654 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8245379856962099976, guid: c0efaed249119934eac021f344791969, type: 3}
+  m_PrefabInstance: {fileID: 2111484640}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506806647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &510439161 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 187589574272592323, guid: 8588ccb3e58cd8340bf27c05778819c5, type: 3}
@@ -24018,6 +24062,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28afc967a8d16574cb6cccc535fdfbff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickButtonSound
+--- !u!114 &771680947 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8245379856962099976, guid: c0efaed249119934eac021f344791969, type: 3}
+  m_PrefabInstance: {fileID: 242728570}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771680940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1001 &772362841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38958,6 +39013,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28afc967a8d16574cb6cccc535fdfbff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickButtonSound
+--- !u!114 &1286963151 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8245379856962099976, guid: c0efaed249119934eac021f344791969, type: 3}
+  m_PrefabInstance: {fileID: 7448156564623916355}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286963144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1292891230 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3287377785941736660, guid: acb64807e43e07049a2b201603d5e3ce, type: 3}
@@ -56640,6 +56706,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28afc967a8d16574cb6cccc535fdfbff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickButtonSound
+--- !u!114 &1815588313 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8245379856962099976, guid: c0efaed249119934eac021f344791969, type: 3}
+  m_PrefabInstance: {fileID: 1170741226}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815588306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1819103344
 GameObject:
   m_ObjectHideFlags: 0
@@ -65677,34 +65754,34 @@ MonoBehaviour:
     cashAmount: 25
     cashBonus: 0
     productId: package_6
-  - chipsAmount: 1200
-    cashAmount: 25
-    cashBonus: 0
-    productId: package_6
+  - chipsAmount: 220
+    cashAmount: 17
+    cashBonus: 4.2
+    productId: offer_premium_value
   - chipsAmount: 140
     cashAmount: 3
     cashBonus: 1.2
-    productId: PRODUCT_ID_BEST_OFFERS
+    productId: offer_best_offers
   - chipsAmount: 120
     cashAmount: 6
     cashBonus: 1.2
-    productId: PRODUCT_ID_QUICK_BOOST
+    productId: offer_quick_boost
   - chipsAmount: 80
     cashAmount: 8
     cashBonus: 3.2
-    productId: PRODUCT_ID_MEGA_BUNDLE
-  - chipsAmount: 1200
-    cashAmount: 25
-    cashBonus: 0
-    productId: package_6
-  - chipsAmount: 1200
-    cashAmount: 25
-    cashBonus: 0
-    productId: package_6
-  - chipsAmount: 1200
-    cashAmount: 25
-    cashBonus: 0
-    productId: package_6
+    productId: offer_mega_bundle
+  - chipsAmount: 70
+    cashAmount: 5
+    cashBonus: 2.5
+    productId: offer_power_deal
+  - chipsAmount: 52
+    cashAmount: 4
+    cashBonus: 1.2
+    productId: offer_bonus_plus
+  - chipsAmount: 160
+    cashAmount: 12
+    cashBonus: 2.4
+    productId: offer_smart_starter
   purchaseButtons:
   - {fileID: 45556954}
   - {fileID: 363935678}
@@ -65719,6 +65796,13 @@ MonoBehaviour:
   - {fileID: 1639981240}
   - {fileID: 355298381}
   - {fileID: 770596642}
+  - {fileID: 1286963151}
+  - {fileID: 771680947}
+  - {fileID: 235708222}
+  - {fileID: 161226003}
+  - {fileID: 342111402}
+  - {fileID: 1815588313}
+  - {fileID: 506806654}
   playerProfileUI: {fileID: 2010734780}
   purchasePanel: {fileID: 1200179411}
 --- !u!4 &2085169955
