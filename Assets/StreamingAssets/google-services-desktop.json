@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "705447120325",
+    "project_id": "dice-rush-production",
+    "storage_bucket": "dice-rush-production.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:705447120325:android:0b603170a8f315b1248fac",
+        "android_client_info": {
+          "package_name": "com.winjogames.blingodice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "705447120325-7a37lb1igmv8g1l0uj58cllqngk1gedb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzeZhae-cyS_JM7ef8b_U0iY58vjpnm1U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "705447120325-7a37lb1igmv8g1l0uj58cllqngk1gedb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

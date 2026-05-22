@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id">
+  <string name="gcm_defaultSenderId" translatable="false">705447120325</string>
+  <string name="google_storage_bucket" translatable="false">dice-rush-production.firebasestorage.app</string>
+  <string name="project_id" translatable="false">dice-rush-production</string>
+  <string name="google_api_key" translatable="false">AIzaSyCzeZhae-cyS_JM7ef8b_U0iY58vjpnm1U</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCzeZhae-cyS_JM7ef8b_U0iY58vjpnm1U</string>
+  <string name="google_app_id" translatable="false">1:705447120325:android:0b603170a8f315b1248fac</string>
+  <string name="default_web_client_id" translatable="false">705447120325-7a37lb1igmv8g1l0uj58cllqngk1gedb.apps.googleusercontent.com</string>
+</resources>
