@@ -21035,7 +21035,7 @@ MonoBehaviour:
   spawnInterval: 0.1
   spawnArea: {fileID: 632410730}
   twinkleDurationRange: {x: 1.5, y: 4}
-  scaleRange: {x: 0.3, y: 0.6}
+  scaleRange: {x: 0.2, y: 0.4}
   maxOpacityRange: {x: 0.5, y: 1}
 --- !u!1 &638413960
 GameObject:

@@ -4705,7 +4705,7 @@ FAULT_0196:
 IL_001f_1:
 			{
 				__this->___U3CU3E1__state = (-1);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:968>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:970>
 				BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_4 = V_2;
 				NullCheck(L_4);
 				String_t* L_5 = L_4->___baseUrl;
@@ -4718,25 +4718,25 @@ IL_001f_1:
 				String_t* L_9;
 				L_9 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(L_6, _stringLiteral53199BA258138272FB8AD87273038D35AF4B2415, L_8, NULL);
 				V_3 = L_9;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:969>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:971>
 				String_t* L_10;
 				L_10 = BackendAuthService_GetStoredJWT_m6CEB0F7B503CC5FBE659428203090712661F270C(NULL);
 				V_4 = L_10;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:971>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:973>
 				String_t* L_11 = V_3;
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_12;
 				L_12 = UnityWebRequest_Get_m1A332EE069BB5052368307F254A5A7627BB5FD86(L_11, NULL);
 				__this->___U3CrequestU3E5__2 = L_12;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)L_12);
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:973>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:975>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_13 = __this->___U3CrequestU3E5__2;
 				String_t* L_14 = V_4;
 				String_t* L_15;
 				L_15 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralC2DA60AE96E2C9EF3EAF20897A5AA957AFDF64EC, L_14, NULL);
 				NullCheck(L_13);
 				UnityWebRequest_SetRequestHeader_m099734EB787B7269B62AB2236A5A4F7D35AF8BC5(L_13, _stringLiteral9D5A3AE3D2B0B5E5AF5AB489000D9B88FA11E907, L_15, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:974>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:976>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_16 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_16);
 				UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* L_17;
@@ -4751,7 +4751,7 @@ IL_001f_1:
 IL_009f_1:
 			{
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:976>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:978>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_18 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_18);
 				int32_t L_19;
@@ -4762,7 +4762,7 @@ IL_009f_1:
 				}
 			}
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:978>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:980>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_20 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_20);
 				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_21;
@@ -4778,7 +4778,7 @@ IL_009f_1:
 			try
 			{
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:981>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:983>
 					UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_24 = __this->___U3CrequestU3E5__2;
 					NullCheck(L_24);
 					DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_25;
@@ -4789,7 +4789,7 @@ IL_009f_1:
 					LeaderboardResponse_t76C371B3E2142424759289AEB79A4626D8385B0D* L_27;
 					L_27 = JsonUtility_FromJson_TisLeaderboardResponse_t76C371B3E2142424759289AEB79A4626D8385B0D_mD9EF81E28EAA6A9FB9EFF8FE49A01CF6EC806D5C(L_26, JsonUtility_FromJson_TisLeaderboardResponse_t76C371B3E2142424759289AEB79A4626D8385B0D_mD9EF81E28EAA6A9FB9EFF8FE49A01CF6EC806D5C_RuntimeMethod_var);
 					V_5 = L_27;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:982>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:984>
 					LeaderboardResponse_t76C371B3E2142424759289AEB79A4626D8385B0D* L_28 = V_5;
 					if (!L_28)
 					{
@@ -4806,7 +4806,7 @@ IL_009f_1:
 					}
 				}
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:984>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:986>
 					Action_2_t46451AB27C5303EDF6421F5762D8A22457C9D8EC* L_31 = __this->___onComplete;
 					Action_2_t46451AB27C5303EDF6421F5762D8A22457C9D8EC* L_32 = L_31;
 					if (L_32)
@@ -4830,7 +4830,7 @@ IL_010c_2:
 
 IL_0116_2:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:988>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:990>
 					Action_2_t46451AB27C5303EDF6421F5762D8A22457C9D8EC* L_34 = __this->___onComplete;
 					Action_2_t46451AB27C5303EDF6421F5762D8A22457C9D8EC* L_35 = L_34;
 					if (L_35)
@@ -4852,7 +4852,7 @@ IL_0122_2:
 
 IL_0129_2:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:990>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:992>
 					goto IL_0185_1;
 				}
 			}
@@ -4870,9 +4870,9 @@ CATCH_012b_1:
 			{
 				{
 					Exception_t* L_36 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:991>
-					V_6 = L_36;
 					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:993>
+					V_6 = L_36;
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:995>
 					Exception_t* L_37 = V_6;
 					NullCheck(L_37);
 					String_t* L_38;
@@ -4881,7 +4881,7 @@ CATCH_012b_1:
 					L_39 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral82C4187943796A8503CED1735AF05F7FB10D13E8)), L_38, NULL);
 					il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
 					Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_39, NULL);
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:994>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:996>
 					Action_2_t46451AB27C5303EDF6421F5762D8A22457C9D8EC* L_40 = __this->___onComplete;
 					Action_2_t46451AB27C5303EDF6421F5762D8A22457C9D8EC* L_41 = L_40;
 					if (L_41)
@@ -4903,7 +4903,7 @@ IL_014f_1:
 
 IL_0156_1:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:995>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:997>
 					IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
 					goto IL_0185_1;
 				}
@@ -4911,7 +4911,7 @@ IL_0156_1:
 
 IL_0158_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:999>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1001>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_42 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_42);
 				String_t* L_43;
@@ -4920,7 +4920,7 @@ IL_0158_1:
 				L_44 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralCB61171374A21F60DEE638665960FAFF2C8A4646, L_43, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_44, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1000>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1002>
 				Action_2_t46451AB27C5303EDF6421F5762D8A22457C9D8EC* L_45 = __this->___onComplete;
 				Action_2_t46451AB27C5303EDF6421F5762D8A22457C9D8EC* L_46 = L_45;
 				if (L_46)
@@ -4942,11 +4942,11 @@ IL_017e_1:
 
 IL_0185_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1002>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1004>
 				U3CGetLeaderboardCoroutineU3Ed__43_U3CU3Em__Finally1_mE82FFD8DB195B97832E982B554295E4FB17AD50D(__this, NULL);
 				__this->___U3CrequestU3E5__2 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1003>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1005>
 				V_0 = (bool)0;
 				goto IL_019d;
 			}
@@ -5151,7 +5151,7 @@ FAULT_017e:
 IL_001f_1:
 			{
 				__this->___U3CU3E1__state = (-1);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1370>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1372>
 				BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_4 = V_2;
 				NullCheck(L_4);
 				String_t* L_5 = L_4->___baseUrl;
@@ -5161,20 +5161,20 @@ IL_001f_1:
 				String_t* L_7;
 				L_7 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_6, _stringLiteral84117BA2863F864EF03F62A5C32BE69AD625A5FE, NULL);
 				V_3 = L_7;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1371>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1373>
 				String_t* L_8 = V_3;
 				String_t* L_9;
 				L_9 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral999593ADCFBD65AA4F14D4D5FD2C91125289FD62, L_8, _stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_9, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1373>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1375>
 				String_t* L_10 = V_3;
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_11;
 				L_11 = UnityWebRequest_Get_m1A332EE069BB5052368307F254A5A7627BB5FD86(L_10, NULL);
 				__this->___U3CrequestU3E5__2 = L_11;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)L_11);
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1375>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1377>
 				bool L_12;
 				L_12 = BackendAuthService_HasStoredJWT_m77D0CD676518CB836991BD62A63D14AC96014601(NULL);
 				if (!L_12)
@@ -5183,7 +5183,7 @@ IL_001f_1:
 				}
 			}
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1377>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1379>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_13 = __this->___U3CrequestU3E5__2;
 				String_t* L_14;
 				L_14 = BackendAuthService_GetStoredJWT_m6CEB0F7B503CC5FBE659428203090712661F270C(NULL);
@@ -5195,7 +5195,7 @@ IL_001f_1:
 
 IL_008d_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1380>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1382>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_16 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_16);
 				UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* L_17;
@@ -5210,7 +5210,7 @@ IL_008d_1:
 IL_00ac_1:
 			{
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1382>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1384>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_18 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_18);
 				int32_t L_19;
@@ -5221,7 +5221,7 @@ IL_00ac_1:
 				}
 			}
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1384>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1386>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_20 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_20);
 				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_21;
@@ -5237,7 +5237,7 @@ IL_00ac_1:
 			try
 			{
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1387>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1389>
 					UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_24 = __this->___U3CrequestU3E5__2;
 					NullCheck(L_24);
 					DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_25;
@@ -5248,7 +5248,7 @@ IL_00ac_1:
 					LobbyApiResponse_tB2F91081B46437DEE75567FD82745912568B0D7D* L_27;
 					L_27 = JsonUtility_FromJson_TisLobbyApiResponse_tB2F91081B46437DEE75567FD82745912568B0D7D_mA5A8B018ABFCE9913A4EEEEE84844E1EF42E6C14(L_26, JsonUtility_FromJson_TisLobbyApiResponse_tB2F91081B46437DEE75567FD82745912568B0D7D_mA5A8B018ABFCE9913A4EEEEE84844E1EF42E6C14_RuntimeMethod_var);
 					V_4 = L_27;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1388>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1390>
 					Action_2_tC9FAC49A789EE6D30AD45BF97FB50EB5226CA096* L_28 = __this->___onComplete;
 					Action_2_tC9FAC49A789EE6D30AD45BF97FB50EB5226CA096* L_29 = L_28;
 					if (L_29)
@@ -5271,7 +5271,7 @@ IL_0109_2:
 
 IL_0111_2:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1389>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1391>
 					goto IL_016d_1;
 				}
 			}
@@ -5289,9 +5289,9 @@ CATCH_0113_1:
 			{
 				{
 					Exception_t* L_31 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1390>
-					V_5 = L_31;
 					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1392>
+					V_5 = L_31;
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1394>
 					Exception_t* L_32 = V_5;
 					NullCheck(L_32);
 					String_t* L_33;
@@ -5300,7 +5300,7 @@ CATCH_0113_1:
 					L_34 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral4D7DED9300D82A7E6C962879BA2716E9B7D50907)), L_33, NULL);
 					il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
 					Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_34, NULL);
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1393>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1395>
 					Action_2_tC9FAC49A789EE6D30AD45BF97FB50EB5226CA096* L_35 = __this->___onComplete;
 					Action_2_tC9FAC49A789EE6D30AD45BF97FB50EB5226CA096* L_36 = L_35;
 					if (L_36)
@@ -5322,7 +5322,7 @@ IL_0137_1:
 
 IL_013e_1:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1394>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1396>
 					IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
 					goto IL_016d_1;
 				}
@@ -5330,7 +5330,7 @@ IL_013e_1:
 
 IL_0140_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1398>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1400>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_37 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_37);
 				String_t* L_38;
@@ -5339,7 +5339,7 @@ IL_0140_1:
 				L_39 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral4DBB0FFB6AEDB1B53CB37602F2302F51CB392F7C, L_38, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_39, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1399>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1401>
 				Action_2_tC9FAC49A789EE6D30AD45BF97FB50EB5226CA096* L_40 = __this->___onComplete;
 				Action_2_tC9FAC49A789EE6D30AD45BF97FB50EB5226CA096* L_41 = L_40;
 				if (L_41)
@@ -5361,11 +5361,11 @@ IL_0166_1:
 
 IL_016d_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1401>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1403>
 				U3CGetLobbyConfigurationsCoroutineU3Ed__60_U3CU3Em__Finally1_mC343B918A7125F08CB254502045ED213D987C479(__this, NULL);
 				__this->___U3CrequestU3E5__2 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1402>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1404>
 				V_0 = (bool)0;
 				goto IL_0185;
 			}
@@ -6121,7 +6121,7 @@ FAULT_018d:
 IL_001c_1:
 			{
 				__this->___U3CU3E1__state = (-1);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1156>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1158>
 				BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_4 = V_2;
 				NullCheck(L_4);
 				String_t* L_5 = L_4->___baseUrl;
@@ -6131,25 +6131,25 @@ IL_001c_1:
 				String_t* L_7;
 				L_7 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_6, _stringLiteralFB313AABFA2304CDCD8F44EB607380581A861814, NULL);
 				V_3 = L_7;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1157>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1159>
 				String_t* L_8;
 				L_8 = BackendAuthService_GetStoredJWT_m6CEB0F7B503CC5FBE659428203090712661F270C(NULL);
 				V_4 = L_8;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1159>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1161>
 				String_t* L_9 = V_3;
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_10;
 				L_10 = UnityWebRequest_Get_m1A332EE069BB5052368307F254A5A7627BB5FD86(L_9, NULL);
 				__this->___U3CrequestU3E5__2 = L_10;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)L_10);
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1161>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1163>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_11 = __this->___U3CrequestU3E5__2;
 				String_t* L_12 = V_4;
 				String_t* L_13;
 				L_13 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralC2DA60AE96E2C9EF3EAF20897A5AA957AFDF64EC, L_12, NULL);
 				NullCheck(L_11);
 				UnityWebRequest_SetRequestHeader_m099734EB787B7269B62AB2236A5A4F7D35AF8BC5(L_11, _stringLiteral9D5A3AE3D2B0B5E5AF5AB489000D9B88FA11E907, L_13, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1162>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1164>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_14 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_14);
 				UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* L_15;
@@ -6164,7 +6164,7 @@ IL_001c_1:
 IL_0091_1:
 			{
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1164>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1166>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_16 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_16);
 				int32_t L_17;
@@ -6175,7 +6175,7 @@ IL_0091_1:
 				}
 			}
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1166>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1168>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_18 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_18);
 				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_19;
@@ -6191,7 +6191,7 @@ IL_0091_1:
 			try
 			{
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1169>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1171>
 					UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_22 = __this->___U3CrequestU3E5__2;
 					NullCheck(L_22);
 					DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_23;
@@ -6202,7 +6202,7 @@ IL_0091_1:
 					TransactionHistoryResponse_t21BEA1B53C601289D24857206A5A29B66DB20110* L_25;
 					L_25 = JsonUtility_FromJson_TisTransactionHistoryResponse_t21BEA1B53C601289D24857206A5A29B66DB20110_m63C152ECC3FCB39BFD3DA3D5943136BDE938B7C4(L_24, JsonUtility_FromJson_TisTransactionHistoryResponse_t21BEA1B53C601289D24857206A5A29B66DB20110_m63C152ECC3FCB39BFD3DA3D5943136BDE938B7C4_RuntimeMethod_var);
 					V_5 = L_25;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1170>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1172>
 					TransactionHistoryResponse_t21BEA1B53C601289D24857206A5A29B66DB20110* L_26 = V_5;
 					if (!L_26)
 					{
@@ -6219,7 +6219,7 @@ IL_0091_1:
 					}
 				}
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1172>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1174>
 					Action_2_t328A190E907AC2C8447FE6AA88B1E1BB15FBC156* L_29 = __this->___onComplete;
 					Action_2_t328A190E907AC2C8447FE6AA88B1E1BB15FBC156* L_30 = L_29;
 					if (L_30)
@@ -6245,7 +6245,7 @@ IL_00fe_2:
 
 IL_010d_2:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1176>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1178>
 					Action_2_t328A190E907AC2C8447FE6AA88B1E1BB15FBC156* L_33 = __this->___onComplete;
 					Action_2_t328A190E907AC2C8447FE6AA88B1E1BB15FBC156* L_34 = L_33;
 					if (L_34)
@@ -6267,7 +6267,7 @@ IL_0119_2:
 
 IL_0120_2:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1178>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1180>
 					goto IL_017c_1;
 				}
 			}
@@ -6285,9 +6285,9 @@ CATCH_0122_1:
 			{
 				{
 					Exception_t* L_35 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1179>
-					V_6 = L_35;
 					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1181>
+					V_6 = L_35;
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1183>
 					Exception_t* L_36 = V_6;
 					NullCheck(L_36);
 					String_t* L_37;
@@ -6296,7 +6296,7 @@ CATCH_0122_1:
 					L_38 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral3A27E87078BAA16BA83D15EA81D17E28150085FD)), L_37, NULL);
 					il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
 					Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_38, NULL);
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1182>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1184>
 					Action_2_t328A190E907AC2C8447FE6AA88B1E1BB15FBC156* L_39 = __this->___onComplete;
 					Action_2_t328A190E907AC2C8447FE6AA88B1E1BB15FBC156* L_40 = L_39;
 					if (L_40)
@@ -6318,7 +6318,7 @@ IL_0146_1:
 
 IL_014d_1:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1183>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1185>
 					IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
 					goto IL_017c_1;
 				}
@@ -6326,7 +6326,7 @@ IL_014d_1:
 
 IL_014f_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1187>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1189>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_41 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_41);
 				String_t* L_42;
@@ -6335,7 +6335,7 @@ IL_014f_1:
 				L_43 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralD9DF6110D364BB43F84F7A3016B5D6EB2216B96A, L_42, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_43, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1188>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1190>
 				Action_2_t328A190E907AC2C8447FE6AA88B1E1BB15FBC156* L_44 = __this->___onComplete;
 				Action_2_t328A190E907AC2C8447FE6AA88B1E1BB15FBC156* L_45 = L_44;
 				if (L_45)
@@ -6357,11 +6357,11 @@ IL_0175_1:
 
 IL_017c_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1190>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1192>
 				U3CGetTransactionHistoryCoroutineU3Ed__51_U3CU3Em__Finally1_m1FCDB8DED597E9747899CEE9EFE3A39287DF096D(__this, NULL);
 				__this->___U3CrequestU3E5__2 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1191>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1193>
 				V_0 = (bool)0;
 				goto IL_0194;
 			}
@@ -9467,7 +9467,7 @@ FAULT_0180:
 IL_001f_1:
 			{
 				__this->___U3CU3E1__state = (-1);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1020>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1022>
 				BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_4 = V_2;
 				NullCheck(L_4);
 				String_t* L_5 = L_4->___baseUrl;
@@ -9477,23 +9477,23 @@ IL_001f_1:
 				String_t* L_7;
 				L_7 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_6, _stringLiteralAA31868F212781EA3409412D7E5224DB6D0075F8, NULL);
 				V_3 = L_7;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1021>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1023>
 				String_t* L_8;
 				L_8 = BackendAuthService_GetStoredJWT_m6CEB0F7B503CC5FBE659428203090712661F270C(NULL);
 				V_4 = L_8;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1022>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1024>
 				String_t* L_9 = __this->___inviterId;
 				String_t* L_10;
 				L_10 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral59AC303817D8ED6260AF2A37B15ECC97CF19E1A7, L_9, _stringLiteralD5F2751FCD979A5D75A2B143601934884E0565F4, NULL);
 				V_5 = L_10;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1024>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1026>
 				String_t* L_11 = V_3;
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_12 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)il2cpp_codegen_object_new(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F_il2cpp_TypeInfo_var);
 				UnityWebRequest__ctor_mD4739B0BF1C4937479A83B24B531C6B819712A3E(L_12, L_11, _stringLiteral14E338D17C42E552FA7AF42CDAE40CA1F0E8A04D, NULL);
 				__this->___U3CrequestU3E5__2 = L_12;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)L_12);
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1026>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1028>
 				Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* L_13;
 				L_13 = Encoding_get_UTF8_m9FA98A53CE96FD6D02982625C5246DD36C1235C9(NULL);
 				String_t* L_14 = V_5;
@@ -9501,31 +9501,31 @@ IL_001f_1:
 				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_15;
 				L_15 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(19, L_13, L_14);
 				V_6 = L_15;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1027>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1029>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_16 = __this->___U3CrequestU3E5__2;
 				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_17 = V_6;
 				UploadHandlerRaw_t0A24CF320CDF16F1BC6C5C086DE71A1908CBB91A* L_18 = (UploadHandlerRaw_t0A24CF320CDF16F1BC6C5C086DE71A1908CBB91A*)il2cpp_codegen_object_new(UploadHandlerRaw_t0A24CF320CDF16F1BC6C5C086DE71A1908CBB91A_il2cpp_TypeInfo_var);
 				UploadHandlerRaw__ctor_m168C957B67E29CB3072E3542044D37E2F16C42B7(L_18, L_17, NULL);
 				NullCheck(L_16);
 				UnityWebRequest_set_uploadHandler_m68F346550136DE178C79238944985892196027FE(L_16, L_18, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1028>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1030>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_19 = __this->___U3CrequestU3E5__2;
 				DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974* L_20 = (DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974*)il2cpp_codegen_object_new(DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974_il2cpp_TypeInfo_var);
 				DownloadHandlerBuffer__ctor_m5EE7C9E8AB468B2B937A7C9C66B4176A884147AF(L_20, NULL);
 				NullCheck(L_19);
 				UnityWebRequest_set_downloadHandler_m6CB94492012097DFC44E5773D1A627753788292F(L_19, L_20, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1029>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1031>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_21 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_21);
 				UnityWebRequest_SetRequestHeader_m099734EB787B7269B62AB2236A5A4F7D35AF8BC5(L_21, _stringLiteral5B58EBE31E594BF8FA4BEA3CD075473149322B18, _stringLiteral64058CC688A96A90239811EF06C9D20DB0499C3E, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1030>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1032>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_22 = __this->___U3CrequestU3E5__2;
 				String_t* L_23 = V_4;
 				String_t* L_24;
 				L_24 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralC2DA60AE96E2C9EF3EAF20897A5AA957AFDF64EC, L_23, NULL);
 				NullCheck(L_22);
 				UnityWebRequest_SetRequestHeader_m099734EB787B7269B62AB2236A5A4F7D35AF8BC5(L_22, _stringLiteral9D5A3AE3D2B0B5E5AF5AB489000D9B88FA11E907, L_24, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1032>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1034>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_25 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_25);
 				UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* L_26;
@@ -9540,7 +9540,7 @@ IL_001f_1:
 IL_00f5_1:
 			{
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1034>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1036>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_27 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_27);
 				int32_t L_28;
@@ -9551,7 +9551,7 @@ IL_00f5_1:
 				}
 			}
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1036>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1038>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_29 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_29);
 				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_30;
@@ -9563,7 +9563,7 @@ IL_00f5_1:
 				L_32 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralE106069587AC3070BC83DCFA1784876670C0891A, L_31, _stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_32, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1037>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1039>
 				Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* L_33 = __this->___onComplete;
 				Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* L_34 = L_33;
 				if (L_34)
@@ -9586,7 +9586,7 @@ IL_013b_1:
 
 IL_0143_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1041>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1043>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_35 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_35);
 				String_t* L_36;
@@ -9595,7 +9595,7 @@ IL_0143_1:
 				L_37 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral71845FE82C898A022761957BEF1BE041E20C1DAD, L_36, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_37, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1042>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1044>
 				Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* L_38 = __this->___onComplete;
 				Action_1_t10DCB0C07D0D3C565CEACADC80D1152B35A45F6C* L_39 = L_38;
 				if (L_39)
@@ -9617,11 +9617,11 @@ IL_0169_1:
 
 IL_016f_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1044>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1046>
 				U3CSubmitInviterCoroutineU3Ed__45_U3CU3Em__Finally1_m5222376AD876CE4D5443C7E8EC551042ABE63F23(__this, NULL);
 				__this->___U3CrequestU3E5__2 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1045>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1047>
 				V_0 = (bool)0;
 				goto IL_0187;
 			}
@@ -9838,7 +9838,7 @@ FAULT_02ea:
 IL_001f_1:
 			{
 				__this->___U3CU3E1__state = (-1);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1268>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1270>
 				BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_4 = V_2;
 				NullCheck(L_4);
 				String_t* L_5 = L_4->___baseUrl;
@@ -9849,31 +9849,31 @@ IL_001f_1:
 				String_t* L_8;
 				L_8 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(L_6, _stringLiteral441EEA7346BB10E86EDF261511AA289364DEEF5B, L_7, NULL);
 				V_3 = L_8;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1269>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1271>
 				String_t* L_9;
 				L_9 = BackendAuthService_GetStoredJWT_m6CEB0F7B503CC5FBE659428203090712661F270C(NULL);
 				V_4 = L_9;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1271>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1273>
 				String_t* L_10 = V_3;
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_11 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)il2cpp_codegen_object_new(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F_il2cpp_TypeInfo_var);
 				UnityWebRequest__ctor_mD4739B0BF1C4937479A83B24B531C6B819712A3E(L_11, L_10, _stringLiteral14E338D17C42E552FA7AF42CDAE40CA1F0E8A04D, NULL);
 				__this->___U3CrequestU3E5__2 = L_11;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)L_11);
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1273>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1275>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_12 = __this->___U3CrequestU3E5__2;
 				DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974* L_13 = (DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974*)il2cpp_codegen_object_new(DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974_il2cpp_TypeInfo_var);
 				DownloadHandlerBuffer__ctor_m5EE7C9E8AB468B2B937A7C9C66B4176A884147AF(L_13, NULL);
 				NullCheck(L_12);
 				UnityWebRequest_set_downloadHandler_m6CB94492012097DFC44E5773D1A627753788292F(L_12, L_13, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1274>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1276>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_14 = __this->___U3CrequestU3E5__2;
 				String_t* L_15 = V_4;
 				String_t* L_16;
 				L_16 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralC2DA60AE96E2C9EF3EAF20897A5AA957AFDF64EC, L_15, NULL);
 				NullCheck(L_14);
 				UnityWebRequest_SetRequestHeader_m099734EB787B7269B62AB2236A5A4F7D35AF8BC5(L_14, _stringLiteral9D5A3AE3D2B0B5E5AF5AB489000D9B88FA11E907, L_16, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1276>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1278>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_17 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_17);
 				UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* L_18;
@@ -9888,7 +9888,7 @@ IL_001f_1:
 IL_00af_1:
 			{
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1278>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1280>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_19 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_19);
 				int32_t L_20;
@@ -9899,7 +9899,7 @@ IL_00af_1:
 				}
 			}
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1280>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1282>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_21 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_21);
 				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_22;
@@ -9915,7 +9915,7 @@ IL_00af_1:
 			try
 			{
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1283>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1285>
 					UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_25 = __this->___U3CrequestU3E5__2;
 					NullCheck(L_25);
 					DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_26;
@@ -9926,7 +9926,7 @@ IL_00af_1:
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_28;
 					L_28 = JsonUtility_FromJson_TisAuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A_mF146DB41680B3594E729E54FE1C4D9BD5F249B6F(L_27, JsonUtility_FromJson_TisAuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A_mF146DB41680B3594E729E54FE1C4D9BD5F249B6F_RuntimeMethod_var);
 					V_5 = L_28;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1284>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1286>
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_29 = V_5;
 					if (!L_29)
 					{
@@ -9956,14 +9956,14 @@ IL_00af_1:
 					}
 				}
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1286>
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1287>
 					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1288>
 					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1289>
 					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1290>
 					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1291>
 					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1292>
 					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1293>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1294>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1295>
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_36 = V_5;
 					NullCheck(L_36);
 					BackendUser_tA2639E54D80A1230B398FBFC497B719A95FDC362* L_37 = L_36->___user;
@@ -10045,7 +10045,7 @@ IL_00af_1:
 					NullCheck(L_82);
 					String_t* L_83 = L_82->___activeRoomId;
 					PlayerModel_UpdateData_m40EC379F66AF3DAC9BA17361756CF24869A6EED0(L_38, L_41, L_44, L_47, L_50, L_53, L_56, L_59, L_62, L_65, L_68, L_71, L_74, L_77, 0, L_80, L_83, NULL);
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1294>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1296>
 					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_84 = __this->___onComplete;
 					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_85 = L_84;
 					if (L_85)
@@ -10068,7 +10068,7 @@ IL_01fe_2:
 
 IL_020b_2:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1298>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1300>
 					AuthResponse_t2DD9F3F41B33C5C205918D2EBC4D7F852827181A* L_86 = V_5;
 					if (!L_86)
 					{
@@ -10085,10 +10085,10 @@ IL_020b_2:
 					}
 				}
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1300>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1302>
 					il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 					Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral43E725026A4780A29FBF651F31F100D3D55429C3, NULL);
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1301>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1303>
 					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_89 = __this->___onComplete;
 					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_90 = L_89;
 					if (L_90)
@@ -10111,7 +10111,7 @@ IL_022e_2:
 
 IL_023b_2:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1305>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1307>
 					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_91 = __this->___onComplete;
 					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_92 = L_91;
 					if (L_92)
@@ -10133,7 +10133,7 @@ IL_0247_2:
 
 IL_0252_2:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1308>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1310>
 					goto IL_02d9_1;
 				}
 			}
@@ -10151,9 +10151,9 @@ CATCH_0257_1:
 			{
 				{
 					Exception_t* L_93 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1309>
-					V_6 = L_93;
 					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1311>
+					V_6 = L_93;
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1313>
 					Exception_t* L_94 = V_6;
 					NullCheck(L_94);
 					String_t* L_95;
@@ -10162,7 +10162,7 @@ CATCH_0257_1:
 					L_96 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral07E43E79795C707E6C9D713EC19DB27FD9E0AF1B)), L_95, NULL);
 					il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
 					Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_96, NULL);
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1312>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1314>
 					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_97 = __this->___onComplete;
 					Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_98 = L_97;
 					if (L_98)
@@ -10184,7 +10184,7 @@ IL_027b_1:
 
 IL_0286_1:
 				{
-					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1313>
+					//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1315>
 					IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
 					goto IL_02d9_1;
 				}
@@ -10192,7 +10192,7 @@ IL_0286_1:
 
 IL_0288_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1317>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1319>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_99 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_99);
 				String_t* L_100;
@@ -10208,7 +10208,7 @@ IL_0288_1:
 				L_104 = String_Concat_m093934F71A9B351911EE46311674ED463B180006(_stringLiteralAD38BACCBEEC19FC6414977DCA9515D09EECE998, L_100, _stringLiteralBD2155E54D0A0EF69D6B035ACE4FB0D1E5C8A136, L_103, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_104, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1318>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1320>
 				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_105 = __this->___onComplete;
 				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_106 = L_105;
 				if (L_106)
@@ -10237,11 +10237,11 @@ IL_02c3_1:
 
 IL_02d9_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1320>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1322>
 				U3CSyncDepositCoroutineU3Ed__56_U3CU3Em__Finally1_m50FF8B8B14768A6F25E357F146CAD3BC4A59B405(__this, NULL);
 				__this->___U3CrequestU3E5__2 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1321>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1323>
 				V_0 = (bool)0;
 				goto IL_02f1;
 			}
@@ -12292,7 +12292,7 @@ FAULT_01c4:
 IL_001f_1:
 			{
 				__this->___U3CU3E1__state = (-1);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1062>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1064>
 				BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_4 = V_2;
 				NullCheck(L_4);
 				String_t* L_5 = L_4->___baseUrl;
@@ -12302,11 +12302,11 @@ IL_001f_1:
 				String_t* L_7;
 				L_7 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_6, _stringLiteral7B129BF1C6EB1B75D1DD75A8557F9D742892C9A2, NULL);
 				V_3 = L_7;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1063>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1065>
 				String_t* L_8;
 				L_8 = BackendAuthService_GetStoredJWT_m6CEB0F7B503CC5FBE659428203090712661F270C(NULL);
 				V_4 = L_8;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1064>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1066>
 				float* L_9 = (float*)(&__this->___amount);
 				il2cpp_codegen_runtime_class_init_inline(CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0_il2cpp_TypeInfo_var);
 				CultureInfo_t9BA817D41AD55AC8BD07480DD8AC22F8FFA378E0* L_10;
@@ -12316,14 +12316,14 @@ IL_001f_1:
 				String_t* L_12;
 				L_12 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral16B727B47217ACF7446979FC7A5E17AF6E52A9F1, L_11, _stringLiteral4D8D9C94AC5DA5FCED2EC8A64E10E714A2515C30, NULL);
 				V_5 = L_12;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1066>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1068>
 				String_t* L_13 = V_3;
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_14 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)il2cpp_codegen_object_new(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F_il2cpp_TypeInfo_var);
 				UnityWebRequest__ctor_mD4739B0BF1C4937479A83B24B531C6B819712A3E(L_14, L_13, _stringLiteral14E338D17C42E552FA7AF42CDAE40CA1F0E8A04D, NULL);
 				__this->___U3CrequestU3E5__2 = L_14;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)L_14);
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1068>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1070>
 				Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* L_15;
 				L_15 = Encoding_get_UTF8_m9FA98A53CE96FD6D02982625C5246DD36C1235C9(NULL);
 				String_t* L_16 = V_5;
@@ -12331,31 +12331,31 @@ IL_001f_1:
 				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_17;
 				L_17 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(19, L_15, L_16);
 				V_6 = L_17;
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1069>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1071>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_18 = __this->___U3CrequestU3E5__2;
 				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_19 = V_6;
 				UploadHandlerRaw_t0A24CF320CDF16F1BC6C5C086DE71A1908CBB91A* L_20 = (UploadHandlerRaw_t0A24CF320CDF16F1BC6C5C086DE71A1908CBB91A*)il2cpp_codegen_object_new(UploadHandlerRaw_t0A24CF320CDF16F1BC6C5C086DE71A1908CBB91A_il2cpp_TypeInfo_var);
 				UploadHandlerRaw__ctor_m168C957B67E29CB3072E3542044D37E2F16C42B7(L_20, L_19, NULL);
 				NullCheck(L_18);
 				UnityWebRequest_set_uploadHandler_m68F346550136DE178C79238944985892196027FE(L_18, L_20, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1070>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1072>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_21 = __this->___U3CrequestU3E5__2;
 				DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974* L_22 = (DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974*)il2cpp_codegen_object_new(DownloadHandlerBuffer_t34C626F6513FA9A44FDDDEE85455CF2CD9DA5974_il2cpp_TypeInfo_var);
 				DownloadHandlerBuffer__ctor_m5EE7C9E8AB468B2B937A7C9C66B4176A884147AF(L_22, NULL);
 				NullCheck(L_21);
 				UnityWebRequest_set_downloadHandler_m6CB94492012097DFC44E5773D1A627753788292F(L_21, L_22, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1071>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1073>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_23 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_23);
 				UnityWebRequest_SetRequestHeader_m099734EB787B7269B62AB2236A5A4F7D35AF8BC5(L_23, _stringLiteral5B58EBE31E594BF8FA4BEA3CD075473149322B18, _stringLiteral64058CC688A96A90239811EF06C9D20DB0499C3E, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1072>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1074>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_24 = __this->___U3CrequestU3E5__2;
 				String_t* L_25 = V_4;
 				String_t* L_26;
 				L_26 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralC2DA60AE96E2C9EF3EAF20897A5AA957AFDF64EC, L_25, NULL);
 				NullCheck(L_24);
 				UnityWebRequest_SetRequestHeader_m099734EB787B7269B62AB2236A5A4F7D35AF8BC5(L_24, _stringLiteral9D5A3AE3D2B0B5E5AF5AB489000D9B88FA11E907, L_26, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1074>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1076>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_27 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_27);
 				UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* L_28;
@@ -12370,7 +12370,7 @@ IL_001f_1:
 IL_0104_1:
 			{
 				__this->___U3CU3E1__state = ((int32_t)-3);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1076>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1078>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_29 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_29);
 				int32_t L_30;
@@ -12381,7 +12381,7 @@ IL_0104_1:
 				}
 			}
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1078>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1080>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_31 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_31);
 				DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_32;
@@ -12393,7 +12393,7 @@ IL_0104_1:
 				L_34 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralDFA48CE37B308098EF4D4D67F97608B8347E1749, L_33, _stringLiteralCBE844AF922BC0AC1AB4CA94466DC7FD7038D0E2, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_34, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1079>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1081>
 				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_35 = __this->___onComplete;
 				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_36 = L_35;
 				if (L_36)
@@ -12423,7 +12423,7 @@ IL_014a_1:
 
 IL_0162_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1083>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1085>
 				UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_40 = __this->___U3CrequestU3E5__2;
 				NullCheck(L_40);
 				String_t* L_41;
@@ -12439,7 +12439,7 @@ IL_0162_1:
 				L_45 = String_Concat_m093934F71A9B351911EE46311674ED463B180006(_stringLiteral3FC4CC05B812653AACDA918FCCC8323A8975C8BC, L_41, _stringLiteralBD2155E54D0A0EF69D6B035ACE4FB0D1E5C8A136, L_44, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_45, NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1084>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1086>
 				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_46 = __this->___onComplete;
 				Action_2_t8EADE87044ADE97906736D729EA2E3EF97F34F3D* L_47 = L_46;
 				if (L_47)
@@ -12468,11 +12468,11 @@ IL_019d_1:
 
 IL_01b3_1:
 			{
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1086>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1088>
 				U3CWithdrawCoroutineU3Ed__47_U3CU3Em__Finally1_m1656726F8DA1E53A36F63EE19EBAC28EF53519CE(__this, NULL);
 				__this->___U3CrequestU3E5__2 = (UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrequestU3E5__2), (void*)(UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F*)NULL);
-				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1087>
+				//<source_info:D:/GitHub/Dice-Rush/Assets/Scripts/BackendAuthService.cs:1089>
 				V_0 = (bool)0;
 				goto IL_01cb;
 			}

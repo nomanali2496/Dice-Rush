@@ -911,7 +911,21 @@ public class BackendAuthService : MonoBehaviour
             Texture2D texture = null;
             if (request.result == UnityWebRequest.Result.Success)
             {
-                // Guard against the server returning an HTML error page
+                texture = DownloadHandlerTexture.GetContent(request);
+                if (texture != null)
+                {
+                    Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Image Downloaded: {url}</color>");
+                    _imageCache[url] = texture;
+                }
+                else
+                {
+                    Debug.LogWarning($"[BackendAuthService] WARNING: Texture decode failed (format unsupported?): {url}");
+                }
+            }
+            else
+            {
+                // When downloading an HTML page (like a 404 masked as 200 OK by a React SPA),
+                // UnityWebRequestTexture fails to decode it and sets result to DataProcessingError.
                 string contentType = request.GetResponseHeader("Content-Type");
                 bool isHtml = !string.IsNullOrEmpty(contentType) && contentType.ToLower().Contains("text/html");
 
@@ -921,21 +935,9 @@ public class BackendAuthService : MonoBehaviour
                 }
                 else
                 {
-                    texture = DownloadHandlerTexture.GetContent(request);
-                    if (texture != null)
-                    {
-                        Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Image Downloaded: {url}</color>");
-                        _imageCache[url] = texture;
-                    }
-                    else
-                    {
-                        Debug.LogError($"<color=#ff0000>[BackendAuthService] ERROR: Texture decode failed (format unsupported?): {url}</color>");
-                    }
+                    // Downgrade to warning so missing avatars don't spam the console with red errors
+                    Debug.LogWarning($"[BackendAuthService] WARNING: Image Download Failed: {url} | {request.error}");
                 }
-            }
-            else
-            {
-                Debug.LogError($"<color=#ff0000>[BackendAuthService] ERROR: Image Download Failed: {url} | {request.error}</color>");
             }
 
             // Fire all waiting callbacks
