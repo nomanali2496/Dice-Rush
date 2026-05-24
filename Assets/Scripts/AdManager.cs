@@ -145,10 +145,7 @@ public class AdManager : MonoBehaviour
         {
             LevelPlay.SetMetaData("is_test_suite", "enable");
 
-            // Must be set BEFORE LevelPlay.Init so the ad network attributes
-            // impressions and rewards to the correct user (MongoDB _id).
-            IronSource.Agent.setUserId(userId);
-            Debug.Log($"AdManager: userId set → {userId}");
+            Debug.Log($"AdManager: Initializing LevelPlay with userId → {userId}");
 
             // Unsubscribe first to prevent double-subscription on re-init
             LevelPlay.OnInitSuccess -= LevelPlay_OnInitSuccess;
@@ -156,7 +153,8 @@ public class AdManager : MonoBehaviour
             LevelPlay.OnInitSuccess += LevelPlay_OnInitSuccess;
             LevelPlay.OnInitFailed  += LevelPlay_OnInitFailed;
 
-            LevelPlay.Init(AppKey);
+            // Pass userId directly — LevelPlay forwards it to the ad networks before init completes.
+            LevelPlay.Init(AppKey, userId);
             Debug.Log("AdManager: LevelPlay.Init called");
         }
         catch (Exception e)

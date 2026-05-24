@@ -102,10 +102,12 @@ public class WatchVideoRewardController : MonoBehaviour
                 {
                     int earned = data.coins - coinsBeforeAd;
                     // Update PlayerModel with the authoritative balance snapshot.
-                    PlayerModel.UpdateData(PlayerModel.Name, PlayerModel.Email, PlayerModel.Avatar,
-                        PlayerModel.Wins, PlayerModel.Losses, PlayerModel.Level, PlayerModel.XP,
-                        PlayerModel.SelectedAvatarIndex, PlayerModel.ActiveMatchId, PlayerModel.ActiveRoomId,
-                        (int)data.cashBalance, data.coins);
+                    PlayerModel.UpdateData(
+                        PlayerModel.Id, PlayerModel.Name, PlayerModel.Email,
+                        PlayerModel.Wins, PlayerModel.Losses,
+                        (int)data.balance, (int)data.cashBalance, (int)data.bonusBalance, (int)data.winningBalance, data.coins,
+                        PlayerModel.Avatar, PlayerModel.Xp, PlayerModel.Level, PlayerModel.Role,
+                        PlayerModel.SelectedAvatarIndex, PlayerModel.ActiveMatchId, PlayerModel.ActiveRoomId);
 
                     StopPoll();
                     ShowClaimingSpinner(false);

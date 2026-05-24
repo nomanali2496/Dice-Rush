@@ -212,10 +212,12 @@ public class SocketManager : MonoBehaviour
             Debug.Log($"<color=#00FF00>⬇️ [Socket ON] adRewardGranted — +{coinsEarned} coins (total: {newTotal})</color>");
 
             // Update PlayerModel immediately from the authoritative socket value.
-            PlayerModel.UpdateData(PlayerModel.Name, PlayerModel.Email, PlayerModel.Avatar,
-                PlayerModel.Wins, PlayerModel.Losses, PlayerModel.Level, PlayerModel.XP,
-                PlayerModel.SelectedAvatarIndex, PlayerModel.ActiveMatchId, PlayerModel.ActiveRoomId,
-                (int)PlayerModel.CashBalance, newTotal);
+            PlayerModel.UpdateData(
+                PlayerModel.Id, PlayerModel.Name, PlayerModel.Email,
+                PlayerModel.Wins, PlayerModel.Losses,
+                PlayerModel.Balance, (int)PlayerModel.CashBalance, PlayerModel.BonusBalance, PlayerModel.WinningBalance, newTotal,
+                PlayerModel.Avatar, PlayerModel.Xp, PlayerModel.Level, PlayerModel.Role,
+                PlayerModel.SelectedAvatarIndex, PlayerModel.ActiveMatchId, PlayerModel.ActiveRoomId);
 
             OnAdRewardGranted?.Invoke(newTotal, coinsEarned);
         }
@@ -233,10 +235,12 @@ public class SocketManager : MonoBehaviour
             UserStatsPayload payload = BestHTTP.JSON.LitJson.JsonMapper.ToObject<UserStatsPayload>(raw);
             Debug.Log($"<color=#00FF00>⬇️ [Socket ON] userStatsUpdated — coins:{payload.coins} cash:{payload.cashBalance}</color>");
 
-            PlayerModel.UpdateData(PlayerModel.Name, PlayerModel.Email, PlayerModel.Avatar,
-                payload.wins, payload.losses, payload.level, payload.xp,
-                PlayerModel.SelectedAvatarIndex, PlayerModel.ActiveMatchId, PlayerModel.ActiveRoomId,
-                (int)payload.cashBalance, payload.coins);
+            PlayerModel.UpdateData(
+                PlayerModel.Id, PlayerModel.Name, PlayerModel.Email,
+                payload.wins, payload.losses,
+                PlayerModel.Balance, (int)payload.cashBalance, (int)payload.bonusBalance, (int)payload.winningBalance, payload.coins,
+                PlayerModel.Avatar, payload.xp, payload.level, PlayerModel.Role,
+                PlayerModel.SelectedAvatarIndex, PlayerModel.ActiveMatchId, PlayerModel.ActiveRoomId);
 
             OnUserStatsUpdated?.Invoke(payload);
         }

@@ -280,6 +280,15 @@ public class GameManager : MonoBehaviour
         // Sort rankings by score (descending)
         rankings.Sort((a, b) => b.count.CompareTo(a.count));
 
+        // Derive chip prize from lobby config using the player's sorted rank.
+        int myRank = rankings.FindIndex(r => r.userId == PlayerModel.Id) + 1;
+        if (currentLobbyConfig != null && myRank > 0)
+        {
+            lastAwardedChips = myRank == 1 ? currentLobbyConfig.firstPlaceChips :
+                               myRank == 2 ? currentLobbyConfig.secondPlaceChips :
+                               myRank == 3 ? currentLobbyConfig.thirdPlaceChips : 0;
+        }
+
         // Show loading screen first
         if (calculateLoadingScreen != null)
         {

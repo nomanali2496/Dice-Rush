@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: LevelPlayMediationSettings
   m_EditorClassIdentifier: Unity.LevelPlay::LevelPlayMediationSettings
   EnableIronsourceSDKInitAPI: 1
-  AndroidAppKey: 2142c05cd
-  IOSAppKey: 214cc7b1d
+  AndroidAppKey: 25fb0fea5
+  IOSAppKey: 25fb1382d
   DeclareAD_IDPermission: 1
   EnableAdapterDebug: 1
   EnableIntegrationHelper: 1

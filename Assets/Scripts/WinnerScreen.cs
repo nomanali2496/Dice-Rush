@@ -755,6 +755,14 @@ public class WinnerScreen : MonoBehaviour
             {
                 cash = (float)earning;
             }
+            if (gameManager != null)
+            {
+                var cfg = gameManager.GetCurrentLobbyConfig();
+                if (cfg != null)
+                    chips = place == 1 ? cfg.firstPlaceChips :
+                            place == 2 ? cfg.secondPlaceChips :
+                            place == 3 ? cfg.thirdPlaceChips : 0;
+            }
 
             // Name and Avatar
             string displayName = (r.playerType == PlayerType.Player) ? "YOU" : "Opponent";
