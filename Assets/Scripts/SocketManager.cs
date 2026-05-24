@@ -185,12 +185,65 @@ public class SocketManager : MonoBehaviour
         ioManager.Open();
     }
 
+    // Fired when server credits coins from a rewarded ad S2S callback.
+    // Only arrives if the socket is already open (e.g. user is in lobby).
+    public static event System.Action<int, int> OnAdRewardGranted; // (newTotal, coinsAwarded)
+
+    // Fired after match settlement and after ad reward — always update local state from this.
+    public static event System.Action<UserStatsPayload> OnUserStatsUpdated;
+
     private void OnSocketConnected(ConnectResponse resp)
     {
         Debug.Log("<color=#00FF00>🎉 ⬇️ [Socket ON] Connected successfully! The backend accepted the connection.</color>");
-        
-        // Seamlessly sync match data if the player resumed directly into the gameplay screen
+
+        // Wire wallet/reward events every (re-)connect.
+        ioManager.Socket.On<BestHTTP.JSON.LitJson.JsonData>("adRewardGranted", OnAdRewardGrantedRaw);
+        ioManager.Socket.On<BestHTTP.JSON.LitJson.JsonData>("userStatsUpdated", OnUserStatsUpdatedRaw);
+
         CheckAndTriggerMatchSync();
+    }
+
+    private void OnAdRewardGrantedRaw(BestHTTP.JSON.LitJson.JsonData json)
+    {
+        try
+        {
+            int newTotal    = (int)json["coins"];
+            int coinsEarned = (int)json["coinsAwarded"];
+            Debug.Log($"<color=#00FF00>⬇️ [Socket ON] adRewardGranted — +{coinsEarned} coins (total: {newTotal})</color>");
+
+            // Update PlayerModel immediately from the authoritative socket value.
+            PlayerModel.UpdateData(PlayerModel.Name, PlayerModel.Email, PlayerModel.Avatar,
+                PlayerModel.Wins, PlayerModel.Losses, PlayerModel.Level, PlayerModel.XP,
+                PlayerModel.SelectedAvatarIndex, PlayerModel.ActiveMatchId, PlayerModel.ActiveRoomId,
+                (int)PlayerModel.CashBalance, newTotal);
+
+            OnAdRewardGranted?.Invoke(newTotal, coinsEarned);
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogWarning($"[SocketManager] adRewardGranted parse error: {e.Message}");
+        }
+    }
+
+    private void OnUserStatsUpdatedRaw(BestHTTP.JSON.LitJson.JsonData json)
+    {
+        try
+        {
+            string raw = json.ToJson();
+            UserStatsPayload payload = BestHTTP.JSON.LitJson.JsonMapper.ToObject<UserStatsPayload>(raw);
+            Debug.Log($"<color=#00FF00>⬇️ [Socket ON] userStatsUpdated — coins:{payload.coins} cash:{payload.cashBalance}</color>");
+
+            PlayerModel.UpdateData(PlayerModel.Name, PlayerModel.Email, PlayerModel.Avatar,
+                payload.wins, payload.losses, payload.level, payload.xp,
+                PlayerModel.SelectedAvatarIndex, PlayerModel.ActiveMatchId, PlayerModel.ActiveRoomId,
+                (int)payload.cashBalance, payload.coins);
+
+            OnUserStatsUpdated?.Invoke(payload);
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogWarning($"[SocketManager] userStatsUpdated parse error: {e.Message}");
+        }
     }
 
     private void OnSocketDisconnected()
@@ -349,4 +402,18 @@ public class MatchmakingUpdateData
 {
     public int current;
     public int target;
+}
+
+[System.Serializable]
+public class UserStatsPayload
+{
+    public float balance;
+    public float cashBalance;
+    public float bonusBalance;
+    public float winningBalance;
+    public int   coins;
+    public int   wins;
+    public int   losses;
+    public int   xp;
+    public int   level;
 }

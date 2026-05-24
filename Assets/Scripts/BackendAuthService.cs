@@ -871,43 +871,42 @@ public class BackendAuthService : MonoBehaviour
     }
 
     /// <summary>
-    /// Notifies the backend that the user finished watching a rewarded video ad.
-    /// The server awards coins and returns the updated profile.
+    /// Lightweight balance snapshot — used to poll for ad reward credit.
+    /// Called by WatchVideoRewardController every 2s after the ad completes.
+    /// Contract: GET /api/wallet/balance
     /// </summary>
-    public void ClaimVideoAdReward(Action<bool, string> onComplete)
+    public void GetWalletBalance(Action<bool, WalletBalanceData> onComplete)
     {
         if (!HasStoredJWT())
         {
-            onComplete?.Invoke(false, "Not authenticated");
+            onComplete?.Invoke(false, null);
             return;
         }
-        Debug.Log("<color=#00ffff>[BackendAuthService] POST Request: /api/rewards/video-ad</color>");
-        StartCoroutine(ClaimVideoAdRewardCoroutine(onComplete));
+        StartCoroutine(GetWalletBalanceCoroutine(onComplete));
     }
 
-    private IEnumerator ClaimVideoAdRewardCoroutine(Action<bool, string> onComplete)
+    private IEnumerator GetWalletBalanceCoroutine(Action<bool, WalletBalanceData> onComplete)
     {
-        string url   = baseUrl.TrimEnd('/') + "/api/rewards/video-ad";
+        string url   = baseUrl.TrimEnd('/') + "/api/wallet/balance";
         string token = GetStoredJWT();
 
-        using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+        using (UnityWebRequest request = UnityWebRequest.Get(url))
         {
             request.SetRequestHeader("Authorization", "Bearer " + token);
-            request.downloadHandler = new DownloadHandlerBuffer();
             yield return request.SendWebRequest();
 
             if (request.result == UnityWebRequest.Result.Success)
             {
-                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: ClaimVideoAdReward: {request.downloadHandler.text}</color>");
-                // Refresh profile so PlayerModel.Coins reflects the server-awarded balance.
-                GetProfile(null);
-                onComplete?.Invoke(true, null);
+                WalletBalanceResponse resp = JsonUtility.FromJson<WalletBalanceResponse>(request.downloadHandler.text);
+                if (resp != null && resp.success)
+                    onComplete?.Invoke(true, resp.data);
+                else
+                    onComplete?.Invoke(false, null);
             }
             else
             {
-                string err = request.downloadHandler.text;
-                Debug.LogError($"<color=#ff0000>[BackendAuthService] ClaimVideoAdReward Error: {request.error} | {err}</color>");
-                onComplete?.Invoke(false, err);
+                Debug.LogWarning($"[BackendAuthService] GetWalletBalance failed: {request.error}");
+                onComplete?.Invoke(false, null);
             }
         }
     }
@@ -1621,5 +1620,22 @@ public class BackendAuthService : MonoBehaviour
         public int losses;
         public bool isOnline;
         public string joinedAt;
+    }
+
+    [Serializable]
+    public class WalletBalanceResponse
+    {
+        public bool success;
+        public WalletBalanceData data;
+    }
+
+    [Serializable]
+    public class WalletBalanceData
+    {
+        public int    coins;
+        public float  balance;
+        public float  cashBalance;
+        public float  bonusBalance;
+        public float  winningBalance;
     }
 }
