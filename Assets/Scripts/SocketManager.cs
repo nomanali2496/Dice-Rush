@@ -93,7 +93,7 @@ public class SocketManager : MonoBehaviour
     /// </summary>
     private void CheckAndTriggerMatchSync()
     {
-        if (GameManager.Instance != null && GameManager.Instance.IsGameplayScreenActive)
+        if (GameManager.Instance != null && GameManager.Instance.IsActivelyPlaying)
         {
             string matchId = PlayerModel.ActiveMatchId;
             string roomId = PlayerModel.ActiveRoomId;
@@ -258,7 +258,7 @@ public class SocketManager : MonoBehaviour
 
     private void TriggerSilentRecoveryIfInGame()
     {
-        if (GameManager.Instance != null && GameManager.Instance.IsGameplayScreenActive)
+        if (GameManager.Instance != null && GameManager.Instance.IsActivelyPlaying)
         {
             if (internetMonitorCoroutine == null)
             {
@@ -298,8 +298,8 @@ public class SocketManager : MonoBehaviour
             // Check every 2 seconds
             yield return new WaitForSeconds(2f);
             
-            // Safety: Stop monitoring if we are no longer in gameplay (e.g., game ended while offline)
-            if (GameManager.Instance == null || !GameManager.Instance.IsGameplayScreenActive)
+            // Safety: Stop monitoring if we are no longer actively playing (e.g., game ended or winner screen showing)
+            if (GameManager.Instance == null || !GameManager.Instance.IsActivelyPlaying)
             {
                 Debug.Log("<color=#FFA500>⏹️ [SocketManager] Gameplay ended. Stopping internet monitor.</color>");
                 internetMonitorCoroutine = null;
