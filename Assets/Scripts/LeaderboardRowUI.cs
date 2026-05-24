@@ -120,7 +120,7 @@ public class LeaderboardRowUI : EnhancedScrollerCellView
                         {
                             Sprite s = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
                             avatarImageCustom.sprite = s;
-                            avatarImageCustom.rectTransform.localScale = Vector3.one * 2f;
+                            avatarImageCustom.rectTransform.localScale = Vector3.one * UIConstants.CustomAvatarScale;
                         }
                     }, isUser);
                 }
@@ -133,7 +133,7 @@ public class LeaderboardRowUI : EnhancedScrollerCellView
             if (avatarImageCustom != null)
             {
                 avatarImageCustom.sprite = avatarSprite;
-                avatarImageCustom.rectTransform.localScale = Vector3.one * 2f; // Zoom effect for custom images
+                avatarImageCustom.rectTransform.localScale = Vector3.one * UIConstants.CustomAvatarScale;
                 avatarImageCustom.gameObject.SetActive(true);
             }
             if (avatarImage != null)
@@ -370,7 +370,7 @@ public class LeaderboardRowUI : EnhancedScrollerCellView
             if (avatarImageCustom != null)
             {
                 avatarImageCustom.sprite = newAvatar;
-                avatarImageCustom.rectTransform.localScale = Vector3.one * 2f;
+                avatarImageCustom.rectTransform.localScale = Vector3.one * UIConstants.CustomAvatarScale;
                 avatarImageCustom.gameObject.SetActive(true);
             }
             if (avatarImage != null) avatarImage.gameObject.SetActive(false);

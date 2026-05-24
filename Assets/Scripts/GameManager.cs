@@ -1154,7 +1154,7 @@ public class GameManager : MonoBehaviour
                     if (playerProfileImageCustom != null)
                     {
                         playerProfileImageCustom.sprite = playerSelectedAvatar;
-                        playerProfileImageCustom.rectTransform.localScale = Vector3.one * 2f;
+                        playerProfileImageCustom.rectTransform.localScale = Vector3.one * UIConstants.CustomAvatarScale;
                         playerProfileImageCustom.gameObject.SetActive(true);
                     }
                     if (playerProfileImage != null) playerProfileImage.gameObject.SetActive(false);
@@ -2036,7 +2036,7 @@ public class GameManager : MonoBehaviour
             if (customSlot != null)
             {
                 customSlot.sprite = sprite;
-                customSlot.rectTransform.localScale = Vector3.one * 2f;
+                customSlot.rectTransform.localScale = Vector3.one * UIConstants.CustomAvatarScale;
                 customSlot.gameObject.SetActive(true);
             }
         }

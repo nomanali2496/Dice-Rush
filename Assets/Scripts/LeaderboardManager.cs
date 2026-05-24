@@ -401,7 +401,7 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
                         {
                             Sprite s = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
                             customSlot.sprite = s;
-                            customSlot.rectTransform.localScale = Vector3.one * 2f;
+                            customSlot.rectTransform.localScale = Vector3.one * UIConstants.CustomAvatarScale;
                         }
                     });
                 }
@@ -584,7 +584,7 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
             if (customSlot != null)
             {
                 customSlot.sprite = sprite;
-                customSlot.rectTransform.localScale = Vector3.one * 2f;
+                customSlot.rectTransform.localScale = Vector3.one * UIConstants.CustomAvatarScale;
                 customSlot.gameObject.SetActive(sprite != null);
             }
             if (spriteSlot != null) spriteSlot.gameObject.SetActive(false);
@@ -637,7 +637,7 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
                             {
                                 Sprite s = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
                                 userFixedAvatarCustom.sprite = s;
-                                userFixedAvatarCustom.rectTransform.localScale = Vector3.one * 2f;
+                                userFixedAvatarCustom.rectTransform.localScale = Vector3.one * UIConstants.CustomAvatarScale;
                             }
                         }, true);
                     }
@@ -657,7 +657,7 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
                         if (userFixedAvatarCustom != null)
                         {
                             userFixedAvatarCustom.sprite = mainMenuSprite;
-                            userFixedAvatarCustom.rectTransform.localScale = Vector3.one * 2f;
+                            userFixedAvatarCustom.rectTransform.localScale = Vector3.one * UIConstants.CustomAvatarScale;
                             userFixedAvatarCustom.gameObject.SetActive(true);
                         }
                         if (userFixedAvatar != null) userFixedAvatar.gameObject.SetActive(false);

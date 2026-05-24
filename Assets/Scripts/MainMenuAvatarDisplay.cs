@@ -103,7 +103,7 @@ public class MainMenuAvatarDisplay : MonoBehaviour
         if (avatarImageCustom != null)
         {
             avatarImageCustom.sprite = sprite;
-            avatarImageCustom.rectTransform.localScale = Vector3.one * 2f; // Zoom effect
+            avatarImageCustom.rectTransform.localScale = Vector3.one * UIConstants.CustomAvatarScale;
             avatarImageCustom.gameObject.SetActive(true);
         }
         if (avatarImageSprite != null) avatarImageSprite.gameObject.SetActive(false);
