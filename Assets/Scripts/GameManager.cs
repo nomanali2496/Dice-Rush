@@ -257,9 +257,9 @@ public class GameManager : MonoBehaviour
         // List<(PlayerType playerType, int opponentIndex, int count, double time, string userId)>
         var rankings = new List<(PlayerType playerType, int opponentIndex, int count, double time, string userId)>();
 
-        // Set the official prizes from server data
-        lastAwardedCash = (float)data.earnings.GetValueOrDefault(PlayerModel.Id, 0);
-        lastAwardedChips = 0;
+        // Server is authoritative — use its earnings/coinsEarnings directly.
+        lastAwardedCash  = (float)data.earnings.GetValueOrDefault(PlayerModel.Id, 0);
+        lastAwardedChips = (int)(data.coinsEarnings?.GetValueOrDefault(PlayerModel.Id, 0) ?? 0);
 
         if (data.scores != null)
         {
@@ -280,14 +280,6 @@ public class GameManager : MonoBehaviour
         // Sort rankings by score (descending)
         rankings.Sort((a, b) => b.count.CompareTo(a.count));
 
-        // Derive chip prize from lobby config using the player's sorted rank.
-        int myRank = rankings.FindIndex(r => r.userId == PlayerModel.Id) + 1;
-        if (currentLobbyConfig != null && myRank > 0)
-        {
-            lastAwardedChips = myRank == 1 ? currentLobbyConfig.firstPlaceChips :
-                               myRank == 2 ? currentLobbyConfig.secondPlaceChips :
-                               myRank == 3 ? currentLobbyConfig.thirdPlaceChips : 0;
-        }
 
         // Show loading screen first
         if (calculateLoadingScreen != null)

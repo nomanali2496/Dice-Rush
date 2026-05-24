@@ -1793,24 +1793,26 @@ public class NumberGrid : MonoBehaviour
     /// </summary>
     private void OnPowerupButtonClicked(BoxData boxData)
     {
+        // Disable the button immediately — prevents a second tap landing in the same frame
+        // (race condition: iconExpired socket event and tap input can arrive in the same frame,
+        // with the tap processed before the socket callback updates isPowerupVisible).
+        if (boxData.selectButton != null)
+            boxData.selectButton.interactable = false;
+
         if (boxData.isSelected)
-        {
-            // Box is already selected and locked - do nothing
             return;
-        }
-        
+
         if (!boxData.isPowerup)
-        {
-            Debug.LogWarning("[NumberGrid] This is not a powerup box!");
             return;
-        }
-        
+
+        // Re-check visibility AFTER disabling the button.
+        // If the socket callback already ran this frame and cleared the flag, bail out.
         if (!boxData.isPowerupVisible)
         {
-            Debug.LogWarning("[NumberGrid] Powerup is not currently visible!");
+            Debug.LogWarning("[NumberGrid] Powerup tap rejected locally — icon not active (race condition caught).");
             return;
         }
-        
+
         // Store this as the last tapped box for visual feedback from server
         lastTappedBoxData = boxData;
 
@@ -1822,15 +1824,11 @@ public class NumberGrid : MonoBehaviour
             int index = boxDataList.IndexOf(boxData);
             if (index != -1)
             {
-                // --- OPTIMISTIC UI / CLIENT-SIDE PREDICTION ---
-                // Only lock locally if we know the icon is currently active — same gate the server uses.
-                if (boxData.isPowerupVisible && !boxData.isSelected)
-                {
-                    Debug.Log("<color=#00FF00>⚡ [Client-Side Prediction] Optimistically locking powerup instantly.</color>");
-                    LockPowerup(boxData, PlayerType.Player, -1);
-                    OnBoxSelected?.Invoke(this, -1, boxData.boxObject);
-                    CheckIfAllBoxesSelected();
-                }
+                // Optimistically lock — local validity already confirmed above.
+                Debug.Log("<color=#00FF00>⚡ [Client-Side Prediction] Optimistically locking powerup instantly.</color>");
+                LockPowerup(boxData, PlayerType.Player, -1);
+                OnBoxSelected?.Invoke(this, -1, boxData.boxObject);
+                CheckIfAllBoxesSelected();
 
                 // Always emit — server is authority; it will send tapResult=false if icon expired or taken.
                 Debug.Log($"[NumberGrid] Emitting powerup tap: index={index}, sequence={tapSequence}");

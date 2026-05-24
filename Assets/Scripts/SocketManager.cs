@@ -399,6 +399,7 @@ public class PlayerAvatarInfo
     public string name;
     public string avatar;
     public bool isBot;
+    public int rank;
 }
 
 [System.Serializable]

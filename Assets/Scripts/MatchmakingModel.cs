@@ -238,17 +238,31 @@ public static class MatchmakingModel
         string msg = err.message ?? "Unknown Server Error";
         Debug.LogError($"❌ <color=#FF0000>[Socket ERROR] 'error' received: {msg}</color>");
 
-        // NEW: Handle the specific case where the player is already in a match (e.g., resumed app after match found)
-        if (msg.Contains("Already in a match"))
+        // Player backgrounded while a match was being found — server already placed them in a match.
+        // Fetch the active match IDs from the profile and reconnect directly.
+        if (msg.Contains("Already in an active match") || msg.Contains("Already in a match"))
         {
-            Debug.Log("<color=#00FFFF>🔄 [MatchmakingModel] 'Already in a match' detected. Stopping search and refreshing profile for recovery...</color>");
+            Debug.Log("<color=#00FFFF>🔄 [MatchmakingModel] Already in active match — fetching profile to reconnect...</color>");
             IsSearching = false;
 
-            // Trigger profile refresh to get the activeMatchId/activeRoomId
             if (BackendAuthService.Instance != null)
             {
                 BackendAuthService.Instance.GetProfile((success, error) => {
-                    if (success) Debug.Log("<color=#00FF00>✅ [MatchmakingModel] Profile refreshed successfully after recovery detection.</color>");
+                    if (!success) { Debug.LogWarning("[MatchmakingModel] Profile fetch failed during active-match recovery."); return; }
+
+                    string matchId = PlayerModel.ActiveMatchId;
+                    string roomId  = PlayerModel.ActiveRoomId;
+
+                    if (!string.IsNullOrEmpty(matchId) && !string.IsNullOrEmpty(roomId))
+                    {
+                        Debug.Log($"<color=#00FF00>✅ [MatchmakingModel] Reconnecting to active match {matchId} / room {roomId}</color>");
+                        ReconnectMatch(matchId, roomId);
+                    }
+                    else
+                    {
+                        Debug.LogWarning("[MatchmakingModel] Active match IDs not found on profile — user may need to rejoin manually.");
+                        OnMatchmakingFailed?.Invoke("Match found but reconnect info missing. Please restart.");
+                    }
                 });
             }
             return;
@@ -496,6 +510,7 @@ public class GameOverData
     public System.Collections.Generic.Dictionary<string, int> scores;
     public System.Collections.Generic.Dictionary<string, int> totalLocks;
     public System.Collections.Generic.Dictionary<string, double> earnings;
+    public System.Collections.Generic.Dictionary<string, double> coinsEarnings;
     public System.Collections.Generic.Dictionary<string, PlayerAvatarInfo> players;
 }
 

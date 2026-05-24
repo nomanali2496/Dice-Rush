@@ -748,21 +748,13 @@ public class WinnerScreen : MonoBehaviour
             var r = rankings[i];
             int place = i + 1;
 
-            // Prize data
-            float cash = 0f;
-            int chips = 0;
-            if (serverData != null && serverData.earnings != null && serverData.earnings.TryGetValue(r.userId, out double earning))
-            {
+            // Prize data — server is authoritative for both currencies.
+            float cash  = 0f;
+            int   chips = 0;
+            if (serverData?.earnings != null && serverData.earnings.TryGetValue(r.userId, out double earning))
                 cash = (float)earning;
-            }
-            if (gameManager != null)
-            {
-                var cfg = gameManager.GetCurrentLobbyConfig();
-                if (cfg != null)
-                    chips = place == 1 ? cfg.firstPlaceChips :
-                            place == 2 ? cfg.secondPlaceChips :
-                            place == 3 ? cfg.thirdPlaceChips : 0;
-            }
+            if (serverData?.coinsEarnings != null && serverData.coinsEarnings.TryGetValue(r.userId, out double coinEarning))
+                chips = (int)coinEarning;
 
             // Name and Avatar
             string displayName = (r.playerType == PlayerType.Player) ? "YOU" : "Opponent";
@@ -819,19 +811,23 @@ public class WinnerScreen : MonoBehaviour
         // Score
         if (scoreText != null) scoreText.text = score.ToString();
 
-        // Prizes (Logic from GameManager fix)
-        bool isCashMatch = true;
-        if (gameManager != null && gameManager.GetCurrentLobbyConfig() != null) isCashMatch = gameManager.GetCurrentLobbyConfig().entryFeeCash > 0;
-
-        if (cashPrize > 0f || (isCashMatch && chipsPrize == 0))
+        // Show whichever currency the server actually awarded.
+        // If somehow both are non-zero, cash takes the slot (coins shown in secondary text if wired).
+        if (cashPrize > 0f)
         {
             if (prizeIcon != null) { prizeIcon.sprite = cashSprite; prizeIcon.gameObject.SetActive(true); }
             if (prizeText != null) { prizeText.text = "$" + CurrencyDisplayUI.FormatCash(cashPrize); prizeText.gameObject.SetActive(true); }
         }
-        else
+        else if (chipsPrize > 0)
         {
             if (prizeIcon != null) { prizeIcon.sprite = chipsSprite; prizeIcon.gameObject.SetActive(true); }
             if (prizeText != null) { prizeText.text = chipsPrize.ToString(); prizeText.gameObject.SetActive(true); }
+        }
+        else
+        {
+            // No prize (loser / bot) — hide the prize slot.
+            if (prizeIcon != null) prizeIcon.gameObject.SetActive(false);
+            if (prizeText != null) prizeText.gameObject.SetActive(false);
         }
     }
 
