@@ -990,6 +990,23 @@ public class NumberGrid : MonoBehaviour
         }
     }
 
+    private void RollbackPowerupLock(BoxData boxData)
+    {
+        if (boxData == null || !boxData.isPowerup) return;
+
+        Debug.Log($"<color=#FFA500>↩️ [Client-Side Prediction] Rolling back optimistic powerup lock for index {boxDataList.IndexOf(boxData)}</color>");
+
+        boxData.isSelected = false;
+        boxData.selectedByPlayer = PlayerType.Player;
+        boxData.selectedByCPUIndex = -1;
+
+        if (boxData.highlightImage != null)
+            boxData.highlightImage.gameObject.SetActive(false);
+
+        // Server rejected it (expired or taken by opponent) — just hide it cleanly.
+        HidePowerup(boxData);
+    }
+
     private void HandleServerTapResult(TapResultData data)
     {
         if (!data.correct)
@@ -997,7 +1014,10 @@ public class NumberGrid : MonoBehaviour
             // Rollback the optimistic lock if it was locked
             if (lastTappedBoxData != null && lastTappedBoxData.isSelected && lastTappedBoxData.selectedByPlayer == PlayerType.Player)
             {
-                RollbackBoxLock(lastTappedBoxData);
+                if (lastTappedBoxData.isPowerup)
+                    RollbackPowerupLock(lastTappedBoxData);
+                else
+                    RollbackBoxLock(lastTappedBoxData);
             }
             
             // Trigger the "Wrong" visual effect on the specific box that was tapped
@@ -1794,21 +1814,28 @@ public class NumberGrid : MonoBehaviour
         // Store this as the last tapped box for visual feedback from server
         lastTappedBoxData = boxData;
 
-        // EMIT TAP TO SERVER instead of locking locally
-        // This ensures the server validates the tap and broadcasts the lock to all players
         GameManager gm = FindObjectOfType<GameManager>();
         string roomId = gm != null ? gm.GetCurrentRoomId() : null;
-        
+
         if (!string.IsNullOrEmpty(roomId))
         {
-            // Find index of this boxData in our list
             int index = boxDataList.IndexOf(boxData);
             if (index != -1)
             {
-                // Send 0 for powerups as per backend contract
+                // --- OPTIMISTIC UI / CLIENT-SIDE PREDICTION ---
+                // Only lock locally if we know the icon is currently active — same gate the server uses.
+                if (boxData.isPowerupVisible && !boxData.isSelected)
+                {
+                    Debug.Log("<color=#00FF00>⚡ [Client-Side Prediction] Optimistically locking powerup instantly.</color>");
+                    LockPowerup(boxData, PlayerType.Player, -1);
+                    OnBoxSelected?.Invoke(this, -1, boxData.boxObject);
+                    CheckIfAllBoxesSelected();
+                }
+
+                // Always emit — server is authority; it will send tapResult=false if icon expired or taken.
                 Debug.Log($"[NumberGrid] Emitting powerup tap: index={index}, sequence={tapSequence}");
                 MatchmakingModel.EmitTapNumber(roomId, index, 0, tapSequence);
-                tapSequence++; // Increment AFTER sending so the first tap is 0
+                tapSequence++;
             }
         }
         else
@@ -1816,11 +1843,7 @@ public class NumberGrid : MonoBehaviour
             // Fallback for offline/network testing (original logic)
             Debug.Log("[NumberGrid] No active match, locking powerup locally.");
             LockPowerup(boxData, PlayerType.Player, -1);
-            
-            // Trigger event (use -1 or 0 as number for powerups)
             OnBoxSelected?.Invoke(this, -1, boxData.boxObject);
-            
-            // Check if all boxes are selected
             CheckIfAllBoxesSelected();
         }
     }
