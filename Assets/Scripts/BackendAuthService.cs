@@ -10,8 +10,10 @@ public class BackendAuthService : MonoBehaviour
     public static BackendAuthService Instance { get; private set; }
 
     [Header("Server Settings")]
-    [Tooltip("Base URL for the Node.js backend API")]
-    [SerializeField] private string baseUrl = "https://unclog-goggles-drastic.ngrok-free.dev";
+    [Tooltip("Backend environment config (assign BackendConfig asset, or place one in Resources/BackendConfig.asset)")]
+    [SerializeField] private BackendConfig backendConfig;
+
+    private string baseUrl => (backendConfig != null ? backendConfig : BackendConfig.Load())?.ApiUrl ?? "https://unclog-goggles-drastic.ngrok-free.dev";
 
     private const string JWT_PREF_KEY = "CustomBackendJWT";
 

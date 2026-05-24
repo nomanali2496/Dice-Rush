@@ -1,0 +1,11 @@
+﻿<Solution>
+  <Project Path="BestHTTP.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="AppleAuth.csproj" />
+  <Project Path="Assembly-CSharp-firstpass.csproj" />
+  <Project Path="Assembly-CSharp-Editor.csproj" />
+  <Project Path="AppleAuth.Editor.csproj" />
+  <Project Path="NativeGallery.Runtime.csproj" />
+  <Project Path="FirebaseMessagingActivityGenerator.csproj" />
+  <Project Path="NativeGallery.Editor.csproj" />
+</Solution>

@@ -13,8 +13,10 @@ public class SocketManager : MonoBehaviour
     private Coroutine internetMonitorCoroutine;
 
     [Header("Server Settings")]
-    [Tooltip("The Ngrok URL or Backend URL")]
-    [SerializeField] private string serverUrl = "https://unclog-goggles-drastic.ngrok-free.dev";
+    [Tooltip("Backend environment config (assign BackendConfig asset, or place one in Resources/BackendConfig.asset)")]
+    [SerializeField] private BackendConfig backendConfig;
+
+    private string serverUrl => (backendConfig != null ? backendConfig : BackendConfig.Load())?.SocketUrl ?? "https://unclog-goggles-drastic.ngrok-free.dev";
 
     public string GetServerUrl() => serverUrl;
 
