@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c1adc1e6bdd493d96bec525d2a15479, type: 3}
   m_Name: BackendConfig
   m_EditorClassIdentifier: Assembly-CSharp::BackendConfig
-  activeEnvironment: 0
+  activeEnvironment: 1
   devApiUrl: https://unclog-goggles-drastic.ngrok-free.dev
   devSocketUrl: https://unclog-goggles-drastic.ngrok-free.dev
-  prodApiUrl: https://api.yourdomain.com
-  prodSocketUrl: https://api.yourdomain.com
+  prodApiUrl: https://api.winjogames.com
+  prodSocketUrl: wss://api.winjogames.com

@@ -1549,16 +1549,18 @@ public class GameManager : MonoBehaviour
         winnerScreenShown = false;
         isWaitingForServer = false;
         prizesAwardedForThisMatch = false;
-        
-        // Clear recovery persistence
-        // Handled by backend profile state now
 
-        gameTimer = initialGameTimer; // Reset timer back to its original value after match ends
-        currentTimer = gameTimer; // Reset to default timer value
-        
+        gameTimer = initialGameTimer;
+        currentTimer = gameTimer;
+
         // Clear current lobby config (will be set when new game starts)
         currentLobbyConfig = null;
         currentMatchData = null;
+
+        // Clear per-match score state so stale data never bleeds into the next match
+        networkPlayerScores.Clear();
+        networkPlayerTimes.Clear();
+        localMatchScore = 0;
         
         // Reset outline fill amounts
         ResetOutlineFillAmounts();

@@ -54,36 +54,28 @@ public class WatchVideoRewardController : MonoBehaviour
 
     private void OnRewardedAdCompleted(bool successfullyWatched)
     {
-        if (successfullyWatched)
+        if (!successfullyWatched)
         {
-            Debug.Log("User finished the ad. Adding 10 chips...");
-            
-            if (BackendAuthService.Instance != null)
-            {
-                // Calculate new chips balance
-                int newChips = PlayerModel.Coins + 10;
-                
-                // Update currency via backend
-                BackendAuthService.Instance.UpdateCurrency(PlayerModel.CashBalance, newChips, (success, message) => 
-                {
-                    if (success)
-                    {
-                        Debug.Log("Successfully added 10 chips via BackendAuthService!");
-                    }
-                    else
-                    {
-                        Debug.LogError($"Failed to add chips: {message}");
-                    }
-                });
-            }
+            Debug.Log("WatchVideoReward: User skipped the ad — no reward.");
+            return;
+        }
+
+        Debug.Log("WatchVideoReward: Ad completed. Requesting server-side reward...");
+
+        if (BackendAuthService.Instance == null)
+        {
+            Debug.LogError("WatchVideoReward: BackendAuthService instance not found!");
+            return;
+        }
+
+        // Server awards the coins and returns the updated balance.
+        // We just refresh the profile so PlayerModel stays in sync.
+        BackendAuthService.Instance.ClaimVideoAdReward((success, message) =>
+        {
+            if (success)
+                Debug.Log("WatchVideoReward: Server reward claimed. Profile refreshed.");
             else
-            {
-                Debug.LogError("BackendAuthService instance not found!");
-            }
-        }
-        else
-        {
-            Debug.Log("User skipped the ad early. No reward.");
-        }
+                Debug.LogError($"WatchVideoReward: Server reward failed — {message}");
+        });
     }
 }

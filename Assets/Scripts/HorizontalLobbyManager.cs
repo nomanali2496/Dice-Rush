@@ -72,6 +72,10 @@ public class HorizontalLobbyManager : MonoBehaviour
     
     // Tracks the lobby they are currently matchmaking for
     private int _pendingLobbyIndex = -1;
+
+    // True while this panel is visible — used by SocketManager to decide whether
+    // to reconnect on app resume.
+    public static bool IsLobbyActive { get; private set; }
     
     private void Start()
     {
@@ -88,17 +92,10 @@ public class HorizontalLobbyManager : MonoBehaviour
         if (cancelMatchmakingButton != null)
             cancelMatchmakingButton.onClick.AddListener(OnCancelMatchmaking);
             
-        // Wire back/disconnect button
+        // Wire back/disconnect button — only called when navigating to the HOME screen.
+        // Gameplay → Lobby transitions do NOT trigger this; the socket stays alive there.
         if (disconnectSocketButton != null)
-        {
-            disconnectSocketButton.onClick.AddListener(() => {
-                if (SocketManager.Instance != null)
-                {
-                    Debug.Log("<color=#FF6347>⚠️ [Lobby] Back button clicked. Disconnecting socket...</color>");
-                    SocketManager.Instance.Disconnect();
-                }
-            });
-        }
+            disconnectSocketButton.onClick.AddListener(OnNavigateToHome);
         
         // Subscribe to PlayerModel events to update when backend data loads
         PlayerModel.OnDataUpdated += OnPlayerDataUpdated;
@@ -146,30 +143,32 @@ public class HorizontalLobbyManager : MonoBehaviour
     
     private void OnEnable()
     {
-        // Refresh lobby rows when GameObject becomes active
-        if (_lobbyObjectsData != null && _lobbyObjectsData.Length > 0)
+        IsLobbyActive = true;
+
+        // Ensure the socket is alive whenever the lobby is visible.
+        // This covers returning from gameplay (socket was kept alive) AND resuming
+        // after a home-screen back (socket was disconnected) if the user re-enters.
+        if (BackendAuthService.HasStoredJWT() && SocketManager.Instance != null)
+            SocketManager.Instance.ConnectToServer();
 
         // Ensure background music is playing if settings allow (e.g. returning from game)
         if (SettingManager.instance != null)
-        {
             SettingManager.instance.ApplyMusicSetting();
-        }
 
         // Refresh lobby rows when GameObject becomes active
         if (_lobbyObjectsData != null && _lobbyObjectsData.Length > 0)
-        {
             UpdateVisibleRows();
-        }
 
         // Start retry routine to ensure buttons light up when data is ready (e.g. after returning from game)
         StartCoroutine(InitializeButtonsRoutine());
-        
+
         // Subscribe to events
         MatchmakingModel.OnMatchFound += HandleMatchFound;
     }
-    
+
     private void OnDisable()
     {
+        IsLobbyActive = false;
         MatchmakingModel.OnMatchFound -= HandleMatchFound;
     }
 
@@ -789,9 +788,27 @@ public class HorizontalLobbyManager : MonoBehaviour
         
         // CancelSearch() internally emits 'cancelMatchmaking' with { lobbyId } via the socket
         MatchmakingModel.CancelSearch();
-        
+
         if (waitingPanel != null) waitingPanel.SetActive(false);
         _pendingLobbyIndex = -1;
+    }
+
+    /// Called ONLY when the player navigates back to the Home/Main screen.
+    /// Cancels any active search and safely closes the socket.
+    /// Going from gameplay → lobby does NOT call this — socket stays alive there.
+    private void OnNavigateToHome()
+    {
+        Debug.Log("<color=#FF6347>⚠️ [Lobby] Navigating home — cancelling search and disconnecting socket.</color>");
+
+        if (MatchmakingModel.IsSearching)
+        {
+            MatchmakingModel.CancelSearch();
+            if (waitingPanel != null) waitingPanel.SetActive(false);
+            _pendingLobbyIndex = -1;
+        }
+
+        if (SocketManager.Instance != null)
+            SocketManager.Instance.Disconnect();
     }
 
     public void StartGameFromNetwork(int lobbyIndex, StartGameData matchData = null, int overrideCPUs = -1)

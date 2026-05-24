@@ -16,11 +16,11 @@ public class AdManager : MonoBehaviour
     private const string GDPR_KEY       = "UserConsent";
 
 #if UNITY_IOS
-    private const string AppKey               = "214cc7b1d";
-    private const string RewardedAdUnitId     = "ra2u44og7hv3cqgj";
+    private const string AppKey           = "25fb1382d";
+    private const string RewardedAdUnitId = "zz0xye8bos3fdhao";
 #else
-    private const string AppKey               = "2142c05cd";
-    private const string RewardedAdUnitId     = "b66pl1c4zv0h0ew2";
+    private const string AppKey           = "25fb0fea5";
+    private const string RewardedAdUnitId = "zhnzswxatn5j0bz8";
 #endif
 
     private const float ReloadDelay      = 30f;
@@ -78,17 +78,17 @@ public class AdManager : MonoBehaviour
 #if UNITY_EDITOR
         DebugDoNotShowAds = true;
 #endif
-        Debug.Log("AdManager: Starting initialization...");
+        // Subscribe so we initialize as soon as a userId is available (login / auto-login).
+        PlayerModel.OnDataUpdated += OnPlayerDataReady;
 
-        if (CanShowAds() && !DebugDoNotShowAds)
-            InitializeSdk();
-        else
-            Debug.LogWarning($"AdManager: Ads not allowed at startup. CanShowAds: {CanShowAds()}, DebugDoNotShowAds: {DebugDoNotShowAds}");
+        // Returning user: PlayerModel.Id may already be populated if auto-login ran first.
+        TryInitializeSdk();
     }
 
 
     void OnDestroy()
     {
+        PlayerModel.OnDataUpdated -= OnPlayerDataReady;
         LevelPlay.OnInitSuccess -= LevelPlay_OnInitSuccess;
         LevelPlay.OnInitFailed  -= LevelPlay_OnInitFailed;
 
@@ -112,17 +112,50 @@ public class AdManager : MonoBehaviour
 
     #region Initialization
 
-    private void InitializeSdk()
+    // Called from Start() and from OnPlayerDataReady() — guards against double-init.
+    private void TryInitializeSdk()
     {
-        Debug.Log("AdManager: Initializing LevelPlay SDK...");
+        if (_isInitialized) return;
+        if (!CanShowAds() || DebugDoNotShowAds)
+        {
+            Debug.LogWarning($"AdManager: Ads skipped. CanShowAds={CanShowAds()}, DebugMode={DebugDoNotShowAds}");
+            return;
+        }
+
+        string userId = PlayerModel.Id;
+        if (string.IsNullOrEmpty(userId))
+        {
+            Debug.Log("AdManager: No userId yet — deferring SDK init until login completes.");
+            return;
+        }
+
+        InitializeSdk(userId);
+    }
+
+    // Fired by PlayerModel.OnDataUpdated after every login / profile fetch.
+    private void OnPlayerDataReady()
+    {
+        TryInitializeSdk();
+    }
+
+    private void InitializeSdk(string userId)
+    {
+        Debug.Log($"AdManager: Initializing LevelPlay SDK for user '{userId}'...");
         try
         {
             LevelPlay.SetMetaData("is_test_suite", "enable");
+
+            // Must be set BEFORE LevelPlay.Init so the ad network attributes
+            // impressions and rewards to the correct user (MongoDB _id).
+            IronSource.Agent.setUserId(userId);
+            Debug.Log($"AdManager: userId set → {userId}");
+
             // Unsubscribe first to prevent double-subscription on re-init
             LevelPlay.OnInitSuccess -= LevelPlay_OnInitSuccess;
             LevelPlay.OnInitFailed  -= LevelPlay_OnInitFailed;
             LevelPlay.OnInitSuccess += LevelPlay_OnInitSuccess;
             LevelPlay.OnInitFailed  += LevelPlay_OnInitFailed;
+
             LevelPlay.Init(AppKey);
             Debug.Log("AdManager: LevelPlay.Init called");
         }
@@ -195,10 +228,10 @@ public class AdManager : MonoBehaviour
 
         if (!shouldRemove && !_isInitialized && !DebugDoNotShowAds)
         {
-            // SDK was never initialized (Start() ran while previous account had ads removed).
-            // Now that this account has ads, initialize for the first time.
-            Debug.Log("AdManager: Ads re-enabled for this account, initializing SDK now");
-            InitializeSdk();
+            // SDK was never initialized (Start() ran while ads were disabled).
+            // TryInitializeSdk guards against missing userId.
+            Debug.Log("AdManager: Ads re-enabled — attempting SDK init now");
+            TryInitializeSdk();
         }
     }
 

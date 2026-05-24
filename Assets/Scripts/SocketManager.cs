@@ -61,15 +61,17 @@ public class SocketManager : MonoBehaviour
     {
         if (BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
         {
-            // ONLY connect if we are in gameplay or searching
+            // Reconnect if we are in gameplay, searching, OR browsing the lobby.
+            // Only stay disconnected when the user is on the home/main screen.
             bool isGameplayActive = GameManager.Instance != null && GameManager.Instance.IsGameplayScreenActive;
-            bool shouldConnect = isGameplayActive || MatchmakingModel.IsSearching;
+            bool isLobbyActive = HorizontalLobbyManager.IsLobbyActive;
+            bool shouldConnect = isGameplayActive || MatchmakingModel.IsSearching || isLobbyActive;
 
             if (shouldConnect)
             {
                 if (ioManager == null || ioManager.State != BestHTTP.SocketIO3.SocketManager.States.Open)
                 {
-                    Debug.Log("<color=#98FB98>⬆️ [SocketManager] App resumed (Gameplay/Search active). Triggering reconnection...</color>");
+                    Debug.Log("<color=#98FB98>⬆️ [SocketManager] App resumed (Gameplay/Search/Lobby active). Triggering reconnection...</color>");
                     ConnectToServer();
                 }
                 else
@@ -80,7 +82,7 @@ public class SocketManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("<color=#AFEEEE>[SocketManager] App resumed but no active match/search. Staying disconnected.</color>");
+                Debug.Log("<color=#AFEEEE>[SocketManager] App resumed on home screen. Staying disconnected.</color>");
             }
         }
     }
