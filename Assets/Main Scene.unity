@@ -52174,7 +52174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WinnerScreen
   cashSprite: {fileID: 21300000, guid: 8fa1cc91b0802404fa18165b40c9c2c2, type: 3}
-  chipsSprite: {fileID: 21300000, guid: 38834a5ba6fd8d44a85097afda2aea0b, type: 3}
+  chipsSprite: {fileID: 21300000, guid: d17b8a47cf568ad4aa6fdd3bdc2f479e, type: 3}
   firstPlacePrizePosition: {fileID: 760401102}
   firstPlacePrizeText: {fileID: 1316242749}
   firstPlacePrizeIcon: {fileID: 285117727}
