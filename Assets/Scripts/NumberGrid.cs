@@ -2004,7 +2004,7 @@ public class NumberGrid : MonoBehaviour
         if (data.index >= 0 && data.index < boxDataList.Count)
         {
             BoxData boxData = boxDataList[data.index];
-            if (boxData.isPowerup)
+            if (boxData.isPowerup && !boxData.isSelected)
             {
                 Debug.Log($"[NumberGrid] Server activated powerup at index {data.index} for {data.duration}ms");
                 ShowPowerup(boxData);
