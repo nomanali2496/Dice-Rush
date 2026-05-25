@@ -35314,7 +35314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3443405773039670259, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 18
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 5359784933632279992, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_Pivot.x
@@ -35406,7 +35406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6127197442369528537, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 18
+      value: 42.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -60448,9 +60448,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1956209287}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c472869304493b4cb6fe266bbe3c353, type: 3}
+  m_Script: {fileID: 11500000, guid: 1bc4ad5967f60c545a71a475f94c4aec, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
+  m_EditorClassIdentifier: Assembly-CSharp::DiceScaler
+  dicesController: {fileID: 1956209288}
+  diceParentContainer: {fileID: 1749224912}
+  referenceScreenSize: {x: 1440, y: 3216}
+  referenceDiceScale: 9000
+  referenceDiceSpacing: 200
 --- !u!114 &1958117582 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4527068884088356609, guid: deac686a2945f0744928e3ac3f74b48b, type: 3}
@@ -72500,7 +72505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3443405773039670259, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 18
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 5359784933632279992, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_Pivot.x
@@ -72596,7 +72601,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6127197442369528537, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 18
+      value: 42.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
