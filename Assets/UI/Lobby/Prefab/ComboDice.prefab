@@ -79,7 +79,7 @@ MonoBehaviour:
   - lobbyId: mega-rush
     sprite: {fileID: 21300000, guid: 5c87fde5146317648be2567ad90db9f9, type: 3}
   - lobbyId: roll-on-the-beach
-    sprite: {fileID: 21300000, guid: 665f009c80cbb1d4db44755c616e13d7, type: 3}
+    sprite: {fileID: 21300000, guid: a7e874a3dba574d41be9679deaa8631e, type: 3}
   - lobbyId: treasure-roll
     sprite: {fileID: 21300000, guid: 71de092f54cfa254faaa2626650f0f94, type: 3}
   - lobbyId: token-mania

@@ -8422,7 +8422,7 @@ PrefabInstance:
     - target: {fileID: 8266724459619458920, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
       propertyPath: spriteMappings.Array.data[8].sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 665f009c80cbb1d4db44755c616e13d7, type: 3}
+      objectReference: {fileID: 21300000, guid: a7e874a3dba574d41be9679deaa8631e, type: 3}
     - target: {fileID: 8266724459619458920, guid: 3989d675aa2c90d4f9c4b5a15bf6b979, type: 3}
       propertyPath: spriteMappings.Array.data[9].sprite
       value: 
@@ -35312,6 +35312,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PasswordField
       objectReference: {fileID: 0}
+    - target: {fileID: 3443405773039670259, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 5359784933632279992, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -35399,6 +35403,10 @@ PrefabInstance:
     - target: {fileID: 6127197442369528537, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_text
       value: Password
+      objectReference: {fileID: 0}
+    - target: {fileID: 6127197442369528537, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
+      propertyPath: m_fontSize
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -60443,27 +60451,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c472869304493b4cb6fe266bbe3c353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  dicesController: {fileID: 1956209288}
-  gameplayScreen: {fileID: 1502321585}
-  monitorWithoutGameplayScreen: 0
-  diceParentContainer: {fileID: 1749224912}
-  referenceScreenSize: {x: 1440, y: 3216}
-  referenceDiceScale: 9000
-  referenceDiceSpacing: 200
-  enableDiceScaling: 1
-  panelsToMonitor:
-  - {fileID: 1200179411}
-  - {fileID: 1620104683}
-  - {fileID: 314033590}
-  - {fileID: 416799079}
-  autoDetectPanels: 0
-  panelNamePatterns:
-  - Panel
-  - Popup
-  - Menu
-  areDicesHidden: 0
-  hasGameplayStarted: 0
-  diceScalingApplied: 0
 --- !u!114 &1958117582 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4527068884088356609, guid: deac686a2945f0744928e3ac3f74b48b, type: 3}
@@ -72511,6 +72498,10 @@ PrefabInstance:
       propertyPath: m_text
       value: "\u200B"
       objectReference: {fileID: 0}
+    - target: {fileID: 3443405773039670259, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 5359784933632279992, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -72605,7 +72596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6127197442369528537, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 42.6
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
