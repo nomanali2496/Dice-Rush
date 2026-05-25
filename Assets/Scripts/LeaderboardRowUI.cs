@@ -107,26 +107,37 @@ public class LeaderboardRowUI : EnhancedScrollerCellView
         {
             if (avatarImageCustom != null)
             {
-                avatarImageCustom.sprite = null; // Clear old/reused cell sprite
-                avatarImageCustom.gameObject.SetActive(true);
-                
-                // Fetch the remote image asynchronously (force-refresh if it's the logged-in user)
-                if (BackendAuthService.Instance != null)
-                {
-                    string targetKey = avatarKey; // Closure-local copy
-                    bool isUser = (username == PlayerModel.Name) || (currentData != null && currentData.username == PlayerModel.Name);
-                    BackendAuthService.Instance.GetImage(targetKey, (tex) => {
-                        if (tex != null && this != null && currentData != null && currentData.avatarKey == targetKey)
-                        {
-                            Sprite s = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
-                            avatarImageCustom.sprite = s;
-                            avatarImageCustom.rectTransform.localScale = Vector3.one * UIConstants.CustomAvatarScale;
-                        }
-                    }, isUser);
-                }
+                avatarImageCustom.gameObject.SetActive(false); // Hide custom slot initially to prevent white block
             }
             if (avatarImage != null)
-                avatarImage.gameObject.SetActive(false);
+            {
+                avatarImage.sprite = (avatarSprite != null) ? avatarSprite : GetFallbackPresetSprite(); // Show fallback preset/default sprite first
+                avatarImage.rectTransform.localScale = Vector3.one;
+                avatarImage.gameObject.SetActive(true);
+            }
+            
+            // Fetch the remote image asynchronously (force-refresh if it's the logged-in user)
+            if (BackendAuthService.Instance != null)
+            {
+                string targetKey = avatarKey; // Closure-local copy
+                bool isUser = (username == PlayerModel.Name) || (currentData != null && currentData.username == PlayerModel.Name);
+                BackendAuthService.Instance.GetImage(targetKey, (tex) => {
+                    if (tex != null && this != null && currentData != null && currentData.avatarKey == targetKey)
+                    {
+                        Sprite s = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+                        if (avatarImageCustom != null)
+                        {
+                            avatarImageCustom.sprite = s;
+                            avatarImageCustom.rectTransform.localScale = Vector3.one * UIConstants.CustomAvatarScale;
+                            avatarImageCustom.gameObject.SetActive(true);
+                        }
+                        if (avatarImage != null)
+                        {
+                            avatarImage.gameObject.SetActive(false); // Hide fallback preset once custom image is ready
+                        }
+                    }
+                }, isUser);
+            }
         }
         else if (isCustom)
         {
@@ -393,6 +404,23 @@ public class LeaderboardRowUI : EnhancedScrollerCellView
     public LeaderboardRowData GetCurrentData()
     {
         return currentData;
+    }
+
+    /// <summary>
+    /// Helper to retrieve the default preset sprite as a fallback when loading custom images
+    /// </summary>
+    private Sprite GetFallbackPresetSprite()
+    {
+        if (GameManager.Instance != null)
+        {
+            Sprite result = GameManager.Instance.GetAvatarSprite(null);
+            if (result != null) return result;
+        }
+        if (AvatarSelector.Instance != null)
+        {
+            return AvatarSelector.Instance.GetAvatarSpriteByIndex(0);
+        }
+        return null;
     }
 }
 

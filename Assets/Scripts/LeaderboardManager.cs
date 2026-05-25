@@ -227,6 +227,7 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
                 {
                     // It is a remote S3 custom URL. The cell itself will fetch it asynchronously
                     isRowCustom = true;
+                    avatarSprite = GetPresetAvatar(null); // Fallback to default preset index 0
                 }
             }
 
@@ -264,6 +265,7 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
                 else
                 {
                     userCustom = true;
+                    userAvatarSprite = GetPresetAvatar(null); // Fallback to default preset index 0
                 }
             }
 
@@ -289,6 +291,13 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
     /// </summary>
     private Sprite GetPresetAvatar(string avatarKey)
     {
+        // Try GameManager first since it holds the active, persistent profile presets configured in the scene
+        if (GameManager.Instance != null)
+        {
+            Sprite result = GameManager.Instance.GetAvatarSprite(avatarKey);
+            if (result != null) return result;
+        }
+
         if (string.IsNullOrEmpty(avatarKey))
         {
             if (AvatarSelector.Instance != null) return AvatarSelector.Instance.GetAvatarSpriteByIndex(0);
@@ -391,22 +400,28 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
         {
             if (customSlot != null)
             {
-                customSlot.sprite = null; // Clear old/stale visual
-                customSlot.gameObject.SetActive(true);
-
-                if (BackendAuthService.Instance != null)
-                {
-                    BackendAuthService.Instance.GetImage(avatarKey, (tex) => {
-                        if (tex != null && customSlot != null)
-                        {
-                            Sprite s = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
-                            customSlot.sprite = s;
-                            customSlot.rectTransform.localScale = Vector3.one * UIConstants.CustomAvatarScale;
-                        }
-                    });
-                }
+                customSlot.gameObject.SetActive(false); // Hide custom slot initially to prevent white block
             }
-            if (spriteSlot != null) spriteSlot.gameObject.SetActive(false);
+            if (spriteSlot != null)
+            {
+                spriteSlot.sprite = GetPresetAvatar(null); // Show fallback preset first
+                spriteSlot.rectTransform.localScale = Vector3.one;
+                spriteSlot.gameObject.SetActive(true);
+            }
+
+            if (BackendAuthService.Instance != null)
+            {
+                BackendAuthService.Instance.GetImage(avatarKey, (tex) => {
+                    if (tex != null && customSlot != null)
+                    {
+                        Sprite s = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+                        customSlot.sprite = s;
+                        customSlot.rectTransform.localScale = Vector3.one * UIConstants.CustomAvatarScale;
+                        customSlot.gameObject.SetActive(true);
+                        if (spriteSlot != null) spriteSlot.gameObject.SetActive(false); // Hide preset slot once ready
+                    }
+                });
+            }
         }
         else
         {
@@ -626,23 +641,29 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
             {
                 if (userFixedAvatarCustom != null)
                 {
-                    userFixedAvatarCustom.sprite = null; // Clear old
-                    userFixedAvatarCustom.gameObject.SetActive(true);
-                    
-                    string targetKey = _userData.avatarKey;
-                    if (BackendAuthService.Instance != null)
-                    {
-                        BackendAuthService.Instance.GetImage(targetKey, (tex) => {
-                            if (tex != null && userFixedAvatarCustom != null && _userData != null && _userData.avatarKey == targetKey)
-                            {
-                                Sprite s = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
-                                userFixedAvatarCustom.sprite = s;
-                                userFixedAvatarCustom.rectTransform.localScale = Vector3.one * UIConstants.CustomAvatarScale;
-                            }
-                        }, true);
-                    }
+                    userFixedAvatarCustom.gameObject.SetActive(false); // Hide custom slot initially
                 }
-                if (userFixedAvatar != null) userFixedAvatar.gameObject.SetActive(false);
+                if (userFixedAvatar != null)
+                {
+                    userFixedAvatar.sprite = GetPresetAvatar(null); // Show fallback preset first
+                    userFixedAvatar.rectTransform.localScale = Vector3.one;
+                    userFixedAvatar.gameObject.SetActive(true);
+                }
+                
+                string targetKey = _userData.avatarKey;
+                if (BackendAuthService.Instance != null)
+                {
+                    BackendAuthService.Instance.GetImage(targetKey, (tex) => {
+                        if (tex != null && userFixedAvatarCustom != null && _userData != null && _userData.avatarKey == targetKey)
+                        {
+                            Sprite s = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+                            userFixedAvatarCustom.sprite = s;
+                            userFixedAvatarCustom.rectTransform.localScale = Vector3.one * UIConstants.CustomAvatarScale;
+                            userFixedAvatarCustom.gameObject.SetActive(true);
+                            if (userFixedAvatar != null) userFixedAvatar.gameObject.SetActive(false); // Hide preset slot
+                        }
+                    }, true);
+                }
             }
             // 2. Try MainMenuAvatarDisplay next
             else if (mainMenuAvatarDisplay != null)

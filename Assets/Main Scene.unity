@@ -59478,7 +59478,7 @@ MonoBehaviour:
   particlesPerCash: 0.5
   particlesPerChip: 0.1
   maxParticles: 20
-  delayBetweenParticles: 0.01
+  delayBetweenParticles: 0.08
   animatedSpritePrefab: {fileID: 0}
   currentDay: 2
   canClaim: 0
