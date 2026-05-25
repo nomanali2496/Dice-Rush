@@ -1,0 +1,5 @@
+/Users/nasir41/Unity Projects/Github/Dice-Rush/.utmp/RelWithDebInfo/j6s3f11p/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/nasir41/Unity Projects/Github/Dice-Rush/.utmp/RelWithDebInfo/j6s3f11p/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/Users/nasir41/Unity Projects/Github/Dice-Rush/.utmp/RelWithDebInfo/j6s3f11p/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+/Users/nasir41/Unity Projects/Github/Dice-Rush/.utmp/RelWithDebInfo/j6s3f11p/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+/Users/nasir41/Unity Projects/Github/Dice-Rush/.utmp/RelWithDebInfo/j6s3f11p/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir

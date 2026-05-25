@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>705447120325-rh6lc8kjavd38o7aqmoc2ri37u20ltdn.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.705447120325-rh6lc8kjavd38o7aqmoc2ri37u20ltdn</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>705447120325-c9sdagrl7sgq9pe1qbrefb43ko8d5sje.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAS5QV4zHfh-e1m-3_KpUNZGiknbf-lXpQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>705447120325</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.winjogames.blingodice</string>
+	<key>PROJECT_ID</key>
+	<string>dice-rush-production</string>
+	<key>STORAGE_BUCKET</key>
+	<string>dice-rush-production.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:705447120325:ios:2ef35f523d253702248fac</string>
+</dict>
+</plist>
