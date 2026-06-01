@@ -24,6 +24,7 @@ public class InAppPurchaseManager : MonoBehaviour
     [System.Serializable]
     public class PurchasePackage
     {
+        public float price; // Real-world USD price of the package
         public int chipsAmount; // Chips (coins) to give
         public float cashAmount; // Cash to give
         public float cashBonus; // Cash bonus to give (added to cashAmount)
@@ -51,21 +52,21 @@ public class InAppPurchaseManager : MonoBehaviour
     [SerializeField] private PurchasePackage[] purchasePackages = new PurchasePackage[13]
     {
         // Regular Packages (0-5)
-        new PurchasePackage { chipsAmount = 50, cashAmount = 0.2f, cashBonus = 0f, productId = PRODUCT_ID_PACKAGE_1 },
-        new PurchasePackage { chipsAmount = 200, cashAmount = 2f, cashBonus = 0f, productId = PRODUCT_ID_PACKAGE_2 },
-        new PurchasePackage { chipsAmount = 350, cashAmount = 2f, cashBonus = 0f, productId = PRODUCT_ID_PACKAGE_3 },
-        new PurchasePackage { chipsAmount = 400, cashAmount = 6f, cashBonus = 0f, productId = PRODUCT_ID_PACKAGE_4 },
-        new PurchasePackage { chipsAmount = 1000, cashAmount = 10f, cashBonus = 0f, productId = PRODUCT_ID_PACKAGE_5 },
-        new PurchasePackage { chipsAmount = 1200, cashAmount = 25f, cashBonus = 0f, productId = PRODUCT_ID_PACKAGE_6 },
+        new PurchasePackage { price = 3f, chipsAmount = 50, cashAmount = 0f, cashBonus = 0.2f, productId = PRODUCT_ID_PACKAGE_1 },
+        new PurchasePackage { price = 10f, chipsAmount = 200, cashAmount = 0f, cashBonus = 1f, productId = PRODUCT_ID_PACKAGE_2 },
+        new PurchasePackage { price = 15f, chipsAmount = 350, cashAmount = 0f, cashBonus = 2f, productId = PRODUCT_ID_PACKAGE_3 },
+        new PurchasePackage { price = 30f, chipsAmount = 400, cashAmount = 0f, cashBonus = 6f, productId = PRODUCT_ID_PACKAGE_4 },
+        new PurchasePackage { price = 50f, chipsAmount = 1000, cashAmount = 0f, cashBonus = 10f, productId = PRODUCT_ID_PACKAGE_5 },
+        new PurchasePackage { price = 75f, chipsAmount = 1200, cashAmount = 0f, cashBonus = 20f, productId = PRODUCT_ID_PACKAGE_6 },
         
         // Offer Panel Packages (6-12)
-        new PurchasePackage { chipsAmount = 220, cashAmount = 17f, cashBonus = 4.2f, productId = PRODUCT_ID_PREMIUM_VALUE },      // Premium value: $17
-        new PurchasePackage { chipsAmount = 140, cashAmount = 3f, cashBonus = 1.2f, productId = PRODUCT_ID_BEST_OFFERS },         // Best offers: $3
-        new PurchasePackage { chipsAmount = 120, cashAmount = 6f, cashBonus = 1.2f, productId = PRODUCT_ID_QUICK_BOOST },         // Quick Boost: $6
-        new PurchasePackage { chipsAmount = 80, cashAmount = 8f, cashBonus = 3.2f, productId = PRODUCT_ID_MEGA_BUNDLE },         // Mega Bundle: $8
-        new PurchasePackage { chipsAmount = 70, cashAmount = 5f, cashBonus = 2.5f, productId = PRODUCT_ID_POWER_DEAL },          // Power deal: $5
-        new PurchasePackage { chipsAmount = 52, cashAmount = 4f, cashBonus = 1.2f, productId = PRODUCT_ID_BONUS_PLUS },         // Bonus Plus: $4
-        new PurchasePackage { chipsAmount = 160, cashAmount = 12f, cashBonus = 2.4f, productId = PRODUCT_ID_SMART_STARTER }      // Smart Starter: $12
+        new PurchasePackage { price = 17f, chipsAmount = 220, cashAmount = 17f, cashBonus = 4.2f, productId = PRODUCT_ID_PREMIUM_VALUE },      // Premium value: $17
+        new PurchasePackage { price = 3f, chipsAmount = 140, cashAmount = 3f, cashBonus = 1.2f, productId = PRODUCT_ID_BEST_OFFERS },         // Best offers: $3
+        new PurchasePackage { price = 6f, chipsAmount = 120, cashAmount = 6f, cashBonus = 1.2f, productId = PRODUCT_ID_QUICK_BOOST },         // Quick Boost: $6
+        new PurchasePackage { price = 8f, chipsAmount = 80, cashAmount = 8f, cashBonus = 3.2f, productId = PRODUCT_ID_MEGA_BUNDLE },         // Mega Bundle: $8
+        new PurchasePackage { price = 5f, chipsAmount = 70, cashAmount = 5f, cashBonus = 2.5f, productId = PRODUCT_ID_POWER_DEAL },          // Power deal: $5
+        new PurchasePackage { price = 4f, chipsAmount = 52, cashAmount = 4f, cashBonus = 1.2f, productId = PRODUCT_ID_BONUS_PLUS },         // Bonus Plus: $4
+        new PurchasePackage { price = 12f, chipsAmount = 160, cashAmount = 12f, cashBonus = 2.4f, productId = PRODUCT_ID_SMART_STARTER }      // Smart Starter: $12
     };
 
     [Header("Purchase Buttons (20 total: 6 regular + 7 offer panels + 7 carousel panels)")]
@@ -208,7 +209,7 @@ public class InAppPurchaseManager : MonoBehaviour
         PurchasePackage package = purchasePackages[packageIndex];
         float totalCash = package.cashAmount + package.cashBonus;
 
-        Debug.Log($"[InAppPurchaseManager] Purchase button {packageIndex + 1} clicked! Package: {package.chipsAmount} chips + {totalCash} cash");
+        Debug.Log($"[InAppPurchaseManager] Purchase button {packageIndex + 1} clicked! Package: {package.chipsAmount} chips + {totalCash} cash reward (Price: {package.price})");
 
         if (BackendAuthService.Instance == null)
         {
@@ -217,8 +218,8 @@ public class InAppPurchaseManager : MonoBehaviour
             return;
         }
 
-        // 1. Create deposit intent on backend API
-        BackendAuthService.Instance.Deposit(totalCash, package.productId, (depositSuccess, depositResponse) =>
+        // 1. Create deposit intent on backend API using the actual package price, not the total cash reward
+        BackendAuthService.Instance.Deposit(package.price, package.productId, (depositSuccess, depositResponse) =>
         {
             if (depositSuccess && depositResponse != null && !string.IsNullOrEmpty(depositResponse.paymentIntentId))
             {
@@ -233,7 +234,11 @@ public class InAppPurchaseManager : MonoBehaviour
                             if (syncSuccess)
                             {
                                 Debug.Log($"[InAppPurchaseManager] SUCCESS: Synced deposit for intent: {depositResponse.paymentIntentId}");
-                                OnPurchaseSuccess?.Invoke(package.chipsAmount, totalCash, package.productId);
+                                // Fetch the latest profile to ensure local PlayerModel reflects the new backend balances
+                                BackendAuthService.Instance.GetProfile((profileSuccess, profileMsg) => 
+                                {
+                                    OnPurchaseSuccess?.Invoke(package.chipsAmount, totalCash, package.productId);
+                                });
                             }
                             else
                             {

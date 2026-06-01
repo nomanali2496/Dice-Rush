@@ -1261,7 +1261,29 @@ public class BackendAuthService : MonoBehaviour
     {
         string url = baseUrl.TrimEnd('/') + "/api/wallet/deposit";
         string token = GetStoredJWT();
-        string jsonPayload = $"{{\"amount\":{amount.ToString("F2", System.Globalization.CultureInfo.InvariantCulture)},\"productId\":\"{productId}\"}}";
+        
+        string jsonPayload;
+        if (productId != null && productId.StartsWith("offer_"))
+        {
+            string oId = productId;
+            switch (productId)
+            {
+                case "offer_premium_value": oId = "offer1.png"; break;
+                case "offer_best_offers": oId = "offer2.png"; break;
+                case "offer_quick_boost": oId = "offer3.png"; break;
+                case "offer_mega_bundle": oId = "offer4.png"; break;
+                case "offer_power_deal": oId = "offer5.png"; break;
+                case "offer_bonus_plus": oId = "offer6.png"; break;
+                case "offer_smart_starter": oId = "offer7.png"; break;
+            }
+            jsonPayload = $"{{\"amount\":{amount.ToString("F2", System.Globalization.CultureInfo.InvariantCulture)},\"offerId\":\"{oId}\"}}";
+        }
+        else
+        {
+            // The backend contract expects "bundle_1" etc. but InAppPurchaseManager uses "package_1".
+            string bId = productId != null ? productId.Replace("package_", "bundle_") : "";
+            jsonPayload = $"{{\"amount\":{amount.ToString("F2", System.Globalization.CultureInfo.InvariantCulture)},\"bundleId\":\"{bId}\"}}";
+        }
 
         using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
         {

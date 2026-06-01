@@ -35314,7 +35314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3443405773039670259, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 43
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5359784933632279992, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_Pivot.x
@@ -35406,7 +35406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6127197442369528537, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 42.6
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -65860,55 +65860,68 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InAppPurchaseManager
   purchasePackages:
-  - chipsAmount: 50
-    cashAmount: 0.2
-    cashBonus: 0
+  - price: 3
+    chipsAmount: 50
+    cashAmount: 0
+    cashBonus: 0.2
     productId: package_1
-  - chipsAmount: 200
-    cashAmount: 2
-    cashBonus: 0
+  - price: 10
+    chipsAmount: 200
+    cashAmount: 0
+    cashBonus: 1
     productId: package_2
-  - chipsAmount: 350
-    cashAmount: 2
-    cashBonus: 0
+  - price: 15
+    chipsAmount: 350
+    cashAmount: 0
+    cashBonus: 2
     productId: package_3
-  - chipsAmount: 400
-    cashAmount: 6
-    cashBonus: 0
+  - price: 30
+    chipsAmount: 400
+    cashAmount: 0
+    cashBonus: 6
     productId: package_4
-  - chipsAmount: 1000
-    cashAmount: 10
-    cashBonus: 0
+  - price: 50
+    chipsAmount: 1000
+    cashAmount: 0
+    cashBonus: 10
     productId: package_5
-  - chipsAmount: 1200
-    cashAmount: 25
-    cashBonus: 0
+  - price: 75
+    chipsAmount: 1200
+    cashAmount: 0
+    cashBonus: 20
     productId: package_6
-  - chipsAmount: 220
+  - price: 17
+    chipsAmount: 220
     cashAmount: 17
     cashBonus: 4.2
     productId: offer_premium_value
-  - chipsAmount: 140
+  - price: 3
+    chipsAmount: 140
     cashAmount: 3
     cashBonus: 1.2
     productId: offer_best_offers
-  - chipsAmount: 120
+  - price: 6
+    chipsAmount: 120
     cashAmount: 6
     cashBonus: 1.2
     productId: offer_quick_boost
-  - chipsAmount: 80
+  - price: 8
+    chipsAmount: 80
     cashAmount: 8
     cashBonus: 3.2
     productId: offer_mega_bundle
-  - chipsAmount: 70
+  - price: 5
+    chipsAmount: 70
     cashAmount: 5
     cashBonus: 2.5
     productId: offer_power_deal
-  - chipsAmount: 52
+  - price: 4
+    chipsAmount: 52
     cashAmount: 4
     cashBonus: 1.2
     productId: offer_bonus_plus
-  - chipsAmount: 160
+  - price: 12
+    chipsAmount: 160
     cashAmount: 12
     cashBonus: 2.4
     productId: offer_smart_starter
@@ -72505,7 +72518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3443405773039670259, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 43
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 5359784933632279992, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_Pivot.x
@@ -72601,7 +72614,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6127197442369528537, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 42.6
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
