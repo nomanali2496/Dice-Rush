@@ -104,6 +104,10 @@ public class OfferPanelManager : MonoBehaviour
             }
         }
         
+        // Close the active offer panel once a purchase completes successfully.
+        if (InAppPurchaseManager.Instance != null)
+            InAppPurchaseManager.Instance.OnPurchaseSuccess += OnPurchaseSuccess;
+
         // Start monitoring panel state to auto-advance when panels are closed
         StartCoroutine(MonitorPanelState());
         
@@ -132,6 +136,18 @@ public class OfferPanelManager : MonoBehaviour
         if (dailyRewardManager != null)
         {
             dailyRewardManager.OnDailyRewardPanelClosed -= OnDailyRewardPanelClosed;
+        }
+
+        if (InAppPurchaseManager.Instance != null)
+            InAppPurchaseManager.Instance.OnPurchaseSuccess -= OnPurchaseSuccess;
+    }
+
+    private void OnPurchaseSuccess(int chips, float cash, string productId)
+    {
+        if (currentActivePanelIndex >= 0)
+        {
+            Debug.Log($"[OfferPanelManager] Purchase succeeded ({productId}) — closing offer panel.");
+            CloseCurrentPanel();
         }
     }
     
@@ -686,24 +702,35 @@ public class OfferPanelManager : MonoBehaviour
             return;
         }
         
-        // Add listener to each button to close the panel when clicked
-        // We add it without removing existing listeners to preserve button functionality (like purchase handlers)
+        // Add close listener to dismiss/close buttons only.
+        // Purchase/price buttons must NOT auto-close — they wait for the server response
+        // and InAppPurchaseManager calls CloseCurrentPanel() on success.
         foreach (Button button in buttons)
         {
-            if (button != null)
+            if (button == null) continue;
+
+            if (IsPurchaseButton(button))
             {
-                // Check if this listener is already added to avoid duplicates
-                // We'll use a wrapper method to check
-                button.onClick.AddListener(() => {
-                    Debug.Log($"[OfferPanelManager] Button '{button.name}' clicked in panel, closing panel...");
-                    CloseCurrentPanel();
-                });
+                Debug.Log($"[OfferPanelManager] Skipping auto-close for purchase button '{button.name}'");
+                continue;
             }
+
+            button.onClick.AddListener(() => {
+                Debug.Log($"[OfferPanelManager] Button '{button.name}' clicked, closing panel.");
+                CloseCurrentPanel();
+            });
         }
         
-        Debug.Log($"[OfferPanelManager] Setup {buttons.Length} button listeners for panel {panel.name} - panels will auto-close on button click");
+        Debug.Log($"[OfferPanelManager] Setup listeners for {buttons.Length} buttons in panel {panel.name}.");
     }
-    
+
+    private static bool IsPurchaseButton(Button btn)
+    {
+        string nameLower = btn.name.ToLowerInvariant();
+        return nameLower.Contains("price") || nameLower.Contains("buy")
+            || nameLower.Contains("purchase") || nameLower.Contains("checkout");
+    }
+
     /// <summary>
     /// Setup close buttons for each panel (kept for backward compatibility)
     /// </summary>

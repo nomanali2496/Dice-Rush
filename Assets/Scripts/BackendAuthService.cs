@@ -1239,8 +1239,17 @@ public class BackendAuthService : MonoBehaviour
     public class DepositResponse
     {
         public bool success;
-        public string paymentIntentId;
-        public string clientSecret;
+        public string checkoutUrl;
+        public string sessionId;
+        public string message;
+    }
+
+    [Serializable]
+    public class ShopCheckoutResponse
+    {
+        public bool success;
+        public string checkoutUrl;
+        public string sessionId;
         public string message;
     }
 
@@ -1261,29 +1270,9 @@ public class BackendAuthService : MonoBehaviour
     {
         string url = baseUrl.TrimEnd('/') + "/api/wallet/deposit";
         string token = GetStoredJWT();
-        
-        string jsonPayload;
-        if (productId != null && productId.StartsWith("offer_"))
-        {
-            string oId = productId;
-            switch (productId)
-            {
-                case "offer_premium_value": oId = "offer1.png"; break;
-                case "offer_best_offers": oId = "offer2.png"; break;
-                case "offer_quick_boost": oId = "offer3.png"; break;
-                case "offer_mega_bundle": oId = "offer4.png"; break;
-                case "offer_power_deal": oId = "offer5.png"; break;
-                case "offer_bonus_plus": oId = "offer6.png"; break;
-                case "offer_smart_starter": oId = "offer7.png"; break;
-            }
-            jsonPayload = $"{{\"amount\":{amount.ToString("F2", System.Globalization.CultureInfo.InvariantCulture)},\"offerId\":\"{oId}\"}}";
-        }
-        else
-        {
-            // The backend contract expects "bundle_1" etc. but InAppPurchaseManager uses "package_1".
-            string bId = productId != null ? productId.Replace("package_", "bundle_") : "";
-            jsonPayload = $"{{\"amount\":{amount.ToString("F2", System.Globalization.CultureInfo.InvariantCulture)},\"bundleId\":\"{bId}\"}}";
-        }
+
+        // v2.7+: plain deposit sends amount + returnUrl; Stripe webhook credits the wallet automatically.
+        string jsonPayload = $"{{\"amount\":{amount.ToString("F2", System.Globalization.CultureInfo.InvariantCulture)},\"returnUrl\":\"blingodice://payment-success\"}}";
 
         using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
         {
@@ -1383,6 +1372,53 @@ public class BackendAuthService : MonoBehaviour
             {
                 Debug.LogError($"[BackendAuthService] Sync Deposit Error: {request.error} | {request.downloadHandler.text}");
                 onComplete?.Invoke(false, request.downloadHandler.text);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Contract: POST /api/shop/checkout
+    /// Creates a Stripe Checkout Session for a shop item. Unity opens the returned URL in Chrome.
+    /// </summary>
+    public void ShopCheckout(string itemId, Action<bool, ShopCheckoutResponse> onComplete)
+    {
+        if (!HasStoredJWT()) { onComplete?.Invoke(false, null); return; }
+        StartCoroutine(ShopCheckoutCoroutine(itemId, onComplete));
+    }
+
+    private IEnumerator ShopCheckoutCoroutine(string itemId, Action<bool, ShopCheckoutResponse> onComplete)
+    {
+        string url   = baseUrl.TrimEnd('/') + "/api/shop/checkout";
+        string token = GetStoredJWT();
+        string json  = $"{{\"itemId\":\"{itemId}\",\"returnUrl\":\"blingodice://payment-success\"}}";
+
+        using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+        {
+            request.uploadHandler   = new UploadHandlerRaw(System.Text.Encoding.UTF8.GetBytes(json));
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+            request.SetRequestHeader("Authorization", "Bearer " + token);
+
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log($"<color=#00ff00>[BackendAuthService] ShopCheckout OK: {request.downloadHandler.text}</color>");
+                try
+                {
+                    ShopCheckoutResponse resp = JsonUtility.FromJson<ShopCheckoutResponse>(request.downloadHandler.text);
+                    onComplete?.Invoke(resp?.success == true && !string.IsNullOrEmpty(resp.checkoutUrl), resp);
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError($"[BackendAuthService] ShopCheckout parse error: {e.Message}");
+                    onComplete?.Invoke(false, null);
+                }
+            }
+            else
+            {
+                Debug.LogError($"[BackendAuthService] ShopCheckout error: {request.error} | {request.downloadHandler.text}");
+                onComplete?.Invoke(false, null);
             }
         }
     }

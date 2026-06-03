@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c1adc1e6bdd493d96bec525d2a15479, type: 3}
   m_Name: BackendConfig
   m_EditorClassIdentifier: Assembly-CSharp::BackendConfig
-  activeEnvironment: 1
+  activeEnvironment: 0
   devApiUrl: http://localhost:3000
   devSocketUrl: ws://localhost:3000
   prodApiUrl: https://api.winjogames.com
