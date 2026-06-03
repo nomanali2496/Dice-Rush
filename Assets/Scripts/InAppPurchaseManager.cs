@@ -79,10 +79,14 @@ public class InAppPurchaseManager : MonoBehaviour
 
     private int  lastPurchasedPackageIndex = -1;
     private bool purchaseInProgress        = false;
+    private bool checkoutUrlOpened         = false; // true only after Application.OpenURL was called
+    private Coroutine resumeCheckCoroutine = null;
 
     private const string DEEP_LINK_SUCCESS     = "blingodice://open/payment-success";
     private const string DEEP_LINK_CANCEL      = "blingodice://open/payment-cancel";
     private const float  WEBHOOK_SETTLE_DELAY  = 2f;
+    // How long to wait after app focus before concluding no deep link is coming
+    private const float  RESUME_DEEP_LINK_GRACE = 1.5f;
 
     // ── Lifecycle ──────────────────────────────────────────────────────────────
 
@@ -108,8 +112,60 @@ public class InAppPurchaseManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        PlayerModel.OnDataUpdated    -= OnPlayerDataUpdated;
+        PlayerModel.OnDataUpdated     -= OnPlayerDataUpdated;
         Application.deepLinkActivated -= OnDeepLinkActivated;
+    }
+
+    private void OnApplicationFocus(bool hasFocus)
+    {
+        if (!hasFocus || !purchaseInProgress || !checkoutUrlOpened) return;
+
+        // App returned to foreground while a purchase was in progress.
+        // Give the deep link handler a short grace period to fire first.
+        // If it does fire, it cancels this coroutine via CancelResumeCheck().
+        if (resumeCheckCoroutine != null) StopCoroutine(resumeCheckCoroutine);
+        resumeCheckCoroutine = StartCoroutine(ResumeCheckCoroutine());
+    }
+
+    private IEnumerator ResumeCheckCoroutine()
+    {
+        yield return new WaitForSeconds(RESUME_DEEP_LINK_GRACE);
+        resumeCheckCoroutine = null;
+
+        if (!purchaseInProgress) yield break; // deep link already handled it
+
+        // No deep link arrived — user closed Chrome (paid but deep link failed, or just dismissed).
+        // Restore buttons and do a silent wallet refresh to catch any payment that went through.
+        Debug.Log("[InAppPurchaseManager] App resumed with no payment deep link. Restoring buttons and refreshing wallet.");
+        lastPurchasedPackageIndex = -1;
+        purchaseInProgress        = false;
+        checkoutUrlOpened         = false;
+        RestoreButtons();
+
+        if (BackendAuthService.Instance != null)
+        {
+            BackendAuthService.Instance.GetWalletBalance((success, data) =>
+            {
+                if (success && data != null)
+                {
+                    PlayerModel.UpdateData(
+                        PlayerModel.Id, PlayerModel.Name, PlayerModel.Email,
+                        PlayerModel.Wins, PlayerModel.Losses, PlayerModel.Balance,
+                        (int)data.cashBalance, (int)data.bonusBalance, (int)data.winningBalance,
+                        data.coins, PlayerModel.Avatar, PlayerModel.Xp, PlayerModel.Level,
+                        PlayerModel.Role, PlayerModel.SelectedAvatarIndex,
+                        PlayerModel.ActiveMatchId, PlayerModel.ActiveRoomId);
+                    Debug.Log("<color=#00FF00>[InAppPurchaseManager] Wallet silently refreshed on resume.</color>");
+                }
+            });
+        }
+    }
+
+    private void CancelResumeCheck()
+    {
+        if (resumeCheckCoroutine == null) return;
+        StopCoroutine(resumeCheckCoroutine);
+        resumeCheckCoroutine = null;
     }
 
     // ── Deep link handler ──────────────────────────────────────────────────────
@@ -117,6 +173,9 @@ public class InAppPurchaseManager : MonoBehaviour
     private void OnDeepLinkActivated(string url)
     {
         if (string.IsNullOrEmpty(url)) return;
+
+        // A real deep link arrived — cancel the focus-based fallback timer
+        CancelResumeCheck();
 
         if (url.Contains("open/payment-success"))
         {
@@ -175,6 +234,7 @@ public class InAppPurchaseManager : MonoBehaviour
         int completedIndex        = lastPurchasedPackageIndex;
         lastPurchasedPackageIndex = -1;
         purchaseInProgress        = false;
+        checkoutUrlOpened         = false;
         RestoreButtons();
 
         if (completedIndex >= 0 && completedIndex < purchasePackages.Length)
@@ -230,6 +290,7 @@ public class InAppPurchaseManager : MonoBehaviour
 #else
                 Application.OpenURL(response.checkoutUrl);
 #endif
+                checkoutUrlOpened = true;
                 // Buttons stay disabled until deep link fires (success or cancel)
             }
             else
