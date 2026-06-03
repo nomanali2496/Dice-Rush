@@ -80,8 +80,8 @@ public class InAppPurchaseManager : MonoBehaviour
     private int  lastPurchasedPackageIndex = -1;
     private bool purchaseInProgress        = false;
 
-    private const string DEEP_LINK_SUCCESS     = "blingodice://payment-success";
-    private const string DEEP_LINK_CANCEL      = "blingodice://payment-cancel";
+    private const string DEEP_LINK_SUCCESS     = "blingodice://open/payment-success";
+    private const string DEEP_LINK_CANCEL      = "blingodice://open/payment-cancel";
     private const float  WEBHOOK_SETTLE_DELAY  = 2f;
 
     // ── Lifecycle ──────────────────────────────────────────────────────────────
@@ -118,12 +118,12 @@ public class InAppPurchaseManager : MonoBehaviour
     {
         if (string.IsNullOrEmpty(url)) return;
 
-        if (url.StartsWith(DEEP_LINK_SUCCESS))
+        if (url.Contains("open/payment-success"))
         {
             Debug.Log("<color=#00FF00>[InAppPurchaseManager] Deep link: payment-success</color>");
             StartCoroutine(HandlePaymentSuccessCoroutine());
         }
-        else if (url.StartsWith(DEEP_LINK_CANCEL))
+        else if (url.Contains("open/payment-cancel"))
         {
             Debug.Log("[InAppPurchaseManager] Deep link: payment-cancel");
             purchaseInProgress = false;
@@ -225,7 +225,7 @@ public class InAppPurchaseManager : MonoBehaviour
 #if UNITY_EDITOR
                 // In the editor, deep links never fire — log the URL so you can copy it,
                 // then use the ContextMenu test methods below to simulate the result.
-                Debug.Log($"<color=#FFD700>🔗 [IAP EDITOR] Stripe URL (copy into browser to pay):\n{response.checkoutUrl}\n\nThen right-click InAppPurchaseManager → Test: Simulate Payment Success</color>");
+                Debug.Log($"<color=#FFD700>🔗 [IAP EDITOR] Stripe URL (copy into browser to pay):\n{response.checkoutUrl}\n\nThen right-click InAppPurchaseManager → Test: Simulate Payment Success\n(deep link: blingodice://open/payment-success)</color>");
                 UnityEditor.EditorGUIUtility.systemCopyBuffer = response.checkoutUrl;
 #else
                 Application.OpenURL(response.checkoutUrl);

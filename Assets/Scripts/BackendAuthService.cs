@@ -1272,7 +1272,7 @@ public class BackendAuthService : MonoBehaviour
         string token = GetStoredJWT();
 
         // v2.7+: plain deposit sends amount + returnUrl; Stripe webhook credits the wallet automatically.
-        string jsonPayload = $"{{\"amount\":{amount.ToString("F2", System.Globalization.CultureInfo.InvariantCulture)},\"returnUrl\":\"blingodice://payment-success\"}}";
+        string jsonPayload = $"{{\"amount\":{amount.ToString("F2", System.Globalization.CultureInfo.InvariantCulture)},\"returnUrl\":\"blingodice://open/payment-success\"}}";
 
         using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
         {
@@ -1390,7 +1390,7 @@ public class BackendAuthService : MonoBehaviour
     {
         string url   = baseUrl.TrimEnd('/') + "/api/shop/checkout";
         string token = GetStoredJWT();
-        string json  = $"{{\"itemId\":\"{itemId}\",\"returnUrl\":\"blingodice://payment-success\"}}";
+        string json  = $"{{\"itemId\":\"{itemId}\",\"returnUrl\":\"blingodice://open/payment-success\"}}";
 
         using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
         {
