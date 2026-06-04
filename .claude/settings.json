@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__unity-mcp__Unity_Grep",
+      "mcp__unity-mcp__Unity_ManageScene",
+      "mcp__unity-mcp__Unity_ManageGameObject",
+      "mcp__unity-mcp__Unity_RunCommand"
+    ]
+  }
+}

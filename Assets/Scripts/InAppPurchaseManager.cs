@@ -69,8 +69,9 @@ public class InAppPurchaseManager : MonoBehaviour
     [SerializeField] private Button[] purchaseButtons = new Button[20];
 
     [Header("UI")]
-    [SerializeField] private PlayerProfileUI playerProfileUI;
-    [SerializeField] private GameObject purchasePanel;
+    [SerializeField] private PlayerProfileUI       playerProfileUI;
+    [SerializeField] private GameObject            purchasePanel;
+    [SerializeField] private PurchaseLoadingOverlay loadingOverlay;
 
     // Events
     public event Action<int, float, string> OnPurchaseSuccess; // (chips, cash, productId)
@@ -119,10 +120,21 @@ public class InAppPurchaseManager : MonoBehaviour
     private void OnApplicationFocus(bool hasFocus)
     {
         if (!hasFocus || !purchaseInProgress || !checkoutUrlOpened) return;
+        TriggerResumeCheck();
+    }
 
-        // App returned to foreground while a purchase was in progress.
+    private void OnApplicationPause(bool isPaused)
+    {
+        // OnApplicationFocus is unreliable on some Android devices/launchers.
+        // OnApplicationPause(false) fires reliably when returning from Chrome.
+        if (isPaused || !purchaseInProgress || !checkoutUrlOpened) return;
+        TriggerResumeCheck();
+    }
+
+    private void TriggerResumeCheck()
+    {
         // Give the deep link handler a short grace period to fire first.
-        // If it does fire, it cancels this coroutine via CancelResumeCheck().
+        // If it fires, CancelResumeCheck() stops this coroutine.
         if (resumeCheckCoroutine != null) StopCoroutine(resumeCheckCoroutine);
         resumeCheckCoroutine = StartCoroutine(ResumeCheckCoroutine());
     }
@@ -140,6 +152,7 @@ public class InAppPurchaseManager : MonoBehaviour
         lastPurchasedPackageIndex = -1;
         purchaseInProgress        = false;
         checkoutUrlOpened         = false;
+        loadingOverlay?.Hide();
         RestoreButtons();
 
         if (BackendAuthService.Instance != null)
@@ -180,12 +193,14 @@ public class InAppPurchaseManager : MonoBehaviour
         if (url.Contains("open/payment-success"))
         {
             Debug.Log("<color=#00FF00>[InAppPurchaseManager] Deep link: payment-success</color>");
+            loadingOverlay?.Show("Verifying payment...");
             StartCoroutine(HandlePaymentSuccessCoroutine());
         }
         else if (url.Contains("open/payment-cancel"))
         {
             Debug.Log("[InAppPurchaseManager] Deep link: payment-cancel");
-            purchaseInProgress = false;
+            loadingOverlay?.Hide();
+            purchaseInProgress        = false;
             lastPurchasedPackageIndex = -1;
             RestoreButtons();
             PurchaseFailed?.Invoke("Payment cancelled");
@@ -235,6 +250,7 @@ public class InAppPurchaseManager : MonoBehaviour
         lastPurchasedPackageIndex = -1;
         purchaseInProgress        = false;
         checkoutUrlOpened         = false;
+        loadingOverlay?.Hide();
         RestoreButtons();
 
         if (completedIndex >= 0 && completedIndex < purchasePackages.Length)
@@ -277,11 +293,13 @@ public class InAppPurchaseManager : MonoBehaviour
         purchaseInProgress        = true;
         lastPurchasedPackageIndex = packageIndex;
         DisableButtons();
+        loadingOverlay?.Show("Initialising transaction...");
 
         BackendAuthService.Instance.ShopCheckout(pkg.productId, (success, response) =>
         {
             if (success && response != null && !string.IsNullOrEmpty(response.checkoutUrl))
             {
+                loadingOverlay?.UpdateStatus("Opening payment page...");
 #if UNITY_EDITOR
                 // In the editor, deep links never fire — log the URL so you can copy it,
                 // then use the ContextMenu test methods below to simulate the result.
@@ -291,11 +309,12 @@ public class InAppPurchaseManager : MonoBehaviour
                 Application.OpenURL(response.checkoutUrl);
 #endif
                 checkoutUrlOpened = true;
-                // Buttons stay disabled until deep link fires (success or cancel)
+                loadingOverlay?.Hide(); // Chrome is now open — hand off to Stripe
             }
             else
             {
                 Debug.LogError($"[InAppPurchaseManager] ShopCheckout failed for {pkg.productId}: {response?.message}");
+                loadingOverlay?.Hide();
                 purchaseInProgress        = false;
                 lastPurchasedPackageIndex = -1;
                 RestoreButtons();
