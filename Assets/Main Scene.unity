@@ -25618,12 +25618,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 60
   m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 50
+  m_fontSizeMax: 80
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -25862,6 +25862,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2113678056}
   m_SourcePrefab: {fileID: 100100000, guid: c7d78fc3c2bfb434889cef23f0ec303a, type: 3}
+--- !u!224 &805084643 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4221693234441103621, guid: 98e6b11369bcdb84188373f99a8a527d, type: 3}
+  m_PrefabInstance: {fileID: 1466731067}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &807953270
 GameObject:
   m_ObjectHideFlags: 0
@@ -35901,7 +35906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3443405773039670259, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 18
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 5359784933632279992, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_Pivot.x
@@ -35993,7 +35998,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6127197442369528537, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 18
+      value: 42.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -53672,6 +53677,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28afc967a8d16574cb6cccc535fdfbff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickButtonSound
+--- !u!224 &1652312856 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4221693234441103621, guid: 98e6b11369bcdb84188373f99a8a527d, type: 3}
+  m_PrefabInstance: {fileID: 955658520}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1660848156
 GameObject:
   m_ObjectHideFlags: 0
@@ -66653,6 +66663,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2085169955}
   - component: {fileID: 2085169954}
+  - component: {fileID: 2085169956}
   m_Layer: 0
   m_Name: ShopManager
   m_TagString: Untagged
@@ -66762,6 +66773,7 @@ MonoBehaviour:
   playerProfileUI: {fileID: 2010734780}
   purchasePanel: {fileID: 1200179411}
   loadingOverlay: {fileID: 708209375}
+  currencyAnimator: {fileID: 2085169956}
 --- !u!4 &2085169955
 Transform:
   m_ObjectHideFlags: 0
@@ -66777,6 +66789,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2085169956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085169953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eff207cf3c2540fda968238107b8144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CurrencyFlyAnimator
+  targetCoinsPosition: {fileID: 90524356}
+  targetCashPosition: {fileID: 1544971538}
+  shopTargetCoinsPosition: {fileID: 1652312856}
+  shopTargetCashPosition: {fileID: 805084643}
+  coinSprite: {fileID: 21300000, guid: 8fb7979643e342845846eeea117a494d, type: 3}
+  cashSprite: {fileID: 21300000, guid: 86b18dec5ba4dbc40971d2f46a36ae7f, type: 3}
+  animatedSpritePrefab: {fileID: 4424766503822717269, guid: 75e36dedebed54f13afb3de55d57122c, type: 3}
+  animationDuration: 0.6
+  movementCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  baseParticles: 3
+  particlesPerCoin: 0.05
+  particlesPerCash: 0.5
+  maxParticles: 12
+  delayBetweenParticles: 0.06
 --- !u!1001 &2090014035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73332,7 +73393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3443405773039670259, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 18
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 5359784933632279992, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_Pivot.x
@@ -73428,7 +73489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6127197442369528537, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 18
+      value: 42.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

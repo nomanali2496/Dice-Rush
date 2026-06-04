@@ -69,19 +69,23 @@ public class InAppPurchaseManager : MonoBehaviour
     [SerializeField] private Button[] purchaseButtons = new Button[20];
 
     [Header("UI")]
-    [SerializeField] private PlayerProfileUI       playerProfileUI;
-    [SerializeField] private GameObject            purchasePanel;
+    [SerializeField] private PlayerProfileUI        playerProfileUI;
+    [SerializeField] private GameObject             purchasePanel;
     [SerializeField] private PurchaseLoadingOverlay loadingOverlay;
+    [SerializeField] private CurrencyFlyAnimator    currencyAnimator;
 
     // Events
     public event Action<int, float, string> OnPurchaseSuccess; // (chips, cash, productId)
     public event Action<string>             PurchaseFailed;
     public event Action                     OnPurchaseInitialized;
 
-    private int  lastPurchasedPackageIndex = -1;
-    private bool purchaseInProgress        = false;
-    private bool checkoutUrlOpened         = false; // true only after Application.OpenURL was called
-    private Coroutine resumeCheckCoroutine = null;
+    private int   lastPurchasedPackageIndex  = -1;
+    private bool  purchaseInProgress         = false;
+    private bool  checkoutUrlOpened          = false;
+    private bool  purchaseFromShopPanel      = false; // captured at tap time, not at completion
+    private int   coinsBeforePurchase        = 0;
+    private float cashBeforePurchase         = 0f;
+    private Coroutine resumeCheckCoroutine   = null;
 
     private const string DEEP_LINK_SUCCESS     = "blingodice://open/payment-success";
     private const string DEEP_LINK_CANCEL      = "blingodice://open/payment-cancel";
@@ -209,7 +213,10 @@ public class InAppPurchaseManager : MonoBehaviour
 
     private IEnumerator HandlePaymentSuccessCoroutine()
     {
-        // Allow Stripe webhook time to credit the wallet on the backend
+        // Snapshot balance BEFORE the refresh so the animation can count up from the old value
+        coinsBeforePurchase = PlayerModel.Coins;
+        cashBeforePurchase  = PlayerModel.CashBalance;
+
         yield return new WaitForSeconds(WEBHOOK_SETTLE_DELAY);
 
         if (BackendAuthService.Instance == null)
@@ -234,7 +241,6 @@ public class InAppPurchaseManager : MonoBehaviour
             }
             else
             {
-                // Fallback: full profile refresh so UI is never stale
                 BackendAuthService.Instance?.GetProfile(null);
             }
 
@@ -244,14 +250,32 @@ public class InAppPurchaseManager : MonoBehaviour
 
     private void FinalisePurchase()
     {
-        // Cache then clear state BEFORE firing event — buttons are interactable
-        // when OfferPanelManager (or any other listener) handles OnPurchaseSuccess.
-        int completedIndex        = lastPurchasedPackageIndex;
+        int  completedIndex       = lastPurchasedPackageIndex;
+        bool wasShopPurchase      = purchaseFromShopPanel;
         lastPurchasedPackageIndex = -1;
         purchaseInProgress        = false;
         checkoutUrlOpened         = false;
+        purchaseFromShopPanel     = false;
         loadingOverlay?.Hide();
         RestoreButtons();
+
+        // Use the target icons that were active when the user tapped — not the current state.
+        if (currencyAnimator != null && completedIndex >= 0 && completedIndex < purchaseButtons.Length)
+        {
+            RectTransform source = purchaseButtons[completedIndex]?.GetComponent<RectTransform>();
+
+            int   coinsAdded = PlayerModel.Coins       - coinsBeforePurchase;
+            float cashAdded  = PlayerModel.CashBalance - cashBeforePurchase;
+
+            RectTransform coinsTarget = wasShopPurchase ? currencyAnimator.shopTargetCoinsPosition : null;
+            RectTransform cashTarget  = wasShopPurchase ? currencyAnimator.shopTargetCashPosition  : null;
+
+            if (source != null)
+            {
+                if (coinsAdded > 0) currencyAnimator.PlayCoins(source, coinsAdded, coinsBeforePurchase, coinsTarget);
+                if (cashAdded  > 0) currencyAnimator.PlayCash (source, cashAdded,  cashBeforePurchase,  cashTarget);
+            }
+        }
 
         if (completedIndex >= 0 && completedIndex < purchasePackages.Length)
         {
@@ -260,7 +284,6 @@ public class InAppPurchaseManager : MonoBehaviour
         }
         else
         {
-            // Cold-start deep link — balance already updated, fire generic event
             OnPurchaseSuccess?.Invoke(0, 0f, string.Empty);
         }
     }
@@ -292,6 +315,7 @@ public class InAppPurchaseManager : MonoBehaviour
 
         purchaseInProgress        = true;
         lastPurchasedPackageIndex = packageIndex;
+        purchaseFromShopPanel     = purchasePanel != null && purchasePanel.activeSelf;
         DisableButtons();
         loadingOverlay?.Show("Initialising transaction...");
 
@@ -434,6 +458,41 @@ public class InAppPurchaseManager : MonoBehaviour
 
     [ContextMenu("Test: Simulate Payment Cancel")]
     private void EditorSimulateCancel() => OnDeepLinkActivated(DEEP_LINK_CANCEL);
+
+    [ContextMenu("Test: Simulate Currency Animation (50 coins + $5 cash)")]
+    private void EditorTestAnimation()
+    {
+        if (currencyAnimator == null)
+        {
+            Debug.LogWarning("[IAP] currencyAnimator is not assigned — cannot test animation.");
+            return;
+        }
+
+        RectTransform source = null;
+        foreach (var btn in purchaseButtons)
+        {
+            if (btn != null) { source = btn.GetComponent<RectTransform>(); break; }
+        }
+
+        if (source == null)
+        {
+            Debug.LogWarning("[IAP] No purchase button found for source position — animation skipped.");
+            return;
+        }
+
+        // Mirror the real purchase logic: use shop targets if the shop panel is active
+        bool fromShop         = purchasePanel != null && purchasePanel.activeSelf;
+        RectTransform coinsTgt = fromShop ? currencyAnimator.shopTargetCoinsPosition : null;
+        RectTransform cashTgt  = fromShop ? currencyAnimator.shopTargetCashPosition  : null;
+
+        int   fakeCoins = 50;
+        float fakeCash  = 5f;
+        Debug.Log($"<color=#FFD700>[IAP EDITOR] Animation: +{fakeCoins} coins +${fakeCash} from '{source.name}' → {(fromShop ? "SHOP targets" : "DEFAULT targets")}</color>");
+        Debug.Log($"<color=#FFD700>[IAP EDITOR] coinsTarget={coinsTgt?.name ?? "default"} cashTarget={cashTgt?.name ?? "default"}</color>");
+
+        currencyAnimator.PlayCoins(source, fakeCoins, PlayerModel.Coins, coinsTgt);
+        currencyAnimator.PlayCash (source, fakeCash,  PlayerModel.CashBalance, cashTgt);
+    }
 
     [ContextMenu("Test: Print Current Purchase State")]
     private void EditorPrintState()
