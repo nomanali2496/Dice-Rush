@@ -66,6 +66,9 @@ public class HorizontalLobbyManager : MonoBehaviour
     
     // Multi-step scroll animation tracking
     private Coroutine multiScrollCoroutine = null;
+    private Tween diceRotationTween = null;
+    private int currentDiceFrame = 0;
+    private readonly string[] diceFrames = { "⚀", "⚁", "⚂", "⚃", "⚄", "⚅" };
     
     // Auto-select flag to prevent re-selecting on every enable
     private bool hasAutoSelectedOnce = false;
@@ -724,8 +727,12 @@ public class HorizontalLobbyManager : MonoBehaviour
 
         Debug.Log($"[HorizontalLobbyManager] UI Button Clicked. Requesting match: ID {lobbyId}, Mode {mode}, Stake {entryFee}");
         
-        if (waitingPanel != null) waitingPanel.SetActive(true);
-        if (waitingStatusText != null) waitingStatusText.text = "Waiting for players...";
+        if (waitingPanel != null)
+        {
+            waitingPanel.SetActive(true);
+            StartDiceAnimation();
+        }
+        if (waitingStatusText != null) waitingStatusText.text = "🎲 Match Starting Soon\nWaiting for players to join...";
         
         // Trigger the middle layer
         MatchmakingModel.FindMatch(mode, entryFee, lobbyId);
@@ -745,7 +752,11 @@ public class HorizontalLobbyManager : MonoBehaviour
             BackendAuthService.Instance.GetProfile(null);
         }
 
-        if (waitingPanel != null) waitingPanel.SetActive(false);
+        if (waitingPanel != null)
+        {
+            waitingPanel.SetActive(false);
+            StopDiceAnimation();
+        }
         
         // Even if _pendingLobbyIndex is -1 (meaning it's a recovered match), we still start the game
         StartGameFromNetwork(_pendingLobbyIndex, data, -1);
@@ -754,28 +765,58 @@ public class HorizontalLobbyManager : MonoBehaviour
     private void HandleMatchError(string errorMessage)
     {
         Debug.LogError("[HorizontalLobbyManager] Matchmaking error: " + errorMessage);
-        if (waitingPanel != null) waitingPanel.SetActive(false);
+        if (waitingPanel != null)
+        {
+            waitingPanel.SetActive(false);
+            StopDiceAnimation();
+        }
         // Future: Show a popup to the user
     }
 
     private void HandleMatchmakingUpdated(int current, int target)
     {
-        if (waitingStatusText != null)
-        {
-            if (target > 0)
-            {
-                waitingStatusText.text = $"Players: {current}/{target}";
-            }
-            else
-            {
-                waitingStatusText.text = $"Waiting for players...";
-            }
-        }
+        // Text is updated continuously by the animation, so we don't need to overwrite it here.
     }
 
     public void HideWaitingPanel()
     {
-        if (waitingPanel != null) waitingPanel.SetActive(false);
+        if (waitingPanel != null)
+        {
+            waitingPanel.SetActive(false);
+            StopDiceAnimation();
+        }
+    }
+
+    private void StartDiceAnimation()
+    {
+        if (waitingStatusText != null && diceRotationTween == null)
+        {
+            currentDiceFrame = 0;
+            diceRotationTween = DOTween.Sequence()
+                .AppendCallback(() => 
+                {
+                    currentDiceFrame = (currentDiceFrame + 1) % diceFrames.Length;
+                    if (waitingStatusText != null)
+                    {
+                        waitingStatusText.text = $"{diceFrames[currentDiceFrame]} Match Starting Soon\nWaiting for players to join...";
+                    }
+                })
+                .AppendInterval(0.2f)
+                .SetLoops(-1);
+        }
+    }
+
+    private void StopDiceAnimation()
+    {
+        if (diceRotationTween != null)
+        {
+            diceRotationTween.Kill();
+            diceRotationTween = null;
+            if (waitingStatusText != null)
+            {
+                waitingStatusText.text = "🎲 Match Starting Soon\nWaiting for players to join...";
+            }
+        }
     }
 
     /// <summary>
@@ -789,7 +830,11 @@ public class HorizontalLobbyManager : MonoBehaviour
         // CancelSearch() internally emits 'cancelMatchmaking' with { lobbyId } via the socket
         MatchmakingModel.CancelSearch();
 
-        if (waitingPanel != null) waitingPanel.SetActive(false);
+        if (waitingPanel != null)
+        {
+            waitingPanel.SetActive(false);
+            StopDiceAnimation();
+        }
         _pendingLobbyIndex = -1;
     }
 
@@ -803,7 +848,11 @@ public class HorizontalLobbyManager : MonoBehaviour
         if (MatchmakingModel.IsSearching)
         {
             MatchmakingModel.CancelSearch();
-            if (waitingPanel != null) waitingPanel.SetActive(false);
+            if (waitingPanel != null)
+            {
+                waitingPanel.SetActive(false);
+                StopDiceAnimation();
+            }
             _pendingLobbyIndex = -1;
         }
 
