@@ -66,9 +66,6 @@ public class HorizontalLobbyManager : MonoBehaviour
     
     // Multi-step scroll animation tracking
     private Coroutine multiScrollCoroutine = null;
-    private Tween diceRotationTween = null;
-    private int currentDiceFrame = 0;
-    private readonly string[] diceFrames = { "⚀", "⚁", "⚂", "⚃", "⚄", "⚅" };
     
     // Auto-select flag to prevent re-selecting on every enable
     private bool hasAutoSelectedOnce = false;
@@ -730,9 +727,8 @@ public class HorizontalLobbyManager : MonoBehaviour
         if (waitingPanel != null)
         {
             waitingPanel.SetActive(true);
-            StartDiceAnimation();
         }
-        if (waitingStatusText != null) waitingStatusText.text = "🎲 Match Starting Soon\nWaiting for players to join...";
+        if (waitingStatusText != null) waitingStatusText.text = "Match Starting Soon\nWaiting for players to join...";
         
         // Trigger the middle layer
         MatchmakingModel.FindMatch(mode, entryFee, lobbyId);
@@ -755,7 +751,6 @@ public class HorizontalLobbyManager : MonoBehaviour
         if (waitingPanel != null)
         {
             waitingPanel.SetActive(false);
-            StopDiceAnimation();
         }
         
         // Even if _pendingLobbyIndex is -1 (meaning it's a recovered match), we still start the game
@@ -768,7 +763,6 @@ public class HorizontalLobbyManager : MonoBehaviour
         if (waitingPanel != null)
         {
             waitingPanel.SetActive(false);
-            StopDiceAnimation();
         }
         // Future: Show a popup to the user
     }
@@ -783,39 +777,6 @@ public class HorizontalLobbyManager : MonoBehaviour
         if (waitingPanel != null)
         {
             waitingPanel.SetActive(false);
-            StopDiceAnimation();
-        }
-    }
-
-    private void StartDiceAnimation()
-    {
-        if (waitingStatusText != null && diceRotationTween == null)
-        {
-            currentDiceFrame = 0;
-            diceRotationTween = DOTween.Sequence()
-                .AppendCallback(() => 
-                {
-                    currentDiceFrame = (currentDiceFrame + 1) % diceFrames.Length;
-                    if (waitingStatusText != null)
-                    {
-                        waitingStatusText.text = $"{diceFrames[currentDiceFrame]} Match Starting Soon\nWaiting for players to join...";
-                    }
-                })
-                .AppendInterval(0.2f)
-                .SetLoops(-1);
-        }
-    }
-
-    private void StopDiceAnimation()
-    {
-        if (diceRotationTween != null)
-        {
-            diceRotationTween.Kill();
-            diceRotationTween = null;
-            if (waitingStatusText != null)
-            {
-                waitingStatusText.text = "🎲 Match Starting Soon\nWaiting for players to join...";
-            }
         }
     }
 
@@ -833,7 +794,6 @@ public class HorizontalLobbyManager : MonoBehaviour
         if (waitingPanel != null)
         {
             waitingPanel.SetActive(false);
-            StopDiceAnimation();
         }
         _pendingLobbyIndex = -1;
     }
@@ -851,7 +811,6 @@ public class HorizontalLobbyManager : MonoBehaviour
             if (waitingPanel != null)
             {
                 waitingPanel.SetActive(false);
-                StopDiceAnimation();
             }
             _pendingLobbyIndex = -1;
         }
