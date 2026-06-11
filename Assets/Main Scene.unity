@@ -17180,7 +17180,7 @@ MonoBehaviour:
   scaleWithGameplayReference: 1
   goodSprite: {fileID: 21300000, guid: 8f29e2b605e6e79439d499e13ee07cb1, type: 3}
   greatSprite: {fileID: 21300000, guid: 56765c04c9f6db84386666566f39d419, type: 3}
-  oopsSprite: {fileID: 21300000, guid: 13550df7e841622419d90d74093ced1b, type: 3}
+  oopsSprite: {fileID: 21300000, guid: 53d634190fe5483498fbba5fdaa85890, type: 3}
   feedbackPrefab: {fileID: 1048062943636153387, guid: 3c845f330ba7dab42b85d3c234dc6406, type: 3}
   pointsTextPrefab: {fileID: 5457951867292248810, guid: 87a847b862e99fe478c9ef3c8cbefda2, type: 3}
   pointsTarget: {fileID: 653184563}
