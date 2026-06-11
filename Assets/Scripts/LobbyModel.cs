@@ -85,13 +85,13 @@ public static class LobbyModel
                     indexToUse,
                     apiConfig.playerCount,
                     apiConfig.entryFeeCash,
-                    apiConfig.entryFeeChips,
+                    apiConfig.entryFeeCoins,
                     apiConfig.firstPlaceCash,
-                    apiConfig.firstPlaceChips,
+                    apiConfig.firstPlaceCoins,
                     apiConfig.secondPlaceCash,
-                    apiConfig.secondPlaceChips,
+                    apiConfig.secondPlaceCoins,
                     apiConfig.thirdPlaceCash,
-                    apiConfig.thirdPlaceChips,
+                    apiConfig.thirdPlaceCoins,
                     apiConfig.gameTimer
                 );
                 
