@@ -45,7 +45,7 @@ public class AuthenticationManager : MonoBehaviour
     [SerializeField] private Button registerAppleButton;
     
     [Header("Status")]
-    // [SerializeField] private TextMeshProUGUI statusText;
+    [SerializeField] private TextMeshProUGUI statusText;
     // [SerializeField] private GameObject loadingIndicator;
     
     [Header("Settings")]
@@ -117,6 +117,10 @@ public class AuthenticationManager : MonoBehaviour
         if (internetPanel != null)
             internetPanel.SetActive(false);
         
+        // Hide status text by default
+        if (statusText != null)
+            statusText.gameObject.SetActive(false);
+        
         // Show loading screen initially (covers everything)
         ShowLoadingScreen();
         
@@ -125,7 +129,7 @@ public class AuthenticationManager : MonoBehaviour
         {
             Debug.Log("[AuthenticationManager] Backend JWT found, fetching profile data...");
             SetLoadingState(true);
-            UpdateStatusText("Restoring session...");
+            UpdateStatusText("");
             
             BackendAuthService.Instance.GetProfile((success, message) => 
             {
@@ -197,7 +201,7 @@ public class AuthenticationManager : MonoBehaviour
         {
             Debug.Log("[AuthenticationManager] Existing JWT session found, attempting to restore...");
             SetLoadingState(true);
-            UpdateStatusText("Restoring session...");
+            UpdateStatusText("");
             isAttemptingAutoLogin = true;
             
             BackendAuthService.Instance.GetProfile((success, message) => 
@@ -282,7 +286,7 @@ public class AuthenticationManager : MonoBehaviour
     private void AttemptSilentGoogleLogin()
     {
         lastAttemptedAction = AttemptSilentGoogleLogin;
-        UpdateStatusText("Restoring Google login...");
+        UpdateStatusText("");
         
         if (GoogleSignInManager.Instance != null)
         {
@@ -311,7 +315,7 @@ public class AuthenticationManager : MonoBehaviour
             GoogleSignInManager.Instance.OnGoogleSignInFailure -= OnSilentGoogleSignInFailure;
         }
         
-        UpdateStatusText("Logging into Backend...");
+        UpdateStatusText("");
         
         if (BackendAuthService.Instance != null)
         {
@@ -371,7 +375,7 @@ public class AuthenticationManager : MonoBehaviour
     private void AttemptSilentFacebookLogin()
     {
         lastAttemptedAction = AttemptSilentFacebookLogin;
-        UpdateStatusText("Restoring Facebook login...");
+        UpdateStatusText("");
         
         if (FacebookSignInManager.Instance != null)
         {
@@ -409,7 +413,7 @@ public class AuthenticationManager : MonoBehaviour
             FacebookSignInManager.Instance.OnFacebookSignInFailure -= OnSilentFacebookSignInFailure;
         }
         
-        UpdateStatusText("Logging into Backend...");
+        UpdateStatusText("");
         
         if (BackendAuthService.Instance != null)
         {
@@ -469,7 +473,7 @@ public class AuthenticationManager : MonoBehaviour
     private void AttemptEmailAutoLogin()
     {
         lastAttemptedAction = AttemptEmailAutoLogin;
-        UpdateStatusText("Restoring email login...");
+        UpdateStatusText("");
         
         // Manual email login is required if JWT is expired.
         Debug.Log("[AuthenticationManager] Email auto-login requires manual login - showing login screen");
@@ -486,7 +490,7 @@ public class AuthenticationManager : MonoBehaviour
     private void AttemptDeviceIdLogin()
     {
         lastAttemptedAction = AttemptDeviceIdLogin;
-        UpdateStatusText("Logging in as guest...");
+        UpdateStatusText("");
         
         string customId = SystemInfo.deviceUniqueIdentifier;
         Debug.Log($"[AuthenticationManager] Attempting auto-login with device ID: {customId}");
@@ -683,7 +687,7 @@ public class AuthenticationManager : MonoBehaviour
         }
         
         SetLoadingState(true);
-        UpdateStatusText("Logging in...");
+        UpdateStatusText("");
         
         if (BackendAuthService.Instance != null)
         {
@@ -719,7 +723,7 @@ public class AuthenticationManager : MonoBehaviour
         if (!CheckInternetAndAction(OnGuestLoginClicked)) return;
         
         SetLoadingState(true);
-        UpdateStatusText("Logging in as guest...");
+        UpdateStatusText("");
         
         string customId = SystemInfo.deviceUniqueIdentifier;
         
@@ -755,7 +759,7 @@ public class AuthenticationManager : MonoBehaviour
         if (!CheckInternetAndAction(OnGoogleLoginClicked)) return;
         
         SetLoadingState(true);
-        UpdateStatusText("Signing in with Google...");
+        UpdateStatusText("");
         
         if (GoogleSignInManager.Instance != null)
         {
@@ -778,7 +782,7 @@ public class AuthenticationManager : MonoBehaviour
         Debug.Log($"[AuthenticationManager] Google Sign-In successful, logging into Backend... Email: {email}, Name: {displayName}");
         Debug.Log($"[AuthenticationManager] DIAGNOSTIC - idToken length: {(string.IsNullOrEmpty(idToken) ? 0 : idToken.Length)}");
         Debug.Log($"[AuthenticationManager] DIAGNOSTIC - serverAuthCode length: {(string.IsNullOrEmpty(serverAuthCode) ? 0 : serverAuthCode.Length)}");
-        UpdateStatusText("Logging into Backend...");
+        UpdateStatusText("");
         
         if (string.IsNullOrEmpty(idToken))
         {
@@ -844,7 +848,7 @@ public class AuthenticationManager : MonoBehaviour
         if (!CheckInternetAndAction(OnFacebookLoginClicked)) return;
         
         SetLoadingState(true);
-        UpdateStatusText("Signing in with Facebook...");
+        UpdateStatusText("");
         
         if (FacebookSignInManager.Instance != null)
         {
@@ -867,7 +871,7 @@ public class AuthenticationManager : MonoBehaviour
     private void OnFacebookSignInSuccess(string accessToken, string facebookName, string facebookEmail, string facebookImageUrl)
     {
         Debug.Log($"[AuthenticationManager] Facebook Sign-In successful, logging into Backend... Name: {facebookName}, Email: {facebookEmail}");
-        UpdateStatusText("Logging into Backend...");
+        UpdateStatusText("");
         
         if (BackendAuthService.Instance != null)
         {
@@ -924,7 +928,7 @@ public class AuthenticationManager : MonoBehaviour
     {
         if (!CheckInternetAndAction(OnAppleLoginClicked)) return;
         
-        UpdateStatusText("Signing in with Apple...");
+        UpdateStatusText("");
         
         if (AppleAuthenticationManager.Instance != null)
         {
@@ -943,7 +947,7 @@ public class AuthenticationManager : MonoBehaviour
         if (success)
         {
             Debug.Log($"[AuthenticationManager] Apple Sign-In successful, logging into Backend... Name: {displayName}");
-            UpdateStatusText("Logging into Backend...");
+            UpdateStatusText("");
             
             if (BackendAuthService.Instance != null)
             {
@@ -997,7 +1001,7 @@ public class AuthenticationManager : MonoBehaviour
         }
         
         SetLoadingState(true);
-        UpdateStatusText("Creating account...");
+        UpdateStatusText("");
         isRegistering = true; // Mark that we're registering
         
         if (BackendAuthService.Instance != null)
@@ -1097,12 +1101,12 @@ public class AuthenticationManager : MonoBehaviour
             if (isAttemptingAutoLogin)
             {
                 Debug.Log("[AuthenticationManager] Auto-login successful!");
-                UpdateStatusText("Welcome!");
+                UpdateStatusText("");
                 isAttemptingAutoLogin = false;
             }
             else
             {
-                UpdateStatusText("Login successful!");
+                UpdateStatusText("");
             }
             
             // Show splash screen after successful login
@@ -1237,8 +1241,37 @@ public class AuthenticationManager : MonoBehaviour
     
     private void UpdateStatusText(string message)
     {
-        // if (statusText != null)
-        //     statusText.text = message;
+        if (statusText == null) return;
+
+        if (string.IsNullOrEmpty(message))
+        {
+            statusText.gameObject.SetActive(false);
+            statusText.text = "";
+            return;
+        }
+
+        // Try to extract just the 'message' field from a JSON error response
+        // e.g. {"success":false,"statusCode":401,"message":"Invalid credentials"}
+        string displayMessage = message;
+        if (message.TrimStart().StartsWith("{"))
+        {
+            try
+            {
+                var parsed = JsonUtility.FromJson<ServerErrorResponse>(message);
+                if (!string.IsNullOrEmpty(parsed.message))
+                    displayMessage = parsed.message;
+            }
+            catch { /* fallback to raw message */ }
+        }
+
+        statusText.text = displayMessage;
+        statusText.gameObject.SetActive(true);
+    }
+
+    [System.Serializable]
+    private class ServerErrorResponse
+    {
+        public string message;
     }
     
     private bool IsValidEmail(string email)
