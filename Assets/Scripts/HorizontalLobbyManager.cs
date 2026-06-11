@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using TMPro;
 
 /// <summary>
 /// Manages the lobby scene with a single horizontal position
@@ -76,6 +77,8 @@ public class HorizontalLobbyManager : MonoBehaviour
     // True while this panel is visible — used by SocketManager to decide whether
     // to reconnect on app resume.
     public static bool IsLobbyActive { get; private set; }
+    
+    private float _waitingSpriteRotationAngle = 0f;
     
     private void Start()
     {
@@ -204,6 +207,51 @@ public class HorizontalLobbyManager : MonoBehaviour
     {
         // Swipe detection
         HandleSwipeInput();
+        
+        // Rotate waiting status text icon/sprite
+        UpdateWaitingStatusSpriteRotation();
+    }
+    
+    private void UpdateWaitingStatusSpriteRotation()
+    {
+        if (waitingPanel == null || !waitingPanel.activeInHierarchy || waitingStatusText == null)
+            return;
+
+        // Ensure the text mesh is updated
+        waitingStatusText.ForceMeshUpdate();
+        TMP_TextInfo textInfo = waitingStatusText.textInfo;
+
+        if (textInfo != null && textInfo.characterCount > 0)
+        {
+            TMP_CharacterInfo charInfo = textInfo.characterInfo[0];
+            if (charInfo.isVisible)
+            {
+                int materialIndex = charInfo.materialReferenceIndex;
+                int vertexIndex = charInfo.vertexIndex;
+
+                if (textInfo.meshInfo != null && materialIndex < textInfo.meshInfo.Length)
+                {
+                    Vector3[] vertices = textInfo.meshInfo[materialIndex].vertices;
+                    if (vertices != null && vertexIndex + 3 < vertices.Length)
+                    {
+                        // Calculate the center of the sprite quad
+                        Vector3 center = (vertices[vertexIndex + 0] + vertices[vertexIndex + 2]) * 0.5f;
+
+                        // Rotate the 4 vertices of the quad
+                        _waitingSpriteRotationAngle -= Time.deltaTime * 200f; // Rotate 200 degrees per second (clockwise)
+                        Matrix4x4 matrix = Matrix4x4.TRS(center, Quaternion.Euler(0, 0, _waitingSpriteRotationAngle), Vector3.one);
+
+                        for (int i = 0; i < 4; i++)
+                        {
+                            vertices[vertexIndex + i] = matrix.MultiplyPoint3x4(vertices[vertexIndex + i] - center);
+                        }
+
+                        // Push the updated vertices to the mesh
+                        waitingStatusText.UpdateVertexData(TMP_VertexDataUpdateFlags.Vertices);
+                    }
+                }
+            }
+        }
     }
     
 
@@ -728,7 +776,8 @@ public class HorizontalLobbyManager : MonoBehaviour
         {
             waitingPanel.SetActive(true);
         }
-        if (waitingStatusText != null) waitingStatusText.text = "Match Starting Soon\nWaiting for players to join...";
+        if (waitingStatusText != null)
+            waitingStatusText.text = "<size=200%><voffset=0.35em><sprite name=\"Dice 1 1\"></voffset></size><space=-0.5em>Match Starting Soon\nWaiting for players to join...";
         
         // Trigger the middle layer
         MatchmakingModel.FindMatch(mode, entryFee, lobbyId);
