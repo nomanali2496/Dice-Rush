@@ -9,11 +9,26 @@ using System.Collections.Generic;
 public class GameDebugViewer : MonoBehaviour
 {
     [Header("Player Data (Live)")]
+    public string playerId;
     public string playerName;
+    public string email;
+    public int wins;
+    public int losses;
+    public int balance;
     public int cashBalance;
+    public int bonusBalance;
+    public int winningBalance;
+    public int withdrawableBalance;
     public int coins;
+    public string avatar;
     public int level;
     public int xp;
+    public string role;
+    
+    [Header("Recent Match Data (Live)")]
+    public string recentMatchId;
+    public string recentRoomId;
+    public string recentMatchStatus;
 
     [Header("Lobby Data (Live)")]
     public bool isLobbyDataLoaded;
@@ -30,11 +45,25 @@ public class GameDebugViewer : MonoBehaviour
     private void Update()
     {
         // Update Player Data
+        playerId = PlayerModel.Id;
         playerName = PlayerModel.Name;
+        email = PlayerModel.Email;
+        wins = PlayerModel.Wins;
+        losses = PlayerModel.Losses;
+        balance = PlayerModel.Balance;
         cashBalance = PlayerModel.CashBalance;
+        bonusBalance = PlayerModel.BonusBalance;
+        winningBalance = PlayerModel.WinningBalance;
+        withdrawableBalance = PlayerModel.WithdrawableBalance;
         coins = PlayerModel.Coins;
+        avatar = PlayerModel.Avatar;
         level = PlayerModel.Level;
         xp = PlayerModel.Xp;
+        role = PlayerModel.Role;
+
+        recentMatchId = PlayerModel.RecentMatchId;
+        recentRoomId = PlayerModel.RecentRoomId;
+        recentMatchStatus = PlayerModel.RecentMatchStatus;
 
         // Update Socket Status
         if (SocketManager.Instance != null)

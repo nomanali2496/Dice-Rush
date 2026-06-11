@@ -769,7 +769,9 @@ public class BackendAuthService : MonoBehaviour
                             response.user.cashBalance, response.user.bonusBalance, response.user.winningBalance,
                             response.user.coins, response.user.avatar, response.user.xp,
                             response.user.level, response.user.role, 0,
-                            response.user.activeMatchId, response.user.activeRoomId
+                            response.user.activeMatchId, response.user.activeRoomId,
+                            response.user.withdrawableBalance, 
+                            response.user.recentMatch?.matchId, response.user.recentMatch?.roomId, response.user.recentMatch?.status
                         );
                         
                         onComplete?.Invoke(true, "Profile loaded successfully!");
@@ -1566,6 +1568,7 @@ public class BackendAuthService : MonoBehaviour
         public int cashBalance;
         public int bonusBalance;
         public int winningBalance;
+        public int withdrawableBalance;
         public int coins;
         public string avatar;
         public int xp;
@@ -1573,6 +1576,15 @@ public class BackendAuthService : MonoBehaviour
         public string role;
         public string activeMatchId;
         public string activeRoomId;
+        public RecentMatchData recentMatch;
+    }
+
+    [Serializable]
+    public class RecentMatchData
+    {
+        public string matchId;
+        public string roomId;
+        public string status;
     }
 
     [Serializable]
@@ -1595,13 +1607,13 @@ public class BackendAuthService : MonoBehaviour
         public int lobbyIndex;
         public int gameTimer;
         public float entryFeeCash;
-        public int entryFeeChips;
+        public int entryFeeCoins;
         public float firstPlaceCash;
-        public int firstPlaceChips;
+        public int firstPlaceCoins;
         public float secondPlaceCash;
-        public int secondPlaceChips;
+        public int secondPlaceCoins;
         public float thirdPlaceCash;
-        public int thirdPlaceChips;
+        public int thirdPlaceCoins;
         public bool enabled;
     }
 

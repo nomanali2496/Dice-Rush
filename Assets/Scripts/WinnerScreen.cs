@@ -117,7 +117,7 @@ public class WinnerScreen : MonoBehaviour
         
         // Get initial cash and chips values (before prize was awarded)
         // Prize was already awarded to PlayerModel, so initial value is current - prize
-        initialCash = PlayerModel.CashBalance - playerCashPrize;
+        initialCash = PlayerModel.Balance - playerCashPrize;
         initialChips = PlayerModel.Coins - playerChipsPrize;
         
         // Check top 3 positions
@@ -143,7 +143,7 @@ public class WinnerScreen : MonoBehaviour
         if (playerInTop3)
         {
             // Get current values (prizes were already awarded)
-            targetCash = PlayerModel.CashBalance;
+            targetCash = PlayerModel.Balance;
             targetChips = PlayerModel.Coins;
             
             // Calculate initial values (current - prize)

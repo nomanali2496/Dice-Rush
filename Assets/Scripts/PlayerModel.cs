@@ -19,6 +19,10 @@ public static class PlayerModel
     public static int SelectedAvatarIndex { get; private set; }
     public static string ActiveMatchId { get; private set; }
     public static string ActiveRoomId { get; private set; }
+    public static int WithdrawableBalance { get; private set; }
+    public static string RecentMatchId { get; private set; }
+    public static string RecentRoomId { get; private set; }
+    public static string RecentMatchStatus { get; private set; }
 
     // Event fired whenever the player data changes
     public static event Action OnDataUpdated;
@@ -31,7 +35,8 @@ public static class PlayerModel
         string id, string name, string email, int wins, int losses,
         int balance, int cashBalance, int bonusBalance, int winningBalance, int coins,
         string avatar, int xp, int level, string role, int selectedAvatarIndex = 0,
-        string activeMatchId = null, string activeRoomId = null)
+        string activeMatchId = null, string activeRoomId = null,
+        int withdrawableBalance = 0, string recentMatchId = null, string recentRoomId = null, string recentMatchStatus = null)
     {
         Id = id;
         Name = name;
@@ -50,6 +55,10 @@ public static class PlayerModel
         SelectedAvatarIndex = selectedAvatarIndex;
         ActiveMatchId = activeMatchId;
         ActiveRoomId = activeRoomId;
+        WithdrawableBalance = withdrawableBalance;
+        RecentMatchId = recentMatchId;
+        RecentRoomId = recentRoomId;
+        RecentMatchStatus = recentMatchStatus;
 
         OnDataUpdated?.Invoke();
     }

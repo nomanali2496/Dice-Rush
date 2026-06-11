@@ -44,7 +44,7 @@ public class CurrencyDisplayUI : MonoBehaviour
     private void HandleDataUpdated()
     {
         float newValue = currencyToWatch == CurrencyType.Cash 
-            ? PlayerModel.CashBalance 
+            ? PlayerModel.Balance 
             : PlayerModel.Coins;
             
         HandleCurrencyUpdated(currencyToWatch, newValue);

@@ -90,8 +90,8 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
     /// </summary>
     private void RefreshBalanceUI()
     {
-        string cashText    = $"${PlayerModel.CashBalance:F2}";
-        string winningText = $"${PlayerModel.WinningBalance:F2}";
+        string cashText    = $"${PlayerModel.Balance:F2}";
+        string winningText = $"${PlayerModel.WithdrawableBalance:F2}";
 
         if (accountBalanceText       != null) accountBalanceText.text       = cashText;
         if (accountBalanceShadowText != null) accountBalanceShadowText.text = cashText;
