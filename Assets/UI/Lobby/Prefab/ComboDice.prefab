@@ -63,19 +63,19 @@ MonoBehaviour:
     m_RotationOrder: 4
   spriteMappings:
   - lobbyId: combo-dice
-    sprite: {fileID: 21300000, guid: 808865f431b90684791fc8a6594552fa, type: 3}
+    sprite: {fileID: 21300000, guid: 1d37f01f231a54e459a703bf4fc3d6fb, type: 3}
   - lobbyId: dice-island
-    sprite: {fileID: 21300000, guid: f1318e5086b8d6b44b25d616082444ed, type: 3}
+    sprite: {fileID: 21300000, guid: 587c922c9493cc44594f1ccd24793268, type: 3}
   - lobbyId: dice-race
-    sprite: {fileID: 21300000, guid: ce0694673173abd4c939ffdbd49ba833, type: 3}
+    sprite: {fileID: 21300000, guid: cee8ae1e747943d438c3b2e63daa8611, type: 3}
   - lobbyId: dice-royale
-    sprite: {fileID: 21300000, guid: b1dd7454085e25f4894ab8fb1f4f8ce6, type: 3}
+    sprite: {fileID: 21300000, guid: feaa7e8670b00f0498c1a0a5c37f4858, type: 3}
   - lobbyId: golden-throw
     sprite: {fileID: 21300000, guid: 426950b52b447334087a3a93d9d974ab, type: 3}
   - lobbyId: lucky-rollers
-    sprite: {fileID: 21300000, guid: 007fa645c889ab247be4b13c44743f09, type: 3}
+    sprite: {fileID: 21300000, guid: 01ecf30a9248e7d4883cc13cd4be2217, type: 3}
   - lobbyId: the-yatch-club
-    sprite: {fileID: 21300000, guid: 5dfa3529cfbaec34aa3cc0bb7e900516, type: 3}
+    sprite: {fileID: 21300000, guid: 4609065efe8cbcf40b652fca825f826f, type: 3}
   - lobbyId: mega-rush
     sprite: {fileID: 21300000, guid: 5c87fde5146317648be2567ad90db9f9, type: 3}
   - lobbyId: roll-on-the-beach
