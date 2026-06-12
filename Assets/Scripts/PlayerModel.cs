@@ -36,7 +36,7 @@ public static class PlayerModel
         int balance, int cashBalance, int bonusBalance, int winningBalance, int coins,
         string avatar, int xp, int level, string role, int selectedAvatarIndex = 0,
         string activeMatchId = null, string activeRoomId = null,
-        int withdrawableBalance = 0, string recentMatchId = null, string recentRoomId = null, string recentMatchStatus = null)
+        int? withdrawableBalance = null, string recentMatchId = null, string recentRoomId = null, string recentMatchStatus = null)
     {
         Id = id;
         Name = name;
@@ -55,7 +55,10 @@ public static class PlayerModel
         SelectedAvatarIndex = selectedAvatarIndex;
         ActiveMatchId = activeMatchId;
         ActiveRoomId = activeRoomId;
-        WithdrawableBalance = withdrawableBalance;
+        if (withdrawableBalance.HasValue)
+        {
+            WithdrawableBalance = withdrawableBalance.Value;
+        }
         RecentMatchId = recentMatchId;
         RecentRoomId = recentRoomId;
         RecentMatchStatus = recentMatchStatus;

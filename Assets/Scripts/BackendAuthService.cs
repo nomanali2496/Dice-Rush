@@ -111,7 +111,7 @@ public class BackendAuthService : MonoBehaviour
     {
         PlayerPrefs.DeleteKey(JWT_PREF_KEY);
         PlayerPrefs.Save();
-        PlayerModel.UpdateData(null, null, null, 0, 0, 0, 0, 0, 0, 0, null, 0, 0, null, 0, null, null);
+        PlayerModel.UpdateData(null, null, null, 0, 0, 0, 0, 0, 0, 0, null, 0, 0, null, 0, null, null, 0);
     }
 
     /// <summary>
@@ -199,7 +199,8 @@ public class BackendAuthService : MonoBehaviour
                             response.user.cashBalance, response.user.bonusBalance, response.user.winningBalance,
                             response.user.coins, response.user.avatar, response.user.xp,
                             response.user.level, response.user.role, 0,
-                            response.user.activeMatchId, response.user.activeRoomId
+                            response.user.activeMatchId, response.user.activeRoomId,
+                            response.user.withdrawableBalance
                         );
                     }
                     if (response != null && !string.IsNullOrEmpty(response.token))
@@ -260,7 +261,8 @@ public class BackendAuthService : MonoBehaviour
                                 response.user.cashBalance, response.user.bonusBalance, response.user.winningBalance,
                                 response.user.coins, response.user.avatar, response.user.xp,
                                 response.user.level, response.user.role, 0,
-                                response.user.activeMatchId, response.user.activeRoomId
+                                response.user.activeMatchId, response.user.activeRoomId,
+                                response.user.withdrawableBalance
                             );
                         }
 
@@ -328,7 +330,8 @@ public class BackendAuthService : MonoBehaviour
                                 response.user.cashBalance, response.user.bonusBalance, response.user.winningBalance,
                                 response.user.coins, response.user.avatar, response.user.xp,
                                 response.user.level, response.user.role, 0,
-                                response.user.activeMatchId, response.user.activeRoomId
+                                response.user.activeMatchId, response.user.activeRoomId,
+                                response.user.withdrawableBalance
                             );
                         }
 
@@ -432,7 +435,8 @@ public class BackendAuthService : MonoBehaviour
                                 response.user.cashBalance, response.user.bonusBalance, response.user.winningBalance,
                                 response.user.coins, response.user.avatar, response.user.xp,
                                 response.user.level, response.user.role, 0,
-                                response.user.activeMatchId, response.user.activeRoomId
+                                response.user.activeMatchId, response.user.activeRoomId,
+                                response.user.withdrawableBalance
                             );
                         }
 
@@ -492,7 +496,8 @@ public class BackendAuthService : MonoBehaviour
                                 response.user.cashBalance, response.user.bonusBalance, response.user.winningBalance,
                                 response.user.coins, response.user.avatar, response.user.xp,
                                 response.user.level, response.user.role, 0,
-                                response.user.activeMatchId, response.user.activeRoomId
+                                response.user.activeMatchId, response.user.activeRoomId,
+                                response.user.withdrawableBalance
                             );
                         }
 
@@ -573,7 +578,8 @@ public class BackendAuthService : MonoBehaviour
                             response.user.cashBalance, response.user.bonusBalance, response.user.winningBalance,
                             response.user.coins, response.user.avatar, response.user.xp,
                             response.user.level, response.user.role, 0,
-                            response.user.activeMatchId, response.user.activeRoomId
+                            response.user.activeMatchId, response.user.activeRoomId,
+                            response.user.withdrawableBalance
                         );
                         onComplete?.Invoke(true, "Profile updated successfully!");
                     }
@@ -638,7 +644,8 @@ public class BackendAuthService : MonoBehaviour
                             response.user.cashBalance, response.user.bonusBalance, response.user.winningBalance,
                             response.user.coins, response.user.avatar, response.user.xp,
                             response.user.level, response.user.role, 0,
-                            response.user.activeMatchId, response.user.activeRoomId
+                            response.user.activeMatchId, response.user.activeRoomId,
+                            response.user.withdrawableBalance
                         );
                         onComplete?.Invoke(true, response.avatar);
                     }
@@ -707,7 +714,8 @@ public class BackendAuthService : MonoBehaviour
                             finalCash, response.user.bonusBalance, response.user.winningBalance,
                             finalCoins, response.user.avatar, response.user.xp,
                             response.user.level, response.user.role, 0,
-                            response.user.activeMatchId, response.user.activeRoomId
+                            response.user.activeMatchId, response.user.activeRoomId,
+                            response.user.withdrawableBalance
                         );
                         onComplete?.Invoke(true, "Currency updated successfully!");
                     }
