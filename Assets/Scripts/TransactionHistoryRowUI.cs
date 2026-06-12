@@ -22,12 +22,14 @@ public class TransactionHistoryRowData
     public string date;
     public float amount;
     public TransactionStatus status;
+    public string type;
     
-    public TransactionHistoryRowData(string date, float amount, TransactionStatus status)
+    public TransactionHistoryRowData(string date, float amount, TransactionStatus status, string type = "")
     {
         this.date = date;
         this.amount = amount;
         this.status = status;
+        this.type = type;
     }
 }
 
@@ -42,6 +44,10 @@ public class TransactionHistoryRowUI : EnhancedScrollerCellView
     
     [Header("Amount Text")]
     [SerializeField] private TextMeshProUGUI amountText; // Amount text component (will show with $ prefix)
+    
+    [Header("Type Text")]
+    [UnityEngine.Serialization.FormerlySerializedAs("balanceTypeText")]
+    [SerializeField] private TextMeshProUGUI typeText; // Transaction type text component (e.g. Deposit, Win Prize, Entry Fee)
     
     [Header("Status Image")]
     [SerializeField] private Image statusImage; // Image to show transaction status
@@ -58,7 +64,7 @@ public class TransactionHistoryRowUI : EnhancedScrollerCellView
     public void SetData(TransactionHistoryRowData data)
     {
         currentData = data;
-        SetupRow(data.date, data.amount, data.status);
+        SetupRow(data.date, data.amount, data.status, data.type);
     }
     
     /// <summary>
@@ -69,6 +75,14 @@ public class TransactionHistoryRowUI : EnhancedScrollerCellView
     /// <param name="amount">Transaction amount</param>
     /// <param name="status">Transaction status (Pending, Successful, Cancel)</param>
     public void SetupRow(string date, float amount, TransactionStatus status)
+    {
+        SetupRow(date, amount, status, "");
+    }
+    
+    /// <summary>
+    /// Sets up the transaction history row with the specified date, amount, status, and transaction type
+    /// </summary>
+    public void SetupRow(string date, float amount, TransactionStatus status, string type)
     {
         // Setup date text
         if (dateText != null)
@@ -84,6 +98,64 @@ public class TransactionHistoryRowUI : EnhancedScrollerCellView
         
         // Setup status image
         SetupStatusImage(status);
+        
+        // Setup type text
+        if (typeText != null)
+        {
+            if (string.IsNullOrEmpty(type))
+            {
+                typeText.text = "";
+            }
+            else
+            {
+                typeText.text = FormatTransactionType(type);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Formats raw transaction types (e.g. deposit -> Deposit, win_prize -> Win Prize)
+    /// </summary>
+    private string FormatTransactionType(string typeStr)
+    {
+        if (string.IsNullOrEmpty(typeStr)) return "";
+        
+        switch (typeStr.ToLower())
+        {
+            case "deposit":
+                return "Deposit";
+            case "win_prize":
+                return "Win Prize";
+            case "entry_fee":
+                return "Entry Fee";
+            case "withdraw":
+                return "Withdraw";
+            case "refund":
+                return "Refund";
+            default:
+                // Replace underscores with spaces and capitalize
+                string result = typeStr.Replace("_", " ");
+                if (result.Length > 0)
+                {
+                    // Capitalize each word
+                    System.Text.StringBuilder sb = new System.Text.StringBuilder();
+                    string[] words = result.Split(' ');
+                    for (int i = 0; i < words.Length; i++)
+                    {
+                        if (words[i].Length > 0)
+                        {
+                            sb.Append(char.ToUpper(words[i][0]));
+                            if (words[i].Length > 1)
+                            {
+                                sb.Append(words[i].Substring(1).ToLower());
+                            }
+                            if (i < words.Length - 1) sb.Append(" ");
+                        }
+                    }
+                    return sb.ToString();
+                }
+                return typeStr;
+        }
     }
     
     /// <summary>

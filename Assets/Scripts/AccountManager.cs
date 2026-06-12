@@ -223,7 +223,7 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
                 }
             }
 
-            _transactionData.Add(new TransactionHistoryRowData(dateString, item.amount, status));
+            _transactionData.Add(new TransactionHistoryRowData(dateString, item.amount, status, item.type));
         }
 
         // Sort by date (newest first)
@@ -286,7 +286,9 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
                 status = TransactionStatus.Cancel;
             }
             
-            _transactionData.Add(new TransactionHistoryRowData(dateString, amount, status));
+            string[] testTypes = { "deposit", "win_prize", "entry_fee", "withdraw" };
+            string transactionType = testTypes[random.Next(testTypes.Length)];
+            _transactionData.Add(new TransactionHistoryRowData(dateString, amount, status, transactionType));
         }
         
         // Sort by date (newest first)
@@ -335,14 +337,14 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
     /// <summary>
     /// Adds a single transaction entry
     /// </summary>
-    public void AddTransaction(string date, float amount, TransactionStatus status)
+    public void AddTransaction(string date, float amount, TransactionStatus status, string type = "")
     {
         if (_transactionData == null)
         {
             _transactionData = new SmallList<TransactionHistoryRowData>();
         }
         
-        _transactionData.Add(new TransactionHistoryRowData(date, amount, status));
+        _transactionData.Add(new TransactionHistoryRowData(date, amount, status, type));
         
         // Sort by date after adding
         SortTransactionsByDate();
@@ -361,10 +363,10 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
     /// <summary>
     /// Adds a transaction with current date
     /// </summary>
-    public void AddTransaction(float amount, TransactionStatus status)
+    public void AddTransaction(float amount, TransactionStatus status, string type = "")
     {
         string currentDate = System.DateTime.Now.ToString("MM/dd/yy");
-        AddTransaction(currentDate, amount, status);
+        AddTransaction(currentDate, amount, status, type);
     }
     
     /// <summary>
