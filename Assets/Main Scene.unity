@@ -4440,7 +4440,7 @@ PrefabInstance:
     - target: {fileID: 8294385113350753335, guid: 98e6b11369bcdb84188373f99a8a527d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 38834a5ba6fd8d44a85097afda2aea0b, type: 3}
+      objectReference: {fileID: 21300000, guid: 58b0527773354f64cb3c7cece2dcc83d, type: 3}
     - target: {fileID: 8376434500396446610, guid: 98e6b11369bcdb84188373f99a8a527d, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -9559,11 +9559,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4623655475744782173, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1120.3
+      value: 1180.3
       objectReference: {fileID: 0}
     - target: {fileID: 4623655475744782173, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1097.9438
+      value: -1168.875
       objectReference: {fileID: 0}
     - target: {fileID: 4623655475744782173, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -11201,7 +11201,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 49.6
+  m_fontSize: 66.1
   m_fontSizeBase: 69.28
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -16115,7 +16115,7 @@ PrefabInstance:
     - target: {fileID: 8294385113350753335, guid: 98e6b11369bcdb84188373f99a8a527d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 38834a5ba6fd8d44a85097afda2aea0b, type: 3}
+      objectReference: {fileID: 21300000, guid: 58b0527773354f64cb3c7cece2dcc83d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18689,11 +18689,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4623655475744782173, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 199.70004
+      value: 259.70004
       objectReference: {fileID: 0}
     - target: {fileID: 4623655475744782173, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1097.9438
+      value: -1168.875
       objectReference: {fileID: 0}
     - target: {fileID: 4623655475744782173, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -19486,11 +19486,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4623655475744782173, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1120.3
+      value: 1180.3
       objectReference: {fileID: 0}
     - target: {fileID: 4623655475744782173, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -220.19379
+      value: -291.12494
       objectReference: {fileID: 0}
     - target: {fileID: 4623655475744782173, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -21447,7 +21447,7 @@ PrefabInstance:
     - target: {fileID: 8294385113350753335, guid: 98e6b11369bcdb84188373f99a8a527d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8fb7979643e342845846eeea117a494d, type: 3}
+      objectReference: {fileID: 21300000, guid: 58b0527773354f64cb3c7cece2dcc83d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28926,11 +28926,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FallingCoinsManager
   coinSprites:
-  - {fileID: 21300000, guid: 3fb70e5ef2233234b9f6cc81a61ab53f, type: 3}
-  - {fileID: 21300000, guid: c53ec33a240bd1042a45bb703dcd4d70, type: 3}
-  - {fileID: 21300000, guid: 6db33e2a4f3c802489b837b374d2caba, type: 3}
-  - {fileID: 21300000, guid: 97c8d487efaa39348bcc0dcb31307ff8, type: 3}
-  - {fileID: 21300000, guid: b66537b6af42a8948b71496f08efa236, type: 3}
+  - {fileID: 21300000, guid: 8537908803dab6448874f7b4da4eaded, type: 3}
+  - {fileID: 21300000, guid: 0fd6380ce06e7424fbb2e9c170f2b994, type: 3}
+  - {fileID: 21300000, guid: 7dd28786fe5776043b90d444b2896e96, type: 3}
+  - {fileID: 21300000, guid: 832d34129cd5ebf45ae357c03db3c78a, type: 3}
   - {fileID: 21300000, guid: 9159d693b1cb69546a1ea7020bf7c0da, type: 3}
   - {fileID: 21300000, guid: a9e82889ca273b14cb4dda8bc54c28bd, type: 3}
   coinPrefab: {fileID: 4424766503822717269, guid: 694cb4db5937eb84294333d2d22cf569, type: 3}
@@ -29385,7 +29384,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 41.1
+  m_fontSize: 56.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -30816,7 +30815,7 @@ PrefabInstance:
     - target: {fileID: 8294385113350753335, guid: 98e6b11369bcdb84188373f99a8a527d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 38834a5ba6fd8d44a85097afda2aea0b, type: 3}
+      objectReference: {fileID: 21300000, guid: 58b0527773354f64cb3c7cece2dcc83d, type: 3}
     - target: {fileID: 8376434500396446610, guid: 98e6b11369bcdb84188373f99a8a527d, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -49863,11 +49862,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4623655475744782173, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 660
+      value: 720
       objectReference: {fileID: 0}
     - target: {fileID: 4623655475744782173, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1097.9438
+      value: -1168.875
       objectReference: {fileID: 0}
     - target: {fileID: 4623655475744782173, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -51565,11 +51564,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4623655475744782173, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 660
+      value: 720
       objectReference: {fileID: 0}
     - target: {fileID: 4623655475744782173, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -220.19379
+      value: -291.12494
       objectReference: {fileID: 0}
     - target: {fileID: 4623655475744782173, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -52248,7 +52247,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 71.5
+  m_fontSize: 78.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -53659,7 +53658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WinnerScreen
   cashSprite: {fileID: 21300000, guid: 8fa1cc91b0802404fa18165b40c9c2c2, type: 3}
-  chipsSprite: {fileID: 21300000, guid: d17b8a47cf568ad4aa6fdd3bdc2f479e, type: 3}
+  chipsSprite: {fileID: 21300000, guid: 58b0527773354f64cb3c7cece2dcc83d, type: 3}
   firstPlacePrizePosition: {fileID: 760401102}
   firstPlacePrizeText: {fileID: 1316242749}
   firstPlacePrizeIcon: {fileID: 285117727}
@@ -60215,7 +60214,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56.3
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -61296,7 +61295,7 @@ MonoBehaviour:
   targetCashPosition: {fileID: 1544971538}
   targetChipsPosition: {fileID: 90524356}
   cashSprite: {fileID: 21300000, guid: 86b18dec5ba4dbc40971d2f46a36ae7f, type: 3}
-  chipsSprite: {fileID: 21300000, guid: 8fb7979643e342845846eeea117a494d, type: 3}
+  chipsSprite: {fileID: 21300000, guid: 58b0527773354f64cb3c7cece2dcc83d, type: 3}
   animationDuration: 0.2
   movementCurve:
     serializedVersion: 2
@@ -63266,7 +63265,7 @@ PrefabInstance:
     - target: {fileID: 5936302013837362036, guid: 2d9527626a390d94bb4ec5a45c15f41c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 38834a5ba6fd8d44a85097afda2aea0b, type: 3}
+      objectReference: {fileID: 21300000, guid: 58b0527773354f64cb3c7cece2dcc83d, type: 3}
     - target: {fileID: 6381519467771583776, guid: 2d9527626a390d94bb4ec5a45c15f41c, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -67994,7 +67993,7 @@ MonoBehaviour:
   targetCashPosition: {fileID: 1544971538}
   shopTargetCoinsPosition: {fileID: 1652312856}
   shopTargetCashPosition: {fileID: 805084643}
-  coinSprite: {fileID: 21300000, guid: 8fb7979643e342845846eeea117a494d, type: 3}
+  coinSprite: {fileID: 21300000, guid: 58b0527773354f64cb3c7cece2dcc83d, type: 3}
   cashSprite: {fileID: 21300000, guid: 86b18dec5ba4dbc40971d2f46a36ae7f, type: 3}
   animatedSpritePrefab: {fileID: 4424766503822717269, guid: 75e36dedebed54f13afb3de55d57122c, type: 3}
   animationDuration: 0.6
@@ -68670,7 +68669,7 @@ RectTransform:
   m_GameObject: {fileID: 2105771366}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.72761196, y: 0.72761196, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1915058719}
@@ -71858,11 +71857,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4623655475744782173, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 199.70004
+      value: 259.70004
       objectReference: {fileID: 0}
     - target: {fileID: 4623655475744782173, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -220.19379
+      value: -291.12494
       objectReference: {fileID: 0}
     - target: {fileID: 4623655475744782173, guid: 8b0b64516096d4b44bdec55c997cd2fe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
