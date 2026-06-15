@@ -1788,4 +1788,162 @@ public class BackendAuthService : MonoBehaviour
         public float  bonusBalance;
         public float  winningBalance;
     }
+
+    // ─── Support Tickets ────────────────────────────────────────────────────────
+
+    [Serializable]
+    public class SupportTicketReply
+    {
+        public string userId;
+        public string userName;
+        public string message;
+        public bool   isAdmin;
+        public string createdAt;
+    }
+
+    [Serializable]
+    public class SupportTicket
+    {
+        public string _id;
+        public string userId;
+        public string userEmail;
+        public string userName;
+        public string subject;
+        public string description;
+        public string category;
+        public string status;
+        public string priority;
+        public SupportTicketReply[] replies;
+        public string createdAt;
+        public string updatedAt;
+    }
+
+    [Serializable]
+    private class SupportTicketListResponse
+    {
+        public bool   success;
+        public int    count;
+        public SupportTicket[] data;
+    }
+
+    [Serializable]
+    private class CreateTicketResponse
+    {
+        public bool   success;
+        public string message;
+        public CreateTicketData data;
+    }
+
+    [Serializable]
+    private class CreateTicketData
+    {
+        public string ticketId;
+        public string status;
+        public string category;
+    }
+
+    /// <summary>
+    /// Creates a new support ticket. No auth token required (rate-limited by email).
+    /// </summary>
+    public void CreateSupportTicket(string email, string subject, string description, string category, Action<bool, string> onComplete)
+    {
+        Debug.Log($"<color=#00ffff>[BackendAuthService] POST Request: /api/support-tickets | Subject: {subject}</color>");
+        StartCoroutine(CreateSupportTicketCoroutine(email, subject, description, category, onComplete));
+    }
+
+    private IEnumerator CreateSupportTicketCoroutine(string email, string subject, string description, string category, Action<bool, string> onComplete)
+    {
+        string url = baseUrl.TrimEnd('/') + "/api/support-tickets";
+
+        // Escape special characters to keep JSON valid
+        string safeSubject     = subject.Replace("\"", "\\\"").Replace("\n", "\\n");
+        string safeDescription = description.Replace("\"", "\\\"").Replace("\n", "\\n");
+
+        string jsonData = $"{{\"email\":\"{email}\",\"subject\":\"{safeSubject}\",\"description\":\"{safeDescription}\",\"category\":\"{category}\"}}";
+
+        using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+        {
+            byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonData);
+            request.uploadHandler   = new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+
+            // Attach JWT if available (logged-in users get their name attached server-side)
+            if (HasStoredJWT())
+                request.SetRequestHeader("Authorization", "Bearer " + GetStoredJWT());
+
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Create Ticket: {request.downloadHandler.text}</color>");
+                try
+                {
+                    CreateTicketResponse response = JsonUtility.FromJson<CreateTicketResponse>(request.downloadHandler.text);
+                    string msg = response?.message ?? "Ticket submitted successfully!";
+                    onComplete?.Invoke(true, msg);
+                }
+                catch
+                {
+                    onComplete?.Invoke(true, "Ticket submitted successfully!");
+                }
+            }
+            else
+            {
+                Debug.LogError($"<color=#ff0000>[BackendAuthService] Create Ticket Error: {request.error} | {request.downloadHandler.text}</color>");
+                string errMsg = request.responseCode == 429
+                    ? "You have reached the limit of 3 tickets per 24 hours. Please try again tomorrow."
+                    : request.downloadHandler.text;
+                onComplete?.Invoke(false, errMsg);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Fetches all support tickets created by the authenticated user.
+    /// </summary>
+    public void GetMyTickets(Action<bool, string, SupportTicket[]> onComplete)
+    {
+        if (!HasStoredJWT())
+        {
+            onComplete?.Invoke(false, "Not logged in.", null);
+            return;
+        }
+        Debug.Log("<color=#00ffff>[BackendAuthService] GET Request: /api/support-tickets</color>");
+        StartCoroutine(GetMyTicketsCoroutine(onComplete));
+    }
+
+    private IEnumerator GetMyTicketsCoroutine(Action<bool, string, SupportTicket[]> onComplete)
+    {
+        string url   = baseUrl.TrimEnd('/') + "/api/support-tickets";
+        string token = GetStoredJWT();
+
+        using (UnityWebRequest request = UnityWebRequest.Get(url))
+        {
+            request.SetRequestHeader("Authorization", "Bearer " + token);
+            request.downloadHandler = new DownloadHandlerBuffer();
+
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Get Tickets: {request.downloadHandler.text}</color>");
+                try
+                {
+                    SupportTicketListResponse response = JsonUtility.FromJson<SupportTicketListResponse>(request.downloadHandler.text);
+                    onComplete?.Invoke(true, "OK", response?.data ?? new SupportTicket[0]);
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError($"<color=#ff0000>[BackendAuthService] Get Tickets Parse Error: {e.Message}</color>");
+                    onComplete?.Invoke(false, "Failed to parse ticket list.", null);
+                }
+            }
+            else
+            {
+                Debug.LogError($"<color=#ff0000>[BackendAuthService] Get Tickets Error: {request.error}</color>");
+                onComplete?.Invoke(false, request.downloadHandler.text, null);
+            }
+        }
+    }
 }

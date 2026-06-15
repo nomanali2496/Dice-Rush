@@ -71231,7 +71231,7 @@ RectTransform:
   m_GameObject: {fileID: 2105771366}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5970149, y: 0.5970149, z: 1}
+  m_LocalScale: {x: 0.89179105, y: 0.89179105, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1915058719}
@@ -71590,6 +71590,65 @@ MonoBehaviour:
   useVelocityScrolling: 1
   pixelsPerItem: 150
   maxScrollItems: 1
+--- !u!1 &2113649929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2113649931}
+  - component: {fileID: 2113649930}
+  m_Layer: 0
+  m_Name: HelpAndSupportPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2113649930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113649929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd12c7f580cef64429058b5902e031d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HelpAndSupportManager
+  helpAndSupportPanel: {fileID: 1893607337}
+  submitTicketTabButton: {fileID: 0}
+  myTicketsTabButton: {fileID: 0}
+  submitTicketPanel: {fileID: 1893607337}
+  subjectInput: {fileID: 968365817}
+  descriptionInput: {fileID: 968365817}
+  categoryDropdown: {fileID: 0}
+  submitTicketButton: {fileID: 2062087044}
+  myTicketsPanel: {fileID: 0}
+  ticketsListContainer: {fileID: 0}
+  ticketRowPrefab: {fileID: 0}
+  refreshTicketsButton: {fileID: 0}
+  noTicketsText: {fileID: 0}
+  statusText: {fileID: 0}
+  loadingOverlay: {fileID: 0}
+--- !u!4 &2113649931
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113649929}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.26395, y: 0.10349, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &2113678052 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 492026478492308729, guid: c7d78fc3c2bfb434889cef23f0ec303a, type: 3}
@@ -77774,3 +77833,4 @@ SceneRoots:
   - {fileID: 350092423}
   - {fileID: 979145351}
   - {fileID: 1634637914}
+  - {fileID: 2113649931}
