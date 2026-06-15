@@ -14145,7 +14145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &407583427
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16522,6 +16522,7 @@ MonoBehaviour:
   slideDistance: 1500
   centerRowScale: 1
   gameplayObject: {fileID: 1502321585}
+  openLobbyPlayButton: {fileID: 795387961}
   waitingPanel: {fileID: 2021851055}
   waitingStatusText: {fileID: 1009527265}
   cancelMatchmakingButton: {fileID: 2033220174}
@@ -25521,18 +25522,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 474178698}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

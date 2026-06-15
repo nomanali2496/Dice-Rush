@@ -34,6 +34,7 @@ public class HorizontalLobbyManager : MonoBehaviour
     [SerializeField] private GameObject gameplayObject; // Gameplay object to open when play button is clicked
     
     [Header("UI Panels")]
+    [SerializeField] private Button openLobbyPlayButton; // Button that opens this lobby panel
     [SerializeField] private GameObject waitingPanel;
     [SerializeField] private TMPro.TextMeshProUGUI waitingStatusText;
     [SerializeField] private Button cancelMatchmakingButton; // Close button on the waiting panel
@@ -100,6 +101,10 @@ public class HorizontalLobbyManager : MonoBehaviour
         if (disconnectSocketButton != null)
             disconnectSocketButton.onClick.AddListener(OnNavigateToHome);
         
+        // Wire the main Play button to manually initialize the lobby when clicked
+        if (openLobbyPlayButton != null)
+            openLobbyPlayButton.onClick.AddListener(OnLobbyOpened);
+        
         // Subscribe to PlayerModel events to update when backend data loads
         PlayerModel.OnDataUpdated += OnPlayerDataUpdated;
     }
@@ -142,6 +147,31 @@ public class HorizontalLobbyManager : MonoBehaviour
             AutoSelectLobbyBasedOnBalance();
             hasAutoSelectedOnce = true;
         }
+    }
+    
+    /// <summary>
+    /// Called when the Play button is clicked to open the lobby.
+    /// Manually triggers the refresh logic since OnEnable only runs once on active objects.
+    /// </summary>
+    public void OnLobbyOpened()
+    {
+        IsLobbyActive = true;
+
+        // Fetch fresh lobby configurations from the API every time the lobby is opened
+        LobbyModel.FetchConfigurations();
+
+        if (BackendAuthService.HasStoredJWT() && SocketManager.Instance != null)
+            SocketManager.Instance.ConnectToServer();
+
+        if (SettingManager.instance != null)
+            SettingManager.instance.ApplyMusicSetting();
+
+        if (_lobbyObjectsData != null && _lobbyObjectsData.Length > 0)
+            UpdateVisibleRows();
+
+        // Stop existing initialization routine if there is one to prevent duplicates
+        StopAllCoroutines(); 
+        StartCoroutine(InitializeButtonsRoutine());
     }
     
     private void OnEnable()

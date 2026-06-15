@@ -124,6 +124,23 @@ public class AuthenticationManager : MonoBehaviour
         // Show loading screen initially (covers everything)
         ShowLoadingScreen();
         
+        StartInitialAuthentication();
+    }
+    
+    private void StartInitialAuthentication()
+    {
+        // INTERNET GATE: Check internet before proceeding
+        if (Application.internetReachability == NetworkReachability.NotReachable)
+        {
+            Debug.LogWarning("[AuthenticationManager] No internet on startup. Showing internet panel.");
+            HideLoadingScreen(); // Ensure loading screen doesn't block the panel
+            ShowInternetPanel(StartInitialAuthentication);
+            return;
+        }
+
+        // Show loading screen in case we're retrying and it was hidden
+        ShowLoadingScreen();
+
         // IMMEDIATE CHECK: If user is already logged in, show splash screen immediately (no delay)
         if (BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
         {
