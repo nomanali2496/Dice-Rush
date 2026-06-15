@@ -384,7 +384,7 @@ public class HorizontalLobbyManager : MonoBehaviour
     /// Updates positions of all lobby items based on current scroll index
     /// </summary>
     /// <param name="instant">If true, snaps to position without animation</param>
-    private void UpdateVisibleRows()
+    public void UpdateVisibleRows()
     {
         // Wrapper for compatibility with existing calls
         UpdateLobbyPositions(false, 0);
