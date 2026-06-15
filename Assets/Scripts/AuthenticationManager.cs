@@ -44,6 +44,20 @@ public class AuthenticationManager : MonoBehaviour
     [SerializeField] private Button registerFacebookButton;
     [SerializeField] private Button registerAppleButton;
     
+    [Header("Forgot Password UI")]
+    [SerializeField] private GameObject forgotPasswordSection;
+    [SerializeField] private TMP_InputField forgotPasswordEmailInput;
+    [SerializeField] private Button sendResetLinkButton;
+    [SerializeField] private Button showForgotPasswordButton;
+    [SerializeField] private Button backToLoginFromForgotButton;
+    
+    [Header("Reset Password UI")]
+    [SerializeField] private GameObject resetPasswordSection;
+    [SerializeField] private TMP_InputField resetPasswordTokenInput;
+    [SerializeField] private TMP_InputField resetPasswordNewInput;
+    [SerializeField] private Button submitResetPasswordButton;
+    [SerializeField] private Button backToLoginFromResetButton;
+    
     [Header("Status")]
     [SerializeField] private TextMeshProUGUI statusText;
     // [SerializeField] private GameObject loadingIndicator;
@@ -103,6 +117,21 @@ public class AuthenticationManager : MonoBehaviour
         
         if (switchToLoginButton != null)
             switchToLoginButton.onClick.AddListener(() => ShowLoginSection());
+            
+        if (showForgotPasswordButton != null)
+            showForgotPasswordButton.onClick.AddListener(() => ShowForgotPasswordSection());
+            
+        if (backToLoginFromForgotButton != null)
+            backToLoginFromForgotButton.onClick.AddListener(() => ShowLoginSection());
+            
+        if (sendResetLinkButton != null)
+            sendResetLinkButton.onClick.AddListener(OnSendResetLinkClicked);
+            
+        if (submitResetPasswordButton != null)
+            submitResetPasswordButton.onClick.AddListener(OnSubmitResetPasswordClicked);
+            
+        if (backToLoginFromResetButton != null)
+            backToLoginFromResetButton.onClick.AddListener(() => ShowLoginSection());
         
         if (loginPasswordToggle != null)
             loginPasswordToggle.onValueChanged.AddListener(OnLoginPasswordToggleChanged);
@@ -616,23 +645,37 @@ public class AuthenticationManager : MonoBehaviour
     
     private void ShowLoginSection()
     {
-        if (loginSection != null)
-            loginSection.SetActive(true);
-        
-        if (registerSection != null)
-            registerSection.SetActive(false);
-        
+        if (loginSection != null) loginSection.SetActive(true);
+        if (registerSection != null) registerSection.SetActive(false);
+        if (forgotPasswordSection != null) forgotPasswordSection.SetActive(false);
+        if (resetPasswordSection != null) resetPasswordSection.SetActive(false);
         UpdateStatusText("");
     }
     
     private void ShowRegisterSection()
     {
-        if (loginSection != null)
-            loginSection.SetActive(false);
-        
-        if (registerSection != null)
-            registerSection.SetActive(true);
-        
+        if (loginSection != null) loginSection.SetActive(false);
+        if (registerSection != null) registerSection.SetActive(true);
+        if (forgotPasswordSection != null) forgotPasswordSection.SetActive(false);
+        if (resetPasswordSection != null) resetPasswordSection.SetActive(false);
+        UpdateStatusText("");
+    }
+
+    private void ShowForgotPasswordSection()
+    {
+        if (loginSection != null) loginSection.SetActive(false);
+        if (registerSection != null) registerSection.SetActive(false);
+        if (forgotPasswordSection != null) forgotPasswordSection.SetActive(true);
+        if (resetPasswordSection != null) resetPasswordSection.SetActive(false);
+        UpdateStatusText("");
+    }
+
+    private void ShowResetPasswordSection()
+    {
+        if (loginSection != null) loginSection.SetActive(false);
+        if (registerSection != null) registerSection.SetActive(false);
+        if (forgotPasswordSection != null) forgotPasswordSection.SetActive(false);
+        if (resetPasswordSection != null) resetPasswordSection.SetActive(true);
         UpdateStatusText("");
     }
     
@@ -725,6 +768,91 @@ public class AuthenticationManager : MonoBehaviour
                     {
                         ShowInternetPanel(OnLoginClicked);
                     }
+                }
+            });
+        }
+        else
+        {
+            UpdateStatusText("Error: Authentication Service not found!");
+            SetLoadingState(false);
+        }
+    }
+
+    private void OnSendResetLinkClicked()
+    {
+        if (!CheckInternetAndAction(OnSendResetLinkClicked)) return;
+
+        string email = forgotPasswordEmailInput != null ? forgotPasswordEmailInput.text : "";
+        
+        if (string.IsNullOrEmpty(email) || !IsValidEmail(email))
+        {
+            UpdateStatusText("Please enter a valid email address.");
+            return;
+        }
+
+        SetLoadingState(true);
+        UpdateStatusText("");
+
+        if (BackendAuthService.Instance != null)
+        {
+            BackendAuthService.Instance.ForgotPassword(email, (success, message) =>
+            {
+                SetLoadingState(false);
+                UpdateStatusText(message);
+                if (success)
+                {
+                    // Automatically switch to the reset password section
+                    ShowResetPasswordSection();
+                }
+                else if (message.ToLower().Contains("network") || message.ToLower().Contains("connect"))
+                {
+                    ShowInternetPanel(OnSendResetLinkClicked);
+                }
+            });
+        }
+        else
+        {
+            UpdateStatusText("Error: Authentication Service not found!");
+            SetLoadingState(false);
+        }
+    }
+
+    private void OnSubmitResetPasswordClicked()
+    {
+        if (!CheckInternetAndAction(OnSubmitResetPasswordClicked)) return;
+
+        string token = resetPasswordTokenInput != null ? resetPasswordTokenInput.text : "";
+        string newPassword = resetPasswordNewInput != null ? resetPasswordNewInput.text : "";
+
+        if (string.IsNullOrEmpty(token))
+        {
+            UpdateStatusText("Please enter the reset token from your email.");
+            return;
+        }
+
+        if (string.IsNullOrEmpty(newPassword) || newPassword.Length < minPasswordLength)
+        {
+            UpdateStatusText($"Password must be at least {minPasswordLength} characters.");
+            return;
+        }
+
+        SetLoadingState(true);
+        UpdateStatusText("");
+
+        if (BackendAuthService.Instance != null)
+        {
+            BackendAuthService.Instance.ResetPassword(token, newPassword, (success, message) =>
+            {
+                SetLoadingState(false);
+                UpdateStatusText(message);
+                if (success)
+                {
+                    // Go back to login screen on success
+                    ShowLoginSection();
+                }
+                else if (message.ToLower().Contains("network") || message.ToLower().Contains("connect"))
+                {
+                    ShowInternetPanel(OnSubmitResetPasswordClicked);
                 }
             });
         }

@@ -360,6 +360,78 @@ public class BackendAuthService : MonoBehaviour
     }
 
     /// <summary>
+    /// Sends a Forgot Password request to the custom Node.js server.
+    /// </summary>
+    public void ForgotPassword(string email, Action<bool, string> onComplete)
+    {
+        Debug.Log($"<color=#00ffff>[BackendAuthService] POST Request: /api/auth/forgot-password | Email: {email}</color>");
+        StartCoroutine(ForgotPasswordCoroutine(email, onComplete));
+    }
+
+    private IEnumerator ForgotPasswordCoroutine(string email, Action<bool, string> onComplete)
+    {
+        string url = baseUrl.TrimEnd('/') + "/api/auth/forgot-password"; 
+        string jsonData = $"{{\"email\":\"{email}\"}}";
+
+        using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+        {
+            byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonData);
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Forgot Password Result: {request.downloadHandler.text}</color>");
+                onComplete?.Invoke(true, "Password reset link sent! Check your email.");
+            }
+            else
+            {
+                Debug.LogError($"<color=#ff0000>[BackendAuthService] Forgot Password Error: {request.error} | {request.downloadHandler.text}</color>");
+                onComplete?.Invoke(false, request.downloadHandler.text);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Sends a Reset Password request to the custom Node.js server.
+    /// </summary>
+    public void ResetPassword(string token, string newPassword, Action<bool, string> onComplete)
+    {
+        Debug.Log($"<color=#00ffff>[BackendAuthService] POST Request: /api/auth/reset-password</color>");
+        StartCoroutine(ResetPasswordCoroutine(token, newPassword, onComplete));
+    }
+
+    private IEnumerator ResetPasswordCoroutine(string token, string newPassword, Action<bool, string> onComplete)
+    {
+        string url = baseUrl.TrimEnd('/') + "/api/auth/reset-password"; 
+        string jsonData = $"{{\"token\":\"{token}\", \"newPassword\":\"{newPassword}\"}}";
+
+        using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+        {
+            byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonData);
+            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Reset Password Result: {request.downloadHandler.text}</color>");
+                onComplete?.Invoke(true, "Password reset successfully!");
+            }
+            else
+            {
+                Debug.LogError($"<color=#ff0000>[BackendAuthService] Reset Password Error: {request.error} | {request.downloadHandler.text}</color>");
+                onComplete?.Invoke(false, request.downloadHandler.text);
+            }
+        }
+    }
+
+    /// <summary>
     /// Sends a Google Login request to the custom Node.js server.
     /// </summary>
     public void GoogleLogin(string idToken, Action<bool, string> onComplete)
