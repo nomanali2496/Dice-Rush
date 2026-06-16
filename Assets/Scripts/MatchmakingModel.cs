@@ -460,6 +460,7 @@ public class DiceRolledData
     public int d2;
     public int sum;
     public string userId;
+    public int score;
 }
 
 [Serializable]
@@ -474,6 +475,7 @@ public class NumberLockedData
 [Serializable]
 public class TapResultData
 {
+    public string userId;
     public bool correct;
     public int scoreDelta;
     public int score;
@@ -496,7 +498,7 @@ public class IconExpiredData
 public class PlayerMilestoneData
 {
     public string userId;
-    public bool reachedWinTarget;
+    public int lockedCount;
     public int score;
 }
 
