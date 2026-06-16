@@ -3694,7 +3694,7 @@ MonoBehaviour:
   showForgotPasswordButton: {fileID: 38392833}
   backToLoginFromForgotButton: {fileID: 50635576}
   resetPasswordSection: {fileID: 1725681295}
-  resetPasswordTokenInput: {fileID: 1915711909}
+  resetPasswordTokenInput: {fileID: 1732226840}
   resetPasswordNewInput: {fileID: 1915711909}
   submitResetPasswordButton: {fileID: 9608798}
   backToLoginFromResetButton: {fileID: 807939672}
@@ -38011,7 +38011,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3443405773039670259, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 43
+      value: 18.8
       objectReference: {fileID: 0}
     - target: {fileID: 5359784933632279992, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_Pivot.x
@@ -38103,7 +38103,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6127197442369528537, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 42.6
+      value: 18.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -58939,6 +58939,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UsernameField (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2491881551020858025, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3443405773039670259, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_text
       value: "\u200B"
@@ -59093,6 +59097,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5359784933632279992, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
   m_PrefabInstance: {fileID: 1732226838}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1732226840 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 357815615386397355, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
+  m_PrefabInstance: {fileID: 1732226838}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TMP_InputField
 --- !u!1 &1733254773
 GameObject:
   m_ObjectHideFlags: 0
@@ -63363,7 +63378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6127197442369528537, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_text
-      value: Email
+      value: Passwprd
       objectReference: {fileID: 0}
     - target: {fileID: 6127197442369528537, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_Enabled
@@ -71623,7 +71638,6 @@ MonoBehaviour:
   submitTicketTabButton: {fileID: 0}
   myTicketsTabButton: {fileID: 0}
   submitTicketPanel: {fileID: 1893607337}
-  subjectInput: {fileID: 968365817}
   descriptionInput: {fileID: 968365817}
   categoryDropdown: {fileID: 0}
   submitTicketButton: {fileID: 2062087044}
@@ -77092,7 +77106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3443405773039670259, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 43
+      value: 18.8
       objectReference: {fileID: 0}
     - target: {fileID: 5359784933632279992, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_Pivot.x
@@ -77188,7 +77202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6127197442369528537, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 42.6
+      value: 18.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

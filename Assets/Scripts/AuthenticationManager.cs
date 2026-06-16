@@ -72,6 +72,7 @@ public class AuthenticationManager : MonoBehaviour
     private bool isAttemptingAutoLogin = false;
     private bool isRegistering = false; // Track if we're currently registering
     private Action lastAttemptedAction = null; // Store last action for retry
+    private bool isResettingPasswordViaDeepLink = false;
     
     private void Start()
     {
@@ -153,11 +154,27 @@ public class AuthenticationManager : MonoBehaviour
         // Show loading screen initially (covers everything)
         ShowLoadingScreen();
         
+        // Subscribe to deep link activation
+        Application.deepLinkActivated += OnDeepLinkActivated;
+        
+        // Handle cold-start deep link (app launched via custom URL while not running)
+        if (!string.IsNullOrEmpty(Application.absoluteURL))
+        {
+            OnDeepLinkActivated(Application.absoluteURL);
+        }
+        
         StartInitialAuthentication();
     }
     
     private void StartInitialAuthentication()
     {
+        // Bypass auto-login if the app was launched to reset password via deep link
+        if (isResettingPasswordViaDeepLink)
+        {
+            Debug.Log("[AuthenticationManager] Bypassing initial authentication due to active reset password deep link.");
+            HideLoadingScreen();
+            return;
+        }
         // INTERNET GATE: Check internet before proceeding
         if (Application.internetReachability == NetworkReachability.NotReachable)
         {
@@ -208,6 +225,7 @@ public class AuthenticationManager : MonoBehaviour
     
     private void OnDestroy()
     {
+        Application.deepLinkActivated -= OnDeepLinkActivated;
     }
     
     private void InitializeSocialManagers()
@@ -241,6 +259,12 @@ public class AuthenticationManager : MonoBehaviour
     private System.Collections.IEnumerator AttemptAutoLoginCoroutine()
     {
         yield return null; // Wait a frame for instance stabilization
+        
+        if (isResettingPasswordViaDeepLink)
+        {
+            Debug.Log("[AuthenticationManager] Bypassing AttemptAutoLoginCoroutine due to active reset password deep link.");
+            yield break;
+        }
         
         // Check if there's an existing backend session
         if (BackendAuthService.HasStoredJWT())
@@ -1449,6 +1473,79 @@ public class AuthenticationManager : MonoBehaviour
         registerPasswordInput.contentType = isRegisterPasswordVisible ? TMP_InputField.ContentType.Standard : TMP_InputField.ContentType.Password;
         registerPasswordInput.ForceLabelUpdate();
     }
+    
+    #endregion
+    
+    #region Deep Link Handling
+    
+    private void OnDeepLinkActivated(string url)
+    {
+        if (string.IsNullOrEmpty(url)) return;
+        
+        Debug.Log($"[AuthenticationManager] Deep link activated: {url}");
+        
+        // Match reset-password URL, e.g., blingodice://open/reset-password?token=XYZ or blingodice://reset-password?token=XYZ
+        if (url.Contains("reset-password"))
+        {
+            string token = ParseQueryParam(url, "token");
+            if (!string.IsNullOrEmpty(token))
+            {
+                Debug.Log($"[AuthenticationManager] Parsed reset token successfully: {token}");
+                
+                isResettingPasswordViaDeepLink = true;
+                
+                // Transition to reset password panel and pre-fill token input field
+                ShowResetPasswordSection();
+                if (resetPasswordTokenInput != null)
+                {
+                    resetPasswordTokenInput.text = token;
+                }
+                
+                UpdateStatusText("Reset token loaded from email. Please enter your new password.");
+            }
+            else
+            {
+                Debug.LogWarning("[AuthenticationManager] Reset password deep link did not contain a valid 'token' query parameter.");
+            }
+        }
+    }
+    
+    private string ParseQueryParam(string url, string paramName)
+    {
+        try
+        {
+            int questionMarkIdx = url.IndexOf('?');
+            if (questionMarkIdx == -1 || questionMarkIdx == url.Length - 1)
+                return string.Empty;
+                
+            string queryString = url.Substring(questionMarkIdx + 1);
+            string[] pairs = queryString.Split('&');
+            foreach (string pair in pairs)
+            {
+                string[] parts = pair.Split('=');
+                if (parts.Length == 2 && string.Equals(parts[0], paramName, StringComparison.OrdinalIgnoreCase))
+                {
+                    return Uri.UnescapeDataString(parts[1]);
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"[AuthenticationManager] Error parsing query parameter '{paramName}': {e.Message}");
+        }
+        return string.Empty;
+    }
+    
+    #if UNITY_EDITOR
+    // Context menu helper to test deep link functionality directly in the Unity Editor
+    [ContextMenu("Test: Simulate Reset Password Deep Link")]
+    private void EditorSimulateResetPasswordDeepLink()
+    {
+        string dummyUrl = "blingodice://open/reset-password?token=simulated_editor_reset_token_12345";
+        Debug.Log($"[AuthenticationManager] Simulating deep link: {dummyUrl}");
+        OnDeepLinkActivated(dummyUrl);
+    }
+    #endif
     
     #endregion
 }
