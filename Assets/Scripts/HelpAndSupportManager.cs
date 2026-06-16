@@ -32,7 +32,7 @@ public class HelpAndSupportManager : MonoBehaviour
 
     [Header("Submit Ticket Panel")]
     [SerializeField] private GameObject submitTicketPanel;
-    [SerializeField] private TMP_InputField subjectInput;
+    // [SerializeField] private TMP_InputField subjectInput; // No longer used; subject is hardcoded to "Help & Support"
     [SerializeField] private TMP_InputField descriptionInput;
     [SerializeField] private TMP_Dropdown   categoryDropdown;  // options: technical, payment, account, complaint, other
     [SerializeField] private Button         submitTicketButton;
@@ -124,7 +124,7 @@ public class HelpAndSupportManager : MonoBehaviour
     {
         // Email is automatically taken from the logged-in user's profile
         string email       = PlayerModel.Email;
-        string subject     = subjectInput     != null ? subjectInput.text.Trim()     : "";
+        string subject     = "Help & Support";
         string description = descriptionInput != null ? descriptionInput.text.Trim() : "";
         string category    = GetSelectedCategory();
 
@@ -132,16 +132,6 @@ public class HelpAndSupportManager : MonoBehaviour
         if (string.IsNullOrEmpty(email) || !IsValidEmail(email))
         {
             ShowStatus("Could not read your account email. Please try logging out and back in.");
-            return;
-        }
-        if (string.IsNullOrEmpty(subject))
-        {
-            ShowStatus("Please enter a subject.");
-            return;
-        }
-        if (subject.Length < 5)
-        {
-            ShowStatus("Subject must be at least 5 characters.");
             return;
         }
         if (string.IsNullOrEmpty(description))
@@ -166,7 +156,6 @@ public class HelpAndSupportManager : MonoBehaviour
             if (success)
             {
                 // Clear form fields on success
-                if (subjectInput     != null) subjectInput.text     = "";
                 if (descriptionInput != null) descriptionInput.text = "";
                 if (categoryDropdown != null) categoryDropdown.value = 0;
             }
