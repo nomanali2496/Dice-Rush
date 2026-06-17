@@ -416,30 +416,13 @@ public class BranchInit : MonoBehaviour
     /// </summary>
     void ShareInviteLink(BranchUniversalObject universalObject, BranchLinkProperties linkProperties, string url)
     {
-        Debug.Log("[BranchInit] Sharing invite link...");
+        Debug.Log("[BranchInit] Sharing invite link using NativeShare...");
         
         string shareMessage = "Join me in Blingo Dice! Use my invite link: " + url;
         
-        // Use Branch's shareLink method which handles native sharing
-        Branch.shareLink(universalObject, linkProperties, shareMessage, (parameters, error) =>
-        {
-            if (error != null)
-            {
-                Debug.LogError("[BranchInit] ❌ Failed to share invite link: " + error);
-            }
-            else
-            {
-                Debug.Log("[BranchInit] ✅ Invite link shared successfully!");
-                Debug.Log("[BranchInit] Share completed with parameters:");
-                if (parameters != null)
-                {
-                    foreach (var param in parameters)
-                    {
-                        Debug.Log($"[BranchInit]   {param.Key}: {param.Value}");
-                    }
-                }
-            }
-        });
+        var share = new NativeShare();
+        share.SetText(shareMessage);
+        share.Share();
     }
 
     /// <summary>
