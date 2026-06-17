@@ -996,6 +996,20 @@ public class BackendAuthService : MonoBehaviour
     private Dictionary<string, List<Action<Texture2D>>> _inFlightImageRequests = new Dictionary<string, List<Action<Texture2D>>>();
     private Dictionary<string, Texture2D> _imageCache = new Dictionary<string, Texture2D>();
 
+    private string GetDiskPathForUrl(string url)
+    {
+        using (var md5 = System.Security.Cryptography.MD5.Create())
+        {
+            byte[] inputBytes = System.Text.Encoding.UTF8.GetBytes(url);
+            byte[] hashBytes = md5.ComputeHash(inputBytes);
+            
+            var sb = new System.Text.StringBuilder();
+            for (int i = 0; i < hashBytes.Length; i++) sb.Append(hashBytes[i].ToString("x2"));
+            
+            return System.IO.Path.Combine(Application.persistentDataPath, sb.ToString() + ".png");
+        }
+    }
+
     /// <summary>
     /// Downloads an image from a URL. Centralizes networking logic away from UI scripts.
     /// Uses in-flight tracking and caching to prevent duplicate network requests.
@@ -1009,6 +1023,30 @@ public class BackendAuthService : MonoBehaviour
         {
             onComplete?.Invoke(cachedTexture);
             return;
+        }
+
+        // 1.5 Check if cached on disk
+        if (!forceRefresh)
+        {
+            string diskPath = GetDiskPathForUrl(url);
+            if (System.IO.File.Exists(diskPath))
+            {
+                try
+                {
+                    byte[] fileData = System.IO.File.ReadAllBytes(diskPath);
+                    Texture2D tex = new Texture2D(2, 2);
+                    if (tex.LoadImage(fileData))
+                    {
+                        _imageCache[url] = tex;
+                        onComplete?.Invoke(tex);
+                        return;
+                    }
+                }
+                catch (Exception e)
+                {
+                    Debug.LogWarning($"[BackendAuthService] Failed to load cached image from disk: {e.Message}");
+                }
+            }
         }
 
         // 2. Check if already downloading (in-flight)
@@ -1041,6 +1079,21 @@ public class BackendAuthService : MonoBehaviour
                 {
                     Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Image Downloaded: {url}</color>");
                     _imageCache[url] = texture;
+                    
+                    // Save to disk
+                    try
+                    {
+                        string diskPath = GetDiskPathForUrl(url);
+                        byte[] rawData = request.downloadHandler.data;
+                        if (rawData != null && rawData.Length > 0)
+                        {
+                            System.IO.File.WriteAllBytes(diskPath, rawData);
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        Debug.LogWarning($"[BackendAuthService] Failed to save image to disk: {e.Message}");
+                    }
                 }
                 else
                 {
