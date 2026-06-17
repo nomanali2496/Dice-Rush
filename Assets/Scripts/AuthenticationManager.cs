@@ -825,8 +825,13 @@ public class AuthenticationManager : MonoBehaviour
                 UpdateStatusText(message);
                 if (success)
                 {
-                    // Automatically switch to the reset password section
+#if UNITY_EDITOR
+                    // Automatically switch to the reset password section in Editor for easy testing
                     ShowResetPasswordSection();
+#else
+                    // On real devices, wait for the user to click the deep link in their email
+                    Debug.Log("[AuthenticationManager] Reset email sent. Waiting for deep link from user.");
+#endif
                 }
                 else if (message.ToLower().Contains("network") || message.ToLower().Contains("connect"))
                 {

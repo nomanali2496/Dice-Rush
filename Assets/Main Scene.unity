@@ -2746,10 +2746,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 838109349}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -200.7, y: 169.5}
-  m_SizeDelta: {x: 474.6, y: 130.9}
+  m_AnchorMin: {x: 0.1578125, y: 0.61271805}
+  m_AnchorMax: {x: 0.5285938, y: 0.7545228}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &67503570
 MonoBehaviour:
@@ -9142,7 +9142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3443405773039670259, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_text
-      value: "gfdgdfgdfgdfgdfgdfg\u200B"
+      value: "\u200B"
       objectReference: {fileID: 0}
     - target: {fileID: 3443405773039670259, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
@@ -9266,7 +9266,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6127197442369528537, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6127197442369528537, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
@@ -25450,10 +25450,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1358036635}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -286.6, y: 169.5}
-  m_SizeDelta: {x: 302.8, y: 130.9}
+  m_AnchorMin: {x: 0.1578125, y: 0.61271805}
+  m_AnchorMax: {x: 0.394375, y: 0.7545228}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &750229323
 MonoBehaviour:
@@ -29274,7 +29274,7 @@ RectTransform:
   m_GameObject: {fileID: 838109348}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.89179105, y: 0.89179105, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 574423919}
@@ -38011,7 +38011,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3443405773039670259, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 18.8
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 5359784933632279992, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_Pivot.x
@@ -38103,7 +38103,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6127197442369528537, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 18.8
+      value: 42.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -45779,7 +45779,7 @@ RectTransform:
   m_GameObject: {fileID: 1358036634}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.89179105, y: 0.89179105, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 965970900}
@@ -58689,8 +58689,6 @@ GameObject:
   - component: {fileID: 1725681296}
   - component: {fileID: 1725681300}
   - component: {fileID: 1725681299}
-  - component: {fileID: 1725681298}
-  - component: {fileID: 1725681297}
   m_Layer: 5
   m_Name: ResetPasswordPanel
   m_TagString: Untagged
@@ -58718,37 +58716,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1725681297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1725681295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f3b5e2f81e74d14aa0a4ef0b2d95c7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  referenceScreenSize: {x: 1440, y: 3216}
-  keepFullScreenChildrenUnscaled: 1
-  coverBackgroundChildren: 1
---- !u!114 &1725681298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1725681295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68c10a646ef28854982cda18ea6cb230, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::QuitPanelScaler
-  referenceScreenSize: {x: 1440, y: 3216}
-  quitPanel: {fileID: 838109349}
-  button1: {fileID: 0}
-  button2: {fileID: 9608796}
 --- !u!114 &1725681299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67360,8 +67327,6 @@ GameObject:
   - component: {fileID: 2021335608}
   - component: {fileID: 2021335612}
   - component: {fileID: 2021335611}
-  - component: {fileID: 2021335610}
-  - component: {fileID: 2021335609}
   m_Layer: 5
   m_Name: ForgotPasswordPanel
   m_TagString: Untagged
@@ -67389,37 +67354,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2021335609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2021335607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f3b5e2f81e74d14aa0a4ef0b2d95c7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  referenceScreenSize: {x: 1440, y: 3216}
-  keepFullScreenChildrenUnscaled: 1
-  coverBackgroundChildren: 1
---- !u!114 &2021335610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2021335607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68c10a646ef28854982cda18ea6cb230, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::QuitPanelScaler
-  referenceScreenSize: {x: 1440, y: 3216}
-  quitPanel: {fileID: 1358036635}
-  button1: {fileID: 0}
-  button2: {fileID: 393250121}
 --- !u!114 &2021335611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77106,7 +77040,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3443405773039670259, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 18.8
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 5359784933632279992, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_Pivot.x
@@ -77202,7 +77136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6127197442369528537, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 18.8
+      value: 42.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
