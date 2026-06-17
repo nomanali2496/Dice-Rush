@@ -70087,6 +70087,7 @@ MonoBehaviour:
   winnerScreenScript: {fileID: 1620104688}
   winnerScreenLobbyButton: {fileID: 1663080490}
   calculateLoadingScreen: {fileID: 416799079}
+  forfeitLoadingScreen: {fileID: 1913866286}
   countdownText: {fileID: 1576471693}
   countdownTextShadow: {fileID: 762145800}
   countdownDuration: 0

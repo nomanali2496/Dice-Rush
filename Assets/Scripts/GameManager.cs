@@ -84,6 +84,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private WinnerScreen winnerScreenScript; // Winner screen script for animations
     [SerializeField] private Button winnerScreenLobbyButton; // Lobby button on winner screen
     [SerializeField] private GameObject calculateLoadingScreen; // Loading screen shown while calculating results
+    [SerializeField] private GameObject forfeitLoadingScreen; // Loading screen shown when user forfeits
     
     private float lastAwardedCash = 0f;
     private int lastAwardedChips = 0;
@@ -305,7 +306,7 @@ public class GameManager : MonoBehaviour
             winnerScreenDelayCoroutine = null;
         }
 
-        if (calculateLoadingScreen != null) calculateLoadingScreen.SetActive(false);
+        if (forfeitLoadingScreen != null) forfeitLoadingScreen.SetActive(false);
         if (winnerScreen != null) winnerScreen.SetActive(false);
         if (gameplayScreen != null) gameplayScreen.SetActive(false);
 
@@ -1026,9 +1027,9 @@ public class GameManager : MonoBehaviour
         localPlayerForfeited = true;
         
         // Show loading screen while waiting for server to acknowledge forfeit
-        if (calculateLoadingScreen != null)
+        if (forfeitLoadingScreen != null)
         {
-            calculateLoadingScreen.SetActive(true);
+            forfeitLoadingScreen.SetActive(true);
         }
 
         // Notify listeners (like SettingManager) that gameplay music should stop
