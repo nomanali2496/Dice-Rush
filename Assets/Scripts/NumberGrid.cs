@@ -328,7 +328,7 @@ public class NumberGrid : MonoBehaviour
                 int spriteIdx = powerupAssignmentCount % powerupSprites.Length;
                 powerupAssignmentCount++;
                 
-                CreatePowerupBox(spriteIdx, i);
+                CreatePowerupBox(spriteIdx, i, number);
             }
             else
             {
@@ -573,7 +573,7 @@ public class NumberGrid : MonoBehaviour
     /// <summary>
     /// Creates a powerup box at the specified grid position
     /// </summary>
-    private void CreatePowerupBox(int powerupSpriteIndex, int gridPosition)
+    private void CreatePowerupBox(int powerupSpriteIndex, int gridPosition, int powerupValue = -1)
     {
         if (numberBoxPrefab == null)
         {
@@ -611,7 +611,7 @@ public class NumberGrid : MonoBehaviour
         BoxData boxData = new BoxData
         {
             boxObject = box,
-            number = -1, // Powerups don't have numbers
+            number = powerupValue, // Store the actual negative powerup value
             isPowerup = true,
             isSelected = false,
             selectedByPlayer = PlayerType.Player,
@@ -841,16 +841,16 @@ public class NumberGrid : MonoBehaviour
         
         foreach (BoxData boxData in boxDataList)
         {
-            if (boxData.isPowerup || boxData.selectButton == null)
+            if (boxData.selectButton == null)
             {
-                continue; // Skip powerups and boxes without buttons
+                continue;
             }
             
-            // For Player: Enable button only if box number matches player's dice sum and box is not selected
+            // For Player: Enable button only if box is not selected and gameplay is active (currentDiceSum > 0)
             // For CPU: Buttons are not interactable (CPU selects programmatically)
             if (playerType == PlayerType.Player)
             {
-                // Allow all unselected boxes to be interactable so we can detect "Wrong" clicks for -50 penalty
+                // Both number boxes and powerups should be interactable during gameplay if not selected
                 bool shouldBeInteractable = !boxData.isSelected && currentDiceSum > 0;
                 boxData.selectButton.interactable = shouldBeInteractable;
             }
@@ -939,7 +939,7 @@ public class NumberGrid : MonoBehaviour
                     LockPowerup(boxData, PlayerType.Player, -1);
                     
                     // Trigger events (same as OnPowerupButtonClicked)
-                    OnBoxSelected?.Invoke(this, -1, boxData.boxObject);
+                    OnBoxSelected?.Invoke(this, boxData.number, boxData.boxObject);
                     CheckIfAllBoxesSelected();
                 }
                 else
@@ -1025,6 +1025,13 @@ public class NumberGrid : MonoBehaviour
             int num = (lastTappedBoxData != null) ? lastTappedBoxData.number : -1;
             
             OnWrongBoxSelected?.Invoke(this, num, targetObj); 
+            
+            // Re-enable select button if the box was not successfully locked
+            if (lastTappedBoxData != null && !lastTappedBoxData.isSelected && lastTappedBoxData.selectButton != null)
+            {
+                lastTappedBoxData.selectButton.interactable = true;
+            }
+            
             Debug.Log("<color=#FF0000>❌ Server says: WRONG TAP!</color>");
         }
         else
@@ -1767,12 +1774,6 @@ public class NumberGrid : MonoBehaviour
             // powerupBox.powerupImage.gameObject.SetActive(true); // Already visible
         }
         
-        // Disable button (make it unselectable)
-        if (powerupBox.selectButton != null)
-        {
-            powerupBox.selectButton.interactable = false;
-        }
-        
         // Hide timer UI (slider and text)
         if (powerupTimerSlider != null)
         {
@@ -1785,7 +1786,7 @@ public class NumberGrid : MonoBehaviour
             powerupTimerText.gameObject.SetActive(false);
         }
         
-        Debug.Log($"[NumberGrid] Powerup animation stopped and disabled!");
+        Debug.Log($"[NumberGrid] Powerup animation stopped!");
     }
     
     /// <summary>
@@ -1805,14 +1806,6 @@ public class NumberGrid : MonoBehaviour
         if (!boxData.isPowerup)
             return;
 
-        // Re-check visibility AFTER disabling the button.
-        // If the socket callback already ran this frame and cleared the flag, bail out.
-        if (!boxData.isPowerupVisible)
-        {
-            Debug.LogWarning("[NumberGrid] Powerup tap rejected locally — icon not active (race condition caught).");
-            return;
-        }
-
         // Store this as the last tapped box for visual feedback from server
         lastTappedBoxData = boxData;
 
@@ -1824,25 +1817,31 @@ public class NumberGrid : MonoBehaviour
             int index = boxDataList.IndexOf(boxData);
             if (index != -1)
             {
-                // Optimistically lock — local validity already confirmed above.
-                Debug.Log("<color=#00FF00>⚡ [Client-Side Prediction] Optimistically locking powerup instantly.</color>");
-                LockPowerup(boxData, PlayerType.Player, -1);
-                OnBoxSelected?.Invoke(this, -1, boxData.boxObject);
-                CheckIfAllBoxesSelected();
+                // Optimistically lock ONLY if the powerup is actually active/visible on the client
+                if (boxData.isPowerupVisible)
+                {
+                    Debug.Log("<color=#00FF00>⚡ [Client-Side Prediction] Optimistically locking powerup instantly.</color>");
+                    LockPowerup(boxData, PlayerType.Player, -1);
+                    OnBoxSelected?.Invoke(this, boxData.number, boxData.boxObject);
+                    CheckIfAllBoxesSelected();
+                }
 
                 // Always emit — server is authority; it will send tapResult=false if icon expired or taken.
                 Debug.Log($"[NumberGrid] Emitting powerup tap: index={index}, sequence={tapSequence}");
-                MatchmakingModel.EmitTapNumber(roomId, index, 0, tapSequence);
+                MatchmakingModel.EmitTapNumber(roomId, index, boxData.number, tapSequence);
                 tapSequence++;
             }
         }
         else
         {
             // Fallback for offline/network testing (original logic)
-            Debug.Log("[NumberGrid] No active match, locking powerup locally.");
-            LockPowerup(boxData, PlayerType.Player, -1);
-            OnBoxSelected?.Invoke(this, -1, boxData.boxObject);
-            CheckIfAllBoxesSelected();
+            if (boxData.isPowerupVisible)
+            {
+                Debug.Log("[NumberGrid] No active match, locking powerup locally.");
+                LockPowerup(boxData, PlayerType.Player, -1);
+                OnBoxSelected?.Invoke(this, boxData.number, boxData.boxObject);
+                CheckIfAllBoxesSelected();
+            }
         }
     }
     
@@ -1881,7 +1880,7 @@ public class NumberGrid : MonoBehaviour
         LockPowerup(boxData, playerType, cpuIndex);
         
         // Trigger event
-        OnBoxSelected?.Invoke(this, -1, boxData.boxObject);
+        OnBoxSelected?.Invoke(this, boxData.number, boxData.boxObject);
         
         Debug.Log($"[NumberGrid] Powerup selected by {playerType}!");
         

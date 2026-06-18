@@ -890,7 +890,7 @@ public class GameManager : MonoBehaviour
             // NEW SCORING: 
             // - Selecting correct number: +100
             // - Selecting icon (if number is -1): +200
-            if (number == -1) {
+            if (number < 0) {
                 localMatchScore += 200;
                 Debug.Log($"[GameManager] 💎 Icon Selected! +200 Points (Total: {localMatchScore})");
                 
