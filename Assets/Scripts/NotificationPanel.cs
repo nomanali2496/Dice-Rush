@@ -20,9 +20,6 @@ public class NotificationPanel : MonoBehaviour
         {
             closeButton.onClick.AddListener(OnCloseButtonClicked);
         }
-        
-        // Hide by default on awake
-        gameObject.SetActive(false);
     }
 
     /// <summary>

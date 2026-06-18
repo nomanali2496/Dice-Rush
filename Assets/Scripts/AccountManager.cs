@@ -26,6 +26,8 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
     [Header("Withdrawal References")]
     [SerializeField] private UnityEngine.UI.Button withdrawButton;
     [SerializeField] private TMPro.TMP_InputField withdrawAmountInput;
+    [SerializeField] private NotificationPanel notificationPanel;
+    [SerializeField] private GameObject loadingScreen;
     
     /// <summary>
     /// Internal representation of transaction history data
@@ -538,6 +540,11 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
             withdrawButton.interactable = false;
         }
 
+        if (loadingScreen != null)
+        {
+            loadingScreen.SetActive(true);
+        }
+
         if (BackendAuthService.Instance != null)
         {
             BackendAuthService.Instance.Withdraw(amount, (success, response) =>
@@ -545,6 +552,11 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
                 if (withdrawButton != null)
                 {
                     withdrawButton.interactable = true;
+                }
+
+                if (loadingScreen != null)
+                {
+                    loadingScreen.SetActive(false);
                 }
 
                 if (success)
@@ -556,12 +568,58 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
                         withdrawAmountInput.text = "$";
                     }
                     
+                    // Show success message in Notification Panel
+                    string displayMessage = "Withdrawal request submitted successfully.";
+                    if (!string.IsNullOrEmpty(response))
+                    {
+                        try
+                        {
+                            WithdrawalResponse res = JsonUtility.FromJson<WithdrawalResponse>(response);
+                            if (res != null && !string.IsNullOrEmpty(res.message))
+                            {
+                                displayMessage = res.message;
+                            }
+                        }
+                        catch (System.Exception e)
+                        {
+                            Debug.LogWarning("[AccountManager] Failed to parse withdrawal response: " + e.Message);
+                        }
+                    }
+
+                    if (notificationPanel != null)
+                    {
+                        notificationPanel.Show(displayMessage);
+                    }
+                    
                     // Refresh transaction history to show new withdrawal entry
                     RefreshTransactionHistory();
                 }
                 else
                 {
                     Debug.LogError($"[AccountManager] Withdrawal failed: {response}");
+
+                    // Show error message in Notification Panel
+                    string errorMessage = "Withdrawal failed. Please try again.";
+                    if (!string.IsNullOrEmpty(response))
+                    {
+                        try
+                        {
+                            WithdrawalResponse res = JsonUtility.FromJson<WithdrawalResponse>(response);
+                            if (res != null && !string.IsNullOrEmpty(res.message))
+                            {
+                                errorMessage = res.message;
+                            }
+                        }
+                        catch (System.Exception e)
+                        {
+                            Debug.LogWarning("[AccountManager] Failed to parse withdrawal error response: " + e.Message);
+                        }
+                    }
+
+                    if (notificationPanel != null)
+                    {
+                        notificationPanel.Show(errorMessage);
+                    }
                 }
             });
         }
@@ -571,7 +629,18 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
             {
                 withdrawButton.interactable = true;
             }
+
+            if (loadingScreen != null)
+            {
+                loadingScreen.SetActive(false);
+            }
+
             Debug.LogError("[AccountManager] BackendAuthService Instance is null!");
+
+            if (notificationPanel != null)
+            {
+                notificationPanel.Show("System error: Connection service not found.");
+            }
         }
     }
     
@@ -598,5 +667,12 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
     }
     
     #endregion
+
+    [System.Serializable]
+    private class WithdrawalResponse
+    {
+        public bool success;
+        public string message;
+    }
 }
 
