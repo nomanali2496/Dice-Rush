@@ -385,14 +385,47 @@ public class BackendAuthService : MonoBehaviour
             if (request.result == UnityWebRequest.Result.Success)
             {
                 Debug.Log($"<color=#00ff00>[BackendAuthService] SUCCESS: Forgot Password Result: {request.downloadHandler.text}</color>");
-                onComplete?.Invoke(true, "Password reset link sent! Check your email.");
+                string msg = "If this email is registered, you will receive a password reset link shortly.";
+                try
+                {
+                    ForgotPasswordResponse response = JsonUtility.FromJson<ForgotPasswordResponse>(request.downloadHandler.text);
+                    if (response != null && !string.IsNullOrEmpty(response.message))
+                    {
+                        msg = response.message;
+                    }
+                }
+                catch (Exception e)
+                {
+                    Debug.LogWarning($"[BackendAuthService] Failed to parse forgot password response: {e.Message}");
+                }
+                onComplete?.Invoke(true, msg);
             }
             else
             {
                 Debug.LogError($"<color=#ff0000>[BackendAuthService] Forgot Password Error: {request.error} | {request.downloadHandler.text}</color>");
-                onComplete?.Invoke(false, request.downloadHandler.text);
+                string errorMsg = request.downloadHandler.text;
+                try
+                {
+                    ForgotPasswordResponse response = JsonUtility.FromJson<ForgotPasswordResponse>(request.downloadHandler.text);
+                    if (response != null && !string.IsNullOrEmpty(response.message))
+                    {
+                        errorMsg = response.message;
+                    }
+                }
+                catch (Exception)
+                {
+                    // Fallback to raw text
+                }
+                onComplete?.Invoke(false, errorMsg);
             }
         }
+    }
+
+    [Serializable]
+    private class ForgotPasswordResponse
+    {
+        public bool success;
+        public string message;
     }
 
     /// <summary>

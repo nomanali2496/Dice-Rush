@@ -14,6 +14,7 @@ public class AuthenticationManager : MonoBehaviour
     [SerializeField] private GameObject loginRegisterPanel;
     [SerializeField] private GameObject splashScreenPanel;
     [SerializeField] private GameObject loadingScreenPanel; // Loading screen that shows until login screen hides
+    [SerializeField] private GameObject loadingScreen; // Different loading screen UI
     [SerializeField] private GameObject internetPanel; // Internet error panel
     [SerializeField] private Button internetRetryButton; // Retry button on internet panel
     
@@ -51,12 +52,8 @@ public class AuthenticationManager : MonoBehaviour
     [SerializeField] private Button showForgotPasswordButton;
     [SerializeField] private Button backToLoginFromForgotButton;
     
-    [Header("Reset Password UI")]
-    [SerializeField] private GameObject resetPasswordSection;
-    [SerializeField] private TMP_InputField resetPasswordTokenInput;
-    [SerializeField] private TMP_InputField resetPasswordNewInput;
-    [SerializeField] private Button submitResetPasswordButton;
-    [SerializeField] private Button backToLoginFromResetButton;
+    [Header("Notification UI")]
+    [SerializeField] private NotificationPanel notificationPanel;
     
     [Header("Status")]
     [SerializeField] private TextMeshProUGUI statusText;
@@ -128,11 +125,7 @@ public class AuthenticationManager : MonoBehaviour
         if (sendResetLinkButton != null)
             sendResetLinkButton.onClick.AddListener(OnSendResetLinkClicked);
             
-        if (submitResetPasswordButton != null)
-            submitResetPasswordButton.onClick.AddListener(OnSubmitResetPasswordClicked);
-            
-        if (backToLoginFromResetButton != null)
-            backToLoginFromResetButton.onClick.AddListener(() => ShowLoginSection());
+
         
         if (loginPasswordToggle != null)
             loginPasswordToggle.onValueChanged.AddListener(OnLoginPasswordToggleChanged);
@@ -634,7 +627,9 @@ public class AuthenticationManager : MonoBehaviour
     /// </summary>
     private void ShowLoadingScreen()
     {
-        if (loadingScreenPanel != null)
+        if (loadingScreen != null)
+            loadingScreen.SetActive(true);
+        else if (loadingScreenPanel != null)
             loadingScreenPanel.SetActive(true);
     }
     
@@ -643,7 +638,9 @@ public class AuthenticationManager : MonoBehaviour
     /// </summary>
     private void HideLoadingScreen()
     {
-        if (loadingScreenPanel != null)
+        if (loadingScreen != null)
+            loadingScreen.SetActive(false);
+        else if (loadingScreenPanel != null)
             loadingScreenPanel.SetActive(false);
     }
     
@@ -672,7 +669,6 @@ public class AuthenticationManager : MonoBehaviour
         if (loginSection != null) loginSection.SetActive(true);
         if (registerSection != null) registerSection.SetActive(false);
         if (forgotPasswordSection != null) forgotPasswordSection.SetActive(false);
-        if (resetPasswordSection != null) resetPasswordSection.SetActive(false);
         UpdateStatusText("");
     }
     
@@ -681,7 +677,6 @@ public class AuthenticationManager : MonoBehaviour
         if (loginSection != null) loginSection.SetActive(false);
         if (registerSection != null) registerSection.SetActive(true);
         if (forgotPasswordSection != null) forgotPasswordSection.SetActive(false);
-        if (resetPasswordSection != null) resetPasswordSection.SetActive(false);
         UpdateStatusText("");
     }
 
@@ -690,16 +685,6 @@ public class AuthenticationManager : MonoBehaviour
         if (loginSection != null) loginSection.SetActive(false);
         if (registerSection != null) registerSection.SetActive(false);
         if (forgotPasswordSection != null) forgotPasswordSection.SetActive(true);
-        if (resetPasswordSection != null) resetPasswordSection.SetActive(false);
-        UpdateStatusText("");
-    }
-
-    private void ShowResetPasswordSection()
-    {
-        if (loginSection != null) loginSection.SetActive(false);
-        if (registerSection != null) registerSection.SetActive(false);
-        if (forgotPasswordSection != null) forgotPasswordSection.SetActive(false);
-        if (resetPasswordSection != null) resetPasswordSection.SetActive(true);
         UpdateStatusText("");
     }
     
@@ -814,6 +799,8 @@ public class AuthenticationManager : MonoBehaviour
             return;
         }
 
+        // Show loading screen panel and set loading state
+        ShowLoadingScreen();
         SetLoadingState(true);
         UpdateStatusText("");
 
@@ -821,73 +808,67 @@ public class AuthenticationManager : MonoBehaviour
         {
             BackendAuthService.Instance.ForgotPassword(email, (success, message) =>
             {
+                // Hide loading screen panel and set loading state
+                HideLoadingScreen();
                 SetLoadingState(false);
                 UpdateStatusText(message);
+
                 if (success)
                 {
-#if UNITY_EDITOR
-                    // Automatically switch to the reset password section in Editor for easy testing
-                    ShowResetPasswordSection();
-#else
-                    // On real devices, wait for the user to click the deep link in their email
-                    Debug.Log("[AuthenticationManager] Reset email sent. Waiting for deep link from user.");
-#endif
+                    if (sendResetLinkButton != null)
+                    {
+                        sendResetLinkButton.interactable = false;
+                    }
+
+                    if (forgotPasswordSection != null)
+                    {
+                        forgotPasswordSection.SetActive(false);
+                    }
+
+                    if (notificationPanel != null)
+                    {
+                        notificationPanel.gameObject.SetActive(true);
+                        notificationPanel.Show(message, () =>
+                        {
+                            ShowLoginSection();
+                            if (sendResetLinkButton != null)
+                            {
+                                sendResetLinkButton.interactable = true;
+                            }
+                        });
+                    }
+                    else
+                    {
+                        ShowLoginSection();
+                        if (sendResetLinkButton != null)
+                        {
+                            sendResetLinkButton.interactable = true;
+                        }
+                    }
                 }
-                else if (message.ToLower().Contains("network") || message.ToLower().Contains("connect"))
+                else
                 {
-                    ShowInternetPanel(OnSendResetLinkClicked);
+                    if (notificationPanel != null)
+                    {
+                        notificationPanel.gameObject.SetActive(true);
+                        notificationPanel.Show(message, null);
+                    }
+                    else
+                    {
+                        UpdateStatusText(message);
+                    }
+
+                    if (message.ToLower().Contains("network") || message.ToLower().Contains("connect"))
+                    {
+                        ShowInternetPanel(OnSendResetLinkClicked);
+                    }
                 }
             });
         }
         else
         {
             UpdateStatusText("Error: Authentication Service not found!");
-            SetLoadingState(false);
-        }
-    }
-
-    private void OnSubmitResetPasswordClicked()
-    {
-        if (!CheckInternetAndAction(OnSubmitResetPasswordClicked)) return;
-
-        string token = resetPasswordTokenInput != null ? resetPasswordTokenInput.text : "";
-        string newPassword = resetPasswordNewInput != null ? resetPasswordNewInput.text : "";
-
-        if (string.IsNullOrEmpty(token))
-        {
-            UpdateStatusText("Please enter the reset token from your email.");
-            return;
-        }
-
-        if (string.IsNullOrEmpty(newPassword) || newPassword.Length < minPasswordLength)
-        {
-            UpdateStatusText($"Password must be at least {minPasswordLength} characters.");
-            return;
-        }
-
-        SetLoadingState(true);
-        UpdateStatusText("");
-
-        if (BackendAuthService.Instance != null)
-        {
-            BackendAuthService.Instance.ResetPassword(token, newPassword, (success, message) =>
-            {
-                SetLoadingState(false);
-                UpdateStatusText(message);
-                if (success)
-                {
-                    // Go back to login screen on success
-                    ShowLoginSection();
-                }
-                else if (message.ToLower().Contains("network") || message.ToLower().Contains("connect"))
-                {
-                    ShowInternetPanel(OnSubmitResetPasswordClicked);
-                }
-            });
-        }
-        else
-        {
-            UpdateStatusText("Error: Authentication Service not found!");
+            HideLoadingScreen();
             SetLoadingState(false);
         }
     }
@@ -1489,29 +1470,10 @@ public class AuthenticationManager : MonoBehaviour
         
         Debug.Log($"[AuthenticationManager] Deep link activated: {url}");
         
-        // Match reset-password URL, e.g., blingodice://open/reset-password?token=XYZ or blingodice://reset-password?token=XYZ
+        // Match reset-password URL - deprecated since reset password is now handled via web page
         if (url.Contains("reset-password"))
         {
-            string token = ParseQueryParam(url, "token");
-            if (!string.IsNullOrEmpty(token))
-            {
-                Debug.Log($"[AuthenticationManager] Parsed reset token successfully: {token}");
-                
-                isResettingPasswordViaDeepLink = true;
-                
-                // Transition to reset password panel and pre-fill token input field
-                ShowResetPasswordSection();
-                if (resetPasswordTokenInput != null)
-                {
-                    resetPasswordTokenInput.text = token;
-                }
-                
-                UpdateStatusText("Reset token loaded from email. Please enter your new password.");
-            }
-            else
-            {
-                Debug.LogWarning("[AuthenticationManager] Reset password deep link did not contain a valid 'token' query parameter.");
-            }
+            Debug.Log("[AuthenticationManager] Reset password deep link ignored because reset is now handled via web page.");
         }
     }
     
