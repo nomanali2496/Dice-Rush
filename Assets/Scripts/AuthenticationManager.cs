@@ -57,6 +57,7 @@ public class AuthenticationManager : MonoBehaviour
     
     [Header("Status")]
     [SerializeField] private TextMeshProUGUI statusText;
+    [SerializeField] private TextMeshProUGUI registerStatusText;
     // [SerializeField] private GameObject loadingIndicator;
     
     [Header("Settings")]
@@ -143,6 +144,8 @@ public class AuthenticationManager : MonoBehaviour
         // Hide status text by default
         if (statusText != null)
             statusText.gameObject.SetActive(false);
+        if (registerStatusText != null)
+            registerStatusText.gameObject.SetActive(false);
         
         // Show loading screen initially (covers everything)
         ShowLoadingScreen();
@@ -1156,7 +1159,7 @@ public class AuthenticationManager : MonoBehaviour
         }
         
         SetLoadingState(true);
-        UpdateStatusText("");
+        UpdateRegisterStatusText("");
         isRegistering = true; // Mark that we're registering
         
         if (BackendAuthService.Instance != null)
@@ -1169,7 +1172,7 @@ public class AuthenticationManager : MonoBehaviour
                 }
                 else
                 {
-                    UpdateStatusText(message);
+                    UpdateRegisterStatusText(message);
                     SetLoadingState(false);
                     isRegistering = false;
                     
@@ -1188,42 +1191,41 @@ public class AuthenticationManager : MonoBehaviour
         }
         else
         {
-            UpdateStatusText("Error: BackendAuthService not found!");
+            UpdateRegisterStatusText("Error: BackendAuthService not found!");
             SetLoadingState(false);
             isRegistering = false;
         }
-
     }
     
     private bool ValidateRegistration(string name, string email, string password)
     {
         if (string.IsNullOrEmpty(name))
         {
-            UpdateStatusText("Please enter your name!");
+            UpdateRegisterStatusText("Please enter your name!");
             return false;
         }
         
         if (string.IsNullOrEmpty(email))
         {
-            UpdateStatusText("Please enter your email!");
+            UpdateRegisterStatusText("Please enter your email!");
             return false;
         }
         
         if (!IsValidEmail(email))
         {
-            UpdateStatusText("Please enter a valid email address!");
+            UpdateRegisterStatusText("Please enter a valid email address!");
             return false;
         }
         
         if (string.IsNullOrEmpty(password))
         {
-            UpdateStatusText("Please enter a password!");
+            UpdateRegisterStatusText("Please enter a password!");
             return false;
         }
         
         if (password.Length < minPasswordLength)
         {
-            UpdateStatusText($"Password must be at least {minPasswordLength} characters!");
+            UpdateRegisterStatusText($"Password must be at least {minPasswordLength} characters!");
             return false;
         }
         
@@ -1421,6 +1423,33 @@ public class AuthenticationManager : MonoBehaviour
 
         statusText.text = displayMessage;
         statusText.gameObject.SetActive(true);
+    }
+
+    private void UpdateRegisterStatusText(string message)
+    {
+        if (registerStatusText == null) return;
+
+        if (string.IsNullOrEmpty(message))
+        {
+            registerStatusText.gameObject.SetActive(false);
+            registerStatusText.text = "";
+            return;
+        }
+
+        string displayMessage = message;
+        if (message.TrimStart().StartsWith("{"))
+        {
+            try
+            {
+                var parsed = JsonUtility.FromJson<ServerErrorResponse>(message);
+                if (!string.IsNullOrEmpty(parsed.message))
+                    displayMessage = parsed.message;
+            }
+            catch { /* fallback to raw message */ }
+        }
+
+        registerStatusText.text = displayMessage;
+        registerStatusText.gameObject.SetActive(true);
     }
 
     [System.Serializable]
