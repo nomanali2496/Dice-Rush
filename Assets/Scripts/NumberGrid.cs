@@ -169,6 +169,7 @@ public class NumberGrid : MonoBehaviour
         MatchmakingModel.OnTapResultEvent += HandleServerTapResult;
         MatchmakingModel.OnIconActivatedEvent += HandleServerIconActivated;
         MatchmakingModel.OnIconExpiredEvent += HandleServerIconExpired;
+        MatchmakingModel.OnSocketErrorEvent += HandleSocketError;
         
         // Initially disable all buttons until dice are rolled
         UpdateBoxInteractability();
@@ -1038,6 +1039,24 @@ public class NumberGrid : MonoBehaviour
         {
             Debug.Log("<color=#00FF00>✅ Server says: CORRECT TAP! Optimistic lock confirmed.</color>");
         }
+    }
+
+    private void HandleSocketError(string error)
+    {
+        // If a socket error occurs (like "Sequence violation"), roll back the optimistic UI lock
+        if (lastTappedBoxData != null && lastTappedBoxData.isSelected && lastTappedBoxData.selectedByPlayer == PlayerType.Player)
+        {
+            Debug.LogWarning($"[NumberGrid] Rolling back optimistic lock due to socket error: {error}");
+            
+            if (lastTappedBoxData.isPowerup)
+                RollbackPowerupLock(lastTappedBoxData);
+            else
+                RollbackBoxLock(lastTappedBoxData);
+        }
+        
+        // Reset tap state so the player can attempt to tap a box again for this roll
+        hasTappedThisRollPlayer = false;
+        UpdateBoxInteractability(PlayerType.Player);
     }
 
     /// <summary>
@@ -1988,6 +2007,7 @@ public class NumberGrid : MonoBehaviour
         MatchmakingModel.OnTapResultEvent -= HandleServerTapResult;
         MatchmakingModel.OnIconActivatedEvent -= HandleServerIconActivated;
         MatchmakingModel.OnIconExpiredEvent -= HandleServerIconExpired;
+        MatchmakingModel.OnSocketErrorEvent -= HandleSocketError;
 
         StopPowerupTimer();
         ClearGrid();
