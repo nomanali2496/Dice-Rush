@@ -18,6 +18,7 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
     [SerializeField] private float cellSize = 100f; // Height of each transaction row cell
 
     [Header("Balance Display")]
+    [SerializeField] private GameObject accountPanel;                          // Reference to the account panel UI GameObject
     [SerializeField] private TMPro.TextMeshProUGUI accountBalanceText;        // Main account balance label
     [SerializeField] private TMPro.TextMeshProUGUI accountBalanceShadowText;  // Shadow copy of account balance
     [SerializeField] private TMPro.TextMeshProUGUI winningBalanceText;        // Main winning balance label
@@ -84,6 +85,53 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
     private void OnDisable()
     {
         PlayerModel.OnDataUpdated -= RefreshBalanceUI;
+    }
+
+    /// <summary>
+    /// Opens the account panel UI and triggers a profile/balance fetch and transaction history refresh.
+    /// </summary>
+    public void OpenAccountPanel()
+    {
+        if (accountPanel != null)
+        {
+            accountPanel.SetActive(true);
+        }
+
+        // Fetch latest profile from backend to show live balance
+        if (BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
+        {
+            BackendAuthService.Instance.GetProfile((success, msg) =>
+            {
+                if (!success)
+                    Debug.LogWarning("[AccountManager] GetProfile failed: " + msg);
+            });
+        }
+        else
+        {
+            // PlayerModel already has cached data — display it immediately
+            RefreshBalanceUI();
+        }
+
+        // Refresh transaction history
+        if (isInitialized)
+        {
+            RefreshTransactionHistory();
+        }
+        else
+        {
+            InitializeTransactionHistory();
+        }
+    }
+
+    /// <summary>
+    /// Closes the account panel UI.
+    /// </summary>
+    public void CloseAccountPanel()
+    {
+        if (accountPanel != null)
+        {
+            accountPanel.SetActive(false);
+        }
     }
 
     /// <summary>
@@ -591,6 +639,13 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
                         notificationPanel.Show(displayMessage);
                     }
                     
+                    // Fetch latest profile to update live balances after withdrawal
+                    BackendAuthService.Instance.GetProfile((profileSuccess, profileMsg) =>
+                    {
+                        if (!profileSuccess)
+                            Debug.LogWarning("[AccountManager] Failed to refresh profile balance after withdrawal: " + profileMsg);
+                    });
+
                     // Refresh transaction history to show new withdrawal entry
                     RefreshTransactionHistory();
                 }
