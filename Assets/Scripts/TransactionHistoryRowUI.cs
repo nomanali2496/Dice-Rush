@@ -43,7 +43,7 @@ public class TransactionHistoryRowUI : EnhancedScrollerCellView
     [SerializeField] private TextMeshProUGUI dateText; // Date text component
     
     [Header("Amount Text")]
-    [SerializeField] private TextMeshProUGUI amountText; // Amount text component (will show with $ prefix)
+    [SerializeField] private TextMeshProUGUI amountText; // Amount text component (will show with $ postfix)
     
     [Header("Type Text")]
     [UnityEngine.Serialization.FormerlySerializedAs("balanceTypeText")]
@@ -90,10 +90,10 @@ public class TransactionHistoryRowUI : EnhancedScrollerCellView
             dateText.text = date;
         }
         
-        // Setup amount text with $ prefix
+        // Setup amount text with $ postfix
         if (amountText != null)
         {
-            amountText.text = "$" + Mathf.RoundToInt(amount).ToString();
+            amountText.text = Mathf.RoundToInt(amount).ToString() + "$";
         }
         
         // Setup status image
@@ -216,7 +216,7 @@ public class TransactionHistoryRowUI : EnhancedScrollerCellView
     {
         if (amountText != null)
         {
-            amountText.text = "$" + Mathf.RoundToInt(newAmount).ToString();
+            amountText.text = Mathf.RoundToInt(newAmount).ToString() +"$";
         }
         
         // Update current data if exists

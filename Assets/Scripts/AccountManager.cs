@@ -572,11 +572,7 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
         float amount = 10.00f;
         if (withdrawAmountInput != null)
         {
-            string amountText = withdrawAmountInput.text.Trim();
-            if (amountText.StartsWith("$"))
-            {
-                amountText = amountText.Substring(1).Trim();
-            }
+            string amountText = withdrawAmountInput.text.Replace("$", "").Trim();
             if (float.TryParse(amountText, out float parsedAmount))
             {
                 amount = parsedAmount;
@@ -706,15 +702,16 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
         // Remove listener temporarily to prevent recursion
         withdrawAmountInput.onValueChanged.RemoveListener(OnAmountValueChanged);
         
-        if (string.IsNullOrEmpty(value))
+        if (string.IsNullOrEmpty(value) || value == "$")
         {
             withdrawAmountInput.text = "$";
-            withdrawAmountInput.caretPosition = 1;
+            withdrawAmountInput.caretPosition = 0; // Cursor before the $ sign
         }
-        else if (!value.StartsWith("$"))
+        else if (!value.EndsWith("$"))
         {
-            withdrawAmountInput.text = "$" + value.Replace("$", "");
-            withdrawAmountInput.caretPosition = withdrawAmountInput.text.Length;
+            string numbers = value.Replace("$", "");
+            withdrawAmountInput.text = numbers + "$";
+            withdrawAmountInput.caretPosition = numbers.Length; // Cursor before the $ sign
         }
         
         // Restore listener
