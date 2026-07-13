@@ -783,18 +783,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b166dc7a6a8f9364caf0b664d5729d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfiniteBackgroundScroller
-  backgroundPanels:
-  - {fileID: 335874410}
-  - {fileID: 677007385}
-  scrollDirection: 0
-  scrollSpeed: 0.5
-  autoStart: 1
-  panelSize: 3216
-  autoDetectPanelSize: 1
-  autoSetupByTag: 1
-  backgroundTag: Background
-  targetCamera: {fileID: 0}
-  resetOffset: 0.01
 --- !u!1 &27660295
 GameObject:
   m_ObjectHideFlags: 0
@@ -12791,18 +12779,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b166dc7a6a8f9364caf0b664d5729d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfiniteBackgroundScroller
-  backgroundPanels:
-  - {fileID: 1960384326}
-  - {fileID: 1158433972}
-  scrollDirection: 0
-  scrollSpeed: 0.5
-  autoStart: 1
-  panelSize: 3216
-  autoDetectPanelSize: 1
-  autoSetupByTag: 1
-  backgroundTag: Background
-  targetCamera: {fileID: 0}
-  resetOffset: 0.01
 --- !u!1 &316169643 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8056275561374347487, guid: 9c75d00dba48c48468c34236a496ece5, type: 3}
@@ -15663,18 +15639,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b166dc7a6a8f9364caf0b664d5729d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfiniteBackgroundScroller
-  backgroundPanels:
-  - {fileID: 292572248}
-  - {fileID: 1118144193}
-  scrollDirection: 0
-  scrollSpeed: 0.5
-  autoStart: 1
-  panelSize: 3216
-  autoDetectPanelSize: 1
-  autoSetupByTag: 1
-  backgroundTag: Background
-  targetCamera: {fileID: 0}
-  resetOffset: 0.01
 --- !u!114 &407583433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16432,18 +16396,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b166dc7a6a8f9364caf0b664d5729d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfiniteBackgroundScroller
-  backgroundPanels:
-  - {fileID: 43544849}
-  - {fileID: 1708674899}
-  scrollDirection: 0
-  scrollSpeed: 0.5
-  autoStart: 1
-  panelSize: 3216
-  autoDetectPanelSize: 1
-  autoSetupByTag: 1
-  backgroundTag: Background
-  targetCamera: {fileID: 0}
-  resetOffset: 0.01
 --- !u!114 &416799083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16758,6 +16710,7 @@ MonoBehaviour:
   withdrawAmountInput: {fileID: 100721505}
   notificationPanel: {fileID: 1370315853}
   loadingScreen: {fileID: 1913866286}
+  minAmountPopup: {fileID: 462758090}
 --- !u!4 &436674971
 Transform:
   m_ObjectHideFlags: 0
@@ -17633,7 +17586,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: daa8c7eb6966a6c478f577c361d80119, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5b1f5d1dbe710064c943ae74402c603e, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -29638,10 +29591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44714c26af3ce4b4bbcafe5f444c1db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIAspectRatioEnforcer
-  referenceScreenWidth: 1440
-  referenceScreenHeight: 3216
-  referencePosY: 0
-  useReferencePosY: 1
 --- !u!1 &841840943
 GameObject:
   m_ObjectHideFlags: 0
@@ -30372,18 +30321,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b166dc7a6a8f9364caf0b664d5729d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfiniteBackgroundScroller
-  backgroundPanels:
-  - {fileID: 1767350429}
-  - {fileID: 325730768}
-  scrollDirection: 0
-  scrollSpeed: 0.5
-  autoStart: 1
-  panelSize: 3216
-  autoDetectPanelSize: 1
-  autoSetupByTag: 1
-  backgroundTag: Background
-  targetCamera: {fileID: 0}
-  resetOffset: 0.01
 --- !u!1 &862409543 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5987568763921396593, guid: 81844129266d4574e90a2f509bc53249, type: 3}
@@ -32348,10 +32285,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44714c26af3ce4b4bbcafe5f444c1db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIAspectRatioEnforcer
-  referenceScreenWidth: 1440
-  referenceScreenHeight: 3216
-  referencePosY: 0
-  useReferencePosY: 1
 --- !u!114 &943265888 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3633228249071264596, guid: 168435e377b32644fa0cfedf314412b2, type: 3}
@@ -36148,18 +36081,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b166dc7a6a8f9364caf0b664d5729d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfiniteBackgroundScroller
-  backgroundPanels:
-  - {fileID: 253029534}
-  - {fileID: 1441574160}
-  scrollDirection: 0
-  scrollSpeed: 0.5
-  autoStart: 1
-  panelSize: 3216
-  autoDetectPanelSize: 1
-  autoSetupByTag: 1
-  backgroundTag: Background
-  targetCamera: {fileID: 0}
-  resetOffset: 0.01
 --- !u!1 &1063224359
 GameObject:
   m_ObjectHideFlags: 0
@@ -38402,7 +38323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3443405773039670259, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 18
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 5359784933632279992, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_Pivot.x
@@ -38494,7 +38415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6127197442369528537, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 18
+      value: 42.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -46222,10 +46143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44714c26af3ce4b4bbcafe5f444c1db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIAspectRatioEnforcer
-  referenceScreenWidth: 1440
-  referenceScreenHeight: 3216
-  referencePosY: 0
-  useReferencePosY: 1
 --- !u!1 &1358700592
 GameObject:
   m_ObjectHideFlags: 0
@@ -57582,18 +57499,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b166dc7a6a8f9364caf0b664d5729d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfiniteBackgroundScroller
-  backgroundPanels:
-  - {fileID: 1245409497}
-  - {fileID: 1984524602}
-  scrollDirection: 0
-  scrollSpeed: 0.5
-  autoStart: 1
-  panelSize: 3216
-  autoDetectPanelSize: 1
-  autoSetupByTag: 1
-  backgroundTag: Background
-  targetCamera: {fileID: 0}
-  resetOffset: 0.01
 --- !u!1 &1679354694
 GameObject:
   m_ObjectHideFlags: 0
@@ -63661,18 +63566,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b166dc7a6a8f9364caf0b664d5729d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfiniteBackgroundScroller
-  backgroundPanels:
-  - {fileID: 1668117926}
-  - {fileID: 1155466932}
-  scrollDirection: 0
-  scrollSpeed: 0.5
-  autoStart: 1
-  panelSize: 3216
-  autoDetectPanelSize: 1
-  autoSetupByTag: 1
-  backgroundTag: Background
-  targetCamera: {fileID: 0}
-  resetOffset: 0.01
 --- !u!114 &1913866290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68494,18 +68387,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b166dc7a6a8f9364caf0b664d5729d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfiniteBackgroundScroller
-  backgroundPanels:
-  - {fileID: 472170759}
-  - {fileID: 1100708412}
-  scrollDirection: 0
-  scrollSpeed: 0.5
-  autoStart: 1
-  panelSize: 3216
-  autoDetectPanelSize: 1
-  autoSetupByTag: 1
-  backgroundTag: Background
-  targetCamera: {fileID: 0}
-  resetOffset: 0.01
 --- !u!114 &2021851059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71974,10 +71855,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44714c26af3ce4b4bbcafe5f444c1db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIAspectRatioEnforcer
-  referenceScreenWidth: 1440
-  referenceScreenHeight: 3216
-  referencePosY: 0
-  useReferencePosY: 1
 --- !u!1001 &2108743278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77810,7 +77687,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3443405773039670259, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 18
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 5359784933632279992, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_Pivot.x
@@ -77906,7 +77783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6127197442369528537, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 18
+      value: 42.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

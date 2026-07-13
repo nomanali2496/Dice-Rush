@@ -29,6 +29,7 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
     [SerializeField] private TMPro.TMP_InputField withdrawAmountInput;
     [SerializeField] private NotificationPanel notificationPanel;
     [SerializeField] private GameObject loadingScreen;
+    [SerializeField] private GameObject minAmountPopup; // Popup shown when amount < 10
     
     /// <summary>
     /// Internal representation of transaction history data
@@ -48,6 +49,7 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
         {
             withdrawAmountInput.text = "$";
             withdrawAmountInput.onValueChanged.AddListener(OnAmountValueChanged);
+            withdrawAmountInput.onEndEdit.AddListener(OnAmountEndEdit);
         }
     }
     
@@ -579,6 +581,19 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
             }
         }
 
+        if (amount < 10.0f)
+        {
+            if (minAmountPopup != null)
+            {
+                minAmountPopup.SetActive(true);
+            }
+            else if (notificationPanel != null)
+            {
+                notificationPanel.Show("Minimum withdrawal amount is $10.");
+            }
+            return;
+        }
+
         if (withdrawButton != null)
         {
             withdrawButton.interactable = false;
@@ -713,9 +728,31 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
             withdrawAmountInput.text = numbers + "$";
             withdrawAmountInput.caretPosition = numbers.Length; // Cursor before the $ sign
         }
+
+        CheckMinAmountPopup();
         
         // Restore listener
         withdrawAmountInput.onValueChanged.AddListener(OnAmountValueChanged);
+    }
+
+    private void OnAmountEndEdit(string value)
+    {
+        CheckMinAmountPopup();
+    }
+
+    private void CheckMinAmountPopup()
+    {
+        if (minAmountPopup == null || withdrawAmountInput == null) return;
+
+        string amountText = withdrawAmountInput.text.Replace("$", "").Trim();
+        if (float.TryParse(amountText, out float parsedAmount))
+        {
+            minAmountPopup.SetActive(parsedAmount > 0f && parsedAmount < 10f);
+        }
+        else
+        {
+            minAmountPopup.SetActive(false);
+        }
     }
     
     #endregion
