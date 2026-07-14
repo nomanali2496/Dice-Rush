@@ -639,30 +639,23 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
             // 1. Try S3 Custom/Remote URL from _userData first
             if (_userData != null && !string.IsNullOrEmpty(_userData.avatarKey) && _userData.avatarKey.StartsWith("http"))
             {
-                if (userFixedAvatarCustom != null)
-                {
-                    userFixedAvatarCustom.gameObject.SetActive(false); // Hide custom slot initially
-                }
-                if (userFixedAvatar != null)
-                {
-                    userFixedAvatar.sprite = GetPresetAvatar(null); // Show fallback preset first
-                    userFixedAvatar.rectTransform.localScale = Vector3.one;
-                    userFixedAvatar.gameObject.SetActive(true);
-                }
+                // Immediately hide the default preset slot when we know we have a custom HTTP avatar
+                if (userFixedAvatar != null) userFixedAvatar.gameObject.SetActive(false);
                 
                 string targetKey = _userData.avatarKey;
                 if (BackendAuthService.Instance != null)
                 {
+                    // Pass false to use cache (_imageCache / disk) instead of forcing a network redownload
                     BackendAuthService.Instance.GetImage(targetKey, (tex) => {
-                        if (tex != null && userFixedAvatarCustom != null && _userData != null && _userData.avatarKey == targetKey)
+                        if (tex != null && userFixedAvatarCustom != null)
                         {
                             Sprite s = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
                             userFixedAvatarCustom.sprite = s;
                             userFixedAvatarCustom.rectTransform.localScale = Vector3.one * UIConstants.CustomAvatarScale;
                             userFixedAvatarCustom.gameObject.SetActive(true);
-                            if (userFixedAvatar != null) userFixedAvatar.gameObject.SetActive(false); // Hide preset slot
+                            if (userFixedAvatar != null) userFixedAvatar.gameObject.SetActive(false); // Ensure preset is hidden
                         }
-                    }, true);
+                    }, false);
                 }
             }
             // 2. Try MainMenuAvatarDisplay next

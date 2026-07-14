@@ -39,7 +39,7 @@ public class MainMenuAvatarDisplay : MonoBehaviour
 
     private void OnPlayerModelUpdated()
     {
-        Refresh(true);
+        Refresh(false);
     }
 
     /// <summary>
@@ -146,6 +146,7 @@ public class MainMenuAvatarDisplay : MonoBehaviour
         byte[] imageBytes = texture.EncodeToJPG(75);
         BackendAuthService.Instance.UploadAvatar(imageBytes, (success, result) => {
             if (!success) Debug.LogError("[MainMenuAvatarDisplay] Upload failed: " + result);
+            else Refresh(true);
         });
     }
 }

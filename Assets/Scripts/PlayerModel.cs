@@ -48,11 +48,21 @@ public static class PlayerModel
         BonusBalance = bonusBalance;
         WinningBalance = winningBalance;
         Coins = coins;
-        Avatar = avatar;
+        if (!string.IsNullOrEmpty(avatar))
+        {
+            Avatar = avatar;
+        }
+        else if (id == null)
+        {
+            Avatar = null; // Clear when logging out
+        }
         Xp = xp;
         Level = level;
         Role = role;
-        SelectedAvatarIndex = selectedAvatarIndex;
+        if (selectedAvatarIndex != 0 || id == null)
+        {
+            SelectedAvatarIndex = selectedAvatarIndex;
+        }
         ActiveMatchId = activeMatchId;
         ActiveRoomId = activeRoomId;
         if (withdrawableBalance.HasValue)

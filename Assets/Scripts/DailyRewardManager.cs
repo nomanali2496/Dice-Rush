@@ -264,13 +264,14 @@ public class DailyRewardManager : MonoBehaviour
         {
             int finalCoins = response.user.coins > 0 ? response.user.coins : newTotalCoins;
             int finalCash = response.user.cashBalance > 0 ? response.user.cashBalance : newTotalCash;
+            string finalAvatar = !string.IsNullOrEmpty(response.user.avatar) ? response.user.avatar : PlayerModel.Avatar;
 
             PlayerModel.UpdateData(
                 response.user.id, response.user.name, response.user.email,
                 response.user.wins, response.user.losses, response.user.balance,
                 finalCash, response.user.bonusBalance, response.user.winningBalance,
-                finalCoins, response.user.avatar, response.user.xp,
-                response.user.level, response.user.role
+                finalCoins, finalAvatar, response.user.xp,
+                response.user.level, response.user.role, PlayerModel.SelectedAvatarIndex
             );
         }
 

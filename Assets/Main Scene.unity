@@ -783,6 +783,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b166dc7a6a8f9364caf0b664d5729d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfiniteBackgroundScroller
+  backgroundPanels: []
+  scrollDirection: 0
+  scrollSpeed: 2
+  autoStart: 1
+  panelSize: 0
+  autoDetectPanelSize: 1
+  autoSetupByTag: 0
+  backgroundTag: Background
+  targetCamera: {fileID: 0}
+  resetOffset: 0.5
 --- !u!1 &27660295
 GameObject:
   m_ObjectHideFlags: 0
@@ -5251,7 +5261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 719501526774664735, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_fontSize
-      value: 70
+      value: 56.1
       objectReference: {fileID: 0}
     - target: {fileID: 719501526774664735, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_fontAsset
@@ -5459,11 +5469,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7229106799575818427, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 952.0003
+      value: 714
       objectReference: {fileID: 0}
     - target: {fileID: 7229106799575818427, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 254.8833
+      value: 163.53333
       objectReference: {fileID: 0}
     - target: {fileID: 7229106799575818427, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5495,11 +5505,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7229106799575818427, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 476.00012
+      value: 357
       objectReference: {fileID: 0}
     - target: {fileID: 7229106799575818427, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -340.02496
+      value: -202.99998
       objectReference: {fileID: 0}
     - target: {fileID: 7229106799575818427, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9062,7 +9072,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 719501526774664735, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_fontSize
-      value: 70
+      value: 56.1
       objectReference: {fileID: 0}
     - target: {fileID: 719501526774664735, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_fontAsset
@@ -9270,11 +9280,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7229106799575818427, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 952.0003
+      value: 714
       objectReference: {fileID: 0}
     - target: {fileID: 7229106799575818427, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 254.8833
+      value: 163.53333
       objectReference: {fileID: 0}
     - target: {fileID: 7229106799575818427, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9306,11 +9316,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7229106799575818427, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 476.00012
+      value: 357
       objectReference: {fileID: 0}
     - target: {fileID: 7229106799575818427, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -552.6083
+      value: -324.2333
       objectReference: {fileID: 0}
     - target: {fileID: 7229106799575818427, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -12779,6 +12789,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b166dc7a6a8f9364caf0b664d5729d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfiniteBackgroundScroller
+  backgroundPanels: []
+  scrollDirection: 0
+  scrollSpeed: 2
+  autoStart: 1
+  panelSize: 0
+  autoDetectPanelSize: 1
+  autoSetupByTag: 0
+  backgroundTag: Background
+  targetCamera: {fileID: 0}
+  resetOffset: 0.5
 --- !u!1 &316169643 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8056275561374347487, guid: 9c75d00dba48c48468c34236a496ece5, type: 3}
@@ -13187,7 +13207,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 104.5
+  m_fontSize: 101.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -15639,6 +15659,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b166dc7a6a8f9364caf0b664d5729d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfiniteBackgroundScroller
+  backgroundPanels: []
+  scrollDirection: 0
+  scrollSpeed: 2
+  autoStart: 1
+  panelSize: 0
+  autoDetectPanelSize: 1
+  autoSetupByTag: 0
+  backgroundTag: Background
+  targetCamera: {fileID: 0}
+  resetOffset: 0.5
 --- !u!114 &407583433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16396,6 +16426,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b166dc7a6a8f9364caf0b664d5729d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfiniteBackgroundScroller
+  backgroundPanels: []
+  scrollDirection: 0
+  scrollSpeed: 2
+  autoStart: 1
+  panelSize: 0
+  autoDetectPanelSize: 1
+  autoSetupByTag: 0
+  backgroundTag: Background
+  targetCamera: {fileID: 0}
+  resetOffset: 0.5
 --- !u!114 &416799083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19815,7 +19855,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -43.025024}
+  m_AnchoredPosition: {x: 0, y: -43.025146}
   m_SizeDelta: {x: 0, y: 86.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &531340428
@@ -28855,7 +28895,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -7.800049}
+  m_AnchoredPosition: {x: 0, y: -7.7999268}
   m_SizeDelta: {x: 0, y: 574.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &818758285
@@ -29563,7 +29603,7 @@ RectTransform:
   m_GameObject: {fileID: 838109348}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 574423919}
@@ -29591,6 +29631,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44714c26af3ce4b4bbcafe5f444c1db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIAspectRatioEnforcer
+  referenceScreenWidth: 1440
+  referenceScreenHeight: 3216
+  referencePosY: 0
+  useReferencePosY: 1
 --- !u!1 &841840943
 GameObject:
   m_ObjectHideFlags: 0
@@ -30321,6 +30365,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b166dc7a6a8f9364caf0b664d5729d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfiniteBackgroundScroller
+  backgroundPanels: []
+  scrollDirection: 0
+  scrollSpeed: 2
+  autoStart: 1
+  panelSize: 0
+  autoDetectPanelSize: 1
+  autoSetupByTag: 0
+  backgroundTag: Background
+  targetCamera: {fileID: 0}
+  resetOffset: 0.5
 --- !u!1 &862409543 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5987568763921396593, guid: 81844129266d4574e90a2f509bc53249, type: 3}
@@ -32285,6 +32339,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44714c26af3ce4b4bbcafe5f444c1db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIAspectRatioEnforcer
+  referenceScreenWidth: 1080
+  referenceScreenHeight: 1920
+  referencePosY: 150
+  useReferencePosY: 1
 --- !u!114 &943265888 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3633228249071264596, guid: 168435e377b32644fa0cfedf314412b2, type: 3}
@@ -36081,6 +36139,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b166dc7a6a8f9364caf0b664d5729d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfiniteBackgroundScroller
+  backgroundPanels: []
+  scrollDirection: 0
+  scrollSpeed: 2
+  autoStart: 1
+  panelSize: 0
+  autoDetectPanelSize: 1
+  autoSetupByTag: 0
+  backgroundTag: Background
+  targetCamera: {fileID: 0}
+  resetOffset: 0.5
 --- !u!1 &1063224359
 GameObject:
   m_ObjectHideFlags: 0
@@ -38323,7 +38391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3443405773039670259, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 43
+      value: 24.1
       objectReference: {fileID: 0}
     - target: {fileID: 5359784933632279992, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_Pivot.x
@@ -38415,7 +38483,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6127197442369528537, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 42.6
+      value: 24.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -46116,7 +46184,7 @@ RectTransform:
   m_GameObject: {fileID: 1358036634}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 965970900}
@@ -46143,6 +46211,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44714c26af3ce4b4bbcafe5f444c1db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIAspectRatioEnforcer
+  referenceScreenWidth: 1440
+  referenceScreenHeight: 3216
+  referencePosY: 0
+  useReferencePosY: 1
 --- !u!1 &1358700592
 GameObject:
   m_ObjectHideFlags: 0
@@ -52272,7 +52344,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -7.800049}
+  m_AnchoredPosition: {x: 0, y: -7.7999268}
   m_SizeDelta: {x: 0, y: 574.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1487383317
@@ -57499,6 +57571,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b166dc7a6a8f9364caf0b664d5729d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfiniteBackgroundScroller
+  backgroundPanels: []
+  scrollDirection: 0
+  scrollSpeed: 2
+  autoStart: 1
+  panelSize: 0
+  autoDetectPanelSize: 1
+  autoSetupByTag: 0
+  backgroundTag: Background
+  targetCamera: {fileID: 0}
+  resetOffset: 0.5
 --- !u!1 &1679354694
 GameObject:
   m_ObjectHideFlags: 0
@@ -61328,7 +61410,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807435816}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 68c10a646ef28854982cda18ea6cb230, type: 3}
   m_Name: 
@@ -63566,6 +63648,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b166dc7a6a8f9364caf0b664d5729d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfiniteBackgroundScroller
+  backgroundPanels: []
+  scrollDirection: 0
+  scrollSpeed: 2
+  autoStart: 1
+  panelSize: 0
+  autoDetectPanelSize: 1
+  autoSetupByTag: 0
+  backgroundTag: Background
+  targetCamera: {fileID: 0}
+  resetOffset: 0.5
 --- !u!114 &1913866290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67925,7 +68017,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60.8
+  m_fontSize: 36.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -68387,6 +68479,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b166dc7a6a8f9364caf0b664d5729d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfiniteBackgroundScroller
+  backgroundPanels: []
+  scrollDirection: 0
+  scrollSpeed: 2
+  autoStart: 1
+  panelSize: 0
+  autoDetectPanelSize: 1
+  autoSetupByTag: 0
+  backgroundTag: Background
+  targetCamera: {fileID: 0}
+  resetOffset: 0.5
 --- !u!114 &2021851059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71831,8 +71933,8 @@ RectTransform:
   m_GameObject: {fileID: 2105771366}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.89179105, y: 0.89179105, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1915058719}
   - {fileID: 1952743258}
@@ -71840,7 +71942,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 100}
   m_SizeDelta: {x: 1290, y: 1361.13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2105771368
@@ -71855,6 +71957,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44714c26af3ce4b4bbcafe5f444c1db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIAspectRatioEnforcer
+  referenceScreenWidth: 1440
+  referenceScreenHeight: 3216
+  referencePosY: 150
+  useReferencePosY: 1
 --- !u!1001 &2108743278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75946,7 +76052,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 719501526774664735, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_fontSize
-      value: 70
+      value: 56.1
       objectReference: {fileID: 0}
     - target: {fileID: 719501526774664735, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_fontAsset
@@ -76150,11 +76256,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7229106799575818427, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 952.0003
+      value: 714
       objectReference: {fileID: 0}
     - target: {fileID: 7229106799575818427, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 254.8833
+      value: 163.53333
       objectReference: {fileID: 0}
     - target: {fileID: 7229106799575818427, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -76186,11 +76292,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7229106799575818427, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 476.00012
+      value: 357
       objectReference: {fileID: 0}
     - target: {fileID: 7229106799575818427, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -127.44165
+      value: -81.76666
       objectReference: {fileID: 0}
     - target: {fileID: 7229106799575818427, guid: 5aa03833974cc16459bd3adf79d08dd7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -77687,7 +77793,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3443405773039670259, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 43
+      value: 24.1
       objectReference: {fileID: 0}
     - target: {fileID: 5359784933632279992, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_Pivot.x
@@ -77783,7 +77889,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6127197442369528537, guid: 721220e8bcaab1449b154f3d50c084c0, type: 3}
       propertyPath: m_fontSize
-      value: 42.6
+      value: 24.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

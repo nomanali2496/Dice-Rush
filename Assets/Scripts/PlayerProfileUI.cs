@@ -83,6 +83,8 @@ public class PlayerProfileUI : MonoBehaviour
         }
         else if (avatarData.StartsWith("http"))
         {
+            if (profileImageSprite != null) profileImageSprite.gameObject.SetActive(false);
+            
             // PURE UI: Delegate download to service
             BackendAuthService.Instance.GetImage(avatarData, (texture) => {
                 if (texture != null)
@@ -202,7 +204,18 @@ public class PlayerProfileUI : MonoBehaviour
     {
         if (texture == null) return;
         byte[] imageBytes = texture.EncodeToJPG(75);
-        BackendAuthService.Instance.UploadAvatar(imageBytes, (success, result) => { });
+        BackendAuthService.Instance.UploadAvatar(imageBytes, (success, result) => {
+            if (success && !string.IsNullOrEmpty(result) && result.StartsWith("http"))
+            {
+                BackendAuthService.Instance.GetImage(result, (tex) => {
+                    if (tex != null)
+                    {
+                        Sprite sprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0.5f, 0.5f));
+                        ShowCustom(sprite);
+                    }
+                }, true);
+            }
+        });
     }
 
     private void SetEditMode(bool editMode) { /* Helper */ }
