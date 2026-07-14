@@ -44,6 +44,7 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
         if (withdrawButton != null)
         {
             withdrawButton.onClick.AddListener(OnWithdrawClicked);
+            withdrawButton.interactable = false;
         }
         if (withdrawAmountInput != null)
         {
@@ -98,6 +99,8 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
         {
             accountPanel.SetActive(true);
         }
+
+        CheckMinAmountPopup();
 
         // Fetch latest profile from backend to show live balance
         if (BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
@@ -627,6 +630,8 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
                         withdrawAmountInput.text = "$";
                     }
                     
+                    CheckMinAmountPopup();
+                    
                     // Show success message in Notification Panel
                     string displayMessage = "Withdrawal request submitted successfully.";
                     if (!string.IsNullOrEmpty(response))
@@ -742,16 +747,30 @@ public class AccountManager : MonoBehaviour, IEnhancedScrollerDelegate
 
     private void CheckMinAmountPopup()
     {
-        if (minAmountPopup == null || withdrawAmountInput == null) return;
+        if (withdrawAmountInput == null) return;
 
         string amountText = withdrawAmountInput.text.Replace("$", "").Trim();
         if (float.TryParse(amountText, out float parsedAmount))
         {
-            minAmountPopup.SetActive(parsedAmount > 0f && parsedAmount < 10f);
+            if (minAmountPopup != null)
+            {
+                minAmountPopup.SetActive(parsedAmount > 0f && parsedAmount < 10f);
+            }
+            if (withdrawButton != null)
+            {
+                withdrawButton.interactable = (parsedAmount >= 10.0f);
+            }
         }
         else
         {
-            minAmountPopup.SetActive(false);
+            if (minAmountPopup != null)
+            {
+                minAmountPopup.SetActive(false);
+            }
+            if (withdrawButton != null)
+            {
+                withdrawButton.interactable = false;
+            }
         }
     }
     
