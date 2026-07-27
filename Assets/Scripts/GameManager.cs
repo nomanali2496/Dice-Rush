@@ -82,6 +82,8 @@ public class GameManager : MonoBehaviour
     [Header("Winner Screen")]
     [SerializeField] private GameObject winnerScreen; // Winner screen GameObject (set active when game ends)
     [SerializeField] private WinnerScreen winnerScreenScript; // Winner screen script for animations
+    [SerializeField] private GameObject loserScoreScreen; // Screen shown for 4th, 5th, 6th place
+    [SerializeField] private LoserScoreScreen loserScoreScreenScript; // Script for loser screen
     [SerializeField] private Button winnerScreenLobbyButton; // Lobby button on winner screen
     [SerializeField] private GameObject calculateLoadingScreen; // Loading screen shown while calculating results
     [SerializeField] private GameObject forfeitLoadingScreen; // Loading screen shown when user forfeits
@@ -308,6 +310,7 @@ public class GameManager : MonoBehaviour
 
         if (forfeitLoadingScreen != null) forfeitLoadingScreen.SetActive(false);
         if (winnerScreen != null) winnerScreen.SetActive(false);
+        if (loserScoreScreen != null) loserScoreScreen.SetActive(false);
         if (gameplayScreen != null) gameplayScreen.SetActive(false);
 
         PlayerModel.UpdateData(
@@ -340,6 +343,35 @@ public class GameManager : MonoBehaviour
         if (calculateLoadingScreen != null)
         {
             calculateLoadingScreen.SetActive(false);
+        }
+
+        // Check if the local player is in the top 3
+        bool isLocalPlayerInTop3 = false;
+        int localPlayerScore = 0;
+        for (int i = 0; i < rankings.Count; i++)
+        {
+            if (rankings[i].playerType == PlayerType.Player)
+            {
+                if (i < 3) isLocalPlayerInTop3 = true;
+                localPlayerScore = rankings[i].count;
+                break;
+            }
+        }
+
+        if (!isLocalPlayerInTop3)
+        {
+            // Player is not in top 3, show Loser Score Screen instead
+            if (loserScoreScreen != null && loserScoreScreenScript != null)
+            {
+                loserScoreScreen.SetActive(true);
+                loserScoreScreenScript.Setup(localPlayerScore);
+                winnerScreenShown = true;
+            }
+            else
+            {
+                OnWinnerLobbyButtonClicked(); // Fallback if screen isn't set
+            }
+            yield break;
         }
 
         // Show the panel first so Awake/Start runs
@@ -813,7 +845,7 @@ public class GameManager : MonoBehaviour
     /// Called when the lobby/finish button on the winner screen is clicked
     /// Leaves the room and cleans up game state
     /// </summary>
-    private void OnWinnerLobbyButtonClicked()
+    public void OnWinnerLobbyButtonClicked()
     {
         Debug.Log("[GameManager] Winner lobby button clicked.");
         
@@ -829,6 +861,11 @@ public class GameManager : MonoBehaviour
         if (winnerScreen != null)
         {
             winnerScreen.SetActive(false);
+        }
+        
+        if (loserScoreScreen != null)
+        {
+            loserScoreScreen.SetActive(false);
         }
         
         ResetGameState();
