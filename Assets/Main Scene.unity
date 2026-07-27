@@ -54749,7 +54749,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55.6
+  m_fontSize: 61.09
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -71519,8 +71519,8 @@ MonoBehaviour:
   gameTimer: 105
   winnerScreen: {fileID: 1620104683}
   winnerScreenScript: {fileID: 1620104688}
-  loserScoreScreen: {fileID: 0}
-  loserScoreScreenScript: {fileID: 0}
+  loserScoreScreen: {fileID: 567410885}
+  loserScoreScreenScript: {fileID: 567410887}
   winnerScreenLobbyButton: {fileID: 1663080490}
   calculateLoadingScreen: {fileID: 416799079}
   forfeitLoadingScreen: {fileID: 1913866286}
