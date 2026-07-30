@@ -7,29 +7,32 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:705447120325:ios:2ef35f523d253702248fac",
+        "mobilesdk_app_id": "1:705447120325:android:0b603170a8f315b1248fac",
         "android_client_info": {
           "package_name": "com.winjogames.blingodice"
         }
       },
+      "oauth_client": [
+        {
+          "client_id": "705447120325-7a37lb1igmv8g1l0uj58cllqngk1gedb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyAS5QV4zHfh-e1m-3_KpUNZGiknbf-lXpQ"
+          "current_key": "AIzaSyCzeZhae-cyS_JM7ef8b_U0iY58vjpnm1U"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 0
-        },
         "appinvite_service": {
-          "status": 1
+          "other_platform_oauth_client": [
+            {
+              "client_id": "705447120325-7a37lb1igmv8g1l0uj58cllqngk1gedb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
-      },
-      "oauth_client": [
-        {
-          "client_id": "705447120325-rh6lc8kjavd38o7aqmoc2ri37u20ltdn.apps.googleusercontent.com"
-        }
-      ]
+      }
     }
   ],
   "configuration_version": "1"
