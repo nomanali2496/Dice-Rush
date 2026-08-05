@@ -671,10 +671,10 @@ public class GameManager : MonoBehaviour
                 countdownTextShadow.alpha = 0f;
                 
                 float countdownScale = 1.5f * GetGameplayReferenceScale(countdownText.transform);
-                countdownText.transform.DOScale(Vector3.one * countdownScale, 0.3f).SetEase(DG.Tweening.Ease.OutBack);
-                countdownText.DOFade(1f, 0.3f);
-                countdownTextShadow.transform.DOScale(Vector3.one * countdownScale, 0.3f).SetEase(DG.Tweening.Ease.OutBack);
-                countdownTextShadow.DOFade(1f, 0.3f);
+                countdownText.transform.DOScale(Vector3.one * countdownScale, 0.3f).SetEase(DG.Tweening.Ease.OutBack).SetLink(countdownText.gameObject);
+                countdownText.DOFade(1f, 0.3f).SetLink(countdownText.gameObject);
+                countdownTextShadow.transform.DOScale(Vector3.one * countdownScale, 0.3f).SetEase(DG.Tweening.Ease.OutBack).SetLink(countdownTextShadow.gameObject);
+                countdownTextShadow.DOFade(1f, 0.3f).SetLink(countdownTextShadow.gameObject);
             }
             
             if (data.count == 1)
@@ -1411,7 +1411,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("[GameManager] Opponent outline images array is empty or not assigned!");
+            Debug.Log("[GameManager] Opponent outline images array is empty or not assigned.");
         }
         
         // Update NumberGrid with the outline colors
@@ -1673,13 +1673,14 @@ public class GameManager : MonoBehaviour
         
         // Set new lobby configuration
         currentLobbyConfig = config;
-        currentMatchData = matchData;
         
         if (matchData == null)
         {
-            Debug.LogError("❌ [GameManager] CRITICAL ERROR: Attempted to start game WITHOUT matchData. Aborting.");
-            return;
+            int reqPlayers = (config != null && config.numberOfPlayers > 0) ? config.numberOfPlayers : 3;
+            Debug.LogWarning($"[GameManager] matchData is null! Auto-generating fallback matchData for {reqPlayers} players.");
+            matchData = CreateFallbackMatchData(reqPlayers, config != null ? (int)config.entryFeeCash : 100);
         }
+        currentMatchData = matchData;
 
         Debug.Log($"[GameManager] ✅ Server match initialized. Room: {matchData.roomId}, Duration: {matchData.duration}s");
 
@@ -1774,6 +1775,45 @@ public class GameManager : MonoBehaviour
     public StartGameData GetCurrentMatchData()
     {
         return currentMatchData;
+    }
+
+    /// <summary>
+    /// Creates a fallback StartGameData payload for offline or CPU matches
+    /// </summary>
+    public static StartGameData CreateFallbackMatchData(int totalPlayers = 3, int stake = 100)
+    {
+        StartGameData fallback = new StartGameData();
+        fallback.roomId = $"room_{totalPlayers}p_{Random.Range(1000, 9999)}";
+        fallback.duration = 60;
+        fallback.stake = stake;
+        fallback.winConditionTarget = 50;
+        fallback.playerAvatars = new Dictionary<string, PlayerAvatarInfo>();
+
+        string localId = !string.IsNullOrEmpty(PlayerModel.Id) ? PlayerModel.Id : "local_player";
+        string localName = !string.IsNullOrEmpty(PlayerModel.Name) ? PlayerModel.Name : "You";
+        fallback.playerAvatars[localId] = new PlayerAvatarInfo
+        {
+            name = localName,
+            avatar = PlayerModel.SelectedAvatarIndex.ToString()
+        };
+
+        string[] cpuNames = new string[] {
+            "Omega Shenron", "Muhammad Usama", "Noman Ali", "Dice Master",
+            "Speedy Roll", "Lucky Strike", "Golden Dice", "Shadow Player", "Victory Ace"
+        };
+
+        for (int i = 1; i < totalPlayers; i++)
+        {
+            string cpuId = $"cpu_{i}";
+            string cpuName = (i - 1 < cpuNames.Length) ? cpuNames[i - 1] : $"CPU {i}";
+            fallback.playerAvatars[cpuId] = new PlayerAvatarInfo
+            {
+                name = cpuName,
+                avatar = ((i - 1) % 6).ToString()
+            };
+        }
+
+        return fallback;
     }
     
     /// <summary>

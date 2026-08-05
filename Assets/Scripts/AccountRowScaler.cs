@@ -32,7 +32,7 @@ public class AccountRowScaler : MonoBehaviour
         // Auto-assign AccountManager if not set
         if (accountManager == null)
         {
-            accountManager = FindObjectOfType<AccountManager>();
+            accountManager = FindFirstObjectByType<AccountManager>();
             if (accountManager != null)
             {
                 Debug.Log("[AccountRowScaler] Auto-assigned AccountManager from scene");

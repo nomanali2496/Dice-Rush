@@ -128,8 +128,8 @@ public class ChampionshipUI : MonoBehaviour
         if (animate)
         {
             // Animate to new scales
-            selected.transform.DOScale(Vector3.one * selectedScale, animationDuration).SetEase(scaleEase);
-            unselected.transform.DOScale(Vector3.one * unselectedScale, animationDuration).SetEase(scaleEase);
+            selected.transform.DOScale(Vector3.one * selectedScale, animationDuration).SetEase(scaleEase).SetLink(selected.gameObject);
+            unselected.transform.DOScale(Vector3.one * unselectedScale, animationDuration).SetEase(scaleEase).SetLink(unselected.gameObject);
         }
         else
         {

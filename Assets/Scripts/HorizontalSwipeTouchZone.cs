@@ -1,15 +1,24 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.Collections.Generic;
 
 /// <summary>
-/// Touch zone panel that detects horizontal swipe gestures without blocking UI interactions
-/// Attach this to a full-screen transparent Image panel behind your UI elements
+/// Touch zone panel that detects horizontal swipe gestures without blocking UI interactions.
+/// When the user performs a click/tap (not a swipe), raycast target is turned off and/or passed through to underlying UI elements.
+/// Attach this to a full-screen transparent Image panel behind your UI elements.
 /// </summary>
 public class HorizontalSwipeTouchZone : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     [Header("Swipe Settings")]
     [SerializeField] private float swipeThreshold = 50f; // Minimum swipe distance to trigger
     [SerializeField] private bool enableSwipeDetection = true;
+
+    [Header("Click / Raycast Settings")]
+    [Tooltip("Turn off raycast target when user performs a click (not a swipe)")]
+    [SerializeField] private bool disableRaycastOnClick = true;
+    [Tooltip("Forward click event to underlying UI elements when user performs a click (not a swipe)")]
+    [SerializeField] private bool passClickToUnderlyingUI = true;
     
     [Header("Velocity-Based Scrolling")]
     [SerializeField] private bool useVelocityScrolling = true; // Enable multiple items per swipe based on distance
@@ -25,6 +34,16 @@ public class HorizontalSwipeTouchZone : MonoBehaviour, IPointerDownHandler, IPoi
     
     // Reference to HorizontalLobbyManager
     private HorizontalLobbyManager lobbyManager;
+
+    // Component references for raycast toggling
+    private Graphic cachedGraphic;
+    private CanvasGroup cachedCanvasGroup;
+
+    private void Awake()
+    {
+        cachedGraphic = GetComponent<Graphic>();
+        cachedCanvasGroup = GetComponent<CanvasGroup>();
+    }
     
     private void Start()
     {
@@ -69,12 +88,16 @@ public class HorizontalSwipeTouchZone : MonoBehaviour, IPointerDownHandler, IPoi
         if (showDebugLogs)
             Debug.Log($"[HorizontalSwipeTouchZone] Swipe ended at: {swipeEndPos}, Delta: {swipeDelta}");
         
+        bool isSwipe = false;
+
         // Check if swipe is long enough (primarily horizontal)
         if (Mathf.Abs(swipeDelta.x) > swipeThreshold)
         {
             // Ensure horizontal swipe is more dominant than vertical
             if (Mathf.Abs(swipeDelta.x) > Mathf.Abs(swipeDelta.y))
             {
+                isSwipe = true;
+
                 if (lobbyManager != null)
                 {
                     if (useVelocityScrolling)
@@ -130,10 +153,65 @@ public class HorizontalSwipeTouchZone : MonoBehaviour, IPointerDownHandler, IPoi
         else
         {
             if (showDebugLogs)
-                Debug.Log($"[HorizontalSwipeTouchZone] Swipe too short ({Mathf.Abs(swipeDelta.x)} < {swipeThreshold}), ignoring");
+                Debug.Log($"[HorizontalSwipeTouchZone] Swipe too short ({Mathf.Abs(swipeDelta.x)} < {swipeThreshold}), click detected.");
         }
         
+        // If not a valid swipe (user only clicked), turn off raycast / pass click to underlying UI
+        if (!isSwipe)
+        {
+            HandleClickPassThrough(eventData);
+        }
+
         isSwiping = false;
+    }
+
+    /// <summary>
+    /// Handles when the user clicks without swiping.
+    /// Turns off raycast target and/or passes click through to underlying UI elements.
+    /// </summary>
+    private void HandleClickPassThrough(PointerEventData eventData)
+    {
+        if (cachedGraphic == null) cachedGraphic = GetComponent<Graphic>();
+        if (cachedCanvasGroup == null) cachedCanvasGroup = GetComponent<CanvasGroup>();
+
+        bool wasGraphicRaycastTarget = cachedGraphic != null && cachedGraphic.raycastTarget;
+        bool wasCanvasGroupBlocksRaycasts = cachedCanvasGroup != null && cachedCanvasGroup.blocksRaycasts;
+
+        // Disable raycast target temporarily so RaycastAll ignores this TouchZone panel
+        if (cachedGraphic != null) cachedGraphic.raycastTarget = false;
+        if (cachedCanvasGroup != null) cachedCanvasGroup.blocksRaycasts = false;
+
+        if (passClickToUnderlyingUI && EventSystem.current != null)
+        {
+            List<RaycastResult> results = new List<RaycastResult>();
+            EventSystem.current.RaycastAll(eventData, results);
+
+            foreach (var result in results)
+            {
+                if (result.gameObject != null && result.gameObject != gameObject && !result.gameObject.transform.IsChildOf(transform))
+                {
+                    if (showDebugLogs)
+                        Debug.Log($"[HorizontalSwipeTouchZone] Passing click to underlying UI: {result.gameObject.name}");
+
+                    ExecuteEvents.ExecuteHierarchy(result.gameObject, eventData, ExecuteEvents.pointerDownHandler);
+                    ExecuteEvents.ExecuteHierarchy(result.gameObject, eventData, ExecuteEvents.pointerUpHandler);
+                    ExecuteEvents.ExecuteHierarchy(result.gameObject, eventData, ExecuteEvents.pointerClickHandler);
+                    break;
+                }
+            }
+        }
+
+        // Keep raycast off if disableRaycastOnClick is true; otherwise restore original state
+        if (!disableRaycastOnClick)
+        {
+            if (cachedGraphic != null) cachedGraphic.raycastTarget = wasGraphicRaycastTarget;
+            if (cachedCanvasGroup != null) cachedCanvasGroup.blocksRaycasts = wasCanvasGroupBlocksRaycasts;
+        }
+        else
+        {
+            if (showDebugLogs)
+                Debug.Log("[HorizontalSwipeTouchZone] Raycast target turned OFF after click.");
+        }
     }
     
     /// <summary>
@@ -157,4 +235,36 @@ public class HorizontalSwipeTouchZone : MonoBehaviour, IPointerDownHandler, IPoi
         if (showDebugLogs)
             Debug.Log($"[HorizontalSwipeTouchZone] Swipe threshold updated to: {swipeThreshold}");
     }
+
+    /// <summary>
+    /// Enable or disable raycast target on this touch zone
+    /// </summary>
+    public void SetRaycastTargetEnabled(bool enabled)
+    {
+        if (cachedGraphic == null) cachedGraphic = GetComponent<Graphic>();
+        if (cachedCanvasGroup == null) cachedCanvasGroup = GetComponent<CanvasGroup>();
+
+        if (cachedGraphic != null) cachedGraphic.raycastTarget = enabled;
+        if (cachedCanvasGroup != null) cachedCanvasGroup.blocksRaycasts = enabled;
+
+        if (showDebugLogs)
+            Debug.Log($"[HorizontalSwipeTouchZone] Raycast target {(enabled ? "enabled" : "disabled")}");
+    }
+
+    /// <summary>
+    /// Turn off raycast target on this touch zone
+    /// </summary>
+    public void DisableRaycastTarget()
+    {
+        SetRaycastTargetEnabled(false);
+    }
+
+    /// <summary>
+    /// Turn on raycast target on this touch zone
+    /// </summary>
+    public void EnableRaycastTarget()
+    {
+        SetRaycastTargetEnabled(true);
+    }
 }
+

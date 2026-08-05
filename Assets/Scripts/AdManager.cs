@@ -242,7 +242,7 @@ public class AdManager : MonoBehaviour
 #if UNITY_EDITOR
         RewardedVideoCompleted(true);
         return;
-#endif
+#else
         if (CanShowAds() && !DebugDoNotShowAds)
         {
             if (IsRewardedVideoAvailable())
@@ -260,6 +260,7 @@ public class AdManager : MonoBehaviour
             if (DebugDoNotShowAds)
                 RewardedVideoCompleted(true);
         }
+#endif
     }
 
     public void ShowRewardedAdNow()
@@ -267,7 +268,7 @@ public class AdManager : MonoBehaviour
 #if UNITY_EDITOR
         RewardedVideoCompleted(true);
         return;
-#endif
+#else
         if (CanShowAds() && !DebugDoNotShowAds)
         {
             if (IsRewardedVideoAvailable())
@@ -279,17 +280,19 @@ public class AdManager : MonoBehaviour
             if (DebugDoNotShowAds)
                 RewardedVideoCompleted(true);
         }
+#endif
     }
 
     public bool CanShowRewardedAd()
     {
 #if UNITY_EDITOR
         return true;
-#endif
+#else
         bool canShow    = CanShowAds() && !DebugDoNotShowAds;
         bool isAvailable = IsRewardedVideoAvailable();
         Debug.Log($"AdManager: CanShowRewardedAd — CanShow: {canShow}, IsAvailable: {isAvailable}");
         return canShow && isAvailable;
+#endif
     }
 
     private void RewardedVideoCompleted(bool shouldAwardUser)

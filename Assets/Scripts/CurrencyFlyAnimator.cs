@@ -120,7 +120,7 @@ public class CurrencyFlyAnimator : MonoBehaviour
 
     private GameObject SpawnParticle(Vector3 position, Sprite sprite)
     {
-        Canvas canvas = GetComponentInParent<Canvas>() ?? FindObjectOfType<Canvas>();
+        Canvas canvas = GetComponentInParent<Canvas>() ?? FindFirstObjectByType<Canvas>();
         Transform parent = canvas != null ? canvas.transform : transform;
 
         GameObject obj = animatedSpritePrefab != null

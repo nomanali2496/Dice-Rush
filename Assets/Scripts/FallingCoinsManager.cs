@@ -53,6 +53,7 @@ public class FallingCoinsManager : MonoBehaviour
         if (coin == null) return;
 
         // Reset state
+        coin.transform.DOKill();
         coin.SetActive(true);
         Image img = coin.GetComponent<Image>();
         if (img != null && coinSprites.Length > 0)
@@ -76,7 +77,10 @@ public class FallingCoinsManager : MonoBehaviour
         
         coin.transform.DOLocalMoveY(endY, duration)
             .SetEase(Ease.Linear)
-            .OnComplete(() => coin.SetActive(false));
+            .SetLink(coin)
+            .OnComplete(() => {
+                if (coin != null) coin.SetActive(false);
+            });
     }
 
     private GameObject GetInactiveCoin()
@@ -90,7 +94,11 @@ public class FallingCoinsManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        // Kill all tweens on this transform to avoid errors
+        // Kill all tweens on this transform and pooled coins to avoid errors
         transform.DOKill();
+        foreach (var coin in coinPool)
+        {
+            if (coin != null) coin.transform.DOKill();
+        }
     }
 }

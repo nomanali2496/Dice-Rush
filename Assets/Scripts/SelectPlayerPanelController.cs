@@ -4,6 +4,7 @@ using UnityEngine.UI;
 /// <summary>
 /// Controller for the Select Player Panel (Dice Blitz / Dice Rush UI)
 /// Manages player count selection (3, 5, 8, 10 players), panel visibility, and back navigation.
+/// Opens the Lobby Panel and triggers waiting for players.
 /// </summary>
 public class SelectPlayerPanelController : MonoBehaviour
 {
@@ -20,6 +21,12 @@ public class SelectPlayerPanelController : MonoBehaviour
     [SerializeField] private Button button5Players;
     [SerializeField] private Button button8Players;
     [SerializeField] private Button button10Players;
+
+    [Header("Lobby Integration")]
+    [Tooltip("Reference to HorizontalLobbyManager script")]
+    [SerializeField] private HorizontalLobbyManager lobbyManager;
+    [Tooltip("Reference to Lobby Panel GameObject to activate when mode is selected")]
+    [SerializeField] private GameObject lobbyPanel;
 
     [Header("Matchmaking Settings")]
     [Tooltip("Lobby ID to join when a mode is selected")]
@@ -70,15 +77,41 @@ public class SelectPlayerPanelController : MonoBehaviour
         // Hide select player panel
         HidePanel();
 
-        // Show waiting/searching panel if assigned
-        if (waitingPanel != null)
+        // Ensure lobby panel is active
+        if (lobbyPanel != null)
         {
-            waitingPanel.SetActive(true);
+            lobbyPanel.SetActive(true);
         }
 
-        // Initiate Matchmaking request via Socket
-        string mode = $"{playerCount}-players";
-        MatchmakingModel.FindMatch(mode, defaultStake, lobbyId);
+        if (lobbyManager == null)
+        {
+            lobbyManager = FindObjectOfType<HorizontalLobbyManager>(true);
+        }
+
+        if (lobbyManager != null)
+        {
+            if (lobbyPanel == null && lobbyManager.gameObject != null)
+            {
+                lobbyManager.gameObject.SetActive(true);
+            }
+
+            // Open/Initialize the lobby manager
+            lobbyManager.OnLobbyOpened();
+
+            // Start matchmaking for selected player count and show waiting panel in lobby
+            lobbyManager.StartMatchmakingForPlayerCount(playerCount, defaultStake, lobbyId);
+        }
+        else
+        {
+            // Fallback if lobbyManager is not found in scene
+            if (waitingPanel != null)
+            {
+                waitingPanel.SetActive(true);
+            }
+
+            string mode = $"{playerCount}-players";
+            MatchmakingModel.FindMatch(mode, defaultStake, lobbyId);
+        }
     }
 
     /// <summary>
@@ -118,3 +151,4 @@ public class SelectPlayerPanelController : MonoBehaviour
         HidePanel();
     }
 }
+

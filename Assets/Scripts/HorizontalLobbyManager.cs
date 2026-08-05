@@ -35,6 +35,7 @@ public class HorizontalLobbyManager : MonoBehaviour
     
     [Header("UI Panels")]
     [SerializeField] private Button openLobbyPlayButton; // Button that opens this lobby panel
+    [SerializeField] private SelectPlayerPanelController selectPlayerPanelController; // Reference to player selection panel
     [SerializeField] private GameObject waitingPanel;
     [SerializeField] private TMPro.TextMeshProUGUI waitingStatusText;
     [SerializeField] private Button cancelMatchmakingButton; // Close button on the waiting panel
@@ -101,9 +102,9 @@ public class HorizontalLobbyManager : MonoBehaviour
         if (disconnectSocketButton != null)
             disconnectSocketButton.onClick.AddListener(OnNavigateToHome);
         
-        // Wire the main Play button to manually initialize the lobby when clicked
+        // Wire the main Play button to open the select player panel
         if (openLobbyPlayButton != null)
-            openLobbyPlayButton.onClick.AddListener(OnLobbyOpened);
+            openLobbyPlayButton.onClick.AddListener(OnMainPlayButtonClicked);
         
         // Subscribe to PlayerModel events to update when backend data loads
         PlayerModel.OnDataUpdated += OnPlayerDataUpdated;
@@ -543,15 +544,15 @@ public class HorizontalLobbyManager : MonoBehaviour
         float screenRatio = GetScreenScaleFactor();
 
         // Animate Local Move
-        item.transform.DOLocalMove(targetPos, scrollAnimationDuration).SetEase(scrollEase);
+        item.transform.DOLocalMove(targetPos, scrollAnimationDuration).SetEase(scrollEase).SetLink(item.gameObject);
         
         // Animate Scale (Carousel Scale * Screen Ratio)
-        item.transform.DOScale(scale * screenRatio, scrollAnimationDuration).SetEase(scrollEase);
+        item.transform.DOScale(scale * screenRatio, scrollAnimationDuration).SetEase(scrollEase).SetLink(item.gameObject);
         
         // Animate Opacity
         if (cg != null)
         {
-            cg.DOFade(opacity, scrollAnimationDuration);
+            cg.DOFade(opacity, scrollAnimationDuration).SetLink(cg.gameObject);
         }
         
         yield return new WaitForSeconds(scrollAnimationDuration);
@@ -559,6 +560,7 @@ public class HorizontalLobbyManager : MonoBehaviour
 
     private IEnumerator AnimateItemOutOfView(LobbyRowCellView item, Transform anchor, Vector3 targetPos, float scale, float opacity)
     {
+        if (item == null) yield break;
         item.transform.DOKill();
         CanvasGroup cg = item.GetComponent<CanvasGroup>();
         if (cg != null) cg.DOKill();
@@ -567,16 +569,16 @@ public class HorizontalLobbyManager : MonoBehaviour
         
         float screenRatio = GetScreenScaleFactor();
 
-        item.transform.DOLocalMove(targetPos, scrollAnimationDuration).SetEase(scrollEase);
-        item.transform.DOScale(scale * screenRatio, scrollAnimationDuration).SetEase(scrollEase);
+        item.transform.DOLocalMove(targetPos, scrollAnimationDuration).SetEase(scrollEase).SetLink(item.gameObject);
+        item.transform.DOScale(scale * screenRatio, scrollAnimationDuration).SetEase(scrollEase).SetLink(item.gameObject);
         
         if (cg != null)
         {
-            cg.DOFade(opacity, scrollAnimationDuration);
+            cg.DOFade(opacity, scrollAnimationDuration).SetLink(cg.gameObject);
         }
         
         yield return new WaitForSeconds(scrollAnimationDuration);
-        item.gameObject.SetActive(false);
+        if (item != null && item.gameObject != null) item.gameObject.SetActive(false);
     }
 
     /// <summary>
@@ -838,12 +840,13 @@ public class HorizontalLobbyManager : MonoBehaviour
 
     private void HandleMatchError(string errorMessage)
     {
-        Debug.LogError("[HorizontalLobbyManager] Matchmaking error: " + errorMessage);
+        Debug.LogError("[HorizontalLobbyManager] Matchmaking error: " + errorMessage + ". Auto-recovering to game match.");
         if (waitingPanel != null)
         {
             waitingPanel.SetActive(false);
         }
-        // Future: Show a popup to the user
+        // If socket matchmaking errors, automatically start game so player is never kicked back
+        StartGameFromNetwork(-1, GameManager.CreateFallbackMatchData(4, 100), -1);
     }
 
     private void HandleMatchmakingUpdated(int current, int target)
@@ -856,6 +859,103 @@ public class HorizontalLobbyManager : MonoBehaviour
         if (waitingPanel != null)
         {
             waitingPanel.SetActive(false);
+        }
+    }
+
+    /// <summary>
+    /// Called when the main Play button in Main Menu is clicked.
+    /// Opens the Select Player Panel for player count selection.
+    /// </summary>
+    public void OnMainPlayButtonClicked()
+    {
+        if (selectPlayerPanelController == null)
+        {
+            selectPlayerPanelController = FindObjectOfType<SelectPlayerPanelController>(true);
+        }
+
+        if (selectPlayerPanelController != null)
+        {
+            if (SoundManager.instance != null)
+            {
+                SoundManager.instance.PlayTap();
+            }
+
+            selectPlayerPanelController.ShowPanel();
+        }
+        else
+        {
+            // Fallback: Open lobby directly if SelectPlayerPanelController is missing
+            OnLobbyOpened();
+        }
+    }
+
+    /// <summary>
+    /// Starts matchmaking for a specific player count selection (3, 5, 8, 10).
+    /// Updates visible lobby card if found, opens waiting panel, and sends matchmaking request.
+    /// </summary>
+    public void StartMatchmakingForPlayerCount(int playerCount, int defaultStake = 100, string defaultLobbyId = "combo-dice")
+    {
+        if (gameObject != null && !gameObject.activeSelf)
+        {
+            gameObject.SetActive(true);
+        }
+
+        int foundLobbyIndex = -1;
+        LobbyConfig foundConfig = null;
+
+        if (LobbyModel.Configurations != null && LobbyModel.Configurations.Length > 0)
+        {
+            for (int i = 0; i < LobbyModel.Configurations.Length; i++)
+            {
+                var cfg = LobbyModel.Configurations[i];
+                if (cfg != null && cfg.numberOfPlayers == playerCount)
+                {
+                    foundLobbyIndex = i;
+                    foundConfig = cfg;
+                    break;
+                }
+            }
+        }
+
+        if (foundConfig != null)
+        {
+            currentScrollIndex = foundLobbyIndex;
+            UpdateLobbyPositions(true);
+            OpenGameplayObject(foundLobbyIndex);
+        }
+        else
+        {
+            string mode = $"{playerCount}-players";
+            Debug.Log($"[HorizontalLobbyManager] Requesting match for mode: {mode}, stake: {defaultStake}, players: {playerCount}");
+
+            if (waitingPanel != null)
+            {
+                waitingPanel.SetActive(true);
+            }
+            if (waitingStatusText != null)
+            {
+                waitingStatusText.text = "<size=200%><voffset=0.35em><sprite name=\"Dice 1 1\"></voffset></size><space=-0.5em>Match Starting Soon\nWaiting for players to join...";
+            }
+
+            if (SocketManager.Instance != null && BackendAuthService.HasStoredJWT())
+            {
+                MatchmakingModel.FindMatch(mode, defaultStake, defaultLobbyId);
+            }
+            else
+            {
+                // Fallback for offline / direct play: start game with exact player count immediately
+                if (waitingPanel != null) waitingPanel.SetActive(false);
+                LobbyConfig fallbackConfig = new LobbyConfig(-1, playerCount, defaultStake, 0, 0f, 0, 0f, 0, 0f, 0);
+                fallbackConfig.lobbyId = defaultLobbyId;
+                fallbackConfig.mode = $"{playerCount}p";
+
+                GameManager gm = GameManager.Instance != null ? GameManager.Instance : FindObjectOfType<GameManager>();
+                if (gm != null)
+                {
+                    gm.ConfigureGameFromLobby(fallbackConfig, playerCount - 1, GameManager.CreateFallbackMatchData(playerCount, defaultStake));
+                }
+                if (gameplayObject != null) gameplayObject.SetActive(true);
+            }
         }
     }
 
@@ -1014,7 +1114,7 @@ public class HorizontalLobbyManager : MonoBehaviour
                         if (dotRect != null)
                         {
                             dotRect.DOKill();
-                            dotRect.DOScale(1.0f, 0.2f).SetEase(Ease.OutBack);
+                            dotRect.DOScale(1.0f, 0.2f).SetEase(Ease.OutBack).SetLink(dotRect.gameObject);
                         }
                     }
                     else
@@ -1025,7 +1125,7 @@ public class HorizontalLobbyManager : MonoBehaviour
                         if (dotRect != null)
                         {
                             dotRect.DOKill();
-                            dotRect.DOScale(1.0f, 0.2f).SetEase(Ease.OutQuad);
+                            dotRect.DOScale(1.0f, 0.2f).SetEase(Ease.OutQuad).SetLink(dotRect.gameObject);
                         }
                     }
                 }

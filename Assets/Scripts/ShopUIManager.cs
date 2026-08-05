@@ -117,7 +117,8 @@ public class ShopUIManager : MonoBehaviour
         // Scale up using DOTween
         Vector3 targetScale = originalScale * hoverScale;
         elementTweens[element] = element.DOScale(targetScale, animationDuration)
-            .SetEase(scaleEase);
+            .SetEase(scaleEase)
+            .SetLink(element.gameObject);
     }
     
     /// <summary>
@@ -147,7 +148,8 @@ public class ShopUIManager : MonoBehaviour
         
         // Scale back to original using DOTween
         elementTweens[element] = element.DOScale(originalScale, animationDuration)
-            .SetEase(scaleEase);
+            .SetEase(scaleEase)
+            .SetLink(element.gameObject);
     }
     
     /// <summary>
@@ -167,6 +169,11 @@ public class ShopUIManager : MonoBehaviour
         // Clear dictionaries
         elementTweens.Clear();
         elementOriginalScales.Clear();
+    }
+
+    private void OnDisable()
+    {
+        CleanupAllAnimations();
     }
     
     /// <summary>

@@ -41,7 +41,7 @@ public class LobbyRowCellView : EnhancedScrollerCellView, IPointerDownHandler, I
     private void Awake()
     {
         // Find HorizontalLobbyManager in the scene
-        horizontalLobbyManager = FindObjectOfType<HorizontalLobbyManager>();
+        horizontalLobbyManager = FindFirstObjectByType<HorizontalLobbyManager>();
         
         // Setup button listener and hover animation
         if (playButton != null)
@@ -59,6 +59,7 @@ public class LobbyRowCellView : EnhancedScrollerCellView, IPointerDownHandler, I
             playButton.onClick.RemoveListener(OnPlayButtonClicked);
             CleanupButtonHoverAnimation(playButton);
         }
+        CleanupTweens();
     }
     
     /// <summary>
@@ -243,7 +244,8 @@ public class LobbyRowCellView : EnhancedScrollerCellView, IPointerDownHandler, I
         // Scale up using DOTween
         Vector3 targetScale = originalScale * buttonHoverScale;
         buttonTweens[button] = rectTransform.DOScale(targetScale, buttonAnimationDuration)
-            .SetEase(buttonScaleEase);
+            .SetEase(buttonScaleEase)
+            .SetLink(button.gameObject);
     }
     
     /// <summary>
@@ -276,7 +278,8 @@ public class LobbyRowCellView : EnhancedScrollerCellView, IPointerDownHandler, I
         
         // Scale back to original using DOTween
         buttonTweens[button] = rectTransform.DOScale(originalScale, buttonAnimationDuration)
-            .SetEase(buttonScaleEase);
+            .SetEase(buttonScaleEase)
+            .SetLink(button.gameObject);
     }
     
     /// <summary>
@@ -305,6 +308,27 @@ public class LobbyRowCellView : EnhancedScrollerCellView, IPointerDownHandler, I
         {
             // Store current scale as original if not stored yet
             buttonOriginalScales[button] = rectTransform.localScale;
+        }
+    }
+
+    private void OnDisable()
+    {
+        CleanupTweens();
+    }
+
+    private void CleanupTweens()
+    {
+        transform.DOKill();
+        if (buttonTweens != null)
+        {
+            foreach (var kvp in buttonTweens)
+            {
+                if (kvp.Value != null && kvp.Value.IsActive())
+                {
+                    kvp.Value.Kill();
+                }
+            }
+            buttonTweens.Clear();
         }
     }
     

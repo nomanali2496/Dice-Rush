@@ -42,6 +42,7 @@ public class ScoreFeedbackUIManager : MonoBehaviour
     [SerializeField, Range(0f, 1.0f)] private float endScale = 0.6f;
 
     private int currentDisplayScore = 0;
+    public int CurrentScore => currentDisplayScore;
     private TMPro.TextMeshProUGUI targetScoreDisplay;
     private RectTransform gameplayRoot;
 
@@ -139,12 +140,12 @@ public class ScoreFeedbackUIManager : MonoBehaviour
             }
             
             // Initial animation: Scale up with pop
-            feedback.transform.DOScale(Vector3.one * scaleMultiplier, 0.4f).SetEase(Ease.OutBack);
+            feedback.transform.DOScale(Vector3.one * scaleMultiplier, 0.4f).SetEase(Ease.OutBack).SetLink(feedback);
 
             // Floating animation: Move up and fade out from the starting position reference
             Vector3 startPos = feedback.transform.position;
-            feedback.transform.DOMoveY(startPos.y + floatingDistance * referenceScale, spriteShowDuration).SetEase(Ease.OutQuad);
-            feedbackImage.DOFade(0f, spriteShowDuration * 0.4f).SetDelay(spriteShowDuration * 0.6f);
+            feedback.transform.DOMoveY(startPos.y + floatingDistance * referenceScale, spriteShowDuration).SetEase(Ease.OutQuad).SetLink(feedback);
+            feedbackImage.DOFade(0f, spriteShowDuration * 0.4f).SetDelay(spriteShowDuration * 0.6f).SetLink(feedback);
 
             // Clean up
             Destroy(feedback, spriteShowDuration + 0.1f);
@@ -183,25 +184,30 @@ public class ScoreFeedbackUIManager : MonoBehaviour
             
             // Initial pop
             textObj.transform.localScale = Vector3.zero;
-            textObj.transform.DOScale(Vector3.one * referenceScale, 0.3f).SetEase(Ease.OutBack);
+            textObj.transform.DOScale(Vector3.one * referenceScale, 0.3f).SetEase(Ease.OutBack).SetLink(textObj);
 
             // Move to target AND Zoom out (Scale down)
             textObj.transform.DOMove(pointsTarget.position, flyToTargetDuration)
                 .SetDelay(secondaryDelay)
                 .SetEase(Ease.InQuad)
+                .SetLink(textObj)
                 .OnComplete(() => {
                     // Update the target score display
                     UpdateTargetScore(scoreChange);
                     
                     // Slight punch to the target UI for "impact"
-                    pointsTarget.DOPunchScale(Vector3.one * 0.15f, 0.3f);
+                    if (pointsTarget != null)
+                    {
+                        pointsTarget.DOPunchScale(Vector3.one * 0.15f, 0.3f).SetLink(pointsTarget.gameObject);
+                    }
                     Destroy(textObj);
                 });
             
             // Zoom out animation: Scale towards endScale instead of zero
             textObj.transform.DOScale(Vector3.one * endScale * referenceScale, flyToTargetDuration)
                 .SetDelay(secondaryDelay)
-                .SetEase(Ease.InQuad);
+                .SetEase(Ease.InQuad)
+                .SetLink(textObj);
             
             // Note: Removed DOFade here so it stays solid until it reaches the target (as requested)
         }
@@ -252,11 +258,11 @@ public class ScoreFeedbackUIManager : MonoBehaviour
             
             // Animate the text counting up/down
             DOTween.To(() => startValue, x => {
-                targetScoreDisplay.text = x.ToString();
-            }, currentDisplayScore, 0.3f);
+                if (targetScoreDisplay != null) targetScoreDisplay.text = x.ToString();
+            }, currentDisplayScore, 0.3f).SetLink(targetScoreDisplay.gameObject);
 
             // Revert color back to original
-            targetScoreDisplay.DOColor(originalTargetColor, 0.5f).SetDelay(0.3f);
+            targetScoreDisplay.DOColor(originalTargetColor, 0.5f).SetDelay(0.3f).SetLink(targetScoreDisplay.gameObject);
         }
         else
         {

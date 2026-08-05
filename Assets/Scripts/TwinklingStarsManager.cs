@@ -53,8 +53,11 @@ public class TwinklingStarsManager : MonoBehaviour
         GameObject star = GetInactiveStar();
         if (star == null) return;
 
-        star.SetActive(true);
         Image img = star.GetComponent<Image>();
+        if (img != null) img.DOKill();
+        star.transform.DOKill();
+
+        star.SetActive(true);
         
         if (img != null && starSprites.Length > 0)
         {
@@ -84,7 +87,8 @@ public class TwinklingStarsManager : MonoBehaviour
             Sequence twinkleSeq = DOTween.Sequence();
             twinkleSeq.Append(img.DOFade(targetAlpha, halfDuration).SetEase(Ease.InOutSine))
                       .Append(img.DOFade(0f, halfDuration).SetEase(Ease.InOutSine))
-                      .OnComplete(() => star.SetActive(false));
+                      .SetLink(star)
+                      .OnComplete(() => { if (star != null) star.SetActive(false); });
         }
     }
 

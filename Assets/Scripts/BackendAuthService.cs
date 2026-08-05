@@ -91,7 +91,7 @@ public class BackendAuthService : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning($"[BackendAuthService] Image Download Failed: {fullUrl} | Error: {request.error}");
+                Debug.Log($"[BackendAuthService] Image Download Info: {fullUrl} | {request.error} (using local fallback)");
                 onComplete?.Invoke(null);
             }
         }
@@ -1143,12 +1143,11 @@ public class BackendAuthService : MonoBehaviour
 
                 if (isHtml)
                 {
-                    Debug.LogWarning($"[BackendAuthService] Image not found (server returned HTML): {url}");
+                    Debug.Log($"[BackendAuthService] Image not found (server returned HTML): {url} (using default avatar)");
                 }
                 else
                 {
-                    // Downgrade to warning so missing avatars don't spam the console with red errors
-                    Debug.LogWarning($"[BackendAuthService] WARNING: Image Download Failed: {url} | {request.error}");
+                    Debug.Log($"[BackendAuthService] Image Download Info: {url} | {request.error} (using default avatar)");
                 }
             }
 

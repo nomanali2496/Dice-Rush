@@ -1692,7 +1692,8 @@ public class NumberGrid : MonoBehaviour
             powerupBox.powerupAnimation = powerupBox.powerupImage.transform
                 .DOScale(1.2f, 0.5f)
                 .SetEase(Ease.InOutSine)
-                .SetLoops(-1, LoopType.Yoyo);
+                .SetLoops(-1, LoopType.Yoyo)
+                .SetLink(powerupBox.powerupImage.gameObject);
         }
         
         // Enable button (make it selectable)

@@ -11,6 +11,7 @@ public class SocketManager : MonoBehaviour
     public BestHTTP.SocketIO3.Socket Socket => ioManager?.Socket;
 
     private Coroutine internetMonitorCoroutine;
+    private bool isQuitting = false;
 
     [Header("Server Settings")]
     [Tooltip("Backend environment config (assign BackendConfig asset, or place one in Resources/BackendConfig.asset)")]
@@ -29,6 +30,12 @@ public class SocketManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        Application.quitting += () => isQuitting = true;
+    }
+
+    private void OnApplicationQuit()
+    {
+        isQuitting = true;
     }
 
     void Start()
@@ -109,7 +116,7 @@ public class SocketManager : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("[SocketManager] Sync: Gameplay active but no Match/Room ID found! Reconnection aborted.");
+                Debug.Log("[SocketManager] Sync: Gameplay active state checked, no match/room ID cached yet.");
             }
         }
         else if (MatchmakingModel.IsReconnectPending())
@@ -252,12 +259,14 @@ public class SocketManager : MonoBehaviour
 
     private void OnSocketDisconnected()
     {
+        if (isQuitting) return;
         Debug.LogWarning("⚠️ <color=#FFA500>⬇️ [Socket ON] Disconnected from server.</color>");
         TriggerSilentRecoveryIfInGame();
     }
 
     private void TriggerSilentRecoveryIfInGame()
     {
+        if (isQuitting) return;
         if (GameManager.Instance != null && GameManager.Instance.IsActivelyPlaying)
         {
             if (internetMonitorCoroutine == null)
@@ -271,7 +280,7 @@ public class SocketManager : MonoBehaviour
     {
         Debug.Log("<color=#00FFFF>🔍 [SocketManager] Silent internet monitor started...</color>");
         
-        while (true)
+        while (!isQuitting)
         {
             // 1. Check if internet is physically reachable
             if (Application.internetReachability != NetworkReachability.NotReachable)
@@ -324,7 +333,15 @@ public class SocketManager : MonoBehaviour
 
     private void OnSocketError(Error err)
     {
-        Debug.LogError("❌ <color=#FF0000>⬇️ [Socket ERROR] " + (err != null ? err.message : "Unknown Error") + "</color>");
+        if (isQuitting) return;
+        string msg = err != null ? err.message : "Unknown Error";
+        if (msg.Contains("Aborted") || msg.Contains("Closed"))
+        {
+            Debug.Log($"[SocketManager] Socket info: {msg}");
+            return;
+        }
+
+        Debug.LogError("❌ <color=#FF0000>⬇️ [Socket ERROR] " + msg + "</color>");
         TriggerSilentRecoveryIfInGame();
     }
 

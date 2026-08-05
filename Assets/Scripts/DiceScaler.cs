@@ -24,7 +24,7 @@ public class DiceScaler : MonoBehaviour
     {
         if (dicesController == null)
         {
-            dicesController = FindObjectOfType<DicesController>();
+            dicesController = FindFirstObjectByType<DicesController>();
             if (dicesController == null)
             {
                 Debug.LogWarning("[DiceScaler] DicesController not found! Please assign it in the inspector.");

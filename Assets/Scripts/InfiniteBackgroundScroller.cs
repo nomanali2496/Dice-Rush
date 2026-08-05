@@ -120,10 +120,26 @@ public class InfiniteBackgroundScroller : MonoBehaviour
             }
         }
         
+        // Auto-setup from child transforms if backgroundPanels array is still empty
+        if (backgroundPanels == null || backgroundPanels.Length == 0)
+        {
+            if (transform.childCount > 0)
+            {
+                System.Collections.Generic.List<Transform> children = new System.Collections.Generic.List<Transform>();
+                foreach (Transform child in transform)
+                {
+                    children.Add(child);
+                }
+                backgroundPanels = children.ToArray();
+                Debug.Log($"[InfiniteBackgroundScroller] Auto-assigned {backgroundPanels.Length} child transforms as background panels.");
+            }
+        }
+
         // Validate backgrounds
         if (backgroundPanels == null || backgroundPanels.Length == 0)
         {
-            Debug.LogWarning("[InfiniteBackgroundScroller] No background panels assigned! Please assign backgrounds in the inspector or enable autoSetupByTag.");
+            Debug.Log("[InfiniteBackgroundScroller] No background panels assigned or found under transform. Disabling scroller.");
+            isScrolling = false;
             return;
         }
         
