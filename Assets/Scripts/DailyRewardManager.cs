@@ -1,3 +1,4 @@
+#pragma warning disable 0414
 using UnityEngine;
 using UnityEngine.UI;
 using System;
@@ -73,7 +74,7 @@ public class DailyRewardManager : MonoBehaviour
     private void Start()
     {
         SetupCloseButton();
-        playerProfileUI = FindObjectOfType<PlayerProfileUI>();
+        playerProfileUI = FindFirstObjectByType<PlayerProfileUI>();
         
         if (collectButton != null)
         {
@@ -91,7 +92,7 @@ public class DailyRewardManager : MonoBehaviour
         }
 
         // Subscribe to login events
-        AuthenticationManager authManager = FindObjectOfType<AuthenticationManager>();
+        AuthenticationManager authManager = FindFirstObjectByType<AuthenticationManager>();
         if (authManager != null)
         {
             authManager.OnAuthenticationSuccess += RefreshStatusFromServer;
@@ -109,7 +110,7 @@ public class DailyRewardManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        AuthenticationManager authManager = FindObjectOfType<AuthenticationManager>();
+        AuthenticationManager authManager = FindFirstObjectByType<AuthenticationManager>();
         if (authManager != null)
         {
             authManager.OnAuthenticationSuccess -= RefreshStatusFromServer;
@@ -158,6 +159,16 @@ public class DailyRewardManager : MonoBehaviour
             hasTriggeredThisSession = true; // Mark as shown so we don't spam it
             dailyRewardPanel.SetActive(true);
             UpdateUI(); // Ensure UI is updated with latest data
+
+            MightyTasksPanelManager tasksManager = dailyRewardPanel.GetComponent<MightyTasksPanelManager>();
+            if (tasksManager == null)
+            {
+                tasksManager = dailyRewardPanel.GetComponentInChildren<MightyTasksPanelManager>(true);
+            }
+            if (tasksManager != null)
+            {
+                tasksManager.SwitchTab(MightyTasksPanelManager.TaskTab.Daily);
+            }
         }
     }
 

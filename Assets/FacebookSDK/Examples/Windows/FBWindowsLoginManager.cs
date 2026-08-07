@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
  *
  * You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
@@ -144,15 +144,15 @@ public class FBWindowsLoginManager : MonoBehaviour
 
     IEnumerator LoadPictureFromUrl(string url, RawImage itemImage)
     {
-        Texture2D UserPicture = new Texture2D(32, 32);
+        using (UnityEngine.Networking.UnityWebRequest www = UnityEngine.Networking.UnityWebRequestTexture.GetTexture(url))
+        {
+            yield return www.SendWebRequest();
 
-        WWW www = new WWW(url);
-        yield return www;
-
-        www.LoadImageIntoTexture(UserPicture);
-        www.Dispose();
-        www = null;
-
-        itemImage.texture = UserPicture;
+            if (www.result == UnityEngine.Networking.UnityWebRequest.Result.Success)
+            {
+                Texture2D texture = UnityEngine.Networking.DownloadHandlerTexture.GetContent(www);
+                itemImage.texture = texture;
+            }
+        }
     }
 }

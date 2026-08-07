@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections.Generic;
 
 /// <summary>
@@ -106,7 +106,7 @@ public class GameDebugViewer : MonoBehaviour
         }
         
         // Update Match Data
-        GameManager gm = FindObjectOfType<GameManager>();
+        GameManager gm = FindFirstObjectByType<GameManager>();
         if (gm != null)
         {
             currentMatch = gm.GetCurrentMatchData();

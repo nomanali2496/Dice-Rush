@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 /// <summary>
@@ -29,7 +29,7 @@ public class OfferSwipeTouchZone : MonoBehaviour, IPointerDownHandler, IPointerU
     private void Start()
     {
         // Find OffersCarouselManager in the scene
-        offersManager = FindObjectOfType<OffersCarouselManager>();
+        offersManager = FindFirstObjectByType<OffersCarouselManager>();
         
         if (offersManager == null)
         {

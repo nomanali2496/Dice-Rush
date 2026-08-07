@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 /// <summary>
@@ -23,7 +23,7 @@ public class OfferCardSwipeDetector : MonoBehaviour, IPointerDownHandler, IPoint
     private void Start()
     {
         // Find OffersCarouselManager in the scene
-        offersManager = FindObjectOfType<OffersCarouselManager>();
+        offersManager = FindFirstObjectByType<OffersCarouselManager>();
         
         if (offersManager == null)
         {

@@ -342,7 +342,7 @@ public class Branch : MonoBehaviour
 	{
 
 		// make sure there's only a single Branch instance
-		var olderBranches = FindObjectsOfType<Branch>();
+		var olderBranches = FindObjectsByType<Branch>(FindObjectsSortMode.None);
 		if (olderBranches != null && olderBranches.Length > 1)
 		{
 			Destroy(gameObject);

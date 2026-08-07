@@ -790,11 +790,11 @@ IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_mD99081BEFA1AB3526715F48919
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_set_Item_m95629806F31CF369D937590912E0B6A53FF7C587_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Nullable_1_get_Value_m0DF3B826A745419D26A168689AEB4BE6F8698ECA_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectOfType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_m9F95418B43AD56D2B249A1712B89939CB1A88FCC_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectOfType_TisDailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823_m3B31EB6CF1CAABB3F91A893E8C681BCE7FBA66DE_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectOfType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_mF2F2D2BE8FEFA1DB028C554FD67649AC0D8A66D8_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectOfType_TisOffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416_m6EF421640DB810988378EA963D0E76511233F57E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectOfType_TisSoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_m736508C1ABE76E8A9EE3FFCAFFC5AFBE7728258A_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Object_FindFirstObjectByType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_mEAD20F2B028B6BD3C96CF684B6DF7C89D7338636_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Object_FindFirstObjectByType_TisDailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823_m81F4A3A1174FBC74B50A1855E4733F085E8353B6_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Object_FindFirstObjectByType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_mB1FFA94457BA87411F29C70DD33A2AC06CC23BEA_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Object_FindFirstObjectByType_TisOffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416_m7F514520B9DD84E2239E9791619C1EE011E7F26F_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Object_FindFirstObjectByType_TisSoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_mE1B613BAF4D42ECAFB3D9153A8A7B4838F70EDE6_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m58C654F1134533E29502629CA67645682B404811_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* OfferPanelManager_OnDailyRewardPanelClosed_m9D6AA578916CE673B10C4D3E792297C7430FE2C7_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* OfferPanelManager_OnPurchaseSuccess_m412188F0EED054578F747EE4868570AB198A7E8F_RuntimeMethod_var;
@@ -1858,6 +1858,10 @@ struct Extents_tA2D2F95811D0A18CB7AC3570D2D8F8CD3AF4C4A8
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___min;
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___max;
+};
+struct FindObjectsInactive_t10C7BE036CAD0178142374F945283DA50D02B87A 
+{
+	int32_t ___value__;
 };
 struct FontStyles_t9E611EE6BBE6E192A73EAFF7872596517C527FF5 
 {
@@ -4360,7 +4364,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_Where_TisRuntimeObj
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* Enumerable_ToList_TisRuntimeObject_m6456D63764F29E6B5B2422C3DE25113577CF51EE_gshared (RuntimeObject* ___0_source, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, int32_t ___0_index, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Object_FindObjectOfType_TisRuntimeObject_m02DFBF011F3B59F777A5E521DB2A116DD496E968_gshared (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Object_FindFirstObjectByType_TisRuntimeObject_mC5927319EB5B80095EFBA653D414D6F8AA87DC0A_gshared (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Enumerator_Dispose_mD9DC3E3C3697830A4823047AB29A77DBBB5ED419_gshared (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) ;
@@ -4418,7 +4422,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922F
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* TweenSettingsExtensions_OnComplete_TisRuntimeObject_mC014D07E92193DA79B257C4508B6DF208FE502A6_gshared (RuntimeObject* ___0_t, TweenCallback_t7C8B8A38E7B30905FF1B83C943256EF23617BB24* ___1_action, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DOGetter_1__ctor_m5586C4AB5126DB0C5D2BDB10005E502A150C7710_gshared (DOGetter_1_t126D20ADA2999ECC8E5336D1EDE57C560F53784B* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DOSetter_1__ctor_m28CDD6404594C0C86337EB1C8727FCFEF7FB507A_gshared (DOSetter_1_t034B092AF3597985E5ACEBF7D43ED7297EF3C6A8* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Object_FindObjectOfType_TisRuntimeObject_m5B9316B6971BA36FD4CF9E0587E19E6FEE6F735A_gshared (bool ___0_includeInactive, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Object_FindFirstObjectByType_TisRuntimeObject_mEA50663B41DBFBDD160FD3E7E56D51298823A885_gshared (int32_t ___0_findObjectsInactive, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityAction_1__ctor_m11A393DB3C00474B4520978077E444DB6E4418DD_gshared (UnityAction_1_t8EC357AF4FBD2A0C4A575C4BBD0B3A81029E43A9* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityEvent_1_AddListener_mE9367D4B3AA4C323EE7C35FA18CF2D8A142F43FD_gshared (UnityEvent_1_tEEB36A367DCB5867E93AAF6BECAF3558CA71BECB* __this, UnityAction_1_t8EC357AF4FBD2A0C4A575C4BBD0B3A81029E43A9* ___0_call, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnityEvent_1_RemoveListener_m5F1198F13FB2222BE8AABD6454B4D21086D0A130_gshared (UnityEvent_1_tEEB36A367DCB5867E93AAF6BECAF3558CA71BECB* __this, UnityAction_1_t8EC357AF4FBD2A0C4A575C4BBD0B3A81029E43A9* ___0_call, const RuntimeMethod* method) ;
@@ -4487,9 +4491,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E7
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double TimeSpan_get_TotalSeconds_mED686E7CECE6A76A7DC38518698B9199DB8CDEA8 (TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline (float ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DateTime_op_LessThan_m2A02FFF5F35E33417FB32CB9F948769CA15AED17 (DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___0_t1, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___1_t2, const RuntimeMethod* method) ;
-inline OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* Object_FindObjectOfType_TisOffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416_m6EF421640DB810988378EA963D0E76511233F57E (const RuntimeMethod* method)
+inline OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* Object_FindFirstObjectByType_TisOffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416_m7F514520B9DD84E2239E9791619C1EE011E7F26F (const RuntimeMethod* method)
 {
-	return ((  OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* (*) (const RuntimeMethod*))Object_FindObjectOfType_TisRuntimeObject_m02DFBF011F3B59F777A5E521DB2A116DD496E968_gshared)(method);
+	return ((  OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* (*) (const RuntimeMethod*))Object_FindFirstObjectByType_TisRuntimeObject_mC5927319EB5B80095EFBA653D414D6F8AA87DC0A_gshared)(method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_x, Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___1_y, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2 (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
@@ -4577,15 +4581,15 @@ inline void Dictionary_2__ctor_m475AC2EDE1C14FDBC01ED69CED8F0825FE4B3E49 (Dictio
 	((  void (*) (Dictionary_2_t04E83E607423FE84F0DF66F31E5AA659C80DA737*, const RuntimeMethod*))Dictionary_2__ctor_m05F523BA9BEBF58F2272B2FED787AB93DAA6773B_gshared)(__this, method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_HideAllPanels_m2C9C10DAEB8107D51E8DE85C9808E5A409DB931A (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) ;
-inline AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* Object_FindObjectOfType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_m9F95418B43AD56D2B249A1712B89939CB1A88FCC (const RuntimeMethod* method)
+inline AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* Object_FindFirstObjectByType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_mEAD20F2B028B6BD3C96CF684B6DF7C89D7338636 (const RuntimeMethod* method)
 {
-	return ((  AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* (*) (const RuntimeMethod*))Object_FindObjectOfType_TisRuntimeObject_m02DFBF011F3B59F777A5E521DB2A116DD496E968_gshared)(method);
+	return ((  AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* (*) (const RuntimeMethod*))Object_FindFirstObjectByType_TisRuntimeObject_mC5927319EB5B80095EFBA653D414D6F8AA87DC0A_gshared)(method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Delegate_t* Delegate_Combine_m1F725AEF318BE6F0426863490691A6F4606E7D00 (Delegate_t* ___0_a, Delegate_t* ___1_b, const RuntimeMethod* method) ;
-inline DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* Object_FindObjectOfType_TisDailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823_m3B31EB6CF1CAABB3F91A893E8C681BCE7FBA66DE (const RuntimeMethod* method)
+inline DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* Object_FindFirstObjectByType_TisDailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823_m81F4A3A1174FBC74B50A1855E4733F085E8353B6 (const RuntimeMethod* method)
 {
-	return ((  DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* (*) (const RuntimeMethod*))Object_FindObjectOfType_TisRuntimeObject_m02DFBF011F3B59F777A5E521DB2A116DD496E968_gshared)(method);
+	return ((  DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* (*) (const RuntimeMethod*))Object_FindFirstObjectByType_TisRuntimeObject_mC5927319EB5B80095EFBA653D414D6F8AA87DC0A_gshared)(method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OfferPanelManager_MonitorMainMenuActivation_m7445DACAEB8BA71BABE4FBDCB565B6BC1DBB880E (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812 (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, RuntimeObject* ___0_routine, const RuntimeMethod* method) ;
@@ -5144,9 +5148,9 @@ inline Tweener_tD38633F1A42EDF47A73CE3BF1894D946E830E140* TweenSettingsExtension
 	return ((  Tweener_tD38633F1A42EDF47A73CE3BF1894D946E830E140* (*) (Tweener_tD38633F1A42EDF47A73CE3BF1894D946E830E140*, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))TweenSettingsExtensions_SetLink_TisRuntimeObject_m8292E22730157B9C05B31B2ED3896A68FD869AF1_gshared)(___0_t, ___1_gameObject, method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SelectPlayerPanelController_HidePanel_mB91726DFC0F4584DB1648757ABFB3156D115A0CB (SelectPlayerPanelController_tB4543EF46EC03D4CCB3569588660DF123E52D57D* __this, const RuntimeMethod* method) ;
-inline HorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637* Object_FindObjectOfType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_mF2F2D2BE8FEFA1DB028C554FD67649AC0D8A66D8 (bool ___0_includeInactive, const RuntimeMethod* method)
+inline HorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637* Object_FindFirstObjectByType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_mB1FFA94457BA87411F29C70DD33A2AC06CC23BEA (int32_t ___0_findObjectsInactive, const RuntimeMethod* method)
 {
-	return ((  HorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637* (*) (bool, const RuntimeMethod*))Object_FindObjectOfType_TisRuntimeObject_m5B9316B6971BA36FD4CF9E0587E19E6FEE6F735A_gshared)(___0_includeInactive, method);
+	return ((  HorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637* (*) (int32_t, const RuntimeMethod*))Object_FindFirstObjectByType_TisRuntimeObject_mEA50663B41DBFBDD160FD3E7E56D51298823A885_gshared)(___0_findObjectsInactive, method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HorizontalLobbyManager_OnLobbyOpened_m34205D315781FF5D9704AE624EDF9D8E01E27B6B (HorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HorizontalLobbyManager_StartMatchmakingForPlayerCount_mF31DACD3BECDBA6F9D0CB5EA55360A57D0495EE2 (HorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637* __this, int32_t ___0_playerCount, int32_t ___1_defaultStake, String_t* ___2_defaultLobbyId, const RuntimeMethod* method) ;
@@ -5184,9 +5188,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SettingManager_GetMusicEnabledKey_m
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_SaveMusicSetting_mDF79DD20D00064033C912DF7664478373E0AD870 (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_SaveSoundSetting_mCCD39A9C2B8803C7887E9C430B41C30B1E520536 (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_StopAllMusic_m87C39C5556640AB2CACF870EE39476C5613F6E07 (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, const RuntimeMethod* method) ;
-inline SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* Object_FindObjectOfType_TisSoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_m736508C1ABE76E8A9EE3FFCAFFC5AFBE7728258A (const RuntimeMethod* method)
+inline SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* Object_FindFirstObjectByType_TisSoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_mE1B613BAF4D42ECAFB3D9153A8A7B4838F70EDE6 (const RuntimeMethod* method)
 {
-	return ((  SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* (*) (const RuntimeMethod*))Object_FindObjectOfType_TisRuntimeObject_m02DFBF011F3B59F777A5E521DB2A116DD496E968_gshared)(method);
+	return ((  SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* (*) (const RuntimeMethod*))Object_FindFirstObjectByType_TisRuntimeObject_mC5927319EB5B80095EFBA653D414D6F8AA87DC0A_gshared)(method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SoundManager_PlayBackgroundMusic_mB3CB091A70E3F6EB7E793396F247A95125E45A01 (SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerPrefs_GetInt_m8AD1FA8BA54CC6CE2B2AEEE36B6D75587BB1692D (String_t* ___0_key, int32_t ___1_defaultValue, const RuntimeMethod* method) ;
@@ -5339,7 +5343,7 @@ inline void List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4 (List
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66462
+// Method Definition Index: 66464
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedTimerStartAfterGridU3Ed__71__ctor_m59497B33973BCC0191BECCD6C0CA33A5780A51D8 (U3CDelayedTimerStartAfterGridU3Ed__71_tF1F6A65EDB0069026B45B5A8DD94C36BEEFC1C09* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -5349,14 +5353,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedTimerStartAfterGridU3Ed__71__c
 		return;
 	}
 }
-// Method Definition Index: 66463
+// Method Definition Index: 66465
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedTimerStartAfterGridU3Ed__71_System_IDisposable_Dispose_m9D45C18254093B2AA07479F51FEA1620470BC912 (U3CDelayedTimerStartAfterGridU3Ed__71_tF1F6A65EDB0069026B45B5A8DD94C36BEEFC1C09* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 66464
+// Method Definition Index: 66466
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CDelayedTimerStartAfterGridU3Ed__71_MoveNext_m6E90ECB4D257D7A9F5CCBFCDA415D3D2DFD9E81D (U3CDelayedTimerStartAfterGridU3Ed__71_tF1F6A65EDB0069026B45B5A8DD94C36BEEFC1C09* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5390,7 +5394,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CDelayedTimerStartAfterGridU3Ed__71_Mo
 IL_0010:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:444>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:445>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 1;
@@ -5400,14 +5404,14 @@ IL_0010:
 IL_0027:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:446>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:447>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralD20AA6F1299EF48EB267C69B999A31E3BB774F37, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:447>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:448>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 66465
+// Method Definition Index: 66467
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedTimerStartAfterGridU3Ed__71_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD75B5E6172102F1722FD4BAF98E45ADE56F26B79 (U3CDelayedTimerStartAfterGridU3Ed__71_tF1F6A65EDB0069026B45B5A8DD94C36BEEFC1C09* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5415,7 +5419,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedTimerStartAfterGridU
 		return L_0;
 	}
 }
-// Method Definition Index: 66466
+// Method Definition Index: 66468
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedTimerStartAfterGridU3Ed__71_System_Collections_IEnumerator_Reset_m0A8E04AB89F54E4976D95EFAE0687CDA71E0F4AE (U3CDelayedTimerStartAfterGridU3Ed__71_tF1F6A65EDB0069026B45B5A8DD94C36BEEFC1C09* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5424,7 +5428,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedTimerStartAfterGridU3Ed__71_Sy
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CDelayedTimerStartAfterGridU3Ed__71_System_Collections_IEnumerator_Reset_m0A8E04AB89F54E4976D95EFAE0687CDA71E0F4AE_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 66467
+// Method Definition Index: 66469
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedTimerStartAfterGridU3Ed__71_System_Collections_IEnumerator_get_Current_m4AB924297137023D1CBAFB0D6A8D3DD49C3D2350 (U3CDelayedTimerStartAfterGridU3Ed__71_tF1F6A65EDB0069026B45B5A8DD94C36BEEFC1C09* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5440,7 +5444,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedTimerStartAfterGridU
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66468
+// Method Definition Index: 66470
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPowerupTimerLoopU3Ed__108__ctor_mDC91CC7A71D9EAB021C18CF9DE4F23C64929AC7D (U3CPowerupTimerLoopU3Ed__108_tBB04FF9EF484997892B0EE729B61589A93EAB97B* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -5450,14 +5454,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPowerupTimerLoopU3Ed__108__ctor_mDC91
 		return;
 	}
 }
-// Method Definition Index: 66469
+// Method Definition Index: 66471
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPowerupTimerLoopU3Ed__108_System_IDisposable_Dispose_m4CCFBF0C037223D3D2EBA4F2FF96EBE25F0AC76E (U3CPowerupTimerLoopU3Ed__108_tBB04FF9EF484997892B0EE729B61589A93EAB97B* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 66470
+// Method Definition Index: 66472
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CPowerupTimerLoopU3Ed__108_MoveNext_mDA6846BBD764CE62BF86B5FD9150D30354195544 (U3CPowerupTimerLoopU3Ed__108_tBB04FF9EF484997892B0EE729B61589A93EAB97B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5518,7 +5522,7 @@ IL_0022:
 
 IL_0029:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1612>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1613>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_3 = V_1;
 		NullCheck(L_3);
 		float L_4 = L_3->___minDelayBetweenPowerups;
@@ -5528,7 +5532,7 @@ IL_0029:
 		float L_7;
 		L_7 = Random_Range_m5236C99A7D8AE6AC9190592DC66016652A2D2494(L_4, L_6, NULL);
 		V_2 = L_7;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1613>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1614>
 		float L_8 = V_2;
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_9 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_9, L_8, NULL);
@@ -5541,7 +5545,7 @@ IL_0029:
 IL_0050:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1616>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1617>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_10 = V_1;
 		NullCheck(L_10);
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_11 = L_10->___boxDataList;
@@ -5576,7 +5580,7 @@ IL_007c:
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_18;
 		L_18 = Enumerable_ToList_TisBoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB_mF96748BC053E086968F2CFAC3A0AEE4C7A06D009(L_17, Enumerable_ToList_TisBoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB_mF96748BC053E086968F2CFAC3A0AEE4C7A06D009_RuntimeMethod_var);
 		V_3 = L_18;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1618>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1619>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_19 = V_3;
 		NullCheck(L_19);
 		int32_t L_20;
@@ -5587,7 +5591,7 @@ IL_007c:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1621>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1622>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_21 = V_1;
 		NullCheck(L_21);
 		Random_t79716069EDE67D1D7734F60AE402D0CA3FB6B4C8* L_22 = L_21->___powerupRandom;
@@ -5599,7 +5603,7 @@ IL_007c:
 		int32_t L_25;
 		L_25 = VirtualFuncInvoker2< int32_t, int32_t, int32_t >::Invoke(6, L_22, 0, L_24);
 		V_4 = L_25;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1622>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1623>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_26 = V_3;
 		int32_t L_27 = V_4;
 		NullCheck(L_26);
@@ -5607,19 +5611,19 @@ IL_007c:
 		L_28 = List_1_get_Item_m9527D866E2BA1DB2A4AF528184943E80CC068857(L_26, L_27, List_1_get_Item_m9527D866E2BA1DB2A4AF528184943E80CC068857_RuntimeMethod_var);
 		__this->___U3CselectedPowerupU3E5__2 = L_28;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CselectedPowerupU3E5__2), (void*)L_28);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1625>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1626>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_29 = V_1;
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_30 = __this->___U3CselectedPowerupU3E5__2;
 		NullCheck(L_29);
 		NumberGrid_ShowPowerup_mD310BC13CFFCDD790543330FB0E52F98B26E75FB(L_29, L_30, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1629>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1630>
 		__this->___U3CelapsedU3E5__3 = (0.0f);
 		goto IL_0192;
 	}
 
 IL_00ce:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1633>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1634>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_31 = __this->___U3CselectedPowerupU3E5__2;
 		NullCheck(L_31);
 		bool L_32 = L_31->___isSelected;
@@ -5629,29 +5633,29 @@ IL_00ce:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1637>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1638>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_33 = V_1;
 		NullCheck(L_33);
 		L_33->___currentlyVisiblePowerup = (BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&L_33->___currentlyVisiblePowerup), (void*)(BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB*)NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1638>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1639>
 		goto IL_01a3;
 	}
 
 IL_00e7:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1641>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1642>
 		float L_34 = __this->___U3CelapsedU3E5__3;
 		float L_35;
 		L_35 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		__this->___U3CelapsedU3E5__3 = ((float)il2cpp_codegen_add(L_34, L_35));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1642>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1643>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_36 = V_1;
 		NullCheck(L_36);
 		float L_37 = L_36->___powerupVisibleDuration;
 		float L_38 = __this->___U3CelapsedU3E5__3;
 		V_5 = ((float)il2cpp_codegen_subtract(L_37, L_38));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1645>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1646>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_39 = V_1;
 		NullCheck(L_39);
 		Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* L_40 = L_39->___powerupTimerSlider;
@@ -5679,7 +5683,7 @@ IL_00e7:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1647>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1648>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_46 = V_1;
 		NullCheck(L_46);
 		Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* L_47 = L_46->___powerupTimerSlider;
@@ -5693,7 +5697,7 @@ IL_00e7:
 
 IL_0140:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1651>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1652>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_51 = V_1;
 		NullCheck(L_51);
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_52 = L_51->___powerupTimerText;
@@ -5721,7 +5725,7 @@ IL_0140:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1653>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1654>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_58 = V_1;
 		NullCheck(L_58);
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_59 = L_58->___powerupTimerText;
@@ -5737,7 +5741,7 @@ IL_0140:
 
 IL_017b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1656>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1657>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 2;
@@ -5751,7 +5755,7 @@ IL_018b:
 
 IL_0192:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1630>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1631>
 		float L_63 = __this->___U3CelapsedU3E5__3;
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_64 = V_1;
 		NullCheck(L_64);
@@ -5764,7 +5768,7 @@ IL_0192:
 
 IL_01a3:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1660>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1661>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_66 = __this->___U3CselectedPowerupU3E5__2;
 		NullCheck(L_66);
 		bool L_67 = L_66->___isSelected;
@@ -5774,7 +5778,7 @@ IL_01a3:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1662>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1663>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_68 = V_1;
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_69 = __this->___U3CselectedPowerupU3E5__2;
 		NullCheck(L_68);
@@ -5783,14 +5787,14 @@ IL_01a3:
 
 IL_01bc:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1664>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1665>
 		__this->___U3CselectedPowerupU3E5__2 = (BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CselectedPowerupU3E5__2), (void*)(BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB*)NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1609>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1610>
 		goto IL_0029;
 	}
 }
-// Method Definition Index: 66471
+// Method Definition Index: 66473
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CPowerupTimerLoopU3Ed__108_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m72AB789577AEF948951362E999E1B26EEB5D4779 (U3CPowerupTimerLoopU3Ed__108_tBB04FF9EF484997892B0EE729B61589A93EAB97B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5798,7 +5802,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CPowerupTimerLoopU3Ed__108_S
 		return L_0;
 	}
 }
-// Method Definition Index: 66472
+// Method Definition Index: 66474
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPowerupTimerLoopU3Ed__108_System_Collections_IEnumerator_Reset_mCAA7CE81D98F0B5E346B7D0837292ADF3091981F (U3CPowerupTimerLoopU3Ed__108_tBB04FF9EF484997892B0EE729B61589A93EAB97B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5807,7 +5811,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPowerupTimerLoopU3Ed__108_System_Coll
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CPowerupTimerLoopU3Ed__108_System_Collections_IEnumerator_Reset_mCAA7CE81D98F0B5E346B7D0837292ADF3091981F_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 66473
+// Method Definition Index: 66475
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CPowerupTimerLoopU3Ed__108_System_Collections_IEnumerator_get_Current_mBA01BA9D8A70B289D3A25CBBA1E55B670979CE7C (U3CPowerupTimerLoopU3Ed__108_tBB04FF9EF484997892B0EE729B61589A93EAB97B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5823,7 +5827,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CPowerupTimerLoopU3Ed__108_S
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66474
+// Method Definition Index: 66476
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CServerPowerupUIUpdateU3Ed__120__ctor_m31BF23D804E2002B0168DE25FE3F315F897AF98F (U3CServerPowerupUIUpdateU3Ed__120_t22F1AA37A48F118CDE00EA7AD9D2A0A9D595949E* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -5833,14 +5837,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CServerPowerupUIUpdateU3Ed__120__ctor_
 		return;
 	}
 }
-// Method Definition Index: 66475
+// Method Definition Index: 66477
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CServerPowerupUIUpdateU3Ed__120_System_IDisposable_Dispose_mBB30C020B6EE093F309D4F9202927A81399DD029 (U3CServerPowerupUIUpdateU3Ed__120_t22F1AA37A48F118CDE00EA7AD9D2A0A9D595949E* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 66476
+// Method Definition Index: 66478
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CServerPowerupUIUpdateU3Ed__120_MoveNext_m5CB7D43BAC350429434B6026BF00A6FC3C070D25 (U3CServerPowerupUIUpdateU3Ed__120_t22F1AA37A48F118CDE00EA7AD9D2A0A9D595949E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5885,12 +5889,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CServerPowerupUIUpdateU3Ed__120_MoveNe
 IL_001a:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2070>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2071>
 		il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_4;
 		L_4 = DateTime_get_UtcNow_m06B6E9995FE16846A0F71EC9DB23E90BE2C5F9FA(NULL);
 		V_2 = L_4;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2071>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2072>
 		float L_5 = __this->___duration;
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_6;
 		L_6 = DateTime_AddSeconds_mC5FE3FB22A1295CA747746ECE48B9D4A4B6B2E81((&V_2), ((double)L_5), NULL);
@@ -5900,7 +5904,7 @@ IL_001a:
 
 IL_0040:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2076>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2077>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_7 = __this->___boxData;
 		NullCheck(L_7);
 		bool L_8 = L_7->___isSelected;
@@ -5910,13 +5914,13 @@ IL_0040:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2076>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2077>
 		return (bool)0;
 	}
 
 IL_004f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2078>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2079>
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_9 = __this->___U3CendTimeU3E5__2;
 		il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_10;
@@ -5928,11 +5932,11 @@ IL_004f:
 		double L_12;
 		L_12 = TimeSpan_get_TotalSeconds_mED686E7CECE6A76A7DC38518698B9199DB8CDEA8((&V_5), NULL);
 		V_3 = ((float)L_12);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2079>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2080>
 		float L_13 = __this->___duration;
 		float L_14 = V_3;
 		V_4 = ((float)il2cpp_codegen_subtract(L_13, L_14));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2082>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2083>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_15 = V_1;
 		NullCheck(L_15);
 		Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* L_16 = L_15->___powerupTimerSlider;
@@ -5945,7 +5949,7 @@ IL_004f:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2084>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2085>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_18 = V_1;
 		NullCheck(L_18);
 		Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* L_19 = L_18->___powerupTimerSlider;
@@ -5959,7 +5963,7 @@ IL_004f:
 
 IL_009b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2088>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2089>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_23 = V_1;
 		NullCheck(L_23);
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_24 = L_23->___powerupTimerText;
@@ -5972,7 +5976,7 @@ IL_009b:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2090>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2091>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_26 = V_1;
 		NullCheck(L_26);
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_27 = L_26->___powerupTimerText;
@@ -5988,7 +5992,7 @@ IL_009b:
 
 IL_00c3:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2093>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2094>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 1;
@@ -6002,7 +6006,7 @@ IL_00d3:
 
 IL_00da:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2073>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2074>
 		il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_31;
 		L_31 = DateTime_get_UtcNow_m06B6E9995FE16846A0F71EC9DB23E90BE2C5F9FA(NULL);
@@ -6015,16 +6019,16 @@ IL_00da:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2096>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2097>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_34 = V_1;
 		NullCheck(L_34);
 		L_34->___serverPowerupUIUpdateCoroutine = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&L_34->___serverPowerupUIUpdateCoroutine), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2097>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2098>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 66477
+// Method Definition Index: 66479
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CServerPowerupUIUpdateU3Ed__120_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m7AC842C0EA3DB3F94C7EF2182F2E63ABB98298B6 (U3CServerPowerupUIUpdateU3Ed__120_t22F1AA37A48F118CDE00EA7AD9D2A0A9D595949E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6032,7 +6036,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CServerPowerupUIUpdateU3Ed__
 		return L_0;
 	}
 }
-// Method Definition Index: 66478
+// Method Definition Index: 66480
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CServerPowerupUIUpdateU3Ed__120_System_Collections_IEnumerator_Reset_m92F0C6A2A4C61980DFF959A6274C7D62AFBE7BF8 (U3CServerPowerupUIUpdateU3Ed__120_t22F1AA37A48F118CDE00EA7AD9D2A0A9D595949E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6041,7 +6045,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CServerPowerupUIUpdateU3Ed__120_System
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CServerPowerupUIUpdateU3Ed__120_System_Collections_IEnumerator_Reset_m92F0C6A2A4C61980DFF959A6274C7D62AFBE7BF8_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 66479
+// Method Definition Index: 66481
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CServerPowerupUIUpdateU3Ed__120_System_Collections_IEnumerator_get_Current_mF16B954D5A54C919FB84BD056874FF5FD400CFC9 (U3CServerPowerupUIUpdateU3Ed__120_t22F1AA37A48F118CDE00EA7AD9D2A0A9D595949E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6057,14 +6061,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CServerPowerupUIUpdateU3Ed__
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66480
+// Method Definition Index: 66482
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCardSwipeDetector_Start_m03A94E1D0B135C2E1CE263C3AE1D4D44CE22719D (OfferCardSwipeDetector_t8A92D3D7515E4CD6DBDDB3EDC24350A68B2C2CA8* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisOffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416_m6EF421640DB810988378EA963D0E76511233F57E_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindFirstObjectByType_TisOffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416_m7F514520B9DD84E2239E9791619C1EE011E7F26F_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral36FC70A54107B06A630E8BC2CD7DFA99C8C0FA69);
 		s_Il2CppMethodInitialized = true;
@@ -6073,7 +6077,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCardSwipeDetector_Start_m03A94E1D0B
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferCardSwipeDetector.cs:26>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* L_0;
-		L_0 = Object_FindObjectOfType_TisOffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416_m6EF421640DB810988378EA963D0E76511233F57E(Object_FindObjectOfType_TisOffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416_m6EF421640DB810988378EA963D0E76511233F57E_RuntimeMethod_var);
+		L_0 = Object_FindFirstObjectByType_TisOffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416_m7F514520B9DD84E2239E9791619C1EE011E7F26F(Object_FindFirstObjectByType_TisOffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416_m7F514520B9DD84E2239E9791619C1EE011E7F26F_RuntimeMethod_var);
 		__this->___offersManager = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___offersManager), (void*)L_0);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferCardSwipeDetector.cs:28>
@@ -6097,7 +6101,7 @@ IL_0023:
 		return;
 	}
 }
-// Method Definition Index: 66481
+// Method Definition Index: 66483
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCardSwipeDetector_OnPointerDown_m16C6C3A77C466B6BF437DA13D756CE37729F906B (OfferCardSwipeDetector_t8A92D3D7515E4CD6DBDDB3EDC24350A68B2C2CA8* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
 	{
@@ -6127,7 +6131,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 66482
+// Method Definition Index: 66484
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCardSwipeDetector_OnPointerUp_mCDC7BC8C57E7F87A074647992D9C908AF6F93E60 (OfferCardSwipeDetector_t8A92D3D7515E4CD6DBDDB3EDC24350A68B2C2CA8* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6296,7 +6300,7 @@ IL_00df:
 		return;
 	}
 }
-// Method Definition Index: 66483
+// Method Definition Index: 66485
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCardSwipeDetector__ctor_m5174F569E1A2ED72A721DBEEDED41E97B2C50243 (OfferCardSwipeDetector_t8A92D3D7515E4CD6DBDDB3EDC24350A68B2C2CA8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6322,7 +6326,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCardSwipeDetector__ctor_m5174F569E1
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66484
+// Method Definition Index: 66486
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCarouselScaler_Awake_m58BD2606AEB45AD40318768DB4E2ED8546E03FFB (OfferCarouselScaler_tDFA4DC8FB0CE908324FE37413C25F8627BFBFD4A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6485,7 +6489,7 @@ IL_00ed:
 		return;
 	}
 }
-// Method Definition Index: 66485
+// Method Definition Index: 66487
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCarouselScaler_Start_m48A472C7395DD7E9036CE0C67D27434E106F9700 (OfferCarouselScaler_tDFA4DC8FB0CE908324FE37413C25F8627BFBFD4A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6495,7 +6499,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCarouselScaler_Start_m48A472C7395DD
 		return;
 	}
 }
-// Method Definition Index: 66486
+// Method Definition Index: 66488
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCarouselScaler_StoreOriginalOffsets_m477FDD742A74480597B8009AA9A4160A27E35768 (OfferCarouselScaler_tDFA4DC8FB0CE908324FE37413C25F8627BFBFD4A* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, String_t* ___1_elementName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6621,7 +6625,7 @@ IL_001f:
 		return;
 	}
 }
-// Method Definition Index: 66487
+// Method Definition Index: 66489
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCarouselScaler_StoreOriginalSize_m6C8D5EFEECB05D1488E4FBBD80296E40F533252C (OfferCarouselScaler_tDFA4DC8FB0CE908324FE37413C25F8627BFBFD4A* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, String_t* ___1_elementName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6692,7 +6696,7 @@ IL_001f:
 		return;
 	}
 }
-// Method Definition Index: 66488
+// Method Definition Index: 66490
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCarouselScaler_ApplyScaling_m928ECBBB61BB5D0B72E2D41D84F3EF0B0064082A (OfferCarouselScaler_tDFA4DC8FB0CE908324FE37413C25F8627BFBFD4A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6982,7 +6986,7 @@ IL_01ca:
 		return;
 	}
 }
-// Method Definition Index: 66489
+// Method Definition Index: 66491
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCarouselScaler_ScaleByOffset_m3301493E2ED554C183346B5ED9D5B5776ABA8F7B (OfferCarouselScaler_tDFA4DC8FB0CE908324FE37413C25F8627BFBFD4A* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7075,7 +7079,7 @@ IL_0018:
 		return;
 	}
 }
-// Method Definition Index: 66490
+// Method Definition Index: 66492
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCarouselScaler_ScaleBySizeDelta_mDD3977A653208C4669EACD2F23FBA62800814D8F (OfferCarouselScaler_tDFA4DC8FB0CE908324FE37413C25F8627BFBFD4A* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7148,7 +7152,7 @@ IL_0018:
 		return;
 	}
 }
-// Method Definition Index: 66491
+// Method Definition Index: 66493
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCarouselScaler_RecalculateScaling_m6317A6814D091448034CC4E14EE31B897FE6E919 (OfferCarouselScaler_tDFA4DC8FB0CE908324FE37413C25F8627BFBFD4A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7158,7 +7162,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCarouselScaler_RecalculateScaling_m
 		return;
 	}
 }
-// Method Definition Index: 66492
+// Method Definition Index: 66494
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCarouselScaler__ctor_mFE831F740C9FB5D0D66B7357DE22AEE71101D45A (OfferCarouselScaler_tDFA4DC8FB0CE908324FE37413C25F8627BFBFD4A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7212,7 +7216,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferCarouselScaler__ctor_mFE831F740C9FB
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66493
+// Method Definition Index: 66495
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_Start_m82243AF50473C9C618ACC9E7ACE0E2F42481BCEE (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7221,8 +7225,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_Start_m82243AF50473C9C
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_3_t5E914D59BC31AAE44A0FE411A5376A095F347A2B_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_m9F95418B43AD56D2B249A1712B89939CB1A88FCC_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisDailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823_m3B31EB6CF1CAABB3F91A893E8C681BCE7FBA66DE_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindFirstObjectByType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_mEAD20F2B028B6BD3C96CF684B6DF7C89D7338636_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindFirstObjectByType_TisDailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823_m81F4A3A1174FBC74B50A1855E4733F085E8353B6_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&OfferPanelManager_OnDailyRewardPanelClosed_m9D6AA578916CE673B10C4D3E792297C7430FE2C7_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&OfferPanelManager_OnPurchaseSuccess_m412188F0EED054578F747EE4868570AB198A7E8F_RuntimeMethod_var);
@@ -7239,15 +7243,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_Start_m82243AF50473C9C
 	}
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* V_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:63>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:64>
 		OfferPanelManager_HideAllPanels_m2C9C10DAEB8107D51E8DE85C9808E5A409DB931A(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:66>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:67>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* L_0;
-		L_0 = Object_FindObjectOfType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_m9F95418B43AD56D2B249A1712B89939CB1A88FCC(Object_FindObjectOfType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_m9F95418B43AD56D2B249A1712B89939CB1A88FCC_RuntimeMethod_var);
+		L_0 = Object_FindFirstObjectByType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_mEAD20F2B028B6BD3C96CF684B6DF7C89D7338636(Object_FindFirstObjectByType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_mEAD20F2B028B6BD3C96CF684B6DF7C89D7338636_RuntimeMethod_var);
 		__this->___authManager = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___authManager), (void*)L_0);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:67>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:68>
 		AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* L_1 = __this->___authManager;
 		bool L_2;
 		L_2 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_1, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -7257,7 +7261,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_Start_m82243AF50473C9C
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:69>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:70>
 		AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* L_3 = __this->___authManager;
 		AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* L_4 = L_3;
 		NullCheck(L_4);
@@ -7269,7 +7273,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_Start_m82243AF50473C9C
 		NullCheck(L_4);
 		L_4->___OnAuthenticationSuccess = ((Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)CastclassSealed((RuntimeObject*)L_7, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&L_4->___OnAuthenticationSuccess), (void*)((Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)CastclassSealed((RuntimeObject*)L_7, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var)));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:70>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:71>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral4B04CB5702293ACB805FED98132F25AE75DD5F3A, NULL);
 		goto IL_005c;
@@ -7277,20 +7281,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_Start_m82243AF50473C9C
 
 IL_0052:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:74>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:75>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral30CBCEE6AB7453E52DB3EE13BA4E1BFB94F67D4C, NULL);
 	}
 
 IL_005c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:78>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:79>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_8;
-		L_8 = Object_FindObjectOfType_TisDailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823_m3B31EB6CF1CAABB3F91A893E8C681BCE7FBA66DE(Object_FindObjectOfType_TisDailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823_m3B31EB6CF1CAABB3F91A893E8C681BCE7FBA66DE_RuntimeMethod_var);
+		L_8 = Object_FindFirstObjectByType_TisDailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823_m81F4A3A1174FBC74B50A1855E4733F085E8353B6(Object_FindFirstObjectByType_TisDailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823_m81F4A3A1174FBC74B50A1855E4733F085E8353B6_RuntimeMethod_var);
 		__this->___dailyRewardManager = L_8;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___dailyRewardManager), (void*)L_8);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:79>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:80>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_9 = __this->___dailyRewardManager;
 		bool L_10;
 		L_10 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_9, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -7300,7 +7304,7 @@ IL_005c:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:81>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:82>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_11 = __this->___dailyRewardManager;
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_12 = L_11;
 		NullCheck(L_12);
@@ -7312,7 +7316,7 @@ IL_005c:
 		NullCheck(L_12);
 		L_12->___OnDailyRewardPanelClosed = ((Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)CastclassSealed((RuntimeObject*)L_15, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&L_12->___OnDailyRewardPanelClosed), (void*)((Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)CastclassSealed((RuntimeObject*)L_15, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var)));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:82>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:83>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral87464E96783EC706C9BC0D6DEF46314A98DE0120, NULL);
 		goto IL_00b2;
@@ -7320,14 +7324,14 @@ IL_005c:
 
 IL_00a8:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:86>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:87>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral5BDB37CCE91C777CF38F7A245B33FE43341BB057, NULL);
 	}
 
 IL_00b2:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:90>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:91>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_16 = __this->___mainMenuScreen;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_17;
@@ -7338,7 +7342,7 @@ IL_00b2:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:92>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:93>
 		RuntimeObject* L_18;
 		L_18 = OfferPanelManager_MonitorMainMenuActivation_m7445DACAEB8BA71BABE4FBDCB565B6BC1DBB880E(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_19;
@@ -7348,14 +7352,14 @@ IL_00b2:
 
 IL_00cf:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:96>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:97>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral17CFDDC3CB558871B244560FB409DE3563727323, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:98>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:99>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_20;
 		L_20 = GameObject_Find_m7A669B4EEC2617AB82F6E3FF007CDCD9F21DB300(_stringLiteral4AD54D1D11D0836FB68BEC938DEA7773FAC64164, NULL);
 		V_0 = L_20;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:99>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:100>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_21 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_22;
@@ -7366,23 +7370,23 @@ IL_00cf:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:101>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:102>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_23 = V_0;
 		__this->___mainMenuScreen = L_23;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___mainMenuScreen), (void*)L_23);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:102>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:103>
 		RuntimeObject* L_24;
 		L_24 = OfferPanelManager_MonitorMainMenuActivation_m7445DACAEB8BA71BABE4FBDCB565B6BC1DBB880E(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_25;
 		L_25 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_24, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:103>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:104>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral3AD4F464C0A9AE7F602080969BEAB5C322522C36, NULL);
 	}
 
 IL_010b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:108>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:109>
 		InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* L_26;
 		L_26 = InAppPurchaseManager_get_Instance_mE5539F4893CBBFD1D265EFB45369076C4803E561_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -7394,7 +7398,7 @@ IL_010b:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:109>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:110>
 		InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* L_28;
 		L_28 = InAppPurchaseManager_get_Instance_mE5539F4893CBBFD1D265EFB45369076C4803E561_inline(NULL);
 		Action_3_t5E914D59BC31AAE44A0FE411A5376A095F347A2B* L_29 = (Action_3_t5E914D59BC31AAE44A0FE411A5376A095F347A2B*)il2cpp_codegen_object_new(Action_3_t5E914D59BC31AAE44A0FE411A5376A095F347A2B_il2cpp_TypeInfo_var);
@@ -7405,17 +7409,17 @@ IL_010b:
 
 IL_012e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:112>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:113>
 		RuntimeObject* L_30;
 		L_30 = OfferPanelManager_MonitorPanelState_mF1BB47CBC9FF964AED5DE1F577754347B26A9E6F(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_31;
 		L_31 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_30, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:115>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:116>
 		RuntimeObject* L_32;
 		L_32 = OfferPanelManager_UpdateTimeUntilNextOffer_m86CF2ECACBFEDEF1DE868FDB8CABDEFE7D936FDD(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_33;
 		L_33 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_32, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:121>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:122>
 		bool L_34 = __this->___hasLoggedIn;
 		if (L_34)
 		{
@@ -7431,20 +7435,20 @@ IL_012e:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:123>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:124>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral17C093304CC862D4F1D4D02AE0E0E21365CF345B, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:124>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:125>
 		OfferPanelManager_OnUserLoggedIn_m1FF22EE27553EEBB3E4A318FD6C37BF1E08E6AB4(__this, NULL);
 	}
 
 IL_0167:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:126>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:127>
 		return;
 	}
 }
-// Method Definition Index: 66494
+// Method Definition Index: 66496
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_OnDestroy_m89C18C85E961DB5136E012E0F884706C731214DE (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7459,7 +7463,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_OnDestroy_m89C18C85E96
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:131>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:132>
 		AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* L_0 = __this->___authManager;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -7470,7 +7474,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_OnDestroy_m89C18C85E96
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:133>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:134>
 		AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* L_2 = __this->___authManager;
 		AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* L_3 = L_2;
 		NullCheck(L_3);
@@ -7486,7 +7490,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_OnDestroy_m89C18C85E96
 
 IL_0035:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:136>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:137>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_7 = __this->___dailyRewardManager;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_8;
@@ -7497,7 +7501,7 @@ IL_0035:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:138>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:139>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_9 = __this->___dailyRewardManager;
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_10 = L_9;
 		NullCheck(L_10);
@@ -7513,7 +7517,7 @@ IL_0035:
 
 IL_006a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:141>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:142>
 		InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* L_14;
 		L_14 = InAppPurchaseManager_get_Instance_mE5539F4893CBBFD1D265EFB45369076C4803E561_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -7525,7 +7529,7 @@ IL_006a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:142>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:143>
 		InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* L_16;
 		L_16 = InAppPurchaseManager_get_Instance_mE5539F4893CBBFD1D265EFB45369076C4803E561_inline(NULL);
 		Action_3_t5E914D59BC31AAE44A0FE411A5376A095F347A2B* L_17 = (Action_3_t5E914D59BC31AAE44A0FE411A5376A095F347A2B*)il2cpp_codegen_object_new(Action_3_t5E914D59BC31AAE44A0FE411A5376A095F347A2B_il2cpp_TypeInfo_var);
@@ -7536,11 +7540,11 @@ IL_006a:
 
 IL_008d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:143>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:144>
 		return;
 	}
 }
-// Method Definition Index: 66495
+// Method Definition Index: 66497
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_OnPurchaseSuccess_m412188F0EED054578F747EE4868570AB198A7E8F (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, int32_t ___0_chips, float ___1_cash, String_t* ___2_productId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7552,7 +7556,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_OnPurchaseSuccess_m412
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:147>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:148>
 		int32_t L_0 = __this->___currentActivePanelIndex;
 		if ((((int32_t)L_0) < ((int32_t)0)))
 		{
@@ -7560,23 +7564,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_OnPurchaseSuccess_m412
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:149>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:150>
 		String_t* L_1 = ___2_productId;
 		String_t* L_2;
 		L_2 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral405A4D0309C2E91B63F3DECFF102926903E7AD96, L_1, _stringLiteral40422E1386B4737F62BF71D0FDE59DEFFBA119C6, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_2, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:150>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:151>
 		OfferPanelManager_CloseCurrentPanel_mBAF996C6037D940AEA80CC5EA4E46F4DF1618481(__this, NULL);
 	}
 
 IL_0024:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:152>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:153>
 		return;
 	}
 }
-// Method Definition Index: 66496
+// Method Definition Index: 66498
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_OnUserLoggedIn_m1FF22EE27553EEBB3E4A318FD6C37BF1E08E6AB4 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7593,19 +7597,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_OnUserLoggedIn_m1FF22E
 	}
 	String_t* V_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:159>
-		__this->___hasLoggedIn = (bool)1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:160>
-		__this->___isApiDataLoaded = (bool)0;
+		__this->___hasLoggedIn = (bool)1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:161>
+		__this->___isApiDataLoaded = (bool)0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:162>
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_0 = __this->___apiOfferStrings;
 		NullCheck(L_0);
 		List_1_Clear_mC6C7AEBB0F980A717A87C0D12377984A464F0934_inline(L_0, List_1_Clear_mC6C7AEBB0F980A717A87C0D12377984A464F0934_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:164>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:165>
 		String_t* L_1;
 		L_1 = PlayerModel_get_Id_mC58F20220F795613BEDA334EE4DB7A9B07CF79E0_inline(NULL);
 		V_0 = L_1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:167>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:168>
 		String_t* L_2 = V_0;
 		bool L_3;
 		L_3 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_2, NULL);
@@ -7615,7 +7619,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_OnUserLoggedIn_m1FF22E
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:169>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:170>
 		String_t* L_4 = V_0;
 		__this->___currentUserId = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentUserId), (void*)L_4);
@@ -7623,7 +7627,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_OnUserLoggedIn_m1FF22E
 
 IL_002e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:173>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:174>
 		BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_5;
 		L_5 = BackendAuthService_get_Instance_m74239149FFCCCF5A49AF965DCA0565780B051110_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -7635,10 +7639,9 @@ IL_002e:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:175>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:176>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral9E764C475F9BFAFB54B7DAAB1C124A318F238C51, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:176>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:177>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:178>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:179>
@@ -7660,6 +7663,7 @@ IL_002e:
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:195>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:196>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:197>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:198>
 		BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_7;
 		L_7 = BackendAuthService_get_Instance_m74239149FFCCCF5A49AF965DCA0565780B051110_inline(NULL);
 		Action_2_t942C54674EA4AD68943D8ACD4EE527AD1166EBA3* L_8 = (Action_2_t942C54674EA4AD68943D8ACD4EE527AD1166EBA3*)il2cpp_codegen_object_new(Action_2_t942C54674EA4AD68943D8ACD4EE527AD1166EBA3_il2cpp_TypeInfo_var);
@@ -7671,30 +7675,30 @@ IL_002e:
 
 IL_005d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:201>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:202>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral0546558C6DE944668AE528A7A4E800769AA291E1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:202>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:203>
 		__this->___isApiDataLoaded = (bool)1;
 	}
 
 IL_006e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:206>
-		__this->___nextPanelIndexToShow = 0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:207>
-		__this->___isShowingPanelsSequence = (bool)0;
+		__this->___nextPanelIndexToShow = 0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:208>
-		__this->___hasShownAfterMainMenuActivation = (bool)0;
+		__this->___isShowingPanelsSequence = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:209>
-		__this->___hasShownOfferThisSession = (bool)0;
+		__this->___hasShownAfterMainMenuActivation = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:210>
-		__this->___hasTriggeredDailyRewardPanel = (bool)0;
+		__this->___hasShownOfferThisSession = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:211>
-		__this->___isWaitingForNextPanel = (bool)0;
+		__this->___hasTriggeredDailyRewardPanel = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:212>
+		__this->___isWaitingForNextPanel = (bool)0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:213>
 		__this->___hasDailyRewardPanelClosed = (bool)0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:215>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:216>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_9 = __this->___dailyRewardManager;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
@@ -7705,17 +7709,17 @@ IL_006e:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:217>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:218>
 		__this->___hasDailyRewardPanelClosed = (bool)1;
 	}
 
 IL_00b4:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:219>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:220>
 		return;
 	}
 }
-// Method Definition Index: 66497
+// Method Definition Index: 66499
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_OnUserLoggedOut_m700F2684A47031F22801A9A2111603CFEC56041A (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7729,43 +7733,43 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_OnUserLoggedOut_m700F2
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:226>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:227>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral0B113C25C7D407E1B8AECC9462B1E29D1A4A46E0, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:229>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:230>
 		__this->___currentUserId = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentUserId), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:232>
-		__this->___hasLoggedIn = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:233>
-		__this->___hasShownOfferThisSession = (bool)0;
+		__this->___hasLoggedIn = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:234>
-		__this->___nextPanelIndexToShow = 0;
+		__this->___hasShownOfferThisSession = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:235>
+		__this->___nextPanelIndexToShow = 0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:236>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_0 = __this->___selectedPanelIndices;
 		NullCheck(L_0);
 		List_1_Clear_mF6795DE5F49C1D0B91D6A0955F448B22970D67A9_inline(L_0, List_1_Clear_mF6795DE5F49C1D0B91D6A0955F448B22970D67A9_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:236>
-		__this->___isShowingPanelsSequence = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:237>
-		__this->___hasTriggeredDailyRewardPanel = (bool)0;
+		__this->___isShowingPanelsSequence = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:238>
-		__this->___hasShownAfterMainMenuActivation = (bool)0;
+		__this->___hasTriggeredDailyRewardPanel = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:239>
-		__this->___isWaitingForNextPanel = (bool)0;
+		__this->___hasShownAfterMainMenuActivation = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:240>
-		__this->___hasDailyRewardPanelClosed = (bool)0;
+		__this->___isWaitingForNextPanel = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:241>
+		__this->___hasDailyRewardPanelClosed = (bool)0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:242>
 		__this->___currentActivePanelIndex = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:244>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:245>
 		OfferPanelManager_HideAllPanels_m2C9C10DAEB8107D51E8DE85C9808E5A409DB931A(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:246>
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralB5FD0825573D66D68B614AF221684EEC16B874E3, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:247>
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralB5FD0825573D66D68B614AF221684EEC16B874E3, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:248>
 		return;
 	}
 }
-// Method Definition Index: 66498
+// Method Definition Index: 66500
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_OnDailyRewardPanelClosed_m9D6AA578916CE673B10C4D3E792297C7430FE2C7 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7776,18 +7780,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_OnDailyRewardPanelClos
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:254>
-		__this->___hasDailyRewardPanelClosed = (bool)1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:255>
-		__this->___isWaitingForDailyRewardPanel = (bool)0;
+		__this->___hasDailyRewardPanelClosed = (bool)1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:256>
+		__this->___isWaitingForDailyRewardPanel = (bool)0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:257>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral6038FEAF8DA0EF6E9E1DAA4C9E9EC5F9CF2EEE45, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:257>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:258>
 		return;
 	}
 }
-// Method Definition Index: 66499
+// Method Definition Index: 66501
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OfferPanelManager_MonitorMainMenuActivation_m7445DACAEB8BA71BABE4FBDCB565B6BC1DBB880E (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7806,7 +7810,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OfferPanelManager_MonitorMainM
 		return L_1;
 	}
 }
-// Method Definition Index: 66500
+// Method Definition Index: 66502
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_GenerateRandomPanelIndices_mEC789E4D20037B4D6349ECC5C0B819AC383403D0 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7837,11 +7841,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_GenerateRandomPanelInd
 	int32_t V_4 = 0;
 	int32_t V_5 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:342>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:343>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_0 = __this->___selectedPanelIndices;
 		NullCheck(L_0);
 		List_1_Clear_mF6795DE5F49C1D0B91D6A0955F448B22970D67A9_inline(L_0, List_1_Clear_mF6795DE5F49C1D0B91D6A0955F448B22970D67A9_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:345>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:346>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_1 = __this->___offerPanels;
 		if (!L_1)
 		{
@@ -7859,27 +7863,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_GenerateRandomPanelInd
 
 IL_001c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:347>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:348>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteralC94AABD93389761619F26845E8D757C06152A0F3, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:348>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:349>
 		return;
 	}
 
 IL_0027:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:352>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:353>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_3 = (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73*)il2cpp_codegen_object_new(List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73_il2cpp_TypeInfo_var);
 		List_1__ctor_m17F501B5A5C289ECE1B4F3D6EBF05DFA421433F8(L_3, List_1__ctor_m17F501B5A5C289ECE1B4F3D6EBF05DFA421433F8_RuntimeMethod_var);
 		V_0 = L_3;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:353>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:354>
 		V_2 = 0;
 		goto IL_004c;
 	}
 
 IL_0031:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:355>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:356>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_4 = __this->___offerPanels;
 		int32_t L_5 = V_2;
 		NullCheck(L_4);
@@ -7894,7 +7898,7 @@ IL_0031:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:357>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:358>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_9 = V_0;
 		int32_t L_10 = V_2;
 		NullCheck(L_9);
@@ -7903,14 +7907,14 @@ IL_0031:
 
 IL_0048:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:353>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:354>
 		int32_t L_11 = V_2;
 		V_2 = ((int32_t)il2cpp_codegen_add(L_11, 1));
 	}
 
 IL_004c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:353>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:354>
 		int32_t L_12 = V_2;
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_13 = __this->___offerPanels;
 		NullCheck(L_13);
@@ -7920,7 +7924,7 @@ IL_004c:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:361>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:362>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_14 = V_0;
 		NullCheck(L_14);
 		int32_t L_15;
@@ -7931,16 +7935,16 @@ IL_004c:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:363>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:364>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral9FEF7B7EDBBDE0A1DA9765EB6254AA1E4517D783, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:364>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:365>
 		return;
 	}
 
 IL_006a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:368>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:369>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_16 = V_0;
 		NullCheck(L_16);
 		int32_t L_17;
@@ -7948,14 +7952,14 @@ IL_006a:
 		int32_t L_18;
 		L_18 = Mathf_Min_m888083F74FF5655778F0403BB5E9608BEFDEA8CB_inline(3, L_17, NULL);
 		V_1 = L_18;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:371>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:372>
 		V_3 = 0;
 		goto IL_00af;
 	}
 
 IL_007b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:373>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:374>
 		int32_t L_19 = V_3;
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_20 = V_0;
 		NullCheck(L_20);
@@ -7964,14 +7968,14 @@ IL_007b:
 		int32_t L_22;
 		L_22 = Random_Range_m6763D9767F033357F88B6637F048F4ACA4123B68(L_19, L_21, NULL);
 		V_4 = L_22;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:374>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:375>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_23 = V_0;
 		int32_t L_24 = V_3;
 		NullCheck(L_23);
 		int32_t L_25;
 		L_25 = List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D(L_23, L_24, List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var);
 		V_5 = L_25;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:375>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:376>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_26 = V_0;
 		int32_t L_27 = V_3;
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_28 = V_0;
@@ -7981,20 +7985,20 @@ IL_007b:
 		L_30 = List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D(L_28, L_29, List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var);
 		NullCheck(L_26);
 		List_1_set_Item_m95629806F31CF369D937590912E0B6A53FF7C587(L_26, L_27, L_30, List_1_set_Item_m95629806F31CF369D937590912E0B6A53FF7C587_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:376>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:377>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_31 = V_0;
 		int32_t L_32 = V_4;
 		int32_t L_33 = V_5;
 		NullCheck(L_31);
 		List_1_set_Item_m95629806F31CF369D937590912E0B6A53FF7C587(L_31, L_32, L_33, List_1_set_Item_m95629806F31CF369D937590912E0B6A53FF7C587_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:371>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:372>
 		int32_t L_34 = V_3;
 		V_3 = ((int32_t)il2cpp_codegen_add(L_34, 1));
 	}
 
 IL_00af:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:371>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:372>
 		int32_t L_35 = V_3;
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_36 = V_0;
 		NullCheck(L_36);
@@ -8006,7 +8010,7 @@ IL_00af:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:380>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:381>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_38 = V_0;
 		int32_t L_39 = V_1;
 		RuntimeObject* L_40;
@@ -8015,7 +8019,7 @@ IL_00af:
 		L_41 = Enumerable_ToList_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m3E9A8F467117CBA5D91E50BC524DEA85E532EAAC(L_40, Enumerable_ToList_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m3E9A8F467117CBA5D91E50BC524DEA85E532EAAC_RuntimeMethod_var);
 		__this->___selectedPanelIndices = L_41;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___selectedPanelIndices), (void*)L_41);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:382>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:383>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_42 = __this->___selectedPanelIndices;
 		NullCheck(L_42);
 		int32_t L_43;
@@ -8029,11 +8033,11 @@ IL_00af:
 		L_48 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralEE2AB586838752977046AC8676871B1BC5EB45F4, L_45, L_47, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_48, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:383>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:384>
 		return;
 	}
 }
-// Method Definition Index: 66501
+// Method Definition Index: 66503
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_MapOfferStringsToIndices_m2509CDD34B539B5274D03EE9F1EF5A962CCB5A9F (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___0_offerNames, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8057,11 +8061,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_MapOfferStringsToIndic
 	String_t* V_1 = NULL;
 	int32_t V_2 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:390>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:391>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_0 = __this->___selectedPanelIndices;
 		NullCheck(L_0);
 		List_1_Clear_mF6795DE5F49C1D0B91D6A0955F448B22970D67A9_inline(L_0, List_1_Clear_mF6795DE5F49C1D0B91D6A0955F448B22970D67A9_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:391>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:392>
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_1 = ___0_offerNames;
 		if (L_1)
 		{
@@ -8069,13 +8073,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_MapOfferStringsToIndic
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:391>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:392>
 		return;
 	}
 
 IL_000f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:393>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:394>
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_2 = ___0_offerNames;
 		NullCheck(L_2);
 		Enumerator_tA7A4B718FE1ED1D87565680D8C8195EC8AEAB3D1 L_3;
@@ -8100,16 +8104,16 @@ FINALLY_005e:
 
 IL_0018_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:393>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:394>
 				String_t* L_4;
 				L_4 = Enumerator_get_Current_m143541DD8FBCD313E7554EA738FA813B8F4DB11A_inline((&V_0), Enumerator_get_Current_m143541DD8FBCD313E7554EA738FA813B8F4DB11A_RuntimeMethod_var);
 				V_1 = L_4;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:396>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:397>
 				String_t* L_5 = V_1;
 				int32_t L_6;
 				L_6 = OfferPanelManager_ParseOfferIndexFromName_m845273747C86CC6A036D3EF40C8C4650B59BB7E1(__this, L_5, NULL);
 				V_2 = L_6;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:397>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:398>
 				int32_t L_7 = V_2;
 				if ((((int32_t)L_7) < ((int32_t)0)))
 				{
@@ -8140,7 +8144,7 @@ IL_0018_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:399>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:400>
 				List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_15 = __this->___selectedPanelIndices;
 				int32_t L_16 = V_2;
 				NullCheck(L_15);
@@ -8149,7 +8153,7 @@ IL_0018_1:
 
 IL_0053_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:393>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:394>
 				bool L_17;
 				L_17 = Enumerator_MoveNext_mDB47EEC4531D33B9C33FD2E70BA15E1535A0F3ED((&V_0), Enumerator_MoveNext_mDB47EEC4531D33B9C33FD2E70BA15E1535A0F3ED_RuntimeMethod_var);
 				if (L_17)
@@ -8169,7 +8173,7 @@ IL_0053_1:
 
 IL_006c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:403>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:404>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_18 = __this->___selectedPanelIndices;
 		String_t* L_19;
 		L_19 = String_Join_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m3954E1690A53FDAE651340E931E00877D887458C(_stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D, L_18, String_Join_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m3954E1690A53FDAE651340E931E00877D887458C_RuntimeMethod_var);
@@ -8177,11 +8181,11 @@ IL_006c:
 		L_20 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralD1EC4E04D69B0CC7726BB611C26424718075ED22, L_19, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_20, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:404>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:405>
 		return;
 	}
 }
-// Method Definition Index: 66502
+// Method Definition Index: 66504
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t OfferPanelManager_ParseOfferIndexFromName_m845273747C86CC6A036D3EF40C8C4650B59BB7E1 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, String_t* ___0_name, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8195,7 +8199,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t OfferPanelManager_ParseOfferIndexFrom
 	}
 	int32_t V_0 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:411>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:412>
 		String_t* L_0 = ___0_name;
 		bool L_1;
 		L_1 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_0, NULL);
@@ -8205,13 +8209,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t OfferPanelManager_ParseOfferIndexFrom
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:411>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:412>
 		return (-1);
 	}
 
 IL_000a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:414>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:415>
 		String_t* L_2 = ___0_name;
 		Func_2_tF409A653B8F770E0A30CD80D21764FB1DDB2A28F* L_3 = (Func_2_tF409A653B8F770E0A30CD80D21764FB1DDB2A28F*)il2cpp_codegen_object_new(Func_2_tF409A653B8F770E0A30CD80D21764FB1DDB2A28F_il2cpp_TypeInfo_var);
 		Func_2__ctor_m86D272566839A59489924C367E316D2E516EC1F2(L_3, NULL, (intptr_t)((void*)Char_IsDigit_m8C1A38685D548E89FB8A05525B55261CC8D271B2_RuntimeMethod_var), NULL);
@@ -8221,7 +8225,7 @@ IL_000a:
 		L_5 = Enumerable_ToArray_TisChar_t521A6F19B456D956AF452D926C32709DC03D6B17_m82691024CEFEC71EBDF5FA1C56204E9A32824CE0(L_4, Enumerable_ToArray_TisChar_t521A6F19B456D956AF452D926C32709DC03D6B17_m82691024CEFEC71EBDF5FA1C56204E9A32824CE0_RuntimeMethod_var);
 		String_t* L_6;
 		L_6 = String_CreateString_mFBC28D2E3EB87D497F7E702E4FFAD65F635E44DF(NULL, L_5, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:415>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:416>
 		bool L_7;
 		L_7 = Int32_TryParse_mC928DE2FEC1C35ED5298BDDCA9868076E94B8A21(L_6, (&V_0), NULL);
 		if (!L_7)
@@ -8230,18 +8234,18 @@ IL_000a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:418>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:419>
 		int32_t L_8 = V_0;
 		return ((int32_t)il2cpp_codegen_subtract(L_8, 1));
 	}
 
 IL_0033:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:420>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:421>
 		return (-1);
 	}
 }
-// Method Definition Index: 66503
+// Method Definition Index: 66505
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_ShowNextOfferPanelInSequence_mB80DE29913B7103A16484902D8659AE8D4A82C22 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8262,7 +8266,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_ShowNextOfferPanelInSe
 	}
 	int32_t V_0 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:429>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:430>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_0 = __this->___offerPanels;
 		if (!L_0)
 		{
@@ -8280,16 +8284,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_ShowNextOfferPanelInSe
 
 IL_0011:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:431>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:432>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteralC94AABD93389761619F26845E8D757C06152A0F3, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:432>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:433>
 		return;
 	}
 
 IL_001c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:436>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:437>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_2 = __this->___selectedPanelIndices;
 		if (!L_2)
 		{
@@ -8309,12 +8313,12 @@ IL_001c:
 
 IL_0031:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:438>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:439>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral158D629FD1D32907611B79BB0B95C0FE8346D3AD, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:439>
-		OfferPanelManager_GenerateRandomPanelIndices_mEC789E4D20037B4D6349ECC5C0B819AC383403D0(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:440>
+		OfferPanelManager_GenerateRandomPanelIndices_mEC789E4D20037B4D6349ECC5C0B819AC383403D0(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:441>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_5 = __this->___selectedPanelIndices;
 		if (!L_5)
 		{
@@ -8334,16 +8338,16 @@ IL_0031:
 
 IL_0056:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:442>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:443>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral03860EA149F881854DA20A7D57DB26B215D77ABD, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:443>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:444>
 		return;
 	}
 
 IL_0061:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:448>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:449>
 		int32_t L_8 = __this->___nextPanelIndexToShow;
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_9 = __this->___selectedPanelIndices;
 		NullCheck(L_9);
@@ -8355,27 +8359,27 @@ IL_0061:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:450>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:451>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralD1C6A78B159023217C37C3819A12D2E9346A817C, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:451>
-		__this->___isShowingPanelsSequence = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:452>
-		__this->___hasShownOfferThisSession = (bool)1;
+		__this->___isShowingPanelsSequence = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:453>
+		__this->___hasShownOfferThisSession = (bool)1;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:454>
 		return;
 	}
 
 IL_008d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:457>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:458>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_11 = __this->___selectedPanelIndices;
 		int32_t L_12 = __this->___nextPanelIndexToShow;
 		NullCheck(L_11);
 		int32_t L_13;
 		L_13 = List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D(L_11, L_12, List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var);
 		V_0 = L_13;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:460>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:461>
 		int32_t L_14 = V_0;
 		if ((((int32_t)L_14) < ((int32_t)0)))
 		{
@@ -8408,7 +8412,7 @@ IL_008d:
 
 IL_00be:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:462>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:463>
 		int32_t L_22 = V_0;
 		int32_t L_23 = L_22;
 		RuntimeObject* L_24 = Box(il2cpp_defaults.int32_class, &L_23);
@@ -8416,10 +8420,10 @@ IL_00be:
 		L_25 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral1A3AB950CFB900AF0E05057F70510415CF0F64FF, L_24, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_25, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:463>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:464>
 		int32_t L_26 = __this->___nextPanelIndexToShow;
 		__this->___nextPanelIndexToShow = ((int32_t)il2cpp_codegen_add(L_26, 1));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:465>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:466>
 		int32_t L_27 = __this->___nextPanelIndexToShow;
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_28 = __this->___selectedPanelIndices;
 		NullCheck(L_28);
@@ -8431,28 +8435,28 @@ IL_00be:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:467>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:468>
 		OfferPanelManager_ShowNextOfferPanelInSequence_mB80DE29913B7103A16484902D8659AE8D4A82C22(__this, NULL);
 	}
 
 IL_00fa:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:469>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:470>
 		return;
 	}
 
 IL_00fb:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:473>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:474>
 		OfferPanelManager_HideAllPanels_m2C9C10DAEB8107D51E8DE85C9808E5A409DB931A(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:476>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:477>
 		int32_t L_30 = V_0;
 		__this->___currentActivePanelIndex = L_30;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:477>
-		__this->___isShowingPanelsSequence = (bool)1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:478>
+		__this->___isShowingPanelsSequence = (bool)1;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:479>
 		__this->___hasShownOfferThisSession = (bool)1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:481>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:482>
 		int32_t L_31 = __this->___nextPanelIndexToShow;
 		if (L_31)
 		{
@@ -8460,23 +8464,23 @@ IL_00fb:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:483>
-		OfferPanelManager_MarkOffersAsShownToday_mA5E503AB85F7657E1718FC9F8D56E6A70A5F79D3(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:484>
+		OfferPanelManager_MarkOffersAsShownToday_mA5E503AB85F7657E1718FC9F8D56E6A70A5F79D3(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:485>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralA6D64FC15FA1F29C893F9AD0C0A78193C649912B, NULL);
 	}
 
 IL_012e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:488>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:489>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_32 = __this->___offerPanels;
 		int32_t L_33 = V_0;
 		NullCheck(L_32);
 		int32_t L_34 = L_33;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_35 = (L_32)->GetAt(static_cast<il2cpp_array_size_t>(L_34));
 		OfferPanelManager_SetupPanelButtonListeners_m4BDA410DAE8BCC247B2C0ED84450BCD6148B7F27(__this, L_35, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:491>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:492>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_36 = __this->___offerPanels;
 		int32_t L_37 = V_0;
 		NullCheck(L_36);
@@ -8486,7 +8490,7 @@ IL_012e:
 		L_40 = OfferPanelManager_AnimatePanelScale_mE22D41C752AFADFC84FE96F79DCE70E7A4DEB952(__this, L_39, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_41;
 		L_41 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_40, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:493>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:494>
 		int32_t L_42 = __this->___nextPanelIndexToShow;
 		int32_t L_43 = ((int32_t)il2cpp_codegen_add(L_42, 1));
 		RuntimeObject* L_44 = Box(il2cpp_defaults.int32_class, &L_43);
@@ -8503,34 +8507,34 @@ IL_012e:
 		L_52 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteral780465B904B8455E4CCE9934C0707934AE905CB4, L_44, L_48, L_51, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_52, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:496>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:497>
 		int32_t L_53 = __this->___nextPanelIndexToShow;
 		__this->___nextPanelIndexToShow = ((int32_t)il2cpp_codegen_add(L_53, 1));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:497>
-		return;
-	}
-}
-// Method Definition Index: 66504
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_ShowRandomOfferPanelWithAnimation_m3A108FEC29D61A01EBE6B7282AB1724372E2CF13 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
-{
-	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:504>
-		OfferPanelManager_ShowNextOfferPanelInSequence_mB80DE29913B7103A16484902D8659AE8D4A82C22(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:505>
-		return;
-	}
-}
-// Method Definition Index: 66505
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_ShowRandomOfferPanel_m86D05C63AADEE1EE0DC018351408636C65591129 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
-{
-	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:512>
-		OfferPanelManager_ShowRandomOfferPanelWithAnimation_m3A108FEC29D61A01EBE6B7282AB1724372E2CF13(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:513>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:498>
 		return;
 	}
 }
 // Method Definition Index: 66506
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_ShowRandomOfferPanelWithAnimation_m3A108FEC29D61A01EBE6B7282AB1724372E2CF13 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:505>
+		OfferPanelManager_ShowNextOfferPanelInSequence_mB80DE29913B7103A16484902D8659AE8D4A82C22(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:506>
+		return;
+	}
+}
+// Method Definition Index: 66507
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_ShowRandomOfferPanel_m86D05C63AADEE1EE0DC018351408636C65591129 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:513>
+		OfferPanelManager_ShowRandomOfferPanelWithAnimation_m3A108FEC29D61A01EBE6B7282AB1724372E2CF13(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:514>
+		return;
+	}
+}
+// Method Definition Index: 66508
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OfferPanelManager_AnimatePanelScale_mE22D41C752AFADFC84FE96F79DCE70E7A4DEB952 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_panel, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8554,7 +8558,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OfferPanelManager_AnimatePanel
 		return L_2;
 	}
 }
-// Method Definition Index: 66507
+// Method Definition Index: 66509
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_HideAllPanels_m2C9C10DAEB8107D51E8DE85C9808E5A409DB931A (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8567,7 +8571,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_HideAllPanels_m2C9C10D
 	int32_t V_1 = 0;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* V_2 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:581>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:582>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_0 = __this->___offerPanels;
 		if (L_0)
 		{
@@ -8575,13 +8579,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_HideAllPanels_m2C9C10D
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:582>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:583>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:584>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:585>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_1 = __this->___offerPanels;
 		V_0 = L_1;
 		V_1 = 0;
@@ -8590,14 +8594,14 @@ IL_0009:
 
 IL_0014:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:584>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:585>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_2 = V_0;
 		int32_t L_3 = V_1;
 		NullCheck(L_2);
 		int32_t L_4 = L_3;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = (L_2)->GetAt(static_cast<il2cpp_array_size_t>(L_4));
 		V_2 = L_5;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:586>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:587>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = V_2;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_7;
@@ -8608,7 +8612,7 @@ IL_0014:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:587>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:588>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8 = V_2;
 		NullCheck(L_8);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_8, (bool)0, NULL);
@@ -8622,7 +8626,7 @@ IL_0028:
 
 IL_002c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:584>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:585>
 		int32_t L_10 = V_1;
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_11 = V_0;
 		NullCheck(L_11);
@@ -8632,13 +8636,13 @@ IL_002c:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:590>
-		__this->___currentActivePanelIndex = (-1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:591>
+		__this->___currentActivePanelIndex = (-1);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:592>
 		return;
 	}
 }
-// Method Definition Index: 66508
+// Method Definition Index: 66510
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_CloseCurrentPanel_mBAF996C6037D940AEA80CC5EA4E46F4DF1618481 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8651,7 +8655,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_CloseCurrentPanel_mBAF
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:598>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:599>
 		int32_t L_0 = __this->___currentActivePanelIndex;
 		if ((((int32_t)L_0) < ((int32_t)0)))
 		{
@@ -8668,7 +8672,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_CloseCurrentPanel_mBAF
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:600>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:601>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_3 = __this->___offerPanels;
 		int32_t L_4 = __this->___currentActivePanelIndex;
 		NullCheck(L_3);
@@ -8683,7 +8687,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_CloseCurrentPanel_mBAF
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:602>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:603>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_8 = __this->___offerPanels;
 		int32_t L_9 = __this->___currentActivePanelIndex;
 		NullCheck(L_8);
@@ -8691,9 +8695,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_CloseCurrentPanel_mBAF
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_11 = (L_8)->GetAt(static_cast<il2cpp_array_size_t>(L_10));
 		NullCheck(L_11);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_11, (bool)0, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:603>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:604>
 		__this->___currentActivePanelIndex = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:606>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:607>
 		int32_t L_12 = __this->___nextPanelIndexToShow;
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_13 = __this->___selectedPanelIndices;
 		NullCheck(L_13);
@@ -8719,9 +8723,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_CloseCurrentPanel_mBAF
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:608>
-		__this->___isWaitingForNextPanel = (bool)1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:609>
+		__this->___isWaitingForNextPanel = (bool)1;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:610>
 		RuntimeObject* L_17;
 		L_17 = OfferPanelManager_ShowNextPanelAfterDelay_m80C216B23D6D13D93DA768CF6FAC7E0F2092DE65(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_18;
@@ -8731,7 +8735,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_CloseCurrentPanel_mBAF
 
 IL_0086:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:611>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:612>
 		int32_t L_19 = __this->___nextPanelIndexToShow;
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_20 = __this->___selectedPanelIndices;
 		NullCheck(L_20);
@@ -8743,22 +8747,22 @@ IL_0086:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:614>
-		__this->___isShowingPanelsSequence = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:615>
-		__this->___isWaitingForNextPanel = (bool)0;
+		__this->___isShowingPanelsSequence = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:616>
+		__this->___isWaitingForNextPanel = (bool)0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:617>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral90C20A9A9E707B9D33FEA225C17287BF0732E48A, NULL);
 	}
 
 IL_00b1:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:620>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:621>
 		return;
 	}
 }
-// Method Definition Index: 66509
+// Method Definition Index: 66511
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OfferPanelManager_ShowNextPanelAfterDelay_m80C216B23D6D13D93DA768CF6FAC7E0F2092DE65 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8777,7 +8781,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OfferPanelManager_ShowNextPane
 		return L_1;
 	}
 }
-// Method Definition Index: 66510
+// Method Definition Index: 66512
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OfferPanelManager_MonitorPanelState_mF1BB47CBC9FF964AED5DE1F577754347B26A9E6F (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8796,7 +8800,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OfferPanelManager_MonitorPanel
 		return L_1;
 	}
 }
-// Method Definition Index: 66511
+// Method Definition Index: 66513
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_SetupPanelButtonListeners_m4BDA410DAE8BCC247B2C0ED84450BCD6148B7F27 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_panel, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8819,7 +8823,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_SetupPanelButtonListen
 	int32_t V_2 = 0;
 	U3CU3Ec__DisplayClass47_0_t918CE5D84FF1A5405603050EAD1007B4912698B0* V_3 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:694>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:695>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = ___0_panel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -8830,19 +8834,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_SetupPanelButtonListen
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:694>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:695>
 		return;
 	}
 
 IL_000a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:697>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:698>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = ___0_panel;
 		NullCheck(L_2);
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_3;
 		L_3 = GameObject_GetComponentsInChildren_TisButton_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098_m36D9096C7A880D43DE8F16498E8ACAC23E1C59DF(L_2, (bool)1, GameObject_GetComponentsInChildren_TisButton_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098_m36D9096C7A880D43DE8F16498E8ACAC23E1C59DF_RuntimeMethod_var);
 		V_0 = L_3;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:699>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:700>
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_4 = V_0;
 		if (!L_4)
 		{
@@ -8860,7 +8864,7 @@ IL_000a:
 
 IL_0019:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:701>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:702>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = ___0_panel;
 		NullCheck(L_6);
 		String_t* L_7;
@@ -8869,13 +8873,13 @@ IL_0019:
 		L_8 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralA23EC806B5AF2F16E197C9315C85FD68D1C1CAAF, L_7, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_8, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:702>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:703>
 		return;
 	}
 
 IL_002f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:708>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:709>
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_9 = V_0;
 		V_1 = L_9;
 		V_2 = 0;
@@ -8891,7 +8895,7 @@ IL_0035:
 		NullCheck(L_11);
 		L_11->___U3CU3E4__this = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&L_11->___U3CU3E4__this), (void*)__this);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:708>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:709>
 		U3CU3Ec__DisplayClass47_0_t918CE5D84FF1A5405603050EAD1007B4912698B0* L_12 = V_3;
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_13 = V_1;
 		int32_t L_14 = V_2;
@@ -8901,7 +8905,7 @@ IL_0035:
 		NullCheck(L_12);
 		L_12->___button = L_16;
 		Il2CppCodeGenWriteBarrier((void**)(&L_12->___button), (void*)L_16);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:710>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:711>
 		U3CU3Ec__DisplayClass47_0_t918CE5D84FF1A5405603050EAD1007B4912698B0* L_17 = V_3;
 		NullCheck(L_17);
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_18 = L_17->___button;
@@ -8914,7 +8918,7 @@ IL_0035:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:712>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:713>
 		U3CU3Ec__DisplayClass47_0_t918CE5D84FF1A5405603050EAD1007B4912698B0* L_20 = V_3;
 		NullCheck(L_20);
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_21 = L_20->___button;
@@ -8926,7 +8930,7 @@ IL_0035:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:714>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:715>
 		U3CU3Ec__DisplayClass47_0_t918CE5D84FF1A5405603050EAD1007B4912698B0* L_23 = V_3;
 		NullCheck(L_23);
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_24 = L_23->___button;
@@ -8937,16 +8941,16 @@ IL_0035:
 		L_26 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral6D52B3C244280A9ECCDF86769A8976A756479D04, L_25, _stringLiteral42646B33B50B6AA15E22733C8900716F0FE19E1D, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_26, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:715>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:716>
 		goto IL_00a3;
 	}
 
 IL_0087:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:718>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:719>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:720>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:721>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:722>
 		U3CU3Ec__DisplayClass47_0_t918CE5D84FF1A5405603050EAD1007B4912698B0* L_27 = V_3;
 		NullCheck(L_27);
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_28 = L_27->___button;
@@ -8968,7 +8972,7 @@ IL_00a3:
 
 IL_00a7:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:708>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:709>
 		int32_t L_33 = V_2;
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_34 = V_1;
 		NullCheck(L_34);
@@ -8978,7 +8982,7 @@ IL_00a7:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:724>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:725>
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_35 = V_0;
 		NullCheck(L_35);
 		int32_t L_36 = ((int32_t)(((RuntimeArray*)L_35)->max_length));
@@ -8991,11 +8995,11 @@ IL_00a7:
 		L_40 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral6DE2161386CD414A8467E09A2419B1B4FA4E06A5, L_37, L_39, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_40, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:725>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:726>
 		return;
 	}
 }
-// Method Definition Index: 66512
+// Method Definition Index: 66514
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool OfferPanelManager_IsPurchaseButton_m3F977F4A6D6CF5491A9D3312EBCC7EE9BDEABFE8 (Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___0_btn, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9009,7 +9013,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool OfferPanelManager_IsPurchaseButton_m3F97
 	}
 	String_t* V_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:729>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:730>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = ___0_btn;
 		NullCheck(L_0);
 		String_t* L_1;
@@ -9018,8 +9022,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool OfferPanelManager_IsPurchaseButton_m3F97
 		String_t* L_2;
 		L_2 = String_ToLowerInvariant_mBE32C93DE27C5353FEA3FA654FC1DDBE3D0EB0F2(L_1, NULL);
 		V_0 = L_2;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:730>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:731>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:732>
 		String_t* L_3 = V_0;
 		NullCheck(L_3);
 		bool L_4;
@@ -9062,33 +9066,33 @@ IL_003f:
 		return (bool)1;
 	}
 }
-// Method Definition Index: 66513
+// Method Definition Index: 66515
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_TestShowRandomPanel_m794735C6BFD84EBF376D608A121B7FEE68685689 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:758>
-		OfferPanelManager_ShowRandomOfferPanel_m86D05C63AADEE1EE0DC018351408636C65591129(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:759>
+		OfferPanelManager_ShowRandomOfferPanel_m86D05C63AADEE1EE0DC018351408636C65591129(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:760>
 		return;
 	}
 }
-// Method Definition Index: 66514
+// Method Definition Index: 66516
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_ResetSessionFlag_mAE0E0FB9637D8B620C49D333CC325B66FF47F2C6 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:767>
-		__this->___hasShownOfferThisSession = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:768>
-		OfferPanelManager_GenerateRandomPanelIndices_mEC789E4D20037B4D6349ECC5C0B819AC383403D0(__this, NULL);
+		__this->___hasShownOfferThisSession = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:769>
-		__this->___nextPanelIndexToShow = 0;
+		OfferPanelManager_GenerateRandomPanelIndices_mEC789E4D20037B4D6349ECC5C0B819AC383403D0(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:770>
-		__this->___isShowingPanelsSequence = (bool)0;
+		__this->___nextPanelIndexToShow = 0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:771>
+		__this->___isShowingPanelsSequence = (bool)0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:772>
 		return;
 	}
 }
-// Method Definition Index: 66515
+// Method Definition Index: 66517
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* OfferPanelManager_GetOfferTimestampKey_mF686C388A0E83DC13F68FABDC5666E1A60BF988F (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9099,7 +9103,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* OfferPanelManager_GetOfferTimestamp
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:778>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:779>
 		String_t* L_0 = __this->___currentUserId;
 		bool L_1;
 		L_1 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_0, NULL);
@@ -9109,20 +9113,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* OfferPanelManager_GetOfferTimestamp
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:781>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:782>
 		return _stringLiteral3BC347174D8BC696D5F93D32B1F776429312E746;
 	}
 
 IL_0013:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:783>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:784>
 		String_t* L_2 = __this->___currentUserId;
 		String_t* L_3;
 		L_3 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralA136E6DC32E9BE3B8ED166B44BBF161289E000FA, L_2, NULL);
 		return L_3;
 	}
 }
-// Method Definition Index: 66516
+// Method Definition Index: 66518
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool OfferPanelManager_HasShownOffersToday_mADEEBBCF1A808695D7FCE2AF0F261FDB2D56036F (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9143,12 +9147,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool OfferPanelManager_HasShownOffersToday_mA
 	DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D V_3;
 	memset((&V_3), 0, sizeof(V_3));
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:792>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:793>
 		il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_0;
 		L_0 = DateTime_get_Now_m636CB9651A9099D20BA1CF813A0C69637317325C(NULL);
 		V_0 = L_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:795>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:796>
 		String_t* L_1 = __this->___lastShownDate;
 		bool L_2;
 		L_2 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_1, NULL);
@@ -9194,7 +9198,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool OfferPanelManager_HasShownOffersToday_mA
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:797>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:798>
 		String_t* L_11 = __this->___lastShownDate;
 		il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
 		bool L_12;
@@ -9205,7 +9209,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool OfferPanelManager_HasShownOffersToday_mA
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:800>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:801>
 		il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_13;
 		L_13 = DateTime_get_Date_m24A9ECCD369D892A2D6B01B30066E50E50584A7D((&V_3), NULL);
@@ -9219,17 +9223,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool OfferPanelManager_HasShownOffersToday_mA
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:802>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:803>
 		return (bool)1;
 	}
 
 IL_0081:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:808>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:809>
 		String_t* L_16;
 		L_16 = OfferPanelManager_GetOfferTimestampKey_mF686C388A0E83DC13F68FABDC5666E1A60BF988F(__this, NULL);
 		V_1 = L_16;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:810>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:811>
 		String_t* L_17 = V_1;
 		bool L_18;
 		L_18 = PlayerPrefs_HasKey_mCA5C64BBA6BF8B230BC3BC92B4761DD3B11D4668(L_17, NULL);
@@ -9239,17 +9243,17 @@ IL_0081:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:812>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:813>
 		return (bool)0;
 	}
 
 IL_0092:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:815>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:816>
 		String_t* L_19 = V_1;
 		String_t* L_20;
 		L_20 = PlayerPrefs_GetString_mA4C9F842BF77E5572AB20EA087C7048F870D02AE(L_19, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:817>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:818>
 		il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
 		bool L_21;
 		L_21 = DateTime_TryParse_mAB837F166C80EEB47B8CE76E7D6106974E7FA44B(L_20, (&V_2), NULL);
@@ -9259,7 +9263,7 @@ IL_0092:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:820>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:821>
 		il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_22;
 		L_22 = DateTime_get_Date_m24A9ECCD369D892A2D6B01B30066E50E50584A7D((&V_2), NULL);
@@ -9272,11 +9276,11 @@ IL_0092:
 
 IL_00b5:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:823>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:824>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 66517
+// Method Definition Index: 66519
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_MarkOffersAsShownToday_mA5E503AB85F7657E1718FC9F8D56E6A70A5F79D3 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9293,35 +9297,35 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_MarkOffersAsShownToday
 	memset((&V_0), 0, sizeof(V_0));
 	String_t* V_1 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:831>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:832>
 		il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_0;
 		L_0 = DateTime_get_Now_m636CB9651A9099D20BA1CF813A0C69637317325C(NULL);
 		V_0 = L_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:832>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:833>
 		String_t* L_1;
 		L_1 = DateTime_ToString_m6963A84785C320DA776C9FCFFEDAF26C8F1A8D78((&V_0), _stringLiteralED45F4AF48C69346087C97D466BF405E270AABE2, NULL);
 		V_1 = L_1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:833>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:834>
 		String_t* L_2;
 		L_2 = OfferPanelManager_GetOfferTimestampKey_mF686C388A0E83DC13F68FABDC5666E1A60BF988F(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:834>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:835>
 		String_t* L_3 = V_1;
 		PlayerPrefs_SetString_mF4F457C81BB75F0213547C6287BA36E15E1F0256(L_2, L_3, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:835>
-		PlayerPrefs_Save_m82567E045D69C838112EA204B60C144D4C1EA3AE(NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:836>
+		PlayerPrefs_Save_m82567E045D69C838112EA204B60C144D4C1EA3AE(NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:837>
 		String_t* L_4 = __this->___currentUserId;
 		String_t* L_5 = V_1;
 		String_t* L_6;
 		L_6 = String_Concat_m093934F71A9B351911EE46311674ED463B180006(_stringLiteral970B9015C8AC5204970402FE7C5448EC7ABCED96, L_4, _stringLiteral1168E92C164109D6220480DEDA987085B2A21155, L_5, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_6, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:837>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:838>
 		return;
 	}
 }
-// Method Definition Index: 66518
+// Method Definition Index: 66520
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_ResetDailyFlag_m19675E8AD398929ACF94B49A1D92FF711078442A (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9333,24 +9337,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_ResetDailyFlag_m19675E
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:845>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:846>
 		String_t* L_0;
 		L_0 = OfferPanelManager_GetOfferTimestampKey_mF686C388A0E83DC13F68FABDC5666E1A60BF988F(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:846>
-		PlayerPrefs_DeleteKey_mF3A7857B52DCEF4139843CD28716788624C2AD30(L_0, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:847>
-		PlayerPrefs_Save_m82567E045D69C838112EA204B60C144D4C1EA3AE(NULL);
+		PlayerPrefs_DeleteKey_mF3A7857B52DCEF4139843CD28716788624C2AD30(L_0, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:848>
+		PlayerPrefs_Save_m82567E045D69C838112EA204B60C144D4C1EA3AE(NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:849>
 		String_t* L_1 = __this->___currentUserId;
 		String_t* L_2;
 		L_2 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralDD7426AB3B7FC23C8ED83D286EFA2F53200CA7C2, L_1, _stringLiteral863AD364A4799A8E825875E9A0F1EB075DDCB4E8, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_2, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:849>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:850>
 		return;
 	}
 }
-// Method Definition Index: 66519
+// Method Definition Index: 66521
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A OfferPanelManager_GetTimeUntilNextOffer_mD645CC213E32F374EBC09F72718F46C9521CF102 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9370,11 +9374,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E7
 	DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D V_4;
 	memset((&V_4), 0, sizeof(V_4));
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:857>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:858>
 		String_t* L_0;
 		L_0 = OfferPanelManager_GetOfferTimestampKey_mF686C388A0E83DC13F68FABDC5666E1A60BF988F(__this, NULL);
 		V_0 = L_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:859>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:860>
 		String_t* L_1 = V_0;
 		bool L_2;
 		L_2 = PlayerPrefs_HasKey_mCA5C64BBA6BF8B230BC3BC92B4761DD3B11D4668(L_1, NULL);
@@ -9384,7 +9388,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E7
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:861>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:862>
 		il2cpp_codegen_runtime_class_init_inline(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var);
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_3 = ((TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_StaticFields*)il2cpp_codegen_static_fields_for(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var))->___Zero;
 		return L_3;
@@ -9392,11 +9396,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E7
 
 IL_0015:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:864>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:865>
 		String_t* L_4 = V_0;
 		String_t* L_5;
 		L_5 = PlayerPrefs_GetString_mA4C9F842BF77E5572AB20EA087C7048F870D02AE(L_4, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:866>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:867>
 		il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
 		bool L_6;
 		L_6 = DateTime_TryParse_mAB837F166C80EEB47B8CE76E7D6106974E7FA44B(L_5, (&V_1), NULL);
@@ -9406,23 +9410,23 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:868>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:869>
 		il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_7;
 		L_7 = DateTime_get_Now_m636CB9651A9099D20BA1CF813A0C69637317325C(NULL);
 		V_2 = L_7;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:871>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:872>
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_8;
 		L_8 = DateTime_get_Date_m24A9ECCD369D892A2D6B01B30066E50E50584A7D((&V_2), NULL);
 		V_4 = L_8;
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_9;
 		L_9 = DateTime_AddDays_m9DC06105845A82FEAF697D5E30308ABD49E5721B((&V_4), (1.0), NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:872>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:873>
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_10 = V_2;
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_11;
 		L_11 = DateTime_op_Subtraction_m64D26F5ABFAE6E166A7E567093D025F6C69F0123(L_9, L_10, NULL);
 		V_3 = L_11;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:875>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:876>
 		il2cpp_codegen_runtime_class_init_inline(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var);
 		double L_12;
 		L_12 = TimeSpan_get_TotalSeconds_mED686E7CECE6A76A7DC38518698B9199DB8CDEA8((&V_3), NULL);
@@ -9445,13 +9449,13 @@ IL_0062:
 
 IL_0064:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:878>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:879>
 		il2cpp_codegen_runtime_class_init_inline(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var);
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_15 = ((TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_StaticFields*)il2cpp_codegen_static_fields_for(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var))->___Zero;
 		return L_15;
 	}
 }
-// Method Definition Index: 66520
+// Method Definition Index: 66522
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OfferPanelManager_UpdateTimeUntilNextOffer_m86CF2ECACBFEDEF1DE868FDB8CABDEFE7D936FDD (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9470,7 +9474,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OfferPanelManager_UpdateTimeUn
 		return L_1;
 	}
 }
-// Method Definition Index: 66521
+// Method Definition Index: 66523
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager__ctor_m844DCE4C41F995A5BC9EF0D58C67B001617C881B (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9486,53 +9490,53 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager__ctor_m844DCE4C41F995A
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:15>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:16>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_0 = (GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF*)(GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF*)SZArrayNew(GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF_il2cpp_TypeInfo_var, (uint32_t)7);
 		__this->___offerPanels = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___offerPanels), (void*)L_0);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:21>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:22>
 		__this->___showDelay = (1.0f);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:23>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:24>
 		__this->___delayBetweenPanels = (0.5f);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:26>
-		__this->___animationDuration = (0.5f);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:27>
+		__this->___animationDuration = (0.5f);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:28>
 		AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* L_1;
 		L_1 = AnimationCurve_EaseInOut_m01DD06E6C8962F8F62F293C9EAE491C3D3F2CAF3((0.0f), (0.0f), (1.0f), (1.0f), NULL);
 		__this->___scaleCurve = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___scaleCurve), (void*)L_1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:30>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:31>
 		__this->___timeUntilNextOffer = _stringLiteral28A00C6C2538607194DCD2548EF0DFB07D324A14;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___timeUntilNextOffer), (void*)_stringLiteral28A00C6C2538607194DCD2548EF0DFB07D324A14);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:31>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:32>
 		__this->___currentTime = _stringLiteral28A00C6C2538607194DCD2548EF0DFB07D324A14;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentTime), (void*)_stringLiteral28A00C6C2538607194DCD2548EF0DFB07D324A14);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:32>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:33>
 		__this->___lastShownDate = _stringLiteral28A00C6C2538607194DCD2548EF0DFB07D324A14;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___lastShownDate), (void*)_stringLiteral28A00C6C2538607194DCD2548EF0DFB07D324A14);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:33>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:34>
 		__this->___nextResetTime = _stringLiteral28A00C6C2538607194DCD2548EF0DFB07D324A14;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___nextResetTime), (void*)_stringLiteral28A00C6C2538607194DCD2548EF0DFB07D324A14);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:39>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:40>
 		__this->___currentActivePanelIndex = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:41>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:42>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_2 = (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73*)il2cpp_codegen_object_new(List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73_il2cpp_TypeInfo_var);
 		List_1__ctor_m17F501B5A5C289ECE1B4F3D6EBF05DFA421433F8(L_2, List_1__ctor_m17F501B5A5C289ECE1B4F3D6EBF05DFA421433F8_RuntimeMethod_var);
 		__this->___selectedPanelIndices = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___selectedPanelIndices), (void*)L_2);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:51>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:52>
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_3 = (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*)il2cpp_codegen_object_new(List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD_il2cpp_TypeInfo_var);
 		List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E(L_3, List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E_RuntimeMethod_var);
 		__this->___apiOfferStrings = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___apiOfferStrings), (void*)L_3);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:55>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:56>
 		__this->___currentUserId = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentUserId), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}
 }
-// Method Definition Index: 66522
+// Method Definition Index: 66524
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_U3COnUserLoggedInU3Eb__32_0_mF3462726BF52DD9A53AD5590DEA1C3D99205DCD6 (OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* __this, bool ___0_success, DailyOffersResponse_tB6AEE2E3D5420B8B6BD17C5CDDBF9BF0679FED7B* ___1_response, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9547,7 +9551,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_U3COnUserLoggedInU3Eb_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:177>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:178>
 		bool L_0 = ___0_success;
 		if (!L_0)
 		{
@@ -9571,7 +9575,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_U3COnUserLoggedInU3Eb_
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:179>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:180>
 		DailyOffersResponse_tB6AEE2E3D5420B8B6BD17C5CDDBF9BF0679FED7B* L_4 = ___1_response;
 		NullCheck(L_4);
 		DailyOffersData_tBA841DDDF6F8C07D26A410A9CCDBA645389B5DA6* L_5 = L_4->___data;
@@ -9579,7 +9583,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_U3COnUserLoggedInU3Eb_
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_6 = L_5->___offers;
 		__this->___apiOfferStrings = L_6;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___apiOfferStrings), (void*)L_6);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:180>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:181>
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_7 = __this->___apiOfferStrings;
 		NullCheck(L_7);
 		int32_t L_8;
@@ -9593,7 +9597,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_U3COnUserLoggedInU3Eb_
 		L_13 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral2285F773F0436F3CF20AA5A072CF9244CE3F8DC1, L_10, L_12, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_13, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:183>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:184>
 		DailyOffersResponse_tB6AEE2E3D5420B8B6BD17C5CDDBF9BF0679FED7B* L_14 = ___1_response;
 		NullCheck(L_14);
 		DailyOffersData_tBA841DDDF6F8C07D26A410A9CCDBA645389B5DA6* L_15 = L_14->___data;
@@ -9607,7 +9611,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_U3COnUserLoggedInU3Eb_
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:185>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:186>
 		DailyOffersResponse_tB6AEE2E3D5420B8B6BD17C5CDDBF9BF0679FED7B* L_18 = ___1_response;
 		NullCheck(L_18);
 		DailyOffersData_tBA841DDDF6F8C07D26A410A9CCDBA645389B5DA6* L_19 = L_18->___data;
@@ -9619,7 +9623,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelManager_U3COnUserLoggedInU3Eb_
 
 IL_0071:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:189>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:190>
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_21 = __this->___apiOfferStrings;
 		OfferPanelManager_MapOfferStringsToIndices_m2509CDD34B539B5274D03EE9F1EF5A962CCB5A9F(__this, L_21, NULL);
 		goto IL_0094;
@@ -9627,10 +9631,10 @@ IL_0071:
 
 IL_007f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:193>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:194>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral1A03F426744146EB71250622DCAD0906B8DBFAF3, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:194>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:195>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_22 = __this->___selectedPanelIndices;
 		NullCheck(L_22);
 		List_1_Clear_mF6795DE5F49C1D0B91D6A0955F448B22970D67A9_inline(L_22, List_1_Clear_mF6795DE5F49C1D0B91D6A0955F448B22970D67A9_RuntimeMethod_var);
@@ -9638,54 +9642,9 @@ IL_007f:
 
 IL_0094:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:196>
-		__this->___isApiDataLoaded = (bool)1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:197>
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// Method Definition Index: 66523
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass47_0__ctor_m3605BC99AC6A3AA73F2A8780C39AB518B0C69EE5 (U3CU3Ec__DisplayClass47_0_t918CE5D84FF1A5405603050EAD1007B4912698B0* __this, const RuntimeMethod* method) 
-{
-	{
-		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
-		return;
-	}
-}
-// Method Definition Index: 66524
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass47_0_U3CSetupPanelButtonListenersU3Eb__0_mE531B80FB8800B7DA7B63FF6C1C5BE6967C5844D (U3CU3Ec__DisplayClass47_0_t918CE5D84FF1A5405603050EAD1007B4912698B0* __this, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral54BF3F3C70DF64A6F520889A2DE791FDE1DB9770);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralF32235EE162ADEBD9B99FFCE9F52E31DE9EDF0DD);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:719>
-		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = __this->___button;
-		NullCheck(L_0);
-		String_t* L_1;
-		L_1 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_0, NULL);
-		String_t* L_2;
-		L_2 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralF32235EE162ADEBD9B99FFCE9F52E31DE9EDF0DD, L_1, _stringLiteral54BF3F3C70DF64A6F520889A2DE791FDE1DB9770, NULL);
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_2, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:720>
-		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_3 = __this->___U3CU3E4__this;
-		NullCheck(L_3);
-		OfferPanelManager_CloseCurrentPanel_mBAF996C6037D940AEA80CC5EA4E46F4DF1618481(L_3, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:721>
+		__this->___isApiDataLoaded = (bool)1;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:198>
 		return;
 	}
 }
@@ -9698,6 +9657,51 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass47_0_U3CSetupPanelB
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 // Method Definition Index: 66525
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass47_0__ctor_m3605BC99AC6A3AA73F2A8780C39AB518B0C69EE5 (U3CU3Ec__DisplayClass47_0_t918CE5D84FF1A5405603050EAD1007B4912698B0* __this, const RuntimeMethod* method) 
+{
+	{
+		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
+		return;
+	}
+}
+// Method Definition Index: 66526
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass47_0_U3CSetupPanelButtonListenersU3Eb__0_mE531B80FB8800B7DA7B63FF6C1C5BE6967C5844D (U3CU3Ec__DisplayClass47_0_t918CE5D84FF1A5405603050EAD1007B4912698B0* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral54BF3F3C70DF64A6F520889A2DE791FDE1DB9770);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralF32235EE162ADEBD9B99FFCE9F52E31DE9EDF0DD);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:720>
+		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = __this->___button;
+		NullCheck(L_0);
+		String_t* L_1;
+		L_1 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(L_0, NULL);
+		String_t* L_2;
+		L_2 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralF32235EE162ADEBD9B99FFCE9F52E31DE9EDF0DD, L_1, _stringLiteral54BF3F3C70DF64A6F520889A2DE791FDE1DB9770, NULL);
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_2, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:721>
+		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_3 = __this->___U3CU3E4__this;
+		NullCheck(L_3);
+		OfferPanelManager_CloseCurrentPanel_mBAF996C6037D940AEA80CC5EA4E46F4DF1618481(L_3, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:722>
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 66527
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimatePanelScaleU3Ed__42__ctor_mDEA62F102B94B084345B7FF94E67672E4E538DB7 (U3CAnimatePanelScaleU3Ed__42_tD0EAD3A35D5E5B7976AF9BEA99D06C5DF2E3CC2C* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -9707,14 +9711,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimatePanelScaleU3Ed__42__ctor_mDEA6
 		return;
 	}
 }
-// Method Definition Index: 66526
+// Method Definition Index: 66528
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimatePanelScaleU3Ed__42_System_IDisposable_Dispose_mA6B4C2BF6B43FD8A14944F772CBF3A107B249F1C (U3CAnimatePanelScaleU3Ed__42_tD0EAD3A35D5E5B7976AF9BEA99D06C5DF2E3CC2C* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 66527
+// Method Definition Index: 66529
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CAnimatePanelScaleU3Ed__42_MoveNext_m5E35B7B37BC8BB37ECB34B1FB65D80CC21886742 (U3CAnimatePanelScaleU3Ed__42_tD0EAD3A35D5E5B7976AF9BEA99D06C5DF2E3CC2C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9755,7 +9759,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CAnimatePanelScaleU3Ed__42_MoveNext_m5
 IL_001a:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:520>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:521>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___panel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_5;
@@ -9766,35 +9770,35 @@ IL_001a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:520>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:521>
 		return (bool)0;
 	}
 
 IL_0031:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:523>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:524>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = __this->___panel;
 		NullCheck(L_6);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_7;
 		L_7 = GameObject_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m1592DCB5AA07291F73A76006F0913A64DFB8A9C4(L_6, GameObject_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m1592DCB5AA07291F73A76006F0913A64DFB8A9C4_RuntimeMethod_var);
 		__this->___U3CrectTransformU3E5__2 = L_7;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CrectTransformU3E5__2), (void*)L_7);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:524>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:525>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8 = __this->___panel;
 		NullCheck(L_8);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_9;
 		L_9 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_8, NULL);
 		__this->___U3CtransformU3E5__3 = L_9;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CtransformU3E5__3), (void*)L_9);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:527>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:528>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10;
 		L_10 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
 		__this->___U3CinitialScaleU3E5__4 = L_10;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:528>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:529>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_11;
 		L_11 = Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline(NULL);
 		__this->___U3CtargetScaleU3E5__5 = L_11;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:530>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:531>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_12 = __this->___U3CrectTransformU3E5__2;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_13;
@@ -9805,7 +9809,7 @@ IL_0031:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:532>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:533>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_14 = __this->___U3CrectTransformU3E5__2;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15 = __this->___U3CinitialScaleU3E5__4;
 		NullCheck(L_14);
@@ -9815,7 +9819,7 @@ IL_0031:
 
 IL_008a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:536>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:537>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16 = __this->___U3CtransformU3E5__3;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_17 = __this->___U3CinitialScaleU3E5__4;
 		NullCheck(L_16);
@@ -9824,29 +9828,29 @@ IL_008a:
 
 IL_009b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:539>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:540>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_18 = __this->___panel;
 		NullCheck(L_18);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_18, (bool)1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:542>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:543>
 		__this->___U3CelapsedU3E5__6 = (0.0f);
 		goto IL_0139;
 	}
 
 IL_00b7:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:546>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:547>
 		float L_19 = __this->___U3CelapsedU3E5__6;
 		float L_20;
 		L_20 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		__this->___U3CelapsedU3E5__6 = ((float)il2cpp_codegen_add(L_19, L_20));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:547>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:548>
 		float L_21 = __this->___U3CelapsedU3E5__6;
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_22 = V_1;
 		NullCheck(L_22);
 		float L_23 = L_22->___animationDuration;
 		V_2 = ((float)(L_21/L_23));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:550>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:551>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_24 = V_1;
 		NullCheck(L_24);
 		AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* L_25 = L_24->___scaleCurve;
@@ -9855,14 +9859,14 @@ IL_00b7:
 		float L_27;
 		L_27 = AnimationCurve_Evaluate_m50B857043DE251A186032ADBCBB4CEF817F4EE3C(L_25, L_26, NULL);
 		V_3 = L_27;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:551>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:552>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_28 = __this->___U3CinitialScaleU3E5__4;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_29 = __this->___U3CtargetScaleU3E5__5;
 		float L_30 = V_3;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_31;
 		L_31 = Vector3_Lerp_m3A906D0530A94FAABB94F0F905E84D99BE85C3F8_inline(L_28, L_29, L_30, NULL);
 		V_4 = L_31;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:553>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:554>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_32 = __this->___U3CrectTransformU3E5__2;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_33;
@@ -9873,7 +9877,7 @@ IL_00b7:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:555>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:556>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_34 = __this->___U3CrectTransformU3E5__2;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_35 = V_4;
 		NullCheck(L_34);
@@ -9883,7 +9887,7 @@ IL_00b7:
 
 IL_0115:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:559>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:560>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_36 = __this->___U3CtransformU3E5__3;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_37 = V_4;
 		NullCheck(L_36);
@@ -9892,7 +9896,7 @@ IL_0115:
 
 IL_0122:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:562>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:563>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 1;
@@ -9906,7 +9910,7 @@ IL_0132:
 
 IL_0139:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:544>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:545>
 		float L_38 = __this->___U3CelapsedU3E5__6;
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_39 = V_1;
 		NullCheck(L_39);
@@ -9917,7 +9921,7 @@ IL_0139:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:566>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:567>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_41 = __this->___U3CrectTransformU3E5__2;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_42;
@@ -9928,7 +9932,7 @@ IL_0139:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:568>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:569>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_43 = __this->___U3CrectTransformU3E5__2;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_44 = __this->___U3CtargetScaleU3E5__5;
 		NullCheck(L_43);
@@ -9938,7 +9942,7 @@ IL_0139:
 
 IL_016b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:572>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:573>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_45 = __this->___U3CtransformU3E5__3;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_46 = __this->___U3CtargetScaleU3E5__5;
 		NullCheck(L_45);
@@ -9947,11 +9951,11 @@ IL_016b:
 
 IL_017c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:574>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:575>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 66528
+// Method Definition Index: 66530
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimatePanelScaleU3Ed__42_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m4A613F3723D0931E0C343CA898D25DC1D5483719 (U3CAnimatePanelScaleU3Ed__42_tD0EAD3A35D5E5B7976AF9BEA99D06C5DF2E3CC2C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9959,7 +9963,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimatePanelScaleU3Ed__42_S
 		return L_0;
 	}
 }
-// Method Definition Index: 66529
+// Method Definition Index: 66531
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimatePanelScaleU3Ed__42_System_Collections_IEnumerator_Reset_m93B1717F9D786118E827DE9BEF2F9A76088A92A9 (U3CAnimatePanelScaleU3Ed__42_tD0EAD3A35D5E5B7976AF9BEA99D06C5DF2E3CC2C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9968,7 +9972,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimatePanelScaleU3Ed__42_System_Coll
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CAnimatePanelScaleU3Ed__42_System_Collections_IEnumerator_Reset_m93B1717F9D786118E827DE9BEF2F9A76088A92A9_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 66530
+// Method Definition Index: 66532
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimatePanelScaleU3Ed__42_System_Collections_IEnumerator_get_Current_mEDF43072E227D45B8C9F3F1F98E35ACAFB57CB13 (U3CAnimatePanelScaleU3Ed__42_tD0EAD3A35D5E5B7976AF9BEA99D06C5DF2E3CC2C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9984,7 +9988,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimatePanelScaleU3Ed__42_S
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66531
+// Method Definition Index: 66533
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMonitorMainMenuActivationU3Ed__35__ctor_mF4C215657C4E6400842435152B890D279166A757 (U3CMonitorMainMenuActivationU3Ed__35_t890C0A316615FE55DCE664F89D584E417821B0B6* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -9994,14 +9998,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMonitorMainMenuActivationU3Ed__35__ct
 		return;
 	}
 }
-// Method Definition Index: 66532
+// Method Definition Index: 66534
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMonitorMainMenuActivationU3Ed__35_System_IDisposable_Dispose_m7A53FAF46FA97F8B6DD271F55D2CDA2631061F39 (U3CMonitorMainMenuActivationU3Ed__35_t890C0A316615FE55DCE664F89D584E417821B0B6* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 66533
+// Method Definition Index: 66535
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CMonitorMainMenuActivationU3Ed__35_MoveNext_m15588AE8751B13D09A43EB7932D29C3192C6D6D7 (U3CMonitorMainMenuActivationU3Ed__35_t890C0A316615FE55DCE664F89D584E417821B0B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10062,7 +10066,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CMonitorMainMenuActivationU3Ed__35_Mov
 IL_0032:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:264>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:265>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_3 = V_1;
 		NullCheck(L_3);
 		L_3->___isMonitoringMainMenu = (bool)1;
@@ -10070,7 +10074,7 @@ IL_0032:
 
 IL_0040:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:269>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:270>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_4 = V_1;
 		NullCheck(L_4);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = L_4->___mainMenuScreen;
@@ -10104,7 +10108,7 @@ IL_0040:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:272>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:273>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_12 = V_1;
 		NullCheck(L_12);
 		bool L_13 = L_12->___isApiDataLoaded;
@@ -10114,7 +10118,7 @@ IL_0040:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:274>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:275>
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_14 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_14, (0.100000001f), NULL);
 		__this->___U3CU3E2__current = L_14;
@@ -10126,13 +10130,13 @@ IL_0040:
 IL_008d:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:275>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:276>
 		goto IL_0040;
 	}
 
 IL_0096:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:280>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:281>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_15 = V_1;
 		NullCheck(L_15);
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_16 = L_15->___selectedPanelIndices;
@@ -10175,7 +10179,7 @@ IL_0096:
 
 IL_00bb:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:282>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:283>
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_24 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_24, (0.5f), NULL);
 		__this->___U3CU3E2__current = L_24;
@@ -10187,13 +10191,13 @@ IL_00bb:
 IL_00d4:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:283>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:284>
 		goto IL_0040;
 	}
 
 IL_00e0:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:287>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:288>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_25 = V_1;
 		NullCheck(L_25);
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_26 = L_25->___dailyRewardManager;
@@ -10218,7 +10222,7 @@ IL_00e0:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:289>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:290>
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_31 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_31, (0.100000001f), NULL);
 		__this->___U3CU3E2__current = L_31;
@@ -10230,13 +10234,13 @@ IL_00e0:
 IL_0114:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:290>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:291>
 		goto IL_0040;
 	}
 
 IL_0120:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:294>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:295>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_32 = V_1;
 		NullCheck(L_32);
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_33 = L_32->___dailyRewardManager;
@@ -10273,7 +10277,7 @@ IL_0120:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:296>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:297>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_41 = V_1;
 		NullCheck(L_41);
 		L_41->___hasDailyRewardPanelClosed = (bool)1;
@@ -10281,7 +10285,7 @@ IL_0120:
 
 IL_014f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:301>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:302>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_42 = V_1;
 		NullCheck(L_42);
 		bool L_43 = L_42->___hasTriggeredDailyRewardPanel;
@@ -10303,11 +10307,11 @@ IL_014f:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:303>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:304>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_47 = V_1;
 		NullCheck(L_47);
 		L_47->___hasTriggeredDailyRewardPanel = (bool)1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:304>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:305>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_48 = V_1;
 		NullCheck(L_48);
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_49 = L_48->___dailyRewardManager;
@@ -10320,13 +10324,13 @@ IL_014f:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:306>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:307>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_51 = V_1;
 		NullCheck(L_51);
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_52 = L_51->___dailyRewardManager;
 		NullCheck(L_52);
 		DailyRewardManager_ShowPanel_mFBC25A146580DFF52CA4600812883EF66F30B98C(L_52, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:307>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:308>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral9406E35E28EB919952A349D320273C7A2129005D, NULL);
 		goto IL_019a;
@@ -10334,14 +10338,14 @@ IL_014f:
 
 IL_0190:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:311>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:312>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral71BA4F8325F3151E86F1E8F0466BA43D2FB1A216, NULL);
 	}
 
 IL_019a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:316>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:317>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_53 = V_1;
 		NullCheck(L_53);
 		bool L_54 = L_53->___hasDailyRewardPanelClosed;
@@ -10351,7 +10355,7 @@ IL_019a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:320>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:321>
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_55 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_55, (0.5f), NULL);
 		__this->___U3CU3E2__current = L_55;
@@ -10363,13 +10367,13 @@ IL_019a:
 IL_01bb:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:321>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:322>
 		goto IL_0040;
 	}
 
 IL_01c7:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:325>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:326>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_56 = V_1;
 		NullCheck(L_56);
 		bool L_57 = L_56->___hasShownAfterMainMenuActivation;
@@ -10397,11 +10401,11 @@ IL_01c7:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:327>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:328>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_62 = V_1;
 		NullCheck(L_62);
 		L_62->___hasShownAfterMainMenuActivation = (bool)1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:328>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:329>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_63 = V_1;
 		NullCheck(L_63);
 		float L_64 = L_63->___showDelay;
@@ -10416,7 +10420,7 @@ IL_01c7:
 IL_0200:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:329>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:330>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_66 = V_1;
 		NullCheck(L_66);
 		OfferPanelManager_ShowNextOfferPanelInSequence_mB80DE29913B7103A16484902D8659AE8D4A82C22(L_66, NULL);
@@ -10424,7 +10428,7 @@ IL_0200:
 
 IL_020d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:333>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:334>
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_67 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_67, (0.5f), NULL);
 		__this->___U3CU3E2__current = L_67;
@@ -10436,11 +10440,11 @@ IL_020d:
 IL_0226:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:266>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:267>
 		goto IL_0040;
 	}
 }
-// Method Definition Index: 66534
+// Method Definition Index: 66536
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CMonitorMainMenuActivationU3Ed__35_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mC0F30D7B3878D1FB212F725F9233B4217E63F377 (U3CMonitorMainMenuActivationU3Ed__35_t890C0A316615FE55DCE664F89D584E417821B0B6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10448,7 +10452,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CMonitorMainMenuActivationU3
 		return L_0;
 	}
 }
-// Method Definition Index: 66535
+// Method Definition Index: 66537
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMonitorMainMenuActivationU3Ed__35_System_Collections_IEnumerator_Reset_m35722BCEBB2BF7A476717044BC54976B027899E5 (U3CMonitorMainMenuActivationU3Ed__35_t890C0A316615FE55DCE664F89D584E417821B0B6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10457,7 +10461,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMonitorMainMenuActivationU3Ed__35_Sys
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CMonitorMainMenuActivationU3Ed__35_System_Collections_IEnumerator_Reset_m35722BCEBB2BF7A476717044BC54976B027899E5_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 66536
+// Method Definition Index: 66538
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CMonitorMainMenuActivationU3Ed__35_System_Collections_IEnumerator_get_Current_m59105EBEB0252F89E98E893D6967D684F6EC988A (U3CMonitorMainMenuActivationU3Ed__35_t890C0A316615FE55DCE664F89D584E417821B0B6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10473,7 +10477,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CMonitorMainMenuActivationU3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66537
+// Method Definition Index: 66539
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMonitorPanelStateU3Ed__46__ctor_m8001F49B25D5081113B2A5FE598EEA7903DC0E71 (U3CMonitorPanelStateU3Ed__46_t3A244A19374B0CE9444D8B870AE6063F73D899F9* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -10483,14 +10487,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMonitorPanelStateU3Ed__46__ctor_m8001
 		return;
 	}
 }
-// Method Definition Index: 66538
+// Method Definition Index: 66540
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMonitorPanelStateU3Ed__46_System_IDisposable_Dispose_m8970758CE7332DBB240F670B71FCB0C116A7CBC3 (U3CMonitorPanelStateU3Ed__46_t3A244A19374B0CE9444D8B870AE6063F73D899F9* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 66539
+// Method Definition Index: 66541
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CMonitorPanelStateU3Ed__46_MoveNext_m5054D183A4B56CBD885351F852278959857B8595 (U3CMonitorPanelStateU3Ed__46_t3A244A19374B0CE9444D8B870AE6063F73D899F9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10532,13 +10536,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CMonitorPanelStateU3Ed__46_MoveNext_m5
 IL_001a:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:638>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:639>
 		__this->___U3ClastActivePanelIndexU3E5__2 = (-1);
 	}
 
 IL_0028:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:643>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:644>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_4 = V_1;
 		NullCheck(L_4);
 		bool L_5 = L_4->___isShowingPanelsSequence;
@@ -10566,7 +10570,7 @@ IL_0028:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:646>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:647>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_10 = V_1;
 		NullCheck(L_10);
 		int32_t L_11 = L_10->___currentActivePanelIndex;
@@ -10598,7 +10602,7 @@ IL_0028:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:648>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:649>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_21 = V_1;
 		NullCheck(L_21);
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_22 = L_21->___offerPanels;
@@ -10612,7 +10616,7 @@ IL_0028:
 		bool L_27;
 		L_27 = GameObject_get_activeSelf_m4F3E5240E138B66AAA080EA30759A3D0517DA368(L_26, NULL);
 		V_2 = L_27;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:651>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:652>
 		int32_t L_28 = __this->___U3ClastActivePanelIndexU3E5__2;
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_29 = V_1;
 		NullCheck(L_29);
@@ -10630,7 +10634,7 @@ IL_0028:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:653>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:654>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_32 = V_1;
 		NullCheck(L_32);
 		int32_t L_33 = L_32->___currentActivePanelIndex;
@@ -10640,7 +10644,7 @@ IL_0028:
 		L_36 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral24E8BD0EAE3CA8F47F9B1C2F03B0B3882FD52F9F, L_35, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_36, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:656>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:657>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_37 = V_1;
 		NullCheck(L_37);
 		int32_t L_38 = L_37->___nextPanelIndexToShow;
@@ -10656,11 +10660,11 @@ IL_0028:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:658>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:659>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_42 = V_1;
 		NullCheck(L_42);
 		L_42->___isWaitingForNextPanel = (bool)1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:659>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:660>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_43 = V_1;
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_44 = V_1;
 		NullCheck(L_44);
@@ -10674,29 +10678,29 @@ IL_0028:
 
 IL_00dc:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:664>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:665>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_47 = V_1;
 		NullCheck(L_47);
 		L_47->___isShowingPanelsSequence = (bool)0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:665>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:666>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_48 = V_1;
 		NullCheck(L_48);
 		L_48->___currentActivePanelIndex = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:666>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:667>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral90C20A9A9E707B9D33FEA225C17287BF0732E48A, NULL);
 	}
 
 IL_00f4:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:669>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:670>
 		__this->___U3ClastActivePanelIndexU3E5__2 = (-1);
 		goto IL_0115;
 	}
 
 IL_00fd:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:671>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:672>
 		bool L_49 = V_2;
 		if (!L_49)
 		{
@@ -10704,7 +10708,7 @@ IL_00fd:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:674>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:675>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_50 = V_1;
 		NullCheck(L_50);
 		int32_t L_51 = L_50->___currentActivePanelIndex;
@@ -10714,13 +10718,13 @@ IL_00fd:
 
 IL_010e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:680>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:681>
 		__this->___U3ClastActivePanelIndexU3E5__2 = (-1);
 	}
 
 IL_0115:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:683>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:684>
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_52 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_52, (0.100000001f), NULL);
 		__this->___U3CU3E2__current = L_52;
@@ -10732,11 +10736,11 @@ IL_0115:
 IL_012e:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:640>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:641>
 		goto IL_0028;
 	}
 }
-// Method Definition Index: 66540
+// Method Definition Index: 66542
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CMonitorPanelStateU3Ed__46_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mDCE3849A8940615109CD0D91DBBA0426531A1B30 (U3CMonitorPanelStateU3Ed__46_t3A244A19374B0CE9444D8B870AE6063F73D899F9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10744,7 +10748,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CMonitorPanelStateU3Ed__46_S
 		return L_0;
 	}
 }
-// Method Definition Index: 66541
+// Method Definition Index: 66543
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMonitorPanelStateU3Ed__46_System_Collections_IEnumerator_Reset_mE2D603EAB5DC7A0F34D42AD745A88F213AB91E9E (U3CMonitorPanelStateU3Ed__46_t3A244A19374B0CE9444D8B870AE6063F73D899F9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10753,7 +10757,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMonitorPanelStateU3Ed__46_System_Coll
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CMonitorPanelStateU3Ed__46_System_Collections_IEnumerator_Reset_mE2D603EAB5DC7A0F34D42AD745A88F213AB91E9E_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 66542
+// Method Definition Index: 66544
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CMonitorPanelStateU3Ed__46_System_Collections_IEnumerator_get_Current_mA5F07C0A1E7EC99B0349F60CDFA3503A8E324ABF (U3CMonitorPanelStateU3Ed__46_t3A244A19374B0CE9444D8B870AE6063F73D899F9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10769,7 +10773,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CMonitorPanelStateU3Ed__46_S
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66543
+// Method Definition Index: 66545
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CShowNextPanelAfterDelayU3Ed__45__ctor_mDCE4F375503D41F31CA4301D0A9F2DD5A3A68A48 (U3CShowNextPanelAfterDelayU3Ed__45_tE993286676D6A572EA8EB9EA9CD28E0BF4797E01* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -10779,14 +10783,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CShowNextPanelAfterDelayU3Ed__45__ctor
 		return;
 	}
 }
-// Method Definition Index: 66544
+// Method Definition Index: 66546
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CShowNextPanelAfterDelayU3Ed__45_System_IDisposable_Dispose_mA1F72711C5BA7D0C2683D50A907ED65B50D295F4 (U3CShowNextPanelAfterDelayU3Ed__45_tE993286676D6A572EA8EB9EA9CD28E0BF4797E01* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 66545
+// Method Definition Index: 66547
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CShowNextPanelAfterDelayU3Ed__45_MoveNext_m3D1660C3EE5475EDBC94B5E719BCF4ADADAB4D39 (U3CShowNextPanelAfterDelayU3Ed__45_tE993286676D6A572EA8EB9EA9CD28E0BF4797E01* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10822,7 +10826,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CShowNextPanelAfterDelayU3Ed__45_MoveN
 IL_0017:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:627>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:628>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_4 = V_1;
 		NullCheck(L_4);
 		float L_5 = L_4->___delayBetweenPanels;
@@ -10837,19 +10841,19 @@ IL_0017:
 IL_0038:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:628>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:629>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_7 = V_1;
 		NullCheck(L_7);
 		L_7->___isWaitingForNextPanel = (bool)0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:629>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:630>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_8 = V_1;
 		NullCheck(L_8);
 		OfferPanelManager_ShowNextOfferPanelInSequence_mB80DE29913B7103A16484902D8659AE8D4A82C22(L_8, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:630>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:631>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 66546
+// Method Definition Index: 66548
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CShowNextPanelAfterDelayU3Ed__45_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m3A405B448CBF430A7C0B2B2D2B52BDC0E76F3DE3 (U3CShowNextPanelAfterDelayU3Ed__45_tE993286676D6A572EA8EB9EA9CD28E0BF4797E01* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10857,7 +10861,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CShowNextPanelAfterDelayU3Ed
 		return L_0;
 	}
 }
-// Method Definition Index: 66547
+// Method Definition Index: 66549
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CShowNextPanelAfterDelayU3Ed__45_System_Collections_IEnumerator_Reset_m34516B63766F951AC8A570379F1EC4672C54D620 (U3CShowNextPanelAfterDelayU3Ed__45_tE993286676D6A572EA8EB9EA9CD28E0BF4797E01* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10866,7 +10870,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CShowNextPanelAfterDelayU3Ed__45_Syste
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CShowNextPanelAfterDelayU3Ed__45_System_Collections_IEnumerator_Reset_m34516B63766F951AC8A570379F1EC4672C54D620_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 66548
+// Method Definition Index: 66550
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CShowNextPanelAfterDelayU3Ed__45_System_Collections_IEnumerator_get_Current_mF6D98292AEACEA6677B3431E7DFCC0AAC4FB028E (U3CShowNextPanelAfterDelayU3Ed__45_tE993286676D6A572EA8EB9EA9CD28E0BF4797E01* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10882,7 +10886,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CShowNextPanelAfterDelayU3Ed
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66549
+// Method Definition Index: 66551
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateTimeUntilNextOfferU3Ed__56__ctor_m8FE06076F2B60108D871B5F555DBD1E2EFC54FF1 (U3CUpdateTimeUntilNextOfferU3Ed__56_tCE7E61BE4176A7B32EC4299C0C54B7C646DB6324* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -10892,14 +10896,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateTimeUntilNextOfferU3Ed__56__cto
 		return;
 	}
 }
-// Method Definition Index: 66550
+// Method Definition Index: 66552
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateTimeUntilNextOfferU3Ed__56_System_IDisposable_Dispose_mEAAD630F15ECCC1425B3BE61EAED86D7F1BD22A6 (U3CUpdateTimeUntilNextOfferU3Ed__56_tCE7E61BE4176A7B32EC4299C0C54B7C646DB6324* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 66551
+// Method Definition Index: 66553
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CUpdateTimeUntilNextOfferU3Ed__56_MoveNext_m2A9661D3DF12F4D1AA8D61B073494949AC23646C (U3CUpdateTimeUntilNextOfferU3Ed__56_tCE7E61BE4176A7B32EC4299C0C54B7C646DB6324* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10962,19 +10966,19 @@ IL_001a:
 
 IL_0021:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:888>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:889>
 		il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_4;
 		L_4 = DateTime_get_Now_m636CB9651A9099D20BA1CF813A0C69637317325C(NULL);
 		V_2 = L_4;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:889>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:890>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_5 = V_1;
 		String_t* L_6;
 		L_6 = DateTime_ToString_m6963A84785C320DA776C9FCFFEDAF26C8F1A8D78((&V_2), _stringLiteralED45F4AF48C69346087C97D466BF405E270AABE2, NULL);
 		NullCheck(L_5);
 		L_5->___currentTime = L_6;
 		Il2CppCodeGenWriteBarrier((void**)(&L_5->___currentTime), (void*)L_6);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:892>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:893>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_7 = V_1;
 		NullCheck(L_7);
 		bool L_8 = L_7->___hasLoggedIn;
@@ -10984,17 +10988,17 @@ IL_0021:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:894>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:895>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_9 = V_1;
 		NullCheck(L_9);
 		L_9->___timeUntilNextOffer = _stringLiteralB6FD3038CC1B21F4D6844E1DA476D3C47147F64F;
 		Il2CppCodeGenWriteBarrier((void**)(&L_9->___timeUntilNextOffer), (void*)_stringLiteralB6FD3038CC1B21F4D6844E1DA476D3C47147F64F);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:895>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:896>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_10 = V_1;
 		NullCheck(L_10);
 		L_10->___lastShownDate = _stringLiteralB6FD3038CC1B21F4D6844E1DA476D3C47147F64F;
 		Il2CppCodeGenWriteBarrier((void**)(&L_10->___lastShownDate), (void*)_stringLiteralB6FD3038CC1B21F4D6844E1DA476D3C47147F64F);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:896>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:897>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_11 = V_1;
 		NullCheck(L_11);
 		L_11->___nextResetTime = _stringLiteralB6FD3038CC1B21F4D6844E1DA476D3C47147F64F;
@@ -11004,13 +11008,13 @@ IL_0021:
 
 IL_0067:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:900>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:901>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_12 = V_1;
 		NullCheck(L_12);
 		String_t* L_13;
 		L_13 = OfferPanelManager_GetOfferTimestampKey_mF686C388A0E83DC13F68FABDC5666E1A60BF988F(L_12, NULL);
 		V_3 = L_13;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:901>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:902>
 		String_t* L_14 = V_3;
 		bool L_15;
 		L_15 = PlayerPrefs_HasKey_mCA5C64BBA6BF8B230BC3BC92B4761DD3B11D4668(L_14, NULL);
@@ -11020,11 +11024,11 @@ IL_0067:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:903>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:904>
 		String_t* L_16 = V_3;
 		String_t* L_17;
 		L_17 = PlayerPrefs_GetString_mA4C9F842BF77E5572AB20EA087C7048F870D02AE(L_16, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:904>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:905>
 		il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
 		bool L_18;
 		L_18 = DateTime_TryParse_mAB837F166C80EEB47B8CE76E7D6106974E7FA44B(L_17, (&V_4), NULL);
@@ -11034,7 +11038,7 @@ IL_0067:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:906>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:907>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_19 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
 		String_t* L_20;
@@ -11042,14 +11046,14 @@ IL_0067:
 		NullCheck(L_19);
 		L_19->___lastShownDate = L_20;
 		Il2CppCodeGenWriteBarrier((void**)(&L_19->___lastShownDate), (void*)L_20);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:908>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:909>
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_21;
 		L_21 = DateTime_get_Date_m24A9ECCD369D892A2D6B01B30066E50E50584A7D((&V_2), NULL);
 		V_6 = L_21;
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_22;
 		L_22 = DateTime_AddDays_m9DC06105845A82FEAF697D5E30308ABD49E5721B((&V_6), (1.0), NULL);
 		V_5 = L_22;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:909>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:910>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_23 = V_1;
 		String_t* L_24;
 		L_24 = DateTime_ToString_m6963A84785C320DA776C9FCFFEDAF26C8F1A8D78((&V_5), _stringLiteralED45F4AF48C69346087C97D466BF405E270AABE2, NULL);
@@ -11061,12 +11065,12 @@ IL_0067:
 
 IL_00c6:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:913>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:914>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_25 = V_1;
 		NullCheck(L_25);
 		L_25->___lastShownDate = _stringLiteral6DD798540816CF95355537E350E0B22DB63ACF5E;
 		Il2CppCodeGenWriteBarrier((void**)(&L_25->___lastShownDate), (void*)_stringLiteral6DD798540816CF95355537E350E0B22DB63ACF5E);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:914>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:915>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_26 = V_1;
 		NullCheck(L_26);
 		L_26->___nextResetTime = _stringLiteral28A00C6C2538607194DCD2548EF0DFB07D324A14;
@@ -11076,12 +11080,12 @@ IL_00c6:
 
 IL_00de:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:919>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:920>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_27 = V_1;
 		NullCheck(L_27);
 		L_27->___lastShownDate = _stringLiteral5316EAF3435858EC44F6B277D413B0C7D67D9F17;
 		Il2CppCodeGenWriteBarrier((void**)(&L_27->___lastShownDate), (void*)_stringLiteral5316EAF3435858EC44F6B277D413B0C7D67D9F17);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:920>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:921>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_28 = V_1;
 		NullCheck(L_28);
 		L_28->___nextResetTime = _stringLiteral28A00C6C2538607194DCD2548EF0DFB07D324A14;
@@ -11090,7 +11094,7 @@ IL_00de:
 
 IL_00f4:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:923>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:924>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_29 = V_1;
 		NullCheck(L_29);
 		bool L_30;
@@ -11101,13 +11105,13 @@ IL_00f4:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:925>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:926>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_31 = V_1;
 		NullCheck(L_31);
 		TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A L_32;
 		L_32 = OfferPanelManager_GetTimeUntilNextOffer_mD645CC213E32F374EBC09F72718F46C9521CF102(L_31, NULL);
 		V_7 = L_32;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:926>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:927>
 		il2cpp_codegen_runtime_class_init_inline(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var);
 		double L_33;
 		L_33 = TimeSpan_get_TotalSeconds_mED686E7CECE6A76A7DC38518698B9199DB8CDEA8((&V_7), NULL);
@@ -11117,20 +11121,20 @@ IL_00f4:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:928>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:929>
 		il2cpp_codegen_runtime_class_init_inline(TimeSpan_t8195C5B013A2C532FEBDF0B64B6911982E750F5A_il2cpp_TypeInfo_var);
 		double L_34;
 		L_34 = TimeSpan_get_TotalHours_m753DFC812CEC8F9214EF5F9839C5B4A4DB0D2883((&V_7), NULL);
 		V_8 = il2cpp_codegen_cast_double_to_int<int32_t>(L_34);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:929>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:930>
 		int32_t L_35;
 		L_35 = TimeSpan_get_Minutes_m93E37D01CD6DA2DE5B35609D740D322E270B678F((&V_7), NULL);
 		V_9 = L_35;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:930>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:931>
 		int32_t L_36;
 		L_36 = TimeSpan_get_Seconds_m8CA21613DC31BD025C5D30D41BAD0ED50827578B((&V_7), NULL);
 		V_10 = L_36;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:931>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:932>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_37 = V_1;
 		int32_t L_38 = V_8;
 		int32_t L_39 = L_38;
@@ -11151,7 +11155,7 @@ IL_00f4:
 
 IL_0159:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:935>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:936>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_48 = V_1;
 		NullCheck(L_48);
 		L_48->___timeUntilNextOffer = _stringLiteralA8F386AB36FA509166C9FD2A1A85C7562FBC0BF5;
@@ -11161,7 +11165,7 @@ IL_0159:
 
 IL_0166:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:940>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:941>
 		OfferPanelManager_tC87C2F04786ABFD518035C030742F90782F6CDDE* L_49 = V_1;
 		NullCheck(L_49);
 		L_49->___timeUntilNextOffer = _stringLiteralA8F386AB36FA509166C9FD2A1A85C7562FBC0BF5;
@@ -11170,7 +11174,7 @@ IL_0166:
 
 IL_0171:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:944>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:945>
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_50 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_50, (1.0f), NULL);
 		__this->___U3CU3E2__current = L_50;
@@ -11182,11 +11186,11 @@ IL_0171:
 IL_018a:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:886>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferPanelManager.cs:887>
 		goto IL_0021;
 	}
 }
-// Method Definition Index: 66552
+// Method Definition Index: 66554
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CUpdateTimeUntilNextOfferU3Ed__56_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE8FFCAFC606FA22A8DC44EFAA43249BDB4B811B7 (U3CUpdateTimeUntilNextOfferU3Ed__56_tCE7E61BE4176A7B32EC4299C0C54B7C646DB6324* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11194,7 +11198,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CUpdateTimeUntilNextOfferU3E
 		return L_0;
 	}
 }
-// Method Definition Index: 66553
+// Method Definition Index: 66555
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateTimeUntilNextOfferU3Ed__56_System_Collections_IEnumerator_Reset_mC07A3D183C6688CA873C65EF36679A48D41A8BFC (U3CUpdateTimeUntilNextOfferU3Ed__56_tCE7E61BE4176A7B32EC4299C0C54B7C646DB6324* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11203,7 +11207,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateTimeUntilNextOfferU3Ed__56_Syst
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CUpdateTimeUntilNextOfferU3Ed__56_System_Collections_IEnumerator_Reset_mC07A3D183C6688CA873C65EF36679A48D41A8BFC_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 66554
+// Method Definition Index: 66556
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CUpdateTimeUntilNextOfferU3Ed__56_System_Collections_IEnumerator_get_Current_m5A88F11D96776D497667998099753D935CB5B08D (U3CUpdateTimeUntilNextOfferU3Ed__56_tCE7E61BE4176A7B32EC4299C0C54B7C646DB6324* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11219,7 +11223,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CUpdateTimeUntilNextOfferU3E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66555
+// Method Definition Index: 66557
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelScaler_Awake_m4BB252D2746636CE57DBEAF7FAD3820468F0413B (OfferPanelScaler_t100536783069EBFF3870D514C394C688ABBB892B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11500,7 +11504,7 @@ IL_012c:
 		return;
 	}
 }
-// Method Definition Index: 66556
+// Method Definition Index: 66558
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelScaler_Start_m9E984773A3FB497702AEE5F02CE8F69C0B02B810 (OfferPanelScaler_t100536783069EBFF3870D514C394C688ABBB892B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11510,7 +11514,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelScaler_Start_m9E984773A3FB4977
 		return;
 	}
 }
-// Method Definition Index: 66557
+// Method Definition Index: 66559
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelScaler_ApplyScaling_m42BC223A6AEF0BD2DA6F3FE2E7234CF642C0317A (OfferPanelScaler_t100536783069EBFF3870D514C394C688ABBB892B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11839,7 +11843,7 @@ IL_01be:
 		return;
 	}
 }
-// Method Definition Index: 66558
+// Method Definition Index: 66560
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelScaler_ScaleElement_mBC8306D28CC8278F27982BABA359D023B9A5EA4B (OfferPanelScaler_t100536783069EBFF3870D514C394C688ABBB892B* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, String_t* ___1_elementType, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11927,7 +11931,7 @@ IL_0018:
 		return;
 	}
 }
-// Method Definition Index: 66559
+// Method Definition Index: 66561
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelScaler_RecalculateScaling_mB3BD2B5C3C0EF52582FA13D80B47B1664173C69C (OfferPanelScaler_t100536783069EBFF3870D514C394C688ABBB892B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11937,7 +11941,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelScaler_RecalculateScaling_mB3B
 		return;
 	}
 }
-// Method Definition Index: 66560
+// Method Definition Index: 66562
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelScaler__ctor_mA84270613A7D5436264D3B02E8769E32FBF9BAD0 (OfferPanelScaler_t100536783069EBFF3870D514C394C688ABBB892B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11989,14 +11993,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferPanelScaler__ctor_mA84270613A7D5436
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66561
+// Method Definition Index: 66563
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferSwipeTouchZone_Start_m7B58C9482718393830570720F865CD1911C44892 (OfferSwipeTouchZone_t0DE266D93D0C89B7429E284D7D469405412FB3C0* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisOffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416_m6EF421640DB810988378EA963D0E76511233F57E_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindFirstObjectByType_TisOffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416_m7F514520B9DD84E2239E9791619C1EE011E7F26F_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE6592E0542EE1B5FF3F1429B17D0830B6C0369A6);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralE94FA512D64475F16DBE2BA4CE29845B1676896F);
@@ -12006,7 +12010,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferSwipeTouchZone_Start_m7B58C94827183
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferSwipeTouchZone.cs:32>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* L_0;
-		L_0 = Object_FindObjectOfType_TisOffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416_m6EF421640DB810988378EA963D0E76511233F57E(Object_FindObjectOfType_TisOffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416_m6EF421640DB810988378EA963D0E76511233F57E_RuntimeMethod_var);
+		L_0 = Object_FindFirstObjectByType_TisOffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416_m7F514520B9DD84E2239E9791619C1EE011E7F26F(Object_FindFirstObjectByType_TisOffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416_m7F514520B9DD84E2239E9791619C1EE011E7F26F_RuntimeMethod_var);
 		__this->___offersManager = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___offersManager), (void*)L_0);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/OfferSwipeTouchZone.cs:34>
@@ -12046,7 +12050,7 @@ IL_0036:
 		return;
 	}
 }
-// Method Definition Index: 66562
+// Method Definition Index: 66564
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferSwipeTouchZone_OnPointerDown_mAF9264B24227D08B7C4C95A7481BE99748949BD0 (OfferSwipeTouchZone_t0DE266D93D0C89B7429E284D7D469405412FB3C0* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12104,7 +12108,7 @@ IL_003e:
 		return;
 	}
 }
-// Method Definition Index: 66563
+// Method Definition Index: 66565
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferSwipeTouchZone_OnPointerUp_m029D57E2B2FDD0E0A71AFA04D193B76316178A5A (OfferSwipeTouchZone_t0DE266D93D0C89B7429E284D7D469405412FB3C0* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12431,7 +12435,7 @@ IL_01c4:
 		return;
 	}
 }
-// Method Definition Index: 66564
+// Method Definition Index: 66566
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferSwipeTouchZone_SetSwipeDetectionEnabled_m89D43234CAFC36F9382134A58C302356C1D26E3D (OfferSwipeTouchZone_t0DE266D93D0C89B7429E284D7D469405412FB3C0* __this, bool ___0_enabled, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12494,7 +12498,7 @@ IL_002d:
 		return;
 	}
 }
-// Method Definition Index: 66565
+// Method Definition Index: 66567
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferSwipeTouchZone_SetSwipeThreshold_mA588837B157D67393A918A677447078FA7438D14 (OfferSwipeTouchZone_t0DE266D93D0C89B7429E284D7D469405412FB3C0* __this, float ___0_threshold, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12534,7 +12538,7 @@ IL_0033:
 		return;
 	}
 }
-// Method Definition Index: 66566
+// Method Definition Index: 66568
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferSwipeTouchZone__ctor_m71913F58194E0CFAD79EEF7E9CC87DD22B7FE36F (OfferSwipeTouchZone_t0DE266D93D0C89B7429E284D7D469405412FB3C0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12560,7 +12564,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferSwipeTouchZone__ctor_m71913F58194E0
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66567
+// Method Definition Index: 66569
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OffersCarouselManager_Start_m83B741CA74D01ED36075A0FE45AAF63B3A542242 (OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12576,7 +12580,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OffersCarouselManager_Start_m83B741CA74D
 		return;
 	}
 }
-// Method Definition Index: 66568
+// Method Definition Index: 66570
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OffersCarouselManager_InitializeOffers_m031A7E839EA506FD7267740B21A591CB499C990C (OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12812,7 +12816,7 @@ IL_00f9:
 		return;
 	}
 }
-// Method Definition Index: 66569
+// Method Definition Index: 66571
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OffersCarouselManager_CalculateVisibleOffers_m6409A671E703608C090BCA8280AFAD0FD4294567 (OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12859,7 +12863,7 @@ IL_004f:
 		return;
 	}
 }
-// Method Definition Index: 66570
+// Method Definition Index: 66572
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OffersCarouselManager_UpdateOfferPositions_m099693C1961E26EF5F6694DE59159CD975DC8918 (OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13120,7 +13124,7 @@ IL_0142:
 		return;
 	}
 }
-// Method Definition Index: 66571
+// Method Definition Index: 66573
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OffersCarouselManager_UpdateNavigationButtonStates_m0A158F681255C036BA634150FA50C4B873C7B6AC (OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13176,7 +13180,7 @@ IL_004d:
 		return;
 	}
 }
-// Method Definition Index: 66572
+// Method Definition Index: 66574
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OffersCarouselManager_SetOfferPositionInstantly_mF74D0CDD147362199E37F278661F7393147803BB (OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* __this, int32_t ___0_index, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___1_targetPosition, float ___2_targetScale, float ___3_targetOpacity, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13276,7 +13280,7 @@ IL_0065:
 		return;
 	}
 }
-// Method Definition Index: 66573
+// Method Definition Index: 66575
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OffersCarouselManager_AnimateOfferToPosition_mDC2119A900468322B1919824A5A1B6C78C2EBB09 (OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* __this, int32_t ___0_index, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___1_targetPosition, float ___2_targetScale, float ___3_targetOpacity, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13312,7 +13316,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OffersCarouselManager_AnimateO
 		return L_8;
 	}
 }
-// Method Definition Index: 66574
+// Method Definition Index: 66576
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OffersCarouselManager_ScrollRight_mD62BF563A3A8AD25567C696DDFF94410909E39B0 (OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13374,7 +13378,7 @@ IL_005f:
 		return;
 	}
 }
-// Method Definition Index: 66575
+// Method Definition Index: 66577
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OffersCarouselManager_ScrollLeft_mD768CD8E3ED777BFA00CDB58AECA684C57A20C2E (OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13430,7 +13434,7 @@ IL_0049:
 		return;
 	}
 }
-// Method Definition Index: 66576
+// Method Definition Index: 66578
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OffersCarouselManager_ScrollMultiple_m2FB7C23BB0AE849A3D14D8939DF694E59AB6E5F7 (OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* __this, int32_t ___0_steps, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -13487,7 +13491,7 @@ IL_002e:
 		return;
 	}
 }
-// Method Definition Index: 66577
+// Method Definition Index: 66579
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OffersCarouselManager_AnimateMultipleSteps_m0DE51DDAA7661B788979692B3DD89E91AB2230A9 (OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* __this, int32_t ___0_totalSteps, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13510,7 +13514,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OffersCarouselManager_AnimateM
 		return L_2;
 	}
 }
-// Method Definition Index: 66578
+// Method Definition Index: 66580
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OffersCarouselManager_TransitionToOffer_m8364E7B6CC48CD0918695DC4B742275E7B3B3186 (OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13611,7 +13615,7 @@ IL_0074:
 		return;
 	}
 }
-// Method Definition Index: 66579
+// Method Definition Index: 66581
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OffersCarouselManager_OnDotButtonClicked_m882984E8E6B4721532334D5F74A69DB315341068 (OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	{
@@ -13622,7 +13626,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OffersCarouselManager_OnDotButtonClicked
 		return;
 	}
 }
-// Method Definition Index: 66580
+// Method Definition Index: 66582
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OffersCarouselManager_SetupDotButtons_m483349887EF50F56032B5450A70A60647D5FD42D (OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13723,7 +13727,7 @@ IL_005c:
 		return;
 	}
 }
-// Method Definition Index: 66581
+// Method Definition Index: 66583
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OffersCarouselManager_UpdateDotButtons_mF2DBFBA66259511D2D6DEB2455A3BA249CF3B460 (OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13871,7 +13875,7 @@ IL_009e:
 		return;
 	}
 }
-// Method Definition Index: 66582
+// Method Definition Index: 66584
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OffersCarouselManager_SetupNavigationButtons_mD38B4E6264884A5623410BE3381C42CC5FB080B7 (OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14015,7 +14019,7 @@ IL_0101:
 		return;
 	}
 }
-// Method Definition Index: 66583
+// Method Definition Index: 66585
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t OffersCarouselManager_GetCurrentSelectedIndex_m22A0741B1D9D0B7E1D58D0FCB32F6F37B0425BDC (OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14024,7 +14028,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t OffersCarouselManager_GetCurrentSelec
 		return L_0;
 	}
 }
-// Method Definition Index: 66584
+// Method Definition Index: 66586
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* OffersCarouselManager_GetCurrentSelectedOffer_m8A137A83122A3E5215C6E74B5F0A1F52B1DC0B11 (OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14060,7 +14064,7 @@ IL_0027:
 		return (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL;
 	}
 }
-// Method Definition Index: 66585
+// Method Definition Index: 66587
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OffersCarouselManager_OnDestroy_m39282F555B46A6A340F0BEF4393D840AE884A9E6 (OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14083,7 +14087,7 @@ IL_0014:
 		return;
 	}
 }
-// Method Definition Index: 66586
+// Method Definition Index: 66588
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* OffersCarouselManager_GetOfferItems_m42046F58AFCA2FE749F4403F755082780F0CFC30 (OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14092,7 +14096,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15
 		return L_0;
 	}
 }
-// Method Definition Index: 66587
+// Method Definition Index: 66589
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OffersCarouselManager_RefreshVisualStates_m520C6BE992660F22FF313C77B2471DD876D44CC1 (OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14122,7 +14126,7 @@ IL_000d:
 		return;
 	}
 }
-// Method Definition Index: 66588
+// Method Definition Index: 66590
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OffersCarouselManager__ctor_m1F2C2863F5B506B60C8EB0D066B0927D742BCC00 (OffersCarouselManager_tC3A132B50651ACD29909F5D8A05D581809A6B416* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14179,7 +14183,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OffersCarouselManager__ctor_m1F2C2863F5B
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66589
+// Method Definition Index: 66591
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass34_0__ctor_m49DB88048D57182E84C075B80A750DA2BCE47C7B (U3CU3Ec__DisplayClass34_0_tBFA2BB213FE228FC34D67B3CC5FA9109082BF6A8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14187,7 +14191,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass34_0__ctor_m49DB880
 		return;
 	}
 }
-// Method Definition Index: 66590
+// Method Definition Index: 66592
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass34_0_U3CSetupDotButtonsU3Eb__0_m072F803464579BF0C0E0C2B93D46B65D3FB980EF (U3CU3Ec__DisplayClass34_0_tBFA2BB213FE228FC34D67B3CC5FA9109082BF6A8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14207,7 +14211,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass34_0_U3CSetupDotBut
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66591
+// Method Definition Index: 66593
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateMultipleStepsU3Ed__31__ctor_mE853BC0695245B4AABE1A043DF57C2115861D358 (U3CAnimateMultipleStepsU3Ed__31_t2D60FD279CE1677376EE778E91AE1C67116A6F44* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -14217,14 +14221,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateMultipleStepsU3Ed__31__ctor_mE
 		return;
 	}
 }
-// Method Definition Index: 66592
+// Method Definition Index: 66594
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateMultipleStepsU3Ed__31_System_IDisposable_Dispose_m1C770CC891C69329B7B541FE8AD5D35D98C6817B (U3CAnimateMultipleStepsU3Ed__31_t2D60FD279CE1677376EE778E91AE1C67116A6F44* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 66593
+// Method Definition Index: 66595
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CAnimateMultipleStepsU3Ed__31_MoveNext_m20B0606DD890922659D64C5F6D49930A0E33E2A9 (U3CAnimateMultipleStepsU3Ed__31_t2D60FD279CE1677376EE778E91AE1C67116A6F44* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14476,7 +14480,7 @@ IL_013b:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 66594
+// Method Definition Index: 66596
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateMultipleStepsU3Ed__31_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mFCC3C0E9CCAAE9CF54ED5CA269CFDDA30A2786E7 (U3CAnimateMultipleStepsU3Ed__31_t2D60FD279CE1677376EE778E91AE1C67116A6F44* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14484,7 +14488,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateMultipleStepsU3Ed__3
 		return L_0;
 	}
 }
-// Method Definition Index: 66595
+// Method Definition Index: 66597
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateMultipleStepsU3Ed__31_System_Collections_IEnumerator_Reset_m531DC21046D315D2C8D5450FF899D5AE9E97F36B (U3CAnimateMultipleStepsU3Ed__31_t2D60FD279CE1677376EE778E91AE1C67116A6F44* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14493,7 +14497,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateMultipleStepsU3Ed__31_System_C
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CAnimateMultipleStepsU3Ed__31_System_Collections_IEnumerator_Reset_m531DC21046D315D2C8D5450FF899D5AE9E97F36B_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 66596
+// Method Definition Index: 66598
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateMultipleStepsU3Ed__31_System_Collections_IEnumerator_get_Current_m423CA96912332D45951E827578859F2D0945EF63 (U3CAnimateMultipleStepsU3Ed__31_t2D60FD279CE1677376EE778E91AE1C67116A6F44* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14509,7 +14513,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateMultipleStepsU3Ed__3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66597
+// Method Definition Index: 66599
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateOfferToPositionU3Ed__27__ctor_mF13124297DC3CEE1CB99875A11596E2A05D5266A (U3CAnimateOfferToPositionU3Ed__27_t016EE1CB72F9FB802DAF4BBC591B0D9972BFAB89* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -14519,14 +14523,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateOfferToPositionU3Ed__27__ctor_
 		return;
 	}
 }
-// Method Definition Index: 66598
+// Method Definition Index: 66600
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateOfferToPositionU3Ed__27_System_IDisposable_Dispose_mD520035ABE0B53E320C3AAB61CB667A5B6D246C1 (U3CAnimateOfferToPositionU3Ed__27_t016EE1CB72F9FB802DAF4BBC591B0D9972BFAB89* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 66599
+// Method Definition Index: 66601
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CAnimateOfferToPositionU3Ed__27_MoveNext_m4EB8C1B505F31B7B29C2F051EA23C50FD23C530F (U3CAnimateOfferToPositionU3Ed__27_t016EE1CB72F9FB802DAF4BBC591B0D9972BFAB89* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14811,7 +14815,7 @@ IL_0208:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 66600
+// Method Definition Index: 66602
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateOfferToPositionU3Ed__27_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m319129CB1E6594E402CF82DAA8E2E382DB1F6A61 (U3CAnimateOfferToPositionU3Ed__27_t016EE1CB72F9FB802DAF4BBC591B0D9972BFAB89* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14819,7 +14823,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateOfferToPositionU3Ed_
 		return L_0;
 	}
 }
-// Method Definition Index: 66601
+// Method Definition Index: 66603
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateOfferToPositionU3Ed__27_System_Collections_IEnumerator_Reset_mA142CD359498CAE5BD2CDB988B6466363897A1C8 (U3CAnimateOfferToPositionU3Ed__27_t016EE1CB72F9FB802DAF4BBC591B0D9972BFAB89* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14828,7 +14832,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateOfferToPositionU3Ed__27_System
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CAnimateOfferToPositionU3Ed__27_System_Collections_IEnumerator_Reset_mA142CD359498CAE5BD2CDB988B6466363897A1C8_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 66602
+// Method Definition Index: 66604
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateOfferToPositionU3Ed__27_System_Collections_IEnumerator_get_Current_m98E5EA98E45CEE05F2CC075BA9AACEA7440546C9 (U3CAnimateOfferToPositionU3Ed__27_t016EE1CB72F9FB802DAF4BBC591B0D9972BFAB89* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14844,7 +14848,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateOfferToPositionU3Ed_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66603
+// Method Definition Index: 66605
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerData__ctor_mDD79CC7712EAF325215F97832BFE3403DF47DFA8 (PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14880,7 +14884,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerData__ctor_mDD79CC7712EAF325215F97
 		return;
 	}
 }
-// Method Definition Index: 66604
+// Method Definition Index: 66606
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerData__ctor_mCB782B8C3497359BC86D594F6C82CE9C3164FA14 (PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* __this, String_t* ___0_name, String_t* ___1_emailAddress, float ___2_initialCash, int32_t ___3_initialCoins, String_t* ___4_id, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14921,7 +14925,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerData__ctor_mCB782B8C3497359BC86D59
 		return;
 	}
 }
-// Method Definition Index: 66605
+// Method Definition Index: 66607
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerData_ToJson_m414598F9CD0A4691CBB4C813BFD04C9B8BD5C46C (PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14931,7 +14935,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerData_ToJson_m414598F9CD0A4691
 		return L_0;
 	}
 }
-// Method Definition Index: 66606
+// Method Definition Index: 66608
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* PlayerData_FromJson_mF11C369FE9FDDFC1B3B842424D4E988E88A54BF3 (String_t* ___0_json, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14956,7 +14960,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PlayerData_t04178AFFCFAF35DA6472B839034F672FF
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66607
+// Method Definition Index: 66609
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerDataDebugger_Start_mB118FEDB5A320552921C31EBDDF538BBB6382253 (PlayerDataDebugger_t8343AF67A02BB044EB9C2B49EAC0941A59B09F26* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14975,7 +14979,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerDataDebugger_Start_mB118FEDB5A3205
 		return;
 	}
 }
-// Method Definition Index: 66608
+// Method Definition Index: 66610
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerDataDebugger_Update_m9C798617B6805B94B84996F326E49575BD6DBEAF (PlayerDataDebugger_t8343AF67A02BB044EB9C2B49EAC0941A59B09F26* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15019,7 +15023,7 @@ IL_003a:
 		return;
 	}
 }
-// Method Definition Index: 66609
+// Method Definition Index: 66611
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerDataDebugger_OnDataLoaded_mBFE983BD12924D4515E8D26B43EA0DF4D1534D4B (PlayerDataDebugger_t8343AF67A02BB044EB9C2B49EAC0941A59B09F26* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15074,7 +15078,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerDataDebugger_OnDataLoaded_mBFE983B
 		return;
 	}
 }
-// Method Definition Index: 66610
+// Method Definition Index: 66612
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerDataDebugger_LogPlayerData_mC13AAEE95FFDFE3E9A397EB0A5396746A9C5912E (PlayerDataDebugger_t8343AF67A02BB044EB9C2B49EAC0941A59B09F26* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15125,7 +15129,7 @@ IL_0017:
 		return;
 	}
 }
-// Method Definition Index: 66611
+// Method Definition Index: 66613
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerDataDebugger_OnDestroy_m7BB2FAC052133AAF43A7BD5AF02172F7126F09C2 (PlayerDataDebugger_t8343AF67A02BB044EB9C2B49EAC0941A59B09F26* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15144,7 +15148,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerDataDebugger_OnDestroy_m7BB2FAC052
 		return;
 	}
 }
-// Method Definition Index: 66612
+// Method Definition Index: 66614
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerDataDebugger__ctor_m1D516709272CB6EFFC3AA633FF79E77B17448331 (PlayerDataDebugger_t8343AF67A02BB044EB9C2B49EAC0941A59B09F26* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15164,7 +15168,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerDataDebugger__ctor_m1D516709272CB6
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66613
+// Method Definition Index: 66615
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerDropdown_Start_mD30B29BAC9F6A79912F2913A0E86EAD3C9C14BFE (PlayerDropdown_t4F2C99FA556F406EB5A0251FF790D3CFA9CEE539* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15174,7 +15178,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerDropdown_Start_mD30B29BAC9F6A79912
 		return;
 	}
 }
-// Method Definition Index: 66614
+// Method Definition Index: 66616
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerDropdown_RefreshList_m69271BA414C408F375142B4AC4050231E63F027D (PlayerDropdown_t4F2C99FA556F406EB5A0251FF790D3CFA9CEE539* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15615,7 +15619,7 @@ IL_01c4:
 		return;
 	}
 }
-// Method Definition Index: 66615
+// Method Definition Index: 66617
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerDropdown_OnPlayerClicked_mE3A87F97C75ACF160FA51EB3A70CD880498360D7 (PlayerDropdown_t4F2C99FA556F406EB5A0251FF790D3CFA9CEE539* __this, String_t* ___0_name, int32_t ___1_score, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15639,7 +15643,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerDropdown_OnPlayerClicked_mE3A87F97
 		return;
 	}
 }
-// Method Definition Index: 66616
+// Method Definition Index: 66618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerDropdown_AddPlayer_m37892AD0E92CCC675313BE7EDF66E7BC26EF5CC0 (PlayerDropdown_t4F2C99FA556F406EB5A0251FF790D3CFA9CEE539* __this, String_t* ___0_name, int32_t ___1_score, Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___2_avatar, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15676,7 +15680,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerDropdown_AddPlayer_m37892AD0E92CCC
 		return;
 	}
 }
-// Method Definition Index: 66617
+// Method Definition Index: 66619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerDropdown__ctor_m80A8C97B2645C0480B53F7CC4F06F75B59A95210 (PlayerDropdown_t4F2C99FA556F406EB5A0251FF790D3CFA9CEE539* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15704,7 +15708,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerDropdown__ctor_m80A8C97B2645C0480B
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66618
+// Method Definition Index: 66620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerData__ctor_m6B4FEA843914FE9E6BDC4601A8E5D516687DC309 (PlayerData_t611697EF2A5CD4EE39EFBCD306C21C9A905D8E87* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15720,7 +15724,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerData__ctor_m6B4FEA843914FE9E6BDC46
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66619
+// Method Definition Index: 66621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass5_0__ctor_mC70F94E5DB3E8CFEA240520F1C29AA0021115A73 (U3CU3Ec__DisplayClass5_0_t50000FC5897B2D1C2F40825E411FCE2116C978B2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15728,7 +15732,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass5_0__ctor_mC70F94E5
 		return;
 	}
 }
-// Method Definition Index: 66620
+// Method Definition Index: 66622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass5_0_U3CRefreshListU3Eb__0_mF1325C44F8B7D36D521C24180FB6E1F543E775CB (U3CU3Ec__DisplayClass5_0_t50000FC5897B2D1C2F40825E411FCE2116C978B2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15749,7 +15753,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass5_0_U3CRefreshListU
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66621
+// Method Definition Index: 66623
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerListUI_UpdatePlayerList_mE09E6ECDF658D25608E2D0E5C78837E76C8F4319 (PlayerListUI_tFE4B8E1A32A6C581EEB195C88BB91D4FA00B9756* __this, List_1_tDB3EC632856AC8A9DEA74FB4090795E09E908332* ___0_players, const RuntimeMethod* method) 
 {
 	{
@@ -15763,7 +15767,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerListUI_UpdatePlayerList_mE09E6ECDF
 		return;
 	}
 }
-// Method Definition Index: 66622
+// Method Definition Index: 66624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerListUI_RefreshUI_m57AF52020A83D2014313832C5536E5DB747D230F (PlayerListUI_tFE4B8E1A32A6C581EEB195C88BB91D4FA00B9756* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16197,7 +16201,7 @@ IL_01a5:
 		return;
 	}
 }
-// Method Definition Index: 66623
+// Method Definition Index: 66625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerListUI_OnPlayerClicked_m8434FE65FE7CEE405D8C70D43D8BFA2406B81947 (PlayerListUI_tFE4B8E1A32A6C581EEB195C88BB91D4FA00B9756* __this, String_t* ___0_name, String_t* ___1_id, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16238,7 +16242,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerListUI_OnPlayerClicked_m8434FE65FE
 		return;
 	}
 }
-// Method Definition Index: 66624
+// Method Definition Index: 66626
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerListUI__ctor_m70A631A691C91403FF0477569B201EEA3D05675F (PlayerListUI_tFE4B8E1A32A6C581EEB195C88BB91D4FA00B9756* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16266,7 +16270,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerListUI__ctor_m70A631A691C91403FF04
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66625
+// Method Definition Index: 66627
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerInfo__ctor_m390B543069D4CA758A83FCD48C8E97BB56F88A12 (PlayerInfo_t266B541C949F3D8EFD371791BBA15208155574E8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16282,7 +16286,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerInfo__ctor_m390B543069D4CA758A83FC
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66626
+// Method Definition Index: 66628
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass5_0__ctor_mCB207B5DC559A4F4D9C593883432E20322581D97 (U3CU3Ec__DisplayClass5_0_tF36803213BFECA4F12BB07BA9EB54DB6E2936D13* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16290,7 +16294,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass5_0__ctor_mCB207B5D
 		return;
 	}
 }
-// Method Definition Index: 66627
+// Method Definition Index: 66629
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass5_0_U3CRefreshUIU3Eb__0_m1186A0B6E9EE3A0624E09DC000B6B0E625CB051B (U3CU3Ec__DisplayClass5_0_tF36803213BFECA4F12BB07BA9EB54DB6E2936D13* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16311,7 +16315,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass5_0_U3CRefreshUIU3E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66628
+// Method Definition Index: 66630
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Id_mC58F20220F795613BEDA334EE4DB7A9B07CF79E0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16326,7 +16330,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Id_mC58F20220F79561
 		return L_0;
 	}
 }
-// Method Definition Index: 66629
+// Method Definition Index: 66631
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_Id_m6A0E149F69AA3C0AE1173F8DE451675628874D3A (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16343,7 +16347,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_Id_m6A0E149F69AA3C0AE117
 		return;
 	}
 }
-// Method Definition Index: 66630
+// Method Definition Index: 66632
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Name_mC2FF8F628463BB165429DADD4D06B7B8DF621276 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16358,7 +16362,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Name_mC2FF8F628463B
 		return L_0;
 	}
 }
-// Method Definition Index: 66631
+// Method Definition Index: 66633
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_Name_mBBCB7B9E185C0DDBFEDB97172876EB0625E2B01B (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16375,7 +16379,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_Name_mBBCB7B9E185C0DDBFE
 		return;
 	}
 }
-// Method Definition Index: 66632
+// Method Definition Index: 66634
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Email_mB1FCCB0FD27F759C2D91D0893F83FEB2434E23B0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16390,7 +16394,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Email_mB1FCCB0FD27F
 		return L_0;
 	}
 }
-// Method Definition Index: 66633
+// Method Definition Index: 66635
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_Email_mCB91E0183AC211FE310FF247BAD5F398A2BC36F2 (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16407,7 +16411,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_Email_mCB91E0183AC211FE3
 		return;
 	}
 }
-// Method Definition Index: 66634
+// Method Definition Index: 66636
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Wins_mD1410D5656E9C61B9CBDBF4AD94A35B882F6A097 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16422,7 +16426,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Wins_mD1410D5656E9C61
 		return L_0;
 	}
 }
-// Method Definition Index: 66635
+// Method Definition Index: 66637
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_Wins_mF25D9D3884C50B12CDD2BE5999C6160D81E8D989 (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16438,7 +16442,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_Wins_mF25D9D3884C50B12CD
 		return;
 	}
 }
-// Method Definition Index: 66636
+// Method Definition Index: 66638
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Losses_mC24BE66603B95A7B77C8CB5004A999B1FE200EB1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16453,7 +16457,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Losses_mC24BE66603B95
 		return L_0;
 	}
 }
-// Method Definition Index: 66637
+// Method Definition Index: 66639
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_Losses_mD2E9A65C46DAC60748C9E280A1D4472C5DD27E09 (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16469,7 +16473,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_Losses_mD2E9A65C46DAC607
 		return;
 	}
 }
-// Method Definition Index: 66638
+// Method Definition Index: 66640
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Balance_mF8AAC11F89C906B7F1E6FAB7C7C6C7E64DA4F46D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16484,7 +16488,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Balance_mF8AAC11F89C9
 		return L_0;
 	}
 }
-// Method Definition Index: 66639
+// Method Definition Index: 66641
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_Balance_m691E03F15C98F1C71C9C0F43E34A0E1C9E01B692 (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16500,7 +16504,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_Balance_m691E03F15C98F1C
 		return;
 	}
 }
-// Method Definition Index: 66640
+// Method Definition Index: 66642
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerModel_get_CashBalance_m0E3FB6888B6E28878E0F553CB0A96C2947BFEFAC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16515,7 +16519,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerModel_get_CashBalance_m0E3FB688
 		return L_0;
 	}
 }
-// Method Definition Index: 66641
+// Method Definition Index: 66643
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_CashBalance_mD0453094D39065D72D804A28132A817A2C0DB522 (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16531,7 +16535,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_CashBalance_mD0453094D39
 		return;
 	}
 }
-// Method Definition Index: 66642
+// Method Definition Index: 66644
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerModel_get_BonusBalance_m8DF8D6BFA86F6BF8A939C1AADE06CD857F89F8B2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16546,7 +16550,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerModel_get_BonusBalance_m8DF8D6B
 		return L_0;
 	}
 }
-// Method Definition Index: 66643
+// Method Definition Index: 66645
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_BonusBalance_m493D43D3E6CB3D4381F8FAB4860AC84A2B83D593 (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16562,7 +16566,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_BonusBalance_m493D43D3E6
 		return;
 	}
 }
-// Method Definition Index: 66644
+// Method Definition Index: 66646
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerModel_get_WinningBalance_mD9CD207134E21A6C0489B6DAF228BC222BBE175D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16577,7 +16581,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerModel_get_WinningBalance_mD9CD2
 		return L_0;
 	}
 }
-// Method Definition Index: 66645
+// Method Definition Index: 66647
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_WinningBalance_mDF506879A54C67775C7258A07F57B945F976D74B (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16593,7 +16597,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_WinningBalance_mDF506879
 		return;
 	}
 }
-// Method Definition Index: 66646
+// Method Definition Index: 66648
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Coins_m4C02B7FEEBA8E8E63B180510D565F9FA8B33F37A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16608,7 +16612,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Coins_m4C02B7FEEBA8E8
 		return L_0;
 	}
 }
-// Method Definition Index: 66647
+// Method Definition Index: 66649
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_Coins_m4E5126E9EFDC0D114DA6E8CAFDA71E82829B24E5 (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16624,7 +16628,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_Coins_m4E5126E9EFDC0D114
 		return;
 	}
 }
-// Method Definition Index: 66648
+// Method Definition Index: 66650
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Avatar_mE3D8C1BE3E6D46C3AE3837FA63789AA9A95EAEDD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16639,7 +16643,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Avatar_mE3D8C1BE3E6
 		return L_0;
 	}
 }
-// Method Definition Index: 66649
+// Method Definition Index: 66651
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_Avatar_mBD556D9F12770A16D8D34C6CA1BBD9E53778A062 (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16656,7 +16660,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_Avatar_mBD556D9F12770A16
 		return;
 	}
 }
-// Method Definition Index: 66650
+// Method Definition Index: 66652
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Xp_m05CA4268D9E61AA1A4EB92C38D7EC583C032E0FC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16671,7 +16675,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Xp_m05CA4268D9E61AA1A
 		return L_0;
 	}
 }
-// Method Definition Index: 66651
+// Method Definition Index: 66653
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_Xp_m0C9B5A9A21681352E4605E08FD896DF84702334D (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16687,7 +16691,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_Xp_m0C9B5A9A21681352E460
 		return;
 	}
 }
-// Method Definition Index: 66652
+// Method Definition Index: 66654
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Level_m3912D0CA3477275AFD84DA38B518F7C4A29E6E7F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16702,7 +16706,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Level_m3912D0CA347727
 		return L_0;
 	}
 }
-// Method Definition Index: 66653
+// Method Definition Index: 66655
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_Level_m4AA59D0D6981C70364811C83189D0EC7896A7785 (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16718,7 +16722,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_Level_m4AA59D0D6981C7036
 		return;
 	}
 }
-// Method Definition Index: 66654
+// Method Definition Index: 66656
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Role_mEA9FBC07AAD94DB90AACD021D9163347300B235B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16733,7 +16737,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Role_mEA9FBC07AAD94
 		return L_0;
 	}
 }
-// Method Definition Index: 66655
+// Method Definition Index: 66657
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_Role_mF38DEC5165741EEA1D624C8F3BDA211CA6A0BD79 (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16750,7 +16754,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_Role_mF38DEC5165741EEA1D
 		return;
 	}
 }
-// Method Definition Index: 66656
+// Method Definition Index: 66658
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerModel_get_SelectedAvatarIndex_m52692425CF7D719B831AFBCC8015DE4B8B021C59 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16765,7 +16769,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerModel_get_SelectedAvatarIndex_m
 		return L_0;
 	}
 }
-// Method Definition Index: 66657
+// Method Definition Index: 66659
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_SelectedAvatarIndex_m726F289D18BEFFF2E77B668E35EAF2A2B2721426 (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16781,7 +16785,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_SelectedAvatarIndex_m726
 		return;
 	}
 }
-// Method Definition Index: 66658
+// Method Definition Index: 66660
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerModel_get_ActiveMatchId_m7A9E15762CC732646485255598E1ADC4767F2D6E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16796,7 +16800,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerModel_get_ActiveMatchId_m7A9E
 		return L_0;
 	}
 }
-// Method Definition Index: 66659
+// Method Definition Index: 66661
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_ActiveMatchId_m7E12030076EC7C1B97F972458A3429B733E2EF09 (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16813,7 +16817,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_ActiveMatchId_m7E1203007
 		return;
 	}
 }
-// Method Definition Index: 66660
+// Method Definition Index: 66662
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerModel_get_ActiveRoomId_mE902293884B9C2FAABF5DD4000F61B57999A7DDF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16828,7 +16832,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerModel_get_ActiveRoomId_mE9022
 		return L_0;
 	}
 }
-// Method Definition Index: 66661
+// Method Definition Index: 66663
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_ActiveRoomId_m21F9279B38021FEBA62E7D03645B38063273035D (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16845,7 +16849,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_ActiveRoomId_m21F9279B38
 		return;
 	}
 }
-// Method Definition Index: 66662
+// Method Definition Index: 66664
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerModel_get_WithdrawableBalance_m5A61C6A8C42833A6DD217AF1052163B7AAEDB0C1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16860,7 +16864,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerModel_get_WithdrawableBalance_m
 		return L_0;
 	}
 }
-// Method Definition Index: 66663
+// Method Definition Index: 66665
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_WithdrawableBalance_mB28A102553D6F67B874755D81F24075B9B5A46D1 (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16876,7 +16880,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_WithdrawableBalance_mB28
 		return;
 	}
 }
-// Method Definition Index: 66664
+// Method Definition Index: 66666
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerModel_get_RecentMatchId_m8E5240DB692A69C9FD652AD4B2DE2C2F7C1361B3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16891,7 +16895,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerModel_get_RecentMatchId_m8E52
 		return L_0;
 	}
 }
-// Method Definition Index: 66665
+// Method Definition Index: 66667
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_RecentMatchId_m0813FA9F8EE7DDB2E8C05EBDD355FBD656D7E287 (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16908,7 +16912,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_RecentMatchId_m0813FA9F8
 		return;
 	}
 }
-// Method Definition Index: 66666
+// Method Definition Index: 66668
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerModel_get_RecentRoomId_m6637CF09DFD1F147C14573230DC59B7F9F2E5905 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16923,7 +16927,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerModel_get_RecentRoomId_m6637C
 		return L_0;
 	}
 }
-// Method Definition Index: 66667
+// Method Definition Index: 66669
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_RecentRoomId_mF087704F1A2DE00E83A3FC3B9D58C89FCA638E1C (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16940,7 +16944,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_RecentRoomId_mF087704F1A
 		return;
 	}
 }
-// Method Definition Index: 66668
+// Method Definition Index: 66670
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerModel_get_RecentMatchStatus_m8FCD39BFC700231D5ECF7DD65F125CDBEDCD37BC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16955,7 +16959,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PlayerModel_get_RecentMatchStatus_m
 		return L_0;
 	}
 }
-// Method Definition Index: 66669
+// Method Definition Index: 66671
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_RecentMatchStatus_m1E7042BA84E08A4A5BC607FE9F5F6F1D697BE23B (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16972,7 +16976,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_set_RecentMatchStatus_m1E704
 		return;
 	}
 }
-// Method Definition Index: 66670
+// Method Definition Index: 66672
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_add_OnDataUpdated_m3AA5EA7A806C9B3B00B0CFC280E198903E52CB6E (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17015,7 +17019,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66671
+// Method Definition Index: 66673
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_remove_OnDataUpdated_m9857E8A6A43EC322CC84C50B6596758592B16985 (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17058,7 +17062,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66672
+// Method Definition Index: 66674
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerModel_UpdateData_mB363F10A567FA0627C883DE25636E0CCF6A04EE7 (String_t* ___0_id, String_t* ___1_name, String_t* ___2_email, int32_t ___3_wins, int32_t ___4_losses, int32_t ___5_balance, int32_t ___6_cashBalance, int32_t ___7_bonusBalance, int32_t ___8_winningBalance, int32_t ___9_coins, String_t* ___10_avatar, int32_t ___11_xp, int32_t ___12_level, String_t* ___13_role, int32_t ___14_selectedAvatarIndex, String_t* ___15_activeMatchId, String_t* ___16_activeRoomId, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___17_withdrawableBalance, String_t* ___18_recentMatchId, String_t* ___19_recentRoomId, String_t* ___20_recentMatchStatus, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17229,7 +17233,7 @@ IL_00c2:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66673
+// Method Definition Index: 66675
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerProfileUI_Start_mB4672821DCD0969E7BCC3B95CF4B55EB2459ECE0 (PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17329,7 +17333,7 @@ IL_007e:
 		return;
 	}
 }
-// Method Definition Index: 66674
+// Method Definition Index: 66676
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerProfileUI_OnEnable_m5522CDAE2CA3324A1F1F3C91E117A7DF8605E3CF (PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17338,7 +17342,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerProfileUI_OnEnable_m5522CDAE2CA332
 		return;
 	}
 }
-// Method Definition Index: 66675
+// Method Definition Index: 66677
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerProfileUI_OnDestroy_m6D849D6210C2A66A444711A6801F9BB1D06E38A7 (PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17356,7 +17360,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerProfileUI_OnDestroy_m6D849D6210C2A
 		return;
 	}
 }
-// Method Definition Index: 66676
+// Method Definition Index: 66678
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerProfileUI_RefreshUI_m527D8CCB8F0E41109B24A0CBDF4E59CD062B3825 (PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17540,7 +17544,7 @@ IL_00c6:
 		return;
 	}
 }
-// Method Definition Index: 66677
+// Method Definition Index: 66679
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerProfileUI_UpdateAvatarDisplay_m1DC5244FCD6C3D0EDACE2924D586F7B85F0AC70C (PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* __this, String_t* ___0_avatarData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17647,7 +17651,7 @@ IL_0067:
 		return;
 	}
 }
-// Method Definition Index: 66678
+// Method Definition Index: 66680
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerProfileUI_ShowPreset_m6FC2070055C629788714D0A3B5CD1BA7F048E729 (PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17817,7 +17821,7 @@ IL_00a7:
 		return;
 	}
 }
-// Method Definition Index: 66679
+// Method Definition Index: 66681
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerProfileUI_ShowCustom_mE2179812A093494538F1E6CBB3D8102FCDB89DCD (PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* __this, Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___0_sprite, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17876,7 +17880,7 @@ IL_004a:
 		return;
 	}
 }
-// Method Definition Index: 66680
+// Method Definition Index: 66682
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerProfileUI_UpdateUIWithDefaultData_mAFECB4C4195024FA6ABCDF9CACD38F154AF0EF4D (PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17930,7 +17934,7 @@ IL_003c:
 		return;
 	}
 }
-// Method Definition Index: 66681
+// Method Definition Index: 66683
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerProfileUI_OnEditNameClicked_mA80A170D22538A4E86CC983FC2132870277BCD34 (PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18041,7 +18045,7 @@ IL_0089:
 		return;
 	}
 }
-// Method Definition Index: 66682
+// Method Definition Index: 66684
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerProfileUI_OnLogoutClicked_mDB2BDCA1368418A639804F39BFFA926502103F62 (PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18145,13 +18149,13 @@ IL_0072:
 		return;
 	}
 }
-// Method Definition Index: 66683
+// Method Definition Index: 66685
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerProfileUI_ShowLoginScreen_m1A6102082C2FE1E1C507B4D2C061465C729A3784 (PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_m9F95418B43AD56D2B249A1712B89939CB1A88FCC_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindFirstObjectByType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_mEAD20F2B028B6BD3C96CF684B6DF7C89D7338636_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -18179,7 +18183,7 @@ IL_001a:
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/PlayerProfileUI.cs:194>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* L_3;
-		L_3 = Object_FindObjectOfType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_m9F95418B43AD56D2B249A1712B89939CB1A88FCC(Object_FindObjectOfType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_m9F95418B43AD56D2B249A1712B89939CB1A88FCC_RuntimeMethod_var);
+		L_3 = Object_FindFirstObjectByType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_mEAD20F2B028B6BD3C96CF684B6DF7C89D7338636(Object_FindFirstObjectByType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_mEAD20F2B028B6BD3C96CF684B6DF7C89D7338636_RuntimeMethod_var);
 		V_0 = L_3;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/PlayerProfileUI.cs:195>
 		AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* L_4 = V_0;
@@ -18203,7 +18207,7 @@ IL_002f:
 		return;
 	}
 }
-// Method Definition Index: 66684
+// Method Definition Index: 66686
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerProfileUI_OnSelectCustomImageClicked_m92DE051A7FF67F3A85DF1B142EA83C9BA0AF6838 (PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18223,7 +18227,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerProfileUI_OnSelectCustomImageClick
 		return;
 	}
 }
-// Method Definition Index: 66685
+// Method Definition Index: 66687
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerProfileUI_OnImageSelected_m4FEBE738E2F56DCB9CF498A38FA868EE54A935EF (PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* __this, Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___0_texture, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18281,7 +18285,7 @@ IL_000a:
 		return;
 	}
 }
-// Method Definition Index: 66686
+// Method Definition Index: 66688
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerProfileUI_SetEditMode_mD12DCDC281BDE37436F5AD2DFD7936A7E8AA2907 (PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* __this, bool ___0_editMode, const RuntimeMethod* method) 
 {
 	{
@@ -18289,7 +18293,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerProfileUI_SetEditMode_mD12DCDC281B
 		return;
 	}
 }
-// Method Definition Index: 66687
+// Method Definition Index: 66689
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerProfileUI_UpdateEditButtonText_m0C68CECC82D8ACCE7634849BE2D322AD30A312D1 (PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18369,7 +18373,7 @@ IL_003f:
 		return;
 	}
 }
-// Method Definition Index: 66688
+// Method Definition Index: 66690
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerProfileUI__ctor_m6F7E1855E0272EDEADD37FA289EFE4F6535100FB (PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18396,7 +18400,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerProfileUI__ctor_m6F7E1855E0272EDEA
 		return;
 	}
 }
-// Method Definition Index: 66689
+// Method Definition Index: 66691
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerProfileUI_U3CUpdateAvatarDisplayU3Eb__22_0_m8020C793E810021A460A137944BE53BDD23C8611 (PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* __this, Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___0_texture, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18448,7 +18452,7 @@ IL_0043:
 		return;
 	}
 }
-// Method Definition Index: 66690
+// Method Definition Index: 66692
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerProfileUI_U3COnLogoutClickedU3Eb__27_0_m753A91F1E0FEED6177BFCEFE470B7870ECA0FFC3 (PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* __this, bool ___0_success, String_t* ___1_message, const RuntimeMethod* method) 
 {
 	{
@@ -18458,7 +18462,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerProfileUI_U3COnLogoutClickedU3Eb__
 		return;
 	}
 }
-// Method Definition Index: 66691
+// Method Definition Index: 66693
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerProfileUI_U3COnImageSelectedU3Eb__30_0_m16267AE682C179DCF4F141B3A7C8A2C3E3A72409 (PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* __this, bool ___0_success, String_t* ___1_result, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18519,7 +18523,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 66692
+// Method Definition Index: 66694
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerProfileUI_U3COnImageSelectedU3Eb__30_1_m6D4ABB26F5B7D6B5EFADE2F0298CE5A44D823C5D (PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* __this, Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___0_tex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18579,7 +18583,7 @@ IL_0043:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66693
+// Method Definition Index: 66695
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProfileScaler_Awake_m6E349F32D434190D8A72FCF1225A237199276054 (ProfileScaler_tADCE00F93C42734475BD48C33FB46F5BF67B41DA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19070,7 +19074,7 @@ IL_0262:
 		return;
 	}
 }
-// Method Definition Index: 66694
+// Method Definition Index: 66696
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProfileScaler_Start_m57787B68060BEBC67600EE247FB8CA44361DB3AC (ProfileScaler_tADCE00F93C42734475BD48C33FB46F5BF67B41DA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19080,7 +19084,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProfileScaler_Start_m57787B68060BEBC6760
 		return;
 	}
 }
-// Method Definition Index: 66695
+// Method Definition Index: 66697
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProfileScaler_StoreOriginalSize_m8975C72AE3FB892A3D028C624F84EE824FAEF5AD (ProfileScaler_tADCE00F93C42734475BD48C33FB46F5BF67B41DA* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, String_t* ___1_elementName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19134,7 +19138,7 @@ IL_0036:
 		return;
 	}
 }
-// Method Definition Index: 66696
+// Method Definition Index: 66698
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProfileScaler_StoreOriginalOffsets_m5D4664A208696E8970ABC8C0D6BB38CF18EC6B4C (ProfileScaler_tADCE00F93C42734475BD48C33FB46F5BF67B41DA* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, String_t* ___1_elementName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19250,7 +19254,7 @@ IL_0090:
 		return;
 	}
 }
-// Method Definition Index: 66697
+// Method Definition Index: 66699
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProfileScaler_ApplyScaling_m1AFBB0625DE5ED2DF58A59974885CB960870AC22 (ProfileScaler_tADCE00F93C42734475BD48C33FB46F5BF67B41DA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19725,7 +19729,7 @@ IL_02b1:
 		return;
 	}
 }
-// Method Definition Index: 66698
+// Method Definition Index: 66700
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProfileScaler_ScaleElementBySize_m4A73807952401F63F1FF5C1B418F613A3FFFD6F1 (ProfileScaler_tADCE00F93C42734475BD48C33FB46F5BF67B41DA* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, String_t* ___1_elementName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19813,7 +19817,7 @@ IL_0018:
 		return;
 	}
 }
-// Method Definition Index: 66699
+// Method Definition Index: 66701
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProfileScaler_ScaleElementByOffset_m870277881018ECA2A5D06A755B00AEB0ECCB0BA0 (ProfileScaler_tADCE00F93C42734475BD48C33FB46F5BF67B41DA* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, String_t* ___1_elementName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19948,7 +19952,7 @@ IL_0018:
 		return;
 	}
 }
-// Method Definition Index: 66700
+// Method Definition Index: 66702
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProfileScaler_ScaleNonAutoSizeTexts_mECB1254B4E3DD490D95261D0FE61A0130BCE56E4 (ProfileScaler_tADCE00F93C42734475BD48C33FB46F5BF67B41DA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20216,7 +20220,7 @@ IL_0171:
 		return;
 	}
 }
-// Method Definition Index: 66701
+// Method Definition Index: 66703
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProfileScaler_RecalculateScaling_m41184036C8CF3722D61E44C9C275F519C76486C6 (ProfileScaler_tADCE00F93C42734475BD48C33FB46F5BF67B41DA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20226,7 +20230,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProfileScaler_RecalculateScaling_m411840
 		return;
 	}
 }
-// Method Definition Index: 66702
+// Method Definition Index: 66704
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProfileScaler__ctor_m1A708D94521F564380440FFFE7FF9589DBE022DF (ProfileScaler_tADCE00F93C42734475BD48C33FB46F5BF67B41DA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20309,7 +20313,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ProfileScaler__ctor_m1A708D94521F5643804
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66703
+// Method Definition Index: 66705
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PurchaseLoadingOverlay_Awake_m17561B451DE21BFE82ECB26F2EED9E02B80F95E9 (PurchaseLoadingOverlay_t2E25ADBB6E7B053162CD9535F5CCCC8C2E4EFF31* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20342,7 +20346,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 66704
+// Method Definition Index: 66706
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PurchaseLoadingOverlay_Update_mDBB6458C55664BAE4FC9815C843A96F3714E0083 (PurchaseLoadingOverlay_t2E25ADBB6E7B053162CD9535F5CCCC8C2E4EFF31* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20388,7 +20392,7 @@ IL_003d:
 		return;
 	}
 }
-// Method Definition Index: 66705
+// Method Definition Index: 66707
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PurchaseLoadingOverlay_Show_mEDB703B3B54EC91C828E45EA82FDAE48E1A06B73 (PurchaseLoadingOverlay_t2E25ADBB6E7B053162CD9535F5CCCC8C2E4EFF31* __this, String_t* ___0_status, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20443,7 +20447,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 66706
+// Method Definition Index: 66708
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PurchaseLoadingOverlay_UpdateStatus_mC182AB97ED5309C23A73F539C50DF15828C9DB93 (PurchaseLoadingOverlay_t2E25ADBB6E7B053162CD9535F5CCCC8C2E4EFF31* __this, String_t* ___0_status, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20506,7 +20510,7 @@ IL_0041:
 		return;
 	}
 }
-// Method Definition Index: 66707
+// Method Definition Index: 66709
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PurchaseLoadingOverlay_Hide_m4BD7794B945C6EC031ABF28CD27B071D0AC3BDFA (PurchaseLoadingOverlay_t2E25ADBB6E7B053162CD9535F5CCCC8C2E4EFF31* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20541,7 +20545,7 @@ IL_0021:
 		return;
 	}
 }
-// Method Definition Index: 66708
+// Method Definition Index: 66710
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PurchaseLoadingOverlay__ctor_mD3E51496B23C4327E14855C044DC8AF0281F40A7 (PurchaseLoadingOverlay_t2E25ADBB6E7B053162CD9535F5CCCC8C2E4EFF31* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20559,7 +20563,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PurchaseLoadingOverlay__ctor_mD3E51496B2
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66709
+// Method Definition Index: 66711
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuitPanelScaler_Awake_m1F5DF9F7819CF18476D238F547A4E37A870E408E (QuitPanelScaler_t215951A276F4DB4A6B6E372CDD4C4B82CB7FDA6C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20633,7 +20637,7 @@ IL_006f:
 		return;
 	}
 }
-// Method Definition Index: 66710
+// Method Definition Index: 66712
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuitPanelScaler_Start_m0716600E7EBDFDD7655C514007C029B23BC9767E (QuitPanelScaler_t215951A276F4DB4A6B6E372CDD4C4B82CB7FDA6C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20643,7 +20647,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuitPanelScaler_Start_m0716600E7EBDFDD76
 		return;
 	}
 }
-// Method Definition Index: 66711
+// Method Definition Index: 66713
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuitPanelScaler_StoreOriginalOffsets_mD587955F1329B4C751F0EA81BC5DA4C3C14A8785 (QuitPanelScaler_t215951A276F4DB4A6B6E372CDD4C4B82CB7FDA6C* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3* ___1_offsets, String_t* ___2_elementName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20740,7 +20744,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuitPanelScaler_StoreOriginalOffsets_mD5
 		return;
 	}
 }
-// Method Definition Index: 66712
+// Method Definition Index: 66714
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuitPanelScaler_ApplyScaling_mC1826F9D7770DFF06BB0D7E9ED8B72E66000579B (QuitPanelScaler_t215951A276F4DB4A6B6E372CDD4C4B82CB7FDA6C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20894,7 +20898,7 @@ IL_0070:
 		return;
 	}
 }
-// Method Definition Index: 66713
+// Method Definition Index: 66715
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuitPanelScaler_ScaleQuitPanel_mD754FA17B7EDB4908370603ADE8AC7E2861975F7 (QuitPanelScaler_t215951A276F4DB4A6B6E372CDD4C4B82CB7FDA6C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21004,7 +21008,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 66714
+// Method Definition Index: 66716
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuitPanelScaler_ScaleButton1_mF9CF54AB581094A4E0FF16E6C51EE56717983295 (QuitPanelScaler_t215951A276F4DB4A6B6E372CDD4C4B82CB7FDA6C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21114,7 +21118,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 66715
+// Method Definition Index: 66717
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuitPanelScaler_ScaleButton2_m4B3A243176E3651C46446B148D8DF725D132ED53 (QuitPanelScaler_t215951A276F4DB4A6B6E372CDD4C4B82CB7FDA6C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21224,7 +21228,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 66716
+// Method Definition Index: 66718
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuitPanelScaler_RecalculateScaling_m0CD724F462F54383AC33702AF9040DE146FE7E48 (QuitPanelScaler_t215951A276F4DB4A6B6E372CDD4C4B82CB7FDA6C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -21234,7 +21238,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuitPanelScaler_RecalculateScaling_m0CD7
 		return;
 	}
 }
-// Method Definition Index: 66717
+// Method Definition Index: 66719
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuitPanelScaler__ctor_mE66B42D0C08E369A9F24D1971448C0453EB24646 (QuitPanelScaler_t215951A276F4DB4A6B6E372CDD4C4B82CB7FDA6C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -21257,7 +21261,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void QuitPanelScaler__ctor_mE66B42D0C08E369A9
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66718
+// Method Definition Index: 66720
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReferredUserData__ctor_mE61EE7353F3DE51532D018CAE41FCEA9F46199B9 (ReferredUserData_t1AD1846690BA7E634BAF79EDD6919D33EC1C232E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21293,7 +21297,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReferredUserData__ctor_mE61EE7353F3DE515
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66719
+// Method Definition Index: 66721
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReferredUsersListWrapper__ctor_m50A07A7F1947E0DB965F447603071D5DD567D5DD (ReferredUsersListWrapper_t4C006D0FB3F9C120ED2EF277835176B4488F7999* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21323,7 +21327,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReferredUsersListWrapper__ctor_m50A07A7F
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66720
+// Method Definition Index: 66722
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ScoreFeedbackUIManager_get_CurrentScore_mB59940AE9BEF42EAD818DBA5E319CEC1D42433AB (ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -21332,7 +21336,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ScoreFeedbackUIManager_get_CurrentSco
 		return L_0;
 	}
 }
-// Method Definition Index: 66721
+// Method Definition Index: 66723
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreFeedbackUIManager_Awake_mF829692A68CED184EDAA08D539C061390C407478 (ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21371,7 +21375,7 @@ IL_0014:
 		return;
 	}
 }
-// Method Definition Index: 66722
+// Method Definition Index: 66724
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreFeedbackUIManager_Start_m8187342224E53D0DCFD34B876ED147567175CC4E (ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21477,7 +21481,7 @@ IL_0079:
 		return;
 	}
 }
-// Method Definition Index: 66723
+// Method Definition Index: 66725
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreFeedbackUIManager_ShowScoreFeedback_mC827C31F16FF34EEEF06856E0DBB011D4C91F8F0 (ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* __this, int32_t ___0_scoreChange, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_targetPosition, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21842,7 +21846,7 @@ IL_01f3:
 		return;
 	}
 }
-// Method Definition Index: 66724
+// Method Definition Index: 66726
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreFeedbackUIManager_AnimateTextToTarget_m39E8BE794A70271964561AE38C78F7A273EAA553 (ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* __this, int32_t ___0_scoreChange, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_startPosition, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22116,7 +22120,7 @@ IL_0185:
 		return;
 	}
 }
-// Method Definition Index: 66725
+// Method Definition Index: 66727
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreFeedbackUIManager_SetScore_m0F8C35CE7487F337B04BB1D05947FA46BBD8C99B (ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* __this, int32_t ___0_newScore, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22252,7 +22256,7 @@ IL_00d7:
 		return;
 	}
 }
-// Method Definition Index: 66726
+// Method Definition Index: 66728
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreFeedbackUIManager_UpdateTargetScore_m9DAAE2756DE497E7C2F851D8DB082F79A6F23B87 (ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* __this, int32_t ___0_scoreChange, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22375,7 +22379,7 @@ IL_00b9:
 		return;
 	}
 }
-// Method Definition Index: 66727
+// Method Definition Index: 66729
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreFeedbackUIManager_ResetScore_m56F2BA9C98FD5DC4B0AF89A1F56AFAA4662A5188 (ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22489,7 +22493,7 @@ IL_00a1:
 		return;
 	}
 }
-// Method Definition Index: 66728
+// Method Definition Index: 66730
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float ScoreFeedbackUIManager_GetReferenceScale_m8543B9F290BFB985786298FD6658146CB8E1DF09 (ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22638,7 +22642,7 @@ IL_0092:
 		return L_28;
 	}
 }
-// Method Definition Index: 66729
+// Method Definition Index: 66731
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreFeedbackUIManager__ctor_m0A0ED26895A80202F4E327407D8A8239164598C9 (ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22677,7 +22681,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreFeedbackUIManager__ctor_m0A0ED26895
 		return;
 	}
 }
-// Method Definition Index: 66730
+// Method Definition Index: 66732
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreFeedbackUIManager_U3CUpdateTargetScoreU3Eb__29_1_m5D211CA627FAE948624FEC7605A3D0C647513CFE (ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* __this, int32_t ___0_x, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22720,7 +22724,7 @@ IL_0020:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66731
+// Method Definition Index: 66733
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass27_0__ctor_mEEA5FE2A444C6D5EED39C6F9CCA9D8ED9BE555A1 (U3CU3Ec__DisplayClass27_0_tBC82F4A0C3EBFF8CC4FE173CAF628EB49361DBD9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22728,7 +22732,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass27_0__ctor_mEEA5FE2
 		return;
 	}
 }
-// Method Definition Index: 66732
+// Method Definition Index: 66734
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass27_0_U3CAnimateTextToTargetU3Eb__0_m4D7CBD9CFFF716F563E2EE6F142A6CEB9CE78078 (U3CU3Ec__DisplayClass27_0_tBC82F4A0C3EBFF8CC4FE173CAF628EB49361DBD9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22795,7 +22799,7 @@ IL_0065:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66733
+// Method Definition Index: 66735
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass29_0__ctor_mD7C5A4372544812FB75CDB9337E1BDFCCBD2F2C7 (U3CU3Ec__DisplayClass29_0_tE53500C25633863949426A18925279300F07C006* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22803,7 +22807,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass29_0__ctor_mD7C5A43
 		return;
 	}
 }
-// Method Definition Index: 66734
+// Method Definition Index: 66736
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t U3CU3Ec__DisplayClass29_0_U3CUpdateTargetScoreU3Eb__0_mF2A2B1AE72ED295B0931711DFAA7827FDD70F18E (U3CU3Ec__DisplayClass29_0_tE53500C25633863949426A18925279300F07C006* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22820,7 +22824,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t U3CU3Ec__DisplayClass29_0_U3CUpdateTa
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66735
+// Method Definition Index: 66737
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SelectPlayerPanelController_Awake_m35FC122234ED8F5091AAB6C39B4D2CCC383C2F75 (SelectPlayerPanelController_tB4543EF46EC03D4CCB3569588660DF123E52D57D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22980,14 +22984,14 @@ IL_00ec:
 		return;
 	}
 }
-// Method Definition Index: 66736
+// Method Definition Index: 66738
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SelectPlayerPanelController_SelectPlayerCount_m68531867D6D2F671D25195361E7682447AD549FD (SelectPlayerPanelController_tB4543EF46EC03D4CCB3569588660DF123E52D57D* __this, int32_t ___0_playerCount, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_mF2F2D2BE8FEFA1DB028C554FD67649AC0D8A66D8_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindFirstObjectByType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_mB1FFA94457BA87411F29C70DD33A2AC06CC23BEA_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0AADEF25A4847EF8A85B9AB6389792693533BA6A);
@@ -23057,7 +23061,7 @@ IL_004c:
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SelectPlayerPanelController.cs:88>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		HorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637* L_12;
-		L_12 = Object_FindObjectOfType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_mF2F2D2BE8FEFA1DB028C554FD67649AC0D8A66D8((bool)1, Object_FindObjectOfType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_mF2F2D2BE8FEFA1DB028C554FD67649AC0D8A66D8_RuntimeMethod_var);
+		L_12 = Object_FindFirstObjectByType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_mB1FFA94457BA87411F29C70DD33A2AC06CC23BEA(1, Object_FindFirstObjectByType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_mB1FFA94457BA87411F29C70DD33A2AC06CC23BEA_RuntimeMethod_var);
 		__this->___lobbyManager = L_12;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___lobbyManager), (void*)L_12);
 	}
@@ -23159,7 +23163,7 @@ IL_00e4:
 		return;
 	}
 }
-// Method Definition Index: 66737
+// Method Definition Index: 66739
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SelectPlayerPanelController_ShowPanel_m267B582BA21E0754C124810AE21F0F833DAA9A8B (SelectPlayerPanelController_tB4543EF46EC03D4CCB3569588660DF123E52D57D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23192,7 +23196,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 66738
+// Method Definition Index: 66740
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SelectPlayerPanelController_HidePanel_mB91726DFC0F4584DB1648757ABFB3156D115A0CB (SelectPlayerPanelController_tB4543EF46EC03D4CCB3569588660DF123E52D57D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23225,7 +23229,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 66739
+// Method Definition Index: 66741
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SelectPlayerPanelController_OnBackButtonClicked_m5C54E0091AC4DF442B4815C396F71793598868A3 (SelectPlayerPanelController_tB4543EF46EC03D4CCB3569588660DF123E52D57D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23266,7 +23270,7 @@ IL_0021:
 		return;
 	}
 }
-// Method Definition Index: 66740
+// Method Definition Index: 66742
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SelectPlayerPanelController__ctor_mCE7A013FEECAF8F903BC191857CFD9F957D129C4 (SelectPlayerPanelController_tB4543EF46EC03D4CCB3569588660DF123E52D57D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23285,7 +23289,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SelectPlayerPanelController__ctor_mCE7A0
 		return;
 	}
 }
-// Method Definition Index: 66741
+// Method Definition Index: 66743
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SelectPlayerPanelController_U3CAwakeU3Eb__11_0_m64D3427492CCD5E4C1E1F88BD20BBF48951C1652 (SelectPlayerPanelController_tB4543EF46EC03D4CCB3569588660DF123E52D57D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23294,7 +23298,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SelectPlayerPanelController_U3CAwakeU3Eb
 		return;
 	}
 }
-// Method Definition Index: 66742
+// Method Definition Index: 66744
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SelectPlayerPanelController_U3CAwakeU3Eb__11_1_m848BD14E5C876060FF85CC8918ACF55F6AB4BB88 (SelectPlayerPanelController_tB4543EF46EC03D4CCB3569588660DF123E52D57D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23303,7 +23307,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SelectPlayerPanelController_U3CAwakeU3Eb
 		return;
 	}
 }
-// Method Definition Index: 66743
+// Method Definition Index: 66745
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SelectPlayerPanelController_U3CAwakeU3Eb__11_2_mB47D268993CF088DFF1A4DFF7F10C208D59D624E (SelectPlayerPanelController_tB4543EF46EC03D4CCB3569588660DF123E52D57D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23312,7 +23316,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SelectPlayerPanelController_U3CAwakeU3Eb
 		return;
 	}
 }
-// Method Definition Index: 66744
+// Method Definition Index: 66746
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SelectPlayerPanelController_U3CAwakeU3Eb__11_3_mBEABA9241B79D3E0DB70019F63324403CAD7BACC (SelectPlayerPanelController_tB4543EF46EC03D4CCB3569588660DF123E52D57D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23329,7 +23333,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SelectPlayerPanelController_U3CAwakeU3Eb
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66745
+// Method Definition Index: 66747
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_Awake_m428BE7DF7776BA19D875BA257852AF2F5B14B124 (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23339,14 +23343,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_Awake_m428BE7DF7776BA19D8
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:38>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:39>
 		((SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C_StaticFields*)il2cpp_codegen_static_fields_for(SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C_il2cpp_TypeInfo_var))->___instance = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&((SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C_StaticFields*)il2cpp_codegen_static_fields_for(SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C_il2cpp_TypeInfo_var))->___instance), (void*)__this);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:39>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:40>
 		return;
 	}
 }
-// Method Definition Index: 66746
+// Method Definition Index: 66748
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_Start_mF7EEC2E49C16D5232D3D21605F6EBA07D80086B9 (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23356,7 +23360,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_Start_mF7EEC2E49C16D5232D
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_1_t7F5858BDA2C68D2E6D97CB0B2580BBCE46966C58_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_m9F95418B43AD56D2B249A1712B89939CB1A88FCC_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindFirstObjectByType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_mEAD20F2B028B6BD3C96CF684B6DF7C89D7338636_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SettingManager_HandleGameEnded_m3CA827D9F09BF0D2150EE28D9102077C700F6FE6_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SettingManager_HandleGameStarted_m0578EDE50F583B83CD640E2CF812F0061EDAA974_RuntimeMethod_var);
@@ -23371,13 +23375,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_Start_mF7EEC2E49C16D5232D
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:48>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:49>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* L_0;
-		L_0 = Object_FindObjectOfType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_m9F95418B43AD56D2B249A1712B89939CB1A88FCC(Object_FindObjectOfType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_m9F95418B43AD56D2B249A1712B89939CB1A88FCC_RuntimeMethod_var);
+		L_0 = Object_FindFirstObjectByType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_mEAD20F2B028B6BD3C96CF684B6DF7C89D7338636(Object_FindFirstObjectByType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_mEAD20F2B028B6BD3C96CF684B6DF7C89D7338636_RuntimeMethod_var);
 		__this->___authManager = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___authManager), (void*)L_0);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:49>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:50>
 		AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* L_1 = __this->___authManager;
 		bool L_2;
 		L_2 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_1, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -23387,7 +23391,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_Start_mF7EEC2E49C16D5232D
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:51>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:52>
 		AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* L_3 = __this->___authManager;
 		AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* L_4 = L_3;
 		NullCheck(L_4);
@@ -23403,15 +23407,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_Start_mF7EEC2E49C16D5232D
 
 IL_0040:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:55>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:56>
 		Action_1_t7F5858BDA2C68D2E6D97CB0B2580BBCE46966C58* L_8 = (Action_1_t7F5858BDA2C68D2E6D97CB0B2580BBCE46966C58*)il2cpp_codegen_object_new(Action_1_t7F5858BDA2C68D2E6D97CB0B2580BBCE46966C58_il2cpp_TypeInfo_var);
 		Action_1__ctor_m0E236ECCABCC35FE4C5C6987D66ACC7071F7A0E9(L_8, __this, (intptr_t)((void*)SettingManager_HandleMatchFound_m7E7D37411C648E9BF58D818A0FBEC1CBAD711761_RuntimeMethod_var), NULL);
 		MatchmakingModel_add_OnMatchFound_m04BF1F0D3A30B8B563F4560799F2873B4400B71C(L_8, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:56>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:57>
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_9 = (Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A*)il2cpp_codegen_object_new(Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A_il2cpp_TypeInfo_var);
 		Action_1__ctor_m9DC2953C55C4D7D4B7BEFE03D84DA1F9362D652C(L_9, __this, (intptr_t)((void*)SettingManager_HandleMatchmakingFailed_m5DCB0F9FEB544AEACB8F287090893069E8470C09_RuntimeMethod_var), NULL);
 		MatchmakingModel_add_OnMatchmakingFailed_mBD669ABBED2EA1FC7DD39F515723B8C56E233814(L_9, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:57>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:58>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_10 = ((GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var))->___OnGameStarted;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_11 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_11, __this, (intptr_t)((void*)SettingManager_HandleGameStarted_m0578EDE50F583B83CD640E2CF812F0061EDAA974_RuntimeMethod_var), NULL);
@@ -23419,7 +23423,7 @@ IL_0040:
 		L_12 = Delegate_Combine_m1F725AEF318BE6F0426863490691A6F4606E7D00(L_10, L_11, NULL);
 		((GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var))->___OnGameStarted = ((Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)CastclassSealed((RuntimeObject*)L_12, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&((GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var))->___OnGameStarted), (void*)((Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)CastclassSealed((RuntimeObject*)L_12, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var)));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:58>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:59>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_13 = ((GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var))->___OnGameEnded;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_14 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_14, __this, (intptr_t)((void*)SettingManager_HandleGameEnded_m3CA827D9F09BF0D2150EE28D9102077C700F6FE6_RuntimeMethod_var), NULL);
@@ -23427,7 +23431,7 @@ IL_0040:
 		L_15 = Delegate_Combine_m1F725AEF318BE6F0426863490691A6F4606E7D00(L_13, L_14, NULL);
 		((GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var))->___OnGameEnded = ((Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)CastclassSealed((RuntimeObject*)L_15, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&((GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var))->___OnGameEnded), (void*)((Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)CastclassSealed((RuntimeObject*)L_15, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var)));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:61>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:62>
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_16 = ((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_17;
@@ -23438,7 +23442,7 @@ IL_0040:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:63>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:64>
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_18 = ((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance;
 		NullCheck(L_18);
 		SoundManager_StopAllMusic_mEF7A48E7675A878CB1FAA03565F4E7D9C70AA5AC(L_18, NULL);
@@ -23446,7 +23450,7 @@ IL_0040:
 
 IL_00b9:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:67>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:68>
 		bool L_19;
 		L_19 = BackendAuthService_HasStoredJWT_m77D0CD676518CB836991BD62A63D14AC96014601(NULL);
 		if (!L_19)
@@ -23455,13 +23459,13 @@ IL_00b9:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:69>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:70>
 		SettingManager_OnUserLoggedIn_mB22FEE966CB5ECB55C6A78FBE3BF8647DF8C16E3(__this, NULL);
 	}
 
 IL_00c6:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:73>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:74>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_20 = __this->___mainMenu;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_21;
@@ -23472,7 +23476,7 @@ IL_00c6:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:75>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:76>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_22 = __this->___mainMenu;
 		NullCheck(L_22);
 		bool L_23;
@@ -23482,7 +23486,7 @@ IL_00c6:
 
 IL_00e5:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:79>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:80>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_24 = __this->___musicToggle;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_25;
@@ -23493,7 +23497,7 @@ IL_00e5:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:79>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:80>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_26 = __this->___musicToggle;
 		NullCheck(L_26);
 		ToggleEvent_t88B31268F9D6D1882E4F921B14704FB9F7047F02* L_27 = L_26->___onValueChanged;
@@ -23505,7 +23509,7 @@ IL_00e5:
 
 IL_010f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:80>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:81>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_29 = __this->___soundToggle;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_30;
@@ -23516,7 +23520,7 @@ IL_010f:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:80>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:81>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_31 = __this->___soundToggle;
 		NullCheck(L_31);
 		ToggleEvent_t88B31268F9D6D1882E4F921B14704FB9F7047F02* L_32 = L_31->___onValueChanged;
@@ -23528,11 +23532,11 @@ IL_010f:
 
 IL_0139:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:81>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:82>
 		return;
 	}
 }
-// Method Definition Index: 66747
+// Method Definition Index: 66749
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_Update_m6280644B63DF3C94010F9BF321E1DAB9B7949C08 (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23545,7 +23549,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_Update_m6280644B63DF3C940
 	}
 	bool V_0 = false;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:86>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:87>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___mainMenu;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -23556,13 +23560,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_Update_m6280644B63DF3C940
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:88>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:89>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___mainMenu;
 		NullCheck(L_2);
 		bool L_3;
 		L_3 = GameObject_get_activeInHierarchy_m49250F4F168DCC5388D5BE4F6A5681386907B109(L_2, NULL);
 		V_0 = L_3;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:89>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:90>
 		bool L_4 = V_0;
 		bool L_5 = __this->___lastMainMenuActiveState;
 		if ((((int32_t)L_4) == ((int32_t)L_5)))
@@ -23571,10 +23575,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_Update_m6280644B63DF3C940
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:91>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:92>
 		bool L_6 = V_0;
 		__this->___lastMainMenuActiveState = L_6;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:92>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:93>
 		bool L_7 = V_0;
 		if (!L_7)
 		{
@@ -23582,20 +23586,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_Update_m6280644B63DF3C940
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:94>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:95>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral15D2410274E778E5B1A26DAA3466BD81AF0D195B, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:95>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:96>
 		SettingManager_ApplyMusicSetting_mB50C71CC5D468F48D5FBFCA74263993BCE47AF38(__this, NULL);
 	}
 
 IL_003d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:99>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:100>
 		return;
 	}
 }
-// Method Definition Index: 66748
+// Method Definition Index: 66750
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_HandleMatchFound_m7E7D37411C648E9BF58D818A0FBEC1CBAD711761 (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23606,7 +23610,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_HandleMatchFound_m7E7D374
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:106>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:107>
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_0 = ((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -23617,7 +23621,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_HandleMatchFound_m7E7D374
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:108>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:109>
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_2 = ((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance;
 		NullCheck(L_2);
 		SoundManager_StopBackgroundMusic_m996637AA28CD5C2D972468C4F59FE13AE4A292CF(L_2, NULL);
@@ -23625,21 +23629,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_HandleMatchFound_m7E7D374
 
 IL_0017:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:110>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:111>
 		return;
 	}
 }
-// Method Definition Index: 66749
+// Method Definition Index: 66751
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_HandleMatchmakingFailed_m5DCB0F9FEB544AEACB8F287090893069E8470C09 (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, String_t* ___0_error, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:115>
-		SettingManager_ApplyMusicSetting_mB50C71CC5D468F48D5FBFCA74263993BCE47AF38(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:116>
+		SettingManager_ApplyMusicSetting_mB50C71CC5D468F48D5FBFCA74263993BCE47AF38(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:117>
 		return;
 	}
 }
-// Method Definition Index: 66750
+// Method Definition Index: 66752
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_HandleGameStarted_m0578EDE50F583B83CD640E2CF812F0061EDAA974 (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23650,7 +23654,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_HandleGameStarted_m0578ED
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:121>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:122>
 		bool L_0 = __this->___isMusicEnabled;
 		if (!L_0)
 		{
@@ -23668,11 +23672,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_HandleGameStarted_m0578ED
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:124>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:125>
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_3 = ((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance;
 		NullCheck(L_3);
 		SoundManager_StopBackgroundMusic_m996637AA28CD5C2D972468C4F59FE13AE4A292CF(L_3, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:125>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:126>
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_4 = ((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance;
 		NullCheck(L_4);
 		SoundManager_PlayGameplayMusic_mD3756971744FA816A85720C2DFB9C02AE16C7175(L_4, NULL);
@@ -23680,11 +23684,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_HandleGameStarted_m0578ED
 
 IL_0029:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:127>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:128>
 		return;
 	}
 }
-// Method Definition Index: 66751
+// Method Definition Index: 66753
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_HandleGameEnded_m3CA827D9F09BF0D2150EE28D9102077C700F6FE6 (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23695,7 +23699,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_HandleGameEnded_m3CA827D9
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:132>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:133>
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_0 = ((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -23706,21 +23710,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_HandleGameEnded_m3CA827D9
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:134>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:135>
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_2 = ((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance;
 		NullCheck(L_2);
 		SoundManager_StopGameplayMusic_m252996D4BA8A87C6DBA3D0364643F23305E5F5F6(L_2, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:135>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:136>
 		SettingManager_ApplyMusicSetting_mB50C71CC5D468F48D5FBFCA74263993BCE47AF38(__this, NULL);
 	}
 
 IL_001d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:137>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:138>
 		return;
 	}
 }
-// Method Definition Index: 66752
+// Method Definition Index: 66754
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_OnUserLoggedIn_mB22FEE966CB5ECB55C6A78FBE3BF8647DF8C16E3 (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23734,14 +23738,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_OnUserLoggedIn_mB22FEE966
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:146>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:147>
 		__this->___hasUserLoggedIn = (bool)1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:149>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:150>
 		String_t* L_0;
 		L_0 = PlayerModel_get_Id_mC58F20220F795613BEDA334EE4DB7A9B07CF79E0_inline(NULL);
 		__this->___currentUserId = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentUserId), (void*)L_0);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:150>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:151>
 		String_t* L_1 = __this->___currentUserId;
 		bool L_2;
 		L_2 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_1, NULL);
@@ -23751,7 +23755,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_OnUserLoggedIn_mB22FEE966
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:152>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:153>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteralB1A2A9C0A5D7B31F4A39845A154E58A7B2A08F6E, NULL);
 		goto IL_0040;
@@ -23759,7 +23763,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_OnUserLoggedIn_mB22FEE966
 
 IL_002b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:156>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:157>
 		String_t* L_3 = __this->___currentUserId;
 		String_t* L_4;
 		L_4 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralD84232EB4FF28796CC51A3ACB9F9286F76AA3EAF, L_3, NULL);
@@ -23769,13 +23773,13 @@ IL_002b:
 
 IL_0040:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:160>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:161>
 		SettingManager_UpdateStorageKeyDisplay_m483DB64AF6CF583A3C75BABE936D56C24A39DF06(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:163>
-		SettingManager_LoadMusicSetting_mEE1C19D7589968850E3EB2275D5D87FE24A63ACB(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:164>
+		SettingManager_LoadMusicSetting_mEE1C19D7589968850E3EB2275D5D87FE24A63ACB(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:165>
 		SettingManager_LoadSoundSetting_m9E4B6B608521187E47A7E1E00A389C5E632D8EC8(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:167>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:168>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_5 = __this->___musicToggle;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_6;
@@ -23786,7 +23790,7 @@ IL_0040:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:169>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:170>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_7 = __this->___musicToggle;
 		bool L_8 = __this->___isMusicEnabled;
 		NullCheck(L_7);
@@ -23795,7 +23799,7 @@ IL_0040:
 
 IL_0071:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:171>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:172>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_9 = __this->___soundToggle;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
@@ -23806,7 +23810,7 @@ IL_0071:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:173>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:174>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_11 = __this->___soundToggle;
 		bool L_12 = __this->___isSoundEnabled;
 		NullCheck(L_11);
@@ -23815,16 +23819,16 @@ IL_0071:
 
 IL_0090:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:177>
-		SettingManager_ApplyMusicSetting_mB50C71CC5D468F48D5FBFCA74263993BCE47AF38(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:178>
+		SettingManager_ApplyMusicSetting_mB50C71CC5D468F48D5FBFCA74263993BCE47AF38(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:179>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral6681661172771BDBE90976372F720FC59D96E045, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:179>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:180>
 		return;
 	}
 }
-// Method Definition Index: 66753
+// Method Definition Index: 66755
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_OnUserLoggedOut_m29D727ED11DFBB47987DA3D968E2C0FE040F4918 (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23838,12 +23842,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_OnUserLoggedOut_m29D727ED
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:186>
-		__this->___hasUserLoggedIn = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:187>
+		__this->___hasUserLoggedIn = (bool)0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:188>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral649F70756755CFBECF8FC66D81FBB5DBE4E69AB0, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:190>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:191>
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_0 = ((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -23854,7 +23858,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_OnUserLoggedOut_m29D727ED
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:192>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:193>
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_2 = ((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance;
 		NullCheck(L_2);
 		SoundManager_StopAllMusic_mEF7A48E7675A878CB1FAA03565F4E7D9C70AA5AC(L_2, NULL);
@@ -23862,16 +23866,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_OnUserLoggedOut_m29D727ED
 
 IL_0028:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:195>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:196>
 		__this->___currentUserId = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentUserId), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:196>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:197>
 		SettingManager_UpdateStorageKeyDisplay_m483DB64AF6CF583A3C75BABE936D56C24A39DF06(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:199>
-		__this->___isMusicEnabled = (bool)1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:200>
+		__this->___isMusicEnabled = (bool)1;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:201>
 		__this->___isSoundEnabled = (bool)1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:203>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:204>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_3 = __this->___musicToggle;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_4;
@@ -23882,7 +23886,7 @@ IL_0028:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:205>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:206>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_5 = __this->___musicToggle;
 		NullCheck(L_5);
 		Toggle_set_isOn_m61D6AB073668E87530A9F49D990A3B3631D2061F(L_5, (bool)1, NULL);
@@ -23890,7 +23894,7 @@ IL_0028:
 
 IL_0061:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:207>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:208>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_6 = __this->___soundToggle;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_7;
@@ -23901,7 +23905,7 @@ IL_0061:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:209>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:210>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_8 = __this->___soundToggle;
 		NullCheck(L_8);
 		Toggle_set_isOn_m61D6AB073668E87530A9F49D990A3B3631D2061F(L_8, (bool)1, NULL);
@@ -23909,24 +23913,24 @@ IL_0061:
 
 IL_007b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:211>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:212>
 		return;
 	}
 }
-// Method Definition Index: 66754
+// Method Definition Index: 66756
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_UpdateStorageKeyDisplay_m483DB64AF6CF583A3C75BABE936D56C24A39DF06 (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:218>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:219>
 		String_t* L_0;
 		L_0 = SettingManager_GetMusicEnabledKey_m30A2A62BD39191AD46B5926BBF19918D6F6C4250(__this, NULL);
 		__this->___storageKey = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___storageKey), (void*)L_0);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:219>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:220>
 		return;
 	}
 }
-// Method Definition Index: 66755
+// Method Definition Index: 66757
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_OnMusicToggleChanged_m877D5F5D8450DED6DDC825C0F54A1E64E634F5E8 (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, bool ___0_isOn, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23943,14 +23947,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_OnMusicToggleChanged_m877
 	String_t* G_B3_0 = NULL;
 	String_t* G_B3_1 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:226>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:227>
 		bool L_0 = ___0_isOn;
 		__this->___isMusicEnabled = L_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:227>
-		SettingManager_SaveMusicSetting_mDF79DD20D00064033C912DF7664478373E0AD870(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:228>
-		SettingManager_ApplyMusicSetting_mB50C71CC5D468F48D5FBFCA74263993BCE47AF38(__this, NULL);
+		SettingManager_SaveMusicSetting_mDF79DD20D00064033C912DF7664478373E0AD870(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:229>
+		SettingManager_ApplyMusicSetting_mB50C71CC5D468F48D5FBFCA74263993BCE47AF38(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:230>
 		bool L_1 = __this->___isMusicEnabled;
 		if (L_1)
 		{
@@ -23977,11 +23981,11 @@ IL_002c:
 		L_2 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(G_B3_1, G_B3_0, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_2, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:230>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:231>
 		return;
 	}
 }
-// Method Definition Index: 66756
+// Method Definition Index: 66758
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_OnSoundToggleChanged_m61E551A5449DBAB867D0B9170BEDBB6E33EF470F (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, bool ___0_isOn, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23998,12 +24002,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_OnSoundToggleChanged_m61E
 	String_t* G_B3_0 = NULL;
 	String_t* G_B3_1 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:237>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:238>
 		bool L_0 = ___0_isOn;
 		__this->___isSoundEnabled = L_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:238>
-		SettingManager_SaveSoundSetting_mCCD39A9C2B8803C7887E9C430B41C30B1E520536(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:239>
+		SettingManager_SaveSoundSetting_mCCD39A9C2B8803C7887E9C430B41C30B1E520536(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:240>
 		bool L_1 = __this->___isSoundEnabled;
 		if (L_1)
 		{
@@ -24030,18 +24034,18 @@ IL_0026:
 		L_2 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(G_B3_1, G_B3_0, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_2, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:240>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:241>
 		return;
 	}
 }
-// Method Definition Index: 66757
+// Method Definition Index: 66759
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_ApplyMusicSetting_mB50C71CC5D468F48D5FBFCA74263993BCE47AF38 (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisSoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_m736508C1ABE76E8A9EE3FFCAFFC5AFBE7728258A_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindFirstObjectByType_TisSoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_mE1B613BAF4D42ECAFB3D9153A8A7B4838F70EDE6_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral5A31F6769149306AA74B09DA3F0E8468117FA567);
@@ -24053,7 +24057,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_ApplyMusicSetting_mB50C71
 	bool V_0 = false;
 	int32_t G_B6_0 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:250>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:251>
 		bool L_0 = __this->___isMusicEnabled;
 		bool L_1 = L_0;
 		RuntimeObject* L_2 = Box(il2cpp_defaults.boolean_class, &L_1);
@@ -24061,7 +24065,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_ApplyMusicSetting_mB50C71
 		L_3 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralCA840C20A8B3B8215652A4C77F0B07279F6B082B, L_2, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_3, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:253>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:254>
 		BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_4;
 		L_4 = BackendAuthService_get_Instance_m74239149FFCCCF5A49AF965DCA0565780B051110_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -24083,18 +24087,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_ApplyMusicSetting_mB50C71
 
 IL_002e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:255>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:256>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralEAE10226F6641943C39EA33B53D72AF88C329A8D, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:256>
-		SettingManager_StopAllMusic_m87C39C5556640AB2CACF870EE39476C5613F6E07(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:257>
+		SettingManager_StopAllMusic_m87C39C5556640AB2CACF870EE39476C5613F6E07(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:258>
 		return;
 	}
 
 IL_003f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:261>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:262>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7 = __this->___mainMenu;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_8;
@@ -24121,7 +24125,7 @@ IL_005a:
 IL_005b:
 	{
 		V_0 = (bool)G_B6_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:262>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:263>
 		bool L_11 = V_0;
 		bool L_12 = L_11;
 		RuntimeObject* L_13 = Box(il2cpp_defaults.boolean_class, &L_12);
@@ -24129,7 +24133,7 @@ IL_005b:
 		L_14 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral60BBF930B78E0A29421CD19F9EA7F190B124FBD6, L_13, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_14, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:265>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:266>
 		bool L_15 = __this->___isMusicEnabled;
 		if (!L_15)
 		{
@@ -24137,7 +24141,7 @@ IL_005b:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:267>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:268>
 		bool L_16 = V_0;
 		if (!L_16)
 		{
@@ -24145,7 +24149,7 @@ IL_005b:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:269>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:270>
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_17 = ((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_18;
@@ -24156,17 +24160,17 @@ IL_005b:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:269>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:270>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_19;
-		L_19 = Object_FindObjectOfType_TisSoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_m736508C1ABE76E8A9EE3FFCAFFC5AFBE7728258A(Object_FindObjectOfType_TisSoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_m736508C1ABE76E8A9EE3FFCAFFC5AFBE7728258A_RuntimeMethod_var);
+		L_19 = Object_FindFirstObjectByType_TisSoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_mE1B613BAF4D42ECAFB3D9153A8A7B4838F70EDE6(Object_FindFirstObjectByType_TisSoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_mE1B613BAF4D42ECAFB3D9153A8A7B4838F70EDE6_RuntimeMethod_var);
 		((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance = L_19;
 		Il2CppCodeGenWriteBarrier((void**)(&((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance), (void*)L_19);
 	}
 
 IL_0093:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:270>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:271>
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_20 = ((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_21;
@@ -24177,7 +24181,7 @@ IL_0093:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:270>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:271>
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_22 = ((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance;
 		NullCheck(L_22);
 		SoundManager_PlayBackgroundMusic_mB3CB091A70E3F6EB7E793396F247A95125E45A01(L_22, NULL);
@@ -24186,20 +24190,20 @@ IL_0093:
 
 IL_00ab:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:277>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:278>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral5A31F6769149306AA74B09DA3F0E8468117FA567, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:278>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:279>
 		SettingManager_StopAllMusic_m87C39C5556640AB2CACF870EE39476C5613F6E07(__this, NULL);
 	}
 
 IL_00bb:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:280>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:281>
 		return;
 	}
 }
-// Method Definition Index: 66758
+// Method Definition Index: 66760
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_StopAllMusic_m87C39C5556640AB2CACF870EE39476C5613F6E07 (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24210,7 +24214,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_StopAllMusic_m87C39C55566
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:284>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:285>
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_0 = ((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -24221,7 +24225,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_StopAllMusic_m87C39C55566
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:286>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:287>
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_2 = ((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance;
 		NullCheck(L_2);
 		SoundManager_StopAllMusic_mEF7A48E7675A878CB1FAA03565F4E7D9C70AA5AC(L_2, NULL);
@@ -24229,11 +24233,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_StopAllMusic_m87C39C55566
 
 IL_0017:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:288>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:289>
 		return;
 	}
 }
-// Method Definition Index: 66759
+// Method Definition Index: 66761
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SettingManager_GetMusicEnabledKey_m30A2A62BD39191AD46B5926BBF19918D6F6C4250 (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24243,11 +24247,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SettingManager_GetMusicEnabledKey_m
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:295>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:296>
 		return _stringLiteral99567457D656B444FE85F43E7350B1FD746BA0F4;
 	}
 }
-// Method Definition Index: 66760
+// Method Definition Index: 66762
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SettingManager_GetSoundEnabledKey_m4EB818A227FC4A2891A1C0D28B04A0CA89182D8B (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24257,11 +24261,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SettingManager_GetSoundEnabledKey_m
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:303>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:304>
 		return _stringLiteralEF705F62D51DF1E2BB31926C631124B2923D8DAA;
 	}
 }
-// Method Definition Index: 66761
+// Method Definition Index: 66763
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_LoadMusicSetting_mEE1C19D7589968850E3EB2275D5D87FE24A63ACB (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24289,11 +24293,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_LoadMusicSetting_mEE1C19D
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B4_2 = NULL;
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B4_3 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:312>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:313>
 		String_t* L_0;
 		L_0 = SettingManager_GetMusicEnabledKey_m30A2A62BD39191AD46B5926BBF19918D6F6C4250(__this, NULL);
 		V_0 = L_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:315>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:316>
 		String_t* L_1 = V_0;
 		bool L_2;
 		L_2 = PlayerPrefs_HasKey_mCA5C64BBA6BF8B230BC3BC92B4761DD3B11D4668(L_1, NULL);
@@ -24303,12 +24307,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_LoadMusicSetting_mEE1C19D
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:317>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:318>
 		String_t* L_3 = V_0;
 		int32_t L_4;
 		L_4 = PlayerPrefs_GetInt_m8AD1FA8BA54CC6CE2B2AEEE36B6D75587BB1692D(L_3, 1, NULL);
 		__this->___isMusicEnabled = (bool)((((int32_t)L_4) == ((int32_t)1))? 1 : 0);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:318>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:319>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_5 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_6 = L_5;
 		NullCheck(L_6);
@@ -24365,21 +24369,21 @@ IL_0043:
 
 IL_0063:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:322>
-		__this->___isMusicEnabled = (bool)1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:323>
-		SettingManager_SaveMusicSetting_mDF79DD20D00064033C912DF7664478373E0AD870(__this, NULL);
+		__this->___isMusicEnabled = (bool)1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:324>
+		SettingManager_SaveMusicSetting_mDF79DD20D00064033C912DF7664478373E0AD870(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:325>
 		String_t* L_14 = V_0;
 		String_t* L_15;
 		L_15 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral0A154AF7846680270387CCD8650DBE3F0D635E9D, L_14, _stringLiteralB3F14BF976EFD974E34846B742502C802FABAE9D, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_15, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:326>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:327>
 		return;
 	}
 }
-// Method Definition Index: 66762
+// Method Definition Index: 66764
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_SaveMusicSetting_mDF79DD20D00064033C912DF7664478373E0AD870 (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24410,11 +24414,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_SaveMusicSetting_mDF79DD2
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B6_2 = NULL;
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B6_3 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:333>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:334>
 		String_t* L_0;
 		L_0 = SettingManager_GetMusicEnabledKey_m30A2A62BD39191AD46B5926BBF19918D6F6C4250(__this, NULL);
 		V_0 = L_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:334>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:335>
 		String_t* L_1 = V_0;
 		bool L_2 = __this->___isMusicEnabled;
 		if (L_2)
@@ -24439,9 +24443,9 @@ IL_0013:
 IL_0014:
 	{
 		PlayerPrefs_SetInt_m956D3E2DB966F20CF42F842880DDF9E2BE94D948(G_B3_1, G_B3_0, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:335>
-		PlayerPrefs_Save_m82567E045D69C838112EA204B60C144D4C1EA3AE(NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:336>
+		PlayerPrefs_Save_m82567E045D69C838112EA204B60C144D4C1EA3AE(NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:337>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_3 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_4 = L_3;
 		NullCheck(L_4);
@@ -24493,11 +24497,11 @@ IL_0042:
 		L_11 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_10, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_11, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:337>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:338>
 		return;
 	}
 }
-// Method Definition Index: 66763
+// Method Definition Index: 66765
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_LoadSoundSetting_m9E4B6B608521187E47A7E1E00A389C5E632D8EC8 (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24525,11 +24529,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_LoadSoundSetting_m9E4B6B6
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B4_2 = NULL;
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B4_3 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:345>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:346>
 		String_t* L_0;
 		L_0 = SettingManager_GetSoundEnabledKey_m4EB818A227FC4A2891A1C0D28B04A0CA89182D8B(__this, NULL);
 		V_0 = L_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:348>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:349>
 		String_t* L_1 = V_0;
 		bool L_2;
 		L_2 = PlayerPrefs_HasKey_mCA5C64BBA6BF8B230BC3BC92B4761DD3B11D4668(L_1, NULL);
@@ -24539,12 +24543,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_LoadSoundSetting_m9E4B6B6
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:350>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:351>
 		String_t* L_3 = V_0;
 		int32_t L_4;
 		L_4 = PlayerPrefs_GetInt_m8AD1FA8BA54CC6CE2B2AEEE36B6D75587BB1692D(L_3, 1, NULL);
 		__this->___isSoundEnabled = (bool)((((int32_t)L_4) == ((int32_t)1))? 1 : 0);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:351>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:352>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_5 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_6 = L_5;
 		NullCheck(L_6);
@@ -24601,21 +24605,21 @@ IL_0043:
 
 IL_0063:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:355>
-		__this->___isSoundEnabled = (bool)1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:356>
-		SettingManager_SaveSoundSetting_mCCD39A9C2B8803C7887E9C430B41C30B1E520536(__this, NULL);
+		__this->___isSoundEnabled = (bool)1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:357>
+		SettingManager_SaveSoundSetting_mCCD39A9C2B8803C7887E9C430B41C30B1E520536(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:358>
 		String_t* L_14 = V_0;
 		String_t* L_15;
 		L_15 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralE0DFB5CD3105321DBD9E0AD6D0D9B89793463563, L_14, _stringLiteralB3F14BF976EFD974E34846B742502C802FABAE9D, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_15, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:359>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:360>
 		return;
 	}
 }
-// Method Definition Index: 66764
+// Method Definition Index: 66766
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_SaveSoundSetting_mCCD39A9C2B8803C7887E9C430B41C30B1E520536 (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24646,11 +24650,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_SaveSoundSetting_mCCD39A9
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B6_2 = NULL;
 	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* G_B6_3 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:366>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:367>
 		String_t* L_0;
 		L_0 = SettingManager_GetSoundEnabledKey_m4EB818A227FC4A2891A1C0D28B04A0CA89182D8B(__this, NULL);
 		V_0 = L_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:367>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:368>
 		String_t* L_1 = V_0;
 		bool L_2 = __this->___isSoundEnabled;
 		if (L_2)
@@ -24675,9 +24679,9 @@ IL_0013:
 IL_0014:
 	{
 		PlayerPrefs_SetInt_m956D3E2DB966F20CF42F842880DDF9E2BE94D948(G_B3_1, G_B3_0, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:368>
-		PlayerPrefs_Save_m82567E045D69C838112EA204B60C144D4C1EA3AE(NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:369>
+		PlayerPrefs_Save_m82567E045D69C838112EA204B60C144D4C1EA3AE(NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:370>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_3 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_4 = L_3;
 		NullCheck(L_4);
@@ -24729,20 +24733,20 @@ IL_0042:
 		L_11 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_10, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_11, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:370>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:371>
 		return;
 	}
 }
-// Method Definition Index: 66765
+// Method Definition Index: 66767
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SettingManager_IsMusicEnabled_m38B55E2207AA0B1FB7DE1F2F3DB7874B3FC30F47 (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:377>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:378>
 		bool L_0 = __this->___isMusicEnabled;
 		return L_0;
 	}
 }
-// Method Definition Index: 66766
+// Method Definition Index: 66768
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_SetMusicEnabled_m2894BF44C5F62633CF761641CEF909C1FE944CB4 (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, bool ___0_enabled, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24752,10 +24756,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_SetMusicEnabled_m2894BF44
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:385>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:386>
 		bool L_0 = ___0_enabled;
 		__this->___isMusicEnabled = L_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:388>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:389>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_1 = __this->___musicToggle;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
@@ -24766,7 +24770,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_SetMusicEnabled_m2894BF44
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:390>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:391>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_3 = __this->___musicToggle;
 		bool L_4 = __this->___isMusicEnabled;
 		NullCheck(L_3);
@@ -24775,24 +24779,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_SetMusicEnabled_m2894BF44
 
 IL_0026:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:393>
-		SettingManager_SaveMusicSetting_mDF79DD20D00064033C912DF7664478373E0AD870(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:394>
-		SettingManager_ApplyMusicSetting_mB50C71CC5D468F48D5FBFCA74263993BCE47AF38(__this, NULL);
+		SettingManager_SaveMusicSetting_mDF79DD20D00064033C912DF7664478373E0AD870(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:395>
+		SettingManager_ApplyMusicSetting_mB50C71CC5D468F48D5FBFCA74263993BCE47AF38(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:396>
 		return;
 	}
 }
-// Method Definition Index: 66767
+// Method Definition Index: 66769
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SettingManager_IsSoundEnabled_mE6888A33CB0F8EF10C3EC19038652B1EA688A991 (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:402>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:403>
 		bool L_0 = __this->___isSoundEnabled;
 		return L_0;
 	}
 }
-// Method Definition Index: 66768
+// Method Definition Index: 66770
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_SetSoundEnabled_mE0E7E08413C37281CD6DFAC400D8730EA67AC162 (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, bool ___0_enabled, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24802,10 +24806,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_SetSoundEnabled_mE0E7E084
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:410>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:411>
 		bool L_0 = ___0_enabled;
 		__this->___isSoundEnabled = L_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:413>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:414>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_1 = __this->___soundToggle;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
@@ -24816,7 +24820,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_SetSoundEnabled_mE0E7E084
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:415>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:416>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_3 = __this->___soundToggle;
 		bool L_4 = __this->___isSoundEnabled;
 		NullCheck(L_3);
@@ -24825,13 +24829,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_SetSoundEnabled_mE0E7E084
 
 IL_0026:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:418>
-		SettingManager_SaveSoundSetting_mCCD39A9C2B8803C7887E9C430B41C30B1E520536(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:419>
+		SettingManager_SaveSoundSetting_mCCD39A9C2B8803C7887E9C430B41C30B1E520536(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:420>
 		return;
 	}
 }
-// Method Definition Index: 66769
+// Method Definition Index: 66771
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_OnCountdownComplete_mCDD3E1BB61E4BA63B80A3E9D7F83C1B81F1F3375 (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24842,18 +24846,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_OnCountdownComplete_mCDD3
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:426>
-		__this->___isCountdownActive = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:427>
-		SettingManager_ApplyMusicSetting_mB50C71CC5D468F48D5FBFCA74263993BCE47AF38(__this, NULL);
+		__this->___isCountdownActive = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:428>
+		SettingManager_ApplyMusicSetting_mB50C71CC5D468F48D5FBFCA74263993BCE47AF38(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:429>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral6EFCE5B0661A9C29F997E55CD03822C98B2026E3, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:429>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:430>
 		return;
 	}
 }
-// Method Definition Index: 66770
+// Method Definition Index: 66772
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_OnDestroy_mE759BC0DB2C8F14DB13A946FFCBB690260F882F7 (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24876,7 +24880,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_OnDestroy_mE759BC0DB2C8F1
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:436>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:437>
 		AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* L_0 = __this->___authManager;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -24887,7 +24891,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_OnDestroy_mE759BC0DB2C8F1
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:438>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:439>
 		AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* L_2 = __this->___authManager;
 		AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* L_3 = L_2;
 		NullCheck(L_3);
@@ -24903,15 +24907,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager_OnDestroy_mE759BC0DB2C8F1
 
 IL_0035:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:441>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:442>
 		Action_1_t7F5858BDA2C68D2E6D97CB0B2580BBCE46966C58* L_7 = (Action_1_t7F5858BDA2C68D2E6D97CB0B2580BBCE46966C58*)il2cpp_codegen_object_new(Action_1_t7F5858BDA2C68D2E6D97CB0B2580BBCE46966C58_il2cpp_TypeInfo_var);
 		Action_1__ctor_m0E236ECCABCC35FE4C5C6987D66ACC7071F7A0E9(L_7, __this, (intptr_t)((void*)SettingManager_HandleMatchFound_m7E7D37411C648E9BF58D818A0FBEC1CBAD711761_RuntimeMethod_var), NULL);
 		MatchmakingModel_remove_OnMatchFound_m8619AD2E784D31FB688805872ADD69492187E5E3(L_7, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:442>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:443>
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_8 = (Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A*)il2cpp_codegen_object_new(Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A_il2cpp_TypeInfo_var);
 		Action_1__ctor_m9DC2953C55C4D7D4B7BEFE03D84DA1F9362D652C(L_8, __this, (intptr_t)((void*)SettingManager_HandleMatchmakingFailed_m5DCB0F9FEB544AEACB8F287090893069E8470C09_RuntimeMethod_var), NULL);
 		MatchmakingModel_remove_OnMatchmakingFailed_m99B7838BE3AC7D9844E1B4C28B6C3A111830E0AE(L_8, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:443>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:444>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_9 = ((GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var))->___OnGameStarted;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_10 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_10, __this, (intptr_t)((void*)SettingManager_HandleGameStarted_m0578EDE50F583B83CD640E2CF812F0061EDAA974_RuntimeMethod_var), NULL);
@@ -24919,7 +24923,7 @@ IL_0035:
 		L_11 = Delegate_Remove_m8B7DD5661308FA972E23CA1CC3FC9CEB355504E3(L_9, L_10, NULL);
 		((GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var))->___OnGameStarted = ((Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)CastclassSealed((RuntimeObject*)L_11, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&((GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var))->___OnGameStarted), (void*)((Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)CastclassSealed((RuntimeObject*)L_11, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var)));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:444>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:445>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_12 = ((GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var))->___OnGameEnded;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_13 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		Action__ctor_mBDC7B0B4A3F583B64C2896F01BDED360772F67DC(L_13, __this, (intptr_t)((void*)SettingManager_HandleGameEnded_m3CA827D9F09BF0D2150EE28D9102077C700F6FE6_RuntimeMethod_var), NULL);
@@ -24927,7 +24931,7 @@ IL_0035:
 		L_14 = Delegate_Remove_m8B7DD5661308FA972E23CA1CC3FC9CEB355504E3(L_12, L_13, NULL);
 		((GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var))->___OnGameEnded = ((Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)CastclassSealed((RuntimeObject*)L_14, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&((GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var))->___OnGameEnded), (void*)((Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)CastclassSealed((RuntimeObject*)L_14, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var)));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:447>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:448>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_15 = __this->___musicToggle;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_16;
@@ -24938,7 +24942,7 @@ IL_0035:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:449>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:450>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_17 = __this->___musicToggle;
 		NullCheck(L_17);
 		ToggleEvent_t88B31268F9D6D1882E4F921B14704FB9F7047F02* L_18 = L_17->___onValueChanged;
@@ -24950,7 +24954,7 @@ IL_0035:
 
 IL_00c1:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:452>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:453>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_20 = __this->___soundToggle;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_21;
@@ -24961,7 +24965,7 @@ IL_00c1:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:454>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:455>
 		Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* L_22 = __this->___soundToggle;
 		NullCheck(L_22);
 		ToggleEvent_t88B31268F9D6D1882E4F921B14704FB9F7047F02* L_23 = L_22->___onValueChanged;
@@ -24973,11 +24977,11 @@ IL_00c1:
 
 IL_00eb:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:456>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:457>
 		return;
 	}
 }
-// Method Definition Index: 66771
+// Method Definition Index: 66773
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager__ctor_m0D019234D46CEFEC1195B613DC78EC75210D620E (SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24988,15 +24992,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager__ctor_m0D019234D46CEFEC11
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:23>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:24>
 		__this->___currentUserId = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentUserId), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:24>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:25>
 		__this->___storageKey = _stringLiteral28A00C6C2538607194DCD2548EF0DFB07D324A14;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___storageKey), (void*)_stringLiteral28A00C6C2538607194DCD2548EF0DFB07D324A14);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:30>
-		__this->___isMusicEnabled = (bool)1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:31>
+		__this->___isMusicEnabled = (bool)1;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/SettingManager.cs:32>
 		__this->___isSoundEnabled = (bool)1;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -25010,7 +25014,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SettingManager__ctor_m0D019234D46CEFEC11
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66772
+// Method Definition Index: 66774
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopGridScaler_Awake_m07666F36A63B6F1B30ED67CE0C0E6DF3A17A2F19 (ShopGridScaler_t197CB16AB6BFBB43DA2213B19513B698D3077E55* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25030,7 +25034,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopGridScaler_Awake_m07666F36A63B6F1B30
 		return;
 	}
 }
-// Method Definition Index: 66773
+// Method Definition Index: 66775
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopGridScaler_Start_m1953422E063017B3C4CA3A3AD2C4A6C20BD5D6AF (ShopGridScaler_t197CB16AB6BFBB43DA2213B19513B698D3077E55* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25116,7 +25120,7 @@ IL_0058:
 		return;
 	}
 }
-// Method Definition Index: 66774
+// Method Definition Index: 66776
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopGridScaler_ApplyScaling_m2DE6290B684ABCE0709676DFBB21393C28720627 (ShopGridScaler_t197CB16AB6BFBB43DA2213B19513B698D3077E55* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25377,7 +25381,7 @@ IL_008e:
 		return;
 	}
 }
-// Method Definition Index: 66775
+// Method Definition Index: 66777
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopGridScaler_StoreOriginalOffsets_m8758F3A796276AB5EF7763EA728D0B6637DF013D (ShopGridScaler_t197CB16AB6BFBB43DA2213B19513B698D3077E55* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25463,7 +25467,7 @@ IL_005e:
 		return;
 	}
 }
-// Method Definition Index: 66776
+// Method Definition Index: 66778
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopGridScaler_ScaleByOffset_mB68AB18ED255C5C1B28BA7195647E3DD8EBECB89 (ShopGridScaler_t197CB16AB6BFBB43DA2213B19513B698D3077E55* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25556,7 +25560,7 @@ IL_0018:
 		return;
 	}
 }
-// Method Definition Index: 66777
+// Method Definition Index: 66779
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopGridScaler_RecalculateScaling_mC661D11FF3F476A140F26C3A1D95CEFB91DE5400 (ShopGridScaler_t197CB16AB6BFBB43DA2213B19513B698D3077E55* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25597,7 +25601,7 @@ IL_0022:
 		return;
 	}
 }
-// Method Definition Index: 66778
+// Method Definition Index: 66780
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float ShopGridScaler_GetScaleFactor_mD9079A7B82E7F1683EDFF06B87B6434042C11EE8 (ShopGridScaler_t197CB16AB6BFBB43DA2213B19513B698D3077E55* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25606,7 +25610,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float ShopGridScaler_GetScaleFactor_mD9079A7B
 		return L_0;
 	}
 }
-// Method Definition Index: 66779
+// Method Definition Index: 66781
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopGridScaler__ctor_m258208BE3F4A0DB284E0C85807E65D422BC50B00 (ShopGridScaler_t197CB16AB6BFBB43DA2213B19513B698D3077E55* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25651,7 +25655,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopGridScaler__ctor_m258208BE3F4A0DB284
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66780
+// Method Definition Index: 66782
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopUIManager_Awake_m2CBF779A15C2499ECAFF4B767E54BE4CF49CDB93 (ShopUIManager_tF94F643332475BFDDB2775E7500A656CCE75CE1F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25661,7 +25665,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopUIManager_Awake_m2CBF779A15C2499ECAF
 		return;
 	}
 }
-// Method Definition Index: 66781
+// Method Definition Index: 66783
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopUIManager_OnDestroy_m1058359E4F5D8886EEECA8B1AC9B631D4A60EF72 (ShopUIManager_tF94F643332475BFDDB2775E7500A656CCE75CE1F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25671,7 +25675,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopUIManager_OnDestroy_m1058359E4F5D888
 		return;
 	}
 }
-// Method Definition Index: 66782
+// Method Definition Index: 66784
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopUIManager_SetupHoverAnimations_mEC76A3BC0DF020AD6B464331879EA4A41E2F1DA3 (ShopUIManager_tF94F643332475BFDDB2775E7500A656CCE75CE1F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25767,7 +25771,7 @@ IL_003f:
 		return;
 	}
 }
-// Method Definition Index: 66783
+// Method Definition Index: 66785
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopUIManager_SetupElementHoverAnimation_m8DCE894487E8CF67DD8A8C75B978164EADF6CB36 (ShopUIManager_tF94F643332475BFDDB2775E7500A656CCE75CE1F* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25953,7 +25957,7 @@ IL_007d:
 		return;
 	}
 }
-// Method Definition Index: 66784
+// Method Definition Index: 66786
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopUIManager_OnElementPointerEnter_m573873AD6E8F1A79B949915CEE311F91A3A53686 (ShopUIManager_tF94F643332475BFDDB2775E7500A656CCE75CE1F* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26114,7 +26118,7 @@ IL_0082:
 		return;
 	}
 }
-// Method Definition Index: 66785
+// Method Definition Index: 66787
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopUIManager_OnElementPointerExit_m0B59FF0C2F506711E38E072B525B3E6D1B04D307 (ShopUIManager_tF94F643332475BFDDB2775E7500A656CCE75CE1F* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26267,7 +26271,7 @@ IL_0082:
 		return;
 	}
 }
-// Method Definition Index: 66786
+// Method Definition Index: 66788
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopUIManager_CleanupAllAnimations_mFA95616CC4AB192E06D470EB58DF3DB8575DEDA2 (ShopUIManager_tF94F643332475BFDDB2775E7500A656CCE75CE1F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26375,7 +26379,7 @@ IL_0053:
 		return;
 	}
 }
-// Method Definition Index: 66787
+// Method Definition Index: 66789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopUIManager_OnDisable_mE4B379AB1DCC98E30519CC5A1D9EAB0CE92D48EC (ShopUIManager_tF94F643332475BFDDB2775E7500A656CCE75CE1F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26385,7 +26389,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopUIManager_OnDisable_mE4B379AB1DCC98E
 		return;
 	}
 }
-// Method Definition Index: 66788
+// Method Definition Index: 66790
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopUIManager_AddShopElement_m408DD1BBB30FD8313C310464E4E18A119B35ADB0 (ShopUIManager_tF94F643332475BFDDB2775E7500A656CCE75CE1F* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26432,7 +26436,7 @@ IL_000a:
 		return;
 	}
 }
-// Method Definition Index: 66789
+// Method Definition Index: 66791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopUIManager_RemoveShopElement_m1C21477F0C8CDCCB2B7EED9ED10F153826B98347 (ShopUIManager_tF94F643332475BFDDB2775E7500A656CCE75CE1F* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26554,7 +26558,7 @@ IL_0058:
 		return;
 	}
 }
-// Method Definition Index: 66790
+// Method Definition Index: 66792
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopUIManager__ctor_m2E596DD14FACC2140738BF13DEE4C23EF8950BF2 (ShopUIManager_tF94F643332475BFDDB2775E7500A656CCE75CE1F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26590,7 +26594,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ShopUIManager__ctor_m2E596DD14FACC214073
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 78461
+// Method Definition Index: 78463
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_CeilToInt_mF2BF9F4261B3431DC20E10A46CFEEED103C48963_inline (float ___0_f, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26615,7 +26619,7 @@ IL_000c:
 		return L_2;
 	}
 }
-// Method Definition Index: 78467
+// Method Definition Index: 78469
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline (float ___0_value, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -26663,7 +26667,7 @@ IL_002d:
 		return L_5;
 	}
 }
-// Method Definition Index: 124890
+// Method Definition Index: 124891
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 PointerEventData_get_position_m5BE71C28EB72EFB8435749E4E6E839213AEF458C_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26672,7 +26676,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		return L_0;
 	}
 }
-// Method Definition Index: 78514
+// Method Definition Index: 78516
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Subtraction_m44475FCDAD2DA2F98D78A6625EC2DCDFE8803837_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_a, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_b, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -26693,7 +26697,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		return L_8;
 	}
 }
-// Method Definition Index: 78463
+// Method Definition Index: 78465
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_RoundToInt_m60F8B66CF27F1FA75AA219342BD184B75771EB4B_inline (float ___0_f, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26718,7 +26722,7 @@ IL_000c:
 		return L_2;
 	}
 }
-// Method Definition Index: 78466
+// Method Definition Index: 78468
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline (int32_t ___0_value, int32_t ___1_min, int32_t ___2_max, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -26769,7 +26773,7 @@ IL_001d:
 		return L_9;
 	}
 }
-// Method Definition Index: 78583
+// Method Definition Index: 78585
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector4__ctor_m96B2CD8B862B271F513AF0BDC2EABD58E4DBC813_inline (Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3* __this, float ___0_x, float ___1_y, float ___2_z, float ___3_w, const RuntimeMethod* method) 
 {
 	{
@@ -26784,7 +26788,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector4__ctor_m96B2CD8B862B2
 		return;
 	}
 }
-// Method Definition Index: 78451
+// Method Definition Index: 78453
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline (float ___0_a, float ___1_b, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -26821,7 +26825,7 @@ IL_000c:
 		return L_4;
 	}
 }
-// Method Definition Index: 78449
+// Method Definition Index: 78451
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Min_m747CA71A9483CDB394B13BD0AD048EE17E48FFE4_inline (float ___0_a, float ___1_b, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -26858,7 +26862,7 @@ IL_000c:
 		return L_4;
 	}
 }
-// Method Definition Index: 78489
+// Method Definition Index: 78491
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, float ___0_x, float ___1_y, const RuntimeMethod* method) 
 {
 	{
@@ -26869,7 +26873,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFF
 		return;
 	}
 }
-// Method Definition Index: 65960
+// Method Definition Index: 65962
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR InAppPurchaseManager_t4881C4A8CD189E8E9140E256685299C66F887B27* InAppPurchaseManager_get_Instance_mE5539F4893CBBFD1D265EFB45369076C4803E561_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26884,7 +26888,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR InAppPurchaseManager_t4881C4A8CD1
 		return L_0;
 	}
 }
-// Method Definition Index: 66628
+// Method Definition Index: 66630
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Id_mC58F20220F795613BEDA334EE4DB7A9B07CF79E0_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26899,7 +26903,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Id_mC58
 		return L_0;
 	}
 }
-// Method Definition Index: 65139
+// Method Definition Index: 65141
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* BackendAuthService_get_Instance_m74239149FFCCCF5A49AF965DCA0565780B051110_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26914,7 +26918,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR BackendAuthService_t71F3E2DE248AE
 		return L_0;
 	}
 }
-// Method Definition Index: 78450
+// Method Definition Index: 78452
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_Min_m888083F74FF5655778F0403BB5E9608BEFDEA8CB_inline (int32_t ___0_a, int32_t ___1_b, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -26951,7 +26955,7 @@ IL_000c:
 		return L_4;
 	}
 }
-// Method Definition Index: 123291
+// Method Definition Index: 123292
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline (Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26960,7 +26964,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ButtonClickedEvent_t8EA72E90B3BD1
 		return L_0;
 	}
 }
-// Method Definition Index: 78368
+// Method Definition Index: 78370
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26974,7 +26978,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_0;
 	}
 }
-// Method Definition Index: 78369
+// Method Definition Index: 78371
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26988,7 +26992,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_0;
 	}
 }
-// Method Definition Index: 78331
+// Method Definition Index: 78333
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_Lerp_m3A906D0530A94FAABB94F0F905E84D99BE85C3F8_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, float ___2_t, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -27035,25 +27039,25 @@ IL_0064:
 		return L_24;
 	}
 }
-// Method Definition Index: 65506
+// Method Definition Index: 65508
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool DailyRewardManager_get_IsStatusLoaded_m42D25D0DED81E0366980401EBD0848B524E29D20_inline (DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:58>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:59>
 		bool L_0 = __this->___isStatusLoaded;
 		return L_0;
 	}
 }
-// Method Definition Index: 65505
+// Method Definition Index: 65507
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool DailyRewardManager_get_CanClaim_mFD2CC193E52A1776A7C42F2258D03DE3DEC1E9D4_inline (DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:55>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:56>
 		bool L_0 = __this->___canClaim;
 		return L_0;
 	}
 }
-// Method Definition Index: 78379
+// Method Definition Index: 78381
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, float ___1_d, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -27076,7 +27080,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_9;
 	}
 }
-// Method Definition Index: 78213
+// Method Definition Index: 78215
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_inline (const RuntimeMethod* method) 
 {
 	{
@@ -27086,7 +27090,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 		return L_0;
 	}
 }
-// Method Definition Index: 78177
+// Method Definition Index: 78179
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___0_r, float ___1_g, float ___2_b, float ___3_a, const RuntimeMethod* method) 
 {
 	{
@@ -27101,7 +27105,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9C
 		return;
 	}
 }
-// Method Definition Index: 124358
+// Method Definition Index: 124359
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Selectable_get_interactable_m17DD0484DC62DCB4467109488D7A599BC85EC112_inline (Selectable_t3251808068A17B8E92FB33590A4C2FA66D456712* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27110,7 +27114,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Selectable_get_interactable_
 		return L_0;
 	}
 }
-// Method Definition Index: 78448
+// Method Definition Index: 78450
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_Abs_mD945EDDEA0D62D21BFDBAB7B1C0F18DFF1CEC905_inline (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27135,7 +27139,7 @@ IL_000a:
 		return L_2;
 	}
 }
-// Method Definition Index: 78471
+// Method Definition Index: 78473
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_SmoothStep_mEFDC738EB0AA162D71013BDBBDD157B080A8E524_inline (float ___0_from, float ___1_to, float ___2_t, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -27164,7 +27168,7 @@ IL_0030:
 		return L_11;
 	}
 }
-// Method Definition Index: 78468
+// Method Definition Index: 78470
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Lerp_m47EF2FFB7647BD0A1FDC26DC03E28B19812139B5_inline (float ___0_a, float ___1_b, float ___2_t, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -27185,7 +27189,7 @@ IL_0010:
 		return L_5;
 	}
 }
-// Method Definition Index: 66630
+// Method Definition Index: 66632
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Name_mC2FF8F628463BB165429DADD4D06B7B8DF621276_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27200,7 +27204,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Name_mC
 		return L_0;
 	}
 }
-// Method Definition Index: 66640
+// Method Definition Index: 66642
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_CashBalance_m0E3FB6888B6E28878E0F553CB0A96C2947BFEFAC_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27215,7 +27219,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_CashBalan
 		return L_0;
 	}
 }
-// Method Definition Index: 66646
+// Method Definition Index: 66648
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Coins_m4C02B7FEEBA8E8E63B180510D565F9FA8B33F37A_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27230,7 +27234,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Coins_m4C
 		return L_0;
 	}
 }
-// Method Definition Index: 66652
+// Method Definition Index: 66654
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Level_m3912D0CA3477275AFD84DA38B518F7C4A29E6E7F_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27245,7 +27249,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Level_m39
 		return L_0;
 	}
 }
-// Method Definition Index: 66629
+// Method Definition Index: 66631
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_Id_m6A0E149F69AA3C0AE1173F8DE451675628874D3A_inline (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27262,7 +27266,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_Id_m6A0E149F
 		return;
 	}
 }
-// Method Definition Index: 66631
+// Method Definition Index: 66633
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_Name_mBBCB7B9E185C0DDBFEDB97172876EB0625E2B01B_inline (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27279,7 +27283,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_Name_mBBCB7B
 		return;
 	}
 }
-// Method Definition Index: 66633
+// Method Definition Index: 66635
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_Email_mCB91E0183AC211FE310FF247BAD5F398A2BC36F2_inline (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27296,7 +27300,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_Email_mCB91E
 		return;
 	}
 }
-// Method Definition Index: 66635
+// Method Definition Index: 66637
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_Wins_mF25D9D3884C50B12CDD2BE5999C6160D81E8D989_inline (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27312,7 +27316,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_Wins_mF25D9D
 		return;
 	}
 }
-// Method Definition Index: 66637
+// Method Definition Index: 66639
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_Losses_mD2E9A65C46DAC60748C9E280A1D4472C5DD27E09_inline (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27328,7 +27332,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_Losses_mD2E9
 		return;
 	}
 }
-// Method Definition Index: 66639
+// Method Definition Index: 66641
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_Balance_m691E03F15C98F1C71C9C0F43E34A0E1C9E01B692_inline (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27344,7 +27348,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_Balance_m691
 		return;
 	}
 }
-// Method Definition Index: 66641
+// Method Definition Index: 66643
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_CashBalance_mD0453094D39065D72D804A28132A817A2C0DB522_inline (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27360,7 +27364,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_CashBalance_
 		return;
 	}
 }
-// Method Definition Index: 66643
+// Method Definition Index: 66645
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_BonusBalance_m493D43D3E6CB3D4381F8FAB4860AC84A2B83D593_inline (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27376,7 +27380,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_BonusBalance
 		return;
 	}
 }
-// Method Definition Index: 66645
+// Method Definition Index: 66647
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_WinningBalance_mDF506879A54C67775C7258A07F57B945F976D74B_inline (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27392,7 +27396,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_WinningBalan
 		return;
 	}
 }
-// Method Definition Index: 66647
+// Method Definition Index: 66649
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_Coins_m4E5126E9EFDC0D114DA6E8CAFDA71E82829B24E5_inline (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27408,7 +27412,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_Coins_m4E512
 		return;
 	}
 }
-// Method Definition Index: 66649
+// Method Definition Index: 66651
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_Avatar_mBD556D9F12770A16D8D34C6CA1BBD9E53778A062_inline (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27425,7 +27429,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_Avatar_mBD55
 		return;
 	}
 }
-// Method Definition Index: 66651
+// Method Definition Index: 66653
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_Xp_m0C9B5A9A21681352E4605E08FD896DF84702334D_inline (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27441,7 +27445,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_Xp_m0C9B5A9A
 		return;
 	}
 }
-// Method Definition Index: 66653
+// Method Definition Index: 66655
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_Level_m4AA59D0D6981C70364811C83189D0EC7896A7785_inline (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27457,7 +27461,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_Level_m4AA59
 		return;
 	}
 }
-// Method Definition Index: 66655
+// Method Definition Index: 66657
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_Role_mF38DEC5165741EEA1D624C8F3BDA211CA6A0BD79_inline (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27474,7 +27478,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_Role_mF38DEC
 		return;
 	}
 }
-// Method Definition Index: 66657
+// Method Definition Index: 66659
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_SelectedAvatarIndex_m726F289D18BEFFF2E77B668E35EAF2A2B2721426_inline (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27490,7 +27494,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_SelectedAvat
 		return;
 	}
 }
-// Method Definition Index: 66659
+// Method Definition Index: 66661
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_ActiveMatchId_m7E12030076EC7C1B97F972458A3429B733E2EF09_inline (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27507,7 +27511,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_ActiveMatchI
 		return;
 	}
 }
-// Method Definition Index: 66661
+// Method Definition Index: 66663
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_ActiveRoomId_m21F9279B38021FEBA62E7D03645B38063273035D_inline (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27524,7 +27528,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_ActiveRoomId
 		return;
 	}
 }
-// Method Definition Index: 66663
+// Method Definition Index: 66665
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_WithdrawableBalance_mB28A102553D6F67B874755D81F24075B9B5A46D1_inline (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27540,7 +27544,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_Withdrawable
 		return;
 	}
 }
-// Method Definition Index: 66665
+// Method Definition Index: 66667
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_RecentMatchId_m0813FA9F8EE7DDB2E8C05EBDD355FBD656D7E287_inline (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27557,7 +27561,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_RecentMatchI
 		return;
 	}
 }
-// Method Definition Index: 66667
+// Method Definition Index: 66669
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_RecentRoomId_mF087704F1A2DE00E83A3FC3B9D58C89FCA638E1C_inline (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27574,7 +27578,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_RecentRoomId
 		return;
 	}
 }
-// Method Definition Index: 66669
+// Method Definition Index: 66671
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerModel_set_RecentMatchStatus_m1E7042BA84E08A4A5BC607FE9F5F6F1D697BE23B_inline (String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27597,7 +27601,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_Invoke_m7126A54DACA72
 	typedef void (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 66632
+// Method Definition Index: 66634
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Email_mB1FCCB0FD27F759C2D91D0893F83FEB2434E23B0_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27612,7 +27616,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Email_m
 		return L_0;
 	}
 }
-// Method Definition Index: 66648
+// Method Definition Index: 66650
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Avatar_mE3D8C1BE3E6D46C3AE3837FA63789AA9A95EAEDD_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27627,7 +27631,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Avatar_
 		return L_0;
 	}
 }
-// Method Definition Index: 65120
+// Method Definition Index: 65122
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* AvatarSelector_get_Instance_m24649C0486FBE07A36A2431B1AA28F8CB8BC20FE_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27642,7 +27646,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AvatarSelector_tDC4598CAB076DAC91
 		return L_0;
 	}
 }
-// Method Definition Index: 110808
+// Method Definition Index: 110809
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A_inline (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27651,7 +27655,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* TMP_InputField_get_text
 		return L_0;
 	}
 }
-// Method Definition Index: 76795
+// Method Definition Index: 76797
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___0_x, float ___1_y, float ___2_width, float ___3_height, const RuntimeMethod* method) 
 {
 	{
@@ -27666,7 +27670,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect__ctor_m18C3033D135097BE
 		return;
 	}
 }
-// Method Definition Index: 111401
+// Method Definition Index: 111402
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float TMP_Text_get_fontSize_m13A8365A56EA2B726EAD826B4A69C8918A528731_inline (TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27675,7 +27679,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float TMP_Text_get_fontSize_m13A8
 		return L_0;
 	}
 }
-// Method Definition Index: 110819
+// Method Definition Index: 110820
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* TMP_InputField_get_textComponent_m85C4BC3F4C18206B3B942F03DB0B953B028EE1CE_inline (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27684,7 +27688,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR TMP_Text_tE8D677872D43AD4B2AAF0D6
 		return L_0;
 	}
 }
-// Method Definition Index: 110821
+// Method Definition Index: 110822
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931* TMP_InputField_get_placeholder_m6C5FDEB031E2900A1792B928E4864B21B144AB3C_inline (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27693,7 +27697,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Graphic_tCBFCA4585A19E2B75465AECF
 		return L_0;
 	}
 }
-// Method Definition Index: 78518
+// Method Definition Index: 78520
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Multiply_m2D984B613020089BF5165BA4CA10988E2DC771FE_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_a, float ___1_d, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -27712,7 +27716,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		return L_6;
 	}
 }
-// Method Definition Index: 76812
+// Method Definition Index: 76814
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_width_m620D67551372073C9C32C4C4624C2A5713F7F9A9_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27720,7 +27724,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_width_m620D6755137
 		return L_0;
 	}
 }
-// Method Definition Index: 76814
+// Method Definition Index: 76816
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_height_mE1AA6C6C725CCD2D317BD2157396D3CF7D47C9D8_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27728,7 +27732,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_height_mE1AA6C6C72
 		return L_0;
 	}
 }
-// Method Definition Index: 78214
+// Method Definition Index: 78216
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_yellow_m66637FA14383E8D74F24AE256B577CE1D55D469F_inline (const RuntimeMethod* method) 
 {
 	{
@@ -27738,7 +27742,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 		return L_0;
 	}
 }
-// Method Definition Index: 78212
+// Method Definition Index: 78214
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_red_mA2E53E7173FDC97E68E335049AB0FAAEE43A844D_inline (const RuntimeMethod* method) 
 {
 	{

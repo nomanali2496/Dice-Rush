@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections.Generic;
 
 /// <summary>
@@ -46,7 +46,7 @@ public class DiceVisibilityManager : MonoBehaviour
     {
         if (dicesController == null)
         {
-            dicesController = FindObjectOfType<DicesController>();
+            dicesController = FindFirstObjectByType<DicesController>();
             if (dicesController == null)
             {
                 Debug.LogWarning("[DiceVisibilityManager] DicesController not found! Please assign it in the inspector.");
@@ -152,7 +152,7 @@ public class DiceVisibilityManager : MonoBehaviour
     private void AutoDetectPanels()
     {
         // Find all GameObjects in the scene
-        GameObject[] allObjects = FindObjectsOfType<GameObject>(true);
+        GameObject[] allObjects = FindObjectsByType<GameObject>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         
         foreach (GameObject obj in allObjects)
         {

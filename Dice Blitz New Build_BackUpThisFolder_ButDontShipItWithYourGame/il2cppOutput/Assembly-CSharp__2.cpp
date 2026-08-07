@@ -670,13 +670,12 @@ IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_m447372C1EF7141193B93090A77395
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m4C37ED2D928D63B80F55AF434730C2D64EEB9F22_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_mE8DBE527F24D9CFED839C34216C475B716169979_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Nullable_1__ctor_m141FA88563AC0B5179132FB929EABD02C47FF703_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Object_FindFirstObjectByType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_mEAD20F2B028B6BD3C96CF684B6DF7C89D7338636_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_FindFirstObjectByType_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m18566EA543B536F04C35FD1AAAD66A86D5649418_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_FindFirstObjectByType_TisDicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655_mB1236AF28D2FA18FE632124B01CF974FEADB6E4B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectOfType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_m9F95418B43AD56D2B249A1712B89939CB1A88FCC_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectOfType_TisDicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655_m7452E8FC8A2EACD073EA581E1EA44285CF73590B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectOfType_TisPlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69_mB0DFC3BE2DB154A8706F953422826D16B0742306_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectsOfType_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m56C380C6D2B676920089B9CC76CD00EA50F76B7C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectsOfType_TisPlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69_mA5C44A13FF65637493FF97ACC55E159C251FD8A4_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Object_FindFirstObjectByType_TisPlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69_m977AFC3647E5DADFF014A2EC14445803FF5A170E_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectsByType_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_mE287E42D33D12DDA538B4C7903022954136A1BAE_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectsByType_TisPlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69_mF6385FBDE3EF9E5DB23277001028B16D4F601728_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m58C654F1134533E29502629CA67645682B404811_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Resources_Load_TisBackendConfig_t3D4EAA2CD08A1971AD65D5789C3449D600F3219B_mF832AB258A83C280C896A423289745D17E45C174_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* TweenSettingsExtensions_SetEase_TisTweenerCore_3_tCD82DFC45FB71C681FA8659EA63A7D7D16BFFE77_mEACEF6A6E654DEDDB2620CD0BE1DA29C023F4E2F_RuntimeMethod_var;
@@ -1972,6 +1971,14 @@ struct Extents_tA2D2F95811D0A18CB7AC3570D2D8F8CD3AF4C4A8
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___min;
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___max;
+};
+struct FindObjectsInactive_t10C7BE036CAD0178142374F945283DA50D02B87A 
+{
+	int32_t ___value__;
+};
+struct FindObjectsSortMode_t3C83F8C6588F54EBB0CEB21F79D54CD19460AE9E 
+{
+	int32_t ___value__;
 };
 struct FontStyles_t9E611EE6BBE6E192A73EAFF7872596517C527FF5 
 {
@@ -4036,13 +4043,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Object_Instantiate_TisRuntimeO
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameObject_AddComponent_TisRuntimeObject_m69B93700FACCF372F5753371C6E8FB780800B824_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameObject_GetComponent_TisRuntimeObject_m6EAED4AA356F0F48288F67899E5958792395563B_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool List_1_Remove_m4DFA48F4CEB9169601E75FC28517C5C06EFA5AD7_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Object_FindObjectOfType_TisRuntimeObject_m02DFBF011F3B59F777A5E521DB2A116DD496E968_gshared (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_2__ctor_m910EDF0572CB2F28E45048A2EB215E25296E58BD_gshared (Action_2_t4E94B0FCA1084D7868DB11A50767A4916CA3D3FB* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameObject_GetComponentInParent_TisRuntimeObject_mDD9FD68B12361AC472D4A83310CAD793C02C6654_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Predicate_1__ctor_m3E007299121A15DF80F4A210FF8C20E5DF688F20_gshared (Predicate_1_t8342C85FF4E41CD1F7024AC0CDC3E5312A32CB12* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* List_1_Find_m5E78A210541B0D844FE27B94F509313623BE33D3_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, Predicate_1_t8342C85FF4E41CD1F7024AC0CDC3E5312A32CB12* ___0_match, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_3_Invoke_m1B6189A2961C2EC44E10EC59752430FA87D89B05_gshared_inline (Action_3_tDC65EE2B977E3060FF31D0E9D271535E08455FDB* __this, int32_t ___0_arg1, int32_t ___1_arg2, float ___2_arg3, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* Object_FindObjectsOfType_TisRuntimeObject_m080DDCB03E6111A6FB7C8A5BC2CD1CCBFBE3BECC_gshared (bool ___0_includeInactive, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* Object_FindObjectsByType_TisRuntimeObject_mB1F91C8A4722D89B3A122EE213E9746E9C67EE8D_gshared (int32_t ___0_findObjectsInactive, int32_t ___1_sortMode, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool List_1_Contains_m4C9139C2A6B23E9343D3F87807B32C6E2CFE660D_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) ;
 
@@ -4465,13 +4471,13 @@ inline bool List_1_Remove_mCCE85D4D5326536C4B214C73D07030F4CCD18485 (List_1_tB95
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_obj, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_SetupCloseButton_mCAE65CA032DA5F1AAA37DE97520B274E83DD6822 (DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* __this, const RuntimeMethod* method) ;
-inline PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* Object_FindObjectOfType_TisPlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69_mB0DFC3BE2DB154A8706F953422826D16B0742306 (const RuntimeMethod* method)
+inline PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* Object_FindFirstObjectByType_TisPlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69_m977AFC3647E5DADFF014A2EC14445803FF5A170E (const RuntimeMethod* method)
 {
-	return ((  PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* (*) (const RuntimeMethod*))Object_FindObjectOfType_TisRuntimeObject_m02DFBF011F3B59F777A5E521DB2A116DD496E968_gshared)(method);
+	return ((  PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* (*) (const RuntimeMethod*))Object_FindFirstObjectByType_TisRuntimeObject_mC5927319EB5B80095EFBA653D414D6F8AA87DC0A_gshared)(method);
 }
-inline AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* Object_FindObjectOfType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_m9F95418B43AD56D2B249A1712B89939CB1A88FCC (const RuntimeMethod* method)
+inline AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* Object_FindFirstObjectByType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_mEAD20F2B028B6BD3C96CF684B6DF7C89D7338636 (const RuntimeMethod* method)
 {
-	return ((  AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* (*) (const RuntimeMethod*))Object_FindObjectOfType_TisRuntimeObject_m02DFBF011F3B59F777A5E521DB2A116DD496E968_gshared)(method);
+	return ((  AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* (*) (const RuntimeMethod*))Object_FindFirstObjectByType_TisRuntimeObject_mC5927319EB5B80095EFBA653D414D6F8AA87DC0A_gshared)(method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_RefreshStatusFromServer_mC8BC7FD3704C4FFB92F246D9C8E550DFC606F0F1 (DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* DailyRewardManager_MonitorMainMenuActivation_mAC5ACCC72681C82BFB3F10102D3CCA1E0F567904 (DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* __this, const RuntimeMethod* method) ;
@@ -4533,9 +4539,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiagnosticHelper_CheckEverything_m69876C
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Id_mC58F20220F795613BEDA334EE4DB7A9B07CF79E0_inline (const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Name_mC2FF8F628463BB165429DADD4D06B7B8DF621276_inline (const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Email_mB1FCCB0FD27F759C2D91D0893F83FEB2434E23B0_inline (const RuntimeMethod* method) ;
-inline PlayerProfileUIU5BU5D_tEFE0069B0989A97DC0789A2B8E66D3EDEF096982* Object_FindObjectsOfType_TisPlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69_mA5C44A13FF65637493FF97ACC55E159C251FD8A4 (bool ___0_includeInactive, const RuntimeMethod* method)
+inline PlayerProfileUIU5BU5D_tEFE0069B0989A97DC0789A2B8E66D3EDEF096982* Object_FindObjectsByType_TisPlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69_mF6385FBDE3EF9E5DB23277001028B16D4F601728 (int32_t ___0_findObjectsInactive, int32_t ___1_sortMode, const RuntimeMethod* method)
 {
-	return ((  PlayerProfileUIU5BU5D_tEFE0069B0989A97DC0789A2B8E66D3EDEF096982* (*) (bool, const RuntimeMethod*))Object_FindObjectsOfType_TisRuntimeObject_m080DDCB03E6111A6FB7C8A5BC2CD1CCBFBE3BECC_gshared)(___0_includeInactive, method);
+	return ((  PlayerProfileUIU5BU5D_tEFE0069B0989A97DC0789A2B8E66D3EDEF096982* (*) (int32_t, int32_t, const RuntimeMethod*))Object_FindObjectsByType_TisRuntimeObject_mB1F91C8A4722D89B3A122EE213E9746E9C67EE8D_gshared)(___0_findObjectsInactive, ___1_sortMode, method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameObject_get_activeInHierarchy_m49250F4F168DCC5388D5BE4F6A5681386907B109 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
@@ -4559,10 +4565,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RectTransform_set_anchoredPosition_mF903ACE04F6959B1CD67E2B94FABC0263068F965 (RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134 (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_value, const RuntimeMethod* method) ;
-inline DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* Object_FindObjectOfType_TisDicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655_m7452E8FC8A2EACD073EA581E1EA44285CF73590B (const RuntimeMethod* method)
-{
-	return ((  DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* (*) (const RuntimeMethod*))Object_FindObjectOfType_TisRuntimeObject_m02DFBF011F3B59F777A5E521DB2A116DD496E968_gshared)(method);
-}
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* GameObject_Find_m7A669B4EEC2617AB82F6E3FF007CDCD9F21DB300 (String_t* ___0_name, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiceVisibilityManager_AutoDetectPanels_mA813F17D703940F093207347FE30166E949FCF1A (DiceVisibilityManager_tA18B656A48FE4B835ADE30485C9CF1AEF617595A* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiceVisibilityManager_ApplyDiceScaling_m64C963D1CDC3E98A3AC9BACA5634718794B64428 (DiceVisibilityManager_tA18B656A48FE4B835ADE30485C9CF1AEF617595A* __this, const RuntimeMethod* method) ;
@@ -4584,9 +4586,9 @@ inline bool Enumerator_MoveNext_m96F4B0BD0A5485C8E8CC57D961DF6F1FA256AF27 (Enume
 	return ((  bool (*) (Enumerator_t88BD1282EF117E59AACFC9EC55B89F0B9EDACE60*, const RuntimeMethod*))Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared)(__this, method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_HideDices_m2327EC8B9ABF8F09C1FE5E04087A6AB106E5278A (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, const RuntimeMethod* method) ;
-inline GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* Object_FindObjectsOfType_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m56C380C6D2B676920089B9CC76CD00EA50F76B7C (bool ___0_includeInactive, const RuntimeMethod* method)
+inline GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* Object_FindObjectsByType_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_mE287E42D33D12DDA538B4C7903022954136A1BAE (int32_t ___0_findObjectsInactive, int32_t ___1_sortMode, const RuntimeMethod* method)
 {
-	return ((  GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* (*) (bool, const RuntimeMethod*))Object_FindObjectsOfType_TisRuntimeObject_m080DDCB03E6111A6FB7C8A5BC2CD1CCBFBE3BECC_gshared)(___0_includeInactive, method);
+	return ((  GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* (*) (int32_t, int32_t, const RuntimeMethod*))Object_FindObjectsByType_TisRuntimeObject_mB1F91C8A4722D89B3A122EE213E9746E9C67EE8D_gshared)(___0_findObjectsInactive, ___1_sortMode, method);
 }
 inline bool List_1_Contains_m8D2C9B0C7844486763AE6C2CA3C04FA4BBA9B384 (List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_item, const RuntimeMethod* method)
 {
@@ -4603,7 +4605,7 @@ inline void List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4 (List
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65256
+// Method Definition Index: 65258
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDepositCoroutineU3Ed__65__ctor_mA5DB31CD4A2E1C27ACD51B88E76DE7ABC7F34473 (U3CDepositCoroutineU3Ed__65_t6E910AB7FB37199A949A5B06E1034C81914D84F0* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -4613,7 +4615,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDepositCoroutineU3Ed__65__ctor_mA5DB3
 		return;
 	}
 }
-// Method Definition Index: 65257
+// Method Definition Index: 65259
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDepositCoroutineU3Ed__65_System_IDisposable_Dispose_m9DD4EA48C463636186231BFAF40226975ECB261C (U3CDepositCoroutineU3Ed__65_t6E910AB7FB37199A949A5B06E1034C81914D84F0* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -4662,7 +4664,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65258
+// Method Definition Index: 65260
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CDepositCoroutineU3Ed__65_MoveNext_m217E93C80FFD8AD7FCAF3BACDA8064F3CD328516 (U3CDepositCoroutineU3Ed__65_t6E910AB7FB37199A949A5B06E1034C81914D84F0* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5001,7 +5003,7 @@ IL_01f2:
 		return L_56;
 	}
 }
-// Method Definition Index: 65259
+// Method Definition Index: 65261
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDepositCoroutineU3Ed__65_U3CU3Em__Finally1_mCFE48261F5BB5E768080FC9D66937C3EB1C29EC9 (U3CDepositCoroutineU3Ed__65_t6E910AB7FB37199A949A5B06E1034C81914D84F0* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5029,7 +5031,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65260
+// Method Definition Index: 65262
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDepositCoroutineU3Ed__65_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m0CD88A4F9DF902C0EFC523BB7B0D4C38F7ACFF05 (U3CDepositCoroutineU3Ed__65_t6E910AB7FB37199A949A5B06E1034C81914D84F0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5037,7 +5039,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDepositCoroutineU3Ed__65_Sy
 		return L_0;
 	}
 }
-// Method Definition Index: 65261
+// Method Definition Index: 65263
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDepositCoroutineU3Ed__65_System_Collections_IEnumerator_Reset_m28C88163AFCD9A12149D7E700778DBD1DCEC3D35 (U3CDepositCoroutineU3Ed__65_t6E910AB7FB37199A949A5B06E1034C81914D84F0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5046,7 +5048,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDepositCoroutineU3Ed__65_System_Colle
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CDepositCoroutineU3Ed__65_System_Collections_IEnumerator_Reset_m28C88163AFCD9A12149D7E700778DBD1DCEC3D35_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65262
+// Method Definition Index: 65264
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDepositCoroutineU3Ed__65_System_Collections_IEnumerator_get_Current_mE33F326567796F4B5026A1DA2E7D2965433729D9 (U3CDepositCoroutineU3Ed__65_t6E910AB7FB37199A949A5B06E1034C81914D84F0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5062,7 +5064,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDepositCoroutineU3Ed__65_Sy
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65263
+// Method Definition Index: 65265
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDownloadSpriteCoroutineU3Ed__11__ctor_m7D34B620094719864615E7591DC0E78FE9FC54E4 (U3CDownloadSpriteCoroutineU3Ed__11_t0E67795CA6712DAAAEBCE161DA82479DD7DA1B28* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -5072,7 +5074,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDownloadSpriteCoroutineU3Ed__11__ctor
 		return;
 	}
 }
-// Method Definition Index: 65264
+// Method Definition Index: 65266
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDownloadSpriteCoroutineU3Ed__11_System_IDisposable_Dispose_m43C19096F7152B70E9764980F7CE737DE2D7B370 (U3CDownloadSpriteCoroutineU3Ed__11_t0E67795CA6712DAAAEBCE161DA82479DD7DA1B28* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -5121,7 +5123,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65265
+// Method Definition Index: 65267
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CDownloadSpriteCoroutineU3Ed__11_MoveNext_mA4092BB031900205178301028E4D5963083364FB (U3CDownloadSpriteCoroutineU3Ed__11_t0E67795CA6712DAAAEBCE161DA82479DD7DA1B28* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5477,7 +5479,7 @@ IL_01f3:
 		return L_62;
 	}
 }
-// Method Definition Index: 65266
+// Method Definition Index: 65268
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDownloadSpriteCoroutineU3Ed__11_U3CU3Em__Finally1_mBD5F598651DA07243C16836ECEEC898DC625E30B (U3CDownloadSpriteCoroutineU3Ed__11_t0E67795CA6712DAAAEBCE161DA82479DD7DA1B28* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5505,7 +5507,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65267
+// Method Definition Index: 65269
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDownloadSpriteCoroutineU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m0D33F8B23169A3E2BF93AFEAA643E1DAED479731 (U3CDownloadSpriteCoroutineU3Ed__11_t0E67795CA6712DAAAEBCE161DA82479DD7DA1B28* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5513,7 +5515,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDownloadSpriteCoroutineU3Ed
 		return L_0;
 	}
 }
-// Method Definition Index: 65268
+// Method Definition Index: 65270
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDownloadSpriteCoroutineU3Ed__11_System_Collections_IEnumerator_Reset_m9AB0DBB7ECC0B684449403253061C41C13F8B5AA (U3CDownloadSpriteCoroutineU3Ed__11_t0E67795CA6712DAAAEBCE161DA82479DD7DA1B28* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5522,7 +5524,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDownloadSpriteCoroutineU3Ed__11_Syste
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CDownloadSpriteCoroutineU3Ed__11_System_Collections_IEnumerator_Reset_m9AB0DBB7ECC0B684449403253061C41C13F8B5AA_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65269
+// Method Definition Index: 65271
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDownloadSpriteCoroutineU3Ed__11_System_Collections_IEnumerator_get_Current_m70A33180789448062ABA8C0DB7FD55757A10B5AA (U3CDownloadSpriteCoroutineU3Ed__11_t0E67795CA6712DAAAEBCE161DA82479DD7DA1B28* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5538,7 +5540,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDownloadSpriteCoroutineU3Ed
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65270
+// Method Definition Index: 65272
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CForgotPasswordCoroutineU3Ed__24__ctor_mC6CC4763DAF1F69AE886D1C95E6CFA122E8F65D8 (U3CForgotPasswordCoroutineU3Ed__24_t4B084BCD1E9B1DAE6D7B934ED8C814BBF8789518* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -5548,7 +5550,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CForgotPasswordCoroutineU3Ed__24__ctor
 		return;
 	}
 }
-// Method Definition Index: 65271
+// Method Definition Index: 65273
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CForgotPasswordCoroutineU3Ed__24_System_IDisposable_Dispose_m768F9D2FE800656C92095938AA02CE9851B7758B (U3CForgotPasswordCoroutineU3Ed__24_t4B084BCD1E9B1DAE6D7B934ED8C814BBF8789518* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -5597,7 +5599,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65272
+// Method Definition Index: 65274
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CForgotPasswordCoroutineU3Ed__24_MoveNext_m3B28A23FED19EB14BBC039977D35E93CCB9D06E0 (U3CForgotPasswordCoroutineU3Ed__24_t4B084BCD1E9B1DAE6D7B934ED8C814BBF8789518* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6019,7 +6021,7 @@ IL_023e:
 		return L_75;
 	}
 }
-// Method Definition Index: 65273
+// Method Definition Index: 65275
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CForgotPasswordCoroutineU3Ed__24_U3CU3Em__Finally1_m04A8551C88D6C1AEF972A9CC47B5DAB65EFF7D73 (U3CForgotPasswordCoroutineU3Ed__24_t4B084BCD1E9B1DAE6D7B934ED8C814BBF8789518* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6047,7 +6049,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65274
+// Method Definition Index: 65276
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CForgotPasswordCoroutineU3Ed__24_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mA26A1F76EBA74C430FDFB42B461968C4825A4A86 (U3CForgotPasswordCoroutineU3Ed__24_t4B084BCD1E9B1DAE6D7B934ED8C814BBF8789518* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6055,7 +6057,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CForgotPasswordCoroutineU3Ed
 		return L_0;
 	}
 }
-// Method Definition Index: 65275
+// Method Definition Index: 65277
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CForgotPasswordCoroutineU3Ed__24_System_Collections_IEnumerator_Reset_m71514A46B1CA3CD5B99C770C4BAEA7784611A3CB (U3CForgotPasswordCoroutineU3Ed__24_t4B084BCD1E9B1DAE6D7B934ED8C814BBF8789518* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6064,7 +6066,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CForgotPasswordCoroutineU3Ed__24_Syste
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CForgotPasswordCoroutineU3Ed__24_System_Collections_IEnumerator_Reset_m71514A46B1CA3CD5B99C770C4BAEA7784611A3CB_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65276
+// Method Definition Index: 65278
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CForgotPasswordCoroutineU3Ed__24_System_Collections_IEnumerator_get_Current_mF9DA3054C886C9085FA0B65569C8425173A02824 (U3CForgotPasswordCoroutineU3Ed__24_t4B084BCD1E9B1DAE6D7B934ED8C814BBF8789518* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6080,7 +6082,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CForgotPasswordCoroutineU3Ed
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65277
+// Method Definition Index: 65279
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetDailyOffersCoroutineU3Ed__71__ctor_m459AEBAB128ABFD2516C145B9080D3781E6249B9 (U3CGetDailyOffersCoroutineU3Ed__71_t5D2F4F8458B15B01B4300ECCF337AE6B5E0236C5* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -6090,7 +6092,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetDailyOffersCoroutineU3Ed__71__ctor
 		return;
 	}
 }
-// Method Definition Index: 65278
+// Method Definition Index: 65280
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetDailyOffersCoroutineU3Ed__71_System_IDisposable_Dispose_mC75C1DD08C8AB90EDE8E31BB62F45BE985F2C61D (U3CGetDailyOffersCoroutineU3Ed__71_t5D2F4F8458B15B01B4300ECCF337AE6B5E0236C5* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -6139,7 +6141,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65279
+// Method Definition Index: 65281
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CGetDailyOffersCoroutineU3Ed__71_MoveNext_mC88919B2242B999C8884E8D6296620179DB4DD49 (U3CGetDailyOffersCoroutineU3Ed__71_t5D2F4F8458B15B01B4300ECCF337AE6B5E0236C5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6357,7 +6359,7 @@ IL_013d:
 		return L_34;
 	}
 }
-// Method Definition Index: 65280
+// Method Definition Index: 65282
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetDailyOffersCoroutineU3Ed__71_U3CU3Em__Finally1_mFF0C544566CF206C9F1D337BB489D6E85869DEE3 (U3CGetDailyOffersCoroutineU3Ed__71_t5D2F4F8458B15B01B4300ECCF337AE6B5E0236C5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6385,7 +6387,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65281
+// Method Definition Index: 65283
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetDailyOffersCoroutineU3Ed__71_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mB3E003617560A706E66326B104CB9D213AB6BA22 (U3CGetDailyOffersCoroutineU3Ed__71_t5D2F4F8458B15B01B4300ECCF337AE6B5E0236C5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6393,7 +6395,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetDailyOffersCoroutineU3Ed
 		return L_0;
 	}
 }
-// Method Definition Index: 65282
+// Method Definition Index: 65284
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetDailyOffersCoroutineU3Ed__71_System_Collections_IEnumerator_Reset_m621C3A2B620F9CE00BE2611F9684BB397384A76E (U3CGetDailyOffersCoroutineU3Ed__71_t5D2F4F8458B15B01B4300ECCF337AE6B5E0236C5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6402,7 +6404,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetDailyOffersCoroutineU3Ed__71_Syste
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CGetDailyOffersCoroutineU3Ed__71_System_Collections_IEnumerator_Reset_m621C3A2B620F9CE00BE2611F9684BB397384A76E_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65283
+// Method Definition Index: 65285
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetDailyOffersCoroutineU3Ed__71_System_Collections_IEnumerator_get_Current_mC4F0B71219AC6925C2FFC23FC68C03F34F1953B9 (U3CGetDailyOffersCoroutineU3Ed__71_t5D2F4F8458B15B01B4300ECCF337AE6B5E0236C5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6418,7 +6420,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetDailyOffersCoroutineU3Ed
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65284
+// Method Definition Index: 65286
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetDailyRewardStatusCoroutineU3Ed__42__ctor_m8C8430DDDBF2BE65F6707FCE565847E1DD63956A (U3CGetDailyRewardStatusCoroutineU3Ed__42_t2BE0679F70AC170C08EFE5BF5D93E31AAEEBB6FB* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -6428,7 +6430,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetDailyRewardStatusCoroutineU3Ed__42
 		return;
 	}
 }
-// Method Definition Index: 65285
+// Method Definition Index: 65287
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetDailyRewardStatusCoroutineU3Ed__42_System_IDisposable_Dispose_m1464CF6EEBDDFCED77E842EE998EE631899DD4BF (U3CGetDailyRewardStatusCoroutineU3Ed__42_t2BE0679F70AC170C08EFE5BF5D93E31AAEEBB6FB* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -6477,7 +6479,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65286
+// Method Definition Index: 65288
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CGetDailyRewardStatusCoroutineU3Ed__42_MoveNext_m29B4B357452CF3B745BA7A7AE192593B9FA27DC6 (U3CGetDailyRewardStatusCoroutineU3Ed__42_t2BE0679F70AC170C08EFE5BF5D93E31AAEEBB6FB* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6720,7 +6722,7 @@ IL_016c:
 		return L_43;
 	}
 }
-// Method Definition Index: 65287
+// Method Definition Index: 65289
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetDailyRewardStatusCoroutineU3Ed__42_U3CU3Em__Finally1_m6D09BA521E9769F56931595797267A1FCD14140F (U3CGetDailyRewardStatusCoroutineU3Ed__42_t2BE0679F70AC170C08EFE5BF5D93E31AAEEBB6FB* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6748,7 +6750,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65288
+// Method Definition Index: 65290
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetDailyRewardStatusCoroutineU3Ed__42_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m329247348AD472211C284D81AC99C1428BF023C8 (U3CGetDailyRewardStatusCoroutineU3Ed__42_t2BE0679F70AC170C08EFE5BF5D93E31AAEEBB6FB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6756,7 +6758,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetDailyRewardStatusCorouti
 		return L_0;
 	}
 }
-// Method Definition Index: 65289
+// Method Definition Index: 65291
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetDailyRewardStatusCoroutineU3Ed__42_System_Collections_IEnumerator_Reset_m2BB1E72970E7AA5E74EF59FF082071CE5E8A9AEC (U3CGetDailyRewardStatusCoroutineU3Ed__42_t2BE0679F70AC170C08EFE5BF5D93E31AAEEBB6FB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6765,7 +6767,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetDailyRewardStatusCoroutineU3Ed__42
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CGetDailyRewardStatusCoroutineU3Ed__42_System_Collections_IEnumerator_Reset_m2BB1E72970E7AA5E74EF59FF082071CE5E8A9AEC_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65290
+// Method Definition Index: 65292
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetDailyRewardStatusCoroutineU3Ed__42_System_Collections_IEnumerator_get_Current_m5C95E8C6187F9C584878000DA39B60561E68565A (U3CGetDailyRewardStatusCoroutineU3Ed__42_t2BE0679F70AC170C08EFE5BF5D93E31AAEEBB6FB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6781,7 +6783,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetDailyRewardStatusCorouti
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65291
+// Method Definition Index: 65293
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetImageCoroutineU3Ed__51__ctor_m693388581E95AA8039EFC04AA18CBDD044F8F97E (U3CGetImageCoroutineU3Ed__51_tC450EA9CEC95637BF24F58D32A7E256B41536E8C* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -6791,7 +6793,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetImageCoroutineU3Ed__51__ctor_m6933
 		return;
 	}
 }
-// Method Definition Index: 65292
+// Method Definition Index: 65294
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetImageCoroutineU3Ed__51_System_IDisposable_Dispose_m7628C6AB9C624B8B7212E931A2666D7BBFE599C1 (U3CGetImageCoroutineU3Ed__51_tC450EA9CEC95637BF24F58D32A7E256B41536E8C* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -6840,7 +6842,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65293
+// Method Definition Index: 65295
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CGetImageCoroutineU3Ed__51_MoveNext_m86ECB7452E111D46ACF94D814D66233C42335146 (U3CGetImageCoroutineU3Ed__51_tC450EA9CEC95637BF24F58D32A7E256B41536E8C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7270,7 +7272,7 @@ IL_022a:
 		return L_69;
 	}
 }
-// Method Definition Index: 65294
+// Method Definition Index: 65296
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetImageCoroutineU3Ed__51_U3CU3Em__Finally1_mB6A0935C593A71CD11796322CE72E10AB251A853 (U3CGetImageCoroutineU3Ed__51_tC450EA9CEC95637BF24F58D32A7E256B41536E8C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7298,7 +7300,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65295
+// Method Definition Index: 65297
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetImageCoroutineU3Ed__51_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mEBDB74CDE9240C83C61244C347B89CCE2A8C6A3D (U3CGetImageCoroutineU3Ed__51_tC450EA9CEC95637BF24F58D32A7E256B41536E8C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7306,7 +7308,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetImageCoroutineU3Ed__51_S
 		return L_0;
 	}
 }
-// Method Definition Index: 65296
+// Method Definition Index: 65298
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetImageCoroutineU3Ed__51_System_Collections_IEnumerator_Reset_mEB5D4A55808034B38DA6C4DA2D9778FFCA6F58E0 (U3CGetImageCoroutineU3Ed__51_tC450EA9CEC95637BF24F58D32A7E256B41536E8C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7315,7 +7317,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetImageCoroutineU3Ed__51_System_Coll
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CGetImageCoroutineU3Ed__51_System_Collections_IEnumerator_Reset_mEB5D4A55808034B38DA6C4DA2D9778FFCA6F58E0_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65297
+// Method Definition Index: 65299
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetImageCoroutineU3Ed__51_System_Collections_IEnumerator_get_Current_mA76BEA7FF671B0EAAA64E6D0F41C5018452710DC (U3CGetImageCoroutineU3Ed__51_tC450EA9CEC95637BF24F58D32A7E256B41536E8C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7331,7 +7333,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetImageCoroutineU3Ed__51_S
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65298
+// Method Definition Index: 65300
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetInviteHistoryCoroutineU3Ed__59__ctor_m0C2A812D5A640472EAC1CCDA3B78DD71B65CAA48 (U3CGetInviteHistoryCoroutineU3Ed__59_tC8D6EB2B064AF3FF25ED2CAA13246281CF1AEA1B* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -7341,7 +7343,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetInviteHistoryCoroutineU3Ed__59__ct
 		return;
 	}
 }
-// Method Definition Index: 65299
+// Method Definition Index: 65301
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetInviteHistoryCoroutineU3Ed__59_System_IDisposable_Dispose_mEEDC52A8BDAB0260A3BEE9DE6856503B6AE6155F (U3CGetInviteHistoryCoroutineU3Ed__59_tC8D6EB2B064AF3FF25ED2CAA13246281CF1AEA1B* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -7390,7 +7392,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65300
+// Method Definition Index: 65302
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CGetInviteHistoryCoroutineU3Ed__59_MoveNext_m005AF62018B878C6EBFDF6B2CF92BDA4D11DA19C (U3CGetInviteHistoryCoroutineU3Ed__59_tC8D6EB2B064AF3FF25ED2CAA13246281CF1AEA1B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7718,7 +7720,7 @@ IL_0194:
 		return L_46;
 	}
 }
-// Method Definition Index: 65301
+// Method Definition Index: 65303
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetInviteHistoryCoroutineU3Ed__59_U3CU3Em__Finally1_mE7192F4E54F309B974C8358707A248404B404CCB (U3CGetInviteHistoryCoroutineU3Ed__59_tC8D6EB2B064AF3FF25ED2CAA13246281CF1AEA1B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7746,7 +7748,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65302
+// Method Definition Index: 65304
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetInviteHistoryCoroutineU3Ed__59_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m75592AF26595A620529D9056590456892C3B37A6 (U3CGetInviteHistoryCoroutineU3Ed__59_tC8D6EB2B064AF3FF25ED2CAA13246281CF1AEA1B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7754,7 +7756,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetInviteHistoryCoroutineU3
 		return L_0;
 	}
 }
-// Method Definition Index: 65303
+// Method Definition Index: 65305
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetInviteHistoryCoroutineU3Ed__59_System_Collections_IEnumerator_Reset_m480243DA8E9499BB4E48D2277B97FEB5112D0F09 (U3CGetInviteHistoryCoroutineU3Ed__59_tC8D6EB2B064AF3FF25ED2CAA13246281CF1AEA1B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7763,7 +7765,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetInviteHistoryCoroutineU3Ed__59_Sys
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CGetInviteHistoryCoroutineU3Ed__59_System_Collections_IEnumerator_Reset_m480243DA8E9499BB4E48D2277B97FEB5112D0F09_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65304
+// Method Definition Index: 65306
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetInviteHistoryCoroutineU3Ed__59_System_Collections_IEnumerator_get_Current_m264F5CEC7EAB4565D3AFCFF9C33BA4DC6EBCDC5A (U3CGetInviteHistoryCoroutineU3Ed__59_tC8D6EB2B064AF3FF25ED2CAA13246281CF1AEA1B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7779,7 +7781,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetInviteHistoryCoroutineU3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65305
+// Method Definition Index: 65307
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetLeaderboardCoroutineU3Ed__53__ctor_m78A0A56805425FE73FCECFB1770D29B75D88C5B9 (U3CGetLeaderboardCoroutineU3Ed__53_tE98B78A06DC35C8D00702C5A4B815D132AE5F154* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -7789,7 +7791,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetLeaderboardCoroutineU3Ed__53__ctor
 		return;
 	}
 }
-// Method Definition Index: 65306
+// Method Definition Index: 65308
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetLeaderboardCoroutineU3Ed__53_System_IDisposable_Dispose_m7A1C883EB51B46CFF19AC1DBD9DB7933C46F5842 (U3CGetLeaderboardCoroutineU3Ed__53_tE98B78A06DC35C8D00702C5A4B815D132AE5F154* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -7838,7 +7840,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65307
+// Method Definition Index: 65309
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CGetLeaderboardCoroutineU3Ed__53_MoveNext_m73F8875CDBF1913E3D187B1B9535C9DC987C2512 (U3CGetLeaderboardCoroutineU3Ed__53_tE98B78A06DC35C8D00702C5A4B815D132AE5F154* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8167,7 +8169,7 @@ IL_019d:
 		return L_47;
 	}
 }
-// Method Definition Index: 65308
+// Method Definition Index: 65310
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetLeaderboardCoroutineU3Ed__53_U3CU3Em__Finally1_m0BFEEF849A0395C1B29F79166CFB3C5036DF3EF8 (U3CGetLeaderboardCoroutineU3Ed__53_tE98B78A06DC35C8D00702C5A4B815D132AE5F154* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8195,7 +8197,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65309
+// Method Definition Index: 65311
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetLeaderboardCoroutineU3Ed__53_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m851F0B52013849488A542F230FFF421A8A7A7EA2 (U3CGetLeaderboardCoroutineU3Ed__53_tE98B78A06DC35C8D00702C5A4B815D132AE5F154* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8203,7 +8205,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetLeaderboardCoroutineU3Ed
 		return L_0;
 	}
 }
-// Method Definition Index: 65310
+// Method Definition Index: 65312
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetLeaderboardCoroutineU3Ed__53_System_Collections_IEnumerator_Reset_mE41D526F5B7276CF9C18CDDC199805ADDECF4207 (U3CGetLeaderboardCoroutineU3Ed__53_tE98B78A06DC35C8D00702C5A4B815D132AE5F154* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8212,7 +8214,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetLeaderboardCoroutineU3Ed__53_Syste
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CGetLeaderboardCoroutineU3Ed__53_System_Collections_IEnumerator_Reset_mE41D526F5B7276CF9C18CDDC199805ADDECF4207_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65311
+// Method Definition Index: 65313
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetLeaderboardCoroutineU3Ed__53_System_Collections_IEnumerator_get_Current_mD386A4B8DC77AEAE3EE56B8D25C1232F4208B90A (U3CGetLeaderboardCoroutineU3Ed__53_tE98B78A06DC35C8D00702C5A4B815D132AE5F154* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8228,7 +8230,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetLeaderboardCoroutineU3Ed
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65312
+// Method Definition Index: 65314
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetLobbyConfigurationsCoroutineU3Ed__73__ctor_m31DE07325CDD0CB8CA9F5C1286C37622C0CECD72 (U3CGetLobbyConfigurationsCoroutineU3Ed__73_t1C1D056E03527FA4C816DA2CD908EC7F328421F0* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -8238,7 +8240,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetLobbyConfigurationsCoroutineU3Ed__
 		return;
 	}
 }
-// Method Definition Index: 65313
+// Method Definition Index: 65315
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetLobbyConfigurationsCoroutineU3Ed__73_System_IDisposable_Dispose_m58B5CBFE783594C7FCA9475214360AD27807E61A (U3CGetLobbyConfigurationsCoroutineU3Ed__73_t1C1D056E03527FA4C816DA2CD908EC7F328421F0* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -8287,7 +8289,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65314
+// Method Definition Index: 65316
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CGetLobbyConfigurationsCoroutineU3Ed__73_MoveNext_m55FE0047ED2EF9BFFE415C85DD019AFC43E15D81 (U3CGetLobbyConfigurationsCoroutineU3Ed__73_t1C1D056E03527FA4C816DA2CD908EC7F328421F0* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8587,7 +8589,7 @@ IL_0185:
 		return L_42;
 	}
 }
-// Method Definition Index: 65315
+// Method Definition Index: 65317
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetLobbyConfigurationsCoroutineU3Ed__73_U3CU3Em__Finally1_m779D64ACDAF58FECC39EE5F720624720DFA351A6 (U3CGetLobbyConfigurationsCoroutineU3Ed__73_t1C1D056E03527FA4C816DA2CD908EC7F328421F0* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8615,7 +8617,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65316
+// Method Definition Index: 65318
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetLobbyConfigurationsCoroutineU3Ed__73_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m4BA3B234326196B0B79370C81A1363F9C0E9DFA9 (U3CGetLobbyConfigurationsCoroutineU3Ed__73_t1C1D056E03527FA4C816DA2CD908EC7F328421F0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8623,7 +8625,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetLobbyConfigurationsCorou
 		return L_0;
 	}
 }
-// Method Definition Index: 65317
+// Method Definition Index: 65319
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetLobbyConfigurationsCoroutineU3Ed__73_System_Collections_IEnumerator_Reset_mAE8CCC16833394B4848DE4D9C82C513685E73444 (U3CGetLobbyConfigurationsCoroutineU3Ed__73_t1C1D056E03527FA4C816DA2CD908EC7F328421F0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8632,7 +8634,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetLobbyConfigurationsCoroutineU3Ed__
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CGetLobbyConfigurationsCoroutineU3Ed__73_System_Collections_IEnumerator_Reset_mAE8CCC16833394B4848DE4D9C82C513685E73444_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65318
+// Method Definition Index: 65320
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetLobbyConfigurationsCoroutineU3Ed__73_System_Collections_IEnumerator_get_Current_m04907037898902E0BB2629CD99F57A01EA6BFDBE (U3CGetLobbyConfigurationsCoroutineU3Ed__73_t1C1D056E03527FA4C816DA2CD908EC7F328421F0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8648,7 +8650,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetLobbyConfigurationsCorou
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65319
+// Method Definition Index: 65321
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetMyTicketsCoroutineU3Ed__102__ctor_mF18F6CE2545B4E7626F983A6FC7236829FC83452 (U3CGetMyTicketsCoroutineU3Ed__102_t189DA1455E312B8024BCCBB8F36C6C90BD1D8FA5* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -8658,7 +8660,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetMyTicketsCoroutineU3Ed__102__ctor_
 		return;
 	}
 }
-// Method Definition Index: 65320
+// Method Definition Index: 65322
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetMyTicketsCoroutineU3Ed__102_System_IDisposable_Dispose_mEC29B5B6FEE6905EFBD70ECD9A76510FB5E3044A (U3CGetMyTicketsCoroutineU3Ed__102_t189DA1455E312B8024BCCBB8F36C6C90BD1D8FA5* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -8707,7 +8709,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65321
+// Method Definition Index: 65323
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CGetMyTicketsCoroutineU3Ed__102_MoveNext_m3E3BC29F777C40FF1A5970656FA800E91492F557 (U3CGetMyTicketsCoroutineU3Ed__102_t189DA1455E312B8024BCCBB8F36C6C90BD1D8FA5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9081,7 +9083,7 @@ IL_01ba:
 		return L_49;
 	}
 }
-// Method Definition Index: 65322
+// Method Definition Index: 65324
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetMyTicketsCoroutineU3Ed__102_U3CU3Em__Finally1_mF3F736E3D85E16C7D103A0CEF30492DAB5B5D9C0 (U3CGetMyTicketsCoroutineU3Ed__102_t189DA1455E312B8024BCCBB8F36C6C90BD1D8FA5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9109,7 +9111,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65323
+// Method Definition Index: 65325
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetMyTicketsCoroutineU3Ed__102_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m5F9BA3DF9DC9A4711CC5BDA804DA9978DA5718FA (U3CGetMyTicketsCoroutineU3Ed__102_t189DA1455E312B8024BCCBB8F36C6C90BD1D8FA5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9117,7 +9119,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetMyTicketsCoroutineU3Ed__
 		return L_0;
 	}
 }
-// Method Definition Index: 65324
+// Method Definition Index: 65326
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetMyTicketsCoroutineU3Ed__102_System_Collections_IEnumerator_Reset_m614F3E627955D76E0180B7D7E32913F337E605FD (U3CGetMyTicketsCoroutineU3Ed__102_t189DA1455E312B8024BCCBB8F36C6C90BD1D8FA5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9126,7 +9128,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetMyTicketsCoroutineU3Ed__102_System
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CGetMyTicketsCoroutineU3Ed__102_System_Collections_IEnumerator_Reset_m614F3E627955D76E0180B7D7E32913F337E605FD_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65325
+// Method Definition Index: 65327
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetMyTicketsCoroutineU3Ed__102_System_Collections_IEnumerator_get_Current_m22A9ADBA4BE21DE459BBEAA1738B5AEBF3E0AB74 (U3CGetMyTicketsCoroutineU3Ed__102_t189DA1455E312B8024BCCBB8F36C6C90BD1D8FA5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9142,7 +9144,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetMyTicketsCoroutineU3Ed__
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65326
+// Method Definition Index: 65328
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetProfileCoroutineU3Ed__40__ctor_mE52B908C430BD1F608B70985810489703A3968E1 (U3CGetProfileCoroutineU3Ed__40_t17504D8F5FA461A2DA529F81174756A1E0515483* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -9152,7 +9154,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetProfileCoroutineU3Ed__40__ctor_mE5
 		return;
 	}
 }
-// Method Definition Index: 65327
+// Method Definition Index: 65329
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetProfileCoroutineU3Ed__40_System_IDisposable_Dispose_m9CFA72AA0B29306C0BBA17B5532DC6A14A6EB58A (U3CGetProfileCoroutineU3Ed__40_t17504D8F5FA461A2DA529F81174756A1E0515483* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -9201,7 +9203,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65328
+// Method Definition Index: 65330
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CGetProfileCoroutineU3Ed__40_MoveNext_mED27D041D69BC64C51FB248D13019563F75368F7 (U3CGetProfileCoroutineU3Ed__40_t17504D8F5FA461A2DA529F81174756A1E0515483* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10140,7 +10142,7 @@ IL_02e1:
 		return L_116;
 	}
 }
-// Method Definition Index: 65329
+// Method Definition Index: 65331
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetProfileCoroutineU3Ed__40_U3CU3Em__Finally1_m03E0267EDDE2D8CD82BD4F1070DEF18DE28196D1 (U3CGetProfileCoroutineU3Ed__40_t17504D8F5FA461A2DA529F81174756A1E0515483* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10168,7 +10170,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65330
+// Method Definition Index: 65332
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetProfileCoroutineU3Ed__40_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m5C55B2AEECD2B63E86057A19E586E1885137ECF5 (U3CGetProfileCoroutineU3Ed__40_t17504D8F5FA461A2DA529F81174756A1E0515483* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10176,7 +10178,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetProfileCoroutineU3Ed__40
 		return L_0;
 	}
 }
-// Method Definition Index: 65331
+// Method Definition Index: 65333
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetProfileCoroutineU3Ed__40_System_Collections_IEnumerator_Reset_mA9A5B437DCE22609375D90300107B5F39DF15490 (U3CGetProfileCoroutineU3Ed__40_t17504D8F5FA461A2DA529F81174756A1E0515483* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10185,7 +10187,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetProfileCoroutineU3Ed__40_System_Co
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CGetProfileCoroutineU3Ed__40_System_Collections_IEnumerator_Reset_mA9A5B437DCE22609375D90300107B5F39DF15490_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65332
+// Method Definition Index: 65334
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetProfileCoroutineU3Ed__40_System_Collections_IEnumerator_get_Current_m47224212A96843CB5200F05C67D1BF18AF6765F9 (U3CGetProfileCoroutineU3Ed__40_t17504D8F5FA461A2DA529F81174756A1E0515483* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10201,7 +10203,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetProfileCoroutineU3Ed__40
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65333
+// Method Definition Index: 65335
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetTransactionHistoryCoroutineU3Ed__61__ctor_mA9E7E7707614AF506026034579AA6A551BCA4EAB (U3CGetTransactionHistoryCoroutineU3Ed__61_tC6FBACEE873D77813C20D6F9A81C90C01A0B94C3* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -10211,7 +10213,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetTransactionHistoryCoroutineU3Ed__6
 		return;
 	}
 }
-// Method Definition Index: 65334
+// Method Definition Index: 65336
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetTransactionHistoryCoroutineU3Ed__61_System_IDisposable_Dispose_mB4491008C4EAC4E8C2253DE833C948EAF1941803 (U3CGetTransactionHistoryCoroutineU3Ed__61_tC6FBACEE873D77813C20D6F9A81C90C01A0B94C3* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -10260,7 +10262,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65335
+// Method Definition Index: 65337
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CGetTransactionHistoryCoroutineU3Ed__61_MoveNext_m6B36D7C5C602AFF4C0F7AC35F223FB694AD42B11 (U3CGetTransactionHistoryCoroutineU3Ed__61_tC6FBACEE873D77813C20D6F9A81C90C01A0B94C3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10588,7 +10590,7 @@ IL_0194:
 		return L_46;
 	}
 }
-// Method Definition Index: 65336
+// Method Definition Index: 65338
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetTransactionHistoryCoroutineU3Ed__61_U3CU3Em__Finally1_m0AECFAA8BE062B19CED4E4FEA86F21DB9D55711C (U3CGetTransactionHistoryCoroutineU3Ed__61_tC6FBACEE873D77813C20D6F9A81C90C01A0B94C3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10616,7 +10618,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65337
+// Method Definition Index: 65339
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetTransactionHistoryCoroutineU3Ed__61_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m50AFB8B90018EA73717187742BC76E6F3F9C7852 (U3CGetTransactionHistoryCoroutineU3Ed__61_tC6FBACEE873D77813C20D6F9A81C90C01A0B94C3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10624,7 +10626,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetTransactionHistoryCorout
 		return L_0;
 	}
 }
-// Method Definition Index: 65338
+// Method Definition Index: 65340
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetTransactionHistoryCoroutineU3Ed__61_System_Collections_IEnumerator_Reset_mC54534019908FD2166648FCAB94C3D16866B0DD5 (U3CGetTransactionHistoryCoroutineU3Ed__61_tC6FBACEE873D77813C20D6F9A81C90C01A0B94C3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10633,7 +10635,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetTransactionHistoryCoroutineU3Ed__6
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CGetTransactionHistoryCoroutineU3Ed__61_System_Collections_IEnumerator_Reset_mC54534019908FD2166648FCAB94C3D16866B0DD5_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65339
+// Method Definition Index: 65341
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetTransactionHistoryCoroutineU3Ed__61_System_Collections_IEnumerator_get_Current_m0D67AC7A4439AE39C222FC1297FE268E833B17A0 (U3CGetTransactionHistoryCoroutineU3Ed__61_tC6FBACEE873D77813C20D6F9A81C90C01A0B94C3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10649,7 +10651,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetTransactionHistoryCorout
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65340
+// Method Definition Index: 65342
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetWalletBalanceCoroutineU3Ed__46__ctor_m860E990C792FC2C9D436E3C43AD9CBAD62F7D90E (U3CGetWalletBalanceCoroutineU3Ed__46_tB494BDE5D62CFBF0288E6D8E5BBFAA2AAB0186A6* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -10659,7 +10661,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetWalletBalanceCoroutineU3Ed__46__ct
 		return;
 	}
 }
-// Method Definition Index: 65341
+// Method Definition Index: 65343
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetWalletBalanceCoroutineU3Ed__46_System_IDisposable_Dispose_mBBD594209B1D959D2061F990E0BDB5C58D67C855 (U3CGetWalletBalanceCoroutineU3Ed__46_tB494BDE5D62CFBF0288E6D8E5BBFAA2AAB0186A6* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -10708,7 +10710,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65342
+// Method Definition Index: 65344
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CGetWalletBalanceCoroutineU3Ed__46_MoveNext_m9ED99EE3E6105825FDC99F2D71D4D5B0F1103AD4 (U3CGetWalletBalanceCoroutineU3Ed__46_tB494BDE5D62CFBF0288E6D8E5BBFAA2AAB0186A6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10956,7 +10958,7 @@ IL_0140:
 		return L_36;
 	}
 }
-// Method Definition Index: 65343
+// Method Definition Index: 65345
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetWalletBalanceCoroutineU3Ed__46_U3CU3Em__Finally1_m0604D8F35936B5FECB850AF4987DD5146B5274F4 (U3CGetWalletBalanceCoroutineU3Ed__46_tB494BDE5D62CFBF0288E6D8E5BBFAA2AAB0186A6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10984,7 +10986,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65344
+// Method Definition Index: 65346
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetWalletBalanceCoroutineU3Ed__46_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mEDD9F69DEF66479F1FC47E8F5DA4A32D1B811E23 (U3CGetWalletBalanceCoroutineU3Ed__46_tB494BDE5D62CFBF0288E6D8E5BBFAA2AAB0186A6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10992,7 +10994,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetWalletBalanceCoroutineU3
 		return L_0;
 	}
 }
-// Method Definition Index: 65345
+// Method Definition Index: 65347
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetWalletBalanceCoroutineU3Ed__46_System_Collections_IEnumerator_Reset_mA830C6B3D4DF2A2CA749E8D3C4725B0EEB1E424C (U3CGetWalletBalanceCoroutineU3Ed__46_tB494BDE5D62CFBF0288E6D8E5BBFAA2AAB0186A6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11001,7 +11003,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGetWalletBalanceCoroutineU3Ed__46_Sys
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CGetWalletBalanceCoroutineU3Ed__46_System_Collections_IEnumerator_Reset_mA830C6B3D4DF2A2CA749E8D3C4725B0EEB1E424C_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65346
+// Method Definition Index: 65348
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetWalletBalanceCoroutineU3Ed__46_System_Collections_IEnumerator_get_Current_m673D0F7F0089DFDB8D1FE1D14E26C47849C06A0E (U3CGetWalletBalanceCoroutineU3Ed__46_tB494BDE5D62CFBF0288E6D8E5BBFAA2AAB0186A6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11017,7 +11019,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGetWalletBalanceCoroutineU3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65347
+// Method Definition Index: 65349
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGuestLoginCoroutineU3Ed__22__ctor_m590D27393F4A23CCE09C0A1F5828D7DE11B50ED1 (U3CGuestLoginCoroutineU3Ed__22_t63EDF0F8A4E3113E8D82899942AFD3198808ED0E* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -11027,7 +11029,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGuestLoginCoroutineU3Ed__22__ctor_m59
 		return;
 	}
 }
-// Method Definition Index: 65348
+// Method Definition Index: 65350
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGuestLoginCoroutineU3Ed__22_System_IDisposable_Dispose_m7C9EFE8EE1E3478BC73A16B31DD3728CDE8AEA81 (U3CGuestLoginCoroutineU3Ed__22_t63EDF0F8A4E3113E8D82899942AFD3198808ED0E* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -11076,7 +11078,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65349
+// Method Definition Index: 65351
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CGuestLoginCoroutineU3Ed__22_MoveNext_m4D41DE5445EAA7F4F8588625AB93E5337F88CE39 (U3CGuestLoginCoroutineU3Ed__22_t63EDF0F8A4E3113E8D82899942AFD3198808ED0E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11590,7 +11592,7 @@ IL_0337:
 		return L_123;
 	}
 }
-// Method Definition Index: 65350
+// Method Definition Index: 65352
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGuestLoginCoroutineU3Ed__22_U3CU3Em__Finally1_m4E1E2BEC59BEAFFAB079BEB4F874127BD67A3D6F (U3CGuestLoginCoroutineU3Ed__22_t63EDF0F8A4E3113E8D82899942AFD3198808ED0E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11618,7 +11620,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65351
+// Method Definition Index: 65353
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGuestLoginCoroutineU3Ed__22_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m43C473EA2E374E0CABEBFA3FFDB800D243C52882 (U3CGuestLoginCoroutineU3Ed__22_t63EDF0F8A4E3113E8D82899942AFD3198808ED0E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11626,7 +11628,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGuestLoginCoroutineU3Ed__22
 		return L_0;
 	}
 }
-// Method Definition Index: 65352
+// Method Definition Index: 65354
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGuestLoginCoroutineU3Ed__22_System_Collections_IEnumerator_Reset_m27736AF47DFF9DC8C2FF6816E9C3423B0275C5AD (U3CGuestLoginCoroutineU3Ed__22_t63EDF0F8A4E3113E8D82899942AFD3198808ED0E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11635,7 +11637,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CGuestLoginCoroutineU3Ed__22_System_Co
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CGuestLoginCoroutineU3Ed__22_System_Collections_IEnumerator_Reset_m27736AF47DFF9DC8C2FF6816E9C3423B0275C5AD_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65353
+// Method Definition Index: 65355
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGuestLoginCoroutineU3Ed__22_System_Collections_IEnumerator_get_Current_mAF4E55D06DE95767B08AC0EF23B934A627B7EC89 (U3CGuestLoginCoroutineU3Ed__22_t63EDF0F8A4E3113E8D82899942AFD3198808ED0E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11651,7 +11653,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CGuestLoginCoroutineU3Ed__22
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65354
+// Method Definition Index: 65356
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoginCoroutineU3Ed__20__ctor_mDF35B297E2EA74DBFD395960FCDD17A086F05E40 (U3CLoginCoroutineU3Ed__20_t1C93CFE22D85C780CAECCADF5D5E211DE832AA12* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -11661,7 +11663,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoginCoroutineU3Ed__20__ctor_mDF35B29
 		return;
 	}
 }
-// Method Definition Index: 65355
+// Method Definition Index: 65357
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoginCoroutineU3Ed__20_System_IDisposable_Dispose_m67C14AD63F974B127EFF5EB25F7D218E37F822EE (U3CLoginCoroutineU3Ed__20_t1C93CFE22D85C780CAECCADF5D5E211DE832AA12* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -11710,7 +11712,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65356
+// Method Definition Index: 65358
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CLoginCoroutineU3Ed__20_MoveNext_m4E142CB144D785549EE130659EED9C13FBE313D6 (U3CLoginCoroutineU3Ed__20_t1C93CFE22D85C780CAECCADF5D5E211DE832AA12* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12242,7 +12244,7 @@ IL_0357:
 		return L_130;
 	}
 }
-// Method Definition Index: 65357
+// Method Definition Index: 65359
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoginCoroutineU3Ed__20_U3CU3Em__Finally1_mF11EA06E5FE72582FDD50BC5BC8CE87978BF38C5 (U3CLoginCoroutineU3Ed__20_t1C93CFE22D85C780CAECCADF5D5E211DE832AA12* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12270,7 +12272,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65358
+// Method Definition Index: 65360
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoginCoroutineU3Ed__20_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m3B94DBBA413B57581FB070AB39ECBFC305B64039 (U3CLoginCoroutineU3Ed__20_t1C93CFE22D85C780CAECCADF5D5E211DE832AA12* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12278,7 +12280,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoginCoroutineU3Ed__20_Syst
 		return L_0;
 	}
 }
-// Method Definition Index: 65359
+// Method Definition Index: 65361
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoginCoroutineU3Ed__20_System_Collections_IEnumerator_Reset_m62B39F228D83ECCA5FB6FA3272DFD71400920BE1 (U3CLoginCoroutineU3Ed__20_t1C93CFE22D85C780CAECCADF5D5E211DE832AA12* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12287,7 +12289,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoginCoroutineU3Ed__20_System_Collect
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CLoginCoroutineU3Ed__20_System_Collections_IEnumerator_Reset_m62B39F228D83ECCA5FB6FA3272DFD71400920BE1_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65360
+// Method Definition Index: 65362
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoginCoroutineU3Ed__20_System_Collections_IEnumerator_get_Current_m98FFD93218E9C0C1301BA877548CCE22D76B16E1 (U3CLoginCoroutineU3Ed__20_t1C93CFE22D85C780CAECCADF5D5E211DE832AA12* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12303,7 +12305,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoginCoroutineU3Ed__20_Syst
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65361
+// Method Definition Index: 65363
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLogoutCoroutineU3Ed__16__ctor_m43F7982AC27F97AF8AEB9D06CCB44BCD4418CB4B (U3CLogoutCoroutineU3Ed__16_t4F6CE7F7451EDA44F8B72E90022B5F237A136C2A* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -12313,7 +12315,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLogoutCoroutineU3Ed__16__ctor_m43F798
 		return;
 	}
 }
-// Method Definition Index: 65362
+// Method Definition Index: 65364
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLogoutCoroutineU3Ed__16_System_IDisposable_Dispose_mC8C138392CB9A286399DD42175183B93942BC48B (U3CLogoutCoroutineU3Ed__16_t4F6CE7F7451EDA44F8B72E90022B5F237A136C2A* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -12362,7 +12364,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65363
+// Method Definition Index: 65365
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CLogoutCoroutineU3Ed__16_MoveNext_m30A4B3595075EB93A538723CDFFD33D802580020 (U3CLogoutCoroutineU3Ed__16_t4F6CE7F7451EDA44F8B72E90022B5F237A136C2A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12605,7 +12607,7 @@ IL_016c:
 		return L_36;
 	}
 }
-// Method Definition Index: 65364
+// Method Definition Index: 65366
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLogoutCoroutineU3Ed__16_U3CU3Em__Finally1_mA7EFAB716C19AAF0F86B762E18923FF0235757D9 (U3CLogoutCoroutineU3Ed__16_t4F6CE7F7451EDA44F8B72E90022B5F237A136C2A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12633,7 +12635,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65365
+// Method Definition Index: 65367
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLogoutCoroutineU3Ed__16_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE1D03E2BF66B51D583A8DD9BE81806D14A108375 (U3CLogoutCoroutineU3Ed__16_t4F6CE7F7451EDA44F8B72E90022B5F237A136C2A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12641,7 +12643,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLogoutCoroutineU3Ed__16_Sys
 		return L_0;
 	}
 }
-// Method Definition Index: 65366
+// Method Definition Index: 65368
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLogoutCoroutineU3Ed__16_System_Collections_IEnumerator_Reset_mDB0CB81E76F862919963ECA6EB8794A45D0E680F (U3CLogoutCoroutineU3Ed__16_t4F6CE7F7451EDA44F8B72E90022B5F237A136C2A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12650,7 +12652,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLogoutCoroutineU3Ed__16_System_Collec
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CLogoutCoroutineU3Ed__16_System_Collections_IEnumerator_Reset_mDB0CB81E76F862919963ECA6EB8794A45D0E680F_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65367
+// Method Definition Index: 65369
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLogoutCoroutineU3Ed__16_System_Collections_IEnumerator_get_Current_mA4DB2A49C713395344CC1B812C75A7792B9AEC59 (U3CLogoutCoroutineU3Ed__16_t4F6CE7F7451EDA44F8B72E90022B5F237A136C2A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12666,7 +12668,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLogoutCoroutineU3Ed__16_Sys
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65368
+// Method Definition Index: 65370
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRegisterCoroutineU3Ed__18__ctor_m213FF8D002B838DCA8EB30085F6831AA0F1C7ED8 (U3CRegisterCoroutineU3Ed__18_t605B8ED70252BA14FBFA8909595C0FA51601CA46* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -12676,7 +12678,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRegisterCoroutineU3Ed__18__ctor_m213F
 		return;
 	}
 }
-// Method Definition Index: 65369
+// Method Definition Index: 65371
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRegisterCoroutineU3Ed__18_System_IDisposable_Dispose_m68466ADB46B40262F7D8B13B60C0197AB09D4C76 (U3CRegisterCoroutineU3Ed__18_t605B8ED70252BA14FBFA8909595C0FA51601CA46* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -12725,7 +12727,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65370
+// Method Definition Index: 65372
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CRegisterCoroutineU3Ed__18_MoveNext_m5E08C815A43AA4F8202C6F3029F764E20446EE0A (U3CRegisterCoroutineU3Ed__18_t605B8ED70252BA14FBFA8909595C0FA51601CA46* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13221,7 +13223,7 @@ IL_0323:
 		return L_128;
 	}
 }
-// Method Definition Index: 65371
+// Method Definition Index: 65373
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRegisterCoroutineU3Ed__18_U3CU3Em__Finally1_m7E62E33CC1E1C3BCD7DEF3CBFB116DB6A9C8B708 (U3CRegisterCoroutineU3Ed__18_t605B8ED70252BA14FBFA8909595C0FA51601CA46* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13249,7 +13251,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65372
+// Method Definition Index: 65374
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRegisterCoroutineU3Ed__18_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m0FE77EE8556391AABAA365832C90F9B19AD44855 (U3CRegisterCoroutineU3Ed__18_t605B8ED70252BA14FBFA8909595C0FA51601CA46* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13257,7 +13259,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRegisterCoroutineU3Ed__18_S
 		return L_0;
 	}
 }
-// Method Definition Index: 65373
+// Method Definition Index: 65375
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRegisterCoroutineU3Ed__18_System_Collections_IEnumerator_Reset_m54F559CAC55FB61F834794F68D038B395F453140 (U3CRegisterCoroutineU3Ed__18_t605B8ED70252BA14FBFA8909595C0FA51601CA46* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13266,7 +13268,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRegisterCoroutineU3Ed__18_System_Coll
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CRegisterCoroutineU3Ed__18_System_Collections_IEnumerator_Reset_m54F559CAC55FB61F834794F68D038B395F453140_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65374
+// Method Definition Index: 65376
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRegisterCoroutineU3Ed__18_System_Collections_IEnumerator_get_Current_m90D0C093063394F02BA5421FA3A72CBD60BC660E (U3CRegisterCoroutineU3Ed__18_t605B8ED70252BA14FBFA8909595C0FA51601CA46* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13282,7 +13284,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRegisterCoroutineU3Ed__18_S
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65375
+// Method Definition Index: 65377
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CResetPasswordCoroutineU3Ed__27__ctor_mF179C19E4C08640931FA68360F180F15FAC153E3 (U3CResetPasswordCoroutineU3Ed__27_tD8118A8EF02529C35D20F4D70FC8E5DF0D2FF87B* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -13292,7 +13294,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CResetPasswordCoroutineU3Ed__27__ctor_
 		return;
 	}
 }
-// Method Definition Index: 65376
+// Method Definition Index: 65378
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CResetPasswordCoroutineU3Ed__27_System_IDisposable_Dispose_m1C46940332CF9E73A84D4511D0135DBB64684FBA (U3CResetPasswordCoroutineU3Ed__27_tD8118A8EF02529C35D20F4D70FC8E5DF0D2FF87B* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -13341,7 +13343,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65377
+// Method Definition Index: 65379
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CResetPasswordCoroutineU3Ed__27_MoveNext_m9164E86AE4D9FDE610347B799D75E897516D5558 (U3CResetPasswordCoroutineU3Ed__27_tD8118A8EF02529C35D20F4D70FC8E5DF0D2FF87B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13622,7 +13624,7 @@ IL_01c8:
 		return L_55;
 	}
 }
-// Method Definition Index: 65378
+// Method Definition Index: 65380
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CResetPasswordCoroutineU3Ed__27_U3CU3Em__Finally1_mF2C620015F398B22A60651757E5A88E5CA0EC26C (U3CResetPasswordCoroutineU3Ed__27_tD8118A8EF02529C35D20F4D70FC8E5DF0D2FF87B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13650,7 +13652,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65379
+// Method Definition Index: 65381
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CResetPasswordCoroutineU3Ed__27_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m02C1AAFD73053A3DBAB607B92F772363315A76AE (U3CResetPasswordCoroutineU3Ed__27_tD8118A8EF02529C35D20F4D70FC8E5DF0D2FF87B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13658,7 +13660,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CResetPasswordCoroutineU3Ed_
 		return L_0;
 	}
 }
-// Method Definition Index: 65380
+// Method Definition Index: 65382
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CResetPasswordCoroutineU3Ed__27_System_Collections_IEnumerator_Reset_m0DFB446EADFB554101FD83AF7430D483D9804FFE (U3CResetPasswordCoroutineU3Ed__27_tD8118A8EF02529C35D20F4D70FC8E5DF0D2FF87B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13667,7 +13669,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CResetPasswordCoroutineU3Ed__27_System
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CResetPasswordCoroutineU3Ed__27_System_Collections_IEnumerator_Reset_m0DFB446EADFB554101FD83AF7430D483D9804FFE_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65381
+// Method Definition Index: 65383
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CResetPasswordCoroutineU3Ed__27_System_Collections_IEnumerator_get_Current_mC31401696EE81CE54CE7ACA4A2E017AC5C7F74F5 (U3CResetPasswordCoroutineU3Ed__27_tD8118A8EF02529C35D20F4D70FC8E5DF0D2FF87B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13683,7 +13685,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CResetPasswordCoroutineU3Ed_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65382
+// Method Definition Index: 65384
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CShopCheckoutCoroutineU3Ed__69__ctor_mD72B486364A0D8271C35450CA13A16836337510A (U3CShopCheckoutCoroutineU3Ed__69_t96F2FA17513947AC031933847113F04C6597287C* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -13693,7 +13695,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CShopCheckoutCoroutineU3Ed__69__ctor_m
 		return;
 	}
 }
-// Method Definition Index: 65383
+// Method Definition Index: 65385
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CShopCheckoutCoroutineU3Ed__69_System_IDisposable_Dispose_m0C1F3B9D21C07B56A2EFF43848FA78A2C50173D6 (U3CShopCheckoutCoroutineU3Ed__69_t96F2FA17513947AC031933847113F04C6597287C* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -13742,7 +13744,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65384
+// Method Definition Index: 65386
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CShopCheckoutCoroutineU3Ed__69_MoveNext_m36C8209D6D5B21D4C4F6E39450FFFA3778740272 (U3CShopCheckoutCoroutineU3Ed__69_t96F2FA17513947AC031933847113F04C6597287C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14113,7 +14115,7 @@ IL_0200:
 		return L_59;
 	}
 }
-// Method Definition Index: 65385
+// Method Definition Index: 65387
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CShopCheckoutCoroutineU3Ed__69_U3CU3Em__Finally1_m3C87B740CC44624A93AE0496F81143E69E51954F (U3CShopCheckoutCoroutineU3Ed__69_t96F2FA17513947AC031933847113F04C6597287C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14141,7 +14143,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65386
+// Method Definition Index: 65388
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CShopCheckoutCoroutineU3Ed__69_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mC850FC5E0ADFDCD4C2816C1D01D4043CA7129698 (U3CShopCheckoutCoroutineU3Ed__69_t96F2FA17513947AC031933847113F04C6597287C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14149,7 +14151,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CShopCheckoutCoroutineU3Ed__
 		return L_0;
 	}
 }
-// Method Definition Index: 65387
+// Method Definition Index: 65389
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CShopCheckoutCoroutineU3Ed__69_System_Collections_IEnumerator_Reset_m74C5E3A98F9F7129E7943B2C024FB1A2A4A0E3B8 (U3CShopCheckoutCoroutineU3Ed__69_t96F2FA17513947AC031933847113F04C6597287C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14158,7 +14160,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CShopCheckoutCoroutineU3Ed__69_System_
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CShopCheckoutCoroutineU3Ed__69_System_Collections_IEnumerator_Reset_m74C5E3A98F9F7129E7943B2C024FB1A2A4A0E3B8_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65388
+// Method Definition Index: 65390
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CShopCheckoutCoroutineU3Ed__69_System_Collections_IEnumerator_get_Current_m266A5FFE6DC671D78353649B084839655890C06A (U3CShopCheckoutCoroutineU3Ed__69_t96F2FA17513947AC031933847113F04C6597287C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14174,7 +14176,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CShopCheckoutCoroutineU3Ed__
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65389
+// Method Definition Index: 65391
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSocialLoginCoroutineU3Ed__31__ctor_mD2643C8BC3079A312CF0EF96FB7676A1C4CF0405 (U3CSocialLoginCoroutineU3Ed__31_t139CD79BBA92BD214858E822FE186D071ECACE95* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -14184,7 +14186,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSocialLoginCoroutineU3Ed__31__ctor_mD
 		return;
 	}
 }
-// Method Definition Index: 65390
+// Method Definition Index: 65392
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSocialLoginCoroutineU3Ed__31_System_IDisposable_Dispose_m370FA97A4D1E5076AB734457FFF9E52EC21ACF8A (U3CSocialLoginCoroutineU3Ed__31_t139CD79BBA92BD214858E822FE186D071ECACE95* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -14233,7 +14235,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65391
+// Method Definition Index: 65393
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CSocialLoginCoroutineU3Ed__31_MoveNext_mDF00F15A540BD44D20E6AA47095298120D45EC50 (U3CSocialLoginCoroutineU3Ed__31_t139CD79BBA92BD214858E822FE186D071ECACE95* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14790,7 +14792,7 @@ IL_0397:
 		return L_140;
 	}
 }
-// Method Definition Index: 65392
+// Method Definition Index: 65394
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSocialLoginCoroutineU3Ed__31_U3CU3Em__Finally1_m30B6E3A75F41837395AF444393EBEBB33DE772A2 (U3CSocialLoginCoroutineU3Ed__31_t139CD79BBA92BD214858E822FE186D071ECACE95* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14818,7 +14820,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65393
+// Method Definition Index: 65395
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSocialLoginCoroutineU3Ed__31_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mEC0A43D44BA745200E587F22FA94CDF32006B7F3 (U3CSocialLoginCoroutineU3Ed__31_t139CD79BBA92BD214858E822FE186D071ECACE95* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14826,7 +14828,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSocialLoginCoroutineU3Ed__3
 		return L_0;
 	}
 }
-// Method Definition Index: 65394
+// Method Definition Index: 65396
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSocialLoginCoroutineU3Ed__31_System_Collections_IEnumerator_Reset_m318EC0D43FC5FAF6DEC9354822E305303D79D6F2 (U3CSocialLoginCoroutineU3Ed__31_t139CD79BBA92BD214858E822FE186D071ECACE95* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14835,7 +14837,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSocialLoginCoroutineU3Ed__31_System_C
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CSocialLoginCoroutineU3Ed__31_System_Collections_IEnumerator_Reset_m318EC0D43FC5FAF6DEC9354822E305303D79D6F2_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65395
+// Method Definition Index: 65397
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSocialLoginCoroutineU3Ed__31_System_Collections_IEnumerator_get_Current_mCAE5AEF73E56FAAD61311CBA77708C0AC7E07399 (U3CSocialLoginCoroutineU3Ed__31_t139CD79BBA92BD214858E822FE186D071ECACE95* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14851,7 +14853,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSocialLoginCoroutineU3Ed__3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65396
+// Method Definition Index: 65398
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSubmitInviterCoroutineU3Ed__55__ctor_m1B55FD432938807E795F4E7853B1CB1185B1874F (U3CSubmitInviterCoroutineU3Ed__55_t2426E2F6BFEC2911DB44642D98632B6CC8E2C775* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -14861,7 +14863,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSubmitInviterCoroutineU3Ed__55__ctor_
 		return;
 	}
 }
-// Method Definition Index: 65397
+// Method Definition Index: 65399
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSubmitInviterCoroutineU3Ed__55_System_IDisposable_Dispose_m23E327D7BE383F7997AE56223168022722E9657F (U3CSubmitInviterCoroutineU3Ed__55_t2426E2F6BFEC2911DB44642D98632B6CC8E2C775* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -14910,7 +14912,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65398
+// Method Definition Index: 65400
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CSubmitInviterCoroutineU3Ed__55_MoveNext_m6E0E8C54FAD630FDAA517A663458D80C153FE108 (U3CSubmitInviterCoroutineU3Ed__55_t2426E2F6BFEC2911DB44642D98632B6CC8E2C775* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15154,7 +15156,7 @@ IL_0187:
 		return L_40;
 	}
 }
-// Method Definition Index: 65399
+// Method Definition Index: 65401
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSubmitInviterCoroutineU3Ed__55_U3CU3Em__Finally1_m6B680E541785C8986AE8D84C6DEB45C2DF706F5B (U3CSubmitInviterCoroutineU3Ed__55_t2426E2F6BFEC2911DB44642D98632B6CC8E2C775* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15182,7 +15184,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65400
+// Method Definition Index: 65402
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSubmitInviterCoroutineU3Ed__55_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m12654B58FC021A760A036C366096E9635C28B8FC (U3CSubmitInviterCoroutineU3Ed__55_t2426E2F6BFEC2911DB44642D98632B6CC8E2C775* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15190,7 +15192,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSubmitInviterCoroutineU3Ed_
 		return L_0;
 	}
 }
-// Method Definition Index: 65401
+// Method Definition Index: 65403
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSubmitInviterCoroutineU3Ed__55_System_Collections_IEnumerator_Reset_mAB1FAB55DDA7BC1E4FABB518DEC6EA005BDE1D77 (U3CSubmitInviterCoroutineU3Ed__55_t2426E2F6BFEC2911DB44642D98632B6CC8E2C775* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15199,7 +15201,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSubmitInviterCoroutineU3Ed__55_System
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CSubmitInviterCoroutineU3Ed__55_System_Collections_IEnumerator_Reset_mAB1FAB55DDA7BC1E4FABB518DEC6EA005BDE1D77_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65402
+// Method Definition Index: 65404
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSubmitInviterCoroutineU3Ed__55_System_Collections_IEnumerator_get_Current_m66F8A918E6E313E54C31653DBE34337E66B1EDDD (U3CSubmitInviterCoroutineU3Ed__55_t2426E2F6BFEC2911DB44642D98632B6CC8E2C775* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15215,7 +15217,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSubmitInviterCoroutineU3Ed_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65403
+// Method Definition Index: 65405
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSyncDepositCoroutineU3Ed__67__ctor_m53583CBB4F6BB0F9D2C54B2B54612C13D1B0387B (U3CSyncDepositCoroutineU3Ed__67_tB6FE624A220C47E14D8AEC7CD8980FA5EFE83B05* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -15225,7 +15227,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSyncDepositCoroutineU3Ed__67__ctor_m5
 		return;
 	}
 }
-// Method Definition Index: 65404
+// Method Definition Index: 65406
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSyncDepositCoroutineU3Ed__67_System_IDisposable_Dispose_m61104D4D0744551B5774FDB6A420B95AF624DBA0 (U3CSyncDepositCoroutineU3Ed__67_tB6FE624A220C47E14D8AEC7CD8980FA5EFE83B05* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -15274,7 +15276,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65405
+// Method Definition Index: 65407
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CSyncDepositCoroutineU3Ed__67_MoveNext_mCCA69EB86719577399AFA13CC16C31C1B2A0B038 (U3CSyncDepositCoroutineU3Ed__67_tB6FE624A220C47E14D8AEC7CD8980FA5EFE83B05* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15779,7 +15781,7 @@ IL_02fe:
 		return L_111;
 	}
 }
-// Method Definition Index: 65406
+// Method Definition Index: 65408
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSyncDepositCoroutineU3Ed__67_U3CU3Em__Finally1_mC92D230AD6473016F71F67D3E1EF3BBA0BA37F29 (U3CSyncDepositCoroutineU3Ed__67_tB6FE624A220C47E14D8AEC7CD8980FA5EFE83B05* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15807,7 +15809,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65407
+// Method Definition Index: 65409
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSyncDepositCoroutineU3Ed__67_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m8734C0D17F429A73F1BCE61462E4C31F5689D333 (U3CSyncDepositCoroutineU3Ed__67_tB6FE624A220C47E14D8AEC7CD8980FA5EFE83B05* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15815,7 +15817,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSyncDepositCoroutineU3Ed__6
 		return L_0;
 	}
 }
-// Method Definition Index: 65408
+// Method Definition Index: 65410
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSyncDepositCoroutineU3Ed__67_System_Collections_IEnumerator_Reset_m4D307218F3B93167FDECE3A85A170264CB8CDEBF (U3CSyncDepositCoroutineU3Ed__67_tB6FE624A220C47E14D8AEC7CD8980FA5EFE83B05* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15824,7 +15826,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSyncDepositCoroutineU3Ed__67_System_C
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CSyncDepositCoroutineU3Ed__67_System_Collections_IEnumerator_Reset_m4D307218F3B93167FDECE3A85A170264CB8CDEBF_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65409
+// Method Definition Index: 65411
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSyncDepositCoroutineU3Ed__67_System_Collections_IEnumerator_get_Current_m1EA88EA14E15D08BCA79FDAB5C28AD32DA622F15 (U3CSyncDepositCoroutineU3Ed__67_tB6FE624A220C47E14D8AEC7CD8980FA5EFE83B05* __this, const RuntimeMethod* method) 
 {
 	{
@@ -15840,7 +15842,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSyncDepositCoroutineU3Ed__6
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65410
+// Method Definition Index: 65412
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateCurrencyCoroutineU3Ed__38__ctor_m4F8951F768A0797F81ED7C144D1549C860A6540B (U3CUpdateCurrencyCoroutineU3Ed__38_tBFEF121D77F47C6CF92698EC23715B70BC5DDCD4* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -15850,7 +15852,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateCurrencyCoroutineU3Ed__38__ctor
 		return;
 	}
 }
-// Method Definition Index: 65411
+// Method Definition Index: 65413
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateCurrencyCoroutineU3Ed__38_System_IDisposable_Dispose_mA159A91C06913750D9254E68F605EDA89E22E11B (U3CUpdateCurrencyCoroutineU3Ed__38_tBFEF121D77F47C6CF92698EC23715B70BC5DDCD4* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -15899,7 +15901,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65412
+// Method Definition Index: 65414
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CUpdateCurrencyCoroutineU3Ed__38_MoveNext_mAB9AB9DAC88A10258A729FBB5A8EE437417F864B (U3CUpdateCurrencyCoroutineU3Ed__38_tBFEF121D77F47C6CF92698EC23715B70BC5DDCD4* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16457,7 +16459,7 @@ IL_0344:
 		return L_131;
 	}
 }
-// Method Definition Index: 65413
+// Method Definition Index: 65415
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateCurrencyCoroutineU3Ed__38_U3CU3Em__Finally1_mEFC193ABD73DEBAC153C69041FD0A6445DD9AFC8 (U3CUpdateCurrencyCoroutineU3Ed__38_tBFEF121D77F47C6CF92698EC23715B70BC5DDCD4* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16485,7 +16487,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65414
+// Method Definition Index: 65416
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CUpdateCurrencyCoroutineU3Ed__38_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mD24D488AFD7C0E19388CFCB941798215FBB4BE51 (U3CUpdateCurrencyCoroutineU3Ed__38_tBFEF121D77F47C6CF92698EC23715B70BC5DDCD4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16493,7 +16495,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CUpdateCurrencyCoroutineU3Ed
 		return L_0;
 	}
 }
-// Method Definition Index: 65415
+// Method Definition Index: 65417
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateCurrencyCoroutineU3Ed__38_System_Collections_IEnumerator_Reset_mBAF58722EF75654B29D34F68489A41C6A404487A (U3CUpdateCurrencyCoroutineU3Ed__38_tBFEF121D77F47C6CF92698EC23715B70BC5DDCD4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16502,7 +16504,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateCurrencyCoroutineU3Ed__38_Syste
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CUpdateCurrencyCoroutineU3Ed__38_System_Collections_IEnumerator_Reset_mBAF58722EF75654B29D34F68489A41C6A404487A_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65416
+// Method Definition Index: 65418
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CUpdateCurrencyCoroutineU3Ed__38_System_Collections_IEnumerator_get_Current_mE80936C35DE76DBE8A08558413D02C27FDA4AAB8 (U3CUpdateCurrencyCoroutineU3Ed__38_tBFEF121D77F47C6CF92698EC23715B70BC5DDCD4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16518,7 +16520,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CUpdateCurrencyCoroutineU3Ed
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65417
+// Method Definition Index: 65419
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateProfileCoroutineU3Ed__34__ctor_mBD67EE5AEC184433ACAEE353815987AE4BF9BEC1 (U3CUpdateProfileCoroutineU3Ed__34_tD264ED57B0B99F51EB4C00C4822D649C0A7B6EB3* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -16528,7 +16530,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateProfileCoroutineU3Ed__34__ctor_
 		return;
 	}
 }
-// Method Definition Index: 65418
+// Method Definition Index: 65420
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateProfileCoroutineU3Ed__34_System_IDisposable_Dispose_m0EDDE62F95CE294FBBC26A82E298854891178CEF (U3CUpdateProfileCoroutineU3Ed__34_tD264ED57B0B99F51EB4C00C4822D649C0A7B6EB3* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -16577,7 +16579,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65419
+// Method Definition Index: 65421
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CUpdateProfileCoroutineU3Ed__34_MoveNext_mFF76B69AFDD9F388EE058F6BB9C3470433ECFC51 (U3CUpdateProfileCoroutineU3Ed__34_tD264ED57B0B99F51EB4C00C4822D649C0A7B6EB3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17117,7 +17119,7 @@ IL_036a:
 		return L_130;
 	}
 }
-// Method Definition Index: 65420
+// Method Definition Index: 65422
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateProfileCoroutineU3Ed__34_U3CU3Em__Finally1_mBD8858CE488D32B5D3729CCBD877196C895A5205 (U3CUpdateProfileCoroutineU3Ed__34_tD264ED57B0B99F51EB4C00C4822D649C0A7B6EB3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17145,7 +17147,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65421
+// Method Definition Index: 65423
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CUpdateProfileCoroutineU3Ed__34_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m4099379724F1BB5AE0AC575D7093E3E54065C98E (U3CUpdateProfileCoroutineU3Ed__34_tD264ED57B0B99F51EB4C00C4822D649C0A7B6EB3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17153,7 +17155,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CUpdateProfileCoroutineU3Ed_
 		return L_0;
 	}
 }
-// Method Definition Index: 65422
+// Method Definition Index: 65424
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateProfileCoroutineU3Ed__34_System_Collections_IEnumerator_Reset_m03DC07146DA8BDD8B95257DF6069FD3BB8F0B896 (U3CUpdateProfileCoroutineU3Ed__34_tD264ED57B0B99F51EB4C00C4822D649C0A7B6EB3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17162,7 +17164,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUpdateProfileCoroutineU3Ed__34_System
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CUpdateProfileCoroutineU3Ed__34_System_Collections_IEnumerator_Reset_m03DC07146DA8BDD8B95257DF6069FD3BB8F0B896_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65423
+// Method Definition Index: 65425
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CUpdateProfileCoroutineU3Ed__34_System_Collections_IEnumerator_get_Current_m18CFC0002D801BE8438FD4B6ABA3A2EC054B3620 (U3CUpdateProfileCoroutineU3Ed__34_tD264ED57B0B99F51EB4C00C4822D649C0A7B6EB3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17178,7 +17180,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CUpdateProfileCoroutineU3Ed_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65424
+// Method Definition Index: 65426
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUploadAvatarCoroutineU3Ed__36__ctor_mC506C552C24F402F3FF522D0CF77D82C3DFC356F (U3CUploadAvatarCoroutineU3Ed__36_t7BEF2436A2086FB2F4BD31A7BDC5BB0F0952FC8F* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -17188,7 +17190,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUploadAvatarCoroutineU3Ed__36__ctor_m
 		return;
 	}
 }
-// Method Definition Index: 65425
+// Method Definition Index: 65427
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUploadAvatarCoroutineU3Ed__36_System_IDisposable_Dispose_m1FAF9F5AF6C933AEACFD20C12250648657D02D50 (U3CUploadAvatarCoroutineU3Ed__36_t7BEF2436A2086FB2F4BD31A7BDC5BB0F0952FC8F* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -17237,7 +17239,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65426
+// Method Definition Index: 65428
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CUploadAvatarCoroutineU3Ed__36_MoveNext_m870531A5EE088923DE0A111D062B64B5D16446C5 (U3CUploadAvatarCoroutineU3Ed__36_t7BEF2436A2086FB2F4BD31A7BDC5BB0F0952FC8F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17684,7 +17686,7 @@ IL_02ac:
 		return L_105;
 	}
 }
-// Method Definition Index: 65427
+// Method Definition Index: 65429
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUploadAvatarCoroutineU3Ed__36_U3CU3Em__Finally1_mABAB72BD91E0F4DC9521E6C289BCF042C279636C (U3CUploadAvatarCoroutineU3Ed__36_t7BEF2436A2086FB2F4BD31A7BDC5BB0F0952FC8F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17712,7 +17714,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65428
+// Method Definition Index: 65430
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CUploadAvatarCoroutineU3Ed__36_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m151B746CBB8002741BCBE512CC22F077501FB3F4 (U3CUploadAvatarCoroutineU3Ed__36_t7BEF2436A2086FB2F4BD31A7BDC5BB0F0952FC8F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17720,7 +17722,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CUploadAvatarCoroutineU3Ed__
 		return L_0;
 	}
 }
-// Method Definition Index: 65429
+// Method Definition Index: 65431
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUploadAvatarCoroutineU3Ed__36_System_Collections_IEnumerator_Reset_m3B641212FA093C620AD3521D46B39E955622D830 (U3CUploadAvatarCoroutineU3Ed__36_t7BEF2436A2086FB2F4BD31A7BDC5BB0F0952FC8F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17729,7 +17731,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CUploadAvatarCoroutineU3Ed__36_System_
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CUploadAvatarCoroutineU3Ed__36_System_Collections_IEnumerator_Reset_m3B641212FA093C620AD3521D46B39E955622D830_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65430
+// Method Definition Index: 65432
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CUploadAvatarCoroutineU3Ed__36_System_Collections_IEnumerator_get_Current_m4B392DE147101BFE26924314D68B8686BFF23D04 (U3CUploadAvatarCoroutineU3Ed__36_t7BEF2436A2086FB2F4BD31A7BDC5BB0F0952FC8F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17745,7 +17747,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CUploadAvatarCoroutineU3Ed__
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65431
+// Method Definition Index: 65433
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWithdrawCoroutineU3Ed__57__ctor_mFFCE09ACC404496884DAF71D1298C4F1EBA10637 (U3CWithdrawCoroutineU3Ed__57_t674190F3B729A66428ED7A3ACF444066C28CB2CA* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -17755,7 +17757,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWithdrawCoroutineU3Ed__57__ctor_mFFCE
 		return;
 	}
 }
-// Method Definition Index: 65432
+// Method Definition Index: 65434
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWithdrawCoroutineU3Ed__57_System_IDisposable_Dispose_m5F28EECEB55C6C7F7916725F9B47CCB2870734AB (U3CWithdrawCoroutineU3Ed__57_t674190F3B729A66428ED7A3ACF444066C28CB2CA* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -17804,7 +17806,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65433
+// Method Definition Index: 65435
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CWithdrawCoroutineU3Ed__57_MoveNext_mC1A69959E91CA27EE52801282CD5DD3D9B09BD9E (U3CWithdrawCoroutineU3Ed__57_t674190F3B729A66428ED7A3ACF444066C28CB2CA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18077,7 +18079,7 @@ IL_01cb:
 		return L_51;
 	}
 }
-// Method Definition Index: 65434
+// Method Definition Index: 65436
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWithdrawCoroutineU3Ed__57_U3CU3Em__Finally1_mFB16DE55FAA4F7D001155EFF09F0CCDDE871D840 (U3CWithdrawCoroutineU3Ed__57_t674190F3B729A66428ED7A3ACF444066C28CB2CA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18105,7 +18107,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65435
+// Method Definition Index: 65437
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CWithdrawCoroutineU3Ed__57_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mABBA05EF76B7CB062107056584C663270C8531BC (U3CWithdrawCoroutineU3Ed__57_t674190F3B729A66428ED7A3ACF444066C28CB2CA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18113,7 +18115,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CWithdrawCoroutineU3Ed__57_S
 		return L_0;
 	}
 }
-// Method Definition Index: 65436
+// Method Definition Index: 65438
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWithdrawCoroutineU3Ed__57_System_Collections_IEnumerator_Reset_m1D058CAC8C9F710075D1AA840FBB6BE725FD44C4 (U3CWithdrawCoroutineU3Ed__57_t674190F3B729A66428ED7A3ACF444066C28CB2CA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18122,7 +18124,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CWithdrawCoroutineU3Ed__57_System_Coll
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CWithdrawCoroutineU3Ed__57_System_Collections_IEnumerator_Reset_m1D058CAC8C9F710075D1AA840FBB6BE725FD44C4_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65437
+// Method Definition Index: 65439
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CWithdrawCoroutineU3Ed__57_System_Collections_IEnumerator_get_Current_mF81C588272AE5CDDC263BD2492835C93B2AE4027 (U3CWithdrawCoroutineU3Ed__57_t674190F3B729A66428ED7A3ACF444066C28CB2CA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18138,7 +18140,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CWithdrawCoroutineU3Ed__57_S
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65438
+// Method Definition Index: 65440
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* BackendConfig_get_ApiUrl_mD4B4796F025B85B72547E9419BC7D76C7A8581D8 (BackendConfig_t3D4EAA2CD08A1971AD65D5789C3449D600F3219B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18160,7 +18162,7 @@ IL_000f:
 		return L_2;
 	}
 }
-// Method Definition Index: 65439
+// Method Definition Index: 65441
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* BackendConfig_get_SocketUrl_m07CF15B26B3BD463B14954F17679481708C1DCD7 (BackendConfig_t3D4EAA2CD08A1971AD65D5789C3449D600F3219B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18182,7 +18184,7 @@ IL_000f:
 		return L_2;
 	}
 }
-// Method Definition Index: 65440
+// Method Definition Index: 65442
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR BackendConfig_t3D4EAA2CD08A1971AD65D5789C3449D600F3219B* BackendConfig_Load_mF52325B5BA167C351EAF0EF8852569CBCC3B56BC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18240,7 +18242,7 @@ IL_0033:
 		return L_5;
 	}
 }
-// Method Definition Index: 65441
+// Method Definition Index: 65443
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendConfig__ctor_mAA6C57BE94A62015000BEEFA7A253C98AD2A5574 (BackendConfig_t3D4EAA2CD08A1971AD65D5789C3449D600F3219B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18283,7 +18285,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BackendConfig__ctor_mAA6C57BE94A62015000
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65442
+// Method Definition Index: 65444
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CPU_Start_m2E125C2077FC8243B6D09DDC633A9F9E91991223 (CPU_tD558793E94FEDDB1AC909E853C6D8F4F0A0CF149* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18338,7 +18340,7 @@ IL_002e:
 		return;
 	}
 }
-// Method Definition Index: 65443
+// Method Definition Index: 65445
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CPU_OnDestroy_m0F0D0D7BC19A277316AECBA57BE920D72894543B (CPU_tD558793E94FEDDB1AC909E853C6D8F4F0A0CF149* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18361,7 +18363,7 @@ IL_0014:
 		return;
 	}
 }
-// Method Definition Index: 65444
+// Method Definition Index: 65446
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CPU_StartAutoRolling_m99B1D07884DEE779E72578243EDCA792F8F3D155 (CPU_tD558793E94FEDDB1AC909E853C6D8F4F0A0CF149* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18391,7 +18393,7 @@ IL_0014:
 		return;
 	}
 }
-// Method Definition Index: 65445
+// Method Definition Index: 65447
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CPU_StopAutoRolling_mBC6386C0240AD781934E772F3EFCE5CA331AFA5D (CPU_tD558793E94FEDDB1AC909E853C6D8F4F0A0CF149* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18417,7 +18419,7 @@ IL_001b:
 		return;
 	}
 }
-// Method Definition Index: 65446
+// Method Definition Index: 65448
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CPU_AutoRollCoroutine_m6500ED4F9ADED2041AD5AA56458E1065CFF19016 (CPU_tD558793E94FEDDB1AC909E853C6D8F4F0A0CF149* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18436,7 +18438,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CPU_AutoRollCoroutine_m6500ED4
 		return L_1;
 	}
 }
-// Method Definition Index: 65447
+// Method Definition Index: 65449
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CPU_RollDice_mE7B14B06251F89C4680E89ADB65DBC88E98CA03D (CPU_tD558793E94FEDDB1AC909E853C6D8F4F0A0CF149* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18540,7 +18542,7 @@ IL_0017:
 		return;
 	}
 }
-// Method Definition Index: 65448
+// Method Definition Index: 65450
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CPU_SelectBoxAfterDelay_mA5A40E22CF1D1D96B8CA0F60EEF56F9FCAE6D1FA (CPU_tD558793E94FEDDB1AC909E853C6D8F4F0A0CF149* __this, int32_t ___0_diceSum, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18563,7 +18565,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CPU_SelectBoxAfterDelay_mA5A40
 		return L_2;
 	}
 }
-// Method Definition Index: 65449
+// Method Definition Index: 65451
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CPU_SetCPUEnabled_mA5BF2826091C2EA343863892E2B7DFA2F9B840C5 (CPU_tD558793E94FEDDB1AC909E853C6D8F4F0A0CF149* __this, bool ___0_enabled, const RuntimeMethod* method) 
 {
 	{
@@ -18598,7 +18600,7 @@ IL_0019:
 		return;
 	}
 }
-// Method Definition Index: 65450
+// Method Definition Index: 65452
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CPU_SetSelectionDelay_m2D0822B87B3C38A60B3D991F5DE92EE03A30DB5F (CPU_tD558793E94FEDDB1AC909E853C6D8F4F0A0CF149* __this, float ___0_delay, const RuntimeMethod* method) 
 {
 	{
@@ -18611,7 +18613,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CPU_SetSelectionDelay_m2D0822B87B3C38A60
 		return;
 	}
 }
-// Method Definition Index: 65451
+// Method Definition Index: 65453
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CPU_SetCPUIndex_m414B6EC4C20ABDF108C4E17B5C111798D6DF5F7D (CPU_tD558793E94FEDDB1AC909E853C6D8F4F0A0CF149* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18637,7 +18639,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CPU_SetCPUIndex_m414B6EC4C20ABDF108C4E17
 		return;
 	}
 }
-// Method Definition Index: 65452
+// Method Definition Index: 65454
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CPU_GetCPUIndex_mF7E9C1ED049B4897D3307E0B942E02B1CF01BEC7 (CPU_tD558793E94FEDDB1AC909E853C6D8F4F0A0CF149* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18646,7 +18648,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CPU_GetCPUIndex_mF7E9C1ED049B4897D330
 		return L_0;
 	}
 }
-// Method Definition Index: 65453
+// Method Definition Index: 65455
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CPU__ctor_m788BA69CE194A802A84F2A663740689479100BC5 (CPU_tD558793E94FEDDB1AC909E853C6D8F4F0A0CF149* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18670,7 +18672,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CPU__ctor_m788BA69CE194A802A84F2A6637406
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65454
+// Method Definition Index: 65456
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAutoRollCoroutineU3Ed__11__ctor_m460EF13F96965654F9C54DFB3FFF0087B92C104E (U3CAutoRollCoroutineU3Ed__11_t7A77A231B32A9B6932BB49FCAB71F034304F4F2D* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -18680,14 +18682,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAutoRollCoroutineU3Ed__11__ctor_m460E
 		return;
 	}
 }
-// Method Definition Index: 65455
+// Method Definition Index: 65457
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAutoRollCoroutineU3Ed__11_System_IDisposable_Dispose_m2F052215851A60D2FEB8CF6FF9B8FAD104FC6658 (U3CAutoRollCoroutineU3Ed__11_t7A77A231B32A9B6932BB49FCAB71F034304F4F2D* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65456
+// Method Definition Index: 65458
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CAutoRollCoroutineU3Ed__11_MoveNext_m230FAA8D3649A03C49574077B1CC9AB26DA89346 (U3CAutoRollCoroutineU3Ed__11_t7A77A231B32A9B6932BB49FCAB71F034304F4F2D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18786,7 +18788,7 @@ IL_005f:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65457
+// Method Definition Index: 65459
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAutoRollCoroutineU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mCECBBAB4014566E72B235A512DE90C19258EF270 (U3CAutoRollCoroutineU3Ed__11_t7A77A231B32A9B6932BB49FCAB71F034304F4F2D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18794,7 +18796,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAutoRollCoroutineU3Ed__11_S
 		return L_0;
 	}
 }
-// Method Definition Index: 65458
+// Method Definition Index: 65460
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAutoRollCoroutineU3Ed__11_System_Collections_IEnumerator_Reset_m4B0A03C954D3267ADD5D97A937ACEA425856B84C (U3CAutoRollCoroutineU3Ed__11_t7A77A231B32A9B6932BB49FCAB71F034304F4F2D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18803,7 +18805,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAutoRollCoroutineU3Ed__11_System_Coll
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CAutoRollCoroutineU3Ed__11_System_Collections_IEnumerator_Reset_m4B0A03C954D3267ADD5D97A937ACEA425856B84C_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65459
+// Method Definition Index: 65461
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAutoRollCoroutineU3Ed__11_System_Collections_IEnumerator_get_Current_mD984D28E0D191364436235845F993E180502EF88 (U3CAutoRollCoroutineU3Ed__11_t7A77A231B32A9B6932BB49FCAB71F034304F4F2D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18819,7 +18821,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAutoRollCoroutineU3Ed__11_S
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65460
+// Method Definition Index: 65462
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSelectBoxAfterDelayU3Ed__13__ctor_mC5DCADA8178E0A5D42FEC63E5A83A5C35C4E36B6 (U3CSelectBoxAfterDelayU3Ed__13_t02D8448C348026957BEE040E1A8437676C7A9260* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -18829,14 +18831,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSelectBoxAfterDelayU3Ed__13__ctor_mC5
 		return;
 	}
 }
-// Method Definition Index: 65461
+// Method Definition Index: 65463
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSelectBoxAfterDelayU3Ed__13_System_IDisposable_Dispose_mE615266F43947D7A86CE224E79737817D8058254 (U3CSelectBoxAfterDelayU3Ed__13_t02D8448C348026957BEE040E1A8437676C7A9260* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65462
+// Method Definition Index: 65464
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CSelectBoxAfterDelayU3Ed__13_MoveNext_m2DFC7CA7811DDE76A3B5E3F3A45B754244F9530B (U3CSelectBoxAfterDelayU3Ed__13_t02D8448C348026957BEE040E1A8437676C7A9260* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19103,7 +19105,7 @@ IL_0170:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65463
+// Method Definition Index: 65465
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSelectBoxAfterDelayU3Ed__13_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m8ED5CF2D496F5F6A715C0683F25DDB7777C9067D (U3CSelectBoxAfterDelayU3Ed__13_t02D8448C348026957BEE040E1A8437676C7A9260* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19111,7 +19113,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSelectBoxAfterDelayU3Ed__13
 		return L_0;
 	}
 }
-// Method Definition Index: 65464
+// Method Definition Index: 65466
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSelectBoxAfterDelayU3Ed__13_System_Collections_IEnumerator_Reset_m81AAB40C3B8D249B4E96123B0C6EFD3551EAF0C6 (U3CSelectBoxAfterDelayU3Ed__13_t02D8448C348026957BEE040E1A8437676C7A9260* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19120,7 +19122,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSelectBoxAfterDelayU3Ed__13_System_Co
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CSelectBoxAfterDelayU3Ed__13_System_Collections_IEnumerator_Reset_m81AAB40C3B8D249B4E96123B0C6EFD3551EAF0C6_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65465
+// Method Definition Index: 65467
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSelectBoxAfterDelayU3Ed__13_System_Collections_IEnumerator_get_Current_m4527F248503591E98555BF7F2116F12CA3C637E0 (U3CSelectBoxAfterDelayU3Ed__13_t02D8448C348026957BEE040E1A8437676C7A9260* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19136,7 +19138,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSelectBoxAfterDelayU3Ed__13
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65466
+// Method Definition Index: 65468
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChampionshipUI_Awake_m98A3314BC0D53B72C19EA1F6C8E40116893F5313 (ChampionshipUI_tF293602442F780E8AD9650FB9033F8B33B3DC25E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19197,7 +19199,7 @@ IL_004a:
 		return;
 	}
 }
-// Method Definition Index: 65467
+// Method Definition Index: 65469
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChampionshipUI_Start_m777728AF9A5A9258003322B8BD5832B03CD3EC1E (ChampionshipUI_tF293602442F780E8AD9650FB9033F8B33B3DC25E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19272,7 +19274,7 @@ IL_0027:
 		return;
 	}
 }
-// Method Definition Index: 65468
+// Method Definition Index: 65470
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChampionshipUI_StoreOriginalOffsets_m8F867478F1F6431FCACBFE183B67A7A4D6CD4F21 (ChampionshipUI_tF293602442F780E8AD9650FB9033F8B33B3DC25E* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_rect, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3* ___1_offsets, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19329,7 +19331,7 @@ IL_000a:
 		return;
 	}
 }
-// Method Definition Index: 65469
+// Method Definition Index: 65471
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChampionshipUI_CalculateScaleFactor_mC934FFA0A3C17ED4AB89B71074F97A146E662DE5 (ChampionshipUI_tF293602442F780E8AD9650FB9033F8B33B3DC25E* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -19362,7 +19364,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChampionshipUI_CalculateScaleFactor_mC93
 		return;
 	}
 }
-// Method Definition Index: 65470
+// Method Definition Index: 65472
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChampionshipUI_ApplyPhysicalScaling_m1C0ED4327ACAAC55CB279A020197566807F04B5B (ChampionshipUI_tF293602442F780E8AD9650FB9033F8B33B3DC25E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19421,7 +19423,7 @@ IL_004a:
 		return;
 	}
 }
-// Method Definition Index: 65471
+// Method Definition Index: 65473
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChampionshipUI_ScaleButtonOffsets_m47549D76CEEA273E8678A4A5ADE5DF6D74EEF25A (ChampionshipUI_tF293602442F780E8AD9650FB9033F8B33B3DC25E* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_rect, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___1_original, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19478,7 +19480,7 @@ IL_000a:
 		return;
 	}
 }
-// Method Definition Index: 65472
+// Method Definition Index: 65474
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChampionshipUI_SelectButton_m8BFCAEC1E82F1305C346253F1E4079E31BB8E6D6 (ChampionshipUI_tF293602442F780E8AD9650FB9033F8B33B3DC25E* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	{
@@ -19507,7 +19509,7 @@ IL_0018:
 		return;
 	}
 }
-// Method Definition Index: 65473
+// Method Definition Index: 65475
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChampionshipUI_ApplySelectionState_mDE8E3A84EBE58FE0C1314778FED46265EF4A5AB4 (ChampionshipUI_tF293602442F780E8AD9650FB9033F8B33B3DC25E* __this, Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___0_selected, Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___1_unselected, bool ___2_animate, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19617,7 +19619,7 @@ IL_008e:
 		return;
 	}
 }
-// Method Definition Index: 65474
+// Method Definition Index: 65476
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChampionshipUI_OnDestroy_m839561F8DC854D3205A133247F52E2A8DE73D9CE (ChampionshipUI_tF293602442F780E8AD9650FB9033F8B33B3DC25E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19675,7 +19677,7 @@ IL_003c:
 		return;
 	}
 }
-// Method Definition Index: 65475
+// Method Definition Index: 65477
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChampionshipUI__ctor_mCAAC11096B571F26F0C26D445233BB489EDACD2A (ChampionshipUI_tF293602442F780E8AD9650FB9033F8B33B3DC25E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19698,7 +19700,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChampionshipUI__ctor_mCAAC11096B571F26F0
 		return;
 	}
 }
-// Method Definition Index: 65476
+// Method Definition Index: 65478
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChampionshipUI_U3CStartU3Eb__11_0_m0EFDE0FF95B761A01AC8328A0CEB7F285F278F62 (ChampionshipUI_tF293602442F780E8AD9650FB9033F8B33B3DC25E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19707,7 +19709,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChampionshipUI_U3CStartU3Eb__11_0_m0EFDE
 		return;
 	}
 }
-// Method Definition Index: 65477
+// Method Definition Index: 65479
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChampionshipUI_U3CStartU3Eb__11_1_m3F98BCC842FAC3D03310826F4D1A5F5D2B94DD3B (ChampionshipUI_tF293602442F780E8AD9650FB9033F8B33B3DC25E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19724,7 +19726,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChampionshipUI_U3CStartU3Eb__11_1_m3F98B
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65478
+// Method Definition Index: 65480
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CurrencyDisplayUI_Awake_mFD356D7C9BD2E09BE3A8C75462EE5003D8EA2D98 (CurrencyDisplayUI_t147EC3BD311037F85AF75AC46ACF89A64D00D653* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19743,7 +19745,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CurrencyDisplayUI_Awake_mFD356D7C9BD2E09
 		return;
 	}
 }
-// Method Definition Index: 65479
+// Method Definition Index: 65481
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CurrencyDisplayUI_OnEnable_mC565126BEA01DF4F3A3E4815F5DFF8CB2DA68BA4 (CurrencyDisplayUI_t147EC3BD311037F85AF75AC46ACF89A64D00D653* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19775,7 +19777,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CurrencyDisplayUI_OnEnable_mC565126BEA01
 		return;
 	}
 }
-// Method Definition Index: 65480
+// Method Definition Index: 65482
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CurrencyDisplayUI_OnDisable_m8EEE946CBBB1AE6F26910FBB2DE435B4BD6D50BF (CurrencyDisplayUI_t147EC3BD311037F85AF75AC46ACF89A64D00D653* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19805,7 +19807,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CurrencyDisplayUI_OnDisable_m8EEE946CBBB
 		return;
 	}
 }
-// Method Definition Index: 65481
+// Method Definition Index: 65483
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CurrencyDisplayUI_HandleDataUpdated_m73464E8C1DFA9837970899D25BE7E1522E688835 (CurrencyDisplayUI_t147EC3BD311037F85AF75AC46ACF89A64D00D653* __this, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -19845,7 +19847,7 @@ IL_0015:
 		return;
 	}
 }
-// Method Definition Index: 65482
+// Method Definition Index: 65484
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CurrencyDisplayUI_TriggerVisualAnimationTick_mD5D3370039680B42715B6DCC4D6E3CA4B864BF88 (int32_t ___0_chips, float ___1_cash, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19905,7 +19907,7 @@ IL_001d:
 		return;
 	}
 }
-// Method Definition Index: 65483
+// Method Definition Index: 65485
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CurrencyDisplayUI_HandleCurrencyUpdated_mFFFE93A2C2784CD6AABE62CDEBC548063B49EAAA (CurrencyDisplayUI_t147EC3BD311037F85AF75AC46ACF89A64D00D653* __this, int32_t ___0_type, float ___1_newAmount, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19981,7 +19983,7 @@ IL_0039:
 		return;
 	}
 }
-// Method Definition Index: 65484
+// Method Definition Index: 65486
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* CurrencyDisplayUI_FormatCash_mAFAE5D39B9625518E73181E664041FDEF098CA32 (float ___0_amount, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20096,7 +20098,7 @@ IL_008d:
 		return L_23;
 	}
 }
-// Method Definition Index: 65485
+// Method Definition Index: 65487
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* CurrencyDisplayUI_FormatCoins_m31B9D889C91A11B252E0BA8991D588D2CC6931CA (int32_t ___0_amount, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20163,7 +20165,7 @@ IL_0056:
 		return L_12;
 	}
 }
-// Method Definition Index: 65486
+// Method Definition Index: 65488
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CurrencyDisplayUI__ctor_m2A86543AA0E3DEB163B5301046AFCEFAA75C9BEF (CurrencyDisplayUI_t147EC3BD311037F85AF75AC46ACF89A64D00D653* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20188,7 +20190,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CurrencyDisplayUI__ctor_m2A86543AA0E3DEB
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65487
+// Method Definition Index: 65489
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CurrencyFlyAnimator_PlayCoins_m7C8D99704C9D28B0724008399369750FF513F517 (CurrencyFlyAnimator_tFE8FDB40D4CCA870C9DF33B6CB530743E329C21C* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_source, int32_t ___1_amount, int32_t ___2_startingCoins, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___3_targetOverride, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20287,7 +20289,7 @@ IL_003a:
 		return;
 	}
 }
-// Method Definition Index: 65488
+// Method Definition Index: 65490
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CurrencyFlyAnimator_PlayCash_m95EC59BAA2F19352A6B899E52AC008F08A614743 (CurrencyFlyAnimator_tFE8FDB40D4CCA870C9DF33B6CB530743E329C21C* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_source, float ___1_amount, float ___2_startingCash, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___3_targetOverride, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20386,7 +20388,7 @@ IL_003e:
 		return;
 	}
 }
-// Method Definition Index: 65489
+// Method Definition Index: 65491
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CurrencyFlyAnimator_AnimateParticles_m0DC0C9F116233119950353B4C8567116BB53959D (CurrencyFlyAnimator_tFE8FDB40D4CCA870C9DF33B6CB530743E329C21C* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_source, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___1_target, Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___2_sprite, float ___3_amount, bool ___4_isCash, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20428,7 +20430,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CurrencyFlyAnimator_AnimatePar
 		return L_10;
 	}
 }
-// Method Definition Index: 65490
+// Method Definition Index: 65492
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CurrencyFlyAnimator_FlyParticle_m1281AA511C544B0F5F8EC40FEF9DAEFFE0718762 (CurrencyFlyAnimator_tFE8FDB40D4CCA870C9DF33B6CB530743E329C21C* __this, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___0_particle, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_target, float ___2_increment, bool ___3_isCash, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20464,7 +20466,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CurrencyFlyAnimator_FlyParticl
 		return L_8;
 	}
 }
-// Method Definition Index: 65491
+// Method Definition Index: 65493
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* CurrencyFlyAnimator_SpawnParticle_mBD1A6BCCB2A8DE3113A890022BCD30FF0EDA821B (CurrencyFlyAnimator_tFE8FDB40D4CCA870C9DF33B6CB530743E329C21C* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_position, Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___1_sprite, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20700,7 +20702,7 @@ IL_00ea:
 		return L_45;
 	}
 }
-// Method Definition Index: 65492
+// Method Definition Index: 65494
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CurrencyFlyAnimator__ctor_m83685D9698A5DEA20B84ED519F4A3661B3C9A6D0 (CurrencyFlyAnimator_tFE8FDB40D4CCA870C9DF33B6CB530743E329C21C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20745,7 +20747,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CurrencyFlyAnimator__ctor_m83685D9698A5D
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65493
+// Method Definition Index: 65495
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateParticlesU3Ed__19__ctor_mC0F647DB77F9CD91B0197941A8786FA7313DC4A6 (U3CAnimateParticlesU3Ed__19_t0FEE814E40DF98FA02100B9BBA0840F04DA0B290* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -20755,14 +20757,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateParticlesU3Ed__19__ctor_mC0F64
 		return;
 	}
 }
-// Method Definition Index: 65494
+// Method Definition Index: 65496
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateParticlesU3Ed__19_System_IDisposable_Dispose_m11F06D482223573687339A4A054CAC49C536FCDF (U3CAnimateParticlesU3Ed__19_t0FEE814E40DF98FA02100B9BBA0840F04DA0B290* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65495
+// Method Definition Index: 65497
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CAnimateParticlesU3Ed__19_MoveNext_mCB76C71857E87E63315D70961C63D5224D930D2D (U3CAnimateParticlesU3Ed__19_t0FEE814E40DF98FA02100B9BBA0840F04DA0B290* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20965,7 +20967,7 @@ IL_0136:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65496
+// Method Definition Index: 65498
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateParticlesU3Ed__19_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m30CA257361E2E24CD1437190C90E887EFBBA3613 (U3CAnimateParticlesU3Ed__19_t0FEE814E40DF98FA02100B9BBA0840F04DA0B290* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20973,7 +20975,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateParticlesU3Ed__19_Sy
 		return L_0;
 	}
 }
-// Method Definition Index: 65497
+// Method Definition Index: 65499
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateParticlesU3Ed__19_System_Collections_IEnumerator_Reset_m737D5EF09D7A28899CFDE6CF8B5A7D9908F1657B (U3CAnimateParticlesU3Ed__19_t0FEE814E40DF98FA02100B9BBA0840F04DA0B290* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20982,7 +20984,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateParticlesU3Ed__19_System_Colle
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CAnimateParticlesU3Ed__19_System_Collections_IEnumerator_Reset_m737D5EF09D7A28899CFDE6CF8B5A7D9908F1657B_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65498
+// Method Definition Index: 65500
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateParticlesU3Ed__19_System_Collections_IEnumerator_get_Current_m981BB841D646B60CFA53E678F2D578894763C6C2 (U3CAnimateParticlesU3Ed__19_t0FEE814E40DF98FA02100B9BBA0840F04DA0B290* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20998,7 +21000,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateParticlesU3Ed__19_Sy
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65499
+// Method Definition Index: 65501
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFlyParticleU3Ed__20__ctor_m7F4BB05E0A7C8C202A1C42282E3A501CE04428A4 (U3CFlyParticleU3Ed__20_t16E5B1A652A59D5C457AD0D30D8FE5C8326195B3* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -21008,14 +21010,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFlyParticleU3Ed__20__ctor_m7F4BB05E0A
 		return;
 	}
 }
-// Method Definition Index: 65500
+// Method Definition Index: 65502
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFlyParticleU3Ed__20_System_IDisposable_Dispose_m698B1D4320118DDD2DC3D6D73A08625D239B1AD6 (U3CFlyParticleU3Ed__20_t16E5B1A652A59D5C457AD0D30D8FE5C8326195B3* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65501
+// Method Definition Index: 65503
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CFlyParticleU3Ed__20_MoveNext_m1148E7AC8E8856FD0C11AEE3E4993B6556C04D63 (U3CFlyParticleU3Ed__20_t16E5B1A652A59D5C457AD0D30D8FE5C8326195B3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21240,7 +21242,7 @@ IL_0138:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65502
+// Method Definition Index: 65504
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFlyParticleU3Ed__20_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mA59AFAF659BAD5FBF7120E1FBE2A827FDA875986 (U3CFlyParticleU3Ed__20_t16E5B1A652A59D5C457AD0D30D8FE5C8326195B3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -21248,7 +21250,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFlyParticleU3Ed__20_System_
 		return L_0;
 	}
 }
-// Method Definition Index: 65503
+// Method Definition Index: 65505
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFlyParticleU3Ed__20_System_Collections_IEnumerator_Reset_m817D9130F2A6831DA9BFDC68CA9E64760560370C (U3CFlyParticleU3Ed__20_t16E5B1A652A59D5C457AD0D30D8FE5C8326195B3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -21257,7 +21259,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFlyParticleU3Ed__20_System_Collection
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CFlyParticleU3Ed__20_System_Collections_IEnumerator_Reset_m817D9130F2A6831DA9BFDC68CA9E64760560370C_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65504
+// Method Definition Index: 65506
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFlyParticleU3Ed__20_System_Collections_IEnumerator_get_Current_mFDB175691D8CE6E023BDE92BBC663EA18C8877B9 (U3CFlyParticleU3Ed__20_t16E5B1A652A59D5C457AD0D30D8FE5C8326195B3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -21281,25 +21283,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFlyParticleU3Ed__20_System_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65505
+// Method Definition Index: 65507
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DailyRewardManager_get_CanClaim_mFD2CC193E52A1776A7C42F2258D03DE3DEC1E9D4 (DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:55>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:56>
 		bool L_0 = __this->___canClaim;
 		return L_0;
 	}
 }
-// Method Definition Index: 65506
+// Method Definition Index: 65508
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DailyRewardManager_get_IsStatusLoaded_m42D25D0DED81E0366980401EBD0848B524E29D20 (DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:58>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:59>
 		bool L_0 = __this->___isStatusLoaded;
 		return L_0;
 	}
 }
-// Method Definition Index: 65507
+// Method Definition Index: 65509
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_Start_m505897AA7858BF78E940578AC5F67BA5D4836181 (DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21308,8 +21310,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_Start_m505897AA7858BF
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DailyRewardManager_CollectCurrentDayReward_m688C152D76A55AA1E32965DED09E6A030C7BB956_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DailyRewardManager_RefreshStatusFromServer_mC8BC7FD3704C4FFB92F246D9C8E550DFC606F0F1_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_m9F95418B43AD56D2B249A1712B89939CB1A88FCC_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisPlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69_mB0DFC3BE2DB154A8706F953422826D16B0742306_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindFirstObjectByType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_mEAD20F2B028B6BD3C96CF684B6DF7C89D7338636_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindFirstObjectByType_TisPlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69_m977AFC3647E5DADFF014A2EC14445803FF5A170E_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UnityAction_t11A1F3B953B365C072A5DCC32677EE1796A962A7_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
@@ -21317,15 +21319,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_Start_m505897AA7858BF
 	AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* V_0 = NULL;
 	int32_t V_1 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:75>
-		DailyRewardManager_SetupCloseButton_mCAE65CA032DA5F1AAA37DE97520B274E83DD6822(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:76>
+		DailyRewardManager_SetupCloseButton_mCAE65CA032DA5F1AAA37DE97520B274E83DD6822(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:77>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		PlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69* L_0;
-		L_0 = Object_FindObjectOfType_TisPlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69_mB0DFC3BE2DB154A8706F953422826D16B0742306(Object_FindObjectOfType_TisPlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69_mB0DFC3BE2DB154A8706F953422826D16B0742306_RuntimeMethod_var);
+		L_0 = Object_FindFirstObjectByType_TisPlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69_m977AFC3647E5DADFF014A2EC14445803FF5A170E(Object_FindFirstObjectByType_TisPlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69_m977AFC3647E5DADFF014A2EC14445803FF5A170E_RuntimeMethod_var);
 		__this->___playerProfileUI = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___playerProfileUI), (void*)L_0);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:78>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:79>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_1 = __this->___collectButton;
 		bool L_2;
 		L_2 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_1, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -21335,7 +21337,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_Start_m505897AA7858BF
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:80>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:81>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_3 = __this->___collectButton;
 		NullCheck(L_3);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_4;
@@ -21348,14 +21350,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_Start_m505897AA7858BF
 
 IL_003b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:84>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:85>
 		V_1 = 0;
 		goto IL_0083;
 	}
 
 IL_003f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:86>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:87>
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_6 = __this->___dayButtons;
 		int32_t L_7 = V_1;
 		NullCheck(L_6);
@@ -21370,7 +21372,7 @@ IL_003f:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:88>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:89>
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_11 = __this->___dayButtons;
 		int32_t L_12 = V_1;
 		NullCheck(L_11);
@@ -21381,7 +21383,7 @@ IL_003f:
 		L_15 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline(L_14, NULL);
 		NullCheck(L_15);
 		UnityEventBase_RemoveAllListeners_m6E68297189537543B0C72FE38804646CA204D076(L_15, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:89>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:90>
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_16 = __this->___dayButtons;
 		int32_t L_17 = V_1;
 		NullCheck(L_16);
@@ -21398,14 +21400,14 @@ IL_003f:
 
 IL_007f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:84>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:85>
 		int32_t L_22 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_22, 1));
 	}
 
 IL_0083:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:84>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:85>
 		int32_t L_23 = V_1;
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_24 = __this->___dayButtons;
 		NullCheck(L_24);
@@ -21415,12 +21417,12 @@ IL_0083:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:94>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:95>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* L_25;
-		L_25 = Object_FindObjectOfType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_m9F95418B43AD56D2B249A1712B89939CB1A88FCC(Object_FindObjectOfType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_m9F95418B43AD56D2B249A1712B89939CB1A88FCC_RuntimeMethod_var);
+		L_25 = Object_FindFirstObjectByType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_mEAD20F2B028B6BD3C96CF684B6DF7C89D7338636(Object_FindFirstObjectByType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_mEAD20F2B028B6BD3C96CF684B6DF7C89D7338636_RuntimeMethod_var);
 		V_0 = L_25;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:95>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:96>
 		AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* L_26 = V_0;
 		bool L_27;
 		L_27 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_26, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -21430,7 +21432,7 @@ IL_0083:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:97>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:98>
 		AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* L_28 = V_0;
 		AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* L_29 = L_28;
 		NullCheck(L_29);
@@ -21446,7 +21448,7 @@ IL_0083:
 
 IL_00bf:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:101>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:102>
 		bool L_33;
 		L_33 = BackendAuthService_HasStoredJWT_m77D0CD676518CB836991BD62A63D14AC96014601(NULL);
 		if (!L_33)
@@ -21455,22 +21457,22 @@ IL_00bf:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:103>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:104>
 		DailyRewardManager_RefreshStatusFromServer_mC8BC7FD3704C4FFB92F246D9C8E550DFC606F0F1(__this, NULL);
 	}
 
 IL_00cc:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:107>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:108>
 		RuntimeObject* L_34;
 		L_34 = DailyRewardManager_MonitorMainMenuActivation_mAC5ACCC72681C82BFB3F10102D3CCA1E0F567904(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_35;
 		L_35 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_34, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:108>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:109>
 		return;
 	}
 }
-// Method Definition Index: 65508
+// Method Definition Index: 65510
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_OnDestroy_mF385B12293B0CDE611B909AE8358497A12933154 (DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21478,18 +21480,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_OnDestroy_mF385B12293
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&DailyRewardManager_RefreshStatusFromServer_mC8BC7FD3704C4FFB92F246D9C8E550DFC606F0F1_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_m9F95418B43AD56D2B249A1712B89939CB1A88FCC_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindFirstObjectByType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_mEAD20F2B028B6BD3C96CF684B6DF7C89D7338636_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* V_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:112>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:113>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* L_0;
-		L_0 = Object_FindObjectOfType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_m9F95418B43AD56D2B249A1712B89939CB1A88FCC(Object_FindObjectOfType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_m9F95418B43AD56D2B249A1712B89939CB1A88FCC_RuntimeMethod_var);
+		L_0 = Object_FindFirstObjectByType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_mEAD20F2B028B6BD3C96CF684B6DF7C89D7338636(Object_FindFirstObjectByType_TisAuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725_mEAD20F2B028B6BD3C96CF684B6DF7C89D7338636_RuntimeMethod_var);
 		V_0 = L_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:113>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:114>
 		AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* L_1 = V_0;
 		bool L_2;
 		L_2 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_1, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -21499,7 +21501,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_OnDestroy_mF385B12293
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:115>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:116>
 		AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* L_3 = V_0;
 		AuthenticationManager_tE68651AD973FB3E42B4847E595D7FC9673597725* L_4 = L_3;
 		NullCheck(L_4);
@@ -21515,15 +21517,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_OnDestroy_mF385B12293
 
 IL_0031:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:117>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:118>
 		return;
 	}
 }
-// Method Definition Index: 65509
+// Method Definition Index: 65511
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_OnEnable_m3194CE4E4B8A7D76B38FD638D0C64DD55AF1CBC4 (DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:121>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:122>
 		bool L_0;
 		L_0 = BackendAuthService_HasStoredJWT_m77D0CD676518CB836991BD62A63D14AC96014601(NULL);
 		if (!L_0)
@@ -21532,17 +21534,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_OnEnable_m3194CE4E4B8
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:123>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:124>
 		DailyRewardManager_RefreshStatusFromServer_mC8BC7FD3704C4FFB92F246D9C8E550DFC606F0F1(__this, NULL);
 	}
 
 IL_000d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:125>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:126>
 		return;
 	}
 }
-// Method Definition Index: 65510
+// Method Definition Index: 65512
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_SetupCloseButton_mCAE65CA032DA5F1AAA37DE97520B274E83DD6822 (DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21554,7 +21556,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_SetupCloseButton_mCAE
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:129>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:130>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = __this->___closeButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -21565,14 +21567,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_SetupCloseButton_mCAE
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:131>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:132>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_2 = __this->___closeButton;
 		NullCheck(L_2);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_3;
 		L_3 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline(L_2, NULL);
 		NullCheck(L_3);
 		UnityEventBase_RemoveAllListeners_m6E68297189537543B0C72FE38804646CA204D076(L_3, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:132>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:133>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_4 = __this->___closeButton;
 		NullCheck(L_4);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_5;
@@ -21585,11 +21587,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_SetupCloseButton_mCAE
 
 IL_003a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:134>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:135>
 		return;
 	}
 }
-// Method Definition Index: 65511
+// Method Definition Index: 65513
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* DailyRewardManager_MonitorMainMenuActivation_mAC5ACCC72681C82BFB3F10102D3CCA1E0F567904 (DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21608,7 +21610,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* DailyRewardManager_MonitorMain
 		return L_1;
 	}
 }
-// Method Definition Index: 65512
+// Method Definition Index: 65514
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_ShowPanel_mFBC25A146580DFF52CA4600812883EF66F30B98C (DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21618,7 +21620,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_ShowPanel_mFBC25A1465
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:156>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:157>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___dailyRewardPanel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -21629,23 +21631,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_ShowPanel_mFBC25A1465
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:158>
-		__this->___hasTriggeredThisSession = (bool)1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:159>
+		__this->___hasTriggeredThisSession = (bool)1;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:160>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___dailyRewardPanel;
 		NullCheck(L_2);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_2, (bool)1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:160>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:161>
 		DailyRewardManager_UpdateUI_mD4503ED4A184615AE4AFD5148011E9D68D5BA6C9(__this, NULL);
 	}
 
 IL_0027:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:162>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:163>
 		return;
 	}
 }
-// Method Definition Index: 65513
+// Method Definition Index: 65515
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_RefreshStatusFromServer_mC8BC7FD3704C4FFB92F246D9C8E550DFC606F0F1 (DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21657,7 +21659,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_RefreshStatusFromServ
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:166>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:167>
 		BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_0;
 		L_0 = BackendAuthService_get_Instance_m74239149FFCCCF5A49AF965DCA0565780B051110_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -21669,13 +21671,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_RefreshStatusFromServ
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:166>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:167>
 		return;
 	}
 
 IL_000e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:168>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:169>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:170>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:171>
@@ -21686,17 +21687,18 @@ IL_000e:
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:176>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:177>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:178>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:179>
 		BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_2;
 		L_2 = BackendAuthService_get_Instance_m74239149FFCCCF5A49AF965DCA0565780B051110_inline(NULL);
 		Action_2_t74D9CF7357517E276161403D7DDF2F7366A330C4* L_3 = (Action_2_t74D9CF7357517E276161403D7DDF2F7366A330C4*)il2cpp_codegen_object_new(Action_2_t74D9CF7357517E276161403D7DDF2F7366A330C4_il2cpp_TypeInfo_var);
 		Action_2__ctor_m0A3CCFAAD3810F736A04AC491F9785F52D6E8F48(L_3, __this, (intptr_t)((void*)DailyRewardManager_U3CRefreshStatusFromServerU3Eb__44_0_m781651041E1D2AC69BE1BE65F274C8D6357ECACD_RuntimeMethod_var), NULL);
 		NullCheck(L_2);
 		BackendAuthService_GetDailyRewardStatus_m3E10CE6876B2ACF8822FAC5904DEF7BF85BB4016(L_2, L_3, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:179>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:180>
 		return;
 	}
 }
-// Method Definition Index: 65514
+// Method Definition Index: 65516
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_UpdateUI_mD4503ED4A184615AE4AFD5148011E9D68D5BA6C9 (DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21708,14 +21710,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_UpdateUI_mD4503ED4A18
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:183>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:184>
 		V_0 = 0;
 		goto IL_007d;
 	}
 
 IL_0004:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:185>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:186>
 		ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_0 = __this->___dayBackgrounds;
 		int32_t L_1 = V_0;
 		NullCheck(L_0);
@@ -21730,9 +21732,9 @@ IL_0004:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:187>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:188>
 		int32_t L_5 = V_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:190>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:191>
 		int32_t L_6 = __this->___currentDay;
 		if ((!(((uint32_t)((int32_t)il2cpp_codegen_add(L_5, 1))) == ((uint32_t)L_6))))
 		{
@@ -21747,7 +21749,7 @@ IL_0004:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:192>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:193>
 		SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B* L_8 = __this->___selectedBackgroundSprites;
 		if (!L_8)
 		{
@@ -21764,7 +21766,7 @@ IL_0004:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:193>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:194>
 		ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_11 = __this->___dayBackgrounds;
 		int32_t L_12 = V_0;
 		NullCheck(L_11);
@@ -21782,7 +21784,7 @@ IL_0004:
 
 IL_0051:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:197>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:198>
 		SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B* L_19 = __this->___normalBackgroundSprites;
 		if (!L_19)
 		{
@@ -21799,7 +21801,7 @@ IL_0051:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:198>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:199>
 		ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_22 = __this->___dayBackgrounds;
 		int32_t L_23 = V_0;
 		NullCheck(L_22);
@@ -21816,14 +21818,14 @@ IL_0051:
 
 IL_0079:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:183>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:184>
 		int32_t L_30 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_30, 1));
 	}
 
 IL_007d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:183>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:184>
 		int32_t L_31 = V_0;
 		if ((((int32_t)L_31) < ((int32_t)7)))
 		{
@@ -21831,7 +21833,7 @@ IL_007d:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:202>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:203>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_32 = __this->___collectButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_33;
@@ -21842,7 +21844,7 @@ IL_007d:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:204>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:205>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_34 = __this->___collectButton;
 		bool L_35 = __this->___canClaim;
 		NullCheck(L_34);
@@ -21851,14 +21853,14 @@ IL_007d:
 
 IL_00a0:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:208>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:209>
 		V_1 = 0;
 		goto IL_00cb;
 	}
 
 IL_00a4:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:210>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:211>
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_36 = __this->___dayButtons;
 		int32_t L_37 = V_1;
 		NullCheck(L_36);
@@ -21873,7 +21875,7 @@ IL_00a4:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:211>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:212>
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_41 = __this->___dayButtons;
 		int32_t L_42 = V_1;
 		NullCheck(L_41);
@@ -21886,14 +21888,14 @@ IL_00a4:
 
 IL_00c7:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:208>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:209>
 		int32_t L_46 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_46, 1));
 	}
 
 IL_00cb:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:208>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:209>
 		int32_t L_47 = V_1;
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_48 = __this->___dayButtons;
 		NullCheck(L_48);
@@ -21903,11 +21905,11 @@ IL_00cb:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:213>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:214>
 		return;
 	}
 }
-// Method Definition Index: 65515
+// Method Definition Index: 65517
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_CollectCurrentDayReward_m688C152D76A55AA1E32965DED09E6A030C7BB956 (DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21928,7 +21930,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_CollectCurrentDayRewa
 		NullCheck(L_1);
 		L_1->___U3CU3E4__this = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this), (void*)__this);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:217>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:218>
 		bool L_2 = __this->___canClaim;
 		if (!L_2)
 		{
@@ -21949,29 +21951,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_CollectCurrentDayRewa
 
 IL_0022:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:217>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:218>
 		return;
 	}
 
 IL_0023:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:219>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:220>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_5 = __this->___collectButton;
 		NullCheck(L_5);
 		Selectable_set_interactable_m8DD581C1AD99B2EFA8B3EE9AF69EDDF26688B492(L_5, (bool)0, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:222>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:223>
 		U3CU3Ec__DisplayClass46_0_tC623ED81FCE96F8C60AE96797B789EB9D2434999* L_6 = V_0;
 		int32_t L_7;
 		L_7 = PlayerModel_get_Coins_m4C02B7FEEBA8E8E63B180510D565F9FA8B33F37A_inline(NULL);
 		NullCheck(L_6);
 		L_6->___coinsBefore = L_7;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:223>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:224>
 		U3CU3Ec__DisplayClass46_0_tC623ED81FCE96F8C60AE96797B789EB9D2434999* L_8 = V_0;
 		int32_t L_9;
 		L_9 = PlayerModel_get_CashBalance_m0E3FB6888B6E28878E0F553CB0A96C2947BFEFAC_inline(NULL);
 		NullCheck(L_8);
 		L_8->___cashBefore = ((float)L_9);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:225>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:226>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:227>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:228>
@@ -21993,6 +21994,7 @@ IL_0023:
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:244>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:245>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:246>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:247>
 		BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_10;
 		L_10 = BackendAuthService_get_Instance_m74239149FFCCCF5A49AF965DCA0565780B051110_inline(NULL);
 		U3CU3Ec__DisplayClass46_0_tC623ED81FCE96F8C60AE96797B789EB9D2434999* L_11 = V_0;
@@ -22000,11 +22002,11 @@ IL_0023:
 		Action_2__ctor_m0A3CCFAAD3810F736A04AC491F9785F52D6E8F48(L_12, L_11, (intptr_t)((void*)U3CU3Ec__DisplayClass46_0_U3CCollectCurrentDayRewardU3Eb__0_mC3D97F70A67483A4F908A986B5CCEEF5C88BDD6E_RuntimeMethod_var), NULL);
 		NullCheck(L_10);
 		BackendAuthService_ClaimDailyReward_mFF6A50CE7C5A40F70FEFFE23EBB6810F358067A4(L_10, L_12, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:247>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:248>
 		return;
 	}
 }
-// Method Definition Index: 65516
+// Method Definition Index: 65518
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* DailyRewardManager_PlayRewardAnimationAndFinish_m6AB93301EBD925818707B8B844D2F4BA118F11FE (DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* __this, int32_t ___0_coins, float ___1_cash, int32_t ___2_day, int32_t ___3_coinsBefore, float ___4_cashBefore, DailyRewardStatusResponse_t7DC635CE35F9E4C87A84498F3D37136661C5A5D4* ___5_response, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22048,7 +22050,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* DailyRewardManager_PlayRewardA
 		return L_12;
 	}
 }
-// Method Definition Index: 65517
+// Method Definition Index: 65519
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_PlayRewardAnimation_m5AFE865387964FB88A2E58171E97FC8CF08A703E (DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* __this, float ___0_amount, bool ___1_isCash, int32_t ___2_day, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22063,12 +22065,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_PlayRewardAnimation_m
 	RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* G_B3_0 = NULL;
 	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* G_B6_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:300>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:301>
 		int32_t L_0 = ___2_day;
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_1;
 		L_1 = DailyRewardManager_GetSourceRewardPosition_m58CA33F7DE5C30A5ACE8C18428D151BA4EB9189C(__this, L_0, NULL);
 		V_0 = L_1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:301>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:302>
 		bool L_2 = ___1_isCash;
 		if (L_2)
 		{
@@ -22090,7 +22092,7 @@ IL_0013:
 IL_0019:
 	{
 		V_1 = G_B3_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:302>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:303>
 		bool L_5 = ___1_isCash;
 		if (L_5)
 		{
@@ -22112,7 +22114,7 @@ IL_0025:
 IL_002b:
 	{
 		V_2 = G_B6_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:304>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:305>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_8 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -22145,13 +22147,13 @@ IL_002b:
 
 IL_0047:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:304>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:305>
 		return;
 	}
 
 IL_0048:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:306>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:307>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_14 = V_0;
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_15 = V_1;
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_16 = V_2;
@@ -22161,19 +22163,19 @@ IL_0048:
 		L_19 = DailyRewardManager_AnimateParticles_m0D06E2761319085A76C46A303129C545F07B7AEF(__this, L_14, L_15, L_16, L_17, L_18, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_20;
 		L_20 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_19, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:307>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:308>
 		return;
 	}
 }
-// Method Definition Index: 65518
+// Method Definition Index: 65520
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* DailyRewardManager_GetSourceRewardPosition_m58CA33F7DE5C30A5ACE8C18428D151BA4EB9189C (DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* __this, int32_t ___0_day, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:311>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:312>
 		int32_t L_0 = ___0_day;
 		V_0 = ((int32_t)il2cpp_codegen_subtract(L_0, 1));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:312>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:313>
 		int32_t L_1 = V_0;
 		if ((((int32_t)L_1) < ((int32_t)0)))
 		{
@@ -22190,7 +22192,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RectTransform_t6C5DA5E41A89E0F488B001E45E5896
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:313>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:314>
 		RectTransformU5BU5D_tD8879AA94435492C205ABBE1E530FFD24CE0393D* L_4 = __this->___sourceRewardPositions;
 		int32_t L_5 = V_0;
 		NullCheck(L_4);
@@ -22201,11 +22203,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RectTransform_t6C5DA5E41A89E0F488B001E45E5896
 
 IL_001c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:314>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:315>
 		return (RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5*)NULL;
 	}
 }
-// Method Definition Index: 65519
+// Method Definition Index: 65521
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* DailyRewardManager_AnimateParticles_m0D06E2761319085A76C46A303129C545F07B7AEF (DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_source, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___1_target, Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___2_sprite, float ___3_amount, bool ___4_isCash, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22247,7 +22249,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* DailyRewardManager_AnimatePart
 		return L_10;
 	}
 }
-// Method Definition Index: 65520
+// Method Definition Index: 65522
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* DailyRewardManager_CreateAnimatedSprite_m4AD1D908BBFCB66598A64A7565B7051CDC7BBFC5 (DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_position, Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___1_sprite, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22272,13 +22274,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* G_B3_0 = NULL;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* G_B6_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:341>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:342>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___dailyRewardPanel;
 		NullCheck(L_0);
 		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_1;
 		L_1 = GameObject_GetComponentInParent_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m0A41CB7A7F9A10FCC98D1C7B5799D57C2724D991(L_0, GameObject_GetComponentInParent_TisCanvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_m0A41CB7A7F9A10FCC98D1C7B5799D57C2724D991_RuntimeMethod_var);
 		V_0 = L_1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:342>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:343>
 		Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* L_2 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
@@ -22307,7 +22309,7 @@ IL_001d:
 IL_0023:
 	{
 		V_1 = G_B3_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:344>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:345>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7 = __this->___animatedSpritePrefab;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_8;
@@ -22337,7 +22339,7 @@ IL_003e:
 IL_004a:
 	{
 		V_2 = G_B6_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:345>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:346>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_13 = __this->___animatedSpritePrefab;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_14;
@@ -22348,7 +22350,7 @@ IL_004a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:347>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:348>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_15 = V_2;
 		NullCheck(L_15);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16;
@@ -22356,7 +22358,7 @@ IL_004a:
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_17 = V_1;
 		NullCheck(L_16);
 		Transform_SetParent_m6677538B60246D958DD91F931C50F969CCBB5250(L_16, L_17, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:348>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:349>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_18 = V_2;
 		NullCheck(L_18);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_19;
@@ -22366,7 +22368,7 @@ IL_004a:
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_20), (100.0f), (100.0f), NULL);
 		NullCheck(L_19);
 		RectTransform_set_sizeDelta_mC9A980EA6036E6725EF24CEDF3EE80A9B2B50EE5(L_19, L_20, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:349>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:350>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_21 = V_2;
 		NullCheck(L_21);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_22;
@@ -22378,13 +22380,13 @@ IL_004a:
 
 IL_008b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:352>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:353>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_24 = V_2;
 		NullCheck(L_24);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_25;
 		L_25 = GameObject_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m1592DCB5AA07291F73A76006F0913A64DFB8A9C4(L_24, GameObject_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m1592DCB5AA07291F73A76006F0913A64DFB8A9C4_RuntimeMethod_var);
 		V_3 = L_25;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:353>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:354>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_26 = V_3;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_27;
@@ -22395,12 +22397,12 @@ IL_008b:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:355>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:356>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_28 = V_3;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_29 = ___0_position;
 		NullCheck(L_28);
 		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_28, L_29, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:356>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:357>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_30 = V_3;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_31;
 		L_31 = Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline(NULL);
@@ -22411,7 +22413,7 @@ IL_008b:
 
 IL_00af:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:360>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:361>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_32 = V_2;
 		NullCheck(L_32);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_33;
@@ -22424,13 +22426,13 @@ IL_00af:
 
 IL_00bf:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:363>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:364>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_35 = V_2;
 		NullCheck(L_35);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_36;
 		L_36 = GameObject_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mA59EA7D5F9133B2593F4AB70B099928BA955EE7D(L_35, GameObject_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mA59EA7D5F9133B2593F4AB70B099928BA955EE7D_RuntimeMethod_var);
 		V_4 = L_36;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:364>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:365>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_37 = V_4;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_38;
@@ -22441,7 +22443,7 @@ IL_00bf:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:364>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:365>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_39 = V_4;
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_40 = ___1_sprite;
 		NullCheck(L_39);
@@ -22450,12 +22452,12 @@ IL_00bf:
 
 IL_00d9:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:366>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:367>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_41 = V_2;
 		return L_41;
 	}
 }
-// Method Definition Index: 65521
+// Method Definition Index: 65523
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* DailyRewardManager_AnimateSingleParticleWithCountUp_m4BFE1338E70DD7800F50CB5C67A70B45DF8ADDA6 (DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* __this, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___0_particle, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_target, float ___2_duration, float ___3_increment, bool ___4_isCash, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22495,7 +22497,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* DailyRewardManager_AnimateSing
 		return L_10;
 	}
 }
-// Method Definition Index: 65522
+// Method Definition Index: 65524
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_ClosePanel_m18DE02940A7E0836017C8A9522F9742E618FC8DC (DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22507,7 +22509,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_ClosePanel_m18DE02940
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B3_0 = NULL;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B2_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:403>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:404>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___dailyRewardPanel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -22518,11 +22520,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_ClosePanel_m18DE02940
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:405>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:406>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___dailyRewardPanel;
 		NullCheck(L_2);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_2, (bool)0, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:406>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:407>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_3 = __this->___OnDailyRewardPanelClosed;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_4 = L_3;
 		if (L_4)
@@ -22544,11 +22546,11 @@ IL_0025:
 
 IL_002a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:408>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:409>
 		return;
 	}
 }
-// Method Definition Index: 65523
+// Method Definition Index: 65525
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager__ctor_mE767609C97B36B32F1F9B8ABD483BCCAA6F06D4F (DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22565,55 +22567,55 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager__ctor_mE767609C97B36B
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:14>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:15>
 		ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_0 = (ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78*)(ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78*)SZArrayNew(ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78_il2cpp_TypeInfo_var, (uint32_t)7);
 		__this->___dayBackgrounds = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___dayBackgrounds), (void*)L_0);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:15>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:16>
 		SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B* L_1 = (SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B*)(SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B*)SZArrayNew(SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B_il2cpp_TypeInfo_var, (uint32_t)7);
 		__this->___selectedBackgroundSprites = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___selectedBackgroundSprites), (void*)L_1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:16>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:17>
 		SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B* L_2 = (SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B*)(SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B*)SZArrayNew(SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B_il2cpp_TypeInfo_var, (uint32_t)7);
 		__this->___normalBackgroundSprites = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___normalBackgroundSprites), (void*)L_2);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:25>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:26>
 		ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF* L_3 = (ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF*)(ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF*)SZArrayNew(ButtonU5BU5D_t0D512FF2FF5A72DAC04754F2C10182F850328BEF_il2cpp_TypeInfo_var, (uint32_t)7);
 		__this->___dayButtons = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___dayButtons), (void*)L_3);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:28>
-		__this->___autoCloseDelay = (0.5f);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:29>
+		__this->___autoCloseDelay = (0.5f);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:30>
 		__this->___checkInterval = (0.5f);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:32>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:33>
 		RectTransformU5BU5D_tD8879AA94435492C205ABBE1E530FFD24CE0393D* L_4 = (RectTransformU5BU5D_tD8879AA94435492C205ABBE1E530FFD24CE0393D*)(RectTransformU5BU5D_tD8879AA94435492C205ABBE1E530FFD24CE0393D*)SZArrayNew(RectTransformU5BU5D_tD8879AA94435492C205ABBE1E530FFD24CE0393D_il2cpp_TypeInfo_var, (uint32_t)7);
 		__this->___sourceRewardPositions = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___sourceRewardPositions), (void*)L_4);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:41>
-		__this->___animationDuration = (0.600000024f);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:42>
+		__this->___animationDuration = (0.600000024f);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:43>
 		AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* L_5;
 		L_5 = AnimationCurve_EaseInOut_m01DD06E6C8962F8F62F293C9EAE491C3D3F2CAF3((0.0f), (0.0f), (1.0f), (1.0f), NULL);
 		__this->___movementCurve = L_5;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___movementCurve), (void*)L_5);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:43>
-		__this->___baseParticles = 3;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:44>
-		__this->___particlesPerCash = (0.5f);
+		__this->___baseParticles = 3;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:45>
-		__this->___particlesPerChip = (0.100000001f);
+		__this->___particlesPerCash = (0.5f);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:46>
-		__this->___maxParticles = ((int32_t)20);
+		__this->___particlesPerChip = (0.100000001f);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:47>
+		__this->___maxParticles = ((int32_t)20);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:48>
 		__this->___delayBetweenParticles = (0.0500000007f);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:53>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:54>
 		__this->___currentDay = 1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:60>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:61>
 		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_6 = (List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B*)il2cpp_codegen_object_new(List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B_il2cpp_TypeInfo_var);
 		List_1__ctor_m447372C1EF7141193B93090A77395B786C72C7BC(L_6, List_1__ctor_m447372C1EF7141193B93090A77395B786C72C7BC_RuntimeMethod_var);
 		__this->___activeAnimations = L_6;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___activeAnimations), (void*)L_6);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:68>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:69>
 		List_1_tEC98B6EA73A793C5834101FEEFE61931CA5BDB8C* L_7 = (List_1_tEC98B6EA73A793C5834101FEEFE61931CA5BDB8C*)il2cpp_codegen_object_new(List_1_tEC98B6EA73A793C5834101FEEFE61931CA5BDB8C_il2cpp_TypeInfo_var);
 		List_1__ctor_m394787936A5CD0FC2624E2856503785348C3E446(L_7, List_1__ctor_m394787936A5CD0FC2624E2856503785348C3E446_RuntimeMethod_var);
 		__this->___serverRewards = L_7;
@@ -22622,13 +22624,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager__ctor_mE767609C97B36B
 		return;
 	}
 }
-// Method Definition Index: 65524
+// Method Definition Index: 65526
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_U3CRefreshStatusFromServerU3Eb__44_0_m781651041E1D2AC69BE1BE65F274C8D6357ECACD (DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* __this, bool ___0_success, DailyRewardStatusResponse_t7DC635CE35F9E4C87A84498F3D37136661C5A5D4* ___1_response, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:170>
-		__this->___isStatusLoaded = (bool)1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:171>
+		__this->___isStatusLoaded = (bool)1;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:172>
 		bool L_0 = ___0_success;
 		if (!L_0)
 		{
@@ -22652,7 +22654,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_U3CRefreshStatusFromS
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:173>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:174>
 		DailyRewardStatusResponse_t7DC635CE35F9E4C87A84498F3D37136661C5A5D4* L_4 = ___1_response;
 		NullCheck(L_4);
 		DailyRewardDataPayload_t92B48EF7A76FBE539B01B6AD7645DC447FD94F42* L_5 = L_4->___data;
@@ -22660,27 +22662,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DailyRewardManager_U3CRefreshStatusFromS
 		List_1_tEC98B6EA73A793C5834101FEEFE61931CA5BDB8C* L_6 = L_5->___rewards;
 		__this->___serverRewards = L_6;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___serverRewards), (void*)L_6);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:174>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:175>
 		DailyRewardStatusResponse_t7DC635CE35F9E4C87A84498F3D37136661C5A5D4* L_7 = ___1_response;
 		NullCheck(L_7);
 		DailyRewardDataPayload_t92B48EF7A76FBE539B01B6AD7645DC447FD94F42* L_8 = L_7->___data;
 		NullCheck(L_8);
 		int32_t L_9 = L_8->___nextDay;
 		__this->___currentDay = L_9;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:175>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:176>
 		DailyRewardStatusResponse_t7DC635CE35F9E4C87A84498F3D37136661C5A5D4* L_10 = ___1_response;
 		NullCheck(L_10);
 		DailyRewardDataPayload_t92B48EF7A76FBE539B01B6AD7645DC447FD94F42* L_11 = L_10->___data;
 		NullCheck(L_11);
 		bool L_12 = L_11->___canClaim;
 		__this->___canClaim = L_12;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:176>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:177>
 		DailyRewardManager_UpdateUI_mD4503ED4A184615AE4AFD5148011E9D68D5BA6C9(__this, NULL);
 	}
 
 IL_004e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:178>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:179>
 		return;
 	}
 }
@@ -22692,7 +22694,7 @@ IL_004e:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65525
+// Method Definition Index: 65527
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m8CDA1401363B84ABB25F27C576DA0C0CB2B863E9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22709,7 +22711,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m8CDA1401363B84ABB25F27C5
 		return;
 	}
 }
-// Method Definition Index: 65526
+// Method Definition Index: 65528
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m8AA5B5412918A68966DB529EAEB692A0F1E87140 (U3CU3Ec_t9268B75A456AD46DE8CB25FFB38FB64444DECCCE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22717,7 +22719,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m8AA5B5412918A68966DB529EA
 		return;
 	}
 }
-// Method Definition Index: 65527
+// Method Definition Index: 65529
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CPlayRewardAnimationAndFinishU3Eb__47_0_m9DD19A6F8DF10C498BCEBE45FC4B91C1D51BB22B (U3CU3Ec_t9268B75A456AD46DE8CB25FFB38FB64444DECCCE* __this, bool ___0_profileSuccess, String_t* ___1_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22729,7 +22731,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CPlayRewardAnimationAndFinishU
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:280>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:281>
 		bool L_0 = ___0_profileSuccess;
 		if (!L_0)
 		{
@@ -22737,7 +22739,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CPlayRewardAnimationAndFinishU
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:282>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:283>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral0162126AB50F505FB3DA2FFC2D5CA100E966A071, NULL);
 		return;
@@ -22745,13 +22747,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CPlayRewardAnimationAndFinishU
 
 IL_000e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:286>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:287>
 		String_t* L_1 = ___1_message;
 		String_t* L_2;
 		L_2 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralAB07B388F9CE6A31AC30D6417F0442D305420064, L_1, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_2, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:288>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:289>
 		return;
 	}
 }
@@ -22763,7 +22765,7 @@ IL_000e:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65528
+// Method Definition Index: 65530
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass46_0__ctor_m239500A40D9A75179451B75D507463AD0EDA3EA2 (U3CU3Ec__DisplayClass46_0_tC623ED81FCE96F8C60AE96797B789EB9D2434999* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22771,7 +22773,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass46_0__ctor_m239500A
 		return;
 	}
 }
-// Method Definition Index: 65529
+// Method Definition Index: 65531
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass46_0_U3CCollectCurrentDayRewardU3Eb__0_mC3D97F70A67483A4F908A986B5CCEEF5C88BDD6E (U3CU3Ec__DisplayClass46_0_tC623ED81FCE96F8C60AE96797B789EB9D2434999* __this, bool ___0_success, DailyRewardStatusResponse_t7DC635CE35F9E4C87A84498F3D37136661C5A5D4* ___1_response, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22788,7 +22790,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass46_0_U3CCollectCurr
 	float V_2 = 0.0f;
 	RewardItem_t1372E7C0500EDA59968C3F02335B76B280ECE10F* V_3 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:227>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:228>
 		bool L_0 = ___0_success;
 		if (!L_0)
 		{
@@ -22806,18 +22808,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass46_0_U3CCollectCurr
 		U3CU3Ec__DisplayClass46_1_tB04388811164C471322D755D9112A514F0A71667* L_2 = (U3CU3Ec__DisplayClass46_1_tB04388811164C471322D755D9112A514F0A71667*)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass46_1_tB04388811164C471322D755D9112A514F0A71667_il2cpp_TypeInfo_var);
 		U3CU3Ec__DisplayClass46_1__ctor_m2CFB3DF6B84A7C66F004D382549C5238F136C41E(L_2, NULL);
 		V_0 = L_2;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:229>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:230>
 		U3CU3Ec__DisplayClass46_1_tB04388811164C471322D755D9112A514F0A71667* L_3 = V_0;
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_4 = __this->___U3CU3E4__this;
 		NullCheck(L_4);
 		int32_t L_5 = L_4->___currentDay;
 		NullCheck(L_3);
 		L_3->___dayToAnimate = L_5;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:230>
-		V_1 = 0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:231>
+		V_1 = 0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:232>
 		V_2 = (0.0f);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:233>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:234>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_6 = __this->___U3CU3E4__this;
 		NullCheck(L_6);
 		List_1_tEC98B6EA73A793C5834101FEEFE61931CA5BDB8C* L_7 = L_6->___serverRewards;
@@ -22828,7 +22830,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass46_0_U3CCollectCurr
 		RewardItem_t1372E7C0500EDA59968C3F02335B76B280ECE10F* L_10;
 		L_10 = List_1_Find_m632D8F00E2B19521279FCCBB17D0518E540FB824(L_7, L_9, List_1_Find_m632D8F00E2B19521279FCCBB17D0518E540FB824_RuntimeMethod_var);
 		V_3 = L_10;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:234>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:235>
 		RewardItem_t1372E7C0500EDA59968C3F02335B76B280ECE10F* L_11 = V_3;
 		if (!L_11)
 		{
@@ -22836,12 +22838,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass46_0_U3CCollectCurr
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:236>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:237>
 		RewardItem_t1372E7C0500EDA59968C3F02335B76B280ECE10F* L_12 = V_3;
 		NullCheck(L_12);
 		int32_t L_13 = L_12->___coins;
 		V_1 = L_13;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:237>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:238>
 		RewardItem_t1372E7C0500EDA59968C3F02335B76B280ECE10F* L_14 = V_3;
 		NullCheck(L_14);
 		float L_15 = L_14->___cash;
@@ -22850,7 +22852,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass46_0_U3CCollectCurr
 
 IL_0053:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:240>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:241>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_16 = __this->___U3CU3E4__this;
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_17 = __this->___U3CU3E4__this;
 		int32_t L_18 = V_1;
@@ -22872,13 +22874,13 @@ IL_0053:
 
 IL_0080:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:244>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:245>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_27 = __this->___U3CU3E4__this;
 		NullCheck(L_27);
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_28 = L_27->___collectButton;
 		NullCheck(L_28);
 		Selectable_set_interactable_m8DD581C1AD99B2EFA8B3EE9AF69EDDF26688B492(L_28, (bool)1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:246>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:247>
 		return;
 	}
 }
@@ -22890,7 +22892,7 @@ IL_0080:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65530
+// Method Definition Index: 65532
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass46_1__ctor_m2CFB3DF6B84A7C66F004D382549C5238F136C41E (U3CU3Ec__DisplayClass46_1_tB04388811164C471322D755D9112A514F0A71667* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22898,11 +22900,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass46_1__ctor_m2CFB3DF
 		return;
 	}
 }
-// Method Definition Index: 65531
+// Method Definition Index: 65533
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass46_1_U3CCollectCurrentDayRewardU3Eb__1_m22D97C386C97D028CCB49050E8C263A9852BA40D (U3CU3Ec__DisplayClass46_1_tB04388811164C471322D755D9112A514F0A71667* __this, RewardItem_t1372E7C0500EDA59968C3F02335B76B280ECE10F* ___0_r, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:233>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:234>
 		RewardItem_t1372E7C0500EDA59968C3F02335B76B280ECE10F* L_0 = ___0_r;
 		NullCheck(L_0);
 		int32_t L_1 = L_0->___day;
@@ -22918,7 +22920,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass46_1_U3CCollectCurr
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65532
+// Method Definition Index: 65534
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateParticlesU3Ed__50__ctor_m9245D6A0C92F82619138244DF489392CCB188662 (U3CAnimateParticlesU3Ed__50_tEF36A627788D87EE4B0C69EBE37547D1315809C0* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -22928,14 +22930,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateParticlesU3Ed__50__ctor_m9245D
 		return;
 	}
 }
-// Method Definition Index: 65533
+// Method Definition Index: 65535
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateParticlesU3Ed__50_System_IDisposable_Dispose_mBF16720FBAD9C644D102777BAE1DC822828D0912 (U3CAnimateParticlesU3Ed__50_tEF36A627788D87EE4B0C69EBE37547D1315809C0* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65534
+// Method Definition Index: 65536
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CAnimateParticlesU3Ed__50_MoveNext_m1A13801B1CD83CA4A0FAE418AE52A75A3FEF11E4 (U3CAnimateParticlesU3Ed__50_tEF36A627788D87EE4B0C69EBE37547D1315809C0* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22979,9 +22981,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CAnimateParticlesU3Ed__50_MoveNext_m1A
 IL_001a:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:319>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:320>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:321>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:322>
 		bool L_4 = __this->___isCash;
 		if (L_4)
 		{
@@ -23024,7 +23026,7 @@ IL_0060:
 	{
 		NullCheck(G_B6_1);
 		G_B6_1->___U3CparticleCountU3E5__2 = G_B6_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:323>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:324>
 		int32_t L_17 = __this->___U3CparticleCountU3E5__2;
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_18 = V_1;
 		NullCheck(L_18);
@@ -23035,24 +23037,24 @@ IL_0060:
 		int32_t L_22;
 		L_22 = Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline(L_17, L_19, L_21, NULL);
 		__this->___U3CparticleCountU3E5__2 = L_22;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:324>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:325>
 		float L_23 = __this->___amount;
 		int32_t L_24 = __this->___U3CparticleCountU3E5__2;
 		__this->___U3CincrementU3E5__3 = ((float)(L_23/((float)L_24)));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:325>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:326>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_25 = __this->___source;
 		NullCheck(L_25);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_26;
 		L_26 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_25, NULL);
 		__this->___U3CsourcePosU3E5__4 = L_26;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:327>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:328>
 		__this->___U3CiU3E5__5 = 0;
 		goto IL_013c;
 	}
 
 IL_00b3:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:329>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:330>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_27 = V_1;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_28 = __this->___U3CsourcePosU3E5__4;
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_29 = __this->___sprite;
@@ -23060,7 +23062,7 @@ IL_00b3:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_30;
 		L_30 = DailyRewardManager_CreateAnimatedSprite_m4AD1D908BBFCB66598A64A7565B7051CDC7BBFC5(L_27, L_28, L_29, NULL);
 		V_2 = L_30;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:330>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:331>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_31 = V_2;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_32;
@@ -23071,14 +23073,14 @@ IL_00b3:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:332>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:333>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_33 = V_1;
 		NullCheck(L_33);
 		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_34 = L_33->___activeAnimations;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_35 = V_2;
 		NullCheck(L_34);
 		List_1_Add_m43FBF207375C6E06B8C45ECE614F9B8008FB686E_inline(L_34, L_35, List_1_Add_m43FBF207375C6E06B8C45ECE614F9B8008FB686E_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:333>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:334>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_36 = V_1;
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_37 = V_1;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_38 = V_2;
@@ -23104,7 +23106,7 @@ IL_00b3:
 
 IL_010b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:335>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:336>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_48 = V_1;
 		NullCheck(L_48);
 		float L_49 = L_48->___delayBetweenParticles;
@@ -23119,7 +23121,7 @@ IL_010b:
 IL_0125:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:327>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:328>
 		int32_t L_51 = __this->___U3CiU3E5__5;
 		V_3 = L_51;
 		int32_t L_52 = V_3;
@@ -23128,7 +23130,7 @@ IL_0125:
 
 IL_013c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:327>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:328>
 		int32_t L_53 = __this->___U3CiU3E5__5;
 		int32_t L_54 = __this->___U3CparticleCountU3E5__2;
 		if ((((int32_t)L_53) < ((int32_t)L_54)))
@@ -23137,11 +23139,11 @@ IL_013c:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:337>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:338>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65535
+// Method Definition Index: 65537
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateParticlesU3Ed__50_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m1B3AD174E9FB01DF32D60438E0731BEC80D153C2 (U3CAnimateParticlesU3Ed__50_tEF36A627788D87EE4B0C69EBE37547D1315809C0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23149,7 +23151,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateParticlesU3Ed__50_Sy
 		return L_0;
 	}
 }
-// Method Definition Index: 65536
+// Method Definition Index: 65538
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateParticlesU3Ed__50_System_Collections_IEnumerator_Reset_m36FD538CDA08B97F246C896445F13362B8DD5423 (U3CAnimateParticlesU3Ed__50_tEF36A627788D87EE4B0C69EBE37547D1315809C0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23158,7 +23160,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateParticlesU3Ed__50_System_Colle
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CAnimateParticlesU3Ed__50_System_Collections_IEnumerator_Reset_m36FD538CDA08B97F246C896445F13362B8DD5423_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65537
+// Method Definition Index: 65539
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateParticlesU3Ed__50_System_Collections_IEnumerator_get_Current_m5176C207CA6F70184283400F9C6CCE3C78D76824 (U3CAnimateParticlesU3Ed__50_tEF36A627788D87EE4B0C69EBE37547D1315809C0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23174,7 +23176,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateParticlesU3Ed__50_Sy
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65538
+// Method Definition Index: 65540
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateSingleParticleWithCountUpU3Ed__52__ctor_mFBBFA542FA3E054BAABCEC1EE1F546A3D5D4242D (U3CAnimateSingleParticleWithCountUpU3Ed__52_t0C135D5B4778438514FAF0674CE6FBE743374355* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -23184,14 +23186,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateSingleParticleWithCountUpU3Ed_
 		return;
 	}
 }
-// Method Definition Index: 65539
+// Method Definition Index: 65541
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateSingleParticleWithCountUpU3Ed__52_System_IDisposable_Dispose_m09B6EAF82C09C969D15227CE11C03D1381D08789 (U3CAnimateSingleParticleWithCountUpU3Ed__52_t0C135D5B4778438514FAF0674CE6FBE743374355* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65540
+// Method Definition Index: 65542
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CAnimateSingleParticleWithCountUpU3Ed__52_MoveNext_m05AD88B1B606DB862727DDCF23EC4E9782516319 (U3CAnimateSingleParticleWithCountUpU3Ed__52_t0C135D5B4778438514FAF0674CE6FBE743374355* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23230,31 +23232,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CAnimateSingleParticleWithCountUpU3Ed_
 IL_001a:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:371>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:372>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4 = __this->___particle;
 		NullCheck(L_4);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5;
 		L_5 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_4, NULL);
 		__this->___U3CstartU3E5__2 = L_5;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:372>
-		__this->___U3CelapsedU3E5__3 = (0.0f);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:373>
+		__this->___U3CelapsedU3E5__3 = (0.0f);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:374>
 		__this->___U3CappliedU3E5__4 = (bool)0;
 		goto IL_0133;
 	}
 
 IL_0049:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:377>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:378>
 		float L_6 = __this->___U3CelapsedU3E5__3;
 		float L_7;
 		L_7 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		__this->___U3CelapsedU3E5__3 = ((float)il2cpp_codegen_add(L_6, L_7));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:378>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:379>
 		float L_8 = __this->___U3CelapsedU3E5__3;
 		float L_9 = __this->___duration;
 		V_2 = ((float)(L_8/L_9));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:379>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:380>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_10 = __this->___particle;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_11 = __this->___U3CstartU3E5__2;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = __this->___target;
@@ -23269,7 +23271,7 @@ IL_0049:
 		L_17 = Vector3_Lerp_m3A906D0530A94FAABB94F0F905E84D99BE85C3F8_inline(L_11, L_12, L_16, NULL);
 		NullCheck(L_10);
 		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_10, L_17, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:381>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:382>
 		bool L_18 = __this->___U3CappliedU3E5__4;
 		if (L_18)
 		{
@@ -23284,7 +23286,7 @@ IL_0049:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:383>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:384>
 		bool L_20 = __this->___isCash;
 		if (!L_20)
 		{
@@ -23292,7 +23294,7 @@ IL_0049:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:383>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:384>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_21 = V_1;
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_22 = V_1;
 		NullCheck(L_22);
@@ -23305,7 +23307,7 @@ IL_0049:
 
 IL_00c1:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:384>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:385>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_25 = V_1;
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_26 = V_1;
 		NullCheck(L_26);
@@ -23319,7 +23321,7 @@ IL_00c1:
 
 IL_00d9:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:386>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:387>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_30 = V_1;
 		NullCheck(L_30);
 		int32_t L_31 = L_30->___currentAnimatedChips;
@@ -23327,9 +23329,9 @@ IL_00d9:
 		NullCheck(L_32);
 		float L_33 = L_32->___currentAnimatedCash;
 		CurrencyDisplayUI_TriggerVisualAnimationTick_mD5D3370039680B42715B6DCC4D6E3CA4B864BF88(L_31, L_33, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:387>
-		__this->___U3CappliedU3E5__4 = (bool)1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:388>
+		__this->___U3CappliedU3E5__4 = (bool)1;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:389>
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_34 = ((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_35;
@@ -23340,7 +23342,7 @@ IL_00d9:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:390>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:391>
 		bool L_36 = __this->___isCash;
 		if (!L_36)
 		{
@@ -23348,7 +23350,7 @@ IL_00d9:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:390>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:391>
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_37 = ((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance;
 		NullCheck(L_37);
 		SoundManager_PlayCash_mD5E4A4FEFB36D3C3CB0782EF85B1A1E27EFEE246(L_37, NULL);
@@ -23357,7 +23359,7 @@ IL_00d9:
 
 IL_0112:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:391>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:392>
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_38 = ((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance;
 		NullCheck(L_38);
 		SoundManager_PlayChips_m7FF0B8229C3E101607FBF4F1A0668E3E4E442B46(L_38, NULL);
@@ -23365,7 +23367,7 @@ IL_0112:
 
 IL_011c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:394>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:395>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 1;
@@ -23379,7 +23381,7 @@ IL_012c:
 
 IL_0133:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:375>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:376>
 		float L_39 = __this->___U3CelapsedU3E5__3;
 		float L_40 = __this->___duration;
 		if ((((float)L_39) < ((float)L_40)))
@@ -23388,7 +23390,7 @@ IL_0133:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:397>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:398>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_41 = V_1;
 		NullCheck(L_41);
 		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_42 = L_41->___activeAnimations;
@@ -23399,18 +23401,18 @@ IL_0133:
 		NullCheck(L_42);
 		bool L_45;
 		L_45 = List_1_Remove_mCCE85D4D5326536C4B214C73D07030F4CCD18485(L_42, L_44, List_1_Remove_mCCE85D4D5326536C4B214C73D07030F4CCD18485_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:398>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:399>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_46 = __this->___particle;
 		NullCheck(L_46);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_47;
 		L_47 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_46, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_47, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:399>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:400>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65541
+// Method Definition Index: 65543
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateSingleParticleWithCountUpU3Ed__52_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m931FF701B55B30D65FC860A0756CF19CF2B89D5B (U3CAnimateSingleParticleWithCountUpU3Ed__52_t0C135D5B4778438514FAF0674CE6FBE743374355* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23418,7 +23420,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateSingleParticleWithCo
 		return L_0;
 	}
 }
-// Method Definition Index: 65542
+// Method Definition Index: 65544
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateSingleParticleWithCountUpU3Ed__52_System_Collections_IEnumerator_Reset_m87D5695FB28E2E14160C3C965B8BD21099993AB3 (U3CAnimateSingleParticleWithCountUpU3Ed__52_t0C135D5B4778438514FAF0674CE6FBE743374355* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23427,7 +23429,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CAnimateSingleParticleWithCountUpU3Ed_
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CAnimateSingleParticleWithCountUpU3Ed__52_System_Collections_IEnumerator_Reset_m87D5695FB28E2E14160C3C965B8BD21099993AB3_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65543
+// Method Definition Index: 65545
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateSingleParticleWithCountUpU3Ed__52_System_Collections_IEnumerator_get_Current_mF79B89994F510D4C2CC12CD74FE271B9378B82FA (U3CAnimateSingleParticleWithCountUpU3Ed__52_t0C135D5B4778438514FAF0674CE6FBE743374355* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23443,7 +23445,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CAnimateSingleParticleWithCo
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65544
+// Method Definition Index: 65546
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMonitorMainMenuActivationU3Ed__42__ctor_m7BB3F051146F0429C8EED644B85D0B128A52BE7C (U3CMonitorMainMenuActivationU3Ed__42_tBC5073CA1CBB18568B12EAC1924572AB65B7597C* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -23453,14 +23455,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMonitorMainMenuActivationU3Ed__42__ct
 		return;
 	}
 }
-// Method Definition Index: 65545
+// Method Definition Index: 65547
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMonitorMainMenuActivationU3Ed__42_System_IDisposable_Dispose_m2C08526BAF27FE441E214BBE6DE5F049467011B5 (U3CMonitorMainMenuActivationU3Ed__42_tBC5073CA1CBB18568B12EAC1924572AB65B7597C* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65546
+// Method Definition Index: 65548
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CMonitorMainMenuActivationU3Ed__42_MoveNext_m51DB17C77B43AF4C4F9237DA2B67D3885A722268 (U3CMonitorMainMenuActivationU3Ed__42_tBC5073CA1CBB18568B12EAC1924572AB65B7597C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23503,7 +23505,7 @@ IL_0017:
 
 IL_001e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:145>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:146>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_4 = V_1;
 		NullCheck(L_4);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = L_4->___mainMenuScreen;
@@ -23546,10 +23548,10 @@ IL_001e:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:147>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:148>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral283A61CA2BA572C254579EFB99B79EFE7C0F9824, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:148>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:149>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_14 = V_1;
 		NullCheck(L_14);
 		DailyRewardManager_ShowPanel_mFBC25A146580DFF52CA4600812883EF66F30B98C(L_14, NULL);
@@ -23557,7 +23559,7 @@ IL_001e:
 
 IL_0059:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:150>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:151>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_15 = V_1;
 		NullCheck(L_15);
 		float L_16 = L_15->___checkInterval;
@@ -23572,11 +23574,11 @@ IL_0059:
 IL_0073:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:142>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:143>
 		goto IL_001e;
 	}
 }
-// Method Definition Index: 65547
+// Method Definition Index: 65549
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CMonitorMainMenuActivationU3Ed__42_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m55C25D5770F7E55B7A383DA02233CD081B458BEC (U3CMonitorMainMenuActivationU3Ed__42_tBC5073CA1CBB18568B12EAC1924572AB65B7597C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23584,7 +23586,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CMonitorMainMenuActivationU3
 		return L_0;
 	}
 }
-// Method Definition Index: 65548
+// Method Definition Index: 65550
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMonitorMainMenuActivationU3Ed__42_System_Collections_IEnumerator_Reset_m3EFAE90FE813D560D751AF8C9337D78400D1CC82 (U3CMonitorMainMenuActivationU3Ed__42_tBC5073CA1CBB18568B12EAC1924572AB65B7597C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23593,7 +23595,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMonitorMainMenuActivationU3Ed__42_Sys
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CMonitorMainMenuActivationU3Ed__42_System_Collections_IEnumerator_Reset_m3EFAE90FE813D560D751AF8C9337D78400D1CC82_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65549
+// Method Definition Index: 65551
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CMonitorMainMenuActivationU3Ed__42_System_Collections_IEnumerator_get_Current_m2D8A86577C6AC9CEDC4A8B57A651BCD0C9E89257 (U3CMonitorMainMenuActivationU3Ed__42_tBC5073CA1CBB18568B12EAC1924572AB65B7597C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23609,7 +23611,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CMonitorMainMenuActivationU3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65550
+// Method Definition Index: 65552
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPlayRewardAnimationAndFinishU3Ed__47__ctor_m2428BCE4CC91771CAF9CD85AC351DA0F7E722179 (U3CPlayRewardAnimationAndFinishU3Ed__47_t0BF200577AB24A1585B7A6C2237E3857137C1376* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -23619,14 +23621,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPlayRewardAnimationAndFinishU3Ed__47_
 		return;
 	}
 }
-// Method Definition Index: 65551
+// Method Definition Index: 65553
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPlayRewardAnimationAndFinishU3Ed__47_System_IDisposable_Dispose_m54BC7F92BE88076178E71CD2919EC7102957E516 (U3CPlayRewardAnimationAndFinishU3Ed__47_t0BF200577AB24A1585B7A6C2237E3857137C1376* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65552
+// Method Definition Index: 65554
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CPlayRewardAnimationAndFinishU3Ed__47_MoveNext_m516F1CCC7940EC2B92A8AAF1910D608945C3F1A8 (U3CPlayRewardAnimationAndFinishU3Ed__47_t0BF200577AB24A1585B7A6C2237E3857137C1376* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23685,17 +23687,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CPlayRewardAnimationAndFinishU3Ed__47_
 IL_001a:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:251>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:252>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_4 = V_1;
 		float L_5 = __this->___cashBefore;
 		NullCheck(L_4);
 		L_4->___currentAnimatedCash = L_5;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:252>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:253>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_6 = V_1;
 		int32_t L_7 = __this->___coinsBefore;
 		NullCheck(L_6);
 		L_6->___currentAnimatedChips = L_7;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:254>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:255>
 		int32_t L_8 = __this->___coins;
 		if ((((int32_t)L_8) <= ((int32_t)0)))
 		{
@@ -23703,7 +23705,7 @@ IL_001a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:254>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:255>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_9 = V_1;
 		int32_t L_10 = __this->___coins;
 		int32_t L_11 = __this->___day;
@@ -23713,7 +23715,7 @@ IL_001a:
 
 IL_0056:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:255>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:256>
 		float L_12 = __this->___cash;
 		if ((!(((float)L_12) > ((float)(0.0f)))))
 		{
@@ -23721,7 +23723,7 @@ IL_0056:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:255>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:256>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_13 = V_1;
 		float L_14 = __this->___cash;
 		int32_t L_15 = __this->___day;
@@ -23731,7 +23733,7 @@ IL_0056:
 
 IL_0076:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:257>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:258>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_16 = V_1;
 		NullCheck(L_16);
 		float L_17 = L_16->___animationDuration;
@@ -23752,17 +23754,17 @@ IL_0076:
 IL_00a5:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:260>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:261>
 		int32_t L_23 = __this->___coinsBefore;
 		int32_t L_24 = __this->___coins;
 		V_2 = ((int32_t)il2cpp_codegen_add(L_23, L_24));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:261>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:262>
 		float L_25 = __this->___cashBefore;
 		float L_26 = __this->___cash;
 		int32_t L_27;
 		L_27 = Mathf_RoundToInt_m60F8B66CF27F1FA75AA219342BD184B75771EB4B_inline(((float)il2cpp_codegen_add(L_25, L_26)), NULL);
 		V_3 = L_27;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:263>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:264>
 		DailyRewardStatusResponse_t7DC635CE35F9E4C87A84498F3D37136661C5A5D4* L_28 = __this->___response;
 		if (!L_28)
 		{
@@ -23779,7 +23781,7 @@ IL_00a5:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:265>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:266>
 		DailyRewardStatusResponse_t7DC635CE35F9E4C87A84498F3D37136661C5A5D4* L_31 = __this->___response;
 		NullCheck(L_31);
 		BackendUser_tA2639E54D80A1230B398FBFC497B719A95FDC362* L_32 = L_31->___user;
@@ -23809,7 +23811,7 @@ IL_00fe:
 IL_010e:
 	{
 		V_4 = G_B13_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:266>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:267>
 		DailyRewardStatusResponse_t7DC635CE35F9E4C87A84498F3D37136661C5A5D4* L_38 = __this->___response;
 		NullCheck(L_38);
 		BackendUser_tA2639E54D80A1230B398FBFC497B719A95FDC362* L_39 = L_38->___user;
@@ -23839,7 +23841,7 @@ IL_0126:
 IL_0136:
 	{
 		V_5 = G_B16_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:267>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:268>
 		DailyRewardStatusResponse_t7DC635CE35F9E4C87A84498F3D37136661C5A5D4* L_45 = __this->___response;
 		NullCheck(L_45);
 		BackendUser_tA2639E54D80A1230B398FBFC497B719A95FDC362* L_46 = L_45->___user;
@@ -23872,13 +23874,13 @@ IL_0156:
 IL_0166:
 	{
 		V_6 = G_B19_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:269>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:270>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:271>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:272>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:273>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:274>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:275>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:276>
 		DailyRewardStatusResponse_t7DC635CE35F9E4C87A84498F3D37136661C5A5D4* L_53 = __this->___response;
 		NullCheck(L_53);
 		BackendUser_tA2639E54D80A1230B398FBFC497B719A95FDC362* L_54 = L_53->___user;
@@ -23946,7 +23948,6 @@ IL_0166:
 
 IL_0237:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:278>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:279>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:280>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:281>
@@ -23957,6 +23958,7 @@ IL_0237:
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:286>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:287>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:288>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:289>
 		BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_91;
 		L_91 = BackendAuthService_get_Instance_m74239149FFCCCF5A49AF965DCA0565780B051110_inline(NULL);
 		int32_t L_92 = V_3;
@@ -23995,7 +23997,7 @@ IL_025d:
 	{
 		NullCheck(G_B22_3);
 		BackendAuthService_UpdateCurrency_m14DE503991EBDEA44F863EFFC42CE18D42983916(G_B22_3, G_B22_2, G_B22_1, G_B22_0, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:290>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:291>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_99 = V_1;
 		NullCheck(L_99);
 		Action_3_tDC65EE2B977E3060FF31D0E9D271535E08455FDB* L_100 = L_99->___OnRewardCollected;
@@ -24022,23 +24024,23 @@ IL_026e:
 
 IL_0285:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:291>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:292>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_105 = V_1;
 		NullCheck(L_105);
 		L_105->___canClaim = (bool)0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:292>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:293>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_106 = V_1;
 		NullCheck(L_106);
 		DailyRewardManager_UpdateUI_mD4503ED4A184615AE4AFD5148011E9D68D5BA6C9(L_106, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:295>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:296>
 		DailyRewardManager_t93D1A7C590B18944D5105D6C0DDABDD99B98A823* L_107 = V_1;
 		NullCheck(L_107);
 		DailyRewardManager_ClosePanel_m18DE02940A7E0836017C8A9522F9742E618FC8DC(L_107, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:296>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DailyRewardManager.cs:297>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65553
+// Method Definition Index: 65555
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CPlayRewardAnimationAndFinishU3Ed__47_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mAFC6C8812BFAB51203A7C334E4A1F9DB861E5C0A (U3CPlayRewardAnimationAndFinishU3Ed__47_t0BF200577AB24A1585B7A6C2237E3857137C1376* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24046,7 +24048,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CPlayRewardAnimationAndFinis
 		return L_0;
 	}
 }
-// Method Definition Index: 65554
+// Method Definition Index: 65556
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPlayRewardAnimationAndFinishU3Ed__47_System_Collections_IEnumerator_Reset_m7F17EF93DF4372E383CCB0E1D6E80FFCA4735506 (U3CPlayRewardAnimationAndFinishU3Ed__47_t0BF200577AB24A1585B7A6C2237E3857137C1376* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24055,7 +24057,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CPlayRewardAnimationAndFinishU3Ed__47_
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CPlayRewardAnimationAndFinishU3Ed__47_System_Collections_IEnumerator_Reset_m7F17EF93DF4372E383CCB0E1D6E80FFCA4735506_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65555
+// Method Definition Index: 65557
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CPlayRewardAnimationAndFinishU3Ed__47_System_Collections_IEnumerator_get_Current_m93DC94321D04E73E6C0A9FC1ADC305CC0ED21457 (U3CPlayRewardAnimationAndFinishU3Ed__47_t0BF200577AB24A1585B7A6C2237E3857137C1376* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24071,7 +24073,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CPlayRewardAnimationAndFinis
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65556
+// Method Definition Index: 65558
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiagnosticHelper_Update_mC5840E45CAEC2C79668D16B71E35D439409D4BE4 (DiagnosticHelper_tA24C52A29A95C506DE37B2AA116A946D9163F936* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24101,14 +24103,14 @@ IL_0031:
 		return;
 	}
 }
-// Method Definition Index: 65557
+// Method Definition Index: 65559
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiagnosticHelper_CheckEverything_m69876C13D3F7F3815BE46DF6FF1F55D64721BFD8 (DiagnosticHelper_tA24C52A29A95C506DE37B2AA116A946D9163F936* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectsOfType_TisPlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69_mA5C44A13FF65637493FF97ACC55E159C251FD8A4_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectsByType_TisPlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69_mF6385FBDE3EF9E5DB23277001028B16D4F601728_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0D7434E9698A0E8CC07A630C99B4EDE5AB1EAD9B);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral42646B33B50B6AA15E22733C8900716F0FE19E1D);
@@ -24173,7 +24175,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiagnosticHelper_CheckEverything_m69876C
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DiagnosticHelper.cs:38>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		PlayerProfileUIU5BU5D_tEFE0069B0989A97DC0789A2B8E66D3EDEF096982* L_14;
-		L_14 = Object_FindObjectsOfType_TisPlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69_mA5C44A13FF65637493FF97ACC55E159C251FD8A4((bool)1, Object_FindObjectsOfType_TisPlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69_mA5C44A13FF65637493FF97ACC55E159C251FD8A4_RuntimeMethod_var);
+		L_14 = Object_FindObjectsByType_TisPlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69_mF6385FBDE3EF9E5DB23277001028B16D4F601728(1, 0, Object_FindObjectsByType_TisPlayerProfileUI_t3AC784257AFE3865CD9F0ADCEEA324C78F5F3B69_mF6385FBDE3EF9E5DB23277001028B16D4F601728_RuntimeMethod_var);
 		V_0 = L_14;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DiagnosticHelper.cs:39>
 		PlayerProfileUIU5BU5D_tEFE0069B0989A97DC0789A2B8E66D3EDEF096982* L_15 = V_0;
@@ -24187,10 +24189,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiagnosticHelper_CheckEverything_m69876C
 		PlayerProfileUIU5BU5D_tEFE0069B0989A97DC0789A2B8E66D3EDEF096982* L_19 = V_0;
 		V_1 = L_19;
 		V_2 = 0;
-		goto IL_012a;
+		goto IL_012b;
 	}
 
-IL_00b0:
+IL_00b1:
 	{
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DiagnosticHelper.cs:41>
 		PlayerProfileUIU5BU5D_tEFE0069B0989A97DC0789A2B8E66D3EDEF096982* L_20 = V_1;
@@ -24251,7 +24253,7 @@ IL_00b0:
 		V_2 = ((int32_t)il2cpp_codegen_add(L_45, 1));
 	}
 
-IL_012a:
+IL_012b:
 	{
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DiagnosticHelper.cs:41>
 		int32_t L_46 = V_2;
@@ -24259,7 +24261,7 @@ IL_012a:
 		NullCheck(L_47);
 		if ((((int32_t)L_46) < ((int32_t)((int32_t)(((RuntimeArray*)L_47)->max_length)))))
 		{
-			goto IL_00b0;
+			goto IL_00b1;
 		}
 	}
 	{
@@ -24270,7 +24272,7 @@ IL_012a:
 		return;
 	}
 }
-// Method Definition Index: 65558
+// Method Definition Index: 65560
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiagnosticHelper_ForceCheckNow_m25E0409DE3D05426B58CCCB66C2921167C63A6A8 (DiagnosticHelper_tA24C52A29A95C506DE37B2AA116A946D9163F936* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24280,7 +24282,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiagnosticHelper_ForceCheckNow_m25E0409D
 		return;
 	}
 }
-// Method Definition Index: 65559
+// Method Definition Index: 65561
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiagnosticHelper__ctor_m1F3A8DB9EDA9C28E94737D87FF890692A8FCE316 (DiagnosticHelper_tA24C52A29A95C506DE37B2AA116A946D9163F936* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24298,7 +24300,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiagnosticHelper__ctor_m1F3A8DB9EDA9C28E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65560
+// Method Definition Index: 65562
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiceScaler_Start_m02AA28B4922364A1D414483C702CC09357626FB8 (DiceScaler_t1040562890EFD95594338936389D4F7D9B947366* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24353,7 +24355,7 @@ IL_0032:
 		return;
 	}
 }
-// Method Definition Index: 65561
+// Method Definition Index: 65563
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiceScaler_ApplyDiceScaling_m5A1FBF5A411CC0594799817FCEAA1DDB42E5C0D5 (DiceScaler_t1040562890EFD95594338936389D4F7D9B947366* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24744,7 +24746,7 @@ IL_0288:
 		return;
 	}
 }
-// Method Definition Index: 65562
+// Method Definition Index: 65564
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiceScaler_CenterDiceContainer_mEA4DD70CB331F306FA561FB7DBDDBDC0E2D0F6DF (DiceScaler_t1040562890EFD95594338936389D4F7D9B947366* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24807,7 +24809,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 65563
+// Method Definition Index: 65565
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiceScaler_CenterDice3DModels_m75E91F87B56C6EBEF280BE799C8476958C594291 (DiceScaler_t1040562890EFD95594338936389D4F7D9B947366* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_dice1, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___1_dice2, float ___2_spacing, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24927,7 +24929,7 @@ IL_007b:
 		return;
 	}
 }
-// Method Definition Index: 65564
+// Method Definition Index: 65566
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiceScaler__ctor_mD2F1409A22419136C02C5E2B146B4EE0F95FE2A5 (DiceScaler_t1040562890EFD95594338936389D4F7D9B947366* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24952,14 +24954,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiceScaler__ctor_mD2F1409A22419136C02C5E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65565
+// Method Definition Index: 65567
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiceVisibilityManager_Start_m099A8AD39F3A25BA3776FF448B5C7C191EA7899C (DiceVisibilityManager_tA18B656A48FE4B835ADE30485C9CF1AEF617595A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisDicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655_m7452E8FC8A2EACD073EA581E1EA44285CF73590B_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindFirstObjectByType_TisDicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655_mB1236AF28D2FA18FE632124B01CF974FEADB6E4B_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral0A90CC26FCC7D6375E759E501E66F63134E76DFD);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral42BE89C6A66E84EE1086370DF52323B75A26F3D6);
@@ -24985,7 +24987,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiceVisibilityManager_Start_m099A8AD39F3
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DiceVisibilityManager.cs:49>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_2;
-		L_2 = Object_FindObjectOfType_TisDicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655_m7452E8FC8A2EACD073EA581E1EA44285CF73590B(Object_FindObjectOfType_TisDicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655_m7452E8FC8A2EACD073EA581E1EA44285CF73590B_RuntimeMethod_var);
+		L_2 = Object_FindFirstObjectByType_TisDicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655_mB1236AF28D2FA18FE632124B01CF974FEADB6E4B(Object_FindFirstObjectByType_TisDicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655_mB1236AF28D2FA18FE632124B01CF974FEADB6E4B_RuntimeMethod_var);
 		__this->___dicesController = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___dicesController), (void*)L_2);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DiceVisibilityManager.cs:50>
@@ -25127,7 +25129,7 @@ IL_00c9:
 		return;
 	}
 }
-// Method Definition Index: 65566
+// Method Definition Index: 65568
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiceVisibilityManager_Update_mA2760A5FACDFB1E310A4D8232B6FB0A12D061D70 (DiceVisibilityManager_tA18B656A48FE4B835ADE30485C9CF1AEF617595A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25396,7 +25398,7 @@ IL_0109:
 		return;
 	}
 }
-// Method Definition Index: 65567
+// Method Definition Index: 65569
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiceVisibilityManager_AutoDetectPanels_mA813F17D703940F093207347FE30166E949FCF1A (DiceVisibilityManager_tA18B656A48FE4B835ADE30485C9CF1AEF617595A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25407,7 +25409,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiceVisibilityManager_AutoDetectPanels_m
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Add_m43FBF207375C6E06B8C45ECE614F9B8008FB686E_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_Contains_m8D2C9B0C7844486763AE6C2CA3C04FA4BBA9B384_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_m4C37ED2D928D63B80F55AF434730C2D64EEB9F22_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectsOfType_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m56C380C6D2B676920089B9CC76CD00EA50F76B7C_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectsByType_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_mE287E42D33D12DDA538B4C7903022954136A1BAE_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral3922C34FA4FCC971DB5D6272A418AE8EC1F2B92E);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8532034E498F5E932C900B258AC8B7389BD7607F);
@@ -25423,14 +25425,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiceVisibilityManager_AutoDetectPanels_m
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DiceVisibilityManager.cs:155>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_0;
-		L_0 = Object_FindObjectsOfType_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m56C380C6D2B676920089B9CC76CD00EA50F76B7C((bool)1, Object_FindObjectsOfType_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m56C380C6D2B676920089B9CC76CD00EA50F76B7C_RuntimeMethod_var);
+		L_0 = Object_FindObjectsByType_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_mE287E42D33D12DDA538B4C7903022954136A1BAE(1, 0, Object_FindObjectsByType_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_mE287E42D33D12DDA538B4C7903022954136A1BAE_RuntimeMethod_var);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DiceVisibilityManager.cs:157>
 		V_0 = L_0;
 		V_1 = 0;
-		goto IL_0080;
+		goto IL_0081;
 	}
 
-IL_000b:
+IL_000c:
 	{
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DiceVisibilityManager.cs:157>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_1 = V_0;
@@ -25443,10 +25445,10 @@ IL_000b:
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_5 = __this->___panelNamePatterns;
 		V_3 = L_5;
 		V_4 = 0;
-		goto IL_0075;
+		goto IL_0076;
 	}
 
-IL_001b:
+IL_001c:
 	{
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DiceVisibilityManager.cs:160>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_6 = V_3;
@@ -25466,7 +25468,7 @@ IL_001b:
 		L_13 = String_Contains_m6D77B121FADA7CA5F397C0FABB65DA62DF03B6C3(L_11, L_12, NULL);
 		if (!L_13)
 		{
-			goto IL_006f;
+			goto IL_0070;
 		}
 	}
 	{
@@ -25477,7 +25479,7 @@ IL_001b:
 		L_16 = List_1_Contains_m8D2C9B0C7844486763AE6C2CA3C04FA4BBA9B384(L_14, L_15, List_1_Contains_m8D2C9B0C7844486763AE6C2CA3C04FA4BBA9B384_RuntimeMethod_var);
 		if (L_16)
 		{
-			goto IL_006f;
+			goto IL_0070;
 		}
 	}
 	{
@@ -25491,7 +25493,7 @@ IL_001b:
 		L_19 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_18, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_19)
 		{
-			goto IL_006f;
+			goto IL_0070;
 		}
 	}
 	{
@@ -25510,16 +25512,16 @@ IL_001b:
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_24, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DiceVisibilityManager.cs:169>
-		goto IL_007c;
+		goto IL_007d;
 	}
 
-IL_006f:
+IL_0070:
 	{
 		int32_t L_25 = V_4;
 		V_4 = ((int32_t)il2cpp_codegen_add(L_25, 1));
 	}
 
-IL_0075:
+IL_0076:
 	{
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DiceVisibilityManager.cs:160>
 		int32_t L_26 = V_4;
@@ -25527,17 +25529,17 @@ IL_0075:
 		NullCheck(L_27);
 		if ((((int32_t)L_26) < ((int32_t)((int32_t)(((RuntimeArray*)L_27)->max_length)))))
 		{
-			goto IL_001b;
+			goto IL_001c;
 		}
 	}
 
-IL_007c:
+IL_007d:
 	{
 		int32_t L_28 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_28, 1));
 	}
 
-IL_0080:
+IL_0081:
 	{
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DiceVisibilityManager.cs:157>
 		int32_t L_29 = V_1;
@@ -25545,7 +25547,7 @@ IL_0080:
 		NullCheck(L_30);
 		if ((((int32_t)L_29) < ((int32_t)((int32_t)(((RuntimeArray*)L_30)->max_length)))))
 		{
-			goto IL_000b;
+			goto IL_000c;
 		}
 	}
 	{
@@ -25564,7 +25566,7 @@ IL_0080:
 		return;
 	}
 }
-// Method Definition Index: 65568
+// Method Definition Index: 65570
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiceVisibilityManager_ApplyDiceScaling_m64C963D1CDC3E98A3AC9BACA5634718794B64428 (DiceVisibilityManager_tA18B656A48FE4B835ADE30485C9CF1AEF617595A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25971,7 +25973,7 @@ IL_02af:
 		return;
 	}
 }
-// Method Definition Index: 65569
+// Method Definition Index: 65571
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiceVisibilityManager_CenterDiceContainer_m3E7F40A9D97CF202E4E3A22486B68E5A558D0EA1 (DiceVisibilityManager_tA18B656A48FE4B835ADE30485C9CF1AEF617595A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26034,7 +26036,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 65570
+// Method Definition Index: 65572
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiceVisibilityManager_CenterDice3DModels_m9CA0DA4CEDD8C5FB7A0404AE35EF7166F66AA6DA (DiceVisibilityManager_tA18B656A48FE4B835ADE30485C9CF1AEF617595A* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_dice1, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___1_dice2, float ___2_spacing, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26181,7 +26183,7 @@ IL_00bb:
 		return;
 	}
 }
-// Method Definition Index: 65571
+// Method Definition Index: 65573
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiceVisibilityManager_AddPanelToMonitor_m57080E17C46FCAF7905D0030F0B8CE8920584566 (DiceVisibilityManager_tA18B656A48FE4B835ADE30485C9CF1AEF617595A* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_panel, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26239,7 +26241,7 @@ IL_0038:
 		return;
 	}
 }
-// Method Definition Index: 65572
+// Method Definition Index: 65574
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiceVisibilityManager_RemovePanelFromMonitor_m43F8A78FEB9222687A2DDFEDACB83BC7324DA7D5 (DiceVisibilityManager_tA18B656A48FE4B835ADE30485C9CF1AEF617595A* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_panel, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26287,7 +26289,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 65573
+// Method Definition Index: 65575
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiceVisibilityManager_ForceShowDices_mA04F544F0FBC70C5B343DEE64B7247EDBE27670E (DiceVisibilityManager_tA18B656A48FE4B835ADE30485C9CF1AEF617595A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26322,7 +26324,7 @@ IL_0020:
 		return;
 	}
 }
-// Method Definition Index: 65574
+// Method Definition Index: 65576
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiceVisibilityManager_ForceHideDices_mE135A34A8BDD8EEDB97E5B88F87CE3369E59F34C (DiceVisibilityManager_tA18B656A48FE4B835ADE30485C9CF1AEF617595A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26357,7 +26359,7 @@ IL_0020:
 		return;
 	}
 }
-// Method Definition Index: 65575
+// Method Definition Index: 65577
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiceVisibilityManager__ctor_mF6277B1A5F25E5332B331FC0BB8BBB7665CE827F (DiceVisibilityManager_tA18B656A48FE4B835ADE30485C9CF1AEF617595A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26410,7 +26412,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiceVisibilityManager__ctor_mF6277B1A5F2
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 76795
+// Method Definition Index: 76797
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___0_x, float ___1_y, float ___2_width, float ___3_height, const RuntimeMethod* method) 
 {
 	{
@@ -26425,7 +26427,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect__ctor_m18C3033D135097BE
 		return;
 	}
 }
-// Method Definition Index: 78489
+// Method Definition Index: 78491
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, float ___0_x, float ___1_y, const RuntimeMethod* method) 
 {
 	{
@@ -26436,7 +26438,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFF
 		return;
 	}
 }
-// Method Definition Index: 66794
+// Method Definition Index: 66796
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR SocketManager_tFA162C4D30D5A71D0A5F10FDA0CF83B2B1101650* SocketManager_get_Instance_mFAF3D466262B9D9A471AB4FF8165EACB053F8CBC_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26451,7 +26453,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR SocketManager_tFA162C4D30D5A71D0A
 		return L_0;
 	}
 }
-// Method Definition Index: 66648
+// Method Definition Index: 66650
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Avatar_mE3D8C1BE3E6D46C3AE3837FA63789AA9A95EAEDD_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26466,7 +26468,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Avatar_
 		return L_0;
 	}
 }
-// Method Definition Index: 66656
+// Method Definition Index: 66658
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_SelectedAvatarIndex_m52692425CF7D719B831AFBCC8015DE4B8B021C59_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26481,7 +26483,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_SelectedA
 		return L_0;
 	}
 }
-// Method Definition Index: 78451
+// Method Definition Index: 78453
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline (float ___0_a, float ___1_b, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -26518,7 +26520,7 @@ IL_000c:
 		return L_4;
 	}
 }
-// Method Definition Index: 123291
+// Method Definition Index: 123292
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline (Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26527,7 +26529,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ButtonClickedEvent_t8EA72E90B3BD1
 		return L_0;
 	}
 }
-// Method Definition Index: 78583
+// Method Definition Index: 78585
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector4__ctor_m96B2CD8B862B271F513AF0BDC2EABD58E4DBC813_inline (Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3* __this, float ___0_x, float ___1_y, float ___2_z, float ___3_w, const RuntimeMethod* method) 
 {
 	{
@@ -26542,7 +26544,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector4__ctor_m96B2CD8B862B2
 		return;
 	}
 }
-// Method Definition Index: 78449
+// Method Definition Index: 78451
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Min_m747CA71A9483CDB394B13BD0AD048EE17E48FFE4_inline (float ___0_a, float ___1_b, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -26579,7 +26581,7 @@ IL_000c:
 		return L_4;
 	}
 }
-// Method Definition Index: 78369
+// Method Definition Index: 78371
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26593,7 +26595,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_0;
 	}
 }
-// Method Definition Index: 78379
+// Method Definition Index: 78381
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, float ___1_d, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -26616,7 +26618,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_9;
 	}
 }
-// Method Definition Index: 66646
+// Method Definition Index: 66648
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Coins_m4C02B7FEEBA8E8E63B180510D565F9FA8B33F37A_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26631,7 +26633,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Coins_m4C
 		return L_0;
 	}
 }
-// Method Definition Index: 66638
+// Method Definition Index: 66640
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Balance_mF8AAC11F89C906B7F1E6FAB7C7C6C7E64DA4F46D_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26646,7 +26648,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Balance_m
 		return L_0;
 	}
 }
-// Method Definition Index: 78463
+// Method Definition Index: 78465
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_RoundToInt_m60F8B66CF27F1FA75AA219342BD184B75771EB4B_inline (float ___0_f, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26671,7 +26673,7 @@ IL_000c:
 		return L_2;
 	}
 }
-// Method Definition Index: 78462
+// Method Definition Index: 78464
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_FloorToInt_m2A39AE881CAEE6B6A4B3BFEF9CA1ED40625F5AB7_inline (float ___0_f, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26696,7 +26698,7 @@ IL_000c:
 		return L_2;
 	}
 }
-// Method Definition Index: 78466
+// Method Definition Index: 78468
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline (int32_t ___0_value, int32_t ___1_min, int32_t ___2_max, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -26747,7 +26749,7 @@ IL_001d:
 		return L_9;
 	}
 }
-// Method Definition Index: 78467
+// Method Definition Index: 78469
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline (float ___0_value, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -26795,7 +26797,7 @@ IL_002d:
 		return L_5;
 	}
 }
-// Method Definition Index: 78331
+// Method Definition Index: 78333
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_Lerp_m3A906D0530A94FAABB94F0F905E84D99BE85C3F8_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, float ___2_t, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -26842,7 +26844,7 @@ IL_0064:
 		return L_24;
 	}
 }
-// Method Definition Index: 65139
+// Method Definition Index: 65141
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* BackendAuthService_get_Instance_m74239149FFCCCF5A49AF965DCA0565780B051110_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26857,7 +26859,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR BackendAuthService_t71F3E2DE248AE
 		return L_0;
 	}
 }
-// Method Definition Index: 66640
+// Method Definition Index: 66642
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_CashBalance_m0E3FB6888B6E28878E0F553CB0A96C2947BFEFAC_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26878,7 +26880,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_Invoke_m7126A54DACA72
 	typedef void (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 66628
+// Method Definition Index: 66630
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Id_mC58F20220F795613BEDA334EE4DB7A9B07CF79E0_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26893,7 +26895,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Id_mC58
 		return L_0;
 	}
 }
-// Method Definition Index: 66630
+// Method Definition Index: 66632
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Name_mC2FF8F628463BB165429DADD4D06B7B8DF621276_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26908,7 +26910,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Name_mC
 		return L_0;
 	}
 }
-// Method Definition Index: 66632
+// Method Definition Index: 66634
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Email_mB1FCCB0FD27F759C2D91D0893F83FEB2434E23B0_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26923,7 +26925,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Email_m
 		return L_0;
 	}
 }
-// Method Definition Index: 76812
+// Method Definition Index: 76814
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_width_m620D67551372073C9C32C4C4624C2A5713F7F9A9_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26931,7 +26933,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_width_m620D6755137
 		return L_0;
 	}
 }
-// Method Definition Index: 76814
+// Method Definition Index: 76816
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_height_mE1AA6C6C725CCD2D317BD2157396D3CF7D47C9D8_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26939,7 +26941,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_height_mE1AA6C6C72
 		return L_0;
 	}
 }
-// Method Definition Index: 78525
+// Method Definition Index: 78527
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;

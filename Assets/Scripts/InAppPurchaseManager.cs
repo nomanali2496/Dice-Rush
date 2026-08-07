@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -357,7 +357,7 @@ public class InAppPurchaseManager : MonoBehaviour
             Debug.LogWarning($"[InAppPurchaseManager] Expected 13 or 20 buttons, got {purchaseButtons.Length}.");
 
         // Auto-wire carousel duplicate buttons
-        OffersCarouselManager carousel = FindObjectOfType<OffersCarouselManager>();
+        OffersCarouselManager carousel = FindFirstObjectByType<OffersCarouselManager>();
         if (carousel != null)
         {
             GameObject[] items = carousel.GetOfferItems();

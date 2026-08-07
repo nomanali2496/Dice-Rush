@@ -408,7 +408,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m16DD8873A5BA0D8B303440E52
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_mB63183A9151F4345A9DD444A7CBE0D6E03F77C7C_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_m21AEC50E791371101DC22ABCF96A2E46800811F8_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_m92EBD0A388F1AC5CC83418DB27C96B15C52B0E2C_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectOfType_TisSampleRoot_t7ADB39090699AC557ADD4EB6A64898F88FBFC1BE_m0030782923B889D9C8F9E9D0A80030F03616E2A6_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Object_FindFirstObjectByType_TisSampleRoot_t7ADB39090699AC557ADD4EB6A64898F88FBFC1BE_m20B289298BE6B410F227A32F6472024A701F9F44_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisCategory_t71E84D09FCE356DC62297C9B6F43E8C28FA23DE6_m29D7A7E908F2CFDA2D512EF4BCC3C2E31892762B_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisExampleInfo_tA24341D4CF9B1E396C492E570E304EF5BB644885_m9583639B22F3FBEA04F0771A535F025CC702007D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisExampleListItem_t25DBFAD69776721D4718BCBB43B0C87EC592C867_mC4BACBC13311DE85C304C7BD5FED870660263DAC_RuntimeMethod_var;
@@ -3163,7 +3163,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* List_1_get_Item_m33561245D64798C2AB07584C0EC4F240E4839A38_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, int32_t ___0_index, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonMapper_ToObject_TisRuntimeObject_m5A783DF3455B33FA6D6734258C8EAD2456F18556_gshared (String_t* ___0_json, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Object_FindObjectOfType_TisRuntimeObject_m02DFBF011F3B59F777A5E521DB2A116DD496E968_gshared (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Object_FindFirstObjectByType_TisRuntimeObject_mC5927319EB5B80095EFBA653D414D6F8AA87DC0A_gshared (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Comparison_1__ctor_mC1E8799BBCE317B612875123C9C894BD470BFE6A_gshared (Comparison_1_t62E531E7B8260E2C6C2718C3BDB8CF8655139645* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1_Sort_mEB3B61CB86B1419919338B0668DC4E568C2FFF93_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, Comparison_1_t62E531E7B8260E2C6C2718C3BDB8CF8655139645* ___0_comparison, const RuntimeMethod* method) ;
@@ -3322,9 +3322,9 @@ inline DateTimeData_t5AC4F27DFABEDCA6D0EAC820267571A95A98FD83* JsonMapper_ToObje
 {
 	return ((  DateTimeData_t5AC4F27DFABEDCA6D0EAC820267571A95A98FD83* (*) (String_t*, const RuntimeMethod*))JsonMapper_ToObject_TisRuntimeObject_m5A783DF3455B33FA6D6734258C8EAD2456F18556_gshared)(___0_json, method);
 }
-inline SampleRoot_t7ADB39090699AC557ADD4EB6A64898F88FBFC1BE* Object_FindObjectOfType_TisSampleRoot_t7ADB39090699AC557ADD4EB6A64898F88FBFC1BE_m0030782923B889D9C8F9E9D0A80030F03616E2A6 (const RuntimeMethod* method)
+inline SampleRoot_t7ADB39090699AC557ADD4EB6A64898F88FBFC1BE* Object_FindFirstObjectByType_TisSampleRoot_t7ADB39090699AC557ADD4EB6A64898F88FBFC1BE_m20B289298BE6B410F227A32F6472024A701F9F44 (const RuntimeMethod* method)
 {
-	return ((  SampleRoot_t7ADB39090699AC557ADD4EB6A64898F88FBFC1BE* (*) (const RuntimeMethod*))Object_FindObjectOfType_TisRuntimeObject_m02DFBF011F3B59F777A5E521DB2A116DD496E968_gshared)(method);
+	return ((  SampleRoot_t7ADB39090699AC557ADD4EB6A64898F88FBFC1BE* (*) (const RuntimeMethod*))Object_FindFirstObjectByType_TisRuntimeObject_mC5927319EB5B80095EFBA653D414D6F8AA87DC0A_gshared)(method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E (MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71* __this, const RuntimeMethod* method) ;
 inline LayoutGroup_t32417833C700E77EDFA7C20034DAFD26604E05CE* Component_GetComponent_TisLayoutGroup_t32417833C700E77EDFA7C20034DAFD26604E05CE_m1F9456DE15CE473E9CC8A0C861F424A2EF8D1F8B (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method)
@@ -5245,7 +5245,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleBase_Start_mDAA516B4045C9F499A83F1
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisSampleRoot_t7ADB39090699AC557ADD4EB6A64898F88FBFC1BE_m0030782923B889D9C8F9E9D0A80030F03616E2A6_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindFirstObjectByType_TisSampleRoot_t7ADB39090699AC557ADD4EB6A64898F88FBFC1BE_m20B289298BE6B410F227A32F6472024A701F9F44_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -5253,7 +5253,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleBase_Start_mDAA516B4045C9F499A83F1
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Examples/Helpers/SampleBase.cs:20>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		SampleRoot_t7ADB39090699AC557ADD4EB6A64898F88FBFC1BE* L_0;
-		L_0 = Object_FindObjectOfType_TisSampleRoot_t7ADB39090699AC557ADD4EB6A64898F88FBFC1BE_m0030782923B889D9C8F9E9D0A80030F03616E2A6(Object_FindObjectOfType_TisSampleRoot_t7ADB39090699AC557ADD4EB6A64898F88FBFC1BE_m0030782923B889D9C8F9E9D0A80030F03616E2A6_RuntimeMethod_var);
+		L_0 = Object_FindFirstObjectByType_TisSampleRoot_t7ADB39090699AC557ADD4EB6A64898F88FBFC1BE_m20B289298BE6B410F227A32F6472024A701F9F44(Object_FindFirstObjectByType_TisSampleRoot_t7ADB39090699AC557ADD4EB6A64898F88FBFC1BE_m20B289298BE6B410F227A32F6472024A701F9F44_RuntimeMethod_var);
 		__this->___sampleSelector = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___sampleSelector), (void*)L_0);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Examples/Helpers/SampleBase.cs:21>
@@ -5527,7 +5527,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleSelectorUI_Start_mD7C8418730714254
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisSampleRoot_t7ADB39090699AC557ADD4EB6A64898F88FBFC1BE_m0030782923B889D9C8F9E9D0A80030F03616E2A6_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindFirstObjectByType_TisSampleRoot_t7ADB39090699AC557ADD4EB6A64898F88FBFC1BE_m20B289298BE6B410F227A32F6472024A701F9F44_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -5535,7 +5535,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SampleSelectorUI_Start_mD7C8418730714254
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Examples/Helpers/SelectorUI/SampleSelectorUI.cs:36>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		SampleRoot_t7ADB39090699AC557ADD4EB6A64898F88FBFC1BE* L_0;
-		L_0 = Object_FindObjectOfType_TisSampleRoot_t7ADB39090699AC557ADD4EB6A64898F88FBFC1BE_m0030782923B889D9C8F9E9D0A80030F03616E2A6(Object_FindObjectOfType_TisSampleRoot_t7ADB39090699AC557ADD4EB6A64898F88FBFC1BE_m0030782923B889D9C8F9E9D0A80030F03616E2A6_RuntimeMethod_var);
+		L_0 = Object_FindFirstObjectByType_TisSampleRoot_t7ADB39090699AC557ADD4EB6A64898F88FBFC1BE_m20B289298BE6B410F227A32F6472024A701F9F44(Object_FindFirstObjectByType_TisSampleRoot_t7ADB39090699AC557ADD4EB6A64898F88FBFC1BE_m20B289298BE6B410F227A32F6472024A701F9F44_RuntimeMethod_var);
 		__this->___sampleSelector = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___sampleSelector), (void*)L_0);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Examples/Helpers/SelectorUI/SampleSelectorUI.cs:37>
@@ -9454,7 +9454,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void HTTPRequest_set_Proxy_mF5E7A
 		return;
 	}
 }
-// Method Definition Index: 123687
+// Method Definition Index: 123688
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* InputField_get_text_m6E0796350FF559505E4DF17311803962699D6704_inline (InputField_tABEA115F23FBD374EBE80D4FAC1D15BD6E37A140* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9472,7 +9472,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Message_get_Data_m46BB4
 		return L_0;
 	}
 }
-// Method Definition Index: 124008
+// Method Definition Index: 124009
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RectOffset_t6358774A0DEEABA4586840CB9BC7DC88B39660B5* LayoutGroup_get_padding_m91ABA3C588704717EDC82E72BA6D1B82711FE83C_inline (LayoutGroup_t32417833C700E77EDFA7C20034DAFD26604E05CE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9586,7 +9586,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void HTTPRequest_set_Callback_m65
 		return;
 	}
 }
-// Method Definition Index: 124533
+// Method Definition Index: 124534
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Toggle_get_isOn_m89A609E936CD67F460E336CA8E03C4047BFB6619_inline (Toggle_tBF13F3EBA485E06826FD8A38F4B4C1380DF21A1F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9640,7 +9640,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint8_t HTTPManager_get_MaxConnec
 		return L_0;
 	}
 }
-// Method Definition Index: 78463
+// Method Definition Index: 78465
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_RoundToInt_m60F8B66CF27F1FA75AA219342BD184B75771EB4B_inline (float ___0_f, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;

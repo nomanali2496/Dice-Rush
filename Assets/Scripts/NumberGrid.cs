@@ -1,3 +1,4 @@
+﻿#pragma warning disable 0414
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -898,7 +899,7 @@ public class NumberGrid : MonoBehaviour
         lastTappedBoxData = boxData;
 
         // EMIT TAP TO SERVER
-        GameManager gm = FindObjectOfType<GameManager>();
+        GameManager gm = FindFirstObjectByType<GameManager>();
         string roomId = gm != null ? gm.GetCurrentRoomId() : null;
         
         if (!string.IsNullOrEmpty(roomId))
@@ -1543,7 +1544,7 @@ public class NumberGrid : MonoBehaviour
 
         // If we are in a server-driven match, do NOT start the local timer loop.
         // Powerups will be activated by 'iconActivated' events from the server.
-        GameManager gm = FindObjectOfType<GameManager>();
+        GameManager gm = FindFirstObjectByType<GameManager>();
         if (gm != null && !string.IsNullOrEmpty(gm.GetCurrentRoomId()))
         {
             Debug.Log("[NumberGrid] Server-driven match detected. Local powerup timer loop disabled.");
@@ -1829,7 +1830,7 @@ public class NumberGrid : MonoBehaviour
         // Store this as the last tapped box for visual feedback from server
         lastTappedBoxData = boxData;
 
-        GameManager gm = FindObjectOfType<GameManager>();
+        GameManager gm = FindFirstObjectByType<GameManager>();
         string roomId = gm != null ? gm.GetCurrentRoomId() : null;
 
         if (!string.IsNullOrEmpty(roomId))

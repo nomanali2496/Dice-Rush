@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -90,7 +90,7 @@ public class MatchRecoveryUIManager : MonoBehaviour
         if (mainMenuScreen != null && !mainMenuScreen.activeSelf) return;
         
         // Don't show the recovery prompt if we are actively playing a game!
-        GameManager gm = FindObjectOfType<GameManager>();
+        GameManager gm = FindFirstObjectByType<GameManager>();
         if (gm != null && gm.IsGameplayScreenActive) return;
         
         if (!string.IsNullOrEmpty(PlayerModel.ActiveMatchId) && !string.IsNullOrEmpty(PlayerModel.ActiveRoomId))

@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
@@ -191,7 +191,7 @@ public class PlayerProfileUI : MonoBehaviour
     private void ShowLoginScreen()
     {
         if (splashScreenPanel != null) splashScreenPanel.SetActive(false);
-        AuthenticationManager auth = FindObjectOfType<AuthenticationManager>();
+        AuthenticationManager auth = FindFirstObjectByType<AuthenticationManager>();
         if (auth != null) auth.ShowLoginRegisterPanel();
     }
 

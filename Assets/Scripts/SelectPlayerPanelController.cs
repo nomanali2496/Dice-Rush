@@ -77,29 +77,27 @@ public class SelectPlayerPanelController : MonoBehaviour
         // Hide select player panel
         HidePanel();
 
-        // Ensure lobby panel is active
-        if (lobbyPanel != null)
-        {
-            lobbyPanel.SetActive(true);
-        }
-
+        // Set selected player count on Lobby Manager and open Select Board panel
         if (lobbyManager == null)
         {
-            lobbyManager = FindObjectOfType<HorizontalLobbyManager>(true);
+            lobbyManager = FindFirstObjectByType<HorizontalLobbyManager>(FindObjectsInactive.Include);
         }
 
         if (lobbyManager != null)
         {
+            lobbyManager.SelectedPlayerCount = playerCount;
+            
             if (lobbyPanel == null && lobbyManager.gameObject != null)
             {
-                lobbyManager.gameObject.SetActive(true);
+                lobbyPanel = lobbyManager.gameObject;
             }
 
-            // Open/Initialize the lobby manager
-            lobbyManager.OnLobbyOpened();
+            if (lobbyPanel != null)
+            {
+                lobbyPanel.SetActive(true);
+            }
 
-            // Start matchmaking for selected player count and show waiting panel in lobby
-            lobbyManager.StartMatchmakingForPlayerCount(playerCount, defaultStake, lobbyId);
+            lobbyManager.OnLobbyOpened();
         }
         else
         {

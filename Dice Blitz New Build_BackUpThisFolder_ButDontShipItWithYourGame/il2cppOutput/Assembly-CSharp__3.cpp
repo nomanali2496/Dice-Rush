@@ -925,11 +925,11 @@ IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_mFA4E2A18AE8F5833FD9FD3389
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_m91209D2BD1090586F090F544200B08A9F926C18F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_mE616D49F5F6197745A12A06084EEE9E6FFCF017F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_set_Item_m748B5D30B1531655DDBCED2F0B4FA5BA2AC0F9E7_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectOfType_TisAvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C_m7ABB382A445BFE961473D47CE493D37ABEBF2A60_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectOfType_TisFriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E_m61D8314EDF972CED0560C2487AC57ACBEAD6A29E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectOfType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_m358B2301D31070F31BF8BF978DC3F2B6F68FE0FB_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectOfType_TisInviteFriendManager_t8B237D78EC6FBC30CA6B9628302BBDE4D2881024_mF6449536BB733AB96A8A04B30A4893E8D15FED29_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Object_FindFirstObjectByType_TisAvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C_m65708B66CE78AAE007ABE959D1B4E84AEF8887C2_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Object_FindFirstObjectByType_TisFriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E_mA9A5CABCB92717FA19A6D1A42BED694DC557479C_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Object_FindFirstObjectByType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mF766559530B489C0F2CD36609162D1A663352C63_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Object_FindFirstObjectByType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_m135AF64B21524B9580A4F9DAB9656669BE6A6F35_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Object_FindFirstObjectByType_TisInviteFriendManager_t8B237D78EC6FBC30CA6B9628302BBDE4D2881024_m67D143B0043FAD2B251C105E17A0F71DEEA3A31F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m58C654F1134533E29502629CA67645682B404811_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* TaskExtension_ContinueWithOnMainThread_TisDependencyStatus_t9DA2DB2B2AC17E9DA549331B93778091496D8195_m3D02ADC7B14017F2CBDCF98EAC7BF5870D05726F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Task_1_ContinueWith_m6D957279C93F486B208C8512F3CE4CD36F82F09C_RuntimeMethod_var;
@@ -4675,7 +4675,7 @@ struct ValueTuple_5U5BU5D_t62AF02CA477210A7A8EDD1FCCB6C4B3258F23D27  : public Ru
 
 
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1__ctor_m2E1DFA67718FC1A0B6E5DFEB78831FFE9C059EB4_gshared (Action_1_t6F9EB113EB3F16226AEF811A2744F4111C116C87* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Object_FindObjectOfType_TisRuntimeObject_m02DFBF011F3B59F777A5E521DB2A116DD496E968_gshared (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Object_FindFirstObjectByType_TisRuntimeObject_mC5927319EB5B80095EFBA653D414D6F8AA87DC0A_gshared (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueTuple_2__ctor_mF5D8FB18DBF2C4B2F879F8E8E12D8FB8FCDB5477_gshared (ValueTuple_2_t973F7AB0EF5DD3619E518A966941F10D8098F52D* __this, int32_t ___0_item1, int32_t ___1_item2, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_2_Invoke_m728A2437F181FBC56F4D617249B47F513AC9FC43_gshared_inline (Action_2_tD7438462601D3939500ED67463331FE00CFFBDB8* __this, int32_t ___0_arg1, int32_t ___1_arg2, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
@@ -4787,9 +4787,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DicesController_NormalizeAngle_mDE63362
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, float ___0_x, float ___1_y, float ___2_z, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2 (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
-inline GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40 (const RuntimeMethod* method)
+inline GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* Object_FindFirstObjectByType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mF766559530B489C0F2CD36609162D1A663352C63 (const RuntimeMethod* method)
 {
-	return ((  GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* (*) (const RuntimeMethod*))Object_FindObjectOfType_TisRuntimeObject_m02DFBF011F3B59F777A5E521DB2A116DD496E968_gshared)(method);
+	return ((  GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* (*) (const RuntimeMethod*))Object_FindFirstObjectByType_TisRuntimeObject_mC5927319EB5B80095EFBA653D414D6F8AA87DC0A_gshared)(method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GameManager_GetCurrentRoomId_mAB222A18C6E2AF00E1F2A2AAF98FAB009F9DD97A (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478 (String_t* ___0_value, const RuntimeMethod* method) ;
@@ -4996,9 +4996,9 @@ inline int32_t Task_1_get_Result_m543F02EC56EEA4AAED7101434F488D890414A3DA (Task
 	return ((  int32_t (*) (Task_1_tCDCA9B2073B1AC4ED4537A6D74742D20B122E1EF*, const RuntimeMethod*))Task_1_get_Result_mF8B724FC6FD57DF2078A1F8927214003AAAC6286_gshared)(__this, method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* FirebaseApp_get_Name_m89C11F96726C8E4FD3CCAE04A5DC3129F7CD975E (FirebaseApp_tD23C437863A3502177988D1382B58820B0571A25* __this, const RuntimeMethod* method) ;
-inline InviteFriendManager_t8B237D78EC6FBC30CA6B9628302BBDE4D2881024* Object_FindObjectOfType_TisInviteFriendManager_t8B237D78EC6FBC30CA6B9628302BBDE4D2881024_mF6449536BB733AB96A8A04B30A4893E8D15FED29 (const RuntimeMethod* method)
+inline InviteFriendManager_t8B237D78EC6FBC30CA6B9628302BBDE4D2881024* Object_FindFirstObjectByType_TisInviteFriendManager_t8B237D78EC6FBC30CA6B9628302BBDE4D2881024_m67D143B0043FAD2B251C105E17A0F71DEEA3A31F (const RuntimeMethod* method)
 {
-	return ((  InviteFriendManager_t8B237D78EC6FBC30CA6B9628302BBDE4D2881024* (*) (const RuntimeMethod*))Object_FindObjectOfType_TisRuntimeObject_m02DFBF011F3B59F777A5E521DB2A116DD496E968_gshared)(method);
+	return ((  InviteFriendManager_t8B237D78EC6FBC30CA6B9628302BBDE4D2881024* (*) (const RuntimeMethod*))Object_FindFirstObjectByType_TisRuntimeObject_mC5927319EB5B80095EFBA653D414D6F8AA87DC0A_gshared)(method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowScaler_ApplyScaling_m8AE3E9B8396C80B1B955BC9AC5C335B0E13798B4 (FriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Screen_get_width_mF608FF3252213E7EFA1F0D2F744C28110E9E5AC9 (const RuntimeMethod* method) ;
@@ -5015,9 +5015,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RectTransform_set_offsetMin_m07F38B4105C
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RectTransform_set_offsetMax_m5514D09D86516F2C0E25FA6D11A3A4274D3D002D (RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowUI_ApplyScaling_m2810ED7B4EA14E067E1990AAF9082FFCE50C8115 (FriendRowUI_t76AF78A210E60917EADE304C389A66172284AAC4* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowUI_SetupRow_m813C95EB961879CAF4E45F00ADA3D4E0D02EFB30 (FriendRowUI_t76AF78A210E60917EADE304C389A66172284AAC4* __this, String_t* ___0_friendName, String_t* ___1_friendId, Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___2_avatarSprite, bool ___3_isOnline, String_t* ___4_avatarKey, const RuntimeMethod* method) ;
-inline FriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E* Object_FindObjectOfType_TisFriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E_m61D8314EDF972CED0560C2487AC57ACBEAD6A29E (const RuntimeMethod* method)
+inline FriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E* Object_FindFirstObjectByType_TisFriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E_mA9A5CABCB92717FA19A6D1A42BED694DC557479C (const RuntimeMethod* method)
 {
-	return ((  FriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E* (*) (const RuntimeMethod*))Object_FindObjectOfType_TisRuntimeObject_m02DFBF011F3B59F777A5E521DB2A116DD496E968_gshared)(method);
+	return ((  FriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E* (*) (const RuntimeMethod*))Object_FindFirstObjectByType_TisRuntimeObject_mC5927319EB5B80095EFBA653D414D6F8AA87DC0A_gshared)(method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowScaler_ScaleRowElements_mEA8D49E1361A77ABBAD7511E48867A8EB5609AA0 (FriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_profileImg, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___1_onlineOfflineImg, TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___2_nameTxt, TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___3_idTxt, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___4_lineImg, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass11_0__ctor_mD08973F4041FC2ED237F0A0C7CF5AD4D1C940295 (U3CU3Ec__DisplayClass11_0_t10ED54E9A49505119E1EF1BC34F9832853B9F69C* __this, const RuntimeMethod* method) ;
@@ -5277,9 +5277,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnAllBoxesSelected_m8696A896A20F037A91B850816DE478D3CD3D2CB0 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool MatchmakingModel_get_IsSearching_mB7F7D264B87192D66A232C3FE5E1548D8EB8CE91_inline (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_CancelSearch_mC7DB2A347EEB04DB97277713FB458E3D769858AB (const RuntimeMethod* method) ;
-inline HorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637* Object_FindObjectOfType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_m358B2301D31070F31BF8BF978DC3F2B6F68FE0FB (const RuntimeMethod* method)
+inline HorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637* Object_FindFirstObjectByType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_m135AF64B21524B9580A4F9DAB9656669BE6A6F35 (const RuntimeMethod* method)
 {
-	return ((  HorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637* (*) (const RuntimeMethod*))Object_FindObjectOfType_TisRuntimeObject_m02DFBF011F3B59F777A5E521DB2A116DD496E968_gshared)(method);
+	return ((  HorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637* (*) (const RuntimeMethod*))Object_FindFirstObjectByType_TisRuntimeObject_mC5927319EB5B80095EFBA653D414D6F8AA87DC0A_gshared)(method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HorizontalLobbyManager_HideWaitingPanel_mA112C20307DD840CF4C346FB12530D5C6679E6FD (HorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_ForfeitMatch_m82F087E962BBCBAAF4075E81527E7A3BC6C84DE8 (String_t* ___0_roomId, bool ___1_joinRoomFirst, const RuntimeMethod* method) ;
@@ -5296,9 +5296,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_AssignAvatarAsync_m3194B986C
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* MainMenuAvatarDisplay_GetCurrentAvatarSprite_m8E9E61DF0B4F446EC8533510F2F7D34EB05FB40F (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MainMenuAvatarDisplay_IsShowingCustomAvatar_m3EB26B9A63B6528128B1DC58D3FCF3B75E1A649B (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* Graphic_get_rectTransform_mF4752E8934267D630810E84CE02CDFB81EB1FD6D (Graphic_tCBFCA4585A19E2B75465AECFEAC43F4016BF7931* __this, const RuntimeMethod* method) ;
-inline AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* Object_FindObjectOfType_TisAvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C_m7ABB382A445BFE961473D47CE493D37ABEBF2A60 (const RuntimeMethod* method)
+inline AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* Object_FindFirstObjectByType_TisAvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C_m65708B66CE78AAE007ABE959D1B4E84AEF8887C2 (const RuntimeMethod* method)
 {
-	return ((  AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* (*) (const RuntimeMethod*))Object_FindObjectOfType_TisRuntimeObject_m02DFBF011F3B59F777A5E521DB2A116DD496E968_gshared)(method);
+	return ((  AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* (*) (const RuntimeMethod*))Object_FindFirstObjectByType_TisRuntimeObject_mC5927319EB5B80095EFBA653D414D6F8AA87DC0A_gshared)(method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* AvatarSelector_GetAvatarSpriteByIndex_m13A49F82BFEDBB331E6F7C8469C48EF0669E7C14 (AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* __this, int32_t ___0_index, const RuntimeMethod* method) ;
 inline Enumerator_t523F80AA7C8FB95122E7C54EF8BE1980556B10D2 Dictionary_2_GetEnumerator_mD25B46BE46310B9408E8E807A367559603D71860 (Dictionary_2_t38334E2D807AD276857B2117EF4E7C07E4813447* __this, const RuntimeMethod* method)
@@ -5702,7 +5702,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_get_magnitude_mF0D6
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65576
+// Method Definition Index: 65578
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_Start_m6F6EF8AD7E2C5587BB506C95093EE66ED2659291 (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5721,7 +5721,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_Start_m6F6EF8AD7E2C5587B
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:58>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:59>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = __this->___rollButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -5732,14 +5732,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_Start_m6F6EF8AD7E2C5587B
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:60>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:61>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_2 = __this->___rollButton;
 		NullCheck(L_2);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_3;
 		L_3 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline(L_2, NULL);
 		NullCheck(L_3);
 		UnityEventBase_RemoveAllListeners_m6E68297189537543B0C72FE38804646CA204D076(L_3, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:61>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:62>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_4 = __this->___rollButton;
 		NullCheck(L_4);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_5;
@@ -5753,14 +5753,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_Start_m6F6EF8AD7E2C5587B
 
 IL_003c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:65>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:66>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteralD02B138AE4EE97107992E2F7BB395D695414C15D, NULL);
 	}
 
 IL_0046:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:69>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:70>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7 = __this->___dice1;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_8;
@@ -5783,28 +5783,28 @@ IL_0046:
 
 IL_0062:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:71>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:72>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral2CE7902CDBB0CDB22D748C1FFB14EE6EE401E05D, NULL);
 	}
 
 IL_006c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:75>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:76>
 		DicesController_ValidateFaceRotations_mDCEA8E3265259FD44A4905C9DEF026B19323F937(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:78>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:79>
 		Action_1_tA1DE18871DB50B19EDBF3E2E5A572A082ABF753D* L_11 = (Action_1_tA1DE18871DB50B19EDBF3E2E5A572A082ABF753D*)il2cpp_codegen_object_new(Action_1_tA1DE18871DB50B19EDBF3E2E5A572A082ABF753D_il2cpp_TypeInfo_var);
 		Action_1__ctor_m928E484F9AEDF8EA7F5D7BA5AF555C244D7607C1(L_11, __this, (intptr_t)((void*)DicesController_HandleServerDiceRolled_mCD555144C1F0ED9B6BECC65C06C2A1E819EFF848_RuntimeMethod_var), NULL);
 		MatchmakingModel_add_OnDiceRolledEvent_mA179828EE2D20C9D1F330D8C508F07519C2B3362(L_11, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:79>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:80>
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_12 = (Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A*)il2cpp_codegen_object_new(Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A_il2cpp_TypeInfo_var);
 		Action_1__ctor_m9DC2953C55C4D7D4B7BEFE03D84DA1F9362D652C(L_12, __this, (intptr_t)((void*)DicesController_HandleSocketError_m2FA43358278FCD455706AF77A5EC2F83F7581A61_RuntimeMethod_var), NULL);
 		MatchmakingModel_add_OnSocketErrorEvent_m50C39E2DB8A1936AE2017EC4E760351169F5EDF8(L_12, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:80>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:81>
 		return;
 	}
 }
-// Method Definition Index: 65577
+// Method Definition Index: 65579
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_OnDestroy_mADC2C2672F9FE94CAEF01BC056D0BE6EC683385C (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5817,15 +5817,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_OnDestroy_mADC2C2672F9FE
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:85>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:86>
 		Action_1_tA1DE18871DB50B19EDBF3E2E5A572A082ABF753D* L_0 = (Action_1_tA1DE18871DB50B19EDBF3E2E5A572A082ABF753D*)il2cpp_codegen_object_new(Action_1_tA1DE18871DB50B19EDBF3E2E5A572A082ABF753D_il2cpp_TypeInfo_var);
 		Action_1__ctor_m928E484F9AEDF8EA7F5D7BA5AF555C244D7607C1(L_0, __this, (intptr_t)((void*)DicesController_HandleServerDiceRolled_mCD555144C1F0ED9B6BECC65C06C2A1E819EFF848_RuntimeMethod_var), NULL);
 		MatchmakingModel_remove_OnDiceRolledEvent_m28C4FA0F7D78E670AB9F075C4E690CE6E3D38DCD(L_0, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:86>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:87>
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_1 = (Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A*)il2cpp_codegen_object_new(Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A_il2cpp_TypeInfo_var);
 		Action_1__ctor_m9DC2953C55C4D7D4B7BEFE03D84DA1F9362D652C(L_1, __this, (intptr_t)((void*)DicesController_HandleSocketError_m2FA43358278FCD455706AF77A5EC2F83F7581A61_RuntimeMethod_var), NULL);
 		MatchmakingModel_remove_OnSocketErrorEvent_mC54AF576663291BFCF15E7F01F27C3C25E4B2635(L_1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:89>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:90>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_2 = __this->___rollCoroutine1;
 		if (!L_2)
 		{
@@ -5833,14 +5833,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_OnDestroy_mADC2C2672F9FE
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:89>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:90>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_3 = __this->___rollCoroutine1;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_3, NULL);
 	}
 
 IL_0036:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:90>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:91>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_4 = __this->___rollCoroutine2;
 		if (!L_4)
 		{
@@ -5848,14 +5848,14 @@ IL_0036:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:90>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:91>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_5 = __this->___rollCoroutine2;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_5, NULL);
 	}
 
 IL_004a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:91>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:92>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_6 = __this->___processCoroutine;
 		if (!L_6)
 		{
@@ -5863,43 +5863,43 @@ IL_004a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:91>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:92>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_7 = __this->___processCoroutine;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_7, NULL);
 	}
 
 IL_005e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:92>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:93>
 		return;
 	}
 }
-// Method Definition Index: 65578
+// Method Definition Index: 65580
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 DicesController_NormalizeEulerForComparison_mB8D24F606D0C0E2F187D0009EC9E3B4E7D44B65A (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_euler, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
 	float V_1 = 0.0f;
 	float V_2 = 0.0f;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:96>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:97>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___0_euler;
 		float L_1 = L_0.___x;
 		float L_2;
 		L_2 = DicesController_NormalizeAngle_mDE63362F355AF11387A976282CF6F1DEB9E75722(__this, L_1, NULL);
 		V_0 = L_2;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:97>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:98>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3 = ___0_euler;
 		float L_4 = L_3.___y;
 		float L_5;
 		L_5 = DicesController_NormalizeAngle_mDE63362F355AF11387A976282CF6F1DEB9E75722(__this, L_4, NULL);
 		V_1 = L_5;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:98>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:99>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___0_euler;
 		float L_7 = L_6.___z;
 		float L_8;
 		L_8 = DicesController_NormalizeAngle_mDE63362F355AF11387A976282CF6F1DEB9E75722(__this, L_7, NULL);
 		V_2 = L_8;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:101>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:102>
 		float L_9 = V_0;
 		if ((!(((float)L_9) < ((float)(0.0f)))))
 		{
@@ -5907,14 +5907,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:101>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:102>
 		float L_10 = V_0;
 		V_0 = ((float)il2cpp_codegen_add((360.0f), L_10));
 	}
 
 IL_0037:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:102>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:103>
 		float L_11 = V_1;
 		if ((!(((float)L_11) < ((float)(0.0f)))))
 		{
@@ -5922,14 +5922,14 @@ IL_0037:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:102>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:103>
 		float L_12 = V_1;
 		V_1 = ((float)il2cpp_codegen_add((360.0f), L_12));
 	}
 
 IL_0047:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:103>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:104>
 		float L_13 = V_2;
 		if ((!(((float)L_13) < ((float)(0.0f)))))
 		{
@@ -5937,29 +5937,29 @@ IL_0047:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:103>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:104>
 		float L_14 = V_2;
 		V_2 = ((float)il2cpp_codegen_add((360.0f), L_14));
 	}
 
 IL_0057:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:106>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:107>
 		float L_15 = V_0;
 		float L_16;
 		L_16 = DicesController_NormalizeAngle_mDE63362F355AF11387A976282CF6F1DEB9E75722(__this, L_15, NULL);
 		V_0 = L_16;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:107>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:108>
 		float L_17 = V_1;
 		float L_18;
 		L_18 = DicesController_NormalizeAngle_mDE63362F355AF11387A976282CF6F1DEB9E75722(__this, L_17, NULL);
 		V_1 = L_18;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:108>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:109>
 		float L_19 = V_2;
 		float L_20;
 		L_20 = DicesController_NormalizeAngle_mDE63362F355AF11387A976282CF6F1DEB9E75722(__this, L_19, NULL);
 		V_2 = L_20;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:110>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:111>
 		float L_21 = V_0;
 		float L_22 = V_1;
 		float L_23 = V_2;
@@ -5969,7 +5969,7 @@ IL_0057:
 		return L_24;
 	}
 }
-// Method Definition Index: 65579
+// Method Definition Index: 65581
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_ValidateFaceRotations_mDCEA8E3265259FD44A4905C9DEF026B19323F937 (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5980,7 +5980,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_ValidateFaceRotations_mD
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:118>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:119>
 		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_0 = __this->___faceRotations;
 		if (!L_0)
 		{
@@ -5998,25 +5998,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_ValidateFaceRotations_mD
 
 IL_0013:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:120>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:121>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral94A4BD5EEF35FD6E593874D01559CC264D1DB3B0, NULL);
 	}
 
 IL_001d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:122>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:123>
 		return;
 	}
 }
-// Method Definition Index: 65580
+// Method Definition Index: 65582
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_RollDices_m5E928304A5238C9A0A4F29664964585F0A601AF3 (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindFirstObjectByType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mF766559530B489C0F2CD36609162D1A663352C63_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral28C156877D582FA5FBECF8A3997FE0D6A5E95804);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral6763EF403895DE706472D1264148E8FA05D7CA05);
@@ -6027,7 +6027,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_RollDices_m5E928304A5238
 	String_t* V_1 = NULL;
 	String_t* G_B8_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:129>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:130>
 		bool L_0 = __this->___isRolling;
 		if (!L_0)
 		{
@@ -6035,16 +6035,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_RollDices_m5E928304A5238
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:131>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:132>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral28C156877D582FA5FBECF8A3997FE0D6A5E95804, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:132>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:133>
 		return;
 	}
 
 IL_0013:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:135>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:136>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___dice1;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
@@ -6067,21 +6067,21 @@ IL_0013:
 
 IL_002f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:137>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:138>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral6763EF403895DE706472D1264148E8FA05D7CA05, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:138>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:139>
 		return;
 	}
 
 IL_003a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:142>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:143>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_5;
-		L_5 = Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40(Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40_RuntimeMethod_var);
+		L_5 = Object_FindFirstObjectByType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mF766559530B489C0F2CD36609162D1A663352C63(Object_FindFirstObjectByType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mF766559530B489C0F2CD36609162D1A663352C63_RuntimeMethod_var);
 		V_0 = L_5;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:143>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:144>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_6 = V_0;
 		bool L_7;
 		L_7 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_6, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -6107,7 +6107,7 @@ IL_004c:
 IL_0052:
 	{
 		V_1 = G_B8_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:145>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:146>
 		String_t* L_10 = V_1;
 		bool L_11;
 		L_11 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_10, NULL);
@@ -6117,18 +6117,18 @@ IL_0052:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:147>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:148>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteralD38327657722E7FEE2A9EB5F0352393B486FE83B, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:148>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:149>
 		return;
 	}
 
 IL_0066:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:152>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:153>
 		__this->___isRolling = (bool)1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:155>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:156>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_12 = __this->___rollButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_13;
@@ -6139,7 +6139,7 @@ IL_0066:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:157>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:158>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_14 = __this->___rollButton;
 		NullCheck(L_14);
 		Selectable_set_interactable_m8DD581C1AD99B2EFA8B3EE9AF69EDDF26688B492(L_14, (bool)0, NULL);
@@ -6147,14 +6147,14 @@ IL_0066:
 
 IL_0087:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:161>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:162>
 		String_t* L_15 = V_1;
 		MatchmakingModel_RequestDiceRoll_mF6F1967428C726E7125E27788BC7E388CABCB0D3(L_15, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:162>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:163>
 		return;
 	}
 }
-// Method Definition Index: 65581
+// Method Definition Index: 65583
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_HandleServerDiceRolled_mCD555144C1F0ED9B6BECC65C06C2A1E819EFF848 (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, DiceRolledData_tF96F092C6A16D37CE466F3546BB9964E7C4518F8* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6167,19 +6167,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_HandleServerDiceRolled_m
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:173>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:174>
 		DiceRolledData_tF96F092C6A16D37CE466F3546BB9964E7C4518F8* L_0 = ___0_data;
 		NullCheck(L_0);
 		int32_t L_1 = L_0->___d1;
 		__this->___targetDice1Value = L_1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:174>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:175>
 		DiceRolledData_tF96F092C6A16D37CE466F3546BB9964E7C4518F8* L_2 = ___0_data;
 		NullCheck(L_2);
 		int32_t L_3 = L_2->___d2;
 		__this->___targetDice2Value = L_3;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:177>
-		__this->___isRolling = (bool)1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:178>
+		__this->___isRolling = (bool)1;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:179>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_4 = __this->___rollButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_5;
@@ -6190,7 +6190,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_HandleServerDiceRolled_m
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:178>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:179>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_6 = __this->___rollButton;
 		NullCheck(L_6);
 		Selectable_set_interactable_m8DD581C1AD99B2EFA8B3EE9AF69EDDF26688B492(L_6, (bool)0, NULL);
@@ -6198,9 +6198,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_HandleServerDiceRolled_m
 
 IL_0039:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:181>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:182>
 		__this->___completedRolls = 0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:184>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:185>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_7 = __this->___rollCoroutine1;
 		if (!L_7)
 		{
@@ -6208,14 +6208,14 @@ IL_0039:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:184>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:185>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_8 = __this->___rollCoroutine1;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_8, NULL);
 	}
 
 IL_0054:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:185>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:186>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_9 = __this->___rollCoroutine2;
 		if (!L_9)
 		{
@@ -6223,14 +6223,14 @@ IL_0054:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:185>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:186>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_10 = __this->___rollCoroutine2;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_10, NULL);
 	}
 
 IL_0068:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:186>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:187>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_11 = __this->___processCoroutine;
 		if (!L_11)
 		{
@@ -6238,18 +6238,18 @@ IL_0068:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:186>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:187>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_12 = __this->___processCoroutine;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_12, NULL);
 	}
 
 IL_007c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:188>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:189>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:190>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:191>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:192>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:193>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_13 = __this->___dice1;
 		int32_t L_14 = __this->___targetDice1Value;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_15 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
@@ -6260,11 +6260,11 @@ IL_007c:
 		L_17 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_16, NULL);
 		__this->___rollCoroutine1 = L_17;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___rollCoroutine1), (void*)L_17);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:194>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:195>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:196>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:197>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:198>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:199>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_18 = __this->___dice2;
 		int32_t L_19 = __this->___targetDice2Value;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_20 = (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)il2cpp_codegen_object_new(Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var);
@@ -6275,11 +6275,11 @@ IL_007c:
 		L_22 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_21, NULL);
 		__this->___rollCoroutine2 = L_22;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___rollCoroutine2), (void*)L_22);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:199>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:200>
 		return;
 	}
 }
-// Method Definition Index: 65582
+// Method Definition Index: 65584
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_HandleSocketError_m2FA43358278FCD455706AF77A5EC2F83F7581A61 (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, String_t* ___0_error, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6293,7 +6293,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_HandleSocketError_m2FA43
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:206>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:207>
 		bool L_0 = __this->___isRolling;
 		if (!L_0)
 		{
@@ -6323,15 +6323,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_HandleSocketError_m2FA43
 
 IL_0022:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:208>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:209>
 		String_t* L_5 = ___0_error;
 		String_t* L_6;
 		L_6 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral891526B96F80BFEDC9BEB61DFB614A373040E59C, L_5, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_6, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:209>
-		__this->___isRolling = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:210>
+		__this->___isRolling = (bool)0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:211>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_7 = __this->___rollButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_8;
@@ -6342,7 +6342,7 @@ IL_0022:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:212>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:213>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_9 = __this->___rollButton;
 		NullCheck(L_9);
 		Selectable_set_interactable_m8DD581C1AD99B2EFA8B3EE9AF69EDDF26688B492(L_9, (bool)1, NULL);
@@ -6350,11 +6350,11 @@ IL_0022:
 
 IL_0053:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:215>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:216>
 		return;
 	}
 }
-// Method Definition Index: 65583
+// Method Definition Index: 65585
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* DicesController_RollDiceCoroutine_m56CB0C1725A21168FBF565AC04E79AD8DD4C91AC (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_dice, int32_t ___1_targetFace, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___2_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6387,7 +6387,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* DicesController_RollDiceCorout
 		return L_6;
 	}
 }
-// Method Definition Index: 65584
+// Method Definition Index: 65586
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_CheckRollComplete_m8441EB74D62BF95631A6F559963BA4960BD1B99E (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6397,7 +6397,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_CheckRollComplete_m8441E
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:334>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:335>
 		int32_t L_0 = __this->___completedRolls;
 		if ((((int32_t)L_0) < ((int32_t)2)))
 		{
@@ -6405,11 +6405,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_CheckRollComplete_m8441E
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:336>
-		__this->___isRolling = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:337>
+		__this->___isRolling = (bool)0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:338>
 		__this->___completedRolls = 0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:340>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:341>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_1 = __this->___rollButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
@@ -6420,7 +6420,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_CheckRollComplete_m8441E
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:342>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:343>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_3 = __this->___rollButton;
 		NullCheck(L_3);
 		Selectable_set_interactable_m8DD581C1AD99B2EFA8B3EE9AF69EDDF26688B492(L_3, (bool)1, NULL);
@@ -6428,7 +6428,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_CheckRollComplete_m8441E
 
 IL_0031:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:346>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:347>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_4 = __this->___processCoroutine;
 		if (!L_4)
 		{
@@ -6436,14 +6436,14 @@ IL_0031:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:346>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:347>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_5 = __this->___processCoroutine;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_5, NULL);
 	}
 
 IL_0045:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:347>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:348>
 		RuntimeObject* L_6;
 		L_6 = DicesController_ProcessRollComplete_m3AB318243EC110BADEB0FCF55F87F89085061233(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_7;
@@ -6454,11 +6454,11 @@ IL_0045:
 
 IL_0057:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:349>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:350>
 		return;
 	}
 }
-// Method Definition Index: 65585
+// Method Definition Index: 65587
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* DicesController_ProcessRollComplete_m3AB318243EC110BADEB0FCF55F87F89085061233 (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6477,32 +6477,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* DicesController_ProcessRollCom
 		return L_1;
 	}
 }
-// Method Definition Index: 65586
+// Method Definition Index: 65588
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 DicesController_NormalizeEulerAngles_mCDCDF31536D2A7E58601AD24E5818233500C1CF9 (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_euler, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
 	float V_1 = 0.0f;
 	float V_2 = 0.0f;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:462>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:463>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___0_euler;
 		float L_1 = L_0.___x;
 		float L_2;
 		L_2 = DicesController_NormalizeAngle_mDE63362F355AF11387A976282CF6F1DEB9E75722(__this, L_1, NULL);
 		V_0 = L_2;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:463>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:464>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3 = ___0_euler;
 		float L_4 = L_3.___y;
 		float L_5;
 		L_5 = DicesController_NormalizeAngle_mDE63362F355AF11387A976282CF6F1DEB9E75722(__this, L_4, NULL);
 		V_1 = L_5;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:464>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:465>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___0_euler;
 		float L_7 = L_6.___z;
 		float L_8;
 		L_8 = DicesController_NormalizeAngle_mDE63362F355AF11387A976282CF6F1DEB9E75722(__this, L_7, NULL);
 		V_2 = L_8;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:468>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:469>
 		float L_9 = V_0;
 		bool L_10;
 		L_10 = Mathf_Approximately_m1DADD012A8FC82E11FB282501AE2EBBF9A77150B_inline(L_9, (0.0f), NULL);
@@ -6530,7 +6530,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:470>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:471>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15;
 		memset((&L_15), 0, sizeof(L_15));
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_15), (180.0f), (0.0f), (0.0f), NULL);
@@ -6539,7 +6539,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 
 IL_0063:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:472>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:473>
 		float L_16 = V_0;
 		bool L_17;
 		L_17 = Mathf_Approximately_m1DADD012A8FC82E11FB282501AE2EBBF9A77150B_inline(L_16, (180.0f), NULL);
@@ -6567,7 +6567,7 @@ IL_0063:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:474>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:475>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_22;
 		memset((&L_22), 0, sizeof(L_22));
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_22), (0.0f), (0.0f), (180.0f), NULL);
@@ -6576,7 +6576,7 @@ IL_0063:
 
 IL_009f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:477>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:478>
 		float L_23 = V_0;
 		float L_24 = V_1;
 		float L_25 = V_2;
@@ -6586,7 +6586,7 @@ IL_009f:
 		return L_26;
 	}
 }
-// Method Definition Index: 65587
+// Method Definition Index: 65589
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t DicesController_GetDiceValue_m56C520A215DD7CD5B7C393A51BD324C3C4D9C6B4 (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_dice, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6611,7 +6611,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t DicesController_GetDiceValue_m56C520A
 	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 G_B5_0;
 	memset((&G_B5_0), 0, sizeof(G_B5_0));
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:492>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:493>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = ___0_dice;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -6622,13 +6622,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t DicesController_GetDiceValue_m56C520A
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:492>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:493>
 		return 1;
 	}
 
 IL_000b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:495>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:496>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = ___0_dice;
 		NullCheck(L_2);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3;
@@ -6671,21 +6671,21 @@ IL_002b:
 IL_0036:
 	{
 		V_0 = G_B5_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:498>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:499>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12;
 		L_12 = Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline(NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:501>
-		V_1 = (-1.0f);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:502>
+		V_1 = (-1.0f);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:503>
 		V_2 = 1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:504>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:505>
 		V_4 = 0;
 		goto IL_0099;
 	}
 
 IL_004a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:507>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:508>
 		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_13 = __this->___faceRotations;
 		int32_t L_14 = V_4;
 		NullCheck(L_13);
@@ -6694,21 +6694,21 @@ IL_004a:
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_17;
 		L_17 = Quaternion_Euler_m5BCCC19216CFAD2426F15BC51A30421880D27B73_inline(L_16, NULL);
 		V_5 = L_17;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:510>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:511>
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_18 = V_5;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_19 = __this->___faceCheckDirection;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_20;
 		L_20 = Quaternion_op_Multiply_mE1EBA73F9173432B50F8F17CE8190C5A7986FB8C(L_18, L_19, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:515>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:516>
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_21 = V_0;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_22 = V_5;
 		float L_23;
 		L_23 = Quaternion_Angle_mAADDBB3C30736B4C7B75CF3A241C1CF5E0386C26_inline(L_21, L_22, NULL);
 		V_6 = L_23;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:518>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:519>
 		float L_24 = V_6;
 		V_7 = ((float)il2cpp_codegen_subtract((1.0f), ((float)(L_24/(180.0f)))));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:520>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:521>
 		float L_25 = V_7;
 		float L_26 = V_1;
 		if ((!(((float)L_25) > ((float)L_26))))
@@ -6717,24 +6717,24 @@ IL_004a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:522>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:523>
 		float L_27 = V_7;
 		V_1 = L_27;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:523>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:524>
 		int32_t L_28 = V_4;
 		V_2 = ((int32_t)il2cpp_codegen_add(L_28, 1));
 	}
 
 IL_0093:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:504>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:505>
 		int32_t L_29 = V_4;
 		V_4 = ((int32_t)il2cpp_codegen_add(L_29, 1));
 	}
 
 IL_0099:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:504>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:505>
 		int32_t L_30 = V_4;
 		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_31 = __this->___faceRotations;
 		NullCheck(L_31);
@@ -6744,10 +6744,10 @@ IL_0099:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:528>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:529>
 		float L_32 = V_1;
 		V_3 = ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_subtract((1.0f), L_32)), (180.0f)));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:531>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:532>
 		float L_33 = V_3;
 		float L_34 = __this->___faceDetectionTolerance;
 		if ((!(((float)L_33) > ((float)L_34))))
@@ -6756,7 +6756,7 @@ IL_0099:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:533>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:534>
 		float L_35 = V_3;
 		float L_36 = L_35;
 		RuntimeObject* L_37 = Box(il2cpp_defaults.single_class, &L_36);
@@ -6764,7 +6764,7 @@ IL_0099:
 		L_38 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral7966CFE79BD1B47BBE7262ED92989C1FBAD45F5D, L_37, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_38, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:534>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:535>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_39 = ___0_dice;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_40 = __this->___dice1;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -6776,14 +6776,14 @@ IL_0099:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:536>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:537>
 		int32_t L_42 = __this->___targetDice1Value;
 		return L_42;
 	}
 
 IL_00e6:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:538>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:539>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_43 = ___0_dice;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_44 = __this->___dice2;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -6795,14 +6795,14 @@ IL_00e6:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:540>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:541>
 		int32_t L_46 = __this->___targetDice2Value;
 		return L_46;
 	}
 
 IL_00fb:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:544>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:545>
 		int32_t L_47 = V_2;
 		int32_t L_48 = L_47;
 		RuntimeObject* L_49 = Box(il2cpp_defaults.int32_class, &L_48);
@@ -6816,12 +6816,12 @@ IL_00fb:
 		L_56 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteral528D4A09487FFFB9FD82C4FDF4A18ECB07BD347B, L_49, L_52, L_55, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_56, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:545>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:546>
 		int32_t L_57 = V_2;
 		return L_57;
 	}
 }
-// Method Definition Index: 65588
+// Method Definition Index: 65590
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DicesController_NormalizeAngle_mDE63362F355AF11387A976282CF6F1DEB9E75722 (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, float ___0_angle, const RuntimeMethod* method) 
 {
 	{
@@ -6830,14 +6830,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DicesController_NormalizeAngle_mDE63362
 
 IL_0002:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:553>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:554>
 		float L_0 = ___0_angle;
 		___0_angle = ((float)il2cpp_codegen_add(L_0, (360.0f)));
 	}
 
 IL_000b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:553>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:554>
 		float L_1 = ___0_angle;
 		if ((((float)L_1) < ((float)(0.0f))))
 		{
@@ -6850,14 +6850,14 @@ IL_000b:
 
 IL_0015:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:554>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:555>
 		float L_2 = ___0_angle;
 		___0_angle = ((float)il2cpp_codegen_subtract(L_2, (360.0f)));
 	}
 
 IL_001e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:554>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:555>
 		float L_3 = ___0_angle;
 		if ((((float)L_3) >= ((float)(360.0f))))
 		{
@@ -6865,29 +6865,29 @@ IL_001e:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:555>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:556>
 		float L_4 = ___0_angle;
 		return L_4;
 	}
 }
-// Method Definition Index: 65589
+// Method Definition Index: 65591
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DicesController_EaseOutCubic_m74D2E3A31CD2401242A31E64F270623C2BA371BC (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, float ___0_t, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:563>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:564>
 		float L_0 = ___0_t;
 		float L_1;
 		L_1 = powf(((float)il2cpp_codegen_subtract((1.0f), L_0)), (3.0f));
 		return ((float)il2cpp_codegen_subtract((1.0f), L_1));
 	}
 }
-// Method Definition Index: 65590
+// Method Definition Index: 65592
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DicesController_EaseInOutCubic_m62D9C4206A298FB0E4A816D784848B5B836B923E (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, float ___0_t, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:571>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:572>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:573>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:574>
 		float L_0 = ___0_t;
 		if ((((float)L_0) < ((float)(0.5f))))
 		{
@@ -6909,7 +6909,7 @@ IL_002c:
 		return ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_multiply((4.0f), L_3)), L_4)), L_5));
 	}
 }
-// Method Definition Index: 65591
+// Method Definition Index: 65593
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_SetDiceFaces_mD26C038D81A280399BE1DE9237DB4B15749394D5 (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, int32_t ___0_dice1Face, int32_t ___1_dice2Face, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6919,7 +6919,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_SetDiceFaces_mD26C038D81
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:581>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:582>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___dice1;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -6944,7 +6944,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_SetDiceFaces_mD26C038D81
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:583>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:584>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___dice1;
 		NullCheck(L_4);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5;
@@ -6962,7 +6962,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_SetDiceFaces_mD26C038D81
 
 IL_0039:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:586>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:587>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_11 = __this->___dice2;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_12;
@@ -6987,7 +6987,7 @@ IL_0039:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:588>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:589>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_15 = __this->___dice2;
 		NullCheck(L_15);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16;
@@ -7005,11 +7005,11 @@ IL_0039:
 
 IL_0072:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:590>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:591>
 		return;
 	}
 }
-// Method Definition Index: 65592
+// Method Definition Index: 65594
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ValueTuple_2_t973F7AB0EF5DD3619E518A966941F10D8098F52D DicesController_GetCurrentDiceValues_m4565B04943C9757BAE6092AE22F920583D6BDB69 (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7026,7 +7026,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ValueTuple_2_t973F7AB0EF5DD3619E518A966941F10
 	int32_t G_B6_0 = 0;
 	int32_t G_B6_1 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:597>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:598>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___dice1;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -7051,7 +7051,7 @@ IL_0011:
 
 IL_001d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:598>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:599>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___dice2;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_5;
@@ -7081,7 +7081,7 @@ IL_002e:
 IL_003a:
 	{
 		V_0 = G_B6_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:599>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:600>
 		int32_t L_8 = V_0;
 		ValueTuple_2_t973F7AB0EF5DD3619E518A966941F10D8098F52D L_9;
 		memset((&L_9), 0, sizeof(L_9));
@@ -7089,7 +7089,7 @@ IL_003a:
 		return L_9;
 	}
 }
-// Method Definition Index: 65593
+// Method Definition Index: 65595
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_SetRollButtonInteractable_mAB42C5281CD16F0E36E0C717B8289AB4FC55CDDF (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, bool ___0_interactable, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7099,7 +7099,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_SetRollButtonInteractabl
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:607>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:608>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = __this->___rollButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -7110,7 +7110,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_SetRollButtonInteractabl
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:609>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:610>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_2 = __this->___rollButton;
 		bool L_3 = ___0_interactable;
 		NullCheck(L_2);
@@ -7119,11 +7119,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_SetRollButtonInteractabl
 
 IL_001a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:611>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:612>
 		return;
 	}
 }
-// Method Definition Index: 65594
+// Method Definition Index: 65596
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_ResetRollingState_m98C526FF7753FFAC2F76FB8B2D17D878D3A0258A (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7137,11 +7137,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_ResetRollingState_m98C52
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
 	memset((&V_1), 0, sizeof(V_1));
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:619>
-		__this->___isRolling = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:620>
+		__this->___isRolling = (bool)0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:621>
 		__this->___completedRolls = 0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:622>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:623>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_0 = __this->___rollCoroutine1;
 		if (!L_0)
 		{
@@ -7149,14 +7149,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_ResetRollingState_m98C52
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:622>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:623>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_1 = __this->___rollCoroutine1;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_1, NULL);
 	}
 
 IL_0022:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:623>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:624>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_2 = __this->___rollCoroutine2;
 		if (!L_2)
 		{
@@ -7164,14 +7164,14 @@ IL_0022:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:623>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:624>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_3 = __this->___rollCoroutine2;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_3, NULL);
 	}
 
 IL_0036:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:624>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:625>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_4 = __this->___processCoroutine;
 		if (!L_4)
 		{
@@ -7179,14 +7179,14 @@ IL_0036:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:624>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:625>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_5 = __this->___processCoroutine;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_5, NULL);
 	}
 
 IL_004a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:628>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:629>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = __this->___dice1;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_7;
@@ -7211,14 +7211,14 @@ IL_004a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:630>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:631>
 		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_10 = __this->___faceRotations;
 		int32_t L_11 = __this->___targetDice1Value;
 		NullCheck(L_10);
 		int32_t L_12 = ((int32_t)il2cpp_codegen_subtract(L_11, 1));
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13 = (L_10)->GetAt(static_cast<il2cpp_array_size_t>(L_12));
 		V_0 = L_13;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:631>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:632>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_14 = __this->___dice1;
 		NullCheck(L_14);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_15;
@@ -7235,7 +7235,7 @@ IL_004a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:631>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:632>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_18 = __this->___dice1;
 		NullCheck(L_18);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_19;
@@ -7250,7 +7250,7 @@ IL_004a:
 
 IL_00ae:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:632>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:633>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_22 = __this->___dice1;
 		NullCheck(L_22);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_23;
@@ -7264,7 +7264,7 @@ IL_00ae:
 
 IL_00c4:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:635>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:636>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_26 = __this->___dice2;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_27;
@@ -7289,14 +7289,14 @@ IL_00c4:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:637>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:638>
 		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_30 = __this->___faceRotations;
 		int32_t L_31 = __this->___targetDice2Value;
 		NullCheck(L_30);
 		int32_t L_32 = ((int32_t)il2cpp_codegen_subtract(L_31, 1));
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_33 = (L_30)->GetAt(static_cast<il2cpp_array_size_t>(L_32));
 		V_1 = L_33;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:638>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:639>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_34 = __this->___dice2;
 		NullCheck(L_34);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_35;
@@ -7313,7 +7313,7 @@ IL_00c4:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:638>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:639>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_38 = __this->___dice2;
 		NullCheck(L_38);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_39;
@@ -7328,7 +7328,7 @@ IL_00c4:
 
 IL_0128:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:639>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:640>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_42 = __this->___dice2;
 		NullCheck(L_42);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_43;
@@ -7342,7 +7342,7 @@ IL_0128:
 
 IL_013e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:642>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:643>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_46 = __this->___rollButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_47;
@@ -7353,7 +7353,7 @@ IL_013e:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:644>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:645>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_48 = __this->___rollButton;
 		NullCheck(L_48);
 		Selectable_set_interactable_m8DD581C1AD99B2EFA8B3EE9AF69EDDF26688B492(L_48, (bool)1, NULL);
@@ -7361,11 +7361,11 @@ IL_013e:
 
 IL_0158:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:646>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:647>
 		return;
 	}
 }
-// Method Definition Index: 65595
+// Method Definition Index: 65597
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_UpdateDiceSumDisplay_m29A9D5F0A116ADC6ADAE67962875A0599CB6691A (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, int32_t ___0_sum, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7376,7 +7376,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_UpdateDiceSumDisplay_m29
 	}
 	String_t* V_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:653>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:654>
 		String_t* L_0 = __this->___sumDisplayFormat;
 		int32_t L_1 = ___0_sum;
 		int32_t L_2 = L_1;
@@ -7384,7 +7384,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_UpdateDiceSumDisplay_m29
 		String_t* L_4;
 		L_4 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(L_0, L_3, NULL);
 		V_0 = L_4;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:656>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:657>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_5 = __this->___diceSumText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_6;
@@ -7395,7 +7395,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_UpdateDiceSumDisplay_m29
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:658>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:659>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_7 = __this->___diceSumText;
 		String_t* L_8 = V_0;
 		NullCheck(L_7);
@@ -7405,7 +7405,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_UpdateDiceSumDisplay_m29
 
 IL_002d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:661>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:662>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_9 = __this->___diceSumTextLegacy;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
@@ -7416,7 +7416,7 @@ IL_002d:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:663>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:664>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_11 = __this->___diceSumTextLegacy;
 		String_t* L_12 = V_0;
 		NullCheck(L_11);
@@ -7425,11 +7425,11 @@ IL_002d:
 
 IL_0047:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:665>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:666>
 		return;
 	}
 }
-// Method Definition Index: 65596
+// Method Definition Index: 65598
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_ClearDiceSumDisplay_mB8A3001124E08E5F9C42648FFDB87B523F471971 (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7440,7 +7440,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_ClearDiceSumDisplay_mB8A
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:672>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:673>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_0 = __this->___diceSumText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -7451,7 +7451,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_ClearDiceSumDisplay_mB8A
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:674>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:675>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_2 = __this->___diceSumText;
 		NullCheck(L_2);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_2, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
@@ -7459,7 +7459,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_ClearDiceSumDisplay_mB8A
 
 IL_001e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:676>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:677>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_3 = __this->___diceSumTextLegacy;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_4;
@@ -7470,7 +7470,7 @@ IL_001e:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:678>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:679>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_5 = __this->___diceSumTextLegacy;
 		NullCheck(L_5);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_5, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
@@ -7478,21 +7478,21 @@ IL_001e:
 
 IL_003c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:680>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:681>
 		return;
 	}
 }
-// Method Definition Index: 65597
+// Method Definition Index: 65599
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_TestRollDices_m37DAAB40EAD8B387C6E3FC1B972E2627CD45A3DC (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:687>
-		DicesController_RollDices_m5E928304A5238C9A0A4F29664964585F0A601AF3(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:688>
+		DicesController_RollDices_m5E928304A5238C9A0A4F29664964585F0A601AF3(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:689>
 		return;
 	}
 }
-// Method Definition Index: 65598
+// Method Definition Index: 65600
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_HideDices_m2327EC8B9ABF8F09C1FE5E04087A6AB106E5278A (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7504,7 +7504,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_HideDices_m2327EC8B9ABF8
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:699>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:700>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___dice1;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -7515,7 +7515,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_HideDices_m2327EC8B9ABF8
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:701>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:702>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___dice1;
 		NullCheck(L_2);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_2, (bool)0, NULL);
@@ -7523,7 +7523,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_HideDices_m2327EC8B9ABF8
 
 IL_001a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:703>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:704>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___dice2;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_4;
@@ -7534,7 +7534,7 @@ IL_001a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:705>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:706>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = __this->___dice2;
 		NullCheck(L_5);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_5, (bool)0, NULL);
@@ -7542,14 +7542,14 @@ IL_001a:
 
 IL_0034:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:707>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:708>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralA4856194A4D4EAAD9B9ECC07F534EC83128A18F1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:708>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:709>
 		return;
 	}
 }
-// Method Definition Index: 65599
+// Method Definition Index: 65601
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_ShowDices_mA9829661ACA656FA72205A47D5463B53BC757920 (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7561,7 +7561,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_ShowDices_mA9829661ACA65
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:715>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:716>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___dice1;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -7572,7 +7572,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_ShowDices_mA9829661ACA65
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:717>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:718>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___dice1;
 		NullCheck(L_2);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_2, (bool)1, NULL);
@@ -7580,7 +7580,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_ShowDices_mA9829661ACA65
 
 IL_001a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:719>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:720>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___dice2;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_4;
@@ -7591,7 +7591,7 @@ IL_001a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:721>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:722>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = __this->___dice2;
 		NullCheck(L_5);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_5, (bool)1, NULL);
@@ -7599,14 +7599,14 @@ IL_001a:
 
 IL_0034:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:723>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:724>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralB11289C937C94E16ADC604536E88CE33FA9BC3AA, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:724>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:725>
 		return;
 	}
 }
-// Method Definition Index: 65600
+// Method Definition Index: 65602
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController__ctor_m7A698AEEBFB282B8CE0858BFE100D97974E6EF0C (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7617,18 +7617,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController__ctor_m7A698AEEBFB282B8C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:24>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:25>
 		__this->___sumDisplayFormat = _stringLiteralE85518124A1AB0F6FEE3112FB9F8159B21CE77F8;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___sumDisplayFormat), (void*)_stringLiteralE85518124A1AB0F6FEE3112FB9F8159B21CE77F8);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:27>
-		__this->___rollDuration = (1.5f);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:28>
-		__this->___spinSpeed = (720.0f);
+		__this->___rollDuration = (1.5f);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:29>
-		__this->___minSpins = 3;
+		__this->___spinSpeed = (720.0f);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:30>
+		__this->___minSpins = 3;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:31>
 		__this->___maxSpins = 6;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:34>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:35>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:36>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:37>
@@ -7637,6 +7636,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController__ctor_m7A698AEEBFB282B8C
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:40>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:41>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:42>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:43>
 		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_0 = (Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C*)(Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C*)SZArrayNew(Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C_il2cpp_TypeInfo_var, (uint32_t)6);
 		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_1 = L_0;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
@@ -7676,43 +7676,43 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController__ctor_m7A698AEEBFB282B8C
 		(L_11)->SetAt(static_cast<il2cpp_array_size_t>(5), (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2)L_12);
 		__this->___faceRotations = L_11;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___faceRotations), (void*)L_11);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:49>
-		__this->___targetDice1Value = 1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:50>
+		__this->___targetDice1Value = 1;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:51>
 		__this->___targetDice2Value = 1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:482>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:483>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13;
 		L_13 = Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline(NULL);
 		__this->___faceCheckDirection = L_13;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:484>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:485>
 		__this->___faceDetectionTolerance = (15.0f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}
 }
-// Method Definition Index: 65601
+// Method Definition Index: 65603
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_U3CHandleServerDiceRolledU3Eb__25_0_mDCABD6B83C37A1671151E98850848978E55572F0 (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:190>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:191>
 		int32_t L_0 = __this->___completedRolls;
 		__this->___completedRolls = ((int32_t)il2cpp_codegen_add(L_0, 1));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:191>
-		DicesController_CheckRollComplete_m8441EB74D62BF95631A6F559963BA4960BD1B99E(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:192>
+		DicesController_CheckRollComplete_m8441EB74D62BF95631A6F559963BA4960BD1B99E(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:193>
 		return;
 	}
 }
-// Method Definition Index: 65602
+// Method Definition Index: 65604
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_U3CHandleServerDiceRolledU3Eb__25_1_m32A5C52B8256C6EAA20665DC82F562F19082BD60 (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:196>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:197>
 		int32_t L_0 = __this->___completedRolls;
 		__this->___completedRolls = ((int32_t)il2cpp_codegen_add(L_0, 1));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:197>
-		DicesController_CheckRollComplete_m8441EB74D62BF95631A6F559963BA4960BD1B99E(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:198>
+		DicesController_CheckRollComplete_m8441EB74D62BF95631A6F559963BA4960BD1B99E(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:199>
 		return;
 	}
 }
@@ -7724,7 +7724,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DicesController_U3CHandleServerDiceRolle
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65603
+// Method Definition Index: 65605
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CProcessRollCompleteU3Ed__29__ctor_m4BB0D777BDA20726904ECFF84481C95B99C62DB0 (U3CProcessRollCompleteU3Ed__29_tBB1779427D3D45889C10840E27F95DF77D1FD081* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -7734,14 +7734,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CProcessRollCompleteU3Ed__29__ctor_m4B
 		return;
 	}
 }
-// Method Definition Index: 65604
+// Method Definition Index: 65606
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CProcessRollCompleteU3Ed__29_System_IDisposable_Dispose_m762E03635423D2AEECD1DB85D9EFA1594F635376 (U3CProcessRollCompleteU3Ed__29_tBB1779427D3D45889C10840E27F95DF77D1FD081* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65605
+// Method Definition Index: 65607
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CProcessRollCompleteU3Ed__29_MoveNext_mC33F0C0AAE6B3F443A27DC4B10C6900F29BEA75A (U3CProcessRollCompleteU3Ed__29_tBB1779427D3D45889C10840E27F95DF77D1FD081* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7811,7 +7811,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CProcessRollCompleteU3Ed__29_MoveNext_
 IL_0022:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:357>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:358>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 1;
@@ -7821,7 +7821,7 @@ IL_0022:
 IL_0039:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:360>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:361>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_3 = V_1;
 		NullCheck(L_3);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = L_3->___dice1;
@@ -7835,7 +7835,7 @@ IL_0039:
 		bool L_7;
 		L_7 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_6, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		__this->___U3CuseLocal1U3E5__2 = L_7;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:361>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:362>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_8 = V_1;
 		NullCheck(L_8);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_9 = L_8->___dice2;
@@ -7848,7 +7848,7 @@ IL_0039:
 		bool L_12;
 		L_12 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_11, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		__this->___U3CuseLocal2U3E5__3 = L_12;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:363>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:364>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_13 = V_1;
 		NullCheck(L_13);
 		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_14 = L_13->___faceRotations;
@@ -7859,7 +7859,7 @@ IL_0039:
 		int32_t L_17 = ((int32_t)il2cpp_codegen_subtract(L_16, 1));
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_18 = (L_14)->GetAt(static_cast<il2cpp_array_size_t>(L_17));
 		__this->___U3Ctarget1RotationU3E5__4 = L_18;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:364>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:365>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_19 = V_1;
 		NullCheck(L_19);
 		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_20 = L_19->___faceRotations;
@@ -7870,14 +7870,14 @@ IL_0039:
 		int32_t L_23 = ((int32_t)il2cpp_codegen_subtract(L_22, 1));
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_24 = (L_20)->GetAt(static_cast<il2cpp_array_size_t>(L_23));
 		__this->___U3Ctarget2RotationU3E5__5 = L_24;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:368>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:369>
 		__this->___U3CiU3E5__6 = 0;
 		goto IL_015f;
 	}
 
 IL_00b6:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:370>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:371>
 		bool L_25 = __this->___U3CuseLocal1U3E5__2;
 		if (!L_25)
 		{
@@ -7885,7 +7885,7 @@ IL_00b6:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:372>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:373>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_26 = V_1;
 		NullCheck(L_26);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_27 = L_26->___dice1;
@@ -7902,7 +7902,7 @@ IL_00b6:
 
 IL_00db:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:376>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:377>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_31 = V_1;
 		NullCheck(L_31);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_32 = L_31->___dice1;
@@ -7918,7 +7918,7 @@ IL_00db:
 
 IL_00f6:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:379>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:380>
 		bool L_36 = __this->___U3CuseLocal2U3E5__3;
 		if (!L_36)
 		{
@@ -7926,7 +7926,7 @@ IL_00f6:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:381>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:382>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_37 = V_1;
 		NullCheck(L_37);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_38 = L_37->___dice2;
@@ -7943,7 +7943,7 @@ IL_00f6:
 
 IL_011b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:385>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:386>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_42 = V_1;
 		NullCheck(L_42);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_43 = L_42->___dice2;
@@ -7959,7 +7959,7 @@ IL_011b:
 
 IL_0136:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:388>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:389>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 2;
@@ -7969,7 +7969,7 @@ IL_0136:
 IL_0146:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:368>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:369>
 		int32_t L_47 = __this->___U3CiU3E5__6;
 		V_12 = L_47;
 		int32_t L_48 = V_12;
@@ -7978,7 +7978,7 @@ IL_0146:
 
 IL_015f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:368>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:369>
 		int32_t L_49 = __this->___U3CiU3E5__6;
 		if ((((int32_t)L_49) < ((int32_t)3)))
 		{
@@ -7986,7 +7986,7 @@ IL_015f:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:392>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:393>
 		bool L_50 = __this->___U3CuseLocal1U3E5__2;
 		if (L_50)
 		{
@@ -8024,7 +8024,7 @@ IL_0185:
 IL_0195:
 	{
 		V_2 = G_B16_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:393>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:394>
 		bool L_59 = __this->___U3CuseLocal2U3E5__3;
 		if (L_59)
 		{
@@ -8062,55 +8062,55 @@ IL_01b0:
 IL_01c0:
 	{
 		V_3 = G_B19_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:397>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:398>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_68 = V_1;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_69 = V_2;
 		NullCheck(L_68);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_70;
 		L_70 = DicesController_NormalizeEulerForComparison_mB8D24F606D0C0E2F187D0009EC9E3B4E7D44B65A(L_68, L_69, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:398>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:399>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_71 = V_1;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_72 = __this->___U3Ctarget1RotationU3E5__4;
 		NullCheck(L_71);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_73;
 		L_73 = DicesController_NormalizeEulerForComparison_mB8D24F606D0C0E2F187D0009EC9E3B4E7D44B65A(L_71, L_72, NULL);
 		V_4 = L_73;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:399>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:400>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_74 = V_1;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_75 = V_3;
 		NullCheck(L_74);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_76;
 		L_76 = DicesController_NormalizeEulerForComparison_mB8D24F606D0C0E2F187D0009EC9E3B4E7D44B65A(L_74, L_75, NULL);
 		V_5 = L_76;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:400>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:401>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_77 = V_1;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_78 = __this->___U3Ctarget2RotationU3E5__5;
 		NullCheck(L_77);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_79;
 		L_79 = DicesController_NormalizeEulerForComparison_mB8D24F606D0C0E2F187D0009EC9E3B4E7D44B65A(L_77, L_78, NULL);
 		V_6 = L_79;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:403>
-		V_7 = (5.0f);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:404>
+		V_7 = (5.0f);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:405>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_80 = V_4;
 		float L_81;
 		L_81 = Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline(L_70, L_80, NULL);
 		float L_82 = V_7;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:405>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:406>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_83 = V_5;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_84 = V_6;
 		float L_85;
 		L_85 = Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline(L_83, L_84, NULL);
 		float L_86 = V_7;
 		V_8 = (bool)((((float)L_85) < ((float)L_86))? 1 : 0);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:407>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:408>
 		if (((((float)L_81) < ((float)L_82))? 1 : 0))
 		{
 			goto IL_023b;
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:409>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:410>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_87 = __this->___U3Ctarget1RotationU3E5__4;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_88 = L_87;
 		RuntimeObject* L_89 = Box(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var, &L_88);
@@ -8130,7 +8130,7 @@ IL_01c0:
 
 IL_023b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:411>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:412>
 		bool L_98 = V_8;
 		if (L_98)
 		{
@@ -8138,7 +8138,7 @@ IL_023b:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:413>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:414>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_99 = __this->___U3Ctarget2RotationU3E5__5;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_100 = L_99;
 		RuntimeObject* L_101 = Box(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var, &L_100);
@@ -8158,7 +8158,7 @@ IL_023b:
 
 IL_026a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:418>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:419>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_110 = V_1;
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_111 = V_1;
 		NullCheck(L_111);
@@ -8167,7 +8167,7 @@ IL_026a:
 		int32_t L_113;
 		L_113 = DicesController_GetDiceValue_m56C520A215DD7CD5B7C393A51BD324C3C4D9C6B4(L_110, L_112, NULL);
 		V_9 = L_113;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:419>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:420>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_114 = V_1;
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_115 = V_1;
 		NullCheck(L_115);
@@ -8176,7 +8176,7 @@ IL_026a:
 		int32_t L_117;
 		L_117 = DicesController_GetDiceValue_m56C520A215DD7CD5B7C393A51BD324C3C4D9C6B4(L_114, L_116, NULL);
 		V_10 = L_117;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:422>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:423>
 		int32_t L_118 = V_9;
 		if ((((int32_t)L_118) < ((int32_t)1)))
 		{
@@ -8193,7 +8193,7 @@ IL_026a:
 
 IL_0290:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:424>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:425>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_120 = V_1;
 		NullCheck(L_120);
 		int32_t L_121 = L_120->___targetDice1Value;
@@ -8202,7 +8202,7 @@ IL_0290:
 
 IL_0298:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:426>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:427>
 		int32_t L_122 = V_10;
 		if ((((int32_t)L_122) < ((int32_t)1)))
 		{
@@ -8219,7 +8219,7 @@ IL_0298:
 
 IL_02a2:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:428>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:429>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_124 = V_1;
 		NullCheck(L_124);
 		int32_t L_125 = L_124->___targetDice2Value;
@@ -8228,11 +8228,11 @@ IL_02a2:
 
 IL_02aa:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:432>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:433>
 		int32_t L_126 = V_9;
 		int32_t L_127 = V_10;
 		V_11 = ((int32_t)il2cpp_codegen_add(L_126, L_127));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:434>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:435>
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_128 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)7);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_129 = L_128;
 		int32_t L_130 = V_9;
@@ -8287,12 +8287,12 @@ IL_02aa:
 		L_157 = String_Format_m918500C1EFB475181349A79989BB79BB36102894(_stringLiteral14CBB1EB2266F35ED21B42BC3A2D22E4EE7A54D6, L_153, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_157, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:437>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:438>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_158 = V_1;
 		int32_t L_159 = V_11;
 		NullCheck(L_158);
 		DicesController_UpdateDiceSumDisplay_m29A9D5F0A116ADC6ADAE67962875A0599CB6691A(L_158, L_159, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:440>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:441>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_160 = V_1;
 		NullCheck(L_160);
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_161 = L_160->___numberGrid;
@@ -8305,7 +8305,7 @@ IL_02aa:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:442>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:443>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_163 = V_1;
 		NullCheck(L_163);
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_164 = L_163->___numberGrid;
@@ -8317,14 +8317,14 @@ IL_02aa:
 
 IL_0339:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:446>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:447>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral2C5CF0825F9FF3E059AC933F1CCA52F89113585B, NULL);
 	}
 
 IL_0343:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:452>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:453>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_166 = V_1;
 		NullCheck(L_166);
 		Action_2_tD7438462601D3939500ED67463331FE00CFFBDB8* L_167 = L_166->___OnDiceRollComplete;
@@ -8350,7 +8350,7 @@ IL_034f:
 
 IL_0358:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:454>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:455>
 		int32_t L_171 = V_9;
 		int32_t L_172 = L_171;
 		RuntimeObject* L_173 = Box(il2cpp_defaults.int32_class, &L_172);
@@ -8364,11 +8364,11 @@ IL_0358:
 		L_180 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteral09545EB519F08CE216EADADF1A7CC0C114B3D106, L_173, L_176, L_179, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_180, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:455>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:456>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65606
+// Method Definition Index: 65608
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CProcessRollCompleteU3Ed__29_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m7303159461B09BB25C9E914904D80C3B6CD61F52 (U3CProcessRollCompleteU3Ed__29_tBB1779427D3D45889C10840E27F95DF77D1FD081* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8376,7 +8376,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CProcessRollCompleteU3Ed__29
 		return L_0;
 	}
 }
-// Method Definition Index: 65607
+// Method Definition Index: 65609
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CProcessRollCompleteU3Ed__29_System_Collections_IEnumerator_Reset_m9E3200154A789E63F13A37283366B6E17ADB6FE8 (U3CProcessRollCompleteU3Ed__29_tBB1779427D3D45889C10840E27F95DF77D1FD081* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8385,7 +8385,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CProcessRollCompleteU3Ed__29_System_Co
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CProcessRollCompleteU3Ed__29_System_Collections_IEnumerator_Reset_m9E3200154A789E63F13A37283366B6E17ADB6FE8_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65608
+// Method Definition Index: 65610
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CProcessRollCompleteU3Ed__29_System_Collections_IEnumerator_get_Current_mAE8FC9A4C8F056EC430208D092402A0AE49FE0B6 (U3CProcessRollCompleteU3Ed__29_tBB1779427D3D45889C10840E27F95DF77D1FD081* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8401,7 +8401,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CProcessRollCompleteU3Ed__29
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65609
+// Method Definition Index: 65611
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRollDiceCoroutineU3Ed__27__ctor_mF3073223005DB34F0DC89548F1DCA5DD138767C7 (U3CRollDiceCoroutineU3Ed__27_t250DF1FE43CE5B2F1C5381DEF53C37108CCDB4B7* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -8411,14 +8411,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRollDiceCoroutineU3Ed__27__ctor_mF307
 		return;
 	}
 }
-// Method Definition Index: 65610
+// Method Definition Index: 65612
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRollDiceCoroutineU3Ed__27_System_IDisposable_Dispose_m33ABC989192CE3FB663FB72C0969533545DFC425 (U3CRollDiceCoroutineU3Ed__27_t250DF1FE43CE5B2F1C5381DEF53C37108CCDB4B7* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65611
+// Method Definition Index: 65613
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CRollDiceCoroutineU3Ed__27_MoveNext_mB1B47C68D3B78FA7601A6B30E548ABB312D860F4 (U3CRollDiceCoroutineU3Ed__27_t250DF1FE43CE5B2F1C5381DEF53C37108CCDB4B7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8491,7 +8491,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CRollDiceCoroutineU3Ed__27_MoveNext_mB
 IL_0022:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:222>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:223>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___dice;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_4;
@@ -8518,7 +8518,7 @@ IL_0022:
 
 IL_0049:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:224>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:225>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_7 = __this->___onComplete;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_8 = L_7;
 		if (L_8)
@@ -8540,13 +8540,13 @@ IL_0055:
 
 IL_005a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:225>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:226>
 		return (bool)0;
 	}
 
 IL_005c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:229>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:230>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_9 = __this->___dice;
 		NullCheck(L_9);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_10;
@@ -8558,7 +8558,7 @@ IL_005c:
 		bool L_12;
 		L_12 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_11, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		__this->___U3CuseLocalRotationU3E5__2 = L_12;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:232>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:233>
 		bool L_13 = __this->___U3CuseLocalRotationU3E5__2;
 		if (L_13)
 		{
@@ -8597,7 +8597,7 @@ IL_00a3:
 	{
 		NullCheck(G_B12_1);
 		G_B12_1->___U3CstartRotationU3E5__3 = G_B12_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:235>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:236>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_20 = V_1;
 		NullCheck(L_20);
 		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_21 = L_20->___faceRotations;
@@ -8606,12 +8606,12 @@ IL_00a3:
 		int32_t L_23 = ((int32_t)il2cpp_codegen_subtract(L_22, 1));
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_24 = (L_21)->GetAt(static_cast<il2cpp_array_size_t>(L_23));
 		__this->___U3CtargetEulerU3E5__4 = L_24;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:236>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:237>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_25 = __this->___U3CtargetEulerU3E5__4;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_26;
 		L_26 = Quaternion_Euler_m5BCCC19216CFAD2426F15BC51A30421880D27B73_inline(L_25, NULL);
 		__this->___U3CtargetRotationU3E5__5 = L_26;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:238>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:239>
 		int32_t L_27 = __this->___targetFace;
 		int32_t L_28 = L_27;
 		RuntimeObject* L_29 = Box(il2cpp_defaults.int32_class, &L_28);
@@ -8625,7 +8625,7 @@ IL_00a3:
 		L_36 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteralB6D06AE6ECCF1FA240B25C8F7A321B7E90E59075, L_29, L_32, L_35, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_36, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:241>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:242>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_37 = V_1;
 		NullCheck(L_37);
 		int32_t L_38 = L_37->___minSpins;
@@ -8635,14 +8635,14 @@ IL_00a3:
 		int32_t L_41;
 		L_41 = Random_Range_m6763D9767F033357F88B6637F048F4ACA4123B68(L_38, ((int32_t)il2cpp_codegen_add(L_40, 1)), NULL);
 		V_2 = L_41;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:242>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:243>
 		int32_t L_42 = V_2;
 		__this->___U3CtotalSpinDegreesU3E5__6 = ((float)il2cpp_codegen_multiply(((float)L_42), (360.0f)));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:245>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:246>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:247>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:248>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:249>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:250>
 		float L_43;
 		L_43 = Random_Range_m5236C99A7D8AE6AC9190592DC66016652A2D2494((-1.0f), (1.0f), NULL);
 		float L_44;
@@ -8656,9 +8656,9 @@ IL_00a3:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_47;
 		L_47 = Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline((&V_4), NULL);
 		__this->___U3CspinAxisU3E5__7 = L_47;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:252>
-		__this->___U3CelapsedU3E5__8 = (0.0f);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:253>
+		__this->___U3CelapsedU3E5__8 = (0.0f);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:254>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_48 = V_1;
 		NullCheck(L_48);
 		float L_49 = L_48->___rollDuration;
@@ -8668,19 +8668,19 @@ IL_00a3:
 
 IL_0189:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:257>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:258>
 		float L_50 = __this->___U3CelapsedU3E5__8;
 		float L_51;
 		L_51 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		__this->___U3CelapsedU3E5__8 = ((float)il2cpp_codegen_add(L_50, L_51));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:258>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:259>
 		float L_52 = __this->___U3CelapsedU3E5__8;
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_53 = V_1;
 		NullCheck(L_53);
 		float L_54 = L_53->___rollDuration;
 		float L_55;
 		L_55 = Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline(((float)(L_52/L_54)), NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:260>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:261>
 		float L_56 = __this->___U3CelapsedU3E5__8;
 		float L_57 = __this->___U3CsnapPhaseStartU3E5__9;
 		if ((!(((float)L_56) < ((float)L_57))))
@@ -8689,33 +8689,33 @@ IL_0189:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:263>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:264>
 		float L_58 = __this->___U3CelapsedU3E5__8;
 		float L_59 = __this->___U3CsnapPhaseStartU3E5__9;
 		V_5 = ((float)(L_58/L_59));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:264>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:265>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_60 = V_1;
 		float L_61 = V_5;
 		NullCheck(L_60);
 		float L_62;
 		L_62 = DicesController_EaseOutCubic_m74D2E3A31CD2401242A31E64F270623C2BA371BC(L_60, L_61, NULL);
 		V_6 = L_62;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:267>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:268>
 		float L_63 = __this->___U3CtotalSpinDegreesU3E5__6;
 		float L_64 = V_6;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:270>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:271>
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_65 = __this->___U3CstartRotationU3E5__3;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_66 = __this->___U3CtargetRotationU3E5__5;
 		float L_67 = V_6;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_68;
 		L_68 = Quaternion_Slerp_m0A9969F500E7716EA4F6BC4E7D5464372D8E9E15_inline(L_65, L_66, ((float)il2cpp_codegen_multiply(L_67, (0.899999976f))), NULL);
 		V_7 = L_68;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:273>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:274>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_69 = __this->___U3CspinAxisU3E5__7;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_70;
 		L_70 = Quaternion_AngleAxis_mF37022977B297E63AA70D69EA1C4C922FF22CC80_inline(((float)il2cpp_codegen_multiply(L_63, ((float)il2cpp_codegen_subtract((1.0f), L_64)))), L_69, NULL);
 		V_8 = L_70;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:274>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:275>
 		bool L_71 = __this->___U3CuseLocalRotationU3E5__2;
 		if (!L_71)
 		{
@@ -8723,7 +8723,7 @@ IL_0189:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:276>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:277>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_72 = __this->___dice;
 		NullCheck(L_72);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_73;
@@ -8739,7 +8739,7 @@ IL_0189:
 
 IL_0235:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:280>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:281>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_77 = __this->___dice;
 		NullCheck(L_77);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_78;
@@ -8755,7 +8755,7 @@ IL_0235:
 
 IL_0253:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:286>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:287>
 		float L_82 = __this->___U3CelapsedU3E5__8;
 		float L_83 = __this->___U3CsnapPhaseStartU3E5__9;
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_84 = V_1;
@@ -8763,14 +8763,14 @@ IL_0253:
 		float L_85 = L_84->___rollDuration;
 		float L_86 = __this->___U3CsnapPhaseStartU3E5__9;
 		V_9 = ((float)(((float)il2cpp_codegen_subtract(L_82, L_83))/((float)il2cpp_codegen_subtract(L_85, L_86))));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:287>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:288>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_87 = V_1;
 		float L_88 = V_9;
 		NullCheck(L_87);
 		float L_89;
 		L_89 = DicesController_EaseInOutCubic_m62D9C4206A298FB0E4A816D784848B5B836B923E(L_87, L_88, NULL);
 		V_10 = L_89;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:290>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:291>
 		bool L_90 = __this->___U3CuseLocalRotationU3E5__2;
 		if (L_90)
 		{
@@ -8803,13 +8803,13 @@ IL_0294:
 
 IL_02a4:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:291>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:292>
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_97 = __this->___U3CtargetRotationU3E5__5;
 		float L_98 = V_10;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_99;
 		L_99 = Quaternion_Slerp_m0A9969F500E7716EA4F6BC4E7D5464372D8E9E15_inline(G_B20_0, L_97, L_98, NULL);
 		V_11 = L_99;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:293>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:294>
 		bool L_100 = __this->___U3CuseLocalRotationU3E5__2;
 		if (!L_100)
 		{
@@ -8817,7 +8817,7 @@ IL_02a4:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:295>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:296>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_101 = __this->___dice;
 		NullCheck(L_101);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_102;
@@ -8830,7 +8830,7 @@ IL_02a4:
 
 IL_02cf:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:299>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:300>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_104 = __this->___dice;
 		NullCheck(L_104);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_105;
@@ -8842,7 +8842,7 @@ IL_02cf:
 
 IL_02e1:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:303>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:304>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 1;
@@ -8856,7 +8856,7 @@ IL_02f1:
 
 IL_02f8:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:255>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:256>
 		float L_107 = __this->___U3CelapsedU3E5__8;
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_108 = V_1;
 		NullCheck(L_108);
@@ -8867,14 +8867,14 @@ IL_02f8:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:309>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:310>
 		__this->___U3CiU3E5__10 = 0;
 		goto IL_0371;
 	}
 
 IL_0312:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:311>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:312>
 		bool L_110 = __this->___U3CuseLocalRotationU3E5__2;
 		if (!L_110)
 		{
@@ -8882,7 +8882,7 @@ IL_0312:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:313>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:314>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_111 = __this->___dice;
 		NullCheck(L_111);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_112;
@@ -8895,7 +8895,7 @@ IL_0312:
 
 IL_0332:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:317>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:318>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_114 = __this->___dice;
 		NullCheck(L_114);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_115;
@@ -8907,7 +8907,7 @@ IL_0332:
 
 IL_0348:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:319>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:320>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 2;
@@ -8917,7 +8917,7 @@ IL_0348:
 IL_0358:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:309>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:310>
 		int32_t L_117 = __this->___U3CiU3E5__10;
 		V_12 = L_117;
 		int32_t L_118 = V_12;
@@ -8926,7 +8926,7 @@ IL_0358:
 
 IL_0371:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:309>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:310>
 		int32_t L_119 = __this->___U3CiU3E5__10;
 		if ((((int32_t)L_119) < ((int32_t)3)))
 		{
@@ -8934,7 +8934,7 @@ IL_0371:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:323>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:324>
 		bool L_120 = __this->___U3CuseLocalRotationU3E5__2;
 		if (L_120)
 		{
@@ -8968,7 +8968,7 @@ IL_0394:
 IL_03a4:
 	{
 		V_3 = G_B36_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:324>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:325>
 		int32_t L_127 = __this->___targetFace;
 		int32_t L_128 = L_127;
 		RuntimeObject* L_129 = Box(il2cpp_defaults.int32_class, &L_128);
@@ -8982,7 +8982,7 @@ IL_03a4:
 		L_136 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteralED7A81EE8756837AAA0D85357A47181485F5A23A, L_129, L_132, L_135, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_136, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:326>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:327>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_137 = __this->___onComplete;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_138 = L_137;
 		if (L_138)
@@ -9004,11 +9004,11 @@ IL_03dc:
 
 IL_03e1:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:327>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/DicesController.cs:328>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65612
+// Method Definition Index: 65614
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRollDiceCoroutineU3Ed__27_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mAD48ACC27E7AFF702401DE91202204F595EA0783 (U3CRollDiceCoroutineU3Ed__27_t250DF1FE43CE5B2F1C5381DEF53C37108CCDB4B7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9016,7 +9016,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRollDiceCoroutineU3Ed__27_S
 		return L_0;
 	}
 }
-// Method Definition Index: 65613
+// Method Definition Index: 65615
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRollDiceCoroutineU3Ed__27_System_Collections_IEnumerator_Reset_mFEC7EEA2B9357E7C3658B436956AF71152826E50 (U3CRollDiceCoroutineU3Ed__27_t250DF1FE43CE5B2F1C5381DEF53C37108CCDB4B7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9025,7 +9025,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRollDiceCoroutineU3Ed__27_System_Coll
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CRollDiceCoroutineU3Ed__27_System_Collections_IEnumerator_Reset_mFEC7EEA2B9357E7C3658B436956AF71152826E50_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65614
+// Method Definition Index: 65616
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRollDiceCoroutineU3Ed__27_System_Collections_IEnumerator_get_Current_mA17041F6FBA5851E8651408BCA4C3195D1309D7A (U3CRollDiceCoroutineU3Ed__27_t250DF1FE43CE5B2F1C5381DEF53C37108CCDB4B7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9041,7 +9041,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRollDiceCoroutineU3Ed__27_S
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65615
+// Method Definition Index: 65617
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* FacebookSignInManager_get_Instance_m2646A1436D1F6ABD8A9572F42AAA6FEEEB966306 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9051,12 +9051,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FacebookSignInManager_t0506B75AD5F450FAA5A8DD
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:14>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:15>
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_0 = ((FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A_StaticFields*)il2cpp_codegen_static_fields_for(FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 65616
+// Method Definition Index: 65618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_set_Instance_mB64AE7EE2A85FB27DB8F10038CD1612AB8749649 (FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9066,14 +9066,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_set_Instance_mB64A
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:14>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:15>
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_0 = ___0_value;
 		((FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A_StaticFields*)il2cpp_codegen_static_fields_for(FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&((FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A_StaticFields*)il2cpp_codegen_static_fields_for(FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 65617
+// Method Definition Index: 65619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_Awake_m53AB480D4291D18887DCBBC212F877561B30BC8C (FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9086,7 +9086,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_Awake_m53AB480D429
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:24>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:25>
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_0;
 		L_0 = FacebookSignInManager_get_Instance_m2646A1436D1F6ABD8A9572F42AAA6FEEEB966306_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -9098,36 +9098,36 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_Awake_m53AB480D429
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:26>
-		FacebookSignInManager_set_Instance_mB64AE7EE2A85FB27DB8F10038CD1612AB8749649_inline(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:27>
+		FacebookSignInManager_set_Instance_mB64AE7EE2A85FB27DB8F10038CD1612AB8749649_inline(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:28>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2;
 		L_2 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_DontDestroyOnLoad_m4B70C3AEF886C176543D1295507B6455C9DCAEA7(L_2, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:28>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:29>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralF7DD660AF5FF739DDECEFABD163B69FE20E8EC6A, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:31>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:32>
 		FacebookSignInManager_InitializeFacebook_m9ACF12A7BF489B68B6D82E458B508B0F56A31BFF(__this, NULL);
 		return;
 	}
 
 IL_002f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:35>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:36>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral78323E96FA74BCF9FC7113F42371396F2C9F6D58, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:36>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:37>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3;
 		L_3 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_3, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:37>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:38>
 		return;
 	}
 }
-// Method Definition Index: 65618
+// Method Definition Index: 65620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_InitializeFacebook_m9ACF12A7BF489B68B6D82E458B508B0F56A31BFF (FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9144,7 +9144,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_InitializeFacebook
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:47>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:48>
 		il2cpp_codegen_runtime_class_init_inline(FB_tD6AF917A642BEC6920761C8E4AD4013414829013_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = FB_get_IsInitialized_mE5526CA5E129B98093E63A5C2D0EE88674B0FA42(NULL);
@@ -9154,10 +9154,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_InitializeFacebook
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:49>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:50>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral5DB2F6E16B9E01A0ABDCBF7DED081BF3552EC935, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:50>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:51>
 		InitDelegate_t880BF96D9E733404D1E36BF894DDA83C1B9A1A9F* L_1 = (InitDelegate_t880BF96D9E733404D1E36BF894DDA83C1B9A1A9F*)il2cpp_codegen_object_new(InitDelegate_t880BF96D9E733404D1E36BF894DDA83C1B9A1A9F_il2cpp_TypeInfo_var);
 		InitDelegate__ctor_m3564BD9683A0BAB69B7B0CCB1F32F0688C9FBAB7(L_1, __this, (intptr_t)((void*)FacebookSignInManager_OnFacebookInitComplete_m627F2E5DB10289E62E5157720628900F328D5A33_RuntimeMethod_var), NULL);
 		HideUnityDelegate_t73424171C1A0762619208C0090DD84BA51FF9BCE* L_2 = (HideUnityDelegate_t73424171C1A0762619208C0090DD84BA51FF9BCE*)il2cpp_codegen_object_new(HideUnityDelegate_t73424171C1A0762619208C0090DD84BA51FF9BCE_il2cpp_TypeInfo_var);
@@ -9169,16 +9169,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_InitializeFacebook
 
 IL_0030:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:54>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:55>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral6BB0C053E4D0A51C036FBC05CF6C2DB0C4DA0FD1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:55>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:56>
 		__this->___isInitialized = (bool)1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:60>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:61>
 		return;
 	}
 }
-// Method Definition Index: 65619
+// Method Definition Index: 65621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_OnFacebookInitComplete_m627F2E5DB10289E62E5157720628900F328D5A33 (FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9191,12 +9191,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_OnFacebookInitComp
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:65>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:66>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralA164D4C3F71CCBE6C390D0EE1DBCB492F745EEA7, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:66>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:67>
 		__this->___isInitialized = (bool)1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:69>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:70>
 		il2cpp_codegen_runtime_class_init_inline(FB_tD6AF917A642BEC6920761C8E4AD4013414829013_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = FB_get_IsLoggedIn_m0E22CD5EE863598BFBBB29D65F36245A15B9302A(NULL);
@@ -9214,18 +9214,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_OnFacebookInitComp
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:71>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:72>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral7E4CE89888CB8E13B648DC2910B207CA25B2CA2F, NULL);
 	}
 
 IL_0029:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:73>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:74>
 		return;
 	}
 }
-// Method Definition Index: 65620
+// Method Definition Index: 65622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_OnHideUnity_mF0B50AEA44349E4498CD3CA97035658626A4F78B (FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* __this, bool ___0_isGameShown, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9236,7 +9236,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_OnHideUnity_mF0B50
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:77>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:78>
 		bool L_0 = ___0_isGameShown;
 		bool L_1 = L_0;
 		RuntimeObject* L_2 = Box(il2cpp_defaults.boolean_class, &L_1);
@@ -9244,31 +9244,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_OnHideUnity_mF0B50
 		L_3 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral67B6387EEAE89E69327E829561CC4D262F4284AE, L_2, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_3, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:78>
-		return;
-	}
-}
-// Method Definition Index: 65621
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_SignInWithFacebook_mC066B4D78BCA23507331E7FCA4F6172225DA6B64 (FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* __this, const RuntimeMethod* method) 
-{
-	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:87>
-		FacebookSignInManager_SignInWithFacebookMobile_mC9CC320F3B41F6454F5658D15E3AA604CFB68581(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:93>
-		return;
-	}
-}
-// Method Definition Index: 65622
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_AttemptSilentSignIn_m67C1CFF3207FC55D499564F3C47EC9FDDB2ABB46 (FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* __this, const RuntimeMethod* method) 
-{
-	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:102>
-		FacebookSignInManager_AttemptSilentSignInMobile_m6DF6B987BB06A818C97690047C02F5A00D614B57(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:106>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:79>
 		return;
 	}
 }
 // Method Definition Index: 65623
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_SignInWithFacebook_mC066B4D78BCA23507331E7FCA4F6172225DA6B64 (FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:88>
+		FacebookSignInManager_SignInWithFacebookMobile_mC9CC320F3B41F6454F5658D15E3AA604CFB68581(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:94>
+		return;
+	}
+}
+// Method Definition Index: 65624
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_AttemptSilentSignIn_m67C1CFF3207FC55D499564F3C47EC9FDDB2ABB46 (FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:103>
+		FacebookSignInManager_AttemptSilentSignInMobile_m6DF6B987BB06A818C97690047C02F5A00D614B57(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:107>
+		return;
+	}
+}
+// Method Definition Index: 65625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_SignInWithFacebookMobile_mC9CC320F3B41F6454F5658D15E3AA604CFB68581 (FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9288,7 +9288,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_SignInWithFacebook
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:111>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:112>
 		bool L_0 = __this->___isInitialized;
 		if (L_0)
 		{
@@ -9296,26 +9296,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_SignInWithFacebook
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:113>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:114>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteralC5FB8A7CDAF2A35E17CDD96C8300D4A49C036FCC, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:114>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:115>
 		FacebookSignInManager_InitializeFacebook_m9ACF12A7BF489B68B6D82E458B508B0F56A31BFF(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:117>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:118>
 		RuntimeObject* L_1;
 		L_1 = FacebookSignInManager_DelayedSignIn_m6D74547663AAC2994F91E9D0338FA00A58B48261(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_2;
 		L_2 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:118>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:119>
 		return;
 	}
 
 IL_0026:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:121>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:122>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral8167812D6099A5C4F3DE45DB137C36EA2E59DB01, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:124>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:125>
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_3 = (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*)il2cpp_codegen_object_new(List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD_il2cpp_TypeInfo_var);
 		List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E(L_3, List_1__ctor_mCA8DD57EAC70C2B5923DBB9D5A77CEAC22E7068E_RuntimeMethod_var);
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_4 = L_3;
@@ -9324,16 +9324,16 @@ IL_0026:
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_5 = L_4;
 		NullCheck(L_5);
 		List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_inline(L_5, _stringLiteral51921D99887DD5ED233F87333EF648AE91A8BF7C, List_1_Add_mF10DB1D3CBB0B14215F0E4F8AB4934A1955E5351_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:126>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:127>
 		FacebookDelegate_1_t12EB4CA46E5479FC254BB457E8695ACBA6D7AB0D* L_6 = (FacebookDelegate_1_t12EB4CA46E5479FC254BB457E8695ACBA6D7AB0D*)il2cpp_codegen_object_new(FacebookDelegate_1_t12EB4CA46E5479FC254BB457E8695ACBA6D7AB0D_il2cpp_TypeInfo_var);
 		FacebookDelegate_1__ctor_m9481063D0B3777DC5F5CC74D0087C2273329EBC1(L_6, __this, (intptr_t)((void*)FacebookSignInManager_OnFacebookLoginCallback_mF9D83FB881FF0445C68CE6153E5259299995E4E6_RuntimeMethod_var), NULL);
 		il2cpp_codegen_runtime_class_init_inline(FB_tD6AF917A642BEC6920761C8E4AD4013414829013_il2cpp_TypeInfo_var);
 		FB_LogInWithReadPermissions_m7621226CFA49BD4C6DB1076EA6A79E13732B2B93(L_5, L_6, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:127>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:128>
 		return;
 	}
 }
-// Method Definition Index: 65624
+// Method Definition Index: 65626
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_AttemptSilentSignInMobile_m6DF6B987BB06A818C97690047C02F5A00D614B57 (FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9352,7 +9352,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_AttemptSilentSignI
 	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* G_B7_0 = NULL;
 	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* G_B6_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:131>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:132>
 		bool L_0 = __this->___isInitialized;
 		if (L_0)
 		{
@@ -9360,24 +9360,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_AttemptSilentSignI
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:133>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:134>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral817F11746E66871CCC7B774BFA0F800EA983E45D, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:135>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:136>
 		RuntimeObject* L_1;
 		L_1 = FacebookSignInManager_DelayedSilentSignIn_m047D1ACAAF15B77253B1C115B95538929AA9ABDD(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_2;
 		L_2 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:136>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:137>
 		return;
 	}
 
 IL_0020:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:139>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:140>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral31F5FAD7F5AFBF4C38E1B6971BEC11EDE9653E9D, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:142>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:143>
 		il2cpp_codegen_runtime_class_init_inline(FB_tD6AF917A642BEC6920761C8E4AD4013414829013_il2cpp_TypeInfo_var);
 		bool L_3;
 		L_3 = FB_get_IsLoggedIn_m0E22CD5EE863598BFBBB29D65F36245A15B9302A(NULL);
@@ -9395,17 +9395,17 @@ IL_0020:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:144>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:145>
 		AccessToken_t73BAE9F45493316E7FF33A14EECB3D77E8C0D346* L_5;
 		L_5 = AccessToken_get_CurrentAccessToken_m79A35A353C7FCFB189F95F9D9BF96763CB085D75_inline(NULL);
 		NullCheck(L_5);
 		String_t* L_6;
 		L_6 = AccessToken_get_TokenString_mB71C7BD483A32572EB0917664CFB15C9B669F5A8_inline(L_5, NULL);
 		V_0 = L_6;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:145>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:146>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral549D155437E233AAB37075E280F6B3605F401EB9, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:148>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:149>
 		String_t* L_7 = V_0;
 		FacebookSignInManager_FetchFacebookProfile_m10C8793ACB18153165AA0746BBDC73724FC1FC61(__this, L_7, NULL);
 		return;
@@ -9413,10 +9413,10 @@ IL_0020:
 
 IL_0055:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:152>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:153>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral33B3E00ECDAE4725251F199DAE9613056DA78CEC, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:153>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:154>
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_8 = __this->___OnFacebookSignInFailure;
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_9 = L_8;
 		if (L_9)
@@ -9434,11 +9434,11 @@ IL_006a:
 	{
 		NullCheck(G_B7_0);
 		Action_1_Invoke_m690438AAE38F9762172E3AE0A33D0B42ACD35790_inline(G_B7_0, _stringLiteral2A612F5B6154CCD05CAB3A5814A37CA06B741310, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:155>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:156>
 		return;
 	}
 }
-// Method Definition Index: 65625
+// Method Definition Index: 65627
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FacebookSignInManager_DelayedSilentSignIn_m047D1ACAAF15B77253B1C115B95538929AA9ABDD (FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9457,7 +9457,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FacebookSignInManager_DelayedS
 		return L_1;
 	}
 }
-// Method Definition Index: 65626
+// Method Definition Index: 65628
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FacebookSignInManager_DelayedSignIn_m6D74547663AAC2994F91E9D0338FA00A58B48261 (FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9476,7 +9476,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FacebookSignInManager_DelayedS
 		return L_1;
 	}
 }
-// Method Definition Index: 65627
+// Method Definition Index: 65629
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_OnFacebookLoginCallback_mF9D83FB881FF0445C68CE6153E5259299995E4E6 (FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9507,7 +9507,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_OnFacebookLoginCal
 	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* G_B16_0 = NULL;
 	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* G_B15_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:195>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:196>
 		RuntimeObject* L_0 = ___0_result;
 		if (L_0)
 		{
@@ -9515,10 +9515,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_OnFacebookLoginCal
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:197>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:198>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral0ECFA262F19F122253D90DFF11F06636C2BF1F0F, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:198>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:199>
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_1 = __this->___OnFacebookSignInFailure;
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_2 = L_1;
 		if (L_2)
@@ -9536,13 +9536,13 @@ IL_0018:
 	{
 		NullCheck(G_B3_0);
 		Action_1_Invoke_m690438AAE38F9762172E3AE0A33D0B42ACD35790_inline(G_B3_0, _stringLiteralAABF14330016FDF15AE44CD977F78F14FDC1D40E, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:199>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:200>
 		return;
 	}
 
 IL_0023:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:202>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:203>
 		RuntimeObject* L_3 = ___0_result;
 		NullCheck(L_3);
 		String_t* L_4;
@@ -9553,7 +9553,7 @@ IL_0023:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:204>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:205>
 		RuntimeObject* L_5 = ___0_result;
 		NullCheck(L_5);
 		String_t* L_6;
@@ -9561,13 +9561,13 @@ IL_0023:
 		String_t* L_7;
 		L_7 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralDD555C632739B23CA68EAC93C4CB35B1E32BECE7, L_6, NULL);
 		V_0 = L_7;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:205>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:206>
 		String_t* L_8 = V_0;
 		String_t* L_9;
 		L_9 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralBDB4315CC4C7A8947208E15FE12431C3C2BF48D1, L_8, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_9, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:206>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:207>
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_10 = __this->___OnFacebookSignInFailure;
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_11 = L_10;
 		if (L_11)
@@ -9586,13 +9586,13 @@ IL_0057:
 		String_t* L_12 = V_0;
 		NullCheck(G_B7_0);
 		Action_1_Invoke_m690438AAE38F9762172E3AE0A33D0B42ACD35790_inline(G_B7_0, L_12, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:207>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:208>
 		return;
 	}
 
 IL_005e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:210>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:211>
 		RuntimeObject* L_13 = ___0_result;
 		NullCheck(L_13);
 		bool L_14;
@@ -9603,10 +9603,10 @@ IL_005e:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:212>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:213>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral3808786545FB9FA234AD7A7E68597D4240B1E817, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:213>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:214>
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_15 = __this->___OnFacebookSignInFailure;
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_16 = L_15;
 		if (L_16)
@@ -9624,13 +9624,13 @@ IL_007b:
 	{
 		NullCheck(G_B11_0);
 		Action_1_Invoke_m690438AAE38F9762172E3AE0A33D0B42ACD35790_inline(G_B11_0, _stringLiteralFF3650275CABC2ED6B216E2CFCFECA1DB72CE680, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:214>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:215>
 		return;
 	}
 
 IL_0086:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:218>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:219>
 		AccessToken_t73BAE9F45493316E7FF33A14EECB3D77E8C0D346* L_17;
 		L_17 = AccessToken_get_CurrentAccessToken_m79A35A353C7FCFB189F95F9D9BF96763CB085D75_inline(NULL);
 		if (!L_17)
@@ -9639,14 +9639,14 @@ IL_0086:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:220>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:221>
 		AccessToken_t73BAE9F45493316E7FF33A14EECB3D77E8C0D346* L_18;
 		L_18 = AccessToken_get_CurrentAccessToken_m79A35A353C7FCFB189F95F9D9BF96763CB085D75_inline(NULL);
 		NullCheck(L_18);
 		String_t* L_19;
 		L_19 = AccessToken_get_TokenString_mB71C7BD483A32572EB0917664CFB15C9B669F5A8_inline(L_18, NULL);
 		V_1 = L_19;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:221>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:222>
 		String_t* L_20 = V_1;
 		String_t* L_21 = V_1;
 		NullCheck(L_21);
@@ -9661,7 +9661,7 @@ IL_0086:
 		L_25 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralE4CCDE749E2C0FB818FA3AD4897025BC7FEF4510, L_24, _stringLiteralFFEF3DBE279EE1F92E1E2E46F45BC18EBBF55A1A, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_25, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:224>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:225>
 		String_t* L_26 = V_1;
 		FacebookSignInManager_FetchFacebookProfile_m10C8793ACB18153165AA0746BBDC73724FC1FC61(__this, L_26, NULL);
 		return;
@@ -9669,10 +9669,10 @@ IL_0086:
 
 IL_00c8:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:228>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:229>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteralEFEA85FD4D371B7410278E5AB5DCF5D05907C289, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:229>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:230>
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_27 = __this->___OnFacebookSignInFailure;
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_28 = L_27;
 		if (L_28)
@@ -9690,11 +9690,11 @@ IL_00dd:
 	{
 		NullCheck(G_B16_0);
 		Action_1_Invoke_m690438AAE38F9762172E3AE0A33D0B42ACD35790_inline(G_B16_0, _stringLiteral490BD97F66448A66C22DC367BF2CC519C7C4FC87, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:231>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:232>
 		return;
 	}
 }
-// Method Definition Index: 65628
+// Method Definition Index: 65630
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_FetchFacebookProfile_m10C8793ACB18153165AA0746BBDC73724FC1FC61 (FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* __this, String_t* ___0_accessToken, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9730,11 +9730,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_FetchFacebookProfi
 	}
 	try
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:242>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:243>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral734FE3C11ADB8673AE409CED7B34B169D206E2E6, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:246>
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:248>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:247>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:249>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:250>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:251>
@@ -9788,12 +9787,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_FetchFacebookProfi
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:299>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:300>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:301>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:302>
 		U3CU3Ec__DisplayClass18_0_tC4B4AD896794BD7875D15A6F37AFD29FFE58C502* L_4 = V_0;
 		FacebookDelegate_1_t3F4605F93830396F9B98FFF45A1DF358D8D1C6FB* L_5 = (FacebookDelegate_1_t3F4605F93830396F9B98FFF45A1DF358D8D1C6FB*)il2cpp_codegen_object_new(FacebookDelegate_1_t3F4605F93830396F9B98FFF45A1DF358D8D1C6FB_il2cpp_TypeInfo_var);
 		FacebookDelegate_1__ctor_m9A4C43BB75B9BA8CAE0A29F54DFFC9F4A7EE1F27(L_5, L_4, (intptr_t)((void*)U3CU3Ec__DisplayClass18_0_U3CFetchFacebookProfileU3Eb__0_mB509BD5BA0743545AC1A8EE84AE1D4B018B28129_RuntimeMethod_var), NULL);
 		il2cpp_codegen_runtime_class_init_inline(FB_tD6AF917A642BEC6920761C8E4AD4013414829013_il2cpp_TypeInfo_var);
 		FB_API_m99EA09DCB400B85BC92B3E9E887D2D934B999B14(_stringLiteralB157C1F0D443A952E2763C0B724D362E197FFAAB, 0, L_5, (RuntimeObject*)NULL, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:302>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:303>
 		goto IL_007b;
 	}
 	catch(Il2CppExceptionWrapper& e)
@@ -9810,9 +9810,9 @@ CATCH_0038:
 	{
 		{
 			Exception_t* L_6 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:303>
+			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:304>
 			V_1 = L_6;
-			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:305>
+			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:306>
 			Exception_t* L_7 = V_1;
 			NullCheck(L_7);
 			String_t* L_8;
@@ -9821,7 +9821,7 @@ CATCH_0038:
 			L_9 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral0C6F826BEE45A6EF59460B3C9E6BBA66846B5DA6)), L_8, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral6AEF98364D80C5020DACD6B3B21D3285A6E46234)), NULL);
 			il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
 			Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_9, NULL);
-			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:307>
+			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:308>
 			Action_4_tCFD3F346D48D585C5AD759BFABECC1400FB2CFCA* L_10 = __this->___OnFacebookSignInSuccess;
 			Action_4_tCFD3F346D48D585C5AD759BFABECC1400FB2CFCA* L_11 = L_10;
 			if (L_11)
@@ -9846,7 +9846,7 @@ IL_005f:
 
 IL_0079:
 		{
-			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:308>
+			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:309>
 			IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
 			goto IL_007b;
 		}
@@ -9854,11 +9854,11 @@ IL_0079:
 
 IL_007b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:313>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:314>
 		return;
 	}
 }
-// Method Definition Index: 65629
+// Method Definition Index: 65631
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_SignOut_m731BA40BD5B0BFB3E9812A07E3C3EF00AA306532 (FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9873,13 +9873,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_SignOut_m731BA40BD
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
 	try
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:323>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:324>
 		il2cpp_codegen_runtime_class_init_inline(FB_tD6AF917A642BEC6920761C8E4AD4013414829013_il2cpp_TypeInfo_var);
 		FB_LogOut_mC6F8C596BF045072300816653C95FD5613EEB7B2(NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:324>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:325>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralE4E992CBAF646B75CC6B5437D943357E0B7807E4, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:325>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:326>
 		goto IL_0029;
 	}
 	catch(Il2CppExceptionWrapper& e)
@@ -9895,9 +9895,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager_SignOut_m731BA40BD
 CATCH_0011:
 	{
 		Exception_t* L_0 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:326>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:327>
 		V_0 = L_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:328>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:329>
 		Exception_t* L_1 = V_0;
 		NullCheck(L_1);
 		String_t* L_2;
@@ -9906,18 +9906,18 @@ CATCH_0011:
 		L_3 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral9583D1B4BB825FDD45432E1323936063F54F4D65)), L_2, NULL);
 		il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_3, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:329>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:330>
 		IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
 		goto IL_0029;
 	}
 
 IL_0029:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:331>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:332>
 		return;
 	}
 }
-// Method Definition Index: 65630
+// Method Definition Index: 65632
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager__ctor_m498AA33103E730F45C64B01FE205E8A1CDBD8508 (FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9933,7 +9933,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FacebookSignInManager__ctor_m498AA33103E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65631
+// Method Definition Index: 65633
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass18_0__ctor_m1ECF18740E976CDA3FE89053F813617D66915F67 (U3CU3Ec__DisplayClass18_0_tC4B4AD896794BD7875D15A6F37AFD29FFE58C502* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9941,7 +9941,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass18_0__ctor_m1ECF187
 		return;
 	}
 }
-// Method Definition Index: 65632
+// Method Definition Index: 65634
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass18_0_U3CFetchFacebookProfileU3Eb__0_mB509BD5BA0743545AC1A8EE84AE1D4B018B28129 (U3CU3Ec__DisplayClass18_0_tC4B4AD896794BD7875D15A6F37AFD29FFE58C502* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9995,7 +9995,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass18_0_U3CFetchFacebo
 	Action_4_tCFD3F346D48D585C5AD759BFABECC1400FB2CFCA* G_B35_0 = NULL;
 	Action_4_tCFD3F346D48D585C5AD759BFABECC1400FB2CFCA* G_B34_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:250>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:251>
 		RuntimeObject* L_0 = ___0_result;
 		NullCheck(L_0);
 		String_t* L_1;
@@ -10006,7 +10006,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass18_0_U3CFetchFacebo
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:252>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:253>
 		RuntimeObject* L_2 = ___0_result;
 		NullCheck(L_2);
 		String_t* L_3;
@@ -10015,7 +10015,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass18_0_U3CFetchFacebo
 		L_4 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral6A0E9076F4BA7985B09F41A2B1F57B7D91A49D60, L_3, _stringLiteral6AEF98364D80C5020DACD6B3B21D3285A6E46234, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_4, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:254>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:255>
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_5 = __this->___U3CU3E4__this;
 		NullCheck(L_5);
 		Action_4_tCFD3F346D48D585C5AD759BFABECC1400FB2CFCA* L_6 = L_5->___OnFacebookSignInSuccess;
@@ -10036,13 +10036,13 @@ IL_0032:
 		String_t* L_8 = __this->___accessToken;
 		NullCheck(G_B3_0);
 		Action_4_Invoke_mD370759F5D2153DD567758AF074BB3B23336982D_inline(G_B3_0, L_8, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:255>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:256>
 		return;
 	}
 
 IL_004d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:258>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:259>
 		RuntimeObject* L_9 = ___0_result;
 		NullCheck(L_9);
 		RuntimeObject* L_10;
@@ -10053,13 +10053,13 @@ IL_004d:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:261>
-		V_0 = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:262>
-		V_1 = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
+		V_0 = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:263>
+		V_1 = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:264>
 		V_2 = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:266>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:267>
 		RuntimeObject* L_11 = ___0_result;
 		NullCheck(L_11);
 		RuntimeObject* L_12;
@@ -10073,7 +10073,7 @@ IL_004d:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:268>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:269>
 		RuntimeObject* L_14 = ___0_result;
 		NullCheck(L_14);
 		RuntimeObject* L_15;
@@ -10123,7 +10123,7 @@ IL_00a1:
 
 IL_00a2:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:272>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:273>
 		RuntimeObject* L_20 = ___0_result;
 		NullCheck(L_20);
 		RuntimeObject* L_21;
@@ -10137,7 +10137,7 @@ IL_00a2:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:274>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:275>
 		RuntimeObject* L_23 = ___0_result;
 		NullCheck(L_23);
 		RuntimeObject* L_24;
@@ -10187,7 +10187,7 @@ IL_00d9:
 
 IL_00da:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:278>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:279>
 		RuntimeObject* L_29 = ___0_result;
 		NullCheck(L_29);
 		RuntimeObject* L_30;
@@ -10201,7 +10201,7 @@ IL_00da:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:280>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:281>
 		RuntimeObject* L_32 = ___0_result;
 		NullCheck(L_32);
 		RuntimeObject* L_33;
@@ -10210,7 +10210,7 @@ IL_00da:
 		RuntimeObject* L_34;
 		L_34 = InterfaceFuncInvoker1< RuntimeObject*, String_t* >::Invoke(0, IDictionary_2_t79D4ADB15B238AC117DF72982FEA3C42EF5AFA19_il2cpp_TypeInfo_var, L_33, _stringLiteral5E89DFB28C21F05C783FF6C52C1E49EC5D97B20C);
 		V_3 = ((Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710*)IsInstClass((RuntimeObject*)L_34, Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710_il2cpp_TypeInfo_var));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:281>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:282>
 		Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_35 = V_3;
 		if (!L_35)
 		{
@@ -10228,13 +10228,13 @@ IL_00da:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:283>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:284>
 		Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_38 = V_3;
 		NullCheck(L_38);
 		RuntimeObject* L_39;
 		L_39 = Dictionary_2_get_Item_m371FC5B3D39406E297F2626B159BA1A3E32917B5(L_38, _stringLiteralA44A39671D4B7FA8FBE50D795EAB52248D5C5469, Dictionary_2_get_Item_m371FC5B3D39406E297F2626B159BA1A3E32917B5_RuntimeMethod_var);
 		V_4 = ((Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710*)IsInstClass((RuntimeObject*)L_39, Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710_il2cpp_TypeInfo_var));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:284>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:285>
 		Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_40 = V_4;
 		if (!L_40)
 		{
@@ -10252,7 +10252,7 @@ IL_00da:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:286>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:287>
 		Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* L_43 = V_4;
 		NullCheck(L_43);
 		RuntimeObject* L_44;
@@ -10299,7 +10299,7 @@ IL_0157:
 
 IL_0158:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:291>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:292>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_48 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)6);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_49 = L_48;
 		NullCheck(L_49);
@@ -10326,7 +10326,7 @@ IL_0158:
 		L_58 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_56, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_58, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:294>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:295>
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_59 = __this->___U3CU3E4__this;
 		NullCheck(L_59);
 		Action_4_tCFD3F346D48D585C5AD759BFABECC1400FB2CFCA* L_60 = L_59->___OnFacebookSignInSuccess;
@@ -10355,10 +10355,10 @@ IL_019c:
 
 IL_01ab:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:298>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:299>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral6918A34C1C40A8B4CD5290F1DAC72F0BBBE131AB, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:299>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:300>
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_66 = __this->___U3CU3E4__this;
 		NullCheck(L_66);
 		Action_4_tCFD3F346D48D585C5AD759BFABECC1400FB2CFCA* L_67 = L_66->___OnFacebookSignInSuccess;
@@ -10379,7 +10379,7 @@ IL_01c5:
 		String_t* L_69 = __this->___accessToken;
 		NullCheck(G_B35_0);
 		Action_4_Invoke_mD370759F5D2153DD567758AF074BB3B23336982D_inline(G_B35_0, L_69, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:301>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:302>
 		return;
 	}
 }
@@ -10391,7 +10391,7 @@ IL_01c5:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65633
+// Method Definition Index: 65635
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedSignInU3Ed__16__ctor_mD4396EBDFDB283CD299A688620EECDEC27610BDF (U3CDelayedSignInU3Ed__16_tB6569B4B90F5D546405DEE0C42DCB6526CF927E0* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -10401,14 +10401,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedSignInU3Ed__16__ctor_mD4396EBD
 		return;
 	}
 }
-// Method Definition Index: 65634
+// Method Definition Index: 65636
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedSignInU3Ed__16_System_IDisposable_Dispose_mFD1FC9B928CEB96304FD37C1BB3EFE1376B804AF (U3CDelayedSignInU3Ed__16_tB6569B4B90F5D546405DEE0C42DCB6526CF927E0* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65635
+// Method Definition Index: 65637
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CDelayedSignInU3Ed__16_MoveNext_mBB43A6C7B45D15C3117CE596D7874A63888741AF (U3CDelayedSignInU3Ed__16_tB6569B4B90F5D546405DEE0C42DCB6526CF927E0* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10449,7 +10449,7 @@ IL_0017:
 
 IL_0020:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:186>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:187>
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_4 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_4, (0.100000001f), NULL);
 		__this->___U3CU3E2__current = L_4;
@@ -10465,7 +10465,7 @@ IL_0039:
 
 IL_0040:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:184>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:185>
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_5 = V_1;
 		NullCheck(L_5);
 		bool L_6 = L_5->___isInitialized;
@@ -10475,15 +10475,15 @@ IL_0040:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:190>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:191>
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_7 = V_1;
 		NullCheck(L_7);
 		FacebookSignInManager_SignInWithFacebookMobile_mC9CC320F3B41F6454F5658D15E3AA604CFB68581(L_7, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:191>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:192>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65636
+// Method Definition Index: 65638
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedSignInU3Ed__16_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m8368B3A78CE1653A61A42913A36780DA8793B84B (U3CDelayedSignInU3Ed__16_tB6569B4B90F5D546405DEE0C42DCB6526CF927E0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10491,7 +10491,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedSignInU3Ed__16_Syste
 		return L_0;
 	}
 }
-// Method Definition Index: 65637
+// Method Definition Index: 65639
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedSignInU3Ed__16_System_Collections_IEnumerator_Reset_mDE14D8581C4A5EB336CC9EF35F2ED03D3B497D52 (U3CDelayedSignInU3Ed__16_tB6569B4B90F5D546405DEE0C42DCB6526CF927E0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10500,7 +10500,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedSignInU3Ed__16_System_Collecti
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CDelayedSignInU3Ed__16_System_Collections_IEnumerator_Reset_mDE14D8581C4A5EB336CC9EF35F2ED03D3B497D52_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65638
+// Method Definition Index: 65640
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedSignInU3Ed__16_System_Collections_IEnumerator_get_Current_m4A34441E2A8810A3B31F189A27AE9D8875524280 (U3CDelayedSignInU3Ed__16_tB6569B4B90F5D546405DEE0C42DCB6526CF927E0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10516,7 +10516,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedSignInU3Ed__16_Syste
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65639
+// Method Definition Index: 65641
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedSilentSignInU3Ed__15__ctor_mEE6A1DB54CC246A51C3807E5A3C52423B12091D8 (U3CDelayedSilentSignInU3Ed__15_t721373D9EC78C0B4AD61183EDFC5D765EA0F4886* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -10526,14 +10526,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedSilentSignInU3Ed__15__ctor_mEE
 		return;
 	}
 }
-// Method Definition Index: 65640
+// Method Definition Index: 65642
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedSilentSignInU3Ed__15_System_IDisposable_Dispose_m8C63D525AE170D32B49D79BBE19543C6338F0CF9 (U3CDelayedSilentSignInU3Ed__15_t721373D9EC78C0B4AD61183EDFC5D765EA0F4886* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65641
+// Method Definition Index: 65643
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CDelayedSilentSignInU3Ed__15_MoveNext_mCC9BA0DB499099CA0BF5F460F75455FA5A3DC849 (U3CDelayedSilentSignInU3Ed__15_t721373D9EC78C0B4AD61183EDFC5D765EA0F4886* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10574,16 +10574,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CDelayedSilentSignInU3Ed__15_MoveNext_
 IL_0017:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:160>
-		__this->___U3CtimeoutU3E5__2 = (5.0f);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:161>
+		__this->___U3CtimeoutU3E5__2 = (5.0f);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:162>
 		__this->___U3CelapsedU3E5__3 = (0.0f);
 		goto IL_0068;
 	}
 
 IL_0036:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:165>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:166>
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_4 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_4, (0.100000001f), NULL);
 		__this->___U3CU3E2__current = L_4;
@@ -10595,14 +10595,14 @@ IL_0036:
 IL_004f:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:166>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:167>
 		float L_5 = __this->___U3CelapsedU3E5__3;
 		__this->___U3CelapsedU3E5__3 = ((float)il2cpp_codegen_add(L_5, (0.100000001f)));
 	}
 
 IL_0068:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:163>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:164>
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_6 = V_1;
 		NullCheck(L_6);
 		bool L_7 = L_6->___isInitialized;
@@ -10622,7 +10622,7 @@ IL_0068:
 
 IL_007e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:169>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:170>
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_10 = V_1;
 		NullCheck(L_10);
 		bool L_11 = L_10->___isInitialized;
@@ -10632,7 +10632,7 @@ IL_007e:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:172>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:173>
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_12 = V_1;
 		NullCheck(L_12);
 		FacebookSignInManager_AttemptSilentSignInMobile_m6DF6B987BB06A818C97690047C02F5A00D614B57(L_12, NULL);
@@ -10641,10 +10641,10 @@ IL_007e:
 
 IL_008e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:176>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:177>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral6B0B7BD62D6BF95A7FA651EC3879BEEBD6D8DADC, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:177>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:178>
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_13 = V_1;
 		NullCheck(L_13);
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_14 = L_13->___OnFacebookSignInFailure;
@@ -10668,11 +10668,11 @@ IL_00a4:
 
 IL_00ae:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:179>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:180>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65642
+// Method Definition Index: 65644
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedSilentSignInU3Ed__15_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m7225769C900DBED40A8294F8DA3A4C02AD14ED63 (U3CDelayedSilentSignInU3Ed__15_t721373D9EC78C0B4AD61183EDFC5D765EA0F4886* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10680,7 +10680,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedSilentSignInU3Ed__15
 		return L_0;
 	}
 }
-// Method Definition Index: 65643
+// Method Definition Index: 65645
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedSilentSignInU3Ed__15_System_Collections_IEnumerator_Reset_mCFBDE949F739323209D0BF18F6441CA0CD3DFD6F (U3CDelayedSilentSignInU3Ed__15_t721373D9EC78C0B4AD61183EDFC5D765EA0F4886* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10689,7 +10689,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedSilentSignInU3Ed__15_System_Co
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CDelayedSilentSignInU3Ed__15_System_Collections_IEnumerator_Reset_mCFBDE949F739323209D0BF18F6441CA0CD3DFD6F_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65644
+// Method Definition Index: 65646
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedSilentSignInU3Ed__15_System_Collections_IEnumerator_get_Current_m1BC6EB00DDFECEED3B7E1C133866D658CEE453D5 (U3CDelayedSilentSignInU3Ed__15_t721373D9EC78C0B4AD61183EDFC5D765EA0F4886* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10705,7 +10705,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedSilentSignInU3Ed__15
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65645
+// Method Definition Index: 65647
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FallingCoinsManager_Start_m879B2F2A62E60C0CB0D53BF1E02D894EA7E9893B (FallingCoinsManager_tF65BD948AA32F78D348A1C476FCD9FFA8848C1A3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10784,7 +10784,7 @@ IL_0047:
 		return;
 	}
 }
-// Method Definition Index: 65646
+// Method Definition Index: 65648
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FallingCoinsManager_Update_m41594CE9B0FBBEA1009DE733A68AFB188377A2E5 (FallingCoinsManager_tF65BD948AA32F78D348A1C476FCD9FFA8848C1A3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10813,7 +10813,7 @@ IL_0025:
 		return;
 	}
 }
-// Method Definition Index: 65647
+// Method Definition Index: 65649
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FallingCoinsManager_SpawnCoin_m2A7ADE4B7B594CA01D000329D5EA439462906A30 (FallingCoinsManager_tF65BD948AA32F78D348A1C476FCD9FFA8848C1A3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11040,7 +11040,7 @@ IL_0078:
 		return;
 	}
 }
-// Method Definition Index: 65648
+// Method Definition Index: 65650
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* FallingCoinsManager_GetInactiveCoin_m6D02A1DDEBF885B430AF2590F924B0A0BD6ACEEB (FallingCoinsManager_tF65BD948AA32F78D348A1C476FCD9FFA8848C1A3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11136,7 +11136,7 @@ IL_003d:
 		return L_7;
 	}
 }
-// Method Definition Index: 65649
+// Method Definition Index: 65651
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FallingCoinsManager_OnDestroy_mEFD42B4E762FAB012953A509DA07FCBC63D7B3B7 (FallingCoinsManager_tF65BD948AA32F78D348A1C476FCD9FFA8848C1A3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11233,7 +11233,7 @@ IL_0052:
 		return;
 	}
 }
-// Method Definition Index: 65650
+// Method Definition Index: 65652
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FallingCoinsManager__ctor_mA6E31EE1CD674702F88584849080C7095A98D693 (FallingCoinsManager_tF65BD948AA32F78D348A1C476FCD9FFA8848C1A3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11275,7 +11275,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FallingCoinsManager__ctor_mA6E31EE1CD674
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65651
+// Method Definition Index: 65653
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass11_0__ctor_mA4A95FD20E74B90022DC14F2E44ED874485F065A (U3CU3Ec__DisplayClass11_0_tC17198A8A46AEA2930C4BAEBA0DF1C6B0C5B8A64* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11283,7 +11283,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass11_0__ctor_mA4A95FD
 		return;
 	}
 }
-// Method Definition Index: 65652
+// Method Definition Index: 65654
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass11_0_U3CSpawnCoinU3Eb__0_mE7A5B19DD851EB0CF565894A760FA1F63EBD67A5 (U3CU3Ec__DisplayClass11_0_tC17198A8A46AEA2930C4BAEBA0DF1C6B0C5B8A64* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11324,7 +11324,7 @@ IL_001a:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65653
+// Method Definition Index: 65655
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FirebaseManager_t881FC27357328319334AD0D1AD55A35C7E12E1AA* FirebaseManager_get_Instance_m5CAE28A901C4A06287EF9A68AB8CE6BD7F025F3B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11339,7 +11339,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FirebaseManager_t881FC27357328319334AD0D1AD55
 		return L_0;
 	}
 }
-// Method Definition Index: 65654
+// Method Definition Index: 65656
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FirebaseManager_set_Instance_mC518394AAF27D4DAA96F77BEF811C31FE23FFA0F (FirebaseManager_t881FC27357328319334AD0D1AD55A35C7E12E1AA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11356,7 +11356,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FirebaseManager_set_Instance_mC518394AAF
 		return;
 	}
 }
-// Method Definition Index: 65655
+// Method Definition Index: 65657
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FirebaseManager_get_IsInitialized_mDED0DDF70FAF39EEAF4E52AE1684993233172CA4 (FirebaseManager_t881FC27357328319334AD0D1AD55A35C7E12E1AA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11365,7 +11365,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FirebaseManager_get_IsInitialized_mDED0D
 		return L_0;
 	}
 }
-// Method Definition Index: 65656
+// Method Definition Index: 65658
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* FirebaseManager_get_InitializationStatus_m79A224DFE9CA9ACD3B6FA040B00D454121BAD158 (FirebaseManager_t881FC27357328319334AD0D1AD55A35C7E12E1AA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11374,7 +11374,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* FirebaseManager_get_InitializationS
 		return L_0;
 	}
 }
-// Method Definition Index: 65657
+// Method Definition Index: 65659
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FirebaseManager_Awake_m242DE3BA656C98CBBAE82A124CCF89E544F80D4D (FirebaseManager_t881FC27357328319334AD0D1AD55A35C7E12E1AA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11426,7 +11426,7 @@ IL_0029:
 		return;
 	}
 }
-// Method Definition Index: 65658
+// Method Definition Index: 65660
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FirebaseManager_Start_m07DC3A6F24732846C3755C2141DAD19750323821 (FirebaseManager_t881FC27357328319334AD0D1AD55A35C7E12E1AA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11436,7 +11436,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FirebaseManager_Start_m07DC3A6F24732846C
 		return;
 	}
 }
-// Method Definition Index: 65659
+// Method Definition Index: 65661
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FirebaseManager_InitializeFirebase_m9A4FECD5C550484A7D3F57ECF0CFEE0FD25B7FE4 (FirebaseManager_t881FC27357328319334AD0D1AD55A35C7E12E1AA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11446,7 +11446,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FirebaseManager_InitializeFirebase_m9A4F
 		return;
 	}
 }
-// Method Definition Index: 65660
+// Method Definition Index: 65662
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FirebaseManager_InitializeFirebaseAndroid_m7EECA40ECB009C40155E3BEEA313C62573498011 (FirebaseManager_t881FC27357328319334AD0D1AD55A35C7E12E1AA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11523,7 +11523,7 @@ IL_0013:
 		return;
 	}
 }
-// Method Definition Index: 65661
+// Method Definition Index: 65663
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FirebaseManager_GetFirebaseApp_mCE960FD41208C319F9181A2EB3E4992025321BBE (FirebaseManager_t881FC27357328319334AD0D1AD55A35C7E12E1AA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11559,7 +11559,7 @@ IL_000e:
 		return NULL;
 	}
 }
-// Method Definition Index: 65662
+// Method Definition Index: 65664
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FirebaseManager_ReinitializeFirebase_m9BF3A5C62DC2CF6C68FBC049EFFBA53E55279613 (FirebaseManager_t881FC27357328319334AD0D1AD55A35C7E12E1AA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11580,7 +11580,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FirebaseManager_ReinitializeFirebase_m9B
 		return;
 	}
 }
-// Method Definition Index: 65663
+// Method Definition Index: 65665
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FirebaseManager__ctor_m13285F82A840546CBCA973AD17A16F39622BBD34 (FirebaseManager_t881FC27357328319334AD0D1AD55A35C7E12E1AA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11599,7 +11599,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FirebaseManager__ctor_m13285F82A840546CB
 		return;
 	}
 }
-// Method Definition Index: 65664
+// Method Definition Index: 65666
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FirebaseManager_U3CInitializeFirebaseAndroidU3Eb__16_0_m934DBEF38DAE9E2E001CD3BE50E52367D2D9743D (FirebaseManager_t881FC27357328319334AD0D1AD55A35C7E12E1AA* __this, Task_1_tCDCA9B2073B1AC4ED4537A6D74742D20B122E1EF* ___0_task, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11733,14 +11733,14 @@ IL_00a5:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65665
+// Method Definition Index: 65667
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowScaler_Awake_m8A37A67E7CC9B552419C831487A43F852ADF41F9 (FriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisInviteFriendManager_t8B237D78EC6FBC30CA6B9628302BBDE4D2881024_mF6449536BB733AB96A8A04B30A4893E8D15FED29_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindFirstObjectByType_TisInviteFriendManager_t8B237D78EC6FBC30CA6B9628302BBDE4D2881024_m67D143B0043FAD2B251C105E17A0F71DEEA3A31F_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral13D8A53C90B009B627E0CA50DC6CEDFA17F510E2);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral929337420DEF09E84991ADA71C9978B4060D08B2);
@@ -11761,7 +11761,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowScaler_Awake_m8A37A67E7CC9B5524
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FriendRowScaler.cs:31>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		InviteFriendManager_t8B237D78EC6FBC30CA6B9628302BBDE4D2881024* L_2;
-		L_2 = Object_FindObjectOfType_TisInviteFriendManager_t8B237D78EC6FBC30CA6B9628302BBDE4D2881024_mF6449536BB733AB96A8A04B30A4893E8D15FED29(Object_FindObjectOfType_TisInviteFriendManager_t8B237D78EC6FBC30CA6B9628302BBDE4D2881024_mF6449536BB733AB96A8A04B30A4893E8D15FED29_RuntimeMethod_var);
+		L_2 = Object_FindFirstObjectByType_TisInviteFriendManager_t8B237D78EC6FBC30CA6B9628302BBDE4D2881024_m67D143B0043FAD2B251C105E17A0F71DEEA3A31F(Object_FindFirstObjectByType_TisInviteFriendManager_t8B237D78EC6FBC30CA6B9628302BBDE4D2881024_m67D143B0043FAD2B251C105E17A0F71DEEA3A31F_RuntimeMethod_var);
 		__this->___inviteFriendManager = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___inviteFriendManager), (void*)L_2);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FriendRowScaler.cs:32>
@@ -11793,7 +11793,7 @@ IL_003c:
 		return;
 	}
 }
-// Method Definition Index: 65666
+// Method Definition Index: 65668
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowScaler_Start_mC66C8A3F9835176ACC4B00078085F5DAEEBC195C (FriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11803,7 +11803,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowScaler_Start_mC66C8A3F9835176AC
 		return;
 	}
 }
-// Method Definition Index: 65667
+// Method Definition Index: 65669
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowScaler_ApplyScaling_m8AE3E9B8396C80B1B955BC9AC5C335B0E13798B4 (FriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11918,7 +11918,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowScaler_ApplyScaling_m8AE3E9B839
 		return;
 	}
 }
-// Method Definition Index: 65668
+// Method Definition Index: 65670
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowScaler_ApplyScrollerSettings_m1152157A794167EB5CB9C217D46E665758354D3C (FriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11968,7 +11968,7 @@ IL_0019:
 		return;
 	}
 }
-// Method Definition Index: 65669
+// Method Definition Index: 65671
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowScaler_ScaleRowElements_mEA8D49E1361A77ABBAD7511E48867A8EB5609AA0 (FriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_profileImg, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___1_onlineOfflineImg, TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___2_nameTxt, TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___3_idTxt, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___4_lineImg, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12121,7 +12121,7 @@ IL_008b:
 		return;
 	}
 }
-// Method Definition Index: 65670
+// Method Definition Index: 65672
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowScaler_ScaleElementOffsets_mF86E86BDF7A160C3902552BE4025574F62280E1A (FriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, float ___1_scale, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12184,7 +12184,7 @@ IL_000a:
 		return;
 	}
 }
-// Method Definition Index: 65671
+// Method Definition Index: 65673
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float FriendRowScaler_GetScaledCellSize_m3CA5CBC39EDB848A970E75D002C31527B15733DB (FriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12193,7 +12193,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float FriendRowScaler_GetScaledCellSize_m3CA5
 		return L_0;
 	}
 }
-// Method Definition Index: 65672
+// Method Definition Index: 65674
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float FriendRowScaler_GetScaledSpacing_mFA31490E1941B1E676F3AA1F3542C359142E142C (FriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12202,7 +12202,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float FriendRowScaler_GetScaledSpacing_mFA314
 		return L_0;
 	}
 }
-// Method Definition Index: 65673
+// Method Definition Index: 65675
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 FriendRowScaler_GetScaleFactors_mCF71A4516A393B5EF8CA26B51129F3F9C016E28E (FriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12215,7 +12215,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D
 		return L_2;
 	}
 }
-// Method Definition Index: 65674
+// Method Definition Index: 65676
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowScaler_RecalculateScaling_m745A83635AF1C70EECADB843600AC89FF0FA85A1 (FriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12225,7 +12225,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowScaler_RecalculateScaling_m745A
 		return;
 	}
 }
-// Method Definition Index: 65675
+// Method Definition Index: 65677
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowScaler__ctor_m622AD9A77E3248BA549363387C9FA855E7052FCD (FriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12254,7 +12254,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowScaler__ctor_m622AD9A77E3248BA5
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65676
+// Method Definition Index: 65678
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowData__ctor_m81F4AAD96146ACBC54051D1A14C933CAF1B57442 (FriendRowData_tBFDD4A336FBA3A17C53D8E7B1E206DF723D68C37* __this, String_t* ___0_friendName, String_t* ___1_friendId, Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___2_avatarSprite, bool ___3_isOnline, String_t* ___4_avatarKey, const RuntimeMethod* method) 
 {
 	{
@@ -12291,7 +12291,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowData__ctor_m81F4AAD96146ACBC540
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65677
+// Method Definition Index: 65679
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowUI_SetData_m762230575F9023997A512C6C876E85B90F5560EA (FriendRowUI_t76AF78A210E60917EADE304C389A66172284AAC4* __this, FriendRowData_tBFDD4A336FBA3A17C53D8E7B1E206DF723D68C37* ___0_data, const RuntimeMethod* method) 
 {
 	{
@@ -12322,7 +12322,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowUI_SetData_m762230575F9023997A5
 		return;
 	}
 }
-// Method Definition Index: 65678
+// Method Definition Index: 65680
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowUI_ApplyScaling_m2810ED7B4EA14E067E1990AAF9082FFCE50C8115 (FriendRowUI_t76AF78A210E60917EADE304C389A66172284AAC4* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12331,7 +12331,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowUI_ApplyScaling_m2810ED7B4EA14E
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Component_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m0640480E7E38BB88B0D1F6AD59E697C8EE6AAFA4_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&FriendRowUI_t76AF78A210E60917EADE304C389A66172284AAC4_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisFriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E_m61D8314EDF972CED0560C2487AC57ACBEAD6A29E_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindFirstObjectByType_TisFriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E_mA9A5CABCB92717FA19A6D1A42BED694DC557479C_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralEAF79D4B81A212DC0DDF478F5E7AE4746DBCF69D);
 		s_Il2CppMethodInitialized = true;
@@ -12355,7 +12355,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowUI_ApplyScaling_m2810ED7B4EA14E
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FriendRowUI.cs:76>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		FriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E* L_2;
-		L_2 = Object_FindObjectOfType_TisFriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E_m61D8314EDF972CED0560C2487AC57ACBEAD6A29E(Object_FindObjectOfType_TisFriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E_m61D8314EDF972CED0560C2487AC57ACBEAD6A29E_RuntimeMethod_var);
+		L_2 = Object_FindFirstObjectByType_TisFriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E_mA9A5CABCB92717FA19A6D1A42BED694DC557479C(Object_FindFirstObjectByType_TisFriendRowScaler_tCA6671D1E3EEFA4D6F68C3FCD92D59E26C82790E_mA9A5CABCB92717FA19A6D1A42BED694DC557479C_RuntimeMethod_var);
 		((FriendRowUI_t76AF78A210E60917EADE304C389A66172284AAC4_StaticFields*)il2cpp_codegen_static_fields_for(FriendRowUI_t76AF78A210E60917EADE304C389A66172284AAC4_il2cpp_TypeInfo_var))->___cachedScaler = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&((FriendRowUI_t76AF78A210E60917EADE304C389A66172284AAC4_StaticFields*)il2cpp_codegen_static_fields_for(FriendRowUI_t76AF78A210E60917EADE304C389A66172284AAC4_il2cpp_TypeInfo_var))->___cachedScaler), (void*)L_2);
 	}
@@ -12448,7 +12448,7 @@ IL_007d:
 		return;
 	}
 }
-// Method Definition Index: 65679
+// Method Definition Index: 65681
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowUI_SetupRow_m813C95EB961879CAF4E45F00ADA3D4E0D02EFB30 (FriendRowUI_t76AF78A210E60917EADE304C389A66172284AAC4* __this, String_t* ___0_friendName, String_t* ___1_friendId, Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___2_avatarSprite, bool ___3_isOnline, String_t* ___4_avatarKey, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12634,7 +12634,7 @@ IL_00f0:
 		return;
 	}
 }
-// Method Definition Index: 65680
+// Method Definition Index: 65682
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowUI_SetupOnlineStatus_mB687A9BB174D69F89936C594021CCEC8601CA505 (FriendRowUI_t76AF78A210E60917EADE304C389A66172284AAC4* __this, bool ___0_isOnline, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12734,7 +12734,7 @@ IL_0082:
 		return;
 	}
 }
-// Method Definition Index: 65681
+// Method Definition Index: 65683
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowUI_UpdateAvatar_m5B747D421852BB725A7A1044A7AE85616BD793C7 (FriendRowUI_t76AF78A210E60917EADE304C389A66172284AAC4* __this, Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___0_newAvatar, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12814,7 +12814,7 @@ IL_005d:
 		return;
 	}
 }
-// Method Definition Index: 65682
+// Method Definition Index: 65684
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowUI_UpdateName_mA367F19AA31F5A588F9874C09AD8DB513A83F6DF (FriendRowUI_t76AF78A210E60917EADE304C389A66172284AAC4* __this, String_t* ___0_newName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12866,7 +12866,7 @@ IL_002e:
 		return;
 	}
 }
-// Method Definition Index: 65683
+// Method Definition Index: 65685
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowUI_UpdateId_mBBA791E0E32496E5BA1EE3F1E3F23439EFB5F490 (FriendRowUI_t76AF78A210E60917EADE304C389A66172284AAC4* __this, String_t* ___0_newId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12918,7 +12918,7 @@ IL_002e:
 		return;
 	}
 }
-// Method Definition Index: 65684
+// Method Definition Index: 65686
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowUI_UpdateOnlineStatus_m6D3C903F072701A7E7EDF7B525A66F435C601DB7 (FriendRowUI_t76AF78A210E60917EADE304C389A66172284AAC4* __this, bool ___0_isOnline, const RuntimeMethod* method) 
 {
 	{
@@ -12946,7 +12946,7 @@ IL_001b:
 		return;
 	}
 }
-// Method Definition Index: 65685
+// Method Definition Index: 65687
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FriendRowData_tBFDD4A336FBA3A17C53D8E7B1E206DF723D68C37* FriendRowUI_GetCurrentData_m952F8730FDAFD5B7D8978B3590B5CBE1B2F0DC72 (FriendRowUI_t76AF78A210E60917EADE304C389A66172284AAC4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12955,7 +12955,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FriendRowData_tBFDD4A336FBA3A17C53D8E7B1E206D
 		return L_0;
 	}
 }
-// Method Definition Index: 65686
+// Method Definition Index: 65688
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FriendRowUI_IsOnline_mB1D10589855C381D4509475076434194E9FFE43D (FriendRowUI_t76AF78A210E60917EADE304C389A66172284AAC4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12978,7 +12978,7 @@ IL_000a:
 		return L_2;
 	}
 }
-// Method Definition Index: 65687
+// Method Definition Index: 65689
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowUI__ctor_mCA27B3664E6B290D3651E97DBD950E56FF1477AA (FriendRowUI_t76AF78A210E60917EADE304C389A66172284AAC4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12994,7 +12994,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FriendRowUI__ctor_mCA27B3664E6B290D3651E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65688
+// Method Definition Index: 65690
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass11_0__ctor_mD08973F4041FC2ED237F0A0C7CF5AD4D1C940295 (U3CU3Ec__DisplayClass11_0_t10ED54E9A49505119E1EF1BC34F9832853B9F69C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13002,7 +13002,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass11_0__ctor_mD08973F
 		return;
 	}
 }
-// Method Definition Index: 65689
+// Method Definition Index: 65691
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass11_0_U3CSetupRowU3Eb__0_m9B4DA7868424DD0F0E192C2E23E9F9E144AEB0A5 (U3CU3Ec__DisplayClass11_0_t10ED54E9A49505119E1EF1BC34F9832853B9F69C* __this, Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___0_tex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13105,7 +13105,7 @@ IL_0099:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65690
+// Method Definition Index: 65692
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameDebugViewer_Update_m25E9C5B0EEED248B20957D629C65DC1C68DDD9CD (GameDebugViewer_tCCD50BB57799AA76B11111E29DF10F20348F9112* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13116,7 +13116,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameDebugViewer_Update_m25E9C5B0EEED248B
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_m722551975FB1A20AAB52C9E9BDB248AAC1F8346F_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_set_Item_m748B5D30B1531655DDBCED2F0B4FA5BA2AC0F9E7_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&LobbyModel_tABA5DB1C3D7A64D6143DACF88F1AF64A6A5F9788_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindFirstObjectByType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mF766559530B489C0F2CD36609162D1A663352C63_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&States_t34807540786EE4028C7D908986EF5D8931222CB0_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralD4C05545D99017A3016FCABFAD91254E19EA6AFC);
@@ -13387,7 +13387,7 @@ IL_01a9:
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameDebugViewer.cs:109>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_50;
-		L_50 = Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40(Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40_RuntimeMethod_var);
+		L_50 = Object_FindFirstObjectByType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mF766559530B489C0F2CD36609162D1A663352C63(Object_FindFirstObjectByType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mF766559530B489C0F2CD36609162D1A663352C63_RuntimeMethod_var);
 		V_0 = L_50;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameDebugViewer.cs:110>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_51 = V_0;
@@ -13414,7 +13414,7 @@ IL_01c4:
 		return;
 	}
 }
-// Method Definition Index: 65691
+// Method Definition Index: 65693
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameDebugViewer__ctor_mD0E63B90D6718B75A9F83712DBD80FCF87021DAD (GameDebugViewer_tCCD50BB57799AA76B11111E29DF10F20348F9112* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13446,7 +13446,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameDebugViewer__ctor_mD0E63B90D6718B75A
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65692
+// Method Definition Index: 65694
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* GameManager_get_Instance_m076FE4D98E785B5AEE0B4C360C7857F824E7FBD0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13456,12 +13456,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEA
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:14>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:15>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_0 = ((GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 65693
+// Method Definition Index: 65695
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_set_Instance_mCFE1FA9223DC000B8D5535A9B6576264FA4405EF (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13471,14 +13471,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_set_Instance_mCFE1FA9223DC00
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:14>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:15>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_0 = ___0_value;
 		((GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&((GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 65694
+// Method Definition Index: 65696
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_Awake_m4B6E8E2AF58C95C9A2A0C4637A34AE0892CB637F (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13488,7 +13488,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_Awake_m4B6E8E2AF58C95C9A2A0C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:18>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:19>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_0;
 		L_0 = GameManager_get_Instance_m076FE4D98E785B5AEE0B4C360C7857F824E7FBD0_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -13511,31 +13511,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_Awake_m4B6E8E2AF58C95C9A2A0C
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:20>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:21>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:21>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:22>
 		return;
 	}
 
 IL_0021:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:23>
-		GameManager_set_Instance_mCFE1FA9223DC000B8D5535A9B6576264FA4405EF_inline(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:24>
+		GameManager_set_Instance_mCFE1FA9223DC000B8D5535A9B6576264FA4405EF_inline(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:25>
 		return;
 	}
 }
-// Method Definition Index: 65695
+// Method Definition Index: 65697
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameManager_get_IsGameActive_m283A94C70D89D87A0141C199A6D5A76C86A1BB00 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:65>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:66>
 		bool L_0 = __this->___isGameActive;
 		return L_0;
 	}
 }
-// Method Definition Index: 65696
+// Method Definition Index: 65698
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameManager_get_IsGameplayScreenActive_m2D13AF47FB684E6C5BF6FDC80652B62DE9EC0A66 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13545,7 +13545,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameManager_get_IsGameplayScreenActive_m
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:66>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:67>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___gameplayScreen;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -13568,11 +13568,11 @@ IL_001a:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65697
+// Method Definition Index: 65699
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameManager_get_IsActivelyPlaying_m807AC7EFB4EAFB78FD98DA01E172DFAFC6D2EDCC (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:69>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:70>
 		bool L_0;
 		L_0 = GameManager_get_IsGameplayScreenActive_m2D13AF47FB684E6C5BF6FDC80652B62DE9EC0A66(__this, NULL);
 		if (!L_0)
@@ -13590,7 +13590,7 @@ IL_0012:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65698
+// Method Definition Index: 65700
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ValueTuple_2_tB0B6C7AB2CEEB49DD04DB7150EC0628FD49D2FC6 GameManager_GetLastAwardedPrize_m84129CC58C00B7019DF9ECECF6A523474EB914B1 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13600,7 +13600,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ValueTuple_2_tB0B6C7AB2CEEB49DD04DB7150EC0628
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:100>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:101>
 		float L_0 = __this->___lastAwardedCash;
 		int32_t L_1 = __this->___lastAwardedChips;
 		ValueTuple_2_tB0B6C7AB2CEEB49DD04DB7150EC0628FD49D2FC6 L_2;
@@ -13609,7 +13609,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ValueTuple_2_tB0B6C7AB2CEEB49DD04DB7150EC0628
 		return L_2;
 	}
 }
-// Method Definition Index: 65699
+// Method Definition Index: 65701
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_Start_m87A71D65F3171A58DBDDBFB03832ADA65643D0E2 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13636,10 +13636,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_Start_m87A71D65F3171A58DBDDB
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:145>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:146>
 		float L_0 = __this->___gameTimer;
 		__this->___initialGameTimer = L_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:150>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:151>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_1 = __this->___numberGrid;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
@@ -13650,7 +13650,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_Start_m87A71D65F3171A58DBDDB
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:152>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:153>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_3 = __this->___numberGrid;
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_4 = L_3;
 		NullCheck(L_4);
@@ -13662,7 +13662,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_Start_m87A71D65F3171A58DBDDB
 		NullCheck(L_4);
 		L_4->___OnAllBoxesSelected = ((Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)CastclassSealed((RuntimeObject*)L_7, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&L_4->___OnAllBoxesSelected), (void*)((Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)CastclassSealed((RuntimeObject*)L_7, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var)));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:153>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:154>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_8 = __this->___numberGrid;
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_9 = L_8;
 		NullCheck(L_9);
@@ -13678,7 +13678,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_Start_m87A71D65F3171A58DBDDB
 
 IL_0068:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:157>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:158>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_13 = __this->___quitButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_14;
@@ -13689,7 +13689,7 @@ IL_0068:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:159>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:160>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_15 = __this->___quitButton;
 		NullCheck(L_15);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_16;
@@ -13702,7 +13702,7 @@ IL_0068:
 
 IL_0092:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:163>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:164>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_18 = __this->___winnerScreenLobbyButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_19;
@@ -13713,7 +13713,7 @@ IL_0092:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:165>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:166>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_20 = __this->___winnerScreenLobbyButton;
 		NullCheck(L_20);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_21;
@@ -13726,12 +13726,12 @@ IL_0092:
 
 IL_00bc:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:169>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:170>
 		RuntimeObject* L_23;
 		L_23 = GameManager_InitializeProfilesDelayed_m148DCDD19F7A19E2302A9838BB535A446518C231(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_24;
 		L_24 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_23, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:172>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:173>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_25 = __this->___winnerScreen;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_26;
@@ -13742,7 +13742,7 @@ IL_00bc:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:173>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:174>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_27 = __this->___winnerScreen;
 		NullCheck(L_27);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_27, (bool)0, NULL);
@@ -13750,7 +13750,7 @@ IL_00bc:
 
 IL_00e3:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:175>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:176>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_28 = __this->___calculateLoadingScreen;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_29;
@@ -13761,7 +13761,7 @@ IL_00e3:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:176>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:177>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_30 = __this->___calculateLoadingScreen;
 		NullCheck(L_30);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_30, (bool)0, NULL);
@@ -13769,7 +13769,7 @@ IL_00e3:
 
 IL_00fd:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:179>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:180>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_31 = __this->___quitPanel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_32;
@@ -13780,7 +13780,7 @@ IL_00fd:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:181>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:182>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_33 = __this->___quitPanel;
 		NullCheck(L_33);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_33, (bool)0, NULL);
@@ -13788,7 +13788,7 @@ IL_00fd:
 
 IL_0117:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:184>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:185>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_34 = __this->___gameplayScreen;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_35;
@@ -13809,13 +13809,13 @@ IL_0117:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:186>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:187>
 		GameManager_StartGameTimer_mA2CB9E43A65FD420925DD72630C510F48131C6BC(__this, NULL);
 	}
 
 IL_0138:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:189>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:190>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_38 = __this->___quitPanel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_39;
@@ -13826,7 +13826,7 @@ IL_0138:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:190>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:191>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_40 = __this->___quitPanel;
 		NullCheck(L_40);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_40, (bool)0, NULL);
@@ -13834,31 +13834,31 @@ IL_0138:
 
 IL_0152:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:193>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:194>
 		Action_1_tA19AE6F29D6F84A3A59DF40AF45A6EEDB1E5DDC7* L_41 = (Action_1_tA19AE6F29D6F84A3A59DF40AF45A6EEDB1E5DDC7*)il2cpp_codegen_object_new(Action_1_tA19AE6F29D6F84A3A59DF40AF45A6EEDB1E5DDC7_il2cpp_TypeInfo_var);
 		Action_1__ctor_mCD16B7E66116AF63B35321795E078654DAFE2B8B(L_41, __this, (intptr_t)((void*)GameManager_HandleServerNumberLocked_m53AB20A6F5C55E8E3918D90EDD2CD42F82AFFC84_RuntimeMethod_var), NULL);
 		MatchmakingModel_add_OnNumberLockedEvent_m1437467400844F3E2234C961D3083E830B3D9A04(L_41, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:194>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:195>
 		Action_1_t5A945E82BE3E1C2882BF73EE0A189EC3A2B47541* L_42 = (Action_1_t5A945E82BE3E1C2882BF73EE0A189EC3A2B47541*)il2cpp_codegen_object_new(Action_1_t5A945E82BE3E1C2882BF73EE0A189EC3A2B47541_il2cpp_TypeInfo_var);
 		Action_1__ctor_m2AE9904056FBB7EF04B0D0E4DC96FE1F760D6977(L_42, __this, (intptr_t)((void*)GameManager_HandleServerGameOver_m82D67C4147405F7ED5D697EE65C23A9748657A1D_RuntimeMethod_var), NULL);
 		MatchmakingModel_add_OnGameOverEvent_m3F4070BB44D1ACDB29ADFE169C7E4580BB20B7AB(L_42, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:195>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:196>
 		Action_1_tEA72E6B5C1D8E0DEA87F3F2B9AD84E3970944B8F* L_43 = (Action_1_tEA72E6B5C1D8E0DEA87F3F2B9AD84E3970944B8F*)il2cpp_codegen_object_new(Action_1_tEA72E6B5C1D8E0DEA87F3F2B9AD84E3970944B8F_il2cpp_TypeInfo_var);
 		Action_1__ctor_mBC5A484594D6B42AF2902D2387BA1FD9DD210032(L_43, __this, (intptr_t)((void*)GameManager_HandleServerCountdown_m28F5DC2D392E7DA3531BA32E618810477F455F74_RuntimeMethod_var), NULL);
 		MatchmakingModel_add_OnCountdownEvent_m2014D918449075EC0E5085874FBF31A2EC29A33E(L_43, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:196>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:197>
 		Action_1_tA1DE18871DB50B19EDBF3E2E5A572A082ABF753D* L_44 = (Action_1_tA1DE18871DB50B19EDBF3E2E5A572A082ABF753D*)il2cpp_codegen_object_new(Action_1_tA1DE18871DB50B19EDBF3E2E5A572A082ABF753D_il2cpp_TypeInfo_var);
 		Action_1__ctor_m928E484F9AEDF8EA7F5D7BA5AF555C244D7607C1(L_44, __this, (intptr_t)((void*)GameManager_HandleServerDiceRolled_m3CF9FD6A030D3B9853786ED221A456E5E3C9E7AB_RuntimeMethod_var), NULL);
 		MatchmakingModel_add_OnDiceRolledEvent_mA179828EE2D20C9D1F330D8C508F07519C2B3362(L_44, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:197>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:198>
 		Action_1_t0153C54893BA1F19BA8C8561E443C561A6CC9E82* L_45 = (Action_1_t0153C54893BA1F19BA8C8561E443C561A6CC9E82*)il2cpp_codegen_object_new(Action_1_t0153C54893BA1F19BA8C8561E443C561A6CC9E82_il2cpp_TypeInfo_var);
 		Action_1__ctor_m38AF51CDEFDA3C7CACE4B66774AD8A08E9A4C9BC(L_45, __this, (intptr_t)((void*)GameManager_HandleServerTapResult_m6DE40DE3844D7AC2DDD85D3A7ADB3639030A06FE_RuntimeMethod_var), NULL);
 		MatchmakingModel_add_OnTapResultEvent_m97FE5757CEA37C5CDC9FAB559D8DFC358FB3DDC1(L_45, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:198>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:199>
 		return;
 	}
 }
-// Method Definition Index: 65700
+// Method Definition Index: 65702
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_HandleServerGameOver_m82D67C4147405F7ED5D697EE65C23A9748657A1D (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, GameOverData_t64DEE11B7483DC311DE5DC555498AB1FF8CEECBC* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13922,7 +13922,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_HandleServerGameOver_m82D67C
 	Comparison_1_tEF5080CD7876E575D57DF47BA155C8FC90F3FAC7* G_B38_0 = NULL;
 	List_1_tD82BDFFDFF48A30CF1C67F8754A408769BD41131* G_B38_1 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:202>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:203>
 		GameOverData_t64DEE11B7483DC311DE5DC555498AB1FF8CEECBC* L_0 = ___0_data;
 		if (L_0)
 		{
@@ -13930,17 +13930,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_HandleServerGameOver_m82D67C
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:202>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:203>
 		return;
 	}
 
 IL_0004:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:204>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:205>
 		bool L_1;
 		L_1 = MatchmakingModel_ConsumeLocalForfeitPending_mF7F0DA44A2E9F76097C2B7F8253D27F2A1C72A65(NULL);
 		V_0 = L_1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:205>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:206>
 		bool L_2 = __this->___localPlayerForfeited;
 		bool L_3 = V_0;
 		if (!((int32_t)((int32_t)L_2|(int32_t)L_3)))
@@ -13949,18 +13949,18 @@ IL_0004:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:207>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:208>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral755164BE34C022C1A38F89EAB9BDD2D73D7F367A, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:208>
-		GameManager_CompleteForfeitCleanup_m4DAB4D57AC5F724C95DC9966E33602ED13396AFD(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:209>
+		GameManager_CompleteForfeitCleanup_m4DAB4D57AC5F724C95DC9966E33602ED13396AFD(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:210>
 		return;
 	}
 
 IL_0025:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:214>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:215>
 		bool L_4 = __this->___isGameActive;
 		if (L_4)
 		{
@@ -13975,16 +13975,16 @@ IL_0025:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:216>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:217>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralE189916457A77FF9FCED144CD3CA61DDE7DC484E, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:217>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:218>
 		return;
 	}
 
 IL_0040:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:220>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:221>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_6 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)5);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_7 = L_6;
 		NullCheck(L_7);
@@ -14011,7 +14011,7 @@ IL_0040:
 		L_16 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_15, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_16, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:223>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:224>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_17 = ((GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var))->___OnGameEnded;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_18 = L_17;
 		if (L_18)
@@ -14033,7 +14033,7 @@ IL_0085:
 
 IL_008a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:226>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:227>
 		BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_19;
 		L_19 = BackendAuthService_get_Instance_m74239149FFCCCF5A49AF965DCA0565780B051110_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -14045,7 +14045,7 @@ IL_008a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:228>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:229>
 		BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_21;
 		L_21 = BackendAuthService_get_Instance_m74239149FFCCCF5A49AF965DCA0565780B051110_inline(NULL);
 		NullCheck(L_21);
@@ -14054,7 +14054,7 @@ IL_008a:
 
 IL_00a2:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:232>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:233>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_22 = __this->___calculateLoadingScreen;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_23;
@@ -14065,7 +14065,7 @@ IL_00a2:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:232>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:233>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_24 = __this->___calculateLoadingScreen;
 		NullCheck(L_24);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_24, (bool)0, NULL);
@@ -14073,7 +14073,7 @@ IL_00a2:
 
 IL_00bc:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:235>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:236>
 		bool L_25 = __this->___winnerScreenShown;
 		if (!L_25)
 		{
@@ -14081,30 +14081,30 @@ IL_00bc:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:237>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:238>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralD1981A6F933A00500CE9FFF51E3AF593E1221932, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:238>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:239>
 		return;
 	}
 
 IL_00cf:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:241>
-		__this->___winnerScreenShown = (bool)1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:242>
-		__this->___isGameActive = (bool)0;
+		__this->___winnerScreenShown = (bool)1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:243>
-		__this->___timerStarted = (bool)0;
+		__this->___isGameActive = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:244>
+		__this->___timerStarted = (bool)0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:245>
 		__this->___isWaitingForServer = (bool)0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:247>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:248>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:249>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:250>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:251>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:252>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:253>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:254>
 		String_t* L_26;
 		L_26 = PlayerModel_get_Id_mC58F20220F795613BEDA334EE4DB7A9B07CF79E0_inline(NULL);
 		String_t* L_27;
@@ -14138,7 +14138,7 @@ IL_00cf:
 		il2cpp_codegen_initobj((&V_2), sizeof(Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28));
 		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_41 = V_2;
 		PlayerModel_UpdateData_mB363F10A567FA0627C883DE25636E0CCF6A04EE7(L_26, L_27, L_28, L_29, L_30, L_31, L_32, L_33, L_34, L_35, L_36, L_37, L_38, L_39, L_40, (String_t*)NULL, (String_t*)NULL, L_41, (String_t*)NULL, (String_t*)NULL, (String_t*)NULL, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:256>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:257>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_42 = __this->___timerCoroutine;
 		if (!L_42)
 		{
@@ -14146,21 +14146,21 @@ IL_00cf:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:258>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:259>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_43 = __this->___timerCoroutine;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_43, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:259>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:260>
 		__this->___timerCoroutine = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___timerCoroutine), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
 	}
 
 IL_0164:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:264>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:265>
 		List_1_tD82BDFFDFF48A30CF1C67F8754A408769BD41131* L_44 = (List_1_tD82BDFFDFF48A30CF1C67F8754A408769BD41131*)il2cpp_codegen_object_new(List_1_tD82BDFFDFF48A30CF1C67F8754A408769BD41131_il2cpp_TypeInfo_var);
 		List_1__ctor_m4F58707698307871F499AB8DC5E1A473D2CC46BE(L_44, List_1__ctor_m4F58707698307871F499AB8DC5E1A473D2CC46BE_RuntimeMethod_var);
 		V_1 = L_44;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:267>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:268>
 		GameOverData_t64DEE11B7483DC311DE5DC555498AB1FF8CEECBC* L_45 = ___0_data;
 		NullCheck(L_45);
 		Dictionary_2_tD703CB7270FBE4380B4E73B621DD5B54EB65B58D* L_46 = L_45->___earnings;
@@ -14169,7 +14169,7 @@ IL_0164:
 		double L_48;
 		L_48 = CollectionExtensions_GetValueOrDefault_TisString_t_TisDouble_tE150EF3D1D43DEE85D533810AB4C742307EEDE5F_m1F46759321A254C8B3375F1B9502282E27791BD4(L_46, L_47, (0.0), CollectionExtensions_GetValueOrDefault_TisString_t_TisDouble_tE150EF3D1D43DEE85D533810AB4C742307EEDE5F_m1F46759321A254C8B3375F1B9502282E27791BD4_RuntimeMethod_var);
 		__this->___lastAwardedCash = ((float)L_48);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:268>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:269>
 		GameOverData_t64DEE11B7483DC311DE5DC555498AB1FF8CEECBC* L_49 = ___0_data;
 		NullCheck(L_49);
 		Dictionary_2_tD703CB7270FBE4380B4E73B621DD5B54EB65B58D* L_50 = L_49->___coinsEarnings;
@@ -14203,7 +14203,7 @@ IL_01b3:
 	{
 		NullCheck(G_B21_1);
 		G_B21_1->___lastAwardedChips = il2cpp_codegen_cast_double_to_int<int32_t>(G_B21_0);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:270>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:271>
 		GameOverData_t64DEE11B7483DC311DE5DC555498AB1FF8CEECBC* L_54 = ___0_data;
 		NullCheck(L_54);
 		Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588* L_55 = L_54->___scores;
@@ -14213,9 +14213,9 @@ IL_01b3:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:272>
-		V_3 = 0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:273>
+		V_3 = 0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:274>
 		GameOverData_t64DEE11B7483DC311DE5DC555498AB1FF8CEECBC* L_56 = ___0_data;
 		NullCheck(L_56);
 		Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588* L_57 = L_56->___scores;
@@ -14242,19 +14242,19 @@ FINALLY_0257:
 
 IL_01d5_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:273>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:274>
 				KeyValuePair_2_t203D89707A14A98B3FB295DFFAC0F4D3CF2B1078 L_59;
 				L_59 = Enumerator_get_Current_m58E48C7A4B001DD9CC590DEF18D64A3D9E5E6F7B_inline((&V_4), Enumerator_get_Current_m58E48C7A4B001DD9CC590DEF18D64A3D9E5E6F7B_RuntimeMethod_var);
 				V_5 = L_59;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:275>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:276>
 				String_t* L_60;
 				L_60 = KeyValuePair_2_get_Key_mC9FB52D78F362AE8CD0466E65D0CAFB23CD1C25D_inline((&V_5), KeyValuePair_2_get_Key_mC9FB52D78F362AE8CD0466E65D0CAFB23CD1C25D_RuntimeMethod_var);
 				V_6 = L_60;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:276>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:277>
 				int32_t L_61;
 				L_61 = KeyValuePair_2_get_Value_m49EC6C1CD52DC0ED12D5C9116368BB112EA11917_inline((&V_5), KeyValuePair_2_get_Value_m49EC6C1CD52DC0ED12D5C9116368BB112EA11917_RuntimeMethod_var);
 				V_7 = L_61;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:278>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:279>
 				String_t* L_62 = V_6;
 				String_t* L_63;
 				L_63 = PlayerModel_get_Id_mC58F20220F795613BEDA334EE4DB7A9B07CF79E0_inline(NULL);
@@ -14278,7 +14278,7 @@ IL_0201_1:
 IL_0202_1:
 			{
 				V_8 = G_B27_0;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:279>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:280>
 				String_t* L_65 = V_6;
 				GameOverData_t64DEE11B7483DC311DE5DC555498AB1FF8CEECBC* L_66 = ___0_data;
 				NullCheck(L_66);
@@ -14303,7 +14303,7 @@ IL_021e_1:
 IL_0227_1:
 			{
 				V_9 = G_B30_0;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:281>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:282>
 				int32_t L_69 = V_8;
 				if (!L_69)
 				{
@@ -14326,7 +14326,7 @@ IL_0234_1:
 IL_0235_1:
 			{
 				V_10 = G_B33_0;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:282>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:283>
 				List_1_tD82BDFFDFF48A30CF1C67F8754A408769BD41131* L_72 = V_1;
 				int32_t L_73 = V_8;
 				int32_t L_74 = V_10;
@@ -14342,7 +14342,7 @@ IL_0235_1:
 
 IL_024c_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:273>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:274>
 				bool L_79;
 				L_79 = Enumerator_MoveNext_mCB84750BAFE59C7D53C86B28A910BBE68DDE5D33((&V_4), Enumerator_MoveNext_mCB84750BAFE59C7D53C86B28A910BBE68DDE5D33_RuntimeMethod_var);
 				if (L_79)
@@ -14362,7 +14362,7 @@ IL_024c_1:
 
 IL_0265:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:287>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:288>
 		List_1_tD82BDFFDFF48A30CF1C67F8754A408769BD41131* L_80 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_t934A682FC7A2310EB64DF8FB184FC75102272AA5_il2cpp_TypeInfo_var);
 		Comparison_1_tEF5080CD7876E575D57DF47BA155C8FC90F3FAC7* L_81 = ((U3CU3Ec_t934A682FC7A2310EB64DF8FB184FC75102272AA5_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t934A682FC7A2310EB64DF8FB184FC75102272AA5_il2cpp_TypeInfo_var))->___U3CU3E9__80_0;
@@ -14392,7 +14392,7 @@ IL_0285:
 	{
 		NullCheck(G_B39_1);
 		List_1_Sort_mF52537C8B4249386579D35F4BA008D5A8210EE44(G_B39_1, G_B39_0, List_1_Sort_mF52537C8B4249386579D35F4BA008D5A8210EE44_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:291>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:292>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_86 = __this->___calculateLoadingScreen;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_87;
@@ -14403,18 +14403,18 @@ IL_0285:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:293>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:294>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_88 = __this->___calculateLoadingScreen;
 		NullCheck(L_88);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_88, (bool)1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:294>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:295>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral658B2ABD5AAD2A857046A515DAAC9E92C508285A, NULL);
 	}
 
 IL_02ae:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:298>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:299>
 		List_1_tD82BDFFDFF48A30CF1C67F8754A408769BD41131* L_89 = V_1;
 		GameOverData_t64DEE11B7483DC311DE5DC555498AB1FF8CEECBC* L_90 = ___0_data;
 		RuntimeObject* L_91;
@@ -14423,11 +14423,11 @@ IL_02ae:
 		L_92 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_91, NULL);
 		__this->___winnerScreenDelayCoroutine = L_92;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___winnerScreenDelayCoroutine), (void*)L_92);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:299>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:300>
 		return;
 	}
 }
-// Method Definition Index: 65701
+// Method Definition Index: 65703
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_CompleteForfeitCleanup_m4DAB4D57AC5F724C95DC9966E33602ED13396AFD (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14442,7 +14442,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_CompleteForfeitCleanup_m4DAB
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B2_0 = NULL;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B1_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:303>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:304>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_0 = ((GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var))->___OnGameEnded;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_1 = L_0;
 		if (L_1)
@@ -14464,7 +14464,7 @@ IL_000b:
 
 IL_0010:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:305>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:306>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_2 = __this->___winnerScreenDelayCoroutine;
 		if (!L_2)
 		{
@@ -14472,17 +14472,17 @@ IL_0010:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:307>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:308>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_3 = __this->___winnerScreenDelayCoroutine;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_3, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:308>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:309>
 		__this->___winnerScreenDelayCoroutine = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___winnerScreenDelayCoroutine), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
 	}
 
 IL_002b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:311>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:312>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___forfeitLoadingScreen;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_5;
@@ -14493,7 +14493,7 @@ IL_002b:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:311>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:312>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = __this->___forfeitLoadingScreen;
 		NullCheck(L_6);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_6, (bool)0, NULL);
@@ -14501,7 +14501,7 @@ IL_002b:
 
 IL_0045:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:312>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:313>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7 = __this->___winnerScreen;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_8;
@@ -14512,7 +14512,7 @@ IL_0045:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:312>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:313>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_9 = __this->___winnerScreen;
 		NullCheck(L_9);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_9, (bool)0, NULL);
@@ -14520,7 +14520,7 @@ IL_0045:
 
 IL_005f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:313>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:314>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_10 = __this->___loserScoreScreen;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_11;
@@ -14531,7 +14531,7 @@ IL_005f:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:313>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:314>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_12 = __this->___loserScoreScreen;
 		NullCheck(L_12);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_12, (bool)0, NULL);
@@ -14539,7 +14539,7 @@ IL_005f:
 
 IL_0079:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:314>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:315>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_13 = __this->___gameplayScreen;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_14;
@@ -14550,7 +14550,7 @@ IL_0079:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:314>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:315>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_15 = __this->___gameplayScreen;
 		NullCheck(L_15);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_15, (bool)0, NULL);
@@ -14558,13 +14558,13 @@ IL_0079:
 
 IL_0093:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:316>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:317>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:318>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:319>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:320>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:321>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:322>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:323>
 		String_t* L_16;
 		L_16 = PlayerModel_get_Id_mC58F20220F795613BEDA334EE4DB7A9B07CF79E0_inline(NULL);
 		String_t* L_17;
@@ -14598,15 +14598,15 @@ IL_0093:
 		il2cpp_codegen_initobj((&V_0), sizeof(Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28));
 		Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 L_31 = V_0;
 		PlayerModel_UpdateData_mB363F10A567FA0627C883DE25636E0CCF6A04EE7(L_16, L_17, L_18, L_19, L_20, L_21, L_22, L_23, L_24, L_25, L_26, L_27, L_28, L_29, L_30, (String_t*)NULL, (String_t*)NULL, L_31, (String_t*)NULL, (String_t*)NULL, (String_t*)NULL, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:324>
-		GameManager_ResetGameState_mF33FB9053CFB001BA59AF315587CBC6520941C66(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:325>
-		__this->___localPlayerForfeited = (bool)0;
+		GameManager_ResetGameState_mF33FB9053CFB001BA59AF315587CBC6520941C66(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:326>
+		__this->___localPlayerForfeited = (bool)0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:327>
 		return;
 	}
 }
-// Method Definition Index: 65702
+// Method Definition Index: 65704
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameManager_ShowWinnerScreenWithDelay_mD8FA78D52EA31D991F541029AC4B4E51FF2D1245 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, List_1_tD82BDFFDFF48A30CF1C67F8754A408769BD41131* ___0_rankings, GameOverData_t64DEE11B7483DC311DE5DC555498AB1FF8CEECBC* ___1_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14635,7 +14635,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameManager_ShowWinnerScreenWi
 		return L_4;
 	}
 }
-// Method Definition Index: 65703
+// Method Definition Index: 65705
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_HandleServerNumberLocked_m53AB20A6F5C55E8E3918D90EDD2CD42F82AFFC84 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, NumberLockedData_tFFE5300E032A6931B04BD1F09545C3F411ECA624* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14649,7 +14649,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_HandleServerNumberLocked_m53
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:398>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:399>
 		NumberLockedData_tFFE5300E032A6931B04BD1F09545C3F411ECA624* L_0 = ___0_data;
 		if (!L_0)
 		{
@@ -14657,7 +14657,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_HandleServerNumberLocked_m53
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:400>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:401>
 		NumberLockedData_tFFE5300E032A6931B04BD1F09545C3F411ECA624* L_1 = ___0_data;
 		NullCheck(L_1);
 		String_t* L_2 = L_1->___userId;
@@ -14671,7 +14671,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_HandleServerNumberLocked_m53
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:402>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:403>
 		Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588* L_5 = __this->___networkPlayerScores;
 		NumberLockedData_tFFE5300E032A6931B04BD1F09545C3F411ECA624* L_6 = ___0_data;
 		NullCheck(L_6);
@@ -14681,7 +14681,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_HandleServerNumberLocked_m53
 		int32_t L_9 = L_8->___score;
 		NullCheck(L_5);
 		Dictionary_2_set_Item_m038480C0EC13713DBD89A53BE69FF0359501B4C2(L_5, L_7, L_9, Dictionary_2_set_Item_m038480C0EC13713DBD89A53BE69FF0359501B4C2_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:403>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:404>
 		Dictionary_2_tD703CB7270FBE4380B4E73B621DD5B54EB65B58D* L_10 = __this->___networkPlayerTimes;
 		NumberLockedData_tFFE5300E032A6931B04BD1F09545C3F411ECA624* L_11 = ___0_data;
 		NullCheck(L_11);
@@ -14690,7 +14690,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_HandleServerNumberLocked_m53
 		L_13 = GameManager_GetEstimatedServerTime_m8F162662B88AB956B24121397CFA9A35D41EC3A6(__this, NULL);
 		NullCheck(L_10);
 		Dictionary_2_set_Item_mAD7AD2995223F7B8E21B3512504EB1CFBE047813(L_10, L_12, L_13, Dictionary_2_set_Item_mAD7AD2995223F7B8E21B3512504EB1CFBE047813_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:404>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:405>
 		NumberLockedData_tFFE5300E032A6931B04BD1F09545C3F411ECA624* L_14 = ___0_data;
 		NullCheck(L_14);
 		String_t* L_15 = L_14->___userId;
@@ -14708,7 +14708,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_HandleServerNumberLocked_m53
 
 IL_0067:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:409>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:410>
 		Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588* L_21 = __this->___networkPlayerScores;
 		NumberLockedData_tFFE5300E032A6931B04BD1F09545C3F411ECA624* L_22 = ___0_data;
 		NullCheck(L_22);
@@ -14718,7 +14718,7 @@ IL_0067:
 		int32_t L_25 = L_24->___score;
 		NullCheck(L_21);
 		Dictionary_2_set_Item_m038480C0EC13713DBD89A53BE69FF0359501B4C2(L_21, L_23, L_25, Dictionary_2_set_Item_m038480C0EC13713DBD89A53BE69FF0359501B4C2_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:410>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:411>
 		NumberLockedData_tFFE5300E032A6931B04BD1F09545C3F411ECA624* L_26 = ___0_data;
 		NullCheck(L_26);
 		int32_t L_27 = L_26->___score;
@@ -14732,11 +14732,11 @@ IL_0067:
 
 IL_0098:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:413>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:414>
 		return;
 	}
 }
-// Method Definition Index: 65704
+// Method Definition Index: 65706
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_HandleServerDiceRolled_m3CF9FD6A030D3B9853786ED221A456E5E3C9E7AB (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, DiceRolledData_tF96F092C6A16D37CE466F3546BB9964E7C4518F8* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14751,7 +14751,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_HandleServerDiceRolled_m3CF9
 	}
 	int32_t V_0 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:420>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:421>
 		Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588* L_0 = __this->___networkPlayerScores;
 		String_t* L_1;
 		L_1 = PlayerModel_get_Id_mC58F20220F795613BEDA334EE4DB7A9B07CF79E0_inline(NULL);
@@ -14764,7 +14764,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_HandleServerDiceRolled_m3CF9
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:422>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:423>
 		int32_t L_3 = __this->___localMatchScore;
 		int32_t L_4 = V_0;
 		if ((((int32_t)L_3) == ((int32_t)L_4)))
@@ -14773,7 +14773,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_HandleServerDiceRolled_m3CF9
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:424>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:425>
 		int32_t L_5 = __this->___localMatchScore;
 		int32_t L_6 = L_5;
 		RuntimeObject* L_7 = Box(il2cpp_defaults.int32_class, &L_6);
@@ -14784,10 +14784,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_HandleServerDiceRolled_m3CF9
 		L_11 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralAAAA79A22DEF75A2A401C66BAE00BB7DAEA13B52, L_7, L_10, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_11, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:425>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:426>
 		int32_t L_12 = V_0;
 		__this->___localMatchScore = L_12;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:427>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:428>
 		ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* L_13 = ((ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_StaticFields*)il2cpp_codegen_static_fields_for(ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_il2cpp_TypeInfo_var))->___Instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_14;
@@ -14798,7 +14798,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_HandleServerDiceRolled_m3CF9
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:429>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:430>
 		ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* L_15 = ((ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_StaticFields*)il2cpp_codegen_static_fields_for(ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_il2cpp_TypeInfo_var))->___Instance;
 		int32_t L_16 = __this->___localMatchScore;
 		NullCheck(L_15);
@@ -14807,11 +14807,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_HandleServerDiceRolled_m3CF9
 
 IL_0061:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:433>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:434>
 		return;
 	}
 }
-// Method Definition Index: 65705
+// Method Definition Index: 65707
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_HandleServerTapResult_m6DE40DE3844D7AC2DDD85D3A7ADB3639030A06FE (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, TapResultData_t1D3D82699AAF28A5B58AFF39C53A2350A9B68DB5* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14823,7 +14823,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_HandleServerTapResult_m6DE40
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:437>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:438>
 		TapResultData_t1D3D82699AAF28A5B58AFF39C53A2350A9B68DB5* L_0 = ___0_data;
 		if (!L_0)
 		{
@@ -14831,7 +14831,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_HandleServerTapResult_m6DE40
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:440>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:441>
 		Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588* L_1 = __this->___networkPlayerScores;
 		String_t* L_2;
 		L_2 = PlayerModel_get_Id_mC58F20220F795613BEDA334EE4DB7A9B07CF79E0_inline(NULL);
@@ -14840,7 +14840,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_HandleServerTapResult_m6DE40
 		int32_t L_4 = L_3->___score;
 		NullCheck(L_1);
 		Dictionary_2_set_Item_m038480C0EC13713DBD89A53BE69FF0359501B4C2(L_1, L_2, L_4, Dictionary_2_set_Item_m038480C0EC13713DBD89A53BE69FF0359501B4C2_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:441>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:442>
 		TapResultData_t1D3D82699AAF28A5B58AFF39C53A2350A9B68DB5* L_5 = ___0_data;
 		NullCheck(L_5);
 		int32_t L_6 = L_5->___score;
@@ -14854,11 +14854,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_HandleServerTapResult_m6DE40
 
 IL_0033:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:443>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:444>
 		return;
 	}
 }
-// Method Definition Index: 65706
+// Method Definition Index: 65708
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnGameplayScreenActivated_m00C6732E5C00F1C3D36E145CB6A562A859482250 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14870,7 +14870,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnGameplayScreenActivated_m0
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:451>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:452>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___gameplayScreen;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -14898,22 +14898,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnGameplayScreenActivated_m0
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:453>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:454>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral94A0A600EC7021F8DD6CCD4D948AD87AECAF3571, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:454>
-		__this->___timerStarted = (bool)1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:455>
+		__this->___timerStarted = (bool)1;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:456>
 		GameManager_StartGameTimer_mA2CB9E43A65FD420925DD72630C510F48131C6BC(__this, NULL);
 	}
 
 IL_003a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:457>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:458>
 		return;
 	}
 }
-// Method Definition Index: 65707
+// Method Definition Index: 65709
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_Update_m7F29D8E933B8D21D2E67507979C0F12ACF87BB41 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14925,7 +14925,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_Update_m7F29D8E933B8D21D2E67
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:462>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:463>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___gameplayScreen;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -14967,20 +14967,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_Update_m7F29D8E933B8D21D2E67
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:464>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:465>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralA19FF32DB1782DCA98DB91B8276101ADE087DD05, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:465>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:466>
 		GameManager_OnGameplayScreenActivated_m00C6732E5C00F1C3D36E145CB6A562A859482250(__this, NULL);
 	}
 
 IL_0043:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:467>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:468>
 		return;
 	}
 }
-// Method Definition Index: 65708
+// Method Definition Index: 65710
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnOfflineRewardClaimed_m626AE1761665C62F30BFF4A5D768D2E82B1C3E68 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, String_t* ___0_message, float ___1_cash, int32_t ___2_chips, String_t* ___3_rankingsJson, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14996,7 +14996,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnOfflineRewardClaimed_m626A
 	}
 	WinnerScreen_tB62EA0D93C2FBA5D799895D556E444C02627FC0A* V_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:476>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:477>
 		String_t* L_0 = ___0_message;
 		float L_1 = ___1_cash;
 		float L_2 = L_1;
@@ -15008,7 +15008,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnOfflineRewardClaimed_m626A
 		L_7 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteral308C18AD137C3598D6807FA0BFE42A849744AE80, L_0, L_3, L_6, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_7, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:479>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:480>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8 = __this->___calculateLoadingScreen;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -15019,7 +15019,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnOfflineRewardClaimed_m626A
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:479>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:480>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_10 = __this->___calculateLoadingScreen;
 		NullCheck(L_10);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_10, (bool)0, NULL);
@@ -15027,9 +15027,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnOfflineRewardClaimed_m626A
 
 IL_0036:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:482>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:483>
 		GameManager_LoadPlayerProfileImage_mB7A61E2E9A792236E3CB7D7721BCF7BD24012AE3(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:485>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:486>
 		bool L_11 = __this->___isGameActive;
 		if (!L_11)
 		{
@@ -15037,7 +15037,7 @@ IL_0036:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:487>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:488>
 		bool L_12 = __this->___isGameActive;
 		bool L_13 = L_12;
 		RuntimeObject* L_14 = Box(il2cpp_defaults.boolean_class, &L_13);
@@ -15045,13 +15045,13 @@ IL_0036:
 		L_15 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral52EDB9DBD893C4F3F9CA9785390DCE5C4C505075, L_14, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_15, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:488>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:489>
 		return;
 	}
 
 IL_005f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:492>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:493>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_16 = __this->___winnerScreen;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_17;
@@ -15062,20 +15062,20 @@ IL_005f:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:494>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:495>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral637669F4927193FF2EA07224C5F1B4E51B7F9A90, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:495>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:496>
 		return;
 	}
 
 IL_0078:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:499>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:500>
 		WinnerScreen_tB62EA0D93C2FBA5D799895D556E444C02627FC0A* L_18;
 		L_18 = GameManager_GetWinnerScreenScript_m25ADCBB7669E590DAAD20CC2A447074F2DDD0E62(__this, NULL);
 		V_0 = L_18;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:500>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:501>
 		WinnerScreen_tB62EA0D93C2FBA5D799895D556E444C02627FC0A* L_19 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_20;
@@ -15086,24 +15086,24 @@ IL_0078:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:502>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:503>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral81908C735B9E73611A453ECA49C913F0D0AE9317, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:503>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:504>
 		return;
 	}
 
 IL_0093:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:507>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:508>
 		float L_21 = ___1_cash;
 		__this->___lastAwardedCash = L_21;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:508>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:509>
 		int32_t L_22 = ___2_chips;
 		__this->___lastAwardedChips = L_22;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:509>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:510>
 		__this->___prizesAwardedForThisMatch = (bool)1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:512>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:513>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_23 = __this->___winnerScreen;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_24;
@@ -15114,7 +15114,7 @@ IL_0093:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:512>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:513>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_25 = __this->___winnerScreen;
 		NullCheck(L_25);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_25, (bool)1, NULL);
@@ -15122,7 +15122,7 @@ IL_0093:
 
 IL_00c2:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:515>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:516>
 		WinnerScreen_tB62EA0D93C2FBA5D799895D556E444C02627FC0A* L_26 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_27;
@@ -15133,7 +15133,7 @@ IL_00c2:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:516>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:517>
 		WinnerScreen_tB62EA0D93C2FBA5D799895D556E444C02627FC0A* L_28 = V_0;
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_29 = __this->___currentLobbyConfig;
 		NullCheck(L_28);
@@ -15142,11 +15142,11 @@ IL_00c2:
 
 IL_00d8:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:518>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:519>
 		return;
 	}
 }
-// Method Definition Index: 65709
+// Method Definition Index: 65711
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_StartGameTimer_mA2CB9E43A65FD420925DD72630C510F48131C6BC (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15174,7 +15174,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_StartGameTimer_mA2CB9E43A65F
 	int32_t G_B14_0 = 0;
 	float G_B20_0 = 0.0f;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:526>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:527>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___gameplayScreen;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -15195,30 +15195,30 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_StartGameTimer_mA2CB9E43A65F
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:528>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:529>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteralD5F3DF0CE7EB06930CAAE9BD318B3D16B4B577AE, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:529>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:530>
 		return;
 	}
 
 IL_0026:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:533>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:534>
 		Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588* L_4 = __this->___networkPlayerScores;
 		NullCheck(L_4);
 		Dictionary_2_Clear_m841DBE29811833266CC127714688998A50D5F7CD(L_4, Dictionary_2_Clear_m841DBE29811833266CC127714688998A50D5F7CD_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:534>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:535>
 		Dictionary_2_tD703CB7270FBE4380B4E73B621DD5B54EB65B58D* L_5 = __this->___networkPlayerTimes;
 		NullCheck(L_5);
 		Dictionary_2_Clear_m980C086EE2CB37B319F928DE06D8966A6C760231(L_5, Dictionary_2_Clear_m980C086EE2CB37B319F928DE06D8966A6C760231_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:537>
-		__this->___lastAwardedCash = (0.0f);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:538>
-		__this->___lastAwardedChips = 0;
+		__this->___lastAwardedCash = (0.0f);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:539>
+		__this->___lastAwardedChips = 0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:540>
 		__this->___prizesAwardedForThisMatch = (bool)0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:542>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:543>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_6 = __this->___currentMatchData;
 		if (!L_6)
 		{
@@ -15237,9 +15237,9 @@ IL_0026:
 
 IL_006b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:544>
-		__this->___localMatchScore = 0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:545>
+		__this->___localMatchScore = 0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:546>
 		ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* L_9 = ((ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_StaticFields*)il2cpp_codegen_static_fields_for(ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_il2cpp_TypeInfo_var))->___Instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
@@ -15250,7 +15250,7 @@ IL_006b:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:547>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:548>
 		ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* L_11 = ((ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_StaticFields*)il2cpp_codegen_static_fields_for(ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_il2cpp_TypeInfo_var))->___Instance;
 		NullCheck(L_11);
 		ScoreFeedbackUIManager_ResetScore_m56F2BA9C98FD5DC4B0AF89A1F56AFAA4662A5188(L_11, NULL);
@@ -15259,7 +15259,7 @@ IL_006b:
 
 IL_008b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:553>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:554>
 		ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* L_12 = ((ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_StaticFields*)il2cpp_codegen_static_fields_for(ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_il2cpp_TypeInfo_var))->___Instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_13;
@@ -15270,7 +15270,7 @@ IL_008b:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:555>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:556>
 		ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* L_14 = ((ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_StaticFields*)il2cpp_codegen_static_fields_for(ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_il2cpp_TypeInfo_var))->___Instance;
 		int32_t L_15 = __this->___localMatchScore;
 		NullCheck(L_14);
@@ -15279,7 +15279,7 @@ IL_008b:
 
 IL_00a8:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:559>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:560>
 		il2cpp_codegen_runtime_class_init_inline(DateTimeOffset_t4EE701FE2F386D6F932FAC9B11E4B74A5B30F0A4_il2cpp_TypeInfo_var);
 		DateTimeOffset_t4EE701FE2F386D6F932FAC9B11E4B74A5B30F0A4 L_16;
 		L_16 = DateTimeOffset_get_UtcNow_mD315065704E3FE153970E6BD06362AEDD3D9765F(NULL);
@@ -15287,7 +15287,7 @@ IL_00a8:
 		int64_t L_17;
 		L_17 = DateTimeOffset_ToUnixTimeMilliseconds_mDC0FF57434DBFAFC47B63F1119CAABE402F8CDEC((&V_1), NULL);
 		V_0 = L_17;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:560>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:561>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_18 = __this->___currentMatchData;
 		if (!L_18)
 		{
@@ -15325,14 +15325,14 @@ IL_00e2:
 
 IL_00e3:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:562>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:563>
 		if (!G_B14_0)
 		{
 			goto IL_021f;
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:565>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:566>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_24 = __this->___currentMatchData;
 		if (!L_24)
 		{
@@ -15349,13 +15349,13 @@ IL_00e3:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:567>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:568>
 		int64_t L_27 = V_0;
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_28 = __this->___currentMatchData;
 		NullCheck(L_28);
 		int64_t L_29 = L_28->___gameplayStartsAt;
 		V_2 = ((double)(((double)((int64_t)il2cpp_codegen_subtract(L_27, L_29)))/(1000.0)));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:568>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:569>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_30 = __this->___currentMatchData;
 		NullCheck(L_30);
 		int32_t L_31 = L_30->___duration;
@@ -15381,7 +15381,7 @@ IL_012e:
 IL_013a:
 	{
 		V_3 = G_B20_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:569>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:570>
 		float L_35 = V_3;
 		double L_36 = V_2;
 		float L_37;
@@ -15392,16 +15392,16 @@ IL_013a:
 
 IL_0151:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:573>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:574>
 		float L_38 = __this->___gameTimer;
 		__this->___currentTimer = L_38;
 	}
 
 IL_015d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:576>
-		__this->___isGameActive = (bool)1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:577>
+		__this->___isGameActive = (bool)1;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:578>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_39 = __this->___timerCoroutine;
 		if (!L_39)
 		{
@@ -15409,21 +15409,21 @@ IL_015d:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:577>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:578>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_40 = __this->___timerCoroutine;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_40, NULL);
 	}
 
 IL_0178:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:578>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:579>
 		RuntimeObject* L_41;
 		L_41 = GameManager_TimerCountdown_m0129B5317C9F64B62FF668193B220E2A87A19CAB(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_42;
 		L_42 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_41, NULL);
 		__this->___timerCoroutine = L_42;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___timerCoroutine), (void*)L_42);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:581>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:582>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_43 = __this->___timerText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_44;
@@ -15434,7 +15434,7 @@ IL_0178:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:581>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:582>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_45 = __this->___timerText;
 		NullCheck(L_45);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_46;
@@ -15445,7 +15445,7 @@ IL_0178:
 
 IL_01a9:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:582>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:583>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_47 = __this->___timerTextLegacy;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_48;
@@ -15456,7 +15456,7 @@ IL_01a9:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:582>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:583>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_49 = __this->___timerTextLegacy;
 		NullCheck(L_49);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_50;
@@ -15467,7 +15467,7 @@ IL_01a9:
 
 IL_01c8:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:583>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:584>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_51 = __this->___countdownText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_52;
@@ -15478,7 +15478,7 @@ IL_01c8:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:583>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:584>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_53 = __this->___countdownText;
 		NullCheck(L_53);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_54;
@@ -15489,7 +15489,7 @@ IL_01c8:
 
 IL_01e7:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:585>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:586>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_55 = __this->___playerDicesController;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_56;
@@ -15500,7 +15500,7 @@ IL_01e7:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:587>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:588>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_57 = __this->___playerDicesController;
 		NullCheck(L_57);
 		DicesController_ResetRollingState_m98C526FF7753FFAC2F76FB8B2D17D878D3A0258A(L_57, NULL);
@@ -15508,7 +15508,7 @@ IL_01e7:
 
 IL_0200:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:590>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:591>
 		float L_58 = __this->___currentTimer;
 		float L_59 = L_58;
 		RuntimeObject* L_60 = Box(il2cpp_defaults.single_class, &L_59);
@@ -15521,7 +15521,7 @@ IL_0200:
 
 IL_021f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:595>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:596>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_62 = __this->___currentMatchData;
 		if (!L_62)
 		{
@@ -15538,13 +15538,13 @@ IL_021f:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:598>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:599>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_65 = __this->___currentMatchData;
 		NullCheck(L_65);
 		int64_t L_66 = L_65->___gameplayStartsAt;
 		int64_t L_67 = V_0;
 		V_4 = ((float)(((float)((int64_t)il2cpp_codegen_subtract(L_66, L_67)))/(1000.0f)));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:599>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:600>
 		float L_68 = V_4;
 		float L_69 = L_68;
 		RuntimeObject* L_70 = Box(il2cpp_defaults.single_class, &L_69);
@@ -15552,7 +15552,7 @@ IL_021f:
 		L_71 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralF107487FDFC37E64A0B78AFBD9BA7DA82D98E8F5, L_70, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_71, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:601>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:602>
 		float L_72 = V_4;
 		if ((!(((float)L_72) > ((float)(0.0f)))))
 		{
@@ -15560,7 +15560,7 @@ IL_021f:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:603>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:604>
 		float L_73 = V_4;
 		RuntimeObject* L_74;
 		L_74 = GameManager_HandleRejoinedCountdown_mF7C35C92EB5245BD9D8F1B39C1AA106EEFF7454F(__this, L_73, NULL);
@@ -15571,7 +15571,7 @@ IL_021f:
 
 IL_027c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:607>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:608>
 		RuntimeObject* L_76;
 		L_76 = GameManager_FinishCountdownSequence_m699A2072E202E2F575F79B8C4CF889CA7324AA55(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_77;
@@ -15581,7 +15581,7 @@ IL_027c:
 
 IL_028b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:613>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:614>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_78 = __this->___timerText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_79;
@@ -15592,7 +15592,7 @@ IL_028b:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:613>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:614>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_80 = __this->___timerText;
 		NullCheck(L_80);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_81;
@@ -15603,7 +15603,7 @@ IL_028b:
 
 IL_02aa:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:614>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:615>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_82 = __this->___timerTextLegacy;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_83;
@@ -15614,7 +15614,7 @@ IL_02aa:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:614>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:615>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_84 = __this->___timerTextLegacy;
 		NullCheck(L_84);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_85;
@@ -15625,7 +15625,7 @@ IL_02aa:
 
 IL_02c9:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:615>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:616>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_86 = __this->___playerDicesController;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_87;
@@ -15636,7 +15636,7 @@ IL_02c9:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:615>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:616>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_88 = __this->___playerDicesController;
 		NullCheck(L_88);
 		DicesController_SetRollButtonInteractable_mAB42C5281CD16F0E36E0C717B8289AB4FC55CDDF(L_88, (bool)0, NULL);
@@ -15644,21 +15644,21 @@ IL_02c9:
 
 IL_02e3:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:616>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:617>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral323EB93748C2F5C7AD991FC973077986B77F4D21, NULL);
 	}
 
 IL_02ed:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:620>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:621>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral567296281B1C3DFE5DAF2BC8E5B7897F1DCE3205, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:621>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:622>
 		return;
 	}
 }
-// Method Definition Index: 65710
+// Method Definition Index: 65712
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameManager_HandleRejoinedCountdown_mF7C35C92EB5245BD9D8F1B39C1AA106EEFF7454F (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, float ___0_secondsToWait, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15681,7 +15681,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameManager_HandleRejoinedCoun
 		return L_2;
 	}
 }
-// Method Definition Index: 65711
+// Method Definition Index: 65713
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_HandleServerCountdown_m28F5DC2D392E7DA3531BA32E618810477F455F74 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, CountdownData_tE33ACC9DA8B9B1C6AD5F1E9CF0D47C0324E55D57* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15698,7 +15698,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_HandleServerCountdown_m28F5D
 	}
 	float V_0 = 0.0f;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:653>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:654>
 		CountdownData_tE33ACC9DA8B9B1C6AD5F1E9CF0D47C0324E55D57* L_0 = ___0_data;
 		if (L_0)
 		{
@@ -15706,13 +15706,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_HandleServerCountdown_m28F5D
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:653>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:654>
 		return;
 	}
 
 IL_0004:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:654>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:655>
 		CountdownData_tE33ACC9DA8B9B1C6AD5F1E9CF0D47C0324E55D57* L_1 = ___0_data;
 		NullCheck(L_1);
 		int32_t L_2 = L_1->___count;
@@ -15722,7 +15722,7 @@ IL_0004:
 		L_5 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralC86A014C330FBAE45F3A39C455CEA57EF802C3FA, L_4, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_5, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:656>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:657>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_6 = __this->___countdownText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_7;
@@ -15743,21 +15743,21 @@ IL_0004:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:658>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:659>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_10 = __this->___countdownText;
 		NullCheck(L_10);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_11;
 		L_11 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_10, NULL);
 		NullCheck(L_11);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_11, (bool)1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:659>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:660>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_12 = __this->___countdownTextShadow;
 		NullCheck(L_12);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_13;
 		L_13 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_12, NULL);
 		NullCheck(L_13);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_13, (bool)1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:661>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:662>
 		CountdownData_tE33ACC9DA8B9B1C6AD5F1E9CF0D47C0324E55D57* L_14 = ___0_data;
 		NullCheck(L_14);
 		int32_t L_15 = L_14->___count;
@@ -15767,7 +15767,7 @@ IL_0004:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:663>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:664>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_16 = __this->___countdownText;
 		CountdownData_tE33ACC9DA8B9B1C6AD5F1E9CF0D47C0324E55D57* L_17 = ___0_data;
 		NullCheck(L_17);
@@ -15776,7 +15776,7 @@ IL_0004:
 		L_19 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5(L_18, NULL);
 		NullCheck(L_16);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_16, L_19);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:664>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:665>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_20 = __this->___countdownTextShadow;
 		CountdownData_tE33ACC9DA8B9B1C6AD5F1E9CF0D47C0324E55D57* L_21 = ___0_data;
 		NullCheck(L_21);
@@ -15785,7 +15785,7 @@ IL_0004:
 		L_23 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5(L_22, NULL);
 		NullCheck(L_20);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_20, L_23);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:666>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:667>
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_24 = ((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_25;
@@ -15796,7 +15796,7 @@ IL_0004:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:666>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:667>
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_26 = ((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance;
 		NullCheck(L_26);
 		SoundManager_PlayCountdown_m52B475CB7A32F8192649FDDBAB0547B1F3C27D9E(L_26, NULL);
@@ -15804,7 +15804,7 @@ IL_0004:
 
 IL_00b1:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:668>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:669>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_27 = __this->___countdownText;
 		NullCheck(L_27);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_28;
@@ -15813,11 +15813,11 @@ IL_00b1:
 		L_29 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
 		NullCheck(L_28);
 		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_28, L_29, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:669>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:670>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_30 = __this->___countdownText;
 		NullCheck(L_30);
 		TMP_Text_set_alpha_mD01D24A2E320F30E26BD42AEE8137F9C4F4EBB57(L_30, (0.0f), NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:670>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:671>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_31 = __this->___countdownTextShadow;
 		NullCheck(L_31);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_32;
@@ -15826,11 +15826,11 @@ IL_00b1:
 		L_33 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
 		NullCheck(L_32);
 		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_32, L_33, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:671>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:672>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_34 = __this->___countdownTextShadow;
 		NullCheck(L_34);
 		TMP_Text_set_alpha_mD01D24A2E320F30E26BD42AEE8137F9C4F4EBB57(L_34, (0.0f), NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:673>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:674>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_35 = __this->___countdownText;
 		NullCheck(L_35);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_36;
@@ -15838,7 +15838,7 @@ IL_00b1:
 		float L_37;
 		L_37 = GameManager_GetGameplayReferenceScale_m2E02F9C3708018F054D4FEDDBE6BB89E9F2FA2B7(__this, L_36, NULL);
 		V_0 = ((float)il2cpp_codegen_multiply((1.5f), L_37));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:674>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:675>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_38 = __this->___countdownText;
 		NullCheck(L_38);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_39;
@@ -15858,7 +15858,7 @@ IL_00b1:
 		L_46 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_45, NULL);
 		TweenerCore_3_tCD82DFC45FB71C681FA8659EA63A7D7D16BFFE77* L_47;
 		L_47 = TweenSettingsExtensions_SetLink_TisTweenerCore_3_tCD82DFC45FB71C681FA8659EA63A7D7D16BFFE77_m92317D8B890ABF2B40E293AD34F6E8B192B4852F(L_44, L_46, TweenSettingsExtensions_SetLink_TisTweenerCore_3_tCD82DFC45FB71C681FA8659EA63A7D7D16BFFE77_m92317D8B890ABF2B40E293AD34F6E8B192B4852F_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:675>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:676>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_48 = __this->___countdownText;
 		TweenerCore_3_tC0593021331EF2AF46590E2184F512C0D38FD4C3* L_49;
 		L_49 = DOTweenModuleUI_DOFade_mE2E3C2482CD1D3B81C2F4B0EA4E95CF2CC10CC21(L_48, (1.0f), (0.300000012f), NULL);
@@ -15868,7 +15868,7 @@ IL_00b1:
 		L_51 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_50, NULL);
 		TweenerCore_3_tC0593021331EF2AF46590E2184F512C0D38FD4C3* L_52;
 		L_52 = TweenSettingsExtensions_SetLink_TisTweenerCore_3_tC0593021331EF2AF46590E2184F512C0D38FD4C3_m1509A6CF5A741EDF732F0255E8ED88D69844B029(L_49, L_51, TweenSettingsExtensions_SetLink_TisTweenerCore_3_tC0593021331EF2AF46590E2184F512C0D38FD4C3_m1509A6CF5A741EDF732F0255E8ED88D69844B029_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:676>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:677>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_53 = __this->___countdownTextShadow;
 		NullCheck(L_53);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_54;
@@ -15888,7 +15888,7 @@ IL_00b1:
 		L_61 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_60, NULL);
 		TweenerCore_3_tCD82DFC45FB71C681FA8659EA63A7D7D16BFFE77* L_62;
 		L_62 = TweenSettingsExtensions_SetLink_TisTweenerCore_3_tCD82DFC45FB71C681FA8659EA63A7D7D16BFFE77_m92317D8B890ABF2B40E293AD34F6E8B192B4852F(L_59, L_61, TweenSettingsExtensions_SetLink_TisTweenerCore_3_tCD82DFC45FB71C681FA8659EA63A7D7D16BFFE77_m92317D8B890ABF2B40E293AD34F6E8B192B4852F_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:677>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:678>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_63 = __this->___countdownTextShadow;
 		TweenerCore_3_tC0593021331EF2AF46590E2184F512C0D38FD4C3* L_64;
 		L_64 = DOTweenModuleUI_DOFade_mE2E3C2482CD1D3B81C2F4B0EA4E95CF2CC10CC21(L_63, (1.0f), (0.300000012f), NULL);
@@ -15902,7 +15902,7 @@ IL_00b1:
 
 IL_01cf:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:680>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:681>
 		CountdownData_tE33ACC9DA8B9B1C6AD5F1E9CF0D47C0324E55D57* L_68 = ___0_data;
 		NullCheck(L_68);
 		int32_t L_69 = L_68->___count;
@@ -15912,7 +15912,7 @@ IL_01cf:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:683>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:684>
 		RuntimeObject* L_70;
 		L_70 = GameManager_FinishCountdownSequence_m699A2072E202E2F575F79B8C4CF889CA7324AA55(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_71;
@@ -15921,11 +15921,11 @@ IL_01cf:
 
 IL_01e5:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:686>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:687>
 		return;
 	}
 }
-// Method Definition Index: 65712
+// Method Definition Index: 65714
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameManager_FinishCountdownSequence_m699A2072E202E2F575F79B8C4CF889CA7324AA55 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15944,7 +15944,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameManager_FinishCountdownSeq
 		return L_1;
 	}
 }
-// Method Definition Index: 65713
+// Method Definition Index: 65715
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float GameManager_GetGameplayReferenceScale_m2E02F9C3708018F054D4FEDDBE6BB89E9F2FA2B7 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___0_source, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15957,7 +15957,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float GameManager_GetGameplayReferenceScale_m
 	GamePlayReferenceScaler_tC730531C7AE6D1D796FC2DA2B06B14A99BE4137B* V_0 = NULL;
 	GamePlayReferenceScaler_tC730531C7AE6D1D796FC2DA2B06B14A99BE4137B* G_B3_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:726>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:727>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = ___0_source;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -15984,7 +15984,7 @@ IL_000c:
 IL_0012:
 	{
 		V_0 = G_B3_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:727>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:728>
 		GamePlayReferenceScaler_tC730531C7AE6D1D796FC2DA2B06B14A99BE4137B* L_4 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_5;
@@ -16007,7 +16007,7 @@ IL_0022:
 		return L_7;
 	}
 }
-// Method Definition Index: 65714
+// Method Definition Index: 65716
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_StartAllPowerupTimers_m0C1EE8497A5A9A956B3089A1B1C465BD780D9FC0 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16030,7 +16030,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_StartAllPowerupTimers_m0C1EE
 	KeyValuePair_2_tF7D81A0E277751D3925E42CDA11A180AC7A9B599 V_1;
 	memset((&V_1), 0, sizeof(V_1));
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:737>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:738>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_0 = __this->___playerNumberGrid;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -16041,18 +16041,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_StartAllPowerupTimers_m0C1EE
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:739>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:740>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_2 = __this->___playerNumberGrid;
 		NullCheck(L_2);
 		NumberGrid_StartPowerupTimerFromGameManager_mADEBBBD57E3162BB8586FB96E1C9BE48E3E2E60F(L_2, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:740>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:741>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral70B23BD8C5FB8BE064267833D6B461A7D38F974E, NULL);
 	}
 
 IL_0023:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:744>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:745>
 		Dictionary_2_t03CB0E456E3F308DB7BD58AC650EDBFA1BB3E3E8* L_3 = __this->___opponentNumberGrids;
 		NullCheck(L_3);
 		Enumerator_tBF9A90E34C99E637EBB35E5FC3734634C75DC260 L_4;
@@ -16077,11 +16077,11 @@ FINALLY_007a:
 
 IL_0031_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:744>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:745>
 				KeyValuePair_2_tF7D81A0E277751D3925E42CDA11A180AC7A9B599 L_5;
 				L_5 = Enumerator_get_Current_mE0D3FF631FE4979B384428F7BCDC8C4489F781B6_inline((&V_0), Enumerator_get_Current_mE0D3FF631FE4979B384428F7BCDC8C4489F781B6_RuntimeMethod_var);
 				V_1 = L_5;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:746>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:747>
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_6;
 				L_6 = KeyValuePair_2_get_Value_m7763E98AE2B9D85D7068AD833CEFEF16B2CE0357_inline((&V_1), KeyValuePair_2_get_Value_m7763E98AE2B9D85D7068AD833CEFEF16B2CE0357_RuntimeMethod_var);
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -16093,12 +16093,12 @@ IL_0031_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:748>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:749>
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_8;
 				L_8 = KeyValuePair_2_get_Value_m7763E98AE2B9D85D7068AD833CEFEF16B2CE0357_inline((&V_1), KeyValuePair_2_get_Value_m7763E98AE2B9D85D7068AD833CEFEF16B2CE0357_RuntimeMethod_var);
 				NullCheck(L_8);
 				NumberGrid_StartPowerupTimerFromGameManager_mADEBBBD57E3162BB8586FB96E1C9BE48E3E2E60F(L_8, NULL);
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:749>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:750>
 				int32_t L_9;
 				L_9 = KeyValuePair_2_get_Key_m2348C716B59F901860057C33AEB654CFBF8946F3_inline((&V_1), KeyValuePair_2_get_Key_m2348C716B59F901860057C33AEB654CFBF8946F3_RuntimeMethod_var);
 				int32_t L_10 = L_9;
@@ -16111,7 +16111,7 @@ IL_0031_1:
 
 IL_006f_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:744>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:745>
 				bool L_13;
 				L_13 = Enumerator_MoveNext_m40AFBA3C350D014C487FCC9E18648AD7999C4F65((&V_0), Enumerator_MoveNext_m40AFBA3C350D014C487FCC9E18648AD7999C4F65_RuntimeMethod_var);
 				if (L_13)
@@ -16131,11 +16131,11 @@ IL_006f_1:
 
 IL_0088:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:752>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:753>
 		return;
 	}
 }
-// Method Definition Index: 65715
+// Method Definition Index: 65717
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameManager_TimerCountdown_m0129B5317C9F64B62FF668193B220E2A87A19CAB (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16154,7 +16154,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameManager_TimerCountdown_m01
 		return L_1;
 	}
 }
-// Method Definition Index: 65716
+// Method Definition Index: 65718
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_UpdateTimerDisplay_mF03182CF6D36FDD0133E5CA889C29F9A9634E169 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16165,12 +16165,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_UpdateTimerDisplay_mF03182CF
 	}
 	int32_t V_0 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:801>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:802>
 		float L_0 = __this->___currentTimer;
 		int32_t L_1;
 		L_1 = Mathf_CeilToInt_mF2BF9F4261B3431DC20E10A46CFEEED103C48963_inline(L_0, NULL);
 		V_0 = L_1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:803>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:804>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_2 = __this->___timerText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
@@ -16181,7 +16181,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_UpdateTimerDisplay_mF03182CF
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:805>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:806>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_4 = __this->___timerText;
 		String_t* L_5;
 		L_5 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_0), NULL);
@@ -16191,7 +16191,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_UpdateTimerDisplay_mF03182CF
 
 IL_002c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:808>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:809>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_6 = __this->___timerTextLegacy;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_7;
@@ -16202,7 +16202,7 @@ IL_002c:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:810>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:811>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_8 = __this->___timerTextLegacy;
 		String_t* L_9;
 		L_9 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_0), NULL);
@@ -16212,11 +16212,11 @@ IL_002c:
 
 IL_004c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:812>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:813>
 		return;
 	}
 }
-// Method Definition Index: 65717
+// Method Definition Index: 65719
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnTimerExpired_m7BBB556891A16D2375EC3DD72418F778EF4D89CA (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16231,14 +16231,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnTimerExpired_m7BBB556891A1
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:819>
-		__this->___isGameActive = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:820>
-		__this->___timerStarted = (bool)0;
+		__this->___isGameActive = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:821>
+		__this->___timerStarted = (bool)0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:822>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral779DAEA6586A8258413650CABB5AF4B7966CA4DB, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:824>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:825>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_0 = __this->___timerCoroutine;
 		if (!L_0)
 		{
@@ -16246,20 +16246,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnTimerExpired_m7BBB556891A1
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:826>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:827>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_1 = __this->___timerCoroutine;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:827>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:828>
 		__this->___timerCoroutine = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___timerCoroutine), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
 	}
 
 IL_0033:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:831>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:832>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral854688A3BCB1B0047565507ABD53ACA95DE2CA4D, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:834>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:835>
 		SocketManager_tFA162C4D30D5A71D0A5F10FDA0CF83B2B1101650* L_2;
 		L_2 = SocketManager_get_Instance_mFAF3D466262B9D9A471AB4FF8165EACB053F8CBC_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -16282,7 +16282,7 @@ IL_0033:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:835>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:836>
 		SocketManager_tFA162C4D30D5A71D0A5F10FDA0CF83B2B1101650* L_6;
 		L_6 = SocketManager_get_Instance_mFAF3D466262B9D9A471AB4FF8165EACB053F8CBC_inline(NULL);
 		NullCheck(L_6);
@@ -16310,16 +16310,16 @@ IL_0033:
 
 IL_008a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:837>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:838>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral2F1DA0E08253B47A690DBDA44B236B3FB8745297, NULL);
 	}
 
 IL_0094:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:840>
-		__this->___isWaitingForServer = (bool)1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:841>
+		__this->___isWaitingForServer = (bool)1;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:842>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_15 = __this->___calculateLoadingScreen;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_16;
@@ -16330,7 +16330,7 @@ IL_0094:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:841>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:842>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_17 = __this->___calculateLoadingScreen;
 		NullCheck(L_17);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_17, (bool)1, NULL);
@@ -16338,11 +16338,11 @@ IL_0094:
 
 IL_00b5:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:842>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:843>
 		return;
 	}
 }
-// Method Definition Index: 65718
+// Method Definition Index: 65720
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnWinnerLobbyButtonClicked_m9361754CF874D909C7FD57E5649160CB63AEBFD3 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16357,10 +16357,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnWinnerLobbyButtonClicked_m
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B2_0 = NULL;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B1_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:850>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:851>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralF0C1240235413A852CF86A5EE922F3823597C1B5, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:853>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:854>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_0 = ((GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var))->___OnGameEnded;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_1 = L_0;
 		if (L_1)
@@ -16382,7 +16382,7 @@ IL_0015:
 
 IL_001a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:856>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:857>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___gameplayScreen;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
@@ -16393,7 +16393,7 @@ IL_001a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:858>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:859>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___gameplayScreen;
 		NullCheck(L_4);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_4, (bool)0, NULL);
@@ -16401,7 +16401,7 @@ IL_001a:
 
 IL_0034:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:861>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:862>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = __this->___winnerScreen;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_6;
@@ -16412,7 +16412,7 @@ IL_0034:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:863>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:864>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7 = __this->___winnerScreen;
 		NullCheck(L_7);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_7, (bool)0, NULL);
@@ -16420,7 +16420,7 @@ IL_0034:
 
 IL_004e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:866>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:867>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8 = __this->___loserScoreScreen;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -16431,7 +16431,7 @@ IL_004e:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:868>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:869>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_10 = __this->___loserScoreScreen;
 		NullCheck(L_10);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_10, (bool)0, NULL);
@@ -16439,13 +16439,13 @@ IL_004e:
 
 IL_0068:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:871>
-		GameManager_ResetGameState_mF33FB9053CFB001BA59AF315587CBC6520941C66(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:872>
+		GameManager_ResetGameState_mF33FB9053CFB001BA59AF315587CBC6520941C66(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:873>
 		return;
 	}
 }
-// Method Definition Index: 65719
+// Method Definition Index: 65721
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnDestroy_m15D42F0A634069A09307B19FBC237FD09A026AE4 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16471,27 +16471,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnDestroy_m15D42F0A634069A09
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:877>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:878>
 		Action_1_tA19AE6F29D6F84A3A59DF40AF45A6EEDB1E5DDC7* L_0 = (Action_1_tA19AE6F29D6F84A3A59DF40AF45A6EEDB1E5DDC7*)il2cpp_codegen_object_new(Action_1_tA19AE6F29D6F84A3A59DF40AF45A6EEDB1E5DDC7_il2cpp_TypeInfo_var);
 		Action_1__ctor_mCD16B7E66116AF63B35321795E078654DAFE2B8B(L_0, __this, (intptr_t)((void*)GameManager_HandleServerNumberLocked_m53AB20A6F5C55E8E3918D90EDD2CD42F82AFFC84_RuntimeMethod_var), NULL);
 		MatchmakingModel_remove_OnNumberLockedEvent_mBACE0B00FB28BEFBCA89D601C9B09E3712D96975(L_0, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:878>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:879>
 		Action_1_t5A945E82BE3E1C2882BF73EE0A189EC3A2B47541* L_1 = (Action_1_t5A945E82BE3E1C2882BF73EE0A189EC3A2B47541*)il2cpp_codegen_object_new(Action_1_t5A945E82BE3E1C2882BF73EE0A189EC3A2B47541_il2cpp_TypeInfo_var);
 		Action_1__ctor_m2AE9904056FBB7EF04B0D0E4DC96FE1F760D6977(L_1, __this, (intptr_t)((void*)GameManager_HandleServerGameOver_m82D67C4147405F7ED5D697EE65C23A9748657A1D_RuntimeMethod_var), NULL);
 		MatchmakingModel_remove_OnGameOverEvent_m01A7410E9DEB2A977FA36EDEDD750938A86F2ABD(L_1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:879>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:880>
 		Action_1_tEA72E6B5C1D8E0DEA87F3F2B9AD84E3970944B8F* L_2 = (Action_1_tEA72E6B5C1D8E0DEA87F3F2B9AD84E3970944B8F*)il2cpp_codegen_object_new(Action_1_tEA72E6B5C1D8E0DEA87F3F2B9AD84E3970944B8F_il2cpp_TypeInfo_var);
 		Action_1__ctor_mBC5A484594D6B42AF2902D2387BA1FD9DD210032(L_2, __this, (intptr_t)((void*)GameManager_HandleServerCountdown_m28F5DC2D392E7DA3531BA32E618810477F455F74_RuntimeMethod_var), NULL);
 		MatchmakingModel_remove_OnCountdownEvent_m08CE683E91D840764E0E2C2F29554C03A8DC533D(L_2, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:880>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:881>
 		Action_1_tA1DE18871DB50B19EDBF3E2E5A572A082ABF753D* L_3 = (Action_1_tA1DE18871DB50B19EDBF3E2E5A572A082ABF753D*)il2cpp_codegen_object_new(Action_1_tA1DE18871DB50B19EDBF3E2E5A572A082ABF753D_il2cpp_TypeInfo_var);
 		Action_1__ctor_m928E484F9AEDF8EA7F5D7BA5AF555C244D7607C1(L_3, __this, (intptr_t)((void*)GameManager_HandleServerDiceRolled_m3CF9FD6A030D3B9853786ED221A456E5E3C9E7AB_RuntimeMethod_var), NULL);
 		MatchmakingModel_remove_OnDiceRolledEvent_m28C4FA0F7D78E670AB9F075C4E690CE6E3D38DCD(L_3, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:881>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:882>
 		Action_1_t0153C54893BA1F19BA8C8561E443C561A6CC9E82* L_4 = (Action_1_t0153C54893BA1F19BA8C8561E443C561A6CC9E82*)il2cpp_codegen_object_new(Action_1_t0153C54893BA1F19BA8C8561E443C561A6CC9E82_il2cpp_TypeInfo_var);
 		Action_1__ctor_m38AF51CDEFDA3C7CACE4B66774AD8A08E9A4C9BC(L_4, __this, (intptr_t)((void*)GameManager_HandleServerTapResult_m6DE40DE3844D7AC2DDD85D3A7ADB3639030A06FE_RuntimeMethod_var), NULL);
 		MatchmakingModel_remove_OnTapResultEvent_mFCCC5153911890D35205CA2156EBC7FE11623D4E(L_4, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:883>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:884>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_5 = __this->___numberGrid;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_6;
@@ -16502,7 +16502,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnDestroy_m15D42F0A634069A09
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:885>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:886>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_7 = __this->___numberGrid;
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_8 = L_7;
 		NullCheck(L_8);
@@ -16514,7 +16514,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnDestroy_m15D42F0A634069A09
 		NullCheck(L_8);
 		L_8->___OnAllBoxesSelected = ((Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)CastclassSealed((RuntimeObject*)L_11, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&L_8->___OnAllBoxesSelected), (void*)((Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)CastclassSealed((RuntimeObject*)L_11, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var)));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:886>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:887>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_12 = __this->___numberGrid;
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_13 = L_12;
 		NullCheck(L_13);
@@ -16530,7 +16530,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnDestroy_m15D42F0A634069A09
 
 IL_00b1:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:890>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:891>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_17 = __this->___quitButton;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_18;
@@ -16541,7 +16541,7 @@ IL_00b1:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:892>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:893>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_19 = __this->___quitButton;
 		NullCheck(L_19);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_20;
@@ -16554,11 +16554,11 @@ IL_00b1:
 
 IL_00db:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:894>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:895>
 		return;
 	}
 }
-// Method Definition Index: 65720
+// Method Definition Index: 65722
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnBoxSelected_m20E78307BF068670174FAC40FE70B8E6AEC33421 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* ___0_grid, int32_t ___1_number, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___2_boxObject, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16586,11 +16586,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnBoxSelected_m20E78307BF068
 	KeyValuePair_2_tF7D81A0E277751D3925E42CDA11A180AC7A9B599 V_3;
 	memset((&V_3), 0, sizeof(V_3));
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:901>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:902>
 		GameManager_UpdateOutlineFillAmounts_m7A38CCE91B3A2F9CE7DA89E9DDC0A8B69D5C0026(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:904>
-		V_0 = (-1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:905>
+		V_0 = (-1);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:906>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_0 = ___0_grid;
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_1 = __this->___playerNumberGrid;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -16602,7 +16602,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnBoxSelected_m20E78307BF068
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:908>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:909>
 		Dictionary_2_t03CB0E456E3F308DB7BD58AC650EDBFA1BB3E3E8* L_3 = __this->___opponentNumberGrids;
 		NullCheck(L_3);
 		Enumerator_tBF9A90E34C99E637EBB35E5FC3734634C75DC260 L_4;
@@ -16627,11 +16627,11 @@ FINALLY_0050:
 
 IL_0024_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:908>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:909>
 				KeyValuePair_2_tF7D81A0E277751D3925E42CDA11A180AC7A9B599 L_5;
 				L_5 = Enumerator_get_Current_mE0D3FF631FE4979B384428F7BCDC8C4489F781B6_inline((&V_2), Enumerator_get_Current_mE0D3FF631FE4979B384428F7BCDC8C4489F781B6_RuntimeMethod_var);
 				V_3 = L_5;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:910>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:911>
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_6;
 				L_6 = KeyValuePair_2_get_Value_m7763E98AE2B9D85D7068AD833CEFEF16B2CE0357_inline((&V_3), KeyValuePair_2_get_Value_m7763E98AE2B9D85D7068AD833CEFEF16B2CE0357_RuntimeMethod_var);
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_7 = ___0_grid;
@@ -16644,17 +16644,17 @@ IL_0024_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:910>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:911>
 				int32_t L_9;
 				L_9 = KeyValuePair_2_get_Key_m2348C716B59F901860057C33AEB654CFBF8946F3_inline((&V_3), KeyValuePair_2_get_Key_m2348C716B59F901860057C33AEB654CFBF8946F3_RuntimeMethod_var);
 				V_0 = L_9;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:910>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:911>
 				goto IL_005e;
 			}
 
 IL_0045_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:908>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:909>
 				bool L_10;
 				L_10 = Enumerator_MoveNext_m40AFBA3C350D014C487FCC9E18648AD7999C4F65((&V_2), Enumerator_MoveNext_m40AFBA3C350D014C487FCC9E18648AD7999C4F65_RuntimeMethod_var);
 				if (L_10)
@@ -16674,17 +16674,17 @@ IL_0045_1:
 
 IL_005e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:918>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:919>
 		double L_11;
 		L_11 = GameManager_GetEstimatedServerTime_m8F162662B88AB956B24121397CFA9A35D41EC3A6(__this, NULL);
 		V_1 = L_11;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:919>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:920>
 		Dictionary_2_tF99E988C7E3A4709CE89F8DEDE7AE36BBC0D4EEF* L_12 = __this->___playerLastScoreTime;
 		int32_t L_13 = V_0;
 		double L_14 = V_1;
 		NullCheck(L_12);
 		Dictionary_2_set_Item_m4751AFE706D4FE3512512F30600A671C38769175(L_12, L_13, L_14, Dictionary_2_set_Item_m4751AFE706D4FE3512512F30600A671C38769175_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:922>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:923>
 		int32_t L_15 = V_0;
 		if ((!(((uint32_t)L_15) == ((uint32_t)(-1)))))
 		{
@@ -16692,7 +16692,7 @@ IL_005e:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:925>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:926>
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_16 = ((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_17;
@@ -16703,7 +16703,7 @@ IL_005e:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:925>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:926>
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_18 = ((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance;
 		NullCheck(L_18);
 		SoundManager_PlayCorrect_mCD48C814680C9B6957A20107CC481B29EE00A93B(L_18, NULL);
@@ -16711,7 +16711,7 @@ IL_005e:
 
 IL_0090:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:930>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:931>
 		int32_t L_19 = ___1_number;
 		if ((((int32_t)L_19) >= ((int32_t)0)))
 		{
@@ -16719,10 +16719,10 @@ IL_0090:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:931>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:932>
 		int32_t L_20 = __this->___localMatchScore;
 		__this->___localMatchScore = ((int32_t)il2cpp_codegen_add(L_20, ((int32_t)200)));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:932>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:933>
 		int32_t L_21 = __this->___localMatchScore;
 		int32_t L_22 = L_21;
 		RuntimeObject* L_23 = Box(il2cpp_defaults.int32_class, &L_22);
@@ -16730,7 +16730,7 @@ IL_0090:
 		L_24 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralED97826A237CE207FF8BE7ABE61A93500C7597DC, L_23, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_24, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:935>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:936>
 		ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* L_25 = ((ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_StaticFields*)il2cpp_codegen_static_fields_for(ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_il2cpp_TypeInfo_var))->___Instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_26;
@@ -16751,7 +16751,7 @@ IL_0090:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:937>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:938>
 		ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* L_29 = ((ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_StaticFields*)il2cpp_codegen_static_fields_for(ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_il2cpp_TypeInfo_var))->___Instance;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_30 = ___2_boxObject;
 		NullCheck(L_30);
@@ -16767,10 +16767,10 @@ IL_0090:
 
 IL_00f1:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:940>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:941>
 		int32_t L_33 = __this->___localMatchScore;
 		__this->___localMatchScore = ((int32_t)il2cpp_codegen_add(L_33, ((int32_t)100)));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:941>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:942>
 		int32_t L_34 = __this->___localMatchScore;
 		int32_t L_35 = L_34;
 		RuntimeObject* L_36 = Box(il2cpp_defaults.int32_class, &L_35);
@@ -16778,7 +16778,7 @@ IL_00f1:
 		L_37 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralF43EA0F212EB546C4028C82DCC6E943CD978BCF2, L_36, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_37, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:943>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:944>
 		ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* L_38 = ((ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_StaticFields*)il2cpp_codegen_static_fields_for(ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_il2cpp_TypeInfo_var))->___Instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_39;
@@ -16799,7 +16799,7 @@ IL_00f1:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:945>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:946>
 		ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* L_42 = ((ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_StaticFields*)il2cpp_codegen_static_fields_for(ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_il2cpp_TypeInfo_var))->___Instance;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_43 = ___2_boxObject;
 		NullCheck(L_43);
@@ -16814,11 +16814,11 @@ IL_00f1:
 
 IL_0147:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:949>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:950>
 		return;
 	}
 }
-// Method Definition Index: 65721
+// Method Definition Index: 65723
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnWrongBoxSelected_m4310F4C2509CA0AEB40F1E3731BE1A2334BD3F37 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* ___0_grid, int32_t ___1_number, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___2_boxObject, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16832,7 +16832,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnWrongBoxSelected_m4310F4C2
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:957>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:958>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_0 = ___0_grid;
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_1 = __this->___playerNumberGrid;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -16851,10 +16851,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnWrongBoxSelected_m4310F4C2
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:959>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:960>
 		int32_t L_4 = __this->___localMatchScore;
 		__this->___localMatchScore = ((int32_t)il2cpp_codegen_subtract(L_4, ((int32_t)50)));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:960>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:961>
 		int32_t L_5 = __this->___localMatchScore;
 		int32_t L_6 = L_5;
 		RuntimeObject* L_7 = Box(il2cpp_defaults.int32_class, &L_6);
@@ -16862,7 +16862,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnWrongBoxSelected_m4310F4C2
 		L_8 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral42A5087FAB84B8CEEDBF065AA63B688C7DF87B70, L_7, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_8, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:963>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:964>
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_9 = ((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
@@ -16873,7 +16873,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnWrongBoxSelected_m4310F4C2
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:963>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:964>
 		SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734* L_11 = ((SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_StaticFields*)il2cpp_codegen_static_fields_for(SoundManager_tCA2CCAC5CDF1BA10E525C01C8D1D0DFAC9BE3734_il2cpp_TypeInfo_var))->___instance;
 		NullCheck(L_11);
 		SoundManager_PlayWrong_m55D9E8A2526E55CB932D7A750967017AED2689F6(L_11, NULL);
@@ -16881,7 +16881,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnWrongBoxSelected_m4310F4C2
 
 IL_0056:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:966>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:967>
 		ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* L_12 = ((ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_StaticFields*)il2cpp_codegen_static_fields_for(ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_il2cpp_TypeInfo_var))->___Instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_13;
@@ -16902,7 +16902,7 @@ IL_0056:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:968>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:969>
 		ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* L_16 = ((ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_StaticFields*)il2cpp_codegen_static_fields_for(ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_il2cpp_TypeInfo_var))->___Instance;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_17 = ___2_boxObject;
 		NullCheck(L_17);
@@ -16917,11 +16917,11 @@ IL_0056:
 
 IL_0083:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:971>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:972>
 		return;
 	}
 }
-// Method Definition Index: 65722
+// Method Definition Index: 65724
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GameManager_GetCurrentLocalScore_m823F1AD149B1BCBD19733227B1783580D51EDDE5 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16941,7 +16941,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GameManager_GetCurrentLocalScore_m823
 	KeyValuePair_2_t203D89707A14A98B3FB295DFFAC0F4D3CF2B1078 V_2;
 	memset((&V_2), 0, sizeof(V_2));
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:981>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:982>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_0 = __this->___playerNumberGrid;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -16952,20 +16952,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GameManager_GetCurrentLocalScore_m823
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:981>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:982>
 		return 0;
 	}
 
 IL_0010:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:982>
-		V_0 = 0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:983>
+		V_0 = 0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:984>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_2 = __this->___playerNumberGrid;
 		NullCheck(L_2);
 		Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588* L_3;
 		L_3 = NumberGrid_GetSelectionCounts_m7BBD1D87A2A27E142273DF2482B47D9ACA563690(L_2, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:984>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:985>
 		NullCheck(L_3);
 		Enumerator_tA2BDFFCCD73E0822BD39B8A162012DCD95F9FDCA L_4;
 		L_4 = Dictionary_2_GetEnumerator_m5B4AB9234E9B5AA8776F5A5E98BD96AADD36A445(L_3, Dictionary_2_GetEnumerator_m5B4AB9234E9B5AA8776F5A5E98BD96AADD36A445_RuntimeMethod_var);
@@ -16989,11 +16989,11 @@ FINALLY_0042:
 
 IL_0025_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:984>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:985>
 				KeyValuePair_2_t203D89707A14A98B3FB295DFFAC0F4D3CF2B1078 L_5;
 				L_5 = Enumerator_get_Current_m58E48C7A4B001DD9CC590DEF18D64A3D9E5E6F7B_inline((&V_1), Enumerator_get_Current_m58E48C7A4B001DD9CC590DEF18D64A3D9E5E6F7B_RuntimeMethod_var);
 				V_2 = L_5;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:984>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:985>
 				int32_t L_6 = V_0;
 				int32_t L_7;
 				L_7 = KeyValuePair_2_get_Value_m49EC6C1CD52DC0ED12D5C9116368BB112EA11917_inline((&V_2), KeyValuePair_2_get_Value_m49EC6C1CD52DC0ED12D5C9116368BB112EA11917_RuntimeMethod_var);
@@ -17002,7 +17002,7 @@ IL_0025_1:
 
 IL_0037_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:984>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:985>
 				bool L_8;
 				L_8 = Enumerator_MoveNext_mCB84750BAFE59C7D53C86B28A910BBE68DDE5D33((&V_1), Enumerator_MoveNext_mCB84750BAFE59C7D53C86B28A910BBE68DDE5D33_RuntimeMethod_var);
 				if (L_8)
@@ -17022,22 +17022,22 @@ IL_0037_1:
 
 IL_0050:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:985>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:986>
 		int32_t L_9 = V_0;
 		return L_9;
 	}
 }
-// Method Definition Index: 65723
+// Method Definition Index: 65725
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double GameManager_GetEstimatedServerTime_m8F162662B88AB956B24121397CFA9A35D41EC3A6 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:994>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:995>
 		float L_0;
 		L_0 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
 		return ((double)L_0);
 	}
 }
-// Method Definition Index: 65724
+// Method Definition Index: 65726
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnGameFinishedByOtherPlayer_mB34B6AD04D4963159EF60284C71E479EDB341F46 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17048,7 +17048,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnGameFinishedByOtherPlayer_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1002>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1003>
 		bool L_0 = __this->___isGameActive;
 		if (!L_0)
 		{
@@ -17056,20 +17056,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnGameFinishedByOtherPlayer_
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1004>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1005>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral329C23B015C65A1807CCF72513E7165A6545F0DC, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1005>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1006>
 		GameManager_OnAllBoxesSelected_m8696A896A20F037A91B850816DE478D3CD3D2CB0(__this, NULL);
 	}
 
 IL_0018:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1007>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1008>
 		return;
 	}
 }
-// Method Definition Index: 65725
+// Method Definition Index: 65727
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnAllBoxesSelected_m8696A896A20F037A91B850816DE478D3CD3D2CB0 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17082,7 +17082,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnAllBoxesSelected_m8696A896
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1014>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1015>
 		bool L_0 = __this->___isGameActive;
 		if (L_0)
 		{
@@ -17090,20 +17090,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnAllBoxesSelected_m8696A896
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1016>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1017>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1019>
-		__this->___isGameActive = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1020>
-		__this->___timerStarted = (bool)0;
+		__this->___isGameActive = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1021>
+		__this->___timerStarted = (bool)0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1022>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral08F8AEEB5814679D864CB249D60D8C53D4FD5577, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1024>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1025>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_1 = __this->___timerCoroutine;
 		if (!L_1)
 		{
@@ -17111,22 +17111,22 @@ IL_0009:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1026>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1027>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_2 = __this->___timerCoroutine;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_2, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1027>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1028>
 		__this->___timerCoroutine = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___timerCoroutine), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
 	}
 
 IL_003c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1031>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1032>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral6887B39C0E260761EBBA6B9CBA4958E2FEA7B610, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1032>
-		__this->___isWaitingForServer = (bool)1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1033>
+		__this->___isWaitingForServer = (bool)1;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1034>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___calculateLoadingScreen;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_4;
@@ -17137,7 +17137,7 @@ IL_003c:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1033>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1034>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = __this->___calculateLoadingScreen;
 		NullCheck(L_5);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_5, (bool)1, NULL);
@@ -17145,11 +17145,11 @@ IL_003c:
 
 IL_0067:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1034>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1035>
 		return;
 	}
 }
-// Method Definition Index: 65726
+// Method Definition Index: 65728
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnQuitButtonClicked_m0D1C0C047AEEBFC18B771310D973A3A3E0276705 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17157,7 +17157,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnQuitButtonClicked_m0D1C0C0
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_m358B2301D31070F31BF8BF978DC3F2B6F68FE0FB_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindFirstObjectByType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_m135AF64B21524B9580A4F9DAB9656669BE6A6F35_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral43CAE3A62CD915D3AD632A6E5A16F1E50EFE7408);
 		s_Il2CppMethodInitialized = true;
@@ -17166,7 +17166,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnQuitButtonClicked_m0D1C0C0
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B9_0 = NULL;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B8_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1045>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1046>
 		bool L_0;
 		L_0 = MatchmakingModel_get_IsSearching_mB7F7D264B87192D66A232C3FE5E1548D8EB8CE91_inline(NULL);
 		if (!L_0)
@@ -17175,14 +17175,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnQuitButtonClicked_m0D1C0C0
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1047>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1048>
 		MatchmakingModel_CancelSearch_mC7DB2A347EEB04DB97277713FB458E3D769858AB(NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1050>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1051>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		HorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637* L_1;
-		L_1 = Object_FindObjectOfType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_m358B2301D31070F31BF8BF978DC3F2B6F68FE0FB(Object_FindObjectOfType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_m358B2301D31070F31BF8BF978DC3F2B6F68FE0FB_RuntimeMethod_var);
+		L_1 = Object_FindFirstObjectByType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_m135AF64B21524B9580A4F9DAB9656669BE6A6F35(Object_FindFirstObjectByType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_m135AF64B21524B9580A4F9DAB9656669BE6A6F35_RuntimeMethod_var);
 		V_0 = L_1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1051>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1052>
 		HorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637* L_2 = V_0;
 		bool L_3;
 		L_3 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_2, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -17192,7 +17192,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnQuitButtonClicked_m0D1C0C0
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1054>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1055>
 		HorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637* L_4 = V_0;
 		NullCheck(L_4);
 		HorizontalLobbyManager_HideWaitingPanel_mA112C20307DD840CF4C346FB12530D5C6679E6FD(L_4, NULL);
@@ -17200,7 +17200,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnQuitButtonClicked_m0D1C0C0
 
 IL_0021:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1058>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1059>
 		bool L_5 = __this->___isGameActive;
 		if (L_5)
 		{
@@ -17208,18 +17208,18 @@ IL_0021:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1060>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1061>
 		return;
 	}
 
 IL_002a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1063>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1064>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral43CAE3A62CD915D3AD632A6E5A16F1E50EFE7408, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1064>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1065>
 		__this->___localPlayerForfeited = (bool)1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1067>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1068>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = __this->___forfeitLoadingScreen;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_7;
@@ -17230,7 +17230,7 @@ IL_002a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1069>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1070>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8 = __this->___forfeitLoadingScreen;
 		NullCheck(L_8);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_8, (bool)1, NULL);
@@ -17238,7 +17238,7 @@ IL_002a:
 
 IL_0055:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1073>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1074>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_9 = ((GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var))->___OnGameEnded;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_10 = L_9;
 		if (L_10)
@@ -17260,7 +17260,7 @@ IL_0060:
 
 IL_0065:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1076>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1077>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_11 = __this->___currentMatchData;
 		if (!L_11)
 		{
@@ -17279,7 +17279,7 @@ IL_0065:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1078>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1079>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_15 = __this->___currentMatchData;
 		NullCheck(L_15);
 		String_t* L_16 = L_15->___roomId;
@@ -17288,11 +17288,11 @@ IL_0065:
 
 IL_0090:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1080>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1081>
 		return;
 	}
 }
-// Method Definition Index: 65727
+// Method Definition Index: 65729
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR WinnerScreen_tB62EA0D93C2FBA5D799895D556E444C02627FC0A* GameManager_GetWinnerScreenScript_m25ADCBB7669E590DAAD20CC2A447074F2DDD0E62 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17303,7 +17303,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR WinnerScreen_tB62EA0D93C2FBA5D799895D556E444C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1088>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1089>
 		WinnerScreen_tB62EA0D93C2FBA5D799895D556E444C02627FC0A* L_0 = __this->___winnerScreenScript;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -17314,14 +17314,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR WinnerScreen_tB62EA0D93C2FBA5D799895D556E444C
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1090>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1091>
 		WinnerScreen_tB62EA0D93C2FBA5D799895D556E444C02627FC0A* L_2 = __this->___winnerScreenScript;
 		return L_2;
 	}
 
 IL_0015:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1093>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1094>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___winnerScreen;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_4;
@@ -17332,25 +17332,25 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1095>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1096>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = __this->___winnerScreen;
 		NullCheck(L_5);
 		WinnerScreen_tB62EA0D93C2FBA5D799895D556E444C02627FC0A* L_6;
 		L_6 = GameObject_GetComponent_TisWinnerScreen_tB62EA0D93C2FBA5D799895D556E444C02627FC0A_mF7D469671A37B3B7FF7CB01CDDA2F7161FA403BF(L_5, GameObject_GetComponent_TisWinnerScreen_tB62EA0D93C2FBA5D799895D556E444C02627FC0A_mF7D469671A37B3B7FF7CB01CDDA2F7161FA403BF_RuntimeMethod_var);
 		__this->___winnerScreenScript = L_6;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___winnerScreenScript), (void*)L_6);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1096>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1097>
 		WinnerScreen_tB62EA0D93C2FBA5D799895D556E444C02627FC0A* L_7 = __this->___winnerScreenScript;
 		return L_7;
 	}
 
 IL_003b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1099>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1100>
 		return (WinnerScreen_tB62EA0D93C2FBA5D799895D556E444C02627FC0A*)NULL;
 	}
 }
-// Method Definition Index: 65728
+// Method Definition Index: 65730
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_ResetWinnerScreenUI_mB142D1CC347257EF99B54F05FFF88B002765AFBD (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17360,7 +17360,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_ResetWinnerScreenUI_mB142D1C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1107>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1108>
 		WinnerScreen_tB62EA0D93C2FBA5D799895D556E444C02627FC0A* L_0 = __this->___winnerScreenScript;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -17371,7 +17371,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_ResetWinnerScreenUI_mB142D1C
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1107>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1108>
 		WinnerScreen_tB62EA0D93C2FBA5D799895D556E444C02627FC0A* L_2 = __this->___winnerScreenScript;
 		NullCheck(L_2);
 		WinnerScreen_ResetUI_m6EEB8C7B148758E6462208B0C5E6950609194AE3(L_2, NULL);
@@ -17379,15 +17379,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_ResetWinnerScreenUI_mB142D1C
 
 IL_0019:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1108>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1109>
 		return;
 	}
 }
-// Method Definition Index: 65729
+// Method Definition Index: 65731
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnPlayerDataLoaded_m138851D93DC0A4B4E2BF1F092C2749985D0B88B9 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* ___0_data, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1116>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1117>
 		PlayerData_t04178AFFCFAF35DA6472B839034F672FFE5EB64A* L_0 = ___0_data;
 		if (!L_0)
 		{
@@ -17395,7 +17395,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnPlayerDataLoaded_m138851D9
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1118>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1119>
 		RuntimeObject* L_1;
 		L_1 = GameManager_RetryLoadPlayerProfile_mC8BA82231EC32895029DC7B5BF5255057A4A1C20(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_2;
@@ -17404,11 +17404,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_OnPlayerDataLoaded_m138851D9
 
 IL_0010:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1120>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1121>
 		return;
 	}
 }
-// Method Definition Index: 65730
+// Method Definition Index: 65732
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameManager_RetryLoadPlayerProfile_mC8BA82231EC32895029DC7B5BF5255057A4A1C20 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17427,7 +17427,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameManager_RetryLoadPlayerPro
 		return L_1;
 	}
 }
-// Method Definition Index: 65731
+// Method Definition Index: 65733
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameManager_InitializeProfilesDelayed_m148DCDD19F7A19E2302A9838BB535A446518C231 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17446,26 +17446,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameManager_InitializeProfiles
 		return L_1;
 	}
 }
-// Method Definition Index: 65732
+// Method Definition Index: 65734
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_InitializeProfiles_mD1B8A360213C4C000199A9AECB5A2F4A02435737 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1145>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1146>
 		GameManager_LoadPlayerProfileImage_mB7A61E2E9A792236E3CB7D7721BCF7BD24012AE3(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1148>
-		GameManager_AssignOutlineColors_m0CFE590F51593BD7FF8A8845C0605BF1062E708D(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1149>
+		GameManager_AssignOutlineColors_m0CFE590F51593BD7FF8A8845C0605BF1062E708D(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1150>
 		return;
 	}
 }
-// Method Definition Index: 65733
+// Method Definition Index: 65735
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_LoadPlayerProfileImage_mB7A61E2E9A792236E3CB7D7721BCF7BD24012AE3 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisAvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C_m7ABB382A445BFE961473D47CE493D37ABEBF2A60_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindFirstObjectByType_TisAvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C_m65708B66CE78AAE007ABE959D1B4E84AEF8887C2_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral58B716FF5428F7961E1403E6D969E605D0F27EAF);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral654BB221437EB882CF565E840C47EB6366A2F9B2);
@@ -17478,7 +17478,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_LoadPlayerProfileImage_mB7A6
 	int32_t V_3 = 0;
 	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* V_4 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1156>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1157>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_0 = __this->___playerProfileImage;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -17489,16 +17489,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_LoadPlayerProfileImage_mB7A6
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1158>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1159>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteralA3C4D6C5DB40AAD7933D09F18CBC5F927009D329, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1159>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1160>
 		return;
 	}
 
 IL_0019:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1163>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1164>
 		String_t* L_2;
 		L_2 = PlayerModel_get_Avatar_mE3D8C1BE3E6D46C3AE3837FA63789AA9A95EAEDD_inline(NULL);
 		bool L_3;
@@ -17520,7 +17520,7 @@ IL_0019:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1165>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1166>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_6 = __this->___playerProfileImageCustom;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_7;
@@ -17531,14 +17531,14 @@ IL_0019:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1167>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1168>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_8 = __this->___playerProfileImageCustom;
 		NullCheck(L_8);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_9;
 		L_9 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_8, NULL);
 		NullCheck(L_9);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_9, (bool)1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1168>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1169>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_10 = __this->___playerProfileImageCustom;
 		String_t* L_11;
 		L_11 = PlayerModel_get_Avatar_mE3D8C1BE3E6D46C3AE3837FA63789AA9A95EAEDD_inline(NULL);
@@ -17547,7 +17547,7 @@ IL_0019:
 
 IL_0067:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1170>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1171>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_12 = __this->___playerProfileImage;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_13;
@@ -17558,7 +17558,7 @@ IL_0067:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1170>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1171>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_14 = __this->___playerProfileImage;
 		NullCheck(L_14);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_15;
@@ -17569,16 +17569,16 @@ IL_0067:
 
 IL_0086:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1171>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1172>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral654BB221437EB882CF565E840C47EB6366A2F9B2, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1172>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1173>
 		return;
 	}
 
 IL_0091:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1176>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1177>
 		MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* L_16 = __this->___mainMenuAvatarDisplay;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_17;
@@ -17589,19 +17589,19 @@ IL_0091:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1178>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1179>
 		MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* L_18 = __this->___mainMenuAvatarDisplay;
 		NullCheck(L_18);
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_19;
 		L_19 = MainMenuAvatarDisplay_GetCurrentAvatarSprite_m8E9E61DF0B4F446EC8533510F2F7D34EB05FB40F(L_18, NULL);
 		V_1 = L_19;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1179>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1180>
 		MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* L_20 = __this->___mainMenuAvatarDisplay;
 		NullCheck(L_20);
 		bool L_21;
 		L_21 = MainMenuAvatarDisplay_IsShowingCustomAvatar_m3EB26B9A63B6528128B1DC58D3FCF3B75E1A649B(L_20, NULL);
 		V_2 = L_21;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1181>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1182>
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_22 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_23;
@@ -17612,11 +17612,11 @@ IL_0091:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1183>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1184>
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_24 = V_1;
 		__this->___playerSelectedAvatar = L_24;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___playerSelectedAvatar), (void*)L_24);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1185>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1186>
 		bool L_25 = V_2;
 		if (!L_25)
 		{
@@ -17624,7 +17624,7 @@ IL_0091:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1187>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1188>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_26 = __this->___playerProfileImageCustom;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_27;
@@ -17635,12 +17635,12 @@ IL_0091:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1189>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1190>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_28 = __this->___playerProfileImageCustom;
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_29 = __this->___playerSelectedAvatar;
 		NullCheck(L_28);
 		Image_set_sprite_mC0C248340BA27AAEE56855A3FAFA0D8CA12956DE(L_28, L_29, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1190>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1191>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_30 = __this->___playerProfileImageCustom;
 		NullCheck(L_30);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_31;
@@ -17651,7 +17651,7 @@ IL_0091:
 		L_33 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_32, (1.10000002f), NULL);
 		NullCheck(L_31);
 		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_31, L_33, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1191>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1192>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_34 = __this->___playerProfileImageCustom;
 		NullCheck(L_34);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_35;
@@ -17662,7 +17662,7 @@ IL_0091:
 
 IL_011f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1193>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1194>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_36 = __this->___playerProfileImage;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_37;
@@ -17673,7 +17673,7 @@ IL_011f:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1193>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1194>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_38 = __this->___playerProfileImage;
 		NullCheck(L_38);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_39;
@@ -17685,7 +17685,7 @@ IL_011f:
 
 IL_013f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1197>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1198>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_40 = __this->___playerProfileImage;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_41;
@@ -17696,12 +17696,12 @@ IL_013f:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1199>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1200>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_42 = __this->___playerProfileImage;
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_43 = __this->___playerSelectedAvatar;
 		NullCheck(L_42);
 		Image_set_sprite_mC0C248340BA27AAEE56855A3FAFA0D8CA12956DE(L_42, L_43, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1200>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1201>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_44 = __this->___playerProfileImage;
 		NullCheck(L_44);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_45;
@@ -17710,7 +17710,7 @@ IL_013f:
 		L_46 = Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline(NULL);
 		NullCheck(L_45);
 		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_45, L_46, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1201>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1202>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_47 = __this->___playerProfileImage;
 		NullCheck(L_47);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_48;
@@ -17721,7 +17721,7 @@ IL_013f:
 
 IL_0184:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1203>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1204>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_49 = __this->___playerProfileImageCustom;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_50;
@@ -17732,7 +17732,7 @@ IL_0184:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1203>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1204>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_51 = __this->___playerProfileImageCustom;
 		NullCheck(L_51);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_52;
@@ -17743,18 +17743,18 @@ IL_0184:
 
 IL_01a3:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1205>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1206>
 		return;
 	}
 
 IL_01a4:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1210>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1211>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* L_53;
-		L_53 = Object_FindObjectOfType_TisAvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C_m7ABB382A445BFE961473D47CE493D37ABEBF2A60(Object_FindObjectOfType_TisAvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C_m7ABB382A445BFE961473D47CE493D37ABEBF2A60_RuntimeMethod_var);
+		L_53 = Object_FindFirstObjectByType_TisAvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C_m65708B66CE78AAE007ABE959D1B4E84AEF8887C2(Object_FindFirstObjectByType_TisAvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C_m65708B66CE78AAE007ABE959D1B4E84AEF8887C2_RuntimeMethod_var);
 		V_0 = L_53;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1211>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1212>
 		AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* L_54 = V_0;
 		bool L_55;
 		L_55 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_54, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -17764,18 +17764,18 @@ IL_01a4:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1213>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1214>
 		int32_t L_56;
 		L_56 = PlayerModel_get_SelectedAvatarIndex_m52692425CF7D719B831AFBCC8015DE4B8B021C59_inline(NULL);
 		V_3 = L_56;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1214>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1215>
 		AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* L_57 = V_0;
 		int32_t L_58 = V_3;
 		NullCheck(L_57);
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_59;
 		L_59 = AvatarSelector_GetAvatarSpriteByIndex_m13A49F82BFEDBB331E6F7C8469C48EF0669E7C14(L_57, L_58, NULL);
 		V_4 = L_59;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1215>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1216>
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_60 = V_4;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_61;
@@ -17786,11 +17786,11 @@ IL_01a4:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1217>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1218>
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_62 = V_4;
 		__this->___playerSelectedAvatar = L_62;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___playerSelectedAvatar), (void*)L_62);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1218>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1219>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_63 = __this->___playerProfileImage;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_64;
@@ -17801,7 +17801,7 @@ IL_01a4:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1218>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1219>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_65 = __this->___playerProfileImage;
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_66 = __this->___playerSelectedAvatar;
 		NullCheck(L_65);
@@ -17810,17 +17810,17 @@ IL_01a4:
 
 IL_01f3:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1219>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1220>
 		return;
 	}
 
 IL_01f4:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1222>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1223>
 		return;
 	}
 }
-// Method Definition Index: 65734
+// Method Definition Index: 65736
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_SetUpOpponentsFromMatch_mC33FE40B81C4DE318D2E7F27230A52F7069E03C6 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* ___0_matchData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17843,7 +17843,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_SetUpOpponentsFromMatch_mC33
 	PlayerAvatarInfo_t95662C35D8C4AE3DBBCFA02B2C95C5EACAB3C35A* V_3 = NULL;
 	int32_t V_4 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1231>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1232>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_0 = ___0_matchData;
 		if (!L_0)
 		{
@@ -17862,15 +17862,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_SetUpOpponentsFromMatch_mC33
 
 IL_000b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1231>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1232>
 		return;
 	}
 
 IL_000c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1233>
-		V_0 = 0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1234>
+		V_0 = 0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1235>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_3 = ___0_matchData;
 		NullCheck(L_3);
 		Dictionary_2_t38334E2D807AD276857B2117EF4E7C07E4813447* L_4 = L_3->___playerAvatars;
@@ -17897,11 +17897,11 @@ FINALLY_00bd:
 
 IL_001f_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1234>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1235>
 				KeyValuePair_2_t2F5C070A71118BEEBC54803DBEDCA88C74A28428 L_6;
 				L_6 = Enumerator_get_Current_m9956CE77BE878CC16AEB25992166A9D5CC809E71_inline((&V_1), Enumerator_get_Current_m9956CE77BE878CC16AEB25992166A9D5CC809E71_RuntimeMethod_var);
 				V_2 = L_6;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1236>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1237>
 				String_t* L_7;
 				L_7 = KeyValuePair_2_get_Key_m35295C5B29FFED6DF7B97031F8E0FFEE92C3961E_inline((&V_2), KeyValuePair_2_get_Key_m35295C5B29FFED6DF7B97031F8E0FFEE92C3961E_RuntimeMethod_var);
 				String_t* L_8;
@@ -17914,7 +17914,7 @@ IL_001f_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1238>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1239>
 				int32_t L_10 = V_0;
 				ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_11 = __this->___opponentProfileImages;
 				NullCheck(L_11);
@@ -17924,14 +17924,14 @@ IL_001f_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1241>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1242>
 				String_t* L_12;
 				L_12 = KeyValuePair_2_get_Key_m35295C5B29FFED6DF7B97031F8E0FFEE92C3961E_inline((&V_2), KeyValuePair_2_get_Key_m35295C5B29FFED6DF7B97031F8E0FFEE92C3961E_RuntimeMethod_var);
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1242>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1243>
 				PlayerAvatarInfo_t95662C35D8C4AE3DBBCFA02B2C95C5EACAB3C35A* L_13;
 				L_13 = KeyValuePair_2_get_Value_m256E86552960720A5BF4BC3D945552516CACE870_inline((&V_2), KeyValuePair_2_get_Value_m256E86552960720A5BF4BC3D945552516CACE870_RuntimeMethod_var);
 				V_3 = L_13;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1245>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1246>
 				int32_t L_14 = V_0;
 				ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_15 = __this->___opponentProfileImages;
 				NullCheck(L_15);
@@ -17941,7 +17941,7 @@ IL_001f_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1247>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1248>
 				ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_16 = __this->___opponentProfileImages;
 				int32_t L_17 = V_0;
 				NullCheck(L_16);
@@ -17952,7 +17952,7 @@ IL_001f_1:
 				L_20 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_19, NULL);
 				NullCheck(L_20);
 				GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_20, (bool)1, NULL);
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1248>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1249>
 				ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_21 = __this->___opponentProfileImages;
 				int32_t L_22 = V_0;
 				NullCheck(L_21);
@@ -17962,7 +17962,7 @@ IL_001f_1:
 				NullCheck(L_25);
 				String_t* L_26 = L_25->___avatar;
 				GameManager_AssignAvatarAsync_m3194B986C9520C44B06A06ACFD4AD9D761FC7730(__this, L_24, L_26, (bool)0, NULL);
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1250>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1251>
 				ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_27 = __this->___opponentOutlineImages;
 				int32_t L_28 = V_0;
 				NullCheck(L_27);
@@ -17977,7 +17977,7 @@ IL_001f_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1252>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1253>
 				ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_32 = __this->___opponentOutlineImages;
 				int32_t L_33 = V_0;
 				NullCheck(L_32);
@@ -17992,14 +17992,14 @@ IL_001f_1:
 
 IL_00ab_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1256>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1257>
 				int32_t L_37 = V_0;
 				V_0 = ((int32_t)il2cpp_codegen_add(L_37, 1));
 			}
 
 IL_00af_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1234>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1235>
 				bool L_38;
 				L_38 = Enumerator_MoveNext_mEA77F95B43FD74F22EB6B6313056101D0092DA5E((&V_1), Enumerator_MoveNext_mEA77F95B43FD74F22EB6B6313056101D0092DA5E_RuntimeMethod_var);
 				if (L_38)
@@ -18019,7 +18019,7 @@ IL_00af_1:
 
 IL_00cb:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1261>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1262>
 		int32_t L_39 = V_0;
 		V_4 = L_39;
 		goto IL_0120;
@@ -18027,7 +18027,7 @@ IL_00cb:
 
 IL_00d0:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1263>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1264>
 		ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_40 = __this->___opponentProfileImages;
 		int32_t L_41 = V_4;
 		NullCheck(L_40);
@@ -18042,7 +18042,7 @@ IL_00d0:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1263>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1264>
 		ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_45 = __this->___opponentProfileImages;
 		int32_t L_46 = V_4;
 		NullCheck(L_45);
@@ -18057,7 +18057,7 @@ IL_00d0:
 
 IL_00f5:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1264>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1265>
 		ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_50 = __this->___opponentOutlineImages;
 		int32_t L_51 = V_4;
 		NullCheck(L_50);
@@ -18072,7 +18072,7 @@ IL_00f5:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1264>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1265>
 		ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_55 = __this->___opponentOutlineImages;
 		int32_t L_56 = V_4;
 		NullCheck(L_55);
@@ -18087,14 +18087,14 @@ IL_00f5:
 
 IL_011a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1261>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1262>
 		int32_t L_60 = V_4;
 		V_4 = ((int32_t)il2cpp_codegen_add(L_60, 1));
 	}
 
 IL_0120:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1261>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1262>
 		int32_t L_61 = V_4;
 		ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_62 = __this->___opponentProfileImages;
 		NullCheck(L_62);
@@ -18104,11 +18104,11 @@ IL_0120:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1266>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1267>
 		return;
 	}
 }
-// Method Definition Index: 65735
+// Method Definition Index: 65737
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* GameManager_GetAvatarSprite_m7F09619692006CCEFF068E5541EE542FEC5D59F3 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, String_t* ___0_avatarKey, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18121,7 +18121,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CA
 	}
 	int32_t V_0 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1271>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1272>
 		String_t* L_0 = ___0_avatarKey;
 		bool L_1;
 		L_1 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_0, NULL);
@@ -18143,7 +18143,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CA
 
 IL_0015:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1273>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1274>
 		SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B* L_4 = __this->___availableProfileSprites;
 		if (!L_4)
 		{
@@ -18175,7 +18175,7 @@ IL_0028:
 
 IL_0031:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1277>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1278>
 		String_t* L_9 = ___0_avatarKey;
 		bool L_10;
 		L_10 = Int32_TryParse_mC928DE2FEC1C35ED5298BDDCA9868076E94B8A21(L_9, (&V_0), NULL);
@@ -18208,7 +18208,7 @@ IL_0031:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1278>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1279>
 		SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B* L_15 = __this->___availableProfileSprites;
 		int32_t L_16 = V_0;
 		NullCheck(L_15);
@@ -18219,7 +18219,7 @@ IL_0031:
 
 IL_005b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1281>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1282>
 		String_t* L_19 = ___0_avatarKey;
 		bool L_20;
 		L_20 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_19, _stringLiteral17ABE7AD4A4BC5737301F6AA3EA15C73AFCF8FD5, NULL);
@@ -18237,7 +18237,7 @@ IL_005b:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1281>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1282>
 		SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B* L_22 = __this->___availableProfileSprites;
 		NullCheck(L_22);
 		int32_t L_23 = 0;
@@ -18247,7 +18247,7 @@ IL_005b:
 
 IL_007a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1282>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1283>
 		String_t* L_25 = ___0_avatarKey;
 		bool L_26;
 		L_26 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_25, _stringLiteralEB882AB7990A63203FC4CD477AD235117FDCA90C, NULL);
@@ -18265,7 +18265,7 @@ IL_007a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1282>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1283>
 		SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B* L_28 = __this->___availableProfileSprites;
 		NullCheck(L_28);
 		int32_t L_29 = 1;
@@ -18275,7 +18275,7 @@ IL_007a:
 
 IL_009b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1285>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1286>
 		SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B* L_31 = __this->___availableProfileSprites;
 		if (!L_31)
 		{
@@ -18305,7 +18305,7 @@ IL_00ae:
 		return L_35;
 	}
 }
-// Method Definition Index: 65736
+// Method Definition Index: 65738
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_AssignAvatarAsync_m3194B986C9520C44B06A06ACFD4AD9D761FC7730 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___0_target, String_t* ___1_avatarKey, bool ___2_zoomIfLocalCustom, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18328,7 +18328,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_AssignAvatarAsync_m3194B986C
 		NullCheck(L_1);
 		L_1->___target = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___target), (void*)L_2);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1293>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1294>
 		U3CU3Ec__DisplayClass118_0_tE64640DDD8BEA7377738C0603B4A22617C4F67C0* L_3 = V_0;
 		NullCheck(L_3);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_4 = L_3->___target;
@@ -18341,13 +18341,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_AssignAvatarAsync_m3194B986C
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1293>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1294>
 		return;
 	}
 
 IL_001c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1295>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1296>
 		String_t* L_6 = ___1_avatarKey;
 		bool L_7;
 		L_7 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_6, NULL);
@@ -18367,7 +18367,7 @@ IL_001c:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1298>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1299>
 		BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_10;
 		L_10 = BackendAuthService_get_Instance_m74239149FFCCCF5A49AF965DCA0565780B051110_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -18379,7 +18379,6 @@ IL_001c:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1300>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1301>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1302>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1303>
@@ -18387,6 +18386,7 @@ IL_001c:
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1305>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1306>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1307>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1308>
 		BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* L_12;
 		L_12 = BackendAuthService_get_Instance_m74239149FFCCCF5A49AF965DCA0565780B051110_inline(NULL);
 		String_t* L_13 = ___1_avatarKey;
@@ -18400,7 +18400,7 @@ IL_001c:
 
 IL_0057:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1313>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1314>
 		U3CU3Ec__DisplayClass118_0_tE64640DDD8BEA7377738C0603B4A22617C4F67C0* L_16 = V_0;
 		NullCheck(L_16);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_17 = L_16->___target;
@@ -18413,21 +18413,21 @@ IL_0057:
 
 IL_0069:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1316>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1317>
 		return;
 	}
 }
-// Method Definition Index: 65737
+// Method Definition Index: 65739
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_RefreshPlayerProfile_m989EB013C0853C3B5F097B152F4C9FA03E9C1CFD (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1324>
-		GameManager_LoadPlayerProfileImage_mB7A61E2E9A792236E3CB7D7721BCF7BD24012AE3(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1325>
+		GameManager_LoadPlayerProfileImage_mB7A61E2E9A792236E3CB7D7721BCF7BD24012AE3(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1326>
 		return;
 	}
 }
-// Method Definition Index: 65738
+// Method Definition Index: 65740
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_AssignOutlineColors_m0CFE590F51593BD7FF8A8845C0605BF1062E708D (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18476,7 +18476,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_AssignOutlineColors_m0CFE590
 	memset((&V_8), 0, sizeof(V_8));
 	int32_t G_B4_0 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1335>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1336>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1337>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1338>
@@ -18485,6 +18484,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_AssignOutlineColors_m0CFE590
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1341>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1342>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1343>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1344>
 		ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389* L_0 = (ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389*)(ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389*)SZArrayNew(ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389_il2cpp_TypeInfo_var, (uint32_t)6);
 		ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389* L_1 = L_0;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_2;
@@ -18517,14 +18517,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_AssignOutlineColors_m0CFE590
 		NullCheck(L_11);
 		(L_11)->SetAt(static_cast<il2cpp_array_size_t>(5), (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F)L_12);
 		V_0 = L_11;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1346>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1347>
 		ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389* L_13 = V_0;
 		List_1_t242CDEAEC9C92000DA96982CDB9D592DDE2AADAF* L_14 = (List_1_t242CDEAEC9C92000DA96982CDB9D592DDE2AADAF*)il2cpp_codegen_object_new(List_1_t242CDEAEC9C92000DA96982CDB9D592DDE2AADAF_il2cpp_TypeInfo_var);
 		List_1__ctor_mB12F0888925D179DFE50A3D23E38061E3062AE71(L_14, (RuntimeObject*)L_13, List_1__ctor_mB12F0888925D179DFE50A3D23E38061E3062AE71_RuntimeMethod_var);
 		V_1 = L_14;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1349>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1350>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1351>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1352>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_15 = __this->___currentMatchData;
 		if (!L_15)
 		{
@@ -18561,7 +18561,7 @@ IL_0092:
 IL_00a2:
 	{
 		V_2 = G_B4_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1354>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1355>
 		int32_t L_21 = V_2;
 		ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389* L_22 = V_0;
 		NullCheck(L_22);
@@ -18571,7 +18571,7 @@ IL_00a2:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1356>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1357>
 		ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389* L_23 = V_0;
 		NullCheck(L_23);
 		int32_t L_24 = ((int32_t)(((RuntimeArray*)L_23)->max_length));
@@ -18587,7 +18587,7 @@ IL_00a2:
 
 IL_00c6:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1360>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1361>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_30 = __this->___playerOutlineImage;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_31;
@@ -18598,7 +18598,7 @@ IL_00c6:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1362>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1363>
 		List_1_t242CDEAEC9C92000DA96982CDB9D592DDE2AADAF* L_32 = V_1;
 		NullCheck(L_32);
 		int32_t L_33;
@@ -18609,7 +18609,7 @@ IL_00c6:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1364>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1365>
 		List_1_t242CDEAEC9C92000DA96982CDB9D592DDE2AADAF* L_34 = V_1;
 		NullCheck(L_34);
 		int32_t L_35;
@@ -18617,24 +18617,24 @@ IL_00c6:
 		int32_t L_36;
 		L_36 = Random_Range_m6763D9767F033357F88B6637F048F4ACA4123B68(0, L_35, NULL);
 		V_3 = L_36;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1365>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1366>
 		List_1_t242CDEAEC9C92000DA96982CDB9D592DDE2AADAF* L_37 = V_1;
 		int32_t L_38 = V_3;
 		NullCheck(L_37);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_39;
 		L_39 = List_1_get_Item_mE616D49F5F6197745A12A06084EEE9E6FFCF017F(L_37, L_38, List_1_get_Item_mE616D49F5F6197745A12A06084EEE9E6FFCF017F_RuntimeMethod_var);
 		__this->___playerOutlineColor = L_39;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1366>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1367>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_40 = __this->___playerOutlineImage;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_41 = __this->___playerOutlineColor;
 		NullCheck(L_40);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_40, L_41);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1367>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1368>
 		List_1_t242CDEAEC9C92000DA96982CDB9D592DDE2AADAF* L_42 = V_1;
 		int32_t L_43 = V_3;
 		NullCheck(L_42);
 		List_1_RemoveAt_mB1EBE3592D556EB57145AB2552F9191876B348DF(L_42, L_43, List_1_RemoveAt_mB1EBE3592D556EB57145AB2552F9191876B348DF_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1368>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1369>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_44 = __this->___playerOutlineColor;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_45 = L_44;
 		RuntimeObject* L_46 = Box(Color_tD001788D726C3A7F1379BEED0260B9591F440C1F_il2cpp_TypeInfo_var, &L_45);
@@ -18647,18 +18647,18 @@ IL_00c6:
 
 IL_012e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1373>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1374>
 		ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389* L_48 = V_0;
 		NullCheck(L_48);
 		int32_t L_49 = 0;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_50 = (L_48)->GetAt(static_cast<il2cpp_array_size_t>(L_49));
 		__this->___playerOutlineColor = L_50;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1374>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1375>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_51 = __this->___playerOutlineImage;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_52 = __this->___playerOutlineColor;
 		NullCheck(L_51);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_51, L_52);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1375>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1376>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral66CC503A11C0368DE52083DB693C12D5D251436E, NULL);
 		goto IL_0162;
@@ -18666,14 +18666,14 @@ IL_012e:
 
 IL_0158:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1380>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1381>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral9916C8A547F4F2394F216BBF0D3771F541C3B6E8, NULL);
 	}
 
 IL_0162:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1384>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1385>
 		ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_53 = __this->___opponentOutlineImages;
 		if (!L_53)
 		{
@@ -18689,9 +18689,9 @@ IL_0162:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1386>
-		V_4 = 0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1387>
+		V_4 = 0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1388>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_55 = __this->___currentMatchData;
 		if (!L_55)
 		{
@@ -18708,7 +18708,7 @@ IL_0162:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1389>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1390>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_58 = __this->___currentMatchData;
 		NullCheck(L_58);
 		Dictionary_2_t38334E2D807AD276857B2117EF4E7C07E4813447* L_59 = L_58->___playerAvatars;
@@ -18735,11 +18735,11 @@ FINALLY_0274:
 
 IL_01ae_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1389>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1390>
 				KeyValuePair_2_t2F5C070A71118BEEBC54803DBEDCA88C74A28428 L_61;
 				L_61 = Enumerator_get_Current_m9956CE77BE878CC16AEB25992166A9D5CC809E71_inline((&V_5), Enumerator_get_Current_m9956CE77BE878CC16AEB25992166A9D5CC809E71_RuntimeMethod_var);
 				V_6 = L_61;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1391>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1392>
 				String_t* L_62;
 				L_62 = KeyValuePair_2_get_Key_m35295C5B29FFED6DF7B97031F8E0FFEE92C3961E_inline((&V_6), KeyValuePair_2_get_Key_m35295C5B29FFED6DF7B97031F8E0FFEE92C3961E_RuntimeMethod_var);
 				String_t* L_63;
@@ -18752,7 +18752,7 @@ IL_01ae_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1393>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1394>
 				int32_t L_65 = V_4;
 				ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_66 = __this->___opponentOutlineImages;
 				NullCheck(L_66);
@@ -18771,7 +18771,7 @@ IL_01ae_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1395>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1396>
 				ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_69 = __this->___opponentOutlineImages;
 				int32_t L_70 = V_4;
 				NullCheck(L_69);
@@ -18786,7 +18786,7 @@ IL_01ae_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1397>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1398>
 				List_1_t242CDEAEC9C92000DA96982CDB9D592DDE2AADAF* L_74 = V_1;
 				NullCheck(L_74);
 				int32_t L_75;
@@ -18797,7 +18797,7 @@ IL_01ae_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1399>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1400>
 				List_1_t242CDEAEC9C92000DA96982CDB9D592DDE2AADAF* L_76 = V_1;
 				NullCheck(L_76);
 				int32_t L_77;
@@ -18805,20 +18805,20 @@ IL_01ae_1:
 				int32_t L_78;
 				L_78 = Random_Range_m6763D9767F033357F88B6637F048F4ACA4123B68(0, L_77, NULL);
 				V_7 = L_78;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1400>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1401>
 				List_1_t242CDEAEC9C92000DA96982CDB9D592DDE2AADAF* L_79 = V_1;
 				int32_t L_80 = V_7;
 				NullCheck(L_79);
 				Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_81;
 				L_81 = List_1_get_Item_mE616D49F5F6197745A12A06084EEE9E6FFCF017F(L_79, L_80, List_1_get_Item_mE616D49F5F6197745A12A06084EEE9E6FFCF017F_RuntimeMethod_var);
 				V_8 = L_81;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1401>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1402>
 				ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389* L_82 = __this->___opponentOutlineColors;
 				int32_t L_83 = V_4;
 				Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_84 = V_8;
 				NullCheck(L_82);
 				(L_82)->SetAt(static_cast<il2cpp_array_size_t>(L_83), (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F)L_84);
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1402>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1403>
 				ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_85 = __this->___opponentOutlineImages;
 				int32_t L_86 = V_4;
 				NullCheck(L_85);
@@ -18827,12 +18827,12 @@ IL_01ae_1:
 				Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_89 = V_8;
 				NullCheck(L_88);
 				VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_88, L_89);
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1403>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1404>
 				List_1_t242CDEAEC9C92000DA96982CDB9D592DDE2AADAF* L_90 = V_1;
 				int32_t L_91 = V_7;
 				NullCheck(L_90);
 				List_1_RemoveAt_mB1EBE3592D556EB57145AB2552F9191876B348DF(L_90, L_91, List_1_RemoveAt_mB1EBE3592D556EB57145AB2552F9191876B348DF_RuntimeMethod_var);
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1404>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1405>
 				int32_t L_92 = V_4;
 				int32_t L_93 = ((int32_t)il2cpp_codegen_add(L_92, 1));
 				RuntimeObject* L_94 = Box(il2cpp_defaults.int32_class, &L_93);
@@ -18847,14 +18847,14 @@ IL_01ae_1:
 
 IL_0260_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1407>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1408>
 				int32_t L_99 = V_4;
 				V_4 = ((int32_t)il2cpp_codegen_add(L_99, 1));
 			}
 
 IL_0266_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1389>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1390>
 				bool L_100;
 				L_100 = Enumerator_MoveNext_mEA77F95B43FD74F22EB6B6313056101D0092DA5E((&V_5), Enumerator_MoveNext_mEA77F95B43FD74F22EB6B6313056101D0092DA5E_RuntimeMethod_var);
 				if (L_100)
@@ -18874,20 +18874,20 @@ IL_0266_1:
 
 IL_0282:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1414>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1415>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralB6499D95724A93DB1BCF051F8E74B0B11FD13144, NULL);
 	}
 
 IL_028c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1418>
-		GameManager_UpdateNumberGridColors_m6C16EACAC232661FA7F5A081943E1A183F661233(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1419>
+		GameManager_UpdateNumberGridColors_m6C16EACAC232661FA7F5A081943E1A183F661233(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1420>
 		return;
 	}
 }
-// Method Definition Index: 65739
+// Method Definition Index: 65741
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_UpdateNumberGridColors_m6C16EACAC232661FA7F5A081943E1A183F661233 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18898,7 +18898,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_UpdateNumberGridColors_m6C16
 	}
 	int32_t V_0 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1426>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1427>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_0 = __this->___numberGrid;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -18909,12 +18909,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_UpdateNumberGridColors_m6C16
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1429>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1430>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_2 = __this->___numberGrid;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = __this->___playerOutlineColor;
 		NullCheck(L_2);
 		NumberGrid_SetPlayerOutlineColor_mAB2FC02618D437FE7E708FFA8516278C54296A12(L_2, L_3, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1432>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1433>
 		ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389* L_4 = __this->___opponentOutlineColors;
 		if (!L_4)
 		{
@@ -18922,14 +18922,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_UpdateNumberGridColors_m6C16
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1434>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1435>
 		V_0 = 0;
 		goto IL_0047;
 	}
 
 IL_002b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1436>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1437>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_5 = __this->___numberGrid;
 		int32_t L_6 = V_0;
 		ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389* L_7 = __this->___opponentOutlineColors;
@@ -18939,14 +18939,14 @@ IL_002b:
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_10 = (L_7)->GetAt(static_cast<il2cpp_array_size_t>(L_9));
 		NullCheck(L_5);
 		NumberGrid_SetCPUOutlineColor_m44C0497881EC5455236AEDAA96F7EB348799FC19(L_5, L_6, L_10, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1434>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1435>
 		int32_t L_11 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_11, 1));
 	}
 
 IL_0047:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1434>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1435>
 		int32_t L_12 = V_0;
 		ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389* L_13 = __this->___opponentOutlineColors;
 		NullCheck(L_13);
@@ -18958,15 +18958,15 @@ IL_0047:
 
 IL_0052:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1440>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1441>
 		return;
 	}
 }
-// Method Definition Index: 65740
+// Method Definition Index: 65742
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F GameManager_GetOutlineColor_m49050822477EB09F5F0A591B3AA4EBEFC799BF81 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, int32_t ___0_playerType, int32_t ___1_opponentIndex, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1447>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1448>
 		int32_t L_0 = ___0_playerType;
 		if (L_0)
 		{
@@ -18974,14 +18974,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1449>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1450>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = __this->___playerOutlineColor;
 		return L_1;
 	}
 
 IL_000a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1453>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1454>
 		ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389* L_2 = __this->___opponentOutlineColors;
 		if (!L_2)
 		{
@@ -19005,7 +19005,7 @@ IL_000a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1455>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1456>
 		ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389* L_6 = __this->___opponentOutlineColors;
 		int32_t L_7 = ___1_opponentIndex;
 		NullCheck(L_6);
@@ -19016,13 +19016,13 @@ IL_000a:
 
 IL_002e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1457>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1458>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_10;
 		L_10 = Color_get_red_mA2E53E7173FDC97E68E335049AB0FAAEE43A844D_inline(NULL);
 		return L_10;
 	}
 }
-// Method Definition Index: 65741
+// Method Definition Index: 65743
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F GameManager_GetRandomColor_m08FE1F24232FF4F86EA597C2A2C80E656E9D2D21 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19040,7 +19040,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 	ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389* V_0 = NULL;
 	int32_t V_1 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1466>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1467>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1468>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1469>
@@ -19049,6 +19048,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1472>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1473>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1474>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1475>
 		ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389* L_0 = (ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389*)(ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389*)SZArrayNew(ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389_il2cpp_TypeInfo_var, (uint32_t)6);
 		ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389* L_1 = L_0;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_2;
@@ -19081,13 +19081,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 		NullCheck(L_11);
 		(L_11)->SetAt(static_cast<il2cpp_array_size_t>(5), (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F)L_12);
 		V_0 = L_11;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1477>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1478>
 		ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389* L_13 = V_0;
 		NullCheck(L_13);
 		int32_t L_14;
 		L_14 = Random_Range_m6763D9767F033357F88B6637F048F4ACA4123B68(0, ((int32_t)(((RuntimeArray*)L_13)->max_length)), NULL);
 		V_1 = L_14;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1478>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1479>
 		ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389* L_15 = V_0;
 		int32_t L_16 = V_1;
 		NullCheck(L_15);
@@ -19096,7 +19096,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 		return L_18;
 	}
 }
-// Method Definition Index: 65742
+// Method Definition Index: 65744
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F GameManager_ParseHexColor_m46D7E59C78A835086289D5AEBD35538C4C6C8A92 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, String_t* ___0_hex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19110,7 +19110,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1486>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1487>
 		String_t* L_0 = ___0_hex;
 		bool L_1;
 		L_1 = ColorUtility_TryParseHtmlString_m8E4DF912AF247EE6893655537CDF0FB47BFE563D(L_0, (&V_0), NULL);
@@ -19120,36 +19120,36 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1488>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1489>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_2 = V_0;
 		return L_2;
 	}
 
 IL_000c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1492>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1493>
 		String_t* L_3 = ___0_hex;
 		String_t* L_4;
 		L_4 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral3E03E038A048D7797F1498C5040B21748D0EBE59, L_3, _stringLiteralADAD5A26F4A1FBD0882427A796DF0FEADA2CBD5F, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_4, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1493>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1494>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_5;
 		L_5 = Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_inline(NULL);
 		return L_5;
 	}
 }
-// Method Definition Index: 65743
+// Method Definition Index: 65745
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_ReassignOutlineColors_m6D4963AE82AB8554DC922A4A8C0E1C6CCA569A5F (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1501>
-		GameManager_AssignOutlineColors_m0CFE590F51593BD7FF8A8845C0605BF1062E708D(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1502>
+		GameManager_AssignOutlineColors_m0CFE590F51593BD7FF8A8845C0605BF1062E708D(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1503>
 		return;
 	}
 }
-// Method Definition Index: 65744
+// Method Definition Index: 65746
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_UpdateOutlineFillAmounts_m7A38CCE91B3A2F9CE7DA89E9DDC0A8B69D5C0026 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19177,7 +19177,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_UpdateOutlineFillAmounts_m7A
 	KeyValuePair_2_t203D89707A14A98B3FB295DFFAC0F4D3CF2B1078 V_7;
 	memset((&V_7), 0, sizeof(V_7));
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1513>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1514>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_0 = __this->___playerOutlineImage;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -19198,14 +19198,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_UpdateOutlineFillAmounts_m7A
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1515>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1516>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_4 = __this->___playerNumberGrid;
 		NullCheck(L_4);
 		Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588* L_5;
 		L_5 = NumberGrid_GetSelectionCounts_m7BBD1D87A2A27E142273DF2482B47D9ACA563690(L_4, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1516>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1517>
 		V_0 = 0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1518>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1519>
 		NullCheck(L_5);
 		Enumerator_tA2BDFFCCD73E0822BD39B8A162012DCD95F9FDCA L_6;
 		L_6 = Dictionary_2_GetEnumerator_m5B4AB9234E9B5AA8776F5A5E98BD96AADD36A445(L_5, Dictionary_2_GetEnumerator_m5B4AB9234E9B5AA8776F5A5E98BD96AADD36A445_RuntimeMethod_var);
@@ -19229,11 +19229,11 @@ FINALLY_004e:
 
 IL_0031_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1518>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1519>
 				KeyValuePair_2_t203D89707A14A98B3FB295DFFAC0F4D3CF2B1078 L_7;
 				L_7 = Enumerator_get_Current_m58E48C7A4B001DD9CC590DEF18D64A3D9E5E6F7B_inline((&V_2), Enumerator_get_Current_m58E48C7A4B001DD9CC590DEF18D64A3D9E5E6F7B_RuntimeMethod_var);
 				V_3 = L_7;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1520>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1521>
 				int32_t L_8 = V_0;
 				int32_t L_9;
 				L_9 = KeyValuePair_2_get_Value_m49EC6C1CD52DC0ED12D5C9116368BB112EA11917_inline((&V_3), KeyValuePair_2_get_Value_m49EC6C1CD52DC0ED12D5C9116368BB112EA11917_RuntimeMethod_var);
@@ -19242,7 +19242,7 @@ IL_0031_1:
 
 IL_0043_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1518>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1519>
 				bool L_10;
 				L_10 = Enumerator_MoveNext_mCB84750BAFE59C7D53C86B28A910BBE68DDE5D33((&V_2), Enumerator_MoveNext_mCB84750BAFE59C7D53C86B28A910BBE68DDE5D33_RuntimeMethod_var);
 				if (L_10)
@@ -19262,15 +19262,15 @@ IL_0043_1:
 
 IL_005c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1522>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1523>
 		int32_t L_11 = V_0;
 		V_1 = ((float)il2cpp_codegen_multiply(((float)L_11), (0.0399999991f)));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1523>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1524>
 		float L_12 = V_1;
 		float L_13;
 		L_13 = Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline(L_12, NULL);
 		V_1 = L_13;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1524>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1525>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_14 = __this->___playerOutlineImage;
 		float L_15 = V_1;
 		NullCheck(L_14);
@@ -19279,7 +19279,7 @@ IL_005c:
 
 IL_0078:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1528>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1529>
 		ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_16 = __this->___opponentOutlineImages;
 		if (!L_16)
 		{
@@ -19287,14 +19287,14 @@ IL_0078:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1530>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1531>
 		V_4 = 0;
 		goto IL_0150;
 	}
 
 IL_008b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1532>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1533>
 		ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_17 = __this->___opponentOutlineImages;
 		int32_t L_18 = V_4;
 		NullCheck(L_17);
@@ -19326,9 +19326,9 @@ IL_008b:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1534>
-		V_5 = 0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1535>
+		V_5 = 0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1536>
 		Dictionary_2_t03CB0E456E3F308DB7BD58AC650EDBFA1BB3E3E8* L_28 = __this->___opponentNumberGrids;
 		int32_t L_29 = V_4;
 		NullCheck(L_28);
@@ -19354,7 +19354,7 @@ IL_008b:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1537>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1538>
 		Dictionary_2_t03CB0E456E3F308DB7BD58AC650EDBFA1BB3E3E8* L_35 = __this->___opponentNumberGrids;
 		int32_t L_36 = V_4;
 		NullCheck(L_35);
@@ -19363,7 +19363,7 @@ IL_008b:
 		NullCheck(L_37);
 		Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588* L_38;
 		L_38 = NumberGrid_GetSelectionCounts_m7BBD1D87A2A27E142273DF2482B47D9ACA563690(L_37, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1538>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1539>
 		NullCheck(L_38);
 		Enumerator_tA2BDFFCCD73E0822BD39B8A162012DCD95F9FDCA L_39;
 		L_39 = Dictionary_2_GetEnumerator_m5B4AB9234E9B5AA8776F5A5E98BD96AADD36A445(L_38, Dictionary_2_GetEnumerator_m5B4AB9234E9B5AA8776F5A5E98BD96AADD36A445_RuntimeMethod_var);
@@ -19387,11 +19387,11 @@ FINALLY_0118:
 
 IL_00f8_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1538>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1539>
 				KeyValuePair_2_t203D89707A14A98B3FB295DFFAC0F4D3CF2B1078 L_40;
 				L_40 = Enumerator_get_Current_m58E48C7A4B001DD9CC590DEF18D64A3D9E5E6F7B_inline((&V_2), Enumerator_get_Current_m58E48C7A4B001DD9CC590DEF18D64A3D9E5E6F7B_RuntimeMethod_var);
 				V_7 = L_40;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1540>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1541>
 				int32_t L_41 = V_5;
 				int32_t L_42;
 				L_42 = KeyValuePair_2_get_Value_m49EC6C1CD52DC0ED12D5C9116368BB112EA11917_inline((&V_7), KeyValuePair_2_get_Value_m49EC6C1CD52DC0ED12D5C9116368BB112EA11917_RuntimeMethod_var);
@@ -19400,7 +19400,7 @@ IL_00f8_1:
 
 IL_010d_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1538>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1539>
 				bool L_43;
 				L_43 = Enumerator_MoveNext_mCB84750BAFE59C7D53C86B28A910BBE68DDE5D33((&V_2), Enumerator_MoveNext_mCB84750BAFE59C7D53C86B28A910BBE68DDE5D33_RuntimeMethod_var);
 				if (L_43)
@@ -19420,15 +19420,15 @@ IL_010d_1:
 
 IL_0126:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1543>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1544>
 		int32_t L_44 = V_5;
 		V_6 = ((float)il2cpp_codegen_multiply(((float)L_44), (0.0399999991f)));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1544>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1545>
 		float L_45 = V_6;
 		float L_46;
 		L_46 = Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline(L_45, NULL);
 		V_6 = L_46;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1545>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1546>
 		ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_47 = __this->___opponentOutlineImages;
 		int32_t L_48 = V_4;
 		NullCheck(L_47);
@@ -19441,14 +19441,14 @@ IL_0126:
 
 IL_014a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1530>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1531>
 		int32_t L_52 = V_4;
 		V_4 = ((int32_t)il2cpp_codegen_add(L_52, 1));
 	}
 
 IL_0150:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1530>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1531>
 		int32_t L_53 = V_4;
 		ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_54 = __this->___opponentOutlineImages;
 		NullCheck(L_54);
@@ -19460,11 +19460,11 @@ IL_0150:
 
 IL_015f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1549>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1550>
 		return;
 	}
 }
-// Method Definition Index: 65745
+// Method Definition Index: 65747
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_ResetOutlineFillAmounts_m38857726E6EC8D4E94F3D21A368832A699ABABA4 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19475,7 +19475,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_ResetOutlineFillAmounts_m388
 	}
 	int32_t V_0 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1557>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1558>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_0 = __this->___playerOutlineImage;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -19486,7 +19486,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_ResetOutlineFillAmounts_m388
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1559>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1560>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_2 = __this->___playerOutlineImage;
 		NullCheck(L_2);
 		Image_set_fillAmount_m8A9B55F47F966A3214EAC4ACBFE198776A98FAA7(L_2, (0.0f), NULL);
@@ -19494,7 +19494,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_ResetOutlineFillAmounts_m388
 
 IL_001e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1563>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1564>
 		ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_3 = __this->___opponentOutlineImages;
 		if (!L_3)
 		{
@@ -19502,14 +19502,14 @@ IL_001e:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1565>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1566>
 		V_0 = 0;
 		goto IL_0050;
 	}
 
 IL_002a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1567>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1568>
 		ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_4 = __this->___opponentOutlineImages;
 		int32_t L_5 = V_0;
 		NullCheck(L_4);
@@ -19524,7 +19524,7 @@ IL_002a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1569>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1570>
 		ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_9 = __this->___opponentOutlineImages;
 		int32_t L_10 = V_0;
 		NullCheck(L_9);
@@ -19536,14 +19536,14 @@ IL_002a:
 
 IL_004c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1565>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1566>
 		int32_t L_13 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_13, 1));
 	}
 
 IL_0050:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1565>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1566>
 		int32_t L_14 = V_0;
 		ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_15 = __this->___opponentOutlineImages;
 		NullCheck(L_15);
@@ -19555,11 +19555,11 @@ IL_0050:
 
 IL_005b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1573>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1574>
 		return;
 	}
 }
-// Method Definition Index: 65746
+// Method Definition Index: 65748
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_ResetGameState_mF33FB9053CFB001BA59AF315587CBC6520941C66 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19572,7 +19572,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_ResetGameState_mF33FB9053CFB
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1582>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1583>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_0 = __this->___timerCoroutine;
 		if (!L_0)
 		{
@@ -19580,51 +19580,51 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_ResetGameState_mF33FB9053CFB
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1584>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1585>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_1 = __this->___timerCoroutine;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1585>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1586>
 		__this->___timerCoroutine = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___timerCoroutine), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
 	}
 
 IL_001b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1589>
-		__this->___isGameActive = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1590>
-		__this->___timerStarted = (bool)0;
+		__this->___isGameActive = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1591>
-		__this->___winnerScreenShown = (bool)0;
+		__this->___timerStarted = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1592>
-		__this->___isWaitingForServer = (bool)0;
+		__this->___winnerScreenShown = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1593>
+		__this->___isWaitingForServer = (bool)0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1594>
 		__this->___prizesAwardedForThisMatch = (bool)0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1595>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1596>
 		float L_2 = __this->___initialGameTimer;
 		__this->___gameTimer = L_2;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1596>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1597>
 		float L_3 = __this->___gameTimer;
 		__this->___currentTimer = L_3;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1599>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1600>
 		__this->___currentLobbyConfig = (LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentLobbyConfig), (void*)(LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6*)NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1600>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1601>
 		__this->___currentMatchData = (StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentMatchData), (void*)(StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486*)NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1603>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1604>
 		Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588* L_4 = __this->___networkPlayerScores;
 		NullCheck(L_4);
 		Dictionary_2_Clear_m841DBE29811833266CC127714688998A50D5F7CD(L_4, Dictionary_2_Clear_m841DBE29811833266CC127714688998A50D5F7CD_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1604>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1605>
 		Dictionary_2_tD703CB7270FBE4380B4E73B621DD5B54EB65B58D* L_5 = __this->___networkPlayerTimes;
 		NullCheck(L_5);
 		Dictionary_2_Clear_m980C086EE2CB37B319F928DE06D8966A6C760231(L_5, Dictionary_2_Clear_m980C086EE2CB37B319F928DE06D8966A6C760231_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1605>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1606>
 		__this->___localMatchScore = 0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1608>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1609>
 		GameManager_ResetOutlineFillAmounts_m38857726E6EC8D4E94F3D21A368832A699ABABA4(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1610>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1611>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = __this->___calculateLoadingScreen;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_7;
@@ -19635,7 +19635,7 @@ IL_001b:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1610>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1611>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8 = __this->___calculateLoadingScreen;
 		NullCheck(L_8);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_8, (bool)0, NULL);
@@ -19643,7 +19643,7 @@ IL_001b:
 
 IL_00a1:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1611>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1612>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_9 = __this->___quitPanel;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
@@ -19654,7 +19654,7 @@ IL_00a1:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1611>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1612>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_11 = __this->___quitPanel;
 		NullCheck(L_11);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_11, (bool)0, NULL);
@@ -19662,7 +19662,7 @@ IL_00a1:
 
 IL_00bb:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1614>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1615>
 		ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* L_12 = ((ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_StaticFields*)il2cpp_codegen_static_fields_for(ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_il2cpp_TypeInfo_var))->___Instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_13;
@@ -19673,7 +19673,7 @@ IL_00bb:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1616>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1617>
 		ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* L_14 = ((ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_StaticFields*)il2cpp_codegen_static_fields_for(ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_il2cpp_TypeInfo_var))->___Instance;
 		NullCheck(L_14);
 		ScoreFeedbackUIManager_ResetScore_m56F2BA9C98FD5DC4B0AF89A1F56AFAA4662A5188(L_14, NULL);
@@ -19681,7 +19681,7 @@ IL_00bb:
 
 IL_00d2:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1623>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1624>
 		SocketManager_tFA162C4D30D5A71D0A5F10FDA0CF83B2B1101650* L_15;
 		L_15 = SocketManager_get_Instance_mFAF3D466262B9D9A471AB4FF8165EACB053F8CBC_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -19699,11 +19699,11 @@ IL_00d2:
 
 IL_00e5:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1630>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1631>
 		return;
 	}
 }
-// Method Definition Index: 65747
+// Method Definition Index: 65749
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_ConfigureGameFromLobby_mDCE62EF85159BF053C1DE9CD67977BF98B5658F5 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* ___0_config, int32_t ___1_overrideCPUs, StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* ___2_matchData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19736,7 +19736,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_ConfigureGameFromLobby_mDCE6
 	int32_t G_B15_0 = 0;
 	int32_t G_B15_1 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1638>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1639>
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_0 = ___0_config;
 		NullCheck(L_0);
 		String_t* L_1 = L_0->___lobbyId;
@@ -19747,11 +19747,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_ConfigureGameFromLobby_mDCE6
 		L_5 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral70048A18DD49074F51288054256B8012426254F4, L_1, L_4, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_5, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1639>
-		__this->___localPlayerForfeited = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1640>
+		__this->___localPlayerForfeited = (bool)0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1641>
 		MatchmakingModel_ClearLocalForfeitPending_m457EB7050CE851971877236CDBC118F3FE4ED562(NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1643>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1644>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = __this->___gameplayScreen;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_7;
@@ -19772,7 +19772,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_ConfigureGameFromLobby_mDCE6
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1645>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1646>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_10 = __this->___gameplayScreen;
 		NullCheck(L_10);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_10, (bool)1, NULL);
@@ -19780,11 +19780,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_ConfigureGameFromLobby_mDCE6
 
 IL_0051:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1648>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1649>
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_11 = ___0_config;
 		__this->___currentLobbyConfig = L_11;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentLobbyConfig), (void*)L_11);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1650>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1651>
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_12 = ___0_config;
 		if (L_12)
 		{
@@ -19792,16 +19792,16 @@ IL_0051:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1652>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1653>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteralABF7F26965947AEA0CDB9E779C6671C29CC9ED29, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1653>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1654>
 		return;
 	}
 
 IL_0066:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1657>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1658>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_13 = __this->___timerCoroutine;
 		if (!L_13)
 		{
@@ -19809,32 +19809,32 @@ IL_0066:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1659>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1660>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_14 = __this->___timerCoroutine;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_14, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1660>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1661>
 		__this->___timerCoroutine = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___timerCoroutine), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
 	}
 
 IL_0081:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1662>
-		__this->___isGameActive = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1663>
+		__this->___isGameActive = (bool)0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1664>
 		__this->___timerStarted = (bool)0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1667>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1668>
 		GameManager_ResetWinnerScreenUI_mB142D1CC347257EF99B54F05FFF88B002765AFBD(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1670>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1671>
 		GameManager_ResetOutlineFillAmounts_m38857726E6EC8D4E94F3D21A368832A699ABABA4(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1672>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1673>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral3CD7481A0E5BCF73B666098535FE2A52148570E9, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1675>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1676>
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_15 = ___0_config;
 		__this->___currentLobbyConfig = L_15;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentLobbyConfig), (void*)L_15);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1677>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1678>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_16 = ___2_matchData;
 		if (L_16)
 		{
@@ -19842,7 +19842,7 @@ IL_0081:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1679>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1680>
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_17 = ___0_config;
 		if (!L_17)
 		{
@@ -19876,7 +19876,7 @@ IL_00be:
 IL_00c4:
 	{
 		V_0 = G_B12_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1680>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1681>
 		int32_t L_22 = V_0;
 		int32_t L_23 = L_22;
 		RuntimeObject* L_24 = Box(il2cpp_defaults.int32_class, &L_23);
@@ -19884,7 +19884,7 @@ IL_00c4:
 		L_25 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral696406A6D9A355D189342CB97417961152A91A5B, L_24, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_25, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1681>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1682>
 		int32_t L_26 = V_0;
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_27 = ___0_config;
 		if (L_27)
@@ -19918,11 +19918,11 @@ IL_00e9:
 
 IL_00f0:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1683>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1684>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_31 = ___2_matchData;
 		__this->___currentMatchData = L_31;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentMatchData), (void*)L_31);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1685>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1686>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_32 = ___2_matchData;
 		NullCheck(L_32);
 		String_t* L_33 = L_32->___roomId;
@@ -19935,7 +19935,7 @@ IL_00f0:
 		L_38 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral4D4468319445427A80E8C7521999CEB35F327FD2, L_33, L_37, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_38, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1691>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1692>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_39 = ___2_matchData;
 		NullCheck(L_39);
 		int32_t L_40 = L_39->___timeRemaining;
@@ -19945,12 +19945,12 @@ IL_00f0:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1693>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1694>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_41 = ___2_matchData;
 		NullCheck(L_41);
 		int32_t L_42 = L_41->___timeRemaining;
 		__this->___gameTimer = ((float)L_42);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1694>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1695>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_43 = ___2_matchData;
 		NullCheck(L_43);
 		int32_t L_44 = L_43->___timeRemaining;
@@ -19965,7 +19965,7 @@ IL_00f0:
 
 IL_0149:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1696>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1697>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_48 = ___2_matchData;
 		NullCheck(L_48);
 		int32_t L_49 = L_48->___duration;
@@ -19975,7 +19975,7 @@ IL_0149:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1698>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1699>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_50 = ___2_matchData;
 		NullCheck(L_50);
 		int32_t L_51 = L_50->___duration;
@@ -19985,7 +19985,7 @@ IL_0149:
 
 IL_0161:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1702>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1703>
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_52 = ___0_config;
 		NullCheck(L_52);
 		float L_53 = L_52->___gameTimer;
@@ -19994,16 +19994,16 @@ IL_0161:
 
 IL_016d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1705>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1706>
 		float L_54 = __this->___gameTimer;
 		__this->___currentTimer = L_54;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1708>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1709>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_55 = ___2_matchData;
 		GameManager_SetUpOpponentsFromMatch_mC33FE40B81C4DE318D2E7F27230A52F7069E03C6(__this, L_55, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1709>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1710>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_56 = ___2_matchData;
 		GameManager_CreateIndividualNumberGrids_m0A3F43B9D2E3CC33D018298D01017358972D6464(__this, L_56, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1712>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1713>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_57 = ___2_matchData;
 		NullCheck(L_57);
 		Dictionary_2_t0D0079AFA6C46DD2191FF975203F4B274F05C15E* L_58 = L_57->___gameState;
@@ -20027,7 +20027,7 @@ IL_016d:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1714>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1715>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_63 = ___2_matchData;
 		NullCheck(L_63);
 		Dictionary_2_t0D0079AFA6C46DD2191FF975203F4B274F05C15E* L_64 = L_63->___gameState;
@@ -20039,7 +20039,7 @@ IL_016d:
 		NullCheck(L_66);
 		int32_t L_67 = L_66->___score;
 		__this->___localMatchScore = L_67;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1715>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1716>
 		ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* L_68 = ((ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_StaticFields*)il2cpp_codegen_static_fields_for(ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_il2cpp_TypeInfo_var))->___Instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_69;
@@ -20050,7 +20050,7 @@ IL_016d:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1717>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1718>
 		ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* L_70 = ((ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_StaticFields*)il2cpp_codegen_static_fields_for(ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_il2cpp_TypeInfo_var))->___Instance;
 		int32_t L_71 = __this->___localMatchScore;
 		NullCheck(L_70);
@@ -20059,7 +20059,7 @@ IL_016d:
 
 IL_01d9:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1719>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1720>
 		int32_t L_72 = __this->___localMatchScore;
 		int32_t L_73 = L_72;
 		RuntimeObject* L_74 = Box(il2cpp_defaults.int32_class, &L_73);
@@ -20072,9 +20072,9 @@ IL_01d9:
 
 IL_01f5:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1723>
-		__this->___localMatchScore = 0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1724>
+		__this->___localMatchScore = 0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1725>
 		ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* L_76 = ((ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_StaticFields*)il2cpp_codegen_static_fields_for(ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_il2cpp_TypeInfo_var))->___Instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_77;
@@ -20085,7 +20085,7 @@ IL_01f5:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1724>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1725>
 		ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A* L_78 = ((ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_StaticFields*)il2cpp_codegen_static_fields_for(ScoreFeedbackUIManager_t40D4A0DCC7A0BE3749BEA59B91AE94B7CC10358A_il2cpp_TypeInfo_var))->___Instance;
 		NullCheck(L_78);
 		ScoreFeedbackUIManager_ResetScore_m56F2BA9C98FD5DC4B0AF89A1F56AFAA4662A5188(L_78, NULL);
@@ -20093,7 +20093,7 @@ IL_01f5:
 
 IL_0213:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1727>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1728>
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_79 = ___0_config;
 		NullCheck(L_79);
 		String_t* L_80 = L_79->___lobbyName;
@@ -20109,25 +20109,25 @@ IL_0213:
 		L_86 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral0324D3F6DE7FB045B73608D628187ED312DF129C, L_80, L_85, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_86, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1730>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1731>
 		Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_87 = __this->___cachedNetworkNames;
 		NullCheck(L_87);
 		Dictionary_2_Clear_m6331920F95E4B821758216B8553A6C12B552A54B(L_87, Dictionary_2_Clear_m6331920F95E4B821758216B8553A6C12B552A54B_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1731>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1732>
 		Dictionary_2_tD001156821253ED04A22112577C96EFE869F40F0* L_88 = __this->___cachedNetworkAvatars;
 		NullCheck(L_88);
 		Dictionary_2_Clear_mDE99767EED6309C96C702B8187D4D742D654C60D(L_88, Dictionary_2_Clear_mDE99767EED6309C96C702B8187D4D742D654C60D_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1732>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1733>
 		Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180* L_89 = __this->___cachedNetworkAvatarIndices;
 		NullCheck(L_89);
 		Dictionary_2_Clear_m9821889E928BB7EAEE9A7E81EDFC59651F7CBDD0(L_89, Dictionary_2_Clear_m9821889E928BB7EAEE9A7E81EDFC59651F7CBDD0_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1733>
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralB24B4FD2CFF089E4C0835E83AB2D093EC8786153, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1734>
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralB24B4FD2CFF089E4C0835E83AB2D093EC8786153, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1735>
 		return;
 	}
 }
-// Method Definition Index: 65748
+// Method Definition Index: 65750
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_AwardPrizes_m747CE8F002C8A1DF1DDE550C7A21792E4C07924D (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, List_1_tD82BDFFDFF48A30CF1C67F8754A408769BD41131* ___0_rankings, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20138,7 +20138,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_AwardPrizes_m747CE8F002C8A1D
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1741>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1742>
 		bool L_0 = __this->___prizesAwardedForThisMatch;
 		if (!L_0)
 		{
@@ -20146,22 +20146,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_AwardPrizes_m747CE8F002C8A1D
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1741>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1742>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1742>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1743>
 		__this->___prizesAwardedForThisMatch = (bool)1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1744>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1745>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral641EBABF73F10D8156FDE923D480F73EBCCB6DDB, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1745>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1746>
 		return;
 	}
 }
-// Method Definition Index: 65749
+// Method Definition Index: 65751
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameManager_RefreshLobbyButtonsDelayed_mDE8AE8E248D16D58D61ACF0A5E89F676A167C940 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20176,22 +20176,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameManager_RefreshLobbyButton
 		return L_0;
 	}
 }
-// Method Definition Index: 65750
+// Method Definition Index: 65752
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* GameManager_GetCurrentLobbyConfig_mE449A6C8461D7E560B98D6105F7C6B71A924AC61 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1767>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1768>
 		LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* L_0 = __this->___currentLobbyConfig;
 		return L_0;
 	}
 }
-// Method Definition Index: 65751
+// Method Definition Index: 65753
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GameManager_GetCurrentRoomId_mAB222A18C6E2AF00E1F2A2AAF98FAB009F9DD97A (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* G_B2_0 = NULL;
 	StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* G_B1_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1772>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1773>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_0 = __this->___currentMatchData;
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_1 = L_0;
 		if (L_1)
@@ -20212,16 +20212,16 @@ IL_000c:
 		return L_2;
 	}
 }
-// Method Definition Index: 65752
+// Method Definition Index: 65754
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* GameManager_GetCurrentMatchData_m1E357516D5238DE52ECC4503F022311AA8EA7D90 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1777>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1778>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_0 = __this->___currentMatchData;
 		return L_0;
 	}
 }
-// Method Definition Index: 65753
+// Method Definition Index: 65755
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* GameManager_CreateFallbackMatchData_m1CB830A2F44148EE7DC66BDFEF43657F393BA369 (int32_t ___0_totalPlayers, int32_t ___1_stake, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20261,11 +20261,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StartGameData_t5999F5F872B15BE3FDCCEC3FFB465B
 	String_t* G_B6_0 = NULL;
 	String_t* G_B10_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1785>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1786>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_0 = (StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486*)il2cpp_codegen_object_new(StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486_il2cpp_TypeInfo_var);
 		StartGameData__ctor_mCFED3CFD10FD3D77C601AA0A6D39E907B2F8A5AB(L_0, NULL);
 		V_0 = L_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1786>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1787>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_1 = V_0;
 		int32_t L_2 = ___0_totalPlayers;
 		int32_t L_3 = L_2;
@@ -20279,27 +20279,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StartGameData_t5999F5F872B15BE3FDCCEC3FFB465B
 		NullCheck(L_1);
 		L_1->___roomId = L_8;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___roomId), (void*)L_8);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1787>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1788>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_9 = V_0;
 		NullCheck(L_9);
 		L_9->___duration = ((int32_t)60);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1788>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1789>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_10 = V_0;
 		int32_t L_11 = ___1_stake;
 		NullCheck(L_10);
 		L_10->___stake = ((float)L_11);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1789>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1790>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_12 = V_0;
 		NullCheck(L_12);
 		L_12->___winConditionTarget = ((int32_t)50);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1790>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1791>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_13 = V_0;
 		Dictionary_2_t38334E2D807AD276857B2117EF4E7C07E4813447* L_14 = (Dictionary_2_t38334E2D807AD276857B2117EF4E7C07E4813447*)il2cpp_codegen_object_new(Dictionary_2_t38334E2D807AD276857B2117EF4E7C07E4813447_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_m2D0FAE0F39C33BE2E077DD689661727321E3E22C(L_14, Dictionary_2__ctor_m2D0FAE0F39C33BE2E077DD689661727321E3E22C_RuntimeMethod_var);
 		NullCheck(L_13);
 		L_13->___playerAvatars = L_14;
 		Il2CppCodeGenWriteBarrier((void**)(&L_13->___playerAvatars), (void*)L_14);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1792>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1793>
 		String_t* L_15;
 		L_15 = PlayerModel_get_Id_mC58F20220F795613BEDA334EE4DB7A9B07CF79E0_inline(NULL);
 		bool L_16;
@@ -20324,7 +20324,7 @@ IL_0066:
 IL_006b:
 	{
 		V_1 = G_B3_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1793>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1794>
 		String_t* L_18;
 		L_18 = PlayerModel_get_Name_mC2FF8F628463BB165429DADD4D06B7B8DF621276_inline(NULL);
 		bool L_19;
@@ -20349,11 +20349,11 @@ IL_007f:
 IL_0084:
 	{
 		V_2 = G_B6_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1794>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1795>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1796>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1797>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1798>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1799>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_21 = V_0;
 		NullCheck(L_21);
 		Dictionary_2_t38334E2D807AD276857B2117EF4E7C07E4813447* L_22 = L_21->___playerAvatars;
@@ -20376,10 +20376,10 @@ IL_0084:
 		Il2CppCodeGenWriteBarrier((void**)(&L_27->___avatar), (void*)L_29);
 		NullCheck(L_22);
 		Dictionary_2_set_Item_mEF14D7FEFC1E3DB734406FF4E29113E5BB1BB7FD(L_22, L_23, L_27, Dictionary_2_set_Item_mEF14D7FEFC1E3DB734406FF4E29113E5BB1BB7FD_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1800>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1801>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1802>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1803>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1804>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_30 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)((int32_t)9));
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_31 = L_30;
 		NullCheck(L_31);
@@ -20409,21 +20409,21 @@ IL_0084:
 		NullCheck(L_39);
 		(L_39)->SetAt(static_cast<il2cpp_array_size_t>(8), (String_t*)_stringLiteralB54E01E4BE3EA37FE79DCC7BFEC3E80B3AF6EA3C);
 		V_3 = L_39;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1805>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1806>
 		V_5 = 1;
 		goto IL_0172;
 	}
 
 IL_0106:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1807>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1808>
 		int32_t L_40 = V_5;
 		int32_t L_41 = L_40;
 		RuntimeObject* L_42 = Box(il2cpp_defaults.int32_class, &L_41);
 		String_t* L_43;
 		L_43 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralB30E80603FA855FB939576121747758F431E0768, L_42, NULL);
 		V_6 = L_43;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1808>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1809>
 		int32_t L_44 = V_5;
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_45 = V_3;
 		NullCheck(L_45);
@@ -20455,11 +20455,11 @@ IL_0135:
 IL_013b:
 	{
 		V_7 = G_B10_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1809>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1810>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1811>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1812>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1813>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1814>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_54 = V_0;
 		NullCheck(L_54);
 		Dictionary_2_t38334E2D807AD276857B2117EF4E7C07E4813447* L_55 = L_54->___playerAvatars;
@@ -20481,14 +20481,14 @@ IL_013b:
 		Il2CppCodeGenWriteBarrier((void**)(&L_60->___avatar), (void*)L_62);
 		NullCheck(L_55);
 		Dictionary_2_set_Item_mEF14D7FEFC1E3DB734406FF4E29113E5BB1BB7FD(L_55, L_56, L_60, Dictionary_2_set_Item_mEF14D7FEFC1E3DB734406FF4E29113E5BB1BB7FD_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1805>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1806>
 		int32_t L_63 = V_5;
 		V_5 = ((int32_t)il2cpp_codegen_add(L_63, 1));
 	}
 
 IL_0172:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1805>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1806>
 		int32_t L_64 = V_5;
 		int32_t L_65 = ___0_totalPlayers;
 		if ((((int32_t)L_64) < ((int32_t)L_65)))
@@ -20497,12 +20497,12 @@ IL_0172:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1816>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1817>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_66 = V_0;
 		return L_66;
 	}
 }
-// Method Definition Index: 65754
+// Method Definition Index: 65756
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_CreateIndividualNumberGrids_m0A3F43B9D2E3CC33D018298D01017358972D6464 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* ___0_matchData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20564,10 +20564,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_CreateIndividualNumberGrids_
 	NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* V_12 = NULL;
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* G_B5_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1825>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1826>
 		GameManager_DestroyIndividualNumberGrids_mC503E5DFB2FA3169A4576DD472A5E5F41DA162FB(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1828>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1829>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1830>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___gridsParent;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -20613,7 +20613,7 @@ IL_0037:
 IL_003d:
 	{
 		V_0 = G_B5_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1832>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1833>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8 = __this->___numberGridPrefab;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -20634,16 +20634,16 @@ IL_003d:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1834>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1835>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteralFD0C4BA37F95A65CD37EDE80ADA240891ABAA5C7, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1835>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1836>
 		return;
 	}
 
 IL_0065:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1839>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1840>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_12 = __this->___numberGrid;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_13;
@@ -20654,14 +20654,14 @@ IL_0065:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1841>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1842>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_14 = __this->___numberGrid;
 		NullCheck(L_14);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_15;
 		L_15 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_14, NULL);
 		NullCheck(L_15);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_15, (bool)0, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1843>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1844>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_16 = __this->___numberGrid;
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_17 = L_16;
 		NullCheck(L_17);
@@ -20673,7 +20673,7 @@ IL_0065:
 		NullCheck(L_17);
 		L_17->___OnAllBoxesSelected = ((Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)CastclassSealed((RuntimeObject*)L_20, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&L_17->___OnAllBoxesSelected), (void*)((Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)CastclassSealed((RuntimeObject*)L_20, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var)));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1844>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1845>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_21 = __this->___numberGrid;
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_22 = L_21;
 		NullCheck(L_22);
@@ -20685,20 +20685,20 @@ IL_0065:
 		NullCheck(L_22);
 		L_22->___OnBoxSelected = ((Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040*)Castclass((RuntimeObject*)L_25, Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&L_22->___OnBoxSelected), (void*)((Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040*)Castclass((RuntimeObject*)L_25, Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040_il2cpp_TypeInfo_var)));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1845>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1846>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral1B6C3C773A6D98F1F1ED8E76144B06991BDD2F83, NULL);
 	}
 
 IL_00dc:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1849>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1850>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_26 = V_0;
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_27;
 		L_27 = GameManager_CreateNumberGridInstance_m7D85FAA81E63CF481D3824A445246CCAA7CF992F(__this, _stringLiteral315F4CB7040703E27FB47365247DCA9C03FFDF4A, L_26, NULL);
 		__this->___playerNumberGrid = L_27;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___playerNumberGrid), (void*)L_27);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1850>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1851>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_28 = __this->___playerNumberGrid;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_29;
@@ -20709,12 +20709,12 @@ IL_00dc:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1852>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1853>
 		List_1_t16892746002A4DE7002276C84C697F635A1E5BE8* L_30 = __this->___allNumberGrids;
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_31 = __this->___playerNumberGrid;
 		NullCheck(L_30);
 		List_1_Add_m5DF504CB4495D4631ABC67AF61588A0691ABF8DD_inline(L_30, L_31, List_1_Add_m5DF504CB4495D4631ABC67AF61588A0691ABF8DD_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1855>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1856>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_32 = __this->___numberGrid;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_33;
@@ -20725,7 +20725,7 @@ IL_00dc:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1857>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1858>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_34 = __this->___numberGrid;
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_35 = __this->___playerNumberGrid;
 		GameManager_AssignTimerUIReferences_mE2F57FB932364A7755510C2AD64F5BFBB87C3D86(__this, L_34, L_35, NULL);
@@ -20733,7 +20733,7 @@ IL_00dc:
 
 IL_0130:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1861>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1862>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_36 = __this->___playerNumberGrid;
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_37 = L_36;
 		NullCheck(L_37);
@@ -20745,7 +20745,7 @@ IL_0130:
 		NullCheck(L_37);
 		L_37->___OnAllBoxesSelected = ((Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)CastclassSealed((RuntimeObject*)L_40, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&L_37->___OnAllBoxesSelected), (void*)((Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)CastclassSealed((RuntimeObject*)L_40, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var)));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1862>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1863>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_41 = __this->___playerNumberGrid;
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_42 = L_41;
 		NullCheck(L_42);
@@ -20757,7 +20757,7 @@ IL_0130:
 		NullCheck(L_42);
 		L_42->___OnBoxSelected = ((Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040*)Castclass((RuntimeObject*)L_45, Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&L_42->___OnBoxSelected), (void*)((Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040*)Castclass((RuntimeObject*)L_45, Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040_il2cpp_TypeInfo_var)));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1863>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1864>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_46 = __this->___playerNumberGrid;
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_47 = L_46;
 		NullCheck(L_47);
@@ -20769,20 +20769,20 @@ IL_0130:
 		NullCheck(L_47);
 		L_47->___OnWrongBoxSelected = ((Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040*)Castclass((RuntimeObject*)L_50, Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&L_47->___OnWrongBoxSelected), (void*)((Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040*)Castclass((RuntimeObject*)L_50, Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040_il2cpp_TypeInfo_var)));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1866>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1867>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_51 = __this->___playerNumberGrid;
 		String_t* L_52;
 		L_52 = PlayerModel_get_Id_mC58F20220F795613BEDA334EE4DB7A9B07CF79E0_inline(NULL);
 		NullCheck(L_51);
 		NumberGrid_SetOwner_m25F9E6780E67663F0B41CADA05517AAB1365581D_inline(L_51, L_52, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1869>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1870>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_53 = __this->___playerNumberGrid;
 		NullCheck(L_53);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_54;
 		L_54 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_53, NULL);
 		NullCheck(L_54);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_54, (bool)1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1871>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1872>
 		String_t* L_55;
 		L_55 = PlayerModel_get_Id_mC58F20220F795613BEDA334EE4DB7A9B07CF79E0_inline(NULL);
 		String_t* L_56;
@@ -20793,9 +20793,9 @@ IL_0130:
 
 IL_01da:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1875>
-		V_1 = 0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1876>
+		V_1 = 0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1877>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_57 = ___0_matchData;
 		NullCheck(L_57);
 		Dictionary_2_t38334E2D807AD276857B2117EF4E7C07E4813447* L_58 = L_57->___playerAvatars;
@@ -20822,11 +20822,11 @@ FINALLY_02d6:
 
 IL_01ed_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1876>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1877>
 				KeyValuePair_2_t2F5C070A71118BEEBC54803DBEDCA88C74A28428 L_60;
 				L_60 = Enumerator_get_Current_m9956CE77BE878CC16AEB25992166A9D5CC809E71_inline((&V_2), Enumerator_get_Current_m9956CE77BE878CC16AEB25992166A9D5CC809E71_RuntimeMethod_var);
 				V_3 = L_60;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1878>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1879>
 				String_t* L_61;
 				L_61 = KeyValuePair_2_get_Key_m35295C5B29FFED6DF7B97031F8E0FFEE92C3961E_inline((&V_3), KeyValuePair_2_get_Key_m35295C5B29FFED6DF7B97031F8E0FFEE92C3961E_RuntimeMethod_var);
 				String_t* L_62;
@@ -20839,7 +20839,7 @@ IL_01ed_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1880>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1881>
 				String_t* L_64;
 				L_64 = KeyValuePair_2_get_Key_m35295C5B29FFED6DF7B97031F8E0FFEE92C3961E_inline((&V_3), KeyValuePair_2_get_Key_m35295C5B29FFED6DF7B97031F8E0FFEE92C3961E_RuntimeMethod_var);
 				String_t* L_65;
@@ -20848,7 +20848,7 @@ IL_01ed_1:
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_67;
 				L_67 = GameManager_CreateNumberGridInstance_m7D85FAA81E63CF481D3824A445246CCAA7CF992F(__this, L_65, L_66, NULL);
 				V_4 = L_67;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1881>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1882>
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_68 = V_4;
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 				bool L_69;
@@ -20859,24 +20859,24 @@ IL_01ed_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1883>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1884>
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_70 = V_4;
 				String_t* L_71;
 				L_71 = KeyValuePair_2_get_Key_m35295C5B29FFED6DF7B97031F8E0FFEE92C3961E_inline((&V_3), KeyValuePair_2_get_Key_m35295C5B29FFED6DF7B97031F8E0FFEE92C3961E_RuntimeMethod_var);
 				NullCheck(L_70);
 				NumberGrid_SetOwner_m25F9E6780E67663F0B41CADA05517AAB1365581D_inline(L_70, L_71, NULL);
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1884>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1885>
 				Dictionary_2_t03CB0E456E3F308DB7BD58AC650EDBFA1BB3E3E8* L_72 = __this->___opponentNumberGrids;
 				int32_t L_73 = V_1;
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_74 = V_4;
 				NullCheck(L_72);
 				Dictionary_2_set_Item_m434A5D83638900582CFDBAD5FDD3A4EBB2AF96F4(L_72, L_73, L_74, Dictionary_2_set_Item_m434A5D83638900582CFDBAD5FDD3A4EBB2AF96F4_RuntimeMethod_var);
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1885>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1886>
 				List_1_t16892746002A4DE7002276C84C697F635A1E5BE8* L_75 = __this->___allNumberGrids;
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_76 = V_4;
 				NullCheck(L_75);
 				List_1_Add_m5DF504CB4495D4631ABC67AF61588A0691ABF8DD_inline(L_75, L_76, List_1_Add_m5DF504CB4495D4631ABC67AF61588A0691ABF8DD_RuntimeMethod_var);
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1888>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1889>
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_77 = V_4;
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_78 = L_77;
 				NullCheck(L_78);
@@ -20888,7 +20888,7 @@ IL_01ed_1:
 				NullCheck(L_78);
 				L_78->___OnAllBoxesSelected = ((Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)CastclassSealed((RuntimeObject*)L_81, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var));
 				Il2CppCodeGenWriteBarrier((void**)(&L_78->___OnAllBoxesSelected), (void*)((Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)CastclassSealed((RuntimeObject*)L_81, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var)));
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1889>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1890>
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_82 = V_4;
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_83 = L_82;
 				NullCheck(L_83);
@@ -20900,28 +20900,28 @@ IL_01ed_1:
 				NullCheck(L_83);
 				L_83->___OnBoxSelected = ((Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040*)Castclass((RuntimeObject*)L_86, Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040_il2cpp_TypeInfo_var));
 				Il2CppCodeGenWriteBarrier((void**)(&L_83->___OnBoxSelected), (void*)((Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040*)Castclass((RuntimeObject*)L_86, Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040_il2cpp_TypeInfo_var)));
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1891>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1892>
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_87 = V_4;
 				NullCheck(L_87);
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_88;
 				L_88 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_87, NULL);
 				NullCheck(L_88);
 				GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_88, (bool)0, NULL);
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1892>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1893>
 				String_t* L_89;
 				L_89 = KeyValuePair_2_get_Key_m35295C5B29FFED6DF7B97031F8E0FFEE92C3961E_inline((&V_3), KeyValuePair_2_get_Key_m35295C5B29FFED6DF7B97031F8E0FFEE92C3961E_RuntimeMethod_var);
 				String_t* L_90;
 				L_90 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral7DE588D78433C0F88A871B542BAFACC7784C9EAC, L_89, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_90, NULL);
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1893>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1894>
 				int32_t L_91 = V_1;
 				V_1 = ((int32_t)il2cpp_codegen_add(L_91, 1));
 			}
 
 IL_02c8_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1876>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1877>
 				bool L_92;
 				L_92 = Enumerator_MoveNext_mEA77F95B43FD74F22EB6B6313056101D0092DA5E((&V_2), Enumerator_MoveNext_mEA77F95B43FD74F22EB6B6313056101D0092DA5E_RuntimeMethod_var);
 				if (L_92)
@@ -20941,9 +20941,9 @@ IL_02c8_1:
 
 IL_02e4:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1898>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1899>
 		GameManager_AssignGridsToControllers_mD74894AA9888B4AA6AEC5FC7EB39DE183A13E61A(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1901>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1902>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_93 = __this->___currentMatchData;
 		if (!L_93)
 		{
@@ -20970,7 +20970,7 @@ IL_02e4:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1903>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1904>
 		List_1_t16892746002A4DE7002276C84C697F635A1E5BE8* L_98 = __this->___allNumberGrids;
 		NullCheck(L_98);
 		Enumerator_tFB2A6FAE9A33A8C06AFF49D649CB361C6BB017A1 L_99;
@@ -20995,11 +20995,11 @@ FINALLY_034f:
 
 IL_031f_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1903>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1904>
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_100;
 				L_100 = Enumerator_get_Current_mCFBFD2C3160158308F9F6B27679D9DAD92693598_inline((&V_5), Enumerator_get_Current_mCFBFD2C3160158308F9F6B27679D9DAD92693598_RuntimeMethod_var);
 				V_6 = L_100;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1905>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1906>
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_101 = V_6;
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 				bool L_102;
@@ -21010,7 +21010,7 @@ IL_031f_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1907>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1908>
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_103 = V_6;
 				StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_104 = __this->___currentMatchData;
 				NullCheck(L_104);
@@ -21021,7 +21021,7 @@ IL_031f_1:
 
 IL_0344_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1903>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1904>
 				bool L_106;
 				L_106 = Enumerator_MoveNext_m6277208C184243B67DB88DD8C7A25966C1031846((&V_5), Enumerator_MoveNext_m6277208C184243B67DB88DD8C7A25966C1031846_RuntimeMethod_var);
 				if (L_106)
@@ -21041,7 +21041,7 @@ IL_0344_1:
 
 IL_035d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1913>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1914>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_107 = ___0_matchData;
 		NullCheck(L_107);
 		Dictionary_2_t0D0079AFA6C46DD2191FF975203F4B274F05C15E* L_108 = L_107->___gameState;
@@ -21051,7 +21051,7 @@ IL_035d:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1915>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1916>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_109 = ___0_matchData;
 		NullCheck(L_109);
 		Dictionary_2_t0D0079AFA6C46DD2191FF975203F4B274F05C15E* L_110 = L_109->___gameState;
@@ -21078,33 +21078,33 @@ FINALLY_03ef:
 
 IL_0377_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1915>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1916>
 				KeyValuePair_2_t538EE340E6BE0FDEEBCA25B1F1A8AFB084C772CD L_112;
 				L_112 = Enumerator_get_Current_m14CAB51D3F758BCA5F59D5AEE9483CD97BECE308_inline((&V_7), Enumerator_get_Current_m14CAB51D3F758BCA5F59D5AEE9483CD97BECE308_RuntimeMethod_var);
 				V_8 = L_112;
 				U3CU3Ec__DisplayClass136_0_t60060A963CCEFDE4491294EF9E1299F535216F4D* L_113 = (U3CU3Ec__DisplayClass136_0_t60060A963CCEFDE4491294EF9E1299F535216F4D*)il2cpp_codegen_object_new(U3CU3Ec__DisplayClass136_0_t60060A963CCEFDE4491294EF9E1299F535216F4D_il2cpp_TypeInfo_var);
 				U3CU3Ec__DisplayClass136_0__ctor_m7194AC050BDC3C8021A38CE7DBA493A69E2B87DF(L_113, NULL);
 				V_9 = L_113;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1917>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1918>
 				U3CU3Ec__DisplayClass136_0_t60060A963CCEFDE4491294EF9E1299F535216F4D* L_114 = V_9;
 				String_t* L_115;
 				L_115 = KeyValuePair_2_get_Key_m362F5146C86D9C5CC341766BC2E6B8228282A5E3_inline((&V_8), KeyValuePair_2_get_Key_m362F5146C86D9C5CC341766BC2E6B8228282A5E3_RuntimeMethod_var);
 				NullCheck(L_114);
 				L_114->___userId = L_115;
 				Il2CppCodeGenWriteBarrier((void**)(&L_114->___userId), (void*)L_115);
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1918>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1919>
 				PlayerGameState_t8C2CEF23AC70559EEB43611E514414C5390A594F* L_116;
 				L_116 = KeyValuePair_2_get_Value_mC13F6234863917D16F4BE8CD526CB29DD70FCE1E_inline((&V_8), KeyValuePair_2_get_Value_mC13F6234863917D16F4BE8CD526CB29DD70FCE1E_RuntimeMethod_var);
 				NullCheck(L_116);
 				Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_117 = L_116->___lockedIndices;
 				V_10 = L_117;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1919>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1920>
 				PlayerGameState_t8C2CEF23AC70559EEB43611E514414C5390A594F* L_118;
 				L_118 = KeyValuePair_2_get_Value_mC13F6234863917D16F4BE8CD526CB29DD70FCE1E_inline((&V_8), KeyValuePair_2_get_Value_mC13F6234863917D16F4BE8CD526CB29DD70FCE1E_RuntimeMethod_var);
 				NullCheck(L_118);
 				int32_t L_119 = L_118->___score;
 				V_11 = L_119;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1922>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1923>
 				List_1_t16892746002A4DE7002276C84C697F635A1E5BE8* L_120 = __this->___allNumberGrids;
 				U3CU3Ec__DisplayClass136_0_t60060A963CCEFDE4491294EF9E1299F535216F4D* L_121 = V_9;
 				Predicate_1_t1700769BEA2BD9ABC427882DF4C8D7312407B42C* L_122 = (Predicate_1_t1700769BEA2BD9ABC427882DF4C8D7312407B42C*)il2cpp_codegen_object_new(Predicate_1_t1700769BEA2BD9ABC427882DF4C8D7312407B42C_il2cpp_TypeInfo_var);
@@ -21113,7 +21113,7 @@ IL_0377_1:
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_123;
 				L_123 = List_1_Find_m4428B4F4E95B80F4C803F2653686D5CAC49FFDA0(L_120, L_122, List_1_Find_m4428B4F4E95B80F4C803F2653686D5CAC49FFDA0_RuntimeMethod_var);
 				V_12 = L_123;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1923>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1924>
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_124 = V_12;
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 				bool L_125;
@@ -21131,7 +21131,7 @@ IL_0377_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1925>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1926>
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_127 = V_12;
 				Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_128 = V_10;
 				int32_t L_129 = V_11;
@@ -21141,7 +21141,7 @@ IL_0377_1:
 
 IL_03e4_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1915>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1916>
 				bool L_130;
 				L_130 = Enumerator_MoveNext_m7FFC82D40F91C04C306CCF8AB7899FD0CF3E5D5F((&V_7), Enumerator_MoveNext_m7FFC82D40F91C04C306CCF8AB7899FD0CF3E5D5F_RuntimeMethod_var);
 				if (L_130)
@@ -21161,11 +21161,11 @@ IL_03e4_1:
 
 IL_03fd:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1929>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1930>
 		return;
 	}
 }
-// Method Definition Index: 65755
+// Method Definition Index: 65757
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* GameManager_CreateNumberGridInstance_m7D85FAA81E63CF481D3824A445246CCAA7CF992F (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, String_t* ___0_name, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___1_parent, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21186,9 +21186,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NumberGrid_t24C470179F6A7CA1F9F044F40799C8632
 	int32_t G_B5_0 = 0;
 	int32_t G_B4_0 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1936>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1937>
 		V_0 = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1940>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1941>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___numberGridPrefab;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -21199,7 +21199,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NumberGrid_t24C470179F6A7CA1F9F044F40799C8632
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1942>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1943>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___numberGridPrefab;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3 = ___1_parent;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -21211,7 +21211,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NumberGrid_t24C470179F6A7CA1F9F044F40799C8632
 
 IL_001f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1944>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1945>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_5 = __this->___numberGrid;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_6;
@@ -21222,7 +21222,7 @@ IL_001f:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1947>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1948>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_7 = __this->___numberGrid;
 		NullCheck(L_7);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8;
@@ -21230,7 +21230,7 @@ IL_001f:
 		NullCheck(L_8);
 		bool L_9;
 		L_9 = GameObject_get_activeSelf_m4F3E5240E138B66AAA080EA30759A3D0517DA368(L_8, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1950>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1951>
 		int32_t L_10 = ((((int32_t)L_9) == ((int32_t)0))? 1 : 0);
 		if (!L_10)
 		{
@@ -21240,7 +21240,7 @@ IL_001f:
 		G_B4_0 = L_10;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1952>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1953>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_11 = __this->___numberGrid;
 		NullCheck(L_11);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_12;
@@ -21252,7 +21252,7 @@ IL_001f:
 
 IL_0054:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1956>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1957>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_13 = __this->___numberGrid;
 		NullCheck(L_13);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_14;
@@ -21262,14 +21262,14 @@ IL_0054:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_16;
 		L_16 = Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m58C654F1134533E29502629CA67645682B404811(L_14, L_15, Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m58C654F1134533E29502629CA67645682B404811_RuntimeMethod_var);
 		V_0 = L_16;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1959>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1960>
 		if (!G_B5_0)
 		{
 			goto IL_0092;
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1961>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1962>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_17 = __this->___numberGrid;
 		NullCheck(L_17);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_18;
@@ -21281,24 +21281,24 @@ IL_0054:
 
 IL_007b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1966>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1967>
 		String_t* L_19 = ___0_name;
 		String_t* L_20;
 		L_20 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral6AEA0E3E1CECCE030A92E8405D3EA8BB043E96AA, L_19, _stringLiteral90E57B194A6FADEF31E22607905AA3CA03FCFED9, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_20, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1967>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1968>
 		return (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487*)NULL;
 	}
 
 IL_0092:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1970>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1971>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_21 = V_0;
 		String_t* L_22 = ___0_name;
 		NullCheck(L_21);
 		Object_set_name_mC79E6DC8FFD72479C90F0C4CC7F42A0FEAF5AE47(L_21, L_22, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1971>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1972>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_23 = V_0;
 		NullCheck(L_23);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_24;
@@ -21307,7 +21307,7 @@ IL_0092:
 		L_25 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
 		NullCheck(L_24);
 		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_24, L_25, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1972>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1973>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_26 = V_0;
 		NullCheck(L_26);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_27;
@@ -21316,7 +21316,7 @@ IL_0092:
 		L_28 = Quaternion_get_identity_m7E701AE095ED10FD5EA0B50ABCFDE2EEFF2173A5_inline(NULL);
 		NullCheck(L_27);
 		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_27, L_28, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1973>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1974>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_29 = V_0;
 		NullCheck(L_29);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_30;
@@ -21325,17 +21325,17 @@ IL_0092:
 		L_31 = Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline(NULL);
 		NullCheck(L_30);
 		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_30, L_31, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1976>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1977>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_32 = V_0;
 		NullCheck(L_32);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_32, (bool)1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1978>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1979>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_33 = V_0;
 		NullCheck(L_33);
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_34;
 		L_34 = GameObject_GetComponent_TisNumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487_m2579379162939AE9E284AB14180F3B89D23E542D(L_33, GameObject_GetComponent_TisNumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487_m2579379162939AE9E284AB14180F3B89D23E542D_RuntimeMethod_var);
 		V_1 = L_34;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1979>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1980>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_35 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_36;
@@ -21346,28 +21346,28 @@ IL_0092:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1982>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1983>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_37 = V_1;
 		NullCheck(L_37);
 		NumberGrid_GenerateGrid_m0C24E107097E9A1324B53BF97DB34AE03EFFBA1B(L_37, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1983>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1984>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_38 = V_1;
 		return L_38;
 	}
 
 IL_00e8:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1986>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1987>
 		String_t* L_39 = ___0_name;
 		String_t* L_40;
 		L_40 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral26CBC156C917FB223E59C56727EFAD99F5B4355A, L_39, _stringLiteralBF710A5EA51F589D562941635198A35284B67C40, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_40, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1987>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1988>
 		return (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487*)NULL;
 	}
 }
-// Method Definition Index: 65756
+// Method Definition Index: 65758
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_DestroyIndividualNumberGrids_mC503E5DFB2FA3169A4576DD472A5E5F41DA162FB (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21396,15 +21396,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_DestroyIndividualNumberGrids
 	NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* V_1 = NULL;
 	NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* V_2 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1996>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1997>
 		Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_0 = __this->___cachedNetworkNames;
 		NullCheck(L_0);
 		Dictionary_2_Clear_m6331920F95E4B821758216B8553A6C12B552A54B(L_0, Dictionary_2_Clear_m6331920F95E4B821758216B8553A6C12B552A54B_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1997>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1998>
 		Dictionary_2_tD001156821253ED04A22112577C96EFE869F40F0* L_1 = __this->___cachedNetworkAvatars;
 		NullCheck(L_1);
 		Dictionary_2_Clear_mDE99767EED6309C96C702B8187D4D742D654C60D(L_1, Dictionary_2_Clear_mDE99767EED6309C96C702B8187D4D742D654C60D_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2000>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2001>
 		List_1_t16892746002A4DE7002276C84C697F635A1E5BE8* L_2 = __this->___allNumberGrids;
 		NullCheck(L_2);
 		Enumerator_tFB2A6FAE9A33A8C06AFF49D649CB361C6BB017A1 L_3;
@@ -21429,11 +21429,11 @@ FINALLY_00a6:
 
 IL_0024_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2000>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2001>
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_4;
 				L_4 = Enumerator_get_Current_mCFBFD2C3160158308F9F6B27679D9DAD92693598_inline((&V_0), Enumerator_get_Current_mCFBFD2C3160158308F9F6B27679D9DAD92693598_RuntimeMethod_var);
 				V_1 = L_4;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2002>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2003>
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_5 = V_1;
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 				bool L_6;
@@ -21444,7 +21444,7 @@ IL_0024_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2004>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2005>
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_7 = V_1;
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_8 = L_7;
 				NullCheck(L_8);
@@ -21456,7 +21456,7 @@ IL_0024_1:
 				NullCheck(L_8);
 				L_8->___OnAllBoxesSelected = ((Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)CastclassSealed((RuntimeObject*)L_11, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var));
 				Il2CppCodeGenWriteBarrier((void**)(&L_8->___OnAllBoxesSelected), (void*)((Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07*)CastclassSealed((RuntimeObject*)L_11, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07_il2cpp_TypeInfo_var)));
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2005>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2006>
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_12 = V_1;
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_13 = L_12;
 				NullCheck(L_13);
@@ -21468,7 +21468,7 @@ IL_0024_1:
 				NullCheck(L_13);
 				L_13->___OnBoxSelected = ((Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040*)Castclass((RuntimeObject*)L_16, Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040_il2cpp_TypeInfo_var));
 				Il2CppCodeGenWriteBarrier((void**)(&L_13->___OnBoxSelected), (void*)((Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040*)Castclass((RuntimeObject*)L_16, Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040_il2cpp_TypeInfo_var)));
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2006>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2007>
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_17 = V_1;
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_18 = L_17;
 				NullCheck(L_18);
@@ -21484,7 +21484,7 @@ IL_0024_1:
 
 IL_009b_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2000>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2001>
 				bool L_22;
 				L_22 = Enumerator_MoveNext_m6277208C184243B67DB88DD8C7A25966C1031846((&V_0), Enumerator_MoveNext_m6277208C184243B67DB88DD8C7A25966C1031846_RuntimeMethod_var);
 				if (L_22)
@@ -21504,7 +21504,7 @@ IL_009b_1:
 
 IL_00b4:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2011>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2012>
 		List_1_t16892746002A4DE7002276C84C697F635A1E5BE8* L_23 = __this->___allNumberGrids;
 		NullCheck(L_23);
 		Enumerator_tFB2A6FAE9A33A8C06AFF49D649CB361C6BB017A1 L_24;
@@ -21529,11 +21529,11 @@ FINALLY_00f7:
 
 IL_00c2_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2011>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2012>
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_25;
 				L_25 = Enumerator_get_Current_mCFBFD2C3160158308F9F6B27679D9DAD92693598_inline((&V_0), Enumerator_get_Current_mCFBFD2C3160158308F9F6B27679D9DAD92693598_RuntimeMethod_var);
 				V_2 = L_25;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2013>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2014>
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_26 = V_2;
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 				bool L_27;
@@ -21557,7 +21557,7 @@ IL_00c2_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2015>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2016>
 				NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_31 = V_2;
 				NullCheck(L_31);
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_32;
@@ -21568,7 +21568,7 @@ IL_00c2_1:
 
 IL_00ec_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2011>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2012>
 				bool L_33;
 				L_33 = Enumerator_MoveNext_m6277208C184243B67DB88DD8C7A25966C1031846((&V_0), Enumerator_MoveNext_m6277208C184243B67DB88DD8C7A25966C1031846_RuntimeMethod_var);
 				if (L_33)
@@ -21588,25 +21588,25 @@ IL_00ec_1:
 
 IL_0105:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2019>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2020>
 		List_1_t16892746002A4DE7002276C84C697F635A1E5BE8* L_34 = __this->___allNumberGrids;
 		NullCheck(L_34);
 		List_1_Clear_m806CDB10BECC71621DA16CE42AEC16754D76C9E2_inline(L_34, List_1_Clear_m806CDB10BECC71621DA16CE42AEC16754D76C9E2_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2020>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2021>
 		Dictionary_2_t03CB0E456E3F308DB7BD58AC650EDBFA1BB3E3E8* L_35 = __this->___opponentNumberGrids;
 		NullCheck(L_35);
 		Dictionary_2_Clear_m22AB4F54782D2256730028623FC644DDC474BB10(L_35, Dictionary_2_Clear_m22AB4F54782D2256730028623FC644DDC474BB10_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2021>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2022>
 		__this->___playerNumberGrid = (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___playerNumberGrid), (void*)(NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487*)NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2023>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2024>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralB035BC8E792720F3F2325A34F0A598349705D1D3, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2024>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2025>
 		return;
 	}
 }
-// Method Definition Index: 65757
+// Method Definition Index: 65759
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_AssignTimerUIReferences_mE2F57FB932364A7755510C2AD64F5BFBB87C3D86 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* ___0_sourceGrid, NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* ___1_targetGrid, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21632,7 +21632,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_AssignTimerUIReferences_mE2F
 	Type_t* G_B4_0 = NULL;
 	Type_t* G_B6_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2031>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2032>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_0 = ___0_sourceGrid;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -21655,28 +21655,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_AssignTimerUIReferences_mE2F
 
 IL_0012:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2033>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2034>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteralDC4877CE203C664A8951F37630E1B08052821B41, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2034>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2035>
 		return;
 	}
 
 IL_001d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2038>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2039>
 		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_4 = { reinterpret_cast<intptr_t> (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487_0_0_0_var) };
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.systemtype_class);
 		Type_t* L_5;
 		L_5 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_4, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2041>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2042>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2043>
 		Type_t* L_6 = L_5;
 		NullCheck(L_6);
 		FieldInfo_t* L_7;
 		L_7 = VirtualFuncInvoker2< FieldInfo_t*, String_t*, int32_t >::Invoke(92, L_6, _stringLiteral9FD5E96A4CAB41F2F7579307E7708BFFC2174B31, ((int32_t)36));
 		V_0 = L_7;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2043>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2044>
 		FieldInfo_t* L_8 = V_0;
 		bool L_9;
 		L_9 = FieldInfo_op_Inequality_m95789A98E646494987E66A9E4188DCA86185066B(L_8, (FieldInfo_t*)NULL, NULL);
@@ -21688,20 +21688,20 @@ IL_001d:
 		G_B4_0 = L_6;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2045>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2046>
 		FieldInfo_t* L_10 = V_0;
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_11 = ___0_sourceGrid;
 		NullCheck(L_10);
 		RuntimeObject* L_12;
 		L_12 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(28, L_10, L_11);
 		V_2 = L_12;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2046>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2047>
 		FieldInfo_t* L_13 = V_0;
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_14 = ___1_targetGrid;
 		RuntimeObject* L_15 = V_2;
 		NullCheck(L_13);
 		FieldInfo_SetValue_mD8C0DA3A1A0CFF073F971622BBDBAAB6688B4B6C(L_13, L_14, L_15, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2047>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2048>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral5B831A9786E5DBAE2B8D5E06F243242E16DCE2E1, NULL);
 		G_B6_0 = G_B4_0;
@@ -21710,7 +21710,7 @@ IL_001d:
 
 IL_005a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2051>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2052>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral0436FFBF493916A70F8DA3C710AB995AE03E2E88, NULL);
 		G_B6_0 = G_B5_0;
@@ -21718,13 +21718,13 @@ IL_005a:
 
 IL_0064:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2055>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2056>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2057>
 		NullCheck(G_B6_0);
 		FieldInfo_t* L_16;
 		L_16 = VirtualFuncInvoker2< FieldInfo_t*, String_t*, int32_t >::Invoke(92, G_B6_0, _stringLiteral44267183A33B8CD828399FCEEF6CF5CFD326D4C5, ((int32_t)36));
 		V_1 = L_16;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2057>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2058>
 		FieldInfo_t* L_17 = V_1;
 		bool L_18;
 		L_18 = FieldInfo_op_Inequality_m95789A98E646494987E66A9E4188DCA86185066B(L_17, (FieldInfo_t*)NULL, NULL);
@@ -21734,20 +21734,20 @@ IL_0064:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2059>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2060>
 		FieldInfo_t* L_19 = V_1;
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_20 = ___0_sourceGrid;
 		NullCheck(L_19);
 		RuntimeObject* L_21;
 		L_21 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(28, L_19, L_20);
 		V_3 = L_21;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2060>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2061>
 		FieldInfo_t* L_22 = V_1;
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_23 = ___1_targetGrid;
 		RuntimeObject* L_24 = V_3;
 		NullCheck(L_22);
 		FieldInfo_SetValue_mD8C0DA3A1A0CFF073F971622BBDBAAB6688B4B6C(L_22, L_23, L_24, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2061>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2062>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral9984570FBA2533A7DE193EBF24BF1EF0C6ADC483, NULL);
 		return;
@@ -21755,14 +21755,14 @@ IL_0064:
 
 IL_0095:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2065>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2066>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteralD6653A3A136F18868DDD8D683F69CC7B01855FA7, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2067>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2068>
 		return;
 	}
 }
-// Method Definition Index: 65758
+// Method Definition Index: 65760
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_AssignGridsToControllers_mD74894AA9888B4AA6AEC5FC7EB39DE183A13E61A (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21778,7 +21778,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_AssignGridsToControllers_mD7
 	}
 	FieldInfo_t* V_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2075>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2076>
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_0 = __this->___playerDicesController;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -21799,8 +21799,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_AssignGridsToControllers_mD7
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2078>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2079>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2080>
 		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_4 = { reinterpret_cast<intptr_t> (DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655_0_0_0_var) };
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.systemtype_class);
 		Type_t* L_5;
@@ -21809,7 +21809,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_AssignGridsToControllers_mD7
 		FieldInfo_t* L_6;
 		L_6 = VirtualFuncInvoker2< FieldInfo_t*, String_t*, int32_t >::Invoke(92, L_5, _stringLiteral6911388BC9221F9FB04BCE8251A3D1F6A63D51C2, ((int32_t)36));
 		V_0 = L_6;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2080>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2081>
 		FieldInfo_t* L_7 = V_0;
 		bool L_8;
 		L_8 = FieldInfo_op_Inequality_m95789A98E646494987E66A9E4188DCA86185066B(L_7, (FieldInfo_t*)NULL, NULL);
@@ -21819,13 +21819,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_AssignGridsToControllers_mD7
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2082>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2083>
 		FieldInfo_t* L_9 = V_0;
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_10 = __this->___playerDicesController;
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_11 = __this->___playerNumberGrid;
 		NullCheck(L_9);
 		FieldInfo_SetValue_mD8C0DA3A1A0CFF073F971622BBDBAAB6688B4B6C(L_9, L_10, L_11, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2083>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2084>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralDBD54E16A6C2C3DAC8D80352632BC4D1CDB8C793, NULL);
 		return;
@@ -21833,31 +21833,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_AssignGridsToControllers_mD7
 
 IL_0059:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2087>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2088>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral6BD498CC7C1E3F2741AF3DC2CA82A46B744812F6, NULL);
 	}
 
 IL_0063:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2091>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2092>
 		return;
 	}
 }
-// Method Definition Index: 65759
+// Method Definition Index: 65761
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F GameManager_GetPlayerOutlineColor_mA36858B5C659AB89037BAC85E02750EAF6E6696D (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2093>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2094>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0 = __this->___playerOutlineColor;
 		return L_0;
 	}
 }
-// Method Definition Index: 65760
+// Method Definition Index: 65762
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F GameManager_GetOpponentOutlineColor_m8A7FDE7692A4EE95E4F2F135846E6FE3C49F281D (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2097>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2098>
 		ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389* L_0 = __this->___opponentOutlineColors;
 		if (!L_0)
 		{
@@ -21881,7 +21881,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2098>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2099>
 		ColorU5BU5D_t612261CF293F6FFC3D80AB52259FF0DC2B2CC389* L_4 = __this->___opponentOutlineColors;
 		int32_t L_5 = ___0_index;
 		NullCheck(L_4);
@@ -21892,13 +21892,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 
 IL_0024:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2099>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2100>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_8;
 		L_8 = Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_inline(NULL);
 		return L_8;
 	}
 }
-// Method Definition Index: 65761
+// Method Definition Index: 65763
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_SetProfileSlot_mD99A3F137DFF249FFF19E05F54F704FD62EA52C3 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___0_spriteSlot, Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* ___1_customSlot, Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___2_sprite, bool ___3_isCustom, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21908,7 +21908,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_SetProfileSlot_mD99A3F137DFF
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2104>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2105>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_0 = ___0_spriteSlot;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -21919,7 +21919,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_SetProfileSlot_mD99A3F137DFF
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2104>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2105>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_2 = ___0_spriteSlot;
 		NullCheck(L_2);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3;
@@ -21930,7 +21930,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_SetProfileSlot_mD99A3F137DFF
 
 IL_0015:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2105>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2106>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_4 = ___1_customSlot;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_5;
@@ -21941,7 +21941,7 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2105>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2106>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_6 = ___1_customSlot;
 		NullCheck(L_6);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7;
@@ -21952,7 +21952,7 @@ IL_0015:
 
 IL_002a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2107>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2108>
 		bool L_8 = ___3_isCustom;
 		if (!L_8)
 		{
@@ -21960,7 +21960,7 @@ IL_002a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2109>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2110>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_9 = ___1_customSlot;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
@@ -21971,12 +21971,12 @@ IL_002a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2111>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2112>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_11 = ___1_customSlot;
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_12 = ___2_sprite;
 		NullCheck(L_11);
 		Image_set_sprite_mC0C248340BA27AAEE56855A3FAFA0D8CA12956DE(L_11, L_12, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2112>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2113>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_13 = ___1_customSlot;
 		NullCheck(L_13);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_14;
@@ -21987,7 +21987,7 @@ IL_002a:
 		L_16 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_15, (1.10000002f), NULL);
 		NullCheck(L_14);
 		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_14, L_16, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2113>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2114>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_17 = ___1_customSlot;
 		NullCheck(L_17);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_18;
@@ -21999,7 +21999,7 @@ IL_002a:
 
 IL_0065:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2118>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2119>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_19 = ___0_spriteSlot;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_20;
@@ -22010,12 +22010,12 @@ IL_0065:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2120>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2121>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_21 = ___0_spriteSlot;
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_22 = ___2_sprite;
 		NullCheck(L_21);
 		Image_set_sprite_mC0C248340BA27AAEE56855A3FAFA0D8CA12956DE(L_21, L_22, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2121>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2122>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_23 = ___0_spriteSlot;
 		NullCheck(L_23);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_24;
@@ -22024,7 +22024,7 @@ IL_0065:
 		L_25 = Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline(NULL);
 		NullCheck(L_24);
 		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_24, L_25, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2122>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2123>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_26 = ___0_spriteSlot;
 		NullCheck(L_26);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_27;
@@ -22035,11 +22035,11 @@ IL_0065:
 
 IL_0091:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2125>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2126>
 		return;
 	}
 }
-// Method Definition Index: 65762
+// Method Definition Index: 65764
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager__ctor_mF453CED520617BFB65C52405A964E06CF17DB368 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22064,61 +22064,61 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager__ctor_mF453CED520617BFB65C52
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:38>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:39>
 		__this->___excludePlayerAvatarFromCPU = (bool)1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:41>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:42>
 		Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_0 = (Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9*)il2cpp_codegen_object_new(Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_mC854597C0C338BBA12EE451456D8658DF6D01BD4(L_0, Dictionary_2__ctor_mC854597C0C338BBA12EE451456D8658DF6D01BD4_RuntimeMethod_var);
 		__this->___lastKnownPlayerIds = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___lastKnownPlayerIds), (void*)L_0);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:44>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:45>
 		Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588* L_1 = (Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588*)il2cpp_codegen_object_new(Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_mA3C3860EDE2CDD08BBD68C389377BC89D029D968(L_1, Dictionary_2__ctor_mA3C3860EDE2CDD08BBD68C389377BC89D029D968_RuntimeMethod_var);
 		__this->___networkPlayerScores = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___networkPlayerScores), (void*)L_1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:45>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:46>
 		Dictionary_2_tD703CB7270FBE4380B4E73B621DD5B54EB65B58D* L_2 = (Dictionary_2_tD703CB7270FBE4380B4E73B621DD5B54EB65B58D*)il2cpp_codegen_object_new(Dictionary_2_tD703CB7270FBE4380B4E73B621DD5B54EB65B58D_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_mE296C85BA85EC0311807DFB3549E3D33D919D802(L_2, Dictionary_2__ctor_mE296C85BA85EC0311807DFB3549E3D33D919D802_RuntimeMethod_var);
 		__this->___networkPlayerTimes = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___networkPlayerTimes), (void*)L_2);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:60>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:61>
 		__this->___gameTimer = (30.0f);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:80>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:81>
 		__this->___currentWinConditionTarget = ((int32_t)50);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:105>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:106>
 		__this->___countdownDuration = (1.0f);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:107>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:108>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3;
 		L_3 = Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_inline(NULL);
 		__this->___playerOutlineColor = L_3;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:116>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:117>
 		Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9* L_4 = (Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9*)il2cpp_codegen_object_new(Dictionary_2_t291007AFA4B4075BA87D802F2E42017CB8C857C9_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_mC854597C0C338BBA12EE451456D8658DF6D01BD4(L_4, Dictionary_2__ctor_mC854597C0C338BBA12EE451456D8658DF6D01BD4_RuntimeMethod_var);
 		__this->___cachedNetworkNames = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___cachedNetworkNames), (void*)L_4);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:117>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:118>
 		Dictionary_2_tD001156821253ED04A22112577C96EFE869F40F0* L_5 = (Dictionary_2_tD001156821253ED04A22112577C96EFE869F40F0*)il2cpp_codegen_object_new(Dictionary_2_tD001156821253ED04A22112577C96EFE869F40F0_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_mD226101EDEF8BCF9B4643E3DB8028EED9CC89730(L_5, Dictionary_2__ctor_mD226101EDEF8BCF9B4643E3DB8028EED9CC89730_RuntimeMethod_var);
 		__this->___cachedNetworkAvatars = L_5;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___cachedNetworkAvatars), (void*)L_5);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:118>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:119>
 		Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180* L_6 = (Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180*)il2cpp_codegen_object_new(Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_m712893C2C48C47CCAFAD85A865C702E8D3D2B71F(L_6, Dictionary_2__ctor_m712893C2C48C47CCAFAD85A865C702E8D3D2B71F_RuntimeMethod_var);
 		__this->___cachedNetworkAvatarIndices = L_6;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___cachedNetworkAvatarIndices), (void*)L_6);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:126>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:127>
 		Dictionary_2_t03CB0E456E3F308DB7BD58AC650EDBFA1BB3E3E8* L_7 = (Dictionary_2_t03CB0E456E3F308DB7BD58AC650EDBFA1BB3E3E8*)il2cpp_codegen_object_new(Dictionary_2_t03CB0E456E3F308DB7BD58AC650EDBFA1BB3E3E8_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_mCE4E5A86CCEC483CEAF744E9D061F5D7814C061A(L_7, Dictionary_2__ctor_mCE4E5A86CCEC483CEAF744E9D061F5D7814C061A_RuntimeMethod_var);
 		__this->___opponentNumberGrids = L_7;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___opponentNumberGrids), (void*)L_7);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:127>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:128>
 		List_1_t16892746002A4DE7002276C84C697F635A1E5BE8* L_8 = (List_1_t16892746002A4DE7002276C84C697F635A1E5BE8*)il2cpp_codegen_object_new(List_1_t16892746002A4DE7002276C84C697F635A1E5BE8_il2cpp_TypeInfo_var);
 		List_1__ctor_m3F6C1865F233F86920804E1788DC9F77DD8EEF71(L_8, List_1__ctor_m3F6C1865F233F86920804E1788DC9F77DD8EEF71_RuntimeMethod_var);
 		__this->___allNumberGrids = L_8;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___allNumberGrids), (void*)L_8);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:130>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:131>
 		__this->___cacheRefreshInterval = (2.0f);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:134>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:135>
 		Dictionary_2_tF99E988C7E3A4709CE89F8DEDE7AE36BBC0D4EEF* L_9 = (Dictionary_2_tF99E988C7E3A4709CE89F8DEDE7AE36BBC0D4EEF*)il2cpp_codegen_object_new(Dictionary_2_tF99E988C7E3A4709CE89F8DEDE7AE36BBC0D4EEF_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_m51FA12AE17D2BD9821C962B5FE102024727B5C1B(L_9, Dictionary_2__ctor_m51FA12AE17D2BD9821C962B5FE102024727B5C1B_RuntimeMethod_var);
 		__this->___playerLastScoreTime = L_9;
@@ -22135,7 +22135,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager__ctor_mF453CED520617BFB65C52
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65763
+// Method Definition Index: 65765
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m9E093D331C270DADD1A4C76D46C227AF4B4AA4D5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22152,7 +22152,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m9E093D331C270DADD1A4C76D
 		return;
 	}
 }
-// Method Definition Index: 65764
+// Method Definition Index: 65766
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m6A162D1CE45F1D23F65A28A8DE89B3B115054DC7 (U3CU3Ec_t934A682FC7A2310EB64DF8FB184FC75102272AA5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22160,11 +22160,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m6A162D1CE45F1D23F65A28A8D
 		return;
 	}
 }
-// Method Definition Index: 65765
+// Method Definition Index: 65767
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t U3CU3Ec_U3CHandleServerGameOverU3Eb__80_0_m037EAC35EA5F35ED32BE00573A0A67EFEE22026C (U3CU3Ec_t934A682FC7A2310EB64DF8FB184FC75102272AA5* __this, ValueTuple_5_t75FF97573D17CC339B320A221F9B0569AA0C2A05 ___0_a, ValueTuple_5_t75FF97573D17CC339B320A221F9B0569AA0C2A05 ___1_b, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:287>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:288>
 		int32_t* L_0 = (int32_t*)(&(&___1_b)->___Item3);
 		ValueTuple_5_t75FF97573D17CC339B320A221F9B0569AA0C2A05 L_1 = ___0_a;
 		int32_t L_2 = L_1.___Item3;
@@ -22181,7 +22181,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t U3CU3Ec_U3CHandleServerGameOverU3Eb__
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65766
+// Method Definition Index: 65768
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass118_0__ctor_m02EC765B1754541DD012CE2F0C903BBBC7863180 (U3CU3Ec__DisplayClass118_0_tE64640DDD8BEA7377738C0603B4A22617C4F67C0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22189,7 +22189,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass118_0__ctor_m02EC76
 		return;
 	}
 }
-// Method Definition Index: 65767
+// Method Definition Index: 65769
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass118_0_U3CAssignAvatarAsyncU3Eb__0_mCFA43342EA055C2D54F63CA83CF46F5AE9BF04AA (U3CU3Ec__DisplayClass118_0_tE64640DDD8BEA7377738C0603B4A22617C4F67C0* __this, Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___0_tex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22200,7 +22200,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass118_0_U3CAssignAvat
 	}
 	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* V_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1301>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1302>
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_0 = ___0_tex;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -22221,7 +22221,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass118_0_U3CAssignAvat
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1303>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1304>
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_4 = ___0_tex;
 		Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* L_5 = ___0_tex;
 		NullCheck(L_5);
@@ -22240,7 +22240,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass118_0_U3CAssignAvat
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_11;
 		L_11 = Sprite_Create_m827A9BDEC4566AB71966A40DB48A09BB064D81E7(L_4, L_9, L_10, NULL);
 		V_0 = L_11;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1304>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1305>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_12 = __this->___target;
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_13 = V_0;
 		NullCheck(L_12);
@@ -22249,7 +22249,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass118_0_U3CAssignAvat
 
 IL_0056:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1307>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1308>
 		return;
 	}
 }
@@ -22261,7 +22261,7 @@ IL_0056:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65768
+// Method Definition Index: 65770
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass136_0__ctor_m7194AC050BDC3C8021A38CE7DBA493A69E2B87DF (U3CU3Ec__DisplayClass136_0_t60060A963CCEFDE4491294EF9E1299F535216F4D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22269,11 +22269,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass136_0__ctor_m7194AC
 		return;
 	}
 }
-// Method Definition Index: 65769
+// Method Definition Index: 65771
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass136_0_U3CCreateIndividualNumberGridsU3Eb__0_mBB4BE636A8C142F74352A9891E74B38D4F4B9DB0 (U3CU3Ec__DisplayClass136_0_t60060A963CCEFDE4491294EF9E1299F535216F4D* __this, NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* ___0_g, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1922>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1923>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_0 = ___0_g;
 		NullCheck(L_0);
 		String_t* L_1;
@@ -22292,7 +22292,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass136_0_U3CCreateIndi
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65770
+// Method Definition Index: 65772
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFinishCountdownSequenceU3Ed__92__ctor_m6CDCA85C1817C96B4840EBA72EDECDD0834E549E (U3CFinishCountdownSequenceU3Ed__92_t02174B85C6BFDF21F1A49E885B9DA27E13AE64E5* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -22302,14 +22302,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFinishCountdownSequenceU3Ed__92__ctor
 		return;
 	}
 }
-// Method Definition Index: 65771
+// Method Definition Index: 65773
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFinishCountdownSequenceU3Ed__92_System_IDisposable_Dispose_mFF3D4A53B220CF2AB4DC5FF8CB48313EC2E7F894 (U3CFinishCountdownSequenceU3Ed__92_t02174B85C6BFDF21F1A49E885B9DA27E13AE64E5* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65772
+// Method Definition Index: 65774
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CFinishCountdownSequenceU3Ed__92_MoveNext_mDBB93DA0D06EAD2F65AF99FAF55A3EE3ED5BC723 (U3CFinishCountdownSequenceU3Ed__92_t02174B85C6BFDF21F1A49E885B9DA27E13AE64E5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22352,7 +22352,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CFinishCountdownSequenceU3Ed__92_MoveN
 IL_0017:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:690>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:691>
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_4 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_4, (1.0f), NULL);
 		__this->___U3CU3E2__current = L_4;
@@ -22364,7 +22364,7 @@ IL_0017:
 IL_0037:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:695>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:696>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_5 = V_1;
 		NullCheck(L_5);
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_6 = L_5->___countdownText;
@@ -22377,7 +22377,7 @@ IL_0037:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:697>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:698>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_8 = V_1;
 		NullCheck(L_8);
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_9 = L_8->___countdownText;
@@ -22386,7 +22386,7 @@ IL_0037:
 		L_10 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_9, NULL);
 		NullCheck(L_10);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_10, (bool)0, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:698>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:699>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_11 = V_1;
 		NullCheck(L_11);
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_12 = L_11->___countdownTextShadow;
@@ -22399,7 +22399,7 @@ IL_0037:
 
 IL_006e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:702>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:703>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_14 = V_1;
 		NullCheck(L_14);
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_15 = L_14->___timerText;
@@ -22412,7 +22412,7 @@ IL_006e:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:702>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:703>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_17 = V_1;
 		NullCheck(L_17);
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_18 = L_17->___timerText;
@@ -22425,7 +22425,7 @@ IL_006e:
 
 IL_008d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:703>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:704>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_20 = V_1;
 		NullCheck(L_20);
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_21 = L_20->___timerTextLegacy;
@@ -22438,7 +22438,7 @@ IL_008d:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:703>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:704>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_23 = V_1;
 		NullCheck(L_23);
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_24 = L_23->___timerTextLegacy;
@@ -22451,7 +22451,7 @@ IL_008d:
 
 IL_00ac:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:706>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:707>
 		SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* L_26 = ((SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C_StaticFields*)il2cpp_codegen_static_fields_for(SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C_il2cpp_TypeInfo_var))->___instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_27;
@@ -22462,7 +22462,7 @@ IL_00ac:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:706>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:707>
 		SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C* L_28 = ((SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C_StaticFields*)il2cpp_codegen_static_fields_for(SettingManager_t5BA69D8AAAA9B58723E3BD1899DC694A0ACD1D5C_il2cpp_TypeInfo_var))->___instance;
 		NullCheck(L_28);
 		SettingManager_OnCountdownComplete_mCDD3E1BB61E4BA63B80A3E9D7F83C1B81F1F3375(L_28, NULL);
@@ -22470,7 +22470,7 @@ IL_00ac:
 
 IL_00c3:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:708>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:709>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_29 = ((GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var))->___OnGameStarted;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_30 = L_29;
 		if (L_30)
@@ -22492,11 +22492,11 @@ IL_00ce:
 
 IL_00d3:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:709>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:710>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_31 = V_1;
 		NullCheck(L_31);
 		GameManager_StartAllPowerupTimers_m0C1EE8497A5A9A956B3089A1B1C465BD780D9FC0(L_31, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:711>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:712>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_32 = V_1;
 		NullCheck(L_32);
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_33 = L_32->___playerDicesController;
@@ -22509,7 +22509,7 @@ IL_00d3:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:713>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:714>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_35 = V_1;
 		NullCheck(L_35);
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_36 = L_35->___playerDicesController;
@@ -22519,18 +22519,18 @@ IL_00d3:
 
 IL_00f2:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:716>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:717>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_37 = V_1;
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_38 = V_1;
 		NullCheck(L_38);
 		float L_39 = L_38->___gameTimer;
 		NullCheck(L_37);
 		L_37->___currentTimer = L_39;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:717>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:718>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_40 = V_1;
 		NullCheck(L_40);
 		L_40->___isGameActive = (bool)1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:719>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:720>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_41 = V_1;
 		NullCheck(L_41);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_42 = L_41->___timerCoroutine;
@@ -22540,7 +22540,7 @@ IL_00f2:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:719>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:720>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_43 = V_1;
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_44 = V_1;
 		NullCheck(L_44);
@@ -22551,7 +22551,7 @@ IL_00f2:
 
 IL_0119:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:720>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:721>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_46 = V_1;
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_47 = V_1;
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_48 = V_1;
@@ -22564,7 +22564,7 @@ IL_0119:
 		NullCheck(L_46);
 		L_46->___timerCoroutine = L_50;
 		Il2CppCodeGenWriteBarrier((void**)(&L_46->___timerCoroutine), (void*)L_50);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:721>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:722>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_51 = V_1;
 		NullCheck(L_51);
 		float L_52 = L_51->___gameTimer;
@@ -22574,11 +22574,11 @@ IL_0119:
 		L_55 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral664B842C68697B277729E6C75E682730B9B83454, L_54, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_55, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:722>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:723>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65773
+// Method Definition Index: 65775
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFinishCountdownSequenceU3Ed__92_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mBD26A35068F83A20B25A8669C909499DE73448DF (U3CFinishCountdownSequenceU3Ed__92_t02174B85C6BFDF21F1A49E885B9DA27E13AE64E5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22586,7 +22586,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFinishCountdownSequenceU3Ed
 		return L_0;
 	}
 }
-// Method Definition Index: 65774
+// Method Definition Index: 65776
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFinishCountdownSequenceU3Ed__92_System_Collections_IEnumerator_Reset_m176F80B3020104D414D0A3D538C736CA0F05A6ED (U3CFinishCountdownSequenceU3Ed__92_t02174B85C6BFDF21F1A49E885B9DA27E13AE64E5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22595,7 +22595,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CFinishCountdownSequenceU3Ed__92_Syste
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CFinishCountdownSequenceU3Ed__92_System_Collections_IEnumerator_Reset_m176F80B3020104D414D0A3D538C736CA0F05A6ED_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65775
+// Method Definition Index: 65777
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFinishCountdownSequenceU3Ed__92_System_Collections_IEnumerator_get_Current_m23BD1517C317D4CAB1F9181FFE4AA012BEC1981D (U3CFinishCountdownSequenceU3Ed__92_t02174B85C6BFDF21F1A49E885B9DA27E13AE64E5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22611,7 +22611,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CFinishCountdownSequenceU3Ed
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65776
+// Method Definition Index: 65778
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CHandleRejoinedCountdownU3Ed__90__ctor_m19A9731AFC94496A21234B36C86C5E04E2DFF8E7 (U3CHandleRejoinedCountdownU3Ed__90_tB840C8BFE4D9101F3C1F05236E33F334E9F39C49* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -22621,14 +22621,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CHandleRejoinedCountdownU3Ed__90__ctor
 		return;
 	}
 }
-// Method Definition Index: 65777
+// Method Definition Index: 65779
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CHandleRejoinedCountdownU3Ed__90_System_IDisposable_Dispose_m35AE8A3F134CBD7031ABF0BE9353F62EE85DA82C (U3CHandleRejoinedCountdownU3Ed__90_tB840C8BFE4D9101F3C1F05236E33F334E9F39C49* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65778
+// Method Definition Index: 65780
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CHandleRejoinedCountdownU3Ed__90_MoveNext_m667FA1120F5EA450BF6C9E62314CFB73CAFACA13 (U3CHandleRejoinedCountdownU3Ed__90_tB840C8BFE4D9101F3C1F05236E33F334E9F39C49* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22667,7 +22667,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CHandleRejoinedCountdownU3Ed__90_MoveN
 IL_001a:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:626>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:627>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_4 = V_1;
 		NullCheck(L_4);
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_5 = L_4->___countdownText;
@@ -22692,7 +22692,7 @@ IL_001a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:628>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:629>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_10 = V_1;
 		NullCheck(L_10);
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_11 = L_10->___countdownText;
@@ -22701,7 +22701,7 @@ IL_001a:
 		L_12 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_11, NULL);
 		NullCheck(L_12);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_12, (bool)1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:629>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:630>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_13 = V_1;
 		NullCheck(L_13);
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_14 = L_13->___countdownTextShadow;
@@ -22710,7 +22710,7 @@ IL_001a:
 		L_15 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_14, NULL);
 		NullCheck(L_15);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_15, (bool)1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:632>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:633>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_16 = V_1;
 		NullCheck(L_16);
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_17 = L_16->___countdownText;
@@ -22755,13 +22755,13 @@ IL_001a:
 
 IL_009f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:634>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:635>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_28 = V_1;
 		NullCheck(L_28);
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_29 = L_28->___countdownText;
 		NullCheck(L_29);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_29, _stringLiteralFFEF3DBE279EE1F92E1E2E46F45BC18EBBF55A1A);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:635>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:636>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_30 = V_1;
 		NullCheck(L_30);
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_31 = L_30->___countdownTextShadow;
@@ -22771,7 +22771,7 @@ IL_009f:
 
 IL_00bf:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:640>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:641>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_32 = V_1;
 		NullCheck(L_32);
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_33 = L_32->___timerText;
@@ -22784,7 +22784,7 @@ IL_00bf:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:640>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:641>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_35 = V_1;
 		NullCheck(L_35);
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_36 = L_35->___timerText;
@@ -22797,7 +22797,7 @@ IL_00bf:
 
 IL_00de:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:641>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:642>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_38 = V_1;
 		NullCheck(L_38);
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_39 = L_38->___timerTextLegacy;
@@ -22810,7 +22810,7 @@ IL_00de:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:641>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:642>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_41 = V_1;
 		NullCheck(L_41);
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_42 = L_41->___timerTextLegacy;
@@ -22823,7 +22823,7 @@ IL_00de:
 
 IL_00fd:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:642>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:643>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_44 = V_1;
 		NullCheck(L_44);
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_45 = L_44->___playerDicesController;
@@ -22836,7 +22836,7 @@ IL_00fd:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:642>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:643>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_47 = V_1;
 		NullCheck(L_47);
 		DicesController_t792741D62A7456ADC55A446B5B2DA4F9281C9655* L_48 = L_47->___playerDicesController;
@@ -22846,7 +22846,7 @@ IL_00fd:
 
 IL_0117:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:645>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:646>
 		float L_49 = __this->___secondsToWait;
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_50 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_50, L_49, NULL);
@@ -22859,7 +22859,7 @@ IL_0117:
 IL_0131:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:648>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:649>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_51 = V_1;
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_52 = V_1;
 		NullCheck(L_52);
@@ -22868,11 +22868,11 @@ IL_0131:
 		NullCheck(L_51);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_54;
 		L_54 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(L_51, L_53, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:649>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:650>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65779
+// Method Definition Index: 65781
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CHandleRejoinedCountdownU3Ed__90_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m078161773A032F1F73B28F394F7158D778B0CF00 (U3CHandleRejoinedCountdownU3Ed__90_tB840C8BFE4D9101F3C1F05236E33F334E9F39C49* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22880,7 +22880,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CHandleRejoinedCountdownU3Ed
 		return L_0;
 	}
 }
-// Method Definition Index: 65780
+// Method Definition Index: 65782
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CHandleRejoinedCountdownU3Ed__90_System_Collections_IEnumerator_Reset_m36A73C69E38E6C4DB2D0CD8CB821A0DB23BC3F8C (U3CHandleRejoinedCountdownU3Ed__90_tB840C8BFE4D9101F3C1F05236E33F334E9F39C49* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22889,7 +22889,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CHandleRejoinedCountdownU3Ed__90_Syste
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CHandleRejoinedCountdownU3Ed__90_System_Collections_IEnumerator_Reset_m36A73C69E38E6C4DB2D0CD8CB821A0DB23BC3F8C_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65781
+// Method Definition Index: 65783
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CHandleRejoinedCountdownU3Ed__90_System_Collections_IEnumerator_get_Current_m6D19B0AAF8A3085F1E5EC5BAEDA2BDBCB209EA90 (U3CHandleRejoinedCountdownU3Ed__90_tB840C8BFE4D9101F3C1F05236E33F334E9F39C49* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22905,7 +22905,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CHandleRejoinedCountdownU3Ed
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65782
+// Method Definition Index: 65784
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInitializeProfilesDelayedU3Ed__113__ctor_m665EE158FE225F9B4B7C09FF2D914CD85C364123 (U3CInitializeProfilesDelayedU3Ed__113_tAF7D0C2F0E3DF0B706475195B8791F5200036403* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -22915,14 +22915,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInitializeProfilesDelayedU3Ed__113__c
 		return;
 	}
 }
-// Method Definition Index: 65783
+// Method Definition Index: 65785
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInitializeProfilesDelayedU3Ed__113_System_IDisposable_Dispose_mD05C8A8B9C553F01FB37532A14EB6F3ED0233B97 (U3CInitializeProfilesDelayedU3Ed__113_tAF7D0C2F0E3DF0B706475195B8791F5200036403* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65784
+// Method Definition Index: 65786
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CInitializeProfilesDelayedU3Ed__113_MoveNext_mD8FD35BC3AFCFB67F5182E75A4BCE3E740742E59 (U3CInitializeProfilesDelayedU3Ed__113_tAF7D0C2F0E3DF0B706475195B8791F5200036403* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22958,7 +22958,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CInitializeProfilesDelayedU3Ed__113_Mo
 IL_0017:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1137>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1138>
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_4 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_4, (1.5f), NULL);
 		__this->___U3CU3E2__current = L_4;
@@ -22970,15 +22970,15 @@ IL_0017:
 IL_0037:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1139>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1140>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_5 = V_1;
 		NullCheck(L_5);
 		GameManager_InitializeProfiles_mD1B8A360213C4C000199A9AECB5A2F4A02435737(L_5, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1140>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1141>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65785
+// Method Definition Index: 65787
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CInitializeProfilesDelayedU3Ed__113_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m60BFAE1211E36620673D4C79A77C1BE34444CB21 (U3CInitializeProfilesDelayedU3Ed__113_tAF7D0C2F0E3DF0B706475195B8791F5200036403* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22986,7 +22986,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CInitializeProfilesDelayedU3
 		return L_0;
 	}
 }
-// Method Definition Index: 65786
+// Method Definition Index: 65788
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInitializeProfilesDelayedU3Ed__113_System_Collections_IEnumerator_Reset_mE0B118C485286CC7D4DBB99C69A4ED352B0EFA43 (U3CInitializeProfilesDelayedU3Ed__113_tAF7D0C2F0E3DF0B706475195B8791F5200036403* __this, const RuntimeMethod* method) 
 {
 	{
@@ -22995,7 +22995,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CInitializeProfilesDelayedU3Ed__113_Sy
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CInitializeProfilesDelayedU3Ed__113_System_Collections_IEnumerator_Reset_mE0B118C485286CC7D4DBB99C69A4ED352B0EFA43_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65787
+// Method Definition Index: 65789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CInitializeProfilesDelayedU3Ed__113_System_Collections_IEnumerator_get_Current_mE74E452F6ACBBC198EFC1322D7D24768F4C92FC5 (U3CInitializeProfilesDelayedU3Ed__113_tAF7D0C2F0E3DF0B706475195B8791F5200036403* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23011,7 +23011,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CInitializeProfilesDelayedU3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65788
+// Method Definition Index: 65790
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRefreshLobbyButtonsDelayedU3Ed__131__ctor_m56B43C142FAB4C8A6BF92CBCF158F3FC2CE2BE96 (U3CRefreshLobbyButtonsDelayedU3Ed__131_t0771CBF885CCA17FB7FAC858E629FC3BF9B3FBC0* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -23021,20 +23021,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRefreshLobbyButtonsDelayedU3Ed__131__
 		return;
 	}
 }
-// Method Definition Index: 65789
+// Method Definition Index: 65791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRefreshLobbyButtonsDelayedU3Ed__131_System_IDisposable_Dispose_mBAEE866FE43DB8414343BDB186131FF1850AAED1 (U3CRefreshLobbyButtonsDelayedU3Ed__131_t0771CBF885CCA17FB7FAC858E629FC3BF9B3FBC0* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65790
+// Method Definition Index: 65792
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CRefreshLobbyButtonsDelayedU3Ed__131_MoveNext_m0905AFEE193D3F129DD69A100023D495BEFCB684 (U3CRefreshLobbyButtonsDelayedU3Ed__131_t0771CBF885CCA17FB7FAC858E629FC3BF9B3FBC0* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_m358B2301D31070F31BF8BF978DC3F2B6F68FE0FB_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindFirstObjectByType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_m135AF64B21524B9580A4F9DAB9656669BE6A6F35_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
@@ -23064,7 +23064,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CRefreshLobbyButtonsDelayedU3Ed__131_M
 IL_0010:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1753>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1754>
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_3 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_3, (3.0f), NULL);
 		__this->___U3CU3E2__current = L_3;
@@ -23076,12 +23076,12 @@ IL_0010:
 IL_0030:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1755>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1756>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		HorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637* L_4;
-		L_4 = Object_FindObjectOfType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_m358B2301D31070F31BF8BF978DC3F2B6F68FE0FB(Object_FindObjectOfType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_m358B2301D31070F31BF8BF978DC3F2B6F68FE0FB_RuntimeMethod_var);
+		L_4 = Object_FindFirstObjectByType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_m135AF64B21524B9580A4F9DAB9656669BE6A6F35(Object_FindFirstObjectByType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_m135AF64B21524B9580A4F9DAB9656669BE6A6F35_RuntimeMethod_var);
 		V_1 = L_4;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1756>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1757>
 		HorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637* L_5 = V_1;
 		bool L_6;
 		L_6 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_5, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -23091,7 +23091,7 @@ IL_0030:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1758>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1759>
 		HorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637* L_7 = V_1;
 		NullCheck(L_7);
 		HorizontalLobbyManager_RefreshAllPlayButtons_mE92A306042855B00F92058F1DFDFC154DFF6951D(L_7, NULL);
@@ -23099,11 +23099,11 @@ IL_0030:
 
 IL_004c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1760>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1761>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65791
+// Method Definition Index: 65793
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRefreshLobbyButtonsDelayedU3Ed__131_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mF61E0B86E516DA8B9E00843E039D43785CC9E9A6 (U3CRefreshLobbyButtonsDelayedU3Ed__131_t0771CBF885CCA17FB7FAC858E629FC3BF9B3FBC0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23111,7 +23111,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRefreshLobbyButtonsDelayedU
 		return L_0;
 	}
 }
-// Method Definition Index: 65792
+// Method Definition Index: 65794
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRefreshLobbyButtonsDelayedU3Ed__131_System_Collections_IEnumerator_Reset_m00E57298DE7B2976A5460D00FA4665270D5188C6 (U3CRefreshLobbyButtonsDelayedU3Ed__131_t0771CBF885CCA17FB7FAC858E629FC3BF9B3FBC0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23120,7 +23120,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRefreshLobbyButtonsDelayedU3Ed__131_S
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CRefreshLobbyButtonsDelayedU3Ed__131_System_Collections_IEnumerator_Reset_m00E57298DE7B2976A5460D00FA4665270D5188C6_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65793
+// Method Definition Index: 65795
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRefreshLobbyButtonsDelayedU3Ed__131_System_Collections_IEnumerator_get_Current_mF9976C305D2F304330BE8F753A99132E9E473B54 (U3CRefreshLobbyButtonsDelayedU3Ed__131_t0771CBF885CCA17FB7FAC858E629FC3BF9B3FBC0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23136,7 +23136,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRefreshLobbyButtonsDelayedU
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65794
+// Method Definition Index: 65796
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRetryLoadPlayerProfileU3Ed__112__ctor_mA69CD15D061349D320285100DA5D755B20BCBEEA (U3CRetryLoadPlayerProfileU3Ed__112_tA711F709BA517D3412EE6BE0C4D6524AF7B71BE9* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -23146,14 +23146,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRetryLoadPlayerProfileU3Ed__112__ctor
 		return;
 	}
 }
-// Method Definition Index: 65795
+// Method Definition Index: 65797
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRetryLoadPlayerProfileU3Ed__112_System_IDisposable_Dispose_m24925704A250CA32D598B096679A6F720D07C4E9 (U3CRetryLoadPlayerProfileU3Ed__112_tA711F709BA517D3412EE6BE0C4D6524AF7B71BE9* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65796
+// Method Definition Index: 65798
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CRetryLoadPlayerProfileU3Ed__112_MoveNext_m5D3305B00163B9812F7965B8BAA4460F00926AE3 (U3CRetryLoadPlayerProfileU3Ed__112_tA711F709BA517D3412EE6BE0C4D6524AF7B71BE9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23189,7 +23189,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CRetryLoadPlayerProfileU3Ed__112_MoveN
 IL_0017:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1127>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1128>
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_4 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_4, (0.5f), NULL);
 		__this->___U3CU3E2__current = L_4;
@@ -23201,15 +23201,15 @@ IL_0017:
 IL_0037:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1128>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1129>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_5 = V_1;
 		NullCheck(L_5);
 		GameManager_LoadPlayerProfileImage_mB7A61E2E9A792236E3CB7D7721BCF7BD24012AE3(L_5, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1129>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1130>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65797
+// Method Definition Index: 65799
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRetryLoadPlayerProfileU3Ed__112_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m660D329B57BF6EF5E0BBD2313E413E462C3A6500 (U3CRetryLoadPlayerProfileU3Ed__112_tA711F709BA517D3412EE6BE0C4D6524AF7B71BE9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23217,7 +23217,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRetryLoadPlayerProfileU3Ed_
 		return L_0;
 	}
 }
-// Method Definition Index: 65798
+// Method Definition Index: 65800
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRetryLoadPlayerProfileU3Ed__112_System_Collections_IEnumerator_Reset_mC988648265938989C854D5249047CA62A8F12F01 (U3CRetryLoadPlayerProfileU3Ed__112_tA711F709BA517D3412EE6BE0C4D6524AF7B71BE9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23226,7 +23226,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CRetryLoadPlayerProfileU3Ed__112_Syste
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CRetryLoadPlayerProfileU3Ed__112_System_Collections_IEnumerator_Reset_mC988648265938989C854D5249047CA62A8F12F01_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65799
+// Method Definition Index: 65801
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRetryLoadPlayerProfileU3Ed__112_System_Collections_IEnumerator_get_Current_mF5B43A3AED90B9CB1EDBBD5F95E5B78A40804B69 (U3CRetryLoadPlayerProfileU3Ed__112_tA711F709BA517D3412EE6BE0C4D6524AF7B71BE9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23242,7 +23242,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CRetryLoadPlayerProfileU3Ed_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65800
+// Method Definition Index: 65802
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CShowWinnerScreenWithDelayU3Ed__82__ctor_m5A49525CD2E92E9D0ED8399A52EFBAB3127E3276 (U3CShowWinnerScreenWithDelayU3Ed__82_t6D826BE0C9584CEF22E8A6D6C6A81D155F0AE7CE* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -23252,14 +23252,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CShowWinnerScreenWithDelayU3Ed__82__ct
 		return;
 	}
 }
-// Method Definition Index: 65801
+// Method Definition Index: 65803
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CShowWinnerScreenWithDelayU3Ed__82_System_IDisposable_Dispose_m27777417FD72D86DA96006DBB5E95709DFC0DCB1 (U3CShowWinnerScreenWithDelayU3Ed__82_t6D826BE0C9584CEF22E8A6D6C6A81D155F0AE7CE* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65802
+// Method Definition Index: 65804
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CShowWinnerScreenWithDelayU3Ed__82_MoveNext_mFE26723984DF40C95E787531434730D7C79CBFC1 (U3CShowWinnerScreenWithDelayU3Ed__82_t6D826BE0C9584CEF22E8A6D6C6A81D155F0AE7CE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23301,7 +23301,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CShowWinnerScreenWithDelayU3Ed__82_Mov
 IL_0017:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:334>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:335>
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_4 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_4, (2.5f), NULL);
 		__this->___U3CU3E2__current = L_4;
@@ -23313,7 +23313,7 @@ IL_0017:
 IL_0037:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:336>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:337>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_5 = V_1;
 		NullCheck(L_5);
 		bool L_6 = L_5->___localPlayerForfeited;
@@ -23323,18 +23323,18 @@ IL_0037:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:338>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:339>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_7 = V_1;
 		NullCheck(L_7);
 		L_7->___winnerScreenDelayCoroutine = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&L_7->___winnerScreenDelayCoroutine), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:339>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:340>
 		return (bool)0;
 	}
 
 IL_004f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:343>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:344>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_8 = V_1;
 		NullCheck(L_8);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_9 = L_8->___calculateLoadingScreen;
@@ -23347,7 +23347,7 @@ IL_004f:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:345>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:346>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_11 = V_1;
 		NullCheck(L_11);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_12 = L_11->___calculateLoadingScreen;
@@ -23357,18 +23357,18 @@ IL_004f:
 
 IL_0069:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:349>
-		V_2 = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:350>
-		V_3 = 0;
+		V_2 = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:351>
+		V_3 = 0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:352>
 		V_4 = 0;
 		goto IL_00a8;
 	}
 
 IL_0072:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:353>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:354>
 		List_1_tD82BDFFDFF48A30CF1C67F8754A408769BD41131* L_13 = __this->___rankings;
 		int32_t L_14 = V_4;
 		NullCheck(L_13);
@@ -23381,7 +23381,7 @@ IL_0072:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:355>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:356>
 		int32_t L_17 = V_4;
 		if ((((int32_t)L_17) >= ((int32_t)3)))
 		{
@@ -23389,13 +23389,13 @@ IL_0072:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:355>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:356>
 		V_2 = (bool)1;
 	}
 
 IL_008d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:356>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:357>
 		List_1_tD82BDFFDFF48A30CF1C67F8754A408769BD41131* L_18 = __this->___rankings;
 		int32_t L_19 = V_4;
 		NullCheck(L_18);
@@ -23403,20 +23403,20 @@ IL_008d:
 		L_20 = List_1_get_Item_m91209D2BD1090586F090F544200B08A9F926C18F(L_18, L_19, List_1_get_Item_m91209D2BD1090586F090F544200B08A9F926C18F_RuntimeMethod_var);
 		int32_t L_21 = L_20.___Item3;
 		V_3 = L_21;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:357>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:358>
 		goto IL_00b7;
 	}
 
 IL_00a2:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:351>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:352>
 		int32_t L_22 = V_4;
 		V_4 = ((int32_t)il2cpp_codegen_add(L_22, 1));
 	}
 
 IL_00a8:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:351>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:352>
 		int32_t L_23 = V_4;
 		List_1_tD82BDFFDFF48A30CF1C67F8754A408769BD41131* L_24 = __this->___rankings;
 		NullCheck(L_24);
@@ -23430,7 +23430,7 @@ IL_00a8:
 
 IL_00b7:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:361>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:362>
 		bool L_26 = V_2;
 		if (L_26)
 		{
@@ -23438,7 +23438,7 @@ IL_00b7:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:364>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:365>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_27 = V_1;
 		NullCheck(L_27);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_28 = L_27->___loserScoreScreen;
@@ -23463,20 +23463,20 @@ IL_00b7:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:366>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:367>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_33 = V_1;
 		NullCheck(L_33);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_34 = L_33->___loserScoreScreen;
 		NullCheck(L_34);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_34, (bool)1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:367>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:368>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_35 = V_1;
 		NullCheck(L_35);
 		LoserScoreScreen_t34AC3715E56236AD336949BD5BEE20FC05F00066* L_36 = L_35->___loserScoreScreenScript;
 		int32_t L_37 = V_3;
 		NullCheck(L_36);
 		LoserScoreScreen_Setup_mA5E9503E952D5E599E86B0BBDE086FC24F7C9B4E(L_36, L_37, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:368>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:369>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_38 = V_1;
 		NullCheck(L_38);
 		L_38->___winnerScreenShown = (bool)1;
@@ -23485,7 +23485,7 @@ IL_00b7:
 
 IL_00f7:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:372>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:373>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_39 = V_1;
 		NullCheck(L_39);
 		GameManager_OnWinnerLobbyButtonClicked_m9361754CF874D909C7FD57E5649160CB63AEBFD3(L_39, NULL);
@@ -23493,13 +23493,13 @@ IL_00f7:
 
 IL_00fd:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:374>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:375>
 		return (bool)0;
 	}
 
 IL_00ff:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:378>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:379>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_40 = V_1;
 		NullCheck(L_40);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_41 = L_40->___winnerScreen;
@@ -23512,13 +23512,13 @@ IL_00ff:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:380>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:381>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_43 = V_1;
 		NullCheck(L_43);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_44 = L_43->___winnerScreen;
 		NullCheck(L_44);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_44, (bool)1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:381>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:382>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_45 = V_1;
 		NullCheck(L_45);
 		L_45->___winnerScreenShown = (bool)1;
@@ -23526,7 +23526,7 @@ IL_00ff:
 
 IL_0120:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:385>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:386>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_46 = V_1;
 		NullCheck(L_46);
 		WinnerScreen_tB62EA0D93C2FBA5D799895D556E444C02627FC0A* L_47 = L_46->___winnerScreenScript;
@@ -23539,7 +23539,7 @@ IL_0120:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:387>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:388>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_49 = V_1;
 		NullCheck(L_49);
 		WinnerScreen_tB62EA0D93C2FBA5D799895D556E444C02627FC0A* L_50 = L_49->___winnerScreenScript;
@@ -23547,7 +23547,7 @@ IL_0120:
 		GameOverData_t64DEE11B7483DC311DE5DC555498AB1FF8CEECBC* L_52 = __this->___data;
 		NullCheck(L_50);
 		WinnerScreen_SetupWinnerResults_m287A4390853DB153F8FCDB44A6219428B9F9568F(L_50, L_51, L_52, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:390>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:391>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_53 = V_1;
 		NullCheck(L_53);
 		WinnerScreen_tB62EA0D93C2FBA5D799895D556E444C02627FC0A* L_54 = L_53->___winnerScreenScript;
@@ -23561,16 +23561,16 @@ IL_0120:
 
 IL_015c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:393>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:394>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_58 = V_1;
 		NullCheck(L_58);
 		L_58->___winnerScreenDelayCoroutine = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&L_58->___winnerScreenDelayCoroutine), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:394>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:395>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65803
+// Method Definition Index: 65805
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CShowWinnerScreenWithDelayU3Ed__82_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m1D3DD9F737B7C0007BC434F839BE0A79B44A3BE9 (U3CShowWinnerScreenWithDelayU3Ed__82_t6D826BE0C9584CEF22E8A6D6C6A81D155F0AE7CE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23578,7 +23578,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CShowWinnerScreenWithDelayU3
 		return L_0;
 	}
 }
-// Method Definition Index: 65804
+// Method Definition Index: 65806
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CShowWinnerScreenWithDelayU3Ed__82_System_Collections_IEnumerator_Reset_mD7F0CF49FF2E57BF4A4457F5109BFBF4F60800FE (U3CShowWinnerScreenWithDelayU3Ed__82_t6D826BE0C9584CEF22E8A6D6C6A81D155F0AE7CE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23587,7 +23587,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CShowWinnerScreenWithDelayU3Ed__82_Sys
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CShowWinnerScreenWithDelayU3Ed__82_System_Collections_IEnumerator_Reset_mD7F0CF49FF2E57BF4A4457F5109BFBF4F60800FE_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65805
+// Method Definition Index: 65807
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CShowWinnerScreenWithDelayU3Ed__82_System_Collections_IEnumerator_get_Current_mCD3B50FE9237B411CD35FF6A144856647A6A6309 (U3CShowWinnerScreenWithDelayU3Ed__82_t6D826BE0C9584CEF22E8A6D6C6A81D155F0AE7CE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23603,7 +23603,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CShowWinnerScreenWithDelayU3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65806
+// Method Definition Index: 65808
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CTimerCountdownU3Ed__95__ctor_mFDC2DC0E773B8C6DE44A2A8007E18B48371CD6A3 (U3CTimerCountdownU3Ed__95_tE1826E3220B38A87AEE52A39046CCBB72829067A* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -23613,14 +23613,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CTimerCountdownU3Ed__95__ctor_mFDC2DC0
 		return;
 	}
 }
-// Method Definition Index: 65807
+// Method Definition Index: 65809
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CTimerCountdownU3Ed__95_System_IDisposable_Dispose_mC57AA3972950AB6C7EDD8468A74FE7ADCA4224BE (U3CTimerCountdownU3Ed__95_tE1826E3220B38A87AEE52A39046CCBB72829067A* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 65808
+// Method Definition Index: 65810
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CTimerCountdownU3Ed__95_MoveNext_mCFE3C18431726BA9EE2B0BDD841FE8638008F863 (U3CTimerCountdownU3Ed__95_tE1826E3220B38A87AEE52A39046CCBB72829067A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23662,7 +23662,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CTimerCountdownU3Ed__95_MoveNext_mCFE3
 IL_0017:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:760>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:761>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_4 = V_1;
 		NullCheck(L_4);
 		GameManager_UpdateTimerDisplay_mF03182CF6D36FDD0133E5CA889C29F9A9634E169(L_4, NULL);
@@ -23671,7 +23671,7 @@ IL_0017:
 
 IL_0029:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:765>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:766>
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_5 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_5, (0.25f), NULL);
 		__this->___U3CU3E2__current = L_5;
@@ -23683,7 +23683,7 @@ IL_0029:
 IL_0042:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:767>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:768>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_6 = V_1;
 		NullCheck(L_6);
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_7 = L_6->___currentMatchData;
@@ -23704,7 +23704,7 @@ IL_0042:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:770>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:771>
 		il2cpp_codegen_runtime_class_init_inline(DateTimeOffset_t4EE701FE2F386D6F932FAC9B11E4B74A5B30F0A4_il2cpp_TypeInfo_var);
 		DateTimeOffset_t4EE701FE2F386D6F932FAC9B11E4B74A5B30F0A4 L_11;
 		L_11 = DateTimeOffset_get_UtcNow_mD315065704E3FE153970E6BD06362AEDD3D9765F(NULL);
@@ -23717,7 +23717,7 @@ IL_0042:
 		NullCheck(L_14);
 		int64_t L_15 = L_14->___gameplayStartsAt;
 		V_2 = ((double)(((double)((int64_t)il2cpp_codegen_subtract(L_12, L_15)))/(1000.0)));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:771>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:772>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_16 = V_1;
 		NullCheck(L_16);
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_17 = L_16->___currentMatchData;
@@ -23749,7 +23749,7 @@ IL_009c:
 IL_00a8:
 	{
 		V_3 = G_B10_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:772>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:773>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_24 = V_1;
 		float L_25 = V_3;
 		double L_26 = V_2;
@@ -23762,7 +23762,7 @@ IL_00a8:
 
 IL_00bf:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:777>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:778>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_28 = V_1;
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_29 = V_1;
 		NullCheck(L_29);
@@ -23773,7 +23773,7 @@ IL_00bf:
 
 IL_00d1:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:781>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:782>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_31 = V_1;
 		NullCheck(L_31);
 		GameManager_UpdateTimerDisplay_mF03182CF6D36FDD0133E5CA889C29F9A9634E169(L_31, NULL);
@@ -23781,7 +23781,7 @@ IL_00d1:
 
 IL_00d7:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:762>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:763>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_32 = V_1;
 		NullCheck(L_32);
 		float L_33 = L_32->___currentTimer;
@@ -23802,7 +23802,7 @@ IL_00d7:
 
 IL_00ef:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:785>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:786>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_36 = V_1;
 		NullCheck(L_36);
 		bool L_37 = L_36->___isGameActive;
@@ -23812,15 +23812,15 @@ IL_00ef:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:787>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:788>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_38 = V_1;
 		NullCheck(L_38);
 		L_38->___currentTimer = (0.0f);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:788>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:789>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_39 = V_1;
 		NullCheck(L_39);
 		GameManager_UpdateTimerDisplay_mF03182CF6D36FDD0133E5CA889C29F9A9634E169(L_39, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:789>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:790>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_40 = V_1;
 		NullCheck(L_40);
 		GameManager_OnTimerExpired_m7BBB556891A16D2375EC3DD72418F778EF4D89CA(L_40, NULL);
@@ -23828,11 +23828,11 @@ IL_00ef:
 
 IL_010e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:791>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:792>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65809
+// Method Definition Index: 65811
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CTimerCountdownU3Ed__95_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m47E7C6D90836E3CAAE9BFC0DF6A7500C5087FF70 (U3CTimerCountdownU3Ed__95_tE1826E3220B38A87AEE52A39046CCBB72829067A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23840,7 +23840,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CTimerCountdownU3Ed__95_Syst
 		return L_0;
 	}
 }
-// Method Definition Index: 65810
+// Method Definition Index: 65812
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CTimerCountdownU3Ed__95_System_Collections_IEnumerator_Reset_mFAE8755D4397C2E932A7C5C59D16102E1055ACEB (U3CTimerCountdownU3Ed__95_tE1826E3220B38A87AEE52A39046CCBB72829067A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23849,7 +23849,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CTimerCountdownU3Ed__95_System_Collect
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CTimerCountdownU3Ed__95_System_Collections_IEnumerator_Reset_mFAE8755D4397C2E932A7C5C59D16102E1055ACEB_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 65811
+// Method Definition Index: 65813
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CTimerCountdownU3Ed__95_System_Collections_IEnumerator_get_Current_mF45459786AB2521C12B3A94B576109890A9B8200 (U3CTimerCountdownU3Ed__95_tE1826E3220B38A87AEE52A39046CCBB72829067A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23865,7 +23865,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CTimerCountdownU3Ed__95_Syst
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65812
+// Method Definition Index: 65814
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfflinePodiumSnapshot__ctor_m3E1D9F9D74228500F9101F58094380EB25A2D54D (OfflinePodiumSnapshot_tB6C6E05A0D5A90C271918FE4214C656B9B2C5B52* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23876,7 +23876,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfflinePodiumSnapshot__ctor_m3E1D9F9D742
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2133>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:2134>
 		List_1_tE1B3A6717A871985D94732C76D47D43997AC2416* L_0 = (List_1_tE1B3A6717A871985D94732C76D47D43997AC2416*)il2cpp_codegen_object_new(List_1_tE1B3A6717A871985D94732C76D47D43997AC2416_il2cpp_TypeInfo_var);
 		List_1__ctor_m6EE2DBF0F50809A203E63ECBB6364E5B55FFD669(L_0, List_1__ctor_m6EE2DBF0F50809A203E63ECBB6364E5B55FFD669_RuntimeMethod_var);
 		__this->___topThree = L_0;
@@ -23893,7 +23893,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfflinePodiumSnapshot__ctor_m3E1D9F9D742
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65813
+// Method Definition Index: 65815
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfflinePlayerEntry__ctor_m51CF7CC83057D79C54BB101FC542AE10F7F2E36F (OfflinePlayerEntry_tCC0714ABA09F528F60F28CFE68A8DEC8507282CB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23909,7 +23909,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfflinePlayerEntry__ctor_m51CF7CC83057D7
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65814
+// Method Definition Index: 65816
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float GamePlayReferenceScaler_get_CurrentScale_mF687116B34B947606B0A65878313014A50FF6FC1 (GamePlayReferenceScaler_tC730531C7AE6D1D796FC2DA2B06B14A99BE4137B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23918,7 +23918,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float GamePlayReferenceScaler_get_CurrentScal
 		return L_0;
 	}
 }
-// Method Definition Index: 65815
+// Method Definition Index: 65817
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GamePlayReferenceScaler_set_CurrentScale_m522CABADDC48F6BF0666CE070AAAE433DE2D056B (GamePlayReferenceScaler_tC730531C7AE6D1D796FC2DA2B06B14A99BE4137B* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -23928,7 +23928,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GamePlayReferenceScaler_set_CurrentScale
 		return;
 	}
 }
-// Method Definition Index: 65816
+// Method Definition Index: 65818
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GamePlayReferenceScaler_Awake_m18F87F56D38DDABEC44D1A56AFEB1686CEB940B7 (GamePlayReferenceScaler_tC730531C7AE6D1D796FC2DA2B06B14A99BE4137B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23993,7 +23993,7 @@ IL_0026:
 		return;
 	}
 }
-// Method Definition Index: 65817
+// Method Definition Index: 65819
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GamePlayReferenceScaler_OnEnable_m1EC31176B9FCF32FA1DE0ACBFB234848EB6D6E8A (GamePlayReferenceScaler_tC730531C7AE6D1D796FC2DA2B06B14A99BE4137B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -24003,7 +24003,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GamePlayReferenceScaler_OnEnable_m1EC311
 		return;
 	}
 }
-// Method Definition Index: 65818
+// Method Definition Index: 65820
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GamePlayReferenceScaler_LateUpdate_m210F1781E816575567F0655541A066B3EDE6BBD8 (GamePlayReferenceScaler_tC730531C7AE6D1D796FC2DA2B06B14A99BE4137B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24062,7 +24062,7 @@ IL_0035:
 		return;
 	}
 }
-// Method Definition Index: 65819
+// Method Definition Index: 65821
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GamePlayReferenceScaler_CaptureOriginalLayouts_mE1CCCBFC789DE7581DD000CD7DBE8703442FA66D (GamePlayReferenceScaler_tC730531C7AE6D1D796FC2DA2B06B14A99BE4137B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24158,7 +24158,7 @@ IL_004e:
 		return;
 	}
 }
-// Method Definition Index: 65820
+// Method Definition Index: 65822
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GamePlayReferenceScaler_ApplyScaling_m1C45D6D08013E6C29BADBCACEF0CC606077A67DA (GamePlayReferenceScaler_tC730531C7AE6D1D796FC2DA2B06B14A99BE4137B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24466,7 +24466,7 @@ IL_0199:
 		return;
 	}
 }
-// Method Definition Index: 65821
+// Method Definition Index: 65823
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GamePlayReferenceScaler_CoverScreen_m61CE50F66FDC3C25DF4683ADA4AA5C7200A391F0 (GamePlayReferenceScaler_tC730531C7AE6D1D796FC2DA2B06B14A99BE4137B* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_child, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24581,7 +24581,7 @@ IL_0048:
 		return;
 	}
 }
-// Method Definition Index: 65822
+// Method Definition Index: 65824
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GamePlayReferenceScaler_CoverArea_mC9AA1439460B61E7E5D82FB4DF8E513666384953 (RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_child, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_coverSize, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___2_coverCenter, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24774,7 +24774,7 @@ IL_00e2:
 		return;
 	}
 }
-// Method Definition Index: 65823
+// Method Definition Index: 65825
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 GamePlayReferenceScaler_ToScaledAnchor_m83E959793119D6F26903021C4680ABB09C47C361 (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_referenceAnchor, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_contentOffset, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___2_contentSize, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___3_rootSize, const RuntimeMethod* method) 
 {
 	{
@@ -24804,7 +24804,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D
 		return L_16;
 	}
 }
-// Method Definition Index: 65824
+// Method Definition Index: 65826
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GamePlayReferenceScaler_Approximately_mDCC3415B858DA191CA2F4E9612805655A1171978 (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_a, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_b, const RuntimeMethod* method) 
 {
 	{
@@ -24835,7 +24835,7 @@ IL_0033:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65825
+// Method Definition Index: 65827
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GamePlayReferenceScaler__ctor_m3FFA809C5B9385C2477C9F4BDD64658245174DE4 (GamePlayReferenceScaler_tC730531C7AE6D1D796FC2DA2B06B14A99BE4137B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24874,7 +24874,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GamePlayReferenceScaler__ctor_m3FFA809C5
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65826
+// Method Definition Index: 65828
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChildLayout__ctor_m40B1412405316D4801402A6494CE7F320BBD9D0D (ChildLayout_t4EF77BBF04625199826F7A7105CEB45468ECE977* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_transform, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25001,7 +25001,7 @@ IL_0093:
 		return;
 	}
 }
-// Method Definition Index: 65827
+// Method Definition Index: 65829
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChildLayout_Restore_m0EE98999614FDC10CB15CD12C5967150FE2833D5 (ChildLayout_t4EF77BBF04625199826F7A7105CEB45468ECE977* __this, const RuntimeMethod* method) 
 {
 	{
@@ -25042,7 +25042,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ChildLayout_Restore_m0EE98999614FDC10CB1
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65828
+// Method Definition Index: 65830
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6* GoogleSignInManager_get_Instance_mFD8D44E4D007DDA960DBB9ACC5681D1B350A35F5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25052,12 +25052,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GoogleSignInManager_t0D78FF3BAC62CD1ED435399D
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:15>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:16>
 		GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6* L_0 = ((GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6_StaticFields*)il2cpp_codegen_static_fields_for(GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 65829
+// Method Definition Index: 65831
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_set_Instance_m41697885AC809E5BABCE04D0577EE876740FD155 (GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25067,14 +25067,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_set_Instance_m416978
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:15>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:16>
 		GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6* L_0 = ___0_value;
 		((GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6_StaticFields*)il2cpp_codegen_static_fields_for(GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&((GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6_StaticFields*)il2cpp_codegen_static_fields_for(GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 65830
+// Method Definition Index: 65832
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_Awake_m76C273A833DE4254B6EBFE8C687E1ED92CA81549 (GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25087,7 +25087,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_Awake_m76C273A833DE4
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:28>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:29>
 		GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6* L_0;
 		L_0 = GoogleSignInManager_get_Instance_mFD8D44E4D007DDA960DBB9ACC5681D1B350A35F5_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -25099,14 +25099,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_Awake_m76C273A833DE4
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:30>
-		GoogleSignInManager_set_Instance_m41697885AC809E5BABCE04D0577EE876740FD155_inline(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:31>
+		GoogleSignInManager_set_Instance_m41697885AC809E5BABCE04D0577EE876740FD155_inline(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:32>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2;
 		L_2 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_DontDestroyOnLoad_m4B70C3AEF886C176543D1295507B6455C9DCAEA7(L_2, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:32>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:33>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralD1E3ADC5DD32061CEE938BF3F7B23D311D5FD877, NULL);
 		return;
@@ -25114,19 +25114,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_Awake_m76C273A833DE4
 
 IL_0029:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:36>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:37>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral57C917F324B3BC8B3535BB069ABCC96E1F7CDD66, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:37>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:38>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3;
 		L_3 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_3, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:38>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:39>
 		return;
 	}
 }
-// Method Definition Index: 65831
+// Method Definition Index: 65833
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_SetWebClientId_m8BD20A62F988863A3BAC46FCB8D72A983E032BB7 (GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6* __this, String_t* ___0_clientId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25137,41 +25137,41 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_SetWebClientId_m8BD2
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:47>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:48>
 		String_t* L_0 = ___0_clientId;
 		__this->___webClientId = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___webClientId), (void*)L_0);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:48>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:49>
 		String_t* L_1 = ___0_clientId;
 		String_t* L_2;
 		L_2 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral05BF040D1553FD3C0DD767E87115CA973360B5DD, L_1, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_2, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:49>
-		return;
-	}
-}
-// Method Definition Index: 65832
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_SignInWithGoogle_mCF0D2D193E0787289E1A64F9A6D34935A9CCA2A6 (GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6* __this, const RuntimeMethod* method) 
-{
-	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:57>
-		GoogleSignInManager_SignInWithGoogleAndroid_m86514FF12DF4DAAC5AC1BCC33A8B3C38EAE9D33C(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:65>
-		return;
-	}
-}
-// Method Definition Index: 65833
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_AttemptSilentSignIn_m8268425EBF28A8351894E578648C88E823CA5E76 (GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6* __this, const RuntimeMethod* method) 
-{
-	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:74>
-		GoogleSignInManager_AttemptSilentSignInAndroid_m2AD3ABF1DA72AC47DBE9E9701A070D5B1CDD8EF2(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:81>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:50>
 		return;
 	}
 }
 // Method Definition Index: 65834
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_SignInWithGoogle_mCF0D2D193E0787289E1A64F9A6D34935A9CCA2A6 (GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:58>
+		GoogleSignInManager_SignInWithGoogleAndroid_m86514FF12DF4DAAC5AC1BCC33A8B3C38EAE9D33C(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:66>
+		return;
+	}
+}
+// Method Definition Index: 65835
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_AttemptSilentSignIn_m8268425EBF28A8351894E578648C88E823CA5E76 (GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6* __this, const RuntimeMethod* method) 
+{
+	{
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:75>
+		GoogleSignInManager_AttemptSilentSignInAndroid_m2AD3ABF1DA72AC47DBE9E9701A070D5B1CDD8EF2(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:82>
+		return;
+	}
+}
+// Method Definition Index: 65836
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_EnsureGoogleSignInConfigured_mCAB8C48F1143548CE369AAB4E44C9F564353C262 (GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25185,7 +25185,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_EnsureGoogleSignInCo
 	Exception_t* V_0 = NULL;
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 2> __active_exceptions;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:89>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:90>
 		bool L_0 = __this->___isConfigured;
 		if (!L_0)
 		{
@@ -25193,13 +25193,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_EnsureGoogleSignInCo
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:92>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:93>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:95>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:96>
 		String_t* L_1 = __this->___webClientId;
 		bool L_2;
 		L_2 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_1, NULL);
@@ -25209,7 +25209,7 @@ IL_0009:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:97>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:98>
 		Exception_t* L_3 = (Exception_t*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)));
 		Exception__ctor_m9B2BD92CD68916245A75109105D9071C9D430E7F(L_3, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral393C93142F179AC6835FC0888D9EA8D23FADFD49)), NULL);
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_3, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&GoogleSignInManager_EnsureGoogleSignInConfigured_mCAB8C48F1143548CE369AAB4E44C9F564353C262_RuntimeMethod_var)));
@@ -25220,7 +25220,6 @@ IL_0021:
 	}
 	try
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:103>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:104>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:105>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:106>
@@ -25228,6 +25227,7 @@ IL_0021:
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:108>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:109>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:110>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:111>
 		GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* L_4 = (GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57*)il2cpp_codegen_object_new(GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57_il2cpp_TypeInfo_var);
 		GoogleSignInConfiguration__ctor_m0869D25269A6E1DB1896150CFC7E035C7D3546EA(L_4, NULL);
 		GoogleSignInConfiguration_t5307D14EA1D76B5E0DD37C96A7BEE89BEA18EB57* L_5 = L_4;
@@ -25248,12 +25248,12 @@ IL_0021:
 		NullCheck(L_10);
 		L_10->___RequestProfile = (bool)1;
 		GoogleSignIn_set_Configuration_m8776A7F24E2A96A318952F7A604120D6957047B8(L_10, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:112>
-		__this->___isConfigured = (bool)1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:113>
+		__this->___isConfigured = (bool)1;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:114>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral1B1F4A908086BA81EBD7E0A9E211223D50576957, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:114>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:115>
 		goto IL_008b;
 	}
 	catch(Il2CppExceptionWrapper& e)
@@ -25270,25 +25270,25 @@ CATCH_0067:
 	{
 		{
 			Exception_t* L_11 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:115>
+			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:116>
 			V_0 = L_11;
 		}
 		try
 		{
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:121>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:122>
 				GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF* L_12;
 				L_12 = GoogleSignIn_get_DefaultInstance_m42FE194859E95A015E875EA09B8FB257DEB3DFB7(NULL);
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:122>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:123>
 				if (!L_12)
 				{
 					goto IL_0082_1;
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:124>
-				__this->___isConfigured = (bool)1;
 				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:125>
+				__this->___isConfigured = (bool)1;
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:126>
 				il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral51E771543F2CAEED7FFC6DFCFA4FB811841199D3)), NULL);
 				goto IL_0084_1;
@@ -25296,14 +25296,14 @@ CATCH_0067:
 
 IL_0082_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:129>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:130>
 				Exception_t* L_13 = V_0;
 				IL2CPP_RAISE_MANAGED_EXCEPTION(L_13, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&GoogleSignInManager_EnsureGoogleSignInConfigured_mCAB8C48F1143548CE369AAB4E44C9F564353C262_RuntimeMethod_var)));
 			}
 
 IL_0084_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:131>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:132>
 				goto IL_0089;
 			}
 		}
@@ -25320,8 +25320,8 @@ IL_0084_1:
 CATCH_0086:
 		{
 			RuntimeObject* L_14 = ((RuntimeObject*)IL2CPP_GET_ACTIVE_EXCEPTION(RuntimeObject*));;
-			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:132>
-			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:134>
+			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:133>
+			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:135>
 			Exception_t* L_15 = V_0;
 			IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
 			IL2CPP_RAISE_MANAGED_EXCEPTION(L_15, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&GoogleSignInManager_EnsureGoogleSignInConfigured_mCAB8C48F1143548CE369AAB4E44C9F564353C262_RuntimeMethod_var)));
@@ -25329,7 +25329,7 @@ CATCH_0086:
 
 IL_0089:
 		{
-			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:136>
+			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:137>
 			IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
 			goto IL_008b;
 		}
@@ -25337,11 +25337,11 @@ IL_0089:
 
 IL_008b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:137>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:138>
 		return;
 	}
 }
-// Method Definition Index: 65835
+// Method Definition Index: 65837
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_SignInWithGoogleAndroid_m86514FF12DF4DAAC5AC1BCC33A8B3C38EAE9D33C (GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25363,7 +25363,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_SignInWithGoogleAndr
 	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* G_B8_0 = NULL;
 	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* G_B7_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:141>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:142>
 		String_t* L_0 = __this->___webClientId;
 		bool L_1;
 		L_1 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_0, NULL);
@@ -25373,10 +25373,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_SignInWithGoogleAndr
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:143>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:144>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteralB6C15A8FBDE71584CD3ED5714C8795376AA35B35, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:144>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:145>
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_2 = __this->___OnGoogleSignInFailure;
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_3 = L_2;
 		if (L_3)
@@ -25394,24 +25394,24 @@ IL_0022:
 	{
 		NullCheck(G_B3_0);
 		Action_1_Invoke_m690438AAE38F9762172E3AE0A33D0B42ACD35790_inline(G_B3_0, _stringLiteralE89CA697C8899DC6FC659F4F5FCAFC89A1B8D13B, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:145>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:146>
 		return;
 	}
 
 IL_002d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:148>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:149>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral4CF066BDDD9128B47608A26A7A8A53BC124FEB2D, NULL);
 	}
 	try
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:153>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:154>
 		GoogleSignInManager_EnsureGoogleSignInConfigured_mCAB8C48F1143548CE369AAB4E44C9F564353C262(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:156>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:157>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:158>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:159>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:160>
 		GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF* L_4;
 		L_4 = GoogleSignIn_get_DefaultInstance_m42FE194859E95A015E875EA09B8FB257DEB3DFB7(NULL);
 		NullCheck(L_4);
@@ -25422,7 +25422,7 @@ IL_002d:
 		NullCheck(L_5);
 		Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572* L_7;
 		L_7 = Task_1_ContinueWith_m6D957279C93F486B208C8512F3CE4CD36F82F09C(L_5, L_6, Task_1_ContinueWith_m6D957279C93F486B208C8512F3CE4CD36F82F09C_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:160>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:161>
 		goto IL_008a;
 	}
 	catch(Il2CppExceptionWrapper& e)
@@ -25439,9 +25439,9 @@ CATCH_005b:
 	{
 		{
 			Exception_t* L_8 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:161>
+			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:162>
 			V_0 = L_8;
-			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:163>
+			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:164>
 			Exception_t* L_9 = V_0;
 			NullCheck(L_9);
 			String_t* L_10;
@@ -25450,7 +25450,7 @@ CATCH_005b:
 			L_11 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralB0334FE461A6ED0084AA88C3CAE8799A88CBC9BF)), L_10, NULL);
 			il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
 			Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_11, NULL);
-			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:164>
+			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:165>
 			Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_12 = __this->___OnGoogleSignInFailure;
 			Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_13 = L_12;
 			if (L_13)
@@ -25476,7 +25476,7 @@ IL_007d:
 
 IL_0088:
 		{
-			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:165>
+			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:166>
 			IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
 			goto IL_008a;
 		}
@@ -25484,11 +25484,11 @@ IL_0088:
 
 IL_008a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:166>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:167>
 		return;
 	}
 }
-// Method Definition Index: 65836
+// Method Definition Index: 65838
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_AttemptSilentSignInAndroid_m2AD3ABF1DA72AC47DBE9E9701A070D5B1CDD8EF2 (GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25510,7 +25510,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_AttemptSilentSignInA
 	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* G_B8_0 = NULL;
 	Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* G_B7_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:170>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:171>
 		String_t* L_0 = __this->___webClientId;
 		bool L_1;
 		L_1 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_0, NULL);
@@ -25520,10 +25520,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_AttemptSilentSignInA
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:172>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:173>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral4C804B5811235B45AB4C7B76B65D842DD22CF19B, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:173>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:174>
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_2 = __this->___OnGoogleSignInFailure;
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_3 = L_2;
 		if (L_3)
@@ -25541,24 +25541,24 @@ IL_0022:
 	{
 		NullCheck(G_B3_0);
 		Action_1_Invoke_m690438AAE38F9762172E3AE0A33D0B42ACD35790_inline(G_B3_0, _stringLiteralE89CA697C8899DC6FC659F4F5FCAFC89A1B8D13B, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:174>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:175>
 		return;
 	}
 
 IL_002d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:177>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:178>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralDEFB829B90809544235DDEA838A8F1FCAF3F2144, NULL);
 	}
 	try
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:182>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:183>
 		GoogleSignInManager_EnsureGoogleSignInConfigured_mCAB8C48F1143548CE369AAB4E44C9F564353C262(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:185>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:186>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:187>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:188>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:189>
 		GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF* L_4;
 		L_4 = GoogleSignIn_get_DefaultInstance_m42FE194859E95A015E875EA09B8FB257DEB3DFB7(NULL);
 		NullCheck(L_4);
@@ -25569,7 +25569,7 @@ IL_002d:
 		NullCheck(L_5);
 		Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572* L_7;
 		L_7 = Task_1_ContinueWith_m6D957279C93F486B208C8512F3CE4CD36F82F09C(L_5, L_6, Task_1_ContinueWith_m6D957279C93F486B208C8512F3CE4CD36F82F09C_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:189>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:190>
 		goto IL_008a;
 	}
 	catch(Il2CppExceptionWrapper& e)
@@ -25586,9 +25586,9 @@ CATCH_005b:
 	{
 		{
 			Exception_t* L_8 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:190>
+			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:191>
 			V_0 = L_8;
-			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:192>
+			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:193>
 			Exception_t* L_9 = V_0;
 			NullCheck(L_9);
 			String_t* L_10;
@@ -25597,7 +25597,7 @@ CATCH_005b:
 			L_11 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral2376D863280B0710F9916478D190F4171908C4D1)), L_10, NULL);
 			il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
 			Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_11, NULL);
-			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:193>
+			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:194>
 			Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_12 = __this->___OnGoogleSignInFailure;
 			Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_13 = L_12;
 			if (L_13)
@@ -25623,7 +25623,7 @@ IL_007d:
 
 IL_0088:
 		{
-			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:194>
+			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:195>
 			IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
 			goto IL_008a;
 		}
@@ -25631,11 +25631,11 @@ IL_0088:
 
 IL_008a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:195>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:196>
 		return;
 	}
 }
-// Method Definition Index: 65837
+// Method Definition Index: 65839
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_HandleSignInResult_m2D6199AB3A65664259F665027F3C5B147493BC19 (GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6* __this, Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D678* ___0_task, bool ___1_isSilent, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25704,7 +25704,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_HandleSignInResult_m
 	String_t* G_B44_1 = NULL;
 	Action_5_t0B8F170660DBF82AC1E8DCA9148AFB0E698E6368* G_B44_2 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:199>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:200>
 		Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D678* L_0 = ___0_task;
 		NullCheck(L_0);
 		bool L_1;
@@ -25715,7 +25715,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_HandleSignInResult_m
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:201>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:202>
 		Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D678* L_2 = ___0_task;
 		NullCheck(L_2);
 		AggregateException_t51B6205846DFB356B94452702201DD239D44422F* L_3;
@@ -25776,9 +25776,9 @@ IL_0026:
 IL_002f:
 	{
 		V_0 = G_B8_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:202>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:203>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:204>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:205>
 		bool L_9 = ___1_isSilent;
 		if (L_9)
 		{
@@ -25803,10 +25803,10 @@ IL_0040:
 
 IL_004b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:205>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:206>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(G_B11_0, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:206>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:207>
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_14 = __this->___OnGoogleSignInFailure;
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_15 = L_14;
 		if (L_15)
@@ -25830,7 +25830,7 @@ IL_005b:
 
 IL_0062:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:208>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:209>
 		Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D678* L_17 = ___0_task;
 		NullCheck(L_17);
 		bool L_18;
@@ -25841,9 +25841,9 @@ IL_0062:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:210>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:211>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:212>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:213>
 		bool L_19 = ___1_isSilent;
 		if (L_19)
 		{
@@ -25862,10 +25862,10 @@ IL_0074:
 
 IL_0079:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:213>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:214>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(G_B18_0, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:214>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:215>
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_20 = __this->___OnGoogleSignInFailure;
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_21 = L_20;
 		if (L_21)
@@ -25910,15 +25910,15 @@ IL_0098:
 
 IL_009e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:218>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:219>
 		Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D678* L_23 = ___0_task;
 		NullCheck(L_23);
 		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_24;
 		L_24 = Task_1_get_Result_m3CD1360AA625EAC3D1FB6E89777C0A08E3340648(L_23, Task_1_get_Result_m3CD1360AA625EAC3D1FB6E89777C0A08E3340648_RuntimeMethod_var);
 		V_1 = L_24;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:219>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:220>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:221>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:222>
 		bool L_25 = ___1_isSilent;
 		if (L_25)
 		{
@@ -25953,22 +25953,22 @@ IL_00c5:
 
 IL_00d5:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:222>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:223>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(G_B27_0, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:225>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:226>
 		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_34 = V_1;
 		NullCheck(L_34);
 		String_t* L_35;
 		L_35 = GoogleSignInUser_get_AuthCode_mAB7501ADD8EDF9BB06A121DFE9AF840C676477A3_inline(L_34, NULL);
 		V_2 = L_35;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:226>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:227>
 		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_36 = V_1;
 		NullCheck(L_36);
 		String_t* L_37;
 		L_37 = GoogleSignInUser_get_IdToken_m4A42AE6E2B638B1904CBD666D6CD020A76A513CD_inline(L_36, NULL);
 		V_3 = L_37;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:227>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:228>
 		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_38 = V_1;
 		NullCheck(L_38);
 		String_t* L_39;
@@ -25988,7 +25988,7 @@ IL_00d5:
 IL_00f7:
 	{
 		V_4 = G_B29_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:228>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:229>
 		GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_41 = V_1;
 		NullCheck(L_41);
 		String_t* L_42;
@@ -26008,13 +26008,13 @@ IL_00f7:
 IL_0108:
 	{
 		V_5 = G_B31_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:231>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:232>
 		V_6 = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 	}
 	try
 	{
 		{
-			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:235>
+			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:236>
 			RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_44 = { reinterpret_cast<intptr_t> (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC_0_0_0_var) };
 			il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.systemtype_class);
 			Type_t* L_45;
@@ -26023,7 +26023,7 @@ IL_0108:
 			PropertyInfo_t* L_46;
 			L_46 = Type_GetProperty_mD183124FC8A89121E8368058B327A7750B14281D(L_45, _stringLiteralD822C7859B24AA83EE711EC02394DE71C18A81EE, NULL);
 			V_7 = L_46;
-			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:236>
+			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:237>
 			PropertyInfo_t* L_47 = V_7;
 			bool L_48;
 			L_48 = PropertyInfo_op_Inequality_mE75A4F14CC678D8A670730FBD4338C718CACB51B(L_47, (PropertyInfo_t*)NULL, NULL);
@@ -26033,14 +26033,14 @@ IL_0108:
 			}
 		}
 		{
-			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:238>
+			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:239>
 			PropertyInfo_t* L_49 = V_7;
 			GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* L_50 = V_1;
 			NullCheck(L_49);
 			RuntimeObject* L_51;
 			L_51 = PropertyInfo_GetValue_m89576462107E2A4DF5B7775216AEC29D74FF6088(L_49, L_50, NULL);
 			V_8 = L_51;
-			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:239>
+			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:240>
 			RuntimeObject* L_52 = V_8;
 			if (!L_52)
 			{
@@ -26048,7 +26048,7 @@ IL_0108:
 			}
 		}
 		{
-			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:241>
+			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:242>
 			RuntimeObject* L_53 = V_8;
 			NullCheck(L_53);
 			String_t* L_54;
@@ -26058,7 +26058,7 @@ IL_0108:
 
 IL_0148_1:
 		{
-			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:244>
+			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:245>
 			goto IL_0164;
 		}
 	}
@@ -26075,9 +26075,9 @@ IL_0148_1:
 CATCH_014a:
 	{
 		Exception_t* L_55 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:245>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:246>
 		V_9 = L_55;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:248>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:249>
 		Exception_t* L_56 = V_9;
 		NullCheck(L_56);
 		String_t* L_57;
@@ -26086,14 +26086,14 @@ CATCH_014a:
 		L_58 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralB14BBBDB50644402EA96F4B12E67F0EC9219AC0A)), L_57, NULL);
 		il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_58, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:249>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:250>
 		IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
 		goto IL_0164;
 	}
 
 IL_0164:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:251>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:252>
 		String_t* L_59 = V_2;
 		bool L_60;
 		L_60 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_59, NULL);
@@ -26103,10 +26103,10 @@ IL_0164:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:253>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:254>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral493F3949ECAB4F337C37490497FB2985EC6E0EE7, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:254>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:255>
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_61 = __this->___OnGoogleSignInFailure;
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_62 = L_61;
 		if (L_62)
@@ -26124,13 +26124,13 @@ IL_0181:
 	{
 		NullCheck(G_B40_0);
 		Action_1_Invoke_m690438AAE38F9762172E3AE0A33D0B42ACD35790_inline(G_B40_0, _stringLiteral39D994CE4AB933D57CC0AB0A42097552F25FC321, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:255>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:256>
 		return;
 	}
 
 IL_018c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:260>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:261>
 		Action_5_t0B8F170660DBF82AC1E8DCA9148AFB0E698E6368* L_63 = __this->___OnGoogleSignInSuccess;
 		Action_5_t0B8F170660DBF82AC1E8DCA9148AFB0E698E6368* L_64 = L_63;
 		if (L_64)
@@ -26173,11 +26173,11 @@ IL_01a2:
 		String_t* L_70 = V_6;
 		NullCheck(G_B45_2);
 		Action_5_Invoke_m47EE53C0DB06A10AAD72FFC45C5E9A372E65DC9E_inline(G_B45_2, G_B45_1, G_B45_0, L_68, L_69, L_70, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:262>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:263>
 		return;
 	}
 }
-// Method Definition Index: 65838
+// Method Definition Index: 65840
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_SignOut_mDF83C87626CC40196B4BBEF98E301852CD80C0FC (GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26191,15 +26191,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_SignOut_mDF83C87626C
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
 	try
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:283>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:284>
 		GoogleSignIn_t29E6FC11179A5AFADA7F81C7438B96054DB111FF* L_0;
 		L_0 = GoogleSignIn_get_DefaultInstance_m42FE194859E95A015E875EA09B8FB257DEB3DFB7(NULL);
 		NullCheck(L_0);
 		GoogleSignIn_SignOut_m798626794F16910EEB26294BD4369F3B490CC472(L_0, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:284>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:285>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral510FBF49513A5A9D988E1D2026F060A0CF535D21, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:285>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:286>
 		goto IL_002e;
 	}
 	catch(Il2CppExceptionWrapper& e)
@@ -26215,9 +26215,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_SignOut_mDF83C87626C
 CATCH_0016:
 	{
 		Exception_t* L_1 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:286>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:287>
 		V_0 = L_1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:288>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:289>
 		Exception_t* L_2 = V_0;
 		NullCheck(L_2);
 		String_t* L_3;
@@ -26226,18 +26226,18 @@ CATCH_0016:
 		L_4 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralDF2C292098B44964756449A4C3BE78E923CB9BC2)), L_3, NULL);
 		il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_4, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:289>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:290>
 		IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
 		goto IL_002e;
 	}
 
 IL_002e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:291>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:292>
 		return;
 	}
 }
-// Method Definition Index: 65839
+// Method Definition Index: 65841
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager__ctor_m09E44028FACCC7BD37FEDF411040C5E20DFB9783 (GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26247,32 +26247,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager__ctor_m09E44028FACCC
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:18>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:19>
 		__this->___webClientId = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___webClientId), (void*)_stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}
 }
-// Method Definition Index: 65840
+// Method Definition Index: 65842
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_U3CSignInWithGoogleAndroidU3Eb__13_0_mAF9302A06064217E9C6B7ECD8AF8A6B22195ED57 (GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6* __this, Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D678* ___0_task, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:158>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:159>
 		Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D678* L_0 = ___0_task;
 		GoogleSignInManager_HandleSignInResult_m2D6199AB3A65664259F665027F3C5B147493BC19(__this, L_0, (bool)0, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:159>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:160>
 		return;
 	}
 }
-// Method Definition Index: 65841
+// Method Definition Index: 65843
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_U3CAttemptSilentSignInAndroidU3Eb__14_0_mCB41D051E238873D45282B83C345C0CD6B70C516 (GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6* __this, Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D678* ___0_task, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:187>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:188>
 		Task_1_t7952F2A93E5A7BCD616D87C9088B7CEC6471D678* L_0 = ___0_task;
 		GoogleSignInManager_HandleSignInResult_m2D6199AB3A65664259F665027F3C5B147493BC19(__this, L_0, (bool)1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:188>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:189>
 		return;
 	}
 }
@@ -26284,7 +26284,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GoogleSignInManager_U3CAttemptSilentSign
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 65842
+// Method Definition Index: 65844
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HelpAndSupportManager_Start_m3F1D9E06213F057964F82E3F5CA502B007F32EAF (HelpAndSupportManager_tD8328777E4D21E287AB52EEB07A860AFBAB9690F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26403,7 +26403,7 @@ IL_00a8:
 		return;
 	}
 }
-// Method Definition Index: 65843
+// Method Definition Index: 65845
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HelpAndSupportManager_OpenPanel_mB7256A124458B600650ED41ADBC534C0B2B8678F (HelpAndSupportManager_tD8328777E4D21E287AB52EEB07A860AFBAB9690F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26440,7 +26440,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65844
+// Method Definition Index: 65846
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HelpAndSupportManager_ClosePanel_mAA11FE9E3DEDB958AD2F0154D31AB757D7678DA9 (HelpAndSupportManager_tD8328777E4D21E287AB52EEB07A860AFBAB9690F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26473,7 +26473,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 65845
+// Method Definition Index: 65847
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HelpAndSupportManager_ShowSubmitTicketPanel_mDC323FF95E8A09F62DE41C975F3863C71581717A (HelpAndSupportManager_tD8328777E4D21E287AB52EEB07A860AFBAB9690F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26527,7 +26527,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 65846
+// Method Definition Index: 65848
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HelpAndSupportManager_ShowMyTicketsPanel_m5AD4E5C290679F4C725CADEAE00DEDBA1F517AA1 (HelpAndSupportManager_tD8328777E4D21E287AB52EEB07A860AFBAB9690F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26579,7 +26579,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 65847
+// Method Definition Index: 65849
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HelpAndSupportManager_OnMyTicketsTabClicked_mAC6D06045912E427D861744562F73A3D83763787 (HelpAndSupportManager_tD8328777E4D21E287AB52EEB07A860AFBAB9690F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26591,7 +26591,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HelpAndSupportManager_OnMyTicketsTabClic
 		return;
 	}
 }
-// Method Definition Index: 65848
+// Method Definition Index: 65850
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HelpAndSupportManager_OnSubmitTicketClicked_m230832A3D3B7AB4810AB9A3273D5469055C75DC0 (HelpAndSupportManager_tD8328777E4D21E287AB52EEB07A860AFBAB9690F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26749,7 +26749,7 @@ IL_0080:
 		return;
 	}
 }
-// Method Definition Index: 65849
+// Method Definition Index: 65851
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HelpAndSupportManager_LoadMyTickets_m91B19F8D32016317E769895558A62BB39AFA8438 (HelpAndSupportManager_tD8328777E4D21E287AB52EEB07A860AFBAB9690F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26829,7 +26829,7 @@ IL_0019:
 		return;
 	}
 }
-// Method Definition Index: 65850
+// Method Definition Index: 65852
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HelpAndSupportManager_SpawnTicketRow_m480DD02CDAA91075B2E5F86E0C70EB0ECFFFF0DA (HelpAndSupportManager_tD8328777E4D21E287AB52EEB07A860AFBAB9690F* __this, SupportTicket_t7E81755841998715A531BE073106838165789BDD* ___0_ticket, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26905,7 +26905,7 @@ IL_0044:
 		return;
 	}
 }
-// Method Definition Index: 65851
+// Method Definition Index: 65853
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HelpAndSupportManager_ClearTicketList_m00AB896762873A9266EC1F2D1280B4D4A52D6097 (HelpAndSupportManager_tD8328777E4D21E287AB52EEB07A860AFBAB9690F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27020,7 +27020,7 @@ IL_004d:
 		return;
 	}
 }
-// Method Definition Index: 65852
+// Method Definition Index: 65854
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* HelpAndSupportManager_GetSelectedCategory_mE81D868360335FC05D5CCD5A6F19A09E6DF65515 (HelpAndSupportManager_tD8328777E4D21E287AB52EEB07A860AFBAB9690F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27087,7 +27087,7 @@ IL_0038:
 		return _stringLiteralF7933083B6BA56CBC6D7BCA0F30688A30D0368F6;
 	}
 }
-// Method Definition Index: 65853
+// Method Definition Index: 65855
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool HelpAndSupportManager_IsValidEmail_m239F34CD86CB46A02D638055BD624FB7116E3999 (HelpAndSupportManager_tD8328777E4D21E287AB52EEB07A860AFBAB9690F* __this, String_t* ___0_email, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27121,7 +27121,7 @@ IL_0019:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 65854
+// Method Definition Index: 65856
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HelpAndSupportManager_ShowStatus_m0886EC15A803BD59552612C301CABAD04B46E169 (HelpAndSupportManager_tD8328777E4D21E287AB52EEB07A860AFBAB9690F* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27164,7 +27164,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 65855
+// Method Definition Index: 65857
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HelpAndSupportManager_HideStatus_m8CC4732CD0A20B414B753B09D558D1207E94EF57 (HelpAndSupportManager_tD8328777E4D21E287AB52EEB07A860AFBAB9690F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27202,7 +27202,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 65856
+// Method Definition Index: 65858
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HelpAndSupportManager_SetLoading_m2C3AE9A0F415804D20EAB0DC5E5A0A17E59BC93B (HelpAndSupportManager_tD8328777E4D21E287AB52EEB07A860AFBAB9690F* __this, bool ___0_isLoading, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27276,7 +27276,7 @@ IL_0054:
 		return;
 	}
 }
-// Method Definition Index: 65857
+// Method Definition Index: 65859
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HelpAndSupportManager__ctor_m291DDF4C0E6F87630BBFB183478865722E1F6C77 (HelpAndSupportManager_tD8328777E4D21E287AB52EEB07A860AFBAB9690F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27314,7 +27314,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HelpAndSupportManager__ctor_m291DDF4C0E6
 		return;
 	}
 }
-// Method Definition Index: 65858
+// Method Definition Index: 65860
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HelpAndSupportManager_U3COnSubmitTicketClickedU3Eb__21_0_mB6F9E6B347EF16A619688A778709311CCC227213 (HelpAndSupportManager_tD8328777E4D21E287AB52EEB07A860AFBAB9690F* __this, bool ___0_success, String_t* ___1_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27380,7 +27380,7 @@ IL_0049:
 		return;
 	}
 }
-// Method Definition Index: 65859
+// Method Definition Index: 65861
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HelpAndSupportManager_U3CLoadMyTicketsU3Eb__22_0_mD4804C72413CBDFF9B6DC0F57AEDBE4491CE8F9A (HelpAndSupportManager_tD8328777E4D21E287AB52EEB07A860AFBAB9690F* __this, bool ___0_success, String_t* ___1_message, SupportTicketU5BU5D_t7342F73D276D1E9124FA65D3875EF0C997F0802C* ___2_tickets, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27554,7 +27554,7 @@ IL_00ac:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 123291
+// Method Definition Index: 123292
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline (Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27563,7 +27563,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ButtonClickedEvent_t8EA72E90B3BD1
 		return L_0;
 	}
 }
-// Method Definition Index: 78338
+// Method Definition Index: 78340
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, float ___0_x, float ___1_y, float ___2_z, const RuntimeMethod* method) 
 {
 	{
@@ -27576,7 +27576,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999E
 		return;
 	}
 }
-// Method Definition Index: 78472
+// Method Definition Index: 78474
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Mathf_Approximately_m1DADD012A8FC82E11FB282501AE2EBBF9A77150B_inline (float ___0_a, float ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27612,7 +27612,7 @@ IL_0035:
 		return L_10;
 	}
 }
-// Method Definition Index: 78372
+// Method Definition Index: 78374
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27626,7 +27626,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_0;
 	}
 }
-// Method Definition Index: 78415
+// Method Definition Index: 78417
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_Euler_m5BCCC19216CFAD2426F15BC51A30421880D27B73_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_euler, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -27641,7 +27641,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E
 		return L_2;
 	}
 }
-// Method Definition Index: 78411
+// Method Definition Index: 78413
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Quaternion_Angle_mAADDBB3C30736B4C7B75CF3A241C1CF5E0386C26_inline (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___0_a, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___1_b, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -27688,7 +27688,7 @@ IL_003e:
 		return L_7;
 	}
 }
-// Method Definition Index: 78358
+// Method Definition Index: 78360
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27742,7 +27742,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_Invoke_m7126A54DACA72
 	typedef void (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78350
+// Method Definition Index: 78352
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27751,7 +27751,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_0;
 	}
 }
-// Method Definition Index: 78467
+// Method Definition Index: 78469
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline (float ___0_value, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -27799,7 +27799,7 @@ IL_002d:
 		return L_5;
 	}
 }
-// Method Definition Index: 78393
+// Method Definition Index: 78395
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_Slerp_m0A9969F500E7716EA4F6BC4E7D5464372D8E9E15_inline (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___0_a, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___1_b, float ___2_t, const RuntimeMethod* method) 
 {
 	{
@@ -27809,7 +27809,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E
 		return L_1;
 	}
 }
-// Method Definition Index: 78399
+// Method Definition Index: 78401
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_AngleAxis_mF37022977B297E63AA70D69EA1C4C922FF22CC80_inline (float ___0_angle, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_axis, const RuntimeMethod* method) 
 {
 	{
@@ -27819,7 +27819,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E
 		return L_1;
 	}
 }
-// Method Definition Index: 78405
+// Method Definition Index: 78407
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_op_Multiply_mCB375FCCC12A2EC8F9EB824A1BFB4453B58C2012_inline (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___0_lhs, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___1_rhs, const RuntimeMethod* method) 
 {
 	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 V_0;
@@ -27898,7 +27898,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E
 		return L_64;
 	}
 }
-// Method Definition Index: 65615
+// Method Definition Index: 65617
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* FacebookSignInManager_get_Instance_m2646A1436D1F6ABD8A9572F42AAA6FEEEB966306_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27908,12 +27908,12 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR FacebookSignInManager_t0506B75AD5
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:14>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:15>
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_0 = ((FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A_StaticFields*)il2cpp_codegen_static_fields_for(FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 65616
+// Method Definition Index: 65618
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FacebookSignInManager_set_Instance_mB64AE7EE2A85FB27DB8F10038CD1612AB8749649_inline (FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27923,14 +27923,14 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FacebookSignInManager_set_In
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:14>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/FacebookSignInManager.cs:15>
 		FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A* L_0 = ___0_value;
 		((FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A_StaticFields*)il2cpp_codegen_static_fields_for(FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&((FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A_StaticFields*)il2cpp_codegen_static_fields_for(FacebookSignInManager_t0506B75AD5F450FAA5A8DD9B073A7ABD414D764A_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 130106
+// Method Definition Index: 130107
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AccessToken_t73BAE9F45493316E7FF33A14EECB3D77E8C0D346* AccessToken_get_CurrentAccessToken_m79A35A353C7FCFB189F95F9D9BF96763CB085D75_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27944,7 +27944,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AccessToken_t73BAE9F45493316E7FF3
 		return L_0;
 	}
 }
-// Method Definition Index: 130108
+// Method Definition Index: 130109
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* AccessToken_get_TokenString_mB71C7BD483A32572EB0917664CFB15C9B669F5A8_inline (AccessToken_t73BAE9F45493316E7FF33A14EECB3D77E8C0D346* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27960,7 +27960,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m42625D
 		return L_0;
 	}
 }
-// Method Definition Index: 78450
+// Method Definition Index: 78452
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_Min_m888083F74FF5655778F0403BB5E9608BEFDEA8CB_inline (int32_t ___0_a, int32_t ___1_b, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -27997,7 +27997,7 @@ IL_000c:
 		return L_4;
 	}
 }
-// Method Definition Index: 76812
+// Method Definition Index: 76814
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_width_m620D67551372073C9C32C4C4624C2A5713F7F9A9_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28005,7 +28005,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_width_m620D6755137
 		return L_0;
 	}
 }
-// Method Definition Index: 76814
+// Method Definition Index: 76816
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_height_mE1AA6C6C725CCD2D317BD2157396D3CF7D47C9D8_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28013,7 +28013,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_height_mE1AA6C6C72
 		return L_0;
 	}
 }
-// Method Definition Index: 78369
+// Method Definition Index: 78371
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28027,7 +28027,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_0;
 	}
 }
-// Method Definition Index: 78379
+// Method Definition Index: 78381
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, float ___1_d, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -28050,7 +28050,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_9;
 	}
 }
-// Method Definition Index: 78489
+// Method Definition Index: 78491
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, float ___0_x, float ___1_y, const RuntimeMethod* method) 
 {
 	{
@@ -28061,7 +28061,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFF
 		return;
 	}
 }
-// Method Definition Index: 65653
+// Method Definition Index: 65655
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR FirebaseManager_t881FC27357328319334AD0D1AD55A35C7E12E1AA* FirebaseManager_get_Instance_m5CAE28A901C4A06287EF9A68AB8CE6BD7F025F3B_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28076,7 +28076,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR FirebaseManager_t881FC27357328319
 		return L_0;
 	}
 }
-// Method Definition Index: 65654
+// Method Definition Index: 65656
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FirebaseManager_set_Instance_mC518394AAF27D4DAA96F77BEF811C31FE23FFA0F_inline (FirebaseManager_t881FC27357328319334AD0D1AD55A35C7E12E1AA* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28093,7 +28093,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FirebaseManager_set_Instance
 		return;
 	}
 }
-// Method Definition Index: 78449
+// Method Definition Index: 78451
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Min_m747CA71A9483CDB394B13BD0AD048EE17E48FFE4_inline (float ___0_a, float ___1_b, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -28130,7 +28130,7 @@ IL_000c:
 		return L_4;
 	}
 }
-// Method Definition Index: 78518
+// Method Definition Index: 78520
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Multiply_m2D984B613020089BF5165BA4CA10988E2DC771FE_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_a, float ___1_d, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -28149,7 +28149,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		return L_6;
 	}
 }
-// Method Definition Index: 65139
+// Method Definition Index: 65141
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* BackendAuthService_get_Instance_m74239149FFCCCF5A49AF965DCA0565780B051110_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28164,7 +28164,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR BackendAuthService_t71F3E2DE248AE
 		return L_0;
 	}
 }
-// Method Definition Index: 76795
+// Method Definition Index: 76797
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___0_x, float ___1_y, float ___2_width, float ___3_height, const RuntimeMethod* method) 
 {
 	{
@@ -28179,7 +28179,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect__ctor_m18C3033D135097BE
 		return;
 	}
 }
-// Method Definition Index: 66628
+// Method Definition Index: 66630
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Id_mC58F20220F795613BEDA334EE4DB7A9B07CF79E0_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28194,7 +28194,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Id_mC58
 		return L_0;
 	}
 }
-// Method Definition Index: 66630
+// Method Definition Index: 66632
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Name_mC2FF8F628463BB165429DADD4D06B7B8DF621276_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28209,7 +28209,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Name_mC
 		return L_0;
 	}
 }
-// Method Definition Index: 66632
+// Method Definition Index: 66634
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Email_mB1FCCB0FD27F759C2D91D0893F83FEB2434E23B0_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28224,7 +28224,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Email_m
 		return L_0;
 	}
 }
-// Method Definition Index: 66634
+// Method Definition Index: 66636
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Wins_mD1410D5656E9C61B9CBDBF4AD94A35B882F6A097_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28239,7 +28239,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Wins_mD14
 		return L_0;
 	}
 }
-// Method Definition Index: 66636
+// Method Definition Index: 66638
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Losses_mC24BE66603B95A7B77C8CB5004A999B1FE200EB1_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28254,7 +28254,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Losses_mC
 		return L_0;
 	}
 }
-// Method Definition Index: 66638
+// Method Definition Index: 66640
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Balance_mF8AAC11F89C906B7F1E6FAB7C7C6C7E64DA4F46D_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28269,7 +28269,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Balance_m
 		return L_0;
 	}
 }
-// Method Definition Index: 66640
+// Method Definition Index: 66642
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_CashBalance_m0E3FB6888B6E28878E0F553CB0A96C2947BFEFAC_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28284,7 +28284,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_CashBalan
 		return L_0;
 	}
 }
-// Method Definition Index: 66642
+// Method Definition Index: 66644
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_BonusBalance_m8DF8D6BFA86F6BF8A939C1AADE06CD857F89F8B2_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28299,7 +28299,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_BonusBala
 		return L_0;
 	}
 }
-// Method Definition Index: 66644
+// Method Definition Index: 66646
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_WinningBalance_mD9CD207134E21A6C0489B6DAF228BC222BBE175D_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28314,7 +28314,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_WinningBa
 		return L_0;
 	}
 }
-// Method Definition Index: 66662
+// Method Definition Index: 66664
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_WithdrawableBalance_m5A61C6A8C42833A6DD217AF1052163B7AAEDB0C1_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28329,7 +28329,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Withdrawa
 		return L_0;
 	}
 }
-// Method Definition Index: 66646
+// Method Definition Index: 66648
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Coins_m4C02B7FEEBA8E8E63B180510D565F9FA8B33F37A_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28344,7 +28344,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Coins_m4C
 		return L_0;
 	}
 }
-// Method Definition Index: 66648
+// Method Definition Index: 66650
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Avatar_mE3D8C1BE3E6D46C3AE3837FA63789AA9A95EAEDD_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28359,7 +28359,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Avatar_
 		return L_0;
 	}
 }
-// Method Definition Index: 66652
+// Method Definition Index: 66654
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Level_m3912D0CA3477275AFD84DA38B518F7C4A29E6E7F_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28374,7 +28374,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Level_m39
 		return L_0;
 	}
 }
-// Method Definition Index: 66650
+// Method Definition Index: 66652
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Xp_m05CA4268D9E61AA1A4EB92C38D7EC583C032E0FC_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28389,7 +28389,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Xp_m05CA4
 		return L_0;
 	}
 }
-// Method Definition Index: 66654
+// Method Definition Index: 66656
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Role_mEA9FBC07AAD94DB90AACD021D9163347300B235B_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28404,7 +28404,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Role_mE
 		return L_0;
 	}
 }
-// Method Definition Index: 66664
+// Method Definition Index: 66666
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_RecentMatchId_m8E5240DB692A69C9FD652AD4B2DE2C2F7C1361B3_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28419,7 +28419,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_RecentM
 		return L_0;
 	}
 }
-// Method Definition Index: 66666
+// Method Definition Index: 66668
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_RecentRoomId_m6637CF09DFD1F147C14573230DC59B7F9F2E5905_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28434,7 +28434,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_RecentR
 		return L_0;
 	}
 }
-// Method Definition Index: 66668
+// Method Definition Index: 66670
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_RecentMatchStatus_m8FCD39BFC700231D5ECF7DD65F125CDBEDCD37BC_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28449,7 +28449,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_RecentM
 		return L_0;
 	}
 }
-// Method Definition Index: 66794
+// Method Definition Index: 66796
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR SocketManager_tFA162C4D30D5A71D0A5F10FDA0CF83B2B1101650* SocketManager_get_Instance_mFAF3D466262B9D9A471AB4FF8165EACB053F8CBC_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28482,7 +28482,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t SocketManager_get_State_m
 		return L_0;
 	}
 }
-// Method Definition Index: 66658
+// Method Definition Index: 66660
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_ActiveMatchId_m7A9E15762CC732646485255598E1ADC4767F2D6E_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28497,7 +28497,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_ActiveM
 		return L_0;
 	}
 }
-// Method Definition Index: 66660
+// Method Definition Index: 66662
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_ActiveRoomId_mE902293884B9C2FAABF5DD4000F61B57999A7DDF_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28512,7 +28512,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_ActiveR
 		return L_0;
 	}
 }
-// Method Definition Index: 66218
+// Method Definition Index: 66220
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool LobbyModel_get_IsLoaded_mB091CB5001A0CA89B75FA476AE7D13CC10D193FD_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28528,7 +28528,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool LobbyModel_get_IsLoaded_mB09
 		return L_0;
 	}
 }
-// Method Definition Index: 66216
+// Method Definition Index: 66218
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR LobbyConfigU5BU5D_tC3F4948ACA699720D170B89FC9F0E31786F6E9B5* LobbyModel_get_Configurations_m2E9B73FA7EB5AC4A32D692549A438F38ACD03CEB_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28544,16 +28544,16 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR LobbyConfigU5BU5D_tC3F4948ACA6997
 		return L_0;
 	}
 }
-// Method Definition Index: 65752
+// Method Definition Index: 65754
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* GameManager_GetCurrentMatchData_m1E357516D5238DE52ECC4503F022311AA8EA7D90_inline (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1777>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:1778>
 		StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* L_0 = __this->___currentMatchData;
 		return L_0;
 	}
 }
-// Method Definition Index: 65692
+// Method Definition Index: 65694
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* GameManager_get_Instance_m076FE4D98E785B5AEE0B4C360C7857F824E7FBD0_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28563,12 +28563,12 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GameManager_tFE129A0017AF5BBD30FD
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:14>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:15>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_0 = ((GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 65693
+// Method Definition Index: 65695
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GameManager_set_Instance_mCFE1FA9223DC000B8D5535A9B6576264FA4405EF_inline (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28578,14 +28578,14 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GameManager_set_Instance_mCF
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:14>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:15>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_0 = ___0_value;
 		((GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&((GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 66656
+// Method Definition Index: 66658
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_SelectedAvatarIndex_m52692425CF7D719B831AFBCC8015DE4B8B021C59_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28600,7 +28600,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_SelectedA
 		return L_0;
 	}
 }
-// Method Definition Index: 78451
+// Method Definition Index: 78453
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline (float ___0_a, float ___1_b, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -28637,7 +28637,7 @@ IL_000c:
 		return L_4;
 	}
 }
-// Method Definition Index: 78368
+// Method Definition Index: 78370
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28651,7 +28651,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_0;
 	}
 }
-// Method Definition Index: 65814
+// Method Definition Index: 65816
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float GamePlayReferenceScaler_get_CurrentScale_mF687116B34B947606B0A65878313014A50FF6FC1_inline (GamePlayReferenceScaler_tC730531C7AE6D1D796FC2DA2B06B14A99BE4137B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28660,7 +28660,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float GamePlayReferenceScaler_get
 		return L_0;
 	}
 }
-// Method Definition Index: 78461
+// Method Definition Index: 78463
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_CeilToInt_mF2BF9F4261B3431DC20E10A46CFEEED103C48963_inline (float ___0_f, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28703,7 +28703,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* Socket_get_Id_m6D2EC28D
 		return L_0;
 	}
 }
-// Method Definition Index: 66301
+// Method Definition Index: 66303
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool MatchmakingModel_get_IsSearching_mB7F7D264B87192D66A232C3FE5E1548D8EB8CE91_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28718,7 +28718,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool MatchmakingModel_get_IsSearc
 		return L_0;
 	}
 }
-// Method Definition Index: 78212
+// Method Definition Index: 78214
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_red_mA2E53E7173FDC97E68E335049AB0FAAEE43A844D_inline (const RuntimeMethod* method) 
 {
 	{
@@ -28728,7 +28728,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 		return L_0;
 	}
 }
-// Method Definition Index: 78213
+// Method Definition Index: 78215
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_inline (const RuntimeMethod* method) 
 {
 	{
@@ -28738,7 +28738,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 		return L_0;
 	}
 }
-// Method Definition Index: 66345
+// Method Definition Index: 66347
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool MatchmakingModel_IsForfeitPending_mD03CF8F12C4368956E6C36ADB836D1A14E4C3ED6_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28753,19 +28753,19 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool MatchmakingModel_IsForfeitPe
 		return L_0;
 	}
 }
-// Method Definition Index: 66387
+// Method Definition Index: 66389
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NumberGrid_SetOwner_m25F9E6780E67663F0B41CADA05517AAB1365581D_inline (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, String_t* ___0_userId, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:300>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:301>
 		String_t* L_0 = ___0_userId;
 		__this->___ownerUserId = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___ownerUserId), (void*)L_0);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:301>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:302>
 		return;
 	}
 }
-// Method Definition Index: 78404
+// Method Definition Index: 78406
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_get_identity_m7E701AE095ED10FD5EA0B50ABCFDE2EEFF2173A5_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28779,16 +28779,16 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E
 		return L_0;
 	}
 }
-// Method Definition Index: 66440
+// Method Definition Index: 66442
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* NumberGrid_GetOwnerId_m7C5CD5EEF69B3EBBB340B92B9051D22383AF9794_inline (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2101>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2102>
 		String_t* L_0 = __this->___ownerUserId;
 		return L_0;
 	}
 }
-// Method Definition Index: 76816
+// Method Definition Index: 76818
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Rect_get_size_mFB990FFC0FE0152179C8C74A59E4AC258CB44267_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -28803,7 +28803,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		return L_2;
 	}
 }
-// Method Definition Index: 65815
+// Method Definition Index: 65817
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GamePlayReferenceScaler_set_CurrentScale_m522CABADDC48F6BF0666CE070AAAE433DE2D056B_inline (GamePlayReferenceScaler_tC730531C7AE6D1D796FC2DA2B06B14A99BE4137B* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -28813,7 +28813,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GamePlayReferenceScaler_set_
 		return;
 	}
 }
-// Method Definition Index: 78514
+// Method Definition Index: 78516
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Subtraction_m44475FCDAD2DA2F98D78A6625EC2DCDFE8803837_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_a, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_b, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -28834,7 +28834,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		return L_8;
 	}
 }
-// Method Definition Index: 76806
+// Method Definition Index: 76808
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Rect_get_center_mAA9A2E1F058B2C9F58E13CC4822F789F42975E5C_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -28851,7 +28851,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		return L_4;
 	}
 }
-// Method Definition Index: 78524
+// Method Definition Index: 78526
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector2_op_Implicit_m6D9CABB2C791A192867D7A4559D132BE86DD3EB7_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_v, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -28869,7 +28869,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_4;
 	}
 }
-// Method Definition Index: 78523
+// Method Definition Index: 78525
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Implicit_mE8EBEE9291F11BB02F062D6E000F4798968CBD96_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_v, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -28886,7 +28886,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		return L_4;
 	}
 }
-// Method Definition Index: 123597
+// Method Definition Index: 123598
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* Image_get_sprite_mB2AA377708722E100574F6F75BC102513BB3BCB1_inline (Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28895,7 +28895,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F
 		return L_0;
 	}
 }
-// Method Definition Index: 78525
+// Method Definition Index: 78527
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28909,7 +28909,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		return L_0;
 	}
 }
-// Method Definition Index: 78526
+// Method Definition Index: 78528
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_get_one_m9097EB8DC23C26118A591AF16702796C3EF51DFB_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28923,7 +28923,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		return L_0;
 	}
 }
-// Method Definition Index: 65828
+// Method Definition Index: 65830
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6* GoogleSignInManager_get_Instance_mFD8D44E4D007DDA960DBB9ACC5681D1B350A35F5_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28933,12 +28933,12 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GoogleSignInManager_t0D78FF3BAC62
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:15>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:16>
 		GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6* L_0 = ((GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6_StaticFields*)il2cpp_codegen_static_fields_for(GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 65829
+// Method Definition Index: 65831
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GoogleSignInManager_set_Instance_m41697885AC809E5BABCE04D0577EE876740FD155_inline (GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28948,14 +28948,14 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void GoogleSignInManager_set_Inst
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:15>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GoogleSignInManager.cs:16>
 		GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6* L_0 = ___0_value;
 		((GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6_StaticFields*)il2cpp_codegen_static_fields_for(GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&((GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6_StaticFields*)il2cpp_codegen_static_fields_for(GoogleSignInManager_t0D78FF3BAC62CD1ED435399D80E1D426F8216DC6_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 143971
+// Method Definition Index: 143970
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_Email_m7303A59BDED078C2634FD843064E55AC5907D014_inline (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28964,7 +28964,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_Em
 		return L_0;
 	}
 }
-// Method Definition Index: 143975
+// Method Definition Index: 143974
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_DisplayName_mB38DD9107955716F09BFD40F1A69F55936395D75_inline (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28973,7 +28973,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_Di
 		return L_0;
 	}
 }
-// Method Definition Index: 143969
+// Method Definition Index: 143968
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_AuthCode_mAB7501ADD8EDF9BB06A121DFE9AF840C676477A3_inline (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28982,7 +28982,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_Au
 		return L_0;
 	}
 }
-// Method Definition Index: 143973
+// Method Definition Index: 143972
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_IdToken_m4A42AE6E2B638B1904CBD666D6CD020A76A513CD_inline (GoogleSignInUser_tE581A5A467AA6C201CF1C06152F4DA9FD6B2E8CC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28991,7 +28991,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* GoogleSignInUser_get_Id
 		return L_0;
 	}
 }
-// Method Definition Index: 110808
+// Method Definition Index: 110809
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* TMP_InputField_get_text_mA4ACBF52435893D9DFD822A492454301740B3C6A_inline (TMP_InputField_t3488E0EE8C3DF56C6A328EC95D1BEEA2DF4A7D5F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29000,7 +29000,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* TMP_InputField_get_text
 		return L_0;
 	}
 }
-// Method Definition Index: 110484
+// Method Definition Index: 110485
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t TMP_Dropdown_get_value_m5916A6D1897431E8ED789FEC24551A311D1B5C70_inline (TMP_Dropdown_t73B37BFDA0D005451C7B750938AFB1748E5EA504* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29243,7 +29243,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_5_Invoke_mA175F5C0E60
 	typedef void (*FunctionPointerType) (RuntimeObject*, RuntimeObject*, RuntimeObject*, RuntimeObject*, RuntimeObject*, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_arg1, ___1_arg2, ___2_arg3, ___3_arg4, ___4_arg5, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78410
+// Method Definition Index: 78412
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Quaternion_Dot_m80E67A0F9F1FD9EAD0C8EEF7D5396ADF612FA105_inline (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974* ___0_a, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974* ___1_b, const RuntimeMethod* method) 
 {
 	{
@@ -29266,7 +29266,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Quaternion_Dot_m80E67A0F9F1
 		return ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_1, L_3)), ((float)il2cpp_codegen_multiply(L_5, L_7)))), ((float)il2cpp_codegen_multiply(L_9, L_11)))), ((float)il2cpp_codegen_multiply(L_13, L_15))));
 	}
 }
-// Method Definition Index: 78409
+// Method Definition Index: 78411
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Quaternion_IsEqualUsingDot_m9C672201C918C2D1E739F559DBE4406F95997CBD_inline (float ___0_dot, const RuntimeMethod* method) 
 {
 	{
@@ -29274,7 +29274,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Quaternion_IsEqualUsingDot_m
 		return (bool)((((float)L_0) > ((float)(0.999998987f)))? 1 : 0);
 	}
 }
-// Method Definition Index: 78348
+// Method Definition Index: 78350
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_Normalize_m1DE89849FE2019B6AA0031306896F3B800849399_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29338,7 +29338,7 @@ IL_0050:
 		return L_14;
 	}
 }
-// Method Definition Index: 78177
+// Method Definition Index: 78179
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___0_r, float ___1_g, float ___2_b, float ___3_a, const RuntimeMethod* method) 
 {
 	{
@@ -29353,7 +29353,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9C
 		return;
 	}
 }
-// Method Definition Index: 78361
+// Method Definition Index: 78363
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Vector3_get_magnitude_mF0D6017E90B345F1F52D1CC564C640F1A847AF2D_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;

@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 /// <summary>
 /// Automatically scales leaderboard row UI elements and Enhanced Scroller settings based on screen resolution
@@ -32,7 +32,7 @@ public class LeaderboardRowScaler : MonoBehaviour
         // Auto-assign LeaderboardManager if not set
         if (leaderboardManager == null)
         {
-            leaderboardManager = FindObjectOfType<LeaderboardManager>();
+            leaderboardManager = FindFirstObjectByType<LeaderboardManager>();
             if (leaderboardManager != null)
             {
                 Debug.Log("[LeaderboardRowScaler] Auto-assigned LeaderboardManager from scene");

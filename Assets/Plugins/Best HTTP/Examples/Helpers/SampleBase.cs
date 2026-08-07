@@ -17,7 +17,7 @@ namespace BestHTTP.Examples.Helpers
 
         protected virtual void Start()
         {
-            this.sampleSelector = FindObjectOfType<SampleRoot>();
+            this.sampleSelector = FindFirstObjectByType<SampleRoot>();
         }
     }
 }

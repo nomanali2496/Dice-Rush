@@ -97,7 +97,7 @@ namespace Facebook.Unity.Example
             var request = UnityWebRequest.Get(path);
             request.SendWebRequest();
             while (!request.isDone) {
-                if (request.isNetworkError || request.isHttpError) {
+                if (request.result == UnityEngine.Networking.UnityWebRequest.Result.ConnectionError || request.result == UnityEngine.Networking.UnityWebRequest.Result.ProtocolError) {
                     break;
                 }
             }

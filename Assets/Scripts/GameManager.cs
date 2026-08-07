@@ -1,3 +1,4 @@
+﻿#pragma warning disable 0414
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
@@ -1047,7 +1048,7 @@ public class GameManager : MonoBehaviour
             MatchmakingModel.CancelSearch();
             
             // Also ensure the waiting panel is hidden if we quit during matchmaking
-            HorizontalLobbyManager lobbyManager = FindObjectOfType<HorizontalLobbyManager>();
+            HorizontalLobbyManager lobbyManager = FindFirstObjectByType<HorizontalLobbyManager>();
             if (lobbyManager != null)
             {
                 // We'll add a public method to HorizontalLobbyManager to hide the panel
@@ -1207,7 +1208,7 @@ public class GameManager : MonoBehaviour
         }
         
         // 3. Fallback to AvatarSelector
-        AvatarSelector avatarSelector = FindObjectOfType<AvatarSelector>();
+        AvatarSelector avatarSelector = FindFirstObjectByType<AvatarSelector>();
         if (avatarSelector != null)
         {
             int selectedIndex = PlayerModel.SelectedAvatarIndex;
@@ -1752,7 +1753,7 @@ public class GameManager : MonoBehaviour
         // Wait for animation to complete (particles + count-up)
         yield return new WaitForSeconds(3f); // Adjust based on your animation duration
         
-        HorizontalLobbyManager lobbyManager = FindObjectOfType<HorizontalLobbyManager>();
+        HorizontalLobbyManager lobbyManager = FindFirstObjectByType<HorizontalLobbyManager>();
         if (lobbyManager != null)
         {
             lobbyManager.RefreshAllPlayButtons();

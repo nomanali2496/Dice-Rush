@@ -754,7 +754,7 @@ inline void List_1_AddWithResize_m79A9BF770BEF9C06BE40D5401E55E375F2726CC4 (List
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 144458
+// Method Definition Index: 144457
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_tEA39788D8AD249640255A82FD59F98E8EFC38CDE UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m2C102A0F726B5484E567261E97CE6BEB136E7C30 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -788,7 +788,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_tEA39788D8AD249640255A82FD59F9
 		return L_6;
 	}
 }
-// Method Definition Index: 144459
+// Method Definition Index: 144458
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m75AA708CC9D3D15EEA873E210571B2CDE86B84AA (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t1BC577CCDBEFB7AC99D841241A974DDB1379088C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -920,7 +920,7 @@ IL2CPP_EXTERN_C void AppleAuthLoginArgs_tEC38AFD6B2C1CCBD455014707F0E505CDF8972B
 	il2cpp_codegen_marshal_free_bstring(marshaled.___State);
 	marshaled.___State = NULL;
 }
-// Method Definition Index: 144460
+// Method Definition Index: 144459
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleAuthLoginArgs__ctor_m979F04437958F29BD5E8FBB8B91085932E47DEC2 (AppleAuthLoginArgs_tEC38AFD6B2C1CCBD455014707F0E505CDF8972B4* __this, int32_t ___0_options, String_t* ___1_nonce, String_t* ___2_state, const RuntimeMethod* method) 
 {
 	{
@@ -954,7 +954,7 @@ IL2CPP_EXTERN_C  void AppleAuthLoginArgs__ctor_m979F04437958F29BD5E8FBB8B9108593
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 144461
+// Method Definition Index: 144460
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleAuthManager__cctor_mD2B1F2782B50BD07F7EE6DF67CE2BCD0196CD1C1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -972,7 +972,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleAuthManager__cctor_mD2B1F2782B50BD0
 		return;
 	}
 }
-// Method Definition Index: 144462
+// Method Definition Index: 144461
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AppleAuthManager_get_IsCurrentPlatformSupported_m7A452E34F3B87A9FBF6F9E79DAD9792B87AB9B9C (const RuntimeMethod* method) 
 {
 	{
@@ -980,7 +980,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AppleAuthManager_get_IsCurrentPlatformSu
 		return (bool)0;
 	}
 }
-// Method Definition Index: 144463
+// Method Definition Index: 144462
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleAuthManager__ctor_mFCE1994D8BD7BFCC9EA201E091A1C09BF63945B3 (AppleAuthManager_t9A6ECFB3E5DA602DB80B9AA03575872FF3B853E4* __this, RuntimeObject* ___0_payloadDeserializer, const RuntimeMethod* method) 
 {
 	{
@@ -990,7 +990,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleAuthManager__ctor_mFCE1994D8BD7BFCC
 		return;
 	}
 }
-// Method Definition Index: 144464
+// Method Definition Index: 144463
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleAuthManager_QuickLogin_m50DC36CEED4EFA9A98B758F7BE696F01D3957506 (AppleAuthManager_t9A6ECFB3E5DA602DB80B9AA03575872FF3B853E4* __this, Action_1_tB908D6FD75107728FE1DCDA76696B95672204A80* ___0_successCallback, Action_1_tC3903E0A1B057943FABF1B75BE7AAD0683CA51CA* ___1_errorCallback, const RuntimeMethod* method) 
 {
 	AppleAuthQuickLoginArgs_tBB2B39ED7803A5FA6916A70CB519F33099AAE38C V_0;
@@ -1006,7 +1006,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleAuthManager_QuickLogin_m50DC36CEED4
 		return;
 	}
 }
-// Method Definition Index: 144465
+// Method Definition Index: 144464
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleAuthManager_QuickLogin_m6729A39051EC9885AD1668BA28B94B9489D39F08 (AppleAuthManager_t9A6ECFB3E5DA602DB80B9AA03575872FF3B853E4* __this, AppleAuthQuickLoginArgs_tBB2B39ED7803A5FA6916A70CB519F33099AAE38C ___0_quickLoginArgs, Action_1_tB908D6FD75107728FE1DCDA76696B95672204A80* ___1_successCallback, Action_1_tC3903E0A1B057943FABF1B75BE7AAD0683CA51CA* ___2_errorCallback, const RuntimeMethod* method) 
 {
 	{
@@ -1016,7 +1016,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleAuthManager_QuickLogin_m6729A39051E
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&AppleAuthManager_QuickLogin_m6729A39051EC9885AD1668BA28B94B9489D39F08_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 144466
+// Method Definition Index: 144465
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleAuthManager_LoginWithAppleId_m7F9D42479BB718C417A879E00F86EA3844B0405F (AppleAuthManager_t9A6ECFB3E5DA602DB80B9AA03575872FF3B853E4* __this, int32_t ___0_options, Action_1_tB908D6FD75107728FE1DCDA76696B95672204A80* ___1_successCallback, Action_1_tC3903E0A1B057943FABF1B75BE7AAD0683CA51CA* ___2_errorCallback, const RuntimeMethod* method) 
 {
 	{
@@ -1032,7 +1032,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleAuthManager_LoginWithAppleId_m7F9D4
 		return;
 	}
 }
-// Method Definition Index: 144467
+// Method Definition Index: 144466
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleAuthManager_LoginWithAppleId_m41AA28DCBBCED940184CCD2D353C8B8D7E3EA355 (AppleAuthManager_t9A6ECFB3E5DA602DB80B9AA03575872FF3B853E4* __this, AppleAuthLoginArgs_tEC38AFD6B2C1CCBD455014707F0E505CDF8972B4 ___0_loginArgs, Action_1_tB908D6FD75107728FE1DCDA76696B95672204A80* ___1_successCallback, Action_1_tC3903E0A1B057943FABF1B75BE7AAD0683CA51CA* ___2_errorCallback, const RuntimeMethod* method) 
 {
 	{
@@ -1042,7 +1042,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleAuthManager_LoginWithAppleId_m41AA2
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&AppleAuthManager_LoginWithAppleId_m41AA28DCBBCED940184CCD2D353C8B8D7E3EA355_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 144468
+// Method Definition Index: 144467
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleAuthManager_GetCredentialState_m7646C8E8F7DFA9A8C77E576C39DFE4059BE5AD02 (AppleAuthManager_t9A6ECFB3E5DA602DB80B9AA03575872FF3B853E4* __this, String_t* ___0_userId, Action_1_t7CF092A129C468D25C4E6E5AC20FE3453FC7EC66* ___1_successCallback, Action_1_tC3903E0A1B057943FABF1B75BE7AAD0683CA51CA* ___2_errorCallback, const RuntimeMethod* method) 
 {
 	{
@@ -1052,7 +1052,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleAuthManager_GetCredentialState_m764
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&AppleAuthManager_GetCredentialState_m7646C8E8F7DFA9A8C77E576C39DFE4059BE5AD02_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 144469
+// Method Definition Index: 144468
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleAuthManager_SetCredentialsRevokedCallback_m0C1A9F85CAE89C2AAAB94863C48F535D315E0CBA (AppleAuthManager_t9A6ECFB3E5DA602DB80B9AA03575872FF3B853E4* __this, Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* ___0_credentialsRevokedCallback, const RuntimeMethod* method) 
 {
 	{
@@ -1060,7 +1060,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleAuthManager_SetCredentialsRevokedCa
 		return;
 	}
 }
-// Method Definition Index: 144470
+// Method Definition Index: 144469
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleAuthManager_Update_mE6CCC051DC13A8B6A838B4E52CEFDA6683B0956A (AppleAuthManager_t9A6ECFB3E5DA602DB80B9AA03575872FF3B853E4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1114,7 +1114,7 @@ IL2CPP_EXTERN_C void AppleAuthQuickLoginArgs_tBB2B39ED7803A5FA6916A70CB519F33099
 	il2cpp_codegen_marshal_free_bstring(marshaled.___State);
 	marshaled.___State = NULL;
 }
-// Method Definition Index: 144471
+// Method Definition Index: 144470
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleAuthQuickLoginArgs__ctor_m29E70947A3CB463F0138B6F58BC35EA58A851AB4 (AppleAuthQuickLoginArgs_tBB2B39ED7803A5FA6916A70CB519F33099AAE38C* __this, String_t* ___0_nonce, String_t* ___1_state, const RuntimeMethod* method) 
 {
 	{
@@ -1145,7 +1145,7 @@ IL2CPP_EXTERN_C  void AppleAuthQuickLoginArgs__ctor_m29E70947A3CB463F0138B6F58BC
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 144479
+// Method Definition Index: 144478
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t AppleError_get_Code_m961287BECF360B2EDAD83FA060A8C7FDB6418FD5 (AppleError_t1DB8D1CB5586B26914C6ADC9E708F907A4192CEA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1154,7 +1154,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t AppleError_get_Code_m961287BECF360B2E
 		return L_0;
 	}
 }
-// Method Definition Index: 144480
+// Method Definition Index: 144479
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AppleError_get_Domain_m63E5CABE6AF7F50CC0FB9B9C55D074AC01D22DDF (AppleError_t1DB8D1CB5586B26914C6ADC9E708F907A4192CEA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1163,7 +1163,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AppleError_get_Domain_m63E5CABE6AF7
 		return L_0;
 	}
 }
-// Method Definition Index: 144481
+// Method Definition Index: 144480
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AppleError_get_LocalizedDescription_m430AE126F8F82BCD7D41545FC20102B666C700E5 (AppleError_t1DB8D1CB5586B26914C6ADC9E708F907A4192CEA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1172,7 +1172,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AppleError_get_LocalizedDescription
 		return L_0;
 	}
 }
-// Method Definition Index: 144482
+// Method Definition Index: 144481
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* AppleError_get_LocalizedRecoveryOptions_m70B334E472068D36B4797AF8BE86C641E347F564 (AppleError_t1DB8D1CB5586B26914C6ADC9E708F907A4192CEA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1181,7 +1181,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F
 		return L_0;
 	}
 }
-// Method Definition Index: 144483
+// Method Definition Index: 144482
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AppleError_get_LocalizedRecoverySuggestion_m2CA60B369F391895F8307B37BB767122522B29A9 (AppleError_t1DB8D1CB5586B26914C6ADC9E708F907A4192CEA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1190,7 +1190,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AppleError_get_LocalizedRecoverySug
 		return L_0;
 	}
 }
-// Method Definition Index: 144484
+// Method Definition Index: 144483
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AppleError_get_LocalizedFailureReason_m51C96BF4FE7F7E50B5739793C800343D05489DB9 (AppleError_t1DB8D1CB5586B26914C6ADC9E708F907A4192CEA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1199,7 +1199,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AppleError_get_LocalizedFailureReas
 		return L_0;
 	}
 }
-// Method Definition Index: 144485
+// Method Definition Index: 144484
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleError_OnBeforeSerialize_mAEAD2F39FA81174491484481AD72D7B005DB67F7 (AppleError_t1DB8D1CB5586B26914C6ADC9E708F907A4192CEA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1207,7 +1207,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleError_OnBeforeSerialize_mAEAD2F39FA
 		return;
 	}
 }
-// Method Definition Index: 144486
+// Method Definition Index: 144485
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleError_OnAfterDeserialize_m0BCD7127B5E7D5505CE32993DA8F2A4D2AA592E2 (AppleError_t1DB8D1CB5586B26914C6ADC9E708F907A4192CEA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1236,7 +1236,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleError_OnAfterDeserialize_m0BCD7127B
 		return;
 	}
 }
-// Method Definition Index: 144487
+// Method Definition Index: 144486
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleError__ctor_m66C93CADE0B99B97DD2891FDA0B886E2B02AADD1 (AppleError_t1DB8D1CB5586B26914C6ADC9E708F907A4192CEA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1252,7 +1252,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleError__ctor_m66C93CADE0B99B97DD2891
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 144488
+// Method Definition Index: 144487
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* AppleIDCredential_get_IdentityToken_m34B56460123F4D5FA0F3F0E9F11889E776583355 (AppleIDCredential_tD23942C97513881D942DFF29A29F55D0B4EA8A75* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1261,7 +1261,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		return L_0;
 	}
 }
-// Method Definition Index: 144489
+// Method Definition Index: 144488
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* AppleIDCredential_get_AuthorizationCode_mF451C6107719D30009CC68965869BA7C0BD50CE8 (AppleIDCredential_tD23942C97513881D942DFF29A29F55D0B4EA8A75* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1270,7 +1270,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		return L_0;
 	}
 }
-// Method Definition Index: 144490
+// Method Definition Index: 144489
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AppleIDCredential_get_State_m84B3905825D39FD46B45AF489FA8163247C74278 (AppleIDCredential_tD23942C97513881D942DFF29A29F55D0B4EA8A75* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1279,7 +1279,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AppleIDCredential_get_State_m84B390
 		return L_0;
 	}
 }
-// Method Definition Index: 144491
+// Method Definition Index: 144490
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AppleIDCredential_get_User_m981CFCEE8723C5A25E0C1F4DA3289D9831EA57F5 (AppleIDCredential_tD23942C97513881D942DFF29A29F55D0B4EA8A75* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1288,7 +1288,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AppleIDCredential_get_User_m981CFCE
 		return L_0;
 	}
 }
-// Method Definition Index: 144492
+// Method Definition Index: 144491
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* AppleIDCredential_get_AuthorizedScopes_m1FC899AEECADDD9871C8622C6F08E73E812C9D92 (AppleIDCredential_tD23942C97513881D942DFF29A29F55D0B4EA8A75* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1297,7 +1297,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F
 		return L_0;
 	}
 }
-// Method Definition Index: 144493
+// Method Definition Index: 144492
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AppleIDCredential_get_FullName_mFD2563DD49DE8936E5F71447BA75E5D1836402D8 (AppleIDCredential_tD23942C97513881D942DFF29A29F55D0B4EA8A75* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1306,7 +1306,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AppleIDCredential_get_FullName
 		return L_0;
 	}
 }
-// Method Definition Index: 144494
+// Method Definition Index: 144493
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AppleIDCredential_get_Email_m714C9A646F5DFE85592A0E4A9FD3E68689685ABE (AppleIDCredential_tD23942C97513881D942DFF29A29F55D0B4EA8A75* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1315,7 +1315,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AppleIDCredential_get_Email_m714C9A
 		return L_0;
 	}
 }
-// Method Definition Index: 144495
+// Method Definition Index: 144494
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t AppleIDCredential_get_RealUserStatus_mE69FF5EC598FB13CF28741DC57528CC2FFB9CF9E (AppleIDCredential_tD23942C97513881D942DFF29A29F55D0B4EA8A75* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1324,7 +1324,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t AppleIDCredential_get_RealUserStatus_
 		return (int32_t)(L_0);
 	}
 }
-// Method Definition Index: 144496
+// Method Definition Index: 144495
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleIDCredential_OnBeforeSerialize_m131D67351E1C50C5B86C9DF5524BDDDE44AA0E61 (AppleIDCredential_tD23942C97513881D942DFF29A29F55D0B4EA8A75* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1332,7 +1332,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleIDCredential_OnBeforeSerialize_m131
 		return;
 	}
 }
-// Method Definition Index: 144497
+// Method Definition Index: 144496
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleIDCredential_OnAfterDeserialize_mB5366B49FF04AF0671E94C27ED9A3715EEB295C9 (AppleIDCredential_tD23942C97513881D942DFF29A29F55D0B4EA8A75* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1383,7 +1383,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleIDCredential_OnAfterDeserialize_mB5
 		return;
 	}
 }
-// Method Definition Index: 144498
+// Method Definition Index: 144497
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleIDCredential__ctor_m51A44FA1D980EC9AF22D63D6072DB75A6FA01C63 (AppleIDCredential_tD23942C97513881D942DFF29A29F55D0B4EA8A75* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1399,7 +1399,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AppleIDCredential__ctor_m51A44FA1D980EC9
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 144499
+// Method Definition Index: 144498
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool CredentialStateResponse_get_Success_m2AE6E6E1D34B0114F4C52C039174DDF9AFA6BC4D (CredentialStateResponse_t168DFACCC4FBA9919D9EBF9314CFC5652199EB27* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1408,7 +1408,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool CredentialStateResponse_get_Success_m2AE
 		return L_0;
 	}
 }
-// Method Definition Index: 144500
+// Method Definition Index: 144499
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CredentialStateResponse_get_CredentialState_m65D7E15BA3EC5C3A7F367597A050193DD4209797 (CredentialStateResponse_t168DFACCC4FBA9919D9EBF9314CFC5652199EB27* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1417,7 +1417,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CredentialStateResponse_get_Credentia
 		return (int32_t)(L_0);
 	}
 }
-// Method Definition Index: 144501
+// Method Definition Index: 144500
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CredentialStateResponse_get_Error_m57C00B45E8F57B0BE47A95942C096E33EE75E13C (CredentialStateResponse_t168DFACCC4FBA9919D9EBF9314CFC5652199EB27* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1426,7 +1426,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CredentialStateResponse_get_Er
 		return L_0;
 	}
 }
-// Method Definition Index: 144502
+// Method Definition Index: 144501
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CredentialStateResponse_OnBeforeSerialize_mAC5BB42DE4654E67E38843519A7DC253F50850B5 (CredentialStateResponse_t168DFACCC4FBA9919D9EBF9314CFC5652199EB27* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1434,7 +1434,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CredentialStateResponse_OnBeforeSerializ
 		return;
 	}
 }
-// Method Definition Index: 144503
+// Method Definition Index: 144502
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CredentialStateResponse_OnAfterDeserialize_mFB21B4973EF797A938B387C7055C5929051AEE60 (CredentialStateResponse_t168DFACCC4FBA9919D9EBF9314CFC5652199EB27* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1457,7 +1457,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CredentialStateResponse_OnAfterDeseriali
 		return;
 	}
 }
-// Method Definition Index: 144504
+// Method Definition Index: 144503
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CredentialStateResponse__ctor_mD9EDB0D8782201A4B143772B6FE1140C1A20A6B3 (CredentialStateResponse_t168DFACCC4FBA9919D9EBF9314CFC5652199EB27* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1473,7 +1473,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CredentialStateResponse__ctor_mD9EDB0D87
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 144505
+// Method Definition Index: 144504
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FullPersonName_get_PhoneticRepresentation_m4C047353D1B6B779000A36AD5A9E95112FB4B78D (FullPersonName_t0454AAAB2D27D3182F2AB37B3F6B49BD94B6E9E8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1482,7 +1482,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* FullPersonName_get_PhoneticRep
 		return L_0;
 	}
 }
-// Method Definition Index: 144506
+// Method Definition Index: 144505
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FullPersonName_OnAfterDeserialize_mD8D3FA785A18B097DA24A5346927BCE5891E2726 (FullPersonName_t0454AAAB2D27D3182F2AB37B3F6B49BD94B6E9E8* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1502,7 +1502,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FullPersonName_OnAfterDeserialize_mD8D3F
 		return;
 	}
 }
-// Method Definition Index: 144507
+// Method Definition Index: 144506
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FullPersonName__ctor_m26740204D45973B681D9A56AAEA22BA07054781B (FullPersonName_t0454AAAB2D27D3182F2AB37B3F6B49BD94B6E9E8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1518,7 +1518,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FullPersonName__ctor_m26740204D45973B681
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 144508
+// Method Definition Index: 144507
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LoginWithAppleIdResponse_get_Success_mE6C377A510A993911F409C936A65584C9049779C (LoginWithAppleIdResponse_t6A4F5AC518D2615E97D6972C7A90F40A5A10447F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1527,7 +1527,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LoginWithAppleIdResponse_get_Success_mE6
 		return L_0;
 	}
 }
-// Method Definition Index: 144509
+// Method Definition Index: 144508
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* LoginWithAppleIdResponse_get_Error_mCCC27C3D0F46A1D52F2CE2D969005696E8E5AE76 (LoginWithAppleIdResponse_t6A4F5AC518D2615E97D6972C7A90F40A5A10447F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1536,7 +1536,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* LoginWithAppleIdResponse_get_E
 		return L_0;
 	}
 }
-// Method Definition Index: 144510
+// Method Definition Index: 144509
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* LoginWithAppleIdResponse_get_AppleIDCredential_m8621F583B1DC2542599CD2C3A666A478660B2366 (LoginWithAppleIdResponse_t6A4F5AC518D2615E97D6972C7A90F40A5A10447F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1545,7 +1545,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* LoginWithAppleIdResponse_get_A
 		return L_0;
 	}
 }
-// Method Definition Index: 144511
+// Method Definition Index: 144510
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* LoginWithAppleIdResponse_get_PasswordCredential_mF712CF23994A66D33B5AE81DE4DB37BFE0900DD0 (LoginWithAppleIdResponse_t6A4F5AC518D2615E97D6972C7A90F40A5A10447F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1554,7 +1554,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* LoginWithAppleIdResponse_get_P
 		return L_0;
 	}
 }
-// Method Definition Index: 144512
+// Method Definition Index: 144511
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LoginWithAppleIdResponse_OnBeforeSerialize_m7921D7B73269C8D01C61CD21A99F2D25E2A768D3 (LoginWithAppleIdResponse_t6A4F5AC518D2615E97D6972C7A90F40A5A10447F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1562,7 +1562,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LoginWithAppleIdResponse_OnBeforeSeriali
 		return;
 	}
 }
-// Method Definition Index: 144513
+// Method Definition Index: 144512
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LoginWithAppleIdResponse_OnAfterDeserialize_m5F4392761E520B362F204ADAA71470944CCB7226 (LoginWithAppleIdResponse_t6A4F5AC518D2615E97D6972C7A90F40A5A10447F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1590,7 +1590,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LoginWithAppleIdResponse_OnAfterDeserial
 		return;
 	}
 }
-// Method Definition Index: 144514
+// Method Definition Index: 144513
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LoginWithAppleIdResponse__ctor_m559AF38D99EA5F01245B730C66C0C575A7D1DFA5 (LoginWithAppleIdResponse_t6A4F5AC518D2615E97D6972C7A90F40A5A10447F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1606,7 +1606,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LoginWithAppleIdResponse__ctor_m559AF38D
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 144515
+// Method Definition Index: 144514
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PasswordCredential_get_User_m14F3321F1778473BAD88C092D9DB7E4E6EBA2BFE (PasswordCredential_t63B67EAA715B6511D38EBF1B1440016648B450C1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1615,7 +1615,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PasswordCredential_get_User_m14F332
 		return L_0;
 	}
 }
-// Method Definition Index: 144516
+// Method Definition Index: 144515
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PasswordCredential_get_Password_m550FE9C9FFC658487D37E4CCBC81646AAA0B6971 (PasswordCredential_t63B67EAA715B6511D38EBF1B1440016648B450C1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1624,7 +1624,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PasswordCredential_get_Password_m55
 		return L_0;
 	}
 }
-// Method Definition Index: 144517
+// Method Definition Index: 144516
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PasswordCredential_OnBeforeSerialize_m4BFB71F9E84B9BF858BD2B79B725972821DFE288 (PasswordCredential_t63B67EAA715B6511D38EBF1B1440016648B450C1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1632,7 +1632,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PasswordCredential_OnBeforeSerialize_m4B
 		return;
 	}
 }
-// Method Definition Index: 144518
+// Method Definition Index: 144517
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PasswordCredential_OnAfterDeserialize_m16D32A34A6F6046F6333F7BB5F69193B37D0F2F5 (PasswordCredential_t63B67EAA715B6511D38EBF1B1440016648B450C1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1646,7 +1646,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PasswordCredential_OnAfterDeserialize_m1
 		return;
 	}
 }
-// Method Definition Index: 144519
+// Method Definition Index: 144518
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PasswordCredential__ctor_m752B85E2013BE8BDA5F98F2E2BFF18BDFBF7676D (PasswordCredential_t63B67EAA715B6511D38EBF1B1440016648B450C1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1662,7 +1662,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PasswordCredential__ctor_m752B85E2013BE8
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 144520
+// Method Definition Index: 144519
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PayloadDeserializer_DeserializeCredentialStateResponse_mD711A60594EEB3B4A2B82769E58C745CC50FD516 (PayloadDeserializer_tB856F635041B5A76FCF832A0A329EABD65C3BD07* __this, String_t* ___0_payload, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1679,7 +1679,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PayloadDeserializer_Deserializ
 		return L_1;
 	}
 }
-// Method Definition Index: 144521
+// Method Definition Index: 144520
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PayloadDeserializer_DeserializeLoginWithAppleIdResponse_mDD6FE763342C1ADB26C95A9F07ECE906FD33D22A (PayloadDeserializer_tB856F635041B5A76FCF832A0A329EABD65C3BD07* __this, String_t* ___0_payload, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1696,7 +1696,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PayloadDeserializer_Deserializ
 		return L_1;
 	}
 }
-// Method Definition Index: 144522
+// Method Definition Index: 144521
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PayloadDeserializer__ctor_mFBD229EF68EBE24EC32CA9609AA005AB90C65C42 (PayloadDeserializer_tB856F635041B5A76FCF832A0A329EABD65C3BD07* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1712,7 +1712,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PayloadDeserializer__ctor_mFBD229EF68EBE
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 144523
+// Method Definition Index: 144522
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PersonName_get_NamePrefix_mD8E065B1341FE87F408B1A43AC98AB752EC37792 (PersonName_tC85CD1987B6BB8340FF6C66426BE3A97E7753D78* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1721,7 +1721,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PersonName_get_NamePrefix_mD8E065B1
 		return L_0;
 	}
 }
-// Method Definition Index: 144524
+// Method Definition Index: 144523
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PersonName_get_GivenName_m0284F3BF19006384CE40D9F2584E9B898E3167BB (PersonName_tC85CD1987B6BB8340FF6C66426BE3A97E7753D78* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1730,7 +1730,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PersonName_get_GivenName_m0284F3BF1
 		return L_0;
 	}
 }
-// Method Definition Index: 144525
+// Method Definition Index: 144524
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PersonName_get_MiddleName_mCFAC728FA738FF02EA1673A41528F15E771B0127 (PersonName_tC85CD1987B6BB8340FF6C66426BE3A97E7753D78* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1739,7 +1739,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PersonName_get_MiddleName_mCFAC728F
 		return L_0;
 	}
 }
-// Method Definition Index: 144526
+// Method Definition Index: 144525
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PersonName_get_FamilyName_mFF3940EE55E62FC22A6CFA6975BCCFF796D6BB26 (PersonName_tC85CD1987B6BB8340FF6C66426BE3A97E7753D78* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1748,7 +1748,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PersonName_get_FamilyName_mFF3940EE
 		return L_0;
 	}
 }
-// Method Definition Index: 144527
+// Method Definition Index: 144526
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PersonName_get_NameSuffix_m28CC64A01463A58CF35EFC6A4CE6CFADCB2518E8 (PersonName_tC85CD1987B6BB8340FF6C66426BE3A97E7753D78* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1757,7 +1757,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PersonName_get_NameSuffix_m28CC64A0
 		return L_0;
 	}
 }
-// Method Definition Index: 144528
+// Method Definition Index: 144527
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PersonName_get_Nickname_m678081BDCCFFD3DED731F9AB66F7FB350166B4C1 (PersonName_tC85CD1987B6BB8340FF6C66426BE3A97E7753D78* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1766,7 +1766,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PersonName_get_Nickname_m678081BDCC
 		return L_0;
 	}
 }
-// Method Definition Index: 144529
+// Method Definition Index: 144528
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PersonName_get_PhoneticRepresentation_m89AA341DA25ACEBFAA1E062842E646B1165A99DB (PersonName_tC85CD1987B6BB8340FF6C66426BE3A97E7753D78* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1774,7 +1774,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PersonName_get_PhoneticReprese
 		return (RuntimeObject*)NULL;
 	}
 }
-// Method Definition Index: 144530
+// Method Definition Index: 144529
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PersonName_OnBeforeSerialize_m4D57A809AC62FE6817EB498247E4AEE5B8B0B510 (PersonName_tC85CD1987B6BB8340FF6C66426BE3A97E7753D78* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1782,7 +1782,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PersonName_OnBeforeSerialize_m4D57A809AC
 		return;
 	}
 }
-// Method Definition Index: 144531
+// Method Definition Index: 144530
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PersonName_OnAfterDeserialize_m62A1515986426365B43F5A7BF5B7FB130EDA0D6E (PersonName_tC85CD1987B6BB8340FF6C66426BE3A97E7753D78* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1808,7 +1808,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PersonName_OnAfterDeserialize_m62A151598
 		return;
 	}
 }
-// Method Definition Index: 144532
+// Method Definition Index: 144531
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PersonName__ctor_m0F0E4933C32F156BAA3F4DB66D4BE72313F76C55 (PersonName_tC85CD1987B6BB8340FF6C66426BE3A97E7753D78* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1824,7 +1824,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PersonName__ctor_m0F0E4933C32F156BAA3F4D
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 144533
+// Method Definition Index: 144532
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializationTools_FixSerializationForString_mF3AF273F198E247A988066CBE929451830480D5F (String_t** ___0_originalString, const RuntimeMethod* method) 
 {
 	{
@@ -1851,7 +1851,7 @@ IL_000c:
 		return;
 	}
 }
-// Method Definition Index: 144536
+// Method Definition Index: 144535
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* SerializationTools_GetBytesFromBase64String_m4C24E80BE8646637F981906DDC1DC001C4785D9F (String_t* ___0_base64String, String_t* ___1_fieldName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1976,7 +1976,7 @@ IL_0041:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 144568
+// Method Definition Index: 144567
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t AppleErrorExtensions_GetAuthorizationErrorCode_m2D356E9280D7A2C580B337A9CCC9B65E32746219 (RuntimeObject* ___0_error, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2043,7 +2043,7 @@ IL_0035:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 144569
+// Method Definition Index: 144568
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* PersonNameExtensions_ToLocalizedString_mD357263F722B7C188313D67D6C54495393189E83 (RuntimeObject* ___0_personName, int32_t ___1_style, bool ___2_usePhoneticRepresentation, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;

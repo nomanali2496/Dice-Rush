@@ -190,16 +190,20 @@ public class LobbyGameObjectUI : EnhancedScrollerCellView, IPointerEnterHandler,
 
     private void ApplyLocalSprite(int index)
     {
-        // Simple fallback if no mappings exist
-        if (spriteMappings != null && index >= 0 && index < spriteMappings.Count)
+        if (spriteMappings != null && spriteMappings.Count > 0)
         {
-            backgroundImage.sprite = spriteMappings[index].sprite;
-            backgroundImage.enabled = true;
+            int safeIndex = Mathf.Abs(index) % spriteMappings.Count;
+            if (spriteMappings[safeIndex] != null && spriteMappings[safeIndex].sprite != null)
+            {
+                backgroundImage.sprite = spriteMappings[safeIndex].sprite;
+                backgroundImage.enabled = true;
+                return;
+            }
         }
-        else
+
+        if (backgroundImage != null)
         {
-            // If even fallback fails, we can't show anything
-            backgroundImage.enabled = (backgroundImage.sprite != null);
+            backgroundImage.enabled = true;
         }
     }
     

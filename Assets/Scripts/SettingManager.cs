@@ -1,3 +1,4 @@
+﻿#pragma warning disable 0414
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -45,7 +46,7 @@ public class SettingManager : MonoBehaviour
     private void Start()
     {
         // Find AuthenticationManager in scene
-        authManager = FindObjectOfType<AuthenticationManager>();
+        authManager = FindFirstObjectByType<AuthenticationManager>();
         if (authManager != null)
         {
             authManager.OnAuthenticationSuccess += OnUserLoggedIn;
@@ -266,7 +267,7 @@ public class SettingManager : MonoBehaviour
         {
             if (isMenuActive)
             {
-                if (SoundManager.instance == null) SoundManager.instance = FindObjectOfType<SoundManager>();
+                if (SoundManager.instance == null) SoundManager.instance = FindFirstObjectByType<SoundManager>();
                 if (SoundManager.instance != null) SoundManager.instance.PlayBackgroundMusic();
             }
             // (Note: Gameplay music is handled by its own event-driven logic)

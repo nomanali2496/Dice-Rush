@@ -82,6 +82,14 @@ public class HorizontalLobbyManager : MonoBehaviour
     
     private float _waitingSpriteRotationAngle = 0f;
     
+    public static HorizontalLobbyManager Instance { get; private set; }
+    public GameObject GameplayObject => gameplayObject;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     private void Start()
     {
         LobbyModel.OnConfigurationsUpdated += HandleLobbyDataUpdated;
@@ -167,8 +175,10 @@ public class HorizontalLobbyManager : MonoBehaviour
         if (SettingManager.instance != null)
             SettingManager.instance.ApplyMusicSetting();
 
-        if (_lobbyObjectsData != null && _lobbyObjectsData.Length > 0)
+        if (_lobbyObjectsData != null && _lobbyObjectsData.Length > 0 && allLobbyItems != null && allLobbyItems.Count > 0)
             UpdateVisibleRows();
+        else
+            InitializeLobbyRows();
 
         // Stop existing initialization routine if there is one to prevent duplicates
         StopAllCoroutines(); 
@@ -190,8 +200,10 @@ public class HorizontalLobbyManager : MonoBehaviour
             SettingManager.instance.ApplyMusicSetting();
 
         // Refresh lobby rows when GameObject becomes active
-        if (_lobbyObjectsData != null && _lobbyObjectsData.Length > 0)
+        if (_lobbyObjectsData != null && _lobbyObjectsData.Length > 0 && allLobbyItems != null && allLobbyItems.Count > 0)
             UpdateVisibleRows();
+        else
+            InitializeLobbyRows();
 
         // Start retry routine to ensure buttons light up when data is ready (e.g. after returning from game)
         StartCoroutine(InitializeButtonsRoutine());
@@ -294,6 +306,11 @@ public class HorizontalLobbyManager : MonoBehaviour
     /// </summary>
     private void InitializeLobbyRows()
     {
+        if (LobbyModel.Configurations == null || LobbyModel.Configurations.Length == 0)
+        {
+            LobbyModel.InitializeDefaults(12);
+        }
+
         // 1. Setup Anchors - Use the PARENT of the row so we don't disable the new items
         if (centerRow != null) centerAnchor = centerRow.transform.parent;
         
@@ -788,6 +805,8 @@ public class HorizontalLobbyManager : MonoBehaviour
         Debug.LogWarning("[HorizontalLobbyManager] SetLobbyConfig called. Use LobbyModel to update configurations.");
     }
     
+    public int SelectedPlayerCount { get; set; } = 5;
+
     public void OpenGameplayObject(int lobbyIndex = -1)
     {
         LobbyConfig config = GetLobbyConfig(lobbyIndex);
@@ -802,8 +821,15 @@ public class HorizontalLobbyManager : MonoBehaviour
         string mode = !string.IsNullOrEmpty(config.mode) ? config.mode : $"{config.numberOfPlayers}p"; 
         string lobbyId = config.lobbyId;
 
-        Debug.Log($"[HorizontalLobbyManager] UI Button Clicked. Requesting match: ID {lobbyId}, Mode {mode}, Stake {entryFee}");
+        Debug.Log($"[HorizontalLobbyManager] UI Button Clicked. Requesting match for {SelectedPlayerCount} players: ID {lobbyId}, Mode {mode}, Stake {entryFee}");
         
+        if (WaitingForPlayerPanelManager.Instance != null)
+        {
+            WaitingForPlayerPanelManager.Instance.OpenWaitingPanel(SelectedPlayerCount > 0 ? SelectedPlayerCount : config.numberOfPlayers, entryFee, lobbyId);
+            gameObject.SetActive(false);
+            return;
+        }
+
         if (waitingPanel != null)
         {
             waitingPanel.SetActive(true);
@@ -870,7 +896,7 @@ public class HorizontalLobbyManager : MonoBehaviour
     {
         if (selectPlayerPanelController == null)
         {
-            selectPlayerPanelController = FindObjectOfType<SelectPlayerPanelController>(true);
+            selectPlayerPanelController = FindFirstObjectByType<SelectPlayerPanelController>(FindObjectsInactive.Include);
         }
 
         if (selectPlayerPanelController != null)
@@ -949,7 +975,7 @@ public class HorizontalLobbyManager : MonoBehaviour
                 fallbackConfig.lobbyId = defaultLobbyId;
                 fallbackConfig.mode = $"{playerCount}p";
 
-                GameManager gm = GameManager.Instance != null ? GameManager.Instance : FindObjectOfType<GameManager>();
+                GameManager gm = GameManager.Instance != null ? GameManager.Instance : FindFirstObjectByType<GameManager>();
                 if (gm != null)
                 {
                     gm.ConfigureGameFromLobby(fallbackConfig, playerCount - 1, GameManager.CreateFallbackMatchData(playerCount, defaultStake));
@@ -1015,7 +1041,7 @@ public class HorizontalLobbyManager : MonoBehaviour
                 config.mode = matchData.roomId;
             }
 
-            GameManager gameManager = FindObjectOfType<GameManager>();
+            GameManager gameManager = FindFirstObjectByType<GameManager>();
             
             if (gameManager != null && config != null)
             {

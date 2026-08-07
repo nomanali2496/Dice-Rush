@@ -1,3 +1,4 @@
+﻿#pragma warning disable 0414
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -139,7 +140,7 @@ public class DicesController : MonoBehaviour
         }
         
         // Get the current room ID from GameManager
-        GameManager gm = FindObjectOfType<GameManager>();
+        GameManager gm = FindFirstObjectByType<GameManager>();
         string roomId = gm != null ? gm.GetCurrentRoomId() : null;
         
         if (string.IsNullOrEmpty(roomId))

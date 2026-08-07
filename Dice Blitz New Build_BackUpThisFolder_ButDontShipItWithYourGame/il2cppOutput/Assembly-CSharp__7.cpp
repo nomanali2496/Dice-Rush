@@ -1180,7 +1180,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IndexOutOfRangeException__ctor_mFD06819F
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 67018
+// Method Definition Index: 67020
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_string_op_Equality_m0D98920787AE1CF87857D5D4BFFB01329EF151B1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1220,7 +1220,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_string_op_Equality_m0D98920787A
 		return;
 	}
 }
-// Method Definition Index: 67019
+// Method Definition Index: 67021
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_string_op_Inequality_mD2EB1E081CA5CD265BA1DD8F2353E215C1A9B4B2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1260,7 +1260,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_string_op_Inequality_mD2EB1E081
 		return;
 	}
 }
-// Method Definition Index: 67020
+// Method Definition Index: 67022
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_float_op_Equality_m29DD2774E812977BE24451A6981EDCA5E91BDD7B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1299,7 +1299,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_float_op_Equality_m29DD2774E812
 		return;
 	}
 }
-// Method Definition Index: 67021
+// Method Definition Index: 67023
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_float_op_Inequality_m3A1C7EE67002066AB9932FBDC9190E306A6717A4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1338,7 +1338,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_float_op_Inequality_m3A1C7EE670
 		return;
 	}
 }
-// Method Definition Index: 67022
+// Method Definition Index: 67024
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_float_op_LessThan_mB3573B7DFAA73C1085F3A0E1E150B4DF4ED4D318 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1377,7 +1377,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_float_op_LessThan_mB3573B7DFAA7
 		return;
 	}
 }
-// Method Definition Index: 67023
+// Method Definition Index: 67025
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_float_op_GreaterThan_m978D4EC0DD1E3887AC58DBDE866CA5A3B50054D2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1416,7 +1416,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_float_op_GreaterThan_m978D4EC0D
 		return;
 	}
 }
-// Method Definition Index: 67024
+// Method Definition Index: 67026
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_float_op_LessThanOrEqual_m5E188B3503156F1C4810853ACAE0CCEF1B6963DC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1455,7 +1455,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_float_op_LessThanOrEqual_m5E188
 		return;
 	}
 }
-// Method Definition Index: 67025
+// Method Definition Index: 67027
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_float_op_GreaterThanOrEqual_mCB24E6FC6408CECBD67603B2B99CCF45439298C5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1494,7 +1494,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_float_op_GreaterThanOrEqual_mCB
 		return;
 	}
 }
-// Method Definition Index: 67026
+// Method Definition Index: 67028
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AI_NavMeshAgent_op_Implicit_m231F28EDA398EED4AF49491C864F113EC6817782 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1531,7 +1531,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AI_NavMeshAgent_op_
 		return;
 	}
 }
-// Method Definition Index: 67027
+// Method Definition Index: 67029
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AI_NavMeshAgent_op_Equality_mF95F2833D8926AB53454AF39013277F31C71AF2C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1573,7 +1573,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AI_NavMeshAgent_op_
 		return;
 	}
 }
-// Method Definition Index: 67028
+// Method Definition Index: 67030
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AI_NavMeshAgent_op_Inequality_mFE14C80512DCC87F1340E67D55C21F0F02AC52F9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1615,7 +1615,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AI_NavMeshAgent_op_
 		return;
 	}
 }
-// Method Definition Index: 67029
+// Method Definition Index: 67031
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AI_NavMeshObstacle_op_Implicit_m1244DCCFE2BDE1157D6A68C1A7D498EB2CC91C7E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1652,7 +1652,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AI_NavMeshObstacle_
 		return;
 	}
 }
-// Method Definition Index: 67030
+// Method Definition Index: 67032
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AI_NavMeshObstacle_op_Equality_m0D2D50E76AA51FC260E0158A78CA06F345848D28 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1694,7 +1694,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AI_NavMeshObstacle_
 		return;
 	}
 }
-// Method Definition Index: 67031
+// Method Definition Index: 67033
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AI_NavMeshObstacle_op_Inequality_mFA1F06F3CF6EA4C215422F63135AB7B0B542B322 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1736,7 +1736,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AI_NavMeshObstacle_
 		return;
 	}
 }
-// Method Definition Index: 67032
+// Method Definition Index: 67034
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AI_NavMeshData_op_Implicit_m1DF8EDDC314F238D198F9C53286C294A32E095E1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1773,7 +1773,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AI_NavMeshData_op_I
 		return;
 	}
 }
-// Method Definition Index: 67033
+// Method Definition Index: 67035
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AI_NavMeshData_op_Equality_m37E3FC99CEF877CA7D80492A522B4D3D482F83F5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1815,7 +1815,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AI_NavMeshData_op_E
 		return;
 	}
 }
-// Method Definition Index: 67034
+// Method Definition Index: 67036
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AI_NavMeshData_op_Inequality_mFDE1DEC5CB5B3F89E604C3D19E84A01B2EDC5BD9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1857,7 +1857,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AI_NavMeshData_op_I
 		return;
 	}
 }
-// Method Definition Index: 67035
+// Method Definition Index: 67037
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animator_op_Implicit_m87D3F586189485A08A8F39E7BFEB84E1CC80A35E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1894,7 +1894,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animator_op_Implici
 		return;
 	}
 }
-// Method Definition Index: 67036
+// Method Definition Index: 67038
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animator_op_Equality_m01946A33431E842B2CE213C63EE451DCAEFEC39C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1936,7 +1936,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animator_op_Equalit
 		return;
 	}
 }
-// Method Definition Index: 67037
+// Method Definition Index: 67039
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animator_op_Inequality_m487C89F883113D515A8C4256536E93DDDA5A1E2A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1978,7 +1978,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animator_op_Inequal
 		return;
 	}
 }
-// Method Definition Index: 67038
+// Method Definition Index: 67040
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animation_op_Implicit_mF5D8055794D3616A2F54D449658BE4B9843AE8BA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2015,7 +2015,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animation_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 67039
+// Method Definition Index: 67041
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animation_op_Equality_mDAA7AB4180F9D9F956A147FAAF3622908D0546E3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2057,7 +2057,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animation_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 67040
+// Method Definition Index: 67042
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animation_op_Inequality_mE2FDF8D6A980A32810A1F678FD86662EF02A3BBF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2099,7 +2099,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animation_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 67041
+// Method Definition Index: 67043
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AnimationClip_op_Implicit_mC245CB279F9A348680D629D8FF2BB041921AC4ED (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2136,7 +2136,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AnimationClip_op_Im
 		return;
 	}
 }
-// Method Definition Index: 67042
+// Method Definition Index: 67044
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AnimationClip_op_Equality_mF508A7F575AC0F322820534289D421C209CE729F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2178,7 +2178,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AnimationClip_op_Eq
 		return;
 	}
 }
-// Method Definition Index: 67043
+// Method Definition Index: 67045
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AnimationClip_op_Inequality_m6E3F93A61F994091364010DC3DC73F5D18E3E658 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2220,7 +2220,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AnimationClip_op_In
 		return;
 	}
 }
-// Method Definition Index: 67044
+// Method Definition Index: 67046
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AnimatorOverrideController_op_Implicit_mDD33F13BB5D6CDD0CEC157825842C3C2D0D9E12E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2257,7 +2257,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AnimatorOverrideCon
 		return;
 	}
 }
-// Method Definition Index: 67045
+// Method Definition Index: 67047
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AnimatorOverrideController_op_Equality_mF87EC04FE193BA768A4825A604943B9B9D1E5509 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2299,7 +2299,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AnimatorOverrideCon
 		return;
 	}
 }
-// Method Definition Index: 67046
+// Method Definition Index: 67048
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AnimatorOverrideController_op_Inequality_mB3E223A939B80048A8793E619776C0ADFB195263 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2341,7 +2341,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AnimatorOverrideCon
 		return;
 	}
 }
-// Method Definition Index: 67047
+// Method Definition Index: 67049
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Avatar_op_Implicit_m2DCB34510D7D6184AECDD95BEF40C20982E756FC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2378,7 +2378,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Avatar_op_Implicit_
 		return;
 	}
 }
-// Method Definition Index: 67048
+// Method Definition Index: 67050
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Avatar_op_Equality_mFA2F1BD55BD7A331123CBEE67FD4BE6D200E9B5E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2420,7 +2420,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Avatar_op_Equality_
 		return;
 	}
 }
-// Method Definition Index: 67049
+// Method Definition Index: 67051
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Avatar_op_Inequality_mBD329FD943050EAF42B80D1E3A6084FC5F45062A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2462,7 +2462,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Avatar_op_Inequalit
 		return;
 	}
 }
-// Method Definition Index: 67050
+// Method Definition Index: 67052
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AvatarMask_op_Implicit_mCCB230192C914F5B5EF3762430B066FE7116376B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2499,7 +2499,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AvatarMask_op_Impli
 		return;
 	}
 }
-// Method Definition Index: 67051
+// Method Definition Index: 67053
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AvatarMask_op_Equality_mE5710572A6BE2A8C5A07DC8EA06374BC10CC9676 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2541,7 +2541,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AvatarMask_op_Equal
 		return;
 	}
 }
-// Method Definition Index: 67052
+// Method Definition Index: 67054
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AvatarMask_op_Inequality_m8991C641D73A02C59DDD7613D93853A9CBF8B2DA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2583,7 +2583,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AvatarMask_op_Inequ
 		return;
 	}
 }
-// Method Definition Index: 67053
+// Method Definition Index: 67055
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Motion_op_Implicit_m46D054020F112CA7A8EDA8744C90FF3334B1E7CF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2620,7 +2620,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Motion_op_Implicit_
 		return;
 	}
 }
-// Method Definition Index: 67054
+// Method Definition Index: 67056
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Motion_op_Equality_mDA3F6FB645F0B7EC0F88F43EC29ACA66311C5A2F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2662,7 +2662,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Motion_op_Equality_
 		return;
 	}
 }
-// Method Definition Index: 67055
+// Method Definition Index: 67057
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Motion_op_Inequality_mEB6972F1C1A91792CEC98340B392BFEBE5B05A7B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2704,7 +2704,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Motion_op_Inequalit
 		return;
 	}
 }
-// Method Definition Index: 67056
+// Method Definition Index: 67058
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RuntimeAnimatorController_op_Implicit_m4AE5655C90829228734659CCB157F017D3A741EE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2741,7 +2741,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RuntimeAnimatorCont
 		return;
 	}
 }
-// Method Definition Index: 67057
+// Method Definition Index: 67059
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RuntimeAnimatorController_op_Equality_m1579BAD0D84A53A18A1CC29AB6FEC265C4DB6645 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2783,7 +2783,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RuntimeAnimatorCont
 		return;
 	}
 }
-// Method Definition Index: 67058
+// Method Definition Index: 67060
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RuntimeAnimatorController_op_Inequality_m2A5CDE77A7EC077E5C7D419559E61938D7256AA6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2825,7 +2825,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RuntimeAnimatorCont
 		return;
 	}
 }
-// Method Definition Index: 67059
+// Method Definition Index: 67061
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_AimConstraint_op_Implicit_m32C53CC9E99CBE6897C5CE0B3FE7BE29BA218942 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2862,7 +2862,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_AimConst
 		return;
 	}
 }
-// Method Definition Index: 67060
+// Method Definition Index: 67062
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_AimConstraint_op_Equality_m4534DC3089FA8052E5D0E5A4237B3197AB3E03E4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2904,7 +2904,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_AimConst
 		return;
 	}
 }
-// Method Definition Index: 67061
+// Method Definition Index: 67063
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_AimConstraint_op_Inequality_mB1AF586E420C7C261199E8514022B8C09987F9B0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2946,7 +2946,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_AimConst
 		return;
 	}
 }
-// Method Definition Index: 67062
+// Method Definition Index: 67064
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_PositionConstraint_op_Implicit_m587E360C26E1183807DB8AE8BF9578C46638E244 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2983,7 +2983,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_Position
 		return;
 	}
 }
-// Method Definition Index: 67063
+// Method Definition Index: 67065
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_PositionConstraint_op_Equality_m1856DEF3A7FC2ED5A9AEF89BFBC996F585E87A1F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3025,7 +3025,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_Position
 		return;
 	}
 }
-// Method Definition Index: 67064
+// Method Definition Index: 67066
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_PositionConstraint_op_Inequality_m858C2FF49563B54EEF954E8AEA3A96C03D3C14D2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3067,7 +3067,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_Position
 		return;
 	}
 }
-// Method Definition Index: 67065
+// Method Definition Index: 67067
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_RotationConstraint_op_Implicit_m99D268C70ACBA19BF8E2C2AC9542E4C574FF7790 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3104,7 +3104,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_Rotation
 		return;
 	}
 }
-// Method Definition Index: 67066
+// Method Definition Index: 67068
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_RotationConstraint_op_Equality_m393E36FF97C09E788AFD6874A745D509C5B6CBE1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3146,7 +3146,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_Rotation
 		return;
 	}
 }
-// Method Definition Index: 67067
+// Method Definition Index: 67069
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_RotationConstraint_op_Inequality_m13B82B0914EDC83446D790CA012F88F709120589 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3188,7 +3188,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_Rotation
 		return;
 	}
 }
-// Method Definition Index: 67068
+// Method Definition Index: 67070
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_ScaleConstraint_op_Implicit_mCFE19AB534299CD1BC017563C58D7642E9988739 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3225,7 +3225,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_ScaleCon
 		return;
 	}
 }
-// Method Definition Index: 67069
+// Method Definition Index: 67071
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_ScaleConstraint_op_Equality_mD97A030AE28D7C3E16B17285944E6055F3B40B96 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3267,7 +3267,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_ScaleCon
 		return;
 	}
 }
-// Method Definition Index: 67070
+// Method Definition Index: 67072
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_ScaleConstraint_op_Inequality_m4C6397E586A225BD7764A684DB1E0D42D709378A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3309,7 +3309,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_ScaleCon
 		return;
 	}
 }
-// Method Definition Index: 67071
+// Method Definition Index: 67073
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_LookAtConstraint_op_Implicit_m5F8E2DEF1E683DD92B08A5F6873B97ECC39B1E13 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3346,7 +3346,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_LookAtCo
 		return;
 	}
 }
-// Method Definition Index: 67072
+// Method Definition Index: 67074
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_LookAtConstraint_op_Equality_m901B5EF66DCEC489501E40E50BBC9D6DE04428D8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3388,7 +3388,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_LookAtCo
 		return;
 	}
 }
-// Method Definition Index: 67073
+// Method Definition Index: 67075
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_LookAtConstraint_op_Inequality_mE0659EE33928AADE10A88D5EB94FDC567BBE3ABC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3430,7 +3430,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_LookAtCo
 		return;
 	}
 }
-// Method Definition Index: 67074
+// Method Definition Index: 67076
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_ParentConstraint_op_Implicit_m77C3C0EF53651ED57EBC512D401617CCC3A4AF3F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3467,7 +3467,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_ParentCo
 		return;
 	}
 }
-// Method Definition Index: 67075
+// Method Definition Index: 67077
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_ParentConstraint_op_Equality_mA555A008A56604D86CA02C711FC2B8CA7D7AE329 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3509,7 +3509,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_ParentCo
 		return;
 	}
 }
-// Method Definition Index: 67076
+// Method Definition Index: 67078
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_ParentConstraint_op_Inequality_m33BF991A6B3B0CF8A84F9A924DB28F71E00A203A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3551,7 +3551,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Animations_ParentCo
 		return;
 	}
 }
-// Method Definition Index: 67077
+// Method Definition Index: 67079
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AssetBundle_op_Implicit_m67D9BDADE8202128B81F8D85EAF5B16205973F5D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3588,7 +3588,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AssetBundle_op_Impl
 		return;
 	}
 }
-// Method Definition Index: 67078
+// Method Definition Index: 67080
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AssetBundle_op_Equality_m91F2706BF0E81765E23E07733889DDCEBEB60F31 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3630,7 +3630,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AssetBundle_op_Equa
 		return;
 	}
 }
-// Method Definition Index: 67079
+// Method Definition Index: 67081
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AssetBundle_op_Inequality_m83DCD413CEAB60F3D8C4697AB4EEEDB2EF457D2E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3672,7 +3672,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AssetBundle_op_Ineq
 		return;
 	}
 }
-// Method Definition Index: 67080
+// Method Definition Index: 67082
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AssetBundleManifest_op_Implicit_mAEECB78DF4661C11A1D3B56B622C21373F622946 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3709,7 +3709,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AssetBundleManifest
 		return;
 	}
 }
-// Method Definition Index: 67081
+// Method Definition Index: 67083
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AssetBundleManifest_op_Equality_mDC5F9E6A9CC2FC033AFD5245EAD29A11BB7BF488 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3751,7 +3751,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AssetBundleManifest
 		return;
 	}
 }
-// Method Definition Index: 67082
+// Method Definition Index: 67084
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AssetBundleManifest_op_Inequality_mBA6D2FA9E44A698210CAFEAC015C60C9F67274C8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3793,7 +3793,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AssetBundleManifest
 		return;
 	}
 }
-// Method Definition Index: 67083
+// Method Definition Index: 67085
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioSource_op_Implicit_mE1BB4F4E51325B020DE7B59DE68A39ECA2EAE5A3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3830,7 +3830,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioSource_op_Impl
 		return;
 	}
 }
-// Method Definition Index: 67084
+// Method Definition Index: 67086
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioSource_op_Equality_m7CF2BE85EE2A48668DA45E4E3DC095A529D0A4DF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3872,7 +3872,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioSource_op_Equa
 		return;
 	}
 }
-// Method Definition Index: 67085
+// Method Definition Index: 67087
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioSource_op_Inequality_m620B16FA39543B6674D590D28A5868077A0B4DC1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3914,7 +3914,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioSource_op_Ineq
 		return;
 	}
 }
-// Method Definition Index: 67086
+// Method Definition Index: 67088
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioLowPassFilter_op_Implicit_mE989DBF95783B1DCCE014D44EA2C3280700DD463 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3951,7 +3951,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioLowPassFilter_
 		return;
 	}
 }
-// Method Definition Index: 67087
+// Method Definition Index: 67089
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioLowPassFilter_op_Equality_m3F204E2C590AEF8EE57F64335594843AFA6A015C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3993,7 +3993,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioLowPassFilter_
 		return;
 	}
 }
-// Method Definition Index: 67088
+// Method Definition Index: 67090
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioLowPassFilter_op_Inequality_mB26620BC629332576BD9CC25577453A996E81012 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4035,7 +4035,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioLowPassFilter_
 		return;
 	}
 }
-// Method Definition Index: 67089
+// Method Definition Index: 67091
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioHighPassFilter_op_Implicit_m48B1888771803CEBF22D632E52EA96D9CD7BD73E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4072,7 +4072,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioHighPassFilter
 		return;
 	}
 }
-// Method Definition Index: 67090
+// Method Definition Index: 67092
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioHighPassFilter_op_Equality_mFDE62095B04A6826F797D2C5D3F992446B31D302 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4114,7 +4114,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioHighPassFilter
 		return;
 	}
 }
-// Method Definition Index: 67091
+// Method Definition Index: 67093
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioHighPassFilter_op_Inequality_m2B9571704FDE0F479FE96C6FCFAB41761BFD45B7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4156,7 +4156,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioHighPassFilter
 		return;
 	}
 }
-// Method Definition Index: 67092
+// Method Definition Index: 67094
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioReverbFilter_op_Implicit_m6B656B46E4B3F6B1190E58E14663A8E82A90D87A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4193,7 +4193,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioReverbFilter_o
 		return;
 	}
 }
-// Method Definition Index: 67093
+// Method Definition Index: 67095
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioReverbFilter_op_Equality_m083ED9BD23F156CB09BBA551C972A7C223D670A3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4235,7 +4235,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioReverbFilter_o
 		return;
 	}
 }
-// Method Definition Index: 67094
+// Method Definition Index: 67096
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioReverbFilter_op_Inequality_mA805FE5913851029576BB065E76CA90AA8B6E449 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4277,7 +4277,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioReverbFilter_o
 		return;
 	}
 }
-// Method Definition Index: 67095
+// Method Definition Index: 67097
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioClip_op_Implicit_mD8526981161ED66AEB3410EA85DDB5871A544F9B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4314,7 +4314,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioClip_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 67096
+// Method Definition Index: 67098
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioClip_op_Equality_mEF10A7A191B0FBB5F0DCC842B0691ACA15F10525 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4356,7 +4356,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioClip_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 67097
+// Method Definition Index: 67099
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioClip_op_Inequality_m3B7866434EA3A78A904592EA53180DE696BB28D1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4398,7 +4398,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioClip_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 67098
+// Method Definition Index: 67100
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioBehaviour_op_Implicit_m7999FA685568FEE4FBE86788B7FB238A31CAF702 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4435,7 +4435,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioBehaviour_op_I
 		return;
 	}
 }
-// Method Definition Index: 67099
+// Method Definition Index: 67101
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioBehaviour_op_Equality_m1D2E5BAF9DA857E7C21202283DF71BC2B6684801 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4477,7 +4477,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioBehaviour_op_E
 		return;
 	}
 }
-// Method Definition Index: 67100
+// Method Definition Index: 67102
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioBehaviour_op_Inequality_m902C160A6FDA970B6DA857AADA2456EB0A76BD5C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4519,7 +4519,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioBehaviour_op_I
 		return;
 	}
 }
-// Method Definition Index: 67101
+// Method Definition Index: 67103
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioListener_op_Implicit_mFDB87A19F40A52E9B089DEA2C5EF865D5391EBEC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4556,7 +4556,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioListener_op_Im
 		return;
 	}
 }
-// Method Definition Index: 67102
+// Method Definition Index: 67104
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioListener_op_Equality_m1183061A755261EC03418214BDAB5901CE72C6B7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4598,7 +4598,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioListener_op_Eq
 		return;
 	}
 }
-// Method Definition Index: 67103
+// Method Definition Index: 67105
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioListener_op_Inequality_mBAAE09F86EE1930729F995850431C0A4E4091E37 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4640,7 +4640,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioListener_op_In
 		return;
 	}
 }
-// Method Definition Index: 67104
+// Method Definition Index: 67106
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioReverbZone_op_Implicit_m41F38C5E56C9BC70C73B0AD0F7C77C5ED0C52F98 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4677,7 +4677,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioReverbZone_op_
 		return;
 	}
 }
-// Method Definition Index: 67105
+// Method Definition Index: 67107
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioReverbZone_op_Equality_mB20952F29CB261E09C1512982C279CA7B7AD070A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4719,7 +4719,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioReverbZone_op_
 		return;
 	}
 }
-// Method Definition Index: 67106
+// Method Definition Index: 67108
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioReverbZone_op_Inequality_mDB5593E78426763ACF944BA6D4D34F582F9B2529 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4761,7 +4761,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioReverbZone_op_
 		return;
 	}
 }
-// Method Definition Index: 67107
+// Method Definition Index: 67109
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioDistortionFilter_op_Implicit_m9F0706E3EE1542A025C7CA1B87E2F79FE70E4385 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4798,7 +4798,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioDistortionFilt
 		return;
 	}
 }
-// Method Definition Index: 67108
+// Method Definition Index: 67110
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioDistortionFilter_op_Equality_m2DDAE55B437142A2E0B43A97D2922B85E08F07BE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4840,7 +4840,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioDistortionFilt
 		return;
 	}
 }
-// Method Definition Index: 67109
+// Method Definition Index: 67111
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioDistortionFilter_op_Inequality_mAF7EEA8B3917C467FD126001E01FC5CC8AC26466 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4882,7 +4882,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioDistortionFilt
 		return;
 	}
 }
-// Method Definition Index: 67110
+// Method Definition Index: 67112
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioEchoFilter_op_Implicit_m98EBB394377F824F48E311F1B79830FEE29E0FB6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4919,7 +4919,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioEchoFilter_op_
 		return;
 	}
 }
-// Method Definition Index: 67111
+// Method Definition Index: 67113
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioEchoFilter_op_Equality_m124D6733E4C13447C0872757B0D30348AFD02E42 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4961,7 +4961,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioEchoFilter_op_
 		return;
 	}
 }
-// Method Definition Index: 67112
+// Method Definition Index: 67114
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioEchoFilter_op_Inequality_m1D8FB96E8833023458FDCB85DD5415FC43252F08 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5003,7 +5003,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioEchoFilter_op_
 		return;
 	}
 }
-// Method Definition Index: 67113
+// Method Definition Index: 67115
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioChorusFilter_op_Implicit_mF5166D47FE64C25B0841C15564476E0C44DEC33A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5040,7 +5040,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioChorusFilter_o
 		return;
 	}
 }
-// Method Definition Index: 67114
+// Method Definition Index: 67116
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioChorusFilter_op_Equality_m468A55082355A0CC07B181E80FB8FFEE5DDA4C62 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5082,7 +5082,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioChorusFilter_o
 		return;
 	}
 }
-// Method Definition Index: 67115
+// Method Definition Index: 67117
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioChorusFilter_op_Inequality_m5CBB51225650A3E074BCC6AA129A75BF2D08EFAF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5124,7 +5124,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AudioChorusFilter_o
 		return;
 	}
 }
-// Method Definition Index: 67116
+// Method Definition Index: 67118
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_WebCamTexture_op_Implicit_mF23647B80B863C7972EA93C32EDDF314FC7A1A84 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5161,7 +5161,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_WebCamTexture_op_Im
 		return;
 	}
 }
-// Method Definition Index: 67117
+// Method Definition Index: 67119
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_WebCamTexture_op_Equality_m49D34F94989EE50C04D59A9BF7FBD2CDA234BA23 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5203,7 +5203,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_WebCamTexture_op_Eq
 		return;
 	}
 }
-// Method Definition Index: 67118
+// Method Definition Index: 67120
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_WebCamTexture_op_Inequality_m5AFEC66754A6225F37FB17A3D9D2EB8E8737F476 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5245,7 +5245,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_WebCamTexture_op_In
 		return;
 	}
 }
-// Method Definition Index: 67119
+// Method Definition Index: 67121
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Audio_AudioMixer_op_Implicit_m8DDC6ED4DAA75BE1E31413F888C4D894FC244D3F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5282,7 +5282,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Audio_AudioMixer_op
 		return;
 	}
 }
-// Method Definition Index: 67120
+// Method Definition Index: 67122
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Audio_AudioMixer_op_Equality_m9288F12B74E0398E5EE011FD38F158FA29321CBF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5324,7 +5324,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Audio_AudioMixer_op
 		return;
 	}
 }
-// Method Definition Index: 67121
+// Method Definition Index: 67123
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Audio_AudioMixer_op_Inequality_m3E3EC99741BB5131BDDCB6480FCA334691D02900 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5366,7 +5366,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Audio_AudioMixer_op
 		return;
 	}
 }
-// Method Definition Index: 67122
+// Method Definition Index: 67124
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Audio_AudioMixerGroup_op_Implicit_mE3E6B3D096BDE8E15885BD4D370204CE9F1E0D8A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5403,7 +5403,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Audio_AudioMixerGro
 		return;
 	}
 }
-// Method Definition Index: 67123
+// Method Definition Index: 67125
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Audio_AudioMixerGroup_op_Equality_mFFB07D419D9409817DEE80C2CCD11454489D6E71 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5445,7 +5445,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Audio_AudioMixerGro
 		return;
 	}
 }
-// Method Definition Index: 67124
+// Method Definition Index: 67126
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Audio_AudioMixerGroup_op_Inequality_m38E60D1CEF9F140970D97A467AEBF66CEF771BBD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5487,7 +5487,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Audio_AudioMixerGro
 		return;
 	}
 }
-// Method Definition Index: 67125
+// Method Definition Index: 67127
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Audio_AudioMixerSnapshot_op_Implicit_mFEA60E2C6906A485E0757FB25B58ED2357BEB317 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5524,7 +5524,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Audio_AudioMixerSna
 		return;
 	}
 }
-// Method Definition Index: 67126
+// Method Definition Index: 67128
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Audio_AudioMixerSnapshot_op_Equality_m5BDA4A9F85C0F25A1726ADF0FC72A4CF364E4B6F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5566,7 +5566,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Audio_AudioMixerSna
 		return;
 	}
 }
-// Method Definition Index: 67127
+// Method Definition Index: 67129
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Audio_AudioMixerSnapshot_op_Inequality_m1A102B45B97BCD98428BFBA9D71A785037B9F41D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5608,7 +5608,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Audio_AudioMixerSna
 		return;
 	}
 }
-// Method Definition Index: 67128
+// Method Definition Index: 67130
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Cloth_op_Implicit_m129ED5714D7D84C208254201E1B9FA9D8274B3FC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5645,7 +5645,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Cloth_op_Implicit_m
 		return;
 	}
 }
-// Method Definition Index: 67129
+// Method Definition Index: 67131
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Cloth_op_Equality_mDE3EF59FAAC6A5B537B6C3E188B0FBC86A099E16 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5687,7 +5687,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Cloth_op_Equality_m
 		return;
 	}
 }
-// Method Definition Index: 67130
+// Method Definition Index: 67132
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Cloth_op_Inequality_mE03F1BE090B95DF612A24BA480E56A5882FADAF5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5729,7 +5729,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Cloth_op_Inequality
 		return;
 	}
 }
-// Method Definition Index: 67131
+// Method Definition Index: 67133
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpriteRenderer_op_Implicit_m8C0DAD5EEB8B780D5C74844A2BB91C19C16FA87A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5766,7 +5766,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpriteRenderer_op_I
 		return;
 	}
 }
-// Method Definition Index: 67132
+// Method Definition Index: 67134
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpriteRenderer_op_Equality_mC6E71C19474DF75DF1C8A826DA52C36A4634BB53 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5808,7 +5808,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpriteRenderer_op_E
 		return;
 	}
 }
-// Method Definition Index: 67133
+// Method Definition Index: 67135
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpriteRenderer_op_Inequality_m4E81A4A84CD6A2107D872BB0A0C5E3C6C2F96898 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5850,7 +5850,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpriteRenderer_op_I
 		return;
 	}
 }
-// Method Definition Index: 67134
+// Method Definition Index: 67136
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Sprite_op_Implicit_mE7E6186AA8B04CC0C2937F1DF23FE63594D0D571 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5887,7 +5887,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Sprite_op_Implicit_
 		return;
 	}
 }
-// Method Definition Index: 67135
+// Method Definition Index: 67137
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Sprite_op_Equality_m31D2D853753506264DC7FFFD60CC3088137FBA61 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5929,7 +5929,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Sprite_op_Equality_
 		return;
 	}
 }
-// Method Definition Index: 67136
+// Method Definition Index: 67138
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Sprite_op_Inequality_m5DA05DD4A510F2DFE7B426EB59E722D8F40E0E10 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5971,7 +5971,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Sprite_op_Inequalit
 		return;
 	}
 }
-// Method Definition Index: 67137
+// Method Definition Index: 67139
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Camera_op_Implicit_mC77B45370BD0290A049BA51C2023A7728B1B7C97 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6008,7 +6008,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Camera_op_Implicit_
 		return;
 	}
 }
-// Method Definition Index: 67138
+// Method Definition Index: 67140
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Camera_op_Equality_mBDB580A2A577C737D25E8CDBADC614F0FFF94A2B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6050,7 +6050,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Camera_op_Equality_
 		return;
 	}
 }
-// Method Definition Index: 67139
+// Method Definition Index: 67141
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Camera_op_Inequality_m296DAF4E9DD3A77F0E7677BB9741C40F133C3729 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6092,7 +6092,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Camera_op_Inequalit
 		return;
 	}
 }
-// Method Definition Index: 67140
+// Method Definition Index: 67142
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_FlareLayer_op_Implicit_m48B068E11E74E4EB712C09884A88ACC0BA108A90 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6129,7 +6129,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_FlareLayer_op_Impli
 		return;
 	}
 }
-// Method Definition Index: 67141
+// Method Definition Index: 67143
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_FlareLayer_op_Equality_m01E7982F641B381E322359D557666007684F52FD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6171,7 +6171,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_FlareLayer_op_Equal
 		return;
 	}
 }
-// Method Definition Index: 67142
+// Method Definition Index: 67144
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_FlareLayer_op_Inequality_mE6F58E5786F7D7B0C02C6C7C34707BA2AD539876 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6213,7 +6213,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_FlareLayer_op_Inequ
 		return;
 	}
 }
-// Method Definition Index: 67143
+// Method Definition Index: 67145
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ReflectionProbe_op_Implicit_m3EECDBEB74353F19C5C40A81282B2741489619CE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6250,7 +6250,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ReflectionProbe_op_
 		return;
 	}
 }
-// Method Definition Index: 67144
+// Method Definition Index: 67146
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ReflectionProbe_op_Equality_mE830D411C6BC0C77E1B575FCFC801D5CEF5AE087 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6292,7 +6292,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ReflectionProbe_op_
 		return;
 	}
 }
-// Method Definition Index: 67145
+// Method Definition Index: 67147
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ReflectionProbe_op_Inequality_m8F423B31A08569B825128FCC7277644697A6FDBF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6334,7 +6334,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ReflectionProbe_op_
 		return;
 	}
 }
-// Method Definition Index: 67146
+// Method Definition Index: 67148
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Bounds_op_Equality_mD81799BB4F6F801CDFF726E0004B700EE2A842F3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6381,7 +6381,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Bounds_op_Equality_
 		return;
 	}
 }
-// Method Definition Index: 67147
+// Method Definition Index: 67149
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Bounds_op_Inequality_mFC83508E573547BAF27E97E8328BCE085DED9423 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6428,7 +6428,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Bounds_op_Inequalit
 		return;
 	}
 }
-// Method Definition Index: 67148
+// Method Definition Index: 67150
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rect_op_Inequality_mDF6B6987093E7E226985FF7D86952C9ABC68EF83 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6476,7 +6476,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rect_op_Inequality_
 		return;
 	}
 }
-// Method Definition Index: 67149
+// Method Definition Index: 67151
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rect_op_Equality_mB075CBB07AA8BB7C243625D6F3FBDBF651555B68 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6524,7 +6524,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rect_op_Equality_mB
 		return;
 	}
 }
-// Method Definition Index: 67150
+// Method Definition Index: 67152
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightingSettings_op_Implicit_mF2EAEC7BEE4B0EB6A2B9F7194F8644CDD442CB59 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6561,7 +6561,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightingSettings_op
 		return;
 	}
 }
-// Method Definition Index: 67151
+// Method Definition Index: 67153
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightingSettings_op_Equality_m62686C7BEACE2599F809B9CB0559D0350081A755 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6603,7 +6603,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightingSettings_op
 		return;
 	}
 }
-// Method Definition Index: 67152
+// Method Definition Index: 67154
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightingSettings_op_Inequality_mD956AC14D9EB4BEEA91F458A5BE35AFF156986C8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6645,7 +6645,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightingSettings_op
 		return;
 	}
 }
-// Method Definition Index: 67153
+// Method Definition Index: 67155
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BillboardAsset_op_Implicit_m62D819A7266319C4F8D39D2243B5D93365CD3A34 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6682,7 +6682,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BillboardAsset_op_I
 		return;
 	}
 }
-// Method Definition Index: 67154
+// Method Definition Index: 67156
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BillboardAsset_op_Equality_mBD0EF78355B4C786F20D5562DB1DF48A922B58FB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6724,7 +6724,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BillboardAsset_op_E
 		return;
 	}
 }
-// Method Definition Index: 67155
+// Method Definition Index: 67157
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BillboardAsset_op_Inequality_m22FC9B1E1BE3DA49DC9CCD80A2FBCC5A3D846EFF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6766,7 +6766,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BillboardAsset_op_I
 		return;
 	}
 }
-// Method Definition Index: 67156
+// Method Definition Index: 67158
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BillboardRenderer_op_Implicit_m5F8EEDC86464F6CD4E61E7A91A81B788704521F9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6803,7 +6803,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BillboardRenderer_o
 		return;
 	}
 }
-// Method Definition Index: 67157
+// Method Definition Index: 67159
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BillboardRenderer_op_Equality_m9E44B36A68CF069ACAC00ECCE4017639CE1F1EAA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6845,7 +6845,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BillboardRenderer_o
 		return;
 	}
 }
-// Method Definition Index: 67158
+// Method Definition Index: 67160
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BillboardRenderer_op_Inequality_mB8B2CFEA11F51B47AD8EA5BF06E3DCAD6DE19EA4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6887,7 +6887,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BillboardRenderer_o
 		return;
 	}
 }
-// Method Definition Index: 67159
+// Method Definition Index: 67161
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_D3D12DeviceFilterLists_op_Implicit_m16DB74E95E2223E7274FB5237E9515AFB5EC8119 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6924,7 +6924,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_D3D12DeviceFilterLi
 		return;
 	}
 }
-// Method Definition Index: 67160
+// Method Definition Index: 67162
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_D3D12DeviceFilterLists_op_Equality_mAA5371E2DD3C4C45E075FB0092CD7F439E79E310 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6966,7 +6966,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_D3D12DeviceFilterLi
 		return;
 	}
 }
-// Method Definition Index: 67161
+// Method Definition Index: 67163
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_D3D12DeviceFilterLists_op_Inequality_m741A78975D3AF105226CFD5D081F89227C654890 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7008,7 +7008,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_D3D12DeviceFilterLi
 		return;
 	}
 }
-// Method Definition Index: 67162
+// Method Definition Index: 67164
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightmapSettings_op_Implicit_m380A7804B5AD2109075573749F6EBF9F6A4A880B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7045,7 +7045,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightmapSettings_op
 		return;
 	}
 }
-// Method Definition Index: 67163
+// Method Definition Index: 67165
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightmapSettings_op_Equality_mB346BF6C65D3A9190428BBEEF81F396D9E9215BA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7087,7 +7087,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightmapSettings_op
 		return;
 	}
 }
-// Method Definition Index: 67164
+// Method Definition Index: 67166
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightmapSettings_op_Inequality_m9C35AB834B5DEFC8E1E9B0DBB4C7DDFCFD306772 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7129,7 +7129,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightmapSettings_op
 		return;
 	}
 }
-// Method Definition Index: 67165
+// Method Definition Index: 67167
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightProbes_op_Implicit_m1C6FB5C583CC2162DC3BB0F96C58BED65A264B4A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7166,7 +7166,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightProbes_op_Impl
 		return;
 	}
 }
-// Method Definition Index: 67166
+// Method Definition Index: 67168
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightProbes_op_Equality_m932EB8E9D43EA97BE6EFC17A90CF81DE17D330A9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7208,7 +7208,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightProbes_op_Equa
 		return;
 	}
 }
-// Method Definition Index: 67167
+// Method Definition Index: 67169
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightProbes_op_Inequality_mBAC44EA7D5D75176CF720706C104C783C68F49B5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7250,7 +7250,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightProbes_op_Ineq
 		return;
 	}
 }
-// Method Definition Index: 67168
+// Method Definition Index: 67170
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_QualitySettings_op_Implicit_mF4B79279271542527ED049155C3A7B72855E3169 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7287,7 +7287,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_QualitySettings_op_
 		return;
 	}
 }
-// Method Definition Index: 67169
+// Method Definition Index: 67171
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_QualitySettings_op_Equality_mA77619AE6764A213304CF404B3D4516636D1005B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7329,7 +7329,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_QualitySettings_op_
 		return;
 	}
 }
-// Method Definition Index: 67170
+// Method Definition Index: 67172
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_QualitySettings_op_Inequality_mF660B0A5221ADFDC7DCABB010683A731FFB5A933 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7371,7 +7371,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_QualitySettings_op_
 		return;
 	}
 }
-// Method Definition Index: 67171
+// Method Definition Index: 67173
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Mesh_op_Implicit_m6173D17F569F57C9A22CBFACAD809EE5C99F369B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7408,7 +7408,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Mesh_op_Implicit_m6
 		return;
 	}
 }
-// Method Definition Index: 67172
+// Method Definition Index: 67174
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Mesh_op_Equality_m9BE4BCC9D63AAC635E4F65AEE772AB4C2B50C8DD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7450,7 +7450,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Mesh_op_Equality_m9
 		return;
 	}
 }
-// Method Definition Index: 67173
+// Method Definition Index: 67175
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Mesh_op_Inequality_m33D95119E91ABB4CF106384D70EAB550B6EF6C9B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7492,7 +7492,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Mesh_op_Inequality_
 		return;
 	}
 }
-// Method Definition Index: 67174
+// Method Definition Index: 67176
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Renderer_op_Implicit_m1E5ADCF06DA2F3A22CD5B83465D86F441A6A7FB1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7529,7 +7529,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Renderer_op_Implici
 		return;
 	}
 }
-// Method Definition Index: 67175
+// Method Definition Index: 67177
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Renderer_op_Equality_mA33C7AE6737C05977D697A7B5B5911DFEC2F665B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7571,7 +7571,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Renderer_op_Equalit
 		return;
 	}
 }
-// Method Definition Index: 67176
+// Method Definition Index: 67178
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Renderer_op_Inequality_m7A73817E4DF334EDD0263EFCB6AA9519D945F6E2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7613,7 +7613,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Renderer_op_Inequal
 		return;
 	}
 }
-// Method Definition Index: 67177
+// Method Definition Index: 67179
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Projector_op_Implicit_m9E7ADA28BDD18FF727EFDD051F921B7134571B1D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7650,7 +7650,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Projector_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 67178
+// Method Definition Index: 67180
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Projector_op_Equality_mF6AE0F30286C1DCA957F56C6A2470CC6903876D3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7692,7 +7692,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Projector_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 67179
+// Method Definition Index: 67181
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Projector_op_Inequality_m083210A9347AFFECF131782887AF6E2F1B524304 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7734,7 +7734,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Projector_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 67180
+// Method Definition Index: 67182
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Shader_op_Implicit_m47CE16DAED25D5E83A8EA15FEDAF96FE4C7B5A11 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7771,7 +7771,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Shader_op_Implicit_
 		return;
 	}
 }
-// Method Definition Index: 67181
+// Method Definition Index: 67183
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Shader_op_Equality_m5183C35126652645C6B52603E2CAB6FD85670ABE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7813,7 +7813,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Shader_op_Equality_
 		return;
 	}
 }
-// Method Definition Index: 67182
+// Method Definition Index: 67184
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Shader_op_Inequality_mB232E9752186593D052856C44B4FD1A6D2D487D4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7855,7 +7855,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Shader_op_Inequalit
 		return;
 	}
 }
-// Method Definition Index: 67183
+// Method Definition Index: 67185
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TrailRenderer_op_Implicit_m10933A55962DDB19F6814C9C9DBD0B14510C31E7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7892,7 +7892,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TrailRenderer_op_Im
 		return;
 	}
 }
-// Method Definition Index: 67184
+// Method Definition Index: 67186
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TrailRenderer_op_Equality_mB13A768F534486DC2B1772643CFE29F28F7AB177 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7934,7 +7934,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TrailRenderer_op_Eq
 		return;
 	}
 }
-// Method Definition Index: 67185
+// Method Definition Index: 67187
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TrailRenderer_op_Inequality_m911AE4D8FFCFB7FECAC44ED0A754D5EDBA64C686 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7976,7 +7976,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TrailRenderer_op_In
 		return;
 	}
 }
-// Method Definition Index: 67186
+// Method Definition Index: 67188
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LineRenderer_op_Implicit_m2C56B08BF449850A4CE6D5C851C97809CEAAB611 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8013,7 +8013,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LineRenderer_op_Imp
 		return;
 	}
 }
-// Method Definition Index: 67187
+// Method Definition Index: 67189
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LineRenderer_op_Equality_mFFFEA0084281B94464C07F83BBEF80BC867D9472 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8055,7 +8055,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LineRenderer_op_Equ
 		return;
 	}
 }
-// Method Definition Index: 67188
+// Method Definition Index: 67190
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LineRenderer_op_Inequality_m0509D3718A906753A8DE569B5D4BA7CFE4D5B55E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8097,7 +8097,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LineRenderer_op_Ine
 		return;
 	}
 }
-// Method Definition Index: 67189
+// Method Definition Index: 67191
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RenderSettings_op_Implicit_m368F617211844257B7DEB2B2623B503E29885B40 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8134,7 +8134,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RenderSettings_op_I
 		return;
 	}
 }
-// Method Definition Index: 67190
+// Method Definition Index: 67192
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RenderSettings_op_Equality_m623FE07F3053AF0CC9C181CB5212D5B6E6C9CA11 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8176,7 +8176,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RenderSettings_op_E
 		return;
 	}
 }
-// Method Definition Index: 67191
+// Method Definition Index: 67193
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RenderSettings_op_Inequality_m0B45E4584953E3B8CC6E36CF8AD1696CA0C7DE02 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8218,7 +8218,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RenderSettings_op_I
 		return;
 	}
 }
-// Method Definition Index: 67192
+// Method Definition Index: 67194
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Material_op_Implicit_m911BD0F0167CD6F7D09387D43C1F2D6B409D1AD4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8255,7 +8255,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Material_op_Implici
 		return;
 	}
 }
-// Method Definition Index: 67193
+// Method Definition Index: 67195
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Material_op_Equality_m73D86A179ED4CD27534D4AF71DBE9668A5C3BA0F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8297,7 +8297,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Material_op_Equalit
 		return;
 	}
 }
-// Method Definition Index: 67194
+// Method Definition Index: 67196
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Material_op_Inequality_mB485872E55552EE2BCC0997D86EA7ABBA37AEEE6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8339,7 +8339,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Material_op_Inequal
 		return;
 	}
 }
-// Method Definition Index: 67195
+// Method Definition Index: 67197
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_OcclusionPortal_op_Implicit_mE0EAB5B48E12F1766662B6DB0C81EA1A9720D29A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8376,7 +8376,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_OcclusionPortal_op_
 		return;
 	}
 }
-// Method Definition Index: 67196
+// Method Definition Index: 67198
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_OcclusionPortal_op_Equality_m77FC93D31CC43EC2DD73704D6D501CEAD9930FAC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8418,7 +8418,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_OcclusionPortal_op_
 		return;
 	}
 }
-// Method Definition Index: 67197
+// Method Definition Index: 67199
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_OcclusionPortal_op_Inequality_mE006D600A2ED988E57003C11B845B8B9AC3CA344 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8460,7 +8460,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_OcclusionPortal_op_
 		return;
 	}
 }
-// Method Definition Index: 67198
+// Method Definition Index: 67200
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_OcclusionArea_op_Implicit_m80D2C0086FA396CF51C399F3DA0995A987132D57 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8497,7 +8497,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_OcclusionArea_op_Im
 		return;
 	}
 }
-// Method Definition Index: 67199
+// Method Definition Index: 67201
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_OcclusionArea_op_Equality_m593B0587894FADB027ADFC30AEFA8B9C3398C1DE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8539,7 +8539,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_OcclusionArea_op_Eq
 		return;
 	}
 }
-// Method Definition Index: 67200
+// Method Definition Index: 67202
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_OcclusionArea_op_Inequality_mE765129A322C059FDFF3F7799CA6104503CEFF74 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8581,7 +8581,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_OcclusionArea_op_In
 		return;
 	}
 }
-// Method Definition Index: 67201
+// Method Definition Index: 67203
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Flare_op_Implicit_m7535A4D48AAB6AA7D49C308EAD6BBC7B9271ED19 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8618,7 +8618,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Flare_op_Implicit_m
 		return;
 	}
 }
-// Method Definition Index: 67202
+// Method Definition Index: 67204
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Flare_op_Equality_m3925DB4C03102958B4FC64C38BCE27FAE28F8233 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8660,7 +8660,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Flare_op_Equality_m
 		return;
 	}
 }
-// Method Definition Index: 67203
+// Method Definition Index: 67205
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Flare_op_Inequality_m9F6434949E164627D9426058F828C4AAAA9D784A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8702,7 +8702,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Flare_op_Inequality
 		return;
 	}
 }
-// Method Definition Index: 67204
+// Method Definition Index: 67206
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LensFlare_op_Implicit_m6285DD1DCED1CEB3C722D3481F872256E60EC724 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8739,7 +8739,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LensFlare_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 67205
+// Method Definition Index: 67207
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LensFlare_op_Equality_mB54940877FB8A60B6E6A858D44B31423A92334E3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8781,7 +8781,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LensFlare_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 67206
+// Method Definition Index: 67208
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LensFlare_op_Inequality_mEAB43ACD953748790EB1A038B81DA7C9AE9CED1E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8823,7 +8823,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LensFlare_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 67207
+// Method Definition Index: 67209
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Light_op_Implicit_m48E65B6ACEA4C25CB2010ADD81C53E65DBDA6E60 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8860,7 +8860,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Light_op_Implicit_m
 		return;
 	}
 }
-// Method Definition Index: 67208
+// Method Definition Index: 67210
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Light_op_Equality_m7146EA1CF6F7BC9D8DBE6FEBBA22462ECEFC8FFE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8902,7 +8902,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Light_op_Equality_m
 		return;
 	}
 }
-// Method Definition Index: 67209
+// Method Definition Index: 67211
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Light_op_Inequality_mEECE9DBB486BEA441BF07D915FEB28DEC4A59E7D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8944,7 +8944,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Light_op_Inequality
 		return;
 	}
 }
-// Method Definition Index: 67210
+// Method Definition Index: 67212
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Skybox_op_Implicit_m3B90838AD70F152AFFEB1CC45D2D01CDA318FCE9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8981,7 +8981,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Skybox_op_Implicit_
 		return;
 	}
 }
-// Method Definition Index: 67211
+// Method Definition Index: 67213
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Skybox_op_Equality_m2E4BA6B4A9DFE1CEEA0BD5240DC752CF9A8DCBDD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9023,7 +9023,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Skybox_op_Equality_
 		return;
 	}
 }
-// Method Definition Index: 67212
+// Method Definition Index: 67214
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Skybox_op_Inequality_m94B7518412F9AC7BDB373836FF4B70F9CAF7EBCE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9065,7 +9065,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Skybox_op_Inequalit
 		return;
 	}
 }
-// Method Definition Index: 67213
+// Method Definition Index: 67215
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_MeshFilter_op_Implicit_m6A37528C9F4BD061B8089CE97CF74F1579276693 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9102,7 +9102,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_MeshFilter_op_Impli
 		return;
 	}
 }
-// Method Definition Index: 67214
+// Method Definition Index: 67216
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_MeshFilter_op_Equality_m4C5DF08E67BC507DDEEED72C42EA23FB682570EC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9144,7 +9144,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_MeshFilter_op_Equal
 		return;
 	}
 }
-// Method Definition Index: 67215
+// Method Definition Index: 67217
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_MeshFilter_op_Inequality_m9439ECD5D3F38B05EA4C6B5ADE85836E2961B09B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9186,7 +9186,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_MeshFilter_op_Inequ
 		return;
 	}
 }
-// Method Definition Index: 67216
+// Method Definition Index: 67218
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightProbeProxyVolume_op_Implicit_mFDB090A167C7FDC4FAE985CFFBE7C696BA396F80 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9223,7 +9223,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightProbeProxyVolu
 		return;
 	}
 }
-// Method Definition Index: 67217
+// Method Definition Index: 67219
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightProbeProxyVolume_op_Equality_m3E8598411430D361AFA24D5DF3D0BDD8BAC2EF8F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9265,7 +9265,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightProbeProxyVolu
 		return;
 	}
 }
-// Method Definition Index: 67218
+// Method Definition Index: 67220
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightProbeProxyVolume_op_Inequality_mACFEA57D09A1F7A8B34BB5FDA75B72F2960E67B9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9307,7 +9307,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightProbeProxyVolu
 		return;
 	}
 }
-// Method Definition Index: 67219
+// Method Definition Index: 67221
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SkinnedMeshRenderer_op_Implicit_mCFEDEB017A31A2B4467778EE65F75C01A13DFB46 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9344,7 +9344,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SkinnedMeshRenderer
 		return;
 	}
 }
-// Method Definition Index: 67220
+// Method Definition Index: 67222
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SkinnedMeshRenderer_op_Equality_m313BEBB4636517169404CD6F521197D055E81523 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9386,7 +9386,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SkinnedMeshRenderer
 		return;
 	}
 }
-// Method Definition Index: 67221
+// Method Definition Index: 67223
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SkinnedMeshRenderer_op_Inequality_m8A0688F854EA39894EBA69A147462410419FA24C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9428,7 +9428,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SkinnedMeshRenderer
 		return;
 	}
 }
-// Method Definition Index: 67222
+// Method Definition Index: 67224
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_MeshRenderer_op_Implicit_m282AFA7296192FB6C8AF541362FFEF802C2AF0E2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9465,7 +9465,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_MeshRenderer_op_Imp
 		return;
 	}
 }
-// Method Definition Index: 67223
+// Method Definition Index: 67225
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_MeshRenderer_op_Equality_m952779236D68B3589971C18702D58B738AADB6EE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9507,7 +9507,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_MeshRenderer_op_Equ
 		return;
 	}
 }
-// Method Definition Index: 67224
+// Method Definition Index: 67226
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_MeshRenderer_op_Inequality_m74731082749499062B0F78F159280B6216828D22 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9549,7 +9549,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_MeshRenderer_op_Ine
 		return;
 	}
 }
-// Method Definition Index: 67225
+// Method Definition Index: 67227
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightProbeGroup_op_Implicit_m6013FA5DA95B7A88C057F8045470FDB4E5890CE8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9586,7 +9586,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightProbeGroup_op_
 		return;
 	}
 }
-// Method Definition Index: 67226
+// Method Definition Index: 67228
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightProbeGroup_op_Equality_mD7C682406FB3EFEC80E7CDA22EEF81F9CC84BC21 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9628,7 +9628,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightProbeGroup_op_
 		return;
 	}
 }
-// Method Definition Index: 67227
+// Method Definition Index: 67229
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightProbeGroup_op_Inequality_mF063F81CB34C2A014F2B59B67790303A6409E747 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9670,7 +9670,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LightProbeGroup_op_
 		return;
 	}
 }
-// Method Definition Index: 67228
+// Method Definition Index: 67230
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LODGroup_op_Implicit_m6E359B78A6BBBCD03362C88F85D08DBE6F98C174 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9707,7 +9707,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LODGroup_op_Implici
 		return;
 	}
 }
-// Method Definition Index: 67229
+// Method Definition Index: 67231
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LODGroup_op_Equality_mE6CEAF5921FE268EE4B6F1FFA07E7B7BA776602D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9749,7 +9749,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LODGroup_op_Equalit
 		return;
 	}
 }
-// Method Definition Index: 67230
+// Method Definition Index: 67232
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LODGroup_op_Inequality_m34753C0DAF51001A1F5BCCDFAF9D9DEB82F019A5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9791,7 +9791,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LODGroup_op_Inequal
 		return;
 	}
 }
-// Method Definition Index: 67231
+// Method Definition Index: 67233
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Texture_op_Implicit_mED1B4A45CC63D760301B70E93F91E3C7AC8194AB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9828,7 +9828,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Texture_op_Implicit
 		return;
 	}
 }
-// Method Definition Index: 67232
+// Method Definition Index: 67234
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Texture_op_Equality_m4A55D3021B7B46F8FA9983388184EF561B2583DC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9870,7 +9870,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Texture_op_Equality
 		return;
 	}
 }
-// Method Definition Index: 67233
+// Method Definition Index: 67235
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Texture_op_Inequality_mFB1F867C9AEC92108DDA20C03CC8E5B0BBEC4D7A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9912,7 +9912,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Texture_op_Inequali
 		return;
 	}
 }
-// Method Definition Index: 67234
+// Method Definition Index: 67236
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Texture2D_op_Implicit_mE3F40DA297D870BF866FE77C015F4F13BEAAEBF9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9949,7 +9949,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Texture2D_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 67235
+// Method Definition Index: 67237
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Texture2D_op_Equality_m7E0F8B7DFD32FAA7906B68E0184A3D3BC9098CF8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9991,7 +9991,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Texture2D_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 67236
+// Method Definition Index: 67238
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Texture2D_op_Inequality_mC61276FB9006D5B0F4B6C3D0A087B6D274DCD8BD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10033,7 +10033,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Texture2D_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 67237
+// Method Definition Index: 67239
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Cubemap_op_Implicit_mCD768905247284D7B6543D728EC1650E996B6ACB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10070,7 +10070,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Cubemap_op_Implicit
 		return;
 	}
 }
-// Method Definition Index: 67238
+// Method Definition Index: 67240
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Cubemap_op_Equality_m884B6624F111DB9540098F665F93ED1DF45E318F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10112,7 +10112,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Cubemap_op_Equality
 		return;
 	}
 }
-// Method Definition Index: 67239
+// Method Definition Index: 67241
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Cubemap_op_Inequality_m2A1F9B6EB69798C3AD865B42539B6E68354B8098 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10154,7 +10154,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Cubemap_op_Inequali
 		return;
 	}
 }
-// Method Definition Index: 67240
+// Method Definition Index: 67242
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Texture3D_op_Implicit_mD3A44A319A41B0D4479B33A7BCBBD7AA34B856F1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10191,7 +10191,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Texture3D_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 67241
+// Method Definition Index: 67243
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Texture3D_op_Equality_mFCA21DB5F08A9B826460981E210FB515BA61EB3A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10233,7 +10233,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Texture3D_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 67242
+// Method Definition Index: 67244
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Texture3D_op_Inequality_mA130A7F750E27D56A98381B05D765ACF08E8C9A3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10275,7 +10275,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Texture3D_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 67243
+// Method Definition Index: 67245
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Texture2DArray_op_Implicit_m1858139FC8BFA81AA2133718B3E0B0D24C8218BB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10312,7 +10312,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Texture2DArray_op_I
 		return;
 	}
 }
-// Method Definition Index: 67244
+// Method Definition Index: 67246
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Texture2DArray_op_Equality_mFF4248E6D655DF11592D53102DD78AD764C4B37D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10354,7 +10354,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Texture2DArray_op_E
 		return;
 	}
 }
-// Method Definition Index: 67245
+// Method Definition Index: 67247
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Texture2DArray_op_Inequality_mA7C91A13CE1F3ADAB705AF80A5D9A3230BBBF857 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10396,7 +10396,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Texture2DArray_op_I
 		return;
 	}
 }
-// Method Definition Index: 67246
+// Method Definition Index: 67248
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CubemapArray_op_Implicit_m606F2D9F3E3C29B5904A55B538078562378FC225 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10433,7 +10433,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CubemapArray_op_Imp
 		return;
 	}
 }
-// Method Definition Index: 67247
+// Method Definition Index: 67249
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CubemapArray_op_Equality_m37F0DFF25557DC0796EA4F9C0D51AA1543C7B604 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10475,7 +10475,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CubemapArray_op_Equ
 		return;
 	}
 }
-// Method Definition Index: 67248
+// Method Definition Index: 67250
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CubemapArray_op_Inequality_m797682571523346089E06236F2E79B63A36CD756 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10517,7 +10517,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CubemapArray_op_Ine
 		return;
 	}
 }
-// Method Definition Index: 67249
+// Method Definition Index: 67251
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SparseTexture_op_Implicit_mFE4642ACC48F90C3343F767393AE94790BDBF32F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10554,7 +10554,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SparseTexture_op_Im
 		return;
 	}
 }
-// Method Definition Index: 67250
+// Method Definition Index: 67252
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SparseTexture_op_Equality_m39D05FEBDEB261B2CAC0513EE968F1648C8321E9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10596,7 +10596,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SparseTexture_op_Eq
 		return;
 	}
 }
-// Method Definition Index: 67251
+// Method Definition Index: 67253
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SparseTexture_op_Inequality_m8D4C27614A333D6A9AD0DEBAAC392FDF6C8F6375 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10638,7 +10638,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SparseTexture_op_In
 		return;
 	}
 }
-// Method Definition Index: 67252
+// Method Definition Index: 67254
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RenderTexture_op_Implicit_m429460512F82C0226E4E78044DF037E2BAD30766 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10675,7 +10675,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RenderTexture_op_Im
 		return;
 	}
 }
-// Method Definition Index: 67253
+// Method Definition Index: 67255
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RenderTexture_op_Equality_m06FFE7483C2388B295D086DC44EE3D9A186111A4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10717,7 +10717,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RenderTexture_op_Eq
 		return;
 	}
 }
-// Method Definition Index: 67254
+// Method Definition Index: 67256
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RenderTexture_op_Inequality_m5C87D8CBF08A77BA017C60B41C064A28D9F073D6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10759,7 +10759,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RenderTexture_op_In
 		return;
 	}
 }
-// Method Definition Index: 67255
+// Method Definition Index: 67257
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CustomRenderTexture_op_Implicit_m979415B4E1E6FDC36A6D3BEAFDBD8DDF60CD9114 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10796,7 +10796,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CustomRenderTexture
 		return;
 	}
 }
-// Method Definition Index: 67256
+// Method Definition Index: 67258
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CustomRenderTexture_op_Equality_m3C8CA8F5EC830DCF9E3FDE094A29A55DB91F3876 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10838,7 +10838,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CustomRenderTexture
 		return;
 	}
 }
-// Method Definition Index: 67257
+// Method Definition Index: 67259
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CustomRenderTexture_op_Inequality_m55077DE46D79DB6A377E7937FC30F66369BA2091 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10880,7 +10880,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CustomRenderTexture
 		return;
 	}
 }
-// Method Definition Index: 67258
+// Method Definition Index: 67260
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_VulkanDeviceFilterLists_op_Implicit_m80E0C5C105C39391D744C138F6D1457C61FE98F6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10917,7 +10917,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_VulkanDeviceFilterL
 		return;
 	}
 }
-// Method Definition Index: 67259
+// Method Definition Index: 67261
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_VulkanDeviceFilterLists_op_Equality_mEFDECF0B418D837E4903E79EEB3A03AB9C9CC79A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10959,7 +10959,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_VulkanDeviceFilterL
 		return;
 	}
 }
-// Method Definition Index: 67260
+// Method Definition Index: 67262
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_VulkanDeviceFilterLists_op_Inequality_m56644C7D5C22619FE4C7CE6C279BFEE79008B9D5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11001,7 +11001,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_VulkanDeviceFilterL
 		return;
 	}
 }
-// Method Definition Index: 67261
+// Method Definition Index: 67263
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Color_op_Addition_m7FBD7F8F19FF68DC142E8407084262DCDF105816 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11048,7 +11048,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Color_op_Addition_m
 		return;
 	}
 }
-// Method Definition Index: 67262
+// Method Definition Index: 67264
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Color_op_Subtraction_m50F1ED77E781F65571FC7A52326BBCAAB4FBA8EB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11095,7 +11095,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Color_op_Subtractio
 		return;
 	}
 }
-// Method Definition Index: 67263
+// Method Definition Index: 67265
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Color_op_Multiply_mFEB008919B89D9EBECA4A2866835AAD402CBF86C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11142,7 +11142,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Color_op_Multiply_m
 		return;
 	}
 }
-// Method Definition Index: 67264
+// Method Definition Index: 67266
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Color_op_Multiply_0_mE0F90F30589E4D4557FB762EBB56329442B1122F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11190,7 +11190,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Color_op_Multiply_0
 		return;
 	}
 }
-// Method Definition Index: 67265
+// Method Definition Index: 67267
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Color_op_Multiply_1_m619D35D1687834277A48B1A2AB2834573B89A3F0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11236,7 +11236,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Color_op_Multiply_1
 		return;
 	}
 }
-// Method Definition Index: 67266
+// Method Definition Index: 67268
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Color_op_Multiply_2_m219EA8242BE2A81061EF21A68812B2915CB80E38 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11282,7 +11282,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Color_op_Multiply_2
 		return;
 	}
 }
-// Method Definition Index: 67267
+// Method Definition Index: 67269
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Color_op_Division_m32A69E0842C849DA13D714CFB52B4E7177CE0356 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11328,7 +11328,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Color_op_Division_m
 		return;
 	}
 }
-// Method Definition Index: 67268
+// Method Definition Index: 67270
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Color_op_Equality_m61368E91311F700795F8EBFA9BAB606E6055D6DE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11375,7 +11375,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Color_op_Equality_m
 		return;
 	}
 }
-// Method Definition Index: 67269
+// Method Definition Index: 67271
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Color_op_Inequality_mE3DB154C0C04E7B443513ED4155B04E9B237E293 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11422,7 +11422,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Color_op_Inequality
 		return;
 	}
 }
-// Method Definition Index: 67270
+// Method Definition Index: 67272
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Color_op_Implicit_m636EEC3E024F03485A1E9B36B375EAAC55AB281A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11461,7 +11461,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Color_op_Implicit_m
 		return;
 	}
 }
-// Method Definition Index: 67271
+// Method Definition Index: 67273
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Color_op_Implicit_0_mD034ADBE555C91D79CA5D76F8281DD0F7B8EF3BD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11500,7 +11500,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Color_op_Implicit_0
 		return;
 	}
 }
-// Method Definition Index: 67272
+// Method Definition Index: 67274
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Matrix4x4_op_Multiply_m4C5754D85A4A91828637C8914F1D154379CDC2D6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11547,7 +11547,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Matrix4x4_op_Multip
 		return;
 	}
 }
-// Method Definition Index: 67273
+// Method Definition Index: 67275
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Matrix4x4_op_Multiply_0_mB3B66EC22E0F5C98BAD4B4FF9A41739B96B1CB14 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11595,7 +11595,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Matrix4x4_op_Multip
 		return;
 	}
 }
-// Method Definition Index: 67274
+// Method Definition Index: 67276
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Matrix4x4_op_Equality_mFA9B89F899D456638F20900A4E722F28C3EC5AE5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11642,7 +11642,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Matrix4x4_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 67275
+// Method Definition Index: 67277
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Matrix4x4_op_Inequality_m54EA2C6D4F6FFA8FCDDC43702B4B0873397DD580 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11689,7 +11689,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Matrix4x4_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 67276
+// Method Definition Index: 67278
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector3_op_Addition_m7A14014D58A0E9FB4B47A8BFDBAE2EE70FC3D765 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11736,7 +11736,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector3_op_Addition
 		return;
 	}
 }
-// Method Definition Index: 67277
+// Method Definition Index: 67279
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector3_op_Subtraction_mA64791CAC8BDF4857E946A8CF5AD57610622FA20 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11783,7 +11783,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector3_op_Subtract
 		return;
 	}
 }
-// Method Definition Index: 67278
+// Method Definition Index: 67280
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector3_op_UnaryNegation_m9CD632DEF8D7F65690841797A9AECAFDAAA602CE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11818,7 +11818,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector3_op_UnaryNeg
 		return;
 	}
 }
-// Method Definition Index: 67279
+// Method Definition Index: 67281
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector3_op_Multiply_m2061B93E534F101E1B7DB867908FCA5995503ABA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11864,7 +11864,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector3_op_Multiply
 		return;
 	}
 }
-// Method Definition Index: 67280
+// Method Definition Index: 67282
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector3_op_Multiply_0_m7CF2B682E3BCCF520A4597800D08296DDB05278D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11910,7 +11910,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector3_op_Multiply
 		return;
 	}
 }
-// Method Definition Index: 67281
+// Method Definition Index: 67283
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector3_op_Division_mBFC713C6A256E4B07EB68D2B04637BBA55BDA976 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11956,7 +11956,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector3_op_Division
 		return;
 	}
 }
-// Method Definition Index: 67282
+// Method Definition Index: 67284
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector3_op_Equality_mC668A0DD87D1AB0D434BD112AA160766416EC516 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12003,7 +12003,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector3_op_Equality
 		return;
 	}
 }
-// Method Definition Index: 67283
+// Method Definition Index: 67285
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector3_op_Inequality_m11FD361511D1F4FC7F8442DA33E2975AFDDC1FAB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12050,7 +12050,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector3_op_Inequali
 		return;
 	}
 }
-// Method Definition Index: 67284
+// Method Definition Index: 67286
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Quaternion_op_Multiply_mEBA96CDBA4469E8EC4B71F89965768496E243E3F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12097,7 +12097,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Quaternion_op_Multi
 		return;
 	}
 }
-// Method Definition Index: 67285
+// Method Definition Index: 67287
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Quaternion_op_Multiply_0_mBE466AD64674838A708F390FA1213E5DB1A76746 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12145,7 +12145,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Quaternion_op_Multi
 		return;
 	}
 }
-// Method Definition Index: 67286
+// Method Definition Index: 67288
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Quaternion_op_Equality_m3F7D045485C76470F0CCF5A11C1B024FE5EC02B8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12192,7 +12192,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Quaternion_op_Equal
 		return;
 	}
 }
-// Method Definition Index: 67287
+// Method Definition Index: 67289
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Quaternion_op_Inequality_mDFCA4A5D166E9D931A434C3A72592E3B2C66E226 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12239,7 +12239,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Quaternion_op_Inequ
 		return;
 	}
 }
-// Method Definition Index: 67288
+// Method Definition Index: 67290
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector2_op_Addition_m1E0EF00C07BA8FA39CD76103391161BCD8B785FE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12286,7 +12286,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector2_op_Addition
 		return;
 	}
 }
-// Method Definition Index: 67289
+// Method Definition Index: 67291
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector2_op_Subtraction_mCAECB174AF79942F39671ED67442C9117CBE4635 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12333,7 +12333,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector2_op_Subtract
 		return;
 	}
 }
-// Method Definition Index: 67290
+// Method Definition Index: 67292
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector2_op_Multiply_mCA00101C70DCC7C910EFF4474A7CEBD902BDF9F4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12380,7 +12380,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector2_op_Multiply
 		return;
 	}
 }
-// Method Definition Index: 67291
+// Method Definition Index: 67293
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector2_op_Division_m5C67F360E13DAB873C485BAC7219BFBCF16908A2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12427,7 +12427,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector2_op_Division
 		return;
 	}
 }
-// Method Definition Index: 67292
+// Method Definition Index: 67294
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector2_op_UnaryNegation_m67DDC82CB9F508C8C8BB9F8AC370A9A60B0D5FA4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12462,7 +12462,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector2_op_UnaryNeg
 		return;
 	}
 }
-// Method Definition Index: 67293
+// Method Definition Index: 67295
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector2_op_Multiply_0_m3B38C76B1385BCE5365632F68FD14C9EEA2F1C90 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12508,7 +12508,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector2_op_Multiply
 		return;
 	}
 }
-// Method Definition Index: 67294
+// Method Definition Index: 67296
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector2_op_Multiply_1_m934D4664C4A2A9A1D4079C003B135C68B58C7A20 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12554,7 +12554,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector2_op_Multiply
 		return;
 	}
 }
-// Method Definition Index: 67295
+// Method Definition Index: 67297
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector2_op_Division_0_mD53174761FC827169A0A0D0CD00455FB59752C42 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12600,7 +12600,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector2_op_Division
 		return;
 	}
 }
-// Method Definition Index: 67296
+// Method Definition Index: 67298
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector2_op_Equality_mBFE8AB1EF22A8BBC00A3C89E1C2802EF32F0E796 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12647,7 +12647,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector2_op_Equality
 		return;
 	}
 }
-// Method Definition Index: 67297
+// Method Definition Index: 67299
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector2_op_Inequality_mEE52291548472F0907465AAD44561B41CBA3C84C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12694,7 +12694,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector2_op_Inequali
 		return;
 	}
 }
-// Method Definition Index: 67298
+// Method Definition Index: 67300
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector2_op_Implicit_m38E9AB0E441FAC216947CAD96B0101F5E7F9FF59 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12733,7 +12733,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector2_op_Implicit
 		return;
 	}
 }
-// Method Definition Index: 67299
+// Method Definition Index: 67301
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector2_op_Implicit_0_m9CAB8EC9A7041B67C0C630CF023F5C2BFC6A9218 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12772,7 +12772,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector2_op_Implicit
 		return;
 	}
 }
-// Method Definition Index: 67300
+// Method Definition Index: 67302
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector4_op_Addition_m2248E85D3CBE7170B9372FD05AE7C087140D69B1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12819,7 +12819,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector4_op_Addition
 		return;
 	}
 }
-// Method Definition Index: 67301
+// Method Definition Index: 67303
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector4_op_Subtraction_m325F70E770B8ABA84B641A32C2FD7A392C83A243 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12866,7 +12866,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector4_op_Subtract
 		return;
 	}
 }
-// Method Definition Index: 67302
+// Method Definition Index: 67304
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector4_op_UnaryNegation_mC0CCA57226934EAA475268517A05DD42DE1485D7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12901,7 +12901,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector4_op_UnaryNeg
 		return;
 	}
 }
-// Method Definition Index: 67303
+// Method Definition Index: 67305
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector4_op_Multiply_mCEF267426EACB4F5A1C1F60F10E80F4405D85E5D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12947,7 +12947,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector4_op_Multiply
 		return;
 	}
 }
-// Method Definition Index: 67304
+// Method Definition Index: 67306
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector4_op_Multiply_0_m147187B3656029642214398966E8653E2DA9753D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12993,7 +12993,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector4_op_Multiply
 		return;
 	}
 }
-// Method Definition Index: 67305
+// Method Definition Index: 67307
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector4_op_Division_m09FD720A1A38317CF9224F8A3A56BB495AA7FEA0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13039,7 +13039,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector4_op_Division
 		return;
 	}
 }
-// Method Definition Index: 67306
+// Method Definition Index: 67308
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector4_op_Equality_m3DAC66861A0A47262E0CB46F3643C95114FF08A0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13086,7 +13086,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector4_op_Equality
 		return;
 	}
 }
-// Method Definition Index: 67307
+// Method Definition Index: 67309
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector4_op_Inequality_mFFE5EEAD0233DE1D2AA5BB0223D7AD20477EC72D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13133,7 +13133,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector4_op_Inequali
 		return;
 	}
 }
-// Method Definition Index: 67308
+// Method Definition Index: 67310
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector4_op_Implicit_mCC072A302EFBC9410CA1A8D236E655DA5EE12FE4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13172,7 +13172,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector4_op_Implicit
 		return;
 	}
 }
-// Method Definition Index: 67309
+// Method Definition Index: 67311
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector4_op_Implicit_0_mC4616DFAAB7B304E56A86FD159D6BDE51BD48045 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13211,7 +13211,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector4_op_Implicit
 		return;
 	}
 }
-// Method Definition Index: 67310
+// Method Definition Index: 67312
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector4_op_Implicit_1_m4495EC6BC464661B6B7818D2579C1AC3532453CA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13250,7 +13250,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Vector4_op_Implicit
 		return;
 	}
 }
-// Method Definition Index: 67311
+// Method Definition Index: 67313
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Behaviour_op_Implicit_m990D1BB8DD65A73B6D4EFF626397F6BD35740199 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13287,7 +13287,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Behaviour_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 67312
+// Method Definition Index: 67314
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Behaviour_op_Equality_m3E3C13254ADD502AD6BA935A56415405164B4206 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13329,7 +13329,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Behaviour_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 67313
+// Method Definition Index: 67315
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Behaviour_op_Inequality_m3736A8132F0530A8EB461F10FBEC8EAF0619A2FC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13371,7 +13371,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Behaviour_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 67314
+// Method Definition Index: 67316
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Component_op_Implicit_mA55092D75794920E1C03A5E3514DD6E2F06EED52 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13408,7 +13408,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Component_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 67315
+// Method Definition Index: 67317
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Component_op_Equality_m89701516A6D53D6041B4E82973A158113AA082BA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13450,7 +13450,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Component_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 67316
+// Method Definition Index: 67318
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Component_op_Inequality_m25D33FBD4D43FD81F6146FC10BED1E5C26E1BA30 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13492,7 +13492,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Component_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 67317
+// Method Definition Index: 67319
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_GameObject_op_Implicit_m89B72B24CA2B2F71A57F43BFAD2DF02CD6428405 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13529,7 +13529,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_GameObject_op_Impli
 		return;
 	}
 }
-// Method Definition Index: 67318
+// Method Definition Index: 67320
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_GameObject_op_Equality_m645D1E1BA3248E09C6FCA515476607CA7CFA5D56 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13571,7 +13571,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_GameObject_op_Equal
 		return;
 	}
 }
-// Method Definition Index: 67319
+// Method Definition Index: 67321
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_GameObject_op_Inequality_m4320EB19A5735FFF83B83EE6DE1FAD6DD4C6F72E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13613,7 +13613,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_GameObject_op_Inequ
 		return;
 	}
 }
-// Method Definition Index: 67320
+// Method Definition Index: 67322
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LayerMask_op_Implicit_m662553FD5681CF5D51D01FFADE5C0ED4DAA09B66 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13652,7 +13652,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LayerMask_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 67321
+// Method Definition Index: 67323
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LayerMask_op_Implicit_0_m9E886ED4623F592E9E01655103D43B0ECB7A875A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13689,7 +13689,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LayerMask_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 67322
+// Method Definition Index: 67324
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_MonoBehaviour_op_Implicit_mD790C2E90AA7D7EB4B0DCD05538E7CE095368C1F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13726,7 +13726,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_MonoBehaviour_op_Im
 		return;
 	}
 }
-// Method Definition Index: 67323
+// Method Definition Index: 67325
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_MonoBehaviour_op_Equality_m557A358D3AC744DE7D39CAD2B13743B52FC4B5C1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13768,7 +13768,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_MonoBehaviour_op_Eq
 		return;
 	}
 }
-// Method Definition Index: 67324
+// Method Definition Index: 67326
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_MonoBehaviour_op_Inequality_m9A9E1A9B6CE09F5F2F9B77FBECC22C8A5EBE48C3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13810,7 +13810,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_MonoBehaviour_op_In
 		return;
 	}
 }
-// Method Definition Index: 67325
+// Method Definition Index: 67327
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ScriptableObject_op_Implicit_mD5FDF435971BA886DA61EBBD115D0F41DE1D34DD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13847,7 +13847,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ScriptableObject_op
 		return;
 	}
 }
-// Method Definition Index: 67326
+// Method Definition Index: 67328
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ScriptableObject_op_Equality_m7A99113FC6FE34FCADD424ABB925228E82D54BD8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13889,7 +13889,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ScriptableObject_op
 		return;
 	}
 }
-// Method Definition Index: 67327
+// Method Definition Index: 67329
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ScriptableObject_op_Inequality_m40F6665A607E11F55EB7393F6DD085FFCC9B0C27 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13931,7 +13931,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ScriptableObject_op
 		return;
 	}
 }
-// Method Definition Index: 67328
+// Method Definition Index: 67330
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TextAsset_op_Implicit_mFAFB0B4A78DA501A9EE3F4ADAC8B9CEDDBE9AE1C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13968,7 +13968,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TextAsset_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 67329
+// Method Definition Index: 67331
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TextAsset_op_Equality_mC6BC6676FF39751F89D973FC66A2C1081BF45331 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14010,7 +14010,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TextAsset_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 67330
+// Method Definition Index: 67332
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TextAsset_op_Inequality_mA0B92ECA8D57ACAF4E2DF781CC51BD08826D8E28 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14052,7 +14052,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TextAsset_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 67331
+// Method Definition Index: 67333
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Object_op_Implicit_m2220EBE0F0FA45532B44216938E84D26E66D08B7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14089,7 +14089,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Object_op_Implicit_
 		return;
 	}
 }
-// Method Definition Index: 67332
+// Method Definition Index: 67334
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Object_op_Equality_m4AE2742CEE448D4A17986515122627562FBEFB00 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14131,7 +14131,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Object_op_Equality_
 		return;
 	}
 }
-// Method Definition Index: 67333
+// Method Definition Index: 67335
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Object_op_Inequality_mAC30390A47FD84289318989B46502124A3FBC209 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14173,7 +14173,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Object_op_Inequalit
 		return;
 	}
 }
-// Method Definition Index: 67334
+// Method Definition Index: 67336
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ComputeShader_op_Implicit_mB8D49723C9992269A74F68DF68EFEC03C26628AA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14210,7 +14210,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ComputeShader_op_Im
 		return;
 	}
 }
-// Method Definition Index: 67335
+// Method Definition Index: 67337
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ComputeShader_op_Equality_mBB347A6E47C5EBD4063416FF93D56B132018CA79 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14252,7 +14252,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ComputeShader_op_Eq
 		return;
 	}
 }
-// Method Definition Index: 67336
+// Method Definition Index: 67338
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ComputeShader_op_Inequality_m8A5A88313DDBE3886EB336E05CA1227EAD51D84B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14294,7 +14294,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ComputeShader_op_In
 		return;
 	}
 }
-// Method Definition Index: 67337
+// Method Definition Index: 67339
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ShaderVariantCollection_op_Implicit_m9945C77B10ADD970094E17BE1E79667B33F15F1D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14331,7 +14331,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ShaderVariantCollec
 		return;
 	}
 }
-// Method Definition Index: 67338
+// Method Definition Index: 67340
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ShaderVariantCollection_op_Equality_m28AD27113D3439B684435F9591D8D0302ED55C56 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14373,7 +14373,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ShaderVariantCollec
 		return;
 	}
 }
-// Method Definition Index: 67339
+// Method Definition Index: 67341
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ShaderVariantCollection_op_Inequality_m2E5F5D3EF1AA3FFC97527A408267C84BDB94F600 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14415,7 +14415,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ShaderVariantCollec
 		return;
 	}
 }
-// Method Definition Index: 67340
+// Method Definition Index: 67342
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RectTransform_op_Implicit_mE471A510E38FDC7E47C2E13EC0CDA0D545D23309 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14452,7 +14452,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RectTransform_op_Im
 		return;
 	}
 }
-// Method Definition Index: 67341
+// Method Definition Index: 67343
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RectTransform_op_Equality_m1CC7C02108FA894051407056C3BB0A78AAAF4B57 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14494,7 +14494,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RectTransform_op_Eq
 		return;
 	}
 }
-// Method Definition Index: 67342
+// Method Definition Index: 67344
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RectTransform_op_Inequality_m1D3E163986F2D6443E623D4EFE6C3FA56701893A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14536,7 +14536,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RectTransform_op_In
 		return;
 	}
 }
-// Method Definition Index: 67343
+// Method Definition Index: 67345
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Transform_op_Implicit_m844E6CD199360D0AD72AB4A659559410B5C146E4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14573,7 +14573,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Transform_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 67344
+// Method Definition Index: 67346
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Transform_op_Equality_mB8830A83E73F1BDE052F829C6EFDD9D57A245D15 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14615,7 +14615,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Transform_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 67345
+// Method Definition Index: 67347
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Transform_op_Inequality_m6613527FE297C16EB83E4D24039E7BCD28B0FB64 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14657,7 +14657,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Transform_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 67346
+// Method Definition Index: 67348
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SceneManagement_Scene_op_Equality_mA82729A564071DEC551999FB8411EC941B75E77D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14704,7 +14704,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SceneManagement_Sce
 		return;
 	}
 }
-// Method Definition Index: 67347
+// Method Definition Index: 67349
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SceneManagement_Scene_op_Inequality_m6A6D61962610639F291CF905972A0871C0B571C3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14751,7 +14751,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SceneManagement_Sce
 		return;
 	}
 }
-// Method Definition Index: 67348
+// Method Definition Index: 67350
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Networking_PlayerConnection_PlayerConnection_op_Implicit_m7EA8E0849D6BC73F30C625D2630FE0712760212A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14788,7 +14788,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Networking_PlayerCo
 		return;
 	}
 }
-// Method Definition Index: 67349
+// Method Definition Index: 67351
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Networking_PlayerConnection_PlayerConnection_op_Equality_m3D9161A8F220FBC06FE39D69F310B32707F9C9F0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14830,7 +14830,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Networking_PlayerCo
 		return;
 	}
 }
-// Method Definition Index: 67350
+// Method Definition Index: 67352
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Networking_PlayerConnection_PlayerConnection_op_Inequality_m610B8868BE9E2C0C83AD36487BFA7E558FC2C401 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14872,7 +14872,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Networking_PlayerCo
 		return;
 	}
 }
-// Method Definition Index: 67351
+// Method Definition Index: 67353
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rendering_SortingGroup_op_Implicit_m1C2CE02A961D389673F88AB32F2928BBCD7C887F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14909,7 +14909,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rendering_SortingGr
 		return;
 	}
 }
-// Method Definition Index: 67352
+// Method Definition Index: 67354
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rendering_SortingGroup_op_Equality_m03BED96FEACD010FF5667BCC4AABD3DC48B76DA3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14951,7 +14951,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rendering_SortingGr
 		return;
 	}
 }
-// Method Definition Index: 67353
+// Method Definition Index: 67355
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rendering_SortingGroup_op_Inequality_m2261EEF2680D0C930F22C899E9CA4119638DF48B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14993,7 +14993,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rendering_SortingGr
 		return;
 	}
 }
-// Method Definition Index: 67354
+// Method Definition Index: 67356
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rendering_GraphicsSettings_op_Implicit_mF8260B8984DB33A5A75B6483E06CBE97AA2EB282 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15030,7 +15030,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rendering_GraphicsS
 		return;
 	}
 }
-// Method Definition Index: 67355
+// Method Definition Index: 67357
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rendering_GraphicsSettings_op_Equality_m5CD4B83A0ACEBCEE9346486062BF503F26E772B9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15072,7 +15072,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rendering_GraphicsS
 		return;
 	}
 }
-// Method Definition Index: 67356
+// Method Definition Index: 67358
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rendering_GraphicsSettings_op_Inequality_mACD24932D6C60A5322544F61909C04086DED304B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15114,7 +15114,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rendering_GraphicsS
 		return;
 	}
 }
-// Method Definition Index: 67357
+// Method Definition Index: 67359
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rendering_RayTracingShader_op_Implicit_m4BE42E7B238EF75CF3E93B8D7B6C1771E58C57C7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15151,7 +15151,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rendering_RayTracin
 		return;
 	}
 }
-// Method Definition Index: 67358
+// Method Definition Index: 67360
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rendering_RayTracingShader_op_Equality_mEB191A86B21A08308AB354275A4D13FFA46A363A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15193,7 +15193,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rendering_RayTracin
 		return;
 	}
 }
-// Method Definition Index: 67359
+// Method Definition Index: 67361
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rendering_RayTracingShader_op_Inequality_mCD5965D6A8C7196A1BE22BB9B304C566E8AD515A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15235,7 +15235,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rendering_RayTracin
 		return;
 	}
 }
-// Method Definition Index: 67360
+// Method Definition Index: 67362
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Experimental_Rendering_GraphicsStateCollection_op_Implicit_mCDD383E53AEC09BF07332A0F42CB7EAAC8BDFDD2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15272,7 +15272,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Experimental_Render
 		return;
 	}
 }
-// Method Definition Index: 67361
+// Method Definition Index: 67363
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Experimental_Rendering_GraphicsStateCollection_op_Equality_m2CC0CF078EB1FD9854A5A516698DF414D970AE1E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15314,7 +15314,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Experimental_Render
 		return;
 	}
 }
-// Method Definition Index: 67362
+// Method Definition Index: 67364
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Experimental_Rendering_GraphicsStateCollection_op_Inequality_m64CFE15B05E16F79F2B6F35D8B840C6CAF2505D3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15356,7 +15356,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Experimental_Render
 		return;
 	}
 }
-// Method Definition Index: 67363
+// Method Definition Index: 67365
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_U2D_SpriteAtlas_op_Implicit_m9713F2093B31436B5B996D1A566D9175627484CB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15393,7 +15393,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_U2D_SpriteAtlas_op_
 		return;
 	}
 }
-// Method Definition Index: 67364
+// Method Definition Index: 67366
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_U2D_SpriteAtlas_op_Equality_m5B19A3AD011936B411A91D7B6C6937EC50D6C671 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15435,7 +15435,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_U2D_SpriteAtlas_op_
 		return;
 	}
 }
-// Method Definition Index: 67365
+// Method Definition Index: 67367
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_U2D_SpriteAtlas_op_Inequality_mE5449052005438AACA09A73FA813944523524A38 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15477,7 +15477,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_U2D_SpriteAtlas_op_
 		return;
 	}
 }
-// Method Definition Index: 67366
+// Method Definition Index: 67368
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Playables_PlayableDirector_op_Implicit_m7174D32F8DEF27EAE7C78C1F99E6875286D2817F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15514,7 +15514,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Playables_PlayableD
 		return;
 	}
 }
-// Method Definition Index: 67367
+// Method Definition Index: 67369
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Playables_PlayableDirector_op_Equality_m76F4635425334529EB33669B776E0ED90ADDEA22 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15556,7 +15556,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Playables_PlayableD
 		return;
 	}
 }
-// Method Definition Index: 67368
+// Method Definition Index: 67370
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Playables_PlayableDirector_op_Inequality_m4A33FF171E77425D4BFD0494EF70BDA361893F36 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15598,7 +15598,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Playables_PlayableD
 		return;
 	}
 }
-// Method Definition Index: 67369
+// Method Definition Index: 67371
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_GUISkin_op_Implicit_m5393B63824B7746414061AD9F717C310ADA6394E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15635,7 +15635,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_GUISkin_op_Implicit
 		return;
 	}
 }
-// Method Definition Index: 67370
+// Method Definition Index: 67372
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_GUISkin_op_Equality_m739FF4E20F0A6D7686B6F2DE53C81FD1F472954C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15677,7 +15677,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_GUISkin_op_Equality
 		return;
 	}
 }
-// Method Definition Index: 67371
+// Method Definition Index: 67373
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_GUISkin_op_Inequality_m7C570429EAD0134EC059C6F3D326B129DFF6C879 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15719,7 +15719,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_GUISkin_op_Inequali
 		return;
 	}
 }
-// Method Definition Index: 67372
+// Method Definition Index: 67374
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ParticleSystem_op_Implicit_m7E1B68C8C2874552076E080500A2242FA503BD8A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15756,7 +15756,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ParticleSystem_op_I
 		return;
 	}
 }
-// Method Definition Index: 67373
+// Method Definition Index: 67375
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ParticleSystem_op_Equality_m2D068E2DD7E4E51EC2A7F7CF993C5EC23D5D1CE1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15798,7 +15798,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ParticleSystem_op_E
 		return;
 	}
 }
-// Method Definition Index: 67374
+// Method Definition Index: 67376
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ParticleSystem_op_Inequality_mA342139BFE67366EF8223884CB1EE695A8B9C597 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15840,7 +15840,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ParticleSystem_op_I
 		return;
 	}
 }
-// Method Definition Index: 67375
+// Method Definition Index: 67377
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ParticleSystemRenderer_op_Implicit_m18A5AD42E779D058C1D4B8B2F5FCF88291F5C246 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15877,7 +15877,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ParticleSystemRende
 		return;
 	}
 }
-// Method Definition Index: 67376
+// Method Definition Index: 67378
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ParticleSystemRenderer_op_Equality_mC640B5191BE03EBDAFA514145ADC624B45734F71 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15919,7 +15919,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ParticleSystemRende
 		return;
 	}
 }
-// Method Definition Index: 67377
+// Method Definition Index: 67379
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ParticleSystemRenderer_op_Inequality_mAD1CD1E2CBE19C8E0DA7BF4D3A485A379708BA09 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15961,7 +15961,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ParticleSystemRende
 		return;
 	}
 }
-// Method Definition Index: 67378
+// Method Definition Index: 67380
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ParticleSystemForceField_op_Implicit_m95896382AF3EBD895C9B8890D0E071D68D8551E5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15998,7 +15998,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ParticleSystemForce
 		return;
 	}
 }
-// Method Definition Index: 67379
+// Method Definition Index: 67381
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ParticleSystemForceField_op_Equality_m822877A1A94F8F16B4F7B70D741CF8B57AFB8B0F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16040,7 +16040,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ParticleSystemForce
 		return;
 	}
 }
-// Method Definition Index: 67380
+// Method Definition Index: 67382
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ParticleSystemForceField_op_Inequality_mC5A158846D96F5E70D907516BBBEDDB965D2C08A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16082,7 +16082,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ParticleSystemForce
 		return;
 	}
 }
-// Method Definition Index: 67381
+// Method Definition Index: 67383
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ArticulationBody_op_Implicit_m93A56B49BE6E5D0726DF67F30E3BABA78BA8A6D6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16119,7 +16119,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ArticulationBody_op
 		return;
 	}
 }
-// Method Definition Index: 67382
+// Method Definition Index: 67384
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ArticulationBody_op_Equality_mFF325E22F8B167A30A6C57C2DB6CCF6ADB16B43F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16161,7 +16161,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ArticulationBody_op
 		return;
 	}
 }
-// Method Definition Index: 67383
+// Method Definition Index: 67385
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ArticulationBody_op_Inequality_mCF9B944DEA6FFD3EE272E9E5E13CB20D14EAB595 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16203,7 +16203,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ArticulationBody_op
 		return;
 	}
 }
-// Method Definition Index: 67384
+// Method Definition Index: 67386
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BoxCollider_op_Implicit_mE5ABFFD8F6BEE2AD6D0DD502D401455CE760993C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16240,7 +16240,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BoxCollider_op_Impl
 		return;
 	}
 }
-// Method Definition Index: 67385
+// Method Definition Index: 67387
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BoxCollider_op_Equality_m381594842788FE7946D234C27C534ACB30EC51BB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16282,7 +16282,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BoxCollider_op_Equa
 		return;
 	}
 }
-// Method Definition Index: 67386
+// Method Definition Index: 67388
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BoxCollider_op_Inequality_m3AB415CB457E0FCEC11C623C5A28D3E1C954D639 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16324,7 +16324,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BoxCollider_op_Ineq
 		return;
 	}
 }
-// Method Definition Index: 67387
+// Method Definition Index: 67389
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CapsuleCollider_op_Implicit_m6492B3B9BC433E2380CA71BD6BDA0542BEF8D7EE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16361,7 +16361,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CapsuleCollider_op_
 		return;
 	}
 }
-// Method Definition Index: 67388
+// Method Definition Index: 67390
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CapsuleCollider_op_Equality_m0D194B3E78CD19D8D0DD70857716074424FF829D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16403,7 +16403,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CapsuleCollider_op_
 		return;
 	}
 }
-// Method Definition Index: 67389
+// Method Definition Index: 67391
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CapsuleCollider_op_Inequality_m5D6722154DAB726634FBABA32E70CF22474933C9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16445,7 +16445,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CapsuleCollider_op_
 		return;
 	}
 }
-// Method Definition Index: 67390
+// Method Definition Index: 67392
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CharacterController_op_Implicit_m63A86EF0E56C47B24DBC05D4C55CB698EA4185EF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16482,7 +16482,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CharacterController
 		return;
 	}
 }
-// Method Definition Index: 67391
+// Method Definition Index: 67393
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CharacterController_op_Equality_m47DA47618553658ADCFFC49A2B67F73F15742804 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16524,7 +16524,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CharacterController
 		return;
 	}
 }
-// Method Definition Index: 67392
+// Method Definition Index: 67394
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CharacterController_op_Inequality_mE7005179DE671AEB4EAA916F073E10AFC021E241 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16566,7 +16566,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CharacterController
 		return;
 	}
 }
-// Method Definition Index: 67393
+// Method Definition Index: 67395
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CharacterJoint_op_Implicit_m4F3152C1A398622E06023DDB28B935A48CF07B58 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16603,7 +16603,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CharacterJoint_op_I
 		return;
 	}
 }
-// Method Definition Index: 67394
+// Method Definition Index: 67396
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CharacterJoint_op_Equality_mED622230052B02185E14791783A3A44DCBC3799C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16645,7 +16645,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CharacterJoint_op_E
 		return;
 	}
 }
-// Method Definition Index: 67395
+// Method Definition Index: 67397
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CharacterJoint_op_Inequality_m95D3090D8637ADF023C218AB0F51EBDC009241B2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16687,7 +16687,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CharacterJoint_op_I
 		return;
 	}
 }
-// Method Definition Index: 67396
+// Method Definition Index: 67398
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Collider_op_Implicit_m43FE5F32196DB51D31FCD068F7D152B14F6D24E3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16724,7 +16724,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Collider_op_Implici
 		return;
 	}
 }
-// Method Definition Index: 67397
+// Method Definition Index: 67399
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Collider_op_Equality_mC89E03511E1A36A54CAFFDDCF1EECED469BDCBD1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16766,7 +16766,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Collider_op_Equalit
 		return;
 	}
 }
-// Method Definition Index: 67398
+// Method Definition Index: 67400
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Collider_op_Inequality_mD2D3C4BB1E1AE930F5A3144A017975EA0FC8F9F9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16808,7 +16808,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Collider_op_Inequal
 		return;
 	}
 }
-// Method Definition Index: 67399
+// Method Definition Index: 67401
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ConfigurableJoint_op_Implicit_mA2A34438B7AA756DC5B043F85334DAA6CFA87486 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16845,7 +16845,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ConfigurableJoint_o
 		return;
 	}
 }
-// Method Definition Index: 67400
+// Method Definition Index: 67402
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ConfigurableJoint_op_Equality_mD573DBFEF1171CC4C5946B651D3358A7D536C382 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16887,7 +16887,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ConfigurableJoint_o
 		return;
 	}
 }
-// Method Definition Index: 67401
+// Method Definition Index: 67403
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ConfigurableJoint_op_Inequality_mA9A682B0917182B048F9ECF145CF0C8BF30B5D10 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16929,7 +16929,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ConfigurableJoint_o
 		return;
 	}
 }
-// Method Definition Index: 67402
+// Method Definition Index: 67404
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ConstantForce_op_Implicit_m1B617DD43F1CD02078021964EF384ACEDCB118EB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16966,7 +16966,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ConstantForce_op_Im
 		return;
 	}
 }
-// Method Definition Index: 67403
+// Method Definition Index: 67405
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ConstantForce_op_Equality_m5064278AA9469C46315C4B8AD641B202B879F091 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17008,7 +17008,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ConstantForce_op_Eq
 		return;
 	}
 }
-// Method Definition Index: 67404
+// Method Definition Index: 67406
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ConstantForce_op_Inequality_mC39F285CB91D5BAFF35B572EB6C63F1218D2DDB1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17050,7 +17050,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ConstantForce_op_In
 		return;
 	}
 }
-// Method Definition Index: 67405
+// Method Definition Index: 67407
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_FixedJoint_op_Implicit_m5E6554E0CCDB32AD77609E1DE6A83B7421DA18B8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17087,7 +17087,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_FixedJoint_op_Impli
 		return;
 	}
 }
-// Method Definition Index: 67406
+// Method Definition Index: 67408
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_FixedJoint_op_Equality_mBE1E03C025EDD229B98A024B2DE06EB482720494 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17129,7 +17129,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_FixedJoint_op_Equal
 		return;
 	}
 }
-// Method Definition Index: 67407
+// Method Definition Index: 67409
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_FixedJoint_op_Inequality_m381129C8F599DFAAF85A20B57881FDC1E05310B1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17171,7 +17171,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_FixedJoint_op_Inequ
 		return;
 	}
 }
-// Method Definition Index: 67408
+// Method Definition Index: 67410
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_HingeJoint_op_Implicit_mF6B73B229316EB317AE8CD5E4B05A4D40E2877CE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17208,7 +17208,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_HingeJoint_op_Impli
 		return;
 	}
 }
-// Method Definition Index: 67409
+// Method Definition Index: 67411
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_HingeJoint_op_Equality_mF4469FEC6C938340764E2F4192FF965D19784E1B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17250,7 +17250,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_HingeJoint_op_Equal
 		return;
 	}
 }
-// Method Definition Index: 67410
+// Method Definition Index: 67412
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_HingeJoint_op_Inequality_mAFC7B56AD322BCB0DFE1B4CD53E8780A4C353BE8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17292,7 +17292,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_HingeJoint_op_Inequ
 		return;
 	}
 }
-// Method Definition Index: 67411
+// Method Definition Index: 67413
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Joint_op_Implicit_m6F4252CDBC15E0D62F40A909805663A099000265 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17329,7 +17329,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Joint_op_Implicit_m
 		return;
 	}
 }
-// Method Definition Index: 67412
+// Method Definition Index: 67414
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Joint_op_Equality_mFE3C2A882AD324F98CAD9D1C19D5F784759E6548 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17371,7 +17371,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Joint_op_Equality_m
 		return;
 	}
 }
-// Method Definition Index: 67413
+// Method Definition Index: 67415
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Joint_op_Inequality_m2702D380FA6C9B36D404A80456B5CF8C53CC232C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17413,7 +17413,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Joint_op_Inequality
 		return;
 	}
 }
-// Method Definition Index: 67414
+// Method Definition Index: 67416
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_MeshCollider_op_Implicit_m0FD36477991CFEC67EB0BF31140874AFB7761BA4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17450,7 +17450,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_MeshCollider_op_Imp
 		return;
 	}
 }
-// Method Definition Index: 67415
+// Method Definition Index: 67417
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_MeshCollider_op_Equality_m6DF5C2B921564525957B7CE995B89DE10588F029 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17492,7 +17492,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_MeshCollider_op_Equ
 		return;
 	}
 }
-// Method Definition Index: 67416
+// Method Definition Index: 67418
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_MeshCollider_op_Inequality_m4FE6157F3EEC3F51B79E2640ED0D386B79747A4E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17534,7 +17534,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_MeshCollider_op_Ine
 		return;
 	}
 }
-// Method Definition Index: 67417
+// Method Definition Index: 67419
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PhysicsMaterial_op_Implicit_mB54470A4F1B3127CEDEEAB51B634655309075012 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17571,7 +17571,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PhysicsMaterial_op_
 		return;
 	}
 }
-// Method Definition Index: 67418
+// Method Definition Index: 67420
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PhysicsMaterial_op_Equality_m4FC54E721059A826802A9EC38D7452B09C56BB4F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17613,7 +17613,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PhysicsMaterial_op_
 		return;
 	}
 }
-// Method Definition Index: 67419
+// Method Definition Index: 67421
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PhysicsMaterial_op_Inequality_mFABB468A13BFF0F49EEE4C47F0615DF73E1FDB57 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17655,7 +17655,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PhysicsMaterial_op_
 		return;
 	}
 }
-// Method Definition Index: 67420
+// Method Definition Index: 67422
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rigidbody_op_Implicit_m5327177494D52BF8A60580044BB4391FCA53C49F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17692,7 +17692,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rigidbody_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 67421
+// Method Definition Index: 67423
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rigidbody_op_Equality_m4B6DAAEBED618B88C7F2F443B49B3D2701FA06E0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17734,7 +17734,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rigidbody_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 67422
+// Method Definition Index: 67424
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rigidbody_op_Inequality_m60BE04376E2395B3DAA0CC771488C67FD2EB250A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17776,7 +17776,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rigidbody_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 67423
+// Method Definition Index: 67425
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SphereCollider_op_Implicit_mF49AA21F568C332946A87C6D0DCFD6C50DD9CC3A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17813,7 +17813,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SphereCollider_op_I
 		return;
 	}
 }
-// Method Definition Index: 67424
+// Method Definition Index: 67426
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SphereCollider_op_Equality_mF6EDCBF44D0C5D6E2DBBF60126C68D367645E2FA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17855,7 +17855,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SphereCollider_op_E
 		return;
 	}
 }
-// Method Definition Index: 67425
+// Method Definition Index: 67427
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SphereCollider_op_Inequality_m9A25641A9F1C1CE255C6CBB55350D119DEEBC4FE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17897,7 +17897,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SphereCollider_op_I
 		return;
 	}
 }
-// Method Definition Index: 67426
+// Method Definition Index: 67428
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpringJoint_op_Implicit_m0F9319152CC9457AC638B790DA966429D8A71BDC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17934,7 +17934,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpringJoint_op_Impl
 		return;
 	}
 }
-// Method Definition Index: 67427
+// Method Definition Index: 67429
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpringJoint_op_Equality_m6A9B4352B0BFD2191E50068555CDBA44795BC227 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17976,7 +17976,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpringJoint_op_Equa
 		return;
 	}
 }
-// Method Definition Index: 67428
+// Method Definition Index: 67430
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpringJoint_op_Inequality_m4A1C379EC6793443347BEBDF5B9ABAD623C7348A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18018,7 +18018,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpringJoint_op_Ineq
 		return;
 	}
 }
-// Method Definition Index: 67429
+// Method Definition Index: 67431
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RaycastHit2D_op_Implicit_m610A55C0ACD0F54F52765994E72E5A952AD8A6D8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18057,7 +18057,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RaycastHit2D_op_Imp
 		return;
 	}
 }
-// Method Definition Index: 67430
+// Method Definition Index: 67432
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rigidbody2D_op_Implicit_m73DD1BA43A69F39B971A0CD7FBB9762D6BF7D5B8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18094,7 +18094,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rigidbody2D_op_Impl
 		return;
 	}
 }
-// Method Definition Index: 67431
+// Method Definition Index: 67433
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rigidbody2D_op_Equality_mC5D81214D254D58A2DC8FB1808D380CF03B3F49F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18136,7 +18136,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rigidbody2D_op_Equa
 		return;
 	}
 }
-// Method Definition Index: 67432
+// Method Definition Index: 67434
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rigidbody2D_op_Inequality_m94D961433E4E1784A2CC116A13EF19EBFDEDF1F6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18178,7 +18178,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Rigidbody2D_op_Ineq
 		return;
 	}
 }
-// Method Definition Index: 67433
+// Method Definition Index: 67435
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Collider2D_op_Implicit_mCDB6C39534C37F041655298D441C0655040EBAD4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18215,7 +18215,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Collider2D_op_Impli
 		return;
 	}
 }
-// Method Definition Index: 67434
+// Method Definition Index: 67436
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Collider2D_op_Equality_m615AFD09EAEB3B6897A76386545A90802692C3A4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18257,7 +18257,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Collider2D_op_Equal
 		return;
 	}
 }
-// Method Definition Index: 67435
+// Method Definition Index: 67437
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Collider2D_op_Inequality_mE46454401784C30E4F0F1A2B08557F8447187B9A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18299,7 +18299,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Collider2D_op_Inequ
 		return;
 	}
 }
-// Method Definition Index: 67436
+// Method Definition Index: 67438
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CustomCollider2D_op_Implicit_m0B5282FF5B5956355C583589F362392D3EB95F61 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18336,7 +18336,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CustomCollider2D_op
 		return;
 	}
 }
-// Method Definition Index: 67437
+// Method Definition Index: 67439
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CustomCollider2D_op_Equality_m4E5DD6577C223B503D76FA48E6D81874A81C6468 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18378,7 +18378,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CustomCollider2D_op
 		return;
 	}
 }
-// Method Definition Index: 67438
+// Method Definition Index: 67440
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CustomCollider2D_op_Inequality_m2FAB277E07E271A8D3E2705F39CF790988ECCCD1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18420,7 +18420,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CustomCollider2D_op
 		return;
 	}
 }
-// Method Definition Index: 67439
+// Method Definition Index: 67441
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CircleCollider2D_op_Implicit_m56D60B7BA170B01EFCAB037EF605D0290F28B866 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18457,7 +18457,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CircleCollider2D_op
 		return;
 	}
 }
-// Method Definition Index: 67440
+// Method Definition Index: 67442
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CircleCollider2D_op_Equality_m0AB93BC814234293CF5909FEF04F84E6D544CBF7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18499,7 +18499,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CircleCollider2D_op
 		return;
 	}
 }
-// Method Definition Index: 67441
+// Method Definition Index: 67443
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CircleCollider2D_op_Inequality_m5456CF3D29B3543106225BA3C6104E612251588C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18541,7 +18541,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CircleCollider2D_op
 		return;
 	}
 }
-// Method Definition Index: 67442
+// Method Definition Index: 67444
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CapsuleCollider2D_op_Implicit_mE636AD5B9C4215CF54DF20F5F80D8E305C68540B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18578,7 +18578,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CapsuleCollider2D_o
 		return;
 	}
 }
-// Method Definition Index: 67443
+// Method Definition Index: 67445
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CapsuleCollider2D_op_Equality_m8E2A2798FF0066EED1B2ABCAEBEE9AD0B7960420 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18620,7 +18620,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CapsuleCollider2D_o
 		return;
 	}
 }
-// Method Definition Index: 67444
+// Method Definition Index: 67446
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CapsuleCollider2D_op_Inequality_m70D7149631CD4E608F9C75788E6C8A59906C61E4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18662,7 +18662,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CapsuleCollider2D_o
 		return;
 	}
 }
-// Method Definition Index: 67445
+// Method Definition Index: 67447
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EdgeCollider2D_op_Implicit_m785EFA4474D5C1243B5EB2121D618A812DD3240E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18699,7 +18699,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EdgeCollider2D_op_I
 		return;
 	}
 }
-// Method Definition Index: 67446
+// Method Definition Index: 67448
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EdgeCollider2D_op_Equality_m4A515D7173C1E2C314D98E967F782D14579108E0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18741,7 +18741,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EdgeCollider2D_op_E
 		return;
 	}
 }
-// Method Definition Index: 67447
+// Method Definition Index: 67449
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EdgeCollider2D_op_Inequality_m295A4FFF697547B775FC9D4E0EEFF683BE104209 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18783,7 +18783,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EdgeCollider2D_op_I
 		return;
 	}
 }
-// Method Definition Index: 67448
+// Method Definition Index: 67450
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BoxCollider2D_op_Implicit_mFB10B6D9C7119EC2191816E06C7DA175E2873895 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18820,7 +18820,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BoxCollider2D_op_Im
 		return;
 	}
 }
-// Method Definition Index: 67449
+// Method Definition Index: 67451
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BoxCollider2D_op_Equality_mCF0AEE1108D2CFCA18B23187CFDD9F1582ECE9BB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18862,7 +18862,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BoxCollider2D_op_Eq
 		return;
 	}
 }
-// Method Definition Index: 67450
+// Method Definition Index: 67452
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BoxCollider2D_op_Inequality_m5C7D6103DF6A28F58B9A03DD4539CEB31887ECA1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18904,7 +18904,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BoxCollider2D_op_In
 		return;
 	}
 }
-// Method Definition Index: 67451
+// Method Definition Index: 67453
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PolygonCollider2D_op_Implicit_m49A57969C668CB1073FB05A83C63D6E989AF8239 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18941,7 +18941,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PolygonCollider2D_o
 		return;
 	}
 }
-// Method Definition Index: 67452
+// Method Definition Index: 67454
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PolygonCollider2D_op_Equality_m5DE88941A06980812F97CC5150B46DD09DAE1171 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18983,7 +18983,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PolygonCollider2D_o
 		return;
 	}
 }
-// Method Definition Index: 67453
+// Method Definition Index: 67455
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PolygonCollider2D_op_Inequality_m366FA276F2C2CCC2E4DFE8C122EA16A8180A9075 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19025,7 +19025,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PolygonCollider2D_o
 		return;
 	}
 }
-// Method Definition Index: 67454
+// Method Definition Index: 67456
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CompositeCollider2D_op_Implicit_m2632348CD4694550575F3D121FEC0CD8B7D0984F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19062,7 +19062,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CompositeCollider2D
 		return;
 	}
 }
-// Method Definition Index: 67455
+// Method Definition Index: 67457
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CompositeCollider2D_op_Equality_m7E0E0AF28BD95B0BE7814C96E1C8F5CC38EAA88F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19104,7 +19104,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CompositeCollider2D
 		return;
 	}
 }
-// Method Definition Index: 67456
+// Method Definition Index: 67458
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CompositeCollider2D_op_Inequality_m8FA7627D116F5D97EB85521F7777F8E767A337D1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19146,7 +19146,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CompositeCollider2D
 		return;
 	}
 }
-// Method Definition Index: 67457
+// Method Definition Index: 67459
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Joint2D_op_Implicit_m1644D409D41E94C3587EF1CAE2804E5F2B0103A2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19183,7 +19183,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Joint2D_op_Implicit
 		return;
 	}
 }
-// Method Definition Index: 67458
+// Method Definition Index: 67460
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Joint2D_op_Equality_m8BC185F2AA68185490A22DA797A1EE991CA32673 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19225,7 +19225,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Joint2D_op_Equality
 		return;
 	}
 }
-// Method Definition Index: 67459
+// Method Definition Index: 67461
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Joint2D_op_Inequality_mBD306ED85E07535409516D50DCCDECDCA849BBD1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19267,7 +19267,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Joint2D_op_Inequali
 		return;
 	}
 }
-// Method Definition Index: 67460
+// Method Definition Index: 67462
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AnchoredJoint2D_op_Implicit_m9CA7A658C68FC323EF641539D5CCB8B5AEFA16D2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19304,7 +19304,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AnchoredJoint2D_op_
 		return;
 	}
 }
-// Method Definition Index: 67461
+// Method Definition Index: 67463
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AnchoredJoint2D_op_Equality_mEE8948CE70C97E3F17D7E3EC870850F090D3F2CC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19346,7 +19346,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AnchoredJoint2D_op_
 		return;
 	}
 }
-// Method Definition Index: 67462
+// Method Definition Index: 67464
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AnchoredJoint2D_op_Inequality_m43F1A172BE5163F015BB0D269C71B4D1CA54D20E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19388,7 +19388,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AnchoredJoint2D_op_
 		return;
 	}
 }
-// Method Definition Index: 67463
+// Method Definition Index: 67465
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpringJoint2D_op_Implicit_m11D69CDDDF7BCFC0C44A84A72FA080E045211C88 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19425,7 +19425,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpringJoint2D_op_Im
 		return;
 	}
 }
-// Method Definition Index: 67464
+// Method Definition Index: 67466
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpringJoint2D_op_Equality_mFE61C9D5DF116178B0111D3AC1D60D0714F1EB72 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19467,7 +19467,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpringJoint2D_op_Eq
 		return;
 	}
 }
-// Method Definition Index: 67465
+// Method Definition Index: 67467
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpringJoint2D_op_Inequality_mE9263BDB7FEF0313598EBD293EF26EC3B1940764 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19509,7 +19509,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpringJoint2D_op_In
 		return;
 	}
 }
-// Method Definition Index: 67466
+// Method Definition Index: 67468
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_DistanceJoint2D_op_Implicit_m9918743FB30A6FB85F933DA0556006A0F3199613 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19546,7 +19546,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_DistanceJoint2D_op_
 		return;
 	}
 }
-// Method Definition Index: 67467
+// Method Definition Index: 67469
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_DistanceJoint2D_op_Equality_m682FAC8A9F3BEB803707B825662643FF2AECD32C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19588,7 +19588,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_DistanceJoint2D_op_
 		return;
 	}
 }
-// Method Definition Index: 67468
+// Method Definition Index: 67470
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_DistanceJoint2D_op_Inequality_m5552F9FC72641A6C4A89E0E60E41CE97F2B64455 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19630,7 +19630,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_DistanceJoint2D_op_
 		return;
 	}
 }
-// Method Definition Index: 67469
+// Method Definition Index: 67471
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_FrictionJoint2D_op_Implicit_m4DC7FA0B5216106073DA9CAE08FC19DB9AC122FD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19667,7 +19667,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_FrictionJoint2D_op_
 		return;
 	}
 }
-// Method Definition Index: 67470
+// Method Definition Index: 67472
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_FrictionJoint2D_op_Equality_m094A423515970E797A4304D2866F2DF329FB735D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19709,7 +19709,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_FrictionJoint2D_op_
 		return;
 	}
 }
-// Method Definition Index: 67471
+// Method Definition Index: 67473
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_FrictionJoint2D_op_Inequality_m6A092A313072DAC289949D4AC6E78B94B1961F1E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19751,7 +19751,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_FrictionJoint2D_op_
 		return;
 	}
 }
-// Method Definition Index: 67472
+// Method Definition Index: 67474
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_HingeJoint2D_op_Implicit_mC40135D42EF3D6241DDDECCCF918F537DEF166FB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19788,7 +19788,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_HingeJoint2D_op_Imp
 		return;
 	}
 }
-// Method Definition Index: 67473
+// Method Definition Index: 67475
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_HingeJoint2D_op_Equality_m7A2DB7574F1F3D451000EC6B650C03977E387C9E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19830,7 +19830,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_HingeJoint2D_op_Equ
 		return;
 	}
 }
-// Method Definition Index: 67474
+// Method Definition Index: 67476
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_HingeJoint2D_op_Inequality_m493E24AD20D8C32BE3783D28542D3D7336680343 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19872,7 +19872,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_HingeJoint2D_op_Ine
 		return;
 	}
 }
-// Method Definition Index: 67475
+// Method Definition Index: 67477
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RelativeJoint2D_op_Implicit_m7C7F743D4C9077DCAE64FF7A614CC1251080D357 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19909,7 +19909,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RelativeJoint2D_op_
 		return;
 	}
 }
-// Method Definition Index: 67476
+// Method Definition Index: 67478
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RelativeJoint2D_op_Equality_mB9F582ADF14A95532D02CDF7C67BA8F04C0DF69E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19951,7 +19951,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RelativeJoint2D_op_
 		return;
 	}
 }
-// Method Definition Index: 67477
+// Method Definition Index: 67479
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RelativeJoint2D_op_Inequality_m12ABA47841CC778F81914AD9EF8A84E6BF252AAF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19993,7 +19993,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_RelativeJoint2D_op_
 		return;
 	}
 }
-// Method Definition Index: 67478
+// Method Definition Index: 67480
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SliderJoint2D_op_Implicit_m235966352B09AEDD875C0FEFAA1F0480D2FD052D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20030,7 +20030,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SliderJoint2D_op_Im
 		return;
 	}
 }
-// Method Definition Index: 67479
+// Method Definition Index: 67481
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SliderJoint2D_op_Equality_m5ABE6CCA963EFD866CBD92EF052FB6BD7ED24A63 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20072,7 +20072,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SliderJoint2D_op_Eq
 		return;
 	}
 }
-// Method Definition Index: 67480
+// Method Definition Index: 67482
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SliderJoint2D_op_Inequality_m4BBE0F675EF048569E65156374C4B84AFD854D84 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20114,7 +20114,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SliderJoint2D_op_In
 		return;
 	}
 }
-// Method Definition Index: 67481
+// Method Definition Index: 67483
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TargetJoint2D_op_Implicit_mD646D07618D350E0D994DF680953228F748C6DC8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20151,7 +20151,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TargetJoint2D_op_Im
 		return;
 	}
 }
-// Method Definition Index: 67482
+// Method Definition Index: 67484
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TargetJoint2D_op_Equality_mDC8BB6B63BF110C1EA67BC1DD4E2E6C4C424D28E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20193,7 +20193,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TargetJoint2D_op_Eq
 		return;
 	}
 }
-// Method Definition Index: 67483
+// Method Definition Index: 67485
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TargetJoint2D_op_Inequality_m96E396395CA9ECAD9DADB37C3D38D6A6D22F71FF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20235,7 +20235,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TargetJoint2D_op_In
 		return;
 	}
 }
-// Method Definition Index: 67484
+// Method Definition Index: 67486
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_FixedJoint2D_op_Implicit_mFCEB0FA2A09CDBDC80ACC87A212F08AE14513A01 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20272,7 +20272,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_FixedJoint2D_op_Imp
 		return;
 	}
 }
-// Method Definition Index: 67485
+// Method Definition Index: 67487
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_FixedJoint2D_op_Equality_m25B62CC6376B29682A6BE1E53A534ED9D2D95E18 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20314,7 +20314,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_FixedJoint2D_op_Equ
 		return;
 	}
 }
-// Method Definition Index: 67486
+// Method Definition Index: 67488
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_FixedJoint2D_op_Inequality_m18603F6D4EAC146B26661480A6ABB23CE225179E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20356,7 +20356,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_FixedJoint2D_op_Ine
 		return;
 	}
 }
-// Method Definition Index: 67487
+// Method Definition Index: 67489
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_WheelJoint2D_op_Implicit_m1BDF390EA0FAAC949A33C8E69512193BEF6BD328 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20393,7 +20393,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_WheelJoint2D_op_Imp
 		return;
 	}
 }
-// Method Definition Index: 67488
+// Method Definition Index: 67490
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_WheelJoint2D_op_Equality_m7D110EAD2A028965292640C54E19D77C9625C817 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20435,7 +20435,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_WheelJoint2D_op_Equ
 		return;
 	}
 }
-// Method Definition Index: 67489
+// Method Definition Index: 67491
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_WheelJoint2D_op_Inequality_m8C946A133C05BE9F7100541ADA940EF7E8C65F5C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20477,7 +20477,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_WheelJoint2D_op_Ine
 		return;
 	}
 }
-// Method Definition Index: 67490
+// Method Definition Index: 67492
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Effector2D_op_Implicit_m1A7183CC008335A2D435A749D767AF889EB23C27 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20514,7 +20514,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Effector2D_op_Impli
 		return;
 	}
 }
-// Method Definition Index: 67491
+// Method Definition Index: 67493
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Effector2D_op_Equality_m0A99F80BDC10819E64D3E2D3FCCE37C017CB75A6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20556,7 +20556,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Effector2D_op_Equal
 		return;
 	}
 }
-// Method Definition Index: 67492
+// Method Definition Index: 67494
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Effector2D_op_Inequality_mCF9EAC3DE154A26A0D358433638C8BB982820DEB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20598,7 +20598,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Effector2D_op_Inequ
 		return;
 	}
 }
-// Method Definition Index: 67493
+// Method Definition Index: 67495
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AreaEffector2D_op_Implicit_m60B09C7D647E83D2199C0FE126D8047BB75022CD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20635,7 +20635,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AreaEffector2D_op_I
 		return;
 	}
 }
-// Method Definition Index: 67494
+// Method Definition Index: 67496
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AreaEffector2D_op_Equality_mF131D142D3A2F095A366E74352BF9A5E64403D1F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20677,7 +20677,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AreaEffector2D_op_E
 		return;
 	}
 }
-// Method Definition Index: 67495
+// Method Definition Index: 67497
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AreaEffector2D_op_Inequality_m78A057C8DC887F7BB4A62E2D36C9ABA8F752E56D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20719,7 +20719,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_AreaEffector2D_op_I
 		return;
 	}
 }
-// Method Definition Index: 67496
+// Method Definition Index: 67498
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BuoyancyEffector2D_op_Implicit_m42F85334DEAA6C824A4F32BEA223CC644AF905B0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20756,7 +20756,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BuoyancyEffector2D_
 		return;
 	}
 }
-// Method Definition Index: 67497
+// Method Definition Index: 67499
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BuoyancyEffector2D_op_Equality_mD9CA9DABF9BAB2AE3830E234F60BB5256EF65511 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20798,7 +20798,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BuoyancyEffector2D_
 		return;
 	}
 }
-// Method Definition Index: 67498
+// Method Definition Index: 67500
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BuoyancyEffector2D_op_Inequality_m94970CA95DD4531AAE9363BEA24B9BD86A5D6EE4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20840,7 +20840,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_BuoyancyEffector2D_
 		return;
 	}
 }
-// Method Definition Index: 67499
+// Method Definition Index: 67501
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PointEffector2D_op_Implicit_mD0F3B71D7ACEAF0F889B81BE4FDFC8A53D5937CC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20877,7 +20877,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PointEffector2D_op_
 		return;
 	}
 }
-// Method Definition Index: 67500
+// Method Definition Index: 67502
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PointEffector2D_op_Equality_m08FEDA44F92D2796DBA1002B80CE22BDBA6A6650 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20919,7 +20919,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PointEffector2D_op_
 		return;
 	}
 }
-// Method Definition Index: 67501
+// Method Definition Index: 67503
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PointEffector2D_op_Inequality_m5B4839D5445619767591E35B80B42A0BDB70C1E1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20961,7 +20961,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PointEffector2D_op_
 		return;
 	}
 }
-// Method Definition Index: 67502
+// Method Definition Index: 67504
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PlatformEffector2D_op_Implicit_m30A829783E9525BD4CA5A6EC0A5C38AF46274BC1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20998,7 +20998,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PlatformEffector2D_
 		return;
 	}
 }
-// Method Definition Index: 67503
+// Method Definition Index: 67505
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PlatformEffector2D_op_Equality_mE90F987C1F26E7FD5ADC0A945299FA05A019BBF7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21040,7 +21040,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PlatformEffector2D_
 		return;
 	}
 }
-// Method Definition Index: 67504
+// Method Definition Index: 67506
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PlatformEffector2D_op_Inequality_m7BDAFE9EEA32BA1EDDABC2CEEEC561EC98931081 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21082,7 +21082,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PlatformEffector2D_
 		return;
 	}
 }
-// Method Definition Index: 67505
+// Method Definition Index: 67507
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SurfaceEffector2D_op_Implicit_mC6B7D9B9F6A6DAFCF684D2837C19140342802C71 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21119,7 +21119,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SurfaceEffector2D_o
 		return;
 	}
 }
-// Method Definition Index: 67506
+// Method Definition Index: 67508
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SurfaceEffector2D_op_Equality_mD301054A81A286767F92A906A34620CD37410AF7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21161,7 +21161,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SurfaceEffector2D_o
 		return;
 	}
 }
-// Method Definition Index: 67507
+// Method Definition Index: 67509
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SurfaceEffector2D_op_Inequality_mBC9A7DC7029B03E41FD387C8CFF4E5F33F1A7E7D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21203,7 +21203,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SurfaceEffector2D_o
 		return;
 	}
 }
-// Method Definition Index: 67508
+// Method Definition Index: 67510
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PhysicsUpdateBehaviour2D_op_Implicit_mA2DD4AA8F037B1B731825DDF9854A0104530D02A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21240,7 +21240,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PhysicsUpdateBehavi
 		return;
 	}
 }
-// Method Definition Index: 67509
+// Method Definition Index: 67511
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PhysicsUpdateBehaviour2D_op_Equality_m513A37C51330B2436C915C1487374085743B3C74 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21282,7 +21282,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PhysicsUpdateBehavi
 		return;
 	}
 }
-// Method Definition Index: 67510
+// Method Definition Index: 67512
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PhysicsUpdateBehaviour2D_op_Inequality_m0266BFA2362AF1C0965083A475ACF6BFE3351186 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21324,7 +21324,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PhysicsUpdateBehavi
 		return;
 	}
 }
-// Method Definition Index: 67511
+// Method Definition Index: 67513
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ConstantForce2D_op_Implicit_m89EC3E1CDA7D492AABB72EA756C415422E4F411A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21361,7 +21361,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ConstantForce2D_op_
 		return;
 	}
 }
-// Method Definition Index: 67512
+// Method Definition Index: 67514
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ConstantForce2D_op_Equality_mE900592B05117B7C1003C4EDB28D9F0AC4B15340 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21403,7 +21403,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ConstantForce2D_op_
 		return;
 	}
 }
-// Method Definition Index: 67513
+// Method Definition Index: 67515
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ConstantForce2D_op_Inequality_m2EF54A01663EA61D18B992B9C0A5057917FCBD21 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21445,7 +21445,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_ConstantForce2D_op_
 		return;
 	}
 }
-// Method Definition Index: 67514
+// Method Definition Index: 67516
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PhysicsMaterial2D_op_Implicit_m83BBEEBA36E7D5EF42C8C9D4D1EAFA3043825F9F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21482,7 +21482,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PhysicsMaterial2D_o
 		return;
 	}
 }
-// Method Definition Index: 67515
+// Method Definition Index: 67517
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PhysicsMaterial2D_op_Equality_m35F44673F0F7C23ED48836759899D4BB8D2965B7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21524,7 +21524,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PhysicsMaterial2D_o
 		return;
 	}
 }
-// Method Definition Index: 67516
+// Method Definition Index: 67518
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PhysicsMaterial2D_op_Inequality_mF4719E0FA8643A43DC9067A7AE3FAF5680FB0515 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21566,7 +21566,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_PhysicsMaterial2D_o
 		return;
 	}
 }
-// Method Definition Index: 67517
+// Method Definition Index: 67519
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LowLevelPhysics2D_PhysicsLowLevelSettings2D_op_Implicit_m9117C6A96E3C2D3CCB248BCFCD057E1B5618C16A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21603,7 +21603,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LowLevelPhysics2D_P
 		return;
 	}
 }
-// Method Definition Index: 67518
+// Method Definition Index: 67520
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LowLevelPhysics2D_PhysicsLowLevelSettings2D_op_Equality_mF7DE99D1A9E612C738BFF149E162941C5D9EA223 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21645,7 +21645,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LowLevelPhysics2D_P
 		return;
 	}
 }
-// Method Definition Index: 67519
+// Method Definition Index: 67521
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LowLevelPhysics2D_PhysicsLowLevelSettings2D_op_Inequality_mD852F237D9C6EE89DE1E49B1884016FE22E0B354 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21687,7 +21687,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_LowLevelPhysics2D_P
 		return;
 	}
 }
-// Method Definition Index: 67520
+// Method Definition Index: 67522
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpriteMask_op_Implicit_m18E8B45C0C8163082F95CD6EEF06D2D7314F0AF0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21724,7 +21724,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpriteMask_op_Impli
 		return;
 	}
 }
-// Method Definition Index: 67521
+// Method Definition Index: 67523
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpriteMask_op_Equality_mBF8EF45CA8C4438D06AD930C1F31EA97E03820BE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21766,7 +21766,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpriteMask_op_Equal
 		return;
 	}
 }
-// Method Definition Index: 67522
+// Method Definition Index: 67524
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpriteMask_op_Inequality_mEED35A9A2026EA5A6D9FA5701992D47D2D879B87 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21808,7 +21808,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpriteMask_op_Inequ
 		return;
 	}
 }
-// Method Definition Index: 67523
+// Method Definition Index: 67525
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Terrain_op_Implicit_mE1FF38D524A2F7488E7477A3B75B22480D7D3B0A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21845,7 +21845,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Terrain_op_Implicit
 		return;
 	}
 }
-// Method Definition Index: 67524
+// Method Definition Index: 67526
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Terrain_op_Equality_mC4E16F82B2263E98CBDE8DDAF99E2293E52C6A72 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21887,7 +21887,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Terrain_op_Equality
 		return;
 	}
 }
-// Method Definition Index: 67525
+// Method Definition Index: 67527
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Terrain_op_Inequality_m793386A5A9AA8E08D0EFEAFB76FA45B128D48865 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21929,7 +21929,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Terrain_op_Inequali
 		return;
 	}
 }
-// Method Definition Index: 67526
+// Method Definition Index: 67528
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tree_op_Implicit_m22FE016745D02A8944D37EB8B75AB2C62E8BC361 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21966,7 +21966,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tree_op_Implicit_m2
 		return;
 	}
 }
-// Method Definition Index: 67527
+// Method Definition Index: 67529
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tree_op_Equality_m658A6D13889804512AE63835C1377D7B40F4522E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22008,7 +22008,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tree_op_Equality_m6
 		return;
 	}
 }
-// Method Definition Index: 67528
+// Method Definition Index: 67530
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tree_op_Inequality_m9412BDE29BA59D8177D541BA19AE58EFB8AE7EF4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22050,7 +22050,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tree_op_Inequality_
 		return;
 	}
 }
-// Method Definition Index: 67529
+// Method Definition Index: 67531
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpeedTreeWindAsset_op_Implicit_mDA0D944CC66CA44EC01023FB37037494915BB4A1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22087,7 +22087,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpeedTreeWindAsset_
 		return;
 	}
 }
-// Method Definition Index: 67530
+// Method Definition Index: 67532
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpeedTreeWindAsset_op_Equality_mA25E03915DDEDE942018670CF8B44257B25CBFE0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22129,7 +22129,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpeedTreeWindAsset_
 		return;
 	}
 }
-// Method Definition Index: 67531
+// Method Definition Index: 67533
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpeedTreeWindAsset_op_Inequality_mF1C93312453A08B108166D7970019EC085C3398D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22171,7 +22171,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_SpeedTreeWindAsset_
 		return;
 	}
 }
-// Method Definition Index: 67532
+// Method Definition Index: 67534
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TerrainData_op_Implicit_m1E960DF4B6387D22878C743DA176FD55333713F8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22208,7 +22208,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TerrainData_op_Impl
 		return;
 	}
 }
-// Method Definition Index: 67533
+// Method Definition Index: 67535
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TerrainData_op_Equality_m7B4D839724A924B30B200D9C1FB273F9A8C55A4F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22250,7 +22250,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TerrainData_op_Equa
 		return;
 	}
 }
-// Method Definition Index: 67534
+// Method Definition Index: 67536
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TerrainData_op_Inequality_m291D13C63BADE35A4BC5F078C0F03E2AFA9ACA27 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22292,7 +22292,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TerrainData_op_Ineq
 		return;
 	}
 }
-// Method Definition Index: 67535
+// Method Definition Index: 67537
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TerrainLayer_op_Implicit_m695E2B6A2AA0B87552F956AF95169BD3413819BB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22329,7 +22329,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TerrainLayer_op_Imp
 		return;
 	}
 }
-// Method Definition Index: 67536
+// Method Definition Index: 67538
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TerrainLayer_op_Equality_m504A5518D19BE2102DD691BE9ADF6B7AC8ADAF6A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22371,7 +22371,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TerrainLayer_op_Equ
 		return;
 	}
 }
-// Method Definition Index: 67537
+// Method Definition Index: 67539
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TerrainLayer_op_Inequality_m647C23EFC51217186B1856573145C82C3EC41472 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22413,7 +22413,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TerrainLayer_op_Ine
 		return;
 	}
 }
-// Method Definition Index: 67538
+// Method Definition Index: 67540
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TerrainCollider_op_Implicit_m5CF1E12C3C4A39E49DC9D27DA5977B85BD279E25 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22450,7 +22450,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TerrainCollider_op_
 		return;
 	}
 }
-// Method Definition Index: 67539
+// Method Definition Index: 67541
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TerrainCollider_op_Equality_m8B052DA4188C2EC7192B4ECC16D94CC0398D6845 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22492,7 +22492,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TerrainCollider_op_
 		return;
 	}
 }
-// Method Definition Index: 67540
+// Method Definition Index: 67542
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TerrainCollider_op_Inequality_m34F32E086C4D4806CED5E25455F3A69AA3D4C343 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22534,7 +22534,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TerrainCollider_op_
 		return;
 	}
 }
-// Method Definition Index: 67541
+// Method Definition Index: 67543
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TextMesh_op_Implicit_mB0A531B1152CEE813592AFFEF970FF9733664AAB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22571,7 +22571,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TextMesh_op_Implici
 		return;
 	}
 }
-// Method Definition Index: 67542
+// Method Definition Index: 67544
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TextMesh_op_Equality_mB12198461E85E46BEF57D7E29567588DD923B886 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22613,7 +22613,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TextMesh_op_Equalit
 		return;
 	}
 }
-// Method Definition Index: 67543
+// Method Definition Index: 67545
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TextMesh_op_Inequality_m10A989CC61A9FA3DB55B14A5D784D34EF0563721 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22655,7 +22655,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_TextMesh_op_Inequal
 		return;
 	}
 }
-// Method Definition Index: 67544
+// Method Definition Index: 67546
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Font_op_Implicit_mCA6A3E83BB83133EB28100ED3DFF300D5E84ED5F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22692,7 +22692,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Font_op_Implicit_mC
 		return;
 	}
 }
-// Method Definition Index: 67545
+// Method Definition Index: 67547
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Font_op_Equality_m77D7BE35DCE72E552EB17C45816C16847B147D4F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22734,7 +22734,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Font_op_Equality_m7
 		return;
 	}
 }
-// Method Definition Index: 67546
+// Method Definition Index: 67548
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Font_op_Inequality_m3A4CC091C35D47B514F14A42AE73EA6AF6A61FA7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22776,7 +22776,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Font_op_Inequality_
 		return;
 	}
 }
-// Method Definition Index: 67547
+// Method Definition Index: 67549
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tilemaps_Tile_op_Implicit_m8C7593713D7AEA52E8BEE5DA54681F2FD5FBA694 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22813,7 +22813,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tilemaps_Tile_op_Im
 		return;
 	}
 }
-// Method Definition Index: 67548
+// Method Definition Index: 67550
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tilemaps_Tile_op_Equality_m450D9A00119BDDB0C4E4603A66ADE6B44590F3DB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22855,7 +22855,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tilemaps_Tile_op_Eq
 		return;
 	}
 }
-// Method Definition Index: 67549
+// Method Definition Index: 67551
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tilemaps_Tile_op_Inequality_m442371EBCF7EBC49602E3916557F22A332D0EE10 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22897,7 +22897,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tilemaps_Tile_op_In
 		return;
 	}
 }
-// Method Definition Index: 67550
+// Method Definition Index: 67552
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tilemaps_Tilemap_op_Implicit_m6CAFC2328D4CA733711760832551C71A604C8357 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22934,7 +22934,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tilemaps_Tilemap_op
 		return;
 	}
 }
-// Method Definition Index: 67551
+// Method Definition Index: 67553
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tilemaps_Tilemap_op_Equality_m05F46E5B99AFDC8179859599AE931F140566DC89 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22976,7 +22976,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tilemaps_Tilemap_op
 		return;
 	}
 }
-// Method Definition Index: 67552
+// Method Definition Index: 67554
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tilemaps_Tilemap_op_Inequality_m218290CFD884195EEFECB21473B7A5FC760F3EFC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23018,7 +23018,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tilemaps_Tilemap_op
 		return;
 	}
 }
-// Method Definition Index: 67553
+// Method Definition Index: 67555
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tilemaps_TilemapRenderer_op_Implicit_mC8D944C484970F0BBB23E8D56582D80A2D8E9E20 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23055,7 +23055,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tilemaps_TilemapRen
 		return;
 	}
 }
-// Method Definition Index: 67554
+// Method Definition Index: 67556
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tilemaps_TilemapRenderer_op_Equality_mBAA90F939B84443D9E8AAE8CA3DE7BFA5716358E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23097,7 +23097,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tilemaps_TilemapRen
 		return;
 	}
 }
-// Method Definition Index: 67555
+// Method Definition Index: 67557
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tilemaps_TilemapRenderer_op_Inequality_m64F0AA448DE22E528A4E5FE7DD789308BC667A53 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23139,7 +23139,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tilemaps_TilemapRen
 		return;
 	}
 }
-// Method Definition Index: 67556
+// Method Definition Index: 67558
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tilemaps_TilemapCollider2D_op_Implicit_m427B2DFCEB334DA0E5AE27C44CB5E7B08A787F21 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23176,7 +23176,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tilemaps_TilemapCol
 		return;
 	}
 }
-// Method Definition Index: 67557
+// Method Definition Index: 67559
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tilemaps_TilemapCollider2D_op_Equality_m05DD834D2B9DA55A43FFF8F9A32EA2B65CCDA975 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23218,7 +23218,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tilemaps_TilemapCol
 		return;
 	}
 }
-// Method Definition Index: 67558
+// Method Definition Index: 67560
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tilemaps_TilemapCollider2D_op_Inequality_m63A2299606D5005563B4471946507F9D8AE9E77D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23260,7 +23260,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Tilemaps_TilemapCol
 		return;
 	}
 }
-// Method Definition Index: 67559
+// Method Definition Index: 67561
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CanvasGroup_op_Implicit_mD6A398F67CC63374DF732DB21F8E9A98013939E3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23297,7 +23297,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CanvasGroup_op_Impl
 		return;
 	}
 }
-// Method Definition Index: 67560
+// Method Definition Index: 67562
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CanvasGroup_op_Equality_mEE35BF82A6A549AEC080E41B6C09A29AA2D553AE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23339,7 +23339,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CanvasGroup_op_Equa
 		return;
 	}
 }
-// Method Definition Index: 67561
+// Method Definition Index: 67563
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CanvasGroup_op_Inequality_m6467CA3F0E7F821551142467F06495D882DEC8E1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23381,7 +23381,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CanvasGroup_op_Ineq
 		return;
 	}
 }
-// Method Definition Index: 67562
+// Method Definition Index: 67564
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CanvasRenderer_op_Implicit_m2ACCA6ED05CA70C6638B3EE4EE02AF48A98DB2F1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23418,7 +23418,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CanvasRenderer_op_I
 		return;
 	}
 }
-// Method Definition Index: 67563
+// Method Definition Index: 67565
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CanvasRenderer_op_Equality_m4EB0D7FA7F0579438667E43F84E44504F76E1C28 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23460,7 +23460,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CanvasRenderer_op_E
 		return;
 	}
 }
-// Method Definition Index: 67564
+// Method Definition Index: 67566
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CanvasRenderer_op_Inequality_m992F29FB2CE1B51CE143ADC607DC98E5E49A9874 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23502,7 +23502,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_CanvasRenderer_op_I
 		return;
 	}
 }
-// Method Definition Index: 67565
+// Method Definition Index: 67567
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Canvas_op_Implicit_m7AA1950E08570DB77198E7BC880D8F5F4EFE0607 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23539,7 +23539,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Canvas_op_Implicit_
 		return;
 	}
 }
-// Method Definition Index: 67566
+// Method Definition Index: 67568
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Canvas_op_Equality_m9C078243CCB118DBA7102EA09BAABBA35EB9E61C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23581,7 +23581,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Canvas_op_Equality_
 		return;
 	}
 }
-// Method Definition Index: 67567
+// Method Definition Index: 67569
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Canvas_op_Inequality_mE321C17E14325A5CD5DD9A476A9C3DE1D28C7679 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23623,7 +23623,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Canvas_op_Inequalit
 		return;
 	}
 }
-// Method Definition Index: 67568
+// Method Definition Index: 67570
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_FilterFunctionDefinition_op_Implicit_m3B957C5B60815B405251F2C3EBFC4156F52E4C8B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23660,7 +23660,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_FilterFu
 		return;
 	}
 }
-// Method Definition Index: 67569
+// Method Definition Index: 67571
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_FilterFunctionDefinition_op_Equality_m936666819FEC31EFBEB9888B740704EC513B6548 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23702,7 +23702,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_FilterFu
 		return;
 	}
 }
-// Method Definition Index: 67570
+// Method Definition Index: 67572
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_FilterFunctionDefinition_op_Inequality_mF9AB23A5379E9F9C976A047E0BECC294DDF149E2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23744,7 +23744,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_FilterFu
 		return;
 	}
 }
-// Method Definition Index: 67571
+// Method Definition Index: 67573
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelInputConfiguration_op_Implicit_m3030328FD25F177270218623FEBF28FD3DC7698A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23781,7 +23781,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelInp
 		return;
 	}
 }
-// Method Definition Index: 67572
+// Method Definition Index: 67574
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelInputConfiguration_op_Equality_mCEE13D4293B625BF63A518AEE77B592E66CE300B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23823,7 +23823,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelInp
 		return;
 	}
 }
-// Method Definition Index: 67573
+// Method Definition Index: 67575
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelInputConfiguration_op_Inequality_mFD2802C8220C937416D3E5B38830CAB0D1A0F491 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23865,7 +23865,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelInp
 		return;
 	}
 }
-// Method Definition Index: 67574
+// Method Definition Index: 67576
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelSettings_op_Implicit_m297FD36BF83266F0AB2D9558DE5559F3E2CB2E4A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23902,7 +23902,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelSet
 		return;
 	}
 }
-// Method Definition Index: 67575
+// Method Definition Index: 67577
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelSettings_op_Equality_mA046125E3AE1FA74AF9F950C0BC31B04DD1B74D6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23944,7 +23944,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelSet
 		return;
 	}
 }
-// Method Definition Index: 67576
+// Method Definition Index: 67578
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelSettings_op_Inequality_mBB8223F04F767C46E6266B56F3F01651B876460D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23986,7 +23986,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelSet
 		return;
 	}
 }
-// Method Definition Index: 67577
+// Method Definition Index: 67579
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_UIDocument_op_Implicit_mF23EB6134F96A8678C067F3D4F7523BC9C512977 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24023,7 +24023,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_UIDocume
 		return;
 	}
 }
-// Method Definition Index: 67578
+// Method Definition Index: 67580
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_UIDocument_op_Equality_mDEE6C2732447A735B948790E6B5FA90FD1E0A57A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24065,7 +24065,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_UIDocume
 		return;
 	}
 }
-// Method Definition Index: 67579
+// Method Definition Index: 67581
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_UIDocument_op_Inequality_mE700BE2E7D52597478CCA3618D2D186A346F2391 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24107,7 +24107,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_UIDocume
 		return;
 	}
 }
-// Method Definition Index: 67580
+// Method Definition Index: 67582
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_UIRenderer_op_Implicit_mE56FC457DFE88261DB4FFBE99E9F15B38F4386D9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24144,7 +24144,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_UIRender
 		return;
 	}
 }
-// Method Definition Index: 67581
+// Method Definition Index: 67583
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_UIRenderer_op_Equality_m39808552CBEC06E23CE4AD63FCA733C714E76A6B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24186,7 +24186,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_UIRender
 		return;
 	}
 }
-// Method Definition Index: 67582
+// Method Definition Index: 67584
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_UIRenderer_op_Inequality_mFFC1BA1B8D1AF54CE101FA990955B6FD993BF00B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24228,7 +24228,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_UIRender
 		return;
 	}
 }
-// Method Definition Index: 67583
+// Method Definition Index: 67585
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_StyleSheet_op_Implicit_m957045F59C828787AD24DAC8905F6A5A01AA2224 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24265,7 +24265,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_StyleShe
 		return;
 	}
 }
-// Method Definition Index: 67584
+// Method Definition Index: 67586
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_StyleSheet_op_Equality_mB54647BC60F4DA7C77DFFFA801D58407BE5BD078 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24307,7 +24307,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_StyleShe
 		return;
 	}
 }
-// Method Definition Index: 67585
+// Method Definition Index: 67587
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_StyleSheet_op_Inequality_m3E88A99194ED3D4285260E24E15AD94FA84CB5E1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24349,7 +24349,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_StyleShe
 		return;
 	}
 }
-// Method Definition Index: 67586
+// Method Definition Index: 67588
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_ThemeStyleSheet_op_Implicit_m8C5A9B7043F4B4C4836CFE52744B492B76F742C3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24386,7 +24386,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_ThemeSty
 		return;
 	}
 }
-// Method Definition Index: 67587
+// Method Definition Index: 67589
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_ThemeStyleSheet_op_Equality_m31975F46401F46159154203ED01861DB1E38A634 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24428,7 +24428,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_ThemeSty
 		return;
 	}
 }
-// Method Definition Index: 67588
+// Method Definition Index: 67590
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_ThemeStyleSheet_op_Inequality_m7E862C01810775766AA9DCDF3EC727AACACEA455 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24470,7 +24470,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_ThemeSty
 		return;
 	}
 }
-// Method Definition Index: 67589
+// Method Definition Index: 67591
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelTextSettings_op_Implicit_mDB876182092B9B32BFEDA2423145A87CD0B077A4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24507,7 +24507,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelTex
 		return;
 	}
 }
-// Method Definition Index: 67590
+// Method Definition Index: 67592
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelTextSettings_op_Equality_m6053C4264E9ED40EDA43247BE12A6C0E7492025C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24549,7 +24549,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelTex
 		return;
 	}
 }
-// Method Definition Index: 67591
+// Method Definition Index: 67593
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelTextSettings_op_Inequality_m90718B30BC5EC711D7434D2E646ADD14611D13D4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24591,7 +24591,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelTex
 		return;
 	}
 }
-// Method Definition Index: 67592
+// Method Definition Index: 67594
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_VisualTreeAsset_op_Implicit_m4291A8623B6C7F141CE09BD0E5DC474FE1D19F8B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24628,7 +24628,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_VisualTr
 		return;
 	}
 }
-// Method Definition Index: 67593
+// Method Definition Index: 67595
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_VisualTreeAsset_op_Equality_m11C0367913277135047808F75FEE679BDEB0AE1D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24670,7 +24670,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_VisualTr
 		return;
 	}
 }
-// Method Definition Index: 67594
+// Method Definition Index: 67596
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_VisualTreeAsset_op_Inequality_m31B01075A2DEAE65AF3F2ADBC8B5BFDB55F3A7DE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24712,7 +24712,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_VisualTr
 		return;
 	}
 }
-// Method Definition Index: 67595
+// Method Definition Index: 67597
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_VectorImage_op_Implicit_m771F31324A52C94DDB19487F5B559DA170276791 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24749,7 +24749,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_VectorIm
 		return;
 	}
 }
-// Method Definition Index: 67596
+// Method Definition Index: 67598
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_VectorImage_op_Equality_m264DB3EBE7500E0AD3C0F23B1A43E47BA266B7E9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24791,7 +24791,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_VectorIm
 		return;
 	}
 }
-// Method Definition Index: 67597
+// Method Definition Index: 67599
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_VectorImage_op_Inequality_m95A8440963AE02B434E6DC89A0B677B7DE6EEF67 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24833,7 +24833,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_VectorIm
 		return;
 	}
 }
-// Method Definition Index: 67598
+// Method Definition Index: 67600
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_InputSystem_InputSystemEventSystem_op_Implicit_mFFBEA17BFDE35D80A432238C88239BDFA69CD400 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24870,7 +24870,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_InputSys
 		return;
 	}
 }
-// Method Definition Index: 67599
+// Method Definition Index: 67601
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_InputSystem_InputSystemEventSystem_op_Equality_m0741D8517688EB2C9368B043DB49506A3616B7D5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24912,7 +24912,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_InputSys
 		return;
 	}
 }
-// Method Definition Index: 67600
+// Method Definition Index: 67602
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_InputSystem_InputSystemEventSystem_op_Inequality_m4B31A645C205D69827C431A1DEDCD84D1C7074C1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24954,7 +24954,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_InputSys
 		return;
 	}
 }
-// Method Definition Index: 67601
+// Method Definition Index: 67603
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_WheelCollider_op_Implicit_mE4AD8C3D71939D95E64570621020E96C0D744048 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24991,7 +24991,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_WheelCollider_op_Im
 		return;
 	}
 }
-// Method Definition Index: 67602
+// Method Definition Index: 67604
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_WheelCollider_op_Equality_m7019A859A1C023D691A1922F5E309709FADF4FE4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25033,7 +25033,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_WheelCollider_op_Eq
 		return;
 	}
 }
-// Method Definition Index: 67603
+// Method Definition Index: 67605
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_WheelCollider_op_Inequality_m0651C5D1D3CCDEC881C70D2669078C39F8F6F652 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25075,7 +25075,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_WheelCollider_op_In
 		return;
 	}
 }
-// Method Definition Index: 67604
+// Method Definition Index: 67606
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Video_VideoClip_op_Implicit_mDA253AC5D0E196A88C051822288A6909D048E748 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25112,7 +25112,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Video_VideoClip_op_
 		return;
 	}
 }
-// Method Definition Index: 67605
+// Method Definition Index: 67607
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Video_VideoClip_op_Equality_m541C01A765D7AC7C326C22B14DF89B5F9201D038 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25154,7 +25154,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Video_VideoClip_op_
 		return;
 	}
 }
-// Method Definition Index: 67606
+// Method Definition Index: 67608
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Video_VideoClip_op_Inequality_m569B085BBB614BB2EAF5DBE5976940C59DA8E957 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25196,7 +25196,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Video_VideoClip_op_
 		return;
 	}
 }
-// Method Definition Index: 67607
+// Method Definition Index: 67609
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Video_VideoPlayer_op_Implicit_m3400E07C3C0C429B3009A347A59CFB70934A005B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25233,7 +25233,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Video_VideoPlayer_o
 		return;
 	}
 }
-// Method Definition Index: 67608
+// Method Definition Index: 67610
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Video_VideoPlayer_op_Equality_m32282EBE1449801352E316AFE288569C6F813174 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25275,7 +25275,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Video_VideoPlayer_o
 		return;
 	}
 }
-// Method Definition Index: 67609
+// Method Definition Index: 67611
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Video_VideoPlayer_op_Inequality_m359B71F6490D3C0865C1920F5725F42B1303773A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25317,7 +25317,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Video_VideoPlayer_o
 		return;
 	}
 }
-// Method Definition Index: 67610
+// Method Definition Index: 67612
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_WindZone_op_Implicit_mCC53C6D847CE88E552644C5B2EA8E14FDDD99C50 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25354,7 +25354,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_WindZone_op_Implici
 		return;
 	}
 }
-// Method Definition Index: 67611
+// Method Definition Index: 67613
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_WindZone_op_Equality_mB2B2D4CDE59D646AE4354EC1945859F1E3F67900 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25396,7 +25396,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_WindZone_op_Equalit
 		return;
 	}
 }
-// Method Definition Index: 67612
+// Method Definition Index: 67614
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_WindZone_op_Inequality_mF027F8D299E0D883B268F944A8C54D3A7DC23221 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25438,7 +25438,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_WindZone_op_Inequal
 		return;
 	}
 }
-// Method Definition Index: 67613
+// Method Definition Index: 67615
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AnchorSnapEditor_op_Implicit_m72E71A4E25F4B9DB252319C2BC990E2DBE5238F1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25475,7 +25475,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AnchorSnapEditor_op_Implicit_m7
 		return;
 	}
 }
-// Method Definition Index: 67614
+// Method Definition Index: 67616
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AnchorSnapEditor_op_Equality_m5B0E19E8C26D947E2B3DC350812FC046C2B97504 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25517,7 +25517,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AnchorSnapEditor_op_Equality_m5
 		return;
 	}
 }
-// Method Definition Index: 67615
+// Method Definition Index: 67617
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AnchorSnapEditor_op_Inequality_mE2CA22E15D11D11E209D81D229532DB0C169C291 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25559,7 +25559,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AnchorSnapEditor_op_Inequality_
 		return;
 	}
 }
-// Method Definition Index: 67616
+// Method Definition Index: 67618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Branch_op_Implicit_m7D5A61C2B9CE0BDA8EA706B3A7F204D236498969 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25596,7 +25596,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Branch_op_Implicit_m7D5A61C2B9C
 		return;
 	}
 }
-// Method Definition Index: 67617
+// Method Definition Index: 67619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Branch_op_Equality_m2BE04D93D4C057CEEB1E331DAA4D2104E49346F0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25638,7 +25638,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Branch_op_Equality_m2BE04D93D4C
 		return;
 	}
 }
-// Method Definition Index: 67618
+// Method Definition Index: 67620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Branch_op_Inequality_m3F8BF36C766CFFF5413617115BF69FC443BE8FEF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25680,7 +25680,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Branch_op_Inequality_m3F8BF36C7
 		return;
 	}
 }
-// Method Definition Index: 67619
+// Method Definition Index: 67621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BranchData_op_Implicit_mCACD670C432102D946D1E63AC2C52D0A8A578F44 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25717,7 +25717,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BranchData_op_Implicit_mCACD670
 		return;
 	}
 }
-// Method Definition Index: 67620
+// Method Definition Index: 67622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BranchData_op_Equality_mD9F1424D13B04EE7B34CCA01518E52A92EF934C9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25759,7 +25759,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BranchData_op_Equality_mD9F1424
 		return;
 	}
 }
-// Method Definition Index: 67621
+// Method Definition Index: 67623
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BranchData_op_Inequality_m28B5E35C5383427AF7489DD559E25DD4A694AA2B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25801,7 +25801,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BranchData_op_Inequality_m28B5E
 		return;
 	}
 }
-// Method Definition Index: 67622
+// Method Definition Index: 67624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BranchDemo_op_Implicit_m002B5D48D5B6333380EB77659BB13DD3EBDBC768 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25838,7 +25838,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BranchDemo_op_Implicit_m002B5D4
 		return;
 	}
 }
-// Method Definition Index: 67623
+// Method Definition Index: 67625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BranchDemo_op_Equality_m44836C12B6EB5F088D982F31AEB57589B1441A26 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25880,7 +25880,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BranchDemo_op_Equality_m44836C1
 		return;
 	}
 }
-// Method Definition Index: 67624
+// Method Definition Index: 67626
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BranchDemo_op_Inequality_m5737D3B9271CE9A9E6E7875E5A3FE02F9606F56B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25922,7 +25922,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BranchDemo_op_Inequality_m5737D
 		return;
 	}
 }
-// Method Definition Index: 67625
+// Method Definition Index: 67627
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_RewardTransactionItem_op_Implicit_mA97E93C6F6B8047D73FDD04131F2C05BFA086D07 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25959,7 +25959,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_RewardTransactionItem_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 67626
+// Method Definition Index: 67628
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_RewardTransactionItem_op_Equality_m7F392894605B6B68F68083317627A14285E754E5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26001,7 +26001,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_RewardTransactionItem_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 67627
+// Method Definition Index: 67629
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_RewardTransactionItem_op_Inequality_m1BD2C6003528C80CA7DEA8016D66BBD9E34AEAF9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26043,7 +26043,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_RewardTransactionItem_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 67628
+// Method Definition Index: 67630
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_RewardsHistoryPanel_op_Implicit_m88179A4A8EA15A36635893DDBDFDB6CF5733E363 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26080,7 +26080,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_RewardsHistoryPanel_op_Implicit
 		return;
 	}
 }
-// Method Definition Index: 67629
+// Method Definition Index: 67631
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_RewardsHistoryPanel_op_Equality_mE89632C242912987D2A70486B5E02E8BF5B8C0E1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26122,7 +26122,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_RewardsHistoryPanel_op_Equality
 		return;
 	}
 }
-// Method Definition Index: 67630
+// Method Definition Index: 67632
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_RewardsHistoryPanel_op_Inequality_m2B93528CC08C2424C4CA7AB55E20239179C0EBCD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26164,7 +26164,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_RewardsHistoryPanel_op_Inequali
 		return;
 	}
 }
-// Method Definition Index: 67631
+// Method Definition Index: 67633
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BranchInit_op_Implicit_m102EA0741B2D75B1FECF7E3BC52F16370629C665 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26201,7 +26201,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BranchInit_op_Implicit_m102EA07
 		return;
 	}
 }
-// Method Definition Index: 67632
+// Method Definition Index: 67634
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BranchInit_op_Equality_m4CCDEBD8128424894D4953A8BC6A92FB279E13A1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26243,7 +26243,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BranchInit_op_Equality_m4CCDEBD
 		return;
 	}
 }
-// Method Definition Index: 67633
+// Method Definition Index: 67635
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BranchInit_op_Inequality_mF6C81F7D938A5B9CB62298F1D2849EBE60ABB082 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26285,7 +26285,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BranchInit_op_Inequality_mF6C81
 		return;
 	}
 }
-// Method Definition Index: 67634
+// Method Definition Index: 67636
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ClickButtonSound_op_Implicit_m270EB7538CFCA114EB60F1C48912024A37AF2F95 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26322,7 +26322,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ClickButtonSound_op_Implicit_m2
 		return;
 	}
 }
-// Method Definition Index: 67635
+// Method Definition Index: 67637
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ClickButtonSound_op_Equality_m89DA3ACDDB88FCD5668951F4495075CB5B30A303 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26364,7 +26364,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ClickButtonSound_op_Equality_m8
 		return;
 	}
 }
-// Method Definition Index: 67636
+// Method Definition Index: 67638
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ClickButtonSound_op_Inequality_m4162E06C08CF3F6909264E459374CD3E794C4EDD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26406,7 +26406,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ClickButtonSound_op_Inequality_
 		return;
 	}
 }
-// Method Definition Index: 67637
+// Method Definition Index: 67639
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ProductRowPrefab_op_Implicit_m8B10E3F47713E7CD1A2BBE2CDDA050882893E734 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26443,7 +26443,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ProductRowPrefab_op_Implicit_m8
 		return;
 	}
 }
-// Method Definition Index: 67638
+// Method Definition Index: 67640
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ProductRowPrefab_op_Equality_m6818E5D16CE5CB9AAB87AE30C5244940FF15BF0E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26485,7 +26485,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ProductRowPrefab_op_Equality_m6
 		return;
 	}
 }
-// Method Definition Index: 67639
+// Method Definition Index: 67641
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ProductRowPrefab_op_Inequality_mB79C3A66D3B594B1236480C12DFCB1694EB01A60 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26527,7 +26527,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ProductRowPrefab_op_Inequality_
 		return;
 	}
 }
-// Method Definition Index: 67640
+// Method Definition Index: 67642
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PurchaseRowPrefab_op_Implicit_m7C5E789FB6EFFF5811BE8B27C0ECB21C177CA4C2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26564,7 +26564,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PurchaseRowPrefab_op_Implicit_m
 		return;
 	}
 }
-// Method Definition Index: 67641
+// Method Definition Index: 67643
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PurchaseRowPrefab_op_Equality_m9394B06E1E13ABD35727CC00CD7654534A11F048 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26606,7 +26606,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PurchaseRowPrefab_op_Equality_m
 		return;
 	}
 }
-// Method Definition Index: 67642
+// Method Definition Index: 67644
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PurchaseRowPrefab_op_Inequality_mC56417AAD6C8CB338CD17E2C18C32839705AFB7D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26648,7 +26648,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PurchaseRowPrefab_op_Inequality
 		return;
 	}
 }
-// Method Definition Index: 67643
+// Method Definition Index: 67645
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AdsPage_op_Implicit_m785DAC8F00BB65F1E85368518C3836C990FBA3BE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26685,7 +26685,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AdsPage_op_Implicit_m785DAC8F00
 		return;
 	}
 }
-// Method Definition Index: 67644
+// Method Definition Index: 67646
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AdsPage_op_Equality_mD2EA3EE311943F2D1FD011AFAD8981CE42BD3479 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26727,7 +26727,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AdsPage_op_Equality_mD2EA3EE311
 		return;
 	}
 }
-// Method Definition Index: 67645
+// Method Definition Index: 67647
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AdsPage_op_Inequality_m832C04D418066D55CA451C1E9C6D6AE92E0B54B7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26769,7 +26769,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AdsPage_op_Inequality_m832C04D4
 		return;
 	}
 }
-// Method Definition Index: 67646
+// Method Definition Index: 67648
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LogScroller_op_Implicit_m21DC79F8C46C55FA3859708E93B9C2A6C2163B17 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26806,7 +26806,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LogScroller_op_Implicit_m21DC79
 		return;
 	}
 }
-// Method Definition Index: 67647
+// Method Definition Index: 67649
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LogScroller_op_Equality_m29B8F2BE3C12335C3CB7DC6240074AE02DCE0B17 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26848,7 +26848,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LogScroller_op_Equality_m29B8F2
 		return;
 	}
 }
-// Method Definition Index: 67648
+// Method Definition Index: 67650
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LogScroller_op_Inequality_mADA5C8F142CF6DCCCC787785A3C910D32C411789 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26890,7 +26890,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LogScroller_op_Inequality_mADA5
 		return;
 	}
 }
-// Method Definition Index: 67649
+// Method Definition Index: 67651
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_MainPage_op_Implicit_m78200E68C20F2FD511CED586D2A9FC3A03267C6B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26927,7 +26927,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_MainPage_op_Implicit_m78200E68C
 		return;
 	}
 }
-// Method Definition Index: 67650
+// Method Definition Index: 67652
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_MainPage_op_Equality_m26E1061419D07380DC427369F957202998ED60E5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26969,7 +26969,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_MainPage_op_Equality_m26E106141
 		return;
 	}
 }
-// Method Definition Index: 67651
+// Method Definition Index: 67653
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_MainPage_op_Inequality_m29F5E905479042E540A88D1FD0E8DC9FD6B91991 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27011,7 +27011,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_MainPage_op_Inequality_m29F5E90
 		return;
 	}
 }
-// Method Definition Index: 67652
+// Method Definition Index: 67654
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Menu_op_Implicit_m5471BB9A767484028E2ACD0B3B5D7A3AD0D874C0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27048,7 +27048,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Menu_op_Implicit_m5471BB9A76748
 		return;
 	}
 }
-// Method Definition Index: 67653
+// Method Definition Index: 67655
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Menu_op_Equality_m88397522FEEBF2EDA07A22E5CB557153B6AF1A52 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27090,7 +27090,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Menu_op_Equality_m88397522FEEBF
 		return;
 	}
 }
-// Method Definition Index: 67654
+// Method Definition Index: 67656
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Menu_op_Inequality_m49E15DE9E435337E23D7C04243DC714E65C8F5CF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27132,7 +27132,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Menu_op_Inequality_m49E15DE9E43
 		return;
 	}
 }
-// Method Definition Index: 67655
+// Method Definition Index: 67657
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PurchasePage_op_Implicit_m3840138F64F008FDD3CB0E84B1848CF296D5DF13 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27169,7 +27169,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PurchasePage_op_Implicit_m38401
 		return;
 	}
 }
-// Method Definition Index: 67656
+// Method Definition Index: 67658
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PurchasePage_op_Equality_m926107171BB29BDAEE5B4ACCC1AA0138E7230290 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27211,7 +27211,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PurchasePage_op_Equality_m92610
 		return;
 	}
 }
-// Method Definition Index: 67657
+// Method Definition Index: 67659
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PurchasePage_op_Inequality_m3E6D016097ADC7D4BD3992445CEC1CFF01A689CC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27253,7 +27253,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PurchasePage_op_Inequality_m3E6
 		return;
 	}
 }
-// Method Definition Index: 67658
+// Method Definition Index: 67660
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SavePage_op_Implicit_m0C24800208752B12D7DE42977582EC12A26EACF5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27290,7 +27290,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SavePage_op_Implicit_m0C2480020
 		return;
 	}
 }
-// Method Definition Index: 67659
+// Method Definition Index: 67661
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SavePage_op_Equality_m8A538C8CF0856C0AC7FCA0C667663B9C6D2EF1DB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27332,7 +27332,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SavePage_op_Equality_m8A538C8CF
 		return;
 	}
 }
-// Method Definition Index: 67660
+// Method Definition Index: 67662
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SavePage_op_Inequality_m7EEA9BC3F61E22AA137074F82A1D9050C9427483 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27374,7 +27374,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SavePage_op_Inequality_m7EEA9BC
 		return;
 	}
 }
-// Method Definition Index: 67661
+// Method Definition Index: 67663
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SettingsMenu_op_Implicit_m1187FD9ED01192B975871BE9210616E0BEFA6D8A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27411,7 +27411,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SettingsMenu_op_Implicit_m1187F
 		return;
 	}
 }
-// Method Definition Index: 67662
+// Method Definition Index: 67664
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SettingsMenu_op_Equality_m207F03CB8203F288A373355040D40B8CFC3C7F60 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27453,7 +27453,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SettingsMenu_op_Equality_m207F0
 		return;
 	}
 }
-// Method Definition Index: 67663
+// Method Definition Index: 67665
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SettingsMenu_op_Inequality_m5EC31610217BC87D8BB2FA5D2F029FE75000A15A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27495,7 +27495,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SettingsMenu_op_Inequality_m5EC
 		return;
 	}
 }
-// Method Definition Index: 67664
+// Method Definition Index: 67666
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UIState_op_Implicit_mE5E641E3E7D5F661E5ADF208654E5A6B78898CCB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27532,7 +27532,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UIState_op_Implicit_mE5E641E3E7
 		return;
 	}
 }
-// Method Definition Index: 67665
+// Method Definition Index: 67667
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UIState_op_Equality_mE3DF2A19F1707FD216058643813A4E64D8E7F501 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27574,7 +27574,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UIState_op_Equality_mE3DF2A19F1
 		return;
 	}
 }
-// Method Definition Index: 67666
+// Method Definition Index: 67668
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UIState_op_Inequality_mC842DE1A04C7D4E561EFD3811AF38FAB125C87A9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27616,7 +27616,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UIState_op_Inequality_mC842DE1A
 		return;
 	}
 }
-// Method Definition Index: 67667
+// Method Definition Index: 67669
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InputSystemWarning_op_Implicit_mA7E588B6F84886656218E3F25609B1D9773ACEC3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27653,7 +27653,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InputSystemWarning_op_Implicit_
 		return;
 	}
 }
-// Method Definition Index: 67668
+// Method Definition Index: 67670
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InputSystemWarning_op_Equality_m5C2CCC202969EC1EA0276440A2F71CDAB63F84BB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27695,7 +27695,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InputSystemWarning_op_Equality_
 		return;
 	}
 }
-// Method Definition Index: 67669
+// Method Definition Index: 67671
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InputSystemWarning_op_Inequality_m46CA3C2286928B844BB7D698BBCEBC60BCD3C3D1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27737,7 +27737,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InputSystemWarning_op_Inequalit
 		return;
 	}
 }
-// Method Definition Index: 67670
+// Method Definition Index: 67672
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UIInputHelper_op_Implicit_m5317769B3D1D1CF7911BD0D2D27952534AA038D7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27774,7 +27774,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UIInputHelper_op_Implicit_m5317
 		return;
 	}
 }
-// Method Definition Index: 67671
+// Method Definition Index: 67673
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UIInputHelper_op_Equality_mD57F21F33099170C0267C93C1FE3DAE792F07DFA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27816,7 +27816,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UIInputHelper_op_Equality_mD57F
 		return;
 	}
 }
-// Method Definition Index: 67672
+// Method Definition Index: 67674
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UIInputHelper_op_Inequality_mF5F058D5EF66166FDCDE7F408254B0FD1D35FA22 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27858,7 +27858,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UIInputHelper_op_Inequality_mF5
 		return;
 	}
 }
-// Method Definition Index: 67673
+// Method Definition Index: 67675
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsA2UNotificationsManager_op_Implicit_mCC4CD742FC71855A0CD8FDCB57195F3F09A75657 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27895,7 +27895,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsA2UNotificationsManage
 		return;
 	}
 }
-// Method Definition Index: 67674
+// Method Definition Index: 67676
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsA2UNotificationsManager_op_Equality_mC8632C8DDC26F3A3C4F0D19728ED954F7E9866D4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27937,7 +27937,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsA2UNotificationsManage
 		return;
 	}
 }
-// Method Definition Index: 67675
+// Method Definition Index: 67677
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsA2UNotificationsManager_op_Inequality_m19DA89977156779CF6132239D6BA4024640398AD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27979,7 +27979,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsA2UNotificationsManage
 		return;
 	}
 }
-// Method Definition Index: 67676
+// Method Definition Index: 67678
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsADSManager_op_Implicit_m2B13337178A9CEF4080EE5CC84BA9BB3957BC7A2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28016,7 +28016,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsADSManager_op_Implicit
 		return;
 	}
 }
-// Method Definition Index: 67677
+// Method Definition Index: 67679
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsADSManager_op_Equality_m395E4404A1E2AB972EBF86000DD0FE6B3709267D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28058,7 +28058,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsADSManager_op_Equality
 		return;
 	}
 }
-// Method Definition Index: 67678
+// Method Definition Index: 67680
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsADSManager_op_Inequality_m9E63EE86B89BBCC9FD5D2C01D47D5FD72B00048D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28100,7 +28100,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsADSManager_op_Inequali
 		return;
 	}
 }
-// Method Definition Index: 67679
+// Method Definition Index: 67681
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsExampleTabsManager_op_Implicit_m37C371DBBF95038B7DE7210FE5AF469BD62AE6D4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28137,7 +28137,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsExampleTabsManager_op_
 		return;
 	}
 }
-// Method Definition Index: 67680
+// Method Definition Index: 67682
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsExampleTabsManager_op_Equality_mD1B556173D442A1F75AE89D6A229CAEFA2F15D50 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28179,7 +28179,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsExampleTabsManager_op_
 		return;
 	}
 }
-// Method Definition Index: 67681
+// Method Definition Index: 67683
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsExampleTabsManager_op_Inequality_m2877C6D70C638B938D2BCD19C82300B43490CF88 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28221,7 +28221,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsExampleTabsManager_op_
 		return;
 	}
 }
-// Method Definition Index: 67682
+// Method Definition Index: 67684
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsFriendsManager_op_Implicit_m6A3EA1EEADE702E7A6D021667F522EC75B5FE708 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28258,7 +28258,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsFriendsManager_op_Impl
 		return;
 	}
 }
-// Method Definition Index: 67683
+// Method Definition Index: 67685
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsFriendsManager_op_Equality_m78D8E8566D1B686653E7140C4FD7E61A06A975EE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28300,7 +28300,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsFriendsManager_op_Equa
 		return;
 	}
 }
-// Method Definition Index: 67684
+// Method Definition Index: 67686
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsFriendsManager_op_Inequality_m48710DD269A8E9E558E4FF1D79B0C806A55EAB79 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28342,7 +28342,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsFriendsManager_op_Ineq
 		return;
 	}
 }
-// Method Definition Index: 67685
+// Method Definition Index: 67687
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsGraphAPIManager_op_Implicit_mFADFBA2A28ED9E2C93A02A0396A865D984657149 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28379,7 +28379,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsGraphAPIManager_op_Imp
 		return;
 	}
 }
-// Method Definition Index: 67686
+// Method Definition Index: 67688
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsGraphAPIManager_op_Equality_m5B761A94043D9A13FA6852F4532D2290AEDA607B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28421,7 +28421,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsGraphAPIManager_op_Equ
 		return;
 	}
 }
-// Method Definition Index: 67687
+// Method Definition Index: 67689
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsGraphAPIManager_op_Inequality_m5A480AE6371410A0B0F6B6A33B16EAFB52C7D9C7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28463,7 +28463,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsGraphAPIManager_op_Ine
 		return;
 	}
 }
-// Method Definition Index: 67688
+// Method Definition Index: 67690
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsInitManager_op_Implicit_m37608114DBE164334B9DB814776E0D8238647F2F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28500,7 +28500,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsInitManager_op_Implici
 		return;
 	}
 }
-// Method Definition Index: 67689
+// Method Definition Index: 67691
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsInitManager_op_Equality_m2B406ADCE7C8C63408ED7684ADDA4E43BC6F7BC7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28542,7 +28542,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsInitManager_op_Equalit
 		return;
 	}
 }
-// Method Definition Index: 67690
+// Method Definition Index: 67692
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsInitManager_op_Inequality_m748667D49179F49BA7E920EB6FF245699122411C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28584,7 +28584,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsInitManager_op_Inequal
 		return;
 	}
 }
-// Method Definition Index: 67691
+// Method Definition Index: 67693
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsLoginManager_op_Implicit_m4F26DF22316A389F3D601A821D31D362DBBBB777 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28621,7 +28621,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsLoginManager_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 67692
+// Method Definition Index: 67694
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsLoginManager_op_Equality_m2673CDB9316E87A42D641442FDBFBA005D53FCEA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28663,7 +28663,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsLoginManager_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 67693
+// Method Definition Index: 67695
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsLoginManager_op_Inequality_m4F250B043CAF2687F4263D754E81F23107B4EDE5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28705,7 +28705,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsLoginManager_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 67694
+// Method Definition Index: 67696
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsLogsManager_op_Implicit_mF845E0D14C7109432D27A7AFC617C195B3C5921E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28742,7 +28742,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsLogsManager_op_Implici
 		return;
 	}
 }
-// Method Definition Index: 67695
+// Method Definition Index: 67697
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsLogsManager_op_Equality_m616C9A2FBBFDB84A9D70A203D32825F2546EC95B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28784,7 +28784,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsLogsManager_op_Equalit
 		return;
 	}
 }
-// Method Definition Index: 67696
+// Method Definition Index: 67698
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsLogsManager_op_Inequality_m0C7593E623949F29E4CB00FC35FE2611159FA2AF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28826,7 +28826,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsLogsManager_op_Inequal
 		return;
 	}
 }
-// Method Definition Index: 67697
+// Method Definition Index: 67699
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsPhysicalGamepadManager_op_Implicit_m9C5B59A6CC5BBF3D98A7001854AFFA24A7C47234 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28863,7 +28863,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsPhysicalGamepadManager
 		return;
 	}
 }
-// Method Definition Index: 67698
+// Method Definition Index: 67700
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsPhysicalGamepadManager_op_Equality_m6FD82323EDBAE0AD624CD6197B478D103761F976 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28905,7 +28905,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsPhysicalGamepadManager
 		return;
 	}
 }
-// Method Definition Index: 67699
+// Method Definition Index: 67701
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsPhysicalGamepadManager_op_Inequality_m92C223E51C66DE9B1D06AC52C5D6AA5E62AF45A7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28947,7 +28947,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsPhysicalGamepadManager
 		return;
 	}
 }
-// Method Definition Index: 67700
+// Method Definition Index: 67702
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsPurchaseManager_op_Implicit_mF82187C8E38F5816AFB44088C5A0EF78ABBD8E71 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28984,7 +28984,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsPurchaseManager_op_Imp
 		return;
 	}
 }
-// Method Definition Index: 67701
+// Method Definition Index: 67703
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsPurchaseManager_op_Equality_mD4F9A926D32D6F70A593CEE1D95D84344C369CA8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29026,7 +29026,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsPurchaseManager_op_Equ
 		return;
 	}
 }
-// Method Definition Index: 67702
+// Method Definition Index: 67704
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsPurchaseManager_op_Inequality_m0DB449F218EF4ACE8FC878627890B7FF7F69858C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29068,7 +29068,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsPurchaseManager_op_Ine
 		return;
 	}
 }
-// Method Definition Index: 67703
+// Method Definition Index: 67705
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsReferralsManager_op_Implicit_m9498FCE257814D6FCC254316784CD907C0820C94 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29105,7 +29105,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsReferralsManager_op_Im
 		return;
 	}
 }
-// Method Definition Index: 67704
+// Method Definition Index: 67706
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsReferralsManager_op_Equality_m9137DAC9E5D1AB4E90617EC27894BBE70731496B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29147,7 +29147,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsReferralsManager_op_Eq
 		return;
 	}
 }
-// Method Definition Index: 67705
+// Method Definition Index: 67707
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsReferralsManager_op_Inequality_m9E7E24A117889A32FA05D5ABB4EC20347ECE559A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29189,7 +29189,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsReferralsManager_op_In
 		return;
 	}
 }
-// Method Definition Index: 67706
+// Method Definition Index: 67708
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsShareManager_op_Implicit_m9F6D63367FE876A15614FD91DE0043DFD8727F70 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29226,7 +29226,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsShareManager_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 67707
+// Method Definition Index: 67709
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsShareManager_op_Equality_m561CF483CD5170886F71DFD4333A7420B685EC3B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29268,7 +29268,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsShareManager_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 67708
+// Method Definition Index: 67710
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsShareManager_op_Inequality_mBCE15F1F910BBCF676174FDB2903078416A56EAE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29310,7 +29310,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsShareManager_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 67709
+// Method Definition Index: 67711
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsSoftKeyboardManager_op_Implicit_mC660CB1CC4F1A0FFA7D6EF8C5223AD43C52632FB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29347,7 +29347,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsSoftKeyboardManager_op
 		return;
 	}
 }
-// Method Definition Index: 67710
+// Method Definition Index: 67712
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsSoftKeyboardManager_op_Equality_m5906A69BD17C5FC5BCA6550FDAA127521413BF60 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29389,7 +29389,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsSoftKeyboardManager_op
 		return;
 	}
 }
-// Method Definition Index: 67711
+// Method Definition Index: 67713
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsSoftKeyboardManager_op_Inequality_m1E6A53A1BC45EAA162DE7AB41DC0593B1E03CF83 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29431,7 +29431,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsSoftKeyboardManager_op
 		return;
 	}
 }
-// Method Definition Index: 67712
+// Method Definition Index: 67714
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsTournamentsManager_op_Implicit_mAFCD4069F1CCCEB6260F0B5585ED79843A1DCD22 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29468,7 +29468,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsTournamentsManager_op_
 		return;
 	}
 }
-// Method Definition Index: 67713
+// Method Definition Index: 67715
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsTournamentsManager_op_Equality_mF1F8FE22D3FF6109818344023D80D9BC18E4B404 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29510,7 +29510,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsTournamentsManager_op_
 		return;
 	}
 }
-// Method Definition Index: 67714
+// Method Definition Index: 67716
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsTournamentsManager_op_Inequality_mBDE56276DD5F217EC8689B90FBB1364131D29B41 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29552,7 +29552,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsTournamentsManager_op_
 		return;
 	}
 }
-// Method Definition Index: 67715
+// Method Definition Index: 67717
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsVirtualGamepadManager_op_Implicit_m549271A2C89B00D203DEEE8256DB74AA0FFD7814 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29589,7 +29589,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsVirtualGamepadManager_
 		return;
 	}
 }
-// Method Definition Index: 67716
+// Method Definition Index: 67718
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsVirtualGamepadManager_op_Equality_mA5173B0AD2135BB7C015C180C3E2FF7BEA5ED03F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29631,7 +29631,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsVirtualGamepadManager_
 		return;
 	}
 }
-// Method Definition Index: 67717
+// Method Definition Index: 67719
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsVirtualGamepadManager_op_Inequality_mDA4FA8FED714EB1C724E6B10FF7D3D8BA51E30CA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29673,7 +29673,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FBWindowsVirtualGamepadManager_
 		return;
 	}
 }
-// Method Definition Index: 67718
+// Method Definition Index: 67720
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AccountManager_op_Implicit_mF4DB1E99CFE538B95DCA8F15CE5616AAD7F8810C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29710,7 +29710,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AccountManager_op_Implicit_mF4D
 		return;
 	}
 }
-// Method Definition Index: 67719
+// Method Definition Index: 67721
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AccountManager_op_Equality_mA338EBBC7EAA75791A5F7CDB9C5F7245243CB016 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29752,7 +29752,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AccountManager_op_Equality_mA33
 		return;
 	}
 }
-// Method Definition Index: 67720
+// Method Definition Index: 67722
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AccountManager_op_Inequality_m28C8165A0D95E2F217BD139B571DC9FE524F1393 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29794,7 +29794,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AccountManager_op_Inequality_m2
 		return;
 	}
 }
-// Method Definition Index: 67721
+// Method Definition Index: 67723
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AccountPanelScaler_op_Implicit_m1B69934FB9C0CDCC43D3E9AA24F41FD44AC36039 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29831,7 +29831,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AccountPanelScaler_op_Implicit_
 		return;
 	}
 }
-// Method Definition Index: 67722
+// Method Definition Index: 67724
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AccountPanelScaler_op_Equality_m5D8F42C3923122E536CB734EF510E6626A502056 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29873,7 +29873,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AccountPanelScaler_op_Equality_
 		return;
 	}
 }
-// Method Definition Index: 67723
+// Method Definition Index: 67725
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AccountPanelScaler_op_Inequality_mFB902713771FAEB48C141B466C9D4D58E56881C1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29915,7 +29915,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AccountPanelScaler_op_Inequalit
 		return;
 	}
 }
-// Method Definition Index: 67724
+// Method Definition Index: 67726
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AccountRowScaler_op_Implicit_mD973C44EB205AB1503A32DEAA87528DDB3AFABB6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29952,7 +29952,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AccountRowScaler_op_Implicit_mD
 		return;
 	}
 }
-// Method Definition Index: 67725
+// Method Definition Index: 67727
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AccountRowScaler_op_Equality_m5005E4E305E47BEC996BAC73DA84936699E1094D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29994,7 +29994,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AccountRowScaler_op_Equality_m5
 		return;
 	}
 }
-// Method Definition Index: 67726
+// Method Definition Index: 67728
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AccountRowScaler_op_Inequality_m70FC9E6226F5DAA1EE7097DD506E035660D5D1AC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30036,7 +30036,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AccountRowScaler_op_Inequality_
 		return;
 	}
 }
-// Method Definition Index: 67727
+// Method Definition Index: 67729
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AdManager_op_Implicit_m8FC1B7286AA9802AF976D4026E8E5FFF4EFC08B6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30073,7 +30073,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AdManager_op_Implicit_m8FC1B728
 		return;
 	}
 }
-// Method Definition Index: 67728
+// Method Definition Index: 67730
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AdManager_op_Equality_m977101DA5E8485671163F066E56A3D9C76586F54 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30115,7 +30115,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AdManager_op_Equality_m977101DA
 		return;
 	}
 }
-// Method Definition Index: 67729
+// Method Definition Index: 67731
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AdManager_op_Inequality_m579F35BE3555AC16207751B8071B5270FE513AC4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30157,7 +30157,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AdManager_op_Inequality_m579F35
 		return;
 	}
 }
-// Method Definition Index: 67730
+// Method Definition Index: 67732
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AppleAuthenticationManager_op_Implicit_m27E151968963B8B313893D935E24C20F86283F08 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30194,7 +30194,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AppleAuthenticationManager_op_I
 		return;
 	}
 }
-// Method Definition Index: 67731
+// Method Definition Index: 67733
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AppleAuthenticationManager_op_Equality_m30558222EF8A79462F940E31DC264C51BE8BA067 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30236,7 +30236,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AppleAuthenticationManager_op_E
 		return;
 	}
 }
-// Method Definition Index: 67732
+// Method Definition Index: 67734
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AppleAuthenticationManager_op_Inequality_m9CABBF1226B706450A54C553B02A45D744BB644E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30278,7 +30278,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AppleAuthenticationManager_op_I
 		return;
 	}
 }
-// Method Definition Index: 67733
+// Method Definition Index: 67735
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AuthenticationManager_op_Implicit_mB39CF1EBA2E5CDAB0FCD25020E30AA20D3647AE7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30315,7 +30315,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AuthenticationManager_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 67734
+// Method Definition Index: 67736
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AuthenticationManager_op_Equality_m742238D12D16D0B631D3A4B3C83F7AE374ED26FC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30357,7 +30357,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AuthenticationManager_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 67735
+// Method Definition Index: 67737
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AuthenticationManager_op_Inequality_m9F2AB189ECE6720A688E0BA8DD760F61457F0203 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30399,7 +30399,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AuthenticationManager_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 67736
+// Method Definition Index: 67738
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AvatarSelector_op_Implicit_m61C83EF856DF53EDE02EF7F45E35A3E084B035C4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30436,7 +30436,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AvatarSelector_op_Implicit_m61C
 		return;
 	}
 }
-// Method Definition Index: 67737
+// Method Definition Index: 67739
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AvatarSelector_op_Equality_mB70C8B582F37DF1849212B9C8B7FBBC1557B8019 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30478,7 +30478,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AvatarSelector_op_Equality_mB70
 		return;
 	}
 }
-// Method Definition Index: 67738
+// Method Definition Index: 67740
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AvatarSelector_op_Inequality_m1FF6D45EB794ADA8FBA176FF7186ACC1C9424745 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30520,7 +30520,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_AvatarSelector_op_Inequality_m1
 		return;
 	}
 }
-// Method Definition Index: 67739
+// Method Definition Index: 67741
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BackendAuthService_op_Implicit_m06D30D77695A99ECC6234C262F87B56C18B72310 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30557,7 +30557,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BackendAuthService_op_Implicit_
 		return;
 	}
 }
-// Method Definition Index: 67740
+// Method Definition Index: 67742
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BackendAuthService_op_Equality_m44E5923B7AD615CA441F355A2B3B799BD03DFC4A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30599,7 +30599,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BackendAuthService_op_Equality_
 		return;
 	}
 }
-// Method Definition Index: 67741
+// Method Definition Index: 67743
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BackendAuthService_op_Inequality_m3279B10B5EDAA642B9538046E1FA801D74C655F5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30641,7 +30641,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BackendAuthService_op_Inequalit
 		return;
 	}
 }
-// Method Definition Index: 67742
+// Method Definition Index: 67744
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BackendConfig_op_Implicit_m415F7BAA89828FECF9835B33CB1947D29F6E7566 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30678,7 +30678,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BackendConfig_op_Implicit_m415F
 		return;
 	}
 }
-// Method Definition Index: 67743
+// Method Definition Index: 67745
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BackendConfig_op_Equality_mAF40ECF3E2DE7D237FFA2D2033AF60620E5BF8F4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30720,7 +30720,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BackendConfig_op_Equality_mAF40
 		return;
 	}
 }
-// Method Definition Index: 67744
+// Method Definition Index: 67746
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BackendConfig_op_Inequality_m41DFD8EA334580B10DDD386D04625F6960FD313C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30762,7 +30762,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_BackendConfig_op_Inequality_m41
 		return;
 	}
 }
-// Method Definition Index: 67745
+// Method Definition Index: 67747
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_CPU_op_Implicit_m909326B745652EBBC210FC204C9907D359F9C9A7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30799,7 +30799,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_CPU_op_Implicit_m909326B745652E
 		return;
 	}
 }
-// Method Definition Index: 67746
+// Method Definition Index: 67748
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_CPU_op_Equality_m426D16BDEBF2D1B8ED3EE0D91288045B9B81AD48 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30841,7 +30841,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_CPU_op_Equality_m426D16BDEBF2D1
 		return;
 	}
 }
-// Method Definition Index: 67747
+// Method Definition Index: 67749
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_CPU_op_Inequality_m7CF400DCD828E6EA47E06A5A0C33F81BCD7DBD65 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30883,7 +30883,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_CPU_op_Inequality_m7CF400DCD828
 		return;
 	}
 }
-// Method Definition Index: 67748
+// Method Definition Index: 67750
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ChampionshipUI_op_Implicit_m301387A51E45CA25107CF1CB8BDB7319CDA53261 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30920,7 +30920,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ChampionshipUI_op_Implicit_m301
 		return;
 	}
 }
-// Method Definition Index: 67749
+// Method Definition Index: 67751
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ChampionshipUI_op_Equality_m646E98556F915B1BCF58C1C2BF52DF6C560DAA7D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -30962,7 +30962,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ChampionshipUI_op_Equality_m646
 		return;
 	}
 }
-// Method Definition Index: 67750
+// Method Definition Index: 67752
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ChampionshipUI_op_Inequality_mE547109B8A298666E515565DD32DEAF74769B5DE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31004,7 +31004,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ChampionshipUI_op_Inequality_mE
 		return;
 	}
 }
-// Method Definition Index: 67751
+// Method Definition Index: 67753
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_CurrencyDisplayUI_op_Implicit_m94BD1ECF4645BBF99A5354621F1738C150283C31 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31041,7 +31041,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_CurrencyDisplayUI_op_Implicit_m
 		return;
 	}
 }
-// Method Definition Index: 67752
+// Method Definition Index: 67754
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_CurrencyDisplayUI_op_Equality_mF0D883C8540A8BE1EEFA5CFFD24E9BE3EA3A9458 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31083,7 +31083,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_CurrencyDisplayUI_op_Equality_m
 		return;
 	}
 }
-// Method Definition Index: 67753
+// Method Definition Index: 67755
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_CurrencyDisplayUI_op_Inequality_mC937FBBBE4A5CE0EB0B102305ADFCB0C45712C69 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31125,7 +31125,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_CurrencyDisplayUI_op_Inequality
 		return;
 	}
 }
-// Method Definition Index: 67754
+// Method Definition Index: 67756
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_CurrencyFlyAnimator_op_Implicit_m8E4767C477A5A6D648B96F1D2F96739871134745 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31162,7 +31162,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_CurrencyFlyAnimator_op_Implicit
 		return;
 	}
 }
-// Method Definition Index: 67755
+// Method Definition Index: 67757
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_CurrencyFlyAnimator_op_Equality_m04684B8F2CF4722BD9F02D86CB51192E3D8CC7A2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31204,7 +31204,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_CurrencyFlyAnimator_op_Equality
 		return;
 	}
 }
-// Method Definition Index: 67756
+// Method Definition Index: 67758
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_CurrencyFlyAnimator_op_Inequality_m2B7B38A85817C8B7B71880C75DB31017510869EC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31246,7 +31246,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_CurrencyFlyAnimator_op_Inequali
 		return;
 	}
 }
-// Method Definition Index: 67757
+// Method Definition Index: 67759
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DailyRewardManager_op_Implicit_m95D75B438F8B86E6B7F4AB19C1124A045FCF2EDE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31283,7 +31283,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DailyRewardManager_op_Implicit_
 		return;
 	}
 }
-// Method Definition Index: 67758
+// Method Definition Index: 67760
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DailyRewardManager_op_Equality_m1E129967BBE3963C1B98F190BBEDF22A39535349 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31325,7 +31325,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DailyRewardManager_op_Equality_
 		return;
 	}
 }
-// Method Definition Index: 67759
+// Method Definition Index: 67761
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DailyRewardManager_op_Inequality_m3742ABF7FF226581A84CE4685368A84B3166892D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31367,7 +31367,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DailyRewardManager_op_Inequalit
 		return;
 	}
 }
-// Method Definition Index: 67760
+// Method Definition Index: 67762
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DiagnosticHelper_op_Implicit_m4FD83D8BA8B44726C41ACF47A27C2AF308DDE853 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31404,7 +31404,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DiagnosticHelper_op_Implicit_m4
 		return;
 	}
 }
-// Method Definition Index: 67761
+// Method Definition Index: 67763
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DiagnosticHelper_op_Equality_m1DD80C8BA8862D26669ABDF81D95ACBEBF789BD5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31446,7 +31446,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DiagnosticHelper_op_Equality_m1
 		return;
 	}
 }
-// Method Definition Index: 67762
+// Method Definition Index: 67764
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DiagnosticHelper_op_Inequality_m6CAD7C0B787F775F23929816ABEFC6DE76C6E025 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31488,7 +31488,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DiagnosticHelper_op_Inequality_
 		return;
 	}
 }
-// Method Definition Index: 67763
+// Method Definition Index: 67765
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DiceScaler_op_Implicit_mED103D794C6FA2ACE26F11D6FE984769559840B4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31525,7 +31525,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DiceScaler_op_Implicit_mED103D7
 		return;
 	}
 }
-// Method Definition Index: 67764
+// Method Definition Index: 67766
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DiceScaler_op_Equality_m3384743680445F37EC22F177A014566FF2B1B47D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31567,7 +31567,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DiceScaler_op_Equality_m3384743
 		return;
 	}
 }
-// Method Definition Index: 67765
+// Method Definition Index: 67767
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DiceScaler_op_Inequality_m85ADC929FB7D4F389CED92AC289EE2DEB7260450 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31609,7 +31609,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DiceScaler_op_Inequality_m85ADC
 		return;
 	}
 }
-// Method Definition Index: 67766
+// Method Definition Index: 67768
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DiceVisibilityManager_op_Implicit_m122D344024B9346728C4C28F796C15F9B42122E5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31646,7 +31646,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DiceVisibilityManager_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 67767
+// Method Definition Index: 67769
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DiceVisibilityManager_op_Equality_m4A1838A4605DDBD63E0EFC68EA40D0245483C28F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31688,7 +31688,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DiceVisibilityManager_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 67768
+// Method Definition Index: 67770
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DiceVisibilityManager_op_Inequality_m704B58173C24CA7324BB8D77A4B6741A0FD485BD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31730,7 +31730,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DiceVisibilityManager_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 67769
+// Method Definition Index: 67771
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DicesController_op_Implicit_mBD39DE402A583FDABDEC984632B2362958BA63D2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31767,7 +31767,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DicesController_op_Implicit_mBD
 		return;
 	}
 }
-// Method Definition Index: 67770
+// Method Definition Index: 67772
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DicesController_op_Equality_mA75ED793FD7CAE7AE889AF5C468D075836BFCE78 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31809,7 +31809,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DicesController_op_Equality_mA7
 		return;
 	}
 }
-// Method Definition Index: 67771
+// Method Definition Index: 67773
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DicesController_op_Inequality_m82A7A443BDEE94D2D028A79C167A0B2F8F5655B5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31851,7 +31851,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DicesController_op_Inequality_m
 		return;
 	}
 }
-// Method Definition Index: 67772
+// Method Definition Index: 67774
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FacebookSignInManager_op_Implicit_mDC07807B340CA472F262D547ABC045DEDC7A61BC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31888,7 +31888,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FacebookSignInManager_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 67773
+// Method Definition Index: 67775
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FacebookSignInManager_op_Equality_mF0FA6AF78EA37AEE900BBA269611821B6AB5C62A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31930,7 +31930,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FacebookSignInManager_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 67774
+// Method Definition Index: 67776
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FacebookSignInManager_op_Inequality_m6B1F45F94F4AAF4600D256DC5DB96494523CD300 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -31972,7 +31972,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FacebookSignInManager_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 67775
+// Method Definition Index: 67777
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FallingCoinsManager_op_Implicit_m0E56272FCF701254FAA52DE1FFDDCBEDEEAF4009 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32009,7 +32009,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FallingCoinsManager_op_Implicit
 		return;
 	}
 }
-// Method Definition Index: 67776
+// Method Definition Index: 67778
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FallingCoinsManager_op_Equality_m3736D37CDC434210D9BB7D4163988C1772F0273F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32051,7 +32051,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FallingCoinsManager_op_Equality
 		return;
 	}
 }
-// Method Definition Index: 67777
+// Method Definition Index: 67779
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FallingCoinsManager_op_Inequality_m4A3CA034A818C0C4DB79222EFDC442B78B082403 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32093,7 +32093,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FallingCoinsManager_op_Inequali
 		return;
 	}
 }
-// Method Definition Index: 67778
+// Method Definition Index: 67780
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FirebaseManager_op_Implicit_mD125DEBDF0CFE6155615E4A247185FE3D2A0C016 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32130,7 +32130,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FirebaseManager_op_Implicit_mD1
 		return;
 	}
 }
-// Method Definition Index: 67779
+// Method Definition Index: 67781
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FirebaseManager_op_Equality_m0A3C121D3CA2AA7F394A37F31F69A826BE17271A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32172,7 +32172,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FirebaseManager_op_Equality_m0A
 		return;
 	}
 }
-// Method Definition Index: 67780
+// Method Definition Index: 67782
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FirebaseManager_op_Inequality_mD097031385D53464ED69AC80C0905E70369527D3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32214,7 +32214,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FirebaseManager_op_Inequality_m
 		return;
 	}
 }
-// Method Definition Index: 67781
+// Method Definition Index: 67783
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FriendRowScaler_op_Implicit_mCA750FBD83093379DD124110D583AE9C377C3A0E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32251,7 +32251,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FriendRowScaler_op_Implicit_mCA
 		return;
 	}
 }
-// Method Definition Index: 67782
+// Method Definition Index: 67784
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FriendRowScaler_op_Equality_mB4754834E7A8A5916C57ED03FB21D18D80F7D148 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32293,7 +32293,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FriendRowScaler_op_Equality_mB4
 		return;
 	}
 }
-// Method Definition Index: 67783
+// Method Definition Index: 67785
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FriendRowScaler_op_Inequality_mD4F41A10809E17F30EEF48C5252CA2A11E58AB17 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32335,7 +32335,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FriendRowScaler_op_Inequality_m
 		return;
 	}
 }
-// Method Definition Index: 67784
+// Method Definition Index: 67786
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FriendRowUI_op_Implicit_m590E9EB4B1399B1B622137358E8CCE26DBC610FF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32372,7 +32372,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FriendRowUI_op_Implicit_m590E9E
 		return;
 	}
 }
-// Method Definition Index: 67785
+// Method Definition Index: 67787
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FriendRowUI_op_Equality_m21708660C6967339FC4FD2DC62DBA5B778D5F555 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32414,7 +32414,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FriendRowUI_op_Equality_m217086
 		return;
 	}
 }
-// Method Definition Index: 67786
+// Method Definition Index: 67788
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FriendRowUI_op_Inequality_m94579F8DC7E6EF31A47A6120E40E64AE4863EA88 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32456,7 +32456,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_FriendRowUI_op_Inequality_m9457
 		return;
 	}
 }
-// Method Definition Index: 67787
+// Method Definition Index: 67789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GameDebugViewer_op_Implicit_m271C97B1506967A4B0C2551C85BDF2C2F083F34D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32493,7 +32493,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GameDebugViewer_op_Implicit_m27
 		return;
 	}
 }
-// Method Definition Index: 67788
+// Method Definition Index: 67790
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GameDebugViewer_op_Equality_m02AAA506DBF73DDA5F843922CFA3141C90A881DF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32535,7 +32535,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GameDebugViewer_op_Equality_m02
 		return;
 	}
 }
-// Method Definition Index: 67789
+// Method Definition Index: 67791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GameDebugViewer_op_Inequality_mDB8D2B810E51C0C6CF86C3494EDD3B954D020BBC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32577,7 +32577,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GameDebugViewer_op_Inequality_m
 		return;
 	}
 }
-// Method Definition Index: 67790
+// Method Definition Index: 67792
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GameManager_op_Implicit_mD303077650F086693D75B249C61D35D5903A7736 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32614,7 +32614,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GameManager_op_Implicit_mD30307
 		return;
 	}
 }
-// Method Definition Index: 67791
+// Method Definition Index: 67793
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GameManager_op_Equality_m249A2878ADAAEAD27656DA2075C8A6E8C18570D7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32656,7 +32656,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GameManager_op_Equality_m249A28
 		return;
 	}
 }
-// Method Definition Index: 67792
+// Method Definition Index: 67794
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GameManager_op_Inequality_m358C2AFFF8F0DAE2E8EA21A49C01FF3DFEA52005 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32698,7 +32698,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GameManager_op_Inequality_m358C
 		return;
 	}
 }
-// Method Definition Index: 67793
+// Method Definition Index: 67795
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GamePlayReferenceScaler_op_Implicit_m337B04144A4F3BEC759FEE956BA6AE0B930E5776 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32735,7 +32735,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GamePlayReferenceScaler_op_Impl
 		return;
 	}
 }
-// Method Definition Index: 67794
+// Method Definition Index: 67796
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GamePlayReferenceScaler_op_Equality_mD1686C055B0E76C4BB76F81360D96F64297BEDAC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32777,7 +32777,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GamePlayReferenceScaler_op_Equa
 		return;
 	}
 }
-// Method Definition Index: 67795
+// Method Definition Index: 67797
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GamePlayReferenceScaler_op_Inequality_m1B4F184700C8A070D09F1198153402A9F389E15B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32819,7 +32819,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GamePlayReferenceScaler_op_Ineq
 		return;
 	}
 }
-// Method Definition Index: 67796
+// Method Definition Index: 67798
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GoogleSignInManager_op_Implicit_mB9A7BB73DC9F1F0F8F28A2E2F99D89DD451B6BE3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32856,7 +32856,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GoogleSignInManager_op_Implicit
 		return;
 	}
 }
-// Method Definition Index: 67797
+// Method Definition Index: 67799
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GoogleSignInManager_op_Equality_mD6CD020C672E7B85205C262778F8668C88D402D8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32898,7 +32898,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GoogleSignInManager_op_Equality
 		return;
 	}
 }
-// Method Definition Index: 67798
+// Method Definition Index: 67800
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GoogleSignInManager_op_Inequality_m47F16A6A497041B7A1933684536BF61A9ABBADBA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32940,7 +32940,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_GoogleSignInManager_op_Inequali
 		return;
 	}
 }
-// Method Definition Index: 67799
+// Method Definition Index: 67801
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_HelpAndSupportManager_op_Implicit_mDC8830214C5D51664483D871F9B4950273E3072C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -32977,7 +32977,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_HelpAndSupportManager_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 67800
+// Method Definition Index: 67802
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_HelpAndSupportManager_op_Equality_m2B8BFE3F7F6FB4DF412D8B9BAF078078AFE2D54C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33019,7 +33019,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_HelpAndSupportManager_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 67801
+// Method Definition Index: 67803
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_HelpAndSupportManager_op_Inequality_m02E52ED2E215AED5915A4B4B9D83DE6ED82576B2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33061,7 +33061,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_HelpAndSupportManager_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 67802
+// Method Definition Index: 67804
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_HorizontalLobbyManager_op_Implicit_mF4EF6E3F0BA8BCCBD0571BFD9BFC23DA5C64A22A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33098,7 +33098,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_HorizontalLobbyManager_op_Impli
 		return;
 	}
 }
-// Method Definition Index: 67803
+// Method Definition Index: 67805
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_HorizontalLobbyManager_op_Equality_mF7CF2F53E483AA10A85A41B52CA2620FE8178734 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33140,7 +33140,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_HorizontalLobbyManager_op_Equal
 		return;
 	}
 }
-// Method Definition Index: 67804
+// Method Definition Index: 67806
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_HorizontalLobbyManager_op_Inequality_m961C3A81AC8A23112B80D36A4238A10FE662639B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33182,7 +33182,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_HorizontalLobbyManager_op_Inequ
 		return;
 	}
 }
-// Method Definition Index: 67805
+// Method Definition Index: 67807
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_HorizontalLobbyScaler_op_Implicit_m9EE7E4E66BF5C6A1ED477FEC3999DE95D27899FF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33219,7 +33219,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_HorizontalLobbyScaler_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 67806
+// Method Definition Index: 67808
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_HorizontalLobbyScaler_op_Equality_mA13ED69543EDE4F4D6F4A865A90B4FE0DF06AA16 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33261,7 +33261,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_HorizontalLobbyScaler_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 67807
+// Method Definition Index: 67809
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_HorizontalLobbyScaler_op_Inequality_m4583169F3A51B5FAFE70C025C2DE245030BB46B6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33303,7 +33303,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_HorizontalLobbyScaler_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 67808
+// Method Definition Index: 67810
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_HorizontalSwipeTouchZone_op_Implicit_m6BB14EF19E10A7EF27E26D9FFBB4286B4449F3B6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33340,7 +33340,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_HorizontalSwipeTouchZone_op_Imp
 		return;
 	}
 }
-// Method Definition Index: 67809
+// Method Definition Index: 67811
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_HorizontalSwipeTouchZone_op_Equality_mA19712DECE829C76AE326DE30789CE8B4029D109 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33382,7 +33382,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_HorizontalSwipeTouchZone_op_Equ
 		return;
 	}
 }
-// Method Definition Index: 67810
+// Method Definition Index: 67812
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_HorizontalSwipeTouchZone_op_Inequality_m9E20D0A8273D434E4B673E487FD6A728D178A244 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33424,7 +33424,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_HorizontalSwipeTouchZone_op_Ine
 		return;
 	}
 }
-// Method Definition Index: 67811
+// Method Definition Index: 67813
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InAppPurchaseManager_op_Implicit_m2BD27A8A37E8E7FE938E78A29DBFC8D72B58063B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33461,7 +33461,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InAppPurchaseManager_op_Implici
 		return;
 	}
 }
-// Method Definition Index: 67812
+// Method Definition Index: 67814
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InAppPurchaseManager_op_Equality_m930100D0A188CB2188EF3BD2E451CFB2155D45BC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33503,7 +33503,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InAppPurchaseManager_op_Equalit
 		return;
 	}
 }
-// Method Definition Index: 67813
+// Method Definition Index: 67815
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InAppPurchaseManager_op_Inequality_m5D9D3E4CB7EAB1A36640CF171DED18520AB2C61E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33545,7 +33545,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InAppPurchaseManager_op_Inequal
 		return;
 	}
 }
-// Method Definition Index: 67814
+// Method Definition Index: 67816
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InfiniteBackgroundScroller_op_Implicit_m6F86FD480F09B651E4D1EF9A74DB102503EC0252 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33582,7 +33582,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InfiniteBackgroundScroller_op_I
 		return;
 	}
 }
-// Method Definition Index: 67815
+// Method Definition Index: 67817
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InfiniteBackgroundScroller_op_Equality_mB5BAFF69CCA2276A16C4A8CCD06B7D7E3C52318C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33624,7 +33624,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InfiniteBackgroundScroller_op_E
 		return;
 	}
 }
-// Method Definition Index: 67816
+// Method Definition Index: 67818
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InfiniteBackgroundScroller_op_Inequality_m893BDAA957D84ED1F1E30EAB8D7CA5EBD89A0767 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33666,7 +33666,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InfiniteBackgroundScroller_op_I
 		return;
 	}
 }
-// Method Definition Index: 67817
+// Method Definition Index: 67819
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InviteFriendManager_op_Implicit_mB75959B538477C29CCE329953B91BFF179BF55E2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33703,7 +33703,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InviteFriendManager_op_Implicit
 		return;
 	}
 }
-// Method Definition Index: 67818
+// Method Definition Index: 67820
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InviteFriendManager_op_Equality_m90ABD0964B106C4C6CC9F21AB200F61D876CAB57 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33745,7 +33745,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InviteFriendManager_op_Equality
 		return;
 	}
 }
-// Method Definition Index: 67819
+// Method Definition Index: 67821
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InviteFriendManager_op_Inequality_mEBFF29939E85B9825313F0E8255C8870883A4524 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33787,7 +33787,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InviteFriendManager_op_Inequali
 		return;
 	}
 }
-// Method Definition Index: 67820
+// Method Definition Index: 67822
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InviteFriendsScaler_op_Implicit_mE83CB607523AC5F089FD03E36F73B748CCAE47D6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33824,7 +33824,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InviteFriendsScaler_op_Implicit
 		return;
 	}
 }
-// Method Definition Index: 67821
+// Method Definition Index: 67823
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InviteFriendsScaler_op_Equality_mCC4F1278BFF49A44DC522978DB186C285D86A8A0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33866,7 +33866,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InviteFriendsScaler_op_Equality
 		return;
 	}
 }
-// Method Definition Index: 67822
+// Method Definition Index: 67824
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InviteFriendsScaler_op_Inequality_m73587B9CD1C8638710D628C2D0A0C87267BD7EF8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33908,7 +33908,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_InviteFriendsScaler_op_Inequali
 		return;
 	}
 }
-// Method Definition Index: 67823
+// Method Definition Index: 67825
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LeaderboardManager_op_Implicit_mDBD564A28A1E26D6466D04A4B96A2B31CC5BFC77 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33945,7 +33945,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LeaderboardManager_op_Implicit_
 		return;
 	}
 }
-// Method Definition Index: 67824
+// Method Definition Index: 67826
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LeaderboardManager_op_Equality_m9E65D772F345C759F0369E8BB45DD2E5508F01E6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -33987,7 +33987,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LeaderboardManager_op_Equality_
 		return;
 	}
 }
-// Method Definition Index: 67825
+// Method Definition Index: 67827
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LeaderboardManager_op_Inequality_m2575D23B0BCBD3349393D2827E9B6E7ED9B8CDD4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34029,7 +34029,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LeaderboardManager_op_Inequalit
 		return;
 	}
 }
-// Method Definition Index: 67826
+// Method Definition Index: 67828
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LeaderboardRowScaler_op_Implicit_m19E4B71640635C2B3C399E39F604D17DB1052EA3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34066,7 +34066,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LeaderboardRowScaler_op_Implici
 		return;
 	}
 }
-// Method Definition Index: 67827
+// Method Definition Index: 67829
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LeaderboardRowScaler_op_Equality_m8AE13467D7C0076007AFBA2D8B5F30B22A072AB1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34108,7 +34108,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LeaderboardRowScaler_op_Equalit
 		return;
 	}
 }
-// Method Definition Index: 67828
+// Method Definition Index: 67830
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LeaderboardRowScaler_op_Inequality_m1DA1E96C5D92BD259E3F9CB6E93099E837C941A1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34150,7 +34150,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LeaderboardRowScaler_op_Inequal
 		return;
 	}
 }
-// Method Definition Index: 67829
+// Method Definition Index: 67831
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LeaderboardRowUI_op_Implicit_m8E7E763479CB85C7A0B0E62893717240E4C65798 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34187,7 +34187,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LeaderboardRowUI_op_Implicit_m8
 		return;
 	}
 }
-// Method Definition Index: 67830
+// Method Definition Index: 67832
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LeaderboardRowUI_op_Equality_m45F27793FB8712B00AAD51BF75177A6D6DB99E99 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34229,7 +34229,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LeaderboardRowUI_op_Equality_m4
 		return;
 	}
 }
-// Method Definition Index: 67831
+// Method Definition Index: 67833
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LeaderboardRowUI_op_Inequality_mC47E5B04F775FB1FCD08223A9E95B1BB15F3FD21 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34271,7 +34271,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LeaderboardRowUI_op_Inequality_
 		return;
 	}
 }
-// Method Definition Index: 67832
+// Method Definition Index: 67834
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LobbyGameObjectUI_op_Implicit_m8E3C849DBB973435C9EA64FC9EDDB47930DD760F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34308,7 +34308,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LobbyGameObjectUI_op_Implicit_m
 		return;
 	}
 }
-// Method Definition Index: 67833
+// Method Definition Index: 67835
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LobbyGameObjectUI_op_Equality_m4320FA6C94E22F22C8878507644452B64B31B3AF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34350,7 +34350,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LobbyGameObjectUI_op_Equality_m
 		return;
 	}
 }
-// Method Definition Index: 67834
+// Method Definition Index: 67836
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LobbyGameObjectUI_op_Inequality_m30072A8F4D020272DBDD6D0C18AD4B997CBC16E3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34392,7 +34392,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LobbyGameObjectUI_op_Inequality
 		return;
 	}
 }
-// Method Definition Index: 67835
+// Method Definition Index: 67837
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LobbyRowCellView_op_Implicit_mD29BA9DEA122D102455DA04BDC5DA3AF346257FA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34429,7 +34429,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LobbyRowCellView_op_Implicit_mD
 		return;
 	}
 }
-// Method Definition Index: 67836
+// Method Definition Index: 67838
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LobbyRowCellView_op_Equality_m9D3F6A4D6979A25C5CBA90C4E0F6A26961F455BA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34471,7 +34471,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LobbyRowCellView_op_Equality_m9
 		return;
 	}
 }
-// Method Definition Index: 67837
+// Method Definition Index: 67839
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LobbyRowCellView_op_Inequality_m0B2E41D42574E20C1BDC5947B6661B24E07F3A4A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34513,7 +34513,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LobbyRowCellView_op_Inequality_
 		return;
 	}
 }
-// Method Definition Index: 67838
+// Method Definition Index: 67840
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LobbyScaler_op_Implicit_m0FF2478130DDAA06DC14B7AA116FC3ADC68D7B50 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34550,7 +34550,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LobbyScaler_op_Implicit_m0FF247
 		return;
 	}
 }
-// Method Definition Index: 67839
+// Method Definition Index: 67841
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LobbyScaler_op_Equality_mD8DF349A14A269B25356917517D2FBFBB0F9B5C3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34592,7 +34592,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LobbyScaler_op_Equality_mD8DF34
 		return;
 	}
 }
-// Method Definition Index: 67840
+// Method Definition Index: 67842
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LobbyScaler_op_Inequality_m99108B2EFD0C2EAF644A92C4F32CF26A7493DCA5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34634,7 +34634,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LobbyScaler_op_Inequality_m9910
 		return;
 	}
 }
-// Method Definition Index: 67841
+// Method Definition Index: 67843
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LoserScoreScreen_op_Implicit_m55696B258155BE9A6D2CB8FD8CE3245E63AE4919 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34671,7 +34671,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LoserScoreScreen_op_Implicit_m5
 		return;
 	}
 }
-// Method Definition Index: 67842
+// Method Definition Index: 67844
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LoserScoreScreen_op_Equality_m344C0162727323DAB5977C2DE9F789EE8C6A9151 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34713,7 +34713,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LoserScoreScreen_op_Equality_m3
 		return;
 	}
 }
-// Method Definition Index: 67843
+// Method Definition Index: 67845
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LoserScoreScreen_op_Inequality_m3CB8C3124B3867193805CF2DE83B9D1FED404964 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34755,7 +34755,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_LoserScoreScreen_op_Inequality_
 		return;
 	}
 }
-// Method Definition Index: 67844
+// Method Definition Index: 67846
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_MainMenuAvatarDisplay_op_Implicit_mB670705973CF92C2FAFA754996F86B1DA9146A4F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34792,7 +34792,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_MainMenuAvatarDisplay_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 67845
+// Method Definition Index: 67847
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_MainMenuAvatarDisplay_op_Equality_mC4E13DF1436D19FD280A567278B6B20B2135AE0E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34834,7 +34834,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_MainMenuAvatarDisplay_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 67846
+// Method Definition Index: 67848
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_MainMenuAvatarDisplay_op_Inequality_mCFA14F43028C4914BA9B0571C8D654FBB1497556 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34876,7 +34876,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_MainMenuAvatarDisplay_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 67847
+// Method Definition Index: 67849
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_MainMenuScaler_op_Implicit_m67464EF6CF5F403595EE54150A5D259907CD93A6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34913,7 +34913,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_MainMenuScaler_op_Implicit_m674
 		return;
 	}
 }
-// Method Definition Index: 67848
+// Method Definition Index: 67850
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_MainMenuScaler_op_Equality_m84227920FE8F5063F3AC2D050980A099B4AEA8A6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34955,7 +34955,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_MainMenuScaler_op_Equality_m842
 		return;
 	}
 }
-// Method Definition Index: 67849
+// Method Definition Index: 67851
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_MainMenuScaler_op_Inequality_mEAD8046BA33816E1E630286F7356FBA7BF00F95B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34997,7 +34997,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_MainMenuScaler_op_Inequality_mE
 		return;
 	}
 }
-// Method Definition Index: 67850
+// Method Definition Index: 67852
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_MatchRecoveryUIManager_op_Implicit_m6D933EC135BA77C685FF1129C3B5FAF01AB399D0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35034,7 +35034,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_MatchRecoveryUIManager_op_Impli
 		return;
 	}
 }
-// Method Definition Index: 67851
+// Method Definition Index: 67853
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_MatchRecoveryUIManager_op_Equality_mE977B0ED67E69DD2D4504E17309F464F19610DA4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35076,7 +35076,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_MatchRecoveryUIManager_op_Equal
 		return;
 	}
 }
-// Method Definition Index: 67852
+// Method Definition Index: 67854
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_MatchRecoveryUIManager_op_Inequality_mB34F135E974476EF99ADCA177682E6BBD0E1727E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35118,7 +35118,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_MatchRecoveryUIManager_op_Inequ
 		return;
 	}
 }
-// Method Definition Index: 67853
+// Method Definition Index: 67855
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_NotificationPanel_op_Implicit_m7F200AAD84CF08ED1D1824FA0A003BA36E18EC2E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35155,7 +35155,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_NotificationPanel_op_Implicit_m
 		return;
 	}
 }
-// Method Definition Index: 67854
+// Method Definition Index: 67856
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_NotificationPanel_op_Equality_m09AD227456506037D31423B49B60FD2DA87D1EAF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35197,7 +35197,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_NotificationPanel_op_Equality_m
 		return;
 	}
 }
-// Method Definition Index: 67855
+// Method Definition Index: 67857
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_NotificationPanel_op_Inequality_mE074251630E268DBE0F5B29B742F53355E3BBB9C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35239,7 +35239,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_NotificationPanel_op_Inequality
 		return;
 	}
 }
-// Method Definition Index: 67856
+// Method Definition Index: 67858
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_NumberGrid_op_Implicit_mF55039013E4B5CDAE28AB686CC2441C44B2A3571 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35276,7 +35276,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_NumberGrid_op_Implicit_mF550390
 		return;
 	}
 }
-// Method Definition Index: 67857
+// Method Definition Index: 67859
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_NumberGrid_op_Equality_m5CD5FB290E2B3E56F2D712D8FD87E738D21FE872 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35318,7 +35318,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_NumberGrid_op_Equality_m5CD5FB2
 		return;
 	}
 }
-// Method Definition Index: 67858
+// Method Definition Index: 67860
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_NumberGrid_op_Inequality_m84508B73BDEA36203989F8242FBF2F7670E19E4B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35360,7 +35360,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_NumberGrid_op_Inequality_m84508
 		return;
 	}
 }
-// Method Definition Index: 67859
+// Method Definition Index: 67861
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferCardSwipeDetector_op_Implicit_m30D6CBFE1DB174B123E7396BD02AA0146838D6C4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35397,7 +35397,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferCardSwipeDetector_op_Impli
 		return;
 	}
 }
-// Method Definition Index: 67860
+// Method Definition Index: 67862
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferCardSwipeDetector_op_Equality_m62B081C8437B60C07ACD1E1C4C49D6EF4AFB32C9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35439,7 +35439,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferCardSwipeDetector_op_Equal
 		return;
 	}
 }
-// Method Definition Index: 67861
+// Method Definition Index: 67863
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferCardSwipeDetector_op_Inequality_m3306C7D0CFB90B6CB4586836B1BFA7528AEDAFFE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35481,7 +35481,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferCardSwipeDetector_op_Inequ
 		return;
 	}
 }
-// Method Definition Index: 67862
+// Method Definition Index: 67864
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferCarouselScaler_op_Implicit_m55B2294599AB595CF56CC63E18E94533B0BA5D33 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35518,7 +35518,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferCarouselScaler_op_Implicit
 		return;
 	}
 }
-// Method Definition Index: 67863
+// Method Definition Index: 67865
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferCarouselScaler_op_Equality_m63767D214379E10B54C388C9DD75E61C89088F0B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35560,7 +35560,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferCarouselScaler_op_Equality
 		return;
 	}
 }
-// Method Definition Index: 67864
+// Method Definition Index: 67866
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferCarouselScaler_op_Inequality_m5BCFE1D0DDC724ECF961009AA3FDCCCBC2357F61 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35602,7 +35602,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferCarouselScaler_op_Inequali
 		return;
 	}
 }
-// Method Definition Index: 67865
+// Method Definition Index: 67867
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferPanelManager_op_Implicit_m2C2F75A60966ACBD06E4DD1CA13CF3196E3DC8A9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35639,7 +35639,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferPanelManager_op_Implicit_m
 		return;
 	}
 }
-// Method Definition Index: 67866
+// Method Definition Index: 67868
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferPanelManager_op_Equality_m0DAE2FB4EF3F6E9129675749D00670607DC2172A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35681,7 +35681,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferPanelManager_op_Equality_m
 		return;
 	}
 }
-// Method Definition Index: 67867
+// Method Definition Index: 67869
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferPanelManager_op_Inequality_m064BC8685D19ED6FAAF6CE74CE5DCEF64C4CB8AD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35723,7 +35723,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferPanelManager_op_Inequality
 		return;
 	}
 }
-// Method Definition Index: 67868
+// Method Definition Index: 67870
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferPanelScaler_op_Implicit_m7AFACE09535166497E2C13E94E564FD101250001 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35760,7 +35760,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferPanelScaler_op_Implicit_m7
 		return;
 	}
 }
-// Method Definition Index: 67869
+// Method Definition Index: 67871
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferPanelScaler_op_Equality_m137AE1274BE8E77D972228896516B2D2A96C9F93 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35802,7 +35802,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferPanelScaler_op_Equality_m1
 		return;
 	}
 }
-// Method Definition Index: 67870
+// Method Definition Index: 67872
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferPanelScaler_op_Inequality_mC364F98147CC8C0B3699828FB6D9F6489913ED30 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35844,7 +35844,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferPanelScaler_op_Inequality_
 		return;
 	}
 }
-// Method Definition Index: 67871
+// Method Definition Index: 67873
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferSwipeTouchZone_op_Implicit_m89380EFFF6CC9688B8C12A7C7A6EDA3D5B40274C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35881,7 +35881,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferSwipeTouchZone_op_Implicit
 		return;
 	}
 }
-// Method Definition Index: 67872
+// Method Definition Index: 67874
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferSwipeTouchZone_op_Equality_m3CC0F518C304F664AC44A07E40642E7E50E816F6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35923,7 +35923,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferSwipeTouchZone_op_Equality
 		return;
 	}
 }
-// Method Definition Index: 67873
+// Method Definition Index: 67875
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferSwipeTouchZone_op_Inequality_m116B696889F45EC966E428DB55A9A3DF9FD3830D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -35965,7 +35965,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OfferSwipeTouchZone_op_Inequali
 		return;
 	}
 }
-// Method Definition Index: 67874
+// Method Definition Index: 67876
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OffersCarouselManager_op_Implicit_mDCF81ABD4AAF60165EC974AFB065E92EF9E7057F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36002,7 +36002,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OffersCarouselManager_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 67875
+// Method Definition Index: 67877
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OffersCarouselManager_op_Equality_m9E50E20362ACB10F58750E32B6E7138E44B25110 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36044,7 +36044,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OffersCarouselManager_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 67876
+// Method Definition Index: 67878
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OffersCarouselManager_op_Inequality_m5D0848FC039AAD8061386F5C8E2C52081EAAD4F4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36086,7 +36086,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_OffersCarouselManager_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 67877
+// Method Definition Index: 67879
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PlayerDataDebugger_op_Implicit_m17CC593A140555E3A8B9A0AFBC29F148D3007580 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36123,7 +36123,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PlayerDataDebugger_op_Implicit_
 		return;
 	}
 }
-// Method Definition Index: 67878
+// Method Definition Index: 67880
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PlayerDataDebugger_op_Equality_m299B1451B45E40BCECC3588E020139DDD172491C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36165,7 +36165,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PlayerDataDebugger_op_Equality_
 		return;
 	}
 }
-// Method Definition Index: 67879
+// Method Definition Index: 67881
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PlayerDataDebugger_op_Inequality_mEFED70227A1DFCAFF713B856E26A271FF136F25E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36207,7 +36207,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PlayerDataDebugger_op_Inequalit
 		return;
 	}
 }
-// Method Definition Index: 67880
+// Method Definition Index: 67882
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PlayerDropdown_op_Implicit_m9228DCD570E9FB3C19DFC6491FD0562474F1619A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36244,7 +36244,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PlayerDropdown_op_Implicit_m922
 		return;
 	}
 }
-// Method Definition Index: 67881
+// Method Definition Index: 67883
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PlayerDropdown_op_Equality_m785CA12BF64F89DC17C30ED7C0BFD55161BCE336 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36286,7 +36286,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PlayerDropdown_op_Equality_m785
 		return;
 	}
 }
-// Method Definition Index: 67882
+// Method Definition Index: 67884
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PlayerDropdown_op_Inequality_m55DF9C9CF3AEBF79924FFA30A9358C8ECBC0A005 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36328,7 +36328,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PlayerDropdown_op_Inequality_m5
 		return;
 	}
 }
-// Method Definition Index: 67883
+// Method Definition Index: 67885
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PlayerListUI_op_Implicit_mF4763E21229F99C1E5B4847DA8CAC335AB679BAD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36365,7 +36365,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PlayerListUI_op_Implicit_mF4763
 		return;
 	}
 }
-// Method Definition Index: 67884
+// Method Definition Index: 67886
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PlayerListUI_op_Equality_m10D67414049F8B219430C4017528B3AD47EF0B98 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36407,7 +36407,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PlayerListUI_op_Equality_m10D67
 		return;
 	}
 }
-// Method Definition Index: 67885
+// Method Definition Index: 67887
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PlayerListUI_op_Inequality_m2D285A3CE022B627429AAC97592B70466A0E0D7D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36449,7 +36449,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PlayerListUI_op_Inequality_m2D2
 		return;
 	}
 }
-// Method Definition Index: 67886
+// Method Definition Index: 67888
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PlayerProfileUI_op_Implicit_mF46FEBF489BB1424CE08D7A221A1B27D3EB028CF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36486,7 +36486,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PlayerProfileUI_op_Implicit_mF4
 		return;
 	}
 }
-// Method Definition Index: 67887
+// Method Definition Index: 67889
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PlayerProfileUI_op_Equality_m8AFA47FF14ADA211AADE4C5F86E8FCBB561D9A17 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36528,7 +36528,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PlayerProfileUI_op_Equality_m8A
 		return;
 	}
 }
-// Method Definition Index: 67888
+// Method Definition Index: 67890
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PlayerProfileUI_op_Inequality_m8F965707F3FCF91DA7FF04200C5CD2A93607E74E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36570,7 +36570,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PlayerProfileUI_op_Inequality_m
 		return;
 	}
 }
-// Method Definition Index: 67889
+// Method Definition Index: 67891
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ProfileScaler_op_Implicit_mAD3EAE9E27F537BC1D03F067E7A99E3F41712C3C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36607,7 +36607,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ProfileScaler_op_Implicit_mAD3E
 		return;
 	}
 }
-// Method Definition Index: 67890
+// Method Definition Index: 67892
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ProfileScaler_op_Equality_m49C0E7581A2436F13C426EA5A3FEBE0C7465C842 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36649,7 +36649,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ProfileScaler_op_Equality_m49C0
 		return;
 	}
 }
-// Method Definition Index: 67891
+// Method Definition Index: 67893
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ProfileScaler_op_Inequality_mCE5E5B439371B3D26D2C3B4D1FD528F8958EDF14 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36691,7 +36691,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ProfileScaler_op_Inequality_mCE
 		return;
 	}
 }
-// Method Definition Index: 67892
+// Method Definition Index: 67894
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PurchaseLoadingOverlay_op_Implicit_m96CCCC7057CB8E330084DF031896FD1BFEA28E37 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36728,7 +36728,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PurchaseLoadingOverlay_op_Impli
 		return;
 	}
 }
-// Method Definition Index: 67893
+// Method Definition Index: 67895
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PurchaseLoadingOverlay_op_Equality_mE63F24111A20683C37B702DEE2219823F032B26A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36770,7 +36770,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PurchaseLoadingOverlay_op_Equal
 		return;
 	}
 }
-// Method Definition Index: 67894
+// Method Definition Index: 67896
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PurchaseLoadingOverlay_op_Inequality_m5D049378AB2A92A841A3BDE341DE7F2361DCA375 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36812,7 +36812,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_PurchaseLoadingOverlay_op_Inequ
 		return;
 	}
 }
-// Method Definition Index: 67895
+// Method Definition Index: 67897
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_QuitPanelScaler_op_Implicit_mAF83D826856B4BCDC04519CFEE06B32B182CC743 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36849,7 +36849,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_QuitPanelScaler_op_Implicit_mAF
 		return;
 	}
 }
-// Method Definition Index: 67896
+// Method Definition Index: 67898
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_QuitPanelScaler_op_Equality_m449CD2697798AE26822B6F1C3B73A74CE8564E10 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36891,7 +36891,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_QuitPanelScaler_op_Equality_m44
 		return;
 	}
 }
-// Method Definition Index: 67897
+// Method Definition Index: 67899
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_QuitPanelScaler_op_Inequality_m6C839B9508867974E83415357D0535B9AF7647EA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36933,7 +36933,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_QuitPanelScaler_op_Inequality_m
 		return;
 	}
 }
-// Method Definition Index: 67898
+// Method Definition Index: 67900
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ScoreFeedbackUIManager_op_Implicit_m451E303F423DB747B4D5AD9155739534612C109F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -36970,7 +36970,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ScoreFeedbackUIManager_op_Impli
 		return;
 	}
 }
-// Method Definition Index: 67899
+// Method Definition Index: 67901
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ScoreFeedbackUIManager_op_Equality_mFE58C4F02867222639C1C7D2B18D89149D5731CF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37012,7 +37012,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ScoreFeedbackUIManager_op_Equal
 		return;
 	}
 }
-// Method Definition Index: 67900
+// Method Definition Index: 67902
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ScoreFeedbackUIManager_op_Inequality_m480F4D81C004860B51B8A71B27C66E3EAB37AC78 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37054,7 +37054,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ScoreFeedbackUIManager_op_Inequ
 		return;
 	}
 }
-// Method Definition Index: 67901
+// Method Definition Index: 67903
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SelectPlayerPanelController_op_Implicit_m3AC926745270CE79DB5F61423CAEAC5AB80FBEBC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37091,7 +37091,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SelectPlayerPanelController_op_
 		return;
 	}
 }
-// Method Definition Index: 67902
+// Method Definition Index: 67904
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SelectPlayerPanelController_op_Equality_m04B81FC01536B80D452B544DF8EFCFDE50BE064C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37133,7 +37133,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SelectPlayerPanelController_op_
 		return;
 	}
 }
-// Method Definition Index: 67903
+// Method Definition Index: 67905
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SelectPlayerPanelController_op_Inequality_m786F5D6DAE3728D1456EEB41F9A6B2C95ED0DF13 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37175,7 +37175,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SelectPlayerPanelController_op_
 		return;
 	}
 }
-// Method Definition Index: 67904
+// Method Definition Index: 67906
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SettingManager_op_Implicit_m93E67079666FDC5E0B1D9F7DD6672DC16C9125DB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37212,7 +37212,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SettingManager_op_Implicit_m93E
 		return;
 	}
 }
-// Method Definition Index: 67905
+// Method Definition Index: 67907
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SettingManager_op_Equality_m71E97FBDF4C725F1CF956CAD40D1AC297C91137F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37254,7 +37254,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SettingManager_op_Equality_m71E
 		return;
 	}
 }
-// Method Definition Index: 67906
+// Method Definition Index: 67908
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SettingManager_op_Inequality_m07A7E2C4C4B77670FBAF506BA6AC0B051CE01C9A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37296,7 +37296,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SettingManager_op_Inequality_m0
 		return;
 	}
 }
-// Method Definition Index: 67907
+// Method Definition Index: 67909
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ShopGridScaler_op_Implicit_mC7CFD67418CE7E95AEBB990B6916D58D33477651 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37333,7 +37333,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ShopGridScaler_op_Implicit_mC7C
 		return;
 	}
 }
-// Method Definition Index: 67908
+// Method Definition Index: 67910
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ShopGridScaler_op_Equality_mBFA3C36A905CD3F5143F8805B160628B03EA0413 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37375,7 +37375,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ShopGridScaler_op_Equality_mBFA
 		return;
 	}
 }
-// Method Definition Index: 67909
+// Method Definition Index: 67911
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ShopGridScaler_op_Inequality_m4AA659552B8CE104BFCEFDC103F0077E3A8905A9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37417,7 +37417,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ShopGridScaler_op_Inequality_m4
 		return;
 	}
 }
-// Method Definition Index: 67910
+// Method Definition Index: 67912
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ShopUIManager_op_Implicit_m60569B580047456AC471F7FB91EA0CB55678FBC2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37454,7 +37454,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ShopUIManager_op_Implicit_m6056
 		return;
 	}
 }
-// Method Definition Index: 67911
+// Method Definition Index: 67913
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ShopUIManager_op_Equality_m804F7FBF0453E1FBAA1B2D7CE71440D80A92FDA1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37496,7 +37496,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ShopUIManager_op_Equality_m804F
 		return;
 	}
 }
-// Method Definition Index: 67912
+// Method Definition Index: 67914
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ShopUIManager_op_Inequality_m16E3CC7C642737FEF731080A2EFDDC4205A2DEB5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37538,7 +37538,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ShopUIManager_op_Inequality_m16
 		return;
 	}
 }
-// Method Definition Index: 67913
+// Method Definition Index: 67915
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SocketManager_op_Implicit_m458F19F10EB81D87EB4E6A626398755715BD3E18 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37575,7 +37575,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SocketManager_op_Implicit_m458F
 		return;
 	}
 }
-// Method Definition Index: 67914
+// Method Definition Index: 67916
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SocketManager_op_Equality_m0DEF1F917CCF73CFFE66B673DAEEEE797D850C61 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37617,7 +37617,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SocketManager_op_Equality_m0DEF
 		return;
 	}
 }
-// Method Definition Index: 67915
+// Method Definition Index: 67917
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SocketManager_op_Inequality_m2CAD26BCE4F0ECAFF66F6BD076A89D985425F24F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37659,7 +37659,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SocketManager_op_Inequality_m2C
 		return;
 	}
 }
-// Method Definition Index: 67916
+// Method Definition Index: 67918
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SoundManager_op_Implicit_m153FE5022C425675A1D4960D5B1EC530DE42E446 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37696,7 +37696,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SoundManager_op_Implicit_m153FE
 		return;
 	}
 }
-// Method Definition Index: 67917
+// Method Definition Index: 67919
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SoundManager_op_Equality_mEB080AC3D1C5AF3167D2499D5BCC26BDCB45AED0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37738,7 +37738,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SoundManager_op_Equality_mEB080
 		return;
 	}
 }
-// Method Definition Index: 67918
+// Method Definition Index: 67920
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SoundManager_op_Inequality_m4A30363341D078FD4E703E1529AEF5D84BBD0BF6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37780,7 +37780,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SoundManager_op_Inequality_m4A3
 		return;
 	}
 }
-// Method Definition Index: 67919
+// Method Definition Index: 67921
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SplashScreen_op_Implicit_m4CD95024E1344BCF024DF950BC2FF109E5A00C0B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37817,7 +37817,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SplashScreen_op_Implicit_m4CD95
 		return;
 	}
 }
-// Method Definition Index: 67920
+// Method Definition Index: 67922
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SplashScreen_op_Equality_m23EAA2A27382AD2B4FAC19C59E4B286FF9D9C890 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37859,7 +37859,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SplashScreen_op_Equality_m23EAA
 		return;
 	}
 }
-// Method Definition Index: 67921
+// Method Definition Index: 67923
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SplashScreen_op_Inequality_mBCF9DDF31BF70E51C9E5213431957C630984077D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37901,7 +37901,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SplashScreen_op_Inequality_mBCF
 		return;
 	}
 }
-// Method Definition Index: 67922
+// Method Definition Index: 67924
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SwipeTouchZone_op_Implicit_m700B4461BEBF4A3623DF6559B754C49C47DEC2D1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37938,7 +37938,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SwipeTouchZone_op_Implicit_m700
 		return;
 	}
 }
-// Method Definition Index: 67923
+// Method Definition Index: 67925
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SwipeTouchZone_op_Equality_m47366E947165EBBF9AD3A4811AA433BBDB5C7FAA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -37980,7 +37980,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SwipeTouchZone_op_Equality_m473
 		return;
 	}
 }
-// Method Definition Index: 67924
+// Method Definition Index: 67926
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SwipeTouchZone_op_Inequality_m88EB09DF81CE8E4EBF1B922542D1C16B4133FC78 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38022,7 +38022,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_SwipeTouchZone_op_Inequality_m8
 		return;
 	}
 }
-// Method Definition Index: 67925
+// Method Definition Index: 67927
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TicketReplyRowUI_op_Implicit_m401F9A6A3F8A2893DA3D69719C2F44C07AE8C51F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38059,7 +38059,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TicketReplyRowUI_op_Implicit_m4
 		return;
 	}
 }
-// Method Definition Index: 67926
+// Method Definition Index: 67928
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TicketReplyRowUI_op_Equality_mA1929136050290ECBFD284C799473A1C15E6F277 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38101,7 +38101,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TicketReplyRowUI_op_Equality_mA
 		return;
 	}
 }
-// Method Definition Index: 67927
+// Method Definition Index: 67929
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TicketReplyRowUI_op_Inequality_m8F5C02E20A004C5F3A4C6A98F2BE2077C10E9360 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38143,7 +38143,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TicketReplyRowUI_op_Inequality_
 		return;
 	}
 }
-// Method Definition Index: 67928
+// Method Definition Index: 67930
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TicketRowUI_op_Implicit_m23F04FE518B4E700D1C92DC4E556D9B065412962 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38180,7 +38180,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TicketRowUI_op_Implicit_m23F04F
 		return;
 	}
 }
-// Method Definition Index: 67929
+// Method Definition Index: 67931
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TicketRowUI_op_Equality_m7180F129C4EB16A5E6D9CBA313E3508A620C63B7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38222,7 +38222,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TicketRowUI_op_Equality_m7180F1
 		return;
 	}
 }
-// Method Definition Index: 67930
+// Method Definition Index: 67932
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TicketRowUI_op_Inequality_m0D8D9A154A504B8FB698EF684D2524428A6A1BF3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38264,7 +38264,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TicketRowUI_op_Inequality_m0D8D
 		return;
 	}
 }
-// Method Definition Index: 67931
+// Method Definition Index: 67933
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TransactionHistoryRowUI_op_Implicit_m64891A0E97B3386A9B81FA259092336373ECF947 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38301,7 +38301,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TransactionHistoryRowUI_op_Impl
 		return;
 	}
 }
-// Method Definition Index: 67932
+// Method Definition Index: 67934
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TransactionHistoryRowUI_op_Equality_m2CF272A46EF07108454CA2B26C8063A04738B47C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38343,7 +38343,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TransactionHistoryRowUI_op_Equa
 		return;
 	}
 }
-// Method Definition Index: 67933
+// Method Definition Index: 67935
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TransactionHistoryRowUI_op_Inequality_m5F53DBC2FC01594E609BCE728CD03902A603E44D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38385,7 +38385,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TransactionHistoryRowUI_op_Ineq
 		return;
 	}
 }
-// Method Definition Index: 67934
+// Method Definition Index: 67936
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TwinklingStarsManager_op_Implicit_mA2CBB8D4A81F5C77488ABDC272226304555A4552 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38422,7 +38422,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TwinklingStarsManager_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 67935
+// Method Definition Index: 67937
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TwinklingStarsManager_op_Equality_mEE4C95E49FDF3D87AB05FCEEC076218460D05339 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38464,7 +38464,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TwinklingStarsManager_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 67936
+// Method Definition Index: 67938
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TwinklingStarsManager_op_Inequality_mA63AD9BE69A906D6E4D018E89CEB24BC996BFECF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38506,7 +38506,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TwinklingStarsManager_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 67937
+// Method Definition Index: 67939
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UIAspectRatioEnforcer_op_Implicit_m79ECE55A2866E048D96D464DAB295011B510CABB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38543,7 +38543,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UIAspectRatioEnforcer_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 67938
+// Method Definition Index: 67940
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UIAspectRatioEnforcer_op_Equality_mD57E0A9687476C157217FA615EBFC0D24583244D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38585,7 +38585,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UIAspectRatioEnforcer_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 67939
+// Method Definition Index: 67941
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UIAspectRatioEnforcer_op_Inequality_m342A5C526A06BBCAFD11A912B7AD0F7DD43453BB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38627,7 +38627,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UIAspectRatioEnforcer_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 67940
+// Method Definition Index: 67942
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_WatchVideoRewardController_op_Implicit_mBE412E1C97A4FD81CA76B0B8FACEB5692BD03C5B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38664,7 +38664,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_WatchVideoRewardController_op_I
 		return;
 	}
 }
-// Method Definition Index: 67941
+// Method Definition Index: 67943
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_WatchVideoRewardController_op_Equality_m1341BEF239681789ADDDD9AA5658A1F7CF20E7D6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38706,7 +38706,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_WatchVideoRewardController_op_E
 		return;
 	}
 }
-// Method Definition Index: 67942
+// Method Definition Index: 67944
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_WatchVideoRewardController_op_Inequality_mB82F76D80F5BD0EF8E2B24AA7A72A1B80BA5A687 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38748,7 +38748,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_WatchVideoRewardController_op_I
 		return;
 	}
 }
-// Method Definition Index: 67943
+// Method Definition Index: 67945
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_WinnerScreen_op_Implicit_m8B4504CA2B9321C69F663420AFD91B2D2A068E7C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38785,7 +38785,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_WinnerScreen_op_Implicit_m8B450
 		return;
 	}
 }
-// Method Definition Index: 67944
+// Method Definition Index: 67946
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_WinnerScreen_op_Equality_m44A4B12A7B5D99FEE7E2F43943B35AB217E204AE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38827,7 +38827,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_WinnerScreen_op_Equality_m44A4B
 		return;
 	}
 }
-// Method Definition Index: 67945
+// Method Definition Index: 67947
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_WinnerScreen_op_Inequality_mF44FAE789A829324D0C50F6BDE09523B055C58F1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38869,7 +38869,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_WinnerScreen_op_Inequality_mF44
 		return;
 	}
 }
-// Method Definition Index: 67946
+// Method Definition Index: 67948
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ChatController_op_Implicit_m27831035BA6BFD45BD67BA6C23E49588676562E9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38906,7 +38906,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ChatController_op_Implicit_m278
 		return;
 	}
 }
-// Method Definition Index: 67947
+// Method Definition Index: 67949
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ChatController_op_Equality_mAB6DC35A4BDB0EF295B60404C2270BD3A863FDC0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38948,7 +38948,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ChatController_op_Equality_mAB6
 		return;
 	}
 }
-// Method Definition Index: 67948
+// Method Definition Index: 67950
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ChatController_op_Inequality_m27DE6B5DF1B0FD607D9A3955D868F2BBF729629C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -38990,7 +38990,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_ChatController_op_Inequality_m2
 		return;
 	}
 }
-// Method Definition Index: 67949
+// Method Definition Index: 67951
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DropdownSample_op_Implicit_m2B7D74E7C43D09326C34950D49A4AECAF0734FD3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39027,7 +39027,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DropdownSample_op_Implicit_m2B7
 		return;
 	}
 }
-// Method Definition Index: 67950
+// Method Definition Index: 67952
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DropdownSample_op_Equality_m4790F5095478EF67C81C3B6D209FCA1C5647E907 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39069,7 +39069,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DropdownSample_op_Equality_m479
 		return;
 	}
 }
-// Method Definition Index: 67951
+// Method Definition Index: 67953
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DropdownSample_op_Inequality_m28877568DCAD5B3777F954DA92373C74F548F9FD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39111,7 +39111,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_DropdownSample_op_Inequality_m2
 		return;
 	}
 }
-// Method Definition Index: 67952
+// Method Definition Index: 67954
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnvMapAnimator_op_Implicit_mE4D4BB06F75BB34699C80AD4D71185511B43FE28 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39148,7 +39148,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnvMapAnimator_op_Implicit_mE4D
 		return;
 	}
 }
-// Method Definition Index: 67953
+// Method Definition Index: 67955
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnvMapAnimator_op_Equality_m200B1142A20E141983EFC1AB8B4043E8D20F6E08 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39190,7 +39190,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnvMapAnimator_op_Equality_m200
 		return;
 	}
 }
-// Method Definition Index: 67954
+// Method Definition Index: 67956
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnvMapAnimator_op_Inequality_mA2ECD6332A1E4E0F9BE12491366F7906D5760C84 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39232,7 +39232,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnvMapAnimator_op_Inequality_mA
 		return;
 	}
 }
-// Method Definition Index: 67955
+// Method Definition Index: 67957
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Assets_SimpleSpinner_SimpleSpinner_op_Implicit_m187B4E8D9447220C50CE8F1931D6F423A4CD76CA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39269,7 +39269,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Assets_SimpleSpinner_SimpleSpin
 		return;
 	}
 }
-// Method Definition Index: 67956
+// Method Definition Index: 67958
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Assets_SimpleSpinner_SimpleSpinner_op_Equality_m7375310D59271EE32B66E9434273A2895A8D6339 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39311,7 +39311,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Assets_SimpleSpinner_SimpleSpin
 		return;
 	}
 }
-// Method Definition Index: 67957
+// Method Definition Index: 67959
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Assets_SimpleSpinner_SimpleSpinner_op_Inequality_m7629F5A3625364B32ABAFD172149A63BC870AF98 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39353,7 +39353,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Assets_SimpleSpinner_SimpleSpin
 		return;
 	}
 }
-// Method Definition Index: 67958
+// Method Definition Index: 67960
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_DigitValidator_op_Implicit_m4974664B6069894DEA5DDAF13566431EBB0D6147 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39390,7 +39390,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_DigitValidator_op_Imp
 		return;
 	}
 }
-// Method Definition Index: 67959
+// Method Definition Index: 67961
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_DigitValidator_op_Equality_mBBFC2B36ACF1DFBC6A44BDF0234373B6440C637A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39432,7 +39432,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_DigitValidator_op_Equ
 		return;
 	}
 }
-// Method Definition Index: 67960
+// Method Definition Index: 67962
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_DigitValidator_op_Inequality_mB8D5CBADE53A6AA2D6FF5746D6F8AF4083CB1C63 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39474,7 +39474,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_DigitValidator_op_Ine
 		return;
 	}
 }
-// Method Definition Index: 67961
+// Method Definition Index: 67963
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_PhoneNumberValidator_op_Implicit_mD38B504B6D0D0B036A7F15243011538EF67029FF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39511,7 +39511,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_PhoneNumberValidator_
 		return;
 	}
 }
-// Method Definition Index: 67962
+// Method Definition Index: 67964
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_PhoneNumberValidator_op_Equality_mD2EF9A72B142E530F9AEC020576FCB8B1E74F4D5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39553,7 +39553,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_PhoneNumberValidator_
 		return;
 	}
 }
-// Method Definition Index: 67963
+// Method Definition Index: 67965
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_PhoneNumberValidator_op_Inequality_m0B11098164D6A80927E3ABD3EDB732E1E0ECDA28 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39595,7 +39595,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_PhoneNumberValidator_
 		return;
 	}
 }
-// Method Definition Index: 67964
+// Method Definition Index: 67966
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_TextEventHandler_op_Implicit_m3F568933B9DED5172D87A20FA0F65435E7B8C0D8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39632,7 +39632,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_TextEventHandler_op_I
 		return;
 	}
 }
-// Method Definition Index: 67965
+// Method Definition Index: 67967
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_TextEventHandler_op_Equality_m164AD0E4941BF1955456D2F3D3E2E4BE67F39AAF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39674,7 +39674,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_TextEventHandler_op_E
 		return;
 	}
 }
-// Method Definition Index: 67966
+// Method Definition Index: 67968
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_TextEventHandler_op_Inequality_m4A28522DD4304B7CB1CF2422577FD375D9D21EAE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39716,7 +39716,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_TextEventHandler_op_I
 		return;
 	}
 }
-// Method Definition Index: 67967
+// Method Definition Index: 67969
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark01_op_Implicit_m5392FC3972940C54569BC6B06FDCFD20355AB107 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39753,7 +39753,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark01_op_I
 		return;
 	}
 }
-// Method Definition Index: 67968
+// Method Definition Index: 67970
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark01_op_Equality_m7627B376067EE982339534C04555307B211A6D45 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39795,7 +39795,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark01_op_E
 		return;
 	}
 }
-// Method Definition Index: 67969
+// Method Definition Index: 67971
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark01_op_Inequality_m118C086E2142ABC3122FD47373A75D280665FA8D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39837,7 +39837,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark01_op_I
 		return;
 	}
 }
-// Method Definition Index: 67970
+// Method Definition Index: 67972
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark01_UGUI_op_Implicit_m7DA7FFB4D025FF0FE7430728BDCE29B8B8CCDF4D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39874,7 +39874,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark01_UGUI
 		return;
 	}
 }
-// Method Definition Index: 67971
+// Method Definition Index: 67973
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark01_UGUI_op_Equality_m701C4A4D4A594B9CD80EB8D1DDF6AB30EF34E70C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39916,7 +39916,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark01_UGUI
 		return;
 	}
 }
-// Method Definition Index: 67972
+// Method Definition Index: 67974
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark01_UGUI_op_Inequality_m1C612F72C0B1EF1CF6C4910F77F53690984469C7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39958,7 +39958,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark01_UGUI
 		return;
 	}
 }
-// Method Definition Index: 67973
+// Method Definition Index: 67975
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark02_op_Implicit_m1F95F74E03D07612F902B9A04B0213851E0BDDBC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39995,7 +39995,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark02_op_I
 		return;
 	}
 }
-// Method Definition Index: 67974
+// Method Definition Index: 67976
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark02_op_Equality_mAF7FD62F28ECDEBA723FDB4D3344E68E90636931 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40037,7 +40037,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark02_op_E
 		return;
 	}
 }
-// Method Definition Index: 67975
+// Method Definition Index: 67977
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark02_op_Inequality_m8A36EA24AEF3C75A9C131999FC30EB6E408D83DD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40079,7 +40079,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark02_op_I
 		return;
 	}
 }
-// Method Definition Index: 67976
+// Method Definition Index: 67978
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark03_op_Implicit_mF1A4C3AB9BAA8E0595363020CCB621F8B77C6C84 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40116,7 +40116,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark03_op_I
 		return;
 	}
 }
-// Method Definition Index: 67977
+// Method Definition Index: 67979
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark03_op_Equality_mDE36C9C4011E62C42CC528B5ACB2A446ED6B6E34 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40158,7 +40158,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark03_op_E
 		return;
 	}
 }
-// Method Definition Index: 67978
+// Method Definition Index: 67980
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark03_op_Inequality_m415AE4638C5A8892326E486BF882C4EDE20B7C17 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40200,7 +40200,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark03_op_I
 		return;
 	}
 }
-// Method Definition Index: 67979
+// Method Definition Index: 67981
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark04_op_Implicit_mFA42D9A0F2B493F0922AFE0ECEEEB4B81DF12C84 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40237,7 +40237,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark04_op_I
 		return;
 	}
 }
-// Method Definition Index: 67980
+// Method Definition Index: 67982
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark04_op_Equality_mFD7636C46FC2F06674A33A5209A70CBA69FEA15C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40279,7 +40279,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark04_op_E
 		return;
 	}
 }
-// Method Definition Index: 67981
+// Method Definition Index: 67983
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark04_op_Inequality_m9A71BB61483C444DDFDCB7B52D1B0D8C1EF65237 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40321,7 +40321,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_Benchmark04_op_I
 		return;
 	}
 }
-// Method Definition Index: 67982
+// Method Definition Index: 67984
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_CameraController_op_Implicit_m9BC1F31F3C42D68955D3FB7F1BC439604104DD3A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40358,7 +40358,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_CameraController
 		return;
 	}
 }
-// Method Definition Index: 67983
+// Method Definition Index: 67985
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_CameraController_op_Equality_mDD5CA43CDD0547BDDB7BD1114AF907DA59C32FF6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40400,7 +40400,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_CameraController
 		return;
 	}
 }
-// Method Definition Index: 67984
+// Method Definition Index: 67986
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_CameraController_op_Inequality_m80CE222D40FF1D829CA4534627934A4634D6F697 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40442,7 +40442,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_CameraController
 		return;
 	}
 }
-// Method Definition Index: 67985
+// Method Definition Index: 67987
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_ObjectSpin_op_Implicit_mF5E40DA92DF0D96FEE5716512966C11BE9511227 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40479,7 +40479,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_ObjectSpin_op_Im
 		return;
 	}
 }
-// Method Definition Index: 67986
+// Method Definition Index: 67988
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_ObjectSpin_op_Equality_m379BD67164A9D6D5E99F3403D351B5F9039C1420 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40521,7 +40521,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_ObjectSpin_op_Eq
 		return;
 	}
 }
-// Method Definition Index: 67987
+// Method Definition Index: 67989
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_ObjectSpin_op_Inequality_mA436D84075FEDC8F80EBCE75678C8B39EDFBE3C0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40563,7 +40563,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_ObjectSpin_op_In
 		return;
 	}
 }
-// Method Definition Index: 67988
+// Method Definition Index: 67990
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_ShaderPropAnimator_op_Implicit_m401FEB1EAD0830A45D7151C8ADF3405532784376 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40600,7 +40600,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_ShaderPropAnimat
 		return;
 	}
 }
-// Method Definition Index: 67989
+// Method Definition Index: 67991
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_ShaderPropAnimator_op_Equality_mA6251B9EFEFD869262CDC4A83122325233F2C5B2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40642,7 +40642,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_ShaderPropAnimat
 		return;
 	}
 }
-// Method Definition Index: 67990
+// Method Definition Index: 67992
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_ShaderPropAnimator_op_Inequality_m98DAE74DBA8C50BC870EF8D1A10A207E8F2D4039 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40684,7 +40684,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_ShaderPropAnimat
 		return;
 	}
 }
-// Method Definition Index: 67991
+// Method Definition Index: 67993
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_SimpleScript_op_Implicit_m4390DD0C3E07CF152C8D4E68C8AC6BCE746742A3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40721,7 +40721,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_SimpleScript_op_
 		return;
 	}
 }
-// Method Definition Index: 67992
+// Method Definition Index: 67994
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_SimpleScript_op_Equality_m23E50FD3890CE9F3FDF386C7E8765405B101F5BB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40763,7 +40763,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_SimpleScript_op_
 		return;
 	}
 }
-// Method Definition Index: 67993
+// Method Definition Index: 67995
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_SimpleScript_op_Inequality_mC2D1F2C9D99D3A8C5AF50E315710C02ADDB08BCB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40805,7 +40805,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_SimpleScript_op_
 		return;
 	}
 }
-// Method Definition Index: 67994
+// Method Definition Index: 67996
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_SkewTextExample_op_Implicit_m65850449A338C7473B96F8DFAB5A622444B96201 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40842,7 +40842,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_SkewTextExample_
 		return;
 	}
 }
-// Method Definition Index: 67995
+// Method Definition Index: 67997
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_SkewTextExample_op_Equality_m7CA8BF0943F2C879462954070828B3A6321E1F5E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40884,7 +40884,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_SkewTextExample_
 		return;
 	}
 }
-// Method Definition Index: 67996
+// Method Definition Index: 67998
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_SkewTextExample_op_Inequality_m09E83DC462B173D0D64042C48501FC653850082E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40926,7 +40926,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_SkewTextExample_
 		return;
 	}
 }
-// Method Definition Index: 67997
+// Method Definition Index: 67999
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_ExampleScript_01_op_Implicit_m9CA2D330B05A535F850E31A6814B21CE5D021710 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -40963,7 +40963,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_ExampleScrip
 		return;
 	}
 }
-// Method Definition Index: 67998
+// Method Definition Index: 68000
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_ExampleScript_01_op_Equality_mACB161BEBE0B7492814BE36500D1CADF2B7D942D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41005,7 +41005,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_ExampleScrip
 		return;
 	}
 }
-// Method Definition Index: 67999
+// Method Definition Index: 68001
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_ExampleScript_01_op_Inequality_m20274BCE99F26D791018270BBEE7588CA5F4797A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41047,7 +41047,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_ExampleScrip
 		return;
 	}
 }
-// Method Definition Index: 68000
+// Method Definition Index: 68002
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_FrameRateCounter_op_Implicit_m00C22E3FA45BC86F4280396C179D410C02012FD4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41084,7 +41084,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_FrameRateCou
 		return;
 	}
 }
-// Method Definition Index: 68001
+// Method Definition Index: 68003
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_FrameRateCounter_op_Equality_m9298B08180DC1B779F029A4E6B95EE744DA2781C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41126,7 +41126,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_FrameRateCou
 		return;
 	}
 }
-// Method Definition Index: 68002
+// Method Definition Index: 68004
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_FrameRateCounter_op_Inequality_m824ADC3786158A79A76BCBCEA7748D05E096E389 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41168,7 +41168,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_FrameRateCou
 		return;
 	}
 }
-// Method Definition Index: 68003
+// Method Definition Index: 68005
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_TextEventCheck_op_Implicit_m1375BD14858EBAA4465F527D6D4E82F6CF45C202 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41205,7 +41205,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_TextEventChe
 		return;
 	}
 }
-// Method Definition Index: 68004
+// Method Definition Index: 68006
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_TextEventCheck_op_Equality_m7F35B5AE3EDDFADC8673FA3D302404D8EC6D063B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41247,7 +41247,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_TextEventChe
 		return;
 	}
 }
-// Method Definition Index: 68005
+// Method Definition Index: 68007
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_TextEventCheck_op_Inequality_m9ED221F77FABF7F17346964C0506822A6A7532A9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41289,7 +41289,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_TextEventChe
 		return;
 	}
 }
-// Method Definition Index: 68006
+// Method Definition Index: 68008
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_TextInfoDebugTool_op_Implicit_m8426BC590C0FB80F0E49B4CC605A74E4291CFFAA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41326,7 +41326,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_TextInfoDebu
 		return;
 	}
 }
-// Method Definition Index: 68007
+// Method Definition Index: 68009
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_TextInfoDebugTool_op_Equality_mC60F59BC881E2C17A1C618F1811B6EFA3B698292 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41368,7 +41368,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_TextInfoDebu
 		return;
 	}
 }
-// Method Definition Index: 68008
+// Method Definition Index: 68010
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_TextInfoDebugTool_op_Inequality_m121D359574261FBE216459E3C28B3A4608094311 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41410,7 +41410,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_TextInfoDebu
 		return;
 	}
 }
-// Method Definition Index: 68009
+// Method Definition Index: 68011
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_TextSelector_A_op_Implicit_mFB775B71D29A106E02187FC1D10316F62D6EBBC5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41447,7 +41447,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_TextSelector
 		return;
 	}
 }
-// Method Definition Index: 68010
+// Method Definition Index: 68012
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_TextSelector_A_op_Equality_m0E562E21BCA249FCCB4815E894A5798F55467D32 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41489,7 +41489,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_TextSelector
 		return;
 	}
 }
-// Method Definition Index: 68011
+// Method Definition Index: 68013
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_TextSelector_A_op_Inequality_mC3B4DD036728B7C28DEF5CC91C26919B27F42B26 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41531,7 +41531,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_TextSelector
 		return;
 	}
 }
-// Method Definition Index: 68012
+// Method Definition Index: 68014
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_TextSelector_B_op_Implicit_mC7169C2AA50EF8D56FAB14CBFD15606D9DD37667 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41568,7 +41568,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_TextSelector
 		return;
 	}
 }
-// Method Definition Index: 68013
+// Method Definition Index: 68015
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_TextSelector_B_op_Equality_m39F5C1545C2BFC2010C779C0AFCD906E43310D04 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41610,7 +41610,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_TextSelector
 		return;
 	}
 }
-// Method Definition Index: 68014
+// Method Definition Index: 68016
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_TextSelector_B_op_Inequality_m538B99A5B7DF1376A32E2D7501EB994188E1E91B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41652,7 +41652,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_TextSelector
 		return;
 	}
 }
-// Method Definition Index: 68015
+// Method Definition Index: 68017
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_UiFrameRateCounter_op_Implicit_m1B196460FD7FC75E3D066AF6EA99349CD3ABFEB9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41689,7 +41689,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_UiFrameRateC
 		return;
 	}
 }
-// Method Definition Index: 68016
+// Method Definition Index: 68018
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_UiFrameRateCounter_op_Equality_mE1CE76D54F42D568CADADEDC28D6C3FAF03FA324 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41731,7 +41731,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_UiFrameRateC
 		return;
 	}
 }
-// Method Definition Index: 68017
+// Method Definition Index: 68019
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_UiFrameRateCounter_op_Inequality_mC55A2E92BCADAF4AEA4A7F585237A91F353E164A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41773,7 +41773,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMP_UiFrameRateC
 		return;
 	}
 }
-// Method Definition Index: 68018
+// Method Definition Index: 68020
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMPro_InstructionOverlay_op_Implicit_m435075744ADD1C55287270F7C72F98C7A2E04CE6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41810,7 +41810,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMPro_Instructio
 		return;
 	}
 }
-// Method Definition Index: 68019
+// Method Definition Index: 68021
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMPro_InstructionOverlay_op_Equality_m7DDA77712392654D0A16B8BDF7E4018F820E3F0B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41852,7 +41852,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMPro_Instructio
 		return;
 	}
 }
-// Method Definition Index: 68020
+// Method Definition Index: 68022
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMPro_InstructionOverlay_op_Inequality_m34B5BC5C3279A488F30C10B88D7ED695C4246E6C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41894,7 +41894,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TMPro_Instructio
 		return;
 	}
 }
-// Method Definition Index: 68021
+// Method Definition Index: 68023
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TeleType_op_Implicit_m7AA5DC1BC5AE58F39A85D64D4BAF9045DBAA6D1A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41931,7 +41931,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TeleType_op_Impl
 		return;
 	}
 }
-// Method Definition Index: 68022
+// Method Definition Index: 68024
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TeleType_op_Equality_m056EA71427CE13BADD7730029C5C6FEA52A5779F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -41973,7 +41973,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TeleType_op_Equa
 		return;
 	}
 }
-// Method Definition Index: 68023
+// Method Definition Index: 68025
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TeleType_op_Inequality_m321AC2622DE61BA7D784C81885910A2E7BD857FA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42015,7 +42015,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TeleType_op_Ineq
 		return;
 	}
 }
-// Method Definition Index: 68024
+// Method Definition Index: 68026
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TextConsoleSimulator_op_Implicit_m1E5CD5DE135736090EF9AFDF39234E39189CC6E9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42052,7 +42052,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TextConsoleSimul
 		return;
 	}
 }
-// Method Definition Index: 68025
+// Method Definition Index: 68027
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TextConsoleSimulator_op_Equality_mE43757B78D491C78EC0123DE91C00DC90A088E7F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42094,7 +42094,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TextConsoleSimul
 		return;
 	}
 }
-// Method Definition Index: 68026
+// Method Definition Index: 68028
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TextConsoleSimulator_op_Inequality_mC227586C6DA9756A90ED4F56A8CD6D6475265414 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42136,7 +42136,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TextConsoleSimul
 		return;
 	}
 }
-// Method Definition Index: 68027
+// Method Definition Index: 68029
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TextMeshProFloatingText_op_Implicit_m94C7E92F083BF40FF5CDFE412E7F34139E7EF687 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42173,7 +42173,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TextMeshProFloat
 		return;
 	}
 }
-// Method Definition Index: 68028
+// Method Definition Index: 68030
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TextMeshProFloatingText_op_Equality_m67CD2F83E6E5C75D497F768876A97D1BE6A3AEC2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42215,7 +42215,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TextMeshProFloat
 		return;
 	}
 }
-// Method Definition Index: 68029
+// Method Definition Index: 68031
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TextMeshProFloatingText_op_Inequality_m8F1618A4D336D35D7E0A7E47CFF764C6E29C15FA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42257,7 +42257,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TextMeshProFloat
 		return;
 	}
 }
-// Method Definition Index: 68030
+// Method Definition Index: 68032
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TextMeshSpawner_op_Implicit_m0A40267B6C4B2246878B98FF0407626DCEF6585A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42294,7 +42294,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TextMeshSpawner_
 		return;
 	}
 }
-// Method Definition Index: 68031
+// Method Definition Index: 68033
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TextMeshSpawner_op_Equality_m5583F67E6D16CBFEDC55B3B668CDF3877AA97D18 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42336,7 +42336,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TextMeshSpawner_
 		return;
 	}
 }
-// Method Definition Index: 68032
+// Method Definition Index: 68034
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TextMeshSpawner_op_Inequality_mB864A5E5FC8244365AC2EE5176981F76C8F50CD2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42378,7 +42378,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_TextMeshSpawner_
 		return;
 	}
 }
-// Method Definition Index: 68033
+// Method Definition Index: 68035
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexColorCycler_op_Implicit_m3B49B5513370202C829D5392167C8BD01D2682DA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42415,7 +42415,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexColorCycle
 		return;
 	}
 }
-// Method Definition Index: 68034
+// Method Definition Index: 68036
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexColorCycler_op_Equality_m31EDC75987B0FEBDDED0BF4A55CD04C2A4A2DACE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42457,7 +42457,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexColorCycle
 		return;
 	}
 }
-// Method Definition Index: 68035
+// Method Definition Index: 68037
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexColorCycler_op_Inequality_mA0F74744FBF68B096F0A95CCCFDB0AF4786E58AB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42499,7 +42499,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexColorCycle
 		return;
 	}
 }
-// Method Definition Index: 68036
+// Method Definition Index: 68038
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexJitter_op_Implicit_m0071EF2CAAD937F8CA1192CAC3ACE53AA2FB0EC8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42536,7 +42536,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexJitter_op_
 		return;
 	}
 }
-// Method Definition Index: 68037
+// Method Definition Index: 68039
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexJitter_op_Equality_mE58D67CE1FD9A97DB92664D83F71B9043709CEB8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42578,7 +42578,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexJitter_op_
 		return;
 	}
 }
-// Method Definition Index: 68038
+// Method Definition Index: 68040
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexJitter_op_Inequality_m396E21FA6C45899EFD5B3DD415A63B6F162A5255 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42620,7 +42620,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexJitter_op_
 		return;
 	}
 }
-// Method Definition Index: 68039
+// Method Definition Index: 68041
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexShakeA_op_Implicit_m578468AA623A87D895D39AD7162995994B1EC725 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42657,7 +42657,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexShakeA_op_
 		return;
 	}
 }
-// Method Definition Index: 68040
+// Method Definition Index: 68042
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexShakeA_op_Equality_mE6421B632510B91BD886202C5C1FB290393DFDA2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42699,7 +42699,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexShakeA_op_
 		return;
 	}
 }
-// Method Definition Index: 68041
+// Method Definition Index: 68043
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexShakeA_op_Inequality_m620DFC10D13A89122B024B5731F6FA44836BD994 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42741,7 +42741,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexShakeA_op_
 		return;
 	}
 }
-// Method Definition Index: 68042
+// Method Definition Index: 68044
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexShakeB_op_Implicit_m4913912429FBDEFA566852EB71C1A0955AE5C083 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42778,7 +42778,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexShakeB_op_
 		return;
 	}
 }
-// Method Definition Index: 68043
+// Method Definition Index: 68045
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexShakeB_op_Equality_m19B00EFEB5CDD5D85D2F09646D2CAFE3C91ADD45 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42820,7 +42820,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexShakeB_op_
 		return;
 	}
 }
-// Method Definition Index: 68044
+// Method Definition Index: 68046
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexShakeB_op_Inequality_mA8D7D3B5F721186667F7ED98CA74C0BB39DF6656 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42862,7 +42862,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexShakeB_op_
 		return;
 	}
 }
-// Method Definition Index: 68045
+// Method Definition Index: 68047
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexZoom_op_Implicit_m818E329828CB51B701B0150496EFA9ABAF53CE1B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42899,7 +42899,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexZoom_op_Im
 		return;
 	}
 }
-// Method Definition Index: 68046
+// Method Definition Index: 68048
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexZoom_op_Equality_m10F62615C89221993838FDE2D442EB8BE43F928B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42941,7 +42941,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexZoom_op_Eq
 		return;
 	}
 }
-// Method Definition Index: 68047
+// Method Definition Index: 68049
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexZoom_op_Inequality_mC0D19A83E6A6FC77C62EA85F5ABCE6D0C3BD6523 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -42983,7 +42983,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_VertexZoom_op_In
 		return;
 	}
 }
-// Method Definition Index: 68048
+// Method Definition Index: 68050
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_WarpTextExample_op_Implicit_m822139C55F7EA5E15D6E8F55ABFB2B58EF05CB6E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43020,7 +43020,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_WarpTextExample_
 		return;
 	}
 }
-// Method Definition Index: 68049
+// Method Definition Index: 68051
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_WarpTextExample_op_Equality_m60CD70C8CE07694CA350C0377A095C4D47DD6A7A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43062,7 +43062,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_WarpTextExample_
 		return;
 	}
 }
-// Method Definition Index: 68050
+// Method Definition Index: 68052
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_WarpTextExample_op_Inequality_m4FFB37B46E70B3FE9330486E19079A7F6D099C9A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43104,7 +43104,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_Examples_WarpTextExample_
 		return;
 	}
 }
-// Method Definition Index: 68051
+// Method Definition Index: 68053
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UI_GameplayProfileDropdown_op_Implicit_mE1B1135E35D20FAC51FA78AB2AB4843E45C18919 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43141,7 +43141,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UI_GameplayProfileDropdown_op_I
 		return;
 	}
 }
-// Method Definition Index: 68052
+// Method Definition Index: 68054
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UI_GameplayProfileDropdown_op_Equality_m2FA2BF80E1FDC1E86620CACFA9A58F364B731B71 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43183,7 +43183,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UI_GameplayProfileDropdown_op_E
 		return;
 	}
 }
-// Method Definition Index: 68053
+// Method Definition Index: 68055
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UI_GameplayProfileDropdown_op_Inequality_m9165F4B2A99042BCEC9E4D240BD5295FE1A51A8D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43225,7 +43225,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UI_GameplayProfileDropdown_op_I
 		return;
 	}
 }
-// Method Definition Index: 68054
+// Method Definition Index: 68056
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UI_ProfileDropdownController_op_Implicit_m1C9345F7CE18173F405CBE73A55A7473F42C0BB3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43262,7 +43262,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UI_ProfileDropdownController_op
 		return;
 	}
 }
-// Method Definition Index: 68055
+// Method Definition Index: 68057
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UI_ProfileDropdownController_op_Equality_mFA794AB90804DF547022A1D72984712CE8CD18CE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43304,7 +43304,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UI_ProfileDropdownController_op
 		return;
 	}
 }
-// Method Definition Index: 68056
+// Method Definition Index: 68058
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UI_ProfileDropdownController_op_Inequality_m8C9A4D986D0758793A5DD207715B907783AA236E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43346,7 +43346,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UI_ProfileDropdownController_op
 		return;
 	}
 }
-// Method Definition Index: 68057
+// Method Definition Index: 68059
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UI_ProfileDropdownRowUI_op_Implicit_m0A65814CD191D6035E7266F07075C178F5101E50 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43383,7 +43383,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UI_ProfileDropdownRowUI_op_Impl
 		return;
 	}
 }
-// Method Definition Index: 68058
+// Method Definition Index: 68060
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UI_ProfileDropdownRowUI_op_Equality_m26B4CD14B7DA7811A46510BE7E846DC46022D955 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43425,7 +43425,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UI_ProfileDropdownRowUI_op_Equa
 		return;
 	}
 }
-// Method Definition Index: 68059
+// Method Definition Index: 68061
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UI_ProfileDropdownRowUI_op_Inequality_m728B6D2E22C857FF9F015AA7AF3632E7B352EEA0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43467,7 +43467,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UI_ProfileDropdownRowUI_op_Ineq
 		return;
 	}
 }
-// Method Definition Index: 68060
+// Method Definition Index: 68062
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedUI_EnhancedScroller_EnhancedScroller_op_Implicit_mDD99DBA50204CEDE885F4867EAB6A2CF67A59FC4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43504,7 +43504,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedUI_EnhancedScroller_Enh
 		return;
 	}
 }
-// Method Definition Index: 68061
+// Method Definition Index: 68063
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedUI_EnhancedScroller_EnhancedScroller_op_Equality_mF4B12B25CEC21AA016F230F4559F85583A08E1F8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43546,7 +43546,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedUI_EnhancedScroller_Enh
 		return;
 	}
 }
-// Method Definition Index: 68062
+// Method Definition Index: 68064
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedUI_EnhancedScroller_EnhancedScroller_op_Inequality_mF0A426CBD66D6E4F0F28CB4D8EA69771F57D8F69 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43588,7 +43588,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedUI_EnhancedScroller_Enh
 		return;
 	}
 }
-// Method Definition Index: 68063
+// Method Definition Index: 68065
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedUI_EnhancedScroller_EnhancedScrollerCellView_op_Implicit_mC61E5DBE575EE34D37136BDB1DD3A20970C2B142 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43625,7 +43625,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedUI_EnhancedScroller_Enh
 		return;
 	}
 }
-// Method Definition Index: 68064
+// Method Definition Index: 68066
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedUI_EnhancedScroller_EnhancedScrollerCellView_op_Equality_m7B242DFDD66183081AFE8D8C5FDC95FB66025BD4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43667,7 +43667,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedUI_EnhancedScroller_Enh
 		return;
 	}
 }
-// Method Definition Index: 68065
+// Method Definition Index: 68067
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedUI_EnhancedScroller_EnhancedScrollerCellView_op_Inequality_m7BA6FEB0BBEC3D8AC6E71C6BBFA1D18AC4AAB058 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43709,7 +43709,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedUI_EnhancedScroller_Enh
 		return;
 	}
 }
-// Method Definition Index: 68066
+// Method Definition Index: 68068
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedUI_EnhancedScroller_Tween_op_Implicit_mFB4F87C08E53ACBFA66AD7C0EE80F3BE081CB382 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43746,7 +43746,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedUI_EnhancedScroller_Twe
 		return;
 	}
 }
-// Method Definition Index: 68067
+// Method Definition Index: 68069
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedUI_EnhancedScroller_Tween_op_Equality_m09290E5CEA975B0AAD5AB6DC3574A7DD73C8DBC6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43788,7 +43788,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedUI_EnhancedScroller_Twe
 		return;
 	}
 }
-// Method Definition Index: 68068
+// Method Definition Index: 68070
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedUI_EnhancedScroller_Tween_op_Inequality_m958E90F1750E887DD873D4FDCDB5F7262BCFEF80 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43830,7 +43830,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedUI_EnhancedScroller_Twe
 		return;
 	}
 }
-// Method Definition Index: 68069
+// Method Definition Index: 68071
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScollerDemos_MainMenu_MainMenu_op_Implicit_m8C556883689BC50DFAC7E7AFE1BDDDAF10B002F4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43867,7 +43867,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScollerDemos_MainMenu_M
 		return;
 	}
 }
-// Method Definition Index: 68070
+// Method Definition Index: 68072
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScollerDemos_MainMenu_MainMenu_op_Equality_mBD281B97D69F7CE9C6E7CCF38D98061094CA4694 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43909,7 +43909,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScollerDemos_MainMenu_M
 		return;
 	}
 }
-// Method Definition Index: 68071
+// Method Definition Index: 68073
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScollerDemos_MainMenu_MainMenu_op_Inequality_mD3050645D11199C64866A8F5FBEE02B454A179D2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43951,7 +43951,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScollerDemos_MainMenu_M
 		return;
 	}
 }
-// Method Definition Index: 68072
+// Method Definition Index: 68074
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MainMenu_ReturnToMainMenu_op_Implicit_mCE98A8A40AD5A2F99B91570904F2D48DE665A534 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -43988,7 +43988,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MainMenu_
 		return;
 	}
 }
-// Method Definition Index: 68073
+// Method Definition Index: 68075
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MainMenu_ReturnToMainMenu_op_Equality_m9E1F8529D46856547808BAE8C72DD3F5A3BC1509 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44030,7 +44030,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MainMenu_
 		return;
 	}
 }
-// Method Definition Index: 68074
+// Method Definition Index: 68076
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MainMenu_ReturnToMainMenu_op_Inequality_m2A4E93808B9817DC23E1DC2908AAF44850DF7816 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44072,7 +44072,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MainMenu_
 		return;
 	}
 }
-// Method Definition Index: 68075
+// Method Definition Index: 68077
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_FlickSnap_CellView_op_Implicit_m36BBEC9F409DEFDC12BE18A5D2DA01B3A00047AC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44109,7 +44109,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_FlickSnap
 		return;
 	}
 }
-// Method Definition Index: 68076
+// Method Definition Index: 68078
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_FlickSnap_CellView_op_Equality_mCA1ECDCBACE7BBFD098360ABD9ADAD34BF9B7A75 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44151,7 +44151,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_FlickSnap
 		return;
 	}
 }
-// Method Definition Index: 68077
+// Method Definition Index: 68079
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_FlickSnap_CellView_op_Inequality_m5CCA505A50CD34FB5C1B81A28209A9AF6ED5041C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44193,7 +44193,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_FlickSnap
 		return;
 	}
 }
-// Method Definition Index: 68078
+// Method Definition Index: 68080
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_FlickSnap_DemoController_op_Implicit_m252B174ED9FC4BDB887C05FC6269AC3EA7E7EAFD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44230,7 +44230,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_FlickSnap
 		return;
 	}
 }
-// Method Definition Index: 68079
+// Method Definition Index: 68081
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_FlickSnap_DemoController_op_Equality_m3E3DB80651598079BC693658F7A8B843DD5B6E72 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44272,7 +44272,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_FlickSnap
 		return;
 	}
 }
-// Method Definition Index: 68080
+// Method Definition Index: 68082
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_FlickSnap_DemoController_op_Inequality_m159ED180061682DADD9C293448FF0F61DCA4E335 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44314,7 +44314,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_FlickSnap
 		return;
 	}
 }
-// Method Definition Index: 68081
+// Method Definition Index: 68083
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_FlickSnap_FlickSnap_op_Implicit_mBAE581A0947C70BBFF7982E19662E0ED240A678F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44351,7 +44351,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_FlickSnap
 		return;
 	}
 }
-// Method Definition Index: 68082
+// Method Definition Index: 68084
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_FlickSnap_FlickSnap_op_Equality_mCE086F610474B21115B2BDCB58D2775E47BC1439 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44393,7 +44393,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_FlickSnap
 		return;
 	}
 }
-// Method Definition Index: 68083
+// Method Definition Index: 68085
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_FlickSnap_FlickSnap_op_Inequality_m9CDA5350FCD4D3FAD4FFD222F28F9D06A7768A0C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44435,7 +44435,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_FlickSnap
 		return;
 	}
 }
-// Method Definition Index: 68084
+// Method Definition Index: 68086
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Chat_CellView_op_Implicit_m85B355D2882AC66CE25B80BA2A99A97949480FFA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44472,7 +44472,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Chat_Cell
 		return;
 	}
 }
-// Method Definition Index: 68085
+// Method Definition Index: 68087
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Chat_CellView_op_Equality_mFE525E4A59BDB040003FD64BCD737E9A8140BE9E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44514,7 +44514,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Chat_Cell
 		return;
 	}
 }
-// Method Definition Index: 68086
+// Method Definition Index: 68088
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Chat_CellView_op_Inequality_m80D202244995A96D5E59676B30CB40214D6E5B70 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44556,7 +44556,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Chat_Cell
 		return;
 	}
 }
-// Method Definition Index: 68087
+// Method Definition Index: 68089
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Chat_Chat_op_Implicit_m2FFBEE57655C06B450AEA452309ECA49BEAA28A3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44593,7 +44593,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Chat_Chat
 		return;
 	}
 }
-// Method Definition Index: 68088
+// Method Definition Index: 68090
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Chat_Chat_op_Equality_mF0479066D04B7C9182979CEDC3C830CDC9CB0F04 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44635,7 +44635,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Chat_Chat
 		return;
 	}
 }
-// Method Definition Index: 68089
+// Method Definition Index: 68091
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Chat_Chat_op_Inequality_m30D8D79ED43576807A097D9634D4B39A2B0E38A6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44677,7 +44677,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Chat_Chat
 		return;
 	}
 }
-// Method Definition Index: 68090
+// Method Definition Index: 68092
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_ExpandingCells_CellView_op_Implicit_m0001BB9EDF9DE84065A51D4E0BCE1ECCCBA53A86 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44714,7 +44714,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Expanding
 		return;
 	}
 }
-// Method Definition Index: 68091
+// Method Definition Index: 68093
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_ExpandingCells_CellView_op_Equality_m6097767D2DCC68C70E0F95E6CCDD702C957CD0E3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44756,7 +44756,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Expanding
 		return;
 	}
 }
-// Method Definition Index: 68092
+// Method Definition Index: 68094
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_ExpandingCells_CellView_op_Inequality_m5CF713E45F416CFC3B16BA5AABFEA902D8D3D709 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44798,7 +44798,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Expanding
 		return;
 	}
 }
-// Method Definition Index: 68093
+// Method Definition Index: 68095
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_ExpandingCells_Controller_op_Implicit_m75A240554C6684417A471DE67CC9E89E8FC7DF08 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44835,7 +44835,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Expanding
 		return;
 	}
 }
-// Method Definition Index: 68094
+// Method Definition Index: 68096
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_ExpandingCells_Controller_op_Equality_m201719D36485836A8155E64B38C301452A9D7DFB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44877,7 +44877,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Expanding
 		return;
 	}
 }
-// Method Definition Index: 68095
+// Method Definition Index: 68097
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_ExpandingCells_Controller_op_Inequality_m1A63607D065B5DFB716D3F2DCB13B9C371F3571C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44919,7 +44919,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Expanding
 		return;
 	}
 }
-// Method Definition Index: 68096
+// Method Definition Index: 68098
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyControlGrid_CellView_op_Implicit_m58F5448C8AE9E04D3F72CCEF6794F4D9941220C4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44956,7 +44956,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyContro
 		return;
 	}
 }
-// Method Definition Index: 68097
+// Method Definition Index: 68099
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyControlGrid_CellView_op_Equality_mAC298ACCD78401075EE1E8333960ADB6C6BDAA65 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -44998,7 +44998,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyContro
 		return;
 	}
 }
-// Method Definition Index: 68098
+// Method Definition Index: 68100
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyControlGrid_CellView_op_Inequality_m77C0E99CDA647BFCC57939DC27CD66BE06C7C7F0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45040,7 +45040,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyContro
 		return;
 	}
 }
-// Method Definition Index: 68099
+// Method Definition Index: 68101
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyControlGrid_Controller_op_Implicit_mA311A22D0BB05D68134A952EB2909BD7C8511689 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45077,7 +45077,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyContro
 		return;
 	}
 }
-// Method Definition Index: 68100
+// Method Definition Index: 68102
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyControlGrid_Controller_op_Equality_m30E69E6AEEE00001B19FBB7D91AA9E34E3139220 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45119,7 +45119,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyContro
 		return;
 	}
 }
-// Method Definition Index: 68101
+// Method Definition Index: 68103
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyControlGrid_Controller_op_Inequality_mE579CA3D023D41B7E8703C604349873D08041209 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45161,7 +45161,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyContro
 		return;
 	}
 }
-// Method Definition Index: 68102
+// Method Definition Index: 68104
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyControlGrid_RowCellView_op_Implicit_mFC44D9345EFC7EF5B5B7C8DA237A242692293311 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45198,7 +45198,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyContro
 		return;
 	}
 }
-// Method Definition Index: 68103
+// Method Definition Index: 68105
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyControlGrid_RowCellView_op_Equality_m1EBE1F13D4A163F3768DB9F1E1B22FE225B5565E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45240,7 +45240,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyContro
 		return;
 	}
 }
-// Method Definition Index: 68104
+// Method Definition Index: 68106
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyControlGrid_RowCellView_op_Inequality_m0D4C9734B574CDCFFAE0C6A31EE960BF2EE8A89E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45282,7 +45282,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyContro
 		return;
 	}
 }
-// Method Definition Index: 68105
+// Method Definition Index: 68107
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyControl_CellView_op_Implicit_mB79A5F0A9B1BD40C6F20E6F5C8FFDDFFF8C34F1C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45319,7 +45319,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyContro
 		return;
 	}
 }
-// Method Definition Index: 68106
+// Method Definition Index: 68108
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyControl_CellView_op_Equality_mFFDC43823B352BB0AAACCF64DD9C3E8E92A85066 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45361,7 +45361,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyContro
 		return;
 	}
 }
-// Method Definition Index: 68107
+// Method Definition Index: 68109
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyControl_CellView_op_Inequality_m65E2697AD2DB26001984F33C341D8FFD4744A369 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45403,7 +45403,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyContro
 		return;
 	}
 }
-// Method Definition Index: 68108
+// Method Definition Index: 68110
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyControl_Controller_op_Implicit_m0F75ADE6D058056068ECBED2E5BC85CE10484DE9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45440,7 +45440,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyContro
 		return;
 	}
 }
-// Method Definition Index: 68109
+// Method Definition Index: 68111
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyControl_Controller_op_Equality_m227A3C1B4D730DFB7532D27C4A651A840560A4EB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45482,7 +45482,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyContro
 		return;
 	}
 }
-// Method Definition Index: 68110
+// Method Definition Index: 68112
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyControl_Controller_op_Inequality_m93C12E3FA29376D773CACD867D71264581D44BEC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45524,7 +45524,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_KeyContro
 		return;
 	}
 }
-// Method Definition Index: 68111
+// Method Definition Index: 68113
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Pagination_CellView_op_Implicit_m01B00B10A9A37C7C0D6D795A060EDA0426474B51 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45561,7 +45561,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Paginatio
 		return;
 	}
 }
-// Method Definition Index: 68112
+// Method Definition Index: 68114
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Pagination_CellView_op_Equality_m2360D1621F71FF8031B6E40C350307FCC795F25F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45603,7 +45603,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Paginatio
 		return;
 	}
 }
-// Method Definition Index: 68113
+// Method Definition Index: 68115
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Pagination_CellView_op_Inequality_mF8FFC917E3858678C5C8DD083CF0B1F41BCF18D6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45645,7 +45645,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Paginatio
 		return;
 	}
 }
-// Method Definition Index: 68114
+// Method Definition Index: 68116
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Pagination_Controller_op_Implicit_m9D57680E439431E893DEBDF5B03D6D969D62E21C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45682,7 +45682,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Paginatio
 		return;
 	}
 }
-// Method Definition Index: 68115
+// Method Definition Index: 68117
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Pagination_Controller_op_Equality_m8FB8674AD90EA812E2B4D0EA3B15542FF40251A2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45724,7 +45724,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Paginatio
 		return;
 	}
 }
-// Method Definition Index: 68116
+// Method Definition Index: 68118
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Pagination_Controller_op_Inequality_mB161E5B834B506CA7522E087CE99BCECE2558BC9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45766,7 +45766,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Paginatio
 		return;
 	}
 }
-// Method Definition Index: 68117
+// Method Definition Index: 68119
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Pagination_LoadingCellView_op_Implicit_m1AED3E236676AE58BB92A3094E3A671BB29B666B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45803,7 +45803,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Paginatio
 		return;
 	}
 }
-// Method Definition Index: 68118
+// Method Definition Index: 68120
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Pagination_LoadingCellView_op_Equality_mE229EDF299FEEA70B3885DFE4FCB4AA77900A538 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45845,7 +45845,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Paginatio
 		return;
 	}
 }
-// Method Definition Index: 68119
+// Method Definition Index: 68121
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Pagination_LoadingCellView_op_Inequality_m64DFE26F0AAAB957DAB18CBB9C0FB723DF969CF2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45887,7 +45887,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Paginatio
 		return;
 	}
 }
-// Method Definition Index: 68120
+// Method Definition Index: 68122
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedLinkedScrollers_Controller_op_Implicit_m6FFC1AD8B2DAD77B59CD1A8791877A10802E3B44 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45924,7 +45924,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedLin
 		return;
 	}
 }
-// Method Definition Index: 68121
+// Method Definition Index: 68123
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedLinkedScrollers_Controller_op_Equality_mC5BC2B7709B349D13F2F44B102B53378BFD2667F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -45966,7 +45966,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedLin
 		return;
 	}
 }
-// Method Definition Index: 68122
+// Method Definition Index: 68124
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedLinkedScrollers_Controller_op_Inequality_mDE64B31C46AEA79DF49BDFE4BAA14F64B67C9E05 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46008,7 +46008,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedLin
 		return;
 	}
 }
-// Method Definition Index: 68123
+// Method Definition Index: 68125
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedLinkedScrollers_DetailCellView_op_Implicit_mF4023A23A5D7EC38823D49AE3431974D9F5692D5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46045,7 +46045,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedLin
 		return;
 	}
 }
-// Method Definition Index: 68124
+// Method Definition Index: 68126
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedLinkedScrollers_DetailCellView_op_Equality_m82C2E9C33D0172FFFD152FCA1A15993A10E10B67 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46087,7 +46087,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedLin
 		return;
 	}
 }
-// Method Definition Index: 68125
+// Method Definition Index: 68127
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedLinkedScrollers_DetailCellView_op_Inequality_m161BF55362EC83914BFBF6EAD6AF0AF824D039B7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46129,7 +46129,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedLin
 		return;
 	}
 }
-// Method Definition Index: 68126
+// Method Definition Index: 68128
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedLinkedScrollers_MasterCellView_op_Implicit_m6CA41293741AE6ED94590C83F5384DB39628A2FE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46166,7 +46166,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedLin
 		return;
 	}
 }
-// Method Definition Index: 68127
+// Method Definition Index: 68129
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedLinkedScrollers_MasterCellView_op_Equality_mDEBF428F81E7414AC176AC7072A154CBC9E81329 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46208,7 +46208,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedLin
 		return;
 	}
 }
-// Method Definition Index: 68128
+// Method Definition Index: 68130
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedLinkedScrollers_MasterCellView_op_Inequality_m6D0A5FDA54D439CCBBFCFCF4F620650141294713 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46250,7 +46250,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedLin
 		return;
 	}
 }
-// Method Definition Index: 68129
+// Method Definition Index: 68131
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedLinkedScrollers_ScrollRectEx_op_Implicit_m8020AC0A4A86CCD74530DE22242DB1DBCA7DDD19 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46287,7 +46287,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedLin
 		return;
 	}
 }
-// Method Definition Index: 68130
+// Method Definition Index: 68132
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedLinkedScrollers_ScrollRectEx_op_Equality_m97F613904F425321FC22E9A95C48E36D615289C6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46329,7 +46329,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedLin
 		return;
 	}
 }
-// Method Definition Index: 68131
+// Method Definition Index: 68133
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedLinkedScrollers_ScrollRectEx_op_Inequality_mD96C70346228B9DC0C881BAC99F429022E785338 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46371,7 +46371,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedLin
 		return;
 	}
 }
-// Method Definition Index: 68132
+// Method Definition Index: 68134
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedScrollers_Controller_op_Implicit_m9268DFE3E44ED7510D051E5AF0153929E9722141 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46408,7 +46408,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedScr
 		return;
 	}
 }
-// Method Definition Index: 68133
+// Method Definition Index: 68135
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedScrollers_Controller_op_Equality_m96D0DA90B90A796DE6AD0DF64DAA7DDDB85B802F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46450,7 +46450,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedScr
 		return;
 	}
 }
-// Method Definition Index: 68134
+// Method Definition Index: 68136
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedScrollers_Controller_op_Inequality_m2B77542AA26309783740B9F4A0B78A6BE6D2E853 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46492,7 +46492,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedScr
 		return;
 	}
 }
-// Method Definition Index: 68135
+// Method Definition Index: 68137
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedScrollers_DetailCellView_op_Implicit_mEB6FD24BB1C1C1952A61D3C617D4F2A5BDD32232 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46529,7 +46529,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedScr
 		return;
 	}
 }
-// Method Definition Index: 68136
+// Method Definition Index: 68138
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedScrollers_DetailCellView_op_Equality_m3C798DEB32B84161018E99A62A4B0AEB59EF58FA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46571,7 +46571,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedScr
 		return;
 	}
 }
-// Method Definition Index: 68137
+// Method Definition Index: 68139
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedScrollers_DetailCellView_op_Inequality_m080F90773FB62EE760A412C5B7CE19CD4C8FD53A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46613,7 +46613,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedScr
 		return;
 	}
 }
-// Method Definition Index: 68138
+// Method Definition Index: 68140
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedScrollers_MasterCellView_op_Implicit_m7169AD3A2B2FB1956AA8EEAE8FEDFE135658E476 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46650,7 +46650,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedScr
 		return;
 	}
 }
-// Method Definition Index: 68139
+// Method Definition Index: 68141
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedScrollers_MasterCellView_op_Equality_m0897190811BF2039B978EA0476D8A10A0FF22E9C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46692,7 +46692,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedScr
 		return;
 	}
 }
-// Method Definition Index: 68140
+// Method Definition Index: 68142
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedScrollers_MasterCellView_op_Inequality_mE2C447DF6D1D1E3CC116BBC378339179247E5084 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46734,7 +46734,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedScr
 		return;
 	}
 }
-// Method Definition Index: 68141
+// Method Definition Index: 68143
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedScrollers_ScrollRectEx_op_Implicit_m1B9DB75FD9DDA24967F85AC976BB5B1CB270210F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46771,7 +46771,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedScr
 		return;
 	}
 }
-// Method Definition Index: 68142
+// Method Definition Index: 68144
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedScrollers_ScrollRectEx_op_Equality_m407926C33943A20C5B22D3FC94AF8A4606E3DFA5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46813,7 +46813,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedScr
 		return;
 	}
 }
-// Method Definition Index: 68143
+// Method Definition Index: 68145
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedScrollers_ScrollRectEx_op_Inequality_mC9357DF39A66DD12034537D449739959E513A0B2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46855,7 +46855,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_NestedScr
 		return;
 	}
 }
-// Method Definition Index: 68144
+// Method Definition Index: 68146
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_PullDownRefresh_CellView_op_Implicit_m0804A7762E325EF275486643573A184F0BABBBBD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46892,7 +46892,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_PullDownR
 		return;
 	}
 }
-// Method Definition Index: 68145
+// Method Definition Index: 68147
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_PullDownRefresh_CellView_op_Equality_m6DD9C931183D17139397198F06A713D6C0C3DBA9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46934,7 +46934,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_PullDownR
 		return;
 	}
 }
-// Method Definition Index: 68146
+// Method Definition Index: 68148
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_PullDownRefresh_CellView_op_Inequality_m1CBF7B6FADF83023B558F751E971A5EAC8EB0C52 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -46976,7 +46976,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_PullDownR
 		return;
 	}
 }
-// Method Definition Index: 68147
+// Method Definition Index: 68149
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_PullDownRefresh_Controller_op_Implicit_m2AA3287728CE116A6C412679249D125589ABB06D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47013,7 +47013,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_PullDownR
 		return;
 	}
 }
-// Method Definition Index: 68148
+// Method Definition Index: 68150
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_PullDownRefresh_Controller_op_Equality_m1CB264A14E8DF072E6DFA8E20E57A3A509D53655 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47055,7 +47055,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_PullDownR
 		return;
 	}
 }
-// Method Definition Index: 68149
+// Method Definition Index: 68151
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_PullDownRefresh_Controller_op_Inequality_m747FFEB68428D26C5A677D8921B664385A55958A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47097,7 +47097,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_PullDownR
 		return;
 	}
 }
-// Method Definition Index: 68150
+// Method Definition Index: 68152
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSelection_CellView_op_Implicit_mC38C34B22AC5FBD4A356E3776C4062465AAA22D4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47134,7 +47134,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSelec
 		return;
 	}
 }
-// Method Definition Index: 68151
+// Method Definition Index: 68153
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSelection_CellView_op_Equality_mDE16A021850A4AF9F9243C79AA5C7C7F62F84278 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47176,7 +47176,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSelec
 		return;
 	}
 }
-// Method Definition Index: 68152
+// Method Definition Index: 68154
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSelection_CellView_op_Inequality_mDC7400B20297F2B8102D3BC2912E796B14C85488 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47218,7 +47218,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSelec
 		return;
 	}
 }
-// Method Definition Index: 68153
+// Method Definition Index: 68155
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSelection_Controller_op_Implicit_mFE7D72803E96E3E0D628816DFC41EB0AADFB859D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47255,7 +47255,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSelec
 		return;
 	}
 }
-// Method Definition Index: 68154
+// Method Definition Index: 68156
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSelection_Controller_op_Equality_m21BE0B6D8A28615551C0A05B5387E01E95BD41A3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47297,7 +47297,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSelec
 		return;
 	}
 }
-// Method Definition Index: 68155
+// Method Definition Index: 68157
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSelection_Controller_op_Inequality_m2D0E7081FCBBF78CAB814F25AAD25D71EB1FFFE3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47339,7 +47339,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSelec
 		return;
 	}
 }
-// Method Definition Index: 68156
+// Method Definition Index: 68158
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSelection_RowCellView_op_Implicit_m2F4B6469132A5F768B3F27A789CA90C71C14C0FE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47376,7 +47376,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSelec
 		return;
 	}
 }
-// Method Definition Index: 68157
+// Method Definition Index: 68159
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSelection_RowCellView_op_Equality_m4F3FD169112483C5B3423BDBE79C7E7EA9E863B0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47418,7 +47418,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSelec
 		return;
 	}
 }
-// Method Definition Index: 68158
+// Method Definition Index: 68160
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSelection_RowCellView_op_Inequality_m6250319CB72B5C73FB03A767665029CDD7B1E872 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47460,7 +47460,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSelec
 		return;
 	}
 }
-// Method Definition Index: 68159
+// Method Definition Index: 68161
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSimulation_CellView_op_Implicit_mE53B8083474BFA95D7609CC2635915FB6EE61B0D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47497,7 +47497,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSimul
 		return;
 	}
 }
-// Method Definition Index: 68160
+// Method Definition Index: 68162
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSimulation_CellView_op_Equality_m5B3F223B1C7B1F7D0FFF61526EACA03E895F49A6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47539,7 +47539,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSimul
 		return;
 	}
 }
-// Method Definition Index: 68161
+// Method Definition Index: 68163
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSimulation_CellView_op_Inequality_mDDE80373AAA897F7C8EAA2AC91277BAB82AF071B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47581,7 +47581,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSimul
 		return;
 	}
 }
-// Method Definition Index: 68162
+// Method Definition Index: 68164
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSimulation_Controller_op_Implicit_m126866EF72342E9E4202FC2CC7F3485F7E944218 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47618,7 +47618,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSimul
 		return;
 	}
 }
-// Method Definition Index: 68163
+// Method Definition Index: 68165
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSimulation_Controller_op_Equality_m951D90B449E23EC005F76B392CF80A9773723696 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47660,7 +47660,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSimul
 		return;
 	}
 }
-// Method Definition Index: 68164
+// Method Definition Index: 68166
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSimulation_Controller_op_Inequality_m6D1A4D21A90D718BE61BDE58CAADF6F78E7DD287 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47702,7 +47702,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSimul
 		return;
 	}
 }
-// Method Definition Index: 68165
+// Method Definition Index: 68167
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSimulation_RowCellView_op_Implicit_m9A98F6A80E1E743D8FCFEDB1CD312DB86E3CB987 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47739,7 +47739,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSimul
 		return;
 	}
 }
-// Method Definition Index: 68166
+// Method Definition Index: 68168
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSimulation_RowCellView_op_Equality_m9E9030D657BAB0FE7EDC9E6D1AC5FD73948C1F60 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47781,7 +47781,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSimul
 		return;
 	}
 }
-// Method Definition Index: 68167
+// Method Definition Index: 68169
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSimulation_RowCellView_op_Inequality_mF6F7A37D1056774559CF5C23AF3452CD416AD2FC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47823,7 +47823,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_GridSimul
 		return;
 	}
 }
-// Method Definition Index: 68168
+// Method Definition Index: 68170
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_CellEvents_CellView_op_Implicit_m6DC8059098B67D75D978BA8B0B2C5C3D97002D15 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47860,7 +47860,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_CellEvent
 		return;
 	}
 }
-// Method Definition Index: 68169
+// Method Definition Index: 68171
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_CellEvents_CellView_op_Equality_mB222BDC56AAF13F948D75D9084DD57AA83D93EA3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47902,7 +47902,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_CellEvent
 		return;
 	}
 }
-// Method Definition Index: 68170
+// Method Definition Index: 68172
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_CellEvents_CellView_op_Inequality_m0DE86FC379AF775FCB073EF842E00044C8C8DB54 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47944,7 +47944,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_CellEvent
 		return;
 	}
 }
-// Method Definition Index: 68171
+// Method Definition Index: 68173
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_CellEvents_Controller_op_Implicit_mE3BD4FDF8951472E66B00DC2CF62A95CDC969610 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -47981,7 +47981,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_CellEvent
 		return;
 	}
 }
-// Method Definition Index: 68172
+// Method Definition Index: 68174
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_CellEvents_Controller_op_Equality_m31093C84201E532063CD82994EB75D9A731E0E8D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48023,7 +48023,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_CellEvent
 		return;
 	}
 }
-// Method Definition Index: 68173
+// Method Definition Index: 68175
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_CellEvents_Controller_op_Inequality_mD60DAD00760C6432751B78F14980EC99EEDD5923 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48065,7 +48065,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_CellEvent
 		return;
 	}
 }
-// Method Definition Index: 68174
+// Method Definition Index: 68176
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_ViewDrivenCellSizes_CellView_op_Implicit_m80F6E1360BB1AE3532E646BA4427F85F7A27C971 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48102,7 +48102,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_ViewDrive
 		return;
 	}
 }
-// Method Definition Index: 68175
+// Method Definition Index: 68177
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_ViewDrivenCellSizes_CellView_op_Equality_m1903BB7875118A10499BEE743C56F3D809E47CCD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48144,7 +48144,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_ViewDrive
 		return;
 	}
 }
-// Method Definition Index: 68176
+// Method Definition Index: 68178
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_ViewDrivenCellSizes_CellView_op_Inequality_mDC17810AA19739EB97DE17EC45B7D8C934530EA3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48186,7 +48186,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_ViewDrive
 		return;
 	}
 }
-// Method Definition Index: 68177
+// Method Definition Index: 68179
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_ViewDrivenCellSizes_Controller_op_Implicit_mC2648E9E502EDA0CC109DF208243652D8DC4B637 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48223,7 +48223,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_ViewDrive
 		return;
 	}
 }
-// Method Definition Index: 68178
+// Method Definition Index: 68180
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_ViewDrivenCellSizes_Controller_op_Equality_m09AEB3CF177211648C339604D9211D82F585232C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48265,7 +48265,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_ViewDrive
 		return;
 	}
 }
-// Method Definition Index: 68179
+// Method Definition Index: 68181
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_ViewDrivenCellSizes_Controller_op_Inequality_m9E10456CC24F855DECC2505F19D12E772883A4E1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48307,7 +48307,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_ViewDrive
 		return;
 	}
 }
-// Method Definition Index: 68180
+// Method Definition Index: 68182
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_RefreshDemo_CellView_op_Implicit_m7E14B75D39F13F1EB2F053111FA721A8D36C5C96 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48344,7 +48344,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_RefreshDe
 		return;
 	}
 }
-// Method Definition Index: 68181
+// Method Definition Index: 68183
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_RefreshDemo_CellView_op_Equality_m24C2C61468E2F69536793F6F64A4D641B7F03BE0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48386,7 +48386,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_RefreshDe
 		return;
 	}
 }
-// Method Definition Index: 68182
+// Method Definition Index: 68184
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_RefreshDemo_CellView_op_Inequality_m6DA80BE82F12E87BD7274501337B12774C61089B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48428,7 +48428,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_RefreshDe
 		return;
 	}
 }
-// Method Definition Index: 68183
+// Method Definition Index: 68185
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_RefreshDemo_Controller_op_Implicit_m1D952FD28E21631FDB17BB9F4A0DFF24684D0B6A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48465,7 +48465,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_RefreshDe
 		return;
 	}
 }
-// Method Definition Index: 68184
+// Method Definition Index: 68186
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_RefreshDemo_Controller_op_Equality_m072F8DCB987DFC407BDB013662F466AB8AAC1E34 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48507,7 +48507,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_RefreshDe
 		return;
 	}
 }
-// Method Definition Index: 68185
+// Method Definition Index: 68187
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_RefreshDemo_Controller_op_Inequality_m04C896E27CE493C9A54226E0F30E8694E0B5D1A0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48549,7 +48549,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_RefreshDe
 		return;
 	}
 }
-// Method Definition Index: 68186
+// Method Definition Index: 68188
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SnappingDemo_PlayWin_op_Implicit_mCC1EEA6989D1AB3A80C1419FACF2E89CD2431969 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48586,7 +48586,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SnappingD
 		return;
 	}
 }
-// Method Definition Index: 68187
+// Method Definition Index: 68189
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SnappingDemo_PlayWin_op_Equality_m580AFE86CF720A5C2AD862B9770ABB86EB16F684 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48628,7 +48628,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SnappingD
 		return;
 	}
 }
-// Method Definition Index: 68188
+// Method Definition Index: 68190
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SnappingDemo_PlayWin_op_Inequality_m25949C75F82AD7D64087A28839D0F77166820766 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48670,7 +48670,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SnappingD
 		return;
 	}
 }
-// Method Definition Index: 68189
+// Method Definition Index: 68191
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SnappingDemo_SlotCellView_op_Implicit_m6EC0C63138D1505A9D09A97B60506B937115857E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48707,7 +48707,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SnappingD
 		return;
 	}
 }
-// Method Definition Index: 68190
+// Method Definition Index: 68192
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SnappingDemo_SlotCellView_op_Equality_m526A0BF4910FA01768ABB7419538CD4F0C8D76AA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48749,7 +48749,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SnappingD
 		return;
 	}
 }
-// Method Definition Index: 68191
+// Method Definition Index: 68193
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SnappingDemo_SlotCellView_op_Inequality_m7C946A7A1E0563DFDBAA425916BA51D6C7A8DFAB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48791,7 +48791,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SnappingD
 		return;
 	}
 }
-// Method Definition Index: 68192
+// Method Definition Index: 68194
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SnappingDemo_SlotController_op_Implicit_m5BC5DD108E36AFBDE97A30658A307F0B0FED55CD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48828,7 +48828,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SnappingD
 		return;
 	}
 }
-// Method Definition Index: 68193
+// Method Definition Index: 68195
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SnappingDemo_SlotController_op_Equality_m2C6A1C26BE8431A510B3A035176DA964A1E586B6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48870,7 +48870,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SnappingD
 		return;
 	}
 }
-// Method Definition Index: 68194
+// Method Definition Index: 68196
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SnappingDemo_SlotController_op_Inequality_m8B9E23C2A5EF6ECC316078F37A9D46BFBD621B3C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48912,7 +48912,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SnappingD
 		return;
 	}
 }
-// Method Definition Index: 68195
+// Method Definition Index: 68197
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SnappingDemo_SnappingDemo_op_Implicit_m922D0A95C565E0F211575F7E0B97972E6E080D08 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48949,7 +48949,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SnappingD
 		return;
 	}
 }
-// Method Definition Index: 68196
+// Method Definition Index: 68198
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SnappingDemo_SnappingDemo_op_Equality_m11AD64504E8084CE798F9E860A95D75872BF7EE5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -48991,7 +48991,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SnappingD
 		return;
 	}
 }
-// Method Definition Index: 68197
+// Method Definition Index: 68199
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SnappingDemo_SnappingDemo_op_Inequality_m03B180CF843E55C4C143CBAB9C103F4512901AE3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49033,7 +49033,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SnappingD
 		return;
 	}
 }
-// Method Definition Index: 68198
+// Method Definition Index: 68200
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_RemoteResourcesDemo_CellView_op_Implicit_m55147A9FD280AB8D7BF67CFD9B58EC9880A6C2B7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49070,7 +49070,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_RemoteRes
 		return;
 	}
 }
-// Method Definition Index: 68199
+// Method Definition Index: 68201
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_RemoteResourcesDemo_CellView_op_Equality_mF126DEE7018E779666AAF818E3FF92DF4C8C3A0C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49112,7 +49112,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_RemoteRes
 		return;
 	}
 }
-// Method Definition Index: 68200
+// Method Definition Index: 68202
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_RemoteResourcesDemo_CellView_op_Inequality_mBE9C7D18CC4E858D1C0BEDEB9EE8CC360F75CD23 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49154,7 +49154,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_RemoteRes
 		return;
 	}
 }
-// Method Definition Index: 68201
+// Method Definition Index: 68203
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_RemoteResourcesDemo_Controller_op_Implicit_m02BF0467621A6CC484CF6238E4BD00E58F53C6A6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49191,7 +49191,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_RemoteRes
 		return;
 	}
 }
-// Method Definition Index: 68202
+// Method Definition Index: 68204
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_RemoteResourcesDemo_Controller_op_Equality_m5A07213D58A5F6448ED6CE3EFE72B12CF54CFEE1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49233,7 +49233,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_RemoteRes
 		return;
 	}
 }
-// Method Definition Index: 68203
+// Method Definition Index: 68205
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_RemoteResourcesDemo_Controller_op_Inequality_mA1AADC0F4C0B97DD813F9006ADFDE21C655FBCDF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49275,7 +49275,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_RemoteRes
 		return;
 	}
 }
-// Method Definition Index: 68204
+// Method Definition Index: 68206
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_JumpToDemo_CellView_op_Implicit_mB6780E1981775D4157DE62F3DB921B6851E0AC1D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49312,7 +49312,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_JumpToDem
 		return;
 	}
 }
-// Method Definition Index: 68205
+// Method Definition Index: 68207
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_JumpToDemo_CellView_op_Equality_mCBE556252BFEE919F5DE92E33A9E7B5F5C06C49C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49354,7 +49354,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_JumpToDem
 		return;
 	}
 }
-// Method Definition Index: 68206
+// Method Definition Index: 68208
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_JumpToDemo_CellView_op_Inequality_m94333ED17C9DF7FD2D88217392784E53F89ED88D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49396,7 +49396,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_JumpToDem
 		return;
 	}
 }
-// Method Definition Index: 68207
+// Method Definition Index: 68209
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_JumpToDemo_Controller_op_Implicit_m04AF9E177BF55C44B1B6076AFE7D6509777F60A9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49433,7 +49433,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_JumpToDem
 		return;
 	}
 }
-// Method Definition Index: 68208
+// Method Definition Index: 68210
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_JumpToDemo_Controller_op_Equality_m45DBE96E76010BC4FC6E632422FB1523B7D851D7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49475,7 +49475,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_JumpToDem
 		return;
 	}
 }
-// Method Definition Index: 68209
+// Method Definition Index: 68211
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_JumpToDemo_Controller_op_Inequality_mF28B84EAEA7F5EC022EF872AAC35DAAF31200ACC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49517,7 +49517,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_JumpToDem
 		return;
 	}
 }
-// Method Definition Index: 68210
+// Method Definition Index: 68212
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SelectionDemo_InventoryCellView_op_Implicit_mA125EF72C3A1ED76F56F7549390A31652ACA8F47 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49554,7 +49554,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Selection
 		return;
 	}
 }
-// Method Definition Index: 68211
+// Method Definition Index: 68213
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SelectionDemo_InventoryCellView_op_Equality_mA4192CF1E9A8D07F14FA45DF8AEF83F193BA2BCA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49596,7 +49596,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Selection
 		return;
 	}
 }
-// Method Definition Index: 68212
+// Method Definition Index: 68214
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SelectionDemo_InventoryCellView_op_Inequality_m403E338A75B763F0268259AB79C3B15209DA3336 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49638,7 +49638,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Selection
 		return;
 	}
 }
-// Method Definition Index: 68213
+// Method Definition Index: 68215
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SelectionDemo_SelectionDemo_op_Implicit_m3424DF2F90C7CCA37E006E42C9AAB80DFE481B4D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49675,7 +49675,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Selection
 		return;
 	}
 }
-// Method Definition Index: 68214
+// Method Definition Index: 68216
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SelectionDemo_SelectionDemo_op_Equality_m5AAC34BCC5EB568F69840598DBFD646DF0AC6351 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49717,7 +49717,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Selection
 		return;
 	}
 }
-// Method Definition Index: 68215
+// Method Definition Index: 68217
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SelectionDemo_SelectionDemo_op_Inequality_m48C449B4001BD98BE25DE2D824AC0A6AB3F165AE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49759,7 +49759,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_Selection
 		return;
 	}
 }
-// Method Definition Index: 68216
+// Method Definition Index: 68218
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleCellTypesDemo_CellView_op_Implicit_m92D80B686717EA6028B2003CD5498B17DEBD9607 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49796,7 +49796,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleC
 		return;
 	}
 }
-// Method Definition Index: 68217
+// Method Definition Index: 68219
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleCellTypesDemo_CellView_op_Equality_m5E88CCEF8A0B95FEDA82D6311773B27142065DCF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49838,7 +49838,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleC
 		return;
 	}
 }
-// Method Definition Index: 68218
+// Method Definition Index: 68220
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleCellTypesDemo_CellView_op_Inequality_m419EDD307922235E722663684C9261716B3918DF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49880,7 +49880,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleC
 		return;
 	}
 }
-// Method Definition Index: 68219
+// Method Definition Index: 68221
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleCellTypesDemo_CellViewFooter_op_Implicit_m64FD278D9211840D1ED1C612ACF8F998721464DB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49917,7 +49917,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleC
 		return;
 	}
 }
-// Method Definition Index: 68220
+// Method Definition Index: 68222
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleCellTypesDemo_CellViewFooter_op_Equality_mDD05E85C77D2A604D0D786A84C2E84A3F2EBA310 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -49959,7 +49959,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleC
 		return;
 	}
 }
-// Method Definition Index: 68221
+// Method Definition Index: 68223
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleCellTypesDemo_CellViewFooter_op_Inequality_mA05344175B9B62E70AC940DEF1B49EBB15B9C0DF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50001,7 +50001,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleC
 		return;
 	}
 }
-// Method Definition Index: 68222
+// Method Definition Index: 68224
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleCellTypesDemo_CellViewHeader_op_Implicit_m0E41E06AEDAC7C734E053B655D1B75DBFCC3B05E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50038,7 +50038,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleC
 		return;
 	}
 }
-// Method Definition Index: 68223
+// Method Definition Index: 68225
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleCellTypesDemo_CellViewHeader_op_Equality_m2E763CA7719D183C821BDBAB28E596022FB26B26 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50080,7 +50080,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleC
 		return;
 	}
 }
-// Method Definition Index: 68224
+// Method Definition Index: 68226
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleCellTypesDemo_CellViewHeader_op_Inequality_m5C8DF403E6882B8F933542BB55A58B9541F36115 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50122,7 +50122,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleC
 		return;
 	}
 }
-// Method Definition Index: 68225
+// Method Definition Index: 68227
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleCellTypesDemo_CellViewRow_op_Implicit_m32700598636F04BBFA7711A751C1D12D6E013549 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50159,7 +50159,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleC
 		return;
 	}
 }
-// Method Definition Index: 68226
+// Method Definition Index: 68228
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleCellTypesDemo_CellViewRow_op_Equality_mCB191BF156E31013F5F589F90112C1E17C316DCB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50201,7 +50201,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleC
 		return;
 	}
 }
-// Method Definition Index: 68227
+// Method Definition Index: 68229
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleCellTypesDemo_CellViewRow_op_Inequality_m4C3698BDBEA9E160180C47E504789AE8B4F5027C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50243,7 +50243,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleC
 		return;
 	}
 }
-// Method Definition Index: 68228
+// Method Definition Index: 68230
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleCellTypesDemo_MultipleCellTypesDemo_op_Implicit_m57043229F029CD2836C2F51A660EFD5A3FEFEB45 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50280,7 +50280,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleC
 		return;
 	}
 }
-// Method Definition Index: 68229
+// Method Definition Index: 68231
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleCellTypesDemo_MultipleCellTypesDemo_op_Equality_m0488B5ECAD4A12BB3010EB6A21751AD8103EE3B9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50322,7 +50322,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleC
 		return;
 	}
 }
-// Method Definition Index: 68230
+// Method Definition Index: 68232
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleCellTypesDemo_MultipleCellTypesDemo_op_Inequality_m9CE4CE3A708B32613BEABD809B1FA111E2B2213F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50364,7 +50364,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_MultipleC
 		return;
 	}
 }
-// Method Definition Index: 68231
+// Method Definition Index: 68233
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SuperSimpleDemo_CellView_op_Implicit_mB0166A75D026DF0D6202D6CDBE22F607A6AD6D7B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50401,7 +50401,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SuperSimp
 		return;
 	}
 }
-// Method Definition Index: 68232
+// Method Definition Index: 68234
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SuperSimpleDemo_CellView_op_Equality_m927B62F492D1E29F1B141F7DCBF38F0AC552BEEF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50443,7 +50443,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SuperSimp
 		return;
 	}
 }
-// Method Definition Index: 68233
+// Method Definition Index: 68235
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SuperSimpleDemo_CellView_op_Inequality_mECD3F37D42E673B983E16CDC34AD1B9077140F9D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50485,7 +50485,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SuperSimp
 		return;
 	}
 }
-// Method Definition Index: 68234
+// Method Definition Index: 68236
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SuperSimpleDemo_SimpleDemo_op_Implicit_mA23690C51A583D76BCE4BB62A28249FAB7D081CD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50522,7 +50522,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SuperSimp
 		return;
 	}
 }
-// Method Definition Index: 68235
+// Method Definition Index: 68237
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SuperSimpleDemo_SimpleDemo_op_Equality_m7B87CF94E040045ACB7413A3408B252E451D9EDE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50564,7 +50564,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SuperSimp
 		return;
 	}
 }
-// Method Definition Index: 68236
+// Method Definition Index: 68238
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SuperSimpleDemo_SimpleDemo_op_Inequality_m82FBF15E80C60CFA8FF4C79016054A3A2342E8E0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50606,7 +50606,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_EnhancedScrollerDemos_SuperSimp
 		return;
 	}
 }
-// Method Definition Index: 68237
+// Method Definition Index: 68239
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Crystal_SafeAreaDemo_op_Implicit_m1C5E20FAEC4151D60916AF177585661C0C26CF2B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50643,7 +50643,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Crystal_SafeAreaDemo_op_Implici
 		return;
 	}
 }
-// Method Definition Index: 68238
+// Method Definition Index: 68240
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Crystal_SafeAreaDemo_op_Equality_m3A9739F59621267B31E4E8F3134F4840569DBF1A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50685,7 +50685,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Crystal_SafeAreaDemo_op_Equalit
 		return;
 	}
 }
-// Method Definition Index: 68239
+// Method Definition Index: 68241
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Crystal_SafeAreaDemo_op_Inequality_m954E2BE50DB8A31CC73FD1B014F5F222F2C1CF89 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50727,7 +50727,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Crystal_SafeAreaDemo_op_Inequal
 		return;
 	}
 }
-// Method Definition Index: 68240
+// Method Definition Index: 68242
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Crystal_SafeArea_op_Implicit_m03717F97737DD8936B59DF513802A52CBBA31089 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50764,7 +50764,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Crystal_SafeArea_op_Implicit_m0
 		return;
 	}
 }
-// Method Definition Index: 68241
+// Method Definition Index: 68243
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Crystal_SafeArea_op_Equality_m3DF2D96C95276B3FF658ABF535D269EEA1EF7102 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50806,7 +50806,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Crystal_SafeArea_op_Equality_m3
 		return;
 	}
 }
-// Method Definition Index: 68242
+// Method Definition Index: 68244
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Crystal_SafeArea_op_Inequality_m0CBC91C2416A155EE21B3C2E183789821E54B164 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50848,7 +50848,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Crystal_SafeArea_op_Inequality_
 		return;
 	}
 }
-// Method Definition Index: 68243
+// Method Definition Index: 68245
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_InputActionAsset_op_Implicit_m2CF17D08FE9C8D6C12E5D870886D43389821AA8D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50885,7 +50885,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_InputAc
 		return;
 	}
 }
-// Method Definition Index: 68244
+// Method Definition Index: 68246
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_InputActionAsset_op_Equality_m4275076CA2286C5674A956A75D4129D6231624B0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50927,7 +50927,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_InputAc
 		return;
 	}
 }
-// Method Definition Index: 68245
+// Method Definition Index: 68247
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_InputActionAsset_op_Inequality_m57F9984EF17F89621EBD850514B8A6608DC97703 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -50969,7 +50969,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_InputAc
 		return;
 	}
 }
-// Method Definition Index: 68246
+// Method Definition Index: 68248
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_InputActionReference_op_Implicit_mE6172E8C6AA51FA3DC50BCD28025D93B86F5C707 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51004,7 +51004,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_InputAc
 		return;
 	}
 }
-// Method Definition Index: 68247
+// Method Definition Index: 68249
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_InputActionReference_op_Implicit_0_mDEE2C56EF4FC724887A1267B1BF41B8D72A55911 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51041,7 +51041,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_InputAc
 		return;
 	}
 }
-// Method Definition Index: 68248
+// Method Definition Index: 68250
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_InputActionReference_op_Equality_mC55ED4951D7E83C16D3A2A6C7F97281E38EFF1F6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51083,7 +51083,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_InputAc
 		return;
 	}
 }
-// Method Definition Index: 68249
+// Method Definition Index: 68251
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_InputActionReference_op_Inequality_mB26BFC0867DDE85923E97458F1A3D36B331AEC13 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51125,7 +51125,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_InputAc
 		return;
 	}
 }
-// Method Definition Index: 68250
+// Method Definition Index: 68252
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_InputSettings_op_Implicit_m930C4531F02ED9D60816C8AAE4AE8C45EB12D5E0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51162,7 +51162,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_InputSe
 		return;
 	}
 }
-// Method Definition Index: 68251
+// Method Definition Index: 68253
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_InputSettings_op_Equality_m7C01A10EFBEED83B5875FD0916030BB3D8A5D6DA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51204,7 +51204,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_InputSe
 		return;
 	}
 }
-// Method Definition Index: 68252
+// Method Definition Index: 68254
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_InputSettings_op_Inequality_m49E49F31E01F239E022C61608E43569AE825778B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51246,7 +51246,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_InputSe
 		return;
 	}
 }
-// Method Definition Index: 68253
+// Method Definition Index: 68255
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_PlayerInput_op_Implicit_mD8786C252239FD2AD4F7D0B0055503692101728B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51283,7 +51283,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_PlayerI
 		return;
 	}
 }
-// Method Definition Index: 68254
+// Method Definition Index: 68256
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_PlayerInput_op_Equality_m18F4572154D87CE318F3392685BB9FE034B5DC0A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51325,7 +51325,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_PlayerI
 		return;
 	}
 }
-// Method Definition Index: 68255
+// Method Definition Index: 68257
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_PlayerInput_op_Inequality_m8C35DF1D81077DB80023388EBCEC037890CB60F0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51367,7 +51367,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_PlayerI
 		return;
 	}
 }
-// Method Definition Index: 68256
+// Method Definition Index: 68258
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_PlayerInputManager_op_Implicit_mC0E24C73BB1453C3DDE6FFA3CE05F3696B05E369 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51404,7 +51404,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_PlayerI
 		return;
 	}
 }
-// Method Definition Index: 68257
+// Method Definition Index: 68259
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_PlayerInputManager_op_Equality_m798DBA138F9FF2CA4D49C57B334E66D1B4BCFD92 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51446,7 +51446,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_PlayerI
 		return;
 	}
 }
-// Method Definition Index: 68258
+// Method Definition Index: 68260
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_PlayerInputManager_op_Inequality_mE074F8617F6156322487A1A78D4C5963DC121386 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51488,7 +51488,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_PlayerI
 		return;
 	}
 }
-// Method Definition Index: 68259
+// Method Definition Index: 68261
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_XR_TrackedPoseDriver_op_Implicit_m1A28F560DEB2CF5DB0F9C739696F70D48FE92F4A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51525,7 +51525,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_XR_Trac
 		return;
 	}
 }
-// Method Definition Index: 68260
+// Method Definition Index: 68262
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_XR_TrackedPoseDriver_op_Equality_m31E2E23807D527905F7F595CD4E9195AE1FA254C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51567,7 +51567,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_XR_Trac
 		return;
 	}
 }
-// Method Definition Index: 68261
+// Method Definition Index: 68263
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_XR_TrackedPoseDriver_op_Inequality_m86E46D074F7CDB27BCD4CA64F375DFEE27CECD38 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51609,7 +51609,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_XR_Trac
 		return;
 	}
 }
-// Method Definition Index: 68262
+// Method Definition Index: 68264
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_UI_InputSystemUIInputModule_op_Implicit_m8B9A8A9E8DA582F3204C8E64107BAE63E44B9F75 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51646,7 +51646,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_UI_Inpu
 		return;
 	}
 }
-// Method Definition Index: 68263
+// Method Definition Index: 68265
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_UI_InputSystemUIInputModule_op_Equality_m8E5C8F449997807CCFB295D163DAD56ECEE6B73B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51688,7 +51688,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_UI_Inpu
 		return;
 	}
 }
-// Method Definition Index: 68264
+// Method Definition Index: 68266
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_UI_InputSystemUIInputModule_op_Inequality_m8CFB6F12CFD92CD1D2B15948F9C17C9A0624627E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51730,7 +51730,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_UI_Inpu
 		return;
 	}
 }
-// Method Definition Index: 68265
+// Method Definition Index: 68267
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_UI_MultiplayerEventSystem_op_Implicit_mD3696F0E05A84B5C86F024DAF84D22DB17C67046 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51767,7 +51767,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_UI_Mult
 		return;
 	}
 }
-// Method Definition Index: 68266
+// Method Definition Index: 68268
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_UI_MultiplayerEventSystem_op_Equality_m9D663F381DFCA48F601FA3F5734E1EBF6744FD82 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51809,7 +51809,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_UI_Mult
 		return;
 	}
 }
-// Method Definition Index: 68267
+// Method Definition Index: 68269
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_UI_MultiplayerEventSystem_op_Inequality_m0056423FB566247D50E9F34C4044F8738D34EF29 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51851,7 +51851,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_UI_Mult
 		return;
 	}
 }
-// Method Definition Index: 68268
+// Method Definition Index: 68270
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_UI_TrackedDeviceRaycaster_op_Implicit_m82686373F0F424F4DD294ADBA80AC8C9663E11D5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51888,7 +51888,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_UI_Trac
 		return;
 	}
 }
-// Method Definition Index: 68269
+// Method Definition Index: 68271
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_UI_TrackedDeviceRaycaster_op_Equality_m50A1702F73A828F48DA90172211F8453382FA35E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51930,7 +51930,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_UI_Trac
 		return;
 	}
 }
-// Method Definition Index: 68270
+// Method Definition Index: 68272
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_UI_TrackedDeviceRaycaster_op_Inequality_mDB953E073D5AD4E7A3EE4A850CD242275D396463 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -51972,7 +51972,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_UI_Trac
 		return;
 	}
 }
-// Method Definition Index: 68271
+// Method Definition Index: 68273
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_UI_VirtualMouseInput_op_Implicit_m87B75CD5704B7CDE916AC8BDD2F45F55A8DFDC7E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52009,7 +52009,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_UI_Virt
 		return;
 	}
 }
-// Method Definition Index: 68272
+// Method Definition Index: 68274
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_UI_VirtualMouseInput_op_Equality_m58378A90A4DA143383A97ED0884D9C2594A43FB2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52051,7 +52051,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_UI_Virt
 		return;
 	}
 }
-// Method Definition Index: 68273
+// Method Definition Index: 68275
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_UI_VirtualMouseInput_op_Inequality_mE3A50C311D57C20491DD9CA671B71B29F5E0455A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52093,7 +52093,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_UI_Virt
 		return;
 	}
 }
-// Method Definition Index: 68274
+// Method Definition Index: 68276
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_OnScreen_OnScreenButton_op_Implicit_m17D45FE2042683D3AA884F79DE8F593DB8B9BD2F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52130,7 +52130,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_OnScree
 		return;
 	}
 }
-// Method Definition Index: 68275
+// Method Definition Index: 68277
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_OnScreen_OnScreenButton_op_Equality_m80AAABFC0986BE8BD3E36A1F56D6EE5907C0CF7C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52172,7 +52172,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_OnScree
 		return;
 	}
 }
-// Method Definition Index: 68276
+// Method Definition Index: 68278
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_OnScreen_OnScreenButton_op_Inequality_m5EC4BC40A0F9CB4FEB2EA489B93DE99ADDFC5D08 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52214,7 +52214,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_OnScree
 		return;
 	}
 }
-// Method Definition Index: 68277
+// Method Definition Index: 68279
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_OnScreen_OnScreenStick_op_Implicit_m14966A8FA2E1286F9ADD84743B8254A105E3DD62 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52251,7 +52251,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_OnScree
 		return;
 	}
 }
-// Method Definition Index: 68278
+// Method Definition Index: 68280
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_OnScreen_OnScreenStick_op_Equality_m4C3AC144670C5F620BDD716140CDC795040E5D26 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52293,7 +52293,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_OnScree
 		return;
 	}
 }
-// Method Definition Index: 68279
+// Method Definition Index: 68281
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_OnScreen_OnScreenStick_op_Inequality_m49DFEF9C04F9F5782F2A0D0395D846A276E82A9D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52335,7 +52335,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_OnScree
 		return;
 	}
 }
-// Method Definition Index: 68280
+// Method Definition Index: 68282
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_EnhancedTouch_TouchSimulation_op_Implicit_mEB75D0F89228067DD708921F7539D6B44D8EE319 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52372,7 +52372,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_Enhance
 		return;
 	}
 }
-// Method Definition Index: 68281
+// Method Definition Index: 68283
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_EnhancedTouch_TouchSimulation_op_Equality_mB7D01B7C72896E135BDE7F51FA71EF9308A13D49 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52414,7 +52414,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_Enhance
 		return;
 	}
 }
-// Method Definition Index: 68282
+// Method Definition Index: 68284
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_EnhancedTouch_TouchSimulation_op_Inequality_mC3AEF5D23C80CE204D5FAD01B5E31C0F53776190 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52456,7 +52456,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_InputSystem_Enhance
 		return;
 	}
 }
-// Method Definition Index: 68283
+// Method Definition Index: 68285
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_ColorGradient_op_Implicit_m5E2986F4878A58E5032E27E2FFB232B2DD987069 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52493,7 +52493,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_ColorGradient_op_Impl
 		return;
 	}
 }
-// Method Definition Index: 68284
+// Method Definition Index: 68286
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_ColorGradient_op_Equality_m9FCEDD12FD0D5BA6CB83BEDD261A41B4489E3F52 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52535,7 +52535,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_ColorGradient_op_Equa
 		return;
 	}
 }
-// Method Definition Index: 68285
+// Method Definition Index: 68287
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_ColorGradient_op_Inequality_mB7EA03B52FBD88A909E3B666DE5E6F1CBE67EB6D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52577,7 +52577,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_ColorGradient_op_Ineq
 		return;
 	}
 }
-// Method Definition Index: 68286
+// Method Definition Index: 68288
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_Dropdown_op_Implicit_mE75F89FFB78E9539616649C3DE744B319A2CB33B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52614,7 +52614,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_Dropdown_op_Implicit_
 		return;
 	}
 }
-// Method Definition Index: 68287
+// Method Definition Index: 68289
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_Dropdown_op_Equality_m528D09F6C8BFD9D8234C9F7BC1BDE1B0FD7B5570 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52656,7 +52656,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_Dropdown_op_Equality_
 		return;
 	}
 }
-// Method Definition Index: 68288
+// Method Definition Index: 68290
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_Dropdown_op_Inequality_mEF7CC6C95F667BFF454E1794829C561FB154DEAC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52698,7 +52698,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_Dropdown_op_Inequalit
 		return;
 	}
 }
-// Method Definition Index: 68289
+// Method Definition Index: 68291
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_FontAsset_op_Implicit_m9BD40820FD3C6BC9E365B54189333634F041A0A5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52735,7 +52735,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_FontAsset_op_Implicit
 		return;
 	}
 }
-// Method Definition Index: 68290
+// Method Definition Index: 68292
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_FontAsset_op_Equality_m6DE9A6BF0B0092A4240884A70D7398257F1BA1D1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52777,7 +52777,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_FontAsset_op_Equality
 		return;
 	}
 }
-// Method Definition Index: 68291
+// Method Definition Index: 68293
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_FontAsset_op_Inequality_m6FAAD4FB43A6B8ED3FC50D6E8C5D4FFFBF5D4DA8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52819,7 +52819,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_FontAsset_op_Inequali
 		return;
 	}
 }
-// Method Definition Index: 68292
+// Method Definition Index: 68294
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_InputField_op_Implicit_mFF54B478D1FFEF1739AD2FFB1E09E50B4A176D0B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52856,7 +52856,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_InputField_op_Implici
 		return;
 	}
 }
-// Method Definition Index: 68293
+// Method Definition Index: 68295
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_InputField_op_Equality_m44893B8E8DF9ABB9EABD9903F350F3A2F8F7555D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52898,7 +52898,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_InputField_op_Equalit
 		return;
 	}
 }
-// Method Definition Index: 68294
+// Method Definition Index: 68296
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_InputField_op_Inequality_m42F64879A210FFB4E69E4B210FBBD8E2F0DADE79 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52940,7 +52940,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_InputField_op_Inequal
 		return;
 	}
 }
-// Method Definition Index: 68295
+// Method Definition Index: 68297
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_PackageResourceImporterWindow_op_Implicit_m397F33C98BE4099F69A50A62A12F53DB8254F703 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -52977,7 +52977,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_PackageResourceImport
 		return;
 	}
 }
-// Method Definition Index: 68296
+// Method Definition Index: 68298
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_PackageResourceImporterWindow_op_Equality_mD2B9A59284A2375D668C97EC043AD8F4B3445D7D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53019,7 +53019,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_PackageResourceImport
 		return;
 	}
 }
-// Method Definition Index: 68297
+// Method Definition Index: 68299
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_PackageResourceImporterWindow_op_Inequality_m4ADC3F5834A347022D00689B8B6474094CC84548 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53061,7 +53061,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_PackageResourceImport
 		return;
 	}
 }
-// Method Definition Index: 68298
+// Method Definition Index: 68300
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_ScrollbarEventHandler_op_Implicit_mDFF785C8DC41825423730970AA266AA0CF80A652 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53098,7 +53098,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_ScrollbarEventHandler
 		return;
 	}
 }
-// Method Definition Index: 68299
+// Method Definition Index: 68301
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_ScrollbarEventHandler_op_Equality_m8E60F9380C854AA567C456F35874F25FCA92387B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53140,7 +53140,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_ScrollbarEventHandler
 		return;
 	}
 }
-// Method Definition Index: 68300
+// Method Definition Index: 68302
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_ScrollbarEventHandler_op_Inequality_mBC8D88DA20C483649BF162AEECD1AC43DECC8517 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53182,7 +53182,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_ScrollbarEventHandler
 		return;
 	}
 }
-// Method Definition Index: 68301
+// Method Definition Index: 68303
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SelectionCaret_op_Implicit_mA4B18342BD50EF8FEDA3E911223C492D732F96E8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53219,7 +53219,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SelectionCaret_op_Imp
 		return;
 	}
 }
-// Method Definition Index: 68302
+// Method Definition Index: 68304
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SelectionCaret_op_Equality_m9785179BB202465F026E8ACF456866ACE6943C13 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53261,7 +53261,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SelectionCaret_op_Equ
 		return;
 	}
 }
-// Method Definition Index: 68303
+// Method Definition Index: 68305
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SelectionCaret_op_Inequality_m3C6F985A66C01B153CF763498510DF8C6C171A06 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53303,7 +53303,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SelectionCaret_op_Ine
 		return;
 	}
 }
-// Method Definition Index: 68304
+// Method Definition Index: 68306
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_Settings_op_Implicit_m84B8F6371565D9537768B472F2FB50900D26A430 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53340,7 +53340,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_Settings_op_Implicit_
 		return;
 	}
 }
-// Method Definition Index: 68305
+// Method Definition Index: 68307
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_Settings_op_Equality_mFF62A4DDB0004E64C4DA3D213DBE4B16DB310827 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53382,7 +53382,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_Settings_op_Equality_
 		return;
 	}
 }
-// Method Definition Index: 68306
+// Method Definition Index: 68308
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_Settings_op_Inequality_m2C53C8BBCA62AF8CCB48850356E1AE72D37A8AAE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53424,7 +53424,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_Settings_op_Inequalit
 		return;
 	}
 }
-// Method Definition Index: 68307
+// Method Definition Index: 68309
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SpriteAnimator_op_Implicit_m7F6DD8BB2FC317FA75043DDF64B6F9A125D6D70F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53461,7 +53461,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SpriteAnimator_op_Imp
 		return;
 	}
 }
-// Method Definition Index: 68308
+// Method Definition Index: 68310
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SpriteAnimator_op_Equality_m71C362246E7BE4511EC80EBC9E1BA44F4B7979B9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53503,7 +53503,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SpriteAnimator_op_Equ
 		return;
 	}
 }
-// Method Definition Index: 68309
+// Method Definition Index: 68311
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SpriteAnimator_op_Inequality_mBF25953E814C51E59E5E9C002DACA7F7C7ABD964 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53545,7 +53545,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SpriteAnimator_op_Ine
 		return;
 	}
 }
-// Method Definition Index: 68310
+// Method Definition Index: 68312
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SpriteAsset_op_Implicit_mF96ADC5CD16C797CE7710843788DC83268BBC8B4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53582,7 +53582,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SpriteAsset_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 68311
+// Method Definition Index: 68313
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SpriteAsset_op_Equality_m9ED3EEB7223AC3E1A87AF5BEEEC1C98574AC5787 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53624,7 +53624,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SpriteAsset_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 68312
+// Method Definition Index: 68314
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SpriteAsset_op_Inequality_mC5B397DA963DBCB719633D8C34987A5FBEAE7230 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53666,7 +53666,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SpriteAsset_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 68313
+// Method Definition Index: 68315
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_StyleSheet_op_Implicit_m02EEFE03FDA0B15D7A0D1A5ECED64B50F58B103C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53703,7 +53703,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_StyleSheet_op_Implici
 		return;
 	}
 }
-// Method Definition Index: 68314
+// Method Definition Index: 68316
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_StyleSheet_op_Equality_m32654539157ECF6C15F114AEF21EAFD58BC0C5A7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53745,7 +53745,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_StyleSheet_op_Equalit
 		return;
 	}
 }
-// Method Definition Index: 68315
+// Method Definition Index: 68317
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_StyleSheet_op_Inequality_m4A6A298F34BA67211A509864138DB63F1E46D967 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53787,7 +53787,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_StyleSheet_op_Inequal
 		return;
 	}
 }
-// Method Definition Index: 68316
+// Method Definition Index: 68318
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SubMesh_op_Implicit_m49E6C5BBE52430EB59E464A2ABD09314BD5C18A2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53824,7 +53824,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SubMesh_op_Implicit_m
 		return;
 	}
 }
-// Method Definition Index: 68317
+// Method Definition Index: 68319
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SubMesh_op_Equality_m310E2CB28318B29A622D52BD8ABC918AC8DAA11C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53866,7 +53866,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SubMesh_op_Equality_m
 		return;
 	}
 }
-// Method Definition Index: 68318
+// Method Definition Index: 68320
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SubMesh_op_Inequality_m86C4E88939E0EBEE328E4964EA5014070B6F4591 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53908,7 +53908,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SubMesh_op_Inequality
 		return;
 	}
 }
-// Method Definition Index: 68319
+// Method Definition Index: 68321
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SubMeshUI_op_Implicit_mF6A5BA5B7C8744CFB5F7B695E4919D9CDAC00BF9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53945,7 +53945,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SubMeshUI_op_Implicit
 		return;
 	}
 }
-// Method Definition Index: 68320
+// Method Definition Index: 68322
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SubMeshUI_op_Equality_mA3A873013DA6CE3131ECB257B5A8B4C0F59BD52F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -53987,7 +53987,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SubMeshUI_op_Equality
 		return;
 	}
 }
-// Method Definition Index: 68321
+// Method Definition Index: 68323
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SubMeshUI_op_Inequality_m285435B3B51D450C42D97FA90609F6CBFEB9ECCC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54029,7 +54029,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TMP_SubMeshUI_op_Inequali
 		return;
 	}
 }
-// Method Definition Index: 68322
+// Method Definition Index: 68324
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TextContainer_op_Implicit_m7D537354EA7B5E42B22EE50DC337C0FB2993BEEA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54066,7 +54066,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TextContainer_op_Implicit
 		return;
 	}
 }
-// Method Definition Index: 68323
+// Method Definition Index: 68325
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TextContainer_op_Equality_mBCEFDF7F67E60A6006FC3F69BE132B2DF0025E99 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54108,7 +54108,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TextContainer_op_Equality
 		return;
 	}
 }
-// Method Definition Index: 68324
+// Method Definition Index: 68326
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TextContainer_op_Inequality_mBBDBC13C9EE031BBCF43917EF7CD3E3DC6D0A9E8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54150,7 +54150,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TextContainer_op_Inequali
 		return;
 	}
 }
-// Method Definition Index: 68325
+// Method Definition Index: 68327
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TextMeshPro_op_Implicit_m3055E74BCD965D09A3A403B336038335103F0D92 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54187,7 +54187,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TextMeshPro_op_Implicit_m
 		return;
 	}
 }
-// Method Definition Index: 68326
+// Method Definition Index: 68328
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TextMeshPro_op_Equality_m9ED142C8B14D7E159ACC7BE9EBA663A8AAD2A26D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54229,7 +54229,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TextMeshPro_op_Equality_m
 		return;
 	}
 }
-// Method Definition Index: 68327
+// Method Definition Index: 68329
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TextMeshPro_op_Inequality_m4F143DAE389356ADB2216066558D534CB9C4FAC9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54271,7 +54271,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TextMeshPro_op_Inequality
 		return;
 	}
 }
-// Method Definition Index: 68328
+// Method Definition Index: 68330
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TextMeshProUGUI_op_Implicit_m10A225B1A7D234AFDD1F809BF7071B5F6F015CF0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54308,7 +54308,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TextMeshProUGUI_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 68329
+// Method Definition Index: 68331
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TextMeshProUGUI_op_Equality_m1EDDF46EA6FA3AF7EDA056ABDFEB5A0C1EE015B3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54350,7 +54350,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TextMeshProUGUI_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 68330
+// Method Definition Index: 68332
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TextMeshProUGUI_op_Inequality_mAB9AB33D807F1905EFE02A7A049557A4FEE8B512 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54392,7 +54392,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TMPro_TextMeshProUGUI_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 68331
+// Method Definition Index: 68333
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_ActivationTrack_op_Implicit_mEF68E5A80E3E2F02A650E604078ED34B693E0AF7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54429,7 +54429,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_Activation
 		return;
 	}
 }
-// Method Definition Index: 68332
+// Method Definition Index: 68334
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_ActivationTrack_op_Equality_mD2B70B34DC546C2EEE5D32AAD86F3B93597A01BE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54471,7 +54471,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_Activation
 		return;
 	}
 }
-// Method Definition Index: 68333
+// Method Definition Index: 68335
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_ActivationTrack_op_Inequality_m26DB0B9599F74D5BAF63FD94946A8F6DE2470B89 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54513,7 +54513,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_Activation
 		return;
 	}
 }
-// Method Definition Index: 68334
+// Method Definition Index: 68336
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_AnimationPlayableAsset_op_Implicit_m9CD8FE70E1E9C989E141B76F782594052723750B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54550,7 +54550,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_AnimationP
 		return;
 	}
 }
-// Method Definition Index: 68335
+// Method Definition Index: 68337
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_AnimationPlayableAsset_op_Equality_m63C79F59C44B18993A0C3857C1837D0EC534B54C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54592,7 +54592,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_AnimationP
 		return;
 	}
 }
-// Method Definition Index: 68336
+// Method Definition Index: 68338
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_AnimationPlayableAsset_op_Inequality_m049DABC3A56CC6CAF583C139B58447B9573C9AFB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54634,7 +54634,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_AnimationP
 		return;
 	}
 }
-// Method Definition Index: 68337
+// Method Definition Index: 68339
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_AnimationTrack_op_Implicit_mDF39389DBF98673C0CAC3EC16C0B9105DD2B7069 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54671,7 +54671,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_AnimationT
 		return;
 	}
 }
-// Method Definition Index: 68338
+// Method Definition Index: 68340
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_AnimationTrack_op_Equality_mFE536A7A1C86CE9985C52BD0E9C1EE38B2479470 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54713,7 +54713,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_AnimationT
 		return;
 	}
 }
-// Method Definition Index: 68339
+// Method Definition Index: 68341
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_AnimationTrack_op_Inequality_mBBE68404B0D6E4B50A55A67E4BE3B0262D8322E1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54755,7 +54755,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_AnimationT
 		return;
 	}
 }
-// Method Definition Index: 68340
+// Method Definition Index: 68342
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_TimelineAsset_op_Implicit_mA3008CE44D4E17104C7D87761AE1419E65D0A8EA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54792,7 +54792,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_TimelineAs
 		return;
 	}
 }
-// Method Definition Index: 68341
+// Method Definition Index: 68343
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_TimelineAsset_op_Equality_mB67517BC975FEE6DFDA7A682DEF0A03375D8A694 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54834,7 +54834,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_TimelineAs
 		return;
 	}
 }
-// Method Definition Index: 68342
+// Method Definition Index: 68344
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_TimelineAsset_op_Inequality_m90C1CE306854B058A705FD303CC730147966E17C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54876,7 +54876,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_TimelineAs
 		return;
 	}
 }
-// Method Definition Index: 68343
+// Method Definition Index: 68345
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_AudioPlayableAsset_op_Implicit_m0FF67B4E70F84FEFE1AA02348ADB1C5286D2F098 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54913,7 +54913,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_AudioPlaya
 		return;
 	}
 }
-// Method Definition Index: 68344
+// Method Definition Index: 68346
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_AudioPlayableAsset_op_Equality_m791124124BF1DCC74EA50F81CCC4BA716CA01DEE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54955,7 +54955,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_AudioPlaya
 		return;
 	}
 }
-// Method Definition Index: 68345
+// Method Definition Index: 68347
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_AudioPlayableAsset_op_Inequality_mA055DBE89811D1E2D30476A128728F172C1823AF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -54997,7 +54997,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_AudioPlaya
 		return;
 	}
 }
-// Method Definition Index: 68346
+// Method Definition Index: 68348
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_AudioTrack_op_Implicit_m1FCC9DA6923AE82A042028E5184CA0DEB8F4E9E1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55034,7 +55034,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_AudioTrack
 		return;
 	}
 }
-// Method Definition Index: 68347
+// Method Definition Index: 68349
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_AudioTrack_op_Equality_mC6788BCB8F3CCA25E1511101FCFC4AB3B6345ACD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55076,7 +55076,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_AudioTrack
 		return;
 	}
 }
-// Method Definition Index: 68348
+// Method Definition Index: 68350
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_AudioTrack_op_Inequality_m517E8A330F021B98C1F17D88DB1AC824231CB9AB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55118,7 +55118,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_AudioTrack
 		return;
 	}
 }
-// Method Definition Index: 68349
+// Method Definition Index: 68351
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_ControlPlayableAsset_op_Implicit_m4F5848DFFB28465A43E2E42AB7D13638B8097AE0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55155,7 +55155,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_ControlPla
 		return;
 	}
 }
-// Method Definition Index: 68350
+// Method Definition Index: 68352
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_ControlPlayableAsset_op_Equality_mF54E66359200534F57B5F9D4DF7210A7B4942418 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55197,7 +55197,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_ControlPla
 		return;
 	}
 }
-// Method Definition Index: 68351
+// Method Definition Index: 68353
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_ControlPlayableAsset_op_Inequality_mD63D15194348AD6A25E905E2AFC1EA5CAA0621EE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55239,7 +55239,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_ControlPla
 		return;
 	}
 }
-// Method Definition Index: 68352
+// Method Definition Index: 68354
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_ControlTrack_op_Implicit_mE00D4E5CC54E3B7DF5F04C73EDBF02E17FC3EBC2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55276,7 +55276,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_ControlTra
 		return;
 	}
 }
-// Method Definition Index: 68353
+// Method Definition Index: 68355
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_ControlTrack_op_Equality_m897ACDC6822B2DA730A007AC8335E49D6723AF2E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55318,7 +55318,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_ControlTra
 		return;
 	}
 }
-// Method Definition Index: 68354
+// Method Definition Index: 68356
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_ControlTrack_op_Inequality_m9F6ACEDE73C3EED6CD06AD8DF4919963151D111F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55360,7 +55360,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_ControlTra
 		return;
 	}
 }
-// Method Definition Index: 68355
+// Method Definition Index: 68357
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_MarkerTrack_op_Implicit_m574FDFCCF70D7A861974F1D1B0CC0669C128561E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55397,7 +55397,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_MarkerTrac
 		return;
 	}
 }
-// Method Definition Index: 68356
+// Method Definition Index: 68358
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_MarkerTrack_op_Equality_mB97F0246BF68D168CD7D6D5E21532D8F2689D8E1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55439,7 +55439,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_MarkerTrac
 		return;
 	}
 }
-// Method Definition Index: 68357
+// Method Definition Index: 68359
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_MarkerTrack_op_Inequality_m7DB6EC4954F1DE278E6B1E953C42D8153AADF578 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55481,7 +55481,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_MarkerTrac
 		return;
 	}
 }
-// Method Definition Index: 68358
+// Method Definition Index: 68360
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_SignalTrack_op_Implicit_m6C4017D266CC741A5CE06AB437E808AB79ECD39F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55518,7 +55518,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_SignalTrac
 		return;
 	}
 }
-// Method Definition Index: 68359
+// Method Definition Index: 68361
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_SignalTrack_op_Equality_m94B4BA8B5A6F8F17B5BF5584D3420334BF65C264 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55560,7 +55560,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_SignalTrac
 		return;
 	}
 }
-// Method Definition Index: 68360
+// Method Definition Index: 68362
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_SignalTrack_op_Inequality_m7E1A359E993AE722D5D7689E741C4E2FAD886FE3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55602,7 +55602,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_SignalTrac
 		return;
 	}
 }
-// Method Definition Index: 68361
+// Method Definition Index: 68363
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_SignalAsset_op_Implicit_m835EE9E07D782B7C130768D4454CCAFCB229FC1A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55639,7 +55639,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_SignalAsse
 		return;
 	}
 }
-// Method Definition Index: 68362
+// Method Definition Index: 68364
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_SignalAsset_op_Equality_m18D2C54148CDAF23C38A40C61D03674F4CD02B6B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55681,7 +55681,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_SignalAsse
 		return;
 	}
 }
-// Method Definition Index: 68363
+// Method Definition Index: 68365
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_SignalAsset_op_Inequality_m2ACFD87827BD689BC09A9476C5B8DF996245E520 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55723,7 +55723,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_SignalAsse
 		return;
 	}
 }
-// Method Definition Index: 68364
+// Method Definition Index: 68366
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_SignalEmitter_op_Implicit_m99A98855C47A9C5D2340C83D89264D22D5D2055F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55760,7 +55760,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_SignalEmit
 		return;
 	}
 }
-// Method Definition Index: 68365
+// Method Definition Index: 68367
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_SignalEmitter_op_Equality_m842D7A7CD81BED071F71B6CB8F490E6D39C533A4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55802,7 +55802,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_SignalEmit
 		return;
 	}
 }
-// Method Definition Index: 68366
+// Method Definition Index: 68368
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_SignalEmitter_op_Inequality_m9FD56496078FDB957804F5809EA848080BDD1836 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55844,7 +55844,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_SignalEmit
 		return;
 	}
 }
-// Method Definition Index: 68367
+// Method Definition Index: 68369
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_SignalReceiver_op_Implicit_m277C6CC194FFA94366A2D9BF49228F6B6E38A238 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55881,7 +55881,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_SignalRece
 		return;
 	}
 }
-// Method Definition Index: 68368
+// Method Definition Index: 68370
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_SignalReceiver_op_Equality_m95C0F7326AF5F30FD50494DC041E8FB46E2811FB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55923,7 +55923,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_SignalRece
 		return;
 	}
 }
-// Method Definition Index: 68369
+// Method Definition Index: 68371
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_SignalReceiver_op_Inequality_mEAF6A4935C12700B59FE618EBC5CA56F45372028 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -55965,7 +55965,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_SignalRece
 		return;
 	}
 }
-// Method Definition Index: 68370
+// Method Definition Index: 68372
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_GroupTrack_op_Implicit_mE683A38AF58102C97421C1781DC780309AA22FDE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56002,7 +56002,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_GroupTrack
 		return;
 	}
 }
-// Method Definition Index: 68371
+// Method Definition Index: 68373
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_GroupTrack_op_Equality_m84AA9752C4E592BA5F94F5D8B3E94739DD0200E2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56044,7 +56044,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_GroupTrack
 		return;
 	}
 }
-// Method Definition Index: 68372
+// Method Definition Index: 68374
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_GroupTrack_op_Inequality_m6BFF96C52E08557EC0C0CAE94E08C1196D86B1BB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56086,7 +56086,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_GroupTrack
 		return;
 	}
 }
-// Method Definition Index: 68373
+// Method Definition Index: 68375
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_PlayableTrack_op_Implicit_mB88355CF010C23D5B8F6FCB5F600F0B7ED151124 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56123,7 +56123,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_PlayableTr
 		return;
 	}
 }
-// Method Definition Index: 68374
+// Method Definition Index: 68376
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_PlayableTrack_op_Equality_m5A68398F6693750F25EE830211967759DA7551D7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56165,7 +56165,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_PlayableTr
 		return;
 	}
 }
-// Method Definition Index: 68375
+// Method Definition Index: 68377
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_PlayableTrack_op_Inequality_m8641CE516E302E1873362AD1ED7B9A3C8A6356D1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56207,7 +56207,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_Timeline_PlayableTr
 		return;
 	}
 }
-// Method Definition Index: 68376
+// Method Definition Index: 68378
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TimelinePreferences_op_Implicit_mD844CAAF42AD52C498C7323626DABC1B8F502743 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56244,7 +56244,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TimelinePreferences_op_Implicit
 		return;
 	}
 }
-// Method Definition Index: 68377
+// Method Definition Index: 68379
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TimelinePreferences_op_Equality_m0D41EA81A993FCF5213426BB637CB66901B422F1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56286,7 +56286,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TimelinePreferences_op_Equality
 		return;
 	}
 }
-// Method Definition Index: 68378
+// Method Definition Index: 68380
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TimelinePreferences_op_Inequality_mED6B4BE8B5A0F070CA5200938FB5BC7C4EE361E7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56328,7 +56328,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TimelinePreferences_op_Inequali
 		return;
 	}
 }
-// Method Definition Index: 68379
+// Method Definition Index: 68381
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TimelineProjectSettings_op_Implicit_m59B40DBC4D659F8BC78C5D9408FE19F23CE13F3D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56365,7 +56365,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TimelineProjectSettings_op_Impl
 		return;
 	}
 }
-// Method Definition Index: 68380
+// Method Definition Index: 68382
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TimelineProjectSettings_op_Equality_m38BEED3C8E9915B1CE838CC6D07B1D274F2EFD92 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56407,7 +56407,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TimelineProjectSettings_op_Equa
 		return;
 	}
 }
-// Method Definition Index: 68381
+// Method Definition Index: 68383
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TimelineProjectSettings_op_Inequality_m38C9ABADD5C7C729DED8D8F5C220F38AB845EAC6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56449,7 +56449,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_TimelineProjectSettings_op_Ineq
 		return;
 	}
 }
-// Method Definition Index: 68382
+// Method Definition Index: 68384
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_AnimatorMessageListener_op_Implicit_m839A428FD4752F883339CAF8A203D6623F0DF322 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56486,7 +56486,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_AnimatorM
 		return;
 	}
 }
-// Method Definition Index: 68383
+// Method Definition Index: 68385
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_AnimatorMessageListener_op_Equality_m025352F021701B92D181BDAF8B520C504C32E66A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56528,7 +56528,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_AnimatorM
 		return;
 	}
 }
-// Method Definition Index: 68384
+// Method Definition Index: 68386
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_AnimatorMessageListener_op_Inequality_m87A289E69B115E6EA541C18C40D936494C608CFF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56570,7 +56570,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_AnimatorM
 		return;
 	}
 }
-// Method Definition Index: 68385
+// Method Definition Index: 68387
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_MacroScriptableObject_op_Implicit_mAA51931330ADD6C7E28820B5F25F13E918D0DED3 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56607,7 +56607,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_MacroScri
 		return;
 	}
 }
-// Method Definition Index: 68386
+// Method Definition Index: 68388
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_MacroScriptableObject_op_Equality_m1FAA1EF7F2ACC8653ADC46972D1125291B01ED48 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56649,7 +56649,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_MacroScri
 		return;
 	}
 }
-// Method Definition Index: 68387
+// Method Definition Index: 68389
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_MacroScriptableObject_op_Inequality_m1E982502EFE81AB92C1E1023CE3FAAFE944F3146 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56691,7 +56691,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_MacroScri
 		return;
 	}
 }
-// Method Definition Index: 68388
+// Method Definition Index: 68390
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_ScriptGraphAsset_op_Implicit_m2E77D3D4DD1F7DEC0313E3C2CAE574874073BF26 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56728,7 +56728,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_ScriptGra
 		return;
 	}
 }
-// Method Definition Index: 68389
+// Method Definition Index: 68391
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_ScriptGraphAsset_op_Equality_mF1BE8CA6FD79AA8EE97AE5206684A918BE89964D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56770,7 +56770,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_ScriptGra
 		return;
 	}
 }
-// Method Definition Index: 68390
+// Method Definition Index: 68392
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_ScriptGraphAsset_op_Inequality_mC850CBE1C8EEA692D1204864871E66A8E70F6EA7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56812,7 +56812,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_ScriptGra
 		return;
 	}
 }
-// Method Definition Index: 68391
+// Method Definition Index: 68393
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_ScriptMachine_op_Implicit_mAFDB4ABC3D9A511BD046DD733E369FD399A16E71 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56849,7 +56849,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_ScriptMac
 		return;
 	}
 }
-// Method Definition Index: 68392
+// Method Definition Index: 68394
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_ScriptMachine_op_Equality_m854F176BEA7F4671622AE16E03C9B8E6ECD05662 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56891,7 +56891,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_ScriptMac
 		return;
 	}
 }
-// Method Definition Index: 68393
+// Method Definition Index: 68395
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_ScriptMachine_op_Inequality_mDD1E4518728FA6229326998817088AE4524D0137 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56933,7 +56933,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_ScriptMac
 		return;
 	}
 }
-// Method Definition Index: 68394
+// Method Definition Index: 68396
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_StateGraphAsset_op_Implicit_m0B4516CD1036C9DE46473D06228024FE58AC77B2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -56970,7 +56970,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_StateGrap
 		return;
 	}
 }
-// Method Definition Index: 68395
+// Method Definition Index: 68397
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_StateGraphAsset_op_Equality_mFD8763C18DF2CCE5643EA2E3D340E74B7F19D6E4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57012,7 +57012,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_StateGrap
 		return;
 	}
 }
-// Method Definition Index: 68396
+// Method Definition Index: 68398
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_StateGraphAsset_op_Inequality_mDA34352C8B5E2D4DBA8161BAA4CE34003F4969CB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57054,7 +57054,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_StateGrap
 		return;
 	}
 }
-// Method Definition Index: 68397
+// Method Definition Index: 68399
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_StateMachine_op_Implicit_m5D9D0CADA0619CF23CA041BCD4CA867F37BB0CD8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57091,7 +57091,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_StateMach
 		return;
 	}
 }
-// Method Definition Index: 68398
+// Method Definition Index: 68400
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_StateMachine_op_Equality_m23545F819042245D30DC87D694456031C04EC80A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57133,7 +57133,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_StateMach
 		return;
 	}
 }
-// Method Definition Index: 68399
+// Method Definition Index: 68401
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_StateMachine_op_Inequality_m59358D5744557FDB074EDFC6D5DAC30FE0AE6BC4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57175,7 +57175,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_Unity_VisualScripting_StateMach
 		return;
 	}
 }
-// Method Definition Index: 68400
+// Method Definition Index: 68402
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Button_op_Implicit_m237B79632D40B55647222104FAA8151148557B54 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57212,7 +57212,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Button_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 68401
+// Method Definition Index: 68403
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Button_op_Equality_m92982C5E9788D16B0D1683F519EDEE67F2082393 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57254,7 +57254,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Button_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 68402
+// Method Definition Index: 68404
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Button_op_Inequality_m16F27F8E3093C30A8AC7C30D0121CBFFB49D8ED4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57296,7 +57296,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Button_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 68403
+// Method Definition Index: 68405
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Dropdown_op_Implicit_m1AB048CA6C4C9439BE777F04C05E9977BB4DAFE7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57333,7 +57333,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Dropdown_op_Impl
 		return;
 	}
 }
-// Method Definition Index: 68404
+// Method Definition Index: 68406
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Dropdown_op_Equality_m781B7AC6654AF6AB81973FF753A338439876FA6D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57375,7 +57375,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Dropdown_op_Equa
 		return;
 	}
 }
-// Method Definition Index: 68405
+// Method Definition Index: 68407
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Dropdown_op_Inequality_mF71BBCCCA509BD0E9FF16293C052D66C022B3EB6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57417,7 +57417,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Dropdown_op_Ineq
 		return;
 	}
 }
-// Method Definition Index: 68406
+// Method Definition Index: 68408
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_GraphicRaycaster_op_Implicit_m5DABA33CD90188B2498D0F636A01DE5C3E2B5E45 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57454,7 +57454,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_GraphicRaycaster
 		return;
 	}
 }
-// Method Definition Index: 68407
+// Method Definition Index: 68409
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_GraphicRaycaster_op_Equality_mB0F864F5ACD8B94CCB3A920C51BD9470D88A6A44 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57496,7 +57496,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_GraphicRaycaster
 		return;
 	}
 }
-// Method Definition Index: 68408
+// Method Definition Index: 68410
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_GraphicRaycaster_op_Inequality_mAC2C187D508988BB015C0CAD7DEB649F62A6573F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57538,7 +57538,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_GraphicRaycaster
 		return;
 	}
 }
-// Method Definition Index: 68409
+// Method Definition Index: 68411
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Image_op_Implicit_mEFDCE6CE8A246601AB8EE26E6F7AE23CF8A74A49 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57575,7 +57575,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Image_op_Implici
 		return;
 	}
 }
-// Method Definition Index: 68410
+// Method Definition Index: 68412
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Image_op_Equality_mE30A50C3932C58BB8B1CF2B70694F80485AA5F20 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57617,7 +57617,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Image_op_Equalit
 		return;
 	}
 }
-// Method Definition Index: 68411
+// Method Definition Index: 68413
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Image_op_Inequality_m7E44D7315CBCDCE36ACC268C41ADE42F6783681B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57659,7 +57659,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Image_op_Inequal
 		return;
 	}
 }
-// Method Definition Index: 68412
+// Method Definition Index: 68414
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_InputField_op_Implicit_m18E5182358B2E10F67BBC5FBD9188F9E14132E76 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57696,7 +57696,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_InputField_op_Im
 		return;
 	}
 }
-// Method Definition Index: 68413
+// Method Definition Index: 68415
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_InputField_op_Equality_mEDB2ABF7EAB501FD77D775E0035CBC438188B1C4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57738,7 +57738,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_InputField_op_Eq
 		return;
 	}
 }
-// Method Definition Index: 68414
+// Method Definition Index: 68416
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_InputField_op_Inequality_m1FCE1605E6C2B8120DB172628B4FF14C7134D227 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57780,7 +57780,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_InputField_op_In
 		return;
 	}
 }
-// Method Definition Index: 68415
+// Method Definition Index: 68417
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_AspectRatioFitter_op_Implicit_m3BB5B4CBF3F6CC1A3C8F32F135918E6DFC955E6F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57817,7 +57817,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_AspectRatioFitte
 		return;
 	}
 }
-// Method Definition Index: 68416
+// Method Definition Index: 68418
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_AspectRatioFitter_op_Equality_m0B454A8A3AA9C173A5E7174D991CC88D4DBBC281 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57859,7 +57859,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_AspectRatioFitte
 		return;
 	}
 }
-// Method Definition Index: 68417
+// Method Definition Index: 68419
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_AspectRatioFitter_op_Inequality_m96D1474D0A7539FDE4BAC718E62D7F48586F4F65 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57901,7 +57901,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_AspectRatioFitte
 		return;
 	}
 }
-// Method Definition Index: 68418
+// Method Definition Index: 68420
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_CanvasScaler_op_Implicit_mC08C74DE270541A121082732148821C72142F7A5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57938,7 +57938,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_CanvasScaler_op_
 		return;
 	}
 }
-// Method Definition Index: 68419
+// Method Definition Index: 68421
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_CanvasScaler_op_Equality_mE912ECC79B9A8CB47F198F343857B911B15CD5D0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -57980,7 +57980,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_CanvasScaler_op_
 		return;
 	}
 }
-// Method Definition Index: 68420
+// Method Definition Index: 68422
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_CanvasScaler_op_Inequality_mF3400395F575229C8315C3DEA9C1E876E4D531A5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58022,7 +58022,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_CanvasScaler_op_
 		return;
 	}
 }
-// Method Definition Index: 68421
+// Method Definition Index: 68423
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_ContentSizeFitter_op_Implicit_m496B8A0C5B00C5E2C3E06D27B83CA914BE3A9E4C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58059,7 +58059,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_ContentSizeFitte
 		return;
 	}
 }
-// Method Definition Index: 68422
+// Method Definition Index: 68424
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_ContentSizeFitter_op_Equality_m4D34CCF52C4B2917CA298F4262EBF854A942E94B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58101,7 +58101,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_ContentSizeFitte
 		return;
 	}
 }
-// Method Definition Index: 68423
+// Method Definition Index: 68425
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_ContentSizeFitter_op_Inequality_mB751DF93CCC2F6E3D00B7B99D986F0F5ABF70FA4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58143,7 +58143,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_ContentSizeFitte
 		return;
 	}
 }
-// Method Definition Index: 68424
+// Method Definition Index: 68426
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_GridLayoutGroup_op_Implicit_m569CB788F567E536FD79B8C1FF7272E9F181FAB6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58180,7 +58180,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_GridLayoutGroup_
 		return;
 	}
 }
-// Method Definition Index: 68425
+// Method Definition Index: 68427
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_GridLayoutGroup_op_Equality_mF899DEB1970F5379424D5B69F7CD5073EAB03318 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58222,7 +58222,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_GridLayoutGroup_
 		return;
 	}
 }
-// Method Definition Index: 68426
+// Method Definition Index: 68428
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_GridLayoutGroup_op_Inequality_m39D09DB5A1C17AE62D91069504A98C686A5C8BDA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58264,7 +58264,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_GridLayoutGroup_
 		return;
 	}
 }
-// Method Definition Index: 68427
+// Method Definition Index: 68429
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_HorizontalLayoutGroup_op_Implicit_mACE4D5E5E3351E47D04FCFAA07DEC5EEEDEF101A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58301,7 +58301,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_HorizontalLayout
 		return;
 	}
 }
-// Method Definition Index: 68428
+// Method Definition Index: 68430
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_HorizontalLayoutGroup_op_Equality_m283FE74FA06A68418533F0D4B6F40C5B4BDCCCA0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58343,7 +58343,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_HorizontalLayout
 		return;
 	}
 }
-// Method Definition Index: 68429
+// Method Definition Index: 68431
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_HorizontalLayoutGroup_op_Inequality_m1EA9FA2772D61016E2836E7CBC35C4251DB1E5C8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58385,7 +58385,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_HorizontalLayout
 		return;
 	}
 }
-// Method Definition Index: 68430
+// Method Definition Index: 68432
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_LayoutElement_op_Implicit_mD8839F799E6CB41C5180E1AE01C62665AF087BF7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58422,7 +58422,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_LayoutElement_op
 		return;
 	}
 }
-// Method Definition Index: 68431
+// Method Definition Index: 68433
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_LayoutElement_op_Equality_m5A8573628D9C29D64044403AE3D86321132B4828 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58464,7 +58464,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_LayoutElement_op
 		return;
 	}
 }
-// Method Definition Index: 68432
+// Method Definition Index: 68434
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_LayoutElement_op_Inequality_mC80E8F90886389688DE4DC8F1D3BB05095BD1465 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58506,7 +58506,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_LayoutElement_op
 		return;
 	}
 }
-// Method Definition Index: 68433
+// Method Definition Index: 68435
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_VerticalLayoutGroup_op_Implicit_mE2F6125B732C114EC279A00E91E14EC617D588A2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58543,7 +58543,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_VerticalLayoutGr
 		return;
 	}
 }
-// Method Definition Index: 68434
+// Method Definition Index: 68436
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_VerticalLayoutGroup_op_Equality_m3A3BF8D16083B2B822DB91A859271B8CB13F8626 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58585,7 +58585,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_VerticalLayoutGr
 		return;
 	}
 }
-// Method Definition Index: 68435
+// Method Definition Index: 68437
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_VerticalLayoutGroup_op_Inequality_m4AE25C0E725C0791D8ED4AD6E0AD08FE4F9163AC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58627,7 +58627,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_VerticalLayoutGr
 		return;
 	}
 }
-// Method Definition Index: 68436
+// Method Definition Index: 68438
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Mask_op_Implicit_mF5B0175B3C5A4AFA6C2EE036056C3A00C4C87A7C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58664,7 +58664,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Mask_op_Implicit
 		return;
 	}
 }
-// Method Definition Index: 68437
+// Method Definition Index: 68439
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Mask_op_Equality_m7DBF8E1842B4E36CA55D3AE7DDBD1744AE8983E4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58706,7 +58706,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Mask_op_Equality
 		return;
 	}
 }
-// Method Definition Index: 68438
+// Method Definition Index: 68440
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Mask_op_Inequality_mF90E3A2C880CC1BCB972E63A664E487BFE352ACF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58748,7 +58748,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Mask_op_Inequali
 		return;
 	}
 }
-// Method Definition Index: 68439
+// Method Definition Index: 68441
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_RawImage_op_Implicit_mE50932ED690E03D0574BABF3FC0522E6A553F8C1 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58785,7 +58785,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_RawImage_op_Impl
 		return;
 	}
 }
-// Method Definition Index: 68440
+// Method Definition Index: 68442
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_RawImage_op_Equality_mD70B92737C30A08297D941C5AB42F82E948A9D40 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58827,7 +58827,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_RawImage_op_Equa
 		return;
 	}
 }
-// Method Definition Index: 68441
+// Method Definition Index: 68443
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_RawImage_op_Inequality_mAE4A13D34252E0609BE6563D75948CF0A0A5C9A9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58869,7 +58869,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_RawImage_op_Ineq
 		return;
 	}
 }
-// Method Definition Index: 68442
+// Method Definition Index: 68444
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_RectMask2D_op_Implicit_mE06E5644A6506C78A6701649A744CBCB855F84F7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58906,7 +58906,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_RectMask2D_op_Im
 		return;
 	}
 }
-// Method Definition Index: 68443
+// Method Definition Index: 68445
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_RectMask2D_op_Equality_m34A981586EF923BE2F9BC4E7CDB7A87DAFCA5FF7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58948,7 +58948,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_RectMask2D_op_Eq
 		return;
 	}
 }
-// Method Definition Index: 68444
+// Method Definition Index: 68446
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_RectMask2D_op_Inequality_mCDEE59034A1849ACDB5B5BC1D0DDD384514DF1B8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -58990,7 +58990,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_RectMask2D_op_In
 		return;
 	}
 }
-// Method Definition Index: 68445
+// Method Definition Index: 68447
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_ScrollRect_op_Implicit_mEA6F1F31D4B7EEF3E8EF20CB5AD67980FC930AB8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59027,7 +59027,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_ScrollRect_op_Im
 		return;
 	}
 }
-// Method Definition Index: 68446
+// Method Definition Index: 68448
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_ScrollRect_op_Equality_mD05A836325E4DC834EB8069BFBA7390A1A088D32 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59069,7 +59069,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_ScrollRect_op_Eq
 		return;
 	}
 }
-// Method Definition Index: 68447
+// Method Definition Index: 68449
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_ScrollRect_op_Inequality_mAE537A8B3BE01DD0F34C9E941AD6FED76EDD2651 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59111,7 +59111,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_ScrollRect_op_In
 		return;
 	}
 }
-// Method Definition Index: 68448
+// Method Definition Index: 68450
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Scrollbar_op_Implicit_m52E8B35CF280E11336C229713CE980F0038AE204 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59148,7 +59148,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Scrollbar_op_Imp
 		return;
 	}
 }
-// Method Definition Index: 68449
+// Method Definition Index: 68451
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Scrollbar_op_Equality_m729AF4AAB877AAB0F4C61F731E8297E344F41555 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59190,7 +59190,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Scrollbar_op_Equ
 		return;
 	}
 }
-// Method Definition Index: 68450
+// Method Definition Index: 68452
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Scrollbar_op_Inequality_m92EF4B62DC9668129E9DA78D4E3A6BE8D4715ED2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59232,7 +59232,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Scrollbar_op_Ine
 		return;
 	}
 }
-// Method Definition Index: 68451
+// Method Definition Index: 68453
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Selectable_op_Implicit_m1E98D96EC52F45F13619DF2A129668D97FD45C2D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59269,7 +59269,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Selectable_op_Im
 		return;
 	}
 }
-// Method Definition Index: 68452
+// Method Definition Index: 68454
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Selectable_op_Equality_m494BAFB7502898EABB812F39795B49D379E4453F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59311,7 +59311,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Selectable_op_Eq
 		return;
 	}
 }
-// Method Definition Index: 68453
+// Method Definition Index: 68455
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Selectable_op_Inequality_m82726207601D689A472B335A22CDBFD04BD67477 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59353,7 +59353,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Selectable_op_In
 		return;
 	}
 }
-// Method Definition Index: 68454
+// Method Definition Index: 68456
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Slider_op_Implicit_mE8B1AEFBB8B4A19177E4753926F08C804D61AF8D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59390,7 +59390,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Slider_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 68455
+// Method Definition Index: 68457
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Slider_op_Equality_m95286FF39D1BFA9E055DC8A340955078718A581C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59432,7 +59432,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Slider_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 68456
+// Method Definition Index: 68458
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Slider_op_Inequality_mEB35E7D21FEF53893CFF19F4970D49E1FE060CF7 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59474,7 +59474,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Slider_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 68457
+// Method Definition Index: 68459
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Text_op_Implicit_m77F7B869D0D5A5D7261F7E71475DA3758071F5BD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59511,7 +59511,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Text_op_Implicit
 		return;
 	}
 }
-// Method Definition Index: 68458
+// Method Definition Index: 68460
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Text_op_Equality_m8FA3BAB7B5A16EFD0558EB6FAAA620CEDF949E4A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59553,7 +59553,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Text_op_Equality
 		return;
 	}
 }
-// Method Definition Index: 68459
+// Method Definition Index: 68461
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Text_op_Inequality_m73E12587D9BF7F18C7BCCDE67B0CC6BE2D14E297 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59595,7 +59595,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Text_op_Inequali
 		return;
 	}
 }
-// Method Definition Index: 68460
+// Method Definition Index: 68462
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Toggle_op_Implicit_m037126042D0E492611500CA906C7AB9615913B12 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59632,7 +59632,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Toggle_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 68461
+// Method Definition Index: 68463
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Toggle_op_Equality_m333F3E9B54E9A8B8F2BA8731290DDABB937589AB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59674,7 +59674,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Toggle_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 68462
+// Method Definition Index: 68464
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Toggle_op_Inequality_m2662C819C24B0276EE6CC24D42F43B44D5E46C57 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59716,7 +59716,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Toggle_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 68463
+// Method Definition Index: 68465
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_ToggleGroup_op_Implicit_m7D69762B9B0FE37455C0F0CB7CDC4AF425B21BDC (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59753,7 +59753,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_ToggleGroup_op_I
 		return;
 	}
 }
-// Method Definition Index: 68464
+// Method Definition Index: 68466
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_ToggleGroup_op_Equality_m8E4AF4F208015E131B4B503337964F87C0242D56 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59795,7 +59795,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_ToggleGroup_op_E
 		return;
 	}
 }
-// Method Definition Index: 68465
+// Method Definition Index: 68467
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_ToggleGroup_op_Inequality_m5B1B92B67C9EC2EF11556A248552B9A724AE8831 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59837,7 +59837,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_ToggleGroup_op_I
 		return;
 	}
 }
-// Method Definition Index: 68466
+// Method Definition Index: 68468
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Outline_op_Implicit_m07E24666C1F988E7605C33B2ECB12BA9BCEE642A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59874,7 +59874,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Outline_op_Impli
 		return;
 	}
 }
-// Method Definition Index: 68467
+// Method Definition Index: 68469
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Outline_op_Equality_m3DA49DFF109EA306545CE2D8350B37802E4C53A9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59916,7 +59916,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Outline_op_Equal
 		return;
 	}
 }
-// Method Definition Index: 68468
+// Method Definition Index: 68470
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Outline_op_Inequality_mD35D32AD526669F46C133FB597655BC816D29320 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59958,7 +59958,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Outline_op_Inequ
 		return;
 	}
 }
-// Method Definition Index: 68469
+// Method Definition Index: 68471
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_PositionAsUV1_op_Implicit_mBF427BB23EA550607E2BB7D2BAC5E7991DE1190F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -59995,7 +59995,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_PositionAsUV1_op
 		return;
 	}
 }
-// Method Definition Index: 68470
+// Method Definition Index: 68472
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_PositionAsUV1_op_Equality_m484DA5F05D995464DF39F77BA6C2BFE31F871CF0 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60037,7 +60037,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_PositionAsUV1_op
 		return;
 	}
 }
-// Method Definition Index: 68471
+// Method Definition Index: 68473
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_PositionAsUV1_op_Inequality_mD848756760992E76D5596B4AA6B316470C85C1D2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60079,7 +60079,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_PositionAsUV1_op
 		return;
 	}
 }
-// Method Definition Index: 68472
+// Method Definition Index: 68474
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Shadow_op_Implicit_mDF19C6BC679DBBC483649DA3CAC0F60DC2D83871 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60116,7 +60116,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Shadow_op_Implic
 		return;
 	}
 }
-// Method Definition Index: 68473
+// Method Definition Index: 68475
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Shadow_op_Equality_m72C5B69E6D13A44CC7FACCB54B4963F05161F667 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60158,7 +60158,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Shadow_op_Equali
 		return;
 	}
 }
-// Method Definition Index: 68474
+// Method Definition Index: 68476
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Shadow_op_Inequality_m9172821B9D790CD1EBA52A93270A5AFCEFB6D196 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60200,7 +60200,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UI_Shadow_op_Inequa
 		return;
 	}
 }
-// Method Definition Index: 68475
+// Method Definition Index: 68477
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelEventHandler_op_Implicit_mA3EBC6F1A2D44A5F658EDA99CB37FDCE5541B6AD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60237,7 +60237,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelEve
 		return;
 	}
 }
-// Method Definition Index: 68476
+// Method Definition Index: 68478
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelEventHandler_op_Equality_m77E20BF062A8C719183F489CCB8612E49EAC2566 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60279,7 +60279,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelEve
 		return;
 	}
 }
-// Method Definition Index: 68477
+// Method Definition Index: 68479
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelEventHandler_op_Inequality_m8D34492B1E064A12D2FAEB78412920E5F4B2EB8B (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60321,7 +60321,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelEve
 		return;
 	}
 }
-// Method Definition Index: 68478
+// Method Definition Index: 68480
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelRaycaster_op_Implicit_m4760100F15DB810F0F1CC88E2632A5C6D8C40014 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60358,7 +60358,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelRay
 		return;
 	}
 }
-// Method Definition Index: 68479
+// Method Definition Index: 68481
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelRaycaster_op_Equality_mF53AE0168F33B018B266396CB1F7C67AAF6318CA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60400,7 +60400,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelRay
 		return;
 	}
 }
-// Method Definition Index: 68480
+// Method Definition Index: 68482
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelRaycaster_op_Inequality_m0523E92F152C7E6C27240977D0E1C81D5CBE429C (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60442,7 +60442,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_PanelRay
 		return;
 	}
 }
-// Method Definition Index: 68481
+// Method Definition Index: 68483
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_WorldDocumentRaycaster_op_Implicit_m48628A3B7975B6CD71F72E07E20C0459D53D1CC2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60479,7 +60479,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_WorldDoc
 		return;
 	}
 }
-// Method Definition Index: 68482
+// Method Definition Index: 68484
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_WorldDocumentRaycaster_op_Equality_m9464C15CD49C0A6B087505CE1688D6D86229BCD4 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60521,7 +60521,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_WorldDoc
 		return;
 	}
 }
-// Method Definition Index: 68483
+// Method Definition Index: 68485
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_WorldDocumentRaycaster_op_Inequality_m175142C627ED0A525F6AEA9FC05A3021C9200C3A (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60563,7 +60563,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_UIElements_WorldDoc
 		return;
 	}
 }
-// Method Definition Index: 68484
+// Method Definition Index: 68486
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_EventSystem_op_Implicit_m60AB0D4B29452E74AF81CA6439D01D6B7E9E8698 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60600,7 +60600,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_EventS
 		return;
 	}
 }
-// Method Definition Index: 68485
+// Method Definition Index: 68487
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_EventSystem_op_Equality_mA8978E8FF5D2FCA8364629589162E802DA1A80AF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60642,7 +60642,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_EventS
 		return;
 	}
 }
-// Method Definition Index: 68486
+// Method Definition Index: 68488
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_EventSystem_op_Inequality_m4E0E8222F5CE99850924AC0E90E0E01ABB4C0AC9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60684,7 +60684,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_EventS
 		return;
 	}
 }
-// Method Definition Index: 68487
+// Method Definition Index: 68489
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_EventTrigger_op_Implicit_m45E9A6C55ACD1C9DEF2A035DDCAF5EFC9B529D41 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60721,7 +60721,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_EventT
 		return;
 	}
 }
-// Method Definition Index: 68488
+// Method Definition Index: 68490
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_EventTrigger_op_Equality_m925B746E7D051F67CEC5BF778A42CB9BF1FD5718 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60763,7 +60763,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_EventT
 		return;
 	}
 }
-// Method Definition Index: 68489
+// Method Definition Index: 68491
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_EventTrigger_op_Inequality_mB66A5AB1DD54C256068D35476DDA7993B37AAABF (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60805,7 +60805,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_EventT
 		return;
 	}
 }
-// Method Definition Index: 68490
+// Method Definition Index: 68492
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_BaseInput_op_Implicit_m6AF464436E3D28A282CA5BF3B35C0A9671603D37 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60842,7 +60842,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_BaseIn
 		return;
 	}
 }
-// Method Definition Index: 68491
+// Method Definition Index: 68493
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_BaseInput_op_Equality_m6679A4049B39B3EADEC5D367369D0FC1F7D4C532 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60884,7 +60884,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_BaseIn
 		return;
 	}
 }
-// Method Definition Index: 68492
+// Method Definition Index: 68494
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_BaseInput_op_Inequality_m8B62BFED2C2A3EAB05A4518D5D4D88B9CFCC8D48 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60926,7 +60926,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_BaseIn
 		return;
 	}
 }
-// Method Definition Index: 68493
+// Method Definition Index: 68495
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_StandaloneInputModule_op_Implicit_m00AEA4C89BCEF7916351A46C0FFD4DEA6F3C4330 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -60963,7 +60963,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_Standa
 		return;
 	}
 }
-// Method Definition Index: 68494
+// Method Definition Index: 68496
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_StandaloneInputModule_op_Equality_m3E97477961C40E51D11FDC82989C1FD583444DB5 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61005,7 +61005,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_Standa
 		return;
 	}
 }
-// Method Definition Index: 68495
+// Method Definition Index: 68497
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_StandaloneInputModule_op_Inequality_m8E6BC4F849F91A0D3A4E93B2D8F3BAA872124C70 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61047,7 +61047,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_Standa
 		return;
 	}
 }
-// Method Definition Index: 68496
+// Method Definition Index: 68498
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_Physics2DRaycaster_op_Implicit_m11EE4CBD2420A7ECBDAA2EEF38491277907A3D13 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61084,7 +61084,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_Physic
 		return;
 	}
 }
-// Method Definition Index: 68497
+// Method Definition Index: 68499
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_Physics2DRaycaster_op_Equality_m585C2ECFB71CA2E491FE30085C82DDAC1C5C8B73 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61126,7 +61126,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_Physic
 		return;
 	}
 }
-// Method Definition Index: 68498
+// Method Definition Index: 68500
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_Physics2DRaycaster_op_Inequality_m913507898E775F0E00D4209473D8F3666D95623D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61168,7 +61168,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_Physic
 		return;
 	}
 }
-// Method Definition Index: 68499
+// Method Definition Index: 68501
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_PhysicsRaycaster_op_Implicit_m59AD6073C9B9447DE9FC8F4C605F286012771306 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61205,7 +61205,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_Physic
 		return;
 	}
 }
-// Method Definition Index: 68500
+// Method Definition Index: 68502
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_PhysicsRaycaster_op_Equality_m30C5C7702A36F2BAEEF9EF82E6F8425500AFAFB9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61247,7 +61247,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_Physic
 		return;
 	}
 }
-// Method Definition Index: 68501
+// Method Definition Index: 68503
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_PhysicsRaycaster_op_Inequality_m5CF222965746AAF9CE984589B2B487C9CC9B0F03 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61289,7 +61289,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs_UnityEngine_EventSystems_Physic
 		return;
 	}
 }
-// Method Definition Index: 68502
+// Method Definition Index: 68504
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs__ctor_mD8E1D4EB5BE3B72AE9FD29C595BB7C9A05734676 (AotStubs_tF4D97888740106FD944A82DA2810D80DBBD915B8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -61300,7 +61300,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AotStubs__ctor_mD8E1D4EB5BE3B72AE9FD29C5
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 76736
+// Method Definition Index: 76738
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Bounds_op_Equality_m5D72DDC8A0C2493FAFD00E88BC3B21D600CB5B33_inline (Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 ___0_lhs, Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 ___1_rhs, const RuntimeMethod* method) 
 {
 	int32_t G_B3_0 = 0;
@@ -61337,7 +61337,7 @@ IL_0027:
 		return (bool)G_B3_0;
 	}
 }
-// Method Definition Index: 76737
+// Method Definition Index: 76739
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Bounds_op_Inequality_mBE4883EFEDADB40B7243DC1F19BD01B5908CD2E0_inline (Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 ___0_lhs, Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 ___1_rhs, const RuntimeMethod* method) 
 {
 	{
@@ -61348,7 +61348,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Bounds_op_Inequality_mBE4883
 		return (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
 	}
 }
-// Method Definition Index: 76832
+// Method Definition Index: 76834
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Rect_op_Inequality_mB5D7316EB50B1DDA9324F4BE6741DFF6A673137D_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___0_lhs, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___1_rhs, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -61366,7 +61366,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Rect_op_Inequality_mB5D7316E
 		return (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
 	}
 }
-// Method Definition Index: 76833
+// Method Definition Index: 76835
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Rect_op_Equality_mF2A038255CAF5F1E86079B9EE0FC96DE54307C1F_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___0_lhs, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___1_rhs, const RuntimeMethod* method) 
 {
 	int32_t G_B5_0 = 0;
@@ -61419,7 +61419,7 @@ IL_003b:
 		return (bool)G_B5_0;
 	}
 }
-// Method Definition Index: 78185
+// Method Definition Index: 78187
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_op_Addition_mA7A51CACA49ED8D23D3D9CA3A0092D32F657E053_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_a, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___1_b, const RuntimeMethod* method) 
 {
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
@@ -61450,7 +61450,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 		return L_16;
 	}
 }
-// Method Definition Index: 78186
+// Method Definition Index: 78188
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_op_Subtraction_mF003448D819F2A41405BB6D85F1563CDA900B07F_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_a, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___1_b, const RuntimeMethod* method) 
 {
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
@@ -61481,7 +61481,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 		return L_16;
 	}
 }
-// Method Definition Index: 78187
+// Method Definition Index: 78189
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_op_Multiply_mD0296202733CB2D5342FB7C82B48AEDA63036758_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_a, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___1_b, const RuntimeMethod* method) 
 {
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
@@ -61512,7 +61512,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 		return L_16;
 	}
 }
-// Method Definition Index: 78188
+// Method Definition Index: 78190
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_op_Multiply_m12CEF5E7697F423B9E98306E05980664A250F3AB_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_a, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___1_b, const RuntimeMethod* method) 
 {
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
@@ -61543,7 +61543,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 		return L_16;
 	}
 }
-// Method Definition Index: 78189
+// Method Definition Index: 78191
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_op_Multiply_m379B20A820266ACF82A21425B9CAE8DCD773CFBB_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_a, float ___1_b, const RuntimeMethod* method) 
 {
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
@@ -61570,7 +61570,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 		return L_12;
 	}
 }
-// Method Definition Index: 78190
+// Method Definition Index: 78192
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_op_Multiply_m8503E764714E7AEF4E3CCBFDB1E09C930E87EFE4_inline (float ___0_b, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___1_a, const RuntimeMethod* method) 
 {
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
@@ -61597,7 +61597,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 		return L_12;
 	}
 }
-// Method Definition Index: 78191
+// Method Definition Index: 78193
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_op_Division_m641F85C0191C56932E452CAAC8E4974C43675FEB_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_a, float ___1_b, const RuntimeMethod* method) 
 {
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
@@ -61624,7 +61624,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 		return L_12;
 	}
 }
-// Method Definition Index: 78192
+// Method Definition Index: 78194
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Color_op_Equality_mB2BDC39B0B367BA15AA8DF22F8CB0D02D20BDC71_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_lhs, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___1_rhs, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -61674,7 +61674,7 @@ IL_0057:
 		return L_25;
 	}
 }
-// Method Definition Index: 78193
+// Method Definition Index: 78195
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Color_op_Inequality_mF1C733BA10E60B086AB950A71143678AE76C4D92_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_lhs, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___1_rhs, const RuntimeMethod* method) 
 {
 	{
@@ -61685,7 +61685,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Color_op_Inequality_mF1C733B
 		return (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
 	}
 }
-// Method Definition Index: 78200
+// Method Definition Index: 78202
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 Color_op_Implicit_m9B3228DAFA8DC57A75DE00CBBF13ED4F1E7B01FF_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_c, const RuntimeMethod* method) 
 {
 	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 V_0;
@@ -61708,7 +61708,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector4_t58B63D32F48C0DBF50DE2C60
 		return L_8;
 	}
 }
-// Method Definition Index: 78201
+// Method Definition Index: 78203
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_op_Implicit_mA8CF4745D766F4F610E1BE0A1ED2F4E5FE5D734C_inline (Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___0_v, const RuntimeMethod* method) 
 {
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
@@ -61731,7 +61731,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 		return L_8;
 	}
 }
-// Method Definition Index: 78301
+// Method Definition Index: 78303
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 Matrix4x4_op_Multiply_m75E91775655DCA8DFC8EDE0AB787285BB3935162_inline (Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 ___0_lhs, Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 ___1_rhs, const RuntimeMethod* method) 
 {
 	Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 V_0;
@@ -62014,7 +62014,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Matrix4x4_tDB70CF134A14BA38190C59
 		return L_256;
 	}
 }
-// Method Definition Index: 78302
+// Method Definition Index: 78304
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 Matrix4x4_op_Multiply_m319DF5B7DD9C9499EB8A5682FA63B1AAF0EE87A4_inline (Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 ___0_lhs, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___1_vector, const RuntimeMethod* method) 
 {
 	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 V_0;
@@ -62093,7 +62093,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector4_t58B63D32F48C0DBF50DE2C60
 		return L_64;
 	}
 }
-// Method Definition Index: 78303
+// Method Definition Index: 78305
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Matrix4x4_op_Equality_m72E9702E42EAED862E9D7EA1B8B9D6EA5AAC5C3D_inline (Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 ___0_lhs, Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 ___1_rhs, const RuntimeMethod* method) 
 {
 	int32_t G_B5_0 = 0;
@@ -62154,7 +62154,7 @@ IL_005d:
 		return (bool)G_B5_0;
 	}
 }
-// Method Definition Index: 78304
+// Method Definition Index: 78306
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Matrix4x4_op_Inequality_m318CC0235679529F15B2C56E0896E70A2BD62713_inline (Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 ___0_lhs, Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 ___1_rhs, const RuntimeMethod* method) 
 {
 	{
@@ -62165,7 +62165,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Matrix4x4_op_Inequality_m318
 		return (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
 	}
 }
-// Method Definition Index: 78376
+// Method Definition Index: 78378
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -62191,7 +62191,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_12;
 	}
 }
-// Method Definition Index: 78377
+// Method Definition Index: 78379
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -62217,7 +62217,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_12;
 	}
 }
-// Method Definition Index: 78379
+// Method Definition Index: 78381
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, float ___1_d, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -62240,7 +62240,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_9;
 	}
 }
-// Method Definition Index: 78380
+// Method Definition Index: 78382
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m7F3B0FA9256CE368D7636558EFEFC4AB0E1A0F41_inline (float ___0_d, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_a, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -62263,7 +62263,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_9;
 	}
 }
-// Method Definition Index: 78381
+// Method Definition Index: 78383
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Division_mCC6BB24E372AB96B8380D1678446EF6A8BAE13BB_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, float ___1_d, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -62286,7 +62286,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_9;
 	}
 }
-// Method Definition Index: 78382
+// Method Definition Index: 78384
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Equality_mCDCBB8D2EDC3D3BF20F31A25ACB34705D352B479_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_rhs, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -62328,7 +62328,7 @@ IL_0043:
 		return L_19;
 	}
 }
-// Method Definition Index: 78383
+// Method Definition Index: 78385
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Inequality_m9F170CDFBF1E490E559DA5D06D6547501A402BBF_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_rhs, const RuntimeMethod* method) 
 {
 	{
@@ -62339,7 +62339,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Inequality_m9F170
 		return (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
 	}
 }
-// Method Definition Index: 78405
+// Method Definition Index: 78407
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_op_Multiply_mCB375FCCC12A2EC8F9EB824A1BFB4453B58C2012_inline (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___0_lhs, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___1_rhs, const RuntimeMethod* method) 
 {
 	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 V_0;
@@ -62418,7 +62418,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E
 		return L_64;
 	}
 }
-// Method Definition Index: 78407
+// Method Definition Index: 78409
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Quaternion_op_Equality_mE6F6B56FCED8478552BE02BBAF18C70B969217F9_inline (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___0_lhs, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___1_rhs, const RuntimeMethod* method) 
 {
 	{
@@ -62429,7 +62429,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Quaternion_op_Equality_mE6F6
 		return L_1;
 	}
 }
-// Method Definition Index: 78408
+// Method Definition Index: 78410
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Quaternion_op_Inequality_m4EC1EF263D0E42432A301F85CB52028D2973F5DA_inline (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___0_lhs, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___1_rhs, const RuntimeMethod* method) 
 {
 	{
@@ -62440,7 +62440,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Quaternion_op_Inequality_m4E
 		return (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
 	}
 }
-// Method Definition Index: 78513
+// Method Definition Index: 78515
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Addition_m8136742CE6EE33BA4EB81C5F584678455917D2AE_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_a, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_b, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -62461,7 +62461,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		return L_8;
 	}
 }
-// Method Definition Index: 78514
+// Method Definition Index: 78516
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Subtraction_m44475FCDAD2DA2F98D78A6625EC2DCDFE8803837_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_a, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_b, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -62482,7 +62482,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		return L_8;
 	}
 }
-// Method Definition Index: 78515
+// Method Definition Index: 78517
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Multiply_m6FFFFF6A9E069A4FBCA7E098D88AE39C2B80D442_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_a, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_b, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -62503,7 +62503,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		return L_8;
 	}
 }
-// Method Definition Index: 78516
+// Method Definition Index: 78518
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Division_m707994C12D356E65E453CEE8F767E652B60911BF_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_a, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_b, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -62524,7 +62524,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		return L_8;
 	}
 }
-// Method Definition Index: 78518
+// Method Definition Index: 78520
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Multiply_m2D984B613020089BF5165BA4CA10988E2DC771FE_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_a, float ___1_d, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -62543,7 +62543,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		return L_6;
 	}
 }
-// Method Definition Index: 78519
+// Method Definition Index: 78521
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Multiply_mC53581E703768BA2512A7C65283657C331994353_inline (float ___0_d, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_a, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -62562,7 +62562,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		return L_6;
 	}
 }
-// Method Definition Index: 78520
+// Method Definition Index: 78522
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Division_m57A2DCD71E0CE7420851D705D1951F9238902AAB_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_a, float ___1_d, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -62581,7 +62581,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		return L_6;
 	}
 }
-// Method Definition Index: 78521
+// Method Definition Index: 78523
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector2_op_Equality_m6F2E069A50E787D131261E5CB25FC9E03F95B5E1_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_lhs, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_rhs, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -62612,7 +62612,7 @@ IL_002e:
 		return L_12;
 	}
 }
-// Method Definition Index: 78522
+// Method Definition Index: 78524
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector2_op_Inequality_mBEA93B5A0E954FEFB863DC61CB209119980EC713_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_lhs, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_rhs, const RuntimeMethod* method) 
 {
 	{
@@ -62623,7 +62623,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector2_op_Inequality_mBEA93
 		return (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
 	}
 }
-// Method Definition Index: 78523
+// Method Definition Index: 78525
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Implicit_mE8EBEE9291F11BB02F062D6E000F4798968CBD96_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_v, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -62640,7 +62640,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		return L_4;
 	}
 }
-// Method Definition Index: 78524
+// Method Definition Index: 78526
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector2_op_Implicit_m6D9CABB2C791A192867D7A4559D132BE86DD3EB7_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_v, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -62658,7 +62658,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_4;
 	}
 }
-// Method Definition Index: 78607
+// Method Definition Index: 78609
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 Vector4_op_Addition_m471A0C9B30316933F8CE430F17A7F8806ECA3EB9_inline (Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___0_a, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___1_b, const RuntimeMethod* method) 
 {
 	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 V_0;
@@ -62689,7 +62689,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector4_t58B63D32F48C0DBF50DE2C60
 		return L_16;
 	}
 }
-// Method Definition Index: 78608
+// Method Definition Index: 78610
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 Vector4_op_Subtraction_mD14864BB81AC08F643D2B82B41B3577012410ED9_inline (Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___0_a, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___1_b, const RuntimeMethod* method) 
 {
 	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 V_0;
@@ -62720,7 +62720,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector4_t58B63D32F48C0DBF50DE2C60
 		return L_16;
 	}
 }
-// Method Definition Index: 78610
+// Method Definition Index: 78612
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 Vector4_op_Multiply_m02FE150FD7366546FC19A36B6928512376BF64E8_inline (Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___0_a, float ___1_d, const RuntimeMethod* method) 
 {
 	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 V_0;
@@ -62747,7 +62747,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector4_t58B63D32F48C0DBF50DE2C60
 		return L_12;
 	}
 }
-// Method Definition Index: 78611
+// Method Definition Index: 78613
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 Vector4_op_Multiply_m59B8215B9A49709B9D299317ECB152C316625559_inline (float ___0_d, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___1_a, const RuntimeMethod* method) 
 {
 	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 V_0;
@@ -62774,7 +62774,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector4_t58B63D32F48C0DBF50DE2C60
 		return L_12;
 	}
 }
-// Method Definition Index: 78612
+// Method Definition Index: 78614
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 Vector4_op_Division_m9B1B8692D50C864CFA585BDF97FB6FBC18967D90_inline (Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___0_a, float ___1_d, const RuntimeMethod* method) 
 {
 	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 V_0;
@@ -62801,7 +62801,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector4_t58B63D32F48C0DBF50DE2C60
 		return L_12;
 	}
 }
-// Method Definition Index: 78613
+// Method Definition Index: 78615
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector4_op_Equality_mCEA0E5F229F4AE8C55152F7A8F84345F24F52DC6_inline (Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___0_lhs, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___1_rhs, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -62851,7 +62851,7 @@ IL_0057:
 		return L_25;
 	}
 }
-// Method Definition Index: 78614
+// Method Definition Index: 78616
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector4_op_Inequality_mD6A1C6E862F3EFB1B222A2DDCB7A7237042DE142_inline (Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___0_lhs, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___1_rhs, const RuntimeMethod* method) 
 {
 	{
@@ -62862,7 +62862,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector4_op_Inequality_mD6A1C
 		return (bool)((((int32_t)L_2) == ((int32_t)0))? 1 : 0);
 	}
 }
-// Method Definition Index: 78615
+// Method Definition Index: 78617
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 Vector4_op_Implicit_m2ECA73F345A7AD84144133E9E51657204002B12D_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_v, const RuntimeMethod* method) 
 {
 	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 V_0;
@@ -62883,7 +62883,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector4_t58B63D32F48C0DBF50DE2C60
 		return L_6;
 	}
 }
-// Method Definition Index: 78616
+// Method Definition Index: 78618
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector4_op_Implicit_m0217ADDC8CADDB93ACBABB17A50207698DAB0071_inline (Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 ___0_v, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -62903,7 +62903,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_6;
 	}
 }
-// Method Definition Index: 78617
+// Method Definition Index: 78619
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 Vector4_op_Implicit_mB193CD8DA20DEB9E9F95CFEB5A2B1B9B3B7ECFEB_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_v, const RuntimeMethod* method) 
 {
 	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 V_0;
@@ -62922,7 +62922,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector4_t58B63D32F48C0DBF50DE2C60
 		return L_4;
 	}
 }
-// Method Definition Index: 78305
+// Method Definition Index: 78307
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 Matrix4x4_GetColumn_m5CE079D7A69DE70E3144BADD20A1651C73A8D118_inline (Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -63038,7 +63038,7 @@ IL_0131:
 		return L_24;
 	}
 }
-// Method Definition Index: 78410
+// Method Definition Index: 78412
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Quaternion_Dot_m80E67A0F9F1FD9EAD0C8EEF7D5396ADF612FA105_inline (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974* ___0_a, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974* ___1_b, const RuntimeMethod* method) 
 {
 	{
@@ -63061,7 +63061,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Quaternion_Dot_m80E67A0F9F1
 		return ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_1, L_3)), ((float)il2cpp_codegen_multiply(L_5, L_7)))), ((float)il2cpp_codegen_multiply(L_9, L_11)))), ((float)il2cpp_codegen_multiply(L_13, L_15))));
 	}
 }
-// Method Definition Index: 78409
+// Method Definition Index: 78411
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Quaternion_IsEqualUsingDot_m9C672201C918C2D1E739F559DBE4406F95997CBD_inline (float ___0_dot, const RuntimeMethod* method) 
 {
 	{

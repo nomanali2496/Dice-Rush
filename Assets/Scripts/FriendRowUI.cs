@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using EnhancedUI.EnhancedScroller;
@@ -73,7 +73,7 @@ public class FriendRowUI : EnhancedScrollerCellView
         // Find or use cached FriendRowScaler
         if (cachedScaler == null)
         {
-            cachedScaler = FindObjectOfType<FriendRowScaler>();
+            cachedScaler = FindFirstObjectByType<FriendRowScaler>();
         }
         
         if (cachedScaler != null)

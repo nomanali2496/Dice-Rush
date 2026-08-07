@@ -474,6 +474,7 @@ extern void FBWindowsLoginManager_U3CGetUserLocaleU3Eb__9_0_m695B3860401653E9CD7
 extern void U3CLoadPictureFromUrlU3Ed__10__ctor_m9EEB7A63008A932E079C0A3EDEFFB926F0745D4E (void);
 extern void U3CLoadPictureFromUrlU3Ed__10_System_IDisposable_Dispose_mF6AA89FF0A768DDDCD3D16DFB8BEE290C43AFD37 (void);
 extern void U3CLoadPictureFromUrlU3Ed__10_MoveNext_m49F1F8C7737731DD774E4070550E2D7746EA93E5 (void);
+extern void U3CLoadPictureFromUrlU3Ed__10_U3CU3Em__Finally1_m6A6F14A220E9716FD480B410105ADF13B7EAAF18 (void);
 extern void U3CLoadPictureFromUrlU3Ed__10_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mB3FA154E2B68AE513F7B0A987C6C4AC77C6C0D35 (void);
 extern void U3CLoadPictureFromUrlU3Ed__10_System_Collections_IEnumerator_Reset_mB1EE45887C3F812C92F230C0E43C498C88BC625E (void);
 extern void U3CLoadPictureFromUrlU3Ed__10_System_Collections_IEnumerator_get_Current_m50EBA0B4A78657063B0B26E5E41E26B8378EEACF (void);
@@ -501,6 +502,7 @@ extern void U3CU3Ec__DisplayClass9_0_U3CprocessPurchasesU3Eb__1_m16A8CAD55992864
 extern void U3CLoadPictureFromUrlU3Ed__6__ctor_mFCAC1E0CD9AFEF9D4FC7C2B08FC7525F559DA8A2 (void);
 extern void U3CLoadPictureFromUrlU3Ed__6_System_IDisposable_Dispose_m8C674AE011C63B72DCEFF7368DA58D764B79C3EA (void);
 extern void U3CLoadPictureFromUrlU3Ed__6_MoveNext_m1A03D1B07139C8798F268EAA92134F89793604AF (void);
+extern void U3CLoadPictureFromUrlU3Ed__6_U3CU3Em__Finally1_m1EDA87C472678E68E8764DF758E14D6E14AB840D (void);
 extern void U3CLoadPictureFromUrlU3Ed__6_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m0F863DD15052B9E3A586A1328846AF3C233EBA15 (void);
 extern void U3CLoadPictureFromUrlU3Ed__6_System_Collections_IEnumerator_Reset_m89151C82740561EB785AF5B2A4AB8303F214CF0A (void);
 extern void U3CLoadPictureFromUrlU3Ed__6_System_Collections_IEnumerator_get_Current_m44D460CB604C85FBE166902DEE8B3AF96DF5E19B (void);
@@ -5111,7 +5113,7 @@ extern void Serializer_SerializeObject_mEE17BC69DDCF30AD22C910401562491ADABE5426
 extern void Serializer_SerializeArray_mD635B32B9406AF9608B71640F32C16AB828138BB (void);
 extern void Serializer_SerializeString_mB658D7F56B6D171FE905FE62A98E59DAC6050BDB (void);
 extern void Serializer_SerializeOther_m5A394D1B6C91B809DFBF69B4F3B9FAE531853841 (void);
-static Il2CppMethodPointer s_methodPointers[5136] = 
+static Il2CppMethodPointer s_methodPointers[5138] = 
 {
 	NULL,
 	NULL,
@@ -5588,6 +5590,7 @@ static Il2CppMethodPointer s_methodPointers[5136] =
 	U3CLoadPictureFromUrlU3Ed__10__ctor_m9EEB7A63008A932E079C0A3EDEFFB926F0745D4E,
 	U3CLoadPictureFromUrlU3Ed__10_System_IDisposable_Dispose_mF6AA89FF0A768DDDCD3D16DFB8BEE290C43AFD37,
 	U3CLoadPictureFromUrlU3Ed__10_MoveNext_m49F1F8C7737731DD774E4070550E2D7746EA93E5,
+	U3CLoadPictureFromUrlU3Ed__10_U3CU3Em__Finally1_m6A6F14A220E9716FD480B410105ADF13B7EAAF18,
 	U3CLoadPictureFromUrlU3Ed__10_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mB3FA154E2B68AE513F7B0A987C6C4AC77C6C0D35,
 	U3CLoadPictureFromUrlU3Ed__10_System_Collections_IEnumerator_Reset_mB1EE45887C3F812C92F230C0E43C498C88BC625E,
 	U3CLoadPictureFromUrlU3Ed__10_System_Collections_IEnumerator_get_Current_m50EBA0B4A78657063B0B26E5E41E26B8378EEACF,
@@ -5615,6 +5618,7 @@ static Il2CppMethodPointer s_methodPointers[5136] =
 	U3CLoadPictureFromUrlU3Ed__6__ctor_mFCAC1E0CD9AFEF9D4FC7C2B08FC7525F559DA8A2,
 	U3CLoadPictureFromUrlU3Ed__6_System_IDisposable_Dispose_m8C674AE011C63B72DCEFF7368DA58D764B79C3EA,
 	U3CLoadPictureFromUrlU3Ed__6_MoveNext_m1A03D1B07139C8798F268EAA92134F89793604AF,
+	U3CLoadPictureFromUrlU3Ed__6_U3CU3Em__Finally1_m1EDA87C472678E68E8764DF758E14D6E14AB840D,
 	U3CLoadPictureFromUrlU3Ed__6_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m0F863DD15052B9E3A586A1328846AF3C233EBA15,
 	U3CLoadPictureFromUrlU3Ed__6_System_Collections_IEnumerator_Reset_m89151C82740561EB785AF5B2A4AB8303F214CF0A,
 	U3CLoadPictureFromUrlU3Ed__6_System_Collections_IEnumerator_get_Current_m44D460CB604C85FBE166902DEE8B3AF96DF5E19B,
@@ -10250,7 +10254,7 @@ static Il2CppMethodPointer s_methodPointers[5136] =
 	Serializer_SerializeString_mB658D7F56B6D171FE905FE62A98E59DAC6050BDB,
 	Serializer_SerializeOther_m5A394D1B6C91B809DFBF69B4F3B9FAE531853841,
 };
-static const int32_t s_InvokerIndices[5136] = 
+static const int32_t s_InvokerIndices[5138] = 
 {
 	-1,
 	-1,
@@ -10727,6 +10731,7 @@ static const int32_t s_InvokerIndices[5136] =
 	13984,
 	18307,
 	17810,
+	18307,
 	18039,
 	18307,
 	18039,
@@ -10754,6 +10759,7 @@ static const int32_t s_InvokerIndices[5136] =
 	13984,
 	18307,
 	17810,
+	18307,
 	18039,
 	18307,
 	18039,
@@ -15393,11 +15399,11 @@ static const Il2CppTokenRangePair s_rgctxIndices[7] =
 {
 	{ 0x02000002, { 0, 29 } },
 	{ 0x020001D3, { 41, 8 } },
-	{ 0x060007E4, { 29, 4 } },
-	{ 0x060007E5, { 33, 3 } },
-	{ 0x060007E6, { 36, 5 } },
-	{ 0x060012D7, { 49, 3 } },
-	{ 0x060012F6, { 52, 3 } },
+	{ 0x060007E6, { 29, 4 } },
+	{ 0x060007E7, { 33, 3 } },
+	{ 0x060007E8, { 36, 5 } },
+	{ 0x060012D9, { 49, 3 } },
+	{ 0x060012F8, { 52, 3 } },
 };
 extern const uint32_t g_rgctx_U3CU3Ef__AnonymousType0_4_t93FD0713D40011506D6B5581D9D5064D1A1A31B8;
 extern const uint32_t g_rgctx_U3CtokenU3Ej__TPar_tB4283D6614B0A1B9713411CF590AE6445EC76C76;
@@ -15516,7 +15522,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	5136,
+	5138,
 	s_methodPointers,
 	0,
 	NULL,

@@ -5,11 +5,11 @@ using UnityEngine.UI;
 /// <summary>
 /// Keeps the gameplay screen composed against a fixed design resolution.
 /// The root still fills the device, while direct gameplay children are remapped
-/// into a centered 1440 x 3216 reference area so spacing and proportions match.
+/// into a centered 1080 x 1920 reference area so spacing and proportions match.
 /// </summary>
 public class GamePlayReferenceScaler : MonoBehaviour
 {
-    [SerializeField] private Vector2 referenceScreenSize = new Vector2(1440f, 3216f);
+    [SerializeField] private Vector2 referenceScreenSize = new Vector2(1080f, 1920f);
     [SerializeField] private bool keepFullScreenChildrenUnscaled = true;
     [SerializeField] private bool coverBackgroundChildren = true;
 
@@ -24,6 +24,20 @@ public class GamePlayReferenceScaler : MonoBehaviour
         root = GetComponent<RectTransform>();
         Canvas canvas = GetComponentInParent<Canvas>();
         canvasRoot = canvas != null ? canvas.GetComponent<RectTransform>() : null;
+
+        // Auto-detect and sync reference resolution with parent CanvasScaler if present
+        CanvasScaler canvasScaler = GetComponentInParent<CanvasScaler>();
+        if (canvasScaler != null && canvasScaler.referenceResolution.x > 0 && canvasScaler.referenceResolution.y > 0)
+        {
+            Vector2 refRes = canvasScaler.referenceResolution;
+            // Ensure portrait orientation (width < height) if screen is portrait
+            if (refRes.x > refRes.y)
+            {
+                refRes = new Vector2(refRes.y, refRes.x);
+            }
+            referenceScreenSize = refRes;
+        }
+
         CaptureOriginalLayouts();
     }
 

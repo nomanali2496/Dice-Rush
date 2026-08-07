@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
@@ -48,7 +48,7 @@ public class HorizontalSwipeTouchZone : MonoBehaviour, IPointerDownHandler, IPoi
     private void Start()
     {
         // Find HorizontalLobbyManager in the scene
-        lobbyManager = FindObjectOfType<HorizontalLobbyManager>();
+        lobbyManager = FindFirstObjectByType<HorizontalLobbyManager>();
         
         if (lobbyManager == null)
         {

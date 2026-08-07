@@ -17,28 +17,42 @@ public static class LobbyModel
     // Static constructor
     static LobbyModel()
     {
-        // Start with empty or small default if needed, but FetchConfigurations will resize it.
+        InitializeDefaults(12);
     }
 
-    private static void InitializeDefaults(int count)
+    public static void InitializeDefaults(int count = 12)
     {
         Configurations = new LobbyConfig[count];
+        int[] playerCounts = new int[] { 3, 5, 8, 10 };
+        int[] entryFees = new int[] { 100, 250, 500, 1000, 2500, 5000, 10000, 25000, 50000, 100000, 250000, 500000 };
+
+        string[] defaultLobbyIds = new string[] { "combo-dice", "dice-island", "dice-race", "dice-royale", "golden-throw", "lucky-rollers" };
+
         for (int i = 0; i < count; i++)
         {
-            Configurations[i] = new LobbyConfig(
+            int pCount = playerCounts[i % playerCounts.Length];
+            int fee = entryFees[i % entryFees.Length];
+            int reward = fee * pCount;
+
+            LobbyConfig cfg = new LobbyConfig(
                 index: i,
-                players: 2,
+                players: pCount,
                 entryCash: 0f,
-                entryChips: 10,
+                entryChips: fee,
                 firstCash: 0f,
-                firstChips: 20,
+                firstChips: reward,
                 secondCash: 0f,
-                secondChips: 10,
+                secondChips: 0,
                 thirdCash: 0f,
-                thirdChips: 5,
+                thirdChips: 0,
                 duration: 60f
             );
+            cfg.lobbyName = $"Board {i + 1}";
+            cfg.lobbyId = defaultLobbyIds[i % defaultLobbyIds.Length];
+            cfg.mode = $"{pCount}p";
+            Configurations[i] = cfg;
         }
+        IsLoaded = true;
     }
 
     /// <summary>
@@ -47,23 +61,38 @@ public static class LobbyModel
     /// </summary>
     public static void FetchConfigurations()
     {
+        if (Configurations == null || Configurations.Length == 0)
+        {
+            InitializeDefaults(12);
+        }
+
         if (BackendAuthService.Instance != null)
         {
             BackendAuthService.Instance.GetLobbyConfigurations((success, response) =>
             {
-                if (success && response != null && response.data != null)
+                if (success && response != null && response.data != null && response.data.Count > 0)
                 {
                     UpdateConfigurations(response.data);
                 }
                 else
                 {
                     Debug.LogWarning("[LobbyModel] Failed to fetch configurations from API. Using local defaults.");
+                    if (Configurations == null || Configurations.Length == 0)
+                    {
+                        InitializeDefaults(12);
+                    }
+                    OnConfigurationsUpdated?.Invoke();
                 }
             });
         }
         else
         {
-            Debug.LogWarning("[LobbyModel] BackendAuthService not found! Cannot fetch configurations.");
+            Debug.LogWarning("[LobbyModel] BackendAuthService not found! Using local default configurations.");
+            if (Configurations == null || Configurations.Length == 0)
+            {
+                InitializeDefaults(12);
+            }
+            OnConfigurationsUpdated?.Invoke();
         }
     }
 

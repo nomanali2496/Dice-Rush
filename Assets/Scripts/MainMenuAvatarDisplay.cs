@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
@@ -127,7 +127,7 @@ public class MainMenuAvatarDisplay : MonoBehaviour
 
     private void NotifyLeaderboard()
     {
-        LeaderboardManager[] managers = FindObjectsOfType<LeaderboardManager>(true);
+        LeaderboardManager[] managers = FindObjectsByType<LeaderboardManager>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         foreach (var lbm in managers)
         {
             if (lbm != null) lbm.SyncAvatarFromMainMenu();

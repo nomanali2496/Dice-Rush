@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 /// <summary>
 /// Diagnostic helper to debug why PlayerProfileUI doesn't update on fresh game start
@@ -35,7 +35,7 @@ public class DiagnosticHelper : MonoBehaviour
         Debug.Log($"  - Coins: {PlayerModel.Coins}");
         
         // Check PlayerProfileUI
-        PlayerProfileUI[] profileUIs = FindObjectsOfType<PlayerProfileUI>(true);
+        PlayerProfileUI[] profileUIs = FindObjectsByType<PlayerProfileUI>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         Debug.Log($"Found {profileUIs.Length} PlayerProfileUI instances");
         
         foreach (var ui in profileUIs)

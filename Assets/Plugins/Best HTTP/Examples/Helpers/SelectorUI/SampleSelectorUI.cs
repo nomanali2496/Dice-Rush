@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,7 +33,7 @@ namespace BestHTTP.Examples.Helpers.SelectorUI
 
         private void Start()
         {
-            this.sampleSelector = FindObjectOfType<SampleRoot>();
+            this.sampleSelector = FindFirstObjectByType<SampleRoot>();
             DisplayExamples();
         }
 

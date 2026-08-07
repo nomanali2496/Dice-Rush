@@ -767,10 +767,10 @@ IL2CPP_EXTERN_C const RuntimeMethod* NumberGrid_HandleServerTapResult_mC28163570
 IL2CPP_EXTERN_C const RuntimeMethod* NumberGrid_HandleSocketError_m4DD08EB1ADDF40C8C036D2E11DD7BC867F152737_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NumberGrid_ShuffleList_TisGridItem_t30F423BB4BFA3D5F5DA067D098A0B38B654AE787_mF9F07F70BAE3E1C551A42864C69528AA68473BDD_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* NumberGrid_ShuffleList_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_mFA0015499A7767FC8405F6D6C1E0FABCBA244893_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Object_FindFirstObjectByType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mF766559530B489C0F2CD36609162D1A663352C63_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_FindFirstObjectByType_TisHorizontalLobbyManager_t8E5295C20ECBB338E1F33675660905135F0D2637_m135AF64B21524B9580A4F9DAB9656669BE6A6F35_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectOfType_TisLeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863_m0748260AF04523B6DC9CEDF35239E7C1AFA6365B_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectsOfType_TisLeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863_mF794C42923175E23AA9DCBABF87089BEC5A8D58F_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Object_FindFirstObjectByType_TisLeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863_m2D9BB900CD8CE6D552746B3E2245B6327A19F99D_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectsByType_TisLeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863_m69F60DDF0F2E465C5FCD0321BED35C9D5A19DB79_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m58C654F1134533E29502629CA67645682B404811_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Socket_On_TisError_t75CFEB2C2BA371613E0CA6C822F9CD7E0912AAC1_mDF9E5FAA9B2D0A81D25E8FB86E2FBE9C7E754912_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Socket_On_TisJsonData_t6E7E81FF7970B2068C43B1D482B003827217B1D3_m1383C186DC4B60762A9F823A056C588C1ACE5271_RuntimeMethod_var;
@@ -1939,6 +1939,14 @@ struct Extents_tA2D2F95811D0A18CB7AC3570D2D8F8CD3AF4C4A8
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___min;
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___max;
+};
+struct FindObjectsInactive_t10C7BE036CAD0178142374F945283DA50D02B87A 
+{
+	int32_t ___value__;
+};
+struct FindObjectsSortMode_t3C83F8C6588F54EBB0CEB21F79D54CD19460AE9E 
+{
+	int32_t ___value__;
 };
 struct FontStyles_t9E611EE6BBE6E192A73EAFF7872596517C527FF5 
 {
@@ -4281,7 +4289,7 @@ struct GridItemU5BU5D_t9A4F5144DC50DAC9BB7D9C131E43AC2B71B3EB26  : public Runtim
 };
 
 
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Object_FindObjectOfType_TisRuntimeObject_m02DFBF011F3B59F777A5E521DB2A116DD496E968_gshared (const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Object_FindFirstObjectByType_TisRuntimeObject_mC5927319EB5B80095EFBA653D414D6F8AA87DC0A_gshared (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1__ctor_m2E1DFA67718FC1A0B6E5DFEB78831FFE9C059EB4_gshared (Action_1_t6F9EB113EB3F16226AEF811A2744F4111C116C87* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Component_GetComponent_TisRuntimeObject_m7181F81CAEC2CF53F5D2BC79B7425C16E1F80D33_gshared (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A List_1_GetEnumerator_mD8294A7FA2BEB1929487127D476F8EC1CDC23BFC_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
@@ -4293,7 +4301,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* List_1_get_Item_m33561245D6479
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_2__ctor_m910EDF0572CB2F28E45048A2EB215E25296E58BD_gshared (Action_2_t4E94B0FCA1084D7868DB11A50767A4916CA3D3FB* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_1_Invoke_mF2422B2DD29F74CE66F791C3F68E288EC7C3DB9E_gshared_inline (Action_1_t6F9EB113EB3F16226AEF811A2744F4111C116C87* __this, RuntimeObject* ___0_obj, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Object_FindFirstObjectByType_TisRuntimeObject_mC5927319EB5B80095EFBA653D414D6F8AA87DC0A_gshared (const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameObject_GetComponent_TisRuntimeObject_m6EAED4AA356F0F48288F67899E5958792395563B_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GameObject_AddComponent_TisRuntimeObject_m69B93700FACCF372F5753371C6E8FB780800B824_gshared (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_ContainsKey_m21860B585DD5B49E783BDD5E66256346928437AC_gshared (Dictionary_2_t184255DB06D490EE1D1E0AC3AB6196B56751FC75* __this, RuntimeObject* ___0_key, const RuntimeMethod* method) ;
@@ -4326,7 +4333,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_ContainsKey_mEA83243BF00BED
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Dictionary_2_get_Item_m258C63607421ED4C906A4D91121D2CC1D782E012_gshared (Dictionary_2_t41479D9F29C6C1BC07FC7F8D3DD313D8A9A419E1* __this, RuntimeObject* ___0_key, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m0263D33E2CDFEDD92506FBBD128A4C2C72CE34DE_gshared (Dictionary_2_tD2310F9956479E75275A8588414EFA998511BFFF* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m05F523BA9BEBF58F2272B2FED787AB93DAA6773B_gshared (Dictionary_2_t41479D9F29C6C1BC07FC7F8D3DD313D8A9A419E1* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* Object_FindObjectsOfType_TisRuntimeObject_m080DDCB03E6111A6FB7C8A5BC2CD1CCBFBE3BECC_gshared (bool ___0_includeInactive, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* Object_FindObjectsByType_TisRuntimeObject_mB1F91C8A4722D89B3A122EE213E9746E9C67EE8D_gshared (int32_t ___0_findObjectsInactive, int32_t ___1_sortMode, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Socket_On_TisRuntimeObject_mD4A987DC443B12A7004EF2101CC3FDAF63232C60_gshared (Socket_t6061FE7C11A9FA6B4F2207B23AE5C57A36DBC4D4* __this, String_t* ___0_eventName, Action_1_t6F9EB113EB3F16226AEF811A2744F4111C116C87* ___1_callback, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Nullable_1__ctor_m141FA88563AC0B5179132FB929EABD02C47FF703_gshared (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, int32_t ___0_value, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_2_Invoke_m728A2437F181FBC56F4D617249B47F513AC9FC43_gshared_inline (Action_2_tD7438462601D3939500ED67463331FE00CFFBDB8* __this, int32_t ___0_arg1, int32_t ___1_arg2, const RuntimeMethod* method) ;
@@ -4395,9 +4402,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnhancedScroller_ReloadData_m9997FA59977
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* __this, float ___0_seconds, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardManager_UpdateUserFixedRow_mC89897F8ABFCD2258712252DA401AB250AB95893 (LeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___0_x, Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___1_y, const RuntimeMethod* method) ;
-inline LeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863* Object_FindObjectOfType_TisLeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863_m0748260AF04523B6DC9CEDF35239E7C1AFA6365B (const RuntimeMethod* method)
+inline LeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863* Object_FindFirstObjectByType_TisLeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863_m2D9BB900CD8CE6D552746B3E2245B6327A19F99D (const RuntimeMethod* method)
 {
-	return ((  LeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863* (*) (const RuntimeMethod*))Object_FindObjectOfType_TisRuntimeObject_m02DFBF011F3B59F777A5E521DB2A116DD496E968_gshared)(method);
+	return ((  LeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863* (*) (const RuntimeMethod*))Object_FindFirstObjectByType_TisRuntimeObject_mC5927319EB5B80095EFBA653D414D6F8AA87DC0A_gshared)(method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9 (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
@@ -4734,9 +4741,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_ShowPreset_mA5573F
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Int32_TryParse_mC928DE2FEC1C35ED5298BDDCA9868076E94B8A21 (String_t* ___0_s, int32_t* ___1_result, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_NotifyLeaderboard_m2D84C0985B2EDC3C4885AE0631CC8141EDD5BC95 (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameObject_get_activeSelf_m4F3E5240E138B66AAA080EA30759A3D0517DA368 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
-inline LeaderboardManagerU5BU5D_t066846BF1B6CAE0D75B579E6771438ABD1B3471D* Object_FindObjectsOfType_TisLeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863_mF794C42923175E23AA9DCBABF87089BEC5A8D58F (bool ___0_includeInactive, const RuntimeMethod* method)
+inline LeaderboardManagerU5BU5D_t066846BF1B6CAE0D75B579E6771438ABD1B3471D* Object_FindObjectsByType_TisLeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863_m69F60DDF0F2E465C5FCD0321BED35C9D5A19DB79 (int32_t ___0_findObjectsInactive, int32_t ___1_sortMode, const RuntimeMethod* method)
 {
-	return ((  LeaderboardManagerU5BU5D_t066846BF1B6CAE0D75B579E6771438ABD1B3471D* (*) (bool, const RuntimeMethod*))Object_FindObjectsOfType_TisRuntimeObject_m080DDCB03E6111A6FB7C8A5BC2CD1CCBFBE3BECC_gshared)(___0_includeInactive, method);
+	return ((  LeaderboardManagerU5BU5D_t066846BF1B6CAE0D75B579E6771438ABD1B3471D* (*) (int32_t, int32_t, const RuntimeMethod*))Object_FindObjectsByType_TisRuntimeObject_mB1F91C8A4722D89B3A122EE213E9746E9C67EE8D_gshared)(___0_findObjectsInactive, ___1_sortMode, method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardManager_SyncAvatarFromMainMenu_mFF139FB5873935D861D91FD657E7D4097FF1CEA1 (LeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ImagePickerHelper_PickImage_m244C5FB50816B90E39351ABE3C3835E5BC98CD53 (Action_1_tD7F74291FAA5A362F4A5F48D4E1CF3ED51FA6A33* ___0_onImagePicked, int32_t ___1_maxSize, const RuntimeMethod* method) ;
@@ -4769,9 +4776,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoBehaviour_StopAllCoroutines_m8720334
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_remove_OnMatchFound_m8619AD2E784D31FB688805872ADD69492187E5E3 (Action_1_t7F5858BDA2C68D2E6D97CB0B2580BBCE46966C58* ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_remove_OnGameOverEvent_m01A7410E9DEB2A977FA36EDEDD750938A86F2ABD (Action_1_t5A945E82BE3E1C2882BF73EE0A189EC3A2B47541* ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMonitorMainMenuActivationU3Ed__11__ctor_mFB68E5A1B41E0CBC363C01CA7A56D40912CB569D (U3CMonitorMainMenuActivationU3Ed__11_t2500AD9A2708EBC42BE59B7188F4E6CE96CB1909* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) ;
-inline GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40 (const RuntimeMethod* method)
+inline GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* Object_FindFirstObjectByType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mF766559530B489C0F2CD36609162D1A663352C63 (const RuntimeMethod* method)
 {
-	return ((  GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* (*) (const RuntimeMethod*))Object_FindObjectOfType_TisRuntimeObject_m02DFBF011F3B59F777A5E521DB2A116DD496E968_gshared)(method);
+	return ((  GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* (*) (const RuntimeMethod*))Object_FindFirstObjectByType_TisRuntimeObject_mC5927319EB5B80095EFBA653D414D6F8AA87DC0A_gshared)(method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameManager_get_IsGameplayScreenActive_m2D13AF47FB684E6C5BF6FDC80652B62DE9EC0A66 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_ActiveMatchId_m7A9E15762CC732646485255598E1ADC4767F2D6E_inline (const RuntimeMethod* method) ;
@@ -5291,7 +5298,7 @@ inline void List_1_AddWithResize_m378B392086AAB6F400944FA9839516326B3F7BB8 (List
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66139
+// Method Definition Index: 66141
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass38_0__ctor_mB1341B0B15A87ACB433179AC95EC61A35AA7F1FA (U3CU3Ec__DisplayClass38_0_tDDD890AF1D1F0CBEB09EBA58F24464A85CA2BD5D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5299,7 +5306,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass38_0__ctor_mB1341B0
 		return;
 	}
 }
-// Method Definition Index: 66140
+// Method Definition Index: 66142
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass38_0_U3CSetTop3SlotRealU3Eb__0_m1AB76E7192431FDE3AF922CD047721BFE388804B (U3CU3Ec__DisplayClass38_0_tDDD890AF1D1F0CBEB09EBA58F24464A85CA2BD5D* __this, Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___0_tex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5407,7 +5414,7 @@ IL_00ab:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66141
+// Method Definition Index: 66143
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadRealLeaderboardDelayedU3Ed__33__ctor_m5C835296936D88169772C2FEA84CAADAF015A3FE (U3CLoadRealLeaderboardDelayedU3Ed__33_tDCF615980D958AA920A43AB2080F0FD626543B30* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -5417,14 +5424,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadRealLeaderboardDelayedU3Ed__33__c
 		return;
 	}
 }
-// Method Definition Index: 66142
+// Method Definition Index: 66144
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadRealLeaderboardDelayedU3Ed__33_System_IDisposable_Dispose_mFF6F49EEC2B3974540065F692064CFE7E0824740 (U3CLoadRealLeaderboardDelayedU3Ed__33_tDCF615980D958AA920A43AB2080F0FD626543B30* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 66143
+// Method Definition Index: 66145
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CLoadRealLeaderboardDelayedU3Ed__33_MoveNext_m1A22D0824ED5D65DE63D41770472D60E3734EE61 (U3CLoadRealLeaderboardDelayedU3Ed__33_tDCF615980D958AA920A43AB2080F0FD626543B30* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -5472,7 +5479,7 @@ IL_002e:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 66144
+// Method Definition Index: 66146
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadRealLeaderboardDelayedU3Ed__33_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m6DF64DEEF23D9E68C408C5AFD5E7042DAE0EF922 (U3CLoadRealLeaderboardDelayedU3Ed__33_tDCF615980D958AA920A43AB2080F0FD626543B30* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5480,7 +5487,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadRealLeaderboardDelayedU
 		return L_0;
 	}
 }
-// Method Definition Index: 66145
+// Method Definition Index: 66147
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadRealLeaderboardDelayedU3Ed__33_System_Collections_IEnumerator_Reset_m1949E141FC9A22C90089C0597932AB280237E99A (U3CLoadRealLeaderboardDelayedU3Ed__33_tDCF615980D958AA920A43AB2080F0FD626543B30* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5489,7 +5496,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadRealLeaderboardDelayedU3Ed__33_Sy
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CLoadRealLeaderboardDelayedU3Ed__33_System_Collections_IEnumerator_Reset_m1949E141FC9A22C90089C0597932AB280237E99A_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 66146
+// Method Definition Index: 66148
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadRealLeaderboardDelayedU3Ed__33_System_Collections_IEnumerator_get_Current_m8840194B80EC0B1999EA15167E1EE910EED754F0 (U3CLoadRealLeaderboardDelayedU3Ed__33_tDCF615980D958AA920A43AB2080F0FD626543B30* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5505,7 +5512,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadRealLeaderboardDelayedU
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66147
+// Method Definition Index: 66149
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CReloadDataDelayedU3Ed__32__ctor_mB543F6B490F33F583D5369BE0BD4166781130F19 (U3CReloadDataDelayedU3Ed__32_t4A156C5C24ABED0DA9FBCB5B38993BEA6CF4CB86* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -5515,14 +5522,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CReloadDataDelayedU3Ed__32__ctor_mB543
 		return;
 	}
 }
-// Method Definition Index: 66148
+// Method Definition Index: 66150
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CReloadDataDelayedU3Ed__32_System_IDisposable_Dispose_m9321ED3B1DFD42EC2126681D8D3DA1606AF7D0C8 (U3CReloadDataDelayedU3Ed__32_t4A156C5C24ABED0DA9FBCB5B38993BEA6CF4CB86* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 66149
+// Method Definition Index: 66151
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CReloadDataDelayedU3Ed__32_MoveNext_m8F986EEAA87C0CE2DCFA149D31763FAE937AD295 (U3CReloadDataDelayedU3Ed__32_t4A156C5C24ABED0DA9FBCB5B38993BEA6CF4CB86* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5610,7 +5617,7 @@ IL_0065:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 66150
+// Method Definition Index: 66152
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CReloadDataDelayedU3Ed__32_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m5322E08EFBA94989CD48A2046389B94A5A12BFD7 (U3CReloadDataDelayedU3Ed__32_t4A156C5C24ABED0DA9FBCB5B38993BEA6CF4CB86* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5618,7 +5625,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CReloadDataDelayedU3Ed__32_S
 		return L_0;
 	}
 }
-// Method Definition Index: 66151
+// Method Definition Index: 66153
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CReloadDataDelayedU3Ed__32_System_Collections_IEnumerator_Reset_mB5CE93C64181E6E4DA5F284C36640DD2F5025BA1 (U3CReloadDataDelayedU3Ed__32_t4A156C5C24ABED0DA9FBCB5B38993BEA6CF4CB86* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5627,7 +5634,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CReloadDataDelayedU3Ed__32_System_Coll
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CReloadDataDelayedU3Ed__32_System_Collections_IEnumerator_Reset_mB5CE93C64181E6E4DA5F284C36640DD2F5025BA1_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 66152
+// Method Definition Index: 66154
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CReloadDataDelayedU3Ed__32_System_Collections_IEnumerator_get_Current_mEF5E83A3E2293866676ECB029AF7921467F4A4E8 (U3CReloadDataDelayedU3Ed__32_t4A156C5C24ABED0DA9FBCB5B38993BEA6CF4CB86* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5643,7 +5650,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CReloadDataDelayedU3Ed__32_S
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66153
+// Method Definition Index: 66155
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSyncAvatarDelayedU3Ed__29__ctor_m7ECBD5233E024BCA7BB13620BACE143CF529A6A4 (U3CSyncAvatarDelayedU3Ed__29_tB1892D6921A1373D9BCDBFA149F6AA701E30C25E* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -5653,14 +5660,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSyncAvatarDelayedU3Ed__29__ctor_m7ECB
 		return;
 	}
 }
-// Method Definition Index: 66154
+// Method Definition Index: 66156
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSyncAvatarDelayedU3Ed__29_System_IDisposable_Dispose_m41FF4D92671FA5AFBA62BDD800B6A315D3028B1D (U3CSyncAvatarDelayedU3Ed__29_tB1892D6921A1373D9BCDBFA149F6AA701E30C25E* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 66155
+// Method Definition Index: 66157
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CSyncAvatarDelayedU3Ed__29_MoveNext_mDEB3FB6C47D02CB9D5B0893E670466A1D036CAB4 (U3CSyncAvatarDelayedU3Ed__29_tB1892D6921A1373D9BCDBFA149F6AA701E30C25E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5716,7 +5723,7 @@ IL_0037:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 66156
+// Method Definition Index: 66158
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSyncAvatarDelayedU3Ed__29_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m605772B16AE502DD637049F9D1CDC09B210C8965 (U3CSyncAvatarDelayedU3Ed__29_tB1892D6921A1373D9BCDBFA149F6AA701E30C25E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5724,7 +5731,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSyncAvatarDelayedU3Ed__29_S
 		return L_0;
 	}
 }
-// Method Definition Index: 66157
+// Method Definition Index: 66159
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSyncAvatarDelayedU3Ed__29_System_Collections_IEnumerator_Reset_m0C7CEE457789A7D34932D98F9B8096F1DF8BE4A6 (U3CSyncAvatarDelayedU3Ed__29_tB1892D6921A1373D9BCDBFA149F6AA701E30C25E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5733,7 +5740,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSyncAvatarDelayedU3Ed__29_System_Coll
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CSyncAvatarDelayedU3Ed__29_System_Collections_IEnumerator_Reset_m0C7CEE457789A7D34932D98F9B8096F1DF8BE4A6_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 66158
+// Method Definition Index: 66160
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSyncAvatarDelayedU3Ed__29_System_Collections_IEnumerator_get_Current_mF56C4194853726D17783305EF2574107EA20267B (U3CSyncAvatarDelayedU3Ed__29_tB1892D6921A1373D9BCDBFA149F6AA701E30C25E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5749,7 +5756,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CSyncAvatarDelayedU3Ed__29_S
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66159
+// Method Definition Index: 66161
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float LeaderboardRowScaler_get_ScaledCellSize_m0ACA9D131D7C5FC18D511C82ACF79F9E4475D60D (LeaderboardRowScaler_t4B120A09B199BBAC05F551718DD7BB73B8A1CCF5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5758,7 +5765,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float LeaderboardRowScaler_get_ScaledCellSize
 		return L_0;
 	}
 }
-// Method Definition Index: 66160
+// Method Definition Index: 66162
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float LeaderboardRowScaler_get_ScaledSpacing_m46E0DB940BFCF991D78787C41A71EDE835FD005D (LeaderboardRowScaler_t4B120A09B199BBAC05F551718DD7BB73B8A1CCF5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5767,7 +5774,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float LeaderboardRowScaler_get_ScaledSpacing_
 		return L_0;
 	}
 }
-// Method Definition Index: 66161
+// Method Definition Index: 66163
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float LeaderboardRowScaler_get_ScaleFactorX_mC1BE842D55CB57DABE17388C73C1C353F21C315F (LeaderboardRowScaler_t4B120A09B199BBAC05F551718DD7BB73B8A1CCF5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5776,7 +5783,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float LeaderboardRowScaler_get_ScaleFactorX_m
 		return L_0;
 	}
 }
-// Method Definition Index: 66162
+// Method Definition Index: 66164
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float LeaderboardRowScaler_get_ScaleFactorY_mA12DABEF278EB637C57D3015EAB71E9FA4673373 (LeaderboardRowScaler_t4B120A09B199BBAC05F551718DD7BB73B8A1CCF5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5785,14 +5792,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float LeaderboardRowScaler_get_ScaleFactorY_m
 		return L_0;
 	}
 }
-// Method Definition Index: 66163
+// Method Definition Index: 66165
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowScaler_Awake_m8BD8FBFE2DEC8D8D070C64DEDEAB55F2C3D1EF76 (LeaderboardRowScaler_t4B120A09B199BBAC05F551718DD7BB73B8A1CCF5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisLeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863_m0748260AF04523B6DC9CEDF35239E7C1AFA6365B_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindFirstObjectByType_TisLeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863_m2D9BB900CD8CE6D552746B3E2245B6327A19F99D_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral07C7DB6DFB01F05D19A36F4B1EDB73DEBC0DF4EB);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9CF0AF60F7CA897B563A6E590ACF5E413204D867);
@@ -5813,7 +5820,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowScaler_Awake_m8BD8FBFE2DEC
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/LeaderboardRowScaler.cs:35>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		LeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863* L_2;
-		L_2 = Object_FindObjectOfType_TisLeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863_m0748260AF04523B6DC9CEDF35239E7C1AFA6365B(Object_FindObjectOfType_TisLeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863_m0748260AF04523B6DC9CEDF35239E7C1AFA6365B_RuntimeMethod_var);
+		L_2 = Object_FindFirstObjectByType_TisLeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863_m2D9BB900CD8CE6D552746B3E2245B6327A19F99D(Object_FindFirstObjectByType_TisLeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863_m2D9BB900CD8CE6D552746B3E2245B6327A19F99D_RuntimeMethod_var);
 		__this->___leaderboardManager = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___leaderboardManager), (void*)L_2);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/LeaderboardRowScaler.cs:36>
@@ -5845,7 +5852,7 @@ IL_003c:
 		return;
 	}
 }
-// Method Definition Index: 66164
+// Method Definition Index: 66166
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowScaler_Start_m351BD2E2508FF6FE074B248374380D801B5E30AA (LeaderboardRowScaler_t4B120A09B199BBAC05F551718DD7BB73B8A1CCF5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5855,7 +5862,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowScaler_Start_m351BD2E2508F
 		return;
 	}
 }
-// Method Definition Index: 66165
+// Method Definition Index: 66167
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowScaler_ApplyScaling_m036112CE66858629B8FF861EF7A3A2DE336FC6BE (LeaderboardRowScaler_t4B120A09B199BBAC05F551718DD7BB73B8A1CCF5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5970,7 +5977,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowScaler_ApplyScaling_m03611
 		return;
 	}
 }
-// Method Definition Index: 66166
+// Method Definition Index: 66168
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowScaler_ApplyScrollerSettings_m3E048D60F00217F2D5045A0573D2DF1071BFFD48 (LeaderboardRowScaler_t4B120A09B199BBAC05F551718DD7BB73B8A1CCF5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6020,7 +6027,7 @@ IL_0019:
 		return;
 	}
 }
-// Method Definition Index: 66167
+// Method Definition Index: 66169
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowScaler_ScaleRowElements_m014CC79BC9EC46218DE4F1F0036EC9FC45EC6A39 (LeaderboardRowScaler_t4B120A09B199BBAC05F551718DD7BB73B8A1CCF5* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_rankText, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___1_profileImage, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___2_nameText, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___3_scoreText, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6117,7 +6124,7 @@ IL_0058:
 		return;
 	}
 }
-// Method Definition Index: 66168
+// Method Definition Index: 66170
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowScaler_ScaleElementOffsets_m4DA08F0DA61CB59597094D0CF01D60BD55A7110E (LeaderboardRowScaler_t4B120A09B199BBAC05F551718DD7BB73B8A1CCF5* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, float ___1_scale, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -6157,7 +6164,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowScaler_ScaleElementOffsets
 		return;
 	}
 }
-// Method Definition Index: 66169
+// Method Definition Index: 66171
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowScaler_RecalculateScaling_m04545FDD1DBF2A357C7A266F8E1431EFB7662104 (LeaderboardRowScaler_t4B120A09B199BBAC05F551718DD7BB73B8A1CCF5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6167,7 +6174,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowScaler_RecalculateScaling_
 		return;
 	}
 }
-// Method Definition Index: 66170
+// Method Definition Index: 66172
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowScaler__ctor_m3D4FA63CE63581C5C5431404BC32A84AA814A666 (LeaderboardRowScaler_t4B120A09B199BBAC05F551718DD7BB73B8A1CCF5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6196,7 +6203,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowScaler__ctor_m3D4FA63CE635
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66171
+// Method Definition Index: 66173
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowData__ctor_m25B7163228135FE08CD74ED7AE8716A25AB87A8B (LeaderboardRowData_t103707DE40DE18AC342597279240F60A2D19928F* __this, int32_t ___0_position, String_t* ___1_username, int32_t ___2_score, Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___3_avatarSprite, bool ___4_isCustom, String_t* ___5_avatarKey, const RuntimeMethod* method) 
 {
 	{
@@ -6235,7 +6242,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowData__ctor_m25B7163228135F
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66172
+// Method Definition Index: 66174
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowUI_SetData_mFAD206E1C909A0DC9C397EA071BBA6B7CEBA75E2 (LeaderboardRowUI_tE1FDBDBD345001EB393900EDD0D4E918B073B144* __this, LeaderboardRowData_t103707DE40DE18AC342597279240F60A2D19928F* ___0_data, const RuntimeMethod* method) 
 {
 	{
@@ -6267,7 +6274,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowUI_SetData_mFAD206E1C909A0
 		return;
 	}
 }
-// Method Definition Index: 66173
+// Method Definition Index: 66175
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowUI_SetupRow_m1C5976E6D60CB6042DCE15CE4653765C1B01E7A9 (LeaderboardRowUI_tE1FDBDBD345001EB393900EDD0D4E918B073B144* __this, int32_t ___0_position, String_t* ___1_username, int32_t ___2_score, Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___3_avatarSprite, bool ___4_isCustom, String_t* ___5_avatarKey, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6695,7 +6702,7 @@ IL_024a:
 		return;
 	}
 }
-// Method Definition Index: 66174
+// Method Definition Index: 66176
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowUI_SetupBackgrounds_m13895BE7ED66C1681872A7FAC2B7E374F0EBC815 (LeaderboardRowUI_tE1FDBDBD345001EB393900EDD0D4E918B073B144* __this, int32_t ___0_position, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6835,7 +6842,7 @@ IL_00a4:
 		return;
 	}
 }
-// Method Definition Index: 66175
+// Method Definition Index: 66177
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowUI_SetupProfileBackground_m325B1CDAB24CBAC588A3E943EBF5D3464D37E80C (LeaderboardRowUI_tE1FDBDBD345001EB393900EDD0D4E918B073B144* __this, int32_t ___0_position, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6975,7 +6982,7 @@ IL_00a4:
 		return;
 	}
 }
-// Method Definition Index: 66176
+// Method Definition Index: 66178
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F LeaderboardRowUI_GetUsernameColor_m3268C3B7B5E3AAFE28349FB6303312EEF5AEE366 (LeaderboardRowUI_tE1FDBDBD345001EB393900EDD0D4E918B073B144* __this, int32_t ___0_position, const RuntimeMethod* method) 
 {
 	{
@@ -7028,7 +7035,7 @@ IL_002b:
 		return L_4;
 	}
 }
-// Method Definition Index: 66177
+// Method Definition Index: 66179
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F LeaderboardRowUI_GetScoreColor_m946A15D7C0109E5FAE64BB9C735436824D56A8B7 (LeaderboardRowUI_tE1FDBDBD345001EB393900EDD0D4E918B073B144* __this, int32_t ___0_position, const RuntimeMethod* method) 
 {
 	{
@@ -7081,7 +7088,7 @@ IL_002b:
 		return L_4;
 	}
 }
-// Method Definition Index: 66178
+// Method Definition Index: 66180
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowUI_SetupPositionDisplay_m15D633A697F052522B8EAA00C809EEA58DF0CF72 (LeaderboardRowUI_tE1FDBDBD345001EB393900EDD0D4E918B073B144* __this, int32_t ___0_position, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7286,7 +7293,7 @@ IL_0121:
 		return;
 	}
 }
-// Method Definition Index: 66179
+// Method Definition Index: 66181
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowUI_SetupArrowImage_m5DFBD80BE8D4D0DC243B369CCB48577221735E39 (LeaderboardRowUI_tE1FDBDBD345001EB393900EDD0D4E918B073B144* __this, int32_t ___0_position, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7320,7 +7327,7 @@ IL_001d:
 		return;
 	}
 }
-// Method Definition Index: 66180
+// Method Definition Index: 66182
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t LeaderboardRowUI_GetCurrentPosition_m82D104277FC5DBC587383CE8F924493A8D8139FC (LeaderboardRowUI_tE1FDBDBD345001EB393900EDD0D4E918B073B144* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7329,7 +7336,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t LeaderboardRowUI_GetCurrentPosition_m
 		return L_0;
 	}
 }
-// Method Definition Index: 66181
+// Method Definition Index: 66183
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowUI_UpdateScore_m7E4543AE5260526A22EF0003385D794D81954FFE (LeaderboardRowUI_tE1FDBDBD345001EB393900EDD0D4E918B073B144* __this, int32_t ___0_newScore, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7364,7 +7371,7 @@ IL_0020:
 		return;
 	}
 }
-// Method Definition Index: 66182
+// Method Definition Index: 66184
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowUI_UpdateUsername_mA32A4D7BE3D2AD394F4852B85DB9A28D649A5F64 (LeaderboardRowUI_tE1FDBDBD345001EB393900EDD0D4E918B073B144* __this, String_t* ___0_newUsername, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7398,7 +7405,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 66183
+// Method Definition Index: 66185
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowUI_UpdateAvatar_m820E97FD6312CE69E80A3553E111305C4B4A9EB9 (LeaderboardRowUI_tE1FDBDBD345001EB393900EDD0D4E918B073B144* __this, Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___0_newAvatar, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7578,7 +7585,7 @@ IL_00eb:
 		return;
 	}
 }
-// Method Definition Index: 66184
+// Method Definition Index: 66186
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR LeaderboardRowData_t103707DE40DE18AC342597279240F60A2D19928F* LeaderboardRowUI_GetCurrentData_m67677DC7DD3F9BE490CC1FBF9364FBC1559BFEAD (LeaderboardRowUI_tE1FDBDBD345001EB393900EDD0D4E918B073B144* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7587,7 +7594,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR LeaderboardRowData_t103707DE40DE18AC342597279
 		return L_0;
 	}
 }
-// Method Definition Index: 66185
+// Method Definition Index: 66187
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* LeaderboardRowUI_GetFallbackPresetSprite_m1A6D347534F8626DB7C1054940349EDD7FAB2953 (LeaderboardRowUI_tE1FDBDBD345001EB393900EDD0D4E918B073B144* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7662,7 +7669,7 @@ IL_003d:
 		return (Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99*)NULL;
 	}
 }
-// Method Definition Index: 66186
+// Method Definition Index: 66188
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowUI__ctor_m3BB41853970632B05191C593EB0032DA8A4C0691 (LeaderboardRowUI_tE1FDBDBD345001EB393900EDD0D4E918B073B144* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7712,7 +7719,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LeaderboardRowUI__ctor_m3BB41853970632B0
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66187
+// Method Definition Index: 66189
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass31_0__ctor_mE5A494C18C61CEDAF286E2072DE35EFC359EB3AF (U3CU3Ec__DisplayClass31_0_t863203E6A6D17F0AD7B1128654616427BA4EA2FD* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7720,7 +7727,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass31_0__ctor_mE5A494C
 		return;
 	}
 }
-// Method Definition Index: 66188
+// Method Definition Index: 66190
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass31_0_U3CSetupRowU3Eb__0_m65E36E87B5D3986BB7A6F2A22557D30596E96CBB (U3CU3Ec__DisplayClass31_0_t863203E6A6D17F0AD7B1128654616427BA4EA2FD* __this, Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___0_tex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7878,7 +7885,7 @@ IL_0107:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66189
+// Method Definition Index: 66191
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyConfig__ctor_mABF579212323D333FC1B06B6F012E02163C09A53 (LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* __this, int32_t ___0_index, int32_t ___1_players, float ___2_entryCash, int32_t ___3_entryChips, float ___4_firstCash, int32_t ___5_firstChips, float ___6_secondCash, int32_t ___7_secondChips, float ___8_thirdCash, int32_t ___9_thirdChips, float ___10_duration, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7939,7 +7946,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyConfig__ctor_mABF579212323D333FC1B0
 		return;
 	}
 }
-// Method Definition Index: 66190
+// Method Definition Index: 66192
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t LobbyConfig_GetNumberOfCPUs_mB25C610589CB79E5D0B904C4A3645126C392B0B9 (LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7955,7 +7962,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t LobbyConfig_GetNumberOfCPUs_mB25C6105
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66191
+// Method Definition Index: 66193
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyGameObjectData__ctor_mDE1C15C3EDB0B00B48EE8A055CA5D479C2F1493C (LobbyGameObjectData_t8598BBF8A6DF007144529A0494D17C1E7B055FA7* __this, int32_t ___0_backgroundIndex, int32_t ___1_lobbyIndex, String_t* ___2_lobbyId, String_t* ___3_imageUrl, const RuntimeMethod* method) 
 {
 	{
@@ -7979,7 +7986,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyGameObjectData__ctor_mDE1C15C3EDB0B
 		return;
 	}
 }
-// Method Definition Index: 66192
+// Method Definition Index: 66194
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyGameObjectData__ctor_m98FD5E2AFE4F268DD5C2E5EDBD75F7FD747410AC (LobbyGameObjectData_t8598BBF8A6DF007144529A0494D17C1E7B055FA7* __this, int32_t ___0_backgroundIndex, const RuntimeMethod* method) 
 {
 	{
@@ -8003,7 +8010,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyGameObjectData__ctor_m98FD5E2AFE4F2
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66193
+// Method Definition Index: 66195
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyGameObjectUI_Awake_mD8CBAB510B3D1346C3B81DFDD361FB8238978878 (LobbyGameObjectUI_tAA7D05CB1E96C1F969841144DECD57900212CE7C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8063,7 +8070,7 @@ IL_006d:
 		return;
 	}
 }
-// Method Definition Index: 66194
+// Method Definition Index: 66196
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyGameObjectUI_InitializeScale_m81AAC81C5F15D3A928502AC759A968704831E791 (LobbyGameObjectUI_tAA7D05CB1E96C1F969841144DECD57900212CE7C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8152,7 +8159,7 @@ IL_0078:
 		return;
 	}
 }
-// Method Definition Index: 66195
+// Method Definition Index: 66197
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyGameObjectUI_OnDestroy_m00C7CC74F7AD82CEB4ADCDF24EAA2079BC2B83E3 (LobbyGameObjectUI_tAA7D05CB1E96C1F969841144DECD57900212CE7C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8175,7 +8182,7 @@ IL_0014:
 		return;
 	}
 }
-// Method Definition Index: 66196
+// Method Definition Index: 66198
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyGameObjectUI_SetData_mBFE395540BEC125195A2DF5F55CA73160732B801 (LobbyGameObjectUI_tAA7D05CB1E96C1F969841144DECD57900212CE7C* __this, LobbyGameObjectData_t8598BBF8A6DF007144529A0494D17C1E7B055FA7* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8238,7 +8245,7 @@ IL_0053:
 		return;
 	}
 }
-// Method Definition Index: 66197
+// Method Definition Index: 66199
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyGameObjectUI_SetupBackground_m5F6E2DF51E8F5B0AD6A69909C3200E89256553CA (LobbyGameObjectUI_tAA7D05CB1E96C1F969841144DECD57900212CE7C* __this, int32_t ___0_fallbackIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8387,7 +8394,7 @@ IL_00a8:
 		return;
 	}
 }
-// Method Definition Index: 66198
+// Method Definition Index: 66200
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* LobbyGameObjectUI_GetSpriteById_m324B6BDB5DCDD5AC6F482FBA2E29DBAEE64DABE5 (LobbyGameObjectUI_tAA7D05CB1E96C1F969841144DECD57900212CE7C* __this, String_t* ___0_id, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8508,7 +8515,7 @@ IL_0055:
 		return L_12;
 	}
 }
-// Method Definition Index: 66199
+// Method Definition Index: 66201
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyGameObjectUI_ApplyLocalSprite_m3EB9C7FC3441CE908439919F64847512E1B29522 (LobbyGameObjectUI_tAA7D05CB1E96C1F969841144DECD57900212CE7C* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8581,7 +8588,7 @@ IL_0043:
 		return;
 	}
 }
-// Method Definition Index: 66200
+// Method Definition Index: 66202
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR LobbyGameObjectData_t8598BBF8A6DF007144529A0494D17C1E7B055FA7* LobbyGameObjectUI_GetCurrentData_mF8FC071C0089CD88A1A4260EFA2988C111587DD3 (LobbyGameObjectUI_tAA7D05CB1E96C1F969841144DECD57900212CE7C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8590,7 +8597,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR LobbyGameObjectData_t8598BBF8A6DF007144529A04
 		return L_0;
 	}
 }
-// Method Definition Index: 66201
+// Method Definition Index: 66203
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t LobbyGameObjectUI_GetCurrentBackgroundIndex_mAF09AD652B21A70141D38CAC50A8CDBFCFFABF7F (LobbyGameObjectUI_tAA7D05CB1E96C1F969841144DECD57900212CE7C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8613,7 +8620,7 @@ IL_000a:
 		return L_2;
 	}
 }
-// Method Definition Index: 66202
+// Method Definition Index: 66204
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyGameObjectUI_OnPointerEnter_mF9A53FBCE1AEE230851BBB6549EAF1C1FA4A7486 (LobbyGameObjectUI_tAA7D05CB1E96C1F969841144DECD57900212CE7C* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8678,7 +8685,7 @@ IL_0029:
 		return;
 	}
 }
-// Method Definition Index: 66203
+// Method Definition Index: 66205
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyGameObjectUI_OnPointerExit_mF2A1ECEC7202060642A2E5A10A6CD7143B5F7B90 (LobbyGameObjectUI_tAA7D05CB1E96C1F969841144DECD57900212CE7C* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8735,7 +8742,7 @@ IL_0029:
 		return;
 	}
 }
-// Method Definition Index: 66204
+// Method Definition Index: 66206
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* LobbyGameObjectUI_ScaleTo_mA40D9346BB339DB6DC6D3E150F70C58D52AEAA62 (LobbyGameObjectUI_tAA7D05CB1E96C1F969841144DECD57900212CE7C* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_targetScale, float ___1_duration, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8762,7 +8769,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* LobbyGameObjectUI_ScaleTo_mA40
 		return L_4;
 	}
 }
-// Method Definition Index: 66205
+// Method Definition Index: 66207
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyGameObjectUI_SetSelectedState_mEDF8081D8C4F0CCBCDB5D40BD2CAAC06218FDA34 (LobbyGameObjectUI_tAA7D05CB1E96C1F969841144DECD57900212CE7C* __this, bool ___0_isSelected, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8799,7 +8806,7 @@ IL_0022:
 		return;
 	}
 }
-// Method Definition Index: 66206
+// Method Definition Index: 66208
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyGameObjectUI__ctor_mEA880C61DB6DE59CCB368AB07C02D3FBC4AB4202 (LobbyGameObjectUI_tAA7D05CB1E96C1F969841144DECD57900212CE7C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8831,7 +8838,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyGameObjectUI__ctor_mEA880C61DB6DE59
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66207
+// Method Definition Index: 66209
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyVisualMapping__ctor_m6F1932B5869A0EEC4E2C805E673056E9B7E25D83 (LobbyVisualMapping_t839FDC20695BC70FA526E876CB15F00E5679C5DF* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8847,7 +8854,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyVisualMapping__ctor_m6F1932B5869A0E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66208
+// Method Definition Index: 66210
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass15_0__ctor_m7C0D9780F06DC97221FB7F40185E2E7A4A94FB1B (U3CU3Ec__DisplayClass15_0_t25999D4C57FB00C55FF2BD2D55559E8D61010455* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8855,7 +8862,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass15_0__ctor_m7C0D978
 		return;
 	}
 }
-// Method Definition Index: 66209
+// Method Definition Index: 66211
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass15_0_U3CSetupBackgroundU3Eb__0_m6FAB12CDB1DFAE73103C10B30EDE34B7534FD028 (U3CU3Ec__DisplayClass15_0_t25999D4C57FB00C55FF2BD2D55559E8D61010455* __this, Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___0_downloadedSprite, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8911,7 +8918,7 @@ IL_002c:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66210
+// Method Definition Index: 66212
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CScaleToU3Ed__22__ctor_m2249BCB51FF47658AD5D3C6C2CCB6119C722F002 (U3CScaleToU3Ed__22_t83654E37EAC66A312B67E8FBDEF114B849D1DAA4* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -8921,14 +8928,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CScaleToU3Ed__22__ctor_m2249BCB51FF476
 		return;
 	}
 }
-// Method Definition Index: 66211
+// Method Definition Index: 66213
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CScaleToU3Ed__22_System_IDisposable_Dispose_m9702286E972DCF8A01CE183B9FEF453E5844DC8F (U3CScaleToU3Ed__22_t83654E37EAC66A312B67E8FBDEF114B849D1DAA4* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 66212
+// Method Definition Index: 66214
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CScaleToU3Ed__22_MoveNext_mF11482250FB1F4B9508739A9DCCB03C62844E143 (U3CScaleToU3Ed__22_t83654E37EAC66A312B67E8FBDEF114B849D1DAA4* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9070,7 +9077,7 @@ IL_00b5:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 66213
+// Method Definition Index: 66215
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CScaleToU3Ed__22_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m43707D12E45A49EC8060E2B604BCA226A5593874 (U3CScaleToU3Ed__22_t83654E37EAC66A312B67E8FBDEF114B849D1DAA4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9078,7 +9085,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CScaleToU3Ed__22_System_Coll
 		return L_0;
 	}
 }
-// Method Definition Index: 66214
+// Method Definition Index: 66216
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CScaleToU3Ed__22_System_Collections_IEnumerator_Reset_m6BA9CE150409850169CAA2D29F51BF1303993A59 (U3CScaleToU3Ed__22_t83654E37EAC66A312B67E8FBDEF114B849D1DAA4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9087,7 +9094,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CScaleToU3Ed__22_System_Collections_IE
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CScaleToU3Ed__22_System_Collections_IEnumerator_Reset_m6BA9CE150409850169CAA2D29F51BF1303993A59_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 66215
+// Method Definition Index: 66217
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CScaleToU3Ed__22_System_Collections_IEnumerator_get_Current_mFBF7D0874D2A7B8F175200B3B767C8B1F936186D (U3CScaleToU3Ed__22_t83654E37EAC66A312B67E8FBDEF114B849D1DAA4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9103,7 +9110,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CScaleToU3Ed__22_System_Coll
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66216
+// Method Definition Index: 66218
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR LobbyConfigU5BU5D_tC3F4948ACA699720D170B89FC9F0E31786F6E9B5* LobbyModel_get_Configurations_m2E9B73FA7EB5AC4A32D692549A438F38ACD03CEB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9119,7 +9126,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR LobbyConfigU5BU5D_tC3F4948ACA699720D170B89FC9
 		return L_0;
 	}
 }
-// Method Definition Index: 66217
+// Method Definition Index: 66219
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyModel_set_Configurations_mD6DA608B204A314308F6467EC9989144B50C17FE (LobbyConfigU5BU5D_tC3F4948ACA699720D170B89FC9F0E31786F6E9B5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9137,7 +9144,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyModel_set_Configurations_mD6DA608B2
 		return;
 	}
 }
-// Method Definition Index: 66218
+// Method Definition Index: 66220
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LobbyModel_get_IsLoaded_mB091CB5001A0CA89B75FA476AE7D13CC10D193FD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9153,7 +9160,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LobbyModel_get_IsLoaded_mB091CB5001A0CA8
 		return L_0;
 	}
 }
-// Method Definition Index: 66219
+// Method Definition Index: 66221
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyModel_set_IsLoaded_m3630D0CF3FAD88448CCF0106D4C919C05642E8D0 (bool ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9170,7 +9177,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyModel_set_IsLoaded_m3630D0CF3FAD884
 		return;
 	}
 }
-// Method Definition Index: 66220
+// Method Definition Index: 66222
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyModel_add_OnConfigurationsUpdated_m2BE2DB0258A2DA31C10DF170092892ED49973960 (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9215,7 +9222,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66221
+// Method Definition Index: 66223
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyModel_remove_OnConfigurationsUpdated_m083A08D2B07D436B5A4E8801242022AD46498AA5 (Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9260,7 +9267,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66222
+// Method Definition Index: 66224
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyModel__cctor_m76419D61858DAF80E80CFB5CCAFDDF361EEBDD37 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9281,7 +9288,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyModel__cctor_m76419D61858DAF80E80CF
 		return;
 	}
 }
-// Method Definition Index: 66223
+// Method Definition Index: 66225
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyModel_InitializeDefaults_m5DE2FE60D7F6F2D8F0DCF39FE6EF723593F5D875 (int32_t ___0_count, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9349,7 +9356,7 @@ IL_0041:
 		return;
 	}
 }
-// Method Definition Index: 66224
+// Method Definition Index: 66226
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyModel_FetchConfigurations_m496BADD34985C90380BE891AACC1A650E168A854 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9433,7 +9440,7 @@ IL_0037:
 		return;
 	}
 }
-// Method Definition Index: 66225
+// Method Definition Index: 66227
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyModel_UpdateConfigurations_m8B25F9F959D3F03B760DC5EC5C644658477E00A4 (List_1_tECB484939730CC4A1E255011670F2C296157631A* ___0_apiData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9633,7 +9640,7 @@ IL_00ce:
 		return;
 	}
 }
-// Method Definition Index: 66226
+// Method Definition Index: 66228
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6* LobbyModel_GetConfig_m0C12629937DDC8C4E10AD44A5535BFAE4FB156D3 (int32_t ___0_index, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9679,7 +9686,7 @@ IL_0016:
 		return (LobbyConfig_t68470063396B86A2C737A8147C8B09F93DC707C6*)NULL;
 	}
 }
-// Method Definition Index: 66227
+// Method Definition Index: 66229
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyModel_LoadLobbySprite_m56C5709209E212373379515ECE0151A913A7E5A5 (String_t* ___0_imageUrl, Action_1_tE15E022A737A08DAA5B691BB69C63DE906C3C94F* ___1_onComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9740,7 +9747,7 @@ IL_0024:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66228
+// Method Definition Index: 66230
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m3D3A4F9940EC05DBD184792805C1370A87A7E1A2 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9757,7 +9764,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m3D3A4F9940EC05DBD1847928
 		return;
 	}
 }
-// Method Definition Index: 66229
+// Method Definition Index: 66231
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_mB5C880738E6EE00851D10DCCF67AA26FA1FA3507 (U3CU3Ec_t93174EEE415AE5B1A6E5696E2FC463B99E147BCB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -9765,7 +9772,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_mB5C880738E6EE00851D10DCCF
 		return;
 	}
 }
-// Method Definition Index: 66230
+// Method Definition Index: 66232
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CFetchConfigurationsU3Eb__13_0_mE2D457705C9B08679D975FBDACC70BE72E2AF503 (U3CU3Ec_t93174EEE415AE5B1A6E5696E2FC463B99E147BCB* __this, bool ___0_success, LobbyApiResponse_tB2F91081B46437DEE75567FD82745912568B0D7D* ___1_response, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9827,7 +9834,7 @@ IL_001a:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66231
+// Method Definition Index: 66233
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_Awake_m7A1E2E3CCB13DE5F0E111CDB9D9F9F3B50E59C53 (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9876,7 +9883,7 @@ IL_0041:
 		return;
 	}
 }
-// Method Definition Index: 66232
+// Method Definition Index: 66234
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_OnDestroy_m74556A0063CC7CCF32D0A3A196B0DA59058A605A (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9921,7 +9928,7 @@ IL_0036:
 		return;
 	}
 }
-// Method Definition Index: 66233
+// Method Definition Index: 66235
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_SetData_mA1502C7FD4C96D764E382654A27388D1A43B84D0 (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, LobbyGameObjectData_t8598BBF8A6DF007144529A0494D17C1E7B055FA7* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10027,7 +10034,7 @@ IL_009f:
 		return;
 	}
 }
-// Method Definition Index: 66234
+// Method Definition Index: 66236
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_UpdatePlayButtonInteractability_m1D67B1523FB383C895817634C4C283FE2516C9FD (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___0_playButton, int32_t ___1_lobbyIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10105,7 +10112,7 @@ IL_0046:
 		return;
 	}
 }
-// Method Definition Index: 66235
+// Method Definition Index: 66237
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_RefreshPlayButtonsInteractability_mA9022AE94D977514266655B03FF19BBAEA5C3E28 (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10165,7 +10172,7 @@ IL_003d:
 		return;
 	}
 }
-// Method Definition Index: 66236
+// Method Definition Index: 66238
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_OnPlayButtonClicked_m343A5685DA3D47A35ED78AFBF147D63AE39A1D49 (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10241,7 +10248,7 @@ IL_0051:
 		return;
 	}
 }
-// Method Definition Index: 66237
+// Method Definition Index: 66239
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_SetupButtonHoverAnimation_m9CC880A0DD93896E658DEC16B3A35D5C3FC90277 (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___0_button, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10445,7 +10452,7 @@ IL_008d:
 		return;
 	}
 }
-// Method Definition Index: 66238
+// Method Definition Index: 66240
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_CleanupButtonHoverAnimation_mCB815D77C17D35E94C99B4EBE4D7DB6E780451C1 (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___0_button, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10539,7 +10546,7 @@ IL_0058:
 		return;
 	}
 }
-// Method Definition Index: 66239
+// Method Definition Index: 66241
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_OnButtonPointerEnter_m58265D926C9DC742FE825CEEFEE521BD8C68D6F6 (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___0_button, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10737,7 +10744,7 @@ IL_009b:
 		return;
 	}
 }
-// Method Definition Index: 66240
+// Method Definition Index: 66242
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_OnButtonPointerExit_m205D8EECD5F381B658F823F1DD368D9C7B95D0BE (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___0_button, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10915,7 +10922,7 @@ IL_0093:
 		return;
 	}
 }
-// Method Definition Index: 66241
+// Method Definition Index: 66243
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_ResetButtonScale_m2F82CF5DE8B1574D233DE67F3A3748BB2B921CF2 (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___0_button, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11065,7 +11072,7 @@ IL_008a:
 		return;
 	}
 }
-// Method Definition Index: 66242
+// Method Definition Index: 66244
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_OnDisable_mF018550737EB3C35B9537346D525F8B97CEBBF30 (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11075,7 +11082,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_OnDisable_mF018550737EB
 		return;
 	}
 }
-// Method Definition Index: 66243
+// Method Definition Index: 66245
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_CleanupTweens_m42A4A762882F8065EBF91081795BA00DCFDE6B51 (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11195,7 +11202,7 @@ IL_0073:
 		return;
 	}
 }
-// Method Definition Index: 66244
+// Method Definition Index: 66246
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_SetSelectedState_mA072924FF6808D3BC06F365D3C8F4B26E8FB98C0 (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, bool ___0_isSelected, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11229,7 +11236,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 66245
+// Method Definition Index: 66247
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_OnPointerDown_m0050C1BF121DF80CE9C7DE00782DC195B39E5F0B (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
 	{
@@ -11259,7 +11266,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 66246
+// Method Definition Index: 66248
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView_OnPointerUp_m9B2C419E3EC27296AA220A619CA9F5922BBF4F03 (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* ___0_eventData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11424,7 +11431,7 @@ IL_00dd:
 		return;
 	}
 }
-// Method Definition Index: 66247
+// Method Definition Index: 66249
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView__ctor_mA876A31E9AB06B6538EDDC908C80DBEB8BE6AD1A (LobbyRowCellView_t697E20659A30EBCE4659045C22A444F108780333* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11475,7 +11482,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyRowCellView__ctor_mA876A31E9AB06B65
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66248
+// Method Definition Index: 66250
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass21_0__ctor_m9AFB4039BF2FDAF7702D8BF29D12D4EC0C526EB8 (U3CU3Ec__DisplayClass21_0_t36660297254E3E761A8FE48901C05FC67682F683* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11483,7 +11490,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass21_0__ctor_m9AFB403
 		return;
 	}
 }
-// Method Definition Index: 66249
+// Method Definition Index: 66251
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass21_0_U3CSetupButtonHoverAnimationU3Eb__0_m0A49FC931514C52C25FA61E4A04152968C3F4D17 (U3CU3Ec__DisplayClass21_0_t36660297254E3E761A8FE48901C05FC67682F683* __this, BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* ___0_data, const RuntimeMethod* method) 
 {
 	{
@@ -11496,7 +11503,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass21_0_U3CSetupButton
 		return;
 	}
 }
-// Method Definition Index: 66250
+// Method Definition Index: 66252
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass21_0_U3CSetupButtonHoverAnimationU3Eb__1_m17C9A7C490704C43505596FD424740E77FB22A55 (U3CU3Ec__DisplayClass21_0_t36660297254E3E761A8FE48901C05FC67682F683* __this, BaseEventData_tE03A848325C0AE8E76C6CA15FD86395EBF83364F* ___0_data, const RuntimeMethod* method) 
 {
 	{
@@ -11517,7 +11524,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass21_0_U3CSetupButton
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66251
+// Method Definition Index: 66253
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyScaler_Awake_m211F9419F1CB6544358742FB97D9EFB29C4252F8 (LobbyScaler_t1468F4DE599440A604EAB43941C25805DC4696E7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11634,7 +11641,7 @@ IL_00b2:
 		return;
 	}
 }
-// Method Definition Index: 66252
+// Method Definition Index: 66254
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyScaler_Start_m3D29DED2769B20D7928CE7948FC97AB1C46C05D5 (LobbyScaler_t1468F4DE599440A604EAB43941C25805DC4696E7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11644,7 +11651,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyScaler_Start_m3D29DED2769B20D7928CE
 		return;
 	}
 }
-// Method Definition Index: 66253
+// Method Definition Index: 66255
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyScaler_StoreOriginalOffsets_m630010BF03889503E964F93244A4D7D42A78C6F6 (LobbyScaler_t1468F4DE599440A604EAB43941C25805DC4696E7* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, String_t* ___1_name, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11718,7 +11725,7 @@ IL_0050:
 		return;
 	}
 }
-// Method Definition Index: 66254
+// Method Definition Index: 66256
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyScaler_StoreOriginalSize_m98D37C1C4E83388AC2BBFC1E0F4062BFFCBB9F28 (LobbyScaler_t1468F4DE599440A604EAB43941C25805DC4696E7* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, String_t* ___1_name, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11757,7 +11764,7 @@ IL_001b:
 		return;
 	}
 }
-// Method Definition Index: 66255
+// Method Definition Index: 66257
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyScaler_ApplyScaling_m4E9DC140D63181C6FF4B3AD4C0974BE333330E30 (LobbyScaler_t1468F4DE599440A604EAB43941C25805DC4696E7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11950,7 +11957,7 @@ IL_012b:
 		return;
 	}
 }
-// Method Definition Index: 66256
+// Method Definition Index: 66258
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyScaler_ScaleByOffset_m0329A2BFE48CD54A26CA7331EBF95D270D381A88 (LobbyScaler_t1468F4DE599440A604EAB43941C25805DC4696E7* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12043,7 +12050,7 @@ IL_0018:
 		return;
 	}
 }
-// Method Definition Index: 66257
+// Method Definition Index: 66259
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyScaler_ScaleBySizeDelta_mB3C38F4117BCBFCED35DEC4611F48DC0E589822F (LobbyScaler_t1468F4DE599440A604EAB43941C25805DC4696E7* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12106,7 +12113,7 @@ IL_0018:
 		return;
 	}
 }
-// Method Definition Index: 66258
+// Method Definition Index: 66260
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyScaler__ctor_m80F01C9A1F0E4644F69FF72DA2323687021A1016 (LobbyScaler_t1468F4DE599440A604EAB43941C25805DC4696E7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12155,7 +12162,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LobbyScaler__ctor_m80F01C9A1F0E4644F69FF
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66259
+// Method Definition Index: 66261
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LoserScoreScreen_Setup_mA5E9503E952D5E599E86B0BBDE086FC24F7C9B4E (LoserScoreScreen_t34AC3715E56236AD336949BD5BEE20FC05F00066* __this, int32_t ___0_score, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12194,7 +12201,7 @@ IL_0029:
 		return;
 	}
 }
-// Method Definition Index: 66260
+// Method Definition Index: 66262
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LoserScoreScreen__ctor_m6A3839A4ABCFB4ECB01113ABE54BA5AD112BD7F1 (LoserScoreScreen_t34AC3715E56236AD336949BD5BEE20FC05F00066* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12210,7 +12217,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LoserScoreScreen__ctor_m6A3839A4ABCFB4EC
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66261
+// Method Definition Index: 66263
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_Start_mA2E65730286DE745438BDB917E2CF0DDF5E53892 (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12258,7 +12265,7 @@ IL_002a:
 		return;
 	}
 }
-// Method Definition Index: 66262
+// Method Definition Index: 66264
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_OnEnable_mF9C9684BB74C27BE63369B64E65DE170303BD5A1 (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12280,7 +12287,7 @@ IL_000e:
 		return;
 	}
 }
-// Method Definition Index: 66263
+// Method Definition Index: 66265
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_OnDestroy_m62EB7EF950013D022D3EB9E1A71EDEFC85D5C5B2 (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12298,7 +12305,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_OnDestroy_m62EB7EF
 		return;
 	}
 }
-// Method Definition Index: 66264
+// Method Definition Index: 66266
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_OnPlayerModelUpdated_m07E2CF115F05611758F0E65BE3A46F216405F73B (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12308,7 +12315,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_OnPlayerModelUpdat
 		return;
 	}
 }
-// Method Definition Index: 66265
+// Method Definition Index: 66267
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_Refresh_m2CFCF07995DE63B6748F48735BDD71BD64C5814F (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, const RuntimeMethod* method) 
 {
 	{
@@ -12318,7 +12325,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_Refresh_m2CFCF0799
 		return;
 	}
 }
-// Method Definition Index: 66266
+// Method Definition Index: 66268
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_Refresh_mB4E0063339F48F94F864B693B4FD7104FFCBEA0C (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, bool ___0_force, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12448,7 +12455,7 @@ IL_0075:
 		return;
 	}
 }
-// Method Definition Index: 66267
+// Method Definition Index: 66269
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_ShowPreset_mA5573F6AE82BF0A9BD602F4E2E4C16209488A8F1 (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12554,7 +12561,7 @@ IL_007b:
 		return;
 	}
 }
-// Method Definition Index: 66268
+// Method Definition Index: 66270
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_ShowCustom_m8F3F73B21D0F43F18A36FA97A19A113F2185D788 (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___0_sprite, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12630,7 +12637,7 @@ IL_0069:
 		return;
 	}
 }
-// Method Definition Index: 66269
+// Method Definition Index: 66271
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* MainMenuAvatarDisplay_GetCurrentAvatarSprite_m8E9E61DF0B4F446EC8533510F2F7D34EB05FB40F (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12699,7 +12706,7 @@ IL_0046:
 		return (Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99*)NULL;
 	}
 }
-// Method Definition Index: 66270
+// Method Definition Index: 66272
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MainMenuAvatarDisplay_IsShowingCustomAvatar_m3EB26B9A63B6528128B1DC58D3FCF3B75E1A649B (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12735,13 +12742,13 @@ IL_001f:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 66271
+// Method Definition Index: 66273
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_NotifyLeaderboard_m2D84C0985B2EDC3C4885AE0631CC8141EDD5BC95 (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectsOfType_TisLeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863_mF794C42923175E23AA9DCBABF87089BEC5A8D58F_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectsByType_TisLeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863_m69F60DDF0F2E465C5FCD0321BED35C9D5A19DB79_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -12752,14 +12759,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_NotifyLeaderboard_
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/MainMenuAvatarDisplay.cs:130>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		LeaderboardManagerU5BU5D_t066846BF1B6CAE0D75B579E6771438ABD1B3471D* L_0;
-		L_0 = Object_FindObjectsOfType_TisLeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863_mF794C42923175E23AA9DCBABF87089BEC5A8D58F((bool)1, Object_FindObjectsOfType_TisLeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863_mF794C42923175E23AA9DCBABF87089BEC5A8D58F_RuntimeMethod_var);
+		L_0 = Object_FindObjectsByType_TisLeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863_m69F60DDF0F2E465C5FCD0321BED35C9D5A19DB79(1, 0, Object_FindObjectsByType_TisLeaderboardManager_tCEE53D433AF4E2936DB9C3815CD0644C371E4863_m69F60DDF0F2E465C5FCD0321BED35C9D5A19DB79_RuntimeMethod_var);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/MainMenuAvatarDisplay.cs:131>
 		V_0 = L_0;
 		V_1 = 0;
-		goto IL_0022;
+		goto IL_0023;
 	}
 
-IL_000b:
+IL_000c:
 	{
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/MainMenuAvatarDisplay.cs:131>
 		LeaderboardManagerU5BU5D_t066846BF1B6CAE0D75B579E6771438ABD1B3471D* L_1 = V_0;
@@ -12775,7 +12782,7 @@ IL_000b:
 		L_6 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_5, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_6)
 		{
-			goto IL_001e;
+			goto IL_001f;
 		}
 	}
 	{
@@ -12785,13 +12792,13 @@ IL_000b:
 		LeaderboardManager_SyncAvatarFromMainMenu_mFF139FB5873935D861D91FD657E7D4097FF1CEA1(L_7, NULL);
 	}
 
-IL_001e:
+IL_001f:
 	{
 		int32_t L_8 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_8, 1));
 	}
 
-IL_0022:
+IL_0023:
 	{
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/MainMenuAvatarDisplay.cs:131>
 		int32_t L_9 = V_1;
@@ -12799,7 +12806,7 @@ IL_0022:
 		NullCheck(L_10);
 		if ((((int32_t)L_9) < ((int32_t)((int32_t)(((RuntimeArray*)L_10)->max_length)))))
 		{
-			goto IL_000b;
+			goto IL_000c;
 		}
 	}
 	{
@@ -12807,7 +12814,7 @@ IL_0022:
 		return;
 	}
 }
-// Method Definition Index: 66272
+// Method Definition Index: 66274
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_OnSelectCustomImageClicked_m27546DAABA24AE413BBCB57627E9B9FDDA7F31AD (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12827,7 +12834,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_OnSelectCustomImag
 		return;
 	}
 }
-// Method Definition Index: 66273
+// Method Definition Index: 66275
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_OnImageSelected_m3A2FBC21CC2855F9C6BA521138E79066E403D0C8 (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___0_texture, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12877,7 +12884,7 @@ IL_000a:
 		return;
 	}
 }
-// Method Definition Index: 66274
+// Method Definition Index: 66276
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay__ctor_m4F45DFDE691A534C646C09D49775544E517F5961 (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12898,7 +12905,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay__ctor_m4F45DFDE691
 		return;
 	}
 }
-// Method Definition Index: 66275
+// Method Definition Index: 66277
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_U3CRefreshU3Eb__11_0_m0DC970651A7FF5AC23D349B3A69BBB7D2270B887 (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___0_texture, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12950,7 +12957,7 @@ IL_0043:
 		return;
 	}
 }
-// Method Definition Index: 66276
+// Method Definition Index: 66278
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuAvatarDisplay_U3COnImageSelectedU3Eb__18_0_m1D0CE58DA578D2A9F5ACA611779DEE511716621A (MainMenuAvatarDisplay_t6D131A19A1170E89142162C7C58E0F0391E54986* __this, bool ___0_success, String_t* ___1_result, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12994,7 +13001,7 @@ IL_0014:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66277
+// Method Definition Index: 66279
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuScaler_Awake_mFC710761500C114B68B6A389CCCEDEB8D2FCD28A (MainMenuScaler_tD4A0995B6EE454A76051559928596004F7AE24F2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13080,7 +13087,7 @@ IL_0083:
 		return;
 	}
 }
-// Method Definition Index: 66278
+// Method Definition Index: 66280
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuScaler_Start_mA6227A58CF8071C850E753EE7FE65670E5B13CFC (MainMenuScaler_tD4A0995B6EE454A76051559928596004F7AE24F2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13090,7 +13097,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuScaler_Start_mA6227A58CF8071C850
 		return;
 	}
 }
-// Method Definition Index: 66279
+// Method Definition Index: 66281
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuScaler_StoreOriginalOffsets_mF038DBA064339F82A500CFD22B2756D1338FB905 (MainMenuScaler_tD4A0995B6EE454A76051559928596004F7AE24F2* __this, RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* ___0_element, Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3* ___1_offsets, String_t* ___2_elementName, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13187,7 +13194,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuScaler_StoreOriginalOffsets_mF03
 		return;
 	}
 }
-// Method Definition Index: 66280
+// Method Definition Index: 66282
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuScaler_ApplyScaling_m9D10E4D35B4B32C5341C59EB965C8E69B66E730D (MainMenuScaler_tD4A0995B6EE454A76051559928596004F7AE24F2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13341,7 +13348,7 @@ IL_0070:
 		return;
 	}
 }
-// Method Definition Index: 66281
+// Method Definition Index: 66283
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuScaler_ScaleDiceImage_mD90AC7BBD74BDC304855EC55FC633879501391F6 (MainMenuScaler_tD4A0995B6EE454A76051559928596004F7AE24F2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13404,7 +13411,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 66282
+// Method Definition Index: 66284
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuScaler_ScaleCashBar_mD83A5F98F9C43753BA3477A17C915BD2BE968E5C (MainMenuScaler_tD4A0995B6EE454A76051559928596004F7AE24F2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13514,7 +13521,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 66283
+// Method Definition Index: 66285
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuScaler_ScaleChipsBar_m9DDEAB16966A7B242ACB15D86480D9B16FAEF527 (MainMenuScaler_tD4A0995B6EE454A76051559928596004F7AE24F2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13624,7 +13631,7 @@ IL_000f:
 		return;
 	}
 }
-// Method Definition Index: 66284
+// Method Definition Index: 66286
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuScaler_RecalculateScaling_mD838DF2A00AF2073F7A750BC1029B13DEDB9206D (MainMenuScaler_tD4A0995B6EE454A76051559928596004F7AE24F2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13634,7 +13641,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuScaler_RecalculateScaling_mD838D
 		return;
 	}
 }
-// Method Definition Index: 66285
+// Method Definition Index: 66287
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuScaler__ctor_m78DB49FADAC03C0CB4D7D7ECEAB04C6EF6797EB7 (MainMenuScaler_tD4A0995B6EE454A76051559928596004F7AE24F2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13657,7 +13664,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MainMenuScaler__ctor_m78DB49FADAC03C0CB4
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66286
+// Method Definition Index: 66288
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchRecoveryUIManager_OnEnable_m89933B177650D30BCFAE119EF529D826FF19CCA2 (MatchRecoveryUIManager_tC997E6FE1AE937DDAFB93D24D0C45EAE5B172351* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13783,7 +13790,7 @@ IL_0088:
 		return;
 	}
 }
-// Method Definition Index: 66287
+// Method Definition Index: 66289
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchRecoveryUIManager_OnDisable_mE5326B2C21F98A88EDE3698901C05817C625F164 (MatchRecoveryUIManager_tC997E6FE1AE937DDAFB93D24D0C45EAE5B172351* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13868,7 +13875,7 @@ IL_005a:
 		return;
 	}
 }
-// Method Definition Index: 66288
+// Method Definition Index: 66290
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchRecoveryUIManager_HandleGameOver_m19E4969C02718CFEBA697743280EC45EB598C5BD (MatchRecoveryUIManager_tC997E6FE1AE937DDAFB93D24D0C45EAE5B172351* __this, GameOverData_t64DEE11B7483DC311DE5DC555498AB1FF8CEECBC* ___0_data, const RuntimeMethod* method) 
 {
 	{
@@ -13878,7 +13885,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchRecoveryUIManager_HandleGameOver_m1
 		return;
 	}
 }
-// Method Definition Index: 66289
+// Method Definition Index: 66291
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchRecoveryUIManager_HandleMatchFound_mB13876EFBB836B33BBCE2276A19FCCB9E7730A33 (MatchRecoveryUIManager_tC997E6FE1AE937DDAFB93D24D0C45EAE5B172351* __this, StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13911,7 +13918,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 66290
+// Method Definition Index: 66292
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* MatchRecoveryUIManager_MonitorMainMenuActivation_m511B9D9571A98ADD795FC75C82509701313AEE71 (MatchRecoveryUIManager_tC997E6FE1AE937DDAFB93D24D0C45EAE5B172351* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13930,14 +13937,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* MatchRecoveryUIManager_Monitor
 		return L_1;
 	}
 }
-// Method Definition Index: 66291
+// Method Definition Index: 66293
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchRecoveryUIManager_CheckForActiveMatch_mC8C99D2A8BEDDDA144CE1027CA99259E76DACB12 (MatchRecoveryUIManager_tC997E6FE1AE937DDAFB93D24D0C45EAE5B172351* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindFirstObjectByType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mF766559530B489C0F2CD36609162D1A663352C63_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral33C3BC0F8E81F58F423996A8362BA7E15285BF94);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral6907A2B3A268F92F95CB7C508AB15F3F80465821);
@@ -13990,7 +13997,7 @@ IL_0025:
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/MatchRecoveryUIManager.cs:93>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_5;
-		L_5 = Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40(Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40_RuntimeMethod_var);
+		L_5 = Object_FindFirstObjectByType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mF766559530B489C0F2CD36609162D1A663352C63(Object_FindFirstObjectByType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mF766559530B489C0F2CD36609162D1A663352C63_RuntimeMethod_var);
 		V_0 = L_5;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/MatchRecoveryUIManager.cs:94>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_6 = V_0;
@@ -14079,7 +14086,7 @@ IL_0099:
 		return;
 	}
 }
-// Method Definition Index: 66292
+// Method Definition Index: 66294
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchRecoveryUIManager_OnRejoinClicked_m4EFE05119DDB46CA2BF5898BB65BBDCCA82450AD (MatchRecoveryUIManager_tC997E6FE1AE937DDAFB93D24D0C45EAE5B172351* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14159,7 +14166,7 @@ IL_0052:
 		return;
 	}
 }
-// Method Definition Index: 66293
+// Method Definition Index: 66295
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchRecoveryUIManager_OnCancelRecoveryClicked_m707E188D62B3D9240CD41B59B2590BB39D265FC1 (MatchRecoveryUIManager_tC997E6FE1AE937DDAFB93D24D0C45EAE5B172351* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14293,7 +14300,7 @@ IL_0063:
 		return;
 	}
 }
-// Method Definition Index: 66294
+// Method Definition Index: 66296
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchRecoveryUIManager__ctor_m8877770AAC9C3B686A1AA12D5AB4F8837BA54A9D (MatchRecoveryUIManager_tC997E6FE1AE937DDAFB93D24D0C45EAE5B172351* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14309,7 +14316,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchRecoveryUIManager__ctor_m8877770AAC
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66295
+// Method Definition Index: 66297
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMonitorMainMenuActivationU3Ed__11__ctor_mFB68E5A1B41E0CBC363C01CA7A56D40912CB569D (U3CMonitorMainMenuActivationU3Ed__11_t2500AD9A2708EBC42BE59B7188F4E6CE96CB1909* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -14319,14 +14326,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMonitorMainMenuActivationU3Ed__11__ct
 		return;
 	}
 }
-// Method Definition Index: 66296
+// Method Definition Index: 66298
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMonitorMainMenuActivationU3Ed__11_System_IDisposable_Dispose_m3D71AF065613254A726130D5DAF76C1D0E502980 (U3CMonitorMainMenuActivationU3Ed__11_t2500AD9A2708EBC42BE59B7188F4E6CE96CB1909* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 66297
+// Method Definition Index: 66299
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CMonitorMainMenuActivationU3Ed__11_MoveNext_m17A296DEDA1A2DE1887BDEDA95A7EBE2D3D486AC (U3CMonitorMainMenuActivationU3Ed__11_t2500AD9A2708EBC42BE59B7188F4E6CE96CB1909* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14448,7 +14455,7 @@ IL_0076:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 66298
+// Method Definition Index: 66300
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CMonitorMainMenuActivationU3Ed__11_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE4B5A11958643CC1710FBA8510834885E35755A1 (U3CMonitorMainMenuActivationU3Ed__11_t2500AD9A2708EBC42BE59B7188F4E6CE96CB1909* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14456,7 +14463,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CMonitorMainMenuActivationU3
 		return L_0;
 	}
 }
-// Method Definition Index: 66299
+// Method Definition Index: 66301
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMonitorMainMenuActivationU3Ed__11_System_Collections_IEnumerator_Reset_mA071847F0910CEE50A638D638F34DFA992A36AF0 (U3CMonitorMainMenuActivationU3Ed__11_t2500AD9A2708EBC42BE59B7188F4E6CE96CB1909* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14465,7 +14472,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CMonitorMainMenuActivationU3Ed__11_Sys
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CMonitorMainMenuActivationU3Ed__11_System_Collections_IEnumerator_Reset_mA071847F0910CEE50A638D638F34DFA992A36AF0_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 66300
+// Method Definition Index: 66302
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CMonitorMainMenuActivationU3Ed__11_System_Collections_IEnumerator_get_Current_m81BFB9EB1D5E93C994477FCD3EBE81BEC69C81EC (U3CMonitorMainMenuActivationU3Ed__11_t2500AD9A2708EBC42BE59B7188F4E6CE96CB1909* __this, const RuntimeMethod* method) 
 {
 	{
@@ -14481,7 +14488,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CMonitorMainMenuActivationU3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66301
+// Method Definition Index: 66303
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MatchmakingModel_get_IsSearching_mB7F7D264B87192D66A232C3FE5E1548D8EB8CE91 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14496,7 +14503,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MatchmakingModel_get_IsSearching_mB7F7D2
 		return L_0;
 	}
 }
-// Method Definition Index: 66302
+// Method Definition Index: 66304
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_set_IsSearching_mBF92CB55C677425D9708022BFE5218241C51C99F (bool ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14512,7 +14519,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_set_IsSearching_mBF92CB
 		return;
 	}
 }
-// Method Definition Index: 66303
+// Method Definition Index: 66305
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MatchmakingModel_get_ReconnectPending_m38BE46DB52AC32E480394062C5CD427BCB51EDC8 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14527,7 +14534,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MatchmakingModel_get_ReconnectPending_m3
 		return L_0;
 	}
 }
-// Method Definition Index: 66304
+// Method Definition Index: 66306
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_set_ReconnectPending_m065CFA9D6D46159CDF66F9E9BCFE8588E337B963 (bool ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14544,7 +14551,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_set_ReconnectPending_m0
 		return;
 	}
 }
-// Method Definition Index: 66305
+// Method Definition Index: 66307
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_add_OnMatchFound_m04BF1F0D3A30B8B563F4560799F2873B4400B71C (Action_1_t7F5858BDA2C68D2E6D97CB0B2580BBCE46966C58* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14587,7 +14594,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66306
+// Method Definition Index: 66308
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_remove_OnMatchFound_m8619AD2E784D31FB688805872ADD69492187E5E3 (Action_1_t7F5858BDA2C68D2E6D97CB0B2580BBCE46966C58* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14630,7 +14637,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66307
+// Method Definition Index: 66309
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_add_OnMatchmakingFailed_mBD669ABBED2EA1FC7DD39F515723B8C56E233814 (Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14673,7 +14680,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66308
+// Method Definition Index: 66310
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_remove_OnMatchmakingFailed_m99B7838BE3AC7D9844E1B4C28B6C3A111830E0AE (Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14716,7 +14723,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66309
+// Method Definition Index: 66311
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_add_OnMatchmakingUpdated_m3D181B5F85C873CAA497EFBF2D3AAD7E9CA9EDE5 (Action_2_tD7438462601D3939500ED67463331FE00CFFBDB8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14759,7 +14766,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66310
+// Method Definition Index: 66312
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_remove_OnMatchmakingUpdated_m2658FCA47FCB123929147615AA208A935E7F3A47 (Action_2_tD7438462601D3939500ED67463331FE00CFFBDB8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14802,7 +14809,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66311
+// Method Definition Index: 66313
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_FindMatch_mB589036DA68B4DC3E0882E7CABDD316FE11071F6 (String_t* ___0_mode, int32_t ___1_stake, String_t* ___2_lobbyId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14950,7 +14957,7 @@ IL_005e:
 		return;
 	}
 }
-// Method Definition Index: 66312
+// Method Definition Index: 66314
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_CancelSearch_mC7DB2A347EEB04DB97277713FB458E3D769858AB (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15052,7 +15059,7 @@ IL_0069:
 		return;
 	}
 }
-// Method Definition Index: 66313
+// Method Definition Index: 66315
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_EnsureListenersAdded_m22C81828FD8E2B9A99F8EA5EC8D184BD5160A670 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15635,7 +15642,7 @@ IL_01f4:
 		return;
 	}
 }
-// Method Definition Index: 66314
+// Method Definition Index: 66316
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_HandleStartGame_m1A6616D431481146282BEF471DE44B2140B8D160 (StartGameData_t5999F5F872B15BE3FDCCEC3FFB465BD5F44C4486* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15891,7 +15898,7 @@ IL_00f2:
 		return;
 	}
 }
-// Method Definition Index: 66315
+// Method Definition Index: 66317
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_HandleError_mC65EFA42C4E4854F93409A56E340AF4A8292AFF1 (Error_t75CFEB2C2BA371613E0CA6C822F9CD7E0912AAC1* ___0_err, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16116,7 +16123,7 @@ IL_00b2:
 		return;
 	}
 }
-// Method Definition Index: 66316
+// Method Definition Index: 66318
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_HandleMatchmakingUpdate_m3EFCBEB37AF18BF60B8866838D8EECB9404C15EC (MatchmakingUpdateData_t664A0532EFB7ECEA8EB089AF1C25C964F8ACFFA8* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16185,7 +16192,7 @@ IL_0043:
 		return;
 	}
 }
-// Method Definition Index: 66317
+// Method Definition Index: 66319
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_ReTriggerSearchAfterReconnect_mC8862694D8B78AAA6B1856891C35C4C2B1DB1871 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16231,7 +16238,7 @@ IL_0031:
 		return;
 	}
 }
-// Method Definition Index: 66318
+// Method Definition Index: 66320
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_add_OnDiceRolledEvent_mA179828EE2D20C9D1F330D8C508F07519C2B3362 (Action_1_tA1DE18871DB50B19EDBF3E2E5A572A082ABF753D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16274,7 +16281,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66319
+// Method Definition Index: 66321
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_remove_OnDiceRolledEvent_m28C4FA0F7D78E670AB9F075C4E690CE6E3D38DCD (Action_1_tA1DE18871DB50B19EDBF3E2E5A572A082ABF753D* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16317,7 +16324,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66320
+// Method Definition Index: 66322
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_add_OnNumberLockedEvent_m1437467400844F3E2234C961D3083E830B3D9A04 (Action_1_tA19AE6F29D6F84A3A59DF40AF45A6EEDB1E5DDC7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16360,7 +16367,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66321
+// Method Definition Index: 66323
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_remove_OnNumberLockedEvent_mBACE0B00FB28BEFBCA89D601C9B09E3712D96975 (Action_1_tA19AE6F29D6F84A3A59DF40AF45A6EEDB1E5DDC7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16403,7 +16410,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66322
+// Method Definition Index: 66324
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_add_OnTapResultEvent_m97FE5757CEA37C5CDC9FAB559D8DFC358FB3DDC1 (Action_1_t0153C54893BA1F19BA8C8561E443C561A6CC9E82* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16446,7 +16453,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66323
+// Method Definition Index: 66325
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_remove_OnTapResultEvent_mFCCC5153911890D35205CA2156EBC7FE11623D4E (Action_1_t0153C54893BA1F19BA8C8561E443C561A6CC9E82* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16489,7 +16496,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66324
+// Method Definition Index: 66326
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_add_OnIconActivatedEvent_mDAF8EE80C37965BE0355F2A7F5279728D1795092 (Action_1_tDD81C7B2C17AF11D030AC91672C51E578E3FF540* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16532,7 +16539,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66325
+// Method Definition Index: 66327
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_remove_OnIconActivatedEvent_m07CDEB6009D9DBDA50816E5E1205C40CD627E50E (Action_1_tDD81C7B2C17AF11D030AC91672C51E578E3FF540* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16575,7 +16582,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66326
+// Method Definition Index: 66328
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_add_OnIconExpiredEvent_m9DC70F594A2AB3768EA5F5AE16A0E11430753474 (Action_1_t13602DFAE78CF9587B8009BA1ED979A180F4CF85* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16618,7 +16625,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66327
+// Method Definition Index: 66329
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_remove_OnIconExpiredEvent_mF32B919659EAFE4ACD3D645D88E346D8BC52758B (Action_1_t13602DFAE78CF9587B8009BA1ED979A180F4CF85* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16661,7 +16668,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66328
+// Method Definition Index: 66330
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_add_OnPlayerMilestoneEvent_mD38F95A74F85DEF4C35C4B4420D45327401BA661 (Action_1_tB9DC19BB62A2B1875B415892735A1D0A68E262A8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16704,7 +16711,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66329
+// Method Definition Index: 66331
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_remove_OnPlayerMilestoneEvent_m74036DC243D42C825056FF0009A659C2ABA632BF (Action_1_tB9DC19BB62A2B1875B415892735A1D0A68E262A8* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16747,7 +16754,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66330
+// Method Definition Index: 66332
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_add_OnGameOverEvent_m3F4070BB44D1ACDB29ADFE169C7E4580BB20B7AB (Action_1_t5A945E82BE3E1C2882BF73EE0A189EC3A2B47541* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16790,7 +16797,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66331
+// Method Definition Index: 66333
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_remove_OnGameOverEvent_m01A7410E9DEB2A977FA36EDEDD750938A86F2ABD (Action_1_t5A945E82BE3E1C2882BF73EE0A189EC3A2B47541* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16833,7 +16840,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66332
+// Method Definition Index: 66334
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_add_OnCountdownEvent_m2014D918449075EC0E5085874FBF31A2EC29A33E (Action_1_tEA72E6B5C1D8E0DEA87F3F2B9AD84E3970944B8F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16876,7 +16883,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66333
+// Method Definition Index: 66335
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_remove_OnCountdownEvent_m08CE683E91D840764E0E2C2F29554C03A8DC533D (Action_1_tEA72E6B5C1D8E0DEA87F3F2B9AD84E3970944B8F* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16919,7 +16926,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66334
+// Method Definition Index: 66336
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_add_OnSocketErrorEvent_m50C39E2DB8A1936AE2017EC4E760351169F5EDF8 (Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16962,7 +16969,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66335
+// Method Definition Index: 66337
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_remove_OnSocketErrorEvent_mC54AF576663291BFCF15E7F01F27C3C25E4B2635 (Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17005,7 +17012,7 @@ IL_0006:
 		return;
 	}
 }
-// Method Definition Index: 66336
+// Method Definition Index: 66338
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_RequestDiceRoll_mF6F1967428C726E7125E27788BC7E388CABCB0D3 (String_t* ___0_roomId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17096,7 +17103,7 @@ IL_0014:
 		return;
 	}
 }
-// Method Definition Index: 66337
+// Method Definition Index: 66339
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_HandleDiceRolled_m7752829E674C6615C180C9A1464D960DB59A1236 (DiceRolledData_tF96F092C6A16D37CE466F3546BB9964E7C4518F8* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17174,7 +17181,7 @@ IL_0052:
 		return;
 	}
 }
-// Method Definition Index: 66338
+// Method Definition Index: 66340
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_EmitTapNumber_m34A4F000E69C0B03ED796E92F7D43287F8065F9D (String_t* ___0_roomId, int32_t ___1_index, int32_t ___2_val, int32_t ___3_sequence, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17308,7 +17315,7 @@ IL_0014:
 		return;
 	}
 }
-// Method Definition Index: 66339
+// Method Definition Index: 66341
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_HandleNumberLocked_m6F10A4469E3A1C78E48F7CBDD78E5E078CE84A82 (NumberLockedData_tFFE5300E032A6931B04BD1F09545C3F411ECA624* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17386,7 +17393,7 @@ IL_0052:
 		return;
 	}
 }
-// Method Definition Index: 66340
+// Method Definition Index: 66342
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_HandleTapResult_m9E29AFFF1135F180BB5B30B24C261520FBFFE1EF (TapResultData_t1D3D82699AAF28A5B58AFF39C53A2350A9B68DB5* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17443,7 +17450,7 @@ IL_003a:
 		return;
 	}
 }
-// Method Definition Index: 66341
+// Method Definition Index: 66343
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_HandleIconActivated_m7A6ECE72DA54BD49A723551659D1D22379ACDDA7 (IconActivatedData_tC24C23609CCD9394E07C9759A3E867AFA2133D33* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17495,7 +17502,7 @@ IL_002f:
 		return;
 	}
 }
-// Method Definition Index: 66342
+// Method Definition Index: 66344
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_ReconnectMatch_mE9B1720F3FA09CDE7B7738E0B2F6866AE1376E22 (String_t* ___0_activeMatchId, String_t* ___1_activeRoomId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17639,7 +17646,7 @@ IL_004c:
 		return;
 	}
 }
-// Method Definition Index: 66343
+// Method Definition Index: 66345
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_ForfeitMatch_m82F087E962BBCBAAF4075E81527E7A3BC6C84DE8 (String_t* ___0_roomId, bool ___1_joinRoomFirst, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17812,7 +17819,7 @@ IL_00a1:
 		return;
 	}
 }
-// Method Definition Index: 66344
+// Method Definition Index: 66346
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MatchmakingModel_ConsumeLocalForfeitPending_mF7F0DA44A2E9F76097C2B7F8253D27F2A1C72A65 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17842,7 +17849,7 @@ IL_0009:
 		return (bool)1;
 	}
 }
-// Method Definition Index: 66345
+// Method Definition Index: 66347
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MatchmakingModel_IsForfeitPending_mD03CF8F12C4368956E6C36ADB836D1A14E4C3ED6 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17857,7 +17864,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MatchmakingModel_IsForfeitPending_mD03CF
 		return L_0;
 	}
 }
-// Method Definition Index: 66346
+// Method Definition Index: 66348
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* MatchmakingModel_GetPendingForfeitRoomId_m782872C13A99379BE4D7A14E6C939CE20CABEC5D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17872,7 +17879,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* MatchmakingModel_GetPendingForfeitR
 		return L_0;
 	}
 }
-// Method Definition Index: 66347
+// Method Definition Index: 66349
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MatchmakingModel_IsReconnectPending_mE4B3DE6FCE9DC456A87470FDB3683C298D96924E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17887,7 +17894,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MatchmakingModel_IsReconnectPending_mE4B
 		return L_0;
 	}
 }
-// Method Definition Index: 66348
+// Method Definition Index: 66350
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_ClearLocalForfeitPending_m457EB7050CE851971877236CDBC118F3FE4ED562 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17903,7 +17910,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_ClearLocalForfeitPendin
 		return;
 	}
 }
-// Method Definition Index: 66349
+// Method Definition Index: 66351
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MatchmakingModel_HandleIconExpired_m461059E870F8E857E4D74CEA7092EC1FCB72A172 (IconExpiredData_tB9EE1B110CB5D87404F73172A83429C4C2D1F4B5* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17958,7 +17965,7 @@ IL_0024:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66350
+// Method Definition Index: 66352
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m91A892C4C6442189DEEB8367A1BCE4A09AE9AE73 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17975,7 +17982,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m91A892C4C6442189DEEB8367
 		return;
 	}
 }
-// Method Definition Index: 66351
+// Method Definition Index: 66353
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_mAD5970464F31D128A7C36FFCAD5983445C07EC14 (U3CU3Ec_t5CB1D9D55FE9454407511F9C3CB910EFFEFB4AA3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17983,7 +17990,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_mAD5970464F31D128A7C36FFCA
 		return;
 	}
 }
-// Method Definition Index: 66352
+// Method Definition Index: 66354
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CEnsureListenersAddedU3Eb__24_0_m308BE68062D3BFCFAFE7F5B8174D5777382B38C1 (U3CU3Ec_t5CB1D9D55FE9454407511F9C3CB910EFFEFB4AA3* __this, JsonData_t6E7E81FF7970B2068C43B1D482B003827217B1D3* ___0_jsonData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18060,7 +18067,7 @@ IL_002d:
 		return;
 	}
 }
-// Method Definition Index: 66353
+// Method Definition Index: 66355
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CEnsureListenersAddedU3Eb__24_1_m0D0BB7199CBD3FCC643B00BA50310BA4627C3FD8 (U3CU3Ec_t5CB1D9D55FE9454407511F9C3CB910EFFEFB4AA3* __this, JsonData_t6E7E81FF7970B2068C43B1D482B003827217B1D3* ___0_jsonData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18110,7 +18117,7 @@ IL_002a:
 		return;
 	}
 }
-// Method Definition Index: 66354
+// Method Definition Index: 66356
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CEnsureListenersAddedU3Eb__24_2_m320EA6AB5E6B711E9669DE17746FDA8368E75BDB (U3CU3Ec_t5CB1D9D55FE9454407511F9C3CB910EFFEFB4AA3* __this, JsonData_t6E7E81FF7970B2068C43B1D482B003827217B1D3* ___0_jsonData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18160,7 +18167,7 @@ IL_002a:
 		return;
 	}
 }
-// Method Definition Index: 66355
+// Method Definition Index: 66357
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CEnsureListenersAddedU3Eb__24_3_m5FCDF9EA90A82CE1512A9CF9DAC8878591D8CFAC (U3CU3Ec_t5CB1D9D55FE9454407511F9C3CB910EFFEFB4AA3* __this, JsonData_t6E7E81FF7970B2068C43B1D482B003827217B1D3* ___0_jsonData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18210,7 +18217,7 @@ IL_002a:
 		return;
 	}
 }
-// Method Definition Index: 66356
+// Method Definition Index: 66358
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CEnsureListenersAddedU3Eb__24_4_m599D515FF6CE655B17E728AC7BFBE546118D02D8 (U3CU3Ec_t5CB1D9D55FE9454407511F9C3CB910EFFEFB4AA3* __this, JsonData_t6E7E81FF7970B2068C43B1D482B003827217B1D3* ___0_jsonData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18282,7 +18289,7 @@ IL_0036:
 		return;
 	}
 }
-// Method Definition Index: 66357
+// Method Definition Index: 66359
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CEnsureListenersAddedU3Eb__24_5_mD3D3B94C4C2BDB70A518BA008933263D5B1FA6F3 (U3CU3Ec_t5CB1D9D55FE9454407511F9C3CB910EFFEFB4AA3* __this, JsonData_t6E7E81FF7970B2068C43B1D482B003827217B1D3* ___0_jsonData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18354,7 +18361,7 @@ IL_0036:
 		return;
 	}
 }
-// Method Definition Index: 66358
+// Method Definition Index: 66360
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CEnsureListenersAddedU3Eb__24_6_m25B5947AF8EF9EFF19C4E4A49E38C727C1834709 (U3CU3Ec_t5CB1D9D55FE9454407511F9C3CB910EFFEFB4AA3* __this, JsonData_t6E7E81FF7970B2068C43B1D482B003827217B1D3* ___0_jsonData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18426,7 +18433,7 @@ IL_0036:
 		return;
 	}
 }
-// Method Definition Index: 66359
+// Method Definition Index: 66361
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CEnsureListenersAddedU3Eb__24_7_mACD74B9A9378FF7A559E2742CC06D8CF301A9F90 (U3CU3Ec_t5CB1D9D55FE9454407511F9C3CB910EFFEFB4AA3* __this, JsonData_t6E7E81FF7970B2068C43B1D482B003827217B1D3* ___0_jsonData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18537,7 +18544,7 @@ IL_0051:
 		return;
 	}
 }
-// Method Definition Index: 66360
+// Method Definition Index: 66362
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CEnsureListenersAddedU3Eb__24_8_m76EF0AB991795F21169707B1C209BC614CE0B711 (U3CU3Ec_t5CB1D9D55FE9454407511F9C3CB910EFFEFB4AA3* __this, JsonData_t6E7E81FF7970B2068C43B1D482B003827217B1D3* ___0_jsonData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18679,7 +18686,7 @@ IL_0090:
 		return;
 	}
 }
-// Method Definition Index: 66361
+// Method Definition Index: 66363
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CEnsureListenersAddedU3Eb__24_9_m0D126B822283B93319B12554251D67E6CC29A9F0 (U3CU3Ec_t5CB1D9D55FE9454407511F9C3CB910EFFEFB4AA3* __this, JsonData_t6E7E81FF7970B2068C43B1D482B003827217B1D3* ___0_jsonData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18790,7 +18797,7 @@ IL_0051:
 		return;
 	}
 }
-// Method Definition Index: 66362
+// Method Definition Index: 66364
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3CHandleErrorU3Eb__26_0_mB412DF82B985E14317A70446F5732CAAF05ABF0D (U3CU3Ec_t5CB1D9D55FE9454407511F9C3CB910EFFEFB4AA3* __this, bool ___0_success, String_t* ___1_error, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18921,7 +18928,7 @@ IL_0076:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66363
+// Method Definition Index: 66365
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReconnectMatchPayload__ctor_m7DE4992AEBFC7F50841937D80D8DA031F28A79F4 (ReconnectMatchPayload_tC6C8891ED2DDF83C12367D787F4A7200EB2986A5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18937,7 +18944,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReconnectMatchPayload__ctor_m7DE4992AEBF
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66364
+// Method Definition Index: 66366
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TapNumberPayload__ctor_mFF7C174FDAD3BD513B554535ED3AC2FF3D1373EC (TapNumberPayload_t012BFD6AAE753CB6153C5049EC1A608086AA2753* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18953,7 +18960,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TapNumberPayload__ctor_mFF7C174FDAD3BD51
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66365
+// Method Definition Index: 66367
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RollDiceRequestPayload__ctor_mF3ED77E0EA0C1F756712EC75141EF2B9D34678E0 (RollDiceRequestPayload_t4AA9F66D97BF3627FC388B9AB4E46D56E55814C9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18969,7 +18976,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RollDiceRequestPayload__ctor_mF3ED77E0EA
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66366
+// Method Definition Index: 66368
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiceRolledData__ctor_m3FDD4CB375E6A32883529910C57225CCD2D315D0 (DiceRolledData_tF96F092C6A16D37CE466F3546BB9964E7C4518F8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18985,7 +18992,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DiceRolledData__ctor_m3FDD4CB375E6A32883
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66367
+// Method Definition Index: 66369
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberLockedData__ctor_mCC5C826A711ABF9894F12513F5614430C4B7EE64 (NumberLockedData_tFFE5300E032A6931B04BD1F09545C3F411ECA624* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19001,7 +19008,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberLockedData__ctor_mCC5C826A711ABF98
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66368
+// Method Definition Index: 66370
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TapResultData__ctor_m2EA5A5EB6E9D572EDDA8E609EA7BAD96FB137058 (TapResultData_t1D3D82699AAF28A5B58AFF39C53A2350A9B68DB5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19017,7 +19024,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TapResultData__ctor_m2EA5A5EB6E9D572EDDA
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66369
+// Method Definition Index: 66371
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IconActivatedData__ctor_m97B84D75B2DE248F23AA0A2A152B121738F31482 (IconActivatedData_tC24C23609CCD9394E07C9759A3E867AFA2133D33* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19033,7 +19040,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IconActivatedData__ctor_m97B84D75B2DE248
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66370
+// Method Definition Index: 66372
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IconExpiredData__ctor_mE82D0B551D60225733B662EAF303E82F43872179 (IconExpiredData_tB9EE1B110CB5D87404F73172A83429C4C2D1F4B5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19049,7 +19056,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IconExpiredData__ctor_mE82D0B551D6022573
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66371
+// Method Definition Index: 66373
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerMilestoneData__ctor_mA4DEEADD1ADC4F6F525ABE4B0FC8E59E6CC5B66F (PlayerMilestoneData_tDAC646C0A718CC426CFF7E91E19FFCAB83D64C6C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19065,7 +19072,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerMilestoneData__ctor_mA4DEEADD1ADC4
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66372
+// Method Definition Index: 66374
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameOverData__ctor_mEF1FBDB3AC0B6A184BE666651B580F41485D411E (GameOverData_t64DEE11B7483DC311DE5DC555498AB1FF8CEECBC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19081,7 +19088,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameOverData__ctor_mEF1FBDB3AC0B6A184BE6
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66373
+// Method Definition Index: 66375
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JoinRoomPayload__ctor_m5334D7A251225BCC695F006621EF6605DB281C7A (JoinRoomPayload_tC750B2DA641FECF2E0F53BBA4D8F745A16020A05* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19097,7 +19104,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JoinRoomPayload__ctor_m5334D7A251225BCC6
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66374
+// Method Definition Index: 66376
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CountdownData__ctor_m579A05F5FCC979F51BD629DE5DEC9921737ECF86 (CountdownData_tE33ACC9DA8B9B1C6AD5F1E9CF0D47C0324E55D57* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19113,7 +19120,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CountdownData__ctor_m579A05F5FCC979F51BD
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66375
+// Method Definition Index: 66377
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ForfeitMatchPayload__ctor_mE89BB042BF836C39A653833FE5D143378E23803B (ForfeitMatchPayload_t1C88D6B3098A32D26DCDF7A465E77A4318EC2347* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19129,7 +19136,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ForfeitMatchPayload__ctor_mE89BB042BF836
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66376
+// Method Definition Index: 66378
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CancelMatchmakingPayload__ctor_mDB03F455AB8E483DA6C2BCC71736C51A1BD70EAE (CancelMatchmakingPayload_t03C6A845E9C84868B16D3117F04AC6900DD530EC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19145,7 +19152,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CancelMatchmakingPayload__ctor_mDB03F455
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66377
+// Method Definition Index: 66379
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotificationPanel_Awake_mCE177906DAC766B46D5932F7A4846018C80B10A7 (NotificationPanel_tB94A568BD38A4E212C3E202F4376DE97E5780F65* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19185,7 +19192,7 @@ IL_002a:
 		return;
 	}
 }
-// Method Definition Index: 66378
+// Method Definition Index: 66380
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotificationPanel_Show_m67DF81BBC3A48177F1108969866079A7DE210FC3 (NotificationPanel_tB94A568BD38A4E212C3E202F4376DE97E5780F65* __this, String_t* ___0_message, Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* ___1_onClose, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19228,7 +19235,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 66379
+// Method Definition Index: 66381
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotificationPanel_Hide_m8C7D4502B60A6DD15137F40522FA89EEF7511AFB (NotificationPanel_tB94A568BD38A4E212C3E202F4376DE97E5780F65* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19244,7 +19251,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotificationPanel_Hide_m8C7D4502B60A6DD1
 		return;
 	}
 }
-// Method Definition Index: 66380
+// Method Definition Index: 66382
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotificationPanel_OnCloseButtonClicked_m86B992FB9000E9319F837BF8E553D4DCB53C93ED (NotificationPanel_tB94A568BD38A4E212C3E202F4376DE97E5780F65* __this, const RuntimeMethod* method) 
 {
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B2_0 = NULL;
@@ -19275,7 +19282,7 @@ IL_0011:
 		return;
 	}
 }
-// Method Definition Index: 66381
+// Method Definition Index: 66383
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotificationPanel_OnDestroy_m26414531873117B35938F83E7858A3FDFFCCFEA1 (NotificationPanel_tB94A568BD38A4E212C3E202F4376DE97E5780F65* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19315,7 +19322,7 @@ IL_002a:
 		return;
 	}
 }
-// Method Definition Index: 66382
+// Method Definition Index: 66384
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotificationPanel__ctor_m4180979D47AA9AB83353B568403B3D27C41DFD41 (NotificationPanel_tB94A568BD38A4E212C3E202F4376DE97E5780F65* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19339,7 +19346,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NotificationPanel__ctor_m4180979D47AA9AB
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66383
+// Method Definition Index: 66385
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_Start_m0392F1E25232AD81E83D02DADA2D74987326FCBD (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19359,9 +19366,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_Start_m0392F1E25232AD81E83D02
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:149>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:150>
 		NumberGrid_AdjustBrixScale_mCCF63DC5C97E6306D241573F328B73F0554C14BD(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:152>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:153>
 		Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* L_0 = __this->___powerupTimerSlider;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -19372,7 +19379,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_Start_m0392F1E25232AD81E83D02
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:154>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:155>
 		Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* L_2 = __this->___powerupTimerSlider;
 		NullCheck(L_2);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3;
@@ -19383,7 +19390,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_Start_m0392F1E25232AD81E83D02
 
 IL_0025:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:156>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:157>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_4 = __this->___powerupTimerText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_5;
@@ -19394,7 +19401,7 @@ IL_0025:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:158>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:159>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_6 = __this->___powerupTimerText;
 		NullCheck(L_6);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7;
@@ -19405,7 +19412,7 @@ IL_0025:
 
 IL_0044:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:162>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:163>
 		bool L_8 = __this->___gridGenerated;
 		if (L_8)
 		{
@@ -19413,39 +19420,39 @@ IL_0044:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:164>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:165>
 		NumberGrid_GenerateGrid_m0C24E107097E9A1324B53BF97DB34AE03EFFBA1B(__this, NULL);
 	}
 
 IL_0052:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:168>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:169>
 		Action_1_tA19AE6F29D6F84A3A59DF40AF45A6EEDB1E5DDC7* L_9 = (Action_1_tA19AE6F29D6F84A3A59DF40AF45A6EEDB1E5DDC7*)il2cpp_codegen_object_new(Action_1_tA19AE6F29D6F84A3A59DF40AF45A6EEDB1E5DDC7_il2cpp_TypeInfo_var);
 		Action_1__ctor_mCD16B7E66116AF63B35321795E078654DAFE2B8B(L_9, __this, (intptr_t)((void*)NumberGrid_HandleServerNumberLocked_m3161FAB587D5DB008C9BD115903BC8FEBDD58599_RuntimeMethod_var), NULL);
 		MatchmakingModel_add_OnNumberLockedEvent_m1437467400844F3E2234C961D3083E830B3D9A04(L_9, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:169>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:170>
 		Action_1_t0153C54893BA1F19BA8C8561E443C561A6CC9E82* L_10 = (Action_1_t0153C54893BA1F19BA8C8561E443C561A6CC9E82*)il2cpp_codegen_object_new(Action_1_t0153C54893BA1F19BA8C8561E443C561A6CC9E82_il2cpp_TypeInfo_var);
 		Action_1__ctor_m38AF51CDEFDA3C7CACE4B66774AD8A08E9A4C9BC(L_10, __this, (intptr_t)((void*)NumberGrid_HandleServerTapResult_mC28163570677B2E6A0C33B1409B590B4A02D37C3_RuntimeMethod_var), NULL);
 		MatchmakingModel_add_OnTapResultEvent_m97FE5757CEA37C5CDC9FAB559D8DFC358FB3DDC1(L_10, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:170>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:171>
 		Action_1_tDD81C7B2C17AF11D030AC91672C51E578E3FF540* L_11 = (Action_1_tDD81C7B2C17AF11D030AC91672C51E578E3FF540*)il2cpp_codegen_object_new(Action_1_tDD81C7B2C17AF11D030AC91672C51E578E3FF540_il2cpp_TypeInfo_var);
 		Action_1__ctor_mE44AF77B1D24925FEDEB2D8E28ABDDE9E04B0F4E(L_11, __this, (intptr_t)((void*)NumberGrid_HandleServerIconActivated_m2B25895357C2B135B8B6DB0235D672EE4EB5C2E8_RuntimeMethod_var), NULL);
 		MatchmakingModel_add_OnIconActivatedEvent_mDAF8EE80C37965BE0355F2A7F5279728D1795092(L_11, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:171>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:172>
 		Action_1_t13602DFAE78CF9587B8009BA1ED979A180F4CF85* L_12 = (Action_1_t13602DFAE78CF9587B8009BA1ED979A180F4CF85*)il2cpp_codegen_object_new(Action_1_t13602DFAE78CF9587B8009BA1ED979A180F4CF85_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA530F4E867BD08BE3591642D2B001C8525E59042(L_12, __this, (intptr_t)((void*)NumberGrid_HandleServerIconExpired_m827CCD419E30FC95A23AFCD696F6C0328109E11F_RuntimeMethod_var), NULL);
 		MatchmakingModel_add_OnIconExpiredEvent_m9DC70F594A2AB3768EA5F5AE16A0E11430753474(L_12, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:172>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:173>
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_13 = (Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A*)il2cpp_codegen_object_new(Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A_il2cpp_TypeInfo_var);
 		Action_1__ctor_m9DC2953C55C4D7D4B7BEFE03D84DA1F9362D652C(L_13, __this, (intptr_t)((void*)NumberGrid_HandleSocketError_m4DD08EB1ADDF40C8C036D2E11DD7BC867F152737_RuntimeMethod_var), NULL);
 		MatchmakingModel_add_OnSocketErrorEvent_m50C39E2DB8A1936AE2017EC4E760351169F5EDF8(L_13, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:175>
-		NumberGrid_UpdateBoxInteractability_mB5F6A88062E41F69EB5F8C4327D48D1DDC718C99(__this, 0, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:176>
+		NumberGrid_UpdateBoxInteractability_mB5F6A88062E41F69EB5F8C4327D48D1DDC718C99(__this, 0, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:177>
 		return;
 	}
 }
-// Method Definition Index: 66384
+// Method Definition Index: 66386
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_AdjustBrixScale_mCCF63DC5C97E6306D241573F328B73F0554C14BD (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19462,7 +19469,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_AdjustBrixScale_mCCF63DC5C97E
 	memset((&V_1), 0, sizeof(V_1));
 	float V_2 = 0.0f;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:184>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:185>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_0 = __this->___brixParent;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -19473,33 +19480,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_AdjustBrixScale_mCCF63DC5C97E
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:184>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:185>
 		return;
 	}
 
 IL_000f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:186>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:187>
 		V_0 = (0.447761208f);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:189>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:190>
 		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_2;
 		L_2 = Screen_get_safeArea_m2ADAD6C36CC5DB40CC2DAD300DD1DF7CA4DF2525(NULL);
 		V_1 = L_2;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:190>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:191>
 		il2cpp_codegen_runtime_class_init_inline(Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D_il2cpp_TypeInfo_var);
 		float L_3;
 		L_3 = Rect_get_width_m620D67551372073C9C32C4C4624C2A5713F7F9A9_inline((&V_1), NULL);
 		float L_4;
 		L_4 = Rect_get_height_mE1AA6C6C725CCD2D317BD2157396D3CF7D47C9D8_inline((&V_1), NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:192>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:193>
 		float L_5 = V_0;
 		V_2 = ((float)(((float)(L_3/L_4))/L_5));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:195>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:196>
 		float L_6 = V_2;
 		float L_7;
 		L_7 = Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline(L_6, (1.0f), NULL);
 		V_2 = L_7;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:197>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:198>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_8 = __this->___brixParent;
 		float L_9 = V_2;
 		float L_10 = V_2;
@@ -19508,7 +19515,7 @@ IL_000f:
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_11), L_9, L_10, (1.0f), NULL);
 		NullCheck(L_8);
 		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_8, L_11, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:198>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:199>
 		float L_12 = V_2;
 		float L_13 = L_12;
 		RuntimeObject* L_14 = Box(il2cpp_defaults.single_class, &L_13);
@@ -19524,11 +19531,11 @@ IL_000f:
 		L_21 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteral20AC21848D9865D2E6B075D75F715967EEFF0713, L_14, L_17, L_20, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_21, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:199>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:200>
 		return;
 	}
 }
-// Method Definition Index: 66385
+// Method Definition Index: 66387
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_SetSizeAndPositionBox_mC9245E4F8C2862B4EF71DB0CB5F1E87893D77DDE (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_box, int32_t ___1_row, int32_t ___2_col, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19542,7 +19549,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_SetSizeAndPositionBox_mC9245E
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
 	memset((&V_1), 0, sizeof(V_1));
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:216>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:217>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = ___0_box;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -19553,19 +19560,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_SetSizeAndPositionBox_mC9245E
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:216>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:217>
 		return;
 	}
 
 IL_000a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:219>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:220>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = ___0_box;
 		NullCheck(L_2);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_3;
 		L_3 = GameObject_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m1592DCB5AA07291F73A76006F0913A64DFB8A9C4(L_2, GameObject_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m1592DCB5AA07291F73A76006F0913A64DFB8A9C4_RuntimeMethod_var);
 		V_0 = L_3;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:220>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:221>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_4 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_5;
@@ -19576,7 +19583,7 @@ IL_000a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:223>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:224>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_6 = V_0;
 		float L_7 = __this->___currentCellSizeX;
 		float L_8 = __this->___currentCellSizeY;
@@ -19589,11 +19596,11 @@ IL_000a:
 
 IL_0031:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:228>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:229>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:230>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:231>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:232>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:233>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_10 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->___startPosition);
 		float L_11 = L_10->___x;
 		int32_t L_12 = ___2_col;
@@ -19605,7 +19612,7 @@ IL_0031:
 		float L_18 = __this->___currentCellSizeY;
 		float L_19 = __this->___spacingY;
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&V_1), ((float)il2cpp_codegen_add(L_11, ((float)il2cpp_codegen_multiply(((float)L_12), ((float)il2cpp_codegen_add(L_13, L_14)))))), ((float)il2cpp_codegen_subtract(L_16, ((float)il2cpp_codegen_multiply(((float)L_17), ((float)il2cpp_codegen_add(L_18, L_19)))))), (0.0f), NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:235>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:236>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_20 = ___0_box;
 		NullCheck(L_20);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_21;
@@ -19613,11 +19620,11 @@ IL_0031:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_22 = V_1;
 		NullCheck(L_21);
 		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_21, L_22, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:236>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:237>
 		return;
 	}
 }
-// Method Definition Index: 66386
+// Method Definition Index: 66388
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_CalculateGridScale_m28B9115491FEF7B8E14201CD671E65BD8350F568 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19648,11 +19655,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_CalculateGridScale_m28B911549
 	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D V_11;
 	memset((&V_11), 0, sizeof(V_11));
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:245>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:246>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_0;
 		L_0 = Component_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m0640480E7E38BB88B0D1F6AD59E697C8EE6AAFA4(__this, Component_GetComponent_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m0640480E7E38BB88B0D1F6AD59E697C8EE6AAFA4_RuntimeMethod_var);
 		V_0 = L_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:246>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:247>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_1 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
@@ -19663,26 +19670,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_CalculateGridScale_m28B911549
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:248>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:249>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral953023CCDEA466FC8FD374F1256CC3E27FFD2E32, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:249>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:250>
 		float L_3 = __this->___referenceCellSizeX;
 		__this->___currentCellSizeX = L_3;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:250>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:251>
 		float L_4 = __this->___referenceCellSizeY;
 		__this->___currentCellSizeY = L_4;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:251>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:252>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_5;
 		L_5 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
 		__this->___startPosition = L_5;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:252>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:253>
 		return;
 	}
 
 IL_003e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:257>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:258>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_6 = V_0;
 		NullCheck(L_6);
 		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_7;
@@ -19694,7 +19701,7 @@ IL_003e:
 		float L_9 = __this->___paddingLeft;
 		float L_10 = __this->___paddingRight;
 		V_1 = ((float)il2cpp_codegen_subtract(L_8, ((float)il2cpp_codegen_add(L_9, L_10))));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:258>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:259>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_11 = V_0;
 		NullCheck(L_11);
 		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_12;
@@ -19705,7 +19712,7 @@ IL_003e:
 		float L_14 = __this->___paddingTop;
 		float L_15 = __this->___paddingBottom;
 		V_2 = ((float)il2cpp_codegen_subtract(L_13, ((float)il2cpp_codegen_add(L_14, L_15))));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:260>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:261>
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_16 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)((int32_t)12));
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_17 = L_16;
 		int32_t L_18;
@@ -19797,64 +19804,64 @@ IL_003e:
 		L_65 = String_Format_m918500C1EFB475181349A79989BB79BB36102894(_stringLiteral48D3BA12CB77C4B010CF67EF89D9789D3A694142, L_61, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_65, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:264>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:265>
 		int32_t L_66 = __this->___gridWidth;
 		float L_67 = __this->___referenceCellSizeX;
 		int32_t L_68 = __this->___gridWidth;
 		float L_69 = __this->___spacingX;
 		V_3 = ((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(((float)L_66), L_67)), ((float)il2cpp_codegen_multiply(((float)((int32_t)il2cpp_codegen_subtract(L_68, 1))), L_69))));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:266>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:267>
 		int32_t L_70 = __this->___gridHeight;
 		float L_71 = __this->___referenceCellSizeY;
 		int32_t L_72 = __this->___gridHeight;
 		float L_73 = __this->___spacingY;
 		V_4 = ((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(((float)L_70), L_71)), ((float)il2cpp_codegen_multiply(((float)((int32_t)il2cpp_codegen_subtract(L_72, 1))), L_73))));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:269>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:270>
 		float L_74 = V_1;
 		float L_75 = V_3;
 		V_5 = ((float)(L_74/L_75));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:270>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:271>
 		float L_76 = V_2;
 		float L_77 = V_4;
 		V_6 = ((float)(L_76/L_77));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:273>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:274>
 		float L_78 = V_5;
 		float L_79 = V_6;
 		float L_80;
 		L_80 = Mathf_Min_m747CA71A9483CDB394B13BD0AD048EE17E48FFE4_inline(L_78, L_79, NULL);
 		__this->___scaleFactor = L_80;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:276>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:277>
 		float L_81 = __this->___referenceCellSizeX;
 		float L_82 = __this->___scaleFactor;
 		__this->___currentCellSizeX = ((float)il2cpp_codegen_multiply(L_81, L_82));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:277>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:278>
 		float L_83 = __this->___referenceCellSizeY;
 		float L_84 = __this->___scaleFactor;
 		__this->___currentCellSizeY = ((float)il2cpp_codegen_multiply(L_83, L_84));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:280>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:281>
 		int32_t L_85 = __this->___gridWidth;
 		float L_86 = __this->___currentCellSizeX;
 		int32_t L_87 = __this->___gridWidth;
 		float L_88 = __this->___spacingX;
 		V_7 = ((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(((float)L_85), L_86)), ((float)il2cpp_codegen_multiply(((float)((int32_t)il2cpp_codegen_subtract(L_87, 1))), L_88))));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:281>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:282>
 		int32_t L_89 = __this->___gridHeight;
 		float L_90 = __this->___currentCellSizeY;
 		int32_t L_91 = __this->___gridHeight;
 		float L_92 = __this->___spacingY;
 		V_8 = ((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(((float)L_89), L_90)), ((float)il2cpp_codegen_multiply(((float)((int32_t)il2cpp_codegen_subtract(L_91, 1))), L_92))));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:287>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:288>
 		float L_93 = __this->___paddingLeft;
 		float L_94 = __this->___paddingRight;
 		V_9 = ((float)(((float)il2cpp_codegen_subtract(L_93, L_94))/(2.0f)));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:288>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:289>
 		float L_95 = __this->___paddingTop;
 		float L_96 = __this->___paddingBottom;
 		V_10 = ((float)(((float)il2cpp_codegen_subtract(L_95, L_96))/(2.0f)));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:290>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:291>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:292>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:293>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:294>
 		float L_97 = V_7;
 		float L_98 = __this->___currentCellSizeX;
 		float L_99 = V_9;
@@ -19865,7 +19872,7 @@ IL_003e:
 		memset((&L_103), 0, sizeof(L_103));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_103), ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(((float)(((-L_97))/(2.0f))), ((float)(L_98/(2.0f))))), L_99)), ((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_subtract(((float)(L_100/(2.0f))), ((float)(L_101/(2.0f))))), L_102)), NULL);
 		__this->___startPosition = L_103;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:295>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:296>
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_104 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)8);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_105 = L_104;
 		float L_106 = V_1;
@@ -19926,23 +19933,23 @@ IL_003e:
 		String_t* L_137;
 		L_137 = String_Format_m918500C1EFB475181349A79989BB79BB36102894(_stringLiteral0909355C9876D9E0D1A4F3A1DB27908D3D836185, L_133, NULL);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_137, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:296>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:297>
 		return;
 	}
 }
-// Method Definition Index: 66387
+// Method Definition Index: 66389
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_SetOwner_m25F9E6780E67663F0B41CADA05517AAB1365581D (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, String_t* ___0_userId, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:300>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:301>
 		String_t* L_0 = ___0_userId;
 		__this->___ownerUserId = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___ownerUserId), (void*)L_0);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:301>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:302>
 		return;
 	}
 }
-// Method Definition Index: 66388
+// Method Definition Index: 66390
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_GenerateGridFromMatrix_mFCE8FE9C3E34E07FE65565A783DD40C0616B3CC7 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___0_matrix, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -19959,27 +19966,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_GenerateGridFromMatrix_mFCE8F
 	int32_t V_2 = 0;
 	int32_t V_3 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:305>
-		__this->___gridGenerated = (bool)1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:306>
-		__this->___tapSequence = 0;
+		__this->___gridGenerated = (bool)1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:307>
-		NumberGrid_ClearGrid_m8E6B453E493D61754D4D688BC6B5C00799E2172A(__this, NULL);
+		__this->___tapSequence = 0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:308>
-		NumberGrid_CalculateGridScale_m28B9115491FEF7B8E14201CD671E65BD8350F568(__this, NULL);
+		NumberGrid_ClearGrid_m8E6B453E493D61754D4D688BC6B5C00799E2172A(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:309>
-		__this->___currentDiceSumPlayer = (-1);
+		NumberGrid_CalculateGridScale_m28B9115491FEF7B8E14201CD671E65BD8350F568(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:310>
-		__this->___currentDiceSumCPU = (-1);
+		__this->___currentDiceSumPlayer = (-1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:311>
+		__this->___currentDiceSumCPU = (-1);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:312>
 		Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180* L_0 = __this->___cpuDiceSums;
 		NullCheck(L_0);
 		Dictionary_2_Clear_m9821889E928BB7EAEE9A7E81EDFC59651F7CBDD0(L_0, Dictionary_2_Clear_m9821889E928BB7EAEE9A7E81EDFC59651F7CBDD0_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:312>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:313>
 		Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180* L_1 = __this->___cpuRollIds;
 		NullCheck(L_1);
 		Dictionary_2_Clear_m9821889E928BB7EAEE9A7E81EDFC59651F7CBDD0(L_1, Dictionary_2_Clear_m9821889E928BB7EAEE9A7E81EDFC59651F7CBDD0_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:314>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:315>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_2 = ___0_matrix;
 		if (!L_2)
 		{
@@ -19997,34 +20004,34 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_GenerateGridFromMatrix_mFCE8F
 
 IL_0048:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:316>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:317>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteralD8CA19F1717B4BB6A0288A891BAB5B7D84B88D4B, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:317>
-		NumberGrid_GenerateGrid_m0C24E107097E9A1324B53BF97DB34AE03EFFBA1B(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:318>
+		NumberGrid_GenerateGrid_m0C24E107097E9A1324B53BF97DB34AE03EFFBA1B(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:319>
 		return;
 	}
 
 IL_0059:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:321>
-		V_0 = 0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:322>
+		V_0 = 0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:323>
 		V_1 = 0;
 		goto IL_008d;
 	}
 
 IL_005f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:324>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:325>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_4 = ___0_matrix;
 		int32_t L_5 = V_1;
 		NullCheck(L_4);
 		int32_t L_6 = L_5;
 		int32_t L_7 = (L_4)->GetAt(static_cast<il2cpp_array_size_t>(L_6));
 		V_2 = L_7;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:325>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:326>
 		int32_t L_8 = V_2;
 		if ((((int32_t)L_8) > ((int32_t)0)))
 		{
@@ -20032,15 +20039,15 @@ IL_005f:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:329>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:330>
 		int32_t L_9 = V_0;
 		SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B* L_10 = __this->___powerupSprites;
 		NullCheck(L_10);
 		V_3 = ((int32_t)(L_9%((int32_t)(((RuntimeArray*)L_10)->max_length))));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:330>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:331>
 		int32_t L_11 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_11, 1));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:332>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:333>
 		int32_t L_12 = V_3;
 		int32_t L_13 = V_1;
 		int32_t L_14 = V_2;
@@ -20050,7 +20057,7 @@ IL_005f:
 
 IL_0081:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:336>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:337>
 		int32_t L_15 = V_2;
 		int32_t L_16 = V_1;
 		NumberGrid_CreateNumberBox_m62A4CF634BD9347EDE569CB710199F68E50F5B32(__this, L_15, L_16, NULL);
@@ -20058,14 +20065,14 @@ IL_0081:
 
 IL_0089:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:322>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:323>
 		int32_t L_17 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_17, 1));
 	}
 
 IL_008d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:322>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:323>
 		int32_t L_18 = V_1;
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_19 = ___0_matrix;
 		NullCheck(L_19);
@@ -20075,7 +20082,7 @@ IL_008d:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:340>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:341>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_20;
 		L_20 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		NullCheck(L_20);
@@ -20087,7 +20094,7 @@ IL_008d:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:342>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:343>
 		RuntimeObject* L_22;
 		L_22 = NumberGrid_DelayedTimerStartAfterGrid_m4A650AEEAC2EF84FA27A7370FE152CC061E920BE(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_23;
@@ -20096,14 +20103,14 @@ IL_008d:
 
 IL_00ad:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:344>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:345>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral50A4B3966FE19872B7EEF1BCF946E3DFC5DB93F7, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:345>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:346>
 		return;
 	}
 }
-// Method Definition Index: 66389
+// Method Definition Index: 66391
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_GenerateGrid_m0C24E107097E9A1324B53BF97DB34AE03EFFBA1B (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20142,36 +20149,36 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_GenerateGrid_m0C24E107097E9A1
 	int32_t V_12 = 0;
 	int32_t V_13 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:352>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:353>
 		__this->___gridGenerated = (bool)1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:354>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:355>
 		NumberGrid_ClearGrid_m8E6B453E493D61754D4D688BC6B5C00799E2172A(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:357>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:358>
 		NumberGrid_CalculateGridScale_m28B9115491FEF7B8E14201CD671E65BD8350F568(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:360>
-		__this->___currentDiceSumPlayer = (-1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:361>
+		__this->___currentDiceSumPlayer = (-1);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:362>
 		__this->___currentDiceSumCPU = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:364>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:365>
 		Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180* L_0 = __this->___cpuDiceSums;
 		NullCheck(L_0);
 		Dictionary_2_Clear_m9821889E928BB7EAEE9A7E81EDFC59651F7CBDD0(L_0, Dictionary_2_Clear_m9821889E928BB7EAEE9A7E81EDFC59651F7CBDD0_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:365>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:366>
 		Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180* L_1 = __this->___cpuRollIds;
 		NullCheck(L_1);
 		Dictionary_2_Clear_m9821889E928BB7EAEE9A7E81EDFC59651F7CBDD0(L_1, Dictionary_2_Clear_m9821889E928BB7EAEE9A7E81EDFC59651F7CBDD0_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:368>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:369>
 		List_1_t83FA6A0F73AA01529EC8759ACB4DF16A9092B176* L_2 = (List_1_t83FA6A0F73AA01529EC8759ACB4DF16A9092B176*)il2cpp_codegen_object_new(List_1_t83FA6A0F73AA01529EC8759ACB4DF16A9092B176_il2cpp_TypeInfo_var);
 		List_1__ctor_m51A5375032AF2D89F5E161C49B811E5A2E8FE223(L_2, List_1__ctor_m51A5375032AF2D89F5E161C49B811E5A2E8FE223_RuntimeMethod_var);
 		V_0 = L_2;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:371>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:372>
 		V_5 = 2;
 		goto IL_008a;
 	}
 
 IL_0042:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:373>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:374>
 		List_1_t83FA6A0F73AA01529EC8759ACB4DF16A9092B176* L_3 = V_0;
 		il2cpp_codegen_initobj((&V_6), sizeof(GridItem_t30F423BB4BFA3D5F5DA067D098A0B38B654AE787));
 		(&V_6)->___isPowerup = (bool)0;
@@ -20180,7 +20187,7 @@ IL_0042:
 		GridItem_t30F423BB4BFA3D5F5DA067D098A0B38B654AE787 L_5 = V_6;
 		NullCheck(L_3);
 		List_1_Add_m3F35DF2DAD16ECE90E4718EEBA66E5D4C26C62D7_inline(L_3, L_5, List_1_Add_m3F35DF2DAD16ECE90E4718EEBA66E5D4C26C62D7_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:374>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:375>
 		List_1_t83FA6A0F73AA01529EC8759ACB4DF16A9092B176* L_6 = V_0;
 		il2cpp_codegen_initobj((&V_6), sizeof(GridItem_t30F423BB4BFA3D5F5DA067D098A0B38B654AE787));
 		(&V_6)->___isPowerup = (bool)0;
@@ -20189,14 +20196,14 @@ IL_0042:
 		GridItem_t30F423BB4BFA3D5F5DA067D098A0B38B654AE787 L_8 = V_6;
 		NullCheck(L_6);
 		List_1_Add_m3F35DF2DAD16ECE90E4718EEBA66E5D4C26C62D7_inline(L_6, L_8, List_1_Add_m3F35DF2DAD16ECE90E4718EEBA66E5D4C26C62D7_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:371>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:372>
 		int32_t L_9 = V_5;
 		V_5 = ((int32_t)il2cpp_codegen_add(L_9, 1));
 	}
 
 IL_008a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:371>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:372>
 		int32_t L_10 = V_5;
 		if ((((int32_t)L_10) <= ((int32_t)((int32_t)12))))
 		{
@@ -20204,34 +20211,34 @@ IL_008a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:378>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:379>
 		Random_t79716069EDE67D1D7734F60AE402D0CA3FB6B4C8* L_11 = (Random_t79716069EDE67D1D7734F60AE402D0CA3FB6B4C8*)il2cpp_codegen_object_new(Random_t79716069EDE67D1D7734F60AE402D0CA3FB6B4C8_il2cpp_TypeInfo_var);
 		Random__ctor_m151183BD4F021499A98B9DE8502DAD4B12DD16AC(L_11, NULL);
 		V_1 = L_11;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:381>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:382>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_12 = (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73*)il2cpp_codegen_object_new(List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73_il2cpp_TypeInfo_var);
 		List_1__ctor_m17F501B5A5C289ECE1B4F3D6EBF05DFA421433F8(L_12, List_1__ctor_m17F501B5A5C289ECE1B4F3D6EBF05DFA421433F8_RuntimeMethod_var);
 		V_2 = L_12;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:382>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:383>
 		V_7 = 0;
 		goto IL_00af;
 	}
 
 IL_00a1:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:384>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:385>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_13 = V_2;
 		int32_t L_14 = V_7;
 		NullCheck(L_13);
 		List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_inline(L_13, L_14, List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:382>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:383>
 		int32_t L_15 = V_7;
 		V_7 = ((int32_t)il2cpp_codegen_add(L_15, 1));
 	}
 
 IL_00af:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:382>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:383>
 		int32_t L_16 = V_7;
 		SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B* L_17 = __this->___powerupSprites;
 		NullCheck(L_17);
@@ -20241,7 +20248,7 @@ IL_00af:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:388>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:389>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_18 = V_2;
 		NullCheck(L_18);
 		int32_t L_19;
@@ -20252,24 +20259,24 @@ IL_00af:
 
 IL_00c4:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:391>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:392>
 		int32_t L_20 = V_3;
 		V_3 = ((int32_t)il2cpp_codegen_subtract(L_20, 1));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:392>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:393>
 		Random_t79716069EDE67D1D7734F60AE402D0CA3FB6B4C8* L_21 = V_1;
 		int32_t L_22 = V_3;
 		NullCheck(L_21);
 		int32_t L_23;
 		L_23 = VirtualFuncInvoker1< int32_t, int32_t >::Invoke(7, L_21, ((int32_t)il2cpp_codegen_add(L_22, 1)));
 		V_8 = L_23;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:393>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:394>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_24 = V_2;
 		int32_t L_25 = V_8;
 		NullCheck(L_24);
 		int32_t L_26;
 		L_26 = List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D(L_24, L_25, List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var);
 		V_9 = L_26;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:394>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:395>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_27 = V_2;
 		int32_t L_28 = V_8;
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_29 = V_2;
@@ -20279,7 +20286,7 @@ IL_00c4:
 		L_31 = List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D(L_29, L_30, List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var);
 		NullCheck(L_27);
 		List_1_set_Item_m95629806F31CF369D937590912E0B6A53FF7C587(L_27, L_28, L_31, List_1_set_Item_m95629806F31CF369D937590912E0B6A53FF7C587_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:395>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:396>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_32 = V_2;
 		int32_t L_33 = V_3;
 		int32_t L_34 = V_9;
@@ -20289,7 +20296,7 @@ IL_00c4:
 
 IL_00f5:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:389>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:390>
 		int32_t L_35 = V_3;
 		if ((((int32_t)L_35) > ((int32_t)1)))
 		{
@@ -20297,14 +20304,14 @@ IL_00f5:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:399>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:400>
 		V_10 = 0;
 		goto IL_012b;
 	}
 
 IL_00fe:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:401>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:402>
 		List_1_t83FA6A0F73AA01529EC8759ACB4DF16A9092B176* L_36 = V_0;
 		il2cpp_codegen_initobj((&V_6), sizeof(GridItem_t30F423BB4BFA3D5F5DA067D098A0B38B654AE787));
 		(&V_6)->___isPowerup = (bool)1;
@@ -20317,14 +20324,14 @@ IL_00fe:
 		GridItem_t30F423BB4BFA3D5F5DA067D098A0B38B654AE787 L_40 = V_6;
 		NullCheck(L_36);
 		List_1_Add_m3F35DF2DAD16ECE90E4718EEBA66E5D4C26C62D7_inline(L_36, L_40, List_1_Add_m3F35DF2DAD16ECE90E4718EEBA66E5D4C26C62D7_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:399>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:400>
 		int32_t L_41 = V_10;
 		V_10 = ((int32_t)il2cpp_codegen_add(L_41, 1));
 	}
 
 IL_012b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:399>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:400>
 		int32_t L_42 = V_10;
 		if ((((int32_t)L_42) >= ((int32_t)3)))
 		{
@@ -20345,33 +20352,33 @@ IL_012b:
 
 IL_013a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:405>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:406>
 		List_1_t83FA6A0F73AA01529EC8759ACB4DF16A9092B176* L_46 = V_0;
 		NumberGrid_ShuffleList_TisGridItem_t30F423BB4BFA3D5F5DA067D098A0B38B654AE787_mF9F07F70BAE3E1C551A42864C69528AA68473BDD(__this, L_46, NumberGrid_ShuffleList_TisGridItem_t30F423BB4BFA3D5F5DA067D098A0B38B654AE787_mF9F07F70BAE3E1C551A42864C69528AA68473BDD_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:408>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:409>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_47 = (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73*)il2cpp_codegen_object_new(List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73_il2cpp_TypeInfo_var);
 		List_1__ctor_m17F501B5A5C289ECE1B4F3D6EBF05DFA421433F8(L_47, List_1__ctor_m17F501B5A5C289ECE1B4F3D6EBF05DFA421433F8_RuntimeMethod_var);
 		V_4 = L_47;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:409>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:410>
 		V_11 = 0;
 		goto IL_015c;
 	}
 
 IL_014d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:411>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:412>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_48 = V_4;
 		int32_t L_49 = V_11;
 		NullCheck(L_48);
 		List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_inline(L_48, L_49, List_1_Add_m0248A96C5334E9A93E6994B7780478BCD994EA3D_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:409>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:410>
 		int32_t L_50 = V_11;
 		V_11 = ((int32_t)il2cpp_codegen_add(L_50, 1));
 	}
 
 IL_015c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:409>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:410>
 		int32_t L_51 = V_11;
 		int32_t L_52 = __this->___gridWidth;
 		int32_t L_53 = __this->___gridHeight;
@@ -20381,24 +20388,24 @@ IL_015c:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:415>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:416>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_54 = V_4;
 		NumberGrid_ShuffleList_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_mFA0015499A7767FC8405F6D6C1E0FABCBA244893(__this, L_54, NumberGrid_ShuffleList_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_mFA0015499A7767FC8405F6D6C1E0FABCBA244893_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:418>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:419>
 		V_12 = 0;
 		goto IL_01c7;
 	}
 
 IL_017a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:420>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:421>
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_55 = V_4;
 		int32_t L_56 = V_12;
 		NullCheck(L_55);
 		int32_t L_57;
 		L_57 = List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D(L_55, L_56, List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var);
 		V_13 = L_57;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:421>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:422>
 		List_1_t83FA6A0F73AA01529EC8759ACB4DF16A9092B176* L_58 = V_0;
 		int32_t L_59 = V_12;
 		NullCheck(L_58);
@@ -20411,7 +20418,7 @@ IL_017a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:423>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:424>
 		List_1_t83FA6A0F73AA01529EC8759ACB4DF16A9092B176* L_62 = V_0;
 		int32_t L_63 = V_12;
 		NullCheck(L_62);
@@ -20425,7 +20432,7 @@ IL_017a:
 
 IL_01ac:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:427>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:428>
 		List_1_t83FA6A0F73AA01529EC8759ACB4DF16A9092B176* L_67 = V_0;
 		int32_t L_68 = V_12;
 		NullCheck(L_67);
@@ -20438,14 +20445,14 @@ IL_01ac:
 
 IL_01c1:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:418>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:419>
 		int32_t L_72 = V_12;
 		V_12 = ((int32_t)il2cpp_codegen_add(L_72, 1));
 	}
 
 IL_01c7:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:418>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:419>
 		int32_t L_73 = V_12;
 		List_1_t83FA6A0F73AA01529EC8759ACB4DF16A9092B176* L_74 = V_0;
 		NullCheck(L_74);
@@ -20470,7 +20477,7 @@ IL_01c7:
 
 IL_01dc:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:432>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:433>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_79;
 		L_79 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		NullCheck(L_79);
@@ -20482,7 +20489,7 @@ IL_01dc:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:434>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:435>
 		RuntimeObject* L_81;
 		L_81 = NumberGrid_DelayedTimerStartAfterGrid_m4A650AEEAC2EF84FA27A7370FE152CC061E920BE(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_82;
@@ -20491,11 +20498,11 @@ IL_01dc:
 
 IL_01f6:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:436>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:437>
 		return;
 	}
 }
-// Method Definition Index: 66390
+// Method Definition Index: 66392
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* NumberGrid_DelayedTimerStartAfterGrid_m4A650AEEAC2EF84FA27A7370FE152CC061E920BE (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20510,7 +20517,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* NumberGrid_DelayedTimerStartAf
 		return L_0;
 	}
 }
-// Method Definition Index: 66391
+// Method Definition Index: 66393
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_StartPowerupTimerFromGameManager_mADEBBBD57E3162BB8586FB96E1C9BE48E3E2E60F (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20521,16 +20528,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_StartPowerupTimerFromGameMana
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:454>
-		NumberGrid_StartPowerupTimer_mADC8F0522C2482E6D41C680051EB5305AADF174B(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:455>
+		NumberGrid_StartPowerupTimer_mADC8F0522C2482E6D41C680051EB5305AADF174B(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:456>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralD6C3B1033FB8D01CC55516B8936EDDEF9F38600E, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:456>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:457>
 		return;
 	}
 }
-// Method Definition Index: 66392
+// Method Definition Index: 66394
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_CreateNumberBox_m62A4CF634BD9347EDE569CB710199F68E50F5B32 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, int32_t ___0_number, int32_t ___1_gridPosition, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20578,7 +20585,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_CreateNumberBox_m62A4CF634BD9
 		NullCheck(L_1);
 		L_1->___U3CU3E4__this = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this), (void*)__this);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:463>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:464>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___numberBoxPrefab;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
@@ -20589,24 +20596,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_CreateNumberBox_m62A4CF634BD9
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:465>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:466>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral638161764D641BC3498ABB9094D8F8BDDD555851, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:466>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:467>
 		return;
 	}
 
 IL_0026:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:470>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:471>
 		int32_t L_4 = ___1_gridPosition;
 		int32_t L_5 = __this->___gridWidth;
 		V_1 = ((int32_t)(L_4/L_5));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:471>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:472>
 		int32_t L_6 = ___1_gridPosition;
 		int32_t L_7 = __this->___gridWidth;
 		V_2 = ((int32_t)(L_6%L_7));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:474>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:475>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8 = __this->___numberBoxPrefab;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_9;
 		L_9 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
@@ -20614,23 +20621,23 @@ IL_0026:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_10;
 		L_10 = Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m58C654F1134533E29502629CA67645682B404811(L_8, L_9, Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m58C654F1134533E29502629CA67645682B404811_RuntimeMethod_var);
 		V_3 = L_10;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:477>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:478>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_11 = V_3;
 		int32_t L_12 = V_1;
 		int32_t L_13 = V_2;
 		NumberGrid_SetSizeAndPositionBox_mC9245E4F8C2862B4EF71DB0CB5F1E87893D77DDE(__this, L_11, L_12, L_13, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:479>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:480>
 		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_14 = __this->___instantiatedBoxes;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_15 = V_3;
 		NullCheck(L_14);
 		List_1_Add_m43FBF207375C6E06B8C45ECE614F9B8008FB686E_inline(L_14, L_15, List_1_Add_m43FBF207375C6E06B8C45ECE614F9B8008FB686E_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:482>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:483>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_16 = V_3;
 		String_t* L_17 = __this->___boxBackgroundImageName;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_18;
 		L_18 = NumberGrid_FindComponentByName_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mD442A163C0FDCAE9577DBD80BE310543B5AC7C28(__this, L_16, L_17, NumberGrid_FindComponentByName_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mD442A163C0FDCAE9577DBD80BE310543B5AC7C28_RuntimeMethod_var);
 		V_4 = L_18;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:483>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:484>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_19 = V_4;
 		bool L_20;
 		L_20 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_19, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -20640,7 +20647,7 @@ IL_0026:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:483>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:484>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_21 = V_3;
 		NullCheck(L_21);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_22;
@@ -20650,7 +20657,7 @@ IL_0026:
 
 IL_0080:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:484>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:485>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_23 = V_4;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_24;
@@ -20671,7 +20678,7 @@ IL_0080:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:486>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:487>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_27 = V_4;
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_28 = __this->___normalBoxBgSprite;
 		NullCheck(L_27);
@@ -20680,7 +20687,6 @@ IL_0080:
 
 IL_00a5:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:490>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:491>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:492>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:493>
@@ -20691,6 +20697,7 @@ IL_00a5:
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:498>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:499>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:500>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:501>
 		U3CU3Ec__DisplayClass73_0_t11958C7544032F6A30EF57C42D0AE646360D8388* L_29 = V_0;
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_30 = (BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB*)il2cpp_codegen_object_new(BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB_il2cpp_TypeInfo_var);
 		BoxData__ctor_m9471D003191BAE8E2F1FCC0E4D30D0948C40A202(L_30, NULL);
@@ -20724,19 +20731,19 @@ IL_00a5:
 		NullCheck(L_29);
 		L_29->___boxData = L_40;
 		Il2CppCodeGenWriteBarrier((void**)(&L_29->___boxData), (void*)L_40);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:503>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:504>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_41 = V_3;
 		String_t* L_42 = __this->___numberTextName;
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_43;
 		L_43 = NumberGrid_FindComponentInChildren_TisTextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957_m298779BCE164A76B3E6AAEDD17889F45B7A808B5(__this, L_41, L_42, NumberGrid_FindComponentInChildren_TisTextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957_m298779BCE164A76B3E6AAEDD17889F45B7A808B5_RuntimeMethod_var);
 		V_5 = L_43;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:504>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:505>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_44 = V_3;
 		String_t* L_45 = __this->___numberTextNameShadow;
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_46;
 		L_46 = NumberGrid_FindComponentInChildren_TisTextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957_m298779BCE164A76B3E6AAEDD17889F45B7A808B5(__this, L_44, L_45, NumberGrid_FindComponentInChildren_TisTextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957_m298779BCE164A76B3E6AAEDD17889F45B7A808B5_RuntimeMethod_var);
 		V_6 = L_46;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:505>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:506>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_47 = V_5;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_48;
@@ -20747,48 +20754,48 @@ IL_00a5:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:507>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:508>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_49 = V_5;
 		String_t* L_50;
 		L_50 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&___0_number), NULL);
 		NullCheck(L_49);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_49, L_50);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:508>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:509>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_51 = V_6;
 		String_t* L_52;
 		L_52 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&___0_number), NULL);
 		NullCheck(L_51);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_51, L_52);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:511>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:512>
 		float L_53 = __this->___referenceFontSize;
 		float L_54 = __this->___scaleFactor;
 		V_10 = ((float)il2cpp_codegen_multiply(L_53, L_54));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:512>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:513>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_55 = V_5;
 		float L_56 = V_10;
 		NullCheck(L_55);
 		TMP_Text_set_fontSize_m1C3A3BA2BC88E5E1D89375FD35A0AA91E75D3AAD(L_55, L_56, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:513>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:514>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_57 = V_6;
 		float L_58 = V_10;
 		NullCheck(L_57);
 		TMP_Text_set_fontSize_m1C3A3BA2BC88E5E1D89375FD35A0AA91E75D3AAD(L_57, L_58, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:516>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:517>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_59 = V_5;
 		NullCheck(L_59);
 		TMP_Text_set_enableAutoSizing_mDD34BC7AA735EEBEB916FF5C9791B1502F65FBCA(L_59, (bool)0, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:517>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:518>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_60 = V_6;
 		NullCheck(L_60);
 		TMP_Text_set_enableAutoSizing_mDD34BC7AA735EEBEB916FF5C9791B1502F65FBCA(L_60, (bool)0, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:519>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:520>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_61 = V_5;
 		NullCheck(L_61);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_62;
 		L_62 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_61, NULL);
 		NullCheck(L_62);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_62, (bool)1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:520>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:521>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_63 = V_6;
 		NullCheck(L_63);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_64;
@@ -20800,13 +20807,13 @@ IL_00a5:
 
 IL_0179:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:525>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:526>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_65 = V_3;
 		String_t* L_66 = __this->___numberTextName;
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_67;
 		L_67 = NumberGrid_FindComponentInChildren_TisText_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62_m58A268C4C14EBB27B87390BFEF08DFD5BB9DF92D(__this, L_65, L_66, NumberGrid_FindComponentInChildren_TisText_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62_m58A268C4C14EBB27B87390BFEF08DFD5BB9DF92D_RuntimeMethod_var);
 		V_11 = L_67;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:527>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:528>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_68 = V_11;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_69;
@@ -20817,13 +20824,13 @@ IL_0179:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:529>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:530>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_70 = V_11;
 		String_t* L_71;
 		L_71 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&___0_number), NULL);
 		NullCheck(L_70);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_70, L_71);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:530>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:531>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_72 = V_11;
 		NullCheck(L_72);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_73;
@@ -20835,7 +20842,7 @@ IL_0179:
 
 IL_01af:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:534>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:535>
 		String_t* L_74 = __this->___numberTextName;
 		String_t* L_75;
 		L_75 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral76E6EB913D51FD89F5A8FE6F092F4B97C6E5642B, L_74, _stringLiteral23526AD46433CF296927F612877D208AF835BBB6, NULL);
@@ -20845,13 +20852,13 @@ IL_01af:
 
 IL_01c9:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:539>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:540>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_76 = V_3;
 		String_t* L_77 = __this->___powerupImageName;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_78;
 		L_78 = NumberGrid_FindComponentInChildren_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE002B63B6B5643A38CAE59900BF5D60C2CF2D647(__this, L_76, L_77, NumberGrid_FindComponentInChildren_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE002B63B6B5643A38CAE59900BF5D60C2CF2D647_RuntimeMethod_var);
 		V_7 = L_78;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:540>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:541>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_79 = V_7;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_80;
@@ -20862,7 +20869,7 @@ IL_01c9:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:542>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:543>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_81 = V_7;
 		NullCheck(L_81);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_82;
@@ -20873,13 +20880,13 @@ IL_01c9:
 
 IL_01ef:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:546>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:547>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_83 = V_3;
 		String_t* L_84 = __this->___selectButtonName;
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_85;
 		L_85 = NumberGrid_FindComponentInChildren_TisButton_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098_m49A5AF1C9E613857E0F6A796C63E5FF0A8285082(__this, L_83, L_84, NumberGrid_FindComponentInChildren_TisButton_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098_m49A5AF1C9E613857E0F6A796C63E5FF0A8285082_RuntimeMethod_var);
 		V_8 = L_85;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:547>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:548>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_86 = V_8;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_87;
@@ -20890,7 +20897,7 @@ IL_01ef:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:549>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:550>
 		U3CU3Ec__DisplayClass73_0_t11958C7544032F6A30EF57C42D0AE646360D8388* L_88 = V_0;
 		NullCheck(L_88);
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_89 = L_88->___boxData;
@@ -20898,18 +20905,18 @@ IL_01ef:
 		NullCheck(L_89);
 		L_89->___selectButton = L_90;
 		Il2CppCodeGenWriteBarrier((void**)(&L_89->___selectButton), (void*)L_90);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:550>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:551>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_91 = V_8;
 		NullCheck(L_91);
 		Selectable_set_interactable_m8DD581C1AD99B2EFA8B3EE9AF69EDDF26688B492(L_91, (bool)0, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:551>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:552>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_92 = V_8;
 		NullCheck(L_92);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_93;
 		L_93 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline(L_92, NULL);
 		NullCheck(L_93);
 		UnityEventBase_RemoveAllListeners_m6E68297189537543B0C72FE38804646CA204D076(L_93, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:552>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:553>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_94 = V_8;
 		NullCheck(L_94);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_95;
@@ -20924,7 +20931,7 @@ IL_01ef:
 
 IL_0243:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:556>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:557>
 		String_t* L_98 = __this->___selectButtonName;
 		String_t* L_99;
 		L_99 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralF94CDBD5F9ACDE9D60CAC57063DCE83BF6EB4CAF, L_98, _stringLiteral23526AD46433CF296927F612877D208AF835BBB6, NULL);
@@ -20934,13 +20941,13 @@ IL_0243:
 
 IL_025d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:560>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:561>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_100 = V_3;
 		String_t* L_101 = __this->___highlightImageName;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_102;
 		L_102 = NumberGrid_FindComponentInChildren_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE002B63B6B5643A38CAE59900BF5D60C2CF2D647(__this, L_100, L_101, NumberGrid_FindComponentInChildren_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE002B63B6B5643A38CAE59900BF5D60C2CF2D647_RuntimeMethod_var);
 		V_9 = L_102;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:561>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:562>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_103 = V_9;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_104;
@@ -20951,7 +20958,7 @@ IL_025d:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:563>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:564>
 		U3CU3Ec__DisplayClass73_0_t11958C7544032F6A30EF57C42D0AE646360D8388* L_105 = V_0;
 		NullCheck(L_105);
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_106 = L_105->___boxData;
@@ -20959,7 +20966,7 @@ IL_025d:
 		NullCheck(L_106);
 		L_106->___highlightImage = L_107;
 		Il2CppCodeGenWriteBarrier((void**)(&L_106->___highlightImage), (void*)L_107);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:564>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:565>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_108 = V_9;
 		NullCheck(L_108);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_109;
@@ -20971,7 +20978,7 @@ IL_025d:
 
 IL_0292:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:568>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:569>
 		String_t* L_110 = __this->___highlightImageName;
 		String_t* L_111;
 		L_111 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralE337CD2608A1A292B455A87E8C64058CA573147F, L_110, _stringLiteral23526AD46433CF296927F612877D208AF835BBB6, NULL);
@@ -20981,18 +20988,18 @@ IL_0292:
 
 IL_02ac:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:571>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:572>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_112 = __this->___boxDataList;
 		U3CU3Ec__DisplayClass73_0_t11958C7544032F6A30EF57C42D0AE646360D8388* L_113 = V_0;
 		NullCheck(L_113);
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_114 = L_113->___boxData;
 		NullCheck(L_112);
 		List_1_Add_mCAF4DD6380DD25AC7D6140F6C48A19B00175B683_inline(L_112, L_114, List_1_Add_mCAF4DD6380DD25AC7D6140F6C48A19B00175B683_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:572>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:573>
 		return;
 	}
 }
-// Method Definition Index: 66393
+// Method Definition Index: 66395
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_CreatePowerupBox_m0B19A23FECEEF04D39FB3CF8590B18B577580190 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, int32_t ___0_powerupSpriteIndex, int32_t ___1_gridPosition, int32_t ___2_powerupValue, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21039,7 +21046,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_CreatePowerupBox_m0B19A23FECE
 		NullCheck(L_1);
 		L_1->___U3CU3E4__this = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___U3CU3E4__this), (void*)__this);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:579>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:580>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___numberBoxPrefab;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
@@ -21050,16 +21057,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_CreatePowerupBox_m0B19A23FECE
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:581>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:582>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(_stringLiteral638161764D641BC3498ABB9094D8F8BDDD555851, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:582>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:583>
 		return;
 	}
 
 IL_0026:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:585>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:586>
 		int32_t L_4 = ___0_powerupSpriteIndex;
 		if ((((int32_t)L_4) < ((int32_t)0)))
 		{
@@ -21092,7 +21099,7 @@ IL_0026:
 
 IL_0045:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:587>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:588>
 		int32_t L_12 = ___0_powerupSpriteIndex;
 		int32_t L_13 = L_12;
 		RuntimeObject* L_14 = Box(il2cpp_defaults.int32_class, &L_13);
@@ -21100,21 +21107,21 @@ IL_0045:
 		L_15 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral49696FBE9FAC0B9E5CF611BAFEE277EB5D6B0ADC, L_14, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_15, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:588>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:589>
 		return;
 	}
 
 IL_005b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:592>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:593>
 		int32_t L_16 = ___1_gridPosition;
 		int32_t L_17 = __this->___gridWidth;
 		V_1 = ((int32_t)(L_16/L_17));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:593>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:594>
 		int32_t L_18 = ___1_gridPosition;
 		int32_t L_19 = __this->___gridWidth;
 		V_2 = ((int32_t)(L_18%L_19));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:596>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:597>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_20 = __this->___numberBoxPrefab;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_21;
 		L_21 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
@@ -21122,23 +21129,23 @@ IL_005b:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_22;
 		L_22 = Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m58C654F1134533E29502629CA67645682B404811(L_20, L_21, Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m58C654F1134533E29502629CA67645682B404811_RuntimeMethod_var);
 		V_3 = L_22;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:599>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:600>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_23 = V_3;
 		int32_t L_24 = V_1;
 		int32_t L_25 = V_2;
 		NumberGrid_SetSizeAndPositionBox_mC9245E4F8C2862B4EF71DB0CB5F1E87893D77DDE(__this, L_23, L_24, L_25, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:601>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:602>
 		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_26 = __this->___instantiatedBoxes;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_27 = V_3;
 		NullCheck(L_26);
 		List_1_Add_m43FBF207375C6E06B8C45ECE614F9B8008FB686E_inline(L_26, L_27, List_1_Add_m43FBF207375C6E06B8C45ECE614F9B8008FB686E_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:604>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:605>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_28 = V_3;
 		String_t* L_29 = __this->___boxBackgroundImageName;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_30;
 		L_30 = NumberGrid_FindComponentByName_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mD442A163C0FDCAE9577DBD80BE310543B5AC7C28(__this, L_28, L_29, NumberGrid_FindComponentByName_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mD442A163C0FDCAE9577DBD80BE310543B5AC7C28_RuntimeMethod_var);
 		V_4 = L_30;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:605>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:606>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_31 = V_4;
 		bool L_32;
 		L_32 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_31, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -21148,7 +21155,7 @@ IL_005b:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:605>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:606>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_33 = V_3;
 		NullCheck(L_33);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_34;
@@ -21158,7 +21165,7 @@ IL_005b:
 
 IL_00b5:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:606>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:607>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_35 = V_4;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_36;
@@ -21179,7 +21186,7 @@ IL_00b5:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:608>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:609>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_39 = V_4;
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_40 = __this->___powerupBoxBgSprite;
 		NullCheck(L_39);
@@ -21188,7 +21195,6 @@ IL_00b5:
 
 IL_00da:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:612>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:613>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:614>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:615>
@@ -21200,6 +21206,7 @@ IL_00da:
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:621>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:622>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:623>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:624>
 		U3CU3Ec__DisplayClass74_0_t939CD4305928BBF4DCB3A101B4EFE1B85F1BD0BF* L_41 = V_0;
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_42 = (BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB*)il2cpp_codegen_object_new(BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB_il2cpp_TypeInfo_var);
 		BoxData__ctor_m9471D003191BAE8E2F1FCC0E4D30D0948C40A202(L_42, NULL);
@@ -21237,19 +21244,19 @@ IL_00da:
 		NullCheck(L_41);
 		L_41->___boxData = L_53;
 		Il2CppCodeGenWriteBarrier((void**)(&L_41->___boxData), (void*)L_53);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:626>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:627>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_55 = V_3;
 		String_t* L_56 = __this->___numberTextName;
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_57;
 		L_57 = NumberGrid_FindComponentInChildren_TisTextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957_m298779BCE164A76B3E6AAEDD17889F45B7A808B5(__this, L_55, L_56, NumberGrid_FindComponentInChildren_TisTextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957_m298779BCE164A76B3E6AAEDD17889F45B7A808B5_RuntimeMethod_var);
 		V_5 = L_57;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:627>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:628>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_58 = V_3;
 		String_t* L_59 = __this->___numberTextNameShadow;
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_60;
 		L_60 = NumberGrid_FindComponentInChildren_TisTextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957_m298779BCE164A76B3E6AAEDD17889F45B7A808B5(__this, L_58, L_59, NumberGrid_FindComponentInChildren_TisTextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957_m298779BCE164A76B3E6AAEDD17889F45B7A808B5_RuntimeMethod_var);
 		V_6 = L_60;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:628>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:629>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_61 = V_5;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_62;
@@ -21260,14 +21267,14 @@ IL_00da:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:630>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:631>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_63 = V_5;
 		NullCheck(L_63);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_64;
 		L_64 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_63, NULL);
 		NullCheck(L_64);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_64, (bool)0, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:631>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:632>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_65 = V_6;
 		NullCheck(L_65);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_66;
@@ -21279,13 +21286,13 @@ IL_00da:
 
 IL_0168:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:636>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:637>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_67 = V_3;
 		String_t* L_68 = __this->___numberTextName;
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_69;
 		L_69 = NumberGrid_FindComponentInChildren_TisText_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62_m58A268C4C14EBB27B87390BFEF08DFD5BB9DF92D(__this, L_67, L_68, NumberGrid_FindComponentInChildren_TisText_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62_m58A268C4C14EBB27B87390BFEF08DFD5BB9DF92D_RuntimeMethod_var);
 		V_10 = L_69;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:637>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:638>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_70 = V_10;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_71;
@@ -21296,7 +21303,7 @@ IL_0168:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:639>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:640>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_72 = V_10;
 		NullCheck(L_72);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_73;
@@ -21307,13 +21314,13 @@ IL_0168:
 
 IL_018e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:644>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:645>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_74 = V_3;
 		String_t* L_75 = __this->___powerupImageName;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_76;
 		L_76 = NumberGrid_FindComponentInChildren_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE002B63B6B5643A38CAE59900BF5D60C2CF2D647(__this, L_74, L_75, NumberGrid_FindComponentInChildren_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE002B63B6B5643A38CAE59900BF5D60C2CF2D647_RuntimeMethod_var);
 		V_7 = L_76;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:645>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:646>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_77 = V_7;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_78;
@@ -21324,7 +21331,7 @@ IL_018e:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:647>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:648>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_79 = V_7;
 		SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B* L_80 = __this->___powerupSprites;
 		int32_t L_81 = ___0_powerupSpriteIndex;
@@ -21333,14 +21340,14 @@ IL_018e:
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_83 = (L_80)->GetAt(static_cast<il2cpp_array_size_t>(L_82));
 		NullCheck(L_79);
 		Image_set_sprite_mC0C248340BA27AAEE56855A3FAFA0D8CA12956DE(L_79, L_83, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:648>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:649>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_84 = V_7;
 		NullCheck(L_84);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_85;
 		L_85 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_84, NULL);
 		NullCheck(L_85);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_85, (bool)1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:649>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:650>
 		U3CU3Ec__DisplayClass74_0_t939CD4305928BBF4DCB3A101B4EFE1B85F1BD0BF* L_86 = V_0;
 		NullCheck(L_86);
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_87 = L_86->___boxData;
@@ -21353,7 +21360,7 @@ IL_018e:
 
 IL_01d2:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:653>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:654>
 		String_t* L_89 = __this->___powerupImageName;
 		String_t* L_90;
 		L_90 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral6D71C6091CBA408CE400B4A2CFAF8AAD4DF600E3, L_89, _stringLiteral23526AD46433CF296927F612877D208AF835BBB6, NULL);
@@ -21363,13 +21370,13 @@ IL_01d2:
 
 IL_01ec:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:657>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:658>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_91 = V_3;
 		String_t* L_92 = __this->___selectButtonName;
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_93;
 		L_93 = NumberGrid_FindComponentInChildren_TisButton_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098_m49A5AF1C9E613857E0F6A796C63E5FF0A8285082(__this, L_91, L_92, NumberGrid_FindComponentInChildren_TisButton_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098_m49A5AF1C9E613857E0F6A796C63E5FF0A8285082_RuntimeMethod_var);
 		V_8 = L_93;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:658>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:659>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_94 = V_8;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_95;
@@ -21380,7 +21387,7 @@ IL_01ec:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:660>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:661>
 		U3CU3Ec__DisplayClass74_0_t939CD4305928BBF4DCB3A101B4EFE1B85F1BD0BF* L_96 = V_0;
 		NullCheck(L_96);
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_97 = L_96->___boxData;
@@ -21388,18 +21395,18 @@ IL_01ec:
 		NullCheck(L_97);
 		L_97->___selectButton = L_98;
 		Il2CppCodeGenWriteBarrier((void**)(&L_97->___selectButton), (void*)L_98);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:661>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:662>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_99 = V_8;
 		NullCheck(L_99);
 		Selectable_set_interactable_m8DD581C1AD99B2EFA8B3EE9AF69EDDF26688B492(L_99, (bool)0, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:662>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:663>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_100 = V_8;
 		NullCheck(L_100);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_101;
 		L_101 = Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline(L_100, NULL);
 		NullCheck(L_101);
 		UnityEventBase_RemoveAllListeners_m6E68297189537543B0C72FE38804646CA204D076(L_101, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:663>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:664>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_102 = V_8;
 		NullCheck(L_102);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_103;
@@ -21413,13 +21420,13 @@ IL_01ec:
 
 IL_023e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:667>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:668>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_106 = V_3;
 		String_t* L_107 = __this->___highlightImageName;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_108;
 		L_108 = NumberGrid_FindComponentInChildren_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE002B63B6B5643A38CAE59900BF5D60C2CF2D647(__this, L_106, L_107, NumberGrid_FindComponentInChildren_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE002B63B6B5643A38CAE59900BF5D60C2CF2D647_RuntimeMethod_var);
 		V_9 = L_108;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:668>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:669>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_109 = V_9;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_110;
@@ -21430,7 +21437,7 @@ IL_023e:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:670>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:671>
 		U3CU3Ec__DisplayClass74_0_t939CD4305928BBF4DCB3A101B4EFE1B85F1BD0BF* L_111 = V_0;
 		NullCheck(L_111);
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_112 = L_111->___boxData;
@@ -21438,7 +21445,7 @@ IL_023e:
 		NullCheck(L_112);
 		L_112->___highlightImage = L_113;
 		Il2CppCodeGenWriteBarrier((void**)(&L_112->___highlightImage), (void*)L_113);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:671>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:672>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_114 = V_9;
 		NullCheck(L_114);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_115;
@@ -21450,7 +21457,7 @@ IL_023e:
 
 IL_0273:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:675>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:676>
 		String_t* L_116 = __this->___highlightImageName;
 		String_t* L_117;
 		L_117 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralE337CD2608A1A292B455A87E8C64058CA573147F, L_116, _stringLiteral23526AD46433CF296927F612877D208AF835BBB6, NULL);
@@ -21460,18 +21467,18 @@ IL_0273:
 
 IL_028d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:678>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:679>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_118 = __this->___boxDataList;
 		U3CU3Ec__DisplayClass74_0_t939CD4305928BBF4DCB3A101B4EFE1B85F1BD0BF* L_119 = V_0;
 		NullCheck(L_119);
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_120 = L_119->___boxData;
 		NullCheck(L_118);
 		List_1_Add_mCAF4DD6380DD25AC7D6140F6C48A19B00175B683_inline(L_118, L_120, List_1_Add_mCAF4DD6380DD25AC7D6140F6C48A19B00175B683_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:679>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:680>
 		return;
 	}
 }
-// Method Definition Index: 66397
+// Method Definition Index: 66399
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_ClearGrid_m8E6B453E493D61754D4D688BC6B5C00799E2172A (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21491,9 +21498,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_ClearGrid_m8E6B453E493D61754D
 	memset((&V_0), 0, sizeof(V_0));
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* V_1 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:758>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:759>
 		NumberGrid_StopPowerupTimer_m8A7856C6812DA3EE30035001F14FD137ADF6F67F(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:760>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:761>
 		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_0 = __this->___instantiatedBoxes;
 		NullCheck(L_0);
 		Enumerator_t88BD1282EF117E59AACFC9EC55B89F0B9EDACE60 L_1;
@@ -21518,11 +21525,11 @@ FINALLY_0036:
 
 IL_0014_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:760>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:761>
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2;
 				L_2 = Enumerator_get_Current_m7236EBE1CFCB6533F96E030500D322B13D0CA5A4_inline((&V_0), Enumerator_get_Current_m7236EBE1CFCB6533F96E030500D322B13D0CA5A4_RuntimeMethod_var);
 				V_1 = L_2;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:762>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:763>
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = V_1;
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 				bool L_4;
@@ -21533,7 +21540,7 @@ IL_0014_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:764>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:765>
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = V_1;
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 				Object_DestroyImmediate_m6336EBC83591A5DB64EC70C92132824C6E258705(L_5, NULL);
@@ -21541,7 +21548,7 @@ IL_0014_1:
 
 IL_002b_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:760>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:761>
 				bool L_6;
 				L_6 = Enumerator_MoveNext_m96F4B0BD0A5485C8E8CC57D961DF6F1FA256AF27((&V_0), Enumerator_MoveNext_m96F4B0BD0A5485C8E8CC57D961DF6F1FA256AF27_RuntimeMethod_var);
 				if (L_6)
@@ -21561,34 +21568,34 @@ IL_002b_1:
 
 IL_0044:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:767>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:768>
 		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_7 = __this->___instantiatedBoxes;
 		NullCheck(L_7);
 		List_1_Clear_m32D399BDD753B5BD6CE27560249096418F3F0867_inline(L_7, List_1_Clear_m32D399BDD753B5BD6CE27560249096418F3F0867_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:768>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:769>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_8 = __this->___boxDataList;
 		NullCheck(L_8);
 		List_1_Clear_m1DEAD1EBAFB6DFA740A39C2C785A4CDCF7FF23A2_inline(L_8, List_1_Clear_m1DEAD1EBAFB6DFA740A39C2C785A4CDCF7FF23A2_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:769>
-		__this->___currentDiceSumPlayer = (-1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:770>
-		__this->___currentDiceSumCPU = (-1);
+		__this->___currentDiceSumPlayer = (-1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:771>
+		__this->___currentDiceSumCPU = (-1);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:772>
 		__this->___currentlyVisiblePowerup = (BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentlyVisiblePowerup), (void*)(BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB*)NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:774>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:775>
 		Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180* L_9 = __this->___cpuDiceSums;
 		NullCheck(L_9);
 		Dictionary_2_Clear_m9821889E928BB7EAEE9A7E81EDFC59651F7CBDD0(L_9, Dictionary_2_Clear_m9821889E928BB7EAEE9A7E81EDFC59651F7CBDD0_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:775>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:776>
 		Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180* L_10 = __this->___cpuRollIds;
 		NullCheck(L_10);
 		Dictionary_2_Clear_m9821889E928BB7EAEE9A7E81EDFC59651F7CBDD0(L_10, Dictionary_2_Clear_m9821889E928BB7EAEE9A7E81EDFC59651F7CBDD0_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:776>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:777>
 		return;
 	}
 }
-// Method Definition Index: 66398
+// Method Definition Index: 66400
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_SetDiceSum_m43975CED02860FEB4209970AB4C80A303A6D78CF (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, int32_t ___0_sum, int32_t ___1_playerType, int32_t ___2_cpuIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21609,7 +21616,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_SetDiceSum_m43975CED02860FEB4
 	int32_t V_3 = 0;
 	int32_t G_B12_0 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:785>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:786>
 		int32_t L_0 = ___1_playerType;
 		if (L_0)
 		{
@@ -21617,22 +21624,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_SetDiceSum_m43975CED02860FEB4
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:787>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:788>
 		int32_t L_1 = __this->___currentRollIdPlayer;
 		__this->___currentRollIdPlayer = ((int32_t)il2cpp_codegen_add(L_1, 1));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:788>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:789>
 		int32_t L_2 = ___0_sum;
 		__this->___currentDiceSumPlayer = L_2;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:789>
-		__this->___tapSequence = 0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:790>
+		__this->___tapSequence = 0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:791>
 		__this->___hasTappedThisRollPlayer = (bool)0;
 		goto IL_009d;
 	}
 
 IL_0028:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:795>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:796>
 		Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180* L_3 = __this->___cpuRollIds;
 		int32_t L_4 = ___2_cpuIndex;
 		NullCheck(L_3);
@@ -21644,7 +21651,7 @@ IL_0028:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:797>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:798>
 		Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180* L_6 = __this->___cpuRollIds;
 		int32_t L_7 = ___2_cpuIndex;
 		NullCheck(L_6);
@@ -21653,7 +21660,7 @@ IL_0028:
 
 IL_0043:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:799>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:800>
 		Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180* L_8 = __this->___cpuRollIds;
 		int32_t L_9 = ___2_cpuIndex;
 		V_2 = L_9;
@@ -21667,7 +21674,7 @@ IL_0043:
 		int32_t L_14 = V_3;
 		NullCheck(L_10);
 		Dictionary_2_set_Item_m420CFC153320557E6823B06767710D1E636E5BDF(L_10, L_13, ((int32_t)il2cpp_codegen_add(L_14, 1)), Dictionary_2_set_Item_m420CFC153320557E6823B06767710D1E636E5BDF_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:801>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:802>
 		Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180* L_15 = __this->___cpuDiceSums;
 		int32_t L_16 = ___2_cpuIndex;
 		NullCheck(L_15);
@@ -21679,7 +21686,7 @@ IL_0043:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:803>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:804>
 		Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180* L_18 = __this->___cpuDiceSums;
 		int32_t L_19 = ___2_cpuIndex;
 		NullCheck(L_18);
@@ -21688,36 +21695,36 @@ IL_0043:
 
 IL_0077:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:805>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:806>
 		Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180* L_20 = __this->___cpuDiceSums;
 		int32_t L_21 = ___2_cpuIndex;
 		int32_t L_22 = ___0_sum;
 		NullCheck(L_20);
 		Dictionary_2_set_Item_m420CFC153320557E6823B06767710D1E636E5BDF(L_20, L_21, L_22, Dictionary_2_set_Item_m420CFC153320557E6823B06767710D1E636E5BDF_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:808>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:809>
 		Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180* L_23 = __this->___cpuRollIds;
 		int32_t L_24 = ___2_cpuIndex;
 		NullCheck(L_23);
 		int32_t L_25;
 		L_25 = Dictionary_2_get_Item_m8B87B804DF06D6420B1DCE028675738AA8F3310F(L_23, L_24, Dictionary_2_get_Item_m8B87B804DF06D6420B1DCE028675738AA8F3310F_RuntimeMethod_var);
 		__this->___currentRollIdCPU = L_25;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:809>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:810>
 		int32_t L_26 = ___0_sum;
 		__this->___currentDiceSumCPU = L_26;
 	}
 
 IL_009d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:813>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:814>
 		int32_t L_27 = ___1_playerType;
 		NumberGrid_UpdateBoxInteractability_mB5F6A88062E41F69EB5F8C4327D48D1DDC718C99(__this, L_27, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:815>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:816>
 		int32_t L_28 = ___0_sum;
 		int32_t L_29 = ___1_playerType;
 		int32_t L_30;
 		L_30 = NumberGrid_GetAvailableBoxCount_mDBFC959BE5619794B3052A3B9A50901E78F0D566(__this, L_28, L_29, 0, NULL);
 		V_0 = L_30;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:816>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:817>
 		int32_t L_31 = ___1_playerType;
 		if (!L_31)
 		{
@@ -21761,7 +21768,7 @@ IL_00d5:
 IL_00db:
 	{
 		V_1 = G_B12_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:817>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:818>
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_40 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)6);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_41 = L_40;
 		int32_t L_42 = ___1_playerType;
@@ -21809,15 +21816,15 @@ IL_00db:
 		L_65 = String_Format_m918500C1EFB475181349A79989BB79BB36102894(_stringLiteralBA4D5BD7DAFE338C23DFCA897E018541F573CD56, L_61, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_65, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:818>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:819>
 		return;
 	}
 }
-// Method Definition Index: 66399
+// Method Definition Index: 66401
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_ClearDiceSum_m5D3BEEE6074B9BE307DEDC817BD4EBB000C701D2 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, int32_t ___0_playerType, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:825>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:826>
 		int32_t L_0 = ___0_playerType;
 		if (L_0)
 		{
@@ -21825,27 +21832,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_ClearDiceSum_m5D3BEEE6074B9BE
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:827>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:828>
 		__this->___currentDiceSumPlayer = (-1);
 		goto IL_0013;
 	}
 
 IL_000c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:831>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:832>
 		__this->___currentDiceSumCPU = (-1);
 	}
 
 IL_0013:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:833>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:834>
 		int32_t L_1 = ___0_playerType;
 		NumberGrid_UpdateBoxInteractability_mB5F6A88062E41F69EB5F8C4327D48D1DDC718C99(__this, L_1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:834>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:835>
 		return;
 	}
 }
-// Method Definition Index: 66400
+// Method Definition Index: 66402
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_UpdateBoxInteractability_mB5F6A88062E41F69EB5F8C4327D48D1DDC718C99 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, int32_t ___0_playerType, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21866,7 +21873,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_UpdateBoxInteractability_mB5F
 	int32_t G_B3_0 = 0;
 	int32_t G_B10_0 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:841>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:842>
 		int32_t L_0 = ___0_playerType;
 		if (!L_0)
 		{
@@ -21888,7 +21895,7 @@ IL_000b:
 IL_0011:
 	{
 		V_0 = G_B3_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:843>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:844>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_3 = __this->___boxDataList;
 		NullCheck(L_3);
 		Enumerator_t0756D2C9E669B6DAE29E6A195BBA96033E3AE983 L_4;
@@ -21913,11 +21920,11 @@ FINALLY_0060:
 
 IL_0020_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:843>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:844>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_5;
 				L_5 = Enumerator_get_Current_m289A0F797166C966F4D35D851DCF6B39785CA2A8_inline((&V_1), Enumerator_get_Current_m289A0F797166C966F4D35D851DCF6B39785CA2A8_RuntimeMethod_var);
 				V_2 = L_5;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:845>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:846>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_6 = V_2;
 				NullCheck(L_6);
 				Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_7 = L_6->___selectButton;
@@ -21930,7 +21937,7 @@ IL_0020_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:852>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:853>
 				int32_t L_9 = ___0_playerType;
 				if (L_9)
 				{
@@ -21938,7 +21945,7 @@ IL_0020_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:855>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:856>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_10 = V_2;
 				NullCheck(L_10);
 				bool L_11 = L_10->___isSelected;
@@ -21961,7 +21968,7 @@ IL_0047_1:
 IL_0048_1:
 			{
 				V_3 = (bool)G_B10_0;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:856>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:857>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_13 = V_2;
 				NullCheck(L_13);
 				Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_14 = L_13->___selectButton;
@@ -21972,7 +21979,7 @@ IL_0048_1:
 
 IL_0055_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:843>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:844>
 				bool L_16;
 				L_16 = Enumerator_MoveNext_m7C33617081D129F1A14AD735AC6574FCB645CF3B((&V_1), Enumerator_MoveNext_m7C33617081D129F1A14AD735AC6574FCB645CF3B_RuntimeMethod_var);
 				if (L_16)
@@ -21992,11 +21999,11 @@ IL_0055_1:
 
 IL_006e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:860>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:861>
 		return;
 	}
 }
-// Method Definition Index: 66401
+// Method Definition Index: 66403
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_OnBoxButtonClicked_m0EA80F983B8ED5F99871561E3D2DC9FE0DB10D05 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* ___0_boxData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22004,7 +22011,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_OnBoxButtonClicked_m0EA80F983
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_IndexOf_m8F17A775B910AEECA020985E8B7CDD6795F50EFA_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindFirstObjectByType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mF766559530B489C0F2CD36609162D1A663352C63_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral9F56E5CEFB7B123F09CBA79B4701CFAFB76037C5);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralDD1260CF28637F0F466898E1651683C59502405E);
@@ -22016,7 +22023,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_OnBoxButtonClicked_m0EA80F983
 	int32_t V_2 = 0;
 	String_t* G_B13_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:867>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:868>
 		bool L_0 = __this->___hasTappedThisRollPlayer;
 		if (!L_0)
 		{
@@ -22024,16 +22031,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_OnBoxButtonClicked_m0EA80F983
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:870>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:871>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral9F56E5CEFB7B123F09CBA79B4701CFAFB76037C5, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:871>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:872>
 		return;
 	}
 
 IL_0013:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:874>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:875>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_1 = ___0_boxData;
 		NullCheck(L_1);
 		bool L_2 = L_1->___isSelected;
@@ -22043,15 +22050,15 @@ IL_0013:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:877>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:878>
 		return;
 	}
 
 IL_001c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:881>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:882>
 		__this->___hasTappedThisRollPlayer = (bool)1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:883>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:884>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_3 = ___0_boxData;
 		NullCheck(L_3);
 		bool L_4 = L_3->___isPowerup;
@@ -22061,16 +22068,16 @@ IL_001c:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:885>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:886>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteralDD1260CF28637F0F466898E1651683C59502405E, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:886>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:887>
 		return;
 	}
 
 IL_0036:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:891>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:892>
 		int32_t L_5 = __this->___currentDiceSumPlayer;
 		if ((((int32_t)L_5) <= ((int32_t)0)))
 		{
@@ -22099,26 +22106,26 @@ IL_0036:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:893>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:894>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralFDD8DFD8269A9EEEEC1052F7B03721AA715C5D44, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:894>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:895>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_12 = ___0_boxData;
 		NumberGrid_PerformLocalBoxLock_m080A2C553C1DD4ADE034E1D9A838F443FED6616A(__this, L_12, 0, NULL);
 	}
 
 IL_006f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:898>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:899>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_13 = ___0_boxData;
 		__this->___lastTappedBoxData = L_13;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___lastTappedBoxData), (void*)L_13);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:901>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:902>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_14;
-		L_14 = Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40(Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40_RuntimeMethod_var);
+		L_14 = Object_FindFirstObjectByType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mF766559530B489C0F2CD36609162D1A663352C63(Object_FindFirstObjectByType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mF766559530B489C0F2CD36609162D1A663352C63_RuntimeMethod_var);
 		V_0 = L_14;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:902>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:903>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_15 = V_0;
 		bool L_16;
 		L_16 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_15, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -22144,7 +22151,7 @@ IL_0088:
 IL_008e:
 	{
 		V_1 = G_B13_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:904>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:905>
 		String_t* L_19 = V_1;
 		bool L_20;
 		L_20 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_19, NULL);
@@ -22154,14 +22161,14 @@ IL_008e:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:907>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:908>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_21 = __this->___boxDataList;
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_22 = ___0_boxData;
 		NullCheck(L_21);
 		int32_t L_23;
 		L_23 = List_1_IndexOf_m8F17A775B910AEECA020985E8B7CDD6795F50EFA(L_21, L_22, List_1_IndexOf_m8F17A775B910AEECA020985E8B7CDD6795F50EFA_RuntimeMethod_var);
 		V_2 = L_23;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:908>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:909>
 		int32_t L_24 = V_2;
 		if ((((int32_t)L_24) == ((int32_t)(-1))))
 		{
@@ -22169,7 +22176,7 @@ IL_008e:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:910>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:911>
 		String_t* L_25 = V_1;
 		int32_t L_26 = V_2;
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_27 = ___0_boxData;
@@ -22177,7 +22184,7 @@ IL_008e:
 		int32_t L_28 = L_27->___number;
 		int32_t L_29 = __this->___tapSequence;
 		MatchmakingModel_EmitTapNumber_m34A4F000E69C0B03ED796E92F7D43287F8065F9D(L_25, L_26, L_28, L_29, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:911>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:912>
 		int32_t L_30 = __this->___tapSequence;
 		__this->___tapSequence = ((int32_t)il2cpp_codegen_add(L_30, 1));
 		return;
@@ -22185,7 +22192,7 @@ IL_008e:
 
 IL_00ca:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:917>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:918>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_31 = ___0_boxData;
 		NullCheck(L_31);
 		bool L_32 = L_31->___isSelected;
@@ -22195,18 +22202,18 @@ IL_00ca:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:919>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:920>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_33 = ___0_boxData;
 		NumberGrid_PerformLocalBoxLock_m080A2C553C1DD4ADE034E1D9A838F443FED6616A(__this, L_33, 0, NULL);
 	}
 
 IL_00da:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:922>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:923>
 		return;
 	}
 }
-// Method Definition Index: 66402
+// Method Definition Index: 66404
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleServerNumberLocked_m3161FAB587D5DB008C9BD115903BC8FEBDD58599 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, NumberLockedData_tFFE5300E032A6931B04BD1F09545C3F411ECA624* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22222,7 +22229,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleServerNumberLocked_m316
 	Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040* G_B8_0 = NULL;
 	Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040* G_B7_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:930>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:931>
 		NumberLockedData_tFFE5300E032A6931B04BD1F09545C3F411ECA624* L_0 = ___0_data;
 		NullCheck(L_0);
 		String_t* L_1 = L_0->___userId;
@@ -22235,13 +22242,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleServerNumberLocked_m316
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:930>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:931>
 		return;
 	}
 
 IL_0014:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:932>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:933>
 		NumberLockedData_tFFE5300E032A6931B04BD1F09545C3F411ECA624* L_4 = ___0_data;
 		NullCheck(L_4);
 		int32_t L_5 = L_4->___index;
@@ -22264,7 +22271,7 @@ IL_0014:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:934>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:935>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_10 = __this->___boxDataList;
 		NumberLockedData_tFFE5300E032A6931B04BD1F09545C3F411ECA624* L_11 = ___0_data;
 		NullCheck(L_11);
@@ -22273,7 +22280,7 @@ IL_0014:
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_13;
 		L_13 = List_1_get_Item_m9527D866E2BA1DB2A4AF528184943E80CC068857(L_10, L_12, List_1_get_Item_m9527D866E2BA1DB2A4AF528184943E80CC068857_RuntimeMethod_var);
 		V_0 = L_13;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:935>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:936>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_14 = V_0;
 		NullCheck(L_14);
 		bool L_15 = L_14->___isSelected;
@@ -22283,7 +22290,7 @@ IL_0014:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:937>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:938>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_16 = V_0;
 		NullCheck(L_16);
 		bool L_17 = L_16->___isPowerup;
@@ -22293,10 +22300,10 @@ IL_0014:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:940>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:941>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_18 = V_0;
 		NumberGrid_LockPowerup_mF278D8B3B4CD9099B9F6FC3D07CDF326BD7EC275(__this, L_18, 0, (-1), NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:943>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:944>
 		Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040* L_19 = __this->___OnBoxSelected;
 		Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040* L_20 = L_19;
 		if (L_20)
@@ -22324,21 +22331,21 @@ IL_006d:
 
 IL_007f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:944>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:945>
 		NumberGrid_CheckIfAllBoxesSelected_m7EE12261BEDAAE06D50CD5161AAC9721C69A19DA(__this, NULL);
 		goto IL_008f;
 	}
 
 IL_0087:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:948>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:949>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_25 = V_0;
 		NumberGrid_PerformLocalBoxLock_m080A2C553C1DD4ADE034E1D9A838F443FED6616A(__this, L_25, 0, NULL);
 	}
 
 IL_008f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:952>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:953>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_26 = __this->___currentlyVisiblePowerup;
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_27 = V_0;
 		if ((!(((RuntimeObject*)(BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB*)L_26) == ((RuntimeObject*)(BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB*)L_27))))
@@ -22354,10 +22361,10 @@ IL_008f:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:954>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:955>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_29 = __this->___serverPowerupUIUpdateCoroutine;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_29, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:955>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:956>
 		__this->___serverPowerupUIUpdateCoroutine = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___serverPowerupUIUpdateCoroutine), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
 		return;
@@ -22365,7 +22372,7 @@ IL_008f:
 
 IL_00b4:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:961>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:962>
 		NumberLockedData_tFFE5300E032A6931B04BD1F09545C3F411ECA624* L_30 = ___0_data;
 		NullCheck(L_30);
 		int32_t L_31 = L_30->___index;
@@ -22379,11 +22386,11 @@ IL_00b4:
 
 IL_00ce:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:964>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:965>
 		return;
 	}
 }
-// Method Definition Index: 66403
+// Method Definition Index: 66405
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_RollbackBoxLock_mA690C3CF928A5C2948F0D7C8BD5A234D15E5FED1 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* ___0_boxData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22396,7 +22403,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_RollbackBoxLock_mA690C3CF928A
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:971>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:972>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_0 = ___0_boxData;
 		if (L_0)
 		{
@@ -22404,13 +22411,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_RollbackBoxLock_mA690C3CF928A
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:971>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:972>
 		return;
 	}
 
 IL_0004:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:973>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:974>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_1 = __this->___boxDataList;
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_2 = ___0_boxData;
 		NullCheck(L_1);
@@ -22427,27 +22434,27 @@ IL_0004:
 		L_10 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral567888EF50174DF9276BB9D168C8BED9BB3060AA, L_5, L_9, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_10, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:975>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:976>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_11 = ___0_boxData;
 		NullCheck(L_11);
 		L_11->___isSelected = (bool)0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:976>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:977>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_12 = ___0_boxData;
 		NullCheck(L_12);
 		L_12->___selectedByPlayer = 0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:977>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:978>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_13 = ___0_boxData;
 		NullCheck(L_13);
 		L_13->___selectedByCPUIndex = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:978>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:979>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_14 = ___0_boxData;
 		NullCheck(L_14);
 		L_14->___selectedInRollSum = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:979>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:980>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_15 = ___0_boxData;
 		NullCheck(L_15);
 		L_15->___selectedInRollId = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:982>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:983>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_16 = ___0_boxData;
 		NullCheck(L_16);
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_17 = L_16->___selectButton;
@@ -22460,7 +22467,7 @@ IL_0004:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:984>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:985>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_19 = ___0_boxData;
 		NullCheck(L_19);
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_20 = L_19->___selectButton;
@@ -22470,7 +22477,7 @@ IL_0004:
 
 IL_006c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:988>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:989>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_21 = ___0_boxData;
 		NullCheck(L_21);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_22 = L_21->___highlightImage;
@@ -22483,7 +22490,7 @@ IL_006c:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:990>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:991>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_24 = ___0_boxData;
 		NullCheck(L_24);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_25 = L_24->___highlightImage;
@@ -22496,11 +22503,11 @@ IL_006c:
 
 IL_008b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:992>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:993>
 		return;
 	}
 }
-// Method Definition Index: 66404
+// Method Definition Index: 66406
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_RollbackPowerupLock_m31F73DF752113436CA10449F43B001C57002237A (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* ___0_boxData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22513,7 +22520,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_RollbackPowerupLock_m31F73DF7
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:996>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:997>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_0 = ___0_boxData;
 		if (!L_0)
 		{
@@ -22532,13 +22539,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_RollbackPowerupLock_m31F73DF7
 
 IL_000b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:996>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:997>
 		return;
 	}
 
 IL_000c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:998>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:999>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_3 = __this->___boxDataList;
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_4 = ___0_boxData;
 		NullCheck(L_3);
@@ -22550,19 +22557,19 @@ IL_000c:
 		L_8 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral869EF11078C1B4965E6C43A6F1C439EB7FC49C48, L_7, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_8, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1000>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1001>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_9 = ___0_boxData;
 		NullCheck(L_9);
 		L_9->___isSelected = (bool)0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1001>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1002>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_10 = ___0_boxData;
 		NullCheck(L_10);
 		L_10->___selectedByPlayer = 0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1002>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1003>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_11 = ___0_boxData;
 		NullCheck(L_11);
 		L_11->___selectedByCPUIndex = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1004>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1005>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_12 = ___0_boxData;
 		NullCheck(L_12);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_13 = L_12->___highlightImage;
@@ -22575,7 +22582,7 @@ IL_000c:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1005>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1006>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_15 = ___0_boxData;
 		NullCheck(L_15);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_16 = L_15->___highlightImage;
@@ -22588,14 +22595,14 @@ IL_000c:
 
 IL_0060:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1008>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1009>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_18 = ___0_boxData;
 		NumberGrid_HidePowerup_mB0F295063AD94BE6CA700869DAB60970C27D0516(__this, L_18, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1009>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1010>
 		return;
 	}
 }
-// Method Definition Index: 66405
+// Method Definition Index: 66407
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleServerTapResult_mC28163570677B2E6A0C33B1409B590B4A02D37C3 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, TapResultData_t1D3D82699AAF28A5B58AFF39C53A2350A9B68DB5* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22614,7 +22621,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleServerTapResult_mC28163
 	Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040* G_B15_0 = NULL;
 	Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040* G_B14_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1013>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1014>
 		TapResultData_t1D3D82699AAF28A5B58AFF39C53A2350A9B68DB5* L_0 = ___0_data;
 		NullCheck(L_0);
 		bool L_1 = L_0->___correct;
@@ -22624,7 +22631,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleServerTapResult_mC28163
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1016>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1017>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_2 = __this->___lastTappedBoxData;
 		if (!L_2)
 		{
@@ -22650,7 +22657,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleServerTapResult_mC28163
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1018>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1019>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_7 = __this->___lastTappedBoxData;
 		NullCheck(L_7);
 		bool L_8 = L_7->___isPowerup;
@@ -22660,7 +22667,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleServerTapResult_mC28163
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1019>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1020>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_9 = __this->___lastTappedBoxData;
 		NumberGrid_RollbackPowerupLock_m31F73DF752113436CA10449F43B001C57002237A(__this, L_9, NULL);
 		goto IL_0054;
@@ -22668,14 +22675,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleServerTapResult_mC28163
 
 IL_0048:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1021>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1022>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_10 = __this->___lastTappedBoxData;
 		NumberGrid_RollbackBoxLock_mA690C3CF928A5C2948F0D7C8BD5A234D15E5FED1(__this, L_10, NULL);
 	}
 
 IL_0054:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1025>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1026>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_11 = __this->___lastTappedBoxData;
 		if (L_11)
 		{
@@ -22698,7 +22705,7 @@ IL_005f:
 IL_006a:
 	{
 		V_0 = G_B10_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1026>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1027>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_14 = __this->___lastTappedBoxData;
 		if (L_14)
 		{
@@ -22721,7 +22728,7 @@ IL_0076:
 IL_0081:
 	{
 		V_1 = G_B13_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1028>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1029>
 		Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040* L_17 = __this->___OnWrongBoxSelected;
 		Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040* L_18 = L_17;
 		if (L_18)
@@ -22745,7 +22752,7 @@ IL_008e:
 
 IL_0096:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1031>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1032>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_21 = __this->___lastTappedBoxData;
 		if (!L_21)
 		{
@@ -22774,7 +22781,7 @@ IL_0096:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1033>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1034>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_27 = __this->___lastTappedBoxData;
 		NullCheck(L_27);
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_28 = L_27->___selectButton;
@@ -22784,7 +22791,7 @@ IL_0096:
 
 IL_00cf:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1036>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1037>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralF48E37C16C4AEC6FB85E8973C7A4E491B8D885E3, NULL);
 		return;
@@ -22792,14 +22799,14 @@ IL_00cf:
 
 IL_00da:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1040>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1041>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral1C9215707427414A501AC14D79313DDE1A0A0F47, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1042>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1043>
 		return;
 	}
 }
-// Method Definition Index: 66406
+// Method Definition Index: 66408
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleSocketError_m4DD08EB1ADDF40C8C036D2E11DD7BC867F152737 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, String_t* ___0_error, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22810,7 +22817,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleSocketError_m4DD08EB1AD
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1047>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1048>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_0 = __this->___lastTappedBoxData;
 		if (!L_0)
 		{
@@ -22836,13 +22843,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleSocketError_m4DD08EB1AD
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1049>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1050>
 		String_t* L_5 = ___0_error;
 		String_t* L_6;
 		L_6 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral9E2D920220956AD35349AE5AFE2929BBC451EC51, L_5, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_6, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1051>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1052>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_7 = __this->___lastTappedBoxData;
 		NullCheck(L_7);
 		bool L_8 = L_7->___isPowerup;
@@ -22852,7 +22859,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleSocketError_m4DD08EB1AD
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1052>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1053>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_9 = __this->___lastTappedBoxData;
 		NumberGrid_RollbackPowerupLock_m31F73DF752113436CA10449F43B001C57002237A(__this, L_9, NULL);
 		goto IL_0059;
@@ -22860,22 +22867,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleSocketError_m4DD08EB1AD
 
 IL_004d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1054>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1055>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_10 = __this->___lastTappedBoxData;
 		NumberGrid_RollbackBoxLock_mA690C3CF928A5C2948F0D7C8BD5A234D15E5FED1(__this, L_10, NULL);
 	}
 
 IL_0059:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1058>
-		__this->___hasTappedThisRollPlayer = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1059>
-		NumberGrid_UpdateBoxInteractability_mB5F6A88062E41F69EB5F8C4327D48D1DDC718C99(__this, 0, NULL);
+		__this->___hasTappedThisRollPlayer = (bool)0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1060>
+		NumberGrid_UpdateBoxInteractability_mB5F6A88062E41F69EB5F8C4327D48D1DDC718C99(__this, 0, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1061>
 		return;
 	}
 }
-// Method Definition Index: 66407
+// Method Definition Index: 66409
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_PerformLocalBoxLock_m080A2C553C1DD4ADE034E1D9A838F443FED6616A (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* ___0_boxData, int32_t ___1_playerType, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22898,20 +22905,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_PerformLocalBoxLock_m080A2C55
 	Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040* G_B12_0 = NULL;
 	Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040* G_B11_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1068>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1069>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_0 = ___0_boxData;
 		NullCheck(L_0);
 		L_0->___isSelected = (bool)1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1069>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1070>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_1 = ___0_boxData;
 		int32_t L_2 = ___1_playerType;
 		NullCheck(L_1);
 		L_1->___selectedByPlayer = L_2;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1070>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1071>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_3 = ___0_boxData;
 		NullCheck(L_3);
 		L_3->___selectedByCPUIndex = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1071>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1072>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_4 = ___0_boxData;
 		int32_t L_5 = ___1_playerType;
 		if (!L_5)
@@ -22939,7 +22946,7 @@ IL_0027:
 	{
 		NullCheck(G_B3_1);
 		G_B3_1->___selectedInRollSum = G_B3_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1072>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1073>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_8 = ___0_boxData;
 		int32_t L_9 = ___1_playerType;
 		if (!L_9)
@@ -22967,7 +22974,7 @@ IL_003e:
 	{
 		NullCheck(G_B6_1);
 		G_B6_1->___selectedInRollId = G_B6_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1075>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1076>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_12 = ___0_boxData;
 		NullCheck(L_12);
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_13 = L_12->___selectButton;
@@ -22980,7 +22987,7 @@ IL_003e:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1077>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1078>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_15 = ___0_boxData;
 		NullCheck(L_15);
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_16 = L_15->___selectButton;
@@ -22990,7 +22997,7 @@ IL_003e:
 
 IL_005d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1081>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1082>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_17 = ___0_boxData;
 		NullCheck(L_17);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_18 = L_17->___highlightImage;
@@ -23003,7 +23010,7 @@ IL_005d:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1083>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1084>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_20 = ___0_boxData;
 		NullCheck(L_20);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_21 = L_20->___highlightImage;
@@ -23016,7 +23023,7 @@ IL_005d:
 
 IL_007c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1087>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1088>
 		Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040* L_23 = __this->___OnBoxSelected;
 		Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040* L_24 = L_23;
 		if (L_24)
@@ -23044,7 +23051,7 @@ IL_0088:
 
 IL_009a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1089>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1090>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_29 = __this->___boxDataList;
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_30 = ___0_boxData;
 		NullCheck(L_29);
@@ -23061,13 +23068,13 @@ IL_009a:
 		L_38 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral9A6F051DFB60B2F23C316E3BDED641FDC9471E30, L_33, L_37, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_38, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1092>
-		NumberGrid_CheckIfAllBoxesSelected_m7EE12261BEDAAE06D50CD5161AAC9721C69A19DA(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1093>
+		NumberGrid_CheckIfAllBoxesSelected_m7EE12261BEDAAE06D50CD5161AAC9721C69A19DA(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1094>
 		return;
 	}
 }
-// Method Definition Index: 66408
+// Method Definition Index: 66410
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NumberGrid_IsAnyBoxWithNumberSelectedInCurrentRoll_m01D4F791887ECCE07A3BE3993558815A685170AA (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, int32_t ___0_number, int32_t ___1_playerType, int32_t ___2_cpuIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23088,7 +23095,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NumberGrid_IsAnyBoxWithNumberSelectedInC
 	bool V_3 = false;
 	int32_t G_B5_0 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1102>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1103>
 		int32_t L_0 = ___1_playerType;
 		if (L_0)
 		{
@@ -23096,7 +23103,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NumberGrid_IsAnyBoxWithNumberSelectedInC
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1104>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1105>
 		int32_t L_1 = __this->___currentRollIdPlayer;
 		V_0 = L_1;
 		goto IL_002f;
@@ -23104,7 +23111,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NumberGrid_IsAnyBoxWithNumberSelectedInC
 
 IL_000c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1108>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1109>
 		Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180* L_2 = __this->___cpuRollIds;
 		int32_t L_3 = ___2_cpuIndex;
 		NullCheck(L_2);
@@ -23138,7 +23145,7 @@ IL_002e:
 
 IL_002f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1111>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1112>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_9 = __this->___boxDataList;
 		NullCheck(L_9);
 		Enumerator_t0756D2C9E669B6DAE29E6A195BBA96033E3AE983 L_10;
@@ -23163,15 +23170,15 @@ FINALLY_0090:
 
 IL_003d_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1111>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1112>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_11;
 				L_11 = Enumerator_get_Current_m289A0F797166C966F4D35D851DCF6B39785CA2A8_inline((&V_1), Enumerator_get_Current_m289A0F797166C966F4D35D851DCF6B39785CA2A8_RuntimeMethod_var);
 				V_2 = L_11;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1115>
 				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1116>
 				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1117>
 				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1118>
 				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1119>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1120>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_12 = V_2;
 				NullCheck(L_12);
 				bool L_13 = L_12->___isPowerup;
@@ -23220,7 +23227,7 @@ IL_003d_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1122>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1123>
 				int32_t L_25 = ___1_playerType;
 				if ((!(((uint32_t)L_25) == ((uint32_t)1))))
 				{
@@ -23228,7 +23235,7 @@ IL_003d_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1124>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1125>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_26 = V_2;
 				NullCheck(L_26);
 				int32_t L_27 = L_26->___selectedByCPUIndex;
@@ -23239,21 +23246,21 @@ IL_003d_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1126>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1127>
 				V_3 = (bool)1;
 				goto IL_00a0;
 			}
 
 IL_0081_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1131>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1132>
 				V_3 = (bool)1;
 				goto IL_00a0;
 			}
 
 IL_0085_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1111>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1112>
 				bool L_29;
 				L_29 = Enumerator_MoveNext_m7C33617081D129F1A14AD735AC6574FCB645CF3B((&V_1), Enumerator_MoveNext_m7C33617081D129F1A14AD735AC6574FCB645CF3B_RuntimeMethod_var);
 				if (L_29)
@@ -23273,18 +23280,18 @@ IL_0085_1:
 
 IL_009e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1135>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1136>
 		return (bool)0;
 	}
 
 IL_00a0:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1136>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1137>
 		bool L_30 = V_3;
 		return L_30;
 	}
 }
-// Method Definition Index: 66409
+// Method Definition Index: 66411
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_ResetSelections_m9F183E7218CAE08E86E5956805F709AB7E3546E8 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23301,7 +23308,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_ResetSelections_m9F183E7218CA
 	memset((&V_0), 0, sizeof(V_0));
 	BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* V_1 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1143>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1144>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_0 = __this->___boxDataList;
 		NullCheck(L_0);
 		Enumerator_t0756D2C9E669B6DAE29E6A195BBA96033E3AE983 L_1;
@@ -23326,31 +23333,31 @@ FINALLY_0072:
 
 IL_000e_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1143>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1144>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_2;
 				L_2 = Enumerator_get_Current_m289A0F797166C966F4D35D851DCF6B39785CA2A8_inline((&V_0), Enumerator_get_Current_m289A0F797166C966F4D35D851DCF6B39785CA2A8_RuntimeMethod_var);
 				V_1 = L_2;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1145>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1146>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_3 = V_1;
 				NullCheck(L_3);
 				L_3->___isSelected = (bool)0;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1146>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1147>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_4 = V_1;
 				NullCheck(L_4);
 				L_4->___selectedByPlayer = 0;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1147>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1148>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_5 = V_1;
 				NullCheck(L_5);
 				L_5->___selectedByCPUIndex = (-1);
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1148>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1149>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_6 = V_1;
 				NullCheck(L_6);
 				L_6->___selectedInRollSum = (-1);
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1149>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1150>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_7 = V_1;
 				NullCheck(L_7);
 				L_7->___selectedInRollId = (-1);
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1151>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1152>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_8 = V_1;
 				NullCheck(L_8);
 				Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_9 = L_8->___highlightImage;
@@ -23363,7 +23370,7 @@ IL_000e_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1153>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1154>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_11 = V_1;
 				NullCheck(L_11);
 				Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_12 = L_11->___highlightImage;
@@ -23376,7 +23383,7 @@ IL_000e_1:
 
 IL_0058_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1157>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1158>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_14 = V_1;
 				NullCheck(L_14);
 				bool L_15 = L_14->___isPowerup;
@@ -23386,7 +23393,7 @@ IL_0058_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1159>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1160>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_16 = V_1;
 				NullCheck(L_16);
 				L_16->___isPowerupVisible = (bool)0;
@@ -23394,7 +23401,7 @@ IL_0058_1:
 
 IL_0067_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1143>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1144>
 				bool L_17;
 				L_17 = Enumerator_MoveNext_m7C33617081D129F1A14AD735AC6574FCB645CF3B((&V_0), Enumerator_MoveNext_m7C33617081D129F1A14AD735AC6574FCB645CF3B_RuntimeMethod_var);
 				if (L_17)
@@ -23414,21 +23421,21 @@ IL_0067_1:
 
 IL_0080:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1164>
-		__this->___currentDiceSumPlayer = (-1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1165>
-		__this->___currentDiceSumCPU = (-1);
+		__this->___currentDiceSumPlayer = (-1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1166>
-		__this->___currentRollIdPlayer = 0;
+		__this->___currentDiceSumCPU = (-1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1167>
-		__this->___currentRollIdCPU = 0;
+		__this->___currentRollIdPlayer = 0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1168>
-		NumberGrid_UpdateBoxInteractability_mB5F6A88062E41F69EB5F8C4327D48D1DDC718C99(__this, 0, NULL);
+		__this->___currentRollIdCPU = 0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1169>
+		NumberGrid_UpdateBoxInteractability_mB5F6A88062E41F69EB5F8C4327D48D1DDC718C99(__this, 0, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1170>
 		return;
 	}
 }
-// Method Definition Index: 66410
+// Method Definition Index: 66412
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NumberGrid_GetAvailableBoxCount_mDBFC959BE5619794B3052A3B9A50901E78F0D566 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, int32_t ___0_sum, int32_t ___1_playerType, int32_t ___2_cpuIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23447,9 +23454,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NumberGrid_GetAvailableBoxCount_mDBFC
 	memset((&V_1), 0, sizeof(V_1));
 	BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* V_2 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1176>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1177>
 		V_0 = 0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1178>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1179>
 		int32_t L_0 = ___1_playerType;
 		if (L_0)
 		{
@@ -23457,14 +23464,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NumberGrid_GetAvailableBoxCount_mDBFC
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1180>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1181>
 		int32_t L_1 = __this->___currentRollIdPlayer;
 		goto IL_0032;
 	}
 
 IL_000e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1184>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1185>
 		Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180* L_2 = __this->___cpuRollIds;
 		int32_t L_3 = ___2_cpuIndex;
 		NullCheck(L_2);
@@ -23491,7 +23498,7 @@ IL_0025:
 
 IL_0032:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1187>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1188>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_9 = __this->___boxDataList;
 		NullCheck(L_9);
 		Enumerator_t0756D2C9E669B6DAE29E6A195BBA96033E3AE983 L_10;
@@ -23516,11 +23523,11 @@ FINALLY_007b:
 
 IL_0040_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1187>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1188>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_11;
 				L_11 = Enumerator_get_Current_m289A0F797166C966F4D35D851DCF6B39785CA2A8_inline((&V_1), Enumerator_get_Current_m289A0F797166C966F4D35D851DCF6B39785CA2A8_RuntimeMethod_var);
 				V_2 = L_11;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1189>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1190>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_12 = V_2;
 				NullCheck(L_12);
 				bool L_13 = L_12->___isPowerup;
@@ -23549,27 +23556,27 @@ IL_0040_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1192>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1193>
 				int32_t L_19 = ___0_sum;
 				int32_t L_20 = ___1_playerType;
 				int32_t L_21 = ___2_cpuIndex;
 				bool L_22;
 				L_22 = NumberGrid_IsAnyBoxWithNumberSelectedInCurrentRoll_m01D4F791887ECCE07A3BE3993558815A685170AA(__this, L_19, L_20, L_21, NULL);
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1193>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1194>
 				if (L_22)
 				{
 					goto IL_0070_1;
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1195>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1196>
 				int32_t L_23 = V_0;
 				V_0 = ((int32_t)il2cpp_codegen_add(L_23, 1));
 			}
 
 IL_0070_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1187>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1188>
 				bool L_24;
 				L_24 = Enumerator_MoveNext_m7C33617081D129F1A14AD735AC6574FCB645CF3B((&V_1), Enumerator_MoveNext_m7C33617081D129F1A14AD735AC6574FCB645CF3B_RuntimeMethod_var);
 				if (L_24)
@@ -23589,12 +23596,12 @@ IL_0070_1:
 
 IL_0089:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1199>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1200>
 		int32_t L_25 = V_0;
 		return L_25;
 	}
 }
-// Method Definition Index: 66411
+// Method Definition Index: 66413
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* NumberGrid_GetAvailableBoxes_m6E93AEE5E3CD26B66FAFF9AB7E5F6A8036F2BB7A (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, int32_t ___0_sum, int32_t ___1_playerType, int32_t ___2_cpuIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23614,11 +23621,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tB951CE80B58D1BF9650862451D8DAD8C231F2
 	memset((&V_1), 0, sizeof(V_1));
 	BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* V_2 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1207>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1208>
 		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_0 = (List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B*)il2cpp_codegen_object_new(List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B_il2cpp_TypeInfo_var);
 		List_1__ctor_m447372C1EF7141193B93090A77395B786C72C7BC(L_0, List_1__ctor_m447372C1EF7141193B93090A77395B786C72C7BC_RuntimeMethod_var);
 		V_0 = L_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1209>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1210>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_1 = __this->___boxDataList;
 		NullCheck(L_1);
 		Enumerator_t0756D2C9E669B6DAE29E6A195BBA96033E3AE983 L_2;
@@ -23643,11 +23650,11 @@ FINALLY_0057:
 
 IL_0014_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1209>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1210>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_3;
 				L_3 = Enumerator_get_Current_m289A0F797166C966F4D35D851DCF6B39785CA2A8_inline((&V_1), Enumerator_get_Current_m289A0F797166C966F4D35D851DCF6B39785CA2A8_RuntimeMethod_var);
 				V_2 = L_3;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1211>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1212>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_4 = V_2;
 				NullCheck(L_4);
 				bool L_5 = L_4->___isPowerup;
@@ -23676,20 +23683,20 @@ IL_0014_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1214>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1215>
 				int32_t L_11 = ___0_sum;
 				int32_t L_12 = ___1_playerType;
 				int32_t L_13 = ___2_cpuIndex;
 				bool L_14;
 				L_14 = NumberGrid_IsAnyBoxWithNumberSelectedInCurrentRoll_m01D4F791887ECCE07A3BE3993558815A685170AA(__this, L_11, L_12, L_13, NULL);
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1215>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1216>
 				if (L_14)
 				{
 					goto IL_004c_1;
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1217>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1218>
 				List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_15 = V_0;
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_16 = V_2;
 				NullCheck(L_16);
@@ -23700,7 +23707,7 @@ IL_0014_1:
 
 IL_004c_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1209>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1210>
 				bool L_18;
 				L_18 = Enumerator_MoveNext_m7C33617081D129F1A14AD735AC6574FCB645CF3B((&V_1), Enumerator_MoveNext_m7C33617081D129F1A14AD735AC6574FCB645CF3B_RuntimeMethod_var);
 				if (L_18)
@@ -23720,18 +23727,18 @@ IL_004c_1:
 
 IL_0065:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1221>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1222>
 		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_19 = V_0;
 		return L_19;
 	}
 }
-// Method Definition Index: 66412
+// Method Definition Index: 66414
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NumberGrid_SelectBox_m44B049F4EBBE47D26AF478D9DB5A7378CEC1291C (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_boxObject, bool ___1_isCPU, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
 	int32_t G_B3_0 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1230>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1231>
 		bool L_0 = ___1_isCPU;
 		if (L_0)
 		{
@@ -23751,7 +23758,7 @@ IL_0006:
 IL_0007:
 	{
 		V_0 = G_B3_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1231>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1232>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = ___0_boxObject;
 		int32_t L_2 = V_0;
 		bool L_3;
@@ -23759,7 +23766,7 @@ IL_0007:
 		return L_3;
 	}
 }
-// Method Definition Index: 66413
+// Method Definition Index: 66415
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NumberGrid_SelectBox_mE3F21CAAF688ACF19E07B3A5B89E23AC2E392187 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_boxObject, int32_t ___1_playerType, int32_t ___2_cpuIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23804,7 +23811,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NumberGrid_SelectBox_mE3F21CAAF688ACF19E
 		NullCheck(L_1);
 		L_1->___boxObject = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___boxObject), (void*)L_2);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1240>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1241>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_3 = __this->___boxDataList;
 		U3CU3Ec__DisplayClass94_0_t5A9DC5FA5187B566806E46A0C6BAA2E0AB7C44B8* L_4 = V_0;
 		Predicate_1_t0AF02329A07629DCA46FC505038EF8D1DCE8DFFB* L_5 = (Predicate_1_t0AF02329A07629DCA46FC505038EF8D1DCE8DFFB*)il2cpp_codegen_object_new(Predicate_1_t0AF02329A07629DCA46FC505038EF8D1DCE8DFFB_il2cpp_TypeInfo_var);
@@ -23813,7 +23820,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NumberGrid_SelectBox_mE3F21CAAF688ACF19E
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_6;
 		L_6 = List_1_Find_mC96D94E371E8CE90F902EB4C6AD9B52D1E80B9F0(L_3, L_5, List_1_Find_mC96D94E371E8CE90F902EB4C6AD9B52D1E80B9F0_RuntimeMethod_var);
 		V_1 = L_6;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1241>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1242>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_7 = V_1;
 		if (L_7)
 		{
@@ -23821,16 +23828,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NumberGrid_SelectBox_mE3F21CAAF688ACF19E
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1243>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1244>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteralF8438DE7B23D1DA4088A3A73CC27029E7F3B2F4E, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1244>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1245>
 		return (bool)0;
 	}
 
 IL_0034:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1247>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1248>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_8 = V_1;
 		NullCheck(L_8);
 		bool L_9 = L_8->___isSelected;
@@ -23840,7 +23847,7 @@ IL_0034:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1249>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1250>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_10 = V_1;
 		NullCheck(L_10);
 		int32_t L_11 = L_10->___number;
@@ -23850,13 +23857,13 @@ IL_0034:
 		L_14 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral80525541D84FFA9EE7B4A033AA9A7C342C29465D, L_13, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_14, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1250>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1251>
 		return (bool)0;
 	}
 
 IL_0058:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1253>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1254>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_15 = V_1;
 		NullCheck(L_15);
 		bool L_16 = L_15->___isPowerup;
@@ -23866,16 +23873,16 @@ IL_0058:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1255>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1256>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteralDD1260CF28637F0F466898E1651683C59502405E, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1256>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1257>
 		return (bool)0;
 	}
 
 IL_006c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1261>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1262>
 		int32_t L_17 = ___1_playerType;
 		if (L_17)
 		{
@@ -23883,7 +23890,7 @@ IL_006c:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1263>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1264>
 		int32_t L_18 = __this->___currentDiceSumPlayer;
 		V_2 = L_18;
 		goto IL_009b;
@@ -23891,7 +23898,7 @@ IL_006c:
 
 IL_0078:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1267>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1268>
 		Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180* L_19 = __this->___cpuDiceSums;
 		int32_t L_20 = ___2_cpuIndex;
 		NullCheck(L_19);
@@ -23925,7 +23932,7 @@ IL_009a:
 
 IL_009b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1270>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1271>
 		int32_t L_26 = V_2;
 		if ((((int32_t)L_26) <= ((int32_t)0)))
 		{
@@ -23945,7 +23952,7 @@ IL_009b:
 
 IL_00a8:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1272>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1273>
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_30 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)4);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_31 = L_30;
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_32 = V_1;
@@ -23981,13 +23988,13 @@ IL_00a8:
 		L_48 = String_Format_m918500C1EFB475181349A79989BB79BB36102894(_stringLiteral0D39CAF46306D0D360B5A5C4892F443D38380502, L_44, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_48, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1273>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1274>
 		return (bool)0;
 	}
 
 IL_00e8:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1277>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1278>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_49 = V_1;
 		NullCheck(L_49);
 		int32_t L_50 = L_49->___number;
@@ -23995,14 +24002,14 @@ IL_00e8:
 		int32_t L_52 = ___2_cpuIndex;
 		bool L_53;
 		L_53 = NumberGrid_IsAnyBoxWithNumberSelectedInCurrentRoll_m01D4F791887ECCE07A3BE3993558815A685170AA(__this, L_50, L_51, L_52, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1278>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1279>
 		if (!L_53)
 		{
 			goto IL_0120;
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1280>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1281>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_54 = V_1;
 		NullCheck(L_54);
 		int32_t L_55 = L_54->___number;
@@ -24018,13 +24025,13 @@ IL_00e8:
 		L_64 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteralCAEDD74616B8CAD7C7EA4B3D054DE60F7E444141, L_57, L_60, L_63, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_64, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1281>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1282>
 		return (bool)0;
 	}
 
 IL_0120:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1286>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1287>
 		int32_t L_65 = ___1_playerType;
 		if (L_65)
 		{
@@ -24032,7 +24039,7 @@ IL_0120:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1288>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1289>
 		int32_t L_66 = __this->___currentRollIdPlayer;
 		V_3 = L_66;
 		goto IL_014f;
@@ -24040,7 +24047,7 @@ IL_0120:
 
 IL_012c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1292>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1293>
 		Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180* L_67 = __this->___cpuRollIds;
 		int32_t L_68 = ___2_cpuIndex;
 		NullCheck(L_67);
@@ -24074,16 +24081,16 @@ IL_014e:
 
 IL_014f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1296>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1297>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_74 = V_1;
 		NullCheck(L_74);
 		L_74->___isSelected = (bool)1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1297>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1298>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_75 = V_1;
 		int32_t L_76 = ___1_playerType;
 		NullCheck(L_75);
 		L_75->___selectedByPlayer = L_76;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1298>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1299>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_77 = V_1;
 		int32_t L_78 = ___1_playerType;
 		if ((((int32_t)L_78) == ((int32_t)1)))
@@ -24110,17 +24117,17 @@ IL_0166:
 	{
 		NullCheck(G_B26_1);
 		G_B26_1->___selectedByCPUIndex = G_B26_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1299>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1300>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_80 = V_1;
 		int32_t L_81 = V_2;
 		NullCheck(L_80);
 		L_80->___selectedInRollSum = L_81;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1300>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1301>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_82 = V_1;
 		int32_t L_83 = V_3;
 		NullCheck(L_82);
 		L_82->___selectedInRollId = L_83;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1303>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1304>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_84 = V_1;
 		NullCheck(L_84);
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_85 = L_84->___selectButton;
@@ -24140,7 +24147,7 @@ IL_0166:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1305>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1306>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_88 = V_1;
 		NullCheck(L_88);
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_89 = L_88->___selectButton;
@@ -24150,7 +24157,7 @@ IL_0166:
 
 IL_0196:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1309>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1310>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_90 = V_1;
 		NullCheck(L_90);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_91 = L_90->___highlightImage;
@@ -24172,7 +24179,7 @@ IL_0196:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1311>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1312>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_95 = V_1;
 		NullCheck(L_95);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_96 = L_95->___highlightImage;
@@ -24185,7 +24192,7 @@ IL_0196:
 
 IL_01bd:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1315>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1316>
 		Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040* L_98 = __this->___OnBoxSelected;
 		Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040* L_99 = L_98;
 		if (L_99)
@@ -24213,7 +24220,7 @@ IL_01c9:
 
 IL_01db:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1317>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1318>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_104 = V_1;
 		NullCheck(L_104);
 		int32_t L_105 = L_104->___number;
@@ -24226,13 +24233,13 @@ IL_01db:
 		L_111 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral854D9D82374F041AD91ED18CC6781CBFDC3EFE46, L_107, L_110, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_111, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1320>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1321>
 		NumberGrid_CheckIfAllBoxesSelected_m7EE12261BEDAAE06D50CD5161AAC9721C69A19DA(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1322>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1323>
 		return (bool)1;
 	}
 }
-// Method Definition Index: 66414
+// Method Definition Index: 66416
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_CheckIfAllBoxesSelected_m7EE12261BEDAAE06D50CD5161AAC9721C69A19DA (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24254,11 +24261,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_CheckIfAllBoxesSelected_m7EE1
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B12_0 = NULL;
 	Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* G_B11_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1330>
-		V_0 = 0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1331>
+		V_0 = 0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1332>
 		V_1 = 0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1333>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1334>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_0 = __this->___boxDataList;
 		NullCheck(L_0);
 		Enumerator_t0756D2C9E669B6DAE29E6A195BBA96033E3AE983 L_1;
@@ -24283,11 +24290,11 @@ FINALLY_003d:
 
 IL_0012_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1333>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1334>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_2;
 				L_2 = Enumerator_get_Current_m289A0F797166C966F4D35D851DCF6B39785CA2A8_inline((&V_2), Enumerator_get_Current_m289A0F797166C966F4D35D851DCF6B39785CA2A8_RuntimeMethod_var);
 				V_3 = L_2;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1335>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1336>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_3 = V_3;
 				NullCheck(L_3);
 				bool L_4 = L_3->___isPowerup;
@@ -24297,10 +24304,10 @@ IL_0012_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1337>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1338>
 				int32_t L_5 = V_0;
 				V_0 = ((int32_t)il2cpp_codegen_add(L_5, 1));
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1338>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1339>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_6 = V_3;
 				NullCheck(L_6);
 				bool L_7 = L_6->___isSelected;
@@ -24310,14 +24317,14 @@ IL_0012_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1340>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1341>
 				int32_t L_8 = V_1;
 				V_1 = ((int32_t)il2cpp_codegen_add(L_8, 1));
 			}
 
 IL_0032_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1333>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1334>
 				bool L_9;
 				L_9 = Enumerator_MoveNext_m7C33617081D129F1A14AD735AC6574FCB645CF3B((&V_2), Enumerator_MoveNext_m7C33617081D129F1A14AD735AC6574FCB645CF3B_RuntimeMethod_var);
 				if (L_9)
@@ -24337,7 +24344,7 @@ IL_0032_1:
 
 IL_004b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1346>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1347>
 		int32_t L_10 = V_1;
 		int32_t L_11 = V_0;
 		if ((((int32_t)L_10) < ((int32_t)L_11)))
@@ -24353,7 +24360,7 @@ IL_004b:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1348>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1349>
 		int32_t L_13 = V_0;
 		int32_t L_14 = L_13;
 		RuntimeObject* L_15 = Box(il2cpp_defaults.int32_class, &L_14);
@@ -24361,7 +24368,7 @@ IL_004b:
 		L_16 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral16F8B41658C935312BE05F9507163837F9886523, L_15, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_16, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1349>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1350>
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_17 = __this->___OnAllBoxesSelected;
 		Action_tD00B0A84D7945E50C2DFFC28EFEE6ED44ED2AD07* L_18 = L_17;
 		if (L_18)
@@ -24383,11 +24390,11 @@ IL_0073:
 
 IL_0078:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1351>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1352>
 		return;
 	}
 }
-// Method Definition Index: 66415
+// Method Definition Index: 66417
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588* NumberGrid_GetSelectionCounts_m7BBD1D87A2A27E142273DF2482B47D9ACA563690 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24414,11 +24421,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23
 	String_t* V_4 = NULL;
 	int32_t V_5 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1360>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1361>
 		Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588* L_0 = (Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588*)il2cpp_codegen_object_new(Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_mA3C3860EDE2CDD08BBD68C389377BC89D029D968(L_0, Dictionary_2__ctor_mA3C3860EDE2CDD08BBD68C389377BC89D029D968_RuntimeMethod_var);
 		V_0 = L_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1362>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1363>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_1 = __this->___boxDataList;
 		NullCheck(L_1);
 		Enumerator_t0756D2C9E669B6DAE29E6A195BBA96033E3AE983 L_2;
@@ -24443,11 +24450,11 @@ FINALLY_0081:
 
 IL_0014_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1362>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1363>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_3;
 				L_3 = Enumerator_get_Current_m289A0F797166C966F4D35D851DCF6B39785CA2A8_inline((&V_1), Enumerator_get_Current_m289A0F797166C966F4D35D851DCF6B39785CA2A8_RuntimeMethod_var);
 				V_2 = L_3;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1364>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1365>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_4 = V_2;
 				NullCheck(L_4);
 				bool L_5 = L_4->___isSelected;
@@ -24457,7 +24464,7 @@ IL_0014_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1367>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1368>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_6 = V_2;
 				NullCheck(L_6);
 				int32_t L_7 = L_6->___selectedByPlayer;
@@ -24467,14 +24474,14 @@ IL_0014_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1369>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1370>
 				V_3 = _stringLiteralCAF8804297181FF007CA835529DD4477CFD94A70;
 				goto IL_004a_1;
 			}
 
 IL_0034_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1373>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1374>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_8 = V_2;
 				NullCheck(L_8);
 				int32_t L_9 = L_8->___selectedByCPUIndex;
@@ -24487,7 +24494,7 @@ IL_0034_1:
 
 IL_004a_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1376>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1377>
 				Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588* L_13 = V_0;
 				String_t* L_14 = V_3;
 				NullCheck(L_13);
@@ -24499,7 +24506,7 @@ IL_004a_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1378>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1379>
 				Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588* L_16 = V_0;
 				String_t* L_17 = V_3;
 				V_4 = L_17;
@@ -24518,7 +24525,7 @@ IL_004a_1:
 
 IL_006e_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1382>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1383>
 				Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588* L_23 = V_0;
 				String_t* L_24 = V_3;
 				NullCheck(L_23);
@@ -24527,7 +24534,7 @@ IL_006e_1:
 
 IL_0076_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1362>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1363>
 				bool L_25;
 				L_25 = Enumerator_MoveNext_m7C33617081D129F1A14AD735AC6574FCB645CF3B((&V_1), Enumerator_MoveNext_m7C33617081D129F1A14AD735AC6574FCB645CF3B_RuntimeMethod_var);
 				if (L_25)
@@ -24547,12 +24554,12 @@ IL_0076_1:
 
 IL_008f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1387>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1388>
 		Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588* L_26 = V_0;
 		return L_26;
 	}
 }
-// Method Definition Index: 66416
+// Method Definition Index: 66418
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NumberGrid_GetTotalPoints_mF011801E2FC5F3BE0B76B6997B00E6FF4450362B (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, String_t* ___0_playerKey, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24574,13 +24581,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NumberGrid_GetTotalPoints_mF011801E2F
 	BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* V_4 = NULL;
 	String_t* G_B8_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1398>
-		V_0 = 0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1399>
-		V_1 = 0;
+		V_0 = 0;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1400>
+		V_1 = 0;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1401>
 		V_2 = 0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1402>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1403>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_0 = __this->___boxDataList;
 		NullCheck(L_0);
 		Enumerator_t0756D2C9E669B6DAE29E6A195BBA96033E3AE983 L_1;
@@ -24605,11 +24612,11 @@ FINALLY_0091:
 
 IL_0014_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1402>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1403>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_2;
 				L_2 = Enumerator_get_Current_m289A0F797166C966F4D35D851DCF6B39785CA2A8_inline((&V_3), Enumerator_get_Current_m289A0F797166C966F4D35D851DCF6B39785CA2A8_RuntimeMethod_var);
 				V_4 = L_2;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1404>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1405>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_3 = V_4;
 				NullCheck(L_3);
 				bool L_4 = L_3->___isPowerup;
@@ -24619,14 +24626,14 @@ IL_0014_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1404>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1405>
 				int32_t L_5 = V_2;
 				V_2 = ((int32_t)il2cpp_codegen_add(L_5, 1));
 			}
 
 IL_002a_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1406>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1407>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_6 = V_4;
 				NullCheck(L_6);
 				bool L_7 = L_6->___isSelected;
@@ -24636,7 +24643,7 @@ IL_002a_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1408>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1409>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_8 = V_4;
 				NullCheck(L_8);
 				int32_t L_9 = L_8->___selectedByPlayer;
@@ -24664,7 +24671,7 @@ IL_0054_1:
 
 IL_0059_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1409>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1410>
 				String_t* L_15 = ___0_playerKey;
 				bool L_16;
 				L_16 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(G_B8_0, L_15, NULL);
@@ -24674,7 +24681,7 @@ IL_0059_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1411>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1412>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_17 = V_4;
 				NullCheck(L_17);
 				bool L_18 = L_17->___isPowerup;
@@ -24684,7 +24691,7 @@ IL_0059_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1411>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1412>
 				int32_t L_19 = V_0;
 				V_0 = ((int32_t)il2cpp_codegen_add(L_19, ((int32_t)200)));
 				goto IL_0079_1;
@@ -24692,14 +24699,14 @@ IL_0059_1:
 
 IL_0074_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1412>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1413>
 				int32_t L_20 = V_0;
 				V_0 = ((int32_t)il2cpp_codegen_add(L_20, ((int32_t)100)));
 			}
 
 IL_0079_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1414>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1415>
 				BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_21 = V_4;
 				NullCheck(L_21);
 				bool L_22 = L_21->___isPowerup;
@@ -24709,14 +24716,14 @@ IL_0079_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1414>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1415>
 				int32_t L_23 = V_1;
 				V_1 = ((int32_t)il2cpp_codegen_add(L_23, 1));
 			}
 
 IL_0086_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1402>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1403>
 				bool L_24;
 				L_24 = Enumerator_MoveNext_m7C33617081D129F1A14AD735AC6574FCB645CF3B((&V_3), Enumerator_MoveNext_m7C33617081D129F1A14AD735AC6574FCB645CF3B_RuntimeMethod_var);
 				if (L_24)
@@ -24736,7 +24743,7 @@ IL_0086_1:
 
 IL_009f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1420>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1421>
 		int32_t L_25 = V_1;
 		int32_t L_26 = V_2;
 		if ((((int32_t)L_25) < ((int32_t)L_26)))
@@ -24752,19 +24759,19 @@ IL_009f:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1422>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1423>
 		int32_t L_28 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_28, ((int32_t)1200)));
 	}
 
 IL_00af:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1425>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1426>
 		int32_t L_29 = V_0;
 		return L_29;
 	}
 }
-// Method Definition Index: 66417
+// Method Definition Index: 66419
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ValueTuple_3_tB335A5D0E3266E1B2306837EE625791AF96AA7CA NumberGrid_GetWinner_mE1AF49168EFC54839D68D68E25AC222CDF7A64E4 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24789,14 +24796,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ValueTuple_3_tB335A5D0E3266E1B2306837EE625791
 	memset((&V_3), 0, sizeof(V_3));
 	int32_t V_4 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1435>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1436>
 		Dictionary_2_t5C8F46F5D57502270DD9E1DA8303B23C7FE85588* L_0;
 		L_0 = NumberGrid_GetSelectionCounts_m7BBD1D87A2A27E142273DF2482B47D9ACA563690(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1437>
-		V_0 = (String_t*)NULL;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1438>
+		V_0 = (String_t*)NULL;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1439>
 		V_1 = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1440>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1441>
 		NullCheck(L_0);
 		Enumerator_tA2BDFFCCD73E0822BD39B8A162012DCD95F9FDCA L_1;
 		L_1 = Dictionary_2_GetEnumerator_m5B4AB9234E9B5AA8776F5A5E98BD96AADD36A445(L_0, Dictionary_2_GetEnumerator_m5B4AB9234E9B5AA8776F5A5E98BD96AADD36A445_RuntimeMethod_var);
@@ -24820,11 +24827,11 @@ FINALLY_003f:
 
 IL_0012_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1440>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1441>
 				KeyValuePair_2_t203D89707A14A98B3FB295DFFAC0F4D3CF2B1078 L_2;
 				L_2 = Enumerator_get_Current_m58E48C7A4B001DD9CC590DEF18D64A3D9E5E6F7B_inline((&V_2), Enumerator_get_Current_m58E48C7A4B001DD9CC590DEF18D64A3D9E5E6F7B_RuntimeMethod_var);
 				V_3 = L_2;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1442>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1443>
 				int32_t L_3;
 				L_3 = KeyValuePair_2_get_Value_m49EC6C1CD52DC0ED12D5C9116368BB112EA11917_inline((&V_3), KeyValuePair_2_get_Value_m49EC6C1CD52DC0ED12D5C9116368BB112EA11917_RuntimeMethod_var);
 				int32_t L_4 = V_1;
@@ -24834,11 +24841,11 @@ IL_0012_1:
 				}
 			}
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1444>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1445>
 				int32_t L_5;
 				L_5 = KeyValuePair_2_get_Value_m49EC6C1CD52DC0ED12D5C9116368BB112EA11917_inline((&V_3), KeyValuePair_2_get_Value_m49EC6C1CD52DC0ED12D5C9116368BB112EA11917_RuntimeMethod_var);
 				V_1 = L_5;
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1445>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1446>
 				String_t* L_6;
 				L_6 = KeyValuePair_2_get_Key_mC9FB52D78F362AE8CD0466E65D0CAFB23CD1C25D_inline((&V_3), KeyValuePair_2_get_Key_mC9FB52D78F362AE8CD0466E65D0CAFB23CD1C25D_RuntimeMethod_var);
 				V_0 = L_6;
@@ -24846,7 +24853,7 @@ IL_0012_1:
 
 IL_0034_1:
 			{
-				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1440>
+				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1441>
 				bool L_7;
 				L_7 = Enumerator_MoveNext_mCB84750BAFE59C7D53C86B28A910BBE68DDE5D33((&V_2), Enumerator_MoveNext_mCB84750BAFE59C7D53C86B28A910BBE68DDE5D33_RuntimeMethod_var);
 				if (L_7)
@@ -24866,7 +24873,7 @@ IL_0034_1:
 
 IL_004d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1449>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1450>
 		String_t* L_8 = V_0;
 		if (L_8)
 		{
@@ -24874,7 +24881,7 @@ IL_004d:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1451>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1452>
 		ValueTuple_3_tB335A5D0E3266E1B2306837EE625791AF96AA7CA L_9;
 		memset((&L_9), 0, sizeof(L_9));
 		ValueTuple_3__ctor_mEA507ABEF0655908930F089F51B6DE86EA6BEB8E((&L_9), 0, (-1), 0, ValueTuple_3__ctor_mEA507ABEF0655908930F089F51B6DE86EA6BEB8E_RuntimeMethod_var);
@@ -24883,7 +24890,7 @@ IL_004d:
 
 IL_0059:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1454>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1455>
 		String_t* L_10 = V_0;
 		bool L_11;
 		L_11 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_10, _stringLiteralCAF8804297181FF007CA835529DD4477CFD94A70, NULL);
@@ -24893,7 +24900,7 @@ IL_0059:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1456>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1457>
 		int32_t L_12 = V_1;
 		ValueTuple_3_tB335A5D0E3266E1B2306837EE625791AF96AA7CA L_13;
 		memset((&L_13), 0, sizeof(L_13));
@@ -24903,7 +24910,7 @@ IL_0059:
 
 IL_006f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1458>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1459>
 		String_t* L_14 = V_0;
 		NullCheck(L_14);
 		bool L_15;
@@ -24914,12 +24921,12 @@ IL_006f:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1460>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1461>
 		String_t* L_16 = V_0;
 		NullCheck(L_16);
 		String_t* L_17;
 		L_17 = String_Substring_m6BA4A3FA3800FE92662D0847CC8E1EEF940DF472(L_16, 4, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1461>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1462>
 		bool L_18;
 		L_18 = Int32_TryParse_mC928DE2FEC1C35ED5298BDDCA9868076E94B8A21(L_17, (&V_4), NULL);
 		if (!L_18)
@@ -24928,7 +24935,7 @@ IL_006f:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1463>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1464>
 		int32_t L_19 = V_4;
 		int32_t L_20 = V_1;
 		ValueTuple_3_tB335A5D0E3266E1B2306837EE625791AF96AA7CA L_21;
@@ -24939,18 +24946,18 @@ IL_006f:
 
 IL_0096:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1467>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1468>
 		ValueTuple_3_tB335A5D0E3266E1B2306837EE625791AF96AA7CA L_22;
 		memset((&L_22), 0, sizeof(L_22));
 		ValueTuple_3__ctor_mEA507ABEF0655908930F089F51B6DE86EA6BEB8E((&L_22), 0, (-1), 0, ValueTuple_3__ctor_mEA507ABEF0655908930F089F51B6DE86EA6BEB8E_RuntimeMethod_var);
 		return L_22;
 	}
 }
-// Method Definition Index: 66418
+// Method Definition Index: 66420
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NumberGrid_GetCurrentDiceSum_m76136175ED91E0D2783AD9A0AA0C409CAABC509E (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, int32_t ___0_playerType, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1475>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1476>
 		int32_t L_0 = ___0_playerType;
 		if (!L_0)
 		{
@@ -24968,7 +24975,7 @@ IL_000a:
 		return L_2;
 	}
 }
-// Method Definition Index: 66419
+// Method Definition Index: 66421
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_SetPlayerOutlineColor_mAB2FC02618D437FE7E708FFA8516278C54296A12 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_color, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -24980,10 +24987,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_SetPlayerOutlineColor_mAB2FC0
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1483>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1484>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0 = ___0_color;
 		__this->___playerOutlineColor = L_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1484>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1485>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ___0_color;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_2 = L_1;
 		RuntimeObject* L_3 = Box(Color_tD001788D726C3A7F1379BEED0260B9591F440C1F_il2cpp_TypeInfo_var, &L_2);
@@ -24991,11 +24998,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_SetPlayerOutlineColor_mAB2FC0
 		L_4 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralD8A08F54496EB73EB720CFDB677E53C5961E5DD5, L_3, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_4, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1485>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1486>
 		return;
 	}
 }
-// Method Definition Index: 66420
+// Method Definition Index: 66422
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_SetCPUOutlineColor_m44C0497881EC5455236AEDAA96F7EB348799FC19 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, int32_t ___0_cpuIndex, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___1_color, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25008,13 +25015,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_SetCPUOutlineColor_m44C049788
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1492>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1493>
 		Dictionary_2_tF298C776417E592A413E40D7A98FBA65E2C1D5B5* L_0 = __this->___cpuOutlineColors;
 		int32_t L_1 = ___0_cpuIndex;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_2 = ___1_color;
 		NullCheck(L_0);
 		Dictionary_2_set_Item_mDEE272727F5E39EECB204ADFD1D9455BB8B745B8(L_0, L_1, L_2, Dictionary_2_set_Item_mDEE272727F5E39EECB204ADFD1D9455BB8B745B8_RuntimeMethod_var);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1493>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1494>
 		int32_t L_3 = ___0_cpuIndex;
 		int32_t L_4 = L_3;
 		RuntimeObject* L_5 = Box(il2cpp_defaults.int32_class, &L_4);
@@ -25025,11 +25032,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_SetCPUOutlineColor_m44C049788
 		L_9 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralF29D375BB6EE4F88BC8AC47F40599605DE06223E, L_5, L_8, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_9, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1494>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1495>
 		return;
 	}
 }
-// Method Definition Index: 66421
+// Method Definition Index: 66423
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F NumberGrid_GetCPUOutlineColor_m41BB4B933DBE341372736740A0F09BB2B27AF8BD (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, int32_t ___0_cpuIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25040,7 +25047,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1501>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1502>
 		Dictionary_2_tF298C776417E592A413E40D7A98FBA65E2C1D5B5* L_0 = __this->___cpuOutlineColors;
 		int32_t L_1 = ___0_cpuIndex;
 		NullCheck(L_0);
@@ -25052,7 +25059,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1503>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1504>
 		Dictionary_2_tF298C776417E592A413E40D7A98FBA65E2C1D5B5* L_3 = __this->___cpuOutlineColors;
 		int32_t L_4 = ___0_cpuIndex;
 		NullCheck(L_3);
@@ -25063,17 +25070,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 
 IL_001b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1505>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1506>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_6;
 		L_6 = Color_get_red_mA2E53E7173FDC97E68E335049AB0FAAEE43A844D_inline(NULL);
 		return L_6;
 	}
 }
-// Method Definition Index: 66422
+// Method Definition Index: 66424
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* NumberGrid_GetCurrentlyVisiblePowerup_m2B9156483EAF9DDB59482F419CF6B3F9BA7DC709 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1513>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1514>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_0 = __this->___currentlyVisiblePowerup;
 		if (!L_0)
 		{
@@ -25099,7 +25106,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1515>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1516>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_5 = __this->___currentlyVisiblePowerup;
 		NullCheck(L_5);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = L_5->___boxObject;
@@ -25108,21 +25115,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GameObject_t76FEDD663AB33C991A9C9A23129337651
 
 IL_002e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1517>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1518>
 		return (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL;
 	}
 }
-// Method Definition Index: 66423
+// Method Definition Index: 66425
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_RegenerateGrid_m4E22297BC5B83D1910A13FF59B76136A078B0FA0 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1526>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1527>
 		NumberGrid_GenerateGrid_m0C24E107097E9A1324B53BF97DB34AE03EFFBA1B(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1528>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1529>
 		return;
 	}
 }
-// Method Definition Index: 66424
+// Method Definition Index: 66426
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_StartPowerupTimer_mADC8F0522C2482E6D41C680051EB5305AADF174B (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25131,7 +25138,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_StartPowerupTimer_mADC8F0522C
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Enumerable_Count_TisBoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB_m61D158F4AB1E634451B2F8F3B354613ACC79A5C7_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Func_2_t1F23BBCEB9985AB1B965EAD6395C13D204184337_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindFirstObjectByType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mF766559530B489C0F2CD36609162D1A663352C63_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_U3CStartPowerupTimerU3Eb__105_0_m51440F0B80914E952806FBE8C36BCFA534E1AB9C_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_tE7C5954DD0D271D0DC9DA0E606E1C53B69E71765_il2cpp_TypeInfo_var);
@@ -25148,7 +25155,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_StartPowerupTimer_mADC8F0522C
 	Func_2_t1F23BBCEB9985AB1B965EAD6395C13D204184337* G_B7_0 = NULL;
 	List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* G_B7_1 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1536>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1537>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0;
 		L_0 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		NullCheck(L_0);
@@ -25170,23 +25177,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_StartPowerupTimer_mADC8F0522C
 
 IL_0015:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1538>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1539>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral354EC8740CAA3E5CD3120D88D4F69AF15EFECB78, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1539>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1540>
 		return;
 	}
 
 IL_0020:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1542>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1543>
 		NumberGrid_StopPowerupTimer_m8A7856C6812DA3EE30035001F14FD137ADF6F67F(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1546>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1547>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_3;
-		L_3 = Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40(Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40_RuntimeMethod_var);
+		L_3 = Object_FindFirstObjectByType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mF766559530B489C0F2CD36609162D1A663352C63(Object_FindFirstObjectByType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mF766559530B489C0F2CD36609162D1A663352C63_RuntimeMethod_var);
 		V_0 = L_3;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1547>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1548>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_4 = V_0;
 		bool L_5;
 		L_5 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_4, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -25208,16 +25215,16 @@ IL_0020:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1549>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1550>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralE180D8C3081CA73C38765C09DC6B11815E2D749F, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1550>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1551>
 		return;
 	}
 
 IL_004d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1554>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1555>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_9 = __this->___boxDataList;
 		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_tE7C5954DD0D271D0DC9DA0E606E1C53B69E71765_il2cpp_TypeInfo_var);
 		Func_2_t1F23BBCEB9985AB1B965EAD6395C13D204184337* L_10 = ((U3CU3Ec_tE7C5954DD0D271D0DC9DA0E606E1C53B69E71765_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_tE7C5954DD0D271D0DC9DA0E606E1C53B69E71765_il2cpp_TypeInfo_var))->___U3CU3E9__105_0;
@@ -25248,7 +25255,7 @@ IL_0072:
 		int32_t L_15;
 		L_15 = Enumerable_Count_TisBoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB_m61D158F4AB1E634451B2F8F3B354613ACC79A5C7(G_B8_1, G_B8_0, Enumerable_Count_TisBoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB_m61D158F4AB1E634451B2F8F3B354613ACC79A5C7_RuntimeMethod_var);
 		V_1 = L_15;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1555>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1556>
 		int32_t L_16 = V_1;
 		if (L_16)
 		{
@@ -25256,23 +25263,23 @@ IL_0072:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1557>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1558>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral204B7180BE7248974A10D552DDE321E1C593408B, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1558>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1559>
 		return;
 	}
 
 IL_0086:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1562>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1563>
 		RuntimeObject* L_17;
 		L_17 = NumberGrid_PowerupTimerLoop_m6B2D5D9FE2E225DB4A6C6EFEA440A9E49919312A(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_18;
 		L_18 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_17, NULL);
 		__this->___powerupTimerCoroutine = L_18;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___powerupTimerCoroutine), (void*)L_18);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1563>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1564>
 		int32_t L_19 = V_1;
 		int32_t L_20 = L_19;
 		RuntimeObject* L_21 = Box(il2cpp_defaults.int32_class, &L_20);
@@ -25280,21 +25287,21 @@ IL_0086:
 		L_22 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralDAE71E75BE6D63BDD12D7B4F88C614F8E60546CF, L_21, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_22, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1564>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1565>
 		return;
 	}
 }
-// Method Definition Index: 66425
+// Method Definition Index: 66427
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_RestartPowerupTimer_mDD6E30C40D396EF1D0342728FD7DE097231826B9 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1571>
-		NumberGrid_StartPowerupTimer_mADC8F0522C2482E6D41C680051EB5305AADF174B(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1572>
+		NumberGrid_StartPowerupTimer_mADC8F0522C2482E6D41C680051EB5305AADF174B(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1573>
 		return;
 	}
 }
-// Method Definition Index: 66426
+// Method Definition Index: 66428
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_StopPowerupTimer_m8A7856C6812DA3EE30035001F14FD137ADF6F67F (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25305,7 +25312,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_StopPowerupTimer_m8A7856C6812
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1579>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1580>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_0 = __this->___powerupTimerCoroutine;
 		if (!L_0)
 		{
@@ -25313,17 +25320,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_StopPowerupTimer_m8A7856C6812
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1581>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1582>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_1 = __this->___powerupTimerCoroutine;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1582>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1583>
 		__this->___powerupTimerCoroutine = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___powerupTimerCoroutine), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
 	}
 
 IL_001b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1586>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1587>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_2 = __this->___currentlyVisiblePowerup;
 		if (!L_2)
 		{
@@ -25331,14 +25338,14 @@ IL_001b:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1588>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1589>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_3 = __this->___currentlyVisiblePowerup;
 		NumberGrid_HidePowerup_mB0F295063AD94BE6CA700869DAB60970C27D0516(__this, L_3, NULL);
 	}
 
 IL_002f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1592>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1593>
 		Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* L_4 = __this->___powerupTimerSlider;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_5;
@@ -25349,11 +25356,11 @@ IL_002f:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1594>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1595>
 		Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* L_6 = __this->___powerupTimerSlider;
 		NullCheck(L_6);
 		VirtualActionInvoker1< float >::Invoke(47, L_6, (0.0f));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1595>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1596>
 		Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* L_7 = __this->___powerupTimerSlider;
 		NullCheck(L_7);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8;
@@ -25364,7 +25371,7 @@ IL_002f:
 
 IL_005e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1597>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1598>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_9 = __this->___powerupTimerText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
@@ -25375,11 +25382,11 @@ IL_005e:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1599>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1600>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_11 = __this->___powerupTimerText;
 		NullCheck(L_11);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_11, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1600>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1601>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_12 = __this->___powerupTimerText;
 		NullCheck(L_12);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_13;
@@ -25390,11 +25397,11 @@ IL_005e:
 
 IL_008d:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1602>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1603>
 		return;
 	}
 }
-// Method Definition Index: 66427
+// Method Definition Index: 66429
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* NumberGrid_PowerupTimerLoop_m6B2D5D9FE2E225DB4A6C6EFEA440A9E49919312A (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25413,7 +25420,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* NumberGrid_PowerupTimerLoop_m6
 		return L_1;
 	}
 }
-// Method Definition Index: 66428
+// Method Definition Index: 66430
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_ShowPowerup_mD310BC13CFFCDD790543330FB0E52F98B26E75FB (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* ___0_powerupBox, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25444,7 +25451,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_ShowPowerup_mD310BC13CFFCDD79
 	memset((&V_6), 0, sizeof(V_6));
 	int32_t V_7 = 0;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1673>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1674>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_0 = ___0_powerupBox;
 		if (!L_0)
 		{
@@ -25463,21 +25470,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_ShowPowerup_mD310BC13CFFCDD79
 
 IL_000b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1673>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1674>
 		return;
 	}
 
 IL_000c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1675>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1676>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_3 = ___0_powerupBox;
 		__this->___currentlyVisiblePowerup = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentlyVisiblePowerup), (void*)L_3);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1676>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1677>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_4 = ___0_powerupBox;
 		NullCheck(L_4);
 		L_4->___isPowerupVisible = (bool)1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1679>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1680>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_5 = ___0_powerupBox;
 		NullCheck(L_5);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_6 = L_5->___powerupImage;
@@ -25490,7 +25497,7 @@ IL_000c:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1682>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1683>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_8 = ___0_powerupBox;
 		NullCheck(L_8);
 		Tweener_tD38633F1A42EDF47A73CE3BF1894D946E830E140* L_9 = L_8->___powerupAnimation;
@@ -25500,7 +25507,7 @@ IL_000c:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1684>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1685>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_10 = ___0_powerupBox;
 		NullCheck(L_10);
 		Tweener_tD38633F1A42EDF47A73CE3BF1894D946E830E140* L_11 = L_10->___powerupAnimation;
@@ -25509,7 +25516,7 @@ IL_000c:
 
 IL_003c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1688>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1689>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_12 = ___0_powerupBox;
 		NullCheck(L_12);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_13 = L_12->___powerupImage;
@@ -25520,11 +25527,11 @@ IL_003c:
 		L_15 = Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline(NULL);
 		NullCheck(L_14);
 		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_14, L_15, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1692>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1693>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1694>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1695>
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1696>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1697>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_16 = ___0_powerupBox;
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_17 = ___0_powerupBox;
 		NullCheck(L_17);
@@ -25553,7 +25560,7 @@ IL_003c:
 
 IL_008e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1700>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1701>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_27 = ___0_powerupBox;
 		NullCheck(L_27);
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_28 = L_27->___selectButton;
@@ -25566,7 +25573,7 @@ IL_008e:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1702>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1703>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_30 = ___0_powerupBox;
 		NullCheck(L_30);
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_31 = L_30->___selectButton;
@@ -25576,7 +25583,7 @@ IL_008e:
 
 IL_00a8:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1706>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1707>
 		Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* L_32 = __this->___powerupTimerSlider;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_33;
@@ -25587,18 +25594,18 @@ IL_00a8:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1708>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1709>
 		Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* L_34 = __this->___powerupTimerSlider;
 		NullCheck(L_34);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_35;
 		L_35 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_34, NULL);
 		NullCheck(L_35);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_35, (bool)1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1709>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1710>
 		Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* L_36 = __this->___powerupTimerSlider;
 		NullCheck(L_36);
 		VirtualActionInvoker1< float >::Invoke(47, L_36, (0.0f));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1712>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1713>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_37 = ___0_powerupBox;
 		NullCheck(L_37);
 		int32_t L_38 = L_37->___powerupSpriteIndex;
@@ -25635,13 +25642,13 @@ IL_00a8:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1715>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1716>
 		Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* L_48 = __this->___powerupTimerSlider;
 		NullCheck(L_48);
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_49;
 		L_49 = Slider_get_handleRect_mF6564572F3D7074E01D17661BD012F5987D328D9_inline(L_48, NULL);
 		V_0 = L_49;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1716>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1717>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_50 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_51;
@@ -25652,13 +25659,13 @@ IL_00a8:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1719>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1720>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_52 = V_0;
 		NullCheck(L_52);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_53;
 		L_53 = Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79(L_52, Component_GetComponent_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_mE74EE63C85A63FC34DCFC631BC229207B420BC79_RuntimeMethod_var);
 		V_1 = L_53;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1720>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1721>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_54 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_55;
@@ -25669,7 +25676,7 @@ IL_00a8:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1722>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1723>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_56 = V_1;
 		SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B* L_57 = __this->___powerupSprites;
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_58 = ___0_powerupBox;
@@ -25685,14 +25692,14 @@ IL_00a8:
 
 IL_014e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1726>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1727>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteralAC7554CBE5FFCEAB90D152F6EC34E4C23632F4B3, NULL);
 	}
 
 IL_0158:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1730>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1731>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_62 = __this->___sliderParent;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_63;
@@ -25703,7 +25710,7 @@ IL_0158:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1733>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1734>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_64 = __this->___sliderParent;
 		NullCheck(L_64);
 		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_65;
@@ -25713,7 +25720,7 @@ IL_0158:
 		float L_66;
 		L_66 = Rect_get_width_m620D67551372073C9C32C4C4624C2A5713F7F9A9_inline((&V_6), NULL);
 		float L_67 = __this->___referenceSliderParentWidth;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1734>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1735>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_68 = __this->___sliderParent;
 		NullCheck(L_68);
 		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_69;
@@ -25723,20 +25730,20 @@ IL_0158:
 		L_70 = Rect_get_height_mE1AA6C6C725CCD2D317BD2157396D3CF7D47C9D8_inline((&V_6), NULL);
 		float L_71 = __this->___referenceSliderParentHeight;
 		V_2 = ((float)(L_70/L_71));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1737>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1738>
 		float L_72 = V_2;
 		float L_73;
 		L_73 = Mathf_Min_m747CA71A9483CDB394B13BD0AD048EE17E48FFE4_inline(((float)(L_66/L_67)), L_72, NULL);
 		V_3 = L_73;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1740>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1741>
 		float L_74 = __this->___referenceHandleWidth;
 		float L_75 = V_3;
 		V_4 = ((float)il2cpp_codegen_multiply(L_74, L_75));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1741>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1742>
 		float L_76 = __this->___referenceHandleHeight;
 		float L_77 = V_3;
 		V_5 = ((float)il2cpp_codegen_multiply(L_76, L_77));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1742>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1743>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_78 = V_0;
 		float L_79 = V_4;
 		float L_80 = V_5;
@@ -25745,7 +25752,7 @@ IL_0158:
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_81), L_79, L_80, NULL);
 		NullCheck(L_78);
 		RectTransform_set_sizeDelta_mC9A980EA6036E6725EF24CEDF3EE80A9B2B50EE5(L_78, L_81, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1744>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1745>
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_82 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)5);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_83 = L_82;
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_84 = __this->___sliderParent;
@@ -25803,7 +25810,7 @@ IL_0158:
 
 IL_0236:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1748>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1749>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteralD7E70B85A8AFFB9B5B4C5F8A5597669F509B22B0, NULL);
 		goto IL_024c;
@@ -25811,14 +25818,14 @@ IL_0236:
 
 IL_0242:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1753>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1754>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral13077A72DCCFC2DF54F556A15F57EF62E1F09155, NULL);
 	}
 
 IL_024c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1757>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1758>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_108 = __this->___powerupTimerText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_109;
@@ -25829,14 +25836,14 @@ IL_024c:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1759>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1760>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_110 = __this->___powerupTimerText;
 		NullCheck(L_110);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_111;
 		L_111 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_110, NULL);
 		NullCheck(L_111);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_111, (bool)1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1760>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1761>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_112 = __this->___powerupTimerText;
 		float L_113 = __this->___powerupVisibleDuration;
 		int32_t L_114;
@@ -25850,7 +25857,7 @@ IL_024c:
 
 IL_028a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1763>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1764>
 		float L_116 = __this->___powerupVisibleDuration;
 		float L_117 = L_116;
 		RuntimeObject* L_118 = Box(il2cpp_defaults.single_class, &L_117);
@@ -25858,11 +25865,11 @@ IL_028a:
 		L_119 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteralA702B8DD1804441C8D9BF334FAA2AC1E4688BE8B, L_118, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_119, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1764>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1765>
 		return;
 	}
 }
-// Method Definition Index: 66429
+// Method Definition Index: 66431
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HidePowerup_mB0F295063AD94BE6CA700869DAB60970C27D0516 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* ___0_powerupBox, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -25875,7 +25882,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HidePowerup_mB0F295063AD94BE6
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1771>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1772>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_0 = ___0_powerupBox;
 		if (!L_0)
 		{
@@ -25894,13 +25901,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HidePowerup_mB0F295063AD94BE6
 
 IL_000b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1771>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1772>
 		return;
 	}
 
 IL_000c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1773>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1774>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_3 = __this->___currentlyVisiblePowerup;
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_4 = ___0_powerupBox;
 		if ((!(((RuntimeObject*)(BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB*)L_3) == ((RuntimeObject*)(BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB*)L_4))))
@@ -25909,18 +25916,18 @@ IL_000c:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1775>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1776>
 		__this->___currentlyVisiblePowerup = (BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentlyVisiblePowerup), (void*)(BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB*)NULL);
 	}
 
 IL_001c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1778>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1779>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_5 = ___0_powerupBox;
 		NullCheck(L_5);
 		L_5->___isPowerupVisible = (bool)0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1781>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1782>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_6 = ___0_powerupBox;
 		NullCheck(L_6);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_7 = L_6->___powerupImage;
@@ -25933,7 +25940,7 @@ IL_001c:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1784>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1785>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_9 = ___0_powerupBox;
 		NullCheck(L_9);
 		Tweener_tD38633F1A42EDF47A73CE3BF1894D946E830E140* L_10 = L_9->___powerupAnimation;
@@ -25943,12 +25950,12 @@ IL_001c:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1786>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1787>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_11 = ___0_powerupBox;
 		NullCheck(L_11);
 		Tweener_tD38633F1A42EDF47A73CE3BF1894D946E830E140* L_12 = L_11->___powerupAnimation;
 		TweenExtensions_Kill_mFFDE4DE45D8A91C357ABFF2F8FA95D412924F466(L_12, (bool)0, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1787>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1788>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_13 = ___0_powerupBox;
 		NullCheck(L_13);
 		L_13->___powerupAnimation = (Tweener_tD38633F1A42EDF47A73CE3BF1894D946E830E140*)NULL;
@@ -25957,7 +25964,7 @@ IL_001c:
 
 IL_004c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1791>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1792>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_14 = ___0_powerupBox;
 		NullCheck(L_14);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_15 = L_14->___powerupImage;
@@ -25972,7 +25979,7 @@ IL_004c:
 
 IL_0061:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1798>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1799>
 		Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* L_18 = __this->___powerupTimerSlider;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_19;
@@ -25983,11 +25990,11 @@ IL_0061:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1800>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1801>
 		Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* L_20 = __this->___powerupTimerSlider;
 		NullCheck(L_20);
 		VirtualActionInvoker1< float >::Invoke(47, L_20, (0.0f));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1801>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1802>
 		Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* L_21 = __this->___powerupTimerSlider;
 		NullCheck(L_21);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_22;
@@ -25998,7 +26005,7 @@ IL_0061:
 
 IL_0090:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1803>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1804>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_23 = __this->___powerupTimerText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_24;
@@ -26009,11 +26016,11 @@ IL_0090:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1805>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1806>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_25 = __this->___powerupTimerText;
 		NullCheck(L_25);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_25, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1806>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1807>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_26 = __this->___powerupTimerText;
 		NullCheck(L_26);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_27;
@@ -26024,14 +26031,14 @@ IL_0090:
 
 IL_00bf:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1809>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1810>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral3467606BD9B5537A36AB9F3484BB122C4DA816DB, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1810>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1811>
 		return;
 	}
 }
-// Method Definition Index: 66430
+// Method Definition Index: 66432
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_OnPowerupButtonClicked_mDE7425A34A7F4B2E148C2A541CF45EA2C7DD31EF (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* ___0_boxData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26039,7 +26046,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_OnPowerupButtonClicked_mDE742
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_IndexOf_m8F17A775B910AEECA020985E8B7CDD6795F50EFA_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_FindFirstObjectByType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mF766559530B489C0F2CD36609162D1A663352C63_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral607038CA3072ECB45BA2B0D50FF45AAC0A7E1CD8);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralF1931109114871491D4CC17080D1C503EE11A209);
@@ -26055,7 +26062,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_OnPowerupButtonClicked_mDE742
 	Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040* G_B20_0 = NULL;
 	Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040* G_B19_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1820>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1821>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_0 = ___0_boxData;
 		NullCheck(L_0);
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_1 = L_0->___selectButton;
@@ -26068,7 +26075,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_OnPowerupButtonClicked_mDE742
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1821>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1822>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_3 = ___0_boxData;
 		NullCheck(L_3);
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_4 = L_3->___selectButton;
@@ -26078,7 +26085,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_OnPowerupButtonClicked_mDE742
 
 IL_001a:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1823>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1824>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_5 = ___0_boxData;
 		NullCheck(L_5);
 		bool L_6 = L_5->___isSelected;
@@ -26088,13 +26095,13 @@ IL_001a:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1824>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1825>
 		return;
 	}
 
 IL_0023:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1826>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1827>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_7 = ___0_boxData;
 		NullCheck(L_7);
 		bool L_8 = L_7->___isPowerup;
@@ -26104,22 +26111,22 @@ IL_0023:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1827>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1828>
 		return;
 	}
 
 IL_002c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1830>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1831>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_9 = ___0_boxData;
 		__this->___lastTappedBoxData = L_9;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___lastTappedBoxData), (void*)L_9);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1832>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1833>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_10;
-		L_10 = Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40(Object_FindObjectOfType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mE5C677E730DDBC0DA49AF7F357BDE2DC9FF98C40_RuntimeMethod_var);
+		L_10 = Object_FindFirstObjectByType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mF766559530B489C0F2CD36609162D1A663352C63(Object_FindFirstObjectByType_TisGameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_mF766559530B489C0F2CD36609162D1A663352C63_RuntimeMethod_var);
 		V_0 = L_10;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1833>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1834>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_11 = V_0;
 		bool L_12;
 		L_12 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_11, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -26145,7 +26152,7 @@ IL_0045:
 IL_004b:
 	{
 		V_1 = G_B9_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1835>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1836>
 		String_t* L_15 = V_1;
 		bool L_16;
 		L_16 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_15, NULL);
@@ -26155,14 +26162,14 @@ IL_004b:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1837>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1838>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_17 = __this->___boxDataList;
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_18 = ___0_boxData;
 		NullCheck(L_17);
 		int32_t L_19;
 		L_19 = List_1_IndexOf_m8F17A775B910AEECA020985E8B7CDD6795F50EFA(L_17, L_18, List_1_IndexOf_m8F17A775B910AEECA020985E8B7CDD6795F50EFA_RuntimeMethod_var);
 		V_2 = L_19;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1838>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1839>
 		int32_t L_20 = V_2;
 		if ((((int32_t)L_20) == ((int32_t)(-1))))
 		{
@@ -26170,7 +26177,7 @@ IL_004b:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1841>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1842>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_21 = ___0_boxData;
 		NullCheck(L_21);
 		bool L_22 = L_21->___isPowerupVisible;
@@ -26180,13 +26187,13 @@ IL_004b:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1843>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1844>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralF1931109114871491D4CC17080D1C503EE11A209, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1844>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1845>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_23 = ___0_boxData;
 		NumberGrid_LockPowerup_mF278D8B3B4CD9099B9F6FC3D07CDF326BD7EC275(__this, L_23, 0, (-1), NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1845>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1846>
 		Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040* L_24 = __this->___OnBoxSelected;
 		Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040* L_25 = L_24;
 		if (L_25)
@@ -26214,13 +26221,13 @@ IL_0092:
 
 IL_00a4:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1846>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1847>
 		NumberGrid_CheckIfAllBoxesSelected_m7EE12261BEDAAE06D50CD5161AAC9721C69A19DA(__this, NULL);
 	}
 
 IL_00aa:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1850>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1851>
 		int32_t L_30 = V_2;
 		int32_t L_31 = L_30;
 		RuntimeObject* L_32 = Box(il2cpp_defaults.int32_class, &L_31);
@@ -26231,7 +26238,7 @@ IL_00aa:
 		L_36 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral607038CA3072ECB45BA2B0D50FF45AAC0A7E1CD8, L_32, L_35, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_36, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1851>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1852>
 		String_t* L_37 = V_1;
 		int32_t L_38 = V_2;
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_39 = ___0_boxData;
@@ -26239,7 +26246,7 @@ IL_00aa:
 		int32_t L_40 = L_39->___number;
 		int32_t L_41 = __this->___tapSequence;
 		MatchmakingModel_EmitTapNumber_m34A4F000E69C0B03ED796E92F7D43287F8065F9D(L_37, L_38, L_40, L_41, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1852>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1853>
 		int32_t L_42 = __this->___tapSequence;
 		__this->___tapSequence = ((int32_t)il2cpp_codegen_add(L_42, 1));
 		return;
@@ -26247,7 +26254,7 @@ IL_00aa:
 
 IL_00ec:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1858>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1859>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_43 = ___0_boxData;
 		NullCheck(L_43);
 		bool L_44 = L_43->___isPowerupVisible;
@@ -26257,13 +26264,13 @@ IL_00ec:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1860>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1861>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralF4DD04267843389DCF8E57C25C1F50ED8349FECF, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1861>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1862>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_45 = ___0_boxData;
 		NumberGrid_LockPowerup_mF278D8B3B4CD9099B9F6FC3D07CDF326BD7EC275(__this, L_45, 0, (-1), NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1862>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1863>
 		Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040* L_46 = __this->___OnBoxSelected;
 		Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040* L_47 = L_46;
 		if (L_47)
@@ -26291,17 +26298,17 @@ IL_0113:
 
 IL_0125:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1863>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1864>
 		NumberGrid_CheckIfAllBoxesSelected_m7EE12261BEDAAE06D50CD5161AAC9721C69A19DA(__this, NULL);
 	}
 
 IL_012b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1866>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1867>
 		return;
 	}
 }
-// Method Definition Index: 66431
+// Method Definition Index: 66433
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NumberGrid_SelectPowerup_m0147E2CC6EED4E355AFE3B6BF5C54930A7D5F624 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_boxObject, int32_t ___1_playerType, int32_t ___2_cpuIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26333,7 +26340,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NumberGrid_SelectPowerup_m0147E2CC6EED4E
 		NullCheck(L_1);
 		L_1->___boxObject = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___boxObject), (void*)L_2);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1874>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1875>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_3 = __this->___boxDataList;
 		U3CU3Ec__DisplayClass112_0_t6A9684776C626B6624BA75CE85CDB369765F5CBE* L_4 = V_0;
 		Predicate_1_t0AF02329A07629DCA46FC505038EF8D1DCE8DFFB* L_5 = (Predicate_1_t0AF02329A07629DCA46FC505038EF8D1DCE8DFFB*)il2cpp_codegen_object_new(Predicate_1_t0AF02329A07629DCA46FC505038EF8D1DCE8DFFB_il2cpp_TypeInfo_var);
@@ -26342,7 +26349,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NumberGrid_SelectPowerup_m0147E2CC6EED4E
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_6;
 		L_6 = List_1_Find_mC96D94E371E8CE90F902EB4C6AD9B52D1E80B9F0(L_3, L_5, List_1_Find_mC96D94E371E8CE90F902EB4C6AD9B52D1E80B9F0_RuntimeMethod_var);
 		V_1 = L_6;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1875>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1876>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_7 = V_1;
 		if (L_7)
 		{
@@ -26350,16 +26357,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NumberGrid_SelectPowerup_m0147E2CC6EED4E
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1877>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1878>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteralF8438DE7B23D1DA4088A3A73CC27029E7F3B2F4E, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1878>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1879>
 		return (bool)0;
 	}
 
 IL_0034:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1881>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1882>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_8 = V_1;
 		NullCheck(L_8);
 		bool L_9 = L_8->___isSelected;
@@ -26369,16 +26376,16 @@ IL_0034:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1883>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1884>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral870E8E0C34E0F7908E9731E2DE7F8EC2823FCA39, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1884>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1885>
 		return (bool)0;
 	}
 
 IL_0048:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1887>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1888>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_10 = V_1;
 		NullCheck(L_10);
 		bool L_11 = L_10->___isPowerup;
@@ -26388,16 +26395,16 @@ IL_0048:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1889>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1890>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral064235BD69CF539016B24A9FE229EEA828F333A1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1890>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1891>
 		return (bool)0;
 	}
 
 IL_005c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1893>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1894>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_12 = V_1;
 		NullCheck(L_12);
 		bool L_13 = L_12->___isPowerupVisible;
@@ -26407,21 +26414,21 @@ IL_005c:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1895>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1896>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral590CCEE2BAFEE2DCB5196FBE8FAF452DF596CF0D, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1896>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1897>
 		return (bool)0;
 	}
 
 IL_0070:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1900>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1901>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_14 = V_1;
 		int32_t L_15 = ___1_playerType;
 		int32_t L_16 = ___2_cpuIndex;
 		NumberGrid_LockPowerup_mF278D8B3B4CD9099B9F6FC3D07CDF326BD7EC275(__this, L_14, L_15, L_16, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1903>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1904>
 		Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040* L_17 = __this->___OnBoxSelected;
 		Action_3_tFF32E2FAF2711C25B32A22A37112D4E695F18040* L_18 = L_17;
 		if (L_18)
@@ -26449,7 +26456,7 @@ IL_0085:
 
 IL_0097:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1905>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1906>
 		int32_t L_23 = ___1_playerType;
 		int32_t L_24 = L_23;
 		RuntimeObject* L_25 = Box(PlayerType_t655131647DCA96C399D79421E8ADA471E8C11990_il2cpp_TypeInfo_var, &L_24);
@@ -26457,13 +26464,13 @@ IL_0097:
 		L_26 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral5E0C854371725CC61EEFA352C3A9E78DC4BB7F78, L_25, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_26, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1908>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1909>
 		NumberGrid_CheckIfAllBoxesSelected_m7EE12261BEDAAE06D50CD5161AAC9721C69A19DA(__this, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1910>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1911>
 		return (bool)1;
 	}
 }
-// Method Definition Index: 66432
+// Method Definition Index: 66434
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_LockPowerup_mF278D8B3B4CD9099B9F6FC3D07CDF326BD7EC275 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* ___0_boxData, int32_t ___1_playerType, int32_t ___2_cpuIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26478,7 +26485,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_LockPowerup_mF278D8B3B4CD9099
 	int32_t G_B6_0 = 0;
 	BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* G_B6_1 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1918>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1919>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_0 = ___0_boxData;
 		if (!L_0)
 		{
@@ -26497,22 +26504,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_LockPowerup_mF278D8B3B4CD9099
 
 IL_000b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1918>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1919>
 		return;
 	}
 
 IL_000c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1921>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1922>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_3 = ___0_boxData;
 		NullCheck(L_3);
 		L_3->___isSelected = (bool)1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1922>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1923>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_4 = ___0_boxData;
 		int32_t L_5 = ___1_playerType;
 		NullCheck(L_4);
 		L_4->___selectedByPlayer = L_5;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1923>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1924>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_6 = ___0_boxData;
 		int32_t L_7 = ___1_playerType;
 		if ((((int32_t)L_7) == ((int32_t)1)))
@@ -26539,15 +26546,15 @@ IL_0023:
 	{
 		NullCheck(G_B6_1);
 		G_B6_1->___selectedByCPUIndex = G_B6_0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1924>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1925>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_9 = ___0_boxData;
 		NullCheck(L_9);
 		L_9->___selectedInRollSum = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1925>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1926>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_10 = ___0_boxData;
 		NullCheck(L_10);
 		L_10->___selectedInRollId = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1928>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1929>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_11 = ___0_boxData;
 		NullCheck(L_11);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_12 = L_11->___powerupImage;
@@ -26560,7 +26567,7 @@ IL_0023:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1931>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1932>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_14 = ___0_boxData;
 		NullCheck(L_14);
 		Tweener_tD38633F1A42EDF47A73CE3BF1894D946E830E140* L_15 = L_14->___powerupAnimation;
@@ -26570,12 +26577,12 @@ IL_0023:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1933>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1934>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_16 = ___0_boxData;
 		NullCheck(L_16);
 		Tweener_tD38633F1A42EDF47A73CE3BF1894D946E830E140* L_17 = L_16->___powerupAnimation;
 		TweenExtensions_Kill_mFFDE4DE45D8A91C357ABFF2F8FA95D412924F466(L_17, (bool)0, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1934>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1935>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_18 = ___0_boxData;
 		NullCheck(L_18);
 		L_18->___powerupAnimation = (Tweener_tD38633F1A42EDF47A73CE3BF1894D946E830E140*)NULL;
@@ -26584,7 +26591,7 @@ IL_0023:
 
 IL_005f:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1938>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1939>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_19 = ___0_boxData;
 		NullCheck(L_19);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_20 = L_19->___powerupImage;
@@ -26599,7 +26606,7 @@ IL_005f:
 
 IL_0074:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1945>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1946>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_23 = ___0_boxData;
 		NullCheck(L_23);
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_24 = L_23->___selectButton;
@@ -26612,7 +26619,7 @@ IL_0074:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1947>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1948>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_26 = ___0_boxData;
 		NullCheck(L_26);
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_27 = L_26->___selectButton;
@@ -26622,7 +26629,7 @@ IL_0074:
 
 IL_008e:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1951>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1952>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_28 = ___0_boxData;
 		NullCheck(L_28);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_29 = L_28->___highlightImage;
@@ -26635,7 +26642,7 @@ IL_008e:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1953>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1954>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_31 = ___0_boxData;
 		NullCheck(L_31);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_32 = L_31->___highlightImage;
@@ -26648,7 +26655,7 @@ IL_008e:
 
 IL_00ad:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1957>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1958>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_34 = __this->___currentlyVisiblePowerup;
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_35 = ___0_boxData;
 		if ((!(((RuntimeObject*)(BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB*)L_34) == ((RuntimeObject*)(BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB*)L_35))))
@@ -26657,18 +26664,18 @@ IL_00ad:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1959>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1960>
 		__this->___currentlyVisiblePowerup = (BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentlyVisiblePowerup), (void*)(BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB*)NULL);
 	}
 
 IL_00bd:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1961>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1962>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_36 = ___0_boxData;
 		NullCheck(L_36);
 		L_36->___isPowerupVisible = (bool)0;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1964>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1965>
 		Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* L_37 = __this->___powerupTimerSlider;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_38;
@@ -26679,11 +26686,11 @@ IL_00bd:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1966>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1967>
 		Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* L_39 = __this->___powerupTimerSlider;
 		NullCheck(L_39);
 		VirtualActionInvoker1< float >::Invoke(47, L_39, (0.0f));
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1967>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1968>
 		Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* L_40 = __this->___powerupTimerSlider;
 		NullCheck(L_40);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_41;
@@ -26694,7 +26701,7 @@ IL_00bd:
 
 IL_00f3:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1969>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1970>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_42 = __this->___powerupTimerText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_43;
@@ -26705,11 +26712,11 @@ IL_00f3:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1971>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1972>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_44 = __this->___powerupTimerText;
 		NullCheck(L_44);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_44, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1972>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1973>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_45 = __this->___powerupTimerText;
 		NullCheck(L_45);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_46;
@@ -26720,11 +26727,11 @@ IL_00f3:
 
 IL_0122:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1974>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1975>
 		return;
 	}
 }
-// Method Definition Index: 66433
+// Method Definition Index: 66435
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_OnEnable_mEEC39DC082E60187188C031CF99AE383474AD879 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26734,7 +26741,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_OnEnable_mEEC39DC082E60187188
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1980>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1981>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_0 = __this->___boxDataList;
 		NullCheck(L_0);
 		int32_t L_1;
@@ -26745,7 +26752,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_OnEnable_mEEC39DC082E60187188
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1982>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1983>
 		RuntimeObject* L_2;
 		L_2 = NumberGrid_DelayedTimerStart_mDCCF21B2FFF589267C64CCAB40F005114119C8A6(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_3;
@@ -26754,11 +26761,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_OnEnable_mEEC39DC082E60187188
 
 IL_001b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1984>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1985>
 		return;
 	}
 }
-// Method Definition Index: 66434
+// Method Definition Index: 66436
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* NumberGrid_DelayedTimerStart_mDCCF21B2FFF589267C64CCAB40F005114119C8A6 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26777,17 +26784,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* NumberGrid_DelayedTimerStart_m
 		return L_1;
 	}
 }
-// Method Definition Index: 66435
+// Method Definition Index: 66437
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_OnDisable_m94288D42B447C1D689D7344AFF01487A0BDAE5B6 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2001>
-		NumberGrid_StopPowerupTimer_m8A7856C6812DA3EE30035001F14FD137ADF6F67F(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2002>
+		NumberGrid_StopPowerupTimer_m8A7856C6812DA3EE30035001F14FD137ADF6F67F(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2003>
 		return;
 	}
 }
-// Method Definition Index: 66436
+// Method Definition Index: 66438
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_OnDestroy_mC2A101279B0FD937CD669A778220FF04072F6B4D (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26806,35 +26813,35 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_OnDestroy_mC2A101279B0FD937CD
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2007>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2008>
 		Action_1_tA19AE6F29D6F84A3A59DF40AF45A6EEDB1E5DDC7* L_0 = (Action_1_tA19AE6F29D6F84A3A59DF40AF45A6EEDB1E5DDC7*)il2cpp_codegen_object_new(Action_1_tA19AE6F29D6F84A3A59DF40AF45A6EEDB1E5DDC7_il2cpp_TypeInfo_var);
 		Action_1__ctor_mCD16B7E66116AF63B35321795E078654DAFE2B8B(L_0, __this, (intptr_t)((void*)NumberGrid_HandleServerNumberLocked_m3161FAB587D5DB008C9BD115903BC8FEBDD58599_RuntimeMethod_var), NULL);
 		MatchmakingModel_remove_OnNumberLockedEvent_mBACE0B00FB28BEFBCA89D601C9B09E3712D96975(L_0, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2008>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2009>
 		Action_1_t0153C54893BA1F19BA8C8561E443C561A6CC9E82* L_1 = (Action_1_t0153C54893BA1F19BA8C8561E443C561A6CC9E82*)il2cpp_codegen_object_new(Action_1_t0153C54893BA1F19BA8C8561E443C561A6CC9E82_il2cpp_TypeInfo_var);
 		Action_1__ctor_m38AF51CDEFDA3C7CACE4B66774AD8A08E9A4C9BC(L_1, __this, (intptr_t)((void*)NumberGrid_HandleServerTapResult_mC28163570677B2E6A0C33B1409B590B4A02D37C3_RuntimeMethod_var), NULL);
 		MatchmakingModel_remove_OnTapResultEvent_mFCCC5153911890D35205CA2156EBC7FE11623D4E(L_1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2009>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2010>
 		Action_1_tDD81C7B2C17AF11D030AC91672C51E578E3FF540* L_2 = (Action_1_tDD81C7B2C17AF11D030AC91672C51E578E3FF540*)il2cpp_codegen_object_new(Action_1_tDD81C7B2C17AF11D030AC91672C51E578E3FF540_il2cpp_TypeInfo_var);
 		Action_1__ctor_mE44AF77B1D24925FEDEB2D8E28ABDDE9E04B0F4E(L_2, __this, (intptr_t)((void*)NumberGrid_HandleServerIconActivated_m2B25895357C2B135B8B6DB0235D672EE4EB5C2E8_RuntimeMethod_var), NULL);
 		MatchmakingModel_remove_OnIconActivatedEvent_m07CDEB6009D9DBDA50816E5E1205C40CD627E50E(L_2, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2010>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2011>
 		Action_1_t13602DFAE78CF9587B8009BA1ED979A180F4CF85* L_3 = (Action_1_t13602DFAE78CF9587B8009BA1ED979A180F4CF85*)il2cpp_codegen_object_new(Action_1_t13602DFAE78CF9587B8009BA1ED979A180F4CF85_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA530F4E867BD08BE3591642D2B001C8525E59042(L_3, __this, (intptr_t)((void*)NumberGrid_HandleServerIconExpired_m827CCD419E30FC95A23AFCD696F6C0328109E11F_RuntimeMethod_var), NULL);
 		MatchmakingModel_remove_OnIconExpiredEvent_mF32B919659EAFE4ACD3D645D88E346D8BC52758B(L_3, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2011>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2012>
 		Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A* L_4 = (Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A*)il2cpp_codegen_object_new(Action_1_t3CB5D1A819C3ED3F99E9E39F890F18633253949A_il2cpp_TypeInfo_var);
 		Action_1__ctor_m9DC2953C55C4D7D4B7BEFE03D84DA1F9362D652C(L_4, __this, (intptr_t)((void*)NumberGrid_HandleSocketError_m4DD08EB1ADDF40C8C036D2E11DD7BC867F152737_RuntimeMethod_var), NULL);
 		MatchmakingModel_remove_OnSocketErrorEvent_mC54AF576663291BFCF15E7F01F27C3C25E4B2635(L_4, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2013>
-		NumberGrid_StopPowerupTimer_m8A7856C6812DA3EE30035001F14FD137ADF6F67F(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2014>
-		NumberGrid_ClearGrid_m8E6B453E493D61754D4D688BC6B5C00799E2172A(__this, NULL);
+		NumberGrid_StopPowerupTimer_m8A7856C6812DA3EE30035001F14FD137ADF6F67F(__this, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2015>
+		NumberGrid_ClearGrid_m8E6B453E493D61754D4D688BC6B5C00799E2172A(__this, NULL);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2016>
 		return;
 	}
 }
-// Method Definition Index: 66437
+// Method Definition Index: 66439
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleServerIconActivated_m2B25895357C2B135B8B6DB0235D672EE4EB5C2E8 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, IconActivatedData_tC24C23609CCD9394E07C9759A3E867AFA2133D33* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26848,7 +26855,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleServerIconActivated_m2B
 	}
 	BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* V_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2024>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2025>
 		IconActivatedData_tC24C23609CCD9394E07C9759A3E867AFA2133D33* L_0 = ___0_data;
 		NullCheck(L_0);
 		int32_t L_1 = L_0->___index;
@@ -26871,7 +26878,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleServerIconActivated_m2B
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2026>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2027>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_6 = __this->___boxDataList;
 		IconActivatedData_tC24C23609CCD9394E07C9759A3E867AFA2133D33* L_7 = ___0_data;
 		NullCheck(L_7);
@@ -26880,7 +26887,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleServerIconActivated_m2B
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_9;
 		L_9 = List_1_get_Item_m9527D866E2BA1DB2A4AF528184943E80CC068857(L_6, L_8, List_1_get_Item_m9527D866E2BA1DB2A4AF528184943E80CC068857_RuntimeMethod_var);
 		V_0 = L_9;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2027>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2028>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_10 = V_0;
 		NullCheck(L_10);
 		bool L_11 = L_10->___isPowerup;
@@ -26899,7 +26906,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleServerIconActivated_m2B
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2029>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2030>
 		IconActivatedData_tC24C23609CCD9394E07C9759A3E867AFA2133D33* L_14 = ___0_data;
 		NullCheck(L_14);
 		int32_t L_15 = L_14->___index;
@@ -26914,10 +26921,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleServerIconActivated_m2B
 		L_22 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral0A4F158688156CE67F7334FB0516936EAC9A8F26, L_17, L_21, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_22, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2030>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2031>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_23 = V_0;
 		NumberGrid_ShowPowerup_mD310BC13CFFCDD790543330FB0E52F98B26E75FB(__this, L_23, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2033>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2034>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_24 = __this->___serverPowerupUIUpdateCoroutine;
 		if (!L_24)
 		{
@@ -26925,14 +26932,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleServerIconActivated_m2B
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2033>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2034>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_25 = __this->___serverPowerupUIUpdateCoroutine;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_25, NULL);
 	}
 
 IL_0084:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2034>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2035>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_26 = V_0;
 		IconActivatedData_tC24C23609CCD9394E07C9759A3E867AFA2133D33* L_27 = ___0_data;
 		NullCheck(L_27);
@@ -26947,11 +26954,11 @@ IL_0084:
 
 IL_00a4:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2037>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2038>
 		return;
 	}
 }
-// Method Definition Index: 66438
+// Method Definition Index: 66440
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleServerIconExpired_m827CCD419E30FC95A23AFCD696F6C0328109E11F (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, IconExpiredData_tB9EE1B110CB5D87404F73172A83429C4C2D1F4B5* ___0_data, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -26965,7 +26972,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleServerIconExpired_m827C
 	}
 	BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* V_0 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2044>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2045>
 		IconExpiredData_tB9EE1B110CB5D87404F73172A83429C4C2D1F4B5* L_0 = ___0_data;
 		NullCheck(L_0);
 		int32_t L_1 = L_0->___index;
@@ -26988,7 +26995,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleServerIconExpired_m827C
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2046>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2047>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_6 = __this->___boxDataList;
 		IconExpiredData_tB9EE1B110CB5D87404F73172A83429C4C2D1F4B5* L_7 = ___0_data;
 		NullCheck(L_7);
@@ -26997,7 +27004,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleServerIconExpired_m827C
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_9;
 		L_9 = List_1_get_Item_m9527D866E2BA1DB2A4AF528184943E80CC068857(L_6, L_8, List_1_get_Item_m9527D866E2BA1DB2A4AF528184943E80CC068857_RuntimeMethod_var);
 		V_0 = L_9;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2047>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2048>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_10 = __this->___currentlyVisiblePowerup;
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_11 = V_0;
 		if ((!(((RuntimeObject*)(BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB*)L_10) == ((RuntimeObject*)(BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB*)L_11))))
@@ -27006,7 +27013,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleServerIconExpired_m827C
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2049>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2050>
 		IconExpiredData_tB9EE1B110CB5D87404F73172A83429C4C2D1F4B5* L_12 = ___0_data;
 		NullCheck(L_12);
 		int32_t L_13 = L_12->___index;
@@ -27016,7 +27023,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleServerIconExpired_m827C
 		L_16 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral6F76E86779A21A2C139CD3A3125958CED7F28BE2, L_15, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_16, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2051>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2052>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_17 = __this->___serverPowerupUIUpdateCoroutine;
 		if (!L_17)
 		{
@@ -27024,17 +27031,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_HandleServerIconExpired_m827C
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2053>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2054>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_18 = __this->___serverPowerupUIUpdateCoroutine;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_18, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2054>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2055>
 		__this->___serverPowerupUIUpdateCoroutine = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___serverPowerupUIUpdateCoroutine), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
 	}
 
 IL_006c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2057>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2058>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_19 = V_0;
 		NullCheck(L_19);
 		bool L_20 = L_19->___isSelected;
@@ -27044,18 +27051,18 @@ IL_006c:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2059>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2060>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_21 = V_0;
 		NumberGrid_HidePowerup_mB0F295063AD94BE6CA700869DAB60970C27D0516(__this, L_21, NULL);
 	}
 
 IL_007b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2063>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2064>
 		return;
 	}
 }
-// Method Definition Index: 66439
+// Method Definition Index: 66441
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* NumberGrid_ServerPowerupUIUpdate_mFA0E4316DA23719454E8AC37C68AD1159F0045D3 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* ___0_boxData, float ___1_duration, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27083,16 +27090,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* NumberGrid_ServerPowerupUIUpda
 		return L_4;
 	}
 }
-// Method Definition Index: 66440
+// Method Definition Index: 66442
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* NumberGrid_GetOwnerId_m7C5CD5EEF69B3EBBB340B92B9051D22383AF9794 (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2101>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2102>
 		String_t* L_0 = __this->___ownerUserId;
 		return L_0;
 	}
 }
-// Method Definition Index: 66441
+// Method Definition Index: 66443
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_RestoreLockedIndices_m664CA8E52EDE2C89EE61CB101AE6C59E4685798E (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* ___0_indices, int32_t ___1_newScore, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27110,7 +27117,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_RestoreLockedIndices_m664CA8E
 	int32_t V_2 = 0;
 	BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* V_3 = NULL;
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2105>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2106>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_0 = ___0_indices;
 		if (!L_0)
 		{
@@ -27127,13 +27134,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid_RestoreLockedIndices_m664CA8E
 
 IL_000b:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2105>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2106>
 		return;
 	}
 
 IL_000c:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2107>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2108>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_2 = ___0_indices;
 		V_0 = L_2;
 		V_1 = 0;
@@ -27142,14 +27149,14 @@ IL_000c:
 
 IL_0015:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2107>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2108>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_3 = V_0;
 		int32_t L_4 = V_1;
 		NullCheck(L_3);
 		int32_t L_5 = L_4;
 		int32_t L_6 = (L_3)->GetAt(static_cast<il2cpp_array_size_t>(L_5));
 		V_2 = L_6;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2109>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2110>
 		int32_t L_7 = V_2;
 		if ((((int32_t)L_7) < ((int32_t)0)))
 		{
@@ -27168,14 +27175,14 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2111>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2112>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_11 = __this->___boxDataList;
 		int32_t L_12 = V_2;
 		NullCheck(L_11);
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_13;
 		L_13 = List_1_get_Item_m9527D866E2BA1DB2A4AF528184943E80CC068857(L_11, L_12, List_1_get_Item_m9527D866E2BA1DB2A4AF528184943E80CC068857_RuntimeMethod_var);
 		V_3 = L_13;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2112>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2113>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_14 = V_3;
 		if (!L_14)
 		{
@@ -27192,11 +27199,11 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2114>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2115>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_17 = V_3;
 		NullCheck(L_17);
 		L_17->___isSelected = (bool)1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2115>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2116>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_18 = V_3;
 		NullCheck(L_18);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_19 = L_18->___highlightImage;
@@ -27209,7 +27216,7 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2117>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2118>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_21 = V_3;
 		NullCheck(L_21);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_22 = L_21->___highlightImage;
@@ -27218,7 +27225,7 @@ IL_0015:
 		L_23 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_22, NULL);
 		NullCheck(L_23);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_23, (bool)1, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2119>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2120>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_24 = V_3;
 		NullCheck(L_24);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_25 = L_24->___highlightImage;
@@ -27252,7 +27259,7 @@ IL_0015:
 
 IL_00ba:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2121>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2122>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_39 = V_3;
 		NullCheck(L_39);
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_40 = L_39->___selectButton;
@@ -27265,7 +27272,7 @@ IL_00ba:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2123>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2124>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_42 = V_3;
 		NullCheck(L_42);
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_43 = L_42->___selectButton;
@@ -27281,7 +27288,7 @@ IL_00d4:
 
 IL_00d8:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2107>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2108>
 		int32_t L_45 = V_1;
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_46 = V_0;
 		NullCheck(L_46);
@@ -27291,7 +27298,7 @@ IL_00d8:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2128>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2129>
 		Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C* L_47 = ___0_indices;
 		NullCheck(L_47);
 		int32_t L_48 = ((int32_t)(((RuntimeArray*)L_47)->max_length));
@@ -27301,11 +27308,11 @@ IL_00d8:
 		L_51 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral2C56B1523ADB6FEFA276E21E9FB99387A9372640, L_49, L_50, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_51, NULL);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2129>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:2130>
 		return;
 	}
 }
-// Method Definition Index: 66442
+// Method Definition Index: 66444
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid__ctor_mCD0B30E3051AD205369B9DC50A06030FAA35A65C (NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27330,104 +27337,104 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid__ctor_mCD0B30E3051AD205369B9D
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:30>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:31>
 		SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B* L_0 = (SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B*)(SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B*)SZArrayNew(SpriteU5BU5D_tCEE379E10CAD9DBFA770B331480592548ED0EA1B_il2cpp_TypeInfo_var, (uint32_t)3);
 		__this->___powerupSprites = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___powerupSprites), (void*)L_0);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:33>
-		__this->___gridWidth = 5;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:34>
-		__this->___gridHeight = 5;
+		__this->___gridWidth = 5;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:35>
+		__this->___gridHeight = 5;
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:36>
 		__this->___spacingX = (18.2700005f);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:39>
-		__this->___paddingLeft = (20.0f);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:40>
-		__this->___paddingRight = (20.0f);
+		__this->___paddingLeft = (20.0f);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:41>
-		__this->___paddingTop = (20.0f);
+		__this->___paddingRight = (20.0f);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:42>
+		__this->___paddingTop = (20.0f);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:43>
 		__this->___paddingBottom = (20.0f);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:46>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:47>
 		__this->___referenceWidthValue = (1440.0f);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:48>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:49>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_1;
 		L_1 = Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline(NULL);
 		__this->___startPosition = L_1;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:51>
-		__this->___referenceCellSizeX = (218.800003f);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:52>
-		__this->___referenceCellSizeY = (216.5f);
+		__this->___referenceCellSizeX = (218.800003f);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:53>
+		__this->___referenceCellSizeY = (216.5f);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:54>
 		__this->___referenceFontSize = (60.0f);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:57>
-		__this->___referenceSliderParentWidth = (446.0f);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:58>
-		__this->___referenceSliderParentHeight = (110.0f);
+		__this->___referenceSliderParentWidth = (446.0f);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:59>
-		__this->___referenceHandleWidth = (144.690002f);
+		__this->___referenceSliderParentHeight = (110.0f);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:60>
+		__this->___referenceHandleWidth = (144.690002f);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:61>
 		__this->___referenceHandleHeight = (144.690002f);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:65>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:66>
 		__this->___scaleFactor = (1.0f);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:68>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:69>
 		__this->___numberTextName = _stringLiteralE0835D767BF60906366ADB2F17317099C7614140;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___numberTextName), (void*)_stringLiteralE0835D767BF60906366ADB2F17317099C7614140);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:69>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:70>
 		__this->___numberTextNameShadow = _stringLiteral08355B6FBA2ABA160645668E0C7AE5D902DCFFC5;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___numberTextNameShadow), (void*)_stringLiteral08355B6FBA2ABA160645668E0C7AE5D902DCFFC5);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:70>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:71>
 		__this->___powerupImageName = _stringLiteralB20B16B55393C1B2B9115F0F1C8FFC3E23011A69;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___powerupImageName), (void*)_stringLiteralB20B16B55393C1B2B9115F0F1C8FFC3E23011A69);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:71>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:72>
 		__this->___selectButtonName = _stringLiteral15336B1A6F9C9646FE53834F71AAC5CF27AC78EF;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___selectButtonName), (void*)_stringLiteral15336B1A6F9C9646FE53834F71AAC5CF27AC78EF);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:72>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:73>
 		__this->___highlightImageName = _stringLiteralCE38332EF9AE51C0A7F0BF519E0D9A83890236BF;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___highlightImageName), (void*)_stringLiteralCE38332EF9AE51C0A7F0BF519E0D9A83890236BF);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:73>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:74>
 		__this->___boxBackgroundImageName = _stringLiteral8F9E91069888938A0F7A195EBD3B0ACF30DCB931;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___boxBackgroundImageName), (void*)_stringLiteral8F9E91069888938A0F7A195EBD3B0ACF30DCB931);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:84>
-		__this->___powerupVisibleDuration = (5.0f);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:85>
-		__this->___minDelayBetweenPowerups = (3.0f);
+		__this->___powerupVisibleDuration = (5.0f);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:86>
+		__this->___minDelayBetweenPowerups = (3.0f);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:87>
 		__this->___maxDelayBetweenPowerups = (10.0f);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:109>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:110>
 		List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2* L_2 = (List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2*)il2cpp_codegen_object_new(List_1_t7FED8B7F28F7DD656026409A4813423574AB72D2_il2cpp_TypeInfo_var);
 		List_1__ctor_m919B7C2DC85916C5AF096164D1F3E5781363F562(L_2, List_1__ctor_m919B7C2DC85916C5AF096164D1F3E5781363F562_RuntimeMethod_var);
 		__this->___boxDataList = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___boxDataList), (void*)L_2);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:110>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:111>
 		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_3 = (List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B*)il2cpp_codegen_object_new(List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B_il2cpp_TypeInfo_var);
 		List_1__ctor_m447372C1EF7141193B93090A77395B786C72C7BC(L_3, List_1__ctor_m447372C1EF7141193B93090A77395B786C72C7BC_RuntimeMethod_var);
 		__this->___instantiatedBoxes = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___instantiatedBoxes), (void*)L_3);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:122>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:123>
 		__this->___currentDiceSumPlayer = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:124>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:125>
 		__this->___currentDiceSumCPU = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:129>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:130>
 		Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180* L_4 = (Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180*)il2cpp_codegen_object_new(Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_m712893C2C48C47CCAFAD85A865C702E8D3D2B71F(L_4, Dictionary_2__ctor_m712893C2C48C47CCAFAD85A865C702E8D3D2B71F_RuntimeMethod_var);
 		__this->___cpuDiceSums = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___cpuDiceSums), (void*)L_4);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:130>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:131>
 		Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180* L_5 = (Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180*)il2cpp_codegen_object_new(Dictionary_2_tABE19B9C5C52F1DE14F0D3287B2696E7D7419180_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_m712893C2C48C47CCAFAD85A865C702E8D3D2B71F(L_5, Dictionary_2__ctor_m712893C2C48C47CCAFAD85A865C702E8D3D2B71F_RuntimeMethod_var);
 		__this->___cpuRollIds = L_5;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___cpuRollIds), (void*)L_5);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:133>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:134>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_6;
 		L_6 = Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_inline(NULL);
 		__this->___playerOutlineColor = L_6;
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:134>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:135>
 		Dictionary_2_tF298C776417E592A413E40D7A98FBA65E2C1D5B5* L_7 = (Dictionary_2_tF298C776417E592A413E40D7A98FBA65E2C1D5B5*)il2cpp_codegen_object_new(Dictionary_2_tF298C776417E592A413E40D7A98FBA65E2C1D5B5_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_m563E95550151C20767EC945950727AA15A925283(L_7, Dictionary_2__ctor_m563E95550151C20767EC945950727AA15A925283_RuntimeMethod_var);
 		__this->___cpuOutlineColors = L_7;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___cpuOutlineColors), (void*)L_7);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:140>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:141>
 		Random_t79716069EDE67D1D7734F60AE402D0CA3FB6B4C8* L_8 = (Random_t79716069EDE67D1D7734F60AE402D0CA3FB6B4C8*)il2cpp_codegen_object_new(Random_t79716069EDE67D1D7734F60AE402D0CA3FB6B4C8_il2cpp_TypeInfo_var);
 		Random__ctor_m151183BD4F021499A98B9DE8502DAD4B12DD16AC(L_8, NULL);
 		__this->___powerupRandom = L_8;
@@ -27444,17 +27451,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NumberGrid__ctor_mCD0B30E3051AD205369B9D
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66443
+// Method Definition Index: 66445
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BoxData__ctor_m9471D003191BAE8E2F1FCC0E4D30D0948C40A202 (BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:99>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:100>
 		__this->___powerupSpriteIndex = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:102>
-		__this->___selectedByCPUIndex = (-1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:103>
-		__this->___selectedInRollSum = (-1);
+		__this->___selectedByCPUIndex = (-1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:104>
+		__this->___selectedInRollSum = (-1);
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:105>
 		__this->___selectedInRollId = (-1);
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		return;
@@ -27518,7 +27525,7 @@ IL2CPP_EXTERN_C void GridItem_t30F423BB4BFA3D5F5DA067D098A0B38B654AE787_marshal_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66444
+// Method Definition Index: 66446
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_mEAFF775241BF5893E0CBE219E8E042592BCCD8B9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27535,7 +27542,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_mEAFF775241BF5893E0CBE219
 		return;
 	}
 }
-// Method Definition Index: 66445
+// Method Definition Index: 66447
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m4C29A447619724077F0D29EBDDCBE60369BD3268 (U3CU3Ec_tE7C5954DD0D271D0DC9DA0E606E1C53B69E71765* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27543,22 +27550,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m4C29A447619724077F0D29EBD
 		return;
 	}
 }
-// Method Definition Index: 66446
+// Method Definition Index: 66448
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CStartPowerupTimerU3Eb__105_0_m51440F0B80914E952806FBE8C36BCFA534E1AB9C (U3CU3Ec_tE7C5954DD0D271D0DC9DA0E606E1C53B69E71765* __this, BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* ___0_b, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1554>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1555>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_0 = ___0_b;
 		NullCheck(L_0);
 		bool L_1 = L_0->___isPowerup;
 		return L_1;
 	}
 }
-// Method Definition Index: 66447
+// Method Definition Index: 66449
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CPowerupTimerLoopU3Eb__108_0_m3B087D59D65543537304827B5F59719DE7ECC041 (U3CU3Ec_tE7C5954DD0D271D0DC9DA0E606E1C53B69E71765* __this, BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* ___0_b, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1616>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1617>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_0 = ___0_b;
 		NullCheck(L_0);
 		bool L_1 = L_0->___isPowerup;
@@ -27587,7 +27594,7 @@ IL_0012:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66448
+// Method Definition Index: 66450
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass112_0__ctor_mF17EB9EA2D83612D6176E942A72C193F126C61A8 (U3CU3Ec__DisplayClass112_0_t6A9684776C626B6624BA75CE85CDB369765F5CBE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27595,7 +27602,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass112_0__ctor_mF17EB9
 		return;
 	}
 }
-// Method Definition Index: 66449
+// Method Definition Index: 66451
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass112_0_U3CSelectPowerupU3Eb__0_m979437537CCB78F389F87D8887877AA3D6E9CE9E (U3CU3Ec__DisplayClass112_0_t6A9684776C626B6624BA75CE85CDB369765F5CBE* __this, BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* ___0_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27605,7 +27612,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass112_0_U3CSelectPowe
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1874>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1875>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_0 = ___0_b;
 		NullCheck(L_0);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = L_0->___boxObject;
@@ -27624,7 +27631,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass112_0_U3CSelectPowe
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66450
+// Method Definition Index: 66452
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass73_0__ctor_m060D8EA420A58B204D120B9829D57B9689438066 (U3CU3Ec__DisplayClass73_0_t11958C7544032F6A30EF57C42D0AE646360D8388* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27632,11 +27639,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass73_0__ctor_m060D8EA
 		return;
 	}
 }
-// Method Definition Index: 66451
+// Method Definition Index: 66453
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass73_0_U3CCreateNumberBoxU3Eb__0_mC9F32EA178D1921FA31373C620C100C5BDD6684B (U3CU3Ec__DisplayClass73_0_t11958C7544032F6A30EF57C42D0AE646360D8388* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:552>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:553>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_0 = __this->___U3CU3E4__this;
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_1 = __this->___boxData;
 		NullCheck(L_0);
@@ -27652,7 +27659,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass73_0_U3CCreateNumbe
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66452
+// Method Definition Index: 66454
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass74_0__ctor_m57694B412FBF5752AD5F76FCF2B4ED6A8C5548CC (U3CU3Ec__DisplayClass74_0_t939CD4305928BBF4DCB3A101B4EFE1B85F1BD0BF* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27660,11 +27667,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass74_0__ctor_m57694B4
 		return;
 	}
 }
-// Method Definition Index: 66453
+// Method Definition Index: 66455
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass74_0_U3CCreatePowerupBoxU3Eb__0_m11348A4E4FB416560CC8399880F8E7F0DE1C0564 (U3CU3Ec__DisplayClass74_0_t939CD4305928BBF4DCB3A101B4EFE1B85F1BD0BF* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:663>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:664>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_0 = __this->___U3CU3E4__this;
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_1 = __this->___boxData;
 		NullCheck(L_0);
@@ -27680,7 +27687,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass74_0_U3CCreatePower
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66454
+// Method Definition Index: 66456
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass94_0__ctor_mD738D6EC0D90A7F366233798CFD23A5E91191318 (U3CU3Ec__DisplayClass94_0_t5A9DC5FA5187B566806E46A0C6BAA2E0AB7C44B8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27688,7 +27695,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass94_0__ctor_mD738D6E
 		return;
 	}
 }
-// Method Definition Index: 66455
+// Method Definition Index: 66457
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass94_0_U3CSelectBoxU3Eb__0_mED15EB680CA97B8EEC06AC2878F485D8BD89C8EC (U3CU3Ec__DisplayClass94_0_t5A9DC5FA5187B566806E46A0C6BAA2E0AB7C44B8* __this, BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* ___0_b, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27698,7 +27705,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass94_0_U3CSelectBoxU3
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1240>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1241>
 		BoxData_t584180FE7D0D8A508B78C05C9C0F7BBE5BB56FCB* L_0 = ___0_b;
 		NullCheck(L_0);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = L_0->___boxObject;
@@ -27717,7 +27724,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec__DisplayClass94_0_U3CSelectBoxU3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 66456
+// Method Definition Index: 66458
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedTimerStartU3Ed__115__ctor_mFC8943C208DEFECCD11799DEB6A42CDFD1E5AA41 (U3CDelayedTimerStartU3Ed__115_t7CA8965B1A31AEF52865F726595E91B56CDBE6C3* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -27727,14 +27734,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedTimerStartU3Ed__115__ctor_mFC8
 		return;
 	}
 }
-// Method Definition Index: 66457
+// Method Definition Index: 66459
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedTimerStartU3Ed__115_System_IDisposable_Dispose_mB3D4710D9295307BAEBD567E4FBF8478BF0D4CA5 (U3CDelayedTimerStartU3Ed__115_t7CA8965B1A31AEF52865F726595E91B56CDBE6C3* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 66458
+// Method Definition Index: 66460
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CDelayedTimerStartU3Ed__115_MoveNext_m4C534866845E19C030C03EEADC87BD43D4AE6E24 (U3CDelayedTimerStartU3Ed__115_t7CA8965B1A31AEF52865F726595E91B56CDBE6C3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27770,7 +27777,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CDelayedTimerStartU3Ed__115_MoveNext_m
 IL_0017:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1991>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1992>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 1;
@@ -27780,7 +27787,7 @@ IL_0017:
 IL_002e:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1992>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1993>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_4 = V_1;
 		NullCheck(L_4);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_5 = L_4->___powerupTimerCoroutine;
@@ -27802,7 +27809,7 @@ IL_002e:
 		}
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1994>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1995>
 		NumberGrid_t24C470179F6A7CA1F9F044F40799C86323343487* L_9 = V_1;
 		NullCheck(L_9);
 		NumberGrid_StartPowerupTimer_mADC8F0522C2482E6D41C680051EB5305AADF174B(L_9, NULL);
@@ -27810,11 +27817,11 @@ IL_002e:
 
 IL_0051:
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1996>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/NumberGrid.cs:1997>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 66459
+// Method Definition Index: 66461
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedTimerStartU3Ed__115_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mC83D3E2A208DF1C87740E4E6AC9D32D818A5DEBF (U3CDelayedTimerStartU3Ed__115_t7CA8965B1A31AEF52865F726595E91B56CDBE6C3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27822,7 +27829,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedTimerStartU3Ed__115_
 		return L_0;
 	}
 }
-// Method Definition Index: 66460
+// Method Definition Index: 66462
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedTimerStartU3Ed__115_System_Collections_IEnumerator_Reset_m806C385B9187A0F4013130C737C45BFC5C8AD52F (U3CDelayedTimerStartU3Ed__115_t7CA8965B1A31AEF52865F726595E91B56CDBE6C3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27831,7 +27838,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CDelayedTimerStartU3Ed__115_System_Col
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CDelayedTimerStartU3Ed__115_System_Collections_IEnumerator_Reset_m806C385B9187A0F4013130C737C45BFC5C8AD52F_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 66461
+// Method Definition Index: 66463
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedTimerStartU3Ed__115_System_Collections_IEnumerator_get_Current_mC86FA54AF9879FA77231B0FA4F010D0A338ED363 (U3CDelayedTimerStartU3Ed__115_t7CA8965B1A31AEF52865F726595E91B56CDBE6C3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27842,7 +27849,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CDelayedTimerStartU3Ed__115_
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 76795
+// Method Definition Index: 76797
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___0_x, float ___1_y, float ___2_width, float ___3_height, const RuntimeMethod* method) 
 {
 	{
@@ -27857,7 +27864,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect__ctor_m18C3033D135097BE
 		return;
 	}
 }
-// Method Definition Index: 78489
+// Method Definition Index: 78491
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, float ___0_x, float ___1_y, const RuntimeMethod* method) 
 {
 	{
@@ -27868,7 +27875,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFF
 		return;
 	}
 }
-// Method Definition Index: 78369
+// Method Definition Index: 78371
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27882,7 +27889,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_0;
 	}
 }
-// Method Definition Index: 78379
+// Method Definition Index: 78381
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, float ___1_d, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -27905,7 +27912,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_9;
 	}
 }
-// Method Definition Index: 78449
+// Method Definition Index: 78451
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Min_m747CA71A9483CDB394B13BD0AD048EE17E48FFE4_inline (float ___0_a, float ___1_b, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -27942,7 +27949,7 @@ IL_000c:
 		return L_4;
 	}
 }
-// Method Definition Index: 78518
+// Method Definition Index: 78520
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Multiply_m2D984B613020089BF5165BA4CA10988E2DC771FE_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_a, float ___1_d, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -27961,7 +27968,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		return L_6;
 	}
 }
-// Method Definition Index: 65139
+// Method Definition Index: 65141
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR BackendAuthService_t71F3E2DE248AE9E4AEABCD45070901AE83DEE542* BackendAuthService_get_Instance_m74239149FFCCCF5A49AF965DCA0565780B051110_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27976,7 +27983,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR BackendAuthService_t71F3E2DE248AE
 		return L_0;
 	}
 }
-// Method Definition Index: 66630
+// Method Definition Index: 66632
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Name_mC2FF8F628463BB165429DADD4D06B7B8DF621276_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -27991,7 +27998,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Name_mC
 		return L_0;
 	}
 }
-// Method Definition Index: 65692
+// Method Definition Index: 65694
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* GameManager_get_Instance_m076FE4D98E785B5AEE0B4C360C7857F824E7FBD0_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28001,12 +28008,12 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GameManager_tFE129A0017AF5BBD30FD
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:14>
+		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Scripts/GameManager.cs:15>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_0 = ((GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 65120
+// Method Definition Index: 65122
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AvatarSelector_tDC4598CAB076DAC91AA8866DDADA6530BCD7DF4C* AvatarSelector_get_Instance_m24649C0486FBE07A36A2431B1AA28F8CB8BC20FE_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28021,7 +28028,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AvatarSelector_tDC4598CAB076DAC91
 		return L_0;
 	}
 }
-// Method Definition Index: 78213
+// Method Definition Index: 78215
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_inline (const RuntimeMethod* method) 
 {
 	{
@@ -28031,7 +28038,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 		return L_0;
 	}
 }
-// Method Definition Index: 78368
+// Method Definition Index: 78370
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28045,7 +28052,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_0;
 	}
 }
-// Method Definition Index: 78382
+// Method Definition Index: 78384
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Equality_mCDCBB8D2EDC3D3BF20F31A25ACB34705D352B479_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_lhs, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_rhs, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -28087,7 +28094,7 @@ IL_0043:
 		return L_19;
 	}
 }
-// Method Definition Index: 123597
+// Method Definition Index: 123598
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* Image_get_sprite_mB2AA377708722E100574F6F75BC102513BB3BCB1_inline (Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28096,7 +28103,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F
 		return L_0;
 	}
 }
-// Method Definition Index: 78467
+// Method Definition Index: 78469
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline (float ___0_value, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -28144,7 +28151,7 @@ IL_002d:
 		return L_5;
 	}
 }
-// Method Definition Index: 78331
+// Method Definition Index: 78333
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_Lerp_m3A906D0530A94FAABB94F0F905E84D99BE85C3F8_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, float ___2_t, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -28191,7 +28198,7 @@ IL_0064:
 		return L_24;
 	}
 }
-// Method Definition Index: 66217
+// Method Definition Index: 66219
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void LobbyModel_set_Configurations_mD6DA608B204A314308F6467EC9989144B50C17FE_inline (LobbyConfigU5BU5D_tC3F4948ACA699720D170B89FC9F0E31786F6E9B5* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28209,7 +28216,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void LobbyModel_set_Configuration
 		return;
 	}
 }
-// Method Definition Index: 66216
+// Method Definition Index: 66218
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR LobbyConfigU5BU5D_tC3F4948ACA699720D170B89FC9F0E31786F6E9B5* LobbyModel_get_Configurations_m2E9B73FA7EB5AC4A32D692549A438F38ACD03CEB_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28225,7 +28232,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR LobbyConfigU5BU5D_tC3F4948ACA6997
 		return L_0;
 	}
 }
-// Method Definition Index: 66219
+// Method Definition Index: 66221
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void LobbyModel_set_IsLoaded_m3630D0CF3FAD88448CCF0106D4C919C05642E8D0_inline (bool ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28248,7 +28255,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_Invoke_m7126A54DACA72
 	typedef void (*FunctionPointerType) (RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 123291
+// Method Definition Index: 123292
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline (Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28257,7 +28264,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ButtonClickedEvent_t8EA72E90B3BD1
 		return L_0;
 	}
 }
-// Method Definition Index: 66200
+// Method Definition Index: 66202
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR LobbyGameObjectData_t8598BBF8A6DF007144529A0494D17C1E7B055FA7* LobbyGameObjectUI_GetCurrentData_mF8FC071C0089CD88A1A4260EFA2988C111587DD3_inline (LobbyGameObjectUI_tAA7D05CB1E96C1F969841144DECD57900212CE7C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28266,7 +28273,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR LobbyGameObjectData_t8598BBF8A6DF
 		return L_0;
 	}
 }
-// Method Definition Index: 124358
+// Method Definition Index: 124359
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Selectable_get_interactable_m17DD0484DC62DCB4467109488D7A599BC85EC112_inline (Selectable_t3251808068A17B8E92FB33590A4C2FA66D456712* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28275,7 +28282,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Selectable_get_interactable_
 		return L_0;
 	}
 }
-// Method Definition Index: 124890
+// Method Definition Index: 124891
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 PointerEventData_get_position_m5BE71C28EB72EFB8435749E4E6E839213AEF458C_inline (PointerEventData_t9670F3C7D823CCB738A1604C72A1EB90292396FB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28284,7 +28291,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		return L_0;
 	}
 }
-// Method Definition Index: 78514
+// Method Definition Index: 78516
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_op_Subtraction_m44475FCDAD2DA2F98D78A6625EC2DCDFE8803837_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_a, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___1_b, const RuntimeMethod* method) 
 {
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -28305,7 +28312,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		return L_8;
 	}
 }
-// Method Definition Index: 78463
+// Method Definition Index: 78465
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_RoundToInt_m60F8B66CF27F1FA75AA219342BD184B75771EB4B_inline (float ___0_f, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28330,7 +28337,7 @@ IL_000c:
 		return L_2;
 	}
 }
-// Method Definition Index: 78466
+// Method Definition Index: 78468
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline (int32_t ___0_value, int32_t ___1_min, int32_t ___2_max, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -28381,7 +28388,7 @@ IL_001d:
 		return L_9;
 	}
 }
-// Method Definition Index: 78583
+// Method Definition Index: 78585
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector4__ctor_m96B2CD8B862B271F513AF0BDC2EABD58E4DBC813_inline (Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3* __this, float ___0_x, float ___1_y, float ___2_z, float ___3_w, const RuntimeMethod* method) 
 {
 	{
@@ -28396,7 +28403,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector4__ctor_m96B2CD8B862B2
 		return;
 	}
 }
-// Method Definition Index: 78451
+// Method Definition Index: 78453
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline (float ___0_a, float ___1_b, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -28433,7 +28440,7 @@ IL_000c:
 		return L_4;
 	}
 }
-// Method Definition Index: 66648
+// Method Definition Index: 66650
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Avatar_mE3D8C1BE3E6D46C3AE3837FA63789AA9A95EAEDD_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28448,7 +28455,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Avatar_
 		return L_0;
 	}
 }
-// Method Definition Index: 66658
+// Method Definition Index: 66660
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_ActiveMatchId_m7A9E15762CC732646485255598E1ADC4767F2D6E_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28463,7 +28470,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_ActiveM
 		return L_0;
 	}
 }
-// Method Definition Index: 66660
+// Method Definition Index: 66662
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_ActiveRoomId_mE902293884B9C2FAABF5DD4000F61B57999A7DDF_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28478,7 +28485,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_ActiveR
 		return L_0;
 	}
 }
-// Method Definition Index: 66794
+// Method Definition Index: 66796
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR SocketManager_tFA162C4D30D5A71D0A5F10FDA0CF83B2B1101650* SocketManager_get_Instance_mFAF3D466262B9D9A471AB4FF8165EACB053F8CBC_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28493,7 +28500,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR SocketManager_tFA162C4D30D5A71D0A
 		return L_0;
 	}
 }
-// Method Definition Index: 66628
+// Method Definition Index: 66630
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Id_mC58F20220F795613BEDA334EE4DB7A9B07CF79E0_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28508,7 +28515,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Id_mC58
 		return L_0;
 	}
 }
-// Method Definition Index: 66632
+// Method Definition Index: 66634
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Email_mB1FCCB0FD27F759C2D91D0893F83FEB2434E23B0_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28523,7 +28530,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Email_m
 		return L_0;
 	}
 }
-// Method Definition Index: 66634
+// Method Definition Index: 66636
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Wins_mD1410D5656E9C61B9CBDBF4AD94A35B882F6A097_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28538,7 +28545,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Wins_mD14
 		return L_0;
 	}
 }
-// Method Definition Index: 66636
+// Method Definition Index: 66638
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Losses_mC24BE66603B95A7B77C8CB5004A999B1FE200EB1_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28553,7 +28560,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Losses_mC
 		return L_0;
 	}
 }
-// Method Definition Index: 66638
+// Method Definition Index: 66640
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Balance_mF8AAC11F89C906B7F1E6FAB7C7C6C7E64DA4F46D_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28568,7 +28575,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Balance_m
 		return L_0;
 	}
 }
-// Method Definition Index: 66640
+// Method Definition Index: 66642
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_CashBalance_m0E3FB6888B6E28878E0F553CB0A96C2947BFEFAC_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28583,7 +28590,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_CashBalan
 		return L_0;
 	}
 }
-// Method Definition Index: 66642
+// Method Definition Index: 66644
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_BonusBalance_m8DF8D6BFA86F6BF8A939C1AADE06CD857F89F8B2_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28598,7 +28605,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_BonusBala
 		return L_0;
 	}
 }
-// Method Definition Index: 66644
+// Method Definition Index: 66646
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_WinningBalance_mD9CD207134E21A6C0489B6DAF228BC222BBE175D_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28613,7 +28620,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_WinningBa
 		return L_0;
 	}
 }
-// Method Definition Index: 66646
+// Method Definition Index: 66648
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Coins_m4C02B7FEEBA8E8E63B180510D565F9FA8B33F37A_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28628,7 +28635,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Coins_m4C
 		return L_0;
 	}
 }
-// Method Definition Index: 66650
+// Method Definition Index: 66652
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Xp_m05CA4268D9E61AA1A4EB92C38D7EC583C032E0FC_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28643,7 +28650,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Xp_m05CA4
 		return L_0;
 	}
 }
-// Method Definition Index: 66652
+// Method Definition Index: 66654
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Level_m3912D0CA3477275AFD84DA38B518F7C4A29E6E7F_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28658,7 +28665,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_Level_m39
 		return L_0;
 	}
 }
-// Method Definition Index: 66654
+// Method Definition Index: 66656
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Role_mEA9FBC07AAD94DB90AACD021D9163347300B235B_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28673,7 +28680,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* PlayerModel_get_Role_mE
 		return L_0;
 	}
 }
-// Method Definition Index: 66656
+// Method Definition Index: 66658
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_SelectedAvatarIndex_m52692425CF7D719B831AFBCC8015DE4B8B021C59_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28688,7 +28695,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerModel_get_SelectedA
 		return L_0;
 	}
 }
-// Method Definition Index: 66302
+// Method Definition Index: 66304
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void MatchmakingModel_set_IsSearching_mBF92CB55C677425D9708022BFE5218241C51C99F_inline (bool ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28722,7 +28729,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t SocketManager_get_State_m
 		return L_0;
 	}
 }
-// Method Definition Index: 66301
+// Method Definition Index: 66303
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool MatchmakingModel_get_IsSearching_mB7F7D264B87192D66A232C3FE5E1548D8EB8CE91_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28737,7 +28744,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool MatchmakingModel_get_IsSearc
 		return L_0;
 	}
 }
-// Method Definition Index: 76812
+// Method Definition Index: 76814
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_width_m620D67551372073C9C32C4C4624C2A5713F7F9A9_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28745,7 +28752,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_width_m620D6755137
 		return L_0;
 	}
 }
-// Method Definition Index: 76814
+// Method Definition Index: 76816
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_height_mE1AA6C6C725CCD2D317BD2157396D3CF7D47C9D8_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28753,7 +28760,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Rect_get_height_mE1AA6C6C72
 		return L_0;
 	}
 }
-// Method Definition Index: 78338
+// Method Definition Index: 78340
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, float ___0_x, float ___1_y, float ___2_z, const RuntimeMethod* method) 
 {
 	{
@@ -28766,7 +28773,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999E
 		return;
 	}
 }
-// Method Definition Index: 78525
+// Method Definition Index: 78527
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 Vector2_get_zero_m32506C40EC2EE7D5D4410BF40D3EE683A3D5F32C_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28780,7 +28787,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2D
 		return L_0;
 	}
 }
-// Method Definition Index: 78212
+// Method Definition Index: 78214
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_red_mA2E53E7173FDC97E68E335049AB0FAAEE43A844D_inline (const RuntimeMethod* method) 
 {
 	{
@@ -28790,7 +28797,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 		return L_0;
 	}
 }
-// Method Definition Index: 124410
+// Method Definition Index: 124411
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* Slider_get_handleRect_mF6564572F3D7074E01D17661BD012F5987D328D9_inline (Slider_t87EA570E3D6556CABF57456C2F3873FFD86E652F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28799,7 +28806,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RectTransform_t6C5DA5E41A89E0F488
 		return L_0;
 	}
 }
-// Method Definition Index: 78461
+// Method Definition Index: 78463
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_CeilToInt_mF2BF9F4261B3431DC20E10A46CFEEED103C48963_inline (float ___0_f, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28824,7 +28831,7 @@ IL_000c:
 		return L_2;
 	}
 }
-// Method Definition Index: 78177
+// Method Definition Index: 78179
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___0_r, float ___1_g, float ___2_b, float ___3_a, const RuntimeMethod* method) 
 {
 	{

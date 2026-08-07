@@ -1,3 +1,4 @@
+﻿#pragma warning disable 0414
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
@@ -63,7 +64,7 @@ public class OfferPanelManager : MonoBehaviour
         HideAllPanels();
         
         // Find AuthenticationManager in scene
-        authManager = FindObjectOfType<AuthenticationManager>();
+        authManager = FindFirstObjectByType<AuthenticationManager>();
         if (authManager != null)
         {
             authManager.OnAuthenticationSuccess += OnUserLoggedIn;
@@ -75,7 +76,7 @@ public class OfferPanelManager : MonoBehaviour
         }
         
         // Find DailyRewardManager in scene
-        dailyRewardManager = FindObjectOfType<DailyRewardManager>();
+        dailyRewardManager = FindFirstObjectByType<DailyRewardManager>();
         if (dailyRewardManager != null)
         {
             dailyRewardManager.OnDailyRewardPanelClosed += OnDailyRewardPanelClosed;

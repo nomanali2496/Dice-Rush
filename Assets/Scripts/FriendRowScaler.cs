@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
@@ -28,7 +28,7 @@ public class FriendRowScaler : MonoBehaviour
         // Auto-assign InviteFriendManager if not set
         if (inviteFriendManager == null)
         {
-            inviteFriendManager = FindObjectOfType<InviteFriendManager>();
+            inviteFriendManager = FindFirstObjectByType<InviteFriendManager>();
             if (inviteFriendManager != null)
             {
                 Debug.Log("[FriendRowScaler] Auto-assigned InviteFriendManager from scene");

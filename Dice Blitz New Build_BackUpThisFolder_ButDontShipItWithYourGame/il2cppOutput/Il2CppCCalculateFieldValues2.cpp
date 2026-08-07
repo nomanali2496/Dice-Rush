@@ -1230,7 +1230,6 @@ struct VolumeProfile_t9B5F2005F575A710F38A124EF81A6228CCACACE1;
 struct VolumeStack_t5DE94743BDB63D97EF5587DBDAE46468233F36E8;
 struct VrsLut_t58EBAF9472D85DBFCE03F06E8856F369F3415E7E;
 struct VrsResources_t5ED87EDD8FED7DD9728095BF4475457CC073CB86;
-struct WWW_tEADA9A43B98FC277E498F8E3206A3B8C4E5AF3FB;
 struct WaitForEndOfFrame_tE38D80923E3F8380069B423968C25ABE50A46663;
 struct WaitHandle_t08F8DB54593B241FE32E0DD0BD3D82785D3AE3D8;
 struct WarpTextExample_tB54C406E58B9D90FC49CD73B5FBF7FAFCCD3CD7E;
@@ -4536,8 +4535,7 @@ struct U3CLoadPictureFromUrlU3Ed__10_t18320EC23486317C6406BA587EB9AA6063B55A84  
 	RuntimeObject* ___U3CU3E2__current;
 	String_t* ___url;
 	RawImage_tFF12F7DB574FBDC1863CF607C7A12A5D9F8D6179* ___itemImage;
-	Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___U3CUserPictureU3E5__2;
-	WWW_tEADA9A43B98FC277E498F8E3206A3B8C4E5AF3FB* ___U3CwwwU3E5__3;
+	UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* ___U3CwwwU3E5__2;
 };
 struct U3CU3Ec__DisplayClass5_0_t64E0F62C2ECF411CA661790AFD6856240D1EBF8A  : public RuntimeObject
 {
@@ -4556,8 +4554,7 @@ struct U3CLoadPictureFromUrlU3Ed__6_t3150D82F3DC0D88A22B1B99C4F1691FB88033CE0  :
 	RuntimeObject* ___U3CU3E2__current;
 	String_t* ___url;
 	RawImage_tFF12F7DB574FBDC1863CF607C7A12A5D9F8D6179* ___itemImage;
-	Texture2D_tE6505BC111DD8A424A9DBE8E05D7D09E11FFFCF4* ___U3CUserPictureU3E5__2;
-	WWW_tEADA9A43B98FC277E498F8E3206A3B8C4E5AF3FB* ___U3CwwwU3E5__3;
+	UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* ___U3CwwwU3E5__2;
 };
 struct ShaderConstants_t39DF791BC3E467E90A77105ED9D45F2CB8E33D00  : public RuntimeObject
 {
@@ -37830,9 +37827,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8154[6] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8155[1] = 
 {
 	static_cast<int32_t>(offsetof(FBWindowsInitManager_t6CE7789E68FC5CDE6A9164B0B8D010DE826B31F8, ___Logger)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8156[6] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8156[5] = 
 {
-	static_cast<int32_t>(offsetof(U3CLoadPictureFromUrlU3Ed__10_t18320EC23486317C6406BA587EB9AA6063B55A84, ___U3CU3E1__state)),static_cast<int32_t>(offsetof(U3CLoadPictureFromUrlU3Ed__10_t18320EC23486317C6406BA587EB9AA6063B55A84, ___U3CU3E2__current)),static_cast<int32_t>(offsetof(U3CLoadPictureFromUrlU3Ed__10_t18320EC23486317C6406BA587EB9AA6063B55A84, ___url)),static_cast<int32_t>(offsetof(U3CLoadPictureFromUrlU3Ed__10_t18320EC23486317C6406BA587EB9AA6063B55A84, ___itemImage)),static_cast<int32_t>(offsetof(U3CLoadPictureFromUrlU3Ed__10_t18320EC23486317C6406BA587EB9AA6063B55A84, ___U3CUserPictureU3E5__2)),static_cast<int32_t>(offsetof(U3CLoadPictureFromUrlU3Ed__10_t18320EC23486317C6406BA587EB9AA6063B55A84, ___U3CwwwU3E5__3)),};
+	static_cast<int32_t>(offsetof(U3CLoadPictureFromUrlU3Ed__10_t18320EC23486317C6406BA587EB9AA6063B55A84, ___U3CU3E1__state)),static_cast<int32_t>(offsetof(U3CLoadPictureFromUrlU3Ed__10_t18320EC23486317C6406BA587EB9AA6063B55A84, ___U3CU3E2__current)),static_cast<int32_t>(offsetof(U3CLoadPictureFromUrlU3Ed__10_t18320EC23486317C6406BA587EB9AA6063B55A84, ___url)),static_cast<int32_t>(offsetof(U3CLoadPictureFromUrlU3Ed__10_t18320EC23486317C6406BA587EB9AA6063B55A84, ___itemImage)),static_cast<int32_t>(offsetof(U3CLoadPictureFromUrlU3Ed__10_t18320EC23486317C6406BA587EB9AA6063B55A84, ___U3CwwwU3E5__2)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8157[4] = 
 {
 	static_cast<int32_t>(offsetof(FBWindowsLoginManager_t7D3F2D62743ACFE0E57134C78B31BC00288FDFC3, ___Logger)),static_cast<int32_t>(offsetof(FBWindowsLoginManager_t7D3F2D62743ACFE0E57134C78B31BC00288FDFC3, ___Permissions)),static_cast<int32_t>(offsetof(FBWindowsLoginManager_t7D3F2D62743ACFE0E57134C78B31BC00288FDFC3, ___UserImage)),static_cast<int32_t>(offsetof(FBWindowsLoginManager_t7D3F2D62743ACFE0E57134C78B31BC00288FDFC3, ___UserName)),};
@@ -37848,9 +37845,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8160[2] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8161[3] = 
 {
 	static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass9_0_t7F2EFEBE4FFFC4C40EEDFAEDD0F56169321128B2, ___item)),static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass9_0_t7F2EFEBE4FFFC4C40EEDFAEDD0F56169321128B2, ___U3CU3E4__this)),static_cast<int32_t>(offsetof(U3CU3Ec__DisplayClass9_0_t7F2EFEBE4FFFC4C40EEDFAEDD0F56169321128B2, ___U3CU3E9__1)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8162[6] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8162[5] = 
 {
-	static_cast<int32_t>(offsetof(U3CLoadPictureFromUrlU3Ed__6_t3150D82F3DC0D88A22B1B99C4F1691FB88033CE0, ___U3CU3E1__state)),static_cast<int32_t>(offsetof(U3CLoadPictureFromUrlU3Ed__6_t3150D82F3DC0D88A22B1B99C4F1691FB88033CE0, ___U3CU3E2__current)),static_cast<int32_t>(offsetof(U3CLoadPictureFromUrlU3Ed__6_t3150D82F3DC0D88A22B1B99C4F1691FB88033CE0, ___url)),static_cast<int32_t>(offsetof(U3CLoadPictureFromUrlU3Ed__6_t3150D82F3DC0D88A22B1B99C4F1691FB88033CE0, ___itemImage)),static_cast<int32_t>(offsetof(U3CLoadPictureFromUrlU3Ed__6_t3150D82F3DC0D88A22B1B99C4F1691FB88033CE0, ___U3CUserPictureU3E5__2)),static_cast<int32_t>(offsetof(U3CLoadPictureFromUrlU3Ed__6_t3150D82F3DC0D88A22B1B99C4F1691FB88033CE0, ___U3CwwwU3E5__3)),};
+	static_cast<int32_t>(offsetof(U3CLoadPictureFromUrlU3Ed__6_t3150D82F3DC0D88A22B1B99C4F1691FB88033CE0, ___U3CU3E1__state)),static_cast<int32_t>(offsetof(U3CLoadPictureFromUrlU3Ed__6_t3150D82F3DC0D88A22B1B99C4F1691FB88033CE0, ___U3CU3E2__current)),static_cast<int32_t>(offsetof(U3CLoadPictureFromUrlU3Ed__6_t3150D82F3DC0D88A22B1B99C4F1691FB88033CE0, ___url)),static_cast<int32_t>(offsetof(U3CLoadPictureFromUrlU3Ed__6_t3150D82F3DC0D88A22B1B99C4F1691FB88033CE0, ___itemImage)),static_cast<int32_t>(offsetof(U3CLoadPictureFromUrlU3Ed__6_t3150D82F3DC0D88A22B1B99C4F1691FB88033CE0, ___U3CwwwU3E5__2)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable8163[4] = 
 {
 	static_cast<int32_t>(offsetof(FBWindowsPurchaseManager_t12C6B4F454009EC79F91E03134BBE00EC88E1A90, ___Logger)),static_cast<int32_t>(offsetof(FBWindowsPurchaseManager_t12C6B4F454009EC79F91E03134BBE00EC88E1A90, ___ProductGameObject)),static_cast<int32_t>(offsetof(FBWindowsPurchaseManager_t12C6B4F454009EC79F91E03134BBE00EC88E1A90, ___CatalogPanelTarnsform)),static_cast<int32_t>(offsetof(FBWindowsPurchaseManager_t12C6B4F454009EC79F91E03134BBE00EC88E1A90, ___PurchasesPanelTarnsform)),};
