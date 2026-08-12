@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -48,12 +48,20 @@ public class MatchRecoveryUIManager : MonoBehaviour
     {
         // When a game ends, we are definitely NOT in a recoverable state anymore.
         // Lock recovery checks for this session instance.
-        hasCheckedForRecovery = true; 
+        hasCheckedForRecovery = true;
+        isReconnecting = false;
+        if (recoveryPromptPanel != null) recoveryPromptPanel.SetActive(false);
     }
 
     private void HandleMatchFound(StartGameData data)
     {
-        // Hide loading panel once the game starts
+        // Hide recovery prompt and loading panel once match starts/rejoins
+        hasCheckedForRecovery = true;
+        isReconnecting = false;
+        if (recoveryPromptPanel != null)
+        {
+            recoveryPromptPanel.SetActive(false);
+        }
         if (loadingPanel != null)
         {
             loadingPanel.SetActive(false);
@@ -68,13 +76,25 @@ public class MatchRecoveryUIManager : MonoBehaviour
     {
         while (!hasCheckedForRecovery)
         {
+            if (mainMenuScreen == null)
+            {
+                mainMenuScreen = GameObject.Find("MainMenuScreen");
+                if (mainMenuScreen == null) mainMenuScreen = GameObject.Find("MainMenu");
+            }
+
             if (mainMenuScreen != null && mainMenuScreen.activeSelf)
             {
+                GameManager gm = FindFirstObjectByType<GameManager>();
+                if (gm != null && (gm.IsGameplayScreenActive || gm.IsActivelyPlaying))
+                {
+                    hasCheckedForRecovery = true;
+                    yield break;
+                }
+
                 // Only check if we haven't already shown it and data is likely loaded
-                if (!string.IsNullOrEmpty(PlayerModel.ActiveMatchId))
+                if (!string.IsNullOrEmpty(PlayerModel.ActiveMatchId) && !string.IsNullOrEmpty(PlayerModel.ActiveRoomId))
                 {
                     CheckForActiveMatch();
-                    hasCheckedForRecovery = true;
                     yield break;
                 }
             }
@@ -84,18 +104,30 @@ public class MatchRecoveryUIManager : MonoBehaviour
 
     private void CheckForActiveMatch()
     {
-        if (isReconnecting) return;
+        if (isReconnecting || hasCheckedForRecovery) return;
+        
+        // Auto-find Main Menu if unassigned in Inspector
+        if (mainMenuScreen == null)
+        {
+            mainMenuScreen = GameObject.Find("MainMenuScreen");
+            if (mainMenuScreen == null) mainMenuScreen = GameObject.Find("MainMenu");
+        }
         
         // Safeguard: Ensure Main Menu is active before showing the prompt
         if (mainMenuScreen != null && !mainMenuScreen.activeSelf) return;
         
         // Don't show the recovery prompt if we are actively playing a game!
         GameManager gm = FindFirstObjectByType<GameManager>();
-        if (gm != null && gm.IsGameplayScreenActive) return;
+        if (gm != null && (gm.IsGameplayScreenActive || gm.IsActivelyPlaying))
+        {
+            hasCheckedForRecovery = true;
+            return;
+        }
         
         if (!string.IsNullOrEmpty(PlayerModel.ActiveMatchId) && !string.IsNullOrEmpty(PlayerModel.ActiveRoomId))
         {
             Debug.Log($"[MatchRecoveryUI] Active match found locally: {PlayerModel.ActiveMatchId}. Showing Rejoin Prompt.");
+            hasCheckedForRecovery = true;
             if (recoveryPromptPanel != null)
             {
                 recoveryPromptPanel.SetActive(true);
@@ -108,6 +140,29 @@ public class MatchRecoveryUIManager : MonoBehaviour
         }
     }
 
+    private Coroutine loadingPanelTimeoutCoroutine;
+
+    private void ShowLoadingPanelWithTimeout()
+    {
+        if (loadingPanel != null)
+        {
+            loadingPanel.SetActive(true);
+            if (loadingPanelTimeoutCoroutine != null) StopCoroutine(loadingPanelTimeoutCoroutine);
+            loadingPanelTimeoutCoroutine = StartCoroutine(HideLoadingPanelAfterTimeout(2.5f));
+        }
+    }
+
+    private IEnumerator HideLoadingPanelAfterTimeout(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if (loadingPanel != null && loadingPanel.activeSelf)
+        {
+            Debug.Log("[MatchRecoveryUI] Hiding loading panel after safety timeout.");
+            loadingPanel.SetActive(false);
+        }
+        loadingPanelTimeoutCoroutine = null;
+    }
+
     private void OnRejoinClicked()
     {
         if (SoundManager.instance != null) SoundManager.instance.PlayTap();
@@ -115,7 +170,7 @@ public class MatchRecoveryUIManager : MonoBehaviour
         isReconnecting = true; // Lock the popup from reappearing
         
         if (recoveryPromptPanel != null) recoveryPromptPanel.SetActive(false);
-        if (loadingPanel != null) loadingPanel.SetActive(true);
+        ShowLoadingPanelWithTimeout();
         
         // Emit reconnectMatch to tell the server we want the state.
         // The server will reply with 'matchRecovered', which MatchmakingModel catches to start the game.
@@ -127,7 +182,7 @@ public class MatchRecoveryUIManager : MonoBehaviour
         if (SoundManager.instance != null) SoundManager.instance.PlayTap();
         
         if (recoveryPromptPanel != null) recoveryPromptPanel.SetActive(false);
-        if (loadingPanel != null) loadingPanel.SetActive(true); // Show loading until gameOver confirms forfeit
+        ShowLoadingPanelWithTimeout(); // Show loading until gameOver confirms forfeit
         
         if (SocketManager.Instance != null)
         {

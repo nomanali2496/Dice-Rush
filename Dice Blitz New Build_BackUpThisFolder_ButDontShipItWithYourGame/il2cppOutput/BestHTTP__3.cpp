@@ -1713,7 +1713,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Platform_Dispose_m8DC2FE7554311AD983C0C0
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/util/Platform.cs:198>
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = ___0_s;
 		NullCheck(L_0);
-		VirtualActionInvoker0::Invoke(18, L_0);
+		VirtualActionInvoker0::Invoke(19, L_0);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/util/Platform.cs:199>
 		return;
 	}
@@ -18678,7 +18678,7 @@ IL_0083:
 		NullCheck(L_22);
 		int32_t L_23 = L_22->___avail_out;
 		NullCheck(L_20);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_20, L_21, 0, ((int32_t)il2cpp_codegen_subtract(((int32_t)4192), L_23)));
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_20, L_21, 0, ((int32_t)il2cpp_codegen_subtract(((int32_t)4192), L_23)));
 	}
 
 IL_00b8:
@@ -18737,7 +18737,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ZDeflaterOutputStream_Flush_m259F2AA0C0F
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/util/zlib/ZDeflaterOutputStream.cs:108>
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->___outp;
 		NullCheck(L_0);
-		VirtualActionInvoker0::Invoke(20, L_0);
+		VirtualActionInvoker0::Invoke(21, L_0);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/util/zlib/ZDeflaterOutputStream.cs:109>
 		return;
 	}
@@ -18753,7 +18753,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ZDeflaterOutputStream_WriteByte_m127194C
 		(L_0)->SetAt(static_cast<il2cpp_array_size_t>(0), (uint8_t)L_1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/util/zlib/ZDeflaterOutputStream.cs:113>
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_2 = __this->___buf1;
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, __this, L_2, 0, 1);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, __this, L_2, 0, 1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/util/zlib/ZDeflaterOutputStream.cs:114>
 		return;
 	}
@@ -18830,7 +18830,7 @@ IL_005c:
 		NullCheck(L_16);
 		int32_t L_17 = L_16->___avail_out;
 		NullCheck(L_14);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_14, L_15, 0, ((int32_t)il2cpp_codegen_subtract(((int32_t)4192), L_17)));
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_14, L_15, 0, ((int32_t)il2cpp_codegen_subtract(((int32_t)4192), L_17)));
 	}
 
 IL_0093:
@@ -18855,7 +18855,7 @@ IL_0093:
 	}
 	{
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/util/zlib/ZDeflaterOutputStream.cs:130>
-		VirtualActionInvoker0::Invoke(20, __this);
+		VirtualActionInvoker0::Invoke(21, __this);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/util/zlib/ZDeflaterOutputStream.cs:131>
 		return;
 	}
@@ -19178,7 +19178,7 @@ IL_0029:
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_13 = __this->___buf;
 		NullCheck(L_12);
 		int32_t L_14;
-		L_14 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, L_12, L_13, 0, ((int32_t)4192));
+		L_14 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, L_12, L_13, 0, ((int32_t)4192));
 		NullCheck(L_11);
 		L_11->___avail_in = L_14;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/util/zlib/ZInflaterInputStream.cs:94>
@@ -19325,7 +19325,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ZInflaterInputStream_Flush_m9DCCC98F078B
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/util/zlib/ZInflaterInputStream.cs:113>
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->___inp;
 		NullCheck(L_0);
-		VirtualActionInvoker0::Invoke(20, L_0);
+		VirtualActionInvoker0::Invoke(21, L_0);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/util/zlib/ZInflaterInputStream.cs:114>
 		return;
 	}
@@ -19365,7 +19365,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ZInflaterInputStream_ReadByte_mC43FF6
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/util/zlib/ZInflaterInputStream.cs:137>
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = __this->___buf1;
 		int32_t L_1;
-		L_1 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, __this, L_0, 0, 1);
+		L_1 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, __this, L_0, 0, 1);
 		if ((((int32_t)L_1) > ((int32_t)0)))
 		{
 			goto IL_0013;
@@ -19800,7 +19800,7 @@ IL_0029:
 		NullCheck(L_14);
 		NullCheck(L_12);
 		int32_t L_15;
-		L_15 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, L_12, L_13, 0, ((int32_t)(((RuntimeArray*)L_14)->max_length)));
+		L_15 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, L_12, L_13, 0, ((int32_t)(((RuntimeArray*)L_14)->max_length)));
 		NullCheck(L_11);
 		L_11->___avail_in = L_15;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/util/zlib/ZInputStream.cs:185>
@@ -19990,7 +19990,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ZInputStream_ReadByte_m9DDDC59E47B8D7
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/util/zlib/ZInputStream.cs:212>
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = __this->___buf1;
 		int32_t L_1;
-		L_1 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, __this, L_0, 0, 1);
+		L_1 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, __this, L_0, 0, 1);
 		if ((((int32_t)L_1) > ((int32_t)0)))
 		{
 			goto IL_0013;
@@ -20330,7 +20330,7 @@ FINALLY_000b:
 				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/util/zlib/ZOutputStream.cs:154>
 				__this->___closed = (bool)1;
 				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/util/zlib/ZOutputStream.cs:155>
-				VirtualActionInvoker0::Invoke(38, __this);
+				VirtualActionInvoker0::Invoke(39, __this);
 				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/util/zlib/ZOutputStream.cs:156>
 				Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->___output;
 				il2cpp_codegen_runtime_class_init_inline(Platform_tC977DC2D832DA875FC4E0B00085E413B221ECCF2_il2cpp_TypeInfo_var);
@@ -20347,7 +20347,7 @@ FINALLY_000b:
 			try
 			{
 				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/util/zlib/ZOutputStream.cs:145>
-				VirtualActionInvoker0::Invoke(39, __this);
+				VirtualActionInvoker0::Invoke(40, __this);
 				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/util/zlib/ZOutputStream.cs:146>
 				goto IL_002b;
 			}
@@ -20560,7 +20560,7 @@ IL_0089:
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_22 = __this->___buf;
 		int32_t L_23 = V_1;
 		NullCheck(L_21);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_21, L_22, 0, L_23);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_21, L_22, 0, L_23);
 	}
 
 IL_00b5:
@@ -20585,7 +20585,7 @@ IL_00b5:
 	}
 	{
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/util/zlib/ZOutputStream.cs:198>
-		VirtualActionInvoker0::Invoke(20, __this);
+		VirtualActionInvoker0::Invoke(21, __this);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/util/zlib/ZOutputStream.cs:199>
 		return;
 	}
@@ -20597,7 +20597,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ZOutputStream_Flush_m4CA242B5304AE8ADB54
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/util/zlib/ZOutputStream.cs:203>
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->___output;
 		NullCheck(L_0);
-		VirtualActionInvoker0::Invoke(20, L_0);
+		VirtualActionInvoker0::Invoke(21, L_0);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/util/zlib/ZOutputStream.cs:204>
 		return;
 	}
@@ -20838,7 +20838,7 @@ IL_00b5:
 		NullCheck(L_27);
 		int32_t L_28 = L_27->___avail_out;
 		NullCheck(L_24);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_24, L_25, 0, ((int32_t)il2cpp_codegen_subtract(((int32_t)(((RuntimeArray*)L_26)->max_length)), L_28)));
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_24, L_25, 0, ((int32_t)il2cpp_codegen_subtract(((int32_t)(((RuntimeArray*)L_26)->max_length)), L_28)));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/util/zlib/ZOutputStream.cs:258>
 		ZStream_t0423426FE3DE0AE91643B4594EDD083B151CCA2B* L_29 = __this->___z;
 		NullCheck(L_29);
@@ -20873,7 +20873,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ZOutputStream_WriteByte_mFDA34400E23C3F2
 		(L_0)->SetAt(static_cast<il2cpp_array_size_t>(0), (uint8_t)L_1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/util/zlib/ZOutputStream.cs:264>
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_2 = __this->___buf1;
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, __this, L_2, 0, 1);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, __this, L_2, 0, 1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/util/zlib/ZOutputStream.cs:265>
 		return;
 	}

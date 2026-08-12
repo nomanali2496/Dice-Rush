@@ -12378,7 +12378,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t BufferedReadNetworkStream_Read_mA47A5
 		int32_t L_3 = ___2_count;
 		NullCheck(L_0);
 		int32_t L_4;
-		L_4 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, L_0, L_1, L_2, L_3);
+		L_4 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, L_0, L_1, L_2, L_3);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Connections/BufferedReadNetworkStream.cs:70>
 		int32_t L_5 = L_4;
 		BufferedReadNetworkStream_IncrementTotalNetworkBytesReceived_m982CDE59FC995795234000A849C2C150F90F1837(L_5, NULL);
@@ -12419,7 +12419,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BufferedReadNetworkStream_Write_mEB4EDF8
 		int32_t L_3 = ___1_offset;
 		int32_t L_4 = ___2_count;
 		NullCheck(L_1);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_1, L_2, L_3, L_4);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_1, L_2, L_3, L_4);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Connections/BufferedReadNetworkStream.cs:88>
 		return;
 	}
@@ -12492,7 +12492,7 @@ IL_0049:
 				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Connections/BufferedReadNetworkStream.cs:100>
 				Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_6 = __this->___innerStream;
 				NullCheck(L_6);
-				VirtualActionInvoker0::Invoke(18, L_6);
+				VirtualActionInvoker0::Invoke(19, L_6);
 				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Connections/BufferedReadNetworkStream.cs:101>
 				__this->___innerStream = (Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE*)NULL;
 				Il2CppCodeGenWriteBarrier((void**)(&__this->___innerStream), (void*)(Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE*)NULL);
@@ -15009,7 +15009,7 @@ IL_00d3_3:
 									StreamList_t8F91802A89F0A343F142096D5C6F416BA398BFA2* L_34 = V_1;
 									NullCheck(L_34);
 									int64_t L_35;
-									L_35 = VirtualFuncInvoker2< int64_t, int64_t, int32_t >::Invoke(30, L_34, ((int64_t)0), 0);
+									L_35 = VirtualFuncInvoker2< int64_t, int64_t, int32_t >::Invoke(31, L_34, ((int64_t)0), 0);
 									//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Connections/FileConnection.cs:37>
 									HTTPRequest_t32091DC566685F9827D7D7EA51A5D6601CB6485B* L_36;
 									L_36 = ConnectionBase_get_CurrentRequest_m6387678B3FA63D65ADD02299A6423B566444996A_inline(__this, NULL);
@@ -19212,7 +19212,7 @@ IL_06b3:
 		SslStream_t19A079881850F9CAD7BAA6FB625BBC4647ED5A27* L_294 = V_19;
 		NullCheck(L_294);
 		bool L_295;
-		L_295 = VirtualFuncInvoker0< bool >::Invoke(38, L_294);
+		L_295 = VirtualFuncInvoker0< bool >::Invoke(39, L_294);
 		if (L_295)
 		{
 			goto IL_06d3;
@@ -19231,7 +19231,7 @@ IL_06b3:
 		String_t* L_300;
 		L_300 = Uri_get_Host_m2C0E258C7DFF7A340049BE9BC08FF45E90988D8C(L_299, NULL);
 		NullCheck(L_296);
-		VirtualActionInvoker1< String_t* >::Invoke(39, L_296, L_300);
+		VirtualActionInvoker1< String_t* >::Invoke(40, L_296, L_300);
 	}
 
 IL_06d3:
@@ -19320,7 +19320,7 @@ FINALLY_0028:
 					Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_3;
 					L_3 = TCPConnector_get_Stream_mAD9CD6747D271A40D55E21224F075C1B2BAF5834_inline(__this, NULL);
 					NullCheck(L_3);
-					VirtualActionInvoker0::Invoke(18, L_3);
+					VirtualActionInvoker0::Invoke(19, L_3);
 				}
 
 IL_0023_2:
@@ -19387,7 +19387,7 @@ FINALLY_0049:
 					Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_6;
 					L_6 = TCPConnector_get_TopmostStream_m25AC6B7C57C11B019CB2FDDDB39F36A1E4DEA2B7_inline(__this, NULL);
 					NullCheck(L_6);
-					VirtualActionInvoker0::Invoke(18, L_6);
+					VirtualActionInvoker0::Invoke(19, L_6);
 				}
 
 IL_0044_2:
@@ -26697,7 +26697,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FastCcmBlockCipher_ProcessAadByte_m646BE
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_0 = __this->___associatedText;
 		uint8_t L_1 = ___0_input;
 		NullCheck(L_0);
-		VirtualActionInvoker1< uint8_t >::Invoke(37, L_0, L_1);
+		VirtualActionInvoker1< uint8_t >::Invoke(38, L_0, L_1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Connections/TLS/Crypto/Impl/FastCcmBlockCipher.cs:223>
 		return;
 	}
@@ -26712,7 +26712,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FastCcmBlockCipher_ProcessAadBytes_m4800
 		int32_t L_2 = ___1_inOff;
 		int32_t L_3 = ___2_len;
 		NullCheck(L_0);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_0, L_1, L_2, L_3);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_0, L_1, L_2, L_3);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Connections/TLS/Crypto/Impl/FastCcmBlockCipher.cs:229>
 		return;
 	}
@@ -26725,7 +26725,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FastCcmBlockCipher_ProcessByte_mD0825
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_0 = __this->___data;
 		uint8_t L_1 = ___0_input;
 		NullCheck(L_0);
-		VirtualActionInvoker1< uint8_t >::Invoke(37, L_0, L_1);
+		VirtualActionInvoker1< uint8_t >::Invoke(38, L_0, L_1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Connections/TLS/Crypto/Impl/FastCcmBlockCipher.cs:238>
 		return 0;
 	}
@@ -26751,7 +26751,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FastCcmBlockCipher_ProcessBytes_mC67A
 		int32_t L_5 = ___1_inOff;
 		int32_t L_6 = ___2_inLen;
 		NullCheck(L_3);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_3, L_4, L_5, L_6);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_3, L_4, L_5, L_6);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Connections/TLS/Crypto/Impl/FastCcmBlockCipher.cs:252>
 		return 0;
 	}
@@ -26766,7 +26766,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FastCcmBlockCipher_DoFinal_m8198DF45C
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_0 = __this->___data;
 		NullCheck(L_0);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_1;
-		L_1 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(38, L_0);
+		L_1 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(39, L_0);
 		V_0 = L_1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Connections/TLS/Crypto/Impl/FastCcmBlockCipher.cs:264>
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_2 = __this->___data;
@@ -26804,11 +26804,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FastCcmBlockCipher_Reset_mB8FB4E36C7BE04
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Connections/TLS/Crypto/Impl/FastCcmBlockCipher.cs:277>
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_1 = __this->___associatedText;
 		NullCheck(L_1);
-		VirtualActionInvoker1< int64_t >::Invoke(31, L_1, ((int64_t)0));
+		VirtualActionInvoker1< int64_t >::Invoke(32, L_1, ((int64_t)0));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Connections/TLS/Crypto/Impl/FastCcmBlockCipher.cs:278>
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_2 = __this->___data;
 		NullCheck(L_2);
-		VirtualActionInvoker1< int64_t >::Invoke(31, L_2, ((int64_t)0));
+		VirtualActionInvoker1< int64_t >::Invoke(32, L_2, ((int64_t)0));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Connections/TLS/Crypto/Impl/FastCcmBlockCipher.cs:279>
 		return;
 	}
@@ -27584,7 +27584,7 @@ IL_014e:
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_56 = __this->___associatedText;
 		NullCheck(L_56);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_57;
-		L_57 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(38, L_56);
+		L_57 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(39, L_56);
 		V_6 = L_57;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Connections/TLS/Crypto/Impl/FastCcmBlockCipher.cs:523>
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_58 = __this->___associatedText;
@@ -28710,7 +28710,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void HTTPRequest_set_Retries_m5E5
 		return;
 	}
 }
-// Method Definition Index: 24747
+// Method Definition Index: 24750
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Exception_t* Exception_get_InnerException_m0C1BDB339C786BA4DA7D2C1AD214571CFBBB1410_inline (Exception_t* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28859,7 +28859,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Socket_t1F49472CDA22B581C29A25822
 		return L_0;
 	}
 }
-// Method Definition Index: 74939
+// Method Definition Index: 75074
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Socket_get_Blocking_mE3DB6D71A54F6376624DDA9522C783B914860ED3_inline (Socket_t1F49472CDA22B581C29A258225ABF3ADA9DED67E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29108,7 +29108,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_1_Invoke_m8BBD2D5D4F7
 	typedef void (*FunctionPointerType) (RuntimeObject*, ProtocolEventInfo_tB00EEA919E72664AEC13E03AD5CB419FF47F4D04, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_obj, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 33193
+// Method Definition Index: 33204
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) 
 {
 	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* V_0 = NULL;
@@ -29146,7 +29146,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 33182
+// Method Definition Index: 33193
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29160,7 +29160,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Action_1_Invoke_m4F71856BFE3
 	typedef void (*FunctionPointerType) (RuntimeObject*, RequestEventInfo_t7E84F90C4FDD1DEDD8695351C8C870BD2B7A5C3D, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_obj, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 33247
+// Method Definition Index: 33258
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29168,7 +29168,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Cur
 		return L_0;
 	}
 }
-// Method Definition Index: 33201
+// Method Definition Index: 33212
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Clear_m16C1F2C61FED5955F10EB36BC1CB2DF34B128994_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -29198,7 +29198,7 @@ IL_003c:
 		return;
 	}
 }
-// Method Definition Index: 23385
+// Method Definition Index: 23387
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_gshared_inline (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29206,7 +29206,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_mCF2
 		return L_0;
 	}
 }
-// Method Definition Index: 23387
+// Method Definition Index: 23389
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Nullable_1_GetValueOrDefault_m8D130DB7F2A1E694736B449176F9C26DB456597B_gshared_inline (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method) 
 {
 	{

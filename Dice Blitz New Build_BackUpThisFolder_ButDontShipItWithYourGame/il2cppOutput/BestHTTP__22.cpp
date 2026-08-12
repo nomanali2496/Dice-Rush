@@ -17898,7 +17898,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Builder_tD1D79A25BCAF7031BCAD7669353B2BE0AAEC
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_13 = V_0;
 		NullCheck(L_13);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_14;
-		L_14 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(41, L_13);
+		L_14 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(42, L_13);
 		Builder_tD1D79A25BCAF7031BCAD7669353B2BE0AAECB695* L_15;
 		L_15 = Builder_Set_m7E7781FFCA1EE397C19A2C9E12FA63BB303CD1B0(__this, 8, L_14, NULL);
 		V_1 = L_15;
@@ -21113,7 +21113,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* DfDigestStream_GetResult_mF6BA
 		DigestSink_t9217B5B0F0F752E009BE3F1A9D7E9E7B8029C88E* L_0 = __this->___mStream;
 		NullCheck(L_0);
 		RuntimeObject* L_1;
-		L_1 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(39, L_0);
+		L_1 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(40, L_0);
 		NullCheck(L_1);
 		int32_t L_2;
 		L_2 = InterfaceFuncInvoker0< int32_t >::Invoke(1, IDigest_tA4B7011D922E10A064770B59C3DD12E9C357D783_il2cpp_TypeInfo_var, L_1);
@@ -21123,7 +21123,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* DfDigestStream_GetResult_mF6BA
 		DigestSink_t9217B5B0F0F752E009BE3F1A9D7E9E7B8029C88E* L_4 = __this->___mStream;
 		NullCheck(L_4);
 		RuntimeObject* L_5;
-		L_5 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(39, L_4);
+		L_5 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(40, L_4);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_6 = V_0;
 		NullCheck(L_5);
 		int32_t L_7;
@@ -23999,7 +23999,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* DefaultSignatureCalculator_Get
 		SignerSink_t433E809DC9A5305830898E5861A4443A83E5ACD2* L_0 = __this->___mSignerSink;
 		NullCheck(L_0);
 		RuntimeObject* L_1;
-		L_1 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(39, L_0);
+		L_1 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(40, L_0);
 		DefaultSignatureResult_t2D15FDCD3630A253676023B10A37C248A7497734* L_2 = (DefaultSignatureResult_t2D15FDCD3630A253676023B10A37C248A7497734*)il2cpp_codegen_object_new(DefaultSignatureResult_t2D15FDCD3630A253676023B10A37C248A7497734_il2cpp_TypeInfo_var);
 		DefaultSignatureResult__ctor_m4E604D22F5F21138741C5F1B4EF52F1921887ABF(L_2, L_1, NULL);
 		return L_2;
@@ -24116,7 +24116,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* DefaultVerifierCalculator_GetR
 		SignerSink_t433E809DC9A5305830898E5861A4443A83E5ACD2* L_0 = __this->___mSignerSink;
 		NullCheck(L_0);
 		RuntimeObject* L_1;
-		L_1 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(39, L_0);
+		L_1 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(40, L_0);
 		DefaultVerifierResult_t0CC55D4FD5E5FFF968FE95BD56177A71D085E919* L_2 = (DefaultVerifierResult_t0CC55D4FD5E5FFF968FE95BD56177A71D085E919*)il2cpp_codegen_object_new(DefaultVerifierResult_t0CC55D4FD5E5FFF968FE95BD56177A71D085E919_il2cpp_TypeInfo_var);
 		DefaultVerifierResult__ctor_m7110A38B7E01066E1241EC362B6CDDF093CFAABB(L_2, L_1, NULL);
 		return L_2;
@@ -25184,7 +25184,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CcmBlockCipher_ProcessAadByte_mAE2E61269
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_0 = __this->___associatedText;
 		uint8_t L_1 = ___0_input;
 		NullCheck(L_0);
-		VirtualActionInvoker1< uint8_t >::Invoke(37, L_0, L_1);
+		VirtualActionInvoker1< uint8_t >::Invoke(38, L_0, L_1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/modes/CcmBlockCipher.cs:115>
 		return;
 	}
@@ -25199,7 +25199,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CcmBlockCipher_ProcessAadBytes_m4E5CBC57
 		int32_t L_2 = ___1_inOff;
 		int32_t L_3 = ___2_len;
 		NullCheck(L_0);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_0, L_1, L_2, L_3);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_0, L_1, L_2, L_3);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/modes/CcmBlockCipher.cs:121>
 		return;
 	}
@@ -25212,7 +25212,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CcmBlockCipher_ProcessByte_mA3C3ACF6F
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_0 = __this->___data;
 		uint8_t L_1 = ___0_input;
 		NullCheck(L_0);
-		VirtualActionInvoker1< uint8_t >::Invoke(37, L_0, L_1);
+		VirtualActionInvoker1< uint8_t >::Invoke(38, L_0, L_1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/modes/CcmBlockCipher.cs:130>
 		return 0;
 	}
@@ -25238,7 +25238,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CcmBlockCipher_ProcessBytes_m0AF234E2
 		int32_t L_5 = ___1_inOff;
 		int32_t L_6 = ___2_inLen;
 		NullCheck(L_3);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_3, L_4, L_5, L_6);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_3, L_4, L_5, L_6);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/modes/CcmBlockCipher.cs:144>
 		return 0;
 	}
@@ -25253,7 +25253,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CcmBlockCipher_DoFinal_m3B6184383BFE9
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_0 = __this->___data;
 		NullCheck(L_0);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_1;
-		L_1 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(38, L_0);
+		L_1 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(39, L_0);
 		V_0 = L_1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/modes/CcmBlockCipher.cs:156>
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_2 = __this->___data;
@@ -25291,11 +25291,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CcmBlockCipher_Reset_m56011B363EF0675DEB
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/modes/CcmBlockCipher.cs:169>
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_1 = __this->___associatedText;
 		NullCheck(L_1);
-		VirtualActionInvoker1< int64_t >::Invoke(31, L_1, ((int64_t)0));
+		VirtualActionInvoker1< int64_t >::Invoke(32, L_1, ((int64_t)0));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/modes/CcmBlockCipher.cs:170>
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_2 = __this->___data;
 		NullCheck(L_2);
-		VirtualActionInvoker1< int64_t >::Invoke(31, L_2, ((int64_t)0));
+		VirtualActionInvoker1< int64_t >::Invoke(32, L_2, ((int64_t)0));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/modes/CcmBlockCipher.cs:171>
 		return;
 	}
@@ -26071,7 +26071,7 @@ IL_014e:
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_56 = __this->___associatedText;
 		NullCheck(L_56);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_57;
-		L_57 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(38, L_56);
+		L_57 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(39, L_56);
 		V_6 = L_57;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/modes/CcmBlockCipher.cs:415>
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_58 = __this->___associatedText;

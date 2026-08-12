@@ -72,18 +72,19 @@ public class SplashScreen : MonoBehaviour
 
     private void StartLoading()
     {
-        if (progressSlider == null) return;
-
         isLoading = true;
         currentProgress = 0f;
         targetProgress = 0f;
         elapsedTime = 0f;
-        progressSlider.value = 0f;
+        if (progressSlider != null)
+        {
+            progressSlider.value = 0f;
+        }
     }
 
     private void Update()
     {
-        if (!isLoading || progressSlider == null) return;
+        if (!isLoading) return;
 
         // Update elapsed time
         elapsedTime += Time.deltaTime;
@@ -108,11 +109,14 @@ public class SplashScreen : MonoBehaviour
             currentProgress = Mathf.Min(currentProgress, elapsedTime / minLoadingTime * 0.9f);
         }
 
-        // Update slider value
-        progressSlider.value = Mathf.Clamp01(currentProgress);
+        // Update slider value if assigned
+        if (progressSlider != null)
+        {
+            progressSlider.value = Mathf.Clamp01(currentProgress);
+        }
 
         // Check if loading is complete
-        if (elapsedTime >= loadingDuration && currentProgress >= 0.99f)
+        if (elapsedTime >= loadingDuration && (progressSlider == null || currentProgress >= 0.90f))
         {
             OnLoadingComplete();
         }
@@ -121,7 +125,10 @@ public class SplashScreen : MonoBehaviour
     private void OnLoadingComplete()
     {
         isLoading = false;
-        progressSlider.value = 1f;
+        if (progressSlider != null)
+        {
+            progressSlider.value = 1f;
+        }
         
         Debug.Log("[SplashScreen] ===== LOADING COMPLETE =====");
         

@@ -14,6 +14,8 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
 {
     public static WaitingForPlayerPanelManager Instance { get; private set; }
 
+    public bool IsPanelActive => (waitingForPlayerPanel != null ? waitingForPlayerPanel.activeSelf : gameObject.activeSelf);
+
     [Header("UI Panel Reference")]
     [Tooltip("The main container GameObject for the Waiting For Players Panel")]
     [SerializeField] private GameObject waitingForPlayerPanel;
@@ -42,6 +44,12 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
     [Tooltip("Button to manually start the game")]
     [SerializeField] private Button startGameButton;
 
+    [Tooltip("Optional Button to toggle local player ready state")]
+    [SerializeField] private Button readyButton;
+
+    [Tooltip("Text component inside ready button (e.g. 'Ready' or '✓ Ready')")]
+    [SerializeField] private TextMeshProUGUI readyButtonText;
+
     [Tooltip("Back / Cancel matchmaking button")]
     [SerializeField] private Button backButton;
 
@@ -52,14 +60,19 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
     [Tooltip("Time interval in seconds between simulated player joins")]
     [SerializeField] private float botJoinIntervalSeconds = 1.5f;
 
-    [Tooltip("If true, automatically starts the game when all required player slots are full")]
-    [SerializeField] private bool autoStartWhenFull = true;
+    [Tooltip("If true, automatically starts the game when all required player slots are full without pressing Start Game button")]
+    [SerializeField] private bool autoStartWhenFull = false;
+
+    [Tooltip("If true, local player must be marked as Ready before game can be started")]
+    [SerializeField] private bool requirePlayerReadyToStart = true;
 
     // Runtime state
     private int targetPlayerCount = 5;
     private int currentJoinedCount = 1;
     private int currentStake = 100;
     private string currentLobbyId = "combo-dice";
+    private bool isLocalPlayerReady = false;
+    private StartGameData pendingMatchFoundData = null;
 
     private List<GameObject> spawnedSlotObjects = new List<GameObject>();
     private List<PlayerSlotData> joinedPlayersList = new List<PlayerSlotData>();
@@ -102,6 +115,11 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
             startGameButton.onClick.AddListener(OnStartGameClicked);
         }
 
+        if (readyButton != null)
+        {
+            readyButton.onClick.AddListener(OnReadyButtonClicked);
+        }
+
         if (backButton != null)
         {
             backButton.onClick.AddListener(OnBackButtonClicked);
@@ -124,6 +142,16 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Checks whether all required players have joined and local player is ready.
+    /// </summary>
+    public bool CanStartGame()
+    {
+        bool slotsFull = (currentJoinedCount >= targetPlayerCount);
+        bool readyOk = !requirePlayerReadyToStart || isLocalPlayerReady;
+        return slotsFull && readyOk;
+    }
+
+    /// <summary>
     /// Opens the Waiting Panel and initializes slots according to selected player count (3, 5, 8, 10).
     /// </summary>
     /// <param name="totalPlayers">Target player count selected by user (e.g. 3, 5, 8, 10)</param>
@@ -134,6 +162,12 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
         targetPlayerCount = Mathf.Max(2, totalPlayers);
         currentStake = stake;
         currentLobbyId = lobbyId;
+        pendingMatchFoundData = null;
+
+        autoStartWhenFull = false;
+
+        // If no separate ready button is assigned in inspector, default local player to ready
+        isLocalPlayerReady = (readyButton == null);
 
         Debug.Log($"<color=#00FFFF>⌛ [WaitingPanel] Opening Waiting Panel for {targetPlayerCount} Players (Stake: {currentStake})</color>");
 
@@ -145,30 +179,29 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
         // Add local player as 1st joined player
         joinedPlayersList.Clear();
         string localName = !string.IsNullOrEmpty(PlayerModel.Name) ? PlayerModel.Name : ("Player " + UnityEngine.Random.Range(100, 999));
-        joinedPlayersList.Add(new PlayerSlotData(localName, null, true));
+        joinedPlayersList.Add(new PlayerSlotData(localName, null, isLocalPlayerReady));
         currentJoinedCount = 1;
 
         UpdatePlayerCountDisplay();
+        UpdateReadyButtonVisual();
         RebuildAllSlots();
-
-        // Enable / Disable start game button initial state
-        if (startGameButton != null)
-        {
-            startGameButton.interactable = (currentJoinedCount >= targetPlayerCount);
-        }
+        UpdateStartGameButtonState();
 
         // Start socket search or bot simulation
         if (SocketManager.Instance != null && SocketManager.Instance.Socket != null && BackendAuthService.HasStoredJWT())
         {
             string mode = $"{targetPlayerCount}-players";
             MatchmakingModel.FindMatch(mode, currentStake, currentLobbyId);
+
+            if (enableBotSimulation)
+            {
+                if (botSimulationCoroutine != null) StopCoroutine(botSimulationCoroutine);
+                botSimulationCoroutine = StartCoroutine(SimulateBotPlayersJoining());
+            }
         }
         else if (enableBotSimulation)
         {
-            if (botSimulationCoroutine != null)
-            {
-                StopCoroutine(botSimulationCoroutine);
-            }
+            if (botSimulationCoroutine != null) StopCoroutine(botSimulationCoroutine);
             botSimulationCoroutine = StartCoroutine(SimulateBotPlayersJoining());
         }
     }
@@ -193,6 +226,62 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Handles Ready button toggle for local player.
+    /// </summary>
+    public void OnReadyButtonClicked()
+    {
+        isLocalPlayerReady = !isLocalPlayerReady;
+
+        if (joinedPlayersList.Count > 0)
+        {
+            joinedPlayersList[0].isReady = isLocalPlayerReady;
+        }
+
+        UpdateReadyButtonVisual();
+        RebuildAllSlots();
+        UpdateStartGameButtonState();
+
+        if (SoundManager.instance != null)
+        {
+            SoundManager.instance.PlayTap();
+        }
+    }
+
+    private void UpdateReadyButtonVisual()
+    {
+        if (readyButtonText != null)
+        {
+            readyButtonText.text = isLocalPlayerReady ? "✓ Ready" : "Tap Ready";
+        }
+    }
+
+    private void UpdateStartGameButtonState()
+    {
+        bool canStart = CanStartGame();
+
+        if (startGameButton != null)
+        {
+            startGameButton.interactable = canStart;
+        }
+
+        if (lookingForPlayersTitle != null)
+        {
+            if (currentJoinedCount < targetPlayerCount)
+            {
+                lookingForPlayersTitle.text = "Looking For Players...";
+            }
+            else if (!isLocalPlayerReady && readyButton != null)
+            {
+                lookingForPlayersTitle.text = "All Players Joined! Tap Ready to Continue";
+            }
+            else
+            {
+                lookingForPlayersTitle.text = "All Players Ready! Press Start Game";
+            }
+        }
+    }
+
+    /// <summary>
     /// Adds a newly joined player to the waiting slots list.
     /// </summary>
     public void AddJoinedPlayer(string playerName, Sprite avatarSprite = null)
@@ -206,11 +295,7 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
 
         UpdatePlayerCountDisplay();
         RebuildAllSlots();
-
-        if (startGameButton != null)
-        {
-            startGameButton.interactable = (currentJoinedCount >= targetPlayerCount);
-        }
+        UpdateStartGameButtonState();
 
         if (currentJoinedCount >= targetPlayerCount && autoStartWhenFull)
         {
@@ -248,7 +333,7 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
 
             if (i < joinedPlayersList.Count)
             {
-                // Ready player slot
+                // Joined player slot
                 GameObject prefabToUse = playerSlotPrefab != null ? playerSlotPrefab : waitingSlotPrefab;
                 if (prefabToUse != null)
                 {
@@ -257,7 +342,7 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
                     if (slotUI != null)
                     {
                         var data = joinedPlayersList[i];
-                        slotUI.SetReadyPlayer(data.playerName, data.avatarSprite);
+                        slotUI.SetJoinedPlayer(data.playerName, data.avatarSprite, data.isReady);
                     }
                 }
             }
@@ -322,6 +407,11 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
 
     private IEnumerator AutoStartGameDelay()
     {
+        if (lookingForPlayersTitle != null)
+        {
+            lookingForPlayersTitle.text = "All Players Joined! Starting Match...";
+        }
+
         yield return new WaitForSeconds(1.2f);
         OnStartGameClicked();
     }
@@ -331,6 +421,12 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
     /// </summary>
     public void OnStartGameClicked()
     {
+        if (!CanStartGame() && pendingMatchFoundData == null && !autoStartWhenFull)
+        {
+            Debug.LogWarning("[WaitingPanel] Cannot start game yet: room not full or player not ready.");
+            return;
+        }
+
         Debug.Log("<color=#00FF00>🚀 [WaitingPanel] Starting Game!</color>");
 
         if (SoundManager.instance != null)
@@ -340,22 +436,45 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
 
         CloseWaitingPanel();
 
-        // Configure fallback / match data for GameManager
-        LobbyConfig config = new LobbyConfig(-1, targetPlayerCount, currentStake, 0, 0f, 0, 0f, 0, 0f, 0);
-        config.lobbyId = currentLobbyId;
-        config.mode = $"{targetPlayerCount}p";
-
-        GameManager gm = GameManager.Instance != null ? GameManager.Instance : FindFirstObjectByType<GameManager>();
-        if (gm != null)
+        if (pendingMatchFoundData != null)
         {
-            gm.ConfigureGameFromLobby(config, targetPlayerCount - 1, GameManager.CreateFallbackMatchData(targetPlayerCount, currentStake));
+            HorizontalLobbyManager lobbyMgr = HorizontalLobbyManager.Instance != null ? HorizontalLobbyManager.Instance : FindFirstObjectByType<HorizontalLobbyManager>();
+            if (lobbyMgr != null)
+            {
+                lobbyMgr.StartGameFromNetwork(-1, pendingMatchFoundData, -1);
+            }
+            else
+            {
+                GameManager gm = GameManager.Instance != null ? GameManager.Instance : FindFirstObjectByType<GameManager>();
+                if (gm != null)
+                {
+                    LobbyConfig config = new LobbyConfig(-1, targetPlayerCount, currentStake, 0, 0f, 0, 0f, 0, 0f, 0);
+                    config.lobbyId = currentLobbyId;
+                    config.mode = $"{targetPlayerCount}p";
+                    gm.ConfigureGameFromLobby(config, -1, pendingMatchFoundData);
+                }
+            }
+            pendingMatchFoundData = null;
         }
-
-        // Open gameplay container if referenced
-        HorizontalLobbyManager lobbyMgr = HorizontalLobbyManager.Instance != null ? HorizontalLobbyManager.Instance : FindFirstObjectByType<HorizontalLobbyManager>();
-        if (lobbyMgr != null && lobbyMgr.GameplayObject != null)
+        else
         {
-            lobbyMgr.GameplayObject.SetActive(true);
+            // Configure fallback / match data for GameManager
+            LobbyConfig config = new LobbyConfig(-1, targetPlayerCount, currentStake, 0, 0f, 0, 0f, 0, 0f, 0);
+            config.lobbyId = currentLobbyId;
+            config.mode = $"{targetPlayerCount}p";
+
+            GameManager gm = GameManager.Instance != null ? GameManager.Instance : FindFirstObjectByType<GameManager>();
+            if (gm != null)
+            {
+                gm.ConfigureGameFromLobby(config, targetPlayerCount - 1, GameManager.CreateFallbackMatchData(targetPlayerCount, currentStake));
+            }
+
+            // Open gameplay container if referenced
+            HorizontalLobbyManager lobbyMgr = HorizontalLobbyManager.Instance != null ? HorizontalLobbyManager.Instance : FindFirstObjectByType<HorizontalLobbyManager>();
+            if (lobbyMgr != null && lobbyMgr.GameplayObject != null)
+            {
+                lobbyMgr.GameplayObject.SetActive(true);
+            }
         }
     }
 
@@ -391,14 +510,87 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
     #region Socket Event Handlers
     private void HandleMatchmakingUpdated(int current, int total)
     {
-        targetPlayerCount = total;
+        if (total > 0) targetPlayerCount = total;
+        int newCount = Mathf.Clamp(current, 1, targetPlayerCount);
+
+        while (joinedPlayersList.Count < newCount)
+        {
+            int pIndex = joinedPlayersList.Count + 1;
+            joinedPlayersList.Add(new PlayerSlotData($"Player {UnityEngine.Random.Range(100, 999)}", null, true));
+        }
+        currentJoinedCount = joinedPlayersList.Count;
+
         UpdatePlayerCountDisplay();
+        RebuildAllSlots();
+        UpdateStartGameButtonState();
     }
 
     private void HandleMatchFound(StartGameData gameData)
     {
         Debug.Log("<color=#00FF00>🎮 [WaitingPanel] Real Match Found via Socket!</color>");
+
+        if (botSimulationCoroutine != null)
+        {
+            StopCoroutine(botSimulationCoroutine);
+            botSimulationCoroutine = null;
+        }
+
+        pendingMatchFoundData = gameData;
+
+        if (gameData != null && gameData.playerAvatars != null && gameData.playerAvatars.Count > 0)
+        {
+            joinedPlayersList.Clear();
+            foreach (var kvp in gameData.playerAvatars)
+            {
+                string pName = (kvp.Value != null && !string.IsNullOrEmpty(kvp.Value.name)) ? kvp.Value.name : "Player";
+                joinedPlayersList.Add(new PlayerSlotData(pName, null, true));
+            }
+            currentJoinedCount = joinedPlayersList.Count;
+            if (currentJoinedCount > targetPlayerCount) targetPlayerCount = currentJoinedCount;
+
+            UpdatePlayerCountDisplay();
+            RebuildAllSlots();
+        }
+
+        UpdateStartGameButtonState();
+
+        if (autoStartWhenFull)
+        {
+            StartCoroutine(StartMatchFoundTransition(gameData));
+        }
+        else if (lookingForPlayersTitle != null)
+        {
+            lookingForPlayersTitle.text = "Match Found! Press Start Game to Begin";
+        }
+    }
+
+    private IEnumerator StartMatchFoundTransition(StartGameData gameData)
+    {
+        if (lookingForPlayersTitle != null)
+        {
+            lookingForPlayersTitle.text = "Match Found! Starting Game...";
+        }
+
+        yield return new WaitForSeconds(1.0f);
+
         CloseWaitingPanel();
+
+        HorizontalLobbyManager lobbyMgr = HorizontalLobbyManager.Instance != null ? HorizontalLobbyManager.Instance : FindFirstObjectByType<HorizontalLobbyManager>();
+        if (lobbyMgr != null)
+        {
+            lobbyMgr.StartGameFromNetwork(-1, gameData, -1);
+        }
+        else
+        {
+            GameManager gm = GameManager.Instance != null ? GameManager.Instance : FindFirstObjectByType<GameManager>();
+            if (gm != null)
+            {
+                LobbyConfig config = new LobbyConfig(-1, targetPlayerCount, currentStake, 0, 0f, 0, 0f, 0, 0f, 0);
+                config.lobbyId = currentLobbyId;
+                config.mode = $"{targetPlayerCount}p";
+                gm.ConfigureGameFromLobby(config, -1, gameData);
+            }
+        }
     }
 
     private void HandleMatchmakingFailed(string error)

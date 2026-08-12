@@ -337,7 +337,7 @@ IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_t451A240ECFD143B4F6EF836424820AADF31FFAE9_
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_t688E416CF7104BA7D734A6639BCD36BE7704B347_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_tA6B1AB7977505DBC1BFC6DCB3AB686ABF2CB95FE_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Update_t2C5E06570884EB1CF9496257D318CD9821457D35_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t1727D2B6118A6A75F461E5316F20AB3D464A6CA2____2A1E5019C9CA602DBDB45463F6022750A29EE34694EC4BE55424DD0E99E11CA3_FieldInfo_var;
+IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t1727D2B6118A6A75F461E5316F20AB3D464A6CA2____238A2064B9C2DCCF2C126CC3EF84EDAD9C6C833378CCF127371ADD3D2C7F5814_FieldInfo_var;
 IL2CPP_EXTERN_C RuntimeField* U3CPrivateImplementationDetailsU3E_t1727D2B6118A6A75F461E5316F20AB3D464A6CA2____52DE94858C957CF60E243581BB76C49BDD2CF996D823660EB74F3E149BD9BBF9_FieldInfo_var;
 IL2CPP_EXTERN_C String_t* _stringLiteral008F6E1BE2B28B633406A8328A0C886C24DD0A51;
 IL2CPP_EXTERN_C String_t* _stringLiteral0B7FA07E44156222B366F2B4401A0F06C3FB5AB6;
@@ -1020,6 +1020,7 @@ struct Graph_tD3F160E11AE372F4006562E44A04A934679A72CA  : public RuntimeObject
 	String_t* ___U3CsummaryU3Ek__BackingField;
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___U3CpanU3Ek__BackingField;
 	float ___U3CzoomU3Ek__BackingField;
+	bool ___U3CisAddingElementsPostDeserializationU3Ek__BackingField;
 	bool ___prewarmed;
 };
 struct GraphSource_t8C1348A60D5A56AED66854349F7831A81EA0FF49 
@@ -1402,7 +1403,7 @@ struct List_1_tE2D40EAAD7C8CFC54A71FAD396C53E27F604CFD9_StaticFields
 };
 struct U3CPrivateImplementationDetailsU3E_t1727D2B6118A6A75F461E5316F20AB3D464A6CA2_StaticFields
 {
-	__StaticArrayInitTypeSizeU3D3155_tA0D9EDFE3227B9C706C1D725C1A9749BD48739F0 ___2A1E5019C9CA602DBDB45463F6022750A29EE34694EC4BE55424DD0E99E11CA3;
+	__StaticArrayInitTypeSizeU3D3155_tA0D9EDFE3227B9C706C1D725C1A9749BD48739F0 ___238A2064B9C2DCCF2C126CC3EF84EDAD9C6C833378CCF127371ADD3D2C7F5814;
 	__StaticArrayInitTypeSizeU3D1227_tA0F2342BA308BE67FD08F6D3647F3AD51D5C788C ___52DE94858C957CF60E243581BB76C49BDD2CF996D823660EB74F3E149BD9BBF9;
 };
 struct Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582_StaticFields
@@ -2121,14 +2122,14 @@ inline void SetGraph_3__ctor_mEBF7B7E77AE074F94249CECBA45A1C458B0911EC (SetGraph
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 142434
+// Method Definition Index: 145319
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t166E7B1CE35C3847C51BC768330C9B692C5C5E8C UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m73250A7C6787C1CF62AFE991B3EFD6793274892E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t1727D2B6118A6A75F461E5316F20AB3D464A6CA2____2A1E5019C9CA602DBDB45463F6022750A29EE34694EC4BE55424DD0E99E11CA3_FieldInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t1727D2B6118A6A75F461E5316F20AB3D464A6CA2____238A2064B9C2DCCF2C126CC3EF84EDAD9C6C833378CCF127371ADD3D2C7F5814_FieldInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CPrivateImplementationDetailsU3E_t1727D2B6118A6A75F461E5316F20AB3D464A6CA2____52DE94858C957CF60E243581BB76C49BDD2CF996D823660EB74F3E149BD9BBF9_FieldInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -2138,7 +2139,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t166E7B1CE35C3847C51BC768330C9
 		il2cpp_codegen_initobj((&V_0), sizeof(MonoScriptData_t166E7B1CE35C3847C51BC768330C9B692C5C5E8C));
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)3155));
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_1 = L_0;
-		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_2 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t1727D2B6118A6A75F461E5316F20AB3D464A6CA2____2A1E5019C9CA602DBDB45463F6022750A29EE34694EC4BE55424DD0E99E11CA3_FieldInfo_var) };
+		RuntimeFieldHandle_t6E4C45B6D2EA12FC99185805A7E77527899B25C5 L_2 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t1727D2B6118A6A75F461E5316F20AB3D464A6CA2____238A2064B9C2DCCF2C126CC3EF84EDAD9C6C833378CCF127371ADD3D2C7F5814_FieldInfo_var) };
 		RuntimeHelpers_InitializeArray_m751372AA3F24FBF6DA9B9D687CBFA2DE436CAB9B((RuntimeArray*)L_1, L_2, NULL);
 		(&V_0)->___FilePathsData = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___FilePathsData), (void*)L_1);
@@ -2155,7 +2156,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t166E7B1CE35C3847C51BC768330C9
 		return L_6;
 	}
 }
-// Method Definition Index: 142435
+// Method Definition Index: 145320
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m73BC4F3232D9E20470142BD0B75EAB18A04454D0 (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t441FFE29C373FAE4EF016940718804FE22CEFCF9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2241,31 +2242,31 @@ IL2CPP_EXTERN_C void MonoScriptData_t166E7B1CE35C3847C51BC768330C9B692C5C5E8C_ma
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 142436
+// Method Definition Index: 145321
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AnyState_get_canBeDestination_m6CE2E5EEAB904ACE6DFBCB01FFA5A694FCE6136A (AnyState_t22469739A4A0EEFCFD11332B215DC01886F6F6B0* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/AnyState.cs:11>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/AnyState.cs:11>
 		return (bool)0;
 	}
 }
-// Method Definition Index: 142437
+// Method Definition Index: 145322
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnyState__ctor_mF8F1A19886CAD1A27D144B2EC36E91888A801014 (AnyState_t22469739A4A0EEFCFD11332B215DC01886F6F6B0* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/AnyState.cs:13>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/AnyState.cs:13>
 		State__ctor_m7B8404B33D1665A1AD0C077CA3E7932D4AF208C3(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/AnyState.cs:15>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/AnyState.cs:15>
 		State_set_isStart_m07936C946A25E5FE5D6CB70C900AB1AABEDE69E0_inline(__this, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/AnyState.cs:16>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/AnyState.cs:16>
 		return;
 	}
 }
-// Method Definition Index: 142438
+// Method Definition Index: 145323
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnyState_OnExit_mE5D5B4BEBB2B403EFE80999B97414E39C6B0AE98 (AnyState_t22469739A4A0EEFCFD11332B215DC01886F6F6B0* __this, Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* ___0_flow, int32_t ___1_reason, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/AnyState.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/AnyState.cs:21>
 		int32_t L_0 = ___1_reason;
 		if ((!(((uint32_t)L_0) == ((uint32_t)1))))
 		{
@@ -2273,21 +2274,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnyState_OnExit_mE5D5B4BEBB2B403EFE80999
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/AnyState.cs:23>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/AnyState.cs:23>
 		return;
 	}
 
 IL_0005:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/AnyState.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/AnyState.cs:26>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_1 = ___0_flow;
 		int32_t L_2 = ___1_reason;
 		State_OnExit_m3695D0CB0F5F97B7EE670B9454B44C30F8F69B96(__this, L_1, L_2, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/AnyState.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/AnyState.cs:27>
 		return;
 	}
 }
-// Method Definition Index: 142439
+// Method Definition Index: 145324
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnyState_OnBranchTo_m1D49F84A9CF63CF43ED37F3B61C673F0A0F812EA (AnyState_t22469739A4A0EEFCFD11332B215DC01886F6F6B0* __this, Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* ___0_flow, RuntimeObject* ___1_destination, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2305,7 +2306,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AnyState_OnBranchTo_m1D49F84A9CF63CF43ED
 	memset((&V_0), 0, sizeof(V_0));
 	RuntimeObject* V_1 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/AnyState.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/AnyState.cs:34>
 		List_1_tE2D40EAAD7C8CFC54A71FAD396C53E27F604CFD9* L_0;
 		L_0 = State_get_outgoingTransitionsNoAlloc_m1BE5207E0FE37E715FD6E9DA700FC96427E74653(__this, NULL);
 		NullCheck(L_0);
@@ -2331,11 +2332,11 @@ FINALLY_0037:
 
 IL_000e_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/AnyState.cs:34>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/AnyState.cs:34>
 				RuntimeObject* L_2;
 				L_2 = Enumerator_get_Current_m4569B07FE60052FEA4C8E0BF192D3987B10D4339_inline((&V_0), Enumerator_get_Current_m4569B07FE60052FEA4C8E0BF192D3987B10D4339_RuntimeMethod_var);
 				V_1 = L_2;
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/AnyState.cs:36>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/AnyState.cs:36>
 				RuntimeObject* L_3 = V_1;
 				NullCheck(L_3);
 				RuntimeObject* L_4;
@@ -2347,7 +2348,7 @@ IL_000e_1:
 				}
 			}
 			{
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/AnyState.cs:38>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/AnyState.cs:38>
 				RuntimeObject* L_6 = V_1;
 				NullCheck(L_6);
 				RuntimeObject* L_7;
@@ -2359,7 +2360,7 @@ IL_000e_1:
 
 IL_002c_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/AnyState.cs:34>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/AnyState.cs:34>
 				bool L_9;
 				L_9 = Enumerator_MoveNext_m0571AF236F4AE67CD524732FDF641C9B2830322F((&V_0), Enumerator_MoveNext_m0571AF236F4AE67CD524732FDF641C9B2830322F_RuntimeMethod_var);
 				if (L_9)
@@ -2379,7 +2380,7 @@ IL_002c_1:
 
 IL_0045:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/AnyState.cs:41>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/AnyState.cs:41>
 		return;
 	}
 }
@@ -2391,7 +2392,7 @@ IL_0045:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 142440
+// Method Definition Index: 145325
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowState__ctor_m4D4C701E6E9FF78E06C5877CDEF6E5DB5ACD31B8 (FlowState_t960CB4990E52C07A5741606D84B8CA6860756F3D* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2401,13 +2402,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowState__ctor_m4D4C701E6E9FF78E06C5877
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:11>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:11>
 		NesterState_2__ctor_mFF5D5DC69CCE4A950BD64C1C2CBB6D21EE967E89(__this, NesterState_2__ctor_mFF5D5DC69CCE4A950BD64C1C2CBB6D21EE967E89_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:11>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:11>
 		return;
 	}
 }
-// Method Definition Index: 142441
+// Method Definition Index: 145326
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowState__ctor_mD07E3FF0AFD3F97F87B37D439858D486B025450B (FlowState_t960CB4990E52C07A5741606D84B8CA6860756F3D* __this, ScriptGraphAsset_t3A899A232ABBF913A5E29152AC28920AED4B0F8C* ___0_macro, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2417,14 +2418,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowState__ctor_mD07E3FF0AFD3F97F87B37D4
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:13>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:13>
 		ScriptGraphAsset_t3A899A232ABBF913A5E29152AC28920AED4B0F8C* L_0 = ___0_macro;
 		NesterState_2__ctor_mCC4E04734900C19A9153DB52BEA0AFB1842B98E4(__this, L_0, NesterState_2__ctor_mCC4E04734900C19A9153DB52BEA0AFB1842B98E4_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:13>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:13>
 		return;
 	}
 }
-// Method Definition Index: 142442
+// Method Definition Index: 145327
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowState_OnEnterImplementation_m3AA782A52C8AD7A2581160A2F5F58F22785C1286 (FlowState_t960CB4990E52C07A5741606D84B8CA6860756F3D* __this, Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* ___0_flow, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2457,7 +2458,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowState_OnEnterImplementation_m3AA782A
 	Func_2_tAF55076662A6FF164DF890818D0B9570331AC1EF* G_B4_2 = NULL;
 	GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* G_B4_3 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:20>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:20>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_0 = ___0_flow;
 		NullCheck(L_0);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_1;
@@ -2471,7 +2472,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowState_OnEnterImplementation_m3AA782A
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:22>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:22>
 		GraphNest_2_tDE7A508253945CE7ED5EF46C78913E049858DD49* L_3;
 		L_3 = NesterState_2_get_nest_mC0FC79B288CD09C94F3DBC68E4127EB07C50EC2E_inline(__this, NesterState_2_get_nest_mC0FC79B288CD09C94F3DBC68E4127EB07C50EC2E_RuntimeMethod_var);
 		NullCheck(L_3);
@@ -2483,7 +2484,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowState_OnEnterImplementation_m3AA782A
 		L_6 = Flow_get_stack_m14E56FE5242B8B811C540A2E23CD29C92095D196_inline(L_5, NULL);
 		NullCheck(L_4);
 		FlowGraph_StartListening_m66319B067F4F4371797D572E4CB459AC42023612(L_4, L_6, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:23>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:23>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_7 = ___0_flow;
 		NullCheck(L_7);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_8;
@@ -2549,7 +2550,7 @@ IL_0049:
 IL_0071:
 	{
 		XEventGraph_TriggerEventHandler_TisEmptyEventArgs_t2EF153F78311F355E9AE7BAE748576515674476F_m10F16C3689339BE90C2D1E008A227D7364F20B9A(G_B5_3, G_B5_2, G_B5_1, G_B5_0, (bool)0, XEventGraph_TriggerEventHandler_TisEmptyEventArgs_t2EF153F78311F355E9AE7BAE748576515674476F_m10F16C3689339BE90C2D1E008A227D7364F20B9A_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:24>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:24>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_20 = ___0_flow;
 		NullCheck(L_20);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_21;
@@ -2560,11 +2561,11 @@ IL_0071:
 
 IL_0082:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:26>
 		return;
 	}
 }
-// Method Definition Index: 142443
+// Method Definition Index: 145328
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowState_OnExitImplementation_m244A007EF38AE04F9973ED7067DA700A3A2647F0 (FlowState_t960CB4990E52C07A5741606D84B8CA6860756F3D* __this, Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* ___0_flow, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2597,7 +2598,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowState_OnExitImplementation_m244A007E
 	Func_2_tAF55076662A6FF164DF890818D0B9570331AC1EF* G_B4_2 = NULL;
 	GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* G_B4_3 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:30>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_0 = ___0_flow;
 		NullCheck(L_0);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_1;
@@ -2611,7 +2612,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowState_OnExitImplementation_m244A007E
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:32>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_3 = ___0_flow;
 		NullCheck(L_3);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_4;
@@ -2677,7 +2678,7 @@ IL_0033:
 IL_005b:
 	{
 		XEventGraph_TriggerEventHandler_TisEmptyEventArgs_t2EF153F78311F355E9AE7BAE748576515674476F_m10F16C3689339BE90C2D1E008A227D7364F20B9A(G_B5_3, G_B5_2, G_B5_1, G_B5_0, (bool)0, XEventGraph_TriggerEventHandler_TisEmptyEventArgs_t2EF153F78311F355E9AE7BAE748576515674476F_m10F16C3689339BE90C2D1E008A227D7364F20B9A_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:33>
 		GraphNest_2_tDE7A508253945CE7ED5EF46C78913E049858DD49* L_16;
 		L_16 = NesterState_2_get_nest_mC0FC79B288CD09C94F3DBC68E4127EB07C50EC2E_inline(__this, NesterState_2_get_nest_mC0FC79B288CD09C94F3DBC68E4127EB07C50EC2E_RuntimeMethod_var);
 		NullCheck(L_16);
@@ -2689,7 +2690,7 @@ IL_005b:
 		L_19 = Flow_get_stack_m14E56FE5242B8B811C540A2E23CD29C92095D196_inline(L_18, NULL);
 		NullCheck(L_17);
 		FlowGraph_StopListening_m869ED63E7EDDF145E07FAF4E224DC61AAA676020(L_17, L_19, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:34>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_20 = ___0_flow;
 		NullCheck(L_20);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_21;
@@ -2700,11 +2701,11 @@ IL_005b:
 
 IL_0082:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:36>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:36>
 		return;
 	}
 }
-// Method Definition Index: 142444
+// Method Definition Index: 145329
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowState_StartListening_m402F6384E00DA2DB6EEE0E8DE2B5D60788899A71 (FlowState_t960CB4990E52C07A5741606D84B8CA6860756F3D* __this, GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* ___0_stack, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2715,7 +2716,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowState_StartListening_m402F6384E00DA2
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:40>
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_0 = ___0_stack;
 		NullCheck(L_0);
 		bool L_1;
@@ -2726,7 +2727,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowState_StartListening_m402F6384E00DA2
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:42>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:42>
 		GraphNest_2_tDE7A508253945CE7ED5EF46C78913E049858DD49* L_2;
 		L_2 = NesterState_2_get_nest_mC0FC79B288CD09C94F3DBC68E4127EB07C50EC2E_inline(__this, NesterState_2_get_nest_mC0FC79B288CD09C94F3DBC68E4127EB07C50EC2E_RuntimeMethod_var);
 		NullCheck(L_2);
@@ -2735,7 +2736,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowState_StartListening_m402F6384E00DA2
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_4 = ___0_stack;
 		NullCheck(L_3);
 		FlowGraph_StartListening_m66319B067F4F4371797D572E4CB459AC42023612(L_3, L_4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:43>
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_5 = ___0_stack;
 		NullCheck(L_5);
 		GraphStack_ExitParentElement_mB4379BEC03B4DF2D6A7674C01B9970CB98290568(L_5, NULL);
@@ -2743,11 +2744,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowState_StartListening_m402F6384E00DA2
 
 IL_0020:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:45>
 		return;
 	}
 }
-// Method Definition Index: 142445
+// Method Definition Index: 145330
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowState_StopListening_mDB2FF53CD19D0FE1AE8B7B980D0E468850148E08 (FlowState_t960CB4990E52C07A5741606D84B8CA6860756F3D* __this, GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* ___0_stack, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2758,7 +2759,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowState_StopListening_mDB2FF53CD19D0FE
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:49>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:49>
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_0 = ___0_stack;
 		NullCheck(L_0);
 		bool L_1;
@@ -2769,7 +2770,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowState_StopListening_mDB2FF53CD19D0FE
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:51>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:51>
 		GraphNest_2_tDE7A508253945CE7ED5EF46C78913E049858DD49* L_2;
 		L_2 = NesterState_2_get_nest_mC0FC79B288CD09C94F3DBC68E4127EB07C50EC2E_inline(__this, NesterState_2_get_nest_mC0FC79B288CD09C94F3DBC68E4127EB07C50EC2E_RuntimeMethod_var);
 		NullCheck(L_2);
@@ -2778,7 +2779,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowState_StopListening_mDB2FF53CD19D0FE
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_4 = ___0_stack;
 		NullCheck(L_3);
 		FlowGraph_StopListening_m869ED63E7EDDF145E07FAF4E224DC61AAA676020(L_3, L_4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:52>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:52>
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_5 = ___0_stack;
 		NullCheck(L_5);
 		GraphStack_ExitParentElement_mB4379BEC03B4DF2D6A7674C01B9970CB98290568(L_5, NULL);
@@ -2786,11 +2787,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowState_StopListening_mDB2FF53CD19D0FE
 
 IL_0020:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:54>
 		return;
 	}
 }
-// Method Definition Index: 142446
+// Method Definition Index: 145331
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FlowState_IsListening_mC5496007FA701AA930152548D8AE6BED44D4414F (FlowState_t960CB4990E52C07A5741606D84B8CA6860756F3D* __this, GraphPointer_t01C98F06D1A7635CB867665044B7DC1FE03D1C0B* ___0_pointer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2800,7 +2801,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FlowState_IsListening_mC5496007FA701AA93
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:58>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:58>
 		GraphPointer_t01C98F06D1A7635CB867665044B7DC1FE03D1C0B* L_0 = ___0_pointer;
 		NullCheck(L_0);
 		Data_tF02C03D4C146CDB89C3D3C5E50935196C5ABC09E* L_1;
@@ -2810,17 +2811,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FlowState_IsListening_mC5496007FA701AA93
 		return L_2;
 	}
 }
-// Method Definition Index: 142447
+// Method Definition Index: 145332
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FlowGraph_tF9E42FECF535CD5BAB10F75672B5BCE285627A45* FlowState_DefaultGraph_m7E23C167C236273414F1D3A8AA5C09832D6B7C29 (FlowState_t960CB4990E52C07A5741606D84B8CA6860756F3D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:68>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:68>
 		FlowGraph_tF9E42FECF535CD5BAB10F75672B5BCE285627A45* L_0;
 		L_0 = FlowState_GraphWithEnterUpdateExit_m9FAEA311DF6960A0503BE45A40C40836583B042D(NULL);
 		return L_0;
 	}
 }
-// Method Definition Index: 142448
+// Method Definition Index: 145333
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FlowState_t960CB4990E52C07A5741606D84B8CA6860756F3D* FlowState_WithEnterUpdateExit_mA1137D474F339D6E95B24B589C3B593786C66C77 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2833,17 +2834,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FlowState_t960CB4990E52C07A5741606D84B8CA6860
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:73>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:73>
 		FlowState_t960CB4990E52C07A5741606D84B8CA6860756F3D* L_0 = (FlowState_t960CB4990E52C07A5741606D84B8CA6860756F3D*)il2cpp_codegen_object_new(FlowState_t960CB4990E52C07A5741606D84B8CA6860756F3D_il2cpp_TypeInfo_var);
 		FlowState__ctor_m4D4C701E6E9FF78E06C5877CDEF6E5DB5ACD31B8(L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:74>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:74>
 		FlowState_t960CB4990E52C07A5741606D84B8CA6860756F3D* L_1 = L_0;
 		NullCheck(L_1);
 		GraphNest_2_tDE7A508253945CE7ED5EF46C78913E049858DD49* L_2;
 		L_2 = NesterState_2_get_nest_mC0FC79B288CD09C94F3DBC68E4127EB07C50EC2E_inline(L_1, NesterState_2_get_nest_mC0FC79B288CD09C94F3DBC68E4127EB07C50EC2E_RuntimeMethod_var);
 		NullCheck(L_2);
 		GraphNest_2_set_source_m5D452830C3C79AC95960B35B40ABD4639EB42AF2(L_2, 0, GraphNest_2_set_source_m5D452830C3C79AC95960B35B40ABD4639EB42AF2_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:75>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:75>
 		FlowState_t960CB4990E52C07A5741606D84B8CA6860756F3D* L_3 = L_1;
 		NullCheck(L_3);
 		GraphNest_2_tDE7A508253945CE7ED5EF46C78913E049858DD49* L_4;
@@ -2852,11 +2853,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FlowState_t960CB4990E52C07A5741606D84B8CA6860
 		L_5 = FlowState_GraphWithEnterUpdateExit_m9FAEA311DF6960A0503BE45A40C40836583B042D(NULL);
 		NullCheck(L_4);
 		GraphNest_2_set_embed_mEE1AA89375CE65D83A8640DE4A213F02807E156D(L_4, L_5, GraphNest_2_set_embed_mEE1AA89375CE65D83A8640DE4A213F02807E156D_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:76>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:76>
 		return L_3;
 	}
 }
-// Method Definition Index: 142449
+// Method Definition Index: 145334
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FlowGraph_tF9E42FECF535CD5BAB10F75672B5BCE285627A45* FlowState_GraphWithEnterUpdateExit_m9FAEA311DF6960A0503BE45A40C40836583B042D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2870,15 +2871,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FlowGraph_tF9E42FECF535CD5BAB10F75672B5BCE285
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:81>
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:82>
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:83>
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:84>
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:85>
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:86>
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:87>
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:88>
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:89>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:81>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:82>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:83>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:84>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:85>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:86>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:87>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:88>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:89>
 		FlowGraph_tF9E42FECF535CD5BAB10F75672B5BCE285627A45* L_0 = (FlowGraph_tF9E42FECF535CD5BAB10F75672B5BCE285627A45*)il2cpp_codegen_object_new(FlowGraph_tF9E42FECF535CD5BAB10F75672B5BCE285627A45_il2cpp_TypeInfo_var);
 		FlowGraph__ctor_m740C540366298ED3EFBBF28CBD0474BFFE21BFA4(L_0, NULL);
 		FlowGraph_tF9E42FECF535CD5BAB10F75672B5BCE285627A45* L_1 = L_0;
@@ -2934,7 +2935,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FlowGraph_tF9E42FECF535CD5BAB10F75672B5BCE285
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 142450
+// Method Definition Index: 145335
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m0658C6CD437641ADC415E24C73729911564EEB68 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2951,7 +2952,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m0658C6CD437641ADC415E24C
 		return;
 	}
 }
-// Method Definition Index: 142451
+// Method Definition Index: 145336
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m0F98AA76D452AA0DE32F3C409B38578A8CE9A153 (U3CU3Ec_t451A240ECFD143B4F6EF836424820AADF31FFAE9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2959,7 +2960,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m0F98AA76D452AA0DE32F3C409
 		return;
 	}
 }
-// Method Definition Index: 142452
+// Method Definition Index: 145337
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3COnEnterImplementationU3Eb__2_0_m43F63A5A2FAF823C98F64A7BAC5B403530E844CD (U3CU3Ec_t451A240ECFD143B4F6EF836424820AADF31FFAE9* __this, EventHook_t1C9E2570B55940C342214BACB5E9EC889A113157 ___0_hook, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2969,7 +2970,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3COnEnterImplementationU3Eb__2_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:23>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:23>
 		EventHook_t1C9E2570B55940C342214BACB5E9EC889A113157 L_0 = ___0_hook;
 		EventHook_t1C9E2570B55940C342214BACB5E9EC889A113157 L_1;
 		L_1 = EventHook_op_Implicit_m93EAC8789A8E846D55B193CB46237A48C54693FA(_stringLiteral1D5D1E7932F4AC7FD073823F2DC0128A2A804BA5, NULL);
@@ -2978,7 +2979,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3COnEnterImplementationU3Eb__2_
 		return L_2;
 	}
 }
-// Method Definition Index: 142453
+// Method Definition Index: 145338
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3COnEnterImplementationU3Eb__2_1_mE576608718F3067AE899488D03B1B3128932F3B0 (U3CU3Ec_t451A240ECFD143B4F6EF836424820AADF31FFAE9* __this, RuntimeObject* ___0_parent, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2988,12 +2989,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3COnEnterImplementationU3Eb__2_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:23>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:23>
 		RuntimeObject* L_0 = ___0_parent;
 		return (bool)((!(((RuntimeObject*)(SubgraphUnit_tD9F0CDD40BD2E2426A757F3F5AAB939BAEAB1C7F*)((SubgraphUnit_tD9F0CDD40BD2E2426A757F3F5AAB939BAEAB1C7F*)IsInstSealed((RuntimeObject*)L_0, SubgraphUnit_tD9F0CDD40BD2E2426A757F3F5AAB939BAEAB1C7F_il2cpp_TypeInfo_var))) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
 	}
 }
-// Method Definition Index: 142454
+// Method Definition Index: 145339
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3COnExitImplementationU3Eb__3_0_mA781D7FF17C84409C2CFD5935374586E350525C3 (U3CU3Ec_t451A240ECFD143B4F6EF836424820AADF31FFAE9* __this, EventHook_t1C9E2570B55940C342214BACB5E9EC889A113157 ___0_hook, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3003,7 +3004,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3COnExitImplementationU3Eb__3_0
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:32>
 		EventHook_t1C9E2570B55940C342214BACB5E9EC889A113157 L_0 = ___0_hook;
 		EventHook_t1C9E2570B55940C342214BACB5E9EC889A113157 L_1;
 		L_1 = EventHook_op_Implicit_m93EAC8789A8E846D55B193CB46237A48C54693FA(_stringLiteralEE62DDB7D20096BE72C952DC168759008AEE41FE, NULL);
@@ -3012,7 +3013,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3COnExitImplementationU3Eb__3_0
 		return L_2;
 	}
 }
-// Method Definition Index: 142455
+// Method Definition Index: 145340
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3COnExitImplementationU3Eb__3_1_m76DD6E0FF7114AC75683EBA1CA9AE4088589BD49 (U3CU3Ec_t451A240ECFD143B4F6EF836424820AADF31FFAE9* __this, RuntimeObject* ___0_parent, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3022,7 +3023,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3COnExitImplementationU3Eb__3_1
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowState.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowState.cs:32>
 		RuntimeObject* L_0 = ___0_parent;
 		return (bool)((!(((RuntimeObject*)(SubgraphUnit_tD9F0CDD40BD2E2426A757F3F5AAB939BAEAB1C7F*)((SubgraphUnit_tD9F0CDD40BD2E2426A757F3F5AAB939BAEAB1C7F*)IsInstSealed((RuntimeObject*)L_0, SubgraphUnit_tD9F0CDD40BD2E2426A757F3F5AAB939BAEAB1C7F_il2cpp_TypeInfo_var))) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
 	}
@@ -3035,7 +3036,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3COnExitImplementationU3Eb__3_1
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 142456
+// Method Definition Index: 145341
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowStateTransition__ctor_m0E287B5B1B9588D42FEFA8B46727E2DBBCAB84C3 (FlowStateTransition_t4BDA71A23158210680606DB3205B58C7DC890DA8* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3045,13 +3046,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowStateTransition__ctor_m0E287B5B1B958
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:9>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:9>
 		NesterStateTransition_2__ctor_mD4DA3C1B82E4D0EEF4A440EABE0C5A6E412C028E(__this, NesterStateTransition_2__ctor_mD4DA3C1B82E4D0EEF4A440EABE0C5A6E412C028E_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:9>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:9>
 		return;
 	}
 }
-// Method Definition Index: 142457
+// Method Definition Index: 145342
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowStateTransition__ctor_m2BBC3AD9B292ECAE66D8D0D2F1FBB8F940F7F159 (FlowStateTransition_t4BDA71A23158210680606DB3205B58C7DC890DA8* __this, RuntimeObject* ___0_source, RuntimeObject* ___1_destination, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3062,11 +3063,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowStateTransition__ctor_m2BBC3AD9B292E
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:11>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:11>
 		RuntimeObject* L_0 = ___0_source;
 		RuntimeObject* L_1 = ___1_destination;
 		NesterStateTransition_2__ctor_m692924A951F0649C34A7925F7933C4F3E33A42EE(__this, L_0, L_1, NesterStateTransition_2__ctor_m692924A951F0649C34A7925F7933C4F3E33A42EE_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:13>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:13>
 		RuntimeObject* L_2 = ___0_source;
 		NullCheck(L_2);
 		bool L_3;
@@ -3077,7 +3078,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowStateTransition__ctor_m2BBC3AD9B292E
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:15>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:15>
 		InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* L_4 = (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB_il2cpp_TypeInfo_var)));
 		InvalidOperationException__ctor_mE4CB6F4712AB6D99A2358FBAE2E052B3EE976162(L_4, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral10EB483BA41E203E0C0BFFFD0F6B6520C79CCA6F)), NULL);
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_4, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&FlowStateTransition__ctor_m2BBC3AD9B292ECAE66D8D0D2F1FBB8F940F7F159_RuntimeMethod_var)));
@@ -3085,7 +3086,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowStateTransition__ctor_m2BBC3AD9B292E
 
 IL_001b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:18>
 		RuntimeObject* L_5 = ___1_destination;
 		NullCheck(L_5);
 		bool L_6;
@@ -3096,7 +3097,7 @@ IL_001b:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:20>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:20>
 		InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* L_7 = (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB_il2cpp_TypeInfo_var)));
 		InvalidOperationException__ctor_mE4CB6F4712AB6D99A2358FBAE2E052B3EE976162(L_7, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral0B7FA07E44156222B366F2B4401A0F06C3FB5AB6)), NULL);
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_7, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&FlowStateTransition__ctor_m2BBC3AD9B292ECAE66D8D0D2F1FBB8F940F7F159_RuntimeMethod_var)));
@@ -3104,11 +3105,11 @@ IL_001b:
 
 IL_002e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:22>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:22>
 		return;
 	}
 }
-// Method Definition Index: 142458
+// Method Definition Index: 145343
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FlowStateTransition_t4BDA71A23158210680606DB3205B58C7DC890DA8* FlowStateTransition_WithDefaultTrigger_m2F0E7BDD771CB5A6E1A1C70B3EC695798FBC179F (RuntimeObject* ___0_source, RuntimeObject* ___1_destination, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3121,19 +3122,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FlowStateTransition_t4BDA71A23158210680606DB3
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:26>
 		RuntimeObject* L_0 = ___0_source;
 		RuntimeObject* L_1 = ___1_destination;
 		FlowStateTransition_t4BDA71A23158210680606DB3205B58C7DC890DA8* L_2 = (FlowStateTransition_t4BDA71A23158210680606DB3205B58C7DC890DA8*)il2cpp_codegen_object_new(FlowStateTransition_t4BDA71A23158210680606DB3205B58C7DC890DA8_il2cpp_TypeInfo_var);
 		FlowStateTransition__ctor_m2BBC3AD9B292ECAE66D8D0D2F1FBB8F940F7F159(L_2, L_0, L_1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:27>
 		FlowStateTransition_t4BDA71A23158210680606DB3205B58C7DC890DA8* L_3 = L_2;
 		NullCheck(L_3);
 		GraphNest_2_tDE7A508253945CE7ED5EF46C78913E049858DD49* L_4;
 		L_4 = NesterStateTransition_2_get_nest_m4FB319B08D32DCB75CC3196F63A003893CB36881_inline(L_3, NesterStateTransition_2_get_nest_m4FB319B08D32DCB75CC3196F63A003893CB36881_RuntimeMethod_var);
 		NullCheck(L_4);
 		GraphNest_2_set_source_m5D452830C3C79AC95960B35B40ABD4639EB42AF2(L_4, 0, GraphNest_2_set_source_m5D452830C3C79AC95960B35B40ABD4639EB42AF2_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:28>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:28>
 		FlowStateTransition_t4BDA71A23158210680606DB3205B58C7DC890DA8* L_5 = L_3;
 		NullCheck(L_5);
 		GraphNest_2_tDE7A508253945CE7ED5EF46C78913E049858DD49* L_6;
@@ -3142,11 +3143,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FlowStateTransition_t4BDA71A23158210680606DB3
 		L_7 = FlowStateTransition_GraphWithDefaultTrigger_mF3C94338EA4CCE13A713BB7E0EFF38F80B9C5E96(NULL);
 		NullCheck(L_6);
 		GraphNest_2_set_embed_mEE1AA89375CE65D83A8640DE4A213F02807E156D(L_6, L_7, GraphNest_2_set_embed_mEE1AA89375CE65D83A8640DE4A213F02807E156D_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:29>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:29>
 		return L_5;
 	}
 }
-// Method Definition Index: 142459
+// Method Definition Index: 145344
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FlowGraph_tF9E42FECF535CD5BAB10F75672B5BCE285627A45* FlowStateTransition_GraphWithDefaultTrigger_mF3C94338EA4CCE13A713BB7E0EFF38F80B9C5E96 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3158,13 +3159,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FlowGraph_tF9E42FECF535CD5BAB10F75672B5BCE285
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:34>
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:35>
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:36>
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:37>
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:38>
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:39>
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:35>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:36>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:37>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:38>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:39>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:40>
 		FlowGraph_tF9E42FECF535CD5BAB10F75672B5BCE285627A45* L_0 = (FlowGraph_tF9E42FECF535CD5BAB10F75672B5BCE285627A45*)il2cpp_codegen_object_new(FlowGraph_tF9E42FECF535CD5BAB10F75672B5BCE285627A45_il2cpp_TypeInfo_var);
 		FlowGraph__ctor_m740C540366298ED3EFBBF28CBD0474BFFE21BFA4(L_0, NULL);
 		FlowGraph_tF9E42FECF535CD5BAB10F75672B5BCE285627A45* L_1 = L_0;
@@ -3184,7 +3185,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FlowGraph_tF9E42FECF535CD5BAB10F75672B5BCE285
 		return L_1;
 	}
 }
-// Method Definition Index: 142460
+// Method Definition Index: 145345
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowStateTransition_OnEnter_mEE5CDE09CBB0CCAB2CF59D6FFAE6486C348C08B8 (FlowStateTransition_t4BDA71A23158210680606DB3205B58C7DC890DA8* __this, Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* ___0_flow, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3215,7 +3216,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowStateTransition_OnEnter_mEE5CDE09CBB
 	Func_2_tAF55076662A6FF164DF890818D0B9570331AC1EF* G_B4_2 = NULL;
 	GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* G_B4_3 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:47>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:47>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_0 = ___0_flow;
 		NullCheck(L_0);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_1;
@@ -3229,7 +3230,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowStateTransition_OnEnter_mEE5CDE09CBB
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:49>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:49>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_3 = ___0_flow;
 		NullCheck(L_3);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_4;
@@ -3295,7 +3296,7 @@ IL_0033:
 IL_005b:
 	{
 		XEventGraph_TriggerEventHandler_TisEmptyEventArgs_t2EF153F78311F355E9AE7BAE748576515674476F_m10F16C3689339BE90C2D1E008A227D7364F20B9A(G_B5_3, G_B5_2, G_B5_1, G_B5_0, (bool)0, XEventGraph_TriggerEventHandler_TisEmptyEventArgs_t2EF153F78311F355E9AE7BAE748576515674476F_m10F16C3689339BE90C2D1E008A227D7364F20B9A_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:50>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:50>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_16 = ___0_flow;
 		NullCheck(L_16);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_17;
@@ -3306,11 +3307,11 @@ IL_005b:
 
 IL_006c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:52>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:52>
 		return;
 	}
 }
-// Method Definition Index: 142461
+// Method Definition Index: 145346
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowStateTransition_OnExit_m87B094699059A5F92CB999662CF8D0B63B89A431 (FlowStateTransition_t4BDA71A23158210680606DB3205B58C7DC890DA8* __this, Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* ___0_flow, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3343,7 +3344,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowStateTransition_OnExit_m87B094699059
 	Func_2_tAF55076662A6FF164DF890818D0B9570331AC1EF* G_B4_2 = NULL;
 	GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* G_B4_3 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:56>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:56>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_0 = ___0_flow;
 		NullCheck(L_0);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_1;
@@ -3357,7 +3358,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowStateTransition_OnExit_m87B094699059
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:58>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:58>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_3 = ___0_flow;
 		NullCheck(L_3);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_4;
@@ -3423,7 +3424,7 @@ IL_0033:
 IL_005b:
 	{
 		XEventGraph_TriggerEventHandler_TisEmptyEventArgs_t2EF153F78311F355E9AE7BAE748576515674476F_m10F16C3689339BE90C2D1E008A227D7364F20B9A(G_B5_3, G_B5_2, G_B5_1, G_B5_0, (bool)0, XEventGraph_TriggerEventHandler_TisEmptyEventArgs_t2EF153F78311F355E9AE7BAE748576515674476F_m10F16C3689339BE90C2D1E008A227D7364F20B9A_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:59>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:59>
 		GraphNest_2_tDE7A508253945CE7ED5EF46C78913E049858DD49* L_16;
 		L_16 = NesterStateTransition_2_get_nest_m4FB319B08D32DCB75CC3196F63A003893CB36881_inline(__this, NesterStateTransition_2_get_nest_m4FB319B08D32DCB75CC3196F63A003893CB36881_RuntimeMethod_var);
 		NullCheck(L_16);
@@ -3435,7 +3436,7 @@ IL_005b:
 		L_19 = Flow_get_stack_m14E56FE5242B8B811C540A2E23CD29C92095D196_inline(L_18, NULL);
 		NullCheck(L_17);
 		FlowGraph_StopListening_m869ED63E7EDDF145E07FAF4E224DC61AAA676020(L_17, L_19, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:60>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:60>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_20 = ___0_flow;
 		NullCheck(L_20);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_21;
@@ -3446,11 +3447,11 @@ IL_005b:
 
 IL_0082:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:62>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:62>
 		return;
 	}
 }
-// Method Definition Index: 142462
+// Method Definition Index: 145347
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowStateTransition_StartListening_mE9C0224F1A05FD61991D54FED630BB557F0F17B0 (FlowStateTransition_t4BDA71A23158210680606DB3205B58C7DC890DA8* __this, GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* ___0_stack, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3461,7 +3462,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowStateTransition_StartListening_mE9C0
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:66>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:66>
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_0 = ___0_stack;
 		NullCheck(L_0);
 		bool L_1;
@@ -3472,7 +3473,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowStateTransition_StartListening_mE9C0
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:68>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:68>
 		GraphNest_2_tDE7A508253945CE7ED5EF46C78913E049858DD49* L_2;
 		L_2 = NesterStateTransition_2_get_nest_m4FB319B08D32DCB75CC3196F63A003893CB36881_inline(__this, NesterStateTransition_2_get_nest_m4FB319B08D32DCB75CC3196F63A003893CB36881_RuntimeMethod_var);
 		NullCheck(L_2);
@@ -3481,7 +3482,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowStateTransition_StartListening_mE9C0
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_4 = ___0_stack;
 		NullCheck(L_3);
 		FlowGraph_StartListening_m66319B067F4F4371797D572E4CB459AC42023612(L_3, L_4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:69>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:69>
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_5 = ___0_stack;
 		NullCheck(L_5);
 		GraphStack_ExitParentElement_mB4379BEC03B4DF2D6A7674C01B9970CB98290568(L_5, NULL);
@@ -3489,11 +3490,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowStateTransition_StartListening_mE9C0
 
 IL_0020:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:71>
 		return;
 	}
 }
-// Method Definition Index: 142463
+// Method Definition Index: 145348
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowStateTransition_StopListening_m2BB47923BC6D64F1339C938A10B5966827C0FA6A (FlowStateTransition_t4BDA71A23158210680606DB3205B58C7DC890DA8* __this, GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* ___0_stack, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3504,7 +3505,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowStateTransition_StopListening_m2BB47
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:75>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:75>
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_0 = ___0_stack;
 		NullCheck(L_0);
 		bool L_1;
@@ -3515,7 +3516,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowStateTransition_StopListening_m2BB47
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:77>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:77>
 		GraphNest_2_tDE7A508253945CE7ED5EF46C78913E049858DD49* L_2;
 		L_2 = NesterStateTransition_2_get_nest_m4FB319B08D32DCB75CC3196F63A003893CB36881_inline(__this, NesterStateTransition_2_get_nest_m4FB319B08D32DCB75CC3196F63A003893CB36881_RuntimeMethod_var);
 		NullCheck(L_2);
@@ -3524,7 +3525,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowStateTransition_StopListening_m2BB47
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_4 = ___0_stack;
 		NullCheck(L_3);
 		FlowGraph_StopListening_m869ED63E7EDDF145E07FAF4E224DC61AAA676020(L_3, L_4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:78>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:78>
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_5 = ___0_stack;
 		NullCheck(L_5);
 		GraphStack_ExitParentElement_mB4379BEC03B4DF2D6A7674C01B9970CB98290568(L_5, NULL);
@@ -3532,11 +3533,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FlowStateTransition_StopListening_m2BB47
 
 IL_0020:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:80>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:80>
 		return;
 	}
 }
-// Method Definition Index: 142464
+// Method Definition Index: 145349
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FlowStateTransition_IsListening_m740F73C951985D1B4B4DAD84A4D14A65ADA45F8C (FlowStateTransition_t4BDA71A23158210680606DB3205B58C7DC890DA8* __this, GraphPointer_t01C98F06D1A7635CB867665044B7DC1FE03D1C0B* ___0_pointer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3546,7 +3547,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FlowStateTransition_IsListening_m740F73C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:84>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:84>
 		GraphPointer_t01C98F06D1A7635CB867665044B7DC1FE03D1C0B* L_0 = ___0_pointer;
 		RuntimeObject* L_1;
 		L_1 = StateTransition_get_source_mD9E4E8A926307F7B242885A07EA578EB6FBB1711_inline(__this, NULL);
@@ -3558,11 +3559,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool FlowStateTransition_IsListening_m740F73C
 		return L_3;
 	}
 }
-// Method Definition Index: 142465
+// Method Definition Index: 145350
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FlowGraph_tF9E42FECF535CD5BAB10F75672B5BCE285627A45* FlowStateTransition_DefaultGraph_mF8F225BF069765DEBD37F360C7E5AE78EE3C2003 (FlowStateTransition_t4BDA71A23158210680606DB3205B58C7DC890DA8* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:92>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:92>
 		FlowGraph_tF9E42FECF535CD5BAB10F75672B5BCE285627A45* L_0;
 		L_0 = FlowStateTransition_GraphWithDefaultTrigger_mF3C94338EA4CCE13A713BB7E0EFF38F80B9C5E96(NULL);
 		return L_0;
@@ -3576,7 +3577,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FlowGraph_tF9E42FECF535CD5BAB10F75672B5BCE285
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 142466
+// Method Definition Index: 145351
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m0B395A6646743E173CD0F098BC258EF559C3EF7E (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3593,7 +3594,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m0B395A6646743E173CD0F098
 		return;
 	}
 }
-// Method Definition Index: 142467
+// Method Definition Index: 145352
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_mF645DCF309189C84E9BC1F1C09CB6F6F821FFD89 (U3CU3Ec_t688E416CF7104BA7D734A6639BCD36BE7704B347* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3601,7 +3602,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_mF645DCF309189C84E9BC1F1C0
 		return;
 	}
 }
-// Method Definition Index: 142468
+// Method Definition Index: 145353
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3COnEnterU3Eb__4_0_m9284B4FA5B0C96E06288C09DE1EEDBB1A957589C (U3CU3Ec_t688E416CF7104BA7D734A6639BCD36BE7704B347* __this, EventHook_t1C9E2570B55940C342214BACB5E9EC889A113157 ___0_hook, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3611,7 +3612,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3COnEnterU3Eb__4_0_m9284B4FA5B0
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:49>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:49>
 		EventHook_t1C9E2570B55940C342214BACB5E9EC889A113157 L_0 = ___0_hook;
 		EventHook_t1C9E2570B55940C342214BACB5E9EC889A113157 L_1;
 		L_1 = EventHook_op_Implicit_m93EAC8789A8E846D55B193CB46237A48C54693FA(_stringLiteral1D5D1E7932F4AC7FD073823F2DC0128A2A804BA5, NULL);
@@ -3620,7 +3621,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3COnEnterU3Eb__4_0_m9284B4FA5B0
 		return L_2;
 	}
 }
-// Method Definition Index: 142469
+// Method Definition Index: 145354
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3COnEnterU3Eb__4_1_m9595DFB11E6730937EAD3D00F27385624A185D2D (U3CU3Ec_t688E416CF7104BA7D734A6639BCD36BE7704B347* __this, RuntimeObject* ___0_parent, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3630,12 +3631,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3COnEnterU3Eb__4_1_m9595DFB11E6
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:49>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:49>
 		RuntimeObject* L_0 = ___0_parent;
 		return (bool)((!(((RuntimeObject*)(SubgraphUnit_tD9F0CDD40BD2E2426A757F3F5AAB939BAEAB1C7F*)((SubgraphUnit_tD9F0CDD40BD2E2426A757F3F5AAB939BAEAB1C7F*)IsInstSealed((RuntimeObject*)L_0, SubgraphUnit_tD9F0CDD40BD2E2426A757F3F5AAB939BAEAB1C7F_il2cpp_TypeInfo_var))) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
 	}
 }
-// Method Definition Index: 142470
+// Method Definition Index: 145355
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3COnExitU3Eb__5_0_m7963C51E2FE5A8FD3EF84AA728BBBD321E16B874 (U3CU3Ec_t688E416CF7104BA7D734A6639BCD36BE7704B347* __this, EventHook_t1C9E2570B55940C342214BACB5E9EC889A113157 ___0_hook, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3645,7 +3646,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3COnExitU3Eb__5_0_m7963C51E2FE5
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:58>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:58>
 		EventHook_t1C9E2570B55940C342214BACB5E9EC889A113157 L_0 = ___0_hook;
 		EventHook_t1C9E2570B55940C342214BACB5E9EC889A113157 L_1;
 		L_1 = EventHook_op_Implicit_m93EAC8789A8E846D55B193CB46237A48C54693FA(_stringLiteralEE62DDB7D20096BE72C952DC168759008AEE41FE, NULL);
@@ -3654,7 +3655,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3COnExitU3Eb__5_0_m7963C51E2FE5
 		return L_2;
 	}
 }
-// Method Definition Index: 142471
+// Method Definition Index: 145356
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3COnExitU3Eb__5_1_m4712164255695128DCB1BE618644E6D055F92129 (U3CU3Ec_t688E416CF7104BA7D734A6639BCD36BE7704B347* __this, RuntimeObject* ___0_parent, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3664,7 +3665,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3COnExitU3Eb__5_1_m471216425569
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/FlowStateTransition.cs:58>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/FlowStateTransition.cs:58>
 		RuntimeObject* L_0 = ___0_parent;
 		return (bool)((!(((RuntimeObject*)(SubgraphUnit_tD9F0CDD40BD2E2426A757F3F5AAB939BAEAB1C7F*)((SubgraphUnit_tD9F0CDD40BD2E2426A757F3F5AAB939BAEAB1C7F*)IsInstSealed((RuntimeObject*)L_0, SubgraphUnit_tD9F0CDD40BD2E2426A757F3F5AAB939BAEAB1C7F_il2cpp_TypeInfo_var))) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
 	}
@@ -3677,36 +3678,36 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3COnExitU3Eb__5_1_m471216425569
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 142472
+// Method Definition Index: 145357
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t HasStateGraph_get_containerType_mE1BFD05FC78A17B33DDC0A60AD306DF69466982A (HasStateGraph_tE746DD57D03BC66D7BEDFE5740C1DA9B79C1F37A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/Framework/Graph/HasStateGraph.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/Framework/Graph/HasStateGraph.cs:18>
 		int32_t L_0 = __this->___U3CcontainerTypeU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142473
+// Method Definition Index: 145358
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HasStateGraph_set_containerType_m0AFC316EB8FFC3061311E8359FDDE4F20A1E9710 (HasStateGraph_tE746DD57D03BC66D7BEDFE5740C1DA9B79C1F37A* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/Framework/Graph/HasStateGraph.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/Framework/Graph/HasStateGraph.cs:18>
 		int32_t L_0 = ___0_value;
 		__this->___U3CcontainerTypeU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 142474
+// Method Definition Index: 145359
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool HasStateGraph_get_isGameObject_m7E752A06C53993576DE48F0C13D2206B03FCA7EB (HasStateGraph_tE746DD57D03BC66D7BEDFE5740C1DA9B79C1F37A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/Framework/Graph/HasStateGraph.cs:20>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/Framework/Graph/HasStateGraph.cs:20>
 		int32_t L_0;
 		L_0 = HasStateGraph_get_containerType_mE1BFD05FC78A17B33DDC0A60AD306DF69466982A_inline(__this, NULL);
 		return (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
 	}
 }
-// Method Definition Index: 142475
+// Method Definition Index: 145360
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HasStateGraph__ctor_m004870EEA621C072605FE1FF61949928F80E20D7 (HasStateGraph_tE746DD57D03BC66D7BEDFE5740C1DA9B79C1F37A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3728,7 +3729,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HasStateGraph__ctor_m004870EEA621C072605
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 142529
+// Method Definition Index: 145414
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* OnEnterState_get_hookName_m635A3B4C8D873861C48E73463E6C66CB22073600 (OnEnterState_t61325902B0C0EF93839D78321D87F88458FC0FCF* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3738,11 +3739,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* OnEnterState_get_hookName_m635A3B4C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/OnEnterState.cs:9>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/OnEnterState.cs:9>
 		return _stringLiteral1D5D1E7932F4AC7FD073823F2DC0128A2A804BA5;
 	}
 }
-// Method Definition Index: 142530
+// Method Definition Index: 145415
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OnEnterState__ctor_m9771B9DB51A6AF7AE773154D81A863ADDEB2CB4E (OnEnterState_t61325902B0C0EF93839D78321D87F88458FC0FCF* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3764,7 +3765,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OnEnterState__ctor_m9771B9DB51A6AF7AE773
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 142531
+// Method Definition Index: 145416
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* OnExitState_get_hookName_mD6F9C109094BB1F60015598B1EDED1BF3AA69636 (OnExitState_t44299FE2DBE8BC20D7385031BA6BE257701A410F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3774,11 +3775,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* OnExitState_get_hookName_mD6F9C1090
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/OnExitState.cs:9>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/OnExitState.cs:9>
 		return _stringLiteralEE62DDB7D20096BE72C952DC168759008AEE41FE;
 	}
 }
-// Method Definition Index: 142532
+// Method Definition Index: 145417
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OnExitState__ctor_mBADF027293975A80865E356175EBD49B389E1CFF (OnExitState_t44299FE2DBE8BC20D7385031BA6BE257701A410F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3800,7 +3801,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OnExitState__ctor_mBADF027293975A80865E3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 142533
+// Method Definition Index: 145418
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* State_CreateData_m750CEF4B1B95BC7FDF74222873166A7EE2A21F1F (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3810,13 +3811,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* State_CreateData_m750CEF4B1B95
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:28>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:28>
 		Data_tF02C03D4C146CDB89C3D3C5E50935196C5ABC09E* L_0 = (Data_tF02C03D4C146CDB89C3D3C5E50935196C5ABC09E*)il2cpp_codegen_object_new(Data_tF02C03D4C146CDB89C3D3C5E50935196C5ABC09E_il2cpp_TypeInfo_var);
 		Data__ctor_m2C25B4EB3FF3AC87BD036C5C89E7147F11C9463C(L_0, NULL);
 		return L_0;
 	}
 }
-// Method Definition Index: 142534
+// Method Definition Index: 145419
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* State_CreateDebugData_m9E432C08EDDCA68FCAC1ABC8026243C2B49E247F (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3826,48 +3827,48 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* State_CreateDebugData_m9E432C0
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:33>
 		DebugData_t7C537AA1FDC4B7DA2641C0A675888003851A0D92* L_0 = (DebugData_t7C537AA1FDC4B7DA2641C0A675888003851A0D92*)il2cpp_codegen_object_new(DebugData_t7C537AA1FDC4B7DA2641C0A675888003851A0D92_il2cpp_TypeInfo_var);
 		DebugData__ctor_mC3ACFE3A5045A3CF3EA6D7C876740EA78B2A3900(L_0, NULL);
 		return L_0;
 	}
 }
-// Method Definition Index: 142535
+// Method Definition Index: 145420
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool State_get_isStart_m1A71470B1BCF2BBC60EFB82821351D1C32DB468E (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:37>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:37>
 		bool L_0 = __this->___U3CisStartU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142536
+// Method Definition Index: 145421
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_set_isStart_m07936C946A25E5FE5D6CB70C900AB1AABEDE69E0 (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:37>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:37>
 		bool L_0 = ___0_value;
 		__this->___U3CisStartU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 142537
+// Method Definition Index: 145422
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool State_get_canBeSource_mD5FABEEDE70724A06C65684326C24266E130E335 (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:40>
 		return (bool)1;
 	}
 }
-// Method Definition Index: 142538
+// Method Definition Index: 145423
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool State_get_canBeDestination_mEDF1C44B1AB845D65901970ECCF460EF850CAD3A (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:43>
 		return (bool)1;
 	}
 }
-// Method Definition Index: 142539
+// Method Definition Index: 145424
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_BeforeRemove_mB9B13B9B2D45F92E6CA06E64B6EE0432A1EAED2B (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3877,15 +3878,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_BeforeRemove_mB9B13B9B2D45F92E6CA0
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:47>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:47>
 		GraphElement_1_BeforeRemove_mE535A52269A1B2014BDF7E40092B538FC40FD9C2(__this, GraphElement_1_BeforeRemove_mE535A52269A1B2014BDF7E40092B538FC40FD9C2_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:49>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:49>
 		State_Disconnect_mC1E687533B179BA0023E41F9408C150C7C52988C(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:50>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:50>
 		return;
 	}
 }
-// Method Definition Index: 142540
+// Method Definition Index: 145425
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_Instantiate_m467F5E628763F11CB368DCA4712E96EF33F5C9C2 (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, GraphReference_t721C982B418EEAA6BE9FA2BFB6A047A8E9362DA9* ___0_instance, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3902,16 +3903,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_Instantiate_m467F5E628763F11CB368D
 	RuntimeObject* V_1 = NULL;
 	Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* V_2 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:54>
 		GraphReference_t721C982B418EEAA6BE9FA2BFB6A047A8E9362DA9* L_0 = ___0_instance;
 		GraphElement_1_Instantiate_m46937EB90FC6BC388113232E6E94D622BA1F0603(__this, L_0, GraphElement_1_Instantiate_m46937EB90FC6BC388113232E6E94D622BA1F0603_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:56>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:56>
 		GraphReference_t721C982B418EEAA6BE9FA2BFB6A047A8E9362DA9* L_1 = ___0_instance;
 		NullCheck(L_1);
 		Data_tF02C03D4C146CDB89C3D3C5E50935196C5ABC09E* L_2;
 		L_2 = GraphPointer_GetElementData_TisData_tF02C03D4C146CDB89C3D3C5E50935196C5ABC09E_mA049EE0A42B11A10A777C39BBB8C52C383A92F19(L_1, __this, GraphPointer_GetElementData_TisData_tF02C03D4C146CDB89C3D3C5E50935196C5ABC09E_mA049EE0A42B11A10A777C39BBB8C52C383A92F19_RuntimeMethod_var);
 		V_0 = L_2;
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:58>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:58>
 		V_1 = ((RuntimeObject*)IsInst((RuntimeObject*)__this, IGraphEventListener_t21DB6AC98799BE07817E5FE5F9CF2C2FB5FE5F93_il2cpp_TypeInfo_var));
 		RuntimeObject* L_3 = V_1;
 		if (!L_3)
@@ -3929,7 +3930,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_Instantiate_m467F5E628763F11CB368D
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:60>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:60>
 		RuntimeObject* L_6 = V_1;
 		GraphReference_t721C982B418EEAA6BE9FA2BFB6A047A8E9362DA9* L_7 = ___0_instance;
 		XGraphEventListener_StartListening_m0DFDFC253035301D7ABCCC4635CA7282B2222AE9(L_6, L_7, NULL);
@@ -3938,7 +3939,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_Instantiate_m467F5E628763F11CB368D
 
 IL_0029:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:62>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:62>
 		bool L_8;
 		L_8 = State_get_isStart_m1A71470B1BCF2BBC60EFB82821351D1C32DB468E_inline(__this, NULL);
 		if (!L_8)
@@ -3968,7 +3969,7 @@ IL_0029:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:64>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:64>
 		GraphReference_t721C982B418EEAA6BE9FA2BFB6A047A8E9362DA9* L_14 = ___0_instance;
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_15;
 		L_15 = Flow_New_m98A782213700BC09F3B5E52989F90DCA246B3E5F(L_14, NULL);
@@ -4001,10 +4002,10 @@ IL_0061:
 		});
 		try
 		{
-			//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:66>
+			//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:66>
 			Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_18 = V_2;
 			VirtualActionInvoker2< Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582*, int32_t >::Invoke(55, __this, L_18, 0);
-			//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:67>
+			//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:67>
 			goto IL_0062;
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -4015,11 +4016,11 @@ IL_0061:
 
 IL_0062:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:69>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:69>
 		return;
 	}
 }
-// Method Definition Index: 142541
+// Method Definition Index: 145426
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_Uninstantiate_mE6196C4A1562C47EE33F83F0B14EBFE1647AA7E2 (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, GraphReference_t721C982B418EEAA6BE9FA2BFB6A047A8E9362DA9* ___0_instance, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4031,7 +4032,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_Uninstantiate_mE6196C4A1562C47EE33
 	}
 	RuntimeObject* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:73>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:73>
 		V_0 = ((RuntimeObject*)IsInst((RuntimeObject*)__this, IGraphEventListener_t21DB6AC98799BE07817E5FE5F9CF2C2FB5FE5F93_il2cpp_TypeInfo_var));
 		RuntimeObject* L_0 = V_0;
 		if (!L_0)
@@ -4040,7 +4041,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_Uninstantiate_mE6196C4A1562C47EE33
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:75>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:75>
 		RuntimeObject* L_1 = V_0;
 		GraphReference_t721C982B418EEAA6BE9FA2BFB6A047A8E9362DA9* L_2 = ___0_instance;
 		XGraphEventListener_StopListening_m6521CC383E1DEC9C994AB5A40BE56C429C25209F(L_1, L_2, NULL);
@@ -4048,14 +4049,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_Uninstantiate_mE6196C4A1562C47EE33
 
 IL_0011:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:78>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:78>
 		GraphReference_t721C982B418EEAA6BE9FA2BFB6A047A8E9362DA9* L_3 = ___0_instance;
 		GraphElement_1_Uninstantiate_m3687828805274206C75F55E6F7CFA009E70ECFE3(__this, L_3, GraphElement_1_Uninstantiate_m3687828805274206C75F55E6F7CFA009E70ECFE3_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:79>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:79>
 		return;
 	}
 }
-// Method Definition Index: 142542
+// Method Definition Index: 145427
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_CopyFrom_m0A03AC5C2C6CBB6D493593E6674C92E7C7F119C3 (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* ___0_source, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4065,26 +4066,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_CopyFrom_m0A03AC5C2C6CBB6D493593E6
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:85>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:85>
 		State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* L_0 = ___0_source;
 		GraphElement_1_CopyFrom_m678A836AB9EBD33FF0CEB80E7987E13A1E33BA65(__this, L_0, GraphElement_1_CopyFrom_m678A836AB9EBD33FF0CEB80E7987E13A1E33BA65_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:87>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:87>
 		State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* L_1 = ___0_source;
 		NullCheck(L_1);
 		bool L_2;
 		L_2 = State_get_isStart_m1A71470B1BCF2BBC60EFB82821351D1C32DB468E_inline(L_1, NULL);
 		State_set_isStart_m07936C946A25E5FE5D6CB70C900AB1AABEDE69E0_inline(__this, L_2, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:88>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:88>
 		State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* L_3 = ___0_source;
 		NullCheck(L_3);
 		float L_4;
 		L_4 = State_get_width_m3C7CE021C0ED120A230D46BAAC0B567F4928BAB1_inline(L_3, NULL);
 		State_set_width_m7FFA90CCD391B250B3345CCC0D279882AF1C50FB_inline(__this, L_4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:89>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:89>
 		return;
 	}
 }
-// Method Definition Index: 142543
+// Method Definition Index: 145428
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* State_get_outgoingTransitions_mBF82B56501D04086DB8D8C39FFC40FAFD4CDB9EC (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4101,7 +4102,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* State_get_outgoingTransitions_
 	RuntimeObject* G_B5_0 = NULL;
 	RuntimeObject* G_B4_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:95>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:95>
 		StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* L_0;
 		L_0 = GraphElement_1_get_graph_mAECD809A5F874AB7C649AD2F7301D6F5D9976609_inline(__this, GraphElement_1_get_graph_mAECD809A5F874AB7C649AD2F7301D6F5D9976609_RuntimeMethod_var);
 		StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* L_1 = L_0;
@@ -4149,7 +4150,7 @@ IL_0021:
 		return G_B5_0;
 	}
 }
-// Method Definition Index: 142544
+// Method Definition Index: 145429
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* State_get_incomingTransitions_mA2A35684A095DA3CD6FF35B1AB161509FBD7744F (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4166,7 +4167,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* State_get_incomingTransitions_
 	RuntimeObject* G_B5_0 = NULL;
 	RuntimeObject* G_B4_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:97>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:97>
 		StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* L_0;
 		L_0 = GraphElement_1_get_graph_mAECD809A5F874AB7C649AD2F7301D6F5D9976609_inline(__this, GraphElement_1_get_graph_mAECD809A5F874AB7C649AD2F7301D6F5D9976609_RuntimeMethod_var);
 		StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* L_1 = L_0;
@@ -4214,7 +4215,7 @@ IL_0021:
 		return G_B5_0;
 	}
 }
-// Method Definition Index: 142545
+// Method Definition Index: 145430
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tE2D40EAAD7C8CFC54A71FAD396C53E27F604CFD9* State_get_outgoingTransitionsNoAlloc_m1BE5207E0FE37E715FD6E9DA700FC96427E74653 (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4231,7 +4232,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tE2D40EAAD7C8CFC54A71FAD396C53E27F604C
 	List_1_tE2D40EAAD7C8CFC54A71FAD396C53E27F604CFD9* G_B5_0 = NULL;
 	List_1_tE2D40EAAD7C8CFC54A71FAD396C53E27F604CFD9* G_B4_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:99>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:99>
 		StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* L_0;
 		L_0 = GraphElement_1_get_graph_mAECD809A5F874AB7C649AD2F7301D6F5D9976609_inline(__this, GraphElement_1_get_graph_mAECD809A5F874AB7C649AD2F7301D6F5D9976609_RuntimeMethod_var);
 		StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* L_1 = L_0;
@@ -4279,7 +4280,7 @@ IL_0021:
 		return G_B5_0;
 	}
 }
-// Method Definition Index: 142546
+// Method Definition Index: 145431
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* State_get_transitions_m05FC600CC7B9FACFC9A6541ECE96CAB8917B813F (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4290,7 +4291,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* State_get_transitions_m05FC600
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:101>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:101>
 		IEnumerableU5BU5D_t2675ADA6DB5E6D17F6B3F4850BCE62F26E04B5B4* L_0 = (IEnumerableU5BU5D_t2675ADA6DB5E6D17F6B3F4850BCE62F26E04B5B4*)(IEnumerableU5BU5D_t2675ADA6DB5E6D17F6B3F4850BCE62F26E04B5B4*)SZArrayNew(IEnumerableU5BU5D_t2675ADA6DB5E6D17F6B3F4850BCE62F26E04B5B4_il2cpp_TypeInfo_var, (uint32_t)2);
 		IEnumerableU5BU5D_t2675ADA6DB5E6D17F6B3F4850BCE62F26E04B5B4* L_1 = L_0;
 		RuntimeObject* L_2;
@@ -4309,7 +4310,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* State_get_transitions_m05FC600
 		return L_5;
 	}
 }
-// Method Definition Index: 142547
+// Method Definition Index: 145432
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_Disconnect_mC1E687533B179BA0023E41F9408C150C7C52988C (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4324,7 +4325,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_Disconnect_mC1E687533B179BA0023E41
 	int32_t V_1 = 0;
 	RuntimeObject* V_2 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:105>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:105>
 		RuntimeObject* L_0;
 		L_0 = State_get_transitions_m05FC600CC7B9FACFC9A6541ECE96CAB8917B813F(__this, NULL);
 		IStateTransitionU5BU5D_t5E2B6682D4538FA79D5F3DBC8B4B94CD3C170922* L_1;
@@ -4336,14 +4337,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_Disconnect_mC1E687533B179BA0023E41
 
 IL_0010:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:105>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:105>
 		IStateTransitionU5BU5D_t5E2B6682D4538FA79D5F3DBC8B4B94CD3C170922* L_2 = V_0;
 		int32_t L_3 = V_1;
 		NullCheck(L_2);
 		int32_t L_4 = L_3;
 		RuntimeObject* L_5 = (L_2)->GetAt(static_cast<il2cpp_array_size_t>(L_4));
 		V_2 = L_5;
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:107>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:107>
 		StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* L_6;
 		L_6 = GraphElement_1_get_graph_mAECD809A5F874AB7C649AD2F7301D6F5D9976609_inline(__this, GraphElement_1_get_graph_mAECD809A5F874AB7C649AD2F7301D6F5D9976609_RuntimeMethod_var);
 		NullCheck(L_6);
@@ -4359,7 +4360,7 @@ IL_0010:
 
 IL_002a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:105>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:105>
 		int32_t L_11 = V_1;
 		IStateTransitionU5BU5D_t5E2B6682D4538FA79D5F3DBC8B4B94CD3C170922* L_12 = V_0;
 		NullCheck(L_12);
@@ -4369,11 +4370,11 @@ IL_002a:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:109>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:109>
 		return;
 	}
 }
-// Method Definition Index: 142548
+// Method Definition Index: 145433
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_OnEnter_m613BEB5A93033C538AF8DF6784FE6B347976F69F (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* ___0_flow, int32_t ___1_reason, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4399,7 +4400,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_OnEnter_m613BEB5A93033C538AF8DF678
 	RuntimeObject* G_B6_0 = NULL;
 	RuntimeObject* G_B5_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:117>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:117>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_0 = ___0_flow;
 		NullCheck(L_0);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_1;
@@ -4408,7 +4409,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_OnEnter_m613BEB5A93033C538AF8DF678
 		Data_tF02C03D4C146CDB89C3D3C5E50935196C5ABC09E* L_2;
 		L_2 = GraphPointer_GetElementData_TisData_tF02C03D4C146CDB89C3D3C5E50935196C5ABC09E_mA049EE0A42B11A10A777C39BBB8C52C383A92F19(L_1, __this, GraphPointer_GetElementData_TisData_tF02C03D4C146CDB89C3D3C5E50935196C5ABC09E_mA049EE0A42B11A10A777C39BBB8C52C383A92F19_RuntimeMethod_var);
 		V_0 = L_2;
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:119>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:119>
 		Data_tF02C03D4C146CDB89C3D3C5E50935196C5ABC09E* L_3 = V_0;
 		NullCheck(L_3);
 		bool L_4 = L_3->___isActive;
@@ -4418,21 +4419,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_OnEnter_m613BEB5A93033C538AF8DF678
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:121>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:121>
 		return;
 	}
 
 IL_0016:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:124>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:124>
 		Data_tF02C03D4C146CDB89C3D3C5E50935196C5ABC09E* L_5 = V_0;
 		NullCheck(L_5);
 		L_5->___isActive = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:126>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:126>
 		Data_tF02C03D4C146CDB89C3D3C5E50935196C5ABC09E* L_6 = V_0;
 		NullCheck(L_6);
 		L_6->___hasEntered = (bool)1;
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:128>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:128>
 		List_1_tE2D40EAAD7C8CFC54A71FAD396C53E27F604CFD9* L_7;
 		L_7 = State_get_outgoingTransitionsNoAlloc_m1BE5207E0FE37E715FD6E9DA700FC96427E74653(__this, NULL);
 		NullCheck(L_7);
@@ -4458,10 +4459,10 @@ FINALLY_005a:
 
 IL_0032_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:128>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:128>
 				RuntimeObject* L_9;
 				L_9 = Enumerator_get_Current_m4569B07FE60052FEA4C8E0BF192D3987B10D4339_inline((&V_1), Enumerator_get_Current_m4569B07FE60052FEA4C8E0BF192D3987B10D4339_RuntimeMethod_var);
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:134>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:134>
 				RuntimeObject* L_10 = ((RuntimeObject*)IsInst((RuntimeObject*)L_9, IGraphEventListener_t21DB6AC98799BE07817E5FE5F9CF2C2FB5FE5F93_il2cpp_TypeInfo_var));
 				if (L_10)
 				{
@@ -4486,7 +4487,7 @@ IL_0044_1:
 
 IL_004f_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:128>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:128>
 				bool L_13;
 				L_13 = Enumerator_MoveNext_m0571AF236F4AE67CD524732FDF641C9B2830322F((&V_1), Enumerator_MoveNext_m0571AF236F4AE67CD524732FDF641C9B2830322F_RuntimeMethod_var);
 				if (L_13)
@@ -4506,7 +4507,7 @@ IL_004f_1:
 
 IL_0068:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:137>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:137>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_14 = ___0_flow;
 		NullCheck(L_14);
 		bool L_15;
@@ -4517,7 +4518,7 @@ IL_0068:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:139>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:139>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_16 = ___0_flow;
 		NullCheck(L_16);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_17;
@@ -4525,7 +4526,7 @@ IL_0068:
 		NullCheck(L_17);
 		DebugData_t7C537AA1FDC4B7DA2641C0A675888003851A0D92* L_18;
 		L_18 = GraphPointer_GetElementDebugData_TisDebugData_t7C537AA1FDC4B7DA2641C0A675888003851A0D92_mB330439BB742F437C2AC8AD6B5D76E8FBC7A5745(L_17, __this, GraphPointer_GetElementDebugData_TisDebugData_t7C537AA1FDC4B7DA2641C0A675888003851A0D92_mB330439BB742F437C2AC8AD6B5D76E8FBC7A5745_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:141>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:141>
 		il2cpp_codegen_runtime_class_init_inline(EditorTimeBinding_t52A0FA441FC552E4992B9382EDAA7E010482EB0B_il2cpp_TypeInfo_var);
 		int32_t L_19;
 		L_19 = EditorTimeBinding_get_frame_m5D60E5B8841F7AEEA93CDF1F72A1E0D68085F098(NULL);
@@ -4535,10 +4536,10 @@ IL_0068:
 
 IL_0086:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:144>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:144>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_20 = ___0_flow;
 		VirtualActionInvoker1< Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* >::Invoke(57, __this, L_20);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:146>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:146>
 		List_1_tE2D40EAAD7C8CFC54A71FAD396C53E27F604CFD9* L_21;
 		L_21 = State_get_outgoingTransitionsNoAlloc_m1BE5207E0FE37E715FD6E9DA700FC96427E74653(__this, NULL);
 		NullCheck(L_21);
@@ -4564,19 +4565,19 @@ FINALLY_00c7:
 
 IL_009b_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:146>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:146>
 				RuntimeObject* L_23;
 				L_23 = Enumerator_get_Current_m4569B07FE60052FEA4C8E0BF192D3987B10D4339_inline((&V_1), Enumerator_get_Current_m4569B07FE60052FEA4C8E0BF192D3987B10D4339_RuntimeMethod_var);
 				V_2 = L_23;
 			}
 			try
 			{
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:150>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:150>
 				RuntimeObject* L_24 = V_2;
 				Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_25 = ___0_flow;
 				NullCheck(L_24);
 				InterfaceActionInvoker1< Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* >::Invoke(1, IStateTransition_tA4844A2B0B9217C1E4BCCB02C1A38594E72921E8_il2cpp_TypeInfo_var, L_24, L_25);
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:151>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:151>
 				goto IL_00bc_1;
 			}
 			catch(Il2CppExceptionWrapper& e)
@@ -4592,9 +4593,9 @@ IL_009b_1:
 CATCH_00ac_1:
 			{
 				Exception_t* L_26 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:152>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:152>
 				V_3 = L_26;
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:154>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:154>
 				RuntimeObject* L_27 = V_2;
 				Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_28 = ___0_flow;
 				NullCheck(L_28);
@@ -4602,13 +4603,13 @@ CATCH_00ac_1:
 				L_29 = Flow_get_stack_m14E56FE5242B8B811C540A2E23CD29C92095D196_inline(L_28, NULL);
 				Exception_t* L_30 = V_3;
 				GraphsExceptionUtility_HandleException_m96BECD401548A4A5B5C01018A2754A9E69727A47(L_27, L_29, L_30, NULL);
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:155>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:155>
 				IL2CPP_RETHROW_MANAGED_EXCEPTION(IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*));
 			}
 
 IL_00bc_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:146>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:146>
 				bool L_31;
 				L_31 = Enumerator_MoveNext_m0571AF236F4AE67CD524732FDF641C9B2830322F((&V_1), Enumerator_MoveNext_m0571AF236F4AE67CD524732FDF641C9B2830322F_RuntimeMethod_var);
 				if (L_31)
@@ -4628,11 +4629,11 @@ IL_00bc_1:
 
 IL_00d5:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:158>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:158>
 		return;
 	}
 }
-// Method Definition Index: 142549
+// Method Definition Index: 145434
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_OnExit_m3695D0CB0F5F97B7EE670B9454B44C30F8F69B96 (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* ___0_flow, int32_t ___1_reason, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4655,7 +4656,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_OnExit_m3695D0CB0F5F97B7EE670B9454
 	Exception_t* V_3 = NULL;
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:162>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:162>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_0 = ___0_flow;
 		NullCheck(L_0);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_1;
@@ -4664,7 +4665,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_OnExit_m3695D0CB0F5F97B7EE670B9454
 		Data_tF02C03D4C146CDB89C3D3C5E50935196C5ABC09E* L_2;
 		L_2 = GraphPointer_GetElementData_TisData_tF02C03D4C146CDB89C3D3C5E50935196C5ABC09E_mA049EE0A42B11A10A777C39BBB8C52C383A92F19(L_1, __this, GraphPointer_GetElementData_TisData_tF02C03D4C146CDB89C3D3C5E50935196C5ABC09E_mA049EE0A42B11A10A777C39BBB8C52C383A92F19_RuntimeMethod_var);
 		V_0 = L_2;
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:164>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:164>
 		Data_tF02C03D4C146CDB89C3D3C5E50935196C5ABC09E* L_3 = V_0;
 		NullCheck(L_3);
 		bool L_4 = L_3->___isActive;
@@ -4674,20 +4675,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_OnExit_m3695D0CB0F5F97B7EE670B9454
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:166>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:166>
 		return;
 	}
 
 IL_0016:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:169>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:169>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_5 = ___0_flow;
 		VirtualActionInvoker1< Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* >::Invoke(61, __this, L_5);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:171>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:171>
 		Data_tF02C03D4C146CDB89C3D3C5E50935196C5ABC09E* L_6 = V_0;
 		NullCheck(L_6);
 		L_6->___isActive = (bool)0;
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:173>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:173>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_7 = ___0_flow;
 		NullCheck(L_7);
 		bool L_8;
@@ -4698,7 +4699,7 @@ IL_0016:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:175>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:175>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_9 = ___0_flow;
 		NullCheck(L_9);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_10;
@@ -4706,7 +4707,7 @@ IL_0016:
 		NullCheck(L_10);
 		DebugData_t7C537AA1FDC4B7DA2641C0A675888003851A0D92* L_11;
 		L_11 = GraphPointer_GetElementDebugData_TisDebugData_t7C537AA1FDC4B7DA2641C0A675888003851A0D92_mB330439BB742F437C2AC8AD6B5D76E8FBC7A5745(L_10, __this, GraphPointer_GetElementDebugData_TisDebugData_t7C537AA1FDC4B7DA2641C0A675888003851A0D92_mB330439BB742F437C2AC8AD6B5D76E8FBC7A5745_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:177>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:177>
 		il2cpp_codegen_runtime_class_init_inline(EditorTimeBinding_t52A0FA441FC552E4992B9382EDAA7E010482EB0B_il2cpp_TypeInfo_var);
 		float L_12;
 		L_12 = EditorTimeBinding_get_time_mA8DA68FB1F787045711D434E42B8C9C30012AAA3(NULL);
@@ -4716,7 +4717,7 @@ IL_0016:
 
 IL_0042:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:180>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:180>
 		List_1_tE2D40EAAD7C8CFC54A71FAD396C53E27F604CFD9* L_13;
 		L_13 = State_get_outgoingTransitionsNoAlloc_m1BE5207E0FE37E715FD6E9DA700FC96427E74653(__this, NULL);
 		NullCheck(L_13);
@@ -4742,19 +4743,19 @@ FINALLY_007c:
 
 IL_0050_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:180>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:180>
 				RuntimeObject* L_15;
 				L_15 = Enumerator_get_Current_m4569B07FE60052FEA4C8E0BF192D3987B10D4339_inline((&V_1), Enumerator_get_Current_m4569B07FE60052FEA4C8E0BF192D3987B10D4339_RuntimeMethod_var);
 				V_2 = L_15;
 			}
 			try
 			{
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:184>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:184>
 				RuntimeObject* L_16 = V_2;
 				Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_17 = ___0_flow;
 				NullCheck(L_16);
 				InterfaceActionInvoker1< Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* >::Invoke(2, IStateTransition_tA4844A2B0B9217C1E4BCCB02C1A38594E72921E8_il2cpp_TypeInfo_var, L_16, L_17);
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:185>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:185>
 				goto IL_0071_1;
 			}
 			catch(Il2CppExceptionWrapper& e)
@@ -4770,9 +4771,9 @@ IL_0050_1:
 CATCH_0061_1:
 			{
 				Exception_t* L_18 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:186>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:186>
 				V_3 = L_18;
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:188>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:188>
 				RuntimeObject* L_19 = V_2;
 				Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_20 = ___0_flow;
 				NullCheck(L_20);
@@ -4780,13 +4781,13 @@ CATCH_0061_1:
 				L_21 = Flow_get_stack_m14E56FE5242B8B811C540A2E23CD29C92095D196_inline(L_20, NULL);
 				Exception_t* L_22 = V_3;
 				GraphsExceptionUtility_HandleException_m96BECD401548A4A5B5C01018A2754A9E69727A47(L_19, L_21, L_22, NULL);
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:189>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:189>
 				IL2CPP_RETHROW_MANAGED_EXCEPTION(IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*));
 			}
 
 IL_0071_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:180>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:180>
 				bool L_23;
 				L_23 = Enumerator_MoveNext_m0571AF236F4AE67CD524732FDF641C9B2830322F((&V_1), Enumerator_MoveNext_m0571AF236F4AE67CD524732FDF641C9B2830322F_RuntimeMethod_var);
 				if (L_23)
@@ -4806,97 +4807,97 @@ IL_0071_1:
 
 IL_008a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:192>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:192>
 		return;
 	}
 }
-// Method Definition Index: 142550
+// Method Definition Index: 145435
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_OnEnterImplementation_mF4E252A6A4C14A5CD3A37DC5F71B83445D1D018A (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* ___0_flow, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:194>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:194>
 		return;
 	}
 }
-// Method Definition Index: 142551
+// Method Definition Index: 145436
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_UpdateImplementation_mE09CBEF6FAF8ECBA068324BAF97AA7B07D20BABA (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* ___0_flow, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:196>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:196>
 		return;
 	}
 }
-// Method Definition Index: 142552
+// Method Definition Index: 145437
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_FixedUpdateImplementation_m3FA2AD93AA8DF893C419A6F08EF4232075B2DFE0 (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* ___0_flow, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:198>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:198>
 		return;
 	}
 }
-// Method Definition Index: 142553
+// Method Definition Index: 145438
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_LateUpdateImplementation_m3ADE74B418A2EC625B6E8F967AEF90D0A0374917 (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* ___0_flow, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:200>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:200>
 		return;
 	}
 }
-// Method Definition Index: 142554
+// Method Definition Index: 145439
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_OnExitImplementation_m09715F3BB15349CFCCA9CA79727469FC0F8E5FE7 (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* ___0_flow, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:202>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:202>
 		return;
 	}
 }
-// Method Definition Index: 142555
+// Method Definition Index: 145440
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_OnBranchTo_m7009201A5374D78C560417131DDB68F71E06E049 (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* ___0_flow, RuntimeObject* ___1_destination, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:204>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:204>
 		return;
 	}
 }
-// Method Definition Index: 142556
+// Method Definition Index: 145441
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 State_get_position_mD7B752AF4485EFBB9779565CE909AB45A911531F (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:213>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:213>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = __this->___U3CpositionU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142557
+// Method Definition Index: 145442
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_set_position_mDE134C8CFF547D789E10EBE0F4EEA5F6BD931DFE (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:213>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:213>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ___0_value;
 		__this->___U3CpositionU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 142558
+// Method Definition Index: 145443
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float State_get_width_m3C7CE021C0ED120A230D46BAAC0B567F4928BAB1 (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:216>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:216>
 		float L_0 = __this->___U3CwidthU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142559
+// Method Definition Index: 145444
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State_set_width_m7FFA90CCD391B250B3345CCC0D279882AF1C50FB (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:216>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:216>
 		float L_0 = ___0_value;
 		__this->___U3CwidthU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 142560
+// Method Definition Index: 145445
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AnalyticsIdentifier_tE867F385ABAC820C67EC52E1F523F2060527DC2A* State_GetAnalyticsIdentifier_m70B252A5D321F049099D47DB11A3A9A1B1E3C59C (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4906,11 +4907,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AnalyticsIdentifier_tE867F385ABAC820C67EC52E1
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:224>
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:225>
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:226>
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:227>
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:228>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:224>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:225>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:226>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:227>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:228>
 		AnalyticsIdentifier_tE867F385ABAC820C67EC52E1F523F2060527DC2A* L_0 = (AnalyticsIdentifier_tE867F385ABAC820C67EC52E1F523F2060527DC2A*)il2cpp_codegen_object_new(AnalyticsIdentifier_tE867F385ABAC820C67EC52E1F523F2060527DC2A_il2cpp_TypeInfo_var);
 		AnalyticsIdentifier__ctor_m6B490051974C08F6C8A0463CC083E7EF6BFDE730(L_0, NULL);
 		AnalyticsIdentifier_tE867F385ABAC820C67EC52E1F523F2060527DC2A* L_1 = L_0;
@@ -4931,7 +4932,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AnalyticsIdentifier_tE867F385ABAC820C67EC52E1
 		NullCheck(L_4);
 		L_4->___Namespace = L_6;
 		Il2CppCodeGenWriteBarrier((void**)(&L_4->___Namespace), (void*)L_6);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:229>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:229>
 		AnalyticsIdentifier_tE867F385ABAC820C67EC52E1F523F2060527DC2A* L_7 = L_4;
 		AnalyticsIdentifier_tE867F385ABAC820C67EC52E1F523F2060527DC2A* L_8 = L_7;
 		NullCheck(L_8);
@@ -4941,11 +4942,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AnalyticsIdentifier_tE867F385ABAC820C67EC52E1
 		L_10 = VirtualFuncInvoker0< int32_t >::Invoke(2, L_9);
 		NullCheck(L_8);
 		L_8->___Hashcode = L_10;
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:230>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:230>
 		return L_7;
 	}
 }
-// Method Definition Index: 142561
+// Method Definition Index: 145446
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State__ctor_m7B8404B33D1665A1AD0C077CA3E7932D4AF208C3 (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4955,13 +4956,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void State__ctor_m7B8404B33D1665A1AD0C077CA3E
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:216>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:216>
 		__this->___U3CwidthU3Ek__BackingField = (170.0f);
 		GraphElement_1__ctor_mFFF71CFB6EE67B269FC3630A1020E9307A26B198(__this, GraphElement_1__ctor_mFFF71CFB6EE67B269FC3630A1020E9307A26B198_RuntimeMethod_var);
 		return;
 	}
 }
-// Method Definition Index: 142562
+// Method Definition Index: 145447
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* State_Unity_VisualScripting_IState_get_graph_mC6C4D29BA0A4F176488F2B4CD6A633C3E08CFE15 (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4984,7 +4985,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StateGraph_t4F59C6C493939AE51DF0745340BEE3B67
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 142563
+// Method Definition Index: 145448
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Data__ctor_m2C25B4EB3FF3AC87BD036C5C89E7147F11C9463C (Data_tF02C03D4C146CDB89C3D3C5E50935196C5ABC09E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5000,65 +5001,65 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Data__ctor_m2C25B4EB3FF3AC87BD036C5C89E7
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 142564
+// Method Definition Index: 145449
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t DebugData_get_lastEnterFrame_m58007BA540A9E3B9D0873513E44672E3478FADD0 (DebugData_t7C537AA1FDC4B7DA2641C0A675888003851A0D92* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:19>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:19>
 		int32_t L_0 = __this->___U3ClastEnterFrameU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142565
+// Method Definition Index: 145450
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugData_set_lastEnterFrame_m1B4E9148981FB5B06AA5A0544A4EDCCE8E25793E (DebugData_t7C537AA1FDC4B7DA2641C0A675888003851A0D92* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:19>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:19>
 		int32_t L_0 = ___0_value;
 		__this->___U3ClastEnterFrameU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 142566
+// Method Definition Index: 145451
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugData_get_lastExitTime_m7810D8AFC8B8AD47C7D7F947E441DAF6E76C29EC (DebugData_t7C537AA1FDC4B7DA2641C0A675888003851A0D92* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:21>
 		float L_0 = __this->___U3ClastExitTimeU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142567
+// Method Definition Index: 145452
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugData_set_lastExitTime_mA44CE5AF88525D4FD937C175F71821634B4F9287 (DebugData_t7C537AA1FDC4B7DA2641C0A675888003851A0D92* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:21>
 		float L_0 = ___0_value;
 		__this->___U3ClastExitTimeU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 142568
+// Method Definition Index: 145453
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Exception_t* DebugData_get_runtimeException_mF301AC2BC62AAFA1AFC7F709968F1C76EE5722F2 (DebugData_t7C537AA1FDC4B7DA2641C0A675888003851A0D92* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:23>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:23>
 		Exception_t* L_0 = __this->___U3CruntimeExceptionU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142569
+// Method Definition Index: 145454
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugData_set_runtimeException_mD42292AFB02AFEF4282EA845CF8A2D9A14161331 (DebugData_t7C537AA1FDC4B7DA2641C0A675888003851A0D92* __this, Exception_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:23>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:23>
 		Exception_t* L_0 = ___0_value;
 		__this->___U3CruntimeExceptionU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CruntimeExceptionU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 142570
+// Method Definition Index: 145455
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugData__ctor_mC3ACFE3A5045A3CF3EA6D7C876740EA78B2A3900 (DebugData_t7C537AA1FDC4B7DA2641C0A675888003851A0D92* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5098,7 +5099,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugData__ctor_mC3ACFE3A5045A3CF3EA6D7C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 142571
+// Method Definition Index: 145456
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateGraph__ctor_m7CA0974AF7312DAFCA303C9AC23C67B0C75A02EE (StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5119,57 +5120,57 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateGraph__ctor_m7CA0974AF7312DAFCA303C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:11>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:11>
 		Graph__ctor_mF1773C42CEAC2A78F45AA76FEC9A1249A4C0BBE1(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:13>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:13>
 		GraphElementCollection_1_tE2784E270F0B3DA5DB5E14808C3F549BC4F61276* L_0 = (GraphElementCollection_1_tE2784E270F0B3DA5DB5E14808C3F549BC4F61276*)il2cpp_codegen_object_new(GraphElementCollection_1_tE2784E270F0B3DA5DB5E14808C3F549BC4F61276_il2cpp_TypeInfo_var);
 		GraphElementCollection_1__ctor_m41152728DA05E3B10A5B2D2C6D747EE54CED3012(L_0, __this, GraphElementCollection_1__ctor_m41152728DA05E3B10A5B2D2C6D747EE54CED3012_RuntimeMethod_var);
 		StateGraph_set_states_mAC5F24102DAB519858ED06F43F326235CC23F58C_inline(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:14>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:14>
 		GraphConnectionCollection_3_t68F202D7B57DD71344E76A265721DA6593B94BA9* L_1 = (GraphConnectionCollection_3_t68F202D7B57DD71344E76A265721DA6593B94BA9*)il2cpp_codegen_object_new(GraphConnectionCollection_3_t68F202D7B57DD71344E76A265721DA6593B94BA9_il2cpp_TypeInfo_var);
 		GraphConnectionCollection_3__ctor_m1C10C001A4E0A71CC9683888CA3BD628A9231B08(L_1, __this, GraphConnectionCollection_3__ctor_m1C10C001A4E0A71CC9683888CA3BD628A9231B08_RuntimeMethod_var);
 		StateGraph_set_transitions_mE0EC6D0AE1E70999080C731A7D56D948D66E3429_inline(__this, L_1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:15>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:15>
 		GraphElementCollection_1_t747DBE349EF6196F21B8B0817448722E5570D25A* L_2 = (GraphElementCollection_1_t747DBE349EF6196F21B8B0817448722E5570D25A*)il2cpp_codegen_object_new(GraphElementCollection_1_t747DBE349EF6196F21B8B0817448722E5570D25A_il2cpp_TypeInfo_var);
 		GraphElementCollection_1__ctor_m539BC8E969C02AAA0BA78B4256915A68FDBF68C6(L_2, __this, GraphElementCollection_1__ctor_m539BC8E969C02AAA0BA78B4256915A68FDBF68C6_RuntimeMethod_var);
 		StateGraph_set_groups_m0B8859AA5C26C3D74455106860B1380DFCF037B4_inline(__this, L_2, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:16>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:16>
 		GraphElementCollection_1_t0859C1F4FC4ACB504F67C57B43AA9DA2F9A3130D* L_3 = (GraphElementCollection_1_t0859C1F4FC4ACB504F67C57B43AA9DA2F9A3130D*)il2cpp_codegen_object_new(GraphElementCollection_1_t0859C1F4FC4ACB504F67C57B43AA9DA2F9A3130D_il2cpp_TypeInfo_var);
 		GraphElementCollection_1__ctor_m8D9C97E1F216FB7D82272E2EC8DD5A20C6051853(L_3, __this, GraphElementCollection_1__ctor_m8D9C97E1F216FB7D82272E2EC8DD5A20C6051853_RuntimeMethod_var);
 		StateGraph_set_sticky_mDBECF74D0B264482F7B000BB3C69991656C81802_inline(__this, L_3, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:18>
 		MergedGraphElementCollection_t617900BF35465F630BAAC77AA6EAAD375D42BA4C* L_4;
 		L_4 = Graph_get_elements_m337720F5A70D0ED47164B591256483AB7D7FE981_inline(__this, NULL);
 		GraphElementCollection_1_tE2784E270F0B3DA5DB5E14808C3F549BC4F61276* L_5;
 		L_5 = StateGraph_get_states_mE379D30E80FC3BF100C356550A768FB0FED62A09_inline(__this, NULL);
 		NullCheck(L_4);
 		GenericVirtualActionInvoker1< RuntimeObject* >::Invoke(MergedKeyedCollection_2_Include_TisIState_tE7D93CD5743D6CACB168E7E4C63654B95186EC38_mA315BAEDCE75CE3945C171DCA6BA4DF4F691F58A_RuntimeMethod_var, L_4, L_5);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:19>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:19>
 		MergedGraphElementCollection_t617900BF35465F630BAAC77AA6EAAD375D42BA4C* L_6;
 		L_6 = Graph_get_elements_m337720F5A70D0ED47164B591256483AB7D7FE981_inline(__this, NULL);
 		GraphConnectionCollection_3_t68F202D7B57DD71344E76A265721DA6593B94BA9* L_7;
 		L_7 = StateGraph_get_transitions_mD532ABAD41415C37BE78E17ABCB54394D8CBA43F_inline(__this, NULL);
 		NullCheck(L_6);
 		GenericVirtualActionInvoker1< RuntimeObject* >::Invoke(MergedKeyedCollection_2_Include_TisIStateTransition_tA4844A2B0B9217C1E4BCCB02C1A38594E72921E8_m15B887F8D2C6C3E2820490999F97CDD023195F92_RuntimeMethod_var, L_6, L_7);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:20>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:20>
 		MergedGraphElementCollection_t617900BF35465F630BAAC77AA6EAAD375D42BA4C* L_8;
 		L_8 = Graph_get_elements_m337720F5A70D0ED47164B591256483AB7D7FE981_inline(__this, NULL);
 		GraphElementCollection_1_t747DBE349EF6196F21B8B0817448722E5570D25A* L_9;
 		L_9 = StateGraph_get_groups_m1ED46DDDE1134596EAC1F7A0853F053B0462BBED_inline(__this, NULL);
 		NullCheck(L_8);
 		GenericVirtualActionInvoker1< RuntimeObject* >::Invoke(MergedKeyedCollection_2_Include_TisGraphGroup_t1EF0E4FE7052C831FC117EE6AB5B3D37D7325EAF_m20C90CB1B93A45470CA737635D3C764026D713E9_RuntimeMethod_var, L_8, L_9);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:21>
 		MergedGraphElementCollection_t617900BF35465F630BAAC77AA6EAAD375D42BA4C* L_10;
 		L_10 = Graph_get_elements_m337720F5A70D0ED47164B591256483AB7D7FE981_inline(__this, NULL);
 		GraphElementCollection_1_t0859C1F4FC4ACB504F67C57B43AA9DA2F9A3130D* L_11;
 		L_11 = StateGraph_get_sticky_mD89D4B181089BCF34458C1A781EE756EE73DFC32_inline(__this, NULL);
 		NullCheck(L_10);
 		GenericVirtualActionInvoker1< RuntimeObject* >::Invoke(MergedKeyedCollection_2_Include_TisStickyNote_t351A03C152E8CCE081FD6E3CCA35FB2EEB112EEE_m0C77DE5331AD4A32C9B024B5852E506495C71AF2_RuntimeMethod_var, L_10, L_11);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:22>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:22>
 		return;
 	}
 }
-// Method Definition Index: 142572
+// Method Definition Index: 145457
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* StateGraph_CreateData_mB2AE48746CC62179456EF5E2C6AFD33CCFDAE51E (StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5179,13 +5180,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* StateGraph_CreateData_mB2AE487
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:26>
 		StateGraphData_t8B9B0FFB8FBD845F21CB09AC426ADBA347D28580* L_0 = (StateGraphData_t8B9B0FFB8FBD845F21CB09AC426ADBA347D28580*)il2cpp_codegen_object_new(StateGraphData_t8B9B0FFB8FBD845F21CB09AC426ADBA347D28580_il2cpp_TypeInfo_var);
 		StateGraphData__ctor_m79E2F84F9D11158EDB8535F4355A1161F009D813(L_0, __this, NULL);
 		return L_0;
 	}
 }
-// Method Definition Index: 142573
+// Method Definition Index: 145458
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateGraph_StartListening_mF6D55D5A2667273F3C5CAB90C6E1D1C9799D4E67 (StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* __this, GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* ___0_stack, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5206,19 +5207,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateGraph_StartListening_mF6D55D5A26672
 	RuntimeObject* G_B4_0 = NULL;
 	RuntimeObject* G_B3_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:31>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:31>
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_0 = ___0_stack;
 		NullCheck(L_0);
 		StateGraphData_t8B9B0FFB8FBD845F21CB09AC426ADBA347D28580* L_1;
 		L_1 = GraphPointer_GetGraphData_TisStateGraphData_t8B9B0FFB8FBD845F21CB09AC426ADBA347D28580_m538BCD380D3F29EDBDE8371824248DB310F86474(L_0, GraphPointer_GetGraphData_TisStateGraphData_t8B9B0FFB8FBD845F21CB09AC426ADBA347D28580_m538BCD380D3F29EDBDE8371824248DB310F86474_RuntimeMethod_var);
 		NullCheck(L_1);
 		StateGraphData_set_isListening_m12A71632FC656D380276DA832081FD5F1CB1E480_inline(L_1, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:33>
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_2 = ___0_stack;
 		HashSet_1_t0E9AD8C1105A880066BB80E42F6BED46C38FCBC8* L_3;
 		L_3 = StateGraph_GetActiveStatesNoAlloc_mF97A80BFBD7A1D0AAC59BDEA602566D79DEDE4D2(__this, L_2, NULL);
 		V_0 = L_3;
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:35>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:35>
 		HashSet_1_t0E9AD8C1105A880066BB80E42F6BED46C38FCBC8* L_4 = V_0;
 		NullCheck(L_4);
 		Enumerator_tC96B0BD05DE15119EE1DCB6388283BDEFD3A933B L_5;
@@ -5243,10 +5244,10 @@ FINALLY_0040:
 
 IL_001d_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:35>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:35>
 				RuntimeObject* L_6;
 				L_6 = Enumerator_get_Current_m9EE18360BB00EF618F254D565567929B7CA01841_inline((&V_1), Enumerator_get_Current_m9EE18360BB00EF618F254D565567929B7CA01841_RuntimeMethod_var);
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:37>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:37>
 				RuntimeObject* L_7 = ((RuntimeObject*)IsInst((RuntimeObject*)L_6, IGraphEventListener_t21DB6AC98799BE07817E5FE5F9CF2C2FB5FE5F93_il2cpp_TypeInfo_var));
 				if (L_7)
 				{
@@ -5268,7 +5269,7 @@ IL_002f_1:
 
 IL_0035_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:35>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:35>
 				bool L_9;
 				L_9 = Enumerator_MoveNext_mA04B5E67CDB6753313EFA4C3631A2254BB83DFBC((&V_1), Enumerator_MoveNext_mA04B5E67CDB6753313EFA4C3631A2254BB83DFBC_RuntimeMethod_var);
 				if (L_9)
@@ -5288,14 +5289,14 @@ IL_0035_1:
 
 IL_004e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:40>
 		HashSet_1_t0E9AD8C1105A880066BB80E42F6BED46C38FCBC8* L_10 = V_0;
 		XHashSetPool_Free_TisIState_tE7D93CD5743D6CACB168E7E4C63654B95186EC38_mB7E0502B94BAADC0D313D7ECC49602C00B6CC91E(L_10, XHashSetPool_Free_TisIState_tE7D93CD5743D6CACB168E7E4C63654B95186EC38_mB7E0502B94BAADC0D313D7ECC49602C00B6CC91E_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:41>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:41>
 		return;
 	}
 }
-// Method Definition Index: 142574
+// Method Definition Index: 145459
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateGraph_StopListening_m2523D73AD67E6FB09BE5363DDB3069BC3D114B33 (StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* __this, GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* ___0_stack, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5316,12 +5317,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateGraph_StopListening_m2523D73AD67E6F
 	RuntimeObject* G_B4_0 = NULL;
 	RuntimeObject* G_B3_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:45>
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_0 = ___0_stack;
 		HashSet_1_t0E9AD8C1105A880066BB80E42F6BED46C38FCBC8* L_1;
 		L_1 = StateGraph_GetActiveStatesNoAlloc_mF97A80BFBD7A1D0AAC59BDEA602566D79DEDE4D2(__this, L_0, NULL);
 		V_0 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:47>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:47>
 		HashSet_1_t0E9AD8C1105A880066BB80E42F6BED46C38FCBC8* L_2 = V_0;
 		NullCheck(L_2);
 		Enumerator_tC96B0BD05DE15119EE1DCB6388283BDEFD3A933B L_3;
@@ -5346,10 +5347,10 @@ FINALLY_0034:
 
 IL_0011_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:47>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:47>
 				RuntimeObject* L_4;
 				L_4 = Enumerator_get_Current_m9EE18360BB00EF618F254D565567929B7CA01841_inline((&V_1), Enumerator_get_Current_m9EE18360BB00EF618F254D565567929B7CA01841_RuntimeMethod_var);
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:49>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:49>
 				RuntimeObject* L_5 = ((RuntimeObject*)IsInst((RuntimeObject*)L_4, IGraphEventListener_t21DB6AC98799BE07817E5FE5F9CF2C2FB5FE5F93_il2cpp_TypeInfo_var));
 				if (L_5)
 				{
@@ -5371,7 +5372,7 @@ IL_0023_1:
 
 IL_0029_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:47>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:47>
 				bool L_7;
 				L_7 = Enumerator_MoveNext_mA04B5E67CDB6753313EFA4C3631A2254BB83DFBC((&V_1), Enumerator_MoveNext_mA04B5E67CDB6753313EFA4C3631A2254BB83DFBC_RuntimeMethod_var);
 				if (L_7)
@@ -5391,21 +5392,21 @@ IL_0029_1:
 
 IL_0042:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:52>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:52>
 		HashSet_1_t0E9AD8C1105A880066BB80E42F6BED46C38FCBC8* L_8 = V_0;
 		XHashSetPool_Free_TisIState_tE7D93CD5743D6CACB168E7E4C63654B95186EC38_mB7E0502B94BAADC0D313D7ECC49602C00B6CC91E(L_8, XHashSetPool_Free_TisIState_tE7D93CD5743D6CACB168E7E4C63654B95186EC38_mB7E0502B94BAADC0D313D7ECC49602C00B6CC91E_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:54>
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_9 = ___0_stack;
 		NullCheck(L_9);
 		StateGraphData_t8B9B0FFB8FBD845F21CB09AC426ADBA347D28580* L_10;
 		L_10 = GraphPointer_GetGraphData_TisStateGraphData_t8B9B0FFB8FBD845F21CB09AC426ADBA347D28580_m538BCD380D3F29EDBDE8371824248DB310F86474(L_9, GraphPointer_GetGraphData_TisStateGraphData_t8B9B0FFB8FBD845F21CB09AC426ADBA347D28580_m538BCD380D3F29EDBDE8371824248DB310F86474_RuntimeMethod_var);
 		NullCheck(L_10);
 		StateGraphData_set_isListening_m12A71632FC656D380276DA832081FD5F1CB1E480_inline(L_10, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:55>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:55>
 		return;
 	}
 }
-// Method Definition Index: 142575
+// Method Definition Index: 145460
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StateGraph_IsListening_m8087BC69652F3F17BA672228765F5F03B2456557 (StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* __this, GraphPointer_t01C98F06D1A7635CB867665044B7DC1FE03D1C0B* ___0_pointer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5415,7 +5416,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StateGraph_IsListening_m8087BC69652F3F17
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:59>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:59>
 		GraphPointer_t01C98F06D1A7635CB867665044B7DC1FE03D1C0B* L_0 = ___0_pointer;
 		NullCheck(L_0);
 		StateGraphData_t8B9B0FFB8FBD845F21CB09AC426ADBA347D28580* L_1;
@@ -5426,87 +5427,87 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StateGraph_IsListening_m8087BC69652F3F17
 		return L_2;
 	}
 }
-// Method Definition Index: 142576
+// Method Definition Index: 145461
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GraphElementCollection_1_tE2784E270F0B3DA5DB5E14808C3F549BC4F61276* StateGraph_get_states_mE379D30E80FC3BF100C356550A768FB0FED62A09 (StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:65>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:65>
 		GraphElementCollection_1_tE2784E270F0B3DA5DB5E14808C3F549BC4F61276* L_0 = __this->___U3CstatesU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142577
+// Method Definition Index: 145462
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateGraph_set_states_mAC5F24102DAB519858ED06F43F326235CC23F58C (StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* __this, GraphElementCollection_1_tE2784E270F0B3DA5DB5E14808C3F549BC4F61276* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:65>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:65>
 		GraphElementCollection_1_tE2784E270F0B3DA5DB5E14808C3F549BC4F61276* L_0 = ___0_value;
 		__this->___U3CstatesU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CstatesU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 142578
+// Method Definition Index: 145463
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GraphConnectionCollection_3_t68F202D7B57DD71344E76A265721DA6593B94BA9* StateGraph_get_transitions_mD532ABAD41415C37BE78E17ABCB54394D8CBA43F (StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:68>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:68>
 		GraphConnectionCollection_3_t68F202D7B57DD71344E76A265721DA6593B94BA9* L_0 = __this->___U3CtransitionsU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142579
+// Method Definition Index: 145464
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateGraph_set_transitions_mE0EC6D0AE1E70999080C731A7D56D948D66E3429 (StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* __this, GraphConnectionCollection_3_t68F202D7B57DD71344E76A265721DA6593B94BA9* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:68>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:68>
 		GraphConnectionCollection_3_t68F202D7B57DD71344E76A265721DA6593B94BA9* L_0 = ___0_value;
 		__this->___U3CtransitionsU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CtransitionsU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 142580
+// Method Definition Index: 145465
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GraphElementCollection_1_t747DBE349EF6196F21B8B0817448722E5570D25A* StateGraph_get_groups_m1ED46DDDE1134596EAC1F7A0853F053B0462BBED (StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:71>
 		GraphElementCollection_1_t747DBE349EF6196F21B8B0817448722E5570D25A* L_0 = __this->___U3CgroupsU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142581
+// Method Definition Index: 145466
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateGraph_set_groups_m0B8859AA5C26C3D74455106860B1380DFCF037B4 (StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* __this, GraphElementCollection_1_t747DBE349EF6196F21B8B0817448722E5570D25A* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:71>
 		GraphElementCollection_1_t747DBE349EF6196F21B8B0817448722E5570D25A* L_0 = ___0_value;
 		__this->___U3CgroupsU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CgroupsU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 142582
+// Method Definition Index: 145467
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GraphElementCollection_1_t0859C1F4FC4ACB504F67C57B43AA9DA2F9A3130D* StateGraph_get_sticky_mD89D4B181089BCF34458C1A781EE756EE73DFC32 (StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:74>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:74>
 		GraphElementCollection_1_t0859C1F4FC4ACB504F67C57B43AA9DA2F9A3130D* L_0 = __this->___U3CstickyU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142583
+// Method Definition Index: 145468
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateGraph_set_sticky_mDBECF74D0B264482F7B000BB3C69991656C81802 (StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* __this, GraphElementCollection_1_t0859C1F4FC4ACB504F67C57B43AA9DA2F9A3130D* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:74>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:74>
 		GraphElementCollection_1_t0859C1F4FC4ACB504F67C57B43AA9DA2F9A3130D* L_0 = ___0_value;
 		__this->___U3CstickyU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CstickyU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 142584
+// Method Definition Index: 145469
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR HashSet_1_t0E9AD8C1105A880066BB80E42F6BED46C38FCBC8* StateGraph_GetActiveStatesNoAlloc_mF97A80BFBD7A1D0AAC59BDEA602566D79DEDE4D2 (StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* __this, GraphPointer_t01C98F06D1A7635CB867665044B7DC1FE03D1C0B* ___0_pointer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5527,12 +5528,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR HashSet_1_t0E9AD8C1105A880066BB80E42F6BED46C3
 	memset((&V_1), 0, sizeof(V_1));
 	RuntimeObject* V_2 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:92>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:92>
 		il2cpp_codegen_runtime_class_init_inline(HashSetPool_1_t359DA90854A05EBE069C15881AA2B5715F5E6D36_il2cpp_TypeInfo_var);
 		HashSet_1_t0E9AD8C1105A880066BB80E42F6BED46C38FCBC8* L_0;
 		L_0 = HashSetPool_1_New_mCD6A82907E0EF51CE578E0C2EDBC4ED1F7BDB429(HashSetPool_1_New_mCD6A82907E0EF51CE578E0C2EDBC4ED1F7BDB429_RuntimeMethod_var);
 		V_0 = L_0;
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:94>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:94>
 		GraphElementCollection_1_tE2784E270F0B3DA5DB5E14808C3F549BC4F61276* L_1;
 		L_1 = StateGraph_get_states_mE379D30E80FC3BF100C356550A768FB0FED62A09_inline(__this, NULL);
 		NullCheck(L_1);
@@ -5558,17 +5559,17 @@ FINALLY_003d:
 
 IL_0014_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:94>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:94>
 				RuntimeObject* L_3;
 				L_3 = NoAllocEnumerator_1_get_Current_mBB293B030BA7E5B6ED096E2AFE2A4B60E1169ABE_inline((&V_1), NoAllocEnumerator_1_get_Current_mBB293B030BA7E5B6ED096E2AFE2A4B60E1169ABE_RuntimeMethod_var);
 				V_2 = L_3;
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:96>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:96>
 				GraphPointer_t01C98F06D1A7635CB867665044B7DC1FE03D1C0B* L_4 = ___0_pointer;
 				RuntimeObject* L_5 = V_2;
 				NullCheck(L_4);
 				Data_tF02C03D4C146CDB89C3D3C5E50935196C5ABC09E* L_6;
 				L_6 = GraphPointer_GetElementData_TisData_tF02C03D4C146CDB89C3D3C5E50935196C5ABC09E_mA049EE0A42B11A10A777C39BBB8C52C383A92F19(L_4, L_5, GraphPointer_GetElementData_TisData_tF02C03D4C146CDB89C3D3C5E50935196C5ABC09E_mA049EE0A42B11A10A777C39BBB8C52C383A92F19_RuntimeMethod_var);
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:98>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:98>
 				NullCheck(L_6);
 				bool L_7 = L_6->___isActive;
 				if (!L_7)
@@ -5577,7 +5578,7 @@ IL_0014_1:
 				}
 			}
 			{
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:100>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:100>
 				HashSet_1_t0E9AD8C1105A880066BB80E42F6BED46C38FCBC8* L_8 = V_0;
 				RuntimeObject* L_9 = V_2;
 				NullCheck(L_8);
@@ -5587,7 +5588,7 @@ IL_0014_1:
 
 IL_0032_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:94>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:94>
 				bool L_11;
 				L_11 = NoAllocEnumerator_1_MoveNext_m77C405BB6B593847F2F1F449E09BF810B66A0628((&V_1), NoAllocEnumerator_1_MoveNext_m77C405BB6B593847F2F1F449E09BF810B66A0628_RuntimeMethod_var);
 				if (L_11)
@@ -5607,12 +5608,12 @@ IL_0032_1:
 
 IL_004b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:104>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:104>
 		HashSet_1_t0E9AD8C1105A880066BB80E42F6BED46C38FCBC8* L_12 = V_0;
 		return L_12;
 	}
 }
-// Method Definition Index: 142585
+// Method Definition Index: 145470
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateGraph_Start_m2291C8453FE3908A8062C9A0111CA28163AC8EA8 (StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* __this, Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* ___0_flow, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5639,7 +5640,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateGraph_Start_m2291C8453FE3908A8062C9
 	Func_2_t12D316E9F1D6A6244FFA22817B3C4B6FA0DD639B* G_B1_0 = NULL;
 	GraphElementCollection_1_tE2784E270F0B3DA5DB5E14808C3F549BC4F61276* G_B1_1 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:109>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:109>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_0 = ___0_flow;
 		NullCheck(L_0);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_1;
@@ -5649,7 +5650,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateGraph_Start_m2291C8453FE3908A8062C9
 		L_2 = GraphPointer_GetGraphData_TisStateGraphData_t8B9B0FFB8FBD845F21CB09AC426ADBA347D28580_m538BCD380D3F29EDBDE8371824248DB310F86474(L_1, GraphPointer_GetGraphData_TisStateGraphData_t8B9B0FFB8FBD845F21CB09AC426ADBA347D28580_m538BCD380D3F29EDBDE8371824248DB310F86474_RuntimeMethod_var);
 		NullCheck(L_2);
 		StateGraphData_set_isListening_m12A71632FC656D380276DA832081FD5F1CB1E480_inline(L_2, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:111>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:111>
 		GraphElementCollection_1_tE2784E270F0B3DA5DB5E14808C3F549BC4F61276* L_3;
 		L_3 = StateGraph_get_states_mE379D30E80FC3BF100C356550A768FB0FED62A09_inline(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_tA6B1AB7977505DBC1BFC6DCB3AB686ABF2CB95FE_il2cpp_TypeInfo_var);
@@ -5718,7 +5719,7 @@ IL_0077:
 
 IL_0043_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:111>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:111>
 				RuntimeObject* L_13 = V_0;
 				NullCheck(L_13);
 				RuntimeObject* L_14;
@@ -5727,12 +5728,12 @@ IL_0043_1:
 			}
 			try
 			{
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:115>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:115>
 				RuntimeObject* L_15 = V_1;
 				Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_16 = ___0_flow;
 				NullCheck(L_15);
 				InterfaceActionInvoker2< Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582*, int32_t >::Invoke(9, IState_tE7D93CD5743D6CACB168E7E4C63654B95186EC38_il2cpp_TypeInfo_var, L_15, L_16, 0);
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:116>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:116>
 				goto IL_0064_1;
 			}
 			catch(Il2CppExceptionWrapper& e)
@@ -5748,9 +5749,9 @@ IL_0043_1:
 CATCH_0054_1:
 			{
 				Exception_t* L_17 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:117>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:117>
 				V_2 = L_17;
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:119>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:119>
 				RuntimeObject* L_18 = V_1;
 				Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_19 = ___0_flow;
 				NullCheck(L_19);
@@ -5758,13 +5759,13 @@ CATCH_0054_1:
 				L_20 = Flow_get_stack_m14E56FE5242B8B811C540A2E23CD29C92095D196_inline(L_19, NULL);
 				Exception_t* L_21 = V_2;
 				GraphsExceptionUtility_HandleException_m96BECD401548A4A5B5C01018A2754A9E69727A47(L_18, L_20, L_21, NULL);
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:120>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:120>
 				IL2CPP_RETHROW_MANAGED_EXCEPTION(IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*));
 			}
 
 IL_0064_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:111>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:111>
 				RuntimeObject* L_22 = V_0;
 				NullCheck(L_22);
 				bool L_23;
@@ -5786,11 +5787,11 @@ IL_0064_1:
 
 IL_0078:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:123>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:123>
 		return;
 	}
 }
-// Method Definition Index: 142586
+// Method Definition Index: 145471
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateGraph_Stop_m75AFD0473DC2AD0806F1BAAA5E73008F9D1A6085 (StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* __this, Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* ___0_flow, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5812,7 +5813,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateGraph_Stop_m75AFD0473DC2AD0806F1BAA
 	Exception_t* V_3 = NULL;
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:127>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:127>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_0 = ___0_flow;
 		NullCheck(L_0);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_1;
@@ -5820,7 +5821,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateGraph_Stop_m75AFD0473DC2AD0806F1BAA
 		HashSet_1_t0E9AD8C1105A880066BB80E42F6BED46C38FCBC8* L_2;
 		L_2 = StateGraph_GetActiveStatesNoAlloc_mF97A80BFBD7A1D0AAC59BDEA602566D79DEDE4D2(__this, L_1, NULL);
 		V_0 = L_2;
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:129>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:129>
 		HashSet_1_t0E9AD8C1105A880066BB80E42F6BED46C38FCBC8* L_3 = V_0;
 		NullCheck(L_3);
 		Enumerator_tC96B0BD05DE15119EE1DCB6388283BDEFD3A933B L_4;
@@ -5845,19 +5846,19 @@ FINALLY_0043:
 
 IL_0016_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:129>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:129>
 				RuntimeObject* L_5;
 				L_5 = Enumerator_get_Current_m9EE18360BB00EF618F254D565567929B7CA01841_inline((&V_1), Enumerator_get_Current_m9EE18360BB00EF618F254D565567929B7CA01841_RuntimeMethod_var);
 				V_2 = L_5;
 			}
 			try
 			{
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:133>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:133>
 				RuntimeObject* L_6 = V_2;
 				Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_7 = ___0_flow;
 				NullCheck(L_6);
 				InterfaceActionInvoker2< Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582*, int32_t >::Invoke(10, IState_tE7D93CD5743D6CACB168E7E4C63654B95186EC38_il2cpp_TypeInfo_var, L_6, L_7, 0);
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:134>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:134>
 				goto IL_0038_1;
 			}
 			catch(Il2CppExceptionWrapper& e)
@@ -5873,9 +5874,9 @@ IL_0016_1:
 CATCH_0028_1:
 			{
 				Exception_t* L_8 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:135>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:135>
 				V_3 = L_8;
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:137>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:137>
 				RuntimeObject* L_9 = V_2;
 				Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_10 = ___0_flow;
 				NullCheck(L_10);
@@ -5883,13 +5884,13 @@ CATCH_0028_1:
 				L_11 = Flow_get_stack_m14E56FE5242B8B811C540A2E23CD29C92095D196_inline(L_10, NULL);
 				Exception_t* L_12 = V_3;
 				GraphsExceptionUtility_HandleException_m96BECD401548A4A5B5C01018A2754A9E69727A47(L_9, L_11, L_12, NULL);
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:138>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:138>
 				IL2CPP_RETHROW_MANAGED_EXCEPTION(IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*));
 			}
 
 IL_0038_1:
 			{
-				//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:129>
+				//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:129>
 				bool L_13;
 				L_13 = Enumerator_MoveNext_mA04B5E67CDB6753313EFA4C3631A2254BB83DFBC((&V_1), Enumerator_MoveNext_mA04B5E67CDB6753313EFA4C3631A2254BB83DFBC_RuntimeMethod_var);
 				if (L_13)
@@ -5909,10 +5910,10 @@ IL_0038_1:
 
 IL_0051:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:142>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:142>
 		HashSet_1_t0E9AD8C1105A880066BB80E42F6BED46C38FCBC8* L_14 = V_0;
 		XHashSetPool_Free_TisIState_tE7D93CD5743D6CACB168E7E4C63654B95186EC38_mB7E0502B94BAADC0D313D7ECC49602C00B6CC91E(L_14, XHashSetPool_Free_TisIState_tE7D93CD5743D6CACB168E7E4C63654B95186EC38_mB7E0502B94BAADC0D313D7ECC49602C00B6CC91E_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:144>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:144>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_15 = ___0_flow;
 		NullCheck(L_15);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_16;
@@ -5922,11 +5923,11 @@ IL_0051:
 		L_17 = GraphPointer_GetGraphData_TisStateGraphData_t8B9B0FFB8FBD845F21CB09AC426ADBA347D28580_m538BCD380D3F29EDBDE8371824248DB310F86474(L_16, GraphPointer_GetGraphData_TisStateGraphData_t8B9B0FFB8FBD845F21CB09AC426ADBA347D28580_m538BCD380D3F29EDBDE8371824248DB310F86474_RuntimeMethod_var);
 		NullCheck(L_17);
 		StateGraphData_set_isListening_m12A71632FC656D380276DA832081FD5F1CB1E480_inline(L_17, (bool)0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:145>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:145>
 		return;
 	}
 }
-// Method Definition Index: 142587
+// Method Definition Index: 145472
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* StateGraph_WithStart_mDEEBFAB7EA0D46CF060D3174131AB107FEE75ECA (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5941,18 +5942,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StateGraph_t4F59C6C493939AE51DF0745340BEE3B67
 	}
 	FlowState_t960CB4990E52C07A5741606D84B8CA6860756F3D* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:152>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:152>
 		StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* L_0 = (StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC*)il2cpp_codegen_object_new(StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC_il2cpp_TypeInfo_var);
 		StateGraph__ctor_m7CA0974AF7312DAFCA303C9AC23C67B0C75A02EE(L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:154>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:154>
 		FlowState_t960CB4990E52C07A5741606D84B8CA6860756F3D* L_1;
 		L_1 = FlowState_WithEnterUpdateExit_mA1137D474F339D6E95B24B589C3B593786C66C77(NULL);
 		V_0 = L_1;
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:155>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:155>
 		FlowState_t960CB4990E52C07A5741606D84B8CA6860756F3D* L_2 = V_0;
 		NullCheck(L_2);
 		State_set_isStart_m07936C946A25E5FE5D6CB70C900AB1AABEDE69E0_inline(L_2, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:156>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:156>
 		FlowState_t960CB4990E52C07A5741606D84B8CA6860756F3D* L_3 = V_0;
 		NullCheck(L_3);
 		GraphNest_2_tDE7A508253945CE7ED5EF46C78913E049858DD49* L_4;
@@ -5962,14 +5963,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StateGraph_t4F59C6C493939AE51DF0745340BEE3B67
 		L_5 = GraphNest_2_get_embed_mCC13444427F2B8F559674EA604B6FE5F15389EA9_inline(L_4, GraphNest_2_get_embed_mCC13444427F2B8F559674EA604B6FE5F15389EA9_RuntimeMethod_var);
 		NullCheck(L_5);
 		Graph_set_title_m5301B78920B637607F14634338FE751F419731C3_inline(L_5, _stringLiteral8243A16D425F93AF62CAAB2BFAE01A2D6246A5FE, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:157>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:157>
 		FlowState_t960CB4990E52C07A5741606D84B8CA6860756F3D* L_6 = V_0;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_7;
 		memset((&L_7), 0, sizeof(L_7));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_7), (-86.0f), (-15.0f), NULL);
 		NullCheck(L_6);
 		State_set_position_mDE134C8CFF547D789E10EBE0F4EEA5F6BD931DFE_inline(L_6, L_7, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:159>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:159>
 		StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* L_8 = L_0;
 		NullCheck(L_8);
 		GraphElementCollection_1_tE2784E270F0B3DA5DB5E14808C3F549BC4F61276* L_9;
@@ -5977,7 +5978,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StateGraph_t4F59C6C493939AE51DF0745340BEE3B67
 		FlowState_t960CB4990E52C07A5741606D84B8CA6860756F3D* L_10 = V_0;
 		NullCheck(L_9);
 		Collection_1_Add_m66299EB9767DC83FD86B14CB00FBB1D9FE16BD04(L_9, L_10, Collection_1_Add_m66299EB9767DC83FD86B14CB00FBB1D9FE16BD04_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:161>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:161>
 		return L_8;
 	}
 }
@@ -5989,7 +5990,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StateGraph_t4F59C6C493939AE51DF0745340BEE3B67
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 142588
+// Method Definition Index: 145473
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m2C0F664AFEEEF1A75457A411511C7A7C711F4C28 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6006,7 +6007,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m2C0F664AFEEEF1A75457A411
 		return;
 	}
 }
-// Method Definition Index: 142589
+// Method Definition Index: 145474
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m11232808DF8DCE11793EE5F05891F6FE61D8D9FB (U3CU3Ec_tA6B1AB7977505DBC1BFC6DCB3AB686ABF2CB95FE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6014,7 +6015,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m11232808DF8DCE11793EE5F05
 		return;
 	}
 }
-// Method Definition Index: 142590
+// Method Definition Index: 145475
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CStartU3Eb__22_0_mBA2E683FA25777571F23E2681330E85603E687CF (U3CU3Ec_tA6B1AB7977505DBC1BFC6DCB3AB686ABF2CB95FE* __this, RuntimeObject* ___0_s, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6024,7 +6025,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CStartU3Eb__22_0_mBA2E683FA257
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:111>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:111>
 		RuntimeObject* L_0 = ___0_s;
 		NullCheck(L_0);
 		bool L_1;
@@ -6040,27 +6041,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CU3Ec_U3CStartU3Eb__22_0_mBA2E683FA257
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 142591
+// Method Definition Index: 145476
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateGraphAsset_ShowData_m48EB469B1B2EF96EEE895AE30C56D1C1C86D919D (StateGraphAsset_t2F8A4D7DA940C5E5D170E531B36878B8F0A5FE3E* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraphAsset.cs:13>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraphAsset.cs:13>
 		LudiqScriptableObject_ShowData_m53F17A66E811705D002006DED0BED7EE7F06428D(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraphAsset.cs:14>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraphAsset.cs:14>
 		return;
 	}
 }
-// Method Definition Index: 142592
+// Method Definition Index: 145477
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* StateGraphAsset_DefaultGraph_m9D74CAAF4B2EC2CDD8B815B82EDD8A01688432A8 (StateGraphAsset_t2F8A4D7DA940C5E5D170E531B36878B8F0A5FE3E* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraphAsset.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraphAsset.cs:18>
 		StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* L_0;
 		L_0 = StateGraph_WithStart_mDEEBFAB7EA0D46CF060D3174131AB107FEE75ECA(NULL);
 		return L_0;
 	}
 }
-// Method Definition Index: 142593
+// Method Definition Index: 145478
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateGraphAsset__ctor_m542DBB36CF2255457868282456A211AD16C7234A (StateGraphAsset_t2F8A4D7DA940C5E5D170E531B36878B8F0A5FE3E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6082,26 +6083,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateGraphAsset__ctor_m542DBB36CF2255457
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 142594
+// Method Definition Index: 145479
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool StateGraphData_get_isListening_m9685979715A4F00FEFF6E5C4DCAF678A9B40D628 (StateGraphData_t8B9B0FFB8FBD845F21CB09AC426ADBA347D28580* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraphData.cs:5>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraphData.cs:5>
 		bool L_0 = __this->___U3CisListeningU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142595
+// Method Definition Index: 145480
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateGraphData_set_isListening_m12A71632FC656D380276DA832081FD5F1CB1E480 (StateGraphData_t8B9B0FFB8FBD845F21CB09AC426ADBA347D28580* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraphData.cs:5>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraphData.cs:5>
 		bool L_0 = ___0_value;
 		__this->___U3CisListeningU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 142596
+// Method Definition Index: 145481
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateGraphData__ctor_m79E2F84F9D11158EDB8535F4355A1161F009D813 (StateGraphData_t8B9B0FFB8FBD845F21CB09AC426ADBA347D28580* __this, StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* ___0_definition, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6111,10 +6112,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateGraphData__ctor_m79E2F84F9D11158EDB
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraphData.cs:7>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraphData.cs:7>
 		StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* L_0 = ___0_definition;
 		GraphData_1__ctor_m722860D1DCD08C980156D3BE03D39225494E0FCE(__this, L_0, GraphData_1__ctor_m722860D1DCD08C980156D3BE03D39225494E0FCE_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraphData.cs:9>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraphData.cs:9>
 		return;
 	}
 }
@@ -6126,7 +6127,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateGraphData__ctor_m79E2F84F9D11158EDB
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 142597
+// Method Definition Index: 145482
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateMachine_OnEnable_m271F8C04A3B1608D85715100A191A2615A2D2AB6 (StateMachine_t7EA9F29EE5F245D33CEE0BDAE0BEA3D7406B065A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6141,7 +6142,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateMachine_OnEnable_m271F8C04A3B1608D8
 	}
 	Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:13>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:13>
 		bool L_0;
 		L_0 = Machine_2_get_hasGraph_m4B873E771684E65D579649888924252CAFA7ADCE(__this, Machine_2_get_hasGraph_m4B873E771684E65D579649888924252CAFA7ADCE_RuntimeMethod_var);
 		if (!L_0)
@@ -6150,7 +6151,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateMachine_OnEnable_m271F8C04A3B1608D8
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:15>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:15>
 		GraphReference_t721C982B418EEAA6BE9FA2BFB6A047A8E9362DA9* L_1;
 		L_1 = Machine_2_get_reference_m7762EF7EE22369A8425E0E413738E72BCE81B4F6(__this, Machine_2_get_reference_m7762EF7EE22369A8425E0E413738E72BCE81B4F6_RuntimeMethod_var);
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_2;
@@ -6184,13 +6185,13 @@ IL_002b:
 		});
 		try
 		{
-			//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:17>
+			//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:17>
 			StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* L_5;
 			L_5 = Machine_2_get_graph_m4A114AEC694B9CEA88EC6297FB45925B66CC8295(__this, Machine_2_get_graph_m4A114AEC694B9CEA88EC6297FB45925B66CC8295_RuntimeMethod_var);
 			Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_6 = V_0;
 			NullCheck(L_5);
 			StateGraph_Start_m2291C8453FE3908A8062C9A0111CA28163AC8EA8(L_5, L_6, NULL);
-			//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:18>
+			//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:18>
 			goto IL_002c;
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -6201,13 +6202,13 @@ IL_002b:
 
 IL_002c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:21>
 		EventMachine_2_OnEnable_m0D911883E28EEAA560B7381D711FC7B028EE6BE5(__this, EventMachine_2_OnEnable_m0D911883E28EEAA560B7381D711FC7B028EE6BE5_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:22>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:22>
 		return;
 	}
 }
-// Method Definition Index: 142598
+// Method Definition Index: 145483
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateMachine_OnInstantiateWhileEnabled_m7D525F1134D5218A1002CE4E4A026D14ED8B9B9C (StateMachine_t7EA9F29EE5F245D33CEE0BDAE0BEA3D7406B065A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6222,7 +6223,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateMachine_OnInstantiateWhileEnabled_m
 	}
 	Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:26>
 		bool L_0;
 		L_0 = Machine_2_get_hasGraph_m4B873E771684E65D579649888924252CAFA7ADCE(__this, Machine_2_get_hasGraph_m4B873E771684E65D579649888924252CAFA7ADCE_RuntimeMethod_var);
 		if (!L_0)
@@ -6231,7 +6232,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateMachine_OnInstantiateWhileEnabled_m
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:28>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:28>
 		GraphReference_t721C982B418EEAA6BE9FA2BFB6A047A8E9362DA9* L_1;
 		L_1 = Machine_2_get_reference_m7762EF7EE22369A8425E0E413738E72BCE81B4F6(__this, Machine_2_get_reference_m7762EF7EE22369A8425E0E413738E72BCE81B4F6_RuntimeMethod_var);
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_2;
@@ -6265,13 +6266,13 @@ IL_002b:
 		});
 		try
 		{
-			//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:30>
+			//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:30>
 			StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* L_5;
 			L_5 = Machine_2_get_graph_m4A114AEC694B9CEA88EC6297FB45925B66CC8295(__this, Machine_2_get_graph_m4A114AEC694B9CEA88EC6297FB45925B66CC8295_RuntimeMethod_var);
 			Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_6 = V_0;
 			NullCheck(L_5);
 			StateGraph_Start_m2291C8453FE3908A8062C9A0111CA28163AC8EA8(L_5, L_6, NULL);
-			//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:31>
+			//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:31>
 			goto IL_002c;
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -6282,13 +6283,13 @@ IL_002b:
 
 IL_002c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:34>
 		EventMachine_2_OnInstantiateWhileEnabled_mC4664C51C295B4E0EC2BCEFE4F5F43AE56BA517C(__this, EventMachine_2_OnInstantiateWhileEnabled_mC4664C51C295B4E0EC2BCEFE4F5F43AE56BA517C_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:35>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:35>
 		return;
 	}
 }
-// Method Definition Index: 142599
+// Method Definition Index: 145484
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateMachine_OnUninstantiateWhileEnabled_mBDA0E33EC45F9C1463460BEF2BC865FCB5B3DDA4 (StateMachine_t7EA9F29EE5F245D33CEE0BDAE0BEA3D7406B065A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6303,9 +6304,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateMachine_OnUninstantiateWhileEnabled
 	}
 	Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:39>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:39>
 		EventMachine_2_OnUninstantiateWhileEnabled_mD7FFCACE93A456BC05D96628EA99B69EC43AD471(__this, EventMachine_2_OnUninstantiateWhileEnabled_mD7FFCACE93A456BC05D96628EA99B69EC43AD471_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:41>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:41>
 		bool L_0;
 		L_0 = Machine_2_get_hasGraph_m4B873E771684E65D579649888924252CAFA7ADCE(__this, Machine_2_get_hasGraph_m4B873E771684E65D579649888924252CAFA7ADCE_RuntimeMethod_var);
 		if (!L_0)
@@ -6314,7 +6315,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateMachine_OnUninstantiateWhileEnabled
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:43>
 		GraphReference_t721C982B418EEAA6BE9FA2BFB6A047A8E9362DA9* L_1;
 		L_1 = Machine_2_get_reference_m7762EF7EE22369A8425E0E413738E72BCE81B4F6(__this, Machine_2_get_reference_m7762EF7EE22369A8425E0E413738E72BCE81B4F6_RuntimeMethod_var);
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_2;
@@ -6348,13 +6349,13 @@ IL_0031:
 		});
 		try
 		{
-			//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:45>
+			//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:45>
 			StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* L_5;
 			L_5 = Machine_2_get_graph_m4A114AEC694B9CEA88EC6297FB45925B66CC8295(__this, Machine_2_get_graph_m4A114AEC694B9CEA88EC6297FB45925B66CC8295_RuntimeMethod_var);
 			Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_6 = V_0;
 			NullCheck(L_5);
 			StateGraph_Stop_m75AFD0473DC2AD0806F1BAAA5E73008F9D1A6085(L_5, L_6, NULL);
-			//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:46>
+			//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:46>
 			goto IL_0032;
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -6365,11 +6366,11 @@ IL_0031:
 
 IL_0032:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:48>
 		return;
 	}
 }
-// Method Definition Index: 142600
+// Method Definition Index: 145485
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateMachine_OnDisable_m8C046A20DC073E780EA249DA4FC44E39B3A26346 (StateMachine_t7EA9F29EE5F245D33CEE0BDAE0BEA3D7406B065A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6384,9 +6385,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateMachine_OnDisable_m8C046A20DC073E78
 	}
 	Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:52>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:52>
 		EventMachine_2_OnDisable_m0594C04C032D66C465224A3EEDF0996BEBA2B44F(__this, EventMachine_2_OnDisable_m0594C04C032D66C465224A3EEDF0996BEBA2B44F_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:54>
 		bool L_0;
 		L_0 = Machine_2_get_hasGraph_m4B873E771684E65D579649888924252CAFA7ADCE(__this, Machine_2_get_hasGraph_m4B873E771684E65D579649888924252CAFA7ADCE_RuntimeMethod_var);
 		if (!L_0)
@@ -6395,7 +6396,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateMachine_OnDisable_m8C046A20DC073E78
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:56>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:56>
 		GraphReference_t721C982B418EEAA6BE9FA2BFB6A047A8E9362DA9* L_1;
 		L_1 = Machine_2_get_reference_m7762EF7EE22369A8425E0E413738E72BCE81B4F6(__this, Machine_2_get_reference_m7762EF7EE22369A8425E0E413738E72BCE81B4F6_RuntimeMethod_var);
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_2;
@@ -6429,13 +6430,13 @@ IL_0031:
 		});
 		try
 		{
-			//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:58>
+			//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:58>
 			StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* L_5;
 			L_5 = Machine_2_get_graph_m4A114AEC694B9CEA88EC6297FB45925B66CC8295(__this, Machine_2_get_graph_m4A114AEC694B9CEA88EC6297FB45925B66CC8295_RuntimeMethod_var);
 			Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_6 = V_0;
 			NullCheck(L_5);
 			StateGraph_Stop_m75AFD0473DC2AD0806F1BAAA5E73008F9D1A6085(L_5, L_6, NULL);
-			//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:59>
+			//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:59>
 			goto IL_0032;
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -6446,31 +6447,31 @@ IL_0031:
 
 IL_0032:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:61>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:61>
 		return;
 	}
 }
-// Method Definition Index: 142601
+// Method Definition Index: 145486
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateMachine_ShowData_m2672D27E98952DF1D14719316287FEFC68A1E618 (StateMachine_t7EA9F29EE5F245D33CEE0BDAE0BEA3D7406B065A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:66>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:66>
 		LudiqBehaviour_ShowData_m087A71050C40ADE4A92F6AF6B4DF6EAE258EE9FA(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:67>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:67>
 		return;
 	}
 }
-// Method Definition Index: 142602
+// Method Definition Index: 145487
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* StateMachine_DefaultGraph_m345D8252EBE88EFCA79CF66254AF7644380F7290 (StateMachine_t7EA9F29EE5F245D33CEE0BDAE0BEA3D7406B065A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateMachine.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateMachine.cs:71>
 		StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* L_0;
 		L_0 = StateGraph_WithStart_mDEEBFAB7EA0D46CF060D3174131AB107FEE75ECA(NULL);
 		return L_0;
 	}
 }
-// Method Definition Index: 142603
+// Method Definition Index: 145488
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateMachine__ctor_m83FE011B426C5C353F77CB95B32C9971A00DF37B (StateMachine_t7EA9F29EE5F245D33CEE0BDAE0BEA3D7406B065A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6492,7 +6493,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateMachine__ctor_m83FE011B426C5C353F77
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 142604
+// Method Definition Index: 145489
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateTransition__ctor_m0943A8C433BF3C32664CEB1BAB309226E58B0413 (StateTransition_t87FA9EAAB936C1A75F1318DDB8D46DCA981BE4BE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6502,13 +6503,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateTransition__ctor_m0943A8C433BF3C326
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:16>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:16>
 		GraphElement_1__ctor_mFFF71CFB6EE67B269FC3630A1020E9307A26B198(__this, GraphElement_1__ctor_mFFF71CFB6EE67B269FC3630A1020E9307A26B198_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:16>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:16>
 		return;
 	}
 }
-// Method Definition Index: 142605
+// Method Definition Index: 145490
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateTransition__ctor_m1F10F24A3006B43F785AAB32BB719B69F3C9B792 (StateTransition_t87FA9EAAB936C1A75F1318DDB8D46DCA981BE4BE* __this, RuntimeObject* ___0_source, RuntimeObject* ___1_destination, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6523,22 +6524,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateTransition__ctor_m1F10F24A3006B43F7
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:18>
 		GraphElement_1__ctor_mFFF71CFB6EE67B269FC3630A1020E9307A26B198(__this, GraphElement_1__ctor_mFFF71CFB6EE67B269FC3630A1020E9307A26B198_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:20>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:20>
 		il2cpp_codegen_runtime_class_init_inline(Ensure_t1AB90E1B9CFC75A223C082272E0281C91184901D_il2cpp_TypeInfo_var);
 		EnsureThat_tCC49E8B65851E70C9534A68EB657B6227F0549FC* L_0;
 		L_0 = Ensure_That_mA8D5A2A6E1D51157C99920962B64DF9BF20DA1E9(_stringLiteral66F9618FDA792CAB23AF2D7FFB50AB2D3E393DC5, NULL);
 		RuntimeObject* L_1 = ___0_source;
 		NullCheck(L_0);
 		EnsureThat_IsNotNull_TisIState_tE7D93CD5743D6CACB168E7E4C63654B95186EC38_mDD7DB93A972D2BC659D5461196EF55432B644451(L_0, L_1, EnsureThat_IsNotNull_TisIState_tE7D93CD5743D6CACB168E7E4C63654B95186EC38_mDD7DB93A972D2BC659D5461196EF55432B644451_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:21>
 		EnsureThat_tCC49E8B65851E70C9534A68EB657B6227F0549FC* L_2;
 		L_2 = Ensure_That_mA8D5A2A6E1D51157C99920962B64DF9BF20DA1E9(_stringLiteralD89ADD2DB1FBF30630EEA02FAAF144060CA0E908, NULL);
 		RuntimeObject* L_3 = ___1_destination;
 		NullCheck(L_2);
 		EnsureThat_IsNotNull_TisIState_tE7D93CD5743D6CACB168E7E4C63654B95186EC38_mDD7DB93A972D2BC659D5461196EF55432B644451(L_2, L_3, EnsureThat_IsNotNull_TisIState_tE7D93CD5743D6CACB168E7E4C63654B95186EC38_mDD7DB93A972D2BC659D5461196EF55432B644451_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:23>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:23>
 		RuntimeObject* L_4 = ___0_source;
 		NullCheck(L_4);
 		StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* L_5;
@@ -6553,7 +6554,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateTransition__ctor_m1F10F24A3006B43F7
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:25>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:25>
 		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_8 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
 		NotSupportedException__ctor_mE174750CF0247BBB47544FFD71D66BB89630945B(L_8, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral1AEFC987A8599C87281CA51B491D32A2211DAB9A)), NULL);
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_8, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&StateTransition__ctor_m1F10F24A3006B43F785AAB32BB719B69F3C9B792_RuntimeMethod_var)));
@@ -6561,17 +6562,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateTransition__ctor_m1F10F24A3006B43F7
 
 IL_003f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:28>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:28>
 		RuntimeObject* L_9 = ___0_source;
 		StateTransition_set_source_m6D5B3D924BF32BD665D388BAFD4699100C97C3E9_inline(__this, L_9, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:29>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:29>
 		RuntimeObject* L_10 = ___1_destination;
 		StateTransition_set_destination_m25DB92BBA492FCCDF42C40BF99101070CA1D14ED_inline(__this, L_10, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:30>
 		return;
 	}
 }
-// Method Definition Index: 142606
+// Method Definition Index: 145491
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* StateTransition_CreateDebugData_mAE5A2EFF4D9A05C6616BDD9529A7EDAEC6DD1DCF (StateTransition_t87FA9EAAB936C1A75F1318DDB8D46DCA981BE4BE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6581,61 +6582,61 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* StateTransition_CreateDebugDat
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:34>
 		DebugData_t23639BF7D05E981CBD90B2063AB4F85B204C6C13* L_0 = (DebugData_t23639BF7D05E981CBD90B2063AB4F85B204C6C13*)il2cpp_codegen_object_new(DebugData_t23639BF7D05E981CBD90B2063AB4F85B204C6C13_il2cpp_TypeInfo_var);
 		DebugData__ctor_m81D679E506459D54B02CC818F6E44041B597CAB0(L_0, NULL);
 		return L_0;
 	}
 }
-// Method Definition Index: 142607
+// Method Definition Index: 145492
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t StateTransition_get_dependencyOrder_mDC572B05A663B770E99A2F63FF0B10608638A6F5 (StateTransition_t87FA9EAAB936C1A75F1318DDB8D46DCA981BE4BE* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:37>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:37>
 		return 1;
 	}
 }
-// Method Definition Index: 142608
+// Method Definition Index: 145493
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* StateTransition_get_source_mD9E4E8A926307F7B242885A07EA578EB6FBB1711 (StateTransition_t87FA9EAAB936C1A75F1318DDB8D46DCA981BE4BE* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:40>
 		RuntimeObject* L_0 = __this->___U3CsourceU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142609
+// Method Definition Index: 145494
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateTransition_set_source_m6D5B3D924BF32BD665D388BAFD4699100C97C3E9 (StateTransition_t87FA9EAAB936C1A75F1318DDB8D46DCA981BE4BE* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:40>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___U3CsourceU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CsourceU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 142610
+// Method Definition Index: 145495
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* StateTransition_get_destination_m5000AA9FDC7863A1F263C267A01814C3705A68B8 (StateTransition_t87FA9EAAB936C1A75F1318DDB8D46DCA981BE4BE* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:43>
 		RuntimeObject* L_0 = __this->___U3CdestinationU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142611
+// Method Definition Index: 145496
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateTransition_set_destination_m25DB92BBA492FCCDF42C40BF99101070CA1D14ED (StateTransition_t87FA9EAAB936C1A75F1318DDB8D46DCA981BE4BE* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:43>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___U3CdestinationU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CdestinationU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 142612
+// Method Definition Index: 145497
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateTransition_Instantiate_mB9FFB83EE6D9DB2752AB48E68FAC581415528F48 (StateTransition_t87FA9EAAB936C1A75F1318DDB8D46DCA981BE4BE* __this, GraphReference_t721C982B418EEAA6BE9FA2BFB6A047A8E9362DA9* ___0_instance, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6648,10 +6649,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateTransition_Instantiate_mB9FFB83EE6D
 	}
 	RuntimeObject* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:47>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:47>
 		GraphReference_t721C982B418EEAA6BE9FA2BFB6A047A8E9362DA9* L_0 = ___0_instance;
 		GraphElement_1_Instantiate_m46937EB90FC6BC388113232E6E94D622BA1F0603(__this, L_0, GraphElement_1_Instantiate_m46937EB90FC6BC388113232E6E94D622BA1F0603_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:49>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:49>
 		V_0 = ((RuntimeObject*)IsInst((RuntimeObject*)__this, IGraphEventListener_t21DB6AC98799BE07817E5FE5F9CF2C2FB5FE5F93_il2cpp_TypeInfo_var));
 		RuntimeObject* L_1 = V_0;
 		if (!L_1)
@@ -6674,7 +6675,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateTransition_Instantiate_mB9FFB83EE6D
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:51>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:51>
 		RuntimeObject* L_6 = V_0;
 		GraphReference_t721C982B418EEAA6BE9FA2BFB6A047A8E9362DA9* L_7 = ___0_instance;
 		XGraphEventListener_StartListening_m0DFDFC253035301D7ABCCC4635CA7282B2222AE9(L_6, L_7, NULL);
@@ -6682,11 +6683,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateTransition_Instantiate_mB9FFB83EE6D
 
 IL_002b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:53>
 		return;
 	}
 }
-// Method Definition Index: 142613
+// Method Definition Index: 145498
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateTransition_Uninstantiate_mD950C776B3477E9451C1D9438131C817469F0ACA (StateTransition_t87FA9EAAB936C1A75F1318DDB8D46DCA981BE4BE* __this, GraphReference_t721C982B418EEAA6BE9FA2BFB6A047A8E9362DA9* ___0_instance, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6698,7 +6699,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateTransition_Uninstantiate_mD950C776B
 	}
 	RuntimeObject* V_0 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:57>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:57>
 		V_0 = ((RuntimeObject*)IsInst((RuntimeObject*)__this, IGraphEventListener_t21DB6AC98799BE07817E5FE5F9CF2C2FB5FE5F93_il2cpp_TypeInfo_var));
 		RuntimeObject* L_0 = V_0;
 		if (!L_0)
@@ -6707,7 +6708,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateTransition_Uninstantiate_mD950C776B
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:59>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:59>
 		RuntimeObject* L_1 = V_0;
 		GraphReference_t721C982B418EEAA6BE9FA2BFB6A047A8E9362DA9* L_2 = ___0_instance;
 		XGraphEventListener_StopListening_m6521CC383E1DEC9C994AB5A40BE56C429C25209F(L_1, L_2, NULL);
@@ -6715,14 +6716,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateTransition_Uninstantiate_mD950C776B
 
 IL_0011:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:62>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:62>
 		GraphReference_t721C982B418EEAA6BE9FA2BFB6A047A8E9362DA9* L_3 = ___0_instance;
 		GraphElement_1_Uninstantiate_m3687828805274206C75F55E6F7CFA009E70ECFE3(__this, L_3, GraphElement_1_Uninstantiate_m3687828805274206C75F55E6F7CFA009E70ECFE3_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:63>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:63>
 		return;
 	}
 }
-// Method Definition Index: 142614
+// Method Definition Index: 145499
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateTransition_Branch_m723BD589A09D3010F0C9540FBBFB931EBCA52B9D (StateTransition_t87FA9EAAB936C1A75F1318DDB8D46DCA981BE4BE* __this, Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* ___0_flow, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6737,7 +6738,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateTransition_Branch_m723BD589A09D3010
 	Exception_t* V_1 = NULL;
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:69>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:69>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_0 = ___0_flow;
 		NullCheck(L_0);
 		bool L_1;
@@ -6748,7 +6749,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateTransition_Branch_m723BD589A09D3010
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:71>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_2 = ___0_flow;
 		NullCheck(L_2);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_3;
@@ -6756,14 +6757,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateTransition_Branch_m723BD589A09D3010
 		NullCheck(L_3);
 		DebugData_t23639BF7D05E981CBD90B2063AB4F85B204C6C13* L_4;
 		L_4 = GraphPointer_GetElementDebugData_TisDebugData_t23639BF7D05E981CBD90B2063AB4F85B204C6C13_m3205A69D5E565E6B6A0FB8A36B1B1D63F735DE1A(L_3, __this, GraphPointer_GetElementDebugData_TisDebugData_t23639BF7D05E981CBD90B2063AB4F85B204C6C13_m3205A69D5E565E6B6A0FB8A36B1B1D63F735DE1A_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:73>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:73>
 		DebugData_t23639BF7D05E981CBD90B2063AB4F85B204C6C13* L_5 = L_4;
 		il2cpp_codegen_runtime_class_init_inline(EditorTimeBinding_t52A0FA441FC552E4992B9382EDAA7E010482EB0B_il2cpp_TypeInfo_var);
 		int32_t L_6;
 		L_6 = EditorTimeBinding_get_frame_m5D60E5B8841F7AEEA93CDF1F72A1E0D68085F098(NULL);
 		NullCheck(L_5);
 		DebugData_set_lastBranchFrame_m412D52C8DAEE9E912A3E0C1A532408F1FF57F437_inline(L_5, L_6, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:74>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:74>
 		float L_7;
 		L_7 = EditorTimeBinding_get_time_mA8DA68FB1F787045711D434E42B8C9C30012AAA3(NULL);
 		NullCheck(L_5);
@@ -6775,13 +6776,13 @@ IL_0029:
 	}
 	try
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:79>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:79>
 		RuntimeObject* L_8;
 		L_8 = StateTransition_get_source_mD9E4E8A926307F7B242885A07EA578EB6FBB1711_inline(__this, NULL);
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_9 = ___0_flow;
 		NullCheck(L_8);
 		InterfaceActionInvoker2< Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582*, int32_t >::Invoke(10, IState_tE7D93CD5743D6CACB168E7E4C63654B95186EC38_il2cpp_TypeInfo_var, L_8, L_9, 1);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:80>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:80>
 		goto IL_004e;
 	}
 	catch(Il2CppExceptionWrapper& e)
@@ -6797,9 +6798,9 @@ IL_0029:
 CATCH_0039:
 	{
 		Exception_t* L_10 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:81>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:81>
 		V_0 = L_10;
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:83>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:83>
 		RuntimeObject* L_11;
 		L_11 = StateTransition_get_source_mD9E4E8A926307F7B242885A07EA578EB6FBB1711_inline(__this, NULL);
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_12 = ___0_flow;
@@ -6808,13 +6809,13 @@ CATCH_0039:
 		L_13 = Flow_get_stack_m14E56FE5242B8B811C540A2E23CD29C92095D196_inline(L_12, NULL);
 		Exception_t* L_14 = V_0;
 		GraphsExceptionUtility_HandleException_m96BECD401548A4A5B5C01018A2754A9E69727A47(L_11, L_13, L_14, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:84>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:84>
 		IL2CPP_RETHROW_MANAGED_EXCEPTION(IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*));
 	}
 
 IL_004e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:87>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:87>
 		RuntimeObject* L_15;
 		L_15 = StateTransition_get_source_mD9E4E8A926307F7B242885A07EA578EB6FBB1711_inline(__this, NULL);
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_16 = ___0_flow;
@@ -6825,13 +6826,13 @@ IL_004e:
 	}
 	try
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:91>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:91>
 		RuntimeObject* L_18;
 		L_18 = StateTransition_get_destination_m5000AA9FDC7863A1F263C267A01814C3705A68B8_inline(__this, NULL);
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_19 = ___0_flow;
 		NullCheck(L_18);
 		InterfaceActionInvoker2< Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582*, int32_t >::Invoke(9, IState_tE7D93CD5743D6CACB168E7E4C63654B95186EC38_il2cpp_TypeInfo_var, L_18, L_19, 1);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:92>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:92>
 		goto IL_0084;
 	}
 	catch(Il2CppExceptionWrapper& e)
@@ -6847,9 +6848,9 @@ IL_004e:
 CATCH_006f:
 	{
 		Exception_t* L_20 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:93>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:93>
 		V_1 = L_20;
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:95>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:95>
 		RuntimeObject* L_21;
 		L_21 = StateTransition_get_destination_m5000AA9FDC7863A1F263C267A01814C3705A68B8_inline(__this, NULL);
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_22 = ___0_flow;
@@ -6858,21 +6859,21 @@ CATCH_006f:
 		L_23 = Flow_get_stack_m14E56FE5242B8B811C540A2E23CD29C92095D196_inline(L_22, NULL);
 		Exception_t* L_24 = V_1;
 		GraphsExceptionUtility_HandleException_m96BECD401548A4A5B5C01018A2754A9E69727A47(L_21, L_23, L_24, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:96>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:96>
 		IL2CPP_RETHROW_MANAGED_EXCEPTION(IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*));
 	}
 
 IL_0084:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:98>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:98>
 		return;
 	}
 }
-// Method Definition Index: 142617
+// Method Definition Index: 145502
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AnalyticsIdentifier_tE867F385ABAC820C67EC52E1F523F2060527DC2A* StateTransition_GetAnalyticsIdentifier_m52BDAD2CCB8E5C480D7126BE4B8254AD77286491 (StateTransition_t87FA9EAAB936C1A75F1318DDB8D46DCA981BE4BE* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:110>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:110>
 		return (AnalyticsIdentifier_tE867F385ABAC820C67EC52E1F523F2060527DC2A*)NULL;
 	}
 }
@@ -6884,65 +6885,65 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AnalyticsIdentifier_tE867F385ABAC820C67EC52E1
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 142618
+// Method Definition Index: 145503
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Exception_t* DebugData_get_runtimeException_m2BE7F01B8C302BBB79B5DE45F6A3E303CF558171 (DebugData_t23639BF7D05E981CBD90B2063AB4F85B204C6C13* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:9>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:9>
 		Exception_t* L_0 = __this->___U3CruntimeExceptionU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142619
+// Method Definition Index: 145504
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugData_set_runtimeException_mF072A6793C4115C43A3A3F61251B46F8851FFBFE (DebugData_t23639BF7D05E981CBD90B2063AB4F85B204C6C13* __this, Exception_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:9>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:9>
 		Exception_t* L_0 = ___0_value;
 		__this->___U3CruntimeExceptionU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CruntimeExceptionU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 142620
+// Method Definition Index: 145505
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t DebugData_get_lastBranchFrame_mC9C9BAC783BA4BB8C03B2D6E691FCC2B872B90E5 (DebugData_t23639BF7D05E981CBD90B2063AB4F85B204C6C13* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:11>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:11>
 		int32_t L_0 = __this->___U3ClastBranchFrameU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142621
+// Method Definition Index: 145506
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugData_set_lastBranchFrame_m412D52C8DAEE9E912A3E0C1A532408F1FF57F437 (DebugData_t23639BF7D05E981CBD90B2063AB4F85B204C6C13* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:11>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:11>
 		int32_t L_0 = ___0_value;
 		__this->___U3ClastBranchFrameU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 142622
+// Method Definition Index: 145507
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DebugData_get_lastBranchTime_m68E5A5B4A54D1AD0F15BB753C445A8CEA1FB1FF2 (DebugData_t23639BF7D05E981CBD90B2063AB4F85B204C6C13* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:13>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:13>
 		float L_0 = __this->___U3ClastBranchTimeU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142623
+// Method Definition Index: 145508
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugData_set_lastBranchTime_m0B6965AC9E09C5008F57F9CCF373E656205E5595 (DebugData_t23639BF7D05E981CBD90B2063AB4F85B204C6C13* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:13>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:13>
 		float L_0 = ___0_value;
 		__this->___U3ClastBranchTimeU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 142624
+// Method Definition Index: 145509
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugData__ctor_m81D679E506459D54B02CC818F6E44041B597CAB0 (DebugData_t23639BF7D05E981CBD90B2063AB4F85B204C6C13* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6958,7 +6959,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DebugData__ctor_m81D679E506459D54B02CC81
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 142625
+// Method Definition Index: 145510
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateUnit__ctor_m07FC407DA8D60F3F6B2EB5B61656D1E0FCA61D59 (StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6968,13 +6969,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateUnit__ctor_m07FC407DA8D60F3F6B2EB5B
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:7>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:7>
 		NesterUnit_2__ctor_m5A7226E8377E124B65E6F2D3B98C2BF045783C2C(__this, NesterUnit_2__ctor_m5A7226E8377E124B65E6F2D3B98C2BF045783C2C_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:7>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:7>
 		return;
 	}
 }
-// Method Definition Index: 142626
+// Method Definition Index: 145511
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateUnit__ctor_mAD18FFF00A1FCACD37BB60969388D658E594C8EC (StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA* __this, StateGraphAsset_t2F8A4D7DA940C5E5D170E531B36878B8F0A5FE3E* ___0_macro, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6984,94 +6985,94 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateUnit__ctor_mAD18FFF00A1FCACD37BB609
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:9>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:9>
 		StateGraphAsset_t2F8A4D7DA940C5E5D170E531B36878B8F0A5FE3E* L_0 = ___0_macro;
 		NesterUnit_2__ctor_m7FFBBBB3354BE066C1FBC2E39C205208EEF731C8(__this, L_0, NesterUnit_2__ctor_m7FFBBBB3354BE066C1FBC2E39C205208EEF731C8_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:9>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:9>
 		return;
 	}
 }
-// Method Definition Index: 142627
+// Method Definition Index: 145512
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* StateUnit_get_start_mE0A3C8DBF73E806B6DC7D56B37AB4463221CC481 (StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:15>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:15>
 		ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* L_0 = __this->___U3CstartU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142628
+// Method Definition Index: 145513
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateUnit_set_start_mF9C9E6511A0345A7548696D69939763B15BC2564 (StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA* __this, ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:15>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:15>
 		ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* L_0 = ___0_value;
 		__this->___U3CstartU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CstartU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 142629
+// Method Definition Index: 145514
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* StateUnit_get_stop_m1E836E89105B4749740645D87966F3D5C732D25A (StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:21>
 		ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* L_0 = __this->___U3CstopU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142630
+// Method Definition Index: 145515
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateUnit_set_stop_mCD618ECF51403F46CFBBFE894517CD8230FF5AB3 (StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA* __this, ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:21>
 		ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* L_0 = ___0_value;
 		__this->___U3CstopU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CstopU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 142631
+// Method Definition Index: 145516
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ControlOutput_t478B71A736EFBCE24B532F0279A9E701C9CDD8B9* StateUnit_get_started_m1DB68019564D9311930301308FE8EF3689FEF273 (StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:27>
 		ControlOutput_t478B71A736EFBCE24B532F0279A9E701C9CDD8B9* L_0 = __this->___U3CstartedU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142632
+// Method Definition Index: 145517
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateUnit_set_started_m52F94D5308D3A46FD700F5AD8636613CB8AA9F5C (StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA* __this, ControlOutput_t478B71A736EFBCE24B532F0279A9E701C9CDD8B9* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:27>
 		ControlOutput_t478B71A736EFBCE24B532F0279A9E701C9CDD8B9* L_0 = ___0_value;
 		__this->___U3CstartedU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CstartedU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 142633
+// Method Definition Index: 145518
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ControlOutput_t478B71A736EFBCE24B532F0279A9E701C9CDD8B9* StateUnit_get_stopped_mFEA3C8AF23330F281410F2D6CA23EB401D5D4062 (StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:33>
 		ControlOutput_t478B71A736EFBCE24B532F0279A9E701C9CDD8B9* L_0 = __this->___U3CstoppedU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142634
+// Method Definition Index: 145519
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateUnit_set_stopped_m856EE3CA2DFCFFD424063C557CF49779B86ACE84 (StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA* __this, ControlOutput_t478B71A736EFBCE24B532F0279A9E701C9CDD8B9* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:33>
 		ControlOutput_t478B71A736EFBCE24B532F0279A9E701C9CDD8B9* L_0 = ___0_value;
 		__this->___U3CstoppedU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CstoppedU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 142635
+// Method Definition Index: 145520
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA* StateUnit_WithStart_m4C998201CAD6B1B1FE99E3C47A2690997BEAC06D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7084,17 +7085,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StateUnit_t067EF331C49C11952D5DB87CA018459EB3
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:37>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:37>
 		StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA* L_0 = (StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA*)il2cpp_codegen_object_new(StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA_il2cpp_TypeInfo_var);
 		StateUnit__ctor_m07FC407DA8D60F3F6B2EB5B61656D1E0FCA61D59(L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:38>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:38>
 		StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA* L_1 = L_0;
 		NullCheck(L_1);
 		GraphNest_2_t4C4357296F8E8A1B30A50EC7FC39D41E7E5361B1* L_2;
 		L_2 = NesterUnit_2_get_nest_m02D77498F164644D005A883230ACAAA96D95AB7C_inline(L_1, NesterUnit_2_get_nest_m02D77498F164644D005A883230ACAAA96D95AB7C_RuntimeMethod_var);
 		NullCheck(L_2);
 		GraphNest_2_set_source_m305C292DCD3443027E30C9655D88A8C155A34835(L_2, 0, GraphNest_2_set_source_m305C292DCD3443027E30C9655D88A8C155A34835_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:39>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:39>
 		StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA* L_3 = L_1;
 		NullCheck(L_3);
 		GraphNest_2_t4C4357296F8E8A1B30A50EC7FC39D41E7E5361B1* L_4;
@@ -7103,11 +7104,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StateUnit_t067EF331C49C11952D5DB87CA018459EB3
 		L_5 = StateGraph_WithStart_mDEEBFAB7EA0D46CF060D3174131AB107FEE75ECA(NULL);
 		NullCheck(L_4);
 		GraphNest_2_set_embed_mA4ADF2F2BC28E43B732B761C5FFDA498671B8DAD(L_4, L_5, GraphNest_2_set_embed_mA4ADF2F2BC28E43B732B761C5FFDA498671B8DAD_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:40>
 		return L_3;
 	}
 }
-// Method Definition Index: 142636
+// Method Definition Index: 145521
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateUnit_Definition_m5D832C7E2702E283ED3E7937AE5A167FD7C28D5C (StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7123,43 +7124,43 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StateUnit_Definition_m5D832C7E2702E283ED
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:45>
 		Func_2_tE299C631F0CB2E8E61444D749D446C27349C90B8* L_0 = (Func_2_tE299C631F0CB2E8E61444D749D446C27349C90B8*)il2cpp_codegen_object_new(Func_2_tE299C631F0CB2E8E61444D749D446C27349C90B8_il2cpp_TypeInfo_var);
 		Func_2__ctor_m36A365D852CA6BD70A68A3A26FF683FB3369DDF4(L_0, __this, (intptr_t)((void*)StateUnit_Start_m35E94FB061A08393913FB35F1AB0AD21A946AE5C_RuntimeMethod_var), NULL);
 		ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* L_1;
 		L_1 = Unit_ControlInput_mF730DABA4FE60423D39B8EADE5DA72F51E6166A5(__this, _stringLiteral2AD47C03F7A83F82E3B2ADFE8A60F1727FD3BEFD, L_0, NULL);
 		StateUnit_set_start_mF9C9E6511A0345A7548696D69939763B15BC2564_inline(__this, L_1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:46>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:46>
 		Func_2_tE299C631F0CB2E8E61444D749D446C27349C90B8* L_2 = (Func_2_tE299C631F0CB2E8E61444D749D446C27349C90B8*)il2cpp_codegen_object_new(Func_2_tE299C631F0CB2E8E61444D749D446C27349C90B8_il2cpp_TypeInfo_var);
 		Func_2__ctor_m36A365D852CA6BD70A68A3A26FF683FB3369DDF4(L_2, __this, (intptr_t)((void*)StateUnit_Stop_m2AB4622F72A54BCB35373D6EC88EC909667D1B60_RuntimeMethod_var), NULL);
 		ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* L_3;
 		L_3 = Unit_ControlInput_mF730DABA4FE60423D39B8EADE5DA72F51E6166A5(__this, _stringLiteral7FB065FC47DDCF8134948800A310281E12F058C7, L_2, NULL);
 		StateUnit_set_stop_mCD618ECF51403F46CFBBFE894517CD8230FF5AB3_inline(__this, L_3, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:48>
 		ControlOutput_t478B71A736EFBCE24B532F0279A9E701C9CDD8B9* L_4;
 		L_4 = Unit_ControlOutput_mCD76724DFB6AAE10C099E9984A39A5E0FC2824FE(__this, _stringLiteral008F6E1BE2B28B633406A8328A0C886C24DD0A51, NULL);
 		StateUnit_set_started_m52F94D5308D3A46FD700F5AD8636613CB8AA9F5C_inline(__this, L_4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:49>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:49>
 		ControlOutput_t478B71A736EFBCE24B532F0279A9E701C9CDD8B9* L_5;
 		L_5 = Unit_ControlOutput_mCD76724DFB6AAE10C099E9984A39A5E0FC2824FE(__this, _stringLiteralA158C0BEEF73459B4DC78E875F243C0D43BAE206, NULL);
 		StateUnit_set_stopped_m856EE3CA2DFCFFD424063C557CF49779B86ACE84_inline(__this, L_5, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:51>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:51>
 		ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* L_6;
 		L_6 = StateUnit_get_start_mE0A3C8DBF73E806B6DC7D56B37AB4463221CC481_inline(__this, NULL);
 		ControlOutput_t478B71A736EFBCE24B532F0279A9E701C9CDD8B9* L_7;
 		L_7 = StateUnit_get_started_m1DB68019564D9311930301308FE8EF3689FEF273_inline(__this, NULL);
 		Unit_Succession_m202BB700D861D65B85102AD7B3119AD1B2FF2158(__this, L_6, L_7, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:52>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:52>
 		ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* L_8;
 		L_8 = StateUnit_get_stop_m1E836E89105B4749740645D87966F3D5C732D25A_inline(__this, NULL);
 		ControlOutput_t478B71A736EFBCE24B532F0279A9E701C9CDD8B9* L_9;
 		L_9 = StateUnit_get_stopped_mFEA3C8AF23330F281410F2D6CA23EB401D5D4062_inline(__this, NULL);
 		Unit_Succession_m202BB700D861D65B85102AD7B3119AD1B2FF2158(__this, L_8, L_9, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:53>
 		return;
 	}
 }
-// Method Definition Index: 142637
+// Method Definition Index: 145522
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ControlOutput_t478B71A736EFBCE24B532F0279A9E701C9CDD8B9* StateUnit_Start_m35E94FB061A08393913FB35F1AB0AD21A946AE5C (StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA* __this, Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* ___0_flow, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7170,14 +7171,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ControlOutput_t478B71A736EFBCE24B532F0279A9E7
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:57>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:57>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_0 = ___0_flow;
 		NullCheck(L_0);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_1;
 		L_1 = Flow_get_stack_m14E56FE5242B8B811C540A2E23CD29C92095D196_inline(L_0, NULL);
 		NullCheck(L_1);
 		GraphStack_EnterParentElement_mFDB479B4C0146EE0CD7D3AB11585799981F455FD(L_1, __this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:58>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:58>
 		GraphNest_2_t4C4357296F8E8A1B30A50EC7FC39D41E7E5361B1* L_2;
 		L_2 = NesterUnit_2_get_nest_m02D77498F164644D005A883230ACAAA96D95AB7C_inline(__this, NesterUnit_2_get_nest_m02D77498F164644D005A883230ACAAA96D95AB7C_RuntimeMethod_var);
 		NullCheck(L_2);
@@ -7186,20 +7187,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ControlOutput_t478B71A736EFBCE24B532F0279A9E7
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_4 = ___0_flow;
 		NullCheck(L_3);
 		StateGraph_Start_m2291C8453FE3908A8062C9A0111CA28163AC8EA8(L_3, L_4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:59>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:59>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_5 = ___0_flow;
 		NullCheck(L_5);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_6;
 		L_6 = Flow_get_stack_m14E56FE5242B8B811C540A2E23CD29C92095D196_inline(L_5, NULL);
 		NullCheck(L_6);
 		GraphStack_ExitParentElement_mB4379BEC03B4DF2D6A7674C01B9970CB98290568(L_6, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:60>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:60>
 		ControlOutput_t478B71A736EFBCE24B532F0279A9E701C9CDD8B9* L_7;
 		L_7 = StateUnit_get_started_m1DB68019564D9311930301308FE8EF3689FEF273_inline(__this, NULL);
 		return L_7;
 	}
 }
-// Method Definition Index: 142638
+// Method Definition Index: 145523
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ControlOutput_t478B71A736EFBCE24B532F0279A9E701C9CDD8B9* StateUnit_Stop_m2AB4622F72A54BCB35373D6EC88EC909667D1B60 (StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA* __this, Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* ___0_flow, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7210,14 +7211,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ControlOutput_t478B71A736EFBCE24B532F0279A9E7
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:65>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:65>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_0 = ___0_flow;
 		NullCheck(L_0);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_1;
 		L_1 = Flow_get_stack_m14E56FE5242B8B811C540A2E23CD29C92095D196_inline(L_0, NULL);
 		NullCheck(L_1);
 		GraphStack_EnterParentElement_mFDB479B4C0146EE0CD7D3AB11585799981F455FD(L_1, __this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:66>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:66>
 		GraphNest_2_t4C4357296F8E8A1B30A50EC7FC39D41E7E5361B1* L_2;
 		L_2 = NesterUnit_2_get_nest_m02D77498F164644D005A883230ACAAA96D95AB7C_inline(__this, NesterUnit_2_get_nest_m02D77498F164644D005A883230ACAAA96D95AB7C_RuntimeMethod_var);
 		NullCheck(L_2);
@@ -7226,24 +7227,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ControlOutput_t478B71A736EFBCE24B532F0279A9E7
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_4 = ___0_flow;
 		NullCheck(L_3);
 		StateGraph_Stop_m75AFD0473DC2AD0806F1BAAA5E73008F9D1A6085(L_3, L_4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:67>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:67>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_5 = ___0_flow;
 		NullCheck(L_5);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_6;
 		L_6 = Flow_get_stack_m14E56FE5242B8B811C540A2E23CD29C92095D196_inline(L_5, NULL);
 		NullCheck(L_6);
 		GraphStack_ExitParentElement_mB4379BEC03B4DF2D6A7674C01B9970CB98290568(L_6, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:68>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:68>
 		ControlOutput_t478B71A736EFBCE24B532F0279A9E701C9CDD8B9* L_7;
 		L_7 = StateUnit_get_stopped_mFEA3C8AF23330F281410F2D6CA23EB401D5D4062_inline(__this, NULL);
 		return L_7;
 	}
 }
-// Method Definition Index: 142639
+// Method Definition Index: 145524
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* StateUnit_DefaultGraph_m7C645343C06DB8DDCF2F5912F53C4174978F57C5 (StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:73>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:73>
 		StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* L_0;
 		L_0 = StateGraph_WithStart_mDEEBFAB7EA0D46CF060D3174131AB107FEE75ECA(NULL);
 		return L_0;
@@ -7257,7 +7258,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StateGraph_t4F59C6C493939AE51DF0745340BEE3B67
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 142640
+// Method Definition Index: 145525
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SuperState__ctor_mD01DBEA9D5FCC15B9DB180301E542C74F62FD23D (SuperState_t45BA2E883ECA903226C0DD01F195277357FED611* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7267,13 +7268,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SuperState__ctor_mD01DBEA9D5FCC15B9DB180
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/SuperState.cs:6>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/SuperState.cs:6>
 		NesterState_2__ctor_mDDFC9CBEBAE1D501A7D398219FC839DB7772353D(__this, NesterState_2__ctor_mDDFC9CBEBAE1D501A7D398219FC839DB7772353D_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/SuperState.cs:6>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/SuperState.cs:6>
 		return;
 	}
 }
-// Method Definition Index: 142641
+// Method Definition Index: 145526
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SuperState__ctor_m58E5C46F63F24EFF49F53FAF0A575328BA0CF63C (SuperState_t45BA2E883ECA903226C0DD01F195277357FED611* __this, StateGraphAsset_t2F8A4D7DA940C5E5D170E531B36878B8F0A5FE3E* ___0_macro, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7283,14 +7284,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SuperState__ctor_m58E5C46F63F24EFF49F53F
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/SuperState.cs:8>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/SuperState.cs:8>
 		StateGraphAsset_t2F8A4D7DA940C5E5D170E531B36878B8F0A5FE3E* L_0 = ___0_macro;
 		NesterState_2__ctor_m3D873B540DC657C968BF977FD1390B5E9203C4AA(__this, L_0, NesterState_2__ctor_m3D873B540DC657C968BF977FD1390B5E9203C4AA_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/SuperState.cs:8>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/SuperState.cs:8>
 		return;
 	}
 }
-// Method Definition Index: 142642
+// Method Definition Index: 145527
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SuperState_t45BA2E883ECA903226C0DD01F195277357FED611* SuperState_WithStart_m8F67699474B30695C6EB511860330DD0AEF485BD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7303,17 +7304,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SuperState_t45BA2E883ECA903226C0DD01F19527735
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/SuperState.cs:12>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/SuperState.cs:12>
 		SuperState_t45BA2E883ECA903226C0DD01F195277357FED611* L_0 = (SuperState_t45BA2E883ECA903226C0DD01F195277357FED611*)il2cpp_codegen_object_new(SuperState_t45BA2E883ECA903226C0DD01F195277357FED611_il2cpp_TypeInfo_var);
 		SuperState__ctor_mD01DBEA9D5FCC15B9DB180301E542C74F62FD23D(L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/SuperState.cs:13>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/SuperState.cs:13>
 		SuperState_t45BA2E883ECA903226C0DD01F195277357FED611* L_1 = L_0;
 		NullCheck(L_1);
 		GraphNest_2_t4C4357296F8E8A1B30A50EC7FC39D41E7E5361B1* L_2;
 		L_2 = NesterState_2_get_nest_mA8380120AAFFEE430093DC51F8BA997C8AA0624D_inline(L_1, NesterState_2_get_nest_mA8380120AAFFEE430093DC51F8BA997C8AA0624D_RuntimeMethod_var);
 		NullCheck(L_2);
 		GraphNest_2_set_source_m305C292DCD3443027E30C9655D88A8C155A34835(L_2, 0, GraphNest_2_set_source_m305C292DCD3443027E30C9655D88A8C155A34835_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/SuperState.cs:14>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/SuperState.cs:14>
 		SuperState_t45BA2E883ECA903226C0DD01F195277357FED611* L_3 = L_1;
 		NullCheck(L_3);
 		GraphNest_2_t4C4357296F8E8A1B30A50EC7FC39D41E7E5361B1* L_4;
@@ -7322,11 +7323,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SuperState_t45BA2E883ECA903226C0DD01F19527735
 		L_5 = StateGraph_WithStart_mDEEBFAB7EA0D46CF060D3174131AB107FEE75ECA(NULL);
 		NullCheck(L_4);
 		GraphNest_2_set_embed_mA4ADF2F2BC28E43B732B761C5FFDA498671B8DAD(L_4, L_5, GraphNest_2_set_embed_mA4ADF2F2BC28E43B732B761C5FFDA498671B8DAD_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/SuperState.cs:15>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/SuperState.cs:15>
 		return L_3;
 	}
 }
-// Method Definition Index: 142643
+// Method Definition Index: 145528
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SuperState_OnEnterImplementation_m20ECC43CAB3613446AAED161FF45E67C57A30DE3 (SuperState_t45BA2E883ECA903226C0DD01F195277357FED611* __this, Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* ___0_flow, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7337,7 +7338,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SuperState_OnEnterImplementation_m20ECC4
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/SuperState.cs:22>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/SuperState.cs:22>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_0 = ___0_flow;
 		NullCheck(L_0);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_1;
@@ -7351,7 +7352,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SuperState_OnEnterImplementation_m20ECC4
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/SuperState.cs:24>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/SuperState.cs:24>
 		GraphNest_2_t4C4357296F8E8A1B30A50EC7FC39D41E7E5361B1* L_3;
 		L_3 = NesterState_2_get_nest_mA8380120AAFFEE430093DC51F8BA997C8AA0624D_inline(__this, NesterState_2_get_nest_mA8380120AAFFEE430093DC51F8BA997C8AA0624D_RuntimeMethod_var);
 		NullCheck(L_3);
@@ -7360,7 +7361,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SuperState_OnEnterImplementation_m20ECC4
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_5 = ___0_flow;
 		NullCheck(L_4);
 		StateGraph_Start_m2291C8453FE3908A8062C9A0111CA28163AC8EA8(L_4, L_5, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/SuperState.cs:25>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/SuperState.cs:25>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_6 = ___0_flow;
 		NullCheck(L_6);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_7;
@@ -7371,11 +7372,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SuperState_OnEnterImplementation_m20ECC4
 
 IL_002a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/SuperState.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/SuperState.cs:27>
 		return;
 	}
 }
-// Method Definition Index: 142644
+// Method Definition Index: 145529
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SuperState_OnExitImplementation_m88256269ABE515C3E18A785386A1203C1E66C69E (SuperState_t45BA2E883ECA903226C0DD01F195277357FED611* __this, Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* ___0_flow, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7386,7 +7387,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SuperState_OnExitImplementation_m8825626
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/SuperState.cs:31>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/SuperState.cs:31>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_0 = ___0_flow;
 		NullCheck(L_0);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_1;
@@ -7400,7 +7401,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SuperState_OnExitImplementation_m8825626
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/SuperState.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/SuperState.cs:33>
 		GraphNest_2_t4C4357296F8E8A1B30A50EC7FC39D41E7E5361B1* L_3;
 		L_3 = NesterState_2_get_nest_mA8380120AAFFEE430093DC51F8BA997C8AA0624D_inline(__this, NesterState_2_get_nest_mA8380120AAFFEE430093DC51F8BA997C8AA0624D_RuntimeMethod_var);
 		NullCheck(L_3);
@@ -7409,7 +7410,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SuperState_OnExitImplementation_m8825626
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_5 = ___0_flow;
 		NullCheck(L_4);
 		StateGraph_Stop_m75AFD0473DC2AD0806F1BAAA5E73008F9D1A6085(L_4, L_5, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/SuperState.cs:34>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/SuperState.cs:34>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_6 = ___0_flow;
 		NullCheck(L_6);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_7;
@@ -7420,11 +7421,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SuperState_OnExitImplementation_m8825626
 
 IL_002a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/SuperState.cs:36>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/SuperState.cs:36>
 		return;
 	}
 }
-// Method Definition Index: 142645
+// Method Definition Index: 145530
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SuperState_StartListening_mA41EFA12F803142E2DE38890D8E2B1B748BB0AF6 (SuperState_t45BA2E883ECA903226C0DD01F195277357FED611* __this, GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* ___0_stack, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7435,7 +7436,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SuperState_StartListening_mA41EFA12F8031
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/SuperState.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/SuperState.cs:40>
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_0 = ___0_stack;
 		NullCheck(L_0);
 		bool L_1;
@@ -7446,7 +7447,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SuperState_StartListening_mA41EFA12F8031
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/SuperState.cs:42>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/SuperState.cs:42>
 		GraphNest_2_t4C4357296F8E8A1B30A50EC7FC39D41E7E5361B1* L_2;
 		L_2 = NesterState_2_get_nest_mA8380120AAFFEE430093DC51F8BA997C8AA0624D_inline(__this, NesterState_2_get_nest_mA8380120AAFFEE430093DC51F8BA997C8AA0624D_RuntimeMethod_var);
 		NullCheck(L_2);
@@ -7455,7 +7456,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SuperState_StartListening_mA41EFA12F8031
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_4 = ___0_stack;
 		NullCheck(L_3);
 		StateGraph_StartListening_mF6D55D5A2667273F3C5CAB90C6E1D1C9799D4E67(L_3, L_4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/SuperState.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/SuperState.cs:43>
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_5 = ___0_stack;
 		NullCheck(L_5);
 		GraphStack_ExitParentElement_mB4379BEC03B4DF2D6A7674C01B9970CB98290568(L_5, NULL);
@@ -7463,11 +7464,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SuperState_StartListening_mA41EFA12F8031
 
 IL_0020:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/SuperState.cs:45>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/SuperState.cs:45>
 		return;
 	}
 }
-// Method Definition Index: 142646
+// Method Definition Index: 145531
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SuperState_StopListening_m210E17EDC73C3354C7B3E76290B478E5B19FE7F7 (SuperState_t45BA2E883ECA903226C0DD01F195277357FED611* __this, GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* ___0_stack, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7478,7 +7479,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SuperState_StopListening_m210E17EDC73C33
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/SuperState.cs:49>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/SuperState.cs:49>
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_0 = ___0_stack;
 		NullCheck(L_0);
 		bool L_1;
@@ -7489,7 +7490,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SuperState_StopListening_m210E17EDC73C33
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/SuperState.cs:51>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/SuperState.cs:51>
 		GraphNest_2_t4C4357296F8E8A1B30A50EC7FC39D41E7E5361B1* L_2;
 		L_2 = NesterState_2_get_nest_mA8380120AAFFEE430093DC51F8BA997C8AA0624D_inline(__this, NesterState_2_get_nest_mA8380120AAFFEE430093DC51F8BA997C8AA0624D_RuntimeMethod_var);
 		NullCheck(L_2);
@@ -7498,7 +7499,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SuperState_StopListening_m210E17EDC73C33
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_4 = ___0_stack;
 		NullCheck(L_3);
 		StateGraph_StopListening_m2523D73AD67E6FB09BE5363DDB3069BC3D114B33(L_3, L_4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/SuperState.cs:52>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/SuperState.cs:52>
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_5 = ___0_stack;
 		NullCheck(L_5);
 		GraphStack_ExitParentElement_mB4379BEC03B4DF2D6A7674C01B9970CB98290568(L_5, NULL);
@@ -7506,11 +7507,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SuperState_StopListening_m210E17EDC73C33
 
 IL_0020:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/SuperState.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/SuperState.cs:54>
 		return;
 	}
 }
-// Method Definition Index: 142647
+// Method Definition Index: 145532
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SuperState_IsListening_mFAA078E5399E377F77777567DD308BA68C96F730 (SuperState_t45BA2E883ECA903226C0DD01F195277357FED611* __this, GraphPointer_t01C98F06D1A7635CB867665044B7DC1FE03D1C0B* ___0_pointer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7520,7 +7521,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SuperState_IsListening_mFAA078E5399E377F
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/SuperState.cs:58>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/SuperState.cs:58>
 		GraphPointer_t01C98F06D1A7635CB867665044B7DC1FE03D1C0B* L_0 = ___0_pointer;
 		NullCheck(L_0);
 		Data_tF02C03D4C146CDB89C3D3C5E50935196C5ABC09E* L_1;
@@ -7530,11 +7531,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SuperState_IsListening_mFAA078E5399E377F
 		return L_2;
 	}
 }
-// Method Definition Index: 142648
+// Method Definition Index: 145533
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* SuperState_DefaultGraph_m90A832AEFE4884FB555FE934E4445A64CB13BEDC (SuperState_t45BA2E883ECA903226C0DD01F195277357FED611* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/SuperState.cs:66>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/SuperState.cs:66>
 		StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* L_0;
 		L_0 = StateGraph_WithStart_mDEEBFAB7EA0D46CF060D3174131AB107FEE75ECA(NULL);
 		return L_0;
@@ -7548,27 +7549,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StateGraph_t4F59C6C493939AE51DF0745340BEE3B67
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 142649
+// Method Definition Index: 145534
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* TriggerStateTransition_get_trigger_mEFDFC3CE9D27FD7EB679FF61B361DBEE24FCEF2B (TriggerStateTransition_tDA99AA08E4F980CE943722357F429BF5DE347320* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/TriggerStateTransition.cs:17>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/TriggerStateTransition.cs:17>
 		ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* L_0 = __this->___U3CtriggerU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142650
+// Method Definition Index: 145535
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TriggerStateTransition_set_trigger_m7A47AC59ACA081DFBCA7185EE3EF11A505F51867 (TriggerStateTransition_tDA99AA08E4F980CE943722357F429BF5DE347320* __this, ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/TriggerStateTransition.cs:17>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/TriggerStateTransition.cs:17>
 		ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* L_0 = ___0_value;
 		__this->___U3CtriggerU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CtriggerU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 142651
+// Method Definition Index: 145536
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TriggerStateTransition_Definition_mBEDF7E1D3FD7C5056A71DA77720F6DE038D2F1AC (TriggerStateTransition_tDA99AA08E4F980CE943722357F429BF5DE347320* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7580,17 +7581,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TriggerStateTransition_Definition_mBEDF7
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/TriggerStateTransition.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/TriggerStateTransition.cs:21>
 		Func_2_tE299C631F0CB2E8E61444D749D446C27349C90B8* L_0 = (Func_2_tE299C631F0CB2E8E61444D749D446C27349C90B8*)il2cpp_codegen_object_new(Func_2_tE299C631F0CB2E8E61444D749D446C27349C90B8_il2cpp_TypeInfo_var);
 		Func_2__ctor_m36A365D852CA6BD70A68A3A26FF683FB3369DDF4(L_0, __this, (intptr_t)((void*)TriggerStateTransition_Trigger_m5A81D29CA96682406159246438503F7A27F4258D_RuntimeMethod_var), NULL);
 		ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* L_1;
 		L_1 = Unit_ControlInput_mF730DABA4FE60423D39B8EADE5DA72F51E6166A5(__this, _stringLiteral9FE5967523CA0E49A247084021DB0C0C2C996FDF, L_0, NULL);
 		TriggerStateTransition_set_trigger_m7A47AC59ACA081DFBCA7185EE3EF11A505F51867_inline(__this, L_1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/TriggerStateTransition.cs:22>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/TriggerStateTransition.cs:22>
 		return;
 	}
 }
-// Method Definition Index: 142652
+// Method Definition Index: 145537
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ControlOutput_t478B71A736EFBCE24B532F0279A9E701C9CDD8B9* TriggerStateTransition_Trigger_m5A81D29CA96682406159246438503F7A27F4258D (TriggerStateTransition_tDA99AA08E4F980CE943722357F429BF5DE347320* __this, Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* ___0_flow, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7601,7 +7602,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ControlOutput_t478B71A736EFBCE24B532F0279A9E7
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/TriggerStateTransition.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/TriggerStateTransition.cs:26>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_0 = ___0_flow;
 		NullCheck(L_0);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_1;
@@ -7609,22 +7610,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ControlOutput_t478B71A736EFBCE24B532F0279A9E7
 		NullCheck(L_1);
 		RuntimeObject* L_2;
 		L_2 = GraphPointer_GetParent_TisINesterStateTransition_t7219AEC5736FA49CF67905DD983499DF41CA9AC0_mA4125D361C82F799297256DDEBFDA623C634721C(L_1, GraphPointer_GetParent_TisINesterStateTransition_t7219AEC5736FA49CF67905DD983499DF41CA9AC0_mA4125D361C82F799297256DDEBFDA623C634721C_RuntimeMethod_var);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/TriggerStateTransition.cs:28>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/TriggerStateTransition.cs:28>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_3 = ___0_flow;
 		NullCheck(L_3);
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_4;
 		L_4 = Flow_get_stack_m14E56FE5242B8B811C540A2E23CD29C92095D196_inline(L_3, NULL);
 		NullCheck(L_4);
 		GraphStack_ExitParentElement_mB4379BEC03B4DF2D6A7674C01B9970CB98290568(L_4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/TriggerStateTransition.cs:30>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/TriggerStateTransition.cs:30>
 		Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* L_5 = ___0_flow;
 		NullCheck(L_2);
 		InterfaceActionInvoker1< Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* >::Invoke(0, IStateTransition_tA4844A2B0B9217C1E4BCCB02C1A38594E72921E8_il2cpp_TypeInfo_var, L_2, L_5);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/TriggerStateTransition.cs:32>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/TriggerStateTransition.cs:32>
 		return (ControlOutput_t478B71A736EFBCE24B532F0279A9E701C9CDD8B9*)NULL;
 	}
 }
-// Method Definition Index: 142653
+// Method Definition Index: 145538
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TriggerStateTransition__ctor_m38F78B5AE034D3550157D716F116EA790599ACF6 (TriggerStateTransition_tDA99AA08E4F980CE943722357F429BF5DE347320* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7640,7 +7641,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TriggerStateTransition__ctor_m38F78B5AE0
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 142654
+// Method Definition Index: 145539
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GetStateGraph__ctor_m4FEE803EDD4B2756702694249027D56BF25F0DE0 (GetStateGraph_t332E1B8798AFF1B287D09F82F53565F98F0D3123* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7662,7 +7663,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GetStateGraph__ctor_m4FEE803EDD4B2756702
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 142655
+// Method Definition Index: 145540
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GetStateGraphs__ctor_m6D988CFB1A843F95873013664070E0E56814F7E1 (GetStateGraphs_t23244C7CCB8AF3F714E2B10B363D9BF360943716* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7684,36 +7685,36 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GetStateGraphs__ctor_m6D988CFB1A843F9587
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 142656
+// Method Definition Index: 145541
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SetStateGraph_get_containerType_m4E0F60160A5BD1C92B93E0FE44F6F8B45A6F91BC (SetStateGraph_tE2B1C976BA4D9ADDD6117CEF0364E8AC37981662* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/Units/SetStateGraph.cs:15>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/Units/SetStateGraph.cs:15>
 		int32_t L_0 = __this->___U3CcontainerTypeU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142657
+// Method Definition Index: 145542
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SetStateGraph_set_containerType_m699D20A04908EDFC345563604155D979DDEFF5B0 (SetStateGraph_tE2B1C976BA4D9ADDD6117CEF0364E8AC37981662* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/Units/SetStateGraph.cs:15>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/Units/SetStateGraph.cs:15>
 		int32_t L_0 = ___0_value;
 		__this->___U3CcontainerTypeU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 142658
+// Method Definition Index: 145543
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SetStateGraph_get_isGameObject_m93DF173F7EF8BB431158EAE8D8AC687824C65197 (SetStateGraph_tE2B1C976BA4D9ADDD6117CEF0364E8AC37981662* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/Units/SetStateGraph.cs:17>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/Units/SetStateGraph.cs:17>
 		int32_t L_0;
 		L_0 = SetStateGraph_get_containerType_m4E0F60160A5BD1C92B93E0FE44F6F8B45A6F91BC_inline(__this, NULL);
 		return (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
 	}
 }
-// Method Definition Index: 142659
+// Method Definition Index: 145544
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SetStateGraph__ctor_mB2A5837B7E729909E87AB08C705E85CE0CCC891A (SetStateGraph_tE2B1C976BA4D9ADDD6117CEF0364E8AC37981662* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7762,35 +7763,35 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SetStateGraph__ctor_mB2A5837B7E729909E87
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 142536
+// Method Definition Index: 145421
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void State_set_isStart_m07936C946A25E5FE5D6CB70C900AB1AABEDE69E0_inline (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:37>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:37>
 		bool L_0 = ___0_value;
 		__this->___U3CisStartU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 115586
+// Method Definition Index: 115727
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* Flow_get_stack_m14E56FE5242B8B811C540A2E23CD29C92095D196_inline (Flow_tC370BDFF173D53E274F883ED6ADAFE29B049C582* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Flow.cs:48>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Flow.cs:48>
 		GraphStack_tD9049F5FB5F8D9E9CD80764D18067D0F87343E7C* L_0 = __this->___U3CstackU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 115686
+// Method Definition Index: 115827
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GraphElementCollection_1_t0165568BAE7EF8D2CD1E954F9F5CB8527EDEC824* FlowGraph_get_units_m66372CF9B4C1EBB6580F088192E35003B9259297_inline (FlowGraph_tF9E42FECF535CD5BAB10F75672B5BCE285627A45* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/FlowGraph.cs:88>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/FlowGraph.cs:88>
 		GraphElementCollection_1_t0165568BAE7EF8D2CD1E954F9F5CB8527EDEC824* L_0 = __this->___U3CunitsU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 78491
+// Method Definition Index: 78628
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* __this, float ___0_x, float ___1_y, const RuntimeMethod* method) 
 {
 	{
@@ -7801,363 +7802,363 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2__ctor_m9525B79969AFF
 		return;
 	}
 }
-// Method Definition Index: 118339
+// Method Definition Index: 118487
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Unit_set_position_m773CEF759ACC9172E095706EA740E335780E1DDB_inline (Unit_tEFDDF0DAD2C72D6F68E357D3530E23599F7D8191* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Unit.cs:398>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Unit.cs:398>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ___0_value;
 		__this->___U3CpositionU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 142608
+// Method Definition Index: 145493
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* StateTransition_get_source_mD9E4E8A926307F7B242885A07EA578EB6FBB1711_inline (StateTransition_t87FA9EAAB936C1A75F1318DDB8D46DCA981BE4BE* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:40>
 		RuntimeObject* L_0 = __this->___U3CsourceU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142472
+// Method Definition Index: 145357
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t HasStateGraph_get_containerType_mE1BFD05FC78A17B33DDC0A60AD306DF69466982A_inline (HasStateGraph_tE746DD57D03BC66D7BEDFE5740C1DA9B79C1F37A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/Framework/Graph/HasStateGraph.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/Framework/Graph/HasStateGraph.cs:18>
 		int32_t L_0 = __this->___U3CcontainerTypeU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142535
+// Method Definition Index: 145420
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool State_get_isStart_m1A71470B1BCF2BBC60EFB82821351D1C32DB468E_inline (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:37>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:37>
 		bool L_0 = __this->___U3CisStartU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142558
+// Method Definition Index: 145443
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float State_get_width_m3C7CE021C0ED120A230D46BAAC0B567F4928BAB1_inline (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:216>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:216>
 		float L_0 = __this->___U3CwidthU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142559
+// Method Definition Index: 145444
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void State_set_width_m7FFA90CCD391B250B3345CCC0D279882AF1C50FB_inline (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:216>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:216>
 		float L_0 = ___0_value;
 		__this->___U3CwidthU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 142578
+// Method Definition Index: 145463
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GraphConnectionCollection_3_t68F202D7B57DD71344E76A265721DA6593B94BA9* StateGraph_get_transitions_mD532ABAD41415C37BE78E17ABCB54394D8CBA43F_inline (StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:68>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:68>
 		GraphConnectionCollection_3_t68F202D7B57DD71344E76A265721DA6593B94BA9* L_0 = __this->___U3CtransitionsU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142565
+// Method Definition Index: 145450
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DebugData_set_lastEnterFrame_m1B4E9148981FB5B06AA5A0544A4EDCCE8E25793E_inline (DebugData_t7C537AA1FDC4B7DA2641C0A675888003851A0D92* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:19>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:19>
 		int32_t L_0 = ___0_value;
 		__this->___U3ClastEnterFrameU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 142567
+// Method Definition Index: 145452
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DebugData_set_lastExitTime_mA44CE5AF88525D4FD937C175F71821634B4F9287_inline (DebugData_t7C537AA1FDC4B7DA2641C0A675888003851A0D92* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:21>
 		float L_0 = ___0_value;
 		__this->___U3ClastExitTimeU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 142577
+// Method Definition Index: 145462
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StateGraph_set_states_mAC5F24102DAB519858ED06F43F326235CC23F58C_inline (StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* __this, GraphElementCollection_1_tE2784E270F0B3DA5DB5E14808C3F549BC4F61276* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:65>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:65>
 		GraphElementCollection_1_tE2784E270F0B3DA5DB5E14808C3F549BC4F61276* L_0 = ___0_value;
 		__this->___U3CstatesU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CstatesU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 142579
+// Method Definition Index: 145464
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StateGraph_set_transitions_mE0EC6D0AE1E70999080C731A7D56D948D66E3429_inline (StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* __this, GraphConnectionCollection_3_t68F202D7B57DD71344E76A265721DA6593B94BA9* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:68>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:68>
 		GraphConnectionCollection_3_t68F202D7B57DD71344E76A265721DA6593B94BA9* L_0 = ___0_value;
 		__this->___U3CtransitionsU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CtransitionsU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 142581
+// Method Definition Index: 145466
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StateGraph_set_groups_m0B8859AA5C26C3D74455106860B1380DFCF037B4_inline (StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* __this, GraphElementCollection_1_t747DBE349EF6196F21B8B0817448722E5570D25A* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:71>
 		GraphElementCollection_1_t747DBE349EF6196F21B8B0817448722E5570D25A* L_0 = ___0_value;
 		__this->___U3CgroupsU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CgroupsU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 142583
+// Method Definition Index: 145468
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StateGraph_set_sticky_mDBECF74D0B264482F7B000BB3C69991656C81802_inline (StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* __this, GraphElementCollection_1_t0859C1F4FC4ACB504F67C57B43AA9DA2F9A3130D* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:74>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:74>
 		GraphElementCollection_1_t0859C1F4FC4ACB504F67C57B43AA9DA2F9A3130D* L_0 = ___0_value;
 		__this->___U3CstickyU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CstickyU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 102501
+// Method Definition Index: 102640
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR MergedGraphElementCollection_t617900BF35465F630BAAC77AA6EAAD375D42BA4C* Graph_get_elements_m337720F5A70D0ED47164B591256483AB7D7FE981_inline (Graph_tD3F160E11AE372F4006562E44A04A934679A72CA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Core/Graphs/Graph.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Core/Graphs/Graph.cs:53>
 		MergedGraphElementCollection_t617900BF35465F630BAAC77AA6EAAD375D42BA4C* L_0 = __this->___U3CelementsU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142576
+// Method Definition Index: 145461
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GraphElementCollection_1_tE2784E270F0B3DA5DB5E14808C3F549BC4F61276* StateGraph_get_states_mE379D30E80FC3BF100C356550A768FB0FED62A09_inline (StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:65>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:65>
 		GraphElementCollection_1_tE2784E270F0B3DA5DB5E14808C3F549BC4F61276* L_0 = __this->___U3CstatesU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142580
+// Method Definition Index: 145465
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GraphElementCollection_1_t747DBE349EF6196F21B8B0817448722E5570D25A* StateGraph_get_groups_m1ED46DDDE1134596EAC1F7A0853F053B0462BBED_inline (StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:71>
 		GraphElementCollection_1_t747DBE349EF6196F21B8B0817448722E5570D25A* L_0 = __this->___U3CgroupsU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142582
+// Method Definition Index: 145467
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GraphElementCollection_1_t0859C1F4FC4ACB504F67C57B43AA9DA2F9A3130D* StateGraph_get_sticky_mD89D4B181089BCF34458C1A781EE756EE73DFC32_inline (StateGraph_t4F59C6C493939AE51DF0745340BEE3B67A6886FC* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraph.cs:74>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraph.cs:74>
 		GraphElementCollection_1_t0859C1F4FC4ACB504F67C57B43AA9DA2F9A3130D* L_0 = __this->___U3CstickyU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142595
+// Method Definition Index: 145480
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StateGraphData_set_isListening_m12A71632FC656D380276DA832081FD5F1CB1E480_inline (StateGraphData_t8B9B0FFB8FBD845F21CB09AC426ADBA347D28580* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraphData.cs:5>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraphData.cs:5>
 		bool L_0 = ___0_value;
 		__this->___U3CisListeningU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 142594
+// Method Definition Index: 145479
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool StateGraphData_get_isListening_m9685979715A4F00FEFF6E5C4DCAF678A9B40D628_inline (StateGraphData_t8B9B0FFB8FBD845F21CB09AC426ADBA347D28580* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateGraphData.cs:5>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateGraphData.cs:5>
 		bool L_0 = __this->___U3CisListeningU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 102503
+// Method Definition Index: 102642
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Graph_set_title_m5301B78920B637607F14634338FE751F419731C3_inline (Graph_tD3F160E11AE372F4006562E44A04A934679A72CA* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Core/Graphs/Graph.cs:61>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Core/Graphs/Graph.cs:61>
 		String_t* L_0 = ___0_value;
 		__this->___U3CtitleU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CtitleU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 142557
+// Method Definition Index: 145442
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void State_set_position_mDE134C8CFF547D789E10EBE0F4EEA5F6BD931DFE_inline (State_t1C69060B0C415895B4CA89F9A6399E16AAF654E3* __this, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/State.cs:213>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/State.cs:213>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ___0_value;
 		__this->___U3CpositionU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 142609
+// Method Definition Index: 145494
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StateTransition_set_source_m6D5B3D924BF32BD665D388BAFD4699100C97C3E9_inline (StateTransition_t87FA9EAAB936C1A75F1318DDB8D46DCA981BE4BE* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:40>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___U3CsourceU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CsourceU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 142611
+// Method Definition Index: 145496
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StateTransition_set_destination_m25DB92BBA492FCCDF42C40BF99101070CA1D14ED_inline (StateTransition_t87FA9EAAB936C1A75F1318DDB8D46DCA981BE4BE* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:43>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___U3CdestinationU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CdestinationU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 142621
+// Method Definition Index: 145506
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DebugData_set_lastBranchFrame_m412D52C8DAEE9E912A3E0C1A532408F1FF57F437_inline (DebugData_t23639BF7D05E981CBD90B2063AB4F85B204C6C13* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:11>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:11>
 		int32_t L_0 = ___0_value;
 		__this->___U3ClastBranchFrameU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 142623
+// Method Definition Index: 145508
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DebugData_set_lastBranchTime_m0B6965AC9E09C5008F57F9CCF373E656205E5595_inline (DebugData_t23639BF7D05E981CBD90B2063AB4F85B204C6C13* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:13>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:13>
 		float L_0 = ___0_value;
 		__this->___U3ClastBranchTimeU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 142610
+// Method Definition Index: 145495
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* StateTransition_get_destination_m5000AA9FDC7863A1F263C267A01814C3705A68B8_inline (StateTransition_t87FA9EAAB936C1A75F1318DDB8D46DCA981BE4BE* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateTransition.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateTransition.cs:43>
 		RuntimeObject* L_0 = __this->___U3CdestinationU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142628
+// Method Definition Index: 145513
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StateUnit_set_start_mF9C9E6511A0345A7548696D69939763B15BC2564_inline (StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA* __this, ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:15>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:15>
 		ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* L_0 = ___0_value;
 		__this->___U3CstartU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CstartU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 142630
+// Method Definition Index: 145515
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StateUnit_set_stop_mCD618ECF51403F46CFBBFE894517CD8230FF5AB3_inline (StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA* __this, ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:21>
 		ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* L_0 = ___0_value;
 		__this->___U3CstopU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CstopU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 142632
+// Method Definition Index: 145517
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StateUnit_set_started_m52F94D5308D3A46FD700F5AD8636613CB8AA9F5C_inline (StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA* __this, ControlOutput_t478B71A736EFBCE24B532F0279A9E701C9CDD8B9* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:27>
 		ControlOutput_t478B71A736EFBCE24B532F0279A9E701C9CDD8B9* L_0 = ___0_value;
 		__this->___U3CstartedU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CstartedU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 142634
+// Method Definition Index: 145519
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void StateUnit_set_stopped_m856EE3CA2DFCFFD424063C557CF49779B86ACE84_inline (StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA* __this, ControlOutput_t478B71A736EFBCE24B532F0279A9E701C9CDD8B9* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:33>
 		ControlOutput_t478B71A736EFBCE24B532F0279A9E701C9CDD8B9* L_0 = ___0_value;
 		__this->___U3CstoppedU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CstoppedU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 142627
+// Method Definition Index: 145512
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* StateUnit_get_start_mE0A3C8DBF73E806B6DC7D56B37AB4463221CC481_inline (StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:15>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:15>
 		ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* L_0 = __this->___U3CstartU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142631
+// Method Definition Index: 145516
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ControlOutput_t478B71A736EFBCE24B532F0279A9E701C9CDD8B9* StateUnit_get_started_m1DB68019564D9311930301308FE8EF3689FEF273_inline (StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:27>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:27>
 		ControlOutput_t478B71A736EFBCE24B532F0279A9E701C9CDD8B9* L_0 = __this->___U3CstartedU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142629
+// Method Definition Index: 145514
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* StateUnit_get_stop_m1E836E89105B4749740645D87966F3D5C732D25A_inline (StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:21>
 		ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* L_0 = __this->___U3CstopU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142633
+// Method Definition Index: 145518
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ControlOutput_t478B71A736EFBCE24B532F0279A9E701C9CDD8B9* StateUnit_get_stopped_mFEA3C8AF23330F281410F2D6CA23EB401D5D4062_inline (StateUnit_t067EF331C49C11952D5DB87CA018459EB3406DEA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/StateUnit.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/StateUnit.cs:33>
 		ControlOutput_t478B71A736EFBCE24B532F0279A9E701C9CDD8B9* L_0 = __this->___U3CstoppedU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142650
+// Method Definition Index: 145535
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TriggerStateTransition_set_trigger_m7A47AC59ACA081DFBCA7185EE3EF11A505F51867_inline (TriggerStateTransition_tDA99AA08E4F980CE943722357F429BF5DE347320* __this, ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/TriggerStateTransition.cs:17>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/TriggerStateTransition.cs:17>
 		ControlInput_t1AD434958538C865F55A62C66B9C24DA82AD31FE* L_0 = ___0_value;
 		__this->___U3CtriggerU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CtriggerU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 142656
+// Method Definition Index: 145541
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t SetStateGraph_get_containerType_m4E0F60160A5BD1C92B93E0FE44F6F8B45A6F91BC_inline (SetStateGraph_tE2B1C976BA4D9ADDD6117CEF0364E8AC37981662* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/Units/SetStateGraph.cs:15>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/Units/SetStateGraph.cs:15>
 		int32_t L_0 = __this->___U3CcontainerTypeU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 33247
+// Method Definition Index: 33258
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8165,34 +8166,34 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Cur
 		return L_0;
 	}
 }
-// Method Definition Index: 142500
+// Method Definition Index: 145385
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GraphNest_2_t809972B852D228243FC0FF238384E13D4D3924F5* NesterState_2_get_nest_mB091C6EB1B0C001B2BFDDD14DFB4C301D3E31839_gshared_inline (NesterState_2_tF2CC520393685B887C696B46B6FC2791CE9F4240* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/NesterState.cs:23>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/NesterState.cs:23>
 		GraphNest_2_t809972B852D228243FC0FF238384E13D4D3924F5* L_0 = __this->___U3CnestU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 142516
+// Method Definition Index: 145401
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GraphNest_2_t809972B852D228243FC0FF238384E13D4D3924F5* NesterStateTransition_2_get_nest_m03E56507619FC56F82921CC22D610E891A31207C_gshared_inline (NesterStateTransition_2_t13CBA26023E771CD2B3FB65A5A16224A347A126F* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.State/NesterStateTransition.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.State/NesterStateTransition.cs:21>
 		GraphNest_2_t809972B852D228243FC0FF238384E13D4D3924F5* L_0 = __this->___U3CnestU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 102556
+// Method Definition Index: 102697
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* GraphElement_1_get_graph_mF018362F083AD86A9E71A2501520AA5666D4F4E4_gshared_inline (GraphElement_1_tE61715904D5A9E5C8385EAF991CC1F874C244DC4* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Core/Graphs/GraphElement.cs:136>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Core/Graphs/GraphElement.cs:136>
 		RuntimeObject* L_0 = __this->___U3CgraphU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 112245
+// Method Definition Index: 112386
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_Empty_TisRuntimeObject_mA90CDE158774C34A28C07CEEA9E9EA2A61618238_gshared_inline (const RuntimeMethod* method) 
 {
 	il2cpp_rgctx_method_init(method);
@@ -8202,7 +8203,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_Empty_T
 		return (RuntimeObject*)L_0;
 	}
 }
-// Method Definition Index: 115412
+// Method Definition Index: 115553
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m139A176CD271A0532D75BE08DA7831C8C45CE28F_gshared_inline (Enumerator_t72556E98D7DDBE118A973D782D523D15A96461C8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8210,29 +8211,29 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Cur
 		return L_0;
 	}
 }
-// Method Definition Index: 102050
+// Method Definition Index: 102189
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* NoAllocEnumerator_1_get_Current_m7E03E7F8FEC0DCFD4D7075328F00E5A2BE6C1C04_gshared_inline (NoAllocEnumerator_1_t815E50CBB8BFB9B54F9277B0B4DAADA111A979C4* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Core/Collections/NoAllocEnumerator.cs:38>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Core/Collections/NoAllocEnumerator.cs:38>
 		RuntimeObject* L_0 = __this->___current;
 		return L_0;
 	}
 }
-// Method Definition Index: 102604
+// Method Definition Index: 102745
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* GraphNest_2_get_embed_m0611F45470EB98F8766153A816BA165928528151_gshared_inline (GraphNest_2_t809972B852D228243FC0FF238384E13D4D3924F5* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Core/Graphs/GraphNest.cs:63>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Core/Graphs/GraphNest.cs:63>
 		RuntimeObject* L_0 = __this->____embed;
 		return L_0;
 	}
 }
-// Method Definition Index: 117989
+// Method Definition Index: 118130
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR GraphNest_2_t809972B852D228243FC0FF238384E13D4D3924F5* NesterUnit_2_get_nest_m972018171827EA13C53BDC32374C0750BEC6BDDE_gshared_inline (NesterUnit_2_t2944808A1A4AA7550C3C8EE5B847A0E91689E602* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/NesterUnit.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/NesterUnit.cs:26>
 		GraphNest_2_t809972B852D228243FC0FF238384E13D4D3924F5* L_0 = __this->___U3CnestU3Ek__BackingField;
 		return L_0;
 	}

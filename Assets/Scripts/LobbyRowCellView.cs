@@ -111,11 +111,6 @@ public class LobbyRowCellView : EnhancedScrollerCellView, IPointerDownHandler, I
         bool canAfford = horizontalLobbyManager.CanPlayerAffordEntryFee(lobbyIndex);
 
         playButton.interactable = canAfford;
-        
-        if (!canAfford)
-        {
-            Debug.Log($"[LobbyRowCellView] Play button disabled for Lobby {lobbyIndex + 1} - player cannot afford entry fee");
-        }
     }
     
     /// <summary>

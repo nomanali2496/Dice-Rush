@@ -11,6 +11,7 @@ extern "C" {
 
 void *LPMInterstitialAdCreateWithConfig(const char *adUnitId, void *configRef);
 void LPMInterstitialAdSetDelegate(void *interstitialAdRef, void *delegateRef);
+void LPMInterstitialAdSetImpressionDataDelegate(void *interstitialAdRef, void *delegateRef);
 
 void LPMInterstitialAdLoadAd(void *interstitialAdRef);
 void LPMInterstitialAdShowAd(void *interstitialAdRef, const char *placementName);

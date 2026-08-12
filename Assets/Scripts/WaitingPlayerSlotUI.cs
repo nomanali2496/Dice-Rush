@@ -31,11 +31,12 @@ public class WaitingPlayerSlotUI : MonoBehaviour
     [SerializeField] private Sprite defaultAvatarSprite;
 
     /// <summary>
-    /// Configures this slot as a Joined & Ready player.
+    /// Configures this slot as a Joined player (Ready or Not Ready).
     /// </summary>
-    /// <param name="playerName">Display name of the player (e.g., 'Player 123')</param>
+    /// <param name="playerName">Display name of the player</param>
     /// <param name="avatarSprite">Optional profile picture sprite</param>
-    public void SetReadyPlayer(string playerName, Sprite avatarSprite = null)
+    /// <param name="isReady">Whether the player is ready</param>
+    public void SetJoinedPlayer(string playerName, Sprite avatarSprite = null, bool isReady = true)
     {
         if (playerNameText != null)
         {
@@ -58,18 +59,28 @@ public class WaitingPlayerSlotUI : MonoBehaviour
 
         if (readyBadge != null)
         {
-            readyBadge.SetActive(true);
+            readyBadge.SetActive(isReady);
         }
 
         if (waitingBadge != null)
         {
-            waitingBadge.SetActive(false);
+            waitingBadge.SetActive(!isReady);
         }
 
         if (statusText != null)
         {
-            statusText.text = "✓ Ready";
+            statusText.text = isReady ? "✓ Ready" : "Not Ready";
         }
+    }
+
+    /// <summary>
+    /// Configures this slot as a Joined & Ready player.
+    /// </summary>
+    /// <param name="playerName">Display name of the player (e.g., 'Player 123')</param>
+    /// <param name="avatarSprite">Optional profile picture sprite</param>
+    public void SetReadyPlayer(string playerName, Sprite avatarSprite = null)
+    {
+        SetJoinedPlayer(playerName, avatarSprite, true);
     }
 
     /// <summary>

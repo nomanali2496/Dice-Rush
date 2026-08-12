@@ -9,6 +9,7 @@ extern "C" {
 
 void *LPMBannerAdViewCreateWithConfig(const char *adUnitId, void *configRef, LPMAdSize *adSize);
 void LPMBannerAdViewSetDelegate(void *bannerAdViewRef, void *delegateRef);
+void LPMBannerAdViewSetImpressionDataDelegate(void *bannerAdViewRef, void *delegateRef);
 
 void LPMBannerAdViewLoadAd(void *bannerAdViewRef);
 void LPMBannerAdViewDestroy(void *bannerAdViewRef);

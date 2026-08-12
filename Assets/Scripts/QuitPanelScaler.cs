@@ -65,7 +65,6 @@ public class QuitPanelScaler : MonoBehaviour
         float top = -element.offsetMax.y;
         
         offsets = new Vector4(left, right, top, bottom);
-        Debug.Log($"[QuitPanelScaler] Stored original offsets for {elementName}: L={left:F2}, R={right:F2}, T={top:F2}, B={bottom:F2}");
     }
     
     /// <summary>
@@ -95,11 +94,6 @@ public class QuitPanelScaler : MonoBehaviour
             scaleFactor = maxScale;
         }
         
-        Debug.Log($"[QuitPanelScaler] ====== QUIT PANEL SCALING ======");
-        Debug.Log($"[QuitPanelScaler] Screen: {Screen.width}x{Screen.height} | Reference: {referenceScreenSize.x}x{referenceScreenSize.y}");
-        Debug.Log($"[QuitPanelScaler] Scale Factors: X={scaleFactorX:F3}, Y={scaleFactorY:F3}");
-        Debug.Log($"[QuitPanelScaler] Uniform Scale Factor: {scaleFactor:F3}");
-        
         // Scale quit panel
         ScaleQuitPanel();
         
@@ -107,7 +101,7 @@ public class QuitPanelScaler : MonoBehaviour
         ScaleButton1();
         ScaleButton2();
         
-        Debug.Log($"[QuitPanelScaler] Scaling applied successfully!");
+        Debug.Log($"[QuitPanelScaler] Applied scaling (Scale: {scaleFactor:F3}) for Screen: {Screen.width}x{Screen.height}.");
     }
     
     /// <summary>
@@ -129,8 +123,6 @@ public class QuitPanelScaler : MonoBehaviour
         // Apply scaled offsets
         quitPanel.offsetMin = new Vector2(scaledLeft, scaledBottom);
         quitPanel.offsetMax = new Vector2(-scaledRight, -scaledTop);
-        
-        Debug.Log($"[QuitPanelScaler] Scaled quit panel offsets: L={scaledLeft:F2}, R={scaledRight:F2}, T={scaledTop:F2}, B={scaledBottom:F2}");
     }
     
     /// <summary>
@@ -152,8 +144,6 @@ public class QuitPanelScaler : MonoBehaviour
         // Apply scaled offsets
         button1.offsetMin = new Vector2(scaledLeft, scaledBottom);
         button1.offsetMax = new Vector2(-scaledRight, -scaledTop);
-        
-        Debug.Log($"[QuitPanelScaler] Scaled button 1 offsets: L={scaledLeft:F2}, R={scaledRight:F2}, T={scaledTop:F2}, B={scaledBottom:F2}");
     }
     
     /// <summary>
@@ -175,8 +165,6 @@ public class QuitPanelScaler : MonoBehaviour
         // Apply scaled offsets
         button2.offsetMin = new Vector2(scaledLeft, scaledBottom);
         button2.offsetMax = new Vector2(-scaledRight, -scaledTop);
-        
-        Debug.Log($"[QuitPanelScaler] Scaled button 2 offsets: L={scaledLeft:F2}, R={scaledRight:F2}, T={scaledTop:F2}, B={scaledBottom:F2}");
     }
     
     /// <summary>

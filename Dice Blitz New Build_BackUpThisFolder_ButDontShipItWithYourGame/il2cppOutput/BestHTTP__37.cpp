@@ -22986,7 +22986,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FilterStream_Flush_mBB5CB0484F080B210D7B
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/asn1/util/FilterStream.cs:57>
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->___s;
 		NullCheck(L_0);
-		VirtualActionInvoker0::Invoke(20, L_0);
+		VirtualActionInvoker0::Invoke(21, L_0);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/asn1/util/FilterStream.cs:58>
 		return;
 	}
@@ -23001,7 +23001,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t FilterStream_Seek_m43E9E8979458560401
 		int32_t L_2 = ___1_origin;
 		NullCheck(L_0);
 		int64_t L_3;
-		L_3 = VirtualFuncInvoker2< int64_t, int64_t, int32_t >::Invoke(30, L_0, L_1, L_2);
+		L_3 = VirtualFuncInvoker2< int64_t, int64_t, int32_t >::Invoke(31, L_0, L_1, L_2);
 		return L_3;
 	}
 }
@@ -23013,7 +23013,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FilterStream_SetLength_m1E9C1E452DF94736
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->___s;
 		int64_t L_1 = ___0_value;
 		NullCheck(L_0);
-		VirtualActionInvoker1< int64_t >::Invoke(31, L_0, L_1);
+		VirtualActionInvoker1< int64_t >::Invoke(32, L_0, L_1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/asn1/util/FilterStream.cs:66>
 		return;
 	}
@@ -23029,7 +23029,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FilterStream_Read_m33E359FACDC8D5788D
 		int32_t L_3 = ___2_count;
 		NullCheck(L_0);
 		int32_t L_4;
-		L_4 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, L_0, L_1, L_2, L_3);
+		L_4 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, L_0, L_1, L_2, L_3);
 		return L_4;
 	}
 }
@@ -23041,7 +23041,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t FilterStream_ReadByte_m38511F2579055D
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->___s;
 		NullCheck(L_0);
 		int32_t L_1;
-		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(34, L_0);
+		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(35, L_0);
 		return L_1;
 	}
 }
@@ -23055,7 +23055,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FilterStream_Write_m93323130DC687F60CBF0
 		int32_t L_2 = ___1_offset;
 		int32_t L_3 = ___2_count;
 		NullCheck(L_0);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_0, L_1, L_2, L_3);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_0, L_1, L_2, L_3);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/asn1/util/FilterStream.cs:78>
 		return;
 	}
@@ -23068,7 +23068,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FilterStream_WriteByte_m1CB9D54DD568A559
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->___s;
 		uint8_t L_1 = ___0_value;
 		NullCheck(L_0);
-		VirtualActionInvoker1< uint8_t >::Invoke(37, L_0, L_1);
+		VirtualActionInvoker1< uint8_t >::Invoke(38, L_0, L_1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/asn1/util/FilterStream.cs:82>
 		return;
 	}

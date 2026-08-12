@@ -37,6 +37,29 @@ public class WinnerScreen : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        HideDiceIfPresent();
+    }
+
+    /// <summary>
+    /// Ensures 3D gameplay dice are hidden when Winner screen is active.
+    /// </summary>
+    public void HideDiceIfPresent()
+    {
+        DicesController dicesController = FindFirstObjectByType<DicesController>();
+        if (dicesController != null)
+        {
+            dicesController.HideDices();
+        }
+
+        DiceVisibilityManager dvm = FindFirstObjectByType<DiceVisibilityManager>();
+        if (dvm != null)
+        {
+            dvm.ForceHideDices();
+        }
+    }
+
     /// <summary>
     /// Sets up the winner results for up to 10 players dynamically using data from the server.
     /// Called by GameManager when match is over.

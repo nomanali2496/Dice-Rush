@@ -591,7 +591,7 @@ struct EvaluationException_t0C3906BE18D421772799C4E0ACFE5478571FEA4E  : public A
 };
 struct U3CPrivateImplementationDetailsU3E_t32B9240F30447D9E5C4951749F43B17B2E485B9D_StaticFields
 {
-	__StaticArrayInitTypeSizeU3D53322_tD54060740AA39B4D874ECBDBEE9B08B96D3AA45D ___13402F6FA08DF28BE0DFC3203C0CB4620E0EBC2EBF9CD30C0F04409C111A0DD5;
+	__StaticArrayInitTypeSizeU3D53322_tD54060740AA39B4D874ECBDBEE9B08B96D3AA45D ___E47887F810535850844B9937E270CEF34B789839698C988FCBB7B29863939D2A;
 	__StaticArrayInitTypeSizeU3D19163_t9893CA5B47FB83E714BF2D09D45B069DDEAC01D1 ___F5B3F4C11249A37FDB47A7C38D73F57F8DF899DE54F37E3034B0880D98515D49;
 };
 struct EventArgs_t37273F03EAC87217701DD431B190FBD84AD7C377_StaticFields
@@ -730,16 +730,16 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m42625D
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 118662
+// Method Definition Index: 118810
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ncalcExpression_return_get_Tree_m25FA69C84C0E7B4D9FAB6B2FBDE8BDA6B226E48B (ncalcExpression_return_t7BA944E8990E85BEF9FF951F17899A1F2E37E3E6* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2313>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2313>
 		CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1* L_0 = __this->___tree;
 		return L_0;
 	}
 }
-// Method Definition Index: 118663
+// Method Definition Index: 118811
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ncalcExpression_return_set_Tree_m526E16C672F4A31CCF5B6BBF6A62C34EDDCE18D3 (ncalcExpression_return_t7BA944E8990E85BEF9FF951F17899A1F2E37E3E6* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -749,15 +749,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ncalcExpression_return_set_Tree_m526E16C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2317>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2317>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___tree = ((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___tree), (void*)((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var)));
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2318>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2318>
 		return;
 	}
 }
-// Method Definition Index: 118664
+// Method Definition Index: 118812
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ncalcExpression_return__ctor_m422CF138036F78F966DAAC76FA5FF572615E7F8F (ncalcExpression_return_t7BA944E8990E85BEF9FF951F17899A1F2E37E3E6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -773,16 +773,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ncalcExpression_return__ctor_m422CF13803
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 118665
+// Method Definition Index: 118813
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* logicalExpression_return_get_Tree_m47FC55BA1965114A63281798B470109FF06A5FC6 (logicalExpression_return_tA9AB7E6573A30432D380780EBFE7611B28413402* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2333>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2333>
 		CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1* L_0 = __this->___tree;
 		return L_0;
 	}
 }
-// Method Definition Index: 118666
+// Method Definition Index: 118814
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void logicalExpression_return_set_Tree_m37615E3C802912EF29AABF3131391A21472A6A1F (logicalExpression_return_tA9AB7E6573A30432D380780EBFE7611B28413402* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -792,15 +792,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void logicalExpression_return_set_Tree_m37615
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2337>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2337>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___tree = ((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___tree), (void*)((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var)));
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2338>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2338>
 		return;
 	}
 }
-// Method Definition Index: 118667
+// Method Definition Index: 118815
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void logicalExpression_return__ctor_m7CEAB730B76250C43456F8505740F98C886B8AAD (logicalExpression_return_tA9AB7E6573A30432D380780EBFE7611B28413402* __this, const RuntimeMethod* method) 
 {
 	{
@@ -816,16 +816,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void logicalExpression_return__ctor_m7CEAB730
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 118668
+// Method Definition Index: 118816
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* conditionalExpression_return_get_Tree_m7B00F4BCC18C932058B8878CFB6FE23E6EAE5888 (conditionalExpression_return_t2DECB6C11A392479654651E2B4810638F9B43257* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2353>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2353>
 		CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1* L_0 = __this->___tree;
 		return L_0;
 	}
 }
-// Method Definition Index: 118669
+// Method Definition Index: 118817
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void conditionalExpression_return_set_Tree_m4DCA1F66FEA8A6D2089F4E3D303A1F337043E849 (conditionalExpression_return_t2DECB6C11A392479654651E2B4810638F9B43257* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -835,15 +835,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void conditionalExpression_return_set_Tree_m4
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2357>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2357>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___tree = ((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___tree), (void*)((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var)));
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2358>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2358>
 		return;
 	}
 }
-// Method Definition Index: 118670
+// Method Definition Index: 118818
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void conditionalExpression_return__ctor_m426B2C4F035ED6EA2823C4B46845822BF796CC96 (conditionalExpression_return_t2DECB6C11A392479654651E2B4810638F9B43257* __this, const RuntimeMethod* method) 
 {
 	{
@@ -859,16 +859,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void conditionalExpression_return__ctor_m426B
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 118671
+// Method Definition Index: 118819
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* booleanAndExpression_return_get_Tree_m4A3DBEDA3FEEB27060C343E3AC1312A9FE1AA965 (booleanAndExpression_return_t5D327F81B89C002A4B4A6F6BB78124A06C536033* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2373>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2373>
 		CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1* L_0 = __this->___tree;
 		return L_0;
 	}
 }
-// Method Definition Index: 118672
+// Method Definition Index: 118820
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void booleanAndExpression_return_set_Tree_m804E06B46D0C9D966E08D2183E2573437779CC14 (booleanAndExpression_return_t5D327F81B89C002A4B4A6F6BB78124A06C536033* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -878,15 +878,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void booleanAndExpression_return_set_Tree_m80
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2377>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2377>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___tree = ((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___tree), (void*)((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var)));
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2378>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2378>
 		return;
 	}
 }
-// Method Definition Index: 118673
+// Method Definition Index: 118821
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void booleanAndExpression_return__ctor_mFEAEFA25C564E27C239A57B0777976BA2BFEA086 (booleanAndExpression_return_t5D327F81B89C002A4B4A6F6BB78124A06C536033* __this, const RuntimeMethod* method) 
 {
 	{
@@ -902,16 +902,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void booleanAndExpression_return__ctor_mFEAEF
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 118674
+// Method Definition Index: 118822
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* bitwiseOrExpression_return_get_Tree_m7616E8D8DBA134F58E0CDE0A3E00211CE135683B (bitwiseOrExpression_return_t5D649C1429A30B43746A096C989A3B03F1804A2C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2393>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2393>
 		CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1* L_0 = __this->___tree;
 		return L_0;
 	}
 }
-// Method Definition Index: 118675
+// Method Definition Index: 118823
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void bitwiseOrExpression_return_set_Tree_mA8B42B36ED141EF81ECC7BCF3AEE279FC7DDFA03 (bitwiseOrExpression_return_t5D649C1429A30B43746A096C989A3B03F1804A2C* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -921,15 +921,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void bitwiseOrExpression_return_set_Tree_mA8B
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2397>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2397>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___tree = ((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___tree), (void*)((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var)));
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2398>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2398>
 		return;
 	}
 }
-// Method Definition Index: 118676
+// Method Definition Index: 118824
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void bitwiseOrExpression_return__ctor_m9AF5AE54B95A0454E1D5C5536EA2AAB50AC51630 (bitwiseOrExpression_return_t5D649C1429A30B43746A096C989A3B03F1804A2C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -945,16 +945,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void bitwiseOrExpression_return__ctor_m9AF5AE
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 118677
+// Method Definition Index: 118825
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* bitwiseXOrExpression_return_get_Tree_mDCD92F7B30C5C0C2082CBE367160D3FE6D4E9622 (bitwiseXOrExpression_return_t2B047A72026B167727E58761DB6CB4285A7D154F* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2413>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2413>
 		CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1* L_0 = __this->___tree;
 		return L_0;
 	}
 }
-// Method Definition Index: 118678
+// Method Definition Index: 118826
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void bitwiseXOrExpression_return_set_Tree_mF42C5260CAEAE16659EB23CE30503DDE935DB599 (bitwiseXOrExpression_return_t2B047A72026B167727E58761DB6CB4285A7D154F* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -964,15 +964,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void bitwiseXOrExpression_return_set_Tree_mF4
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2417>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2417>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___tree = ((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___tree), (void*)((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var)));
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2418>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2418>
 		return;
 	}
 }
-// Method Definition Index: 118679
+// Method Definition Index: 118827
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void bitwiseXOrExpression_return__ctor_m541B10184341E638DDE6E5B26AE7B085DADFBAE3 (bitwiseXOrExpression_return_t2B047A72026B167727E58761DB6CB4285A7D154F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -988,16 +988,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void bitwiseXOrExpression_return__ctor_m541B1
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 118680
+// Method Definition Index: 118828
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* bitwiseAndExpression_return_get_Tree_mFEF73BA1F82770B77896085106AB6A4C1C940040 (bitwiseAndExpression_return_t175E1A2F5820948567BD9AA8684F4B7984CD25CD* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2433>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2433>
 		CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1* L_0 = __this->___tree;
 		return L_0;
 	}
 }
-// Method Definition Index: 118681
+// Method Definition Index: 118829
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void bitwiseAndExpression_return_set_Tree_mFA1C91FF73AD56348572CD428DAD444076BDF5E8 (bitwiseAndExpression_return_t175E1A2F5820948567BD9AA8684F4B7984CD25CD* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1007,15 +1007,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void bitwiseAndExpression_return_set_Tree_mFA
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2437>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2437>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___tree = ((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___tree), (void*)((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var)));
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2438>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2438>
 		return;
 	}
 }
-// Method Definition Index: 118682
+// Method Definition Index: 118830
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void bitwiseAndExpression_return__ctor_m7B0C7223BC7F67092EBC55739953BD24CD5C9686 (bitwiseAndExpression_return_t175E1A2F5820948567BD9AA8684F4B7984CD25CD* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1031,16 +1031,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void bitwiseAndExpression_return__ctor_m7B0C7
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 118683
+// Method Definition Index: 118831
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* equalityExpression_return_get_Tree_m62DE6B858A75C7C1263EDA6801016507981C88F5 (equalityExpression_return_t0D80CDA5C73818322F64909C0E18BE6A66139957* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2453>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2453>
 		CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1* L_0 = __this->___tree;
 		return L_0;
 	}
 }
-// Method Definition Index: 118684
+// Method Definition Index: 118832
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void equalityExpression_return_set_Tree_m1EAFCEDC072CAB7C92A09A8E86888D05A9EE52D1 (equalityExpression_return_t0D80CDA5C73818322F64909C0E18BE6A66139957* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1050,15 +1050,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void equalityExpression_return_set_Tree_m1EAF
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2457>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2457>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___tree = ((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___tree), (void*)((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var)));
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2458>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2458>
 		return;
 	}
 }
-// Method Definition Index: 118685
+// Method Definition Index: 118833
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void equalityExpression_return__ctor_m00B929AD146884433C96A1CDA91E593171A28D6A (equalityExpression_return_t0D80CDA5C73818322F64909C0E18BE6A66139957* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1074,16 +1074,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void equalityExpression_return__ctor_m00B929A
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 118686
+// Method Definition Index: 118834
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* relationalExpression_return_get_Tree_mCAE9CDD4E575A356921EF4954880B98A2CA775BA (relationalExpression_return_tC04CDE620BCC02B06DB216424FB881600C5BF1EE* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2473>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2473>
 		CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1* L_0 = __this->___tree;
 		return L_0;
 	}
 }
-// Method Definition Index: 118687
+// Method Definition Index: 118835
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void relationalExpression_return_set_Tree_mCD9919CCC08608D2DE71E5F87F3FA042599F7919 (relationalExpression_return_tC04CDE620BCC02B06DB216424FB881600C5BF1EE* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1093,15 +1093,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void relationalExpression_return_set_Tree_mCD
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2477>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2477>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___tree = ((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___tree), (void*)((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var)));
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2478>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2478>
 		return;
 	}
 }
-// Method Definition Index: 118688
+// Method Definition Index: 118836
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void relationalExpression_return__ctor_m5A84A5D6F3647F41895F0281CB5087695BF44B64 (relationalExpression_return_tC04CDE620BCC02B06DB216424FB881600C5BF1EE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1117,16 +1117,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void relationalExpression_return__ctor_m5A84A
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 118689
+// Method Definition Index: 118837
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* shiftExpression_return_get_Tree_mC7FB6F92729DCADB2B13440C7289DF494F1100EA (shiftExpression_return_t4D59B55A1F185BBBF6A94C93C302F52383806B71* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2493>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2493>
 		CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1* L_0 = __this->___tree;
 		return L_0;
 	}
 }
-// Method Definition Index: 118690
+// Method Definition Index: 118838
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void shiftExpression_return_set_Tree_mDB7F9948616A4E701032595D7DE599B85F7705B7 (shiftExpression_return_t4D59B55A1F185BBBF6A94C93C302F52383806B71* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1136,15 +1136,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void shiftExpression_return_set_Tree_mDB7F994
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2497>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2497>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___tree = ((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___tree), (void*)((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var)));
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2498>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2498>
 		return;
 	}
 }
-// Method Definition Index: 118691
+// Method Definition Index: 118839
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void shiftExpression_return__ctor_mDA7571BFF156CDDEB994FEBA01C969A002837E9B (shiftExpression_return_t4D59B55A1F185BBBF6A94C93C302F52383806B71* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1160,16 +1160,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void shiftExpression_return__ctor_mDA7571BFF1
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 118692
+// Method Definition Index: 118840
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* additiveExpression_return_get_Tree_m251D5360DEC7D9C6870284A8D8604A51F53339BD (additiveExpression_return_tB18B0EC332BCD3B19584E9DAFEFE5C3A3AA07AA9* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2513>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2513>
 		CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1* L_0 = __this->___tree;
 		return L_0;
 	}
 }
-// Method Definition Index: 118693
+// Method Definition Index: 118841
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void additiveExpression_return_set_Tree_mE782367D93C327CFD39BCFB5602D2C4E9E4FAF98 (additiveExpression_return_tB18B0EC332BCD3B19584E9DAFEFE5C3A3AA07AA9* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1179,15 +1179,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void additiveExpression_return_set_Tree_mE782
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2517>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2517>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___tree = ((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___tree), (void*)((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var)));
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2518>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2518>
 		return;
 	}
 }
-// Method Definition Index: 118694
+// Method Definition Index: 118842
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void additiveExpression_return__ctor_m069149FDAE713F9A87A10851AD630B59C869CA53 (additiveExpression_return_tB18B0EC332BCD3B19584E9DAFEFE5C3A3AA07AA9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1203,16 +1203,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void additiveExpression_return__ctor_m069149F
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 118695
+// Method Definition Index: 118843
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* multiplicativeExpression_return_get_Tree_m91EBDD30267B15C0F1FC2ACE126F9AB0B38D40DB (multiplicativeExpression_return_t7A09259F17BF722C3F4DB872B13DB1156FEAF2AE* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2533>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2533>
 		CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1* L_0 = __this->___tree;
 		return L_0;
 	}
 }
-// Method Definition Index: 118696
+// Method Definition Index: 118844
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void multiplicativeExpression_return_set_Tree_mBA83AC1DE18FD7E1D4BEF0F19815A02CF5F2A8AE (multiplicativeExpression_return_t7A09259F17BF722C3F4DB872B13DB1156FEAF2AE* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1222,15 +1222,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void multiplicativeExpression_return_set_Tree
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2537>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2537>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___tree = ((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___tree), (void*)((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var)));
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2538>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2538>
 		return;
 	}
 }
-// Method Definition Index: 118697
+// Method Definition Index: 118845
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void multiplicativeExpression_return__ctor_m4EC6588201A9DD7527112016F99FD17611790A3C (multiplicativeExpression_return_t7A09259F17BF722C3F4DB872B13DB1156FEAF2AE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1246,16 +1246,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void multiplicativeExpression_return__ctor_m4
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 118698
+// Method Definition Index: 118846
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* unaryExpression_return_get_Tree_mE07C150C325AE6DB206226A63D022E8D986042D8 (unaryExpression_return_t1D4375D11904F5069239CF413FA752605C805B64* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2553>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2553>
 		CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1* L_0 = __this->___tree;
 		return L_0;
 	}
 }
-// Method Definition Index: 118699
+// Method Definition Index: 118847
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void unaryExpression_return_set_Tree_mA24F81046099E1E681E95090F5EA88F4E8568BB3 (unaryExpression_return_t1D4375D11904F5069239CF413FA752605C805B64* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1265,15 +1265,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void unaryExpression_return_set_Tree_mA24F810
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2557>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2557>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___tree = ((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___tree), (void*)((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var)));
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2558>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2558>
 		return;
 	}
 }
-// Method Definition Index: 118700
+// Method Definition Index: 118848
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void unaryExpression_return__ctor_mE4FBA5CA64602B3C38981B648ED292D7B0C7DA98 (unaryExpression_return_t1D4375D11904F5069239CF413FA752605C805B64* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1289,16 +1289,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void unaryExpression_return__ctor_mE4FBA5CA64
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 118701
+// Method Definition Index: 118849
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* primaryExpression_return_get_Tree_mCB8524A9E1AA313BCF8710D2E8686D3104214205 (primaryExpression_return_t5F4C3B79D4F622E70BB3E8721D9D71C84E737F55* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2573>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2573>
 		CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1* L_0 = __this->___tree;
 		return L_0;
 	}
 }
-// Method Definition Index: 118702
+// Method Definition Index: 118850
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void primaryExpression_return_set_Tree_m4FDF089D1628CD32FDC6D066DFA132ADEFEFA5E0 (primaryExpression_return_t5F4C3B79D4F622E70BB3E8721D9D71C84E737F55* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1308,15 +1308,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void primaryExpression_return_set_Tree_m4FDF0
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2577>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2577>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___tree = ((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___tree), (void*)((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var)));
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2578>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2578>
 		return;
 	}
 }
-// Method Definition Index: 118703
+// Method Definition Index: 118851
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void primaryExpression_return__ctor_mF0B4992409A94995D798FC05A446633E95165C65 (primaryExpression_return_t5F4C3B79D4F622E70BB3E8721D9D71C84E737F55* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1332,16 +1332,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void primaryExpression_return__ctor_mF0B49924
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 118704
+// Method Definition Index: 118852
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* value_return_get_Tree_m7F398FCF1A6F68554E94F9CB20A9F2C8A0665594 (value_return_t9454A396BAAADDC799C8683452D54B73FB6AD0CA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2593>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2593>
 		CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1* L_0 = __this->___tree;
 		return L_0;
 	}
 }
-// Method Definition Index: 118705
+// Method Definition Index: 118853
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void value_return_set_Tree_m9AA445CFA3DA5B81A338DE2F944A7D0EF2A26D81 (value_return_t9454A396BAAADDC799C8683452D54B73FB6AD0CA* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1351,15 +1351,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void value_return_set_Tree_m9AA445CFA3DA5B81A
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2597>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2597>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___tree = ((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___tree), (void*)((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var)));
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2598>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2598>
 		return;
 	}
 }
-// Method Definition Index: 118706
+// Method Definition Index: 118854
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void value_return__ctor_m1D48771759774D00FCCB206334475E57EB8C2A8B (value_return_t9454A396BAAADDC799C8683452D54B73FB6AD0CA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1375,16 +1375,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void value_return__ctor_m1D48771759774D00FCCB
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 118707
+// Method Definition Index: 118855
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* identifier_return_get_Tree_mC911B456349FB5AF7A896EF70089D24023406D4D (identifier_return_t7975BB7A138630A5D91EEC2F07E00881BC9C161D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2613>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2613>
 		CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1* L_0 = __this->___tree;
 		return L_0;
 	}
 }
-// Method Definition Index: 118708
+// Method Definition Index: 118856
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void identifier_return_set_Tree_mA1DEFC2FF6BF66309052BA15F9D0BDB2C269AD67 (identifier_return_t7975BB7A138630A5D91EEC2F07E00881BC9C161D* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1394,15 +1394,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void identifier_return_set_Tree_mA1DEFC2FF6BF
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2617>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2617>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___tree = ((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___tree), (void*)((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var)));
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2618>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2618>
 		return;
 	}
 }
-// Method Definition Index: 118709
+// Method Definition Index: 118857
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void identifier_return__ctor_m607079BF18B64935F5D65C179A1DD2EEBDD1DC64 (identifier_return_t7975BB7A138630A5D91EEC2F07E00881BC9C161D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1418,16 +1418,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void identifier_return__ctor_m607079BF18B6493
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 118710
+// Method Definition Index: 118858
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* expressionList_return_get_Tree_m7492B83626B037F9D2FE29E5B1BCDD25DA9EC72D (expressionList_return_tC2A1C94AC3FC330E8C6B7B9AC0119EEE42596F7C* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2633>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2633>
 		CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1* L_0 = __this->___tree;
 		return L_0;
 	}
 }
-// Method Definition Index: 118711
+// Method Definition Index: 118859
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void expressionList_return_set_Tree_m3E9798B55F6865DC07A4C738440BC9AA4769953A (expressionList_return_tC2A1C94AC3FC330E8C6B7B9AC0119EEE42596F7C* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1437,15 +1437,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void expressionList_return_set_Tree_m3E9798B5
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2637>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2637>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___tree = ((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___tree), (void*)((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var)));
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2638>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2638>
 		return;
 	}
 }
-// Method Definition Index: 118712
+// Method Definition Index: 118860
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void expressionList_return__ctor_m2EA78AA8DAA3AC6FD1F1B998CA9BC362502D0FC7 (expressionList_return_tC2A1C94AC3FC330E8C6B7B9AC0119EEE42596F7C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1461,16 +1461,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void expressionList_return__ctor_m2EA78AA8DAA
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 118713
+// Method Definition Index: 118861
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* arguments_return_get_Tree_m6BDE202D6590A78646A6B0D16500B4D92E595DDD (arguments_return_t43E6906F1BAB77E73E8865459062A500CF3E7B6B* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2653>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2653>
 		CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1* L_0 = __this->___tree;
 		return L_0;
 	}
 }
-// Method Definition Index: 118714
+// Method Definition Index: 118862
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void arguments_return_set_Tree_mAA2BAF43843A5E5A57F044054FCCFB32F07D3164 (arguments_return_t43E6906F1BAB77E73E8865459062A500CF3E7B6B* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1480,15 +1480,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void arguments_return_set_Tree_mAA2BAF43843A5
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2657>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2657>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___tree = ((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___tree), (void*)((CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1*)CastclassClass((RuntimeObject*)L_0, CommonTree_t3BD1CA810EEB23860077704FB2963AFE6B9C69B1_il2cpp_TypeInfo_var)));
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2658>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/NCalcParser.cs:2658>
 		return;
 	}
 }
-// Method Definition Index: 118715
+// Method Definition Index: 118863
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void arguments_return__ctor_mD57A323BD2933750E6A65521119CA6EE4B0F8384 (arguments_return_t43E6906F1BAB77E73E8865459062A500CF3E7B6B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1504,49 +1504,49 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void arguments_return__ctor_mD57A323BD2933750
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 118716
+// Method Definition Index: 118864
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ParameterArgs_get_Result_m0C577BECCB47D7097879C041C6EF76D7AB597AB7 (ParameterArgs_t6F99757E4429D71D057F5A21D287F4F0E57D7957* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ParameterArgs.cs:13>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ParameterArgs.cs:13>
 		RuntimeObject* L_0 = __this->____result;
 		return L_0;
 	}
 }
-// Method Definition Index: 118717
+// Method Definition Index: 118865
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ParameterArgs_set_Result_mEB9F6FC8CA211EF0F80C66161F5A91A94A205BD8 (ParameterArgs_t6F99757E4429D71D057F5A21D287F4F0E57D7957* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ParameterArgs.cs:17>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ParameterArgs.cs:17>
 		RuntimeObject* L_0 = ___0_value;
 		__this->____result = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____result), (void*)L_0);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ParameterArgs.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ParameterArgs.cs:18>
 		ParameterArgs_set_HasResult_m9CB8E148415DFDB780A5C5D0299E71AB596A76B8_inline(__this, (bool)1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ParameterArgs.cs:19>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ParameterArgs.cs:19>
 		return;
 	}
 }
-// Method Definition Index: 118718
+// Method Definition Index: 118866
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ParameterArgs_get_HasResult_m00CBA2CBCC312D378EAAF7665634BB5B0CE2F444 (ParameterArgs_t6F99757E4429D71D057F5A21D287F4F0E57D7957* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ParameterArgs.cs:22>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ParameterArgs.cs:22>
 		bool L_0 = __this->___U3CHasResultU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 118719
+// Method Definition Index: 118867
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ParameterArgs_set_HasResult_m9CB8E148415DFDB780A5C5D0299E71AB596A76B8 (ParameterArgs_t6F99757E4429D71D057F5A21D287F4F0E57D7957* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ParameterArgs.cs:22>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ParameterArgs.cs:22>
 		bool L_0 = ___0_value;
 		__this->___U3CHasResultU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 118720
+// Method Definition Index: 118868
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ParameterArgs__ctor_m8AE187E045B505540DE24CDB377ECE4B14F96E42 (ParameterArgs_t6F99757E4429D71D057F5A21D287F4F0E57D7957* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1569,7 +1569,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ParameterArgs__ctor_m8AE187E045B505540DE
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 118721
+// Method Definition Index: 118869
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializationVisitor__ctor_m375F92459AC15A3D38B7941759CB2727AD953C42 (SerializationVisitor_t905028B475D58D19AF23347E008E38A220539D58* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1581,13 +1581,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializationVisitor__ctor_m375F92459AC1
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:8>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:8>
 		LogicalExpressionVisitor__ctor_m24C7C345ACEE6EADDD7106CAC9D789BFEBB0F3D9(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:10>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:10>
 		StringBuilder_t* L_0 = (StringBuilder_t*)il2cpp_codegen_object_new(StringBuilder_t_il2cpp_TypeInfo_var);
 		StringBuilder__ctor_m1D99713357DE05DAFA296633639DB55F8C30587D(L_0, NULL);
 		SerializationVisitor_set_Result_m1C2912A68EBF051E396DA3EC9A52BFED68A46A36_inline(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:11>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:11>
 		NumberFormatInfo_t8E26808B202927FEBF9064FCFEEA4D6E076E6472* L_1 = (NumberFormatInfo_t8E26808B202927FEBF9064FCFEEA4D6E076E6472*)il2cpp_codegen_object_new(NumberFormatInfo_t8E26808B202927FEBF9064FCFEEA4D6E076E6472_il2cpp_TypeInfo_var);
 		NumberFormatInfo__ctor_m94502038B1DB45D50D1331C312DDAD0D80CD608C(L_1, NULL);
 		NumberFormatInfo_t8E26808B202927FEBF9064FCFEEA4D6E076E6472* L_2 = L_1;
@@ -1595,31 +1595,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializationVisitor__ctor_m375F92459AC1
 		NumberFormatInfo_set_NumberDecimalSeparator_mEC8D7493863AD768CF6107DE7617811E1105DF10(L_2, _stringLiteralF3E84B722399601AD7E281754E917478AA9AD48D, NULL);
 		__this->____numberFormatInfo = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____numberFormatInfo), (void*)L_2);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:12>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:12>
 		return;
 	}
 }
-// Method Definition Index: 118722
+// Method Definition Index: 118870
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringBuilder_t* SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841 (SerializationVisitor_t905028B475D58D19AF23347E008E38A220539D58* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:16>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:16>
 		StringBuilder_t* L_0 = __this->___U3CResultU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 118723
+// Method Definition Index: 118871
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializationVisitor_set_Result_m1C2912A68EBF051E396DA3EC9A52BFED68A46A36 (SerializationVisitor_t905028B475D58D19AF23347E008E38A220539D58* __this, StringBuilder_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:16>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:16>
 		StringBuilder_t* L_0 = ___0_value;
 		__this->___U3CResultU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CResultU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 118724
+// Method Definition Index: 118872
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializationVisitor_Visit_mF41318032810D31B1C2AA564FA7DE48DF8152B47 (SerializationVisitor_t905028B475D58D19AF23347E008E38A220539D58* __this, TernaryExpression_t9A0501B3ED48F564B0F3012DEF0E8D8CCDD106CC* ___0_ternary, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1630,41 +1630,41 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializationVisitor_Visit_mF41318032810
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:20>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:20>
 		TernaryExpression_t9A0501B3ED48F564B0F3012DEF0E8D8CCDD106CC* L_0 = ___0_ternary;
 		NullCheck(L_0);
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_1;
 		L_1 = TernaryExpression_get_LeftExpression_mDE504809B2CDB09C513D85D62F681F3432EAEBE0_inline(L_0, NULL);
 		SerializationVisitor_EncapsulateNoValue_m06891EDB91B45CA3AF14D77517BAF38013719DC9(__this, L_1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:22>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:22>
 		StringBuilder_t* L_2;
 		L_2 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_2);
 		StringBuilder_t* L_3;
 		L_3 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_2, _stringLiteral210A6A07AB8F66B3554669378F6148D2C7F62920, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:24>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:24>
 		TernaryExpression_t9A0501B3ED48F564B0F3012DEF0E8D8CCDD106CC* L_4 = ___0_ternary;
 		NullCheck(L_4);
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_5;
 		L_5 = TernaryExpression_get_MiddleExpression_m31BE5A457389B52577A93E6757D2291A3ABDDFA7_inline(L_4, NULL);
 		SerializationVisitor_EncapsulateNoValue_m06891EDB91B45CA3AF14D77517BAF38013719DC9(__this, L_5, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:26>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:26>
 		StringBuilder_t* L_6;
 		L_6 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_6);
 		StringBuilder_t* L_7;
 		L_7 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_6, _stringLiteral1168E92C164109D6220480DEDA987085B2A21155, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:28>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:28>
 		TernaryExpression_t9A0501B3ED48F564B0F3012DEF0E8D8CCDD106CC* L_8 = ___0_ternary;
 		NullCheck(L_8);
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_9;
 		L_9 = TernaryExpression_get_RightExpression_m3BB5D4B3540900E08217DBA3B4DCA150B3293825_inline(L_8, NULL);
 		SerializationVisitor_EncapsulateNoValue_m06891EDB91B45CA3AF14D77517BAF38013719DC9(__this, L_9, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:29>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:29>
 		return;
 	}
 }
-// Method Definition Index: 118725
+// Method Definition Index: 118873
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializationVisitor_Visit_m6E14C2211C9FAF620D5D07FA6C4EC16F8A45668D (SerializationVisitor_t905028B475D58D19AF23347E008E38A220539D58* __this, BinaryExpression_tCFC1F7B29A185986E4A41101F75232CFDDA81D2B* ___0_binary, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1692,13 +1692,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializationVisitor_Visit_m6E14C2211C9F
 	}
 	int32_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:33>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:33>
 		BinaryExpression_tCFC1F7B29A185986E4A41101F75232CFDDA81D2B* L_0 = ___0_binary;
 		NullCheck(L_0);
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_1;
 		L_1 = BinaryExpression_get_LeftExpression_mD21818A59055D95C304B73471F9D4B782DB63B28_inline(L_0, NULL);
 		SerializationVisitor_EncapsulateNoValue_m06891EDB91B45CA3AF14D77517BAF38013719DC9(__this, L_1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:35>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:35>
 		BinaryExpression_tCFC1F7B29A185986E4A41101F75232CFDDA81D2B* L_2 = ___0_binary;
 		NullCheck(L_2);
 		int32_t L_3;
@@ -1787,211 +1787,211 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializationVisitor_Visit_m6E14C2211C9F
 
 IL_0066:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:38>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:38>
 		StringBuilder_t* L_5;
 		L_5 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_5);
 		StringBuilder_t* L_6;
 		L_6 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_5, _stringLiteral64DDEE858A91B7DDB44761D703E5A2FD737BCAA9, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:39>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:39>
 		goto IL_01db;
 	}
 
 IL_007c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:42>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:42>
 		StringBuilder_t* L_7;
 		L_7 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_7);
 		StringBuilder_t* L_8;
 		L_8 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_7, _stringLiteralC8FB3AADE865E6D34A8377CFB1E0D3ADC4040BDC, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:43>
 		goto IL_01db;
 	}
 
 IL_0092:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:46>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:46>
 		StringBuilder_t* L_9;
 		L_9 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_9);
 		StringBuilder_t* L_10;
 		L_10 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_9, _stringLiteralADB95DDF09353FBDD17E9890451F2F88C7F3AF20, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:47>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:47>
 		goto IL_01db;
 	}
 
 IL_00a8:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:50>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:50>
 		StringBuilder_t* L_11;
 		L_11 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_11);
 		StringBuilder_t* L_12;
 		L_12 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_11, _stringLiteral9B2D833B107F93D5FC776077FE8509021DCC803E, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:51>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:51>
 		goto IL_01db;
 	}
 
 IL_00be:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:54>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:54>
 		StringBuilder_t* L_13;
 		L_13 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_13);
 		StringBuilder_t* L_14;
 		L_14 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_13, _stringLiteral4E1C61AD64824F0F49388BB9A0A66BA660066922, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:55>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:55>
 		goto IL_01db;
 	}
 
 IL_00d4:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:58>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:58>
 		StringBuilder_t* L_15;
 		L_15 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_15);
 		StringBuilder_t* L_16;
 		L_16 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_15, _stringLiteralCDF1B8C01FE1D4D3E80FBCE3178BE0FA050AC8D9, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:59>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:59>
 		goto IL_01db;
 	}
 
 IL_00ea:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:62>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:62>
 		StringBuilder_t* L_17;
 		L_17 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_17);
 		StringBuilder_t* L_18;
 		L_18 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_17, _stringLiteral2FDB12CAF040DE0941DCA5DA173D724FBE249CE3, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:63>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:63>
 		goto IL_01db;
 	}
 
 IL_0100:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:66>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:66>
 		StringBuilder_t* L_19;
 		L_19 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_19);
 		StringBuilder_t* L_20;
 		L_20 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_19, _stringLiteral88DE3AE5D1539B4DC69F188BF0BA71D156A2A987, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:67>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:67>
 		goto IL_01db;
 	}
 
 IL_0116:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:70>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:70>
 		StringBuilder_t* L_21;
 		L_21 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_21);
 		StringBuilder_t* L_22;
 		L_22 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_21, _stringLiteralFC920BF5B48C73F1A2C760180F624A2192ADDA32, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:71>
 		goto IL_01db;
 	}
 
 IL_012c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:74>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:74>
 		StringBuilder_t* L_23;
 		L_23 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_23);
 		StringBuilder_t* L_24;
 		L_24 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_23, _stringLiteralAC47381A312D0BE38226537F85448FFF2264564C, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:75>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:75>
 		goto IL_01db;
 	}
 
 IL_0142:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:78>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:78>
 		StringBuilder_t* L_25;
 		L_25 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_25);
 		StringBuilder_t* L_26;
 		L_26 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_25, _stringLiteralF4DEFACDDC6EDC45049E58865E8CC7A05C7AEA5B, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:79>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:79>
 		goto IL_01db;
 	}
 
 IL_0158:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:82>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:82>
 		StringBuilder_t* L_27;
 		L_27 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_27);
 		StringBuilder_t* L_28;
 		L_28 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_27, _stringLiteral1B9D3CF4697EAF2BF914545D4E803CF9FCA58F66, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:83>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:83>
 		goto IL_01db;
 	}
 
 IL_016b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:86>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:86>
 		StringBuilder_t* L_29;
 		L_29 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_29);
 		StringBuilder_t* L_30;
 		L_30 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_29, _stringLiteral15FB8A04339464F72B79BAF171F17EF1E153CA52, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:87>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:87>
 		goto IL_01db;
 	}
 
 IL_017e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:90>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:90>
 		StringBuilder_t* L_31;
 		L_31 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_31);
 		StringBuilder_t* L_32;
 		L_32 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_31, _stringLiteral9624DEBBCD14C2B589D0526FE720B99449CA1D13, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:91>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:91>
 		goto IL_01db;
 	}
 
 IL_0191:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:94>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:94>
 		StringBuilder_t* L_33;
 		L_33 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_33);
 		StringBuilder_t* L_34;
 		L_34 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_33, _stringLiteral1B1EB7B676D45EEA70B706E25988B5A063563F3D, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:95>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:95>
 		goto IL_01db;
 	}
 
 IL_01a4:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:98>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:98>
 		StringBuilder_t* L_35;
 		L_35 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_35);
 		StringBuilder_t* L_36;
 		L_36 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_35, _stringLiteralE0CFF3BC021C7A77F8C1BAFB2D406397F52AD882, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:99>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:99>
 		goto IL_01db;
 	}
 
 IL_01b7:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:102>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:102>
 		StringBuilder_t* L_37;
 		L_37 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_37);
 		StringBuilder_t* L_38;
 		L_38 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_37, _stringLiteral4809E30105820D7F0D6338C0181D9A191EAE18E2, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:103>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:103>
 		goto IL_01db;
 	}
 
 IL_01ca:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:106>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:106>
 		StringBuilder_t* L_39;
 		L_39 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_39);
@@ -2001,17 +2001,17 @@ IL_01ca:
 
 IL_01db:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:110>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:110>
 		BinaryExpression_tCFC1F7B29A185986E4A41101F75232CFDDA81D2B* L_41 = ___0_binary;
 		NullCheck(L_41);
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_42;
 		L_42 = BinaryExpression_get_RightExpression_m7CF8195F4CC8C4EEABB53A658BECE92ACEE3BD94_inline(L_41, NULL);
 		SerializationVisitor_EncapsulateNoValue_m06891EDB91B45CA3AF14D77517BAF38013719DC9(__this, L_42, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:111>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:111>
 		return;
 	}
 }
-// Method Definition Index: 118726
+// Method Definition Index: 118874
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializationVisitor_Visit_mA2167A9765FE3128958F0CB0D0AA1A94CF33B896 (SerializationVisitor_t905028B475D58D19AF23347E008E38A220539D58* __this, UnaryExpression_t7C7A55B898046D406C32F128859B2D1A7C97358E* ___0_unary, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2024,7 +2024,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializationVisitor_Visit_mA2167A9765FE
 	}
 	int32_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:115>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:115>
 		UnaryExpression_t7C7A55B898046D406C32F128859B2D1A7C97358E* L_0 = ___0_unary;
 		NullCheck(L_0);
 		int32_t L_1;
@@ -2053,31 +2053,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializationVisitor_Visit_mA2167A9765FE
 
 IL_001b:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:118>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:118>
 		StringBuilder_t* L_3;
 		L_3 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_3);
 		StringBuilder_t* L_4;
 		L_4 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_3, _stringLiteral15196F05B117690F3E12E56AA0C43803EA0D2A46, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:119>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:119>
 		goto IL_0052;
 	}
 
 IL_002e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:122>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:122>
 		StringBuilder_t* L_5;
 		L_5 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_5);
 		StringBuilder_t* L_6;
 		L_6 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_5, _stringLiteral3B2C1C62D4D1C2A0C8A9AC42DB00D33C654F9AD0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:123>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:123>
 		goto IL_0052;
 	}
 
 IL_0041:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:126>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:126>
 		StringBuilder_t* L_7;
 		L_7 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_7);
@@ -2087,17 +2087,17 @@ IL_0041:
 
 IL_0052:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:130>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:130>
 		UnaryExpression_t7C7A55B898046D406C32F128859B2D1A7C97358E* L_9 = ___0_unary;
 		NullCheck(L_9);
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_10;
 		L_10 = UnaryExpression_get_Expression_m048BC347DA44FFBA007ECA3B5C71B26C9A730EED_inline(L_9, NULL);
 		SerializationVisitor_EncapsulateNoValue_m06891EDB91B45CA3AF14D77517BAF38013719DC9(__this, L_10, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:131>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:131>
 		return;
 	}
 }
-// Method Definition Index: 118727
+// Method Definition Index: 118875
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializationVisitor_Visit_mAF3BD72EE9DAF030DB798A90E571B62E3F08D2AC (SerializationVisitor_t905028B475D58D19AF23347E008E38A220539D58* __this, ValueExpression_t10CE6DF459173F04F6A5B1F499ACB837E737DBC7* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2113,7 +2113,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializationVisitor_Visit_mAF3BD72EE9DA
 	Decimal_tDA6C877282B2D789CF97C0949661CC11D643969F V_1;
 	memset((&V_1), 0, sizeof(V_1));
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:135>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:135>
 		ValueExpression_t10CE6DF459173F04F6A5B1F499ACB837E737DBC7* L_0 = ___0_value;
 		NullCheck(L_0);
 		int32_t L_1;
@@ -2150,7 +2150,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializationVisitor_Visit_mAF3BD72EE9DA
 
 IL_0022:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:138>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:138>
 		StringBuilder_t* L_3;
 		L_3 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		ValueExpression_t10CE6DF459173F04F6A5B1F499ACB837E737DBC7* L_4 = ___0_value;
@@ -2163,13 +2163,13 @@ IL_0022:
 		NullCheck(L_6);
 		StringBuilder_t* L_7;
 		L_7 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_6, _stringLiteral2386E77CF610F786B06A91AF2C1B3FD2282D2745, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:139>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:139>
 		return;
 	}
 
 IL_003f:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:142>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:142>
 		StringBuilder_t* L_8;
 		L_8 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_8);
@@ -2188,13 +2188,13 @@ IL_003f:
 		NullCheck(L_13);
 		StringBuilder_t* L_14;
 		L_14 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_13, _stringLiteral2386E77CF610F786B06A91AF2C1B3FD2282D2745, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:143>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:143>
 		return;
 	}
 
 IL_0070:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:146>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:146>
 		StringBuilder_t* L_15;
 		L_15 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		ValueExpression_t10CE6DF459173F04F6A5B1F499ACB837E737DBC7* L_16 = ___0_value;
@@ -2217,13 +2217,13 @@ IL_0070:
 		NullCheck(L_22);
 		StringBuilder_t* L_23;
 		L_23 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_22, _stringLiteral2386E77CF610F786B06A91AF2C1B3FD2282D2745, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:147>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:147>
 		return;
 	}
 
 IL_00a5:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:150>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:150>
 		StringBuilder_t* L_24;
 		L_24 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		ValueExpression_t10CE6DF459173F04F6A5B1F499ACB837E737DBC7* L_25 = ___0_value;
@@ -2236,13 +2236,13 @@ IL_00a5:
 		NullCheck(L_27);
 		StringBuilder_t* L_28;
 		L_28 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_27, _stringLiteral2386E77CF610F786B06A91AF2C1B3FD2282D2745, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:151>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:151>
 		return;
 	}
 
 IL_00c2:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:154>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:154>
 		StringBuilder_t* L_29;
 		L_29 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_29);
@@ -2261,11 +2261,11 @@ IL_00c2:
 		NullCheck(L_34);
 		StringBuilder_t* L_35;
 		L_35 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_34, _stringLiteral2386E77CF610F786B06A91AF2C1B3FD2282D2745, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:157>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:157>
 		return;
 	}
 }
-// Method Definition Index: 118728
+// Method Definition Index: 118876
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializationVisitor_Visit_m61FDF5B476F37E1A8710A3532564AB9790487D65 (SerializationVisitor_t905028B475D58D19AF23347E008E38A220539D58* __this, FunctionExpression_t3A53FC78B142456333673341D03D61C3A6216BAD* ___0_function, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2278,7 +2278,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializationVisitor_Visit_m61FDF5B476F3
 	}
 	int32_t V_0 = 0;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:161>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:161>
 		StringBuilder_t* L_0;
 		L_0 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		FunctionExpression_t3A53FC78B142456333673341D03D61C3A6216BAD* L_1 = ___0_function;
@@ -2291,20 +2291,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializationVisitor_Visit_m61FDF5B476F3
 		NullCheck(L_0);
 		StringBuilder_t* L_4;
 		L_4 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_0, L_3, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:163>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:163>
 		StringBuilder_t* L_5;
 		L_5 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_5);
 		StringBuilder_t* L_6;
 		L_6 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_5, _stringLiteralA3DFC0C77ACADE0EE48DCC73E795A597D0270A73, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:165>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:165>
 		V_0 = 0;
 		goto IL_0076;
 	}
 
 IL_002c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:167>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:167>
 		FunctionExpression_t3A53FC78B142456333673341D03D61C3A6216BAD* L_7 = ___0_function;
 		NullCheck(L_7);
 		LogicalExpressionU5BU5D_t49F14F6531BBD5377D7F7213C54828402C75EB0B* L_8;
@@ -2315,7 +2315,7 @@ IL_002c:
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_11 = (L_8)->GetAt(static_cast<il2cpp_array_size_t>(L_10));
 		NullCheck(L_11);
 		VirtualActionInvoker1< LogicalExpressionVisitor_t7CEF3C71E05242B458501BB2898642F4F9C01AE2* >::Invoke(4, L_11, __this);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:169>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:169>
 		int32_t L_12 = V_0;
 		FunctionExpression_t3A53FC78B142456333673341D03D61C3A6216BAD* L_13 = ___0_function;
 		NullCheck(L_13);
@@ -2328,7 +2328,7 @@ IL_002c:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:171>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:171>
 		StringBuilder_t* L_15;
 		L_15 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		StringBuilder_t* L_16;
@@ -2339,7 +2339,7 @@ IL_002c:
 		NullCheck(L_15);
 		StringBuilder_t* L_18;
 		L_18 = StringBuilder_Remove_m0D93692674D1C09795C7D6542420A3B6C5F81E90(L_15, ((int32_t)il2cpp_codegen_subtract(L_17, 1)), 1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:172>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:172>
 		StringBuilder_t* L_19;
 		L_19 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_19);
@@ -2349,14 +2349,14 @@ IL_002c:
 
 IL_0072:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:165>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:165>
 		int32_t L_21 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_21, 1));
 	}
 
 IL_0076:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:165>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:165>
 		int32_t L_22 = V_0;
 		FunctionExpression_t3A53FC78B142456333673341D03D61C3A6216BAD* L_23 = ___0_function;
 		NullCheck(L_23);
@@ -2374,7 +2374,7 @@ IL_0076:
 
 IL_0083:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:179>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:179>
 		StringBuilder_t* L_25;
 		L_25 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		StringBuilder_t* L_26;
@@ -2389,7 +2389,7 @@ IL_0083:
 
 IL_009d:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:177>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:177>
 		StringBuilder_t* L_29;
 		L_29 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		StringBuilder_t* L_30;
@@ -2406,17 +2406,17 @@ IL_009d:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:182>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:182>
 		StringBuilder_t* L_33;
 		L_33 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_33);
 		StringBuilder_t* L_34;
 		L_34 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_33, _stringLiteralC087E631060AB76B7C814C0E1B92D5C7C4C4B924, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:183>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:183>
 		return;
 	}
 }
-// Method Definition Index: 118729
+// Method Definition Index: 118877
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializationVisitor_Visit_mF388B7819484B208F634D64AEAD4A61A409959F8 (SerializationVisitor_t905028B475D58D19AF23347E008E38A220539D58* __this, IdentifierExpression_tC5B02681A1745D0F3ADE0B4FBA62CE3118E850E1* ___0_identifier, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2427,7 +2427,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializationVisitor_Visit_mF388B7819484
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:187>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:187>
 		StringBuilder_t* L_0;
 		L_0 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_0);
@@ -2443,11 +2443,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializationVisitor_Visit_mF388B7819484
 		NullCheck(L_4);
 		StringBuilder_t* L_5;
 		L_5 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_4, _stringLiteral10A105116F1400FFCE661E402C3C12DDCA0D688C, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:188>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:188>
 		return;
 	}
 }
-// Method Definition Index: 118730
+// Method Definition Index: 118878
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializationVisitor_EncapsulateNoValue_m06891EDB91B45CA3AF14D77517BAF38013719DC9 (SerializationVisitor_t905028B475D58D19AF23347E008E38A220539D58* __this, LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* ___0_expression, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2459,7 +2459,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializationVisitor_EncapsulateNoValue_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:192>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:192>
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_0 = ___0_expression;
 		if (!((ValueExpression_t10CE6DF459173F04F6A5B1F499ACB837E737DBC7*)IsInstClass((RuntimeObject*)L_0, ValueExpression_t10CE6DF459173F04F6A5B1F499ACB837E737DBC7_il2cpp_TypeInfo_var)))
 		{
@@ -2467,7 +2467,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializationVisitor_EncapsulateNoValue_
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:194>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:194>
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_1 = ___0_expression;
 		NullCheck(L_1);
 		VirtualActionInvoker1< LogicalExpressionVisitor_t7CEF3C71E05242B458501BB2898642F4F9C01AE2* >::Invoke(4, L_1, __this);
@@ -2476,13 +2476,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SerializationVisitor_EncapsulateNoValue_
 
 IL_0010:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:198>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:198>
 		StringBuilder_t* L_2;
 		L_2 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_2);
 		StringBuilder_t* L_3;
 		L_3 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_2, _stringLiteralA3DFC0C77ACADE0EE48DCC73E795A597D0270A73, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:199>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:199>
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_4 = ___0_expression;
 		NullCheck(L_4);
 		VirtualActionInvoker1< LogicalExpressionVisitor_t7CEF3C71E05242B458501BB2898642F4F9C01AE2* >::Invoke(4, L_4, __this);
@@ -2491,7 +2491,7 @@ IL_0010:
 
 IL_002a:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:204>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:204>
 		StringBuilder_t* L_5;
 		L_5 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		StringBuilder_t* L_6;
@@ -2506,7 +2506,7 @@ IL_002a:
 
 IL_0044:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:202>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:202>
 		StringBuilder_t* L_9;
 		L_9 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		StringBuilder_t* L_10;
@@ -2523,13 +2523,13 @@ IL_0044:
 		}
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:207>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:207>
 		StringBuilder_t* L_13;
 		L_13 = SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline(__this, NULL);
 		NullCheck(L_13);
 		StringBuilder_t* L_14;
 		L_14 = StringBuilder_Append_m08904D74E0C78E5F36DCD9C9303BDD07886D9F7D(L_13, _stringLiteralC087E631060AB76B7C814C0E1B92D5C7C4C4B924, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:209>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:209>
 		return;
 	}
 }
@@ -2541,94 +2541,94 @@ IL_0044:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 118731
+// Method Definition Index: 118879
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TernaryExpression__ctor_mCB08337682715EEB37EE0D03996181A303FD3267 (TernaryExpression_t9A0501B3ED48F564B0F3012DEF0E8D8CCDD106CC* __this, LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* ___0_leftExpression, LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* ___1_middleExpression, LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* ___2_rightExpression, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:5>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:5>
 		LogicalExpression__ctor_mC180EF846E24CD9005ED04E50B507193551547EF(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:7>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:7>
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_0 = ___0_leftExpression;
 		TernaryExpression_set_LeftExpression_mA61386087E56C883FC1036D5C1A93347C2C0D7BF_inline(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:8>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:8>
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_1 = ___1_middleExpression;
 		TernaryExpression_set_MiddleExpression_m78AB85AA7179BE64D7C6EEC0D534DED8E16CBB03_inline(__this, L_1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:9>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:9>
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_2 = ___2_rightExpression;
 		TernaryExpression_set_RightExpression_m32C9F11F1B7C64A2853EA2D1EDAA0BC18D0E775E_inline(__this, L_2, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:10>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:10>
 		return;
 	}
 }
-// Method Definition Index: 118732
+// Method Definition Index: 118880
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* TernaryExpression_get_LeftExpression_mDE504809B2CDB09C513D85D62F681F3432EAEBE0 (TernaryExpression_t9A0501B3ED48F564B0F3012DEF0E8D8CCDD106CC* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:12>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:12>
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_0 = __this->___U3CLeftExpressionU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 118733
+// Method Definition Index: 118881
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TernaryExpression_set_LeftExpression_mA61386087E56C883FC1036D5C1A93347C2C0D7BF (TernaryExpression_t9A0501B3ED48F564B0F3012DEF0E8D8CCDD106CC* __this, LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:12>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:12>
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_0 = ___0_value;
 		__this->___U3CLeftExpressionU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CLeftExpressionU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 118734
+// Method Definition Index: 118882
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* TernaryExpression_get_MiddleExpression_m31BE5A457389B52577A93E6757D2291A3ABDDFA7 (TernaryExpression_t9A0501B3ED48F564B0F3012DEF0E8D8CCDD106CC* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:14>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:14>
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_0 = __this->___U3CMiddleExpressionU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 118735
+// Method Definition Index: 118883
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TernaryExpression_set_MiddleExpression_m78AB85AA7179BE64D7C6EEC0D534DED8E16CBB03 (TernaryExpression_t9A0501B3ED48F564B0F3012DEF0E8D8CCDD106CC* __this, LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:14>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:14>
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_0 = ___0_value;
 		__this->___U3CMiddleExpressionU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CMiddleExpressionU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 118736
+// Method Definition Index: 118884
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* TernaryExpression_get_RightExpression_m3BB5D4B3540900E08217DBA3B4DCA150B3293825 (TernaryExpression_t9A0501B3ED48F564B0F3012DEF0E8D8CCDD106CC* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:16>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:16>
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_0 = __this->___U3CRightExpressionU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 118737
+// Method Definition Index: 118885
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TernaryExpression_set_RightExpression_m32C9F11F1B7C64A2853EA2D1EDAA0BC18D0E775E (TernaryExpression_t9A0501B3ED48F564B0F3012DEF0E8D8CCDD106CC* __this, LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:16>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:16>
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_0 = ___0_value;
 		__this->___U3CRightExpressionU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CRightExpressionU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 118738
+// Method Definition Index: 118886
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TernaryExpression_Accept_m87285AA7D23F48EBC1D65506490B17EA950C2822 (TernaryExpression_t9A0501B3ED48F564B0F3012DEF0E8D8CCDD106CC* __this, LogicalExpressionVisitor_t7CEF3C71E05242B458501BB2898642F4F9C01AE2* ___0_visitor, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:20>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:20>
 		LogicalExpressionVisitor_t7CEF3C71E05242B458501BB2898642F4F9C01AE2* L_0 = ___0_visitor;
 		NullCheck(L_0);
 		VirtualActionInvoker1< TernaryExpression_t9A0501B3ED48F564B0F3012DEF0E8D8CCDD106CC* >::Invoke(4, L_0, __this);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:21>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:21>
 		return;
 	}
 }
@@ -2640,70 +2640,70 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TernaryExpression_Accept_m87285AA7D23F48
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 118739
+// Method Definition Index: 118887
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnaryExpression__ctor_m1FB2772CED5F7227987F4689D8697977BCA3C24E (UnaryExpression_t7C7A55B898046D406C32F128859B2D1A7C97358E* __this, int32_t ___0_type, LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* ___1_expression, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:5>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:5>
 		LogicalExpression__ctor_mC180EF846E24CD9005ED04E50B507193551547EF(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:7>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:7>
 		int32_t L_0 = ___0_type;
 		UnaryExpression_set_Type_m99254492E0713042FF17F8993E77B00312BB5DE1_inline(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:8>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:8>
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_1 = ___1_expression;
 		UnaryExpression_set_Expression_m458F59A7061112E5568F1C100D0655350B6E9029_inline(__this, L_1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:9>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:9>
 		return;
 	}
 }
-// Method Definition Index: 118740
+// Method Definition Index: 118888
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* UnaryExpression_get_Expression_m048BC347DA44FFBA007ECA3B5C71B26C9A730EED (UnaryExpression_t7C7A55B898046D406C32F128859B2D1A7C97358E* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:11>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:11>
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_0 = __this->___U3CExpressionU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 118741
+// Method Definition Index: 118889
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnaryExpression_set_Expression_m458F59A7061112E5568F1C100D0655350B6E9029 (UnaryExpression_t7C7A55B898046D406C32F128859B2D1A7C97358E* __this, LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:11>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:11>
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_0 = ___0_value;
 		__this->___U3CExpressionU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CExpressionU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 118742
+// Method Definition Index: 118890
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnaryExpression_get_Type_m1975DEB3A3A893A20EEF225A9B83A818812A457B (UnaryExpression_t7C7A55B898046D406C32F128859B2D1A7C97358E* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:13>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:13>
 		int32_t L_0 = __this->___U3CTypeU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 118743
+// Method Definition Index: 118891
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnaryExpression_set_Type_m99254492E0713042FF17F8993E77B00312BB5DE1 (UnaryExpression_t7C7A55B898046D406C32F128859B2D1A7C97358E* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:13>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:13>
 		int32_t L_0 = ___0_value;
 		__this->___U3CTypeU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 118744
+// Method Definition Index: 118892
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnaryExpression_Accept_m3A43817A0CF736373B199C035BF99EFD9BCF65C5 (UnaryExpression_t7C7A55B898046D406C32F128859B2D1A7C97358E* __this, LogicalExpressionVisitor_t7CEF3C71E05242B458501BB2898642F4F9C01AE2* ___0_visitor, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:17>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:17>
 		LogicalExpressionVisitor_t7CEF3C71E05242B458501BB2898642F4F9C01AE2* L_0 = ___0_visitor;
 		NullCheck(L_0);
 		VirtualActionInvoker1< UnaryExpression_t7C7A55B898046D406C32F128859B2D1A7C97358E* >::Invoke(6, L_0, __this);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:18>
 		return;
 	}
 }
@@ -2723,23 +2723,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnaryExpression_Accept_m3A43817A0CF73637
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 118745
+// Method Definition Index: 118893
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueExpression__ctor_m824D9FF0F53B0C67CA4DF6DA22DC29D1C18A9ECB (ValueExpression_t10CE6DF459173F04F6A5B1F499ACB837E737DBC7* __this, RuntimeObject* ___0_value, int32_t ___1_type, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:7>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:7>
 		LogicalExpression__ctor_mC180EF846E24CD9005ED04E50B507193551547EF(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:9>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:9>
 		RuntimeObject* L_0 = ___0_value;
 		ValueExpression_set_Value_m48A57BC266A58CFB4A2EF7821805AD556399EC7A_inline(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:10>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:10>
 		int32_t L_1 = ___1_type;
 		ValueExpression_set_Type_mDE7ABF79914D5FC2C93E353268D68AF6DFAB39DF_inline(__this, L_1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:11>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:11>
 		return;
 	}
 }
-// Method Definition Index: 118746
+// Method Definition Index: 118894
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueExpression__ctor_mACD41125FFF375D20F709F1B2CB4B0002A8D2C97 (ValueExpression_t10CE6DF459173F04F6A5B1F499ACB837E737DBC7* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -2748,9 +2748,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueExpression__ctor_mACD41125FFF375D20
 	String_t* G_B10_0 = NULL;
 	String_t* G_B10_1 = NULL;
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:13>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:13>
 		LogicalExpression__ctor_mC180EF846E24CD9005ED04E50B507193551547EF(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:15>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:15>
 		RuntimeObject* L_0 = ___0_value;
 		NullCheck(L_0);
 		Type_t* L_1;
@@ -2834,47 +2834,47 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueExpression__ctor_mACD41125FFF375D20
 
 IL_005c:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:18>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:18>
 		ValueExpression_set_Type_mDE7ABF79914D5FC2C93E353268D68AF6DFAB39DF_inline(__this, 4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:19>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:19>
 		goto IL_00a5;
 	}
 
 IL_0065:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:22>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:22>
 		ValueExpression_set_Type_mDE7ABF79914D5FC2C93E353268D68AF6DFAB39DF_inline(__this, 2, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:23>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:23>
 		goto IL_00a5;
 	}
 
 IL_006e:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:28>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:28>
 		ValueExpression_set_Type_mDE7ABF79914D5FC2C93E353268D68AF6DFAB39DF_inline(__this, 3, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:29>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:29>
 		goto IL_00a5;
 	}
 
 IL_0077:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:39>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:39>
 		ValueExpression_set_Type_mDE7ABF79914D5FC2C93E353268D68AF6DFAB39DF_inline(__this, 0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:40>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:40>
 		goto IL_00a5;
 	}
 
 IL_0080:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:43>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:43>
 		ValueExpression_set_Type_mDE7ABF79914D5FC2C93E353268D68AF6DFAB39DF_inline(__this, 1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:44>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:44>
 		goto IL_00a5;
 	}
 
 IL_0089:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:47>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:47>
 		RuntimeObject* L_4 = ___0_value;
 		if (L_4)
 		{
@@ -2910,63 +2910,63 @@ IL_009a:
 
 IL_00a5:
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:50>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:50>
 		RuntimeObject* L_9 = ___0_value;
 		ValueExpression_set_Value_m48A57BC266A58CFB4A2EF7821805AD556399EC7A_inline(__this, L_9, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:51>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:51>
 		return;
 	}
 }
-// Method Definition Index: 118747
+// Method Definition Index: 118895
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueExpression__ctor_m64932619474457A2EC86AAFB6803242EAF683C9F (ValueExpression_t10CE6DF459173F04F6A5B1F499ACB837E737DBC7* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:53>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:53>
 		LogicalExpression__ctor_mC180EF846E24CD9005ED04E50B507193551547EF(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:55>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:55>
 		String_t* L_0 = ___0_value;
 		ValueExpression_set_Value_m48A57BC266A58CFB4A2EF7821805AD556399EC7A_inline(__this, L_0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:56>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:56>
 		ValueExpression_set_Type_mDE7ABF79914D5FC2C93E353268D68AF6DFAB39DF_inline(__this, 1, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:57>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:57>
 		return;
 	}
 }
-// Method Definition Index: 118748
+// Method Definition Index: 118896
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueExpression__ctor_m7E0753DE1AD2DA756C691B84700449E413F7663A (ValueExpression_t10CE6DF459173F04F6A5B1F499ACB837E737DBC7* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:59>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:59>
 		LogicalExpression__ctor_mC180EF846E24CD9005ED04E50B507193551547EF(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:61>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:61>
 		int32_t L_0 = ___0_value;
 		int32_t L_1 = L_0;
 		RuntimeObject* L_2 = Box(il2cpp_defaults.int32_class, &L_1);
 		ValueExpression_set_Value_m48A57BC266A58CFB4A2EF7821805AD556399EC7A_inline(__this, L_2, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:62>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:62>
 		ValueExpression_set_Type_mDE7ABF79914D5FC2C93E353268D68AF6DFAB39DF_inline(__this, 0, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:63>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:63>
 		return;
 	}
 }
-// Method Definition Index: 118749
+// Method Definition Index: 118897
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueExpression__ctor_mE330F904E914D7B454BB195668A6D89C5B5F13DD (ValueExpression_t10CE6DF459173F04F6A5B1F499ACB837E737DBC7* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:65>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:65>
 		LogicalExpression__ctor_mC180EF846E24CD9005ED04E50B507193551547EF(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:67>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:67>
 		float L_0 = ___0_value;
 		float L_1 = L_0;
 		RuntimeObject* L_2 = Box(il2cpp_defaults.single_class, &L_1);
 		ValueExpression_set_Value_m48A57BC266A58CFB4A2EF7821805AD556399EC7A_inline(__this, L_2, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:68>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:68>
 		ValueExpression_set_Type_mDE7ABF79914D5FC2C93E353268D68AF6DFAB39DF_inline(__this, 3, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:69>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:69>
 		return;
 	}
 }
-// Method Definition Index: 118750
+// Method Definition Index: 118898
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueExpression__ctor_m5FA864D2F1EC21C1C0788F61CF5B2EB0A203D223 (ValueExpression_t10CE6DF459173F04F6A5B1F499ACB837E737DBC7* __this, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2976,84 +2976,84 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueExpression__ctor_m5FA864D2F1EC21C1C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:71>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:71>
 		LogicalExpression__ctor_mC180EF846E24CD9005ED04E50B507193551547EF(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:73>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:73>
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_0 = ___0_value;
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_1 = L_0;
 		RuntimeObject* L_2 = Box(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var, &L_1);
 		ValueExpression_set_Value_m48A57BC266A58CFB4A2EF7821805AD556399EC7A_inline(__this, L_2, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:74>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:74>
 		ValueExpression_set_Type_mDE7ABF79914D5FC2C93E353268D68AF6DFAB39DF_inline(__this, 2, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:75>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:75>
 		return;
 	}
 }
-// Method Definition Index: 118751
+// Method Definition Index: 118899
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueExpression__ctor_m3D94A47FFF8510B37262AD8CE50E6982153BA06A (ValueExpression_t10CE6DF459173F04F6A5B1F499ACB837E737DBC7* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:77>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:77>
 		LogicalExpression__ctor_mC180EF846E24CD9005ED04E50B507193551547EF(__this, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:79>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:79>
 		bool L_0 = ___0_value;
 		bool L_1 = L_0;
 		RuntimeObject* L_2 = Box(il2cpp_defaults.boolean_class, &L_1);
 		ValueExpression_set_Value_m48A57BC266A58CFB4A2EF7821805AD556399EC7A_inline(__this, L_2, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:80>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:80>
 		ValueExpression_set_Type_mDE7ABF79914D5FC2C93E353268D68AF6DFAB39DF_inline(__this, 4, NULL);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:81>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:81>
 		return;
 	}
 }
-// Method Definition Index: 118752
+// Method Definition Index: 118900
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ValueExpression_get_Value_m5114B4BA989CC94C8E5090888632884B9EC3428E (ValueExpression_t10CE6DF459173F04F6A5B1F499ACB837E737DBC7* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:83>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:83>
 		RuntimeObject* L_0 = __this->___U3CValueU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 118753
+// Method Definition Index: 118901
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueExpression_set_Value_m48A57BC266A58CFB4A2EF7821805AD556399EC7A (ValueExpression_t10CE6DF459173F04F6A5B1F499ACB837E737DBC7* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:83>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:83>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___U3CValueU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CValueU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 118754
+// Method Definition Index: 118902
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ValueExpression_get_Type_mB8AC3CE9703854799ACF44BC217CE9F39ED933E5 (ValueExpression_t10CE6DF459173F04F6A5B1F499ACB837E737DBC7* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:84>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:84>
 		int32_t L_0 = __this->___U3CTypeU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 118755
+// Method Definition Index: 118903
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueExpression_set_Type_mDE7ABF79914D5FC2C93E353268D68AF6DFAB39DF (ValueExpression_t10CE6DF459173F04F6A5B1F499ACB837E737DBC7* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:84>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:84>
 		int32_t L_0 = ___0_value;
 		__this->___U3CTypeU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 118756
+// Method Definition Index: 118904
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueExpression_Accept_mE406F7BBE8CCC32F795063829B71C5577AC99E07 (ValueExpression_t10CE6DF459173F04F6A5B1F499ACB837E737DBC7* __this, LogicalExpressionVisitor_t7CEF3C71E05242B458501BB2898642F4F9C01AE2* ___0_visitor, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:88>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:88>
 		LogicalExpressionVisitor_t7CEF3C71E05242B458501BB2898642F4F9C01AE2* L_0 = ___0_visitor;
 		NullCheck(L_0);
 		VirtualActionInvoker1< ValueExpression_t10CE6DF459173F04F6A5B1F499ACB837E737DBC7* >::Invoke(7, L_0, __this);
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:89>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:89>
 		return;
 	}
 }
@@ -3073,7 +3073,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ValueExpression_Accept_mE406F7BBE8CCC32F
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 118757
+// Method Definition Index: 118905
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t U3CPrivateImplementationDetailsU3E_ComputeStringHash_mCD31B865A41BB2F8FD3279C909302AD1BB45C92F (String_t* ___0_s, const RuntimeMethod* method) 
 {
 	uint32_t V_0 = 0;
@@ -3142,223 +3142,223 @@ IL_002a:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 118719
+// Method Definition Index: 118867
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ParameterArgs_set_HasResult_m9CB8E148415DFDB780A5C5D0299E71AB596A76B8_inline (ParameterArgs_t6F99757E4429D71D057F5A21D287F4F0E57D7957* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ParameterArgs.cs:22>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ParameterArgs.cs:22>
 		bool L_0 = ___0_value;
 		__this->___U3CHasResultU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 118723
+// Method Definition Index: 118871
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SerializationVisitor_set_Result_m1C2912A68EBF051E396DA3EC9A52BFED68A46A36_inline (SerializationVisitor_t905028B475D58D19AF23347E008E38A220539D58* __this, StringBuilder_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:16>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:16>
 		StringBuilder_t* L_0 = ___0_value;
 		__this->___U3CResultU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CResultU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 118732
+// Method Definition Index: 118880
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* TernaryExpression_get_LeftExpression_mDE504809B2CDB09C513D85D62F681F3432EAEBE0_inline (TernaryExpression_t9A0501B3ED48F564B0F3012DEF0E8D8CCDD106CC* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:12>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:12>
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_0 = __this->___U3CLeftExpressionU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 118722
+// Method Definition Index: 118870
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR StringBuilder_t* SerializationVisitor_get_Result_mC640670F888A2801FC65EDB88439253555AF1841_inline (SerializationVisitor_t905028B475D58D19AF23347E008E38A220539D58* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:16>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/SerializationVisitor.cs:16>
 		StringBuilder_t* L_0 = __this->___U3CResultU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 118734
+// Method Definition Index: 118882
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* TernaryExpression_get_MiddleExpression_m31BE5A457389B52577A93E6757D2291A3ABDDFA7_inline (TernaryExpression_t9A0501B3ED48F564B0F3012DEF0E8D8CCDD106CC* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:14>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:14>
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_0 = __this->___U3CMiddleExpressionU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 118736
+// Method Definition Index: 118884
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* TernaryExpression_get_RightExpression_m3BB5D4B3540900E08217DBA3B4DCA150B3293825_inline (TernaryExpression_t9A0501B3ED48F564B0F3012DEF0E8D8CCDD106CC* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:16>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:16>
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_0 = __this->___U3CRightExpressionU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 118442
+// Method Definition Index: 118590
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* BinaryExpression_get_LeftExpression_mD21818A59055D95C304B73471F9D4B782DB63B28_inline (BinaryExpression_tCFC1F7B29A185986E4A41101F75232CFDDA81D2B* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/BinaryExpression.cs:12>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/BinaryExpression.cs:12>
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_0 = __this->___U3CLeftExpressionU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 118446
+// Method Definition Index: 118594
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t BinaryExpression_get_Type_m643CED48C4A086AB2E63036E53B64DD3D04D10A1_inline (BinaryExpression_tCFC1F7B29A185986E4A41101F75232CFDDA81D2B* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/BinaryExpression.cs:16>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/BinaryExpression.cs:16>
 		int32_t L_0 = __this->___U3CTypeU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 118444
+// Method Definition Index: 118592
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* BinaryExpression_get_RightExpression_m7CF8195F4CC8C4EEABB53A658BECE92ACEE3BD94_inline (BinaryExpression_tCFC1F7B29A185986E4A41101F75232CFDDA81D2B* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/BinaryExpression.cs:14>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/BinaryExpression.cs:14>
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_0 = __this->___U3CRightExpressionU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 118742
+// Method Definition Index: 118890
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t UnaryExpression_get_Type_m1975DEB3A3A893A20EEF225A9B83A818812A457B_inline (UnaryExpression_t7C7A55B898046D406C32F128859B2D1A7C97358E* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:13>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:13>
 		int32_t L_0 = __this->___U3CTypeU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 118740
+// Method Definition Index: 118888
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* UnaryExpression_get_Expression_m048BC347DA44FFBA007ECA3B5C71B26C9A730EED_inline (UnaryExpression_t7C7A55B898046D406C32F128859B2D1A7C97358E* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:11>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:11>
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_0 = __this->___U3CExpressionU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 118754
+// Method Definition Index: 118902
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ValueExpression_get_Type_mB8AC3CE9703854799ACF44BC217CE9F39ED933E5_inline (ValueExpression_t10CE6DF459173F04F6A5B1F499ACB837E737DBC7* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:84>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:84>
 		int32_t L_0 = __this->___U3CTypeU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 118752
+// Method Definition Index: 118900
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* ValueExpression_get_Value_m5114B4BA989CC94C8E5090888632884B9EC3428E_inline (ValueExpression_t10CE6DF459173F04F6A5B1F499ACB837E737DBC7* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:83>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:83>
 		RuntimeObject* L_0 = __this->___U3CValueU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 118520
+// Method Definition Index: 118668
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR IdentifierExpression_tC5B02681A1745D0F3ADE0B4FBA62CE3118E850E1* FunctionExpression_get_Identifier_mC36B5723E1F5542170364200861FE75527686D3E_inline (FunctionExpression_t3A53FC78B142456333673341D03D61C3A6216BAD* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/FunctionExpression.cs:11>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/FunctionExpression.cs:11>
 		IdentifierExpression_tC5B02681A1745D0F3ADE0B4FBA62CE3118E850E1* L_0 = __this->___U3CIdentifierU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 118526
+// Method Definition Index: 118674
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* IdentifierExpression_get_Name_mEC9209065D0E0A9E5877D0D7CE5C5F06317F27B2_inline (IdentifierExpression_tC5B02681A1745D0F3ADE0B4FBA62CE3118E850E1* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/IdentifierExpression.cs:10>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/IdentifierExpression.cs:10>
 		String_t* L_0 = __this->___U3CNameU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 118522
+// Method Definition Index: 118670
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR LogicalExpressionU5BU5D_t49F14F6531BBD5377D7F7213C54828402C75EB0B* FunctionExpression_get_Expressions_mDD1CA87B11D2BAE3D578441A3BC83657D0FB9819_inline (FunctionExpression_t3A53FC78B142456333673341D03D61C3A6216BAD* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/FunctionExpression.cs:13>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/FunctionExpression.cs:13>
 		LogicalExpressionU5BU5D_t49F14F6531BBD5377D7F7213C54828402C75EB0B* L_0 = __this->___U3CExpressionsU3Ek__BackingField;
 		return L_0;
 	}
 }
-// Method Definition Index: 118733
+// Method Definition Index: 118881
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TernaryExpression_set_LeftExpression_mA61386087E56C883FC1036D5C1A93347C2C0D7BF_inline (TernaryExpression_t9A0501B3ED48F564B0F3012DEF0E8D8CCDD106CC* __this, LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:12>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:12>
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_0 = ___0_value;
 		__this->___U3CLeftExpressionU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CLeftExpressionU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 118735
+// Method Definition Index: 118883
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TernaryExpression_set_MiddleExpression_m78AB85AA7179BE64D7C6EEC0D534DED8E16CBB03_inline (TernaryExpression_t9A0501B3ED48F564B0F3012DEF0E8D8CCDD106CC* __this, LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:14>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:14>
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_0 = ___0_value;
 		__this->___U3CMiddleExpressionU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CMiddleExpressionU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 118737
+// Method Definition Index: 118885
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TernaryExpression_set_RightExpression_m32C9F11F1B7C64A2853EA2D1EDAA0BC18D0E775E_inline (TernaryExpression_t9A0501B3ED48F564B0F3012DEF0E8D8CCDD106CC* __this, LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:16>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/TernaryExpression.cs:16>
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_0 = ___0_value;
 		__this->___U3CRightExpressionU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CRightExpressionU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 118743
+// Method Definition Index: 118891
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void UnaryExpression_set_Type_m99254492E0713042FF17F8993E77B00312BB5DE1_inline (UnaryExpression_t7C7A55B898046D406C32F128859B2D1A7C97358E* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:13>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:13>
 		int32_t L_0 = ___0_value;
 		__this->___U3CTypeU3Ek__BackingField = L_0;
 		return;
 	}
 }
-// Method Definition Index: 118741
+// Method Definition Index: 118889
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void UnaryExpression_set_Expression_m458F59A7061112E5568F1C100D0655350B6E9029_inline (UnaryExpression_t7C7A55B898046D406C32F128859B2D1A7C97358E* __this, LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:11>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/UnaryExpression.cs:11>
 		LogicalExpression_tCA9E3E9B83693197B8F1B3BEE909EEE4BF6FE465* L_0 = ___0_value;
 		__this->___U3CExpressionU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CExpressionU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 118753
+// Method Definition Index: 118901
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ValueExpression_set_Value_m48A57BC266A58CFB4A2EF7821805AD556399EC7A_inline (ValueExpression_t10CE6DF459173F04F6A5B1F499ACB837E737DBC7* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:83>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:83>
 		RuntimeObject* L_0 = ___0_value;
 		__this->___U3CValueU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CValueU3Ek__BackingField), (void*)L_0);
 		return;
 	}
 }
-// Method Definition Index: 118755
+// Method Definition Index: 118903
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ValueExpression_set_Type_mDE7ABF79914D5FC2C93E353268D68AF6DFAB39DF_inline (ValueExpression_t10CE6DF459173F04F6A5B1F499ACB837E737DBC7* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:./Library/PackageCache/com.unity.visualscripting@8bed5ad90189/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:84>
+		//<source_info:./Library/PackageCache/com.unity.visualscripting@4edfcc09512f/Runtime/VisualScripting.Flow/Dependencies/NCalc/ValueExpression.cs:84>
 		int32_t L_0 = ___0_value;
 		__this->___U3CTypeU3Ek__BackingField = L_0;
 		return;

@@ -4596,11 +4596,11 @@ IL_002a:
 		NullCheck(L_40);
 		int32_t L_41 = L_40->___len;
 		NullCheck(L_35);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_35, L_37, L_39, L_41);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_35, L_37, L_39, L_41);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/tls/RecordStream.cs:308>
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_42 = __this->___m_output;
 		NullCheck(L_42);
-		VirtualActionInvoker0::Invoke(20, L_42);
+		VirtualActionInvoker0::Invoke(21, L_42);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/tls/RecordStream.cs:309>
 		return;
 	}
@@ -5013,7 +5013,7 @@ IL_0002:
 		il2cpp_codegen_memory_barrier();
 		NullCheck(L_0);
 		int32_t L_5;
-		L_5 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, L_0, L_1, L_2, ((int32_t)il2cpp_codegen_subtract(L_3, L_4)));
+		L_5 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, L_0, L_1, L_2, ((int32_t)il2cpp_codegen_subtract(L_3, L_4)));
 		V_0 = L_5;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/tls/RecordStream.cs:440>
 		int32_t L_6 = V_0;
@@ -6215,7 +6215,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ServerHello_Encode_m0AC54E37ECEDB1DA3A32
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_4 = __this->___m_random;
 		NullCheck(L_4);
 		NullCheck(L_2);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_2, L_3, 0, ((int32_t)(((RuntimeArray*)L_4)->max_length)));
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_2, L_3, 0, ((int32_t)(((RuntimeArray*)L_4)->max_length)));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/tls/ServerHello.cs:78>
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_5 = __this->___m_sessionID;
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_6 = ___1_output;
@@ -7443,7 +7443,7 @@ IL_0015:
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_6 = V_0;
 		NullCheck(L_6);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_7;
-		L_7 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(41, L_6);
+		L_7 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(42, L_6);
 		__this->___m_encodedServerExtensions = L_7;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_encodedServerExtensions), (void*)L_7);
 	}
@@ -10256,7 +10256,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Ssl3Utilities_WriteEncryptedPms_m9B1FB15
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_2 = ___0_encryptedPms;
 		NullCheck(L_2);
 		NullCheck(L_0);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_0, L_1, 0, ((int32_t)(((RuntimeArray*)L_2)->max_length)));
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_0, L_1, 0, ((int32_t)(((RuntimeArray*)L_2)->max_length)));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/tls/Ssl3Utilities.cs:69>
 		return;
 	}
@@ -17837,7 +17837,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_11 = V_0;
 		NullCheck(L_11);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_12;
-		L_12 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(41, L_11);
+		L_12 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(42, L_11);
 		return L_12;
 	}
 }
@@ -18186,7 +18186,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		DigestInputBuffer_t735CD9C6DD28742989435477E016B5336CF0F444* L_14 = V_0;
 		NullCheck(L_14);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_15;
-		L_15 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(41, L_14);
+		L_15 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(42, L_14);
 		return L_15;
 	}
 }
@@ -18735,7 +18735,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_9 = V_0;
 		NullCheck(L_9);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_10;
-		L_10 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(41, L_9);
+		L_10 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(42, L_9);
 		return L_10;
 	}
 }
@@ -19091,7 +19091,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		DigestInputBuffer_t735CD9C6DD28742989435477E016B5336CF0F444* L_12 = V_0;
 		NullCheck(L_12);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_13;
-		L_13 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(41, L_12);
+		L_13 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(42, L_12);
 		return L_13;
 	}
 }
@@ -22557,7 +22557,7 @@ IL_000b:
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_5 = V_0;
 		NullCheck(L_5);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_6;
-		L_6 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(41, L_5);
+		L_6 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(42, L_5);
 		return L_6;
 	}
 }
@@ -22759,7 +22759,7 @@ IL_000b:
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_5 = V_0;
 		NullCheck(L_5);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_6;
-		L_6 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(41, L_5);
+		L_6 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(42, L_5);
 		return L_6;
 	}
 }
@@ -23020,7 +23020,7 @@ IL_000b:
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_5 = V_0;
 		NullCheck(L_5);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_6;
-		L_6 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(41, L_5);
+		L_6 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(42, L_5);
 		return L_6;
 	}
 }
@@ -23166,7 +23166,7 @@ IL_000b:
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_6 = V_0;
 		NullCheck(L_6);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_7;
-		L_7 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(41, L_6);
+		L_7 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(42, L_6);
 		return L_7;
 	}
 }
@@ -23205,7 +23205,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_3 = V_0;
 		NullCheck(L_3);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_4;
-		L_4 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(41, L_3);
+		L_4 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(42, L_3);
 		return L_4;
 	}
 }
@@ -23260,7 +23260,7 @@ IL_000b:
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_5 = V_0;
 		NullCheck(L_5);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_6;
-		L_6 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(41, L_5);
+		L_6 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(42, L_5);
 		return L_6;
 	}
 }
@@ -25599,7 +25599,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_3 = ___0_buf;
 		NullCheck(L_3);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_4;
-		L_4 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(41, L_3);
+		L_4 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(42, L_3);
 		V_0 = L_4;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/tls/TlsExtensionsUtilities.cs:1375>
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_5 = V_0;
@@ -27613,7 +27613,7 @@ IL_0135:
 		HandshakeMessageInput_t5468568D895414071D1C91FD936B80ABC348C4B9* L_52 = V_3;
 		NullCheck(L_52);
 		int64_t L_53;
-		L_53 = VirtualFuncInvoker2< int64_t, int64_t, int32_t >::Invoke(30, L_52, ((int64_t)4), 1);
+		L_53 = VirtualFuncInvoker2< int64_t, int64_t, int32_t >::Invoke(31, L_52, ((int64_t)4), 1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/tls/TlsProtocol.cs:647>
 		int16_t L_54 = V_0;
 		HandshakeMessageInput_t5468568D895414071D1C91FD936B80ABC348C4B9* L_55 = V_3;
@@ -32150,7 +32150,7 @@ IL_000d:
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_12 = V_0;
 		NullCheck(L_12);
 		NullCheck(L_10);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_10, L_11, 0, ((int32_t)(((RuntimeArray*)L_12)->max_length)));
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_10, L_11, 0, ((int32_t)(((RuntimeArray*)L_12)->max_length)));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/tls/TlsProtocol.cs:1939>
 		return;
 	}
@@ -32190,7 +32190,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_4 = V_0;
 		NullCheck(L_4);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_5;
-		L_5 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(41, L_4);
+		L_5 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(42, L_4);
 		return L_5;
 	}
 }
@@ -32278,7 +32278,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TlsProtocol_WritePreSharedKeyExtension_m
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_12 = V_0;
 		NullCheck(L_12);
 		NullCheck(L_10);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_10, L_11, 0, ((int32_t)(((RuntimeArray*)L_12)->max_length)));
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_10, L_11, 0, ((int32_t)(((RuntimeArray*)L_12)->max_length)));
 	}
 
 IL_0041:
@@ -32547,7 +32547,7 @@ IL_0052:
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_16 = V_0;
 		NullCheck(L_16);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_17;
-		L_17 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(41, L_16);
+		L_17 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(42, L_16);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/tls/TlsProtocol.cs:2026>
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_18 = ___0_output;
 		il2cpp_codegen_runtime_class_init_inline(TlsUtilities_t3A534DA544AEB444F2BDD63771561B4637E55B95_il2cpp_TypeInfo_var);

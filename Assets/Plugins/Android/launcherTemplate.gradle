@@ -12,7 +12,7 @@ android {
     ndkPath "**NDKPATH**"
     ndkVersion "27.2.12479018"
 
-    compileSdk **APIVERSION**
+    compileSdk Math.max(35, **APIVERSION**)
     buildToolsVersion = "**BUILDTOOLS**"
 
     compileOptions {

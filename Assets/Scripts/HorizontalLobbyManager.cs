@@ -19,7 +19,7 @@ public class HorizontalLobbyManager : MonoBehaviour
     [Header("Scroll Controls")]
     [SerializeField] private Button scrollLeftButton; // Button to scroll left (show previous items)
     [SerializeField] private Button scrollRightButton; // Button to scroll right (show next items)
-    [SerializeField] private bool enableSwipeDetection = false; // Enable/disable swipe scrolling
+    [SerializeField] private bool enableSwipeDetection = true; // Enable/disable swipe scrolling
     
     [Header("Scroll Animation Settings")]
     [SerializeField] private float scrollAnimationDuration = 0.3f; // Duration of scroll animation
@@ -122,6 +122,7 @@ public class HorizontalLobbyManager : MonoBehaviour
     {
         // Retry for 5 seconds
         float elapsed = 0f;
+        bool loggedWaiting = false;
         
         while (elapsed < 5f)
         {
@@ -139,9 +140,10 @@ public class HorizontalLobbyManager : MonoBehaviour
                     AutoSelectLobbyBasedOnBalance();
                     hasAutoSelectedOnce = true; // Mark as done, don't auto-select again
                 }
-                else if (elapsed < 4.5f)
+                else if (!loggedWaiting)
                 {
-                    Debug.Log($"[HorizontalLobbyManager] Waiting for player data to load... (elapsed: {elapsed}s, Cash: ${PlayerModel.CashBalance}, Chips: {PlayerModel.Coins})");
+                    Debug.Log($"[HorizontalLobbyManager] Waiting for player data to load... (Cash: ${PlayerModel.CashBalance}, Chips: {PlayerModel.Coins})");
+                    loggedWaiting = true;
                 }
             }
             
@@ -165,6 +167,14 @@ public class HorizontalLobbyManager : MonoBehaviour
     public void OnLobbyOpened()
     {
         IsLobbyActive = true;
+        isSwiping = false;
+        isScrollAnimating = false;
+
+        if (multiScrollCoroutine != null)
+        {
+            StopCoroutine(multiScrollCoroutine);
+            multiScrollCoroutine = null;
+        }
 
         // Fetch fresh lobby configurations from the API every time the lobby is opened
         LobbyModel.FetchConfigurations();
@@ -176,9 +186,11 @@ public class HorizontalLobbyManager : MonoBehaviour
             SettingManager.instance.ApplyMusicSetting();
 
         if (_lobbyObjectsData != null && _lobbyObjectsData.Length > 0 && allLobbyItems != null && allLobbyItems.Count > 0)
-            UpdateVisibleRows();
+            UpdateVisibleRows(true);
         else
             InitializeLobbyRows();
+
+        RefreshAllPlayButtons();
 
         // Stop existing initialization routine if there is one to prevent duplicates
         StopAllCoroutines(); 
@@ -188,10 +200,16 @@ public class HorizontalLobbyManager : MonoBehaviour
     private void OnEnable()
     {
         IsLobbyActive = true;
+        isSwiping = false;
+        isScrollAnimating = false;
+
+        if (multiScrollCoroutine != null)
+        {
+            StopCoroutine(multiScrollCoroutine);
+            multiScrollCoroutine = null;
+        }
 
         // Ensure the socket is alive whenever the lobby is visible.
-        // This covers returning from gameplay (socket was kept alive) AND resuming
-        // after a home-screen back (socket was disconnected) if the user re-enters.
         if (BackendAuthService.HasStoredJWT() && SocketManager.Instance != null)
             SocketManager.Instance.ConnectToServer();
 
@@ -201,9 +219,11 @@ public class HorizontalLobbyManager : MonoBehaviour
 
         // Refresh lobby rows when GameObject becomes active
         if (_lobbyObjectsData != null && _lobbyObjectsData.Length > 0 && allLobbyItems != null && allLobbyItems.Count > 0)
-            UpdateVisibleRows();
+            UpdateVisibleRows(true);
         else
             InitializeLobbyRows();
+
+        RefreshAllPlayButtons();
 
         // Start retry routine to ensure buttons light up when data is ready (e.g. after returning from game)
         StartCoroutine(InitializeButtonsRoutine());
@@ -215,6 +235,15 @@ public class HorizontalLobbyManager : MonoBehaviour
     private void OnDisable()
     {
         IsLobbyActive = false;
+        isSwiping = false;
+        isScrollAnimating = false;
+
+        if (multiScrollCoroutine != null)
+        {
+            StopCoroutine(multiScrollCoroutine);
+            multiScrollCoroutine = null;
+        }
+
         MatchmakingModel.OnMatchFound -= HandleMatchFound;
     }
 
@@ -432,10 +461,10 @@ public class HorizontalLobbyManager : MonoBehaviour
     /// Updates positions of all lobby items based on current scroll index
     /// </summary>
     /// <param name="instant">If true, snaps to position without animation</param>
-    public void UpdateVisibleRows()
+    public void UpdateVisibleRows(bool instant = false)
     {
         // Wrapper for compatibility with existing calls
-        UpdateLobbyPositions(false, 0);
+        UpdateLobbyPositions(instant, 0);
     }
     
     private void UpdateLobbyPositions(bool instant = false, int scrollDirection = 0)
@@ -814,18 +843,21 @@ public class HorizontalLobbyManager : MonoBehaviour
 
         _pendingLobbyIndex = lobbyIndex;
         
+        int reqPlayers = SelectedPlayerCount > 0 ? SelectedPlayerCount : config.numberOfPlayers;
+        config.numberOfPlayers = reqPlayers;
+        
         // Calculate the fee (prioritize cash, fallback to chips)
         int entryFee = config.entryFeeCash > 0 ? (int)config.entryFeeCash : config.entryFeeChips;
-        
+
         // Use the official mode and ID from the backend database
-        string mode = !string.IsNullOrEmpty(config.mode) ? config.mode : $"{config.numberOfPlayers}p"; 
+        string mode = $"{reqPlayers}-players"; 
         string lobbyId = config.lobbyId;
 
-        Debug.Log($"[HorizontalLobbyManager] UI Button Clicked. Requesting match for {SelectedPlayerCount} players: ID {lobbyId}, Mode {mode}, Stake {entryFee}");
+        Debug.Log($"[HorizontalLobbyManager] UI Button Clicked. Requesting match for {reqPlayers} players: ID {lobbyId}, Mode {mode}, Stake {entryFee}");
         
         if (WaitingForPlayerPanelManager.Instance != null)
         {
-            WaitingForPlayerPanelManager.Instance.OpenWaitingPanel(SelectedPlayerCount > 0 ? SelectedPlayerCount : config.numberOfPlayers, entryFee, lobbyId);
+            WaitingForPlayerPanelManager.Instance.OpenWaitingPanel(reqPlayers, entryFee, lobbyId);
             gameObject.SetActive(false);
             return;
         }
@@ -853,6 +885,15 @@ public class HorizontalLobbyManager : MonoBehaviour
         if (!isAlreadyInGame && BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
         {
             BackendAuthService.Instance.GetProfile(null);
+        }
+
+        // If the WaitingForPlayerPanel is active, DO NOT auto-start the game!
+        // Let WaitingForPlayerPanelManager handle ready state and manual Start Game button trigger.
+        WaitingForPlayerPanelManager waitingMgr = WaitingForPlayerPanelManager.Instance != null ? WaitingForPlayerPanelManager.Instance : FindFirstObjectByType<WaitingForPlayerPanelManager>();
+        if (waitingMgr != null && waitingMgr.IsPanelActive)
+        {
+            Debug.Log("[HorizontalLobbyManager] WaitingForPlayerPanel is active. Passing control to WaitingForPlayerPanelManager instead of auto-starting.");
+            return;
         }
 
         if (waitingPanel != null)
@@ -1032,13 +1073,20 @@ public class HorizontalLobbyManager : MonoBehaviour
             if (lobbyIndex >= 0 && lobbyIndex < BACKGROUND_COUNT)
             {
                 config = GetLobbyConfig(lobbyIndex);
+                if (config != null && SelectedPlayerCount > 0)
+                {
+                    config.numberOfPlayers = SelectedPlayerCount;
+                }
             }
             else if (matchData != null)
             {
-                // Reconstruct a pseudo-config for recovered matches
-                config = new LobbyConfig(-1, 2, matchData.stake, 0, 0f, 0, 0f, 0, 0f, 0);
-                config.lobbyId = "recovered_match";
-                config.mode = matchData.roomId;
+                int reqPlayers = (matchData.playerAvatars != null && matchData.playerAvatars.Count > 0) 
+                    ? matchData.playerAvatars.Count 
+                    : (SelectedPlayerCount > 0 ? SelectedPlayerCount : 3);
+
+                config = new LobbyConfig(-1, reqPlayers, matchData.stake, 0, 0f, 0, 0f, 0, 0f, 0);
+                config.lobbyId = !string.IsNullOrEmpty(matchData.roomId) ? matchData.roomId : "recovered_match";
+                config.mode = $"{reqPlayers}p";
             }
 
             GameManager gameManager = FindFirstObjectByType<GameManager>();

@@ -4630,7 +4630,7 @@ IL_002b:
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_7 = V_1;
 		NullCheck(L_7);
 		NullCheck(L_5);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_5, L_6, 0, ((int32_t)(((RuntimeArray*)L_7)->max_length)));
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_5, L_6, 0, ((int32_t)(((RuntimeArray*)L_7)->max_length)));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/tls/TrustedAuthority.cs:69>
 		return;
 	}
@@ -5054,7 +5054,7 @@ IL_0021:
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_8 = __this->___m_sha1Hash;
 		NullCheck(L_8);
 		NullCheck(L_6);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_6, L_7, 0, ((int32_t)(((RuntimeArray*)L_8)->max_length)));
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_6, L_7, 0, ((int32_t)(((RuntimeArray*)L_8)->max_length)));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/tls/UrlAndHash.cs:54>
 		return;
 	}
@@ -23767,7 +23767,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		SignerSink_t433E809DC9A5305830898E5861A4443A83E5ACD2* L_0 = __this->___m_output;
 		NullCheck(L_0);
 		RuntimeObject* L_1;
-		L_1 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(39, L_0);
+		L_1 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(40, L_0);
 		NullCheck(L_1);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_2;
 		L_2 = InterfaceFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(4, ISigner_t843D732405B62E80B737CF04F5653558369F6716_il2cpp_TypeInfo_var, L_1);
@@ -23861,7 +23861,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool BcTlsStreamVerifier_IsVerified_m74E0F476
 		SignerSink_t433E809DC9A5305830898E5861A4443A83E5ACD2* L_0 = __this->___m_output;
 		NullCheck(L_0);
 		RuntimeObject* L_1;
-		L_1 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(39, L_0);
+		L_1 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(40, L_0);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_2 = __this->___m_signature;
 		NullCheck(L_1);
 		bool L_3;
@@ -27499,7 +27499,7 @@ IL_0148:
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_58 = V_6;
 		NullCheck(L_58);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_59;
-		L_59 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(41, L_58);
+		L_59 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(42, L_58);
 		return L_59;
 	}
 
@@ -35356,7 +35356,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR TextWriter_tA9E5461506CF806E17B6B
 		return L_0;
 	}
 }
-// Method Definition Index: 24747
+// Method Definition Index: 24750
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Exception_t* Exception_get_InnerException_m0C1BDB339C786BA4DA7D2C1AD214571CFBBB1410_inline (Exception_t* __this, const RuntimeMethod* method) 
 {
 	{

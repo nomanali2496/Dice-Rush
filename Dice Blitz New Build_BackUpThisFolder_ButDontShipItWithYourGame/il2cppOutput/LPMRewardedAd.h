@@ -11,6 +11,7 @@ extern "C" {
 
 void *LPMRewardedAdCreateWithConfig(const char *adUnitId, void *configRef);
 void LPMRewardedAdSetDelegate(void *rewardedAdRef, void *delegateRef);
+void LPMRewardedAdSetImpressionDataDelegate(void *rewardedAdRef, void *delegateRef);
 
 void LPMRewardedAdLoadAd(void *rewardedAdRef);
 void LPMRewardedAdShowAd(void *rewardedAdRef, const char *placementName);

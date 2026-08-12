@@ -11586,7 +11586,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Pkcs8EncryptedPrivateKeyInfo_t40314934380873E
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_9 = V_1;
 		NullCheck(L_9);
 		NullCheck(L_7);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_7, L_8, 0, ((int32_t)(((RuntimeArray*)L_9)->max_length)));
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_7, L_8, 0, ((int32_t)(((RuntimeArray*)L_9)->max_length)));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/pkcs/Pkcs8EncryptedPrivateKeyInfoBuilder.cs:43>
 		il2cpp_codegen_runtime_class_init_inline(Platform_tC977DC2D832DA875FC4E0B00085E413B221ECCF2_il2cpp_TypeInfo_var);
 		Platform_Dispose_m8DC2FE7554311AD983C0C0CE2508C59A5CFDC4ED(L_7, NULL);
@@ -11598,7 +11598,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Pkcs8EncryptedPrivateKeyInfo_t40314934380873E
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_12 = V_0;
 		NullCheck(L_12);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_13;
-		L_13 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(41, L_12);
+		L_13 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(42, L_12);
 		EncryptedPrivateKeyInfo_t7B7326228DD0551D3A99F2F8F5C913E2D364E182* L_14 = (EncryptedPrivateKeyInfo_t7B7326228DD0551D3A99F2F8F5C913E2D364E182*)il2cpp_codegen_object_new(EncryptedPrivateKeyInfo_t7B7326228DD0551D3A99F2F8F5C913E2D364E182_il2cpp_TypeInfo_var);
 		EncryptedPrivateKeyInfo__ctor_m2CCC138386AA63985237E1F7B140523854241D36(L_14, ((AlgorithmIdentifier_tE72809190AA26CAE74268F7DF76294A1331B5B5A*)CastclassClass((RuntimeObject*)L_11, AlgorithmIdentifier_tE72809190AA26CAE74268F7DF76294A1331B5B5A_il2cpp_TypeInfo_var)), L_13, NULL);
 		Pkcs8EncryptedPrivateKeyInfo_t40314934380873E105A605F4B024262994B8D69F* L_15 = (Pkcs8EncryptedPrivateKeyInfo_t40314934380873E105A605F4B024262994B8D69F*)il2cpp_codegen_object_new(Pkcs8EncryptedPrivateKeyInfo_t40314934380873E105A605F4B024262994B8D69F_il2cpp_TypeInfo_var);
@@ -26086,7 +26086,7 @@ IL_000f:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 32290
+// Method Definition Index: 32299
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* DictionaryEntry_get_Key_m09845C00732E530E6FCB9042079E90D3912215FE_inline (DictionaryEntry_t171080F37B311C25AA9E75888F9C9D703FA721BB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26094,7 +26094,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* DictionaryEntry_ge
 		return L_0;
 	}
 }
-// Method Definition Index: 32291
+// Method Definition Index: 32300
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* DictionaryEntry_get_Value_m75FD18FE968AE131F28AA2CB0DF4895EBA39075E_inline (DictionaryEntry_t171080F37B311C25AA9E75888F9C9D703FA721BB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26722,7 +26722,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR BigInteger_t8D73EE50301CC807BBA33
 		return L_0;
 	}
 }
-// Method Definition Index: 24747
+// Method Definition Index: 24750
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Exception_t* Exception_get_InnerException_m0C1BDB339C786BA4DA7D2C1AD214571CFBBB1410_inline (Exception_t* __this, const RuntimeMethod* method) 
 {
 	{
@@ -26730,7 +26730,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Exception_t* Exception_get_InnerE
 		return L_0;
 	}
 }
-// Method Definition Index: 24497
+// Method Definition Index: 24500
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_gshared_inline (const RuntimeMethod* method) 
 {
 	il2cpp_rgctx_method_init(method);

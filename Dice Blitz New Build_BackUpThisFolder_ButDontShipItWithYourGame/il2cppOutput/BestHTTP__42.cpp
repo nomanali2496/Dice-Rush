@@ -12318,7 +12318,7 @@ IL_00a6_1:
 				L_34 = HTTPFieldData_get_Payload_m00B8CD6A3939D1142254D2DFDC72DA688D347770(L_33, NULL);
 				NullCheck(L_34);
 				NullCheck(L_30);
-				VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_30, L_32, 0, ((int32_t)(((RuntimeArray*)L_34)->max_length)));
+				VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_30, L_32, 0, ((int32_t)(((RuntimeArray*)L_34)->max_length)));
 				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Forms/Implementations/HTTPMultiPartForm.cs:63>
 				BufferPoolMemoryStream_tACFC72B72CC2AAFDFA97D6E8B8FEB94C5EC4B20B* L_35 = V_0;
 				il2cpp_codegen_runtime_class_init_inline(HTTPRequest_t32091DC566685F9827D7D7EA51A5D6601CB6485B_il2cpp_TypeInfo_var);
@@ -12326,7 +12326,7 @@ IL_00a6_1:
 				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_37 = ((HTTPRequest_t32091DC566685F9827D7D7EA51A5D6601CB6485B_StaticFields*)il2cpp_codegen_static_fields_for(HTTPRequest_t32091DC566685F9827D7D7EA51A5D6601CB6485B_il2cpp_TypeInfo_var))->___EOL;
 				NullCheck(L_37);
 				NullCheck(L_35);
-				VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_35, L_36, 0, ((int32_t)(((RuntimeArray*)L_37)->max_length)));
+				VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_35, L_36, 0, ((int32_t)(((RuntimeArray*)L_37)->max_length)));
 				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Forms/Implementations/HTTPMultiPartForm.cs:44>
 				int32_t L_38 = V_1;
 				V_1 = ((int32_t)il2cpp_codegen_add(L_38, 1));
@@ -14523,7 +14523,7 @@ IL_0014:
 		int32_t L_5 = __this->___length;
 		int32_t L_6 = __this->___initialIndex;
 		NullCheck(L_2);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_2, L_3, L_4, ((int32_t)il2cpp_codegen_subtract(L_5, L_6)));
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_2, L_3, L_4, ((int32_t)il2cpp_codegen_subtract(L_5, L_6)));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Extensions/BufferPoolMemoryStream.cs:473>
 		return;
 	}
@@ -14592,7 +14592,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t BufferSegmentStream_ReadByte_m3A34A81
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Extensions/BufferSegmentStream.cs:28>
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = __this->____tempByteArray;
 		int32_t L_1;
-		L_1 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, __this, L_0, 0, 1);
+		L_1 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, __this, L_0, 0, 1);
 		if (L_1)
 		{
 			goto IL_0012;
@@ -14757,7 +14757,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BufferSegmentStream_Write_mF4F1F234AB923
 		BufferSegment_t3B766B555791F8BE558F53ACD0661A027BE1C29C L_3;
 		memset((&L_3), 0, sizeof(L_3));
 		BufferSegment__ctor_mA453E2BD0F8DAA8E214F99EEC32BD535B9348ABD((&L_3), L_0, L_1, L_2, NULL);
-		VirtualActionInvoker1< BufferSegment_t3B766B555791F8BE558F53ACD0661A027BE1C29C >::Invoke(38, __this, L_3);
+		VirtualActionInvoker1< BufferSegment_t3B766B555791F8BE558F53ACD0661A027BE1C29C >::Invoke(39, __this, L_3);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Extensions/BufferSegmentStream.cs:67>
 		return;
 	}
@@ -15207,7 +15207,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Extensions_WriteLine_m71F9D53264285063B7
 		il2cpp_codegen_runtime_class_init_inline(HTTPRequest_t32091DC566685F9827D7D7EA51A5D6601CB6485B_il2cpp_TypeInfo_var);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_1 = ((HTTPRequest_t32091DC566685F9827D7D7EA51A5D6601CB6485B_StaticFields*)il2cpp_codegen_static_fields_for(HTTPRequest_t32091DC566685F9827D7D7EA51A5D6601CB6485B_il2cpp_TypeInfo_var))->___EOL;
 		NullCheck(L_0);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_0, L_1, 0, 2);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_0, L_1, 0, 2);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Extensions/Extensions.cs:67>
 		return;
 	}
@@ -15240,7 +15240,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Extensions_WriteLine_mFB573A7F3D7A332635
 		BufferSegment_t3B766B555791F8BE558F53ACD0661A027BE1C29C L_7 = V_0;
 		int32_t L_8 = L_7.___Count;
 		NullCheck(L_2);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_2, L_4, L_6, L_8);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_2, L_4, L_6, L_8);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Extensions/Extensions.cs:73>
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_9 = ___0_fs;
 		Extensions_WriteLine_m71F9D53264285063B77A1CA1A65BD16EAB0C81C4(L_9, NULL);
@@ -15283,7 +15283,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Extensions_WriteLine_mF0EA5FF2DEEA52D232
 		BufferSegment_t3B766B555791F8BE558F53ACD0661A027BE1C29C L_9 = V_0;
 		int32_t L_10 = L_9.___Count;
 		NullCheck(L_4);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_4, L_6, L_8, L_10);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_4, L_6, L_8, L_10);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Extensions/Extensions.cs:81>
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_11 = ___0_fs;
 		Extensions_WriteLine_m71F9D53264285063B77A1CA1A65BD16EAB0C81C4(L_11, NULL);
@@ -15509,7 +15509,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Extensions_WriteArray_mCE42C4636CECDFCA0
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_2 = ___1_array;
 		NullCheck(L_2);
 		NullCheck(L_0);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_0, L_1, 0, ((int32_t)(((RuntimeArray*)L_2)->max_length)));
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_0, L_1, 0, ((int32_t)(((RuntimeArray*)L_2)->max_length)));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Extensions/Extensions.cs:125>
 		return;
 	}
@@ -15527,7 +15527,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Extensions_WriteBufferSegment_m8F50A98EB
 		BufferSegment_t3B766B555791F8BE558F53ACD0661A027BE1C29C L_5 = ___1_buffer;
 		int32_t L_6 = L_5.___Count;
 		NullCheck(L_0);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_0, L_2, L_4, L_6);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_0, L_2, L_4, L_6);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Extensions/Extensions.cs:130>
 		return;
 	}
@@ -16947,7 +16947,7 @@ IL_0002:
 		int32_t L_4 = V_0;
 		NullCheck(L_0);
 		int32_t L_5;
-		L_5 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, L_0, L_1, L_2, ((int32_t)il2cpp_codegen_subtract(((int32_t)(((RuntimeArray*)L_3)->max_length)), L_4)));
+		L_5 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, L_0, L_1, L_2, ((int32_t)il2cpp_codegen_subtract(((int32_t)(((RuntimeArray*)L_3)->max_length)), L_4)));
 		V_1 = L_5;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Extensions/Extensions.cs:439>
 		int32_t L_6 = V_1;
@@ -17003,7 +17003,7 @@ IL_0002:
 		int32_t L_4 = V_0;
 		NullCheck(L_0);
 		int32_t L_5;
-		L_5 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, L_0, L_1, L_2, ((int32_t)il2cpp_codegen_subtract(L_3, L_4)));
+		L_5 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, L_0, L_1, L_2, ((int32_t)il2cpp_codegen_subtract(L_3, L_4)));
 		V_1 = L_5;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Extensions/Extensions.cs:454>
 		int32_t L_6 = V_1;
@@ -17081,7 +17081,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Extensions_WriteString_mA7953BA780391B17
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_12 = V_1;
 		int32_t L_13 = V_0;
 		NullCheck(L_11);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_11, L_12, 0, L_13);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_11, L_12, 0, L_13);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Extensions/Extensions.cs:471>
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_14 = V_1;
 		BufferPool_Release_mAA762F6DB3026FD6F5DD5FFDE3DEB7B5920D7A23(L_14, NULL);
@@ -17106,7 +17106,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Extensions_WriteLine_mB01EA1A62F7175EF26
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_2 = ((HTTPRequest_t32091DC566685F9827D7D7EA51A5D6601CB6485B_StaticFields*)il2cpp_codegen_static_fields_for(HTTPRequest_t32091DC566685F9827D7D7EA51A5D6601CB6485B_il2cpp_TypeInfo_var))->___EOL;
 		NullCheck(L_2);
 		NullCheck(L_0);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_0, L_1, 0, ((int32_t)(((RuntimeArray*)L_2)->max_length)));
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_0, L_1, 0, ((int32_t)(((RuntimeArray*)L_2)->max_length)));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Extensions/Extensions.cs:477>
 		return;
 	}
@@ -17134,7 +17134,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Extensions_WriteLine_m96CC42A963EF98FED0
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_4 = ((HTTPRequest_t32091DC566685F9827D7D7EA51A5D6601CB6485B_StaticFields*)il2cpp_codegen_static_fields_for(HTTPRequest_t32091DC566685F9827D7D7EA51A5D6601CB6485B_il2cpp_TypeInfo_var))->___EOL;
 		NullCheck(L_4);
 		NullCheck(L_2);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_2, L_3, 0, ((int32_t)(((RuntimeArray*)L_4)->max_length)));
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_2, L_3, 0, ((int32_t)(((RuntimeArray*)L_4)->max_length)));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Extensions/Extensions.cs:483>
 		return;
 	}
@@ -19194,7 +19194,7 @@ IL_0048:
 		int32_t L_19 = ___2_size;
 		NullCheck(L_16);
 		int32_t L_20;
-		L_20 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, L_16, L_17, L_18, L_19);
+		L_20 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, L_16, L_17, L_18, L_19);
 		return L_20;
 	}
 
@@ -19209,7 +19209,7 @@ IL_0062:
 		NullCheck(L_23);
 		NullCheck(L_21);
 		int32_t L_24;
-		L_24 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, L_21, L_22, 0, ((int32_t)(((RuntimeArray*)L_23)->max_length)));
+		L_24 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, L_21, L_22, 0, ((int32_t)(((RuntimeArray*)L_23)->max_length)));
 		__this->___available = L_24;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Extensions/ReadOnlyBufferedStream.cs:50>
 		int32_t L_25 = __this->___available;
@@ -19224,7 +19224,7 @@ IL_0062:
 		int32_t L_27 = ___1_offset;
 		int32_t L_28 = ___2_size;
 		int32_t L_29;
-		L_29 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, __this, L_26, L_27, L_28);
+		L_29 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, __this, L_26, L_27, L_28);
 		return L_29;
 	}
 
@@ -19275,7 +19275,7 @@ IL_0035:
 		NullCheck(L_9);
 		NullCheck(L_7);
 		int32_t L_10;
-		L_10 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, L_7, L_8, 0, ((int32_t)(((RuntimeArray*)L_9)->max_length)));
+		L_10 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, L_7, L_8, 0, ((int32_t)(((RuntimeArray*)L_9)->max_length)));
 		__this->___available = L_10;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Extensions/ReadOnlyBufferedStream.cs:71>
 		__this->___pos = 0;
@@ -19616,7 +19616,7 @@ IL_0015:
 		int32_t L_4 = L_3;
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_5 = (L_2)->GetAt(static_cast<il2cpp_array_size_t>(L_4));
 		NullCheck(L_5);
-		VirtualActionInvoker0::Invoke(20, L_5);
+		VirtualActionInvoker0::Invoke(21, L_5);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Extensions/StreamList.cs:48>
 		int32_t L_6 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_6, 1));
@@ -19736,7 +19736,7 @@ IL_0012:
 		int32_t L_8 = ___2_count;
 		NullCheck(L_5);
 		int32_t L_9;
-		L_9 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, L_5, L_6, L_7, L_8);
+		L_9 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, L_5, L_6, L_7, L_8);
 		V_0 = L_9;
 		goto IL_0088;
 	}
@@ -19806,7 +19806,7 @@ IL_006c:
 		int32_t L_28 = V_0;
 		NullCheck(L_23);
 		int32_t L_29;
-		L_29 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, L_23, L_24, ((int32_t)il2cpp_codegen_add(L_25, L_26)), ((int32_t)il2cpp_codegen_subtract(L_27, L_28)));
+		L_29 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, L_23, L_24, ((int32_t)il2cpp_codegen_add(L_25, L_26)), ((int32_t)il2cpp_codegen_subtract(L_27, L_28)));
 		V_0 = ((int32_t)il2cpp_codegen_add(L_19, L_29));
 	}
 
@@ -19871,7 +19871,7 @@ IL_0011:
 		int32_t L_7 = ___1_offset;
 		int32_t L_8 = ___2_count;
 		NullCheck(L_5);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_5, L_6, L_7, L_8);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_5, L_6, L_7, L_8);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Extensions/StreamList.cs:99>
 		return;
 	}
@@ -19902,7 +19902,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StreamList_Write_mA01FD83168FA3314F32D0C
 		int32_t L_5 = L_4.___Offset;
 		BufferSegment_t3B766B555791F8BE558F53ACD0661A027BE1C29C L_6 = V_0;
 		int32_t L_7 = L_6.___Count;
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, __this, L_3, L_5, L_7);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, __this, L_3, L_5, L_7);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Extensions/StreamList.cs:105>
 		BufferSegment_t3B766B555791F8BE558F53ACD0661A027BE1C29C L_8 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(BufferPool_t9AE33DCEE74AA5BD63A83B5CB44DC09DB4A658D3_il2cpp_TypeInfo_var);
@@ -20059,7 +20059,7 @@ IL_0013:
 		int32_t L_7 = ___1_origin;
 		NullCheck(L_5);
 		int64_t L_8;
-		L_8 = VirtualFuncInvoker2< int64_t, int64_t, int32_t >::Invoke(30, L_5, L_6, L_7);
+		L_8 = VirtualFuncInvoker2< int64_t, int64_t, int32_t >::Invoke(31, L_5, L_6, L_7);
 		return L_8;
 	}
 }
@@ -20783,11 +20783,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WriteOnlyBufferedStream_Flush_m256958D2E
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_2 = __this->___buffer;
 		int32_t L_3 = __this->____position;
 		NullCheck(L_1);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_1, L_2, 0, L_3);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_1, L_2, 0, L_3);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Extensions/WriteOnlyBufferedStream.cs:36>
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_4 = __this->___stream;
 		NullCheck(L_4);
-		VirtualActionInvoker0::Invoke(20, L_4);
+		VirtualActionInvoker0::Invoke(21, L_4);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Extensions/WriteOnlyBufferedStream.cs:41>
 		__this->____position = 0;
 	}
@@ -20853,7 +20853,7 @@ IL_0002:
 	}
 	{
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Extensions/WriteOnlyBufferedStream.cs:57>
-		VirtualActionInvoker0::Invoke(20, __this);
+		VirtualActionInvoker0::Invoke(21, __this);
 	}
 
 IL_005a:
@@ -21143,7 +21143,7 @@ IL_0014:
 		int32_t L_6 = ___1_offset;
 		int32_t L_7 = ___2_count;
 		NullCheck(L_4);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_4, L_5, L_6, L_7);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_4, L_5, L_6, L_7);
 	}
 
 IL_0025:
@@ -21200,7 +21200,7 @@ IL_0045:
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Decompression/GZipDecompressor.cs:66>
 		GZipStream_t0EE366BFE9C90614773B3C167D72F944C39DF440* L_17 = __this->___decompressorGZipStream;
 		NullCheck(L_17);
-		VirtualActionInvoker1< int32_t >::Invoke(39, L_17, 2);
+		VirtualActionInvoker1< int32_t >::Invoke(40, L_17, 2);
 	}
 
 IL_007a:
@@ -21225,7 +21225,7 @@ IL_008d:
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Decompression/GZipDecompressor.cs:71>
 		BufferPoolMemoryStream_tACFC72B72CC2AAFDFA97D6E8B8FEB94C5EC4B20B* L_20 = __this->___decompressorOutputStream;
 		NullCheck(L_20);
-		VirtualActionInvoker1< int64_t >::Invoke(31, L_20, ((int64_t)0));
+		VirtualActionInvoker1< int64_t >::Invoke(32, L_20, ((int64_t)0));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Decompression/GZipDecompressor.cs:73>
 		il2cpp_codegen_runtime_class_init_inline(BufferPool_t9AE33DCEE74AA5BD63A83B5CB44DC09DB4A658D3_il2cpp_TypeInfo_var);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_21;
@@ -21243,7 +21243,7 @@ IL_00ab:
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_23 = V_0;
 		int32_t L_24 = V_1;
 		NullCheck(L_22);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_22, L_23, 0, L_24);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_22, L_23, 0, L_24);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Decompression/GZipDecompressor.cs:80>
 		int32_t L_25 = V_2;
 		int32_t L_26 = V_1;
@@ -21259,7 +21259,7 @@ IL_00bd:
 		NullCheck(L_29);
 		NullCheck(L_27);
 		int32_t L_30;
-		L_30 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, L_27, L_28, 0, ((int32_t)(((RuntimeArray*)L_29)->max_length)));
+		L_30 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, L_27, L_28, 0, ((int32_t)(((RuntimeArray*)L_29)->max_length)));
 		int32_t L_31 = L_30;
 		V_1 = L_31;
 		if (L_31)
@@ -21283,7 +21283,7 @@ IL_00bd:
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/Decompression/GZipDecompressor.cs:87>
 		GZipStream_t0EE366BFE9C90614773B3C167D72F944C39DF440* L_34 = __this->___decompressorGZipStream;
 		NullCheck(L_34);
-		VirtualActionInvoker1< int64_t >::Invoke(31, L_34, ((int64_t)0));
+		VirtualActionInvoker1< int64_t >::Invoke(32, L_34, ((int64_t)0));
 	}
 
 IL_00e8:
@@ -27513,7 +27513,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool HTTPFormBase_get_IsChanged_m
 		return L_0;
 	}
 }
-// Method Definition Index: 78486
+// Method Definition Index: 78623
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Mathf_IsPowerOfTwo_m58172AEBE272F53FD34CC10641057847181E960A_inline (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -27530,7 +27530,7 @@ IL_000c:
 		return L_2;
 	}
 }
-// Method Definition Index: 78485
+// Method Definition Index: 78622
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_NextPowerOfTwo_mA1CE7F3EEF9B0B07AB2D586C030ED236D578F485_inline (int32_t ___0_value, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -27658,7 +27658,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t CompressFunc_Invoke_m90C9
 	typedef int32_t (*FunctionPointerType) (RuntimeObject*, int32_t, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_flush, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 33314
+// Method Definition Index: 33325
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Stack_1_get_Count_mD08AE71D49787D30DDD9D484BCD323D646744D2E_gshared_inline (Stack_1_tAD790A47551563636908E21E4F08C54C0C323EB5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27666,7 +27666,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Stack_1_get_Count_mD08AE7
 		return L_0;
 	}
 }
-// Method Definition Index: 33182
+// Method Definition Index: 33193
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27674,7 +27674,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C
 		return L_0;
 	}
 }
-// Method Definition Index: 33193
+// Method Definition Index: 33204
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) 
 {
 	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* V_0 = NULL;
@@ -27712,7 +27712,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 33182
+// Method Definition Index: 33193
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4BA1C1A68F62015EEC8D234C4A01C1851820FCC5_gshared_inline (List_1_tB2308B0E9951D05CB7B0115F13DED88E37C77E86* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27720,7 +27720,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4BA1C1A
 		return L_0;
 	}
 }
-// Method Definition Index: 33193
+// Method Definition Index: 33204
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mA574AF9AF608B03BAA656FB5BA63BCE625A653F7_gshared_inline (List_1_tB2308B0E9951D05CB7B0115F13DED88E37C77E86* __this, BufferSegment_t3B766B555791F8BE558F53ACD0661A027BE1C29C ___0_item, const RuntimeMethod* method) 
 {
 	BufferSegmentU5BU5D_tBA314EAB717F927BB231C19E4304EBFC62FADF34* V_0 = NULL;
@@ -27758,7 +27758,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 33201
+// Method Definition Index: 33212
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Clear_m464FD9262B411A33EAE4BBB5BA92EF9C48BC7945_gshared_inline (List_1_tB2308B0E9951D05CB7B0115F13DED88E37C77E86* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -27794,7 +27794,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Func_2_Invoke_m4733F0A0FE136
 	typedef bool (*FunctionPointerType) (RuntimeObject*, Il2CppChar, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_arg, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 23385
+// Method Definition Index: 23387
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_m9897CE72A58099ADB081E439D3A3EF0AA9CF5ED9_gshared_inline (Nullable_1_tD52F1D0FC7EBB336F119BE953E59F426766032C1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27802,7 +27802,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_m989
 		return L_0;
 	}
 }
-// Method Definition Index: 23387
+// Method Definition Index: 23389
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Il2CppChar Nullable_1_GetValueOrDefault_m4DC59B3219E9E81FFB2DBE02BF850B54E460DEB6_gshared_inline (Nullable_1_tD52F1D0FC7EBB336F119BE953E59F426766032C1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27810,7 +27810,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Il2CppChar Nullable_1_GetValueOrD
 		return L_0;
 	}
 }
-// Method Definition Index: 23387
+// Method Definition Index: 23389
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Nullable_1_GetValueOrDefault_m8D130DB7F2A1E694736B449176F9C26DB456597B_gshared_inline (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27818,7 +27818,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Nullable_1_GetValueOrDefa
 		return L_0;
 	}
 }
-// Method Definition Index: 23385
+// Method Definition Index: 23387
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_gshared_inline (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27826,7 +27826,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_mCF2
 		return L_0;
 	}
 }
-// Method Definition Index: 33247
+// Method Definition Index: 33258
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -27834,7 +27834,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Cur
 		return L_0;
 	}
 }
-// Method Definition Index: 33201
+// Method Definition Index: 33212
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Clear_m16C1F2C61FED5955F10EB36BC1CB2DF34B128994_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -27864,7 +27864,7 @@ IL_003c:
 		return;
 	}
 }
-// Method Definition Index: 33193
+// Method Definition Index: 33204
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mBE150E619B7F21DF40D729EFD05A8D5EB8F0246E_gshared_inline (List_1_t15FD75E181F1CC1541D68BDAB2C33D49187A4D8B* __this, TimerData_tAD297E7A229F450DD1D089603A9D44BCDD10D43D ___0_item, const RuntimeMethod* method) 
 {
 	TimerDataU5BU5D_t571BFCB00A39D2F13A3494ADB6CC0B2DBD60F42D* V_0 = NULL;
@@ -27902,7 +27902,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 33182
+// Method Definition Index: 33193
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4DBE15D2F41718F39FE846E786E765126C6A5BCF_gshared_inline (List_1_t15FD75E181F1CC1541D68BDAB2C33D49187A4D8B* __this, const RuntimeMethod* method) 
 {
 	{

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections.Generic;
 
 /// <summary>
@@ -34,13 +34,23 @@ public class DiceVisibilityManager : MonoBehaviour
     [SerializeField] private List<GameObject> panelsToMonitor = new List<GameObject>();
     
     [Header("Auto-Detect Panels")]
-    [Tooltip("Automatically detect panels by name patterns (e.g., panels containing 'Panel', 'Popup', 'Menu')")]
+    [Tooltip("Automatically detect panels by name patterns (e.g., panels containing 'Panel', 'Popup', 'Menu', 'Screen')")]
     [SerializeField] private bool autoDetectPanels = true;
-    [SerializeField] private string[] panelNamePatterns = new string[] { "Panel", "Popup", "Menu" };
+    [SerializeField] private string[] panelNamePatterns = new string[] { "Panel", "Popup", "Menu", "Screen", "Winner", "Loser", "Loading", "Quit" };
     
     private bool areDicesHidden = false;
     private bool hasGameplayStarted = false;
     private bool diceScalingApplied = false;
+
+    private void OnDisable()
+    {
+        ForceHideDices();
+    }
+
+    private void OnDestroy()
+    {
+        ForceHideDices();
+    }
     
     private void Start()
     {
@@ -99,9 +109,13 @@ public class DiceVisibilityManager : MonoBehaviour
         
         if (!isGameplayActive)
         {
-            // Not on gameplay screen, reset flag
+            // Not on gameplay screen -> ALWAYS HIDE DICE
+            if (!areDicesHidden)
+            {
+                dicesController.HideDices();
+                areDicesHidden = true;
+            }
             hasGameplayStarted = false;
-            areDicesHidden = false;
             return;
         }
         

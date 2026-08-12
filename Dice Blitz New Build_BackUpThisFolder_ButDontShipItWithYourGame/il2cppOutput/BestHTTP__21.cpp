@@ -8937,7 +8937,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Ed25519Signer_Update_m13D37744FD41E1B419
 		Buffer_tAEF3D1C867AD2A6BDE0995E8CB6E75D47A255710* L_0 = __this->___buffer;
 		uint8_t L_1 = ___0_b;
 		NullCheck(L_0);
-		VirtualActionInvoker1< uint8_t >::Invoke(37, L_0, L_1);
+		VirtualActionInvoker1< uint8_t >::Invoke(38, L_0, L_1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/signers/Ed25519Signer.cs:52>
 		return;
 	}
@@ -8952,7 +8952,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Ed25519Signer_BlockUpdate_m453E84F022252
 		int32_t L_2 = ___1_off;
 		int32_t L_3 = ___2_len;
 		NullCheck(L_0);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_0, L_1, L_2, L_3);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_0, L_1, L_2, L_3);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/signers/Ed25519Signer.cs:57>
 		return;
 	}
@@ -9105,7 +9105,7 @@ IL_004a:
 			Monitor_Enter_m3CDB589DA1300B513D55FDCFB52B63E879794149(L_2, (&V_1), NULL);
 			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/signers/Ed25519Signer.cs:90>
 			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3;
-			L_3 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(38, __this);
+			L_3 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(39, __this);
 			V_2 = L_3;
 			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/signers/Ed25519Signer.cs:91>
 			int64_t L_4;
@@ -9212,7 +9212,7 @@ IL_0055:
 			Monitor_Enter_m3CDB589DA1300B513D55FDCFB52B63E879794149(L_4, (&V_1), NULL);
 			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/signers/Ed25519Signer.cs:114>
 			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_5;
-			L_5 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(38, __this);
+			L_5 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(39, __this);
 			V_2 = L_5;
 			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/signers/Ed25519Signer.cs:115>
 			int64_t L_6;
@@ -9296,7 +9296,7 @@ IL_0034:
 			V_2 = L_3;
 			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/signers/Ed25519Signer.cs:133>
 			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_4;
-			L_4 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(38, __this);
+			L_4 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(39, __this);
 			int64_t L_5 = V_2;
 			Array_Clear_m50BAA3751899858B097D3FF2ED31F284703FE5CB((RuntimeArray*)L_4, 0, ((int32_t)L_5), NULL);
 			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/signers/Ed25519Signer.cs:135>
@@ -9434,7 +9434,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Ed25519ctxSigner_Update_m4A2295AF1862E4A
 		Buffer_tF815955377DDD73AB33B3955EBA14BC8D3B21337* L_0 = __this->___buffer;
 		uint8_t L_1 = ___0_b;
 		NullCheck(L_0);
-		VirtualActionInvoker1< uint8_t >::Invoke(37, L_0, L_1);
+		VirtualActionInvoker1< uint8_t >::Invoke(38, L_0, L_1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/signers/Ed25519ctxSigner.cs:54>
 		return;
 	}
@@ -9449,7 +9449,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Ed25519ctxSigner_BlockUpdate_mAA3ACFA79C
 		int32_t L_2 = ___1_off;
 		int32_t L_3 = ___2_len;
 		NullCheck(L_0);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_0, L_1, L_2, L_3);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_0, L_1, L_2, L_3);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/signers/Ed25519ctxSigner.cs:59>
 		return;
 	}
@@ -9604,7 +9604,7 @@ IL_004a:
 			Monitor_Enter_m3CDB589DA1300B513D55FDCFB52B63E879794149(L_2, (&V_1), NULL);
 			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/signers/Ed25519ctxSigner.cs:92>
 			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3;
-			L_3 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(38, __this);
+			L_3 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(39, __this);
 			V_2 = L_3;
 			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/signers/Ed25519ctxSigner.cs:93>
 			int64_t L_4;
@@ -9712,7 +9712,7 @@ IL_0056:
 			Monitor_Enter_m3CDB589DA1300B513D55FDCFB52B63E879794149(L_4, (&V_1), NULL);
 			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/signers/Ed25519ctxSigner.cs:116>
 			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_5;
-			L_5 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(38, __this);
+			L_5 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(39, __this);
 			V_2 = L_5;
 			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/signers/Ed25519ctxSigner.cs:117>
 			int64_t L_6;
@@ -9797,7 +9797,7 @@ IL_0034:
 			V_2 = L_3;
 			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/signers/Ed25519ctxSigner.cs:135>
 			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_4;
-			L_4 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(38, __this);
+			L_4 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(39, __this);
 			int64_t L_5 = V_2;
 			Array_Clear_m50BAA3751899858B097D3FF2ED31F284703FE5CB((RuntimeArray*)L_4, 0, ((int32_t)L_5), NULL);
 			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/signers/Ed25519ctxSigner.cs:137>
@@ -10256,7 +10256,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Ed448Signer_Update_m77BB56EA14E6D6C4C287
 		Buffer_t2304600387288DA79E81EC92B92118DF0DD8E27A* L_0 = __this->___buffer;
 		uint8_t L_1 = ___0_b;
 		NullCheck(L_0);
-		VirtualActionInvoker1< uint8_t >::Invoke(37, L_0, L_1);
+		VirtualActionInvoker1< uint8_t >::Invoke(38, L_0, L_1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/signers/Ed448Signer.cs:54>
 		return;
 	}
@@ -10271,7 +10271,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Ed448Signer_BlockUpdate_mB50B21377884E01
 		int32_t L_2 = ___1_off;
 		int32_t L_3 = ___2_len;
 		NullCheck(L_0);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_0, L_1, L_2, L_3);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_0, L_1, L_2, L_3);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/signers/Ed448Signer.cs:59>
 		return;
 	}
@@ -10426,7 +10426,7 @@ IL_004a:
 			Monitor_Enter_m3CDB589DA1300B513D55FDCFB52B63E879794149(L_2, (&V_1), NULL);
 			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/signers/Ed448Signer.cs:92>
 			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_3;
-			L_3 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(38, __this);
+			L_3 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(39, __this);
 			V_2 = L_3;
 			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/signers/Ed448Signer.cs:93>
 			int64_t L_4;
@@ -10534,7 +10534,7 @@ IL_0056:
 			Monitor_Enter_m3CDB589DA1300B513D55FDCFB52B63E879794149(L_4, (&V_1), NULL);
 			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/signers/Ed448Signer.cs:116>
 			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_5;
-			L_5 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(38, __this);
+			L_5 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(39, __this);
 			V_2 = L_5;
 			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/signers/Ed448Signer.cs:117>
 			int64_t L_6;
@@ -10619,7 +10619,7 @@ IL_0034:
 			V_2 = L_3;
 			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/signers/Ed448Signer.cs:135>
 			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_4;
-			L_4 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(38, __this);
+			L_4 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(39, __this);
 			int64_t L_5 = V_2;
 			Array_Clear_m50BAA3751899858B097D3FF2ED31F284703FE5CB((RuntimeArray*)L_4, 0, ((int32_t)L_5), NULL);
 			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/signers/Ed448Signer.cs:137>

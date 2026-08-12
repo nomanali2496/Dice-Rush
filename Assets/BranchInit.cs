@@ -55,7 +55,14 @@ public class BranchInit : MonoBehaviour
     {
         if (error != null)
         {
-            Debug.Log("[BranchInit] ❌ Branch initialization FAILED: " + error);
+            if (error.Contains("Not implemented") || Application.isEditor)
+            {
+                Debug.Log($"[BranchInit] ℹ️ Branch SDK is not supported on platform {Application.platform}. Deep linking disabled in Editor/Standalone.");
+            }
+            else
+            {
+                Debug.LogWarning("[BranchInit] ⚠️ Branch initialization failed: " + error);
+            }
             isBranchInitialized = false;
             return;
         }

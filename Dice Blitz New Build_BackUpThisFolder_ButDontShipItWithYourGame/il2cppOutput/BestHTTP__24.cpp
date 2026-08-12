@@ -9828,7 +9828,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CipherStream_ReadByte_m59995D428FB95C
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_1 = __this->___stream;
 		NullCheck(L_1);
 		int32_t L_2;
-		L_2 = VirtualFuncInvoker0< int32_t >::Invoke(34, L_1);
+		L_2 = VirtualFuncInvoker0< int32_t >::Invoke(35, L_1);
 		return L_2;
 	}
 
@@ -9908,7 +9908,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t CipherStream_Read_m93074E985766099533
 		int32_t L_4 = ___2_count;
 		NullCheck(L_1);
 		int32_t L_5;
-		L_5 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, L_1, L_2, L_3, L_4);
+		L_5 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, L_1, L_2, L_3, L_4);
 		return L_5;
 	}
 
@@ -10110,7 +10110,7 @@ IL_001f:
 		int32_t L_9 = V_2;
 		NullCheck(L_5);
 		int32_t L_10;
-		L_10 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, L_5, L_6, L_7, ((int32_t)il2cpp_codegen_subtract(((int32_t)(((RuntimeArray*)L_8)->max_length)), L_9)));
+		L_10 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, L_5, L_6, L_7, ((int32_t)il2cpp_codegen_subtract(((int32_t)(((RuntimeArray*)L_8)->max_length)), L_9)));
 		V_4 = L_10;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/CipherStream.cs:115>
 		int32_t L_11 = V_4;
@@ -10229,7 +10229,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CipherStream_Write_m6ABCA5842D32D39AD952
 		int32_t L_3 = ___1_offset;
 		int32_t L_4 = ___2_count;
 		NullCheck(L_1);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_1, L_2, L_3, L_4);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_1, L_2, L_3, L_4);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/CipherStream.cs:154>
 		return;
 	}
@@ -10259,7 +10259,7 @@ IL_0017:
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_13 = V_0;
 		NullCheck(L_13);
 		NullCheck(L_11);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_11, L_12, 0, ((int32_t)(((RuntimeArray*)L_13)->max_length)));
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_11, L_12, 0, ((int32_t)(((RuntimeArray*)L_13)->max_length)));
 	}
 
 IL_0039:
@@ -10291,7 +10291,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CipherStream_WriteByte_m7E9C0607DA538598
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_1 = __this->___stream;
 		uint8_t L_2 = ___0_b;
 		NullCheck(L_1);
-		VirtualActionInvoker1< uint8_t >::Invoke(37, L_1, L_2);
+		VirtualActionInvoker1< uint8_t >::Invoke(38, L_1, L_2);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/CipherStream.cs:170>
 		return;
 	}
@@ -10319,7 +10319,7 @@ IL_0015:
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_9 = V_0;
 		NullCheck(L_9);
 		NullCheck(L_7);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_7, L_8, 0, ((int32_t)(((RuntimeArray*)L_9)->max_length)));
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_7, L_8, 0, ((int32_t)(((RuntimeArray*)L_9)->max_length)));
 	}
 
 IL_0035:
@@ -10446,11 +10446,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CipherStream_Close_m698CDE7C6A2BAE7D9E9B
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_5 = V_0;
 		NullCheck(L_5);
 		NullCheck(L_3);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_3, L_4, 0, ((int32_t)(((RuntimeArray*)L_5)->max_length)));
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_3, L_4, 0, ((int32_t)(((RuntimeArray*)L_5)->max_length)));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/CipherStream.cs:228>
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_6 = __this->___stream;
 		NullCheck(L_6);
-		VirtualActionInvoker0::Invoke(20, L_6);
+		VirtualActionInvoker0::Invoke(21, L_6);
 	}
 
 IL_002f:
@@ -10472,7 +10472,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CipherStream_Flush_m04C9FE7CFC9F0EF3E3DC
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/CipherStream.cs:238>
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->___stream;
 		NullCheck(L_0);
-		VirtualActionInvoker0::Invoke(20, L_0);
+		VirtualActionInvoker0::Invoke(21, L_0);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/CipherStream.cs:239>
 		return;
 	}
@@ -10656,7 +10656,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t DigestStream_Read_mF1210FF811FE9D05BE
 		int32_t L_3 = ___2_count;
 		NullCheck(L_0);
 		int32_t L_4;
-		L_4 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, L_0, L_1, L_2, L_3);
+		L_4 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, L_0, L_1, L_2, L_3);
 		V_0 = L_4;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/DigestStream.cs:43>
 		RuntimeObject* L_5 = __this->___inDigest;
@@ -10705,7 +10705,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t DigestStream_ReadByte_m33B0784894CD15
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->___stream;
 		NullCheck(L_0);
 		int32_t L_1;
-		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(34, L_0);
+		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(35, L_0);
 		V_0 = L_1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/DigestStream.cs:56>
 		RuntimeObject* L_2 = __this->___inDigest;
@@ -10780,7 +10780,7 @@ IL_001a:
 		int32_t L_8 = ___1_offset;
 		int32_t L_9 = ___2_count;
 		NullCheck(L_6);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_6, L_7, L_8, L_9);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_6, L_7, L_8, L_9);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/DigestStream.cs:79>
 		return;
 	}
@@ -10816,7 +10816,7 @@ IL_0014:
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_3 = __this->___stream;
 		uint8_t L_4 = ___0_b;
 		NullCheck(L_3);
-		VirtualActionInvoker1< uint8_t >::Invoke(37, L_3, L_4);
+		VirtualActionInvoker1< uint8_t >::Invoke(38, L_3, L_4);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/DigestStream.cs:89>
 		return;
 	}
@@ -10921,7 +10921,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DigestStream_Flush_m453C574E2A220E9E0F18
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/DigestStream.cs:136>
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->___stream;
 		NullCheck(L_0);
-		VirtualActionInvoker0::Invoke(20, L_0);
+		VirtualActionInvoker0::Invoke(21, L_0);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/DigestStream.cs:137>
 		return;
 	}
@@ -10936,7 +10936,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t DigestStream_Seek_m7307AD68940CA5C62E
 		int32_t L_2 = ___1_origin;
 		NullCheck(L_0);
 		int64_t L_3;
-		L_3 = VirtualFuncInvoker2< int64_t, int64_t, int32_t >::Invoke(30, L_0, L_1, L_2);
+		L_3 = VirtualFuncInvoker2< int64_t, int64_t, int32_t >::Invoke(31, L_0, L_1, L_2);
 		return L_3;
 	}
 }
@@ -10948,7 +10948,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DigestStream_SetLength_m19D51C5EE2B5CB95
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->___stream;
 		int64_t L_1 = ___0_length;
 		NullCheck(L_0);
-		VirtualActionInvoker1< int64_t >::Invoke(31, L_0, L_1);
+		VirtualActionInvoker1< int64_t >::Invoke(32, L_0, L_1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/DigestStream.cs:150>
 		return;
 	}
@@ -11112,7 +11112,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t MacStream_Read_m3B371A1DA5098B24B3D5F
 		int32_t L_3 = ___2_count;
 		NullCheck(L_0);
 		int32_t L_4;
-		L_4 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, L_0, L_1, L_2, L_3);
+		L_4 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, L_0, L_1, L_2, L_3);
 		V_0 = L_4;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/MacStream.cs:43>
 		RuntimeObject* L_5 = __this->___inMac;
@@ -11161,7 +11161,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t MacStream_ReadByte_m92D186DCD531B1AB0
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->___stream;
 		NullCheck(L_0);
 		int32_t L_1;
-		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(34, L_0);
+		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(35, L_0);
 		V_0 = L_1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/MacStream.cs:56>
 		RuntimeObject* L_2 = __this->___inMac;
@@ -11236,7 +11236,7 @@ IL_001a:
 		int32_t L_8 = ___1_offset;
 		int32_t L_9 = ___2_count;
 		NullCheck(L_6);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_6, L_7, L_8, L_9);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_6, L_7, L_8, L_9);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/MacStream.cs:79>
 		return;
 	}
@@ -11272,7 +11272,7 @@ IL_0014:
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_3 = __this->___stream;
 		uint8_t L_4 = ___0_b;
 		NullCheck(L_3);
-		VirtualActionInvoker1< uint8_t >::Invoke(37, L_3, L_4);
+		VirtualActionInvoker1< uint8_t >::Invoke(38, L_3, L_4);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/MacStream.cs:88>
 		return;
 	}
@@ -11377,7 +11377,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MacStream_Flush_m35F67687C6E3F2A028D0810
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/MacStream.cs:135>
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->___stream;
 		NullCheck(L_0);
-		VirtualActionInvoker0::Invoke(20, L_0);
+		VirtualActionInvoker0::Invoke(21, L_0);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/MacStream.cs:136>
 		return;
 	}
@@ -11392,7 +11392,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t MacStream_Seek_m068825F45EE40D006E340
 		int32_t L_2 = ___1_origin;
 		NullCheck(L_0);
 		int64_t L_3;
-		L_3 = VirtualFuncInvoker2< int64_t, int64_t, int32_t >::Invoke(30, L_0, L_1, L_2);
+		L_3 = VirtualFuncInvoker2< int64_t, int64_t, int32_t >::Invoke(31, L_0, L_1, L_2);
 		return L_3;
 	}
 }
@@ -11404,7 +11404,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MacStream_SetLength_m4AE6D18E8138BDEAC26
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->___stream;
 		int64_t L_1 = ___0_length;
 		NullCheck(L_0);
-		VirtualActionInvoker1< int64_t >::Invoke(31, L_0, L_1);
+		VirtualActionInvoker1< int64_t >::Invoke(32, L_0, L_1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/MacStream.cs:149>
 		return;
 	}
@@ -11568,7 +11568,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SignerStream_Read_m4DDB7529FB7403E9F0
 		int32_t L_3 = ___2_count;
 		NullCheck(L_0);
 		int32_t L_4;
-		L_4 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, L_0, L_1, L_2, L_3);
+		L_4 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, L_0, L_1, L_2, L_3);
 		V_0 = L_4;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/SignerStream.cs:43>
 		RuntimeObject* L_5 = __this->___inSigner;
@@ -11617,7 +11617,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SignerStream_ReadByte_mDD911E71C5EE0E
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->___stream;
 		NullCheck(L_0);
 		int32_t L_1;
-		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(34, L_0);
+		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(35, L_0);
 		V_0 = L_1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/SignerStream.cs:56>
 		RuntimeObject* L_2 = __this->___inSigner;
@@ -11692,7 +11692,7 @@ IL_001a:
 		int32_t L_8 = ___1_offset;
 		int32_t L_9 = ___2_count;
 		NullCheck(L_6);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_6, L_7, L_8, L_9);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_6, L_7, L_8, L_9);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/SignerStream.cs:79>
 		return;
 	}
@@ -11728,7 +11728,7 @@ IL_0014:
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_3 = __this->___stream;
 		uint8_t L_4 = ___0_b;
 		NullCheck(L_3);
-		VirtualActionInvoker1< uint8_t >::Invoke(37, L_3, L_4);
+		VirtualActionInvoker1< uint8_t >::Invoke(38, L_3, L_4);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/SignerStream.cs:89>
 		return;
 	}
@@ -11833,7 +11833,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignerStream_Flush_mE7DEF23138DF3BC8F5A5
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/SignerStream.cs:136>
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->___stream;
 		NullCheck(L_0);
-		VirtualActionInvoker0::Invoke(20, L_0);
+		VirtualActionInvoker0::Invoke(21, L_0);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/SignerStream.cs:137>
 		return;
 	}
@@ -11848,7 +11848,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t SignerStream_Seek_m8A41297CCA6617B42F
 		int32_t L_2 = ___1_origin;
 		NullCheck(L_0);
 		int64_t L_3;
-		L_3 = VirtualFuncInvoker2< int64_t, int64_t, int32_t >::Invoke(30, L_0, L_1, L_2);
+		L_3 = VirtualFuncInvoker2< int64_t, int64_t, int32_t >::Invoke(31, L_0, L_1, L_2);
 		return L_3;
 	}
 }
@@ -11860,7 +11860,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SignerStream_SetLength_m468CB7BBB1A4CDAC
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->___stream;
 		int64_t L_1 = ___0_length;
 		NullCheck(L_0);
-		VirtualActionInvoker1< int64_t >::Invoke(31, L_0, L_1);
+		VirtualActionInvoker1< int64_t >::Invoke(32, L_0, L_1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/io/SignerStream.cs:150>
 		return;
 	}

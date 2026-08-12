@@ -76,8 +76,18 @@ public class DailyRewardManager : MonoBehaviour
         SetupCloseButton();
         playerProfileUI = FindFirstObjectByType<PlayerProfileUI>();
         
+        // Ensure MightyTasksPanelManager button listeners are wired at launch even if panel starts inactive
+        MightyTasksPanelManager tasksManager = dailyRewardPanel != null ? 
+            dailyRewardPanel.GetComponentInChildren<MightyTasksPanelManager>(true) : 
+            FindFirstObjectByType<MightyTasksPanelManager>(FindObjectsInactive.Include);
+        if (tasksManager != null)
+        {
+            tasksManager.EnsureListenersWired();
+        }
+
         if (collectButton != null)
         {
+            collectButton.onClick.RemoveAllListeners();
             collectButton.onClick.AddListener(CollectCurrentDayReward);
         }
 

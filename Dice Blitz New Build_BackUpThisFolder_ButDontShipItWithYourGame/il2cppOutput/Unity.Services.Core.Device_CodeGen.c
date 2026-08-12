@@ -7,7 +7,9 @@
 
 
 
-extern void InstallationId__ctor_mD8E8D5B7A72C54F2517D33F9F2C89FA708CC6BF7 (void);
+extern void EngineInstallationId_GetOrCreateIdentifier_mDFE1DBFAB1EF5971A39F3618094D375B0424A277 (void);
+extern void EngineInstallationId__ctor_m3DA969A78EEC8A653BE1E04C1E0716863F929CB7 (void);
+extern void InstallationId__ctor_m4F1DE6BA6692F53DBB59AE191892391A0C4CB065 (void);
 extern void InstallationId_GetOrCreateIdentifier_mB808E735A25CB3357E33337F9A4B737DDAB6B40F (void);
 extern void InstallationId_CreateIdentifier_mC089486FCD96983C9186689C41D1D75E36EFB90C (void);
 extern void InstallationId_ReadIdentifierFromFile_m126AF7B4F947DBB382AA8848D51FEA52C91C3E7C (void);
@@ -30,10 +32,12 @@ extern void UnityAnalyticsIdentifier_set_UserId_m2751FA3CB0A777DAC8AA56ECBE8945E
 extern void UnityAnalyticsIdentifier__ctor_mE19B73CB1414B5AC0619E8EF1366C0164B06D14B (void);
 extern void UnityEngineIdentifier_get_UserId_m34135DB2F190D05C1B89D8BA6BC2344C8F18C796 (void);
 extern void UnityEngineIdentifier_set_UserId_mCA38EC3A0364B91D605849C3390177F6006B0E99 (void);
-extern void UnityEngineIdentifier__ctor_m805AEF091D20B8DEFC5CDA619D586C380B1C00CA (void);
-static Il2CppMethodPointer s_methodPointers[26] = 
+extern void UnityEngineIdentifier__ctor_mC73AC45F64384198D95BB0BDC3799FE5796A1A36 (void);
+static Il2CppMethodPointer s_methodPointers[28] = 
 {
-	InstallationId__ctor_mD8E8D5B7A72C54F2517D33F9F2C89FA708CC6BF7,
+	EngineInstallationId_GetOrCreateIdentifier_mDFE1DBFAB1EF5971A39F3618094D375B0424A277,
+	EngineInstallationId__ctor_m3DA969A78EEC8A653BE1E04C1E0716863F929CB7,
+	InstallationId__ctor_m4F1DE6BA6692F53DBB59AE191892391A0C4CB065,
 	InstallationId_GetOrCreateIdentifier_mB808E735A25CB3357E33337F9A4B737DDAB6B40F,
 	InstallationId_CreateIdentifier_mC089486FCD96983C9186689C41D1D75E36EFB90C,
 	InstallationId_ReadIdentifierFromFile_m126AF7B4F947DBB382AA8848D51FEA52C91C3E7C,
@@ -58,42 +62,44 @@ static Il2CppMethodPointer s_methodPointers[26] =
 	UnityAnalyticsIdentifier__ctor_mE19B73CB1414B5AC0619E8EF1366C0164B06D14B,
 	UnityEngineIdentifier_get_UserId_m34135DB2F190D05C1B89D8BA6BC2344C8F18C796,
 	UnityEngineIdentifier_set_UserId_mCA38EC3A0364B91D605849C3390177F6006B0E99,
-	UnityEngineIdentifier__ctor_m805AEF091D20B8DEFC5CDA619D586C380B1C00CA,
+	UnityEngineIdentifier__ctor_mC73AC45F64384198D95BB0BDC3799FE5796A1A36,
 };
-static const int32_t s_InvokerIndices[26] = 
+static const int32_t s_InvokerIndices[28] = 
 {
-	18307,
-	18039,
-	18307,
-	31184,
-	29945,
-	31184,
-	31184,
-	23019,
-	25611,
-	23021,
-	23021,
-	23925,
-	23925,
+	18298,
+	18568,
+	14272,
+	18298,
+	18568,
+	31495,
+	30252,
+	31495,
+	31495,
+	23303,
+	25899,
+	23305,
+	23305,
+	24212,
+	24212,
 	-1,
 	-1,
-	18039,
-	14057,
-	31184,
-	29945,
-	18307,
-	18039,
-	14057,
-	18307,
-	18039,
-	14057,
-	18307,
+	18298,
+	14272,
+	31495,
+	30252,
+	18568,
+	18298,
+	14272,
+	18568,
+	18298,
+	14272,
+	14272,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_Services_Core_Device_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_Services_Core_Device_CodeGenModule = 
 {
 	"Unity.Services.Core.Device.dll",
-	26,
+	28,
 	s_methodPointers,
 	0,
 	NULL,

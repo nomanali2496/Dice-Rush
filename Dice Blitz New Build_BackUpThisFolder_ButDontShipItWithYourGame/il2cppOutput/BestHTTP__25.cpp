@@ -3828,7 +3828,7 @@ IL_006d:
 		int32_t L_31 = ((int32_t)(((int32_t)((uint32_t)L_30>>2))&((int32_t)63)));
 		uint8_t L_32 = (L_29)->GetAt(static_cast<il2cpp_array_size_t>(L_31));
 		NullCheck(L_28);
-		VirtualActionInvoker1< uint8_t >::Invoke(37, L_28, L_32);
+		VirtualActionInvoker1< uint8_t >::Invoke(38, L_28, L_32);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/generators/OpenBsdBCrypt.cs:236>
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_33 = V_1;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_34 = ((OpenBsdBCrypt_t0169237E93B2461B0853A9961A77862348C33C83_StaticFields*)il2cpp_codegen_static_fields_for(OpenBsdBCrypt_t0169237E93B2461B0853A9961A77862348C33C83_il2cpp_TypeInfo_var))->___EncodingTable;
@@ -3838,7 +3838,7 @@ IL_006d:
 		int32_t L_37 = ((int32_t)(((int32_t)(((int32_t)((int32_t)L_35<<4))|((int32_t)((uint32_t)L_36>>4))))&((int32_t)63)));
 		uint8_t L_38 = (L_34)->GetAt(static_cast<il2cpp_array_size_t>(L_37));
 		NullCheck(L_33);
-		VirtualActionInvoker1< uint8_t >::Invoke(37, L_33, L_38);
+		VirtualActionInvoker1< uint8_t >::Invoke(38, L_33, L_38);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/generators/OpenBsdBCrypt.cs:237>
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_39 = V_1;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_40 = ((OpenBsdBCrypt_t0169237E93B2461B0853A9961A77862348C33C83_StaticFields*)il2cpp_codegen_static_fields_for(OpenBsdBCrypt_t0169237E93B2461B0853A9961A77862348C33C83_il2cpp_TypeInfo_var))->___EncodingTable;
@@ -3848,7 +3848,7 @@ IL_006d:
 		int32_t L_43 = ((int32_t)(((int32_t)(((int32_t)((int32_t)L_41<<2))|((int32_t)((uint32_t)L_42>>6))))&((int32_t)63)));
 		uint8_t L_44 = (L_40)->GetAt(static_cast<il2cpp_array_size_t>(L_43));
 		NullCheck(L_39);
-		VirtualActionInvoker1< uint8_t >::Invoke(37, L_39, L_44);
+		VirtualActionInvoker1< uint8_t >::Invoke(38, L_39, L_44);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/generators/OpenBsdBCrypt.cs:238>
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_45 = V_1;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_46 = ((OpenBsdBCrypt_t0169237E93B2461B0853A9961A77862348C33C83_StaticFields*)il2cpp_codegen_static_fields_for(OpenBsdBCrypt_t0169237E93B2461B0853A9961A77862348C33C83_il2cpp_TypeInfo_var))->___EncodingTable;
@@ -3857,7 +3857,7 @@ IL_006d:
 		int32_t L_48 = ((int32_t)((int32_t)L_47&((int32_t)63)));
 		uint8_t L_49 = (L_46)->GetAt(static_cast<il2cpp_array_size_t>(L_48));
 		NullCheck(L_45);
-		VirtualActionInvoker1< uint8_t >::Invoke(37, L_45, L_49);
+		VirtualActionInvoker1< uint8_t >::Invoke(38, L_45, L_49);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/generators/OpenBsdBCrypt.cs:229>
 		int32_t L_50 = V_6;
 		V_6 = ((int32_t)il2cpp_codegen_add(L_50, 3));
@@ -3878,7 +3878,7 @@ IL_00da:
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_53 = V_1;
 		NullCheck(L_53);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_54;
-		L_54 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(41, L_53);
+		L_54 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(42, L_53);
 		String_t* L_55;
 		L_55 = Strings_FromByteArray_m9A271169009EB0FE1EFB9DE69F9C2CA89F8849C6(L_54, NULL);
 		V_7 = L_55;
@@ -4124,19 +4124,19 @@ IL_00a6:
 		uint8_t L_57 = V_2;
 		uint8_t L_58 = V_3;
 		NullCheck(L_56);
-		VirtualActionInvoker1< uint8_t >::Invoke(37, L_56, (uint8_t)((int32_t)(uint8_t)((int32_t)(((int32_t)((int32_t)L_57<<2))|((int32_t)((int32_t)L_58>>4))))));
+		VirtualActionInvoker1< uint8_t >::Invoke(38, L_56, (uint8_t)((int32_t)(uint8_t)((int32_t)(((int32_t)((int32_t)L_57<<2))|((int32_t)((int32_t)L_58>>4))))));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/generators/OpenBsdBCrypt.cs:293>
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_59 = V_1;
 		uint8_t L_60 = V_3;
 		uint8_t L_61 = V_4;
 		NullCheck(L_59);
-		VirtualActionInvoker1< uint8_t >::Invoke(37, L_59, (uint8_t)((int32_t)(uint8_t)((int32_t)(((int32_t)((int32_t)L_60<<4))|((int32_t)((int32_t)L_61>>2))))));
+		VirtualActionInvoker1< uint8_t >::Invoke(38, L_59, (uint8_t)((int32_t)(uint8_t)((int32_t)(((int32_t)((int32_t)L_60<<4))|((int32_t)((int32_t)L_61>>2))))));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/generators/OpenBsdBCrypt.cs:294>
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_62 = V_1;
 		uint8_t L_63 = V_4;
 		uint8_t L_64 = V_5;
 		NullCheck(L_62);
-		VirtualActionInvoker1< uint8_t >::Invoke(37, L_62, (uint8_t)((int32_t)(uint8_t)((int32_t)(((int32_t)((int32_t)L_63<<6))|(int32_t)L_64))));
+		VirtualActionInvoker1< uint8_t >::Invoke(38, L_62, (uint8_t)((int32_t)(uint8_t)((int32_t)(((int32_t)((int32_t)L_63<<6))|(int32_t)L_64))));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/generators/OpenBsdBCrypt.cs:285>
 		int32_t L_65 = V_12;
 		V_12 = ((int32_t)il2cpp_codegen_add(L_65, 4));
@@ -4157,7 +4157,7 @@ IL_010b:
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_68 = V_1;
 		NullCheck(L_68);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_69;
-		L_69 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(41, L_68);
+		L_69 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(42, L_68);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/generators/OpenBsdBCrypt.cs:300>
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_70 = (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)SZArrayNew(ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031_il2cpp_TypeInfo_var, (uint32_t)((int32_t)16));
 		V_8 = L_70;

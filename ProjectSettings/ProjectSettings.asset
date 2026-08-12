@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: Blingo Dice
+  productName: Dice Blitz
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.09803922, g: 0.03137255, b: 0.1254902, a: 1}
@@ -40,7 +40,7 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos:
-  - logo: {fileID: 21300000, guid: 8077c6ddf47ad93448efaab9e8451a52, type: 3}
+  - logo: {fileID: 0}
     duration: 5
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
@@ -304,7 +304,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: ebf33ef4d648893409e49f2cce9048f9, type: 3}
+      m_Icon: {fileID: 2800000, guid: 69fa31f317cdb86448ec63325ae96e69, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -805,6 +805,7 @@ PlayerSettings:
     Kepler: DOTWEEN;PHOTON_UNITY_NETWORKING;PUN_2_0_OR_NEWER;PUN_2_OR_NEWER;PUN_2_19_OR_NEWER
     LinuxHeadlessSimulation: DOTWEEN;PHOTON_UNITY_NETWORKING;PUN_2_0_OR_NEWER;PUN_2_OR_NEWER;PUN_2_19_OR_NEWER
     Nintendo Switch: DOTWEEN;PHOTON_UNITY_NETWORKING;PUN_2_0_OR_NEWER;PUN_2_OR_NEWER;PUN_2_19_OR_NEWER
+    Nintendo Switch 2: DOTWEEN
     PS4: DOTWEEN;PHOTON_UNITY_NETWORKING;PUN_2_0_OR_NEWER;PUN_2_OR_NEWER;PUN_2_19_OR_NEWER
     PS5: DOTWEEN;PHOTON_UNITY_NETWORKING;PUN_2_0_OR_NEWER;PUN_2_OR_NEWER;PUN_2_19_OR_NEWER
     QNX: DOTWEEN;PHOTON_UNITY_NETWORKING;PUN_2_0_OR_NEWER;PUN_2_OR_NEWER;PUN_2_19_OR_NEWER

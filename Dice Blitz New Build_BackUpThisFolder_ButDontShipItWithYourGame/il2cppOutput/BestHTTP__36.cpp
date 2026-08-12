@@ -4425,7 +4425,7 @@ IL_001b:
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/asn1/IndefiniteLengthInputStream.cs:43>
 		__this->____lookAhead = (-1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/asn1/IndefiniteLengthInputStream.cs:44>
-		VirtualActionInvoker1< bool >::Invoke(39, __this, (bool)1);
+		VirtualActionInvoker1< bool >::Invoke(40, __this, (bool)1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/asn1/IndefiniteLengthInputStream.cs:45>
 		return (bool)1;
 	}
@@ -4492,7 +4492,7 @@ IL_0021:
 		int32_t L_10 = ___2_count;
 		NullCheck(L_7);
 		int32_t L_11;
-		L_11 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, L_7, L_8, ((int32_t)il2cpp_codegen_add(L_9, 1)), ((int32_t)il2cpp_codegen_subtract(L_10, 1)));
+		L_11 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, L_7, L_8, ((int32_t)il2cpp_codegen_add(L_9, 1)), ((int32_t)il2cpp_codegen_subtract(L_10, 1)));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/asn1/IndefiniteLengthInputStream.cs:64>
 		int32_t L_12 = L_11;
 		if ((((int32_t)L_12) > ((int32_t)0)))
@@ -4571,7 +4571,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t IndefiniteLengthInputStream_RequireBy
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = ((LimitedInputStream_t54306834885D9B4B406198749457959386BAC1E5*)__this)->____in;
 		NullCheck(L_0);
 		int32_t L_1;
-		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(34, L_0);
+		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(35, L_0);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/asn1/IndefiniteLengthInputStream.cs:89>
 		int32_t L_2 = L_1;
 		if ((((int32_t)L_2) >= ((int32_t)0)))
@@ -4719,7 +4719,7 @@ IL_0012:
 		LazyAsn1InputStream__ctor_m7269AE2C2C8439B1BC3324168A43C42DDF7AF0E2(L_7, L_4, L_5, L_6, NULL);
 		NullCheck(L_7);
 		Asn1EncodableVector_t2C53C28268CB94799CEC7D08464DF8A75F56D28F* L_8;
-		L_8 = VirtualFuncInvoker0< Asn1EncodableVector_t2C53C28268CB94799CEC7D08464DF8A75F56D28F* >::Invoke(38, L_7);
+		L_8 = VirtualFuncInvoker0< Asn1EncodableVector_t2C53C28268CB94799CEC7D08464DF8A75F56D28F* >::Invoke(39, L_7);
 		return L_8;
 	}
 }
@@ -4829,7 +4829,7 @@ IL_0043:
 				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/asn1/LazyDERSequence.cs:29>
 				NullCheck(L_5);
 				Asn1EncodableVector_t2C53C28268CB94799CEC7D08464DF8A75F56D28F* L_6;
-				L_6 = VirtualFuncInvoker0< Asn1EncodableVector_t2C53C28268CB94799CEC7D08464DF8A75F56D28F* >::Invoke(38, L_5);
+				L_6 = VirtualFuncInvoker0< Asn1EncodableVector_t2C53C28268CB94799CEC7D08464DF8A75F56D28F* >::Invoke(39, L_5);
 				V_2 = L_6;
 				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/asn1/LazyDERSequence.cs:31>
 				Asn1EncodableVector_t2C53C28268CB94799CEC7D08464DF8A75F56D28F* L_7 = V_2;
@@ -5163,7 +5163,7 @@ IL_0043:
 				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/asn1/LazyDERSet.cs:29>
 				NullCheck(L_5);
 				Asn1EncodableVector_t2C53C28268CB94799CEC7D08464DF8A75F56D28F* L_6;
-				L_6 = VirtualFuncInvoker0< Asn1EncodableVector_t2C53C28268CB94799CEC7D08464DF8A75F56D28F* >::Invoke(38, L_5);
+				L_6 = VirtualFuncInvoker0< Asn1EncodableVector_t2C53C28268CB94799CEC7D08464DF8A75F56D28F* >::Invoke(39, L_5);
 				V_2 = L_6;
 				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/asn1/LazyDERSet.cs:31>
 				Asn1EncodableVector_t2C53C28268CB94799CEC7D08464DF8A75F56D28F* L_7 = V_2;

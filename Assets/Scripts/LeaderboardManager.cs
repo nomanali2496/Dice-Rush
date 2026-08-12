@@ -46,8 +46,20 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
     // Filtered indices for the scroller — excludes the logged-in user's row
     private System.Collections.Generic.List<int> _filteredIndices = new System.Collections.Generic.List<int>();
     
+    private void Awake()
+    {
+        if (FindFirstObjectByType<NewLeaderboardManager>() != null)
+        {
+            Debug.Log("[LeaderboardManager] NewLeaderboardManager detected in scene. Disabling legacy LeaderboardManager.");
+            enabled = false;
+            gameObject.SetActive(false);
+            return;
+        }
+    }
+
     private void Start()
     {
+        if (FindFirstObjectByType<NewLeaderboardManager>() != null) return;
         InitializeLeaderboard();
         
         // Initial sync of user row
@@ -80,6 +92,13 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
     
     private void OnEnable()
     {
+        if (FindFirstObjectByType<NewLeaderboardManager>() != null)
+        {
+            enabled = false;
+            gameObject.SetActive(false);
+            return;
+        }
+
         PlayerModel.OnDataUpdated += OnPlayerDataUpdated;
         
         if (isInitialized)

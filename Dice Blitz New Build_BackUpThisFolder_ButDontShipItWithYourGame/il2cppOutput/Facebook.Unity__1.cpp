@@ -4200,7 +4200,7 @@ void OnComplete_Invoke_m2F0A29DF18AE6DF007D002FAE635C8B9C5CF30E9_OpenGenericInte
 	NullCheck(___0_resultContainer);
 	GenericInterfaceActionInvoker0::Invoke(method, ___0_resultContainer);
 }
-// Method Definition Index: 131117
+// Method Definition Index: 133421
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OnComplete__ctor_m2B0318BD0EEC045FA17F4EA2F1BFAE8BFA7165D3 (OnComplete_t2DD970952C312F20869A0FE258F817CDB5A45AE3* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -4253,20 +4253,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OnComplete__ctor_m2B0318BD0EEC045FA17F4E
 	}
 	__this->___extra_arg = (intptr_t)&OnComplete_Invoke_m2F0A29DF18AE6DF007D002FAE635C8B9C5CF30E9_Multicast;
 }
-// Method Definition Index: 131118
+// Method Definition Index: 133422
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OnComplete_Invoke_m2F0A29DF18AE6DF007D002FAE635C8B9C5CF30E9 (OnComplete_t2DD970952C312F20869A0FE258F817CDB5A45AE3* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_resultContainer, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 131119
+// Method Definition Index: 133423
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OnComplete_BeginInvoke_m01F77D2603ECC3E1FE89B9356D90C6321B00302D (OnComplete_t2DD970952C312F20869A0FE258F817CDB5A45AE3* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___1_callback, RuntimeObject* ___2_object, const RuntimeMethod* method) 
 {
 	void *__d_args[2] = {0};
 	__d_args[0] = ___0_resultContainer;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___1_callback, (RuntimeObject*)___2_object);
 }
-// Method Definition Index: 131120
+// Method Definition Index: 133424
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OnComplete_EndInvoke_mDB85488EB5D8D8C3C7C20B222BA9F9150B907339 (OnComplete_t2DD970952C312F20869A0FE258F817CDB5A45AE3* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___0_result, 0);
@@ -4279,7 +4279,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OnComplete_EndInvoke_mDB85488EB5D8D8C3C7
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131158
+// Method Definition Index: 133462
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FacebookGameObject_t2A844C47156B1DC094D9D008FFFC2F730F8E0D0B* WindowsFacebookLoader_get_FBGameObject_m3D2DFEB035BF5D7250B95DCF0F041FEBF44F2D89 (WindowsFacebookLoader_tEEDB2844F23553B44E89F93C1593BC86F524F9C3* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4317,7 +4317,7 @@ IL_001a:
 		return L_5;
 	}
 }
-// Method Definition Index: 131159
+// Method Definition Index: 133463
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WindowsFacebookLoader__ctor_mF8EF5A7D69942E86C77B55E92A99643EC360E043 (WindowsFacebookLoader_tEEDB2844F23553B44E89F93C1593BC86F524F9C3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4333,7 +4333,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WindowsFacebookLoader__ctor_mF8EF5A7D699
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131160
+// Method Definition Index: 133464
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* WindowsFacebookGameObject_get_WindowsFacebookImpl_m3373EE7ECD133E5BFA6B3DDA1BDB4FE240EB63AE (WindowsFacebookGameObject_t6A68D4D02C30E7655DBDA4D112F5E48B9FE7D864* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4348,14 +4348,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* WindowsFacebookGameObject_get_
 		return ((RuntimeObject*)Castclass((RuntimeObject*)L_0, IWindowsFacebookImplementation_tC85B6B66B8369F46C6224A04DF3FA294BD6A70EB_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 131161
+// Method Definition Index: 133465
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WindowsFacebookGameObject_OnAwake_mD4F9BBC1FA31A373B863A9824947500B02FDFAC8 (WindowsFacebookGameObject_t6A68D4D02C30E7655DBDA4D112F5E48B9FE7D864* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 131162
+// Method Definition Index: 133466
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WindowsFacebookGameObject_Update_m680446474D6683D25F516E58CD5527F4074740FF (WindowsFacebookGameObject_t6A68D4D02C30E7655DBDA4D112F5E48B9FE7D864* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4372,7 +4372,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WindowsFacebookGameObject_Update_m680446
 		return;
 	}
 }
-// Method Definition Index: 131163
+// Method Definition Index: 133467
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WindowsFacebookGameObject_OnDestroy_m5FF5AD573B9396E08F4B5A7092913BA42BC4BA49 (WindowsFacebookGameObject_t6A68D4D02C30E7655DBDA4D112F5E48B9FE7D864* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4389,7 +4389,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WindowsFacebookGameObject_OnDestroy_m5FF
 		return;
 	}
 }
-// Method Definition Index: 131164
+// Method Definition Index: 133468
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WindowsFacebookGameObject__ctor_mF82F044EE09B2A680F83A9D8177C8A55138B7D2C (WindowsFacebookGameObject_t6A68D4D02C30E7655DBDA4D112F5E48B9FE7D864* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4405,7 +4405,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WindowsFacebookGameObject__ctor_mF82F044
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131165
+// Method Definition Index: 133469
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook__ctor_m106D4F616A606999DFA0D5E9D678306644DAC060 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, RuntimeObject* ___0_wrapper, CallbackManager_t3B9141B4E44116445C556786C02DEDA7CE612749* ___1_callbackManager, const RuntimeMethod* method) 
 {
 	{
@@ -4417,7 +4417,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook__ctor_m106D4F616A606999DF
 		return;
 	}
 }
-// Method Definition Index: 131166
+// Method Definition Index: 133470
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook__ctor_m3DF123CBA908ABBD50F288D30C31D748083A527B (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4438,7 +4438,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook__ctor_m3DF123CBA908ABBD50
 		return;
 	}
 }
-// Method Definition Index: 131167
+// Method Definition Index: 133471
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool EditorFacebook_get_LimitEventUsage_mCEA393F421DB04B863917B3AED81CA65DF9F2375 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4446,7 +4446,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool EditorFacebook_get_LimitEventUsage_mCEA3
 		return L_0;
 	}
 }
-// Method Definition Index: 131168
+// Method Definition Index: 133472
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_set_LimitEventUsage_m99297763CF00CF93953967DF2458C68265693CF1 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -4455,7 +4455,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_set_LimitEventUsage_m9929
 		return;
 	}
 }
-// Method Definition Index: 131169
+// Method Definition Index: 133473
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t EditorFacebook_get_ShareDialogMode_mBBB5619BF4064803DB388EAAAF651B7C98F5FF7A (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4463,7 +4463,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t EditorFacebook_get_ShareDialogMode_mB
 		return L_0;
 	}
 }
-// Method Definition Index: 131170
+// Method Definition Index: 133474
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_set_ShareDialogMode_mD84D014A1DD8E118CA761340B477B6C3C526F5D0 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -4472,7 +4472,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_set_ShareDialogMode_mD84D
 		return;
 	}
 }
-// Method Definition Index: 131171
+// Method Definition Index: 133475
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* EditorFacebook_get_SDKName_m01A1BEAFF60DCFAD0F29B4565E1F73FF8855FB59 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4485,7 +4485,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* EditorFacebook_get_SDKName_m01A1BEA
 		return _stringLiteral6FF2EEE60B195E20BB4D40851C59ED8A05D983F4;
 	}
 }
-// Method Definition Index: 131172
+// Method Definition Index: 133476
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* EditorFacebook_get_SDKVersion_mE51F1D00513983A972D67503E3F2EAE1A815A695 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4494,7 +4494,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* EditorFacebook_get_SDKVersion_mE51F
 		return L_0;
 	}
 }
-// Method Definition Index: 131173
+// Method Definition Index: 133477
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* EditorFacebook_get_UserID_m0FAD348872D065D0A81F48C523C7048C410C28A0 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4502,7 +4502,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* EditorFacebook_get_UserID_m0FAD3488
 		return L_0;
 	}
 }
-// Method Definition Index: 131174
+// Method Definition Index: 133478
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_set_UserID_m2DC39B45D3DFA57B05C0940987126818ADF0CBC4 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -4512,7 +4512,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_set_UserID_m2DC39B45D3DFA
 		return;
 	}
 }
-// Method Definition Index: 131175
+// Method Definition Index: 133479
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* EditorFacebook_get_EditorGameObject_m9A7A38B9A09F4507C4D09ADDB1C1A27901B48EDE (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4527,7 +4527,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* EditorFacebook_get_EditorGameO
 		return L_0;
 	}
 }
-// Method Definition Index: 131176
+// Method Definition Index: 133480
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_Init_m0C4BEC7E7B7F5B0836F8C643143A83C4A49A1B20 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, InitDelegate_t880BF96D9E733404D1E36BF894DDA83C1B9A1A9F* ___0_onInitComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4549,7 +4549,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_Init_m0C4BEC7E7B7F5B0836F
 		return;
 	}
 }
-// Method Definition Index: 131177
+// Method Definition Index: 133481
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_LogInWithReadPermissions_mD682B38558DDDAC21BA639BFF5E50D6BFA1BEBE3 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, RuntimeObject* ___0_permissions, FacebookDelegate_1_t12EB4CA46E5479FC254BB457E8695ACBA6D7AB0D* ___1_callback, const RuntimeMethod* method) 
 {
 	{
@@ -4559,7 +4559,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_LogInWithReadPermissions_
 		return;
 	}
 }
-// Method Definition Index: 131178
+// Method Definition Index: 133482
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_LogInWithPublishPermissions_m5C79F38C4A01C039D62E59E568A517DFB9F12687 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, RuntimeObject* ___0_permissions, FacebookDelegate_1_t12EB4CA46E5479FC254BB457E8695ACBA6D7AB0D* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4588,7 +4588,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_LogInWithPublishPermissio
 		return;
 	}
 }
-// Method Definition Index: 131179
+// Method Definition Index: 133483
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_EnableProfileUpdatesOnAccessTokenChange_m4B2CBF527F117D6B4642E2FA457FA2CEFE441046 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, bool ___0_enable, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4604,7 +4604,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_EnableProfileUpdatesOnAcc
 		return;
 	}
 }
-// Method Definition Index: 131180
+// Method Definition Index: 133484
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_LoginWithTrackingPreference_mA61C635424BA7F8C90292483E4BA3D33D50FD617 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_tracking, RuntimeObject* ___1_permissions, String_t* ___2_nonce, FacebookDelegate_1_t12EB4CA46E5479FC254BB457E8695ACBA6D7AB0D* ___3_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4633,7 +4633,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_LoginWithTrackingPreferen
 		return;
 	}
 }
-// Method Definition Index: 131181
+// Method Definition Index: 133485
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_AppRequest_mB4D888E34327E56CBECB82174A73E8C276A0F70B (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_message, Nullable_1_t61CE348507A9F5421A2CFD17C087DBF01CE99C73 ___1_actionType, String_t* ___2_objectId, RuntimeObject* ___3_to, RuntimeObject* ___4_filters, RuntimeObject* ___5_excludeIds, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___6_maxRecipients, String_t* ___7_data, String_t* ___8_title, FacebookDelegate_1_t0FD54CEBA449E8491C6F3CC16DAEC9723FBDEFF2* ___9_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4659,7 +4659,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_AppRequest_mB4D888E34327E
 		return;
 	}
 }
-// Method Definition Index: 131182
+// Method Definition Index: 133486
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_ShareLink_mD221383D553A0C2185A3C851E3AA0DEE66F1F021 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___0_contentURL, String_t* ___1_contentTitle, String_t* ___2_contentDescription, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___3_photoURL, FacebookDelegate_1_t4C7ACE222D7D3FBEA79B4E2B46A1CD632E0EAD35* ___4_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4686,7 +4686,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_ShareLink_mD221383D553A0C
 		return;
 	}
 }
-// Method Definition Index: 131183
+// Method Definition Index: 133487
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_FeedShare_mDDCCCC5DB87E4B142AF80AAD630B83F9B96D8AF2 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_toId, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___1_link, String_t* ___2_linkName, String_t* ___3_linkCaption, String_t* ___4_linkDescription, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___5_picture, String_t* ___6_mediaSource, FacebookDelegate_1_t4C7ACE222D7D3FBEA79B4E2B46A1CD632E0EAD35* ___7_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4713,7 +4713,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_FeedShare_mDDCCCC5DB87E4B
 		return;
 	}
 }
-// Method Definition Index: 131184
+// Method Definition Index: 133488
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_ActivateApp_mB415FCEE55B459031A34B332A89F7B4A5DA28E87 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_appId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4729,7 +4729,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_ActivateApp_mB415FCEE55B4
 		return;
 	}
 }
-// Method Definition Index: 131185
+// Method Definition Index: 133489
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_GetAppLink_m612FE11FB69FC7C88A439540D77B42C097644334 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, FacebookDelegate_1_t084616048CD926AFFFA1D0E903E2278104EDFF5D* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4769,7 +4769,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_GetAppLink_m612FE11FB69FC
 		return;
 	}
 }
-// Method Definition Index: 131186
+// Method Definition Index: 133490
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_AppEventsLogEvent_mDED81430AD92CE4D18F9E7FE692CF2CB9107D0C6 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_logEvent, Nullable_1_t3D746CBB6123D4569FF4DEA60BC4240F32C6FE75 ___1_valueToSum, Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* ___2_parameters, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4785,7 +4785,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_AppEventsLogEvent_mDED814
 		return;
 	}
 }
-// Method Definition Index: 131187
+// Method Definition Index: 133491
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_AppEventsLogPurchase_m32CEE56A36448E0D50605CB3F7548EFF5D9345C7 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, float ___0_logPurchase, String_t* ___1_currency, Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* ___2_parameters, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4801,70 +4801,70 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_AppEventsLogPurchase_m32C
 		return;
 	}
 }
-// Method Definition Index: 131188
+// Method Definition Index: 133492
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool EditorFacebook_IsImplicitPurchaseLoggingEnabled_m85DF96F54604DA4D7A0F1BE66D51EF31F664F8C1 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, const RuntimeMethod* method) 
 {
 	{
 		return (bool)1;
 	}
 }
-// Method Definition Index: 131189
+// Method Definition Index: 133493
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_SetAutoLogAppEventsEnabled_mC7FDB57307F683EFDDA77488A9152C5C271EAFB9 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, bool ___0_autoLogAppEventsEnabled, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 131190
+// Method Definition Index: 133494
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_SetAdvertiserIDCollectionEnabled_m5BA375EE700532B9191409539F93253407694E2E (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, bool ___0_advertiserIDCollectionEnabled, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 131191
+// Method Definition Index: 133495
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool EditorFacebook_SetAdvertiserTrackingEnabled_m625F31B016D4F16BCEF9C296F7FEB2D764B5EC58 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, bool ___0_advertiserTrackingEnabled, const RuntimeMethod* method) 
 {
 	{
 		return (bool)1;
 	}
 }
-// Method Definition Index: 131192
+// Method Definition Index: 133496
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool EditorFacebook_SetDomainErrorEnabled_m46B398D55E33F1336E5CD84DA3EF2F285472226C (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, bool ___0_domainErrorEnabled, const RuntimeMethod* method) 
 {
 	{
 		return (bool)1;
 	}
 }
-// Method Definition Index: 131193
+// Method Definition Index: 133497
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_SetPushNotificationsDeviceTokenString_m4AAC4E8EA63425760E3379B869A2D0CDC36C5AC4 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_token, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 131194
+// Method Definition Index: 133498
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_SetDataProcessingOptions_m1FEF8B87105EB4B4F51F85ED9026E82E698A42BF (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, RuntimeObject* ___0_options, int32_t ___1_country, int32_t ___2_state, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 131195
+// Method Definition Index: 133499
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AuthenticationToken_t925F4C42BE7D08897D579F0A55D5682704237B8C* EditorFacebook_CurrentAuthenticationToken_m8A319654452E70B3CBC8B1B5F5F41C703416F5FC (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, const RuntimeMethod* method) 
 {
 	{
 		return (AuthenticationToken_t925F4C42BE7D08897D579F0A55D5682704237B8C*)NULL;
 	}
 }
-// Method Definition Index: 131196
+// Method Definition Index: 133500
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Profile_t80D50211DC9ED35561A8B96A45C9C79AF07E5CF7* EditorFacebook_CurrentProfile_mC8E92CBE24ADD1FEF7AD5566967E0D54B767F032 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, const RuntimeMethod* method) 
 {
 	{
 		return (Profile_t80D50211DC9ED35561A8B96A45C9C79AF07E5CF7*)NULL;
 	}
 }
-// Method Definition Index: 131197
+// Method Definition Index: 133501
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_CurrentProfile_mB5E6BDE274755645E11B5633CC2F5B97CDBFBA3D (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, FacebookDelegate_1_t94FBFEDD2C735E8672548F7A3A1E9751AD48590A* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -4873,7 +4873,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_CurrentProfile_mB5E6BDE27
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&EditorFacebook_CurrentProfile_mB5E6BDE274755645E11B5633CC2F5B97CDBFBA3D_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131198
+// Method Definition Index: 133502
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_FetchDeferredAppLink_m845607F6D1BFAFFEC520A322815F19C72CD4C469 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, FacebookDelegate_1_t084616048CD926AFFFA1D0E903E2278104EDFF5D* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4935,7 +4935,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_FetchDeferredAppLink_m845
 		return;
 	}
 }
-// Method Definition Index: 131199
+// Method Definition Index: 133503
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_Pay_mA7C57483FF8000195E24B51DEC8ADB54114FB913 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_product, String_t* ___1_action, int32_t ___2_quantity, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___3_quantityMin, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___4_quantityMax, String_t* ___5_requestId, String_t* ___6_pricepointId, String_t* ___7_testCurrency, FacebookDelegate_1_t196A2AB9CCB2BC5DCA5BC05F82516E4C3FF9DD4B* ___8_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4961,7 +4961,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_Pay_mA7C57483FF8000195E24
 		return;
 	}
 }
-// Method Definition Index: 131200
+// Method Definition Index: 133504
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_PayWithProductId_mF39EE83B298B43464A247B3F1A31417A8B2B7BF7 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_productId, String_t* ___1_action, int32_t ___2_quantity, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___3_quantityMin, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___4_quantityMax, String_t* ___5_requestId, String_t* ___6_pricepointId, String_t* ___7_testCurrency, FacebookDelegate_1_t196A2AB9CCB2BC5DCA5BC05F82516E4C3FF9DD4B* ___8_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4987,7 +4987,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_PayWithProductId_mF39EE83
 		return;
 	}
 }
-// Method Definition Index: 131201
+// Method Definition Index: 133505
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_PayWithProductId_mCE42464F80CB1512EBCA21F66BCB4E39BBC4DDD6 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_productId, String_t* ___1_action, String_t* ___2_developerPayload, String_t* ___3_testCurrency, FacebookDelegate_1_t196A2AB9CCB2BC5DCA5BC05F82516E4C3FF9DD4B* ___4_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5013,7 +5013,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_PayWithProductId_mCE42464
 		return;
 	}
 }
-// Method Definition Index: 131202
+// Method Definition Index: 133506
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_RefreshCurrentAccessToken_mE92960DB9257AD2EDC5F8FD0CE11A1DC8AC62EC4 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, FacebookDelegate_1_t0A787A64D3187E98A865A198DDF444C008C79F35* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5099,7 +5099,7 @@ IL_0056:
 		return;
 	}
 }
-// Method Definition Index: 131203
+// Method Definition Index: 133507
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnAppRequestsComplete_m33C935BBFBAFE70F6D00DDB2884A2441F55EB450 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5122,7 +5122,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnAppRequestsComplete_m33
 		return;
 	}
 }
-// Method Definition Index: 131204
+// Method Definition Index: 133508
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnGetAppLinkComplete_m6CDDD93B77ADFBFD65B4A6358268E60A19949008 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5145,7 +5145,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnGetAppLinkComplete_m6CD
 		return;
 	}
 }
-// Method Definition Index: 131205
+// Method Definition Index: 133509
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnLoginComplete_mBFB12DC4575B0BD9417DBFE20E0F4B6C4E7FC68F (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5165,7 +5165,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnLoginComplete_mBFB12DC4
 		return;
 	}
 }
-// Method Definition Index: 131206
+// Method Definition Index: 133510
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnShareLinkComplete_m72DDBF6E5E32D9C9E1B65ACC962CE0BA5D1AE2A5 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5188,7 +5188,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnShareLinkComplete_m72DD
 		return;
 	}
 }
-// Method Definition Index: 131207
+// Method Definition Index: 133511
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnFetchDeferredAppLinkComplete_mC9E71A96BEC8DF218CCB9739D2EBCA9637C1C61E (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5211,7 +5211,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnFetchDeferredAppLinkCom
 		return;
 	}
 }
-// Method Definition Index: 131208
+// Method Definition Index: 133512
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnPayComplete_mC5559E0D52653A44882F5D251CBD7B2D9A303E70 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5234,7 +5234,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnPayComplete_mC5559E0D52
 		return;
 	}
 }
-// Method Definition Index: 131209
+// Method Definition Index: 133513
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnRefreshCurrentAccessTokenComplete_m2218930BEC62AE76B43E5D9C994BDEE44DE78C21 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5257,7 +5257,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnRefreshCurrentAccessTok
 		return;
 	}
 }
-// Method Definition Index: 131210
+// Method Definition Index: 133514
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnFriendFinderComplete_mDB5FCB0D2CDDA6385E7818F58714DBCD28FEAB88 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5280,7 +5280,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnFriendFinderComplete_mD
 		return;
 	}
 }
-// Method Definition Index: 131211
+// Method Definition Index: 133515
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnUploadImageToMediaLibraryComplete_m7A2176FB51EE4BD4000D8FAEE1081724DA171F28 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5303,7 +5303,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnUploadImageToMediaLibra
 		return;
 	}
 }
-// Method Definition Index: 131212
+// Method Definition Index: 133516
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnUploadVideoToMediaLibraryComplete_m8EA0669729A93492758DB7C74E9AEE92CCEFA135 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5326,7 +5326,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnUploadVideoToMediaLibra
 		return;
 	}
 }
-// Method Definition Index: 131213
+// Method Definition Index: 133517
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnOnIAPReadyComplete_m7FD5EA05302B469394DAF144F39B7CD32B7536DD (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5349,7 +5349,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnOnIAPReadyComplete_m7FD
 		return;
 	}
 }
-// Method Definition Index: 131214
+// Method Definition Index: 133518
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnGetCatalogComplete_m53A9317A52FF6B0AFA47FA57C7D2458D026B7075 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5372,7 +5372,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnGetCatalogComplete_m53A
 		return;
 	}
 }
-// Method Definition Index: 131215
+// Method Definition Index: 133519
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnGetPurchasesComplete_m71387527052A5306C79277DC9A45E4BACC013B0D (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5395,7 +5395,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnGetPurchasesComplete_m7
 		return;
 	}
 }
-// Method Definition Index: 131216
+// Method Definition Index: 133520
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnPurchaseComplete_m1783F7FA2032271C2C364D65D467ED499C666B81 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5418,7 +5418,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnPurchaseComplete_m1783F
 		return;
 	}
 }
-// Method Definition Index: 131217
+// Method Definition Index: 133521
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnConsumePurchaseComplete_m0DA13AA079EB700A5EED3CAAE6E02D32B767ABE1 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5441,7 +5441,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnConsumePurchaseComplete
 		return;
 	}
 }
-// Method Definition Index: 131218
+// Method Definition Index: 133522
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnGetSubscribableCatalogComplete_m527DD4DD14C82D808844834167682A9331282468 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5464,7 +5464,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnGetSubscribableCatalogC
 		return;
 	}
 }
-// Method Definition Index: 131219
+// Method Definition Index: 133523
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnGetSubscriptionsComplete_m2939171C9070B63718849C01317191676A3F3E56 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5487,7 +5487,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnGetSubscriptionsComplet
 		return;
 	}
 }
-// Method Definition Index: 131220
+// Method Definition Index: 133524
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnPurchaseSubscriptionComplete_mCCBF92966E5857F559EFEEADBDE6606D6FFADED6 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5510,7 +5510,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnPurchaseSubscriptionCom
 		return;
 	}
 }
-// Method Definition Index: 131221
+// Method Definition Index: 133525
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnCancelSubscriptionComplete_mE0680EA317DE0145AE689416BD66BB62CAF579C1 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5533,7 +5533,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnCancelSubscriptionCompl
 		return;
 	}
 }
-// Method Definition Index: 131222
+// Method Definition Index: 133526
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnInitCloudGameComplete_mF70ADF13D4D9EBFDE01B14749E47BF065B4793E0 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5556,7 +5556,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnInitCloudGameComplete_m
 		return;
 	}
 }
-// Method Definition Index: 131223
+// Method Definition Index: 133527
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnGameLoadCompleteComplete_mF568D774508CC280F0F6EF70ED8957F62C526A51 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5579,7 +5579,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnGameLoadCompleteComplet
 		return;
 	}
 }
-// Method Definition Index: 131224
+// Method Definition Index: 133528
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnScheduleAppToUserNotificationComplete_m550F826DE4E2E812E65D9E1F588E56FCAA69CB0A (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5602,7 +5602,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnScheduleAppToUserNotifi
 		return;
 	}
 }
-// Method Definition Index: 131225
+// Method Definition Index: 133529
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnLoadInterstitialAdComplete_mDCD3858BE7BCDA80597FD615C66D320AC8489F16 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5625,7 +5625,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnLoadInterstitialAdCompl
 		return;
 	}
 }
-// Method Definition Index: 131226
+// Method Definition Index: 133530
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnShowInterstitialAdComplete_mEFE41BAFEA9C6D21DCDA3B6EF23FA69DC67ED585 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5648,7 +5648,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnShowInterstitialAdCompl
 		return;
 	}
 }
-// Method Definition Index: 131227
+// Method Definition Index: 133531
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnLoadRewardedVideoComplete_mAB7163C45B3F662CFD5A55D95A1DF151E6FC9860 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5671,7 +5671,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnLoadRewardedVideoComple
 		return;
 	}
 }
-// Method Definition Index: 131228
+// Method Definition Index: 133532
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnShowRewardedVideoComplete_mA8D243C1CEB01910979FEAF0205C8B8F551256E7 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5694,7 +5694,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnShowRewardedVideoComple
 		return;
 	}
 }
-// Method Definition Index: 131229
+// Method Definition Index: 133533
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnGetPayloadComplete_m59190D8790BAD04EF9D69607A84D3423B2C3DF65 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5717,7 +5717,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnGetPayloadComplete_m591
 		return;
 	}
 }
-// Method Definition Index: 131230
+// Method Definition Index: 133534
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnPostSessionScoreComplete_m8A486E87F9248DE10662876558ED309466E42498 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5740,7 +5740,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnPostSessionScoreComplet
 		return;
 	}
 }
-// Method Definition Index: 131231
+// Method Definition Index: 133535
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnPostTournamentScoreComplete_m1DF6940A3CF0015EFEF2DE060466B607428106D1 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5763,7 +5763,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnPostTournamentScoreComp
 		return;
 	}
 }
-// Method Definition Index: 131232
+// Method Definition Index: 133536
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnGetTournamentComplete_mEBB2DA813257C3D420FBACCA4416F7E280661D8D (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5786,7 +5786,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnGetTournamentComplete_m
 		return;
 	}
 }
-// Method Definition Index: 131233
+// Method Definition Index: 133537
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnShareTournamentComplete_mDB8D3194A2C59B0B7CA724D70744081F927524AB (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5809,7 +5809,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnShareTournamentComplete
 		return;
 	}
 }
-// Method Definition Index: 131234
+// Method Definition Index: 133538
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnCreateTournamentComplete_m4FB10A71C84250280B2B29EE7E4658C4E143AF9E (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5832,7 +5832,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnCreateTournamentComplet
 		return;
 	}
 }
-// Method Definition Index: 131235
+// Method Definition Index: 133539
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnGetTournamentsComplete_m6A5A9BAA4A827BCE402C70F440FBB2B8F1878E90 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5855,7 +5855,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnGetTournamentsComplete_
 		return;
 	}
 }
-// Method Definition Index: 131236
+// Method Definition Index: 133540
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnUpdateTournamentComplete_m8FF07AFE5D5164149E688EE87ABBD2EC2B02EE27 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5878,7 +5878,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnUpdateTournamentComplet
 		return;
 	}
 }
-// Method Definition Index: 131237
+// Method Definition Index: 133541
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnTournamentDialogSuccess_m8AE8C41C765DCAFC12EFD05B55400CC2F52C9DCC (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5901,7 +5901,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnTournamentDialogSuccess
 		return;
 	}
 }
-// Method Definition Index: 131238
+// Method Definition Index: 133542
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnTournamentDialogCancel_mA3ED472A269C7E1D0786AABDC73638AE9566A2CB (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5924,7 +5924,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnTournamentDialogCancel_
 		return;
 	}
 }
-// Method Definition Index: 131239
+// Method Definition Index: 133543
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnTournamentDialogError_m714759FF7DAAE59FE3B34A14A175937E4FBAF1DC (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5947,7 +5947,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnTournamentDialogError_m
 		return;
 	}
 }
-// Method Definition Index: 131240
+// Method Definition Index: 133544
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnOpenAppStoreComplete_m0FA13A2085595F535E7BBE6CD450E31397DC50A4 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5970,7 +5970,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnOpenAppStoreComplete_m0
 		return;
 	}
 }
-// Method Definition Index: 131241
+// Method Definition Index: 133545
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnCreateGamingContextComplete_mC2BB7B86588341068273AB25B59906532446DACA (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5993,7 +5993,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnCreateGamingContextComp
 		return;
 	}
 }
-// Method Definition Index: 131242
+// Method Definition Index: 133546
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnSwitchGamingContextComplete_m7B1C322A5DFDCFCDA70A3DE65CE0001784A4CE5C (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6016,7 +6016,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnSwitchGamingContextComp
 		return;
 	}
 }
-// Method Definition Index: 131243
+// Method Definition Index: 133547
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnChooseGamingContextComplete_mCD6E75D0E0F8D5E735894ED9A0A1F7084DFFD904 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6039,7 +6039,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnChooseGamingContextComp
 		return;
 	}
 }
-// Method Definition Index: 131244
+// Method Definition Index: 133548
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnGetCurrentGamingContextComplete_mB2DE7D3829FA9C5C818C7B2557D4F6E2BD6A63F3 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6062,7 +6062,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnGetCurrentGamingContext
 		return;
 	}
 }
-// Method Definition Index: 131245
+// Method Definition Index: 133549
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OpenFriendFinderDialog_mCB0B921D8C3012159121E9253509897725BE2C12 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, FacebookDelegate_1_t55619BCDC758CB1C82277E6D8BA44ACA47C03DE2* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6089,7 +6089,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OpenFriendFinderDialog_mC
 		return;
 	}
 }
-// Method Definition Index: 131246
+// Method Definition Index: 133550
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_GetFriendFinderInvitations_m98777C3ED44ABFF5916899D962DD9025817BDFAE (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, FacebookDelegate_1_tF518E51A3BF076B1D5E8CE983567127943500CCC* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -6098,7 +6098,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_GetFriendFinderInvitation
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&EditorFacebook_GetFriendFinderInvitations_m98777C3ED44ABFF5916899D962DD9025817BDFAE_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131247
+// Method Definition Index: 133551
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_DeleteFriendFinderInvitation_mB9516E18A6636A7D1C604AB58B7C92A22F3ED69A (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_invitationId, FacebookDelegate_1_tF518E51A3BF076B1D5E8CE983567127943500CCC* ___1_callback, const RuntimeMethod* method) 
 {
 	{
@@ -6107,7 +6107,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_DeleteFriendFinderInvitat
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&EditorFacebook_DeleteFriendFinderInvitation_mB9516E18A6636A7D1C604AB58B7C92A22F3ED69A_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131248
+// Method Definition Index: 133552
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_UploadImageToMediaLibrary_m03FD72C97DE5F5C4F43D1450F33E9216B0894E64 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_caption, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___1_imageUri, bool ___2_shouldLaunchMediaDialog, FacebookDelegate_1_t7CA00F6A27B3FE85139590EFEA03B7C7C0D4A66D* ___3_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6147,7 +6147,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_UploadImageToMediaLibrary
 		return;
 	}
 }
-// Method Definition Index: 131249
+// Method Definition Index: 133553
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_UploadVideoToMediaLibrary_m6A792B013FD6E5A0968FBBE04163E625C4A46BA9 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_caption, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___1_imageUri, bool ___2_shouldLaunchMediaDialog, FacebookDelegate_1_t7CA00F6A27B3FE85139590EFEA03B7C7C0D4A66D* ___3_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6187,7 +6187,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_UploadVideoToMediaLibrary
 		return;
 	}
 }
-// Method Definition Index: 131250
+// Method Definition Index: 133554
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_GetUserLocale_mDE07DFBEDA23BD26D457ED9B7D143E9C6E1B42DA (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, FacebookDelegate_1_t287669D2D13F62ECCB982BD24ABCFB8AC41D6B0A* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -6196,7 +6196,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_GetUserLocale_mDE07DFBEDA
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&EditorFacebook_GetUserLocale_mDE07DFBEDA23BD26D457ED9B7D143E9C6E1B42DA_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131251
+// Method Definition Index: 133555
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnIAPReady_m0AF32C9DD812244AFEC58BCE515671A862CC39F1 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, FacebookDelegate_1_tA2A619ACCF137D8094955A556E78A66749C43F74* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6228,7 +6228,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnIAPReady_m0AF32C9DD8122
 		return;
 	}
 }
-// Method Definition Index: 131252
+// Method Definition Index: 133556
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_GetCatalog_m417B251C09C400AC1603FDB2386BB499B620AE9D (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, FacebookDelegate_1_tA8F51BBA2E7364881368E0CBED892F561162C32E* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6260,7 +6260,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_GetCatalog_m417B251C09C40
 		return;
 	}
 }
-// Method Definition Index: 131253
+// Method Definition Index: 133557
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_GetPurchases_mF7D8EDA8102B77E27B712726BAB2795B0AF7024E (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, FacebookDelegate_1_t61D056F5D405CB3DF2F643449D9C03A64AB8E818* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6292,7 +6292,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_GetPurchases_mF7D8EDA8102
 		return;
 	}
 }
-// Method Definition Index: 131254
+// Method Definition Index: 133558
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_Purchase_mFE656507AB20483964CDF6375764264FBBCB4FE9 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_productID, FacebookDelegate_1_tBD274D4AED39A6A24A22981D38D3CBF447CF036E* ___1_callback, String_t* ___2_developerPayload, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6324,7 +6324,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_Purchase_mFE656507AB20483
 		return;
 	}
 }
-// Method Definition Index: 131255
+// Method Definition Index: 133559
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_ConsumePurchase_mE33B7802FC020AABD52ACFE9A7A0CBDE2EA46E6D (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_purchaseToken, FacebookDelegate_1_tF96C838D4977CEFDB874E77F7A56B1CFECF4D8DD* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6356,7 +6356,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_ConsumePurchase_mE33B7802
 		return;
 	}
 }
-// Method Definition Index: 131256
+// Method Definition Index: 133560
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_GetSubscribableCatalog_m4E9AB13D23CC41833F38B4D5CF255EA54F7A0240 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, FacebookDelegate_1_tCBDD2ED234A2D2CC094CDD20A03718E3B5BD81EE* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6388,7 +6388,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_GetSubscribableCatalog_m4
 		return;
 	}
 }
-// Method Definition Index: 131257
+// Method Definition Index: 133561
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_GetSubscriptions_m138AEE125D9AD0FF992BAAD872F2DCBB4DC905D0 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, FacebookDelegate_1_tF5F09FA5017250C0A7EDF6B3CC98AF13684FCB17* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6420,7 +6420,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_GetSubscriptions_m138AEE1
 		return;
 	}
 }
-// Method Definition Index: 131258
+// Method Definition Index: 133562
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_PurchaseSubscription_mEE1F12394C4898945170B003D69A6F9528326B03 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_productID, FacebookDelegate_1_t6E63BCC63D73CBC6E3733913002FDBE5F7A9C8EF* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6452,7 +6452,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_PurchaseSubscription_mEE1
 		return;
 	}
 }
-// Method Definition Index: 131259
+// Method Definition Index: 133563
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_CancelSubscription_m4BD00B04CF672176BA8BAEEFAF38E11AA9E9C024 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_purchaseToken, FacebookDelegate_1_t59D18819566848CF07E01DDFC1F4ADF70E376FC7* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6484,7 +6484,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_CancelSubscription_m4BD00
 		return;
 	}
 }
-// Method Definition Index: 131260
+// Method Definition Index: 133564
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_InitCloudGame_mCB30F600E394F50644DBFCDB0ACB1C482EDE85C2 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, FacebookDelegate_1_tB829CDA8266CAB15D1703F5904BB2F8592CA60E8* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6516,7 +6516,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_InitCloudGame_mCB30F600E3
 		return;
 	}
 }
-// Method Definition Index: 131261
+// Method Definition Index: 133565
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_GameLoadComplete_m6632B730E321A7813A3F237F0636AD2D6759C65A (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, FacebookDelegate_1_t2A3F65614ACD86BAA7B587ADC574B2830F2FAD31* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6548,7 +6548,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_GameLoadComplete_m6632B73
 		return;
 	}
 }
-// Method Definition Index: 131262
+// Method Definition Index: 133566
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_ScheduleAppToUserNotification_mCF088B032EDE8DAA221EBF1A0BC0D7CA471924E3 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_title, String_t* ___1_body, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___2_media, int32_t ___3_timeInterval, String_t* ___4_payload, FacebookDelegate_1_t623E520D5B99523D410AEE72AB9FF4901DC356AC* ___5_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6580,7 +6580,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_ScheduleAppToUserNotifica
 		return;
 	}
 }
-// Method Definition Index: 131263
+// Method Definition Index: 133567
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_LoadInterstitialAd_m006EBA34DB940156D1EA34590584AD680D741F2C (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_placementID, FacebookDelegate_1_t6BAE034F2CC3270BFC282A9D0DEB58CC5F91C265* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6612,7 +6612,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_LoadInterstitialAd_m006EB
 		return;
 	}
 }
-// Method Definition Index: 131264
+// Method Definition Index: 133568
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_ShowInterstitialAd_m75FE0AB7BE22C95210BEE2564DF3535C23C638C6 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_placementID, FacebookDelegate_1_t6BAE034F2CC3270BFC282A9D0DEB58CC5F91C265* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6644,7 +6644,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_ShowInterstitialAd_m75FE0
 		return;
 	}
 }
-// Method Definition Index: 131265
+// Method Definition Index: 133569
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_LoadRewardedVideo_mA87703C85457413610CB09B9DAB7599AE332C28B (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_placementID, FacebookDelegate_1_t9C5748E8AC36242F3F03171AA1E6306E60860ACD* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6676,7 +6676,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_LoadRewardedVideo_mA87703
 		return;
 	}
 }
-// Method Definition Index: 131266
+// Method Definition Index: 133570
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_ShowRewardedVideo_mF37DA354A366CEF350C834E2D76AB6543922DBCD (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_placementID, FacebookDelegate_1_t9C5748E8AC36242F3F03171AA1E6306E60860ACD* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6708,7 +6708,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_ShowRewardedVideo_mF37DA3
 		return;
 	}
 }
-// Method Definition Index: 131267
+// Method Definition Index: 133571
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_GetPayload_m12D25370B09EE974D5972E14E99642B65FA9CA3F (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, FacebookDelegate_1_tB6B04FA63685B9A0D41AB08E3E5BC96A72D7A1D7* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6740,7 +6740,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_GetPayload_m12D25370B09EE
 		return;
 	}
 }
-// Method Definition Index: 131268
+// Method Definition Index: 133572
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_PostSessionScore_m0437D20438F0100BA83AEFA488105188F7B88476 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, int32_t ___0_score, FacebookDelegate_1_t610D359C8E47669CC0D9F0B6CA9DF9240BF80267* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6772,7 +6772,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_PostSessionScore_m0437D20
 		return;
 	}
 }
-// Method Definition Index: 131269
+// Method Definition Index: 133573
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_PostTournamentScore_m03849D58FD56944C222605E3DA77A2F17FFC7F7F (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, int32_t ___0_score, FacebookDelegate_1_t474682078C474498C8D4805F13E9077763B39255* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6804,7 +6804,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_PostTournamentScore_m0384
 		return;
 	}
 }
-// Method Definition Index: 131270
+// Method Definition Index: 133574
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_GetTournament_m904B41D486EFB5389BF2E1541E8FDD2E788EECE1 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, FacebookDelegate_1_tD9C9BBFE6AD0931C935E391D858C37BEBF14BBA3* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6853,7 +6853,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_GetTournament_m904B41D486
 		return;
 	}
 }
-// Method Definition Index: 131271
+// Method Definition Index: 133575
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_ShareTournament_mCEF0CE221A65FD352C9ABB9D7B07EA513D1D65D5 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, int32_t ___0_score, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___1_data, FacebookDelegate_1_t474682078C474498C8D4805F13E9077763B39255* ___2_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6885,7 +6885,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_ShareTournament_mCEF0CE22
 		return;
 	}
 }
-// Method Definition Index: 131272
+// Method Definition Index: 133576
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_CreateTournament_mB81F9BFA3F313683972FC225AFB854734FA82ED0 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, int32_t ___0_initialScore, String_t* ___1_title, String_t* ___2_imageBase64DataUrl, String_t* ___3_sortOrder, String_t* ___4_scoreFormat, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___5_data, FacebookDelegate_1_tD9C9BBFE6AD0931C935E391D858C37BEBF14BBA3* ___6_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6934,7 +6934,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_CreateTournament_mB81F9BF
 		return;
 	}
 }
-// Method Definition Index: 131273
+// Method Definition Index: 133577
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_GetTournaments_m79362CBC20947480156D03634D9BEDE80993A21F (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, FacebookDelegate_1_t64F37B84FFAB406D45358FC281716C5AD6B6916A* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -6943,7 +6943,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_GetTournaments_m79362CBC2
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&EditorFacebook_GetTournaments_m79362CBC20947480156D03634D9BEDE80993A21F_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131274
+// Method Definition Index: 133578
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_UpdateTournament_m0757138A415A318EF880B602288D2A32B3BC8541 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_tournamentID, int32_t ___1_score, FacebookDelegate_1_t474682078C474498C8D4805F13E9077763B39255* ___2_callback, const RuntimeMethod* method) 
 {
 	{
@@ -6952,7 +6952,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_UpdateTournament_m0757138
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&EditorFacebook_UpdateTournament_m0757138A415A318EF880B602288D2A32B3BC8541_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131275
+// Method Definition Index: 133579
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_UpdateAndShareTournament_m63469310CBE274B5800B628027243BABE1CFAAA9 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_tournamentID, int32_t ___1_score, FacebookDelegate_1_t2CCD4851FD0B117C9DDD8076206645B712D37148* ___2_callback, const RuntimeMethod* method) 
 {
 	{
@@ -6961,7 +6961,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_UpdateAndShareTournament_
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&EditorFacebook_UpdateAndShareTournament_m63469310CBE274B5800B628027243BABE1CFAAA9_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131276
+// Method Definition Index: 133580
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_CreateAndShareTournament_m29E7BEA8C84E13629AA40F42E746951AFD651FD9 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, int32_t ___0_initialScore, String_t* ___1_title, int32_t ___2_sortOrder, int32_t ___3_scoreFormat, int64_t ___4_endTime, String_t* ___5_payload, FacebookDelegate_1_t2CCD4851FD0B117C9DDD8076206645B712D37148* ___6_callback, const RuntimeMethod* method) 
 {
 	{
@@ -6970,7 +6970,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_CreateAndShareTournament_
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&EditorFacebook_CreateAndShareTournament_m29E7BEA8C84E13629AA40F42E746951AFD651FD9_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131277
+// Method Definition Index: 133581
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OpenAppStore_m5FA3E198BDA339B5526909AA735B2F2ADFDD283C (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, FacebookDelegate_1_t5E457BF6B03D4AD72D97F1848A0612B675747CFD* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7002,7 +7002,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OpenAppStore_m5FA3E198BDA
 		return;
 	}
 }
-// Method Definition Index: 131278
+// Method Definition Index: 133582
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_CreateGamingContext_mC05AE79883CBB5B74DCC372158F31B2F40575489 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_playerID, FacebookDelegate_1_t4EE1A08C9856158E0FE827895B7C215B9D31DFDB* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7034,7 +7034,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_CreateGamingContext_mC05A
 		return;
 	}
 }
-// Method Definition Index: 131279
+// Method Definition Index: 133583
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_SwitchGamingContext_m643F4933ABC6DB5567671B7B9D4262CB275D84AF (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_gamingContextID, FacebookDelegate_1_t91F4CF55A78EB0E71A911614B7301B6B10573C5E* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7066,7 +7066,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_SwitchGamingContext_m643F
 		return;
 	}
 }
-// Method Definition Index: 131280
+// Method Definition Index: 133584
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_ChooseGamingContext_mBF4F38949937D9570CC376B5922C6EFE89192F19 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___0_filters, int32_t ___1_minSize, int32_t ___2_maxSize, FacebookDelegate_1_t81E13A1711AD1F793F015F156F2C7659AAE23FD9* ___3_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7098,7 +7098,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_ChooseGamingContext_mBF4F
 		return;
 	}
 }
-// Method Definition Index: 131281
+// Method Definition Index: 133585
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_GetCurrentGamingContext_m50345F4FF477420EE50D340E76DB4A4B6E9A6854 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, FacebookDelegate_1_t8FEADD97FF7B0B7FD6CA562CCD1C2EA7F91B5A00* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7130,7 +7130,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_GetCurrentGamingContext_m
 		return;
 	}
 }
-// Method Definition Index: 131282
+// Method Definition Index: 133586
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnFacebookAuthResponseChange_m20E371CB800D3AD16DFB28A66595787F1429A044 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	{
@@ -7139,7 +7139,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnFacebookAuthResponseCha
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&EditorFacebook_OnFacebookAuthResponseChange_m20E371CB800D3AD16DFB28A66595787F1429A044_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131283
+// Method Definition Index: 133587
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnUrlResponse_mF4BC57C29883D3DFC808D8B4D96F0BA2559CB862 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	{
@@ -7148,7 +7148,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnUrlResponse_mF4BC57C298
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&EditorFacebook_OnUrlResponse_mF4BC57C29883D3DFC808D8B4D96F0BA2559CB862_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131284
+// Method Definition Index: 133588
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnHideUnity_m9F260C5829AEA9333B9D163CB07B9062A30AE044 (EditorFacebook_tB0E08C8E5F98B88620DC4B012C1544518D23CB31* __this, bool ___0_hidden, const RuntimeMethod* method) 
 {
 	{
@@ -7165,7 +7165,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebook_OnHideUnity_m9F260C5829AE
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131285
+// Method Definition Index: 133589
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookGameObject_OnAwake_mB07FEF1BB61F53C2FE5138EA8285D5BAB2782FD7 (EditorFacebookGameObject_t110FDC7E311FB95A6003B78DCD493B1012778C4F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7173,7 +7173,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookGameObject_OnAwake_mB07FEF
 		return;
 	}
 }
-// Method Definition Index: 131286
+// Method Definition Index: 133590
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookGameObject_OnEnable_mE4DADAFCACB50757B4A4A63B1CC25B9DF503DB26 (EditorFacebookGameObject_t110FDC7E311FB95A6003B78DCD493B1012778C4F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7192,7 +7192,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookGameObject_OnEnable_mE4DAD
 		return;
 	}
 }
-// Method Definition Index: 131287
+// Method Definition Index: 133591
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookGameObject_OnSceneLoaded_mB44A4F190A688BF3AE28A62043626870D314EA05 (EditorFacebookGameObject_t110FDC7E311FB95A6003B78DCD493B1012778C4F* __this, Scene_tA1DC762B79745EB5140F054C884855B922318356 ___0_scene, int32_t ___1_mode, const RuntimeMethod* method) 
 {
 	{
@@ -7200,7 +7200,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookGameObject_OnSceneLoaded_m
 		return;
 	}
 }
-// Method Definition Index: 131288
+// Method Definition Index: 133592
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookGameObject_OnDisable_m1D38B4218BE05C22A6378EBDEB0A9F8975A2CEE3 (EditorFacebookGameObject_t110FDC7E311FB95A6003B78DCD493B1012778C4F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7219,7 +7219,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookGameObject_OnDisable_m1D38
 		return;
 	}
 }
-// Method Definition Index: 131289
+// Method Definition Index: 133593
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookGameObject_onPurchaseCompleteHandler_mAF6DDA2F7C1EB1D359D0D97FD23CCD456C7B7E2F (EditorFacebookGameObject_t110FDC7E311FB95A6003B78DCD493B1012778C4F* __this, RuntimeObject* ___0_data, const RuntimeMethod* method) 
 {
 	{
@@ -7228,7 +7228,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookGameObject_onPurchaseCompl
 		return;
 	}
 }
-// Method Definition Index: 131290
+// Method Definition Index: 133594
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookGameObject__ctor_m7C5546731AB8A92D6F91E73273346724DADC7729 (EditorFacebookGameObject_t110FDC7E311FB95A6003B78DCD493B1012778C4F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7244,7 +7244,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookGameObject__ctor_m7C554673
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131291
+// Method Definition Index: 133595
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FacebookGameObject_t2A844C47156B1DC094D9D008FFFC2F730F8E0D0B* EditorFacebookLoader_get_FBGameObject_mE5E3EE5E648EFBD03D636C9493E537BD85EDD406 (EditorFacebookLoader_t47F19D261855CDD9E86E4B2D35329B2567C3D1D1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7265,7 +7265,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FacebookGameObject_t2A844C47156B1DC094D9D008F
 		return L_1;
 	}
 }
-// Method Definition Index: 131292
+// Method Definition Index: 133596
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookLoader__ctor_mEF902820AE88D037DC5D3D37766C78E75E06C08B (EditorFacebookLoader_t47F19D261855CDD9E86E4B2D35329B2567C3D1D1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7281,7 +7281,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookLoader__ctor_mEF902820AE88
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131293
+// Method Definition Index: 133597
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Callback_1_tFC22DABD78A3E51786E5CDB3C3A5B523E804BB92* EditorFacebookMockDialog_get_Callback_mB11D11D9B9F4B4ED1276E76F6336DB1B73F9A591 (EditorFacebookMockDialog_t3C291FEC1F61F9E43280E163A461351B101D8413* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7289,7 +7289,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Callback_1_tFC22DABD78A3E51786E5CDB3C3A5B523E
 		return L_0;
 	}
 }
-// Method Definition Index: 131294
+// Method Definition Index: 133598
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookMockDialog_set_Callback_mA7C663BD3838624EC44C41D7B3D51508FD9CF38F (EditorFacebookMockDialog_t3C291FEC1F61F9E43280E163A461351B101D8413* __this, Callback_1_tFC22DABD78A3E51786E5CDB3C3A5B523E804BB92* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -7299,7 +7299,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookMockDialog_set_Callback_mA
 		return;
 	}
 }
-// Method Definition Index: 131295
+// Method Definition Index: 133599
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* EditorFacebookMockDialog_get_CallbackID_mFFEAB6799E5D30F564BCD75AD8BAA540B58E7FB6 (EditorFacebookMockDialog_t3C291FEC1F61F9E43280E163A461351B101D8413* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7307,7 +7307,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* EditorFacebookMockDialog_get_Callba
 		return L_0;
 	}
 }
-// Method Definition Index: 131296
+// Method Definition Index: 133600
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookMockDialog_set_CallbackID_m639766A186073990C65E435C5EC0FF487ED703F7 (EditorFacebookMockDialog_t3C291FEC1F61F9E43280E163A461351B101D8413* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -7317,7 +7317,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookMockDialog_set_CallbackID_
 		return;
 	}
 }
-// Method Definition Index: 131298
+// Method Definition Index: 133602
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookMockDialog_Start_m9F3AA1C4713839CA7D3197A60708018E1F27D2BD (EditorFacebookMockDialog_t3C291FEC1F61F9E43280E163A461351B101D8413* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7363,7 +7363,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookMockDialog_Start_m9F3AA1C4
 		return;
 	}
 }
-// Method Definition Index: 131299
+// Method Definition Index: 133603
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookMockDialog_OnGUI_mEB8B399F102A8D2ADFA7EBF27EB65F1D55E6AAC6 (EditorFacebookMockDialog_t3C291FEC1F61F9E43280E163A461351B101D8413* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7389,7 +7389,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookMockDialog_OnGUI_mEB8B399F
 		return;
 	}
 }
-// Method Definition Index: 131302
+// Method Definition Index: 133606
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookMockDialog_SendCancelResult_m9D717C2BA3EECAF85A6E930A59F4B63FA120F3E0 (EditorFacebookMockDialog_t3C291FEC1F61F9E43280E163A461351B101D8413* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7444,7 +7444,7 @@ IL_0035:
 		return;
 	}
 }
-// Method Definition Index: 131303
+// Method Definition Index: 133607
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookMockDialog_SendErrorResult_m442246A267E4E1140F1700A047D5CA068182FAB2 (EditorFacebookMockDialog_t3C291FEC1F61F9E43280E163A461351B101D8413* __this, String_t* ___0_errorMessage, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7498,7 +7498,7 @@ IL_0030:
 		return;
 	}
 }
-// Method Definition Index: 131304
+// Method Definition Index: 133608
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookMockDialog_OnGUIDialog_m0A1074E6DF9602F47A3EBCD32AB301FBF605F27F (EditorFacebookMockDialog_t3C291FEC1F61F9E43280E163A461351B101D8413* __this, int32_t ___0_windowId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7634,7 +7634,7 @@ IL_00f6:
 		return;
 	}
 }
-// Method Definition Index: 131305
+// Method Definition Index: 133609
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookMockDialog__ctor_mE4E709495875A1B4D1C9364EE61806EB2BDCE3AF (EditorFacebookMockDialog_t3C291FEC1F61F9E43280E163A461351B101D8413* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7650,7 +7650,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorFacebookMockDialog__ctor_mE4E70949
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131306
+// Method Definition Index: 133610
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorWrapper__ctor_m034690ED7A0C61F5A590C6385EAEF9324588F20F (EditorWrapper_tC028AA497195B9D1ADB9A0D6AC6963B5615D5C9E* __this, RuntimeObject* ___0_callbackHandler, const RuntimeMethod* method) 
 {
 	{
@@ -7661,7 +7661,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorWrapper__ctor_m034690ED7A0C61F5A59
 		return;
 	}
 }
-// Method Definition Index: 131307
+// Method Definition Index: 133611
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorWrapper_Init_m2538FD3F03261557BEB04097207B6BFB6298CCDE (EditorWrapper_tC028AA497195B9D1ADB9A0D6AC6963B5615D5C9E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7678,7 +7678,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorWrapper_Init_m2538FD3F03261557BEB0
 		return;
 	}
 }
-// Method Definition Index: 131308
+// Method Definition Index: 133612
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorWrapper_ShowLoginMockDialog_m6F74EAC45F47C58AB246A9A8D09826AC6A60BFE4 (EditorWrapper_tC028AA497195B9D1ADB9A0D6AC6963B5615D5C9E* __this, Callback_1_tFC22DABD78A3E51786E5CDB3C3A5B523E804BB92* ___0_callback, String_t* ___1_callbackId, String_t* ___2_permsisions, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7700,7 +7700,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorWrapper_ShowLoginMockDialog_m6F74E
 		return;
 	}
 }
-// Method Definition Index: 131309
+// Method Definition Index: 133613
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorWrapper_ShowAppRequestMockDialog_m9C192F2C737F7588822A493D7434162C0163402E (EditorWrapper_tC028AA497195B9D1ADB9A0D6AC6963B5615D5C9E* __this, Callback_1_tFC22DABD78A3E51786E5CDB3C3A5B523E804BB92* ___0_callback, String_t* ___1_callbackId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7716,7 +7716,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorWrapper_ShowAppRequestMockDialog_m
 		return;
 	}
 }
-// Method Definition Index: 131310
+// Method Definition Index: 133614
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorWrapper_ShowPayMockDialog_m6E41A5AFC5BB60F14AA9DA424670B7F01407089B (EditorWrapper_tC028AA497195B9D1ADB9A0D6AC6963B5615D5C9E* __this, Callback_1_tFC22DABD78A3E51786E5CDB3C3A5B523E804BB92* ___0_callback, String_t* ___1_callbackId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7732,7 +7732,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorWrapper_ShowPayMockDialog_m6E41A5A
 		return;
 	}
 }
-// Method Definition Index: 131311
+// Method Definition Index: 133615
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorWrapper_ShowMockShareDialog_m2484F4421C2F820A77F76AC5B79F8CAB2A06A088 (EditorWrapper_tC028AA497195B9D1ADB9A0D6AC6963B5615D5C9E* __this, Callback_1_tFC22DABD78A3E51786E5CDB3C3A5B523E804BB92* ___0_callback, String_t* ___1_subTitle, String_t* ___2_callbackId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7758,7 +7758,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorWrapper_ShowMockShareDialog_m2484F
 		return;
 	}
 }
-// Method Definition Index: 131312
+// Method Definition Index: 133616
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorWrapper_ShowMockFriendFinderDialog_m45940ED6B2E2F3F9B8D66AA0B198C1C38D564887 (EditorWrapper_tC028AA497195B9D1ADB9A0D6AC6963B5615D5C9E* __this, Callback_1_tFC22DABD78A3E51786E5CDB3C3A5B523E804BB92* ___0_callback, String_t* ___1_subTitle, String_t* ___2_callbackId, const RuntimeMethod* method) 
 {
 	{
@@ -7769,7 +7769,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorWrapper_ShowMockFriendFinderDialog
 		return;
 	}
 }
-// Method Definition Index: 131313
+// Method Definition Index: 133617
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorWrapper_ShowEmptyMockDialog_m95F84CC06ADAE76D56B7C05738D40421F0268238 (EditorWrapper_tC028AA497195B9D1ADB9A0D6AC6963B5615D5C9E* __this, Callback_1_tFC22DABD78A3E51786E5CDB3C3A5B523E804BB92* ___0_callback, String_t* ___1_callbackId, String_t* ___2_title, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7803,7 +7803,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EditorWrapper_ShowEmptyMockDialog_m95F84
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131320
+// Method Definition Index: 133624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* EmptyMockDialog_get_EmptyDialogTitle_m9F217E498AD2C1CCCA9272F124811D757FFBF4CF (EmptyMockDialog_t4423608B7CB0DB381BC9D5A84B0F0DA5EAEFA653* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7811,7 +7811,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* EmptyMockDialog_get_EmptyDialogTitl
 		return L_0;
 	}
 }
-// Method Definition Index: 131321
+// Method Definition Index: 133625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyMockDialog_set_EmptyDialogTitle_mF8A8319112E4E2E7D2A36302B45A024E2D4A31E8 (EmptyMockDialog_t4423608B7CB0DB381BC9D5A84B0F0DA5EAEFA653* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -7821,7 +7821,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyMockDialog_set_EmptyDialogTitle_mF8
 		return;
 	}
 }
-// Method Definition Index: 131322
+// Method Definition Index: 133626
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* EmptyMockDialog_get_DialogTitle_m1FD86F400A70653339632AE49590D0ADB7E7AD7D (EmptyMockDialog_t4423608B7CB0DB381BC9D5A84B0F0DA5EAEFA653* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7830,14 +7830,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* EmptyMockDialog_get_DialogTitle_m1F
 		return L_0;
 	}
 }
-// Method Definition Index: 131323
+// Method Definition Index: 133627
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyMockDialog_DoGui_m0CFF12352564736C9F71FA8BE49FDB39D9C07E03 (EmptyMockDialog_t4423608B7CB0DB381BC9D5A84B0F0DA5EAEFA653* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 131324
+// Method Definition Index: 133628
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyMockDialog_SendSuccessResult_m6C9B9A1BE3F0693B05C642AD258D225305E3B339 (EmptyMockDialog_t4423608B7CB0DB381BC9D5A84B0F0DA5EAEFA653* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7902,7 +7902,7 @@ IL_004e:
 		return;
 	}
 }
-// Method Definition Index: 131325
+// Method Definition Index: 133629
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyMockDialog__ctor_m97D9832077157908CA350F4CFAC0AE5DF01438BD (EmptyMockDialog_t4423608B7CB0DB381BC9D5A84B0F0DA5EAEFA653* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7918,7 +7918,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyMockDialog__ctor_m97D9832077157908C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131326
+// Method Definition Index: 133630
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* MockLoginDialog_get_DialogTitle_mE3C8DDB558EA2B182ACA7CAA3AAA869266B85676 (MockLoginDialog_tA21F42789CFD3785C70F1B842AA288FEEC917109* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7931,7 +7931,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* MockLoginDialog_get_DialogTitle_mE3
 		return _stringLiteralAD2A363C155CCEA41EAFE7B3407F6EC2073907A1;
 	}
 }
-// Method Definition Index: 131327
+// Method Definition Index: 133631
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MockLoginDialog_DoGui_m8225F10231976FA18FFC51465CE12C1CAAF4D741 (MockLoginDialog_tA21F42789CFD3785C70F1B842AA288FEEC917109* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7994,7 +7994,7 @@ IL_007e:
 		return;
 	}
 }
-// Method Definition Index: 131328
+// Method Definition Index: 133632
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MockLoginDialog_SendSuccessResult_m559E11A6268F6A2134CEEA7C9CAC6B67B470AFBB (MockLoginDialog_tA21F42789CFD3785C70F1B842AA288FEEC917109* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8112,7 +8112,7 @@ IL_0056:
 		return;
 	}
 }
-// Method Definition Index: 131329
+// Method Definition Index: 133633
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MockLoginDialog__ctor_m24FE8E02B57566F416AA0240F8F6F4C7618745F4 (MockLoginDialog_tA21F42789CFD3785C70F1B842AA288FEEC917109* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8131,7 +8131,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MockLoginDialog__ctor_m24FE8E02B57566F41
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131330
+// Method Definition Index: 133634
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass4_0__ctor_m3F80DC1A347D4ECFD5D3C346D91BE5E0915F58BC (U3CU3Ec__DisplayClass4_0_t9F719AC54763B72C4719153133941537DEE9F211* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8139,7 +8139,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass4_0__ctor_m3F80DC1A
 		return;
 	}
 }
-// Method Definition Index: 131331
+// Method Definition Index: 133635
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass4_0_U3CSendSuccessResultU3Eb__0_mCBC390CC1C8DD1668F66AF4795303145CDB2164A (U3CU3Ec__DisplayClass4_0_t9F719AC54763B72C4719153133941537DEE9F211* __this, RuntimeObject* ___0_graphResult, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8218,7 +8218,7 @@ IL_0036:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131332
+// Method Definition Index: 133636
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass4_1__ctor_mC58E3B473D543EE00E1D4E33C03AF985FD24D9CF (U3CU3Ec__DisplayClass4_1_t830B72957738A8537DFC67B2DF73B11B5EDD6592* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8226,7 +8226,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass4_1__ctor_mC58E3B47
 		return;
 	}
 }
-// Method Definition Index: 131333
+// Method Definition Index: 133637
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass4_1_U3CSendSuccessResultU3Eb__1_m7EFD550B3D2BE7943746868559BD5CF88FEDBCFE (U3CU3Ec__DisplayClass4_1_t830B72957738A8537DFC67B2DF73B11B5EDD6592* __this, RuntimeObject* ___0_permResult, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8492,7 +8492,7 @@ IL_019a:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131334
+// Method Definition Index: 133638
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* MockShareDialog_get_SubTitle_m42ADB31AC5DCD3C02BB237E1DD7596AAAAF669B5 (MockShareDialog_t34433FD5741F34BBCB0C6122D4F68EAA13E7A57F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8500,7 +8500,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* MockShareDialog_get_SubTitle_m42ADB
 		return L_0;
 	}
 }
-// Method Definition Index: 131335
+// Method Definition Index: 133639
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MockShareDialog_set_SubTitle_m6E78CBFC0C21A5F7FCB0ACCC850AFAA0C05A4ADE (MockShareDialog_t34433FD5741F34BBCB0C6122D4F68EAA13E7A57F* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -8510,7 +8510,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MockShareDialog_set_SubTitle_m6E78CBFC0C
 		return;
 	}
 }
-// Method Definition Index: 131336
+// Method Definition Index: 133640
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* MockShareDialog_get_DialogTitle_mA538B179410DBDB51CA98AC68C6A7E5562499449 (MockShareDialog_t34433FD5741F34BBCB0C6122D4F68EAA13E7A57F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8528,14 +8528,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* MockShareDialog_get_DialogTitle_mA5
 		return L_1;
 	}
 }
-// Method Definition Index: 131337
+// Method Definition Index: 133641
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MockShareDialog_DoGui_m779586A1B573F0CA65A38A857648FE946DAFE805 (MockShareDialog_t34433FD5741F34BBCB0C6122D4F68EAA13E7A57F* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 131338
+// Method Definition Index: 133642
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MockShareDialog_SendSuccessResult_m32C58D9E0D41804B70503C95D6692304C8DEA08C (MockShareDialog_t34433FD5741F34BBCB0C6122D4F68EAA13E7A57F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8625,7 +8625,7 @@ IL_0068:
 		return;
 	}
 }
-// Method Definition Index: 131339
+// Method Definition Index: 133643
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MockShareDialog_SendCancelResult_m7C03F3E5D3F602C77B12386DC97B2A7E82E18173 (MockShareDialog_t34433FD5741F34BBCB0C6122D4F68EAA13E7A57F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8677,7 +8677,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 131340
+// Method Definition Index: 133644
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* MockShareDialog_GenerateFakePostID_m89128E5FBA4805C30909C2D32608EF93F3E6C516 (MockShareDialog_t34433FD5741F34BBCB0C6122D4F68EAA13E7A57F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8737,7 +8737,7 @@ IL_0037:
 		return L_13;
 	}
 }
-// Method Definition Index: 131341
+// Method Definition Index: 133645
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MockShareDialog__ctor_m929F9E5C942E357E4A73B17E78FE1205649B8E20 (MockShareDialog_t34433FD5741F34BBCB0C6122D4F68EAA13E7A57F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8753,7 +8753,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MockShareDialog__ctor_m929F9E5C942E357E4
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131445
+// Method Definition Index: 133749
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook__ctor_m6A029489BABC6CB3915882605CC3F8E4EFD3DFD1 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, CallbackManager_t3B9141B4E44116445C556786C02DEDA7CE612749* ___0_callbackManager, const RuntimeMethod* method) 
 {
 	{
@@ -8762,7 +8762,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook__ctor_m6A029489BABC6CB391
 		return;
 	}
 }
-// Method Definition Index: 131446
+// Method Definition Index: 133750
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t MobileFacebook_get_ShareDialogMode_mDB1DC63BFFC736A47D2F07B5313A82BED621A571 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8770,7 +8770,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t MobileFacebook_get_ShareDialogMode_mD
 		return L_0;
 	}
 }
-// Method Definition Index: 131447
+// Method Definition Index: 133751
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_set_ShareDialogMode_m7D9AD624A03EFE159A912389EAAC7214E942EBC9 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -8781,7 +8781,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_set_ShareDialogMode_m7D9A
 		return;
 	}
 }
-// Method Definition Index: 131451
+// Method Definition Index: 133755
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Profile_t80D50211DC9ED35561A8B96A45C9C79AF07E5CF7* MobileFacebook_CurrentProfile_mD1A08898E6E82C327E0D5EE71823E176CF76894F (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, const RuntimeMethod* method) 
 {
 	{
@@ -8790,7 +8790,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Profile_t80D50211DC9ED35561A8B96A45C9C79AF07E
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_CurrentProfile_mD1A08898E6E82C327E0D5EE71823E176CF76894F_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131452
+// Method Definition Index: 133756
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_CurrentProfile_mECCC18EF5083DA5F1549D11DC64F1434F9F2B13D (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, FacebookDelegate_1_t94FBFEDD2C735E8672548F7A3A1E9751AD48590A* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -8799,7 +8799,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_CurrentProfile_mECCC18EF5
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_CurrentProfile_mECCC18EF5083DA5F1549D11DC64F1434F9F2B13D_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131464
+// Method Definition Index: 133768
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnLoginComplete_mEEAC96096030B41C81E492724FFC7E6622B3653B (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8819,7 +8819,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnLoginComplete_mEEAC9609
 		return;
 	}
 }
-// Method Definition Index: 131465
+// Method Definition Index: 133769
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnGetAppLinkComplete_m2B4F8D3EC96360548EED25AB35616B2F6D151B5E (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8842,7 +8842,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnGetAppLinkComplete_m2B4
 		return;
 	}
 }
-// Method Definition Index: 131466
+// Method Definition Index: 133770
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnAppRequestsComplete_m06AE328590ADD91E59B5EC9588CA0128F8F4EB1E (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8865,7 +8865,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnAppRequestsComplete_m06
 		return;
 	}
 }
-// Method Definition Index: 131467
+// Method Definition Index: 133771
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnFetchDeferredAppLinkComplete_mBC1AB6EB09E7B34A1F62A53095EE5FD017165106 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8888,7 +8888,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnFetchDeferredAppLinkCom
 		return;
 	}
 }
-// Method Definition Index: 131468
+// Method Definition Index: 133772
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnShareLinkComplete_mFC0E9F41610B620504122FD362F5706AB5369355 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8911,7 +8911,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnShareLinkComplete_mFC0E
 		return;
 	}
 }
-// Method Definition Index: 131469
+// Method Definition Index: 133773
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnRefreshCurrentAccessTokenComplete_mA9C98836E1D4B133A8A34744AF70103F114D76A7 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8953,7 +8953,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 131470
+// Method Definition Index: 133774
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OpenFriendFinderDialog_m96D4BA050EE98B0C02450F8398C91537195A9E7E (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, FacebookDelegate_1_t55619BCDC758CB1C82277E6D8BA44ACA47C03DE2* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -8962,7 +8962,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OpenFriendFinderDialog_m9
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_OpenFriendFinderDialog_m96D4BA050EE98B0C02450F8398C91537195A9E7E_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131471
+// Method Definition Index: 133775
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_GetFriendFinderInvitations_mBAB5AA666E47A42D3E56ED1A50430555B3074707 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, FacebookDelegate_1_tF518E51A3BF076B1D5E8CE983567127943500CCC* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -8971,7 +8971,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_GetFriendFinderInvitation
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_GetFriendFinderInvitations_mBAB5AA666E47A42D3E56ED1A50430555B3074707_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131472
+// Method Definition Index: 133776
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_DeleteFriendFinderInvitation_mB224EFF335FCBAD1C2AC592AACB8B0A119529624 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, String_t* ___0_invitationId, FacebookDelegate_1_tF518E51A3BF076B1D5E8CE983567127943500CCC* ___1_callback, const RuntimeMethod* method) 
 {
 	{
@@ -8980,7 +8980,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_DeleteFriendFinderInvitat
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_DeleteFriendFinderInvitation_mB224EFF335FCBAD1C2AC592AACB8B0A119529624_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131473
+// Method Definition Index: 133777
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnFriendFinderComplete_m75B9BDBB0987AA6094DE95AF46C1EE80B6DA5063 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9003,7 +9003,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnFriendFinderComplete_m7
 		return;
 	}
 }
-// Method Definition Index: 131474
+// Method Definition Index: 133778
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnUploadImageToMediaLibraryComplete_m5583E4F744A3A01CBE1C262F2527F14C5F0DFDC9 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9026,7 +9026,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnUploadImageToMediaLibra
 		return;
 	}
 }
-// Method Definition Index: 131475
+// Method Definition Index: 133779
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnUploadVideoToMediaLibraryComplete_m378B5354B17B945294F057713EA7E39A4CD05D05 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9049,7 +9049,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnUploadVideoToMediaLibra
 		return;
 	}
 }
-// Method Definition Index: 131476
+// Method Definition Index: 133780
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnOnIAPReadyComplete_m92FB3897744A1B1A84F8E455D885C8B2062883B9 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9072,7 +9072,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnOnIAPReadyComplete_m92F
 		return;
 	}
 }
-// Method Definition Index: 131477
+// Method Definition Index: 133781
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnGetCatalogComplete_m6649961F5FFC36EE6405E2E179F426648DA49AD6 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9095,7 +9095,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnGetCatalogComplete_m664
 		return;
 	}
 }
-// Method Definition Index: 131478
+// Method Definition Index: 133782
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnGetPurchasesComplete_m9C74C185E6FB01D085BEC7C64CF4B94565BEF335 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9118,7 +9118,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnGetPurchasesComplete_m9
 		return;
 	}
 }
-// Method Definition Index: 131479
+// Method Definition Index: 133783
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnPurchaseComplete_m6A563BA773CF29CD730FE1EA6A9F9B1574FE08DC (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9141,7 +9141,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnPurchaseComplete_m6A563
 		return;
 	}
 }
-// Method Definition Index: 131480
+// Method Definition Index: 133784
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnConsumePurchaseComplete_mFC7B623A80CA7FD594B2B2AF8B3E4ED7E29E9A12 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9164,7 +9164,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnConsumePurchaseComplete
 		return;
 	}
 }
-// Method Definition Index: 131481
+// Method Definition Index: 133785
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnGetSubscribableCatalogComplete_m036BC5BBE6A9BC316F42F98B75C87577D419F324 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9187,7 +9187,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnGetSubscribableCatalogC
 		return;
 	}
 }
-// Method Definition Index: 131482
+// Method Definition Index: 133786
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnGetSubscriptionsComplete_m1A4F8BF0667304EBF10F71AB05B8E0074A67369F (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9210,7 +9210,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnGetSubscriptionsComplet
 		return;
 	}
 }
-// Method Definition Index: 131483
+// Method Definition Index: 133787
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnPurchaseSubscriptionComplete_m2DBF78A07DBFA3414C04C3264A564E50C6460D3B (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9233,7 +9233,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnPurchaseSubscriptionCom
 		return;
 	}
 }
-// Method Definition Index: 131484
+// Method Definition Index: 133788
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnCancelSubscriptionComplete_m67C4D05732E8A1B429195190F7E66AB16D085645 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9256,7 +9256,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnCancelSubscriptionCompl
 		return;
 	}
 }
-// Method Definition Index: 131485
+// Method Definition Index: 133789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnInitCloudGameComplete_m94ACD001437ADC094882D43C98D0C33E4FDF2E92 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9279,7 +9279,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnInitCloudGameComplete_m
 		return;
 	}
 }
-// Method Definition Index: 131486
+// Method Definition Index: 133790
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnGameLoadCompleteComplete_m4AA8AC499E8EF3ED9E2830108D1D5B8626EDAFA6 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9302,7 +9302,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnGameLoadCompleteComplet
 		return;
 	}
 }
-// Method Definition Index: 131487
+// Method Definition Index: 133791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnScheduleAppToUserNotificationComplete_m97B8EFF8B2F8D73E81AF473F450B6576BF92D730 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9325,7 +9325,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnScheduleAppToUserNotifi
 		return;
 	}
 }
-// Method Definition Index: 131488
+// Method Definition Index: 133792
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnLoadInterstitialAdComplete_mFDFF7CA3C1628131003D4CCD2E3ECA40DE01FA68 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9348,7 +9348,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnLoadInterstitialAdCompl
 		return;
 	}
 }
-// Method Definition Index: 131489
+// Method Definition Index: 133793
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnShowInterstitialAdComplete_m540267CF34F7E6CEF23E7310E5CD1F6B343ED46A (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9371,7 +9371,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnShowInterstitialAdCompl
 		return;
 	}
 }
-// Method Definition Index: 131490
+// Method Definition Index: 133794
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnLoadRewardedVideoComplete_m19A1E4C8527B6284212642670884C5247CB18946 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9394,7 +9394,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnLoadRewardedVideoComple
 		return;
 	}
 }
-// Method Definition Index: 131491
+// Method Definition Index: 133795
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnShowRewardedVideoComplete_m9954FCCFD99A002C9B5BD0F4092BA8175C2CA1E3 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9417,7 +9417,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnShowRewardedVideoComple
 		return;
 	}
 }
-// Method Definition Index: 131492
+// Method Definition Index: 133796
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnGetPayloadComplete_mE180D24D851DC511F39F1654DE610523D18A7A90 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9440,7 +9440,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnGetPayloadComplete_mE18
 		return;
 	}
 }
-// Method Definition Index: 131493
+// Method Definition Index: 133797
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnPostSessionScoreComplete_mDD1C7B745B62FD0E6AECEEA11379C6619BD32D64 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9463,7 +9463,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnPostSessionScoreComplet
 		return;
 	}
 }
-// Method Definition Index: 131494
+// Method Definition Index: 133798
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnPostTournamentScoreComplete_m57CAC2F8556D4AB372E666C022440AC3F77C7582 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9486,7 +9486,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnPostTournamentScoreComp
 		return;
 	}
 }
-// Method Definition Index: 131495
+// Method Definition Index: 133799
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnGetTournamentComplete_mD64F22D6FF369819943A87FFD422D382A6F069C5 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9509,7 +9509,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnGetTournamentComplete_m
 		return;
 	}
 }
-// Method Definition Index: 131496
+// Method Definition Index: 133800
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnShareTournamentComplete_mE8CF66C5AB870B5ED96C40AD7B09D58492905D38 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9532,7 +9532,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnShareTournamentComplete
 		return;
 	}
 }
-// Method Definition Index: 131497
+// Method Definition Index: 133801
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnCreateTournamentComplete_mB4B4F84427C4A41CBBD430CCD38E2811A9C41BAF (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9555,7 +9555,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnCreateTournamentComplet
 		return;
 	}
 }
-// Method Definition Index: 131498
+// Method Definition Index: 133802
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnGetTournamentsComplete_m02D6C28A838C816B801A7D51B1107A64057F8478 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9578,7 +9578,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnGetTournamentsComplete_
 		return;
 	}
 }
-// Method Definition Index: 131499
+// Method Definition Index: 133803
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnUpdateTournamentComplete_m8F96215214EFABBA5DACDED75C4ECEC937A380BD (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9601,7 +9601,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnUpdateTournamentComplet
 		return;
 	}
 }
-// Method Definition Index: 131500
+// Method Definition Index: 133804
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnTournamentDialogSuccess_mCCA68726DA08F198E9E52901D7331066DC21E241 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9624,7 +9624,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnTournamentDialogSuccess
 		return;
 	}
 }
-// Method Definition Index: 131501
+// Method Definition Index: 133805
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnTournamentDialogError_m8420CFF733080C83969A99FDF51D8BB6FF3044CC (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9647,7 +9647,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnTournamentDialogError_m
 		return;
 	}
 }
-// Method Definition Index: 131502
+// Method Definition Index: 133806
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnTournamentDialogCancel_m8B47C896C633985CD29276B5612C91058CB8EDBF (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9670,7 +9670,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnTournamentDialogCancel_
 		return;
 	}
 }
-// Method Definition Index: 131503
+// Method Definition Index: 133807
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnOpenAppStoreComplete_m8113399C0CDBD73574E218E532247D6A170FF4EB (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9693,7 +9693,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnOpenAppStoreComplete_m8
 		return;
 	}
 }
-// Method Definition Index: 131504
+// Method Definition Index: 133808
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnCreateGamingContextComplete_m1817D99C79EEB6CB45013088414BF976DB487E45 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9716,7 +9716,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnCreateGamingContextComp
 		return;
 	}
 }
-// Method Definition Index: 131505
+// Method Definition Index: 133809
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnSwitchGamingContextComplete_mAE012708613EB8ADF26CBAD3BA667DFA0394B81F (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9739,7 +9739,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnSwitchGamingContextComp
 		return;
 	}
 }
-// Method Definition Index: 131506
+// Method Definition Index: 133810
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnChooseGamingContextComplete_m51CBD70EAD25A32379877BD101E5CD2FA8F60B41 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9762,7 +9762,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnChooseGamingContextComp
 		return;
 	}
 }
-// Method Definition Index: 131507
+// Method Definition Index: 133811
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnGetCurrentGamingContextComplete_mB3410291B833661C6DB91B98E29BEB561CE50FFF (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9785,7 +9785,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnGetCurrentGamingContext
 		return;
 	}
 }
-// Method Definition Index: 131508
+// Method Definition Index: 133812
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_UploadImageToMediaLibrary_mD7D7A0FD61060A7B9B1100467CC3D1ED04A121CA (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, String_t* ___0_caption, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___1_imageUri, bool ___2_shouldLaunchMediaDialog, FacebookDelegate_1_t7CA00F6A27B3FE85139590EFEA03B7C7C0D4A66D* ___3_callback, const RuntimeMethod* method) 
 {
 	{
@@ -9794,7 +9794,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_UploadImageToMediaLibrary
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_UploadImageToMediaLibrary_mD7D7A0FD61060A7B9B1100467CC3D1ED04A121CA_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131509
+// Method Definition Index: 133813
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_UploadVideoToMediaLibrary_m39BC47D1116F4D5CA646A1FFC3E91B07313C678C (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, String_t* ___0_caption, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___1_videoUri, bool ___2_shouldLaunchMediaDialog, FacebookDelegate_1_t7CA00F6A27B3FE85139590EFEA03B7C7C0D4A66D* ___3_callback, const RuntimeMethod* method) 
 {
 	{
@@ -9803,7 +9803,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_UploadVideoToMediaLibrary
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_UploadVideoToMediaLibrary_m39BC47D1116F4D5CA646A1FFC3E91B07313C678C_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131510
+// Method Definition Index: 133814
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnIAPReady_m52F8E9F5A061F3FD4DDC59F8436F52A5919D202A (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, FacebookDelegate_1_tA2A619ACCF137D8094955A556E78A66749C43F74* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -9812,7 +9812,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OnIAPReady_m52F8E9F5A061F
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_OnIAPReady_m52F8E9F5A061F3FD4DDC59F8436F52A5919D202A_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131511
+// Method Definition Index: 133815
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_GetCatalog_m3B3B52FB27E1FA9D86F794547432879A3DFD9178 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, FacebookDelegate_1_tA8F51BBA2E7364881368E0CBED892F561162C32E* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -9821,7 +9821,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_GetCatalog_m3B3B52FB27E1F
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_GetCatalog_m3B3B52FB27E1FA9D86F794547432879A3DFD9178_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131512
+// Method Definition Index: 133816
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_GetPurchases_mB7D74549753D08BE268D32A0DE10C457B324E3EC (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, FacebookDelegate_1_t61D056F5D405CB3DF2F643449D9C03A64AB8E818* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -9830,7 +9830,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_GetPurchases_mB7D74549753
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_GetPurchases_mB7D74549753D08BE268D32A0DE10C457B324E3EC_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131513
+// Method Definition Index: 133817
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_Purchase_m120EE7F4EE11BBCB66B557635A01F6CF31A1D34A (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, String_t* ___0_productID, FacebookDelegate_1_tBD274D4AED39A6A24A22981D38D3CBF447CF036E* ___1_callback, String_t* ___2_developerPayload, const RuntimeMethod* method) 
 {
 	{
@@ -9839,7 +9839,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_Purchase_m120EE7F4EE11BBC
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_Purchase_m120EE7F4EE11BBCB66B557635A01F6CF31A1D34A_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131514
+// Method Definition Index: 133818
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_ConsumePurchase_m99810CAF11A5B28C4EBECEA3165389F2C56C7F25 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, String_t* ___0_purchaseToken, FacebookDelegate_1_tF96C838D4977CEFDB874E77F7A56B1CFECF4D8DD* ___1_callback, const RuntimeMethod* method) 
 {
 	{
@@ -9848,7 +9848,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_ConsumePurchase_m99810CAF
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_ConsumePurchase_m99810CAF11A5B28C4EBECEA3165389F2C56C7F25_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131515
+// Method Definition Index: 133819
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_GetSubscribableCatalog_m9A8B1BFF7D4FC6A6B2D10E439F79C40DF91BE302 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, FacebookDelegate_1_tCBDD2ED234A2D2CC094CDD20A03718E3B5BD81EE* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -9857,7 +9857,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_GetSubscribableCatalog_m9
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_GetSubscribableCatalog_m9A8B1BFF7D4FC6A6B2D10E439F79C40DF91BE302_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131516
+// Method Definition Index: 133820
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_GetSubscriptions_m948ACB34842D644876780F3CE125724DD10CCF61 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, FacebookDelegate_1_tF5F09FA5017250C0A7EDF6B3CC98AF13684FCB17* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -9866,7 +9866,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_GetSubscriptions_m948ACB3
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_GetSubscriptions_m948ACB34842D644876780F3CE125724DD10CCF61_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131517
+// Method Definition Index: 133821
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_PurchaseSubscription_m79E98FE57FEE63EB55E8BAE4BDFD84630585779F (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, String_t* ___0_productToken, FacebookDelegate_1_t6E63BCC63D73CBC6E3733913002FDBE5F7A9C8EF* ___1_callback, const RuntimeMethod* method) 
 {
 	{
@@ -9875,7 +9875,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_PurchaseSubscription_m79E
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_PurchaseSubscription_m79E98FE57FEE63EB55E8BAE4BDFD84630585779F_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131518
+// Method Definition Index: 133822
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_CancelSubscription_mD1CD0034A1513628A39CC0553D46211295F439E0 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, String_t* ___0_purchaseToken, FacebookDelegate_1_t59D18819566848CF07E01DDFC1F4ADF70E376FC7* ___1_callback, const RuntimeMethod* method) 
 {
 	{
@@ -9884,7 +9884,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_CancelSubscription_mD1CD0
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_CancelSubscription_mD1CD0034A1513628A39CC0553D46211295F439E0_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131519
+// Method Definition Index: 133823
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_InitCloudGame_mA1D4F52F83C39A287A04F90848C6AF7FBD7B67EA (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, FacebookDelegate_1_tB829CDA8266CAB15D1703F5904BB2F8592CA60E8* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -9893,7 +9893,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_InitCloudGame_mA1D4F52F83
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_InitCloudGame_mA1D4F52F83C39A287A04F90848C6AF7FBD7B67EA_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131520
+// Method Definition Index: 133824
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_GameLoadComplete_m07720341F5D4CB57B91C294276BEA7293C979B6F (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, FacebookDelegate_1_t2A3F65614ACD86BAA7B587ADC574B2830F2FAD31* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -9902,7 +9902,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_GameLoadComplete_m0772034
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_GameLoadComplete_m07720341F5D4CB57B91C294276BEA7293C979B6F_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131521
+// Method Definition Index: 133825
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_ScheduleAppToUserNotification_mFA8B6613DC09DC66B4C11FA20414E3C920C22F3A (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, String_t* ___0_title, String_t* ___1_body, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___2_media, int32_t ___3_timeInterval, String_t* ___4_payload, FacebookDelegate_1_t623E520D5B99523D410AEE72AB9FF4901DC356AC* ___5_callback, const RuntimeMethod* method) 
 {
 	{
@@ -9911,7 +9911,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_ScheduleAppToUserNotifica
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_ScheduleAppToUserNotification_mFA8B6613DC09DC66B4C11FA20414E3C920C22F3A_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131522
+// Method Definition Index: 133826
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_LoadInterstitialAd_m531E621513135F418B2AD89FB9BC06DBC0BC3DC9 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, String_t* ___0_placementID, FacebookDelegate_1_t6BAE034F2CC3270BFC282A9D0DEB58CC5F91C265* ___1_callback, const RuntimeMethod* method) 
 {
 	{
@@ -9920,7 +9920,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_LoadInterstitialAd_m531E6
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_LoadInterstitialAd_m531E621513135F418B2AD89FB9BC06DBC0BC3DC9_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131523
+// Method Definition Index: 133827
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_ShowInterstitialAd_mFF4C35430AB12284D702C138F90F5EF886D0EB2B (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, String_t* ___0_placementID, FacebookDelegate_1_t6BAE034F2CC3270BFC282A9D0DEB58CC5F91C265* ___1_callback, const RuntimeMethod* method) 
 {
 	{
@@ -9929,7 +9929,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_ShowInterstitialAd_mFF4C3
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_ShowInterstitialAd_mFF4C35430AB12284D702C138F90F5EF886D0EB2B_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131524
+// Method Definition Index: 133828
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_LoadRewardedVideo_mDF24EE8D229F361D8683A0B54596F7DFB9D5FDC5 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, String_t* ___0_placementID, FacebookDelegate_1_t9C5748E8AC36242F3F03171AA1E6306E60860ACD* ___1_callback, const RuntimeMethod* method) 
 {
 	{
@@ -9938,7 +9938,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_LoadRewardedVideo_mDF24EE
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_LoadRewardedVideo_mDF24EE8D229F361D8683A0B54596F7DFB9D5FDC5_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131525
+// Method Definition Index: 133829
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_ShowRewardedVideo_mF5324710D1B8AEE20C90458687B223A2F059471D (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, String_t* ___0_placementID, FacebookDelegate_1_t9C5748E8AC36242F3F03171AA1E6306E60860ACD* ___1_callback, const RuntimeMethod* method) 
 {
 	{
@@ -9947,7 +9947,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_ShowRewardedVideo_mF53247
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_ShowRewardedVideo_mF5324710D1B8AEE20C90458687B223A2F059471D_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131526
+// Method Definition Index: 133830
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_GetPayload_m5DC3590968788C6776CD9B2E3656607E51077E63 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, FacebookDelegate_1_tB6B04FA63685B9A0D41AB08E3E5BC96A72D7A1D7* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -9956,7 +9956,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_GetPayload_m5DC3590968788
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_GetPayload_m5DC3590968788C6776CD9B2E3656607E51077E63_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131527
+// Method Definition Index: 133831
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_PostSessionScore_m1EFF25584FA9431FDBF24260F016C00EAB4F1995 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, int32_t ___0_score, FacebookDelegate_1_t610D359C8E47669CC0D9F0B6CA9DF9240BF80267* ___1_callback, const RuntimeMethod* method) 
 {
 	{
@@ -9965,7 +9965,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_PostSessionScore_m1EFF255
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_PostSessionScore_m1EFF25584FA9431FDBF24260F016C00EAB4F1995_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131528
+// Method Definition Index: 133832
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_PostTournamentScore_mC656E79876B4D9780709A2AF57FF2FF5CE0DF24B (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, int32_t ___0_score, FacebookDelegate_1_t474682078C474498C8D4805F13E9077763B39255* ___1_callback, const RuntimeMethod* method) 
 {
 	{
@@ -9974,7 +9974,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_PostTournamentScore_mC656
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_PostTournamentScore_mC656E79876B4D9780709A2AF57FF2FF5CE0DF24B_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131529
+// Method Definition Index: 133833
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_GetTournament_m31117DF7072FCDA2C45AE6FC46DE795CA27E47FF (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, FacebookDelegate_1_tD9C9BBFE6AD0931C935E391D858C37BEBF14BBA3* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -9983,7 +9983,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_GetTournament_m31117DF707
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_GetTournament_m31117DF7072FCDA2C45AE6FC46DE795CA27E47FF_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131530
+// Method Definition Index: 133834
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_ShareTournament_mCA50AA45A5B3BDB89F190FA2066789C622044A5C (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, int32_t ___0_score, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___1_data, FacebookDelegate_1_t474682078C474498C8D4805F13E9077763B39255* ___2_callback, const RuntimeMethod* method) 
 {
 	{
@@ -9992,7 +9992,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_ShareTournament_mCA50AA45
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_ShareTournament_mCA50AA45A5B3BDB89F190FA2066789C622044A5C_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131531
+// Method Definition Index: 133835
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_CreateTournament_mEB0490A9790E02E14DBA2340EA5721BD7CA62CE6 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, int32_t ___0_initialScore, String_t* ___1_title, String_t* ___2_imageBase64DataUrl, String_t* ___3_sortOrder, String_t* ___4_scoreFormat, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___5_data, FacebookDelegate_1_tD9C9BBFE6AD0931C935E391D858C37BEBF14BBA3* ___6_callback, const RuntimeMethod* method) 
 {
 	{
@@ -10001,7 +10001,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_CreateTournament_mEB0490A
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_CreateTournament_mEB0490A9790E02E14DBA2340EA5721BD7CA62CE6_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131532
+// Method Definition Index: 133836
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_GetTournaments_m38A98618AE06B558B5EADA9B263F8AB7B6E3CEAB (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, FacebookDelegate_1_t64F37B84FFAB406D45358FC281716C5AD6B6916A* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -10010,7 +10010,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_GetTournaments_m38A98618A
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_GetTournaments_m38A98618AE06B558B5EADA9B263F8AB7B6E3CEAB_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131533
+// Method Definition Index: 133837
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_UpdateTournament_mEC9895A652CFEA566E2EA42A4FB32E3A0A426861 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, String_t* ___0_tournamentID, int32_t ___1_score, FacebookDelegate_1_t474682078C474498C8D4805F13E9077763B39255* ___2_callback, const RuntimeMethod* method) 
 {
 	{
@@ -10019,7 +10019,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_UpdateTournament_mEC9895A
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_UpdateTournament_mEC9895A652CFEA566E2EA42A4FB32E3A0A426861_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131534
+// Method Definition Index: 133838
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_UpdateAndShareTournament_m3D0CD35322FF41A0DDF9C98FF5AE9A697E0AA181 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, String_t* ___0_tournamentID, int32_t ___1_score, FacebookDelegate_1_t2CCD4851FD0B117C9DDD8076206645B712D37148* ___2_callback, const RuntimeMethod* method) 
 {
 	{
@@ -10028,7 +10028,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_UpdateAndShareTournament_
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_UpdateAndShareTournament_m3D0CD35322FF41A0DDF9C98FF5AE9A697E0AA181_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131535
+// Method Definition Index: 133839
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_CreateAndShareTournament_mC3501AF835717098CC37CBC65257342BF3E60A44 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, int32_t ___0_initialScore, String_t* ___1_title, int32_t ___2_sortOrder, int32_t ___3_scoreFormat, int64_t ___4_endTime, String_t* ___5_payload, FacebookDelegate_1_t2CCD4851FD0B117C9DDD8076206645B712D37148* ___6_callback, const RuntimeMethod* method) 
 {
 	{
@@ -10037,7 +10037,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_CreateAndShareTournament_
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_CreateAndShareTournament_mC3501AF835717098CC37CBC65257342BF3E60A44_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131536
+// Method Definition Index: 133840
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OpenAppStore_m7F409CB0A359478BD27E53393D02FA592EDC4560 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, FacebookDelegate_1_t5E457BF6B03D4AD72D97F1848A0612B675747CFD* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -10046,7 +10046,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_OpenAppStore_m7F409CB0A35
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_OpenAppStore_m7F409CB0A359478BD27E53393D02FA592EDC4560_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131537
+// Method Definition Index: 133841
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_CreateGamingContext_mBB5343C2589F089A07AF4AD85B449D9F75E1840A (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, String_t* ___0_playerID, FacebookDelegate_1_t4EE1A08C9856158E0FE827895B7C215B9D31DFDB* ___1_callback, const RuntimeMethod* method) 
 {
 	{
@@ -10055,7 +10055,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_CreateGamingContext_mBB53
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_CreateGamingContext_mBB5343C2589F089A07AF4AD85B449D9F75E1840A_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131538
+// Method Definition Index: 133842
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_SwitchGamingContext_m1C025BE3B18F390D6C8715A5D2D1905AADCFD469 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, String_t* ___0_gamingContextID, FacebookDelegate_1_t91F4CF55A78EB0E71A911614B7301B6B10573C5E* ___1_callback, const RuntimeMethod* method) 
 {
 	{
@@ -10064,7 +10064,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_SwitchGamingContext_m1C02
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_SwitchGamingContext_m1C025BE3B18F390D6C8715A5D2D1905AADCFD469_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131539
+// Method Definition Index: 133843
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_ChooseGamingContext_mA07278AEC258B9B81C672D34E8EA4565B740DDA7 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___0_filters, int32_t ___1_minSize, int32_t ___2_maxSize, FacebookDelegate_1_t81E13A1711AD1F793F015F156F2C7659AAE23FD9* ___3_callback, const RuntimeMethod* method) 
 {
 	{
@@ -10073,7 +10073,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_ChooseGamingContext_mA072
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_ChooseGamingContext_mA07278AEC258B9B81C672D34E8EA4565B740DDA7_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131540
+// Method Definition Index: 133844
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_GetCurrentGamingContext_m1E0BF3FD45407E4D8F11FBD4215ABAE30C333D82 (MobileFacebook_tFB7FCB79FF54D81C7EB30A5D40786FAB1DBFB21E* __this, FacebookDelegate_1_t8FEADD97FF7B0B7FD6CA562CCD1C2EA7F91B5A00* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -10082,7 +10082,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebook_GetCurrentGamingContext_m
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileFacebook_GetCurrentGamingContext_m1E0BF3FD45407E4D8F11FBD4215ABAE30C333D82_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131542
+// Method Definition Index: 133846
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* MobileFacebook_DeserializeMessage_m4E37E271A1848095751DA91B179349CEB1FEE8C5 (String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10100,7 +10100,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* MobileFacebook_DeserializeMess
 		return ((Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710*)CastclassClass((RuntimeObject*)L_1, Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 131543
+// Method Definition Index: 133847
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* MobileFacebook_SerializeDictionary_mCC5EE0198435C988B8DB552953E293AC7442B2CE (RuntimeObject* ___0_dict, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10117,7 +10117,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* MobileFacebook_SerializeDictionary_
 		return L_1;
 	}
 }
-// Method Definition Index: 131544
+// Method Definition Index: 133848
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MobileFacebook_TryGetCallbackId_m4D6082326DBD71A74C28942E82A4B7A7F4559C42 (RuntimeObject* ___0_result, String_t** ___1_callbackId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10154,7 +10154,7 @@ IL_001c:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 131545
+// Method Definition Index: 133849
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MobileFacebook_TryGetError_mB681095E7A24135D3B4F9E0DA07B5B2BC6FB42EA (RuntimeObject* ___0_result, String_t** ___1_errorMessage, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10199,7 +10199,7 @@ IL_001c:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131546
+// Method Definition Index: 133850
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* MobileFacebookGameObject_get_MobileFacebook_mEE5B1108EB1A4D71C26AC0BAD4EB39342FAAA4C9 (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10214,7 +10214,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* MobileFacebookGameObject_get_M
 		return ((RuntimeObject*)Castclass((RuntimeObject*)L_0, IMobileFacebookImplementation_tEB9F9C30F89EA88E5CC988AC4218EB3B712C2CBA_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 131547
+// Method Definition Index: 133851
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnFetchDeferredAppLinkComplete_m5FCE2504E423120808AE62D615D1F912FC660CCA (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10235,7 +10235,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnFetchDeferred
 		return;
 	}
 }
-// Method Definition Index: 131548
+// Method Definition Index: 133852
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnRefreshCurrentAccessTokenComplete_mC5B670117C309A37A17FC7601E0DE373651BC930 (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10256,7 +10256,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnRefreshCurren
 		return;
 	}
 }
-// Method Definition Index: 131549
+// Method Definition Index: 133853
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnFriendFinderComplete_mA82EF87AC79E0FF1DA51C09608A5F04DB8BAA37A (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10277,7 +10277,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnFriendFinderC
 		return;
 	}
 }
-// Method Definition Index: 131550
+// Method Definition Index: 133854
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnUploadImageToMediaLibraryComplete_mB64279249213D82336D6179C4397701C1CB00299 (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10298,7 +10298,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnUploadImageTo
 		return;
 	}
 }
-// Method Definition Index: 131551
+// Method Definition Index: 133855
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnUploadVideoToMediaLibraryComplete_m8157017BF6C8590D6C417D0651F59E17F3C93E34 (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10319,7 +10319,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnUploadVideoTo
 		return;
 	}
 }
-// Method Definition Index: 131552
+// Method Definition Index: 133856
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnOnIAPReadyComplete_m3DF3C09E67A098B0B6AABB31AD908F67A5631D5E (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10340,7 +10340,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnOnIAPReadyCom
 		return;
 	}
 }
-// Method Definition Index: 131553
+// Method Definition Index: 133857
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnGetCatalogComplete_m90B80105C5A8E189BFD4019206C333A13AE8263C (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10361,7 +10361,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnGetCatalogCom
 		return;
 	}
 }
-// Method Definition Index: 131554
+// Method Definition Index: 133858
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnGetPurchasesComplete_mB6D221DDE541B3D635B309EE3F11A20CFC199F1C (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10382,7 +10382,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnGetPurchasesC
 		return;
 	}
 }
-// Method Definition Index: 131555
+// Method Definition Index: 133859
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnPurchaseComplete_m234A5C3F5998E79A57F0CEE670AF530F70DA62D0 (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10403,7 +10403,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnPurchaseCompl
 		return;
 	}
 }
-// Method Definition Index: 131556
+// Method Definition Index: 133860
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnConsumePurchaseComplete_mE308BBA869688C33CAFBF76D1C53B7962E6DD9CF (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10424,7 +10424,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnConsumePurcha
 		return;
 	}
 }
-// Method Definition Index: 131557
+// Method Definition Index: 133861
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnGetSubscribableCatalogComplete_mC436880C35B2EADE29CF44455E93EA2C6037255D (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10445,7 +10445,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnGetSubscribab
 		return;
 	}
 }
-// Method Definition Index: 131558
+// Method Definition Index: 133862
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnGetSubscriptionsComplete_mC7B61261BC766BCBC7291E79592FB314711028E7 (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10466,7 +10466,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnGetSubscripti
 		return;
 	}
 }
-// Method Definition Index: 131559
+// Method Definition Index: 133863
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnPurchaseSubscriptionComplete_m63BAB5C0529828DF7D2B7D459F5CD9CFAEDF4441 (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10487,7 +10487,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnPurchaseSubsc
 		return;
 	}
 }
-// Method Definition Index: 131560
+// Method Definition Index: 133864
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnCancelSubscriptionComplete_m8C9773FC1C287215B4CF103590ACB58BD2001182 (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10508,7 +10508,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnCancelSubscri
 		return;
 	}
 }
-// Method Definition Index: 131561
+// Method Definition Index: 133865
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnInitCloudGameComplete_mBB5810A26C8E1AD96738EABAF3C1B3AAB54BA484 (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10529,7 +10529,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnInitCloudGame
 		return;
 	}
 }
-// Method Definition Index: 131562
+// Method Definition Index: 133866
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnGameLoadCompleteComplete_mF360A44BB683896F60BBFB409CBEF93FA10C836F (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10550,7 +10550,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnGameLoadCompl
 		return;
 	}
 }
-// Method Definition Index: 131563
+// Method Definition Index: 133867
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnScheduleAppToUserNotificationComplete_mD243507B9D6FD9C3322806CDD576EB3123EA77DB (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10571,7 +10571,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnScheduleAppTo
 		return;
 	}
 }
-// Method Definition Index: 131564
+// Method Definition Index: 133868
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnLoadInterstitialAdComplete_m9E94158FE8B3B525FC0F8FB7FDD1CAAB40799F47 (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10592,7 +10592,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnLoadInterstit
 		return;
 	}
 }
-// Method Definition Index: 131565
+// Method Definition Index: 133869
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnShowInterstitialAdComplete_m911A31E189AAEB781695672118FF1E8A90A32C82 (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10613,7 +10613,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnShowInterstit
 		return;
 	}
 }
-// Method Definition Index: 131566
+// Method Definition Index: 133870
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnLoadRewardedVideoComplete_m65E4527AB489053E572CE410310FB8FB09CD555C (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10634,7 +10634,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnLoadRewardedV
 		return;
 	}
 }
-// Method Definition Index: 131567
+// Method Definition Index: 133871
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnShowRewardedVideoComplete_m0470C56F9FD211DE41901D00D7951999515C0683 (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10655,7 +10655,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnShowRewardedV
 		return;
 	}
 }
-// Method Definition Index: 131568
+// Method Definition Index: 133872
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnGetPayloadComplete_m604E204CD51695FD23C1CCA0C3F3ACA5460B61FE (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10676,7 +10676,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnGetPayloadCom
 		return;
 	}
 }
-// Method Definition Index: 131569
+// Method Definition Index: 133873
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnPostSessionScoreComplete_mDFCC6BB2291C3A9657FA1662F74FF0911F672467 (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10697,7 +10697,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnPostSessionSc
 		return;
 	}
 }
-// Method Definition Index: 131570
+// Method Definition Index: 133874
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnPostTournamentScoreComplete_m19BA5056C9ABBBEFB342F41CE026133D88BDD052 (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10718,7 +10718,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnPostTournamen
 		return;
 	}
 }
-// Method Definition Index: 131571
+// Method Definition Index: 133875
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnGetTournamentComplete_mD81A26F4BF085FFDDCCEF9F2C6F2D69A7A741776 (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10739,7 +10739,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnGetTournament
 		return;
 	}
 }
-// Method Definition Index: 131572
+// Method Definition Index: 133876
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnShareTournamentComplete_m2B6F5ABE840373BFFFD95457B299E04F9A5AAB12 (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10760,7 +10760,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnShareTourname
 		return;
 	}
 }
-// Method Definition Index: 131573
+// Method Definition Index: 133877
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnCreateTournamentComplete_mDEE6A558B19CC2E0422FC21CB08D051ED09B48AB (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10781,7 +10781,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnCreateTournam
 		return;
 	}
 }
-// Method Definition Index: 131574
+// Method Definition Index: 133878
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnGetTournamentsComplete_mDF37E5938046389AF985C8D79D4ABF3C44F58E68 (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10802,7 +10802,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnGetTournament
 		return;
 	}
 }
-// Method Definition Index: 131575
+// Method Definition Index: 133879
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnUpdateTournamentComplete_m64925AB3CF01AA80FA855806444A3A4D4BC00266 (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10823,7 +10823,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnUpdateTournam
 		return;
 	}
 }
-// Method Definition Index: 131576
+// Method Definition Index: 133880
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnTournamentDialogSuccess_m8FEDE3A279C4955CC493CFDC9B647C780D71D999 (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10844,7 +10844,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnTournamentDia
 		return;
 	}
 }
-// Method Definition Index: 131577
+// Method Definition Index: 133881
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnTournamentDialogCancel_m329646FF29DE49B8D3BF67BEF78E4BAB988F5220 (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10865,7 +10865,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnTournamentDia
 		return;
 	}
 }
-// Method Definition Index: 131578
+// Method Definition Index: 133882
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnTournamentDialogError_mCAC0385F8F8EBEFC67F58CEEC692C2679CB347E5 (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10886,7 +10886,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnTournamentDia
 		return;
 	}
 }
-// Method Definition Index: 131579
+// Method Definition Index: 133883
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnOpenAppStoreComplete_m5EBEAC1D6877AC87F402DE87A13977ABAC891D3F (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10907,7 +10907,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnOpenAppStoreC
 		return;
 	}
 }
-// Method Definition Index: 131580
+// Method Definition Index: 133884
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnCreateGamingContextComplete_m16401498E159D779E0480798A1866980ADA60758 (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10928,7 +10928,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnCreateGamingC
 		return;
 	}
 }
-// Method Definition Index: 131581
+// Method Definition Index: 133885
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnSwitchGamingContextComplete_mEF1D116D3FB22F7DFDE2795AAA763240FC5851DC (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10949,7 +10949,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnSwitchGamingC
 		return;
 	}
 }
-// Method Definition Index: 131582
+// Method Definition Index: 133886
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnChooseGamingContextComplete_m350E660754A6463BAF470E9B740D81475DBAB753 (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10970,7 +10970,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnChooseGamingC
 		return;
 	}
 }
-// Method Definition Index: 131583
+// Method Definition Index: 133887
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnGetCurrentGamingContextComplete_m1917A5AE8D4DBA79A43CE6604373CA45AB7CC4F4 (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10991,7 +10991,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject_OnGetCurrentGam
 		return;
 	}
 }
-// Method Definition Index: 131584
+// Method Definition Index: 133888
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject__ctor_m21F7B347AB7787EBE63D37862A1BB5F191E9B17D (MobileFacebookGameObject_t105BCEF7BF0751B141C332580EE375559D10BB7C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11007,7 +11007,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileFacebookGameObject__ctor_m21F7B347
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131624
+// Method Definition Index: 133928
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook__ctor_m09F8C5E4063FAB2C5C2084B32F924630161331AB (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11025,7 +11025,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook__ctor_m09F8C5E4063FAB2C5C208
 		return;
 	}
 }
-// Method Definition Index: 131625
+// Method Definition Index: 133929
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook__ctor_m3A9DC528D7030AACDB4623A363805A4C64560E8C (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, RuntimeObject* ___0_iosWrapper, CallbackManager_t3B9141B4E44116445C556786C02DEDA7CE612749* ___1_callbackManager, const RuntimeMethod* method) 
 {
 	{
@@ -11037,7 +11037,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook__ctor_m3A9DC528D7030AACDB462
 		return;
 	}
 }
-// Method Definition Index: 131626
+// Method Definition Index: 133930
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool IOSFacebook_get_LimitEventUsage_m9203EA38F08828CB34C1B789E11FC06DC0F40792 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11045,7 +11045,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool IOSFacebook_get_LimitEventUsage_m9203EA3
 		return L_0;
 	}
 }
-// Method Definition Index: 131627
+// Method Definition Index: 133931
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_set_LimitEventUsage_m324647A7264F18F380AE43EC91C495390A099057 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11064,7 +11064,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_set_LimitEventUsage_m324647A
 		return;
 	}
 }
-// Method Definition Index: 131628
+// Method Definition Index: 133932
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_SetAutoLogAppEventsEnabled_mF8F5F0E7DB7854D8D284F462C30B49261A448183 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, bool ___0_autoLogAppEventsEnabled, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11081,7 +11081,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_SetAutoLogAppEventsEnabled_m
 		return;
 	}
 }
-// Method Definition Index: 131629
+// Method Definition Index: 133933
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_SetAdvertiserIDCollectionEnabled_m4D9B19B2E39140C63F16AD9A6DDB010116879438 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, bool ___0_advertiserIDCollectionEnabled, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11098,7 +11098,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_SetAdvertiserIDCollectionEna
 		return;
 	}
 }
-// Method Definition Index: 131630
+// Method Definition Index: 133934
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool IOSFacebook_SetAdvertiserTrackingEnabled_m701C5BEEB054F60FE624C129E9986D34B1055B9E (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, bool ___0_advertiserTrackingEnabled, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11116,7 +11116,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool IOSFacebook_SetAdvertiserTrackingEnabled
 		return L_2;
 	}
 }
-// Method Definition Index: 131631
+// Method Definition Index: 133935
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool IOSFacebook_SetDomainErrorEnabled_mF736B09BBB5BD28256A9F40D7FAF8EEEE7108887 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, bool ___0_domainErrorEnabled, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11134,7 +11134,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool IOSFacebook_SetDomainErrorEnabled_mF736B
 		return L_2;
 	}
 }
-// Method Definition Index: 131632
+// Method Definition Index: 133936
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_SetPushNotificationsDeviceTokenString_m644F13D08DC2A75B35F8DA7BE546D8EC9B668E54 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, String_t* ___0_token, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11151,7 +11151,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_SetPushNotificationsDeviceTo
 		return;
 	}
 }
-// Method Definition Index: 131633
+// Method Definition Index: 133937
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* IOSFacebook_get_SDKName_m7CFC4100E3614E0D4AA711BE48E28130CEDE8708 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11164,7 +11164,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* IOSFacebook_get_SDKName_m7CFC4100E3
 		return _stringLiteral52EE5F4DAD1E432A7C6CBF07E8D17D7A681E7DC7;
 	}
 }
-// Method Definition Index: 131634
+// Method Definition Index: 133938
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* IOSFacebook_get_SDKVersion_m330ABA743460340300E25372E681E5E913F44014 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11181,7 +11181,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* IOSFacebook_get_SDKVersion_m330ABA7
 		return L_1;
 	}
 }
-// Method Definition Index: 131635
+// Method Definition Index: 133939
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* IOSFacebook_get_UserID_mFFE9C3326A6A215F6F30AC1587BC6900333AE47E (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -11189,7 +11189,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* IOSFacebook_get_UserID_mFFE9C3326A6
 		return L_0;
 	}
 }
-// Method Definition Index: 131636
+// Method Definition Index: 133940
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_set_UserID_m425850BC7A09EFDCF61B234B54458FBD7A5BE766 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11209,7 +11209,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_set_UserID_m425850BC7A09EFDC
 		return;
 	}
 }
-// Method Definition Index: 131637
+// Method Definition Index: 133941
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_SetDataProcessingOptions_mCA1D0C3709EE47D4C9E634B56B4CA8C714538463 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, RuntimeObject* ___0_options, int32_t ___1_country, int32_t ___2_state, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11231,7 +11231,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_SetDataProcessingOptions_mCA
 		return;
 	}
 }
-// Method Definition Index: 131638
+// Method Definition Index: 133942
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_Init_m0CCF14A6B4AB0C14B712B52C1CE9CEA33B455ED5 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, String_t* ___0_appId, bool ___1_frictionlessRequests, String_t* ___2_iosURLSuffix, HideUnityDelegate_t73424171C1A0762619208C0090DD84BA51FF9BCE* ___3_hideUnityDelegate, InitDelegate_t880BF96D9E733404D1E36BF894DDA83C1B9A1A9F* ___4_onInitComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11260,7 +11260,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_Init_m0CCF14A6B4AB0C14B712B5
 		return;
 	}
 }
-// Method Definition Index: 131639
+// Method Definition Index: 133943
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_EnableProfileUpdatesOnAccessTokenChange_mE9C509CD47C55A8A873721C172E26B7DFA3E1914 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, bool ___0_enable, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11277,7 +11277,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_EnableProfileUpdatesOnAccess
 		return;
 	}
 }
-// Method Definition Index: 131640
+// Method Definition Index: 133944
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_LoginWithTrackingPreference_m60C32061BAEFD9360E7733D702400D333289C852 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, String_t* ___0_tracking, RuntimeObject* ___1_permissions, String_t* ___2_nonce, FacebookDelegate_1_t12EB4CA46E5479FC254BB457E8695ACBA6D7AB0D* ___3_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11302,7 +11302,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_LoginWithTrackingPreference_
 		return;
 	}
 }
-// Method Definition Index: 131641
+// Method Definition Index: 133945
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_LogInWithReadPermissions_mAD04CD5C7878A3904CEDFA49D477AA2418A0396B (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, RuntimeObject* ___0_permissions, FacebookDelegate_1_t12EB4CA46E5479FC254BB457E8695ACBA6D7AB0D* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11325,7 +11325,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_LogInWithReadPermissions_mAD
 		return;
 	}
 }
-// Method Definition Index: 131642
+// Method Definition Index: 133946
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_LogInWithPublishPermissions_m99806878F3C2F620791C21346706B99F70B19E97 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, RuntimeObject* ___0_permissions, FacebookDelegate_1_t12EB4CA46E5479FC254BB457E8695ACBA6D7AB0D* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11348,7 +11348,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_LogInWithPublishPermissions_
 		return;
 	}
 }
-// Method Definition Index: 131643
+// Method Definition Index: 133947
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_LogOut_mA8E8A3523841C17C8B81D04E953EDA6CCA8E2E05 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11365,7 +11365,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_LogOut_mA8E8A3523841C17C8B81
 		return;
 	}
 }
-// Method Definition Index: 131644
+// Method Definition Index: 133948
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool IOSFacebook_get_LoggedIn_m6C9FDEF7FE29BF0E6CB1808C3FDC9014AB53CD16 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11416,7 +11416,7 @@ IL_0027:
 		return (bool)1;
 	}
 }
-// Method Definition Index: 131645
+// Method Definition Index: 133949
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AuthenticationToken_t925F4C42BE7D08897D579F0A55D5682704237B8C* IOSFacebook_CurrentAuthenticationToken_m37410FAE66A01C427D1AC64F34D67F3A50859EE7 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11433,7 +11433,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AuthenticationToken_t925F4C42BE7D08897D579F0A
 		return L_1;
 	}
 }
-// Method Definition Index: 131646
+// Method Definition Index: 133950
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Profile_t80D50211DC9ED35561A8B96A45C9C79AF07E5CF7* IOSFacebook_CurrentProfile_m17C8CE9957C4D65E85091F619003BBC08FF6D93D (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -11450,7 +11450,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Profile_t80D50211DC9ED35561A8B96A45C9C79AF07E
 		return L_1;
 	}
 }
-// Method Definition Index: 131647
+// Method Definition Index: 133951
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_AppRequest_m0A86694F549C4A65667E50F33640B84C1A93B723 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, String_t* ___0_message, Nullable_1_t61CE348507A9F5421A2CFD17C087DBF01CE99C73 ___1_actionType, String_t* ___2_objectId, RuntimeObject* ___3_to, RuntimeObject* ___4_filters, RuntimeObject* ___5_excludeIds, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___6_maxRecipients, String_t* ___7_data, String_t* ___8_title, FacebookDelegate_1_t0FD54CEBA449E8491C6F3CC16DAEC9723FBDEFF2* ___9_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12066,7 +12066,7 @@ IL_00c7:
 		return;
 	}
 }
-// Method Definition Index: 131648
+// Method Definition Index: 133952
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_ShareLink_m6AE8AC2F9882B1B1F041A18832B353F705522939 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___0_contentURL, String_t* ___1_contentTitle, String_t* ___2_contentDescription, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___3_photoURL, FacebookDelegate_1_t4C7ACE222D7D3FBEA79B4E2B46A1CD632E0EAD35* ___4_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12094,7 +12094,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_ShareLink_m6AE8AC2F9882B1B1F
 		return;
 	}
 }
-// Method Definition Index: 131649
+// Method Definition Index: 133953
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_FeedShare_m799E9134382799B64B163078B8A31CB46B3FF0AB (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, String_t* ___0_toId, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___1_link, String_t* ___2_linkName, String_t* ___3_linkCaption, String_t* ___4_linkDescription, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___5_picture, String_t* ___6_mediaSource, FacebookDelegate_1_t4C7ACE222D7D3FBEA79B4E2B46A1CD632E0EAD35* ___7_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12180,7 +12180,7 @@ IL_002f:
 		return;
 	}
 }
-// Method Definition Index: 131650
+// Method Definition Index: 133954
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_AppEventsLogEvent_m1DD34755BF049A778FB35BBA5E997A24862480AD (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, String_t* ___0_logEvent, Nullable_1_t3D746CBB6123D4569FF4DEA60BC4240F32C6FE75 ___1_valueToSum, Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* ___2_parameters, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12247,7 +12247,7 @@ IL_0037:
 		return;
 	}
 }
-// Method Definition Index: 131651
+// Method Definition Index: 133955
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_AppEventsLogPurchase_m31C1A94D7EA2F189D2628525835A1C653CC99C98 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, float ___0_logPurchase, String_t* ___1_currency, Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* ___2_parameters, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12282,14 +12282,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_AppEventsLogPurchase_m31C1A9
 		return;
 	}
 }
-// Method Definition Index: 131652
+// Method Definition Index: 133956
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool IOSFacebook_IsImplicitPurchaseLoggingEnabled_mA4B6F9B89FDCCA084DABCC46700A4121BED7D996 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, const RuntimeMethod* method) 
 {
 	{
 		return (bool)0;
 	}
 }
-// Method Definition Index: 131653
+// Method Definition Index: 133957
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_ActivateApp_m4F3DF6E2858B9C34595A1557EF0F03FEB4984B07 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, String_t* ___0_appId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12305,7 +12305,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_ActivateApp_m4F3DF6E2858B9C3
 		return;
 	}
 }
-// Method Definition Index: 131654
+// Method Definition Index: 133958
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_FetchDeferredAppLink_m0D40663193021021DC6E7272D646AA527AB64591 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, FacebookDelegate_1_t084616048CD926AFFFA1D0E903E2278104EDFF5D* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12325,7 +12325,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_FetchDeferredAppLink_m0D4066
 		return;
 	}
 }
-// Method Definition Index: 131655
+// Method Definition Index: 133959
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_GetAppLink_m17AE6BDAA065FB09A60290046516250987B83158 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, FacebookDelegate_1_t084616048CD926AFFFA1D0E903E2278104EDFF5D* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12352,7 +12352,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_GetAppLink_m17AE6BDAA065FB09
 		return;
 	}
 }
-// Method Definition Index: 131656
+// Method Definition Index: 133960
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_OpenFriendFinderDialog_m8CD6AC88C1888530878F1D8A4ACF21A02997DD1E (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, FacebookDelegate_1_t55619BCDC758CB1C82277E6D8BA44ACA47C03DE2* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12379,7 +12379,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_OpenFriendFinderDialog_m8CD6
 		return;
 	}
 }
-// Method Definition Index: 131657
+// Method Definition Index: 133961
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_GetFriendFinderInvitations_mD73D47D2EDF0D5D104F0553B0E41BEECEF9A39D1 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, FacebookDelegate_1_tF518E51A3BF076B1D5E8CE983567127943500CCC* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -12388,7 +12388,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_GetFriendFinderInvitations_m
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&IOSFacebook_GetFriendFinderInvitations_mD73D47D2EDF0D5D104F0553B0E41BEECEF9A39D1_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131658
+// Method Definition Index: 133962
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_DeleteFriendFinderInvitation_m3D09D56E635F04E162A04CABB30020462C97C466 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, String_t* ___0_invitationId, FacebookDelegate_1_tF518E51A3BF076B1D5E8CE983567127943500CCC* ___1_callback, const RuntimeMethod* method) 
 {
 	{
@@ -12397,7 +12397,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_DeleteFriendFinderInvitation
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&IOSFacebook_DeleteFriendFinderInvitation_m3D09D56E635F04E162A04CABB30020462C97C466_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131659
+// Method Definition Index: 133963
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_CreateGamingContext_mAEC633BAC92F48C18B3EAE3C3D6C3CB21F694532 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, String_t* ___0_playerID, FacebookDelegate_1_t4EE1A08C9856158E0FE827895B7C215B9D31DFDB* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12425,7 +12425,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_CreateGamingContext_mAEC633B
 		return;
 	}
 }
-// Method Definition Index: 131660
+// Method Definition Index: 133964
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_SwitchGamingContext_m3D0905E401E4F97626D609C8FE10C91188A3158F (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, String_t* ___0_gamingContextID, FacebookDelegate_1_t91F4CF55A78EB0E71A911614B7301B6B10573C5E* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12453,7 +12453,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_SwitchGamingContext_m3D0905E
 		return;
 	}
 }
-// Method Definition Index: 131661
+// Method Definition Index: 133965
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_ChooseGamingContext_m99A8DB96058A9A6EBBD0179622336205F4683251 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___0_filters, int32_t ___1_minSize, int32_t ___2_maxSize, FacebookDelegate_1_t81E13A1711AD1F793F015F156F2C7659AAE23FD9* ___3_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12514,7 +12514,7 @@ IL_001a:
 		return;
 	}
 }
-// Method Definition Index: 131662
+// Method Definition Index: 133966
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_GetCurrentGamingContext_m2BDFB56EA27ECF23B7A75E119DECA0DF6778FB93 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, FacebookDelegate_1_t8FEADD97FF7B0B7FD6CA562CCD1C2EA7F91B5A00* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12541,7 +12541,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_GetCurrentGamingContext_m2BD
 		return;
 	}
 }
-// Method Definition Index: 131663
+// Method Definition Index: 133967
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_GetTournaments_m477DBDB7E746BA5F7C1AEDD1BA2BC370E2817DAF (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, FacebookDelegate_1_t64F37B84FFAB406D45358FC281716C5AD6B6916A* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12568,7 +12568,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_GetTournaments_m477DBDB7E746
 		return;
 	}
 }
-// Method Definition Index: 131664
+// Method Definition Index: 133968
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_UpdateTournament_m9A466B00DCF18D96E0FD5F81F07FA7A58658641F (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, String_t* ___0_tournamentID, int32_t ___1_score, FacebookDelegate_1_t474682078C474498C8D4805F13E9077763B39255* ___2_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12597,7 +12597,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_UpdateTournament_m9A466B00DC
 		return;
 	}
 }
-// Method Definition Index: 131665
+// Method Definition Index: 133969
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_UpdateAndShareTournament_m7C4C85052B0DBCA0312B67C7B35B7E0F8130A113 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, String_t* ___0_tournamentID, int32_t ___1_score, FacebookDelegate_1_t2CCD4851FD0B117C9DDD8076206645B712D37148* ___2_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12626,7 +12626,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_UpdateAndShareTournament_m7C
 		return;
 	}
 }
-// Method Definition Index: 131666
+// Method Definition Index: 133970
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_CreateAndShareTournament_m85B6054C0701B98A0C70BF56DB2756135739A7D6 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, int32_t ___0_initialScore, String_t* ___1_title, int32_t ___2_sortOrder, int32_t ___3_scoreFormat, int64_t ___4_endTime, String_t* ___5_payload, FacebookDelegate_1_t2CCD4851FD0B117C9DDD8076206645B712D37148* ___6_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12659,7 +12659,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_CreateAndShareTournament_m85
 		return;
 	}
 }
-// Method Definition Index: 131667
+// Method Definition Index: 133971
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_RefreshCurrentAccessToken_m4C5CC0F474794E8D85459CFD077E2C7AA9A78A65 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, FacebookDelegate_1_t0A787A64D3187E98A865A198DDF444C008C79F35* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12686,7 +12686,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_RefreshCurrentAccessToken_m4
 		return;
 	}
 }
-// Method Definition Index: 131668
+// Method Definition Index: 133972
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_SetShareDialogMode_m383B58C9254069E60D1BF3A138A1E7B05BE52BE1 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, int32_t ___0_mode, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12703,7 +12703,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_SetShareDialogMode_m383B58C9
 		return;
 	}
 }
-// Method Definition Index: 131669
+// Method Definition Index: 133973
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_UploadImageToMediaLibrary_m2C0378275AA8C621E939E3F55E12B487213F0B4E (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, String_t* ___0_caption, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___1_imageUri, bool ___2_shouldLaunchMediaDialog, FacebookDelegate_1_t7CA00F6A27B3FE85139590EFEA03B7C7C0D4A66D* ___3_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12739,7 +12739,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_UploadImageToMediaLibrary_m2
 		return;
 	}
 }
-// Method Definition Index: 131670
+// Method Definition Index: 133974
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_UploadVideoToMediaLibrary_mE7A136198F2FC0847CDAA8CE454CE93FA0A443D2 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, String_t* ___0_caption, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___1_videoUri, bool ___2_shouldLaunchMediaDialog, FacebookDelegate_1_t7CA00F6A27B3FE85139590EFEA03B7C7C0D4A66D* ___3_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12774,7 +12774,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_UploadVideoToMediaLibrary_mE
 		return;
 	}
 }
-// Method Definition Index: 131671
+// Method Definition Index: 133975
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_GetUserLocale_mFDFC442CC2BE8F381AF083A4BE832A5693335160 (IOSFacebook_tC5DD1DAB3274516F7194A166C4C9D5C2900A99F4* __this, FacebookDelegate_1_t287669D2D13F62ECCB982BD24ABCFB8AC41D6B0A* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -12783,7 +12783,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebook_GetUserLocale_mFDFC442CC2BE8
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&IOSFacebook_GetUserLocale_mFDFC442CC2BE8F381AF083A4BE832A5693335160_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131672
+// Method Definition Index: 133976
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* IOSFacebook_GetIOSWrapper_m8F280FD6B1CC9C1CF3872DCB6A6729ABCE82139F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12805,7 +12805,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* IOSFacebook_GetIOSWrapper_m8F2
 		return ((RuntimeObject*)Castclass((RuntimeObject*)L_2, IIOSWrapper_t40FDB67E3759959235A21CA13F14028147479E3F_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 131673
+// Method Definition Index: 133977
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeDict_t4A202CF8A258D4786D791217AEBBC54F2B88EFA9* IOSFacebook_MarshallDict_m12264D8B4C0C958E8AC72CEF941D7FAE00A71641 (Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* ___0_dict, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -12958,7 +12958,7 @@ IL_00a8:
 		return L_32;
 	}
 }
-// Method Definition Index: 131674
+// Method Definition Index: 133978
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeDict_t4A202CF8A258D4786D791217AEBBC54F2B88EFA9* IOSFacebook_MarshallDict_mB235B47AA2FA403DCC0ADD38E3914C2C6814D2A1 (Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___0_dict, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13124,7 +13124,7 @@ IL_00a3:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131676
+// Method Definition Index: 133980
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeDict__ctor_m3A0EA06026FAAD1574D34316CE425641C08AA531 (NativeDict_t4A202CF8A258D4786D791217AEBBC54F2B88EFA9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13135,7 +13135,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeDict__ctor_m3A0EA06026FAAD1574D343
 		return;
 	}
 }
-// Method Definition Index: 131677
+// Method Definition Index: 133981
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeDict_get_NumEntries_mFB13D8178B1556ABF10D679F54B405819292FCDB (NativeDict_t4A202CF8A258D4786D791217AEBBC54F2B88EFA9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13143,7 +13143,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t NativeDict_get_NumEntries_mFB13D8178B
 		return L_0;
 	}
 }
-// Method Definition Index: 131678
+// Method Definition Index: 133982
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeDict_set_NumEntries_m57353835AD86ED502693E4BE8DCE1E3265BD6B52 (NativeDict_t4A202CF8A258D4786D791217AEBBC54F2B88EFA9* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -13152,7 +13152,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeDict_set_NumEntries_m57353835AD86E
 		return;
 	}
 }
-// Method Definition Index: 131679
+// Method Definition Index: 133983
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* NativeDict_get_Keys_mE731082312A3966531B454E2EE0228E0BA14A4B3 (NativeDict_t4A202CF8A258D4786D791217AEBBC54F2B88EFA9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13160,7 +13160,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F
 		return L_0;
 	}
 }
-// Method Definition Index: 131680
+// Method Definition Index: 133984
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeDict_set_Keys_m30955DED0955CCE506D1FC315F2F534BF1450D7D (NativeDict_t4A202CF8A258D4786D791217AEBBC54F2B88EFA9* __this, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -13170,7 +13170,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeDict_set_Keys_m30955DED0955CCE506D
 		return;
 	}
 }
-// Method Definition Index: 131681
+// Method Definition Index: 133985
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* NativeDict_get_Values_m201D111E57F4837102CF02561EDEDBD7FBBBA2C1 (NativeDict_t4A202CF8A258D4786D791217AEBBC54F2B88EFA9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13178,7 +13178,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F
 		return L_0;
 	}
 }
-// Method Definition Index: 131682
+// Method Definition Index: 133986
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeDict_set_Values_m2D082203061E2C96CD3F728152BB43361E3CD860 (NativeDict_t4A202CF8A258D4786D791217AEBBC54F2B88EFA9* __this, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -13196,7 +13196,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeDict_set_Values_m2D082203061E2C96C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131683
+// Method Definition Index: 133987
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebookGameObject__ctor_m2C8F511F0B941CD1BF051275BCF53174396854AD (IOSFacebookGameObject_t450135CB062F631777F4608FB602AC5202797ACA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13212,7 +13212,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebookGameObject__ctor_m2C8F511F0B9
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131684
+// Method Definition Index: 133988
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FacebookGameObject_t2A844C47156B1DC094D9D008FFFC2F730F8E0D0B* IOSFacebookLoader_get_FBGameObject_mE7F3A444000BC99D3EC59046DB5AC217010299B2 (IOSFacebookLoader_tC4449925F5E12605B6DAC60A202C0EC3ECB7B242* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13250,7 +13250,7 @@ IL_001a:
 		return L_5;
 	}
 }
-// Method Definition Index: 131685
+// Method Definition Index: 133989
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebookLoader__ctor_m11A9478D7F674F2FA8D10FF31469F5D65D65B89B (IOSFacebookLoader_tC4449925F5E12605B6DAC60A202C0EC3ECB7B242* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13266,7 +13266,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IOSFacebookLoader__ctor_m11A9478D7F674F2
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131686
+// Method Definition Index: 133990
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook__ctor_m4C9297CE471F88A30A971963689FAE8332984011 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13284,7 +13284,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook__ctor_m4C9297CE471F88A30
 		return;
 	}
 }
-// Method Definition Index: 131687
+// Method Definition Index: 133991
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook__ctor_m9AE45755787625750D7BB161746CCF187F2D327B (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, RuntimeObject* ___0_androidWrapper, CallbackManager_t3B9141B4E44116445C556786C02DEDA7CE612749* ___1_callbackManager, const RuntimeMethod* method) 
 {
 	{
@@ -13298,7 +13298,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook__ctor_m9AE45755787625750
 		return;
 	}
 }
-// Method Definition Index: 131688
+// Method Definition Index: 133992
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AndroidFacebook_get_KeyHash_m9EE1C5D0E46E3B9072B6FAC209386183E6A255FA (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13306,7 +13306,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AndroidFacebook_get_KeyHash_m9EE1C5
 		return L_0;
 	}
 }
-// Method Definition Index: 131689
+// Method Definition Index: 133993
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_set_KeyHash_m955883E7FF2093A8219358F222D292B3E556FED1 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -13316,7 +13316,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_set_KeyHash_m955883E7FF2
 		return;
 	}
 }
-// Method Definition Index: 131690
+// Method Definition Index: 133994
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AndroidFacebook_get_LimitEventUsage_m7E545EC37F53B3B67CBF85DBEDA016134B592213 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13324,7 +13324,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AndroidFacebook_get_LimitEventUsage_m7E5
 		return L_0;
 	}
 }
-// Method Definition Index: 131691
+// Method Definition Index: 133995
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_set_LimitEventUsage_m889CE583C1A25F566D5957D85FA3C8E5F1A703FA (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13343,7 +13343,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_set_LimitEventUsage_m889
 		return;
 	}
 }
-// Method Definition Index: 131692
+// Method Definition Index: 133996
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AndroidFacebook_get_UserID_m31005356A823C6222CD67B6A40993022E18ABF57 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, const RuntimeMethod* method) 
 {
 	{
@@ -13351,7 +13351,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AndroidFacebook_get_UserID_m3100535
 		return L_0;
 	}
 }
-// Method Definition Index: 131693
+// Method Definition Index: 133997
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_set_UserID_m8669E2C8609B4B0FEF8C0A13C873909D4D4EEB44 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13369,7 +13369,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_set_UserID_m8669E2C8609B
 		return;
 	}
 }
-// Method Definition Index: 131694
+// Method Definition Index: 133998
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_SetDataProcessingOptions_m4BD94FD098392E08C38516F6B3F187E06243F8D3 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, RuntimeObject* ___0_options, int32_t ___1_country, int32_t ___2_state, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13409,7 +13409,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_SetDataProcessingOptions
 		return;
 	}
 }
-// Method Definition Index: 131695
+// Method Definition Index: 133999
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_SetAutoLogAppEventsEnabled_m57B0C4F1B97EED806354AE68447D03A8B0FB9C43 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, bool ___0_autoLogAppEventsEnabled, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13426,7 +13426,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_SetAutoLogAppEventsEnabl
 		return;
 	}
 }
-// Method Definition Index: 131696
+// Method Definition Index: 134000
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_SetAdvertiserIDCollectionEnabled_m6A2D29CC94AD242466733AF0F1DC719EE494C5F6 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, bool ___0_advertiserIDCollectionEnabled, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13443,21 +13443,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_SetAdvertiserIDCollectio
 		return;
 	}
 }
-// Method Definition Index: 131697
+// Method Definition Index: 134001
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AndroidFacebook_SetAdvertiserTrackingEnabled_m72226F882AE76105DC64A7224B8CE5A4C74011CB (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, bool ___0_advertiserTrackingEnabled, const RuntimeMethod* method) 
 {
 	{
 		return (bool)0;
 	}
 }
-// Method Definition Index: 131698
+// Method Definition Index: 134002
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AndroidFacebook_SetDomainErrorEnabled_mCDED245B7318B5C9995B85C48D9FC065B1BA671F (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, bool ___0_domainErrorEnabled, const RuntimeMethod* method) 
 {
 	{
 		return (bool)0;
 	}
 }
-// Method Definition Index: 131699
+// Method Definition Index: 134003
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_SetPushNotificationsDeviceTokenString_mE92A4BEE9292217577AA1455B74CBEF93685A5BA (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_token, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13472,7 +13472,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_SetPushNotificationsDevi
 		return;
 	}
 }
-// Method Definition Index: 131700
+// Method Definition Index: 134004
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AndroidFacebook_get_SDKName_m45A7073C38377B225083ABF9EDD945C33740EF72 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13485,7 +13485,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AndroidFacebook_get_SDKName_m45A707
 		return _stringLiteralBCAB68EDA292B4050A6B8D0864BDB3D03423FBB3;
 	}
 }
-// Method Definition Index: 131701
+// Method Definition Index: 134005
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AndroidFacebook_get_SDKVersion_m2B6B6A54835EFE1C041F5585CE9F89B7619AF829 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13503,7 +13503,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* AndroidFacebook_get_SDKVersion_m2B6
 		return L_1;
 	}
 }
-// Method Definition Index: 131702
+// Method Definition Index: 134006
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_Init_m8B76127CDFE72B842EE6D72E8EBE60B28C5A9032 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_appId, String_t* ___1_clientToken, HideUnityDelegate_t73424171C1A0762619208C0090DD84BA51FF9BCE* ___2_hideUnityDelegate, InitDelegate_t880BF96D9E733404D1E36BF894DDA83C1B9A1A9F* ___3_onInitComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13556,7 +13556,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_Init_m8B76127CDFE72B842E
 		return;
 	}
 }
-// Method Definition Index: 131703
+// Method Definition Index: 134007
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_EnableProfileUpdatesOnAccessTokenChange_m6F86838E45D597ED86CA089594F9E86A6111AF3C (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, bool ___0_enable, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13585,7 +13585,7 @@ IL_0011:
 		return;
 	}
 }
-// Method Definition Index: 131704
+// Method Definition Index: 134008
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_LoginWithTrackingPreference_mF026DB690A6AD6632EB986A1F26C6AB689754BBA (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_tracking, RuntimeObject* ___1_permissions, String_t* ___2_nonce, FacebookDelegate_1_t12EB4CA46E5479FC254BB457E8695ACBA6D7AB0D* ___3_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13614,7 +13614,7 @@ IL_0011:
 		return;
 	}
 }
-// Method Definition Index: 131705
+// Method Definition Index: 134009
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_LogInWithReadPermissions_m4C99FF88B77AB3DB605AF8917E3A381A3ACFC8AD (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, RuntimeObject* ___0_permissions, FacebookDelegate_1_t12EB4CA46E5479FC254BB457E8695ACBA6D7AB0D* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13649,7 +13649,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_LogInWithReadPermissions
 		return;
 	}
 }
-// Method Definition Index: 131706
+// Method Definition Index: 134010
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_LogInWithPublishPermissions_mFB6B7D47B8365217835469A3AF4FE77D6BE35F44 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, RuntimeObject* ___0_permissions, FacebookDelegate_1_t12EB4CA46E5479FC254BB457E8695ACBA6D7AB0D* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13684,7 +13684,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_LogInWithPublishPermissi
 		return;
 	}
 }
-// Method Definition Index: 131707
+// Method Definition Index: 134011
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_LogOut_mC14352C07A4BF2C75C48B459239E995E42FD3126 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13704,7 +13704,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_LogOut_mC14352C07A4BF2C7
 		return;
 	}
 }
-// Method Definition Index: 131708
+// Method Definition Index: 134012
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AuthenticationToken_t925F4C42BE7D08897D579F0A55D5682704237B8C* AndroidFacebook_CurrentAuthenticationToken_m6C213D8F6F7EAD81C6384589365B6811D97E5CC6 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -13788,7 +13788,7 @@ IL_0053:
 		return L_13;
 	}
 }
-// Method Definition Index: 131709
+// Method Definition Index: 134013
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Profile_t80D50211DC9ED35561A8B96A45C9C79AF07E5CF7* AndroidFacebook_CurrentProfile_m0ACF33A89FC8F58FBFBCE521C0B76161AFFC1E26 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14040,7 +14040,7 @@ IL_0126:
 		return L_54;
 	}
 }
-// Method Definition Index: 131710
+// Method Definition Index: 134014
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_RetrieveLoginStatus_m8C0FF351B92535E21DEDD38F1F7FF36CDBD08206 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, FacebookDelegate_1_t8F87C09452F7935D587FD72EBCFE7518FB6C2362* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14064,7 +14064,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_RetrieveLoginStatus_m8C0
 		return;
 	}
 }
-// Method Definition Index: 131711
+// Method Definition Index: 134015
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_OnLoginStatusRetrieved_m65A558404816C7726AD1B59A65F8E35BD00A5F78 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14084,7 +14084,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_OnLoginStatusRetrieved_m
 		return;
 	}
 }
-// Method Definition Index: 131712
+// Method Definition Index: 134016
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_AppRequest_m5D32582F8592790E82693AEC169B97098D8B5586 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_message, Nullable_1_t61CE348507A9F5421A2CFD17C087DBF01CE99C73 ___1_actionType, String_t* ___2_objectId, RuntimeObject* ___3_to, RuntimeObject* ___4_filters, RuntimeObject* ___5_excludeIds, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___6_maxRecipients, String_t* ___7_data, String_t* ___8_title, FacebookDelegate_1_t0FD54CEBA449E8491C6F3CC16DAEC9723FBDEFF2* ___9_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14201,7 +14201,7 @@ IL_0077:
 		return;
 	}
 }
-// Method Definition Index: 131713
+// Method Definition Index: 134017
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_ShareLink_mC90BE9560964BE19B57A8B629095500C509F5669 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___0_contentURL, String_t* ___1_contentTitle, String_t* ___2_contentDescription, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___3_photoURL, FacebookDelegate_1_t4C7ACE222D7D3FBEA79B4E2B46A1CD632E0EAD35* ___4_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14251,7 +14251,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_ShareLink_mC90BE9560964B
 		return;
 	}
 }
-// Method Definition Index: 131714
+// Method Definition Index: 134018
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_FeedShare_mF664D633B15A786909B71DEF1371B858EBB19478 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_toId, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___1_link, String_t* ___2_linkName, String_t* ___3_linkCaption, String_t* ___4_linkDescription, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___5_picture, String_t* ___6_mediaSource, FacebookDelegate_1_t4C7ACE222D7D3FBEA79B4E2B46A1CD632E0EAD35* ___7_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14316,7 +14316,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_FeedShare_mF664D633B15A7
 		return;
 	}
 }
-// Method Definition Index: 131715
+// Method Definition Index: 134019
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_GetAppLink_mDF8BAFD77BAC492622874E85C779B973D39D30D9 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, FacebookDelegate_1_t084616048CD926AFFFA1D0E903E2278104EDFF5D* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14340,7 +14340,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_GetAppLink_mDF8BAFD77BAC
 		return;
 	}
 }
-// Method Definition Index: 131716
+// Method Definition Index: 134020
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_ClearAppLink_mFC63222F788C532D01DCF03B4A780DC5130780ED (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14354,7 +14354,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_ClearAppLink_mFC63222F78
 		return;
 	}
 }
-// Method Definition Index: 131717
+// Method Definition Index: 134021
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_AppEventsLogEvent_mC6CE59C57DD5F9668F4D96126C2D2A6651A72112 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_logEvent, Nullable_1_t3D746CBB6123D4569FF4DEA60BC4240F32C6FE75 ___1_valueToSum, Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* ___2_parameters, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14439,7 +14439,7 @@ IL_0038:
 		return;
 	}
 }
-// Method Definition Index: 131718
+// Method Definition Index: 134022
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_AppEventsLogPurchase_m612651B65F87BD6D0CCFF3F0C83E162B8F242E1F (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, float ___0_logPurchase, String_t* ___1_currency, Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* ___2_parameters, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14484,7 +14484,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_AppEventsLogPurchase_m61
 		return;
 	}
 }
-// Method Definition Index: 131719
+// Method Definition Index: 134023
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AndroidFacebook_IsImplicitPurchaseLoggingEnabled_m423036B8A916964D878DC02F4F3BD6370B31CA92 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14502,7 +14502,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool AndroidFacebook_IsImplicitPurchaseLoggin
 		return L_1;
 	}
 }
-// Method Definition Index: 131720
+// Method Definition Index: 134024
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_ActivateApp_mCFC9C6B304E050FEF0408E1FC0BDD262EFE96CCB (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_appId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14516,7 +14516,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_ActivateApp_mCFC9C6B304E
 		return;
 	}
 }
-// Method Definition Index: 131721
+// Method Definition Index: 134025
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_FetchDeferredAppLink_m3A10755959CED3ED891E70BDA8F3AF00F1B3A28A (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, FacebookDelegate_1_t084616048CD926AFFFA1D0E903E2278104EDFF5D* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14546,7 +14546,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_FetchDeferredAppLink_m3A
 		return;
 	}
 }
-// Method Definition Index: 131722
+// Method Definition Index: 134026
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_RefreshCurrentAccessToken_m3308164AD5446470F3D2E0B2EB4306890A483187 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, FacebookDelegate_1_t0A787A64D3187E98A865A198DDF444C008C79F35* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14570,7 +14570,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_RefreshCurrentAccessToke
 		return;
 	}
 }
-// Method Definition Index: 131723
+// Method Definition Index: 134027
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_OpenFriendFinderDialog_m41FB887EA6BB529507AB67D77E368530800AB16A (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, FacebookDelegate_1_t55619BCDC758CB1C82277E6D8BA44ACA47C03DE2* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14594,7 +14594,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_OpenFriendFinderDialog_m
 		return;
 	}
 }
-// Method Definition Index: 131724
+// Method Definition Index: 134028
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_GetFriendFinderInvitations_m9517D7ABD5DA15F256BA35BFC348E3F195286793 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, FacebookDelegate_1_tF518E51A3BF076B1D5E8CE983567127943500CCC* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -14603,7 +14603,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_GetFriendFinderInvitatio
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&AndroidFacebook_GetFriendFinderInvitations_m9517D7ABD5DA15F256BA35BFC348E3F195286793_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131725
+// Method Definition Index: 134029
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_DeleteFriendFinderInvitation_mD98543B87AD5FF8820D12EDDADBA513FC2FEF4AB (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_invitationId, FacebookDelegate_1_tF518E51A3BF076B1D5E8CE983567127943500CCC* ___1_callback, const RuntimeMethod* method) 
 {
 	{
@@ -14612,7 +14612,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_DeleteFriendFinderInvita
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&AndroidFacebook_DeleteFriendFinderInvitation_mD98543B87AD5FF8820D12EDDADBA513FC2FEF4AB_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131726
+// Method Definition Index: 134030
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_UploadImageToMediaLibrary_m087EAA451D15BA1447884972213B0B2297D74B3A (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_caption, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___1_imageUri, bool ___2_shouldLaunchMediaDialog, FacebookDelegate_1_t7CA00F6A27B3FE85139590EFEA03B7C7C0D4A66D* ___3_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14659,7 +14659,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_UploadImageToMediaLibrar
 		return;
 	}
 }
-// Method Definition Index: 131727
+// Method Definition Index: 134031
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_UploadVideoToMediaLibrary_m7B26F9DDDF8E5309C912A0B8893AF7F997CAF860 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_caption, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___1_videoUri, bool ___2_shouldLaunchMediaDialog, FacebookDelegate_1_t7CA00F6A27B3FE85139590EFEA03B7C7C0D4A66D* ___3_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14699,7 +14699,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_UploadVideoToMediaLibrar
 		return;
 	}
 }
-// Method Definition Index: 131728
+// Method Definition Index: 134032
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_GetUserLocale_m52F279BC42B0353CAE6510BF4374EC4B8C878FAD (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, FacebookDelegate_1_t287669D2D13F62ECCB982BD24ABCFB8AC41D6B0A* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -14708,7 +14708,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_GetUserLocale_m52F279BC4
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&AndroidFacebook_GetUserLocale_m52F279BC42B0353CAE6510BF4374EC4B8C878FAD_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131729
+// Method Definition Index: 134033
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_OnIAPReady_m3C93CF5FB07B3EEF6157C77C50D9E2A81DBB537F (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, FacebookDelegate_1_tA2A619ACCF137D8094955A556E78A66749C43F74* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14732,7 +14732,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_OnIAPReady_m3C93CF5FB07B
 		return;
 	}
 }
-// Method Definition Index: 131730
+// Method Definition Index: 134034
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_GetCatalog_m8BDF9EC7DEAAB0B764F5FC70C52A34ED9939BA7F (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, FacebookDelegate_1_tA8F51BBA2E7364881368E0CBED892F561162C32E* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14756,7 +14756,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_GetCatalog_m8BDF9EC7DEAA
 		return;
 	}
 }
-// Method Definition Index: 131731
+// Method Definition Index: 134035
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_GetPurchases_m73D2A1110F5D5D5A548A42EFA8BF4FF2EB2713CC (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, FacebookDelegate_1_t61D056F5D405CB3DF2F643449D9C03A64AB8E818* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14780,7 +14780,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_GetPurchases_m73D2A1110F
 		return;
 	}
 }
-// Method Definition Index: 131732
+// Method Definition Index: 134036
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_Purchase_mE61E80DAE920AB7E9C9D729A8F55C0B9997A2D9C (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_productID, FacebookDelegate_1_tBD274D4AED39A6A24A22981D38D3CBF447CF036E* ___1_callback, String_t* ___2_developerPayload, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14820,7 +14820,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_Purchase_mE61E80DAE920AB
 		return;
 	}
 }
-// Method Definition Index: 131733
+// Method Definition Index: 134037
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_ConsumePurchase_m2AD242A5189160D0F584A0B6CDF9EF92EAC2B1BF (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_purchaseToken, FacebookDelegate_1_tF96C838D4977CEFDB874E77F7A56B1CFECF4D8DD* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14855,7 +14855,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_ConsumePurchase_m2AD242A
 		return;
 	}
 }
-// Method Definition Index: 131734
+// Method Definition Index: 134038
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_GetSubscribableCatalog_mE4A7ECC9B4431B2DB6554A344B77E4E6E4FAC743 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, FacebookDelegate_1_tCBDD2ED234A2D2CC094CDD20A03718E3B5BD81EE* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14879,7 +14879,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_GetSubscribableCatalog_m
 		return;
 	}
 }
-// Method Definition Index: 131735
+// Method Definition Index: 134039
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_GetSubscriptions_mA4751F62B3F065820B5BD3EF406B72527A92405D (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, FacebookDelegate_1_tF5F09FA5017250C0A7EDF6B3CC98AF13684FCB17* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14903,7 +14903,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_GetSubscriptions_mA4751F
 		return;
 	}
 }
-// Method Definition Index: 131736
+// Method Definition Index: 134040
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_PurchaseSubscription_mF373DBACE865A52356FE1E72836FC1DF508E1A32 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_productID, FacebookDelegate_1_t6E63BCC63D73CBC6E3733913002FDBE5F7A9C8EF* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14938,7 +14938,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_PurchaseSubscription_mF3
 		return;
 	}
 }
-// Method Definition Index: 131737
+// Method Definition Index: 134041
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_CancelSubscription_m0403A1674DFFA01CAA3CD7F54F5A8C136B26CF89 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_purchaseToken, FacebookDelegate_1_t59D18819566848CF07E01DDFC1F4ADF70E376FC7* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14973,7 +14973,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_CancelSubscription_m0403
 		return;
 	}
 }
-// Method Definition Index: 131738
+// Method Definition Index: 134042
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_InitCloudGame_m48B0B85D69AC4272CFE86F24EE66146553A6355D (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, FacebookDelegate_1_tB829CDA8266CAB15D1703F5904BB2F8592CA60E8* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -14997,7 +14997,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_InitCloudGame_m48B0B85D6
 		return;
 	}
 }
-// Method Definition Index: 131739
+// Method Definition Index: 134043
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_GameLoadComplete_mD661B44DA3D1A574A5B195888C87568C4F1E08CD (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, FacebookDelegate_1_t2A3F65614ACD86BAA7B587ADC574B2830F2FAD31* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15021,7 +15021,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_GameLoadComplete_mD661B4
 		return;
 	}
 }
-// Method Definition Index: 131740
+// Method Definition Index: 134044
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_ScheduleAppToUserNotification_mE2ABBC5F7486F7468D710680580F0DF2DA242A39 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_title, String_t* ___1_body, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___2_media, int32_t ___3_timeInterval, String_t* ___4_payload, FacebookDelegate_1_t623E520D5B99523D410AEE72AB9FF4901DC356AC* ___5_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15077,7 +15077,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_ScheduleAppToUserNotific
 		return;
 	}
 }
-// Method Definition Index: 131741
+// Method Definition Index: 134045
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_LoadInterstitialAd_mFABB93839D1D47D5BF1D65F612215F3341D762D0 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_placementID, FacebookDelegate_1_t6BAE034F2CC3270BFC282A9D0DEB58CC5F91C265* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15112,7 +15112,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_LoadInterstitialAd_mFABB
 		return;
 	}
 }
-// Method Definition Index: 131742
+// Method Definition Index: 134046
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_ShowInterstitialAd_mCC55F1D6B6FB59B226AAD6D1767C346A3111209E (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_placementID, FacebookDelegate_1_t6BAE034F2CC3270BFC282A9D0DEB58CC5F91C265* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15147,7 +15147,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_ShowInterstitialAd_mCC55
 		return;
 	}
 }
-// Method Definition Index: 131743
+// Method Definition Index: 134047
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_LoadRewardedVideo_mC13C361164376E76BB38CAA0D5692552816B5754 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_placementID, FacebookDelegate_1_t9C5748E8AC36242F3F03171AA1E6306E60860ACD* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15182,7 +15182,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_LoadRewardedVideo_mC13C3
 		return;
 	}
 }
-// Method Definition Index: 131744
+// Method Definition Index: 134048
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_ShowRewardedVideo_m69BF5BB105E609C0DCFAB93F53A1FB71B7BD7817 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_placementID, FacebookDelegate_1_t9C5748E8AC36242F3F03171AA1E6306E60860ACD* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15217,7 +15217,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_ShowRewardedVideo_m69BF5
 		return;
 	}
 }
-// Method Definition Index: 131745
+// Method Definition Index: 134049
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_GetPayload_mB059A54B0859D8768F4C964C6D9D0842A3F71C7E (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, FacebookDelegate_1_tB6B04FA63685B9A0D41AB08E3E5BC96A72D7A1D7* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15241,7 +15241,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_GetPayload_mB059A54B0859
 		return;
 	}
 }
-// Method Definition Index: 131746
+// Method Definition Index: 134050
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_PostSessionScore_m6AFF1D4CDBB0AFB9C0E6781992A8D2F9B37D96ED (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, int32_t ___0_score, FacebookDelegate_1_t610D359C8E47669CC0D9F0B6CA9DF9240BF80267* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15277,7 +15277,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_PostSessionScore_m6AFF1D
 		return;
 	}
 }
-// Method Definition Index: 131747
+// Method Definition Index: 134051
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_PostTournamentScore_m9D81CEBBAC153093014752F6501EB0B228AEC890 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, int32_t ___0_score, FacebookDelegate_1_t474682078C474498C8D4805F13E9077763B39255* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15313,7 +15313,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_PostTournamentScore_m9D8
 		return;
 	}
 }
-// Method Definition Index: 131748
+// Method Definition Index: 134052
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_GetTournament_m53D7AB0908FDD98CEF08F5DC12C1F5BDEE5D4DD3 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, FacebookDelegate_1_tD9C9BBFE6AD0931C935E391D858C37BEBF14BBA3* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15337,7 +15337,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_GetTournament_m53D7AB090
 		return;
 	}
 }
-// Method Definition Index: 131749
+// Method Definition Index: 134053
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_CreateTournament_mC04A8889339BD907399E759E37E9C80EC591B43C (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, int32_t ___0_initialScore, String_t* ___1_title, String_t* ___2_imageBase64DataUrl, String_t* ___3_sortOrder, String_t* ___4_scoreFormat, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___5_data, FacebookDelegate_1_tD9C9BBFE6AD0931C935E391D858C37BEBF14BBA3* ___6_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15491,7 +15491,7 @@ IL_0090:
 		return;
 	}
 }
-// Method Definition Index: 131750
+// Method Definition Index: 134054
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_ShareTournament_m61F59DF4C01C633AD792AE0E69DD73F78E612F1F (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, int32_t ___0_score, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___1_data, FacebookDelegate_1_t474682078C474498C8D4805F13E9077763B39255* ___2_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15625,7 +15625,7 @@ IL_005d:
 		return;
 	}
 }
-// Method Definition Index: 131751
+// Method Definition Index: 134055
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_GetTournaments_m39F95C9C64D9E45A79C30ABF15EBA0CFB568A2E7 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, FacebookDelegate_1_t64F37B84FFAB406D45358FC281716C5AD6B6916A* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15649,7 +15649,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_GetTournaments_m39F95C9C
 		return;
 	}
 }
-// Method Definition Index: 131752
+// Method Definition Index: 134056
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_UpdateTournament_m4D79CC96741536C16328B31FA1C42B985C6EE3B9 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_tournamentID, int32_t ___1_score, FacebookDelegate_1_t474682078C474498C8D4805F13E9077763B39255* ___2_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15690,7 +15690,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_UpdateTournament_m4D79CC
 		return;
 	}
 }
-// Method Definition Index: 131753
+// Method Definition Index: 134057
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_UpdateAndShareTournament_m979F390047064DB9FFBF690B1A373422F2D9AD63 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_tournamentID, int32_t ___1_score, FacebookDelegate_1_t2CCD4851FD0B117C9DDD8076206645B712D37148* ___2_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15731,7 +15731,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_UpdateAndShareTournament
 		return;
 	}
 }
-// Method Definition Index: 131754
+// Method Definition Index: 134058
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_CreateAndShareTournament_mEA87988E65DDA149D6C80FA38D231C2246566B22 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, int32_t ___0_initialScore, String_t* ___1_title, int32_t ___2_sortOrder, int32_t ___3_scoreFormat, int64_t ___4_endTime, String_t* ___5_payload, FacebookDelegate_1_t2CCD4851FD0B117C9DDD8076206645B712D37148* ___6_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15864,7 +15864,7 @@ IL_0054:
 		return;
 	}
 }
-// Method Definition Index: 131755
+// Method Definition Index: 134059
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_OpenAppStore_m76FBF23B9117A0CC7DDB59D5183F341855A05278 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, FacebookDelegate_1_t5E457BF6B03D4AD72D97F1848A0612B675747CFD* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15888,7 +15888,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_OpenAppStore_m76FBF23B91
 		return;
 	}
 }
-// Method Definition Index: 131756
+// Method Definition Index: 134060
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_CreateGamingContext_m642A059D4F65509AE97DB2721083125CC440D5A8 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_playerID, FacebookDelegate_1_t4EE1A08C9856158E0FE827895B7C215B9D31DFDB* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15923,7 +15923,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_CreateGamingContext_m642
 		return;
 	}
 }
-// Method Definition Index: 131757
+// Method Definition Index: 134061
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_SwitchGamingContext_mF6D147F20768D10144D017202B217A0BEF516E21 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_gamingContextID, FacebookDelegate_1_t91F4CF55A78EB0E71A911614B7301B6B10573C5E* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -15958,7 +15958,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_SwitchGamingContext_mF6D
 		return;
 	}
 }
-// Method Definition Index: 131758
+// Method Definition Index: 134062
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_ChooseGamingContext_m280A4EE5113D99FD9C3ADEB3486DBCB4FD82CB7B (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* ___0_filters, int32_t ___1_minSize, int32_t ___2_maxSize, FacebookDelegate_1_t81E13A1711AD1F793F015F156F2C7659AAE23FD9* ___3_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16005,7 +16005,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_ChooseGamingContext_m280
 		return;
 	}
 }
-// Method Definition Index: 131759
+// Method Definition Index: 134063
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_GetCurrentGamingContext_m78D9F8F1BF92F7791392B3FCE2A5B267FE808BED (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, FacebookDelegate_1_t8FEADD97FF7B0B7FD6CA562CCD1C2EA7F91B5A00* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16035,7 +16035,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_GetCurrentGamingContext_
 		return;
 	}
 }
-// Method Definition Index: 131760
+// Method Definition Index: 134064
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_SetShareDialogMode_m0777C8F927E921C12CFE49DCFB12A977CC760DAD (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, int32_t ___0_mode, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16053,7 +16053,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_SetShareDialogMode_m0777
 		return;
 	}
 }
-// Method Definition Index: 131761
+// Method Definition Index: 134065
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AndroidFacebook_GetAndroidWrapper_mFB879F02BAD046A4C58F0A4AFCADE56BB98673A9 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16075,7 +16075,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* AndroidFacebook_GetAndroidWrap
 		return ((RuntimeObject*)Castclass((RuntimeObject*)L_2, IAndroidWrapper_t3D8FC6369EBCAB7A86AE6A71C08CD96C9E1DDC63_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 131762
+// Method Definition Index: 134066
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_CallFB_mBFD340DDC8C5FD7AD5B9498EC31A03C371448889 (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_method, String_t* ___1_args, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16107,7 +16107,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebook_CallFB_mBFD340DDC8C5FD7A
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131765
+// Method Definition Index: 134069
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_mBD1EE586906B8B42D0D4677D3664DE6F51CE820D (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16124,7 +16124,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_mBD1EE586906B8B42D0D4677D
 		return;
 	}
 }
-// Method Definition Index: 131766
+// Method Definition Index: 134070
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m6FA067A84B1AE0399E7ED35538573D3678CC0B38 (U3CU3Ec_tA735FA2125E48AFF6D822CDC474E539DC0B9CFCD* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16132,7 +16132,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m6FA067A84B1AE0399E7ED3553
 		return;
 	}
 }
-// Method Definition Index: 131767
+// Method Definition Index: 134071
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* U3CU3Ec_U3CCreateTournamentU3Eb__73_0_m240F4AB0CA18E3E396B634D5F2C5BC60DCFB74CD (U3CU3Ec_tA735FA2125E48AFF6D822CDC474E539DC0B9CFCD* __this, KeyValuePair_2_t47AB280304B50F542FD7E14F25DB2C374AEDD80A ___0_pair, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16147,7 +16147,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* U3CU3Ec_U3CCreateTournamentU3Eb__73
 		return L_0;
 	}
 }
-// Method Definition Index: 131768
+// Method Definition Index: 134072
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CU3Ec_U3CCreateTournamentU3Eb__73_1_m4F370DCA44964A4A85CA3652279FC511CBD72AD4 (U3CU3Ec_tA735FA2125E48AFF6D822CDC474E539DC0B9CFCD* __this, KeyValuePair_2_t47AB280304B50F542FD7E14F25DB2C374AEDD80A ___0_pair, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16162,7 +16162,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CU3Ec_U3CCreateTournamentU3E
 		return L_0;
 	}
 }
-// Method Definition Index: 131769
+// Method Definition Index: 134073
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* U3CU3Ec_U3CShareTournamentU3Eb__74_0_m3261805909640A793B1E4508BA17590DE074820E (U3CU3Ec_tA735FA2125E48AFF6D822CDC474E539DC0B9CFCD* __this, KeyValuePair_2_t47AB280304B50F542FD7E14F25DB2C374AEDD80A ___0_pair, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16177,7 +16177,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* U3CU3Ec_U3CShareTournamentU3Eb__74_
 		return L_0;
 	}
 }
-// Method Definition Index: 131770
+// Method Definition Index: 134074
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CU3Ec_U3CShareTournamentU3Eb__74_1_m1EF02FD070B7C0757C9F27817E6D89239A55F05F (U3CU3Ec_tA735FA2125E48AFF6D822CDC474E539DC0B9CFCD* __this, KeyValuePair_2_t47AB280304B50F542FD7E14F25DB2C374AEDD80A ___0_pair, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16200,7 +16200,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CU3Ec_U3CShareTournamentU3Eb
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131771
+// Method Definition Index: 134075
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebookGameObject_OnAwake_mB286A5F4810D9949241D37DC435258D6AEF21EF8 (AndroidFacebookGameObject_tE6C1710A0A021C2A3758C18B550590F001B0E378* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16208,7 +16208,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebookGameObject_OnAwake_mB286A
 		return;
 	}
 }
-// Method Definition Index: 131772
+// Method Definition Index: 134076
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebookGameObject_OnEnable_m15E6D53A86D9125635895AE188031CD4913E828B (AndroidFacebookGameObject_tE6C1710A0A021C2A3758C18B550590F001B0E378* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16227,7 +16227,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebookGameObject_OnEnable_m15E6
 		return;
 	}
 }
-// Method Definition Index: 131773
+// Method Definition Index: 134077
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebookGameObject_OnSceneLoaded_mE8FDAADE1E19AA7202CB27DC8C033676B52700BD (AndroidFacebookGameObject_tE6C1710A0A021C2A3758C18B550590F001B0E378* __this, Scene_tA1DC762B79745EB5140F054C884855B922318356 ___0_scene, int32_t ___1_mode, const RuntimeMethod* method) 
 {
 	{
@@ -16235,7 +16235,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebookGameObject_OnSceneLoaded_
 		return;
 	}
 }
-// Method Definition Index: 131774
+// Method Definition Index: 134078
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebookGameObject_OnDisable_m32311E0E2E06960DE723D4A47BF7EC57889782F1 (AndroidFacebookGameObject_tE6C1710A0A021C2A3758C18B550590F001B0E378* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16254,7 +16254,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebookGameObject_OnDisable_m323
 		return;
 	}
 }
-// Method Definition Index: 131775
+// Method Definition Index: 134079
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebookGameObject_onPurchaseCompleteHandler_mE0D510C76A73484AF0B7C11E2DD7BD6D99B18EF7 (AndroidFacebookGameObject_tE6C1710A0A021C2A3758C18B550590F001B0E378* __this, RuntimeObject* ___0_data, const RuntimeMethod* method) 
 {
 	{
@@ -16263,7 +16263,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebookGameObject_onPurchaseComp
 		return;
 	}
 }
-// Method Definition Index: 131776
+// Method Definition Index: 134080
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebookGameObject_OnLoginStatusRetrieved_m50EA4D72094D287AE88120ECD3906546AC8044FF (AndroidFacebookGameObject_tE6C1710A0A021C2A3758C18B550590F001B0E378* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16284,7 +16284,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebookGameObject_OnLoginStatusR
 		return;
 	}
 }
-// Method Definition Index: 131777
+// Method Definition Index: 134081
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebookGameObject__ctor_mD6C0FB2BD08E92351A31426D73C0AAC0914DFC86 (AndroidFacebookGameObject_tE6C1710A0A021C2A3758C18B550590F001B0E378* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16300,7 +16300,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebookGameObject__ctor_mD6C0FB2
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131778
+// Method Definition Index: 134082
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FacebookGameObject_t2A844C47156B1DC094D9D008FFFC2F730F8E0D0B* AndroidFacebookLoader_get_FBGameObject_m0066C68A46FA60BBD72042D9D2EA80E381CDD9AA (AndroidFacebookLoader_t581FB6217BD8B55FE1012FCF1AC8EDABE25320E9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16338,7 +16338,7 @@ IL_001a:
 		return L_5;
 	}
 }
-// Method Definition Index: 131779
+// Method Definition Index: 134083
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebookLoader__ctor_m7AD409122FD6048F992BA57F3BB0FC854D9C7343 (AndroidFacebookLoader_t581FB6217BD8B55FE1012FCF1AC8EDABE25320E9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16354,7 +16354,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AndroidFacebookLoader__ctor_m7AD409122FD
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131782
+// Method Definition Index: 134086
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook__ctor_m84A06718D125F7DEC19BD186F5D318F495248EFE (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16372,7 +16372,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook__ctor_m84A06718D125F7DEC1
 		return;
 	}
 }
-// Method Definition Index: 131783
+// Method Definition Index: 134087
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook__ctor_m3ADD98C9D62A49DFCE51D16F6862FB80179E85E0 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, RuntimeObject* ___0_canvasJSWrapper, CallbackManager_t3B9141B4E44116445C556786C02DEDA7CE612749* ___1_callbackManager, const RuntimeMethod* method) 
 {
 	{
@@ -16384,7 +16384,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook__ctor_m3ADD98C9D62A49DFCE
 		return;
 	}
 }
-// Method Definition Index: 131784
+// Method Definition Index: 134088
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CanvasFacebook_GetCanvasJSWrapper_mCAF1873B89014661AA22463DB1FCF2FFA5FE3CFD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16406,7 +16406,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CanvasFacebook_GetCanvasJSWrap
 		return ((RuntimeObject*)Castclass((RuntimeObject*)L_2, ICanvasJSWrapper_t1748EA8C60A8447BF5907D9F7EBEAF381AAA0B12_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 131785
+// Method Definition Index: 134089
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool CanvasFacebook_get_LimitEventUsage_m6E8EC596862C259390BFBA34758E526898FDEEB6 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -16414,7 +16414,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool CanvasFacebook_get_LimitEventUsage_m6E8E
 		return L_0;
 	}
 }
-// Method Definition Index: 131786
+// Method Definition Index: 134090
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_set_LimitEventUsage_mE01AAF26FAC1854A4A6214ED5314C7E31B379587 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -16423,7 +16423,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_set_LimitEventUsage_mE01A
 		return;
 	}
 }
-// Method Definition Index: 131787
+// Method Definition Index: 134091
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* CanvasFacebook_get_SDKName_mE46F50F1B61A9FE5A7B21610E33ABCE28F747ACF (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16436,7 +16436,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* CanvasFacebook_get_SDKName_mE46F50F
 		return _stringLiteralC329109D65F880A37C0127AB93EAA77E304327AB;
 	}
 }
-// Method Definition Index: 131788
+// Method Definition Index: 134092
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* CanvasFacebook_get_SDKVersion_m5AA4B8892A945B7791CCB3D86C00118E86A323DA (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16453,7 +16453,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* CanvasFacebook_get_SDKVersion_m5AA4
 		return L_1;
 	}
 }
-// Method Definition Index: 131789
+// Method Definition Index: 134093
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* CanvasFacebook_get_SDKUserAgent_mFFE3C4E9F7435D98165C9CD52DCAC71CFEBDA8C1 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16533,7 +16533,7 @@ IL_0046:
 		return L_16;
 	}
 }
-// Method Definition Index: 131790
+// Method Definition Index: 134094
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_Init_m9CB9B404293C16B33E4E1C4B7A937E0BA4896488 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, String_t* ___0_appId, bool ___1_cookie, bool ___2_logging, bool ___3_status, bool ___4_xfbml, String_t* ___5_channelUrl, String_t* ___6_authResponse, bool ___7_frictionlessRequests, String_t* ___8_javascriptSDKLocale, bool ___9_loadDebugJSSDK, HideUnityDelegate_t73424171C1A0762619208C0090DD84BA51FF9BCE* ___10_hideUnityDelegate, InitDelegate_t880BF96D9E733404D1E36BF894DDA83C1B9A1A9F* ___11_onInitComplete, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16714,7 +16714,7 @@ IL_00c0:
 		return;
 	}
 }
-// Method Definition Index: 131791
+// Method Definition Index: 134095
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_LogInWithPublishPermissions_mDD1C186ED08556FCFF248E3E0319163453E01A28 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, RuntimeObject* ___0_permissions, FacebookDelegate_1_t12EB4CA46E5479FC254BB457E8695ACBA6D7AB0D* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16741,7 +16741,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_LogInWithPublishPermissio
 		return;
 	}
 }
-// Method Definition Index: 131792
+// Method Definition Index: 134096
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_LogInWithReadPermissions_mE38B763C71C23F4A42092994AB11B0C29574EBA4 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, RuntimeObject* ___0_permissions, FacebookDelegate_1_t12EB4CA46E5479FC254BB457E8695ACBA6D7AB0D* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16768,7 +16768,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_LogInWithReadPermissions_
 		return;
 	}
 }
-// Method Definition Index: 131793
+// Method Definition Index: 134097
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_LogOut_m80C55010FC178EE2C777DE9427FB1B35862CAE56 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16785,7 +16785,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_LogOut_m80C55010FC178EE2C
 		return;
 	}
 }
-// Method Definition Index: 131794
+// Method Definition Index: 134098
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_AppRequest_m7EB4F779548999C3940633F11A4BE3BCE7317740 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, String_t* ___0_message, Nullable_1_t61CE348507A9F5421A2CFD17C087DBF01CE99C73 ___1_actionType, String_t* ___2_objectId, RuntimeObject* ___3_to, RuntimeObject* ___4_filters, RuntimeObject* ___5_excludeIds, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___6_maxRecipients, String_t* ___7_data, String_t* ___8_title, FacebookDelegate_1_t0FD54CEBA449E8491C6F3CC16DAEC9723FBDEFF2* ___9_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16912,7 +16912,7 @@ IL_0055:
 		return;
 	}
 }
-// Method Definition Index: 131795
+// Method Definition Index: 134099
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_ActivateApp_mE8DA5EE23CA9C034E85F0562ACE7CAADA9553CE3 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, String_t* ___0_appId, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16928,7 +16928,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_ActivateApp_mE8DA5EE23CA9
 		return;
 	}
 }
-// Method Definition Index: 131796
+// Method Definition Index: 134100
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_ShareLink_mC2F448B9212E4A29F58F3C98E3941A43BBB6617A (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___0_contentURL, String_t* ___1_contentTitle, String_t* ___2_contentDescription, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___3_photoURL, FacebookDelegate_1_t4C7ACE222D7D3FBEA79B4E2B46A1CD632E0EAD35* ___4_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -16979,7 +16979,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_ShareLink_mC2F448B9212E4A
 		return;
 	}
 }
-// Method Definition Index: 131797
+// Method Definition Index: 134101
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_FeedShare_m5FCAC2758D64A984D8202F573EE4F385DE7984D0 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, String_t* ___0_toId, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___1_link, String_t* ___2_linkName, String_t* ___3_linkCaption, String_t* ___4_linkDescription, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___5_picture, String_t* ___6_mediaSource, FacebookDelegate_1_t4C7ACE222D7D3FBEA79B4E2B46A1CD632E0EAD35* ___7_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17045,7 +17045,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_FeedShare_m5FCAC2758D64A9
 		return;
 	}
 }
-// Method Definition Index: 131798
+// Method Definition Index: 134102
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_Pay_m9EA829A520213664925AE20AB50D2C13EA75CC72 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, String_t* ___0_product, String_t* ___1_action, int32_t ___2_quantity, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___3_quantityMin, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___4_quantityMax, String_t* ___5_requestId, String_t* ___6_pricepointId, String_t* ___7_testCurrency, FacebookDelegate_1_t196A2AB9CCB2BC5DCA5BC05F82516E4C3FF9DD4B* ___8_callback, const RuntimeMethod* method) 
 {
 	{
@@ -17062,7 +17062,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_Pay_m9EA829A520213664925A
 		return;
 	}
 }
-// Method Definition Index: 131799
+// Method Definition Index: 134103
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_PayWithProductId_mE2D14B1B2E6BC62050DE5F9EBC2455416708F823 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, String_t* ___0_productId, String_t* ___1_action, int32_t ___2_quantity, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___3_quantityMin, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___4_quantityMax, String_t* ___5_requestId, String_t* ___6_pricepointId, String_t* ___7_testCurrency, FacebookDelegate_1_t196A2AB9CCB2BC5DCA5BC05F82516E4C3FF9DD4B* ___8_callback, const RuntimeMethod* method) 
 {
 	{
@@ -17079,7 +17079,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_PayWithProductId_mE2D14B1
 		return;
 	}
 }
-// Method Definition Index: 131800
+// Method Definition Index: 134104
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_PayWithProductId_m0B142A91058339CDD681F60985BAAE1AF2676FA0 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, String_t* ___0_productId, String_t* ___1_action, String_t* ___2_developerPayload, String_t* ___3_testCurrency, FacebookDelegate_1_t196A2AB9CCB2BC5DCA5BC05F82516E4C3FF9DD4B* ___4_callback, const RuntimeMethod* method) 
 {
 	Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 V_0;
@@ -17098,7 +17098,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_PayWithProductId_m0B142A9
 		return;
 	}
 }
-// Method Definition Index: 131801
+// Method Definition Index: 134105
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_GetAppLink_mF958026CDE246DB093863010513EDAADD159CE27 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, FacebookDelegate_1_t084616048CD926AFFFA1D0E903E2278104EDFF5D* ___0_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17135,7 +17135,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_GetAppLink_mF958026CDE246
 		return;
 	}
 }
-// Method Definition Index: 131802
+// Method Definition Index: 134106
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_AppEventsLogEvent_m3E83E524321F0B649623A9B0FA3C8BDFB5DBE649 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, String_t* ___0_logEvent, Nullable_1_t3D746CBB6123D4569FF4DEA60BC4240F32C6FE75 ___1_valueToSum, Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* ___2_parameters, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17158,7 +17158,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_AppEventsLogEvent_m3E83E5
 		return;
 	}
 }
-// Method Definition Index: 131803
+// Method Definition Index: 134107
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_AppEventsLogPurchase_mA9F046615C36B3AC163AFB32A7CCEBC09D0CB2FE (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, float ___0_purchaseAmount, String_t* ___1_currency, Dictionary_2_tA348003A3C1CEFB3096E9D2A0BC7F1AC8EC4F710* ___2_parameters, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17181,7 +17181,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_AppEventsLogPurchase_mA9F
 		return;
 	}
 }
-// Method Definition Index: 131804
+// Method Definition Index: 134108
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_OnLoginComplete_m31B8BC35ACD40C5211D6C7A59DBF95FD049788A2 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_result, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17199,7 +17199,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_OnLoginComplete_m31B8BC35
 		return;
 	}
 }
-// Method Definition Index: 131805
+// Method Definition Index: 134109
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_OnGetAppLinkComplete_mA941FB6E6FC4EE30B35515478C5C5CC4CA2E8F64 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_message, const RuntimeMethod* method) 
 {
 	{
@@ -17208,7 +17208,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_OnGetAppLinkComplete_mA94
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_OnGetAppLinkComplete_mA941FB6E6FC4EE30B35515478C5C5CC4CA2E8F64_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131806
+// Method Definition Index: 134110
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_OnFacebookAuthResponseChange_mD3D6322EE6982AA5E7D849AB2F670AAEDB8CEC03 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, String_t* ___0_responseJsonData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17225,7 +17225,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_OnFacebookAuthResponseCha
 		return;
 	}
 }
-// Method Definition Index: 131807
+// Method Definition Index: 134111
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_OnFacebookAuthResponseChange_m007239F26735F40030DC4B8E887370CA1045CEF8 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17272,7 +17272,7 @@ IL_0020:
 		return;
 	}
 }
-// Method Definition Index: 131808
+// Method Definition Index: 134112
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_OnPayComplete_m426CFD2DECA6F40D307198BD2AF4221D43CC6AE9 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, String_t* ___0_responseJsonData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17289,7 +17289,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_OnPayComplete_m426CFD2DEC
 		return;
 	}
 }
-// Method Definition Index: 131809
+// Method Definition Index: 134113
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_OnPayComplete_m92E1525EF1656737630DC7D82B5A6A58C73A6B38 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17312,7 +17312,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_OnPayComplete_m92E1525EF1
 		return;
 	}
 }
-// Method Definition Index: 131810
+// Method Definition Index: 134114
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_OnAppRequestsComplete_m88AAA34CC6141AF5E96370E9142880EB2A474EC1 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17335,7 +17335,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_OnAppRequestsComplete_m88
 		return;
 	}
 }
-// Method Definition Index: 131811
+// Method Definition Index: 134115
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_OnShareLinkComplete_m71D918C8B490675B09F8591AF900EB8A76C06E42 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_resultContainer, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17358,7 +17358,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_OnShareLinkComplete_m71D9
 		return;
 	}
 }
-// Method Definition Index: 131812
+// Method Definition Index: 134116
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_OnUrlResponse_m8C2FEFF33E69C66ACDECD490D243A1E0830FAA21 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, String_t* ___0_url, const RuntimeMethod* method) 
 {
 	{
@@ -17368,7 +17368,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_OnUrlResponse_m8C2FEFF33E
 		return;
 	}
 }
-// Method Definition Index: 131813
+// Method Definition Index: 134117
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_OnHideUnity_m2163ADB8F4B3014E79C08D53B099B9A80A994D03 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, bool ___0_isGameShown, const RuntimeMethod* method) 
 {
 	{
@@ -17390,7 +17390,7 @@ IL_0014:
 		return;
 	}
 }
-// Method Definition Index: 131814
+// Method Definition Index: 134118
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_FormatAuthResponse_mF113AE6F0CECF177B251B4989E62E404E69BB0BF (ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_result, Callback_1_tFC22DABD78A3E51786E5CDB3C3A5B523E804BB92* ___1_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17647,7 +17647,7 @@ IL_012c:
 		return;
 	}
 }
-// Method Definition Index: 131815
+// Method Definition Index: 134119
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_PayImpl_m6559E97A2444BFABD5E6B5D4B8D14FB5DD984069 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, String_t* ___0_product, String_t* ___1_productId, String_t* ___2_action, int32_t ___3_quantity, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___4_quantityMin, Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28 ___5_quantityMax, String_t* ___6_requestId, String_t* ___7_pricepointId, String_t* ___8_testCurrency, String_t* ___9_developerPayload, FacebookDelegate_1_t196A2AB9CCB2BC5DCA5BC05F82516E4C3FF9DD4B* ___10_callback, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17730,7 +17730,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_PayImpl_m6559E97A2444BFAB
 		return;
 	}
 }
-// Method Definition Index: 131816
+// Method Definition Index: 134120
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_GetCatalog_m4ECE5FB9CBC55786AA306B68CF7DC18D6B9CB838 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, FacebookDelegate_1_tA8F51BBA2E7364881368E0CBED892F561162C32E* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -17739,7 +17739,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_GetCatalog_m4ECE5FB9CBC55
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_GetCatalog_m4ECE5FB9CBC55786AA306B68CF7DC18D6B9CB838_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131817
+// Method Definition Index: 134121
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_GetPurchases_mC34187F035BF8C77425ABC47639F61382B63F067 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, FacebookDelegate_1_t61D056F5D405CB3DF2F643449D9C03A64AB8E818* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -17748,7 +17748,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_GetPurchases_mC34187F035B
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_GetPurchases_mC34187F035BF8C77425ABC47639F61382B63F067_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131818
+// Method Definition Index: 134122
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_Purchase_m469ECC3B798DFB25314E7E41460FE61DBB770EF7 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, String_t* ___0_productID, FacebookDelegate_1_tBD274D4AED39A6A24A22981D38D3CBF447CF036E* ___1_callback, String_t* ___2_developerPayload, const RuntimeMethod* method) 
 {
 	{
@@ -17757,7 +17757,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_Purchase_m469ECC3B798DFB2
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_Purchase_m469ECC3B798DFB25314E7E41460FE61DBB770EF7_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131819
+// Method Definition Index: 134123
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_ConsumePurchase_m38091AD121B5E9373D012A37C05138940BD6804A (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, String_t* ___0_productToken, FacebookDelegate_1_tF96C838D4977CEFDB874E77F7A56B1CFECF4D8DD* ___1_callback, const RuntimeMethod* method) 
 {
 	{
@@ -17766,7 +17766,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_ConsumePurchase_m38091AD1
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_ConsumePurchase_m38091AD121B5E9373D012A37C05138940BD6804A_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131820
+// Method Definition Index: 134124
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_GetSubscribableCatalog_mF0337252E1117E40D29B6B7473470C9F3EB455C7 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, FacebookDelegate_1_tCBDD2ED234A2D2CC094CDD20A03718E3B5BD81EE* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -17775,7 +17775,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_GetSubscribableCatalog_mF
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_GetSubscribableCatalog_mF0337252E1117E40D29B6B7473470C9F3EB455C7_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131821
+// Method Definition Index: 134125
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_GetSubscriptions_mEA97701DABC403FEFB92EA4C6E631A3182371B46 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, FacebookDelegate_1_tF5F09FA5017250C0A7EDF6B3CC98AF13684FCB17* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -17784,7 +17784,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_GetSubscriptions_mEA97701
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_GetSubscriptions_mEA97701DABC403FEFB92EA4C6E631A3182371B46_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131822
+// Method Definition Index: 134126
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_PurchaseSubscription_m6FF75225AA61A2580E9A53640F74EDE817C86A74 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, String_t* ___0_productID, FacebookDelegate_1_t6E63BCC63D73CBC6E3733913002FDBE5F7A9C8EF* ___1_callback, const RuntimeMethod* method) 
 {
 	{
@@ -17793,7 +17793,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_PurchaseSubscription_m6FF
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_PurchaseSubscription_m6FF75225AA61A2580E9A53640F74EDE817C86A74_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131823
+// Method Definition Index: 134127
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_CancelSubscription_mEF56F940A632C894B2A65545C12F2693DA715FAD (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, String_t* ___0_productToken, FacebookDelegate_1_t59D18819566848CF07E01DDFC1F4ADF70E376FC7* ___1_callback, const RuntimeMethod* method) 
 {
 	{
@@ -17802,7 +17802,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_CancelSubscription_mEF56F
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_CancelSubscription_mEF56F940A632C894B2A65545C12F2693DA715FAD_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131824
+// Method Definition Index: 134128
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Profile_t80D50211DC9ED35561A8B96A45C9C79AF07E5CF7* CanvasFacebook_CurrentProfile_mAFBA870F8976D835C6D93CD17BCA96CEAA6B3AB3 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -17811,7 +17811,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Profile_t80D50211DC9ED35561A8B96A45C9C79AF07E
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_CurrentProfile_mAFBA870F8976D835C6D93CD17BCA96CEAA6B3AB3_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131825
+// Method Definition Index: 134129
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_CurrentProfile_mF82DFB2360AAABAF88A92D4604F3A6CAA038589F (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, FacebookDelegate_1_t94FBFEDD2C735E8672548F7A3A1E9751AD48590A* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -17820,7 +17820,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_CurrentProfile_mF82DFB236
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_CurrentProfile_mF82DFB2360AAABAF88A92D4604F3A6CAA038589F_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131826
+// Method Definition Index: 134130
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_LoadInterstitialAd_m93B5DC66F5C11CFB38DC83A1B9FF8580ADFDCEA7 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, String_t* ___0_placementID, FacebookDelegate_1_t6BAE034F2CC3270BFC282A9D0DEB58CC5F91C265* ___1_callback, const RuntimeMethod* method) 
 {
 	{
@@ -17829,7 +17829,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_LoadInterstitialAd_m93B5D
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_LoadInterstitialAd_m93B5DC66F5C11CFB38DC83A1B9FF8580ADFDCEA7_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131827
+// Method Definition Index: 134131
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_ShowInterstitialAd_m55C0929FAA86F8E631631F3830DEBC2D1564E54E (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, String_t* ___0_placementID, FacebookDelegate_1_t6BAE034F2CC3270BFC282A9D0DEB58CC5F91C265* ___1_callback, const RuntimeMethod* method) 
 {
 	{
@@ -17838,7 +17838,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_ShowInterstitialAd_m55C09
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_ShowInterstitialAd_m55C0929FAA86F8E631631F3830DEBC2D1564E54E_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131828
+// Method Definition Index: 134132
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_LoadRewardedVideo_mD735EC580F12DEDFA2463DEDD1694A8295818BA3 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, String_t* ___0_placementID, FacebookDelegate_1_t9C5748E8AC36242F3F03171AA1E6306E60860ACD* ___1_callback, const RuntimeMethod* method) 
 {
 	{
@@ -17847,7 +17847,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_LoadRewardedVideo_mD735EC
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_LoadRewardedVideo_mD735EC580F12DEDFA2463DEDD1694A8295818BA3_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131829
+// Method Definition Index: 134133
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_ShowRewardedVideo_m097F738C6AF43B1DFBB5FB5770265A8A990CF2AD (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, String_t* ___0_placementID, FacebookDelegate_1_t9C5748E8AC36242F3F03171AA1E6306E60860ACD* ___1_callback, const RuntimeMethod* method) 
 {
 	{
@@ -17856,7 +17856,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_ShowRewardedVideo_m097F73
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_ShowRewardedVideo_m097F738C6AF43B1DFBB5FB5770265A8A990CF2AD_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131830
+// Method Definition Index: 134134
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_OpenFriendFinderDialog_m0F11DF9EAA670E1C25E8EB8B7DFA5EFDFF167965 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, FacebookDelegate_1_t55619BCDC758CB1C82277E6D8BA44ACA47C03DE2* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -17865,7 +17865,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_OpenFriendFinderDialog_m0
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_OpenFriendFinderDialog_m0F11DF9EAA670E1C25E8EB8B7DFA5EFDFF167965_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131831
+// Method Definition Index: 134135
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_GetFriendFinderInvitations_mDA9482E0A496BAACA8635879ACBDE1071F23875A (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, FacebookDelegate_1_tF518E51A3BF076B1D5E8CE983567127943500CCC* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -17874,7 +17874,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_GetFriendFinderInvitation
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_GetFriendFinderInvitations_mDA9482E0A496BAACA8635879ACBDE1071F23875A_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131832
+// Method Definition Index: 134136
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_DeleteFriendFinderInvitation_mBC45C4C6E85D773376E68AE0B19D48EFDF5D3ACD (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, String_t* ___0_invitationId, FacebookDelegate_1_tF518E51A3BF076B1D5E8CE983567127943500CCC* ___1_callback, const RuntimeMethod* method) 
 {
 	{
@@ -17883,7 +17883,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_DeleteFriendFinderInvitat
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_DeleteFriendFinderInvitation_mBC45C4C6E85D773376E68AE0B19D48EFDF5D3ACD_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131833
+// Method Definition Index: 134137
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_ScheduleAppToUserNotification_m2E483A99E8E40ECF63845F7A572F14D294A352E1 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, String_t* ___0_title, String_t* ___1_body, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___2_media, int32_t ___3_timeInterval, String_t* ___4_payload, FacebookDelegate_1_t623E520D5B99523D410AEE72AB9FF4901DC356AC* ___5_callback, const RuntimeMethod* method) 
 {
 	{
@@ -17892,7 +17892,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_ScheduleAppToUserNotifica
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_ScheduleAppToUserNotification_m2E483A99E8E40ECF63845F7A572F14D294A352E1_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131834
+// Method Definition Index: 134138
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_PostSessionScore_m7B8727D4B4CAC8FDC9AA143EBD74550AF174E0FC (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, int32_t ___0_score, FacebookDelegate_1_t610D359C8E47669CC0D9F0B6CA9DF9240BF80267* ___1_callback, const RuntimeMethod* method) 
 {
 	{
@@ -17901,7 +17901,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_PostSessionScore_m7B8727D
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_PostSessionScore_m7B8727D4B4CAC8FDC9AA143EBD74550AF174E0FC_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131835
+// Method Definition Index: 134139
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_PostTournamentScore_mAD04E81E924718E6D6B8B3491BA31A77A9EEFBE2 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, int32_t ___0_score, FacebookDelegate_1_t474682078C474498C8D4805F13E9077763B39255* ___1_callback, const RuntimeMethod* method) 
 {
 	{
@@ -17910,7 +17910,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_PostTournamentScore_mAD04
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_PostTournamentScore_mAD04E81E924718E6D6B8B3491BA31A77A9EEFBE2_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131836
+// Method Definition Index: 134140
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_GetTournament_m8C387762E57F243AEA6C485D88C54F2C56618792 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, FacebookDelegate_1_tD9C9BBFE6AD0931C935E391D858C37BEBF14BBA3* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -17919,7 +17919,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_GetTournament_m8C387762E5
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_GetTournament_m8C387762E57F243AEA6C485D88C54F2C56618792_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131837
+// Method Definition Index: 134141
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_ShareTournament_m0FA3617688730FAC630575BFB709369B1BDBDF21 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, int32_t ___0_score, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___1_data, FacebookDelegate_1_t474682078C474498C8D4805F13E9077763B39255* ___2_callback, const RuntimeMethod* method) 
 {
 	{
@@ -17928,7 +17928,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_ShareTournament_m0FA36176
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_ShareTournament_m0FA3617688730FAC630575BFB709369B1BDBDF21_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131838
+// Method Definition Index: 134142
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_CreateTournament_mFDD17F2DFE18C95CB788802D411C5A48570D3E4A (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, int32_t ___0_initialScore, String_t* ___1_title, String_t* ___2_imageBase64DataUrl, String_t* ___3_sortOrder, String_t* ___4_scoreFormat, Dictionary_2_t46B2DB028096FA2B828359E52F37F3105A83AD83* ___5_data, FacebookDelegate_1_tD9C9BBFE6AD0931C935E391D858C37BEBF14BBA3* ___6_callback, const RuntimeMethod* method) 
 {
 	{
@@ -17937,7 +17937,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_CreateTournament_mFDD17F2
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_CreateTournament_mFDD17F2DFE18C95CB788802D411C5A48570D3E4A_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131839
+// Method Definition Index: 134143
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_UploadImageToMediaLibrary_mB5939A699352C6D34CEDB11590DFD553CFB83C4D (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, String_t* ___0_caption, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___1_imageUri, bool ___2_shouldLaunchMediaDialog, FacebookDelegate_1_t7CA00F6A27B3FE85139590EFEA03B7C7C0D4A66D* ___3_callback, const RuntimeMethod* method) 
 {
 	{
@@ -17946,7 +17946,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_UploadImageToMediaLibrary
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_UploadImageToMediaLibrary_mB5939A699352C6D34CEDB11590DFD553CFB83C4D_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131840
+// Method Definition Index: 134144
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_UploadVideoToMediaLibrary_mA8404AA6596D1F1090467A0C0A13D119141FC3CA (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, String_t* ___0_caption, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___1_videoUri, bool ___2_shouldLaunchMediaDialog, FacebookDelegate_1_t7CA00F6A27B3FE85139590EFEA03B7C7C0D4A66D* ___3_callback, const RuntimeMethod* method) 
 {
 	{
@@ -17955,7 +17955,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_UploadVideoToMediaLibrary
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_UploadVideoToMediaLibrary_mA8404AA6596D1F1090467A0C0A13D119141FC3CA_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131841
+// Method Definition Index: 134145
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_GetUserLocale_m4C0092233DC29AF728F1A7BA68AB06EA55C5CAEF (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, FacebookDelegate_1_t287669D2D13F62ECCB982BD24ABCFB8AC41D6B0A* ___0_callback, const RuntimeMethod* method) 
 {
 	{
@@ -17964,7 +17964,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_GetUserLocale_m4C0092233D
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&CanvasFacebook_GetUserLocale_m4C0092233DC29AF728F1A7BA68AB06EA55C5CAEF_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 131842
+// Method Definition Index: 134146
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_U3COnLoginCompleteU3Eb__37_0_mECC453F16A4ABDD1C5301986A3265C98AA4F3945 (CanvasFacebook_t456AE335836BFFB54B0D77A3B4CF04D7D830A6E1* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_formattedResponse, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -17989,7 +17989,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebook_U3COnLoginCompleteU3Eb__3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131846
+// Method Definition Index: 134150
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m301ECE813EC06AA199DBD1D27A011D77D58D57AD (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18006,7 +18006,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_m301ECE813EC06AA199DBD1D2
 		return;
 	}
 }
-// Method Definition Index: 131847
+// Method Definition Index: 134151
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m9E708C2F94EE7BA080505D395F1D5B63F00D64FA (U3CU3Ec_t2C9BA0FCFE0DFEA4516C51A9AB8736E2377BC5B8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18014,7 +18014,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m9E708C2F94EE7BA080505D395
 		return;
 	}
 }
-// Method Definition Index: 131848
+// Method Definition Index: 134152
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3COnFacebookAuthResponseChangeU3Eb__40_0_m6BDA2E988B1B4F39B882D8A24DE94F228F1B481F (U3CU3Ec_t2C9BA0FCFE0DFEA4516C51A9AB8736E2377BC5B8* __this, ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* ___0_formattedResponse, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18042,7 +18042,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec_U3COnFacebookAuthResponseChangeU
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131849
+// Method Definition Index: 134153
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass47_0__ctor_m8D4983F5B36F90967DDFDD0051DBDD7BE6E39DE7 (U3CU3Ec__DisplayClass47_0_tC325FD2BA234BC428DF99019A297F7E70389DF4A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18050,7 +18050,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass47_0__ctor_m8D4983F
 		return;
 	}
 }
-// Method Definition Index: 131850
+// Method Definition Index: 134154
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__DisplayClass47_0_U3CFormatAuthResponseU3Eb__0_m601241C800917FCB891C39BCCEA9988624FDE94A (U3CU3Ec__DisplayClass47_0_tC325FD2BA234BC428DF99019A297F7E70389DF4A* __this, RuntimeObject* ___0_r, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18296,7 +18296,7 @@ IL_00f4:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131851
+// Method Definition Index: 134155
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CanvasFacebookGameObject_get_CanvasFacebookImpl_m820D790D560FE4C671A11206517112613C721FA0 (CanvasFacebookGameObject_tCEF960711D27D55DC0CD48CCB5793B6E96557D46* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18311,7 +18311,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CanvasFacebookGameObject_get_C
 		return ((RuntimeObject*)Castclass((RuntimeObject*)L_0, ICanvasFacebookImplementation_t26FCCCC1DEF6E943A189D145F7FB7E4E5B90A38C_il2cpp_TypeInfo_var));
 	}
 }
-// Method Definition Index: 131852
+// Method Definition Index: 134156
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebookGameObject_OnPayComplete_mAD590A57E2A03A31255C76A651024B1DFE94ADB9 (CanvasFacebookGameObject_tCEF960711D27D55DC0CD48CCB5793B6E96557D46* __this, String_t* ___0_result, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18332,7 +18332,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebookGameObject_OnPayComplete_m
 		return;
 	}
 }
-// Method Definition Index: 131853
+// Method Definition Index: 134157
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebookGameObject_OnFacebookAuthResponseChange_m7A8C55480D8BBE68D39F28604FBEEFE119AAC8FE (CanvasFacebookGameObject_tCEF960711D27D55DC0CD48CCB5793B6E96557D46* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18353,7 +18353,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebookGameObject_OnFacebookAuthR
 		return;
 	}
 }
-// Method Definition Index: 131854
+// Method Definition Index: 134158
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebookGameObject_OnUrlResponse_m2B810CEBB06EF9BC30C520EF73AE2C9E6A4893E0 (CanvasFacebookGameObject_tCEF960711D27D55DC0CD48CCB5793B6E96557D46* __this, String_t* ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18371,7 +18371,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebookGameObject_OnUrlResponse_m
 		return;
 	}
 }
-// Method Definition Index: 131855
+// Method Definition Index: 134159
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebookGameObject_OnHideUnity_m559EF49590A408C9E4FF3205D41EAD9187DBDBBB (CanvasFacebookGameObject_tCEF960711D27D55DC0CD48CCB5793B6E96557D46* __this, bool ___0_hide, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18389,7 +18389,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebookGameObject_OnHideUnity_m55
 		return;
 	}
 }
-// Method Definition Index: 131856
+// Method Definition Index: 134160
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebookGameObject_OnAwake_mC286FDC276190169D2D006C8AB21A807FFDB12C0 (CanvasFacebookGameObject_tCEF960711D27D55DC0CD48CCB5793B6E96557D46* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18420,7 +18420,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebookGameObject_OnAwake_mC286FD
 		return;
 	}
 }
-// Method Definition Index: 131857
+// Method Definition Index: 134161
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebookGameObject__ctor_m6BD8741949A8FB687ECBD64C50A36862A6B3BCC1 (CanvasFacebookGameObject_tCEF960711D27D55DC0CD48CCB5793B6E96557D46* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18436,7 +18436,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebookGameObject__ctor_m6BD87419
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131858
+// Method Definition Index: 134162
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR FacebookGameObject_t2A844C47156B1DC094D9D008FFFC2F730F8E0D0B* CanvasFacebookLoader_get_FBGameObject_m0A400611CEF5A3F63113A889C140F7C312BED86B (CanvasFacebookLoader_t50D8266C527416BEBCBA1355E4513AD3DEBC71EA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18474,7 +18474,7 @@ IL_001a:
 		return L_5;
 	}
 }
-// Method Definition Index: 131859
+// Method Definition Index: 134163
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebookLoader__ctor_mB07FF0671755BEAE1509D5E75A64137A31A8FD87 (CanvasFacebookLoader_t50D8266C527416BEBCBA1355E4513AD3DEBC71EA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18490,7 +18490,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasFacebookLoader__ctor_mB07FF0671755
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 131878
+// Method Definition Index: 134182
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsBridge_Start_mAAF7181E2A872FC8C742EC6D7C796347F4DEBB1E (JsBridge_t338341DF8272C935803F827012749337260971DA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18507,7 +18507,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsBridge_Start_mAAF7181E2A872FC8C742EC6D
 		return;
 	}
 }
-// Method Definition Index: 131879
+// Method Definition Index: 134183
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsBridge_OnLoginComplete_m478A8D70CF7AF78EEE38D27604836B6AB7A2267C (JsBridge_t338341DF8272C935803F827012749337260971DA* __this, String_t* ___0_responseJsonData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18524,7 +18524,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsBridge_OnLoginComplete_m478A8D70CF7AF7
 		return;
 	}
 }
-// Method Definition Index: 131880
+// Method Definition Index: 134184
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsBridge_OnFacebookAuthResponseChange_m2D1A480A6CD1F2890EB04B4A5557E8EDC6AA9898 (JsBridge_t338341DF8272C935803F827012749337260971DA* __this, String_t* ___0_responseJsonData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18541,7 +18541,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsBridge_OnFacebookAuthResponseChange_m2
 		return;
 	}
 }
-// Method Definition Index: 131881
+// Method Definition Index: 134185
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsBridge_OnPayComplete_m9255C062C0720D77399170CF8C8E247DCD863952 (JsBridge_t338341DF8272C935803F827012749337260971DA* __this, String_t* ___0_responseJsonData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18558,7 +18558,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsBridge_OnPayComplete_m9255C062C0720D77
 		return;
 	}
 }
-// Method Definition Index: 131882
+// Method Definition Index: 134186
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsBridge_OnAppRequestsComplete_m1C77062A6F2F3129AE85B6E550881E708925F198 (JsBridge_t338341DF8272C935803F827012749337260971DA* __this, String_t* ___0_responseJsonData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18575,7 +18575,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsBridge_OnAppRequestsComplete_m1C77062A
 		return;
 	}
 }
-// Method Definition Index: 131883
+// Method Definition Index: 134187
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsBridge_OnShareLinkComplete_mFB16F927CEA780C609E119455825568057F0A590 (JsBridge_t338341DF8272C935803F827012749337260971DA* __this, String_t* ___0_responseJsonData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18592,7 +18592,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsBridge_OnShareLinkComplete_mFB16F927CE
 		return;
 	}
 }
-// Method Definition Index: 131884
+// Method Definition Index: 134188
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsBridge_OnFacebookFocus_m0C7639DE1243602FD595AF54E2DEB9F5723E7C54 (JsBridge_t338341DF8272C935803F827012749337260971DA* __this, String_t* ___0_state, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18612,7 +18612,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsBridge_OnFacebookFocus_m0C7639DE124360
 		return;
 	}
 }
-// Method Definition Index: 131885
+// Method Definition Index: 134189
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsBridge_OnInitComplete_m5B8598453F58C4E156123BCE47D9C1C54DBCB4B8 (JsBridge_t338341DF8272C935803F827012749337260971DA* __this, String_t* ___0_responseJsonData, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18629,7 +18629,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsBridge_OnInitComplete_m5B8598453F58C4E
 		return;
 	}
 }
-// Method Definition Index: 131886
+// Method Definition Index: 134190
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsBridge_OnUrlResponse_m701C53BF71C5BA4A050C985C90EDBF0E21027BA3 (JsBridge_t338341DF8272C935803F827012749337260971DA* __this, String_t* ___0_url, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18646,7 +18646,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsBridge_OnUrlResponse_m701C53BF71C5BA4A
 		return;
 	}
 }
-// Method Definition Index: 131887
+// Method Definition Index: 134191
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsBridge__ctor_m8104A953BEA1CC11145810A1F2EBC91574A1D29B (JsBridge_t338341DF8272C935803F827012749337260971DA* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18657,7 +18657,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsBridge__ctor_m8104A953BEA1CC11145810A1
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 130402
+// Method Definition Index: 132706
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* FacebookGameObject_get_Facebook_m8F6DC9F80E732D237D7F858FB1FC5D448071D137_inline (FacebookGameObject_t2A844C47156B1DC094D9D008FFFC2F730F8E0D0B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18665,7 +18665,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* FacebookGameObject
 		return L_0;
 	}
 }
-// Method Definition Index: 130403
+// Method Definition Index: 132707
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FacebookGameObject_set_Facebook_mEDCEAC5301992E16A962C3993F25C151F6251F1C_inline (FacebookGameObject_t2A844C47156B1DC094D9D008FFFC2F730F8E0D0B* __this, RuntimeObject* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -18675,7 +18675,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FacebookGameObject_set_Faceb
 		return;
 	}
 }
-// Method Definition Index: 130334
+// Method Definition Index: 132638
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FacebookBase_Init_m20FB2F18FDA2C3A4FA3EAD6C734EEFEAA5CF5F6A_inline (FacebookBase_tF5635ED76AFFFA9234A516FCD6AAF6C6B55B5865* __this, InitDelegate_t880BF96D9E733404D1E36BF894DDA83C1B9A1A9F* ___0_onInitComplete, const RuntimeMethod* method) 
 {
 	{
@@ -18685,7 +18685,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FacebookBase_Init_m20FB2F18F
 		return;
 	}
 }
-// Method Definition Index: 130332
+// Method Definition Index: 132636
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR CallbackManager_t3B9141B4E44116445C556786C02DEDA7CE612749* FacebookBase_get_CallbackManager_m6C4BEBEF920CD139CF777D45E0E924829E4CF57F_inline (FacebookBase_tF5635ED76AFFFA9234A516FCD6AAF6C6B55B5865* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18693,7 +18693,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR CallbackManager_t3B9141B4E4411644
 		return L_0;
 	}
 }
-// Method Definition Index: 130107
+// Method Definition Index: 132411
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AccessToken_t73BAE9F45493316E7FF33A14EECB3D77E8C0D346* AccessToken_get_CurrentAccessToken_m79A35A353C7FCFB189F95F9D9BF96763CB085D75_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18707,7 +18707,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AccessToken_t73BAE9F45493316E7FF3
 		return L_0;
 	}
 }
-// Method Definition Index: 76797
+// Method Definition Index: 76932
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23_inline (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* __this, float ___0_x, float ___1_y, float ___2_width, float ___3_height, const RuntimeMethod* method) 
 {
 	{
@@ -18722,7 +18722,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Rect__ctor_m18C3033D135097BE
 		return;
 	}
 }
-// Method Definition Index: 78179
+// Method Definition Index: 78316
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___0_r, float ___1_g, float ___2_b, float ___3_a, const RuntimeMethod* method) 
 {
 	{
@@ -18737,7 +18737,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9C
 		return;
 	}
 }
-// Method Definition Index: 131295
+// Method Definition Index: 133599
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* EditorFacebookMockDialog_get_CallbackID_mFFEAB6799E5D30F564BCD75AD8BAA540B58E7FB6_inline (EditorFacebookMockDialog_t3C291FEC1F61F9E43280E163A461351B101D8413* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18745,7 +18745,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* EditorFacebookMockDialo
 		return L_0;
 	}
 }
-// Method Definition Index: 131293
+// Method Definition Index: 133597
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Callback_1_tFC22DABD78A3E51786E5CDB3C3A5B523E804BB92* EditorFacebookMockDialog_get_Callback_mB11D11D9B9F4B4ED1276E76F6336DB1B73F9A591_inline (EditorFacebookMockDialog_t3C291FEC1F61F9E43280E163A461351B101D8413* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18753,7 +18753,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Callback_1_tFC22DABD78A3E51786E5C
 		return L_0;
 	}
 }
-// Method Definition Index: 131294
+// Method Definition Index: 133598
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void EditorFacebookMockDialog_set_Callback_mA7C663BD3838624EC44C41D7B3D51508FD9CF38F_inline (EditorFacebookMockDialog_t3C291FEC1F61F9E43280E163A461351B101D8413* __this, Callback_1_tFC22DABD78A3E51786E5CDB3C3A5B523E804BB92* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -18763,7 +18763,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void EditorFacebookMockDialog_set
 		return;
 	}
 }
-// Method Definition Index: 131296
+// Method Definition Index: 133600
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void EditorFacebookMockDialog_set_CallbackID_m639766A186073990C65E435C5EC0FF487ED703F7_inline (EditorFacebookMockDialog_t3C291FEC1F61F9E43280E163A461351B101D8413* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -18773,7 +18773,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void EditorFacebookMockDialog_set
 		return;
 	}
 }
-// Method Definition Index: 131335
+// Method Definition Index: 133639
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void MockShareDialog_set_SubTitle_m6E78CBFC0C21A5F7FCB0ACCC850AFAA0C05A4ADE_inline (MockShareDialog_t34433FD5741F34BBCB0C6122D4F68EAA13E7A57F* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -18783,7 +18783,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void MockShareDialog_set_SubTitle
 		return;
 	}
 }
-// Method Definition Index: 131321
+// Method Definition Index: 133625
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void EmptyMockDialog_set_EmptyDialogTitle_mF8A8319112E4E2E7D2A36302B45A024E2D4A31E8_inline (EmptyMockDialog_t4423608B7CB0DB381BC9D5A84B0F0DA5EAEFA653* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -18793,7 +18793,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void EmptyMockDialog_set_EmptyDia
 		return;
 	}
 }
-// Method Definition Index: 131320
+// Method Definition Index: 133624
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* EmptyMockDialog_get_EmptyDialogTitle_m9F217E498AD2C1CCCA9272F124811D757FFBF4CF_inline (EmptyMockDialog_t4423608B7CB0DB381BC9D5A84B0F0DA5EAEFA653* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18801,7 +18801,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* EmptyMockDialog_get_Emp
 		return L_0;
 	}
 }
-// Method Definition Index: 130156
+// Method Definition Index: 132460
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* FB_get_AppId_m4D9D4AE3CE894A73A9BAA429B65A50E71DA66B5C_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18816,7 +18816,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* FB_get_AppId_m4D9D4AE3C
 		return L_0;
 	}
 }
-// Method Definition Index: 130108
+// Method Definition Index: 132412
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AccessToken_set_CurrentAccessToken_m7C9C5DF205C036C288F21657E7891FF461BE9EB4_inline (AccessToken_t73BAE9F45493316E7FF33A14EECB3D77E8C0D346* ___0_value, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18832,7 +18832,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AccessToken_set_CurrentAcces
 		return;
 	}
 }
-// Method Definition Index: 131334
+// Method Definition Index: 133638
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* MockShareDialog_get_SubTitle_m42ADB31AC5DCD3C02BB237E1DD7596AAAAF669B5_inline (MockShareDialog_t34433FD5741F34BBCB0C6122D4F68EAA13E7A57F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18840,7 +18840,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* MockShareDialog_get_Sub
 		return L_0;
 	}
 }
-// Method Definition Index: 130115
+// Method Definition Index: 132419
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* AccessToken_get_UserId_m8684C2DBD8FFBC95E21AF907CB5CF3757AF4AC9B_inline (AccessToken_t73BAE9F45493316E7FF33A14EECB3D77E8C0D346* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18848,7 +18848,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* AccessToken_get_UserId_
 		return L_0;
 	}
 }
-// Method Definition Index: 130610
+// Method Definition Index: 132914
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AccessToken_t73BAE9F45493316E7FF33A14EECB3D77E8C0D346* AccessTokenRefreshResult_get_AccessToken_mCEF82A7208ECDFA8A7465DEA5115E80E706901F5_inline (AccessTokenRefreshResult_t617A449BDE9D1A038567E1BD178559A8A071A963* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18856,7 +18856,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AccessToken_t73BAE9F45493316E7FF3
 		return L_0;
 	}
 }
-// Method Definition Index: 130111
+// Method Definition Index: 132415
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D AccessToken_get_ExpirationTime_mE1B3B7DC3B413521594375BD03B1D909429C41AD_inline (AccessToken_t73BAE9F45493316E7FF33A14EECB3D77E8C0D346* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18864,7 +18864,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89
 		return L_0;
 	}
 }
-// Method Definition Index: 131677
+// Method Definition Index: 133981
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t NativeDict_get_NumEntries_mFB13D8178B1556ABF10D679F54B405819292FCDB_inline (NativeDict_t4A202CF8A258D4786D791217AEBBC54F2B88EFA9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18872,7 +18872,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t NativeDict_get_NumEntries
 		return L_0;
 	}
 }
-// Method Definition Index: 131679
+// Method Definition Index: 133983
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* NativeDict_get_Keys_mE731082312A3966531B454E2EE0228E0BA14A4B3_inline (NativeDict_t4A202CF8A258D4786D791217AEBBC54F2B88EFA9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18880,7 +18880,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR StringU5BU5D_t7674CD946EC0CE7B3AE
 		return L_0;
 	}
 }
-// Method Definition Index: 131681
+// Method Definition Index: 133985
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* NativeDict_get_Values_m201D111E57F4837102CF02561EDEDBD7FBBBA2C1_inline (NativeDict_t4A202CF8A258D4786D791217AEBBC54F2B88EFA9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18888,7 +18888,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR StringU5BU5D_t7674CD946EC0CE7B3AE
 		return L_0;
 	}
 }
-// Method Definition Index: 131680
+// Method Definition Index: 133984
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NativeDict_set_Keys_m30955DED0955CCE506D1FC315F2F534BF1450D7D_inline (NativeDict_t4A202CF8A258D4786D791217AEBBC54F2B88EFA9* __this, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -18898,7 +18898,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NativeDict_set_Keys_m30955DE
 		return;
 	}
 }
-// Method Definition Index: 131682
+// Method Definition Index: 133986
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NativeDict_set_Values_m2D082203061E2C96CD3F728152BB43361E3CD860_inline (NativeDict_t4A202CF8A258D4786D791217AEBBC54F2B88EFA9* __this, StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -18908,7 +18908,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NativeDict_set_Values_m2D082
 		return;
 	}
 }
-// Method Definition Index: 131678
+// Method Definition Index: 133982
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NativeDict_set_NumEntries_m57353835AD86ED502693E4BE8DCE1E3265BD6B52_inline (NativeDict_t4A202CF8A258D4786D791217AEBBC54F2B88EFA9* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -18917,7 +18917,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void NativeDict_set_NumEntries_m5
 		return;
 	}
 }
-// Method Definition Index: 131689
+// Method Definition Index: 133993
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AndroidFacebook_set_KeyHash_m955883E7FF2093A8219358F222D292B3E556FED1_inline (AndroidFacebook_tF88E54F7B5DA2E5974F0A7291E52F91F42029ADD* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -18927,7 +18927,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AndroidFacebook_set_KeyHash_
 		return;
 	}
 }
-// Method Definition Index: 130160
+// Method Definition Index: 132464
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* FB_get_GraphApiVersion_m234E4C9258DE0F012E1A78D5A4DED1DE8D6D5198_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -18942,13 +18942,13 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* FB_get_GraphApiVersion_
 		return L_0;
 	}
 }
-// Method Definition Index: 130399
+// Method Definition Index: 132703
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void HideUnityDelegate_Invoke_m84D79F9CD775257293DF8E35297F43835E18CD71_inline (HideUnityDelegate_t73424171C1A0762619208C0090DD84BA51FF9BCE* __this, bool ___0_isUnityShown, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, bool, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_isUnityShown, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 130760
+// Method Definition Index: 133064
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* ResultContainer_get_ResultDictionary_m76808545CDB3106D7129B3E90F9F9C027DFE16BD_inline (ResultContainer_tCEBF6F181CFDC82B929D1BA360D7C6EEE46D321B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18956,7 +18956,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* ResultContainer_ge
 		return L_0;
 	}
 }
-// Method Definition Index: 130705
+// Method Definition Index: 133009
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AccessToken_t73BAE9F45493316E7FF33A14EECB3D77E8C0D346* LoginResult_get_AccessToken_m57A8C7CD5C7AE61792EEBBC7486FBD18C03EB7FE_inline (LoginResult_t14BC55B035322862D91FCB9D24D071953DAC09C1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -18964,13 +18964,13 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR AccessToken_t73BAE9F45493316E7FF3
 		return L_0;
 	}
 }
-// Method Definition Index: 130855
+// Method Definition Index: 133159
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Callback_1_Invoke_m8D352E98D69718836E0A8A72F8170BD075F846B5_gshared_inline (Callback_1_t244FCFB1C42CF22CE5AF6954370376FF384F449A* __this, RuntimeObject* ___0_obj, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_obj, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 33193
+// Method Definition Index: 33204
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) 
 {
 	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* V_0 = NULL;
@@ -19008,7 +19008,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 33247
+// Method Definition Index: 33258
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19016,7 +19016,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Cur
 		return L_0;
 	}
 }
-// Method Definition Index: 23385
+// Method Definition Index: 23387
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_mB1F55188CDD50D6D725D41F55D2F2540CD15FB20_gshared_inline (Nullable_1_t163D49A1147F217B7BD43BE8ACC8A5CC6B846D14* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19024,7 +19024,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_mB1F
 		return L_0;
 	}
 }
-// Method Definition Index: 23385
+// Method Definition Index: 23387
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_mCF2FD8B3055FA87FC9C504F2122B3B0FAEDE3EC9_gshared_inline (Nullable_1_tCF32C56A2641879C053C86F273C0C6EC1B40BC28* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19032,7 +19032,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_mCF2
 		return L_0;
 	}
 }
-// Method Definition Index: 23385
+// Method Definition Index: 23387
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_mC149B1C717AF506BBE8932F2C1DC86C378D17EA8_gshared_inline (Nullable_1_t3D746CBB6123D4569FF4DEA60BC4240F32C6FE75* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19040,7 +19040,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_mC14
 		return L_0;
 	}
 }
-// Method Definition Index: 33182
+// Method Definition Index: 33193
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19048,7 +19048,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C
 		return L_0;
 	}
 }
-// Method Definition Index: 33089
+// Method Definition Index: 33100
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230 Enumerator_get_Current_mE3475384B761E1C7971D3639BD09117FE8363422_gshared_inline (Enumerator_tEA93FE2B778D098F590CA168BEFC4CD85D73A6B9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19056,7 +19056,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR KeyValuePair_2_tFC32D250721629385
 		return L_0;
 	}
 }
-// Method Definition Index: 33173
+// Method Definition Index: 33184
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_gshared_inline (KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19064,7 +19064,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get
 		return L_0;
 	}
 }
-// Method Definition Index: 33174
+// Method Definition Index: 33185
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_gshared_inline (KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19072,7 +19072,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get
 		return L_0;
 	}
 }
-// Method Definition Index: 130515
+// Method Definition Index: 132819
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void MethodCall_1_set_Callback_mA74BB403FFEBB049BA981D103C39772844B08762_gshared_inline (MethodCall_1_tBE309A8BE882A6A1F80E42A8EE1493B9CB4FBBC8* __this, FacebookDelegate_1_tC3557293F9F4D8302666EA5C4874312230B814C9* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -19082,7 +19082,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void MethodCall_1_set_Callback_mA
 		return;
 	}
 }
-// Method Definition Index: 23387
+// Method Definition Index: 23389
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Nullable_1_GetValueOrDefault_m068A148705ED1E215A5E85D18BA6852B192DA419_gshared_inline (Nullable_1_t3D746CBB6123D4569FF4DEA60BC4240F32C6FE75* __this, const RuntimeMethod* method) 
 {
 	{
@@ -19090,7 +19090,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Nullable_1_GetValueOrDefaul
 		return L_0;
 	}
 }
-// Method Definition Index: 130395
+// Method Definition Index: 132699
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void FacebookDelegate_1_Invoke_mBF6BA93033A7B72E328E2BA4C01FC55B970E123B_gshared_inline (FacebookDelegate_1_tC3557293F9F4D8302666EA5C4874312230B814C9* __this, RuntimeObject* ___0_result, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, RuntimeObject*, const RuntimeMethod*);

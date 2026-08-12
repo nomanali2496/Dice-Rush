@@ -25110,7 +25110,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_0 = __this->___buffer;
 		uint8_t L_1 = ___0_input;
 		NullCheck(L_0);
-		VirtualActionInvoker1< uint8_t >::Invoke(37, L_0, L_1);
+		VirtualActionInvoker1< uint8_t >::Invoke(38, L_0, L_1);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/BufferedIesCipher.cs:71>
 		return (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)NULL;
 	}
@@ -25192,7 +25192,7 @@ IL_003f:
 		int32_t L_12 = ___1_inOff;
 		int32_t L_13 = ___2_length;
 		NullCheck(L_10);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_10, L_11, L_12, L_13);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_10, L_11, L_12, L_13);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/BufferedIesCipher.cs:89>
 		return (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*)NULL;
 	}
@@ -25206,7 +25206,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_0 = __this->___buffer;
 		NullCheck(L_0);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_1;
-		L_1 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(41, L_0);
+		L_1 = VirtualFuncInvoker0< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(42, L_0);
 		V_0 = L_1;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/BufferedIesCipher.cs:96>
 		VirtualActionInvoker0::Invoke(39, __this);
@@ -25244,7 +25244,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BufferedIesCipher_Reset_m55BEE48D39AE9E6
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/BufferedIesCipher.cs:112>
 		MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2* L_0 = __this->___buffer;
 		NullCheck(L_0);
-		VirtualActionInvoker1< int64_t >::Invoke(31, L_0, ((int64_t)0));
+		VirtualActionInvoker1< int64_t >::Invoke(32, L_0, ((int64_t)0));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/crypto/BufferedIesCipher.cs:113>
 		return;
 	}

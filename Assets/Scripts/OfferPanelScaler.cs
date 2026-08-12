@@ -36,7 +36,6 @@ public class OfferPanelScaler : MonoBehaviour
             if (panel != null)
             {
                 originalSizes[panel] = panel.sizeDelta;
-                Debug.Log($"[OfferPanelScaler] Stored original size for offer panel: {panel.sizeDelta}");
             }
         }
         
@@ -46,7 +45,6 @@ public class OfferPanelScaler : MonoBehaviour
             if (button != null)
             {
                 originalSizes[button] = button.sizeDelta;
-                Debug.Log($"[OfferPanelScaler] Stored original size for close button: {button.sizeDelta}");
             }
         }
         
@@ -56,9 +54,10 @@ public class OfferPanelScaler : MonoBehaviour
             if (button != null)
             {
                 originalSizes[button] = button.sizeDelta;
-                Debug.Log($"[OfferPanelScaler] Stored original size for price button: {button.sizeDelta}");
             }
         }
+
+        Debug.Log($"[OfferPanelScaler] Stored original sizes for {offerPanels.Count} panels, {closeButtons.Count} close buttons, {priceButtons.Count} price buttons.");
     }
     
     private void Start()
@@ -93,50 +92,55 @@ public class OfferPanelScaler : MonoBehaviour
             scaleFactor = maxScale;
         }
         
-        Debug.Log($"[OfferPanelScaler] ====== OFFER PANEL SCALING ======");
-        Debug.Log($"[OfferPanelScaler] Screen: {Screen.width}x{Screen.height} | Reference: {referenceScreenSize.x}x{referenceScreenSize.y}");
-        Debug.Log($"[OfferPanelScaler] Scale Factors: X={scaleFactorX:F3}, Y={scaleFactorY:F3}");
-        Debug.Log($"[OfferPanelScaler] Uniform Scale Factor: {scaleFactor:F3}");
+        Debug.Log($"[OfferPanelScaler] Screen: {Screen.width}x{Screen.height} | Ref: {referenceScreenSize.x}x{referenceScreenSize.y} | Scale: {scaleFactor:F3}");
         
+        int scaledCount = 0;
+
         // Scale all offer panels
         foreach (var panel in offerPanels)
         {
-            ScaleElement(panel, "Offer Panel");
+            if (ScaleElement(panel, "Offer Panel")) scaledCount++;
         }
         
         // Scale all close buttons
         foreach (var button in closeButtons)
         {
-            ScaleElement(button, "Close Button");
+            if (ScaleElement(button, "Close Button")) scaledCount++;
         }
         
         // Scale all price buttons
         foreach (var button in priceButtons)
         {
-            ScaleElement(button, "Price Button");
+            if (ScaleElement(button, "Price Button")) scaledCount++;
         }
         
-        Debug.Log($"[OfferPanelScaler] Scaling applied successfully!");
+        Debug.Log($"[OfferPanelScaler] Applied scaling to {scaledCount} non-anchored element(s).");
     }
     
     /// <summary>
     /// Scales a non-anchored element by adjusting its sizeDelta
     /// </summary>
-    private void ScaleElement(RectTransform element, string elementType)
+    private bool ScaleElement(RectTransform element, string elementType)
     {
         if (element == null || !originalSizes.ContainsKey(element))
         {
-            return;
+            return false;
         }
         
         Vector2 originalSize = originalSizes[element];
+        if (originalSize == Vector2.zero)
+        {
+            // Stretch-anchored element with zero sizeDelta, skip scaling
+            return false;
+        }
+
         Vector2 scaledSize = new Vector2(
             originalSize.x * scaleFactor,
             originalSize.y * scaleFactor
         );
         
         element.sizeDelta = scaledSize;
-        Debug.Log($"[OfferPanelScaler] Scaled {elementType}: {originalSize} -> {scaledSize}");
+        return true;
     }
     
     /// <summary>

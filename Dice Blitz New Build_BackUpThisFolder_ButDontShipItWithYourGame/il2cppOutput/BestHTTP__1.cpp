@@ -6044,7 +6044,7 @@ IL_002d_1:
 				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_13 = V_2;
 				NullCheck(L_13);
 				NullCheck(L_11);
-				VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_11, L_12, 0, ((int32_t)(((RuntimeArray*)L_13)->max_length)));
+				VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_11, L_12, 0, ((int32_t)(((RuntimeArray*)L_13)->max_length)));
 				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/WebSocket.cs:337>
 				Encoding_t65CDEF28CF20A7B8C92E85A4E808920C2465F095* L_14;
 				L_14 = Encoding_get_UTF8_m9FA98A53CE96FD6D02982625C5246DD36C1235C9(NULL);
@@ -6059,7 +6059,7 @@ IL_002d_1:
 				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_19 = V_2;
 				NullCheck(L_19);
 				NullCheck(L_17);
-				VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_17, L_18, 0, ((int32_t)(((RuntimeArray*)L_19)->max_length)));
+				VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_17, L_18, 0, ((int32_t)(((RuntimeArray*)L_19)->max_length)));
 				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/WebSocket.cs:340>
 				BufferPoolMemoryStream_tACFC72B72CC2AAFDFA97D6E8B8FEB94C5EC4B20B* L_20 = V_1;
 				NullCheck(L_20);
@@ -7656,7 +7656,7 @@ FINALLY_016f_4:
 									RawFrameData_tD0F5E7EB9E7836E6EAD36E9337BCB6B180437538 L_66 = V_4;
 									int32_t L_67 = L_66.___Length;
 									NullCheck(L_63);
-									VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_63, L_65, 0, L_67);
+									VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_63, L_65, 0, L_67);
 									goto IL_017d_4;
 								}
 								catch(Il2CppExceptionWrapper& e)
@@ -7718,7 +7718,7 @@ IL_01ad_4:
 								//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/WebSocketResponse.cs:382>
 								WriteOnlyBufferedStream_t37318C6BA1762AD62EA59CE3E49EF13AD5026E70* L_78 = V_0;
 								NullCheck(L_78);
-								VirtualActionInvoker0::Invoke(20, L_78);
+								VirtualActionInvoker0::Invoke(21, L_78);
 								//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/WebSocketResponse.cs:383>
 								goto IL_01ff_3;
 							}
@@ -9522,7 +9522,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LockedBufferSegmenStream_Dispose_m60B070
 		bool L_0 = ___0_disposing;
 		BufferSegmentStream_Dispose_mAEFC151ADA7F2A57465B06B02E2B402475157A51(__this, L_0, NULL);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/Implementations/Utils/LockedBufferSegmenStream.cs:51>
-		VirtualActionInvoker0::Invoke(39, __this);
+		VirtualActionInvoker0::Invoke(40, __this);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/Implementations/Utils/LockedBufferSegmenStream.cs:52>
 		return;
 	}
@@ -10273,7 +10273,7 @@ IL_020c:
 				uint8_t L_7;
 				L_7 = WebSocketFrame_get_Header_m9A09E4800ECC8E439A30ACB62EF5B77ACE9D9955_inline(__this, NULL);
 				NullCheck(L_6);
-				VirtualActionInvoker1< uint8_t >::Invoke(37, L_6, L_7);
+				VirtualActionInvoker1< uint8_t >::Invoke(38, L_6, L_7);
 				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/Frames/WebSocketFrame.cs:125>
 				int32_t L_8;
 				L_8 = WebSocketFrame_get_DataLength_m069B1B23A2B0807D9E8769CB034B821BB6A59EB4_inline(__this, NULL);
@@ -10288,7 +10288,7 @@ IL_020c:
 				int32_t L_10;
 				L_10 = WebSocketFrame_get_DataLength_m069B1B23A2B0807D9E8769CB034B821BB6A59EB4_inline(__this, NULL);
 				NullCheck(L_9);
-				VirtualActionInvoker1< uint8_t >::Invoke(37, L_9, (uint8_t)((int32_t)(uint8_t)((int32_t)(((int32_t)128)|((int32_t)(uint8_t)L_10)))));
+				VirtualActionInvoker1< uint8_t >::Invoke(38, L_9, (uint8_t)((int32_t)(uint8_t)((int32_t)(((int32_t)128)|((int32_t)(uint8_t)L_10)))));
 				goto IL_00ca_1;
 			}
 
@@ -10306,7 +10306,7 @@ IL_004e_1:
 				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/Frames/WebSocketFrame.cs:129>
 				BufferPoolMemoryStream_tACFC72B72CC2AAFDFA97D6E8B8FEB94C5EC4B20B* L_12 = V_0;
 				NullCheck(L_12);
-				VirtualActionInvoker1< uint8_t >::Invoke(37, L_12, (uint8_t)((int32_t)254));
+				VirtualActionInvoker1< uint8_t >::Invoke(38, L_12, (uint8_t)((int32_t)254));
 				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/Frames/WebSocketFrame.cs:130>
 				int32_t L_13;
 				L_13 = WebSocketFrame_get_DataLength_m069B1B23A2B0807D9E8769CB034B821BB6A59EB4_inline(__this, NULL);
@@ -10335,7 +10335,7 @@ IL_0084_1:
 				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_19 = V_3;
 				NullCheck(L_19);
 				NullCheck(L_17);
-				VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_17, L_18, 0, ((int32_t)(((RuntimeArray*)L_19)->max_length)));
+				VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_17, L_18, 0, ((int32_t)(((RuntimeArray*)L_19)->max_length)));
 				goto IL_00ca_1;
 			}
 
@@ -10344,7 +10344,7 @@ IL_0091_1:
 				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/Frames/WebSocketFrame.cs:138>
 				BufferPoolMemoryStream_tACFC72B72CC2AAFDFA97D6E8B8FEB94C5EC4B20B* L_20 = V_0;
 				NullCheck(L_20);
-				VirtualActionInvoker1< uint8_t >::Invoke(37, L_20, (uint8_t)((int32_t)255));
+				VirtualActionInvoker1< uint8_t >::Invoke(38, L_20, (uint8_t)((int32_t)255));
 				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/Frames/WebSocketFrame.cs:139>
 				int32_t L_21;
 				L_21 = WebSocketFrame_get_DataLength_m069B1B23A2B0807D9E8769CB034B821BB6A59EB4_inline(__this, NULL);
@@ -10373,7 +10373,7 @@ IL_00bd_1:
 				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_27 = V_4;
 				NullCheck(L_27);
 				NullCheck(L_25);
-				VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_25, L_26, 0, ((int32_t)(((RuntimeArray*)L_27)->max_length)));
+				VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_25, L_26, 0, ((int32_t)(((RuntimeArray*)L_27)->max_length)));
 			}
 
 IL_00ca_1:
@@ -10411,7 +10411,7 @@ IL_00ca_1:
 				BufferPoolMemoryStream_tACFC72B72CC2AAFDFA97D6E8B8FEB94C5EC4B20B* L_38 = V_0;
 				ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_39 = V_1;
 				NullCheck(L_38);
-				VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_38, L_39, 0, 4);
+				VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_38, L_39, 0, 4);
 			}
 			{
 				auto __finallyBlock = il2cpp::utils::Finally([&]
@@ -10608,7 +10608,7 @@ IL_01d3_1:
 				int32_t L_79;
 				L_79 = WebSocketFrame_get_DataLength_m069B1B23A2B0807D9E8769CB034B821BB6A59EB4_inline(__this, NULL);
 				NullCheck(L_77);
-				VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_77, L_78, 0, L_79);
+				VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_77, L_78, 0, L_79);
 				//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/Frames/WebSocketFrame.cs:189>
 				BufferPoolMemoryStream_tACFC72B72CC2AAFDFA97D6E8B8FEB94C5EC4B20B* L_80 = V_0;
 				NullCheck(L_80);
@@ -11311,7 +11311,7 @@ IL_00d9:
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_27 = V_1;
 		NullCheck(L_26);
 		int32_t L_28;
-		L_28 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, L_26, L_27, 0, 4);
+		L_28 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, L_26, L_27, 0, 4);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_29 = V_1;
 		NullCheck(L_29);
 		if ((((int32_t)L_28) >= ((int32_t)((int32_t)(((RuntimeArray*)L_29)->max_length)))))
@@ -11370,7 +11370,7 @@ IL_0128:
 		uint32_t L_39 = V_2;
 		NullCheck(L_35);
 		int32_t L_40;
-		L_40 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, L_35, L_36, L_37, ((int32_t)((int64_t)il2cpp_codegen_subtract((int64_t)L_38, ((int64_t)(uint64_t)((uint32_t)L_39))))));
+		L_40 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, L_35, L_36, L_37, ((int32_t)((int64_t)il2cpp_codegen_subtract((int64_t)L_38, ((int64_t)(uint64_t)((uint32_t)L_39))))));
 		V_5 = L_40;
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/Frames/WebSocketFrameReader.cs:130>
 		int32_t L_41 = V_5;
@@ -11601,7 +11601,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t WebSocketFrameReader_ReadByte_m950351
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = ___0_stream;
 		NullCheck(L_0);
 		int32_t L_1;
-		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(34, L_0);
+		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(35, L_0);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/Frames/WebSocketFrameReader.cs:170>
 		int32_t L_2 = L_1;
 		if ((((int32_t)L_2) >= ((int32_t)0)))
@@ -12808,7 +12808,7 @@ IL_0013:
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/Extensions/PerMessageCompression.cs:255>
 		BufferPoolMemoryStream_tACFC72B72CC2AAFDFA97D6E8B8FEB94C5EC4B20B* L_2 = __this->___compressorOutputStream;
 		NullCheck(L_2);
-		VirtualActionInvoker1< int64_t >::Invoke(31, L_2, ((int64_t)0));
+		VirtualActionInvoker1< int64_t >::Invoke(32, L_2, ((int64_t)0));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/Extensions/PerMessageCompression.cs:257>
 		DeflateStream_t1976EDE107AE1BE93B6B3B08F3170C974BEA0228* L_3 = __this->___compressorDeflateStream;
 		if (L_3)
@@ -12830,7 +12830,7 @@ IL_0013:
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/Extensions/PerMessageCompression.cs:260>
 		DeflateStream_t1976EDE107AE1BE93B6B3B08F3170C974BEA0228* L_8 = __this->___compressorDeflateStream;
 		NullCheck(L_8);
-		VirtualActionInvoker1< int32_t >::Invoke(39, L_8, 2);
+		VirtualActionInvoker1< int32_t >::Invoke(40, L_8, 2);
 	}
 
 IL_0053:
@@ -12877,11 +12877,11 @@ IL_00bc:
 			ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_12 = ___0_data;
 			int32_t L_13 = ___1_length;
 			NullCheck(L_11);
-			VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_11, L_12, 0, L_13);
+			VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_11, L_12, 0, L_13);
 			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/Extensions/PerMessageCompression.cs:267>
 			DeflateStream_t1976EDE107AE1BE93B6B3B08F3170C974BEA0228* L_14 = __this->___compressorDeflateStream;
 			NullCheck(L_14);
-			VirtualActionInvoker0::Invoke(20, L_14);
+			VirtualActionInvoker0::Invoke(21, L_14);
 			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/Extensions/PerMessageCompression.cs:269>
 			BufferPoolMemoryStream_tACFC72B72CC2AAFDFA97D6E8B8FEB94C5EC4B20B* L_15 = __this->___compressorOutputStream;
 			NullCheck(L_15);
@@ -12893,7 +12893,7 @@ IL_00bc:
 			int64_t L_18;
 			L_18 = VirtualFuncInvoker0< int64_t >::Invoke(11, L_17);
 			NullCheck(L_16);
-			VirtualActionInvoker1< int64_t >::Invoke(31, L_16, ((int64_t)il2cpp_codegen_subtract(L_18, ((int64_t)4))));
+			VirtualActionInvoker1< int64_t >::Invoke(32, L_16, ((int64_t)il2cpp_codegen_subtract(L_18, ((int64_t)4))));
 			//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/Extensions/PerMessageCompression.cs:275>
 			BufferPoolMemoryStream_tACFC72B72CC2AAFDFA97D6E8B8FEB94C5EC4B20B* L_19 = __this->___compressorOutputStream;
 			NullCheck(L_19);
@@ -12956,7 +12956,7 @@ IL_0016:
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_4 = ___0_data;
 		int32_t L_5 = ___1_length;
 		NullCheck(L_3);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_3, L_4, 0, L_5);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_3, L_4, 0, L_5);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/Extensions/PerMessageCompression.cs:301>
 		BufferPoolMemoryStream_tACFC72B72CC2AAFDFA97D6E8B8FEB94C5EC4B20B* L_6 = __this->___decompressorInputStream;
 		il2cpp_codegen_runtime_class_init_inline(PerMessageCompression_t94C67E85B63689B7E7DDAE282FE4A39C216ECBB0_il2cpp_TypeInfo_var);
@@ -12964,7 +12964,7 @@ IL_0016:
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_8 = ((PerMessageCompression_t94C67E85B63689B7E7DDAE282FE4A39C216ECBB0_StaticFields*)il2cpp_codegen_static_fields_for(PerMessageCompression_t94C67E85B63689B7E7DDAE282FE4A39C216ECBB0_il2cpp_TypeInfo_var))->___Trailer;
 		NullCheck(L_8);
 		NullCheck(L_6);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_6, L_7, 0, ((int32_t)(((RuntimeArray*)L_8)->max_length)));
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_6, L_7, 0, ((int32_t)(((RuntimeArray*)L_8)->max_length)));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/Extensions/PerMessageCompression.cs:303>
 		BufferPoolMemoryStream_tACFC72B72CC2AAFDFA97D6E8B8FEB94C5EC4B20B* L_9 = __this->___decompressorInputStream;
 		NullCheck(L_9);
@@ -12988,7 +12988,7 @@ IL_0016:
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/Extensions/PerMessageCompression.cs:308>
 		DeflateStream_t1976EDE107AE1BE93B6B3B08F3170C974BEA0228* L_14 = __this->___decompressorDeflateStream;
 		NullCheck(L_14);
-		VirtualActionInvoker1< int32_t >::Invoke(39, L_14, 2);
+		VirtualActionInvoker1< int32_t >::Invoke(40, L_14, 2);
 	}
 
 IL_0077:
@@ -13013,7 +13013,7 @@ IL_008a:
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/Extensions/PerMessageCompression.cs:313>
 		BufferPoolMemoryStream_tACFC72B72CC2AAFDFA97D6E8B8FEB94C5EC4B20B* L_17 = __this->___decompressorOutputStream;
 		NullCheck(L_17);
-		VirtualActionInvoker1< int64_t >::Invoke(31, L_17, ((int64_t)0));
+		VirtualActionInvoker1< int64_t >::Invoke(32, L_17, ((int64_t)0));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/Extensions/PerMessageCompression.cs:315>
 		il2cpp_codegen_runtime_class_init_inline(BufferPool_t9AE33DCEE74AA5BD63A83B5CB44DC09DB4A658D3_il2cpp_TypeInfo_var);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_18;
@@ -13029,7 +13029,7 @@ IL_00a6:
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_20 = V_0;
 		int32_t L_21 = V_1;
 		NullCheck(L_19);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_19, L_20, 0, L_21);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_19, L_20, 0, L_21);
 	}
 
 IL_00b4:
@@ -13041,7 +13041,7 @@ IL_00b4:
 		NullCheck(L_24);
 		NullCheck(L_22);
 		int32_t L_25;
-		L_25 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, L_22, L_23, 0, ((int32_t)(((RuntimeArray*)L_24)->max_length)));
+		L_25 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, L_22, L_23, 0, ((int32_t)(((RuntimeArray*)L_24)->max_length)));
 		int32_t L_26 = L_25;
 		V_1 = L_26;
 		if (L_26)
@@ -13057,7 +13057,7 @@ IL_00b4:
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/Extensions/PerMessageCompression.cs:322>
 		DeflateStream_t1976EDE107AE1BE93B6B3B08F3170C974BEA0228* L_28 = __this->___decompressorDeflateStream;
 		NullCheck(L_28);
-		VirtualActionInvoker1< int64_t >::Invoke(31, L_28, ((int64_t)0));
+		VirtualActionInvoker1< int64_t >::Invoke(32, L_28, ((int64_t)0));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/WebSocket/Extensions/PerMessageCompression.cs:324>
 		BufferPoolMemoryStream_tACFC72B72CC2AAFDFA97D6E8B8FEB94C5EC4B20B* L_29 = __this->___decompressorOutputStream;
 		NullCheck(L_29);
@@ -21551,7 +21551,7 @@ IL_00fe:
 		memset((&L_60), 0, sizeof(L_60));
 		BufferSegment__ctor_mA453E2BD0F8DAA8E214F99EEC32BD535B9348ABD((&L_60), L_58, 0, L_59, NULL);
 		NullCheck(L_57);
-		VirtualActionInvoker1< BufferSegment_t3B766B555791F8BE558F53ACD0661A027BE1C29C >::Invoke(38, L_57, L_60);
+		VirtualActionInvoker1< BufferSegment_t3B766B555791F8BE558F53ACD0661A027BE1C29C >::Invoke(39, L_57, L_60);
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SocketIO.3/Transports/PollingTransport.cs:178>
 		HTTPRequest_t32091DC566685F9827D7D7EA51A5D6601CB6485B* L_61 = ___1_request;
 		BufferSegmentStream_tCD125F69CB3AC8C83F8EC9BD1DDC3399A6B66F3E* L_62 = V_3;
@@ -34449,7 +34449,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR HTTPResponse_t852864E3439C906B2B9
 		return L_0;
 	}
 }
-// Method Definition Index: 23713
+// Method Definition Index: 23715
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR StringComparer_t6268F19CA34879176651429C0D8A3D0002BB8E06* StringComparer_get_OrdinalIgnoreCase_m071AA1B1747345CCA058A3879EBDEBBA2EA4B169_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -34784,7 +34784,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR TimeSpan_t8195C5B013A2C532FEBDF0B
 		return L_0;
 	}
 }
-// Method Definition Index: 33193
+// Method Definition Index: 33204
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_m6CF40941471CECB852A01B541A3E09899AC2ABFA_gshared_inline (List_1_t7FC1349563704AA7F8510A67B2E593539FCDF2EB* __this, WebSocketFrameReader_t7D2DC431E5B33DF6B860B5A8171D435570B6F560 ___0_item, const RuntimeMethod* method) 
 {
 	WebSocketFrameReaderU5BU5D_tEDCA03ACACE80361C59F70DD0887E9DA67D0B242* V_0 = NULL;
@@ -34822,7 +34822,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 33201
+// Method Definition Index: 33212
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Clear_mCF6C30812F33E0F5ADD111D1A75E642279FC5836_gshared_inline (List_1_t7FC1349563704AA7F8510A67B2E593539FCDF2EB* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -34885,7 +34885,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t CircularBuffer_1_get_Coun
 		return L_0;
 	}
 }
-// Method Definition Index: 33182
+// Method Definition Index: 33193
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4BA1C1A68F62015EEC8D234C4A01C1851820FCC5_gshared_inline (List_1_tB2308B0E9951D05CB7B0115F13DED88E37C77E86* __this, const RuntimeMethod* method) 
 {
 	{
@@ -34893,7 +34893,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4BA1C1A
 		return L_0;
 	}
 }
-// Method Definition Index: 33182
+// Method Definition Index: 33193
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m76D5F5591FC871D34444A1D7BC68B02D5963AEAE_gshared_inline (List_1_t7FC1349563704AA7F8510A67B2E593539FCDF2EB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -34901,7 +34901,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m76D5F55
 		return L_0;
 	}
 }
-// Method Definition Index: 33182
+// Method Definition Index: 33193
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -34909,7 +34909,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C
 		return L_0;
 	}
 }
-// Method Definition Index: 33182
+// Method Definition Index: 33193
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m2384816BFA410D39A87A58FAF7674831DE8998D9_gshared_inline (List_1_tF5676F16674F82182CEF162DD82DB50F1A4BE62C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -34917,7 +34917,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m2384816
 		return L_0;
 	}
 }
-// Method Definition Index: 33193
+// Method Definition Index: 33204
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_m58D2E847DFE984644D65FD4A2FB0642E00E7354A_gshared_inline (List_1_tF5676F16674F82182CEF162DD82DB50F1A4BE62C* __this, TimingEvent_t69A9B074F7E66D68EB92E06938E3B1B600B47A90 ___0_item, const RuntimeMethod* method) 
 {
 	TimingEventU5BU5D_t404C1876FC3832CA42C12D3F99B74CF1403949BE* V_0 = NULL;
@@ -34955,7 +34955,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 33247
+// Method Definition Index: 33258
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR TimingEvent_t69A9B074F7E66D68EB92E06938E3B1B600B47A90 Enumerator_get_Current_mB5F97B605921E100693DDE8924EB7B92B40168FF_gshared_inline (Enumerator_tA4F6DF5297DAF2356CCBABA86517509FF8754C24* __this, const RuntimeMethod* method) 
 {
 	{
@@ -34969,7 +34969,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Func_3_Invoke_m31D
 	typedef RuntimeObject* (*FunctionPointerType) (RuntimeObject*, RuntimeObject*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_arg1, ___1_arg2, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 33193
+// Method Definition Index: 33204
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) 
 {
 	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* V_0 = NULL;
@@ -35007,7 +35007,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 24497
+// Method Definition Index: 24500
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* Array_Empty_TisRuntimeObject_mFB8A63D602BB6974D31E20300D9EB89C6FE7C278_gshared_inline (const RuntimeMethod* method) 
 {
 	il2cpp_rgctx_method_init(method);
@@ -35017,7 +35017,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD
 		return L_0;
 	}
 }
-// Method Definition Index: 33201
+// Method Definition Index: 33212
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Clear_mE16F5071E68F220F4C902EA0A048801552203722_gshared_inline (List_1_tEE5875A8B826C1629C1384099211165B3EAC23F3* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -35047,7 +35047,7 @@ IL_003c:
 		return;
 	}
 }
-// Method Definition Index: 33182
+// Method Definition Index: 33193
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_mECBBA36E7C33C70991DE474C4FBD34B99D6D2EC7_gshared_inline (List_1_tEE5875A8B826C1629C1384099211165B3EAC23F3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -35055,7 +35055,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_mECBBA36
 		return L_0;
 	}
 }
-// Method Definition Index: 33193
+// Method Definition Index: 33204
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mC57A58C5F0BAC5FBACD8A523D72B0D112BE81595_gshared_inline (List_1_tEE5875A8B826C1629C1384099211165B3EAC23F3* __this, OutgoingPacket_t6E6464FDFEE9FD7DD12ECF82250CC4BC654B4FA0 ___0_item, const RuntimeMethod* method) 
 {
 	OutgoingPacketU5BU5D_tBAC961A0227C8776841D3B2BC4DDDAB297FEE5B7* V_0 = NULL;
@@ -35093,7 +35093,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 33173
+// Method Definition Index: 33184
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get_Key_mBD8EA7557C27E6956F2AF29DA3F7499B2F51A282_gshared_inline (KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230* __this, const RuntimeMethod* method) 
 {
 	{
@@ -35101,7 +35101,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get
 		return L_0;
 	}
 }
-// Method Definition Index: 33174
+// Method Definition Index: 33185
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get_Value_mC6BD8075F9C9DDEF7B4D731E5C38EC19103988E7_gshared_inline (KeyValuePair_2_tFC32D2507216293851350D29B64D79F950B55230* __this, const RuntimeMethod* method) 
 {
 	{
@@ -35109,7 +35109,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* KeyValuePair_2_get
 		return L_0;
 	}
 }
-// Method Definition Index: 33193
+// Method Definition Index: 33204
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mA574AF9AF608B03BAA656FB5BA63BCE625A653F7_gshared_inline (List_1_tB2308B0E9951D05CB7B0115F13DED88E37C77E86* __this, BufferSegment_t3B766B555791F8BE558F53ACD0661A027BE1C29C ___0_item, const RuntimeMethod* method) 
 {
 	BufferSegmentU5BU5D_tBA314EAB717F927BB231C19E4304EBFC62FADF34* V_0 = NULL;
@@ -35147,7 +35147,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 33193
+// Method Definition Index: 33204
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_m4C50369629918884937D1FDB4A6546D9386BA5A2_gshared_inline (List_1_t651372EFEB6BBAF4AA5F0668E1EC01A6ED182602* __this, CallbackDescriptor_t8DE2456607B38580A2C223D9E26900A6053A2F8A ___0_item, const RuntimeMethod* method) 
 {
 	CallbackDescriptorU5BU5D_tFAE359A996B5D769DAE3DFAC9937D7BF6A9E206C* V_0 = NULL;
@@ -35185,7 +35185,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 33182
+// Method Definition Index: 33193
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m9EF961444D264C12AF79DBE13E4449ED0B8B4100_gshared_inline (List_1_t651372EFEB6BBAF4AA5F0668E1EC01A6ED182602* __this, const RuntimeMethod* method) 
 {
 	{

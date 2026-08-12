@@ -10,11 +10,13 @@
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m1C2AB186402E995AFA8D0B93A235886B58870E80 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m3C27A3567D3251B35547D1E1AC0937B76632D26B (void);
 extern void OSXStoreBindings_SetUnityPurchasingCallback_m9B4AE831B19A63329EAC52D411D15FBA8BA829A1 (void);
+extern void OSXStoreBindings_Sk1SetUnityPurchasingCallback_m03EF1CDF6C069FF885A70DF29EE72D7A94698EA9 (void);
 extern void OSXStoreBindings_RestoreTransactions_mD2B10C0455BF99E10AC708717142F12EAB26D560 (void);
 extern void OSXStoreBindings_SetAppAccountToken_mE30AC1AE5EBB82DD056C6E0D03A3E98F7F8310AF (void);
 extern void OSXStoreBindings_AppReceipt_m877C9F7EB1EBF918D230FFF5759992D649593FE3 (void);
 extern void OSXStoreBindings_Connect_m2FD92838A1D3D2B2EDB972C434E6053DEC05C75D (void);
 extern void OSXStoreBindings_AddTransactionObserver_m15EFA84E6FA488EB3BF0D93A3B4787479959E493 (void);
+extern void OSXStoreBindings_SetApplicationUsername_m3EC2BEFEEC4B62D88E299B738A78714F2722F1EB (void);
 extern void OSXStoreBindings_FetchProducts_mB211E5948DDBA03D378AEEE89EF1F1B737618A66 (void);
 extern void OSXStoreBindings_FetchExistingPurchases_m347A52EFDB84D8841D2209BB3388C7BF51D7F608 (void);
 extern void OSXStoreBindings_Purchase_m158A10177614EFC04C210A20B0A63349FA17CF36 (void);
@@ -33,17 +35,27 @@ extern void OSXStoreBindings_RefreshAppReceipt_mCE20ABD067443DD71E3F0181B9E26BC5
 extern void OSXStoreBindings_TransactionObserved_m377FB823CF4ED39382B4495E7E14202896DD3AE8 (void);
 extern void OSXStoreBindings_FetchPurchases_m7747809178A5E4800F8BB2C9DC685DCFA7413299 (void);
 extern void OSXStoreBindings_Purchase_m21BC2DC114C2E62BBD23AD93483B52594B8C38BA (void);
+extern void OSXStoreBindings_FetchStorefront_mC8ED0EF682179E503704DDC1D274856DCED16752 (void);
+extern void OSXStoreBindings_FetchAdvertisingIdentifier_m38117D821F29C5C516F5E6C800EF66065EC285A5 (void);
+extern void OSXStoreBindings_FetchVendorIdentifier_m5BC15DB05B2F24B95C83B1B20ED2F1F2A16F6722 (void);
+extern void OSXStoreBindings_ExternalPurchaseCheckEligibility_m49446A0426E1DB078C30DEB376D473E8737A0519 (void);
+extern void OSXStoreBindings_ExternalPurchaseFetchToken_m9F70173B6274D1895DB3CB6C569E8C1AADDEBDA5 (void);
+extern void OSXStoreBindings_ExternalPurchaseShowNotice_mD1024207D9D56B41796F5B46E1A7AE1001441706 (void);
+extern void OSXStoreBindings_ExternalPurchaseFetchStorefront_mBCC038768710D0696DBF84EEBC32C88EECC3FCEF (void);
+extern void OSXStoreBindings_FetchNativeDeviceInfo_m1A7790545D047FBBD255B11C1CA4AC4A43C43B69 (void);
 extern void OSXStoreBindings__ctor_m858AEA206C8B4F7BCA3D0A062F94CB5ACBF692E3 (void);
-static Il2CppMethodPointer s_methodPointers[27] = 
+static Il2CppMethodPointer s_methodPointers[37] = 
 {
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m1C2AB186402E995AFA8D0B93A235886B58870E80,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m3C27A3567D3251B35547D1E1AC0937B76632D26B,
 	OSXStoreBindings_SetUnityPurchasingCallback_m9B4AE831B19A63329EAC52D411D15FBA8BA829A1,
+	OSXStoreBindings_Sk1SetUnityPurchasingCallback_m03EF1CDF6C069FF885A70DF29EE72D7A94698EA9,
 	OSXStoreBindings_RestoreTransactions_mD2B10C0455BF99E10AC708717142F12EAB26D560,
 	OSXStoreBindings_SetAppAccountToken_mE30AC1AE5EBB82DD056C6E0D03A3E98F7F8310AF,
 	OSXStoreBindings_AppReceipt_m877C9F7EB1EBF918D230FFF5759992D649593FE3,
 	OSXStoreBindings_Connect_m2FD92838A1D3D2B2EDB972C434E6053DEC05C75D,
 	OSXStoreBindings_AddTransactionObserver_m15EFA84E6FA488EB3BF0D93A3B4787479959E493,
+	OSXStoreBindings_SetApplicationUsername_m3EC2BEFEEC4B62D88E299B738A78714F2722F1EB,
 	OSXStoreBindings_FetchProducts_mB211E5948DDBA03D378AEEE89EF1F1B737618A66,
 	OSXStoreBindings_FetchExistingPurchases_m347A52EFDB84D8841D2209BB3388C7BF51D7F608,
 	OSXStoreBindings_Purchase_m158A10177614EFC04C210A20B0A63349FA17CF36,
@@ -62,43 +74,61 @@ static Il2CppMethodPointer s_methodPointers[27] =
 	OSXStoreBindings_TransactionObserved_m377FB823CF4ED39382B4495E7E14202896DD3AE8,
 	OSXStoreBindings_FetchPurchases_m7747809178A5E4800F8BB2C9DC685DCFA7413299,
 	OSXStoreBindings_Purchase_m21BC2DC114C2E62BBD23AD93483B52594B8C38BA,
+	OSXStoreBindings_FetchStorefront_mC8ED0EF682179E503704DDC1D274856DCED16752,
+	OSXStoreBindings_FetchAdvertisingIdentifier_m38117D821F29C5C516F5E6C800EF66065EC285A5,
+	OSXStoreBindings_FetchVendorIdentifier_m5BC15DB05B2F24B95C83B1B20ED2F1F2A16F6722,
+	OSXStoreBindings_ExternalPurchaseCheckEligibility_m49446A0426E1DB078C30DEB376D473E8737A0519,
+	OSXStoreBindings_ExternalPurchaseFetchToken_m9F70173B6274D1895DB3CB6C569E8C1AADDEBDA5,
+	OSXStoreBindings_ExternalPurchaseShowNotice_mD1024207D9D56B41796F5B46E1A7AE1001441706,
+	OSXStoreBindings_ExternalPurchaseFetchStorefront_mBCC038768710D0696DBF84EEBC32C88EECC3FCEF,
+	OSXStoreBindings_FetchNativeDeviceInfo_m1A7790545D047FBBD255B11C1CA4AC4A43C43B69,
 	OSXStoreBindings__ctor_m858AEA206C8B4F7BCA3D0A062F94CB5ACBF692E3,
 };
-static const int32_t s_InvokerIndices[27] = 
+static const int32_t s_InvokerIndices[37] = 
 {
-	31335,
-	18307,
-	14057,
-	18307,
-	14057,
-	18039,
-	18307,
-	18307,
-	14057,
-	18307,
-	7304,
-	7304,
-	10022,
-	17810,
-	18307,
-	14057,
-	14057,
-	7304,
-	18307,
-	18307,
-	18307,
-	13987,
-	18307,
-	669,
-	14057,
-	3370,
-	18307,
+	31646,
+	18568,
+	14272,
+	14272,
+	18568,
+	14272,
+	18298,
+	18568,
+	18568,
+	14272,
+	14272,
+	18568,
+	7399,
+	7399,
+	10165,
+	18066,
+	18568,
+	14272,
+	14272,
+	7399,
+	18568,
+	18568,
+	18568,
+	14201,
+	18568,
+	694,
+	14272,
+	3426,
+	18568,
+	18298,
+	18298,
+	14272,
+	7399,
+	7399,
+	14272,
+	18298,
+	18568,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_Purchasing_AppleMacosStub_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_Purchasing_AppleMacosStub_CodeGenModule = 
 {
 	"Unity.Purchasing.AppleMacosStub.dll",
-	27,
+	37,
 	s_methodPointers,
 	0,
 	NULL,

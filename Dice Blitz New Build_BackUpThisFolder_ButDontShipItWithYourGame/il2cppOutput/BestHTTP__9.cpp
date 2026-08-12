@@ -29678,7 +29678,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Pkcs10CertificationRequest_Init_m125E03D
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_15 = V_2;
 		NullCheck(L_15);
 		NullCheck(L_13);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_13, L_14, 0, ((int32_t)(((RuntimeArray*)L_15)->max_length)));
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_13, L_14, 0, ((int32_t)(((RuntimeArray*)L_15)->max_length)));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/pkcs/Pkcs10CertificationRequest.cs:309>
 		RuntimeObject* L_16 = V_1;
 		NullCheck(L_16);
@@ -29806,7 +29806,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Pkcs10CertificationRequest_Verify_m15FC9
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_7 = V_0;
 		NullCheck(L_7);
 		NullCheck(L_5);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(35, L_5, L_6, 0, ((int32_t)(((RuntimeArray*)L_7)->max_length)));
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(36, L_5, L_6, 0, ((int32_t)(((RuntimeArray*)L_7)->max_length)));
 		//<source_info:D:/Unity Projects/New folder/Dice-Rush/Assets/Plugins/Best HTTP/Source/SecureProtocol/pkcs/Pkcs10CertificationRequest.cs:372>
 		RuntimeObject* L_8 = L_4;
 		NullCheck(L_8);
@@ -31070,7 +31070,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t GeneralName_get_TagNo_m83
 		return L_0;
 	}
 }
-// Method Definition Index: 32290
+// Method Definition Index: 32299
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* DictionaryEntry_get_Key_m09845C00732E530E6FCB9042079E90D3912215FE_inline (DictionaryEntry_t171080F37B311C25AA9E75888F9C9D703FA721BB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31078,7 +31078,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* DictionaryEntry_ge
 		return L_0;
 	}
 }
-// Method Definition Index: 32291
+// Method Definition Index: 32300
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* DictionaryEntry_get_Value_m75FD18FE968AE131F28AA2CB0DF4895EBA39075E_inline (DictionaryEntry_t171080F37B311C25AA9E75888F9C9D703FA721BB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31306,7 +31306,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void X509CrlStoreSelector_set_Com
 		return;
 	}
 }
-// Method Definition Index: 24747
+// Method Definition Index: 24750
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Exception_t* Exception_get_InnerException_m0C1BDB339C786BA4DA7D2C1AD214571CFBBB1410_inline (Exception_t* __this, const RuntimeMethod* method) 
 {
 	{

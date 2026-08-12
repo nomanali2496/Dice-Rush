@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
@@ -16,7 +16,7 @@ public class HorizontalSwipeTouchZone : MonoBehaviour, IPointerDownHandler, IPoi
 
     [Header("Click / Raycast Settings")]
     [Tooltip("Turn off raycast target when user performs a click (not a swipe)")]
-    [SerializeField] private bool disableRaycastOnClick = true;
+    [SerializeField] private bool disableRaycastOnClick = false;
     [Tooltip("Forward click event to underlying UI elements when user performs a click (not a swipe)")]
     [SerializeField] private bool passClickToUnderlyingUI = true;
     
@@ -43,6 +43,12 @@ public class HorizontalSwipeTouchZone : MonoBehaviour, IPointerDownHandler, IPoi
     {
         cachedGraphic = GetComponent<Graphic>();
         cachedCanvasGroup = GetComponent<CanvasGroup>();
+    }
+
+    private void OnEnable()
+    {
+        EnableRaycastTarget();
+        isSwiping = false;
     }
     
     private void Start()
@@ -201,7 +207,7 @@ public class HorizontalSwipeTouchZone : MonoBehaviour, IPointerDownHandler, IPoi
             }
         }
 
-        // Keep raycast off if disableRaycastOnClick is true; otherwise restore original state
+        // Always restore raycast target so future swipes and clicks will work
         if (!disableRaycastOnClick)
         {
             if (cachedGraphic != null) cachedGraphic.raycastTarget = wasGraphicRaycastTarget;
@@ -209,8 +215,8 @@ public class HorizontalSwipeTouchZone : MonoBehaviour, IPointerDownHandler, IPoi
         }
         else
         {
-            if (showDebugLogs)
-                Debug.Log("[HorizontalSwipeTouchZone] Raycast target turned OFF after click.");
+            if (cachedGraphic != null) cachedGraphic.raycastTarget = true;
+            if (cachedCanvasGroup != null) cachedCanvasGroup.blocksRaycasts = true;
         }
     }
     

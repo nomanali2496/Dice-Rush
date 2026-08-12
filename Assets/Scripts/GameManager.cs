@@ -1,4 +1,4 @@
-﻿#pragma warning disable 0414
+#pragma warning disable 0414
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
@@ -200,6 +200,12 @@ public class GameManager : MonoBehaviour
 
     private void HandleServerGameOver(GameOverData data)
     {
+        if (serverGameOverTimeoutCoroutine != null)
+        {
+            StopCoroutine(serverGameOverTimeoutCoroutine);
+            serverGameOverTimeoutCoroutine = null;
+        }
+
         if (data == null) return;
 
         bool localForfeitPending = MatchmakingModel.ConsumeLocalForfeitPending();
@@ -303,6 +309,12 @@ public class GameManager : MonoBehaviour
     {
         OnGameEnded?.Invoke();
 
+        if (forfeitTimeoutCoroutine != null)
+        {
+            StopCoroutine(forfeitTimeoutCoroutine);
+            forfeitTimeoutCoroutine = null;
+        }
+
         if (winnerScreenDelayCoroutine != null)
         {
             StopCoroutine(winnerScreenDelayCoroutine);
@@ -310,6 +322,8 @@ public class GameManager : MonoBehaviour
         }
 
         if (forfeitLoadingScreen != null) forfeitLoadingScreen.SetActive(false);
+        if (calculateLoadingScreen != null) calculateLoadingScreen.SetActive(false);
+        if (quitPanel != null) quitPanel.SetActive(false);
         if (winnerScreen != null) winnerScreen.SetActive(false);
         if (loserScoreScreen != null) loserScoreScreen.SetActive(false);
         if (gameplayScreen != null) gameplayScreen.SetActive(false);
@@ -331,19 +345,23 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private System.Collections.IEnumerator ShowWinnerScreenWithDelay(List<(PlayerType playerType, int opponentIndex, int count, double time, string userId)> rankings, GameOverData data)
     {
-        // Wait for 2.5 seconds to "calculate" results
-        yield return new WaitForSeconds(2.5f);
+        // Wait for 0.8 seconds to calculate results before showing winner screen
+        yield return new WaitForSeconds(0.8f);
+
+        // Hide loading screen immediately after calculation delay
+        if (calculateLoadingScreen != null)
+        {
+            calculateLoadingScreen.SetActive(false);
+        }
+        if (forfeitLoadingScreen != null)
+        {
+            forfeitLoadingScreen.SetActive(false);
+        }
 
         if (localPlayerForfeited)
         {
             winnerScreenDelayCoroutine = null;
             yield break;
-        }
-
-        // Hide loading screen
-        if (calculateLoadingScreen != null)
-        {
-            calculateLoadingScreen.SetActive(false);
         }
 
         // Check if the local player is in the top 3
@@ -357,6 +375,17 @@ public class GameManager : MonoBehaviour
                 localPlayerScore = rankings[i].count;
                 break;
             }
+        }
+
+        // Hide 3D dice when match completes and result screen opens
+        if (playerDicesController != null)
+        {
+            playerDicesController.HideDices();
+        }
+        DiceVisibilityManager dvm = FindFirstObjectByType<DiceVisibilityManager>();
+        if (dvm != null)
+        {
+            dvm.ForceHideDices();
         }
 
         if (!isLocalPlayerInTop3)
@@ -840,6 +869,7 @@ public class GameManager : MonoBehaviour
 
         isWaitingForServer = true;
         if (calculateLoadingScreen != null) calculateLoadingScreen.SetActive(true);
+        StartServerGameOverTimeout();
     }
 
     /// <summary>
@@ -852,6 +882,9 @@ public class GameManager : MonoBehaviour
         
         // Safety: Ensure gameplay music is stopped
         OnGameEnded?.Invoke();
+
+        if (calculateLoadingScreen != null) calculateLoadingScreen.SetActive(false);
+        if (forfeitLoadingScreen != null) forfeitLoadingScreen.SetActive(false);
 
         // Return to lobby by disabling gameplay screen
         if (gameplayScreen != null)
@@ -1032,6 +1065,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("[GameManager] Board complete locally. Waiting for server 'gameOver' event...");
         isWaitingForServer = true;
         if (calculateLoadingScreen != null) calculateLoadingScreen.SetActive(true);
+        StartServerGameOverTimeout();
     }
     
     /// <summary>
@@ -1039,6 +1073,12 @@ public class GameManager : MonoBehaviour
     /// No prizes awarded, no winner screen shown to quitting player
     /// If only 2 players total: CPU wins instantly but player doesn't see winner screen
     /// If more than 2 players: CPUs continue playing
+    /// </summary>
+    private Coroutine forfeitTimeoutCoroutine;
+
+    /// <summary>
+    /// Called when the player quits/forfeits an active game.
+    /// Handles forfeiting the match with the server and returning to the lobby safely.
     /// </summary>
     private void OnQuitButtonClicked()
     {
@@ -1051,19 +1091,19 @@ public class GameManager : MonoBehaviour
             HorizontalLobbyManager lobbyManager = FindFirstObjectByType<HorizontalLobbyManager>();
             if (lobbyManager != null)
             {
-                // We'll add a public method to HorizontalLobbyManager to hide the panel
                 lobbyManager.HideWaitingPanel();
             }
         }
 
-        if (!isGameActive)
-        {
-            return; // Game already ended
-        }
-        
-        Debug.Log("[GameManager] Player forfeit requested. Waiting for server confirmation...");
+        Debug.Log("[GameManager] Player forfeit/quit requested.");
         localPlayerForfeited = true;
         
+        // Hide quit popup panel if active
+        if (quitPanel != null)
+        {
+            quitPanel.SetActive(false);
+        }
+
         // Show loading screen while waiting for server to acknowledge forfeit
         if (forfeitLoadingScreen != null)
         {
@@ -1073,11 +1113,32 @@ public class GameManager : MonoBehaviour
         // Notify listeners (like SettingManager) that gameplay music should stop
         OnGameEnded?.Invoke();
 
-        // Notify server about forfeit if in a room
-        if (currentMatchData != null && !string.IsNullOrEmpty(currentMatchData.roomId))
+        // Get roomId from currentMatchData or PlayerModel fallback
+        string roomId = (currentMatchData != null && !string.IsNullOrEmpty(currentMatchData.roomId)) 
+            ? currentMatchData.roomId 
+            : PlayerModel.ActiveRoomId;
+
+        // Notify server about forfeit if room ID is valid
+        if (!string.IsNullOrEmpty(roomId))
         {
-            MatchmakingModel.ForfeitMatch(currentMatchData.roomId);
+            MatchmakingModel.ForfeitMatch(roomId);
         }
+        else
+        {
+            Debug.LogWarning("[GameManager] No active RoomId found for forfeit. Proceeding to immediate cleanup.");
+        }
+
+        // Safety fallback: Ensure we return to lobby after 2 seconds even if server gameOver doesn't arrive
+        if (forfeitTimeoutCoroutine != null) StopCoroutine(forfeitTimeoutCoroutine);
+        forfeitTimeoutCoroutine = StartCoroutine(ForfeitSafetyTimeoutRoutine(2.0f));
+    }
+
+    private System.Collections.IEnumerator ForfeitSafetyTimeoutRoutine(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Debug.Log("[GameManager] Forfeit safety timeout reached. Completing forfeit cleanup.");
+        forfeitTimeoutCoroutine = null;
+        CompleteForfeitCleanup();
     }
 
 
@@ -1609,7 +1670,24 @@ public class GameManager : MonoBehaviour
         ResetOutlineFillAmounts();
         
         if (calculateLoadingScreen != null) calculateLoadingScreen.SetActive(false);
+        if (forfeitLoadingScreen != null) forfeitLoadingScreen.SetActive(false);
         if (quitPanel != null) quitPanel.SetActive(false);
+
+        if (playerDicesController == null)
+        {
+            playerDicesController = FindFirstObjectByType<DicesController>();
+        }
+        if (playerDicesController != null)
+        {
+            playerDicesController.ResetRollingState();
+            playerDicesController.ClearDiceSumDisplay();
+            playerDicesController.HideDices();
+        }
+        DiceVisibilityManager dvm = FindFirstObjectByType<DiceVisibilityManager>();
+        if (dvm != null)
+        {
+            dvm.ForceHideDices();
+        }
         
         // Reset score UI
         if (ScoreFeedbackUIManager.Instance != null)
@@ -1667,10 +1745,26 @@ public class GameManager : MonoBehaviour
         // Reset winner screen UI to ensure clean state
         ResetWinnerScreenUI();
         
+        if (calculateLoadingScreen != null) calculateLoadingScreen.SetActive(false);
+        if (forfeitLoadingScreen != null) forfeitLoadingScreen.SetActive(false);
+        if (quitPanel != null) quitPanel.SetActive(false);
+        
         // Reset outline fill amounts for new game
         ResetOutlineFillAmounts();
         
-        Debug.Log("[GameManager] Board reset for new match.");
+        // Ensure playerDicesController reference is populated and cleanly reset for new game
+        if (playerDicesController == null)
+        {
+            playerDicesController = FindFirstObjectByType<DicesController>();
+        }
+        if (playerDicesController != null)
+        {
+            playerDicesController.ResetRollingState();
+            playerDicesController.ClearDiceSumDisplay();
+            playerDicesController.ShowDices();
+        }
+        
+        Debug.Log("[GameManager] Board and dice state reset for new match.");
         
         // Set new lobby configuration
         currentLobbyConfig = config;
@@ -1815,6 +1909,91 @@ public class GameManager : MonoBehaviour
         }
 
         return fallback;
+    }
+
+    private Coroutine serverGameOverTimeoutCoroutine = null;
+
+    private void StartServerGameOverTimeout()
+    {
+        if (serverGameOverTimeoutCoroutine != null)
+        {
+            StopCoroutine(serverGameOverTimeoutCoroutine);
+        }
+        serverGameOverTimeoutCoroutine = StartCoroutine(WaitForServerGameOverTimeout());
+    }
+
+    private System.Collections.IEnumerator WaitForServerGameOverTimeout()
+    {
+        bool isOnlineSocket = SocketManager.Instance != null && 
+                             SocketManager.Instance.Socket != null && 
+                             SocketManager.Instance.Socket.IsOpen &&
+                             (currentMatchData != null && !string.IsNullOrEmpty(currentMatchData.roomId));
+
+        float waitTime = isOnlineSocket ? 3.0f : 0.5f;
+
+        yield return new WaitForSeconds(waitTime);
+
+        if (isWaitingForServer && !winnerScreenShown)
+        {
+            Debug.LogWarning($"[GameManager] Server gameOver event did not arrive after {waitTime}s. Triggering fallback results.");
+            GameOverData fallbackData = GenerateFallbackGameOverData();
+            HandleServerGameOver(fallbackData);
+        }
+
+        serverGameOverTimeoutCoroutine = null;
+    }
+
+    public GameOverData GenerateFallbackGameOverData()
+    {
+        GameOverData data = new GameOverData();
+        data.reason = "game_completed";
+        data.scores = new Dictionary<string, int>();
+        data.earnings = new Dictionary<string, double>();
+        data.coinsEarnings = new Dictionary<string, double>();
+
+        string localId = !string.IsNullOrEmpty(PlayerModel.Id) ? PlayerModel.Id : "local_player";
+        data.scores[localId] = localMatchScore;
+
+        int highestScore = localMatchScore;
+        string winnerId = localId;
+
+        if (networkPlayerScores != null)
+        {
+            foreach (var kvp in networkPlayerScores)
+            {
+                data.scores[kvp.Key] = kvp.Value;
+                if (kvp.Value > highestScore)
+                {
+                    highestScore = kvp.Value;
+                    winnerId = kvp.Key;
+                }
+            }
+        }
+
+        data.winnerId = winnerId;
+
+        // Populate players dictionary
+        data.players = currentMatchData != null && currentMatchData.playerAvatars != null 
+            ? new Dictionary<string, PlayerAvatarInfo>(currentMatchData.playerAvatars) 
+            : new Dictionary<string, PlayerAvatarInfo>();
+
+        if (!data.players.ContainsKey(localId))
+        {
+            data.players[localId] = new PlayerAvatarInfo
+            {
+                name = !string.IsNullOrEmpty(PlayerModel.Name) ? PlayerModel.Name : "You",
+                avatar = PlayerModel.SelectedAvatarIndex.ToString()
+            };
+        }
+
+        // Calculate earnings for winner
+        int stake = currentLobbyConfig != null ? (int)currentLobbyConfig.entryFeeCash : 100;
+        int totalPlayers = data.players.Count > 0 ? data.players.Count : 3;
+        double prize = stake * totalPlayers;
+
+        data.earnings[winnerId] = prize;
+
+        return data;
     }
     
     /// <summary>

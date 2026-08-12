@@ -99,10 +99,13 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Unity_Mathematics_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Unity_Purchasing_AppleMacosStub_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Unity_Purchasing_AppleStub_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Unity_Purchasing_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Unity_Purchasing_LiveContentAdapterService_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Unity_Purchasing_PaymentProviderService_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Unity_Purchasing_SecurityCore_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Unity_Purchasing_Security_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Unity_Purchasing_Stores_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Unity_Purchasing_Utilities_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Unity_Purchasing_WebshopService_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Unity_RenderPipeline_Universal_ShaderLibrary_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Unity_RenderPipelines_Core_Runtime_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Unity_RenderPipelines_Core_Runtime_Shared_CodeGenModule;
@@ -127,7 +130,7 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Unity_VisualScripting_State_CodeGenM
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g___Generated_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_mscorlib_CodeGenModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule* g_CodeGenModules[];
-const Il2CppCodeGenModule* g_CodeGenModules[111] = 
+const Il2CppCodeGenModule* g_CodeGenModules[114] = 
 {
 	(&g_AppleAuth_CodeGenModule),
 	(&g_AssemblyU2DCSharpU2Dfirstpass_CodeGenModule),
@@ -213,10 +216,13 @@ const Il2CppCodeGenModule* g_CodeGenModules[111] =
 	(&g_Unity_Purchasing_AppleMacosStub_CodeGenModule),
 	(&g_Unity_Purchasing_AppleStub_CodeGenModule),
 	(&g_Unity_Purchasing_CodeGenModule),
+	(&g_Unity_Purchasing_LiveContentAdapterService_CodeGenModule),
+	(&g_Unity_Purchasing_PaymentProviderService_CodeGenModule),
 	(&g_Unity_Purchasing_SecurityCore_CodeGenModule),
 	(&g_Unity_Purchasing_Security_CodeGenModule),
 	(&g_Unity_Purchasing_Stores_CodeGenModule),
 	(&g_Unity_Purchasing_Utilities_CodeGenModule),
+	(&g_Unity_Purchasing_WebshopService_CodeGenModule),
 	(&g_Unity_RenderPipeline_Universal_ShaderLibrary_CodeGenModule),
 	(&g_Unity_RenderPipelines_Core_Runtime_CodeGenModule),
 	(&g_Unity_RenderPipelines_Core_Runtime_Shared_CodeGenModule),
@@ -244,22 +250,22 @@ const Il2CppCodeGenModule* g_CodeGenModules[111] =
 IL2CPP_EXTERN_C const Il2CppCodeRegistration g_CodeRegistration;
 const Il2CppCodeRegistration g_CodeRegistration = 
 {
-	74,
+	75,
 	g_ReversePInvokeWrapperPointers,
-	149571,
+	152811,
 	g_Il2CppGenericMethodPointers,
 	g_Il2CppGenericAdjustorThunks,
-	31355,
+	31669,
 	g_Il2CppInvokerPointers,
-	4664,
+	4778,
 	g_UnresolvedVirtualMethodPointers,
 	g_UnresolvedInstanceMethodPointers,
 	g_UnresolvedStaticMethodPointers,
-	1169,
+	1187,
 	g_Il2CppInteropData,
 	0,
 	NULL,
-	111,
+	114,
 	g_CodeGenModules,
 };
 IL2CPP_EXTERN_C_CONST Il2CppMetadataRegistration g_MetadataRegistration;

@@ -19,7 +19,10 @@ extern void ConfigurationEntry__ctor_mCDEE0FDC493789EC96FE73A25242EB76EE73786C (
 extern void ConfigurationEntry_TrySetValue_m36B9719FC8D14A2DEABFB0912F93B8A68A635B0E (void);
 extern void ConfigurationEntry_op_Implicit_m0B1AB7411B225ECE931BDC3749159CE3F1699408 (void);
 extern void ConfigurationEntry_op_Implicit_m70B888797326BC9FC906390542AE0F24CC5F20B0 (void);
+extern void ConfigurationResetter_RegisterCallbacks_mF148C984B05B81B164314FE8A367320BFF3BC779 (void);
 extern void ConfigurationUtils_get_ConfigurationLoader_mB619F0CDCB950AAFD0C6EBAFFCCBD1FB4C4E6688 (void);
+extern void ConfigurationUtils_set_ConfigurationLoader_m1633781E8D37A9FC1EA4361712F6880AA3148179 (void);
+extern void ConfigurationUtils_ResetStaticsOnLoad_mA7E5CEB6B51876FC92C1C5D608E1E1EDD040DE07 (void);
 extern void ConfigurationUtils__cctor_mA5BD13AE78F4A7ADA1DDCB08C371E406BB89D622 (void);
 extern void ExternalUserId_get_UserId_m1268EF581536451C575FFE42AB7A5FA8C41854AE (void);
 extern void ExternalUserId_add_UserIdChanged_mDC960AA45420844A9419398970EB546AD8D150D8 (void);
@@ -42,7 +45,7 @@ extern void StreamingAssetsConfigurationLoader_GetConfigAsync_m4670747CC5108D64D
 extern void U3CGetConfigAsyncU3Ed__2_MoveNext_m9E58D12C49A5A91D6977494C811C89A2CF85522D (void);
 extern void U3CGetConfigAsyncU3Ed__2_SetStateMachine_m97223D4789B45241E85C9AA48042B683730089B7 (void);
 extern void StreamingAssetsUtils_GetFileTextFromStreamingAssetsAsync_m9E49560DF4218CAED97B714AC3EF6691A2288C28 (void);
-static Il2CppMethodPointer s_methodPointers[36] = 
+static Il2CppMethodPointer s_methodPointers[39] = 
 {
 	CloudProjectId_GetCloudProjectId_m869FB68DB9939F1F1DAA6AFCE8935CDC6EE755D6,
 	CloudProjectId__ctor_m04C6207EF478495335469EA975A65E82B79BACF7,
@@ -56,7 +59,10 @@ static Il2CppMethodPointer s_methodPointers[36] =
 	ConfigurationEntry_TrySetValue_m36B9719FC8D14A2DEABFB0912F93B8A68A635B0E,
 	ConfigurationEntry_op_Implicit_m0B1AB7411B225ECE931BDC3749159CE3F1699408,
 	ConfigurationEntry_op_Implicit_m70B888797326BC9FC906390542AE0F24CC5F20B0,
+	ConfigurationResetter_RegisterCallbacks_mF148C984B05B81B164314FE8A367320BFF3BC779,
 	ConfigurationUtils_get_ConfigurationLoader_mB619F0CDCB950AAFD0C6EBAFFCCBD1FB4C4E6688,
+	ConfigurationUtils_set_ConfigurationLoader_m1633781E8D37A9FC1EA4361712F6880AA3148179,
+	ConfigurationUtils_ResetStaticsOnLoad_mA7E5CEB6B51876FC92C1C5D608E1E1EDD040DE07,
 	ConfigurationUtils__cctor_mA5BD13AE78F4A7ADA1DDCB08C371E406BB89D622,
 	ExternalUserId_get_UserId_m1268EF581536451C575FFE42AB7A5FA8C41854AE,
 	ExternalUserId_add_UserIdChanged_mDC960AA45420844A9419398970EB546AD8D150D8,
@@ -85,53 +91,56 @@ extern void U3CGetConfigAsyncU3Ed__2_MoveNext_m9E58D12C49A5A91D6977494C811C89A2C
 extern void U3CGetConfigAsyncU3Ed__2_SetStateMachine_m97223D4789B45241E85C9AA48042B683730089B7_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[2] = 
 {
-	{ 0x06000022, U3CGetConfigAsyncU3Ed__2_MoveNext_m9E58D12C49A5A91D6977494C811C89A2CF85522D_AdjustorThunk },
-	{ 0x06000023, U3CGetConfigAsyncU3Ed__2_SetStateMachine_m97223D4789B45241E85C9AA48042B683730089B7_AdjustorThunk },
+	{ 0x06000025, U3CGetConfigAsyncU3Ed__2_MoveNext_m9E58D12C49A5A91D6977494C811C89A2CF85522D_AdjustorThunk },
+	{ 0x06000026, U3CGetConfigAsyncU3Ed__2_SetStateMachine_m97223D4789B45241E85C9AA48042B683730089B7_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[36] = 
+static const int32_t s_InvokerIndices[39] = 
 {
-	18039,
-	18307,
-	26686,
-	26679,
-	23925,
-	18039,
-	17810,
-	18307,
-	7270,
-	10022,
-	29417,
-	29417,
-	31184,
-	31285,
-	18039,
-	14057,
-	14057,
-	18307,
+	18298,
+	18568,
+	26974,
+	26967,
+	24212,
+	18298,
+	18066,
+	18568,
+	7365,
+	10165,
+	29723,
+	29723,
+	31596,
+	31495,
+	30252,
+	31596,
+	31596,
+	18298,
+	14272,
+	14272,
+	18568,
 	-1,
-	18039,
-	7304,
-	4503,
-	5086,
-	5683,
-	5547,
-	18039,
-	31285,
-	18307,
-	12050,
-	12050,
-	31236,
-	14057,
-	18039,
-	18307,
-	14057,
-	29417,
+	18298,
+	7399,
+	4566,
+	5158,
+	5763,
+	5626,
+	18298,
+	31596,
+	18568,
+	12232,
+	12232,
+	31547,
+	14272,
+	18298,
+	18568,
+	14272,
+	29723,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_Services_Core_Configuration_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_Services_Core_Configuration_CodeGenModule = 
 {
 	"Unity.Services.Core.Configuration.dll",
-	36,
+	39,
 	s_methodPointers,
 	2,
 	s_adjustorThunks,
