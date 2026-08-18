@@ -51,14 +51,25 @@ public class HorizontalSwipeTouchZone : MonoBehaviour, IPointerDownHandler, IPoi
         isSwiping = false;
     }
     
+    private HorizontalLobbyManager GetLobbyManager()
+    {
+        if (lobbyManager == null || !lobbyManager)
+        {
+            lobbyManager = HorizontalLobbyManager.Instance != null 
+                ? HorizontalLobbyManager.Instance 
+                : FindFirstObjectByType<HorizontalLobbyManager>(FindObjectsInactive.Include);
+        }
+        return lobbyManager;
+    }
+
     private void Start()
     {
         // Find HorizontalLobbyManager in the scene
-        lobbyManager = FindFirstObjectByType<HorizontalLobbyManager>();
+        lobbyManager = GetLobbyManager();
         
         if (lobbyManager == null)
         {
-            Debug.LogError("[HorizontalSwipeTouchZone] HorizontalLobbyManager not found! Swipe detection will not work.");
+            Debug.LogWarning("[HorizontalSwipeTouchZone] HorizontalLobbyManager not found initial attempt. Will lazily find on swipe.");
         }
         else
         {
@@ -104,7 +115,8 @@ public class HorizontalSwipeTouchZone : MonoBehaviour, IPointerDownHandler, IPoi
             {
                 isSwipe = true;
 
-                if (lobbyManager != null)
+                HorizontalLobbyManager mgr = GetLobbyManager();
+                if (mgr != null && mgr.gameObject.activeInHierarchy && mgr.enabled)
                 {
                     if (useVelocityScrolling)
                     {
@@ -120,14 +132,14 @@ public class HorizontalSwipeTouchZone : MonoBehaviour, IPointerDownHandler, IPoi
                         {
                             if (showDebugLogs)
                                 Debug.Log($"[HorizontalSwipeTouchZone] Swipe LEFT detected ({swipeDistance:F0}px) -> Scroll RIGHT by {itemsToScroll} items");
-                            lobbyManager.ScrollMultiple(itemsToScroll);
+                            mgr.ScrollMultiple(itemsToScroll);
                         }
                         // Swipe right (positive x) = scroll left (show previous items)
                         else
                         {
                             if (showDebugLogs)
                                 Debug.Log($"[HorizontalSwipeTouchZone] Swipe RIGHT detected ({swipeDistance:F0}px) -> Scroll LEFT by {itemsToScroll} items");
-                            lobbyManager.ScrollMultiple(-itemsToScroll);
+                            mgr.ScrollMultiple(-itemsToScroll);
                         }
                     }
                     else
@@ -138,14 +150,14 @@ public class HorizontalSwipeTouchZone : MonoBehaviour, IPointerDownHandler, IPoi
                         {
                             if (showDebugLogs)
                                 Debug.Log("[HorizontalSwipeTouchZone] Swipe LEFT detected -> Scroll RIGHT");
-                            lobbyManager.ScrollRight();
+                            mgr.ScrollRight();
                         }
                         // Swipe right = scroll left (show previous items)
                         else
                         {
                             if (showDebugLogs)
                                 Debug.Log("[HorizontalSwipeTouchZone] Swipe RIGHT detected -> Scroll LEFT");
-                            lobbyManager.ScrollLeft();
+                            mgr.ScrollLeft();
                         }
                     }
                 }

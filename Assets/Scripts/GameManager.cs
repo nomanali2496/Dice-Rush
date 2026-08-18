@@ -338,6 +338,14 @@ public class GameManager : MonoBehaviour
 
         ResetGameState();
         localPlayerForfeited = false;
+
+        HorizontalLobbyManager lobbyManager = HorizontalLobbyManager.Instance != null 
+            ? HorizontalLobbyManager.Instance 
+            : FindFirstObjectByType<HorizontalLobbyManager>(FindObjectsInactive.Include);
+        if (lobbyManager != null)
+        {
+            lobbyManager.OnLobbyOpened();
+        }
     }
 
     /// <summary>
@@ -903,6 +911,14 @@ public class GameManager : MonoBehaviour
         }
         
         ResetGameState();
+
+        HorizontalLobbyManager lobbyManager = HorizontalLobbyManager.Instance != null 
+            ? HorizontalLobbyManager.Instance 
+            : FindFirstObjectByType<HorizontalLobbyManager>(FindObjectsInactive.Include);
+        if (lobbyManager != null)
+        {
+            lobbyManager.OnLobbyOpened();
+        }
     }
     
     private void OnDestroy()

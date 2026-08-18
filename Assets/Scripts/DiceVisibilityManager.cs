@@ -36,11 +36,17 @@ public class DiceVisibilityManager : MonoBehaviour
     [Header("Auto-Detect Panels")]
     [Tooltip("Automatically detect panels by name patterns (e.g., panels containing 'Panel', 'Popup', 'Menu', 'Screen')")]
     [SerializeField] private bool autoDetectPanels = true;
-    [SerializeField] private string[] panelNamePatterns = new string[] { "Panel", "Popup", "Menu", "Screen", "Winner", "Loser", "Loading", "Quit" };
+    [SerializeField] private string[] panelNamePatterns = new string[] { "Panel", "Popup", "Menu", "Screen", "Winner", "Loser", "Loading", "Quit", "Waiting", "ChooseYourMode", "SelectPlayer", "Overlay" };
     
     private bool areDicesHidden = false;
     private bool hasGameplayStarted = false;
     private bool diceScalingApplied = false;
+
+    private void Awake()
+    {
+        // Immediately force hide dice on scene load until pure gameplay is confirmed active
+        ForceHideDices();
+    }
 
     private void OnDisable()
     {
@@ -62,6 +68,9 @@ public class DiceVisibilityManager : MonoBehaviour
                 Debug.LogWarning("[DiceVisibilityManager] DicesController not found! Please assign it in the inspector.");
             }
         }
+        
+        // Force hide dice at startup
+        ForceHideDices();
         
         // Try to find gameplay screen if not assigned
         if (gameplayScreen == null)
@@ -104,8 +113,8 @@ public class DiceVisibilityManager : MonoBehaviour
     {
         if (dicesController == null) return;
         
-        // Only monitor if gameplay screen is active (or if monitoring without gameplay screen is enabled)
-        bool isGameplayActive = monitorWithoutGameplayScreen || (gameplayScreen != null && gameplayScreen.activeSelf);
+        // Only show dice if gameplay screen is active in hierarchy
+        bool isGameplayActive = monitorWithoutGameplayScreen || (gameplayScreen != null && gameplayScreen.activeInHierarchy);
         
         if (!isGameplayActive)
         {
@@ -119,44 +128,41 @@ public class DiceVisibilityManager : MonoBehaviour
             return;
         }
         
-        // When gameplay first becomes active, show dice and ensure scaling is applied
-        if (!hasGameplayStarted)
-        {
-            hasGameplayStarted = true;
-            dicesController.ShowDices();
-            areDicesHidden = false;
-            Debug.Log("[DiceVisibilityManager] Gameplay started - dice shown");
-            
-            // Apply/reapply dice scaling if enabled and not yet applied
-            if (enableDiceScaling && !diceScalingApplied)
-            {
-                ApplyDiceScaling();
-            }
-        }
-        
-        // Check if any monitored panel is active
+        // Check if any monitored panel is active in hierarchy
         bool anyPanelActive = false;
         foreach (GameObject panel in panelsToMonitor)
         {
-            if (panel != null && panel.activeSelf)
+            if (panel != null && panel.activeInHierarchy)
             {
                 anyPanelActive = true;
                 break;
             }
         }
         
-        // Simple logic: Panel active = hide dice, Panel off = show dice
-        if (anyPanelActive && !areDicesHidden)
+        // Strictly control dice visibility:
+        // If any panel/popup/loading panel is active -> HIDE DICE
+        // Only show dice when gameplay is active AND no panel is active
+        if (anyPanelActive || !isGameplayActive)
         {
-            // Panel is active, hide dice
-            dicesController.HideDices();
-            areDicesHidden = true;
+            if (!areDicesHidden)
+            {
+                dicesController.HideDices();
+                areDicesHidden = true;
+            }
         }
-        else if (!anyPanelActive && areDicesHidden)
+        else
         {
-            // No panels active, show dice
-            dicesController.ShowDices();
-            areDicesHidden = false;
+            if (areDicesHidden || !hasGameplayStarted)
+            {
+                hasGameplayStarted = true;
+                dicesController.ShowDices();
+                areDicesHidden = false;
+                
+                if (enableDiceScaling && !diceScalingApplied)
+                {
+                    ApplyDiceScaling();
+                }
+            }
         }
     }
     

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3b886b3e84b99f94baa836b5149933e3
+guid: 275030e81e0ebc54faa512295bc289d3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4283255579849314899
-    second: Daily (2)_0
+      213: 1472330934711076843
+    second: Cross (3)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Daily (2)_0
+      name: Cross (3)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 373
-        height: 111
+        width: 137
+        height: 137
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 352d027914e217b30800000000000000
-      internalID: 4283255579849314899
+      spriteID: be7c5433f25ce6410800000000000000
+      internalID: 1472330934711076843
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Daily (2)_0: 4283255579849314899
+      Cross (3)_0: 1472330934711076843
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

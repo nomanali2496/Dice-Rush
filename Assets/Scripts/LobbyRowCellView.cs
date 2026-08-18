@@ -38,10 +38,21 @@ public class LobbyRowCellView : EnhancedScrollerCellView, IPointerDownHandler, I
     private Vector2 swipeStartPos;
     private bool isSwiping = false;
     
+    private HorizontalLobbyManager GetLobbyManager()
+    {
+        if (horizontalLobbyManager == null || !horizontalLobbyManager)
+        {
+            horizontalLobbyManager = HorizontalLobbyManager.Instance != null 
+                ? HorizontalLobbyManager.Instance 
+                : FindFirstObjectByType<HorizontalLobbyManager>(FindObjectsInactive.Include);
+        }
+        return horizontalLobbyManager;
+    }
+
     private void Awake()
     {
         // Find HorizontalLobbyManager in the scene
-        horizontalLobbyManager = FindFirstObjectByType<HorizontalLobbyManager>();
+        horizontalLobbyManager = GetLobbyManager();
         
         // Setup button listener and hover animation
         if (playButton != null)
@@ -139,9 +150,10 @@ public class LobbyRowCellView : EnhancedScrollerCellView, IPointerDownHandler, I
             LobbyGameObjectData data = item.GetCurrentData();
             if (data != null)
             {
-                if (horizontalLobbyManager != null)
+                HorizontalLobbyManager mgr = GetLobbyManager();
+                if (mgr != null)
                 {
-                    horizontalLobbyManager.OpenGameplayObject(data.lobbyIndex);
+                    mgr.OpenGameplayObject(data.lobbyIndex);
                 }
                 else
                 {
@@ -363,7 +375,8 @@ public class LobbyRowCellView : EnhancedScrollerCellView, IPointerDownHandler, I
         Vector2 swipeEndPos = eventData.position;
         Vector2 swipeDelta = swipeEndPos - swipeStartPos;
         
-        if (horizontalLobbyManager != null)
+        HorizontalLobbyManager mgr = GetLobbyManager();
+        if (mgr != null && mgr.gameObject.activeInHierarchy && mgr.enabled)
         {
             if (Mathf.Abs(swipeDelta.x) > swipeThreshold && Mathf.Abs(swipeDelta.x) > Mathf.Abs(swipeDelta.y))
             {
@@ -372,13 +385,13 @@ public class LobbyRowCellView : EnhancedScrollerCellView, IPointerDownHandler, I
                     float swipeDistance = Mathf.Abs(swipeDelta.x);
                     int itemsToScroll = Mathf.Clamp(Mathf.RoundToInt(swipeDistance / pixelsPerItem), 1, maxScrollItems);
                     
-                    if (swipeDelta.x < 0) horizontalLobbyManager.ScrollMultiple(itemsToScroll);
-                    else horizontalLobbyManager.ScrollMultiple(-itemsToScroll);
+                    if (swipeDelta.x < 0) mgr.ScrollMultiple(itemsToScroll);
+                    else mgr.ScrollMultiple(-itemsToScroll);
                 }
                 else
                 {
-                    if (swipeDelta.x < 0) horizontalLobbyManager.ScrollRight();
-                    else horizontalLobbyManager.ScrollLeft();
+                    if (swipeDelta.x < 0) mgr.ScrollRight();
+                    else mgr.ScrollLeft();
                 }
             }
         }

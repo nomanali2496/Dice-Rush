@@ -147,6 +147,12 @@ public class SelectPlayerPanelController : MonoBehaviour
         }
 
         HidePanel();
+
+        ChooseYourModeManager modeMgr = ChooseYourModeManager.Instance != null ? ChooseYourModeManager.Instance : FindFirstObjectByType<ChooseYourModeManager>(FindObjectsInactive.Include);
+        if (modeMgr != null)
+        {
+            modeMgr.OpenPanel();
+        }
     }
 }
 

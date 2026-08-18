@@ -1,4 +1,4 @@
-﻿#pragma warning disable 0414
+#pragma warning disable 0414
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -53,6 +53,12 @@ public class DicesController : MonoBehaviour
     // Events
     public System.Action<int, int> OnDiceRollComplete; // Called when roll finishes (dice1Value, dice2Value)
     
+    private void Awake()
+    {
+        // Ensure 3D dice are hidden by default on startup until gameplay is active
+        HideDices();
+    }
+
     private void Start()
     {
         // Setup button listener

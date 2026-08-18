@@ -8,7 +8,7 @@ using TMPro;
 /// <summary>
 /// Controls the unified "Mighty Tasks" popup panel.
 /// Manages tab switching between the DAILY (7-Day Login Rewards) tab and the WEEKLY (Tasks) tab,
-/// handles tab active/inactive visuals, sub-panel visibility, close button, and reset countdown timer.
+/// handles dynamic 5-task progression tracking, auto-fill progress bars, claims, and reset timer.
 /// </summary>
 public class MightyTasksPanelManager : MonoBehaviour
 {
@@ -17,6 +17,8 @@ public class MightyTasksPanelManager : MonoBehaviour
         Daily,
         Weekly
     }
+
+    public static MightyTasksPanelManager Instance { get; private set; }
 
     [Header("Panel Root & Navigation")]
     [Tooltip("Main popup panel root GameObject (defaults to this GameObject if unassigned)")]
@@ -54,13 +56,8 @@ public class MightyTasksPanelManager : MonoBehaviour
     [SerializeField] private Sprite inactiveTabSprite;
 
     [Header("Visual Customization Options")]
-    [Tooltip("If true, swaps tab sprites at runtime (only when sprite reference is assigned)")]
     [SerializeField] private bool changeTabSprites = true;
-
-    [Tooltip("If true, changes tab image color tint on tab switch")]
     [SerializeField] private bool changeTabColors = false;
-
-    [Tooltip("If true, applies scale feedback (0.95x) on inactive tab button. Leave false to preserve exact RectTransform layout.")]
     [SerializeField] private bool changeTabScale = false;
 
     [SerializeField] private Color activeTabColor = Color.white;
@@ -72,6 +69,10 @@ public class MightyTasksPanelManager : MonoBehaviour
 
     [Tooltip("Sub-panel containing the Weekly Tasks list")]
     [SerializeField] private GameObject weeklyContentPanel;
+
+    [Header("Weekly Task Cards Container")]
+    [Tooltip("Content container holding the 5 task items in ScrollView (auto-detected if null)")]
+    [SerializeField] private Transform weeklyTasksContainer;
 
     [Header("Collect Button")]
     [Tooltip("Global collect button for Daily Login Rewards (only shown when DAILY tab is active)")]
@@ -88,8 +89,23 @@ public class MightyTasksPanelManager : MonoBehaviour
 
     private Coroutine timerCoroutine;
 
+    // 5 Default Weekly Tasks Data definitions
+    private List<TaskData> defaultWeeklyTasks = new List<TaskData>()
+    {
+        new TaskData { taskId = "task_roll_50_dice", title = "Roll 50 Dice", description = "Roll 50 Total Dices in Gameplay", currentProgress = 50, targetProgress = 50, rewardChips = 500, rewardCash = 0f },
+        new TaskData { taskId = "task_win_3_matches", title = "Win 3 Matches", description = "Win 3 Matches in Any Mode", currentProgress = 3, targetProgress = 3, rewardChips = 750, rewardCash = 0f },
+        new TaskData { taskId = "task_play_5_games", title = "Play 5 Games", description = "Complete 5 Total Matches", currentProgress = 5, targetProgress = 5, rewardChips = 1000, rewardCash = 0f },
+        new TaskData { taskId = "task_earn_2000_coins", title = "Earn 2,000 Coins", description = "Earn 2000 Coins from Matches", currentProgress = 2000, targetProgress = 2000, rewardChips = 1500, rewardCash = 0f },
+        new TaskData { taskId = "task_score_100_pts", title = "Score 100 Points", description = "Score 100 Total Points in Grid", currentProgress = 100, targetProgress = 100, rewardChips = 0, rewardCash = 1.00f }
+    };
+
     private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+
         EnsureListenersWired();
     }
 
@@ -166,10 +182,9 @@ public class MightyTasksPanelManager : MonoBehaviour
 
     private void OnEnable()
     {
-        // Switch to default or active tab when panel opens
         SwitchTab(currentTab);
+        PopulateWeeklyTasks();
 
-        // Start reset countdown timer coroutine
         if (timerCoroutine != null)
         {
             StopCoroutine(timerCoroutine);
@@ -183,6 +198,86 @@ public class MightyTasksPanelManager : MonoBehaviour
         {
             StopCoroutine(timerCoroutine);
             timerCoroutine = null;
+        }
+    }
+
+    /// <summary>
+    /// Configures all 5 weekly task cards in the UI hierarchy with progress tracking and claim listeners
+    /// </summary>
+    public void PopulateWeeklyTasks()
+    {
+        MightyTaskItemUI[] taskCards = null;
+
+        if (weeklyTasksContainer != null)
+        {
+            taskCards = weeklyTasksContainer.GetComponentsInChildren<MightyTaskItemUI>(true);
+        }
+        else if (weeklyContentPanel != null)
+        {
+            taskCards = weeklyContentPanel.GetComponentsInChildren<MightyTaskItemUI>(true);
+        }
+        else
+        {
+            taskCards = GetComponentsInChildren<MightyTaskItemUI>(true);
+        }
+
+        if (taskCards == null || taskCards.Length == 0) return;
+
+        for (int i = 0; i < taskCards.Length; i++)
+        {
+            if (taskCards[i] == null) continue;
+
+            int taskDataIndex = i % defaultWeeklyTasks.Count;
+            TaskData baseData = defaultWeeklyTasks[taskDataIndex];
+
+            // Load saved task state from PlayerPrefs
+            TaskData taskInstance = new TaskData()
+            {
+                taskId = baseData.taskId,
+                title = baseData.title,
+                description = baseData.description,
+                targetProgress = baseData.targetProgress,
+                rewardChips = baseData.rewardChips,
+                rewardCash = baseData.rewardCash,
+                taskIcon = baseData.taskIcon,
+                currentProgress = PlayerPrefs.GetInt($"MightyTask_Prog_{baseData.taskId}", baseData.targetProgress),
+                isClaimed = PlayerPrefs.GetInt($"MightyTask_Claimed_{baseData.taskId}", 0) == 1
+            };
+
+            taskCards[i].SetupTask(taskInstance, OnClaimTaskClicked, OnGoTaskClicked);
+        }
+    }
+
+    private void OnClaimTaskClicked(TaskData task)
+    {
+        if (task == null) return;
+
+        Debug.Log($"<color=#00FF00>🎁 [MightyTasks] Task Claimed: {task.title} (+{task.rewardChips} Chips, +${task.rewardCash:F2})</color>");
+        PlayerPrefs.SetInt($"MightyTask_Claimed_{task.taskId}", 1);
+        PlayerPrefs.Save();
+
+        // Refresh UI
+        PopulateWeeklyTasks();
+    }
+
+    private void OnGoTaskClicked(TaskData task)
+    {
+        Debug.Log($"[MightyTasks] GO button clicked for task: {task?.title}");
+        ClosePanel();
+
+        // Navigate to ChooseYourMode or Lobby
+        ChooseYourModeManager chooseModeMgr = ChooseYourModeManager.Instance != null ? ChooseYourModeManager.Instance : FindFirstObjectByType<ChooseYourModeManager>(FindObjectsInactive.Include);
+        if (chooseModeMgr != null)
+        {
+            chooseModeMgr.OpenPanel();
+        }
+        else
+        {
+            HorizontalLobbyManager lobbyMgr = HorizontalLobbyManager.Instance != null ? HorizontalLobbyManager.Instance : FindFirstObjectByType<HorizontalLobbyManager>(FindObjectsInactive.Include);
+            if (lobbyMgr != null)
+            {
+                lobbyMgr.OnLobbyOpened();
+            }
         }
     }
 
@@ -209,25 +304,16 @@ public class MightyTasksPanelManager : MonoBehaviour
         SwitchTab(tab);
     }
 
-    /// <summary>
-    /// Public trigger for Unity UI Button OnClick event in Inspector (opens Daily tab).
-    /// </summary>
     public void OpenDailyTasksPanel()
     {
         OpenPanel(TaskTab.Daily);
     }
 
-    /// <summary>
-    /// Public trigger for Unity UI Button OnClick event in Inspector (opens Weekly tab).
-    /// </summary>
     public void OpenWeeklyTasksPanel()
     {
         OpenPanel(TaskTab.Weekly);
     }
 
-    /// <summary>
-    /// Closes the panel popup.
-    /// </summary>
     public void ClosePanel()
     {
         if (SoundManager.instance != null)
@@ -241,9 +327,6 @@ public class MightyTasksPanelManager : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Callback when Daily Tab button is clicked.
-    /// </summary>
     public void SelectDailyTab()
     {
         if (SoundManager.instance != null)
@@ -253,9 +336,6 @@ public class MightyTasksPanelManager : MonoBehaviour
         SwitchTab(TaskTab.Daily);
     }
 
-    /// <summary>
-    /// Callback when Weekly Tab button is clicked.
-    /// </summary>
     public void SelectWeeklyTab()
     {
         if (SoundManager.instance != null)
@@ -265,16 +345,11 @@ public class MightyTasksPanelManager : MonoBehaviour
         SwitchTab(TaskTab.Weekly);
     }
 
-    /// <summary>
-    /// Switches sub-panel visibility and updates tab button visuals.
-    /// </summary>
     public void SwitchTab(TaskTab tab)
     {
         currentTab = tab;
-
         bool isDaily = (tab == TaskTab.Daily);
 
-        // 1. Toggle Sub Panels Visibility
         if (dailyContentPanel != null)
         {
             dailyContentPanel.SetActive(isDaily);
@@ -285,13 +360,11 @@ public class MightyTasksPanelManager : MonoBehaviour
             weeklyContentPanel.SetActive(!isDaily);
         }
 
-        // 2. Toggle Collect Button Visibility (Daily tab only)
         if (collectButton != null)
         {
             collectButton.SetActive(isDaily);
         }
 
-        // 3. Update Daily Tab Visuals
         if (dailyTabImage != null)
         {
             if (changeTabSprites)
@@ -312,7 +385,6 @@ public class MightyTasksPanelManager : MonoBehaviour
             }
         }
 
-        // 4. Update Weekly Tab Visuals
         if (weeklyTabImage != null)
         {
             if (changeTabSprites)
@@ -333,7 +405,6 @@ public class MightyTasksPanelManager : MonoBehaviour
             }
         }
 
-        // 5. Scale feedback on active tab button (Optional, disabled by default to preserve exact RectTransform layout)
         if (changeTabScale)
         {
             if (dailyTabButton != null)
@@ -345,11 +416,13 @@ public class MightyTasksPanelManager : MonoBehaviour
                 weeklyTabButton.transform.localScale = !isDaily ? Vector3.one : new Vector3(0.95f, 0.95f, 1f);
             }
         }
+
+        if (!isDaily)
+        {
+            PopulateWeeklyTasks();
+        }
     }
 
-    /// <summary>
-    /// Coroutine that continuously updates the reset countdown timer until midnight (UTC / Local).
-    /// </summary>
     private IEnumerator UpdateResetTimerRoutine()
     {
         WaitForSeconds wait = new WaitForSeconds(1f);

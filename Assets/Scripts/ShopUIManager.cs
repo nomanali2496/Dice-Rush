@@ -40,6 +40,17 @@ public class ShopUIManager : MonoBehaviour
     {
         if (shopElements == null || shopElements.Length == 0)
         {
+            Button[] buttons = GetComponentsInChildren<Button>(true);
+            List<RectTransform> rects = new List<RectTransform>();
+            foreach (var btn in buttons)
+            {
+                if (btn != null) rects.Add(btn.GetComponent<RectTransform>());
+            }
+            shopElements = rects.ToArray();
+        }
+
+        if (shopElements == null || shopElements.Length == 0)
+        {
             Debug.LogWarning("[ShopUIManager] No shop elements assigned!");
             return;
         }

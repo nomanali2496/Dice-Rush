@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 /// <summary>
@@ -26,14 +26,25 @@ public class SwipeTouchZone : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     // Reference to HorizontalLobbyManager
     private HorizontalLobbyManager horizontalLobbyManager;
     
+    private HorizontalLobbyManager GetLobbyManager()
+    {
+        if (horizontalLobbyManager == null || !horizontalLobbyManager)
+        {
+            horizontalLobbyManager = HorizontalLobbyManager.Instance != null 
+                ? HorizontalLobbyManager.Instance 
+                : FindFirstObjectByType<HorizontalLobbyManager>(FindObjectsInactive.Include);
+        }
+        return horizontalLobbyManager;
+    }
+
     private void Start()
     {
         // Find HorizontalLobbyManager in the scene
-        horizontalLobbyManager = FindFirstObjectByType<HorizontalLobbyManager>();
+        horizontalLobbyManager = GetLobbyManager();
         
         if (horizontalLobbyManager == null)
         {
-            Debug.LogError("[SwipeTouchZone] HorizontalLobbyManager not found! Swipe detection will not work.");
+            Debug.LogWarning("[SwipeTouchZone] HorizontalLobbyManager not found on Start. Will lazily find on swipe.");
         }
         else
         {
@@ -75,7 +86,8 @@ public class SwipeTouchZone : MonoBehaviour, IPointerDownHandler, IPointerUpHand
             // Ensure horizontal swipe is more dominant than vertical
             if (Mathf.Abs(swipeDelta.x) > Mathf.Abs(swipeDelta.y))
             {
-                if (horizontalLobbyManager != null)
+                HorizontalLobbyManager mgr = GetLobbyManager();
+                if (mgr != null && mgr.gameObject.activeInHierarchy && mgr.enabled)
                 {
                     if (useVelocityScrolling)
                     {
@@ -91,14 +103,14 @@ public class SwipeTouchZone : MonoBehaviour, IPointerDownHandler, IPointerUpHand
                         {
                             if (showDebugLogs)
                                 Debug.Log($"[SwipeTouchZone] Swipe LEFT detected ({swipeDistance:F0}px) -> Scroll RIGHT by {itemsToScroll} items");
-                            horizontalLobbyManager.ScrollMultiple(itemsToScroll);
+                            mgr.ScrollMultiple(itemsToScroll);
                         }
                         // Swipe right = scroll left (show previous items)
                         else
                         {
                             if (showDebugLogs)
                                 Debug.Log($"[SwipeTouchZone] Swipe RIGHT detected ({swipeDistance:F0}px) -> Scroll LEFT by {itemsToScroll} items");
-                            horizontalLobbyManager.ScrollMultiple(-itemsToScroll);
+                            mgr.ScrollMultiple(-itemsToScroll);
                         }
                     }
                     else
@@ -109,14 +121,14 @@ public class SwipeTouchZone : MonoBehaviour, IPointerDownHandler, IPointerUpHand
                         {
                             if (showDebugLogs)
                                 Debug.Log("[SwipeTouchZone] Swipe LEFT detected -> Scroll RIGHT");
-                            horizontalLobbyManager.ScrollRight();
+                            mgr.ScrollRight();
                         }
                         // Swipe right = scroll left (show previous items)
                         else
                         {
                             if (showDebugLogs)
                                 Debug.Log("[SwipeTouchZone] Swipe RIGHT detected -> Scroll LEFT");
-                            horizontalLobbyManager.ScrollLeft();
+                            mgr.ScrollLeft();
                         }
                     }
                 }

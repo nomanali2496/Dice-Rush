@@ -9,11 +9,6 @@ using System.Collections.Generic;
 /// </summary>
 public class ShopGridScaler : MonoBehaviour
 {
-    [Header("Reference Values (1440x3216 resolution)")]
-    [SerializeField] private Vector2 referenceCellSize = new Vector2(480f, 590f); // Reference cell size at 1440x3216
-    [SerializeField] private Vector2 referenceSpacing = new Vector2(-4f, 116.7f); // Reference spacing at 1440x3216
-    [SerializeField] private Vector2 referenceParentSize = new Vector2(1440f, 1311f); // Reference parent size at 1440x3216
-    
     [Header("Padding (in pixels)")]
     [SerializeField] private float paddingLeft = 0f; // Padding on the left side
     [SerializeField] private float paddingRight = 0f; // Padding on the right side
@@ -27,6 +22,13 @@ public class ShopGridScaler : MonoBehaviour
     [SerializeField] private RectTransform upperTitle; // Reference to Upper Title (e.g. "GET COINS")
     [SerializeField] private RectTransform lowerTitle; // Reference to Lower Title
     
+    // Reference resolution
+    private Vector2 referenceScreenSize = new Vector2(1440f, 3216f);
+    
+    // Storage for original values (captured automatically in Awake)
+    private Vector2 originalCellSize;
+    private Vector2 originalSpacing;
+    
     // Storage for original offsets (for anchored elements)
     private Dictionary<RectTransform, Vector4> originalOffsets = new Dictionary<RectTransform, Vector4>();
     
@@ -35,6 +37,22 @@ public class ShopGridScaler : MonoBehaviour
 
     private void Awake()
     {
+        // Auto-assign Grid Layout Group if not set
+        if (gridLayoutGroup == null)
+        {
+            gridLayoutGroup = GetComponent<GridLayoutGroup>();
+        }
+
+        // Get RectTransform
+        rectTransform = GetComponent<RectTransform>();
+
+        // Store original grid layout values before any scaling occurs
+        if (gridLayoutGroup != null)
+        {
+            originalCellSize = gridLayoutGroup.cellSize;
+            originalSpacing = gridLayoutGroup.spacing;
+        }
+
         // Store original offsets for all anchored elements before any scaling happens
         StoreOriginalOffsets(cashBar);
         StoreOriginalOffsets(coinsBar);
@@ -57,7 +75,11 @@ public class ShopGridScaler : MonoBehaviour
         }
         
         // Get RectTransform
-        rectTransform = GetComponent<RectTransform>();
+        if (rectTransform == null)
+        {
+            rectTransform = GetComponent<RectTransform>();
+        }
+        
         if (rectTransform == null)
         {
             Debug.LogError("[ShopGridScaler] No RectTransform found on this GameObject!");
@@ -73,18 +95,14 @@ public class ShopGridScaler : MonoBehaviour
     /// </summary>
     private void ApplyScaling()
     {
-        // Get current parent size
-        float currentWidth = rectTransform.rect.width;
-        float currentHeight = rectTransform.rect.height;
-        
         // Calculate scale factors based on screen vs reference
-        float scaleFactorX = Screen.width / referenceParentSize.x;
-        float scaleFactorY = Screen.height / 3216f; // Use total screen height for layout-wide scaling
+        float scaleFactorX = Screen.width / referenceScreenSize.x;
+        float scaleFactorY = Screen.height / referenceScreenSize.y;
         
-        // Use smart scaling logic from LobbyScaler
+        // Use smart scaling logic
         float maxScale = Mathf.Max(scaleFactorX, scaleFactorY);
-        float scaledWidth = referenceParentSize.x * maxScale;
-        float scaledHeight = 3216f * maxScale;
+        float scaledWidth = referenceScreenSize.x * maxScale;
+        float scaledHeight = referenceScreenSize.y * maxScale;
         
         if (scaledWidth > Screen.width || scaledHeight > Screen.height)
         {
@@ -97,14 +115,14 @@ public class ShopGridScaler : MonoBehaviour
         
         // Calculate scaled cell size
         Vector2 scaledCellSize = new Vector2(
-            referenceCellSize.x * scaleFactor,
-            referenceCellSize.y * scaleFactor
+            originalCellSize.x * scaleFactor,
+            originalCellSize.y * scaleFactor
         );
         
         // Calculate scaled spacing
         Vector2 scaledSpacing = new Vector2(
-            referenceSpacing.x * scaleFactor,
-            referenceSpacing.y * scaleFactor
+            originalSpacing.x * scaleFactor,
+            originalSpacing.y * scaleFactor
         );
         
         // Apply to Grid Layout Group

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -35,6 +36,7 @@ public class HorizontalLobbyManager : MonoBehaviour
     
     [Header("UI Panels")]
     [SerializeField] private Button openLobbyPlayButton; // Button that opens this lobby panel
+    [SerializeField] private Button openShopButton; // Button that opens the shop panel
     [SerializeField] private SelectPlayerPanelController selectPlayerPanelController; // Reference to player selection panel
     [SerializeField] private GameObject waitingPanel;
     [SerializeField] private TMPro.TextMeshProUGUI waitingStatusText;
@@ -113,9 +115,37 @@ public class HorizontalLobbyManager : MonoBehaviour
         // Wire the main Play button to open the select player panel
         if (openLobbyPlayButton != null)
             openLobbyPlayButton.onClick.AddListener(OnMainPlayButtonClicked);
-        
+            
+        // Wire the Shop button to open the Shop panel
+        if (openShopButton == null)
+        {
+            Button[] allBtns = FindObjectsByType<Button>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+            foreach (var btn in allBtns)
+            {
+                if (btn != null && (btn.name.Equals("Shop", StringComparison.OrdinalIgnoreCase) || 
+                                    btn.name.Equals("ShopButton", StringComparison.OrdinalIgnoreCase) || 
+                                    btn.name.Equals("BtnShop", StringComparison.OrdinalIgnoreCase) || 
+                                    btn.name.Equals("ShopBtn", StringComparison.OrdinalIgnoreCase)))
+                {
+                    openShopButton = btn;
+                    break;
+                }
+            }
+        }
+
+        if (openShopButton != null)
+        {
+            openShopButton.onClick.RemoveListener(OnMainShopButtonClicked);
+            openShopButton.onClick.AddListener(OnMainShopButtonClicked);
+        }
+
         // Subscribe to PlayerModel events to update when backend data loads
         PlayerModel.OnDataUpdated += OnPlayerDataUpdated;
+    }
+
+    public void OnMainShopButtonClicked()
+    {
+        ShopController.ShowShop();
     }
     
     private IEnumerator InitializeButtonsRoutine()
@@ -166,6 +196,13 @@ public class HorizontalLobbyManager : MonoBehaviour
     /// </summary>
     public void OnLobbyOpened()
     {
+        if (gameObject != null && !gameObject.activeSelf)
+        {
+            gameObject.SetActive(true);
+            // Activating the GameObject automatically triggers OnEnable(), which performs complete lobby setup.
+            return;
+        }
+
         IsLobbyActive = true;
         isSwiping = false;
         isScrollAnimating = false;
@@ -681,6 +718,8 @@ public class HorizontalLobbyManager : MonoBehaviour
     /// </summary>
     public void ScrollLeft()
     {
+        if (gameObject == null || !gameObject.activeInHierarchy || !enabled) return;
+
         currentScrollIndex--;
         if (currentScrollIndex < 0) currentScrollIndex = BACKGROUND_COUNT - 1;
         
@@ -692,6 +731,8 @@ public class HorizontalLobbyManager : MonoBehaviour
     /// </summary>
     public void ScrollRight()
     {
+        if (gameObject == null || !gameObject.activeInHierarchy || !enabled) return;
+
         currentScrollIndex++;
         if (currentScrollIndex >= BACKGROUND_COUNT) currentScrollIndex = 0;
         
@@ -706,6 +747,12 @@ public class HorizontalLobbyManager : MonoBehaviour
     {
         if (steps == 0) return;
         
+        if (gameObject == null || !gameObject.activeInHierarchy || !enabled)
+        {
+            Debug.LogWarning("[HorizontalLobbyManager] Cannot scroll because LobbyManager is inactive or disabled.");
+            return;
+        }
+
         steps = Mathf.Clamp(steps, -BACKGROUND_COUNT, BACKGROUND_COUNT);
         
         if (multiScrollCoroutine != null)
@@ -769,7 +816,7 @@ public class HorizontalLobbyManager : MonoBehaviour
                 swipeStartPos = touch.position;
                 isSwiping = true;
             }
-            else if (touch.phase == TouchPhase.Ended && isSwiping)
+            else if ((touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled) && isSwiping)
             {
                 ProcessSwipeCompletion(touch.position);
             }
@@ -907,7 +954,15 @@ public class HorizontalLobbyManager : MonoBehaviour
 
     private void HandleMatchError(string errorMessage)
     {
-        Debug.LogError("[HorizontalLobbyManager] Matchmaking error: " + errorMessage + ". Auto-recovering to game match.");
+        Debug.LogError("[HorizontalLobbyManager] Matchmaking error: " + errorMessage);
+
+        WaitingForPlayerPanelManager waitingMgr = WaitingForPlayerPanelManager.Instance != null ? WaitingForPlayerPanelManager.Instance : FindFirstObjectByType<WaitingForPlayerPanelManager>(FindObjectsInactive.Include);
+        if (waitingMgr != null && waitingMgr.IsPanelActive)
+        {
+            Debug.Log("[HorizontalLobbyManager] WaitingForPlayerPanel is active. Staying on waiting panel for player/bot readiness.");
+            return;
+        }
+
         if (waitingPanel != null)
         {
             waitingPanel.SetActive(false);
@@ -931,10 +986,26 @@ public class HorizontalLobbyManager : MonoBehaviour
 
     /// <summary>
     /// Called when the main Play button in Main Menu is clicked.
-    /// Opens the Select Player Panel for player count selection.
+    /// Opens the Choose Your Mode panel (or Select Player Panel if ChooseYourMode is unassigned).
     /// </summary>
     public void OnMainPlayButtonClicked()
     {
+        if (selectPlayerPanelController == null)
+        {
+            selectPlayerPanelController = FindFirstObjectByType<SelectPlayerPanelController>(FindObjectsInactive.Include);
+        }
+
+        ChooseYourModeManager chooseModeMgr = ChooseYourModeManager.Instance != null ? ChooseYourModeManager.Instance : FindFirstObjectByType<ChooseYourModeManager>(FindObjectsInactive.Include);
+        if (chooseModeMgr != null)
+        {
+            if (selectPlayerPanelController != null)
+            {
+                selectPlayerPanelController.HidePanel();
+            }
+            chooseModeMgr.OpenPanel();
+            return;
+        }
+
         if (selectPlayerPanelController == null)
         {
             selectPlayerPanelController = FindFirstObjectByType<SelectPlayerPanelController>(FindObjectsInactive.Include);
