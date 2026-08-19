@@ -8,23 +8,21 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
 {
     public static WaitingForPlayerPanelManager Instance { get; private set; }
 
-    // ========== YE PROPERTY ZAROORI HAI ==========
     public bool IsPanelActive => waitingForPlayerPanel != null ? waitingForPlayerPanel.activeSelf : gameObject.activeSelf;
-    // =============================================
 
     [Header("Panel References")]
     [SerializeField] private GameObject waitingForPlayerPanel;
-    [SerializeField] private GameObject selectBoardPanel;      // Back button ke liye (wapas jaana)
-    [SerializeField] private GameObject gameplayScreenPanel;   // Start Game ke baad yeh open hoga
+    [SerializeField] private GameObject selectBoardPanel;
+    [SerializeField] private GameObject gameplayScreenPanel;
 
     [Header("Texts")]
     [SerializeField] private TextMeshProUGUI playerCountText;
     [SerializeField] private TextMeshProUGUI lookingForPlayersTitle;
 
     [Header("Slots")]
-    [SerializeField] private Transform slotsContainer;          // Content
-    [SerializeField] private GameObject playerSlotPrefab;       // ProfilePlayer prefab
-    [SerializeField] private GameObject waitingSlotPrefab;      // Waitingtojoin prefab
+    [SerializeField] private Transform slotsContainer;
+    [SerializeField] private GameObject playerSlotPrefab;
+    [SerializeField] private GameObject waitingSlotPrefab;
 
     [Header("Buttons")]
     [SerializeField] private Button startGameButton;
@@ -37,7 +35,6 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
     [SerializeField] private float botJoinInterval = 1.2f;
     [SerializeField] private bool autoStartWhenFull = false;
 
-    // Runtime
     private int targetPlayerCount = 5;
     private int currentJoinedCount = 0;
     private bool isLocalPlayerReady = true;
@@ -109,8 +106,6 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
     {
         ClearSlots();
 
-        // Only spawn slots for players who have actually joined.
-        // No extra empty "Waiting..." slots — count grows as players join.
         for (int i = 0; i < players.Count; i++)
         {
             GameObject slot = Instantiate(playerSlotPrefab, slotsContainer);
@@ -153,6 +148,11 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
             UpdateUI();
             index++;
         }
+
+        if (autoStartWhenFull)
+        {
+            OnStartGameClicked();
+        }
     }
 
     private void UpdateUI()
@@ -192,7 +192,6 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
 
         SoundManager.instance?.PlayTap();
 
-        // Baki empty slots ko bots se fill karo
         while (players.Count < targetPlayerCount)
         {
             players.Add(new PlayerSlotData("Bot_" + Random.Range(100, 999), true, true));
@@ -201,34 +200,32 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
         CloseWaitingPanel();
         Debug.Log("🚀 Starting Game with " + targetPlayerCount + " players");
 
-        // ── Option 1: GameManager ke zariye proper game start karo ──
         if (GameManager.Instance != null)
         {
-            // targetPlayerCount ke liye ek minimal LobbyConfig banao
             LobbyConfig config = new LobbyConfig(
-                lobbyId: -1,
-                numberOfPlayers: targetPlayerCount,
-                entryFeeCash: 0,
-                entryFeeChips: 0,
-                prizePool1stCash: 0f,
-                prizePool1stChips: 0,
-                prizePool2ndCash: 0f,
-                prizePool2ndChips: 0,
-                prizePool3rdCash: 0f,
-                prizePool3rdChips: 0
+                -1,
+                targetPlayerCount,
+                0,
+                0,
+                0f,
+                0,
+                0f,
+                0,
+                0f,
+                0
             );
+
             GameManager.Instance.ConfigureGameFromLobby(config);
             return;
         }
 
-        // ── Option 2: Directly gameplay screen activate karo ──
         if (gameplayScreenPanel != null)
         {
             gameplayScreenPanel.SetActive(true);
         }
         else
         {
-            Debug.LogWarning("[WaitingForPlayerPanelManager] gameplayScreenPanel assign nahi hai! Inspector mein assign karo.");
+            Debug.LogWarning("[WaitingForPlayerPanelManager] gameplayScreenPanel assign nahi hai!");
         }
     }
 

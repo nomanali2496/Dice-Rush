@@ -806,6 +806,34 @@ public class HorizontalLobbyManager : MonoBehaviour
     {
         if (!enableSwipeDetection) return;
         
+#if ENABLE_INPUT_SYSTEM
+        // New Input System implementation
+        if (UnityEngine.InputSystem.Touchscreen.current != null && UnityEngine.InputSystem.Touchscreen.current.touches.Count > 0)
+        {
+            var touch = UnityEngine.InputSystem.Touchscreen.current.touches[0];
+            if (touch.phase.ReadValue() == UnityEngine.InputSystem.TouchPhase.Began)
+            {
+                swipeStartPos = touch.position.ReadValue();
+                isSwiping = true;
+            }
+            else if ((touch.phase.ReadValue() == UnityEngine.InputSystem.TouchPhase.Ended || touch.phase.ReadValue() == UnityEngine.InputSystem.TouchPhase.Canceled) && isSwiping)
+            {
+                ProcessSwipeCompletion(touch.position.ReadValue());
+            }
+        }
+        else if (UnityEngine.InputSystem.Mouse.current != null)
+        {
+            if (UnityEngine.InputSystem.Mouse.current.leftButton.wasPressedThisFrame)
+            {
+                swipeStartPos = UnityEngine.InputSystem.Mouse.current.position.ReadValue();
+                isSwiping = true;
+            }
+            else if (UnityEngine.InputSystem.Mouse.current.leftButton.wasReleasedThisFrame && isSwiping)
+            {
+                ProcessSwipeCompletion(UnityEngine.InputSystem.Mouse.current.position.ReadValue());
+            }
+        }
+#else
         // Handle Touch Input
         if (Input.touchCount > 0)
         {
@@ -834,6 +862,7 @@ public class HorizontalLobbyManager : MonoBehaviour
                 ProcessSwipeCompletion(Input.mousePosition);
             }
         }
+#endif
     }
 
     private void ProcessSwipeCompletion(Vector2 swipeEndPos)
