@@ -335,7 +335,11 @@ public class SocketManager : MonoBehaviour
     {
         if (isQuitting) return;
         string msg = err != null ? err.message : "Unknown Error";
-        if (msg.Contains("Aborted") || msg.Contains("Closed"))
+        
+        // Filter out harmless exceptions and expected closures
+        if (msg.Contains("Aborted") || 
+            msg.Contains("Closed") || 
+            msg.Contains("WSACancelBlockingCall"))
         {
             Debug.Log($"[SocketManager] Socket info: {msg}");
             return;
@@ -374,7 +378,7 @@ public class SocketManager : MonoBehaviour
 public class FindMatchPayload
 {
     public string mode;
-    public int stake;
+    public float stake;
     public string lobbyId;
 }
 

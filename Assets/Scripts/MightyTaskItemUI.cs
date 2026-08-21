@@ -68,8 +68,8 @@ public class MightyTaskItemUI : MonoBehaviour
     [Tooltip("Blue GO button (shown when task is in-progress)")]
     [SerializeField] private Button goButton;
 
-    [Tooltip("Badge/text shown ONLY after task reward has been claimed (Do NOT assign Title text here!)")]
-    [SerializeField] private GameObject completedBadge;
+    // [Tooltip("Badge/text shown ONLY after task reward has been claimed (Do NOT assign Title text here!)")]
+    // [SerializeField] private GameObject completedBadge;
 
     private TaskData currentTaskData;
     private Action<TaskData> onClaimCallback;
@@ -210,12 +210,12 @@ public class MightyTaskItemUI : MonoBehaviour
         }
 
         // 7. Sanity check: if Completed Badge points to titleText or descriptionText, clear it!
-        if (completedBadge != null && (completedBadge == (titleText != null ? titleText.gameObject : null) || 
-                                       completedBadge == (descriptionText != null ? descriptionText.gameObject : null)))
-        {
-            Debug.LogWarning($"[MightyTaskItemUI] Fixed misconfigured Completed Badge on {gameObject.name} (Title Text was assigned to Completed Badge). Clearing reference.");
-            completedBadge = null;
-        }
+        // if (completedBadge != null && (completedBadge == (titleText != null ? titleText.gameObject : null) || 
+        //                                completedBadge == (descriptionText != null ? descriptionText.gameObject : null)))
+        // {
+        //     Debug.LogWarning($"[MightyTaskItemUI] Fixed misconfigured Completed Badge on {gameObject.name} (Title Text was assigned to Completed Badge). Clearing reference.");
+        //     completedBadge = null;
+        // }
     }
 
     /// <summary>
@@ -379,11 +379,11 @@ public class MightyTaskItemUI : MonoBehaviour
         if (claimButton != null) claimButton.gameObject.SetActive(!isClaimed && isCompleted);
         if (goButton != null) goButton.gameObject.SetActive(!isClaimed && !isCompleted);
 
-        if (completedBadge != null && completedBadge != (titleText != null ? titleText.gameObject : null) &&
-            completedBadge != (descriptionText != null ? descriptionText.gameObject : null))
-        {
-            completedBadge.SetActive(isClaimed);
-        }
+        // if (completedBadge != null && completedBadge != (titleText != null ? titleText.gameObject : null) &&
+        //     completedBadge != (descriptionText != null ? descriptionText.gameObject : null))
+        // {
+        //     completedBadge.SetActive(isClaimed);
+        // }
     }
 
     private void OnClaimClicked()

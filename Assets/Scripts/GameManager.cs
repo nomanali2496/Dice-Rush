@@ -1789,7 +1789,7 @@ public class GameManager : MonoBehaviour
         {
             int reqPlayers = (config != null && config.numberOfPlayers > 0) ? config.numberOfPlayers : 3;
             Debug.LogWarning($"[GameManager] matchData is null! Auto-generating fallback matchData for {reqPlayers} players.");
-            matchData = CreateFallbackMatchData(reqPlayers, config != null ? (int)config.entryFeeCash : 100);
+            matchData = CreateFallbackMatchData(reqPlayers, config != null ? (config.entryFeeCash > 0 ? config.entryFeeCash : config.entryFeeChips) : 100f);
         }
         currentMatchData = matchData;
 
@@ -1891,7 +1891,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// Creates a fallback StartGameData payload for offline or CPU matches
     /// </summary>
-    public static StartGameData CreateFallbackMatchData(int totalPlayers = 3, int stake = 100)
+    public static StartGameData CreateFallbackMatchData(int totalPlayers = 3, float stake = 100f)
     {
         StartGameData fallback = new StartGameData();
         fallback.roomId = $"room_{totalPlayers}p_{Random.Range(1000, 9999)}";
@@ -2003,7 +2003,7 @@ public class GameManager : MonoBehaviour
         }
 
         // Calculate earnings for winner
-        int stake = currentLobbyConfig != null ? (int)currentLobbyConfig.entryFeeCash : 100;
+        float stake = currentLobbyConfig != null ? (currentLobbyConfig.entryFeeCash > 0 ? currentLobbyConfig.entryFeeCash : currentLobbyConfig.entryFeeChips) : 100f;
         int totalPlayers = data.players.Count > 0 ? data.players.Count : 3;
         double prize = stake * totalPlayers;
 

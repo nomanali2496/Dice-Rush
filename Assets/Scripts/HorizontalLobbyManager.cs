@@ -223,7 +223,18 @@ public class HorizontalLobbyManager : MonoBehaviour
             SettingManager.instance.ApplyMusicSetting();
 
         if (_lobbyObjectsData != null && _lobbyObjectsData.Length > 0 && allLobbyItems != null && allLobbyItems.Count > 0)
+        {
+            // Ensure configs match SelectedPlayerCount if the lobby was already initialized
+            if (SelectedPlayerCount > 0)
+            {
+                for (int i = 0; i < BACKGROUND_COUNT; i++)
+                {
+                    LobbyConfig config = LobbyModel.GetConfig(i);
+                    if (config != null) config.numberOfPlayers = SelectedPlayerCount;
+                }
+            }
             UpdateVisibleRows(true);
+        }
         else
             InitializeLobbyRows();
 
@@ -256,7 +267,17 @@ public class HorizontalLobbyManager : MonoBehaviour
 
         // Refresh lobby rows when GameObject becomes active
         if (_lobbyObjectsData != null && _lobbyObjectsData.Length > 0 && allLobbyItems != null && allLobbyItems.Count > 0)
+        {
+            if (SelectedPlayerCount > 0)
+            {
+                for (int i = 0; i < BACKGROUND_COUNT; i++)
+                {
+                    LobbyConfig config = LobbyModel.GetConfig(i);
+                    if (config != null) config.numberOfPlayers = SelectedPlayerCount;
+                }
+            }
             UpdateVisibleRows(true);
+        }
         else
             InitializeLobbyRows();
 
@@ -919,14 +940,13 @@ public class HorizontalLobbyManager : MonoBehaviour
 
         _pendingLobbyIndex = lobbyIndex;
         
-        int reqPlayers = SelectedPlayerCount > 0 ? SelectedPlayerCount : config.numberOfPlayers;
-        config.numberOfPlayers = reqPlayers;
+        int reqPlayers = config.numberOfPlayers;
         
         // Calculate the fee (prioritize cash, fallback to chips)
-        int entryFee = config.entryFeeCash > 0 ? (int)config.entryFeeCash : config.entryFeeChips;
+        float entryFee = config.entryFeeCash > 0 ? config.entryFeeCash : config.entryFeeChips;
 
         // Use the official mode and ID from the backend database
-        string mode = $"{reqPlayers}-players"; 
+        string mode = !string.IsNullOrEmpty(config.mode) ? config.mode : $"{reqPlayers}p";
         string lobbyId = config.lobbyId;
 
         Debug.Log($"[HorizontalLobbyManager] UI Button Clicked. Requesting match for {reqPlayers} players: ID {lobbyId}, Mode {mode}, Stake {entryFee}");
@@ -983,6 +1003,12 @@ public class HorizontalLobbyManager : MonoBehaviour
 
     private void HandleMatchError(string errorMessage)
     {
+        if (!string.IsNullOrEmpty(errorMessage) && errorMessage.ToLower().Contains("request aborted"))
+        {
+            Debug.Log("[HorizontalLobbyManager] Matchmaking request aborted (likely app quit).");
+            return;
+        }
+        
         Debug.LogError("[HorizontalLobbyManager] Matchmaking error: " + errorMessage);
 
         WaitingForPlayerPanelManager waitingMgr = WaitingForPlayerPanelManager.Instance != null ? WaitingForPlayerPanelManager.Instance : FindFirstObjectByType<WaitingForPlayerPanelManager>(FindObjectsInactive.Include);
@@ -1060,7 +1086,7 @@ public class HorizontalLobbyManager : MonoBehaviour
     /// Starts matchmaking for a specific player count selection (3, 5, 8, 10).
     /// Updates visible lobby card if found, opens waiting panel, and sends matchmaking request.
     /// </summary>
-    public void StartMatchmakingForPlayerCount(int playerCount, int defaultStake = 100, string defaultLobbyId = "combo-dice")
+    public void StartMatchmakingForPlayerCount(int playerCount, float defaultStake = 100f, string defaultLobbyId = "combo-dice")
     {
         if (gameObject != null && !gameObject.activeSelf)
         {
@@ -1092,7 +1118,7 @@ public class HorizontalLobbyManager : MonoBehaviour
         }
         else
         {
-            string mode = $"{playerCount}-players";
+            string mode = $"{playerCount}p";
             Debug.Log($"[HorizontalLobbyManager] Requesting match for mode: {mode}, stake: {defaultStake}, players: {playerCount}");
 
             if (waitingPanel != null)

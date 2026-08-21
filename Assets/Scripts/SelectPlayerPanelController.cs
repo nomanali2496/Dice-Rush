@@ -32,7 +32,7 @@ public class SelectPlayerPanelController : MonoBehaviour
     [Tooltip("Lobby ID to join when a mode is selected")]
     [SerializeField] private string lobbyId = "combo-dice";
     [Tooltip("Default entry stake amount")]
-    [SerializeField] private int defaultStake = 100;
+    [SerializeField] private float defaultStake = 100f;
     [Tooltip("Optional reference to the waiting/matchmaking panel to trigger after selection")]
     [SerializeField] private GameObject waitingPanel;
 

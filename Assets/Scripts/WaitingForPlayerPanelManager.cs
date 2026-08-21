@@ -74,7 +74,7 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
         backButton?.onClick.AddListener(OnBackClicked);
     }
 
-    public void OpenWaitingPanel(int maxPlayers, int stake = 100, string lobbyId = "combo-dice")
+    public void OpenWaitingPanel(int maxPlayers, float stake = 100f, string lobbyId = "combo-dice")
     {
         targetPlayerCount = Mathf.Clamp(maxPlayers, 2, 10);
         isLocalPlayerReady = true;
@@ -109,6 +109,7 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
         for (int i = 0; i < players.Count; i++)
         {
             GameObject slot = Instantiate(playerSlotPrefab, slotsContainer);
+            slot.SetActive(true); // Fix: Ensure it's active even if prefab is disabled
             var ui = slot.GetComponent<WaitingPlayerSlotUI>();
             if (ui != null)
                 ui.SetJoinedPlayer(players[i].name, players[i].avatar, players[i].isReady);
@@ -149,10 +150,8 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
             index++;
         }
 
-        if (autoStartWhenFull)
-        {
-            OnStartGameClicked();
-        }
+        // Fix: Removed autoStartWhenFull to prevent game from starting on its own
+        // User must manually press the Start Game button
     }
 
     private void UpdateUI()

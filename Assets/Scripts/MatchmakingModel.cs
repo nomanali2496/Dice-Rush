@@ -16,13 +16,13 @@ public static class MatchmakingModel
     public static event Action<int, int> OnMatchmakingUpdated;
 
     private static string lastMode;
-    private static int lastStake;
+    private static float lastStake;
     private static string lastLobbyId;
     private static BestHTTP.SocketIO3.Socket lastSocket;
     private static bool localForfeitPending;
     private static bool reconnectPending;
 
-    public static void FindMatch(string mode, int stake, string lobbyId)
+    public static void FindMatch(string mode, float stake, string lobbyId)
     {
         lastMode = mode;
         lastStake = stake;
@@ -236,6 +236,13 @@ public static class MatchmakingModel
     {
         if (err == null) return;
         string msg = err.message ?? "Unknown Server Error";
+        
+        if (msg.ToLower().Contains("request aborted") || msg.ToLower().Contains("transport close"))
+        {
+            Debug.Log($"<color=#AAAAAA>ℹ️ [Socket] Connection aborted during quit/shutdown: {msg}</color>");
+            return;
+        }
+
         Debug.LogError($"❌ <color=#FF0000>[Socket ERROR] 'error' received: {msg}</color>");
 
         // Player backgrounded while a match was being found — server already placed them in a match.

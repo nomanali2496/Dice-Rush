@@ -571,11 +571,50 @@ public class NewLeaderboardManager : MonoBehaviour
         {
             if (detailPanels[i] != null)
             {
-                detailPanels[i].SetActive(i == catIdx);
+                bool isActive = (i == catIdx);
+                detailPanels[i].SetActive(isActive);
+
+                if (isActive)
+                {
+                    PopulateDetailPanel(category, detailPanels[i]);
+                }
             }
         }
 
         Debug.Log($"📊 [NewLeaderboardManager] Opened Detail Panel for Category: {CategoryNames[catIdx]}");
+    }
+
+    private void PopulateDetailPanel(CategoryType category, GameObject panel)
+    {
+        if (panel == null) return;
+
+        // Try to find row scripts attached to the children (e.g. 10 rows)
+        LeaderboardCategoryRowUI[] rows = panel.GetComponentsInChildren<LeaderboardCategoryRowUI>(true);
+
+        if (rows == null || rows.Length == 0)
+        {
+            Debug.LogWarning($"[NewLeaderboardManager] No LeaderboardCategoryRowUI scripts found inside {panel.name}. Please attach the script to each row.");
+            return;
+        }
+
+        // Sort them by sibling index to ensure order is 1 to 10
+        Array.Sort(rows, (a, b) => a.transform.GetSiblingIndex().CompareTo(b.transform.GetSiblingIndex()));
+
+        List<LeaderboardCategoryEntry> entries = categoryData.ContainsKey(category) ? categoryData[category] : new List<LeaderboardCategoryEntry>();
+
+        for (int i = 0; i < rows.Length; i++)
+        {
+            if (i < entries.Count)
+            {
+                rows[i].gameObject.SetActive(true);
+                var entry = entries[i];
+                rows[i].SetData(entry.rank, entry.playerName, entry.scoreDisplay, entry.avatarSprite);
+            }
+            else
+            {
+                rows[i].gameObject.SetActive(false);
+            }
+        }
     }
 
     /// <summary>
