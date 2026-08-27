@@ -603,7 +603,7 @@ public class GameManager : MonoBehaviour
             if (currentMatchData != null && currentMatchData.gameplayStartsAt > 0)
             {
                 double elapsedSeconds = (currentTimeMs - currentMatchData.gameplayStartsAt) / 1000.0;
-                float durationToUse = currentMatchData.duration > 0 ? currentMatchData.duration : gameTimer;
+                float durationToUse = gameTimer; // FORCE Inspector timer
                 currentTimer = Mathf.Max(0, durationToUse - (float)elapsedSeconds);
             }
             else
@@ -806,7 +806,7 @@ public class GameManager : MonoBehaviour
             {
                 // Sync to backend absolute start time
                 double elapsedSeconds = (System.DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() - currentMatchData.gameplayStartsAt) / 1000.0;
-                float durationToUse = currentMatchData.duration > 0 ? currentMatchData.duration : gameTimer;
+                float durationToUse = gameTimer; // FORCE Inspector timer
                 currentTimer = Mathf.Max(0, durationToUse - (float)elapsedSeconds);
             }
             else

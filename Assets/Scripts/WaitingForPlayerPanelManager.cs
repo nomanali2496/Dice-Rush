@@ -106,8 +106,11 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
     {
         ClearSlots();
 
+        // 1. Instantiate joined players
         for (int i = 0; i < players.Count; i++)
         {
+            if (i >= targetPlayerCount) break; // Safety check
+
             GameObject slot = Instantiate(playerSlotPrefab, slotsContainer);
             slot.SetActive(true); // Fix: Ensure it's active even if prefab is disabled
             var ui = slot.GetComponent<WaitingPlayerSlotUI>();
@@ -117,6 +120,19 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
             spawnedSlots.Add(slot);
         }
 
+        // 2. Instantiate "Waiting..." slots for the remaining empty spots
+        int remainingSlots = targetPlayerCount - players.Count;
+        for (int i = 0; i < remainingSlots; i++)
+        {
+            if (waitingSlotPrefab != null)
+            {
+                GameObject waitingSlot = Instantiate(waitingSlotPrefab, slotsContainer);
+                waitingSlot.SetActive(true);
+                spawnedSlots.Add(waitingSlot);
+            }
+        }
+
+        // Force rebuild to ensure ScrollView detects the new size correctly
         if (slotsContainer is RectTransform rt)
             LayoutRebuilder.ForceRebuildLayoutImmediate(rt);
     }

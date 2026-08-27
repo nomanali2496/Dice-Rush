@@ -7,7 +7,7 @@ public class ProfilePanelUI : MonoBehaviour
     [Header("Profile Card Info")]
     [SerializeField] private Image profileIcon;
     [SerializeField] private Image frameIcon; // Added for frame
-    [SerializeField] private TMP_Text playerNameText;
+    [SerializeField] private TMP_InputField playerNameInputField;
     [SerializeField] private TMP_Text playerIdText;
     [SerializeField] private TMP_Text playerLikesText;
 
@@ -36,6 +36,8 @@ public class ProfilePanelUI : MonoBehaviour
 
     private string currentPlayerId = "";
     private bool isSelfView = true;
+    private bool isNameEditMode = false;
+    private string originalPlayerName = "";
 
     private void Start()
     {
@@ -44,6 +46,8 @@ public class ProfilePanelUI : MonoBehaviour
         if (addFriendButton != null) addFriendButton.onClick.AddListener(OnAddFriendClicked);
         if (editProfileIconButton != null) editProfileIconButton.onClick.AddListener(OnEditProfileIconClicked);
         if (editPlayerNameButton != null) editPlayerNameButton.onClick.AddListener(OnEditPlayerNameClicked);
+
+        PlayerModel.OnDataUpdated += OnPlayerDataUpdated;
     }
 
     private void OnDestroy()
@@ -53,6 +57,16 @@ public class ProfilePanelUI : MonoBehaviour
         if (addFriendButton != null) addFriendButton.onClick.RemoveListener(OnAddFriendClicked);
         if (editProfileIconButton != null) editProfileIconButton.onClick.RemoveListener(OnEditProfileIconClicked);
         if (editPlayerNameButton != null) editPlayerNameButton.onClick.RemoveListener(OnEditPlayerNameClicked);
+
+        PlayerModel.OnDataUpdated -= OnPlayerDataUpdated;
+    }
+
+    private void OnPlayerDataUpdated()
+    {
+        if (isSelfView && gameObject.activeInHierarchy)
+        {
+            SetupForSelf();
+        }
     }
 
     /// <summary>
@@ -66,7 +80,11 @@ public class ProfilePanelUI : MonoBehaviour
 
         currentPlayerId = PlayerModel.Id;
         
-        if (playerNameText != null) playerNameText.text = !string.IsNullOrEmpty(PlayerModel.Name) ? PlayerModel.Name : "Guest";
+        if (playerNameInputField != null) 
+        {
+            playerNameInputField.text = !string.IsNullOrEmpty(PlayerModel.Name) ? PlayerModel.Name : "Guest";
+            playerNameInputField.interactable = false;
+        }
         if (playerIdText != null) playerIdText.text = currentPlayerId;
         
         if (totalWinsText != null) totalWinsText.text = PlayerModel.Wins.ToString();
@@ -84,6 +102,17 @@ public class ProfilePanelUI : MonoBehaviour
 
         // Load Avatar
         UpdateAvatarDisplay(PlayerModel.Avatar);
+
+        // Load Frame
+        if (frameIcon != null)
+        {
+            int savedFrameIndex = PlayerPrefs.GetInt("SelectedProfileFrameIndex", 0);
+            if (AvatarSelector.Instance != null)
+            {
+                Sprite frameSprite = AvatarSelector.Instance.GetBackgroundSpriteByIndex(savedFrameIndex);
+                if (frameSprite != null) frameIcon.sprite = frameSprite;
+            }
+        }
     }
 
     /// <summary>
@@ -97,7 +126,11 @@ public class ProfilePanelUI : MonoBehaviour
 
         currentPlayerId = data.id;
 
-        if (playerNameText != null) playerNameText.text = data.name;
+        if (playerNameInputField != null) 
+        {
+            playerNameInputField.text = data.name;
+            playerNameInputField.interactable = false;
+        }
         if (playerIdText != null) playerIdText.text = data.id;
         
         if (totalWinsText != null) totalWinsText.text = data.wins.ToString();
@@ -206,8 +239,32 @@ public class ProfilePanelUI : MonoBehaviour
 
     private void OnEditPlayerNameClicked()
     {
-        // Open Name Edit Logic
-        Debug.Log("Edit Player Name Clicked");
+        if (playerNameInputField == null) return;
+        
+        if (!isNameEditMode)
+        {
+            isNameEditMode = true;
+            originalPlayerName = !string.IsNullOrEmpty(PlayerModel.Name) ? PlayerModel.Name : "Guest";
+            playerNameInputField.interactable = true;
+            playerNameInputField.ActivateInputField();
+        }
+        else
+        {
+            string newName = playerNameInputField.text.Trim();
+            if (!string.IsNullOrEmpty(newName) && newName != originalPlayerName && newName.Length >= 3)
+            {
+                if (BackendAuthService.Instance != null)
+                    BackendAuthService.Instance.UpdateProfile(newName);
+            }
+            else
+            {
+                Debug.LogWarning($"[ProfilePanelUI] Name edit ignored or invalid. New: '{newName}', Old: '{originalPlayerName}', Length: {newName.Length}");
+                playerNameInputField.text = originalPlayerName; // Revert if invalid
+            }
+            
+            isNameEditMode = false;
+            playerNameInputField.interactable = false;
+        }
     }
 }
 

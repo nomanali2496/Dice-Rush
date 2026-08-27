@@ -588,16 +588,64 @@ public class NewLeaderboardManager : MonoBehaviour
     {
         if (panel == null) return;
 
-        // Try to find row scripts attached to the children (e.g. 10 rows)
-        LeaderboardCategoryRowUI[] rows = panel.GetComponentsInChildren<LeaderboardCategoryRowUI>(true);
+        // Auto-detect PositionManager if it exists
+        Transform positionManager = panel.transform.Find("PositionManager");
+        if (positionManager == null) positionManager = panel.transform; // fallback to panel itself
+
+        // Try to find row scripts attached to the children
+        LeaderboardCategoryRowUI[] rows = positionManager.GetComponentsInChildren<LeaderboardCategoryRowUI>(true);
+
+        // If no scripts are attached, let's AUTOMATICALLY attach and configure them based on your exact hierarchy!
+        if (rows == null || rows.Length == 0)
+        {
+            List<LeaderboardCategoryRowUI> autoRows = new List<LeaderboardCategoryRowUI>();
+            
+            // Loop through slots 1 to 10
+            for (int i = 1; i <= 10; i++)
+            {
+                Transform rowObj = positionManager.Find(i.ToString());
+                if (rowObj != null)
+                {
+                    LeaderboardCategoryRowUI rowUI = rowObj.gameObject.AddComponent<LeaderboardCategoryRowUI>();
+                    
+                    // Auto-map Name
+                    Transform nameT = rowObj.Find("NameText");
+                    if (nameT != null)
+                    {
+                        rowUI.nameText = nameT.GetComponent<TextMeshProUGUI>();
+                        if (rowUI.nameText == null) rowUI.nameTextLegacy = nameT.GetComponent<Text>();
+                    }
+
+                    // Auto-map Score (IdText (1) or IdText)
+                    Transform scoreT = rowObj.Find("IdText (1)");
+                    if (scoreT == null) scoreT = rowObj.Find("IdText");
+                    if (scoreT != null)
+                    {
+                        rowUI.scoreText = scoreT.GetComponent<TextMeshProUGUI>();
+                        if (rowUI.scoreText == null) rowUI.scoreTextLegacy = scoreT.GetComponent<Text>();
+                    }
+
+                    // Auto-map Avatar (Profile)
+                    Transform profileT = rowObj.Find("Profile");
+                    if (profileT != null)
+                    {
+                        rowUI.avatarImage = profileT.GetComponent<Image>();
+                    }
+
+                    autoRows.Add(rowUI);
+                }
+            }
+            
+            rows = autoRows.ToArray();
+        }
 
         if (rows == null || rows.Length == 0)
         {
-            Debug.LogWarning($"[NewLeaderboardManager] No LeaderboardCategoryRowUI scripts found inside {panel.name}. Please attach the script to each row.");
+            Debug.LogWarning($"[NewLeaderboardManager] No LeaderboardCategoryRowUI scripts found inside {panel.name}, and auto-setup failed. Please check hierarchy names.");
             return;
         }
 
-        // Sort them by sibling index to ensure order is 1 to 10
+        // Sort them by sibling index to ensure order is 1 to 10 just in case
         Array.Sort(rows, (a, b) => a.transform.GetSiblingIndex().CompareTo(b.transform.GetSiblingIndex()));
 
         List<LeaderboardCategoryEntry> entries = categoryData.ContainsKey(category) ? categoryData[category] : new List<LeaderboardCategoryEntry>();

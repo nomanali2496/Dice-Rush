@@ -7,6 +7,8 @@ public class EditProfilePanelManager : MonoBehaviour
     [Header("UI References")]
     [SerializeField] private Button backButton;
     [SerializeField] private Button uploadAvatarButton; // Slot 1 in the avatar grid
+    [SerializeField] private Image topAvatarPreview; // Top profile icon preview
+    [SerializeField] private Image topFramePreview; // Top frame/border preview
     
     [Header("Preset Avatars (7 Slots)")]
     [SerializeField] private Button[] presetAvatarButtons = new Button[7];
@@ -94,6 +96,20 @@ public class EditProfilePanelManager : MonoBehaviour
             if (frameHighlights[i] != null)
             {
                 frameHighlights[i].SetActive(i == selectedFrameIndex);
+            }
+        }
+
+        // Update Top Previews instantly
+        if (AvatarSelector.Instance != null)
+        {
+            if (topFramePreview != null)
+            {
+                topFramePreview.sprite = AvatarSelector.Instance.GetBackgroundSpriteByIndex(selectedFrameIndex);
+            }
+            
+            if (topAvatarPreview != null && selectedAvatarIndex >= 0)
+            {
+                topAvatarPreview.sprite = AvatarSelector.Instance.GetAvatarSpriteByIndex(selectedAvatarIndex);
             }
         }
     }
