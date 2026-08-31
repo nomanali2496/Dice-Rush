@@ -1,5 +1,3 @@
 # ninja log v5
-26	2014	8088899557490633	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	a29fc96ab18b3877
-2015	2915	8088899565803597	D:/Unity Projects/New folder/Dice-Rush/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5g441k40/obj/arm64-v8a/libswappywrapper.so	6f14919320871adb
-7	1151	8089614508539270	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	a29fc96ab18b3877
-1153	1755	8089614514238218	D:/Unity Projects/New folder/Dice-Rush/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5g441k40/obj/arm64-v8a/libswappywrapper.so	6f14919320871adb
+1	1609	8096348449672045	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	a29fc96ab18b3877
+1612	2051	8096348453692256	D:/Unity Projects/New folder/Dice-Rush/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5g441k40/obj/arm64-v8a/libswappywrapper.so	6f14919320871adb

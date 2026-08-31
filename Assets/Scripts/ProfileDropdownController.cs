@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 using DG.Tweening;
 
 namespace UI
@@ -25,7 +26,7 @@ namespace UI
     /// Controller for the Profile Dropdown UI component (Dice Rush / Dice Blitz UI)
     /// Manages expandable profile list, backend data loading, smooth DOTween collapse/expand, and arrow rotation.
     /// </summary>
-    public class ProfileDropdownController : MonoBehaviour
+    public class ProfileDropdownController : MonoBehaviour, IPointerClickHandler
     {
         [Header("UI Containers & References")]
         [Tooltip("Parent RectTransform containing profile row instances")]
@@ -78,6 +79,12 @@ namespace UI
             {
                 toggleDropdownButton.onClick.AddListener(ToggleDropdown);
             }
+        }
+
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            // Jab aap puray object pe touch/click karenge tab bhi toggle hoga
+            ToggleDropdown();
         }
 
         private void Start()

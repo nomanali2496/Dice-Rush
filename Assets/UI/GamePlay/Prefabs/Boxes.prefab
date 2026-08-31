@@ -82,12 +82,29 @@ MonoBehaviour:
   gridHeight: 5
   spacingX: 100
   spacingY: 100
+  paddingLeft: 20
+  paddingRight: 20
+  paddingTop: 20
+  paddingBottom: 20
+  brixParent: {fileID: 0}
+  referenceWidthValue: 1440
   startPosition: {x: 0, y: 0}
+  referenceCellSizeX: 218.8
+  referenceCellSizeY: 216.5
+  referenceFontSize: 60
+  sliderParent: {fileID: 0}
+  referenceSliderParentWidth: 446
+  referenceSliderParentHeight: 110
+  referenceHandleWidth: 144.69
+  referenceHandleHeight: 144.69
   numberTextName: NumberText
   numberTextNameShadow: NumberText1
   powerupImageName: PowerUp
   selectButtonName: SelectButton
   highlightImageName: HighlightImage
+  boxBackgroundImageName: MainBackground
+  normalBoxBgSprite: {fileID: 0}
+  powerupBoxBgSprite: {fileID: 0}
   powerupTimerSlider: {fileID: 0}
   powerupTimerText: {fileID: 0}
   powerupVisibleDuration: 5
