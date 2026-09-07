@@ -75,4 +75,12 @@ public static class PlayerModel
 
         OnDataUpdated?.Invoke();
     }
+
+    /// <summary>
+    /// Forces UI elements listening to OnDataUpdated to refresh their visuals (useful for local changes like frame updates).
+    /// </summary>
+    public static void TriggerDataUpdated()
+    {
+        OnDataUpdated?.Invoke();
+    }
 }

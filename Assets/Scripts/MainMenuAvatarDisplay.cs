@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
@@ -11,6 +11,7 @@ public class MainMenuAvatarDisplay : MonoBehaviour
     [Header("Avatar Display")]
     [SerializeField] private Image avatarImageSprite;
     [SerializeField] private Image avatarImageCustom;
+    [SerializeField] private Image frameImageSprite;
     
     [Header("Settings")]
     [SerializeField] private bool autoRefreshOnEnable = true;
@@ -81,6 +82,22 @@ public class MainMenuAvatarDisplay : MonoBehaviour
         else
         {
             ShowPreset(0);
+        }
+
+        RefreshFrame();
+    }
+
+    private void RefreshFrame()
+    {
+        if (frameImageSprite != null && AvatarSelector.Instance != null)
+        {
+            int frameIndex = PlayerPrefs.GetInt("SelectedProfileFrameIndex", 0);
+            Sprite frameSprite = AvatarSelector.Instance.GetBackgroundSpriteByIndex(frameIndex);
+            if (frameSprite != null)
+            {
+                frameImageSprite.sprite = frameSprite;
+                frameImageSprite.gameObject.SetActive(true);
+            }
         }
     }
 

@@ -34,14 +34,40 @@ public class EditProfilePanelManager : MonoBehaviour
         {
             int index = i;
             if (presetAvatarButtons[i] != null)
+            {
                 presetAvatarButtons[i].onClick.AddListener(() => OnPresetAvatarClicked(index));
+                
+                // Automatically set the sprite from AvatarSelector
+                if (AvatarSelector.Instance != null)
+                {
+                    Image btnImage = presetAvatarButtons[i].GetComponent<Image>();
+                    if (btnImage != null)
+                    {
+                        Sprite spr = AvatarSelector.Instance.GetAvatarSpriteByIndex(index);
+                        if (spr != null) btnImage.sprite = spr;
+                    }
+                }
+            }
         }
 
         for (int i = 0; i < frameButtons.Length; i++)
         {
             int index = i;
             if (frameButtons[i] != null)
+            {
                 frameButtons[i].onClick.AddListener(() => OnFrameClicked(index));
+                
+                // Automatically set the sprite from AvatarSelector
+                if (AvatarSelector.Instance != null)
+                {
+                    Image btnImage = frameButtons[i].GetComponent<Image>();
+                    if (btnImage != null)
+                    {
+                        Sprite spr = AvatarSelector.Instance.GetBackgroundSpriteByIndex(index);
+                        if (spr != null) btnImage.sprite = spr;
+                    }
+                }
+            }
         }
     }
 
@@ -134,7 +160,15 @@ public class EditProfilePanelManager : MonoBehaviour
         // Save locally for now
         PlayerPrefs.SetInt("SelectedProfileFrameIndex", index);
         PlayerPrefs.Save();
+        PlayerModel.TriggerDataUpdated();
         Debug.Log($"Frame {index} selected and saved locally.");
+
+        // Save immediately to backend (BackendAuthService automatically updates PlayerModel upon success)
+        if (BackendAuthService.Instance != null)
+        {
+            // Send null for avatar so it only updates the frame
+            BackendAuthService.Instance.UpdateProfile(PlayerModel.Name, null, index.ToString());
+        }
     }
 
     private void OnUploadAvatarClicked()

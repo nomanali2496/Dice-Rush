@@ -49,15 +49,17 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
     {
         public string name;
         public Sprite avatar;
+        public string frame;
         public bool isReady;
         public bool isBot;
 
-        public PlayerSlotData(string name, bool isReady = true, bool isBot = false, Sprite avatar = null)
+        public PlayerSlotData(string name, bool isReady = true, bool isBot = false, Sprite avatar = null, string frame = null)
         {
             this.name = name;
             this.isReady = isReady;
             this.isBot = isBot;
             this.avatar = avatar;
+            this.frame = frame;
         }
     }
 
@@ -90,6 +92,18 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
         RebuildSlots();
         UpdateUI();
 
+        // ✅ FIX: Subscribe to real matchmaking events so server players show up
+        MatchmakingModel.OnMatchmakingUpdated -= OnMatchmakingUpdated;
+        MatchmakingModel.OnMatchmakingUpdated += OnMatchmakingUpdated;
+        MatchmakingModel.OnMatchFound -= OnMatchFoundFromServer;
+        MatchmakingModel.OnMatchFound += OnMatchFoundFromServer;
+
+        // ✅ FIX: Trigger actual server matchmaking
+        string mode = !string.IsNullOrEmpty(lobbyId) ? lobbyId : $"{maxPlayers}p";
+        MatchmakingModel.FindMatch(mode, stake, lobbyId);
+        Debug.Log($"[WaitingForPlayerPanelManager] OpenWaitingPanel — FindMatch called for {maxPlayers} players (lobby: {lobbyId})");
+
+        // Bot simulation only runs as fallback (e.g. offline/debug mode)
         if (botCoroutine != null) StopCoroutine(botCoroutine);
         if (enableBotSimulation)
             botCoroutine = StartCoroutine(SimulateBots());
@@ -100,6 +114,10 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
         if (botCoroutine != null) StopCoroutine(botCoroutine);
         ClearSlots();
         waitingForPlayerPanel.SetActive(false);
+
+        // ✅ FIX: Unsubscribe from matchmaking events to prevent memory leaks / stale calls
+        MatchmakingModel.OnMatchmakingUpdated -= OnMatchmakingUpdated;
+        MatchmakingModel.OnMatchFound -= OnMatchFoundFromServer;
     }
 
     private void RebuildSlots()
@@ -115,7 +133,7 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
             slot.SetActive(true); // Fix: Ensure it's active even if prefab is disabled
             var ui = slot.GetComponent<WaitingPlayerSlotUI>();
             if (ui != null)
-                ui.SetJoinedPlayer(players[i].name, players[i].avatar, players[i].isReady);
+                ui.SetJoinedPlayer(players[i].name, players[i].avatar, players[i].frame, players[i].isReady);
 
             spawnedSlots.Add(slot);
         }
@@ -268,5 +286,64 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
     {
         isHost = value;
         UpdateUI();
+    }
+
+    // ✅ FIX: Called by MatchmakingModel when server sends "matchmakingUpdate" {current, target}
+    // This is how REAL players joining appear in the panel slots.
+    private void OnMatchmakingUpdated(int current, int target)
+    {
+        Debug.Log($"[WaitingForPlayerPanelManager] matchmakingUpdate received: {current}/{target}");
+
+        // Fill up slots to match the server's reported current count
+        // Start from 1 because index 0 is the local player (already added)
+        while (players.Count < current && players.Count < targetPlayerCount)
+        {
+            players.Add(new PlayerSlotData("Player " + Random.Range(100, 999), true, false));
+            currentJoinedCount = players.Count;
+        }
+
+        RebuildSlots();
+        UpdateUI();
+    }
+
+    // ✅ FIX: Called when server confirms a real match is found ("startGame" event)
+    // Stop bot coroutine since we now have real players, then let normal game flow proceed.
+    private void OnMatchFoundFromServer(StartGameData data)
+    {
+        Debug.Log("[WaitingForPlayerPanelManager] Real match found from server! Stopping bot simulation.");
+
+        // Stop bot simulation — we have real players now
+        if (botCoroutine != null)
+        {
+            StopCoroutine(botCoroutine);
+            botCoroutine = null;
+        }
+
+        // Fill remaining slots with the confirmed player count from server
+        if (data != null && data.playerAvatars != null)
+        {
+            players.Clear();
+            string localName = PlayerModel.Name ?? "Me";
+            players.Add(new PlayerSlotData(localName, true, false));
+
+            foreach (var kvp in data.playerAvatars)
+            {
+                if (players.Count >= targetPlayerCount) break;
+                // Avoid adding ourselves twice
+                if (kvp.Value != null && kvp.Key != PlayerModel.Id)
+                {
+                    string pName = !string.IsNullOrEmpty(kvp.Value.name) ? kvp.Value.name : ("Player " + Random.Range(100, 999));
+                    players.Add(new PlayerSlotData(pName, true, !kvp.Value.isBot == false, null, kvp.Value.frame));
+                }
+            }
+
+            currentJoinedCount = players.Count;
+            RebuildSlots();
+            UpdateUI();
+        }
+
+        // NOTE: Do NOT close the panel or start the game here.
+        // The user must press "Start Game" manually (or the host decides).
+        // HorizontalLobbyManager.HandleMatchFound will not auto-start because IsPanelActive == true.
     }
 }

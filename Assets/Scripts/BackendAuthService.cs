@@ -633,31 +633,32 @@ public class BackendAuthService : MonoBehaviour
     /// <summary>
     /// Updates the user's profile (e.g., name or preset avatar) on the backend.
     /// </summary>
-    public void UpdateProfile(string newName, string avatar = null, Action<bool, string> onComplete = null)
+    public void UpdateProfile(string newName, string avatar = null, string frame = null, Action<bool, string> onComplete = null)
     {
         if (!HasStoredJWT())
         {
             onComplete?.Invoke(false, "No stored JWT found.");
             return;
         }
-        Debug.Log($"<color=#00ffff>[BackendAuthService] PATCH Request: /api/auth/profile | Name: {newName}, Avatar: {avatar}</color>");
-        StartCoroutine(UpdateProfileCoroutine(newName, avatar, onComplete));
+        Debug.Log($"<color=#00ffff>[BackendAuthService] PATCH Request: /api/auth/profile | Name: {newName}, Avatar: {avatar}, Frame: {frame}</color>");
+        StartCoroutine(UpdateProfileCoroutine(newName, avatar, frame, onComplete));
     }
 
-    private IEnumerator UpdateProfileCoroutine(string newName, string avatar, Action<bool, string> onComplete)
+    private IEnumerator UpdateProfileCoroutine(string newName, string avatar, string frame, Action<bool, string> onComplete)
     {
         string url = baseUrl.TrimEnd('/') + "/api/auth/profile"; 
         string token = GetStoredJWT();
         
-        string jsonData;
-        if (string.IsNullOrEmpty(avatar))
+        string jsonData = $"{{\"name\":\"{newName}\"";
+        if (!string.IsNullOrEmpty(avatar))
         {
-            jsonData = $"{{\"name\":\"{newName}\"}}";
+            jsonData += $", \"avatar\":\"{avatar}\"";
         }
-        else
+        if (!string.IsNullOrEmpty(frame))
         {
-            jsonData = $"{{\"name\":\"{newName}\", \"avatar\":\"{avatar}\"}}";
+            jsonData += $", \"frame\":\"{frame}\"";
         }
+        jsonData += "}";
 
         using (UnityWebRequest request = new UnityWebRequest(url, "PATCH"))
         {
@@ -774,76 +775,6 @@ public class BackendAuthService : MonoBehaviour
     }
 
     /// <summary>
-    /// Updates the user's currency (cash and coins) on the backend.
-    /// </summary>
-    public void UpdateCurrency(int cashBalance, int coins, Action<bool, string> onComplete)
-    {
-        if (!HasStoredJWT())
-        {
-            onComplete?.Invoke(false, "No stored JWT found.");
-            return;
-        }
-        StartCoroutine(UpdateCurrencyCoroutine(cashBalance, coins, onComplete));
-    }
-
-    private IEnumerator UpdateCurrencyCoroutine(int cashBalance, int coins, Action<bool, string> onComplete)
-    {
-        string url = baseUrl.TrimEnd('/') + "/api/auth/profile"; 
-        string token = GetStoredJWT();
-        
-        string jsonData = $"{{\"cashBalance\":{cashBalance}, \"coins\":{coins}}}";
-
-        using (UnityWebRequest request = new UnityWebRequest(url, "PATCH"))
-        {
-            byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonData);
-            request.uploadHandler = new UploadHandlerRaw(bodyRaw);
-            request.downloadHandler = new DownloadHandlerBuffer();
-            request.SetRequestHeader("Content-Type", "application/json");
-            request.SetRequestHeader("Authorization", "Bearer " + token);
-
-            yield return request.SendWebRequest();
-
-            if (request.result == UnityWebRequest.Result.Success)
-            {
-                try
-                {
-                    AuthResponse response = JsonUtility.FromJson<AuthResponse>(request.downloadHandler.text);
-                    if (response != null && response.user != null)
-                    {
-                        int finalCoins = response.user.coins > 0 ? response.user.coins : coins;
-                        int finalCash = response.user.cashBalance > 0 ? response.user.cashBalance : cashBalance;
-                        string finalAvatar = !string.IsNullOrEmpty(response.user.avatar) ? response.user.avatar : PlayerModel.Avatar;
-
-                        PlayerModel.UpdateData(
-                            response.user.id, response.user.name, response.user.email,
-                            response.user.wins, response.user.losses, response.user.balance,
-                            finalCash, response.user.bonusBalance, response.user.winningBalance,
-                            finalCoins, finalAvatar, response.user.xp,
-                            response.user.level, response.user.role, PlayerModel.SelectedAvatarIndex,
-                            response.user.activeMatchId, response.user.activeRoomId,
-                            response.user.withdrawableBalance
-                        );
-                        onComplete?.Invoke(true, "Currency updated successfully!");
-                    }
-                    else
-                    {
-                        onComplete?.Invoke(false, "Failed to parse updated user data.");
-                    }
-                }
-                catch (Exception e)
-                {
-                    Debug.LogError($"[BackendAuthService] UpdateCurrency Parse Error: {e.Message}");
-                    onComplete?.Invoke(false, "JSON parsing failed.");
-                }
-            }
-            else
-            {
-                Debug.LogError($"[BackendAuthService] UpdateCurrency Error: {request.error} | {request.downloadHandler.text}");
-                onComplete?.Invoke(false, request.downloadHandler.text);
-            }
-        }
-    }
-
     /// <summary>
     /// Fetches the user's latest profile data from the backend using the stored JWT.
     /// </summary>

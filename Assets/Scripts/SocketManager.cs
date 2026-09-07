@@ -419,6 +419,7 @@ public class PlayerAvatarInfo
 {
     public string name;
     public string avatar;
+    public string frame; // Added for profile frame support
     public bool isBot;
     public int rank;
 }
@@ -442,4 +443,5 @@ public class UserStatsPayload
     public int   losses;
     public int   xp;
     public int   level;
+    public string frame; // Added for profile frame support
 }

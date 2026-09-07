@@ -44,6 +44,12 @@ namespace UI
         [Tooltip("Expandable content panel transform (for animated collapse/expand)")]
         [SerializeField] private RectTransform expandableContentPanel;
 
+        [Tooltip("Background panel transform to resize alongside content")]
+        [SerializeField] private RectTransform backgroundPanel;
+
+        [Tooltip("The minimum (collapsed) height of the background panel")]
+        [SerializeField] private float backgroundCollapsedHeight = 80f;
+
         [Header("Toggle Controls")]
         [Tooltip("Button to expand or collapse the gameplay dropdown")]
         [SerializeField] private Button toggleButton;
@@ -55,8 +61,8 @@ namespace UI
         [SerializeField] private Transform arrowIconTransform;
 
         [Header("Labels & Text Settings")]
-        [SerializeField] private string collapsedButtonText = "Live Rankings ▾";
-        [SerializeField] private string expandedButtonText = "Hide Rankings ▴";
+        [SerializeField] private string collapsedButtonText = "View All Profiles";
+        [SerializeField] private string expandedButtonText = "Hide Profiles";
 
         [Header("Live Update Settings")]
         [Tooltip("Interval in seconds to update live player scores")]
@@ -100,6 +106,10 @@ namespace UI
             if (expandableContentPanel != null)
             {
                 expandableContentPanel.sizeDelta = new Vector2(expandableContentPanel.sizeDelta.x, 0);
+            }
+            if (backgroundPanel != null)
+            {
+                backgroundPanel.sizeDelta = new Vector2(backgroundPanel.sizeDelta.x, backgroundCollapsedHeight);
             }
         }
 
@@ -262,6 +272,15 @@ namespace UI
                 expandableContentPanel.DOSizeDelta(new Vector2(expandableContentPanel.sizeDelta.x, targetHeight), animationDuration)
                     .SetEase(animationEase)
                     .SetLink(expandableContentPanel.gameObject);
+                    
+                if (backgroundPanel != null)
+                {
+                    backgroundPanel.DOKill();
+                    float bgTargetHeight = open ? (targetHeight + backgroundCollapsedHeight) : backgroundCollapsedHeight;
+                    backgroundPanel.DOSizeDelta(new Vector2(backgroundPanel.sizeDelta.x, bgTargetHeight), animationDuration)
+                        .SetEase(animationEase)
+                        .SetLink(backgroundPanel.gameObject);
+                }
             }
 
             UpdateToggleVisuals(open);

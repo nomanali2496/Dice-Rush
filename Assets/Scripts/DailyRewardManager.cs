@@ -277,34 +277,27 @@ public class DailyRewardManager : MonoBehaviour
 
         yield return new WaitForSeconds(animationDuration + (delayBetweenParticles * maxParticles) + 0.2f);
 
-        // Explicitly push the updated currency values to the backend profile endpoint
-        int newTotalCoins = coinsBefore + coins;
-        int newTotalCash = Mathf.RoundToInt(cashBefore + cash);
-
-        if (response != null && response.user != null)
+        // Explicitly pull the updated authoritative currency values from the backend
+        BackendAuthService.Instance.GetWalletBalance((balanceSuccess, walletData) => 
         {
-            int finalCoins = response.user.coins > 0 ? response.user.coins : newTotalCoins;
-            int finalCash = response.user.cashBalance > 0 ? response.user.cashBalance : newTotalCash;
-            string finalAvatar = !string.IsNullOrEmpty(response.user.avatar) ? response.user.avatar : PlayerModel.Avatar;
-
-            PlayerModel.UpdateData(
-                response.user.id, response.user.name, response.user.email,
-                response.user.wins, response.user.losses, response.user.balance,
-                finalCash, response.user.bonusBalance, response.user.winningBalance,
-                finalCoins, finalAvatar, response.user.xp,
-                response.user.level, response.user.role, PlayerModel.SelectedAvatarIndex
-            );
-        }
-
-        BackendAuthService.Instance.UpdateCurrency(newTotalCash, newTotalCoins, (profileSuccess, message) => 
-        {
-            if (profileSuccess)
+            if (balanceSuccess && walletData != null)
             {
-                Debug.Log("[DailyRewardManager] Currency successfully synced to backend profile.");
+                Debug.Log("[DailyRewardManager] Currency successfully fetched from backend.");
+                // Update player model with authoritative values
+                PlayerModel.UpdateData(
+                    PlayerModel.Id, PlayerModel.Name, PlayerModel.Email,
+                    PlayerModel.Wins, PlayerModel.Losses, PlayerModel.Balance,
+                    (int)walletData.cashBalance, PlayerModel.BonusBalance, PlayerModel.WinningBalance,
+                    walletData.coins, PlayerModel.Avatar, PlayerModel.Xp,
+                    PlayerModel.Level, PlayerModel.Role, PlayerModel.SelectedAvatarIndex
+                );
+                
+                // Ensure UI updates to match the authoritative server state
+                CurrencyDisplayUI.TriggerVisualAnimationTick(walletData.coins, (float)walletData.cashBalance);
             }
             else
             {
-                Debug.LogError("[DailyRewardManager] Failed to sync currency to backend profile: " + message);
+                Debug.LogError("[DailyRewardManager] Failed to fetch currency from backend after claiming reward.");
             }
         });
 

@@ -209,6 +209,38 @@ public class MightyTaskItemUI : MonoBehaviour
             }
         }
 
+        // 7. Auto-detect Buttons (GO vs CLAIM) if missing
+        if (claimButton == null || goButton == null)
+        {
+            Button[] allButtons = GetComponentsInChildren<Button>(true);
+            
+            // Single button fallback (like old UI)
+            if (allButtons.Length == 1 && claimButton == null && goButton == null)
+            {
+                goButton = allButtons[0];
+                claimButton = allButtons[0];
+            }
+            else
+            {
+                foreach (var btn in allButtons)
+                {
+                    if (btn == null) continue;
+                    
+                    TextMeshProUGUI btnText = btn.GetComponentInChildren<TextMeshProUGUI>(true);
+                    string textVal = btnText != null ? btnText.text.ToLower() : btn.name.ToLower();
+                    
+                    if (claimButton == null && (textVal.Contains("claim") || textVal.Contains("collect")))
+                    {
+                        claimButton = btn;
+                    }
+                    else if (goButton == null && textVal.Contains("go"))
+                    {
+                        goButton = btn;
+                    }
+                }
+            }
+        }
+
         // 7. Sanity check: if Completed Badge points to titleText or descriptionText, clear it!
         // if (completedBadge != null && (completedBadge == (titleText != null ? titleText.gameObject : null) || 
         //                                completedBadge == (descriptionText != null ? descriptionText.gameObject : null)))
@@ -230,20 +262,6 @@ public class MightyTaskItemUI : MonoBehaviour
         if (descriptionText != null)
         {
             descriptionText.gameObject.SetActive(true);
-        }
-
-        if (progressText != null && !string.IsNullOrEmpty(progressText.text))
-        {
-            Match match = Regex.Match(progressText.text, @"(\d+)\s*/\s*(\d+)");
-            if (match.Success)
-            {
-                if (int.TryParse(match.Groups[1].Value, out int current) &&
-                    int.TryParse(match.Groups[2].Value, out int target) && target > 0)
-                {
-                    UpdateProgressBarVisual(current, target);
-                    return;
-                }
-            }
         }
 
         if (currentTaskData != null)
@@ -320,6 +338,11 @@ public class MightyTaskItemUI : MonoBehaviour
             progressBarSlider.minValue = 0f;
             progressBarSlider.maxValue = 1f;
             progressBarSlider.value = ratio;
+            progressBarSlider.interactable = false; // Prevent manual filling by touch
+            if (progressBarSlider.targetGraphic != null) 
+            {
+                progressBarSlider.targetGraphic.raycastTarget = false;
+            }
         }
 
         // B. Update Filled Image
@@ -376,8 +399,22 @@ public class MightyTaskItemUI : MonoBehaviour
         bool isCompleted = task.IsCompleted;
         bool isClaimed = task.isClaimed;
 
-        if (claimButton != null) claimButton.gameObject.SetActive(!isClaimed && isCompleted);
-        if (goButton != null) goButton.gameObject.SetActive(!isClaimed && !isCompleted);
+        if (claimButton == goButton && claimButton != null)
+        {
+            // Single Button Setup
+            claimButton.gameObject.SetActive(!isClaimed);
+            TextMeshProUGUI btnTxt = claimButton.GetComponentInChildren<TextMeshProUGUI>(true);
+            if (btnTxt != null)
+            {
+                btnTxt.text = isCompleted ? "CLAIM" : "GO";
+            }
+        }
+        else
+        {
+            // Dual Button Setup
+            if (claimButton != null) claimButton.gameObject.SetActive(!isClaimed && isCompleted);
+            if (goButton != null) goButton.gameObject.SetActive(!isClaimed && !isCompleted);
+        }
 
         // if (completedBadge != null && completedBadge != (titleText != null ? titleText.gameObject : null) &&
         //     completedBadge != (descriptionText != null ? descriptionText.gameObject : null))
@@ -400,6 +437,7 @@ public class MightyTaskItemUI : MonoBehaviour
 
     private void OnGoClicked()
     {
+        if (currentTaskData != null && currentTaskData.IsCompleted && !currentTaskData.isClaimed) return; // Handled by claim
         if (SoundManager.instance != null) SoundManager.instance.PlayTap();
         onGoCallback?.Invoke(currentTaskData);
     }

@@ -27,11 +27,13 @@ public class GameManager : MonoBehaviour
     [Header("Player Profile")]
     [SerializeField] private Image playerProfileImage; // Player's profile image display
     [SerializeField] private Image playerProfileImageCustom; // Player's profile image (custom/zoomed)
+    [SerializeField] private Image playerFrameImage; // Player's profile frame image
     [SerializeField] private Image playerOutlineImage; // Player's outline image (for color assignment)
     [SerializeField] private MainMenuAvatarDisplay mainMenuAvatarDisplay; // Reference to main menu avatar display (to get user's selected avatar)
     
     [Header("Opponent Profiles")]
     [SerializeField] private Image[] opponentProfileImages; // Array of profile image displays for opponents
+    [SerializeField] private Image[] opponentFrameImages; // Array of profile frame images for opponents
     [SerializeField] private Image[] opponentOutlineImages; // Array of outline images for opponents
     
     [Header("Profile Image Settings")]
@@ -1234,10 +1236,25 @@ public class GameManager : MonoBehaviour
         if (playerProfileImage == null)
         {
             Debug.LogWarning("[GameManager] Player profile image not assigned!");
-            return;
         }
 
-        // 1. Check if the backend has a custom avatar URL (v2.3 contract)
+        // Load Player Frame
+        if (playerFrameImage != null)
+        {
+            int savedFrameIndex = PlayerPrefs.GetInt("SelectedProfileFrameIndex", 0);
+            Sprite frameSprite = AvatarSelector.Instance != null ? AvatarSelector.Instance.GetBackgroundSpriteByIndex(savedFrameIndex) : null;
+            if (frameSprite != null)
+            {
+                playerFrameImage.sprite = frameSprite;
+                playerFrameImage.gameObject.SetActive(true);
+            }
+            else
+            {
+                playerFrameImage.gameObject.SetActive(false);
+            }
+        }
+
+        // 1. Check if backend URL is available custom avatar URL (v2.3 contract)
         if (!string.IsNullOrEmpty(PlayerModel.Avatar) && PlayerModel.Avatar.StartsWith("http"))
         {
             if (playerProfileImageCustom != null)
@@ -1325,6 +1342,27 @@ public class GameManager : MonoBehaviour
                     opponentProfileImages[opponentCount].gameObject.SetActive(true);
                     AssignAvatarAsync(opponentProfileImages[opponentCount], info.avatar);
                     
+                    if (opponentFrameImages != null && opponentCount < opponentFrameImages.Length && opponentFrameImages[opponentCount] != null)
+                    {
+                        if (!string.IsNullOrEmpty(info.frame) && int.TryParse(info.frame, out int frameIndex))
+                        {
+                            Sprite frameSprite = AvatarSelector.Instance != null ? AvatarSelector.Instance.GetBackgroundSpriteByIndex(frameIndex) : null;
+                            if (frameSprite != null)
+                            {
+                                opponentFrameImages[opponentCount].sprite = frameSprite;
+                                opponentFrameImages[opponentCount].gameObject.SetActive(true);
+                            }
+                            else
+                            {
+                                opponentFrameImages[opponentCount].gameObject.SetActive(false);
+                            }
+                        }
+                        else
+                        {
+                            opponentFrameImages[opponentCount].gameObject.SetActive(false);
+                        }
+                    }
+
                     if (opponentOutlineImages[opponentCount] != null)
                     {
                         opponentOutlineImages[opponentCount].gameObject.SetActive(true);
@@ -1339,6 +1377,7 @@ public class GameManager : MonoBehaviour
         for (int i = opponentCount; i < opponentProfileImages.Length; i++)
         {
             if (opponentProfileImages[i] != null) opponentProfileImages[i].gameObject.SetActive(false);
+            if (opponentFrameImages != null && i < opponentFrameImages.Length && opponentFrameImages[i] != null) opponentFrameImages[i].gameObject.SetActive(false);
             if (opponentOutlineImages[i] != null) opponentOutlineImages[i].gameObject.SetActive(false);
         }
     }

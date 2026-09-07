@@ -15,5 +15,5 @@ MonoBehaviour:
   activeEnvironment: 1
   devApiUrl: http://localhost:3000
   devSocketUrl: ws://localhost:3000
-  prodApiUrl: https://api.winjogames.com
+  prodApiUrl: https://karaoke-finest-then-private.trycloudflare.com/
   prodSocketUrl: wss://api.winjogames.com

@@ -13,6 +13,9 @@ public class WaitingPlayerSlotUI : MonoBehaviour
     [Tooltip("Image component to display player avatar")]
     [SerializeField] private Image avatarImage;
 
+    [Tooltip("Image component to display the profile frame boundary")]
+    [SerializeField] private Image frameImage;
+
     [Tooltip("Text component to display player name")]
     [SerializeField] private TextMeshProUGUI playerNameText;
 
@@ -35,8 +38,9 @@ public class WaitingPlayerSlotUI : MonoBehaviour
     /// </summary>
     /// <param name="playerName">Display name of the player</param>
     /// <param name="avatarSprite">Optional profile picture sprite</param>
+    /// <param name="frameString">Optional profile frame string from backend</param>
     /// <param name="isReady">Whether the player is ready</param>
-    public void SetJoinedPlayer(string playerName, Sprite avatarSprite = null, bool isReady = true)
+    public void SetJoinedPlayer(string playerName, Sprite avatarSprite = null, string frameString = null, bool isReady = true)
     {
         if (playerNameText != null)
         {
@@ -54,6 +58,47 @@ public class WaitingPlayerSlotUI : MonoBehaviour
             else if (defaultAvatarSprite != null)
             {
                 avatarImage.sprite = defaultAvatarSprite;
+            }
+        }
+
+        if (frameImage != null)
+        {
+            // If this slot belongs to the local player, load their saved frame
+            if (playerName == PlayerModel.Name)
+            {
+                int savedFrameIndex = PlayerPrefs.GetInt("SelectedProfileFrameIndex", 0);
+                Sprite frameSprite = AvatarSelector.Instance != null ? AvatarSelector.Instance.GetBackgroundSpriteByIndex(savedFrameIndex) : null;
+                
+                if (frameSprite != null)
+                {
+                    frameImage.sprite = frameSprite;
+                    frameImage.gameObject.SetActive(true);
+                }
+                else
+                {
+                    frameImage.gameObject.SetActive(false);
+                }
+            }
+            else
+            {
+                // For opponents, read from the backend payload (frameString)
+                if (!string.IsNullOrEmpty(frameString) && int.TryParse(frameString, out int frameIndex))
+                {
+                    Sprite frameSprite = AvatarSelector.Instance != null ? AvatarSelector.Instance.GetBackgroundSpriteByIndex(frameIndex) : null;
+                    if (frameSprite != null)
+                    {
+                        frameImage.sprite = frameSprite;
+                        frameImage.gameObject.SetActive(true);
+                    }
+                    else
+                    {
+                        frameImage.gameObject.SetActive(false);
+                    }
+                }
+                else
+                {
+                    frameImage.gameObject.SetActive(false);
+                }
             }
         }
 
@@ -76,11 +121,11 @@ public class WaitingPlayerSlotUI : MonoBehaviour
     /// <summary>
     /// Configures this slot as a Joined & Ready player.
     /// </summary>
-    /// <param name="playerName">Display name of the player (e.g., 'Player 123')</param>
+    /// <param name="playerName">Display name of the player</param>
     /// <param name="avatarSprite">Optional profile picture sprite</param>
     public void SetReadyPlayer(string playerName, Sprite avatarSprite = null)
     {
-        SetJoinedPlayer(playerName, avatarSprite, true);
+        SetJoinedPlayer(playerName, avatarSprite, null, true);
     }
 
     /// <summary>
@@ -100,6 +145,11 @@ public class WaitingPlayerSlotUI : MonoBehaviour
             {
                 avatarImage.sprite = defaultAvatarSprite;
             }
+        }
+
+        if (frameImage != null)
+        {
+            frameImage.gameObject.SetActive(false);
         }
 
         if (readyBadge != null)

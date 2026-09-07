@@ -19,6 +19,9 @@ public class WinnerPlayerRowUI : MonoBehaviour
     [Tooltip("Player profile avatar image")]
     [SerializeField] private Image avatarImage;
 
+    [Tooltip("Player profile frame image")]
+    [SerializeField] private Image frameImage;
+
     [Tooltip("Player display name text")]
     [SerializeField] private TextMeshProUGUI nameText;
 
@@ -62,15 +65,34 @@ public class WinnerPlayerRowUI : MonoBehaviour
         // 2. Setup Player Avatar
         if (avatarImage != null)
         {
-            if (avatarSprite != null)
+            avatarImage.sprite = avatarSprite != null ? avatarSprite : defaultAvatarSprite;
+        }
+
+        if (frameImage != null)
+        {
+            if (playerName == PlayerModel.Name)
             {
-                avatarImage.sprite = avatarSprite;
+                int savedFrameIndex = PlayerPrefs.GetInt("SelectedProfileFrameIndex", 0);
+                Sprite frameSprite = AvatarSelector.Instance != null ? AvatarSelector.Instance.GetBackgroundSpriteByIndex(savedFrameIndex) : null;
+                
+                if (frameSprite != null)
+                {
+                    frameImage.sprite = frameSprite;
+                    frameImage.gameObject.SetActive(true);
+                }
+                else
+                {
+                    frameImage.gameObject.SetActive(false);
+                }
             }
-            else if (defaultAvatarSprite != null)
+            else
             {
-                avatarImage.sprite = defaultAvatarSprite;
+                // Opponent frames not supported by backend yet
+                frameImage.gameObject.SetActive(false);
             }
         }
+
+        if (coinIcon != null) coinIcon.gameObject.SetActive(true);
 
         // 3. Setup Rank Crown & Row Background Bar based on Rank (1st, 2nd, 3rd, 4th+)
         switch (rank)

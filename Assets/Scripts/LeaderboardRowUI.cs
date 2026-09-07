@@ -99,8 +99,8 @@ public class LeaderboardRowUI : EnhancedScrollerCellView
         // Setup backgrounds based on position
         SetupBackgrounds(position);
         
-        // Setup profile background based on position
-        SetupProfileBackground(position);
+        // Setup profile background based on position and player identity
+        SetupProfileBackground(position, username);
         
         // Setup avatar display
         if (!string.IsNullOrEmpty(avatarKey) && avatarKey.StartsWith("http"))
@@ -214,10 +214,22 @@ public class LeaderboardRowUI : EnhancedScrollerCellView
     /// <summary>
     /// Sets up the profile background based on position
     /// </summary>
-    private void SetupProfileBackground(int position)
+    private void SetupProfileBackground(int position, string username)
     {
         if (profileBackground == null) return;
         
+        // If this is the local player's row, override the default rank background with their custom frame
+        if (username == PlayerModel.Name)
+        {
+            int savedFrameIndex = PlayerPrefs.GetInt("SelectedProfileFrameIndex", 0);
+            Sprite frameSprite = AvatarSelector.Instance != null ? AvatarSelector.Instance.GetBackgroundSpriteByIndex(savedFrameIndex) : null;
+            if (frameSprite != null)
+            {
+                profileBackground.sprite = frameSprite;
+                return; // Early return to keep the custom frame
+            }
+        }
+
         switch (position)
         {
             case 1:

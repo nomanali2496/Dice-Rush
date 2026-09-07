@@ -957,6 +957,19 @@ public class HorizontalLobbyManager : MonoBehaviour
             gameObject.SetActive(false);
             return;
         }
+        else if (waitingPanel != null)
+        {
+            waitingPanel.SetActive(true); // This will trigger Awake if it was disabled
+            WaitingForPlayerPanelManager manager = waitingPanel.GetComponent<WaitingForPlayerPanelManager>();
+            if (manager == null) manager = waitingPanel.GetComponentInChildren<WaitingForPlayerPanelManager>();
+            
+            if (manager != null)
+            {
+                manager.OpenWaitingPanel(reqPlayers, entryFee, lobbyId);
+                gameObject.SetActive(false);
+                return;
+            }
+        }
 
         if (waitingPanel != null)
         {

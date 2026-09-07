@@ -9,8 +9,8 @@ public class BackendConfig : ScriptableObject
     public AppEnvironment activeEnvironment = AppEnvironment.Development;
 
     [Header("Development URLs")]
-    public string devApiUrl = "https://unclog-goggles-drastic.ngrok-free.dev";
-    public string devSocketUrl = "https://unclog-goggles-drastic.ngrok-free.dev";
+    public string devApiUrl = "http://localhost:3000";
+    public string devSocketUrl = "http://localhost:3000";
 
     [Header("Production URLs")]
     public string prodApiUrl = "https://api.yourdomain.com";

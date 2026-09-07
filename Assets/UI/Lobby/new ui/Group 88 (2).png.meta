@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2e95d7d7da853b24fad37c894a827db2
+guid: 54b73127f3028874687e66b53bcb5109
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6083242214660705593
-    second: Group 53 (2)_0
+      213: 6798499527089342171
+    second: Group 88 (2)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,11 +109,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Group 53 (2)_0
+      name: Group 88 (2)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 93d038750940c6450800000000000000
-      internalID: 6083242214660705593
+      spriteID: bd642d5cc4f195e50800000000000000
+      internalID: 6798499527089342171
       vertices: []
       indices: 
       edges: []
@@ -148,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Group 53 (2)_0: 6083242214660705593
+      Group 88 (2)_0: 6798499527089342171
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

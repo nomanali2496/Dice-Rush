@@ -89,14 +89,16 @@ public class MightyTasksPanelManager : MonoBehaviour
 
     private Coroutine timerCoroutine;
 
-    // 5 Default Weekly Tasks Data definitions
+    [Header("Weekly Tasks Configuration")]
+    [Tooltip("Define the weekly tasks here. You can add, remove, or edit tasks relevant to Dice Blitz.")]
+    [SerializeField]
     private List<TaskData> defaultWeeklyTasks = new List<TaskData>()
     {
-        new TaskData { taskId = "task_roll_50_dice", title = "Roll 50 Dice", description = "Roll 50 Total Dices in Gameplay", currentProgress = 50, targetProgress = 50, rewardChips = 500, rewardCash = 0f },
-        new TaskData { taskId = "task_win_3_matches", title = "Win 3 Matches", description = "Win 3 Matches in Any Mode", currentProgress = 3, targetProgress = 3, rewardChips = 750, rewardCash = 0f },
-        new TaskData { taskId = "task_play_5_games", title = "Play 5 Games", description = "Complete 5 Total Matches", currentProgress = 5, targetProgress = 5, rewardChips = 1000, rewardCash = 0f },
-        new TaskData { taskId = "task_earn_2000_coins", title = "Earn 2,000 Coins", description = "Earn 2000 Coins from Matches", currentProgress = 2000, targetProgress = 2000, rewardChips = 1500, rewardCash = 0f },
-        new TaskData { taskId = "task_score_100_pts", title = "Score 100 Points", description = "Score 100 Total Points in Grid", currentProgress = 100, targetProgress = 100, rewardChips = 0, rewardCash = 1.00f }
+        new TaskData { taskId = "task_roll_50_dice", title = "Roll 50 Dice", description = "Roll 50 Total Dices in Gameplay", currentProgress = 0, targetProgress = 50, rewardChips = 500, rewardCash = 0f },
+        new TaskData { taskId = "task_win_3_matches", title = "Win 3 Matches", description = "Win 3 Matches in Any Mode", currentProgress = 0, targetProgress = 3, rewardChips = 750, rewardCash = 0f },
+        new TaskData { taskId = "task_play_5_games", title = "Play 5 Games", description = "Complete 5 Total Matches", currentProgress = 0, targetProgress = 5, rewardChips = 1000, rewardCash = 0f },
+        new TaskData { taskId = "task_earn_2000_coins", title = "Earn 2,000 Coins", description = "Earn 2000 Coins from Matches", currentProgress = 0, targetProgress = 2000, rewardChips = 1500, rewardCash = 0f },
+        new TaskData { taskId = "task_score_100_pts", title = "Score 100 Points", description = "Score 100 Total Points in Grid", currentProgress = 0, targetProgress = 100, rewardChips = 0, rewardCash = 1.00f }
     };
 
     private void Awake()
@@ -240,7 +242,7 @@ public class MightyTasksPanelManager : MonoBehaviour
                 rewardChips = baseData.rewardChips,
                 rewardCash = baseData.rewardCash,
                 taskIcon = baseData.taskIcon,
-                currentProgress = PlayerPrefs.GetInt($"MightyTask_Prog_{baseData.taskId}", baseData.targetProgress),
+                currentProgress = PlayerPrefs.GetInt($"MightyTask_Prog_{baseData.taskId}", 0),
                 isClaimed = PlayerPrefs.GetInt($"MightyTask_Claimed_{baseData.taskId}", 0) == 1
             };
 
