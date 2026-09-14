@@ -88,6 +88,10 @@ public class NewLeaderboardManager : MonoBehaviour
 {
     public static NewLeaderboardManager Instance { get; private set; }
 
+    [Header("Avatar References")]
+    [SerializeField] private MainMenuAvatarDisplay mainMenuAvatarDisplay;
+    [SerializeField] private Sprite[] fallbackAvatars;
+
     [Header("Main Panels")]
     [Tooltip("Main Leaderboard Panel / Container")]
     [SerializeField] private GameObject mainLeaderboardPanel;
@@ -258,8 +262,73 @@ public class NewLeaderboardManager : MonoBehaviour
                         categoryCards[i].titleImage = tT.GetComponent<Image>();
                     }
                 }
+
+                if (categoryCards[i].titleText == null)
+                {
+                    categoryCards[i].titleText = FindTextComponent(categoryCards[i].cardObject.transform,
+                        "TitleText", "Title", "CategoryTitle");
+                }
+
+                if (categoryCards[i].topPlayerNameText == null)
+                {
+                    categoryCards[i].topPlayerNameText = FindTextComponent(categoryCards[i].cardObject.transform,
+                        "TopPlayerName", "PlayerName", "NameText", "Name");
+                }
+
+                if (categoryCards[i].topPlayerScoreText == null)
+                {
+                    categoryCards[i].topPlayerScoreText = FindTextComponent(categoryCards[i].cardObject.transform,
+                        "TopPlayerScore", "PlayerScore", "ScoreText", "Score", "IdText");
+                }
+
+                if (categoryCards[i].topPlayerAvatarImage == null)
+                {
+                    categoryCards[i].topPlayerAvatarImage = FindImageComponent(categoryCards[i].cardObject.transform,
+                        "Profile", "Avatar", "AvatarImage");
+                }
             }
         }
+    }
+
+    private TextMeshProUGUI FindTextComponent(Transform root, params string[] names)
+    {
+        for (int i = 0; i < names.Length; i++)
+        {
+            Transform target = FindChildRecursive(root, names[i]);
+            if (target == null) continue;
+
+            TextMeshProUGUI text = target.GetComponent<TextMeshProUGUI>();
+            if (text != null) return text;
+        }
+
+        return root.GetComponentInChildren<TextMeshProUGUI>(true);
+    }
+
+    private Image FindImageComponent(Transform root, params string[] names)
+    {
+        for (int i = 0; i < names.Length; i++)
+        {
+            Transform target = FindChildRecursive(root, names[i]);
+            if (target == null) continue;
+
+            Image image = target.GetComponent<Image>();
+            if (image != null) return image;
+        }
+
+        return null;
+    }
+
+    private Transform FindChildRecursive(Transform root, string childName)
+    {
+        if (root.name == childName) return root;
+
+        for (int i = 0; i < root.childCount; i++)
+        {
+            Transform result = FindChildRecursive(root.GetChild(i), childName);
+            if (result != null) return result;
+        }
+
+        return null;
     }
 
     private void DeactivateOldLeaderboard()
@@ -371,7 +440,7 @@ public class NewLeaderboardManager : MonoBehaviour
         for (int i = 0; i < Mathf.Min(10, sortedWins.Count); i++)
         {
             var item = sortedWins[i];
-            listWins.Add(new LeaderboardCategoryEntry(i + 1, item.name, $"{item.wins} Wins", item.wins, null, item.avatar));
+            listWins.Add(CreateEntry(i + 1, item, $"{item.wins} Wins", item.wins));
         }
         categoryData[CategoryType.MostWins] = listWins;
 
@@ -384,7 +453,7 @@ public class NewLeaderboardManager : MonoBehaviour
         {
             var item = sortedMatches[i];
             int totalM = item.wins + item.losses;
-            listMatches.Add(new LeaderboardCategoryEntry(i + 1, item.name, $"{totalM} Matches", totalM, null, item.avatar));
+            listMatches.Add(CreateEntry(i + 1, item, $"{totalM} Matches", totalM));
         }
         categoryData[CategoryType.MostMatchesPlayed] = listMatches;
 
@@ -395,7 +464,7 @@ public class NewLeaderboardManager : MonoBehaviour
             var item = items[i];
             long val = (long)(1234567678L - (i * 100000000L));
             if (val < 1000) val = 12345;
-            listCredits.Add(new LeaderboardCategoryEntry(i + 1, item.name, val.ToString("N0"), val, null, item.avatar));
+            listCredits.Add(CreateEntry(i + 1, item, val.ToString("N0"), val));
         }
         categoryData[CategoryType.HighestCurrentCredits] = listCredits;
 
@@ -406,7 +475,7 @@ public class NewLeaderboardManager : MonoBehaviour
             var item = items[i];
             long val = (long)(2500000000L - (i * 200000000L));
             if (val < 5000) val = 98765;
-            listLifetime.Add(new LeaderboardCategoryEntry(i + 1, item.name, val.ToString("N0"), val, null, item.avatar));
+            listLifetime.Add(CreateEntry(i + 1, item, val.ToString("N0"), val));
         }
         categoryData[CategoryType.HighestLifetimeCredits] = listLifetime;
 
@@ -416,7 +485,7 @@ public class NewLeaderboardManager : MonoBehaviour
         {
             var item = items[i];
             int val = Mathf.Max(1, 850 - (i * 70));
-            listLikes.Add(new LeaderboardCategoryEntry(i + 1, item.name, $"{val} Likes", val, null, item.avatar));
+            listLikes.Add(CreateEntry(i + 1, item, $"{val} Likes", val));
         }
         categoryData[CategoryType.MostLikesReceived] = listLikes;
 
@@ -426,9 +495,47 @@ public class NewLeaderboardManager : MonoBehaviour
         {
             var item = items[i];
             int val = Mathf.Max(1, item.wins > 0 ? (item.wins * 2 + 1) : (10 - i));
-            listStreak.Add(new LeaderboardCategoryEntry(i + 1, item.name, $"{val} Streak", val, null, item.avatar));
+            listStreak.Add(CreateEntry(i + 1, item, $"{val} Streak", val));
         }
         categoryData[CategoryType.LongestWinStreak] = listStreak;
+    }
+
+    private LeaderboardCategoryEntry CreateEntry(int rank, BackendAuthService.LeaderboardItem item, string scoreDisplay, double numericValue)
+    {
+        Sprite avatar = ResolveAvatar(item.avatar, item.userId == PlayerModel.Id);
+        return new LeaderboardCategoryEntry(rank, item.name, scoreDisplay, numericValue, avatar, item.avatar);
+    }
+
+    private Sprite ResolveAvatar(string avatarKey, bool isCurrentUser)
+    {
+        if (isCurrentUser && mainMenuAvatarDisplay != null)
+        {
+            Sprite current = mainMenuAvatarDisplay.GetCurrentAvatarSprite();
+            if (current != null) return current;
+        }
+
+        if (!string.IsNullOrEmpty(avatarKey) && !avatarKey.StartsWith("http"))
+        {
+            if (GameManager.Instance != null)
+            {
+                Sprite configured = GameManager.Instance.GetAvatarSprite(avatarKey);
+                if (configured != null) return configured;
+            }
+
+            if (int.TryParse(avatarKey, out int index) && AvatarSelector.Instance != null)
+            {
+                Sprite indexed = AvatarSelector.Instance.GetAvatarSpriteByIndex(index);
+                if (indexed != null) return indexed;
+            }
+        }
+
+        if (AvatarSelector.Instance != null)
+        {
+            Sprite defaultAvatar = AvatarSelector.Instance.GetAvatarSpriteByIndex(0);
+            if (defaultAvatar != null) return defaultAvatar;
+        }
+
+        return fallbackAvatars != null && fallbackAvatars.Length > 0 ? fallbackAvatars[0] : null;
     }
 
     private void GenerateFallbackCategoryData()
@@ -518,6 +625,10 @@ public class NewLeaderboardManager : MonoBehaviour
                 var topEntry = categoryData[cat][0];
                 if (i < categoryCards.Length && categoryCards[i] != null)
                 {
+                    if (categoryCards[i].titleText != null)
+                    {
+                        categoryCards[i].titleText.text = CategoryNames[i];
+                    }
                     if (categoryCards[i].topPlayerNameText != null)
                     {
                         categoryCards[i].topPlayerNameText.text = topEntry.playerName;
@@ -525,6 +636,10 @@ public class NewLeaderboardManager : MonoBehaviour
                     if (categoryCards[i].topPlayerScoreText != null)
                     {
                         categoryCards[i].topPlayerScoreText.text = topEntry.scoreDisplay;
+                    }
+                    if (categoryCards[i].topPlayerAvatarImage != null && topEntry.avatarSprite != null)
+                    {
+                        categoryCards[i].topPlayerAvatarImage.sprite = topEntry.avatarSprite;
                     }
                 }
             }

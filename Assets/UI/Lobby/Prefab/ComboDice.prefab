@@ -63,17 +63,17 @@ MonoBehaviour:
     m_RotationOrder: 4
   spriteMappings:
   - lobbyId: Monaco Riviera
-    sprite: {fileID: 21300000, guid: 57c0a3ad1ce3e174e97d4b4b9937d7c5, type: 3}
+    sprite: {fileID: 21300000, guid: a242c4ae6d6838d4181a4589aec49d53, type: 3}
   - lobbyId: Atlantic Boardwalk
-    sprite: {fileID: 21300000, guid: 57c0a3ad1ce3e174e97d4b4b9937d7c5, type: 3}
+    sprite: {fileID: 21300000, guid: 54b73127f3028874687e66b53bcb5109, type: 3}
   - lobbyId: 'Macau Dragon  '
-    sprite: {fileID: 21300000, guid: d1636f6b859c69741b915b8f6822a2db, type: 3}
+    sprite: {fileID: 21300000, guid: 09748d0a56859424f93a3c1cf0f16d26, type: 3}
   - lobbyId: 'Vegas Neon  '
-    sprite: {fileID: 21300000, guid: 2e95d7d7da853b24fad37c894a827db2, type: 3}
+    sprite: {fileID: 21300000, guid: b6e2ff53f65036b4abb613c93b102d79, type: 3}
   - lobbyId: 'Singapore Marina  '
-    sprite: {fileID: 21300000, guid: c723d993ba8d10a41adb3419742025f9, type: 3}
+    sprite: {fileID: 21300000, guid: a79695dac95e7b94d86310a3dcb22e43, type: 3}
   - lobbyId: 'London Royal  '
-    sprite: {fileID: 21300000, guid: 6f47b6967b262204ea98939699a318ad, type: 3}
+    sprite: {fileID: 21300000, guid: b0a284a92a6df284ab8db053eaad9889, type: 3}
 --- !u!1 &4896836788611776765
 GameObject:
   m_ObjectHideFlags: 0
