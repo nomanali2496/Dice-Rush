@@ -242,7 +242,7 @@ public class MightyTasksPanelManager : MonoBehaviour
                 rewardChips = baseData.rewardChips,
                 rewardCash = baseData.rewardCash,
                 taskIcon = baseData.taskIcon,
-                currentProgress = PlayerPrefs.GetInt($"MightyTask_Prog_{baseData.taskId}", 0),
+                currentProgress = 0,
                 isClaimed = PlayerPrefs.GetInt($"MightyTask_Claimed_{baseData.taskId}", 0) == 1
             };
 

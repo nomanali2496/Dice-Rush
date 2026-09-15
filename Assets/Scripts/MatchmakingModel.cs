@@ -243,7 +243,8 @@ public static class MatchmakingModel
             return;
         }
 
-        Debug.LogError($"❌ <color=#FF0000>[Socket ERROR] 'error' received: {msg}</color>");
+        string code = string.IsNullOrEmpty(err.code) ? string.Empty : $" [{err.code}]";
+        Debug.LogError($"❌ <color=#FF0000>[Socket ERROR]{code} 'error' received: {msg}</color>");
 
         // Player backgrounded while a match was being found — server already placed them in a match.
         // Fetch the active match IDs from the profile and reconnect directly.
@@ -260,7 +261,7 @@ public static class MatchmakingModel
                     string matchId = PlayerModel.ActiveMatchId;
                     string roomId  = PlayerModel.ActiveRoomId;
 
-                    if (!string.IsNullOrEmpty(matchId) && !string.IsNullOrEmpty(roomId))
+                    if (!string.IsNullOrEmpty(roomId))
                     {
                         Debug.Log($"<color=#00FF00>✅ [MatchmakingModel] Reconnecting to active match {matchId} / room {roomId}</color>");
                         ReconnectMatch(matchId, roomId);
@@ -350,7 +351,7 @@ public static class MatchmakingModel
 
     private static void HandleNumberLocked(NumberLockedData data)
     {
-        Debug.Log($"<color=#00FFFF>⬇️ [Socket ON] 'numberLocked': index={data.index} by {data.userId}, cellValue={data.cellValue}, score={data.score}</color>");
+        Debug.Log($"<color=#00FFFF>⬇️ [Socket ON] 'numberLocked': index={data.index} by {data.userId}, val={data.val}, score={data.score}</color>");
         OnNumberLockedEvent?.Invoke(data);
     }
 
@@ -475,8 +476,14 @@ public class NumberLockedData
 {
     public int index;
     public string userId;
-    public int cellValue;
+    public int val;
     public int score;
+}
+
+[Serializable]
+public class SessionKickedData
+{
+    public string message;
 }
 
 [Serializable]

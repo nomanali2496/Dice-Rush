@@ -16,6 +16,7 @@ public class PlayerProfileUI : MonoBehaviour
     [SerializeField] private Image profileImageSprite;
     [SerializeField] private Image profileImageCustom;
     [SerializeField] private Image profileBackgroundDisplay;
+    [SerializeField] private Image profileFrameDisplay;
     
     [Header("Buttons")]
     [SerializeField] private Button editNameButton;
@@ -72,6 +73,7 @@ public class PlayerProfileUI : MonoBehaviour
         }
 
         UpdateAvatarDisplay(PlayerModel.Avatar);
+        UpdateFrameDisplay();
         if (AvatarDisplay != null) AvatarDisplay.SetActive(true);
     }
 
@@ -101,6 +103,21 @@ public class PlayerProfileUI : MonoBehaviour
         else
         {
             ShowPreset(0);
+        }
+    }
+
+    private void UpdateFrameDisplay()
+    {
+        if (profileFrameDisplay == null || AvatarSelector.Instance == null) return;
+
+        int frameIndex = int.TryParse(PlayerModel.ProfileFrame, out int parsedFrame)
+            ? parsedFrame
+            : PlayerPrefs.GetInt("SelectedProfileFrameIndex", 0);
+        Sprite frameSprite = AvatarSelector.Instance.GetBackgroundSpriteByIndex(frameIndex);
+        if (frameSprite != null)
+        {
+            profileFrameDisplay.sprite = frameSprite;
+            profileFrameDisplay.gameObject.SetActive(true);
         }
     }
 

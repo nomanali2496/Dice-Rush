@@ -97,7 +97,9 @@ public class EditProfilePanelManager : MonoBehaviour
         }
 
         // Load frame from PlayerPrefs since it's not in PlayerModel yet
-        selectedFrameIndex = PlayerPrefs.GetInt("SelectedProfileFrameIndex", 0);
+        selectedFrameIndex = int.TryParse(PlayerModel.ProfileFrame, out int parsedFrame)
+            ? parsedFrame
+            : PlayerPrefs.GetInt("SelectedProfileFrameIndex", 0);
     }
 
     private void RefreshHighlights()
@@ -160,7 +162,7 @@ public class EditProfilePanelManager : MonoBehaviour
         // Save locally for now
         PlayerPrefs.SetInt("SelectedProfileFrameIndex", index);
         PlayerPrefs.Save();
-        PlayerModel.TriggerDataUpdated();
+        PlayerModel.SetProfileFrame(index.ToString());
         Debug.Log($"Frame {index} selected and saved locally.");
 
         // Save immediately to backend (BackendAuthService automatically updates PlayerModel upon success)

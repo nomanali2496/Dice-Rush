@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.UI;
@@ -74,6 +75,7 @@ public class MightyTaskItemUI : MonoBehaviour
     private TaskData currentTaskData;
     private Action<TaskData> onClaimCallback;
     private Action<TaskData> onGoCallback;
+    private Coroutine progressAnimationCoroutine;
 
     private void Awake()
     {
@@ -331,6 +333,48 @@ public class MightyTaskItemUI : MonoBehaviour
     public void UpdateProgressBarVisual(int currentProgress, int targetProgress)
     {
         float ratio = (targetProgress > 0) ? Mathf.Clamp01((float)currentProgress / targetProgress) : 0f;
+
+        // Setup and OnValidate can run while this card is inactive, so apply the
+        // initial state directly instead of starting a coroutine on a disabled object.
+        if (!isActiveAndEnabled)
+        {
+            ApplyProgressBarVisual(ratio, currentProgress, targetProgress);
+            return;
+        }
+
+        if (progressAnimationCoroutine != null)
+        {
+            StopCoroutine(progressAnimationCoroutine);
+        }
+
+        progressAnimationCoroutine = StartCoroutine(AnimateProgressBar(currentProgress, targetProgress, ratio));
+    }
+
+    private IEnumerator AnimateProgressBar(int currentProgress, int targetProgress, float targetRatio)
+    {
+        float startRatio = 0f;
+        if (progressBarSlider != null)
+        {
+            startRatio = progressBarSlider.value;
+        }
+
+        float elapsed = 0f;
+        const float duration = 0.35f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.unscaledDeltaTime;
+            float ratio = Mathf.Lerp(startRatio, targetRatio, Mathf.Clamp01(elapsed / duration));
+            ApplyProgressBarVisual(ratio, currentProgress, targetProgress);
+            yield return null;
+        }
+
+        ApplyProgressBarVisual(targetRatio, currentProgress, targetProgress);
+        progressAnimationCoroutine = null;
+    }
+
+    private void ApplyProgressBarVisual(float ratio, int currentProgress, int targetProgress)
+    {
 
         // A. Update Slider
         if (progressBarSlider != null)

@@ -17,7 +17,7 @@ public class SocketManager : MonoBehaviour
     [Tooltip("Backend environment config (assign BackendConfig asset, or place one in Resources/BackendConfig.asset)")]
     [SerializeField] private BackendConfig backendConfig;
 
-    private string serverUrl => (backendConfig != null ? backendConfig : BackendConfig.Load())?.SocketUrl ?? "https://unclog-goggles-drastic.ngrok-free.dev";
+    private string serverUrl => (backendConfig != null ? backendConfig : BackendConfig.Load())?.SocketUrl ?? "https://obtaining-conscious-scan-seekers.trycloudflare.com";
 
     public string GetServerUrl() => serverUrl;
 
@@ -106,10 +106,9 @@ public class SocketManager : MonoBehaviour
             string roomId = PlayerModel.ActiveRoomId;
 
             // Fallback to GameManager's active data if PlayerModel cache is empty (silent recovery case)
-            if (string.IsNullOrEmpty(matchId)) matchId = GameManager.Instance.GetCurrentRoomId();
             if (string.IsNullOrEmpty(roomId)) roomId = GameManager.Instance.GetCurrentRoomId();
 
-            if (!string.IsNullOrEmpty(matchId) && !string.IsNullOrEmpty(roomId))
+            if (!string.IsNullOrEmpty(roomId))
             {
                 Debug.Log($"<color=#FFA500>🔄 [SocketManager] Auto-triggering match sync for Match:{matchId} Room:{roomId}</color>");
                 MatchmakingModel.ReconnectMatch(matchId, roomId);
@@ -125,7 +124,7 @@ public class SocketManager : MonoBehaviour
             string matchId = PlayerModel.ActiveMatchId;
             string roomId = PlayerModel.ActiveRoomId;
             
-            if (!string.IsNullOrEmpty(matchId) && !string.IsNullOrEmpty(roomId))
+            if (!string.IsNullOrEmpty(roomId))
             {
                 Debug.Log($"<color=#FFA500>🔄 [SocketManager] Rejoin Pending: Triggering match sync for Match:{matchId} Room:{roomId}</color>");
                 MatchmakingModel.ReconnectMatch(matchId, roomId);
@@ -186,6 +185,7 @@ public class SocketManager : MonoBehaviour
         ioManager.Socket.On<ConnectResponse>(SocketIOEventTypes.Connect, OnSocketConnected);
         ioManager.Socket.On(SocketIOEventTypes.Disconnect, OnSocketDisconnected);
         ioManager.Socket.On<Error>(SocketIOEventTypes.Error, OnSocketError);
+        ioManager.Socket.On<BestHTTP.JSON.LitJson.JsonData>("sessionKicked", OnSessionKicked);
 
         Debug.Log("<color=#FFA500>⬆️ [Socket EMIT] Handshake initialized. Waiting for 'connect' event...</color>");
 
@@ -349,6 +349,24 @@ public class SocketManager : MonoBehaviour
         TriggerSilentRecoveryIfInGame();
     }
 
+    private void OnSessionKicked(BestHTTP.JSON.LitJson.JsonData jsonData)
+    {
+        string message = "Your account was signed in on another device.";
+        try
+        {
+            SessionKickedData data = BestHTTP.JSON.LitJson.JsonMapper.ToObject<SessionKickedData>(jsonData.ToJson());
+            if (data != null && !string.IsNullOrEmpty(data.message)) message = data.message;
+        }
+        catch (Exception e)
+        {
+            Debug.LogWarning($"[SocketManager] sessionKicked parse failed: {e.Message}");
+        }
+
+        Debug.LogWarning($"[SocketManager] Session kicked: {message}");
+        BackendAuthService.ClearJWT();
+        Disconnect();
+    }
+
     /// <summary>
     /// Waits for a specified duration before disconnecting.
     /// Useful for ensuring 'forfeit' or 'leave' messages are sent before the socket closes.
@@ -390,6 +408,7 @@ public class StartGameData
     public int duration;
     public float stake;
     public int winConditionTarget; // Added from your JSON
+    public PrizeData[] prizes;
     
     public System.Collections.Generic.Dictionary<string, string> playerSides;
     public System.Collections.Generic.Dictionary<string, PlayerAvatarInfo> playerAvatars;
@@ -399,6 +418,14 @@ public class StartGameData
     public long gameplayStartsAt; // Unix ms timestamp when gameplay begins
     public int countdown; // Seconds of countdown before gameplay
     public System.Collections.Generic.Dictionary<string, PlayerGameState> gameState; // Current state of each player
+}
+
+[System.Serializable]
+public class PrizeData
+{
+    public int rank;
+    public double cash;
+    public int coins;
 }
 
 // RecoveredGameData removed. Use StartGameData instead as it matches the server payload.

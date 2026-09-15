@@ -13,7 +13,7 @@ public class BackendAuthService : MonoBehaviour
     [Tooltip("Backend environment config (assign BackendConfig asset, or place one in Resources/BackendConfig.asset)")]
     [SerializeField] private BackendConfig backendConfig;
 
-    private string baseUrl => (backendConfig != null ? backendConfig : BackendConfig.Load())?.ApiUrl ?? "https://unclog-goggles-drastic.ngrok-free.dev";
+    private string baseUrl => (backendConfig != null ? backendConfig : BackendConfig.Load())?.ApiUrl ?? "https://obtaining-conscious-scan-seekers.trycloudflare.com";
 
     private const string JWT_PREF_KEY = "CustomBackendJWT";
 
@@ -687,6 +687,7 @@ public class BackendAuthService : MonoBehaviour
                             response.user.activeMatchId, response.user.activeRoomId,
                             response.user.withdrawableBalance
                         );
+                        PlayerModel.SetProfileFrame(response.user.frame);
                         onComplete?.Invoke(true, "Profile updated successfully!");
                     }
                     else
@@ -818,6 +819,7 @@ public class BackendAuthService : MonoBehaviour
                             response.user.withdrawableBalance, 
                             response.user.recentMatch?.matchId, response.user.recentMatch?.roomId, response.user.recentMatch?.status
                         );
+                        PlayerModel.SetProfileFrame(response.user.frame);
                         
                         onComplete?.Invoke(true, "Profile loaded successfully!");
                     }
@@ -1668,6 +1670,7 @@ public class BackendAuthService : MonoBehaviour
         public int withdrawableBalance;
         public int coins;
         public string avatar;
+        public string frame;
         public int xp;
         public int level;
         public string role;

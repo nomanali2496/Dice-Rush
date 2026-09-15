@@ -106,11 +106,17 @@ public class ProfilePanelUI : MonoBehaviour
         // Load Frame
         if (frameIcon != null)
         {
-            int savedFrameIndex = PlayerPrefs.GetInt("SelectedProfileFrameIndex", 0);
+            int savedFrameIndex = int.TryParse(PlayerModel.ProfileFrame, out int parsedFrame)
+                ? parsedFrame
+                : PlayerPrefs.GetInt("SelectedProfileFrameIndex", 0);
             if (AvatarSelector.Instance != null)
             {
                 Sprite frameSprite = AvatarSelector.Instance.GetBackgroundSpriteByIndex(savedFrameIndex);
-                if (frameSprite != null) frameIcon.sprite = frameSprite;
+                if (frameSprite != null)
+                {
+                    frameIcon.sprite = frameSprite;
+                    frameIcon.gameObject.SetActive(true);
+                }
             }
         }
     }

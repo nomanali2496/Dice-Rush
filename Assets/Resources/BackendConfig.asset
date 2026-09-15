@@ -15,5 +15,5 @@ MonoBehaviour:
   activeEnvironment: 1
   devApiUrl: http://localhost:3000
   devSocketUrl: ws://localhost:3000
-  prodApiUrl: https://317b1eda2cf3ba.lhr.life/
-  prodSocketUrl: wss://api.winjogames.com
+  prodApiUrl: https://obtaining-conscious-scan-seekers.trycloudflare.com/
+  prodSocketUrl: https://obtaining-conscious-scan-seekers.trycloudflare.com/

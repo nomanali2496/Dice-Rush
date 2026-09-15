@@ -5,6 +5,7 @@ namespace BestHTTP.SocketIO3
     public class Error
     {
         public string message;
+        public string code;
 
         public Error() { }
 

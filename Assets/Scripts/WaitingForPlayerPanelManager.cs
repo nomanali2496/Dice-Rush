@@ -99,7 +99,7 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
         MatchmakingModel.OnMatchFound += OnMatchFoundFromServer;
 
         // ✅ FIX: Trigger actual server matchmaking
-        string mode = !string.IsNullOrEmpty(lobbyId) ? lobbyId : $"{maxPlayers}p";
+        string mode = $"{targetPlayerCount}p";
         MatchmakingModel.FindMatch(mode, stake, lobbyId);
         Debug.Log($"[WaitingForPlayerPanelManager] OpenWaitingPanel — FindMatch called for {maxPlayers} players (lobby: {lobbyId})");
 

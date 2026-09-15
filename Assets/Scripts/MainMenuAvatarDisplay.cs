@@ -91,7 +91,9 @@ public class MainMenuAvatarDisplay : MonoBehaviour
     {
         if (frameImageSprite != null && AvatarSelector.Instance != null)
         {
-            int frameIndex = PlayerPrefs.GetInt("SelectedProfileFrameIndex", 0);
+            int frameIndex = int.TryParse(PlayerModel.ProfileFrame, out int parsedFrame)
+                ? parsedFrame
+                : PlayerPrefs.GetInt("SelectedProfileFrameIndex", 0);
             Sprite frameSprite = AvatarSelector.Instance.GetBackgroundSpriteByIndex(frameIndex);
             if (frameSprite != null)
             {

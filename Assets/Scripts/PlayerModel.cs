@@ -13,6 +13,7 @@ public static class PlayerModel
     public static int WinningBalance { get; private set; }
     public static int Coins { get; private set; }
     public static string Avatar { get; private set; }
+    public static string ProfileFrame { get; private set; }
     public static int Xp { get; private set; }
     public static int Level { get; private set; }
     public static string Role { get; private set; }
@@ -81,6 +82,16 @@ public static class PlayerModel
     /// </summary>
     public static void TriggerDataUpdated()
     {
+        OnDataUpdated?.Invoke();
+    }
+
+    public static void SetProfileFrame(string frame)
+    {
+        if (!string.IsNullOrEmpty(frame))
+        {
+            ProfileFrame = frame;
+        }
+
         OnDataUpdated?.Invoke();
     }
 }

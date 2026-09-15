@@ -107,7 +107,7 @@ public class SelectPlayerPanelController : MonoBehaviour
                 waitingPanel.SetActive(true);
             }
 
-            string mode = $"{playerCount}-players";
+            string mode = $"{playerCount}p";
             MatchmakingModel.FindMatch(mode, defaultStake, lobbyId);
         }
     }
