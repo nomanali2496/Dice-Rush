@@ -55,8 +55,10 @@ public class SocketManager : MonoBehaviour
         Debug.Log($"<color=#AFEEEE>[SocketManager] OnApplicationPause: {pause}</color>");
         if (pause)
         {
-            Debug.Log("<color=#FF6347>⚠️ [SocketManager] App backgrounded. Triggering disconnect...</color>");
-            Disconnect();
+            // Keep the Socket.IO connection alive while the app is backgrounded.
+            // BestHTTP's built-in reconnection handles temporary network/background drops.
+            // Explicit Disconnect() is reserved for logout/home/quit flows.
+            Debug.Log("<color=#FFA500>⏸️ [SocketManager] App backgrounded. Keeping socket alive for reconnection.</color>");
         }
         else
         {
@@ -170,9 +172,9 @@ public class SocketManager : MonoBehaviour
             // Reverted back to Polling as WebSocket was causing disconnects
             ConnectWith = BestHTTP.SocketIO3.Transports.TransportTypes.Polling,
             Reconnection = true,
-            ReconnectionAttempts = 5,
+            ReconnectionAttempts = 20,
             ReconnectionDelay = TimeSpan.FromMilliseconds(1000),
-            ReconnectionDelayMax = TimeSpan.FromMilliseconds(5000),
+            ReconnectionDelayMax = TimeSpan.FromMilliseconds(10000),
             Timeout = TimeSpan.FromSeconds(15),
             AutoConnect = false, // Connecting manually
             Auth = (manager, socket) => new { 
@@ -208,6 +210,9 @@ public class SocketManager : MonoBehaviour
     private void OnSocketConnected(ConnectResponse resp)
     {
         Debug.Log("<color=#00FF00>🎉 ⬇️ [Socket ON] Connected successfully! The backend accepted the connection.</color>");
+
+        // Ensure gameplay/matchmaking listeners are attached to this socket instance.
+        MatchmakingModel.EnsureListenersAdded();
 
         // Wire wallet/reward events every (re-)connect.
         ioManager.Socket.On<BestHTTP.JSON.LitJson.JsonData>("adRewardGranted", OnAdRewardGrantedRaw);
