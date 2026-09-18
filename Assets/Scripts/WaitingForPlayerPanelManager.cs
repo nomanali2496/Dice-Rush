@@ -78,6 +78,13 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
 
     public void OpenWaitingPanel(int maxPlayers, float stake = 100f, string lobbyId = "combo-dice")
     {
+        OpenWaitingPanel(maxPlayers, stake, lobbyId, null);
+    }
+
+    // Supports both normal/simple lobbies and private/custom lobbies that provide
+    // their exact backend matchmaking mode.
+    public void OpenWaitingPanel(int maxPlayers, float stake, string lobbyId, string matchmakingMode)
+    {
         targetPlayerCount = Mathf.Clamp(maxPlayers, 2, 10);
         isLocalPlayerReady = true;
         isHost = true;
@@ -99,7 +106,7 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
         MatchmakingModel.OnMatchFound += OnMatchFoundFromServer;
 
         // ✅ FIX: Trigger actual server matchmaking
-        string mode = $"{targetPlayerCount}p";
+        string mode = string.IsNullOrEmpty(matchmakingMode) ? $"{targetPlayerCount}p" : matchmakingMode;
         MatchmakingModel.FindMatch(mode, stake, lobbyId);
         Debug.Log($"[WaitingForPlayerPanelManager] OpenWaitingPanel — FindMatch called for {maxPlayers} players (lobby: {lobbyId})");
 
