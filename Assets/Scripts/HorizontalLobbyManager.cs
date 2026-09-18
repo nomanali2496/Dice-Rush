@@ -1033,12 +1033,11 @@ public class HorizontalLobbyManager : MonoBehaviour
             return;
         }
 
+        // Never start a game as a fallback for a matchmaking/socket error.
+        // Keep the lobby flow intact so the player can retry/reconnect instead of
+        // being silently placed into a local/fallback match.
         if (waitingPanel != null)
-        {
-            waitingPanel.SetActive(false);
-        }
-        // If socket matchmaking errors, automatically start game so player is never kicked back
-        StartGameFromNetwork(-1, GameManager.CreateFallbackMatchData(4, 100), -1);
+            waitingPanel.SetActive(true);
     }
 
     private void HandleMatchmakingUpdated(int current, int target)
