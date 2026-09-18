@@ -929,7 +929,19 @@ public class BackendAuthService : MonoBehaviour
             }
             else
             {
-                Debug.LogError($"<color=#ff0000>[BackendAuthService] ClaimDailyReward Error: {request.error} | {request.downloadHandler.text}</color>");
+                // HTTP 409 means the backend has already granted today's reward.
+                // This is an expected state for a duplicate claim, not a client/server failure.
+                string responseText = request.downloadHandler != null ? request.downloadHandler.text : string.Empty;
+                if (request.responseCode == 409 &&
+                    responseText.IndexOf("Reward already claimed", StringComparison.OrdinalIgnoreCase) >= 0)
+                {
+                    Debug.Log($"<color=#FFA500>[BackendAuthService] Daily reward already claimed today. Ignoring duplicate claim. {responseText}</color>");
+                }
+                else
+                {
+                    Debug.LogError($"<color=#ff0000>[BackendAuthService] ClaimDailyReward Error: {request.error} | {responseText}</color>");
+                }
+
                 onComplete?.Invoke(false, null);
             }
         }
