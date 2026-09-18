@@ -200,7 +200,8 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
                 : "Looking For Players...";
         }
 
-        bool canStart = isHost && isLocalPlayerReady;
+        // Game must NOT start until all player/bot slots are filled.
+        bool canStart = isHost && isLocalPlayerReady && currentJoinedCount >= targetPlayerCount;
         if (startGameButton != null)
             startGameButton.interactable = canStart;
 
