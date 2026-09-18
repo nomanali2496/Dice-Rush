@@ -108143,6 +108143,7 @@ MonoBehaviour:
   backButton: {fileID: 0}
   enableBotSimulation: 1
   botJoinInterval: 1.2
+  autoStartWhenFull: 0
 --- !u!114 &2021851063
 MonoBehaviour:
   m_ObjectHideFlags: 0
