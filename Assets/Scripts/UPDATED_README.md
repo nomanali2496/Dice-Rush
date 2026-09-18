@@ -1,4 +1,4 @@
-# Dice Rush - PlayFab Integration (SINGLE SCENE VERSION)
+# Dice Blitz - PlayFab Integration (SINGLE SCENE VERSION)
 
 ## 🎮 Complete PlayFab Integration - Single Scene Setup
 
@@ -272,7 +272,7 @@ PlayFabManager.Instance.SavePlayerData();
 
 **Version:** 2.0 (Single Scene)  
 **Updated:** December 2025  
-**Game:** Dice Rush  
+**Game:** Dice Blitz
 
 🎲 Happy Gaming! 🎮
 

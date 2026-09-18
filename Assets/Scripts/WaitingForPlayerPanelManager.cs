@@ -8,9 +8,32 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
 {
     public static WaitingForPlayerPanelManager Instance { get; private set; }
 
-    public bool IsPanelActive => waitingForPlayerPanel != null ? waitingForPlayerPanel.activeSelf : gameObject.activeSelf;
+    public bool IsPanelActive => gameObject.activeInHierarchy;
 
-    [Header("Panel References")]
+    public void OnStartGameClicked()
+    {
+        if (!isHost) return;
+
+        SoundManager.instance?.PlayTap();
+
+        if (serverMatchData == null)
+        {
+            // If offline/bots, we can start immediately
+            if (enableBotSimulation || (BackendAuthService.Instance != null && !BackendAuthService.HasStoredJWT()))
+            {
+                serverMatchData = GameManager.CreateFallbackMatchData(targetPlayerCount, 100f);
+            }
+            // If online but server hasn't replied yet, force start
+            else if (isHost && !string.IsNullOrEmpty(currentLobbyId))
+            {
+                MatchmakingModel.StartNow(currentLobbyId);
+                return; // Wait for server to reply with startGame payload
+            }
+        }
+
+        CloseWaitingPanel();
+        Debug.Log("🚀 Starting Game with " + targetPlayerCount + " players");
+
     [SerializeField] private GameObject waitingForPlayerPanel;
     [SerializeField] private GameObject selectBoardPanel;
     [SerializeField] private GameObject gameplayScreenPanel;
@@ -31,18 +54,19 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
     [SerializeField] private Button backButton;
 
     [Header("Settings")]
-    [SerializeField] private bool enableBotSimulation = true;
+    [SerializeField] private bool enableBotSimulation = false;
     [SerializeField] private float botJoinInterval = 1.2f;
-    [SerializeField] private bool autoStartWhenFull = false;
 
     private int targetPlayerCount = 5;
     private int currentJoinedCount = 0;
     private bool isLocalPlayerReady = true;
     private bool isHost = true;
+    private string currentLobbyId = "";
 
     private List<PlayerSlotData> players = new List<PlayerSlotData>();
     private List<GameObject> spawnedSlots = new List<GameObject>();
     private Coroutine botCoroutine;
+    private StartGameData serverMatchData;
 
     [System.Serializable]
     public class PlayerSlotData
@@ -76,11 +100,13 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
         backButton?.onClick.AddListener(OnBackClicked);
     }
 
-    public void OpenWaitingPanel(int maxPlayers, float stake = 100f, string lobbyId = "combo-dice")
+    public void OpenWaitingPanel(int maxPlayers, float stake = 100f, string lobbyId = "combo-dice", string mode = "3p")
     {
         targetPlayerCount = Mathf.Clamp(maxPlayers, 2, 10);
         isLocalPlayerReady = true;
         isHost = true;
+        serverMatchData = null;
+        currentLobbyId = lobbyId;
 
         players.Clear();
         string localName = PlayerModel.Name ?? ("Player " + Random.Range(100, 999));
@@ -98,14 +124,28 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
         MatchmakingModel.OnMatchFound -= OnMatchFoundFromServer;
         MatchmakingModel.OnMatchFound += OnMatchFoundFromServer;
 
-        // ✅ FIX: Trigger actual server matchmaking
-        string mode = $"{targetPlayerCount}p";
+        // ✅ FIX: Trigger actual server matchmaking using exact backend mode
         MatchmakingModel.FindMatch(mode, stake, lobbyId);
-        Debug.Log($"[WaitingForPlayerPanelManager] OpenWaitingPanel — FindMatch called for {maxPlayers} players (lobby: {lobbyId})");
+        Debug.Log($"[WaitingForPlayerPanelManager] OpenWaitingPanel — FindMatch called for {maxPlayers} players (lobby: {lobbyId}, mode: {mode})");
 
-        // Bot simulation only runs as fallback (e.g. offline/debug mode)
+        // Bot simulation only runs as fallback (e.g. offline/debug mode) if not an arena preset
         if (botCoroutine != null) StopCoroutine(botCoroutine);
-        if (enableBotSimulation)
+        
+        bool isArena = false;
+        var config = LobbyModel.Configurations;
+        if (config != null)
+        {
+            foreach(var c in config)
+            {
+                if (c.lobbyId == lobbyId && c.isArenaPreset)
+                {
+                    isArena = true;
+                    break;
+                }
+            }
+        }
+        
+        if (enableBotSimulation && !BackendAuthService.HasStoredJWT() && !isArena)
             botCoroutine = StartCoroutine(SimulateBots());
     }
 
@@ -122,6 +162,7 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
 
     private void RebuildSlots()
     {
+        EnsureHorizontalSlotsLayout();
         ClearSlots();
 
         // 1. Instantiate joined players
@@ -155,6 +196,40 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
             LayoutRebuilder.ForceRebuildLayoutImmediate(rt);
     }
 
+    private void EnsureHorizontalSlotsLayout()
+    {
+        if (slotsContainer == null) return;
+
+        VerticalLayoutGroup verticalLayout = slotsContainer.GetComponent<VerticalLayoutGroup>();
+        if (verticalLayout != null)
+        {
+            DestroyImmediate(verticalLayout);
+        }
+
+        HorizontalLayoutGroup horizontalLayout = slotsContainer.GetComponent<HorizontalLayoutGroup>();
+        if (horizontalLayout == null)
+        {
+            horizontalLayout = slotsContainer.gameObject.AddComponent<HorizontalLayoutGroup>();
+        }
+
+        horizontalLayout.enabled = true;
+        horizontalLayout.spacing = 20f;
+        horizontalLayout.childAlignment = TextAnchor.MiddleLeft;
+        horizontalLayout.childControlWidth = true;
+        horizontalLayout.childControlHeight = true;
+        horizontalLayout.childForceExpandWidth = true;
+        horizontalLayout.childForceExpandHeight = true;
+
+        ContentSizeFitter contentSizeFitter = slotsContainer.GetComponent<ContentSizeFitter>();
+        if (contentSizeFitter == null)
+        {
+            contentSizeFitter = slotsContainer.gameObject.AddComponent<ContentSizeFitter>();
+        }
+
+        contentSizeFitter.horizontalFit = ContentSizeFitter.FitMode.PreferredSize;
+        contentSizeFitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+    }
+
     private void ClearSlots()
     {
         foreach (var s in spawnedSlots)
@@ -184,8 +259,7 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
             index++;
         }
 
-        // Fix: Removed autoStartWhenFull to prevent game from starting on its own
-        // User must manually press the Start Game button
+        // User must manually press the Start Game button.
     }
 
     private void UpdateUI()
@@ -225,9 +299,20 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
 
         SoundManager.instance?.PlayTap();
 
-        while (players.Count < targetPlayerCount)
+        if (serverMatchData == null)
         {
-            players.Add(new PlayerSlotData("Bot_" + Random.Range(100, 999), true, true));
+            // If no match data from server yet, this might be an Arena Start Now attempt
+            if (isHost && !string.IsNullOrEmpty(currentLobbyId))
+            {
+                MatchmakingModel.StartNow(currentLobbyId);
+                Debug.Log($"[WaitingForPlayerPanelManager] Emitted startNow for {currentLobbyId}");
+                return; // Wait for server to reply with startGame payload
+            }
+            else
+            {
+                Debug.LogWarning("[WaitingForPlayerPanelManager] Cannot start without a valid server match.");
+                return;
+            }
         }
 
         CloseWaitingPanel();
@@ -248,7 +333,7 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
                 0
             );
 
-            GameManager.Instance.ConfigureGameFromLobby(config);
+            GameManager.Instance.ConfigureGameFromLobby(config, -1, serverMatchData);
             return;
         }
 
@@ -311,6 +396,14 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
     private void OnMatchFoundFromServer(StartGameData data)
     {
         Debug.Log("[WaitingForPlayerPanelManager] Real match found from server! Stopping bot simulation.");
+
+        if (data == null)
+        {
+            Debug.LogWarning("[WaitingForPlayerPanelManager] Server returned an empty match payload.");
+            return;
+        }
+
+        serverMatchData = data;
 
         // Stop bot simulation — we have real players now
         if (botCoroutine != null)

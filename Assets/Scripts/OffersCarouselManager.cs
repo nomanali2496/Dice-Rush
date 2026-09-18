@@ -37,8 +37,6 @@ public class OffersCarouselManager : MonoBehaviour
     private int currentSelectedIndex = 0; // Currently selected offer (center)
     private Dictionary<int, RectTransform> offerTransforms = new Dictionary<int, RectTransform>();
     private Dictionary<int, CanvasGroup> offerCanvasGroups = new Dictionary<int, CanvasGroup>();
-    private Coroutine transitionCoroutine;
-    
     // Multi-step scroll animation tracking
     private Coroutine multiScrollCoroutine = null;
     
@@ -462,12 +460,6 @@ public class OffersCarouselManager : MonoBehaviour
         Debug.Log($"[OffersCarouselManager] Transitioning to offer index: {index}");
         currentSelectedIndex = index;
         
-        // Stop any existing transition
-        if (transitionCoroutine != null)
-        {
-            StopCoroutine(transitionCoroutine);
-        }
-        
         // Update positions
         UpdateOfferPositions();
     }
@@ -586,10 +578,6 @@ public class OffersCarouselManager : MonoBehaviour
     
     private void OnDestroy()
     {
-        if (transitionCoroutine != null)
-        {
-            StopCoroutine(transitionCoroutine);
-        }
     }
     
     /// <summary>

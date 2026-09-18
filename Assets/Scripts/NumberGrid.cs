@@ -1,4 +1,4 @@
-﻿#pragma warning disable 0414
+#pragma warning disable 0414
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -641,12 +641,12 @@ public class NumberGrid : MonoBehaviour
             }
         }
         
-        // Find and store powerup image with sprite (start visible but inactive)
+        // Find and store powerup image with sprite (start HIDDEN - only shown when slider activates)
         Image powerupImage = FindComponentInChildren<Image>(box, powerupImageName);
         if (powerupImage != null)
         {
             powerupImage.sprite = powerupSprites[powerupSpriteIndex];
-            powerupImage.gameObject.SetActive(true); // Start visible
+            powerupImage.gameObject.SetActive(false); // Hidden by default - shown only via slider
             boxData.powerupImage = powerupImage; // Store reference
         }
         else
@@ -1676,9 +1676,12 @@ public class NumberGrid : MonoBehaviour
         currentlyVisiblePowerup = powerupBox;
         powerupBox.isPowerupVisible = true;
         
-        // Powerup image is already visible, just start animating it
+        // Show powerup image and start pulsing animation
         if (powerupBox.powerupImage != null)
         {
+            // Make the powerup image visible now
+            powerupBox.powerupImage.gameObject.SetActive(true);
+            
             // Kill any existing animation
             if (powerupBox.powerupAnimation != null)
             {
@@ -1778,7 +1781,7 @@ public class NumberGrid : MonoBehaviour
         
         powerupBox.isPowerupVisible = false;
         
-        // Stop animation and reset scale (keep image visible)
+        // Stop animation and HIDE the powerup image (returns to plain number-only look)
         if (powerupBox.powerupImage != null)
         {
             // Kill the animation
@@ -1791,8 +1794,8 @@ public class NumberGrid : MonoBehaviour
             // Reset scale to normal
             powerupBox.powerupImage.transform.localScale = Vector3.one;
             
-            // Keep image visible (don't disable it)
-            // powerupBox.powerupImage.gameObject.SetActive(true); // Already visible
+            // Hide image - powerup disappears from grid, only shows via slider
+            powerupBox.powerupImage.gameObject.SetActive(false);
         }
         
         // Hide timer UI (slider and text)

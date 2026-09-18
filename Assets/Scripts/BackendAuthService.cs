@@ -13,7 +13,7 @@ public class BackendAuthService : MonoBehaviour
     [Tooltip("Backend environment config (assign BackendConfig asset, or place one in Resources/BackendConfig.asset)")]
     [SerializeField] private BackendConfig backendConfig;
 
-    private string baseUrl => (backendConfig != null ? backendConfig : BackendConfig.Load())?.ApiUrl ?? "https://obtaining-conscious-scan-seekers.trycloudflare.com";
+    private string baseUrl => (backendConfig != null ? backendConfig : BackendConfig.Load())?.ApiUrl ?? "https://mil-discrimination-ought-tests.trycloudflare.com";
 
     private const string JWT_PREF_KEY = "CustomBackendJWT";
 
@@ -34,6 +34,9 @@ public class BackendAuthService : MonoBehaviour
     /// Loads a sprite from a remote URL or returns it from cache if available.
     /// Follows clean architecture by acting as the low-level provider.
     /// </summary>
+    // Tracks URLs that have already failed so we don't retry them every frame
+    private static readonly HashSet<string> _failedImageUrls = new HashSet<string>();
+
     public void LoadRemoteSprite(string imagePath, Action<Sprite> onComplete)
     {
         if (string.IsNullOrEmpty(imagePath))
@@ -42,14 +45,21 @@ public class BackendAuthService : MonoBehaviour
             return;
         }
 
-        // 1. Check cache first
+        // 1. Check successful cache first
         if (_spriteCache.ContainsKey(imagePath))
         {
             onComplete?.Invoke(_spriteCache[imagePath]);
             return;
         }
 
-        // 2. Download if not in cache
+        // 2. Skip already-failed URLs silently (avoids 49x download spam for same broken URL)
+        if (_failedImageUrls.Contains(imagePath))
+        {
+            onComplete?.Invoke(null);
+            return;
+        }
+
+        // 3. Download if not in cache
         StartCoroutine(DownloadSpriteCoroutine(imagePath, onComplete));
     }
 
@@ -91,7 +101,13 @@ public class BackendAuthService : MonoBehaviour
             }
             else
             {
-                Debug.Log($"[BackendAuthService] Image Download Info: {fullUrl} | {request.error} (using local fallback)");
+                // Store in failed set so same URL isn't retried by every lobby card
+                _failedImageUrls.Add(imagePath);
+                if (!_failedImageUrls.Contains(imagePath + "_logged"))
+                {
+                    _failedImageUrls.Add(imagePath + "_logged");
+                    Debug.LogWarning($"[BackendAuthService] Image download failed (will use fallback): {fullUrl} | {request.error}");
+                }
                 onComplete?.Invoke(null);
             }
         }
@@ -1715,6 +1731,9 @@ public class BackendAuthService : MonoBehaviour
         public float thirdPlaceCash;
         public int thirdPlaceCoins;
         public bool enabled;
+        public bool isArenaPreset;
+        public float arenaStakeMin;
+        public float arenaStakeMax;
     }
 
     [Serializable]

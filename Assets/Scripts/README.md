@@ -1,8 +1,8 @@
-# Dice Rush - PlayFab Integration Scripts
+# Dice Blitz - PlayFab Integration Scripts
 
 ## 🎮 Complete PlayFab Integration with Player Data Management
 
-This folder contains all the scripts needed to integrate PlayFab into your Dice Rush game, including authentication, player data management, and currency systems.
+This folder contains all the scripts needed to integrate PlayFab into your Dice Blitz game, including authentication, player data management, and currency systems.
 
 ---
 
@@ -203,7 +203,7 @@ See **PLAYFAB_SETUP_GUIDE.md** for detailed setup instructions, troubleshooting,
 ---
 
 **Version:** 1.0  
-**Created for:** Dice Rush Game  
+**Created for:** Dice Blitz Game
 **Last Updated:** December 2025
 
 Happy coding! 🎲🎮

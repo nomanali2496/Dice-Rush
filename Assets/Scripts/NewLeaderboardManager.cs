@@ -86,6 +86,8 @@ public class LeaderboardCategoryRowUI : MonoBehaviour
 /// </summary>
 public class NewLeaderboardManager : MonoBehaviour
 {
+    private const int LeaderboardEntryLimit = 10;
+
     public static NewLeaderboardManager Instance { get; private set; }
 
     [Header("Avatar References")]
@@ -408,10 +410,14 @@ public class NewLeaderboardManager : MonoBehaviour
     {
         if (BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
         {
-            BackendAuthService.Instance.GetLeaderboard(50, (success, response) =>
+            BackendAuthService.Instance.GetLeaderboard(LeaderboardEntryLimit, (success, response) =>
             {
                 if (success && response != null && response.leaderboard != null && response.leaderboard.Count > 0)
                 {
+                    if (response.leaderboard.Count < LeaderboardEntryLimit)
+                    {
+                        Debug.LogWarning($"[NewLeaderboardManager] Backend returned {response.leaderboard.Count}/{LeaderboardEntryLimit} leaderboard entries.");
+                    }
                     PopulateFromBackendData(response.leaderboard);
                 }
                 else

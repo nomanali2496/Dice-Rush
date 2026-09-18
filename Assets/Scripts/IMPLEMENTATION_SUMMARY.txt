@@ -1,6 +1,6 @@
 ================================================================================
                     PLAYFAB INTEGRATION - IMPLEMENTATION COMPLETE
-                              Dice Rush Game
+                              Dice Blitz Game
 ================================================================================
 
 ✅ ALL SCRIPTS CREATED AND CONFIGURED
@@ -249,7 +249,7 @@ Notes:
 
 Version: 1.0
 Created: December 2025
-Game: Dice Rush
+Game: Dice Blitz
 
 ================================================================================
 

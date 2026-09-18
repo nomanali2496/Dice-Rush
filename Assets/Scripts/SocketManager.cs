@@ -17,7 +17,7 @@ public class SocketManager : MonoBehaviour
     [Tooltip("Backend environment config (assign BackendConfig asset, or place one in Resources/BackendConfig.asset)")]
     [SerializeField] private BackendConfig backendConfig;
 
-    private string serverUrl => (backendConfig != null ? backendConfig : BackendConfig.Load())?.SocketUrl ?? "https://obtaining-conscious-scan-seekers.trycloudflare.com";
+    private string serverUrl => (backendConfig != null ? backendConfig : BackendConfig.Load())?.SocketUrl ?? "https://mil-discrimination-ought-tests.trycloudflare.com";
 
     public string GetServerUrl() => serverUrl;
 
@@ -167,7 +167,13 @@ public class SocketManager : MonoBehaviour
 
         SocketOptions options = new SocketOptions
         {
-            ConnectWith = BestHTTP.SocketIO3.Transports.TransportTypes.WebSocket,
+            // Reverted back to Polling as WebSocket was causing disconnects
+            ConnectWith = BestHTTP.SocketIO3.Transports.TransportTypes.Polling,
+            Reconnection = true,
+            ReconnectionAttempts = 5,
+            ReconnectionDelay = TimeSpan.FromMilliseconds(1000),
+            ReconnectionDelayMax = TimeSpan.FromMilliseconds(5000),
+            Timeout = TimeSpan.FromSeconds(15),
             AutoConnect = false, // Connecting manually
             Auth = (manager, socket) => new { 
                 token = BackendAuthService.GetStoredJWT(),

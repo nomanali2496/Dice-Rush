@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using TMPro;
 
 /// <summary>
-/// Controls the Shop UI panel in Dice Rush / Dice Blitz.
+/// Controls the Shop UI panel in Dice Blitz.
 /// Manages the "REMOVE ADS" purchase banner & button, "EARN FREE" rewarded ad chips button,
 /// Chips Pack IAP purchases (5k, 10k, 25k, 50k, 100k chips), and back button navigation.
 /// </summary>

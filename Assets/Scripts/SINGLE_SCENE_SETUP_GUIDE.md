@@ -292,7 +292,7 @@ MainScene
 ### Organize Login Section (Example Layout)
 ```
 LoginSection (vertical layout)
-├── Title Text ("Welcome to Dice Rush!")
+├── Title Text ("Welcome to Dice Blitz!")
 ├── Email Input
 ├── Password Input
 ├── Login Button

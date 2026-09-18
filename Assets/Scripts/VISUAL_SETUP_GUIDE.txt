@@ -21,7 +21,7 @@ MainScene
   │   │   ├─ Background Image
   │   │   │
   │   │   ├─ LoginSection [✓ ACTIVE]
-  │   │   │   ├─ Title Text ("Welcome to Dice Rush!")
+  │   │   │   ├─ Title Text ("Welcome to Dice Blitz!")
   │   │   │   ├─ LoginEmailInput (InputField - TMP)
   │   │   │   ├─ LoginPasswordInput (InputField - TMP)
   │   │   │   ├─ LoginButton (Button - TMP)

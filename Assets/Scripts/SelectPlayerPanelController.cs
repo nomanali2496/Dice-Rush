@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// Controller for the Select Player Panel (Dice Blitz / Dice Rush UI)
+/// Controller for the Select Player Panel (Dice Blitz UI)
 /// Manages player count selection (3, 5, 8, 10 players), panel visibility, and back navigation.
 /// Opens the Lobby Panel and triggers waiting for players.
 /// </summary>

@@ -456,8 +456,18 @@ public class MightyTaskItemUI : MonoBehaviour
         else
         {
             // Dual Button Setup
-            if (claimButton != null) claimButton.gameObject.SetActive(!isClaimed && isCompleted);
-            if (goButton != null) goButton.gameObject.SetActive(!isClaimed && !isCompleted);
+            if (claimButton != null)
+            {
+                claimButton.gameObject.SetActive(!isClaimed && isCompleted);
+                TextMeshProUGUI claimText = claimButton.GetComponentInChildren<TextMeshProUGUI>(true);
+                if (claimText != null) claimText.text = "CLAIM";
+            }
+            if (goButton != null)
+            {
+                goButton.gameObject.SetActive(!isClaimed && !isCompleted);
+                TextMeshProUGUI goText = goButton.GetComponentInChildren<TextMeshProUGUI>(true);
+                if (goText != null) goText.text = "GO";
+            }
         }
 
         // if (completedBadge != null && completedBadge != (titleText != null ? titleText.gameObject : null) &&

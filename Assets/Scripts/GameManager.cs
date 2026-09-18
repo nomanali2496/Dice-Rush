@@ -67,6 +67,7 @@ public class GameManager : MonoBehaviour
     private bool isGameActive = false; // Flag to track if game is active
     public bool IsGameActive => isGameActive;
     public bool IsGameplayScreenActive => gameplayScreen != null && gameplayScreen.activeSelf;
+    public bool IsDiceGameplayActive => IsGameplayScreenActive && isGameActive && !winnerScreenShown && !isWaitingForServer;
     // True only when the player is mid-match (screen active AND winner results not yet shown).
     // Use this instead of IsGameplayScreenActive when deciding to sync/reconnect a live match.
     public bool IsActivelyPlaying => IsGameplayScreenActive && !winnerScreenShown;

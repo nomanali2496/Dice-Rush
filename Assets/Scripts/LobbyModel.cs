@@ -98,41 +98,46 @@ public static class LobbyModel
 
     private static void UpdateConfigurations(List<BackendAuthService.LobbyApiData> apiData)
     {
-        // Resize the configuration array to match exactly what the server returned
-        Configurations = new LobbyConfig[apiData.Count];
+        // ✅ FIX: Filter out disabled lobbies BEFORE building the config array.
+        // This prevents players from clicking on and submitting findMatch for lobbies
+        // that the backend has marked as inactive (enabled: false).
+        var enabledData = apiData.FindAll(d => d.enabled);
 
-        for (int i = 0; i < apiData.Count; i++)
+        Debug.Log($"[LobbyModel] Backend returned {apiData.Count} lobbies. {enabledData.Count} are enabled and will be shown.");
+
+        // Resize the configuration array to match only enabled lobbies
+        Configurations = new LobbyConfig[enabledData.Count];
+
+        for (int i = 0; i < enabledData.Count; i++)
         {
-            var apiConfig = apiData[i];
-            
-            // Use the loop index (i) as the SSOT index.
-            int indexToUse = i;
+            var apiConfig = enabledData[i];
 
-            if (indexToUse >= 0 && indexToUse < Configurations.Length)
-            {
-                LobbyConfig newConfig = new LobbyConfig(
-                    indexToUse,
-                    apiConfig.playerCount,
-                    apiConfig.entryFeeCash,
-                    apiConfig.entryFeeCoins,
-                    apiConfig.firstPlaceCash,
-                    apiConfig.firstPlaceCoins,
-                    apiConfig.secondPlaceCash,
-                    apiConfig.secondPlaceCoins,
-                    apiConfig.thirdPlaceCash,
-                    apiConfig.thirdPlaceCoins,
-                    apiConfig.gameTimer
-                );
-                
-                newConfig.lobbyName = apiConfig.name;
-                newConfig.lobbyId = apiConfig.id; // Map the database slug
-                newConfig.mode = apiConfig.mode; // Map the database mode ("2p", "5p", etc)
-                newConfig.imageUrl = apiConfig.image; // Map the remote image path
-                
-                Configurations[indexToUse] = newConfig;
-            }
+            LobbyConfig newConfig = new LobbyConfig(
+                i,
+                apiConfig.playerCount,
+                apiConfig.entryFeeCash,
+                apiConfig.entryFeeCoins,
+                apiConfig.firstPlaceCash,
+                apiConfig.firstPlaceCoins,
+                apiConfig.secondPlaceCash,
+                apiConfig.secondPlaceCoins,
+                apiConfig.thirdPlaceCash,
+                apiConfig.thirdPlaceCoins,
+                apiConfig.gameTimer,
+                apiConfig.isArenaPreset,
+                apiConfig.arenaStakeMin,
+                apiConfig.arenaStakeMax
+            );
+
+            newConfig.lobbyName = apiConfig.name;
+            newConfig.lobbyId = apiConfig.id;
+            newConfig.mode = apiConfig.mode;
+            newConfig.imageUrl = apiConfig.image;
+            newConfig.enabled = true; // Already filtered, so always true here
+
+            Configurations[i] = newConfig;
         }
-        
+
         IsLoaded = true;
         OnConfigurationsUpdated?.Invoke();
     }

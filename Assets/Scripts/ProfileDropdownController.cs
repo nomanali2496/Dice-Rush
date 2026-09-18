@@ -23,7 +23,7 @@ namespace UI
     }
 
     /// <summary>
-    /// Controller for the Profile Dropdown UI component (Dice Rush / Dice Blitz UI)
+    /// Controller for the Profile Dropdown UI component (Dice Blitz UI)
     /// Manages expandable profile list, backend data loading, smooth DOTween collapse/expand, and arrow rotation.
     /// </summary>
     public class ProfileDropdownController : MonoBehaviour, IPointerClickHandler

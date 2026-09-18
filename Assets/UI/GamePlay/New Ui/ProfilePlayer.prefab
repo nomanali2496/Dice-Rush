@@ -33,11 +33,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4341319721729190985}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 5}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -91.5}
   m_SizeDelta: {x: 120, y: 40}
-  m_Pivot: {x: 0.5, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &792295361261880126
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -289,11 +289,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4341319721729190985}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.30481482, y: 0.22236286}
-  m_AnchorMax: {x: 0.6951852, y: 0.30291137}
+  m_AnchorMin: {x: 0.13368858, y: 0.20675105}
+  m_AnchorMax: {x: 0.86631143, y: 0.28691983}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &321238931809569533
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -486,6 +486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaitingPlayerSlotUI
   avatarImage: {fileID: 0}
+  frameImage: {fileID: 0}
   playerNameText: {fileID: 3242260683652157417}
   readyBadge: {fileID: 648714655358047036}
   waitingBadge: {fileID: 2367022654023498597, guid: f2bf077b488673346b9d86a47d573b90, type: 3}

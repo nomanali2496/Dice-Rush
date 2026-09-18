@@ -12,6 +12,8 @@ using TMPro;
 /// </summary>
 public class MightyTasksPanelManager : MonoBehaviour
 {
+    private const string TaskProgressKeyPrefix = "MightyTask_Progress_";
+
     public enum TaskTab
     {
         Daily,
@@ -242,11 +244,31 @@ public class MightyTasksPanelManager : MonoBehaviour
                 rewardChips = baseData.rewardChips,
                 rewardCash = baseData.rewardCash,
                 taskIcon = baseData.taskIcon,
-                currentProgress = 0,
+                currentProgress = PlayerPrefs.GetInt(TaskProgressKeyPrefix + baseData.taskId, 0),
                 isClaimed = PlayerPrefs.GetInt($"MightyTask_Claimed_{baseData.taskId}", 0) == 1
             };
 
+            taskInstance.currentProgress = Mathf.Clamp(taskInstance.currentProgress, 0, taskInstance.targetProgress);
+
             taskCards[i].SetupTask(taskInstance, OnClaimTaskClicked, OnGoTaskClicked);
+        }
+    }
+
+    public void AddTaskProgress(string taskId, int amount)
+    {
+        if (string.IsNullOrEmpty(taskId) || amount <= 0) return;
+
+        TaskData task = defaultWeeklyTasks.Find(item => item.taskId == taskId);
+        if (task == null) return;
+
+        int currentProgress = PlayerPrefs.GetInt(TaskProgressKeyPrefix + taskId, 0);
+        currentProgress = Mathf.Clamp(currentProgress + amount, 0, task.targetProgress);
+        PlayerPrefs.SetInt(TaskProgressKeyPrefix + taskId, currentProgress);
+        PlayerPrefs.Save();
+
+        if (isActiveAndEnabled)
+        {
+            PopulateWeeklyTasks();
         }
     }
 
@@ -256,6 +278,7 @@ public class MightyTasksPanelManager : MonoBehaviour
 
         Debug.Log($"<color=#00FF00>🎁 [MightyTasks] Task Claimed: {task.title} (+{task.rewardChips} Chips, +${task.rewardCash:F2})</color>");
         PlayerPrefs.SetInt($"MightyTask_Claimed_{task.taskId}", 1);
+        PlayerPrefs.SetInt(TaskProgressKeyPrefix + task.taskId, task.targetProgress);
         PlayerPrefs.Save();
 
         // Refresh UI

@@ -15,5 +15,5 @@ MonoBehaviour:
   activeEnvironment: 1
   devApiUrl: http://localhost:3000
   devSocketUrl: ws://localhost:3000
-  prodApiUrl: https://obtaining-conscious-scan-seekers.trycloudflare.com/
-  prodSocketUrl: https://obtaining-conscious-scan-seekers.trycloudflare.com/
+  prodApiUrl: https://mil-discrimination-ought-tests.trycloudflare.com
+  prodSocketUrl: https://mil-discrimination-ought-tests.trycloudflare.com

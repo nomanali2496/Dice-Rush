@@ -1,7 +1,7 @@
 # PlayFab Integration Setup Guide
 
 ## Overview
-This guide will help you set up and use the PlayFab integration for your Dice Rush game. The integration includes player authentication, data management, and currency systems.
+This guide will help you set up and use the PlayFab integration for your Dice Blitz game. The integration includes player authentication, data management, and currency systems.
 
 ## Files Created
 1. **PlayerData.cs** - Data model for player information
@@ -238,6 +238,6 @@ The `SplashScreen` can attempt auto-login:
 - PlayFab Forums: https://community.playfab.com/
 
 ---
-**Created for Dice Rush Game**
+**Created for Dice Blitz Game**
 *Player data includes: Name, Email, Cash, Coins, and Profile Image*
 

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "BackendConfig", menuName = "Dice Rush/Backend Config")]
+[CreateAssetMenu(fileName = "BackendConfig", menuName = "Dice Blitz/Backend Config")]
 public class BackendConfig : ScriptableObject
 {
     public enum AppEnvironment { Development, Production }
@@ -13,8 +13,8 @@ public class BackendConfig : ScriptableObject
     public string devSocketUrl = "http://localhost:3000";
 
     [Header("Production URLs")]
-    public string prodApiUrl = "https://api.yourdomain.com";
-    public string prodSocketUrl = "https://api.yourdomain.com";
+    public string prodApiUrl = "https://mil-discrimination-ought-tests.trycloudflare.com";
+    public string prodSocketUrl = "https://mil-discrimination-ought-tests.trycloudflare.com";
 
     public string ApiUrl => activeEnvironment == AppEnvironment.Development ? devApiUrl : prodApiUrl;
     public string SocketUrl => activeEnvironment == AppEnvironment.Development ? devSocketUrl : prodSocketUrl;

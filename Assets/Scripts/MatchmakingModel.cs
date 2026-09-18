@@ -14,6 +14,7 @@ public static class MatchmakingModel
     public static event Action<StartGameData> OnMatchFound;
     public static event Action<string> OnMatchmakingFailed;
     public static event Action<int, int> OnMatchmakingUpdated;
+    public static event Action<ArenaHostedData> OnArenaHostedEvent;
 
     private static string lastMode;
     private static float lastStake;
@@ -78,6 +79,63 @@ public static class MatchmakingModel
         lastLobbyId = string.Empty;
     }
 
+    public static void HostArena(string lobbyId, string tableName, float? stake = null)
+    {
+        lastLobbyId = lobbyId;
+        IsSearching = true;
+
+        if (SocketManager.Instance == null) return;
+        if (SocketManager.Instance.Socket == null || SocketManager.Instance.Socket.Manager.State != BestHTTP.SocketIO3.SocketManager.States.Open)
+        {
+            SocketManager.Instance.ConnectToServer();
+            return;
+        }
+
+        EnsureListenersAdded();
+
+        HostArenaPayload payload = new HostArenaPayload { lobbyId = lobbyId, tableName = tableName, stake = stake };
+        SocketManager.Instance.Socket.Emit("hostArena", payload);
+        Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'hostArena' for Lobby: {lobbyId}, Table: {tableName}</color>");
+    }
+
+    public static void JoinArena(string arenaCode)
+    {
+        IsSearching = true;
+
+        if (SocketManager.Instance == null) return;
+        if (SocketManager.Instance.Socket == null || SocketManager.Instance.Socket.Manager.State != BestHTTP.SocketIO3.SocketManager.States.Open)
+        {
+            SocketManager.Instance.ConnectToServer();
+            return;
+        }
+
+        EnsureListenersAdded();
+
+        JoinArenaPayload payload = new JoinArenaPayload { arenaCode = arenaCode };
+        SocketManager.Instance.Socket.Emit("joinArena", payload);
+        Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'joinArena' Code: {arenaCode}</color>");
+    }
+
+    public static void CancelArena(string arenaCode)
+    {
+        if (SocketManager.Instance != null && SocketManager.Instance.Socket != null)
+        {
+            CancelArenaPayload payload = new CancelArenaPayload { arenaCode = arenaCode };
+            SocketManager.Instance.Socket.Emit("cancelArena", payload);
+            Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'cancelArena' Code: {arenaCode}</color>");
+        }
+        IsSearching = false;
+    }
+
+    public static void StartNow(string lobbyId)
+    {
+        if (SocketManager.Instance != null && SocketManager.Instance.Socket != null)
+        {
+            SocketManager.Instance.Socket.Emit("startNow", new StartNowPayload { lobbyId = lobbyId });
+            Debug.Log($"<color=#FFA500>⬆️ [Socket EMIT] 'startNow' for Lobby: {lobbyId}</color>");
+        }
+    }
+
     public static void EnsureListenersAdded()
     {
         var socket = SocketManager.Instance.Socket;
@@ -104,6 +162,8 @@ public static class MatchmakingModel
         socket.On<Error>("error", HandleError);
         socket.On<MatchmakingUpdateData>("matchmakingUpdate", HandleMatchmakingUpdate);
         
+
+
         // Gameplay events
         socket.On<BestHTTP.JSON.LitJson.JsonData>("diceRolled", (jsonData) => {
             if (jsonData != null) {
@@ -206,6 +266,19 @@ public static class MatchmakingModel
                 Debug.LogError($"[MatchmakingModel] JsonData parse failed for countdown: {e.Message}");
             }
         });
+
+        socket.On<BestHTTP.JSON.LitJson.JsonData>("arenaHosted", (jsonData) => {
+            try {
+                if (jsonData != null) {
+                    string json = jsonData.ToJson();
+                    Debug.Log("<color=#00FFFF>⬇️ [Socket ON] 'arenaHosted' received: " + json + "</color>");
+                    ArenaHostedData data = BestHTTP.JSON.LitJson.JsonMapper.ToObject<ArenaHostedData>(json);
+                    OnArenaHostedEvent?.Invoke(data);
+                }
+            } catch (Exception e) {
+                Debug.LogError($"[MatchmakingModel] JsonData parse failed for arenaHosted: {e.Message}");
+            }
+        });
     }
 
     private static void HandleStartGame(StartGameData data)
@@ -243,6 +316,19 @@ public static class MatchmakingModel
             return;
         }
 
+        // Server sends this when cancelMatchmaking arrives for a session that is no longer in queue.
+        // This happens on socket reconnect: the new session was never queued yet, or the match
+        // already started server-side. Silently clear searching state — no UI error needed.
+        if (msg.ToLower().Contains("not in this queue") || msg.ToLower().Contains("not in queue"))
+        {
+            Debug.Log($"<color=#AAAAAA>ℹ️ [Socket] Stale cancel/queue mismatch (ignored): {msg}</color>");
+            IsSearching = false;
+            lastMode = string.Empty;
+            lastStake = 0;
+            lastLobbyId = string.Empty;
+            return;
+        }
+
         string code = string.IsNullOrEmpty(err.code) ? string.Empty : $" [{err.code}]";
         Debug.LogError($"❌ <color=#FF0000>[Socket ERROR]{code} 'error' received: {msg}</color>");
 
@@ -261,7 +347,7 @@ public static class MatchmakingModel
                     string matchId = PlayerModel.ActiveMatchId;
                     string roomId  = PlayerModel.ActiveRoomId;
 
-                    if (!string.IsNullOrEmpty(roomId))
+                    if (!string.IsNullOrEmpty(matchId) && !string.IsNullOrEmpty(roomId))
                     {
                         Debug.Log($"<color=#00FF00>✅ [MatchmakingModel] Reconnecting to active match {matchId} / room {roomId}</color>");
                         ReconnectMatch(matchId, roomId);
@@ -370,6 +456,13 @@ public static class MatchmakingModel
     public static void ReconnectMatch(string activeMatchId, string activeRoomId)
     {
         if (SocketManager.Instance == null) return;
+
+        if (string.IsNullOrEmpty(activeMatchId) || string.IsNullOrEmpty(activeRoomId))
+        {
+            Debug.LogWarning("[MatchmakingModel] Skipping reconnect because active match IDs are missing.");
+            reconnectPending = false;
+            return;
+        }
 
         // If not connected, connect first. The connection callback will handle the sync.
         if (SocketManager.Instance.Socket == null || SocketManager.Instance.Socket.Manager.State != BestHTTP.SocketIO3.SocketManager.States.Open)
@@ -517,6 +610,12 @@ public class PlayerMilestoneData
 }
 
 [Serializable]
+public class StartNowPayload
+{
+    public string lobbyId;
+}
+
+[Serializable]
 public class GameOverData
 {
     public string winnerId;
@@ -551,5 +650,36 @@ public class ForfeitMatchPayload
 [Serializable]
 public class CancelMatchmakingPayload
 {
+    public string lobbyId;
+}
+
+[Serializable]
+public class HostArenaPayload
+{
+    public string lobbyId;
+    public string tableName;
+    public float? stake;
+}
+
+[Serializable]
+public class JoinArenaPayload
+{
+    public string arenaCode;
+}
+
+[Serializable]
+public class CancelArenaPayload
+{
+    public string arenaCode;
+}
+
+[Serializable]
+public class ArenaHostedData
+{
+    public string arenaCode;
+    public string tableName;
+    public string hostName;
+    public long expiresAt;
+    public float stake;
     public string lobbyId;
 }

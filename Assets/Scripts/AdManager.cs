@@ -6,7 +6,7 @@ using UnityEngine;
 
 /// <summary>
 /// Manages all ad functionality directly via the LevelPlay SDK.
-/// Simplified for Dice-Rush: Only Rewarded Ads included.
+/// Simplified for Dice Blitz: Only Rewarded Ads included.
 /// </summary>
 public class AdManager : MonoBehaviour
 {

@@ -174,7 +174,7 @@ public class DicesController : MonoBehaviour
     private void HandleServerDiceRolled(DiceRolledData data)
     {
         // We might want to check if the roll was by this user or the CPU,
-        // but since Dice Rush often shares the same dice roll for both,
+        // but since Dice Blitz often shares the same dice roll for both,
         // we'll just animate it anyway.
         
         targetDice1Value = data.d1;

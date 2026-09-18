@@ -3,7 +3,7 @@
                     PlayFab Integration - Single Scene
 ================================================================================
 
-                    Welcome to Dice Rush PlayFab Setup!
+                    Welcome to Dice Blitz PlayFab Setup!
 
 You asked for: Login/Register FIRST → Then SplashScreen → One Scene Only
                         ✅ ALL DONE! ✅

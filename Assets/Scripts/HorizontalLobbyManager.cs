@@ -224,15 +224,6 @@ public class HorizontalLobbyManager : MonoBehaviour
 
         if (_lobbyObjectsData != null && _lobbyObjectsData.Length > 0 && allLobbyItems != null && allLobbyItems.Count > 0)
         {
-            // Ensure configs match SelectedPlayerCount if the lobby was already initialized
-            if (SelectedPlayerCount > 0)
-            {
-                for (int i = 0; i < BACKGROUND_COUNT; i++)
-                {
-                    LobbyConfig config = LobbyModel.GetConfig(i);
-                    if (config != null) config.numberOfPlayers = SelectedPlayerCount;
-                }
-            }
             UpdateVisibleRows(true);
         }
         else
@@ -268,14 +259,6 @@ public class HorizontalLobbyManager : MonoBehaviour
         // Refresh lobby rows when GameObject becomes active
         if (_lobbyObjectsData != null && _lobbyObjectsData.Length > 0 && allLobbyItems != null && allLobbyItems.Count > 0)
         {
-            if (SelectedPlayerCount > 0)
-            {
-                for (int i = 0; i < BACKGROUND_COUNT; i++)
-                {
-                    LobbyConfig config = LobbyModel.GetConfig(i);
-                    if (config != null) config.numberOfPlayers = SelectedPlayerCount;
-                }
-            }
             UpdateVisibleRows(true);
         }
         else
@@ -940,20 +923,39 @@ public class HorizontalLobbyManager : MonoBehaviour
 
         _pendingLobbyIndex = lobbyIndex;
         
-        int reqPlayers = config.numberOfPlayers;
+        int reqPlayers = SelectedPlayerCount > 0 ? SelectedPlayerCount : config.numberOfPlayers;
         
         // Calculate the fee (prioritize cash, fallback to chips)
         float entryFee = config.entryFeeCash > 0 ? config.entryFeeCash : config.entryFeeChips;
 
-        // Use the official mode and ID from the backend database
-        string mode = !string.IsNullOrEmpty(config.mode) ? config.mode : $"{reqPlayers}p";
+        // The selected player count is purely for UI sizing if needed, but matchmaking MUST use the exact backend mode.
+        string mode = config.mode;
         string lobbyId = config.lobbyId;
+
+        // If this is an Arena preset, intercept the flow and open the Arena panel instead
+        if (config.isArenaPreset)
+        {
+            Debug.Log($"[HorizontalLobbyManager] Arena Preset Selected! Opening ArenaHostJoinPanel for Lobby ID: {lobbyId}");
+            if (ArenaHostJoinPanel.Instance != null)
+            {
+                ArenaHostJoinPanel.Instance.OpenPanel(lobbyId, entryFee);
+                // Don't disable horizontal lobby manager here so they can go back easily, 
+                // or you could, depending on the UI hierarchy. Let's let the Panel just overlay.
+                return;
+            }
+            else
+            {
+                Debug.LogWarning("[HorizontalLobbyManager] ArenaHostJoinPanel.Instance not found! Make sure you attached ArenaHostJoinPanel.cs to a UI Canvas in the scene.");
+                // We fallback to standard error logging or returning to prevent breaking the flow
+                return;
+            }
+        }
 
         Debug.Log($"[HorizontalLobbyManager] UI Button Clicked. Requesting match for {reqPlayers} players: ID {lobbyId}, Mode {mode}, Stake {entryFee}");
         
         if (WaitingForPlayerPanelManager.Instance != null)
         {
-            WaitingForPlayerPanelManager.Instance.OpenWaitingPanel(reqPlayers, entryFee, lobbyId);
+            WaitingForPlayerPanelManager.Instance.OpenWaitingPanel(reqPlayers, entryFee, lobbyId, mode);
             gameObject.SetActive(false);
             return;
         }
@@ -965,7 +967,7 @@ public class HorizontalLobbyManager : MonoBehaviour
             
             if (manager != null)
             {
-                manager.OpenWaitingPanel(reqPlayers, entryFee, lobbyId);
+                manager.OpenWaitingPanel(reqPlayers, entryFee, lobbyId, mode);
                 gameObject.SetActive(false);
                 return;
             }
@@ -1101,6 +1103,8 @@ public class HorizontalLobbyManager : MonoBehaviour
     /// </summary>
     public void StartMatchmakingForPlayerCount(int playerCount, float defaultStake = 100f, string defaultLobbyId = "combo-dice")
     {
+        SelectedPlayerCount = Mathf.Clamp(playerCount, 2, 10);
+
         if (gameObject != null && !gameObject.activeSelf)
         {
             gameObject.SetActive(true);
@@ -1212,10 +1216,6 @@ public class HorizontalLobbyManager : MonoBehaviour
             if (lobbyIndex >= 0 && lobbyIndex < BACKGROUND_COUNT)
             {
                 config = GetLobbyConfig(lobbyIndex);
-                if (config != null && SelectedPlayerCount > 0)
-                {
-                    config.numberOfPlayers = SelectedPlayerCount;
-                }
             }
             else if (matchData != null)
             {
@@ -1243,8 +1243,30 @@ public class HorizontalLobbyManager : MonoBehaviour
     private void HandleLobbyDataUpdated()
     {
         Debug.Log($"[HorizontalLobbyManager] Lobby data updated. Re-initializing {BACKGROUND_COUNT} rows.");
-        InitializeLobbyRows();
-        InitializeDotNavigation(); // Re-create navigation dots for the new count
+        
+        // Instead of destroying and recreating items (which causes blinking),
+        // let's just update the existing ones if the count hasn't changed.
+        if (allLobbyItems != null && allLobbyItems.Count == BACKGROUND_COUNT && _lobbyObjectsData != null && _lobbyObjectsData.Length == BACKGROUND_COUNT)
+        {
+            for (int i = 0; i < BACKGROUND_COUNT; i++)
+            {
+                LobbyConfig config = LobbyModel.GetConfig(i);
+                string imageUrl = config != null ? config.imageUrl : "";
+                string lobbyId = config != null ? config.lobbyId : "";
+                _lobbyObjectsData[i] = new LobbyGameObjectData(i, i, lobbyId, imageUrl);
+                
+                if (allLobbyItems[i] != null)
+                {
+                    allLobbyItems[i].SetData(_lobbyObjectsData[i]);
+                }
+            }
+        }
+        else
+        {
+            InitializeLobbyRows();
+            InitializeDotNavigation(); // Re-create navigation dots for the new count
+        }
+        
         RefreshAllPlayButtons();
     }
 

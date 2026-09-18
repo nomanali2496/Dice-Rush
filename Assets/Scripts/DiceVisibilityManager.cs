@@ -113,8 +113,10 @@ public class DiceVisibilityManager : MonoBehaviour
     {
         if (dicesController == null) return;
         
-        // Only show dice if gameplay screen is active in hierarchy
-        bool isGameplayActive = monitorWithoutGameplayScreen || (gameplayScreen != null && gameplayScreen.activeInHierarchy);
+        // Dice are visible only during the active match, never during countdown/results/loading UI.
+        bool isGameplayActive = GameManager.Instance != null
+            ? GameManager.Instance.IsDiceGameplayActive
+            : monitorWithoutGameplayScreen || (gameplayScreen != null && gameplayScreen.activeInHierarchy);
         
         if (!isGameplayActive)
         {

@@ -4,10 +4,10 @@ using UnityEditor;
 /// Tools menu for switching backend environments without touching the Inspector.
 public static class BackendEnvironmentMenu
 {
-    private const string MenuRoot      = "Tools/Dice Rush/Environment/";
+    private const string MenuRoot      = "Tools/Dice Blitz/Environment/";
     private const string MenuDev       = MenuRoot + "Development";
     private const string MenuProd      = MenuRoot + "Production";
-    private const string MenuOpenAsset = "Tools/Dice Rush/Open Backend Config";
+    private const string MenuOpenAsset = "Tools/Dice Blitz/Open Backend Config";
 
     // ---------- menu items ----------
 
@@ -74,7 +74,7 @@ public static class BackendEnvironmentMenu
     {
         bool create = EditorUtility.DisplayDialog(
             "Backend Config Missing",
-            "No BackendConfig asset found.\n\nCreate one via:\nAssets → Create → Dice Rush → Backend Config\n\nThen place it in Assets/Resources/ for auto-loading at runtime.",
+            "No BackendConfig asset found.\n\nCreate one via:\nAssets → Create → Dice Blitz → Backend Config\n\nThen place it in Assets/Resources/ for auto-loading at runtime.",
             "OK"
         );
     }

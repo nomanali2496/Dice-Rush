@@ -7,6 +7,8 @@ using TMPro;
 
 public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
 {
+    private const int LeaderboardEntryLimit = 10;
+
     [Header("Enhanced Scroller References")]
     [SerializeField] private EnhancedScroller scroller;
     [SerializeField] private LeaderboardRowUI cellViewPrefab;
@@ -175,10 +177,14 @@ public class LeaderboardManager : MonoBehaviour, IEnhancedScrollerDelegate
         if (BackendAuthService.Instance != null && BackendAuthService.HasStoredJWT())
         {
             Debug.Log("[LeaderboardManager] Requesting real leaderboard from backend...");
-            BackendAuthService.Instance.GetLeaderboard(testDataCount, (success, response) =>
+            BackendAuthService.Instance.GetLeaderboard(LeaderboardEntryLimit, (success, response) =>
             {
                 if (success && response != null && response.leaderboard != null)
                 {
+                    if (response.leaderboard.Count < LeaderboardEntryLimit)
+                    {
+                        Debug.LogWarning($"[LeaderboardManager] Backend returned {response.leaderboard.Count}/{LeaderboardEntryLimit} leaderboard entries.");
+                    }
                     PopulateRealLeaderboard(response);
                 }
                 else

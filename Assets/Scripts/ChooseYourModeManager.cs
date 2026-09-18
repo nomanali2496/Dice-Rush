@@ -4,7 +4,7 @@ using System;
 using DG.Tweening;
 
 /// <summary>
-/// Controls the "Choose Your Mode" panel in Dice Rush / Dice Blitz.
+/// Controls the "Choose Your Mode" panel in Dice Blitz.
 /// Tailored for the simple hierarchy where each Mode item (Classic, Zombie, Snake) is its own Button & Image.
 /// </summary>
 public class ChooseYourModeManager : MonoBehaviour
