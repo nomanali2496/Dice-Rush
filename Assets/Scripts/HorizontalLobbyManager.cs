@@ -932,23 +932,18 @@ public class HorizontalLobbyManager : MonoBehaviour
         string mode = config.mode;
         string lobbyId = config.lobbyId;
 
-        // If this is an Arena preset, intercept the flow and open the Arena panel instead
-        if (config.isArenaPreset)
+        // Arena presets use the same normal lobby/waiting flow when the Arena UI is not present.
+        // This prevents a missing ArenaHostJoinPanel from blocking the Play button.
+        if (config.isArenaPreset && ArenaHostJoinPanel.Instance != null)
         {
-            Debug.Log($"[HorizontalLobbyManager] Arena Preset Selected! Opening ArenaHostJoinPanel for Lobby ID: {lobbyId}");
-            if (ArenaHostJoinPanel.Instance != null)
-            {
-                ArenaHostJoinPanel.Instance.OpenPanel(lobbyId, entryFee);
-                // Don't disable horizontal lobby manager here so they can go back easily, 
-                // or you could, depending on the UI hierarchy. Let's let the Panel just overlay.
-                return;
-            }
-            else
-            {
-                Debug.LogWarning("[HorizontalLobbyManager] ArenaHostJoinPanel.Instance not found! Make sure you attached ArenaHostJoinPanel.cs to a UI Canvas in the scene.");
-                // We fallback to standard error logging or returning to prevent breaking the flow
-                return;
-            }
+            Debug.Log($"[HorizontalLobbyManager] Arena Preset Selected. Opening ArenaHostJoinPanel for Lobby ID: {lobbyId}");
+            ArenaHostJoinPanel.Instance.OpenPanel(lobbyId, entryFee);
+            return;
+        }
+
+        if (config.isArenaPreset && ArenaHostJoinPanel.Instance == null)
+        {
+            Debug.LogWarning("[HorizontalLobbyManager] ArenaHostJoinPanel not found. Using standard waiting/matchmaking flow for this lobby.");
         }
 
         Debug.Log($"[HorizontalLobbyManager] UI Button Clicked. Requesting match for {reqPlayers} players: ID {lobbyId}, Mode {mode}, Stake {entryFee}");
