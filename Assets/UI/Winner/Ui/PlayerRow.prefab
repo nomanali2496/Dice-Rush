@@ -57,6 +57,7 @@ MonoBehaviour:
   bgImage: {fileID: 4685845089839295184}
   rankImage: {fileID: 5028464051231971689}
   avatarImage: {fileID: 1676484325112234854}
+  frameImage: {fileID: 0}
   nameText: {fileID: 4488310176119755751}
   coinIcon: {fileID: 1124090910462771847}
   scoreText: {fileID: 7308293411047089678}
@@ -102,8 +103,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 372.86, y: 0}
-  m_SizeDelta: {x: 187.32068, y: 95}
+  m_AnchoredPosition: {x: 384.006, y: 0}
+  m_SizeDelta: {x: 117.151, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6665672113597151532
 CanvasRenderer:
@@ -239,7 +240,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: 8}
+  m_AnchoredPosition: {x: -256.58, y: 8}
   m_SizeDelta: {x: 119, y: 119}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &757472143330282404
@@ -389,7 +390,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -420, y: 0}
+  m_AnchoredPosition: {x: -380.3, y: 0}
   m_SizeDelta: {x: 108, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &229927306067976920
@@ -464,7 +465,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20.7659, y: 0}
+  m_AnchoredPosition: {x: 33.744, y: 0}
   m_SizeDelta: {x: 425.3727, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8130800984480547894
@@ -603,7 +604,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 240, y: 0}
+  m_AnchoredPosition: {x: 285.93, y: 0}
   m_SizeDelta: {x: 79, y: 79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4373046394905681866
