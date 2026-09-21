@@ -36,7 +36,7 @@ public class DiceVisibilityManager : MonoBehaviour
     [Header("Auto-Detect Panels")]
     [Tooltip("Automatically detect panels by name patterns (e.g., panels containing 'Panel', 'Popup', 'Menu', 'Screen')")]
     [SerializeField] private bool autoDetectPanels = true;
-    [SerializeField] private string[] panelNamePatterns = new string[] { "Panel", "Popup", "Menu", "Screen", "Winner", "Loser", "Loading", "Quit", "Waiting", "ChooseYourMode", "SelectPlayer", "Overlay", "Shop", "Profile", "Settings", "Store", "Lobby" };
+    [SerializeField] private string[] panelNamePatterns = new string[] { "Panel", "Popup", "Menu", "Screen", "Winner", "Loser", "Loading", "Quit", "Waiting", "ChooseYourMode", "SelectPlayer", "Overlay", "Shop", "Profile", "Settings", "Store", "Lobby", "Leaderboard", "Reward", "Task", "Match", "Transaction", "Invite", "Friend", "Offer", "Daily", "Message", "Feedback", "Support", "History", "Recovery", "Pause", "Info" };
     
     private bool areDicesHidden = false;
     private bool hasGameplayStarted = false;

@@ -14,7 +14,7 @@ public class LobbyConfig
     public string lobbyId; // Unique ID from database (e.g. "combo-dice")
     public string mode; // Mode from database (e.g. "2p")
     public string imageUrl; // Remote image path
-    public float gameTimer = 60f; // Match duration in seconds
+    public float gameTimer = 120f; // Match duration in seconds
     
     [Header("Entry Fee")]
     public float entryFeeCash; // Entry fee in cash (0 if not using cash)

@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
     
     [SerializeField] private TMPro.TextMeshProUGUI timerText; // Timer text display (TextMeshProUGUI)
     [SerializeField] private Text timerTextLegacy; // Timer text display (Legacy Text - use if not using TextMeshPro)
-    [SerializeField] private float gameTimer = 30f; // Game timer in seconds (30 seconds)
+    [SerializeField] private float gameTimer = 120f; // Game timer in seconds (120 seconds)
     
     private float currentTimer; // Current timer value
     private Coroutine timerCoroutine; // Reference to the timer coroutine

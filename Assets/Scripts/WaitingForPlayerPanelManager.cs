@@ -43,6 +43,7 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
     private List<PlayerSlotData> players = new List<PlayerSlotData>();
     private List<GameObject> spawnedSlots = new List<GameObject>();
     private Coroutine botCoroutine;
+    private StartGameData pendingMatchData;
 
     [System.Serializable]
     public class PlayerSlotData
@@ -92,6 +93,8 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
         players.Clear();
         string localName = PlayerModel.Name ?? ("Player " + Random.Range(100, 999));
         players.Add(new PlayerSlotData(localName, true, false));
+
+        pendingMatchData = null;
 
         currentJoinedCount = 1;
 
@@ -256,7 +259,14 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
                 0
             );
 
-            GameManager.Instance.ConfigureGameFromLobby(config);
+            if (pendingMatchData != null)
+            {
+                GameManager.Instance.ConfigureGameFromLobby(config, -1, pendingMatchData);
+            }
+            else
+            {
+                GameManager.Instance.ConfigureGameFromLobby(config);
+            }
             return;
         }
 
@@ -319,6 +329,7 @@ public class WaitingForPlayerPanelManager : MonoBehaviour
     private void OnMatchFoundFromServer(StartGameData data)
     {
         Debug.Log("[WaitingForPlayerPanelManager] Real match found from server! Stopping bot simulation.");
+        pendingMatchData = data;
 
         // Stop bot simulation — we have real players now
         if (botCoroutine != null)
