@@ -932,16 +932,22 @@ public class HorizontalLobbyManager : MonoBehaviour
         string mode = config.mode;
         string lobbyId = config.lobbyId;
 
+        ArenaHostJoinPanel arenaPanel = ArenaHostJoinPanel.Instance;
+        if (arenaPanel == null)
+        {
+            arenaPanel = FindFirstObjectByType<ArenaHostJoinPanel>(FindObjectsInactive.Include);
+        }
+
         // Arena presets use the same normal lobby/waiting flow when the Arena UI is not present.
         // This prevents a missing ArenaHostJoinPanel from blocking the Play button.
-        if (config.isArenaPreset && ArenaHostJoinPanel.Instance != null)
+        if (config.isArenaPreset && arenaPanel != null)
         {
             Debug.Log($"[HorizontalLobbyManager] Arena Preset Selected. Opening ArenaHostJoinPanel for Lobby ID: {lobbyId}");
-            ArenaHostJoinPanel.Instance.OpenPanel(lobbyId, entryFee);
+            arenaPanel.OpenPanel(lobbyId, entryFee);
             return;
         }
 
-        if (config.isArenaPreset && ArenaHostJoinPanel.Instance == null)
+        if (config.isArenaPreset && arenaPanel == null)
         {
             Debug.LogWarning("[HorizontalLobbyManager] ArenaHostJoinPanel not found. Using standard waiting/matchmaking flow for this lobby.");
         }

@@ -109,6 +109,7 @@ public class NumberGrid : MonoBehaviour
     
     private List<BoxData> boxDataList = new List<BoxData>(); // List to store all box data
     private List<GameObject> instantiatedBoxes = new List<GameObject>(); // List to store all instantiated boxes (for cleanup)
+    private Coroutine activePowerupCoroutine = null;
     private bool gridGenerated = false; // Flag to prevent double generation
     private string ownerUserId; // The Socket.io User ID that owns this grid
     private int tapSequence = 0; // Sequence number for tap validation
@@ -150,14 +151,8 @@ public class NumberGrid : MonoBehaviour
         AdjustBrixScale(); // Scale parent to fit screen width (as per your instruction)
 
         // Ensure slider is hidden by default
-        if (powerupTimerSlider != null)
-        {
-            powerupTimerSlider.gameObject.SetActive(false);
-        }
-        if (powerupTimerText != null)
-        {
-            powerupTimerText.gameObject.SetActive(false);
-        }
+        if (powerupTimerSlider != null) powerupTimerSlider.gameObject.SetActive(false);
+        if (powerupTimerText != null) powerupTimerText.gameObject.SetActive(false);
         
         // Only generate a random grid if one hasn't been provided by the server yet
         if (!gridGenerated)
@@ -296,6 +291,62 @@ public class NumberGrid : MonoBehaviour
         Debug.Log($"[NumberGrid] Grid scale calculated - Available: {availableWidth:F2}x{availableHeight:F2}, Scale Factor: {scaleFactor:F3}, Cell Size: {currentCellSizeX:F2}x{currentCellSizeY:F2}, Grid Size: {actualGridWidth:F2}x{actualGridHeight:F2}, Start Position: {startPosition}");
     }
     
+    private void TriggerRandomPowerup()
+    {
+        if (powerupSprites == null || powerupSprites.Length == 0) return;
+        
+        // 20% chance on a good move
+        if (UnityEngine.Random.value <= 0.2f)
+        {
+            int index = UnityEngine.Random.Range(0, powerupSprites.Length);
+            if (activePowerupCoroutine != null) StopCoroutine(activePowerupCoroutine);
+            activePowerupCoroutine = StartCoroutine(ActivePowerupTimer(index));
+        }
+    }
+
+    private System.Collections.IEnumerator ActivePowerupTimer(int spriteIndex)
+    {
+        if (powerupTimerSlider != null)
+        {
+            powerupTimerSlider.gameObject.SetActive(true);
+            
+            // Set handle sprite
+            RectTransform handleRect = powerupTimerSlider.handleRect;
+            if (handleRect != null)
+            {
+                UnityEngine.UI.Image handleImage = handleRect.GetComponent<UnityEngine.UI.Image>();
+                if (handleImage != null && powerupSprites[spriteIndex] != null)
+                {
+                    handleImage.sprite = powerupSprites[spriteIndex];
+                }
+            }
+        }
+        
+        if (powerupTimerText != null) powerupTimerText.gameObject.SetActive(true);
+
+        float duration = 5f; // Hardcoded to 5 seconds matching the UI
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            if (powerupTimerSlider != null)
+            {
+                powerupTimerSlider.value = 1f - (elapsed / duration); // Drain from 1 to 0
+            }
+            if (powerupTimerText != null)
+            {
+                int remainingSeconds = Mathf.CeilToInt(duration - elapsed);
+                powerupTimerText.text = $"00:{remainingSeconds:D2}";
+            }
+            yield return null;
+        }
+
+        // Hide when done
+        if (powerupTimerSlider != null) powerupTimerSlider.gameObject.SetActive(false);
+        if (powerupTimerText != null) powerupTimerText.gameObject.SetActive(false);
+    }
+
     public void SetOwner(string userId)
     {
         this.ownerUserId = userId;
@@ -319,23 +370,15 @@ public class NumberGrid : MonoBehaviour
             return;
         }
 
-        int powerupAssignmentCount = 0;
         for (int i = 0; i < matrix.Length; i++)
         {
             int number = matrix[i];
             if (number <= 0)
             {
-                // Assign sprites sequentially based on the order they appear in the matrix
-                // This ensures that the same cell always gets the same sprite during recovery.
-                int spriteIdx = powerupAssignmentCount % powerupSprites.Length;
-                powerupAssignmentCount++;
-                
-                CreatePowerupBox(spriteIdx, i, number);
+                // The backend sent 0 (powerup). Replace with random valid number to avoid empty boxes.
+                number = Random.Range(2, 13);
             }
-            else
-            {
-                CreateNumberBox(number, i);
-            }
+            CreateNumberBox(number, i);
         }
         
         if (gameObject.activeInHierarchy)
@@ -375,31 +418,10 @@ public class NumberGrid : MonoBehaviour
             gridItems.Add(new GridItem { isPowerup = false, number = i });
         }
         
-        // Add powerups with unique sprite indices (no duplicates)
-        System.Random rng = new System.Random();
-        
-        // Create a list of all available sprite indices
-        List<int> availableSpriteIndices = new List<int>();
-        for (int i = 0; i < powerupSprites.Length; i++)
+        // Fill remaining 3 spots with random numbers (25 total items needed for 5x5 grid)
+        for (int i = 0; i < 3; i++)
         {
-            availableSpriteIndices.Add(i);
-        }
-        
-        // Shuffle the indices to randomize
-        int n = availableSpriteIndices.Count;
-        while (n > 1)
-        {
-            n--;
-            int k = rng.Next(n + 1);
-            int value = availableSpriteIndices[k];
-            availableSpriteIndices[k] = availableSpriteIndices[n];
-            availableSpriteIndices[n] = value;
-        }
-        
-        // Take the first POWERUP_COUNT unique indices
-        for (int i = 0; i < POWERUP_COUNT && i < availableSpriteIndices.Count; i++)
-        {
-            gridItems.Add(new GridItem { isPowerup = true, powerupIndex = availableSpriteIndices[i] });
+            gridItems.Add(new GridItem { isPowerup = false, number = UnityEngine.Random.Range(MIN_NUMBER, MAX_NUMBER + 1) });
         }
         
         // Shuffle all items together for complete randomness
@@ -979,6 +1001,11 @@ public class NumberGrid : MonoBehaviour
         boxData.selectedInRollSum = -1;
         boxData.selectedInRollId = -1;
         
+        if (boxData.selectedByPlayer == PlayerType.Player)
+        {
+            // Removed decrement logic since we use random chance instead
+        }
+        
         // Re-enable button
         if (boxData.selectButton != null)
         {
@@ -1071,6 +1098,11 @@ public class NumberGrid : MonoBehaviour
         boxData.selectedByCPUIndex = -1;
         boxData.selectedInRollSum = (playerType == PlayerType.Player) ? currentDiceSumPlayer : currentDiceSumCPU;
         boxData.selectedInRollId = (playerType == PlayerType.Player) ? currentRollIdPlayer : currentRollIdCPU;
+        
+        if (playerType == PlayerType.Player)
+        {
+            TriggerRandomPowerup();
+        }
         
         // Disable this button (permanently locked)
         if (boxData.selectButton != null)

@@ -238,6 +238,15 @@ namespace UI
                 if (row != null) Destroy(row);
             }
             spawnedRowObjects.Clear();
+            
+            // Clear any dummy UI objects in hierarchy
+            if (itemsContainer != null)
+            {
+                foreach (Transform child in itemsContainer)
+                {
+                    Destroy(child.gameObject);
+                }
+            }
         }
 
         /// <summary>
