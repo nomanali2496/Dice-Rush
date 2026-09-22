@@ -6,18 +6,26 @@ public class EditProfilePanelManager : MonoBehaviour
 {
     [Header("UI References")]
     [SerializeField] private Button backButton;
-    [SerializeField] private Button uploadAvatarButton; // Slot 1 in the avatar grid
-    [SerializeField] private Image topAvatarPreview; // Top profile icon preview
-    [SerializeField] private Image topFramePreview; // Top frame/border preview
+    [UnityEngine.Serialization.FormerlySerializedAs("uploadAvatarButton")]
+    [SerializeField] private Button uploadButton; // Maps to "Upload" in hierarchy
+    [UnityEngine.Serialization.FormerlySerializedAs("topAvatarPreview")]
+    [SerializeField] private Image avatarPreview; // Maps to "Button" in hierarchy
+    [UnityEngine.Serialization.FormerlySerializedAs("topFramePreview")]
+    [SerializeField] private Image framePreview; // Maps to "2" in hierarchy
     
-    [Header("Preset Avatars (7 Slots)")]
-    [SerializeField] private Button[] presetAvatarButtons = new Button[7];
-    [SerializeField] private GameObject[] presetAvatarHighlights = new GameObject[7];
-    [SerializeField] private GameObject customAvatarHighlight; // Highlight for the upload button
+    [Header("AvatarManager (Avatars)")]
+    [UnityEngine.Serialization.FormerlySerializedAs("presetAvatarButtons")]
+    [SerializeField] private Button[] avatarManagerButtons = new Button[7];
+    [UnityEngine.Serialization.FormerlySerializedAs("presetAvatarHighlights")]
+    [SerializeField] private GameObject[] avatarManagerHighlights = new GameObject[7];
+    [UnityEngine.Serialization.FormerlySerializedAs("customAvatarHighlight")]
+    [SerializeField] private GameObject uploadHighlight; // Highlight for the upload button
 
-    [Header("Frames (8 Slots)")]
-    [SerializeField] private Button[] frameButtons = new Button[8];
-    [SerializeField] private GameObject[] frameHighlights = new GameObject[8];
+    [Header("AvatarFrameManager (Frames)")]
+    [UnityEngine.Serialization.FormerlySerializedAs("frameButtons")]
+    [SerializeField] private Button[] avatarFrameManagerButtons = new Button[8];
+    [UnityEngine.Serialization.FormerlySerializedAs("frameHighlights")]
+    [SerializeField] private GameObject[] avatarFrameManagerHighlights = new GameObject[8];
 
     [Header("Settings")]
     [SerializeField] private int maxImageSize = 512;
@@ -28,19 +36,19 @@ public class EditProfilePanelManager : MonoBehaviour
     private void Start()
     {
         if (backButton != null) backButton.onClick.AddListener(ClosePanel);
-        if (uploadAvatarButton != null) uploadAvatarButton.onClick.AddListener(OnUploadAvatarClicked);
+        if (uploadButton != null) uploadButton.onClick.AddListener(OnUploadAvatarClicked);
 
-        for (int i = 0; i < presetAvatarButtons.Length; i++)
+        for (int i = 0; i < avatarManagerButtons.Length; i++)
         {
             int index = i;
-            if (presetAvatarButtons[i] != null)
+            if (avatarManagerButtons[i] != null)
             {
-                presetAvatarButtons[i].onClick.AddListener(() => OnPresetAvatarClicked(index));
+                avatarManagerButtons[i].onClick.AddListener(() => OnPresetAvatarClicked(index));
                 
                 // Automatically set the sprite from AvatarSelector
                 if (AvatarSelector.Instance != null)
                 {
-                    Image btnImage = presetAvatarButtons[i].GetComponent<Image>();
+                    Image btnImage = avatarManagerButtons[i].GetComponent<Image>();
                     if (btnImage != null)
                     {
                         Sprite spr = AvatarSelector.Instance.GetAvatarSpriteByIndex(index);
@@ -50,17 +58,17 @@ public class EditProfilePanelManager : MonoBehaviour
             }
         }
 
-        for (int i = 0; i < frameButtons.Length; i++)
+        for (int i = 0; i < avatarFrameManagerButtons.Length; i++)
         {
             int index = i;
-            if (frameButtons[i] != null)
+            if (avatarFrameManagerButtons[i] != null)
             {
-                frameButtons[i].onClick.AddListener(() => OnFrameClicked(index));
+                avatarFrameManagerButtons[i].onClick.AddListener(() => OnFrameClicked(index));
                 
                 // Automatically set the sprite from AvatarSelector
                 if (AvatarSelector.Instance != null)
                 {
-                    Image btnImage = frameButtons[i].GetComponent<Image>();
+                    Image btnImage = avatarFrameManagerButtons[i].GetComponent<Image>();
                     if (btnImage != null)
                     {
                         Sprite spr = AvatarSelector.Instance.GetBackgroundSpriteByIndex(index);
@@ -89,7 +97,7 @@ public class EditProfilePanelManager : MonoBehaviour
         {
             // Map the parsed index directly (assuming backend index matches our 0-6 presets)
             selectedAvatarIndex = parsedIndex;
-            if (selectedAvatarIndex >= presetAvatarButtons.Length) selectedAvatarIndex = 0;
+            if (selectedAvatarIndex >= avatarManagerButtons.Length) selectedAvatarIndex = 0;
         }
         else
         {
@@ -105,39 +113,39 @@ public class EditProfilePanelManager : MonoBehaviour
     private void RefreshHighlights()
     {
         // Avatar Highlights
-        if (customAvatarHighlight != null)
+        if (uploadHighlight != null)
         {
-            customAvatarHighlight.SetActive(selectedAvatarIndex == -1);
+            uploadHighlight.SetActive(selectedAvatarIndex == -1);
         }
 
-        for (int i = 0; i < presetAvatarHighlights.Length; i++)
+        for (int i = 0; i < avatarManagerHighlights.Length; i++)
         {
-            if (presetAvatarHighlights[i] != null)
+            if (avatarManagerHighlights[i] != null)
             {
-                presetAvatarHighlights[i].SetActive(i == selectedAvatarIndex);
+                avatarManagerHighlights[i].SetActive(i == selectedAvatarIndex);
             }
         }
 
         // Frame Highlights
-        for (int i = 0; i < frameHighlights.Length; i++)
+        for (int i = 0; i < avatarFrameManagerHighlights.Length; i++)
         {
-            if (frameHighlights[i] != null)
+            if (avatarFrameManagerHighlights[i] != null)
             {
-                frameHighlights[i].SetActive(i == selectedFrameIndex);
+                avatarFrameManagerHighlights[i].SetActive(i == selectedFrameIndex);
             }
         }
 
         // Update Top Previews instantly
         if (AvatarSelector.Instance != null)
         {
-            if (topFramePreview != null)
+            if (framePreview != null)
             {
-                topFramePreview.sprite = AvatarSelector.Instance.GetBackgroundSpriteByIndex(selectedFrameIndex);
+                framePreview.sprite = AvatarSelector.Instance.GetBackgroundSpriteByIndex(selectedFrameIndex);
             }
             
-            if (topAvatarPreview != null && selectedAvatarIndex >= 0)
+            if (avatarPreview != null && selectedAvatarIndex >= 0)
             {
-                topAvatarPreview.sprite = AvatarSelector.Instance.GetAvatarSpriteByIndex(selectedAvatarIndex);
+                avatarPreview.sprite = AvatarSelector.Instance.GetAvatarSpriteByIndex(selectedAvatarIndex);
             }
         }
     }

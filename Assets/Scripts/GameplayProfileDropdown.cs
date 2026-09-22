@@ -64,6 +64,10 @@ namespace UI
         [SerializeField] private string collapsedButtonText = "View All Profiles";
         [SerializeField] private string expandedButtonText = "Hide Profiles";
 
+        [Header("Dropdown State Settings")]
+        [Tooltip("Minimum number of profiles to show when dropdown is collapsed")]
+        [SerializeField] private int minProfilesWhenCollapsed = 3;
+
         [Header("Live Update Settings")]
         [Tooltip("Interval in seconds to update live player scores")]
         [SerializeField] private float updateIntervalSeconds = 0.5f;
@@ -105,11 +109,11 @@ namespace UI
             // Collapse by default so it doesn't obstruct initial gameplay view
             if (expandableContentPanel != null)
             {
-                expandableContentPanel.sizeDelta = new Vector2(expandableContentPanel.sizeDelta.x, 0);
+                expandableContentPanel.sizeDelta = new Vector2(expandableContentPanel.sizeDelta.x, GetCollapsedHeight());
             }
             if (backgroundPanel != null)
             {
-                backgroundPanel.sizeDelta = new Vector2(backgroundPanel.sizeDelta.x, backgroundCollapsedHeight);
+                backgroundPanel.sizeDelta = new Vector2(backgroundPanel.sizeDelta.x, backgroundCollapsedHeight + GetCollapsedHeight());
             }
         }
 
@@ -225,10 +229,32 @@ namespace UI
         private void RecalculateHeight()
         {
             Canvas.ForceUpdateCanvases();
-            if (expandableContentPanel != null && isExpanded)
+            if (expandableContentPanel != null)
             {
                 fullPanelHeight = itemsContainer != null ? itemsContainer.rect.height : expandableContentPanel.rect.height;
             }
+        }
+
+        private float GetCollapsedHeight()
+        {
+            if (itemsContainer == null || itemsContainer.childCount == 0) return 0f;
+            int count = Mathf.Min(minProfilesWhenCollapsed, itemsContainer.childCount);
+            
+            float height = 0f;
+            var layoutGroup = itemsContainer.GetComponent<UnityEngine.UI.VerticalLayoutGroup>();
+            float spacing = layoutGroup != null ? layoutGroup.spacing : 0f;
+            float paddingTop = layoutGroup != null ? layoutGroup.padding.top : 0f;
+            float paddingBottom = layoutGroup != null ? layoutGroup.padding.bottom : 0f;
+
+            height += paddingTop;
+            for(int i = 0; i < count; i++)
+            {
+                RectTransform rt = itemsContainer.GetChild(i) as RectTransform;
+                if(rt != null) height += rt.rect.height;
+                if(i < count - 1) height += spacing;
+            }
+            height += paddingBottom;
+            return height;
         }
 
         private void ClearRows()
@@ -277,7 +303,8 @@ namespace UI
             {
                 expandableContentPanel.DOKill();
                 RecalculateHeight();
-                float targetHeight = open ? Mathf.Max(fullPanelHeight, 150f) : 0f;
+                float collapsedHeight = GetCollapsedHeight();
+                float targetHeight = open ? Mathf.Max(fullPanelHeight, collapsedHeight) : collapsedHeight;
                 expandableContentPanel.DOSizeDelta(new Vector2(expandableContentPanel.sizeDelta.x, targetHeight), animationDuration)
                     .SetEase(animationEase)
                     .SetLink(expandableContentPanel.gameObject);
@@ -285,7 +312,7 @@ namespace UI
                 if (backgroundPanel != null)
                 {
                     backgroundPanel.DOKill();
-                    float bgTargetHeight = open ? (targetHeight + backgroundCollapsedHeight) : backgroundCollapsedHeight;
+                    float bgTargetHeight = open ? (targetHeight + backgroundCollapsedHeight) : (collapsedHeight + backgroundCollapsedHeight);
                     backgroundPanel.DOSizeDelta(new Vector2(backgroundPanel.sizeDelta.x, bgTargetHeight), animationDuration)
                         .SetEase(animationEase)
                         .SetLink(backgroundPanel.gameObject);

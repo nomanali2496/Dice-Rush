@@ -67,7 +67,8 @@ public class GameManager : MonoBehaviour
     private bool isGameActive = false; // Flag to track if game is active
     public bool IsGameActive => isGameActive;
     public bool IsGameplayScreenActive => gameplayScreen != null && gameplayScreen.activeSelf;
-    public bool IsDiceGameplayActive => IsGameplayScreenActive && isGameActive && !winnerScreenShown && !isWaitingForServer;
+    public bool IsQuitPanelActive => quitPanel != null && quitPanel.activeInHierarchy;
+    public bool IsDiceGameplayActive => IsGameplayScreenActive && isGameActive && !winnerScreenShown && !isWaitingForServer && !IsQuitPanelActive;
     // True only when the player is mid-match (screen active AND winner results not yet shown).
     // Use this instead of IsGameplayScreenActive when deciding to sync/reconnect a live match.
     public bool IsActivelyPlaying => IsGameplayScreenActive && !winnerScreenShown;
@@ -277,20 +278,40 @@ public class GameManager : MonoBehaviour
         lastAwardedCash  = (float)data.earnings.GetValueOrDefault(PlayerModel.Id, 0);
         lastAwardedChips = (int)(data.coinsEarnings?.GetValueOrDefault(PlayerModel.Id, 0) ?? 0);
 
+        // Ensure data.players is populated with all known players from the match
+        if (data.players == null) data.players = new System.Collections.Generic.Dictionary<string, PlayerAvatarInfo>();
+        if (currentMatchData != null && currentMatchData.playerAvatars != null)
+        {
+            foreach (var kvp in currentMatchData.playerAvatars)
+            {
+                if (!data.players.ContainsKey(kvp.Key))
+                {
+                    data.players[kvp.Key] = kvp.Value;
+                }
+            }
+        }
+
+        // Build rankings from ALL known players
+        var allPlayerIds = new System.Collections.Generic.HashSet<string>();
+        if (data.players != null)
+        {
+            foreach (var key in data.players.Keys) allPlayerIds.Add(key);
+        }
         if (data.scores != null)
         {
-            int oppIdx = 0;
-            foreach (var kvp in data.scores)
-            {
-                string userId = kvp.Key;
-                int score = kvp.Value;
-                
-                PlayerType type = (userId == PlayerModel.Id) ? PlayerType.Player : PlayerType.Network;
-                double time = (userId == data.winnerId) ? 0 : 999.0;
+            foreach (var key in data.scores.Keys) allPlayerIds.Add(key);
+        }
 
-                int index = (type == PlayerType.Player) ? -1 : oppIdx++;
-                rankings.Add((type, index, score, time, userId));
-            }
+        int oppIdx = 0;
+        foreach (string userId in allPlayerIds)
+        {
+            int score = (data.scores != null && data.scores.TryGetValue(userId, out int s)) ? s : 0;
+            
+            PlayerType type = (userId == PlayerModel.Id) ? PlayerType.Player : PlayerType.Network;
+            double time = (userId == data.winnerId) ? 0 : 999.0;
+
+            int index = (type == PlayerType.Player) ? -1 : oppIdx++;
+            rankings.Add((type, index, score, time, userId));
         }
 
         // Sort rankings by score (descending)
@@ -650,11 +671,12 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                // Fresh start - hide timer and wait for server countdown ticks
+                // Fresh start - run local countdown
                 if (timerText != null) timerText.gameObject.SetActive(false);
                 if (timerTextLegacy != null) timerTextLegacy.gameObject.SetActive(false);
                 if (playerDicesController != null) playerDicesController.SetRollButtonInteractable(false);
-                Debug.Log("[GameManager] Match started locally. Waiting for server countdown ticks...");
+                Debug.Log("[GameManager] Match started locally. Starting local 3,2,1 countdown...");
+                StartCoroutine(LocalCountdownSequence());
             }
         }
 
@@ -687,6 +709,15 @@ public class GameManager : MonoBehaviour
         
         // Finalize start
         StartCoroutine(FinishCountdownSequence());
+    }
+
+    private System.Collections.IEnumerator LocalCountdownSequence()
+    {
+        for (int i = 3; i >= 1; i--)
+        {
+            HandleServerCountdown(new CountdownData { count = i });
+            yield return new WaitForSeconds(1f);
+        }
     }
 
     private void HandleServerCountdown(CountdownData data)
@@ -751,7 +782,10 @@ public class GameManager : MonoBehaviour
         
         if (playerDicesController != null) 
         {
+            playerDicesController.SetRollButtonInteractable(true);
+            playerDicesController.ShowDices();
             playerDicesController.ResetRollingState();
+            playerDicesController.ClearDiceSumDisplay();
         }
         
         currentTimer = gameTimer;
@@ -1817,7 +1851,7 @@ public class GameManager : MonoBehaviour
         {
             playerDicesController.ResetRollingState();
             playerDicesController.ClearDiceSumDisplay();
-            playerDicesController.ShowDices();
+            // Let DiceVisibilityManager handle showing the dice when gameplay actually starts
         }
         
         Debug.Log("[GameManager] Board and dice state reset for new match.");
@@ -1844,13 +1878,11 @@ public class GameManager : MonoBehaviour
             this.gameTimer = matchData.timeRemaining;
             Debug.Log($"[GameManager] Match recovery: Setting timer to remaining time: {matchData.timeRemaining}s");
         }
-        else if (matchData.duration > 0)
-        {
-            this.gameTimer = matchData.duration;
-        }
         else
         {
-            this.gameTimer = config.gameTimer;
+            // FORCE 120 seconds as requested, ignoring matchData.duration from backend
+            this.gameTimer = 120f;
+            Debug.Log("[GameManager] Forced game timer to 120 seconds.");
         }
         
         this.currentTimer = this.gameTimer;

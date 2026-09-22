@@ -13,7 +13,7 @@ public class BackendAuthService : MonoBehaviour
     [Tooltip("Backend environment config (assign BackendConfig asset, or place one in Resources/BackendConfig.asset)")]
     [SerializeField] private BackendConfig backendConfig;
 
-    private string baseUrl => (backendConfig != null ? backendConfig : BackendConfig.Load())?.ApiUrl ?? "https://lead-waiting-hockey-results.trycloudflare.com";
+    private string baseUrl => (backendConfig != null ? backendConfig : BackendConfig.Load())?.ApiUrl ?? "https://drill-somerset-firewire-norman.trycloudflare.com";
 
     private const string JWT_PREF_KEY = "CustomBackendJWT";
 

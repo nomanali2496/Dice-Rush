@@ -932,24 +932,12 @@ public class HorizontalLobbyManager : MonoBehaviour
         string mode = config.mode;
         string lobbyId = config.lobbyId;
 
-        ArenaHostJoinPanel arenaPanel = ArenaHostJoinPanel.Instance;
-        if (arenaPanel == null)
+        // Removed the ArenaHostJoinPanel logic as requested.
+        // It will now proceed to the default matchmaking flow.
+        
+        if (config.isArenaPreset)
         {
-            arenaPanel = FindFirstObjectByType<ArenaHostJoinPanel>(FindObjectsInactive.Include);
-        }
-
-        // Arena presets use the same normal lobby/waiting flow when the Arena UI is not present.
-        // This prevents a missing ArenaHostJoinPanel from blocking the Play button.
-        if (config.isArenaPreset && arenaPanel != null)
-        {
-            Debug.Log($"[HorizontalLobbyManager] Arena Preset Selected. Opening ArenaHostJoinPanel for Lobby ID: {lobbyId}");
-            arenaPanel.OpenPanel(lobbyId, entryFee);
-            return;
-        }
-
-        if (config.isArenaPreset && arenaPanel == null)
-        {
-            Debug.LogWarning("[HorizontalLobbyManager] ArenaHostJoinPanel not found. Using standard waiting/matchmaking flow for this lobby.");
+            Debug.LogWarning("[HorizontalLobbyManager] Arena Preset Selected, but default Arena popup has been disabled.");
         }
 
         Debug.Log($"[HorizontalLobbyManager] UI Button Clicked. Requesting match for {reqPlayers} players: ID {lobbyId}, Mode {mode}, Stake {entryFee}");

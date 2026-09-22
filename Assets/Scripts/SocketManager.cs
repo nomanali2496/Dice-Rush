@@ -17,7 +17,7 @@ public class SocketManager : MonoBehaviour
     [Tooltip("Backend environment config (assign BackendConfig asset, or place one in Resources/BackendConfig.asset)")]
     [SerializeField] private BackendConfig backendConfig;
 
-    private string serverUrl => (backendConfig != null ? backendConfig : BackendConfig.Load())?.SocketUrl ?? "https://lead-waiting-hockey-results.trycloudflare.com";
+    private string serverUrl => (backendConfig != null ? backendConfig : BackendConfig.Load())?.SocketUrl ?? "https://drill-somerset-firewire-norman.trycloudflare.com";
 
     public string GetServerUrl() => serverUrl;
 

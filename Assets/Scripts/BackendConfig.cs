@@ -13,8 +13,8 @@ public class BackendConfig : ScriptableObject
     public string devSocketUrl = "http://localhost:3000";
 
     [Header("Production URLs")]
-    public string prodApiUrl = "https://lead-waiting-hockey-results.trycloudflare.com";
-    public string prodSocketUrl = "https://lead-waiting-hockey-results.trycloudflare.com";
+    public string prodApiUrl = "https://drill-somerset-firewire-norman.trycloudflare.com";
+    public string prodSocketUrl = "https://drill-somerset-firewire-norman.trycloudflare.com";
 
     public string ApiUrl => activeEnvironment == AppEnvironment.Development ? devApiUrl : prodApiUrl;
     public string SocketUrl => activeEnvironment == AppEnvironment.Development ? devSocketUrl : prodSocketUrl;

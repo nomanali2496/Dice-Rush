@@ -56,7 +56,7 @@ public class DicesController : MonoBehaviour
     private void Awake()
     {
         // Ensure 3D dice are hidden by default on startup until gameplay is active
-        HideDices();
+        // HideDices(); // Temporarily commented out so you can see them while positioning
     }
 
     private void Start()

@@ -76,24 +76,18 @@ public class DiceVisibilityManager : MonoBehaviour
         if (gameplayScreen == null)
         {
             GameObject foundGameplayScreen = GameObject.Find("GameplayScreen");
+            if (foundGameplayScreen == null) foundGameplayScreen = GameObject.Find("GamePlayScreen");
+            if (foundGameplayScreen == null) foundGameplayScreen = GameObject.Find("Gameplay");
+            if (foundGameplayScreen == null) foundGameplayScreen = GameObject.Find("GamePlay");
+
             if (foundGameplayScreen != null)
             {
                 gameplayScreen = foundGameplayScreen;
-                Debug.Log("[DiceVisibilityManager] Found GameplayScreen automatically.");
+                Debug.Log($"[DiceVisibilityManager] Found Gameplay screen automatically: {gameplayScreen.name}");
             }
-            else
+            else if (!monitorWithoutGameplayScreen)
             {
-                // Try alternate names
-                foundGameplayScreen = GameObject.Find("Gameplay");
-                if (foundGameplayScreen != null)
-                {
-                    gameplayScreen = foundGameplayScreen;
-                    Debug.Log("[DiceVisibilityManager] Found Gameplay screen automatically.");
-                }
-                else if (!monitorWithoutGameplayScreen)
-                {
-                    Debug.LogWarning("[DiceVisibilityManager] Gameplay screen not assigned and not found! Dice visibility will only be monitored if 'Monitor Without Gameplay Screen' is enabled.");
-                }
+                Debug.LogWarning("[DiceVisibilityManager] Gameplay screen not assigned and not found! Dice visibility will only be monitored if 'Monitor Without Gameplay Screen' is enabled.");
             }
         }
         
@@ -136,6 +130,9 @@ public class DiceVisibilityManager : MonoBehaviour
         {
             if (panel != null && panel.activeInHierarchy)
             {
+                // Bulletproof check: Never treat a child of the gameplay screen as a popup that hides dice!
+                if (gameplayScreen != null && panel.transform.IsChildOf(gameplayScreen.transform)) continue;
+                
                 anyPanelActive = true;
                 break;
             }
@@ -179,6 +176,9 @@ public class DiceVisibilityManager : MonoBehaviour
         foreach (GameObject obj in allObjects)
         {
             if (obj == gameplayScreen) continue; // Skip the gameplay screen itself
+            
+            // Skip any children of the gameplay screen (like TopPanel, BottomPanel, etc.)
+            if (gameplayScreen != null && obj.transform.IsChildOf(gameplayScreen.transform)) continue;
 
             // Check if object name matches any pattern
             foreach (string pattern in panelNamePatterns)
@@ -281,12 +281,6 @@ public class DiceVisibilityManager : MonoBehaviour
                 diceScalingApplied = true;
                 Debug.Log($"[DiceVisibilityManager] Dice scaling applied successfully to {scaledCount} dice!");
                 
-                // Center the dice container and 3D models
-                if (diceParentContainer != null)
-                {
-                    CenterDiceContainer();
-                }
-                
                 // Center the 3D dice models on X axis with scaled spacing
                 float scaledSpacing = referenceDiceSpacing * uniformScaleFactor;
                 CenterDice3DModels(dice1, dice2, scaledSpacing);
@@ -300,27 +294,6 @@ public class DiceVisibilityManager : MonoBehaviour
         {
             Debug.LogError("[DiceVisibilityManager] Could not access dice1 and dice2 fields via reflection!");
         }
-    }
-    
-    /// <summary>
-    /// Centers the dice parent container in the middle of the screen
-    /// </summary>
-    private void CenterDiceContainer()
-    {
-        if (diceParentContainer == null) return;
-        
-        // Ensure anchors are set to center
-        // This makes the container position relative to the center of the parent
-        diceParentContainer.anchorMin = new Vector2(0.5f, 0.5f);
-        diceParentContainer.anchorMax = new Vector2(0.5f, 0.5f);
-        
-        // Set pivot to center (makes the container rotate/scale from center)
-        diceParentContainer.pivot = new Vector2(0.5f, 0.5f);
-        
-        // Position at center (0, 0 is center when anchors are at 0.5, 0.5)
-        diceParentContainer.anchoredPosition = Vector2.zero;
-        
-        Debug.Log($"[DiceVisibilityManager] Dice container UI centered - Anchors: (0.5, 0.5), Position: (0, 0)");
     }
     
     /// <summary>

@@ -60,6 +60,10 @@ public class LobbyGameObjectUI : EnhancedScrollerCellView, IPointerEnterHandler,
         public Sprite sprite;
     }
     
+    [Header("Text Elements")]
+    [SerializeField] private TMPro.TextMeshProUGUI entryFeeText; // Reference for Entry Fee Text
+    [SerializeField] private TMPro.TextMeshProUGUI rewardText; // Reference for Reward Text
+
     private LobbyGameObjectData currentData;
     private RectTransform rectTransform;
     private Vector3 originalScale;
@@ -118,6 +122,34 @@ public class LobbyGameObjectUI : EnhancedScrollerCellView, IPointerEnterHandler,
     {
         currentData = data;
         SetupBackground(data.backgroundIndex);
+        
+        // Setup texts from LobbyModel
+        if (data != null)
+        {
+            LobbyConfig config = LobbyModel.GetConfig(data.lobbyIndex);
+            if (config != null)
+            {
+                if (entryFeeText != null)
+                {
+                    if (config.entryFeeChips > 0)
+                        entryFeeText.text = config.entryFeeChips.ToString("N0");
+                    else if (config.entryFeeCash > 0)
+                        entryFeeText.text = "$" + config.entryFeeCash.ToString("0.00");
+                    else
+                        entryFeeText.text = "FREE";
+                }
+                
+                if (rewardText != null)
+                {
+                    if (config.firstPlaceChips > 0)
+                        rewardText.text = config.firstPlaceChips.ToString("N0");
+                    else if (config.firstPlaceCash > 0)
+                        rewardText.text = "$" + config.firstPlaceCash.ToString("0.00");
+                    else
+                        rewardText.text = "NONE";
+                }
+            }
+        }
         
         // Reset scale when data is set (important for cell recycling)
         InitializeScale(); // Ensure scale is initialized
