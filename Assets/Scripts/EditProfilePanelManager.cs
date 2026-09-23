@@ -45,6 +45,7 @@ public class EditProfilePanelManager : MonoBehaviour
             {
                 avatarManagerButtons[i].onClick.AddListener(() => OnPresetAvatarClicked(index));
                 
+                /*
                 // Automatically set the sprite from AvatarSelector
                 if (AvatarSelector.Instance != null)
                 {
@@ -55,6 +56,7 @@ public class EditProfilePanelManager : MonoBehaviour
                         if (spr != null) btnImage.sprite = spr;
                     }
                 }
+                */
             }
         }
 
@@ -65,6 +67,7 @@ public class EditProfilePanelManager : MonoBehaviour
             {
                 avatarFrameManagerButtons[i].onClick.AddListener(() => OnFrameClicked(index));
                 
+                /*
                 // Automatically set the sprite from AvatarSelector
                 if (AvatarSelector.Instance != null)
                 {
@@ -75,6 +78,7 @@ public class EditProfilePanelManager : MonoBehaviour
                         if (spr != null) btnImage.sprite = spr;
                     }
                 }
+                */
             }
         }
     }

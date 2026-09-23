@@ -17,7 +17,7 @@ public class SocketManager : MonoBehaviour
     [Tooltip("Backend environment config (assign BackendConfig asset, or place one in Resources/BackendConfig.asset)")]
     [SerializeField] private BackendConfig backendConfig;
 
-    private string serverUrl => (backendConfig != null ? backendConfig : BackendConfig.Load())?.SocketUrl ?? "https://drill-somerset-firewire-norman.trycloudflare.com";
+    private string serverUrl => (backendConfig != null ? backendConfig : BackendConfig.Load())?.SocketUrl ?? "https://loving-filled-occasions-breaks.trycloudflare.com";
 
     public string GetServerUrl() => serverUrl;
 
@@ -166,6 +166,7 @@ public class SocketManager : MonoBehaviour
         }
 
         Uri serverUri = new Uri(serverUrl);
+        Debug.Log($"<color=#FFFF00>🛠️ [SocketManager] Connecting to EXACT URL: {serverUri.AbsoluteUri}</color>");
 
         SocketOptions options = new SocketOptions
         {

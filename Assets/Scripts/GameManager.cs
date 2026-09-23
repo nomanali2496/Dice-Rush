@@ -81,6 +81,18 @@ public class GameManager : MonoBehaviour
     private LobbyConfig currentLobbyConfig; // Current lobby configuration being played
     private StartGameData currentMatchData; // Current match data from socket
     
+    [Header("Dynamic Backgrounds")]
+    [SerializeField] private InfiniteBackgroundScroller backgroundScroller;
+    [SerializeField] private Color[] lobbyBackgroundColors = new Color[] 
+    {
+        new Color(0.05f, 0.3f, 0.5f),   // Monaco Riviera (Blue)
+        new Color(0.0f, 0.45f, 0.05f),  // Atlantic Boardwalk (Green)
+        new Color(0.45f, 0.05f, 0.05f), // Macau Dragon (Red)
+        new Color(0.15f, 0.15f, 0.15f), // Vegas Neon (Black)
+        new Color(0.45f, 0.35f, 0.15f), // Singapore Marina (Gold)
+        new Color(0.35f, 0.35f, 0.35f)  // London Royal (Gray)
+    };
+    
     // Win conditions
     private int currentWinConditionTarget = 50; // Target score or boxes to win
 
@@ -1820,6 +1832,13 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogWarning("[GameManager] LobbyConfig is null! Using default settings.");
             return;
+        }
+
+        // Set dynamic background color based on lobby index
+        if (backgroundScroller != null && lobbyBackgroundColors != null && lobbyBackgroundColors.Length > 0)
+        {
+            int colorIndex = Mathf.Clamp(config.lobbyIndex, 0, lobbyBackgroundColors.Length - 1);
+            backgroundScroller.SetBackgroundColor(lobbyBackgroundColors[colorIndex]);
         }
         
         // Stop any running timer and reset flags first

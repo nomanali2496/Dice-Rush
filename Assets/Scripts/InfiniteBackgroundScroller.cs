@@ -642,4 +642,34 @@ public class InfiniteBackgroundScroller : MonoBehaviour
     #endif
     
     #endregion
+
+    #region Color Customization
+    
+    /// <summary>
+    /// Changes the color of all background panels (supports both SpriteRenderer and UI Image)
+    /// </summary>
+    /// <param name="color">The new color to apply</param>
+    public void SetBackgroundColor(Color color)
+    {
+        if (backgroundPanels == null) return;
+        
+        foreach (Transform panel in backgroundPanels)
+        {
+            if (panel == null) continue;
+            
+            SpriteRenderer sr = panel.GetComponent<SpriteRenderer>();
+            if (sr != null)
+            {
+                sr.color = color;
+            }
+            
+            UnityEngine.UI.Image img = panel.GetComponent<UnityEngine.UI.Image>();
+            if (img != null)
+            {
+                img.color = color;
+            }
+        }
+    }
+    
+    #endregion
 }

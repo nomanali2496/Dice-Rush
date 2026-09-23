@@ -15,5 +15,5 @@ MonoBehaviour:
   activeEnvironment: 1
   devApiUrl: http://localhost:3000
   devSocketUrl: ws://localhost:3000
-  prodApiUrl: https://drill-somerset-firewire-norman.trycloudflare.com
-  prodSocketUrl: https://drill-somerset-firewire-norman.trycloudflare.com
+  prodApiUrl: https://sustainability-underwear-afterwards-painted.trycloudflare.com/
+  prodSocketUrl: https://sustainability-underwear-afterwards-painted.trycloudflare.com/
